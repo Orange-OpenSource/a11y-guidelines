@@ -1,0 +1,1180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Recommandations accessibilité Orange</title>
+  <subtitle>Les derniers articles en français</subtitle>
+  <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
+  <link href="https://a11y-guidelines.orange.com"/>
+  <updated>2021-07-05T00:00:00Z</updated>
+  <id>https://a11y-guidelines.orange.com</id>
+  
+  <entry>
+    <title>HTML5 &amp; ARIA</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/html5-et-aria/"/>
+    <updated>2016-09-16T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/html5-et-aria/</id>
+    <content type="html">&lt;h1&gt;&lt;abbr&gt;HTML5&lt;/abbr&gt; &amp;amp; &lt;abbr&gt;ARIA&lt;/abbr&gt;&lt;/h1&gt;
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/html5-et-aria/#introduction&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Les sites internet sont de plus en plus dynamiques (chargement asynchrone, génération dynamique de contenu) et interactifs (composants d’interface complexes : &lt;i lang=&quot;en&quot;&gt;slider&lt;/i&gt;, &lt;i lang=&quot;en&quot;&gt;datepicker&lt;/i&gt;…). Il est donc très difficile voire impossible de rendre ce genre de composants accessibles avec le &lt;abbr&gt;HTML&lt;/abbr&gt; classique.&lt;/p&gt;
+&lt;p&gt;Même avec l’évolution due au &lt;abbr&gt;HTML5&lt;/abbr&gt;, on manque encore d’informations sémantiques à fournir aux aides techniques (lecteurs d’écran, loupes logicielles…), la navigation clavier est souvent impossible, la gestion complexe du focus clavier est absente et les mises à jour des régions dynamiques ne sont pas signalées, notamment aux lecteurs d&#39;écran.&lt;/p&gt;
+&lt;h2 id=&quot;quest-ce-que-cest&quot;&gt;Qu’est-ce que c’est ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/html5-et-aria/#quest-ce-que-cest&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Pour remédier à ces limitations, le &lt;abbr&gt;W3c&lt;/abbr&gt;/&lt;abbr&gt;WAI&lt;/abbr&gt; a publié une recommandation appelée &lt;abbr&gt;ARIA&lt;/abbr&gt;, pour &lt;i lang=&quot;en&quot;&gt;Accessible Rich Internet Applications&lt;/i&gt;, ainsi qu’une suite de documents traitant de l’utilisation d’&lt;abbr&gt;ARIA&lt;/abbr&gt;. Nous sommes à la version 1.1 d&#39;&lt;abbr&gt;ARIA&lt;/abbr&gt; et des Authoring Practices, bonnes pratiques d&#39;utilisation d&#39;&lt;abbr&gt;ARIA&lt;/abbr&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;abbr&gt;ARIA&lt;/abbr&gt; est une sur-couche sémantique à base de couples attribut/valeur utilisables dans les langages de balisage tels que &lt;abbr&gt;HTML&lt;/abbr&gt;, &lt;abbr&gt;SVG&lt;/abbr&gt;, &lt;abbr&gt;XML&lt;/abbr&gt;, etc. Cette recommandation est composée de rôles, d’états et de propriétés qui vont spécifiquement interagir avec les aides techniques (&lt;abbr&gt;AT&lt;/abbr&gt;). Grâce à &lt;abbr&gt;ARIA&lt;/abbr&gt;, on peut décrire des éléments et leurs comportements en &lt;abbr&gt;HTML&lt;/abbr&gt; lorsqu’ils sont nativement non sémantiquement explicites, par exemple, des onglets, les arbres dépliants, des régions dynamiques, les info-bulles, les fenêtres modales. &lt;abbr&gt;ARIA&lt;/abbr&gt; définit également comment doit se comporter un composant d’interface avec le clavier afin d’homogénéiser l’expérience des utilisateurs qui naviguent au clavier. &lt;strong&gt;&lt;abbr&gt;ARIA&lt;/abbr&gt; prend tout son sens et exprime tout son potentiel lorsqu’il est utilisé dans du &lt;abbr&gt;HTML5&lt;/abbr&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Aria ne rajoute aucun comportement particulier ni aucune présentation visuelle aux composants d’interface. Il faut donc toujours assurer la mise en forme grâce aux &lt;abbr&gt;CSS&lt;/abbr&gt;, le contrôle du contenu et la gestion de l’interactivité via Javascript.&lt;/p&gt;
+&lt;h2 id=&quot;le-support&quot;&gt;Le support &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/html5-et-aria/#le-support&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Le support d’&lt;abbr&gt;ARIA&lt;/abbr&gt; s’améliore constamment et est déjà présent depuis longtemps :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dans les navigateurs modernes (Firefox &amp;gt;=3.0, Chrome &amp;gt;=16, Safari &amp;gt;=4, Opera &amp;gt;=9.5, Internet Explorer 8 pour un support basique, Internet Explorer &amp;gt;=9 et Edge pour un support avancé).&lt;/li&gt;
+&lt;li&gt;Dans les aides techniques (&lt;abbr&gt;NVDA&lt;/abbr&gt; &amp;gt;=2010, Orca &amp;gt;= 2 + Firefox uniquement, VoiceOver &lt;abbr&gt;OSX&lt;/abbr&gt; &amp;gt;=10.5, &lt;abbr&gt;iOS&lt;/abbr&gt; &amp;gt;=4, &lt;abbr&gt;JAWS&lt;/abbr&gt; &amp;gt;=8, Window-Eyes &amp;gt;=7, ZoomText 10 pour un support basique, ZoomText &amp;gt;=11 pour un support avancé).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;De plus, l’efficacité optimale de la prise en charge d’&lt;abbr&gt;ARIA&lt;/abbr&gt; dépend du couple navigateur / aide technique : Firefox avec &lt;abbr&gt;NVDA&lt;/abbr&gt;, Jaws avec Internet Explorer et Safari avec VoiceOver, par exemple.&lt;/p&gt;
+&lt;h2 id=&quot;faut-il-lutiliser&quot;&gt;Faut-il l’utiliser ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/html5-et-aria/#faut-il-lutiliser&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Globalement, &lt;abbr&gt;ARIA&lt;/abbr&gt; améliore l’accessibilité pour des composants pas nativement présents dans le &lt;abbr&gt;HTML&lt;/abbr&gt; (ou pas accessibles notamment certains éléments &lt;abbr&gt;HTML5&lt;/abbr&gt;). La robustesse et l’interopérabilité d’&lt;abbr&gt;ARIA&lt;/abbr&gt; sont maintenant suffisantes pour qu’&lt;a href=&quot;https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques&quot;&gt;une quarantaine de techniques WCAG 2.1 soient spécifiques à &lt;abbr&gt;ARIA&lt;/abbr&gt;&lt;/a&gt; (contre 10 techniques &lt;abbr&gt;HTML5&lt;/abbr&gt;). En conséquence, pour des applications Internet riches, l’&lt;abbr&gt;ARIA&lt;/abbr&gt; est incontournable pour leur mise en accessibilité.&lt;/p&gt;
+&lt;p&gt;Dans tous les cas, il faut tester les développements sur les environnements cibles (couple navigateurs / aides techniques). C’est un gros travail absolument nécessaire pour les cas complexes car sur un site ou une application internet classique, il faut, à minima, tester avec Safari/VoiceOver, Jaws/Internet Explorer et Firefox/&lt;abbr&gt;NVDA&lt;/abbr&gt;.&lt;/p&gt;
+&lt;p&gt;Dans un environnement maîtrisé (intranet), les environnements cibles sont connus et en nombre fini, on peut donc statuer plus facilement !&lt;/p&gt;
+&lt;h2 id=&quot;webographie&quot;&gt;Webographie &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/html5-et-aria/#webographie&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;abbr&gt;W3c&lt;/abbr&gt; :
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.w3.org/TR/wai-aria/&quot;&gt;Spécification &lt;abbr&gt;ARIA&lt;/abbr&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.w3.org/TR/wai-aria-practices/&quot;&gt;Mettre en place &lt;abbr&gt;ARIA&lt;/abbr&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.w3.org/TR/aria-in-html/&quot;&gt;Utiliser &lt;abbr&gt;ARIA&lt;/abbr&gt; en &lt;abbr&gt;HTML&lt;/abbr&gt; (5)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques&quot;&gt;Techniques &lt;abbr&gt;ARIA&lt;/abbr&gt; dans le wiki du &lt;abbr&gt;W3c&lt;/abbr&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.sitepoint.com/introduction-wai-aria/&quot;&gt;Introduction à &lt;abbr&gt;ARIA&lt;/abbr&gt; chez Site Point&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA&quot;&gt;Introduction et liste de liens vers des sources sur &lt;abbr&gt;ARIA&lt;/abbr&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Les attributs ARIA qui peuvent vous sauver !</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/attributs-aria-qui-peuvent-vous-sauver/"/>
+    <updated>2018-01-08T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/attributs-aria-qui-peuvent-vous-sauver/</id>
+    <content type="html">&lt;h1&gt;Les attributs &lt;abbr&gt;ARIA&lt;/abbr&gt; qui peuvent vous sauver : &lt;code&gt;aria-label&lt;/code&gt;, &lt;code&gt;aria-labelledby&lt;/code&gt; et &lt;code&gt;aria-describedby&lt;/code&gt;&lt;/h1&gt;
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/attributs-aria-qui-peuvent-vous-sauver/#introduction&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;nom-et-description-accessible&quot;&gt;Nom et description accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/attributs-aria-qui-peuvent-vous-sauver/#nom-et-description-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Un nom accessible (pour aller plus loin, &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/le-nom-accessible-en-html/&quot;&gt;Le nom accessible en HTML&lt;/a&gt;) est l&#39;information qui permet à l&#39;aide technique (&lt;abbr&gt;AT&lt;/abbr&gt;), par exemple, un lecteur d&#39;écran ou une loupe logicielle, d&#39;identifier l&#39;élément (tag &lt;abbr&gt;HTML&lt;/abbr&gt;) en question. Il peut être fourni par l&#39;intitulé ou le contenu d&#39;un élément, un attribut (par exemple, un attribut &lt;code&gt;alt&lt;/code&gt; pour une image) ou par un élément associé (par exemple, une balise &lt;code&gt;label&lt;/code&gt; pour un champ &lt;code&gt;input&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Une description accessible est une information plus étendue qui est utilisée par l&#39;&lt;abbr&gt;AT&lt;/abbr&gt; lui permettant de compléter le nom accessible en précisant et rajoutant du sens là ou le nom accessible n&#39;est pas suffisant.&lt;/p&gt;
+&lt;p&gt;Le  comme la description accessible peuvent être visuellement perceptible ou pas (intitulé de lien : visible, alternative d&#39;image : cachée et utilisable que par une &lt;abbr&gt;AT&lt;/abbr&gt;...)&lt;/p&gt;
+&lt;h3 id=&quot;les-attributs-aria-aria-label-aria-labelledby-et-aria-describedby&quot;&gt;Les attributs &lt;abbr&gt;ARIA&lt;/abbr&gt; : &lt;code&gt;aria-label&lt;/code&gt;, &lt;code&gt;aria-labelledby&lt;/code&gt; et &lt;code&gt;aria-describedby&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/attributs-aria-qui-peuvent-vous-sauver/#les-attributs-aria-aria-label-aria-labelledby-et-aria-describedby&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Trois attributs &lt;abbr&gt;ARIA&lt;/abbr&gt; sont très bien supportés par les navigateurs et les &lt;abbr&gt;AT&lt;/abbr&gt;: &lt;code&gt;aria-label&lt;/code&gt;, &lt;code&gt;aria-labelledby&lt;/code&gt; et &lt;code&gt;aria-describedby&lt;/code&gt;. Ils permettent de rajouter de l&#39;information à un élément &lt;abbr&gt;HTML&lt;/abbr&gt; :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;aria-label&lt;/code&gt;, &lt;code&gt;aria-labelledby&lt;/code&gt; permettent de donner un nom accessible à un élément&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-describedby&lt;/code&gt; permet de rajouter au nom accessible, si besoin, en sus, une description accessible à un élément&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cependant, ils ne fonctionnent bien qu&#39;avec certains éléments :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;les éléments interactifs : &lt;code&gt;a&lt;/code&gt; (avec un attribut &lt;code&gt;href&lt;/code&gt;), &lt;code&gt;audio&lt;/code&gt; et &lt;code&gt;video&lt;/code&gt; (avec un attribut &lt;code&gt;controls&lt;/code&gt;), &lt;code&gt;input&lt;/code&gt; (sauf si &lt;code&gt;type=&amp;quot;hidden&amp;quot;&lt;/code&gt;), &lt;code&gt;select&lt;/code&gt;, &lt;code&gt;button&lt;/code&gt; et &lt;code&gt;textarea&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;les éléments &lt;code&gt;img&lt;/code&gt; et &lt;code&gt;iframe&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;les éléments possédant un rôle de landmark explicite, donc, avec un attribut &lt;code&gt;role&lt;/code&gt; ou un landmark implicite (une balise de structure &lt;abbr&gt;HTML5&lt;/abbr&gt; : &lt;code&gt;header&lt;/code&gt;, &lt;code&gt;footer&lt;/code&gt;, &lt;code&gt;main&lt;/code&gt;, &lt;code&gt;nav&lt;/code&gt;, &lt;code&gt;aside&lt;/code&gt; et &lt;code&gt;section&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;les éléments avec un des  &lt;a href=&quot;https://www.w3.org/TR/wai-aria-1.1/#widget_roles&quot; lang=&quot;en&quot; hreflang=&quot;en&quot;&gt;rôles de widget d&#39;&lt;abbr&gt;ARIA&lt;/abbr&gt; (27 pour &lt;abbr&gt;ARIA&lt;/abbr&gt; 1.1)&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pour tout autre élément &lt;abbr&gt;HTML&lt;/abbr&gt;, ces trois attributs &lt;abbr&gt;ARIA&lt;/abbr&gt; ont un support peu robuste voire aléatoire selon les couples &lt;abbr&gt;AT/navigateur, donc ne pas l&#39;utiliser comme seul moyen de passer une information nécessaire.&lt;/abbr&gt;&lt;/p&gt;
+&lt;h2 id=&quot;faut-il-les-utiliser-et-comment&quot;&gt;Faut-il les utiliser et comment ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/attributs-aria-qui-peuvent-vous-sauver/#faut-il-les-utiliser-et-comment&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Oui, on peut utiliser ces trois attributs &lt;abbr&gt;ARIA&lt;/abbr&gt; sur les éléments avec lesquels cela fonctionne (voir ci-dessus) pour passer une information essentielle, spécifiquement aux &lt;abbr&gt;AT&lt;/abbr&gt;.&lt;/p&gt;
+&lt;p&gt;Il faut savoir que &lt;code&gt;aria-label&lt;/code&gt; doit contenir, comme valeur, une chaîne de caractères qui sera le nom accessible. Alors que pour &lt;code&gt;aria-labelledby&lt;/code&gt; et &lt;code&gt;aria-describedby&lt;/code&gt;, la valeur de cet attribut référence le  ou les (séparée par un espace) &lt;code&gt;id&lt;/code&gt; d&#39;éléments (auto référencement possible) de la page dont le contenu sera utilisé comme nom accessible de l&#39;élément portant l&#39;attribut &lt;abbr&gt;Aria&lt;/abbr&gt;.&lt;/p&gt;
+&lt;p&gt;Lorsqu&#39;on utilise &lt;code&gt;aria-label&lt;/code&gt; ou &lt;code&gt;aria-labelledby&lt;/code&gt; sur un élément, le contenu ou l&#39;intitulé de cet élément n&#39;est plus restitué au &lt;abbr&gt;AT&lt;/abbr&gt;, mais remplacé par le nom accessible (pour &lt;code&gt;aria-label&lt;/code&gt; le contenu de cet attribut, pour &lt;code&gt;aria-labelledby&lt;/code&gt; le contenu de l&#39;élément référencé). Donc, seul, le nom accessible doit donner l&#39;ensemble des informations nécessaires à l&#39;&lt;abbr&gt;AT&lt;/abbr&gt; et donc à l&#39;utilisateur.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Important :&lt;/strong&gt; l&#39;&lt;code&gt;aria-labelledby&lt;/code&gt; peut admettre plusieurs valeurs séparées par un espace et peut s&#39;auto-référencer. Il fonctionne aussi avec du contenu généré par pseudo-classes &lt;abbr&gt;CSS&lt;/abbr&gt; &lt;code&gt;::before&lt;/code&gt; ou &lt;code&gt;::after&lt;/code&gt;. On peut également référencer un contenu masqué visuellement par : &lt;abbr&gt;CSS&lt;/abbr&gt;,  &lt;code&gt;visibility:hidden;&lt;/code&gt; ou &lt;code&gt;display:none;&lt;/code&gt;, et avec l&#39;attribut &lt;abbr&gt;HTML&lt;/abbr&gt;5 &lt;code&gt;hidden&lt;/code&gt;. Cependant, les bonnes pratiques demandent que si l&#39;interface est telle qu&#39;il n&#39;est pas possible d&#39;avoir une étiquette textuelle visible à l&#39;écran, il est préférable d&#39;utiliser &lt;code&gt;aria-label&lt;/code&gt; plutôt que &lt;code&gt;aria-labelledby&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Lorsque les deux attributs &lt;code&gt;aria-labelledby&lt;/code&gt; et &lt;code&gt;aria-label&lt;/code&gt; sont utilisés, les agents utilisateurs donnent la priorité (et donc sera le seul contenu restitué) à &lt;code&gt;aria-labelledby&lt;/code&gt; lors du calcul de la propriété de nom accessible.&lt;/p&gt;
+&lt;p&gt;Quant à lui, &lt;code&gt;aria-describedby&lt;/code&gt; va rajouter au nom accessible de l&#39;élément, une description accessible, plus longue ou plus complète, logiquement, que le nom accessible.&lt;/p&gt;
+&lt;h2 id=&quot;exemples&quot;&gt;Exemples &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/attributs-aria-qui-peuvent-vous-sauver/#exemples&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;button aria-label=&quot;accéder au code Hypertext markup language&quot;&amp;gt;html&amp;lt;/button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sortie pour un lecteur d&#39;écran : &amp;quot;accéder au code Hypertext markup language&amp;quot;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;h2 id=&quot;titre&quot;&amp;gt;Code de la page HTML&amp;lt;h2&amp;gt;
+&amp;lt;button aria-label=&quot;accéder au code Hypertext markup language&quot; aria-labelledby=&quot;titre&quot;&amp;gt;html&amp;lt;/buttton&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sortie pour un lecteur d&#39;écran : &amp;quot;Code de la page HTML&amp;quot;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;h3 id=&quot;titre&quot;&amp;gt;Code de la page de formulaire de connexion&amp;lt;h3&amp;gt;
+&amp;lt;button aria-label=&quot;accéder au code HTML&quot; aria-describedby=&quot;titre&quot;&amp;gt;html&amp;lt;/buttton&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sortie pour un lecteur d&#39;écran : &amp;quot;accéder au code HTML code de la page de formulaire de connexion&amp;quot;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;h3 id=&quot;titre&quot;&amp;gt;Code de la page de formulaire de connexion&amp;lt;h3&amp;gt;
+&amp;lt;button id=&quot;code&quot; aria-describedby=&quot;code titre&quot;&amp;gt;Accéder au code HTML&amp;lt;/buttton&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Sortie pour un lecteur d&#39;écran : &amp;quot;Accéder au code HTML code de la page de formulaire de connexion&amp;quot;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Les CAPTCHAs et l&#39;accessibilité</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/"/>
+    <updated>2018-02-07T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/</id>
+    <content type="html">&lt;h1&gt;Les CAPTCHAs et l&#39;accessibilité&lt;/h1&gt;
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/#introduction&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Un CAPTCHA (« Completely Automated Public Turing-test to tell Computers and Humans Apart », en français « Test public de Turing complètement automatisé pour différencier les humains des ordinateurs ») est un test destiné à différencier un utilisateur d’un programme informatique. Il est utilisé notamment sur les formulaires pour se prémunir du SPAM.&lt;/p&gt;
+&lt;p&gt;Il existe différents types de CAPTCHA, les plus nombreux sont les CAPTCHAs visuels où on demande à l’utilisateur de saisir une série de lettres déformées affichées à l’écran.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/web/images/captchas/captcha.png&quot; alt=&quot;Capture d&#39;écran d&#39;un captcha visuel&quot; class=&quot;img-fluid&quot; /&gt;&lt;br /&gt;
+&lt;strong&gt;Exemple de CAPTCHA visuel&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;premier-constat-le-captcha-et-les-utilisateurs&quot;&gt;Premier constat : le Captcha et les utilisateurs &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/#premier-constat-le-captcha-et-les-utilisateurs&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Les CAPTCHAs posent souvent des difficultés même pour les utilisateurs les plus aguerris. En effet il est souvent nécessaire d’effectuer plusieurs tentatives avant de répondre correctement à un CAPTCHA. Pour certains utilisateurs la présence d’un CAPTCHA est tout simplement rédhibitoire. Par exemple, un utilisateur non-voyant ne peut pas renseigner un CAPTCHA visuel. Même si certains sites proposent des alternatives, comme un CAPTCHA audio en plus d’un CAPTCHA visuel, dans les faits c’est rarement concluant. C&#39;est d&#39;ailleurs la première source de difficultés citée par les utilisateurs malvoyants d&#39;après &lt;a href=&quot;https://webaim.org/projects/screenreadersurvey7&quot;&gt;le sondage réalisé par le site WebAIM fin 2017&lt;/a&gt; :&lt;br /&gt;
+&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/web/images/captchas/webaim.png&quot; alt=&quot;Graphique issu du sondage webAIM 2017 montrant que les captcha sont la première source de problème&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Les CAPTCHA pointés du doigt par les utilisateurs malvoyants (sondage WebAIM 2017)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;L’explosion des moyens de calcul permet aux bots et autres programmes informatiques d’être de plus en plus performants. Il est aujourd’hui simple de concevoir un programme permettant de deviner le texte inscrit dans une image ou vocalisé dans un fichier audio.&lt;br /&gt;
+Pour que le CAPTCHA reste efficace vis-à-vis des bots, il est donc nécessaire d’accentuer la déformation de l’image ou du son proposé par le CAPTCHA : cela accentue d’autant les difficultés pour l’utilisateur.&lt;/p&gt;
+&lt;p&gt;C’est pourquoi Google tente de trouver des alternatives pour différencier un utilisateur humain d’un robot. Ils proposent le « No Captcha », une simple case à cocher du point de vue de l’utilisateur. Celui-ci utilise des données annexes telles que la résolution de l’écran, le déplacement du pointeur de la souris ou le temps de saisie d&#39;un formulaire…etc.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/web/images/captchas/nocaptcha.png&quot; alt=&quot;Capture d&#39;écran du no captcha de google&quot; class=&quot;img-fluid&quot; /&gt;&lt;br /&gt;
+&lt;strong&gt;No CAPTCHA de Google&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bien que cette solution soit plus efficace, elle n’est pas aujourd’hui satisfaisante en termes d’accessibilité car en cas de doute, un CAPTCHA standard est affiché à l’écran. C’est souvent le cas pour un utilisateur qui ne peut pas utiliser une souris et qui navigue au clavier ou pour un utilisateur qui navigue à l’aide d’un lecteur d’écran (cas des personnes malvoyantes). Il faut donc toujours proposer un moyen de contact alternatif (email, téléphone….) dans le cas où le CAPTCHA ne pourrait pas être renseigné.&lt;/p&gt;
+&lt;p&gt;Entre les utilisateurs qui ne peuvent pas saisir le CAPTCHA, ceux qui n’y arrivent et ceux qui ne comprennent pas ce qu’il faut faire, la mise en place d’un CAPTCHA n’est pas anodine pour l’audience d’un site. Partant du principe que les CAPTCHAs posent des difficultés à de nombreux utilisateurs, la première recommandation est donc de &lt;strong&gt;ne pas utiliser de CAPTCHA&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;deuxieme-constat-le-captcha-et-la-securite&quot;&gt;Deuxième constat : Le CAPTCHA et la sécurité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/#deuxieme-constat-le-captcha-et-la-securite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Dans &lt;a href=&quot;https://security.googleblog.com/2014/12/are-you-robot-introducing-no-captcha.html&quot;&gt;un article de Google publié en 2014&lt;/a&gt;, on apprend qu’une intelligence artificielle obtient un score de 99,8% pour résoudre des CAPTCHAs visuels parmi les plus difficiles, soit un meilleur score que celui obtenu par un « vrai » utilisateur ! Même chose dans un autre article de 2018 (&lt;a href=&quot;https://medium.com/mlmemoirs/breaking-captcha-using-machine-learning-in-0-05-seconds-9feefb997694&quot; lang=&quot;en&quot;&gt;Breaking CAPTCHA Using Machine Learning in 0.05 Seconds&lt;/a&gt;). Des services sont en effet capables de déterminer la police de caractères utilisée dans une image ou bien de deviner si l’image contient un objet (un chat, une voiture, un chapeau, etc.).&lt;/p&gt;
+&lt;p&gt;Face à ce constat (fuite des utilisateurs et sécurité incertaine), on en revient à notre première recommandation qui est de &lt;strong&gt;ne pas utiliser de CAPTCHA&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;les-solutions-preconisees&quot;&gt;Les solutions préconisées &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/#les-solutions-preconisees&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;L’idée est donc dans un premier temps de déterminer les risques et de se poser les questions suivantes :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quels sont les risques en cas d’attaque ?&lt;/li&gt;
+&lt;li&gt;Quel est le besoin réel, entre éliminer les requêtes des bots et apporter une solution sécurisée ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;En fonction des réponses, il s’agit de mettre en place la solution la plus adaptée.&lt;/p&gt;
+&lt;h2 id=&quot;honeypot-et-time-measuring-deux-techniques-simples-a-mettre-en-place-pour-identifier-les-bots&quot;&gt;HoneyPot et Time measuring, deux techniques  simples à mettre en place pour identifier les bots &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/#honeypot-et-time-measuring-deux-techniques-simples-a-mettre-en-place-pour-identifier-les-bots&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Si les risques sont limités, ces 2 techniques ont l’avantage d’être transparentes pour l’utilisateur.&lt;br /&gt;
+La première solution consiste à ajouter un champ masqué à l’écran dans le formulaire. Celui-ci ne sera donc jamais renseigné par un utilisateur. Coté serveur si on constate que ce champ a été renseigné, c’est qu’il s’agit d’un programme malveillant.&lt;br /&gt;
+La seconde technique consiste à mesurer le temps que l’utilisateur met pour saisir le formulaire. Si celui-ci s’avère très rapide, il s’agit très probablement d’un programme malveillant.&lt;/p&gt;
+&lt;h2 id=&quot;des-solutions-anti-spam-et-liste-noire-pour-eliminer-les-requetes-de-bots&quot;&gt;Des solutions anti-SPAM et liste noire pour éliminer les requêtes de bots &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/#des-solutions-anti-spam-et-liste-noire-pour-eliminer-les-requetes-de-bots&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Il est également possible coté serveur de trier les informations reçues à l’aide d’un logiciel anti-SPAM qui supprime automatiquement les soumissions des logiciels malveillants en analysant les données et l’adresse IP à l’origine de la requête.&lt;/p&gt;
+&lt;h2 id=&quot;un-test-logique-ou-mathematique-textuel-appele-aussi-captcha-textuel&quot;&gt;Un test logique ou mathématique textuel, appelé aussi Captcha textuel &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/#un-test-logique-ou-mathematique-textuel-appele-aussi-captcha-textuel&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Il s’agit de simples phrases demandant de recopier un mot, de résoudre une opération mathématique simple, etc.&lt;/p&gt;
+&lt;p&gt;« Recopier le mot : maison »&lt;br /&gt;
+« Combien font deux plus deux ? »&lt;br /&gt;
+« Quel animal fait miaou ? »&lt;br /&gt;
+« De quelle couleur est le ciel ? »&lt;/p&gt;
+&lt;p&gt;A condition que les questions restent très simples, ce type de CAPTCHA pose très peu de difficulté aux utilisateurs.&lt;br /&gt;
+Comme il est précisé dans &lt;a href=&quot;https://www.accede-web.com/notices/graphique/7-formulaires/7-13-tests-de-securite-tests-logiques/&quot;&gt;la notice du site acceDe Web&lt;/a&gt; une bonne pratique dans ce cas consiste à prévoir une solution de rafraîchissement, très utile pour les personnes déficientes cognitives.&lt;/p&gt;
+&lt;h2 id=&quot;une-verification-par-email-sms-ou-telephone-pour-une-securite-renforcee&quot;&gt;Une vérification par email, SMS ou téléphone pour une sécurité renforcée &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/#une-verification-par-email-sms-ou-telephone-pour-une-securite-renforcee&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Cette solution consiste à envoyer un email, un SMS ou à téléphoner directement à l’utilisateur pour que celui-ci confirme la transaction en cliquant sur un lien ou en renseignant le code indiqué.&lt;/p&gt;
+&lt;p&gt;C&#39;est à la fois à la fois plus contraignante pour l’utilisateur qui doit communiquer des informations personnelles et plus lourd à mettre en place mais c’est une solution très efficace quand un niveau de sécurité fort est nécessaire.&lt;/p&gt;
+&lt;h2 id=&quot;pour-recapituler&quot;&gt;Pour récapituler &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/#pour-recapituler&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Il n’existe pas de solutions parfaites ni pour l’utilisateur, ni en termes de sécurité. L’idée est d’opter pour la technique la plus juste en fonction du service proposé. Il est important par ailleurs en cas d’attaque d’avoir des logs pour analyser et contrer les attaques ultérieures.&lt;br /&gt;
+ &lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Le nom accessible en HTML</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/le-nom-accessible-en-html/"/>
+    <updated>2018-10-26T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/le-nom-accessible-en-html/</id>
+    <content type="html">&lt;h1&gt;Le nom accessible en &lt;abbr&gt;HTML&lt;/abbr&gt;&lt;/h1&gt;
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/le-nom-accessible-en-html/#introduction&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Le nom (&lt;span lang=&quot;en&quot;&gt;name&lt;/span&gt;) du composant d&#39;interface est appelé aussi nom accessible  (&lt;span lang=&quot;en&quot;&gt;accessible name&lt;/span&gt;), c&#39;est globalement ce nom qui va être exposé à la technologie d&#39;assistance &lt;abbr&gt;AT&lt;/abbr&gt; via l&#39;&lt;abbr&gt;API&lt;/abbr&gt; d&#39;accessibilité (&lt;span lang=&quot;en&quot;&gt;accessibility &lt;abbr&gt;API&lt;/abbr&gt;&lt;/span&gt;). Ce nom est calculé par le navigateur via un algorithme appelé &lt;a href=&quot;https://www.w3.org/TR/accname-1.1/&quot;&gt;&lt;span lang=&quot;en&quot;&gt;Accessible Name and Description Computation 1.1&lt;/span&gt;&lt;/a&gt;.&lt;br /&gt;
+En fait, pour faire simple, le navigateur va générer un arbre accessible (&lt;span lang=&quot;en&quot;&gt;accessibility tree&lt;/span&gt;) à partir du &lt;span lang=&quot;en&quot;&gt;Document Model Object&lt;/span&gt; (&lt;abbr&gt;DOM&lt;/abbr&gt;) dans lequel une grande majorité des éléments &lt;abbr&gt;HTML&lt;/abbr&gt; (ceux qui n&#39;ont qu&#39;un but de présentation, ex. : balises &lt;code&gt;div&lt;/code&gt; et &lt;code&gt;span&lt;/code&gt; n&#39;en ont pas l&#39;utilité) ont besoin d&#39;un nom (accessible) pour être correctement identifiés par l&#39;&lt;abbr&gt;AT&lt;/abbr&gt;.&lt;/p&gt;
+&lt;p&gt;Le nom accessible est issu du contenu d&#39;une balise, d&#39;attributs de cette balise ou d&#39;un élément qui lui est associé.&lt;/p&gt;
+&lt;h2 id=&quot;en-pratique-comment-ca-marche&quot;&gt;En pratique, comment ça marche ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/le-nom-accessible-en-html/#en-pratique-comment-ca-marche&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Le nom accessible est, par exemple, annoncé par un lecteur d&#39;écran à la prise de focus sur cet élément mais le rôle de l&#39;élément est aussi ajouté (lien, graphique, bouton...).&lt;/p&gt;
+&lt;h3 id=&quot;acceder-au-nom-accessible-via-le-navigateur&quot;&gt;Accéder au nom accessible via le navigateur &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/le-nom-accessible-en-html/#acceder-au-nom-accessible-via-le-navigateur&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Pour accéder au nom (accessible), le plus simple est d&#39;utiliser les outils des navigateurs.&lt;/p&gt;
+&lt;p&gt;Dans Chrome, il faut, dans les Chrome dev tools (&lt;kbd&gt;Ctrl+ Maj. + i&lt;/kbd&gt;), inspecter un élément (onglet &amp;quot;Elements&amp;quot;) et ouvrir le panneau &amp;quot;Accessibility&amp;quot; à la place de celui de &amp;quot;Style&amp;quot; (généralement à droite). On accède à l&#39;&amp;quot;Accessibility tree&amp;quot; et dans &amp;quot;Computed properties&amp;quot; au &amp;quot;Name&amp;quot;, le nom accessible de l&#39;élément inspecté.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/web/images/chrome_name.png&quot; alt=&quot;Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Dans FireFox, il faut, dans les dev tools (&lt;kbd&gt;Ctrl+ Maj. + i&lt;/kbd&gt;), ouvrir l&#39;onglet &amp;quot;Accessibilité&amp;quot; (à afficher les &amp;quot;Options&amp;quot; des dev tools), inspecter un élément. On accède au &amp;quot;Name&amp;quot;, le nom accessible de l&#39;élément inspecté.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/web/images/FF_name.png&quot; alt=&quot;Panneaux des outils de développement de Firefox avec l&#39;onglet Accessibilité ouvert&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;contenu-dune-balise&quot;&gt;Contenu d&#39;une balise &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/le-nom-accessible-en-html/#contenu-dune-balise&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;a href=&amp;quot;canard.html&amp;quot;&amp;gt;canards en plastique&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Ici, le nom du lien est le contenu (libellé) de celui-ci : &amp;quot;canards en plastique&amp;quot;. Un utilisateur de lecteur d&#39;écran à la prise de focus sur cet élément entendra : &amp;quot;canards en plastique lien&amp;quot;. Pour un utilisateur de commande vocale, pour cliquer sur ce lien, dira : &amp;quot;cliquer canards en plastique lien&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Donc, un élément de ce type &lt;code&gt;&amp;lt;button type=”submit”&amp;gt;&amp;lt;/button&amp;gt;&lt;/code&gt; sans intitulé, ne sera pas accessible, bien sûr !&lt;/p&gt;
+&lt;p&gt;Également, on peut additionner les éléments pour donner un nom.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;button type=”submit”&amp;gt;Acheter &amp;lt;img alt=&amp;quot;le canard en plastique&amp;quot; src=&amp;quot;canard.jpg&amp;quot;&amp;gt;&amp;lt;/button&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Ce bouton aura lui un nom accessible qui est le contenu du bouton : l&#39;intitulé textuel, &amp;quot;Acheter &amp;quot; plus le &lt;code&gt;alt&lt;/code&gt; de l&#39;image : &amp;quot;le canard en plastique&amp;quot; donc &amp;quot;Acheter le canard en plastique&amp;quot;.&lt;/p&gt;
+&lt;h3 id=&quot;element-associe&quot;&gt;Élément associé &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/le-nom-accessible-en-html/#element-associe&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Par ailleurs, pour les éléments de formulaire, le nom accessible est le &lt;code&gt;label&lt;/code&gt; lorsqu’il est programmatiquement associé à l&#39;élément via l&#39;attribut &lt;code&gt;for&lt;/code&gt; référençant l&#39;&lt;code&gt;id&lt;/code&gt; du champ.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;label for=&quot;search&quot;&amp;gt;Rechercher&amp;lt;/label&amp;gt;
+&amp;lt;input id=&quot;search&quot; type=&quot;text&quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Avec ce code, le lecteur d&#39;écran dira : &amp;quot;Rechercher édition&amp;quot;.&lt;/p&gt;
+&lt;h3 id=&quot;avec-aria-aussi&quot;&gt;Avec &lt;abbr&gt;ARIA&lt;/abbr&gt; aussi ! &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/le-nom-accessible-en-html/#avec-aria-aussi&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;abbr&gt;ARIA&lt;/abbr&gt; va pouvoir nous aider pour donner un nom à un élément &lt;abbr&gt;HTML&lt;/abbr&gt;, en utilisant &lt;code&gt;aria-label&lt;/code&gt; et &lt;code&gt;aria-labelledby&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;button class=&quot;navbar-toggler&quot; type=&quot;button&quot; aria-label=&quot;Ouverture menu navigation&quot; ... &amp;gt;
+&amp;lt;span class=&quot;navbar-toggler-icon&quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ce bouton de menu hamburger a donc un nom : &amp;quot;Ouverture menu navigation&amp;quot;.&lt;br /&gt;
+Mais on pourrait aussi utiliser &lt;code&gt;aria-labelledby&lt;/code&gt; pour référencer un autre élément de la page comme nom :&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;input type=&quot;search&quot; aria-labelledby=&quot;this&quot;&amp;gt;
+&amp;lt;button id=&quot;this&quot;&amp;gt;Rechercher dans le site&amp;lt;/button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Lors de la prise de focus sur le champ, le lecteur d&#39;écran annonce &amp;quot;Rechercher sur le site édition&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Plus de détails sur &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/attributs-aria-qui-peuvent-vous-sauver/&quot;&gt;&amp;quot;Les attributs &lt;abbr&gt;ARIA&lt;/abbr&gt; qui peuvent vous sauver&amp;quot;&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;webographie&quot;&gt;Webographie &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/le-nom-accessible-en-html/#webographie&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/accname-1.1/&quot; lang=&quot;en&quot; hreflang=&quot;en&quot;&gt;Accessible Name and Description Computation 1.1&lt;/a&gt; par &lt;span lang=&quot;en&quot;&gt;the Accessible Rich Internet Applications Working Group&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://simplyaccessible.com/article/accessible-name/&quot; lang=&quot;en&quot; hreflang=&quot;en&quot;&gt;Demystifying accessible name&lt;/a&gt; par Joe Watkins&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/&quot; lang=&quot;en&quot; hreflang=&quot;en&quot;&gt;What is an accessible name?&lt;/a&gt; par Léonie Watson&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Utiliser ARIA, les messages d&#39;état, de statut ou contextuel</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/"/>
+    <updated>2018-10-26T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/</id>
+    <content type="html">&lt;h1&gt;Utiliser &lt;abbr&gt;ARIA&lt;/abbr&gt;  les messages d&#39;état, de statut ou contextuel&lt;/h1&gt;
+&lt;h2 id=&quot;message-de-statut-et-accessibilite&quot;&gt;Message de statut et accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/#message-de-statut-et-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Le critère &lt;a lang=&quot;en&quot; href=&quot;https://www.w3.org/TR/WCAG21/#status-messages&quot;&gt;4.1.3 Status Messages&lt;/a&gt; des WCAG 2.1 demande que les informations importantes pour l&#39;utilisateur, qui n&#39;induisent pas de changement de contexte (pas d&#39;ouverture d&#39;une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu ou du &lt;span lang=&quot;en&quot;&gt;viewport&lt;/span&gt;), soient perçues via des propriétés et rôles (&lt;abbr&gt;ARIA&lt;/abbr&gt;) par toute personne utilisant une &lt;abbr&gt;AT&lt;/abbr&gt; sans prise de focus sur le message.&lt;/p&gt;
+&lt;h2 id=&quot;quelques-exemple-de-messages-detat-de-statut-ou-contextuels&quot;&gt;Quelques exemple de messages d&#39;état, de statut ou contextuels &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/#quelques-exemple-de-messages-detat-de-statut-ou-contextuels&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Lorsqu&#39;un utilisateur appuie sur un bouton de recherche, le contenu de la page est mis à jour asynchronement pour ajouter les résultats de la recherche  affichés dans une région située sous le bouton de recherche. Le message &amp;quot;XX résultats trouvés&amp;quot; est en haut de ce nouveau contenu. Un lecteur d&#39;écran devra annoncer &amp;quot;XX résultats ont été trouvés&amp;quot;. Dans ce cas, l&#39;information fournie à l&#39;utilisateur est important et doit être immédiatement donnée, donc on utilisera le rôle &lt;code&gt;&amp;quot;alert&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;h2 role=&amp;quot;alert&amp;quot;&amp;gt;
+    5 résultats ont été trouvés
+&amp;lt;/h2&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Lorsqu&#39;un utilisateur après avoir choisi un article, appuie sur un bouton &amp;quot;Ajouter au panier&amp;quot;, une mention textuelle &amp;quot;1 élément ajouté, 4 articles dans le panier&amp;quot; apparaît temporairement près de l&#39;icône du panier. Un lecteur d&#39;écran devra annoncer &amp;quot;un article ajouté au panier, le panier contient actuellement 4 articles&amp;quot;. Ici, l&#39;information à pousser à l&#39;utilisateur est moins cruciale que précédemment donc on utilisera le rôle &lt;code&gt;&amp;quot;status&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;p role=&amp;quot;status&amp;quot;&amp;gt;
+    un article ajouté au panier, le panier contient actuellement 4 articles
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Une fois qu&#39;un utilisateur a activé un processus d&#39;application de filtres de recherche complexes, une icône symbolisant « en attente » : un sablier, une horloge… apparaît à l&#39;écran. Le lecteur d&#39;écran annonce &amp;quot;Application occupée, chargement en cours&amp;quot;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;div role=&amp;quot;alert&amp;quot;&amp;gt;
+    Application occupée, chargement en cours
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Une application affiche une barre de progression pour indiquer l&#39;état d&#39;une mise à jour d&#39;un élément de contenu. Le lecteur d&#39;écran fournit des annonces intermittentes des progrès : &amp;quot;10% mis à jour&amp;quot;, puis &amp;quot;20% mis à jour&amp;quot;…&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;div role=&amp;quot;progressbar&amp;quot; aria-valuenow=&amp;quot;20&amp;quot; aria-valuemin=&amp;quot;0&amp;quot; aria-valuemax=&amp;quot;100&amp;quot;&amp;gt;
+    20% mis à jour
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Après qu&#39;un utilisateur a soumis un formulaire, du texte est ajouté au formulaire existant comme suit : &amp;quot;Votre formulaire a été soumis avec succès&amp;quot;. Le lecteur d&#39;écran annonce le même message.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;div role=&amp;quot;alert&amp;quot;&amp;gt;
+    Votre formulaire a été soumis avec succès
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Lorsqu&#39;un utilisateur remplit un formulaire mais certaines des données entrées sont incorrectes, du texte est ajouté en haut du formulaire existant indique &amp;quot;XX erreurs dans le formulaire&amp;quot;. Le lecteur d&#39;écran annonce le message &amp;quot;Formulaire non envoyé car XX erreurs de validation&amp;quot; (ceci ne dispense pas de donner les détails de l&#39;erreur pour chaque champ incorrectement rempli). L&#39;information d&#39;erreur dans le formulaire est importante et urgente, immédiate, donc on utilise  le rôle &lt;code&gt;&amp;quot;alertdialog&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;div role=&amp;quot;alertdialog&amp;quot; aria-labelledby=&amp;quot;errors&amp;quot;&amp;gt;
+   &amp;lt;p id=&amp;quot;errors&amp;quot;&amp;gt;Formulaire non envoyé car 2 erreurs de validation&amp;lt;/p&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Une fois qu&#39;un utilisateur, dans une application de gestion documentaire en ligne, a inséré un nouveau document dans un répertoire, une notification toast (message de feedback en popup) affiche le message &amp;quot;Le document YYY est bien enregistré dans le répertoire XXX&amp;quot;, qui est également lu par un lecteur d&#39;écran.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;p role=&amp;quot;status&amp;quot;&amp;gt;
+    Le document YYY est bien enregistré dans le répertoire XXX
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Dans une application de mailing en ligne, l&#39;utilisateur choisi dans une liste de destinataire de rajouter/enlever une nouvelle adresse mail, cette l&#39;adresse e-mail du destinataire est affichée à l&#39;écran à la suite de celle déjà choisies pour ce message. Le lecteur d&#39;écran devra annoncer l&#39;ajout de cette nouvelle adresse mail. Il faut comprendre que le texte, adresse mail, ajouté/retiré à la liste peut ne pas être visible à l&#39;écran pour certains utilisateurs d&#39;&lt;abbr&gt;AT&lt;/abbr&gt;. Donc, afin de donner le contexte aux utilisateurs de lecteurs d&#39;écran, une information supplémentaire est nécessaire sous forme de contenu non affiché mais lu par la synthèse vocale. Comme de nouvelles informations sont ajoutées dans un ordre significatif et les anciennes informations peuvent disparaître (un autre exemple pourrait être un &lt;span lang=&quot;en&quot;&gt;chat&lt;/span&gt; ou &lt;span lang=&quot;en&quot;&gt;chatbot&lt;/span&gt;), on utilise, ici, le rôle &lt;code&gt;&amp;quot;log&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;div role=&amp;quot;log&amp;quot;&amp;gt;
+  &amp;lt;ol&amp;gt;
+    &amp;lt;li&amp;gt;XX@YY.ZZ a été rajouté&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;XX@YY.ZZ a été retiré&amp;lt;/li&amp;gt;
+  &amp;lt;/ol&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Parfois, on veut fournir des messages que pour les lecteurs d&#39;écran, donc, sans avoir besoin de les afficher visuellement. Dans ce cas aussi, il faut utiliser ces rôles &lt;abbr&gt;ARIA&lt;/abbr&gt; pour pousser le message au &lt;abbr&gt;AT&lt;/abbr&gt; et en particulier aux lecteurs d&#39;écran sans les afficher à l&#39;écran.&lt;/p&gt;
+&lt;h2 id=&quot;les-messages-de-statut-qui-nen-sont-pas&quot;&gt;Les messages de statut qui n&#39;en sont pas ! &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/#les-messages-de-statut-qui-nen-sont-pas&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;La règle de base est que si le focus est déplacé ou que le contexte est restitué aux utilisateur d&#39;&lt;abbr&gt;AT&lt;/abbr&gt;, ce n&#39;est pas un message de statut :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;une modale qui demande une action utilisateur, sur laquelle le focus est donc mis&lt;/li&gt;
+&lt;li&gt;lors de l&#39;apparition/disparition de contenu suite une interaction utilisateur qui est annoncé aussi aux &lt;abbr&gt;AT&lt;/abbr&gt; (par exemple, on annonce au lecteur d&#39;écran &amp;quot;ouvert/fermé&amp;quot; pour un menu, un accordéon)&lt;/li&gt;
+&lt;li&gt;pour une système de panneaux, dont l&#39;onglet sélectionné est annoncé aux &lt;abbr&gt;AT&lt;/abbr&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Les bonnes pratiques pour les liens d’évitements</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/liens-evitement/"/>
+    <updated>2019-06-19T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/liens-evitement/</id>
+    <content type="html">&lt;h1&gt;Les bonnes pratiques pour les liens d’évitements&lt;/h1&gt;
+&lt;h2 id=&quot;quest-ce-quun-lien-devitement&quot;&gt;Qu’est-ce qu’un lien d’évitement ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#quest-ce-quun-lien-devitement&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;quest-ce&quot;&gt;Qu&#39;est ce ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#quest-ce&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Les liens d’évitement sont des raccourcis permettant d’accéder directement à une zone de contenu ou d’éviter des régions de la page, afin de naviguer plus rapidement.&lt;br /&gt;
+On peut distinguer 3 types de liens :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;les liens d&#39;accès rapide : rassemblés en haut de page et permettant d’aller aux principales régions de la page : « Aller au menu », « Aller au contenu », « Aller à la recherche », par exemple&lt;/li&gt;
+&lt;li&gt;les liens d’évitement : positionnés avant la région qu’ils permettent de sauter : « Passer la section », « Passer le chapitre »&lt;/li&gt;
+&lt;li&gt;les liens de navigation interne à une page : « Retour en haut de page », par exemple&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Ces liens d’évitement permettent donc à l’utilisateur d’éviter des parties de pages, que l’on navigue au clavier, que l’on ait du mal à se repérer dans une page longue ou que scroller soit difficile.&lt;/p&gt;
+&lt;h3 id=&quot;pour-qui&quot;&gt;Pour qui ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#pour-qui&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Les liens d’évitement sont précieux pour de multiples utilisateurs :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;les utilisateurs de lecteur d’écran ou ne pouvant utiliser la souris, qui se déplacent donc au clavier uniquement&lt;/li&gt;
+&lt;li&gt;Les utilisateurs qui peinent à naviguer dans une page longue : les déficients moteurs (fatigabilité ou limitations motrices) ou les personnes qui naviguent sur leur smartphone (on évite le swipe, le balayage)&lt;/li&gt;
+&lt;li&gt;les malvoyants, qui utilisent ou pas une loupe d’écran, et ayant du mal à se faire une représentation globale de la topologie de la page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;quelles-sont-les-types-de-solutions&quot;&gt;Quelles sont les types de solutions ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#quelles-sont-les-types-de-solutions&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;les liens d&#39;accès rapide : la solution la plus répandue, est une série de liens (entre 1 et 6 généralement) positionnés tout en haut de page visuellement et intégrés dans le code juste après l’ouverture de la balise body. Chaque lien pointe vers  une région,  ou toute autre partie importante de la page. Ils sont, généralement, définies avec une taille de police plus petite que le corps du texte ou par défaut cachés et rendus visibles, lors de la navigation clavier, à la prise de focus.&lt;/li&gt;
+&lt;li&gt;Les liens d‘évitement : ces éléments sont positionnés juste avant chaque partie de page ou région à sauter. Ils peuvent être toujours visibles ou bien rendus visibles, lors de la navigation clavier, à la prise de focus.&lt;/li&gt;
+&lt;li&gt;Les liens de navigation internes de type « retour en haut de page » : ils sont souvent collés (position CSS &lt;code&gt;sticky&lt;/code&gt;) tout en bas, côté droit du viewport, toujours visible ou n’apparaissant que lorsqu’on arrive en fin de scroll vertical.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;quelles-sont-les-bonnes-pratiques&quot;&gt;Quelles sont les bonnes pratiques ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#quelles-sont-les-bonnes-pratiques&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;quand-doit-on-mettre-en-place-des-liens-devitement&quot;&gt;Quand doit-on mettre en place des liens d’évitement ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#quand-doit-on-mettre-en-place-des-liens-devitement&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;La première question à se poser est, sur mon site, l’utilisateur a-t-il besoin de liens d’évitement ?&lt;/p&gt;
+&lt;p&gt;Les principales raisons de la mise en place de liens d’évitement :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;la page est longue&lt;/li&gt;
+&lt;li&gt;la navigation contient beaucoup de liens&lt;/li&gt;
+&lt;li&gt;le contenu contient beaucoup de liens (plusieurs menus de navigation, pieds de page faisant office de plan de site…)&lt;/li&gt;
+&lt;li&gt;la page est découpée en de nombreuses parties distinctes (portail, tableau de bord…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;utiliser-une-solution-hybride&quot;&gt;Utiliser une solution hybride ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#utiliser-une-solution-hybride&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;On a vu que les liens d’accès rapide, peuvent être visibles, ou masqués par défaut pour être affichés uniquement lors de la navigation clavier. Cette dernière option répond souvent à des problématiques esthétiques. Néanmoins, elle supprime le bénéfice que pourraient apporter ces liens aux autres utilisateurs qui n’utilisent pas le clavier (utilisateurs de loupe logicielle par exemple). Une solution, qui permettrait de concilier les avantages des deux techniques, serait de positionner un bouton discret mais affordant au click, en haut de page, permettant de déclencher à la demande l’ouverture et la fermeture du panneau des liens d’accès rapides. On pourrait également penser à une barre horizontale visible tout en haut à l’ouverture de la page et qui disparaît lors du scroll vers le bas de page.&lt;/p&gt;
+&lt;p&gt;Quelle que soit la solution, il faut que les liens d’évitement soient visibles (dans la mesure du possible) et utilisables par tous !&lt;/p&gt;
+&lt;p&gt;Pour toutes remarques, suggestions, n&#39;hésitez pas à consulter ou créer une issue sur notre (&lt;a href=&quot;https://github.com/Orange-OpenSource/a11y-guidelines/issues&quot;&gt;compte github&lt;/a&gt;).&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>L&#39;attribut aria-live et le role alert</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/"/>
+    <updated>2020-01-08T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/</id>
+    <content type="html">&lt;h1&gt;L&#39;attribut aria-live et le role alert&lt;/h1&gt;
+&lt;p&gt;Les utilisateurs qui naviguent à l&#39;aide d&#39;un lecteur d&#39;écran ne sont pas toujours au courant des modifications apportées dans la page. Lorsqu&#39;une information est actualisée ou lorsqu&#39;un message apparaît il est parfois nécessaire de faire parler le lecteur d&#39;écran pour informer l&#39;utilisateur. Pour ce faire, le language &lt;abbr&gt;ARIA&lt;/abbr&gt; dispose du role &lt;code&gt;alert&lt;/code&gt; et de l&#39;attribut &lt;code&gt;aria-live&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;le-role-alert&quot;&gt;Le role alert &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/#le-role-alert&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Positionné sur un élément HTML, celui-ci permet d&#39;indiquer au lecteur d&#39;écran de vocaliser l&#39;élément automatiquement lors de sa création. Veiller toutefois à utiliser ce rôle uniquement dans les cas appropriés, comme il est clairement indiqué dans la documentation &lt;a href=&quot;https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_r%C3%B4le_alert&quot;&gt;MDN de Mozilla&lt;/a&gt;. De fait de sa nature intrusive, le role alert doit être utilisé avec parcimonie et uniquement dans les situations où l’attention de l’utilisateur est immédiatement requise. Les changements dynamiques de moindre urgence devraient utiliser une méthode moins agressive, telle que &lt;code&gt;aria-live=&amp;quot;polite&amp;quot;&lt;/code&gt; ou autres rôles de zone live.&lt;/p&gt;
+&lt;p&gt;Pour déclencher une alerte, plusieurs méthodes sont possibles, avec des supports qui différent en fonction du couple navigateur et lecteur d&#39;écran utilisé. Vous pouvez consulter &lt;a href=&quot;https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/&quot;&gt;l&#39;article de Steve Faulkner (en anglais)&lt;/a&gt; à ce sujet.&lt;/p&gt;
+&lt;p&gt;Voici quelques exemples de méthodes qui sont bien supportées.&lt;/p&gt;
+&lt;h3 id=&quot;creer-un-nouvel-element-dans-le-dom&quot;&gt;Créer un nouvel élément dans le DOM &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/#creer-un-nouvel-element-dans-le-dom&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;On peut déclencher une alerte en insérant un nouvel élément dans le &lt;abbr&gt;DOM&lt;/abbr&gt; via Javascript.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;span role=&quot;alert&quot;&amp;gt;Ceci est un message d&#39;alerte.&amp;lt;/span&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;ajouter-un-role-alert-sur-un-element-existant&quot;&gt;Ajouter un role alert sur un élément existant &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/#ajouter-un-role-alert-sur-un-element-existant&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Le déclenchement d&#39;une alerte peut également s&#39;effectuer en ajoutant un &lt;code&gt;role=&amp;quot;alert&amp;quot;&lt;/code&gt;, à un élément existant, dynamiquement via Javascript.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;
+document.getElementById(&#39;alert&#39;).setAttribute(&quot;role&quot;, &quot;alert&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;utiliser-innerhtml&quot;&gt;Utiliser innerHTML &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/#utiliser-innerhtml&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Créer une alerte via la propriété innerHTML.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;js&quot;&gt;
+element.innerHTML = &#39;&amp;lt;div role=&quot;alert&quot;&amp;gt;Ceci est une alerte&amp;lt;/div&amp;gt;&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;lattribut-aria-live&quot;&gt;L&#39;attribut &lt;code&gt;aria-live&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/#lattribut-aria-live&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Positionné sur un élément HTML, l&#39;attribut &lt;code&gt;aria-live&lt;/code&gt; permet d&#39;indiquer au lecteur d&#39;écran que toute modification apportée à son contenu entraînera une vocalisation par le lecteur d&#39;écran.&lt;/p&gt;
+&lt;p&gt;Trois valeurs sont possibles :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Off : aucune vocalisation&lt;/li&gt;
+&lt;li&gt;Polite : la vocalisation aura lieu lorsque le lecteur d&#39;écran aura fini la tâche en cours&lt;/li&gt;
+&lt;li&gt;Assertive : le lecteur d&#39;écran interrompt la tâche en cours pour informer l&#39;utilisateur&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Il est fortement recommandé que l&#39;attribut &lt;code&gt;aria-live&lt;/code&gt; soit positionné sur l&#39;élément dès le chargement de la page pour maximiser la compatibilité avec les différents couples navigateurs et lecteurs d&#39;écran.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;span aria-live=&quot;polite&quot;&amp;gt;5 éléments sélectionnés&amp;lt;/span&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Des attributs supplémentaires permettent de modifier finement le comportement par défaut d&#39;&lt;code&gt;aria-live&lt;/code&gt; :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;aria-atomic :&lt;/strong&gt;  true ou false (défaut), permet d&#39;indiquer si la totalité de la zone live doit être lue (true) ou seulement la partie modifiée (false).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;aria-relevant :&lt;/strong&gt; indique quel type de changement déclenche une vocalisation, valeurs possibles : additions (défaut), removals, all.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Enfin pour être complet, sachez que le langage &lt;abbr&gt;ARIA&lt;/abbr&gt; prévoit également quelques roles spécifiques, &lt;strong&gt;status&lt;/strong&gt; et &lt;strong&gt;log&lt;/strong&gt; notamment qui peuvent s&#39;avérer utiles dans certains cas (barre d&#39;état, journalisation, chat…) et qui pour le moment doivent être utilisés en complément de l&#39;attribut &lt;code&gt;aria-live&lt;/code&gt; pour maximiser la prise en charge par les outils d&#39;assistance. Vous trouverez plus d&#39;infos sur ces roles dans les liens ci-dessous.&lt;/p&gt;
+&lt;h2 id=&quot;references&quot;&gt;Références &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/#references&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_alert&quot;&gt;Utilisation du rôle alert&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Zones_live_ARIA&quot;&gt;Zones live ARIA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_log&quot;&gt;Utiliser le rôle log&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_status&quot;&gt;Utiliser le rôle status&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Quelques bonnes pratiques pour les liens de téléchargement</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/liens-telechargement/"/>
+    <updated>2020-07-02T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/liens-telechargement/</id>
+    <content type="html">&lt;h1&gt;Les bonnes pratiques pour les liens de téléchargement&lt;/h1&gt;
+&lt;p&gt;Il existe différents types de liens : &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/web/developper/navigation-generale&quot;&gt;les liens classiques&lt;/a&gt; permettant d&#39;atteindre une nouvelle page, &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement&quot;&gt;les liens d&#39;évitement&lt;/a&gt; permettant de se déplacer au sein de la page et enfin ceux qui nous intéressent dans cet article : les liens permettant de télécharger un fichier.&lt;/p&gt;
+&lt;p&gt;Un lien permettant de télécharger un fichier devrait respecter les règles suivantes :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;son intitulé doit être explicite, il doit également préciser le type et le poids du fichier&lt;/li&gt;
+&lt;li&gt;son intitulé doit préciser la langue du document lorsque celui-ci est rédigé dans une langue différente que celle de la page courante&lt;/li&gt;
+&lt;li&gt;ce lien doit être réalisé à l&#39;aide d&#39;une balise &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; (et non une balise &lt;code&gt;&amp;lt;button&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;ce lien doit s&#39;ouvrir dans la fenêtre en cours (pas d&#39;attribut &lt;code&gt;target&lt;/code&gt; pour ouvrir dans un nouvel onglet)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;En plus de servir l&#39;accessibilité, fournir ces informations permettra à l&#39;utilisateur d&#39;éviter un téléchargement inutile ce qui est également une bonne pratique eco-responsable.&lt;/p&gt;
+&lt;h2 id=&quot;exemples-valides&quot;&gt;Exemples valides &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-telechargement/#exemples-valides&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Voici un exemple de lien présentant les informations nécessaires :&lt;/p&gt;
+&lt;p&gt;Télécharger le &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-telechargement/#&quot;&gt;bilan complet 2020 (PDF, 1.5 Mo)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Il est important que ces informations complémentaires soient présentes dans l&#39;intitulé du lien et non juste après le lien (notamment pour les personnes qui utilisent un lecteur d&#39;écran). Cela dit pour des questions esthétiques il est possible de faire en sorte que les informations complémentaires ne soient pas soulignées, exemple :&lt;/p&gt;
+&lt;p&gt;Télécharger le &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-telechargement/#&quot; style=&quot;text-decoration: none&quot;&gt;&lt;span style=&quot;text-decoration: underline&quot;&gt;bilan complet 2020 &lt;/span&gt;(PDF, 1.5Mo)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;a-propos-des-unites&quot;&gt;À propos des unités &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-telechargement/#a-propos-des-unites&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;En anglais, les unités utilisées pour exprimer le poids des fichiers s&#39;écrivent en lettres capitales (KB, MB, GB ...).&lt;/p&gt;
+&lt;h2 id=&quot;langue-du-fichier&quot;&gt;Langue du fichier &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-telechargement/#langue-du-fichier&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Pour les liens permettant de télécharger un document dans une langue autre que celle de la page courante, il est important de le préciser.&lt;/p&gt;
+&lt;p&gt;Exemples de documents en anglais sur un site français :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-telechargement/#&quot;&gt;&lt;span lang=&quot;en&quot;&gt;Complete review&lt;/span&gt; (Anglais, DOC, 800 Ko)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-telechargement/#&quot;&gt;&lt;span&gt;Notice d&#39;utilisation&lt;/span&gt; (Anglais, PDF, 1.2 Mo)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;une-petite-image-pour-la-deco-mais-pas-seulement&quot;&gt;Une petite image pour la déco, mais pas seulement &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-telechargement/#une-petite-image-pour-la-deco-mais-pas-seulement&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Si le type de fichier est connu, une petite icône à côté du fichier permet à l&#39;utilisateur de le percevoir plus rapidement :&lt;br /&gt;
+&lt;a style=&quot;background-image: url(/images/icons/pdf-icon.svg); background-size: contain; background-repeat: no-repeat; padding-left: 2rem;&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-telechargement/#&quot;&gt;bilan complet 2020 (PDF, 1.5 Mo)&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Recommandations pour l&#39;accessibilité d&#39;un composant d&#39;autocomplétion</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/"/>
+    <updated>2020-12-23T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/</id>
+    <content type="html">&lt;h1&gt;Recommandations pour l&#39;accessibilité d&#39;un composant d&#39;autocomplétion&lt;/h1&gt;
+&lt;p&gt;Les composants d’autocomplétion sont de plus en plus courants au sein de nos interfaces, pourtant ils restent souvent peu accessibles.&lt;/p&gt;
+&lt;p&gt;Nous avons donc décidés de réaliser un état des lieux afin de définir plusieurs recommandations fonctionnelles.&lt;/p&gt;
+&lt;p&gt;L’objectif final est de proposer un composant prêt à l’emploi pour nos projets.&lt;/p&gt;
+&lt;p&gt;Dans cet article nous vous présentons notre démarche et les recommandations retenues.&lt;/p&gt;
+&lt;h2 id=&quot;notre-demarche&quot;&gt;Notre démarche &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/#notre-demarche&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Nous souhaitons dans la mesure du possible nous appuyer sur des &lt;span lang=&quot;en&quot;&gt;patterns&lt;/span&gt; existants.&lt;/p&gt;
+&lt;p&gt;Dans un premier temps, des audits en amont sont réalisés sur  plusieurs composants par un expert accessibilité afin d’assurer une première sélection.&lt;/p&gt;
+&lt;p&gt;Les composants les plus utilisables sont ensuite soumis à des tests utilisateurs.&lt;/p&gt;
+&lt;p&gt;Au terme du benchmark les implémentations retenues sont :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://alphagov.github.io/accessible-autocomplete/examples/&quot; target=&quot;_blank&quot; title=&quot;GOV UK, accessible autocomplete (new window)&quot;&gt;&lt;span lang=&quot;en&quot;&gt;GOV UK, accessible autocomplete&lt;/span&gt; &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/wai-aria-practices-1.1/#combobox&quot; target=&quot;_blank&quot; title=&quot;Pattern WAI ARIA 1.1, combobox (new window)&quot;&gt;Pattern WAI ARIA 1.1, combobox &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;tests-utilisateurs&quot;&gt;Tests utilisateurs &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/#tests-utilisateurs&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Nous avons sollicité des salariés d’Orange en situation de handicap.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Documentaliste, utilisateur de JAWS et IE11&lt;/li&gt;
+&lt;li&gt;Développeur, utilisateur de NVDA et Firefox ESR&lt;/li&gt;
+&lt;li&gt;Téléconseiller, utilisateur de ZoomText et IE11&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;JAWS 19 (lecteur d’écran) et Zoomtext (loupe d’écran), sont les aides techniques fournies aux salariés non-voyants et malvoyants.&lt;/p&gt;
+&lt;p&gt;Internet Explorer 11 et Firefox ESR sont les navigateurs installés par défaut sur les postes de travail.&lt;br /&gt;
+Les applications métiers et les intranets sont développés pour ces supports.&lt;/p&gt;
+&lt;p&gt;Les associations JAWS / IE et Zoomtext / IE sont les couples testés en priorité lors d’une évaluation de projets internes, car les plus répandus chez nos utilisateurs cibles.&lt;/p&gt;
+&lt;p&gt;Nous avons créé un scénario simple, basé sur des formulaires, utilisant chacun une version différente du composant :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;abbr title=&quot;site web du gouvernement britannique&quot;&gt;GOV UK &lt;span class=&quot;sr-only&quot;&gt;site du gouvernement britannique&lt;/span&gt;&lt;/abbr&gt; &lt;span lang=&quot;en&quot;&gt;accessible autocomplete&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span lang=&quot;en&quot;&gt;Pattern&lt;/span&gt; WAI ARIA 1.1, &lt;span lang=&quot;en&quot;&gt;Combobox with Listbox&lt;/span&gt;, exemple 1&lt;/li&gt;
+&lt;li&gt;&lt;span lang=&quot;en&quot;&gt;Pattern&lt;/span&gt; WAI ARIA 1.1, &lt;span lang=&quot;en&quot;&gt;Combobox with Listbox&lt;/span&gt;, exemple 2&lt;/li&gt;
+&lt;li&gt;&lt;span lang=&quot;en&quot;&gt;Pattern&lt;/span&gt; WAI ARIA 1.1, &lt;span lang=&quot;en&quot;&gt;Combobox with Listbox&lt;/span&gt;, exemple 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/page-test.png&quot; alt=&quot;&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;resume-des-retours&quot;&gt;Résumé des retours &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/#resume-des-retours&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Depuis JAWS :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Dans les versions ARIA, exemples 2 et 3, l&#39;utilisateur n&#39;est pas informé qu’il s’agit d’un champ d’autocomplétion.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Depuis NVDA :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;L&#39;utilisateur préfère la version GOV UK, car, non seulement, le composant lui indique le nombre de caractères minimum à saisir (2 ou 3 lettres), mais également, le nombre de résultats affichés.&lt;/li&gt;
+&lt;li&gt;Depuis l&#39;exemple 1 du pattern ARIA 1.1, c’est par hasard en faisant flèche bas qu’il découvre des propositions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;On peut complètement zapper l’autocomplétion&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Dans les exemples 2 et 3 du pattern ARIA 1.1, l&#39;utilisateur perçoit la notion d’autocomplétion, mais on ne lui précise aucune information après la saisie de 2 ou 3 lettres (que ce soit le nombre de propositions, ou les propositions).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Depuis ZoomText :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;L&#39;utilisateur ne voit pas de différences significatives entre les quatre implementations.&lt;/p&gt;
+&lt;h3 id=&quot;tests-mobile&quot;&gt;Tests mobile &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/#tests-mobile&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;En complément, des tests sur mobile sont réalisés par des experts accessibilités, à partir des mêmes pages de tests.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Versions testées :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IOS 13 + Safari + VoiceOver&lt;/li&gt;
+&lt;li&gt;Android 6.0.1+ Chrome + Talkback&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sur ces deux environnements la conclusion est la même :&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GOV UK &lt;span lang=&quot;en&quot;&gt;accessible autocomplete&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Comportement identique au desktop (toutes les vocalisations sont lancées, que ce soit à l’entrée dans le champ, et lors de la navigation dans la liste)&lt;/li&gt;
+&lt;li&gt;Navigation dans la liste OK, et sélection de l’élément désiré OK&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Pattern WAI ARIA 1.1 &lt;span lang=&quot;en&quot;&gt;Combobox with Listbox&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;La liste de propositions ne s’affiche pas systématiquement&lt;/li&gt;
+&lt;li&gt;Lorsque la liste s’affiche, aucune vocalisation automatique n’est lancée&lt;/li&gt;
+&lt;li&gt;L’utilisateur ne sait pas que des propositions lui sont faites&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;conclusion-des-tests&quot;&gt;Conclusion des tests &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/#conclusion-des-tests&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Il apparaît que sur les supports (aides techniques, navigateurs) testés, l’implémentation du GOV UK est plus robuste.&lt;/p&gt;
+&lt;p&gt;Le &lt;span lang=&quot;en&quot;&gt;pattern&lt;/span&gt; ARIA repose sur une gestion du focus par &lt;code&gt;aria-activedescendant&lt;/code&gt;, contrairement au composant de GOV UK qui repose sur la méthode &lt;code&gt;focus()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Il est possible que ce soit cette implémentation qui impacte le comportement sur mobile.&lt;/p&gt;
+&lt;p&gt;C&#39;est en tout cas une différence significative entre les deux composants.&lt;/p&gt;
+&lt;p&gt;Nous avons pris également l’initiative des tester la version WAI ARIA 1.2 de la combobox, &lt;strong&gt;encore en draft&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Là encore le comportement sur mobile n&#39;est pas concluant, la liste de propositions n&#39;est pas perçue.&lt;/p&gt;
+&lt;p&gt;Cependant, pour le reste le &lt;span lang=&quot;en&quot;&gt;pattern&lt;/span&gt; utilisé se rapproche de l&#39;implémentation GOV UK (par exemple le &lt;code&gt;role = &amp;quot;combobox&amp;quot;&lt;/code&gt; est dorénavant positionné directement sur l’&lt;code&gt;input&lt;/code&gt;, contrairement à la version ARIA 1.1).&lt;/p&gt;
+&lt;p&gt;A ce stade compte tenu des retours utilisateurs et des points de blocages sur mobile, nous orientons notre choix sur le composant GOV UK, par ailleurs conforté par l’évolution que semble prendre le &lt;span lang=&quot;en&quot;&gt;pattern&lt;/span&gt; ARIA 1.2.&lt;/p&gt;
+&lt;h2 id=&quot;recommandations&quot;&gt;Recommandations &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/#recommandations&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Vous l’avez compris, nous nous sommes grandement appuyés sur le composant GOV UK.&lt;/p&gt;
+&lt;p&gt;Les écarts avec le composant initial sont commentés directement dans les recommandations.&lt;/p&gt;
+&lt;h3 id=&quot;combobox&quot;&gt;Combobox &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/#combobox&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Input text avec les attributs suivants :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/autocompletion-combobox.png&quot; alt=&quot;&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;role = &amp;quot;combobox&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-expanded = true/false&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;autocomplete = &amp;quot;off&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-autocomplete = &amp;quot;list&amp;quot;&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;La valeur &lt;code&gt;list&lt;/code&gt; correspond au comportement actuel du composant que nous devons produire, d’autres valeurs sont cependant possibles (&lt;code&gt;inline&lt;/code&gt; et &lt;code&gt;both&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;inline&lt;/code&gt; = suggestion automatique dans le champ de saisie&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;both&lt;/code&gt; = suggestion automatique dans le champ de saisie + liste de choix&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-control&lt;/code&gt; (&lt;span lang=&quot;en&quot;&gt;ID&lt;/span&gt; de la listbox)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Remarques&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Le role est directement positionné sur l’&lt;code&gt;input&lt;/code&gt;, contrairement à l’implémentation ARIA 1.1. et conformément à l’implémentation GOV UK et ARIA 1.2 &lt;span lang=&quot;en&quot;&gt;(draft)&lt;/span&gt;,&lt;/li&gt;
+&lt;li&gt;Par contre nous privilégions l’utilisation du &lt;code&gt;aria-control&lt;/code&gt; au &lt;code&gt;aria-owns&lt;/code&gt;, qui nous parait plus adaptée au regard de la description du &lt;span lang=&quot;en&quot;&gt;pattern&lt;/span&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Plus d’informations dans l&#39;article &lt;a href=&quot;https://www.levelaccess.com/differences-aria-1-0-1-1-changes/&quot; target=&quot;_blank&quot; lang=&quot;en&quot; title=&quot;Differences between ARIA 1.0 and 1.1: Changes (new window)&quot;&gt;Differences between ARIA 1.0 and 1.1: Changes &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;listbox&quot;&gt;Listbox &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/#listbox&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Elément UL avec les attributs suivant :&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/autocompletion-listbox.png&quot; alt=&quot;&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;role = &amp;quot;listbox&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-label&lt;/code&gt; (la valeur est identique au label associé au champ de saisie)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Elément LI avec les attributs suivant :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;role = &amp;quot;option&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-posinset&lt;/code&gt; (position de l’item dans la liste)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-setsize&lt;/code&gt; (longueur totale de liste de proposition)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-selected = &amp;quot;true&amp;quot;&lt;/code&gt; (lorsqu’un item est en cours de sélection)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tabindex = &amp;quot;-1&amp;quot;&lt;/code&gt; (la valeur -1 permettra une gestion du déplacement focus de manière programmatique)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Remarques&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Pour rappel, cette solution s’avère plus robuste que la gestion de l&#39;élément actif par l’attribut &lt;code&gt;aria-descendant&lt;/code&gt;, plus d’informations :&lt;br /&gt;
+a.	&lt;a href=&quot;https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_roving_tabindex&quot; target=&quot;_blank&quot; title=&quot;Gestion du focus par tabindex (new window)&quot;&gt;Gestion du focus par tabindex &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;
+b.	&lt;a href=&quot;https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_focus_activedescendant)&quot; target=&quot;_blank&quot; title=&quot;Gestion du focus par aria-activedescendant (new window)&quot;&gt;Gestion du focus par aria-activedescendant &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;La liste de propositions étant rafraichie dynamiquement nous préservons les attributs &lt;code&gt;aria-posinset&lt;/code&gt; et &lt;code&gt;aria-setsize&lt;/code&gt;, afin de fournir une liste à jour au lecteur d’écran, quelques soit le nombre de propositions.&lt;br /&gt;
+Cela nous paraît plus robuste afin de palier à d&#39;éventuels défauts d&#39;interprétation des lecteurs d&#39;écran.&lt;br /&gt;
+En effet ceux-ci pourraient être induits en erreur dans des cas comme celui-ci, où le contenu d&#39;une liste, et notamment le nombre d&#39;items, est mis à jour dynamiquement.&lt;br /&gt;
+Pour information, cette implémentation n’est pas préservée dans la &lt;span lang=&quot;en&quot;&gt;draft&lt;/span&gt; ARIA 1.2.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;feedbacks&quot;&gt;&lt;span lang=&quot;en&quot;&gt;Feedbacks&lt;/span&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/#feedbacks&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Un message pour indiquer les interactions, exemple issu de GOV UK :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Lorsque des résultats sont disponibles, utiliser les flèches haut et bas pour naviguer dans les propositions.&lt;br /&gt;
+Depuis un périphérique tactile, explorer en utilisant un balayage&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Un message pour indiquer le nombre de caractères mininum à saisir&lt;/li&gt;
+&lt;li&gt;Un message pour indiquer le nombre de résultats et l’item en cours de sélection :&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;3 résultats sont disponibles. Afghanistan 1 sur 3 est sélectionné&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Remarques&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Nous préservons les feedbacks mis en place par GOV UK. Ils se sont avérés pertinents pour diriger les utilisateurs dans l’utilisation du composant.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Intégration&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Un élément &lt;code&gt;DIV&lt;/code&gt; est présent dans le &lt;abbr title=&quot;Document Object Model&quot; lang=&quot;en&quot;&gt;DOM&lt;/abbr&gt; dès le chargement de la page :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;role = &amp;quot;status&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-live = &amp;quot;polite&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-atomic = &amp;quot;true&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;class = &amp;quot;sr-only&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Remarques&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;L’élément &lt;code&gt;DIV&lt;/code&gt; avec l’attribut &lt;code&gt;aria-live&lt;/code&gt; est présent dans le DOM dès le chargement de la page.&lt;/p&gt;
+&lt;p&gt;Nous nous assurons ainsi que les aides techniques identifient correctement cette zone dynamique lors de leur analyse du DOM.&lt;/p&gt;
+&lt;p&gt;A l’initialisation, le &lt;code&gt;DIV&lt;/code&gt; est vide afin d’éviter une vocalisation intempestive.&lt;/p&gt;
+&lt;p&gt;Les messages sont intégrés dynamiquement selon les actions de l’utilisateur.&lt;/p&gt;
+&lt;p&gt;La restitution d’un message s’opère dès son intégration dans la zone &lt;span lang=&quot;en&quot;&gt;LIVE&lt;/span&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;interactions&quot;&gt;Interactions &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/#interactions&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Entrer dans les propositions :&lt;/strong&gt; flèches bas (input vers premier item)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Navigation entre les propositions :&lt;/strong&gt; flèches haut et bas (pas de tabulation)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Sortir des propositions :&lt;/strong&gt; flèches haut (premier item vers input)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Sélectionner une proposition :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Espace ou Entrée&lt;/li&gt;
+&lt;li&gt;Repositionner automatiquement le focus dans l’&lt;code&gt;input&lt;/code&gt; après sélection&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Touche Echap :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ferme la &lt;code&gt;listbox&lt;/code&gt; et repositionne focus dans l&#39;&lt;code&gt;input&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Aucun item n’est sélectionné&lt;/li&gt;
+&lt;li&gt;Si une sélection est déjà faite, le focus est repositionné dans le champ sans le vider&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Fleche droite/gauche :&lt;/strong&gt; repositionner curseur dans la combobox sans fermer la listbox&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Touche TAB depuis la combobox :&lt;/strong&gt; poursuivre le parcours focus, donc l’utilisateur est positionné sur l’élément suivant éligible au focus (&lt;code&gt;input&lt;/code&gt;, &lt;code&gt;button&lt;/code&gt;, &lt;code&gt;link&lt;/code&gt;, …)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Touche TAB depuis la listbox :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Poursuivre le parcours focus&lt;/li&gt;
+&lt;li&gt;La combobox est renseignée avec la valeur en cours de sélection lors de l’activation de la touche TAB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Raccourci SHIFT + TAB depuis la listbox :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Poursuivre le parcours focus en sens inverse&lt;/li&gt;
+&lt;li&gt;La combobox est renseignée avec la valeur en cours de sélection lors de l’activation de la touche TAB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Remarques&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Lorsque la touche TAB est utilisée depuis la listbox, la valeur en cours de sélection est automatiquement ajoutée à la combobox, avant la sortie du composant.&lt;br /&gt;
+Nous faisons ici le choix de nous aligner sur le comportement natif de l’autocomplétion.&lt;br /&gt;
+Le composant GOV UK ne reprend pas ce comportement.&lt;/li&gt;
+&lt;li&gt;Les flèches permettent de se repositionner dans la combobox, là encore nous choisissons de nous aligner sur le comportement natif (contrairement cette fois-ci au pattern ARIA 1.2 &lt;span lang=&quot;en&quot;&gt;draft&lt;/span&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;ressources&quot;&gt;Ressources &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/#ressources&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://alphagov.github.io/accessible-autocomplete/examples/&quot; target=&quot;_blank&quot; title=&quot;GOV UK, accessible autocomplete (new window)&quot;&gt;GOV UK, accessible autocomplete &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://designnotes.blog.gov.uk/2017/04/20/were-building-an-autocomplete/&quot; target=&quot;_blank&quot; title=&quot;Article We’re building an autocomplete (new window)&quot;&gt;Article We’re building an autocomplete &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/wai-aria-practices-1.1/#combobox&quot; target=&quot;_blank&quot; title=&quot;WAI-ARIA Authoring Practices 1.1 Combobox (new window)&quot;&gt;WAI-ARIA Authoring Practices 1.1 Combobox &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pidila.gitlab.io/select-a11y/&quot; target=&quot;_blank&quot; title=&quot;Select-a11y - demo (new window)&quot;&gt;Select-a11y - demo &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.24a11y.com/2019/select-your-poison/&quot; target=&quot;_blank&quot; title=&quot;Select your poison (new window)&quot;&gt;&lt;span lang=&quot;en&quot;&gt;Select your poison&lt;/span&gt; &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.24a11y.com/2019/select-your-poison-part-2/&quot; target=&quot;_blank&quot; title=&quot;Select your poison part 2 (new window)&quot;&gt;Select your poison part 2 &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.levelaccess.com/differences-aria-1-0-1-1-changes/&quot; target=&quot;_blank&quot; title=&quot;Differences between ARIA 1.0 and 1.1: Changes (new window)&quot;&gt;Differences between ARIA 1.0 and 1.1: Changes &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Quelques bonnes pratiques pour les images SVG</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/svg-accessibles/"/>
+    <updated>2021-01-01T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/svg-accessibles/</id>
+    <content type="html">&lt;h1&gt;Les images SVG sont de plus en plus utilisées sur le web mais qu’en est-il de leur accessibilité ?&lt;/h1&gt;
+&lt;p&gt;Voici quelques pistes sachant que le support navigateurs/aide techniques évolue très rapidement !&lt;br /&gt;
+Important : Pensez donc à tester vos implémentations sur des cibles navigateurs /aides techniques les plus utilisées par vos utilisateurs, cela, quel que soit la solution pour laquelle vous optez. ;&lt;/p&gt;
+&lt;h2 id=&quot;image-de-decoration&quot;&gt;Image de décoration &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/svg-accessibles/#image-de-decoration&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;svg-dans-une-balise-img&quot;&gt;SVG dans une balise &lt;code&gt;img&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/svg-accessibles/#svg-dans-une-balise-img&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;img src=&quot;XXX.svg&quot; alt=&quot;&quot; aria-hidden=”true” /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;svg-en-ligne-inline&quot;&gt;SVG en ligne (inline) &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/svg-accessibles/#svg-en-ligne-inline&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&amp;gt;
+…
+&amp;lt;/svg&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;On utilise &lt;code&gt;focusable=&amp;quot;false&amp;quot;&lt;/code&gt; pour éviter toute prise de focus sur le SVG par IE (&amp;gt;10 et Edge)&lt;/p&gt;
+&lt;p&gt;De plus, vous devez vous assurer que la balise &lt;code&gt;svg&lt;/code&gt; ou un de ses enfants (&lt;code&gt;&amp;lt;g&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;path&amp;gt;&lt;/code&gt;…) ne possède aucun attribut visant à lui fournir un nom accessible (&lt;code&gt;title&lt;/code&gt;, &lt;code&gt;desc&lt;/code&gt;, &lt;code&gt;aria-*&lt;/code&gt;…).&lt;/p&gt;
+&lt;h2 id=&quot;image-informative-hors-lien-ou-bouton&quot;&gt;Image informative (hors lien ou bouton) &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/svg-accessibles/#image-informative-hors-lien-ou-bouton&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;svg-dans-une-balise-img-2&quot;&gt;SVG dans une balise &lt;code&gt;img&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/svg-accessibles/#svg-dans-une-balise-img-2&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;img src=&quot;XXX.svg&quot; alt=&quot;texte de remplacement&quot; role=&quot;img&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;en second choix :&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;img src=&quot;XXX.svg&quot; aria-label=&quot;texte de remplacement&quot; role=&quot;img&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;On rajoute &lt;code&gt;role=&amp;quot;img&amp;quot;&lt;/code&gt; pour s’assurer qu’avec macOS Safari, VoiceOver (anciennes versions) annonce bien « image ».&lt;/p&gt;
+&lt;h4 id=&quot;svg-en-ligne-inline-2&quot;&gt;SVG en ligne (inline) &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/svg-accessibles/#svg-en-ligne-inline-2&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;svg viewBox=&quot;0 0 440 540&quot; version=&quot;1.1&quot; role=&quot;img&quot;
+  lang=&quot;fr&quot; xml:lang=&quot;fr&quot;
+  aria-labelledby=&quot;title description&quot;&amp;gt;
+
+  &amp;lt;title id=&quot;title&quot;&amp;gt;Revenus bruts 2019&amp;lt;/title&amp;gt;
+
+  &amp;lt;desc id=&quot;description&quot;&amp;gt;
+    Ce schéma présente les revenus de l’année 2019, en pourcentage du total et en valeur absolue. Le total des revenus est de 20,3 millions d’Euros et se divise en 6,9 millions (34%) pour le premier trimestre, 2,1 millions (10%) pour le second, 10,3 millions pour le troisième (51%) et 1 million au dernier trimestre (5%).
+  &amp;lt;/desc&amp;gt;
+
+  ...
+&amp;lt;/svg&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Le meilleur support pour les SVG est de les afficher inline.&lt;/p&gt;
+&lt;p&gt;Il faut utiliser &lt;code&gt;aria-labelledby&lt;/code&gt; en premier choix en référençant le « title » et la « desc » (éviter &lt;code&gt;aria-describedby&lt;/code&gt; pour la « desc », support encore mauvais) pour assurer un support maximal.&lt;br /&gt;
+Les SVG servant de lien ou de bouton&lt;/p&gt;
+&lt;p&gt;Plusieurs choix possibles :&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;button&amp;gt;
+  &amp;lt;svg focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;!--...--&amp;gt;&amp;lt;/svg&amp;gt;
+  Rechercher
+&amp;lt;/button&amp;gt;
+
+&amp;lt;a href=&quot;/Rechercher&quot;&amp;gt;
+  &amp;lt;svg focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;!--...--&amp;gt;&amp;lt;/svg&amp;gt;
+  Rechercher
+&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;On utilise &lt;code&gt;focusable=&amp;quot;false&amp;quot;&lt;/code&gt; pour éviter toute prise de focus sur le SVG (en plus du lien &lt;code&gt;a&lt;/code&gt;) par &lt;abbr&gt;IE&lt;/abbr&gt;&amp;gt; 10 et Edge.&lt;br /&gt;
+C’est la meilleure solution, la plus robuste mais pas toujours possible d’afficher un texte (contrainte graphique/design/marketing…).&lt;br /&gt;
+Alors, voici une alternative qui permet de  cacher visuellement le texte pour un bouton ou un lien tout en le laissant lisible par les aides techniques via &lt;code&gt;aria-labelledby&lt;/code&gt; :&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;button aria-labelledby=&quot;label&quot;&amp;gt; 
+
+  &amp;lt;span id=&quot;label&quot; hidden&amp;gt;Rechercher&amp;lt;/span&amp;gt;
+
+  &amp;lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot;&amp;gt;&amp;lt;!--...--&amp;gt;&amp;lt;/svg&amp;gt;
+
+&amp;lt;/button&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Enfin, ces deux solutions suivantes sont équivalentes et de toute façon à tester dans vos environnements de navigation (couples navigateur/aide technique) ciblés.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;button&amp;gt;
+  &amp;lt;svg focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;!--...--&amp;gt;&amp;lt;/svg&amp;gt;
+  &amp;lt;span class=&quot;sr-only&quot;&amp;gt;Rechercher&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+
+&amp;lt;a href=&quot;/Rechercher&quot;&amp;gt;
+  &amp;lt;svg focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;!--...--&amp;gt;&amp;lt;/svg&amp;gt;
+  &amp;lt;span class=&quot;sr-only&quot;&amp;gt;Rechercher&amp;lt;/span&amp;gt;
+&amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;La class sr-only permet de cacher le texte sauf aux utilisateurs d’aide technique (masquage accessible).&lt;/p&gt;
+&lt;p&gt;ou&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;button aria-label=&quot;Rechercher&quot;&amp;gt;
+  &amp;lt;svg focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;!--...--&amp;gt;&amp;lt;/svg&amp;gt;
+&amp;lt;/button&amp;gt;
+
+&amp;lt;a href=&quot;/Rechercher&quot; aria-label=&quot;Rechercher&quot;&amp;gt;
+  &amp;lt;svg focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;!--...--&amp;gt;&amp;lt;/svg&amp;gt;
+&amp;lt;/a&amp;gt;
+
+ou, mais beaucoup plus risqué…
+&amp;lt;button&amp;gt;
+  &amp;lt;svg aria-labelledby=&quot;rechercher-icon-title&quot; focusable=&quot;false&quot; role=”img”&amp;gt;
+    &amp;lt;title id=&quot;rechercher-icon-title&quot;&amp;gt;Rechercher&amp;lt;/title&amp;gt;
+    &amp;lt;!--...--&amp;gt;
+  &amp;lt;/svg&amp;gt;
+&amp;lt;/button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;dernier-mots&quot;&gt;Dernier mots… &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/svg-accessibles/#dernier-mots&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;En résumé, un seul conseil pour du SVG accessible, ce serait TESTER et tester encore !&lt;/p&gt;
+&lt;h2 id=&quot;webographie-articles-qui-mont-bien-bien-aides&quot;&gt;Webographie (articles qui m’ont bien, bien aidés) &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/svg-accessibles/#webographie-articles-qui-mont-bien-bien-aides&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.deque.com/blog/creating-accessible-svgs/&quot;&gt;https://www.deque.com/blog/creating-accessible-svgs/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://weboverhauls.github.io/demos/svg/&quot;&gt;https://weboverhauls.github.io/demos/svg/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html&quot;&gt;https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility&quot;&gt;https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JeremiePat/svg-accessible/blob/master/slides.md&quot;&gt;https://github.com/JeremiePat/svg-accessible/blob/master/slides.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.sarasoueidan.com/blog/accessible-icon-buttons/&quot;&gt;https://www.sarasoueidan.com/blog/accessible-icon-buttons/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Veille #A11y Janvier-Février 2021</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/veille-janvier-fevrier-2021/"/>
+    <updated>2021-02-19T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/veille-janvier-fevrier-2021/</id>
+    <content type="html">&lt;h1&gt;Veille accessibilité numérique Décembre 2020 – Janvier 2021&lt;/h1&gt;
+&lt;p&gt;Grosse nouvelle, sortie du “W3C First Public Working Draft 21 January 2021” l’avenir de l’a11y web et bien plus. Une introduction : &lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/&quot;&gt;https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Et quelques articles pour se faire une idée :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.deque.com/blog/first-public-working-draft-wcag-3/&quot;&gt;https://www.deque.com/blog/first-public-working-draft-wcag-3/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.deque.com/blog/public-working-draft-wcag-3-history/&quot;&gt;https://www.deque.com/blog/public-working-draft-wcag-3-history/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://jspellman-77432.medium.com/an-insider-look-at-wcag-3-0-276e9b964a33&quot;&gt;https://jspellman-77432.medium.com/an-insider-look-at-wcag-3-0-276e9b964a33&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://sheribyrnehaber.medium.com/silver-wcag-3-0-first-public-working-draft-released-15f765b9525e&quot;&gt;https://sheribyrnehaber.medium.com/silver-wcag-3-0-first-public-working-draft-released-15f765b9525e&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.jdsupra.com/legalnews/new-web-content-accessibility-standard-4698390/&quot;&gt;https://www.jdsupra.com/legalnews/new-web-content-accessibility-standard-4698390/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;laccessibilite-dans-les-lois-les-normes-et-recommandations&quot;&gt;L’accessibilité dans les lois, les normes et recommandations &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-janvier-fevrier-2021/#laccessibilite-dans-les-lois-les-normes-et-recommandations&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Label in name WCAG 2.5.3, expliqué en détails (anglais) : &lt;a href=&quot;https://css-tricks.com/whats-new-in-wcag-2-1-label-in-name/&quot;&gt;https://css-tricks.com/whats-new-in-wcag-2-1-label-in-name/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Message status 4.1.3 explications (anglais) : &lt;a href=&quot;https://www.digitala11y.com/understanding-sc-4-1-3-status-messages/&quot;&gt;https://www.digitala11y.com/understanding-sc-4-1-3-status-messages/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;retours-dexperience-et-accessibilite&quot;&gt;Retours d’expérience et accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-janvier-fevrier-2021/#retours-dexperience-et-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Un message d’un utilisateur de lecteur d’écran pour les devs (anglais) : &lt;a href=&quot;https://bighack.org/message-to-web-developers-from-a-screen-reader-user/&quot;&gt;https://bighack.org/message-to-web-developers-from-a-screen-reader-user/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;HTML sémantique ou affichage CSS ? (anglais) : &lt;a href=&quot;https://adrianroselli.com/2020/10/a11yto-conf-css-display-properties-versus-html-semantics.html&quot;&gt;https://adrianroselli.com/2020/10/a11yto-conf-css-display-properties-versus-html-semantics.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;strategie-de-mise-en-accessibilite&quot;&gt;Stratégie de mise en accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-janvier-fevrier-2021/#strategie-de-mise-en-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Faire des cartes accessibles, tous les points de vigilance (anglais) : &lt;a href=&quot;https://www.benjystanton.co.uk/blog/a-plan-for-accessible-maps/&quot;&gt;https://www.benjystanton.co.uk/blog/a-plan-for-accessible-maps/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Réduire les animations via CSS, JS et React, à lire (anglais) : &lt;a href=&quot;https://letsbuildui.dev/articles/reducing-motion-in-animations&quot;&gt;https://letsbuildui.dev/articles/reducing-motion-in-animations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;tester-laccessibilite&quot;&gt;Tester l’accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-janvier-fevrier-2021/#tester-laccessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Les outils développeur du navigateur pour tester l’accessibilité (anglais) : &lt;a href=&quot;https://christianheilmann.com/2021/01/11/seven-ways-to-test-for-accessibility-of-your-web-site-with-browser-developer-tools/&quot;&gt;https://christianheilmann.com/2021/01/11/seven-ways-to-test-for-accessibility-of-your-web-site-with-browser-developer-tools/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Le problème du test avec lecteur d’écran pour les devs (anglais) : &lt;a href=&quot;https://jaketracey.com/a-developers-perspective-the-problem-with-screen-reader-testing/&quot;&gt;https://jaketracey.com/a-developers-perspective-the-problem-with-screen-reader-testing/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Outils de tests développeur, succinct mais fait le point (anglais) : &lt;a href=&quot;https://techosmo.com/hacker-noon/winning-at-web-accessibility-in-2021-with-these-tools-for-developers/&quot;&gt;https://techosmo.com/hacker-noon/winning-at-web-accessibility-in-2021-with-these-tools-for-developers/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Calculateur de ratio de contraste pour WCAG3 (anglais) : &lt;a href=&quot;https://www.myndex.com/APCA/&quot;&gt;https://www.myndex.com/APCA/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;points-techniques-en-accessibilite&quot;&gt;Points techniques en accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-janvier-fevrier-2021/#points-techniques-en-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;aria-description&lt;/code&gt;, chouette (anglais) : &lt;a href=&quot;https://html5accessibility.com/stuff/2021/02/09/aria-description-by-public-demand-and-to-thunderous-applause/&quot;&gt;https://html5accessibility.com/stuff/2021/02/09/aria-description-by-public-demand-and-to-thunderous-applause/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Attention à la propriété CSS &lt;code&gt;content-visibility&lt;/code&gt; (anglais) : &lt;a href=&quot;https://marcysutton.com/content-visibility-accessible-semantics&quot;&gt;https://marcysutton.com/content-visibility-accessible-semantics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Différence &lt;code&gt;aria-label&lt;/code&gt;, &lt;code&gt;labelledby&lt;/code&gt;, &lt;code&gt;describedby&lt;/code&gt; (anglais) : &lt;a href=&quot;https://benmyers.dev/blog/aria-labels-and-descriptions/&quot;&gt;https://benmyers.dev/blog/aria-labels-and-descriptions/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Étiqueter un contrôle (éléments interactif), prioriser les méthodes, à lire (anglais) : &lt;a href=&quot;https://adrianroselli.com/2020/01/my-priority-of-methods-for-labeling-a-control.html&quot;&gt;https://adrianroselli.com/2020/01/my-priority-of-methods-for-labeling-a-control.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-haspopup&lt;/code&gt;, peu robuste et donc à éviter, comment… (anglais) : &lt;a href=&quot;https://html5accessibility.com/stuff/2021/02/02/haspopup-haspoop/&quot;&gt;https://html5accessibility.com/stuff/2021/02/02/haspopup-haspoop/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Un point sur la visibilité du focus, techniques (anglais) : &lt;a href=&quot;https://www.nicchan.me/blog/tips-for-focus-styles/&quot;&gt;https://www.nicchan.me/blog/tips-for-focus-styles/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Conseil pour la commande vocale et les SVG (anglais) : &lt;a href=&quot;https://www.ajsaucier.com/accessibility/2020/12/14/voice-control-and-css-psuedo-elements.html&quot;&gt;https://www.ajsaucier.com/accessibility/2020/12/14/voice-control-and-css-psuedo-elements.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Changer les noms accessibles dynamiquement, bof ! (anglais) : &lt;a href=&quot;https://adrianroselli.com/2020/12/be-careful-with-dynamic-accessible-names.html&quot;&gt;https://adrianroselli.com/2020/12/be-careful-with-dynamic-accessible-names.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;alt&lt;/code&gt; et &lt;code&gt;figcaption&lt;/code&gt;, pour qui, pourquoi (anglais) : &lt;a href=&quot;https://thoughtbot.com/blog/alt-vs-figcaption&quot;&gt;https://thoughtbot.com/blog/alt-vs-figcaption&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lien ancre et accessibilité (anglais) : &lt;a href=&quot;https://amberwilson.co.uk/blog/are-your-anchor-links-accessible/&quot;&gt;https://amberwilson.co.uk/blog/are-your-anchor-links-accessible/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;appli-mobile&quot;&gt;Appli mobile &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-janvier-fevrier-2021/#appli-mobile&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Des guidelines mobiles sur le très sérieux &lt;a href=&quot;http://bbc.co.uk/&quot;&gt;bbc.co.uk&lt;/a&gt; (anglais) : &lt;a href=&quot;https://www.bbc.co.uk/accessibility/forproducts/guides/mobile/&quot;&gt;https://www.bbc.co.uk/accessibility/forproducts/guides/mobile/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ergonomie-ui-ux&quot;&gt;Ergonomie, UI &amp;amp; UX &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-janvier-fevrier-2021/#ergonomie-ui-ux&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Expérience utilisateur et accessibilité, les points de base (anglais) : &lt;a href=&quot;https://www.awwwards.com/accessibility-in-user-experience-how-to-include-people-with-disabilities.html&quot;&gt;https://www.awwwards.com/accessibility-in-user-experience-how-to-include-people-with-disabilities.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Utilisateurs sans souris, les basiques (anglais) : &lt;a href=&quot;https://uxdesign.cc/taking-the-keyboard-navigation-red-pill-dbb76dd73b1e&quot;&gt;https://uxdesign.cc/taking-the-keyboard-navigation-red-pill-dbb76dd73b1e&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;La charge cognitive, exemples (anglais) : &lt;a href=&quot;https://uxdesign.cc/the-cognitive-overload-happening-on-your-screen-right-now-deee2a913393&quot;&gt;https://uxdesign.cc/the-cognitive-overload-happening-on-your-screen-right-now-deee2a913393&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;8 points sur UX et a11y (anglais) : &lt;a href=&quot;https://uxdesign.cc/8-faqs-about-accessible-ux-7c5a372a1ffb&quot;&gt;https://uxdesign.cc/8-faqs-about-accessible-ux-7c5a372a1ffb&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ressources&quot;&gt;Ressources &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-janvier-fevrier-2021/#ressources&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Bibliothèques de code web et design patterns, plein de ressources (anglais) : &lt;a href=&quot;http://www.webaxe.org/web-accessible-code-library-design-systems-patterns/&quot;&gt;http://www.webaxe.org/web-accessible-code-library-design-systems-patterns/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ressources sympa pour les devs en a11y (anglais) : &lt;a href=&quot;https://www.upyoura11y.com/&quot;&gt;https://www.upyoura11y.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ressources pour l’accessibilité et ses lois (anglais) : &lt;a href=&quot;https://accessibility-manual.dwp.gov.uk/accessibility-law&quot;&gt;https://accessibility-manual.dwp.gov.uk/accessibility-law&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Un peu d’histoire des lecteurs d’écran (anglais) : &lt;a href=&quot;https://knowbility.org/blog/2021/a-brief-history-of-screen-readers/&quot;&gt;https://knowbility.org/blog/2021/a-brief-history-of-screen-readers/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Excellents épisodes vidéos de Heydon Pickering, ici sur ARIA, à voir absolument, humour dedans (anglais) : &lt;a href=&quot;https://briefs.video/videos/what-is-aria-even-for/&quot;&gt;https://briefs.video/videos/what-is-aria-even-for/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Newsletter accessibilité numérique (anglais) : &lt;a href=&quot;http://www.webaxe.org/digital-accessibility-newsletters/&quot;&gt;http://www.webaxe.org/digital-accessibility-newsletters/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Outils 2021 de dev a11y (anglais) : &lt;a href=&quot;https://dev.to/jaketracey/the-best-web-accessibility-tools-for-developers-in-2021-8c8&quot;&gt;https://dev.to/jaketracey/the-best-web-accessibility-tools-for-developers-in-2021-8c8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Le HTML sémantique (anglais) : &lt;a href=&quot;https://dev.to/eevajonnapanula/ode-to-semantic-html-38c3&quot;&gt;https://dev.to/eevajonnapanula/ode-to-semantic-html-38c3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Le web sémantique, aller plus loin que le précédent lien (anglais) : &lt;a href=&quot;https://24days.in/umbraco-cms/2020/semantics-in-web-development/&quot;&gt;https://24days.in/umbraco-cms/2020/semantics-in-web-development/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Liste de sites accessibles (anglais) : &lt;a href=&quot;https://www.a11ywebsites.com/&quot;&gt;https://www.a11ywebsites.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;autres&quot;&gt;Autres &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-janvier-fevrier-2021/#autres&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Le progressive enhancement (amélioration progressive) où en est-on ? (anglais) : &lt;a href=&quot;https://briefs.video/videos/is-progressive-enhancement-dead-yet/&quot;&gt;https://briefs.video/videos/is-progressive-enhancement-dead-yet/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pourquoi séparer HTML, CSS et JS, c’est bon pour l’utilisateur (anglais) : &lt;a href=&quot;https://hiddedevries.nl/en/blog/2020-11-25-why-its-good-for-users-that-html-css-and-js-are-separate-languages&quot;&gt;https://hiddedevries.nl/en/blog/2020-11-25-why-its-good-for-users-that-html-css-and-js-are-separate-languages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Veille #A11y Mars-Mai 2021</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/veille-mars-mai-2021/"/>
+    <updated>2021-06-03T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/veille-mars-mai-2021/</id>
+    <content type="html">&lt;h1&gt;Veille accessibilité numérique Mars - Mai 2021&lt;/h1&gt;
+&lt;p&gt;Pour la cent cinquantième fois au moins, dans cette veille, on vous dit et on vous prouve que les solutions de surcouches magiques d’accessibilité numérique ne marchent pas.&lt;/p&gt;
+&lt;p&gt;Voici une escalade dans cette sombre histoire, certains experts en accessibilité français bien connus (salut les zamis !) sont attaqués par une de ces sociétés aux discours souvent limite, FACIL’ITI. Les détails sur cette affaire :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://koena.net/koena-mise-en-demeure-par-faciliti/&quot;&gt;https://koena.net/koena-mise-en-demeure-par-faciliti/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://koena.net/2e-courrier-avocat-de-faciliti/&quot;&gt;https://koena.net/2e-courrier-avocat-de-faciliti/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Un communiqué de soutien du syndicat des tpme et indépendant du numérique à Koena : &lt;a href=&quot;https://www.cinov-numerique.fr/motion-de-soutien-a-lentreprise-koena/&quot;&gt;https://www.cinov-numerique.fr/motion-de-soutien-a-lentreprise-koena/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Aux US aussi, ces « solutions magiques » hérissent le poil de la communauté A11y, exemples :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.accessibyebye.org/&quot;&gt;https://www.accessibyebye.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.vice.com/en/article/m7az74/people-with-disabilities-say-this-ai-tool-is-making-the-web-worse-for-them&quot;&gt;https://www.vice.com/en/article/m7az74/people-with-disabilities-say-this-ai-tool-is-making-the-web-worse-for-them&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://uxdesign.cc/the-single-biggest-threat-to-the-future-of-digital-accessibility-d5a9e411f33f&quot;&gt;https://uxdesign.cc/the-single-biggest-threat-to-the-future-of-digital-accessibility-d5a9e411f33f&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Le 20 mai, c’était le GAAD, Jour de sensibilisation global à l’accessibilité, plein de choses ont eu lieu, voici un truc qui me semble sympa, 10 petits films (moins d&#39;une minute) sur l’A11y (en) : &lt;a href=&quot;https://www.youtube.com/playlist?list=PLTqm2yVMMUKWTr9XWdW5hJ9tk512Ow0SE&quot;&gt;https://www.youtube.com/playlist?list=PLTqm2yVMMUKWTr9XWdW5hJ9tk512Ow0SE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Dernière minute : questionnaire WebAim n°9 sur les utilisateurs	 de lecteurs d’écrans, n’hésitez pas à répondre (même si vous  n’êtes qu’utilisateur testeur ou occasionnel) (en) : &lt;a href=&quot;https://webaim.org/projects/screenreadersurvey9/&quot;&gt;https://webaim.org/projects/screenreadersurvey9/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;laccessibilite-dans-les-lois-les-normes-et-recommandations&quot;&gt;L’accessibilité dans les lois, les normes et recommandations &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-mars-mai-2021/#laccessibilite-dans-les-lois-les-normes-et-recommandations&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Explication des futurs nouveaux critères WCAG 2.2 en Français : &lt;a href=&quot;https://access42.net/wcag-2-2-explication-des-nouveaux-criteres-proposes&quot;&gt;https://access42.net/wcag-2-2-explication-des-nouveaux-criteres-proposes&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Les impacts des WCAG 2.2 (en) : &lt;a href=&quot;https://makeitfable.com/article/wcag-2-2/&quot;&gt;https://makeitfable.com/article/wcag-2-2/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Editor draft 5/05/2021 de Aria in HTML (en) : &lt;a href=&quot;https://w3c.github.io/html-aria/&quot;&gt;https://w3c.github.io/html-aria/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Communication en temps réel et accessibilité au W3c (en) : &lt;a href=&quot;https://www.w3.org/TR/raur/&quot;&gt;https://www.w3.org/TR/raur/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ce qui est normatif ou pas Dans WCAG (en) : &lt;a href=&quot;https://hiddedevries.nl/en/blog/2021-04-27-whats-normative-in-wcag&quot;&gt;https://hiddedevries.nl/en/blog/2021-04-27-whats-normative-in-wcag&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Titre de rubrique et conformité WCAG (en) : &lt;a href=&quot;https://www.tpgi.com/heading-off-confusion-when-do-headings-fail-wcag/&quot;&gt;https://www.tpgi.com/heading-off-confusion-when-do-headings-fail-wcag/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Réflexion de fond sur l&#39;amélioration des WCAG pour les rendre plus opérationnelles, à lire (en) :  &lt;a href=&quot;https://level-level.com/blog/we-need-to-talk-about-wcag/&quot;&gt;https://level-level.com/blog/we-need-to-talk-about-wcag/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;retours-dexperience-et-accessibilite&quot;&gt;Retours d’expérience et accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-mars-mai-2021/#retours-dexperience-et-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Smashing Magazine fait un retour d’expérience pas qu’avec de l’a11y dedans, intéressant (en) : &lt;a href=&quot;https://www.smashingmagazine.com/2021/03/floating-labels-performance-lighthouse/&quot;&gt;https://www.smashingmagazine.com/2021/03/floating-labels-performance-lighthouse/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Comment faire des menus déroulant de navigation accessibles, à lire (en) : &lt;a href=&quot;https://css-tricks.com/in-praise-of-the-unambiguous-click-menu/&quot;&gt;https://css-tricks.com/in-praise-of-the-unambiguous-click-menu/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Handicap temporaire et troubles vestibulaire, sympa (en) : &lt;a href=&quot;https://alistapart.com/article/accessibility-for-vestibular/&quot;&gt;https://alistapart.com/article/accessibility-for-vestibular/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mettre en place un bouton « afficher le mot de passe » (en) : &lt;a href=&quot;https://technology.blog.gov.uk/2021/04/19/simple-things-are-complicated-making-a-show-password-option/&quot;&gt;https://technology.blog.gov.uk/2021/04/19/simple-things-are-complicated-making-a-show-password-option/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;strategie-de-mise-en-accessibilite&quot;&gt;Stratégie de mise en accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-mars-mai-2021/#strategie-de-mise-en-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Encore une démo pour montrer que le respect de la norme sans tests utilisateurs, eh bien, on a des trous dans la raquette, à lire (en) : &lt;a href=&quot;https://www.smashingmagazine.com/2020/11/weaving-web-accessibility-usability/&quot;&gt;https://www.smashingmagazine.com/2020/11/weaving-web-accessibility-usability/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Utiliser les CSS récentes pour mieux faire de l’accessibilité, à lire (en) : &lt;a href=&quot;https://moderncss.dev/modern-css-upgrades-to-improve-accessibility/&quot;&gt;https://moderncss.dev/modern-css-upgrades-to-improve-accessibility/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;tester-laccessibilite&quot;&gt;Tester l’accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-mars-mai-2021/#tester-laccessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Tests auto d’accessibilité dans React, chouette (en) : &lt;a href=&quot;https://medium.com/czi-technology/automated-accessibility-testing-for-react-30c88cf892f4&quot;&gt;https://medium.com/czi-technology/automated-accessibility-testing-for-react-30c88cf892f4&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Les points qu’un audit automatique ne perçoit pas en PDF, à lire (en)  &lt;a href=&quot;https://www.microassist.com/digital-accessibility/pdf-accessibility-errors-automated-tools-miss/&quot;&gt;https://www.microassist.com/digital-accessibility/pdf-accessibility-errors-automated-tools-miss/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Une checklist accessibilité web et un outil de test (en) : &lt;a href=&quot;https://webflow.com/accessibility/checklist&quot;&gt;https://webflow.com/accessibility/checklist&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rappel les outil auto d’accessibilité ne font pas tout, faut savoir s’en servir (en) : &lt;a href=&quot;https://chrisheilmann.medium.com/you-cant-automate-accessibility-testing-9f278ab6b7a&quot;&gt;https://chrisheilmann.medium.com/you-cant-automate-accessibility-testing-9f278ab6b7a&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tester l’accessibilité, méthodologie à grande échelle (en) : &lt;a href=&quot;https://www.smashingmagazine.com/2021/04/bake-layers-accessibility-testing-process/&quot;&gt;https://www.smashingmagazine.com/2021/04/bake-layers-accessibility-testing-process/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mise à jour 2021 de l’étude Million de Webaim, les un million de sites web principaux testés automatiquement (en) : &lt;a href=&quot;https://webaim.org/projects/million/lookup?homepage=orange.fr&quot;&gt;https://webaim.org/projects/million/lookup?homepage=orange.fr&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Un outil de tests automatiques d’accessibilité que je ne connaissais pas (en) : &lt;a href=&quot;https://www.accessi.org/&quot;&gt;https://www.accessi.org/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Axe linter une extension pour votre Visual Studio Code (en) : &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter&quot;&gt;https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;points-techniques-en-accessibilite&quot;&gt;Points techniques en accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-mars-mai-2021/#points-techniques-en-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Gros travail sur des entêtes de colonnes triables et accessible (en) : &lt;a href=&quot;https://adrianroselli.com/2021/04/sortable-table-columns.html&quot;&gt;https://adrianroselli.com/2021/04/sortable-table-columns.html&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bien comprendre le DOM accessible (accessible tree) la base (en) : &lt;a href=&quot;https://blogs.intuit.com/blog/2021/01/12/why-the-accessibility-tree-is-key-to-understanding-accessible-applications/&quot;&gt;https://blogs.intuit.com/blog/2021/01/12/why-the-accessibility-tree-is-key-to-understanding-accessible-applications/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rendre accessible pour les utilisateurs de lecteur d’écran et de reconnaissance vocale, point pas souvent abordé (en) : &lt;a href=&quot;https://www.sarasoueidan.com/blog/accessible-text-labels/&quot;&gt;https://www.sarasoueidan.com/blog/accessible-text-labels/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Point complet sur aria-hidden, à lire (en) : &lt;a href=&quot;https://html5accessibility.com/stuff/2021/05/31/the-hidden-world-of-aria-hidden/&quot;&gt;https://html5accessibility.com/stuff/2021/05/31/the-hidden-world-of-aria-hidden/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;L’attribut inert pour éviter la prise de focus, à lire (en) : &lt;a href=&quot;https://css-tricks.com/focus-management-and-inert/&quot;&gt;https://css-tricks.com/focus-management-and-inert/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sémantique et ARIA, 2 articles de fond (en) :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.filamentgroup.com/lab/practical-accessibility-1-semantics/&quot;&gt;https://www.filamentgroup.com/lab/practical-accessibility-1-semantics/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.filamentgroup.com/lab/practical-accessibility-2-names/&quot;&gt;https://www.filamentgroup.com/lab/practical-accessibility-2-names/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Bouton toggle accessibles, pour tout savoir (en) : &lt;a href=&quot;https://kittygiraudel.com/2021/04/05/an-accessible-toggle/&quot;&gt;https://kittygiraudel.com/2021/04/05/an-accessible-toggle/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Titre de page et React, comment bien faire (en) : &lt;a href=&quot;https://dev.to/steady5063/accessible-titles-in-react-210j&quot;&gt;https://dev.to/steady5063/accessible-titles-in-react-210j&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Indicateur de Focus  et accessibilité (en) : &lt;a href=&quot;https://craftcms.com/accessibility/designing-custom-focus-indicators&quot;&gt;https://craftcms.com/accessibility/designing-custom-focus-indicators&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Anticiper les évolutions de WCAG (en) : &lt;a href=&quot;https://medium.com/intuit-design/designing-for-the-wcag-future-15e3435459a7&quot;&gt;https://medium.com/intuit-design/designing-for-the-wcag-future-15e3435459a7&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Différence entre aria-disabled et disabled (en) : &lt;a href=&quot;https://html5accessibility.com/stuff/2021/03/15/re-upped-short-note-on-the-disabled-aria-disabled-attributes/&quot;&gt;https://html5accessibility.com/stuff/2021/03/15/re-upped-short-note-on-the-disabled-aria-disabled-attributes/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;appli-mobile&quot;&gt;Appli mobile &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-mars-mai-2021/#appli-mobile&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Introduction à l’a11y des apps mobile :la bas (en) : &lt;a href=&quot;https://www.shopify.com/partners/blog/mobile-accessibility&quot;&gt;https://www.shopify.com/partners/blog/mobile-accessibility&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Accessibilité et React Native, tout savoir (en) : &lt;a href=&quot;https://medium.com/adapptor/accessibility-and-react-native-from-0-to-100-abde4cbaf56b&quot;&gt;https://medium.com/adapptor/accessibility-and-react-native-from-0-to-100-abde4cbaf56b&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ergonomie-ui-ux&quot;&gt;Ergonomie, UI &amp;amp; UX &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-mars-mai-2021/#ergonomie-ui-ux&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Article complet sur les design systems bien ou pas bien : &lt;a href=&quot;https://www.usabilis.com/design-patterns-pour-la-composition-interfaces/&quot;&gt;https://www.usabilis.com/design-patterns-pour-la-composition-interfaces/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Super article de fond sur la typographie accessible (en) : &lt;a href=&quot;https://cariefisher.com/a11y-content/&quot;&gt;https://cariefisher.com/a11y-content/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Un peu la suite du précédent, la lisibilité et l’accessibilité (en) : &lt;a href=&quot;https://medium.com/the-readability-group/typographic-accessibility-in-more-detail-4a11a0ef1cc2&quot;&gt;https://medium.com/the-readability-group/typographic-accessibility-in-more-detail-4a11a0ef1cc2&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Conception pour les troubles du spectre autistique (en) : &lt;a href=&quot;https://uxdesign.cc/inclusive-design-guide-7-principles-of-designing-for-the-autistic-community-1e6dcd4bae85&quot;&gt;https://uxdesign.cc/inclusive-design-guide-7-principles-of-designing-for-the-autistic-community-1e6dcd4bae85&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ressources&quot;&gt;Ressources &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-mars-mai-2021/#ressources&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Tutoriel sur l’accessibilité technique, à tester (en) : &lt;a href=&quot;https://teachaccess.github.io/tutorial/&quot;&gt;https://teachaccess.github.io/tutorial/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Quelques bons conseils a11y pour les devs (en) : &lt;a href=&quot;https://www.hassellinclusion.com/blog/elearning-accessibility-poster/&quot;&gt;https://www.hassellinclusion.com/blog/elearning-accessibility-poster/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Accessibilité des newsletters (en) : &lt;a href=&quot;https://mn.gov/mnit/media/blog/?id=38-472949&quot;&gt;https://mn.gov/mnit/media/blog/?id=38-472949&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;La richesse des docs au W3c en matière d’accessibilité par thématiques, chouette (en) : &lt;a href=&quot;https://www.lireo.com/helpful-accessibility-resources-from-the-web-accessibility-initiative/&quot;&gt;https://www.lireo.com/helpful-accessibility-resources-from-the-web-accessibility-initiative/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Premier pas pour un site web accessible, pédagogique (en) : &lt;a href=&quot;https://convergeaccessibility.com/blog/&quot;&gt;https://convergeaccessibility.com/blog/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Questions/réponses d’experts sur le dev accessible intéressant (en) : &lt;a href=&quot;https://knowbility.org/blog/2021/developer-techniques-for-screen-reader-accessibility&quot;&gt;https://knowbility.org/blog/2021/developer-techniques-for-screen-reader-accessibility&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Poster accessibilité et e-learning, cool (en) : &lt;a href=&quot;https://www.hassellinclusion.com/blog/elearning-accessibility-poster/&quot;&gt;https://www.hassellinclusion.com/blog/elearning-accessibility-poster/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;autres&quot;&gt;Autres &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-mars-mai-2021/#autres&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Sous-titres en direct (live) dans chrome pour l’audio et la vidéo (en) : &lt;a href=&quot;https://blog.google/products/chrome/live-caption-chrome/&quot;&gt;https://blog.google/products/chrome/live-caption-chrome/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Des conférences sur l’a11y, plein de sujets, à voir (en) : &lt;a href=&quot;https://a11ytalks.com/&quot;&gt;https://a11ytalks.com/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mythes d’accessibilité démystifiés (en) : &lt;a href=&quot;https://ux.shopify.com/accessibility-is-more-than-a-technical-problem-ca6bb9dee8ce&quot;&gt;https://ux.shopify.com/accessibility-is-more-than-a-technical-problem-ca6bb9dee8ce&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Single Page Applications (SPA)</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/single-page-app/"/>
+    <updated>2021-06-16T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/single-page-app/</id>
+    <content type="html">&lt;h1&gt;Recommandations pour les &lt;span lang=&quot;en&quot;&gt;Single Page Applications&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;Une &lt;a href=&quot;https://fr.wikipedia.org/wiki/Application_web_monopage&quot;&gt;application web monopage&lt;/a&gt; (en anglais single-page application ou &lt;abbr lang=&quot;en&quot; title=&quot;single-page application&quot;&gt;SPA&lt;/abbr&gt;) est une application web dont la particularité est de n&#39;avoir qu&#39;une seule page. Lors de la navigation celle-ci n&#39;est jamais rechargée, seules des portions de la page sont dynamiquement mises à jour à l&#39;aide de code Javascript.&lt;/p&gt;
+&lt;p&gt;Les &lt;abbr lang=&quot;en&quot; title=&quot;single-page application&quot;&gt;SPA&lt;/abbr&gt; rencontrent un engouement depuis l&#39;avènement des frameworks Javascript : &lt;code&gt;Angular&lt;/code&gt;, &lt;code&gt;React&lt;/code&gt; ou &lt;code&gt;Vue&lt;/code&gt; pour ne citer que les plus populaires. Dans cet article, l&#39;idée n&#39;est pas de prendre partie pour ou contre les &lt;abbr lang=&quot;en&quot; title=&quot;single-page application&quot;&gt;SPA&lt;/abbr&gt;. Il faut reconnaître qu&#39;employé correctement, ce type de framework peut résoudre des problèmes notamment lorsqu&#39;il est utilisé dans la conception d&#39;applications web complexes. Nous allons nous concentrer ici sur les difficultés que cela peut apporter en terme d&#39;accessibilité.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Avertissement :&lt;/strong&gt; les &lt;abbr lang=&quot;en&quot; title=&quot;single-page application&quot;&gt;SPA&lt;/abbr&gt; ne doivent en aucun cas devenir la norme. Si votre besoin peut être satisfait à l&#39;aide d&#39;un site standard inutile de succomber aux effets de mode. Un site Web standard offre nativement une prise en charge de l&#39;accessiblité et vous épargne la prise en main d&#39;un framework complexe, la montée en compétence, la maintenance ou les problèmes de compatibilité avec les anciens navigateurs.&lt;/p&gt;
+&lt;h2 id=&quot;mettre-a-jour-le-titre-des-pages&quot;&gt;Mettre à jour le titre des pages &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/single-page-app/#mettre-a-jour-le-titre-des-pages&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;La navigation à travers une &lt;abbr lang=&quot;en&quot; title=&quot;single-page application&quot;&gt;SPA&lt;/abbr&gt; n&#39;entraîne pas de rechargement de page par le navigateur. Qui dit pas de rechargement, dit pas de modification du titre de la page (balise &lt;code&gt;title&lt;/code&gt;). Or, il est important que &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/web/developper/contenu-textuel/#donner-un-titre-aux-pages&quot;&gt;chaque page ait un titre unique&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Il faudra donc veiller à mettre à jour le titre de la page via Javascript (&lt;code&gt;document.title&lt;/code&gt;). Se référer à la documentation du framework utilisé pour savoir si une implémentation de ce mécanisme est proposée ou s&#39;il doit être créé de toute pièce.&lt;/p&gt;
+&lt;h2 id=&quot;prevenir-lutilisateur-des-changements-de-page&quot;&gt;Prévenir l&#39;utilisateur des changements de page &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/single-page-app/#prevenir-lutilisateur-des-changements-de-page&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Les lecteurs d&#39;écran utilisés par les personnes malvoyantes informent l&#39;utilisateur automatiquement dès qu&#39;une nouvelle page est chargée par le navigateur. Dans le cadre d&#39;une &lt;abbr lang=&quot;en&quot; title=&quot;single-page application&quot;&gt;SPA&lt;/abbr&gt;, les changements de page n&#39;entraînent pas de rechargement par le navigateur. Le lecteur d&#39;écran n&#39;a donc aucun moyen de prévenir l&#39;utilisateur.&lt;/p&gt;
+&lt;p&gt;Une solution acceptable consiste à déplacer le focus sur le premier titre &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; de la page courante. Ceci entraînerra sa lecture par le lecteur d&#39;écran, ainsi l&#39;utilisateur sera prévenu qu&#39;une nouvelle page est affichée.&lt;br /&gt;
+À noter que par défaut une balise &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; n&#39;est pas focusable. Pour L&#39;autoriser à recevoir le focus via Javascript, il suffit de lui ajouter un attribut &lt;code&gt;tabindex=&amp;quot;-1&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;prevenir-lutilisateur-des-mises-a-jour-a-linterieur-de-la-page&quot;&gt;Prévenir l&#39;utilisateur des mises à jour à l&#39;intérieur de la page &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/single-page-app/#prevenir-lutilisateur-des-mises-a-jour-a-linterieur-de-la-page&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Si certaines informations sont mises à jour dynamiquement dans la page (message de confirmation, chargement en cours, affichage d&#39;erreur…). Il est important de faire en sorte que les lecteurs d&#39;écran annoncent ces modifications. Plusieurs méthodes sont disponibles selon les cas :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Déplacer le focus sur un élément qui vient d&#39;être mis à jour.&lt;/li&gt;
+&lt;li&gt;Utiliser de l&#39;ARIA comme indiqué dans les articles suivants : &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/&quot;&gt;Utiliser ARIA les messages d&#39;état, de statut ou contextuel&lt;/a&gt; et &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/#main-content&quot;&gt;L&#39;attribut aria-live et le role alert&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;deplacer-le-focus&quot;&gt;Déplacer le focus &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/single-page-app/#deplacer-le-focus&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Sur un site web classique, lorsqu&#39;un utilisateur clique sur un lien et qu&#39;une nouvelle page s&#39;affiche, le focus est automatiquement repositionné en haut de page (sur le &lt;code&gt;body&lt;/code&gt;). Ainsi pour les utilisateurs qui naviguent à l&#39;aide du clavier, il suffit d&#39;utiliser la touche &lt;code&gt;TAB&lt;/code&gt; pour se déplacer dans la page.&lt;/p&gt;
+&lt;p&gt;Dans une &lt;abbr lang=&quot;en&quot; title=&quot;single-page application&quot;&gt;SPA&lt;/abbr&gt;, si un utilisateur clique sur un bouton qui entraîne une mise jour du contenu, le focus n&#39;est pas déplacé (il reste sur le bouton). Plus important encore, si le changement de page a fait disparaître l&#39;élément sur lequel était positionné le focus, l&#39;utilisateur ne sait plus où il est dans la page. Cela peut également entraîner des problèmes de vocalisation pour les personnes qui naviguent à l&#39;aide d&#39;un lecteur d&#39;écran.&lt;/p&gt;
+&lt;p&gt;Il est donc important de veiller à déplacer le focus via Javascript lorsque cela est nécessaire. De même si une boite de dialogue modale est affichée à l&#39;écran, le focus doit être positionné dans la boite lors de son apparition puis replacé sur l&#39;élément d&#39;origine (un bouton par exemple) lors de sa disparition.&lt;/p&gt;
+&lt;h2 id=&quot;utiliser-la-semantique-html-5&quot;&gt;Utiliser la sémantique HTML 5 &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/single-page-app/#utiliser-la-semantique-html-5&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Les &lt;abbr lang=&quot;en&quot; title=&quot;single-page application&quot;&gt;SPA&lt;/abbr&gt; sont souvent utilisées dans le cadre d&#39;applications Web. L&#39;utilisateur doit composer parfois avec une interface qui s&#39;apparente plus a une application native qu&#39;à celle d&#39;un site Web. Il est important de veiller à identifier correctement les différentes zones : navigation, contenu, zone de recherche…&lt;/p&gt;
+&lt;p&gt;Si votre application possèdent des zones spécifiques, il est recommandé de leur attribuer un &lt;code&gt;label&lt;/code&gt; afin qu&#39;elles soient rapidement identifiables. Par exemple à l&#39;aide d&#39;une balise &lt;code&gt;&amp;lt;region&amp;gt;&lt;/code&gt; et d&#39;un attribut &lt;code&gt;aria-label&lt;/code&gt; ou &lt;code&gt;aria-labelledby&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;div role=&quot;region&quot; aria-label=&quot;moniteur d&#39;activité&quot;&amp;gt;
+  &amp;lt;!-- contenu de la région --&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;div role=&quot;region&quot; aria-label=&quot;simulateur des coûts&quot;&amp;gt;
+  &amp;lt;!-- contenu de la région --&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Consultez l&#39;article : &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/web/exemples-de-composants/landmarks-aria/#main-content&quot;&gt;les régions ou landmarks ARIA&lt;/a&gt;, pour obtenir plus d&#39;information sur l&#39;utilisation de ces balises.&lt;/p&gt;
+&lt;h2 id=&quot;gerer-lhistorique-du-navigateur&quot;&gt;Gérer l&#39;historique du navigateur &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/single-page-app/#gerer-lhistorique-du-navigateur&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Rien de plus agaçant que de sortir d&#39;une application alors qu&#39;on souhaitait simplement revenir à la page précédente en utilisant le bouton &lt;code&gt;précédent&lt;/code&gt; du navigateur. C&#39;est pourtant ce qui se produit parfois dans les &lt;abbr lang=&quot;en&quot; title=&quot;single-page application&quot;&gt;SPA&lt;/abbr&gt;.&lt;/p&gt;
+&lt;p&gt;La solution consiste à manipuler l&#39;historique du navigateur en Javascript à l&#39;aide de l&#39;&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Web/API/History_API&quot; lang=&quot;en&quot;&gt;History API&lt;/a&gt;. Celle-ci permet de mémoriser les différents états de l&#39;application et d&#39;y revenir à l&#39;aide des boutons &lt;code&gt;précédent&lt;/code&gt; et &lt;code&gt;suivant&lt;/code&gt; du navigateur.&lt;/p&gt;
+&lt;h2 id=&quot;resume&quot;&gt;Résumé des bonnes pratiques&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Mettre à jour le titre des pages (&lt;code&gt;document.title&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Prévenir l&#39;utilisateur des changements de page&lt;/li&gt;
+&lt;li&gt;Prévenir l&#39;utilisateur des mises à jour à l&#39;intérieur de la page (ARIA)&lt;/li&gt;
+&lt;li&gt;Déplacer le focus&lt;/li&gt;
+&lt;li&gt;Utiliser la sémantique HTML 5&lt;/li&gt;
+&lt;li&gt;Gérer l&#39;historique du navigateur (&lt;span lang=&quot;en&quot;&gt;History API&lt;/span&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;liens-utiles&quot;&gt;Liens utiles &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/single-page-app/#liens-utiles&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://dev.to/s_aitchison/page-titles-and-a11y-in-single-page-applications-esp-react-vue-4ok8&quot; hreflang=&quot;en&quot; lang=&quot;en&quot;&gt;Page Titles and A11y in Single Page Applications (Suzanne Aitchison)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.gatsbyjs.com/blog/2019-07-11-user-testing-accessible-client-routing/&quot; hreflang=&quot;en&quot; lang=&quot;en&quot;&gt;What we learned from user testing of accessible client-side routing techniques with Fable Tech Labs (Marcy Sutton)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.paris-web.fr/2020/conferences/trucs-et-astuces-pour-construire-une-single-page-app-accessible.php&quot;&gt;Mini-conf Maël Brunet, Paris Web 2020&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Désactiver des éléments HTML</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/desactiver-des-elements/"/>
+    <updated>2021-07-01T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/desactiver-des-elements/</id>
+    <content type="html">&lt;h1&gt;Désactiver un champ de formulaire&lt;/h1&gt;
+&lt;p&gt;Pour désactiver un champ de formulaire il suffit de lui attribuer l&#39;attribut &lt;code&gt;disabled&lt;/code&gt; :&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;button disabled&amp;gt;Supprimer&amp;lt;/button&amp;gt;
+&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;address&amp;quot; disabled&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Si &lt;code&gt;disable&lt;/code&gt; est utilisé sur un &lt;code&gt;&amp;lt;fieldset&amp;gt;&lt;/code&gt;, les éléments enfants sont désactivés.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;fieldset id=&amp;quot;groupe&amp;quot; disabled&amp;gt; 
+    &amp;lt;input name=&amp;quot;foo&amp;quot;&amp;gt; 
+    &amp;lt;input type=&amp;quot;checkbox&amp;quot; name=&amp;quot;bar&amp;quot;&amp;gt; 
+    &amp;lt;select name=&amp;quot;values&amp;quot;&amp;gt; 
+        &amp;lt;option value=&amp;quot;1&amp;quot;&amp;gt;Valeur 1&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&amp;quot;2&amp;quot;&amp;gt;Valeur 2&amp;lt;/option&amp;gt;
+        &amp;lt;option value=&amp;quot;3&amp;quot;&amp;gt;Valeur 3&amp;lt;/option&amp;gt;        
+    &amp;lt;/select&amp;gt;
+&amp;lt;/fieldset&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1&gt;Désactiver un lien&lt;/h1&gt;
+&lt;p&gt;Pour désactiver un lien, contrairement à la technique précédente, l&#39;utilisation de l&#39;attribut &lt;code&gt;disabled&lt;/code&gt; n&#39;est pas autorisée. Il est tout de même possible de désactiver un lien en suivant les 3 étapes suivantes :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;supprimer l&#39;attribut &lt;code&gt;href&lt;/code&gt; pour qu&#39;il ne puisse plus recevoir le focus&lt;/li&gt;
+&lt;li&gt;ajouter un &lt;code&gt;role=&amp;quot;link&amp;quot;&lt;/code&gt; pour qu&#39;il soit toujours considéré comme un lien par les lecteurs d&#39;écran&lt;/li&gt;
+&lt;li&gt;ajouter un attribut &lt;code&gt;aria-disabled=&amp;quot;true&amp;quot;&lt;/code&gt; pour qu&#39;il soit indiqué comme étant désactivé&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;&amp;lt;a role=&quot;link&quot; aria-disabled=&quot;true&quot;&amp;gt;Lien désactivé&amp;lt;/a&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Consultez l&#39;excellent article de Scott O&#39;Hara sur le sujet : &lt;a href=&quot;https://www.scottohara.me/blog/2021/05/28/disabled-links.html&quot; hreflang=&quot;en&quot; lang=&quot;en&quot;&gt;Disabling a link&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Taille et couleur des textes</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/couleur-et-taille-du-texte/"/>
+    <updated>2021-07-05T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/couleur-et-taille-du-texte/</id>
+    <content type="html">&lt;h1&gt;Taille et couleur des textes&lt;/h1&gt;
+&lt;p&gt;Dans cet article, nous allons tenter de répondre aux questions suivantes concernant l&#39;accessibilité des textes dans les pages Web:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Quelle taille faut-il utiliser pour les textes ?&lt;/li&gt;
+&lt;li&gt;Quelle est la taille de police minimale à respecter ?&lt;/li&gt;
+&lt;li&gt;Quelle couleur puis-je utiliser pour le texte ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;quen-dit-le-referenciel&quot;&gt;Qu&#39;en dit le référenciel ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/couleur-et-taille-du-texte/#quen-dit-le-referenciel&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Le &lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/&quot;&gt;référentiel WCAG&lt;/a&gt; n&#39;impose pas de taille minimale ni de couleurs pour les textes. Ceci dit deux critères permettant de répondre à ces questions méritent notre attention :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/WCAG21/#resize-text&quot; lang=&quot;en&quot;&gt;1.4.4 Resize text&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/WCAG21/#contrast-minimum&quot; lang=&quot;en&quot;&gt;1.4.3 Contrast (Minimum)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;agrandissement-de-la-taille-des-caracteres&quot;&gt;Agrandissement de la taille des caractères &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/couleur-et-taille-du-texte/#agrandissement-de-la-taille-des-caracteres&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Si le référentiel n&#39;impose pas de taille minimale pour la taille des caractères, &lt;a href=&quot;https://www.w3.org/TR/WCAG21/#resize-text&quot;&gt;le critère 1.4.4&lt;/a&gt; indique que l&#39;utilisateur doit pouvoir augmenter la taille du texte jusqu&#39;à 200% sans perte de contenu ou de fonctionnalité. Pour être conforme à ce critère il est indispensable de tester dans un navigateur. La procédure pour augmenter la taille du texte est disponible sur la page suivante : &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/web/outils/methodes-et-outils-de-test/agrandissement-texte/&quot;&gt;Agrandissement de la taille du texte&lt;/a&gt;.&lt;br /&gt;
+Parfois le dimensionnement de certains blocs de texte, notamment à l&#39;aide de tailles en pixels, peut entraîner des pertes d&#39;informations (textes tronqués), c&#39;est pourquoi il est conseillé d&#39;utiliser des unités relatives (%, em, rem ...).&lt;/p&gt;
+&lt;h3 id=&quot;contraste-des-couleurs&quot;&gt;Contraste des couleurs &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/couleur-et-taille-du-texte/#contraste-des-couleurs&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Le référentiel n&#39;impose pas d&#39;utiliser ni même n&#39;interdit l&#39;utilisation de certaines couleurs pour les textes. Cela dit, un texte gris clair sur fond blanc par exemple pourra poser des difficultés. Il est donc indispensable de vérifier que la couleur du texte et la couleur du fond fournissent un niveau de contraste suffisant (cf. niveaux ci-dessous). Celui-ci peut être &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/&quot;&gt;mesuré très simplement à l&#39;aide d&#39;outils&lt;/a&gt;.&lt;br /&gt;
+ &lt;br /&gt;
+Le &lt;a href=&quot;https://www.w3.org/TR/WCAG21/#contrast-minimum&quot;&gt;critère 1.4.3 du référentiel&lt;/a&gt; impose des niveaux de contraste minimums permettant de garantir un confort de lecture suffisant.&lt;/p&gt;
+&lt;p&gt;Pour les textes standards :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;de taille inférieure à 24px : contraste de 4,5:1 minimum&lt;/li&gt;
+&lt;li&gt;de taille supérieure ou égale à 24px : contraste de 3:1 minimum&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pour les textes gras :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;de taille inférieure à 18,5px : contraste de 4,5:1 minimum&lt;/li&gt;
+&lt;li&gt;de taille supérieure ou égale à 18,5px : contraste de 3:1 minimum&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pour les liens non-soulignés&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;contraste de 3:1 minimum avec le texte environnement et la couleur de fond&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Le critère mentionne quelques exceptions soumises à aucune contrainte, notamment les textes des éléments inactifs (un bouton apparaissant grisé par exemple), les textes faisant partie d&#39;un logo ou un nom de marque.&lt;/p&gt;
+&lt;h2 id=&quot;et-les-utilisateurs-dans-tout-ca&quot;&gt;Et, les utilisateurs dans tout ça ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/couleur-et-taille-du-texte/#et-les-utilisateurs-dans-tout-ca&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Comme on vient de le voir, le référentiel n&#39;impose pas de taille minimale car il part du principe qu&#39;il est possible d&#39;agrandir le texte si nécessaire. Dans les faits les utilisateurs n&#39;ajustent pas toujours la taille du texte à leurs besoins, par manque d&#39;habitude ou par méconnaissance des possibilités qui leur sont offertes. C&#39;est pourquoi il est important que la taille par défaut soit suffisante pour garantir un confort de lecture qui donne envie de poursuivre sur le site.&lt;/p&gt;
+&lt;p&gt;La taille et la couleur ne sont pas les seules caractéristiques qui entrent en jeu sur la lisibilité d&#39;un texte, en effet la police de caractères ou l&#39;utilisation de texte en italique peut avoir des conséquences importantes. Vous trouverez quelques recommandations complémentaires à ce sujet dans la section &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/contenu-editorial/&quot;&gt;contenu éditorial&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+</feed>
