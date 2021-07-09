@@ -20,8 +20,8 @@ module.exports = {
       fr: 'Recommandations accessibilité Orange - Français'
     },
     url: {
-      en: 'https:/a11y-guidelines.orange.com/feed-en.xml',
-      fr: 'https:/a11y-guidelines.orange.com/feed-fr.xml'
+      en: '/feed-en.xml',
+      fr: '/feed-fr.xml'
     }     
   },
   home: {
