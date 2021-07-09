@@ -16,12 +16,12 @@ module.exports = {
   },
   rss: {
     title: {
-      en: 'Orange digital accessibility guidelines',
-      fr: 'Recommandations accessibilité Orange'
+      en: 'Orange digital accessibility guidelines - English',
+      fr: 'Recommandations accessibilité Orange - Français'
     },
     url: {
-      en: 'http://127.0.0.1:8080/en/feed.xml',
-      fr: 'http://127.0.0.1:8080/fr/feed.xml'
+      en: 'https:/a11y-guidelines.orange.com/feed-en.xml',
+      fr: 'https:/a11y-guidelines.orange.com/feed-fr.xml'
     }     
   },
   home: {
