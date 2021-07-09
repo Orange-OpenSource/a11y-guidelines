@@ -203,6 +203,8 @@
 <h2>Introduction</h2>
 <p>In this example we will use the <a href="https://boosted.orange.com/docs/4.5/components/dropdowns/">drop-down menu</a> available in the <a href="https://boosted.orange.com/">Boosted</a> library. This library based on Bootstrap allows you to quickly create <abbr title="User Interface">UI</abbr> components branded with the Orange colours.</p>
 
+<p>The example implementation described below is suitable for navigation menus as well as for unit components presenting a list of actions.</p>
+
 <h2>Final example</h2>
 <p>This is how the drop-down looks with our library.</p>
 
@@ -266,32 +268,35 @@
    <dd>The menu closes. As the focus is repositioned automatically, the screen reader again vocalizes the menu button, and its state.</dd>
  </dl>
 
- <h2><abbr>ARIA</abbr> attributes</h2>
- <p>If you do not already use an accessible drop-down component, you will need to add some <abbr>ARIA</abbr> attributes in order to be correctly vocalized by the screen reader.</p>
- On the opening button:
- <ul>   
-   <li>The <code>aria-expanded</code> attribute with a <code>true</code>/<code>false</code> value, allows to vocalize menu states (open or closed).</li>
+<h3><abbr>ARIA</abbr> attributes</h3>
+
+<ul>   
+	<li><code>aria-expanded</code>: the <code>aria-expanded</code> attribute with a <code>true</code>/<code>false</code> value, allows to vocalize menu states (open or closed).</li>
+	<li><code>aria-current</code>: if the dropdown menu is used within a navigation menu, provide for the addition of an attribute <code>aria-current="page"</code> on the item corresponding to the active page.</li>
+	<li><code>aria-haspopup</code>: the <code>aria-haspopup</code> attribute is reserved for the <code> menu </code> role (see paragraph "Special case of application menus"). It is therefore not present in this implementation.</li>
 </ul>
 
-Example:
-<pre><code class="html">
-  &lt;button aria-expanded="false"&gt;My account&lt;/button&gt;
-</code></pre>
-
-On the menu list items:
-<ul>
-  <li>A <code>role="menu"</code> attribute on the <code>ul</code> list tag.</li>
-  <li>A <code>role="menuitem"</code> attribute on <code>a</code> tags.</li>
-</ul>
-
-Example:
 <pre><code class="html">
   &lt;button aria-expanded="false"&gt;Mon compte&lt;/button&gt;
-  &lt;ul role="menu"&gt;
-    &lt;li&gt;&lt;a href="#" role="menuitem"&gt;My cart&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#" role="menuitem"&gt;My orders&lt;/li&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mon panier&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#" aria-current="page"&gt;Mes commandes&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mes informations&lt;/a&gt;&lt;/li&gt;
+      &lt;li role="separator" class="dropdown-divider"&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Déconnexion&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 </code></pre>
+
+<p>In addition, the ARIA pattern describes the use of an <code>aria-controls</code> attribute, as well as additional optional keyboard interactions: <kbd lang="en">Home</kbd> / <kbd lang="en">End</kbd></p>
+<p>Example: <a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/disclosure/disclosure-navigation.html">Example Disclosure for Navigation Menus</a></p>
+
+<h2>Special case of application menus</h2>
+
+<p>The ARIA pattern describes a "Menu" and "Menubar" component, using the roles <code>menu</code> or <code>menubar</code>.</p>
+<p>Please note, this pattern is reserved only for the creation of an application menu, the interactions of which should be similar to the behavior of the menus present in desktop applications for example.</p>
+<p>These implementations are more complex and unnecessary for web navigation menus.</p>
+
+<p>Example: <a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/menubar/menubar-2/menubar-2.html">Editor Menubar Example</a></p>
 
     </main>
     
