@@ -81,14 +81,15 @@ tags: componentsExamples_fr
 	<li><code>aria-haspopup</code> : l'attribut <code>aria-haspopup</code> est réservé au rôle <code>menu</code> (voir paragraphe "Cas particulier des menus applicatifs"). Il n'est donc pas présent dans cette implémentation.</li>
 </ul>
 
-Exemple&nbsp;:
 <pre><code class="html">
-  &lt;button aria-expanded="false"&get;Mon compte&lt;/button&gt;
-   &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mon panier&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a class="dropdown-item" href="#" aria-current="page"&gt;Mes commandes&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mes informations&lt;/a&gt;&lt;/li&gt;
-    &lt;li role="separator" class="dropdown-divider"&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Déconnexion&lt;/a&gt;&lt;/li&gt;
+  &lt;button aria-expanded="false"&gt;Mon compte&lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mon panier&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#" aria-current="page"&gt;Mes commandes&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mes informations&lt;/a&gt;&lt;/li&gt;
+      &lt;li role="separator" class="dropdown-divider"&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Déconnexion&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
 </code></pre>
 
 <p>En complément le pattern ARIA décrit l'utilisation d'un attribut <code>aria-controls</code>, ainsi que des interactions claviers optionnelles supplémentaires : <kbd lang="en">Home</kbd>/<kbd lang="en">End</kbd></p>
@@ -100,4 +101,4 @@ Exemple&nbsp;:
 <p>Attention, ce pattern est réservé uniquement à la création de menu applicatif, dont les interactions devront se rapprocher du comportement des menus présent dans des applications bureaux par exemple.</p>
 <p>Ces implémentations sont plus complexes et non nécessaires aux menus de navigation web.</p>
 
-<p><strong>Exemple de menu :</strong> <a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/menubar/menubar-2/menubar-2.html" hreflang="en" lang="en">Editor Menubar Example</a></p>
+<p>Exemple : <a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/menubar/menubar-2/menubar-2.html" hreflang="en" lang="en">Editor Menubar Example</a></p>
