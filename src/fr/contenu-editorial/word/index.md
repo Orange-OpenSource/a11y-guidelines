@@ -1,5 +1,6 @@
 ---
 title: "Accessibilité des documents Word"
+abstract: "Créer un document Word accessible"
 ---
 
 # Créer un document Word accessible

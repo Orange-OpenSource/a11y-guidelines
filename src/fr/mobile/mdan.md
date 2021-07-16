@@ -1,5 +1,6 @@
 ---
 title: "Démonstrateur d’accessibilité sur mobile mDAN"
+abstract: "Présentation de l'application mDAN permettant de découvrir la conception et le développement mobile accessible"
 ---
 
 # Démonstrateur d’accessibilité sur mobile mDAN   

@@ -1,5 +1,6 @@
 ---
 title: "Comment tester l'accessibilité d'un documents Word"
+abstract: "Que faut-il vérifier au sujet de l'accessibilité des documents Word ?"
 ---
 
 # Comment tester l'accessibilité d'un documents Word

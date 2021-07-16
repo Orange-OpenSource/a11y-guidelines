@@ -1,5 +1,6 @@
 ---
 title: "Les critères incontournables sous Android"
+abstract: "Les critères incontournables pour le développement d'une application Android accessible"
 ---
 
 # Les critères incontournables sous Android

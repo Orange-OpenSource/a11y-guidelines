@@ -1,5 +1,6 @@
 ---
 title: "Aides techniques"
+abstract: "S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran"
 ---
 
 # Aides techniques

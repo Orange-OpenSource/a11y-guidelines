@@ -1,5 +1,6 @@
 ---
 title: "Référentiels et ressources"
+abstract: "Les référentiels d'accessibilité en vigueur en France et dans le monde"
 ---
 
 # Référentiels et ressources

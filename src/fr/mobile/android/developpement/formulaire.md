@@ -1,5 +1,6 @@
 ﻿---
 title: "Écran de saisie"
+abstract: "Accessibilité des champs de formulaire sous Android"
 ---
 
 # Écran de saisie

@@ -1,5 +1,6 @@
 ---
 title: "Storyline 360 - E-learning"
+abstract: "Recommandations Storyline 360"
 ---
 # Recommandations Storyline 360
 

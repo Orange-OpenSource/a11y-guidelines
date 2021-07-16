@@ -1,5 +1,6 @@
 ---
 title: "WWDC 2019 : Quelques enseignements en accessibilité"
+abstract: "Quelques recommandations sur le développement d'une application iOS accessible"
 displayToc: true
 ---
 

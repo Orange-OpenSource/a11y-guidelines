@@ -1,5 +1,6 @@
 ﻿---
 title: "Entêtes"
+abstract: "Avoir un titre d'écran pertinent et unique"
 ---
 
 # Entêtes

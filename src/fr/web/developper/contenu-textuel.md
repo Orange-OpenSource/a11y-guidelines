@@ -1,5 +1,6 @@
 ---
 title: "Contenu textuel"
+abstract: "S’assurer que les contenus textuels soient structurés avec la sémantique appropriée"
 ---
 
 # Contenu textuel

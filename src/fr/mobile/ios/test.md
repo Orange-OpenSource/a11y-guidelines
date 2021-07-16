@@ -1,5 +1,6 @@
 ---
 title: "Tester l'accessibilité d'une application iOS"
+abstract: "Guide pour tester l'accessibilité d'une application mobile iOS"
 displayToc: true
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Rappels sur les gestes de base avec un iPhone X"
+abstract: "Guide des gestes principaux pour naviguer avec un iphone X"
 ---
 
 # Rappels sur les gestes de base avec un iPhone X

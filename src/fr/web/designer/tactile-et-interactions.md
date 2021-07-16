@@ -1,5 +1,6 @@
 ---
 title: "Tactile et interactions"
+abstract: "S’assurer que l’utilisateur garde le contrôle sur les interactions, en particulier tactiles"
 ---
 
 # Tactile et interactions

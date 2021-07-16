@@ -1,5 +1,6 @@
 ---
 title: "Agrandissement de la taille du texte"
+abstract: "Gestion de l'agrandissement des textes dans une page web"
 ---
 
 # Agrandissement de la taille du texte

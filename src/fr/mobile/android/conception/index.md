@@ -1,5 +1,6 @@
 ﻿---
 title: "Les critères incontournables sous Android pour la conception"
+abstract: "Quelques recommandations pour concevoir accessible sous Android"
 ---
 
 # Les critères incontournables sous Android pour la conception

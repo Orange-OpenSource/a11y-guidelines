@@ -1,5 +1,6 @@
 ---
 title: "Créer des présentations PowerPoint accessibles"
+abstract: "Quelques recommandations pour créer des documents Powerpoint accessibles"
 ---
 
 # Créer des présentations PowerPoint accessibles

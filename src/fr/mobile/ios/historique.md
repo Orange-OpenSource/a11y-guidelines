@@ -1,5 +1,6 @@
 ---
 title: "Historique iOS"
+abstract: "Historique des mises à jour"
 displayToc: false
 ---
 

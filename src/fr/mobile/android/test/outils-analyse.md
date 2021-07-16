@@ -1,5 +1,6 @@
 ﻿---
 title: "Scan de l'application : les outils d'analyse"
+abstract: "Les outils de test automatisé de l'accessibilité pour Android"
 ---
 
 # Scan de l'application : les outils d'analyse

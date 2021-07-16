@@ -1,5 +1,6 @@
 ﻿---
 title: "Les tests manuels : mise en situation"
+abstract: "Les tests manuels d'accessibilité sous Android"
 ---
 
 # Les tests manuels : mise en situation

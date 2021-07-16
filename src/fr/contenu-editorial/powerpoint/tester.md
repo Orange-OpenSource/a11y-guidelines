@@ -1,5 +1,6 @@
 ---
 title: "Comment tester l'accessibilité d'une présentation PowerPoint"
+abstract: "Que faut-il vérifier au sujet de l'accessibilité de vos documents Powerpoint ?"
 ---
 
 # Comment tester l'accessibilité d'une présentation PowerPoint

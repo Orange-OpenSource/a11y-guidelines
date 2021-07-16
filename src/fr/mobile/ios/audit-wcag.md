@@ -1,5 +1,6 @@
 ﻿---
 title: "Audit WCAG"
+abstract: "La vallydette l'outil de test Orange pour mesurer le taux de conformité à l'accessibilité d'une application iOS"
 ---
 
 # Audit WCAG

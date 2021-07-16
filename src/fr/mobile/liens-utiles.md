@@ -1,5 +1,6 @@
 ---
 title: "Liens utiles"
+abstract: "Quelques ressources sur l'accessibilité pour Android et iOS"
 ---
 
 # Liens utiles

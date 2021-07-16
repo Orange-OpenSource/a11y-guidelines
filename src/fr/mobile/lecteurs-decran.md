@@ -1,5 +1,6 @@
 ---
 title: "Guide d’utilisation des lecteurs d’écran TalkBack et VoiceOver"
+abstract: "Présentation des gestes de base pour l'utilisation des lecteurs d'écran sur mobile"
 ---
 
 # Guide d’utilisation des lecteurs d’écran <span lang="en">TalkBack</span> et <span lang="en">VoiceOver</span>

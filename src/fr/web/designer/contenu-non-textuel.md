@@ -1,5 +1,6 @@
 ---
 title: "Contenu non-textuel"
+abstract: "S’assurer qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur"
 ---
 
 # Contenu non-textuel

@@ -1,5 +1,6 @@
 ---
 title: "À propos"
+abstract: "À propos de ce site"
 ---
 
 # À propos

@@ -1,5 +1,6 @@
 ---
 title: "Méthodes et outils de test"
+abstract: "Les méthodes et les outils pour tester l'accessibilité des pages web"
 ---
 
 # Méthodes et outils de test
