@@ -1,5 +1,6 @@
 ---
 title: "Créer des documents PDF accessibles"
+abstract: "Quelques recommandations pour créer des documents PDF accessibles"
 ---
 
 # Créer des documents PDF accessibles

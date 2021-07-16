@@ -1,5 +1,6 @@
 ---
 title: "Mise en page"
+abstract: "S’assurer que la mise en page soit adaptée à l’utilisateur."
 ---
 
 # Mise en page

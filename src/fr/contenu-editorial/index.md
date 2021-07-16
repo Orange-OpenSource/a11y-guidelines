@@ -1,5 +1,6 @@
 ---
 title: "Recommandations éditoriales générales"
+abstract: "Quelques recommandations concernant la rédaction des contenus éditoriaux"
 ---
 
 # Recommandations éditoriales générales

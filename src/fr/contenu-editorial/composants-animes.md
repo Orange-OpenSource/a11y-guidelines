@@ -1,5 +1,6 @@
 ---
 title: "Accessibilité des contenus vidéos, animations et audios"
+abstract: "Quelques recommandations pour l'accessibilité des contenus multimédias"
 ---
 
 # Accessibilité des contenus vidéos, animations et audios

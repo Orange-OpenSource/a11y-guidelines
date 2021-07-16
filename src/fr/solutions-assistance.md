@@ -1,5 +1,6 @@
 ---
 title: "Les solutions d'assistances ou aides techniques"
+abstract: "Quelques exemples de solutions d'assistances"
 ---
 # Les solutions d'assistances ou aides techniques
 

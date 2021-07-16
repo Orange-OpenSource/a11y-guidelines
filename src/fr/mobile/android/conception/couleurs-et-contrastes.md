@@ -1,5 +1,6 @@
 ﻿---
 title: "Couleurs et contrastes"
+abstract: "Quelques recommandations d'accessibilité sur les couleurs"
 ---
 
 # Couleurs et contrastes

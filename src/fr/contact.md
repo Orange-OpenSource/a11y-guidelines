@@ -1,5 +1,6 @@
 ---
 title: "Votre avis compte"
+abstract: "Formulaire de contact"
 ---
 
 # Votre avis compte

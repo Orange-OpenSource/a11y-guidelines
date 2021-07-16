@@ -1,5 +1,6 @@
 ---
 title: "Accéder à la liste des titres de la page (balises H1 à H6)"
+abstract: "Pour vérifier si des titres ont été correctement positionnés dans la page, il existe plusieurs solutions"
 ---
 
 # Accéder à la liste des titres de la page (balises `H1` à `H6`)

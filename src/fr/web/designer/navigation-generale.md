@@ -1,5 +1,6 @@
 ---
 title: "Navigation générale"
+abstract: "S’assurer que l’utilisateur navigue facilement dans une page et plus globalement dans un site"
 ---
 
 # Navigation générale

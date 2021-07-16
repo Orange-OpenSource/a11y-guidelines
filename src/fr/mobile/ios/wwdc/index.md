@@ -1,5 +1,6 @@
 ---
 title: "WWDC : World Wide Developers Conference"
+abstract: "Liste des présentations WWDC d'Apple au sujet de l'accessibilité"
 displayToc: true
 ---
 

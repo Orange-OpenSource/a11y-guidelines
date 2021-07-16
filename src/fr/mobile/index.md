@@ -1,5 +1,6 @@
 ---
 title: "Appareils mobiles"
+abstract: "L'accessibilité des applications mobiles Android et iOS"
 ---
 
 # Recommandations accessibilité Orange pour les mobiles

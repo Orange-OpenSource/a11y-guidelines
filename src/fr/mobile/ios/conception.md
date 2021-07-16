@@ -1,5 +1,6 @@
 ---
 title: "Les critères de conception iOS"
+abstract: "Les critères à respecter pour concevoir une application iOS accessible"
 displayToc: true
 ---
 

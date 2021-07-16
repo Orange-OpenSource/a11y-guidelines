@@ -1,5 +1,6 @@
 ---
 title: "Les formulaires"
+abstract: "S’assurer que l’utilisateur puisse efficacement compléter les formulaires"
 ---
 
 # Les formulaires

@@ -14,6 +14,10 @@ module.exports = {
     en: 'Orange digital accessibility guidelines',
     fr: 'Recommandations accessibilité numérique Orange'
   },
+  abstract: {
+    en: 'Guidelines, methods, resources and tools proposed by the Orange skill center for digital accessibility',
+    fr: 'Recommandations, méthodes, ressources et outils proposés par le centre de compétences groupe d\'Orange sur l\'accessibilité numérique'
+  },
   rss: {
     title: {
       en: 'Orange digital accessibility guidelines - English',

@@ -1,5 +1,6 @@
 ---
 title: "Guide d’utilisation de TalkBack"
+abstract: "Les gestes principaux pour naviguer à l'aide de Talkback sous Android"
 ---
 
 # Guide d’utilisation de <span lang="en">TalkBack</span>

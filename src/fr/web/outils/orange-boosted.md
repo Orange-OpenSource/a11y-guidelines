@@ -1,5 +1,6 @@
 ---
 title: "Orange Boosted"
+abstract: "Orange Boosted est un framework HTML, CSS et Javascript basé sur le très populaire Twitter Boostrap"
 ---
 
 # Orange Boosted

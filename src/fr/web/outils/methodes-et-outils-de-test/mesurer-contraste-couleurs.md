@@ -1,5 +1,6 @@
 ---
 title: "Mesurer le niveau de contraste des couleurs"
+abstract: "Le niveau de contraste peut être mesuré simplement à l’aide d'outils"
 ---
 
 # Mesurer le niveau de contraste des couleurs

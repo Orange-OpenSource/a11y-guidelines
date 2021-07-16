@@ -1,5 +1,6 @@
 ﻿---
 title: "Agrandissement des éléments"
+abstract: "Agrandir les textes sans perte d'information"
 ---
 
 # Agrandissement des éléments

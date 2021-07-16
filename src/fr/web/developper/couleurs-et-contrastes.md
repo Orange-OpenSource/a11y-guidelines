@@ -1,10 +1,11 @@
 ---
 title: "Couleurs et contrastes"
+abstract: "S’assurer que les couleurs utilisées ne posent pas de problème à l’utilisateur"
 ---
 
 # Couleurs et contrastes
 
-<p class="lead">S’assurer que les couleurs utilisés ne posent pas de problème à l’utilisateur</p>
+<p class="lead">S’assurer que les couleurs utilisées ne posent pas de problème à l’utilisateur</p>
 
 
 

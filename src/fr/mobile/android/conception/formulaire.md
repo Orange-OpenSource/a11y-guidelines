@@ -1,5 +1,6 @@
 ﻿---
-title: Écran de saisie
+title: "Écran de saisie"
+abstract: "Quelques recommandations sur l'accessibilité des champs de formulaire"
 ---
 
 # Écran de saisie

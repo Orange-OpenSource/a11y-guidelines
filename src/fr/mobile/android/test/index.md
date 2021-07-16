@@ -1,5 +1,6 @@
 ﻿---
 title: "Le test de l’accessibilité sous Android"
+abstract: "Comment tester l'accessibilité d'une application Android ?"
 ---
 
 # Le test de l’accessibilité sous Android

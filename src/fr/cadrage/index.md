@@ -1,5 +1,6 @@
 ---
 title: "Cadrage"
+abstract: "Cadrage d'un projet numérique accessible"
 ---
 
 # Cadrage d'un projet numérique accessible

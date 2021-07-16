@@ -1,5 +1,6 @@
 ---
 title: "Liste des critères WCAG pour les tests"
+abstract: "Ce socle de critères destiné aux sites et applications web permet d’éviter les principales erreurs d’accessibilité"
 displayToc: true
 leftColumn:
   display: true

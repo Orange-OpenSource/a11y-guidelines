@@ -1,5 +1,6 @@
 ---
 title: "Tester l’accessibilité numérique"
+abstract: "Comment tester l’accessibilité numérique ?"
 ---
 
 # Comment tester l’accessibilité numérique&nbsp;?
