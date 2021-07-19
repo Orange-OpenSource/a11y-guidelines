@@ -161,7 +161,7 @@
 		"wcag": [
 			"1.4.1 A"
 		],
-		"verifier": "<p>Vérifier que la couleur n'est pas le seul moyen de convoyer d'information&nbsp;:</p><ul><li>l'information peut également être obtenue par un texte</li><li>au moins un autre moyen visuel est disponible pour obtenir la même information (exemple&nbsp;: des icônes utilisent des couleurs, mais également des formes différentes).</li></ul>\n<p>Non applicable, si aucune information n'est portée par de la couleur.</p>",
+		"verifier": "<p>Vérifier que la couleur n'est pas le seul moyen de convoyer une information&nbsp;:</p><ul><li>l'information peut également être obtenue par un texte</li><li>au moins un autre moyen visuel est disponible pour obtenir la même information (exemple&nbsp;: des icônes qui utilisent des couleurs, mais également des formes différentes)</li><li>cas particulier des liens non soulignés dans du texte : <ul> <li>le lien doit avoir un contraste de 3 :1 avec le texte environnant</li> <li>et un indicateur, ne reposant pas sur la couleur, doit permettre de le distinguer lors de la prise de focus (ex : souligné)</li> </ul></li></ul><p><strong>Remarques :</strong></p><ul> <li>sont exclus les liens dont la nature est explicite, exemple des liens présent dans les zones de navigation (entête et pieds de page, menu ou liste de liens…)</li> <li>critère non applicable, si aucune information n'est portée par de la couleur</li></ul>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Couleurs et contrastes",
@@ -171,7 +171,7 @@
 		"wcag": [
 			"1.3.3 A"
 		],
-		"verifier": "<p>Vérifier que l'information transmise par une information sensorielle (forme, taille, position, orientation, son) peut également être obtenue par un texte ou un message explicite.</p>\n<p>Non applicable, si aucune information n'est portée par le son, l'orientation, la taille, la forme ou la position.</p>",
+		"verifier": "<p>Vérifier que l'information transmise par une caractéristique sensorielle (forme, taille, position, orientation, son) peut également être obtenue par un texte ou un message explicite.</p><p><strong>Exemples de non conformités :</strong></p><ul> <li>identification d’une information uniquement par sa position : \" pour aller à l'écran suivant appuyez sur le bouton à droite \", ou \" choisissez un des boutons affichés au-dessus de l’image pour en savoir plus \"</li> <li>identification d’une information uniquement par sa forme visuelle ou un symbole graphique : \" Appuyez sur le bouton rond pour quitter \"</li></ul><p>Non applicable, si aucune information n'est portée par de le son, l'orientation, la taille, la forme ou la position</p>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Agrandissement des éléments",
@@ -186,7 +186,7 @@
 		"resultatTest": "nt"
 	},{
 		"themes": "Navigation vocale",
-		"title": "Les éléments signifiants sont-ils tous vocalisés ? ",
+		"title": "Les éléments signifiants sont-ils tous vocalisés et pertinents ? ",
 		"ID": "testID-018",
 		"IDorigin": "testID-018",
 		"wcag": [
@@ -243,7 +243,7 @@
 		"wcag": [
 			"4.1.3 AA"
 		],
-		"verifier": "<p>Vérifier qu'un mécanisme reposant sur les régions live est implémenté :</p><ul><li>les messages temporaires sont vocalisés</li><li>les messages d'erreurs sont vocalisés</li><li>le changement d'un élément est vocalisé s'il est utile pour l'utilisateur d'en être informé</li><li>la progression d'une mise à jour du contenu est vocalisée</li></ul>",
+		"verifier": "<p>Pour tous les messages de status (résultats d'une recherche, messages d'erreurs ou temporaires, une notification, changement d'un élément significatif, dialogue dans un chat, upload d'un fichier, enregistrement produit dans un panier, chargement progressif d'une liste...) :</p><ul><li>vérifier qu'un mécanisme reposant sur les régions dynamique live est implémenté</li><li>vérifier qu'ils soient restitués de façon pertinentes au lecteur d'écran</li></ul>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Navigation vocale",
@@ -287,44 +287,44 @@
 		"resultatTest": "nt"
 	},{
 
-		"themes": "Navigation au clavier (Switch Access)",
-		"title": "Les fonctionnalités de la page sont-elles utilisables avec Switch Access ?",
+		"themes": "Navigation au clavier & Switch Access",
+		"title": "Les fonctionnalités de l'écran sont-elles utilisables avec Switch Access et avec un clavier ?",
 		"ID": "testID-027",
 		"IDorigin": "testID-027",
 		"wcag": [
 			"2.1.1 A"
 		],
-		"verifier": "<p>Vérifier que :</p><ul><li>toutes les fonctionnalités sont disponibles avec Switch Access</li><li>seuls les éléments interactifs sont accessibles avec Switch Access</li><li>les éléments sont regroupés lorsqu'ils sont liés (Ex : contenu au sein d'une ligne cliquable d'une liste)</li></ul>",
+		"verifier": "<p>Vérifier que :</p><ul><li>toutes les fonctionnalités sont disponibles avec Switch Access et avec un clavier</li><li>seuls les éléments interactifs sont focusables</li><li>les éléments sont regroupés lorsqu'ils sont liés (Ex : contenu au sein d'une ligne cliquable d'une liste)</li><li>il est possible de scroller pour lire le contenu dans une scrollView</li></ul>",
 		"resultatTest": "nt"
 	},{
-		"themes": "Navigation au clavier (Switch Access)",
+		"themes": "Navigation au clavier & Switch Access",
 		"title": "L'écran ne contient pas de piège clavier&nbsp;?",
 		"ID": "testID-028",
 		"IDorigin": "testID-028",
 		"wcag": [
 			"2.1.2 A"
 		],
-		"verifier": "<p>Vérifier que l'écran ne contient aucun piège clavier avec Switch Access.</p>",
+		"verifier": "<p>Vérifier que l'écran ne contient aucun piège clavier avec la navigation au clavier.</p>",
 		"resultatTest": "nt"
 	},{
-		"themes": "Navigation au clavier (Switch Access)",
+		"themes": "Navigation au clavier & Switch Access",
 		"title": "L'ordre de prise de focus des éléments est-il logique et cohérent&nbsp;?",
 		"ID": "testID-029",
 		"IDorigin": "testID-029",
 		"wcag": [
 			"2.4.3 A"
 		],
-		"verifier": "Vérifier que l'ordre de prise de focus des éléments (boutons, liens, champs de formulaires) est cohérent et logique (souvent équivalent à l'ordre visuel) avec Switch Access.",
+		"verifier": "Vérifier que l'ordre de prise de focus des éléments (boutons, liens, champs de formulaires) est cohérent et logique (souvent équivalent à l'ordre visuel) avec Switch Access et la navigation au clavier.",
 		"resultatTest": "nt"
 	},{
-		"themes": "Navigation au clavier (Switch Access)",
+		"themes": "Navigation au clavier & Switch Access",
 		"title": "La prise de focus est-elle visible&nbsp;?",
 		"ID": "testID-030",
 		"IDorigin": "testID-030",
 		"wcag": [
 			"2.4.7 AA"
 		],
-		"verifier": "<p>Vérifier que le focus est visible d'un coup d'oeil et qu'il se distingue bien du reste de l'écran.</p>",
+		"verifier": "<p>Vérifier que le focus est visible d'un coup d'oeil et qu'il se distingue bien du reste de l'écran, que ce soit avec Switch Access ou la navigation clavier.</p>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Navigation générale",
@@ -417,8 +417,8 @@
 			"3.2.1 A",
 			"3.2.2 A"
 		],
-		"verifier": "<p>Lors de l'utilisation de formulaire ou de tout composant interactif, vérifier l'absence de changement de contexte&nbsp;:</p><ul><li>lors de la prise de focus d'un élément</li><li>lors de la saisie de données</li><li>lors de l'activation d'un élément de formulaire autre qu'un bouton</li></ul>",
-		"complement": "<h4>Changement de contexte</h4><p>Changement majeur dans le contenu de l'écran qui, lorsqu'il est effectué à l'insu de l'utilisateur, peut désorienter les utilisateurs incapables d'afficher la page dans sa totalité.</p>",
+		"verifier": "<p>Lors de l'utilisation de formulaire ou de tout composant interactif, vérifier l'absence de changement de contexte, sans avertissement de l'utilisateur&nbsp;:</p><ul><li>lors de la prise de focus d'un élément</li><li>lors de la saisie de données</li><li>lors de l'activation d'un élément de formulaire autre qu'un bouton</li></ul>",
+		"complement": "<h4>Changement de contexte</h4><p>Changement majeur dans le contenu de l'écran qui, lorsqu'il est effectué à l'insu de l'utilisateur, peut désorienter.</p><p>Les changements de contexte incluent les changements de&nbsp;:</p><ul><li>d'agent utilisateur (ouverture d'une autre application)</li><li><span lang=\"en\">viewport</span>(ouverture d'un nouvel écran, autre partie de l'écran affiché)</li><li>focus (déplacement du focus)</li><li>contenu qui modifie le sens de l'écran</li></ul>Le changement de contexte est conforme si: <ul><li>l'action est initiée par un bouton ou un lien explicite</li><li>l'utilisateur est averti par un texte avant son déclenchement</li></ul>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Navigation générale",
@@ -468,7 +468,8 @@
 		"wcag": [
 			"2.4.4 A"
 		],
-		"verifier": "<p>L'utilisateur doit être capable de savoir s'il souhaite suivre un lien sans avoir à se déplacer dans l'écran pour comprendre de quoi il s'agit.</p><ul><li>vérifier qu'il n'y a pas de libellés identiques pointant vers des destinations différentes</li><li>vérifier qu'il est possible de déterminer l'action ou la destination d'un lien ou d'un bouton uniquement à partir de son nom accessible</li><li>si ce n'est pas le cas, vérifier que la cible d'un lien ou l'action portée par un bouton est au moins compréhensible grâce à son contexte direct.</li></ul>",
+		"verifier": "<p>L'utilisateur doit être capable de savoir s'il souhaite suivre un lien sans avoir à se déplacer dans la page pour comprendre de quoi il s'agit.</p><ul><li>vérifier qu'il n'y a pas de libellés identiques pointant vers des destinations différentes</li><li>vérifier qu'il est possible de déterminer l'action ou la destination d'un lien ou d'un bouton uniquement à partir de son nom accessible</li><li>si vérifications précédentes non concluantes, vérifier que la cible d'un lien ou l'action portée par un bouton est au moins compréhensible grâce à son contexte.</li></ul>",
+		"complement": "<h4>Comment déterminer le contexte de lien&nbsp;: </h4><p>Le contexte du lien représente les informations supplémentaires qui permettent de comprendre son intitulé. Vérifier que ces informations supplémentaires sont positionnées soit :</p><ul><li>dans la même phrase</li><li>dans le même paragraphe</li><li>dans le même élément de liste</li><li>dans la même cellule de tableau</li><li>dans la cellule d'entête du tableau, associée à la cellule du lien</li><li>dans un titre de niveau explicite précédent le lien</li></ul>",
 		"resultatTest": "nt"
 	},{			
 		"themes": "Multimédia",
@@ -558,6 +559,51 @@
 		],
 		"verifier": "<p>Vérifier que des contrôles sont présents pour interagir avec un média audio, ou un média vidéo.</p>",
 		"group": "Multimédia",		
+		"resultatTest": "nt"
+	},{
+		"themes": "WebView",
+		"title": "Le code source est-il valide&nbsp;?",
+		"ID": "testID-057",
+		"IDorigin": "testID-057",
+		"wcag": [
+			"4.1.1 A"
+		],
+		"verifier": "<p>Ce critère ne peut être vérifié que si on a accès à l'URL de la WebView.</p><p>Dans le code HTML s'assurer que&nbsp;:</p><ul><li>les balises de début et de fin sont complètes</li><li>éléments imbriqués selon leurs spécifications</li><li>il n'y a pas d'attributs en double</li><li>les attributs sont définis correctement (ouverture et fermeture des guillemets)</li><li>chaque attribut <code>id</code> est unique</li></ul>",
+		"group": "WebView",		
+		"resultatTest": "nt"
+	},{
+		"themes": "WebView",
+		"title": "Les changements de langues sont-ils indiqués&nbsp;?",
+		"ID": "testID-058",
+		"IDorigin": "testID-058",
+		"wcag": [
+			"3.1.2 AA"
+		],
+		"verifier": "<p>Ce critère ne peut être vérifié que si on a accès à l'URL de la WebView.</p><p>Vérifier qu'un attribut <code>lang</code> est renseigné pour les mots et expressions en langue étrangères.</p>",
+		"exception": "<p>Pour les mots ou expressions en langue étrangère passés dans l'usage courant (Google, newsletter…) ou les noms propres, ne pas indiquer de changement de langue.</p>",
+		"group": "WebView",		
+		"resultatTest": "nt"
+	},{
+		"themes": "WebView",
+		"title": "Un mécanisme pour naviguer au sein de la WebView est-il présent&nbsp;?",
+		"ID": "testID-059",
+		"IDorigin": "testID-059",
+		"wcag": [
+			"2.4.1 A"
+		],
+		"verifier": "<p>Si un des mécanismes ci-dessous est jugé nécessaire à la navigation, mais absent de la page, le test est alors non-conforme&nbsp;:</p><ul><li>des titres de niveaux</li><li>des liens d'évitement, présents en début de page et permettant d'accéder aux principales zones de contenu</li><li>des <span lang=\"en\">landmarks</span>, utilisés pour structurer le document (<code>header</code>, <code>main</code>…)</li><li>des liens de sauts de bloc présents au sein du contenu</li></ul>",
+		"group": "WebView",		
+		"resultatTest": "nt"
+	},{
+		"themes": "WebView",
+		"title": "La langue principale est-elle définie et correspond-elle à la langue principale du document&nbsp;?",
+		"ID": "testID-060",
+		"IDorigin": "testID-060",
+		"wcag": [
+			"3.1.1 A"
+		],
+		"verifier": "<p>Ce critère ne peut être vérifié que si on a accès à l'URL de la WebView.</p><ul><li>vérifier la présence d'un attribut <code>lang</code> (attention l'attribut <code>xml:lang</code> ne permet pas de valider le test)</li><li>la valeur de l'attribut <code>lang</code> doit correspondre à la langue principale de la page</li></ul>",
+		"group": "WebView",
 		"resultatTest": "nt"
 	}
 ]
