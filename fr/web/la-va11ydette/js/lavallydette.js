@@ -1,3 +1,17 @@
+/* 
+
+Copyright (C) 2021 Orange
+
+This software is confidential and proprietary information of Orange.
+You shall not disclose such Confidential Information and shall use it only
+in accordance with the terms of the agreement you entered into.
+Unauthorized copying of this file, via any medium is strictly prohibited.
+
+If you are Orange employee you shall use this software in accordance with
+the Orange Source Charter (http://infoportal-opensource.innov.intraorange/en/orange-source-charter/).
+
+*/
+
 $('#docs-navbar').navbar({sticky: true, hideSupra: true});
 $('.o-nav-local').prioritynav('Autres pages');
 
@@ -73,7 +87,7 @@ function initVallydetteApp (criteriaListName, lang) {
 	  } 
 	};
 	langRequest.send();
-	
+
 }
 
 /**
@@ -150,6 +164,7 @@ function createObjectAndRunVallydette() {
 			"version": globalVersion,
 			"template": globalTemplate,
 			"autoCheckIDs": [],
+			"timestamp": Date.now(),
 			"page": [{
 					"IDPage": "pageID-0",
 					"name": langVallydette.pageName,
@@ -334,8 +349,6 @@ function importCriteriaToVallydetteObj (criteriaVallydette) {
  
 	if (checklistVallydette[currentCriteriaListName].template === 'audit'){
 		criteriaVallydette.forEach(function (criteria, key) {
-			 criteria.ID = "testWebID-"+key;
-			 criteria.IDorigin = "testWebID-"+key;
 			 criteria.resultatTest = "nt";
 			 criteria.issues = [];
 			 
@@ -515,6 +528,7 @@ function eventHandler() {
 			checkTheVersion(dataVallydette.checklist.version);
 			utils.putTheFocus(document.getElementById("checklistName"));
 			runLangRequest();
+			setTimeout(function(){ jsonUpdate(); }, 500);
 		}
 
 		fr.readAsText(files.item(0));
@@ -535,11 +549,11 @@ function eventHandler() {
 		runLocalStorage();
 	}, false);
 
-	if (localStorage.getItem("lavallydette")===null) {
+	if(Object.keys(getAllStorage()).length === 0){
 		btnLocalStorage.disabled=true;
 		btnLocalStorage.classList.add("disabled");
 	}
- 
+	
 	btnActionPageEventHandler();
 	
 }
@@ -556,39 +570,109 @@ function runLocalStorage() {
 	
 	let htmlModal = '';
 	htmlModal = '<div id="modalLocalStorage" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalLocalStorageTitle">';
-	htmlModal += '<div class="modal-dialog modal-dialog-scrollable" role="document">';
+	htmlModal += '<div class="modal-dialog" role="document">';
 	htmlModal += '<div class="modal-content">';
 	htmlModal += '<div class="modal-header">';
 	htmlModal += '<h5 class="modal-title" id="modalLocalStorageTitle">' + langVallydette.recoverTitle + '</h5>';
 	htmlModal += '<button type="button" class="close" data-dismiss="modal" aria-label="' + langVallydette.close + '"></button>';
 	htmlModal += '</div>';
-	htmlModal += '<div class="modal-body">';
-	htmlModal += langVallydette.recoverMessage;
+	htmlModal += '<div class="modal-body" id="modalLocalStorageForm">';
 	htmlModal += '</div>';
 	htmlModal += '<div class="modal-footer">';
-	htmlModal += '<button type="button" class="btn btn-secondary" data-dismiss="modal">' + langVallydette.cancel + '</button>';
+	htmlModal += '<button type="button" id="localStorageCancelBtn" class="btn btn-secondary" data-dismiss="modal">' + langVallydette.cancel + '</button>';
 	htmlModal += '<button type="button" id="localStorageSaveBtn" data-dismiss="modal" class="btn btn-primary">' + langVallydette.recoverAction + '</button>';
+	htmlModal += '<button type="button" id="localStorageDeleteBtn" class="btn btn-danger">' + langVallydette.deleteAction + '</button>'
 	htmlModal += '</div></div></div></div>';
 	
 	let elModal = document.getElementById('modal');
 	elModal.innerHTML = htmlModal;
+	createFormLocalStorage();
 
 	var localStorageSaveBtn = document.getElementById("localStorageSaveBtn");
 	localStorageSaveBtn.addEventListener('click', function () {
-		getLocalStorage();
+		valueSelect = document.querySelector('input[name="auditRadioRestore"]:checked').value;
+		getLocalStorage(valueSelect);
 	});
+
+	var localStorageDeleteBtn = document.getElementById("localStorageDeleteBtn");
+	localStorageDeleteBtn.addEventListener('click', function () {
+		valueSelect = document.querySelector('input[name="auditRadioRestore"]:checked').value;
+		let selectChecklist = window.localStorage.getItem(valueSelect);
+		selectChecklist = JSON.parse(selectChecklist);
+		let HtmlDivDelete ='';
+		HtmlDivDelete += '<p>'+ langVallydette.deleteAsk +' '+ selectChecklist.checklist.name +' ?</p>';
+		HtmlDivDelete += '<button type="button" id="localStorageDeleteYesBtn" class="btn btn-primary">' + langVallydette.yes + '</button>';
+		HtmlDivDelete += '<button type="button" id="localStorageDeleteNoBtn" class="btn btn-danger ml-2">' + langVallydette.no + '</button>'
+		let elDivDelete = document.getElementById('localStorageValidDelete');
+		elDivDelete.innerHTML = HtmlDivDelete;
+		elDivDelete.focus();
+
+		var localStorageDeleteYesBtn = document.getElementById("localStorageDeleteYesBtn");
+		localStorageDeleteYesBtn.addEventListener('click', function () {
+			valueSelect = document.querySelector('input[name="auditRadioRestore"]:checked').value;
+			window.localStorage.removeItem(valueSelect);
+			createFormLocalStorage();
+			if(Object.keys(getAllStorage()).length === 0){
+				document.getElementById("localStorageCancelBtn").click();
+				document.getElementById('btnExcelExport').focus();
+				let btnLocalStorage = document.getElementById("btnLocalStorage");
+				btnLocalStorage.disabled=true;
+				btnLocalStorage.classList.add("disabled");
+			}
+			else{
+				document.getElementById(document.querySelector('input[name="auditRadioRestore"]:checked').id).focus();
+			}	
+		});
+
+		var localStorageDeleteNoBtn = document.getElementById("localStorageDeleteNoBtn");
+		localStorageDeleteNoBtn.addEventListener('click', function () {
+			createFormLocalStorage();
+			document.getElementById(document.querySelector('input[name="auditRadioRestore"]:checked').id).focus();
+		});
+	});
+
+	
+
+}
+
+/**
+ * Create Radio button localstorage
+ */
+function createFormLocalStorage(){
+	let allLocalStorage;
+	allLocalStorage = getAllStorage();
+	let checked = true;
+
+	let htmlModal = '';
+	
+	htmlModal += '<div tabindex="-1" id="localStorageValidDelete" class="pb-3"></div>';
+	htmlModal += '<fieldset>';
+	htmlModal += '<legend>' + langVallydette.recoverMessage +'</legend>';
+	for (const [key, value] of Object.entries(allLocalStorage)) {
+		let auditStorage = JSON.parse(value);
+		htmlModal += '<div class="custom-control custom-radio">';
+		htmlModal += '<input class="custom-control-input" type="radio" name="auditRadioRestore" value="'+key+'" id="'+utils.formatHeading(key)+'"'+ (checked ? 'checked' : '')+'>';
+		htmlModal += '<label class="custom-control-label" for="'+ utils.formatHeading(key)+'" '+ ( globalLang!== auditStorage.checklist.lang ? 'lang="'+auditStorage.checklist.lang+'"' : '')+'>';
+		htmlModal += auditStorage.checklist.name;
+		htmlModal += '</label>';
+		htmlModal += '</div>';
+		checked = false;
+	}
+	htmlModal += '</fieldset>';
+
+	let elModal = document.getElementById('modalLocalStorageForm');
+	elModal.innerHTML = htmlModal;
+
 }
 
 /**
  *  Get the localstorage object
+ * @param {string} auditName - Audit name in locale storage
  */
-function getLocalStorage() {
+function getLocalStorage(auditName) {
 	
-	let objLocalStorage = localStorage.getItem("lavallydette");
+	let objLocalStorage = localStorage.getItem(auditName);
 	dataVallydette = JSON.parse(objLocalStorage);
-	
-	btnLocalStorage.disabled=true;
-	btnLocalStorage.classList.add("disabled");
 	
 	initGlobalLang(dataVallydette.checklist.lang, true);
 	initGlobalTemplate(dataVallydette.checklist.template);
@@ -671,7 +755,7 @@ runTestListMarkup = function (currentRefTests) {
 				htmlrefTests += '<div class="collapse show px-2" id="collapse-' + formattedHeadingTheme + '">';
 			}
 
-			htmlrefTests += '<article class="card mb-3" id="' + currentTest + '"><div class="card-header border-light"><h3 class="card-title h5 d-flex align-items-center mb-0" id="heading' + currentTest + '"><span class="w-75 mr-auto">' + currentRefTests[i].title + '</span>' + ((getIfAutoCheck(currentRefTests[i].IDorigin)) ? '<span class="icon icon-Link ml-1 badge badge-warning" id="link-' + currentRefTests[i].ID + '"><span class="sr-only">' + langVallydette.autocheckTxt1 + '</span></span>' : '') + '<span id="resultID-' + currentTest + '" class="ml-1 badge ' + getStatutClass(currentRefTests[i].resultatTest) + '">' + setStatutText(currentRefTests[i].resultatTest) + '</span></h3></div>';
+			htmlrefTests += '<article class="card mb-3" id="' + currentTest + '"><div class="card-header border-light"><h3 class="card-title h5 d-flex align-items-center mb-0" id="heading' + currentTest + '" style="scroll-margin-top: 10.35em;"><span class="w-75 mr-auto">' + currentRefTests[i].title + ' <a class="header-anchor"  href="#heading' + currentTest + '" aria-label="' + langVallydette.anchorLink + '">#</a></span>' + ((getIfAutoCheck(currentRefTests[i].IDorigin)) ? '<span class="icon icon-Link ml-1 badge badge-warning" id="link-' + currentRefTests[i].ID + '"><span class="sr-only">' + langVallydette.autocheckTxt1 + '</span></span>' : '') + '<span id="resultID-' + currentTest + '" class="ml-1 badge ' + getStatutClass(currentRefTests[i].resultatTest) + '">' + setStatutText(currentRefTests[i].resultatTest) + '</span></h3></div>';
 			
 			htmlrefTests += '<div class="card-body py-2 d-flex align-items-center justify-content-between"><ul class="list-inline m-0">';
 			htmlrefTests += '<li class="custom-control custom-radio custom-control-inline mb-0"><input class="custom-control-input" type="radio" id="conforme-' + currentTest + '" name="test-' + currentTest + '" value="ok" ' + ((currentRefTests[i].resultatTest === arrayFilterNameAndValue[0][1]) ? "checked" : "") + '/><label for="conforme-' + currentTest + '" class="custom-control-label">' + langVallydette.template.status1 + '</label></li>';
@@ -1407,6 +1491,10 @@ function initComputation() {
             }, false);
 		
 	    runTestListMarkup(dataVallydette.checklist.page[currentPage].items);
+		if(window.location.hash !== ""){
+			document.getElementById(window.location.hash.substring(1)).scrollIntoView();
+		}
+		
 
 	  }
 	};
@@ -2669,11 +2757,17 @@ setIssue = function (targetId, title, targetIdOrigin) {
 	htmlModal += '<div class="form-group">';
 	htmlModal += '<label class="is-required" for="issueNameValue">' + langVallydette.summary + ' <span class="sr-only"> (' + langVallydette.required + ')</span></label>';
 	htmlModal += '<input type="text" class="form-control" id="issueNameValue" value="" required>';
+	htmlModal += '</div>';
+	htmlModal += '<div class="form-group">';
 	htmlModal += '<label class="is-required mt-2" for="issueDetailValue">' + langVallydette.description + ' <span class="sr-only"> (' + langVallydette.required + ')</span></label>';
 	htmlModal += '<textarea class="form-control" id="issueDetailValue" required></textarea>';
-	htmlModal += '<label for="issueSolutionValue" class="mt-2">' + langVallydette.solution + ' <span class="sr-only"> (' + langVallydette.required + ')</span></label>';
+	htmlModal += '</div>';
+	htmlModal += '<div class="form-group">';
+	htmlModal += '<label for="issueSolutionValue" class="mt-2">' + langVallydette.solution + ' </span></label>';
 	htmlModal += '<textarea class="form-control" id="issueSolutionValue"></textarea>';
-	htmlModal += '<label for="issueTechnicalSolutionValue" class="mt-2">' + langVallydette.technical_solution + ' <span class="sr-only"> (' + langVallydette.required + ')</span></label>';
+	htmlModal += '</div>';
+	htmlModal += '<div class="form-group">';
+	htmlModal += '<label for="issueTechnicalSolutionValue" class="mt-2">' + langVallydette.technical_solution + ' </span></label>';
 	htmlModal += '<textarea class="form-control" id="issueTechnicalSolutionValue"></textarea>';
 	htmlModal += '</div>';
 	htmlModal += '</div>';
@@ -2934,6 +3028,7 @@ deleteIssue = function (targetId, issueIndex, issueValidation) {
 	
 		utils.removeElement(document.getElementById("cardIssue"+targetId+"-"+ issueIndex));
 		utils.putTheFocus(document.getElementById("modal" + targetId + "Title"));
+		jsonUpdate();
 		
 	} else {
 		
@@ -2967,14 +3062,16 @@ displayIssue = function (targetId, title) {
 	for (let i in dataVallydette.checklist.page[currentPage].items) {
 		
 		if (dataVallydette.checklist.page[currentPage].items[i].ID === targetId && dataVallydette.checklist.page[currentPage].items[i].issues.length > 0 ) {
+			let auditNumber = 0;
 			for (let j in dataVallydette.checklist.page[currentPage].items[i].issues) {
+				auditNumber= j +1;
 				
 				htmlModal += '<div class="card" id="cardIssue'+targetId+'-'+ j +'">';
 				
 				htmlModal += ' <div class="card-header" id="issue'+targetId+'-'+ j +'">';
 				htmlModal += ' <h5 class="mb-0">';
 				htmlModal += '  <a id="btnIssue'+targetId+'-'+ j +'" data-toggle="collapse" href="#collapse'+targetId+'-'+j+'" aria-expanded="false" aria-controls="collapse'+targetId+'-'+ j +'" role="button" class="collapsed">';
-				htmlModal += '#' + j + ' ' + dataVallydette.checklist.page[currentPage].items[i].issues[j].issueTitle;
+				htmlModal += '#' + auditNumber + ' ' + dataVallydette.checklist.page[currentPage].items[i].issues[j].issueTitle;
 				htmlModal += ' </a>';
 				htmlModal += '</h5>';
 				htmlModal += ' </div>';
@@ -3313,7 +3410,7 @@ loadChecklistObject = function () {
 jsonUpdate = function () {
 
 	let exportFileName = utils.fileName('json');
-	
+	dataVallydette.checklist.timestamp = Date.now();
 	let dataStr = JSON.stringify(dataVallydette);
 	let dataUri = 'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
 
@@ -3323,12 +3420,46 @@ jsonUpdate = function () {
 	linkElement.setAttribute('aria-disabled', false);
 	linkElement.setAttribute('href', dataUri);
 	linkElement.setAttribute('download', exportFileName);
+
+	let allLocalStorage = getAllStorage();
+
+	if( Object.keys(allLocalStorage).length >8 ){
 	
-	
-	window.localStorage.setItem('lavallydette', dataStr);
-	
-	btnLocalStorage.disabled=true;
-	btnLocalStorage.classList.add("disabled");
+		let deleteitem = '';
+		let timestamp = 0;
+		for (const [key, value] of Object.entries(allLocalStorage)) {
+			let storage_audit=JSON.parse(value);
+			if( timestamp === 0 || timestamp > storage_audit.checklist.timestamp){
+				deleteitem = key;
+				timestamp = storage_audit.checklist.timestamp;
+			}
+		  }
+		  window.localStorage.removeItem(deleteitem);
+	}
+	window.localStorage.setItem('lavallydette__'+dataVallydette.checklist.name, dataStr);
+	btnLocalStorage.disabled=false;
+	btnLocalStorage.classList.remove("disabled");
+}
+
+/**
+ * Get all local storage va11ydette audit
+ * 
+ * @returns 
+ */
+function getAllStorage() {
+
+    var archive = {}, // Notice change here
+        keys = Object.keys(localStorage),
+        i = keys.length;
+
+    while ( i-- ) {
+		if( keys[i].indexOf('lavallydette')>=0 ){
+        	archive[ keys[i] ] = localStorage.getItem( keys[i] );
+		}
+    }
+
+
+    return archive;
 }
 
 /**
@@ -3400,10 +3531,11 @@ for (let i in dataVallydette.checklist.page) {
 			if (type === "audit") {
 				
 				if (item.issues.length > 0) {
+					let urlanchor = utils.getUrlAnchor(item);
 						
 					item.issues.forEach(function (issue, key) {
 						rowIssues++;
-						excel.set(setIndex,0,rowIssues,  'issue-' + i + '-' + rowIssues);
+						excel.set(setIndex,0,rowIssues,  '=HYPERLINK("' + urlanchor + '","issue-' + i + '-' + rowIssues+ '")', formatHyperlink);
 						//@ ajout url tests
 						
 						excel.set(setIndex,1,rowIssues, item.title);
@@ -3425,7 +3557,9 @@ for (let i in dataVallydette.checklist.page) {
 			} else {
 
 					rowIssues++;
-					excel.set(setIndex,0,rowIssues,  'issue-' + i + '-' + rowIssues);
+					let urlanchor = utils.getUrlAnchor(item);
+
+					excel.set(setIndex,0,rowIssues,  '=HYPERLINK("' + urlanchor + '","issue-' + i + '-' + rowIssues+ '")', formatHyperlink);
 						
 					if (!item.commentaire) {
 						item.commentaire = langVallydette.noCommentary;
@@ -5048,6 +5182,13 @@ const utils = {
   },
   htmlEntities: function (str) {
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  },
+
+  getUrlAnchor: function(item){
+		let urlanchor = window.location.origin + window.location.pathname + window.location.search + '#heading' + item.ID;
+		return urlanchor.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+			return '&#'+i.charCodeAt(0)+';';
+		});
   }
 	
 }  
