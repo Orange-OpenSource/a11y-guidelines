@@ -15,7 +15,7 @@ Lier les champs de saisie avec leurs labels apporte une vocalisation supplément
   
 Il existe 2 grandes techniques pour réaliser cette liaison&nbsp;:
  - `labelFor`&nbsp;: permet de spécifier à une vue qu’elle est le label d’une autre vue. Cette méthode prend en paramètre l’`id` de la vue que l’on labellise. On peut utiliser cette méthode avec quasiment tout type de champ de saisie. Utilisable depuis le <abbr>xml</abbr> `android:labelFor` ou le code `setLabelFor`.
- - `hint`&nbsp;: permet d’ajouter un texte d’exemple quand le champ de texte est vide. Cette méthode ne marche que pour les `TextView`. Prend en paramètre l’`id` d’une chaîne de caractère. Utilisable depuis le <abbr>xml</abbr> `android:hint` ou le code `setHint`.
+ - `TextInputLayout` : permet de lier directement le champ de texte avec son label au sein d'un même layout, ce qui aura pour effet de vocaliser correctement le champ tout en le rendant plus jolie.
 
 De plus, il est essentiel d'indiquer à l'utilisateur, pour une bonne compréhension de l'écran de saisie, les différents champs obligatoires, le format attendu, ou encore les erreurs commises sur de potentiels champs.
 
@@ -27,20 +27,25 @@ De plus, il est essentiel d'indiquer à l'utilisateur, pour une bonne compréhen
 
 **Exemple** 
 
-Remarque&nbsp;: il est très fréquent, une fois le label lié à son champ, de masquer le label à l’accessibilité. En effet, celui ci n’a plus besoin d’être reconnu par l’<abbr>API</abbr> d’accessibilité car son champ de saisie l’utilise déjà (et sera donc restitué vocalement par <span lang="en">TalkBack</span> par exemple).
-
-<pre><code class="xml">&lt;EditText
-   android:id="@+id/addressLine2"
-   android:hint="@string/aptSuiteBuilding" ... /&gt;
-
+<pre><code class="xml">
 &lt;TextView
    android:id="@+id/usernameLabel" ...
    android:text="@string/username"
-   android:importantForAccessibility="no" 
    android:labelFor="@+id/usernameEntry" /&gt;
 
 &lt;EditText
    android:id="@+id/usernameEntry" ... /&gt;
+</code></pre>
+
+
+<pre><code class="xml">&lt;com.google.android.material.textfield.TextInputLayout
+   android:id="@+id/addressLine"
+   android:hint="@string/adress" ... &gt;
+
+&lt;com.google.android.material.textfield.TextInputEditText
+   ... /&gt;
+
+&lt;/com.google.android.material.textfield.TextInputLayout&gt;
 </code></pre>
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  

@@ -82,6 +82,16 @@ infobulleTextView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_N
 
 
 <br/><br/>
+## Rédiger de bonnes alternatives textuelles
+
+**Description&nbsp;:**
+Il est essentiel d'écrire de bonnes alternatives textuelles afin de faciliter la compréhension des utilisateurs de lecteurs d'écrans. La rédaction d'une bonne alternative dépend de ce qu'on souhaite décrire.
+
+- Icônes : les icônes sont utilisées fréquemment pour représenter un bouton ou pour afficher un état. Dans le cas d'un bouton, il est préférable d'utiliser un verbe pour rédiger l'alternative textuelle. Par exemple, un bouton Favori représenté par un coeur pourrait être décrite par "Ajouter le film au favori" plutôt que par "Coeur" ou "Favori". Dans le cas d'une icône représentant un état, il faut cette fois décrire l'état qui est représenté. Par exemple, si on a une icône représentant un micro barré d'une croix, l'alternative textuelle pourrait être "Mutée".
+- Textes : les textes sont en général très bien gérés nativement par Android, le texte affiché sera celui qui sera vocalisé, il n'est donc pas nécessaire d'ajouter d'alternative textuelle. En revanche, il faut parfois faire attention, si on utilise des symboles ou des abréviations. Par exemple, pour le texte "02/05/92", on doit ajouter une alternative textuelle pour vocaliser "2 mai 1992" (il est aussi possible dans ce cas précis d'utiliser un `TtsSpan`).
+- Images : le cas des images qui est plus complexe est détaillé [dans ce chapitre](https://a11y-guidelines.orange.com/fr/mobile/android/developpement/navigation-vocale/#vocaliser-les-images)
+
+<br/><br/>
 
 ## Vocaliser l'état des éléments
 
