@@ -76,6 +76,32 @@ Improve reading comfort for people with cognitive and visual disabilities.
 - <a href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a>
 
 
+## Ensure a comprehensible reading order
+
+**Target:** everyone, and in particular people with visual or cognitive impairments or with an attention deficit disorder and mobility.
+**When:** during development.
+
+**Description:**
+
+If a specific reading order is necessary for a good understanding of the content or the use of the interface, it must be ensured that the order of appearance in the <abbr>HTML</abbr> code also allows the access, for any user, to the content and the interface.
+
+**To be checked:**
+
+- Provide that the order of appearance of the elements in the <abbr>HTML</abbr> code is the same as the reading order of the information in the page, if this impacts the understanding of the content or ability to use the interface. It's the simplest solution!
+- Even during the appearance or disappearance of content or dynamically generated content, this understandable reading order and a usable interface must be kept.
+
+**User goal:**
+Allow content to be understood and used, especially for <abbr>AT</abbr> users who often read content in order of appearance in code.
+
+**Do:**
+A press site presents its articles in three columns. In the code, the columns are placed in the same order as displayed on the screen. In this case, all users can read the articles without difficulty.
+
+**Don't:**
+ The main menu of a site is present at the very end of the source code (after the footer) but it positioned at the top of the page via <abbr>CSS</abbr>, there's a risk of not being perceived by a screen reader user.
+
+
+**Reference <abbr>WCAG</abbr>:**
+- <a href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful sequence</a>
 
 
 
@@ -107,7 +133,7 @@ To give a semantic structure to the main regions of a page, we can use the <abbr
 
 Setting up this type of semantics allows visually impaired people to identify and understand the organization, the overall structure of the page and thus navigate more easily.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**Reference <abbr>WCAG</abbr>:**  
 - <a href="https://www.w3.org/TR/WCAG21/#consistent-navigation">3.2.3 Consistent Navigation</a>
 - <a href="https://www.w3.org/TR/WCAG21/#consistent-identification">3.2.4 Consistent Identification</a>
 

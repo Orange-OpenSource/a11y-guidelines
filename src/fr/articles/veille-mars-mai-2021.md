@@ -20,11 +20,7 @@ Aux US aussi, ces « solutions magiques » hérissent le poil de la communauté 
 -	https://www.vice.com/en/article/m7az74/people-with-disabilities-say-this-ai-tool-is-making-the-web-worse-for-them
 -	https://uxdesign.cc/the-single-biggest-threat-to-the-future-of-digital-accessibility-d5a9e411f33f 
 
-<<<<<<< HEAD
 Le 20 mai, c’était le GAAD, Jour de sensibilisation global à l’accessibilité, plein de choses ont eu lieu, voici un truc qui me semble sympa, 10 petits films (moins d'une minute) sur l’A11y (en) : https://www.youtube.com/playlist?list=PLTqm2yVMMUKWTr9XWdW5hJ9tk512Ow0SE 
-=======
-Le 20 mai, c’était le GAAD, Jour de sensibilisation global à l’accessibilité, plein de choses ont e lieux, voici un truc qui me semble sympa, 10 petits films (<1mn) sur l’A11y (en) : https://www.youtube.com/playlist?list=PLTqm2yVMMUKWTr9XWdW5hJ9tk512Ow0SE 
->>>>>>> eeb127d5 ( Changes to be committed:)
 
 Dernière minute : questionnaire WebAim n°9 sur les utilisateurs	 de lecteurs d’écrans, n’hésitez pas à répondre (même si vous  n’êtes qu’utilisateur testeur ou occasionnel) (en) : https://webaim.org/projects/screenreadersurvey9/ 
 
