@@ -5,7 +5,7 @@ title: "Momindum Maker"
 # Recommandations Momindum Maker
 
 Les bonnes pratiques détaillées dans cet article s'appliquent à l'outil *Momindum Maker*, permettant de créer des présentations vidéos à partir d'un document *Powerpoint*.
-Il est donc impératif en pré-requis d'appliquer <a href="http://localhost:8080/fr/contenu-editorial/powerpoint/">les recommandations Powerpoint</a> sur le document servant de base à la présentation.
+Il est donc impératif en pré-requis d'appliquer <a href="/fr/contenu-editorial/powerpoint/">les recommandations Powerpoint</a> sur le document servant de base à la présentation.
 
 ## Propriétés du projet
 Renseigner au minimum le titre et la langue.
@@ -21,8 +21,8 @@ Le choix de langue définit la traduction des éléments de navigation (ex : lec
 
 ## Proposer des alternatives aux pistes audios et vidéos
 - *Sous-titres*
-	- *Proposer des sous-titres* en alternative de la piste audio (la transcription automatique est adaptée, ou des sous-titres .SRT).
-	- *Ne pas proposer des sous-titres incrustés* dans la vidéo.
+	- *Proposer des sous-titres* en alternative de la piste audio (la transcription automatique est adaptée, ou des sous-titres .SRT)
+	- *Ne pas proposer des sous-titres incrustés* dans la vidéo
 
 - *Transcription*
 	- Proposer une transcription complète de la vidéo sous forme d’un fichier texte (txt, word, html)

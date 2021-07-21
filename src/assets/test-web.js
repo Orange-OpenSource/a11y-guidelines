@@ -170,7 +170,7 @@ $(document).ready(function () {
     var data = JSON.parse(responseFirst);
     var data2 = JSON.parse(responseSecond);
     var uniqueTypes = [];
-    var refTests = compareReorder(data.items, data2);
+    var refTests = compareReorder(data, data2);
 
     let app = new function() {
       // Récupération des données

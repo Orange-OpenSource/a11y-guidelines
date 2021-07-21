@@ -23,6 +23,7 @@
   "license": "CC-BY-SA-3.0",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
     "babel-preset-minify": "^0.5.1",

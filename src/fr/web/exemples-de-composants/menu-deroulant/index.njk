@@ -9,6 +9,8 @@ tags: componentsExamples_fr
 <h2>Préambule</h2>
 <p>Dans cet exemple nous allons utiliser le <a href="https://boosted.orange.com/docs/4.5/components/dropdowns/">menu déroulant</a> disponible dans la librairie <a href="https://boosted.orange.com/">Boosted</a>. Cette librairie basée sur Bootstrap permet de concevoir rapidement des interfaces accessibles aux couleurs de la charte Orange.</p>
 
+<p>L'exemple d'implémentation décrit ci-dessous est aussi bien adapté aux menus de navigation comme aux composants unitaires présentant une liste d'actions.</p>
+
 <h2>Rendu final</h2>
 <p>Voici le rendu de notre menu.</p>
 
@@ -72,29 +74,31 @@ tags: componentsExamples_fr
    <dd>Le menu se ferme. Comme le focus est replacé automatiquement, le lecteur d'écran vocalise à nouveau le bouton du menu, ainsi que son état.</dd>
  </dl>
 
- <h2>Attributs <abbr>ARIA</abbr></h2>
- <p>Si vous n'utilisez pas un composant menu déjà accessible, vous aller devoir utiliser quelques attributs <abbr>ARIA</abbr> pour que ce menu soit correctement vocalisé au lecteur d'écran.</p>
- <p>Sur le bouton permettant d'ouvrir le menu&nbsp;:</p>
- <ul>   
-   <li>L'attribut <code>aria-expanded</code> avec comme valeur <code>true/false</code>, permet de faire vocaliser l'état du menu (ouvert ou fermé).</li>
-</ul>
-
-Exemple&nbsp;:
-<pre><code class="html">
-  &lt;button aria-expanded="false"&gt;Mon compte&lt;/button&gt;
-</code></pre>
-
-<p>Sur la liste des éléments à l'intérieur du menu&nbsp;:</p>
+<h3>Attributs <abbr>ARIA</abbr></h3>
 <ul>
-  <li>Un attribut <code>role="menu"</code> sur la balise de liste <code>ul</code>.</li>
-  <li>Un attribut <code>role="menuitem"</code> sur les balises <code>a</code>.</li>
+	<li><code>aria-expanded</code> : l'attribut <code>aria-expanded</code> avec comme valeur <code>true/false</code>, permet de vocaliser l'état du menu (ouvert ou fermé).</li>
+	<li><code>aria-current</code> : si le menu déroulant est utilisé au sein d'un menu de navigation, prévoir l'ajout d'un attribut <code>aria-current="page"</code> sur l'item correspondant à la page active.</li>
+	<li><code>aria-haspopup</code> : l'attribut <code>aria-haspopup</code> est réservé au rôle <code>menu</code> (voir paragraphe "Cas particulier des menus applicatifs"). Il n'est donc pas présent dans cette implémentation.</li>
 </ul>
 
-Exemple&nbsp;:
 <pre><code class="html">
   &lt;button aria-expanded="false"&gt;Mon compte&lt;/button&gt;
-  &lt;ul role="menu"&gt;
-    &lt;li&gt;&lt;a href="#" role="menuitem"&gt;Mon panier&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#" role="menuitem"&gt;Mes commandes&lt;/li&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mon panier&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#" aria-current="page"&gt;Mes commandes&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mes informations&lt;/a&gt;&lt;/li&gt;
+      &lt;li role="separator" class="dropdown-divider"&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Déconnexion&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 </code></pre>
+
+<p>En complément le pattern ARIA décrit l'utilisation d'un attribut <code>aria-controls</code>, ainsi que des interactions claviers optionnelles supplémentaires : <kbd lang="en">Home</kbd>/<kbd lang="en">End</kbd></p>
+<p>Exemple : <a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/disclosure/disclosure-navigation.html" hreflang="en" lang="en">Example Disclosure for Navigation Menus</a></p>
+
+<h2>Cas particulier des menus applicatifs</h2>
+
+<p>Le pattern ARIA décrit un composant "Menu" et "Menubar", utilisant les rôles <code>menu</code> ou  <code>menubar</code>.</p>
+<p>Attention, ce pattern est réservé uniquement à la création de menu applicatif, dont les interactions devront se rapprocher du comportement des menus présent dans des applications bureaux par exemple.</p>
+<p>Ces implémentations sont plus complexes et non nécessaires aux menus de navigation web.</p>
+
+<p>Exemple : <a href="https://www.w3.org/TR/wai-aria-practices-1.1/examples/menubar/menubar-2/menubar-2.html" hreflang="en" lang="en">Editor Menubar Example</a></p>

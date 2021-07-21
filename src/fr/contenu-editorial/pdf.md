@@ -11,6 +11,8 @@ Afin de rendre vos PDF compréhensibles et utilisables par tous, il faut qu'ils 
 Retrouvez [nos recommandations pour créer un PDF accessible depuis Microsoft Word](/fr/contenu-editorial/word/#convertir-en-fichier-pdf) et [nos recommandations pour Microsoft PowerPoint](/fr/contenu-editorial/powerpoint/#convertir-une-presentation-powerpoint-en-fichier-pdf).
 
 ### Depuis Adobe InDesign
+InDesign est un logiciel de mise en page, notamment utilisé en pré-presse pour la production de documents imprimables.
+Il est cependant tout à fait possible de configurer son fichier pour produire un PDF accessible.
 Retrouvez [les recommandations Adobe inDesign sur cette notice](http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#indesign). 
 
 ### Depuis Adobe Acrobat Pro

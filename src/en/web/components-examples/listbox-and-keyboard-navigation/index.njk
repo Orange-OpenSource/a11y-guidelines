@@ -1,12 +1,12 @@
 ---
 title: "Listbox and keyboard navigation"
-abstract: "Example of ARIA list (part 2)."
+abstract: "Example of ARIA list (part 2)"
 tags: componentsExamples_en
 css:
   - style.css
 js:
-  - script.js
   - wgxpath.install.js
+  - script.js
 ---
 
 <h1>Listbox and keyboard navigation</h1>
@@ -106,9 +106,12 @@ js:
 
 <pre><code class="javascript">
 …
+// Init
+const listbox = document.querySelector("[role=listbox]");
+
 // On keydown
-$("[role=listbox]").on("keydown", function (e) {
-  var currentItem = $(this).find("[aria-selected=true]");
+listbox.onkeydown = function(e) {          
+	var currentItem = this.querySelector("[aria-selected=true]"); 
   switch (e.keyCode) {
       case 9: // TAB
           break;
@@ -153,10 +156,12 @@ default:  // Search item starts with
       searchString = "";
 
       // If an item is found…
-      if (matchingElement) {
-          currentItem.attr("aria-selected", "false");
-          $(matchingElement).parent().attr("aria-selected", "true").focus().addClass("active");
-      }
+      if (matchingElement) {                            
+	   currentItem.setAttribute("aria-selected", "false");
+	   matchingElement.parentElement.setAttribute("aria-selected", "true");
+	   matchingElement.parentElement.focus();
+	   matchingElement.parentElement.classList.add("active");
+      }     
   }, 500);
 
   e.preventDefault();

@@ -13,7 +13,8 @@ In order to make your PDFs understandable and usable by everyone, they must be s
 Find [our recommendations for creating a PDF accessible from Microsoft Word](/en/editorial-content/word/) and [our recommendations for Microsoft PowerPoint](/en/editorial-content/powerpoint/). 
 
 ### From Adobe InDesign
-
+InDesign is a design layout software, used in particular for the production of printable documents.
+However, it is quite possible to configure your file to produce an accessible PDF.
 Find the [Adobe inDesign recommendations in this guide](http://www.pdf-accessible.com/notices-accessibilite-indesign-acrobat/#indesign).
 
 ### From Adobe Acrobat Pro
