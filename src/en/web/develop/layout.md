@@ -10,7 +10,7 @@ title: "Layout"
 
 ## Use relative size to allow changing text size and responsive design
 
-**Target:** everyone and especially people with visual impairments, using a device outdoors and elderly people.  
+**Target:** Everyone and especially people with visual impairments, using a device outdoors and elderly people.  
 **When:** during development.
 
 **Description:**
@@ -43,7 +43,7 @@ See the example [handling zoom, increasing the text size](../../components-examp
 
 ## Allow text spacing
 
-**Target:** everyone, particularly people with visual disabilities.  
+**Target:** Everyone, particularly people with visual disabilities.  
 **When:** as of design and during development.
 
 If the user applies the following settings, the text must remain legible (no truncated content, superimposed):
@@ -78,7 +78,7 @@ Improve reading comfort for people with cognitive and visual disabilities.
 
 ## Ensure a comprehensible reading order
 
-**Target:** everyone, and in particular people with visual or cognitive impairments or with an attention deficit disorder and mobility.
+**Target:** Everyone, and in particular people with visual or cognitive impairments or with an attention deficit disorder and mobility.
 **When:** during development.
 
 **Description:**
@@ -107,7 +107,7 @@ A press site presents its articles in three columns. In the code, the columns ar
 
 ## Identify and maintain consistency of groupings and different regions of the page
 
-**Target:**Everyone, especially people with visual, cognitive or attention deficit disorders.
+**Target:** Everyone, especially people with visual, cognitive or attention deficit disorders.
 
 **Description:**
 Provide ways to identify and visually distinguish the different parts of the page and ensure the consistency of these regions or groupings in all pages.
@@ -156,7 +156,7 @@ In addition, the sensitive areas must be sufficiently spaced from each other (ab
 
 ## Decoupling content from interaction and presentation
 
-**Target:** everyone, especially people with visual disabilities, reading or attention difficulties.  
+**Target:** Everyone, especially people with visual disabilities, reading or attention difficulties.  
 **When:** during development.
 
 **Description:**
