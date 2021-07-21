@@ -75,6 +75,32 @@ Permettre aux personnes déficientes visuelles et cognitives d'améliorer le con
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a>
 
 
+## Assurer un ordre de lecture du contenu compréhensible
+
+**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un trouble de l’attention et en mobilité.  
+**Quand&nbsp;:** lors du développement.
+
+**Description&nbsp;:**
+
+Si un sens de lecture spécifique est nécessaire à la bonne compréhension du contenu ou l'utilisation de l'interface, il faut s'assurer que l'ordre d'apparition dans le code <abbr>HTML</abbr> permet également l'accès, pour tout utilisateur, au contenu et à l'interface.
+
+**À vérifier&nbsp;:**
+
+- Veillez à ce que l’ordre d’apparition des éléments dans le code <abbr>HTML</abbr> soit le même que l'ordre de lecture de l'information dans la page, si cet ordre impacte la compréhension du contenu ou capacité d'utiliser l'interface. C'est la solution la plus simple&nbsp;!
+- Même lors d’apparition, de disparition de contenu ou de contenu dynamiquement généré, il faut conserver cet ordre de lecture compréhensible et une interface utilisable.
+
+**Objectif utilisateur&nbsp;:**
+Permettre de comprendre et utiliser le contenu, notamment pour des utilisateurs d'<abbr>AT</abbr> qui souvent lisent le contenu dans l'ordre d'apparition dans le code.
+
+**Exemple valide&nbsp;:**
+Un site de presse présente ses articles en trois colonnes. Dans le code, les colonnes sont placées dans le même ordre qu'affiché à l'écran. Dans ce cas, tous les utilisateurs peuvent lire les articles sans difficultés.
+
+**Exemple non-valide&nbsp;:**      
+ Le menu principal d'un site est présent à toute fin du code source (après le pied de page) mais positionné tout en haut de la page via <abbr>CSS</abbr>, il risque de n'être pas perçu par un utilisateur de lecteur d'écran.
+
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**
+- <a lang="en" href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
 
 
 ## Identifier et conserver la cohérence des regroupements et des différentes régions de la page
