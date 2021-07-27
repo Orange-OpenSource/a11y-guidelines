@@ -1,67 +1,88 @@
-$(document).ready(function() {
-  const openButton = $('#openButton')
-  const dialog = $('#dialog')
-  const options = $("[role=option]")
+
+  const openButton = document.getElementById('openButton');
+  const dialog = document.getElementById('dialog');
+  const options = document.querySelectorAll('[role=option]');
+  const dialogFocusableContent = dialog.querySelectorAll('button');
+  const dialogStart = dialog.querySelectorAll('button')[0];
+  const dialogStop = dialogFocusableContent[dialogFocusableContent.length - 1];
 
   function showDialog() {
-    dialog.show();
+    dialog.style.display = "block";
 
     // If no selected element, select the first by default
-    if (!dialog.find("[aria-selected=true]").length) {
-      dialog.find("[role=option]:first").attr("aria-selected", "true").focus();
+    if (!dialog.querySelectorAll("[aria-selected=true]").length) {	
+      var firstOption = dialog.querySelector("[role=option]");
+	 firstOption.setAttribute("aria-selected", "true");
+	 firstOption.focus();
     } else {
-      dialog.find("[aria-selected=true]").focus();
+     dialog.querySelector("[aria-selected=true]").focus();
     }
   }
 
   function hideDialog () {
     openButton.focus();
-    dialog.hide()
+    dialog.style.display = "none";
   }
+
 
   // --- Exemple final ---
   // Ouverture de l'exemple final
-  openButton.on('click', function () {
-    $('[role=dialog], .dialog').hide();
+  openButton.onclick = function(){
+    document.querySelector('[role=dialog], .dialog').style.dysplay = "none";
     showDialog();
-  });
-
-  // Gestion de la touche échap
-  dialog.on('keydown', function (e) {
-    if (e.keyCode === 27) {
-      hideDialog();
-    }
-  });
+  };
 
   // Boutons de fermeture des dialog
-  $('[role=dialog] button').on('click', function () {
-    hideDialog();
-  })
+   document.querySelectorAll('[role=dialog] button').forEach(function(b){
+	   
+		b.onclick = function(){
+			hideDialog();
+		}
+	   
+   })
 
-  $('.dialog-start').on('focus', function () {
-    $(this).parent().find('button:last').focus();
-  });
-
-  $('.dialog-stop').on('focus', function () {
-    $(this).parent().find('button:first').focus();
-  });
+  dialog.onkeydown = function(e){
+	  
+	if (e.keyCode === 27) {
+      hideDialog();
+    }
+	
+	if (e.key === 'Tab' || e.keyCode === 9) {
+		
+		if ( e.shiftKey ) {
+		  if (document.activeElement === dialogStart) {
+			e.preventDefault();
+			dialogStop.focus();
+			
+		  }
+		} else /* tab */ {
+		  if (document.activeElement === dialogStop) {
+			e.preventDefault();
+			dialogStart.focus();
+			
+		  }
+		}
+	}
+  };
   
-  // --- Listbox ---
-  // On keydown
-  $("[role=listbox]").on("keydown", function (e) {            
-      var currentItem = $(this).find("[aria-selected=true]");          
+  dialog.querySelector("[role=listbox]").onkeydown = function(e){          
+      var currentItem = this.querySelector("[aria-selected=true]"); 
       switch (e.keyCode) {
           case 38:  // Up arrow
-              if (currentItem.prev().length) {
-                  currentItem.attr("aria-selected", "false");                    
-                  currentItem.prev().attr("aria-selected", "true").focus();
+              if (currentItem.previousElementSibling) {
+                  currentItem.setAttribute("aria-selected", "false"); 
+				  var previousItem = currentItem.previousElementSibling;
+                  previousItem.setAttribute("aria-selected", "true");
+				  previousItem.focus();				  
               }                    
               e.preventDefault();
               break;
           case 40: // Down arrow          
-              if (currentItem.next().length) {
-                  currentItem.attr("aria-selected", "false");
-                  currentItem.next().attr("aria-selected", "true").focus();
+              if (currentItem.nextElementSibling) {
+                  currentItem.setAttribute("aria-selected", "false");
+				  var nextItem = currentItem.nextElementSibling;
+                  nextItem.setAttribute("aria-selected", "true");
+				  nextItem.focus();
               }
               e.preventDefault();
               break;
@@ -70,36 +91,44 @@ $(document).ready(function() {
               e.preventDefault();
               break;
           case 36: // home                    
-              currentItem.attr("aria-selected", "false");                    
-              currentItem.parent().find("[role=option]").first().attr("aria-selected", "true").focus();
+              currentItem.setAttribute("aria-selected", "false");                    
+              var firstItem = this.querySelectorAll("[role=option]")[0];
+              firstItem.setAttribute("aria-selected", "true");
+			        firstItem.focus();
               e.preventDefault();
               break;
           case 35: // end
-              currentItem.attr("aria-selected", "false");                    
-              currentItem.parent().find("[role=option]").last().attr("aria-selected", "true").focus();
+              currentItem.setAttribute("aria-selected", "false");
+			  var allItems = this.querySelectorAll("[role=option]");
+			  var lastItem = allItems[allItems.length - 1];
+        lastItem.setAttribute("aria-selected", "true");
+			  lastItem.focus();
               e.preventDefault();
               break;                   
       }
-  });
+  };
   
-  // double click
-  options.on("dblclick", function (e) {
-    hideDialog();
-  });
+  options.forEach(function(o){
+	  
+	  // double click
+	  o.ondblclick = function() {hideDialog()};
 
-  // Mouse down
-  options.on("mousedown", function (e) {
-      $(this).parent().find("[aria-selected=true]").attr("aria-selected", "false");
-      $(this).attr("aria-selected", "true").focus();
-      e.preventDefault();
-  });
-  
-  // On focus option
-  options.on("focus", function (e) {
-      $(this).parent().attr("tabindex", "-1");
-  });
+	  // Mouse down
+	  o.onmousedown = function (e) {
+		 var parentElement = this.parentElement.querySelector("[aria-selected=true]");
+		 parentElement.setAttribute("aria-selected", "false");
+		 this.setAttribute("aria-selected", "true");
+		 this.focus();
+		 e.preventDefault();
+	  };
+	  
+	  // On focus option
+	  o.onfocus = function (e) {
+		  this.parentElement.setAttribute("tabindex", "-1");
+	  };
 
-  options.on("blur", function (e) {
-      $(this).parent().attr("tabindex", "0");
+	  o.onblur = function(e) {
+		  this.parentElement.setAttribute("tabindex", "0");
+	  };
+	  
   });
-});

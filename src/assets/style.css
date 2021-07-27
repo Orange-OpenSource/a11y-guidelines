@@ -37,10 +37,41 @@ html {
 }
 
 
+/** 
+ * Fix for Boosted (to remove as soon as Boosted removes orange on white colors) 
+ */
+a:hover, a:focus {
+  color: #000;
+}
+
+a:hover {
+  text-decoration-thickness: .1rem;
+}
+
+a:focus {
+  outline-color: #f16e00;  
+  outline-offset: .075rem;  
+  text-decoration: none;
+}
+
+h2 a:hover, h2 a:focus {
+  color: #f16e00;
+  background-color: transparent;
+}
+
+a.text-decoration-none:hover, a.text-decoration-none:focus {
+  text-decoration: underline !important;
+}
+
+
 
 /**
  * Typography
  */
+
+li::marker {
+  color: #000;
+}
 
 /* Citations */
 blockquote {
@@ -59,7 +90,18 @@ blockquote p::after {
   content: close-quote;
 }
 
+.nav-link:hover,.nav-link:focus {
+  text-decoration: underline;
+}
 
+.navbar-light .nav-link.active, .navbar-light .nav-link:hover, .navbar-light .nav-link:focus {
+  color: #000;
+  background: #fff;
+}
+
+.navbar-light .nav-link.active::before {
+  background-color: #ff7900;
+}
 
 /**
  * Table Of Content and Side navigation
@@ -85,20 +127,9 @@ blockquote p::after {
   width: 4px;
 }
 
-
-
-/**
- * Secondary navigation
- */
-
-#secondary-navigation a[aria-current] {
-  color: #000;
+.StickySideNavigation .nav-link.text-muted {
+  background-color: transparent;
 }
-
-#secondary-navigation a[aria-current]::before {
-  background-color: #ff7900;
-}
-
 
 
 /**
@@ -145,6 +176,10 @@ blockquote p::after {
   text-decoration: underline;
 }
 
+[role="contentinfo"] a:hover, [role="contentinfo"] a:focus {
+  text-decoration: none;
+}
+
 [role="contentinfo"] svg {
   fill: #fff;
 }
@@ -154,6 +189,13 @@ blockquote p::after {
   fill: currentColor;
 }
 
+[role="contentinfo"] .nav-link {
+  padding: .3125rem 0.625rem .3125rem 0.625rem;
+}
+
+[role="contentinfo"] .nav-item:first-child .nav-link {
+  padding-left: 0;
+}
 
 
 /**
@@ -187,6 +229,10 @@ pre code {
 
 #search-input-toggler {
   outline-color: #ff7900;
+}
+
+#search-input-toggler:hover svg, #search-input-toggler:focus svg {   
+  fill: #ff7900;
 }
 
 .algolia-autocomplete {
@@ -262,8 +308,6 @@ pre code {
 .list-position-inside {
   list-style-position: inside !important;
 }
-
-
 
 /**
  * Responsive

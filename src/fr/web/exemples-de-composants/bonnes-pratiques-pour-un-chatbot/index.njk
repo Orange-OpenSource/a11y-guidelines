@@ -239,20 +239,20 @@ js:
 
   <pre><code class="js">
     // Désactivation de l'aria-live (pour éviter une double vocalisation)
-    $("#chat-container").attr("aria-live", "off");
+    document.getElementById("chat-container").setAttribute("aria-live", "off");
 
     // Affichage la question
-    push("Djingo", "Excellente idée ! Vous souhaitez parler d'accessibilité web ou mobile ?", true, "poll1");
+    push("Djingo", "Excellente idée ! Vous souhaitez parler d'accessibilité web ou mobile ?", true, "poll1"); 
 
     // Affichage des choix possibles
     rawPush('moi', '&lt;button id="poll-web" class="btn btn-primary btn-poll"&gt;Web&lt;/button&gt;&lt;button id="poll-mobile" class="btn btn-primary btn-poll"&gt;Mobile&lt;button&gt;');
 
     // Déplacement du focus sur la question (déclenchement de la vocalisation)
-    $("#poll1").focus();
+    document.getElementById("poll1").focus();
 
     // Réactivation de l'aria-live
     window.setTimeout(function() {
-        $("#chat-container").attr("aria-live", "polite");
+        document.getElementById("chat-container").setAttribute("aria-live", "polite");
     }, 0);
   </code></pre>
 

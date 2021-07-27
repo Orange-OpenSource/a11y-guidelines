@@ -1,117 +1,114 @@
 var title;
 
-$(document).ready(function() {
-    title = document.title;
+title = document.title;
 
-    $(".skiplink").on("focus", function () {
-        $("#skip-links").removeClass("sr-only");
-        window.scrollTo(0,0);
-    });
+document.getElementById("btnChatbot").onclick = function() {
+	document.getElementById("chatbot-window").style.display = "block";
+	document.getElementById("btnChatbot").classList.add("sr-only");
+	document.getElementById("chat-input").focus();
+};
 
-    $(".skiplink").on("blur", function () {
-        $("#skip-links").addClass("sr-only");
-    });
+document.querySelector("#chatbot form").onsubmit = function(e) {
+	sendMessage();
+    return false;
+};
 
-    $("#chatbot-skiplink").on("click", function () {
-        if ($("#chatbot-window").is(":visible")) {
-            $("#chat-input").focus();
-        } else {
-            $("#chatbot-window").show();
-            $("#btnChatbot").addClass("sr-only");
-            $("#chat-input").focus();
-        }
-    });
+document.getElementById("chatbot-close").onclick = function() {
+	document.getElementById("chatbot-window").style.display = "none";
+	document.getElementById("btnChatbot").classList.remove("sr-only");
+};
 
-    $("#btnChatbot").on("click", function () {
-        $("#chatbot-window").show();
-        $("#btnChatbot").addClass("sr-only");
-        $("#chat-input").focus();
-    });
+document.getElementById("chatbot-hide").onclick = function() {
+	document.getElementById("chatbot-window").classList.toggle("chatbot-hidden");
+	document.getElementById("chatbot-show").focus();
+};
 
-    $("form").on("submit", function () {
-        sendMessage();
-        return false;
-    })
-    $("#chatbot-close").on("click", function () {
-        $("#chatbot-window").hide();
-        $("#btnChatbot").removeClass("sr-only");
-    });
-    $("#chatbot-hide").on("click", function () {
-        $("#chatbot-window").toggleClass("chatbot-hidden");
-        $("#chatbot-show").focus();
-    });
-    $("#chatbot-show").on("click", function () {
-        $("#chatbot-window").toggleClass("chatbot-hidden");
-        $("#chatbot-hide").focus();
-    });
+document.getElementById("chatbot-show").onclick = function() {
+	document.getElementById("chatbot-window").classList.toggle("chatbot-hidden");
+	document.getElementById("chatbot-hide").focus();
+};
 
-    $("#chat-input").on("focus", function () {
-        document.title = title;
-    });        
-    
-    push("Djingo", "Hello, may I help you ?", true); 
-   
-    $("#btnExemple1, #btnExemple2").on("click", function () {
-        alert("Opening the chatbot !");
-    });
 
-    $("#btnChoice").on("click", function () {
-        $("#chatbot-window").show();
-        $("#btnChatbot").addClass("sr-only");
-        $("#chatbot-window").removeClass("chatbot-hidden");
-        window.setTimeout(function () {
-            push("me", "What about accessibility ?");
-        },0);
-        
-        window.setTimeout(function () {
-            $("#chat-container").attr("aria-live", "off");
-            $("#poll1, #poll-web, #poll-mobile").attr("id","");
-            push("Djingo", "Excellent idea ! Do you want to talk about web or mobile accessibility ?", true, "poll1"); 
-            rawPush('me', '<button id="poll-web" class="btn btn-primary btn-poll">Web</button><button id="poll-mobile" class="btn btn-primary btn-poll">Mobile</button>');            
-            window.setTimeout(function() {
-                $("#chat-container").attr("aria-live", "polite");
-            }, 0);
-            $("#poll1").focus();
-        }, 2000);       
-    });
+document.getElementById("chat-input").onfocus = function() {
+	 document.title = title;
+};
 
-    $('body').on('click', '#poll-web', function () {                
-        window.setTimeout(function () {
-            push("me", "Let's talk about web accessibility.");
-        }, 500);
-        $("#chat-input").val("").focus();
-        $(".from.invisible").remove();
-        $(".messages").last().remove();        
-    });
+push("Djingo", "Hello, may I help you ?", true); 
 
-    $('body').on('click', '#poll-mobile', function () {
-        $("#chat-input").val("").focus();
-        $(".from.invisible").remove();
-        $(".messages").last().remove();
-        window.setTimeout(function () {
-            push("me", "Let's talk about mobile accessibility.");
-        },500);
-    });    
-
+document.querySelectorAll("#btnExemple1, #btnExemple2").forEach(function(b){
+	b.onclick = function () {
+		  alert("Opening the chatbot !");
+	};	
 });
 
-function rawPush(from, message) {
-    var lastFrom = $("#chat-content .messages").last().attr("data-from");
-    if (lastFrom !== from) {
-        $("#chat-content").append('<span data-from="' + from + '" class="from invisible" aria-hidden="true">' + from + '</span><div class="messages" data-from="' + from + '"></div>');
-    }
-    $("#chat-content .messages").last().append('<div class="raw-message"><span class="sr-only">' + from + ' says : </span>' + message + '</div>');        
-    $("#chat-content").css({scrollTop: document.getElementById("chat-content").scrollHeight });
+document.getElementById("btnChoice").onclick = function() {
+	document.getElementById("chatbot-window").style.display = "block";
+	document.getElementById("btnChatbot").classList.add("sr-only");
+	document.getElementById("chatbot-window").classList.remove = "chatbot-hidden";
+	
+	window.setTimeout(function () {
+        push("me", "What about accessibility ?");        
+    },0);
+	
+	window.setTimeout(function () {
+		document.getElementById("chat-container").setAttribute("aria-live", "off");
+		document.querySelectorAll("#poll1, #poll-web, #poll-mobile").forEach(function(p){
+			p.setAttribute("id","");
+		});
+		push("Djingo", "Excellent idea ! Do you want to talk about web or mobile accessibility ?", true, "poll1"); 
+		rawPush('me', '<button id="poll-web" class="btn btn-primary btn-poll">Web</button><button id="poll-mobile" class="btn btn-primary btn-poll">Mobile</button>');
 
-    var chatContent = document.getElementById('chat-content');
+		document.getElementById('poll-web').onclick = function() {
+			removePoll("Let's talk about web accessibility.");
+		}
+
+		document.getElementById('poll-mobile').onclick = function() {
+			removePoll("Let's talk about mobile accessibility.");
+		}
+		
+		window.setTimeout(function() {
+			document.getElementById("chat-container").setAttribute("aria-live", "polite");
+		}, 0);
+		
+		document.getElementById("poll1").focus();
+	}, 2000);    
+}
+
+function removePoll(message) {
+	window.setTimeout(function () {
+		push("me", message);
+	}, 500);
+	document.getElementById("chat-input").value = "";
+	document.getElementById("chat-input").focus();
+	document.querySelector(".from.invisible").remove();
+	document.querySelector(".messages:last-child").remove();     
+}
+
+function rawPush(from, message) {
+	var chatContent = document.getElementById('chat-content');
+	if (chatContent.querySelector((".messages:last-child"))) {
+		var lastFrom = chatContent.querySelector((".messages:last-child")).getAttribute("data-from"); 
+	}
+	
+    if (lastFrom !== from) {
+       chatContent.innerHTML = chatContent.innerHTML + '<span data-from="' + from + '" class="from invisible" aria-hidden="true">' + from + '</span><div class="messages" data-from="' + from + '"></div>';
+    }
+	
+    chatContent.querySelector((".messages:last-child")).innerHTML = chatContent.querySelector((".messages:last-child")).innerHTML + '<div class="raw-message"><span class="sr-only">' + from + ' says: </span>' + message + '</div>';    
+	
+	chatContent.style.scrollTop = document.getElementById("chat-content").scrollHeight;
     chatContent.scrollTop = chatContent.scrollHeight;
 }
 
 function push(from, message, silence, id) {
-    var lastFrom = $("#chat-content .messages").last().attr("data-from");
+	var chatContent = document.getElementById('chat-content');
+	if (chatContent.querySelector((".messages:last-child"))) {
+		var lastFrom = chatContent.querySelector((".messages:last-child")).getAttribute("data-from"); 
+	}
+	    
     var id = id?' id="'+id+'" ':'';
     if (lastFrom !== from) {
-        $("#chat-content").append('<span data-from="' + from + '" class="from" aria-hidden="true">' + from + '</span><div class="messages" data-from="' + from + '"></div>');
+		 chatContent.innerHTML = chatContent.innerHTML + '<span data-from="' + from + '" class="from" aria-hidden="true">' + from + '</span><div class="messages" data-from="' + from + '"></div>';
     }
 
     if (!silence) {
@@ -124,28 +121,29 @@ function push(from, message, silence, id) {
             }
         }
     }
-
-    $("#chat-content .messages").last().append('<div class="message" ' + id + ' tabindex="-1"><span class="sr-only">' + from + ' says : </span>' + message + '</div>');    
-    var chatContent = document.getElementById('chat-content');
+	
+	chatContent.querySelector((".messages:last-child")).innerHTML = chatContent.querySelector((".messages:last-child")).innerHTML + '<div class="message" ' + id + ' tabindex="-1"><span class="sr-only">' + from + ' says: </span>' + message + '</div>';
     chatContent.scrollTop = chatContent.scrollHeight;
 }
 
 function sendMessage() {
-    var msg = $("#chat-input").val();
+    var msg = document.getElementById("chat-input").value;
+
     if (msg == '') {
         return;
     }
     push("me", msg);
-    $("#chat-input").val("").focus();
-    
+	document.getElementById("chat-input").value = "";
+	document.getElementById("chat-input").focus();
+   
     // echo reply
     window.setTimeout(function () {
         push("Djingo", msg);
     }, 4000);
 }
 
-function playSound(filename){
-    document.getElementById("sound").innerHTML='<audio autoplay="autoplay"><source src="./sounds/' + filename + '.mp3" type="audio/mpeg" /><embed hidden="true" autostart="true" loop="false" src="./sounds/' + filename +'.mp3" /></audio>';    
+function playSound(filename){   
+    document.getElementById("sound").innerHTML='<audio autoplay="autoplay"><source src="./sounds/' + filename + '.mp3" type="audio/mpeg" /><embed hidden="true" autostart="true" loop="false" src="./sounds/' + filename +'.mp3" /></audio>';
 }
 
 /* --- On supprime le focus lors de la navigation avec la souris --- */

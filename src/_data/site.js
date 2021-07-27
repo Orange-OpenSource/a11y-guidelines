@@ -14,6 +14,16 @@ module.exports = {
     en: 'Orange digital accessibility guidelines',
     fr: 'Recommandations accessibilité numérique Orange'
   },
+  rss: {
+    title: {
+      en: 'Orange digital accessibility guidelines - English',
+      fr: 'Recommandations accessibilité Orange - Français'
+    },
+    url: {
+      en: '/feed-en.xml',
+      fr: '/feed-fr.xml'
+    }     
+  },
   home: {
     lastPosts: {
       limit: 6
