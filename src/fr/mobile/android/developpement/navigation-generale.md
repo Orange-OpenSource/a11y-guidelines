@@ -133,7 +133,7 @@ Cette évolution automatique de l'interface pose cependant un problème pour l'a
 
 Une option d'accessibilité nommée **Time to take action** existe depuis Android 10, et permet de définir son propre timeout depuis les paramètres d'accessibilité. Il est ainsi possible d'exploiter cette option par le biais de la fonction `getRecommendedTimeoutMillis()`. Cette méthode prend en charge les délais d'expiration définis par l'utilisateur pour les éléments d'interface utilisateur interactifs et non interactifs. La valeur de retour est influencée à la fois par les préférences de l'utilisateur (Time to take action) et les API du service d'accessibilité.
 
-Cependant, tout les téléphones n'utilisant pas nécessairement une version d'Android récente, il est recommandé de proposer directement au sein de l'application un paramètrage de ce delai.
+Cependant, tous les téléphones n'utilisant pas nécessairement une version d'Android récente, il est recommandé de proposer directement au sein de l'application un paramétrage de ce délai.
 
 **À vérifier&nbsp;:**
 
