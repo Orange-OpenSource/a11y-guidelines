@@ -17,9 +17,9 @@ Insufficient contrast will be detrimental to users with visual difficulties or t
 
 **To be verified&nbsp;:**
 - Make sure the contrast between the background color and the text is :
-	- More than 4.5:1 for small texts
-	- More than 3:1 for large texts, or for bold texts
-- Ensure that the colors used in interface components, or information-bearing graphic elements, have a 3:1 contrast to the background. This includes buttons, radio buttons, checkboxes, selection lists, focus, progress bars, etc.
+	- More than 4.5:1 for small texts (less than 18sp or 14sp for bold texts)
+	- More than 3:1 for large texts (more than 18sp or 14sp for bold texts)
+- Ensure that the colors used in interface components, or information-bearing graphic elements, have a 3:1 contrast to the background. This includes buttons, radio buttons, checkboxes, selection lists, focus, progress bars, etc. The following are not affected: decorative texts, inactive elements, the logo and the brand name.
 
 **Tool&nbsp;:**
 The [Colour Constrast Analyzer](http://www.paciellogroup.com/resources/contrastanalyser/) application allows you to quickly measure color contrast levels (free for Mac and Windows).  
@@ -37,6 +37,29 @@ The text "film | 20h40 ..." does not have sufficient contrast. It will not be re
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-contrast">1.4.11 Non text contrast</a>
 
 <br/><br/>
+
+## Make sure that the dark mode is provided by the application
+
+**Target: everyone (sun on the screen, black and white printing...) and in particular visually impaired people, seniors and people with vision problems (color blindness, contrast vision, etc.)  
+**When:** from the design phase and during development.
+
+**Description: **
+Although the dark mode is mostly used by aesthetic preference by users, for some visually impaired users (presence of floaters for example), the dark mode brings a real difference and it is therefore essential to take it into account in order to make it accessible.
+
+**To be checked:**
+- The application proposes to switch from light to dark mode in the application settings, and/or adapts to the phone setting (Settings/Screen/Dark mode).
+
+**Example of a screen in light mode:**  
+
+![screenshot showing a screen with light mode active](../../images/light_mode.png)  
+
+**Example of the same screen with the dark mode&nbsp;:**  
+
+![screenshot showing the same screen with dark mode active](../../images/dark_mode.png)  
+
+<br/><br/>
+
+Translated with www.DeepL.com/Translator (free version)
 
 ## Ensure that color or sensory information is not the only source of information 
 
