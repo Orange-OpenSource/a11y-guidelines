@@ -310,20 +310,19 @@ Une fonctionnalité réalisable uniquement à l’aide du <i lang="en">drag’n�
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a></li>
 </ul>
 <h2 id="rendre-le-parcours-du-focus-sequentiel-et-logique-sans-piege-clavier">Rendre le parcours du focus séquentiel et logique sans piège clavier <a class="header-anchor" href="#rendre-le-parcours-du-focus-sequentiel-et-logique-sans-piege-clavier" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Cible :</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un trouble de l’attention 1et en mobilité.<br>
-<strong>Quand :</strong> lors du développement.</p>
+<p><strong>Cible :</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives ou avec un trouble de l’attention et en mobilité.</p>
+<p><strong>Quand :</strong> lors du développement.</p>
 <p><strong>Description :</strong></p>
-<p>Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre séquentiel et logique (de haut en bas et de gauche à droite) lorsque l'ordre du focus est nécessaire pour la compréhension ou l'opérabilité clavier et cela même pour du contenu généré dynamiquement (modification du DOM, Ajax,…). Bien-sûr, le focus ne doit ni rester piégé, ni bloqué.</p>
-<p>Pour le contenu, également, si un sens de lecture est nécessaire à la bonne compréhension, il faut s'assurer que celui-ci est cohérent pour tout utilisateur.</p>
+<p>Les éléments (liens, boutons, éléments de formulaire) doivent recevoir le focus dans un ordre séquentiel et logique (de haut en bas et de gauche à droite) lorsque l'ordre du focus est nécessaire pour la compréhension ou l'opérabilité clavier et cela même pour du contenu généré dynamiquement (modification du DOM, Ajax…). Bien-sûr, le focus ne doit ni rester piégé, ni bloqué.</p>
 <p>Exemple, les puces numérotées indiquent l'ordre de déplacement du focus dans cette page :<br>
 <img src="../../images/focus/focus-order.png" alt="Capture d'écran indiquant l'ordre de déplacement du focus dans une page" class="img-fluid"></p>
 <p><strong>À vérifier :</strong></p>
 <ul>
-<li>Pour valider cette exigence, la position du focus doit être visible à tout moment (propriété <code>outline</code> et <code>:focus</code> en <abbr>CSS</abbr>), voir exigence 20, ci-dessous.</li>
-<li>Veillez à ce que l’ordre d’apparition des éléments dans le code <abbr>HTML</abbr>soit le même que l'ordre de déplacement du focus ou de lecture de l'information dans la page si cet ordre impacte la compréhension du contenu ou capacité d'utiliser l'interface. Un élément présent à la fin du code source mais positionné tout en haut de la page via <abbr>CSS</abbr> sera le dernier à recevoir le focus. C'est la solution la plus simple !</li>
+<li>Pour valider cette exigence, la position du focus doit être visible à tout moment (propriété <code>outline</code> et <code>:focus</code> en <abbr>CSS</abbr>), voir exigence &quot;Rendre visible le focus en toute circonstance&quot; ci-dessous.</li>
+<li>Veillez à ce que l’ordre d’apparition des éléments dans le code <abbr>HTML</abbr>soit le même que l'ordre de déplacement du focus, si cet ordre impacte la compréhension du contenu ou la capacité d'utiliser l'interface. Un élément présent à la fin du code source mais positionné tout en haut de la page via <abbr>CSS</abbr> sera le dernier à recevoir le focus. C'est la solution la plus simple !</li>
 <li>Pour la maintenabilité, éviter l’utilisation de l’attribut <code>tabindex</code> avec des valeurs supérieures à 0.</li>
-<li>Même lors d’apparition ou de disparition de contenu, il faut conserver ce parcours logique et séquentiel.<br>
-Ceci est vrai pour du contenu dynamiquement généré ou pour des <span lang="en"><abbr>SPA</abbr> (single page application)</span> ou des applications web sur une seule page. Pour plus de détails, voir <a href="../../exemples-de-composants/gestion-dynamique-du-focus/">Gérer le focus pour du contenu dynamique</a></li>
+<li>Même lors d’apparition ou de disparition de contenu, si besoin, il faut conserver ce parcours logique et séquentiel du focus.<br>
+Ceci est vrai pour du contenu dynamiquement généré ou pour des <span lang="en"><abbr>SPA</abbr> (single page application)</span> ou applications web sur une seule page. Pour plus de détails, voir <a href="../../../articles/single-page-app/">Recommandations pour les Single Page Applications</a> et <a href="../../exemples-de-composants/gestion-dynamique-du-focus/">Gestion dynamique du focus</a></li>
 </ul>
 <p><strong>Objectif utilisateur :</strong><br>
 Permettre la navigation logique, sans piège au clavier dans les pages de l’application. Nécessaire pour les utilisateurs ne naviguant qu’au clavier (non ou malvoyants, déficients moteurs, déficients cognitifs, en mobilité).</p>
@@ -333,7 +332,6 @@ Dans une page dédiée à la recherche dans le site, on passe, à la navigation 
 Une page contenant un lecteur vidéo dont le focus peut entrer à l’intérieur du lecteur, mais ne peut pas en sortir (piège clavier).</p>
 <p><strong>Référence <abbr>WCAG</abbr> :</strong></p>
 <ul>
-<li><a lang="en" href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful Sequence</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#no-keyboard-trap">2.1.2 No Keyboard Trap</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a></li>
 </ul>

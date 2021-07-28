@@ -222,7 +222,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Table of content
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#use-relative-size-to-allow-changing-text-size-and-responsive-design" class="dropdown-item text-wrap">Use relative size to allow changing text size and responsive design</a><a href="#allow-text-spacing" class="dropdown-item text-wrap">Allow text spacing</a><a href="#identify-and-maintain-consistency-of-groupings-and-different-regions-of-the-page" class="dropdown-item text-wrap">Identify and maintain consistency of groupings and different regions of the page</a><a href="#define-sensitive-areas-of-sufficient-size" class="dropdown-item text-wrap">Define sensitive areas of sufficient size</a><a href="#decoupling-content-from-interaction-and-presentation" class="dropdown-item text-wrap">Decoupling content from interaction and presentation</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#use-relative-size-to-allow-changing-text-size-and-responsive-design" class="dropdown-item text-wrap">Use relative size to allow changing text size and responsive design</a><a href="#allow-text-spacing" class="dropdown-item text-wrap">Allow text spacing</a><a href="#ensure-a-comprehensible-reading-order" class="dropdown-item text-wrap">Ensure a comprehensible reading order</a><a href="#identify-and-maintain-consistency-of-groupings-and-different-regions-of-the-page" class="dropdown-item text-wrap">Identify and maintain consistency of groupings and different regions of the page</a><a href="#define-sensitive-areas-of-sufficient-size" class="dropdown-item text-wrap">Define sensitive areas of sufficient size</a><a href="#decoupling-content-from-interaction-and-presentation" class="dropdown-item text-wrap">Decoupling content from interaction and presentation</a></div>
     </nav>
         
       </div>
@@ -281,7 +281,7 @@
           <h1>Layout</h1>
 <p class="lead">Make sure the layout is suitable for the user</p>
 <h2 id="use-relative-size-to-allow-changing-text-size-and-responsive-design">Use relative size to allow changing text size and responsive design <a class="header-anchor" href="#use-relative-size-to-allow-changing-text-size-and-responsive-design" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Target:</strong> everyone and especially people with visual impairments, using a device outdoors and elderly people.<br>
+<p><strong>Target:</strong> Everyone and especially people with visual impairments, using a device outdoors and elderly people.<br>
 <strong>When:</strong> during development.</p>
 <p><strong>Description:</strong></p>
 <p>Use relative length units for font size (<code>em</code>, <code>rem</code>, <code>%</code>) and for containers handling text size enlargement up to 200% and design your pages to be responsive.</p>
@@ -304,7 +304,7 @@ See the example <a href="../../components-examples/zoom/">handling zoom, increas
 <li><a href="https://www.w3.org/TR/WCAG21/#reflow">1.4.10 Reflow</a></li>
 </ul>
 <h2 id="allow-text-spacing">Allow text spacing <a class="header-anchor" href="#allow-text-spacing" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Target:</strong> everyone, particularly people with visual disabilities.<br>
+<p><strong>Target:</strong> Everyone, particularly people with visual disabilities.<br>
 <strong>When:</strong> as of design and during development.</p>
 <p>If the user applies the following settings, the text must remain legible (no truncated content, superimposed):</p>
 <ul>
@@ -333,8 +333,28 @@ Improve reading comfort for people with cognitive and visual disabilities.</p>
 <ul>
 <li><a href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a></li>
 </ul>
+<h2 id="ensure-a-comprehensible-reading-order">Ensure a comprehensible reading order <a class="header-anchor" href="#ensure-a-comprehensible-reading-order" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong> Everyone, and in particular people with visual or cognitive impairments or with an attention deficit disorder and mobility.<br>
+<strong>When:</strong> during development.</p>
+<p><strong>Description:</strong></p>
+<p>If a specific reading order is necessary for a good understanding of the content or the use of the interface, it must be ensured that the order of appearance in the <abbr>HTML</abbr> code also allows the access, for any user, to the content and the interface.</p>
+<p><strong>To be checked:</strong></p>
+<ul>
+<li>Provide that the order of appearance of the elements in the <abbr>HTML</abbr> code is the same as the reading order of the information in the page, if this impacts the understanding of the content or ability to use the interface. It's the simplest solution!</li>
+<li>Even during the appearance or disappearance of content or dynamically generated content, this understandable reading order and a usable interface must be kept.</li>
+</ul>
+<p><strong>User goal:</strong><br>
+Allow content to be understood and used, especially for <abbr>AT</abbr> users who often read content in order of appearance in code.</p>
+<p><strong>Do:</strong><br>
+A press site presents its articles in three columns. In the code, the columns are placed in the same order as displayed on the screen. In this case, all users can read the articles without difficulty.</p>
+<p><strong>Don't:</strong><br>
+The main menu of a site is present at the very end of the source code (after the footer) but it positioned at the top of the page via <abbr>CSS</abbr>, there's a risk of not being perceived by a screen reader user.</p>
+<p><strong>Reference <abbr>WCAG</abbr>:</strong></p>
+<ul>
+<li><a href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful sequence</a></li>
+</ul>
 <h2 id="identify-and-maintain-consistency-of-groupings-and-different-regions-of-the-page">Identify and maintain consistency of groupings and different regions of the page <a class="header-anchor" href="#identify-and-maintain-consistency-of-groupings-and-different-regions-of-the-page" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>**Target:**Everyone, especially people with visual, cognitive or attention deficit disorders.</p>
+<p><strong>Target:</strong> Everyone, especially people with visual, cognitive or attention deficit disorders.</p>
 <p><strong>Description:</strong><br>
 Provide ways to identify and visually distinguish the different parts of the page and ensure the consistency of these regions or groupings in all pages.</p>
 <p><strong>Checklist:</strong></p>
@@ -354,7 +374,7 @@ It is very difficult to associate the themes (&quot;par region&quot;, &quot;par 
 <p>**Example: The <abbr>HTML5</abbr> and landmarks <abbr>ARIA</abbr> **<br>
 To give a semantic structure to the main regions of a page, we can use the <abbr> HTML5 &lt;/ abbr&gt; structure tags (<code>main</code> for the main content of the page,<code> nav</code> for the main navigation, <code>header </code>for page header,<code> footer</code> for footer, <code>aside</code> for content complementary to the main content, and others) even if their support by assistive technologies / browsers is not total , it's enough. You can also use, to set up this page structure, <a href="https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html">the landmarks <abbr>ARIA</abbr> (Accessible Rich Internet Applications)</a> and there, the support is much better &amp; nbsp ;!</p>
 <p>Setting up this type of semantics allows visually impaired people to identify and understand the organization, the overall structure of the page and thus navigate more easily.</p>
-<p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
+<p><strong>Reference <abbr>WCAG</abbr>:</strong></p>
 <ul>
 <li><a href="https://www.w3.org/TR/WCAG21/#consistent-navigation">3.2.3 Consistent Navigation</a></li>
 <li><a href="https://www.w3.org/TR/WCAG21/#consistent-identification">3.2.4 Consistent Identification</a></li>
@@ -366,7 +386,7 @@ To give a semantic structure to the main regions of a page, we can use the <abbr
 Each sensitive area must have a sufficient size (minimum 9mm width and height).<br>
 In addition, the sensitive areas must be sufficiently spaced from each other (about 2mm minimum).</p>
 <h2 id="decoupling-content-from-interaction-and-presentation">Decoupling content from interaction and presentation <a class="header-anchor" href="#decoupling-content-from-interaction-and-presentation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Target:</strong> everyone, especially people with visual disabilities, reading or attention difficulties.<br>
+<p><strong>Target:</strong> Everyone, especially people with visual disabilities, reading or attention difficulties.<br>
 <strong>When:</strong> during development.</p>
 <p><strong>Description:</strong></p>
 <p>Strictly decouple the content (<abbr>HTML</abbr>), the interaction (Javascript) and presentation (<abbr>CSS</abbr>).</p>
@@ -398,6 +418,8 @@ In addition, the sensitive areas must be sufficiently spaced from each other (ab
             <a href="#use-relative-size-to-allow-changing-text-size-and-responsive-design" class="nav-link text-muted bg-200">Use relative size to allow changing text size and responsive design</a>
           </li><li class="nav-item position-relative">
             <a href="#allow-text-spacing" class="nav-link text-muted bg-200">Allow text spacing</a>
+          </li><li class="nav-item position-relative">
+            <a href="#ensure-a-comprehensible-reading-order" class="nav-link text-muted bg-200">Ensure a comprehensible reading order</a>
           </li><li class="nav-item position-relative">
             <a href="#identify-and-maintain-consistency-of-groupings-and-different-regions-of-the-page" class="nav-link text-muted bg-200">Identify and maintain consistency of groupings and different regions of the page</a>
           </li><li class="nav-item position-relative">
