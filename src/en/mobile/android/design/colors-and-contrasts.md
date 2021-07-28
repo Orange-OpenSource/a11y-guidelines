@@ -51,15 +51,13 @@ Although the dark mode is mostly used by aesthetic preference by users, for some
 
 **Example of a screen in light mode:**  
 
-![screenshot showing a screen with light mode active](../../images/light_mode.png)  
+![screenshot showing a screen with light mode active](../../../images/light_mode.png)  
 
 **Example of the same screen with the dark mode&nbsp;:**  
 
-![screenshot showing the same screen with dark mode active](../../images/dark_mode.png)  
+![screenshot showing the same screen with dark mode active](../../../images/dark_mode.png)  
 
 <br/><br/>
-
-Translated with www.DeepL.com/Translator (free version)
 
 ## Ensure that color or sensory information is not the only source of information 
 
