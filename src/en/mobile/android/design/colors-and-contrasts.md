@@ -40,10 +40,10 @@ The text "film | 20h40 ..." does not have sufficient contrast. It will not be re
 
 ## Make sure that the dark mode is provided by the application
 
-**Target: everyone (sun on the screen, black and white printing...) and in particular visually impaired people, seniors and people with vision problems (color blindness, contrast vision, etc.)  
+**Target:** everyone (sun on the screen, black and white printing...) and in particular visually impaired people, seniors and people with vision problems (color blindness, contrast vision, etc.)  
 **When:** from the design phase and during development.
 
-**Description: **
+**Description:**
 Although the dark mode is mostly used by aesthetic preference by users, for some visually impaired users (presence of floaters for example), the dark mode brings a real difference and it is therefore essential to take it into account in order to make it accessible.
 
 **To be checked:**
@@ -53,7 +53,7 @@ Although the dark mode is mostly used by aesthetic preference by users, for some
 
 ![screenshot showing a screen with light mode active](../../../images/light_mode.png)  
 
-**Example of the same screen with the dark mode&nbsp;:**  
+**Example of the same screen with the dark mode:**  
 
 ![screenshot showing the same screen with dark mode active](../../../images/dark_mode.png)  
 
