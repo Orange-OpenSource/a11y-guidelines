@@ -241,7 +241,7 @@ Il est utile pour les malvoyants, lorsque l’écran n’est pas lisible, pour l
 
 Il peut être utilisé dans un but de démonstration mais est redondant avec <span lang="en">Talkback</span> pour des tests d’accessibilité sans pouvoir le remplacer.
 
-## Simulate color space
+## Simuler espace colorimétrique
 
 Il est possible de simuler différents problèmes de vue liés à la perception des couleurs (Monochromacy, Deuteranomaly , Protanomly & Tritanomaly) directement sur son téléphone Android à l'aide d'un paramètre disponible. Celui-ci est proposé dans les options développeurs qu'il faut donc au préalable avoir déverrouillées.
 
