@@ -1,5 +1,6 @@
 ---
 title: "Layout"
+abstract: "Make sure the layout is suitable for the user"
 ---
 
 # Layout

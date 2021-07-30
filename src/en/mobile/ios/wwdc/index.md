@@ -1,5 +1,6 @@
 ---
 title: "WWDC : World Wide Developers Conference"
+abstract: "This section regroups presentations at the WWDC dealing with accessibility"
 displayToc: true
 ---
 

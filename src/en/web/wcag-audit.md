@@ -1,5 +1,6 @@
 ---
 title: "WCAG audit"
+abstract: "Types of accessibility audits"
 ---
 
 # WCAG conformity audit

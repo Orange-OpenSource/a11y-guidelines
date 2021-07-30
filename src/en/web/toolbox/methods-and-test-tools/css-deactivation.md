@@ -1,5 +1,6 @@
 ---
 title: "Test by disabling CSS"
+abstract: "Disabling CSS is a good way to ensure compliance with certain best practices and to validate some important accessibility criteria"
 ---
 
 # Test by disabling CSS

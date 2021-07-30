@@ -1,5 +1,6 @@
 ---
 title: "Browser extensions"
+abstract: "Some browser extensions (or add-ons), such as aXe from Deque or Wave from WebAIM, allow automatic testing of HTML pages"
 ---
 
 # Browser extensions

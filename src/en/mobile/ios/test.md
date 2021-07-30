@@ -1,5 +1,6 @@
 ---
 title: "How to test the iOS accessibility"
+abstract: "ALL the project members should know the iOS accessibility features introduced in this web site"
 displayToc: true
 ---
 

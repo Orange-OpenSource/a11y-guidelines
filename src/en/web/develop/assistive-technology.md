@@ -1,5 +1,6 @@
 ---
 title: "Assistive technology"
+abstract: "Allow the screen reader user access to the main features of the application"
 ---
 
 # Assistive technology

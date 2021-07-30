@@ -1,5 +1,6 @@
 ---
 title: "Non-textual content"
+abstract: "Ensure that an alternative to non-text content is provided to the user"
 ---
 
 # Non-textual content

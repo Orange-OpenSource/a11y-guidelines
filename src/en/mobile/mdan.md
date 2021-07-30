@@ -1,5 +1,6 @@
 ---
 title: "mDAN"
+abstract: "mDAN is a mobile application (for Android and iOS) that showcases accessibility on a mobile device"
 ---
 
 # mDAN

@@ -1,5 +1,6 @@
 ---
 title: "Planning accessibility"
+abstract: "Planning a digital project taking in account accessibility"
 ---
 
 # Planning a digital project taking in account accessibility

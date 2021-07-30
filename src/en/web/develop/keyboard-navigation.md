@@ -1,5 +1,6 @@
 ---
 title: "Keyboard navigation"
+abstract: "Ensure the user can navigate using the keyboard only"
 ---
 
 # Keyboard navigation

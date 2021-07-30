@@ -1,5 +1,6 @@
 ---
 title: "iPhoneX basic gestures"
+abstract: "This page describes the iPhoneX common gestures"
 ---
 
 # iPhoneX basic gestures

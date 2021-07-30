@@ -1,5 +1,6 @@
 ---
 title: "Measure the color contrast level"
+abstract: "The contrast level can be measured simply by using the Colour Contrast Analyser tool"
 ---
 
 # Measure the color contrast level

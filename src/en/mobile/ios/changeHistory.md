@@ -1,5 +1,6 @@
 ---
 title: "iOS change history"
+abstract: "iOS changelog"
 displayToc: false
 ---
 

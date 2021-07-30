@@ -1,5 +1,6 @@
 ---
 title: "Textual content"
+abstract: "Ensure that textual content is structured with the appropriate semantics"
 ---
 
 # Textual content

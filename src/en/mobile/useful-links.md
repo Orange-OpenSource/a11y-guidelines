@@ -1,5 +1,6 @@
 ---
 title: "Useful links"
+abstract: "Websites dealing on accessibility"
 ---
 
 # Useful links
