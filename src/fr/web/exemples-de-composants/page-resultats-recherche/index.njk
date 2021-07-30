@@ -11,7 +11,7 @@ js:
 <h1>Bonnes pratiques pour les résultats de recherche dans un site</h1>
 
 <h2>Préambule</h2>
-<p>La recherche sur le site doit de préférence être une page dédiée spécifique. Pour y accèder, on peut mettre en place dans le menu principal, dansé le pied" de page..., un lien "Rechercher" ou un icône de loupe qui permet d'aller sur cette page dédiée.</p>
+<p>La recherche sur le site doit de préférence être une page dédiée spécifique. Pour y accéder, on peut mettre en place dans le menu principal, dans le pied de page..., un lien "Rechercher" ou un icône de loupe qui permet d'aller sur cette page dédiée.</p>
 
 <h2>Le formulaire de recherche</h2>
 <p>Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/">la librairie Boosted</a>. Celle-ci permet d’obtenir des formulaires dont le design est conforme à la charte Orange. </p>
@@ -19,7 +19,7 @@ js:
 <!-- Code du form de recherche -->
 <pre><code class="html">
       &lt;form class="d-flex" role="search"&gt;
-        &lt;input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Recherhcher"&gt;
+        &lt;input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Rechercher"&gt;
         &lt;button class="btn btn-primary" type="submit"&gt;Search&lt;/button&gt;
       &lt;/form&gt;
 </code></pre>
@@ -58,13 +58,13 @@ js:
 <p>Il est plus pratique pour les utilisateurs de privilégier un rechargement asynchrone des résultats afin de ne pas charger une nouvelle page, toujours perturbant pour les utilisateurs.</p>
 <p>Quoi qu'il en soit, le contenu principal de la page doit afficher les résultats trouvés. Ils doivent se situer juste après le formulaire de recherche afin d'être l'élément suivant de la navigation clavier, juste après le bouton d'envoi de la recherche.</p> 
 <p>Il faut faire précéder les résultats d'un titre de rubrique, reprenant le terme recherché et le nombre total de résultats et, si besoin, en cas de pagination, le nombre de résultats affichés ans la page.</p>
-<p>Ce titre de rubrique doit être notifié aux utilisateurs, y compris ceux utilisant des aides techniques et en particulier, des lecteurs d'écran. Pour cela, nous utilisons de l'<abbr>ARIA</abbr>, le <code>role="alert"</code> permettra une lecture dynamique du. contenu de l'élément au <abbr>AT</abbr>.</p>
+<p>Ce titre de rubrique doit être notifié aux utilisateurs, y compris ceux utilisant des aides techniques et en particulier, des lecteurs d'écran. Pour cela, nous utilisons de l'<abbr>ARIA</abbr>, le <code>role="alert"</code> permettra une lecture dynamique du contenu de l'élément au <abbr>AT</abbr>.</p>
 <!-- Code pour form de recherche et résultats -->
 <pre><code class="html">
 ...
   &lt;form class="d-flex" role="search"&gt;
     &lt;input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Rechercher dans le site"&gt;
-    &lt;button class="btn btn-primary" type="submit"&gt;Recherhcer&lt;/button&gt;
+    &lt;button class="btn btn-primary" type="submit"&gt;Rechercher&lt;/button&gt;
   &lt;/form&gt;
   &lt;h2 role="alert"&gt;
     15 résultats, 5 affichés pour "Fibre" 
