@@ -1,5 +1,6 @@
 ﻿---
 title: "Keyboard navigation (Switch Access)"
+abstract: "Navigation using Switch Access is very useful for people with motor or cognitive difficulties"
 ---
 
 # Keyboard navigation (Switch Access)

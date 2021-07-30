@@ -1,5 +1,6 @@
 ---
 title: "Create accessible PowerPoint slides"
+abstract: "Producing accessible PowerPoint slides requires following these different recommendations"
 ---
 
 # Create accessible PowerPoint slides

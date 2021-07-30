@@ -1,5 +1,6 @@
 ---
 title: "Check accessibility in PowerPoint slides"
+abstract: "Automated tests with Office Accessibility Verification Tool"
 ---
 
 # Check accessibility in PowerPoint slides

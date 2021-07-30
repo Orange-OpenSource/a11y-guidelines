@@ -1,5 +1,6 @@
 ---
 title: "Momindum Maker"
+abstract: "Momindum Maker recommandations"
 ---
 
 # Momindum Maker recommandations 

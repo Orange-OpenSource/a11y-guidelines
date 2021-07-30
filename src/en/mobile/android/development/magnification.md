@@ -1,5 +1,6 @@
 ﻿---
 title: "Element Magnification"
+abstract: "Enlarge texts without loss of information"
 ---
 
 # Element magnification

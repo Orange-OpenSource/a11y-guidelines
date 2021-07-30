@@ -1,5 +1,6 @@
 ﻿---
 title: "Input screen"
+abstract: "Explicitly label input fields"
 ---
 
 # Input screen

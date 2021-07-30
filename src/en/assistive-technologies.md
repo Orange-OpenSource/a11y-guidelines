@@ -1,5 +1,6 @@
 ---
 title: "Assistive technologies"
+abstract: "People with disabilities can use assistive technologies to access the web whatever the device"
 ---
 
 # Assistive technologies

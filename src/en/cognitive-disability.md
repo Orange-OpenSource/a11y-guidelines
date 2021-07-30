@@ -1,5 +1,6 @@
 ---
 title: "Cognitive disability"
+abstract: "Cognitive disability is the consequence of cognitive dysfunctions"
 ---
 
 # Cognitive disability

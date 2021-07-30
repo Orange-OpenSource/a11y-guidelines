@@ -1,5 +1,6 @@
 ﻿---
 title: "Application scan : analysis tools"
+abstract: "Analysis tools complement the first approach, in order to detect other accessibility problems"
 ---
 
 # Application scan : analysis tools

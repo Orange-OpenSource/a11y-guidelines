@@ -1,5 +1,6 @@
 ---
 title: "Videos, audios, and animated components "
+abstract: "The accessibility of videos and audio embedded in content (Web page, Office document, etc.) goes through"
 ---
 
 # Accessibility of video, animation and audio content

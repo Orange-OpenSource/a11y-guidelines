@@ -1,5 +1,6 @@
 ﻿---
 title: "Developer testing: code analysis"
+abstract: "This step allows accessibility issues to be reported directly during the development phase and causes application build errors or various warnings"
 ---
 
 # Developer testing: code analysis
