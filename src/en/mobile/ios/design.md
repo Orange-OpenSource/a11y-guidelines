@@ -1,5 +1,6 @@
 ---
 title: "iOS design criteria"
+abstract: "This guide aims to present the different accessibility criteria for getting an accessible iOS application"
 displayToc: true
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Touch and interactions"
+abstract: "Ensure that the user keeps control over interactions, particularly tactile ones"
 ---
 
 # Touch and interactions

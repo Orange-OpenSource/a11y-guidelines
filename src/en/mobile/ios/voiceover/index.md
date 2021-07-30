@@ -1,5 +1,6 @@
 ---
 title: "VoiceOver user guide"
+abstract: "VoiceOver is a built-in screen reader that reads aloud the items that appear on the device screen"
 ---
 
 # VoiceOver user guide

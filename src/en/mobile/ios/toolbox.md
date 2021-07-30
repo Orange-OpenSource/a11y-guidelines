@@ -1,5 +1,6 @@
 ---
 title: "Toolbox"
+abstract: "Resources and tools to help improving digital accessibility"
 sideNavigationLinks:
   - label: "VoiceOver screen reader"
     href: "../voiceover/"

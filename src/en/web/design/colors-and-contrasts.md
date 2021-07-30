@@ -1,5 +1,6 @@
 ---
 title: "Colors and contrasts"
+abstract: "Ensure that the colors used are not a problem for the user"
 ---
 
 # Colors and contrasts

@@ -1,5 +1,6 @@
 ---
 title: "Resources"
+abstract: "Useful links"
 ---
 
 # Resources

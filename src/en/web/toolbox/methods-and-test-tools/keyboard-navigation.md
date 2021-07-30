@@ -1,5 +1,6 @@
 ---
 title: "Keyboard navigation"
+abstract: "Navigation in a web page should be possible using only the keyboard, particularly for people who cannot use a mouse"
 ---
 
 # Keyboard navigation

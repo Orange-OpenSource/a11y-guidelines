@@ -1,5 +1,6 @@
 ---
 title: "Accessibility regulations"
+abstract: "Synthesis of regulations focused on digital accessibility in France and E.U."
 ---
 
 # Accessibility regulations

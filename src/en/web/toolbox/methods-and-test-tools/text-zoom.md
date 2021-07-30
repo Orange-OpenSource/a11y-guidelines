@@ -1,5 +1,6 @@
 ---
 title: "Text size enlargement"
+abstract: "How to test ? One of the accessibility requirements is being able to enlarge the text up to 200%"
 ---
 
 # Text size enlargement

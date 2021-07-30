@@ -1,5 +1,6 @@
 ---
 title: "Home"
+abstract: "Guidelines, methods, resources and tools proposed by the Orange skill center for digital accessibility"
 layout: "templates/home"
 cardNavigationTitle: "Our recommendations"
 ---

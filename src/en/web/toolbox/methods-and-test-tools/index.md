@@ -1,5 +1,6 @@
 ---
 title: "Web-specific methods and tools"
+abstract: "This section describes an evaluation method for project stakeholders to test the compliance of mobile web and web content with the accessibility criteria"
 ---
 
 # Web-specific methods and tools
