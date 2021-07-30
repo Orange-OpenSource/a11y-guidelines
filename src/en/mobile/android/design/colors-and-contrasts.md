@@ -18,7 +18,7 @@ Insufficient contrast will be detrimental to users with visual difficulties or t
 **To be verified&nbsp;:**
 - Make sure the contrast between the background color and the text is :
 	- More than 4.5:1 for small texts (less than 18sp or 14sp for bold texts)
-	- More than 3:1 for large texts (more than 18sp or 14sp for bold texts)
+	- More than 3:1 for large texts (more than or equals to 18sp or 14sp for bold texts)
 - Ensure that the colors used in interface components, or information-bearing graphic elements, have a 3:1 contrast to the background. This includes buttons, radio buttons, checkboxes, selection lists, focus, progress bars, etc. The following are not affected: decorative texts, inactive elements, the logo and the brand name.
 
 **Tool&nbsp;:**
