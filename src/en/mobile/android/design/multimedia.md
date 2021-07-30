@@ -1,5 +1,6 @@
 ﻿---
 title: "Multimedia"
+abstract: "Control multimedia content"
 ---
 
 # Multimedia

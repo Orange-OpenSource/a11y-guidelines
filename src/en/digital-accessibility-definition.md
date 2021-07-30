@@ -1,5 +1,6 @@
 ---
 title: "Digital accessibility definition"
+abstract: "What is digital accessibility?"
 ---
 
 # Digital accessibility definition

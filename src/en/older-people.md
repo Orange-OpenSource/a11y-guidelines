@@ -1,5 +1,6 @@
 ---
 title: "Older people"
+abstract: "An older person (“senior”) belongs to a category of people whose definition varies according to context: work, health, etc."
 ---
 
 # Older people

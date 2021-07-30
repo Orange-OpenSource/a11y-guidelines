@@ -1,5 +1,6 @@
 ---
 title: "Accessibility user testing"
+abstract: "In order to evaluate the accessibility of a site, application, or product, accessibility experts conduct audits"
 ---
 
 # Orange digital accessibility guidelines

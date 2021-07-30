@@ -1,5 +1,6 @@
 ---
 title: "General recommendations for content"
+abstract: "This section presents general recommendations to ensure the accessibility of your content regardless of the medium used"
 ---
 
 # General recommendations 

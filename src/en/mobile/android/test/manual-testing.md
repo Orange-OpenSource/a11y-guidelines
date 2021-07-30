@@ -1,5 +1,6 @@
 ﻿---
 title: "Manual tests: use cases"
+abstract: "Manual tests are those that you will perform yourself, by reproducing the situation experienced by your users"
 ---
 
 # Manual tests: use cases

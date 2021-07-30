@@ -1,5 +1,6 @@
 ---
 title: "Check accessibility in Word"
+abstract: "Automated tests with Office Accessibility Verification Tool"
 ---
 
 # Check accessibility in Word

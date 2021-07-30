@@ -1,5 +1,6 @@
 ﻿---
 title: "Input screen"
+abstract: "Linking input fields with their labels provides additional vocalisation that makes the field easier for the user to understand"
 ---
 
 # Input screen

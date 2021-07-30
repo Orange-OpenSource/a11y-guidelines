@@ -1,5 +1,6 @@
 ﻿---
 title: "General navigation"
+abstract: "Insufficient size for a clickable element can make it difficult to interact with the application"
 ---
 
 # General navigation

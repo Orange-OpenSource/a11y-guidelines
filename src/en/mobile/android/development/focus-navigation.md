@@ -1,5 +1,6 @@
 ﻿---
 title: "Keyboard navigation (Switch Access)"
+abstract: "Access to interactive elements"
 ---
 
 # Keyboard navigation (Switch Access)
