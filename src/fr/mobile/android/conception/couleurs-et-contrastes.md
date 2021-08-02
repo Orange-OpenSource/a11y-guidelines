@@ -17,9 +17,9 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 
 **À vérifier&nbsp;:**
 - S'assurer que le contraste entre la couleur de fond et du texte, est de :
-	- De 4,5:1 minimum pour les petits textes
-	- De 3:1 minimum pour les grands textes, ou pour les textes en gras
-- S'assurer que les couleurs utilisés dans les composants d'interface, ou que les éléments graphiques porteurs d'informations, ont un contraste de 3:1 par rapport à l'arrière-plan. Sont concernés, entre autres : les boutons, les boutons radios, les cases à cocher, les listes de sélection, le focus, les barres de progression etc...
+	- De 4,5:1 minimum pour les petits textes (inférieur à 18sp ou 14sp si le texte est en gras)
+	- De 3:1 minimum pour les grands textes (supérieur ou égale à 18sp, ou 14sp si le texte est en gras)
+- S'assurer que les couleurs utilisés dans les composants d'interface, ou que les éléments graphiques porteurs d'informations, ont un contraste de 3:1 par rapport à l'arrière-plan. Sont concernés, entre autres : les boutons, les boutons radios, les cases à cocher, les listes de sélection, le focus, les barres de progression etc... Ne sont pas concernés : les textes décoratifs, les éléments inactifs, le logo et le brand name.
 
 **Outil&nbsp;:**
 L’application [<span lang="en">Colour Constrast Analyzer</span>](http://www.paciellogroup.com/resources/contrastanalyser/) permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows).  
@@ -60,3 +60,25 @@ Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, o
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#sensory-characteristics">1.3.3 Sensory characteristics</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#use-of-color">1.4.1 Use of color</a>
+
+
+## S'assurer que le mode sombre est prévu par l'application
+
+**Cible&nbsp;:** tout le monde (soleil sur l’écran, impression noir et blanc…) et en particulier les personnes malvoyantes, les seniors et les personnes avec des problèmes de vision (daltonisme, vision des contrastes, etc.)  
+**Quand&nbsp;:**  dès la phase de conception et lors du développement.
+
+**Description&nbsp;:**
+Bien que le mode sombre soit utilisé majoritairement par préférence esthétique par les utilisateurs, pour certains utilisateurs malvoyants (présence de corps flottants par exemple), le mode sombre apporte une réelle différence dans le confort d'utilisation de l'application et il est donc essentiel de le prendre en compte afin de rendre celle-ci accessible.
+
+**À vérifier&nbsp;:**
+- L'application propose de passer du mode clair au mode sombre dans les paramètres de l'application, et/ou s'adapte au paramètre du téléphone (Paramètres/Ecran/Mode sombre).
+
+**Exemple d'un écran en mode clair&nbsp;:**  
+
+![capture d’écran présentant un écran avec le mode clair actif](../../../images/light_mode.png)  
+
+**Exemple du même écran avec le mode sombre&nbsp;:**  
+
+![capture d’écran présentant le même écran avec le mode sombre actif](../../../images/dark_mode.png)  
+
+<br/><br/>

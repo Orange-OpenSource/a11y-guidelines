@@ -15,7 +15,7 @@ Linking input fields with their labels provides additional vocalisation that mak
   
 There are 2 techniques to achieve this:
  - `labelFor` &nbsp;: indicate that a label is linked to another view.  This method takes as parameter the id of the view that we label. You can use this method with almost any type of input field. It can be used from the <abbr>XML</abbr> `android:labelFor` or the `setLabelFor` method.
- - `hint`&nbsp;: add an example text when the text field is empty. This method only works for `EditText`. It takes in parameter the `id` of a string. Usable from the `android:hint` <abbr>XML</abbr> or the `setHint` method.
+ - `TextInputLayout`: allows to link directly the text field with its label within the same layout, which will have the effect to vocalize correctly the field while making it prettier.
 
 It is essential to indicate to the user, for a good understanding of the input screen, the required fields, the expected format, or errors made on fields.
 
@@ -27,9 +27,7 @@ It is essential to indicate to the user, for a good understanding of the input s
 
 **Example** 
 
-<pre><code class="xml">&lt;EditText
-   android:id="@+id/addressLine2"
-   android:hint="@string/aptSuiteBuilding" ... /&gt;
+<pre><code class="xml">
 
 &lt;TextView
    android:id="@+id/usernameLabel" ...
@@ -38,6 +36,16 @@ It is essential to indicate to the user, for a good understanding of the input s
 
 &lt;EditText
    android:id="@+id/usernameEntry" ... /&gt;
+</code></pre>
+
+<pre><code class="xml">&lt;com.google.android.material.textfield.TextInputLayout
+   android:id="@+id/addressLine"
+   android:hint="@string/adress" ... &gt;
+
+&lt;com.google.android.material.textfield.TextInputEditText
+   ... /&gt;
+
+&lt;/com.google.android.material.textfield.TextInputLayout&gt;
 </code></pre>
 
 **Reference <abbr>WCAG</abbr>:**  

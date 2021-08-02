@@ -196,6 +196,16 @@ It is necessary to indicate the state and the nature of the tabs (not internatio
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
 
+<br/><br/>
+
+## Write good text alternatives
+
+**Description:**
+Writing good text alternatives is essential to make it easier for screen reader users to understand. Writing a good alternative depends on what you want to describe.
+
+- Icons: Icons are frequently used to represent a button or to display a status. In the case of a button, it is better to use a verb to write the text alternative. For example, a Favorite button represented by a heart could be described as "Add movie to favorite" rather than "Heart" or "Favorite". In the case of an icon representing a state, the state that is represented must be described. For example, if we have an icon representing a microphone crossed out, the textual alternative could be "Muted".
+- Texts: texts are generally very well managed natively by Android, the text displayed will be the one that will be vocalized, so it is not necessary to add a textual alternative. On the other hand, it is sometimes necessary to be careful, if you use symbols or abbreviations. For example, for the text "02/05/92", a textual alternative must be added to vocalize "2 May 1992". (it is also possible in this case to use a `TtsSpan`).
+- Images: the case of images is more complex and is detailed [in this chapter](https://a11y-guidelines.orange.com/en/mobile/android/development/vocal-navigation/#vocalize-the-images)
   
 <br/><br/>
 
