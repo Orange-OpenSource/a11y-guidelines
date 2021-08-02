@@ -13,6 +13,10 @@ title: "Navigation générale"
 
 Une taille insuffisante pour la zone d’action d’un composant peut empêcher certains utilisateurs de profiter pleinement de l’application. Cela peut engendrer des frustrations qui peuvent conduire à la désinstallation de l’application. Chaque élément cliquable de l’application doit donner à l’utilisateur une taille suffisante pour sa zone d’action.
 
+Certaines exceptions sont cependant à noter : 
+- Si l'action proposée a un équivalent dans l'écran qui respecte la taille requise
+- Si l'élément cliquable fait partie d'une zone ou d'un bloc de texte (ce qui est fréquemment le cas des liens notamment).
+
 **À vérifier&nbsp;:**
 
 - La zone de clic a une taille d'au minimum 48 dp
@@ -116,22 +120,24 @@ Le texte peut poser des problèmes de lisibilité lorsque celui-ci présente une
 
 <br/><br/>
 
-## Rendre adaptable les UI avec limite de temps
+## Rendre adaptable les limites de temps qui provoquent un changement de contexte
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes ayant des déficiences visuelles et/ou motrices.
 **Quand&nbsp;:** dès la phase de conception et lors du développement.
 
 **Description&nbsp;:**
 
-Sur certaines applications, il arrive que l’UI change après un certain délai. C'est le cas par exemple pour les lecteurs vidéo : il est fréquent que les boutons de contrôles associés à la vidéo disparaissent après une dizaine de secondes sans interaction. 
+Sur certaines applications, il arrive que le contexte change après un certain délai. C'est le cas par exemple pour les lecteurs vidéo : il est fréquent que les boutons de contrôles associés à la vidéo disparaissent après une dizaine de secondes sans interaction. 
 
 Cette évolution automatique de l'interface pose cependant un problème pour l'accessibilité, une personne ayant peut-être besoin de plus de temps pour interagir avec les éléments. Ce délai doit donc pouvoir être adapté selon le besoin de chaque utilisateur. 
 
 Une option d'accessibilité nommée **Time to take action** existe depuis Android 10, et permet de définir son propre timeout depuis les paramètres d'accessibilité. Il est ainsi possible d'exploiter cette option par le biais de la fonction `getRecommendedTimeoutMillis()`. Cette méthode prend en charge les délais d'expiration définis par l'utilisateur pour les éléments d'interface utilisateur interactifs et non interactifs. La valeur de retour est influencée à la fois par les préférences de l'utilisateur (Time to take action) et les API du service d'accessibilité.
 
+Cependant, tous les téléphones n'utilisant pas nécessairement une version d'Android récente, il est recommandé de proposer directement au sein de l'application un paramétrage de ce délai.
+
 **À vérifier&nbsp;:**
 
-- Une UI avec limite de temps a son délai paramétrable
+- Une limite de temps a son délai paramétrable
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#timing-adjustable">2.2.1 Timing Adjustable</a>

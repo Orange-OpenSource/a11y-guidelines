@@ -13,6 +13,10 @@ title: "General navigation"
 
 Insufficient size for a clickable element can make it difficult to interact with the application. Each clickable element of the application must be of sufficient size.
 
+However, there are some exceptions: 
+- If the proposed action has an equivalent in the screen that respects the required size
+- If the clickable element is part of a zone or a text block (which is often the case for links).
+
 **To be verified&nbsp;:**
 
 - The click zone has a minimum size of 48 dp.
@@ -126,22 +130,24 @@ Make maximum use of native components: if no standard component can meet the nee
  
 <br/><br/>
 
-## Make UI with timeout adaptable 
+## Make adaptable the time limits causing a change of context 
 
 **Target&nbsp;:** everyone and in particular people with visual and/or motor impairments.
 **When&nbsp;:** from the design phase and during development.
 
 **Description&nbsp;:**
 
-In some applications, the UI may change after a timeout. For example, with video players:  control buttons associated with the video disappear after about ten seconds without interaction. 
+In some applications, the context may change after a timeout. For example, with video players:  control buttons associated with the video disappear after about ten seconds without interaction. 
 
 This automatic UI update is an issue for accessibility, cause a user could need more time to interact with the elements. This timeout must be adaptable according to the needs of each user. 
 
 An accessibility option named "Time to take action" exists since Android 10, and allows to define its own timeout. By calling this option from the application, it is possible to adapt its interfaces with timeout to the user.
 
+However, not all phones use a recent version of Android, it is recommended to propose directly within the application a setting of this delay.
+
 **To be verified&nbsp;:**
 
-- A UI with a timeout has a configurable delay.
+- A timeout has a configurable delay.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#timing-adjustable">2.2.1 Timing Adjustable</a>

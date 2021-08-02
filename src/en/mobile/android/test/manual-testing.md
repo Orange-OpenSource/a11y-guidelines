@@ -244,4 +244,10 @@ It is useful for the visually impaired, when the screen is not readable, for lea
 
 It can be used for demonstration purposes but is redundant with Talkback for accessibility testing without being able to replace it.
 
+## Simulate color space
+
+It is possible to simulate different vision problems related to color perception (Monochromacy, Deuteranomaly , Protanomly & Tritanomaly) directly on your Android phone using an accessibility parameter. This is offered in the developer options, which must first be unlocked.
+
+By applying this setting, it will be easier for you to detect problems related to a source of information provided only by the color.
+
 <span class="licence" lang="en">These images are licensed under a Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/" hreflang="en">openexhibits</a></span>
