@@ -2,10 +2,6 @@
 title: "Page de résultats de recherche"
 abstract: "Bonnes pratiques pour les résultats de recherche dans un site."
 tags: componentsExamples_fr
-css:
-- style.css
-js:
-- script.js
 ---
 
 <h1>Bonnes pratiques pour les résultats de recherche dans un site</h1>
@@ -75,7 +71,7 @@ js:
 <p>Nota bene &nbsp;: la pagination des résultats de recherche est une bonne option pour éviter des pages trop longue de résultats. Cependant, il ne faut pas utiliser de chargement dynamique infini au scroll qui est particulièrement inaccessible.</p>
 
 <h3>L'affichage et la sémantique des résultats</h3>
-<p>Sémantiquement, les résultats de la recherche à afficher sont, soit, une liste (ordonnée ou pas), soit un tableau de données. Si des filtres, par exemple, permettent de classer les résultats par pertinence, nombre d'occurrences du terme recherché, par date... alors il faudra choisir une liste ordonnée <code>ol</code> ou signifier cet ordre de tri dans le tableau de résultats. Le choix de la sémantique des résultats va dépendre de plusieurs critères&nbsp;:<br />
+<p>Sémantiquement, les résultats de la recherche à afficher sont, soit une liste (ordonnée ou pas), soit un tableau de données. Si des filtres, par exemple, permettent de classer les résultats par pertinence, nombre d'occurrences du terme recherché, par date... alors il faudra choisir une liste ordonnée <code>ol</code> ou signifier cet ordre de tri dans le tableau de résultats. Le choix de la sémantique des résultats va dépendre de plusieurs critères&nbsp;:<br />
 <ul>
 <li>le type de données à afficher, par exemple, si les résultats sont une liste de titre d'articles et un chapeau, la liste semble adaptée.</li>
 <li>les données à afficher par résultat, par exemple, si ce sont des produits avec le nom, le prix, des détails... le tableau de données sera préféré du fait de la structure de données plus complexe.</li>
