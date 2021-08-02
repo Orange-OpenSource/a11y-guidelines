@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Keyboard navigation (Switch Access) - Orange digital accessibility guidelines</title>
+    <title>Keyboard navigation &amp; Switch Access - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -182,7 +182,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Keyboard navigation (Switch Access)
+          Keyboard navigation &amp; Switch Access
         </li>
       </ol>
 </nav>
@@ -198,7 +198,7 @@
 </a><a href="/en/mobile/android/development/vocal-navigation/" class="nav-link dropdown-item">
   Vocal navigation
 </a><a href="/en/mobile/android/development/focus-navigation/" class="nav-link dropdown-item active" aria-current="page">
-  Keyboard navigation (Switch Access)
+  Keyboard navigation &amp; Switch Access
 </a><a href="/en/mobile/android/development/magnification/" class="nav-link dropdown-item">
   Magnification
 </a><a href="/en/mobile/android/development/form/" class="nav-link dropdown-item">
@@ -233,7 +233,7 @@
 </a>
           </li><li class="nav-item position-relative">
             <a href="/en/mobile/android/development/focus-navigation/" class="nav-link text-muted active" aria-current="page">
-  Keyboard navigation (Switch Access)
+  Keyboard navigation &amp; Switch Access
 </a>
           </li><li class="nav-item position-relative">
             <a href="/en/mobile/android/development/magnification/" class="nav-link text-muted">
@@ -250,12 +250,12 @@
           </div>
         
         <main id="main-content" class="col-md-6" role="main">
-          <h1>Keyboard navigation (Switch Access)</h1>
+          <h1>Keyboard navigation &amp; Switch Access</h1>
 <h2 id="access-to-interactive-elements">Access to interactive elements <a class="header-anchor" href="#access-to-interactive-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p><strong>Target:</strong> everyone and especially people with motor disabilities who use a keyboard to navigate.<br>
 <strong>When:</strong> during design and development.</p>
-<p>Navigation using Switch Access is very useful for people with motor or cognitive difficulties. This navigation makes it possible to move from one interactive element to the next (elements on which an action can be performed). This is done through the use of a Bluetooth keyboard connected to a smartphone.</p>
-<p>To manage keyboard navigation, there are 2 things to check:</p>
+<p>Navigation using Switch Access or with keyboard is very useful for people with motor or cognitive difficulties. This navigation makes it possible to move from one interactive element to the next (elements on which an action can be performed).</p>
+<p>To manage keyboard (and Switch Access) navigation, there are 2 things to check:</p>
 <ul>
 <li>Allow focus on interactive elements (focus navigation only concerns interactive elements). If, for example, your application has custom views that can be clicked on, you must make sure that these views are focusable by setting the <code>focusable</code> attribute to <code>true</code>.</li>
 <li>Manage the focus display: any interactive element can receive the focus, so the <code>state_focused</code> must be defined and allow to easily distinguish which element has the focus.</li>
@@ -263,10 +263,10 @@
 <p>Note: Android Pie (9, API 28), introduces a specific focus for screen reader to avoid edge effects between the screen reader focus (<code>screenReaderFocusable</code>) and the keyboard focus (<code>focusable</code>). Keyboard navigation is not sensitive to the <code>screenReaderFocusable</code>.</p>
 <p><strong>To be verified:</strong></p>
 <ul>
-<li>With the keyboard navigation, it is possible to visually determine which element has the focus.</li>
-<li>All the features are accessible with the keyboard navigation.</li>
-<li>All interactive elements are highlighted with the keyboard navigation.</li>
-<li>Only the interactive elements are highlighted with the keyboard navigation.</li>
+<li>With the keyboard (and Switch Access) navigation, it is possible to visually determine which element has the focus.</li>
+<li>All the features are accessible with the keyboard (and Switch Access) navigation.</li>
+<li>All interactive elements are highlighted with the keyboard (and Switch Access) navigation.</li>
+<li>Only the interactive elements are highlighted with the keyboard (and Switch Access) navigation.</li>
 </ul>
 <p><strong>Examples</strong>:<br>
 Example of a selector including the <code>state_focused</code> :</p>
@@ -306,13 +306,15 @@ Example of a selector including the <code>state_focused</code> :</p>
 <p><strong>Target:</strong> everyone and especially people with motor disabilities who use a keyboard to navigate.<br>
 <strong>When:</strong> during design and development.</p>
 <p><strong>Description:</strong></p>
-<p>Keyboard navigation, to be understandable and easy to use, must provide a coherent and understandable order of navigation. It is important to manage the focus order : through the options <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code> and <code>nextFocusLeft</code>, you can specify which view should take the focus according to the use of the <kbd>tab</kbd>, <kbd>down</kbd>, <kbd>up</kbd>, <kbd>right</kbd> and <kbd>left</kbd> arrows.</p>
+<p>Keyboard (and Switch Access) navigation, to be understandable and easy to use, must provide a coherent and understandable order of navigation. It is important to manage the focus order : through the options <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code> and <code>nextFocusLeft</code>, you can specify which view should take the focus according to the use of the <kbd>tab</kbd>, <kbd>down</kbd>, <kbd>up</kbd>, <kbd>right</kbd> and <kbd>left</kbd> arrows.</p>
 <p><strong>Note</strong>: <code>nextFocusDown</code>, <code>nextFocusUp</code>, <code>nextFocusRight</code>, <code>nextFocusLeft</code>, <code>focusable</code> and other focus management options are available directly in the <abbr>XML</abbr> or in the code through the corresponding methods.</p>
 <p>For more information on <a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#focus-nav">focus management on Android</a>.</p>
 <p><strong>To be verified:</strong></p>
 <ul>
-<li>The keyboard navigation order is logical and consistent.</li>
+<li>The keyboard (and Switch Access) navigation order is logical and consistent.</li>
 <li>Items are grouped together when they are linked (example: content within a clickable item in a list).</li>
+<li>It is possible to scroll in a drop-down list to access all the content</li>
+<li>You are never trapped in a part of the screen (what we call a keyboard trap)</li>
 </ul>
 <p><strong>Example</strong></p>
 <pre><code class="xml">&lt;EditText

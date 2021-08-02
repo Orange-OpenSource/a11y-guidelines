@@ -198,7 +198,7 @@
 </a><a href="/en/mobile/android/development/vocal-navigation/" class="nav-link dropdown-item active" aria-current="page">
   Vocal navigation
 </a><a href="/en/mobile/android/development/focus-navigation/" class="nav-link dropdown-item">
-  Keyboard navigation (Switch Access)
+  Keyboard navigation &amp; Switch Access
 </a><a href="/en/mobile/android/development/magnification/" class="nav-link dropdown-item">
   Magnification
 </a><a href="/en/mobile/android/development/form/" class="nav-link dropdown-item">
@@ -210,7 +210,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Table of content
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#vocalize-the-images" class="dropdown-item text-wrap">Vocalize the images</a><a href="#vocalize-all-significant-elements" class="dropdown-item text-wrap">Vocalize all significant elements</a><a href="#vocalize-the-state-of-the-elements" class="dropdown-item text-wrap">Vocalize the state of the elements</a><a href="#manage-the-vocalization-order" class="dropdown-item text-wrap">Manage the vocalization order</a><a href="#vocalize-content-change" class="dropdown-item text-wrap">Vocalize content change</a><a href="#do-not-vocalize-the-decorative-and-hidden-elements" class="dropdown-item text-wrap">Do not vocalize the decorative and hidden elements.</a><a href="#group-the-elements" class="dropdown-item text-wrap">Group the elements</a><a href="#enable-header-navigation" class="dropdown-item text-wrap">Enable header navigation</a><a href="#hide-elements-from-the-accessibility-api" class="dropdown-item text-wrap">Hide elements from the accessibility API</a><a href="#detect-if-talkback-is-enabled" class="dropdown-item text-wrap">Detect if TalkBack is enabled</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#vocalize-the-images" class="dropdown-item text-wrap">Vocalize the images</a><a href="#vocalize-all-significant-elements" class="dropdown-item text-wrap">Vocalize all significant elements</a><a href="#vocalize-the-state-of-the-elements" class="dropdown-item text-wrap">Vocalize the state of the elements</a><a href="#write-good-text-alternatives" class="dropdown-item text-wrap">Write good text alternatives</a><a href="#manage-the-vocalization-order" class="dropdown-item text-wrap">Manage the vocalization order</a><a href="#vocalize-content-change" class="dropdown-item text-wrap">Vocalize content change</a><a href="#do-not-vocalize-the-decorative-and-hidden-elements" class="dropdown-item text-wrap">Do not vocalize the decorative and hidden elements.</a><a href="#group-the-elements" class="dropdown-item text-wrap">Group the elements</a><a href="#enable-header-navigation" class="dropdown-item text-wrap">Enable header navigation</a><a href="#hide-elements-from-the-accessibility-api" class="dropdown-item text-wrap">Hide elements from the accessibility API</a><a href="#detect-if-talkback-is-enabled" class="dropdown-item text-wrap">Detect if TalkBack is enabled</a></div>
     </nav>
         
       </div>
@@ -233,7 +233,7 @@
 </a>
           </li><li class="nav-item position-relative">
             <a href="/en/mobile/android/development/focus-navigation/" class="nav-link text-muted">
-  Keyboard navigation (Switch Access)
+  Keyboard navigation &amp; Switch Access
 </a>
           </li><li class="nav-item position-relative">
             <a href="/en/mobile/android/development/magnification/" class="nav-link text-muted">
@@ -411,6 +411,15 @@ It is necessary to indicate the state and the nature of the tabs (not internatio
 <p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a></li>
+</ul>
+<p><br/><br/></p>
+<h2 id="write-good-text-alternatives">Write good text alternatives <a class="header-anchor" href="#write-good-text-alternatives" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Description:</strong><br>
+Writing good text alternatives is essential to make it easier for screen reader users to understand. Writing a good alternative depends on what you want to describe.</p>
+<ul>
+<li>Icons: Icons are frequently used to represent a button or to display a status. In the case of a button, it is better to use a verb to write the text alternative. For example, a Favorite button represented by a heart could be described as &quot;Add movie to favorite&quot; rather than &quot;Heart&quot; or &quot;Favorite&quot;. In the case of an icon representing a state, the state that is represented must be described. For example, if we have an icon representing a microphone crossed out, the textual alternative could be &quot;Muted&quot;.</li>
+<li>Texts: texts are generally very well managed natively by Android, the text displayed will be the one that will be vocalized, so it is not necessary to add a textual alternative. On the other hand, it is sometimes necessary to be careful, if you use symbols or abbreviations. For example, for the text &quot;02/05/92&quot;, a textual alternative must be added to vocalize &quot;2 May 1992&quot;. (it is also possible in this case to use a <code>TtsSpan</code>).</li>
+<li>Images: the case of images is more complex and is detailed <a href="https://a11y-guidelines.orange.com/en/mobile/android/development/vocal-navigation/#vocalize-the-images">in this chapter</a></li>
 </ul>
 <p><br/><br/></p>
 <h2 id="manage-the-vocalization-order">Manage the vocalization order <a class="header-anchor" href="#manage-the-vocalization-order" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
@@ -634,6 +643,8 @@ val isAccessibilityEnabled = am.isEnabled<br>
             <a href="#vocalize-all-significant-elements" class="nav-link text-muted bg-200">Vocalize all significant elements</a>
           </li><li class="nav-item position-relative">
             <a href="#vocalize-the-state-of-the-elements" class="nav-link text-muted bg-200">Vocalize the state of the elements</a>
+          </li><li class="nav-item position-relative">
+            <a href="#write-good-text-alternatives" class="nav-link text-muted bg-200">Write good text alternatives</a>
           </li><li class="nav-item position-relative">
             <a href="#manage-the-vocalization-order" class="nav-link text-muted bg-200">Manage the vocalization order</a>
           </li><li class="nav-item position-relative">

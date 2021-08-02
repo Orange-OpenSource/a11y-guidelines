@@ -198,7 +198,7 @@
 </a><a href="/fr/mobile/android/developpement/navigation-vocale/" class="nav-link dropdown-item">
   Navigation vocale
 </a><a href="/fr/mobile/android/developpement/navigation-focus/" class="nav-link dropdown-item">
-  Navigation clavier (Switch Access)
+  Navigation clavier &amp; Switch Access
 </a><a href="/fr/mobile/android/developpement/agrandissement/" class="nav-link dropdown-item">
   Agrandissement
 </a><a href="/fr/mobile/android/developpement/formulaire/" class="nav-link dropdown-item active" aria-current="page">
@@ -233,7 +233,7 @@
 </a>
           </li><li class="nav-item position-relative">
             <a href="/fr/mobile/android/developpement/navigation-focus/" class="nav-link text-muted">
-  Navigation clavier (Switch Access)
+  Navigation clavier &amp; Switch Access
 </a>
           </li><li class="nav-item position-relative">
             <a href="/fr/mobile/android/developpement/agrandissement/" class="nav-link text-muted">
@@ -259,7 +259,7 @@
 <p>Il existe 2 grandes techniques pour réaliser cette liaison :</p>
 <ul>
 <li><code>labelFor</code> : permet de spécifier à une vue qu’elle est le label d’une autre vue. Cette méthode prend en paramètre l’<code>id</code> de la vue que l’on labellise. On peut utiliser cette méthode avec quasiment tout type de champ de saisie. Utilisable depuis le <abbr>xml</abbr> <code>android:labelFor</code> ou le code <code>setLabelFor</code>.</li>
-<li><code>hint</code> : permet d’ajouter un texte d’exemple quand le champ de texte est vide. Cette méthode ne marche que pour les <code>TextView</code>. Prend en paramètre l’<code>id</code> d’une chaîne de caractère. Utilisable depuis le <abbr>xml</abbr> <code>android:hint</code> ou le code <code>setHint</code>.</li>
+<li><code>TextInputLayout</code> : permet de lier directement le champ de texte avec son label au sein d'un même layout, ce qui aura pour effet de vocaliser correctement le champ tout en le rendant plus jolie.</li>
 </ul>
 <p>De plus, il est essentiel d'indiquer à l'utilisateur, pour une bonne compréhension de l'écran de saisie, les différents champs obligatoires, le format attendu, ou encore les erreurs commises sur de potentiels champs.</p>
 <p><strong>À vérifier :</strong></p>
@@ -269,10 +269,7 @@
 <li>Le format de données des champs &quot;complexe&quot; est indiqué à l'utilisateur</li>
 </ul>
 <p><strong>Exemple</strong></p>
-<pre><code class="xml">&lt;EditText
-   android:id="@+id/addressLine2"
-   android:hint="@string/aptSuiteBuilding" ... /&gt;
-
+<pre><code class="xml">
 &lt;TextView
    android:id="@+id/usernameLabel" ...
    android:text="@string/username"
@@ -280,6 +277,15 @@
 
 &lt;EditText
    android:id="@+id/usernameEntry" ... /&gt;
+</code></pre>
+<pre><code class="xml">&lt;com.google.android.material.textfield.TextInputLayout
+   android:id="@+id/addressLine"
+   android:hint="@string/adress" ... &gt;
+
+&lt;com.google.android.material.textfield.TextInputEditText
+   ... /&gt;
+
+&lt;/com.google.android.material.textfield.TextInputLayout&gt;
 </code></pre>
 <p><strong>Référence <abbr>WCAG</abbr> :</strong></p>
 <ul>

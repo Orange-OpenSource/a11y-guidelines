@@ -198,7 +198,7 @@
 </a><a href="/fr/mobile/android/developpement/navigation-vocale/" class="nav-link dropdown-item">
   Navigation vocale
 </a><a href="/fr/mobile/android/developpement/navigation-focus/" class="nav-link dropdown-item">
-  Navigation clavier (Switch Access)
+  Navigation clavier &amp; Switch Access
 </a><a href="/fr/mobile/android/developpement/agrandissement/" class="nav-link dropdown-item">
   Agrandissement
 </a><a href="/fr/mobile/android/developpement/formulaire/" class="nav-link dropdown-item">
@@ -210,7 +210,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Sommaire
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#avoir-des-zones-de-clic-suffisamment-grandes" class="dropdown-item text-wrap">Avoir des zones de clic suffisamment grandes</a><a href="#proposer-des-textes-lisibles" class="dropdown-item text-wrap">Proposer des textes lisibles</a><a href="#rendre-adaptable-les-ui-avec-limite-de-temps" class="dropdown-item text-wrap">Rendre adaptable les UI avec limite de temps</a><a href="#evenements-daccessibilite-custom-views" class="dropdown-item text-wrap">Événements d’accessibilité &amp; custom views</a><a href="#webview" class="dropdown-item text-wrap">WebView</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#avoir-des-zones-de-clic-suffisamment-grandes" class="dropdown-item text-wrap">Avoir des zones de clic suffisamment grandes</a><a href="#proposer-des-textes-lisibles" class="dropdown-item text-wrap">Proposer des textes lisibles</a><a href="#rendre-adaptable-les-limites-de-temps-qui-provoquent-un-changement-de-contexte" class="dropdown-item text-wrap">Rendre adaptable les limites de temps qui provoquent un changement de contexte</a><a href="#evenements-daccessibilite-custom-views" class="dropdown-item text-wrap">Événements d’accessibilité &amp; custom views</a><a href="#webview" class="dropdown-item text-wrap">WebView</a></div>
     </nav>
         
       </div>
@@ -233,7 +233,7 @@
 </a>
           </li><li class="nav-item position-relative">
             <a href="/fr/mobile/android/developpement/navigation-focus/" class="nav-link text-muted">
-  Navigation clavier (Switch Access)
+  Navigation clavier &amp; Switch Access
 </a>
           </li><li class="nav-item position-relative">
             <a href="/fr/mobile/android/developpement/agrandissement/" class="nav-link text-muted">
@@ -256,6 +256,11 @@
 <strong>Quand :</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description :</strong></p>
 <p>Une taille insuffisante pour la zone d’action d’un composant peut empêcher certains utilisateurs de profiter pleinement de l’application. Cela peut engendrer des frustrations qui peuvent conduire à la désinstallation de l’application. Chaque élément cliquable de l’application doit donner à l’utilisateur une taille suffisante pour sa zone d’action.</p>
+<p>Certaines exceptions sont cependant à noter :</p>
+<ul>
+<li>Si l'action proposée a un équivalent dans l'écran qui respecte la taille requise</li>
+<li>Si l'élément cliquable fait partie d'une zone ou d'un bloc de texte (ce qui est fréquemment le cas des liens notamment).</li>
+</ul>
 <p><strong>À vérifier :</strong></p>
 <ul>
 <li>La zone de clic a une taille d'au minimum 48 dp</li>
@@ -337,16 +342,17 @@
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a></li>
 </ul>
 <p><br/><br/></p>
-<h2 id="rendre-adaptable-les-ui-avec-limite-de-temps">Rendre adaptable les UI avec limite de temps <a class="header-anchor" href="#rendre-adaptable-les-ui-avec-limite-de-temps" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="rendre-adaptable-les-limites-de-temps-qui-provoquent-un-changement-de-contexte">Rendre adaptable les limites de temps qui provoquent un changement de contexte <a class="header-anchor" href="#rendre-adaptable-les-limites-de-temps-qui-provoquent-un-changement-de-contexte" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p><strong>Cible :</strong> tout le monde et en particulier les personnes ayant des déficiences visuelles et/ou motrices.<br>
 <strong>Quand :</strong> dès la phase de conception et lors du développement.</p>
 <p><strong>Description :</strong></p>
-<p>Sur certaines applications, il arrive que l’UI change après un certain délai. C'est le cas par exemple pour les lecteurs vidéo : il est fréquent que les boutons de contrôles associés à la vidéo disparaissent après une dizaine de secondes sans interaction.</p>
+<p>Sur certaines applications, il arrive que le contexte change après un certain délai. C'est le cas par exemple pour les lecteurs vidéo : il est fréquent que les boutons de contrôles associés à la vidéo disparaissent après une dizaine de secondes sans interaction.</p>
 <p>Cette évolution automatique de l'interface pose cependant un problème pour l'accessibilité, une personne ayant peut-être besoin de plus de temps pour interagir avec les éléments. Ce délai doit donc pouvoir être adapté selon le besoin de chaque utilisateur.</p>
 <p>Une option d'accessibilité nommée <strong>Time to take action</strong> existe depuis Android 10, et permet de définir son propre timeout depuis les paramètres d'accessibilité. Il est ainsi possible d'exploiter cette option par le biais de la fonction <code>getRecommendedTimeoutMillis()</code>. Cette méthode prend en charge les délais d'expiration définis par l'utilisateur pour les éléments d'interface utilisateur interactifs et non interactifs. La valeur de retour est influencée à la fois par les préférences de l'utilisateur (Time to take action) et les API du service d'accessibilité.</p>
+<p>Cependant, tous les téléphones n'utilisant pas nécessairement une version d'Android récente, il est recommandé de proposer directement au sein de l'application un paramétrage de ce délai.</p>
 <p><strong>À vérifier :</strong></p>
 <ul>
-<li>Une UI avec limite de temps a son délai paramétrable</li>
+<li>Une limite de temps a son délai paramétrable</li>
 </ul>
 <p><strong>Référence <abbr>WCAG</abbr> :</strong></p>
 <ul>
@@ -392,7 +398,7 @@ Dans ces conditions, la page affichée à travers la <code>WebView</code>  réag
           </li><li class="nav-item position-relative">
             <a href="#proposer-des-textes-lisibles" class="nav-link text-muted bg-200">Proposer des textes lisibles</a>
           </li><li class="nav-item position-relative">
-            <a href="#rendre-adaptable-les-ui-avec-limite-de-temps" class="nav-link text-muted bg-200">Rendre adaptable les UI avec limite de temps</a>
+            <a href="#rendre-adaptable-les-limites-de-temps-qui-provoquent-un-changement-de-contexte" class="nav-link text-muted bg-200">Rendre adaptable les limites de temps qui provoquent un changement de contexte</a>
           </li><li class="nav-item position-relative">
             <a href="#evenements-daccessibilite-custom-views" class="nav-link text-muted bg-200">Événements d’accessibilité &amp; custom views</a>
           </li><li class="nav-item position-relative">

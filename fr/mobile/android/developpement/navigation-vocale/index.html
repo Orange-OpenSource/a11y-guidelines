@@ -198,7 +198,7 @@
 </a><a href="/fr/mobile/android/developpement/navigation-vocale/" class="nav-link dropdown-item active" aria-current="page">
   Navigation vocale
 </a><a href="/fr/mobile/android/developpement/navigation-focus/" class="nav-link dropdown-item">
-  Navigation clavier (Switch Access)
+  Navigation clavier &amp; Switch Access
 </a><a href="/fr/mobile/android/developpement/agrandissement/" class="nav-link dropdown-item">
   Agrandissement
 </a><a href="/fr/mobile/android/developpement/formulaire/" class="nav-link dropdown-item">
@@ -210,7 +210,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Sommaire
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#vocaliser-les-images" class="dropdown-item text-wrap">Vocaliser les images</a><a href="#vocaliser-tous-les-elements-signifiants" class="dropdown-item text-wrap">Vocaliser tous les éléments signifiants</a><a href="#vocaliser-letat-des-elements" class="dropdown-item text-wrap">Vocaliser l&#39;état des éléments</a><a href="#gerer-lordre-de-lecture-avec-la-navigation-vocale" class="dropdown-item text-wrap">Gérer l&#39;ordre de lecture avec la navigation vocale</a><a href="#vocaliser-le-changement-de-contenu" class="dropdown-item text-wrap">Vocaliser le changement de contenu</a><a href="#ne-pas-vocaliser-les-elements-decoratifs-et-caches" class="dropdown-item text-wrap">Ne pas vocaliser les éléments décoratifs et cachés</a><a href="#regrouper-les-elements" class="dropdown-item text-wrap">Regrouper les éléments</a><a href="#gerer-la-navigation-par-entetes" class="dropdown-item text-wrap">Gérer la navigation par entêtes</a><a href="#masquer-des-elements-a-laccessibilite" class="dropdown-item text-wrap">Masquer des éléments à l’accessibilité</a><a href="#detecter-si-talkback-est-active" class="dropdown-item text-wrap">Détecter si TalkBack est activé</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#vocaliser-les-images" class="dropdown-item text-wrap">Vocaliser les images</a><a href="#vocaliser-tous-les-elements-signifiants" class="dropdown-item text-wrap">Vocaliser tous les éléments signifiants</a><a href="#rediger-de-bonnes-alternatives-textuelles" class="dropdown-item text-wrap">Rédiger de bonnes alternatives textuelles</a><a href="#vocaliser-letat-des-elements" class="dropdown-item text-wrap">Vocaliser l&#39;état des éléments</a><a href="#gerer-lordre-de-lecture-avec-la-navigation-vocale" class="dropdown-item text-wrap">Gérer l&#39;ordre de lecture avec la navigation vocale</a><a href="#vocaliser-le-changement-de-contenu" class="dropdown-item text-wrap">Vocaliser le changement de contenu</a><a href="#ne-pas-vocaliser-les-elements-decoratifs-et-caches" class="dropdown-item text-wrap">Ne pas vocaliser les éléments décoratifs et cachés</a><a href="#regrouper-les-elements" class="dropdown-item text-wrap">Regrouper les éléments</a><a href="#gerer-la-navigation-par-entetes" class="dropdown-item text-wrap">Gérer la navigation par entêtes</a><a href="#masquer-des-elements-a-laccessibilite" class="dropdown-item text-wrap">Masquer des éléments à l’accessibilité</a><a href="#detecter-si-talkback-est-active" class="dropdown-item text-wrap">Détecter si TalkBack est activé</a></div>
     </nav>
         
       </div>
@@ -233,7 +233,7 @@
 </a>
           </li><li class="nav-item position-relative">
             <a href="/fr/mobile/android/developpement/navigation-focus/" class="nav-link text-muted">
-  Navigation clavier (Switch Access)
+  Navigation clavier &amp; Switch Access
 </a>
           </li><li class="nav-item position-relative">
             <a href="/fr/mobile/android/developpement/agrandissement/" class="nav-link text-muted">
@@ -308,6 +308,15 @@ infobulleTextView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_N
 <p><strong>Référence <abbr>WCAG</abbr> :</strong></p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a></li>
+</ul>
+<p><br/><br/></p>
+<h2 id="rediger-de-bonnes-alternatives-textuelles">Rédiger de bonnes alternatives textuelles <a class="header-anchor" href="#rediger-de-bonnes-alternatives-textuelles" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Description :</strong><br>
+Il est essentiel d'écrire de bonnes alternatives textuelles afin de faciliter la compréhension des utilisateurs de lecteurs d'écrans. La rédaction d'une bonne alternative dépend de ce qu'on souhaite décrire.</p>
+<ul>
+<li>Icônes : les icônes sont utilisées fréquemment pour représenter un bouton ou pour afficher un état. Dans le cas d'un bouton, il est préférable d'utiliser un verbe pour rédiger l'alternative textuelle. Par exemple, un bouton Favori représenté par un coeur pourrait être décrit par &quot;Ajouter le film au favori&quot; plutôt que par &quot;Coeur&quot; ou &quot;Favori&quot;. Dans le cas d'une icône représentant un état, il faut cette fois décrire l'état qui est représenté. Par exemple, si on a une icône représentant un micro barré d'une croix, l'alternative textuelle pourrait être &quot;Mutée&quot;.</li>
+<li>Textes : les textes sont en général très bien gérés nativement par Android, le texte affiché sera celui qui sera vocalisé, il n'est donc pas nécessaire d'ajouter d'alternative textuelle. En revanche, il faut parfois faire attention, si on utilise des symboles ou des abréviations. Par exemple, pour le texte &quot;02/05/92&quot;, on doit ajouter une alternative textuelle pour vocaliser &quot;2 mai 1992&quot; (il est aussi possible dans ce cas précis d'utiliser un <code>TtsSpan</code>).</li>
+<li>Images : le cas des images qui est plus complexe est détaillé <a href="https://a11y-guidelines.orange.com/fr/mobile/android/developpement/navigation-vocale/#vocaliser-les-images">dans ce chapitre</a></li>
 </ul>
 <p><br/><br/></p>
 <h2 id="vocaliser-letat-des-elements">Vocaliser l'état des éléments <a class="header-anchor" href="#vocaliser-letat-des-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
@@ -630,6 +639,8 @@ val isAccessibilityEnabled = am.isEnabled<br>
             <a href="#vocaliser-les-images" class="nav-link text-muted bg-200">Vocaliser les images</a>
           </li><li class="nav-item position-relative">
             <a href="#vocaliser-tous-les-elements-signifiants" class="nav-link text-muted bg-200">Vocaliser tous les éléments signifiants</a>
+          </li><li class="nav-item position-relative">
+            <a href="#rediger-de-bonnes-alternatives-textuelles" class="nav-link text-muted bg-200">Rédiger de bonnes alternatives textuelles</a>
           </li><li class="nav-item position-relative">
             <a href="#vocaliser-letat-des-elements" class="nav-link text-muted bg-200">Vocaliser l&#39;état des éléments</a>
           </li><li class="nav-item position-relative">

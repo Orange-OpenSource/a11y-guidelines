@@ -198,7 +198,7 @@
 </a><a href="/en/mobile/android/design/vocal-navigation/" class="nav-link dropdown-item">
   Vocal navigation
 </a><a href="/en/mobile/android/design/focus-navigation/" class="nav-link dropdown-item">
-  Keyboard navigation (Switch Access)
+  Keyboard navigation &amp; Switch Access
 </a><a href="/en/mobile/android/design/headers/" class="nav-link dropdown-item">
   Headers
 </a><a href="/en/mobile/android/design/colors-and-contrasts/" class="nav-link dropdown-item">
@@ -216,7 +216,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Table of content
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#have-sufficiently-large-click-areas" class="dropdown-item text-wrap">Have sufficiently large click areas</a><a href="#have-an-application-that-can-be-used-in-any-orientation" class="dropdown-item text-wrap">Have an application that can be used in any orientation</a><a href="#propose-an-alternative-to-gestural-actions" class="dropdown-item text-wrap">Propose an alternative to gestural actions</a><a href="#have-readable-texts" class="dropdown-item text-wrap">Have readable texts</a><a href="#use-native-components" class="dropdown-item text-wrap">Use native components</a><a href="#make-ui-with-timeout-adaptable" class="dropdown-item text-wrap">Make UI with timeout adaptable</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#have-sufficiently-large-click-areas" class="dropdown-item text-wrap">Have sufficiently large click areas</a><a href="#have-an-application-that-can-be-used-in-any-orientation" class="dropdown-item text-wrap">Have an application that can be used in any orientation</a><a href="#propose-an-alternative-to-gestural-actions" class="dropdown-item text-wrap">Propose an alternative to gestural actions</a><a href="#have-readable-texts" class="dropdown-item text-wrap">Have readable texts</a><a href="#use-native-components" class="dropdown-item text-wrap">Use native components</a><a href="#make-adaptable-the-time-limits-causing-a-change-of-context" class="dropdown-item text-wrap">Make adaptable the time limits causing a change of context</a></div>
     </nav>
         
       </div>
@@ -239,7 +239,7 @@
 </a>
           </li><li class="nav-item position-relative">
             <a href="/en/mobile/android/design/focus-navigation/" class="nav-link text-muted">
-  Keyboard navigation (Switch Access)
+  Keyboard navigation &amp; Switch Access
 </a>
           </li><li class="nav-item position-relative">
             <a href="/en/mobile/android/design/headers/" class="nav-link text-muted">
@@ -274,6 +274,11 @@
 <strong>When :</strong> from the design phase and during development.</p>
 <p><strong>Description :</strong></p>
 <p>Insufficient size for a clickable element can make it difficult to interact with the application. Each clickable element of the application must be of sufficient size.</p>
+<p>However, there are some exceptions:</p>
+<ul>
+<li>If the proposed action has an equivalent in the screen that respects the required size</li>
+<li>If the clickable element is part of a zone or a text block (which is often the case for links).</li>
+</ul>
 <p><strong>To be verified :</strong></p>
 <ul>
 <li>The click zone has a minimum size of 48 dp.</li>
@@ -356,16 +361,17 @@ Content access of an application should not depend on the screen orientation (po
 <p>Native components integrate accessibility (most of the time). Navigation in a standard interface is more comfortable since the behaviors of the different elements are usual.</p>
 <p>Make maximum use of native components: if no standard component can meet the need, create a dedicated component based on a standard component while maintaining navigation consistency and accessibility.</p>
 <p><br/><br/></p>
-<h2 id="make-ui-with-timeout-adaptable">Make UI with timeout adaptable <a class="header-anchor" href="#make-ui-with-timeout-adaptable" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="make-adaptable-the-time-limits-causing-a-change-of-context">Make adaptable the time limits causing a change of context <a class="header-anchor" href="#make-adaptable-the-time-limits-causing-a-change-of-context" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p><strong>Target :</strong> everyone and in particular people with visual and/or motor impairments.<br>
 <strong>When :</strong> from the design phase and during development.</p>
 <p><strong>Description :</strong></p>
-<p>In some applications, the UI may change after a timeout. For example, with video players:  control buttons associated with the video disappear after about ten seconds without interaction.</p>
+<p>In some applications, the context may change after a timeout. For example, with video players:  control buttons associated with the video disappear after about ten seconds without interaction.</p>
 <p>This automatic UI update is an issue for accessibility, cause a user could need more time to interact with the elements. This timeout must be adaptable according to the needs of each user.</p>
 <p>An accessibility option named &quot;Time to take action&quot; exists since Android 10, and allows to define its own timeout. By calling this option from the application, it is possible to adapt its interfaces with timeout to the user.</p>
+<p>However, not all phones use a recent version of Android, it is recommended to propose directly within the application a setting of this delay.</p>
 <p><strong>To be verified :</strong></p>
 <ul>
-<li>A UI with a timeout has a configurable delay.</li>
+<li>A timeout has a configurable delay.</li>
 </ul>
 <p><strong>Reference <abbr>WCAG</abbr> :</strong></p>
 <ul>
@@ -389,7 +395,7 @@ Content access of an application should not depend on the screen orientation (po
           </li><li class="nav-item position-relative">
             <a href="#use-native-components" class="nav-link text-muted bg-200">Use native components</a>
           </li><li class="nav-item position-relative">
-            <a href="#make-ui-with-timeout-adaptable" class="nav-link text-muted bg-200">Make UI with timeout adaptable</a>
+            <a href="#make-adaptable-the-time-limits-causing-a-change-of-context" class="nav-link text-muted bg-200">Make adaptable the time limits causing a change of context</a>
           </li></ul>
     </nav>
             </div>
