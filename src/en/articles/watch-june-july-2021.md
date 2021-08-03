@@ -5,7 +5,6 @@ date: "2021-08-03"
 tags:
   - veille
 ---
-
 # Digital accessibility watch June– July
 
 The holidays are here, but still so many articles written ...
@@ -21,7 +20,7 @@ And finally, an article on what we can do on a daily basis to be more inclusive 
 
 ## Accessibility in laws, standards and recommendations
 
-- A Luxembourg's RGAA like for mobile apps, in French: https://accessibilite.public.lu/fr/raam1/
+- A Luxembourg's RGAA like for mobile apps, sin French: https://accessibilite.public.lu/fr/raam1/
 
 - Wcag 2.2 explanation of the new criteria in French: https://access42.net/wcag-2-2-explication-des-nouveaux-criteres-proposes
 

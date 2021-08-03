@@ -13,8 +13,6 @@ Un édito fouillis de vacances (rire):D
  Sur les surcouches d'accessibilité, toujours et encore, en anglais :
 - https://toddl.dev/posts/accessibe-is-not-your-friend/ 
 - https://ericwbailey.design/writing/accessibe-and-the-false-david-vs-goliath-narrative/ 
-
-
 En France, l'assignation de Koena par Facil'iti, il faut soutenir Koena dans cette démarche : https://koena.net/assignation-de-koena-par-faciliti/ 
 Une réflexion au coeur de notre métier d'expert accessibilité, différentes opinion sur quel est ce métier, passionnant chez notre collègue le fameux Stéphane D. : https://nota-bene.org/Qu-est-ce-qu-une-experte-un-expert-accessibilite 
 Et enfin, un article sur ce qu'on peut faire au quotidien pour être plus inclusif dans nos pratiques du numérique : https://www.a11yproject.com/posts/2021-06-14-everyday_accessibility/ 
