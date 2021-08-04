@@ -4,7 +4,8 @@ abstract: "#a11y anthology, June-July 2021"
 date: "2021-08-03"
 tags:
   - veille
---
+---
+
 # Digital accessibility watch June– July
 
 The holidays are here, but still so many articles written ...

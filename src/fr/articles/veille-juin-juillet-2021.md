@@ -1,6 +1,6 @@
 ---
 title: "Veille #A11y Juin-Juillet 2021"
-abstract: "Florilèges de ressources en #a11y, Juin-Juilelt 2021"
+abstract: "Florilèges de ressources en #a11y, Juin-Juillet 2021"
 date: "2021-08-03"
 tags:
   - veille
