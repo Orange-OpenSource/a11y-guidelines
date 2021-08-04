@@ -13,13 +13,15 @@ A holiday messy editorial (laughs) :D
  On accessibility overlays, again and again:
 - https://toddl.dev/posts/accessibe-is-not-your-friend/
 - https://ericwbailey.design/writing/accessibe-and-the-false-david-vs-goliath-narrative/
+
+
 In France, the assignment of Koena by Facil'iti, Koena must be supported in this process, in French: https://koena.net/assignation-de-koena-par-faciliti/
 A reflection at the heart of our profession of accessibility expert, different opinions on what this profession is, fascinating in our colleague the famous Stéphane D. blog, in French: https://nota-bene.org/Qu-est-ce-qu-une-experte-an-expert-accessibility
 And finally, an article on what we can do on a daily basis to be more inclusive in our digital practices, in French: https://www.a11yproject.com/posts/2021-06-14-everyday_accessibility/
 
 ## Accessibility in laws, standards and recommendations
 
-- A Luxembourg's RGAA like for mobile apps, sin French: https://accessibilite.public.lu/fr/raam1/
+- A Luxembourg's RGAA like for mobile apps, in French: https://accessibilite.public.lu/fr/raam1/
 
 - Wcag 2.2 explanation of the new criteria in French: https://access42.net/wcag-2-2-explication-des-nouveaux-criteres-proposes
 
