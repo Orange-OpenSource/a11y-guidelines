@@ -14,6 +14,7 @@ A holiday messy editorial (laughs) :D
 - https://toddl.dev/posts/accessibe-is-not-your-friend/
 - https://ericwbailey.design/writing/accessibe-and-the-false-david-vs-goliath-narrative/
 
+
 In France, the assignment of Koena by Facil'iti, Koena must be supported in this process, in French: https://koena.net/assignation-de-koena-par-faciliti/
 A reflection at the heart of our profession of accessibility expert, different opinions on what this profession is, fascinating in our colleague the famous Stéphane D. blog, in French: https://nota-bene.org/Qu-est-ce-qu-une-experte-an-expert-accessibility
 And finally, an article on what we can do on a daily basis to be more inclusive in our digital practices, in French: https://www.a11yproject.com/posts/2021-06-14-everyday_accessibility/
