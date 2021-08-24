@@ -14,6 +14,10 @@ abstract: "Insufficient size for a clickable element can make it difficult to in
 
 Insufficient size for a clickable element can make it difficult to interact with the application. Each clickable element of the application must be of sufficient size.
 
+However, there are some exceptions: 
+- If the proposed action has an equivalent in the screen that respects the required size
+- If the clickable element is part of a zone or a text block (which is often the case for links).
+
 **To be verified:**
 
 - The click zone has a minimum size of 48 dp.
@@ -116,14 +120,14 @@ Android natively offers the Roboto font which has 16 variants, including many sa
 
 <br/><br/>
 
-## Make UI with timeout adaptable 
+## Make adaptable the time limits that cause a change of context 
 
 **Target:** everyone and in particular people with visual and/or motor impairments.
 **When:** from the design phase and during development.
 
 **Description:**
 
-In some applications, the UI may change after a timeout. For example, with video players:  control buttons associated with the video disappear after about ten seconds without interaction. 
+In some applications, the context may change after a timeout. For example, with video players:  control buttons associated with the video disappear after about ten seconds without interaction. 
 
 This automatic UI update is an issue for accessibility, because a user may need more time to interact with the elements. This timeout must be adaptable according to the needs of each user. 
 
@@ -131,9 +135,11 @@ An accessibility option named "Time to take action" was introduced with Android 
 
 It is possible to exploit this option through the `getRecommendedTimeoutMillis()` function. This method supports user-defined timeouts for interactive and non-interactive user interface elements. The return value is influenced by both user preferences (Time to take action) and accessibility service APIs.
 
+However, as not all phones use a recent version of Android, it is recommended to propose directly within the application a setting of this delay.
+
 **To be verified:**
 
-- A UI with a timeout has a configurable delay.
+- A timeout has a configurable delay.
 
 **Reference <abbr>WCAG</abbr>:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#timing-adjustable">2.2.1 Timing Adjustable</a>
