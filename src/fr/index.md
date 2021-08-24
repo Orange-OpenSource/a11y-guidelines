@@ -1,5 +1,6 @@
 ---
 title: "Accueil"
+abstract: "Recommandations, méthodes, ressources et outils proposés par le centre de compétences groupe d'Orange sur l'accessibilité numérique"
 layout: "templates/home"
 cardNavigationTitle: "Nos recommandations"
 ---
