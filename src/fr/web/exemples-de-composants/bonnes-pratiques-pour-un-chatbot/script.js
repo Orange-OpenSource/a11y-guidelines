@@ -17,16 +17,19 @@ document.querySelector("#chatbot form").onsubmit = function(e) {
 document.getElementById("chatbot-close").onclick = function() {
 	document.getElementById("chatbot-window").style.display = "none";
 	document.getElementById("btnChatbot").classList.remove("sr-only");
+	document.getElementById("chat-container").setAttribute("aria-live", "off");
 };
 
 document.getElementById("chatbot-hide").onclick = function() {
 	document.getElementById("chatbot-window").classList.toggle("chatbot-hidden");
 	document.getElementById("chatbot-show").focus();
+	document.getElementById("chat-container").setAttribute("aria-live", "off");
 };
 
 document.getElementById("chatbot-show").onclick = function() {
 	document.getElementById("chatbot-window").classList.toggle("chatbot-hidden");
 	document.getElementById("chatbot-hide").focus();
+	document.getElementById("chat-container").setAttribute("aria-live", "polite");
 };
 
 
@@ -46,6 +49,7 @@ document.getElementById("btnChoice").onclick = function() {
 	document.getElementById("chatbot-window").style.display = "block";
 	document.getElementById("btnChatbot").classList.add("sr-only");
 	document.getElementById("chatbot-window").classList.remove = "chatbot-hidden";
+	document.getElementById("chat-container").setAttribute("aria-live", "polite");
 	
 	window.setTimeout(function () {
         push("moi", "Et si on parlait accessibilité ?");        
