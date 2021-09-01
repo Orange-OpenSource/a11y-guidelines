@@ -1,6 +1,6 @@
 ﻿---
 title: "Entêtes"
-abstract: "Avoir un titre d'écran pertinent et unique"
+abstract: "Titre d'écran, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
 # Entêtes

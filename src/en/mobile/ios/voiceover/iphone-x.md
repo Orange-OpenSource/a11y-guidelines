@@ -1,11 +1,11 @@
 ---
 title: "iPhoneX basic gestures"
-abstract: "This page describes the iPhoneX common gestures"
+abstract: "The iPhoneX common gestures description"
 ---
 
 # iPhoneX basic gestures
 
-This page describes the iPhoneX common gestures thanks to textual explanations and illustrations so as to easily understand the movements to be done.
+This page describes the iPhoneX common gestures with textual explanations and illustrations to easily understand the movements to be done.
 <br>Thereafter, **illustrations with a home button device** are also included to see possible differences.
 
 - [Go to Home Screen.](#BackHome)

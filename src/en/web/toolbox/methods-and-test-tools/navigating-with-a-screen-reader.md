@@ -1,6 +1,6 @@
 ---
 title: "Navigating with a screen reader"
-abstract: "A screen reader is a voice synthesis software used by the visually impaired and the blind"
+abstract: "Screen reader how to test"
 ---
 
 # Navigating with a screen reader

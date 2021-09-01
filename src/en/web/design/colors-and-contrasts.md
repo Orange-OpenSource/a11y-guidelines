@@ -1,6 +1,6 @@
 ---
 title: "Colors and contrasts"
-abstract: "Ensure that the colors used are not a problem for the user"
+abstract: "Colors and contrast, web accessibility design recommandations"
 ---
 
 # Colors and contrasts

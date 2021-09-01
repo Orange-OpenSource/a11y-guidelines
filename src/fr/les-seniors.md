@@ -1,6 +1,6 @@
 ---
 title: "Les seniors"
-abstract: "Un sénior est une personne plus ou moins âgée faisant partie d’une catégorie de personnes dont la définition varie selon le contexte"
+abstract: "Un sénior est une personne plus ou moins âgée et l'accessibilité numérique"
 ---
 
 # Les séniors

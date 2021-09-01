@@ -1,6 +1,6 @@
 ---
 title: "Contenu textuel"
-abstract: "S’assurer que les contenus textuels soient structurés avec la sémantique appropriée"
+abstract: "Contenu textuel, recommendations d'accessibilité web lors du développement"
 ---
 
 # Contenu textuel

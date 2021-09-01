@@ -1,6 +1,6 @@
 ﻿---
 title: "Keyboard navigation & Switch Access"
-abstract: "Navigation using Switch Access is very useful for people with motor or cognitive difficulties"
+abstract: "Keyboard navigation & Switch Access, accessibility design recommandations with Android"
 ---
 
 # Keyboard navigation & Switch Access

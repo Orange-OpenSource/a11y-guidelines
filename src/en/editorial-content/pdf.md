@@ -1,6 +1,6 @@
 ---
 title: "Creating accessible PDF documents"
-abstract: "In order to make your PDFs understandable and usable by everyone, they must be structured according to these recommendations"
+abstract: "Create accessible PDFs for all"
 ---
 
 # Creating accessible <abbr>PDF</abbr> documents

@@ -1,6 +1,6 @@
 ﻿---
 title: "Écran de saisie"
-abstract: "Quelques recommandations sur l'accessibilité des champs de formulaire"
+abstract: "Champs de formulaire, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
 # Écran de saisie

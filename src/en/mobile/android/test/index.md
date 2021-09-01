@@ -1,6 +1,6 @@
 ﻿---
 title: "Android accessibility testing"
-abstract: "Orange group requires its Web sites to be compliant with the level AA of the Web Content Accessibility Guidelines"
+abstract: "The four phases of Android accessibility testing"
 ---
 
 # Android accessibility testing

@@ -1,6 +1,6 @@
 ﻿---
 title: "Element Magnification"
-abstract: "Enlarge texts without loss of information"
+abstract: "Element magnification, accessibility dev recommandations with Android"
 ---
 
 # Element magnification

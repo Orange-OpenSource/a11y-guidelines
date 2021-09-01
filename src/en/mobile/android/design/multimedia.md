@@ -1,6 +1,6 @@
 ﻿---
 title: "Multimedia"
-abstract: "Control multimedia content"
+abstract: "Multimedia content, accessibility design recommandations with Android"
 ---
 
 # Multimedia

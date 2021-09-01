@@ -1,6 +1,6 @@
 ﻿---
 title: "Headers"
-abstract: "Have a relevant and unique screen title"
+abstract: "Headers, accessibility design recommandations with Android"
 ---
 
 # Headers

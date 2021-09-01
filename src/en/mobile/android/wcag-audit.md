@@ -1,6 +1,6 @@
 ﻿---
-title: "WCAG audit"
-abstract: "The purpose of the WCAG audit is to calculate the compliance rates found in the accessibility statements which are available on Orange apps"
+title: "La Va11ydette a WCAG audit"
+abstract: "La Va11ydette, our tool to perform Android WCAG audits"
 ---
 
 # WCAG audit

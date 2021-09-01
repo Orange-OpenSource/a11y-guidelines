@@ -1,6 +1,6 @@
 ---
 title: "Designer accessible"
-abstract: "Liste des critères WCAG pour le design"
+abstract: "Liste des critères WCAG pour la ;conception"
 ---
 
 # Liste des critères WCAG pour le design

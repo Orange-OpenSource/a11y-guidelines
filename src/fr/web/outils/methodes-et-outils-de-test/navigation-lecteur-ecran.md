@@ -1,6 +1,6 @@
 ---
 title: "Navigation à l’aide d’un lecteur d’écran"
-abstract: "Un lecteur d’écran (appelé aussi revue d’écran) est un logiciel de synthèse vocale utilisé par les personnes malvoyantes et non-voyantes"
+abstract: "Tester avec un lecteur d’écran (appelé aussi revue d’écran"
 ---
 
 # Navigation à l’aide d’un lecteur d’écran

@@ -1,6 +1,6 @@
 ---
 title: "Tactile et interactions"
-abstract: "S’assurer que l’utilisateur garde le contrôle sur les interactions, en particulier tactiles"
+abstract: "Tactile et interactions, recommendations d'accessibilité web lors du développement"
 ---
 
 # Tactile et interactions

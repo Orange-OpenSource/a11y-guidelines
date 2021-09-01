@@ -1,6 +1,6 @@
 ---
 title: "Aides techniques"
-abstract: "S’assurer que les principales fonctionnalités sont utilisables avec les lecteurs d’écran"
+abstract: "Aides techniques, recommendations d'accessibilité web lors du développement"
 ---
 
 # Aides techniques

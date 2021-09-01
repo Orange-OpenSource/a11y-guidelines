@@ -1,6 +1,6 @@
 ﻿---
 title: "Keyboard navigation & Switch Access"
-abstract: "Access to interactive elements"
+abstract: "Keyboard navigation & Switch Access, accessibility dev recommandations with Android"
 ---
 
 # Keyboard navigation & Switch Access

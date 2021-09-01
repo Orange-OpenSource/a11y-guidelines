@@ -1,6 +1,6 @@
 ﻿---
 title: "General navigation"
-abstract: "Insufficient size for a clickable element can make it difficult to interact with the application"
+abstract: "General navigation, accessibility design recommandations with Android"
 ---
 
 # General navigation
@@ -12,7 +12,7 @@ abstract: "Insufficient size for a clickable element can make it difficult to in
 
 **Description&nbsp;:**  
 
-Insufficient size for a clickable element can make it difficult to interact with the application. Each clickable element of the application must be of sufficient size.
+Insufficient size for a clickable element can make it difficult to interact with. Each clickable element of the application must be of sufficient size.
 
 However, there are some exceptions: 
 - If the proposed action has an equivalent in the screen that respects the required size

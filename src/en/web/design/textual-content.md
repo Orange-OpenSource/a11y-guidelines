@@ -1,6 +1,6 @@
 ---
 title: "Textual content"
-abstract: "Ensure that textual content is structured with the appropriate semantics"
+abstract: "Textual content, web accessibility design recommandations"
 ---
 
 # Textual content

@@ -1,6 +1,6 @@
 ---
 title: "WCAG based guidelines for web development"
-abstract: "This set of criteria intended for websites and web applications describes code-related accessibility criteria"
+abstract: "Set of criteria for websites and web applications to be taken in account during the development phase"
 ---
 
 # WCAG based guidelines for web development

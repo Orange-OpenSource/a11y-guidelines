@@ -1,6 +1,6 @@
 ﻿---
 title: "Vocal navigation"
-abstract: "Images must have a text alternative that gives all the information carried by the image to users using voice navigation"
+abstract: "Vocal navigation, accessibility design recommandations with Android"
 ---
 
 # Vocal navigation

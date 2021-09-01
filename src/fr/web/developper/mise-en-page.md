@@ -1,6 +1,6 @@
 ---
 title: "Mise en page"
-abstract: "S’assurer que la mise en page soit adaptée à l’utilisateur."
+abstract: "Mise en page, recommendations d'accessibilité web lors du développement"
 ---
 
 # Mise en page

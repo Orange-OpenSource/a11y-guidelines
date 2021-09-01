@@ -1,6 +1,6 @@
 ---
 title: "Toolbox"
-abstract: "Resources and tools to help improving digital accessibility"
+abstract: "Resources and tools to help improving digital accessibility in Android"
 sideNavigationLinks:
   - label: "Talkback screen reader"
     href: "../talkback/"

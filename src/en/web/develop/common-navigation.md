@@ -1,6 +1,6 @@
 ---
 title: "Common navigation"
-abstract: "Make sure that the user easily navigate within page and more generally in the website"
+abstract: "Commun navigation, web accessibility dev recommandations"
 ---
 
 # Common navigation

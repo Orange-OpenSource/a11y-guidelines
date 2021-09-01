@@ -1,6 +1,6 @@
 ---
 title: "Touch and interactions"
-abstract: "Ensure that the user keeps control over interactions, particularly tactile ones"
+abstract: "Touch and interactions, web accessibility design recommandations"
 ---
 
 # Touch and interactions

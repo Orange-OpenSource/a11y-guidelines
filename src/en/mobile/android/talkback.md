@@ -1,6 +1,6 @@
 ---
 title: "Talkback user guide"
-abstract: "TalkBack is a built-in screen reader for Android that reads aloud the items that appear on the device screen"
+abstract: "Using TalkBack a built-in screen reader for Android"
 ---
 
 # Talkback user guide

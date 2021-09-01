@@ -1,6 +1,6 @@
 ---
 title: "Couleurs et contrastes"
-abstract: "S’assurer que les couleurs utilisées ne posent pas de problème à l’utilisateur"
+abstract: "Couleurs et contraste, recommendations d'accessibilité web lors du développement"
 ---
 
 # Couleurs et contrastes

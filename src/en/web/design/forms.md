@@ -1,6 +1,6 @@
 ---
 title: "Forms"
-abstract: "Ensure that the user can effectively complete the forms"
+abstract: "Forms, web accessibility design recommandations"
 ---
 
 # Forms

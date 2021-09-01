@@ -1,6 +1,6 @@
 ---
 title: "Navigation à l’aide du clavier"
-abstract: "La navigation dans une page web doit être possible à l’aide du clavier seul, notamment pour les personnes qui ne peuvent pas utiliser de souris"
+abstract: "Tester la navigation clavier"
 ---
 
 # Navigation à l’aide du clavier

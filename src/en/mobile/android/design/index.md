@@ -1,6 +1,6 @@
 ﻿---
 title: "Android's essential criteria for design"
-abstract: "This guide presents the different accessibility criteria required to obtain an accessible Android application"
+abstract: "Design an accessible Android application for all"
 ---
 
 # Android's essential criteria for design

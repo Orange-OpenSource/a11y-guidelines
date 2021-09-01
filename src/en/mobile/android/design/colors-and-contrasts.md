@@ -1,6 +1,6 @@
 ﻿---
 title: "Colors and contrasts"
-abstract: "Ensure that the colors used do not cause problems for the user"
+abstract: "Colors and contrasts, accessibility design recommandations with Android"
 ---
 
 # Colors and contrasts

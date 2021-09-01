@@ -1,6 +1,6 @@
 ---
 title: "Methodes de test d'accessibilité avec des utilisat·eur·rices"
-abstract: "Pour évaluer l’accessibilité d’un site ou d’une application, l’expert réalise un audit."
+abstract: "Méthode de tests utilisateur pour évaluer l’accessibilité d’un site ou d’une application"
 ---
 
 # Recommandations accessibilité numérique Orange

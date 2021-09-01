@@ -1,6 +1,6 @@
 ---
 title: "Keyboard navigation"
-abstract: "Ensure the user can navigate using the keyboard only"
+abstract: "Keyboard navigation, web accessibility design recommandations"
 ---
 
 # Keyboard navigation

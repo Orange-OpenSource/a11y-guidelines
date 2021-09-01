@@ -1,6 +1,6 @@
 ---
 title: "Layout"
-abstract: "Make sure the layout is suitable for the user"
+abstract: "Layout, web accessibility dev recommandations"
 ---
 
 # Layout

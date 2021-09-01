@@ -1,6 +1,6 @@
 ---
 title: "Navigation au clavier"
-abstract: "S’assurer que l’utilisateur puisse naviguer uniquement à l’aide du clavier"
+abstract: "Navigation au clavier, recommendations d'accessibilité web lors de la conception"
 ---
 
 # Navigation au clavier

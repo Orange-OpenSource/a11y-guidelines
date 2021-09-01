@@ -1,6 +1,6 @@
 ---
 title: "Le handicap cognitif"
-abstract: "Le handicap cognitif est la conséquence de dysfonctionnements des fonctions cognitives"
+abstract: "Différents types de handicap cognitif"
 ---
 
 # Le handicap cognitif

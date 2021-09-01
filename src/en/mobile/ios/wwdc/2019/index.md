@@ -1,6 +1,6 @@
 ---
 title: "WWDC 2019: Accessibility Lessons"
-abstract: "Apple videos lessons"
+abstract: "Apple videos accessibility lessons WWDC 2019"
 displayToc: true
 ---
 

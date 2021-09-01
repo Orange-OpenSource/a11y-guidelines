@@ -1,6 +1,6 @@
 ---
 title: "Accessing page headers (h1 to h6 tags)"
-abstract: "To check if the headers have been properly positioned on the page, there are several solutions"
+abstract: "Test headers hierarchy and pertinence"
 ---
 
 # Accessing page headers (`h1` to `h6` tags)

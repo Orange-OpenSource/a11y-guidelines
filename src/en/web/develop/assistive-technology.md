@@ -1,6 +1,6 @@
 ---
 title: "Assistive technology"
-abstract: "Allow the screen reader user access to the main features of the application"
+abstract: "Assistive technologies, web accessibility dev recommandations"
 ---
 
 # Assistive technology

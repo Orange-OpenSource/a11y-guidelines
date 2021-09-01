@@ -1,6 +1,6 @@
 ﻿---
 title: "Input screen"
-abstract: "Explicitly label input fields"
+abstract: "Input fields, accessibility dev recommandations with Android "
 ---
 
 # Input screen

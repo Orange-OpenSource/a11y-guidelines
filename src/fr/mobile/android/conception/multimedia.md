@@ -1,6 +1,6 @@
 ﻿---
 title: "Multimédia"
-abstract: "Quelques recommandations d'accessibilité pour le multimédia sous Android"
+abstract: "Multimédia, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
 # Multimédia

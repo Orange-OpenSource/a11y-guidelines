@@ -1,6 +1,6 @@
 ---
 title: "Agrandissement de la taille du texte"
-abstract: "Gestion de l'agrandissement des textes dans une page web"
+abstract: "Tester l'grandissement du texte à 200%"
 ---
 
 # Agrandissement de la taille du texte

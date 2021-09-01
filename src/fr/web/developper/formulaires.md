@@ -1,6 +1,6 @@
 ---
 title: "Formulaires"
-abstract: "S’assurer que l’utilisateur puisse efficacement compléter les formulaires"
+abstract: "Formulaires, recommendations d'accessibilité web lors du développement"
 ---
 
 # Formulaires

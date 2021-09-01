@@ -1,6 +1,6 @@
 ---
 title: "Create an accessible Word document"
-abstract: "This part describes how to make your Word documents accessible to everyone, including assistive technology users"
+abstract: "Create accessible Word documents for all"
 ---
 
 # Create an accessible Word document

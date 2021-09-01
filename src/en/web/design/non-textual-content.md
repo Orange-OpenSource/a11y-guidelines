@@ -1,6 +1,6 @@
 ---
 title: "Non-textual content"
-abstract: "Ensure that an alternative to non-text content is provided to the user"
+abstract: "Non-textual content, web accessibility design recommandations"
 ---
 
 # Non-textual content

@@ -1,6 +1,6 @@
 ---
 title: "Resources"
-abstract: "Useful links"
+abstract: "Useful links on digital accessibility"
 ---
 
 # Resources

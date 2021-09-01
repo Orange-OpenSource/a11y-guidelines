@@ -1,11 +1,11 @@
 ﻿---
 title: "Application scan : analysis tools"
-abstract: "Analysis tools complement the first approach, in order to detect other accessibility problems"
+abstract: "Android analysis tools to detect accessibility problems"
 ---
 
 # Application scan : analysis tools
 
-Analysis tools complement the first approach, in order to detect other accessibility problems, such as those related to the size of the buttons, color contrasts etc ...
+Analysis tools complement the first approach, in order to detect other accessibility problems, such as those related to the size of the buttons, color contrasts...
 
 
 ## Accessibility Scanner

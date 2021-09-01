@@ -1,6 +1,6 @@
 ---
 title: "Accessibility with Flutter"
-abstract: "If you develop applications with Flutter, you should know that it is possible to produce accessible applications"
+abstract: "Ressources to be accessible with Flutter"
 ---
 
 # Accessibility with Flutter

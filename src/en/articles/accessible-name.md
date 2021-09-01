@@ -1,6 +1,6 @@
 ---
 title: "The accessible name in HTML"
-abstract: "Accessible name, what's and his link with Assistive Technology"
+abstract: "Accessible name, what is it and his link with Assistive Technologies"
 date: "2019-02-20"
 tags:
   - web

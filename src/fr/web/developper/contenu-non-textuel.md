@@ -1,6 +1,6 @@
 ---
 title: "Contenu non-textuel"
-abstract: "S’assurer, qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur"
+abstract: "Contenu non-textuel, recommendations d'accessibilité web lors du développement"
 ---
 
 # Contenu non-textuel
