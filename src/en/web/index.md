@@ -1,6 +1,6 @@
 ---
 title: "Orange web accessibility guidelines"
-abstract:"The Orange site for digital accessibility"
+abstract: "The Orange site for digital accessibility"
 ---
 
 # Orange web accessibility guidelines  

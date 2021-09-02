@@ -1,6 +1,6 @@
 ---
 title: "L'accessibilité avec Flutter"
-abstract: "Quelques ressources sur le développement d'une application accessibile avec Flutter"
+abstract: "Quelques ressources sur le développement d'une application accessible avec Flutter"
 ---
 
 # L'accessibilité avec Flutter

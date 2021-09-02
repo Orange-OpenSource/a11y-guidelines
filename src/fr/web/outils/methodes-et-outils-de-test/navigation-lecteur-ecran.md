@@ -1,6 +1,6 @@
 ---
 title: "Navigation à l’aide d’un lecteur d’écran"
-abstract: "Tester avec un lecteur d’écran (appelé aussi revue d’écran"
+abstract: "Tester avec un lecteur d’écran (appelé aussi revue d’écran)"
 ---
 
 # Navigation à l’aide d’un lecteur d’écran
