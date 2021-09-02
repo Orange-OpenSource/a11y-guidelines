@@ -1,5 +1,6 @@
 ---
 title: "Mise en page"
+abstract: "Mise en page, recommendations d'accessibilité Web lors de la conception"
 ---
 
 # Mise en page

@@ -1,6 +1,6 @@
 ---
 title: "Recommandations pour l'accessibilité d'un composant d'autocomplétion"
-abstract: "Présentation de notre démarche et des recommandations sélectionnées"
+abstract: "Présentation de notre démarche et des recommandations pour les composants d'autocomplétion"
 date: "2020-12-23"
 tags:
   - web

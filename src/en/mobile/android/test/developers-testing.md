@@ -1,5 +1,6 @@
 ﻿---
 title: "Developer testing: code analysis"
+abstract: "Detect accessibility issues during the development phase in Android apps"
 ---
 
 # Developer testing: code analysis

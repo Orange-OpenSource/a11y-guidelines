@@ -1,5 +1,6 @@
 ---
 title: "iOS developer guide"
+abstract: "Accessibility dev guide and iOS SDK accessibility options"
 displayToc: true
 ---
 

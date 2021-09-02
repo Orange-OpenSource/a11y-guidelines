@@ -1,5 +1,6 @@
 ---
 title: "WCAG based guidelines for testing"
+abstract: "A set of criteria for websites and web applications to present the procedures and tools to check compliance with WCAG"
 displayToc: true
 leftColumn:
   display: true

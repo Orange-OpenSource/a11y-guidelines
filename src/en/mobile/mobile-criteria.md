@@ -1,5 +1,6 @@
 ---
 title: "Mobile criteria"
+abstract: "Our base criteria for the Android and iOS Orange mobile applications to avoid major accessibility errors"
 ---
 
 # Mobile criteria

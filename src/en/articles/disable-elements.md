@@ -1,6 +1,6 @@
 ---
 title: "Disable HTML elements"
-abstract: "How to disable page elements ?"
+abstract: "How to disable HTML elements in the page?"
 date: "2021-07-01"
 tags:
   - web

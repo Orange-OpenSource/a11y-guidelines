@@ -1,6 +1,6 @@
 ---
 title: "ARIA attributes that can save you"
-abstract: "Some ARIA attributes to know"
+abstract: "Some ARIA attributes you must know"
 date: "2018-07-18"
 tags:
   - web

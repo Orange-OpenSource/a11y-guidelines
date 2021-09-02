@@ -1,5 +1,6 @@
 ---
 title: "Cognitive disability"
+abstract: "Different types of cognitive disability"
 ---
 
 # Cognitive disability

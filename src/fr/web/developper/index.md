@@ -1,5 +1,6 @@
 ---
 title: "Développer accessible"
+abstract: "Liste des critères WCAG pour le développement"
 ---
 
 # Liste des critères WCAG pour le développement

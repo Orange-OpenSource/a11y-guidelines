@@ -1,5 +1,6 @@
 ---
 title: "Les formulaires"
+abstract: "Formulaires, recommendations d'accessibilité web lors de la conception"
 ---
 
 # Les formulaires

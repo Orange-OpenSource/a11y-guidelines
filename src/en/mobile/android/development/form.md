@@ -1,5 +1,6 @@
 ﻿---
 title: "Input screen"
+abstract: "Input fields, accessibility dev recommandations with Android"
 ---
 
 # Input screen

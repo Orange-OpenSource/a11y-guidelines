@@ -1,5 +1,6 @@
 ---
 title: "Orange Open source tools"
+abstract: "Our list of open source tools for the web"
 ---
 
 # Orange Open source tools  

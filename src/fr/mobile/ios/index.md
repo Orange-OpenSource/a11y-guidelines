@@ -1,5 +1,6 @@
 ---
 title: "Accessibilité sous iOS"
+abstract: "Guide pour la conception et le développement d'une application mobile accessible sous iOS"
 ---
 
 # Accessibilité sous iOS

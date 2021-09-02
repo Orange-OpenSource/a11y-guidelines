@@ -1,6 +1,6 @@
 ---
 title: "Use ARIA for status messages"
-abstract: "Status messages how to with ARIA"
+abstract: "Status messages, how to with ARIA"
 date: "2019-02-20"
 tags:
   - web

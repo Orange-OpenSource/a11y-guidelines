@@ -1,5 +1,6 @@
 ---
 title: "Talkback user guide"
+abstract: "Using TalkBack a built-in screen reader for Android"
 ---
 
 # Talkback user guide

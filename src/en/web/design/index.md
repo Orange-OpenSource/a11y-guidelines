@@ -1,5 +1,6 @@
 ---
 title: "WCAG based guidelines for design"
+abstract: "Set of criteria for websites and web applications to be taken in account during the design phase"
 ---
 
 # WCAG based guidelines for design

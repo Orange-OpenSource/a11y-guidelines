@@ -1,5 +1,6 @@
 ---
 title: "Mobile devices"
+abstract: "Orange mobile accessibility guidelines"
 ---
 
 # Orange mobile accessibility guidelines

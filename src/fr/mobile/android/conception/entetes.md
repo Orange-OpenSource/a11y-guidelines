@@ -1,5 +1,6 @@
 ﻿---
 title: "Entêtes"
+abstract: "Titre d'écran, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
 # Entêtes

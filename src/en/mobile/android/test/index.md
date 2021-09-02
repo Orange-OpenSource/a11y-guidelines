@@ -1,5 +1,6 @@
 ﻿---
 title: "Android accessibility testing"
+abstract: "The four phases of Android accessibility testing"
 ---
 
 # Android accessibility testing

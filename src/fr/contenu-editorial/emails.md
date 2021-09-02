@@ -1,5 +1,6 @@
 ---
 title: "Concevoir des mails accessibles à tous"
+abstract: "Quelques recommandations concernant l'accessibilité des emails"
 ---
 
 # Concevoir des mails accessibles à tous

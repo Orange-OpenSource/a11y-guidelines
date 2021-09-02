@@ -1,5 +1,6 @@
 ---
 title: "Assistive technology"
+abstract: "Assistive technologies, web accessibility dev recommandations"
 ---
 
 # Assistive technology

@@ -1,5 +1,6 @@
 ---
 title: "Contenu textuel"
+abstract: "Contenu textuel, recommendations d'accessibilité web lors du développement"
 ---
 
 # Contenu textuel

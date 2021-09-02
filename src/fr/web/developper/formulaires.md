@@ -1,5 +1,6 @@
 ---
 title: "Formulaires"
+abstract: "Formulaires, recommendations d'accessibilité web lors du développement"
 ---
 
 # Formulaires

@@ -1,5 +1,6 @@
 ---
 title: "Create an accessible Word document"
+abstract: "Create accessible Word documents for all"
 ---
 
 # Create an accessible Word document

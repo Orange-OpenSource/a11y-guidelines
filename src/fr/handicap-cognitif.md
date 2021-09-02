@@ -1,5 +1,6 @@
 ---
 title: "Le handicap cognitif"
+abstract: "Différents types de handicap cognitif"
 ---
 
 # Le handicap cognitif

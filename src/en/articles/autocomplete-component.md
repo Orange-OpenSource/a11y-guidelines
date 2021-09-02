@@ -1,6 +1,6 @@
 ---
 title: "Best practices for the accessibility of an autocompletion component"
-abstract: "Presentation of our approach and selected guidelines"
+abstract: "Presentation of our approach and selected guidelines for autocompletion components"
 date: "2020-12-23"
 tags:
   - web

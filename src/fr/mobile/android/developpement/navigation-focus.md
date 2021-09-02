@@ -1,5 +1,6 @@
 ﻿---
 title: "Navigation au clavier & Switch Access"
+abstract: "Développer une application Android accessible au clavier"
 ---
 
 # Navigation au clavier & Switch Access

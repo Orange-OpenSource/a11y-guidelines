@@ -1,5 +1,6 @@
 ---
 title: "Create accessible PowerPoint slides"
+abstract: "Create accessible PowerPoint slides for all"
 ---
 
 # Create accessible PowerPoint slides

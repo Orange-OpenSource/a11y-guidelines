@@ -1,5 +1,6 @@
 ---
 title: "Non-textual content"
+abstract: "Non-textual content, web accessibility design recommandations"
 ---
 
 # Non-textual content

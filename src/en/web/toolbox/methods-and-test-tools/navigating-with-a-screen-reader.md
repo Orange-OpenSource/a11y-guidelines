@@ -1,5 +1,6 @@
 ---
 title: "Navigating with a screen reader"
+abstract: "Screen reader how to test"
 ---
 
 # Navigating with a screen reader

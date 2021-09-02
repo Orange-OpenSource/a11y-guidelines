@@ -1,5 +1,6 @@
 ---
 title: "Toolbox"
+abstract: "Resources, tools and methods to help improving digital accessibility"
 ---
 
 # Toolbox

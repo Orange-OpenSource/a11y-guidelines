@@ -1,6 +1,6 @@
 ---
 title: "The aria-live attribute and the role alert"
-abstract: "When and how to use roles and attributes of live type "
+abstract: "When and how to use roles and attributes of live content type"
 date: "2020-01-08"
 tags:
   - web

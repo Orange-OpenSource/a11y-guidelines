@@ -1,5 +1,6 @@
 ---
 title: "Older people"
+abstract: "Older people (“senior”) and digital accessibility"
 ---
 
 # Older people

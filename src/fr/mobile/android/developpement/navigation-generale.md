@@ -1,5 +1,6 @@
 ﻿---
 title: "Navigation générale"
+abstract: "Recommandations générales pour le développement d'une application Android accessible"
 ---
 
 # Navigation générale

@@ -1,5 +1,6 @@
 ---
 title: "Contenu non-textuel"
+abstract: "Contenu non-textuel, recommendations d'accessibilité web lors du développement"
 ---
 
 # Contenu non-textuel

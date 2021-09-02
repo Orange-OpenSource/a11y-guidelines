@@ -1,5 +1,6 @@
 ﻿---
 title: "Audit WCAG"
+abstract: "La vallydette, l'outil de test Orange pour les audit d'accessibilité WCAG Android "
 ---
 
 # Audit WCAG

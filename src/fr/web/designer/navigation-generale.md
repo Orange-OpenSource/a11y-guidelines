@@ -1,5 +1,6 @@
 ---
 title: "Navigation générale"
+abstract: "Navigation générale, recommendations d'accessibilité web lors de la conception"
 ---
 
 # Navigation générale

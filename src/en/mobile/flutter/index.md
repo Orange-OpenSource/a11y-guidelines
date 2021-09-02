@@ -1,5 +1,6 @@
 ---
 title: "Accessibility with Flutter"
+abstract: "Ressources to be accessible with Flutter"
 ---
 
 # Accessibility with Flutter

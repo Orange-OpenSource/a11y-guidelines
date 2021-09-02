@@ -1,5 +1,6 @@
 ---
 title: "Browser extensions"
+abstract: "List of browser extensions (or add-ons) to test of HTML pages"
 ---
 
 # Browser extensions

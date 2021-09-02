@@ -1,5 +1,6 @@
 ﻿---
 title: "Manual tests: use cases"
+abstract: "Manual tests by reproducing the situation experienced by your users with Android"
 ---
 
 # Manual tests: use cases

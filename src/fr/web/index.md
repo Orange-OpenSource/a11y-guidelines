@@ -1,5 +1,6 @@
 ---
 title: "Recommandations accessibilité Orange pour le web"
+abstract: "Critères incontournables, exigences, méthodes et outils pour l'accessibilité des pages web"
 ---
 
 # Recommandations accessibilité Orange pour le web

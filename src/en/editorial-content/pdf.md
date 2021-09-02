@@ -1,5 +1,6 @@
 ---
 title: "Creating accessible PDF documents"
+abstract: "Create accessible PDFs for all"
 ---
 
 # Creating accessible <abbr>PDF</abbr> documents

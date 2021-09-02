@@ -1,5 +1,6 @@
 ---
 title: "Tester en désactivant les CSS"
+abstract: "Pourquoi et comment tester l'accessibilité en désactivant les feuilles de style ?"
 ---
 
 # Tester en désactivant les CSS

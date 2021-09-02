@@ -1,5 +1,6 @@
 ---
 title: "Text size enlargement"
+abstract: "Enlargement of the text up to 200% how to test"
 ---
 
 # Text size enlargement

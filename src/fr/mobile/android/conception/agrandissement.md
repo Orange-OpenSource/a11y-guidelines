@@ -1,5 +1,6 @@
 ﻿---
 title: "Agrandissement des éléments"
+abstract: "Agrandir les textes, recommendations d'accessibilité lors de la conception"
 ---
 
 # Agrandissement des éléments

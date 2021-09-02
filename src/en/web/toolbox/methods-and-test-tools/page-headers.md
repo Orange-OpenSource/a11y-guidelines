@@ -1,5 +1,6 @@
 ---
 title: "Accessing page headers (h1 to h6 tags)"
+abstract: "Test headers hierarchy and pertinence"
 ---
 
 # Accessing page headers (`h1` to `h6` tags)

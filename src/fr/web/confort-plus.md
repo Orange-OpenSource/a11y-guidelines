@@ -1,5 +1,6 @@
 ---
 title: "Confort+"
+abstract: "Le service Orange Confort+ permet d’adapter l’affichage d’un site web pour améliorer le confort lors de la consultation"
 ---
 
 # Confort+

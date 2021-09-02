@@ -1,11 +1,12 @@
 ---
 title: "iOS design criteria"
+abstract: "Accessibility criteria to create an accessible iOS application"
 displayToc: true
 ---
 
 # iOS design criteria
 
-This guide aims to present the different accessibility criteria for getting an accessible iOS application.
+This guide aims to present the different accessibility criteria to create an accessible iOS application.
 <br>Each criterion explains for whom it is important, when it can be implemented, why it is important and the corresponding accessibility rule.
 
 <a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555"><img class="img-fluid" alt="Access to the WWDC video highlighting the importance ofthe visual." src="../../images/conception-intro-wwdc.png"/>
@@ -38,7 +39,7 @@ This guide aims to present the different accessibility criteria for getting an a
      id="images-Objectives"
      role="tabpanel">
     
-Access the information included in images for users who cannot access it.
+Textual alternative for users who cannot access to image information.
 
 **Blocking point:** an image without textual description is unusable by people with visual impairments or those that cannot display images.
 
@@ -46,7 +47,7 @@ Access the information included in images for users who cannot access it.
 **When:** as of design and during development.
 </div>
 <div class="tab-pane" id="images-Description" role="tabpanel" >
-Images are often used to convey a lot of information that must be exposed thanks to an alternative.
+Images are often used to convey a lot of informations that must be exposed thanks to an alternative.
 <br><br>In case of an image containing text, this text will be used for the alternative.
 <br>In case of an image that provides information as a graph, drawing or other, the alternative will contain all necessary information in the image.
 <br><br>Some images are used for decorative purposes and do not require alternatives.

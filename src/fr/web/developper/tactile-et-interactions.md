@@ -1,5 +1,6 @@
 ---
 title: "Tactile et interactions"
+abstract: "Tactile et interactions, recommendations d'accessibilité web lors du développement"
 ---
 
 # Tactile et interactions
