@@ -19,15 +19,16 @@ Most of the illustrations are parts of Apple presentations and are available at 
 ## [2021 - Bring accessibility to charts in your app](2021/122/)
 This video highlights the **iOS&nbsp;15 new feature** called audio graph that further **improves the data presentation of charts** for the VoiceOver users.
 <a href="2021/122/">
+    
 ![Access to the Bring accessibility to charts in your app video session](../../images/iOSdev/wwdc21-122.png)
 </br></br></br>  
-<!--
+
 ## [2021 - Tailor the VoiceOver experience in your data-rich apps](2021/121/)
-Cette vidéo concerne la fonctionnalité **fournisseur de contenu personnalisé** apparue avec iOS 14 et parfaitement détaillée tout au long de cette présentation.
+This video session deals with the the ways the **Accessibility Custom Content** feature works and should be implemented.
 <a href="2021/121/"> 
+    
 ![Access to the Tailor the VoiceOver experience in your data-rich apps video session](../../images/iOSdev/wwdc21-121.png)
 </br></br></br>
--->
     
 ## [2020 - VoiceOver Efficiency with Custom Rotors](2020/116/)
 Explanations about **custom rotors** are enlighted thanks to an application for which the rotor functionalities implementations are detailed in depth.
