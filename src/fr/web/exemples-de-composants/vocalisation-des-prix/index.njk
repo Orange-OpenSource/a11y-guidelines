@@ -57,7 +57,7 @@ js:
     <img src="images/phone.png" alt="téléphones Orange">
     <p>
         <strong>à partir de </strong><span class="price">1€*</span>
-        <span class="line-through">129,90€</span><br>
+        <s>129,90€</s><br>
         *voir conditions
     </p>
 </div>
@@ -70,7 +70,7 @@ js:
 &lt;img src="./images/phone.png" alt="téléphones Orange"&gt;
 &lt;p&gt;
     &lt;strong&gt;à partir de &lt;/strong&gt;&lt;span class="price"&gt;1€*&lt;/span&gt;
-    &lt;span class="line-through"&gt;129,90€&lt;/span&gt;&lt;br&gt;
+    &lt;s&gt;129,90€&lt;/s&gt;&lt;br&gt;
     *voir conditions
 &lt;/p&gt;
 &lt;/div&gt;
@@ -103,7 +103,7 @@ js:
     <img src="images/phone.png" alt="téléphones Orange">
     <p aria-hidden="true">
         <strong>à partir de </strong><span class="price">1€*</span>
-        <span class="line-through">129,90€</span><br>
+        <s>129,90€</s><br>
         *voir conditions
     </p>
     <span class="sr-only">à partir de 1€ au lieu de 129,90€ voir conditions</span>
@@ -120,9 +120,15 @@ js:
 &lt;img src="./images/phone.png" alt="téléphones Orange"&gt;
 &lt;p aria-hidden="true"&gt;
     &lt;strong&gt;à partir de &lt;/strong&gt;&lt;span class="price"&gt;1€*&lt;/span&gt;
-    &lt;span class="line-through"&gt;129,90€&lt;/span&gt;&lt;br&gt;
+    &lt;s&gt;129,90€&lt;/s&gt;&lt;br&gt;
     *voir conditions
 &lt;/p&gt;
 &lt;span class="sr-only"&gt;à partir de 1€ au lieu de 129,90€ voir conditions&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
+
+<h2>Importance de la sémantique</h2>
+<p>La solution à base de texte en masquage accessible a le mérite de fonctionner avec l'ensemble des outils d'assistance, cela dit il est important de porter une attention particulière aux balises HTML utilisées.</p>
+
+<p>Ajouter de la sémantique dans le code HTML permet d'améliorer la prise en charge des outils d'assistance. Il est possible d'afficher un texte barré à l'aide d'une balise <code>&lt;span&gt;</code> et d'une classe CSS, cela dit l'utilisation d'une balise appropriée <code>&lt;s&gt;</code> ou <code>&lt;del&gt;</code> apporte du sens à votre code.
+Le lecteur d'écran NVDA par exemple indique automatiquement que le texte est barré lorsqu'il est inséré dans une balise <code>&lt;del&gt;</code>. Même si le support de ces balises n'est pas encore complet, il est important de veiller à choisir les balises HTML appropriée en fonction de vos besoins.</p>
