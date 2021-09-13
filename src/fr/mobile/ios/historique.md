@@ -4,6 +4,10 @@ abstract: "Historique des mises à jour"
 displayToc: false
 ---
 
+**14/09/21** ⟹ WWDC 2021 <a href="../wwdc/2021/121/">🎬</a> Optimiser VoiceOver dans un contexte riche en données
+
+**09/09/21** ⟹ WWDC 2021 <a href="../wwdc/2021/122/">🎬</a> Incorporer efficacement l'accessibilité à vos graphes
+
 **30/04/21** ⟹ ajouts de critères de conception pour les couleurs <a href="../conception/#couleurs">🔖</a>
 
 **19/03/21** ⟹ Fournisseur de contenu personnalisé <a href="../developpement/#fournisseur-de-contenu-personnalise">🔖</a>
