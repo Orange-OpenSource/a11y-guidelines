@@ -393,55 +393,87 @@
   },
   {
     "old": "others/editorial.html",
-    "new": "/fr/contenu-editorial"
+    "new": "/fr/contenu-et-communication"
+  },
+  {
+    "old": "/fr/contenu-editorial/emails",
+    "new": "/fr/contenu-et-communication/emails"
   },
   {
     "old": "others/email.html",
-    "new": "/fr/contenu-editorial/emails"
+    "new": "/fr/contenu-et-communication/emails"
   },
   {
     "old": "others/index.html",
-    "new": "/fr/contenu-editorial"
+    "new": "/fr/contenu-et-communication"
+  },
+  {
+    "old": "/fr/contenu-editorial/pdf",
+    "new": "/fr/contenu-et-communication/pdf"
   },
   {
     "old": "others/pdf.html",
-    "new": "/fr/contenu-editorial/pdf"
+    "new": "/fr/contenu-et-communication/pdf"
+  },
+  {
+    "old": "/fr/contenu-editorial/powerpoint",
+    "new": "/fr/contenu-et-communication/powerpoint"
   },
   {
     "old": "others/powerpoint-create.html",
-    "new": "/fr/contenu-editorial/powerpoint"
+    "new": "/fr/contenu-et-communication/powerpoint"
+  },
+  {
+    "old": "/fr/contenu-editorial/powerpoint/tester",
+    "new": "/fr/contenu-et-communication/powerpoint/tester"
   },
   {
     "old": "others/powerpoint-test.html",
-    "new": "/fr/contenu-editorial/powerpoint/tester"
+    "new": "/fr/contenu-et-communication/powerpoint/tester"
   },
   {
     "old": "others/powerpoint.html",
-    "new": "/fr/contenu-editorial/powerpoint"
+    "new": "/fr/contenu-et-communication/powerpoint"
   },
   {
     "old": "others/pushmail.html",
-    "new": "/fr/contenu-editorial/emails"
+    "new": "/fr/contenu-et-communication/emails"
+  },
+  {
+    "old": "/fr/contenu-editorial",
+    "new": "/fr/contenu-et-communication"
   },
   {
     "old": "others/search.html",
     "new": "/fr/recherche"
   },
   {
+    "old": "/fr/contenu-editorial/composants-animes",
+    "new": "/fr/contenu-et-communication/composants-animes"
+  },
+  {
     "old": "others/video-audio.html",
-    "new": "/fr/contenu-editorial/composants-animes"
+    "new": "/fr/contenu-et-communication/composants-animes"
+  },
+  {
+    "old": "/fr/contenu-editorial/word",
+    "new": "/fr/contenu-et-communication/word"
   },
   {
     "old": "others/word-create.html",
-    "new": "/fr/contenu-editorial/word"
+    "new": "/fr/contenu-et-communication/word"
+  },
+  {
+    "old": "/fr/contenu-editorial/word/tester",
+    "new": "/fr/contenu-et-communication/word/tester"
   },
   {
     "old": "others/word-test.html",
-    "new": "/fr/contenu-editorial/word/tester"
+    "new": "/fr/contenu-et-communication/word/tester"
   },
   {
     "old": "others/word.html",
-    "new": "/fr/contenu-editorial/word"
+    "new": "/fr/contenu-et-communication/word"
   },
   {
     "old": "outils.html",

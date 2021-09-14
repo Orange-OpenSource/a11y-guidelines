@@ -4,10 +4,6 @@ abstract: "iOS changelog"
 displayToc: false
 ---
 
-**21/09/14** ⟹ WWDC 2021 <a href="../wwdc/2021/121/">🎬</a> Tailor the VoiceOver experience in your data-rich apps
-
-**21/09/09** ⟹ WWDC 2021 <a href="../wwdc/2021/122/">🎬</a> Bring accessibility to charts in your app
-
 **21/04/30** ⟹ added design criteria for colours <a href="../design/#colours">🔖</a>
 
 **21/03/19** ⟹ Custom content provider <a href="../development/#custom-content-provider">🔖</a>
