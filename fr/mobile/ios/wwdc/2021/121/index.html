@@ -2,10 +2,8 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Historique iOS - Recommandations accessibilité numérique Orange</title>
+    <title>WWDC 2021 : Optimiser VoiceOver dans un contexte riche en données - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <meta name="description" content="Historique des mises à jour">
             
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -28,7 +26,7 @@
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -156,7 +154,7 @@
   Boite à outils
 </a>
             </li><li class="nav-item">
-              <a href="/fr/mobile/ios/wwdc/" class="nav-link">
+              <a href="/fr/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
   WWDC
 </a>
             </li></ul>
@@ -178,13 +176,18 @@
         </li>
       
       
-        <li class="breadcrumb-item">
+        <li class="breadcrumb-item d-none d-sm-flex">
           <a href="/fr/mobile/ios/">iOS</a>
         </li>
       
       
+        <li class="breadcrumb-item">
+          <a href="/fr/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Historique iOS
+          WWDC 2021 : Optimiser VoiceOver dans un contexte riche en données
         </li>
       </ol>
 </nav>
@@ -193,22 +196,105 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction-0020" class="dropdown-item text-wrap">Introduction (00:20)</a><a href="#fonctionnement-0229" class="dropdown-item text-wrap">Fonctionnement (02:29)</a><a href="#programmation-avec-uikit-0457" class="dropdown-item text-wrap">Programmation avec UIKit (04:57)</a><a href="#programmation-avec-swiftui-0743" class="dropdown-item text-wrap">Programmation avec SwiftUI (07:43)</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <p><strong>14/09/21</strong> ⟹ WWDC 2021 <a href="../wwdc/2021/121/">🎬</a> Optimiser VoiceOver dans un contexte riche en données</p>
-<p><strong>09/09/21</strong> ⟹ WWDC 2021 <a href="../wwdc/2021/122/">🎬</a> Incorporer efficacement l'accessibilité à vos graphes</p>
-<p><strong>30/04/21</strong> ⟹ ajouts de critères de conception pour les couleurs <a href="../conception/#couleurs">🔖</a></p>
-<p><strong>19/03/21</strong> ⟹ Fournisseur de contenu personnalisé <a href="../developpement/#fournisseur-de-contenu-personnalise">🔖</a></p>
-<p><strong>10/03/21</strong> ⟹ Modifier la langue de vocalisation <a href="../developpement/#modifier-la-langue-de-vocalisation">🔖</a></p>
-<p><strong>07/01/21</strong> ⟹ mises à jour (swift 5.3, Xcode 12 et iOS 14)</p>
-<p><strong>08/12/20</strong> ⟹ WWDC 2020 <a href="../wwdc/2020/020/">🎬</a> Rendre un visuel accessible</p>
-<p><strong>30/11/20</strong> ⟹ WWDC 2020 <a href="../wwdc/2020/019/">🎬</a> Accessibilité avec le contrôle de sélection</p>
-<p><strong>25/11/20</strong> ⟹ WWDC 2020 <a href="../wwdc/2020/116/">🎬</a> Efficience du rotor</p>
-<p><strong>27/04/20</strong> ⟹ Écran spécifique accessibilité <a href="../conception/#ecran-specifique-accessibilite">🔖</a></p>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>WWDC 2021 : Optimiser VoiceOver dans un contexte riche en données</h1>
+<p>Cette présentation visualisable sur le <strong>site développeur officiel d'<span lang="en">Apple</span></strong> (<a href="https://developer.apple.com/videos/play/wwdc2021/10121/">session 121</a>) explique comment <strong>présenter un ensemble complexe de données</strong> avec <span lang="en">VoiceOver</span> en utilisant la fonctionnalité <strong>fournisseur de contenu personnalisé</strong> disponible depuis iOS 14.</p>
+<p><img src="../../../../images/iOSdev/wwdc21-121.png" alt="" class="img-fluid"><br>
+<br><br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :</p>
+<ul>
+<li>
+<p><a href="#introduction-0020">Introduction</a> (00:20)</p>
+</li>
+<li>
+<p><a href="#fonctionnement-0229">Fonctionnement</a> (02:29)</p>
+</li>
+<li>
+<p><a href="#programmation-avec-uikit-0457">Programmation avec UIKit</a> (04:57)</p>
+</li>
+<li>
+<p><a href="#programmation-avec-swiftui-0743">Programmation avec SwiftUI</a> (07:43) ⟹ <strong>nouveauté iOS 15</strong></p>
+</li>
+</ul>
+<p><br><br></p>
+<h2 id="introduction-0020"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=20">Introduction (00:20)</a> <a class="header-anchor" href="#introduction-0020" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>L'utilisation de <span lang="en">VoiceOver</span> pour présenter un ensemble de données peut devenir rapidement très problématique si on veut absolument vocaliser chacun des éléments affichés sans que cela ne soit réellement le souhait de l'utilisateur.<br>
+<img src="../../../../images/iOSdev/wwdc21-121-Intro1.png" alt="" class="img-fluid"><br>
+Pour bien comprendre le <strong>fournisseur de contenu personnalisé</strong>, une application <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=37">initialement sans cette fonctionnalité</a> est exposée pour mettre en avant les manquements à combler et optimiser ainsi son utilisation future.</p>
+<p>Pour implémenter cette fonctionnalité, il est impératif d'importer le <span lang="en">framework <code>Accessibility</code></span> (disponible depuis iOS 14) qui va permettre d'utiliser le protocole <strong><a href="https://developer.apple.com/documentation/accessibility/axcustomcontentprovider">AXCustomContentProvider</a></strong> ainsi que la classe <strong><a href="https://developer.apple.com/documentation/accessibility/axcustomcontent">AXCustomContent</a></strong>.<br>
+<a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=110"></p>
+<p><img src="../../../../images/iOSdev/wwdc21-121-Intro2.png" alt="Accès à l'extrait de la vidéo mentionnant le protocole et la classe utilisées." class="img-fluid"><br>
+<br><br></p>
+<h2 id="fonctionnement-0229"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=149">Fonctionnement (02:29)</a> <a class="header-anchor" href="#fonctionnement-0229" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>L'implémentation du <strong>fournisseur de contenu personnalisé</strong> est immédiatement mise en évidence par une <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=155"><code>vocalisation spécifique</code></a> réalisée automatiquement par <span lang="en">VoiceOver</span> qui, par ce biais, suggère l'utilisation du rotor pour obtenir de plus amples informations si besoin.</p>
+<p><img src="../../../../images/iOSdev/wwdc21-121-Using1.png" alt="" class="img-fluid"><br>
+L'utilisateur est ainsi averti que des informations complémentaires sont disponibles en sélectionnant l'item du rotor intitulé <code>Plus de contenus</code>.<br>
+Il suffit ensuite de faire glisser un doigt verticalement pour faire défiler successivement chacune des informations proposées ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=192">🎬</a></p>
+<p><img src="../../../../images/iOSdev/wwdc21-121-Using2.png" alt="" class="img-fluid"></p>
+<p>La fonctionnalité <strong>fournisseur de contenu personnalisé</strong> doit être activée par l'utilisateur dans ses réglages pour être détectée par le lecteur d'écran ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=264">🎬</a></p>
+<p><img src="../../../../images/iOSdev/wwdc21-121-Using3.png" alt="" class="img-fluid"><br>
+<br><br></p>
+<h2 id="programmation-avec-uikit-0457"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=297">Programmation avec UIKit (04:57)</a> <a class="header-anchor" href="#programmation-avec-uikit-0457" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Pour implémenter le <strong>fournisseur de contenu personnalisé</strong> à l'exemple proposé, quelques étapes indispensables sont nécessaires :</p>
+<ul>
+<li>
+<p>importer le <span lang="en">framework <code>Accessibility</code></span>,</p>
+</li>
+<li>
+<p>spécifier l'adaptation au protocole <code>AXCustomContentProvider</code> pour le type d'élément auquel la fonctionnalité va être rattachée,</p>
+</li>
+<li>
+<p>définir la propriété <code>accessibilityCustomContent</code> liée à ce protocole en spécifiant chacune des informations que le fournisseur de contenu personnalisé sera susceptible de mentionner,</p>
+</li>
+<li>
+<p>regrouper l'ensemble de ces informations dans un tableau qui sera retourné par la propriété précédente.</p>
+</li>
+</ul>
+<p><img src="../../../../images/iOSdev/wwdc21-121-UIKit1.png" alt="" class="img-fluid"></p>
+<p>Le <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=388">résultat</a> est très satisfaisant mais il peut-être encore optimisé si, lors de la sélection de l'élément impacté, on souhaite tout de même mettre en avant une des informations créées précédemment ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=410">🎬</a></p>
+<p><img src="../../../../images/iOSdev/wwdc21-121-UIKit2.png" alt="" class="img-fluid"></p>
+<p>La <a href="../../../developpement/#fournisseur-de-contenu-personnalise" style="text-decoration: underline;">section développement iOS</a> de ce site propose un éventuel complément d'informations avec une description réalisée l'an dernier à l'issue de la WWDC20.</p>
+<p><br><br></p>
+<h2 id="programmation-avec-swiftui-0743"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=463">Programmation avec SwiftUI (07:43)</a> <a class="header-anchor" href="#programmation-avec-swiftui-0743" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>La <strong>nouveauté iOS 15</strong> de cette fonctionnalité introduite dans la version iOS précédente réside dans son <strong>adaptation à SwiftUI</strong>.<br>
+<img src="../../../../images/iOSdev/wwdc21-121-SwiftUI1.png" alt="" class="img-fluid"></p>
+<p>L'ensemble des informations à définir est beaucoup plus condensée qu'avec UIKit.<br>
+<img src="../../../../images/iOSdev/wwdc21-121-SwiftUI2.png" alt="" class="img-fluid"><br>
+<br><br><br></p>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#introduction-0020" class="nav-link text-muted bg-200">Introduction (00:20)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#fonctionnement-0229" class="nav-link text-muted bg-200">Fonctionnement (02:29)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#programmation-avec-uikit-0457" class="nav-link text-muted bg-200">Programmation avec UIKit (04:57)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#programmation-avec-swiftui-0743" class="nav-link text-muted bg-200">Programmation avec SwiftUI (07:43)</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     
 
 <footer id="footer" class="o-footer" role="contentinfo">
@@ -236,7 +322,7 @@
           </a>
         </li>
         <li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/ios/historique.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/ios/wwdc/2021/121.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
             Signaler une erreur sur GitHub<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
