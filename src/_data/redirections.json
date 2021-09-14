@@ -468,6 +468,14 @@
     "new": "/fr/contenu-et-communication/word/tester"
   },
   {
+    "old" :"/fr/contenu-editorial/e-learning",
+    "new" : "/fr/contenu-et-communication/e-learning"
+  },
+  {
+    "old" :"/fr/contenu-editorial/e-learning/momindum",
+    "new" : "/fr/contenu-et-communication/e-learning/momindum"
+  },
+  {
     "old": "others/word-test.html",
     "new": "/fr/contenu-et-communication/word/tester"
   },
