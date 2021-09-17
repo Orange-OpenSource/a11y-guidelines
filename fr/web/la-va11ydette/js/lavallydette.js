@@ -4744,7 +4744,7 @@ exportStatementHTML = function(statementResult) {
 </head>
 
 <body>    
-    <main class="container-mb content">        
+    <main class="container content">        
         <h1>${langStatement.statementTemplate.title} : ${dataVallydette.statement.name}</h1>
         
         <div class="summary">
