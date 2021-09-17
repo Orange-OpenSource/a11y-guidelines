@@ -169,8 +169,8 @@ module.exports = {
         ]
       },
       {
-        label: 'Contenu éditorial',
-        href: '/fr/contenu-editorial/',
+        label: 'Contenu et communication',
+        href: '/fr/contenu-et-communication/',
         inCardNavigation: true,
         icon: {
           name: 'editorial-content',
@@ -179,12 +179,12 @@ module.exports = {
         },
         theme: 'purple',
         subLevels: [
-          { label: 'Word', href: '/fr/contenu-editorial/word/' },
-          { label: 'Powerpoint', href: '/fr/contenu-editorial/powerpoint/' },
-          { label: 'Documents PDF', href: '/fr/contenu-editorial/pdf/' },
-          { label: 'Emails', href: '/fr/contenu-editorial/emails/' },
-          { label: 'Contenus audios/vidéos', href: '/fr/contenu-editorial/composants-animes/' },
-		  { label: 'E-learning', href: '/fr/contenu-editorial/e-learning/' }
+          { label: 'Word', href: '/fr/contenu-et-communication/word/' },
+          { label: 'Powerpoint', href: '/fr/contenu-et-communication/powerpoint/' },
+          { label: 'Documents PDF', href: '/fr/contenu-et-communication/pdf/' },
+          { label: 'Emails', href: '/fr/contenu-et-communication/emails/' },
+          { label: 'Contenus audios/vidéos', href: '/fr/contenu-et-communication/composants-animes/' },
+		  { label: 'E-learning', href: '/fr/contenu-et-communication/e-learning/' }
         ]
       },
       { label: 'Articles', href: '/fr/articles/' }

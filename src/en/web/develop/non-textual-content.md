@@ -85,7 +85,7 @@ To be accessible, the multimedia contents must:
 6. Prohibit videos that have more than 3 flashes per second
 7. Furthermore, for any sound that has been emitted for more than 3 seconds, the user must have the option of either stopping or pausing it or controlling its volume regardless of the overall system volume.
 
-For more info check out [accessibility recommendations for video content, animations and Orange audios](../../../../fr/contenu-editorial/composants-animes/).
+For more info check out [accessibility recommendations for video content, animations and Orange audios](../../../../fr/contenu-et-communication/composants-animes/).
 
 **Users’ goal:**
 

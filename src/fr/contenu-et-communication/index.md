@@ -36,7 +36,7 @@ Cette section présente des recommandations générales à respecter pour garant
 
 ## Mise en page avec des tableaux 
 
-Sachant que les clients de messagerie (Outlook inclus) obligent encore parfois à utiliser une [mise en page en tableaux](/fr/contenu-editorial/emails/) : ajouter un `role="presentation"` à vos balises table afin que les synthèses vocales comprennent qu'il ne s'agit que de mise en forme.  
+Sachant que les clients de messagerie (Outlook inclus) obligent encore parfois à utiliser une [mise en page en tableaux](/fr/contenu-et-communication/emails/) : ajouter un `role="presentation"` à vos balises table afin que les synthèses vocales comprennent qu'il ne s'agit que de mise en forme.  
 
 
 ## Des tableaux de données accessibles

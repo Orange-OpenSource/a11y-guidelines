@@ -6,7 +6,7 @@ abstract: "Recommandations Momindum Maker"
 # Recommandations Momindum Maker
 
 Les bonnes pratiques détaillées dans cet article s'appliquent à l'outil *Momindum Maker*, permettant de créer des présentations vidéos à partir d'un document *Powerpoint*.
-Il est donc impératif en pré-requis d'appliquer <a href="/fr/contenu-editorial/powerpoint/">les recommandations Powerpoint</a> sur le document servant de base à la présentation.
+Il est donc impératif en pré-requis d'appliquer <a href="/fr/contenu-et-communication/powerpoint/">les recommandations Powerpoint</a> sur le document servant de base à la présentation.
 
 ## Propriétés du projet
 Renseigner au minimum le titre et la langue.
@@ -18,7 +18,7 @@ Ce sont 2 éléments très importants pour les utilisateurs de lecteur d’écra
 - *Langue*
 Le choix de langue définit la traduction des éléments de navigation (ex : lecture / pause, menu de navigation, etc…).
 
-<img alt="" src="/fr/contenu-editorial/images/titre-presentation.png" class="img-fluid" />  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/titre-presentation.png" class="img-fluid" />  &nbsp;
 
 ## Proposer des alternatives aux pistes audios et vidéos
 - *Sous-titres*
@@ -29,7 +29,7 @@ Le choix de langue définit la traduction des éléments de navigation (ex : lec
 	- Proposer une transcription complète de la vidéo sous forme d’un fichier texte (txt, word, html)
 	- Veiller à renseigner un titre compréhensible pour le document
 	
-<img alt="" src="/fr/contenu-editorial/images/momindum-alternative.png" class="img-fluid" />  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/momindum-alternative.png" class="img-fluid" />  &nbsp;
 	
 ## Définir un plan
 - *Le système de plan généré par Momindum est accessible.*
@@ -38,14 +38,14 @@ Il peut notamment être utilisé depuis une navigation clavier ou un lecteur d'�
 
 - Il est impératif que les libellés soient pertinents.
 
-<img alt="" src="/fr/contenu-editorial/images/momindum-plan.png" class="img-fluid" />  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/momindum-plan.png" class="img-fluid" />  &nbsp;
 	
 ## Quizz
-Les quizz Momindum sont utilisables (voir néanmoins les remarques dans le paragraphe <a href="/fr/contenu-editorial/e-learning/momindum/#defauts-daccessibilites">défauts d'accessibilités</a>.
+Les quizz Momindum sont utilisables (voir néanmoins les remarques dans le paragraphe <a href="/fr/contenu-et-communication/e-learning/momindum/#defauts-daccessibilites">défauts d'accessibilités</a>.
 
 - Proposer néanmoins *le résultat sous forme de texte*, car l’information (bonne / mauvaise réponse) est donnée uniquement par la couleur (elle sera non perçue par les utilisateurs non-voyants ou malvoyants).
 
-<img alt="" src="/fr/contenu-editorial/images/momindum-quizz.png" class="img-fluid" />  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/momindum-quizz.png" class="img-fluid" />  &nbsp;
 	
 ## Défauts d'accessibilités
 

@@ -5,7 +5,7 @@ abstract: "Recommandations Storyline 360"
 # Recommandations Storyline 360
 
 Recommandations pour la création de présentation <span lang="en">e-learning</span> accessible.
-*Remarque* : en complément <a href="/fr/contenu-editorial/">les recommandations éditoriales générales</a> (couleurs, faciliter la lecture, etc...) sont également à appliquer, mais non décrites dans cet article.
+*Remarque* : en complément <a href="/fr/contenu-et-communication/">les recommandations éditoriales générales</a> (couleurs, faciliter la lecture, etc...) sont également à appliquer, mais non décrites dans cet article.
 
 ## Personnaliser l’expérience utilisateur dès le début
 
@@ -16,7 +16,7 @@ Les utilisateurs doivent pouvoir connaître et anticiper les mécanismes de navi
 - Ces instructions présentent les éventuels raccourcis spécifiques à l’<span lang="en">e-learning</span>
 - Pour les utilisateurs de lecteur d’écran, nous recommandons d’ajouter des instructions à propos de la navigation clavier
 <figure class="figure">
-  <img alt="" src="/fr/contenu-editorial/images/trigger-wizard.png" class="img-fluid">
+  <img alt="" src="/fr/contenu-et-communication/images/trigger-wizard.png" class="img-fluid">
   <figcaption class="figure-caption">Si des raccourcis clavier sont définis, ceux-ci doivent être annoncés dès le premier diapositive.</figcaption>
 </figure>
 
@@ -30,7 +30,7 @@ Les contenus (serious game, exercices, …) pourront être adaptés au contexte 
 - Proposer des mécanismes alternatifs (ex : en remplacement d’un système drag n’drop par exemple)
 - Proposer des contenus supplémentaires (ex : ajout de descriptions détaillées destinées aux lecteurs d’écrans)
 <figure class="figure">
-  <img alt="" src="/fr/contenu-editorial/images/profile-selection.png" class="img-fluid">
+  <img alt="" src="/fr/contenu-et-communication/images/profile-selection.png" class="img-fluid">
   <figcaption class="figure-caption">Dans cet exemple des Serious Games alternatifs sont proposés aux utilisateurs non-voyants.</figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ La visualisation du focus permet aux utilisateurs clavier de se repérer dans le
 2. Sélectionner "Couleurs & effets"
 3. Modifier la couleurs par défaut du focus
 
- <img alt="" src="/fr/contenu-editorial/images/storyline-focus.png" class="img-fluid">  &nbsp;
+ <img alt="" src="/fr/contenu-et-communication/images/storyline-focus.png" class="img-fluid">  &nbsp;
   
 ## S’assurer que l’utilisateur garde le contrôle lors des interactions
 
@@ -62,7 +62,7 @@ Les résultats des quizzs notamment, doivent être perçus par tous les utilisat
 - Utiliser les composants de notifications natifs de Storyline (<span lang="en">feedback layers</span>)
 - Lancer une vocalisation du résultat après soumission par l’utilisateur
 <figure class="figure">
-  <img alt="" src="/fr/contenu-editorial/images/feedback-message.png" class="img-fluid">
+  <img alt="" src="/fr/contenu-et-communication/images/feedback-message.png" class="img-fluid">
   <figcaption class="figure-caption">Dans cet exemple, le résultat "Pas tout-à-fait... Toutes ces propositions sont exactes !" est vocalisé par une voix-off</figcaption>
 </figure>
 
@@ -94,13 +94,13 @@ Pour tous les utilisateurs, quel que soit leur moyen de naviguer (lecteur d’é
 6. Activer « enregistrer »
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/storyline-order-1.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/storyline-order-1.png" class="img-fluid">
 <figcaption class="figure-caption">Storyline permet la réorganisation de tous les éléments grâce à l'option "Ordre du focus".
 </figcaption>
 </figure>
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/storyline-order-2.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/storyline-order-2.png" class="img-fluid">
 <figcaption class="figure-caption">L’ordre des éléments à l’écran, ne correspond pas toujours à l’ordre des éléments dans le code source.
 L’ordre des éléments dans le code source, va avoir un impact lors de la lecture depuis une aide technique, comme un lecteur d’écran par exemple.
 </figcaption>
@@ -120,13 +120,13 @@ Ceci est particulièrement important pour les utilisateurs de lecteurs d'écran.
 3. Compléter le champ " Titre "
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/titre-formation.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/titre-formation.png" class="img-fluid">
 <figcaption class="figure-caption">Cliquer sur Publier, puis renseigner le champ Titre.
 </figcaption>
 
 </figure>
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/onglet-formation.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/onglet-formation.png" class="img-fluid">
 <figcaption class="figure-caption">Le titre apparaît dans l'onglet du navigateur.
 </figcaption>
 </figure>
@@ -139,7 +139,7 @@ Notamment les utilisateurs de lecteurs d'écran, en effet cet élément sera voc
 
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/titre-diapo.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/titre-diapo.png" class="img-fluid">  &nbsp;
 <figcaption class="figure-caption">Double cliquer sur le titre de la diapositive pour le modifier.
 </figcaption>
 </figure>
@@ -150,7 +150,7 @@ Appliquer des styles de titre sur les textes présentés comme des titres.
 Les titres de niveaux sont essentiels aux utilisateurs de lecteurs d'écran pour leur permettre de comprendre la structure du contenu et naviguer facilement au sein de celui-ci.
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/storyline-titre-niveau.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/storyline-titre-niveau.png" class="img-fluid">  &nbsp;
 <figcaption class="figure-caption">Utiliser les styles appropriés (de Titre 1 à Titre 4).
 </figcaption>
 </figure>
@@ -161,7 +161,7 @@ Le texte de remplacement est primordial pour les utilisateurs non-voyants.
 C’est ce contenu qui sera vocalisé.
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/alt-images.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/alt-images.png" class="img-fluid">
 <figcaption class="figure-caption">
 Liste de 3 boutons (anticiper, gérer, communiquer), basés sur des images.
 
@@ -179,7 +179,7 @@ Liste de 3 boutons (anticiper, gérer, communiquer), basés sur des images.
 - Éviter les abréviations et la répétition d’éléments de ponctuation
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/alt-images-infos.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/alt-images-infos.png" class="img-fluid">
 <figcaption class="figure-caption">
 Exemple d’une image porteuse d’information :
 
@@ -195,13 +195,13 @@ Exemple d’une image porteuse d’information :
 4. Cliquer sur « Enregistrer »
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/storyline-order-1.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/storyline-order-1.png" class="img-fluid">
 <figcaption class="figure-caption">
 Les textes alternatifs peuvent être définis depuis le panneau "Ordre du focus".
 </figcaption>
 </figure>
 
-<img alt="" src="/fr/contenu-editorial/images/storyline-order-3.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/storyline-order-3.png" class="img-fluid">  &nbsp;
 
 
 ## Masquer les images décoratives
@@ -215,8 +215,8 @@ Les bénéfices :
 - Alléger la navigation clavier en supprimant des éléments inutiles du parcours clavier
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/image-deco-1.png" class="w-50 pr-1 float-left">
-<img alt="" src="/fr/contenu-editorial/images/image-deco-2.png" class="w-50 float-left">
+<img alt="" src="/fr/contenu-et-communication/images/image-deco-1.png" class="w-50 pr-1 float-left">
+<img alt="" src="/fr/contenu-et-communication/images/image-deco-2.png" class="w-50 float-left">
 <figcaption class="figure-caption">
 Exemples d'images décoratives, dans ces contextes, le personnages ou le pied de table n'apportent pas d'informations.
 Ils peuvent donc être masqués aux utilisateurs d'aides techniques.
@@ -231,8 +231,8 @@ Ils peuvent donc être masqués aux utilisateurs d'aides techniques.
 5. Décocher la case « L’objet est visible… »
 6. Cliquer sur «fermer »
 
-<img alt="" src="/fr/contenu-editorial/images/hide-image.png" class="img-fluid mb-1">
-<img alt="" src="/fr/contenu-editorial/images/hide-image-2.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/hide-image.png" class="img-fluid mb-1">
+<img alt="" src="/fr/contenu-et-communication/images/hide-image-2.png" class="img-fluid">  &nbsp;
 
 
 ## Indiquer la langue principale du document
@@ -246,7 +246,7 @@ Définir la langue d'un document permettra aux synthèses vocales d'adapter leur
 4. Modifier les textes dans la colonne « texte personnalisé »
 5. Cliquer sur « OK »
 
-<img alt="" src="/fr/contenu-editorial/images/storyline-langue-1.png" class="img-fluid mb-1">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/storyline-langue-1.png" class="img-fluid mb-1">  &nbsp;
 
 ## Contenus audio ou vidéo
 
@@ -254,7 +254,7 @@ Définir la langue d'un document permettra aux synthèses vocales d'adapter leur
 - Ne pas lancer l’audio ou la vidéo automatiquement
 - Si le média se lance automatiquement, s’assurer que l’utilisateur a la possibilité de l’arrêter manuellement
 
-<img alt="" src="/fr/contenu-editorial/images/lancement-auto.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/lancement-auto.png" class="img-fluid">  &nbsp;
 
 ### Audios accessibles
 
@@ -265,7 +265,7 @@ Storyline permet la création de sous-titres synchronisés.
 - S’assurer que l’ensemble du contenu textuel du diapositive soit vocalisé, afin de ne pas induire en erreur les utilisateurs non-voyants qui pourraient se reposer uniquement sur l’audio et ne pas consulter manuellement tout le contenu du diapositive.
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/activer-sous-titre.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/activer-sous-titre.png" class="img-fluid">
 <figcaption class="figure-caption">
 Donner la possibilité aux utilisateurs d'activiter les sous-titres dès le début de la présentation.
 </figcaption>
@@ -273,7 +273,7 @@ Donner la possibilité aux utilisateurs d'activiter les sous-titres dès le déb
 
 ### Vidéos accessibles
 
-Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-editorial/composants-animes) pour en savoir plus.
+Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-et-communication/composants-animes) pour en savoir plus.
 
 ## Ressources
 

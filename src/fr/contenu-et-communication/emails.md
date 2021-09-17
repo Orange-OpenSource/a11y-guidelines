@@ -18,14 +18,14 @@ Principalement :
 ## À noter 
 Si votre communication contient beaucoup d'informations et que sa mise en page nécessite d’être complexe : 
 -	Créer le mail avec la méthode qui vous est la plus simple, 
--	Ajouter en pièce jointe un [fichier Word accessible](/fr/contenu-editorial/word/) (ou fichier texte) contenant le même niveau d’information mais sous forme **textuelle uniquement**, 
+-	Ajouter en pièce jointe un [fichier Word accessible](/fr/contenu-et-communication/word/) (ou fichier texte) contenant le même niveau d’information mais sous forme **textuelle uniquement**, 
 -	Ajouter une alternative textuelle précisant que l'équivalent textuel est contenu dans la pièce jointe. 
 
 ## Les mails du quotidien 
 Pour tous vos mails du quotidien : 
 - Utiliser des polices simples, sans serif : Arial, Calibri ou la [police Accessible DfA](https://opensource.orange.com/fr/category/actualites/ow2-fr/osai-fr/accessible_dfa-fr/)
 -	Adopter une taille de police au moins égale à 10 points
-- Conserver l’accent des lettres en majuscule, voir [comment mettre des accents aux majuscules](/fr/contenu-editorial/#comment-mettre-des-accents-aux-majuscules) ? ou suite Office : menu **Insertion** > **Symbole**
+- Conserver l’accent des lettres en majuscule, voir [comment mettre des accents aux majuscules](/fr/contenu-et-communication/#comment-mettre-des-accents-aux-majuscules) ? ou suite Office : menu **Insertion** > **Symbole**
 - Mettre une  majuscule à chaque début de phrase mais éviter les phrases entières en majuscule
 - Aligner les textes à gauche (éviter de justifier) 
 - Éviter l’italique 
@@ -46,15 +46,15 @@ Pour tous vos mails du quotidien :
 Plusieurs options s’offrent à vous pour créer un Pushmail accessible.
 
 ### Création à partir d’un document Word
-1. Créer un document Word accessible en suivant [nos recommandations Word](/fr/contenu-editorial/word/).
+1. Créer un document Word accessible en suivant [nos recommandations Word](/fr/contenu-et-communication/word/).
 2. Utiliser l’option « Envoyer au destinataire du message ».  
 
 Option à ajouter la première fois via **Fichier > Option > Barre d’outils accès rapide > Envoyer au destinataire du message**. 
 
-<img src="/fr/contenu-editorial/images/email1.png" width="400">
+<img src="/fr/contenu-et-communication/images/email1.png" width="400">
 
 ### Création à partir d’un outil de newsletter / mailing 
-Il est tout à fait possible que l’outil que vous avez choisi fournisse des gabarits nativement accessibles mais cela n’empêche pas de suivre nos [recommandations générales pour le contenu éditorial](/fr/contenu-editorial/). 
+Il est tout à fait possible que l’outil que vous avez choisi fournisse des gabarits nativement accessibles mais cela n’empêche pas de suivre nos [recommandations générales pour le contenu éditorial](/fr/contenu-et-communication/). 
 
 Toujours vérifier : 
 -	Alternatives textuelles des images,  

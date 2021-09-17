@@ -9,7 +9,7 @@ abstract: "Quelques recommandations pour créer des documents PDF accessibles"
 Afin de rendre vos PDF compréhensibles et utilisables par tous, il faut qu'ils soient structurés en suivant ces recommandations.
 
 ### Depuis Microsoft Word ou PowerPoint
-Retrouvez [nos recommandations pour créer un PDF accessible depuis Microsoft Word](/fr/contenu-editorial/word/#convertir-en-fichier-pdf) et [nos recommandations pour Microsoft PowerPoint](/fr/contenu-editorial/powerpoint/#convertir-une-presentation-powerpoint-en-fichier-pdf).
+Retrouvez [nos recommandations pour créer un PDF accessible depuis Microsoft Word](/fr/contenu-et-communication/word/#convertir-en-fichier-pdf) et [nos recommandations pour Microsoft PowerPoint](/fr/contenu-et-communication/powerpoint/#convertir-une-presentation-powerpoint-en-fichier-pdf).
 
 ### Depuis Adobe InDesign
 InDesign est un logiciel de mise en page, notamment utilisé en pré-presse pour la production de documents imprimables.
@@ -96,4 +96,4 @@ Ces logiciels permettent l’exécution de tests automatiques sur un document PD
 * testent les propriétés du document, 
 * vérifient le balisage des listes et des liens, des formulaires et des tableaux.
 
-<img src="/fr/contenu-editorial/images/pac1.png" alt="" class="img-fluid" />
+<img src="/fr/contenu-et-communication/images/pac1.png" alt="" class="img-fluid" />
