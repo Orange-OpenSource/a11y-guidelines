@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Concevoir des mails accessibles à tous - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Quelques recommandations concernant l&#39;accessibilité des emails">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d&#39;évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Aller à la recherche</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/contenu-et-communication/" class="nav-link active" aria-current="true">
+  Contenu et communication
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-toggle="collapse" data-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Rechercher">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="sr-only">Rechercher</span>
+    </button>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-500" aria-label="Rechercher" placeholder="Rechercher">
+  </form>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/fr/contenu-et-communication/word/" class="nav-link">
+  Word
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/powerpoint/" class="nav-link">
+  Powerpoint
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/pdf/" class="nav-link">
+  Documents PDF
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/emails/" class="nav-link active" aria-current="page">
+  Emails
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/composants-animes/" class="nav-link">
+  Contenus audios/vidéos
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/e-learning/" class="nav-link">
+  E-learning
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&amp;nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/contenu-et-communication/">Contenu et communication</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Emails
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite" class="dropdown-item text-wrap">Qu’est ce qui peut poser problème d’un point de vue accessibilité ?</a><a href="#a-noter" class="dropdown-item text-wrap">À noter</a><a href="#les-mails-du-quotidien" class="dropdown-item text-wrap">Les mails du quotidien</a><a href="#les-pushmails-newsletters-communications-automatiques" class="dropdown-item text-wrap">Les Pushmails / newsletters / communications automatiques</a><a href="#creation-a-partir-dun-document-word" class="dropdown-item text-wrap">Création à partir d’un document Word</a><a href="#creation-a-partir-dun-outil-de-newsletter-mailing" class="dropdown-item text-wrap">Création à partir d’un outil de newsletter / mailing</a><a href="#creation-a-partir-dhtml-ou-autre-outil-dedie" class="dropdown-item text-wrap">Création à partir d’HTML (ou autre outil dédié)</a><a href="#liens-utiles" class="dropdown-item text-wrap">Liens utiles</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Concevoir des mails accessibles à tous</h1>
+<p>Voici une liste de recommandations pour écrire (ou produire des templates qui permettent de générer) des messages accessibles, c’est-à-dire, compréhensibles par tous.</p>
+<h2 id="quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite">Qu’est ce qui peut poser problème d’un point de vue accessibilité ? <a class="header-anchor" href="#quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Principalement :</p>
+<ul>
+<li>Les images</li>
+<li>Les polices, couleurs et styles utilisés</li>
+<li>Les tableaux de mise en forme</li>
+<li>Les liens</li>
+<li>Les pièces jointes</li>
+</ul>
+<h2 id="a-noter">À noter <a class="header-anchor" href="#a-noter" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Si votre communication contient beaucoup d'informations et que sa mise en page nécessite d’être complexe :</p>
+<ul>
+<li>Créer le mail avec la méthode qui vous est la plus simple,</li>
+<li>Ajouter en pièce jointe un <a href="/fr/contenu-et-communication/word/">fichier Word accessible</a> (ou fichier texte) contenant le même niveau d’information mais sous forme <strong>textuelle uniquement</strong>,</li>
+<li>Ajouter une alternative textuelle précisant que l'équivalent textuel est contenu dans la pièce jointe.</li>
+</ul>
+<h2 id="les-mails-du-quotidien">Les mails du quotidien <a class="header-anchor" href="#les-mails-du-quotidien" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Pour tous vos mails du quotidien :</p>
+<ul>
+<li>Utiliser des polices simples, sans serif : Arial, Calibri ou la <a href="https://opensource.orange.com/fr/category/actualites/ow2-fr/osai-fr/accessible_dfa-fr/">police Accessible DfA</a></li>
+<li>Adopter une taille de police au moins égale à 10 points</li>
+<li>Conserver l’accent des lettres en majuscule, voir <a href="/fr/contenu-et-communication/#comment-mettre-des-accents-aux-majuscules">comment mettre des accents aux majuscules</a> ? ou suite Office : menu <strong>Insertion</strong> &gt; <strong>Symbole</strong></li>
+<li>Mettre une  majuscule à chaque début de phrase mais éviter les phrases entières en majuscule</li>
+<li>Aligner les textes à gauche (éviter de justifier)</li>
+<li>Éviter l’italique</li>
+<li>Vérifier le contraste entre la couleur de police et l’arrière-plan à l’aide de l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> et limiter le nombre total de couleurs utilisées</li>
+<li>Utiliser un fond neutre : pas de papier à lettre décoratif ni d’images d’arrière-plan</li>
+<li>Renseigner un texte de remplacement pour toutes les images (ou alternative textuelle, suite Office : <strong>clic droit</strong> sur l’image &gt; <strong>Format de l’image</strong> &gt; <strong>Texte de remplacement</strong> &gt; champ <strong>« Description »</strong>)</li>
+<li>Utiliser les styles « Titre » et « Sous-titre » du menu « format du texte » si mail long, avec plusieurs sections</li>
+<li>Traduire les émoticônes, exemple : [smiley clin d’oeil] à la place du classique « ;) »</li>
+<li>Éviter les animations, les GIFs et les flashs</li>
+<li>Utiliser les fonctions « <strong>Retrait, Espacement</strong> » pour sauter des lignes, exemple suite Office : <strong>Menu Mise en page &gt; Paragraphe &gt; Retrait ou Espacement</strong> ou <strong>Clic droit : « Paragraphe… »</strong>)</li>
+<li>Rédiger des libellés de liens explicites, exemple : préférer « découvrez nos offres » à « cliquer ici » ou « en savoir plus »</li>
+<li>Vérifier que la <a href="https://www.ludotic.com/quelle-taille-boutons-sur-une-interface-tactile/">taille des boutons et des zones cliquables</a> est suffisante (1cm de côté)</li>
+<li>Paramétrer votre outil mail : format HTML par défaut, exemple Outlook : <strong>Fichier &gt; Options &gt; Courrier &gt; Composition des messages</strong></li>
+<li><strong>Pièces jointes</strong> : Utiliser la fonction « Insérer » pour ajouter une pièce jointe afin que le lecteur d’écran signale sa présence, elle apparaitra dans le champ « Attaché »</li>
+</ul>
+<h2 id="les-pushmails-newsletters-communications-automatiques">Les Pushmails / newsletters / communications automatiques <a class="header-anchor" href="#les-pushmails-newsletters-communications-automatiques" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Plusieurs options s’offrent à vous pour créer un Pushmail accessible.</p>
+<h3 id="creation-a-partir-dun-document-word">Création à partir d’un document Word <a class="header-anchor" href="#creation-a-partir-dun-document-word" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ol>
+<li>Créer un document Word accessible en suivant <a href="/fr/contenu-et-communication/word/">nos recommandations Word</a>.</li>
+<li>Utiliser l’option « Envoyer au destinataire du message ».</li>
+</ol>
+<p>Option à ajouter la première fois via <strong>Fichier &gt; Option &gt; Barre d’outils accès rapide &gt; Envoyer au destinataire du message</strong>.</p>
+<img src="/fr/contenu-et-communication/images/email1.png" width="400">
+<h3 id="creation-a-partir-dun-outil-de-newsletter-mailing">Création à partir d’un outil de newsletter / mailing <a class="header-anchor" href="#creation-a-partir-dun-outil-de-newsletter-mailing" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Il est tout à fait possible que l’outil que vous avez choisi fournisse des gabarits nativement accessibles mais cela n’empêche pas de suivre nos <a href="/fr/contenu-et-communication/">recommandations générales pour le contenu éditorial</a>.</p>
+<p>Toujours vérifier :</p>
+<ul>
+<li>Alternatives textuelles des images,</li>
+<li>Titres de niveaux,</li>
+<li>Si tableaux de présentation : ajouter le role=presentation dans la balise <code>table</code>.</li>
+</ul>
+<h3 id="creation-a-partir-dhtml-ou-autre-outil-dedie">Création à partir d’HTML (ou autre outil dédié) <a class="header-anchor" href="#creation-a-partir-dhtml-ou-autre-outil-dedie" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Composer le code HTML de façon accessible en suivant <a href="/fr/web/developper/">les principales recommandations Web</a>.</p>
+<p><strong>Important :</strong> compte tenu des problématiques d’interprétation des multiples clients mail, la mise en page devrait plutôt être faite via des tableaux en utilisant l’attribut role=presentation dans la balise table.</p>
+<p>Afin de tester ponctuellement la prise en charge de l’HTML et du CSS dans les différents clients mails, utilisez les sites <a href="https://www.caniemail.com/">Can I email ?</a> et <a href="https://caniuse.email/">Can I use in HTML emails ?</a>.<br>
+Afin de tester toute votre campagne mail, utiliser le site <a href="http://www.accessible-email.org/">Accessible email</a></p>
+<h2 id="liens-utiles">Liens utiles <a class="header-anchor" href="#liens-utiles" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li><a href="https://support.office.com/fr-fr/article/vid%C3%A9o-am%C3%A9liorer-l-accessibilit%C3%A9-des-e-mails-ebf3730a-18f8-4b57-81d1-730086231775">Tuto Office mails accessibles</a></li>
+<li><a href="https://www.caniemail.com/">Tester la prise en charge de l’HTML et du CSS sur les différents clients mails</a></li>
+<li><a href="https://emails.hteumeuleu.com/which-email-clients-should-you-test-on-b2a892e57606">Sur quels clients mails tester en priorité (anglais)</a></li>
+<li><a href="https://webdesign.tutsplus.com/tutorials/a-beginners-guide-to-email-accessibility--cms-31240">Guide le l’accessibilité des mails (anglais)</a></li>
+<li><a href="https://litmus.com/blog/ultimate-guide-accessible-emails">Guide Litmus : mails accessibles (anglais)</a></li>
+<li><a href="https://www.smashingmagazine.com/2012/02/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/">Taille idéale des zones cliquables (anglais)</a></li>
+<li><a href="https://www.ludotic.com/quelle-taille-boutons-sur-une-interface-tactile/">Taille des boutons interface tactile</a></li>
+<li><a href="https://opensource.orange.com/fr/category/actualites/ow2-fr/osai-fr/accessible_dfa-fr/">Police Accessible DfA</a></li>
+</ul>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#quest-ce-qui-peut-poser-probleme-dun-point-de-vue-accessibilite" class="nav-link text-muted bg-200">Qu’est ce qui peut poser problème d’un point de vue accessibilité ?</a>
+          </li><li class="nav-item position-relative">
+            <a href="#a-noter" class="nav-link text-muted bg-200">À noter</a>
+          </li><li class="nav-item position-relative">
+            <a href="#les-mails-du-quotidien" class="nav-link text-muted bg-200">Les mails du quotidien</a>
+          </li><li class="nav-item position-relative">
+            <a href="#les-pushmails-newsletters-communications-automatiques" class="nav-link text-muted bg-200">Les Pushmails / newsletters / communications automatiques</a>
+          </li><li class="nav-item position-relative">
+            <a href="#creation-a-partir-dun-document-word" class="nav-link text-muted bg-200">Création à partir d’un document Word</a>
+          </li><li class="nav-item position-relative">
+            <a href="#creation-a-partir-dun-outil-de-newsletter-mailing" class="nav-link text-muted bg-200">Création à partir d’un outil de newsletter / mailing</a>
+          </li><li class="nav-item position-relative">
+            <a href="#creation-a-partir-dhtml-ou-autre-outil-dedie" class="nav-link text-muted bg-200">Création à partir d’HTML (ou autre outil dédié)</a>
+          </li><li class="nav-item position-relative">
+            <a href="#liens-utiles" class="nav-link text-muted bg-200">Liens utiles</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link">
+  À propos
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/accessibilite" class="nav-link">
+  Accessibilité
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/fr/" class="nav-link">
+  Pré-version sur Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Déploiements sur Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/contenu-et-communication/emails.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+            Signaler une erreur sur GitHub<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" aria-label="Retour en haut de page">
+      <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
+        <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.min.js" integrity="sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI" crossorigin="anonymous"></script>
+    
+    
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:fr"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2021 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>

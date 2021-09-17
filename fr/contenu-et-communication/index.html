@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Recommandations éditoriales générales - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Quelques recommandations concernant la rédaction des contenus éditoriaux">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d&#39;évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Aller à la recherche</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/contenu-et-communication/" class="nav-link active" aria-current="page">
+  Contenu et communication
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-toggle="collapse" data-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Rechercher">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="sr-only">Rechercher</span>
+    </button>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-500" aria-label="Rechercher" placeholder="Rechercher">
+  </form>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/fr/contenu-et-communication/word/" class="nav-link">
+  Word
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/powerpoint/" class="nav-link">
+  Powerpoint
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/pdf/" class="nav-link">
+  Documents PDF
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/emails/" class="nav-link">
+  Emails
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/composants-animes/" class="nav-link">
+  Contenus audios/vidéos
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/e-learning/" class="nav-link">
+  E-learning
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&amp;nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Contenu et communication
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#verifier-les-couleurs" class="dropdown-item text-wrap">Vérifier les couleurs</a><a href="#faciliter-la-lecture" class="dropdown-item text-wrap">Faciliter la lecture</a><a href="#mise-en-page-avec-des-tableaux" class="dropdown-item text-wrap">Mise en page avec des tableaux</a><a href="#des-tableaux-de-donnees-accessibles" class="dropdown-item text-wrap">Des tableaux de données accessibles</a><a href="#annexes" class="dropdown-item text-wrap">Annexes</a><a href="#comment-mettre-des-accents-aux-majuscules" class="dropdown-item text-wrap">Comment mettre des accents aux majuscules ?</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Recommandations éditoriales générales</h1>
+<h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Cette section présente des recommandations générales à respecter pour garantir l’accessibilité de vos contenus quel que soit le support utilisé (email, PPT, PDF, Word, etc.).</p>
+<h2 id="verifier-les-couleurs">Vérifier les couleurs <a class="header-anchor" href="#verifier-les-couleurs" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li>S’assurer que <a href="/fr/web/designer/couleurs-et-contrastes/#ne-pas-utiliser-la-couleur-ou-linformation-sensorielle-comme-seule-source-dinformation">la couleur n’est pas le seul moyen utilisé pour communiquer l’information</a>.</li>
+<li>Assurer un niveau de <a href="/fr/web/designer/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond">contraste suffisant entre la couleur du texte et celle de l’arrière-plan</a>. Ceci est valable pour vos textes mais aussi pour les icônes, boutons et autres éléments graphiques porteurs d'information. Le contraste peut être vérifié à l’aide de l’outil <a href="https://www.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> par exemple :
+<ul>
+<li>4.5:1 pour du texte de taille normale.</li>
+<li>3:1 pour du <a href="/fr/glossaire/#texte-de-grande-taille">texte de grande taille</a> et les composants d'interface ou éléments graphiques porteurs d'informations.</li>
+</ul>
+</li>
+</ul>
+<h2 id="faciliter-la-lecture">Faciliter la lecture <a class="header-anchor" href="#faciliter-la-lecture" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li>Aligner les textes à gauche (éviter de justifier).</li>
+<li>Mettre une majuscule à chaque début de phrase mais éviter les phrases entières en majuscule.</li>
+<li>Éviter l’italique.</li>
+<li>Utiliser des polices simples, sans serif : Arial, Calibri ou la <a href="https://opensource.orange.com/fr/category/actualites/ow2-fr/osai-fr/accessible_dfa-fr/">police Accessible DfA</a> ayant une taille au moins égale à 10 points.</li>
+<li>Ajouter des accents aux majuscules éèêçàïùÉÈÊÇÀÏÙ (« Insertion &gt; Symbole &gt; Texte normal » ou utiliser <a href="#annexes">les raccourcis clavier</a>).</li>
+<li>Mettre en place une ponctuation simple.</li>
+<li>Éviter les fonds texturés (images).</li>
+<li>Ne pas faire de retours chariots répétés ou de tabulation pour espacer (mais la fonction « Paragraphe &gt; Espacement » ou « Retrait » dans Word, par exemple).</li>
+<li>Éviter les tableaux de mise en page ou tableaux de données complexes (sauf en HTML si la <a href="/fr/web/developper/contenu-textuel/#structurer-les-tableaux-de-donnees">structure du tableau est accessible</a>).</li>
+<li>Éviter le contenu « image » porteur d’information : graphes, schémas, diagrammes (sauf en HTML si une <a href="/fr/web/designer/contenu-non-textuel/">alternative textuelle est accessible</a>)</li>
+<li>Utiliser des tournures de phrases limpides, des phrases courtes et à la construction simple : sujet, verbe, complément. Une idée par phrase.</li>
+<li>Éviter au maximum les mots trop compliqués ou spécifiques à un domaine, et sinon, les expliquer.</li>
+<li>Utiliser le présent, de préférence le style direct et la forme active (pas de subjonctif, pas de conjonction).</li>
+<li>Utiliser les caractères typographiques du Français : tiret - , cadratin — , « guillemets français ».</li>
+<li>Éviter les termes dans une langue étrangère (mots en anglais), les sigles ou abréviations sauf ceux passés dans le langage courant.</li>
+<li>Mettre en place un indicateur de fin de document (par exemple, une image indiquant « fin de mail », un texte blanc sur fond blanc « fin de document »).</li>
+</ul>
+<h2 id="mise-en-page-avec-des-tableaux">Mise en page avec des tableaux <a class="header-anchor" href="#mise-en-page-avec-des-tableaux" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Sachant que les clients de messagerie (Outlook inclus) obligent encore parfois à utiliser une <a href="/fr/contenu-et-communication/emails/">mise en page en tableaux</a> : ajouter un <code>role=&quot;presentation&quot;</code> à vos balises table afin que les synthèses vocales comprennent qu'il ne s'agit que de mise en forme.</p>
+<h2 id="des-tableaux-de-donnees-accessibles">Des tableaux de données accessibles <a class="header-anchor" href="#des-tableaux-de-donnees-accessibles" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Afin que vos tableaux de données soient accessible, simplifiez-les au maximum dès leur conception :</p>
+<ul>
+<li>Éviter d’imbriquer les tableaux les uns dans les autres (maximum 2 niveaux d’imbrication).</li>
+<li>Éviter de fusionner les cellules, d'utiliser trop de cellules vides, d'ajouter des images de fond.</li>
+<li>Assurer une lecture séquentielle (on doit pouvoir lire de gauche à droite et de haut en bas).</li>
+</ul>
+<p>Et pour l'implémentation dans une page Web par exemple, consultez <a href="/fr/web/developper/contenu-textuel/#structurer-les-tableaux-de-donnees">notre article dédié aux tableaux de données accessibles</a>.</p>
+<h2 id="annexes">Annexes <a class="header-anchor" href="#annexes" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="comment-mettre-des-accents-aux-majuscules">Comment mettre des accents aux majuscules ? <a class="header-anchor" href="#comment-mettre-des-accents-aux-majuscules" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Pour mettre des accents sur mac, il suffit de taper la lettre désirée par exemple « E » et laisser la touche enfoncée. Un menu contextuel apparait et permet de sélectionner la lettre accentuée désirée (É, È, Ë...), à noter qu'il est également possible d'utiliser des raccourcis clavier (cf. tableau ci-dessous).</p>
+<p>Sur Windows, les raccourcis clavier suivants permettent d'écrire des lettres majuscule accentuées quelle que soit l'application utilisée :</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Lettre</th>
+      <th scope="col">raccourci Windows</th>
+      <th scope="col">raccourci Mac</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">À</th>
+      <td>Alt Gr + \` (touche 7) puis A majuscule</td>
+      <td>Maj lock puis à</td>
+    </tr>
+    <tr>
+      <th scope="row">Ç</th>
+      <td>alt + 128</td>
+      <td>Option + ç</td>
+    </tr>
+    <tr>
+      <th scope="row">È</th>
+      <td>Alt Gr + ` (touche 7) puis E majuscule</td>
+      <td>Maj lock puis è</td>
+    </tr>
+    <tr>
+      <th scope="row">É</th>
+      <td>alt + 144</td>
+      <td>Maj lock puis é</td>
+    </tr>
+    <tr>
+      <th scope="row">Ê</th>
+      <td>^ puis E majuscule </td>
+      <td>^ puis E majuscule</td>
+    </tr>
+  </tbody>
+</table>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#introduction" class="nav-link text-muted bg-200">Introduction</a>
+          </li><li class="nav-item position-relative">
+            <a href="#verifier-les-couleurs" class="nav-link text-muted bg-200">Vérifier les couleurs</a>
+          </li><li class="nav-item position-relative">
+            <a href="#faciliter-la-lecture" class="nav-link text-muted bg-200">Faciliter la lecture</a>
+          </li><li class="nav-item position-relative">
+            <a href="#mise-en-page-avec-des-tableaux" class="nav-link text-muted bg-200">Mise en page avec des tableaux</a>
+          </li><li class="nav-item position-relative">
+            <a href="#des-tableaux-de-donnees-accessibles" class="nav-link text-muted bg-200">Des tableaux de données accessibles</a>
+          </li><li class="nav-item position-relative">
+            <a href="#annexes" class="nav-link text-muted bg-200">Annexes</a>
+          </li><li class="nav-item position-relative">
+            <a href="#comment-mettre-des-accents-aux-majuscules" class="nav-link text-muted bg-200">Comment mettre des accents aux majuscules ?</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link">
+  À propos
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/accessibilite" class="nav-link">
+  Accessibilité
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/fr/" class="nav-link">
+  Pré-version sur Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Déploiements sur Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/contenu-et-communication/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+            Signaler une erreur sur GitHub<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" aria-label="Retour en haut de page">
+      <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
+        <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.min.js" integrity="sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI" crossorigin="anonymous"></script>
+    
+    
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:fr"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2021 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
