@@ -142,7 +142,6 @@
 		"IDorigin": "testID-010",
 		"wcag": [
 			"1.3.1 A",
-			"2.4.1 A",
 			"2.4.6 AA"
 		],
 		"verifier": "<ul><li>check that section headings are present, and that they represent the structure of the document</li><li>check that elements resembling headings use the correct heading tags (<code>hn</code>, <code>role='heading'</code>)</li><li>check that the heading levels are ordered in a logical manner</li></ul>",
