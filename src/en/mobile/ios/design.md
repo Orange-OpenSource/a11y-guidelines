@@ -137,7 +137,8 @@ These two elements propose to the greatest number a very comfortable reading tha
 
 </br>**Tools:**
 
-- The <a href="http://www.paciellogroup.com/resources/contrastanalyser/" style="text-decoration: underline;">Colour&nbsp;Contrast&nbsp;Analyser</a> application can quickly measure colour contrast levels (free for Windows and Mac).
+- The **Colour&nbsp;Contrast&nbsp;Analyser** application (version 2.3) can quickly measure colour contrast levels (free for Windows and Mac).
+![](../../images/color_contrast_analyzer.png)
 
 - The Accessibility Inspector tool provides a specific <a href="../wwdc/2019/#color-contrast-0626" style="text-decoration: underline;">Color&nbsp;Contrast&nbsp;Calculator</a> feature that reaches the same purpose since Xcode 11.
 </div>
