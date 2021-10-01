@@ -1,7 +1,7 @@
 ---
 title: "Veille #A11y Août-Septembre 2021"
 abstract: "Florilèges de ressources en #a11y, Août-Septembre 2021"
-date: "2021-08-03"
+date: "2021-09-27"
 tags:
   - veille
 ---
