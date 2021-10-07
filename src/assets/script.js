@@ -32,6 +32,44 @@
   }, { once: true })
 })();
 
+
+(function(){
+  $('.item-oc a').on("click", function(){
+    $('div[class="languageinfo"] li a').each(function(){
+      $(this).classList.remove('active');
+    });
+    $('div[class=".item-oc"] a').each(function(){
+      $(this).addClass('active');
+    });
+    $('div[class=".languageinfotab"] div').each(function(){
+      $(this).classList.remove('show');
+      $(this).classList.remove('active');
+    });
+    $('div[class=".objc"]').each(function(){
+      $(this).addClass('show');
+      $(this).addClass('active');
+    });
+  });
+
+  $('.item-s a').on("click", function(){
+    $('div[class="languageinfo"] li a').each(function(){
+      $(this).classList.remove('active');
+    });
+    $('div[class=".item-s] a').each(function(){
+      $(this).addClass('active');
+    });
+    $('div[class=".languageinfotab"] div').each(function(){
+      $(this).classList.remove('show');
+      $(this).classList.remove('active');
+    });
+    $('div[class=".swift"]').each(function(){
+      $(this).addClass('show');
+      $(this).addClass('active');
+    });
+  });
+
+})();
+
 /* Filter bar */
 (function () {
   const filtersbar = document.getElementById('filtersbar')
@@ -126,7 +164,7 @@ function highlightCodeBlocks () {
   hljs.initHighlighting()
 
   const codeBlocks = document.querySelectorAll('.hljs')
-
+  
   if (!codeBlocks.length) {
     return
   }
@@ -140,13 +178,13 @@ function highlightCodeBlocks () {
     'kotlin': 'Kotlin',
     'objectivec':'Objective-C',
     'swift': 'Swift',
+    'swiftui': 'SwiftUI',
     'xml': 'XML'
   }
 
   codeBlocks.forEach(function (codeBlock) {
     const language = codeBlock.result.language
     const displayLanguage = displayLanguageList[language] || language
-
     const languageWrapper = document.createElement('div')
     languageWrapper.classList.add('bg-primary', 'd-inline-block', 'p-2', 'font-weight-bold')
     languageWrapper.textContent = displayLanguage
@@ -209,4 +247,5 @@ window.addEventListener('DOMContentLoaded', function () {
     highlightCodeBlocks()
   }
 }, { once: true })
+
 
