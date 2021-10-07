@@ -1,5 +1,6 @@
 ---
 title: "Extensions pour navigateur"
+abstract: "Liste des extensions pour tester l'accessibilité des pages web"
 ---
 
 # Extensions pour navigateur

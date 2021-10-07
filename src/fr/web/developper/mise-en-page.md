@@ -1,5 +1,6 @@
 ---
 title: "Mise en page"
+abstract: "Mise en page, recommendations d'accessibilité web lors du développement"
 ---
 
 # Mise en page
@@ -86,7 +87,8 @@ Si un sens de lecture spécifique est nécessaire à la bonne compréhension du 
 
 **À vérifier&nbsp;:**
 
-- Veillez à ce que l’ordre d’apparition des éléments dans le code <abbr>HTML</abbr> soit le même que l'ordre de lecture de l'information dans la page, si cet ordre impacte la compréhension du contenu ou capacité d'utiliser l'interface. C'est la solution la plus simple&nbsp;!
+- Veillez à ce que l’ordre d’apparition des éléments dans le code <abbr>HTML</abbr> soit le même que l'ordre de lecture de l'information dans la page, si cet ordre impacte la compréhension du contenu ou la capacité à utiliser l'interface. C'est la solution la plus simple&nbsp;!
+
 - Même lors d’apparition, de disparition de contenu ou de contenu dynamiquement généré, il faut conserver cet ordre de lecture compréhensible et une interface utilisable.
 
 **Objectif utilisateur&nbsp;:**

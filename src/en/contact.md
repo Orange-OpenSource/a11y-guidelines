@@ -1,5 +1,6 @@
 ---
 title: "Your opinion matters"
+abstract: "Have a bug or a feature request?"
 ---
 
 # Your opinion matters

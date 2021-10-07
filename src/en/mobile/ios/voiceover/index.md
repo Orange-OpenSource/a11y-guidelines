@@ -1,5 +1,6 @@
 ---
 title: "VoiceOver user guide"
+abstract: "VoiceOver a built-in screen reader for iOS"
 ---
 
 # VoiceOver user guide

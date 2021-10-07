@@ -1,5 +1,6 @@
 ---
 title: "Accessibility in Android"
+abstract: "For design, for development, for testing"
 ---
 
 # Accessibility in Android

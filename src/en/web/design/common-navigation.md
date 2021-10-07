@@ -1,5 +1,6 @@
 ---
 title: "Common navigation"
+abstract: "Commun navigation, web accessibility design recommandations"
 ---
 
 # Common navigation

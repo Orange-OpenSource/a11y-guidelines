@@ -1,5 +1,6 @@
 ﻿---
 title: "Keyboard navigation & Switch Access"
+abstract: "Keyboard navigation & Switch Access, accessibility dev recommandations with Android"
 ---
 
 # Keyboard navigation & Switch Access

@@ -1,6 +1,6 @@
 ---
 title: "Some best practices for downloading links"
-abstract: "How to make understandable downloading links"
+abstract: "How to make usable and understandable downloading links"
 date: "2020-09-01"
 tags:
   - web

@@ -1,5 +1,6 @@
 ---
 title: "Boite à outils"
+abstract: "Des ressources et outils pour faciliter la prise en compte de l’accessibilité numérique sur iOS"
 sideNavigationLinks:
   - label: "Lecteur d'écran VoiceOver"
     href: "../voiceover/"

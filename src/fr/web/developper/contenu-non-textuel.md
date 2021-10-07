@@ -1,5 +1,6 @@
 ---
 title: "Contenu non-textuel"
+abstract: "Contenu non-textuel, recommendations d'accessibilité web lors du développement"
 ---
 
 # Contenu non-textuel
@@ -99,7 +100,7 @@ Pour être accessibles, les contenus multimédias doivent&nbsp;:
 6.	proscrire les vidéos qui présentent plus de 3 flashs à la seconde 
 7. par ailleurs, pour tout son émis de plus de 3 secondes, l'utilisateur doit avoir la possibilité soit de l'arrêter ou de le mettre en pause soit d'en contrôler son volume indépendamment du volume général du système.
 
-Pour plus d'infos consulter [les recommandations accessibilité pour les contenus vidéos, animations et audios Orange](../../../contenu-editorial/composants-animes/).
+Pour plus d'infos consulter [les recommandations accessibilité pour les contenus vidéos, animations et audios Orange](../../../contenu-et-communication/composants-animes/).
 
 **Objectif utilisateur&nbsp;:**
 

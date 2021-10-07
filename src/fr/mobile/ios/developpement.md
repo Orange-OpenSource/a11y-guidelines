@@ -1,5 +1,6 @@
 ---
 title: "Guide pour les développeurs iOS"
+abstract: "Développer des applications iOS accessibles"
 displayToc: true
 ---
 

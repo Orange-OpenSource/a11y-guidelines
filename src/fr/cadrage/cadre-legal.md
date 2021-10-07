@@ -1,5 +1,6 @@
 ---
 title: "Cadre légal"
+abstract: "Cadre légal de l'accessibilité numérique"
 ---
 
 # Cadre légal de l'accessibilité numérique

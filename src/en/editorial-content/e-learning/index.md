@@ -1,10 +1,11 @@
 ---
 title: "Storyline 360 - E-learning"
+abstract: "Storyline 360 recommandations"
 ---
 # Storyline 360 recommandations
 
 Recommendations for making an accessible e-learning presentation.
-*Note* : in addition, <a href="/fr/contenu-editorial/">the general editorial recommendations </a> (colors, make reading easier, etc.) must also be applied, but are not described in this article.
+*Note* : in addition, <a href="/fr/contenu-et-communication/">the general editorial recommendations </a> (colors, make reading easier, etc.) must also be applied, but are not described in this article.
 
 ## Personalize the user experience from the start
 
@@ -15,7 +16,7 @@ Users must be able to know and anticipate the navigation mechanisms.
 - These instructions provide all the shortcuts specific to e-learning
 - For screen reader users, we suggest adding keyboard navigation instructions
 <figure class="figure">
-  <img alt="" src="/fr/contenu-editorial/images/trigger-wizard.png" class="img-fluid">
+  <img alt="" src="/fr/contenu-et-communication/images/trigger-wizard.png" class="img-fluid">
   <figcaption class="figure-caption">If keyboard shortcuts are defined, they must be announced from the first slide.</figcaption>
 </figure>
 
@@ -29,7 +30,7 @@ The content (serious game, exercises, etc.) can be adapted to the context of eac
 - Propose alternative mechanisms (example: replacing a drag n’drop system for example)
 - Offer additional content (example: addition of detailed descriptions for screen readers)
 <figure class="figure">
-  <img alt="" src="/fr/contenu-editorial/images/profile-selection.png" class="img-fluid">
+  <img alt="" src="/fr/contenu-et-communication/images/profile-selection.png" class="img-fluid">
   <figcaption class="figure-caption">In this example, alternative Serious Games are offered to blind users.</figcaption>
 </figure>
 
@@ -51,7 +52,7 @@ A visible focus indicator allows keyboard users to know which component is curre
 2. Select "Colors & Effects"
 3. Change the default focus color
 
- <img alt="" src="/fr/contenu-editorial/images/storyline-focus.png" class="img-fluid">  &nbsp;
+ <img alt="" src="/fr/contenu-et-communication/images/storyline-focus.png" class="img-fluid">  &nbsp;
   
 ## Ensure that the user keeps control during interactions
 
@@ -62,7 +63,7 @@ The results of quizzes in particular must be perceived by all users.
 - Use Storyline's native notification components (feedback layers)
 - Start a vocalization of the result after submission by the user
 <figure class="figure">
-  <img alt="" src="/fr/contenu-editorial/images/feedback-message.png" class="img-fluid">
+  <img alt="" src="/fr/contenu-et-communication/images/feedback-message.png" class="img-fluid">
   <figcaption class="figure-caption">In this example, the result "Not quite ... All of the above are correct!" is vocalized by a voice-over</figcaption>
 </figure>
 
@@ -94,13 +95,13 @@ For all users, whatever their method of browsing (screen reader, screen magnifie
 6. Activate "save"
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/storyline-order-1.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/storyline-order-1.png" class="img-fluid">
 <figcaption class="figure-caption">Storyline allows all items to be rearranged with the "Focus Order" option.
 </figcaption>
 </figure>
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/storyline-order-2.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/storyline-order-2.png" class="img-fluid">
 <figcaption class="figure-caption">The order of items on the screen does not always match the order of items in the source code.
 The order of the elements in the source code will have an impact when reading from a technical aid, such as a screen reader for example.
 </figcaption>
@@ -120,13 +121,13 @@ This is especially important for users of screen readers.
 3. Complete the "Title" field
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/titre-formation.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/titre-formation.png" class="img-fluid">
 <figcaption class="figure-caption">Click on Publish, then fill in the Title field.
 </figcaption>
 
 </figure>
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/onglet-formation.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/onglet-formation.png" class="img-fluid">
 <figcaption class="figure-caption">The title appears in the browser tab.
 </figcaption>
 </figure>
@@ -139,7 +140,7 @@ Especially screen reader users, indeed this element will be vocalized automatica
 
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/titre-diapo.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/titre-diapo.png" class="img-fluid">  &nbsp;
 <figcaption class="figure-caption">Double click on the title of the slide to modify it.
 </figcaption>
 </figure>
@@ -150,7 +151,7 @@ Apply heading styles to texts presented as heading.
 Headings are essential for screen reader users to understand the structure of content and navigate easily within it.
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/storyline-titre-niveau.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/storyline-titre-niveau.png" class="img-fluid">  &nbsp;
 <figcaption class="figure-caption">Use the appropriate styles (from Heading 1 to Heading 4).
 </figcaption>
 </figure>
@@ -161,7 +162,7 @@ Alt text is essential for blind users.
 It is this content that will be vocalized.
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/alt-images.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/alt-images.png" class="img-fluid">
 <figcaption class="figure-caption">
 List of 3 buttons : <span lang="fr">anticiper</span> (anticipate), <span lang="fr">gérer</span> (manage), <span lang="fr">communiquer</span> (communicate), based on images.
 
@@ -179,7 +180,7 @@ List of 3 buttons : <span lang="fr">anticiper</span> (anticipate), <span lang="f
 - Avoid abbreviations and repetition of punctuation elements
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/alt-images-infos.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/alt-images-infos.png" class="img-fluid">
 <figcaption class="figure-caption">
 Example of an image that conveys information:
 
@@ -195,13 +196,13 @@ Example of an image that conveys information:
 4. Click on "Save"
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/storyline-order-1.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/storyline-order-1.png" class="img-fluid">
 <figcaption class="figure-caption">
 Alternative texts can be defined from the "Focus order" panel.
 </figcaption>
 </figure>
 
-<img alt="" src="/fr/contenu-editorial/images/storyline-order-3.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/storyline-order-3.png" class="img-fluid">  &nbsp;
 
 
 ## Hide decorative images
@@ -215,8 +216,8 @@ Profits :
 - Simplify keyboard navigation by removing unnecessary elements from the keyboard path
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/image-deco-1.png" class="w-50 pr-1 float-left">
-<img alt="" src="/fr/contenu-editorial/images/image-deco-2.png" class="w-50 float-left">
+<img alt="" src="/fr/contenu-et-communication/images/image-deco-1.png" class="w-50 pr-1 float-left">
+<img alt="" src="/fr/contenu-et-communication/images/image-deco-2.png" class="w-50 float-left">
 <figcaption class="figure-caption">
 Examples of decorative images, in these contexts, the figures or the table leg do not provide any information.
 They can therefore be hidden from users of technical aids.
@@ -231,8 +232,8 @@ They can therefore be hidden from users of technical aids.
 5. Uncheck the box "The object is visible ..."
 6. Click on "close"
 
-<img alt="" src="/fr/contenu-editorial/images/hide-image.png" class="img-fluid mb-1">
-<img alt="" src="/fr/contenu-editorial/images/hide-image-2.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/hide-image.png" class="img-fluid mb-1">
+<img alt="" src="/fr/contenu-et-communication/images/hide-image-2.png" class="img-fluid">  &nbsp;
 
 
 ## Indicate the main language of the document
@@ -246,7 +247,7 @@ Defining the language of a document will allow screen readers to adapt their voc
 4. Edit the texts in the "personalized text" column
 5. Click on “OK”
 
-<img alt="" src="/fr/contenu-editorial/images/storyline-langue-1.png" class="img-fluid mb-1">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/storyline-langue-1.png" class="img-fluid mb-1">  &nbsp;
 
 ## Audio or video content
 
@@ -254,7 +255,7 @@ Defining the language of a document will allow screen readers to adapt their voc
 - Do not start audio or video automatically
 - If the media starts automatically, make sure the user has the option to stop it manually
 
-<img alt="" src="/fr/contenu-editorial/images/lancement-auto.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/lancement-auto.png" class="img-fluid">  &nbsp;
 
 ### Accessible audios
 
@@ -265,7 +266,7 @@ Storyline enables the creation of synchronized captions.
 - Make sure that all textual content on the slide is vocalized, so as not to mislead blind users who may rely solely on audio and not manually view all of the slide's content.
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-editorial/images/activer-sous-titre.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/activer-sous-titre.png" class="img-fluid">
 <figcaption class="figure-caption">
 Give the possibility to users to activate the subtitles from the beginning of the presentation.
 </figcaption>

@@ -1,5 +1,6 @@
 ---
 title: "Accessibility user testing"
+abstract: "How to evaluate the accessibility of a site, application, or product with user testing?"
 ---
 
 # Orange digital accessibility guidelines

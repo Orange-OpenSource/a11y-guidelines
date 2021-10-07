@@ -1,5 +1,6 @@
 ---
 title: "Guide d'utilisation de VoiceOver"
+abstract: "Navigation à l'aide du lecteur d'écran voiceover sous iOS"
 ---
 
 # Guide d’utilisation de <span lang="en">VoiceOver</span>

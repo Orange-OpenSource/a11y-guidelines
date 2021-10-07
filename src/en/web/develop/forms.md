@@ -1,5 +1,6 @@
 ---
 title: "Forms"
+abstract: "Forms, web accessibility dev recommandations"
 ---
 
 # Forms

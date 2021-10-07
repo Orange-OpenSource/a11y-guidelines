@@ -1,5 +1,6 @@
 ---
 title: "Définition de l'accessibilité numérique"
+abstract: "Qu’est ce que l’accessibilité numérique ?"
 ---
 # Définition de l'accessibilité numérique
 

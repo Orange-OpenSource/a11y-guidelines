@@ -1,5 +1,6 @@
 ---
 title: "Navigation à l’aide du clavier"
+abstract: "Tester la navigation clavier"
 ---
 
 # Navigation à l’aide du clavier

@@ -1,5 +1,6 @@
 ---
 title: "Assistive technologies"
+abstract: "Examples of assistive technologies to access the digital world whatever the device"
 ---
 
 # Assistive technologies

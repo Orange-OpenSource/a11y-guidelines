@@ -1,5 +1,6 @@
 ---
 title: "Talkback and VoiceOver guide"
+abstract: "The list the common gestures for Android and iOS screen readers"
 ---
 
 # TalkBack and VoiceOver guide

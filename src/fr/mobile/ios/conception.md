@@ -1,5 +1,6 @@
 ---
 title: "Les critères de conception iOS"
+abstract: "Les critères à respecter pour concevoir une application iOS accessible"
 displayToc: true
 ---
 
@@ -133,7 +134,8 @@ Ces deux éléments permettent de proposer au plus grand nombre une lecture trè
 Dans ce cas, l'utilisation de l'option d'accessibilité <a style="text-decoration: underline" role="button" onclick="$('#a11yOptions-Description_tab').trigger('click');document.getElementById('options-daccessibilite').scrollIntoView({ behavior: 'smooth', block: 'start' })">différencier&nbsp;sans&nbsp;couleur</a> va permettre ce type d'affichage **uniquement à la demande de l'utilisateur**.
 </br></br>**Outils&nbsp;:**
 
-- l’application [<span lang="en">Colour&nbsp;Contrast&nbsp;Analyzer</span>](http://www.paciellogroup.com/resources/contrastanalyser/) permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour mac et windows),
+- l’application **Colour&nbsp;Contrast&nbsp;Analyzer** (version 2.3) permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour mac et windows),
+![](../../images/color_contrast_analyzer.png)
 
 - l'outil <span lang="en">Accessibility&nbsp;Inspector</span> dispose aussi d'une fonctionnalité [<span lang="en">Color&nbsp;Contrast&nbsp;Calculator</span>](../wwdc/2019#contraste-des-couleurs-0626) depuis Xcode 11 qui permet d'obtenir les mêmes résultats.
 </div>

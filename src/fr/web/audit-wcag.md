@@ -1,5 +1,6 @@
 ---
 title: "Audit WCAG"
+abstract: "Types d'audit WCAG"
 ---
 
 # Audit de conformité WCAG 

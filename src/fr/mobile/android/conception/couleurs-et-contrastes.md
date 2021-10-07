@@ -1,5 +1,6 @@
 ﻿---
 title: "Couleurs et contrastes"
+abstract: "Couleurs et contrastes, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
 # Couleurs et contrastes

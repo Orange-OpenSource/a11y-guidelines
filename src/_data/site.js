@@ -13,7 +13,7 @@ module.exports = {
   title: {
     en: 'Orange digital accessibility guidelines',
     fr: 'Recommandations accessibilité numérique Orange'
-  },
+  },  
   rss: {
     title: {
       en: 'Orange digital accessibility guidelines - English',

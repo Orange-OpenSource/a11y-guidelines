@@ -1,5 +1,6 @@
 ---
 title: "Les seniors"
+abstract: "Un sénior est une personne plus ou moins âgée et l'accessibilité numérique"
 ---
 
 # Les séniors

@@ -6,140 +6,72 @@ tags:
   - veille
 ---
 
-# Veille accessibilité numérique Juin– Juillet 
+# Veille accessibilité numérique Août – Septembre 2021
 
-Les vacances sont là, mais toujours autant d'articles rédigés...
-Un édito fouillis de vacances (rire):D
- Sur les surcouches d'accessibilité, toujours et encore, en anglais :
-- https://toddl.dev/posts/accessibe-is-not-your-friend/ 
-- https://ericwbailey.design/writing/accessibe-and-the-false-david-vs-goliath-narrative/ 
-
-
-En France, l'assignation de Koena par Facil'iti, il faut soutenir Koena dans cette démarche : https://koena.net/assignation-de-koena-par-faciliti/ 
-Une réflexion au coeur de notre métier d'expert accessibilité, différentes opinion sur quel est ce métier, passionnant chez notre collègue le fameux Stéphane D. : https://nota-bene.org/Qu-est-ce-qu-une-experte-un-expert-accessibilite 
-Et enfin, un article sur ce qu'on peut faire au quotidien pour être plus inclusif dans nos pratiques du numérique : https://www.a11yproject.com/posts/2021-06-14-everyday_accessibility/ 
+https://w3c.github.io/silver/explainer/ 
+https://www.visionaustralia.org/services/digital-access/blog/the-new-requirements-for-wcag-2-2 
 
 ## L’accessibilité dans les lois, les normes et recommandations
 
-- Un RGAA luxembourgeois pour les apps mobile : https://accessibilite.public.lu/fr/raam1/ 
+- Consultation publique « Réexamen des règles de l’UE relatives à l’accessibilité des sites internet et du contenu numérique pour les personnes handicapées » si vous avez un peu de temps : https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives/12537-Accessible-web-&-digital-content-for-people-with-disabilities-review-of-EU-rules/public-consultation_fr 
+- WCAG 3, une nouvelle façon de d’évaluer en chiffre l’accessibilité (en) : https://www.boia.org/blog/wcag-3.0-may-introduce-new-rating-scale-for-accessibility 
+- Recommandations ARIA pour les nuls, épisode 2 (en) : https://www.deque.com/blog/aria-spec-for-the-uninitiated-part-2/  pour rappel l’épisode 1 (en) : https://www.deque.com/blog/aria-spec-for-the-uninitiated-part-1/ 
+Retours d’expérience et accessibilité
 
-- Wcag 2.2 explication des nouveaux critères : https://access42.net/wcag-2-2-explication-des-nouveaux-criteres-proposes 
+- 4 des plus fréquentes erreurs en ARIA, faut faire gaffe (en) : https://www.maxability.co.in/2021/08/22/4-aria-mistakes/ 
+- Vidéo sur sémantique html et a11y en pratique (en) : https://www.youtube.com/watch?v=qSNUi7pRmWg 
+- Démarche d’audit d’accessibilité d’un site de bibliothèque, bien fait et plus générique que sous-entendu (en) : https://journals.publishing.umich.edu/weaveux/article/id/218/ 
+- Encore des soucis entre CS et lecteurs d’écran, à lire (en) : https://uselessdivs.com/blog/the-effect-of-css-on-screen-readers
+Stratégie de mise en accessibilité 
 
-- WCAG 2.2 demande de clarification, réflexion pertinente (en) :  https://www.tpgi.com/wcag-22-working-draft-feedback/ 
+- Faire un audit lorsqu’on a déjà corrigé les erreurs d’a11y basiques et faciles, c’est mieux (en) : https://adactio.com/journal/18458 
+- Au-delà des WCAG (en) : https://hiddedevries.nl/en/blog/2021-09-08-subsets-and-supersets-of-wcag 
+- L’accessibilité est plus qu’un simple problème technique, 3 bonnes raisons (en) : https://ux.shopify.com/accessibility-is-more-than-a-technical-problem-ca6bb9dee8ce 
+- Les règles de bases pour un email accessible (en) : https://www.litmus.com/blog/ultimate-guide-accessible-emails/ 
+- Les points de vigilance en accessibilité numérique pour les achats et acheteurs (en) : https://www.tpgi.com/accessibility-strategy-for-procurement/ 
+Tester l’accessibilité
 
-- Retours attendus sur l’application de la Web Accessibility Directive de la communauté Européenne ouvert à tous (en) : https://digital-strategy.ec.europa.eu/en/news/commission-seeks-feedback-improve-public-sector-website-and-mobile-apps-accessibility 
+- Dernière version du bookmarklet Text Spacing, mettre à jour (en) : https://cdpn.io/stevef/debug/YLMqbo 
+- Méthodologie de tests utilisateurs en a11y, chouette à lire (en) : https://ux.shopify.com/how-to-test-for-accessibility-with-users-at-every-design-stage-ec655fed7878 
+- Un outil spécifique de tests d’accessibilité et son utilisation, approche intéressante (en) : https://dataingovernment.blog.gov.uk/2021/02/16/how-we-created-a-reporting-tool-to-improve-the-accessibility-of-gov-uk/ 
+- Tester l’a11y des iframes (en) : https://convergeaccessibility.com/2021/08/09/accessibility-testing-and-iframes/ 
+- Auditer l’accessibilité d’un design, comment… bon pense-bête (en) : https://www.a11yproject.com/posts/2021-08-14-reviewing-a-design-for-accessibility/ 
+- Cas de test HTML pour l’a11y et leur support par les AT Jaws, VoiceOver, NVDA, pratique (en) : https://russmaxdesign.github.io/accessible-forms/ 
+- Tester avec un lecteur d’écran, ce qu’il faut savoir (en) : https://www.boia.org/blog/can-you-check-web-accessibility-by-downloading-a-screen-reader 
+- Tout sur les pièges clavier (en) : https://www.boia.org/blog/avoid-keyboard-traps-to-make-your-site-more-accessible 
+- Combiner Pa11y et axe, à voir (en) : http://www.craigabbott.co.uk/blog/combining-axe-core-and-pa11y 
+Points techniques en accessibilité
 
-- La version editor’s draft de Using ARIA du w3c  (en) : https://w3c.github.io/using-aria/ 
+- Sur l’importance de l’ordre de la prise de focus, un concept essentiel à comprendre (en) : https://devyarns.com/logical-focus-order/ 
+- Tout sur les definition lists, dl (en) : https://benmyers.dev/blog/on-the-dl/ 
+- Une bonne alternative d‘image (en) : https://jebswebs.net/blog/2021/08/just-what-is-a-good-alternative-description/ 
+- Rendre accessible son authentification de site web (en) : https://www.boia.org/blog/is-your-sites-authentication-process-accessible 
+- Rendre une aide en ligne accessible (en) : https://www.boia.org/blog/make-sure-your-websites-help-resources-are-available-and-accessible 
+- Les contrôles cachés et WCAG 2.2, nouveauté (en) : https://www.boia.org/blog/wcag-2.2-introduces-new-requirements-for-hidden-controls 
+- Les entrés redondantes et leur impact sur l’a11y, WCAG 2.2 (en) : https://www.boia.org/blog/what-is-redundant-entry-and-how-does-it-affect-accessibility 
+- Drag-n-drop et a11y (en) : https://www.boia.org/blog/how-drag-and-drop-movements-affect-web-accessibility 
+- Live chat et a11y (en) : https://www.boia.org/blog/does-live-chat-make-a-site-less-accessible 
+- les propriétés CSS d’overflow pour du contenu accessible, simple et efficace (en) : https://convergeaccessibility.com/2021/09/07/using-css-3-overflow-properties-to-make-containers-meet-wcag-2-1/ 
+Appli mobile
 
-- La candidate recommandation de ARIA in HTML (en) : https://www.w3.org/TR/html-aria/ 
+- 
 
-- Une réflexion sur ce qu’il faut améliorer dans les WCAG pour les rendre plus utilisables, intéressant (en) : https://level-level.com/blog/we-need-to-talk-about-wcag/ 
+Ergonomie, UI & UX
 
-- Des abus dans l’application du RGAA, édifiant : https://certam-avh.com/fr/dossiers-thematiques/accessibilite-numerique-halte-aux-petits-et-gros-arrangements-avec-le-rgaa 
-
-## Retours d’expérience et accessibilité
-
-- Interrogation sur les options d’accessibilité dans un site (en) : https://www.petergoes.nl/blog/should-a-website-provide-configurable-accessibility-options-to-users/ 
-
-- Quelques conseils pour les devs qui commencent l’a11y (en) : https://dev.to/steady5063/starting-your-accessibility-journey-a-developers-guide-37o4 
-
-- Google docs améliore son accessibilité (en) : https://www.techradar.com/news/google-docs-is-getting-a-major-accessibility-upgrade 
-
-## Stratégie de mise en accessibilité 
-
-- Les bonnes conditions pour la mise en place d’une stratégie de mise en accessibilité (en) : https://www.smashingmagazine.com/2021/07/strong-case-for-accessibility/ 
-
-- Produire une vidéo accessible (en) : https://tetralogical.com/articles/an-inclusive-approach-to-video-production/ 
-
-- Un outil de rapport d’audit WCAG-EM opensource sous Eleventy, à tester (en) : https://hiddedevries.nl/en/blog/2021-05-24-introducing-an-eleventy-starter-project-for-wcag-reports 
-
-- Gestion de produit et accessibilité les bases (en) : https://www.tpgi.com/accessibility-strategy-for-product-management/ 
-
-- L’empathie ne suffit pas pour mettre en place l’accessibilité, réflexion pertinente (en) : https://www.frontiersin.org/articles/10.3389/fcomp.2021.617044/full 
-
-- Une vidéo sur l’intégration de l’a11y dans le cycle de vie d’un projet, à voir (en) : https://mle.southampton.ac.uk/bb/access/amazing/ 
-
-## Tester l’accessibilité
-
-- un tour d'horizon sur les outils de test d’accessibilité (en) : https://www.smashingmagazine.com/2021/06/complete-guide-accessibility-tooling/ 
-
-- Trucs et astuces pour tester avec des AT de bons conseils (en) : https://blog.tenon.io/tips-tricks-for-testing-accessibility-with-assistive-technologies/ 
-
-- Un tour d’horizon complet sur les outils de test en a11y, une vrai bible (en) : https://www.smashingmagazine.com/2021/06/complete-guide-accessibility-tooling/ 
-
-- Tests auto d’a11y avec React, chouette guide (en) : https://medium.com/czi-technology/automated-accessibility-testing-for-react-30c88cf892f4 
-
-- Un outil de crawl de test auto a11y sur MacOS et Linux à tester (en) : https://github.com/GovTechSG/purple-hats 
-
-- Un outil de checklist wcag 2.1 bien pratique mais qui ne vaut pas la va11ydette [rire] :D (en) : https://webflow.com/accessibility/checklist 
-
-- Tester l’a11y dans les devtools de Edge Chromium (en) : https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/accessibility/accessibility-testing-in-devtools 
-
-- Un bookmarklet pour valider le html en a11y, super pratique et facile (en) : https://codepen.io/stevef/pen/VRZdGJ/ 
-
-## Points techniques en accessibilité
-
-- Des modales accessibles, tout y est expliqué (en) : https://www.smashingmagazine.com/2021/07/accessible-dialog-from-scratch/ 
-
-- Bien utiliser l’élément section en html (en) : https://www.scottohara.me/blog/2021/07/16/section.html 
-
-- Css pour mettre en œuvre l’accessibilité (en) : https://accessibilite.public.lu/fr/raam1/index.html 
-
-- Navigation clavier accessible dans React (en) : https://www.freecodecamp.org/news/designing-keyboard-accessibility-for-complex-react-experiences/ 
-
-- Images décorative et plus, technique web (en) : https://www.smashingmagazine.com/2021/06/img-alt-attribute-alternate-description-decorative/ 
-
-- Les rôles ARI pour tout savoir (en) : https://www.a11yproject.com/posts/2020-08-20-an-indepth-guide-to-aria-roles/ 
-
-- Aria-hidden n’aura plus de secret (en) : https://html5accessibility.com/stuff/2021/05/31/the-hidden-world-of-aria-hidden/ 
-
-- Un article complet sur le critère 2.5.5 taille de la cible (en) : https://css-tricks.com/looking-at-wcag-2-5-5-for-better-target-sizes/ 
-
-- Des questions pratiques sur les textes de remplacement aux images et des réponses d’expert a11y, pratico-pratique (en) : https://knowbility.org/blog/2021/best-practices-for-image-text-alternatives 
-
-- Un système de trie multi-colonne de tableau de données (en) : https://adrianroselli.com/2021/06/multi-column-sortable-table-experiment.html 
-
-## Appli mobile
-
-- Introduction à l’a11y des applis natives (en) : https://www.shopify.com/partners/blog/mobile-accessibility 
-
-- Recommandations d’accessibilité  pour les applis mobiles du gouvernement du Luxembourg, super : https://accessibilite.public.lu/fr/raam1/index.html 
-
-## Ergonomie, UI & UX
-
-- UX et l’accessibilité pour les déficients cognitifs, gros travail de fond, bien documenté (en) : https://www.ab11y.com/articles/ux-principles-that-include-cognitive-accessibility/ 
-
-- Des liens parfaits, bible (en) : https://www.a11y-collective.com/blog/the-perfect-link/ 
-
-- La loi de Fitt’s en pratique, vraiment essayez !!!! (en) : http://simonwallner.at/ext/fitts/ 
-
-- 10 outils d’a11y pour les designers (en) : https://www.hongkiat.com/blog/accessibility-tools-for-designers/ 
-
-- Une introduction à l’accessibilité numérique pour les concepteurs, pratique et bien faite (en) : https://accessibility.uxdesign.cc/ 
-
-- Rendre plus utilisable les mega-menus (en) : https://www.smashingmagazine.com/2021/05/frustrating-design-patterns-mega-dropdown-hover-menus/ 
-
-- Des tableaux de données utilisables (en) : https://medium.com/nextux/design-better-data-tables-4ecc99d23356 
+- TAdER — Text Adaptability is Essential for Reading, on vous explique tout sur pourquoi le texte doit pouvoir s’adapter à l’utilisateur dans le numérique à lire (en) : http://www.tader.info/ 
+- Designer pour des déficiences cognitives, bon résumé (en) : https://ux.shopify.com/designing-for-cognitive-disabilities-b2933d58c278 
+- Améliorer les personas utilisateurs (en) : https://www.uxbooth.com/articles/rethinking-user-personas/ 
 Ressources
+- On manque d’études et donc de chiffres sur la handicap en France  https://www.slate.fr/story/214940/tribune-france-retard-etudes-handicap-passage-modele-medical-social-changer-connaissances-pratiques-inclusion-enseignement-superieur-recherche 
+- Quel élément peut contenir quel élément en HTML, indispensable (en) : https://caninclude.glitch.me/ 
+- Les ressources pour des tableaux accessibles (en) : https://www.digitala11y.com/resources-for-building-accessible-tables/ 
+- Un module JS/npm pour avoir facilement les références à un critère WCAG, pratique (en) : https://www.npmjs.com/package/wcagify 
+- Ressource sous Github pour le sous-titrage des vidéo, bible : https://github.com/emma11y/sous-titres/ 
+- List ds raccourcis et gestuelle pour les lecteurs d’écran, indispensable (en) : https://dequeuniversity.com/screenreaders/
 
-- Expliquer WCAG 2.1, très pédagogique (en) : https://accessguide.io/ 
+Autres
 
-- Analyse des réponses au Neuvième questionnaire Webaim pour les utilisateurs de lecteurs d’écran, toujours riche sur l’évolution des pratiques (en) : https://webaim.org/projects/screenreadersurvey9/ 
-
-- 5 mythes sur les lecteurs d’écran portant préjudice à la mise en accessibilité (en) : https://www.boia.org/blog/5-myths-about-screen-readers-that-can-hurt-accessibility 
-
-- Podcast sur hyperactivité, troubles de l’attention et contenu en mouvement (en) : https://a11yrules.com/podcast/julieanne-king-talks-about-moving-content-on-pages-and-adhd/ 
-
-- Tout sur lien et a11y article de fond (en) : https://www.a11y-collective.com/blog/the-perfect-link/ 
-
-- Un avant-gout de WCAG 2.2 pour ce faire une idée, en vidéo (en) : https://www.youtube.com/watch?v=EZlqSwgKuZE  
-
-- Ressource pour concevoir un site inclusif et accessible : https://design-accessible.fr/ 
-
-## Autres
-
-- Auto-remplir les champs html, tout ce que le dev peut mettre en place, à lire (en) : https://cloudfour.com/thinks/autofill-what-web-devs-should-know-but-dont/ 
-
-- Programme de PW2021, une incontournable conférence : https://www.paris-web.fr/actualites/2021/06/programme-des-conferences-de-paris-web-2021-disponible.php 
-
-- Encore un point sur les outils de surcouches d’a11y bien fait : https://blog.empreintedigitale.fr/2021/06/01/outils-de-surcouche-daccessibilite-que-valent-ils-vraiment/ 
+- Des idées reçues sur l’a11y balayées, classique mais bon à rappeler (en) : https://alvaromontoro.com/blog/67989/myths-about-web-accessibility#accessibility-is-for-people-with-disabilities
+- Le métier d’expert a11y : https://access42.net/metier-conseil-expertise-accessibilite-numerique 
+- Une belle interview d’une UX/UI experte a11y : https://www.alsacreations.com/actu/lire/1833-Interview-des-gens-du-Web--Marie-Guillaumet.html 
+- Synthèses vocales où en eston ? (en) : https://tink.uk/notes-on-synthetic-speech/ 

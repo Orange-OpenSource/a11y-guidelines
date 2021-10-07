@@ -1,5 +1,6 @@
 ---
 title: "Textual content"
+abstract: "Textual content, web accessibility dev recommandations"
 ---
 
 # Textual content

@@ -1,6 +1,6 @@
 ---
 title: "Désactiver des éléments HTML"
-abstract: "Comment désactiver des éléments dans la page ?"
+abstract: "Comment désactiver des éléments d'une page ?"
 date: "2021-07-01"
 tags:
   - web

@@ -1,5 +1,6 @@
 ﻿---
-title: "WCAG audit"
+title: "La Va11ydette a WCAG audit"
+abstract: "La Va11ydette, our tool to perform Android WCAG audits"
 ---
 
 # WCAG audit

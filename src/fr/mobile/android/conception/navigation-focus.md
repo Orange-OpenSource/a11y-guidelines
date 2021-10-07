@@ -1,5 +1,6 @@
 ﻿---
 title: "Navigation au clavier & Switch Access"
+abstract: "Navigation au clavier & Switch Access, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
 # Navigation au clavier & Switch Access

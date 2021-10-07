@@ -1,5 +1,6 @@
 ---
 title: "Layout"
+abstract: "Layout, web accessibility dev recommandations"
 ---
 
 # Layout

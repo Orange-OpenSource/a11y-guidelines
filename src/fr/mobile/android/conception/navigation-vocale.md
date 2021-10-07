@@ -1,5 +1,6 @@
 ﻿---
 title: "Navigation vocale"
+abstract: "Navigation à l'aide du lecteur d'écran, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
 # Navigation vocale

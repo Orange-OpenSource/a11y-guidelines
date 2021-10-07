@@ -1,5 +1,6 @@
 ---
 title: "WWDC : World Wide Developers Conference"
+abstract: "Liste des présentations WWDC d'Apple au sujet de l'accessibilité"
 displayToc: true
 ---
 
@@ -14,6 +15,20 @@ La plupart des illustrations proviennent des supports de présentations fournies
 **L'accès au résumé de chacune de ces vidéos se fait en cliquant sur le titre ou directement sur l'image de présentation**.
 <br><br><br>
 
+## [2021 - Incorporer efficacement l'accessibilité à vos graphes](2021/122/)
+Précisions sur la façon de **présenter des graphes** avec VoiceOver en présentant une **nouveauté iOS&nbsp;15** pour ce système d'assistance technologique.
+<a href="2021/122/">
+    
+![Accès à la session Incorporer l'accessibilité à vos graphes.](../../images/iOSdev/wwdc21-122.png)
+<br><br><br>
+    
+## [2021 - Optimiser VoiceOver dans un contexte riche en données](2021/121/)
+Cette vidéo détaille parfaitement l'implémentation de la fonctionnalité **fournisseur de contenu personnalisé** apparue avec iOS&nbsp;14.
+<a href="2021/121/">
+    
+![Accès à la session Optimiser VoiceOver dans un contexte riche en données.](../../images/iOSdev/wwdc21-121.png)
+<br><br><br>
+    
 ## [2020 - Efficience du rotor](2020/116/)
 Explications sur la mise en oeuvre du **rotor personnalisé** à l'aide d'une application pour laquelle l'implémentation des fonctionnalités est développée de façon détaillée.
 <a href="2020/116/">

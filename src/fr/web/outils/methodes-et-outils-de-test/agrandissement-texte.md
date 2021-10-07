@@ -1,5 +1,6 @@
 ---
 title: "Agrandissement de la taille du texte"
+abstract: "Tester l'grandissement du texte à 200%"
 ---
 
 # Agrandissement de la taille du texte

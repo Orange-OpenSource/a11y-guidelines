@@ -1,5 +1,6 @@
 ---
 title: "Keyboard navigation"
+abstract: "Keyboard navigation, web accessibility dev recommandations"
 ---
 
 # Keyboard navigation

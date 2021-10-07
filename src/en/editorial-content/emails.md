@@ -1,5 +1,6 @@
 ---
 title: "Emails accessibility guidelines"
+abstract: "Create accessible emails for all"
 ---
 
 # Design emails accessible to all 

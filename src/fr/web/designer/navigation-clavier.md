@@ -1,5 +1,6 @@
 ---
 title: "Navigation au clavier"
+abstract: "Navigation au clavier, recommendations d'accessibilité web lors de la conception"
 ---
 
 # Navigation au clavier

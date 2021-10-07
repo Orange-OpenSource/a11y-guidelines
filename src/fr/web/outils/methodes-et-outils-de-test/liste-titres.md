@@ -1,5 +1,6 @@
 ---
 title: "Accéder à la liste des titres de la page (balises H1 à H6)"
+abstract: "Tester la hiérarchie et la pertinence des  titres de rubrique"
 ---
 
 # Accéder à la liste des titres de la page (balises `H1` à `H6`)

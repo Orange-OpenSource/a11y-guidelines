@@ -1,5 +1,6 @@
 ---
 title: "iOS accessibility"
+abstract: "Many accessibility concepts must be perfectly understood in order to bring the best user experience"
 ---
 
 # iOS accessibility
