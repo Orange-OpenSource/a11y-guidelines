@@ -1,4 +1,5 @@
 {
   "jquery": true,
-  "highlightJS": true
+  "highlightJS": true,
+  "highlightTitle":true
 }

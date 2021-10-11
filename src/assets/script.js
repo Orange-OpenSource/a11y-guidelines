@@ -32,42 +32,64 @@
   }, { once: true })
 })();
 
-
 (function(){
-  $('.item-oc a').on("click", function(){
-    $('div[class="languageinfo"] li a').each(function(){
-      $(this).classList.remove('active');
+
+  function removeActiveClass() {
+    document.querySelectorAll('.languageinfo li a').forEach(function(item){
+      item.classList.remove('active');
+      item.setAttribute('tabindex',-1);
+      item.setAttribute('aria-selected',false);
     });
-    $('div[class=".item-oc"] a').each(function(){
-      $(this).addClass('active');
+    document.querySelectorAll('.languageinfotab div').forEach(function(item){
+      item.classList.remove('show');
+      item.classList.remove('active');
+      item.setAttribute('tabindex',-1);
+      item.setAttribute('aria-hidden',true);
     });
-    $('div[class=".languageinfotab"] div').each(function(){
-      $(this).classList.remove('show');
-      $(this).classList.remove('active');
+  }
+
+  function addActiveClass(classLink, classDiv) {
+    document.querySelectorAll('.'+classLink+' a').forEach(function(item){
+      item.classList.add('active');
+      item.setAttribute('tabindex',0);
+      item.setAttribute('aria-selected',true);
     });
-    $('div[class=".objc"]').each(function(){
-      $(this).addClass('show');
-      $(this).addClass('active');
+    document.querySelectorAll('.'+classDiv).forEach(function(item){
+      item.classList.add('show');
+      item.classList.add('active');
+      item.setAttribute('tabindex',0);
+      item.setAttribute('aria-hidden',false);
+    })
+  }
+
+  document.querySelectorAll('.item-oc a').forEach(function(item){
+
+    item.addEventListener("click", function(){
+
+      removeActiveClass();
+      addActiveClass('item-oc', 'objc');
+
     });
   });
 
-  $('.item-s a').on("click", function(){
-    $('div[class="languageinfo"] li a').each(function(){
-      $(this).classList.remove('active');
-    });
-    $('div[class=".item-s] a').each(function(){
-      $(this).addClass('active');
-    });
-    $('div[class=".languageinfotab"] div').each(function(){
-      $(this).classList.remove('show');
-      $(this).classList.remove('active');
-    });
-    $('div[class=".swift"]').each(function(){
-      $(this).addClass('show');
-      $(this).addClass('active');
+  document.querySelectorAll('.item-s a').forEach(function(item){
+
+    item.addEventListener("click", function(){
+      
+      removeActiveClass();
+      addActiveClass('item-s', 'swift');
+
     });
   });
 
+  document.querySelectorAll('.item-sui a').forEach(function(item){
+    item.addEventListener("click", function(){
+      
+      removeActiveClass();
+      addActiveClass('item-sui', 'swiftui');
+
+    });
+  });
 })();
 
 /* Filter bar */
@@ -163,34 +185,37 @@ function initPriorityNav () {
 function highlightCodeBlocks () {
   hljs.initHighlighting()
 
-  const codeBlocks = document.querySelectorAll('.hljs')
-  
-  if (!codeBlocks.length) {
-    return
+  if (Application.vendors.highlightTitle === true) {
+
+    const codeBlocks = document.querySelectorAll('.hljs')
+    
+    if (!codeBlocks.length) {
+      return
+    }
+
+    const displayLanguageList = {
+      'css': 'CSS',
+      'html': 'HTML',
+      'java': 'Java',
+      'javascript': 'JavaScript',
+      'json': 'JSON',
+      'kotlin': 'Kotlin',
+      'objectivec':'Objective-C',
+      'swift': 'Swift',
+      'swiftui': 'SwiftUI',
+      'xml': 'XML'
+    }
+
+    codeBlocks.forEach(function (codeBlock) {
+      const language = codeBlock.result.language
+      const displayLanguage = displayLanguageList[language] || language
+      const languageWrapper = document.createElement('div')
+      languageWrapper.classList.add('bg-primary', 'd-inline-block', 'p-2', 'font-weight-bold')
+      languageWrapper.textContent = displayLanguage
+
+      codeBlock.parentNode.insertBefore(languageWrapper, codeBlock)
+    })
   }
-
-  const displayLanguageList = {
-    'css': 'CSS',
-    'html': 'HTML',
-    'java': 'Java',
-    'javascript': 'JavaScript',
-    'json': 'JSON',
-    'kotlin': 'Kotlin',
-    'objectivec':'Objective-C',
-    'swift': 'Swift',
-    'swiftui': 'SwiftUI',
-    'xml': 'XML'
-  }
-
-  codeBlocks.forEach(function (codeBlock) {
-    const language = codeBlock.result.language
-    const displayLanguage = displayLanguageList[language] || language
-    const languageWrapper = document.createElement('div')
-    languageWrapper.classList.add('bg-primary', 'd-inline-block', 'p-2', 'font-weight-bold')
-    languageWrapper.textContent = displayLanguage
-
-    codeBlock.parentNode.insertBefore(languageWrapper, codeBlock)
-  })
 }
 
 function enhanceSearchField () {

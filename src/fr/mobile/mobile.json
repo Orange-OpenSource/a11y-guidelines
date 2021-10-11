@@ -1,3 +1,4 @@
 {
-  "highlightJS": false
+  "highlightJS": true,
+  "highlightTitle":false
 }
