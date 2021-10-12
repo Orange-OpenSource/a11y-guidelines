@@ -882,9 +882,6 @@ L’accès au contenu d’une application ne doit absolument pas dépendre de l�
 - La définition très précise de la façon dont les transitions entre les modes doivent être réalisées.
 
 - La parfaite adaptation du contenu aux modes portrait et paysage par le biais d’une batterie de tests graphiques sur tous les mobiles compatibles avec la version iOS déployée (très important pour le grossissement de texte).
-
-- Le paramétrage approprié dans l’éditeur de code.
-<br>![](../../images/orientation.png)
 </div>
 </div>
 <br><br>
@@ -1008,9 +1005,16 @@ La liste exhaustive de ces options est fournie ci-dessous en détaillant leur ac
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#Contrast-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#Contrast-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1020,9 +1024,13 @@ La liste exhaustive de ces options est fournie ci-dessous en détaillant leur ac
            aria-selected="false">iOS 12</a>
     </li>
 </ul><div class="tab-content">
-<div class="tab-pane show active"
-     id="Contrast-iOS13"
-     role="tabpanel">
+<div class="tab-pane show active" 
+     id="Contrast-iOS15" 
+     role="tabpanel" >
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Augmenter le contraste](../../images/optionA11Y_iOS15_contraste.png)
+</div>
+<div class="tab-pane" id="Contrast-iOS13" role="tabpanel">
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Augmenter le contraste](../../images/optionA11Y_iOS13_contraste.png)
 Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="https://developer.apple.com/documentation/uikit/uitraitcollection/3238079-accessibilitycontrast" style="text-decoration: underline;">variable&nbsp;d'instance</a>** `traitCollection`.
@@ -1040,9 +1048,16 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#AssistiveTouch-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#AssistiveTouch-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1053,8 +1068,12 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="AssistiveTouch-iOS13"
+     id="AssistiveTouch-iOS15"
      role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Toucher - AssistiveTouch - AssistiveTouch](../../images/optionA11Y_iOS15_assistiveTouch.png)
+</div>
+<div class="tab-pane" id="AssistiveTouch-iOS13" role="tabpanel">
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - Toucher - AssistiveTouch - AssistiveTouch](../../images/optionA11Y_iOS13_assistiveTouch.png)
 </div>
@@ -1071,9 +1090,16 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#Bold-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#Bold-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1084,8 +1110,12 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="Bold-iOS13"
+     id="Bold-iOS15"
      role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Texte en gras](../../images/optionA11Y_iOS15_bold.png)
+</div>
+<div class="tab-pane" id="Bold-iOS13" role="tabpanel">
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Texte en gras](../../images/optionA11Y_iOS13_bold.png)
 </div>
@@ -1102,9 +1132,16 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#ClosedCaption-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#ClosedCaption-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1115,8 +1152,12 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="ClosedCaption-iOS13"
+     id="ClosedCaption-iOS15"
      role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Sous-titres codés et SM](../../images/optionA11Y_iOS15_closedCaptions.png)
+</div>
+<div class="tab-pane" id="ClosedCaption-iOS13" role="tabpanel">
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - Sous-titres codés et SM](../../images/optionA11Y_iOS13_closedCaptions.png)
 </div>
@@ -1133,9 +1174,16 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#GrayScale-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#GrayScale-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1146,8 +1194,12 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="GrayScale-iOS13"
+     id="GrayScale-iOS15"
      role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Filtres de couleur](../../images/optionA11Y_iOS15_grayScale.png)
+</div>
+<div class="tab-pane" id="GrayScale-iOS13" role="tabpanel">
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Filtres de couleur](../../images/optionA11Y_iOS13_grayScale.png)
 </div>
@@ -1165,9 +1217,16 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#GuidedAccess-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#GuidedAccess-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1178,8 +1237,12 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="GuidedAccess-iOS13"
+     id="GuidedAccess-iOS15"
      role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Accès guidé - Accès guidé](../../images/optionA11Y_iOS15_guidedAccess.png)
+</div>
+<div class="tab-pane" id="GuidedAccess-iOS13" role="tabpanel">
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - Accès guidé - Accès guidé](../../images/optionA11Y_iOS13_guidedAccess.png)
 </div>
@@ -1196,9 +1259,16 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#invertColors-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#invertColors-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1209,8 +1279,12 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="invertColors-iOS13"
+     id="invertColors-iOS15"
      role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Inversion intelligente](../../images/optionA11Y_iOS15_invertColors.png)
+</div>
+<div class="tab-pane" id="invertColors-iOS13" role="tabpanel">
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Inversion intelligente](../../images/optionA11Y_iOS13_invertColors.png)
 </div>
@@ -1227,9 +1301,16 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#AudioMono-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#AudioMono-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="fakse">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1240,8 +1321,12 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="AudioMono-iOS13"
+     id="AudioMono-iOS15"
      role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Audio Visuel - Mono Audio](../../images/optionA11Y_iOS15_audioEnMono.png)
+</div>
+<div class="tab-pane" id="AudioMono-iOS13" role="tabpanel">
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - Audio Visuel - Mono Audio](../../images/optionA11Y_iOS13_audioEnMono.png)
 </div>
@@ -1258,9 +1343,16 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#ReduceMotion-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#ReduceMotion-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1271,8 +1363,12 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="ReduceMotion-iOS13"
+     id="ReduceMotion-iOS15"
      role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Animation - Réduire les animations](../../images/optionA11Y_iOS15_reduceMotion.png)
+</div>
+<div class="tab-pane" id="ReduceMotion-iOS13" role="tabpanel">
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - Animation - Réduire les animations](../../images/optionA11Y_iOS13_reduceMotion.png)
 </div>
@@ -1284,9 +1380,33 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
 <a name="optionA11Y_preferCrossFadeTransition"></a>
 
 - **Préférer les fondus enchaînés** (UIAccessibilityPrefersCrossFadeTranstions)&nbsp;: voir [WWDC&nbsp;2019](../wwdc/2019/#reduction-de-mouvement) et [WWDC&nbsp;2020](../wwdc/2020/020/#preferences-utilisateur) pour un descriptif précis de la fonctionnalité.
+   
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#CrossFadeTransition-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#CrossFadeTransition-iOS13"
+           role="tab" 
+           aria-selected="false">iOS 13</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="CrossFadeTransition-iOS15"
+     role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Animation - Réduire les animations - Préférer les fondus enchaînés](../../images/optionA11Y_iOS15_crossFadeTransition.png)
+</div>
+<div class="tab-pane" id="CrossFadeTransition-iOS13" role="tabpanel" >
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - Animation - Réduire les animations - Préférer les fondus enchaînés](../../images/optionA11Y_iOS13_crossFadeTransition.png)
-</br>
+</div></div></br>
 
 <a name="optionA11Y_reductionTransparence"></a>
 
@@ -1296,9 +1416,16 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#ReduceTransparency-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#ReduceTransparency-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1309,8 +1436,12 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="ReduceTransparency-iOS13"
+     id="ReduceTransparency-iOS15"
      role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Réduire la transparence](../../images/optionA11Y_iOS15_reduceTransparency.png)
+</div>
+<div class="tab-pane" id="ReduceTransparency-iOS13" role="tabpanel">
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Réduire la transparence](../../images/optionA11Y_iOS13_reduceTransparency.png)
 </div>
@@ -1327,9 +1458,16 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#ShakeToUndo-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#ShakeToUndo-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1340,8 +1478,12 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="ShakeToUndo-iOS13"
+     id="ShakeToUndo-iOS15"
      role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Toucher - Secouer pour annuler](../../images/optionA11Y_iOS15_shakeToUndo.png)
+</div>
+<div class="tab-pane" id="ShakeToUndo-iOS13" role="tabpanel">
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - Toucher - Secouer pour annuler](../../images/optionA11Y_iOS13_shakeToUndo.png)
 </div>
@@ -1358,9 +1500,16 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#SpeakScreen-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#SpeakScreen-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1371,8 +1520,12 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="SpeakScreen-iOS13"
+     id="SpeakScreen-iOS15"
      role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Contenu énoncé - Énoncer lecontenu de l'écran](../../images/optionA11Y_iOS15_speakScreen.png)
+</div>
+<div class="tab-pane" id="SpeakScreen-iOS13" role="tabpanel">
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - Contenu énoncé - Énoncer lecontenu de l'écran](../../images/optionA11Y_iOS13_speakScreen.png)
 </div>
@@ -1389,9 +1542,16 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#SpeakSelection-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#SpeakSelection-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1402,8 +1562,12 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="SpeakSelection-iOS13"
+     id="SpeakSelection-iOS15"
      role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Contenu énoncé - Énoncer la sélection](../../images/optionA11Y_iOS15_speakSelection.png)
+</div>
+<div class="tab-pane" id="SpeakSelection-iOS13" role="tabpanel">
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - Contenu énoncé - Énoncer la sélection](../../images/optionA11Y_iOS13_speakSelection.png)
 </div>
@@ -1420,9 +1584,16 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#SwitchControl-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#SwitchControl-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1433,8 +1604,12 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="SwitchControl-iOS13"
+     id="SwitchControl-iOS15"
      role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Switch Control - Switch Control](../../images/optionA11Y_iOS15_switchControl.png)
+</div>
+<div class="tab-pane" id="SwitchControl-iOS13" role="tabpanel">
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - Switch Control - Switch Control](../../images/optionA11Y_iOS13_switchControl.png)
 </div>
@@ -1451,9 +1626,16 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#VoiceOver-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#VoiceOver-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1464,8 +1646,12 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="VoiceOver-iOS13"
+     id="VoiceOver-iOS15"
      role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - VoiceOver - VoiceOver](../../images/optionA11Y_iOS15_voiceOver.png)
+</div>
+<div class="tab-pane" id="VoiceOver-iOS13" role="tabpanel">
     
 ![Illustration d'accès via le menu Réglages - Accessibilité - VoiceOver - VoiceOver](../../images/optionA11Y_iOS13_voiceOver.png)
 </div>
@@ -1478,22 +1664,94 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
 
 - **Prévisualisation vidéo** (UIAccessibilityIsVideoAutoplayEnabled)&nbsp;: voir [WWDC&nbsp;2019](../wwdc/2019/#reduction-de-mouvement) pour un descriptif de cette **nouvelle fonctionnalité iOS 13**.
 
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#AutoPlayVideoPreviews-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#AutoPlayVideoPreviews-iOS13"
+           role="tab" 
+           aria-selected="false">iOS 13</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="AutoPlayVideoPreviews-iOS15"
+     role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Mouvement - Lire automatiquement les aperçus](../../images/optionA11Y_iOS15_autoPlayVideoPreviews.png)
+</div>
+<div class="tab-pane" id="AutoPlayVideoPreviews-iOS13" role="tabpanel">
+    
 ![Illustration d'accès via le menu Réglages - Accessibilité - Mouvement - Lire automatiquement les aperçus](../../images/optionA11Y_iOS13_autoPlayVideoPreviews.jpg)
-</br></br></br>
+</div></div></br>
 
 <a name="optionA11Y_differentiateWithoutColour"></a>
 
 - **Différencier sans couleur** (UIAccessibilityShouldDifferentiateWithoutColour)&nbsp;: voir [WWDC&nbsp;2019](../wwdc/2019/#couleur) pour un descriptif de cette **nouvelle fonctionnalité iOS&nbsp;13** et de son **[accès&nbsp;programmatique](../wwdc/2020/020/#couleur-formes) possible à partir de iOS&nbsp;14**.
 
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#DifferentiateWithoutColour-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#DifferentiateWithoutColour-iOS13"
+           role="tab" 
+           aria-selected="false">iOS 13</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="DifferentiateWithoutColour-iOS15"
+     role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Différencier sans couleur](../../images/optionA11Y_iOS15_differentiateWithoutColour.png)
+</div>
+<div class="tab-pane" id="DifferentiateWithoutColour-iOS13" role="tabpanel">
+    
 ![Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Différencier sans couleur](../../images/optionA11Y_iOS13_differentiateWithoutColour.png)
-</br></br></br>
+</div></div></br>
 
 <a name="optionA11Y_onOffSwitchLabels"></a>
 
 - **Boutons avec I/O** (UIAccessibilityIsOnOffSwitchLabelsEnabled)&nbsp;: une fois activée, cette option dont l'**accès programmatique est une nouveauté iOS 13** affiche directement l'état des boutons à bascule pour éviter que seule la couleur soit porteuse de l'information.
 
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#OnOffSwitchLabels-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#OnOffSwitchLabels-iOS13"
+           role="tab" 
+           aria-selected="false">iOS 13</a>
+    </li>
+</ul><div class="tab-content">
+<div class="tab-pane show active"
+     id="OnOffSwitchLabels-iOS15"
+     role="tabpanel">
+    
+![Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Boutons avec I/O](../../images/optionA11Y_iOS15_onOffSwitchLabels.png)
+</div>
+<div class="tab-pane" id="OnOffSwitchLabels-iOS13" role="tabpanel">
+    
 ![Illustration d'accès via le menu Réglages - Accessibilité - Affichage et taille du texte - Boutons avec I/O](../../images/optionA11Y_iOS13_onOffSwitchLabels.png)
-
+</div></div>
 </div>
 <div class="tab-pane" id="a11yOptions-Check" role="tabpanel" >
 
