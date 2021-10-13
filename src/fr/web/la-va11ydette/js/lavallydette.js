@@ -1,14 +1,10 @@
 /* 
 
-Copyright (C) 2021 Orange
-
-This software is confidential and proprietary information of Orange.
-You shall not disclose such Confidential Information and shall use it only
-in accordance with the terms of the agreement you entered into.
-Unauthorized copying of this file, via any medium is strictly prohibited.
-
-If you are Orange employee you shall use this software in accordance with
-the Orange Source Charter (http://infoportal-opensource.innov.intraorange/en/orange-source-charter/).
+# Software Name: La Va11ydette
+# SPDX-FileCopyrightText: Copyright (c) 2021 Orange
+# SPDX-License-Identifier: MIT License
+#
+# This software is distributed under the MIT licens
 
 */
 
@@ -39,7 +35,7 @@ $('.o-nav-local').prioritynav('Autres pages');
 var dataVallydette;
 var langVallydette;
 var checklistVallydette;
-var issuesVallydette;
+var issuesVallydette={};
 
 var globalLang;
 var globalTemplate;
@@ -112,7 +108,7 @@ function initGlobalCriteriaListName(criteriaListName) {
 		
 	  if(checklistRequest.readyState === 4 && checklistRequest.status === 200) {
 		checklistVallydette = JSON.parse(checklistRequest.responseText);
-		
+
 		if (currentCriteriaListName) {
 			initAuditPage();
 			createObjectAndRunVallydette();
@@ -120,24 +116,26 @@ function initGlobalCriteriaListName(criteriaListName) {
 		} else {
 			initHomePage();
 		}
-		
+
 		initMainMenu();
 		localizeHTML();
+
+		var issuesRequest = new XMLHttpRequest();
+		issuesRequest.open("GET", "json/"+ checklistVallydette[currentCriteriaListName].filename+"-issues-" + globalLang + ".json", true);
+		issuesRequest.onreadystatechange = function () {
+	 	if(issuesRequest.readyState === 4 && issuesRequest.status === 200) {
+			issuesVallydette = JSON.parse(issuesRequest.responseText);
+	  	}	 
+	};
+	
+	issuesRequest.send();
 	  } 
 	};
 	
 	checklistRequest.send();
 	
 	
-	var issuesRequest = new XMLHttpRequest();
-	issuesRequest.open("GET", "json/issues-" + globalLang + ".json", true);
-	issuesRequest.onreadystatechange = function () {
-	  if(issuesRequest.readyState === 4 && issuesRequest.status === 200) {
-		issuesVallydette = JSON.parse(issuesRequest.responseText);
-	  } 
-	};
-	
-	issuesRequest.send();	
+		
 	
 	initLangMenu();
 
@@ -220,7 +218,7 @@ function initMainMenu() {
 	htmlMainMenu += '</div>';
 	htmlMainMenu += '</div>';
 	
-	document.getElementById("importexport").innerHTML = htmlMainMenu + document.getElementById("importexport").innerHTML;
+	document.getElementById("checklist").innerHTML = htmlMainMenu;
 	
 }
 
@@ -339,6 +337,7 @@ function initAuditPage() {
 	htmlMainContent = document.getElementById('mainContent');
 	
 	eventHandler();
+	AuditEventHandler();
 	
 }
 
@@ -350,7 +349,6 @@ function importCriteriaToVallydetteObj (criteriaVallydette) {
 	if (checklistVallydette[currentCriteriaListName].template === 'audit'){
 		criteriaVallydette.forEach(function (criteria, key) {
 			 criteria.resultatTest = "nt";
-			 criteria.issues = [];
 			 
 		 })
 	}
@@ -360,6 +358,7 @@ function importCriteriaToVallydetteObj (criteriaVallydette) {
     dataVallydette.checklist.page[0].items = dataVallydette.checklist.page[0].items.concat(criteriaVallydette);
 
 	dataVallydette.checklist.page[0].items.forEach(function (test) {
+		test.issues = [];
 
 		if(test.group) {
 			if(dataVallydette.checklist.page[0].groups[test.group]){
@@ -403,7 +402,6 @@ function importRGAA(dataRGAA) {
 
 
                 vallydetteTest.ID = "testID-" + topics.number + "-" + criteria.criterium.number + "-" + test;
-                vallydetteTest.commentaire = "";
                 vallydetteTest.resultatTest = "";
 
 
@@ -508,53 +506,50 @@ function eventHandler() {
 	
 	btnImport.onclick = function () {
 		var files = document.getElementById('selectFiles').files;
-		var fr = new FileReader();
+		let alert = document.getElementById('import-alert');
+		alert.classList.add('d-none');
 
-		fr.onload = function (e) {
-			dataVallydette = JSON.parse(e.target.result);
-			if (dataVallydette.checklist.referentiel) {
-				
-				//fix obsolete referentiel name (from 1.4 checklist version)
-				if (dataVallydette.checklist.referentiel === "wcagEase") {
-					dataVallydette.checklist.referentiel = "wcag-web";
-				}
-				
-				currentCriteriaListName = dataVallydette.checklist.referentiel;
-				
-			}
-			initAuditPage();
-			initGlobalLang(dataVallydette.checklist.lang, true);
-			initGlobalTemplate(dataVallydette.checklist.template);
-			checkTheVersion(dataVallydette.checklist.version);
-			utils.putTheFocus(document.getElementById("checklistName"));
-			runLangRequest();
-			setTimeout(function(){ jsonUpdate(); }, 500);
+		if(files.length==0){
+			alert.classList.remove('d-none');
+			alert.innerHTML='<span class="alert-icon"></span><p>'+ langVallydette.importErrorEmpty +'</p>';
 		}
+		else{
+			var fr = new FileReader();
 
-		fr.readAsText(files.item(0));
+			fr.onload = function (e) {
+				let dataFile = JSON.parse(e.target.result);
+				if (dataFile.hasOwnProperty('checklist')) {
+					dataVallydette = managementDeprecatedComment(dataFile);
+						
+					//fix obsolete referentiel name (from 1.4 checklist version)
+					if (dataVallydette.checklist.referentiel === "wcagEase") {
+						dataVallydette.checklist.referentiel = "wcag-web";
+					}
+					
+					currentCriteriaListName = dataVallydette.checklist.referentiel;
+					initAuditPage();
+					initGlobalLang(dataVallydette.checklist.lang, true);
+					initGlobalTemplate(dataVallydette.checklist.template);
+					checkTheVersion(dataVallydette.checklist.version);
+					document.getElementById("btnImport").click();
+					utils.putTheFocus(document.getElementById("checklistName"));
+					runLangRequest();
+					setTimeout(function(){ jsonUpdate(); }, 500);
+				}
+				else{
+					alert.classList.remove('d-none');
+					alert.innerHTML='<span class="alert-icon"></span><p>'+ langVallydette.importError +'</p>';
+				}
+			}
+			fr.readAsText(files.item(0));	
+		}
+		
 	};
 	
 	var inputSelectFile = document.getElementById("selectFiles");
 	inputSelectFile.addEventListener('change', function () {
 		document.getElementById("selectFilesLabel").innerText = inputSelectFile.files[0].name;
 	}, false);
-	
-	var btnChecklist = document.getElementById("btnChecklistName");
-	btnChecklist.addEventListener('click', function () {
-		setValue(btnChecklist.dataset.element, btnChecklist.dataset.property);
-	}, false);
-	
-	var btnLocalStorage = document.getElementById("btnLocalStorage");
-	btnLocalStorage.addEventListener('click', function () {
-		runLocalStorage();
-	}, false);
-
-	if(Object.keys(getAllStorage()).length === 0){
-		btnLocalStorage.disabled=true;
-		btnLocalStorage.classList.add("disabled");
-	}
-	
-	btnActionPageEventHandler();
 	
 }
 
@@ -672,7 +667,7 @@ function createFormLocalStorage(){
 function getLocalStorage(auditName) {
 	
 	let objLocalStorage = localStorage.getItem(auditName);
-	dataVallydette = JSON.parse(objLocalStorage);
+	dataVallydette = managementDeprecatedComment(JSON.parse(objLocalStorage));
 	
 	initGlobalLang(dataVallydette.checklist.lang, true);
 	initGlobalTemplate(dataVallydette.checklist.template);
@@ -682,6 +677,30 @@ function getLocalStorage(auditName) {
 	runLangRequest();						
 }
 
+
+/**
+ *  Initialization of events for name audit button, and local Storage button.
+ */
+
+function AuditEventHandler(){
+	var btnChecklist = document.getElementById("btnChecklistName");
+
+	btnChecklist.addEventListener('click', function () {
+		setValue(btnChecklist.dataset.element, btnChecklist.dataset.property);
+	}, false);
+
+	var btnLocalStorage = document.getElementById("btnLocalStorage");
+	btnLocalStorage.addEventListener('click', function () {
+		runLocalStorage();
+	}, false);
+
+	if(Object.keys(getAllStorage()).length === 0){
+		btnLocalStorage.disabled=true;
+		btnLocalStorage.classList.add("disabled");
+	}
+	btnActionPageEventHandler();
+
+}
 
 /**
  *  Initialization of events for page name edit button and page delete button.
@@ -764,8 +783,13 @@ runTestListMarkup = function (currentRefTests) {
 			htmlrefTests += '<li class="custom-control custom-radio custom-control-inline mb-0"><input class="custom-control-input" type="radio" id="nt-' + currentTest + '" name="test-' + currentTest + '" value="nt" ' + (((currentRefTests[i].resultatTest === arrayFilterNameAndValue[3][1]) || (currentRefTests[i].resultatTest === '')) ? "checked" : "") + '/><label for="nt-' + currentTest + '" class="custom-control-label">' + langVallydette.template.status4 + '</label></li>';
 			htmlrefTests += '</ul>';
 
-			htmlrefTests += '<button type="button" id="commentBtn' + currentTest + '" class="btn btn-link d-print-none" aria-labelledby="commentBtn' + currentTest + ' title-' + currentTest + '" data-toggle="modal" data-target="#modal' + currentTest + '">' + getCommentState(currentTest) + '</button>';
-
+			htmlrefTests += '<div class="btn-group" role="group" aria-label="' + langVallydette.issueManagement + '">';
+			htmlrefTests += '<ul class="list-inline m-0">';
+			htmlrefTests += '<li class="list-inline-item" aria-hidden="true">' + langVallydette.issues + '</li>';
+			htmlrefTests += '<li class="list-inline-item"><button type="button" id="issueDisplayBtn' + currentTest + '" class="btn btn-secondary btn-icon mr-1 d-print-none" title="' + langVallydette.editIssue + '" data-toggle="modal" data-target="#modal' + currentTest + '" ' + ((currentRefTests[i].issues.length === 0) ? "disabled" : "") + '><span class="icon icon-Pencil" aria-hidden="true"></span><span class="sr-only">' + langVallydette.editIssue + '</span></button></li>';
+			htmlrefTests += '<li class="list-inline-item"><button type="button" id="issueBtn' + currentTest + '" class="btn btn-secondary btn-icon d-print-none" title="' + langVallydette.addIssue + '" data-toggle="modal" data-target="#modalAddIssue"><span class="icon icon-Add" aria-hidden="true"></span></span><span class="sr-only">' + langVallydette.addIssue + '</span></button></li>';
+			htmlrefTests += '</ul>';
+			htmlrefTests += '</div>';
 			htmlrefTests += '<button class="btn btn-secondary btn-icon d-print-none" type="button" data-toggle="collapse" data-target="#collapse-' + currentTest + '" aria-expanded="false" aria-controls="collapse-' + currentTest + '"><span class="icon-arrow-down" aria-hidden="true"></span><span class="sr-only">' + langVallydette.informations + '</span></button></div>';
 			htmlrefTests += '<div class="collapse ' + ((currentRefTests[i].verifier || currentRefTests[i].exception) ? 'border-top' : '' ) + ' border-light pt-3 mx-3 d-print-block" id="collapse-' + currentTest + '">';
 
@@ -943,7 +967,6 @@ runTestListMarkup = function (currentRefTests) {
 				}
 
 				htmlrefTests += '<div class="testForm"><label for="conforme' + i + '">Conforme</label><input type="radio" id="conforme' + i + '" name="test' + i + '" value="ok" ' + ((currentRefTests[i].resultatTest === arrayFilterNameAndValue[0][1]) ? "checked" : "") + '/> <label for="non-conforme' + i + '">Non conforme</label><input type="radio" id="non-conforme' + i + '" name="test' + i + '" id="radio' + i + '" value="ko" ' + ((currentRefTests[i].resultatTest === arrayFilterNameAndValue[1][1]) ? "checked" : "") + '/>  <label for="na' + i + '">N/A</label><input type="radio" id="na' + i + '" name="test' + i + '" value="na" ' + ((currentRefTests[i].resultatTest === arrayFilterNameAndValue[2][1]) ? "checked" : "") + '/>  <label for="nt' + i + '">Non testé</label><input type="radio" id="nt' + i + '" name="test' + i + '" value="nt" ' + ((currentRefTests[i].resultatTest === arrayFilterNameAndValue[3][1]) ? "checked" : "") + '/>';
-				htmlrefTests += '<button type="button" id="commentBtn' + i + '" class="btn btn-secondary float-lg-right" data-toggle="modal" data-target="#modal' + i + '">' + getCommentState(i) + '</button></div></div>';
 				htmlrefTests += '<div id="collapse' + i + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + i + '">';
 				htmlrefTests += '<div class="card-block"><div class="row">';
 				htmlrefTests += '<div class="col-lg-6"><h4>' + textContent.title1 + '</h4><ol>';
@@ -976,7 +999,6 @@ runTestListMarkup = function (currentRefTests) {
 
 				htmlrefTests += '<div class="testForm"><label for="conforme' + i + '">Conforme</label><input type="radio" id="conforme' + i + '" name="test' + i + '" value="ok" ' + ((currentRefTests[i].resultatTest === arrayFilterNameAndValue[0][1]) ? "checked" : "") + '/> <label for="non-conforme' + i + '">Non conforme</label><input type="radio" id="non-conforme' + i + '" name="test' + i + '" id="radio' + i + '" value="ko" ' + ((currentRefTests[i].resultatTest === arrayFilterNameAndValue[1][1]) ? "checked" : "") + '/>  <label for="na' + i + '">N/A</label><input type="radio" id="na' + i + '" name="test' + i + '" value="na" ' + ((currentRefTests[i].resultatTest === arrayFilterNameAndValue[2][1]) ? "checked" : "") + '/>  <label for="nt' + i + '">Non testé</label><input type="radio" id="nt' + i + '" name="test' + i + '" value="nt" ' + (((currentRefTests[i].resultatTest === arrayFilterNameAndValue[3][1]) || (currentRefTests[i].resultatTest === '')) ? "checked" : "") + '/>';
 
-				htmlrefTests += '<button type="button" id="commentBtn' + i + '" class="btn btn-secondary float-lg-right" data-toggle="modal" data-target="#modal' + i + '">' + getCommentState(i) + '</button></div>';
 				htmlrefTests += '</div></article>';
 
 				if ((currentRefTests[nextIndex] != undefined) && (headingCriterium != currentRefTests[nextIndex].criterium)) {
@@ -999,7 +1021,6 @@ runTestListMarkup = function (currentRefTests) {
 			htmlrefTests += '<article class="" id="' + currentRefTests[i].ID + '"><div class="card-header" id="heading' + i + '"><h3 class="card-title"><a class="" role="button" data-toggle="collapse" href="#collapse' + i + '" aria-expanded="false" aria-controls="collapse' + i + '"><span class="accordion-title">' + currentRefTests[i].title + '</span><span id="resultID-' + currentRefTests[i].ID + '" class="badge badge-pill ' + getStatutClass(currentRefTests[i].resultatTest) + ' float-lg-right">' + setStatutText(currentRefTests[i].resultatTest) + '</span></a></h3>';
 
 			htmlrefTests += '<div class="testForm"><label for="conforme' + i + '">Conforme</label><input type="radio" id="conforme' + i + '" name="test' + i + '" value="ok" ' + ((currentRefTests[i].resultatTest === arrayFilterNameAndValue[0][1]) ? "checked" : "") + '/> <label for="non-conforme' + i + '">Non conforme</label><input type="radio" id="non-conforme' + i + '" name="test' + i + '" id="radio' + i + '" value="ko" ' + ((currentRefTests[i].resultatTest === arrayFilterNameAndValue[1][1]) ? "checked" : "") + '/>  <label for="na' + i + '">N/A</label><input type="radio" id="na' + i + '" name="test' + i + '" value="na" ' + ((currentRefTests[i].resultatTest === arrayFilterNameAndValue[2][1]) ? "checked" : "") + '/>  <label for="nt' + i + '">Non testé</label><input type="radio" id="nt' + i + '" name="test' + i + '" value="nt" ' + (((currentRefTests[i].resultatTest === arrayFilterNameAndValue[3][1]) || (currentRefTests[i].resultatTest === '')) ? "checked" : "") + '/>';
-			htmlrefTests += '<button type="button" id="commentBtn' + i + '" class="btn btn-secondary float-lg-right" data-toggle="modal" data-target="#modal' + i + '">' + getCommentState(i) + '</button></div></div>';
 			htmlrefTests += '<div id="collapse' + i + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + i + '">';
 			htmlrefTests += '<div class="card-block"><div class="row">';
 			htmlrefTests += '<div class="col-lg-6"><h4>' + textContent.title1 + '</h4><ol>';
@@ -1053,12 +1074,6 @@ runTestListMarkup = function (currentRefTests) {
 			}, false);
 		}
 
-		var comment = document.getElementById("commentBtn" + currentRefTests[i].ID);
-		if (comment) {
-			comment.addEventListener('click', function () {
-				setComment(currentRefTests[i].ID, currentRefTests[i].title)
-			}, false);
-		}
 		
 		var issue = document.getElementById("issueBtn" + currentRefTests[i].ID);
 		if (issue) {
@@ -1586,6 +1601,7 @@ function runComputation(obj) {
 
 							if (dataVallydette.checklist.page[i].items[j].resultatTest === "ko") {
 								dataWCAG.items[k].resultat = false;
+								//@TODO voir pour rajouter les issues
 								if (dataVallydette.checklist.page[i].items[j].commentaire!=="") { 
 								   dataWCAG.items[k].comment.push(dataVallydette.checklist.page[i].items[j].commentaire);
 								   dataWCAG.items[k].page.push(pagesResults[i].name);
@@ -2173,7 +2189,6 @@ initNewPage = function (item) {
 	/**  auto check */
 	if (!getIfAutoCheck(item.IDorigin)) {
 		item.resultatTest = 'nt';
-		item.commentaire = '';
 	}
 	
 	if(item.issues) {
@@ -2229,7 +2244,7 @@ initContextualMenu = function (currentPageIndex, currentPageID) {
 	htmlMenu += '<hr class="border-light  w-100">';
 	htmlContextualMenuContent.innerHTML = htmlMenu;
 	
-	btnActionPageEventHandler ();
+	btnActionPageEventHandler();
 }
 
 
@@ -2645,90 +2660,32 @@ updateProperty = function(arrayPropertyValue, targetElement, targetProperty, tar
  */
 
 /**
- * Comment popin initialization.
- * @param {string} targetId - current test ID.
- * @param {string} title - current test title.
-*/
-setComment = function (targetId, title) {
-	let titleModal = title;
-
-	let htmlModal = '';
-	htmlModal = '<div id="modal' + targetId + '" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modal' + targetId + 'Title">';
-	htmlModal += '<div class="modal-dialog modal-dialog-scrollable" role="document">';
-	htmlModal += '<div class="modal-content">';
-	htmlModal += '<div class="modal-header">';
-	htmlModal += '<h5 class="modal-title" id="modal' + targetId + 'Title">' + langVallydette.commentTxt1 + ' : ' + titleModal + '</h5>';
-	htmlModal += '<button type="button" class="close" data-dismiss="modal" aria-label="' + langVallydette.close + '"></button>';
-	htmlModal += '</div>';
-	htmlModal += '<div class="modal-body">';
-	htmlModal += '<textarea class="form-control" id="comment' + targetId +'" aria-labelledby="modal' + targetId + 'Title">' + getComment(targetId) + '</textarea>';
-	htmlModal += '</div>';
-	htmlModal += '<div class="modal-footer">';
-	htmlModal += '<button type="button" class="btn btn-secondary" data-dismiss="modal">' + langVallydette.cancel + '</button>';
-	htmlModal += '<button type="button" id="commentSaveBtn" data-dismiss="modal" class="btn btn-primary">' + langVallydette.save + '</button>';
-	htmlModal += '</div></div></div></div>';
-
-	let elModal = document.getElementById('modal');
-	elModal.innerHTML = htmlModal;
-
-	var commentSave = document.getElementById("commentSaveBtn");
-	commentSave.addEventListener('click', function () {
-		addComment(targetId, comment.value)
-	});
-	
-	var comment = document.getElementById('comment' + targetId);
-
-	$('.modal').on('shown.bs.modal', function (event) {
-		comment.focus()
-	});
-	
-}
-
-/**
- * Add the comment to the vallydette object.
- * @param {string} targetId - current test ID.
- * @param {string} newComment.
-*/
-addComment = function (targetId, newComment) {
-	for (let i in dataVallydette.checklist.page[currentPage].items) {
-		if (dataVallydette.checklist.page[currentPage].items[i].ID === targetId) {
-			dataVallydette.checklist.page[currentPage].items[i].commentaire = newComment;
-		}
-	}
-
-	var currentBtnComment = document.getElementById("commentBtn" + targetId);
-	currentBtnComment.innerHTML = getCommentState(targetId);
-
-	jsonUpdate();
-}
-
-/**
- * Get the comment from the vallydette object.
- * @param {string} targetId - current test ID.
- * @return {string} currentComment - current comment value
-*/
-getComment = function (targetId) {
-	var currentComment;
-
-	for (let i in dataVallydette.checklist.page[currentPage].items) {
-		if (dataVallydette.checklist.page[currentPage].items[i].ID === targetId && dataVallydette.checklist.page[currentPage].items[i].commentaire !== undefined ) {
-			currentComment = dataVallydette.checklist.page[currentPage].items[i].commentaire;
-		}
-	}
-
-	return (currentComment !== undefined  ? currentComment : "");
-}
-
-/**
- * Return a markup depending on commant value
- * @param {string} targetId - current test ID.
- * @return {string} - markup depending on comment value
-*/
-getCommentState = function (targetId) {
-	
-	var currentComment = getComment(targetId);
-
-	return (currentComment === undefined || currentComment === "" ? "<span class='icon-Comments' aria-hidden='true'></span>&nbsp;" + langVallydette.addComment + "" : "<span class='icon-Comments text-primary' aria-hidden='true'></span>&nbsp;" + langVallydette.editComment + "");
+ * Management of deprecated comments that no longer exist 
+ * @param {array} data - data valydette
+ */
+managementDeprecatedComment = function (data){
+	data.checklist.page.forEach( 
+			page => {
+				page.items.forEach( item =>{
+					if(typeof item.issues === 'undefined'){
+						item.issues = [];
+					}
+					if( typeof item.commentaire !== 'undefined'){
+						if(item.commentaire!==""){
+							newIssue = {
+								issueTitle : item.commentaire,
+								issueDetail : "",
+								issueSolution : "",
+								issueTechnicalSolution:""
+							};
+							item.issues.push(newIssue);
+						}
+						delete item.commentaire	
+					}
+				})
+			}
+		 );
+	return data;
 }
 
 /**
@@ -2759,15 +2716,15 @@ setIssue = function (targetId, title, targetIdOrigin) {
 	htmlModal += '<input type="text" class="form-control" id="issueNameValue" value="" required>';
 	htmlModal += '</div>';
 	htmlModal += '<div class="form-group">';
-	htmlModal += '<label class="is-required mt-2" for="issueDetailValue">' + langVallydette.description + ' <span class="sr-only"> (' + langVallydette.required + ')</span></label>';
-	htmlModal += '<textarea class="form-control" id="issueDetailValue" required></textarea>';
+	htmlModal += '<label class="mt-2" for="issueDetailValue">' + langVallydette.description + ' </label>';
+	htmlModal += '<textarea class="form-control" id="issueDetailValue" ></textarea>';
 	htmlModal += '</div>';
 	htmlModal += '<div class="form-group">';
-	htmlModal += '<label for="issueSolutionValue" class="mt-2">' + langVallydette.solution + ' </span></label>';
+	htmlModal += '<label for="issueSolutionValue" class="mt-2">' + langVallydette.solution + ' </label>';
 	htmlModal += '<textarea class="form-control" id="issueSolutionValue"></textarea>';
 	htmlModal += '</div>';
 	htmlModal += '<div class="form-group">';
-	htmlModal += '<label for="issueTechnicalSolutionValue" class="mt-2">' + langVallydette.technical_solution + ' </span></label>';
+	htmlModal += '<label for="issueTechnicalSolutionValue" class="mt-2">' + langVallydette.technical_solution + ' </label>';
 	htmlModal += '<textarea class="form-control" id="issueTechnicalSolutionValue"></textarea>';
 	htmlModal += '</div>';
 	htmlModal += '</div>';
@@ -2901,7 +2858,7 @@ editIssue = function (targetId, issueIndex) {
 	htmlEditIssue += '<form id="editIssueForm">';
 	htmlEditIssue += '<label class="is-required" for="issueNameValue-' + issueIndex + '"> ' + langVallydette.summary + ' <span class="sr-only"> (' + langVallydette.required + ')</span></label>';
 	htmlEditIssue += '<input type="text" class="form-control" id="issueNameValue-' + issueIndex + '" value="' + getIssue(targetId, 'issueTitle', issueIndex) + '" required >';
-	htmlEditIssue += '<label class="is-required mt-2" for="issueDetailValue-' + issueIndex + '">' + langVallydette.description + ' <span class="sr-only"> (' + langVallydette.required + ')</span></label>';
+	htmlEditIssue += '<label class="mt-2" for="issueDetailValue-' + issueIndex + '">' + langVallydette.description + '</label>';
 	htmlEditIssue += '<textarea class="form-control" id="issueDetailValue-' + issueIndex + '">' + getIssue(targetId, 'issueDetail', issueIndex) + '</textarea>';
 	htmlEditIssue += '<label for="issueSolutionValue-' + issueIndex + '" class="mt-2">' + langVallydette.solution + '</label>';
 	htmlEditIssue += '<textarea class="form-control" id="issueSolutionValue-' + issueIndex + '">' + getIssue(targetId, 'issueSolution', issueIndex) + '</textarea>';
@@ -3021,7 +2978,7 @@ deleteIssue = function (targetId, issueIndex, issueValidation) {
 			if (dataVallydette.checklist.page[currentPage].items[i].ID === targetId) {
 				dataVallydette.checklist.page[currentPage].items[i].issues.splice(issueIndex, 1);
 				if (dataVallydette.checklist.page[currentPage].items[i].issues.length === 0) {
-					document.getElementById("issueDisplayBtntestWebID-"+ i).setAttribute("disabled", true);
+					document.getElementById("issueDisplayBtn"+ targetId).setAttribute("disabled", true);
 				}
 			}
 		}
@@ -3064,8 +3021,7 @@ displayIssue = function (targetId, title) {
 		if (dataVallydette.checklist.page[currentPage].items[i].ID === targetId && dataVallydette.checklist.page[currentPage].items[i].issues.length > 0 ) {
 			let auditNumber = 0;
 			for (let j in dataVallydette.checklist.page[currentPage].items[i].issues) {
-				auditNumber= j +1;
-				
+				auditNumber++;
 				htmlModal += '<div class="card" id="cardIssue'+targetId+'-'+ j +'">';
 				
 				htmlModal += ' <div class="card-header" id="issue'+targetId+'-'+ j +'">';
@@ -3497,7 +3453,7 @@ for (let i in dataVallydette.checklist.page) {
 
 	excel.set(0,0,rowPages, dataVallydette.checklist.page[i].name);
 	if (dataVallydette.checklist.page[i].url) {
-		excel.set(0,1,rowPages, '=HYPERLINK("' + dataVallydette.checklist.page[i].url + '","' + dataVallydette.checklist.page[i].url + '")', formatHyperlink);
+		excel.set(0,1,rowPages, '=HYPERLINK("' + utils.escapeExcel(dataVallydette.checklist.page[i].url) + '","' + utils.escapeExcel(dataVallydette.checklist.page[i].url) + '")', formatHyperlink);
 	}
 
 	rowPages++;
@@ -3527,57 +3483,30 @@ for (let i in dataVallydette.checklist.page) {
 		let rowIssues = 0;
 		
 		const listNonConformity = dataVallydette.checklist.page[i].items.filter(item => item.resultatTest === "ko").map(function(item) {
-			
-			if (type === "audit") {
 				
-				if (item.issues.length > 0) {
-					let urlanchor = utils.getUrlAnchor(item);
-						
-					item.issues.forEach(function (issue, key) {
-						rowIssues++;
-						excel.set(setIndex,0,rowIssues,  '=HYPERLINK("' + urlanchor + '","issue-' + i + '-' + rowIssues+ '")', formatHyperlink);
-						//@ ajout url tests
-						
-						excel.set(setIndex,1,rowIssues, item.title);
-						if (item.moreInfo) {
-							excel.set(setIndex,2,rowIssues, '=HYPERLINK("' + item.moreInfo + '","' + langVallydette.moreInfo + '")', formatHyperlink);
-						} else {
-							excel.set(setIndex,2,rowIssues, '');
-						}
-
-						excel.set(setIndex,3,rowIssues, issue.issueTitle);
-						excel.set(setIndex,4,rowIssues, issue.issueDetail);
-						excel.set(setIndex,5,rowIssues, issue.issueSolution);
-						excel.set(setIndex,6,rowIssues, issue.issueTechnicalSolution);
-			
-					})
-						
-				}
-				
-			} else {
-
+			if (item.issues.length > 0) {
+				let urlanchor = utils.getUrlAnchor(item);
+					
+				item.issues.forEach(function (issue, key) {
 					rowIssues++;
-					let urlanchor = utils.getUrlAnchor(item);
-
 					excel.set(setIndex,0,rowIssues,  '=HYPERLINK("' + urlanchor + '","issue-' + i + '-' + rowIssues+ '")', formatHyperlink);
-						
-					if (!item.commentaire) {
-						item.commentaire = langVallydette.noCommentary;
-					}
-
+					//@ ajout url tests
+					
 					excel.set(setIndex,1,rowIssues, item.title);
 					if (item.moreInfo) {
-							excel.set(setIndex,2,rowIssues, '=HYPERLINK("' + item.moreInfo + '","' + langVallydette.moreInfo + '")', formatHyperlink);
-						} else {
-							excel.set(setIndex,2,rowIssues, '');
-						}
+						excel.set(setIndex,2,rowIssues, '=HYPERLINK("' + item.moreInfo + '","' + langVallydette.moreInfo + '")', formatHyperlink);
+					} else {
+						excel.set(setIndex,2,rowIssues, '');
+					}
 
-					excel.set(setIndex,3,rowIssues, '');
-					excel.set(setIndex,4,rowIssues, item.commentaire);
-					excel.set(setIndex,5,rowIssues, '');
-					excel.set(setIndex,6,rowIssues, '');
-
-			} 
+					excel.set(setIndex,3,rowIssues, issue.issueTitle);
+					excel.set(setIndex,4,rowIssues, issue.issueDetail);
+					excel.set(setIndex,5,rowIssues, issue.issueSolution);
+					excel.set(setIndex,6,rowIssues, issue.issueTechnicalSolution);
+		
+				})
+					
+			}
 			
 		});
 		
@@ -4744,7 +4673,7 @@ exportStatementHTML = function(statementResult) {
 </head>
 
 <body>    
-    <main class="container-mb content">        
+    <main class="container content">        
         <h1>${langStatement.statementTemplate.title} : ${dataVallydette.statement.name}</h1>
         
         <div class="summary">
@@ -5175,6 +5104,7 @@ const utils = {
 		return
 		
 	}
+
 	  
 	document.getElementById('filter').style.display = display;
 	document.getElementById('currentPageContent').classList.remove(remove);
@@ -5184,11 +5114,14 @@ const utils = {
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   },
 
-  getUrlAnchor: function(item){
-		let urlanchor = window.location.origin + window.location.pathname + window.location.search + '#heading' + item.ID;
-		return urlanchor.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
+  escapeExcel: function (url){
+		return url.replace(/[\u00A0-\u9999<>\&]/gim, function(i) {
 			return '&#'+i.charCodeAt(0)+';';
 		});
+	},
+  getUrlAnchor: function(item){
+		let urlanchor = window.location.origin + window.location.pathname + window.location.search + '#heading' + item.ID;
+		return utils.escapeExcel(urlanchor);
   }
 	
 }  

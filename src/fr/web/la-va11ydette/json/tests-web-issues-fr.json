@@ -12,7 +12,6 @@
 			"solution" : "Renseigner l'élément <title>, avec des mots clefs permettant de comprendre le rôle de la page. Les informations peuvent être ordonnées de la  plus spécifique vers la moins spécifique, ou inversement (pas de règles).",
 			"technicalSolution" : "<title>Acccueil - Espace client Orange</title>"
 		}
-		
 	],
 	"testWebID-1": [
 		{
@@ -568,7 +567,7 @@
 			"technicalSolution" : ""
 		},
 		{
-			"title" : "Champ obligatoire non identifiable ne manière programmatique",
+			"title" : "Champ obligatoire non identifiable de manière programmatique",
 			"detail" : "L'identification d'un champ obligatoire n'est pas possible depuis une aide technique (ex: lecteur d'écran), si elle n'est pas donner de manière programmatique.",
 			"solution" : "Utiliser une des techniques ci-dessous :\n- information visuelle intégrée dans le label\n- ajout d'un attribut \"required\" sur l'input \n- ajout d'un attribut \"aria-required\" sur l'input",
 			"technicalSolution" : ""
@@ -577,7 +576,7 @@
 	"testWebID-51": [
 		{
 			"title" : "Présence de champs non-groupés",
-			"detail" : "Lorque nécessaire les champs ne même natures doivent être groupés",
+			"detail" : "Lorque nécessaire les champs de même natures doivent être groupés",
 			"solution" : "- appliquer un \"fieldset\" complété par un élément \"legend\"\n- appliquer un role \"group\" sur l'élément parent encapsulant les champs, et compléter par une légende basée sur un aria-labelledby",
 			"technicalSolution" : ""
 		}

@@ -159,7 +159,8 @@ the Orange Source Charter (http://infoportal-opensource.innov.intraorange/en/ora
                         <h1 class="small text-primary m-0" id="auditNameWcag"></h1>
                     </span>
                 </a>
-                <div class="ml-auto" id="importexport">
+                <div class="ml-auto" id="checklist"></div>
+                <div id="importexport">
                     <button id="btnImport" type="button" class="btn btn-inverse btn-link mr-n3" title=""
                             data-toggle="collapse" data-target="#import-form"
                             aria-expanded="false" aria-controls="import-form">
@@ -177,12 +178,20 @@ the Orange Source Charter (http://infoportal-opensource.innov.intraorange/en/ora
                 <div class="container py-3">
                     <div class="input-group">
                         <div class="custom-file">
-                            <input class="custom-file-input" id="selectFiles" type="file">
+                            <input class="custom-file-input" id="selectFiles" type="file" accept="application/JSON">
                             <label class="custom-file-label" id="selectFilesLabel" for="selectFiles" aria-describedby="import">Sélectionner un audit</label>
                         </div>
                         <div class="input-group-append">
-                            <button class="btn btn-secondary btn-inverse" type="button" id="import" data-toggle="collapse" data-target="#import-form"
-                            aria-expanded="false" aria-controls="import-form">Importer</button>
+                            <button class="btn btn-secondary btn-inverse" type="button" id="import">Importer</button>
+                            <button id="btnImportClose" type="button" class="btn btn-secondary btn-inverse btn-icon" title=""
+                            data-toggle="collapse" data-target="#import-form"
+                            aria-expanded="false" aria-controls="import-form">
+                                <span class="icon icon-delete" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-dark pt-3">
+                        <div id="import-alert" class="alert alert-danger d-none" role="alert">
                         </div>
                     </div>
                 </div>
