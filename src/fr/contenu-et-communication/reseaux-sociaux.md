@@ -17,7 +17,7 @@ Utiliser un [outil pour vérifier le contraste](/fr/web/outils/methodes-et-outil
 
 ### Liens
 - Donner des intitulés aux liens qui permettent de comprendre l’action ou la destination du  lien. Exemple : Eviter « Cliquez ici », préférer « Le forfait en détail… ».
-- Clarifier la destination du lien pour une photo, une vidéo ou un audio ; la préciser en ajoutant [IMAGE], [VIDEO] ou [AUDIO] au début de l’intitulé.
+- Clarifier la destination du lien pour une photo, une vidéo ou un audio ; la préciser en ajoutant [IMAGE], [VIDEO] ou [AUDIO] au début de l’intitulé. Exemple : « [VIDEO] La dernière campagne de notre marque. ».
 
 ### Hashtags
 - Mettre une majuscule au début de chaque mot (écrire en CamelCase) 
@@ -28,7 +28,7 @@ Par exemple #TousSolidaires est plus lisible que #TOUSSOLIDAIRES.
 ### Émojis
 Chaque émoji a une description unique qui est transcrite de manière vocale par un lecteur d’écran
 - Utiliser les émojis avec parcimonie.
-- S’assurer de la signification exacte des émojis utilisés pour éviter incompréhensions ou contresens : vérifier ce qui sera lu grâce à Emojipedia.
+- S’assurer de la signification exacte des émojis utilisés pour éviter incompréhensions ou contresens : vérifier ce qui sera lu grâce à [Emojipedia](https://emojipedia.org/).
 - Ne pas mettre plusieurs émojis identiques d’affilée.
 - Les utiliser à la fin des posts.
 
@@ -65,7 +65,7 @@ Description détaillée sur le [centre d’assistance de twitter](https://help.t
 ### Vidéos
 Si la vidéo n’a pas déjà des sous-titres, l’outil Média Studio permet d’en rajouter.
 
-[Mode d’emploi sur le site de Twitter](https://help.twitter.com/fr/using-twitter/media-studio).
+[Mode d’emploi des vidéos sur le Twitter](https://help.twitter.com/fr/using-twitter/media-studio).
 
 Si vous n’avez pas accès à Média Studio, [utiliser un autre outil](#videos).
 
@@ -74,7 +74,7 @@ Twitter a intégré la possibilité de tweeter des messages audio. Cette fonctio
 
 Il n’est pas recommandé de les utiliser, la fonctionnalité n’est pas encore optimisée pour l’accessibilité.
 
-[Mode d’emploi sur le site de Twitter](https://help.twitter.com/fr/using-twitter/voice-tweet).
+[Mode d’emploi des messages vocaux sur Twitter](https://help.twitter.com/fr/using-twitter/voice-tweet).
 
 ## Facebook
 
@@ -87,7 +87,7 @@ Facebook crée automatiquement une alternative textuelle aux images ajoutées ; 
 
 <img src="/fr/contenu-et-communication/images/facebook-images.png" alt="Exemple de modification d’un texte alternatif sur PC" class="img-fluid" />
 
-[Mode d’emploi sur le site de Facebook](https://www.facebook.com/help/214124458607871?helpref=related).
+[Mode d’emploi des images sur Facebook](https://www.facebook.com/help/214124458607871?helpref=related).
 
 ### Vidéos
 Pour les vidéos sans sous-titres, Facebook propose nativement une solution pour importer des sous-titres aux vidéos.
@@ -98,7 +98,7 @@ Pour les vidéos sans sous-titres, Facebook propose nativement une solution pour
 
 <img src="/fr/contenu-et-communication/images/facebook-videos.png" alt="Exemple d'ajout de sous-titre sur PC" class="img-fluid" />
 
-[Mode d’emploi sur le site de Facebook](https://www.facebook.com/help/261764017354370).
+[Mode d’emploi des vidéos sur Facebook](https://www.facebook.com/help/261764017354370).
 
 ## Instagram
 
@@ -112,7 +112,7 @@ Instagram génère une alternative textuelle automatique. Il est possible de la 
 
 <img src="/fr/contenu-et-communication/images/instagram-images.png" alt="Exemple de modification d’un texte alternatif sur PC" class="img-fluid" />
 
-[Mode d’emploi sur le site d'Instagram](https://help.instagram.com/308605337351503).
+[Mode d’emploi des images sur Instagram](https://help.instagram.com/308605337351503).
 
 ### Vidéos
 Pour les vidéos sans sous-titres, Instagram permet l’ajout des sous-titres automatiques :
