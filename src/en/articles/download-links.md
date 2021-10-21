@@ -4,6 +4,7 @@ abstract: "How to make usable and understandable downloading links"
 date: "2020-09-01"
 tags:
   - web
+  - intermediate
 ---
 
 # Best practices for download links

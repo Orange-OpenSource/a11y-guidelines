@@ -4,6 +4,7 @@ abstract: "Quand et comment utiliser les roles et attributs de type live"
 date: "2020-01-08"
 tags:
   - web
+  - intermediate
 ---
 
 # L'attribut aria-live et le role alert

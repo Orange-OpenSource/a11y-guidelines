@@ -4,6 +4,7 @@ abstract: "Recommandations pour les Single Page Applications"
 date: "2021-06-16"
 tags:
   - web
+  - advanced
 ---
 
 <h1>Recommandations pour les <span lang="en">Single Page Applications</span></h1>

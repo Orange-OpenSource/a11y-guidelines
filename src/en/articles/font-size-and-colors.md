@@ -4,6 +4,7 @@ abstract: "What size and what colors should the texts adopt?"
 date: "2021-07-05"
 tags:
   - web
+  - beginner
 ---
 
 # Text size and color

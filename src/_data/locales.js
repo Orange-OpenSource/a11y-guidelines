@@ -32,11 +32,15 @@ module.exports = {
       all: "All"
     },
     tags: {
+      list : "Associated themes :",
       componentExample: "Component example",
       mobile: 'Mobile',
       technicalArticle: 'Technical article',
       web: 'Web',
-      veille: 'Watch'
+      veille: 'Watch',
+      beginner: 'Beginner',
+      intermediate: 'Intermediate',
+      advanced: 'Advanced'
     },
     toc: {
       title: 'Table of content'
@@ -97,11 +101,15 @@ module.exports = {
       all: 'Tout'
     },
     tags: {
+      list : "Thématiques associées :",
       componentExample: "Exemple de composant",
       mobile: 'Mobile',
       technicalArticle: 'Article technique',
       web: 'Web',
-      veille: 'Veille'
+      veille: 'Veille',
+      beginner: 'Débutant',
+      intermediate: 'Intermédiaire',
+      advanced: 'Avancé'
     },
     toc: {
       title: 'Sommaire'

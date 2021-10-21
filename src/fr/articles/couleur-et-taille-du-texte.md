@@ -4,6 +4,7 @@ abstract: "Quelle taille et quelles couleurs doit ont adopter pour les textes ?"
 date: "2021-07-05"
 tags:
   - web
+  - beginner
 ---
 
 # Taille et couleur des textes

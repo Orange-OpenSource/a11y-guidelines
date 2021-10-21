@@ -4,6 +4,7 @@ abstract: "Présentation de notre démarche et des recommandations pour les comp
 date: "2020-12-23"
 tags:
   - web
+  - advanced
 ---
 
 # Recommandations pour l'accessibilité d'un composant d'autocomplétion

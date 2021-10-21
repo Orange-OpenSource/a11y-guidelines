@@ -4,6 +4,7 @@ abstract: "Comment désactiver des éléments d'une page ?"
 date: "2021-07-01"
 tags:
   - web
+  - beginner
 ---
 
 # Désactiver un champ de formulaire

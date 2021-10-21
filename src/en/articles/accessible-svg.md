@@ -4,6 +4,7 @@ abstract: "How to make SVG images accessible"
 date: "2021-01-01"
 tags:
   - web
+  - intermediate
 ---
 
 # SVG images are used more and more on the web but what about their accessibility?

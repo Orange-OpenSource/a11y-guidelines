@@ -4,6 +4,7 @@ abstract: "Les messages d'état, de statut ou contextuel gérés par ARIA"
 date: "2018-10-26"
 tags:
   - web
+  - intermediate
 ---
 
 # Utiliser <abbr>ARIA</abbr>  les messages d'état, de statut ou contextuel

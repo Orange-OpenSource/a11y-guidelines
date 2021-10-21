@@ -4,6 +4,7 @@ abstract: "Presentation of our approach and selected guidelines for autocompleti
 date: "2020-12-23"
 tags:
   - web
+  - advanced
 ---
 
 # Guidelines for the accessibility of an autocompletion component

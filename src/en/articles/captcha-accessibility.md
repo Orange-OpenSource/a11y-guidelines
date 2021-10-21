@@ -4,6 +4,7 @@ abstract: "CAPTCHA and accessibility"
 date: "2018-02-08"
 tags:
   - web
+  - advanced
 ---
 
 # CAPTCHA Accessibility

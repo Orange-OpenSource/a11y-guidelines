@@ -4,6 +4,7 @@ abstract: "Notre point de vue sur les CAPTCHAs et l'accessibilité"
 date: "2018-02-07"
 tags:
   - web
+  - advanced
 ---
 
 # Les CAPTCHAs et l'accessibilité

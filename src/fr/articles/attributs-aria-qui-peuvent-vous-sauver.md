@@ -4,6 +4,7 @@ abstract: "Quelques attributs ARIA à connaître pour avoir un nom accessible"
 date: "2018-01-08"
 tags:
   - web
+  - intermediate
 ---
 
 # Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver&nbsp;: `aria-label`, `aria-labelledby` et `aria-describedby` 

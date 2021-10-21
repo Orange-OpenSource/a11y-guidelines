@@ -81,7 +81,7 @@
           {%- for tag in tags -%}
             {%- set tagTranslationKey = 'tags.' + tag -%}
             <li class="list-inline-item">
-              <a href="?tag={{ tag }}" class="badge badge-secondary">
+              <a href="?tag={{ tag }}" class="btn btn-dark btn-sm">
                 <span class="sr-only">{{ 'filtersBar.label' | translate }}&nbsp;</span>{{ tagTranslationKey | translate }}
               </a>
             </li>

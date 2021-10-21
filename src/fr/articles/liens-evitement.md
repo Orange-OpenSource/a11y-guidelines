@@ -4,6 +4,7 @@ abstract: "Les liens d'évitement, qu'est-ce et comment bien les mettre en œuvr
 date: "2019-06-19"
 tags:
   - web
+  - beginner
 ---
 
 # Les bonnes pratiques pour les liens d’évitements

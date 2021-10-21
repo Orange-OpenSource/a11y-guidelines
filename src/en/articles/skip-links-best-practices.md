@@ -4,6 +4,7 @@ abstract: "Skip links, what is it and how to implement them"
 date: "2019-06-19"
 tags:
   - web
+  - beginner
 ---
 
 # Skip links best practices

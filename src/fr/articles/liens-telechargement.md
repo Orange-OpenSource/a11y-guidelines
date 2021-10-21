@@ -4,6 +4,7 @@ abstract: "Comment rendre accessible les liens de téléchargement"
 date: "2020-07-02"
 tags:
   - web
+  - intermediate
 ---
 
 # Les bonnes pratiques pour les liens de téléchargement

@@ -4,6 +4,7 @@ abstract: "Le nom accessible, qu'est-ce et son rapport avec les technologies d'a
 date: "2018-10-26"
 tags:
   - web
+  - intermediate
 ---
 
 # Le nom accessible en <abbr>HTML</abbr>

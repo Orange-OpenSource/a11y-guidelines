@@ -4,6 +4,7 @@ abstract: "Introduction HTML 5 et ARIA"
 date: "2016-09-16"
 tags:
   - web
+  - beginner
 ---
 
 # <abbr>HTML5</abbr> & <abbr>ARIA</abbr>
