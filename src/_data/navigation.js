@@ -182,6 +182,7 @@ module.exports = {
           { label: 'Word', href: '/fr/contenu-et-communication/word/' },
           { label: 'Powerpoint', href: '/fr/contenu-et-communication/powerpoint/' },
           { label: 'Documents PDF', href: '/fr/contenu-et-communication/pdf/' },
+          { label: 'Réseaux sociaux', href: '/fr/contenu-et-communication/reseaux-sociaux/' },
           { label: 'Emails', href: '/fr/contenu-et-communication/emails/' },
           { label: 'Contenus audios/vidéos', href: '/fr/contenu-et-communication/composants-animes/' },
 		  { label: 'E-learning', href: '/fr/contenu-et-communication/e-learning/' }
