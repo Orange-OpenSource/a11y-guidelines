@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Communication accessible sur les réseaux sociaux - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Quelques recommandations concernant l&#39;accessibilité des communications sur les réseaux sociaux">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d&#39;évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Aller à la recherche</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/contenu-et-communication/" class="nav-link active" aria-current="true">
+  Contenu et communication
+</a>
+        </li><li class="nav-item">
+          <a href="/fr/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-toggle="collapse" data-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Rechercher">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="sr-only">Rechercher</span>
+    </button>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-500" aria-label="Rechercher" placeholder="Rechercher">
+  </form>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/fr/contenu-et-communication/word/" class="nav-link">
+  Word
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/powerpoint/" class="nav-link">
+  Powerpoint
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/pdf/" class="nav-link">
+  Documents PDF
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/reseaux-sociaux/" class="nav-link active" aria-current="page">
+  Réseaux sociaux
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/emails/" class="nav-link">
+  Emails
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/composants-animes/" class="nav-link">
+  Contenus audios/vidéos
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/e-learning/" class="nav-link">
+  E-learning
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&amp;nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/contenu-et-communication/">Contenu et communication</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Réseaux sociaux
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#recommandations-generales" class="dropdown-item text-wrap">Recommandations générales</a><a href="#redaction-du-post" class="dropdown-item text-wrap">Rédaction du post</a><a href="#liens" class="dropdown-item text-wrap">Liens</a><a href="#hashtags" class="dropdown-item text-wrap">Hashtags</a><a href="#emojis" class="dropdown-item text-wrap">Émojis</a><a href="#images" class="dropdown-item text-wrap">Images</a><a href="#videos" class="dropdown-item text-wrap">Vidéos</a><a href="#twitter" class="dropdown-item text-wrap">Twitter</a><a href="#images-2" class="dropdown-item text-wrap">Images</a><a href="#videos-2" class="dropdown-item text-wrap">Vidéos</a><a href="#messages-vocaux" class="dropdown-item text-wrap">Messages vocaux</a><a href="#facebook" class="dropdown-item text-wrap">Facebook</a><a href="#images-3" class="dropdown-item text-wrap">Images</a><a href="#videos-3" class="dropdown-item text-wrap">Vidéos</a><a href="#instagram" class="dropdown-item text-wrap">Instagram</a><a href="#images-4" class="dropdown-item text-wrap">Images</a><a href="#videos-4" class="dropdown-item text-wrap">Vidéos</a><a href="#stories" class="dropdown-item text-wrap">Stories</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Communication accessible sur les réseaux sociaux</h1>
+<p>Cette partie indique comment rendre vos contenus sur les réseaux sociaux le plus accessible possible.</p>
+<h2 id="recommandations-generales">Recommandations générales <a class="header-anchor" href="#recommandations-generales" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="redaction-du-post">Rédaction du post <a class="header-anchor" href="#redaction-du-post" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li><a href="/fr/contenu-editorial/#comment-mettre-des-accents-aux-majuscules">Conserver l’accentuation sur les majuscules</a> (exemple : É ou Ç).<br>
+Sur un mobile, il suffit de maintenir le doigt sur la lettre à accentuer.</li>
+<li>Si le post est rédigé sur une image ou une couleur de fond, <a href="/fr/web/developper/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond">respecter un contraste suffisant avec le texte</a>.<br>
+Utiliser un <a href="/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/#main-content">outil pour vérifier le contraste</a>.</li>
+</ul>
+<h3 id="liens">Liens <a class="header-anchor" href="#liens" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li>Donner des intitulés aux liens qui permettent de comprendre l’action ou la destination du  lien. Exemple : Eviter « Cliquez ici », préférer « Le forfait en détail… ».</li>
+<li>Clarifier la destination du lien pour une photo, une vidéo ou un audio ; la préciser en ajoutant [IMAGE], [VIDEO] ou [AUDIO] au début de l’intitulé. Exemple : « [VIDEO] La dernière campagne de notre marque. ».</li>
+</ul>
+<h3 id="hashtags">Hashtags <a class="header-anchor" href="#hashtags" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li>Mettre une majuscule au début de chaque mot (écrire en CamelCase)<br>
+Cela facilite la lecture en aidant à distinguer les différents mots et cela permet au lecteur d’écran de différencier le nombre de mots.<br>
+Par exemple #TousSolidaires est plus lisible que #TOUSSOLIDAIRES.</li>
+<li>Placer les hashtags à la fin des posts/tweets.</li>
+</ul>
+<h3 id="emojis">Émojis <a class="header-anchor" href="#emojis" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Chaque émoji a une description unique qui est transcrite de manière vocale par un lecteur d’écran</p>
+<ul>
+<li>Utiliser les émojis avec parcimonie.</li>
+<li>S’assurer de la signification exacte des émojis utilisés pour éviter incompréhensions ou contresens : vérifier ce qui sera lu grâce à <a href="https://emojipedia.org/">Emojipedia</a>.</li>
+<li>Ne pas mettre plusieurs émojis identiques d’affilée.</li>
+<li>Les utiliser à la fin des posts.</li>
+</ul>
+<h3 id="images">Images <a class="header-anchor" href="#images" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Les images doivent être accompagnées d’un texte de remplacement (cf. ci-dessous pour le mode d’emploi selon le réseau social)</p>
+<ul>
+<li>Ajouter un texte de remplacement (une description alternative) aux images
+<ul>
+<li>Si du texte est inclus dans l’image, intégrer le texte dans la description</li>
+<li>Ne pas commencer la description par « image de » car l’image est détectée comme telle par les aides techniques</li>
+<li>Si une description d'image et une légende sont renseignées, faire attention à ne pas mettre des informations redondantes dans la mesure du possible</li>
+</ul>
+</li>
+<li>Vérifier le contraste de l’image
+<ul>
+<li>Pour toute image contenant du texte, <a href="/fr/web/developper/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond">vérifier que le contraste est suffisant</a>.<br>
+Utiliser un <a href="/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/#main-content">outil pour vérifier le contraste</a>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="videos">Vidéos <a class="header-anchor" href="#videos" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Toutes les vidéos doivent avoir des sous-titres et si possible une transcription.</p>
+<ul>
+<li>YouTube permet de générer automatiquement des sous-titres. Vous pouvez télécharger le .SRT via YouTube.</li>
+<li>Pour les réseaux sociaux ne générant pas de sous-titres automatiques, il existe des outils comme <a href="https://apps.apple.com/us/app/mixcaptions-video-captions/id952426779">MixCaptions (AppStore)</a> ou <a href="https://play.google.com/store/apps/details?id=com.laika.kinetictypovid&amp;hl=en_US&amp;gl=US">AutoCap (GooglePlay)</a>.</li>
+<li>Remarque : même si des outils peuvent générer automatiquement des sous-titres, il est souvent nécessaire de les vérifier.</li>
+</ul>
+<h2 id="twitter">Twitter <a class="header-anchor" href="#twitter" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="images-2">Images <a class="header-anchor" href="#images-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Par défaut Twitter renseigne l’alternative d’une image avec le texte « image ».<br>
+Pour ajouter des descriptions personnalisées aux images :</p>
+<ul>
+<li>Ajouter une image au tweet.</li>
+<li>Éditer / ajouter une description à l’image.</li>
+<li>Renseigner la description de l’image.</li>
+<li>Publier le tweet.</li>
+</ul>
+<img src="/fr/contenu-et-communication/images/twitter-images.png" alt="Exemple de modification d’une description d’image sur PC" class="img-fluid" />
+<p>Description détaillée sur le <a href="https://help.twitter.com/fr/using-twitter/picture-descriptions">centre d’assistance de twitter</a>.</p>
+<h3 id="videos-2">Vidéos <a class="header-anchor" href="#videos-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Si la vidéo n’a pas déjà des sous-titres, l’outil Média Studio permet d’en rajouter.</p>
+<p><a href="https://help.twitter.com/fr/using-twitter/media-studio">Mode d’emploi des vidéos sur le Twitter</a>.</p>
+<p>Si vous n’avez pas accès à Média Studio, <a href="#videos">utiliser un autre outil</a>.</p>
+<h3 id="messages-vocaux">Messages vocaux <a class="header-anchor" href="#messages-vocaux" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Twitter a intégré la possibilité de tweeter des messages audio. Cette fonctionnalité est encore en bêta et disponible seulement sur IOS. Pour améliorer l’accessibilité, twitter a également rajouté des transcriptions générées automatiquement.</p>
+<p>Il n’est pas recommandé de les utiliser, la fonctionnalité n’est pas encore optimisée pour l’accessibilité.</p>
+<p><a href="https://help.twitter.com/fr/using-twitter/voice-tweet">Mode d’emploi des messages vocaux sur Twitter</a>.</p>
+<h2 id="facebook">Facebook <a class="header-anchor" href="#facebook" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="images-3">Images <a class="header-anchor" href="#images-3" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Facebook crée automatiquement une alternative textuelle aux images ajoutées ;  pour personnaliser ce texte descriptif souvent inexact :</p>
+<ul>
+<li>Ajouter l’image</li>
+<li>Éditer l’image</li>
+<li>Choisir texte alternatif</li>
+<li>Enregistrer</li>
+</ul>
+<img src="/fr/contenu-et-communication/images/facebook-images.png" alt="Exemple de modification d’un texte alternatif sur PC" class="img-fluid" />
+<p><a href="https://www.facebook.com/help/214124458607871?helpref=related">Mode d’emploi des images sur Facebook</a>.</p>
+<h3 id="videos-3">Vidéos <a class="header-anchor" href="#videos-3" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Pour les vidéos sans sous-titres, Facebook propose nativement une solution pour importer des sous-titres aux vidéos.</p>
+<ul>
+<li>Ajouter la vidéo</li>
+<li>Éditer la vidéo</li>
+<li>Importer une piste de sous-titre</li>
+<li>Enregistrer</li>
+</ul>
+<img src="/fr/contenu-et-communication/images/facebook-videos.png" alt="Exemple d'ajout de sous-titre sur PC" class="img-fluid" />
+<p><a href="https://www.facebook.com/help/261764017354370">Mode d’emploi des vidéos sur Facebook</a>.</p>
+<h2 id="instagram">Instagram <a class="header-anchor" href="#instagram" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="images-4">Images <a class="header-anchor" href="#images-4" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Instagram génère une alternative textuelle automatique. Il est possible de la modifier :</p>
+<ul>
+<li>Prendre une photo ou télécharger une photo existante sur Instagram</li>
+<li>Modifier l'image selon le besoin, puis appuyez sur « Suivant »</li>
+<li>Sélectionner « Paramètres avancés »</li>
+<li>Appuyer sur « Écrire un texte alternatif » sous l'en-tête « Accessibilité »</li>
+<li>Écrire le texte alternatif dans la zone et appuyer sur « Terminé »</li>
+</ul>
+<img src="/fr/contenu-et-communication/images/instagram-images.png" alt="Exemple de modification d’un texte alternatif sur PC" class="img-fluid" />
+<p><a href="https://help.instagram.com/308605337351503">Mode d’emploi des images sur Instagram</a>.</p>
+<h3 id="videos-4">Vidéos <a class="header-anchor" href="#videos-4" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Pour les vidéos sans sous-titres, Instagram permet l’ajout des sous-titres automatiques :</p>
+<ul>
+<li>Prendre une vidéo ou télécharger une vidéo existante sur Instagram</li>
+<li>Modifier la vidéo selon le besoin et appuyer sur suivant</li>
+<li>Sélectionner paramètres avancés</li>
+<li>Activer Sous-titres générés automatiquement</li>
+<li>Publier le post</li>
+</ul>
+<img src="/fr/contenu-et-communication/images/instagram-videos.png" alt="Exemple d'ajout de sous-titre sur PC" class="img-fluid" />
+<h3 id="stories">Stories <a class="header-anchor" href="#stories" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Les story Instagram ne sont pas encore très accessibles.<br>
+Pour communiquer des informations importantes, il est nécessaire de les reporter sur le mur personnel.</p>
+
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#recommandations-generales" class="nav-link text-muted bg-200">Recommandations générales</a>
+          </li><li class="nav-item position-relative">
+            <a href="#redaction-du-post" class="nav-link text-muted bg-200">Rédaction du post</a>
+          </li><li class="nav-item position-relative">
+            <a href="#liens" class="nav-link text-muted bg-200">Liens</a>
+          </li><li class="nav-item position-relative">
+            <a href="#hashtags" class="nav-link text-muted bg-200">Hashtags</a>
+          </li><li class="nav-item position-relative">
+            <a href="#emojis" class="nav-link text-muted bg-200">Émojis</a>
+          </li><li class="nav-item position-relative">
+            <a href="#images" class="nav-link text-muted bg-200">Images</a>
+          </li><li class="nav-item position-relative">
+            <a href="#videos" class="nav-link text-muted bg-200">Vidéos</a>
+          </li><li class="nav-item position-relative">
+            <a href="#twitter" class="nav-link text-muted bg-200">Twitter</a>
+          </li><li class="nav-item position-relative">
+            <a href="#images-2" class="nav-link text-muted bg-200">Images</a>
+          </li><li class="nav-item position-relative">
+            <a href="#videos-2" class="nav-link text-muted bg-200">Vidéos</a>
+          </li><li class="nav-item position-relative">
+            <a href="#messages-vocaux" class="nav-link text-muted bg-200">Messages vocaux</a>
+          </li><li class="nav-item position-relative">
+            <a href="#facebook" class="nav-link text-muted bg-200">Facebook</a>
+          </li><li class="nav-item position-relative">
+            <a href="#images-3" class="nav-link text-muted bg-200">Images</a>
+          </li><li class="nav-item position-relative">
+            <a href="#videos-3" class="nav-link text-muted bg-200">Vidéos</a>
+          </li><li class="nav-item position-relative">
+            <a href="#instagram" class="nav-link text-muted bg-200">Instagram</a>
+          </li><li class="nav-item position-relative">
+            <a href="#images-4" class="nav-link text-muted bg-200">Images</a>
+          </li><li class="nav-item position-relative">
+            <a href="#videos-4" class="nav-link text-muted bg-200">Vidéos</a>
+          </li><li class="nav-item position-relative">
+            <a href="#stories" class="nav-link text-muted bg-200">Stories</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link">
+  À propos
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/accessibilite" class="nav-link">
+  Accessibilité
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/fr/" class="nav-link">
+  Pré-version sur Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Déploiements sur Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/contenu-et-communication/reseaux-sociaux.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+            Signaler une erreur sur GitHub<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" aria-label="Retour en haut de page">
+      <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
+        <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.min.js" integrity="sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI" crossorigin="anonymous"></script>
+    
+    
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:fr"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2021 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
