@@ -1,6 +1,7 @@
 ---
 title: "Guide d'utilisation de VoiceOver"
 abstract: "Navigation à l'aide du lecteur d'écran voiceover sous iOS"
+displayToc: true
 ---
 
 # Guide d’utilisation de <span lang="en">VoiceOver</span>
@@ -14,9 +15,16 @@ L'activation de <span lang="en">VoiceOver</span> se fait via le menu `Réglages`
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#VoiceOverActivation-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#VoiceOverActivation-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -27,14 +35,16 @@ L'activation de <span lang="en">VoiceOver</span> se fait via le menu `Réglages`
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="VoiceOverActivation-iOS13"
+     id="VoiceOverActivation-iOS15"
      role="tabpanel">
+    
+![](../../images/iphonex_VoiceOverActivation_iOS15.png)
+</div>
+<div class="tab-pane" id="VoiceOverActivation-iOS13" role="tabpanel">
     
 ![](../../images/iphonex_VoiceOverActivation_iOS13.png)
 </div>
-<div class="tab-pane" 
-     id="VoiceOverActivation-iOS12" 
-     role="tabpanel" >
+<div class="tab-pane" id="VoiceOverActivation-iOS12" role="tabpanel" >
      
 ![](../../images/iphonex_VoiceOverActivation_iOS12.png)
 </div></div>
@@ -91,13 +101,13 @@ Dans une première partie, nous décrirons les gestes de base liés à une utili
   <li class="clearfix">
     
 ![](../../images/gesture1.png)
-<h3>Se déplacer avec un doigt sur l’écran</h3>
+**Se déplacer avec un doigt sur l’écran**
 <p>Explorer l’écran et entendre la vocalisation de l’élément qui est touché.</p>
   </li><br><br>
   <li class="clearfix">
     
 ![](../../images/gesture2.png)   
-<h3>Double-cliquer n’importe où sur l’écran</h3>
+**Double-cliquer n’importe où sur l’écran**
 <p>Ouvrir ou activer l’élément qui a été touché (vocalisé) en dernier.</p>
   </li><br><br>
     <li class="clearfix">
@@ -111,7 +121,8 @@ Dans une première partie, nous décrirons les gestes de base liés à une utili
 ![](../../images/gesture9_2.png)
 </div>
 </div>
-<h3>Balayer vers le haut ou le bas en utilisant trois doigts</h3>
+
+**Balayer vers le haut ou le bas en utilisant trois doigts**
 <p>Se déplacer verticalement sur une liste ou sur une page à condition qu’elle soit sélectionnée. Correspond à un balayage vertical.</p><br><br>
   </li><br>
   <li class="clearfix">
@@ -125,7 +136,8 @@ Dans une première partie, nous décrirons les gestes de base liés à une utili
 ![](../../images/gesture10_2.png)
 </div>
 </div>
-<h3>Balayer vers la gauche ou la droite en utilisant trois doigts</h3>
+
+**Balayer vers la gauche ou la droite en utilisant trois doigts**
 <p>Changer de page ou d’écran quand c’est possible. Correspond à un balayage horizontal.</p>
   </li><br>
   <li class="clearfix">
@@ -138,8 +150,9 @@ Dans une première partie, nous décrirons les gestes de base liés à une utili
 
 ![](../../images/gesture6.png)
 </div>
-</div>   
-<h3>Balayer vers la gauche (resp. droite) en utilisant un doigt</h3>
+</div>  
+
+**Balayer vers la gauche (resp. droite) en utilisant un doigt**
 <p>Déplacer le focus <span lang="en">VoiceOver</span> sur le prochain (resp. précédent) élément.</p>
   </li><br>
   <li class="clearfix">
@@ -153,7 +166,8 @@ Dans une première partie, nous décrirons les gestes de base liés à une utili
 ![](../../images/gesture8.png)
 </div>
 </div> 
-<h3>Balayer vers le haut (resp. bas) en utilisant un doigt</h3>
+
+**Balayer vers le haut (resp. bas) en utilisant un doigt**
 <p>Permet d’augmenter (resp. diminuer) la valeur d’un élément ajustable.</p>
   </li>
 </ul>
@@ -227,6 +241,8 @@ Cette partie contient des manipulations qui ne sont pas forcément toutes très 
 - [réaliser un appui long,](#LongPressure)
 
 - [ouvrir un lien dans une vue.](#OpenLink)
+
+- [retour arrière rapide](#BackButton) ⟹ **nouveauté iOS&nbsp;14**
 
 <a name="ReadAllElementsFromTop"></a>
 <br>Mouvement&nbsp;: **balayage avec 2 doigts** du bas vers le haut n'importe où sur l'écran.
@@ -312,7 +328,7 @@ Cette partie contient des manipulations qui ne sont pas forcément toutes très 
 ![](../../images/iphonex_fr_search.png)
 
 <a name="LongPressure"></a>
-<br>Mouvement&nbsp;: **double tap avec 1 doigt en maintenant la pression** *(iOS 12)* ou ** triple tap avec un doigt** *(iOS 13)* n'importe où sur l'écran.
+<br>Mouvement&nbsp;: **double tap avec 1 doigt en maintenant la pression** *(iOS 12)* ou **triple tap avec un doigt** *(iOS 13)* n'importe où sur l'écran.
 
 ![](../../images/iphonex_fr_long_pressure.png)
 
@@ -322,3 +338,9 @@ Cette partie contient des manipulations qui ne sont pas forcément toutes très 
 <br>Ensuite, effectuer un double tap avec 1 doigt en maintenant la pression **jusqu'à l'apparition d'une popup au-dessus du lien** qui affichera une fenêtre d'actions en bas d'écran.
 
 ![](../../images/iphonex_en_open_link.png)
+
+<a name="BackButton"></a>
+<br>Mouvement&nbsp;: **double tap avec 1 doigt en maintenant la pression** n'importe où sur l'écran dès lors que le bouton de retour de la barre de navigation est sélectionné ⟹&nbsp;**nouveauté&nbsp;iOS&nbsp;14**.
+<br>Dans le menu qui vient de s'ouvrir, sélectionner le titre de la page vers laquelle le retour immédiat est souhaité en balayant l'écran horizontalement avec un doigt puis valider la sélection par un double tap avec un doigt.
+
+![](../../images/iphonex_fr_back_button.png)

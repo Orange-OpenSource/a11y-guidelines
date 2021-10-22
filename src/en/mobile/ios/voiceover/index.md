@@ -1,6 +1,7 @@
 ---
 title: "VoiceOver user guide"
 abstract: "VoiceOver a built-in screen reader for iOS"
+displayToc: true
 ---
 
 # VoiceOver user guide
@@ -14,9 +15,16 @@ VoiceOver can be switched on thanks to the `Settings` device menu:
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#VoiceOverActivation-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#VoiceOverActivation-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -27,14 +35,16 @@ VoiceOver can be switched on thanks to the `Settings` device menu:
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="VoiceOverActivation-iOS13"
+     id="VoiceOverActivation-iOS15"
      role="tabpanel">
+    
+![](../../images/iphonex_VoiceOverActivation_iOS15.png)
+</div>
+<div class="tab-pane" id="VoiceOverActivation-iOS13" role="tabpanel">
     
 ![](../../images/iphonex_VoiceOverActivation_iOS13.png)
 </div>
-<div class="tab-pane" 
-     id="VoiceOverActivation-iOS12" 
-     role="tabpanel" >
+<div class="tab-pane" id="VoiceOverActivation-iOS12" role="tabpanel" >
      
 ![](../../images/iphonex_VoiceOverActivation_iOS12.png)
 </div></div>
@@ -91,13 +101,13 @@ First, VoiceOver common gestures will be introduced to be followed by iPhoneX de
   <li class="clearfix">
     
 ![](../../images/gesture1.png)  
-<h3>Drag one finger</h3>
+**Drag one finger**
 <p>Explore your screen and hear audible feedback for what is being touched.</p>
   </li><br><br>
   <li class="clearfix">
     
 ![](../../images/gesture2.png)    
-<h3>Double-tap anywhere on the screen</h3>
+**Double-tap anywhere on the screen**
 <p>Opens or activates the item that you last touched (vocalized).</p>
   </li><br><br>
     <li class="clearfix">
@@ -111,7 +121,8 @@ First, VoiceOver common gestures will be introduced to be followed by iPhoneX de
 ![](../../images/gesture9_2.png)
 </div>
 </div>
-<h3>Flick up or down using three fingers</h3>
+
+**Flick up or down using three fingers**
 <p>Scroll within lists or pages if selected. Equivalent to a vertical swipe.</p><br><br>
   </li><br>
   <li class="clearfix">
@@ -125,7 +136,8 @@ First, VoiceOver common gestures will be introduced to be followed by iPhoneX de
 ![](../../images/gesture10_2.png)
 </div>
 </div> 
-<h3>Flick left or right using three fingers</h3>
+
+**Flick left or right using three fingers**
 <p>Change pages and screens when possible. Equivalent to a horizontal swipe.</p>
   </li><br>
   <li class="clearfix">  
@@ -139,7 +151,8 @@ First, VoiceOver common gestures will be introduced to be followed by iPhoneX de
 ![](../../images/gesture6.png)
 </div>
 </div>   
-<h3>Flick left/right using one finger</h3>
+
+**Flick left/right using one finger**
 <p>Move the focus to the previous/next item.</p>
   </li><br>
   <li class="clearfix"> 
@@ -153,7 +166,8 @@ First, VoiceOver common gestures will be introduced to be followed by iPhoneX de
 ![](../../images/gesture8.png)
 </div>
 </div> 
-<h3>Flick up/down using one finger</h3>
+
+**Flick up/down using one finger**
 <p>Increase/decrease the value of an adjustable element.</p>
   </li>
 </ul>
@@ -228,6 +242,8 @@ Hereunder are unusual features that may be useful to a VoiceOver user on **any t
 - [Activate a long pressure.](#LongPressure)
 
 - [Open a link in a text view.](#OpenLink)
+
+- [Back button shortcut](#BackButton) ⟹ **iOS&nbsp;14 new feature**
 
 <a name="ReadAllElementsFromTop"></a>
 <br>Gesture: **flick up with 2 fingers** anywhere on the screen.
@@ -323,3 +339,10 @@ Hereunder are unusual features that may be useful to a VoiceOver user on **any t
 <br>Then, double-tap and hold with one finger once the link is selected **until a popup shows up and an action sheet appears** to suggest the appropriate option.
 
 ![](../../images/iphonex_en_open_link.png)
+
+<a name="BackButton"></a>
+<br>Gesture: **double-tap and hold with 1 finger** anywhere on the screen once the back button is selected ⟹&nbsp;**iOS&nbsp;14&nbsp;new&nbsp;feature**.
+<br>As soon as a menu shows up, swipe to the desired page title by flicking left/right using one finger and validate the selection thanks to a double-tap with one finger.
+
+![](../../images/iphonex_en_back_button.png)
+
