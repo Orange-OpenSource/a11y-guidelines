@@ -194,10 +194,10 @@ module.exports = function (eleventyConfig) {
     $(config.toc.selector.join(',')).each(function () {
       items.push({
         id: $(this).attr('id'),
-        text: $(this).text().replace(permalinkSymbol, '').trim()
-      })
+        text: $(this).text().replace(permalinkSymbol, '').trim(),
+        level: $(this)[0].name.substring(1)
+      })      
     })
-
     return items
   })
 

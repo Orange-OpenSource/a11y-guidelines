@@ -129,7 +129,7 @@
       <ul class="nav flex-column">
         {%- for heading in headings -%}
           <li class="nav-item position-relative">
-            <a href="#{{ heading.id }}" class="nav-link text-muted bg-200">{{ heading.text }}</a>
+            <a href="#{{ heading.id }}" class="nav-link text-muted bg-200 level-{{ heading.level }}">{{ heading.text }}</a>
           </li>
         {%- endfor -%}
       </ul>
