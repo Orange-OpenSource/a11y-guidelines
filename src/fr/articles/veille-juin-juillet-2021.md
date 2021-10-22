@@ -1,12 +1,11 @@
 ---
-title: "Veille #A11y Juin-Juillet 2021"
+title: "Veille accessibilité numérique Août – Septembre 2021"
 abstract: "Florilèges de ressources en #a11y, Juin-Juillet 2021"
+titleBeforeTag: true
 date: "2021-08-03"
 tags:
   - veille
 ---
-
-# Veille accessibilité numérique Août – Septembre 2021
 
 https://w3c.github.io/silver/explainer/ 
 https://www.visionaustralia.org/services/digital-access/blog/the-new-requirements-for-wcag-2-2 

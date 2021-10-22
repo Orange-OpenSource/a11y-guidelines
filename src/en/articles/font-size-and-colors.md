@@ -1,13 +1,12 @@
 ---
 title: "Text size and color "
 abstract: "What size and what colors should the texts adopt?"
+titleBeforeTag: true
 date: "2021-07-05"
 tags:
   - web
   - beginner
 ---
-
-# Text size and color
 
 In this article, we will try to answer the following questions concerning the accessibility of texts in web pages:
 - What size should I use for the texts?

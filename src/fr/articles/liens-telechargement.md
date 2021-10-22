@@ -1,13 +1,13 @@
 ---
-title: "Quelques bonnes pratiques pour les liens de téléchargement"
+title: "Les bonnes pratiques pour les liens de téléchargement"
 abstract: "Comment rendre accessible les liens de téléchargement"
+titleBeforeTag: true
 date: "2020-07-02"
 tags:
   - web
   - intermediate
 ---
 
-# Les bonnes pratiques pour les liens de téléchargement
 
 Il existe différents types de liens : [les liens classiques](/fr/web/developper/navigation-generale) permettant d'atteindre une nouvelle page, [les liens d'évitement](/fr/articles/liens-evitement) permettant de se déplacer au sein de la page et enfin ceux qui nous intéressent dans cet article : les liens permettant de télécharger un fichier.
 

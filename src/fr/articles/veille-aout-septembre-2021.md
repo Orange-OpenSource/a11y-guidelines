@@ -1,6 +1,7 @@
 ---
-title: "Veille #A11y Août-Septembre 2021"
+title: "Veille accessibilité numérique Août – Septembre 2021"
 abstract: "Florilèges de ressources en #a11y, Août-Septembre 2021"
+titleBeforeTag: true
 date: "2021-09-27"
 tags:
   - veille

@@ -1,11 +1,11 @@
 ---
-title: "#a11y technical watch, March-May 2021"
+title: "Digital accessibility watch March - May  2021"
 abstract: "#a11y anthology, March-May 2021"
+titleBeforeTag: true
 date: "2021-06-03"
 tags:
   - veille
 ---
-# Digital accessibility watch March - May  2021
 
 Over and over in this technical watch, we tell you and prouve it, that magical accessibility overlays don't work.
 

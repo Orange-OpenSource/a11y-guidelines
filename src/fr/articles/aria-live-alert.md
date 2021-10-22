@@ -1,13 +1,12 @@
 ---
 title: "L'attribut aria-live et le role alert"
 abstract: "Quand et comment utiliser les roles et attributs de type live"
+titleBeforeTag: true
 date: "2020-01-08"
 tags:
   - web
   - intermediate
 ---
-
-# L'attribut aria-live et le role alert
   
 Les utilisateurs qui naviguent à l'aide d'un lecteur d'écran ne sont pas toujours au courant des modifications apportées dans la page. Lorsqu'une information est actualisée ou lorsqu'un message apparaît il est parfois nécessaire de faire parler le lecteur d'écran pour informer l'utilisateur. Pour ce faire, le language <abbr>ARIA</abbr> dispose du role `alert` et de l'attribut `aria-live`.
 

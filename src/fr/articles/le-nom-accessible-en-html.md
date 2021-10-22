@@ -1,13 +1,13 @@
 ---
 title: "Le nom accessible en HTML"
 abstract: "Le nom accessible, qu'est-ce et son rapport avec les technologies d'assistance"
+titleBeforeTag: true
 date: "2018-10-26"
 tags:
   - web
   - intermediate
 ---
 
-# Le nom accessible en <abbr>HTML</abbr>
   
 ## Introduction
 

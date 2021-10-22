@@ -1,6 +1,7 @@
 ---
 title: "Disable HTML elements"
 abstract: "How to disable HTML elements in the page?"
+titleBeforeTag: true
 date: "2021-07-01"
 tags:
   - web
@@ -30,7 +31,7 @@ If a `<fieldset>` is disabled, the descendant form controls are all disabled.
 </fieldset>
 ```
 
-# Disable a link
+## Disable a link
 
 To disable a link, unlike the previous technique, the use of the `disabled` attribute is not allowed. It is still possible to disable a link by following 3 steps:
 - remove the `href` attribute so that it can no longer receive the focus

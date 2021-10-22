@@ -1,13 +1,13 @@
 ---
-title: "Single Page Applications (SPA)"
+title: "Recommandations pour les Single Page Applications (SPA)"
 abstract: "Recommandations pour les Single Page Applications"
+titleBeforeTag: true
 date: "2021-06-16"
 tags:
   - web
   - advanced
 ---
 
-<h1>Recommandations pour les <span lang="en">Single Page Applications</span></h1>
    
 Une [application web monopage](https://fr.wikipedia.org/wiki/Application_web_monopage) (en anglais single-page application ou <abbr lang="en" title="single-page application">SPA</abbr>) est une application web dont la particularité est de n'avoir qu'une seule page. Lors de la navigation celle-ci n'est jamais rechargée, seules des portions de la page sont dynamiquement mises à jour à l'aide de code Javascript. 
 

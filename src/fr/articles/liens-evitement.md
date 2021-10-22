@@ -1,13 +1,12 @@
 ---
 title: "Les bonnes pratiques pour les liens d’évitements"
 abstract: "Les liens d'évitement, qu'est-ce et comment bien les mettre en œuvre"
+titleBeforeTag: true
 date: "2019-06-19"
 tags:
   - web
   - beginner
 ---
-
-# Les bonnes pratiques pour les liens d’évitements
 
 ## Qu’est-ce qu’un lien d’évitement&nbsp;?
 
