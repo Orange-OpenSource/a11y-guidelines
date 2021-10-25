@@ -131,6 +131,9 @@ blockquote p::after {
   background-color: transparent;
 }
 
+.StickySideNavigation ul ul .nav-link {
+  padding-left: .5rem;
+}
 
 /**
  * Back to top link

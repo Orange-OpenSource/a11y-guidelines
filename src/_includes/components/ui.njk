@@ -127,11 +127,32 @@
     <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">{{ 'toc.title' | translate }}</h2>
       <ul class="nav flex-column">
+        {%- set level = config.eleventy.markdownItAnchor.level -%}
+        {%- set first = true -%}
+
         {%- for heading in headings -%}
+          
+          {%- if heading.level > level %}
+            <ul>
+          {%- elseif first == false -%}            
+            </li>          
+          {%- endif -%}
+
+          {%- if heading.level < level %}
+            </ul></li>
+          {%- endif -%}
+
           <li class="nav-item position-relative">
             <a href="#{{ heading.id }}" class="nav-link text-muted bg-200">{{ heading.text }}</a>
-          </li>
+          
+          {%- set level = heading.level -%}
+          {%- set first = false -%}
         {%- endfor -%}
+
+        {% for i in range(0, level-config.eleventy.markdownItAnchor.level) -%}
+          </li></ul>
+        {%- endfor -%}
+        </li>
       </ul>
     </nav>
   {%- elseif mode == "mobile" -%}
