@@ -131,18 +131,8 @@ blockquote p::after {
   background-color: transparent;
 }
 
-.StickySideNavigation a.level-2 {
-  padding-left: 1.75rem;  
-}
-
-.StickySideNavigation a.level-3 {
-  padding-left: 2.25rem;  
-}
-
-.StickySideNavigation a.level-4,
-.StickySideNavigation a.level-5,
-.StickySideNavigation a.level-6 {
-  padding-left: 2.75rem;  
+.StickySideNavigation ul ul .nav-link {
+  padding-left: .5rem;
 }
 
 /**

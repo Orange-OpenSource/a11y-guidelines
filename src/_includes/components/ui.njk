@@ -127,11 +127,28 @@
     <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">{{ 'toc.title' | translate }}</h2>
       <ul class="nav flex-column">
+        {%- set level = 2 -%}
         {%- for heading in headings -%}
+          
+          {%- if heading.level > level %}
+            <ul>
+          {%- endif -%}
+
+          {%- if heading.level < level %}
+            </ul>
+          {%- endif -%}
+
           <li class="nav-item position-relative">
-            <a href="#{{ heading.id }}" class="nav-link text-muted bg-200 level-{{ heading.level }}">{{ heading.text }}</a>
+            <a href="#{{ heading.id }}" class="nav-link text-muted bg-200">{{ heading.text }}</a>
           </li>
+
+          {%- set level = heading.level -%}
         {%- endfor -%}
+
+        {% for i in range(0, level-2) -%}
+          </ul>
+        {%- endfor -%}
+
       </ul>
     </nav>
   {%- elseif mode == "mobile" -%}
