@@ -127,9 +127,10 @@
     <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">{{ 'toc.title' | translate }}</h2>
       <ul class="nav flex-column">
-        {%- set level = 2 -%}
+        {%- set level = config.eleventy.markdownItAnchor.level -%}
         {%- set first = true -%}
 
+<!-- CONFIG LEVEL = {{ config.eleventy.markdownItAnchor.level }} -->
         {%- for heading in headings -%}
           
           {%- if heading.level > level %}
@@ -149,7 +150,7 @@
           {%- set first = false -%}
         {%- endfor -%}
 
-        {% for i in range(0, level-2) -%}        
+        {% for i in range(0, level-config.eleventy.markdownItAnchor.level) -%}
           </li></ul>
         {%- endfor -%}
         </li>
