@@ -128,27 +128,31 @@
       <h2 id="toc-title">{{ 'toc.title' | translate }}</h2>
       <ul class="nav flex-column">
         {%- set level = 2 -%}
+        {%- set first = true -%}
+
         {%- for heading in headings -%}
           
           {%- if heading.level > level %}
             <ul>
+          {%- elseif first == false -%}            
+            </li>          
           {%- endif -%}
 
           {%- if heading.level < level %}
-            </ul>
+            </ul></li>
           {%- endif -%}
 
           <li class="nav-item position-relative">
             <a href="#{{ heading.id }}" class="nav-link text-muted bg-200">{{ heading.text }}</a>
-          </li>
-
+          
           {%- set level = heading.level -%}
+          {%- set first = false -%}
         {%- endfor -%}
 
-        {% for i in range(0, level-2) -%}
-          </ul>
+        {% for i in range(0, level-2) -%}        
+          </li></ul>
         {%- endfor -%}
-
+        </li>
       </ul>
     </nav>
   {%- elseif mode == "mobile" -%}
