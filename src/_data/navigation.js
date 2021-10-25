@@ -2,14 +2,14 @@ module.exports = {
   top: {
     en: [
       { id : 'menu', label: 'Go to menu', href: '#main-menu' },
-      { id : 'sumary', label: 'Go to sumary', href: '#toc' },
+      { id : 'summary', label: 'Go to summary', href: '#toc' },
       { id : 'content', label: 'Go to content', href: '#main-content' },
       { id : 'search', label: 'Go to search', href: '#search-input', itemClass: ['hidden-if-no-js'] },
       { id : 'footer', label: 'Go to footer', href: '#footer' }
     ],
     fr: [
       { id : 'menu', label: 'Aller au menu', href: '#main-menu' },
-      { id : 'sumary', label: 'Aller au sommaire', href: '#toc' },
+      { id : 'summary', label: 'Aller au sommaire', href: '#toc' },
       { id : 'content', label: 'Aller au contenu', href: '#main-content' },
       { id : 'search', label: 'Aller à la recherche', href: '#search-input', itemClass: ['hidden-if-no-js'] },
       { id : 'footer', label: 'Aller au pied de page', href: '#footer' }
