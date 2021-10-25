@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -193,11 +193,21 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#common-gestures" class="dropdown-item text-wrap">Common gestures</a><a href="#iphonex" class="dropdown-item text-wrap">iPhoneX</a><a href="#tips-tricks" class="dropdown-item text-wrap">Tips &amp; Tricks</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>VoiceOver user guide</h1>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>VoiceOver user guide</h1>
 <p>VoiceOver is a built-in screen reader that reads aloud the items that appear on the device screen.<br>
 <br>It vocalizes all visible elements in the page specially for blind or impaired, dyslexic or illiterate users.</p>
 <p>VoiceOver can be switched on thanks to the <code>Settings</code> device menu:</p>
@@ -205,9 +215,16 @@
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#VoiceOverActivation-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#VoiceOverActivation-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -218,13 +235,14 @@
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="VoiceOverActivation-iOS13"
+     id="VoiceOverActivation-iOS15"
      role="tabpanel">
+<p><img src="../../images/iphonex_VoiceOverActivation_iOS15.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="VoiceOverActivation-iOS13" role="tabpanel">
 <p><img src="../../images/iphonex_VoiceOverActivation_iOS13.png" alt="" class="img-fluid"></p>
 </div>
-<div class="tab-pane" 
-     id="VoiceOverActivation-iOS12" 
-     role="tabpanel" >
+<div class="tab-pane" id="VoiceOverActivation-iOS12" role="tabpanel" >
 <p><img src="../../images/iphonex_VoiceOverActivation_iOS12.png" alt="" class="img-fluid"></p>
 </div></div>
 <p><br>When VoiceOver is on, the standard gestures behave differently and additional gestures let you move the focus on the screen and control the selected items.</p>
@@ -267,13 +285,13 @@ The <strong>swipe</strong> consists in doing the gesture while keeping the finge
 <h2 id="common-gestures">Common gestures <a class="header-anchor" href="#common-gestures" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul class="list-gesture">
   <li class="clearfix">
-<p><img src="../../images/gesture1.png" alt="" class="img-fluid"></p>
-<h3>Drag one finger</h3>
+<p><img src="../../images/gesture1.png" alt="" class="img-fluid"><br>
+<strong>Drag one finger</strong></p>
 <p>Explore your screen and hear audible feedback for what is being touched.</p>
   </li><br><br>
   <li class="clearfix">
-<p><img src="../../images/gesture2.png" alt="" class="img-fluid"></p>
-<h3>Double-tap anywhere on the screen</h3>
+<p><img src="../../images/gesture2.png" alt="" class="img-fluid"><br>
+<strong>Double-tap anywhere on the screen</strong></p>
 <p>Opens or activates the item that you last touched (vocalized).</p>
   </li><br><br>
     <li class="clearfix">
@@ -285,7 +303,7 @@ The <strong>swipe</strong> consists in doing the gesture while keeping the finge
 <p><img src="../../images/gesture9_2.png" alt="" class="img-fluid"></p>
 </div>
 </div>
-<h3>Flick up or down using three fingers</h3>
+<p><strong>Flick up or down using three fingers</strong></p>
 <p>Scroll within lists or pages if selected. Equivalent to a vertical swipe.</p><br><br>
   </li><br>
   <li class="clearfix">
@@ -297,7 +315,7 @@ The <strong>swipe</strong> consists in doing the gesture while keeping the finge
 <p><img src="../../images/gesture10_2.png" alt="" class="img-fluid"></p>
 </div>
 </div> 
-<h3>Flick left or right using three fingers</h3>
+<p><strong>Flick left or right using three fingers</strong></p>
 <p>Change pages and screens when possible. Equivalent to a horizontal swipe.</p>
   </li><br>
   <li class="clearfix">  
@@ -309,7 +327,7 @@ The <strong>swipe</strong> consists in doing the gesture while keeping the finge
 <p><img src="../../images/gesture6.png" alt="" class="img-fluid"></p>
 </div>
 </div>   
-<h3>Flick left/right using one finger</h3>
+<p><strong>Flick left/right using one finger</strong></p>
 <p>Move the focus to the previous/next item.</p>
   </li><br>
   <li class="clearfix"> 
@@ -321,7 +339,7 @@ The <strong>swipe</strong> consists in doing the gesture while keeping the finge
 <p><img src="../../images/gesture8.png" alt="" class="img-fluid"></p>
 </div>
 </div> 
-<h3>Flick up/down using one finger</h3>
+<p><strong>Flick up/down using one finger</strong></p>
 <p>Increase/decrease the value of an adjustable element.</p>
   </li>
 </ul>
@@ -410,6 +428,9 @@ The <strong>swipe</strong> consists in doing the gesture while keeping the finge
 <li>
 <p><a href="#OpenLink">Open a link in a text view.</a></p>
 </li>
+<li>
+<p><a href="#BackButton">Back button shortcut</a> ⟹ <strong>iOS 14 new feature</strong></p>
+</li>
 </ul>
 <p><a name="ReadAllElementsFromTop"></a><br>
 <br>Gesture: <strong>flick up with 2 fingers</strong> anywhere on the screen.</p>
@@ -472,8 +493,30 @@ The <strong>swipe</strong> consists in doing the gesture while keeping the finge
 <br>First, select the 'Links' rotor item before flicking up to reach the desired link.<br>
 <br>Then, double-tap and hold with one finger once the link is selected <strong>until a popup shows up and an action sheet appears</strong> to suggest the appropriate option.</p>
 <p><img src="../../images/iphonex_en_open_link.png" alt="" class="img-fluid"></p>
+<p><a name="BackButton"></a><br>
+<br>Gesture: <strong>double-tap and hold with 1 finger</strong> anywhere on the screen once the back button is selected ⟹ <strong>iOS 14 new feature</strong>.<br>
+<br>As soon as a menu shows up, swipe to the desired page title by flicking left/right using one finger and validate the selection thanks to a double-tap with one finger.</p>
+<p><img src="../../images/iphonex_en_back_button.png" alt="" class="img-fluid"></p>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#common-gestures" class="nav-link text-muted bg-200">Common gestures</a>
+          </li><li class="nav-item position-relative">
+            <a href="#iphonex" class="nav-link text-muted bg-200">iPhoneX</a>
+          </li><li class="nav-item position-relative">
+            <a href="#tips-tricks" class="nav-link text-muted bg-200">Tips &amp; Tricks</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     
 
 <footer id="footer" class="o-footer" role="contentinfo">

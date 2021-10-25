@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -193,11 +193,21 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#gestes-de-bases" class="dropdown-item text-wrap">Gestes de bases</a><a href="#iphonex" class="dropdown-item text-wrap">iPhoneX</a><a href="#trucs-astuces" class="dropdown-item text-wrap">Trucs &amp; Astuces</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Guide d’utilisation de <span lang="en">VoiceOver</span></h1>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          <h1>Guide d’utilisation de <span lang="en">VoiceOver</span></h1>
 <p><span lang="en">VoiceOver</span> est le lecteur d’écran natif iOS qui décrit à haute voix les éléments qui apparaissent sur l’écran de votre terminal.<br>
 <br>Il permet à un utilisateur malvoyant ou nonvoyant, dyslexique ou illettré de pouvoir vocaliser tous les éléments visibles contenus dans la page.</p>
 <p>L'activation de <span lang="en">VoiceOver</span> se fait via le menu <code>Réglages</code> du téléphone :</p>
@@ -205,9 +215,16 @@
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-toggle="tab" 
+           href="#VoiceOverActivation-iOS15"
+           role="tab" 
+           aria-selected="true">iOS 15</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
            href="#VoiceOverActivation-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -218,13 +235,14 @@
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="VoiceOverActivation-iOS13"
+     id="VoiceOverActivation-iOS15"
      role="tabpanel">
+<p><img src="../../images/iphonex_VoiceOverActivation_iOS15.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="VoiceOverActivation-iOS13" role="tabpanel">
 <p><img src="../../images/iphonex_VoiceOverActivation_iOS13.png" alt="" class="img-fluid"></p>
 </div>
-<div class="tab-pane" 
-     id="VoiceOverActivation-iOS12" 
-     role="tabpanel" >
+<div class="tab-pane" id="VoiceOverActivation-iOS12" role="tabpanel" >
 <p><img src="../../images/iphonex_VoiceOverActivation_iOS12.png" alt="" class="img-fluid"></p>
 </div></div>
 <p><br>Lorsque l'activation est effective, les gestes standards effectués sur l’écran tactile donnent des résultats différents.<br>
@@ -267,13 +285,13 @@ Le <strong>glissement</strong> qui consiste à réaliser le mouvement défini en
 <h2 id="gestes-de-bases">Gestes de bases <a class="header-anchor" href="#gestes-de-bases" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul class="list-gesture">
   <li class="clearfix">
-<p><img src="../../images/gesture1.png" alt="" class="img-fluid"></p>
-<h3>Se déplacer avec un doigt sur l’écran</h3>
+<p><img src="../../images/gesture1.png" alt="" class="img-fluid"><br>
+<strong>Se déplacer avec un doigt sur l’écran</strong></p>
 <p>Explorer l’écran et entendre la vocalisation de l’élément qui est touché.</p>
   </li><br><br>
   <li class="clearfix">
-<p><img src="../../images/gesture2.png" alt="" class="img-fluid"></p>
-<h3>Double-cliquer n’importe où sur l’écran</h3>
+<p><img src="../../images/gesture2.png" alt="" class="img-fluid"><br>
+<strong>Double-cliquer n’importe où sur l’écran</strong></p>
 <p>Ouvrir ou activer l’élément qui a été touché (vocalisé) en dernier.</p>
   </li><br><br>
     <li class="clearfix">
@@ -285,7 +303,7 @@ Le <strong>glissement</strong> qui consiste à réaliser le mouvement défini en
 <p><img src="../../images/gesture9_2.png" alt="" class="img-fluid"></p>
 </div>
 </div>
-<h3>Balayer vers le haut ou le bas en utilisant trois doigts</h3>
+<p><strong>Balayer vers le haut ou le bas en utilisant trois doigts</strong></p>
 <p>Se déplacer verticalement sur une liste ou sur une page à condition qu’elle soit sélectionnée. Correspond à un balayage vertical.</p><br><br>
   </li><br>
   <li class="clearfix">
@@ -297,7 +315,7 @@ Le <strong>glissement</strong> qui consiste à réaliser le mouvement défini en
 <p><img src="../../images/gesture10_2.png" alt="" class="img-fluid"></p>
 </div>
 </div>
-<h3>Balayer vers la gauche ou la droite en utilisant trois doigts</h3>
+<p><strong>Balayer vers la gauche ou la droite en utilisant trois doigts</strong></p>
 <p>Changer de page ou d’écran quand c’est possible. Correspond à un balayage horizontal.</p>
   </li><br>
   <li class="clearfix">
@@ -308,8 +326,8 @@ Le <strong>glissement</strong> qui consiste à réaliser le mouvement défini en
 <div class="col-sm-6 col-xs-12">
 <p><img src="../../images/gesture6.png" alt="" class="img-fluid"></p>
 </div>
-</div>   
-<h3>Balayer vers la gauche (resp. droite) en utilisant un doigt</h3>
+</div>  
+<p><strong>Balayer vers la gauche (resp. droite) en utilisant un doigt</strong></p>
 <p>Déplacer le focus <span lang="en">VoiceOver</span> sur le prochain (resp. précédent) élément.</p>
   </li><br>
   <li class="clearfix">
@@ -321,7 +339,7 @@ Le <strong>glissement</strong> qui consiste à réaliser le mouvement défini en
 <p><img src="../../images/gesture8.png" alt="" class="img-fluid"></p>
 </div>
 </div> 
-<h3>Balayer vers le haut (resp. bas) en utilisant un doigt</h3>
+<p><strong>Balayer vers le haut (resp. bas) en utilisant un doigt</strong></p>
 <p>Permet d’augmenter (resp. diminuer) la valeur d’un élément ajustable.</p>
   </li>
 </ul>
@@ -410,6 +428,9 @@ Le <strong>glissement</strong> qui consiste à réaliser le mouvement défini en
 <li>
 <p><a href="#OpenLink">ouvrir un lien dans une vue.</a></p>
 </li>
+<li>
+<p><a href="#BackButton">retour arrière rapide</a> ⟹ <strong>nouveauté iOS 14</strong></p>
+</li>
 </ul>
 <p><a name="ReadAllElementsFromTop"></a><br>
 <br>Mouvement : <strong>balayage avec 2 doigts</strong> du bas vers le haut n'importe où sur l'écran.</p>
@@ -465,15 +486,37 @@ Le <strong>glissement</strong> qui consiste à réaliser le mouvement défini en
 <br>Mouvement : <strong>balayage avec 3 doigts</strong> vers le bas n'importe où sur l'écran.</p>
 <p><img src="../../images/iphonex_fr_search.png" alt="" class="img-fluid"></p>
 <p><a name="LongPressure"></a><br>
-<br>Mouvement : <strong>double tap avec 1 doigt en maintenant la pression</strong> <em>(iOS 12)</em> ou ** triple tap avec un doigt** <em>(iOS 13)</em> n'importe où sur l'écran.</p>
+<br>Mouvement : <strong>double tap avec 1 doigt en maintenant la pression</strong> <em>(iOS 12)</em> ou <strong>triple tap avec un doigt</strong> <em>(iOS 13)</em> n'importe où sur l'écran.</p>
 <p><img src="../../images/iphonex_fr_long_pressure.png" alt="" class="img-fluid"></p>
 <p><a name="OpenLink"></a><br>
 <br>Mouvement : <strong>double tap avec 1 doigt en maintenant la pression</strong> n'importe où sur l'écran.<br>
 <br>Sélectionner l'option 'Liens' du rotor avant de balayer vers le haut pour atteindre le lien souhaité.<br>
 <br>Ensuite, effectuer un double tap avec 1 doigt en maintenant la pression <strong>jusqu'à l'apparition d'une popup au-dessus du lien</strong> qui affichera une fenêtre d'actions en bas d'écran.</p>
 <p><img src="../../images/iphonex_en_open_link.png" alt="" class="img-fluid"></p>
+<p><a name="BackButton"></a><br>
+<br>Mouvement : <strong>double tap avec 1 doigt en maintenant la pression</strong> n'importe où sur l'écran dès lors que le bouton de retour de la barre de navigation est sélectionné ⟹ <strong>nouveauté iOS 14</strong>.<br>
+<br>Dans le menu qui vient de s'ouvrir, sélectionner le titre de la page vers laquelle le retour immédiat est souhaité en balayant l'écran horizontalement avec un doigt puis valider la sélection par un double tap avec un doigt.</p>
+<p><img src="../../images/iphonex_fr_back_button.png" alt="" class="img-fluid"></p>
 
-    </main>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#gestes-de-bases" class="nav-link text-muted bg-200">Gestes de bases</a>
+          </li><li class="nav-item position-relative">
+            <a href="#iphonex" class="nav-link text-muted bg-200">iPhoneX</a>
+          </li><li class="nav-item position-relative">
+            <a href="#trucs-astuces" class="nav-link text-muted bg-200">Trucs &amp; Astuces</a>
+          </li></ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     
 
 <footer id="footer" class="o-footer" role="contentinfo">
