@@ -204,96 +204,101 @@
   <main id="main-content" class="container-lg pt-4" role="main">
       
 <h1>Showing and vocalizing prices</h1>
-    <h2>Introduction</h2>
-    <p>
-        Price display can sometimes be problematic for visually impaired people who use a screen reader. This is especially true when you want a particular layout or display promotions (strikethrough price). </p>
+
+<h2>Introduction</h2>
+<p>
+    Price display can sometimes be problematic for visually impaired people who use a screen reader. This is especially true when you want a particular layout or display promotions (strikethrough price). 
+</p>
 
 <h2>Examples with vocalisation problems </h2>
 
-    <h3>Example 1</h3>
+<h3>Example 1</h3>
 
-    <p>Using a screen reader, the following example is vocalized as three distinct elements: </p>
-    <ul>
-      <li>"from 120" </li>
-      <li>"90 euros" </li>
-      <li>"slash month"</li>
-    </ul>
+<p>Using a screen reader, the following example is vocalized as three distinct elements: </p>
+<ul>
+    <li>"from 120" </li>
+    <li>"90 euros" </li>
+    <li>"slash month"</li>
+</ul>
 
-    <p>We do not know if the price is 120 € or 90 €, while the real price is 120.90 €. </p>
+<p>We do not know if the price is 120 € or 90 €, while the real price is 120.90 €. </p>
 
-    <p class="example">
-        from
-        <span class="price">
-            120<sup>.90 €</sup><sub>/month </sub>
-        </span>
-            </p>
+<p class="example">
+    from
+    <span class="price">
+        120<sup>.90 €</sup><sub>/month </sub>
+    </span>
+</p>
 
-    <strong>Sample code</strong>
+<strong>Sample code</strong>
 
-    <pre><code class="html">
+<pre><code class="html">
 from
 &lt;span class="price"&gt;
     120&lt;sup&gt;.90€&lt;/sup&gt;&lt;sub&gt;/month&lt;/sub&gt;
 &lt;/span&gt;
-    </code></pre>
+</code></pre>
+
 <h3>Example 2</h3>
 
 <p>The following example is vocalized: </p>
-    <ul>
-        <li>Orange phones </li>
-        <li>from 1 euro asterisk 129 euros </li>
-        <li>asterisk see condition </li>
-    </ul>
-    <p>The user is not informed that the price 129.90 euros is crossed out. </p>
-    <div class="example2">
-        <img src="images/phone.png" alt="Orange phones">
-        <p>
-            <strong>From </strong> <span class="price">1€*</span>
-            <span class="line-through"> 129.90 € </span><br>
-            *see conditions
-        </p>
-    </div>
+<ul>
+    <li>Orange phones </li>
+    <li>from 1 euro asterisk 129 euros </li>
+    <li>asterisk see condition </li>
+</ul>
+<p>The user is not informed that the price 129.90 euros is crossed out. </p>
+<div class="example2">
+    <img src="images/phone.png" alt="Orange phones">
+    <p>
+        <strong>From </strong> <span class="price">1€*</span>
+        <s>129.90€</s><br>
+        *see conditions
+    </p>
+</div>
 
-    <br>
-    <strong>Sample code</strong>
+<br>
+<strong>Sample code</strong>
 
-<pre> <code class = "html">
+<pre><code class = "html">
 &lt;div class="example2"&gt;
 &lt;img src="./images/phone.png" alt="Orange phones"&gt;
 &lt;p&gt;
     &lt;strong&gt;From &lt;/strong&gt;&lt;span class="price"&gt;1€*&lt;/span&gt;
-    &lt;span class="line-through"&gt;129.90€&lt;/span&gt;&lt;br&gt;
+    &lt;s&gt;129,90€&lt;/s&gt;&lt;br&gt;
     *see conditions
-&lt;/p &gt;
+&lt;/p&gt;
 &lt;/div&gt;
-    </code></pre>
-    <h2> Solution to correct vocalization </h2>
+</code></pre>
 
-        <p>To fix these problems the easiest way is to ignore the price displayed on the screen and add accessible hiding text containing the price to be vocalized.</p>
-        <p> To hide an element from speech synthesis, just use the <code>aria-hidden</code> attribute. To add text in accessible hiding (text that is vocalized but not displayed), you only need to use an accessible CSS class (for example, the class <code>sr-only</code> if you use the framework <a href="http://boosted.orange.com">boosted</a>).</p>
+<h2> Solution to correct vocalization </h2>
 
-        <p class="example" aria-hidden="true">
-        From
-        <span class="price">
-            120<sup>90€</sup><sub>/month</sub>
-        </span></p>
-        <p>
-        <span class="sr-only">starting from 120.90 € per month</span> </p>
-        <p> Vocalized element "from 120 euros 90 per month" </p>
-        <pre><code class="html">
-            &lt;p class="example" aria-hidden="true"&gt;
-            From
-            &lt;span class="price"&gt;
-                120&lt;sup&gt;.90€&lt;/sup&gt;&lt;sub&gt;/mois&lt;/sub&gt;
-            &lt;/span&gt;
-            &lt;p&gt;
-            &lt;span class="sr-only"&gt;from 120.90€ per month&lt;/span&gt;
-        </code></pre>
+<p>To fix these problems the easiest way is to ignore the price displayed on the screen and add accessible hiding text containing the price to be vocalized.</p>
+<p> To hide an element from speech synthesis, just use the <code>aria-hidden</code> attribute. To add text in accessible hiding (text that is vocalized but not displayed), you only need to use an accessible CSS class (for example, the class <code>sr-only</code> if you use the framework <a href="http://boosted.orange.com">boosted</a>).</p>
+
+<p class="example" aria-hidden="true">
+From
+<span class="price">
+    120<sup>,90€</sup><sub>/month</sub>
+</span></p>
+<p>
+<span class="sr-only">starting from 120.90 € per month</span> </p>
+<p> Vocalized element "from 120 euros 90 per month" </p>
+<pre><code class="html">
+&lt;p class="example" aria-hidden="true"&gt;
+From
+&lt;span class="price"&gt;
+    120&lt;sup&gt;.90€&lt;/sup&gt;&lt;sub&gt;/mois&lt;/sub&gt;
+&lt;/span&gt;
+&lt;p&gt;
+&lt;span class="sr-only"&gt;from 120.90€ per month&lt;/span&gt;
+</code></pre>
+
 <div class="example2">
     <img src="images/phone.png" alt="Orange phones">
     <p aria-hidden="true">
         <strong>From </strong><span class="price">1€*</span>
-        <span class="line-through">129.90€</span><br>
+        <s>129,90€</s><br>
         *see conditions
     </p>
     <span class="sr-only">From 1 € instead of 129.90 € see conditions</span>
@@ -309,13 +314,20 @@ from
 &lt;div class="example2"&gt;
 &lt;img src="./images/phone.png" alt="Orange phones"&gt;
 &lt;p aria-hidden="true"&gt;
-&lt;strong&gt;From &lt;/strong&gt;&lt;span class="price"&gt;1€*&lt;/span&gt;
-&lt;span class="line-through"&gt;129.90€&lt;/span&gt;&lt;br&gt;
-*see conditions
+    &lt;strong&gt;From &lt;/strong&gt;&lt;span class="price"&gt;1€*&lt;/span&gt;
+    &lt;s&gt;129,90€&lt;/s&gt;&lt;br&gt;
+    *see conditions
 &lt;/p&gt;
 &lt;span class="sr-only"&gt;From 1 € instead of 129.90 € see conditions&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
+
+<h2>Importance of semantics</h2>
+<p>The accessible text-based hiding solution work with all the assistive technologies, however it is important to pay particular attention to the HTML tags used.</p>
+
+<p>Adding semantics to the HTML code improves support for assistive technologies now and for the futur. It is possible to display a strikethrough text using a <code>&lt;span&gt;</code> tag and a CSS class, but the use of an appropriate tag <code>&lt;s&gt;</code> or <code>&lt;del&gt;</code> brings meaning to your code. 
+The NVDA screen reader, for example, automatically indicates that text is strikethrough when inserted into a <code>&lt;del&gt;</code>tag. Although support for these tags is not yet complete, it is important to ensure that you choose the appropriate HTML tags based on your needs.</p>
+
 
     </main>
     
