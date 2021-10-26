@@ -1400,6 +1400,10 @@
     "new": "/fr/web/audit-wcag"
   },
   {
+    "old": "/fr/web/la-va11ydette",
+    "new": "https://la-va11ydette.orange.com/"
+  },
+  {
     "old": "web/fondamentaux-nontech.html",
     "new": "/fr/web/designer"
   }

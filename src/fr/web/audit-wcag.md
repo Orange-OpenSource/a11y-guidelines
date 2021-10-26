@@ -15,7 +15,7 @@ La grille calcule un taux de conformité par page auditée : ce taux est égal �
 
 Le lien ci-dessous entraine l'ouverture de la grille "Audit WCAG" dans un nouvel onglet du navigateur.  
 
-<a href="../la-va11ydette/?list=wcag-web&lang=fr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Ouvrir la grille WCAG (nouvelle fenêtre)">Ouvrir la grille WCAG<span class="sr-only"> (nouvelle fenêtre)</span></a>
+<a href="https://la-va11ydette.orange.com/?list=wcag-web&lang=fr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Ouvrir la grille WCAG (nouvelle fenêtre)">Ouvrir la grille WCAG<span class="sr-only"> (nouvelle fenêtre)</span></a>
 	
 # Audit d'évaluation
 
@@ -29,7 +29,7 @@ Cette grille est utilisable à différentes étapes d'un projet : elle peut êtr
 
 Le lien ci-dessous entraine l'ouverture de la grille "Audit d'évaluation"  dans un nouvel onglet du navigateur.  
 
-<a href="../la-va11ydette/?list=audit-web&lang=fr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Ouvrir la grille d'évaluation (nouvelle fenêtre)">Ouvrir la grille d'évaluation<span class="sr-only"> (nouvelle fenêtre)</span></a>
+<a href="https://la-va11ydette.orange.com/?list=audit-web&lang=fr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Ouvrir la grille d'évaluation (nouvelle fenêtre)">Ouvrir la grille d'évaluation<span class="sr-only"> (nouvelle fenêtre)</span></a>
 
 
 
