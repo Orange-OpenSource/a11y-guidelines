@@ -23,7 +23,7 @@ Ces informations doivent être proches visuellement du champ afin que l'utilisat
 
 Chaque libellé (ou instructions) doit être inclus dans une balise `label`, elle-même associée au champ de formulaire grâce à un attribut `for` renseigné, reprenant la valeur de l’`id` du champ.
 
-Dans certains cas, il semble inutile d’accompagner le champ de formulaire d’un libellé (champ de recherche accompagné d’un bouton en forme de loupe par exemple, case à cocher pour sélectionner une ligne dans un tableau de données). Dans ce cas, prévoir au minimum un attribut `title`. Un libellé peut être également ajouté (reprenant la valeur du `title`), celui doit être associé au champ de formulaire et rendu invisible à l’écran (utiliser une classe de <a href="../../exemples-de-composants/masquage-accessible/">masquage accessible</a>).
+Dans certains cas, il semble inutile d’accompagner le champ de formulaire d’un libellé car son rôle est évident (champ de recherche accompagné d’un bouton en forme de loupe par exemple, case à cocher pour sélectionner une ligne dans un tableau de données). Dans ce cas, prévoir au minimum un attribut `title`. Un libellé peut être également ajouté (reprenant la valeur du `title`), celui doit être associé au champ de formulaire et rendu invisible à l’écran (utiliser une classe de <a href="../../exemples-de-composants/masquage-accessible/">masquage accessible</a>).
 
 À noter que l’attribut `title` positionné sur une balise de champ de formulaire fait office de libellé tout comme les attributs `aria-label` et `aria-labelledby` (cf. [les attributs ARIA qui peuvent vous sauver](../../../articles/attributs-aria-qui-peuvent-vous-sauver/)) dans cet ordre de préférence.
 

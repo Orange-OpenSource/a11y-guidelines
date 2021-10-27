@@ -23,7 +23,7 @@ This label should be visually close to the field so we can easily mentally link 
 
 Each label must be set in a `label` tag, which is associated to the form field with a` for` attribute, using the `id` attribute of the form element.
 
-In some cases, it seems unnecessary to associate a label to a form field (e.g. search field with a magnifying glass button next to it, a checkbox to select a row in a grid). In such case provide at least a `title` attribute. A hidden label (using <a href="../../components-examples/accessible-hiding/">accessible hiding</a>) can also be added, which must be associated with the form field.
+In some cases, it seems unnecessary to associate a label to a form field because his role is obvious (e.g. search field with a magnifying glass button next to it, a checkbox to select a row in a grid). In such case provide at least a `title` attribute. A hidden label (using <a href="../../components-examples/accessible-hiding/">accessible hiding</a>) can also be added, which must be associated with the form field.
 
 Note that the `title` attribute positioned on a form field tag acts as a label just like the `aria-label` and `aria-labelledby` attributes (see [ARIA attributes that can save you](../../../articles/aria-attributes-that-can-save-you)), preferably in this order.
 The `autocomplete` attribute must be present and relevant for all fields listed in <a href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.
