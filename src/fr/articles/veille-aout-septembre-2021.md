@@ -7,8 +7,6 @@ tags:
   - veille
 ---
 
-# Veille accessibilité numérique Août – Septembre 2021
-
 On sent que ça se rapproche et là, vous me dites...    QUOI ?? 
 Ben les WCAG 3, une petite explication de cette future recommandation (en) : https://w3c.github.io/silver/explainer/ 
 Donc les WCAG 2.2, elles aussi, mécaniquement, s'approchent à grand pas, soyez prêt pour un saut, pas énorme mais quand même (en) : https://www.visionaustralia.org/services/digital-access/blog/the-new-requirements-for-wcag-2-2 

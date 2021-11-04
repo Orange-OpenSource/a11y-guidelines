@@ -27,10 +27,10 @@
             <h1>{{ title }}</h1>  
             {% if tags %}
             <div class="bg-200 mx-n1 p-1 my-2">
-              <p class="d-inline">
+              <p class="d-inline" id="filters_label">
                 <strong>{{'tags.list' | translate}}</strong>
               </p>
-              <ul class="d-inline list-inline">
+              <ul class="d-inline list-inline" aria-labelledby="filters_label">
               {%- for tag in tags -%}
                 {%- set tagTranslationKey = 'tags.' + tag -%}
                 <li class="list-inline-item"><a href="../?tag={{ tag }}" class="btn btn-dark btn-sm" data-tag="{{ tag }}">{{ tagTranslationKey | translate }}</a></li>

@@ -1,5 +1,5 @@
 ---
-title: "Veille accessibilité numérique Décembre 2020 – Janvier 2021"
+title: "Veille accessibilité numérique Janvier 2021 – février 2021"
 abstract: "Florilèges de ressources en #a11y, janvier-février 2021"
 titleBeforeTag: true
 date: "2021-02-19"

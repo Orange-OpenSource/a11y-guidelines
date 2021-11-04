@@ -28,7 +28,7 @@ module.exports = {
       label: 'Search'
     },
     filtersBar: {
-      label: 'Filters',
+      label: 'Filter by theme ',
       all: "All"
     },
     tags: {
@@ -97,7 +97,7 @@ module.exports = {
       label: 'Rechercher'
     },
     filtersBar: {
-      label: 'Filtres',
+      label: 'Filtrer par thématique',
       all: 'Tout'
     },
     tags: {
