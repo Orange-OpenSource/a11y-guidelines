@@ -32,11 +32,12 @@ module.exports = {
       all: "All"
     },
     tags: {
-      componentExample: "Component example",
+      componentExample: 'Component example',
       mobile: 'Mobile',
       technicalArticle: 'Technical article',
       web: 'Web',
-      veille: 'Watch'
+      veille: 'Watch',
+      telechargement: 'Download'
     },
     toc: {
       title: 'Table of content'
@@ -97,11 +98,12 @@ module.exports = {
       all: 'Tout'
     },
     tags: {
-      componentExample: "Exemple de composant",
+      componentExample: 'Exemple de composant',
       mobile: 'Mobile',
       technicalArticle: 'Article technique',
       web: 'Web',
-      veille: 'Veille'
+      veille: 'Veille',
+      telechargement: 'Téléchargement'
     },
     toc: {
       title: 'Sommaire'
