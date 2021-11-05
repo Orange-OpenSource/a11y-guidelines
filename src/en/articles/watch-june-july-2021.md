@@ -1,8 +1,8 @@
 ---
-title: "Digital accessibility watch August - September 2021"
-abstract: "#a11y anthology, August-September 2021"
+title: "#a11y technical watch, June-July 2021"
+abstract: "#a11y anthology, June-July 2021"
+date: "2021-08-03"
 titleBeforeTag: true
-date: "2021-09-27"
 tags:
   - veille
 ---
