@@ -103,7 +103,7 @@ module.exports = {
       technicalArticle: 'Article technique',
       web: 'Web',
       veille: 'Veille',
-      telechargement: 'Téléchargement'
+      fichememo: 'Fiche mémo'
     },
     toc: {
       title: 'Sommaire'

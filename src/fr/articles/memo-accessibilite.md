@@ -3,7 +3,7 @@ title: "Mémo accessibilité"
 abstract: "Nos mémos sur l'accessibilité numérique à télécharger, à imprimer et à partager"
 date: "2021-11-08"
 tags:
-  - telechargement
+  - fichememo    
 ---
 # Nos mémos sur l'accessibilité numérique
 N'oubliez pas les informations essentielles, adoptez nos mémos !
@@ -21,6 +21,7 @@ Choisissez les mémos qui vous correspondent :
 - [Les tests Web](./#les-tests-web)
 - [Développement Android](./#developpement-android)
 - [Développement iOS](./#developpement-ios)
+- [Rédiger un Email accessible](./#rediger-un-email-accessible)
 
 <hr>
 
@@ -130,6 +131,33 @@ Choisissez les mémos qui vous correspondent :
       <a href="../../res/memos/ios/Memo-iOS-Orange.pdf" class="btn btn-secondary">
         Télécharger au format PDF (415 Ko)
         <span class="sr-only">Mémo accessibilité développement iOS</span>
+      </a>
+    </p>
+  </div>
+</div>
+
+<hr>
+
+## Rédiger un email accessible
+
+<div class="row">
+  <div class="col-3">
+    <p class="border-right">
+      <img src="../images/memos/memo-email.png" alt="">
+    </p>
+  </div>
+  <div class="col-xl-9">  
+    <h3>Description</h4>
+    <p>Rappel des bonnes pratiques pour rédiger un email accessible.</p>
+    <h3>Téléchargements</h4>
+    <p>    
+      <a href="../../res/memos/email/Memo-Email-Orange.svg" class="btn btn-secondary">
+        Consulter au format SVG
+        <span class="sr-only">Mémo rédiger un email accessible</span>
+      </a>
+      <a href="../../res/memos/email/Memo-Email-Orange.pdf" class="btn btn-secondary">
+        Télécharger au format PDF (415 Ko)
+        <span class="sr-only">Mémo rédiger un email accessible</span>
       </a>
     </p>
   </div>

@@ -8,8 +8,8 @@ sideNavigationLinks:
     href: "../../flutter/"
   - label: "App m-learning mDAN"
     href: "../../mdan/"
-  - label: "Téléchargements"
-    href: "../telechargements/"        
+  - label: "Fiches mémo"
+    href: "../fiches-memo/"        
   - label: "Liens utiles"
     href: "../../liens-utiles/"
 ---
