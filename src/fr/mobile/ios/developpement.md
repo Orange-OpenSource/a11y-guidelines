@@ -94,13 +94,6 @@ Il existe beaucoup de traits dont les principaux sont fournis ci-dessous&nbsp;:
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#Description-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="Description-ObjC" role="tabpanel">
@@ -127,11 +120,6 @@ Il existe beaucoup de traits dont les principaux sont fournis ci-dessous&nbsp;:
     }
 </code>
         </div>
-        <div class="tab-pane swiftui" id="Description-SwiftUI" role="tabpanel" >
-        <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 
@@ -156,13 +144,6 @@ L'attribut `accessibilityTrait` est en réalité un `bitmask` pour lequel chaque
             href="#BasicOperations-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#BasicOperations-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -208,11 +189,6 @@ L'attribut `accessibilityTrait` est en réalité un `bitmask` pour lequel chaque
             // Tâches à réaliser si le trait '.header' est présent...
         }
     }
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="BasicOperations-SwiftUI" role="tabpanel" >
-        <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -299,13 +275,6 @@ Tout élément dérivant de `UIView` possède ces attributs qui acceptent une ch
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#textAlt-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="textAlt-ObjC" role="tabpanel">
@@ -348,11 +317,6 @@ Tout élément dérivant de `UIView` possède ces attributs qui acceptent une ch
             maProgressView.accessibilityValue = "45 pour cent"
         }
     }
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="textAlt-SwiftUI" role="tabpanel" >
-        <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -432,13 +396,6 @@ Il faut absolument formater les données en entrée pour obtenir une vocalisatio
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#date-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="date-ObjC" role="tabpanel">
@@ -496,11 +453,6 @@ Il faut absolument formater les données en entrée pour obtenir une vocalisatio
                                                                         unitsStyle: .spellOut)
 </code>
         </div>
-        <div class="tab-pane swiftui" id="date-SwiftUI" role="tabpanel" >
-        <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 <div class="tab-pane" id="format-Numbers" role="tabpanel" >
@@ -526,13 +478,6 @@ Comme pour les date et heure, il faut formater la donnée en entrée pour qu'ell
             href="#nombre-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#nombre-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -562,11 +507,6 @@ Comme pour les date et heure, il faut formater la donnée en entrée pour qu'ell
                                                         number: .spellOut)
 </code>
         </div>
-        <div class="tab-pane swiftui" id="nombre-SwiftUI" role="tabpanel" >
-        <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 <div class="tab-pane" id="format-PhoneNumbers" role="tabpanel" >
@@ -593,13 +533,6 @@ L'idée est de séparer chaque paire de chiffres par une virgule qui va fournir 
             href="#telephoone-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#telephoone-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -678,11 +611,6 @@ L'idée est de séparer chaque paire de chiffres par une virgule qui va fournir 
     phoneNumberLabel.accessibilityLabel = spelledOutString 
 </code>
         </div>
-        <div class="tab-pane swiftui" id="telephoone-SwiftUI" role="tabpanel" >
-        <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 </div>
@@ -739,13 +667,6 @@ Pour déclencher une vocalisation qui se fera dans la langue du système, il fau
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#triggerVocal-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="triggerVocal-ObjC" role="tabpanel">
@@ -760,11 +681,6 @@ Pour déclencher une vocalisation qui se fera dans la langue du système, il fau
 
     UIAccessibility.post(notification: .announcement,
                      argument: "Message pour la vocalisation.")
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="triggerVocal-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -849,13 +765,6 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#changeNotif-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="changeNotif-ObjC" role="tabpanel">
@@ -892,11 +801,6 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
         UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
                             argument: nil)
     }
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="changeNotif-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -966,13 +870,6 @@ Si on utilise l'attribut `accessibilityLanguage` sur un `UILabel`, alors celui-c
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#changeLang-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="changeLang-ObjC" role="tabpanel">
@@ -995,11 +892,6 @@ Si on utilise l'attribut `accessibilityLanguage` sur un `UILabel`, alors celui-c
         myLabel.accessibilityLabel = "This is a new label. Thank you."
     }
     
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="changeLang-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -1087,13 +979,6 @@ L'idée est de créer un carré rouge qui va contenir 2 autres carrés (bleu et 
             href="#hideElts-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#hideElts-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -1186,11 +1071,6 @@ L'idée est de créer un carré rouge qui va contenir 2 autres carrés (bleu et 
     
 </code>
         </div>
-        <div class="tab-pane swiftui" id="hideElts-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 
@@ -1270,13 +1150,6 @@ Création de l'élément accessible qui va regrouper les éléments souhaités :
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#groupElts1-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="groupElts1-ObjC" role="tabpanel">
@@ -1328,11 +1201,6 @@ Création de l'élément accessible qui va regrouper les éléments souhaités :
     }
 </code>
         </div>
-        <div class="tab-pane swiftui" id="groupElts1-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 
@@ -1353,13 +1221,6 @@ Création de l'élément accessible qui va regrouper les éléments souhaités :
             href="#groupElts2-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#groupElts2-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -1454,11 +1315,6 @@ Création de l'élément accessible qui va regrouper les éléments souhaités :
     }
 </code>
         </div>
-        <div class="tab-pane swiftui" id="groupElts2-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 
@@ -1488,13 +1344,6 @@ Cela n'étant malheureusement pas toujours possible, il va donc falloir créer u
                 href="#groupElts3-Swift" 
                 role="tab" 
                 aria-selected="false">Swift</a>
-            </li>
-            <li class="nav-item item-sui" role="presentation">
-                <a class="nav-link" 
-                data-toggle="tab" 
-                href="#groupElts3-SwiftUI" 
-                role="tab" 
-                aria-selected="false">Swift UI</a>
             </li>
         </ul>
         <div class="tab-content languageinfotab">
@@ -1588,11 +1437,6 @@ Cela n'étant malheureusement pas toujours possible, il va donc falloir créer u
     }
 </code>
             </div>
-            <div class="tab-pane swiftui" id="groupElts3-SwiftUI" role="tabpanel" >
-                <code class="swiftUI">
-    
-</code>
-            </div>
         </div>
     </div>
 
@@ -1671,13 +1515,6 @@ On crée deux vues au sein desquelles on incorpore les chiffres qu'on souhaite v
         role="tab" 
         aria-selected="false">Swift</a>
     </li>
-    <li class="nav-item item-sui" role="presentation">
-        <a class="nav-link" 
-        data-toggle="tab" 
-        href="#readingOrder-SwiftUI" 
-        role="tab" 
-        aria-selected="false">Swift UI</a>
-    </li>
 </ul>
 <div class="tab-content languageinfotab">
     <div class="tab-pane objc show active" id="readingOrder-ObjC" role="tabpanel">
@@ -1720,11 +1557,6 @@ blueBlock.accessibilityElements = [key_6!,
                                     key_9!,
                                     key_5!]
 }
-</code>
-    </div>
-    <div class="tab-pane swiftui" id="readingOrder-SwiftUI" role="tabpanel" >
-        <code class="swiftUI">
-
 </code>
     </div>
 </div>
@@ -1822,13 +1654,6 @@ Après avoir défini la classe pour la vue contenant l'image&nbsp;:
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#CuCoPro1-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="CuCoPro1-ObjC" role="tabpanel">
@@ -1870,11 +1695,6 @@ Après avoir défini la classe pour la vue contenant l'image&nbsp;:
     }
 </code>
         </div>
-        <div class="tab-pane swiftui" id="CuCoPro1-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 
@@ -1896,13 +1716,6 @@ Après avoir défini la classe pour la vue contenant l'image&nbsp;:
             href="#CuCoPro2-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#CuCoPro2-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -1957,11 +1770,6 @@ Après avoir défini la classe pour la vue contenant l'image&nbsp;:
             myView.accessibilityCustomContent = [lastModified, items, type]
         }
     }
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="CuCoPro2-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -2046,13 +1854,6 @@ L'exemple de code ci-dessous permet de suivre le focus d'un élément accessible
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#focusElt-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="focusElt-ObjC" role="tabpanel">
@@ -2114,11 +1915,6 @@ L'exemple de code ci-dessous permet de suivre le focus d'un élément accessible
             }
         }
     }
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="focusElt-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -2201,13 +1997,6 @@ En conservant la valeur par défaut de ce point, on peut aisément se retrouver 
             href="#focusArea-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#focusArea-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -2312,11 +2101,6 @@ En conservant la valeur par défaut de ce point, on peut aisément se retrouver 
     }
 </code>
         </div>
-        <div class="tab-pane swiftui" id="focusArea-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 
 
@@ -2416,13 +2200,6 @@ Pour application, supposons que nous avons une vue générique contenant des él
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#modalView1-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="modalView1-ObjC" role="tabpanel">
@@ -2451,11 +2228,6 @@ Pour application, supposons que nous avons une vue générique contenant des él
     parentB.accessibilityElementsHidden = true
 </code>
         </div>
-        <div class="tab-pane swiftui" id="modalView1-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 
@@ -2480,13 +2252,6 @@ Pour application, supposons que nous avons une vue générique contenant des él
             href="#modalView2-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#modalView2-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -2526,11 +2291,6 @@ Pour application, supposons que nous avons une vue générique contenant des él
 
     B2.isAccessibilityElement = false
     B2.accessibilityElementsHidden = true
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="modalView2-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -2632,13 +2392,6 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#TextSize1-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="TextSize1-ObjC" role="tabpanel">
@@ -2671,11 +2424,6 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
     fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
 </code>
         </div>
-        <div class="tab-pane swiftui" id="TextSize1-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 
@@ -2698,13 +2446,6 @@ Il est aussi possible d'utiliser la méthode **[traitCollectionDidChange](../wwd
             href="#TextSize2-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#TextSize2-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -2745,11 +2486,6 @@ Il est aussi possible d'utiliser la méthode **[traitCollectionDidChange](../wwd
         //Il faut de nouveau affecter la police des éléments impactés lors du traitement de cette notification.
         fontFootNote.font = UIFont.preferredFont(forTextStyle: .footnote)
     }
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="TextSize2-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -2819,13 +2555,6 @@ Malheureusement, cela n'est pas pris en compte nativement par le système et seu
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#truncHyphen-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="truncHyphen-ObjC" role="tabpanel">
@@ -2890,11 +2619,6 @@ Malheureusement, cela n'est pas pris en compte nativement par le système et seu
             myLabel.attributedText = myText
         }
     }
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="truncHyphen-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -3039,13 +2763,6 @@ Si le grossissement extrême d'un élément graphique risque de dégrader l'exp�
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#largeContentViewer1-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="largeContentViewer1-ObjC" role="tabpanel">
@@ -3093,12 +2810,7 @@ Si le grossissement extrême d'un élément graphique risque de dégrader l'exp�
     }
 </code>
         </div>
-        <div class="tab-pane swiftui" id="largeContentViewer1-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
-    </div>
+</div>
 </div>
 
 
@@ -3120,13 +2832,6 @@ De la même façon, pour un **élément cliquable** comme un bouton dont le gros
             href="#largeContentViewer2-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#largeContentViewer2-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -3179,11 +2884,6 @@ De la même façon, pour un **élément cliquable** comme un bouton dont le gros
             //Actions à réaliser dès que le bouton est activé.
         }
     }
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="largeContentViewer2-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -3285,13 +2985,6 @@ On élimine ainsi toutes les contraintes rencontrées initialement et on obtient
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#adjustable1-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="adjustable1-ObjC" role="tabpanel">
@@ -3376,11 +3069,6 @@ On élimine ainsi toutes les contraintes rencontrées initialement et on obtient
     }
 </code>
         </div>
-        <div class="tab-pane swiftui" id="adjustable1-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 
@@ -3402,13 +3090,6 @@ On élimine ainsi toutes les contraintes rencontrées initialement et on obtient
             href="#adjustable2-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#adjustable2-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -3483,11 +3164,6 @@ On élimine ainsi toutes les contraintes rencontrées initialement et on obtient
             stepperStackViewAccess.accessibilityValue = stepperValueAccess.text
         }
     }
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="adjustable2-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -3600,13 +3276,6 @@ Une solution consiste à **associer à l'élément sélectionné un tableau d'ac
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#customActions-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="customActions-ObjC" role="tabpanel">
@@ -3697,11 +3366,6 @@ Une solution consiste à **associer à l'élément sélectionné un tableau d'ac
     }
 </code>
         </div>
-        <div class="tab-pane swiftui" id="customActions-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 
 <br>Le code implémenté ci-dessus permet d'obtenir le résultat suivant par balayages successifs sur l'élément accessible sélectionné&nbsp;:
@@ -3776,13 +3440,6 @@ Le code fourni ci-dessous permet de compter et d'afficher le nombre de balayages
             href="#rotor-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#rotor-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -3885,11 +3542,6 @@ Le code fourni ci-dessous permet de compter et d'afficher le nombre de balayages
     }
 </code>
         </div>
-        <div class="tab-pane swiftui" id="rotor-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 
 <br>Le code implémenté ci-dessus permet d'obtenir le résultat suivant :
@@ -3972,13 +3624,6 @@ Une présentation très visuelle de certaines fonctions, peut-être moins utiles
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#a11yOptions1-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="a11yOptions1-ObjC" role="tabpanel">
@@ -3997,11 +3642,6 @@ Une présentation très visuelle de certaines fonctions, peut-être moins utiles
     let isSwitchControlRunning = (UIAccessibility.isSwitchControlRunning ? 1 : 0)
         
     print("VoiceOver vaut \(isVoiceOverRunning) et SwichControl vaut \(isSwitchControlRunning).")
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="a11yOptions1-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -4034,13 +3674,6 @@ Dans l'exemple suivant, on appelle une méthode spécifique au moment où le sta
             href="#a11yOptions2-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#a11yOptions2-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -4094,11 +3727,6 @@ Dans l'exemple suivant, on appelle une méthode spécifique au moment où le sta
         
         print("SWITCH CONTROL est \(switchControlStatus) et VOICE OVER est \(voiceOverStatus).")
     }
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="a11yOptions2-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -4201,13 +3829,6 @@ Si on ne souhaite modifier que la vocalisation <span lang="en">VoiceOver</span> 
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#navBar1-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="navBar1-ObjC" role="tabpanel">
@@ -4220,11 +3841,6 @@ Si on ne souhaite modifier que la vocalisation <span lang="en">VoiceOver</span> 
             <code class="swift">
 
     navigationController?.navigationBar.backItem?.accessibilityLabel = "nouveau label pour le bouton de retour"
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="navBar1-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -4250,13 +3866,6 @@ Si on ne souhaite modifier que la vocalisation <span lang="en">VoiceOver</span> 
             href="#navBar2-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#navBar2-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -4288,11 +3897,6 @@ Si on ne souhaite modifier que la vocalisation <span lang="en">VoiceOver</span> 
     navigationItem.leftBarButtonItem = a11yLeftBarButton
 </code>
         </div>
-        <div class="tab-pane swiftui" id="navBar2-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 
@@ -4313,13 +3917,6 @@ Si on ne souhaite modifier que la vocalisation <span lang="en">VoiceOver</span> 
             href="#navBar3-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#navBar3-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -4362,11 +3959,6 @@ Si on ne souhaite modifier que la vocalisation <span lang="en">VoiceOver</span> 
     navigationItem.leftBarButtonItem = a11yLeftBarButton
 </code>
         </div>
-        <div class="tab-pane swiftui" id="navBar3-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 
@@ -4392,13 +3984,6 @@ De façon à pouvoir utiliser rapidement les propriétés d'accessibilité du ti
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#navBar4-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="navBar4-ObjC" role="tabpanel">
@@ -4421,11 +4006,6 @@ De façon à pouvoir utiliser rapidement les propriétés d'accessibilité du ti
 
     navigationItem.titleView = a11yTitleLabel
     navigationItem.titleView?.accessibilityLabel = "vocalisation du titre différente de l'écrit"
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="navBar4-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -4451,13 +4031,6 @@ De façon à pouvoir utiliser rapidement les propriétés d'accessibilité du ti
             href="#navBar5-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#navBar5-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -4507,11 +4080,6 @@ De façon à pouvoir utiliser rapidement les propriétés d'accessibilité du ti
     navigationItem.rightBarButtonItem = a11yRightBarButton
 </code>
         </div>
-        <div class="tab-pane swiftui" id="navBar5-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 
@@ -4550,13 +4118,6 @@ Dans un premier temps, on **personnalise les éléments de la barre de navigatio
             href="#navBar6-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#navBar6-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -4681,11 +4242,6 @@ Dans un premier temps, on **personnalise les éléments de la barre de navigatio
     }
 </code>
         </div>
-        <div class="tab-pane swiftui" id="navBar6-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 
@@ -4708,13 +4264,6 @@ La vue et la barre de navigation étant deux conteneurs différents, on **cache 
             href="#navBar7-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#navBar7-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -4831,11 +4380,6 @@ La vue et la barre de navigation étant deux conteneurs différents, on **cache 
     }
 </code>
         </div>
-        <div class="tab-pane swiftui" id="navBar7-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 
@@ -4934,13 +4478,6 @@ L'exemple suivant va permettre de définir le débit vocal, la hauteur tonale ai
             href="#speechSyn1-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#speechSyn1-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -5106,11 +4643,6 @@ L'exemple suivant va permettre de définir le débit vocal, la hauteur tonale ai
     }
 </code>
         </div>
-        <div class="tab-pane swiftui" id="speechSyn1-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
-</code>
-        </div>
     </div>
 </div>
 
@@ -5134,13 +4666,6 @@ Lorsque des mots ont une consonance bien particulière ou que l'on souhaite réa
             href="#speechSyn2-Swift" 
             role="tab" 
             aria-selected="false">Swift</a>
-        </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#speechSyn2-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
         </li>
     </ul>
     <div class="tab-content languageinfotab">
@@ -5168,11 +4693,6 @@ Lorsque des mots ont une consonance bien particulière ou que l'on souhaite réa
 
     let synthesizer = AVSpeechSynthesizer()
     synthesizer.speak(utterance)
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="speechSyn2-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>
@@ -5326,13 +4846,6 @@ Afin de personnaliser la sélection de ces éléments, on souhaite&nbsp;:
             role="tab" 
             aria-selected="false">Swift</a>
         </li>
-        <li class="nav-item item-sui" role="presentation">
-            <a class="nav-link" 
-            data-toggle="tab" 
-            href="#switchCtrl-SwiftUI" 
-            role="tab" 
-            aria-selected="false">Swift UI</a>
-        </li>
     </ul>
     <div class="tab-content languageinfotab">
         <div class="tab-pane objc show active" id="switchCtrl-ObjC" role="tabpanel">
@@ -5454,11 +4967,6 @@ Afin de personnaliser la sélection de ces éléments, on souhaite&nbsp;:
                                             thirdGroup]
         }
     }
-</code>
-        </div>
-        <div class="tab-pane swiftui" id="switchCtrl-SwiftUI" role="tabpanel" >
-            <code class="swiftUI">
-
 </code>
         </div>
     </div>

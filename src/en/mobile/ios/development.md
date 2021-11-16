@@ -75,27 +75,48 @@ There are many available traits and the most commonly used are:
 
 </div>
 <div class="tab-pane" id="TraitElt-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#Description-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#Description-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="Description-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-<pre><code class="objectivec">
-- (void)customTraits() {
-    //Specified UIPageControl with the ’ajustable’ trait.
-    pageControl.accessibilityTraits = UIAccessibilityTraitAdjustable;
-    
-    //Added header.  
-    defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader;
-}
-</code></pre>
+    - (void)customTraits() {
+        //Specified UIPageControl with the ’ajustable’ trait.
+        pageControl.accessibilityTraits = UIAccessibilityTraitAdjustable;
+        
+        //Added header.  
+        defaultHeaderViewCell.accessibilityTraits = UIAccessibilityTraitHeader;
+    }
+</code>
+        </div>
+        <div class="tab-pane swift" id="Description-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
-func customTraits() {
-    //Specified UIPageControl with the ’ajustable’ trait.
-    pageControl.accessibilityTraits = .adjustable
-    
-    //Added header.
-    defaultHeaderViewCell.accessibilityTraits = .header
-}
-</code></pre>
-
+    func customTraits() {
+        //Specified UIPageControl with the ’ajustable’ trait.
+        pageControl.accessibilityTraits = .adjustable
+        
+        //Added header.
+        defaultHeaderViewCell.accessibilityTraits = .header
+    }
+</code>
+        </div>
+    </div>
 </div>
 <div class="tab-pane" id="TraitElt-BasicOperations" role="tabpanel">
 
@@ -104,46 +125,68 @@ The `accessibilityTrait` attribute is actually a `bitmask` in which each element
 ![](../../images/iOSdev/Traits.png)
 <br>It's then possible to add and remove some `traits` after having checked their existence in the bitmask for instance.
 
-<pre><code class="objectivec">
+<ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#BasicOperations-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#BasicOperations-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="BasicOperations-ObjC" role="tabpanel">
+            <code class="objectivec">
+     
+    - (void)changeTraits {
 
-- (void)changeTraits {
-
-    //Dedicated trait set with no other option.
-    onePageButton.accessibilityTraits = UIAccessibilityTraitButton | UIAccessibilityTraitLink;
-    
-    //Added traits to the existing ones.
-    pageControl.accessibilityTraits |= UIAccessibilityTraitHeader; //Only one trait.
-    pageControl.accessibilityTraits |= UIAccessibilityTraitButton + UIAccessibilityTraitLink; //Many traits.
-    
-    //Remove a trait.
-    onePageButton.accessibilityTraits &= ~UIAccessibilityTraitLink;
-    
-    //Check out the bitmask trait existence.
-    if ((pageControl.accessibilityTraits & UIAccessibilityTraitHeader) != 0) {
-        // Do the job if '.header' is one of the traits...
+        //Dedicated trait set with no other option.
+        onePageButton.accessibilityTraits = UIAccessibilityTraitButton | UIAccessibilityTraitLink;
+        
+        //Added traits to the existing ones.
+        pageControl.accessibilityTraits |= UIAccessibilityTraitHeader; //Only one trait.
+        pageControl.accessibilityTraits |= UIAccessibilityTraitButton + UIAccessibilityTraitLink; //Many traits.
+        
+        //Remove a trait.
+        onePageButton.accessibilityTraits &= ~UIAccessibilityTraitLink;
+        
+        //Check out the bitmask trait existence.
+        if ((pageControl.accessibilityTraits & UIAccessibilityTraitHeader) != 0) {
+            // Do the job if '.header' is one of the traits...
+        }
     }
-}
-</code></pre>
+</code>
+        </div>
+        <div class="tab-pane swift" id="BasicOperations-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
-func changeTraits() {
-
-    //Dedicated trait set with no other option.
-    onePageButton.accessibilityTraits = [.button, .link]
+    func changeTraits() {
         
-    //Added traits to the existing ones.
-    pageControl.accessibilityTraits.insert(.header) //Only one trait.
-    pageControl.accessibilityTraits.formUnion([.button, .link]) //Many traits.
-        
-    //Remove a trait.
-    onePageButton.accessibilityTraits.remove(.link)
-        
-    //Check out the bitmask trait existence.
-    if (pageControl.accessibilityTraits.rawValue & UIAccessibilityTraits.header.rawValue == UIAccessibilityTraits.header.rawValue) {
-        // Do the job if '.header' is one of the traits...
+        //Dedicated trait set with no other option.
+        onePageButton.accessibilityTraits = [.button, .link]
+            
+        //Added traits to the existing ones.
+        pageControl.accessibilityTraits.insert(.header) //Only one trait.
+        pageControl.accessibilityTraits.formUnion([.button, .link]) //Many traits.
+            
+        //Remove a trait.
+        onePageButton.accessibilityTraits.remove(.link)
+            
+        //Check out the bitmask trait existence.
+        if (pageControl.accessibilityTraits.rawValue & UIAccessibilityTraits.header.rawValue == UIAccessibilityTraits.header.rawValue) {
+            // Do the job if '.header' is one of the traits...
+        }
     }
-}
-</code></pre>
+</code>
+        </div>
+    </div>
 
 </div>
 <div class="tab-pane" id="TraitElt-Links" role="tabpanel">
@@ -210,45 +253,66 @@ Anything inheriting from `UIView` has these attributes by default that accept an
 
 </div>
 <div class="tab-pane" id="textAlt-Example" role="tabpanel">
- 
-<pre><code class="objectivec">
-@interface ChangeTextView() {
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#textAlt-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#textAlt-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="textAlt-ObjC" role="tabpanel">
+            <code class="objectivec">
+     
+    @interface ChangeTextView() {
     
-    __weak IBOutlet UILabel * myLabel;
-    __weak IBOutlet UIProgressView * myProgressView;
-}
-@end
-
-@implementation ChangeTextView
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    myLabel.accessibilityLabel = @"hello";
-    myLabel.accessibilityHint = @"This is an added comment.";
-    
-    myProgressView.accessibilityValue = @"45 per cent";
-}
-@end
-</code></pre>
-
-<pre><code class="swift">
-class ChangeTextView: UIViewController {
-
-    @IBOutlet weak var myLabel: UILabel!
-    @IBOutlet weak var myProgressView: UIProgressView!
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        myLabel.accessibilityLabel = "hello"
-        myLabel.accessibilityHint = "This is an added comment."
-        
-        myProgressView.accessibilityValue = "45 per cent"
+        __weak IBOutlet UILabel * monLabel;
+        __weak IBOutlet UIProgressView * maProgressView;
     }
-}
-</code></pre>
+    @end
 
+    @implementation ChangeTextView
+
+    - (void)viewDidAppear:(BOOL)animated {
+        [super viewDidAppear:animated];
+        
+        monLabel.accessibilityLabel = @"hello";
+        monLabel.accessibilityHint = @"Ceci est un commentaire supplémentaire.";
+        
+        maProgressView.accessibilityValue = @"45 per cent";
+    }
+    @end
+</code>
+        </div>
+        <div class="tab-pane swift" id="textAlt-Swift" role="tabpanel" >
+            <code class="swift">
+
+    class ChangeTextView: UIViewController {
+
+        @IBOutlet weak var monLabel: UILabel!
+        @IBOutlet weak var maProgressView: UIProgressView!
+        
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            
+            monLabel.accessibilityLabel = "hello"
+            monLabel.accessibilityHint = "This is an added comment."
+            
+            maProgressView.accessibilityValue = "45 per cent"
+        }
+    }
+</code>
+        </div>
+    </div>
 </div>
 <div class="tab-pane" id="textAlt-Links" role="tabpanel"> 
 
@@ -311,7 +375,26 @@ The rendering isn't natural if the date or time data are imported text in a `lab
 <br>Incoming data must be formatted to obtain a natural and understandable descriptive vocalization.
 
 ![](../../images/iOSdev/DateHeureNombres_7.png)
-<pre><code class="objectivec">
+<ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#date-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#date-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="date-ObjC" role="tabpanel">
+            <code class="objectivec">
+     
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"dd/MM/yyyy HH:mm"];
     
@@ -322,8 +405,8 @@ The rendering isn't natural if the date or time data are imported text in a `lab
                                                     timeStyle:NSDateFormatterNoStyle];
     
     dateLabel.accessibilityLabel = [NSDateFormatter localizedStringFromDate:date
-                                                                  dateStyle:NSDateFormatterMediumStyle
-                                                                  timeStyle:NSDateFormatterNoStyle];
+                                                                dateStyle:NSDateFormatterMediumStyle
+                                                                timeStyle:NSDateFormatterNoStyle];
 
     
     hourLabel.text = [NSDateFormatter localizedStringFromDate:date
@@ -334,34 +417,37 @@ The rendering isn't natural if the date or time data are imported text in a `lab
                                                                         fromDate:date];
                                                                         
     hourLabel.accessibilityLabel = [NSDateComponentsFormatter localizedStringFromDateComponents:hourComponents
-                                                                                     unitsStyle:NSDateComponentsFormatterUnitsStyleSpellOut];
-</code></pre>
+                                                                                    unitsStyle:NSDateComponentsFormatterUnitsStyleSpellOut];
+</code>
+        </div>
+        <div class="tab-pane swift" id="date-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
         
     let date = dateFormatter.date(from: "01/04/2015 05:30")
         
     dateLabel.text = DateFormatter.localizedString(from: date!,
-                                                   dateStyle: .short,
-                                                   timeStyle: .none)
-                                                       
+                                                dateStyle: .short,
+                                                timeStyle: .none)
+                                                    
     dateLabel.accessibilityLabel = DateFormatter.localizedString(from: date!,
-                                                                 dateStyle: .medium,
-                                                                 timeStyle: .none)
+                                                                dateStyle: .medium,
+                                                                timeStyle: .none)
         
         
     hourLabel.text = DateFormatter.localizedString(from: date!,
-                                                   dateStyle: .none,
-                                                   timeStyle: .short)
+                                                dateStyle: .none,
+                                                timeStyle: .short)
         
     let hourComponents = Calendar.current.dateComponents([.hour, .minute],
-                                                         from: date!)
+                                                        from: date!)
     hourLabel.accessibilityLabel = DateComponentsFormatter.localizedString(from: hourComponents,
-                                                                           unitsStyle: .spellOut)
-</code></pre>
-
+                                                                        unitsStyle: .spellOut)
+</code>
+        </div>
+    </div>
 </div>
 <div class="tab-pane" id="format-Numbers" role="tabpanel">
 
@@ -371,28 +457,50 @@ If a number is imported as is in a `label`text, the vocalization will be made on
 <br>As the previous sheet dealing with date and time, the incoming data must be formatted to be analyzed and vocalized according to the proper value of the explained number.
 
 ![](../../images/iOSdev/DateHeureNombres_8.png)
-<pre><code class="objectivec">
+<ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#nombre-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#nombre-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="nombre-ObjC" role="tabpanel">
+            <code class="objectivec">
+
     NSNumber * numberValue = @54038921.7;
-    
+
     NSNumberFormatter * numberFormatter = [[NSNumberFormatter alloc]init];
     numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
     
     numberLabel.text = [numberFormatter stringFromNumber:numberValue];
     
     numberLabel.accessibilityLabel = [NSNumberFormatter localizedStringFromNumber:numberValue
-                                                                      numberStyle:NSNumberFormatterSpellOutStyle];
-</code></pre>
+                                                    numberStyle:NSNumberFormatterSpellOutStyle];
+</code>
+        </div>
+        <div class="tab-pane swift" id="nombre-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
     let numberValue = NSNumber(value: 54038921.7)
-        
-    numberLabel.text = NumberFormatter.localizedString(from: numberValue,
-                                                       number: .decimal)
-                                                           
-    numberLabel.accessibilityLabel = NumberFormatter.localizedString(from: numberValue,
-                                                                     number: .spellOut)
-</code></pre>
 
+    numberLabel.text = NumberFormatter.localizedString(from: numberValue,
+                                                    number: .decimal)
+                                                        
+    numberLabel.accessibilityLabel = NumberFormatter.localizedString(from: numberValue,
+                                                        number: .spellOut)
+</code>
+        </div>
+    </div>
 </div>
 <div class="tab-pane" id="format-PhoneNumbers" role="tabpanel">
 
@@ -403,7 +511,26 @@ Once more, formatting data is an essential step for a phone number vocalization 
 <br>The idea of this format is based on a comma separation of each pair of figures that will provide the vocal punctuation.
 
 ![in this case the phone number is well vocalized](../../images/iOSdev/DateHeureNombres_9.png)
-<pre><code class="objectivec">
+<ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#telephoone-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#telephoone-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="telephoone-ObjC" role="tabpanel">
+            <code class="objectivec">
+     
     NSString * phoneNumberValue = @"06.11.22.33.06";
     NSArray * phoneNumberElts = [phoneNumberValue componentsSeparatedByString:@"."];
     
@@ -413,8 +540,8 @@ Once more, formatting data is an essential step for a phone number vocalization 
     NSMutableString * spelledOutString = [[NSMutableString alloc]init];
     
     [phoneNumberElts enumerateObjectsUsingBlock:^(id  _Nonnull obj,
-                                                  NSUInteger idx,
-                                                  BOOL * _Nonnull stop) {
+                                                NSUInteger idx,
+                                                BOOL * _Nonnull stop) {
         NSString * elt = (NSString *)obj;
         
         if (idx != 0) {
@@ -436,46 +563,50 @@ Once more, formatting data is an essential step for a phone number vocalization 
     
     phoneNumberLabel.text = phoneNumberValue;
     phoneNumberLabel.accessibilityLabel = spelledOutString;
-</code></pre>
+</code>
+        </div>
+        <div class="tab-pane swift" id="telephoone-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
-        let phoneNumberValue = "06.11.22.33.06"
-        let phoneNumberElts = phoneNumberValue.components(separatedBy: ".")
+    let phoneNumberValue = "06.11.22.33.06"
+    let phoneNumberElts = phoneNumberValue.components(separatedBy: ".")
+
+    let nbFormatter = NumberFormatter()
+    nbFormatter.numberStyle = .spellOut
+
+    var spelledOutString = String()
+
+    for (index, elt) in phoneNumberElts.enumerated() {
         
-        let nbFormatter = NumberFormatter()
-        nbFormatter.numberStyle = .spellOut
-        
-        var spelledOutString = String()
-        
-        for (index, elt) in phoneNumberElts.enumerated() {
-            
-            if (index != 0) {
-                spelledOutString.append(",")
-            }
-            
-            if (elt.hasPrefix("0")) {
-                
-                let firstFigureValue = Int(String(elt[elt.startIndex]))!
-                let firstFigure = nbFormatter.string(from: NSNumber(value:firstFigureValue))
-                spelledOutString.append(firstFigure!)
-                
-                let secondFigureValue = Int(String(elt[elt.index(elt.startIndex, offsetBy: 1)]))!
-                let secondFigure = nbFormatter.string(from: NSNumber(value:secondFigureValue))
-                spelledOutString.append(secondFigure!)
-                
-            } else {
-                
-                let figure = nbFormatter.string(from: NSNumber(value:Int(elt)!))
-                spelledOutString.append(figure!)
-            }
+        if (index != 0) {
+            spelledOutString.append(",")
         }
+        
+        if (elt.hasPrefix("0")) {
+            
+            let firstFigureValue = Int(String(elt[elt.startIndex]))!
+            let firstFigure = nbFormatter.string(from: NSNumber(value:firstFigureValue))
+            spelledOutString.append(firstFigure!)
+            
+            let secondFigureValue = Int(String(elt[elt.index(elt.startIndex, offsetBy: 1)]))!
+            let secondFigure = nbFormatter.string(from: NSNumber(value:secondFigureValue))
+            spelledOutString.append(secondFigure!)
+            
+        } else {
+            
+            let figure = nbFormatter.string(from: NSNumber(value:Int(elt)!))
+            spelledOutString.append(figure!)
+        }
+    }
 
-        phoneNumberLabel.text = phoneNumberValue
-        phoneNumberLabel.accessibilityLabel = spelledOutString
-</code></pre>
-
+    phoneNumberLabel.text = phoneNumberValue
+    phoneNumberLabel.accessibilityLabel = spelledOutString 
+</code>
+        </div>
+    </div>
 </div>
-</div><br><br>
+</div>
+<br><br>
 
 ## Trigger a vocalization
 <ul class="nav nav-tabs" role="tablist">
@@ -511,16 +642,38 @@ To trigger a vocalization, just call the **UIAccessibilityPostNotification** met
 </div>
 <div class="tab-pane" id="triggerVocal-Example" role="tabpanel">
 
-<pre><code class="objectivec">
-UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, 
-                                @"This is a VoiceOver message.");
-</code></pre>
+<ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#triggerVocal-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#triggerVocal-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="triggerVocal-ObjC" role="tabpanel">
+            <code class="objectivec">
+     
+    UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, 
+                                @"This is a VoiceOver message.");158
+</code>
+        </div>
+        <div class="tab-pane swift" id="triggerVocal-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
-UIAccessibility.post(notification: .announcement,
+    UIAccessibility.post(notification: .announcement,
                      argument: "This is a VoiceOver message.")
-</code></pre>
-
+</code>
+        </div>
+    </div>
 </div>
 <div class="tab-pane" id="triggerVocal-Links" role="tabpanel">
 
@@ -587,38 +740,60 @@ This notification comes along with a vocalization including a sound like announc
 </div>
 <div class="tab-pane" id="changeNotif-Example" role="tabpanel">
 
-<pre><code class="objectivec">
-//The element 'myLabel' is focused and vocalized with its new value.
-- (IBAction)tapHere:(UIButton *)sender {
-    
-    myLabel.accessibilityLabel = @"This is a new label.";
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
-}
+<ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#changeNotif-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#changeNotif-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="changeNotif-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-//The first accessible element in the page is focused and vocalized with a sound like announcing a new page.
-- (IBAction)clic:(UIButton *)sender {
-    
-    UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil);
-}
-</code></pre>
-
-<pre><code class="swift">
-//The element 'myLabel' is focused and vocalized with its new value.
-@IBAction func tapHere(_ sender: UIButton) {
+    //The element 'myLabel' is focused and vocalized with its new value.
+    - (IBAction)tapHere:(UIButton *)sender {
         
-    myLabel.accessibilityLabel = "This is a new label."
-    UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
-                         argument: myLabel)
-}
-    
-//The first accessible element in the page is focused and vocalized with a sound like announcing a new page.
-@IBAction func clic(_ sender: UIButton) {
-        
-    UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
-                         argument: nil)
-}
-</code></pre>
+        myLabel.accessibilityLabel = @"This is a new label.";
+        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
+    }
 
+    //The first accessible element in the page is focused and vocalized with a sound like announcing a new page.
+    - (IBAction)clic:(UIButton *)sender {
+        
+        UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil);
+    }
+</code>
+        </div>
+        <div class="tab-pane swift" id="changeNotif-Swift" role="tabpanel" >
+<code class="swift">
+
+    //The element 'myLabel' is focused and vocalized with its new value.
+    @IBAction func tapHere(_ sender: UIButton) {
+            
+        myLabel.accessibilityLabel = "This is a new label."
+        UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
+                            argument: myLabel)
+    }
+        
+    //The first accessible element in the page is focused and vocalized with a sound like announcing a new page.
+    @IBAction func clic(_ sender: UIButton) {
+            
+        UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
+                            argument: nil)
+    }
+</code>
+        </div>
+    </div>
 </div>
 <div class="tab-pane" id="changeNotif-Links" role="tabpanel">
 
@@ -669,21 +844,46 @@ Available through the `UIAccessibility` informal protocol, this attribute allows
 <div class="tab-pane" id="changeLang-Example" role="tabpanel">
 
 If we use the `accessibilityLanguage` attribute on a `UILabel`, it will be vocalized by VoiceOver in the language set on this attribute.
-<pre><code class="objectivec">
-- (IBAction)tapHere:(UIButton *)sender {
-    
-    myLabel.accessibilityLanguage = @"fr";
-    myLabel.accessibilityLabel = @"Ceci est un nouveau label. Merci.";
-}
-</code></pre>
+<ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#changeLang-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#changeLang-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="changeLang-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-<pre><code class="swift">
-@IBAction func tapHere(_ sender: UIButton) {
+    - (IBAction)tapHere:(UIButton *)sender {
         
-    myLabel.accessibilityLanguage = "fr"
-    myLabel.accessibilityLabel = "Ceci est un nouveau label. Merci."
-}
-</code></pre>
+        myLabel.accessibilityLanguage = @"fr";
+        myLabel.accessibilityLabel = @"Ceci est un nouveau label. Merci.";
+    } 
+    
+</code>
+        </div>
+        <div class="tab-pane swift" id="changeLang-Swift" role="tabpanel" >
+            <code class="swift">
+            
+    @IBAction func tapHere(_ sender: UIButton) {
+            
+        myLabel.accessibilityLanguage = "fr"
+        myLabel.accessibilityLabel = "Ceci est un nouveau label. Merci."
+    }
+    
+</code>
+        </div>
+    </div>
 
 A single word in a foreign language may be added in a sentence with the appropriate pronunciation thanks to the **Attributed Accessibility Properties** using a `NSAttributedString` [since iOS&nbsp;11](https://a11y-guidelines.orange.com/en/mobile/ios/wwdc/2017/215/#attributed-accessibility-properties-2607).
 </div>
@@ -753,89 +953,112 @@ A red square will be drawn and contain two other squares (blue and yellow) in or
 
 ![](../../images/iOSdev/MasquerDesElements_1.png)
 
-<pre><code class="objectivec">
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    //Creation of an element inside which 2 other children elements will be inserted.
-    CGRect redParentViewRect = CGRectMake(100.0, 100.0, 40.0, 40.0);
-    UIView * myRedParentView = [[UIView alloc]initWithFrame:redParentViewRect];
-    myRedParentView.backgroundColor = [UIColor redColor];
-    
-    [self.view addSubview:myRedParentView];
-    
-    //The target element musn't be accessible so as to be considered as a container to its children elements.
-    //If this attribute is 'YES', the target element will be the only one accessible element.
-    myRedParentView.isAccessibilityElement = NO;
-    
-    //The elements contained in the target element won't be accessible even if they're defined as such.
-    //If this attribute is 'NO' and the previous one is 'NO', only the children elements will be accessible.
-    myRedParentView.accessibilityElementsHidden = NO;
-    
-    [self createViewWithColor:[UIColor yellowColor] 
-                       inside:myRedParentView];
-    [self createViewWithColor:[UIColor blueColor] 
-                       inside:myRedParentView];
-}
+<ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#hideElts-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#hideElts-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="hideElts-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-- (void)createViewWithColor:(UIColor*)color
-                     inside:(UIView*)parentView {
-    
-    float delta = (color == [UIColor yellowColor]) ? 0.0 : 20.0;
-    
-    CGRect rect = CGRectMake(10.0 + delta, 10.0 + delta, 10.0, 10.0);
-    UIView * theView = [[UIView alloc]initWithFrame:rect];
-    theView.backgroundColor = color;
-    
-    [parentView addSubview:theView];
-    
-    theView.isAccessibilityElement = YES;
-}
-</code></pre>
-
-<pre><code class="swift">
-override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    - (void)viewDidAppear:(BOOL)animated {
+        [super viewDidAppear:animated];
         
         //Creation of an element inside which 2 other children elements will be inserted.
-        let redParentViewRect = CGRect.init(x: 100.0,
-                                            y: 100.0,
-                                            width: 40.0,
-                                            height: 40.0)
-        let myParentView = UIView.init(frame: parentViewRect)
-        myRedParentView.backgroundColor = .red
+        CGRect redParentViewRect = CGRectMake(100.0, 100.0, 40.0, 40.0);
+        UIView * myRedParentView = [[UIView alloc]initWithFrame:redParentViewRect];
+        myRedParentView.backgroundColor = [UIColor redColor];
         
-        self.view.addSubview(myRedParentView)
+        [self.view addSubview:myRedParentView];
         
         //The target element musn't be accessible so as to be considered as a container to its children elements.
-        //If this attribute is 'true', the target element will be the only one accessible element.
-        myRedParentView.isAccessibilityElement = true
+        //If this attribute is 'YES', the target element will be the only one accessible element.
+        myRedParentView.isAccessibilityElement = NO;
         
         //The elements contained in the target element won't be accessible even if they're defined as such.
-        //If this attribute is 'false' and the previous one is 'false', only the children elements will be accessible.
-        myRedParentView.accessibilityElementsHidden = false
+        //If this attribute is 'NO' and the previous one is 'NO', only the children elements will be accessible.
+        myRedParentView.accessibilityElementsHidden = NO;
         
-        self.createViewWithColor(.yellow, inside: myRedParentView)
-        self.createViewWithColor(.blue, inside: myRedParentView)
+        [self createViewWithColor:[UIColor yellowColor] 
+                        inside:myRedParentView];
+        [self createViewWithColor:[UIColor blueColor] 
+                        inside:myRedParentView];
     }
-    
-    func createViewWithColor(_ color:UIColor, inside parentView:UIView) {
-        
-        let delta:CGFloat = ((color == .yellow) ? 0.0 : 20.0)
-        let rect = CGRect.init(x: 10.0 + delta,
-                               y: 10.0 + delta,
-                               width: 10.0,
-                               height: 10.0)
-        
-        let theView = UIView.init(frame: rect)
-        theView.backgroundColor = color
-        
-        parentView.addSubview(theView)
-        
-        theView.isAccessibilityElement = true
-    }
-</code></pre>
 
+    - (void)createViewWithColor:(UIColor*)color
+                        inside:(UIView*)parentView {
+        
+        float delta = (color == [UIColor yellowColor]) ? 0.0 : 20.0;
+        
+        CGRect rect = CGRectMake(10.0 + delta, 10.0 + delta, 10.0, 10.0);
+        UIView * theView = [[UIView alloc]initWithFrame:rect];
+        theView.backgroundColor = color;
+        
+        [parentView addSubview:theView];
+        
+        theView.isAccessibilityElement = YES;
+    }
+</code>
+
+</div>
+        <div class="tab-pane swift" id="hideElts-Swift" role="tabpanel" >
+            <code class="swift">
+
+    override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            
+            //Creation of an element inside which 2 other children elements will be inserted.
+            let redParentViewRect = CGRect.init(x: 100.0,
+                                                y: 100.0,
+                                                width: 40.0,
+                                                height: 40.0)
+            let myParentView = UIView.init(frame: parentViewRect)
+            myRedParentView.backgroundColor = .red
+            
+            self.view.addSubview(myRedParentView)
+            
+            //The target element musn't be accessible so as to be considered as a container to its children elements.
+            //If this attribute is 'true', the target element will be the only one accessible element.
+            myRedParentView.isAccessibilityElement = true
+            
+            //The elements contained in the target element won't be accessible even if they're defined as such.
+            //If this attribute is 'false' and the previous one is 'false', only the children elements will be accessible.
+            myRedParentView.accessibilityElementsHidden = false
+            
+            self.createViewWithColor(.yellow, inside: myRedParentView)
+            self.createViewWithColor(.blue, inside: myRedParentView)
+        }
+        
+        func createViewWithColor(_ color:UIColor, inside parentView:UIView) {
+            
+            let delta:CGFloat = ((color == .yellow) ? 0.0 : 20.0)
+            let rect = CGRect.init(x: 10.0 + delta,
+                                y: 10.0 + delta,
+                                width: 10.0,
+                                height: 10.0)
+            
+            let theView = UIView.init(frame: rect)
+            theView.backgroundColor = color
+            
+            parentView.addSubview(theView)
+            
+            theView.isAccessibilityElement = true
+        }
+</code>
+        </div>
+    </div>
 </div>
 <div class="tab-pane" id="hideElts-Links" role="tabpanel">
 
@@ -893,138 +1116,188 @@ We wish to obtain a 'label' and a 'switch control' as one unique block behaving 
 
 ![](../../images/iOSdev/GrouperDesElements_1.png)
 Create your wrapper as an accessible element :
-<pre><code class="objectivec">
-#import "MyViewController.h"
-#import "MyWrapView.h"
+<div class="tab-pane" id="groupElts1-Example" role="tabpanel">
+<ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#groupElts1-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#groupElts1-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="groupElts1-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-@interface MyViewController ()
+    #import "MyViewController.h"
+    #import "MyWrapView.h"
 
-@property (weak, nonatomic) IBOutlet UILabel * myLabel;
-@property (weak, nonatomic) IBOutlet UISwitch * mySwitch;
+    @interface MyViewController ()
 
-@end
+    @property (weak, nonatomic) IBOutlet UILabel * myLabel;
+    @property (weak, nonatomic) IBOutlet UISwitch * mySwitch;
+
+    @end
 
 
-@implementation MyViewController
+    @implementation MyViewController
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    //Create the view that will encapsulate the 'label' and the 'Switch Control'.
-    MyWrapView * wrap = [[MyWrapView alloc] initWith:_myLabel
-                                                 and:_mySwitch];
-    
-    [self.view addSubview:wrap];
-}
-@end
-</code></pre>
-
-<pre><code class="swift">
-    class MyViewController: UIViewController {
-
-    @IBOutlet weak var myLabel: UILabel!
-    @IBOutlet weak var mySwitch: UISwitch!
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    - (void)viewDidAppear:(BOOL)animated {
+        [super viewDidAppear:animated];
         
         //Create the view that will encapsulate the 'label' and the 'Switch Control'.
-        let wrap = MyWrapView.init(with: myLabel,
-                                   and: mySwitch)
+        MyWrapView * wrap = [[MyWrapView alloc] initWith:_myLabel
+                                                    and:_mySwitch];
         
-        self.view.addSubview(wrap)
+        [self.view addSubview:wrap];
     }
-}
-</code></pre>
+    @end
+</code>
+        </div>
+        <div class="tab-pane swift" id="groupElts1-Swift" role="tabpanel" >
+            <code class="swift">
+
+    class MyViewController: UIViewController {
+
+        @IBOutlet weak var myLabel: UILabel!
+        @IBOutlet weak var mySwitch: UISwitch!
+        
+        
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            
+            //Create the view that will encapsulate the 'label' and the 'Switch Control'.
+            let wrap = MyWrapView.init(with: myLabel,
+                                    and: mySwitch)
+            
+            self.view.addSubview(wrap)
+        }
+    }
+</code>
+        </div>
+    </div>
+</div>
 
 <br>... and implement the wrapper class to define accurately the <a href="../wwdc/2017/215/#default-activation-3738">action&nbsp;when&nbsp;a&nbsp;double&nbsp;tap&nbsp;occurs</a>:
-<pre><code class="objectivec">
-@implementation MyWrapView
+<div class="tab-pane" id="groupElts2-Example" role="tabpanel">
+<ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#groupElts2-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#groupElts2-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="groupElts2-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-//Indexes for the array containing all the wrapped elements.
-int indexLabel = 0;
-int indexSwitch = 1;
+    @implementation MyWrapView
+
+    //Indexes for the array containing all the wrapped elements.
+    int indexLabel = 0;
+    int indexSwitch = 1;
 
 
-- (instancetype)initWith:(UILabel *)label and:(UISwitch *)aSwitch {
-    
-    CGRect viewFrame = CGRectUnion(label.frame, aSwitch.frame);
-    MyWrapView * wrapView = [[MyWrapView alloc]initWithFrame:viewFrame];
-    
-    wrapView.accessibilityElements = @[label, aSwitch];
-    
-    NSString * switchValue = (aSwitch.isOn) ? @"on" : @"off";
-    
-    wrapView.isAccessibilityElement = YES;
-    wrapView.accessibilityLabel = [NSString stringWithFormat:@"the switch control is %@", switchValue.description];
-    wrapView.accessibilityHint = @"tap twice to change the switch control status.";
-    
-    return wrapView;
-}
+    - (instancetype)initWith:(UILabel *)label and:(UISwitch *)aSwitch {
+        
+        CGRect viewFrame = CGRectUnion(label.frame, aSwitch.frame);
+        MyWrapView * wrapView = [[MyWrapView alloc]initWithFrame:viewFrame];
+        
+        wrapView.accessibilityElements = @[label, aSwitch];
+        
+        NSString * switchValue = (aSwitch.isOn) ? @"on" : @"off";
+        
+        wrapView.isAccessibilityElement = YES;
+        wrapView.accessibilityLabel = [NSString stringWithFormat:@"the switch control is %@", switchValue.description];
+        wrapView.accessibilityHint = @"tap twice to change the switch control status.";
+        
+        return wrapView;
+    }
 
 
-//Function called by the system when a double tap occurs on the selected wrapper.
-- (BOOL)accessibilityActivate {
-    
-    UISwitch * theSwitch = self.accessibilityElements[indexSwitch];
-    [theSwitch setOn:!(theSwitch.isOn)];
-    
-    NSString * switchValue = (theSwitch.isOn) ? @"on" : @"off";
-    
-    self.accessibilityLabel = [NSString stringWithFormat:@"the switch control is %@", switchValue.description];
-    return YES;
-}
-@end
-</code></pre>
+    //Function called by the system when a double tap occurs on the selected wrapper.
+    - (BOOL)accessibilityActivate {
+        
+        UISwitch * theSwitch = self.accessibilityElements[indexSwitch];
+        [theSwitch setOn:!(theSwitch.isOn)];
+        
+        NSString * switchValue = (theSwitch.isOn) ? @"on" : @"off";
+        
+        self.accessibilityLabel = [NSString stringWithFormat:@"the switch control is %@", switchValue.description];
+        return YES;
+    }
+    @end
+</code>
+        </div>
+        <div class="tab-pane swift" id="groupElts2-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
     class MyWrapView: UIView {
     
-    //Indexes for the array containing all the wrapped elements.
-    let indexLabel = 0
-    let indexSwitch = 1
-    
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+        //Indexes for the array containing all the wrapped elements.
+        let indexLabel = 0
+        let indexSwitch = 1
+        
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+        }
+        
+        
+        required init?(coder aDecoder: NSCoder) {
+            super.init(coder: aDecoder)
+        }
+        
+        
+        convenience init(with label: UILabel,and aSwitch: UISwitch) {
+            
+            let viewFrame = label.frame.union(aSwitch.frame)
+            self.init(frame: viewFrame)
+            
+            self.accessibilityElements = [label, aSwitch]
+            
+            let switchValue = (aSwitch.isOn) ? "on" : "off"
+            
+            self.isAccessibilityElement = true
+            self.accessibilityLabel = "the switch control is " + switchValue.description
+            self.accessibilityHint = "tap twice to change the switch control status."
+        }
+        
+        
+        //Function called by the system when a double tap occurs on the selected wrapper.
+        override func accessibilityActivate() -> Bool {
+            
+            let theSwitch = self.accessibilityElements?[indexSwitch] as? UISwitch
+            theSwitch?.setOn(!((theSwitch?.isOn)!), animated: false)
+            
+            let switchValue = (theSwitch?.isOn)! ? "on" : "off"
+            
+            self.accessibilityLabel = "the switch control is " + switchValue.description
+            
+            return true
+        }
     }
-    
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    
-    convenience init(with label: UILabel,and aSwitch: UISwitch) {
-        
-        let viewFrame = label.frame.union(aSwitch.frame)
-        self.init(frame: viewFrame)
-        
-        self.accessibilityElements = [label, aSwitch]
-        
-        let switchValue = (aSwitch.isOn) ? "on" : "off"
-        
-        self.isAccessibilityElement = true
-        self.accessibilityLabel = "the switch control is " + switchValue.description
-        self.accessibilityHint = "tap twice to change the switch control status."
-    }
-    
-    
-    //Function called by the system when a double tap occurs on the selected wrapper.
-    override func accessibilityActivate() -> Bool {
-        
-        let theSwitch = self.accessibilityElements?[indexSwitch] as? UISwitch
-        theSwitch?.setOn(!((theSwitch?.isOn)!), animated: false)
-        
-        let switchValue = (theSwitch?.isOn)! ? "on" : "off"
-        
-        self.accessibilityLabel = "the switch control is " + switchValue.description
-        
-        return true
-    }
-}
-</code></pre>
+</code>
+        </div>
+    </div>
+</div>
 
 </div>
 <div class="tab-pane" id="groupElts-Example2" role="tabpanel">
@@ -1036,91 +1309,115 @@ The easiest way would be to place the switch control in the middle of the create
 A new accessible element must then be created to gather all the desired objects and its **accessibilityActivationPoint** has to be defined on the switch control.
 
 ![](../../images/iOSdev/GrouperDesElements_2.png)
-<pre><code class="objectivec">
-@interface ActivationPointViewController ()
+<div class="tab-pane" id="groupElts3-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+            <li class="nav-item item-oc" role="presentation">
+                <a class="nav-link active"
+                data-toggle="tab" 
+                href="#groupElts3-ObjC" 
+                role="tab" 
+                aria-selected="true">Objective C</a>
+            </li>
+            <li class="nav-item item-s" role="presentation">
+                <a class="nav-link" 
+                data-toggle="tab" 
+                href="#groupElts3-Swift" 
+                role="tab" 
+                aria-selected="false">Swift</a>
+            </li>
+        </ul>
+        <div class="tab-content languageinfotab">
+            <div class="tab-pane objc show active" id="groupElts3-ObjC" role="tabpanel">
+                <code class="objectivec">
 
-@property (weak, nonatomic) IBOutlet UIButton * myButton;
-@property (weak, nonatomic) IBOutlet UILabel * myLabel;
-@property (weak, nonatomic) IBOutlet UISwitch * mySwitch;
+    @interface ActivationPointViewController ()
 
-@end
+    @property (weak, nonatomic) IBOutlet UIButton * myButton;
+    @property (weak, nonatomic) IBOutlet UILabel * myLabel;
+    @property (weak, nonatomic) IBOutlet UISwitch * mySwitch;
+
+    @end
 
 
-@implementation ActivationPointViewController
+    @implementation ActivationPointViewController
 
-UIAccessibilityElement * elt;
+    UIAccessibilityElement * elt;
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+    - (void)viewDidAppear:(BOOL)animated {
+        [super viewDidAppear:animated];
+        
+        [_mySwitch addTarget:self
+                    action:@selector(configChanged:)
+            forControlEvents:UIControlEventValueChanged];
+        
+        elt = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
+        
+        CGRect a11yFirstEltFrame = CGRectUnion(_myLabel.frame, _myButton.frame);
+        CGRect a11yEltFrame = CGRectUnion(a11yFirstEltFrame, _mySwitch.frame);
+        
+        elt.accessibilityLabel = @"regrouping elements";
+        elt.accessibilityHint = @"double tap to change the switch control status";
+        elt.accessibilityFrameInContainerSpace = a11yEltFrame;
+        elt.accessibilityActivationPoint = [_mySwitch center];
+        
+        self.view.accessibilityElements = @[elt];
+    }
     
-    [_mySwitch addTarget:self
-                  action:@selector(configChanged:)
-        forControlEvents:UIControlEventValueChanged];
+        
+    - (void)configChanged:(UISwitch *)sender {
     
-    elt = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
-    
-    CGRect a11yFirstEltFrame = CGRectUnion(_myLabel.frame, _myButton.frame);
-    CGRect a11yEltFrame = CGRectUnion(a11yFirstEltFrame, _mySwitch.frame);
-    
-    elt.accessibilityLabel = @"regrouping elements";
-    elt.accessibilityHint = @"double tap to change the switch control status";
-    elt.accessibilityFrameInContainerSpace = a11yEltFrame;
-    elt.accessibilityActivationPoint = [_mySwitch center];
-    
-    self.view.accessibilityElements = @[elt];
-}
-  
-    
-- (void)configChanged:(UISwitch *)sender {
- 
-    NSString * switchValue = _mySwitch.on ? @"on" : @"off";
-    elt.accessibilityLabel = [NSString stringWithFormat:@"the switch control is %@", switchValue.description];
-}
-@end
-</code></pre>
-
-<pre><code class="swift">
+        NSString * switchValue = _mySwitch.on ? @"on" : @"off";
+        elt.accessibilityLabel = [NSString stringWithFormat:@"the switch control is %@", switchValue.description];
+    }
+    @end
+</code>
+            </div>
+            <div class="tab-pane swift" id="groupElts3-Swift" role="tabpanel" >
+                <code class="swift">
     class ActivationPointViewController: UIViewController {
     
-    @IBOutlet weak var myButton: UIButton!
-    @IBOutlet weak var myLabel: UILabel!
-    @IBOutlet weak var mySwitch: UISwitch!
-    
-    var elt: UIAccessibilityElement?
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        @IBOutlet weak var myButton: UIButton!
+        @IBOutlet weak var myLabel: UILabel!
+        @IBOutlet weak var mySwitch: UISwitch!
         
-        mySwitch.addTarget(self,
-                           action: #selector(configChanged),
-                           for: .valueChanged)
+        var elt: UIAccessibilityElement?
         
-        elt = UIAccessibilityElement(accessibilityContainer: self.view!)
-        let a11yEltFrame = (myLabel.frame.union(myButton.frame)).union(mySwitch.frame)
         
-        if let elt = elt {
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
             
-            elt.accessibilityLabel = "regrouping elements"
-            elt.accessibilityHint = "double tap to change the switch control status"
-            elt.accessibilityFrameInContainerSpace = a11yEltFrame
-            elt.accessibilityActivationPoint = mySwitch.center
+            mySwitch.addTarget(self,
+                            action: #selector(configChanged),
+                            for: .valueChanged)
             
-            self.view.accessibilityElements = [elt]
+            elt = UIAccessibilityElement(accessibilityContainer: self.view!)
+            let a11yEltFrame = (myLabel.frame.union(myButton.frame)).union(mySwitch.frame)
+            
+            if let elt = elt {
+                
+                elt.accessibilityLabel = "regrouping elements"
+                elt.accessibilityHint = "double tap to change the switch control status"
+                elt.accessibilityFrameInContainerSpace = a11yEltFrame
+                elt.accessibilityActivationPoint = mySwitch.center
+                
+                self.view.accessibilityElements = [elt]
+            }
+        }
+        
+        
+        @objc func configChanged(sender: UISwitch){
+            
+            if let configGroup = elt {
+                
+                let switchValue = (mySwitch?.isOn)! ? "on" : "off"
+                configGroup.accessibilityLabel = "the switch control is " + switchValue.description
+            }
         }
     }
-    
-    
-    @objc func configChanged(sender: UISwitch){
-        
-        if let configGroup = elt {
-            
-            let switchValue = (mySwitch?.isOn)! ? "on" : "off"
-            configGroup.accessibilityLabel = "the switch control is " + switchValue.description
-        }
-    }
-}
-</code></pre>
+</code>
+            </div>
+        </div>
+    </div>
 
 <br>Another grouping elements case could use the **shouldGroupAccessibilityChildren** attribute which is a Boolean that indicates whether <span lang="en">VoiceOver</span> must group its children views.
 
@@ -1176,43 +1473,64 @@ Here's the desired order : 1, 2, 3, 4, 7, 6, 8, 9, 5.
 Two views are created containing the numbers to be spelled out in a specific order:
 
 ![display of the blue and grey views](../../images/iOSdev/OrdreDeLecture_1.png)
-<pre><code class="objectivec">
-    __weak IBOutlet UIView * blueBlock;
-    __weak IBOutlet UIView * greyColumn;
-    
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    //Reads the first three numbers in the grey column.
-    greyColumn.shouldGroupAccessibilityChildren = YES;
-    
-    //Reads 6, 8, 9 and 5 in this order inside the blue block.
-    blueBlock.isAccessibilityElement = NO;
-    blueBlock.accessibilityElements = @[key_6,
-                                        key_8,
-                                        key_9,
-                                        key_5];
-}
-</code></pre>
-
-<pre><code class="swift">
-    @IBOutlet weak var greyColumn: UIView!
-    @IBOutlet weak var blueBlock: UIView!
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+<ul class="nav nav-tabs languageinfo" role="tablist">
+    <li class="nav-item item-oc" role="presentation">
+        <a class="nav-link active"
+        data-toggle="tab" 
+        href="#readingOrder-ObjC" 
+        role="tab" 
+        aria-selected="true">Objective C</a>
+    </li>
+    <li class="nav-item item-s" role="presentation">
+        <a class="nav-link" 
+        data-toggle="tab" 
+        href="#readingOrder-Swift" 
+        role="tab" 
+        aria-selected="false">Swift</a>
+    </li>
+</ul>
+<div class="tab-content languageinfotab">
+    <div class="tab-pane objc show active" id="readingOrder-ObjC" role="tabpanel">
+            <code class="objectivec">
+        __weak IBOutlet UIView * blueBlock;
+        __weak IBOutlet UIView * greyColumn;
+        
+    - (void)viewDidAppear:(BOOL)animated {
+        [super viewDidAppear:animated];
         
         //Reads the first three numbers in the grey column.
-        greyColumn.shouldGroupAccessibilityChildren = true
+        greyColumn.shouldGroupAccessibilityChildren = YES;
         
         //Reads 6, 8, 9 and 5 in this order inside the blue block.
-        blueBlock.isAccessibilityElement = false
-        blueBlock.accessibilityElements = [key_6!,
-                                           key_8!,
-                                           key_9!,
-                                           key_5!]
+        blueBlock.isAccessibilityElement = NO;
+        blueBlock.accessibilityElements = @[key_6,
+                                            key_8,
+                                            key_9,
+                                            key_5];
     }
-</code></pre>
+</code>
+    </div>
+    <div class="tab-pane swift" id="readingOrder-Swift" role="tabpanel" >
+        <code class="swift">
+    @IBOutlet weak var greyColumn: UIView!
+    @IBOutlet weak var blueBlock: UIView!
+        
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            
+            //Reads the first three numbers in the grey column.
+            greyColumn.shouldGroupAccessibilityChildren = true
+            
+            //Reads 6, 8, 9 and 5 in this order inside the blue block.
+            blueBlock.isAccessibilityElement = false
+            blueBlock.accessibilityElements = [key_6!,
+                                            key_8!,
+                                            key_9!,
+                                            key_5!]
+        }
+</code>
+    </div>
+</div>
 
 </div>
 <div class="tab-pane" id="readingOrder-Links" role="tabpanel">
@@ -1289,91 +1607,140 @@ The following code provides an example to reach some invisible information that 
 
 First, define the class of the view that contains the image:
 
-<pre><code class="objectivec">
-//MyCustomView.h
-#import &lt;UIKit/UIKit.h&gt;
-#import &lt;Accessibility/Accessibility.h&gt;  //Fatal issue if not used.
+<div class="tab-pane" id="CuCoPro1-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#CuCoPro1-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#CuCoPro1-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="CuCoPro1-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-@interface MyCustomView : UIImageView <AXCustomContentProvider>
-@end
+    //MyCustomView.h
+    #import &lt;UIKit/UIKit.h&gt;
+    #import &lt;Accessibility/Accessibility.h&gt;  //Fatal issue if not used.
 
-//MyCustomView.m
-@implementation MyCustomView
+    @interface MyCustomView : UIImageView <AXCustomContentProvider>
+    @end
 
-@synthesize accessibilityCustomContent = _accessibilityCustomContent;
+    //MyCustomView.m
+    @implementation MyCustomView
 
-- (void)setAccessibilityCustomContent:(NSArray<AXCustomContent *> *)accessibilityCustomContent {
+    @synthesize accessibilityCustomContent = _accessibilityCustomContent;
 
-    if (accessibilityCustomContent != nil) {
-        _accessibilityCustomContent = accessibilityCustomContent;
+    - (void)setAccessibilityCustomContent:(NSArray<AXCustomContent *> *)accessibilityCustomContent {
+
+        if (accessibilityCustomContent != nil) {
+            _accessibilityCustomContent = accessibilityCustomContent;
+        }
     }
-}
-@end        
-</code></pre>
+    @end        
+</code>
+        </div>
+        <div class="tab-pane swift" id="CuCoPro1-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
-import Accessibility  //Fatal issue if not used.
+    import Accessibility  //Fatal issue if not used.
 
-class MyCustomView: UIImageView, AXCustomContentProvider {
-    
-    var _accessibilityCustomContent: [AXCustomContent]? = nil
-    var accessibilityCustomContent: [AXCustomContent]! {
-           get { return _accessibilityCustomContent }
-           set(newValue) { _accessibilityCustomContent = newValue }
-       }
-}
-</code></pre>
+    class MyCustomView: UIImageView, AXCustomContentProvider {
+        
+        var _accessibilityCustomContent: [AXCustomContent]? = nil
+        var accessibilityCustomContent: [AXCustomContent]! {
+            get { return _accessibilityCustomContent }
+            set(newValue) { _accessibilityCustomContent = newValue }
+        }
+    }
+</code>
+        </div>
+    </div>
+</div>
 
 Then, create each and every element to be vocalized with a one finger vertical swipe:
+<div class="tab-pane" id="CuCoPro2-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#CuCoPro2-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#CuCoPro2-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="CuCoPro2-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-<pre><code class="objectivec">
-@interface ViewController ()
-@property (weak, nonatomic) IBOutlet MyCustomView * myView;
-@end
+    @interface ViewController ()
+    @property (weak, nonatomic) IBOutlet MyCustomView * myView;
+    @end
 
 
-@implementation ViewController
+    @implementation ViewController
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    _myView.accessibilityLabel = @"Orange logo";
-    _myView.accessibilityHint = @"use the rotor item entitled more content to get additional information";
-    
-    AXCustomContent * lastModified = [AXCustomContent customContentWithLabel:@"date of creation"
-                                                                       value:@"1988"];
-    AXCustomContent * items = [AXCustomContent customContentWithLabel:@"registered office location"
-                                                                value:@"paris"];
-    AXCustomContent * type = [AXCustomContent customContentWithLabel:@"type of company"
-                                                               value:@"telecommunications"];
-    
-    _myView.accessibilityCustomContent = @[lastModified, items, type];
-}
-@end
-</code></pre>
-
-<pre><code class="swift">
-class ViewController: UIViewController {
-
-    @IBOutlet weak var myView: MyCustomView!
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    - (void)viewDidAppear:(BOOL)animated {
+        [super viewDidAppear:animated];
         
-        myView.accessibilityLabel = "Orange logo"
-        myView.accessibilityHint = "use the rotor item entitled more content to get additional information"
+        _myView.accessibilityLabel = @"Orange logo";
+        _myView.accessibilityHint = @"use the rotor item entitled more content to get additional information";
         
-        let lastModified = AXCustomContent(label: "date of creation", 
-                                           value: "1988")
-        let items = AXCustomContent(label: "registered office location", 
-                                    value: "paris")
-        let type = AXCustomContent(label: "type of company", 
-                                   value: "telecommunications")
-
-        myView.accessibilityCustomContent = [lastModified, items, type]
+        AXCustomContent * lastModified = [AXCustomContent customContentWithLabel:@"date of creation"
+                                                                        value:@"1988"];
+        AXCustomContent * items = [AXCustomContent customContentWithLabel:@"registered office location"
+                                                                    value:@"paris"];
+        AXCustomContent * type = [AXCustomContent customContentWithLabel:@"type of company"
+                                                                value:@"telecommunications"];
+        
+        _myView.accessibilityCustomContent = @[lastModified, items, type];
     }
-}
-</code></pre>
+    @end
+</code>
+        </div>
+        <div class="tab-pane swift" id="CuCoPro2-Swift" role="tabpanel" >
+            <code class="swift">
+
+    class ViewController: UIViewController {
+
+        @IBOutlet weak var myView: MyCustomView!
+        
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            
+            myView.accessibilityLabel = "Orange logo"
+            myView.accessibilityHint = "use the rotor item entitled more content to get additional information"
+            
+            let lastModified = AXCustomContent(label: "date of creation", 
+                                            value: "1988")
+            let items = AXCustomContent(label: "registered office location", 
+                                        value: "paris")
+            let type = AXCustomContent(label: "type of company", 
+                                    value: "telecommunications")
+
+            myView.accessibilityCustomContent = [lastModified, items, type]
+        }
+    }
+</code>
+        </div>
+    </div>
+</div>
 
 ![](../../images/iOSdev/CustomContentProvider_2.png)
 ![](../../images/iOSdev/CustomContentProvider_3.png)
@@ -1442,62 +1809,86 @@ This mistake is due to the informal aspect of the protocol that allows an overri
 <div class="tab-pane" id="focusElt-Example" role="tabpanel">
 
 The example below enables to follow the focus of an accessible element identified by its `accessibleIdentifier`.
-<pre><code class="objectivec">
-#import "UIView+focus.h"
+<ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#focusElt-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#focusElt-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="focusElt-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-@implementation UIView (focus)
+    #import "UIView+focus.h"
 
-- (void)accessibilityElementDidBecomeFocused {
-    
-    if ([self accessibilityElementIsFocused]) {
-        NSLog(@"My element has become focused.");
-    }
-}
+    @implementation UIView (focus)
 
-- (void)accessibilityElementDidLoseFocus {
-    
-    if ([self accessibilityElementIsFocused]) {
-        NSLog(@"My element has lost focus.");
-    }
-}
-
-- (BOOL)accessibilityElementIsFocused {
-    
-    if ([self.accessibilityIdentifier isEqualToString:@"myAccessibleElt"]) {
-        return YES;
-    } else {
-        return NO;
-    }
-}
-@end
-</code></pre>
-
-<pre><code class="swift">
-extension UIView {
-    override open func accessibilityElementDidBecomeFocused() {
+    - (void)accessibilityElementDidBecomeFocused {
         
-        if self.accessibilityElementIsFocused() {
-            print("My element has become focused.")
+        if ([self accessibilityElementIsFocused]) {
+            NSLog(@"My element has become focused.");
         }
     }
-    
-    override open func accessibilityElementDidLoseFocus() {
+
+    - (void)accessibilityElementDidLoseFocus {
         
-        if self.accessibilityElementIsFocused() {
-            print("My element has lost focus.")
+        if ([self accessibilityElementIsFocused]) {
+            NSLog(@"My element has lost focus.");
         }
     }
-    
-    override open func accessibilityElementIsFocused() -> Bool {
+
+    - (BOOL)accessibilityElementIsFocused {
         
-        if (self.accessibilityIdentifier == "myAccessibleElt") {
-            return true
+        if ([self.accessibilityIdentifier isEqualToString:@"myAccessibleElt"]) {
+            return YES;
         } else {
-            return false
+            return NO;
         }
     }
-}
-</code></pre>
+    @end
+</code>
+        </div>
+        <div class="tab-pane swift" id="focusElt-Swift" role="tabpanel" >
+            <code class="swift">
+
+    extension UIView {
+        override open func accessibilityElementDidBecomeFocused() {
+            
+            if self.accessibilityElementIsFocused() {
+                print("My element has become focused.")
+            }
+        }
+        
+        override open func accessibilityElementDidLoseFocus() {
+            
+            if self.accessibilityElementIsFocused() {
+                print("My element has lost focus.")
+            }
+        }
+        
+        override open func accessibilityElementIsFocused() -> Bool {
+            
+            if (self.accessibilityIdentifier == "myAccessibleElt") {
+                return true
+            } else {
+                return false
+            }
+        }
+    }
+</code>
+        </div>
+    </div>
+
 
 </div>
 <div class="tab-pane" id="focusElt-Links" role="tabpanel">
@@ -1564,55 +1955,76 @@ By keeping this default value, one might unwillingly activate the element in the
 <div class="tab-pane" id="focusArea-Example" role="tabpanel">
 
 ![](../../images/iOSdev/ModifierLaZoneDeFocus_1.png)
-<pre><code class="objectivec">
-float xVal;
-float yVal;
-float widthVal;
-float heightVal;
-    
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    xVal = myLabel.accessibilityFrame.origin.x;
-    yVal = myLabel.accessibilityFrame.origin.y;
-    widthVal = myLabel.accessibilityFrame.size.width;
-    heightVal = myLabel.accessibilityFrame.size.height;
-    
-}
+<ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#focusArea-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#focusArea-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="focusArea-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-//First way to enlarge the focus area.
-- (IBAction)tapHere:(UIButton *)sender {
-    
-    myLabel.accessibilityFrame = CGRectMake(xVal,
-                                            yVal,
-                                            widthVal + 100.0,
-                                            heightVal+ 100.0);
-    
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
-}
+    float xVal;
+    float yVal;
+    float widthVal;
+    float heightVal;
+        
+    - (void)viewDidAppear:(BOOL)animated {
+        [super viewDidAppear:animated];
+        
+        xVal = myLabel.accessibilityFrame.origin.x;
+        yVal = myLabel.accessibilityFrame.origin.y;
+        widthVal = myLabel.accessibilityFrame.size.width;
+        heightVal = myLabel.accessibilityFrame.size.height;
+        
+    }
 
-//Second way to enlarge the focus area (Bezier).
-- (IBAction)clic:(UIButton *)sender {
-    
-    UIBezierPath * bezierPath = [UIBezierPath bezierPath];
-    
-    [bezierPath moveToPoint:CGPointMake(xVal, yVal)];
-    
-    [bezierPath addLineToPoint:CGPointMake(xVal + widthVal + 100.0, 
-                                           yVal)];
-    [bezierPath addLineToPoint:CGPointMake(xVal + widthVal + 100.0, 
-                                           yVal + heightVal+ 100.0)];
-    [bezierPath addLineToPoint:CGPointMake(xVal, 
-                                           yVal + heightVal+ 100.0)];
-    [bezierPath closePath];
-    
-    myLabel.accessibilityPath = bezierPath;
-    
-    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
-}
-</code></pre>
+    //First way to enlarge the focus area.
+    - (IBAction)tapHere:(UIButton *)sender {
+        
+        myLabel.accessibilityFrame = CGRectMake(xVal,
+                                                yVal,
+                                                widthVal + 100.0,
+                                                heightVal+ 100.0);
+        
+        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
+    }
 
-<pre><code class="swift">
+    //Second way to enlarge the focus area (Bezier).
+    - (IBAction)clic:(UIButton *)sender {
+        
+        UIBezierPath * bezierPath = [UIBezierPath bezierPath];
+        
+        [bezierPath moveToPoint:CGPointMake(xVal, yVal)];
+        
+        [bezierPath addLineToPoint:CGPointMake(xVal + widthVal + 100.0, 
+                                            yVal)];
+        [bezierPath addLineToPoint:CGPointMake(xVal + widthVal + 100.0, 
+                                            yVal + heightVal+ 100.0)];
+        [bezierPath addLineToPoint:CGPointMake(xVal, 
+                                            yVal + heightVal+ 100.0)];
+        [bezierPath closePath];
+        
+        myLabel.accessibilityPath = bezierPath;
+        
+        UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
+    }
+</code>
+        </div>
+        <div class="tab-pane swift" id="focusArea-Swift" role="tabpanel" >
+            <code class="swift">
+
     var xVal: CGFloat = 0.0
     var yVal: CGFloat = 0.0
     var widthVal: CGFloat = 0.0
@@ -1659,7 +2071,10 @@ float heightVal;
         UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
                              argument: myLabel)
     }
-</code></pre>
+</code>
+        </div>
+    </div>
+
 
 </div>
 <div class="tab-pane" id="focusArea-Links" role="tabpanel">
@@ -1745,7 +2160,27 @@ Because `Parent B` is a `Parent A` sibling, `accessibilityViewIsModal = true` is
 
 ![](../../images/iOSdev/ModalView_3.png)
 <br>In order to figure out this problem, hiding the undesirable elements when the view is activated as modal is the solution to be applied.
-<pre><code class="objectivec">
+<div class="tab-pane" id="modalView1-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#modalView1-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#modalView1-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="modalView1-ObjC" role="tabpanel">
+            <code class="objectivec">
+
     parentA.isAccessibilityElement = NO;
     parentA.accessibilityElementsHidden = NO;
 
@@ -1754,9 +2189,11 @@ Because `Parent B` is a `Parent A` sibling, `accessibilityViewIsModal = true` is
     //Resolves the problem with Parent B and its subviews.
     parentB.isAccessibilityElement = NO;
     parentB.accessibilityElementsHidden = YES;
-</code></pre>
+</code>
+        </div>
+        <div class="tab-pane swift" id="modalView1-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
     parentA.isAccessibilityElement = false
     parentA.accessibilityElementsHidden = false
 
@@ -1765,7 +2202,10 @@ Because `Parent B` is a `Parent A` sibling, `accessibilityViewIsModal = true` is
     //Resolves the problem with Parent B and its subviews.
     parentB.isAccessibilityElement = false
     parentB.accessibilityElementsHidden = true
-</code></pre>
+</code>
+        </div>
+    </div>
+</div>
 
 <br><br>**Example 3**&nbsp;: `B1.1` view as modal.
 
@@ -1774,7 +2214,27 @@ In this case, `parent A` and `B2` (or possibly their subviews) are vocalized wit
 ![](../../images/iOSdev/ModalView_4.png)
 
 Again, all the undesirable elements must be hidden as soon as the modal view is activated as modal.
-<pre><code class="objectivec">
+<div class="tab-pane" id="modalView2-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#modalView2-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#modalView2-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="modalView2-ObjC" role="tabpanel">
+            <code class="objectivec">
+
     parentB.isAccessibilityElement = NO;
     parentB.accessibilityElementsHidden = NO;
 
@@ -1789,9 +2249,11 @@ Again, all the undesirable elements must be hidden as soon as the modal view is 
 
     B2.isAccessibilityElement = NO;
     B2.accessibilityElementsHidden = YES;
-</code></pre>
+</code>
+        </div>
+        <div class="tab-pane swift" id="modalView2-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
     parentB.isAccessibilityElement = false
     parentB.accessibilityElementsHidden = false
 
@@ -1806,7 +2268,10 @@ Again, all the undesirable elements must be hidden as soon as the modal view is 
 
     B2.isAccessibilityElement = false
     B2.accessibilityElementsHidden = true
-</code></pre>
+</code>
+        </div>
+    </div>
+</div>
 
 </div>
 <div class="tab-pane" id="modalView-Links" role="tabpanel">
@@ -1889,7 +2354,27 @@ Since iOS7, it is possible to make the text size dynamic according to the device
  
  ![](../../images/iOSdev/TailleDesTextes_2.png)
  - Choose the system font to facilitate your programing even if the use of other fonts is well assisted by the `UIFontMetrics` class since iOS11.
- <pre><code class="objectivec">
+ <div class="tab-pane" id="TextSize1-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#TextSize1-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#TextSize1-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="TextSize1-ObjC" role="tabpanel">
+            <code class="objectivec">
+
     __weak IBOutlet UILabel * fontHeadline;
     __weak IBOutlet UILabel * fontFootNote;
     
@@ -1900,9 +2385,11 @@ Since iOS7, it is possible to make the text size dynamic according to the device
     UIFont * fontHead = [UIFont fontWithName:@"Chalkduster" size:30.0];
     UIFontMetrics * fontHeadMetrics = [[UIFontMetrics alloc]initForTextStyle:UIFontTextStyleHeadline];
     fontHeadline.font = [fontHeadMetrics scaledFontForFont:fontHead];
-</code></pre>
+</code>
+        </div>
+        <div class="tab-pane swift" id="TextSize1-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
     @IBOutlet weak var fontHeadline: UILabel!
     @IBOutlet weak var fontFootNote: UILabel!
     
@@ -1913,10 +2400,33 @@ Since iOS7, it is possible to make the text size dynamic according to the device
     let fontHead = UIFont(name: "Chalkduster", size: 30.0)
     let fontHeadMetrics = UIFontMetrics(forTextStyle: .headline)
     fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
-</code></pre>
+</code>
+        </div>
+    </div>
+</div>
  - Listen to the font size settings change event **UIContentSizeCategoryDidChange** or directly use the property **adjustsFontForContentSizeCategory** to have an automatic update of your system font size if you're programming in iOS10 (this attribute applies to custom fonts only with the `UIFontMetrics` class).
 <br>Note that the **[traitCollectionDidChange](../wwdc/2017/245/#Demo)** method that belongs to the `UITraitEnvironment` informal protocol may also be used in this context because it will be called as soon as the iOS interface environment changes (class/content size, portrait/landscape, color contrast).
-<pre><code class="objectivec">
+<div class="tab-pane" id="TextSize2-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#TextSize2-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#TextSize2-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="TextSize2-ObjC" role="tabpanel">
+            <code class="objectivec">
+
     //Listens to the notification dealing with the font size changing from the mobile settings.
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(methodToBeCalled:)
@@ -1931,9 +2441,11 @@ Since iOS7, it is possible to make the text size dynamic according to the device
         //When handling the font size change event, you must redisplay the affected elements.
         fontFootNote.font = [UIFont preferredFontForTextStyle:UIFontTextStyleFootnote];
     }
-</code></pre>
+</code>
+        </div>
+        <div class="tab-pane swift" id="TextSize2-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
     //Listens to the notification dealing with the font size changing from the mobile settings.
     NotificationCenter.default.addObserver(self,
                                            selector:#selector(methodToBeCalled(notification:)),
@@ -1948,7 +2460,10 @@ Since iOS7, it is possible to make the text size dynamic according to the device
         //When handling the font size change event, you must redisplay the affected elements.
         fontFootNote.font = UIFont.preferredFont(forTextStyle: .footnote)
     }
-</code></pre>
+</code>
+        </div>
+    </div>
+</div>
  - Be careful that the containers fit their contents: using constraints is the best way to perform this task using dynamic values.
  Don't forget to include the settings for the navigation/tab/status bar and toolbar items that will be handled by the **[Large Content Viewer](../wwdc/2019/261/)**.
  
@@ -1999,65 +2514,88 @@ Unfortunately, the iOS system doesn't handle natively this point that can be imp
 ![](../../images/iOSdev/Troncature.png)
 <br>The rationale behind is the use of a `NSMutableAttributedString` with a `NSMutableParagraphStyle` type property as exposed hereunder:
 
-<pre><code class="objectivec">
-@interface TruncationHyphen () {
-    __weak IBOutlet UILabel * myLabel;
-}
-@end
+<ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#truncHyphen-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#truncHyphen-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="truncHyphen-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-
-@implementation TruncationHyphen
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    NSString * myString = @"floccinaucinihilipilification";
-    NSMutableParagraphStyle * paraph = [[NSMutableParagraphStyle alloc] init];
-    
-    paraph.hyphenationFactor = 1.0;
-    
-    UIFont * myFont = [UIFont fontWithName:@"HoeflerText-Black" size:18.0];
-    UIFont * myTextFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleTitle1] scaledFontForFont:myFont];
-    
-    NSDictionary * attributesDictionary = @{NSFontAttributeName:myTextFont};
-    NSMutableAttributedString * myText = [[NSMutableAttributedString alloc]initWithString:myString 
-                                                                               attributes:attributesDictionary];
-    
-    [myText addAttribute:NSParagraphStyleAttributeName
-                   value:paraph
-                   range:NSMakeRange(0, 1)];
-    
-    myLabel.attributedText = myText;
-}
-@end
-</code></pre>
-
-<pre><code class="swift">
-class TruncationHyphen: UIViewController {
-
-    @IBOutlet weak var myLabel: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let myString = "floccinaucinihilipilification"
-        
-        let paraph = NSMutableParagraphStyle()
-        paraph.hyphenationFactor = 1.0
-        
-        let myTextFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for:UIFont(name:"HoeflerText-Black", size:18)!)
-        
-        let myText = NSMutableAttributedString(string:myString,
-                                               attributes: [.font: myTextFont])
-        
-        myText.addAttribute(.paragraphStyle,
-                            value: paraph,
-                            range: NSMakeRange(0,1))
-
-        myLabel.attributedText = myText
+    @interface TruncationHyphen () {
+        __weak IBOutlet UILabel * myLabel;
     }
-}
-</code></pre>
+    @end
+
+
+    @implementation TruncationHyphen
+
+    - (void)viewDidLoad {
+        [super viewDidLoad];
+        
+        NSString * myString = @"floccinaucinihilipilification";
+        NSMutableParagraphStyle * paraph = [[NSMutableParagraphStyle alloc] init];
+        
+        paraph.hyphenationFactor = 1.0;
+        
+        UIFont * myFont = [UIFont fontWithName:@"HoeflerText-Black" size:18.0];
+        UIFont * myTextFont = [[UIFontMetrics metricsForTextStyle:UIFontTextStyleTitle1] scaledFontForFont:myFont];
+        
+        NSDictionary * attributesDictionary = @{NSFontAttributeName:myTextFont};
+        NSMutableAttributedString * myText = [[NSMutableAttributedString alloc]initWithString:myString 
+                                                                                attributes:attributesDictionary];
+        
+        [myText addAttribute:NSParagraphStyleAttributeName
+                    value:paraph
+                    range:NSMakeRange(0, 1)];
+        
+        myLabel.attributedText = myText;
+    }
+    @end
+</code>
+        </div>
+        <div class="tab-pane swift" id="truncHyphen-Swift" role="tabpanel" >
+            <code class="swift">
+
+    class TruncationHyphen: UIViewController {
+
+        @IBOutlet weak var myLabel: UILabel!
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            let myString = "floccinaucinihilipilification"
+            
+            let paraph = NSMutableParagraphStyle()
+            paraph.hyphenationFactor = 1.0
+            
+            let myTextFont = UIFontMetrics(forTextStyle: .title1).scaledFont(for:UIFont(name:"HoeflerText-Black", size:18)!)
+            
+            let myText = NSMutableAttributedString(string:myString,
+                                                attributes: [.font: myTextFont])
+            
+            myText.addAttribute(.paragraphStyle,
+                                value: paraph,
+                                range: NSMakeRange(0,1))
+
+            myLabel.attributedText = myText
+        }
+    }
+</code>
+        </div>
+    </div>
 
 </div>
 </div>
@@ -2185,97 +2723,147 @@ If an element magnification may lower the user experience, the `Large`&nbsp;`Con
 
 ![](../../images/iOSdev/LargeContentViewer_2.png)
 
-<pre><code class="objectivec">
-@interface LogoViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView * myView;
-@end
+<div class="tab-pane" id="largeContentViewer1-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#largeContentViewer1-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#largeContentViewer1-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="largeContentViewer1-ObjC" role="tabpanel">
+            <code class="objectivec">
+
+    @interface LogoViewController ()
+    @property (weak, nonatomic) IBOutlet UIImageView * myView;
+    @end
 
 
-NS_ASSUME_NONNULL_BEGIN
-@implementation LogoViewController
+    NS_ASSUME_NONNULL_BEGIN
+    @implementation LogoViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    _myView.showsLargeContentViewer = YES;
-    _myView.largeContentTitle = @"logo";
-    _myView.largeContentImage = [UIImage systemImageNamed:@"hand.thumbsup"];
-    
-    [_myView addInteraction:[[UILargeContentViewerInteraction alloc] init]];
-}
-@end
-NS_ASSUME_NONNULL_END
-</code></pre>
-
-<pre><code class="swift">
-class LogoViewController: UIViewController {
-    
-    @IBOutlet weak var myView: UIImageView!
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    - (void)viewDidLoad {
+        [super viewDidLoad];
         
-        myView.isUserInteractionEnabled = true
+        _myView.showsLargeContentViewer = YES;
+        _myView.largeContentTitle = @"logo";
+        _myView.largeContentImage = [UIImage systemImageNamed:@"hand.thumbsup"];
         
-        myView.showsLargeContentViewer = true
-        myView.largeContentTitle = "logo"
-        myView.largeContentImage = UIImage(systemName: "hand.thumbsup")
-        
-        myView.addInteraction(UILargeContentViewerInteraction())
+        [_myView addInteraction:[[UILargeContentViewerInteraction alloc] init]];
     }
-}
-</code></pre>
+    @end
+    NS_ASSUME_NONNULL_END
+</code>
+        </div>
+        <div class="tab-pane swift" id="largeContentViewer1-Swift" role="tabpanel" >
+            <code class="swift">
+
+    class LogoViewController: UIViewController {
+        
+        @IBOutlet weak var myView: UIImageView!
+        
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            
+            myView.isUserInteractionEnabled = true
+            
+            myView.showsLargeContentViewer = true
+            myView.largeContentTitle = "logo"
+            myView.largeContentImage = UIImage(systemName: "hand.thumbsup")
+            
+            myView.addInteraction(UILargeContentViewerInteraction())
+        }
+    }
+</code>
+        </div>
+</div>
+</div>
 
 In the same way, on a **clickable element** like a button whose magnification may become problematic, it's quite possible to use this feature to display its content and to ensure to **trigger its actions when the finger is up**:
 
 ![](../../images/iOSdev/LargeContentViewer_3.png)
 
-<pre><code class="objectivec">
-@interface ButtonViewController ()
-@property (weak, nonatomic) IBOutlet UIButton * myButton;
-@end
+<div class="tab-pane" id="largeContentViewer2-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#largeContentViewer2-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#largeContentViewer2-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="largeContentViewer2-ObjC" role="tabpanel">
+            <code class="objectivec">
+
+    @interface ButtonViewController ()
+    @property (weak, nonatomic) IBOutlet UIButton * myButton;
+    @end
 
 
-NS_ASSUME_NONNULL_BEGIN
-@implementation ButtonViewController
+    NS_ASSUME_NONNULL_BEGIN
+    @implementation ButtonViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    _myButton.showsLargeContentViewer = YES;
-    _myButton.largeContentTitle = @"button";
-    _myButton.largeContentImage = @"hand.thumbsup";
-    
-    [_myButton addInteraction:[[UILargeContentViewerInteraction alloc] init]];
-}
-
-- (IBAction)tapButton:(UIButton *)sender {
-    //Appropriate actions when the button is tapped.
-}
-@end
-NS_ASSUME_NONNULL_END
-</code></pre>
-
-<pre><code class="swift">
-class ButtonViewController: UIViewController {
-
-    @IBOutlet weak var myButton: UIButton!
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    - (void)viewDidLoad {
+        [super viewDidLoad];
         
-        myButton.showsLargeContentViewer = true
-        myButton.largeContentTitle = "button"
-        myButton.largeContentImage = UIImage(systemName: "hand.thumbsup")
-        myButton.addInteraction(UILargeContentViewerInteraction())
+        _myButton.showsLargeContentViewer = YES;
+        _myButton.largeContentTitle = @"button";
+        _myButton.largeContentImage = @"hand.thumbsup";
+        
+        [_myButton addInteraction:[[UILargeContentViewerInteraction alloc] init]];
     }
-    
-    
-    @IBAction func tapButton(_ sender: UIButton) {
+
+    - (IBAction)tapButton:(UIButton *)sender {
         //Appropriate actions when the button is tapped.
     }
-}
-</code></pre>
+    @end
+    NS_ASSUME_NONNULL_END
+</code>
+        </div>
+        <div class="tab-pane swift" id="largeContentViewer2-Swift" role="tabpanel" >
+            <code class="swift">
+
+    class ButtonViewController: UIViewController {
+
+        @IBOutlet weak var myButton: UIButton!
+        
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            
+            myButton.showsLargeContentViewer = true
+            myButton.largeContentTitle = "button"
+            myButton.largeContentImage = UIImage(systemName: "hand.thumbsup")
+            myButton.addInteraction(UILargeContentViewerInteraction())
+        }
+        
+        
+        @IBAction func tapButton(_ sender: UIButton) {
+            //Appropriate actions when the button is tapped.
+        }
+    }
+</code>
+        </div>
+    </div>
+</div>
 
 When **the long press gesture is already implemented on the graphical element**, it may be interesting to use the `gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)` method that will be helpful to [set&nbsp;up&nbsp;the&nbsp;two&nbsp;gestures&nbsp;simutaneously](https://developer.apple.com/videos/play/wwdc2019/261/?time=636). 
 </div>
@@ -2352,152 +2940,202 @@ As a result, all the previous constraints are removed and a `hint` is natively p
 
 - To get this result, the container class {`stepper` + `label`} is first created to allow the delegation for the future value changing.
 
-<pre><code class="objectivec">
--===== StepperWrapper.h =====-
-NS_ASSUME_NONNULL_BEGIN
-@class StepperWrapper;
+<div class="tab-pane" id="adjustable1-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#adjustable1-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#adjustable1-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="adjustable1-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-@protocol AdjustableForAccessibilityDelegate &lt;NSObject&gt;
-- (void)adjustableDecrementForView:(StepperWrapper *)view;
-- (void)adjustableIncrementForView:(StepperWrapper *)view;
-@end
+    -===== StepperWrapper.h =====-
+    NS_ASSUME_NONNULL_BEGIN
+    @class StepperWrapper;
 
-
-@interface StepperWrapper : UIStackView
-@property(nonatomic,weak) id &lt;AdjustableForAccessibilityDelegate&gt; delegate;
-@end
-NS_ASSUME_NONNULL_END
-    
-    
--===== StepperWrapper.m =====-
-NS_ASSUME_NONNULL_BEGIN
-@implementation StepperWrapper
-
-- (instancetype)initWithCoder:(NSCoder *)coder {
-    
-    self = [super initWithCoder:coder];
-    
-    self.isAccessibilityElement = YES;
-    self.accessibilityTraits = UIAccessibilityTraitAdjustable;
-    
-    return self;
-}
-
-- (void)accessibilityDecrement {
-    if ([_delegate respondsToSelector:@selector(adjustableDecrementForView:)]) {
-        [_delegate adjustableDecrementForView:self];
-    }
-}
-
-- (void)accessibilityIncrement {
-    if ([_delegate respondsToSelector:@selector(adjustableIncrementForView:)]) {
-        [_delegate adjustableIncrementForView:self];
-    }
-}
-</code></pre>
-
-<pre><code class="swift">
-protocol AdjustableForAccessibilityDelegate: class {
-    func adjustableDecrementFor(_ view: StepperWrapper)
-    func adjustableIncrementFor(_ view: StepperWrapper)
-}
+    @protocol AdjustableForAccessibilityDelegate &lt;NSObject&gt;
+    - (void)adjustableDecrementForView:(StepperWrapper *)view;
+    - (void)adjustableIncrementForView:(StepperWrapper *)view;
+    @end
 
 
-class StepperWrapper: UIStackView {
-
-    weak var delegate: AdjustableForAccessibilityDelegate?
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init(coder: NSCoder) {
-        super.init(coder: coder)
+    @interface StepperWrapper : UIStackView
+    @property(nonatomic,weak) id &lt;AdjustableForAccessibilityDelegate&gt; delegate;
+    @end
+    NS_ASSUME_NONNULL_END
         
-        isAccessibilityElement = true
-        accessibilityTraits = .adjustable
+        
+    -===== StepperWrapper.m =====-
+    NS_ASSUME_NONNULL_BEGIN
+    @implementation StepperWrapper
+
+    - (instancetype)initWithCoder:(NSCoder *)coder {
+        
+        self = [super initWithCoder:coder];
+        
+        self.isAccessibilityElement = YES;
+        self.accessibilityTraits = UIAccessibilityTraitAdjustable;
+        
+        return self;
     }
-    
-    override func accessibilityDecrement() {
-        delegate?.adjustableDecrementFor(self)
+
+    - (void)accessibilityDecrement {
+        if ([_delegate respondsToSelector:@selector(adjustableDecrementForView:)]) {
+            [_delegate adjustableDecrementForView:self];
+        }
     }
-    
-    override func accessibilityIncrement() {
-        delegate?.adjustableIncrementFor(self)
+
+    - (void)accessibilityIncrement {
+        if ([_delegate respondsToSelector:@selector(adjustableIncrementForView:)]) {
+            [_delegate adjustableIncrementForView:self];
+        }
     }
-}
-</code></pre>
+</code>
+        </div>
+        <div class="tab-pane swift" id="adjustable1-Swift" role="tabpanel" >
+            <code class="swift">
+
+    protocol AdjustableForAccessibilityDelegate: class {
+        func adjustableDecrementFor(_ view: StepperWrapper)
+        func adjustableIncrementFor(_ view: StepperWrapper)
+    }
+
+
+    class StepperWrapper: UIStackView {
+
+        weak var delegate: AdjustableForAccessibilityDelegate?
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+        }
+        
+        required init(coder: NSCoder) {
+            super.init(coder: coder)
+            
+            isAccessibilityElement = true
+            accessibilityTraits = .adjustable
+        }
+        
+        override func accessibilityDecrement() {
+            delegate?.adjustableDecrementFor(self)
+        }
+        
+        override func accessibilityIncrement() {
+            delegate?.adjustableIncrementFor(self)
+        }
+    }
+</code>
+        </div>
+    </div>
+</div>
 
 - Next, the two methods of the implemented protocol must be defined before updating and vocally presenting the new value in the ViewController.
 
-<pre><code class="objectivec">
-NS_ASSUME_NONNULL_BEGIN
-@interface ContinuousAdjustableValues () &lt;AdjustableForAccessibilityDelegate&gt;
-@property (weak, nonatomic) IBOutlet StepperWrapper * stepperStackViewAccess;
-@property (weak, nonatomic) IBOutlet UIStepper * stepperAccess;
-@property (weak, nonatomic) IBOutlet UILabel * stepperValueAccess;
-@end
+<div class="tab-pane" id="adjustable2-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#adjustable2-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#adjustable2-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="adjustable2-ObjC" role="tabpanel">
+            <code class="objectivec">
+                
+    NS_ASSUME_NONNULL_BEGIN
+    @interface ContinuousAdjustableValues () &lt;AdjustableForAccessibilityDelegate&gt;
+    @property (weak, nonatomic) IBOutlet StepperWrapper * stepperStackViewAccess;
+    @property (weak, nonatomic) IBOutlet UIStepper * stepperAccess;
+    @property (weak, nonatomic) IBOutlet UILabel * stepperValueAccess;
+    @end
 
 
-@implementation ContinuousAdjustableValues
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    _stepperStackViewAccess.delegate = self;
-    _stepperStackViewAccess.accessibilityLabel = @"increase or decrease the value";
-    _stepperStackViewAccess.accessibilityValue = _stepperValueAccess.text;
-}
-
-- (void)adjustableDecrementForView:(StepperWrapper *)view {
-    _stepperAccess.value  -= _stepperAccess.stepValue;
-    [self updateStepperValue];
-}
-
-- (void)adjustableIncrementForView:(StepperWrapper *)view {
-    _stepperAccess.value  += _stepperAccess.stepValue;
-    [self updateStepperValue];
-}
-
-- (void) updateStepperValue {
-    _stepperValueAccess.text = [NSString stringWithFormat:@"Value = %0.1f",_stepperAccess.value];
-    _stepperStackViewAccess.accessibilityValue = _stepperValueAccess.text;
-}
-@end
-NS_ASSUME_NONNULL_END
-</code></pre>
-
-<pre><code class="swift">
-class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDelegate {
-    
-    @IBOutlet weak var stepperStackViewAccess: StepperWrapper!
-    @IBOutlet weak var stepperAccess: UIStepper!
-    @IBOutlet weak var stepperValueAccess: UILabel!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @implementation ContinuousAdjustableValues
+    - (void)viewWillAppear:(BOOL)animated {
+        [super viewWillAppear:animated];
         
-        stepperStackViewAccess.delegate = self
-        stepperStackViewAccess.accessibilityLabel = "increase or decrease the value"
-        stepperStackViewAccess.accessibilityValue = stepperValueAccess.text
+        _stepperStackViewAccess.delegate = self;
+        _stepperStackViewAccess.accessibilityLabel = @"increase or decrease the value";
+        _stepperStackViewAccess.accessibilityValue = _stepperValueAccess.text;
     }
-    
-    func adjustableDecrementFor(_ view: StepperWrapper) {
-        stepperAccess.value -= stepperAccess.stepValue
-        updateStepperValue()
+
+    - (void)adjustableDecrementForView:(StepperWrapper *)view {
+        _stepperAccess.value  -= _stepperAccess.stepValue;
+        [self updateStepperValue];
     }
-    
-    func adjustableIncrementFor(_ view: StepperWrapper) {
-        stepperAccess.value += stepperAccess.stepValue
-        updateStepperValue()
+
+    - (void)adjustableIncrementForView:(StepperWrapper *)view {
+        _stepperAccess.value  += _stepperAccess.stepValue;
+        [self updateStepperValue];
     }
-    
-    private func updateStepperValue() {
-        stepperValueAccess.text = "Value = \(stepperAccess.value)"
-        stepperStackViewAccess.accessibilityValue = stepperValueAccess.text
+
+    - (void) updateStepperValue {
+        _stepperValueAccess.text = [NSString stringWithFormat:@"Value = %0.1f",_stepperAccess.value];
+        _stepperStackViewAccess.accessibilityValue = _stepperValueAccess.text;
     }
-}
-</code></pre>
+    @end
+    NS_ASSUME_NONNULL_END
+</code>
+        </div>
+        <div class="tab-pane swift" id="adjustable2-Swift" role="tabpanel" >
+            <code class="swift">
+
+    class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDelegate {
+        
+        @IBOutlet weak var stepperStackViewAccess: StepperWrapper!
+        @IBOutlet weak var stepperAccess: UIStepper!
+        @IBOutlet weak var stepperValueAccess: UILabel!
+        
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            stepperStackViewAccess.delegate = self
+            stepperStackViewAccess.accessibilityLabel = "increase or decrease the value"
+            stepperStackViewAccess.accessibilityValue = stepperValueAccess.text
+        }
+        
+        func adjustableDecrementFor(_ view: StepperWrapper) {
+            stepperAccess.value -= stepperAccess.stepValue
+            updateStepperValue()
+        }
+        
+        func adjustableIncrementFor(_ view: StepperWrapper) {
+            stepperAccess.value += stepperAccess.stepValue
+            updateStepperValue()
+        }
+        
+        private func updateStepperValue() {
+            stepperValueAccess.text = "Value = \(stepperAccess.value)"
+            stepperStackViewAccess.accessibilityValue = stepperValueAccess.text
+        }
+    }
+</code>
+        </div>
+    </div>
+</div>
 
 </div>
 <div class="tab-pane" id="adjustable-Links" role="tabpanel">
@@ -2588,89 +3226,112 @@ Whatever the VoiceOver or the Switch Control feature, the implementation to get 
 A solution may consist of **associating the selected element with an array of actions** that will be automatically introduced to the user.
 
 ![](../../images/iOSdev/Actions_2.png)
-<pre><code class="objectivec">
-@interface CustomActions ()
-@property (weak, nonatomic) IBOutlet UILabel * persoElt;
-@end
+<ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#customActions-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#customActions-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="customActions-ObjC" role="tabpanel">
+            <code class="objectivec">
+
+    @interface CustomActions ()
+    @property (weak, nonatomic) IBOutlet UILabel * persoElt;
+    @end
 
 
-@implementation CustomActions
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    UIAccessibilityCustomAction * a11yMoreAction = [[UIAccessibilityCustomAction alloc]initWithName:@"more"
-                                                                                             target:self
-                                                                                           selector:@selector(moreAction)];
-    UIAccessibilityCustomAction * a11yFlagAction = [[UIAccessibilityCustomAction alloc]initWithName:@"flag"
-                                                                                             target:self
-                                                                                           selector:@selector(flagAction)];
-    UIAccessibilityCustomAction * a11yDeleteAction = [[UIAccessibilityCustomAction alloc]initWithName:@"delete"
-                                                                                               target:self
-                                                                                             selector:@selector(deleteAction)];
-    
-    _persoElt.accessibilityCustomActions = @[a11yMoreAction,
-                                             a11yFlagAction,
-                                             a11yDeleteAction];
-}
-
-- (BOOL)moreAction {
-    //Code to be implemented for the appropriate action.
-    return YES;
-}
-
-- (BOOL)flagAction {
-    //Code to be implemented for the appropriate action.
-    return YES;
-}
-
-- (BOOL)deleteAction {
-    //Code to be implemented for the appropriate action.
-    return YES;
-}
-@end
-</code></pre>
-
-<pre><code class="swift">
-class CustomActions: UIViewController {
-    
-    @IBOutlet weak var persoElt: UILabel!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @implementation CustomActions
+    - (void)viewDidLoad {
+        [super viewDidLoad];
         
-        let a11yMoreAction = UIAccessibilityCustomAction(name: "more",
-                                                         target: self,
-                                                         selector: #selector(moreAction))
+        UIAccessibilityCustomAction * a11yMoreAction = [[UIAccessibilityCustomAction alloc]initWithName:@"more"
+                                                                                                target:self
+                                                                                            selector:@selector(moreAction)];
+        UIAccessibilityCustomAction * a11yFlagAction = [[UIAccessibilityCustomAction alloc]initWithName:@"flag"
+                                                                                                target:self
+                                                                                            selector:@selector(flagAction)];
+        UIAccessibilityCustomAction * a11yDeleteAction = [[UIAccessibilityCustomAction alloc]initWithName:@"delete"
+                                                                                                target:self
+                                                                                                selector:@selector(deleteAction)];
         
-        let a11yFlagAction = UIAccessibilityCustomAction(name: "flag",
-                                                         target: self,
-                                                         selector: #selector(flagAction))
-        
-        // iOS 13 new syntax with a closure.
-        let a11yDeleteAction = UIAccessibilityCustomAction(name: "delete",
-                                                           actionHandler: { (customAction: UIAccessibilityCustomAction) -> Bool in
-                                                              //Code to be implemented for the appropriate action.
-                                                              return true
-                                                           })
-                                                           
-        persoElt.accessibilityCustomActions = [a11yMoreAction,
-                                               a11yFlagAction,
-                                               a11yDeleteAction]
+        _persoElt.accessibilityCustomActions = @[a11yMoreAction,
+                                                a11yFlagAction,
+                                                a11yDeleteAction];
     }
-    
-    
-    @objc func moreAction() -> Bool {
+
+    - (BOOL)moreAction {
         //Code to be implemented for the appropriate action.
-        return true
+        return YES;
     }
-    
-    @objc func flagAction() -> Bool {
+
+    - (BOOL)flagAction {
         //Code to be implemented for the appropriate action.
-        return true
+        return YES;
     }
-}
-</code></pre>
+
+    - (BOOL)deleteAction {
+        //Code to be implemented for the appropriate action.
+        return YES;
+    }
+    @end
+</code>
+        </div>
+        <div class="tab-pane swift" id="customActions-Swift" role="tabpanel" >
+            <code class="swift">
+
+    class CustomActions: UIViewController {
+        
+        @IBOutlet weak var persoElt: UILabel!
+        
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            let a11yMoreAction = UIAccessibilityCustomAction(name: "more",
+                                                            target: self,
+                                                            selector: #selector(moreAction))
+            
+            let a11yFlagAction = UIAccessibilityCustomAction(name: "flag",
+                                                            target: self,
+                                                            selector: #selector(flagAction))
+            
+            // iOS 13 new syntax with a closure.
+            let a11yDeleteAction = UIAccessibilityCustomAction(name: "delete",
+                                                            actionHandler: { (customAction: UIAccessibilityCustomAction) -> Bool in
+                                                                //Code to be implemented for the appropriate action.
+                                                                return true
+                                                            })
+                                                            
+            persoElt.accessibilityCustomActions = [a11yMoreAction,
+                                                a11yFlagAction,
+                                                a11yDeleteAction]
+        }
+        
+        
+        @objc func moreAction() -> Bool {
+            //Code to be implemented for the appropriate action.
+            return true
+        }
+        
+        @objc func flagAction() -> Bool {
+            //Code to be implemented for the appropriate action.
+            return true
+        }
+    }
+</code>
+        </div>
+    </div>
 
 <br>The code above gives rise to a smoother result thanks to consecutive flicks on the selected accessible element:
 
@@ -2729,100 +3390,123 @@ Since iOS10, adding a new rotor option is possible thanks to the **UIAccessibili
 <div class="tab-pane" id="rotor-Example" role="tabpanel">
 
 To illustrate the programing side of this feature, the code snippet below counts and displays all the flicks up and down.
-<pre><code class="objectivec">
-@interface CustomRotor ()
-@property (weak, nonatomic) IBOutlet UILabel * rotorTitle;
-@property (weak, nonatomic) IBOutlet UILabel * upLabel;
-@property (weak, nonatomic) IBOutlet UILabel * downLabel;
-@end
+<ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#rotor-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#rotor-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="rotor-ObjC" role="tabpanel">
+            <code class="objectivec">
+
+    @interface CustomRotor ()
+    @property (weak, nonatomic) IBOutlet UILabel * rotorTitle;
+    @property (weak, nonatomic) IBOutlet UILabel * upLabel;
+    @property (weak, nonatomic) IBOutlet UILabel * downLabel;
+    @end
 
 
-@implementation CustomRotor
+    @implementation CustomRotor
 
-static NSInteger flicksUp;
-static NSInteger flicksDown;
-
-
-+ (void)initialize {
-    
-    flicksUp = 0;
-    flicksDown = 0;
-}
+    static NSInteger flicksUp;
+    static NSInteger flicksDown;
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    UIAccessibilityCustomRotor * rotor = [self buildMyRotor:@"Rotor info"];
-    self.accessibilityCustomRotors = @[rotor];
-}
-
-
-- (UIAccessibilityCustomRotor *)buildMyRotor:(NSString * _Nonnull)name{
-    
-    return [[UIAccessibilityCustomRotor alloc]initWithName:name
-                                           itemSearchBlock:^UIAccessibilityCustomRotorItemResult * _Nullable(UIAccessibilityCustomRotorSearchPredicate * _Nonnull predicate) {
-                                               
-                                               if (predicate.searchDirection == UIAccessibilityCustomRotorDirectionNext) {
-                                                   
-                                                   flicksDown += 1;
-                                                   self.downLabel.text = [NSString stringWithFormat:@"%ld",(long)flicksDown];
-                                                   
-                                               } else {
-                                                   
-                                                   flicksUp += 1;
-                                                   self.upLabel.text = [NSString stringWithFormat:@"%ld",(long)flicksUp];
-                                               }
-                                               
-                                               return [[UIAccessibilityCustomRotorItemResult alloc] initWithTargetElement:self.rotorTitle
-                                                                                                              targetRange:nil];
-                                           }];
-}
-@end
-</code></pre>
-
-<pre><code class="swift">
-class CustomRotor: UIViewController {
-
-    @IBOutlet weak var rotorTitle: UILabel!
-    
-    static var flicksUp = 0
-    @IBOutlet weak var upLabel: UILabel!
-    
-    static var flicksDown = 0
-    @IBOutlet weak var downLabel: UILabel!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    + (void)initialize {
         
-        let rotor = buildMyRotor("Rotor info")
-        self.accessibilityCustomRotors = [rotor]
+        flicksUp = 0;
+        flicksDown = 0;
     }
-    
-    
-    func buildMyRotor(_ name: String) -> UIAccessibilityCustomRotor {
+
+
+    - (void)viewDidLoad {
+        [super viewDidLoad];
         
-        return  UIAccessibilityCustomRotor.init(name: name,
-                                                itemSearch: { predicate -> UIAccessibilityCustomRotorItemResult? in
-                                                    
-                                                    if (predicate.searchDirection == UIAccessibilityCustomRotor.Direction.next) {
-                                                        
-                                                        CustomRotor.flicksDown += 1
-                                                        self.downLabel.text = String(CustomRotor.flicksDown)
-                                                        
-                                                    } else {
-                                                        
-                                                        CustomRotor.flicksUp += 1
-                                                        self.upLabel.text = String(CustomRotor.flicksUp)
-                                                    }
-                                                    
-                                                    return UIAccessibilityCustomRotorItemResult.init(targetElement:self.rotorTitle,
-                                                                                                     targetRange: nil)
-        })
+        UIAccessibilityCustomRotor * rotor = [self buildMyRotor:@"Rotor info"];
+        self.accessibilityCustomRotors = @[rotor];
     }
-}
-</code></pre>
+
+
+    - (UIAccessibilityCustomRotor *)buildMyRotor:(NSString * _Nonnull)name{
+        
+        return [[UIAccessibilityCustomRotor alloc]initWithName:name
+                                            itemSearchBlock:^UIAccessibilityCustomRotorItemResult * _Nullable(UIAccessibilityCustomRotorSearchPredicate * _Nonnull predicate) {
+                                                
+                                                if (predicate.searchDirection == UIAccessibilityCustomRotorDirectionNext) {
+                                                    
+                                                    flicksDown += 1;
+                                                    self.downLabel.text = [NSString stringWithFormat:@"%ld",(long)flicksDown];
+                                                    
+                                                } else {
+                                                    
+                                                    flicksUp += 1;
+                                                    self.upLabel.text = [NSString stringWithFormat:@"%ld",(long)flicksUp];
+                                                }
+                                                
+                                                return [[UIAccessibilityCustomRotorItemResult alloc] initWithTargetElement:self.rotorTitle
+                                                                                                                targetRange:nil];
+                                            }];
+    }
+    @end
+</code></code>
+        </div>
+        <div class="tab-pane swift" id="rotor-Swift" role="tabpanel" >
+            <code class="swift">
+
+    class CustomRotor: UIViewController {
+
+        @IBOutlet weak var rotorTitle: UILabel!
+        
+        static var flicksUp = 0
+        @IBOutlet weak var upLabel: UILabel!
+        
+        static var flicksDown = 0
+        @IBOutlet weak var downLabel: UILabel!
+        
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            let rotor = buildMyRotor("Rotor info")
+            self.accessibilityCustomRotors = [rotor]
+        }
+        
+        
+        func buildMyRotor(_ name: String) -> UIAccessibilityCustomRotor {
+            
+            return  UIAccessibilityCustomRotor.init(name: name,
+                                                    itemSearch: { predicate -> UIAccessibilityCustomRotorItemResult? in
+                                                        
+                                                        if (predicate.searchDirection == UIAccessibilityCustomRotor.Direction.next) {
+                                                            
+                                                            CustomRotor.flicksDown += 1
+                                                            self.downLabel.text = String(CustomRotor.flicksDown)
+                                                            
+                                                        } else {
+                                                            
+                                                            CustomRotor.flicksUp += 1
+                                                            self.upLabel.text = String(CustomRotor.flicksUp)
+                                                        }
+                                                        
+                                                        return UIAccessibilityCustomRotorItemResult.init(targetElement:self.rotorTitle,
+                                                                                                        targetRange: nil)
+            })
+        }
+    }
+</code>
+        </div>
+    </div>
 
 <br>The code above gives rise to the following illustrated steps:
 
@@ -2885,19 +3569,44 @@ Such a feature must be implemented with **caution** and according to **specific 
 On iOS, it is possible to check the accessibility options state that may be changed in the device settings. 
 
 The most useful method provided by the `UIKit` framework is **UIAccessibilityIsVoiceOverRunning** which allows to know whether VoiceOver is activated.
-<pre><code class="objectivec">
-    BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
-    BOOL isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0);
-    
-    NSLog(@"VoiceOver is %d and SwitchControl is %d.", isVoiveOverRunning, isSwitchControlRunning);
-</code></pre>
+<div class="tab-pane" id="a11yOptions1-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#a11yOptions1-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#a11yOptions1-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="a11yOptions1-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-<pre><code class="swift">
+        BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
+        BOOL isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0);
+        
+        NSLog(@"VoiceOver is %d and SwitchControl is %d.", isVoiveOverRunning, isSwitchControlRunning);
+</code>
+        </div>
+        <div class="tab-pane swift" id="a11yOptions1-Swift" role="tabpanel" >
+            <code class="swift">
+
     let isVoiceOverRunning = (UIAccessibility.isVoiceOverRunning ? 1 : 0)
     let isSwitchControlRunning = (UIAccessibility.isSwitchControlRunning ? 1 : 0)
         
     print("VoiceOver is \(isVoiceOverRunning) and SwichControl is \(isSwitchControlRunning).")
-</code></pre>
+</code>
+        </div>
+    </div>
+</div>
 
 <br>Some other methods are deeply explained in a WWDC video whose content is [perfectly&nbsp;detailed](../wwdc/2018/230) in the iOS WWDC section of this site.
 </div>
@@ -2914,32 +3623,54 @@ What happens if VoiceOver is disabled? This is exactly the use case when the sys
 By listening to these events, it is possible to dynamically change how the application behaves.
 
 In the following example, a method is fired when VoiceOver or Switch Control status has changed.
-<pre><code class="objectivec">
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(methodToBeCalled:)
-                                                 name:UIAccessibilitySwitchControlStatusDidChangeNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(methodToBeCalled:)
-                                                 name:UIAccessibilityVoiceOverStatusDidChangeNotification
-                                               object:nil];
-}
+<div class="tab-pane" id="a11yOptions2-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#a11yOptions2-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#a11yOptions2-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="a11yOptions2-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-- (void)methodToBeCalled:(NSNotification *)notification {
-    
-    NSArray * checkStatus = @[@"NOK", @"OK"];
-    
-    NSLog(@"SWITCH CONTROL is %@ and VOICE OVER is %@",
-          checkStatus[UIAccessibilityIsSwitchControlRunning()],
-          checkStatus[UIAccessibilityIsVoiceOverRunning()]);
-}
-</code></pre>
+    - (void)viewDidAppear:(BOOL)animated {
+        [super viewDidAppear:animated];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                selector:@selector(methodToBeCalled:)
+                                                    name:UIAccessibilitySwitchControlStatusDidChangeNotification
+                                                object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                selector:@selector(methodToBeCalled:)
+                                                    name:UIAccessibilityVoiceOverStatusDidChangeNotification
+                                                object:nil];
+    }
 
-<pre><code class="swift">
+    - (void)methodToBeCalled:(NSNotification *)notification {
+        
+        NSArray * checkStatus = @[@"NOK", @"OK"];
+        
+        NSLog(@"SWITCH CONTROL is %@ and VOICE OVER is %@",
+            checkStatus[UIAccessibilityIsSwitchControlRunning()],
+            checkStatus[UIAccessibilityIsVoiceOverRunning()]);
+    }
+</code>
+        </div>
+        <div class="tab-pane swift" id="a11yOptions2-Swift" role="tabpanel" >
+            <code class="swift">
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -2961,7 +3692,10 @@ In the following example, a method is fired when VoiceOver or Switch Control sta
         
         print("SWITCH CONTROL is \(switchControlStatus) and VOICE OVER is \(voiceOverStatus).")
     }
-</code></pre>
+</code>
+        </div>
+    </div>
+</div>
 
 </div>
 <div class="tab-pane" id="a11yOptions-Recap" role="tabpanel">
@@ -3044,19 +3778,65 @@ Unfortunately, some project constraints may prevent such a practice: specific ex
     
 Once the navigation bar loaded, a new `label` must be provided so as to amend only the VoiceOver reading out without modifying the appearance of the left bar item.
 
-<pre><code class="objectivec">
+<div class="tab-pane" id="navBar1-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#navBar1-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#navBar1-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="navBar1-ObjC" role="tabpanel">
+            <code class="objectivec">
+
     self.navigationController.navigationBar.backItem.accessibilityLabel = @"new label for the back button";
-</code></pre>
-<pre><code class="swift">
+</code>
+        </div>
+        <div class="tab-pane swift" id="navBar1-Swift" role="tabpanel" >
+            <code class="swift">
+
     navigationController?.navigationBar.backItem?.accessibilityLabel = "new label for the back button"
-</code></pre>
+</code>
+        </div>
+    </div>
+</div>
 
 <br>The customization of this element often consists in **displaying a single disclosure indicator with no text**.
 
 ![](../../images/iOSdev/NavigationBar_2.png)
 The two possible achievements that are detailed in the following examples are based on the standard component replacement by a customized **UIBarButtonItem** with a simple **image as an incoming parameter** for the disclosure indicator: 
 
-<pre><code class="objectivec">
+<div class="tab-pane" id="navBar2-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#navBar2-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#navBar2-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="navBar2-ObjC" role="tabpanel">
+            <code class="objectivec">
+
     UIBarButtonItem &#42; _a11yLeftBarButton;
     
     _a11yLeftBarButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"imgInfo"]
@@ -3066,9 +3846,11 @@ The two possible achievements that are detailed in the following examples are ba
     
     _a11yLeftBarButton.accessibilityLabel = @"previous screen";
     self.navigationItem.leftBarButtonItem = _a11yLeftBarButton;
-</code></pre>
+</code>
+        </div>
+        <div class="tab-pane swift" id="navBar2-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
     var a11yLeftBarButton: UIBarButtonItem?
     
     a11yLeftBarButton = UIBarButtonItem(image: UIImage(named: "imgInfo"),
@@ -3078,11 +3860,34 @@ The two possible achievements that are detailed in the following examples are ba
 
     a11yLeftBarButton!.accessibilityLabel = "previous screen"
     navigationItem.leftBarButtonItem = a11yLeftBarButton
-</code></pre>
+</code>
+        </div>
+    </div>
+</div>
 
 <br>... or on a **UIView** with an added gesture recognizer to define the action of this element: it's a little bit longer than the previous one but it has the advantage of **providing a frame** whose interest will be enlighted if the reading order of the page items will include those of the navigation bar for instance.
 
-<pre><code class="objectivec">
+<div class="tab-pane" id="navBar3-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#navBar3-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#navBar3-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="navBar3-ObjC" role="tabpanel">
+            <code class="objectivec">
+
     var a11yLeftBarButton: UIBarButtonItem?
     
     UIImage &#42; img = [UIImage imageNamed:@"imgInfo"];
@@ -3098,9 +3903,11 @@ The two possible achievements that are detailed in the following examples are ba
     _a11yLeftBarButton.accessibilityLabel = @"previous screen";
     
     self.navigationItem.leftBarButtonItem = _a11yLeftBarButton;
-</code></pre>
+</code>
+        </div>
+        <div class="tab-pane swift" id="navBar3-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
     var a11yLeftBarButton: UIBarButtonItem?
     
     let a11yLeftBarButtonImage = UIImage(named: "imgInfo")
@@ -3115,7 +3922,10 @@ The two possible achievements that are detailed in the following examples are ba
     a11yLeftBarButton?.accessibilityLabel = "previous screen"
         
     navigationItem.leftBarButtonItem = a11yLeftBarButton
-</code></pre>
+</code>
+        </div>
+    </div>
+</div>
 
 <br>Then, the chosen implementation will depend on the purpose of the new created element.
 </div>
@@ -3123,30 +3933,75 @@ The two possible achievements that are detailed in the following examples are ba
 
 In order to have a quick access to the accessibility properties of a navigation bar title item, it's recommended to **implement its content in a UIView form**:
 
-<pre><code class="objectivec">
+<div class="tab-pane" id="navBar4-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#navBar4-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#navBar4-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="navBar4-ObjC" role="tabpanel">
+            <code class="objectivec">
+
     UILabel &#42; a11yTitleLabel = [[UILabel alloc]init];
     a11yTitleLabel.text = @"TITLE";
     [a11yTitleLabel sizeToFit];
     
     self.navigationItem.titleView = a11yTitleLabel;
     self.navigationItem.titleView.accessibilityLabel = @"writing and reading out are different";
-</code></pre>
+</code>
+        </div>
+        <div class="tab-pane swift" id="navBar4-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
     let a11yTitleLabel = UILabel()
     a11yTitleLabel.text = "TITLE"
     a11yTitleLabel.sizeToFit()
 
     navigationItem.titleView = a11yTitleLabel
     navigationItem.titleView?.accessibilityLabel = "writing and reading out are different"
-</code></pre>
+</code>
+        </div>
+    </div>
+</div>
 
 </div>
 <div class="tab-pane" id="navBar-RightBarItem" role="tabpanel">
 
 ![](../../images/iOSdev/NavigationBar_3.png)
 <br>**Using UIView is recommended** when new elements are created in the right part of the navigation bar so as to ease some VoiceOver future implementations.
-<pre><code class="objectivec">
+<div class="tab-pane" id="navBar5-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#navBar5-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#navBar5-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="navBar5-ObjC" role="tabpanel">
+            <code class="objectivec">
+
     UIBarButtonItem &#42; _a11yRightBarButton;
 
     UILabel &#42; a11y = [[UILabel alloc]init];
@@ -3165,9 +4020,11 @@ In order to have a quick access to the accessibility properties of a navigation 
     _a11yRightBarButton.accessibilityLabel = @"validate your actions";
     
     self.navigationItem.rightBarButtonItem = _a11yRightBarButton;
-</code></pre>
+</code>
+        </div>
+        <div class="tab-pane swift" id="navBar5-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
     var a11yRightBarButton: UIBarButtonItem?
 
     let a11y = UILabel()
@@ -3186,7 +4043,10 @@ In order to have a quick access to the accessibility properties of a navigation 
     a11yRightBarButton?.accessibilityLabel = "validate your actions"
         
     navigationItem.rightBarButtonItem = a11yRightBarButton
-</code></pre>
+</code>
+        </div>
+    </div>
+</div>
 
 </div>
 <div class="tab-pane" id="navBar-ReadingOrder" role="tabpanel">
@@ -3207,236 +4067,285 @@ The proposed page will be composed of the following elements:
 The rationale behind this presentation is to follow this order: LeftBarItem, title, Label1, Label2, Label3, 'ACTION' button, Label4, Label5 and RightBarItem.
 
 First of all, the navigation bar items are customized thanks to the code examples provided in the other sheets of this section.
-<pre><code class="objectivec">
-@interface NavigationBarReadingOrder() {
-    UIBarButtonItem &#42; _a11yLeftBarButton;
-    UIView &#42; _a11yBarTitle;
-    UIBarButtonItem &#42; _a11yRightBarButton;
-}
-@end
+<div class="tab-pane" id="navBar6-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#navBar6-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#navBar6-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="navBar6-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-
-@implementation NavigationBarReadingOrder
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [self setBackItem];
-    [self setTitle];
-    [self setNextPageBarButton];
-}
-
-
-- (void)setBackItem {
-    
-    UIImage &#42; img = [UIImage imageNamed:@"infoImg"];
-    UIImageView &#42; imgView = [[UIImageView alloc]initWithImage:img];
-    _a11yLeftBarButton = [[UIBarButtonItem alloc]initWithCustomView:imgView];
-    
-    UITapGestureRecognizer &#42; tap = [[UITapGestureRecognizer alloc]initWithTarget:self
-                                                                          action:@selector(goBackToThePreviousView:)];
-    [_a11yLeftBarButton.customView addGestureRecognizer:tap];
-    
-    self.navigationItem.leftBarButtonItem = _a11yLeftBarButton;
-}
-
-
-- (void)setTitle {
-    
-    UILabel &#42; a11yTitleLabel = [[UILabel alloc]init];
-    a11yTitleLabel.text = @"TITLE";
-    [a11yTitleLabel sizeToFit];
-    
-    self.navigationItem.titleView = a11yTitleLabel;
-    _a11yBarTitle = self.navigationItem.titleView;
-}
-
-
-- (void)setNextPageBarButton {
-    
-    UILabel &#42; a11y = [[UILabel alloc]init];
-    a11y.text = @"OK";
-    [a11y sizeToFit];
-    [a11y setUserInteractionEnabled:YES];
-    
-    _a11yRightBarButton = [[UIBarButtonItem alloc]initWithCustomView:a11y];
-    
-    UITapGestureRecognizer &#42; tap = [[UITapGestureRecognizer alloc]initWithTarget:self
-                                                                          action:@selector(validateActions:)];
-    [_a11yRightBarButton.customView addGestureRecognizer:tap];
-    
-    self.navigationItem.rightBarButtonItem = _a11yRightBarButton;
-}
-@end
-</code></pre>
-
-<pre><code class="swift">
-class OrderViewController: UIViewController {
-
-    var a11yLeftBarButton: UIBarButtonItem?
-    var a11yBarTitle: UIView?
-    var a11yRightBarButton: UIBarButtonItem?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setBackItem()
-        setTitle()
-        setNextPageBarButton()
+    @interface NavigationBarReadingOrder() {
+        UIBarButtonItem &#42; _a11yLeftBarButton;
+        UIView &#42; _a11yBarTitle;
+        UIBarButtonItem &#42; _a11yRightBarButton;
     }
-    
-    private func setBackItem() {
-        let a11yLeftBarButtonImage = UIImage(named: "infoImg")
-        a11yLeftBarButton = UIBarButtonItem(customView: UIImageView(image: a11yLeftBarButtonImage))
+    @end
 
-        let tap = UITapGestureRecognizer(target: self,
-                                         action: #selector(goBackToThePreviousView(info:)))
-        a11yLeftBarButton?.customView?.addGestureRecognizer(tap)
 
-        navigationItem.leftBarButtonItem = a11yLeftBarButton
-    }
-    
-    private func setTitle() {
+    @implementation NavigationBarReadingOrder
+
+    - (void)viewDidLoad {
+        [super viewDidLoad];
         
-        let a11yTitleLabel = UILabel()
-        a11yTitleLabel.text = "TITLE"
-        a11yTitleLabel.sizeToFit()
-
-        navigationItem.titleView = a11yTitleLabel
-        a11yBarTitle = navigationItem.titleView
+        [self setBackItem];
+        [self setTitle];
+        [self setNextPageBarButton];
     }
-    
-    private func setNextPageBarButton() {
-    
-        let a11y = UILabel()
-        a11y.text = "OK"
-        a11y.sizeToFit()
-        a11y.isUserInteractionEnabled = true
 
-        a11yRightBarButton = UIBarButtonItem(customView: a11y)
+
+    - (void)setBackItem {
         
-        let tap = UITapGestureRecognizer(target: self,
-                                         action: #selector(goToTheNextPage(info:)))
-        a11yRightBarButton?.customView?.addGestureRecognizer(tap)
+        UIImage &#42; img = [UIImage imageNamed:@"infoImg"];
+        UIImageView &#42; imgView = [[UIImageView alloc]initWithImage:img];
+        _a11yLeftBarButton = [[UIBarButtonItem alloc]initWithCustomView:imgView];
         
-        navigationItem.rightBarButtonItem = a11yRightBarButton
+        UITapGestureRecognizer &#42; tap = [[UITapGestureRecognizer alloc]initWithTarget:self
+                                                                            action:@selector(goBackToThePreviousView:)];
+        [_a11yLeftBarButton.customView addGestureRecognizer:tap];
+        
+        self.navigationItem.leftBarButtonItem = _a11yLeftBarButton;
     }
-}
-</code></pre>
+
+
+    - (void)setTitle {
+        
+        UILabel &#42; a11yTitleLabel = [[UILabel alloc]init];
+        a11yTitleLabel.text = @"TITLE";
+        [a11yTitleLabel sizeToFit];
+        
+        self.navigationItem.titleView = a11yTitleLabel;
+        _a11yBarTitle = self.navigationItem.titleView;
+    }
+
+
+    - (void)setNextPageBarButton {
+        
+        UILabel &#42; a11y = [[UILabel alloc]init];
+        a11y.text = @"OK";
+        [a11y sizeToFit];
+        [a11y setUserInteractionEnabled:YES];
+        
+        _a11yRightBarButton = [[UIBarButtonItem alloc]initWithCustomView:a11y];
+        
+        UITapGestureRecognizer &#42; tap = [[UITapGestureRecognizer alloc]initWithTarget:self
+                                                                            action:@selector(validateActions:)];
+        [_a11yRightBarButton.customView addGestureRecognizer:tap];
+        
+        self.navigationItem.rightBarButtonItem = _a11yRightBarButton;
+    }
+    @end
+</code>
+        </div>
+        <div class="tab-pane swift" id="navBar6-Swift" role="tabpanel" >
+            <code class="swift">
+
+    class OrderViewController: UIViewController {
+
+        var a11yLeftBarButton: UIBarButtonItem?
+        var a11yBarTitle: UIView?
+        var a11yRightBarButton: UIBarButtonItem?
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            setBackItem()
+            setTitle()
+            setNextPageBarButton()
+        }
+        
+        private func setBackItem() {
+            let a11yLeftBarButtonImage = UIImage(named: "infoImg")
+            a11yLeftBarButton = UIBarButtonItem(customView: UIImageView(image: a11yLeftBarButtonImage))
+
+            let tap = UITapGestureRecognizer(target: self,
+                                            action: #selector(goBackToThePreviousView(info:)))
+            a11yLeftBarButton?.customView?.addGestureRecognizer(tap)
+
+            navigationItem.leftBarButtonItem = a11yLeftBarButton
+        }
+        
+        private func setTitle() {
+            
+            let a11yTitleLabel = UILabel()
+            a11yTitleLabel.text = "TITLE"
+            a11yTitleLabel.sizeToFit()
+
+            navigationItem.titleView = a11yTitleLabel
+            a11yBarTitle = navigationItem.titleView
+        }
+        
+        private func setNextPageBarButton() {
+        
+            let a11y = UILabel()
+            a11y.text = "OK"
+            a11y.sizeToFit()
+            a11y.isUserInteractionEnabled = true
+
+            a11yRightBarButton = UIBarButtonItem(customView: a11y)
+            
+            let tap = UITapGestureRecognizer(target: self,
+                                            action: #selector(goToTheNextPage(info:)))
+            a11yRightBarButton?.customView?.addGestureRecognizer(tap)
+            
+            navigationItem.rightBarButtonItem = a11yRightBarButton
+        }
+    }
+</code>
+        </div>
+    </div>
+</div>
 
 <br>Next, we **create accessible elements** for the navigation bar and we **define the VoiceOver reading order** for the entire page thanks to its `accessibilityElements` array.
 
 The entire page and the navigation bar are two different containers that lead to **hiding to VoiceOver the navigation bar native items** and to transfer them to the page view with the focus appropriate coordinates.
 
-<pre><code class="objectivec">
-@interface NavigationBarReadingOrder() {
-    UIBarButtonItem &#42; _a11yLeftBarButton;
-    UIView &#42; _a11yBarTitle;
-    UIBarButtonItem &#42; _a11yRightBarButton;
-}
+<div class="tab-pane" id="navBar7-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#navBar7-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#navBar7-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="navBar7-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-@property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel1;
-@property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel2;
-@property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel3;
-@property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel4;
-@property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel5;
-@property (weak, nonatomic) IBOutlet UIButton &#42; a11yCentralButton;
+    @interface NavigationBarReadingOrder() {
+        UIBarButtonItem &#42; _a11yLeftBarButton;
+        UIView &#42; _a11yBarTitle;
+        UIBarButtonItem &#42; _a11yRightBarButton;
+    }
 
-@end
+    @property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel1;
+    @property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel2;
+    @property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel3;
+    @property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel4;
+    @property (weak, nonatomic) IBOutlet UILabel &#42; a11yLabel5;
+    @property (weak, nonatomic) IBOutlet UIButton &#42; a11yCentralButton;
 
-
-@implementation NavigationBarReadingOrder
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    [self createA11yElts];
-    self.navigationController.navigationBar.accessibilityElementsHidden = YES;
-}
+    @end
 
 
-- (void)createA11yElts {
-    
-    UIView &#42; navBarView = [[[_a11yBarTitle superview] superview] superview];
-    
-    UIView &#42; leftButtonView = [_a11yLeftBarButton valueForKey:@"view"];
-    UIAccessibilityElement * a11yLBB = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self.view];
-    a11yLBB.accessibilityFrameInContainerSpace = [navBarView convertRect:[[leftButtonView superview] superview].frame toView:self.view];
-    a11yLBB.accessibilityLabel = @"previous screen";
-    a11yLBB.accessibilityTraits = UIAccessibilityTraitButton;
-    
-    UIAccessibilityElement &#42; a11yTBV = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self.view];
-    a11yTBV.accessibilityFrameInContainerSpace = [navBarView convertRect:[self.navigationItem.titleView superview].frame toView:self.view];
-    a11yTBV.accessibilityLabel = @"writing and reading out are different";
-    a11yTBV.accessibilityTraits = UIAccessibilityTraitHeader;
+    @implementation NavigationBarReadingOrder
 
-    UIView &#42; rightButtonView = [_a11yRightBarButton valueForKey:@"view"];
-    UIAccessibilityElement &#42; a11yRBB = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self.view];
-    a11yRBB.accessibilityFrameInContainerSpace = [navBarView convertRect:[[rightButtonView superview] superview].frame toView:self.view];
-    a11yRBB.accessibilityLabel = @"next screen";
-    a11yRBB.accessibilityTraits = UIAccessibilityTraitButton;
-    
-    self.view.accessibilityElements = @[a11yLBB,
+    - (void)viewDidAppear:(BOOL)animated {
+        [super viewDidAppear:animated];
+        
+        [self createA11yElts];
+        self.navigationController.navigationBar.accessibilityElementsHidden = YES;
+    }
+
+
+    - (void)createA11yElts {
+        
+        UIView &#42; navBarView = [[[_a11yBarTitle superview] superview] superview];
+        
+        UIView &#42; leftButtonView = [_a11yLeftBarButton valueForKey:@"view"];
+        UIAccessibilityElement * a11yLBB = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self.view];
+        a11yLBB.accessibilityFrameInContainerSpace = [navBarView convertRect:[[leftButtonView superview] superview].frame toView:self.view];
+        a11yLBB.accessibilityLabel = @"previous screen";
+        a11yLBB.accessibilityTraits = UIAccessibilityTraitButton;
+        
+        UIAccessibilityElement &#42; a11yTBV = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self.view];
+        a11yTBV.accessibilityFrameInContainerSpace = [navBarView convertRect:[self.navigationItem.titleView superview].frame toView:self.view];
+        a11yTBV.accessibilityLabel = @"writing and reading out are different";
+        a11yTBV.accessibilityTraits = UIAccessibilityTraitHeader;
+
+        UIView &#42; rightButtonView = [_a11yRightBarButton valueForKey:@"view"];
+        UIAccessibilityElement &#42; a11yRBB = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self.view];
+        a11yRBB.accessibilityFrameInContainerSpace = [navBarView convertRect:[[rightButtonView superview] superview].frame toView:self.view];
+        a11yRBB.accessibilityLabel = @"next screen";
+        a11yRBB.accessibilityTraits = UIAccessibilityTraitButton;
+        
+        self.view.accessibilityElements = @[a11yLBB,
+                                            a11yTBV,
+                                            _a11yLabel1,
+                                            _a11yLabel2,
+                                            _a11yLabel3,
+                                            _a11yCentralButton,
+                                            _a11yLabel4,
+                                            _a11yLabel5,
+                                            a11yRBB];
+    }
+    @end
+
+</code>
+        </div>
+        <div class="tab-pane swift" id="navBar7-Swift" role="tabpanel" >
+            <code class="swift">
+    @IBOutlet weak var a11yLabel1: UILabel!
+    @IBOutlet weak var a11yLabel2: UILabel!
+    @IBOutlet weak var a11yLabel3: UILabel!
+    @IBOutlet weak var a11yLabel4: UILabel!
+    @IBOutlet weak var a11yLabel5: UILabel!
+    @IBOutlet weak var a11yCentralButton: UIButton!
+
+    override func viewDidAppear(&#95; animated: Bool) {
+        super.viewDidAppear(animated)
+            
+        createA11yElts()
+        navigationController?.navigationBar.accessibilityElementsHidden = true
+    }
+        
+    private func createA11yElts() {
+            
+        let navBarView = a11yBarTitle?.superview?.superview?.superview
+
+        let leftButtonView = a11yLeftBarButton?.value(forKey: "view") as? UIView
+        let a11yLBB = UIAccessibilityElement(accessibilityContainer: self.view!)
+        a11yLBB.accessibilityFrameInContainerSpace = navBarView!.convert((leftButtonView?.superview?.superview!.frame)!,to:self.view)
+        a11yLBB.accessibilityLabel = "previous screen"
+        a11yLBB.accessibilityTraits = .button
+
+        let a11yTBV = UIAccessibilityElement(accessibilityContainer: self.view!)
+        a11yTBV.accessibilityFrameInContainerSpace = navBarView!.convert((navigationItem.titleView?.superview!.frame)!,to:self.view)
+        a11yTBV.accessibilityLabel = "writing and reading out are different"
+        a11yTBV.accessibilityTraits = .header
+
+        let rightButtonView = a11yRightBarButton?.value(forKey: "view") as? UIView
+        let a11yRBB = UIAccessibilityElement(accessibilityContainer: self.view!)
+        a11yRBB.accessibilityFrameInContainerSpace = navBarView!.convert((rightButtonView?.superview?.superview!.frame)!,to:self.view)
+        a11yRBB.accessibilityLabel = "next screen"
+        a11yRBB.accessibilityTraits = .button
+
+        self.view.accessibilityElements = [a11yLBB,
                                         a11yTBV,
-                                        _a11yLabel1,
-                                        _a11yLabel2,
-                                        _a11yLabel3,
-                                        _a11yCentralButton,
-                                        _a11yLabel4,
-                                        _a11yLabel5,
-                                        a11yRBB];
-}
-@end
-
-</code></pre>
-
-<pre><code class="swift">
-@IBOutlet weak var a11yLabel1: UILabel!
-@IBOutlet weak var a11yLabel2: UILabel!
-@IBOutlet weak var a11yLabel3: UILabel!
-@IBOutlet weak var a11yLabel4: UILabel!
-@IBOutlet weak var a11yLabel5: UILabel!
-@IBOutlet weak var a11yCentralButton: UIButton!
-
-override func viewDidAppear(&#95; animated: Bool) {
-    super.viewDidAppear(animated)
-        
-    createA11yElts()
-    navigationController?.navigationBar.accessibilityElementsHidden = true
-}
-    
-private func createA11yElts() {
-        
-    let navBarView = a11yBarTitle?.superview?.superview?.superview
-
-    let leftButtonView = a11yLeftBarButton?.value(forKey: "view") as? UIView
-    let a11yLBB = UIAccessibilityElement(accessibilityContainer: self.view!)
-    a11yLBB.accessibilityFrameInContainerSpace = navBarView!.convert((leftButtonView?.superview?.superview!.frame)!,to:self.view)
-    a11yLBB.accessibilityLabel = "previous screen"
-    a11yLBB.accessibilityTraits = .button
-
-    let a11yTBV = UIAccessibilityElement(accessibilityContainer: self.view!)
-    a11yTBV.accessibilityFrameInContainerSpace = navBarView!.convert((navigationItem.titleView?.superview!.frame)!,to:self.view)
-    a11yTBV.accessibilityLabel = "writing and reading out are different"
-    a11yTBV.accessibilityTraits = .header
-
-    let rightButtonView = a11yRightBarButton?.value(forKey: "view") as? UIView
-    let a11yRBB = UIAccessibilityElement(accessibilityContainer: self.view!)
-    a11yRBB.accessibilityFrameInContainerSpace = navBarView!.convert((rightButtonView?.superview?.superview!.frame)!,to:self.view)
-    a11yRBB.accessibilityLabel = "next screen"
-    a11yRBB.accessibilityTraits = .button
-
-    self.view.accessibilityElements = [a11yLBB,
-                                       a11yTBV,
-                                       a11yLabel1!,
-                                       a11yLabel2!,
-                                       a11yLabel3!,
-                                       a11yCentralButton!,
-                                       a11yLabel4!,
-                                       a11yLabel5!,
-                                       a11yRBB]
-}
-</code></pre>
+                                        a11yLabel1!,
+                                        a11yLabel2!,
+                                        a11yLabel3!,
+                                        a11yCentralButton!,
+                                        a11yLabel4!,
+                                        a11yLabel5!,
+                                        a11yRBB]
+    }
+</code>
+        </div>
+    </div>
+</div>
     
 <br>The result corresponds to the desired reading order using successive one-finger flicks to select the different accessible elements.
 
@@ -3518,170 +4427,215 @@ The following example will define the speech rate and the voice pitch/volume for
   <li>Pausing and resuming from where the speech stopped thanks to some `AVSpeechSynthesizer` instance methods.</li>
 </ul>
 
-<pre><code class="objectivec">
-@interface SpeechSynthesis()  <AVSpeechSynthesizerDelegate> {
+<div class="tab-pane" id="speechSyn1-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#speechSyn1-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#speechSyn1-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="speechSyn1-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-    NSMutableArray * playerQueue;
-    AVSpeechSynthesizer * synthesizer;
-    __weak IBOutlet UILabel * textLabel;
-}
-@end
+    @interface SpeechSynthesis()  <AVSpeechSynthesizerDelegate> {
 
-NS_ASSUME_NONNULL_BEGIN
-@implementation SpeechSynthesis
+        NSMutableArray * playerQueue;
+        AVSpeechSynthesizer * synthesizer;
+        __weak IBOutlet UILabel * textLabel;
+    }
+    @end
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    playerQueue = [[NSMutableArray alloc] init];
-    synthesizer = [[AVSpeechSynthesizer alloc] init];
-}
+    NS_ASSUME_NONNULL_BEGIN
+    @implementation SpeechSynthesis
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    for (int i = 1 ; i < 11 ; i++) {
-     
-        NSString * stringNbPrefix = @"Sentence number ";
-        NSString * stringNbSuffix = @" of the speech synthesizer.";
-        NSString * stringNb = [NSString stringWithFormat:@"%@%i%@", stringNbPrefix, i, stringNbSuffix];
+    - (void)viewDidLoad {
+        [super viewDidLoad];
         
-        AVSpeechUtterance * utterance = [[AVSpeechUtterance alloc] initWithString:stringNb];
-        utterance.rate = AVSpeechUtteranceDefaultSpeechRate;
-        utterance.pitchMultiplier = 1.0;
-        utterance.volume = 1.0;
+        playerQueue = [[NSMutableArray alloc] init];
+        synthesizer = [[AVSpeechSynthesizer alloc] init];
+    }
+
+    - (void)viewDidAppear:(BOOL)animated {
+        [super viewDidAppear:animated];
         
-        [playerQueue addObject:utterance];
-    }
-    
-    synthesizer.delegate = self;
-    
-    for (AVSpeechUtterance * utterance in playerQueue) {
-        [synthesizer speakUtterance:utterance];
-    }
-}
-
-//AVSpeechSynthesizerDelegate protocol method to highlight the vocalized word.
-- (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer
-willSpeakRangeOfSpeechString:(NSRange)characterRange
-                utterance:(AVSpeechUtterance *)utterance {
-    
-    NSMutableAttributedString * attributedString = [[NSMutableAttributedString alloc] initWithString:utterance.speechString];
-    
-    [attributedString addAttribute:NSFontAttributeName
-                             value:[UIFont systemFontOfSize:19.0]
-                             range:characterRange];
-    
-    NSAttributedString * subString = [attributedString attributedSubstringFromRange:characterRange];
-    textLabel.attributedText = attributedString;
-    
-    NSString * output = [NSString stringWithFormat:@"%@%@", @"word : ", subString.string];
-    NSLog(@"%@", output);
-}
-
-- (IBAction)pauseButton:(UIButton *)sender {
-    
-    if (synthesizer.isSpeaking == TRUE) {
-        if ([synthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate] == TRUE) {
-            NSLog(@"PAUSE");
-        } else {
-            NSLog(@"P.R.O.B.L.E.M. when pausing.");
-        }
-    }
-}
-
-- (IBAction)resumeButton:(UIButton *)sender {
-    
-    if (synthesizer.isPaused == TRUE) {
-        if ([synthesizer continueSpeaking] == TRUE) {
-            NSLog(@"RESUME");
-        } else {
-            NSLog(@"P.R.O.B.L.E.M. when resuming.");
-        }
-    }
-}
-@end
-</code></pre>
-
-<pre><code class="swift">
-class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
-    
-    @IBOutlet weak var textLabel: UILabel!
-    
-    var synthesizer = AVSpeechSynthesizer()
-    var playQueue = [AVSpeechUtterance]()
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        for (int i = 1 ; i < 11 ; i++) {
         
-        for i in 1...10 {
+            NSString * stringNbPrefix = @"Sentence number ";
+            NSString * stringNbSuffix = @" of the speech synthesizer.";
+            NSString * stringNb = [NSString stringWithFormat:@"%@%i%@", stringNbPrefix, i, stringNbSuffix];
             
-            let stringNb = "Sentence number " + String(i) + " of the speech synthesizer."
+            AVSpeechUtterance * utterance = [[AVSpeechUtterance alloc] initWithString:stringNb];
+            utterance.rate = AVSpeechUtteranceDefaultSpeechRate;
+            utterance.pitchMultiplier = 1.0;
+            utterance.volume = 1.0;
             
-            let utterance = AVSpeechUtterance(string: stringNb)
-            utterance.rate = AVSpeechUtteranceDefaultSpeechRate
-            utterance.pitchMultiplier = 1.0
-            utterance.volume = 1.0
-            
-            playQueue.append(utterance)
+            [playerQueue addObject:utterance];
         }
-
-        synthesizer.delegate = self
-
-        for utterance in playQueue {
-            synthesizer.speak(utterance)
+        
+        synthesizer.delegate = self;
+        
+        for (AVSpeechUtterance * utterance in playerQueue) {
+            [synthesizer speakUtterance:utterance];
         }
     }
-    
+
     //AVSpeechSynthesizerDelegate protocol method to highlight the vocalized word.
-    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer,
-                           willSpeakRangeOfSpeechString characterRange: NSRange,
-                           utterance: AVSpeechUtterance) {
-
-        let attributedString = NSMutableAttributedString(string: utterance.speechString)
-        attributedString.addAttribute(.font,
-                                      value: UIFont.boldSystemFont(ofSize: 19),
-                                      range: characterRange)
-
-        textLabel.attributedText = attributedString
-
-        let subString = attributedString.attributedSubstring(from: characterRange)
-        print("word : \(subString.string)")
+    - (void)speechSynthesizer:(AVSpeechSynthesizer *)synthesizer
+    willSpeakRangeOfSpeechString:(NSRange)characterRange
+                    utterance:(AVSpeechUtterance *)utterance {
+        
+        NSMutableAttributedString * attributedString = [[NSMutableAttributedString alloc] initWithString:utterance.speechString];
+        
+        [attributedString addAttribute:NSFontAttributeName
+                                value:[UIFont systemFontOfSize:19.0]
+                                range:characterRange];
+        
+        NSAttributedString * subString = [attributedString attributedSubstringFromRange:characterRange];
+        textLabel.attributedText = attributedString;
+        
+        NSString * output = [NSString stringWithFormat:@"%@%@", @"word : ", subString.string];
+        NSLog(@"%@", output);
     }
-    
-    
-    @IBAction func pauseAction(_ sender: UIButton) {
-    
-        if (synthesizer.isSpeaking == true) {
-            if (synthesizer.pauseSpeaking(at: .immediate) == true) {
-                print("PAUSE")
+
+    - (IBAction)pauseButton:(UIButton *)sender {
+        
+        if (synthesizer.isSpeaking == TRUE) {
+            if ([synthesizer pauseSpeakingAtBoundary:AVSpeechBoundaryImmediate] == TRUE) {
+                NSLog(@"PAUSE");
             } else {
-                print("P.R.O.B.L.E.M. when pausing.")
+                NSLog(@"P.R.O.B.L.E.M. when pausing.");
             }
         }
     }
-    
-    
-    @IBAction func resumeAction(_ sender: UIButton) {
-     
-        if (synthesizer.isPaused == true) {
-            if (synthesizer.continueSpeaking() == true) {
-                print("RESUME")
+
+    - (IBAction)resumeButton:(UIButton *)sender {
+        
+        if (synthesizer.isPaused == TRUE) {
+            if ([synthesizer continueSpeaking] == TRUE) {
+                NSLog(@"RESUME");
             } else {
-                print("P.R.O.B.L.E.M. when resuming.")
+                NSLog(@"P.R.O.B.L.E.M. when resuming.");
             }
         }
     }
-}
-</code></pre>
+    @end
+</code>
+        </div>
+        <div class="tab-pane swift" id="speechSyn1-Swift" role="tabpanel" >
+            <code class="swift">
+
+    class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
+        
+        @IBOutlet weak var textLabel: UILabel!
+        
+        var synthesizer = AVSpeechSynthesizer()
+        var playQueue = [AVSpeechUtterance]()
+        
+        
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            
+            for i in 1...10 {
+                
+                let stringNb = "Sentence number " + String(i) + " of the speech synthesizer."
+                
+                let utterance = AVSpeechUtterance(string: stringNb)
+                utterance.rate = AVSpeechUtteranceDefaultSpeechRate
+                utterance.pitchMultiplier = 1.0
+                utterance.volume = 1.0
+                
+                playQueue.append(utterance)
+            }
+
+            synthesizer.delegate = self
+
+            for utterance in playQueue {
+                synthesizer.speak(utterance)
+            }
+        }
+        
+        //AVSpeechSynthesizerDelegate protocol method to highlight the vocalized word.
+        func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer,
+                            willSpeakRangeOfSpeechString characterRange: NSRange,
+                            utterance: AVSpeechUtterance) {
+
+            let attributedString = NSMutableAttributedString(string: utterance.speechString)
+            attributedString.addAttribute(.font,
+                                        value: UIFont.boldSystemFont(ofSize: 19),
+                                        range: characterRange)
+
+            textLabel.attributedText = attributedString
+
+            let subString = attributedString.attributedSubstring(from: characterRange)
+            print("word : \(subString.string)")
+        }
+        
+        
+        @IBAction func pauseAction(_ sender: UIButton) {
+        
+            if (synthesizer.isSpeaking == true) {
+                if (synthesizer.pauseSpeaking(at: .immediate) == true) {
+                    print("PAUSE")
+                } else {
+                    print("P.R.O.B.L.E.M. when pausing.")
+                }
+            }
+        }
+        
+        
+        @IBAction func resumeAction(_ sender: UIButton) {
+        
+            if (synthesizer.isPaused == true) {
+                if (synthesizer.continueSpeaking() == true) {
+                    print("RESUME")
+                } else {
+                    print("P.R.O.B.L.E.M. when resuming.")
+                }
+            }
+        }
+    }
+</code>
+        </div>
+    </div>
+</div>
 
 </div>
 <div class="tab-pane" id="speechSyn-Phonemes" role="tabpanel">
 
 When a particular spelling is intended, phonetics is highly recommended to get the desired purpose.
 
-<pre><code class="objectivec">
+<div class="tab-pane" id="speechSyn2-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#speechSyn2-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#speechSyn2-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="speechSyn2-ObjC" role="tabpanel">
+            <code class="objectivec">
+
     NSMutableAttributedString &#42; attrStr = [[NSMutableAttributedString alloc] initWithString:@"blablabla" 
                                                                              attributes:@{AVSpeechSynthesisIPANotationAttribute:@"ˈma͡ɪ.ˈa͡ɪ.ˈfʌ.ˈniz.ˈgɻe͡ɪt"}];
     
@@ -3689,9 +4643,11 @@ When a particular spelling is intended, phonetics is highly recommended to get t
     
     AVSpeechSynthesizer &#42; synthesizer = [[AVSpeechSynthesizer alloc] init];
     [synthesizer speakUtterance:utterance];
-</code></pre>
+</code>
+        </div>
+        <div class="tab-pane swift" id="speechSyn2-Swift" role="tabpanel" >
+            <code class="swift">
 
-<pre><code class="swift">
         let pronunciationKey = NSAttributedString.Key(rawValue: AVSpeechSynthesisIPANotationAttribute)
         
         let attrStr = NSMutableAttributedString(string: "blablabla",
@@ -3701,7 +4657,10 @@ When a particular spelling is intended, phonetics is highly recommended to get t
 
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
-</code></pre>
+</code>
+        </div>
+    </div>
+</div>
 
 <br>Generating phonetics may be done in the device settings.
 <ul class="nav nav-tabs" role="tablist">
@@ -3833,122 +4792,147 @@ The following steps represent the customization:
 
 <br>
 
-<pre><code class="objectivec">
-@interface ViewController2 ()
+<div class="tab-pane" id="switchCtrl-Example" role="tabpanel">
+    <ul class="nav nav-tabs languageinfo" role="tablist">
+        <li class="nav-item item-oc" role="presentation">
+            <a class="nav-link active"
+            data-toggle="tab" 
+            href="#switchCtrl-ObjC" 
+            role="tab" 
+            aria-selected="true">Objective C</a>
+        </li>
+        <li class="nav-item item-s" role="presentation">
+            <a class="nav-link" 
+            data-toggle="tab" 
+            href="#switchCtrl-Swift" 
+            role="tab" 
+            aria-selected="false">Swift</a>
+        </li>
+    </ul>
+    <div class="tab-content languageinfotab">
+        <div class="tab-pane objc show active" id="switchCtrl-ObjC" role="tabpanel">
+            <code class="objectivec">
 
-@property (weak, nonatomic) IBOutlet UIStackView * btnsParentView;
-@property (weak, nonatomic) IBOutlet UIButton * btn1;
-@property (weak, nonatomic) IBOutlet UIButton * btn2;
-@property (weak, nonatomic) IBOutlet UIButton * btn5;
-@property (weak, nonatomic) IBOutlet UIButton * btn6;
+    @interface ViewController2 ()
 
-@end
+    @property (weak, nonatomic) IBOutlet UIStackView * btnsParentView;
+    @property (weak, nonatomic) IBOutlet UIButton * btn1;
+    @property (weak, nonatomic) IBOutlet UIButton * btn2;
+    @property (weak, nonatomic) IBOutlet UIButton * btn5;
+    @property (weak, nonatomic) IBOutlet UIButton * btn6;
+
+    @end
 
 
-@implementation ViewController2
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    
-    //Creation of the first group 'testWrap' COMBINING the 'Test_1' and 'Test_2' buttons.
-    UIButton * testOneButton = [self.view viewWithTag:1];
-    UIButton * testTwoButton = [self.view viewWithTag:2];
-    CGRect testWrapFrame = CGRectUnion(testOneButton.frame, testTwoButton.frame);
-    
-    UIAccessibilityElement * testWrap = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
-    
-    testWrap.isAccessibilityElement = false;
-    testWrap.accessibilityFrame = testWrapFrame;
-    testWrap.accessibilityNavigationStyle = UIAccessibilityNavigationStyleCombined; //Property specific to Switch Control.
-    testWrap.accessibilityElements = @[testOneButton, testTwoButton];
-    
-    
-    //Creation of the 'secondGroup' SEPARATING the first two buttons.
-    CGRect secondGroupRect = CGRectUnion(_btn1.frame, _btn2.frame);
-    CGRect secondGroupFrame = [_btnsParentView convertRect:secondGroupRect
-                                                    toView:self.view];
-    UIAccessibilityElement * secondGroup = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:_btnsParentView];
-    
-    secondGroup.isAccessibilityElement = false;
-    secondGroup.accessibilityFrame = secondGroupFrame;
-    secondGroup.accessibilityNavigationStyle = UIAccessibilityNavigationStyleSeparate;
-    secondGroup.accessibilityElements = @[_btn1, _btn2];
-
-    
-    //Creation of the 'thirdGroup' COMBINING the last two buttons.
-    CGRect thirdGroupRect = CGRectUnion(_btn5.frame, _btn6.frame);
-    CGRect thirdGroupFrame = [_btnsParentView convertRect:thirdGroupRect
-                                                   toView:self.view];
-    UIAccessibilityElement * thirdGroup = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:_btnsParentView];
-    
-    thirdGroup.isAccessibilityElement = false;
-    thirdGroup.accessibilityFrame = thirdGroupFrame;
-    thirdGroup.accessibilityNavigationStyle = UIAccessibilityNavigationStyleCombined;
-    thirdGroup.accessibilityElements = @[_btn5, _btn6];
-    
-    
-    self.view.accessibilityElements = @[testWrap, 
-                                        secondGroup, 
-                                        thirdGroup];
-}
-@end
-</code></pre>
-
-<pre><code class="swift">
-class ViewController: UIViewController {
-    
-    @IBOutlet weak var btnsParentView: UIStackView!
-    @IBOutlet weak var btn1: UIButton!
-    @IBOutlet weak var btn2: UIButton!
-    @IBOutlet weak var btn5: UIButton!
-    @IBOutlet weak var btn6: UIButton!
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    @implementation ViewController2
+    - (void)viewDidAppear:(BOOL)animated {
+        [super viewDidAppear:animated];
         
         //Creation of the first group 'testWrap' COMBINING the 'Test_1' and 'Test_2' buttons.
-        let testOneButton = self.view.viewWithTag(1) as? UIButton
-        let testTwoButton = self.view.viewWithTag(2) as? UIButton
-        let testWrapFrame = testOneButton?.frame.union((testTwoButton?.frame)!)
-
-        let testWrap = UIAccessibilityElement(accessibilityContainer: self.view!)
-
-        testWrap.isAccessibilityElement = false
-        testWrap.accessibilityFrame = testWrapFrame!
-        testWrap.accessibilityNavigationStyle = .combined   //Property specific to Switch Control.
-        testWrap.accessibilityElements = [testOneButton!, testTwoButton!]
-
-
+        UIButton * testOneButton = [self.view viewWithTag:1];
+        UIButton * testTwoButton = [self.view viewWithTag:2];
+        CGRect testWrapFrame = CGRectUnion(testOneButton.frame, testTwoButton.frame);
+        
+        UIAccessibilityElement * testWrap = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:self.view];
+        
+        testWrap.isAccessibilityElement = false;
+        testWrap.accessibilityFrame = testWrapFrame;
+        testWrap.accessibilityNavigationStyle = UIAccessibilityNavigationStyleCombined; //Property specific to Switch Control.
+        testWrap.accessibilityElements = @[testOneButton, testTwoButton];
+        
+        
         //Creation of the 'secondGroup' SEPARATING the first two buttons.
-        let secondGroupRect = btn1.frame.union(btn2.frame)
-        let secondGroupFrame = btnsParentView.convert(secondGroupRect,
-                                                      to: self.view)
-        let secondGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView!)
+        CGRect secondGroupRect = CGRectUnion(_btn1.frame, _btn2.frame);
+        CGRect secondGroupFrame = [_btnsParentView convertRect:secondGroupRect
+                                                        toView:self.view];
+        UIAccessibilityElement * secondGroup = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:_btnsParentView];
+        
+        secondGroup.isAccessibilityElement = false;
+        secondGroup.accessibilityFrame = secondGroupFrame;
+        secondGroup.accessibilityNavigationStyle = UIAccessibilityNavigationStyleSeparate;
+        secondGroup.accessibilityElements = @[_btn1, _btn2];
 
-        secondGroup.isAccessibilityElement = false
-        secondGroup.accessibilityFrame = secondGroupFrame
-        secondGroup.accessibilityNavigationStyle = .separate
-        secondGroup.accessibilityElements = [btn1!, btn2!]
-
-
+        
         //Creation of the 'thirdGroup' COMBINING the last two buttons.
-        let thirdGroupRect = btn5.frame.union(btn6.frame)
-        let thirdGroupFrame = btnsParentView.convert(thirdGroupRect,
-                                                     to: self.view)
-        let thirdGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView!)
-
-        thirdGroup.isAccessibilityElement = false
-        thirdGroup.accessibilityFrame = thirdGroupFrame
-        thirdGroup.accessibilityNavigationStyle = .combined
-        thirdGroup.accessibilityElements = [btn5!, btn6!]
-
-
-        self.view.accessibilityElements = [testWrap,
-                                           secondGroup, 
-                                           thirdGroup]
+        CGRect thirdGroupRect = CGRectUnion(_btn5.frame, _btn6.frame);
+        CGRect thirdGroupFrame = [_btnsParentView convertRect:thirdGroupRect
+                                                    toView:self.view];
+        UIAccessibilityElement * thirdGroup = [[UIAccessibilityElement alloc]initWithAccessibilityContainer:_btnsParentView];
+        
+        thirdGroup.isAccessibilityElement = false;
+        thirdGroup.accessibilityFrame = thirdGroupFrame;
+        thirdGroup.accessibilityNavigationStyle = UIAccessibilityNavigationStyleCombined;
+        thirdGroup.accessibilityElements = @[_btn5, _btn6];
+        
+        
+        self.view.accessibilityElements = @[testWrap, 
+                                            secondGroup, 
+                                            thirdGroup];
     }
-}
-</code></pre>
+    @end
+</code>
+        </div>
+        <div class="tab-pane swift" id="switchCtrl-Swift" role="tabpanel" >
+            <code class="swift">
+
+    class ViewController: UIViewController {
+        
+        @IBOutlet weak var btnsParentView: UIStackView!
+        @IBOutlet weak var btn1: UIButton!
+        @IBOutlet weak var btn2: UIButton!
+        @IBOutlet weak var btn5: UIButton!
+        @IBOutlet weak var btn6: UIButton!
+        
+        
+        override func viewDidAppear(_ animated: Bool) {
+            super.viewDidAppear(animated)
+            
+            //Creation of the first group 'testWrap' COMBINING the 'Test_1' and 'Test_2' buttons.
+            let testOneButton = self.view.viewWithTag(1) as? UIButton
+            let testTwoButton = self.view.viewWithTag(2) as? UIButton
+            let testWrapFrame = testOneButton?.frame.union((testTwoButton?.frame)!)
+
+            let testWrap = UIAccessibilityElement(accessibilityContainer: self.view!)
+
+            testWrap.isAccessibilityElement = false
+            testWrap.accessibilityFrame = testWrapFrame!
+            testWrap.accessibilityNavigationStyle = .combined   //Property specific to Switch Control.
+            testWrap.accessibilityElements = [testOneButton!, testTwoButton!]
+
+
+            //Creation of the 'secondGroup' SEPARATING the first two buttons.
+            let secondGroupRect = btn1.frame.union(btn2.frame)
+            let secondGroupFrame = btnsParentView.convert(secondGroupRect,
+                                                        to: self.view)
+            let secondGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView!)
+
+            secondGroup.isAccessibilityElement = false
+            secondGroup.accessibilityFrame = secondGroupFrame
+            secondGroup.accessibilityNavigationStyle = .separate
+            secondGroup.accessibilityElements = [btn1!, btn2!]
+
+
+            //Creation of the 'thirdGroup' COMBINING the last two buttons.
+            let thirdGroupRect = btn5.frame.union(btn6.frame)
+            let thirdGroupFrame = btnsParentView.convert(thirdGroupRect,
+                                                        to: self.view)
+            let thirdGroup = UIAccessibilityElement(accessibilityContainer: btnsParentView!)
+
+            thirdGroup.isAccessibilityElement = false
+            thirdGroup.accessibilityFrame = thirdGroupFrame
+            thirdGroup.accessibilityNavigationStyle = .combined
+            thirdGroup.accessibilityElements = [btn5!, btn6!]
+
+
+            self.view.accessibilityElements = [testWrap,
+                                            secondGroup, 
+                                            thirdGroup]
+        }
+    }
+</code>
+        </div>
+    </div>
+</div>
 
 <br>The visual rendering is exposed hereunder:
 
