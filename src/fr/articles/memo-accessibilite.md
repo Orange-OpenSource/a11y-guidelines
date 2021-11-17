@@ -34,10 +34,10 @@ Choisissez les mémos qui vous correspondent :
     </p>
   </div>
   <div class="col-xl-9">  
-    <h3>Description</h4>
+    <h3 id="desc-web">Description</h4>
     <p>Mémo à destination des développeurs Web.</p>
     <p>Rappel des techniques et outils indispensables pour développer un site web accessible.</p>        
-    <h3>Téléchargements</h4>
+    <h3 id="tele-web">Téléchargements</h4>
     <p>    
       <a href="../../res/memos/dev-web/Memo-Web-Orange.svg" class="btn btn-secondary">
         Consulter au format SVG
@@ -62,11 +62,11 @@ Choisissez les mémos qui vous correspondent :
     </p>
   </div>
   <div class="col-xl-9">  
-    <h3>Description</h4>
+    <h3 id="desc-tests-web">Description</h4>
     <p>Mémo à destination des personnes qui réalisent des tests Web d'accessibilité.</p>
     <p>Rappel des outils et des principaux tests à effectuer pour vérifier l'accessibilité d'une page Web.</p>
     </p>        
-    <h3>Téléchargements</h4>
+    <h3 id="tele-tests-web">Téléchargements</h4>
     <p>    
       <a href="../../res/memos/tests-web/Memo-Tests-Web-Orange.svg" class="btn btn-secondary">
         Consulter au format SVG
@@ -91,10 +91,10 @@ Choisissez les mémos qui vous correspondent :
     </p>
   </div>
   <div class="col-xl-9">  
-    <h3>Description</h4>
+    <h3 id="desc-android">Description</h4>
     <p>Mémo à destination des développeurs Android.</p>
     <p>Rappel des techniques et outils indispensables pour développer un application Android accessible.</p>
-    <h3>Téléchargements</h4>
+    <h3 id="tele-android">Téléchargements</h4>
     <p>   
       <a href="../../res/memos/android/Memo-Android-Orange.svg" class="btn btn-secondary">
         Consulter au format SVG
@@ -119,10 +119,10 @@ Choisissez les mémos qui vous correspondent :
     </p>
   </div>
   <div class="col-xl-9">  
-    <h3>Description</h4>
+    <h3 id="desc-ios">Description</h4>
     <p>Mémo à destination des développeurs iOS.<p>
     <p>Rappel des techniques et outils indispensables pour développer un application iOS accessible.</p>
-    <h3>Téléchargements</h4>
+    <h3 id="tele-ios">Téléchargements</h4>
     <p>    
       <a href="../../res/memos/ios/Memo-iOS-Orange.svg" class="btn btn-secondary">
         Consulter au format SVG
@@ -147,9 +147,9 @@ Choisissez les mémos qui vous correspondent :
     </p>
   </div>
   <div class="col-xl-9">  
-    <h3>Description</h4>
+    <h3 id="desc-email">Description</h4>
     <p>Rappel des bonnes pratiques pour rédiger un email accessible.</p>
-    <h3>Téléchargements</h4>
+    <h3 id="tele-email">Téléchargements</h4>
     <p>    
       <a href="../../res/memos/email/Memo-Email-Orange.svg" class="btn btn-secondary">
         Consulter au format SVG
