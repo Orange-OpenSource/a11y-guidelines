@@ -1,12 +1,12 @@
 ---
 title: "Use ARIA for status messages"
 abstract: "Status messages, how to with ARIA"
+titleBeforeTag: true
 date: "2019-02-20"
 tags:
   - web
+  - intermediate
 ---
-
-# Use <abbr>ARIA</abbr> for status messages
 
 ## Status message and accessibility
 The WCAG 2.1 criterion <a href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a> requires that important informations for the user, which do not induce a change of context (no opening of a new window, no focus on the content, no modification of the content or the viewport), are seen via properties and roles (<abbr>ARIA</abbr>) by anyone using <abbr>AT</abbr> without taking focus on the message.

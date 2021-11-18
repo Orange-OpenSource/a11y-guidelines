@@ -1,12 +1,12 @@
 ---
 title: "ARIA attributes that can save you"
 abstract: "Some ARIA attributes you must know"
+titleBeforeTag: true
 date: "2018-07-18"
 tags:
   - web
+  - intermediate
 ---
-
-# <abbr>ARIA</abbr> attributes that can save you: `aria-label`, `aria-labelledby` and `aria-describedby` 
 
 ## Introduction
 ### Accessible name and description

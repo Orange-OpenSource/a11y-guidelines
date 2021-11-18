@@ -1,12 +1,12 @@
 ---
 title: "CAPTCHA Accessibility"
 abstract: "CAPTCHA and accessibility"
+titleBeforeTag: true
 date: "2018-02-08"
 tags:
   - web
+  - advanced
 ---
-
-# CAPTCHA Accessibility
 
 ## Introduction
 

@@ -1,12 +1,12 @@
 ---
 title: "Some best practices for downloading links"
 abstract: "How to make usable and understandable downloading links"
+titleBeforeTag: true
 date: "2020-09-01"
 tags:
   - web
+  - intermediate
 ---
-
-# Best practices for download links
 
 There are different types of links: [classic links](/en/web/develop/general-navigation) allowing to reach a new page, [skip links] (/en/articles/skip-links-best-practices) allowing to move within the page and finally those which interest us in this article, the links allowing to download a file.
 

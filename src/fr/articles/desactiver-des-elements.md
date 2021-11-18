@@ -1,12 +1,14 @@
 ---
 title: "Désactiver des éléments HTML"
 abstract: "Comment désactiver des éléments d'une page ?"
+titleBeforeTag: true
 date: "2021-07-01"
 tags:
   - web
+  - beginner
 ---
 
-# Désactiver un champ de formulaire
+## Désactiver un champ de formulaire
 
 Pour désactiver un champ de formulaire il suffit de lui attribuer l'attribut `disabled` :
 
@@ -27,7 +29,7 @@ Si `disable` est utilisé sur un `<fieldset>`, les éléments enfants sont désa
 </fieldset>
 ```
 
-# Désactiver un lien
+## Désactiver un lien
 
 Pour désactiver un lien, contrairement à la technique précédente, l'utilisation de l'attribut `disabled` n'est pas autorisée. Il est tout de même possible de désactiver un lien en suivant les 3 étapes suivantes : 
 - supprimer l'attribut `href` pour qu'il ne puisse plus recevoir le focus

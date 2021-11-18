@@ -1,12 +1,12 @@
 ---
 title: "HTML5 & ARIA"
 abstract: "HTML 5 and ARIA introduction"
+titleBeforeTag: true
 date: "2016-09-08"
 tags:
   - web
+  - beginner
 ---
-
-# <abbr>HTML5</abbr> & <abbr>ARIA</abbr>
 
 ## Introduction
 

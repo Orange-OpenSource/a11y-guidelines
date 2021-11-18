@@ -28,15 +28,19 @@ module.exports = {
       label: 'Search'
     },
     filtersBar: {
-      label: 'Filters',
+      label: 'Filter by theme ',
       all: "All"
     },
     tags: {
+      list : "Associated themes :",
       componentExample: "Component example",
       mobile: 'Mobile',
       technicalArticle: 'Technical article',
       web: 'Web',
-      veille: 'Watch'
+      veille: 'Watch',
+      beginner: 'Beginner',
+      intermediate: 'Intermediate',
+      advanced: 'Advanced'
     },
     toc: {
       title: 'Table of content'
@@ -93,15 +97,19 @@ module.exports = {
       label: 'Rechercher'
     },
     filtersBar: {
-      label: 'Filtres',
+      label: 'Filtrer par thématique',
       all: 'Tout'
     },
     tags: {
+      list : "Thématiques associées :",
       componentExample: "Exemple de composant",
       mobile: 'Mobile',
       technicalArticle: 'Article technique',
       web: 'Web',
-      veille: 'Veille'
+      veille: 'Veille',
+      beginner: 'Débutant',
+      intermediate: 'Intermédiaire',
+      advanced: 'Avancé'
     },
     toc: {
       title: 'Sommaire'

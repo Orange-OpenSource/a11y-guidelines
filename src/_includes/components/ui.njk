@@ -70,23 +70,24 @@
       <h2 class="mb-1">
         <a href="{{ post.url }}" class="text-decoration-none">{{ post.data.title }}</a>
       </h2>
+      {% if displayTags == true and tags %}
+       <span id="post_{{loop.index}}" class="sr-only">{{'tags.list' | translate}}</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_{{loop.index}}">
+          {%- for tag in tags -%}
+            {%- set tagTranslationKey = 'tags.' + tag -%}
+            <li class="list-inline-item">
+              <a href="?tag={{ tag }}" class="btn btn-dark btn-sm">
+                {{ tagTranslationKey | translate }}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {% endif %}
       {% if displayDate == true and post.date %}
         <time class="text-muted" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale  %}</time>
       {% endif %}
       {% if post.data.abstract %}
         <p class="my-2">{{ post.data.abstract }}</p>
-      {% endif %}
-      {% if displayTags == true and tags %}
-        <ul class="list-inline">
-          {%- for tag in tags -%}
-            {%- set tagTranslationKey = 'tags.' + tag -%}
-            <li class="list-inline-item">
-              <a href="?tag={{ tag }}" class="badge badge-secondary">
-                <span class="sr-only">{{ 'filtersBar.label' | translate }}&nbsp;</span>{{ tagTranslationKey | translate }}
-              </a>
-            </li>
-          {%- endfor -%}
-        </ul>
       {% endif %}
     </article>
   </li>
@@ -100,24 +101,26 @@
 
 {%- macro filtersBar(posts) -%}
 {% set tags = posts | getPostsTags %}
-<nav id="filtersbar" class="hidden-if-no-js o-nav-local navbar-light mb-4 d-flex align-items-center" aria-labelledby="filtersbar_label" role="navigation">
-  <h2 id="filtersbar_label" class="h6 mb-0 pr-3">{{ 'filtersBar.label' | translate }} :</h2>
+<div class="hidden-if-no-js o-nav-local navbar-light mb-4 d-flex align-items-center">
+<h2 id="filtersbar_label" class="h6 mb-0 pr-3">{{ 'filtersBar.label' | translate }} :</h2>
+<nav id="filtersbar" aria-labelledby="filtersbar_label" role="navigation">
   <ul class="nav">
     <li class="nav-item">
       <a href="?all" class="nav-link" data-tag="all">
-        <span class="sr-only">{{ 'filtersBar.label' | translate }}&nbsp;</span>{{ 'filtersBar.all' | translate }}
+        {{ 'filtersBar.all' | translate }}
       </a>
     </li>
     {%- for tag in tags -%}
       {%- set tagTranslationKey = 'tags.' + tag -%}
       <li class="nav-item">
         <a href="?tag={{ tag }}" class="nav-link" data-tag="{{ tag }}">
-          <span class="sr-only">{{ 'filtersBar.label' | translate }}&nbsp;</span>{{ tagTranslationKey | translate }}
+          {{ tagTranslationKey | translate }}
         </a>
       </li>
     {%- endfor -%}
   </ul>
 </nav>
+</div>
 {%- endmacro -%}
 
 {%- macro toc(mode = "list") -%}

@@ -1,12 +1,12 @@
 ---
-title: "Quelques bonnes pratiques pour les images SVG"
+title: "Les images SVG sont de plus en plus utilisées sur le web mais qu’en est-il de leur accessibilité ?"
 abstract: "Comment rendre accessibles les images SVG"
+titleBeforeTag: true
 date: "2021-01-01"
 tags:
   - web
+  - intermediate
 ---
-
-# Les images SVG sont de plus en plus utilisées sur le web mais qu’en est-il de leur accessibilité ?
 
 Voici quelques pistes sachant que le support navigateurs/aide techniques évolue très rapidement !
 Important : Pensez donc à tester vos implémentations sur des cibles navigateurs /aides techniques les plus utilisées par vos utilisateurs, cela, quel que soit la solution pour laquelle vous optez. ;

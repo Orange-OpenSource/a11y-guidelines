@@ -1,12 +1,11 @@
 ---
-title: "#a11y technical watch, August-September 2021"
+title: "Digital accessibility watch August - September 2021"
 abstract: "#a11y anthology, August-September 2021"
+titleBeforeTag: true
 date: "2021-09-27"
 tags:
   - veille
 ---
-
-# Digital accessibility watch August - September 2021
 
 We feel that it is getting closer and there, you'll tell me... WHAT ??
 Well, the WCAG 3, a little explanation of these future guidelines: https://w3c.github.io/silver/explainer/

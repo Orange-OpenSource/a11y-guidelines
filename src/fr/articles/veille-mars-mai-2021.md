@@ -1,12 +1,11 @@
 ---
-title: "Veille #A11y Mars-Mai 2021"
+title: "Veille accessibilité numérique Mars - Mai 2021"
 abstract: "Florilèges de ressources en #a11y, mars-mai 2021"
+titleBeforeTag: true
 date: "2021-06-03"
 tags:
   - veille
 ---
-
-# Veille accessibilité numérique Mars - Mai 2021
 
 Pour la cent cinquantième fois au moins, dans cette veille, on vous dit et on vous prouve que les solutions de surcouches magiques d’accessibilité numérique ne marchent pas.
 

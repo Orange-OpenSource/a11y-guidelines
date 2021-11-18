@@ -1,12 +1,12 @@
 ---
 title: "Recommandations pour l'accessibilité d'un composant d'autocomplétion"
 abstract: "Présentation de notre démarche et des recommandations pour les composants d'autocomplétion"
+titleBeforeTag: true
 date: "2020-12-23"
 tags:
   - web
+  - advanced
 ---
-
-# Recommandations pour l'accessibilité d'un composant d'autocomplétion
 
 Les composants d’autocomplétion sont de plus en plus courants au sein de nos interfaces, pourtant ils restent souvent peu accessibles.
 

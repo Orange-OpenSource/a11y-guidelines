@@ -1,12 +1,11 @@
 ---
-title: "Veille #A11y Janvier-Février 2021"
+title: "Veille accessibilité numérique Janvier 2021 – février 2021"
 abstract: "Florilèges de ressources en #a11y, janvier-février 2021"
+titleBeforeTag: true
 date: "2021-02-19"
 tags:
   - veille
 ---
-
-# Veille accessibilité numérique Décembre 2020 – Janvier 2021
 
 Grosse nouvelle, sortie du “W3C First Public Working Draft 21 January 2021” l’avenir de l’a11y web et bien plus. Une introduction&nbsp;: https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/ 
 
