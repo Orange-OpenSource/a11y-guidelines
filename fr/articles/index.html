@@ -172,44 +172,59 @@
 
 
   
-<nav id="filtersbar" class="hidden-if-no-js o-nav-local navbar-light mb-4 d-flex align-items-center" aria-labelledby="filtersbar_label" role="navigation">
-  <h2 id="filtersbar_label" class="h6 mb-0 pr-3">Filtres :</h2>
+<div class="hidden-if-no-js o-nav-local navbar-light mb-4 d-flex align-items-center">
+<h2 id="filtersbar_label" class="h6 mb-0 pr-3">Filtrer par thématique :</h2>
+<nav id="filtersbar" aria-labelledby="filtersbar_label" role="navigation">
   <ul class="nav">
     <li class="nav-item">
       <a href="?all" class="nav-link" data-tag="all">
-        <span class="sr-only">Filtres&nbsp;</span>Tout
+        Tout
       </a>
     </li><li class="nav-item">
         <a href="?tag=veille" class="nav-link" data-tag="veille">
-          <span class="sr-only">Filtres&nbsp;</span>Veille
+          Veille
         </a>
       </li><li class="nav-item">
         <a href="?tag=web" class="nav-link" data-tag="web">
-          <span class="sr-only">Filtres&nbsp;</span>Web
+          Web
+        </a>
+      </li><li class="nav-item">
+        <a href="?tag=beginner" class="nav-link" data-tag="beginner">
+          Débutant
+        </a>
+      </li><li class="nav-item">
+        <a href="?tag=advanced" class="nav-link" data-tag="advanced">
+          Avancé
+        </a>
+      </li><li class="nav-item">
+        <a href="?tag=intermediate" class="nav-link" data-tag="intermediate">
+          Intermédiaire
         </a>
       </li></ul>
 </nav>
+</div>
 
 <ol class="list-unstyled">
 
   <li class="border-bottom border-500 py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/fr/articles/veille-aout-septembre-2021/" class="text-decoration-none">Veille #A11y Août-Septembre 2021</a>
+        <a href="/fr/articles/veille-aout-septembre-2021/" class="text-decoration-none">Veille accessibilité numérique Août – Septembre 2021</a>
       </h2>
+      
+       <span id="post_1" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_1"><li class="list-inline-item">
+              <a href="?tag=veille" class="btn btn-dark btn-sm">
+                Veille
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2021-09-27T00:00:00.000Z">27 septembre 2021</time>
       
       
         <p class="my-2">Florilèges de ressources en #a11y, Août-Septembre 2021</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=veille" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Veille
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
@@ -217,87 +232,103 @@
   <li class="border-bottom border-500 py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/fr/articles/veille-juin-juillet-2021/" class="text-decoration-none">Veille #A11y Juin-Juillet 2021</a>
+        <a href="/fr/articles/veille-juin-juillet-2021/" class="text-decoration-none">Veille accessibilité numérique Juin – Juillet 2021</a>
       </h2>
+      
+       <span id="post_2" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_2"><li class="list-inline-item">
+              <a href="?tag=veille" class="btn btn-dark btn-sm">
+                Veille
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2021-08-03T00:00:00.000Z">03 août 2021</time>
       
       
         <p class="my-2">Florilèges de ressources en #a11y, Juin-Juillet 2021</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=veille" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Veille
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;beginner">
     <article>
       <h2 class="mb-1">
         <a href="/fr/articles/couleur-et-taille-du-texte/" class="text-decoration-none">Taille et couleur des textes</a>
       </h2>
+      
+       <span id="post_3" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_3"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+                Débutant
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2021-07-05T00:00:00.000Z">05 juillet 2021</time>
       
       
         <p class="my-2">Quelle taille et quelles couleurs doit ont adopter pour les textes ?</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;beginner">
     <article>
       <h2 class="mb-1">
         <a href="/fr/articles/desactiver-des-elements/" class="text-decoration-none">Désactiver des éléments HTML</a>
       </h2>
+      
+       <span id="post_4" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_4"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+                Débutant
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2021-07-01T00:00:00.000Z">01 juillet 2021</time>
       
       
         <p class="my-2">Comment désactiver des éléments d&#39;une page ?</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;advanced">
     <article>
       <h2 class="mb-1">
-        <a href="/fr/articles/single-page-app/" class="text-decoration-none">Single Page Applications (SPA)</a>
+        <a href="/fr/articles/single-page-app/" class="text-decoration-none">Recommandations pour les Single Page Applications (SPA)</a>
       </h2>
+      
+       <span id="post_5" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_5"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=advanced" class="btn btn-dark btn-sm">
+                Avancé
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2021-06-16T00:00:00.000Z">16 juin 2021</time>
       
       
         <p class="my-2">Recommandations pour les Single Page Applications</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
@@ -305,21 +336,22 @@
   <li class="border-bottom border-500 py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/fr/articles/veille-mars-mai-2021/" class="text-decoration-none">Veille #A11y Mars-Mai 2021</a>
+        <a href="/fr/articles/veille-mars-mai-2021/" class="text-decoration-none">Veille accessibilité numérique Mars - Mai 2021</a>
       </h2>
+      
+       <span id="post_6" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_6"><li class="list-inline-item">
+              <a href="?tag=veille" class="btn btn-dark btn-sm">
+                Veille
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2021-06-03T00:00:00.000Z">03 juin 2021</time>
       
       
         <p class="my-2">Florilèges de ressources en #a11y, mars-mai 2021</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=veille" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Veille
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
@@ -327,240 +359,291 @@
   <li class="border-bottom border-500 py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/fr/articles/veille-janvier-fevrier-2021/" class="text-decoration-none">Veille #A11y Janvier-Février 2021</a>
+        <a href="/fr/articles/veille-janvier-fevrier-2021/" class="text-decoration-none">Veille accessibilité numérique Janvier 2021 – février 2021</a>
       </h2>
+      
+       <span id="post_7" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_7"><li class="list-inline-item">
+              <a href="?tag=veille" class="btn btn-dark btn-sm">
+                Veille
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2021-02-19T00:00:00.000Z">19 février 2021</time>
       
       
         <p class="my-2">Florilèges de ressources en #a11y, janvier-février 2021</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=veille" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Veille
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
-        <a href="/fr/articles/svg-accessibles/" class="text-decoration-none">Quelques bonnes pratiques pour les images SVG</a>
+        <a href="/fr/articles/svg-accessibles/" class="text-decoration-none">Les images SVG sont de plus en plus utilisées sur le web mais qu’en est-il de leur accessibilité ?</a>
       </h2>
+      
+       <span id="post_8" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_8"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+                Intermédiaire
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2021-01-01T00:00:00.000Z">01 janvier 2021</time>
       
       
         <p class="my-2">Comment rendre accessibles les images SVG</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;advanced">
     <article>
       <h2 class="mb-1">
         <a href="/fr/articles/recommandations-autocompletion/" class="text-decoration-none">Recommandations pour l&#39;accessibilité d&#39;un composant d&#39;autocomplétion</a>
       </h2>
+      
+       <span id="post_9" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_9"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=advanced" class="btn btn-dark btn-sm">
+                Avancé
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2020-12-23T00:00:00.000Z">23 décembre 2020</time>
       
       
         <p class="my-2">Présentation de notre démarche et des recommandations pour les composants d&#39;autocomplétion</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
-        <a href="/fr/articles/liens-telechargement/" class="text-decoration-none">Quelques bonnes pratiques pour les liens de téléchargement</a>
+        <a href="/fr/articles/liens-telechargement/" class="text-decoration-none">Les bonnes pratiques pour les liens de téléchargement</a>
       </h2>
+      
+       <span id="post_10" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_10"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+                Intermédiaire
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2020-07-02T00:00:00.000Z">02 juillet 2020</time>
       
       
         <p class="my-2">Comment rendre accessible les liens de téléchargement</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
         <a href="/fr/articles/aria-live-alert/" class="text-decoration-none">L&#39;attribut aria-live et le role alert</a>
       </h2>
+      
+       <span id="post_11" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_11"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+                Intermédiaire
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2020-01-08T00:00:00.000Z">08 janvier 2020</time>
       
       
         <p class="my-2">Quand et comment utiliser les roles et attributs de type live</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;beginner">
     <article>
       <h2 class="mb-1">
         <a href="/fr/articles/liens-evitement/" class="text-decoration-none">Les bonnes pratiques pour les liens d’évitements</a>
       </h2>
+      
+       <span id="post_12" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_12"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+                Débutant
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2019-06-19T00:00:00.000Z">19 juin 2019</time>
       
       
         <p class="my-2">Les liens d&#39;évitement, qu&#39;est-ce et comment bien les mettre en œuvre</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
         <a href="/fr/articles/messages-de-statut-aria/" class="text-decoration-none">Utiliser ARIA, les messages d&#39;état, de statut ou contextuel</a>
       </h2>
+      
+       <span id="post_13" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_13"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+                Intermédiaire
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2018-10-26T00:00:00.000Z">26 octobre 2018</time>
       
       
         <p class="my-2">Les messages d&#39;état, de statut ou contextuel gérés par ARIA</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
         <a href="/fr/articles/le-nom-accessible-en-html/" class="text-decoration-none">Le nom accessible en HTML</a>
       </h2>
+      
+       <span id="post_14" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_14"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+                Intermédiaire
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2018-10-26T00:00:00.000Z">26 octobre 2018</time>
       
       
         <p class="my-2">Le nom accessible, qu&#39;est-ce et son rapport avec les technologies d&#39;assistance</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;advanced">
     <article>
       <h2 class="mb-1">
         <a href="/fr/articles/les-captchas-et-l-accessibilite/" class="text-decoration-none">Les CAPTCHAs et l&#39;accessibilité</a>
       </h2>
+      
+       <span id="post_15" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_15"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=advanced" class="btn btn-dark btn-sm">
+                Avancé
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2018-02-07T00:00:00.000Z">07 février 2018</time>
       
       
         <p class="my-2">Notre point de vue sur les CAPTCHAs et l&#39;accessibilité</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
         <a href="/fr/articles/attributs-aria-qui-peuvent-vous-sauver/" class="text-decoration-none">Les attributs ARIA qui peuvent vous sauver !</a>
       </h2>
+      
+       <span id="post_16" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_16"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+                Intermédiaire
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2018-01-08T00:00:00.000Z">08 janvier 2018</time>
       
       
         <p class="my-2">Quelques attributs ARIA à connaître pour avoir un nom accessible</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;beginner">
     <article>
       <h2 class="mb-1">
         <a href="/fr/articles/html5-et-aria/" class="text-decoration-none">HTML5 &amp; ARIA</a>
       </h2>
       
+       <span id="post_17" class="sr-only">Thématiques associées :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_17"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+                Débutant
+              </a>
+            </li></ul>
+      
+      
         <time class="text-muted" datetime="2016-09-16T00:00:00.000Z">16 septembre 2016</time>
       
       
         <p class="my-2">Introduction HTML 5 et ARIA</p>
-      
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filtres&nbsp;</span>Web
-              </a>
-            </li></ul>
       
     </article>
   </li>

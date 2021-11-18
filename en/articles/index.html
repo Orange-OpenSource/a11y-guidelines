@@ -172,43 +172,58 @@
 
 
   
-<nav id="filtersbar" class="hidden-if-no-js o-nav-local navbar-light mb-4 d-flex align-items-center" aria-labelledby="filtersbar_label" role="navigation">
-  <h2 id="filtersbar_label" class="h6 mb-0 pr-3">Filters :</h2>
+<div class="hidden-if-no-js o-nav-local navbar-light mb-4 d-flex align-items-center">
+<h2 id="filtersbar_label" class="h6 mb-0 pr-3">Filter by theme  :</h2>
+<nav id="filtersbar" aria-labelledby="filtersbar_label" role="navigation">
   <ul class="nav">
     <li class="nav-item">
       <a href="?all" class="nav-link" data-tag="all">
-        <span class="sr-only">Filters&nbsp;</span>All
+        All
       </a>
     </li><li class="nav-item">
         <a href="?tag=veille" class="nav-link" data-tag="veille">
-          <span class="sr-only">Filters&nbsp;</span>Watch
+          Watch
         </a>
       </li><li class="nav-item">
         <a href="?tag=web" class="nav-link" data-tag="web">
-          <span class="sr-only">Filters&nbsp;</span>Web
+          Web
+        </a>
+      </li><li class="nav-item">
+        <a href="?tag=beginner" class="nav-link" data-tag="beginner">
+          Beginner
+        </a>
+      </li><li class="nav-item">
+        <a href="?tag=advanced" class="nav-link" data-tag="advanced">
+          Advanced
+        </a>
+      </li><li class="nav-item">
+        <a href="?tag=intermediate" class="nav-link" data-tag="intermediate">
+          Intermediate
         </a>
       </li></ul>
 </nav>
+</div>
 
 <ol class="list-unstyled">
 
   <li class="border-bottom border-500 py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-june-july-2021/" class="text-decoration-none">#a11y technical watch, August-September 2021</a>
+        <a href="/en/articles/watch-august-september-2021/" class="text-decoration-none">Digital accessibility watch August - September 2021</a>
       </h2>
+      
+       <span id="post_1" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_1"><li class="list-inline-item">
+              <a href="?tag=veille" class="btn btn-dark btn-sm">
+                Watch
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2021-09-27T00:00:00.000Z">September 27, 2021</time>
       
       
         <p class="my-2">#a11y anthology, August-September 2021</p>
-      
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=veille" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Watch
-              </a>
-            </li></ul>
       
     </article>
   </li>
@@ -217,87 +232,103 @@
   <li class="border-bottom border-500 py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-august-september-2021/" class="text-decoration-none">#a11y technical watch, August-September 2021</a>
+        <a href="/en/articles/watch-june-july-2021/" class="text-decoration-none">#a11y technical watch, June-July 2021</a>
       </h2>
       
-        <time class="text-muted" datetime="2021-09-27T00:00:00.000Z">September 27, 2021</time>
-      
-      
-        <p class="my-2">#a11y anthology, August-September 2021</p>
-      
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=veille" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Watch
+       <span id="post_2" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_2"><li class="list-inline-item">
+              <a href="?tag=veille" class="btn btn-dark btn-sm">
+                Watch
               </a>
             </li></ul>
+      
+      
+        <time class="text-muted" datetime="2021-08-03T00:00:00.000Z">August 03, 2021</time>
+      
+      
+        <p class="my-2">#a11y anthology, June-July 2021</p>
       
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;beginner">
     <article>
       <h2 class="mb-1">
         <a href="/en/articles/font-size-and-colors/" class="text-decoration-none">Text size and color </a>
       </h2>
+      
+       <span id="post_3" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_3"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+                Beginner
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2021-07-05T00:00:00.000Z">July 05, 2021</time>
       
       
         <p class="my-2">What size and what colors should the texts adopt?</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;beginner">
     <article>
       <h2 class="mb-1">
         <a href="/en/articles/disable-elements/" class="text-decoration-none">Disable HTML elements</a>
       </h2>
+      
+       <span id="post_4" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_4"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+                Beginner
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2021-07-01T00:00:00.000Z">July 01, 2021</time>
       
       
         <p class="my-2">How to disable HTML elements in the page?</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;advanced">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/single-page-app/" class="text-decoration-none">Single Page Applications (SPA)</a>
+        <a href="/en/articles/single-page-app/" class="text-decoration-none">Recommendations for Single Page Applications</a>
       </h2>
+      
+       <span id="post_5" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_5"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=advanced" class="btn btn-dark btn-sm">
+                Advanced
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2021-06-25T00:00:00.000Z">June 25, 2021</time>
       
       
         <p class="my-2">Recommendations for Single Page Applications</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
@@ -305,21 +336,22 @@
   <li class="border-bottom border-500 py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-march-may-2021/" class="text-decoration-none">#a11y technical watch, March-May 2021</a>
+        <a href="/en/articles/watch-march-may-2021/" class="text-decoration-none">Digital accessibility watch March - May  2021</a>
       </h2>
+      
+       <span id="post_6" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_6"><li class="list-inline-item">
+              <a href="?tag=veille" class="btn btn-dark btn-sm">
+                Watch
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2021-06-03T00:00:00.000Z">June 03, 2021</time>
       
       
         <p class="my-2">#a11y anthology, March-May 2021</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=veille" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Watch
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
@@ -327,240 +359,291 @@
   <li class="border-bottom border-500 py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-january-february-2021/" class="text-decoration-none">#a11y technical watch, January-February 2021</a>
+        <a href="/en/articles/watch-january-february-2021/" class="text-decoration-none">Digital accessibility watch January - February  2021</a>
       </h2>
+      
+       <span id="post_7" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_7"><li class="list-inline-item">
+              <a href="?tag=veille" class="btn btn-dark btn-sm">
+                Watch
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2021-02-19T00:00:00.000Z">February 19, 2021</time>
       
       
         <p class="my-2">#a11y anthology, January-February 2021</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=veille" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Watch
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/accessible-svg/" class="text-decoration-none">Some best practices for SVG images</a>
+        <a href="/en/articles/accessible-svg/" class="text-decoration-none">SVG images are used more and more on the web but what about their accessibility ?</a>
       </h2>
+      
+       <span id="post_8" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_8"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+                Intermediate
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2021-01-01T00:00:00.000Z">January 01, 2021</time>
       
       
         <p class="my-2">How to make SVG images accessible</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;advanced">
     <article>
       <h2 class="mb-1">
         <a href="/en/articles/autocomplete-component/" class="text-decoration-none">Best practices for the accessibility of an autocompletion component</a>
       </h2>
+      
+       <span id="post_9" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_9"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=advanced" class="btn btn-dark btn-sm">
+                Advanced
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2020-12-23T00:00:00.000Z">December 23, 2020</time>
       
       
         <p class="my-2">Presentation of our approach and selected guidelines for autocompletion components</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
         <a href="/en/articles/download-links/" class="text-decoration-none">Some best practices for downloading links</a>
       </h2>
+      
+       <span id="post_10" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_10"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+                Intermediate
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2020-09-01T00:00:00.000Z">September 01, 2020</time>
       
       
         <p class="my-2">How to make usable and understandable downloading links</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
         <a href="/en/articles/aria-live-alert/" class="text-decoration-none">The aria-live attribute and the role alert</a>
       </h2>
+      
+       <span id="post_11" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_11"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+                Intermediate
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2020-01-08T00:00:00.000Z">January 08, 2020</time>
       
       
         <p class="my-2">When and how to use roles and attributes of live content type</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;beginner">
     <article>
       <h2 class="mb-1">
         <a href="/en/articles/skip-links-best-practices/" class="text-decoration-none">Skip links best practices</a>
       </h2>
+      
+       <span id="post_12" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_12"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+                Beginner
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2019-06-19T00:00:00.000Z">June 19, 2019</time>
       
       
         <p class="my-2">Skip links, what is it and how to implement them</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
         <a href="/en/articles/aria-status-messages/" class="text-decoration-none">Use ARIA for status messages</a>
       </h2>
+      
+       <span id="post_13" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_13"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+                Intermediate
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2019-02-20T00:00:00.000Z">February 20, 2019</time>
       
       
         <p class="my-2">Status messages, how to with ARIA</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
         <a href="/en/articles/accessible-name/" class="text-decoration-none">The accessible name in HTML</a>
       </h2>
+      
+       <span id="post_14" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_14"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+                Intermediate
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2019-02-20T00:00:00.000Z">February 20, 2019</time>
       
       
         <p class="my-2">Accessible name, what is it and his link with Assistive Technologies</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
         <a href="/en/articles/aria-attributes-that-can-save-you/" class="text-decoration-none">ARIA attributes that can save you</a>
       </h2>
+      
+       <span id="post_15" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_15"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+                Intermediate
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2018-07-18T00:00:00.000Z">July 18, 2018</time>
       
       
         <p class="my-2">Some ARIA attributes you must know</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;advanced">
     <article>
       <h2 class="mb-1">
         <a href="/en/articles/captcha-accessibility/" class="text-decoration-none">CAPTCHA Accessibility</a>
       </h2>
+      
+       <span id="post_16" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_16"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=advanced" class="btn btn-dark btn-sm">
+                Advanced
+              </a>
+            </li></ul>
+      
       
         <time class="text-muted" datetime="2018-02-08T00:00:00.000Z">February 08, 2018</time>
       
       
         <p class="my-2">CAPTCHA and accessibility</p>
       
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Web
-              </a>
-            </li></ul>
-      
     </article>
   </li>
 
 
-  <li class="border-bottom border-500 py-3" data-tags="web">
+  <li class="border-bottom border-500 py-3" data-tags="web;beginner">
     <article>
       <h2 class="mb-1">
         <a href="/en/articles/html5-aria/" class="text-decoration-none">HTML5 &amp; ARIA</a>
       </h2>
       
+       <span id="post_17" class="sr-only">Associated themes :</span>
+        <ul class="list-inline mb-1" aria-labelledby="post_17"><li class="list-inline-item">
+              <a href="?tag=web" class="btn btn-dark btn-sm">
+                Web
+              </a>
+            </li><li class="list-inline-item">
+              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+                Beginner
+              </a>
+            </li></ul>
+      
+      
         <time class="text-muted" datetime="2016-09-08T00:00:00.000Z">September 08, 2016</time>
       
       
         <p class="my-2">HTML 5 and ARIA introduction</p>
-      
-      
-        <ul class="list-inline"><li class="list-inline-item">
-              <a href="?tag=web" class="badge badge-secondary">
-                <span class="sr-only">Filters&nbsp;</span>Web
-              </a>
-            </li></ul>
       
     </article>
   </li>

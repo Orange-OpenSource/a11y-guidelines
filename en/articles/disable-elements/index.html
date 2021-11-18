@@ -169,7 +169,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Table of content
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#disable-form-elements" class="dropdown-item text-wrap">Disable form elements</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#disable-form-elements" class="dropdown-item text-wrap">Disable form elements</a><a href="#disable-a-link" class="dropdown-item text-wrap">Disable a link</a></div>
     </nav>
         
       </div>
@@ -179,6 +179,19 @@
       <div class="row">
         
         <main id="main-content" class="col-md-9" role="main">
+          
+            <h1>Disable HTML elements</h1>  
+            
+              <span class="sr-only" id="filters_label">
+                Associated themes :
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="../?tag=web" class="btn btn-dark btn-sm" data-tag="web">Web</a></li>
+              <li class="list-inline-item"><a href="../?tag=beginner" class="btn btn-dark btn-sm" data-tag="beginner">Beginner</a></li>
+              </ul>
+            
+            <time class="text-muted" datetime="2021-07-01T00:00:00.000Z">July 01, 2021</time>
+            
+          <div class="mt-4">
           <h2 id="disable-form-elements">Disable form elements <a class="header-anchor" href="#disable-form-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>The <code>disabled</code> attribute is used to disable form elements</p>
 <pre><code class="language-html">&lt;button disabled&gt;Delete&lt;/button&gt;
@@ -195,7 +208,7 @@
     &lt;/select&gt;
 &lt;/fieldset&gt;
 </code></pre>
-<h1>Disable a link</h1>
+<h2 id="disable-a-link">Disable a link <a class="header-anchor" href="#disable-a-link" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>To disable a link, unlike the previous technique, the use of the <code>disabled</code> attribute is not allowed. It is still possible to disable a link by following 3 steps:</p>
 <ul>
 <li>remove the <code>href</code> attribute so that it can no longer receive the focus</li>
@@ -205,6 +218,7 @@
 <pre><code class="html">&lt;a role="link" aria-disabled="true"&gt; Disabled link &lt;/a&gt;</code></pre>
 <p>Check out Scott O'Hara's excellent article on the subject: <a href="https://www.scottohara.me/blog/2021/05/28/disabled-links.html">Disabling a link</a>.</p>
 
+          </div>
         </main>
         
           <div class="col-md-3">
@@ -212,7 +226,8 @@
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Table of content</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#disable-form-elements" class="nav-link text-muted">Disable form elements</a></li>
+            <a href="#disable-form-elements" class="nav-link text-muted">Disable form elements</a></li><li class="nav-item position-relative">
+            <a href="#disable-a-link" class="nav-link text-muted">Disable a link</a></li>
       </ul>
     </nav>
             </div>

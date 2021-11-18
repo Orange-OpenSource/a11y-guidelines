@@ -179,8 +179,20 @@
       <div class="row">
         
         <main id="main-content" class="col-md-9" role="main">
-          <h1><abbr>ARIA</abbr> attributes that can save you: <code>aria-label</code>, <code>aria-labelledby</code> and <code>aria-describedby</code></h1>
-<h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+          
+            <h1>ARIA attributes that can save you</h1>  
+            
+              <span class="sr-only" id="filters_label">
+                Associated themes :
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="../?tag=web" class="btn btn-dark btn-sm" data-tag="web">Web</a></li>
+              <li class="list-inline-item"><a href="../?tag=intermediate" class="btn btn-dark btn-sm" data-tag="intermediate">Intermediate</a></li>
+              </ul>
+            
+            <time class="text-muted" datetime="2018-07-18T00:00:00.000Z">July 18, 2018</time>
+            
+          <div class="mt-4">
+          <h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <h3 id="accessible-name-and-description">Accessible name and description <a class="header-anchor" href="#accessible-name-and-description" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <p>An accessible name is the information that allows assistive technology (<abbr>AT</abbr>), for example, a screen reader or a magnification program, to identify a given element (<abbr>HTML</abbr> tag). It can be provided by the title or content of an element, an attribute (for example, an <code>alt</code> attribute for an image) or by an associated element (for example, a <code>label</code> tag for a <code>input</code> field).</p>
 <p>An accessible description is more extensive information that is used by the <abbr>AT</abbr> allowing it to complete the accessible name by specifying and adding meaning where the accessible name is not sufficient.</p>
@@ -222,6 +234,7 @@
 </code></pre>
 <p>Screen reader output: &quot;Access HTML Login page sourcecode&quot;</p>
 
+          </div>
         </main>
         
           <div class="col-md-3">

@@ -12,8 +12,7 @@
     <link href="https://a11y-guidelines.orange.com/en/articles/html5-aria/"/>
     <updated>2016-09-08T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/html5-aria/</id>
-    <content type="html">&lt;h1&gt;&lt;abbr&gt;HTML5&lt;/abbr&gt; &amp;amp; &lt;abbr&gt;ARIA&lt;/abbr&gt;&lt;/h1&gt;
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/html5-aria/#introduction&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+    <content type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/html5-aria/#introduction&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Web sites are increasingly dynamic (asynchronous loading, dynamic content generation) and interactive (rich interface components: slider, datepicker…). So it is very difficult or impossible to make these components accessible with conventional &lt;abbr&gt;HTML&lt;/abbr&gt;.&lt;/p&gt;
 &lt;p&gt;Even with the &lt;abbr&gt;HTML5&lt;/abbr&gt; change, we still lack semantics to provide technical aids (screen readers, magnifiying software, …), keyboard navigation is often impossible, complex handling of the keyboard focus is missing and live regions are not notified to the user, in particular for the screenreaders.&lt;/p&gt;
 &lt;h2 id=&quot;what-is-it&quot;&gt;What is it ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/html5-aria/#what-is-it&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
@@ -49,8 +48,7 @@
     <link href="https://a11y-guidelines.orange.com/en/articles/captcha-accessibility/"/>
     <updated>2018-02-08T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/captcha-accessibility/</id>
-    <content type="html">&lt;h1&gt;CAPTCHA Accessibility&lt;/h1&gt;
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/captcha-accessibility/#introduction&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+    <content type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/captcha-accessibility/#introduction&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;A CAPTCHA (“Completely Automated Public Turing-test to tell Computers and Humans Apart”) is an automated test aimed at telling apart a human user from a software program. It is often used on forms to prevent spam.&lt;br /&gt;
 There are several types of CAPTCHAs, most of them are visual tests that ask the user to type a series of deformed letters displayed on the screen.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/en/web/images/captchas/captcha.png&quot; alt=&quot;Visual captcha screenshot&quot; class=&quot;img-fluid&quot; /&gt;&lt;br /&gt;
@@ -105,8 +103,7 @@ This solution is at the same time more constraining for the user who must commun
     <link href="https://a11y-guidelines.orange.com/en/articles/aria-attributes-that-can-save-you/"/>
     <updated>2018-07-18T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/aria-attributes-that-can-save-you/</id>
-    <content type="html">&lt;h1&gt;&lt;abbr&gt;ARIA&lt;/abbr&gt; attributes that can save you: &lt;code&gt;aria-label&lt;/code&gt;, &lt;code&gt;aria-labelledby&lt;/code&gt; and &lt;code&gt;aria-describedby&lt;/code&gt;&lt;/h1&gt;
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/aria-attributes-that-can-save-you/#introduction&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+    <content type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/aria-attributes-that-can-save-you/#introduction&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&quot;accessible-name-and-description&quot;&gt;Accessible name and description &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/aria-attributes-that-can-save-you/#accessible-name-and-description&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;An accessible name is the information that allows assistive technology (&lt;abbr&gt;AT&lt;/abbr&gt;), for example, a screen reader or a magnification program, to identify a given element (&lt;abbr&gt;HTML&lt;/abbr&gt; tag). It can be provided by the title or content of an element, an attribute (for example, an &lt;code&gt;alt&lt;/code&gt; attribute for an image) or by an associated element (for example, a &lt;code&gt;label&lt;/code&gt; tag for a &lt;code&gt;input&lt;/code&gt; field).&lt;/p&gt;
 &lt;p&gt;An accessible description is more extensive information that is used by the &lt;abbr&gt;AT&lt;/abbr&gt; allowing it to complete the accessible name by specifying and adding meaning where the accessible name is not sufficient.&lt;/p&gt;
@@ -155,8 +152,7 @@ This solution is at the same time more constraining for the user who must commun
     <link href="https://a11y-guidelines.orange.com/en/articles/accessible-name/"/>
     <updated>2019-02-20T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/accessible-name/</id>
-    <content type="html">&lt;h1&gt;The accessible name in &lt;abbr&gt;HTML&lt;/abbr&gt;&lt;/h1&gt;
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/accessible-name/#introduction&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+    <content type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/accessible-name/#introduction&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The name of the interface components also called accessible name, is basically the name who will be exposed to assistive technology &lt;abbr&gt;AT&lt;/abbr&gt; via the accessibility &lt;abbr&gt;API&lt;/abbr&gt;. This name is calculated by the browser via an algorithm called &lt;a href=&quot;https://www.w3.org/TR/accname-1.1/&quot;&gt;Accessible Name and Description Computation 1.1&lt;/a&gt;.&lt;br /&gt;
 In fact, to make it simple, the browser will generate an accessible tree from the &lt;abbr&gt;DOM&lt;/abbr&gt; (Document Object Model) in which a large majority of &lt;abbr&gt;HTML&lt;/abbr&gt; elements (those with only a presentation purpose, eg &lt;code&gt;div&lt;/code&gt; and&lt;code&gt; span&lt;/code&gt; tags do not have utility) need a (accessible) name to be correctly identified by the &lt;abbr&gt;AT&lt;/abbr&gt;.&lt;/p&gt;
 &lt;p&gt;The accessible name is derived from the content of a tag, attributes of this tag or an element associated with it.&lt;/p&gt;
@@ -212,8 +208,7 @@ But we could also use &lt;code&gt;aria-labelledby&lt;/code&gt; to reference anot
     <link href="https://a11y-guidelines.orange.com/en/articles/aria-status-messages/"/>
     <updated>2019-02-20T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/aria-status-messages/</id>
-    <content type="html">&lt;h1&gt;Use &lt;abbr&gt;ARIA&lt;/abbr&gt; for status messages&lt;/h1&gt;
-&lt;h2 id=&quot;status-message-and-accessibility&quot;&gt;Status message and accessibility &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/aria-status-messages/#status-message-and-accessibility&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+    <content type="html">&lt;h2 id=&quot;status-message-and-accessibility&quot;&gt;Status message and accessibility &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/aria-status-messages/#status-message-and-accessibility&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The WCAG 2.1 criterion &lt;a href=&quot;https://www.w3.org/TR/WCAG21/#status-messages&quot;&gt;4.1.3 Status Messages&lt;/a&gt; requires that important informations for the user, which do not induce a change of context (no opening of a new window, no focus on the content, no modification of the content or the viewport), are seen via properties and roles (&lt;abbr&gt;ARIA&lt;/abbr&gt;) by anyone using &lt;abbr&gt;AT&lt;/abbr&gt; without taking focus on the message.&lt;/p&gt;
 &lt;h2 id=&quot;some-examples-of-status-messages&quot;&gt;Some examples of status messages &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/aria-status-messages/#some-examples-of-status-messages&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;When a user presses a search button, the content of the page is updated asynchronously to add the search results displayed in a region below the search button. The message &amp;quot;XX results found&amp;quot; is at the top of this new content. A screen reader will have to announce &amp;quot;XX results have been found&amp;quot;. In this case, the information provided to the user is important and must be given immediately, so we will use the role &lt;code&gt;&amp;quot;alert&amp;quot;&lt;/code&gt;.&lt;/p&gt;
@@ -275,8 +270,7 @@ But we could also use &lt;code&gt;aria-labelledby&lt;/code&gt; to reference anot
     <link href="https://a11y-guidelines.orange.com/en/articles/skip-links-best-practices/"/>
     <updated>2019-06-19T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/skip-links-best-practices/</id>
-    <content type="html">&lt;h1&gt;Skip links best practices&lt;/h1&gt;
-&lt;h2 id=&quot;what-is-an-skip-link&quot;&gt;What is an skip link? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/skip-links-best-practices/#what-is-an-skip-link&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+    <content type="html">&lt;h2 id=&quot;what-is-an-skip-link&quot;&gt;What is an skip link? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/skip-links-best-practices/#what-is-an-skip-link&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&quot;what-is-it&quot;&gt;What is it? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/skip-links-best-practices/#what-is-it&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Skip links are shortcuts that allow you to directly access a content area or avoid some areas of the page, so you can navigate faster.&lt;/p&gt;
 &lt;p&gt;We can distinguish 3 types of skip links:&lt;/p&gt;
@@ -321,8 +315,7 @@ But we could also use &lt;code&gt;aria-labelledby&lt;/code&gt; to reference anot
     <link href="https://a11y-guidelines.orange.com/en/articles/aria-live-alert/"/>
     <updated>2020-01-08T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/aria-live-alert/</id>
-    <content type="html">&lt;h1&gt;The aria-live attribute and the role alert&lt;/h1&gt;
-&lt;p&gt;Users who navigate using a screen reader are not always aware of changes made on the page. When information is updated or when a message appears, it is sometimes necessary to make the screen reader speak to inform the user. To do this, the &lt;abbr&gt;ARIA&lt;/abbr&gt; language has the role &lt;code&gt;alert&lt;/code&gt; and the attribute&lt;code&gt; aria-live&lt;/code&gt;.&lt;/p&gt;
+    <content type="html">&lt;p&gt;Users who navigate using a screen reader are not always aware of changes made on the page. When information is updated or when a message appears, it is sometimes necessary to make the screen reader speak to inform the user. To do this, the &lt;abbr&gt;ARIA&lt;/abbr&gt; language has the role &lt;code&gt;alert&lt;/code&gt; and the attribute&lt;code&gt; aria-live&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;the-role-alert&quot;&gt;The role alert &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/aria-live-alert/#the-role-alert&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Positioned on an HTML element, this allows you to tell the screen reader to vocalize the element automatically when it is created. However, be sure to use this role only in appropriate cases, as clearly stated in the [Mozilla MDN] documentation (&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/&quot;&gt;https://developer.mozilla.org/fr/docs/Accessibilité/ARIA/Techniques_ARIA/&lt;/a&gt; Use_the_r% C3% B4le_alert). Due to its intrusive nature, role alert should be used sparingly and only in situations where the user&#39;s attention is immediately required. Less urgent dynamic changes should use a less aggressive method, such as &lt;code&gt;aria-live=&amp;quot;polite&amp;quot;&lt;/code&gt; or other live zone roles.&lt;/p&gt;
 &lt;p&gt;To trigger an alert, several methods are possible, with a support that differ depending on the browser and screen reader pair used. You can read [Steve Faulkner&#39;s article] (&lt;a href=&quot;https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/&quot;&gt;https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/&lt;/a&gt;) on this subject.&lt;/p&gt;
@@ -373,8 +366,7 @@ element.innerHTML = &#39;&amp;lt;div role =&quot;alert&quot;&amp;gt;This is an a
     <link href="https://a11y-guidelines.orange.com/en/articles/download-links/"/>
     <updated>2020-09-01T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/download-links/</id>
-    <content type="html">&lt;h1&gt;Best practices for download links&lt;/h1&gt;
-&lt;p&gt;There are different types of links: &lt;a href=&quot;https://a11y-guidelines.orange.com/en/web/develop/general-navigation&quot;&gt;classic links&lt;/a&gt; allowing to reach a new page, [skip links] (/en/articles/skip-links-best-practices) allowing to move within the page and finally those which interest us in this article, the links allowing to download a file.&lt;/p&gt;
+    <content type="html">&lt;p&gt;There are different types of links: &lt;a href=&quot;https://a11y-guidelines.orange.com/en/web/develop/general-navigation&quot;&gt;classic links&lt;/a&gt; allowing to reach a new page, [skip links] (/en/articles/skip-links-best-practices) allowing to move within the page and finally those which interest us in this article, the links allowing to download a file.&lt;/p&gt;
 &lt;p&gt;A link to download a file should respect the following rules:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;its title must be explicit, it must also specify the type and size of the file&lt;/li&gt;
@@ -620,12 +612,11 @@ The GOV UK component does not follow this behavior.&lt;/li&gt;
   </entry>
   
   <entry>
-    <title>Some best practices for SVG images</title>
+    <title>SVG images are used more and more on the web but what about their accessibility ?</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/accessible-svg/"/>
     <updated>2021-01-01T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/accessible-svg/</id>
-    <content type="html">&lt;h1&gt;SVG images are used more and more on the web but what about their accessibility?&lt;/h1&gt;
-&lt;p&gt;Here are some ideas knowing that the support for browsers and assistive technologies evolves very quickly!&lt;br /&gt;
+    <content type="html">&lt;p&gt;Here are some ideas knowing that the support for browsers and assistive technologies evolves very quickly!&lt;br /&gt;
 Important: So remember to test your implementations on the browsers/assistive technologies targets the most used by your users, whatever the solution for which you choose.&lt;/p&gt;
 &lt;h2 id=&quot;decorative-image&quot;&gt;Decorative image &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/accessible-svg/#decorative-image&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&quot;svg-in-an-img-tag&quot;&gt;SVG in an &lt;code&gt;img&lt;/code&gt; tag &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/accessible-svg/#svg-in-an-img-tag&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
@@ -736,12 +727,11 @@ or, but much more risky ...
   </entry>
   
   <entry>
-    <title>#a11y technical watch, January-February 2021</title>
+    <title>Digital accessibility watch January - February  2021</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/watch-january-february-2021/"/>
     <updated>2021-02-19T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/watch-january-february-2021/</id>
-    <content type="html">&lt;h1&gt;Digital accessibility watch January - February  2021&lt;/h1&gt;
-&lt;p&gt;Big news, “W3C First Public Working Draft 21 January 2021” released, the future of a11y web and more. An introduction: &lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/&quot;&gt;https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/&lt;/a&gt;&lt;/p&gt;
+    <content type="html">&lt;p&gt;Big news, “W3C First Public Working Draft 21 January 2021” released, the future of a11y web and more. An introduction: &lt;a href=&quot;https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/&quot;&gt;https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;And some articles to get an idea:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.deque.com/blog/first-public-working-draft-wcag-3/&quot;&gt;https://www.deque.com/blog/first-public-working-draft-wcag-3/&lt;/a&gt;&lt;/li&gt;
@@ -818,12 +808,11 @@ or, but much more risky ...
   </entry>
   
   <entry>
-    <title>#a11y technical watch, March-May 2021</title>
+    <title>Digital accessibility watch March - May  2021</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/watch-march-may-2021/"/>
     <updated>2021-06-03T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/watch-march-may-2021/</id>
-    <content type="html">&lt;h1&gt;Digital accessibility watch March - May  2021&lt;/h1&gt;
-&lt;p&gt;Over and over in this technical watch, we tell you and prouve it, that magical accessibility overlays don&#39;t work.&lt;/p&gt;
+    <content type="html">&lt;p&gt;Over and over in this technical watch, we tell you and prouve it, that magical accessibility overlays don&#39;t work.&lt;/p&gt;
 &lt;p&gt;These &amp;quot;magic solutions&amp;quot; bristle the hair of the A11y community, examples  :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.accessibyebye.org/&quot;&gt;https://www.accessibyebye.org/&lt;/a&gt;&lt;/li&gt;
@@ -1011,12 +1000,11 @@ or, but much more risky ...
   </entry>
   
   <entry>
-    <title>Single Page Applications (SPA)</title>
+    <title>Recommendations for Single Page Applications</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/single-page-app/"/>
     <updated>2021-06-25T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/single-page-app/</id>
-    <content type="html">&lt;h1&gt;Recommendations for Single Page Applications&lt;/h1&gt;
-&lt;p&gt;A &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/SPA&quot;&gt;single-page web application (SPA)&lt;/a&gt; is a web application in which page refresh never occurs. During navigation, only portions of the page are dynamically updated using JavaScript code.&lt;/p&gt;
+    <content type="html">&lt;p&gt;A &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Glossary/SPA&quot;&gt;single-page web application (SPA)&lt;/a&gt; is a web application in which page refresh never occurs. During navigation, only portions of the page are dynamically updated using JavaScript code.&lt;/p&gt;
 &lt;p&gt;&lt;abbr title=&quot;single page application&quot;&gt;SPA&lt;/abbr&gt;s have met with enthusiasm since the advent of JavaScript frameworks: Angular, React or Vue to name only the most popular. In this article, the idea is not to take sides for or against PPS. It must be recognized that used correctly, this type of framework can solve problems, especially when it is used in the design of large web applications. We will focus here on the difficulties that this can bring in terms of accessibility.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; &lt;abbr title=&quot;single page applications&quot;&gt;SPAs&lt;/abbr&gt; should never become the norm. If your need can be met with the help of a standard site you don&#39;t need to succumb to the hype. A standard website natively offers accessibility support and spares you the need to get started with a complex framework, skills training, maintenance or compatibility problems with old browsers.&lt;/p&gt;
 &lt;h2 id=&quot;update-page-title&quot;&gt;Update page title &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/single-page-app/#update-page-title&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
@@ -1091,7 +1079,7 @@ Note that by default an &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; tag is not f
     &amp;lt;/select&amp;gt;
 &amp;lt;/fieldset&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h1&gt;Disable a link&lt;/h1&gt;
+&lt;h2 id=&quot;disable-a-link&quot;&gt;Disable a link &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/disable-elements/#disable-a-link&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;To disable a link, unlike the previous technique, the use of the &lt;code&gt;disabled&lt;/code&gt; attribute is not allowed. It is still possible to disable a link by following 3 steps:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;remove the &lt;code&gt;href&lt;/code&gt; attribute so that it can no longer receive the focus&lt;/li&gt;
@@ -1108,8 +1096,7 @@ Note that by default an &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; tag is not f
     <link href="https://a11y-guidelines.orange.com/en/articles/font-size-and-colors/"/>
     <updated>2021-07-05T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/font-size-and-colors/</id>
-    <content type="html">&lt;h1&gt;Text size and color&lt;/h1&gt;
-&lt;p&gt;In this article, we will try to answer the following questions concerning the accessibility of texts in web pages:&lt;/p&gt;
+    <content type="html">&lt;p&gt;In this article, we will try to answer the following questions concerning the accessibility of texts in web pages:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;What size should I use for the texts?&lt;/li&gt;
 &lt;li&gt;What is the minimum font size to respect?&lt;/li&gt;
@@ -1149,12 +1136,45 @@ Sometimes the sizing of certain blocks of text, in particular using sizes in pix
   </entry>
   
   <entry>
-    <title>#a11y technical watch, August-September 2021</title>
+    <title>#a11y technical watch, June-July 2021</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/watch-june-july-2021/"/>
+    <updated>2021-08-03T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/watch-june-july-2021/</id>
+    <content type="html">&lt;p&gt;We feel that it is getting closer and there, you tell me ... WHAT ??&lt;br /&gt;
+Well the WCAG 3, a little explanation of this future recommendation (in): &lt;a href=&quot;https://w3c.github.io/silver/explainer/&quot;&gt;https://w3c.github.io/silver/explainer/&lt;/a&gt;&lt;br /&gt;
+So WCAG 2.2, too, mechanically, are fast approaching, be ready for a jump, not huge but still (in): &lt;a href=&quot;https://www.visionaustralia.org/services/digital-access/blog/&quot;&gt;https://www.visionaustralia.org/services/digital-access/blog/&lt;/a&gt; the-new-requirements-for-wcag-2-2&lt;br /&gt;
+Good reading !&lt;/p&gt;
+&lt;h2 id=&quot;accessibility-in-laws-standards-and-recommendations&quot;&gt;Accessibility in laws, standards and recommendations &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-june-july-2021/#accessibility-in-laws-standards-and-recommendations&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Public consultation “Review of EU rules on accessibility of websites and digital content for people with disabilities” if you have time: &lt;a href=&quot;https://ec.europa.eu/info/law/&quot;&gt;https://ec.europa.eu/info/law/&lt;/a&gt; better-regulation / have-your-say / initiatives / 12537-Accessible-web - &amp;amp; - digital-content-for-people-with-disabilities-review-of-EU-rules / public-consultation_en&lt;/li&gt;
+&lt;li&gt;WCAG 3, a new way to assess accessibility in figures: &lt;a href=&quot;https://www.boia.org/blog/wcag-3.0-may-introduce-new-rating-scale-for-accessibility&quot;&gt;https://www.boia.org/blog/wcag-3.0-may-introduce-new-rating-scale-for-accessibility&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ARIA Recommendations for Dummies, Episode 2: &lt;a href=&quot;https://www.deque.com/blog/aria-spec-for-the-uninitiated-part-2/&quot;&gt;https://www.deque.com/blog/aria-spec-for-the-uninitiated-part-2/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;As a reminder, episode 1 (in): &lt;a href=&quot;https://www.deque.com/blog/aria-spec-for-the-uninitiated-part-1/&quot;&gt;https://www.deque.com/blog/aria-spec-for-the-uninitiated-part-1/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;feedback-and-accessibility&quot;&gt;Feedback and accessibility &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-june-july-2021/#feedback-and-accessibility&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;4 of the most frequent errors in ARIA, must be careful: &lt;a href=&quot;https://www.maxability.co.in/2021/08/22/4-aria-mistakes/&quot;&gt;https://www.maxability.co.in/2021/08/22/4-aria-mistakes/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Video on html and a11y semantics in practice: &lt;a href=&quot;https://www.youtube.com/watch?v=qSNUi7pRmWg&quot;&gt;https://www.youtube.com/watch?v=qSNUi7pRmWg&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Accessibility audit approach for a library site, well done and more generic than implied (in): &lt;a href=&quot;https://journals.publishing.umich.edu/weaveux/article/id/218/&quot;&gt;https://journals.publishing.umich.edu/weaveux/article/id/218/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Still some issues between CSS and screen readers, read: &lt;a href=&quot;https://uselessdivs.com/blog/the-effect-of-css-on-screen-readers&quot;&gt;https://uselessdivs.com/blog/the-effect-of-css-on-screen-readers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;accessibility-strategy&quot;&gt;Accessibility strategy &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-june-july-2021/#accessibility-strategy&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Doing an audit when you have already corrected the basic and easy a11y errors is better: &lt;a href=&quot;https://adactio.com/journal/18458&quot;&gt;https://adactio.com/journal/18458&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Beyond WCAG (en): &lt;a href=&quot;https://hiddedevries.nl/en/blog/2021-09-08-subsets-and-supersets-of-wcag&quot;&gt;https://hiddedevries.nl/en/blog/2021-09-08-subsets-and-supersets-of-wcag&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Accessibility is more than just a technical problem, 3 good reasons (in): &lt;a href=&quot;https://ux.shopify.com/accessibility-is-more-than-a-technical-problem-ca6bb9dee8ce&quot;&gt;https://ux.shopify.com/accessibility-is-more-than-a-technical-problem-ca6bb9dee8ce&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The basic rules for an accessible email (in): &lt;a href=&quot;https://www.litmus.com/blog/ultimate-guide-accessible-emails/&quot;&gt;https://www.litmus.com/blog/ultimate-guide-accessible-emails/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Points of vigilance in digital accessibility for purchases and buyers: &lt;a href=&quot;https://www.tpgi.com/accessibility-strategy-for-procurement/&quot;&gt;https://www.tpgi.com/accessibility-strategy-for-procurement/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Digital accessibility watch August - September 2021</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/watch-august-september-2021/"/>
     <updated>2021-09-27T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/watch-august-september-2021/</id>
-    <content type="html">&lt;h1&gt;Digital accessibility watch August - September 2021&lt;/h1&gt;
-&lt;p&gt;We feel that it is getting closer and there, you&#39;ll tell me... WHAT ??&lt;br /&gt;
+    <content type="html">&lt;p&gt;We feel that it is getting closer and there, you&#39;ll tell me... WHAT ??&lt;br /&gt;
 Well, the WCAG 3, a little explanation of these future guidelines: &lt;a href=&quot;https://w3c.github.io/silver/explainer/&quot;&gt;https://w3c.github.io/silver/explainer/&lt;/a&gt;&lt;br /&gt;
 So WCAG 2.2 too, mechanically, are fast approaching, be ready for a jump, not huge but still: &lt;a href=&quot;https://www.visionaustralia.org/services/digital-access/blog/the-new-requirements-for-wcag-2-2&quot;&gt;https://www.visionaustralia.org/services/digital-access/blog/the-new-requirements-for-wcag-2-2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Last minute: all videos from the September online accessibility event Inclusive Design 24 &lt;a href=&quot;https://www.youtube.com/hashtag/id24&quot;&gt;https://www.youtube.com/hashtag/id24&lt;/a&gt;&lt;/p&gt;
@@ -1232,41 +1252,6 @@ So WCAG 2.2 too, mechanically, are fast approaching, be ready for a jump, not hu
 &lt;li&gt;The expert profession a11y (fr): &lt;a href=&quot;https://access42.net/metier-conseil-expertise-accessibilite-numerique&quot;&gt;https://access42.net/metier-conseil-expertise-accessibilite-numerique&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;A nice interview with a UX / UI expert a11y (fr): &lt;a href=&quot;https://www.alsacreations.com/actu/lire/1833-Interview-des-gens-du-Web--Marie-Guillaumet.html&quot;&gt;https://www.alsacreations.com/actu/lire/1833-Interview-des-gens-du-Web--Marie-Guillaumet.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Voice synthesis where are we? : &lt;a href=&quot;https://tink.uk/notes-on-synthetic-speech/&quot;&gt;https://tink.uk/notes-on-synthetic-speech/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <title>#a11y technical watch, August-September 2021</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/watch-june-july-2021/"/>
-    <updated>2021-09-27T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/watch-june-july-2021/</id>
-    <content type="html">&lt;h1&gt;Digital accessibility watch August - September 2021&lt;/h1&gt;
-&lt;p&gt;We feel that it is getting closer and there, you tell me ... WHAT ??&lt;br /&gt;
-Well the WCAG 3, a little explanation of this future recommendation (in): &lt;a href=&quot;https://w3c.github.io/silver/explainer/&quot;&gt;https://w3c.github.io/silver/explainer/&lt;/a&gt;&lt;br /&gt;
-So WCAG 2.2, too, mechanically, are fast approaching, be ready for a jump, not huge but still (in): &lt;a href=&quot;https://www.visionaustralia.org/services/digital-access/blog/&quot;&gt;https://www.visionaustralia.org/services/digital-access/blog/&lt;/a&gt; the-new-requirements-for-wcag-2-2&lt;br /&gt;
-Good reading !&lt;/p&gt;
-&lt;h2 id=&quot;accessibility-in-laws-standards-and-recommendations&quot;&gt;Accessibility in laws, standards and recommendations &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-june-july-2021/#accessibility-in-laws-standards-and-recommendations&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Public consultation “Review of EU rules on accessibility of websites and digital content for people with disabilities” if you have time: &lt;a href=&quot;https://ec.europa.eu/info/law/&quot;&gt;https://ec.europa.eu/info/law/&lt;/a&gt; better-regulation / have-your-say / initiatives / 12537-Accessible-web - &amp;amp; - digital-content-for-people-with-disabilities-review-of-EU-rules / public-consultation_en&lt;/li&gt;
-&lt;li&gt;WCAG 3, a new way to assess accessibility in figures: &lt;a href=&quot;https://www.boia.org/blog/wcag-3.0-may-introduce-new-rating-scale-for-accessibility&quot;&gt;https://www.boia.org/blog/wcag-3.0-may-introduce-new-rating-scale-for-accessibility&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;ARIA Recommendations for Dummies, Episode 2: &lt;a href=&quot;https://www.deque.com/blog/aria-spec-for-the-uninitiated-part-2/&quot;&gt;https://www.deque.com/blog/aria-spec-for-the-uninitiated-part-2/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;As a reminder, episode 1 (in): &lt;a href=&quot;https://www.deque.com/blog/aria-spec-for-the-uninitiated-part-1/&quot;&gt;https://www.deque.com/blog/aria-spec-for-the-uninitiated-part-1/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;feedback-and-accessibility&quot;&gt;Feedback and accessibility &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-june-july-2021/#feedback-and-accessibility&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;4 of the most frequent errors in ARIA, must be careful: &lt;a href=&quot;https://www.maxability.co.in/2021/08/22/4-aria-mistakes/&quot;&gt;https://www.maxability.co.in/2021/08/22/4-aria-mistakes/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Video on html and a11y semantics in practice: &lt;a href=&quot;https://www.youtube.com/watch?v=qSNUi7pRmWg&quot;&gt;https://www.youtube.com/watch?v=qSNUi7pRmWg&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Accessibility audit approach for a library site, well done and more generic than implied (in): &lt;a href=&quot;https://journals.publishing.umich.edu/weaveux/article/id/218/&quot;&gt;https://journals.publishing.umich.edu/weaveux/article/id/218/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Still some issues between CSS and screen readers, read: &lt;a href=&quot;https://uselessdivs.com/blog/the-effect-of-css-on-screen-readers&quot;&gt;https://uselessdivs.com/blog/the-effect-of-css-on-screen-readers&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;accessibility-strategy&quot;&gt;Accessibility strategy &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-june-july-2021/#accessibility-strategy&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Doing an audit when you have already corrected the basic and easy a11y errors is better: &lt;a href=&quot;https://adactio.com/journal/18458&quot;&gt;https://adactio.com/journal/18458&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Beyond WCAG (en): &lt;a href=&quot;https://hiddedevries.nl/en/blog/2021-09-08-subsets-and-supersets-of-wcag&quot;&gt;https://hiddedevries.nl/en/blog/2021-09-08-subsets-and-supersets-of-wcag&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Accessibility is more than just a technical problem, 3 good reasons (in): &lt;a href=&quot;https://ux.shopify.com/accessibility-is-more-than-a-technical-problem-ca6bb9dee8ce&quot;&gt;https://ux.shopify.com/accessibility-is-more-than-a-technical-problem-ca6bb9dee8ce&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The basic rules for an accessible email (in): &lt;a href=&quot;https://www.litmus.com/blog/ultimate-guide-accessible-emails/&quot;&gt;https://www.litmus.com/blog/ultimate-guide-accessible-emails/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Points of vigilance in digital accessibility for purchases and buyers: &lt;a href=&quot;https://www.tpgi.com/accessibility-strategy-for-procurement/&quot;&gt;https://www.tpgi.com/accessibility-strategy-for-procurement/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>

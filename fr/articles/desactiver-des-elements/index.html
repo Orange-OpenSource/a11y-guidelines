@@ -165,7 +165,12 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
-          
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#desactiver-un-champ-de-formulaire" class="dropdown-item text-wrap">Désactiver un champ de formulaire</a><a href="#desactiver-un-lien" class="dropdown-item text-wrap">Désactiver un lien</a></div>
+    </nav>
         
       </div>
     </div>
@@ -174,7 +179,20 @@
       <div class="row">
         
         <main id="main-content" class="col-md-9" role="main">
-          <h1>Désactiver un champ de formulaire</h1>
+          
+            <h1>Désactiver des éléments HTML</h1>  
+            
+              <span class="sr-only" id="filters_label">
+                Thématiques associées :
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="../?tag=web" class="btn btn-dark btn-sm" data-tag="web">Web</a></li>
+              <li class="list-inline-item"><a href="../?tag=beginner" class="btn btn-dark btn-sm" data-tag="beginner">Débutant</a></li>
+              </ul>
+            
+            <time class="text-muted" datetime="2021-07-01T00:00:00.000Z">01 juillet 2021</time>
+            
+          <div class="mt-4">
+          <h2 id="desactiver-un-champ-de-formulaire">Désactiver un champ de formulaire <a class="header-anchor" href="#desactiver-un-champ-de-formulaire" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Pour désactiver un champ de formulaire il suffit de lui attribuer l'attribut <code>disabled</code> :</p>
 <pre><code class="language-html">&lt;button disabled&gt;Supprimer&lt;/button&gt;
 &lt;input type=&quot;text&quot; name=&quot;address&quot; disabled&gt;
@@ -190,7 +208,7 @@
     &lt;/select&gt;
 &lt;/fieldset&gt;
 </code></pre>
-<h1>Désactiver un lien</h1>
+<h2 id="desactiver-un-lien">Désactiver un lien <a class="header-anchor" href="#desactiver-un-lien" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Pour désactiver un lien, contrairement à la technique précédente, l'utilisation de l'attribut <code>disabled</code> n'est pas autorisée. Il est tout de même possible de désactiver un lien en suivant les 3 étapes suivantes :</p>
 <ul>
 <li>supprimer l'attribut <code>href</code> pour qu'il ne puisse plus recevoir le focus</li>
@@ -200,11 +218,18 @@
 <pre><code class="html">&lt;a role="link" aria-disabled="true"&gt;Lien désactivé&lt;/a&gt;</code></pre>
 <p>Consultez l'excellent article de Scott O'Hara sur le sujet : <a href="https://www.scottohara.me/blog/2021/05/28/disabled-links.html" hreflang="en" lang="en">Disabling a link</a>.</p>
 
+          </div>
         </main>
         
           <div class="col-md-3">
             <div class="StickySideNavigation">
-              
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#desactiver-un-champ-de-formulaire" class="nav-link text-muted">Désactiver un champ de formulaire</a></li><li class="nav-item position-relative">
+            <a href="#desactiver-un-lien" class="nav-link text-muted">Désactiver un lien</a></li>
+      </ul>
+    </nav>
             </div>
           </div>
         

@@ -179,8 +179,20 @@
       <div class="row">
         
         <main id="main-content" class="col-md-9" role="main">
-          <h1>The accessible name in <abbr>HTML</abbr></h1>
-<h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+          
+            <h1>The accessible name in HTML</h1>  
+            
+              <span class="sr-only" id="filters_label">
+                Associated themes :
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="../?tag=web" class="btn btn-dark btn-sm" data-tag="web">Web</a></li>
+              <li class="list-inline-item"><a href="../?tag=intermediate" class="btn btn-dark btn-sm" data-tag="intermediate">Intermediate</a></li>
+              </ul>
+            
+            <time class="text-muted" datetime="2019-02-20T00:00:00.000Z">February 20, 2019</time>
+            
+          <div class="mt-4">
+          <h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>The name of the interface components also called accessible name, is basically the name who will be exposed to assistive technology <abbr>AT</abbr> via the accessibility <abbr>API</abbr>. This name is calculated by the browser via an algorithm called <a href="https://www.w3.org/TR/accname-1.1/">Accessible Name and Description Computation 1.1</a>.<br>
 In fact, to make it simple, the browser will generate an accessible tree from the <abbr>DOM</abbr> (Document Object Model) in which a large majority of <abbr>HTML</abbr> elements (those with only a presentation purpose, eg <code>div</code> and<code> span</code> tags do not have utility) need a (accessible) name to be correctly identified by the <abbr>AT</abbr>.</p>
 <p>The accessible name is derived from the content of a tag, attributes of this tag or an element associated with it.</p>
@@ -229,6 +241,7 @@ But we could also use <code>aria-labelledby</code> to reference another element 
 </ul>
 <p> </p>
 
+          </div>
         </main>
         
           <div class="col-md-3">
