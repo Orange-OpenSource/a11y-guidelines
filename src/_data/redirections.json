@@ -400,10 +400,6 @@
     "new": "/en/content-and-communication/animated-components"
   },
   {
-    "old": "/en/editorial-content/word",
-    "new": "/en/content-and-communication/word"
-  },
-  {
     "old": "/en/editorial-content/word/test",
     "new": "/en/content-and-communication/word/test"
   },
