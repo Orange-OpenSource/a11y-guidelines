@@ -3,11 +3,11 @@
   "sideNavigationLinks": [
     {
       "label": "Storyline 360",
-      "href": "/en/editorial-content/e-learning/"
+      "href": "/en/content-and-communication/e-learning/"
     },
     {
       "label": "Momindum Maker",
-      "href": "/en/editorial-content/e-learning/momindum/"
+      "href": "/en/content-and-communication/e-learning/momindum/"
     }  
   ]
 }

@@ -81,8 +81,8 @@ module.exports = {
         ]
       },
       {
-        label: 'Editorial content',
-        href: '/en/editorial-content/',
+        label: 'Content and communication',
+        href: '/en/content-and-communication/',
         inCardNavigation: true,
         icon: {
           name: 'editorial-content',
@@ -91,13 +91,13 @@ module.exports = {
         },
         theme: 'purple',
         subLevels: [
-          { label: 'Word', href: '/en/editorial-content/word/' },
-          { label: 'Powerpoint', href: '/en/editorial-content/powerpoint/' },
-          { label: 'PDF documents', href: '/en/editorial-content/pdf/' },
-          { label: 'Social networks', href: '/en/editorial-content/social-networks/' },
-          { label: 'Emails', href: '/en/editorial-content/emails/' },
-          { label: 'Audio/video content', href: '/en/editorial-content/animated-components/' },
-		  { label: 'E-learning', href: '/en/editorial-content/e-learning/' }
+          { label: 'Word', href: '/en/content-and-communication/word/' },
+          { label: 'Powerpoint', href: '/en/content-and-communication/powerpoint/' },
+          { label: 'PDF documents', href: '/en/content-and-communication/pdf/' },
+          { label: 'Social networks', href: '/en/content-and-communication/social-networks/' },
+          { label: 'Emails', href: '/en/content-and-communication/emails/' },
+          { label: 'Audio/video content', href: '/en/content-and-communication/animated-components/' },
+		  { label: 'E-learning', href: '/en/content-and-communication/e-learning/' }
         ]
       },
       { label: 'Articles', href: '/en/articles/' }

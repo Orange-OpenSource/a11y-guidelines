@@ -10,7 +10,7 @@ Cette partie indique comment rendre vos contenus sur les réseaux sociaux le plu
 ## Recommandations générales
 
 ### Rédaction du post
-- [Conserver l’accentuation sur les majuscules](/fr/contenu-editorial/#comment-mettre-des-accents-aux-majuscules) (exemple : É ou Ç).
+- [Conserver l’accentuation sur les majuscules](/fr/contenu-et-communication/#comment-mettre-des-accents-aux-majuscules) (exemple : É ou Ç).
 Sur un mobile, il suffit de maintenir le doigt sur la lettre à accentuer.
 - Si le post est rédigé sur une image ou une couleur de fond, [respecter un contraste suffisant avec le texte](/fr/web/developper/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond).
 Utiliser un [outil pour vérifier le contraste](/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/#main-content).

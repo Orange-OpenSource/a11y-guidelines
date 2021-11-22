@@ -11,7 +11,7 @@ In order to make your PDFs understandable and usable by everyone, they must be s
 
 ### From Microsoft Word or PowerPoint
 
-Find [our recommendations for creating a PDF accessible from Microsoft Word](/en/editorial-content/word/) and [our recommendations for Microsoft PowerPoint](/en/editorial-content/powerpoint/). 
+Find [our recommendations for creating a PDF accessible from Microsoft Word](/en/content-and-communication/word/) and [our recommendations for Microsoft PowerPoint](/en/content-and-communication/powerpoint/). 
 
 ### From Adobe InDesign
 InDesign is a design layout software, used in particular for the production of printable documents.
@@ -100,4 +100,4 @@ These softwares allow the execution of automatic tests on a PDF document and the
 * test the document properties,
 * check the markup of lists and links, forms and tables.
 
-<img  src="/en/editorial-content/images/pac1.png" alt=""/>
+<img  src="/en/content-and-communication/images/pac1.png" alt=""/>

@@ -3,11 +3,11 @@
   "sideNavigationLinks": [
     {
       "label": "Create accessible PowerPoint slides",
-      "href": "/en/editorial-content/powerpoint/"
+      "href": "/en/content-and-communication/powerpoint/"
     },
     {
       "label": "Check accessibility in PowerPoint slides",
-      "href": "/en/editorial-content/powerpoint/test/"
+      "href": "/en/content-and-communication/powerpoint/test/"
     }  
   ]
 }

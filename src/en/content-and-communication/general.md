@@ -34,7 +34,7 @@ This section presents general recommendations to ensure the accessibility of you
 
 ## Layout with tables
 
-Knowing that email clients (Outlook included) still sometimes require to use a [table layout](/en/editorial-content/emails/): add a `role="presentation"` to your table tags so that text-to-speeches understand it's just formatting.
+Knowing that email clients (Outlook included) still sometimes require to use a [table layout](/en/content-and-communication/emails/): add a `role="presentation"` to your table tags so that text-to-speeches understand it's just formatting.
 
 ## Accessible data tables
 

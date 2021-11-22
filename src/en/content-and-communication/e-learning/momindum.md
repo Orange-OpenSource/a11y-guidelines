@@ -6,7 +6,7 @@ abstract: "Momindum Maker recommandations"
 # Momindum Maker recommandations 
 
 The best practices detailed in this article apply to the *Momindum Maker* tool, allowing you to create video presentations from a *Powerpoint* document.
-It is therefore imperative as a prerequisite to apply <a href="/en/editorial-content/powerpoint/"> the Powerpoint recommendations </a> on the document serving as the basis for the presentation.
+It is therefore imperative as a prerequisite to apply <a href="/en/content-and-communication/powerpoint/"> the Powerpoint recommendations </a> on the document serving as the basis for the presentation.
 
 ## Project properties
 Provide at least the title and the language.
@@ -40,7 +40,7 @@ It can in particular be used from a keyboard navigation or a screen reader, and 
 <img alt="" src="/fr/contenu-et-communication/images/momindum-plan.png" class="img-fluid" />  &nbsp;
 	
 ## Quizz
-Momindum quizzes can be used (see however the remarks in the paragraph <a href="/en/editorial-content/e-learning/momindum/#accessibility-defects"> accessibility defects </a>.
+Momindum quizzes can be used (see however the remarks in the paragraph <a href="/en/content-and-communication/e-learning/momindum/#accessibility-defects"> accessibility defects </a>.
 
 - However, propose *the result in the form of text*, because the information (good / bad answer) is given only by color (it will not be perceived by blind or visually impaired users).
 

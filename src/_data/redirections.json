@@ -325,7 +325,7 @@
   },
   {
     "old": "others_EN/all.html",
-    "new": "/en/editorial-content"
+    "new": "/en/content-and-communication"
   },
   {
     "old": "others_EN/contact.html",
@@ -333,7 +333,11 @@
   },
   {
     "old": "others_EN/editorial.html",
-    "new": "/en/editorial-content"
+    "new": "/en/content-and-communication"
+  },
+  {
+    "old": "/en/editorial-content/emails",
+    "new": "/en/content-and-communication/emails"
   },
   {
     "old": "others_EN/email.html",
@@ -341,7 +345,7 @@
   },
   {
     "old": "others_EN/index.html",
-    "new": "/en/editorial-content"
+    "new": "/en/content-and-communication"
   },
   {
     "old": "others_EN/pdf.html",
@@ -358,6 +362,22 @@
   {
     "old": "others_EN/powerpoint.html",
     "new": "/en/editorial-content/powerpoint"
+  },
+  {
+    "old": "/en/editorial-content/pdf",
+    "new": "/en/content-and-communication/pdf"
+  },
+  {
+    "old": "/en/editorial-content/powerpoint",
+    "new": "/en/content-and-communication/powerpoint"
+  },
+  {
+    "old": "/en/editorial-content/powerpoint/test",
+    "new": "/en/content-and-communication/powerpoint/test"
+  },
+  {
+    "old": "/en/editorial-content/powerpoint",
+    "new": "/en/content-and-communication/powerpoint"
   },
   {
     "old": "others_EN/search.html",
@@ -378,6 +398,26 @@
   {
     "old": "others_EN/word.html",
     "new": "/en/editorial-content/word"
+  },
+  {
+    "old": "/en/editorial-content/animated-components",
+    "new": "/en/content-and-communication/animated-components"
+  },
+  {
+    "old": "/en/editorial-content/word",
+    "new": "/en/content-and-communication/word"
+  },
+  {
+    "old": "/en/editorial-content/word/test",
+    "new": "/en/content-and-communication/word/test"
+  },
+  {
+    "old": "/en/editorial-content/word",
+    "new": "/en/content-and-communication/word"
+  },
+  {
+    "old": "/en/editorial-content",
+    "new": "/en/content-and-communication"
   },
   {
     "old": "others/about.html",

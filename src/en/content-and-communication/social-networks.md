@@ -10,7 +10,7 @@ This part indicates how to make your content on social networks as accessible as
 ## General guidelines
 
 ### Post writing
-- [Keep the accentuation on the capital letters](/fr/contenu-editorial/#comment-mettre-des-accents-aux-majuscules) (example: É or Ç).
+- [Keep the accentuation on the capital letters](/fr/contenu-et-communication/#comment-mettre-des-accents-aux-majuscules) (example: É or Ç).
 On a mobile phone, simply hold your finger on the letter to be accentuated.
 - If the post is written on an image or a background color, [maintain sufficient contrast with the text](/en/web/develop/colors-and-contrasts/#provide-enough-contrast-between-front-and-background-colors).
 Use a [tool to check the contrast](/en/web/toolbox/methods-and-test-tools/color-contrast-level).
@@ -58,7 +58,7 @@ To add custom descriptions to images:
 - Fill in the description of the image.
 - Publish the tweet.
 
-<img src="/en/editorial-content/images/twitter-images.png" alt="Example of editing an image description on computer" class="img-fluid" />
+<img src="/en/content-and-communication/images/twitter-images.png" alt="Example of editing an image description on computer" class="img-fluid" />
 
 Detailed description on the [twitter support center](https://help.twitter.com/en/using-twitter/picture-descriptions).
 
@@ -85,7 +85,7 @@ Facebook automatically creates a textual alternative to the added images; to cus
 - Choose alternative text
 - Save image
 
-<img src="/en/editorial-content/images/facebook-images.png" alt="Example of editing an alternative text on a computer" class="img-fluid" />
+<img src="/en/content-and-communication/images/facebook-images.png" alt="Example of editing an alternative text on a computer" class="img-fluid" />
 
 [How to use images on Facebook](https://www.facebook.com/help/214124458607871?helpref=related).
 
@@ -96,7 +96,7 @@ For videos without subtitles, Facebook natively offers a solution to import subt
 - Import a subtitle track
 - Save video
 
-<img src="/en/editorial-content/images/facebook-videos.png" alt="Example of adding subtitles on computer" class="img-fluid" />
+<img src="/en/content-and-communication/images/facebook-videos.png" alt="Example of adding subtitles on computer" class="img-fluid" />
 
 [How to use videos on Facebook](https://www.facebook.com/help/261764017354370).
 
@@ -110,7 +110,7 @@ Instagram generates an automatic text alternative. It is possible to edit it:
 - Press "Set alternative text" under the "Accessibility" heading
 - Write the alternative text in the box and press "Done"
 
-<img src="/en/editorial-content/images/instagram-images.png" alt="Example of editing an alternative text on a computer" class="img-fluid" />
+<img src="/en/content-and-communication/images/instagram-images.png" alt="Example of editing an alternative text on a computer" class="img-fluid" />
 
 [How to use images on Instagram](https://help.instagram.com/308605337351503).
 
@@ -122,7 +122,7 @@ For videos without subtitles, Instagram allows automatic subtitles to be added:
 - Activate automatically generated subtitles
 - Publish the post
 
-<img src="/en/editorial-content/images/instagram-videos.png" alt="Example of adding subtitles on computer" class="img-fluid" />
+<img src="/en/content-and-communication/images/instagram-videos.png" alt="Example of adding subtitles on computer" class="img-fluid" />
 
 ### Stories
 Instagram stories are not yet very accessible.

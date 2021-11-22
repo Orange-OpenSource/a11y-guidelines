@@ -19,7 +19,7 @@ Above all:
 
 If your communication contains a lot of information and its layout needs to be complex:
 - create the email with the method which is the easiest for you,
-- add [an accessible Word file](/en/editorial-content/word/) (or text file) as an attachment containing the same level of information (but only in text!),
+- add [an accessible Word file](/en/content-and-communication/word/) (or text file) as an attachment containing the same level of information (but only in text!),
 - specify that the equivalent accessible text is contained in the attachment.
 
 ## "Everyday" emails
@@ -45,13 +45,13 @@ For all your everyday emails:
 You have several options for creating an accessible Pushmail.
 
 ### From a Word document
-1. Create a Word document accessible by following [the Word accessibility guidelines](/en/editorial-content/word/).
+1. Create a Word document accessible by following [the Word accessibility guidelines](/en/content-and-communication/word/).
 2. Then use the "Send to Mail Recipient"* option.
 
 Add this Option the first time via **File> Options> Quick access toolbar> “Send to Mail Recipient”**
 
 ### From a newsletter / mailing tool
-It is quite possible that the tool you have chosen will provide natively accessible templates, but that does not preclude following our [general guidelines for editorial content](/en/editorial-content/).
+It is quite possible that the tool you have chosen will provide natively accessible templates, but that does not preclude following our [general guidelines for editorial content](/en/content-and-communication/).
 Always check:
 - Text alternatives for images
 - Level titles
