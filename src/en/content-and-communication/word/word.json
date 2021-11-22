@@ -3,11 +3,11 @@
   "sideNavigationLinks": [
     {
       "label": "Create an accessible Word document",
-      "href": "/en/editorial-content/word/"
+      "href": "/en/content-and-communication/word/"
     },
     {
       "label": "Check accessibility in Word",
-      "href": "/en/editorial-content/word/test/"
+      "href": "/en/content-and-communication/word/test/"
     }  
   ]
 }

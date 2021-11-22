@@ -47,4 +47,4 @@ The criterion mentions a few exceptions subject to no constraint, in particular 
 
 The guidelines do not impose a minimum size because it assumes that it is possible to enlarge the text if necessary. In fact, users do not always adjust the size of the text to their needs, due to a lack of habit or ignorance of the possibilities offered to them. This is why it is important that the default size is sufficient to ensure reading comfort.
 
-The size and the color are not the only characteristics which come into play on the readability of a text, indeed the typeface or the use of text in italics can have important consequences. You will find some additional recommendations on this subject in the [editorial content section ](https://a11y-guidelines.orange.com/en/editorial-content/).
+The size and the color are not the only characteristics which come into play on the readability of a text, indeed the typeface or the use of text in italics can have important consequences. You will find some additional recommendations on this subject in the [editorial content section ](https://a11y-guidelines.orange.com/en/content-and-communication/).
