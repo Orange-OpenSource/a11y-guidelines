@@ -94,6 +94,7 @@ module.exports = {
           { label: 'Word', href: '/en/editorial-content/word/' },
           { label: 'Powerpoint', href: '/en/editorial-content/powerpoint/' },
           { label: 'PDF documents', href: '/en/editorial-content/pdf/' },
+          { label: 'Social networks', href: '/en/editorial-content/social-networks/' },
           { label: 'Emails', href: '/en/editorial-content/emails/' },
           { label: 'Audio/video content', href: '/en/editorial-content/animated-components/' },
 		  { label: 'E-learning', href: '/en/editorial-content/e-learning/' }
