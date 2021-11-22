@@ -39,8 +39,8 @@ The images must be completed with a replacement text (see below for the instruct
   - Do not start the description with "image of" because the image is detected as such by the technical aids 
   - If an image description and a caption are filled in, be careful not to put redundant information as much as possible
 - Check the image contrast
-  - For any image containing text, [check that the contrast is sufficient (/fr/web/developper/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond).
-Use a [tool to check the contrast](/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/#main-content).
+  - For any image containing text, [check that the contrast is sufficient (/en/web/develop/colors-and-contrasts/#provide-enough-contrast-between-front-and-background-colors).
+Use a [tool to check the contrast](/en/web/test/#test-colors-and-contrasts).
 
 ### Videos
 All videos should have subtitles and if possible a transcript.
@@ -58,14 +58,14 @@ To add custom descriptions to images:
 - Fill in the description of the image.
 - Publish the tweet.
 
-<img src="/fr/contenu-et-communication/images/twitter-images.png" alt="Example of editing an image description on computer" class="img-fluid" />
+<img src="/en/editorial-content/images/twitter-images.png" alt="Example of editing an image description on computer" class="img-fluid" />
 
-Detailed description on the [twitter support center](https://help.twitter.com/fr/using-twitter/picture-descriptions).
+Detailed description on the [twitter support center](https://help.twitter.com/en/using-twitter/picture-descriptions).
 
 ### Videos
 If the video does not already have subtitles, the Media Studio tool allows you to add them.
 
-[How to use videos on Twitter](https://help.twitter.com/fr/using-twitter/media-studio).
+[How to use videos on Twitter](https://help.twitter.com/en/using-twitter/media-studio).
 
 If you do not have access to Media Studio, [use another tool](#videos).
 
@@ -74,7 +74,7 @@ Twitter allows to tweet audio messages. This feature is still in beta and only a
 
 It is not recommended to use them, the feature is not yet optimized for accessibility.
 
-[How to use voice messages on Twitter](https://help.twitter.com/fr/using-twitter/voice-tweet).
+[How to use voice messages on Twitter](https://help.twitter.com/en/using-twitter/voice-tweet).
 
 ## Facebook
 
@@ -85,7 +85,7 @@ Facebook automatically creates a textual alternative to the added images; to cus
 - Choose alternative text
 - Save image
 
-<img src="/fr/contenu-et-communication/images/facebook-images.png" alt="Example of editing an alternative text on a computer" class="img-fluid" />
+<img src="/en/editorial-content/images/facebook-images.png" alt="Example of editing an alternative text on a computer" class="img-fluid" />
 
 [How to use images on Facebook](https://www.facebook.com/help/214124458607871?helpref=related).
 
@@ -96,7 +96,7 @@ For videos without subtitles, Facebook natively offers a solution to import subt
 - Import a subtitle track
 - Save video
 
-<img src="/fr/contenu-et-communication/images/facebook-videos.png" alt="Example of adding subtitles on computer" class="img-fluid" />
+<img src="/en/editorial-content/images/facebook-videos.png" alt="Example of adding subtitles on computer" class="img-fluid" />
 
 [How to use videos on Facebook](https://www.facebook.com/help/261764017354370).
 
@@ -110,7 +110,7 @@ Instagram generates an automatic text alternative. It is possible to edit it:
 - Press "Set alternative text" under the "Accessibility" heading
 - Write the alternative text in the box and press "Done"
 
-<img src="/fr/contenu-et-communication/images/instagram-images.png" alt="Example of editing an alternative text on a computer" class="img-fluid" />
+<img src="/en/editorial-content/images/instagram-images.png" alt="Example of editing an alternative text on a computer" class="img-fluid" />
 
 [How to use images on Instagram](https://help.instagram.com/308605337351503).
 
@@ -122,7 +122,7 @@ For videos without subtitles, Instagram allows automatic subtitles to be added:
 - Activate automatically generated subtitles
 - Publish the post
 
-<img src="/fr/contenu-et-communication/images/instagram-videos.png" alt="Example of adding subtitles on computer" class="img-fluid" />
+<img src="/en/editorial-content/images/instagram-videos.png" alt="Example of adding subtitles on computer" class="img-fluid" />
 
 ### Stories
 Instagram stories are not yet very accessible.
