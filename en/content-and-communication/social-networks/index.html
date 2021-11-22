@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Accessible communication on social networks - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Some guidelines about accessible communication on social networks">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body>
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/content-and-communication/" class="nav-link active" aria-current="true">
+  Content and communication
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-toggle="collapse" data-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Search">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="sr-only">Search</span>
+    </button>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-500" aria-label="Search" placeholder="Search">
+  </form>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/content-and-communication/word/" class="nav-link">
+  Word
+</a>
+            </li><li class="nav-item">
+              <a href="/en/content-and-communication/powerpoint/" class="nav-link">
+  Powerpoint
+</a>
+            </li><li class="nav-item">
+              <a href="/en/content-and-communication/pdf/" class="nav-link">
+  PDF documents
+</a>
+            </li><li class="nav-item">
+              <a href="/en/content-and-communication/social-networks/" class="nav-link active" aria-current="page">
+  Social networks
+</a>
+            </li><li class="nav-item">
+              <a href="/en/content-and-communication/emails/" class="nav-link">
+  Emails
+</a>
+            </li><li class="nav-item">
+              <a href="/en/content-and-communication/animated-components/" class="nav-link">
+  Audio/video content
+</a>
+            </li><li class="nav-item">
+              <a href="/en/content-and-communication/e-learning/" class="nav-link">
+  E-learning
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/content-and-communication/">Content and communication</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Social networks
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+      </div>
+    </div>
+    
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>Accessible communication on social networks</h1>
+<p>This part indicates how to make your content on social networks as accessible as possible.</p>
+<h2 id="general-guidelines">General guidelines <a class="header-anchor" href="#general-guidelines" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="post-writing">Post writing <a class="header-anchor" href="#post-writing" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li><a href="/fr/contenu-et-communication/#comment-mettre-des-accents-aux-majuscules">Keep the accentuation on the capital letters</a> (example: É or Ç).<br>
+On a mobile phone, simply hold your finger on the letter to be accentuated.</li>
+<li>If the post is written on an image or a background color, <a href="/en/web/develop/colors-and-contrasts/#provide-enough-contrast-between-front-and-background-colors">maintain sufficient contrast with the text</a>.<br>
+Use a <a href="/en/web/toolbox/methods-and-test-tools/color-contrast-level">tool to check the contrast</a>.</li>
+</ul>
+<h3 id="links">Links <a class="header-anchor" href="#links" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li>Name the links in a way that makes it easy to understand the action or destination of the link. Example: Avoid &quot;Clic here&quot;, prefer &quot;The package in detail…&quot;.</li>
+<li>Clarify the link destination for a photo, video or audio ; specify it by adding [IMAGE], [VIDEO] or [AUDIO] at the beginning of the title. Example: &quot;[VIDEO] Our brand's latest campaign.&quot;.</li>
+</ul>
+<h3 id="hashtags">Hashtags <a class="header-anchor" href="#hashtags" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+<li>Put a capital letter at the beginning of each word (write in CamelCase)<br>
+This makes reading easier by helping to distinguish the different words and it allows the screen reader to differentiate the number of words.<br>
+For example #AllUnited is more readable than #ALLUNITED.</li>
+<li>Place hashtags at the end of posts/tweets.</li>
+</ul>
+<h3 id="emojis">Emojis <a class="header-anchor" href="#emojis" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Each emoji has a unique description that is transcribed vocally by a screen reader</p>
+<ul>
+<li>Use emojis sparingly.</li>
+<li>Ensure the exact meaning of the emojis used to avoid misunderstandings or misinterpretations: check what will be read using <a href="https://emojipedia.org/">Emojipedia</a>.</li>
+<li>Do not put several identical emojis in a row.</li>
+<li>Use them at the end of posts.</li>
+</ul>
+<h3 id="images">Images <a class="header-anchor" href="#images" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The images must be completed with a replacement text (see below for the instructions according to the social network)</p>
+<ul>
+<li>Add a replacement text (an alternative description) to the images
+<ul>
+<li>If text is present in the image, include the text in the description</li>
+<li>Do not start the description with &quot;image of&quot; because the image is detected as such by the technical aids</li>
+<li>If an image description and a caption are filled in, be careful not to put redundant information as much as possible</li>
+</ul>
+</li>
+<li>Check the image contrast
+<ul>
+<li>For any image containing text, [check that the contrast is sufficient (/en/web/develop/colors-and-contrasts/#provide-enough-contrast-between-front-and-background-colors).<br>
+Use a <a href="/en/web/test/#test-colors-and-contrasts">tool to check the contrast</a>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="videos">Videos <a class="header-anchor" href="#videos" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>All videos should have subtitles and if possible a transcript.</p>
+<ul>
+<li>YouTube allows you to automatically generate subtitles. You can download the .SRT from YouTube.</li>
+<li>For social networks that do not generate automatic subtitles, there are tools like <a href="https://apps.apple.com/us/app/mixcaptions-video-captions/id952426779">MixCaptions (AppStore)</a> or <a href="https://play.google.com/store/apps/details?id=com.laika.kinetictypovid&amp;hl=en_US&amp;gl=US">AutoCap (GooglePlay)</a>.</li>
+<li>Note: Although there are tools that can automatically generate subtitles, it is often necessary to verify them.</li>
+</ul>
+<h2 id="twitter">Twitter <a class="header-anchor" href="#twitter" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="images-2">Images <a class="header-anchor" href="#images-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>By default Twitter fills in the alternative of an image with the text &quot;image&quot;.<br>
+To add custom descriptions to images:</p>
+<ul>
+<li>Add an image to the tweet.</li>
+<li>Edit / add a description to the image.</li>
+<li>Fill in the description of the image.</li>
+<li>Publish the tweet.</li>
+</ul>
+<img src="/en/content-and-communication/images/twitter-images.png" alt="Example of editing an image description on computer" class="img-fluid" />
+<p>Detailed description on the <a href="https://help.twitter.com/en/using-twitter/picture-descriptions">twitter support center</a>.</p>
+<h3 id="videos-2">Videos <a class="header-anchor" href="#videos-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>If the video does not already have subtitles, the Media Studio tool allows you to add them.</p>
+<p><a href="https://help.twitter.com/en/using-twitter/media-studio">How to use videos on Twitter</a>.</p>
+<p>If you do not have access to Media Studio, <a href="#videos">use another tool</a>.</p>
+<h3 id="voice-messages">Voice messages <a class="header-anchor" href="#voice-messages" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Twitter allows to tweet audio messages. This feature is still in beta and only available on IOS. To improve accessibility, Twitter has also added automatically generated transcripts.</p>
+<p>It is not recommended to use them, the feature is not yet optimized for accessibility.</p>
+<p><a href="https://help.twitter.com/en/using-twitter/voice-tweet">How to use voice messages on Twitter</a>.</p>
+<h2 id="facebook">Facebook <a class="header-anchor" href="#facebook" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="images-3">Images <a class="header-anchor" href="#images-3" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Facebook automatically creates a textual alternative to the added images; to customize this often inaccurate descriptive text:</p>
+<ul>
+<li>Add image</li>
+<li>Edit image</li>
+<li>Choose alternative text</li>
+<li>Save image</li>
+</ul>
+<img src="/en/content-and-communication/images/facebook-images.png" alt="Example of editing an alternative text on a computer" class="img-fluid" />
+<p><a href="https://www.facebook.com/help/214124458607871?helpref=related">How to use images on Facebook</a>.</p>
+<h3 id="videos-3">Videos <a class="header-anchor" href="#videos-3" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>For videos without subtitles, Facebook natively offers a solution to import subtitles to videos.</p>
+<ul>
+<li>Add video</li>
+<li>Edit the video</li>
+<li>Import a subtitle track</li>
+<li>Save video</li>
+</ul>
+<img src="/en/content-and-communication/images/facebook-videos.png" alt="Example of adding subtitles on computer" class="img-fluid" />
+<p><a href="https://www.facebook.com/help/261764017354370">How to use videos on Facebook</a>.</p>
+<h2 id="instagram">Instagram <a class="header-anchor" href="#instagram" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="images-4">Images <a class="header-anchor" href="#images-4" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Instagram generates an automatic text alternative. It is possible to edit it:</p>
+<ul>
+<li>Take a photo or upload an existing photo on Instagram</li>
+<li>Edit the image as needed, then press &quot;Next&quot;</li>
+<li>Select &quot;Advanced Settings&quot;.</li>
+<li>Press &quot;Set alternative text&quot; under the &quot;Accessibility&quot; heading</li>
+<li>Write the alternative text in the box and press &quot;Done&quot;</li>
+</ul>
+<img src="/en/content-and-communication/images/instagram-images.png" alt="Example of editing an alternative text on a computer" class="img-fluid" />
+<p><a href="https://help.instagram.com/308605337351503">How to use images on Instagram</a>.</p>
+<h3 id="videos-4">Videos <a class="header-anchor" href="#videos-4" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>For videos without subtitles, Instagram allows automatic subtitles to be added:</p>
+<ul>
+<li>Take a video or upload an existing one on Instagram</li>
+<li>Modify the video as needed and press next</li>
+<li>Select advanced settings</li>
+<li>Activate automatically generated subtitles</li>
+<li>Publish the post</li>
+</ul>
+<img src="/en/content-and-communication/images/instagram-videos.png" alt="Example of adding subtitles on computer" class="img-fluid" />
+<h3 id="stories">Stories <a class="header-anchor" href="#stories" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Instagram stories are not yet very accessible.<br>
+To communicate important information, it is necessary to put it on the personal wall.</p>
+
+    </main>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link">
+  About
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility" class="nav-link">
+  Accessibility
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/content-and-communication/social-networks.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" aria-label="Back to top">
+      <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+        <span class="d-none d-sm-inline-block">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.min.js" integrity="sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI" crossorigin="anonymous"></script>
+    
+    
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2021 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>

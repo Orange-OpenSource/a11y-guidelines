@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Momindum Maker - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Momindum Maker recommandations">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/content-and-communication/" class="nav-link active" aria-current="true">
+  Content and communication
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-toggle="collapse" data-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Search">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="sr-only">Search</span>
+    </button>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-500" aria-label="Search" placeholder="Search">
+  </form>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/content-and-communication/word/" class="nav-link">
+  Word
+</a>
+            </li><li class="nav-item">
+              <a href="/en/content-and-communication/powerpoint/" class="nav-link">
+  Powerpoint
+</a>
+            </li><li class="nav-item">
+              <a href="/en/content-and-communication/pdf/" class="nav-link">
+  PDF documents
+</a>
+            </li><li class="nav-item">
+              <a href="/en/content-and-communication/social-networks/" class="nav-link">
+  Social networks
+</a>
+            </li><li class="nav-item">
+              <a href="/en/content-and-communication/emails/" class="nav-link">
+  Emails
+</a>
+            </li><li class="nav-item">
+              <a href="/en/content-and-communication/animated-components/" class="nav-link">
+  Audio/video content
+</a>
+            </li><li class="nav-item">
+              <a href="/en/content-and-communication/e-learning/" class="nav-link active" aria-current="true">
+  E-learning
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/content-and-communication/">Content and communication</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/content-and-communication/e-learning/">E-learning</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Momindum Maker
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
+        Topics
+      </button>
+      <div class="dropdown-menu dropdown-menu-left"><a href="/en/content-and-communication/e-learning/" class="nav-link dropdown-item">
+  Storyline 360
+</a><a href="/en/content-and-communication/e-learning/momindum/" class="nav-link dropdown-item active" aria-current="page">
+  Momindum Maker
+</a></div>
+    </nav>
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#project-properties" class="dropdown-item text-wrap">Project properties</a><a href="#offer-alternatives-to-audio-and-video-tracks" class="dropdown-item text-wrap">Offer alternatives to audio and video tracks</a><a href="#define-a-plan" class="dropdown-item text-wrap">Define a plan</a><a href="#quizz" class="dropdown-item text-wrap">Quizz</a><a href="#accessibility-defects" class="dropdown-item text-wrap">Accessibility defects</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
+      <h2 id="side-navigation-label">Topics</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="/en/content-and-communication/e-learning/" class="nav-link text-muted">
+  Storyline 360
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/en/content-and-communication/e-learning/momindum/" class="nav-link text-muted active" aria-current="page">
+  Momindum Maker
+</a>
+          </li></ul>
+    </nav>
+              
+            </div>
+          </div>
+        
+        <main id="main-content" class="col-md-6" role="main">
+            
+          <div class="mt-4">
+          <h1>Momindum Maker recommandations</h1>
+<p>The best practices detailed in this article apply to the <em>Momindum Maker</em> tool, allowing you to create video presentations from a <em>Powerpoint</em> document.<br>
+It is therefore imperative as a prerequisite to apply <a href="/en/content-and-communication/powerpoint/"> the Powerpoint recommendations </a> on the document serving as the basis for the presentation.</p>
+<h2 id="project-properties">Project properties <a class="header-anchor" href="#project-properties" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Provide at least the title and the language.</p>
+<ul>
+<li>
+<p><em>Project title</em><br>
+The title of the project is included in the <em>page title</em> and in the <em>main title</em>.<br>
+These are 2 very important things for screen reader users.</p>
+</li>
+<li>
+<p><em>Language</em><br>
+The choice of language defines the translation of the navigation elements (eg: play / pause, navigation menu, etc.).</p>
+</li>
+</ul>
+<p><img alt="" src="/fr/contenu-et-communication/images/titre-presentation.png" class="img-fluid" />   </p>
+<h2 id="offer-alternatives-to-audio-and-video-tracks">Offer alternatives to audio and video tracks <a class="header-anchor" href="#offer-alternatives-to-audio-and-video-tracks" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li>
+<p><em>Closed captions</em></p>
+<ul>
+<li><em>Offer subtitles</em> as an alternative to the audio track (automatic transcription is adapted, or .SRT subtitles)</li>
+<li><em>Do not offer embedded subtitles</em> in the video</li>
+</ul>
+</li>
+<li>
+<p><em>Transcription</em></p>
+<ul>
+<li>Provide a full transcription of the video as a text file (txt, word, html)</li>
+<li>Make sure to fill in an understandable title for the document</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="/fr/contenu-et-communication/images/momindum-alternative.png" class="img-fluid" />   </p>
+<h2 id="define-a-plan">Define a plan <a class="header-anchor" href="#define-a-plan" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li>
+<p><em>The plan system generated by Momindum is accessible.</em><br>
+It can in particular be used from a keyboard navigation or a screen reader, and prove to be very useful for navigation within the presentation.</p>
+</li>
+<li>
+<p>It is imperative that the wording is relevant.</p>
+</li>
+</ul>
+<p><img alt="" src="/fr/contenu-et-communication/images/momindum-plan.png" class="img-fluid" />   </p>
+<h2 id="quizz">Quizz <a class="header-anchor" href="#quizz" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Momindum quizzes can be used (see however the remarks in the paragraph <a href="/en/content-and-communication/e-learning/momindum/#accessibility-defects"> accessibility defects </a>.</p>
+<ul>
+<li>However, propose <em>the result in the form of text</em>, because the information (good / bad answer) is given only by color (it will not be perceived by blind or visually impaired users).</li>
+</ul>
+<p><img alt="" src="/fr/contenu-et-communication/images/momindum-quizz.png" class="img-fluid" />   </p>
+<h2 id="accessibility-defects">Accessibility defects <a class="header-anchor" href="#accessibility-defects" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>While good practices can make a Momindum Maker presentation usable, there are still some drawbacks that impact end users:</p>
+<ul>
+<li>
+<p><em>Autoplay:</em><br>
+Play / pause actions are not possible from keyboard navigation.<br>
+It is therefore necessary to offer automatic reading, contrary to the usual recommendations, in order not to block keyboard users.</p>
+</li>
+<li>
+<p><em>Quizz :</em><br>
+It is possible to take the quizz from technical help, however:</p>
+<ul>
+<li>Perception of responses should be improved.<br>
+Screen reader users may not perceive them depending on their browsing mode.</li>
+<li>Answers are selected systematically in the form of a checkbox.<br>
+However, when only one answer is possible, the radio button format is more suitable.<br>
+Screen reader users could be misled.</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#project-properties" class="nav-link text-muted">Project properties</a></li><li class="nav-item position-relative">
+            <a href="#offer-alternatives-to-audio-and-video-tracks" class="nav-link text-muted">Offer alternatives to audio and video tracks</a></li><li class="nav-item position-relative">
+            <a href="#define-a-plan" class="nav-link text-muted">Define a plan</a></li><li class="nav-item position-relative">
+            <a href="#quizz" class="nav-link text-muted">Quizz</a></li><li class="nav-item position-relative">
+            <a href="#accessibility-defects" class="nav-link text-muted">Accessibility defects</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link">
+  About
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility" class="nav-link">
+  Accessibility
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/content-and-communication/e-learning/momindum.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" aria-label="Back to top">
+      <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+        <span class="d-none d-sm-inline-block">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.min.js" integrity="sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI" crossorigin="anonymous"></script>
+    
+    
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2021 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
