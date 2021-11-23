@@ -68,7 +68,7 @@ Celle-ci va exprimer les caractéristiques de l'élément : sa fonction (lien, b
 
 Vous pouvez utiliser la visionneuse de paroles du lecteur d'écran afin de retranscrire de manière textuelle les caractéristique d'un élément. Il est donc possible de comparer le nom accessible lu par le lecteur d'écran avec le texte affiché sur le composant. 
 
-![](..images/tester-wcag-253/nvda_visionneuse.png)
+![Exemple de visionneuse de parole](../images/tester-wcag-253/nvda_visionneuse.png)
 
 ### Inspecteur de commande
 
