@@ -10,7 +10,7 @@ Ce guide a pour objectif de présenter les différentes notions d’accessibilit
 
 - des explications détaillées concernant les attributs et méthodes d'accessibilité,
 
-- des exemples de code en **Swift 5.3** et en **Objective C** sous {Xcode 13 ; iOS 14},
+- des exemples de code en **Swift&nbsp;5.5** et en **Objective&nbsp;C** sous {**Xcode&nbsp;13** ; **iOS&nbsp;15**},
 
 - des liens vers la [`documentation officielle Apple`](https://developer.apple.com/documentation/uikit/accessibility).
 
@@ -1276,7 +1276,7 @@ On crée deux vues au sein desquelles on incorpore les chiffres qu'on souhaite v
      id="CuCoPro-Description"
      role="tabpanel">
      
-Cette **nouveauté iOS&nbsp;14** passée incognito lors de la WWDC 2020 est pourtant véritablement essentielle pour améliorer de façon significative le confort d'utilisation de <span lang="en">VoiceOver</span>.
+Cette **nouveauté iOS&nbsp;14** passée incognito lors de la WWDC 2020 est pourtant véritablement essentielle pour améliorer de façon significative le confort d'utilisation de <span lang="en">VoiceOver</span>... même si une [présentation dédiée](../wwdc/2021/121) a été réalisée tardivement lors de la WWDC 2021.
 
 L'objectif principal du **fournisseur de contenu personnalisé** réside dans une navigation plus rapide au sein d'une interface riche en détails auxquels l'utilisateur peut accéder sans être obligé de subir la vocalisation d'éléments parasites avant d'obtenir ce qui l'intéresse.
 
@@ -1399,9 +1399,11 @@ class ViewController: UIViewController {
 </div>
 <div class="tab-pane" id="CuCoPro-Links" role="tabpanel">
 
-- [Customized Accessibility Content](https://developer.apple.com/documentation/accessibility/customized_accessibility_content/)
+- [Customized Accessibility Content](https://developer.apple.com/documentation/accessibility/customized_accessibility_content/).
 
 - L'[article de Rob Whitaker](https://mobilea11y.com/blog/custom-accessibility-content/) apporte une belle description pédagogique de cette nouvelle fonctionnalité qu'il est un des seuls aujourd'hui à exposer à l'issue de la WWDC 2020.
+
+- [WWDC 2021 : Optimiser VoiceOver dans un contexte riche en données](../wwdc/2021/121).
 </div>
 </div>
 <br><br>
@@ -2592,6 +2594,8 @@ Pour un composant développé au sein d'une application, il est très fortement 
 <br><br>**iOS 13** a introduit un **nouveau comportement** des actions personnalisées&nbsp;: seul le premier élément avec des actions sera vocalisé, tous les autres disposant du même jeu d'actions resteront muets afin d'éviter les annonces répétitives des "actions disponibles".
 
 Dès que la **liste d'actions** est **différente** sur un élément, **l'annonce reprend** sur ce dernier de façon à faire comprendre à l'utilisateur qu'un nouveau jeu d'actions est à disposition.
+
+Ce comportement qui n'a jamais été présenté ni expliqué par <span lang="en">Apple</span> **n'est plus d'actualité en iOS&nbsp;15** pour revenir au fonctionnement nominal iOS&nbsp;12.
 </div>
 
 <div class="tab-pane" id="customActions-Example" role="tabpanel">
