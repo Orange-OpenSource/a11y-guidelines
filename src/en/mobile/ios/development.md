@@ -8,7 +8,7 @@ displayToc: true
 
 This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options : through different categories, it explains how to use the accessibility attributes&nbsp;/ methods and provides links to the [`Apple official documentation`](https://developer.apple.com/documentation/uikit/accessibility).
 
-Code snippets are also available to show the different possible implementations {(*Swift 5.3*, *Objective C*) + (*Xcode 12*, *iOS 14*)}.
+Code snippets are also available to show the different possible implementations {(**Swift&nbsp;5.5**, **Objective&nbsp;C**) + (**Xcode&nbsp;13**, **iOS&nbsp;15**)}.
 
 <br><br>
 
@@ -1260,7 +1260,7 @@ Two views are created containing the numbers to be spelled out in a specific ord
      id="CuCoPro-Description"
      role="tabpanel">
      
-This **iOS&nbsp;14 new feature** has unfortunately not been introduced during the WWDC 2020 while it's crucial to significantly improve the VoiceOver user experience.
+This **iOS&nbsp;14 new feature** has unfortunately not been introduced during the WWDC 2020 while it's crucial to significantly improve the VoiceOver user experience even if  its presentation has been detailed in depth later on within a dedicated [WWDC 2021 video](../wwdc/2021/121).
 
 The **custom content provider** provides a faster navigation within an interface the user can access some rich details without having to undergo the vocalization of parasitic elements before getting what he's interested in.
 
@@ -1381,9 +1381,11 @@ class ViewController: UIViewController {
 </div>
 <div class="tab-pane" id="CuCoPro-Links" role="tabpanel">
 
-- [Customized Accessibility Content](https://developer.apple.com/documentation/accessibility/customized_accessibility_content/)
+- [Customized Accessibility Content](https://developer.apple.com/documentation/accessibility/customized_accessibility_content/).
 
-- This [Rob Whitaker article](https://mobilea11y.com/blog/custom-accessibility-content/) provides an interesting description of this new feature that he's one of the few to highlight after the WWDC 2020.
+- This [Rob Whitaker article](https://mobilea11y.com/blog/custom-accessibility-content/) provides an interesting description of this feature that he's one of the few to highlight after the WWDC 2020.
+
+- [WWDC 2021: Tailor the VoiceOver experience in your data-rich apps](../wwdc/2021/121).
 </div>
 </div>
 <br><br>
@@ -2577,10 +2579,12 @@ Using the switch control feature, all the available actions are present at the f
 It's highly recommended to follow the pattern described in the `Example` sheet to get this purpose for a custom component.
 </div></div>
 
-<br><br>**iOS 13** intriduced a **new custom actions behavior**: the "actions available" announcement isn't always present anymore.
+<br><br>**iOS&nbsp;13** intriduced a **new custom actions behavior**: the "actions available" announcement isn't always present anymore.
 It was previously offered to every element containing custom actions but, now, **it will occur** when you navigate to another element that **contains a different set of actions**.
 
 The purpose is to **prevent repetitive announcements** on elements where the same actions are present as the previous element.
+
+However, a rollback has been made by Apple since **the behavior in iOS&nbsp;15 is now the same as in iOS&nbsp;12**.
 </div>
 <div class="tab-pane" id="customActions-Example" role="tabpanel">
 
