@@ -13,7 +13,7 @@ tags:
 ### Explication générale
 
 Le but de ce critère est de s'assurer que si un bouton, un lien ou un autre élément d'interface contient du texte visible à l'écran, <a href="/fr/articles/le-nom-accessible-en-html/">le nom accessible</a> doit contenir au moins le même texte que celui affiché.
-Cela permet de garantir que n'importe quels utilisateurs, qu'ils utilisent une aide technique ou non, soient capables de s'appuyer sur les nom accessibles pour comprendre la fonction du composant afin d'interargir avec lui.
+Cela permet de garantir que n'importe quels utilisateurs, qu'ils utilisent une aide technique ou non, soient capables de s'appuyer sur les noms accessibles pour comprendre la fonction du composant afin d'interargir avec lui.
 Par exemple, les utilisateurs de reconnaissance vocale pourront naviguer en prononçant les noms accessibles visibles sur les boutons.
 
 Il n'est pas demandé que le texte visible et le nom accessible soit identique, mais le texte visible doit être présent dans le nom accesible, de préférence en premier.
@@ -36,7 +36,7 @@ Dans l'exemple ci-dessus, le bouton de soumission ne fonctionnera pas correcteme
 Le bouton contient une image avec le texte "Envoyer", mais l'alternative textuelle de l'image est "Soumettre", son nom accessible est donc "Soumettre".
 
 Les technologies d'assistance identifient les éléments grâce à leurs noms accessibles.
-C'est pour cette raison que les utilisateurs de reconnaissance vocale ne pourront pas utiliser le bouton, puisque lors qu'ils prononceront "Envoyer" rien ne se passera vu que c'est le terme "Soumettre" qui est le nom accessible du composant d'interface.
+C'est pour cette raison que les utilisateurs de reconnaissance vocale ne pourront pas utiliser le bouton, puisque lors qu'ils prononceront "Envoyer" rien ne se passera? vu que c'est le terme "Soumettre" qui est le nom accessible du composant d'interface.
 
 Pour résoudre le problème, il faut que l'alternative textuelle soit la même que le texte de l'image, donc "Envoyer".
 
