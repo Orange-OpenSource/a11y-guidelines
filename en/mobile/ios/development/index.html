@@ -211,7 +211,7 @@
           <div class="mt-4">
           <h1>iOS developer guide</h1>
 <p>This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options : through different categories, it explains how to use the accessibility attributes / methods and provides links to the <a href="https://developer.apple.com/documentation/uikit/accessibility"><code>Apple official documentation</code></a>.</p>
-<p>Code snippets are also available to show the different possible implementations {(<em>Swift 5.3</em>, <em>Objective C</em>) + (<em>Xcode 12</em>, <em>iOS 14</em>)}.</p>
+<p>Code snippets are also available to show the different possible implementations {(<strong>Swift 5.5</strong>, <strong>Objective C</strong>) + (<strong>Xcode 13</strong>, <strong>iOS 15</strong>)}.</p>
 <p><br><br></p>
 <h2 id="element-trait">Element trait <a class="header-anchor" href="#element-trait" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
@@ -1412,7 +1412,7 @@ UIAccessibilityElement * elt;
 <div class="tab-pane show active"
      id="CuCoPro-Description"
      role="tabpanel">
-<p>This <strong>iOS 14 new feature</strong> has unfortunately not been introduced during the WWDC 2020 while it's crucial to significantly improve the VoiceOver user experience.</p>
+<p>This <strong>iOS 14 new feature</strong> has unfortunately not been introduced during the WWDC 2020 while it's crucial to significantly improve the VoiceOver user experience even if  its presentation has been detailed in depth later on within a dedicated <a href="../wwdc/2021/121">WWDC 2021 video</a>.</p>
 <p>The <strong>custom content provider</strong> provides a faster navigation within an interface the user can access some rich details without having to undergo the vocalization of parasitic elements before getting what he's interested in.</p>
 <p>The main goal of this feature may be defined as merging <strong>vocalized information</strong> with a <strong>smoother and faster navigation</strong>.</p>
 <p>The <code>Photos</code> iOS application is an outstanding example where some metadata (date, hour...) can be obtained while the photo is still selected thanks to the <code>More</code> <code>Content</code> <a href="#custom-rotor">rotor item</a>.<br>
@@ -1525,10 +1525,13 @@ class ViewController: UIViewController {
 <div class="tab-pane" id="CuCoPro-Links" role="tabpanel">
 <ul>
 <li>
-<p><a href="https://developer.apple.com/documentation/accessibility/customized_accessibility_content/">Customized Accessibility Content</a></p>
+<p><a href="https://developer.apple.com/documentation/accessibility/customized_accessibility_content/">Customized Accessibility Content</a>.</p>
 </li>
 <li>
-<p>This <a href="https://mobilea11y.com/blog/custom-accessibility-content/">Rob Whitaker article</a> provides an interesting description of this new feature that he's one of the few to highlight after the WWDC 2020.</p>
+<p>This <a href="https://mobilea11y.com/blog/custom-accessibility-content/">Rob Whitaker article</a> provides an interesting description of this feature that he's one of the few to highlight after the WWDC 2020.</p>
+</li>
+<li>
+<p><a href="../wwdc/2021/121">WWDC 2021: Tailor the VoiceOver experience in your data-rich apps</a>.</p>
 </li>
 </ul>
 </div>
@@ -2693,9 +2696,10 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
 <p>Using the switch control feature, all the available actions are present at the first screen so as to ease the user experience by reaching his goal as quick as possible.</p>
 <p>It's highly recommended to follow the pattern described in the <code>Example</code> sheet to get this purpose for a custom component.</p>
 </div></div>
-<p><br><br><strong>iOS 13</strong> intriduced a <strong>new custom actions behavior</strong>: the &quot;actions available&quot; announcement isn't always present anymore.<br>
+<p><br><br><strong>iOS 13</strong> intriduced a <strong>new custom actions behavior</strong>: the &quot;actions available&quot; announcement isn't always present anymore.<br>
 It was previously offered to every element containing custom actions but, now, <strong>it will occur</strong> when you navigate to another element that <strong>contains a different set of actions</strong>.</p>
 <p>The purpose is to <strong>prevent repetitive announcements</strong> on elements where the same actions are present as the previous element.</p>
+<p>However, a rollback has been made by Apple since <strong>the behavior in iOS 15 is now the same as in iOS 12</strong>.</p>
 </div>
 <div class="tab-pane" id="customActions-Example" role="tabpanel">
 <p>Whatever the VoiceOver or the Switch Control feature, the implementation to get the desired actions on a custom element is exactly the same: VoiceOver is the option to illustrate the following example.</p>

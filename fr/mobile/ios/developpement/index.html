@@ -216,7 +216,7 @@
 <p>des explications détaillées concernant les attributs et méthodes d'accessibilité,</p>
 </li>
 <li>
-<p>des exemples de code en <strong>Swift 5.3</strong> et en <strong>Objective C</strong> sous {Xcode 13 ; iOS 14},</p>
+<p>des exemples de code en <strong>Swift 5.5</strong> et en <strong>Objective C</strong> sous {<strong>Xcode 13</strong> ; <strong>iOS 15</strong>},</p>
 </li>
 <li>
 <p>des liens vers la <a href="https://developer.apple.com/documentation/uikit/accessibility"><code>documentation officielle Apple</code></a>.</p>
@@ -1433,7 +1433,7 @@ UIAccessibilityElement * elt;
 <div class="tab-pane show active"
      id="CuCoPro-Description"
      role="tabpanel">
-<p>Cette <strong>nouveauté iOS 14</strong> passée incognito lors de la WWDC 2020 est pourtant véritablement essentielle pour améliorer de façon significative le confort d'utilisation de <span lang="en">VoiceOver</span>.</p>
+<p>Cette <strong>nouveauté iOS 14</strong> passée incognito lors de la WWDC 2020 est pourtant véritablement essentielle pour améliorer de façon significative le confort d'utilisation de <span lang="en">VoiceOver</span>... même si une <a href="../wwdc/2021/121">présentation dédiée</a> a été réalisée tardivement lors de la WWDC 2021.</p>
 <p>L'objectif principal du <strong>fournisseur de contenu personnalisé</strong> réside dans une navigation plus rapide au sein d'une interface riche en détails auxquels l'utilisateur peut accéder sans être obligé de subir la vocalisation d'éléments parasites avant d'obtenir ce qui l'intéresse.</p>
 <p>L'association d'une <strong>vocalisation souhaitée</strong> de l'information (visuelle ou non) avec une <strong>navigation plus fluide et plus rapide</strong> caractérise donc parfaitement la finalité de cette fonctionnalité.</p>
 <p>Un exemple probant est celui de l'application <code>Photos</code> où cette fonctionnalité permet l'accès à certaines métadonnées (date, heure...) en ayant toujours la photo sélectionnée : ces informations sont accessibles via l'item <code>Plus</code> <code>de</code> <code>contenus</code> présent dans le <a href="#rotor-personnalise">rotor</a>.<br>
@@ -1546,10 +1546,13 @@ class ViewController: UIViewController {
 <div class="tab-pane" id="CuCoPro-Links" role="tabpanel">
 <ul>
 <li>
-<p><a href="https://developer.apple.com/documentation/accessibility/customized_accessibility_content/">Customized Accessibility Content</a></p>
+<p><a href="https://developer.apple.com/documentation/accessibility/customized_accessibility_content/">Customized Accessibility Content</a>.</p>
 </li>
 <li>
 <p>L'<a href="https://mobilea11y.com/blog/custom-accessibility-content/">article de Rob Whitaker</a> apporte une belle description pédagogique de cette nouvelle fonctionnalité qu'il est un des seuls aujourd'hui à exposer à l'issue de la WWDC 2020.</p>
+</li>
+<li>
+<p><a href="../wwdc/2021/121">WWDC 2021 : Optimiser VoiceOver dans un contexte riche en données</a>.</p>
 </li>
 </ul>
 </div>
@@ -2718,6 +2721,7 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
 </div></div>
 <p><br><br><strong>iOS 13</strong> a introduit un <strong>nouveau comportement</strong> des actions personnalisées : seul le premier élément avec des actions sera vocalisé, tous les autres disposant du même jeu d'actions resteront muets afin d'éviter les annonces répétitives des &quot;actions disponibles&quot;.</p>
 <p>Dès que la <strong>liste d'actions</strong> est <strong>différente</strong> sur un élément, <strong>l'annonce reprend</strong> sur ce dernier de façon à faire comprendre à l'utilisateur qu'un nouveau jeu d'actions est à disposition.</p>
+<p>Ce comportement qui n'a jamais été présenté ni expliqué par <span lang="en">Apple</span> <strong>n'est plus d'actualité en iOS 15</strong> pour revenir au fonctionnement nominal iOS 12.</p>
 </div>
 <div class="tab-pane" id="customActions-Example" role="tabpanel">
 <p>Que ce soit pour le lecteur d'écran ou le contrôle de sélection, la réalisation programmatique est exactement la même pour obtenir les actions souhaitées : l'exemple suivant sera illustré pour VoiceOver.</p>
