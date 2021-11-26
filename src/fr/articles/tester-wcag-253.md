@@ -91,10 +91,10 @@ Le moyen de vérifier le critère avec l'inspecteur de commande dépend du navig
   <li>Sélectionner l'onglet Éléments</li>
   <li>Choissiser l'élément que vous souhaitez inspecter</li>
   <li>
-    Cliquer sur l'onglet <span lang="en">Accessibility</span>, cette onglet peut être caché derrière le bouton <span lang="en">"More tab"</span>
+    Cliquer sur l'onglet Accessibilité, cette onglet peut être caché derrière le bouton "plus d'onglet"
     <img src="../images/tester-wcag-253/more_tab_img.png" alt="">
   </li>
-  <li>Regarder la partie <span lang="en">Computed properties</span> si l'attribut <span lang="en">name</span> contient au moins le texte qui est affiché, le critère est valide</li>
+  <li>Regarder la partie "Propriétées calculées" si l'attribut <span lang="en">name</span> contient au moins le texte qui est affiché, le critère est valide</li>
 </ol>
 
 
