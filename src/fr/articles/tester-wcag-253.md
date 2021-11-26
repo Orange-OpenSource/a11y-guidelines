@@ -74,15 +74,29 @@ Vous pouvez utiliser la visionneuse de paroles du lecteur d'écran afin de retra
 
 Le moyen de vérifier le critère avec l'inspecteur de commande dépend du navigateur utilisé.
 
-Avec Firefox, il faut accéder à l'inspecteur de commande (<kbd>Ctrl+ Maj. + i</kbd>), puis sélectionnez l'onglet accessibilité, puis inspectez un élément.
-Les différentes propriétés de l’élément sont affichées dans la console comme son rôle, les différentes actions de celui-ci et en premier la caractéristique « name » qui est le nom accessible de l’objet. Si le nom accessible, qui se trouve dans « Name », contient au moins le même texte que celui qui est affiché alors le critère est valide.
+#### Avec Firefox
+<ol>
+  <li>Accédez à l'inspecteur de commande (<kbd>Ctrl+ Maj. + i</kbd>)</li>
+  <li>Sélectionnez l'onglet accessibilité</li>
+  <li>Inspectez un élément</li>
+  <li>Regardez la partie propriétés, si l'attribut <span lang="en">name</span> contient au moins le texte qui est affiché le critère est conforme</li> 
+</ol>
 
 ![Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert](../images/tester-wcag-253/FF_name.png)
 
-Avec Chrome ou bien Edge Chronium, il faut ouvrir l'inspecteur de commande (<kbd>Ctrl+ Maj. + i</kbd>), puis acceder à l'onglet "Accessibility" qui se trouve en dessous du code HTML de l'inspecteur.
+#### Avec Chrome ou bien Edge Chronium
 
-Celui-ci nous montre de quoi est composé l’objet. En premier, l’arborescence d’accessibilité qui explique où se trouve l’élément et les noms qui lui sont associés en sachant que le dernier nom est celui qui est affiché dans le site. 
-En dessous, nous trouvons les attributs ARIA, si celui-ci en contient, puis les propriétés calculées où le premier paramètre le nom accessible de l’objet en question avec les attributs aria, la source, le contenu, le titre et d’autres paramètres. 
-C’est ici que l’on aperçoit le nom accessible qui est reconnu par un lecteur d’écran. Si le nom accessible qui se trouve dans « Name » ne contient pas au moins le même texte que celui qui est affiché alors le critère est invalide.
+<ol>
+  <li>Accédez à l'inspecteur de commande (<kbd>Ctrl+ Maj. + i</kbd>)</li>
+  <li>Sélectionnez l'onglet Éléments</li>
+  <li>Choissisez l'élément que vous souhaitez inspecter</li>
+  <li>
+    Cliquez sur l'onglet <span lang="en">Accessibility</span>, cette onglet peut être caché derrière le bouton <span lang="en">"More tab"</span>
+    <img src="../images/tester-wcag-253/more_tab_img.png" alt="">
+  </li>
+  <li>Regardez si l'attribut <span lang="en">name</span> contient au moins le texte qui est affiché</li>
+</ol>
+
+
 
 ![Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert](../images/tester-wcag-253/Chrome_name.png)
