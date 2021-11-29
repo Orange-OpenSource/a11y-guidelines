@@ -1295,7 +1295,7 @@ First, define the class of the view that contains the image:
 #import &lt;UIKit/UIKit.h&gt;
 #import &lt;Accessibility/Accessibility.h&gt;  //Fatal issue if not used.
 
-@interface MyCustomView : UIImageView <AXCustomContentProvider>
+@interface MyCustomView: UIImageView &lt;AXCustomContentProvider&gt;
 @end
 
 //MyCustomView.m

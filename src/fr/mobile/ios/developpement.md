@@ -1313,7 +1313,7 @@ Après avoir défini la classe pour la vue contenant l'image&nbsp;:
 #import &lt;UIKit/UIKit.h&gt;
 #import &lt;Accessibility/Accessibility.h&gt;  //Oubli rédhibitoire
 
-@interface MyCustomView : UIImageView <AXCustomContentProvider>
+@interface MyCustomView: UIImageView &lt;AXCustomContentProvider&gt;
 @end
 
 //MyCustomView.m
