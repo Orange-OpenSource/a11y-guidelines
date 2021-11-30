@@ -24,9 +24,9 @@ La voix par défaut n’est pas de très bonne qualité mais elle est très réa
 ### Configuration
 
 Au premier démarrage, <abbr>NVDA</abbr> est configuré pour vocaliser tout ce que survole le pointeur de la souris. Ce mode est utilisé par certaines personnes malvoyantes qui ont des difficultés à lire les textes affichés à l’écran par exemple. Il est conseillé de désactiver cette option si vous utilisez <abbr>NVDA</abbr> pour faire des tests d’accessibilité sur vos pages. 
-Pour désactiver ce mode de navigation, faites un clic droit sur l’icône de <abbr>NVDA</abbr> dans la barre Windows à côté de l’heure. Puis aller dans *Préférences &gt; Paramètres* de la souris et désactiver la case «&nbsp;Activer le suivi de la souris&nbsp;».
 
-Enfin, il est conseillé de modifier le mode de lecture par défaut. Pour cela, se positionner sur une page web et utiliser le raccourci clavier suivant <kbd>INS+v</kbd> pour désactiver la «&nbsp;disposition telle qu’à l’écran&nbsp;» puis enregistrer cette configuration par défaut à l’aide du raccourci <kbd>INS+Ctrl+c</kbd>. 
+1. Pour désactiver ce mode de navigation, faites un clic droit sur l’icône de <abbr>NVDA</abbr> dans la barre Windows à côté de l’heure. Puis aller dans *Préférences &gt; Paramètres* de la souris et désactiver la case «&nbsp;Activer le suivi de la souris&nbsp;».
+2. Enfin, toujours dans les préférences, rubrique "Mode Navigation", décocher la case "Utiliser la disposition telle qu'à l'écran". Cela indique à NVDA de faire une pause par exemple entre deux boutons qui apparaissent sur une même ligne.
 
 ### Navigation dans les pages Web
 

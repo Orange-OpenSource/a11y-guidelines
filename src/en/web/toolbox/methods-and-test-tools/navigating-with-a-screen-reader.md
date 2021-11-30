@@ -24,9 +24,10 @@ The default voice is not very good but it is very reactive. It is not mandatory,
 ### Configuration
 
 At first startup, NVDA is configured to vocalize whatever the mouse pointer is over. This mode is used by visually-impaired people who have difficulties reading the text displayed on the screen, for example. It is recommended to disable this option if you use NVDA to test accessibility on your pages.
-To disable this navigation mode, right-click on the NVDA icon located in the notification area. Then go to *Preferences&nbsp;&gt; Mouse settings* and uncheck “Enable mouse tracking”.
 
-Finally, it is advisable to change the default playback mode. On a webpage use the following keyboard shortcut <kbd>Ins+v</kbd> to disable the “screen layout is preserved” option and then save this configuration as default using the shortcut <kbd>Ins+Ctrl+c</kbd>.
+1. To disable this navigation mode, right-click on the NVDA icon located in the notification area. Then go to *Preferences&nbsp;&gt; Mouse settings* and uncheck “Enable mouse tracking”.
+
+2. Finally, it is advisable to change the default screen layout. Go to *Preferences&nbsp;&gt; Browser Mode* and uncheck “Use screen layout”.
 
 ### Navigating web pages
 
