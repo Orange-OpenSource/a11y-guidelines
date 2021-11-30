@@ -1,6 +1,6 @@
 ---
 title: "Comment tester le WCAG 2.5.3 ?"
-abstract: "Les bonnes pratiques pour tester le WCAG 2.5.3"
+abstract: "Les bonnes pratiques pour tester le critère WCAG 2.5.3"
 titleBeforeTag: true
 date: "2021-11-22"
 tags:
@@ -12,18 +12,16 @@ tags:
 
 ### Explication générale
 
-Le but de ce critère est de s'assurer que si un bouton, un lien ou un autre élément d'interface contient du texte visible à l'écran, <a href="/fr/articles/le-nom-accessible-en-html/">le nom accessible</a> doit contenir au moins le même texte que celui affiché.
-Cela permet de garantir que n'importe quels utilisateurs, qu'ils utilisent une aide technique ou non, soient capables de s'appuyer sur les noms accessibles pour comprendre la fonction du composant afin d'interargir avec lui.
-Par exemple, les utilisateurs de reconnaissance vocale pourront naviguer en prononçant les noms accessibles visibles sur les boutons.
+Le but de [ce critère](https://www.w3.org/TR/WCAG21/#label-in-name) est de s'assurer que si un bouton, un lien ou un autre élément d'interface contient du texte visible à l'écran, <a href="/fr/articles/le-nom-accessible-en-html/">son nom accessible</a> doit contenir au moins le même texte que celui affiché.
+Cela pour garantir que les utilisateurs [d'aides techniques](/fr/solutions-assistance/#main-content) soient capables de comprendre et d'interagir avec le composant. En effet les aides techniques s'appuient sur le nom accessible des composants. Par exemple, un utilisateur de reconnaissance vocale pourra cliquer sur un bouton simplement en prononçant son nom accessible.
 
-Il n'est pas demandé que le texte visible et le nom accessible soit identique, mais le texte visible doit être présent dans le nom accesible, de préférence en premier.
+Il n'est pas demandé que le texte visible et le nom accessible soient identiques, mais le texte visible doit être présent dans le nom accessible, de préférence en premier.
 
 ### Exemple concret
 
 #### Nom accessible
 
-Prenons l'exemple d'un formulaire de contact HTLM. Un utilisateur peut utiliser un logiciel de reconnaissance vocale pour remplir le formulaire et l'envoyer.
-
+Prenons l'exemple d'un utilisateur navigant à l'aide d'un logiciel de reconnaissance vocale souhaitant saisir et soumettre un formulaire.
 ![bouton avec le texte envoyer](../images/tester-wcag-253/button_send.png)
 
 <pre><code class="html">
@@ -32,13 +30,9 @@ Prenons l'exemple d'un formulaire de contact HTLM. Un utilisateur peut utiliser 
 &lt;/button&gt;
 </code></pre>
 
-Dans l'exemple ci-dessus, le bouton de soumission ne fonctionnera pas correctement avec certaines technologie d'assistance.
-Le bouton contient une image avec le texte "Envoyer", mais l'alternative textuelle de l'image est "Soumettre", son nom accessible est donc "Soumettre".
+L'exemple ci-dessus risque de poser des difficultés. Le bouton contient une image avec le texte "Envoyer", mais l'alternative textuelle de l'image est "Soumettre", son nom accessible est donc "Soumettre". Les technologies d'assistance se basant sur le nom accessible, si l'utilisateur prononce "Envoyer", il ne se passera rien.
 
-Les technologies d'assistance identifient les éléments grâce à leurs noms accessibles.
-C'est pour cette raison que les utilisateurs de reconnaissance vocale ne pourront pas utiliser le bouton, puisque lors qu'ils prononceront "Envoyer" rien ne se passera? vu que c'est le terme "Soumettre" qui est le nom accessible du composant d'interface.
-
-Pour résoudre le problème, il faut que l'alternative textuelle soit la même que le texte de l'image, donc "Envoyer".
+Pour résoudre le problème, il faut que l'alternative textuelle soit la même que le texte de l'image ("Envoyer").
 
 <pre><code class="html">
 &lt;button&gt;
@@ -63,7 +57,7 @@ Si on prononce "Ouvrir le site d'orange", le logiciel de reconnaissance vocale n
 
 ### Lecteur d'écran
 
-Le lecteur d'écran vocalise les propriétés éléments sur lesquels vous placez votre focus.
+Le lecteur d'écran vocalise les propriétés de l'élément sur lequel vous placez votre focus.
 En particulier, les caractéristiques suivantes de l'élément : sa fonction (lien, bouton, texte ...), son statut et son nom accessible. Si le nom accessible que vous entendez ne correspond pas à ce qui est textuellement visible, alors le critère est considéré comme non-conforme.
 
 Vous pouvez utiliser la visionneuse de paroles du lecteur d'écran afin de retranscrire de manière textuelle les caractéristiques d'un élément. Il est donc possible de comparer le nom accessible sous forme textuelle lu par le lecteur d'écran avec le texte affiché sur le composant. 
@@ -89,9 +83,9 @@ Le moyen de vérifier le critère avec l'inspecteur de commande dépend du navig
 <ol>
   <li>Accéder à l'inspecteur de commande (<kbd>Ctrl+ Maj. + i</kbd>)</li>
   <li>Sélectionner l'onglet Éléments</li>
-  <li>Choissiser l'élément que vous souhaitez inspecter</li>
+  <li>Choisisser l'élément que vous souhaitez inspecter</li>
   <li>
-    Cliquer sur l'onglet Accessibilité, cette onglet peut être caché derrière le bouton "plus d'onglet"
+    Cliquer sur l'onglet Accessibilité, cet onglet peut être caché derrière le bouton "plus d'onglet"
     <img src="../images/tester-wcag-253/more_tab_img.png" alt="">
   </li>
   <li>Regarder la partie "Propriétées calculées" si l'attribut <span lang="en">name</span> contient au moins le texte qui est affiché, le critère est valide</li>
