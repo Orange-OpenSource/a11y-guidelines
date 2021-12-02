@@ -1,18 +1,16 @@
 ---
-title: "Mémo accessibilité"
-abstract: "Nos mémos sur l'accessibilité numérique à télécharger, à imprimer et à partager"
-date: "2021-11-18"
+title: "Fiches mémo accessibilité"
+abstract: "Nos fiches mémo sur l'accessibilité numérique à télécharger, à imprimer et à partager"
+date: "2021-12-10"
 tags:
-  - fichememo    
+  - web
+  - mobile  
 ---
-# Nos mémos sur l'accessibilité numérique
+# Nos fiches mémo sur l'accessibilité numérique
 N'oubliez pas les informations essentielles, adoptez nos mémos !
 
 ## Qu'est-ce que c'est ?
-Il s'agit de pense-bêtes disponibles au format PDF ou SVG (accessible).
-Les fichiers PDF sont destinés à être imprimés sur une feuille recto verso puis pliés en trois pour former un petit fascicule à conserver sous la main ou à partager.
-
-Note : pour l'impression du fascicule, au niveau des options recto/verso, choisir "retourner sur le bord court" ou "reliure sur le petit côté".
+Il s'agit de pense-bêtes disponibles au format PDF. Vous pouvez les imprimés sur une feuille recto verso puis les plier en accordéon pour former un petit fascicule à conserver sous la main ou à partager.
 
 ## Liste des mémos
 
@@ -22,6 +20,7 @@ Choisissez les mémos qui vous correspondent :
 - [Développement Android](./#developpement-android)
 - [Développement iOS](./#developpement-ios)
 - [Rédiger un Email accessible](./#rediger-un-email-accessible)
+- [Rédiger un document Word accessible](./#rediger-un-document-word-accessible)
 
 <hr>
 
@@ -37,14 +36,10 @@ Choisissez les mémos qui vous correspondent :
     <h3 id="desc-web">Description</h4>
     <p>Mémo à destination des développeurs Web.</p>
     <p>Rappel des techniques et outils indispensables pour développer un site web accessible.</p>        
-    <h3 id="tele-web">Téléchargements</h4>
-    <p>    
-      <a href="../../res/memos/dev-web/Memo-Web-Orange.svg" class="btn btn-secondary">
-        Consulter au format SVG
-        <span class="sr-only">Mémo accessibilité développement Web</span>
-      </a>
+    <h3 id="tele-web">Téléchargement</h4>
+    <p>          
       <a href="../../res/memos/dev-web/Memo-Web-Orange.pdf" class="btn btn-secondary">
-        Télécharger au format PDF (415 Ko)
+        Télécharger au format PDF (272 Ko)
         <span class="sr-only">Mémo accessibilité développement Web</span>
       </a>
     </p>
@@ -66,14 +61,10 @@ Choisissez les mémos qui vous correspondent :
     <p>Mémo à destination des personnes qui réalisent des tests Web d'accessibilité.</p>
     <p>Rappel des outils et des principaux tests à effectuer pour vérifier l'accessibilité d'une page Web.</p>
     </p>        
-    <h3 id="tele-tests-web">Téléchargements</h4>
-    <p>    
-      <a href="../../res/memos/tests-web/Memo-Tests-Web-Orange.svg" class="btn btn-secondary">
-        Consulter au format SVG
-        <span class="sr-only">Mémo accessibilité les tests Web</span>
-      </a>
+    <h3 id="tele-tests-web">Téléchargement</h4>
+    <p>          
       <a href="../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-secondary">
-        Télécharger au format PDF (415 Ko)
+        Télécharger au format PDF (335 Ko)
         <span class="sr-only">Mémo accessibilité les tests Web</span>
       </a>
     </p>
@@ -94,14 +85,10 @@ Choisissez les mémos qui vous correspondent :
     <h3 id="desc-android">Description</h4>
     <p>Mémo à destination des développeurs Android.</p>
     <p>Rappel des techniques et outils indispensables pour développer un application Android accessible.</p>
-    <h3 id="tele-android">Téléchargements</h4>
-    <p>   
-      <a href="../../res/memos/android/Memo-Android-Orange.svg" class="btn btn-secondary">
-        Consulter au format SVG
-        <span class="sr-only">Mémo accessibilité développement Android</span>
-      </a>
+    <h3 id="tele-android">Téléchargement</h4>
+    <p>         
       <a href="../../res/memos/android/Memo-Android-Orange.pdf" class="btn btn-secondary">
-        Télécharger au format PDF (415 Ko)
+        Télécharger au format PDF (261 Ko)
         <span class="sr-only">Mémo accessibilité développement Android</span>
       </a>
     </p>
@@ -122,14 +109,10 @@ Choisissez les mémos qui vous correspondent :
     <h3 id="desc-ios">Description</h4>
     <p>Mémo à destination des développeurs iOS.<p>
     <p>Rappel des techniques et outils indispensables pour développer un application iOS accessible.</p>
-    <h3 id="tele-ios">Téléchargements</h4>
-    <p>    
-      <a href="../../res/memos/ios/Memo-iOS-Orange.svg" class="btn btn-secondary">
-        Consulter au format SVG
-        <span class="sr-only">Mémo accessibilité développement iOS</span>
-      </a>
+    <h3 id="tele-ios">Téléchargement</h4>
+    <p>      
       <a href="../../res/memos/ios/Memo-iOS-Orange.pdf" class="btn btn-secondary">
-        Télécharger au format PDF (415 Ko)
+        Télécharger au format PDF (263 Ko)
         <span class="sr-only">Mémo accessibilité développement iOS</span>
       </a>
     </p>
@@ -149,15 +132,32 @@ Choisissez les mémos qui vous correspondent :
   <div class="col-xl-9">  
     <h3 id="desc-email">Description</h4>
     <p>Rappel des bonnes pratiques pour rédiger un email accessible.</p>
-    <h3 id="tele-email">Téléchargements</h4>
-    <p>    
-      <a href="../../res/memos/email/Memo-Email-Orange.svg" class="btn btn-secondary">
-        Consulter au format SVG
+    <h3 id="tele-email">Téléchargement</h4>
+    <p>      
+      <a href="../../res/memos/email/Memo-Email-Orange.pdf" class="btn btn-secondary">
+        Télécharger au format PDF (283 Ko)
         <span class="sr-only">Mémo rédiger un email accessible</span>
       </a>
-      <a href="../../res/memos/email/Memo-Email-Orange.pdf" class="btn btn-secondary">
-        Télécharger au format PDF (415 Ko)
-        <span class="sr-only">Mémo rédiger un email accessible</span>
+    </p>
+  </div>
+</div>
+
+## Rédiger un document Word accessible
+
+<div class="row">
+  <div class="col-3">
+    <p class="border-right">
+      <img src="../images/memos/memo-word.png" alt="">
+    </p>
+  </div>
+  <div class="col-xl-9">  
+    <h3 id="desc-word">Description</h4>
+    <p>Rappel des bonnes pratiques pour rédiger un document Word accessible.</p>
+    <h3 id="tele-word">Téléchargement</h4>
+    <p>      
+      <a href="../../res/memos/word/Memo-Word-Orange.pdf" class="btn btn-secondary">
+        Télécharger au format PDF (236 Ko)
+        <span class="sr-only">Mémo rédiger un document Word accessible</span>
       </a>
     </p>
   </div>
