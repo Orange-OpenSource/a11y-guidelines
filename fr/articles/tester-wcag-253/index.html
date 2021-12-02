@@ -2,10 +2,10 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Le nom accessible en HTML - Recommandations accessibilité numérique Orange</title>
+    <title>Comment tester le WCAG 2.5.3 ? - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <meta name="description" content="Le nom accessible, qu&#39;est-ce et son rapport avec les technologies d&#39;assistance">
+    <meta name="description" content="Les bonnes pratiques pour tester le critère WCAG 2.5.3">
             
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -156,7 +156,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Le nom accessible en HTML
+          Comment tester le WCAG 2.5.3 ?
         </li>
       </ol>
 </nav>
@@ -169,7 +169,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Sommaire
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#en-pratique-comment-ca-marche" class="dropdown-item text-wrap">En pratique, comment ça marche ?</a><a href="#acceder-au-nom-accessible-via-le-navigateur" class="dropdown-item text-wrap">Accéder au nom accessible via le navigateur</a><a href="#contenu-dune-balise" class="dropdown-item text-wrap">Contenu d&#39;une balise</a><a href="#element-associe" class="dropdown-item text-wrap">Élément associé</a><a href="#avec-aria-aussi" class="dropdown-item text-wrap">Avec ARIA aussi !</a><a href="#webographie" class="dropdown-item text-wrap">Webographie</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#que-signifie-le-wcag-253" class="dropdown-item text-wrap">Que signifie le WCAG 2.5.3</a><a href="#explication-generale" class="dropdown-item text-wrap">Explication générale</a><a href="#exemple-concret" class="dropdown-item text-wrap">Exemple concret</a><a href="#nom-accessible" class="dropdown-item text-wrap">Nom accessible</a><a href="#masquage-accessible" class="dropdown-item text-wrap">Masquage accessible</a><a href="#comment-le-tester" class="dropdown-item text-wrap">Comment le tester</a><a href="#lecteur-decran" class="dropdown-item text-wrap">Lecteur d&#39;écran</a><a href="#inspecteur-de-commande" class="dropdown-item text-wrap">Inspecteur de commande</a><a href="#avec-firefox" class="dropdown-item text-wrap">Avec Firefox</a><a href="#avec-chrome-ou-bien-edge-chronium" class="dropdown-item text-wrap">Avec Chrome ou bien Edge Chronium</a></div>
     </nav>
         
       </div>
@@ -180,7 +180,7 @@
         
         <main id="main-content" class="col-md-9" role="main">
           
-            <h1>Le nom accessible en HTML</h1>  
+            <h1>Comment tester le WCAG 2.5.3 ?</h1>  
             
               <span class="sr-only" id="filters_label">
                 Thématiques associées :
@@ -189,56 +189,66 @@
               <li class="list-inline-item"><a href="../?tag=intermediate" class="btn btn-dark btn-sm" data-tag="intermediate">Intermédiaire</a></li>
               </ul>
             
-            <time class="text-muted" datetime="2018-10-26T00:00:00.000Z">26 octobre 2018</time>
+            <time class="text-muted" datetime="2021-11-22T00:00:00.000Z">22 novembre 2021</time>
             
           <div class="mt-4">
-          <h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Le nom (<span lang="en">name</span>) du composant d'interface est appelé aussi nom accessible  (<span lang="en">accessible name</span>), c'est globalement ce nom qui va être exposé à la technologie d'assistance <abbr>AT</abbr> via l'<abbr>API</abbr> d'accessibilité (<span lang="en">accessibility <abbr>API</abbr></span>). Ce nom est calculé par le navigateur via un algorithme appelé <a href="https://www.w3.org/TR/accname-1.1/"><span lang="en">Accessible Name and Description Computation 1.1</span></a>.<br>
-En fait, pour faire simple, le navigateur va générer un arbre accessible (<span lang="en">accessibility tree</span>) à partir du <span lang="en">Document Model Object</span> (<abbr>DOM</abbr>) dans lequel une grande majorité des éléments <abbr>HTML</abbr> (ceux qui n'ont qu'un but de présentation, ex. : balises <code>div</code> et <code>span</code> n'en ont pas l'utilité) ont besoin d'un nom (accessible) pour être correctement identifiés par l'<abbr>AT</abbr>.</p>
-<p>Le nom accessible est issu du contenu d'une balise, d'attributs de cette balise ou d'un élément qui lui est associé.</p>
-<h2 id="en-pratique-comment-ca-marche">En pratique, comment ça marche ? <a class="header-anchor" href="#en-pratique-comment-ca-marche" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Le nom accessible est, par exemple, annoncé par un lecteur d'écran à la prise de focus sur cet élément mais le rôle de l'élément est aussi ajouté (lien, graphique, bouton...).</p>
-<h3 id="acceder-au-nom-accessible-via-le-navigateur">Accéder au nom accessible via le navigateur <a class="header-anchor" href="#acceder-au-nom-accessible-via-le-navigateur" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Pour accéder au nom (accessible), le plus simple est d'utiliser les outils des navigateurs.</p>
-<p>Dans Chrome, il faut, dans les Chrome dev tools (<kbd>Ctrl+ Maj. + i</kbd>), inspecter un élément (onglet &quot;Elements&quot;) et ouvrir le panneau &quot;Accessibility&quot; à la place de celui de &quot;Style&quot; (généralement à droite). On accède à l'&quot;Accessibility tree&quot; et dans &quot;Computed properties&quot; au &quot;Name&quot;, le nom accessible de l'élément inspecté.</p>
-<p><img src="../../web/images/chrome_name.png" alt="Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert" class="img-fluid"></p>
-<p>Dans FireFox, il faut, dans les dev tools (<kbd>Ctrl+ Maj. + i</kbd>), ouvrir l'onglet &quot;Accessibilité&quot; (à afficher les &quot;Options&quot; des dev tools), inspecter un élément. On accède au &quot;Name&quot;, le nom accessible de l'élément inspecté.</p>
-<p><img src="../../web/images/FF_name.png" alt="Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert" class="img-fluid"></p>
-<h3 id="contenu-dune-balise">Contenu d'une balise <a class="header-anchor" href="#contenu-dune-balise" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p><code>&lt;a href=&quot;canard.html&quot;&gt;canards en plastique&lt;/a&gt;</code></p>
-<p>Ici, le nom du lien est le contenu (libellé) de celui-ci : &quot;canards en plastique&quot;. Un utilisateur de lecteur d'écran à la prise de focus sur cet élément entendra : &quot;canards en plastique lien&quot;. Pour un utilisateur de commande vocale, pour cliquer sur ce lien, dira : &quot;cliquer canards en plastique lien&quot;.</p>
-<p>Donc, un élément de ce type <code>&lt;button type=”submit”&gt;&lt;/button&gt;</code> sans intitulé, ne sera pas accessible, bien sûr !</p>
-<p>Également, on peut additionner les éléments pour donner un nom.</p>
-<p><code>&lt;button type=”submit”&gt;Acheter &lt;img alt=&quot;le canard en plastique&quot; src=&quot;canard.jpg&quot;&gt;&lt;/button&gt;</code></p>
-<p>Ce bouton aura lui un nom accessible qui est le contenu du bouton : l'intitulé textuel, &quot;Acheter &quot; plus le <code>alt</code> de l'image : &quot;le canard en plastique&quot; donc &quot;Acheter le canard en plastique&quot;.</p>
-<h3 id="element-associe">Élément associé <a class="header-anchor" href="#element-associe" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Par ailleurs, pour les éléments de formulaire, le nom accessible est le <code>label</code> lorsqu’il est programmatiquement associé à l'élément via l'attribut <code>for</code> référençant l'<code>id</code> du champ.</p>
+          <h2 id="que-signifie-le-wcag-253">Que signifie le WCAG 2.5.3 <a class="header-anchor" href="#que-signifie-le-wcag-253" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="explication-generale">Explication générale <a class="header-anchor" href="#explication-generale" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Le but de <a href="https://www.w3.org/TR/WCAG21/#label-in-name">ce critère</a> est de s'assurer que si un bouton, un lien ou un autre élément d'interface contient du texte visible à l'écran, <a href="/fr/articles/le-nom-accessible-en-html/">son nom accessible</a> doit contenir au moins le même texte que celui affiché.<br>
+Cela pour garantir que les utilisateurs <a href="/fr/solutions-assistance/#main-content">d'aides techniques</a> soient capables de comprendre et d'interagir avec le composant. En effet les aides techniques s'appuient sur le nom accessible des composants. Par exemple, un utilisateur de reconnaissance vocale pourra cliquer sur un bouton simplement en prononçant son nom accessible.</p>
+<p>Il n'est pas demandé que le texte visible et le nom accessible soient identiques, mais le texte visible doit être présent dans le nom accessible, de préférence en premier.</p>
+<h3 id="exemple-concret">Exemple concret <a class="header-anchor" href="#exemple-concret" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<h4 id="nom-accessible">Nom accessible <a class="header-anchor" href="#nom-accessible" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Prenons l'exemple d'un utilisateur navigant à l'aide d'un logiciel de reconnaissance vocale souhaitant saisir et soumettre un formulaire.<br>
+<img src="../images/tester-wcag-253/button_send.png" alt="bouton avec le texte envoyer" class="img-fluid"></p>
 <pre><code class="html">
-&lt;label for="search"&gt;Rechercher&lt;/label&gt;
-&lt;input id="search" type="text"&gt;
-</code></pre>
-<p>Avec ce code, le lecteur d'écran dira : &quot;Rechercher édition&quot;.</p>
-<h3 id="avec-aria-aussi">Avec <abbr>ARIA</abbr> aussi ! <a class="header-anchor" href="#avec-aria-aussi" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p><abbr>ARIA</abbr> va pouvoir nous aider pour donner un nom à un élément <abbr>HTML</abbr>, en utilisant <code>aria-label</code> et <code>aria-labelledby</code>.</p>
-<pre><code class="html">
-&lt;button class="navbar-toggler" type="button" aria-label="Ouverture menu navigation" ... &gt;
-&lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;
+&lt;button&gt;
+    &lt;img src="envoyer.png" alt="Soumettre"&gt;
 &lt;/button&gt;
 </code></pre>
-<p>Ce bouton de menu hamburger a donc un nom : &quot;Ouverture menu navigation&quot;.<br>
-Mais on pourrait aussi utiliser <code>aria-labelledby</code> pour référencer un autre élément de la page comme nom :</p>
+<p>L'exemple ci-dessus risque de poser des difficultés. Le bouton contient une image avec le texte &quot;Envoyer&quot;, mais l'alternative textuelle de l'image est &quot;Soumettre&quot;, son nom accessible est donc &quot;Soumettre&quot;. Les technologies d'assistance se basant sur le nom accessible, si l'utilisateur prononce &quot;Envoyer&quot;, il ne se passera rien.</p>
+<p>Pour résoudre le problème, il faut que l'alternative textuelle soit la même que le texte de l'image (&quot;Envoyer&quot;).</p>
 <pre><code class="html">
-&lt;input type="search" aria-labelledby="this"&gt;
-&lt;button id="this"&gt;Rechercher dans le site&lt;/button&gt;
+&lt;button&gt;
+    &lt;img src="envoyer.png" alt="Envoyer"&gt;
+&lt;/button&gt;
 </code></pre>
-<p>Lors de la prise de focus sur le champ, le lecteur d'écran annonce &quot;Rechercher sur le site édition&quot;.</p>
-<p>Plus de détails sur <a href="../attributs-aria-qui-peuvent-vous-sauver/">&quot;Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver&quot;</a>.</p>
-<h2 id="webographie">Webographie <a class="header-anchor" href="#webographie" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<ul>
-<li><a href="https://www.w3.org/TR/accname-1.1/" lang="en" hreflang="en">Accessible Name and Description Computation 1.1</a> par <span lang="en">the Accessible Rich Internet Applications Working Group</span></li>
-<li><a href="http://simplyaccessible.com/article/accessible-name/" lang="en" hreflang="en">Demystifying accessible name</a> par Joe Watkins</li>
-<li><a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/" lang="en" hreflang="en">What is an accessible name?</a> par Léonie Watson</li>
-</ul>
+<h4 id="masquage-accessible">Masquage accessible <a class="header-anchor" href="#masquage-accessible" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Il faut faire attention lorsqu'on utilise du <a href="/fr/web/exemples-de-composants/masquage-accessible/">masquage accessible</a>. Celui-ci ne doit pas être placé au milieu d'un intitulé affiché visuellement.</p>
+<p>Sinon il sera impossible de faire une corrélation entre le nom accessible et le texte affiché.</p>
+<p>Exemple d'erreur :</p>
+<pre><code class="html">
+&lt;a href="www.orange.com" target="_blank"&gt; Ouvrir &lt;span class="sr-only"&gt;dans une nouvelle fenêtre &lt;/span&gt; le site d'orange &lt;/a&gt;
+</code></pre>
+<p>Si on prononce &quot;Ouvrir le site d'orange&quot;, le logiciel de reconnaissance vocale ne trouvera pas cet élément. En revanche, si l'on prononce &quot;Ouvrir dans une nouvelle fenêtre le site d'orange&quot; le lien sera activé, puisque c'est son nom accessible.</p>
+<h2 id="comment-le-tester">Comment le tester <a class="header-anchor" href="#comment-le-tester" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="lecteur-decran">Lecteur d'écran <a class="header-anchor" href="#lecteur-decran" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Le lecteur d'écran vocalise les propriétés de l'élément sur lequel vous placez votre focus.<br>
+En particulier, les caractéristiques suivantes de l'élément : sa fonction (lien, bouton, texte ...), son statut et son nom accessible. Si le nom accessible que vous entendez ne correspond pas à ce qui est textuellement visible, alors le critère est considéré comme non-conforme.</p>
+<p>Vous pouvez utiliser la visionneuse de paroles du lecteur d'écran afin de retranscrire de manière textuelle les caractéristiques d'un élément. Il est donc possible de comparer le nom accessible sous forme textuelle lu par le lecteur d'écran avec le texte affiché sur le composant.</p>
+<p><img src="../images/tester-wcag-253/nvda_visionneuse.png" alt="Exemple de visionneuse de parole" class="img-fluid"></p>
+<h3 id="inspecteur-de-commande">Inspecteur de commande <a class="header-anchor" href="#inspecteur-de-commande" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Le moyen de vérifier le critère avec l'inspecteur de commande dépend du navigateur utilisé.</p>
+<h4 id="avec-firefox">Avec Firefox <a class="header-anchor" href="#avec-firefox" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<ol>
+  <li>Accéder à l'inspecteur de commande (<kbd>Ctrl+ Maj. + i</kbd>)</li>
+  <li>Sélectionner l'onglet accessibilité</li>
+  <li>Inspecter un élément</li>
+  <li>Regarder la partie propriétés, si l'attribut <span lang="en">name</span> contient au moins le texte qui est affiché le critère est conforme</li> 
+</ol>
+<p><img src="../images/tester-wcag-253/FF_name.png" alt="Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert" class="img-fluid"></p>
+<h4 id="avec-chrome-ou-bien-edge-chronium">Avec Chrome ou bien Edge Chronium <a class="header-anchor" href="#avec-chrome-ou-bien-edge-chronium" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<ol>
+  <li>Accéder à l'inspecteur de commande (<kbd>Ctrl+ Maj. + i</kbd>)</li>
+  <li>Sélectionner l'onglet Éléments</li>
+  <li>Choisisser l'élément que vous souhaitez inspecter</li>
+  <li>
+    Cliquer sur l'onglet Accessibilité, cet onglet peut être caché derrière le bouton "plus d'onglet"
+    <img src="../images/tester-wcag-253/more_tab_img.png" alt="">
+  </li>
+  <li>Regarder la partie "Propriétées calculées" si l'attribut <span lang="en">name</span> contient au moins le texte qui est affiché, le critère est valide</li>
+</ol>
+<p><img src="../images/tester-wcag-253/Chrome_name.png" alt="Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert" class="img-fluid"></p>
 
           </div>
         </main>
@@ -248,14 +258,20 @@ Mais on pourrait aussi utiliser <code>aria-labelledby</code> pour référencer u
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Sommaire</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
-            <a href="#en-pratique-comment-ca-marche" class="nav-link text-muted">En pratique, comment ça marche ?</a>
+            <a href="#que-signifie-le-wcag-253" class="nav-link text-muted">Que signifie le WCAG 2.5.3</a>
             <ul><li class="nav-item position-relative">
-            <a href="#acceder-au-nom-accessible-via-le-navigateur" class="nav-link text-muted">Accéder au nom accessible via le navigateur</a></li><li class="nav-item position-relative">
-            <a href="#contenu-dune-balise" class="nav-link text-muted">Contenu d&#39;une balise</a></li><li class="nav-item position-relative">
-            <a href="#element-associe" class="nav-link text-muted">Élément associé</a></li><li class="nav-item position-relative">
-            <a href="#avec-aria-aussi" class="nav-link text-muted">Avec ARIA aussi !</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#webographie" class="nav-link text-muted">Webographie</a></li>
+            <a href="#explication-generale" class="nav-link text-muted">Explication générale</a></li><li class="nav-item position-relative">
+            <a href="#exemple-concret" class="nav-link text-muted">Exemple concret</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#nom-accessible" class="nav-link text-muted">Nom accessible</a></li><li class="nav-item position-relative">
+            <a href="#masquage-accessible" class="nav-link text-muted">Masquage accessible</a></li></ul></li></ul></li><li class="nav-item position-relative">
+            <a href="#comment-le-tester" class="nav-link text-muted">Comment le tester</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#lecteur-decran" class="nav-link text-muted">Lecteur d&#39;écran</a></li><li class="nav-item position-relative">
+            <a href="#inspecteur-de-commande" class="nav-link text-muted">Inspecteur de commande</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#avec-firefox" class="nav-link text-muted">Avec Firefox</a></li><li class="nav-item position-relative">
+            <a href="#avec-chrome-ou-bien-edge-chronium" class="nav-link text-muted">Avec Chrome ou bien Edge Chronium</a></li></ul></li></ul></li>
       </ul>
     </nav>
             </div>
@@ -290,7 +306,7 @@ Mais on pourrait aussi utiliser <code>aria-labelledby</code> pour référencer u
           </a>
         </li>
         <li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/le-nom-accessible-en-html.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/tester-wcag-253.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
             Signaler une erreur sur GitHub<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>

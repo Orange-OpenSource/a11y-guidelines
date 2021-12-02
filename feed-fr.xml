@@ -4,7 +4,7 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2021-09-27T00:00:00Z</updated>
+  <updated>2021-11-22T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -1380,6 +1380,71 @@ Donc les WCAG 2.2, elles aussi, mécaniquement, s&#39;approchent à grand pas, s
 &lt;li&gt;Une belle interview d’une UX/UI experte a11y : &lt;a href=&quot;https://www.alsacreations.com/actu/lire/1833-Interview-des-gens-du-Web--Marie-Guillaumet.html&quot;&gt;https://www.alsacreations.com/actu/lire/1833-Interview-des-gens-du-Web--Marie-Guillaumet.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Synthèses vocales où en est-on ? (en) : &lt;a href=&quot;https://tink.uk/notes-on-synthetic-speech/&quot;&gt;https://tink.uk/notes-on-synthetic-speech/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Comment tester le WCAG 2.5.3 ?</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/"/>
+    <updated>2021-11-22T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/</id>
+    <content type="html">&lt;h2 id=&quot;que-signifie-le-wcag-253&quot;&gt;Que signifie le WCAG 2.5.3 &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/#que-signifie-le-wcag-253&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;explication-generale&quot;&gt;Explication générale &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/#explication-generale&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Le but de &lt;a href=&quot;https://www.w3.org/TR/WCAG21/#label-in-name&quot;&gt;ce critère&lt;/a&gt; est de s&#39;assurer que si un bouton, un lien ou un autre élément d&#39;interface contient du texte visible à l&#39;écran, &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/le-nom-accessible-en-html/&quot;&gt;son nom accessible&lt;/a&gt; doit contenir au moins le même texte que celui affiché.&lt;br /&gt;
+Cela pour garantir que les utilisateurs &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/solutions-assistance/#main-content&quot;&gt;d&#39;aides techniques&lt;/a&gt; soient capables de comprendre et d&#39;interagir avec le composant. En effet les aides techniques s&#39;appuient sur le nom accessible des composants. Par exemple, un utilisateur de reconnaissance vocale pourra cliquer sur un bouton simplement en prononçant son nom accessible.&lt;/p&gt;
+&lt;p&gt;Il n&#39;est pas demandé que le texte visible et le nom accessible soient identiques, mais le texte visible doit être présent dans le nom accessible, de préférence en premier.&lt;/p&gt;
+&lt;h3 id=&quot;exemple-concret&quot;&gt;Exemple concret &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/#exemple-concret&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&quot;nom-accessible&quot;&gt;Nom accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/#nom-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Prenons l&#39;exemple d&#39;un utilisateur navigant à l&#39;aide d&#39;un logiciel de reconnaissance vocale souhaitant saisir et soumettre un formulaire.&lt;br /&gt;
+&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/tester-wcag-253/button_send.png&quot; alt=&quot;bouton avec le texte envoyer&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;button&amp;gt;
+    &amp;lt;img src=&quot;envoyer.png&quot; alt=&quot;Soumettre&quot;&amp;gt;
+&amp;lt;/button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;L&#39;exemple ci-dessus risque de poser des difficultés. Le bouton contient une image avec le texte &amp;quot;Envoyer&amp;quot;, mais l&#39;alternative textuelle de l&#39;image est &amp;quot;Soumettre&amp;quot;, son nom accessible est donc &amp;quot;Soumettre&amp;quot;. Les technologies d&#39;assistance se basant sur le nom accessible, si l&#39;utilisateur prononce &amp;quot;Envoyer&amp;quot;, il ne se passera rien.&lt;/p&gt;
+&lt;p&gt;Pour résoudre le problème, il faut que l&#39;alternative textuelle soit la même que le texte de l&#39;image (&amp;quot;Envoyer&amp;quot;).&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;button&amp;gt;
+    &amp;lt;img src=&quot;envoyer.png&quot; alt=&quot;Envoyer&quot;&amp;gt;
+&amp;lt;/button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;masquage-accessible&quot;&gt;Masquage accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/#masquage-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Il faut faire attention lorsqu&#39;on utilise du &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/web/exemples-de-composants/masquage-accessible/&quot;&gt;masquage accessible&lt;/a&gt;. Celui-ci ne doit pas être placé au milieu d&#39;un intitulé affiché visuellement.&lt;/p&gt;
+&lt;p&gt;Sinon il sera impossible de faire une corrélation entre le nom accessible et le texte affiché.&lt;/p&gt;
+&lt;p&gt;Exemple d&#39;erreur :&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;a href=&quot;www.orange.com&quot; target=&quot;_blank&quot;&amp;gt; Ouvrir &amp;lt;span class=&quot;sr-only&quot;&amp;gt;dans une nouvelle fenêtre &amp;lt;/span&amp;gt; le site d&#39;orange &amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Si on prononce &amp;quot;Ouvrir le site d&#39;orange&amp;quot;, le logiciel de reconnaissance vocale ne trouvera pas cet élément. En revanche, si l&#39;on prononce &amp;quot;Ouvrir dans une nouvelle fenêtre le site d&#39;orange&amp;quot; le lien sera activé, puisque c&#39;est son nom accessible.&lt;/p&gt;
+&lt;h2 id=&quot;comment-le-tester&quot;&gt;Comment le tester &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/#comment-le-tester&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;lecteur-decran&quot;&gt;Lecteur d&#39;écran &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/#lecteur-decran&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Le lecteur d&#39;écran vocalise les propriétés de l&#39;élément sur lequel vous placez votre focus.&lt;br /&gt;
+En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction (lien, bouton, texte ...), son statut et son nom accessible. Si le nom accessible que vous entendez ne correspond pas à ce qui est textuellement visible, alors le critère est considéré comme non-conforme.&lt;/p&gt;
+&lt;p&gt;Vous pouvez utiliser la visionneuse de paroles du lecteur d&#39;écran afin de retranscrire de manière textuelle les caractéristiques d&#39;un élément. Il est donc possible de comparer le nom accessible sous forme textuelle lu par le lecteur d&#39;écran avec le texte affiché sur le composant.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/tester-wcag-253/nvda_visionneuse.png&quot; alt=&quot;Exemple de visionneuse de parole&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;inspecteur-de-commande&quot;&gt;Inspecteur de commande &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/#inspecteur-de-commande&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Le moyen de vérifier le critère avec l&#39;inspecteur de commande dépend du navigateur utilisé.&lt;/p&gt;
+&lt;h4 id=&quot;avec-firefox&quot;&gt;Avec Firefox &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/#avec-firefox&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Accéder à l&#39;inspecteur de commande (&lt;kbd&gt;Ctrl+ Maj. + i&lt;/kbd&gt;)&lt;/li&gt;
+  &lt;li&gt;Sélectionner l&#39;onglet accessibilité&lt;/li&gt;
+  &lt;li&gt;Inspecter un élément&lt;/li&gt;
+  &lt;li&gt;Regarder la partie propriétés, si l&#39;attribut &lt;span lang=&quot;en&quot;&gt;name&lt;/span&gt; contient au moins le texte qui est affiché le critère est conforme&lt;/li&gt; 
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/tester-wcag-253/FF_name.png&quot; alt=&quot;Panneaux des outils de développement de Firefox avec l&#39;onglet Accessibilité ouvert&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;avec-chrome-ou-bien-edge-chronium&quot;&gt;Avec Chrome ou bien Edge Chronium &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/#avec-chrome-ou-bien-edge-chronium&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Accéder à l&#39;inspecteur de commande (&lt;kbd&gt;Ctrl+ Maj. + i&lt;/kbd&gt;)&lt;/li&gt;
+  &lt;li&gt;Sélectionner l&#39;onglet Éléments&lt;/li&gt;
+  &lt;li&gt;Choisisser l&#39;élément que vous souhaitez inspecter&lt;/li&gt;
+  &lt;li&gt;
+    Cliquer sur l&#39;onglet Accessibilité, cet onglet peut être caché derrière le bouton &quot;plus d&#39;onglet&quot;
+    &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/tester-wcag-253/more_tab_img.png&quot; alt=&quot;&quot; /&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Regarder la partie &quot;Propriétées calculées&quot; si l&#39;attribut &lt;span lang=&quot;en&quot;&gt;name&lt;/span&gt; contient au moins le texte qui est affiché, le critère est valide&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/tester-wcag-253/Chrome_name.png&quot; alt=&quot;Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
