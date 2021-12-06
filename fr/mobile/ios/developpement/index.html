@@ -2110,6 +2110,8 @@ Il est aussi possible d'utiliser la méthode <strong><a href="../wwdc/2017/245/#
 <p>penser à adapter le <a href="../conception#couleurs">contraste des couleurs</a> à la taille de texte modifiée si nécessaire.</p>
 </li>
 </ul>
+<p><br><strong>Depuis iOS 15</strong>, il est désormais possible de <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=878">limiter les seuils minimal et maximal</a> de modification de taille avec le <span lang="en">Dynamic Type</span> pour un élément <span lang="en">UIView</span> grâce à deux nouvelles propriétés : <strong><a href="https://developer.apple.com/documentation/uikit/uiview/3750924-minimumcontentsizecategory">minimumContentSizeCategory</a></strong> et <strong><a href="https://developer.apple.com/documentation/uikit/uiview/3750923-maximumcontentsizecategory">maximumContentSizeCategory</a></strong>.</p>
+<p>Il est toutefois nécessaire de bien garder à l'esprit que cette nouveauté iOS 15 n'est à utiliser que dans des situations spécifiques qui utilisent déjà le <span lang="en">Dynamic Type</span> mais dont les représentations extrêmes seraient plutôt néfastes à l'expérience utilisateur.</p>
 </div>
 <div class="tab-pane" id="textSize-Links" role="tabpanel">
 <ul>
@@ -2124,6 +2126,12 @@ Il est aussi possible d'utiliser la méthode <strong><a href="../wwdc/2017/245/#
 </li>
 <li>
 <p><a href="../wwdc/2017/245">Application du Dynamic Type</a></p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/uikit/uiview/3750924-minimumcontentsizecategory"><code>minimumContentSizeCategory</code></a></p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/uikit/uiview/3750923-maximumcontentsizecategory"><code>maximumContentSizeCategory</code></a></p>
 </li>
 </ul>
 </div>
