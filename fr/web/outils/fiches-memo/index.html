@@ -2,10 +2,10 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Boite à outils - Recommandations accessibilité numérique Orange</title>
+    <title>Les fiches mémos accessibilité pour le Web - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <meta name="description" content="Des ressources et outils pour faciliter la prise en compte de l’accessibilité numérique sur iOS">
+    <meta name="description" content="Les fiches mémo à télécharger pour l&#39;accessibilité des sites Web">
             
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -22,8 +22,6 @@
     <link rel="icon" href="/assets/images/favicon.ico">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
-    
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
@@ -78,7 +76,7 @@
   Cadrage
 </a>
         </li><li class="nav-item">
-          <a href="/fr/web/" class="nav-link">
+          <a href="/fr/web/" class="nav-link active" aria-current="true">
   Web
 </a>
         </li><li class="nav-item">
@@ -86,7 +84,7 @@
   Android
 </a>
         </li><li class="nav-item">
-          <a href="/fr/mobile/ios/" class="nav-link active" aria-current="true">
+          <a href="/fr/mobile/ios/" class="nav-link">
   iOS
 </a>
         </li><li class="nav-item">
@@ -136,28 +134,28 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/fr/mobile/ios/conception/" class="nav-link">
+              <a href="/fr/web/designer/" class="nav-link">
   Designer
 </a>
             </li><li class="nav-item">
-              <a href="/fr/mobile/ios/developpement/" class="nav-link">
+              <a href="/fr/web/developper/" class="nav-link">
   Développer
 </a>
             </li><li class="nav-item">
-              <a href="/fr/mobile/ios/test/" class="nav-link">
+              <a href="/fr/web/tester/" class="nav-link">
   Tester
 </a>
             </li><li class="nav-item">
-              <a href="/fr/mobile/ios/audit-wcag/" class="nav-link">
+              <a href="/fr/web/audit-wcag/" class="nav-link">
   Évaluer
 </a>
             </li><li class="nav-item">
-              <a href="/fr/mobile/ios/outils/" class="nav-link active" aria-current="page">
+              <a href="/fr/web/outils/" class="nav-link active" aria-current="true">
   Boite à outils
 </a>
             </li><li class="nav-item">
-              <a href="/fr/mobile/ios/wwdc/" class="nav-link">
-  WWDC
+              <a href="/fr/web/exemples-de-composants/" class="nav-link">
+  Exemples de composants
 </a>
             </li></ul>
   </div>
@@ -178,13 +176,18 @@
         </li>
       
       
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/web/">Web</a>
+        </li>
+      
+      
         <li class="breadcrumb-item">
-          <a href="/fr/mobile/ios/">iOS</a>
+          <a href="/fr/web/outils/">Boite à outils</a>
         </li>
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Boite à outils
+          Les fiches mémos accessibilité pour le Web
         </li>
       </ol>
 </nav>
@@ -195,16 +198,18 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
         Thématiques
       </button>
-      <div class="dropdown-menu dropdown-menu-left"><a href="../voiceover/" class="nav-link dropdown-item">
-  Lecteur d&#39;écran VoiceOver
-</a><a href="../../flutter/" class="nav-link dropdown-item">
-  Flutter
-</a><a href="../../mdan/" class="nav-link dropdown-item">
-  App m-learning mDAN
-</a><a href="../fiches-memo/" class="nav-link dropdown-item">
+      <div class="dropdown-menu dropdown-menu-left"><a href="/fr/web/outils/orange-boosted/" class="nav-link dropdown-item">
+  Orange Boosted
+</a><a href="/fr/web/outils/methodes-et-outils-de-test/" class="nav-link dropdown-item">
+  Méthodes et outils de test
+</a><a href="/fr/web/audit-wcag/" class="nav-link dropdown-item">
+  La Va11ydette
+</a><a href="/fr/web/outils/fiches-memo/" class="nav-link dropdown-item active" aria-current="page">
   Fiches mémo
-</a><a href="../../liens-utiles/" class="nav-link dropdown-item">
+</a><a href="/fr/web/liens-utiles/" class="nav-link dropdown-item">
   Liens utiles
+</a><a href="/fr/glossaire/" class="nav-link dropdown-item">
+  Glossaire
 </a></div>
     </nav>
         
@@ -219,24 +224,28 @@
               <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
       <h2 id="side-navigation-label">Thématiques</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="../voiceover/" class="nav-link text-muted">
-  Lecteur d&#39;écran VoiceOver
+            <a href="/fr/web/outils/orange-boosted/" class="nav-link text-muted">
+  Orange Boosted
 </a>
           </li><li class="nav-item position-relative">
-            <a href="../../flutter/" class="nav-link text-muted">
-  Flutter
+            <a href="/fr/web/outils/methodes-et-outils-de-test/" class="nav-link text-muted">
+  Méthodes et outils de test
 </a>
           </li><li class="nav-item position-relative">
-            <a href="../../mdan/" class="nav-link text-muted">
-  App m-learning mDAN
+            <a href="/fr/web/audit-wcag/" class="nav-link text-muted">
+  La Va11ydette
 </a>
           </li><li class="nav-item position-relative">
-            <a href="../fiches-memo/" class="nav-link text-muted">
+            <a href="/fr/web/outils/fiches-memo/" class="nav-link text-muted active" aria-current="page">
   Fiches mémo
 </a>
           </li><li class="nav-item position-relative">
-            <a href="../../liens-utiles/" class="nav-link text-muted">
+            <a href="/fr/web/liens-utiles/" class="nav-link text-muted">
   Liens utiles
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/fr/glossaire/" class="nav-link text-muted">
+  Glossaire
 </a>
           </li></ul>
     </nav>
@@ -247,14 +256,9 @@
         <main id="main-content" class="col-md-9" role="main">
             
           <div class="mt-4">
-          <h1>Boite à outils</h1>
-<p>Des ressources et outils pour faciliter la prise en compte de l’accessibilité numérique sur iOS :</p>
-<ul>
-<li>Guide d'utilisation du lecteur d'écran VoiceOver</li>
-<li>Informations pour développer accessible avec Flutter</li>
-<li>mDAN, une application mobile pour se former sur les options d'accessibilité des mobiles et des applications sous iOS</li>
-<li>Liens vers d'autres ressources dont la page officielle de l'accessibilité d'Apple</li>
-</ul>
+          <h1>Les fiches mémos accessibilité pour le Web</h1>
+<p>Des fiches mémo au format PDF et SVG (accessible) contenant un rappel des critères incontournables à respecter pour créer ou pour tester l'accessibilité d'un site Web.</p>
+<p><a href="../../../articles/memo-accessibilite/">Consulter tous les mémos</a></p>
 
           </div>
         </main>
@@ -288,7 +292,7 @@
           </a>
         </li>
         <li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/ios/outils.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/web/outils/fiches-memo.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
             Signaler une erreur sur GitHub<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
@@ -315,13 +319,11 @@
     
     
     
-      <script src="/assets/vendors/highlightjs/highlight.js"></script>
-    
     <script>
       const Application = {
         lang: "fr",
         vendors: {
-          highlightJS: true
+          highlightJS: false
         }
       }
     </script>

@@ -2,10 +2,10 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Boite à outils - Recommandations accessibilité numérique Orange</title>
+    <title>Fiches mémos accessibilité pour Word - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <meta name="description" content="Des ressources et outils pour faciliter la prise en compte de l’accessibilité numérique sur iOS">
+    <meta name="description" content="Fiches mémo à télécharger pour l&#39;accessibilité des documents Word">
             
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -23,12 +23,10 @@
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
     
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
-    
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -86,11 +84,11 @@
   Android
 </a>
         </li><li class="nav-item">
-          <a href="/fr/mobile/ios/" class="nav-link active" aria-current="true">
+          <a href="/fr/mobile/ios/" class="nav-link">
   iOS
 </a>
         </li><li class="nav-item">
-          <a href="/fr/contenu-et-communication/" class="nav-link">
+          <a href="/fr/contenu-et-communication/" class="nav-link active" aria-current="true">
   Contenu et communication
 </a>
         </li><li class="nav-item">
@@ -136,28 +134,32 @@
   <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/fr/mobile/ios/conception/" class="nav-link">
-  Designer
+              <a href="/fr/contenu-et-communication/word/" class="nav-link active" aria-current="true">
+  Word
 </a>
             </li><li class="nav-item">
-              <a href="/fr/mobile/ios/developpement/" class="nav-link">
-  Développer
+              <a href="/fr/contenu-et-communication/powerpoint/" class="nav-link">
+  Powerpoint
 </a>
             </li><li class="nav-item">
-              <a href="/fr/mobile/ios/test/" class="nav-link">
-  Tester
+              <a href="/fr/contenu-et-communication/pdf/" class="nav-link">
+  Documents PDF
 </a>
             </li><li class="nav-item">
-              <a href="/fr/mobile/ios/audit-wcag/" class="nav-link">
-  Évaluer
+              <a href="/fr/contenu-et-communication/reseaux-sociaux/" class="nav-link">
+  Réseaux sociaux
 </a>
             </li><li class="nav-item">
-              <a href="/fr/mobile/ios/outils/" class="nav-link active" aria-current="page">
-  Boite à outils
+              <a href="/fr/contenu-et-communication/emails/" class="nav-link">
+  Emails
 </a>
             </li><li class="nav-item">
-              <a href="/fr/mobile/ios/wwdc/" class="nav-link">
-  WWDC
+              <a href="/fr/contenu-et-communication/composants-animes/" class="nav-link">
+  Contenus audios/vidéos
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/contenu-et-communication/e-learning/" class="nav-link">
+  E-learning
 </a>
             </li></ul>
   </div>
@@ -178,13 +180,18 @@
         </li>
       
       
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/contenu-et-communication/">Contenu et communication</a>
+        </li>
+      
+      
         <li class="breadcrumb-item">
-          <a href="/fr/mobile/ios/">iOS</a>
+          <a href="/fr/contenu-et-communication/word/">Word</a>
         </li>
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          Boite à outils
+          Fiches mémos accessibilité pour Word
         </li>
       </ol>
 </nav>
@@ -195,18 +202,16 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
         Thématiques
       </button>
-      <div class="dropdown-menu dropdown-menu-left"><a href="../voiceover/" class="nav-link dropdown-item">
-  Lecteur d&#39;écran VoiceOver
-</a><a href="../../flutter/" class="nav-link dropdown-item">
-  Flutter
-</a><a href="../../mdan/" class="nav-link dropdown-item">
-  App m-learning mDAN
-</a><a href="../fiches-memo/" class="nav-link dropdown-item">
-  Fiches mémo
-</a><a href="../../liens-utiles/" class="nav-link dropdown-item">
-  Liens utiles
+      <div class="dropdown-menu dropdown-menu-left"><a href="/fr/contenu-et-communication/word/" class="nav-link dropdown-item">
+  Créer un document Word accessible
+</a><a href="/fr/contenu-et-communication/word/tester/" class="nav-link dropdown-item">
+  Tester l&#39;accessibilité de votre document Word
+</a><a href="/fr/contenu-et-communication/word/fiche-memo/" class="nav-link dropdown-item active" aria-current="page">
+  Fiche mémo accessibilité Word
 </a></div>
     </nav>
+        
+          
         
       </div>
     </div>
@@ -219,24 +224,16 @@
               <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
       <h2 id="side-navigation-label">Thématiques</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="../voiceover/" class="nav-link text-muted">
-  Lecteur d&#39;écran VoiceOver
+            <a href="/fr/contenu-et-communication/word/" class="nav-link text-muted">
+  Créer un document Word accessible
 </a>
           </li><li class="nav-item position-relative">
-            <a href="../../flutter/" class="nav-link text-muted">
-  Flutter
+            <a href="/fr/contenu-et-communication/word/tester/" class="nav-link text-muted">
+  Tester l&#39;accessibilité de votre document Word
 </a>
           </li><li class="nav-item position-relative">
-            <a href="../../mdan/" class="nav-link text-muted">
-  App m-learning mDAN
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="../fiches-memo/" class="nav-link text-muted">
-  Fiches mémo
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="../../liens-utiles/" class="nav-link text-muted">
-  Liens utiles
+            <a href="/fr/contenu-et-communication/word/fiche-memo/" class="nav-link text-muted active" aria-current="page">
+  Fiche mémo accessibilité Word
 </a>
           </li></ul>
     </nav>
@@ -244,20 +241,21 @@
             </div>
           </div>
         
-        <main id="main-content" class="col-md-9" role="main">
+        <main id="main-content" class="col-md-6" role="main">
             
           <div class="mt-4">
-          <h1>Boite à outils</h1>
-<p>Des ressources et outils pour faciliter la prise en compte de l’accessibilité numérique sur iOS :</p>
-<ul>
-<li>Guide d'utilisation du lecteur d'écran VoiceOver</li>
-<li>Informations pour développer accessible avec Flutter</li>
-<li>mDAN, une application mobile pour se former sur les options d'accessibilité des mobiles et des applications sous iOS</li>
-<li>Liens vers d'autres ressources dont la page officielle de l'accessibilité d'Apple</li>
-</ul>
+          <h1>Fiches mémos accessibilité pour Word</h1>
+<p>Notre fiche mémo accessibilité Word contient un rappel des critères incontournables à respecter pour créer un document Word accessible.</p>
+<p><a href="../../../articles/memo-accessibilite/">Consulter tous les mémos</a></p>
 
           </div>
         </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              
+            </div>
+          </div>
         
       </div>
     </div>
@@ -288,7 +286,7 @@
           </a>
         </li>
         <li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/ios/outils.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/contenu-et-communication/word/fiche-memo.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
             Signaler une erreur sur GitHub<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
@@ -315,13 +313,11 @@
     
     
     
-      <script src="/assets/vendors/highlightjs/highlight.js"></script>
-    
     <script>
       const Application = {
         lang: "fr",
         vendors: {
-          highlightJS: true
+          highlightJS: false
         }
       }
     </script>
