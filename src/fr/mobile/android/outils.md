@@ -8,6 +8,8 @@ sideNavigationLinks:
     href: "../../flutter/"
   - label: "App m-learning mDAN"
     href: "../../mdan/"
+  - label: "Fiches mémo"
+    href: "../fiches-memo/"    
   - label: "Liens utiles"
     href: "../../liens-utiles/"
 ---
@@ -19,5 +21,6 @@ Des ressources et outils pour faciliter la prise en compte de l’accessibilité
 - Guide d'utilisation du lecteur d'écran TalkBack
 - Informations pour développer accessible avec Flutter
 - mDAN, une application mobile pour se former sur les options d'accessibilité des mobiles et des applications sur Android
+- Des ressources à télécharger
 - Liens vers d'autres ressources dont la documentation officielle de Google
 

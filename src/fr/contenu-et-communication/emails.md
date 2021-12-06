@@ -7,6 +7,8 @@ abstract: "Quelques recommandations concernant l'accessibilité des emails"
 
 Voici une liste de recommandations pour écrire (ou produire des templates qui permettent de générer) des messages accessibles, c’est-à-dire, compréhensibles par tous.
 
+Pour compléter cette article vous pouvez également télécharger notre [fiche mémo sur l'accessibilité des emails](../../articles/memo-accessibilite/).
+
 ## Qu’est ce qui peut poser problème d’un point de vue accessibilité ?
 Principalement : 
 - Les images
@@ -72,6 +74,7 @@ Afin de tester toute votre campagne mail, utiliser le site [Accessible email](ht
 
 ## Liens utiles
 
+- [Fiche mémo sur l'accessibilité des emails](../../articles/memo-accessibilite/)
 - [Tuto Office mails accessibles](https://support.office.com/fr-fr/article/vid%C3%A9o-am%C3%A9liorer-l-accessibilit%C3%A9-des-e-mails-ebf3730a-18f8-4b57-81d1-730086231775)
 - [Tester la prise en charge de l’HTML et du CSS sur les différents clients mails](https://www.caniemail.com/)
 - [Sur quels clients mails tester en priorité (anglais)](https://emails.hteumeuleu.com/which-email-clients-should-you-test-on-b2a892e57606)

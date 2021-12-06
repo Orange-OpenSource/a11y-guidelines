@@ -32,12 +32,13 @@ module.exports = {
       all: "All"
     },
     tags: {
-      list : "Associated themes :",
-      componentExample: "Component example",
+      componentExample: 'Component example',
+      list : "Associated themes :",      
       mobile: 'Mobile',
       technicalArticle: 'Technical article',
       web: 'Web',
       veille: 'Watch',
+      telechargement: 'Download',
       beginner: 'Beginner',
       intermediate: 'Intermediate',
       advanced: 'Advanced'
@@ -101,12 +102,14 @@ module.exports = {
       all: 'Tout'
     },
     tags: {
+      componentExample: 'Exemple de composant',
       list : "Thématiques associées :",
       componentExample: "Exemple de composant",
       mobile: 'Mobile',
       technicalArticle: 'Article technique',
       web: 'Web',
       veille: 'Veille',
+      fichememo: 'Fiche mémo',
       beginner: 'Débutant',
       intermediate: 'Intermédiaire',
       advanced: 'Avancé'

@@ -8,6 +8,10 @@
     {
       "label": "Tester l'accessibilité de votre document Word",
       "href": "/fr/contenu-et-communication/word/tester/"
+    },
+    {
+      "label": "Fiche mémo accessibilité Word",
+      "href": "/fr/contenu-et-communication/word/fiche-memo/"
     }  
   ]
 }
