@@ -15,10 +15,10 @@ Il s'agit de pense-bêtes disponibles au format PDF. Vous pouvez les imprimer su
 ## Liste des mémos
 
 Choisissez les mémos qui vous correspondent :
-- [Développement Web](./#developpement-web)
-- [Les tests Web](./#les-tests-web)
-- [Développement Android](./#developpement-android)
-- [Développement iOS](./#developpement-ios)
+- [Développer des pages Web accessibles](./#developpement-web)
+- [Tester l'accessibilité de pages Web](./#les-tests-web)
+- [Développer une application Android accessible](./#developpement-android)
+- [Développer une application iOS accessible](./#developpement-ios)
 - [Rédiger un Email accessible](./#rediger-un-email-accessible)
 - [Rédiger un document Word accessible](./#rediger-un-document-word-accessible)
 
