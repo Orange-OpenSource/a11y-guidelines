@@ -16,16 +16,16 @@ Il s'agit de pense-bêtes disponibles au format PDF. Vous pouvez les imprimer su
 ## Liste des mémos
 
 Choisissez les mémos qui vous correspondent :
-- [Développer des pages Web accessibles](./#developpement-web)
-- [Tester l'accessibilité de pages Web](./#les-tests-web)
-- [Développer une application Android accessible](./#developpement-android)
-- [Développer une application iOS accessible](./#developpement-ios)
+- [Développer des pages Web accessibles](./#developper-des-pages-web-accessibles)
+- [Tester l'accessibilité de pages Web](./#tester-laccessibilite-de-pages-web)
+- [Développer une application Android accessible](./#developper-une-application-android-accessible)
+- [Développer une application iOS accessible](./#developper-une-application-ios-accessible)
 - [Rédiger un Email accessible](./#rediger-un-email-accessible)
 - [Rédiger un document Word accessible](./#rediger-un-document-word-accessible)
 
 <hr>
 
-## Développement Web
+## Développer des pages Web accessibles
 
 <div class="row">
   <div class="col-3">
@@ -49,7 +49,7 @@ Choisissez les mémos qui vous correspondent :
 
 <hr>
 
-## Les tests Web
+## Tester l'accessibilité de pages Web
 
 <div class="row">
   <div class="col-3">
@@ -74,7 +74,7 @@ Choisissez les mémos qui vous correspondent :
 
 <hr>
 
-## Développement Android
+## Développer une application Android accessible
 
 <div class="row">
   <div class="col-3">
@@ -98,7 +98,7 @@ Choisissez les mémos qui vous correspondent :
 
 <hr>
 
-## Développement iOS
+## Développer une application iOS accessible
 
 <div class="row">
   <div class="col-3">
