@@ -1963,6 +1963,9 @@ Il est aussi possible d'utiliser la méthode **[traitCollectionDidChange](../wwd
  
  - penser à adapter le [contraste des couleurs](../conception#couleurs) à la taille de texte modifiée si nécessaire.
 
+<br>**Depuis iOS&nbsp;15**, il est désormais possible de [limiter les seuils minimal et maximal](https://developer.apple.com/videos/play/wwdc2021/10059/?time=878) de modification de taille avec le <span lang="en">Dynamic Type</span> pour un élément <span lang="en">UIView</span> grâce à deux nouvelles propriétés&nbsp;: **[minimumContentSizeCategory](https://developer.apple.com/documentation/uikit/uiview/3750924-minimumcontentsizecategory)** et **[maximumContentSizeCategory](https://developer.apple.com/documentation/uikit/uiview/3750923-maximumcontentsizecategory)**.
+
+Il est toutefois nécessaire de bien garder à l'esprit que cette nouveauté&nbsp;iOS&nbsp;15 n'est à utiliser que dans des situations spécifiques qui utilisent déjà le <span lang="en">Dynamic Type</span> mais dont les représentations extrêmes seraient plutôt néfastes à l'expérience utilisateur.
 </div>
 <div class="tab-pane" id="textSize-Links" role="tabpanel">
 
@@ -1973,6 +1976,10 @@ Il est aussi possible d'utiliser la méthode **[traitCollectionDidChange](../wwd
 - [`adjustsFontForContentSizeCategory`](https://developer.apple.com/documentation/uikit/uicontentsizecategoryadjusting/1771731-adjustsfontforcontentsizecategor?language=objc)
 
 - [Application&nbsp;du&nbsp;Dynamic&nbsp;Type](../wwdc/2017/245)
+
+- [`minimumContentSizeCategory`](https://developer.apple.com/documentation/uikit/uiview/3750924-minimumcontentsizecategory)
+
+- [`maximumContentSizeCategory`](https://developer.apple.com/documentation/uikit/uiview/3750923-maximumcontentsizecategory)
     
 </div>
 </div>

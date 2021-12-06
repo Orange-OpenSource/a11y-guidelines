@@ -1957,6 +1957,8 @@ Since iOS7, it is possible to make the text size dynamic according to the device
  
  - Don't forget to adapt the [color contrast](../design#colours) to the text size.
 
+<br>**Since iOS&nbsp;15**, it's now possible to [set limits on the minimum and maximum sizes of Dynamic Type](https://developer.apple.com/videos/play/wwdc2021/10059/?time=878)  thanks two new properties: **[minimumContentSizeCategory](https://developer.apple.com/documentation/uikit/uiview/3750924-minimumcontentsizecategory)** and **[maximumContentSizeCategory](https://developer.apple.com/documentation/uikit/uiview/3750923-maximumcontentsizecategory)**.
+However, it's necessary to keep in mind that these restrictions are recommended for specific situations that already include the size change and for which extreme sizes may worsen the user experience.
 </div>
 <div class="tab-pane" id="textSize-Links" role="tabpanel">
 
@@ -1967,6 +1969,10 @@ Since iOS7, it is possible to make the text size dynamic according to the device
 - [`adjustsFontForContentSizeCategory`](https://developer.apple.com/documentation/uikit/uicontentsizecategoryadjusting/1771731-adjustsfontforcontentsizecategor?language=objc)
 
 - [Building&nbsp;Apps&nbsp;with&nbsp;Dynamic&nbsp;Type](../wwdc/2017/245)
+
+- [`minimumContentSizeCategory`](https://developer.apple.com/documentation/uikit/uiview/3750924-minimumcontentsizecategory)
+
+- [`maximumContentSizeCategory`](https://developer.apple.com/documentation/uikit/uiview/3750923-maximumcontentsizecategory)
     
 </div>
 </div>
