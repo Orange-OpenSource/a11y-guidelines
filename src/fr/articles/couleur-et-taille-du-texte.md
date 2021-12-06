@@ -1,12 +1,12 @@
 ---
 title: "Taille et couleur des textes"
 abstract: "Quelle taille et quelles couleurs doit ont adopter pour les textes ?"
+titleBeforeTag: true
 date: "2021-07-05"
 tags:
   - web
+  - beginner
 ---
-
-# Taille et couleur des textes
 
 Dans cet article, nous allons tenter de répondre aux questions suivantes concernant l'accessibilité des textes dans les pages Web:
 - Quelle taille faut-il utiliser pour les textes ?

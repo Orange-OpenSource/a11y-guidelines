@@ -1,12 +1,12 @@
 ---
-title: "Single Page Applications (SPA)"
+title: "Recommendations for Single Page Applications"
 abstract: "Recommendations for Single Page Applications"
+titleBeforeTag: true
 date: "2021-06-25"
 tags:
   - web
+  - advanced
 ---
-
-<h1>Recommendations for Single Page Applications</h1>
    
 A <a href="https://developer.mozilla.org/en-US/docs/Glossary/SPA">single-page web application (SPA)</a> is a web application in which page refresh never occurs. During navigation, only portions of the page are dynamically updated using JavaScript code. 
 

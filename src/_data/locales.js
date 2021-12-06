@@ -28,16 +28,20 @@ module.exports = {
       label: 'Search'
     },
     filtersBar: {
-      label: 'Filters',
+      label: 'Filter by theme ',
       all: "All"
     },
     tags: {
       componentExample: 'Component example',
+      list : "Associated themes :",      
       mobile: 'Mobile',
       technicalArticle: 'Technical article',
       web: 'Web',
       veille: 'Watch',
-      telechargement: 'Download'
+      telechargement: 'Download',
+      beginner: 'Beginner',
+      intermediate: 'Intermediate',
+      advanced: 'Advanced'
     },
     toc: {
       title: 'Table of content'
@@ -94,16 +98,21 @@ module.exports = {
       label: 'Rechercher'
     },
     filtersBar: {
-      label: 'Filtres',
+      label: 'Filtrer par thématique',
       all: 'Tout'
     },
     tags: {
       componentExample: 'Exemple de composant',
+      list : "Thématiques associées :",
+      componentExample: "Exemple de composant",
       mobile: 'Mobile',
       technicalArticle: 'Article technique',
       web: 'Web',
       veille: 'Veille',
-      fichememo: 'Fiche mémo'
+      fichememo: 'Fiche mémo',
+      beginner: 'Débutant',
+      intermediate: 'Intermédiaire',
+      advanced: 'Avancé'
     },
     toc: {
       title: 'Sommaire'

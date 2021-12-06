@@ -4,6 +4,8 @@ abstract: "iOS changelog"
 displayToc: false
 ---
 
+**21/12/01** ⟹ Updates for swift 5.5, Xcode 13 and iOS 15
+
 **21/09/14** ⟹ WWDC 2021 <a href="../wwdc/2021/121/">🎬</a> Tailor the VoiceOver experience in your data-rich apps
 
 **21/09/09** ⟹ WWDC 2021 <a href="../wwdc/2021/122/">🎬</a> Bring accessibility to charts in your app

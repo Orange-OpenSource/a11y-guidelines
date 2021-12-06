@@ -1,11 +1,11 @@
 ---
-title: "#a11y technical watch, January-February 2021"
+title: "Digital accessibility watch January - February  2021"
 abstract: "#a11y anthology, January-February 2021"
+titleBeforeTag: true
 date: "2021-02-19"
 tags:
   - veille
 ---
-# Digital accessibility watch January - February  2021
 
 Big news, “W3C First Public Working Draft 21 January 2021” released, the future of a11y web and more. An introduction: https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/
 

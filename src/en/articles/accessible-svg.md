@@ -1,12 +1,12 @@
 ---
-title: "Some best practices for SVG images"
+title: "SVG images are used more and more on the web but what about their accessibility ?"
 abstract: "How to make SVG images accessible"
+titleBeforeTag: true
 date: "2021-01-01"
 tags:
   - web
+  - intermediate
 ---
-
-# SVG images are used more and more on the web but what about their accessibility?
 
 Here are some ideas knowing that the support for browsers and assistive technologies evolves very quickly!
 Important: So remember to test your implementations on the browsers/assistive technologies targets the most used by your users, whatever the solution for which you choose.

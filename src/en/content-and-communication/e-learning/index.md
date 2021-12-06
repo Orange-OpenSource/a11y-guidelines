@@ -274,7 +274,7 @@ Give the possibility to users to activate the subtitles from the beginning of th
 
 ### Accessible videos
 
-See [Accessibility of video, animation and audio content](/en/editorial-content/animated-components/) to learn more.
+See [Accessibility of video, animation and audio content](/en/content-and-communication/animated-components/) to learn more.
 
 ## Ressources
 

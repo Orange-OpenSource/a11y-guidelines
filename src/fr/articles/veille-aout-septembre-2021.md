@@ -1,12 +1,11 @@
 ---
-title: "Veille #A11y Août-Septembre 2021"
+title: "Veille accessibilité numérique Août – Septembre 2021"
 abstract: "Florilèges de ressources en #a11y, Août-Septembre 2021"
+titleBeforeTag: true
 date: "2021-09-27"
 tags:
   - veille
 ---
-
-# Veille accessibilité numérique Août – Septembre 2021
 
 On sent que ça se rapproche et là, vous me dites...    QUOI ?? 
 Ben les WCAG 3, une petite explication de cette future recommandation (en) : https://w3c.github.io/silver/explainer/ 

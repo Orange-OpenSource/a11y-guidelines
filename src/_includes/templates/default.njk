@@ -23,7 +23,24 @@
           </div>
         {% endif %}
         <main id="main-content" class="col-md-{{ mainContentColumn }}" role="main">
+          {% if titleBeforeTag %}
+            <h1>{{ title }}</h1>  
+            {% if tags %}
+              <span class="sr-only" id="filters_label">
+                {{'tags.list' | translate}}
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label">
+              {%- for tag in tags -%}
+                {%- set tagTranslationKey = 'tags.' + tag -%}
+                <li class="list-inline-item"><a href="../?tag={{ tag }}" class="btn btn-dark btn-sm" data-tag="{{ tag }}">{{ tagTranslationKey | translate }}</a></li>
+              {% endfor -%}
+              </ul>
+            {% endif %}
+            <time class="text-muted" datetime="{{ page.date.toISOString() }}">{% localizedDate page.date, locale  %}</time>
+          {% endif %}  
+          <div class="mt-4">
           {{ content | safe }}
+          </div>
         </main>
         {% if displayToc == true %}
           <div class="col-md-3">

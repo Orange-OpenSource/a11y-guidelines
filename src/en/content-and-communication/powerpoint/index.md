@@ -14,11 +14,11 @@ Producing accessible PowerPoint slides requires following these different recomm
 Defining slide layouts is the first action to do in order to create an accessible presentation, it will ensure information have the correct reading order.
 Use the Slide Master view: select the <code>View</code> tab > <code>Slide Master</code> to create or modify slides layouts. 
 
-<img class="center" src="/en/editorial-content/images/screen1.png" alt=""/>
+<img class="center" src="/en/content-and-communication/images/screen1.png" alt=""/>
 
 Use the Master Layout submenu to add titles or footers.
 
-<img class="center" src="/en/editorial-content/images/screen2.png" alt=""/>
+<img class="center" src="/en/content-and-communication/images/screen2.png" alt=""/>
 
 Create as many layouts as types of slides needed.
 Avoid adding text boxes or images directly into the presentation via the <code>Insert</code> menu but use the <code>Slide Master</code> view.  
@@ -34,7 +34,7 @@ Every punctual change of language must be identified by selecting the text and: 
 ### Other properties
 Title, author and tags fields have to be completed in tab <code>File > Info > Properties</code>.
 
-<img class="center" src="/en/editorial-content/images/screen3.png" alt=""/>
+<img class="center" src="/en/content-and-communication/images/screen3.png" alt=""/>
 
 This information is accessible by everyone in Windows Explorer and are readable by the screen readers. 
 
@@ -50,7 +50,7 @@ Begin all sentences by a capital letter but avoid using all capital letters and 
 Avoid justifying the text; prefer left alignment.
 In order to add white space between sentences and paragraphs, use option: <code>right click</code> on the text and select <code>Paragraph… > Indents and Spacing</code>.
 
-<img class="center" src="/en/editorial-content/images/screen4.png" alt=""/>
+<img class="center" src="/en/content-and-communication/images/screen4.png" alt=""/>
 
 ## Colors and contrasts
 
@@ -61,19 +61,19 @@ Ensure a level of [sufficient contrast between the color of the text and that of
 Make sure [color is not the only means used to convey information](/en/web/design/colors-and-contrasts/#do-not-use-colour-or-sensory-characteristics-as-the-unique-source-of-information).
 
 <figure>
-  <img src="/en/editorial-content/images/color1.png" alt=""/>  
+  <img src="/en/content-and-communication/images/color1.png" alt=""/>  
   <figcaption><strong>Not correct</strong>: information is transmitted only by color.</figcaption>
 </figure>
 
 <figure>
-  <img src="/en/editorial-content/images/color2.png" alt=""/>
+  <img src="/en/content-and-communication/images/color2.png" alt=""/>
   <figcaption><strong>Correct</strong>: information is conveyed by color and shape.</figcaption>
 </figure>
 
 ## Bulleted Lists or Numbered Lists
 Always use the appropriate and native functions in order to create lists.
 
-<img class="center" src="/en/editorial-content/images/images/screen5.png" alt=""/>
+<img class="center" src="/en/content-and-communication/images/images/screen5.png" alt=""/>
 
 ## Pictures and other Images
 
@@ -81,7 +81,7 @@ Add alt text to images, shapes or SmartArt graphics in your PowerPoint slides.
 In order to write a good alt text, make sure to convey the content and the purpose of the image and its context in a concise and unambiguous manner.
 Right-click on an image and select <code>Format Picture</code> or <code>Format Shape > Alt Text</code>.
 
-<img class="center" src="/en/editorial-content/images/screen6.png" alt=""/>
+<img class="center" src="/en/content-and-communication/images/screen6.png" alt=""/>
 
 Type the alt text in the Description text box (but leave Title blank, this information is not conveyed to assistive technologies).
 If the picture is only decorative, leave the Description text box blank.
@@ -95,7 +95,7 @@ Select the text to which you want to add the hyperlink, and then right-click.
 The text you selected displays in the “Text to display” box. This is the hyperlink text.
 If necessary, add a ScreenTip by clicking on the ScreenTip button.  
 
-<img class="center" src="/en/editorial-content/images/screen11.png" alt=""/>
+<img class="center" src="/en/content-and-communication/images/screen11.png" alt=""/>
 
 For every downloadable file, it is necessary to specify its name, type, size and language (if different of the presentation language).  
 Screen reader users sometimes scan a list of links, so the labels have to be simple and easy to understand. 
@@ -110,37 +110,37 @@ If a table is too complex, you will need to provide an additional description: R
 
 ## Audio or video file
 For audio and video content, in addition to alt text, be sure the video or audio as well as the player are accessible.
-<a href="/en/editorial-content/animated-components/">See our recommendations for audio or video files.</a>
+<a href="/en/content-and-communication/animated-components/">See our recommendations for audio or video files.</a>
 
 ## Set the reading order
 The order in which the screen readers read the slide contents can be modified in the Selection pane.  
 On the <code>Home</code> tab, in the <code>Drawing group</code>, select <code>Arrange > Selection</code> Pane.
 The elements of your slide are read in the reverse order listed in this pane.
 
-<img class="center" src="/en/editorial-content/images/screen7.png" alt=""/>
+<img class="center" src="/en/content-and-communication/images/screen7.png" alt=""/>
 
 ## Accessibility Checker
 At least, run Accessibility Checker to make sure your content is accessible.  
 
 In <code>File tab > Check for Issues</code>.
 
-<img class="center" src="/en/editorial-content/images/screen8.png" alt=""/>
+<img class="center" src="/en/content-and-communication/images/screen8.png" alt=""/>
 
 ## Convert to PDF
 
-After checking the accessibility of your document (see the <a href="/en/editorial-content/powerpoint/test/">Testing the accessibility of your Word document section</a>), you can convert it to a PDF file, if necessary, by selecting: <code>File tab > Save As</code> and save as type PDF.
+After checking the accessibility of your document (see the <a href="/en/content-and-communication/powerpoint/test/">Testing the accessibility of your Word document section</a>), you can convert it to a PDF file, if necessary, by selecting: <code>File tab > Save As</code> and save as type PDF.
 Check the « Document structure tags for accessibility » option.
 
-<img src="/en/editorial-content/images/screen9.png" alt=""/>
+<img src="/en/content-and-communication/images/screen9.png" alt=""/>
 
 PDF is often a better format to present PowerPoint presentations electronically.  
 
 Note:  If your presentation have more than 50 slides, it is better to advise your readers to change the following setting in Adobe:
 <code>Edit > Preferences > Reading > Screen Reader Options > Page vs Document: "Read the entire document"</code>
 
-<img src="/en/editorial-content/images/screen10.png" alt=""/>
+<img src="/en/content-and-communication/images/screen10.png" alt=""/>
 
-To check the accessibility of a PDF document, see the <a href="/en/editorial-content/pdf/">accessible PDF section of our site</a>.
+To check the accessibility of a PDF document, see the <a href="/en/content-and-communication/pdf/">accessible PDF section of our site</a>.
 
 ## For more detailed information
 - [PowerPoint Accessibility, WebAIM](https://webaim.org/techniques/powerpoint/)

@@ -1,12 +1,12 @@
 ---
 title: "The aria-live attribute and the role alert"
 abstract: "When and how to use roles and attributes of live content type"
+titleBeforeTag: true
 date: "2020-01-08"
 tags:
   - web
+  - intermediate
 ---
-
-# The aria-live attribute and the role alert
   
 Users who navigate using a screen reader are not always aware of changes made on the page. When information is updated or when a message appears, it is sometimes necessary to make the screen reader speak to inform the user. To do this, the <abbr>ARIA</abbr> language has the role `alert` and the attribute` aria-live`.
 
