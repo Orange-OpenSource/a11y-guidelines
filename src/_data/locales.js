@@ -108,8 +108,7 @@ module.exports = {
       mobile: 'Mobile',
       technicalArticle: 'Article technique',
       web: 'Web',
-      veille: 'Veille',
-      fichememo: 'Fiche mémo',
+      veille: 'Veille',      
       beginner: 'Débutant',
       intermediate: 'Intermédiaire',
       advanced: 'Avancé'
