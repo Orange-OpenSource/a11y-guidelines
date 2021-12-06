@@ -10,7 +10,7 @@ tags:
 N'oubliez pas les informations essentielles, adoptez nos mémos !
 
 ## Qu'est-ce que c'est ?
-Il s'agit de pense-bêtes disponibles au format PDF. Vous pouvez les imprimés sur une feuille recto verso puis les plier en accordéon pour former un petit fascicule à conserver sous la main ou à partager.
+Il s'agit de pense-bêtes disponibles au format PDF. Vous pouvez les imprimer sur une feuille recto verso puis les plier en accordéon pour former un petit fascicule à conserver sous la main ou à partager.
 
 ## Liste des mémos
 
