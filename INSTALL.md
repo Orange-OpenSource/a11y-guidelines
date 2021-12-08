@@ -12,7 +12,7 @@ You need to have [NodeJS](https://nodejs.org/) (at least v14) and [NPM](https://
 ## Install Node dependencies & build the website
 
 1. In your terminal, navigate to the project folder which has just been created (or open a new terminal in it, as you like). Then, run the `npm install` command which will install all dependencies needed to build the website
-2. If everything went well, you can run the `npm run serve:dev` command which will launch the build of the website and provide a local server with hot reload feature (you won't need to manually refresh your browser, it will do so everrytime you save a file)
+2. If everything went well, you can run the `npm run serve:dev` command which will launch the build of the website and provide a local server with hot reload feature (you won't need to manually refresh your browser, it will do so everytime you save a file)
 
 ### What commands are available ?
 We provide 2 sets of commands to build the website and each command has a flag that sets the environment :

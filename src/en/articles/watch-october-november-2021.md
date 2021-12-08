@@ -39,7 +39,7 @@ Happy Holidays !
 
 ## Accessibility strategy
 
-- Do we need to know how many people are benefiting from a11y on our site: https://hiddedevries.nl/en/blog/2021-12-05-how-many-people-with- disabilities-use-our-site
+- Do we need to know how many people are benefiting from a11y on our site: https://hiddedevries.nl/en/blog/2021-12-05-how-many-people-with-disabilities-use-our-site
 - Collaborative accessibility planning, to read: https://www.deque.com/blog/collaborative-planning-the-forgotten-step-of-accessible-development/
 - Captcha and a11y, an overview: https://www.digitala11y.com/the-captcha-conundrum-accessible-alternatives/
 - Focus visibility according to WCAG 2.1 and even 2.2: https://www.sarasoueidan.com/blog/focus-indicators/
@@ -79,7 +79,7 @@ Happy Holidays !
 - Design and accessibility, a guide: https://www.saggezza.com/a-guide-to-accessible-digital-ux-design/
 - Design and accessibility, a great podcast: https://podcast.designmasterclass.fr/episode/28/design-accessible-une-priorite
 - A ready-made kit for a11y annotations in Figma, practical: https://www.figma.com/community/file/1022394680250523675
-- Too many pop-ups, uplifting: https://www.nngroup.com/articles/overlay-overload/?utm_source=swlinks-tw
+- Too many pop-ups, uplifting: https://www.nngroup.com/articles/overlay-overload/
 - UX = a11y and vice versa: https://uxdesign.cc/ux-accessibility-accessibility-ux-3f609617c480
 - Ban generic "click here" and other "read more" links: https://uxdesign.cc/the-problem-with-click-here-and-learn-more-links-d01a0eba5cbd
 

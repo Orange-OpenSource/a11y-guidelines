@@ -8,9 +8,17 @@ tags:
 
 # Veille accessibilité numérique Octobre-Novembre 2021
 
-https://www.yanous.com/pratique/informatique/pointsdevue211001.html a11y et la loi en fr
-koena dépose ses conclusions pour le procès Facil’iti https://koena.net/proces-faciliti-conclusions-koena-12-novembre-2021/ 
-https://overlayfalseclaims.com
+Un peu en retard cette fois mais bon les fêtes et tout ça...
+
+Période oblige, le fameux 24 jours de web, le calendrier de l'avent web : https://www.24joursdeweb.fr.
+
+On continu par un coup de gueule sur l'immobilisme Français au niveau de l'A11y, https://www.yanous.com/pratique/informatique/pointsdevue211001.html, en gros sans sanctions rien n'avancera !
+
+Pour faire suite aux poursuites intentées pas Facil'iti, Koena dépose ses conclusions pour le procès https://koena.net/proces-faciliti-conclusions-koena-12-novembre-2021/.
+
+Et dans la même veine, un autre site sur les surcouches d'accessibilité : https://overlayfalseclaims.com.
+
+Bonnes fêtes !
 
 ## L’accessibilité dans les lois, les normes et recommandations
 
@@ -44,17 +52,17 @@ https://overlayfalseclaims.com
 -	47 bookmarklets pour tester l’a11y (en) : https://www.digitala11y.com/accessibility-bookmarklets-testing/ 
 -	ARC, un outil pour tester l’a11y, tout y est expliqué, outil bien foutu (en) : https://valor-software.com/articles/arc-a-new-weapon-against-accessibility-bugs.html 
 -	Equal Access, un nouvelle suite d’outils (extension navigateur, bibliothèque de tests ci/cd)  d’IBM pour l’a11y, je ne l’avais pas encore vu, à tester (en) : https://github.com/IBMa/equal-access 
--	AI et test d’a11y (en) : https://www.tpgi.com/introduction-to-a-i-and-accessibility-testing/ 
+-	AI et tests d’a11y (en) : https://www.tpgi.com/introduction-to-a-i-and-accessibility-testing/ 
 
 ## Points techniques en accessibilité
 
 -	L’attribut scope n’est plus nécessaire pour les principaux lecteurs d’écran (en) : https://www.tpgi.com/short-note-on-scoping-mechanisms/ 
--	Les pièges clavier une horreur (en) : https://www.boia.org/blog/why-keyboard-traps-are-one-of-the-most-frustrating-accessibility-issues 
+-	Les pièges clavier, une horreur (en) : https://www.boia.org/blog/why-keyboard-traps-are-one-of-the-most-frustrating-accessibility-issues 
 -	Trop d’a11y tue l’a11y, un exemple avec les champs de formulaire (en) : https://www.scottohara.me//blog/2021/10/04/redundantly-redundant.html 
 -	React et a11y, tour d’horizon (en) : https://www.freecodecamp.org/news/react-accessibility-tools-build-accessible-react-apps/ 
 -	Le rôle ARIA application, les pour/contre (en) : https://www.boia.org/blog/avoid-accessibility-issues-when-using-arias-application-role 
 -	Ce que voient les lecteurs d’écran, chouettes exemples et explications (en) : https://www.boia.org/blog/avoid-accessibility-issues-when-using-arias-application-role 
--	Des titres de page <title> dans React (en) : https://dev.to/steady5063/accessible-titles-in-react-210j 
+-	Des titres de page 'title' dans React (en) : https://dev.to/steady5063/accessible-titles-in-react-210j 
 -	Taille du texte pour le web, une réponse à une question souvent posée (en) : https://pimpmytype.com/font-size/ 
 -	Encore une fois un lien n’est pas un bouton et inversement (en) : https://yatil.net/blog/buttons-vs-links 
 -	Mettre en place prefers-reduced-motion, article de fond (en) : https://www.smashingmagazine.com/2021/10/respecting-users-motion-preferences/ 
@@ -72,7 +80,7 @@ https://overlayfalseclaims.com
 -	Design et accessibilité, un guide (en) : https://www.saggezza.com/a-guide-to-accessible-digital-ux-design/ 
 -	Design et accessibilité, un podcast chouette : https://podcast.designmasterclass.fr/episode/28/design-accessible-une-priorite 
 -	Un kit tout prêt pour des annotations d’a11y dans Figma, pratique (en) : https://www.figma.com/community/file/1022394680250523675 
--	Trop de fenêtres surgissantes, édifiant (en) : https://www.nngroup.com/articles/overlay-overload/?utm_source=swlinks-tw  
+-	Trop de fenêtres surgissantes, édifiant (en) : https://www.nngroup.com/articles/overlay-overload/  
 -	UX=a11y et inversement (en) : https://uxdesign.cc/ux-accessibility-accessibility-ux-3f609617c480
 -	Bannir les liens génériques « cliquez ici » et autre « lire la Suite » (en) : https://uxdesign.cc/the-problem-with-click-here-and-learn-more-links-d01a0eba5cbd 
 
