@@ -1449,6 +1449,107 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
   </entry>
   
   <entry>
+    <title>Veille #A11y Octobre-Novembre 2021</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/veille-octobre-novembre-2021/"/>
+    <updated>2021-11-27T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/veille-octobre-novembre-2021/</id>
+    <content type="html">&lt;h1&gt;Veille accessibilité numérique Octobre-Novembre 2021&lt;/h1&gt;
+&lt;p&gt;Un peu en retard cette fois mais bon les fêtes et tout ça...&lt;/p&gt;
+&lt;p&gt;Période oblige, le fameux 24 jours de web, le calendrier de l&#39;avent web : &lt;a href=&quot;https://www.24joursdeweb.fr/&quot;&gt;https://www.24joursdeweb.fr&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;On continu par un coup de gueule sur l&#39;immobilisme Français au niveau de l&#39;A11y, &lt;a href=&quot;https://www.yanous.com/pratique/informatique/pointsdevue211001.html&quot;&gt;https://www.yanous.com/pratique/informatique/pointsdevue211001.html&lt;/a&gt;, en gros sans sanctions rien n&#39;avancera !&lt;/p&gt;
+&lt;p&gt;Pour faire suite aux poursuites intentées pas Facil&#39;iti, Koena dépose ses conclusions pour le procès &lt;a href=&quot;https://koena.net/proces-faciliti-conclusions-koena-12-novembre-2021/&quot;&gt;https://koena.net/proces-faciliti-conclusions-koena-12-novembre-2021/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Et dans la même veine, un autre site sur les surcouches d&#39;accessibilité : &lt;a href=&quot;https://overlayfalseclaims.com/&quot;&gt;https://overlayfalseclaims.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Bonnes fêtes !&lt;/p&gt;
+&lt;h2 id=&quot;laccessibilite-dans-les-lois-les-normes-et-recommandations&quot;&gt;L’accessibilité dans les lois, les normes et recommandations &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-octobre-novembre-2021/#laccessibilite-dans-les-lois-les-normes-et-recommandations&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Plaidoyer de 12 propositions pour concrétiser l’obligation d’accessibilité en France : &lt;a href=&quot;https://certam-avh.com/fr/dossiers-thematiques/plaidoyer-pour-l-accessibilite-numerique#les-douze-propositions-de-l-association-valentin-hauy&quot;&gt;https://certam-avh.com/fr/dossiers-thematiques/plaidoyer-pour-l-accessibilite-numerique#les-douze-propositions-de-l-association-valentin-hauy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Coup de gueule des malvoyants sur l‘a11y : &lt;a href=&quot;https://informations.handicap.fr/a-web-inaccessible-ras-le-bol-internautes-malvoyants-31777.php&quot;&gt;https://informations.handicap.fr/a-web-inaccessible-ras-le-bol-internautes-malvoyants-31777.php&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Et la suite logique de ce manque volonté politique, porter plainte : &lt;a href=&quot;https://www.voirensemble.asso.fr/actualites/sites-internet-inaccessibles-les-aveugles-se-portent-en-justice&quot;&gt;https://www.voirensemble.asso.fr/actualites/sites-internet-inaccessibles-les-aveugles-se-portent-en-justice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Principales avancées de WCAG 3.0, attention WCAG 3.0 n’est pas officielle, hein (en) : &lt;a href=&quot;https://www.boia.org/blog/understanding-the-differences-between-wcag-2.2-and-wcag-3.0&quot;&gt;https://www.boia.org/blog/understanding-the-differences-between-wcag-2.2-and-wcag-3.0&lt;/a&gt; et là aussi &lt;a href=&quot;https://uxdesign.cc/wcag-3-0-what-you-need-to-know-about-the-future-of-accessibility-standards-2e1f6374f2c7&quot;&gt;https://uxdesign.cc/wcag-3-0-what-you-need-to-know-about-the-future-of-accessibility-standards-2e1f6374f2c7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Le tour des nouveaux critères WCAG 2.2 (en) : &lt;a href=&quot;https://www.3playmedia.com/blog/guide-caption-description-formats-video-player/&quot;&gt;https://www.3playmedia.com/blog/guide-caption-description-formats-video-player/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bien utiliser ARIA 1.2 (editor draft) par le W3C (en) : &lt;a href=&quot;https://w3c.github.io/aria-practices/&quot;&gt;https://w3c.github.io/aria-practices/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Certification Qualiopi et accessibilité des formations : &lt;a href=&quot;https://access42.net/qualiopi-handicap-indicateur26-formation-accessible&quot;&gt;https://access42.net/qualiopi-handicap-indicateur26-formation-accessible&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;retours-dexperience-et-accessibilite&quot;&gt;Retours d’expérience et accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-octobre-novembre-2021/#retours-dexperience-et-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Mise à jour des tests de patterns SVG et leur support dans les lecteurs d’écran (en) : &lt;a href=&quot;https://codepen.io/cariefisher/pen/QWpjded&quot;&gt;https://codepen.io/cariefisher/pen/QWpjded&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Les experts en a11y ne sont pas des évangéliste, un point de vue que je partage (en) : &lt;a href=&quot;https://uxdesign.cc/it-is-time-to-ditch-the-title-evangelist-from-accessibility-d35e8723ed71&quot;&gt;https://uxdesign.cc/it-is-time-to-ditch-the-title-evangelist-from-accessibility-d35e8723ed71&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Point de vue intéressant sur l’avenir proche qui serait bénéfique pour l’a11y (en) : &lt;a href=&quot;https://yatil.net/blog/fix-web-accessibility-systematically#fn-2&quot;&gt;https://yatil.net/blog/fix-web-accessibility-systematically#fn-2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comparaison des principaux outils de sondage en ligne, c’est ki ki gagne ? (en) : &lt;a href=&quot;https://www.washington.edu/accessibility/2021/09/28/online-survey-tools/&quot;&gt;https://www.washington.edu/accessibility/2021/09/28/online-survey-tools/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Les faux négatifs de nos outils d’a11y, prenez garde (en) : &lt;a href=&quot;https://adrianroselli.com/2021/09/beware-false-negatives.html&quot;&gt;https://adrianroselli.com/2021/09/beware-false-negatives.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;strategie-de-mise-en-accessibilite&quot;&gt;Stratégie de mise en accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-octobre-novembre-2021/#strategie-de-mise-en-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A-t-on besoin de savoir combien de gens bénéficient de l’a11y sur notre site (en) : &lt;a href=&quot;https://hiddedevries.nl/en/blog/2021-12-05-how-many-people-with-disabilities-use-our-site&quot;&gt;https://hiddedevries.nl/en/blog/2021-12-05-how-many-people-with-disabilities-use-our-site&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Le planning collaboratif en accessibilité, à lire (en) : &lt;a href=&quot;https://www.deque.com/blog/collaborative-planning-the-forgotten-step-of-accessible-development/&quot;&gt;https://www.deque.com/blog/collaborative-planning-the-forgotten-step-of-accessible-development/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Captcha et a11y, un tour d’horizon (en) : &lt;a href=&quot;https://www.digitala11y.com/the-captcha-conundrum-accessible-alternatives/&quot;&gt;https://www.digitala11y.com/the-captcha-conundrum-accessible-alternatives/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;La visibilité focus selon WCAG 2.1 et même 2.2 (en) : &lt;a href=&quot;https://www.sarasoueidan.com/blog/focus-indicators/&quot;&gt;https://www.sarasoueidan.com/blog/focus-indicators/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Considérer tout_ type dz handicap en a11y, ici la photophobie (en) : &lt;a href=&quot;https://www.boia.org/blog/web-design-mistakes-that-impact-light-sensitive-users&quot;&gt;https://www.boia.org/blog/web-design-mistakes-that-impact-light-sensitive-users&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;tester-laccessibilite&quot;&gt;Tester l’accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-octobre-novembre-2021/#tester-laccessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;PAC pdf Accessibility Checker, nouvel éditeur, nouvelle version (en) : &lt;a href=&quot;https://pdfua.foundation/en/pac-download&quot;&gt;https://pdfua.foundation/en/pac-download&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;47 bookmarklets pour tester l’a11y (en) : &lt;a href=&quot;https://www.digitala11y.com/accessibility-bookmarklets-testing/&quot;&gt;https://www.digitala11y.com/accessibility-bookmarklets-testing/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ARC, un outil pour tester l’a11y, tout y est expliqué, outil bien foutu (en) : &lt;a href=&quot;https://valor-software.com/articles/arc-a-new-weapon-against-accessibility-bugs.html&quot;&gt;https://valor-software.com/articles/arc-a-new-weapon-against-accessibility-bugs.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Equal Access, un nouvelle suite d’outils (extension navigateur, bibliothèque de tests ci/cd)  d’IBM pour l’a11y, je ne l’avais pas encore vu, à tester (en) : &lt;a href=&quot;https://github.com/IBMa/equal-access&quot;&gt;https://github.com/IBMa/equal-access&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;AI et tests d’a11y (en) : &lt;a href=&quot;https://www.tpgi.com/introduction-to-a-i-and-accessibility-testing/&quot;&gt;https://www.tpgi.com/introduction-to-a-i-and-accessibility-testing/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;points-techniques-en-accessibilite&quot;&gt;Points techniques en accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-octobre-novembre-2021/#points-techniques-en-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;L’attribut scope n’est plus nécessaire pour les principaux lecteurs d’écran (en) : &lt;a href=&quot;https://www.tpgi.com/short-note-on-scoping-mechanisms/&quot;&gt;https://www.tpgi.com/short-note-on-scoping-mechanisms/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Les pièges clavier, une horreur (en) : &lt;a href=&quot;https://www.boia.org/blog/why-keyboard-traps-are-one-of-the-most-frustrating-accessibility-issues&quot;&gt;https://www.boia.org/blog/why-keyboard-traps-are-one-of-the-most-frustrating-accessibility-issues&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Trop d’a11y tue l’a11y, un exemple avec les champs de formulaire (en) : &lt;a href=&quot;https://www.scottohara.me//blog/2021/10/04/redundantly-redundant.html&quot;&gt;https://www.scottohara.me//blog/2021/10/04/redundantly-redundant.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;React et a11y, tour d’horizon (en) : &lt;a href=&quot;https://www.freecodecamp.org/news/react-accessibility-tools-build-accessible-react-apps/&quot;&gt;https://www.freecodecamp.org/news/react-accessibility-tools-build-accessible-react-apps/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Le rôle ARIA application, les pour/contre (en) : &lt;a href=&quot;https://www.boia.org/blog/avoid-accessibility-issues-when-using-arias-application-role&quot;&gt;https://www.boia.org/blog/avoid-accessibility-issues-when-using-arias-application-role&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ce que voient les lecteurs d’écran, chouettes exemples et explications (en) : &lt;a href=&quot;https://www.boia.org/blog/avoid-accessibility-issues-when-using-arias-application-role&quot;&gt;https://www.boia.org/blog/avoid-accessibility-issues-when-using-arias-application-role&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Des titres de page &#39;title&#39; dans React (en) : &lt;a href=&quot;https://dev.to/steady5063/accessible-titles-in-react-210j&quot;&gt;https://dev.to/steady5063/accessible-titles-in-react-210j&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Taille du texte pour le web, une réponse à une question souvent posée (en) : &lt;a href=&quot;https://pimpmytype.com/font-size/&quot;&gt;https://pimpmytype.com/font-size/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Encore une fois un lien n’est pas un bouton et inversement (en) : &lt;a href=&quot;https://yatil.net/blog/buttons-vs-links&quot;&gt;https://yatil.net/blog/buttons-vs-links&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mettre en place prefers-reduced-motion, article de fond (en) : &lt;a href=&quot;https://www.smashingmagazine.com/2021/10/respecting-users-motion-preferences/&quot;&gt;https://www.smashingmagazine.com/2021/10/respecting-users-motion-preferences/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Nom, étiquette et ARIA, plein de techniques de bases (en) : &lt;a href=&quot;https://www.scottohara.me/blog/2021/11/02/names-and-labels.html&quot;&gt;https://www.scottohara.me/blog/2021/11/02/names-and-labels.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;appli-mobile-web-mobile&quot;&gt;Appli mobile, web mobile &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-octobre-novembre-2021/#appli-mobile-web-mobile&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Tester une appli mobile ou un site webmobile pour l’a11y (en) : &lt;a href=&quot;https://www.boia.org/blog/how-do-i-test-my-app-or-mobile-website-for-accessibility&quot;&gt;https://www.boia.org/blog/how-do-i-test-my-app-or-mobile-website-for-accessibility&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Les lecteurs d’écran sur mobile, une belle synthèse (en) : &lt;a href=&quot;https://tetralogical.com/blog/2021/10/05/browsing-with-a-mobile-screen-reader/&quot;&gt;https://tetralogical.com/blog/2021/10/05/browsing-with-a-mobile-screen-reader/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Support de Swift UI par aXe DevTools mobile (en) : &lt;a href=&quot;https://www.deque.com/blog/axe-devtools-mobile-now-supports-swiftui/&quot;&gt;https://www.deque.com/blog/axe-devtools-mobile-now-supports-swiftui/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Qu’est qu’une appli mobile accessible (en) : &lt;a href=&quot;https://www.boia.org/blog/what-is-accessibility-in-mobile-apps&quot;&gt;https://www.boia.org/blog/what-is-accessibility-in-mobile-apps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ergonomie-ui-ux&quot;&gt;Ergonomie, UI &amp;amp; UX &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-octobre-novembre-2021/#ergonomie-ui-ux&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Design et accessibilité, un guide (en) : &lt;a href=&quot;https://www.saggezza.com/a-guide-to-accessible-digital-ux-design/&quot;&gt;https://www.saggezza.com/a-guide-to-accessible-digital-ux-design/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Design et accessibilité, un podcast chouette : &lt;a href=&quot;https://podcast.designmasterclass.fr/episode/28/design-accessible-une-priorite&quot;&gt;https://podcast.designmasterclass.fr/episode/28/design-accessible-une-priorite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Un kit tout prêt pour des annotations d’a11y dans Figma, pratique (en) : &lt;a href=&quot;https://www.figma.com/community/file/1022394680250523675&quot;&gt;https://www.figma.com/community/file/1022394680250523675&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Trop de fenêtres surgissantes, édifiant (en) : &lt;a href=&quot;https://www.nngroup.com/articles/overlay-overload/&quot;&gt;https://www.nngroup.com/articles/overlay-overload/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;UX=a11y et inversement (en) : &lt;a href=&quot;https://uxdesign.cc/ux-accessibility-accessibility-ux-3f609617c480&quot;&gt;https://uxdesign.cc/ux-accessibility-accessibility-ux-3f609617c480&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bannir les liens génériques « cliquez ici » et autre « lire la Suite » (en) : &lt;a href=&quot;https://uxdesign.cc/the-problem-with-click-here-and-learn-more-links-d01a0eba5cbd&quot;&gt;https://uxdesign.cc/the-problem-with-click-here-and-learn-more-links-d01a0eba5cbd&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ressources&quot;&gt;Ressources &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-octobre-novembre-2021/#ressources&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Un florilège de mythe sur l’a11y, y’en a pleins (en) : &lt;a href=&quot;https://a11ymyths.com/&quot;&gt;https://a11ymyths.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Les utilisateurs de loupe d’écran (en) : &lt;a href=&quot;https://tetralogical.com/blog/2021/11/10/browsing-with-screen-magnification&quot;&gt;https://tetralogical.com/blog/2021/11/10/browsing-with-screen-magnification&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;La bible de l’audiodescription à garder (en) : &lt;a href=&quot;https://www.3playmedia.com/learn/popular-topics/audio-description/&quot;&gt;https://www.3playmedia.com/learn/popular-topics/audio-description/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Article payant mais checkliste gratuite sur les chatbots accessibles, gros boulot, bien complet (en) : &lt;a href=&quot;https://link.springer.com/chapter/10.1007/978-981-16-1781-2_80&quot;&gt;https://link.springer.com/chapter/10.1007/978-981-16-1781-2_80&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Présentation de ressources accessibilité sur la réalité augmentée et virtuelle (en) : &lt;a href=&quot;https://arpost.co/2021/10/28/xr-association-xr-access-xraccessibility-site/&quot;&gt;https://arpost.co/2021/10/28/xr-association-xr-access-xraccessibility-site/&lt;/a&gt; et le site ressource (en) : &lt;a href=&quot;https://github.com/XRAccessibility/xraccessibility.github.io&quot;&gt;https://github.com/XRAccessibility/xraccessibility.github.io&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ça m’a fait rire, un bouton en html comment bien faire, une leçon de code (en) : &lt;a href=&quot;https://www.buttoncheatsheet.com/&quot;&gt;https://www.buttoncheatsheet.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Qu’est ce qu’un audit a11y (en) : &lt;a href=&quot;https://www.rmmagazine.com/articles/article/2021/10/12/what-constitutes-a-digital-accessibility-audit&quot;&gt;https://www.rmmagazine.com/articles/article/2021/10/12/what-constitutes-a-digital-accessibility-audit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;L’a11y et les réseaux sociaux, comment bien faire (en) : &lt;a href=&quot;https://therealalexa.com/accessible-social&quot;&gt;https://therealalexa.com/accessible-social&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Introduction sur les lecteurs d’écran (en) : &lt;a href=&quot;https://www.tpgi.com/what-is-a-screen-reader-and-why-are-they-important/&quot;&gt;https://www.tpgi.com/what-is-a-screen-reader-and-why-are-they-important/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Quelques-uns des outils de génération de déclaration d ‘a11y (en) : &lt;a href=&quot;https://www.digitala11y.com/accessibility-statement-generators-roundup/&quot;&gt;https://www.digitala11y.com/accessibility-statement-generators-roundup/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Le grand guide des sous-titrages pour les principaux lecteurs vidéo, un instantané de l’état de l’art (en) : &lt;a href=&quot;https://www.3playmedia.com/blog/guide-caption-description-formats-video-player/&quot;&gt;https://www.3playmedia.com/blog/guide-caption-description-formats-video-player/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ressources pour le sous-titrage, bien complet : &lt;a href=&quot;https://github.com/emma11y/sous-titres/&quot;&gt;https://github.com/emma11y/sous-titres/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Construire une galerie de photo, par exemple, accessible en html (en) : &lt;a href=&quot;https://www.smashingmagazine.com/2021/10/build-expandable-accessible-gallery/&quot;&gt;https://www.smashingmagazine.com/2021/10/build-expandable-accessible-gallery/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Belle intro à l’a11y : &lt;a href=&quot;https://www.usabilis.com/accessibilite-numerique/&quot;&gt;https://www.usabilis.com/accessibilite-numerique/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;autres&quot;&gt;Autres &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-octobre-novembre-2021/#autres&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;6 points pour améliorer l’a11y de vos réunions distancielles (en) : &lt;a href=&quot;https://meryl.net/accessible-online-video-meetings/&quot;&gt;https://meryl.net/accessible-online-video-meetings/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;L’AI pas si ben que ça pour l’a11y  (en) : &lt;a href=&quot;https://www.vice.com/en/article/m7az74/people-with-disabilities-say-this-ai-tool-is-making-the-web-worse-for-them&quot;&gt;https://www.vice.com/en/article/m7az74/people-with-disabilities-say-this-ai-tool-is-making-the-web-worse-for-them&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
     <title>Fiches mémo accessibilité</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/"/>
     <updated>2021-12-06T00:00:00Z</updated>
