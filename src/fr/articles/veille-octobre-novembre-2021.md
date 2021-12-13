@@ -26,15 +26,15 @@ Bonnes fêtes !
 -	Coup de gueule des malvoyants sur l‘a11y : https://informations.handicap.fr/a-web-inaccessible-ras-le-bol-internautes-malvoyants-31777.php 
 -	Et la suite logique de ce manque volonté politique, porter plainte : https://www.voirensemble.asso.fr/actualites/sites-internet-inaccessibles-les-aveugles-se-portent-en-justice 
 -	Principales avancées de WCAG 3.0, attention WCAG 3.0 n’est pas officielle, hein (en) : https://www.boia.org/blog/understanding-the-differences-between-wcag-2.2-and-wcag-3.0 et là aussi https://uxdesign.cc/wcag-3-0-what-you-need-to-know-about-the-future-of-accessibility-standards-2e1f6374f2c7 
--	Le tour des nouveaux critères WCAG 2.2 (en) : https://www.3playmedia.com/blog/guide-caption-description-formats-video-player/ 
+-	Le tour des nouveaux critères WCAG 2.2 (en) : https://www.essentialaccessibility.com/blog/new-wcag-22-release-impacts-2021-web-accessibility 
 -	Bien utiliser ARIA 1.2 (editor draft) par le W3C (en) : https://w3c.github.io/aria-practices/ 
 -	Certification Qualiopi et accessibilité des formations : https://access42.net/qualiopi-handicap-indicateur26-formation-accessible 
 
 ## Retours d’expérience et accessibilité
 
 -	Mise à jour des tests de patterns SVG et leur support dans les lecteurs d’écran (en) : https://codepen.io/cariefisher/pen/QWpjded 
--	Les experts en a11y ne sont pas des évangéliste, un point de vue que je partage (en) : https://uxdesign.cc/it-is-time-to-ditch-the-title-evangelist-from-accessibility-d35e8723ed71 
--	Point de vue intéressant sur l’avenir proche qui serait bénéfique pour l’a11y (en) : https://yatil.net/blog/fix-web-accessibility-systematically#fn-2 
+-	Les experts en a11y ne sont pas des évangélistes, un point de vue que je partage (en) : https://uxdesign.cc/it-is-time-to-ditch-the-title-evangelist-from-accessibility-d35e8723ed71 
+-	Point de vue intéressant sur l’avenir proche qui serait bénéfique pour l’a11y (en) : https://yatil.net/blog/fix-web-accessibility-systematically
 -	Comparaison des principaux outils de sondage en ligne, c’est ki ki gagne ? (en) : https://www.washington.edu/accessibility/2021/09/28/online-survey-tools/ 
 -	Les faux négatifs de nos outils d’a11y, prenez garde (en) : https://adrianroselli.com/2021/09/beware-false-negatives.html 
 
@@ -44,7 +44,7 @@ Bonnes fêtes !
 -	Le planning collaboratif en accessibilité, à lire (en) : https://www.deque.com/blog/collaborative-planning-the-forgotten-step-of-accessible-development/ 
 -	Captcha et a11y, un tour d’horizon (en) : https://www.digitala11y.com/the-captcha-conundrum-accessible-alternatives/ 
 -	La visibilité focus selon WCAG 2.1 et même 2.2 (en) : https://www.sarasoueidan.com/blog/focus-indicators/ 
--	Considérer tout_ type dz handicap en a11y, ici la photophobie (en) : https://www.boia.org/blog/web-design-mistakes-that-impact-light-sensitive-users 
+-	Considérer tout type de handicap en a11y, ici la photophobie (en) : https://www.boia.org/blog/web-design-mistakes-that-impact-light-sensitive-users 
 
 ## Tester l’accessibilité
 
@@ -89,7 +89,7 @@ Bonnes fêtes !
 -	Un florilège de mythe sur l’a11y, y’en a pleins (en) : https://a11ymyths.com/ 
 -	Les utilisateurs de loupe d’écran (en) : https://tetralogical.com/blog/2021/11/10/browsing-with-screen-magnification 
 -	La bible de l’audiodescription à garder (en) : https://www.3playmedia.com/learn/popular-topics/audio-description/ 
--	Article payant mais checkliste gratuite sur les chatbots accessibles, gros boulot, bien complet (en) : https://link.springer.com/chapter/10.1007/978-981-16-1781-2_80 
+-	Article payant mais checklist gratuite sur les chatbots accessibles, gros boulot, bien complet (en) : https://link.springer.com/chapter/10.1007/978-981-16-1781-2_80 
 -	Présentation de ressources accessibilité sur la réalité augmentée et virtuelle (en) : https://arpost.co/2021/10/28/xr-association-xr-access-xraccessibility-site/ et le site ressource (en) : https://github.com/XRAccessibility/xraccessibility.github.io 
 -	Ça m’a fait rire, un bouton en html comment bien faire, une leçon de code (en) : https://www.buttoncheatsheet.com/ 
 -	Qu’est ce qu’un audit a11y (en) : https://www.rmmagazine.com/articles/article/2021/10/12/what-constitutes-a-digital-accessibility-audit 
