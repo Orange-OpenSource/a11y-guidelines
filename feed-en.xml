@@ -4,7 +4,7 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2021-10-27T00:00:00Z</updated>
+  <updated>2021-11-27T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -1257,9 +1257,9 @@ So WCAG 2.2 too, mechanically, are fast approaching, be ready for a jump, not hu
   </entry>
   
   <entry>
-    <title>#a11y technical watch, October-november 2021</title>
+    <title>#a11y technical watch, October-November 2021</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/watch-october-november-2021/"/>
-    <updated>2021-10-27T00:00:00Z</updated>
+    <updated>2021-11-27T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/watch-october-november-2021/</id>
     <content type="html">&lt;h1&gt;Digital accessibility watch October-November 2021&lt;/h1&gt;
 &lt;p&gt;A little late this time but, hey, the holidays and all that...&lt;/p&gt;
@@ -1274,15 +1274,15 @@ So WCAG 2.2 too, mechanically, are fast approaching, be ready for a jump, not hu
 &lt;li&gt;Rant of the visually impaired on a11y (fr): &lt;a href=&quot;https://informations.handicap.fr/a-web-inaccessible-ras-le-bol-internautes-malvoyants-31777.php&quot;&gt;https://informations.handicap.fr/a-web-inaccessible-ras-le-bol-internautes-malvoyants-31777.php&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;And the logical consequence of this lack of political will, filing a complaint (fr): &lt;a href=&quot;https://www.voirensemble.asso.fr/actualites/sites-internet-inaccessibles-les-aveugles-se-portent-en-justice&quot;&gt;https://www.voirensemble.asso.fr/actualites/sites-internet-inaccessibles-les-aveugles-se-portent-en-justice&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Main advances of WCAG 3.0, becareful, WCAG 3.0 is not official: &lt;a href=&quot;https://www.boia.org/blog/understanding-the-differences-between-wcag-2.2-and-wcag-3.0&quot;&gt;https://www.boia.org/blog/understanding-the-differences-between-wcag-2.2-and-wcag-3.0&lt;/a&gt; and here too &lt;a href=&quot;https://uxdesign.cc/wcag-3-0-what-you-need-to-know-about-the-future-of-accessibility-standards-2e1f6374f2c7&quot;&gt;https://uxdesign.cc/wcag-3-0-what-you-need-to-know-about-the-future-of-accessibility-standards-2e1f6374f2c7&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The tour of the new WCAG 2.2 criteria: &lt;a href=&quot;https://www.3playmedia.com/blog/guide-caption-description-formats-video-player/&quot;&gt;https://www.3playmedia.com/blog/guide-caption-description-formats-video-player/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The tour of the new WCAG 2.2 criteria: &lt;a href=&quot;https://www.essentialaccessibility.com/blog/new-wcag-22-release-impacts-2021-web-accessibility&quot;&gt;https://www.essentialaccessibility.com/blog/new-wcag-22-release-impacts-2021-web-accessibility&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Make good use of ARIA 1.2 (editor draft) by the W3C: &lt;a href=&quot;https://w3c.github.io/aria-practices/&quot;&gt;https://w3c.github.io/aria-practices/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Qualiopi certification and accessibility of training (fr): &lt;a href=&quot;https://access42.net/qualiopi-handicap-inducteur26-formation-accessible&quot;&gt;https://access42.net/qualiopi-handicap-inducteur26-formation-accessible&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Qualiopi certification and accessibility of training (fr): &lt;a href=&quot;https://access42.net/qualiopi-handicap-indicateur26-formation-accessible&quot;&gt;https://access42.net/qualiopi-handicap-indicateur26-formation-accessible&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;feedback-and-accessibility&quot;&gt;Feedback and accessibility &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-october-november-2021/#feedback-and-accessibility&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Updated SVG pattern tests and their support in screen readers: &lt;a href=&quot;https://codepen.io/cariefisher/pen/QWpjded&quot;&gt;https://codepen.io/cariefisher/pen/QWpjded&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Experts in a11y are not evangelists, a point of view that I share: &lt;a href=&quot;https://uxdesign.cc/it-is-time-to-ditch-the-title-evangelist-from-accessibility-&quot;&gt;https://uxdesign.cc/it-is-time-to-ditch-the-title-evangelist-from-accessibility-&lt;/a&gt; d35e8723ed71&lt;/li&gt;
-&lt;li&gt;Interesting perspective on the near future that would be beneficial for a11y: &lt;a href=&quot;https://yatil.net/blog/fix-web-accessibility-systematically#fn-2&quot;&gt;https://yatil.net/blog/fix-web-accessibility-systematically#fn-2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Experts in a11y are not evangelists, a point of view that I share: &lt;a href=&quot;https://uxdesign.cc/it-is-time-to-ditch-the-title-evangelist-from-accessibility-d35e8723ed71&quot;&gt;https://uxdesign.cc/it-is-time-to-ditch-the-title-evangelist-from-accessibility-d35e8723ed71&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Interesting perspective on the near future that would be beneficial for a11y: &lt;a href=&quot;https://yatil.net/blog/fix-web-accessibility-systematically&quot;&gt;https://yatil.net/blog/fix-web-accessibility-systematically&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Comparison of the main online survey tools, who wins?: &lt;a href=&quot;https://www.washington.edu/accessibility/2021/09/28/online-survey-tools/&quot;&gt;https://www.washington.edu/accessibility/2021/09/28/online-survey-tools/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;The false negatives of our a11y tools, beware: &lt;a href=&quot;https://adrianroselli.com/2021/09/beware-false-negatives.html&quot;&gt;https://adrianroselli.com/2021/09/beware-false-negatives.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -1292,14 +1292,14 @@ So WCAG 2.2 too, mechanically, are fast approaching, be ready for a jump, not hu
 &lt;li&gt;Collaborative accessibility planning, to read: &lt;a href=&quot;https://www.deque.com/blog/collaborative-planning-the-forgotten-step-of-accessible-development/&quot;&gt;https://www.deque.com/blog/collaborative-planning-the-forgotten-step-of-accessible-development/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Captcha and a11y, an overview: &lt;a href=&quot;https://www.digitala11y.com/the-captcha-conundrum-accessible-alternatives/&quot;&gt;https://www.digitala11y.com/the-captcha-conundrum-accessible-alternatives/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Focus visibility according to WCAG 2.1 and even 2.2: &lt;a href=&quot;https://www.sarasoueidan.com/blog/focus-indicators/&quot;&gt;https://www.sarasoueidan.com/blog/focus-indicators/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Consider any type of handicap in a11y, here photophobia (in): &lt;a href=&quot;https://www.boia.org/blog/web-design-mistakes-that-impact-light-sensitive-users&quot;&gt;https://www.boia.org/blog/web-design-mistakes-that-impact-light-sensitive-users&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Consider any type of handicap in a11y, here photophobia: &lt;a href=&quot;https://www.boia.org/blog/web-design-mistakes-that-impact-light-sensitive-users&quot;&gt;https://www.boia.org/blog/web-design-mistakes-that-impact-light-sensitive-users&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;test-accessibility&quot;&gt;Test accessibility &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-october-november-2021/#test-accessibility&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;PAC, pdf Accessibility Checker, new editor, new version: &lt;a href=&quot;https://pdfua.foundation/en/pac-download&quot;&gt;https://pdfua.foundation/en/pac-download&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;47 bookmarklets to test the a11y: &lt;a href=&quot;https://www.digitala11y.com/accessibility-bookmarklets-testing/&quot;&gt;https://www.digitala11y.com/accessibility-bookmarklets-testing/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;ARC, a tool to test the a11y, everything is explained there, well done tool: &lt;a href=&quot;https://valor-software.com/articles/arc-a-new-weapon-against-accessibility-bugs.html&quot;&gt;https://valor-software.com/articles/arc-a-new-weapon-against-accessibility-bugs.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Equal Access, a new suite of tools (browser extension, ci/cd, test library) from IBM for a11y, I had not yet seen it, to test: https: // github. com / IBMa / equal-access&lt;/li&gt;
+&lt;li&gt;Equal Access, a new suite of tools (browser extension, ci/cd, test library) from IBM for a11y, I had not yet seen it, to test: &lt;a href=&quot;https://github.com/IBMa/equal-access&quot;&gt;https://github.com/IBMa/equal-access&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;AI and a11y tests: &lt;a href=&quot;https://www.tpgi.com/introduction-to-a-i-and-accessibility-testing/&quot;&gt;https://www.tpgi.com/introduction-to-a-i-and-accessibility-testing/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;technical-accessibility-points&quot;&gt;Technical accessibility points &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-october-november-2021/#technical-accessibility-points&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
@@ -1344,7 +1344,7 @@ So WCAG 2.2 too, mechanically, are fast approaching, be ready for a jump, not hu
 &lt;li&gt;A11y and social networks, how to do it right: &lt;a href=&quot;https://therealalexa.com/accessible-social&quot;&gt;https://therealalexa.com/accessible-social&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Introduction to screen readers: &lt;a href=&quot;https://www.tpgi.com/what-is-a-screen-reader-and-why-are-they-important/&quot;&gt;https://www.tpgi.com/what-is-a-screen-reader-and-why-are-they-important/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Some of the a11y declaration generation tools: &lt;a href=&quot;https://www.digitala11y.com/accessibility-statement-generators-roundup/&quot;&gt;https://www.digitala11y.com/accessibility-statement-generators-roundup/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;The great guide to subtitling for major video players, a snapshot of the state of the art: &lt;a href=&quot;https://www.3playmedia.com/blog/guide-caption-description-formats-video-&quot;&gt;https://www.3playmedia.com/blog/guide-caption-description-formats-video-&lt;/a&gt; player /&lt;/li&gt;
+&lt;li&gt;The great guide to subtitling for major video players, a snapshot of the state of the art: &lt;a href=&quot;https://www.3playmedia.com/blog/guide-caption-description-formats-video-player/&quot;&gt;https://www.3playmedia.com/blog/guide-caption-description-formats-video-player/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Resources for subtitling, complete (fr): &lt;a href=&quot;https://github.com/emma11y/sous-titres/&quot;&gt;https://github.com/emma11y/sous-titres/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Build a photo gallery, for example, accessible in html: &lt;a href=&quot;https://www.smashingmagazine.com/2021/10/build-expandable-accessible-gallery/&quot;&gt;https://www.smashingmagazine.com/2021/10/build-expandable-accessible-gallery/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Nice intro to a11y (fr): &lt;a href=&quot;https://www.usabilis.com/accessibilite-numerique/&quot;&gt;https://www.usabilis.com/accessibilite-numerique/&lt;/a&gt;&lt;/li&gt;
