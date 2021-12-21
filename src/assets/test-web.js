@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function(event) {
   const lang = document.documentElement.getAttribute('lang')
 
   if (!lang) {

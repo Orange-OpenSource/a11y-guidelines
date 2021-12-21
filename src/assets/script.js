@@ -157,7 +157,7 @@ function highlightCodeBlocks () {
 
 function enhanceSearchField () {
   const searchInputSkipLink = document.querySelector('[role="banner"] a[href="#search-input"]')
-  const searchInputContainer = $('#search-input-container') // jQuery selector needed by Bootstrap v4.x.x for events
+  const searchInputContainer = $('#search-input-container') //TODO remove jquery in boosted 5
   const searchInputToggler = document.getElementById('search-input-toggler')
   const searchInput = document.getElementById('search-input')
 
