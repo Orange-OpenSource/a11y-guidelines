@@ -68,6 +68,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 this.focus();
                 e.preventDefault();
             })
+
+            option.addEventListener("focus",function(e){
+            
+                this.parentElement.setAttribute("tabindex", "-1")
+            })
+
+            option.addEventListener("blur",function(e){
+                this.classList.remove("active");
+                this.parentElement.setAttribute("tabindex", "0")
+            })
         })
 
         document.querySelectorAll("label").forEach(label =>{
@@ -86,22 +96,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     this.parentElement.parentElement.setAttribute("aria-checked", "false");
                 }
                 e.stopPropagation();
-            })
-        })
-
-
-       // On focus option
-        document.querySelectorAll("[role=option]").forEach(option =>{
-            option.addEventListener("focus",function(e){
-            
-                this.parentElement.setAttribute("tabindex", "-1")
-            })
-        })
-
-        document.querySelectorAll("[role=option]").forEach(option =>{
-            option.addEventListener("blur",function(e){
-                this.classList.remove("active");
-                this.parentElement.setAttribute("tabindex", "0")
             })
         })
       
