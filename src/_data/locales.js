@@ -61,6 +61,11 @@ module.exports = {
       profiles: 'Profiles',
       tools: 'Tools'
     },
+    wwdcFilters: {
+      title: 'Filters',
+      themes: 'Themes',
+      elements: 'Elements'
+    },
     404: {
       title: 'Page not found',
       content: {
@@ -130,6 +135,11 @@ module.exports = {
       title: 'Filtres',
       profiles: 'Profils',
       tools: 'Outils'
+    },
+    wwdcFilters: {
+      title: 'Filtres',
+      themes: 'Thèmes',
+      elements: 'Éléments'
     },
     404: {
       title: 'Page non trouvée',
