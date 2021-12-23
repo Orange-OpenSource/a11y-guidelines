@@ -56,7 +56,7 @@ function addItem(item, noSpeak) {
 
   document.getElementById("selection-list").appendChild(li)
   if (!noSpeak) {
-    speak(item + " ajouté à la sélection, " + $("#selection-list li").length + " élément sélectionné");
+    speak(item + " ajouté à la sélection, " + document.getElementById("selection-list").children.length + " élément sélectionné");
   }
 }
 

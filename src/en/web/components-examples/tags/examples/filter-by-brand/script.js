@@ -47,7 +47,7 @@ function addItem(item, noSpeak) {
   }
 
   let button = document.createElement("button");
-  button.setAttribute("aria-label","retirer "+item+" de liste.");
+  button.setAttribute("aria-label","remove "+item+" from the list.");
   button.innerText = item;
 
   let li = document.createElement("li");
@@ -56,7 +56,7 @@ function addItem(item, noSpeak) {
 
   document.getElementById("selection-list").appendChild(li)
   if (!noSpeak) {
-    speak(item + " ajouté à la sélection, " + $("#selection-list li").length + " élément sélectionné");
+    speak(item + " added from the selection, " + document.getElementById("selection-list").children.length + " added to recipients");
   }
 }
 
@@ -77,7 +77,7 @@ function removeItem(item) {
   opt.text=item.textContent;
   document.getElementById("brand-list").add(opt,null);
   item.parentElement.remove();
-  speak(item.textContent + " supprimé de la sélection, " + document.getElementById("selection-list").children.length + " élément sélectionné.");
+  speak(item.textContent + " removed from the selectop,, " + document.getElementById("selection-list").children.length + " added to recipients.");
 }
 
 function speak(text, priority) {
