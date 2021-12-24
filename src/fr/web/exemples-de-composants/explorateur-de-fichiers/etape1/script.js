@@ -1,6 +1,15 @@
-$(document).ready(function() {
-	$(function () {
-        $("#mode-mosaique" ).prop( "checked", true );
+document.addEventListener("DOMContentLoaded", function(event) {
+
+    (function () {
+        document.getElementById("mode-mosaique").checked=true;
+        console.log(document.getElementsByName("mode"))
+
+        /*document.getElementsByName("mode").forEach(element=>{
+            console.log(element)
+            element.onchange = function(e){
+                console.log(e)
+            }
+        });*/
         
          $('input[type=radio][name=mode]').change(function() {             
             if (this.value === "liste") {
@@ -113,6 +122,6 @@ $(document).ready(function() {
             
             $("ease-file.active").focus();
         })
-    });
+    })();
 });
 
