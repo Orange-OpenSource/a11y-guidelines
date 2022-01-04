@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -195,11 +195,23 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#transcript" class="dropdown-item text-wrap">Transcript</a><a href="#captions" class="dropdown-item text-wrap">Captions</a><a href="#audio-descriptions" class="dropdown-item text-wrap">Audio descriptions</a><a href="#do-not-play-contents-automatically-when-the-page-loads" class="dropdown-item text-wrap">Do not play contents automatically when the page loads</a><a href="#choose-an-accessible-media-player" class="dropdown-item text-wrap">Choose an accessible media Player</a><a href="#for-more-detailed-information" class="dropdown-item text-wrap">For more detailed information</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Accessibility of video, animation and audio content</h1>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>Accessibility of video, animation and audio content</h1>
 <p>The accessibility of videos and audio embedded in content (Web page, Office document, etc.) goes through:</p>
 <ul>
 <li>these videos, animations and audios themselves must be accessible;</li>
@@ -261,7 +273,27 @@ When reading content, check:</p>
 <li>SitePoint :  <a href="https://www.sitepoint.com/accessible-video/">8 Steps to Creating Accessible Video</a></li>
 </ul>
 
-    </main>
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#transcript" class="nav-link text-muted">Transcript</a></li><li class="nav-item position-relative">
+            <a href="#captions" class="nav-link text-muted">Captions</a></li><li class="nav-item position-relative">
+            <a href="#audio-descriptions" class="nav-link text-muted">Audio descriptions</a></li><li class="nav-item position-relative">
+            <a href="#do-not-play-contents-automatically-when-the-page-loads" class="nav-link text-muted">Do not play contents automatically when the page loads</a></li><li class="nav-item position-relative">
+            <a href="#choose-an-accessible-media-player" class="nav-link text-muted">Choose an accessible media Player</a></li><li class="nav-item position-relative">
+            <a href="#for-more-detailed-information" class="nav-link text-muted">For more detailed information</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     
 
 <footer id="footer" class="o-footer" role="contentinfo">
@@ -334,7 +366,7 @@ When reading content, check:</p>
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
     </script>
     <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
-    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2021 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>
 </html>

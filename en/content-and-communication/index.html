@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -190,11 +190,23 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#check-colours" class="dropdown-item text-wrap">Check colours</a><a href="#make-reading-easier" class="dropdown-item text-wrap">Make reading easier</a><a href="#layout-with-tables" class="dropdown-item text-wrap">Layout with tables</a><a href="#accessible-data-tables" class="dropdown-item text-wrap">Accessible data tables</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>General recommendations</h1>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>General recommendations</h1>
 <h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>This section presents general recommendations to ensure the accessibility of your content regardless of the medium used (email, PPT, PDF, Word, etc.).</p>
 <h2 id="check-colours">Check colours <a class="header-anchor" href="#check-colours" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
@@ -235,7 +247,26 @@
 </ul>
 <p>And for the implementation in a web page for example, see <a href="/en/web/develop/textual-content/#structuring-data-tables" title="Structuring data tables">our dedicated article</a>.</p>
 
-    </main>
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#check-colours" class="nav-link text-muted">Check colours</a></li><li class="nav-item position-relative">
+            <a href="#make-reading-easier" class="nav-link text-muted">Make reading easier</a></li><li class="nav-item position-relative">
+            <a href="#layout-with-tables" class="nav-link text-muted">Layout with tables</a></li><li class="nav-item position-relative">
+            <a href="#accessible-data-tables" class="nav-link text-muted">Accessible data tables</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     
 
 <footer id="footer" class="o-footer" role="contentinfo">
@@ -308,7 +339,7 @@
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
     </script>
     <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
-    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2021 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>
 </html>

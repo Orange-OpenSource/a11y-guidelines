@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -195,11 +195,23 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#general-guidelines" class="dropdown-item text-wrap">General guidelines</a><a href="#post-writing" class="dropdown-item text-wrap">Post writing</a><a href="#links" class="dropdown-item text-wrap">Links</a><a href="#hashtags" class="dropdown-item text-wrap">Hashtags</a><a href="#emojis" class="dropdown-item text-wrap">Emojis</a><a href="#images" class="dropdown-item text-wrap">Images</a><a href="#videos" class="dropdown-item text-wrap">Videos</a><a href="#twitter" class="dropdown-item text-wrap">Twitter</a><a href="#images-2" class="dropdown-item text-wrap">Images</a><a href="#videos-2" class="dropdown-item text-wrap">Videos</a><a href="#voice-messages" class="dropdown-item text-wrap">Voice messages</a><a href="#facebook" class="dropdown-item text-wrap">Facebook</a><a href="#images-3" class="dropdown-item text-wrap">Images</a><a href="#videos-3" class="dropdown-item text-wrap">Videos</a><a href="#instagram" class="dropdown-item text-wrap">Instagram</a><a href="#images-4" class="dropdown-item text-wrap">Images</a><a href="#videos-4" class="dropdown-item text-wrap">Videos</a><a href="#stories" class="dropdown-item text-wrap">Stories</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Accessible communication on social networks</h1>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>Accessible communication on social networks</h1>
 <p>This part indicates how to make your content on social networks as accessible as possible.</p>
 <h2 id="general-guidelines">General guidelines <a class="header-anchor" href="#general-guidelines" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <h3 id="post-writing">Post writing <a class="header-anchor" href="#post-writing" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
@@ -320,7 +332,43 @@ To add custom descriptions to images:</p>
 <p>Instagram stories are not yet very accessible.<br>
 To communicate important information, it is necessary to put it on the personal wall.</p>
 
-    </main>
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#general-guidelines" class="nav-link text-muted">General guidelines</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#post-writing" class="nav-link text-muted">Post writing</a></li><li class="nav-item position-relative">
+            <a href="#links" class="nav-link text-muted">Links</a></li><li class="nav-item position-relative">
+            <a href="#hashtags" class="nav-link text-muted">Hashtags</a></li><li class="nav-item position-relative">
+            <a href="#emojis" class="nav-link text-muted">Emojis</a></li><li class="nav-item position-relative">
+            <a href="#images" class="nav-link text-muted">Images</a></li><li class="nav-item position-relative">
+            <a href="#videos" class="nav-link text-muted">Videos</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#twitter" class="nav-link text-muted">Twitter</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#images-2" class="nav-link text-muted">Images</a></li><li class="nav-item position-relative">
+            <a href="#videos-2" class="nav-link text-muted">Videos</a></li><li class="nav-item position-relative">
+            <a href="#voice-messages" class="nav-link text-muted">Voice messages</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#facebook" class="nav-link text-muted">Facebook</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#images-3" class="nav-link text-muted">Images</a></li><li class="nav-item position-relative">
+            <a href="#videos-3" class="nav-link text-muted">Videos</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#instagram" class="nav-link text-muted">Instagram</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#images-4" class="nav-link text-muted">Images</a></li><li class="nav-item position-relative">
+            <a href="#videos-4" class="nav-link text-muted">Videos</a></li><li class="nav-item position-relative">
+            <a href="#stories" class="nav-link text-muted">Stories</a></li></ul></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     
 
 <footer id="footer" class="o-footer" role="contentinfo">
@@ -393,7 +441,7 @@ To communicate important information, it is necessary to put it on the personal 
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
     </script>
     <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
-    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2021 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>
 </html>

@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -195,11 +195,23 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#guides-to-create-accessible-pdf-documents" class="dropdown-item text-wrap">Guides to create accessible PDF documents</a><a href="#from-microsoft-word-or-powerpoint" class="dropdown-item text-wrap">From Microsoft Word or PowerPoint</a><a href="#from-adobe-indesign" class="dropdown-item text-wrap">From Adobe InDesign</a><a href="#from-adobe-acrobat-pro" class="dropdown-item text-wrap">From Adobe Acrobat Pro</a><a href="#mandatory-criteria" class="dropdown-item text-wrap">Mandatory criteria</a><a href="#document-structure" class="dropdown-item text-wrap">Document structure</a><a href="#keyboard-navigation-and-reading-order" class="dropdown-item text-wrap">Keyboard navigation and reading order</a><a href="#images" class="dropdown-item text-wrap">Images</a><a href="#tables" class="dropdown-item text-wrap">Tables</a><a href="#links" class="dropdown-item text-wrap">Links</a><a href="#lists" class="dropdown-item text-wrap">Lists</a><a href="#forms" class="dropdown-item text-wrap">Forms</a><a href="#colours" class="dropdown-item text-wrap">Colours</a><a href="#testing-the-accessibility-of-a-pdf-document" class="dropdown-item text-wrap">Testing the accessibility of a PDF document</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Creating accessible <abbr>PDF</abbr> documents</h1>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>Creating accessible <abbr>PDF</abbr> documents</h1>
 <p>In order to make your PDFs understandable and usable by everyone, they must be structured according to these recommendations.</p>
 <h2 id="guides-to-create-accessible-pdf-documents">Guides to create accessible PDF documents <a class="header-anchor" href="#guides-to-create-accessible-pdf-documents" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <h3 id="from-microsoft-word-or-powerpoint">From Microsoft Word or PowerPoint <a class="header-anchor" href="#from-microsoft-word-or-powerpoint" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
@@ -277,7 +289,37 @@ These softwares allow the execution of automatic tests on a PDF document and the
 </ul>
 <img  src="/en/content-and-communication/images/pac1.png" alt=""/>
 
-    </main>
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#guides-to-create-accessible-pdf-documents" class="nav-link text-muted">Guides to create accessible PDF documents</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#from-microsoft-word-or-powerpoint" class="nav-link text-muted">From Microsoft Word or PowerPoint</a></li><li class="nav-item position-relative">
+            <a href="#from-adobe-indesign" class="nav-link text-muted">From Adobe InDesign</a></li><li class="nav-item position-relative">
+            <a href="#from-adobe-acrobat-pro" class="nav-link text-muted">From Adobe Acrobat Pro</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#mandatory-criteria" class="nav-link text-muted">Mandatory criteria</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#document-structure" class="nav-link text-muted">Document structure</a></li><li class="nav-item position-relative">
+            <a href="#keyboard-navigation-and-reading-order" class="nav-link text-muted">Keyboard navigation and reading order</a></li><li class="nav-item position-relative">
+            <a href="#images" class="nav-link text-muted">Images</a></li><li class="nav-item position-relative">
+            <a href="#tables" class="nav-link text-muted">Tables</a></li><li class="nav-item position-relative">
+            <a href="#links" class="nav-link text-muted">Links</a></li><li class="nav-item position-relative">
+            <a href="#lists" class="nav-link text-muted">Lists</a></li><li class="nav-item position-relative">
+            <a href="#forms" class="nav-link text-muted">Forms</a></li><li class="nav-item position-relative">
+            <a href="#colours" class="nav-link text-muted">Colours</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#testing-the-accessibility-of-a-pdf-document" class="nav-link text-muted">Testing the accessibility of a PDF document</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     
 
 <footer id="footer" class="o-footer" role="contentinfo">
@@ -350,7 +392,7 @@ These softwares allow the execution of automatic tests on a PDF document and the
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
     </script>
     <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
-    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2021 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>
 </html>

@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -195,11 +195,23 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#what-can-be-problematic" class="dropdown-item text-wrap">What can be problematic?</a><a href="#important" class="dropdown-item text-wrap">Important</a><a href="#everyday-emails" class="dropdown-item text-wrap">&quot;Everyday&quot; emails</a><a href="#pushmails-newsletters-automatic-communications" class="dropdown-item text-wrap">Pushmails / newsletters / automatic communications</a><a href="#from-a-word-document" class="dropdown-item text-wrap">From a Word document</a><a href="#from-a-newsletter-mailing-tool" class="dropdown-item text-wrap">From a newsletter / mailing tool</a><a href="#creation-from-html-or-other-dedicated-tool" class="dropdown-item text-wrap">Creation from HTML (or other dedicated tool)</a><a href="#related-links" class="dropdown-item text-wrap">Related links</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>Design emails accessible to all</h1>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>Design emails accessible to all</h1>
 <p>Here is a list of recommendations for writing (or producing templates that generate) messages that are accessible, that is to say, understandable by all.</p>
 <h2 id="what-can-be-problematic">What can be problematic? <a class="header-anchor" href="#what-can-be-problematic" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Above all:</p>
@@ -270,7 +282,30 @@ To test your entire email campaign, use the <a href="http://www.accessible-email
 <li><a href="https://github.com/Orange-OpenSource/font-accessible-dfa">Accessible font DfA</a></li>
 </ul>
 
-    </main>
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#what-can-be-problematic" class="nav-link text-muted">What can be problematic?</a></li><li class="nav-item position-relative">
+            <a href="#important" class="nav-link text-muted">Important</a></li><li class="nav-item position-relative">
+            <a href="#everyday-emails" class="nav-link text-muted">&quot;Everyday&quot; emails</a></li><li class="nav-item position-relative">
+            <a href="#pushmails-newsletters-automatic-communications" class="nav-link text-muted">Pushmails / newsletters / automatic communications</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#from-a-word-document" class="nav-link text-muted">From a Word document</a></li><li class="nav-item position-relative">
+            <a href="#from-a-newsletter-mailing-tool" class="nav-link text-muted">From a newsletter / mailing tool</a></li><li class="nav-item position-relative">
+            <a href="#creation-from-html-or-other-dedicated-tool" class="nav-link text-muted">Creation from HTML (or other dedicated tool)</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#related-links" class="nav-link text-muted">Related links</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     
 
 <footer id="footer" class="o-footer" role="contentinfo">
@@ -343,7 +378,7 @@ To test your entire email campaign, use the <a href="http://www.accessible-email
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
     </script>
     <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
-    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2021 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>
 </html>
