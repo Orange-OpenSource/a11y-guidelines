@@ -7,7 +7,7 @@ cardNavigationTitle: "Nos recommandations"
 
 # Accessibilité Numérique Orange
 
-## En quelques mots
+## En quelques motssssssssssssssssssssssssssssssssssssssssssssssssssssss
 
 Recommandations, méthodes, ressources et outils proposés par <span lang="en">EASE</span>, <span lang="en">E-Accessibility Solutions for Everyone</span>, le centre de compétences groupe d'Orange sur l'accessibilité numérique.
 
