@@ -9,6 +9,14 @@ js:
 - script.js
 ---
 
+<!---- DEBUT - A SUPPRIMER EN FIN DE RELECTURE -->
+<style>
+.relecture {
+  background-color: #ff0;
+}
+</style>
+<!---- FIN - A SUPPRIMER EN FIN DE RELECTURE -->
+
 <h1>Exemples de formulaire</h1>
 
 <h2>Préambule</h2>
@@ -17,8 +25,8 @@ js:
 
 <h2>Exemple de formulaire accessible</h2>
 
-------------------------------------------
-à revoir
+<div class="relecture">------------------------ A REVOIR ---------------------------------</div>
+
 <p>Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/">la librairie Boosted</a>. Celle-ci permet
   d’obtenir des formulaires dont le design est conforme à la charte Orange. Nous utilisons également le plugin jQuery <a href="http://jqueryvalidation.org/" lang="en" hreflang="en">validate</a> pour les contrôles de saisie.</p>
 
@@ -61,14 +69,15 @@ js:
     </form>
   </div>
 </div>
----------------------------------------------------------
+<div class="relecture">---------------------------------------------------------</div>
 
 
 <h2>Mise en place</h2>
 <h3>Étiqueter les champs de formulaire</h3>
-<p>Tous les éléments de formulaire doivent être étiquetés avec un libellé pertinent, donc qui, spécifiquement, informe sur le contenu attendu dans le champ, le bouton, le bouton radio la case à cocher ou la liste déroulante. Ainsi, le lecteur d’écran vocalisera automatiquement le libellé du champ de formulaire lors de la sélection de l'élément de formulaire lors de la navigation.</p>
-<p>De plus, les étiquettes de champs (<code>label</code>) doivent être le moins possible éloigné visuellement  de leur champ afin de faciliter leur association pour les malvoyants ou les déficients cognitifs ou ayant des troubles de l'attention ou de la concentration.</p>
-<p>Pour étiqueter un champ (élément de formulaire autre qu'un bouton), il existe plusieurs solutions.</p>
+<p>Tous les éléments de formulaire doivent être étiquetés avec un libellé pertinent, donc qui, spécifiquement, informe sur le contenu attendu dans le champ, le bouton, le bouton radio la case à cocher ou la liste déroulante. Ainsi, le lecteur d’écran vocalisera automatiquement le libellé du champ de formulaire lors de la sélection de l'élément de formulaire lors de la navigation.
+<span class="relecture">Tournure à revoir⬈</span></p>
+<p>De plus, les étiquettes (<code>label</code>) doivent être le moins possible éloignées visuellement de leur champ afin de faciliter leur association (notamment par les malvoyants, déficients cognitifs, les utilisateurs ayant des troubles de l'attention ou de la concentration).</p>
+<p>Il existe plusieurs solutions pour étiqueter un champ de formulaire (autre qu'un bouton).</p>
 
 <h4>Utilisation d’une balise <code>label</code></h4>
 <p>Il s’agit de la solution standard, à utiliser en priorité, pour étiqueter un champ de formulaire, la mieux supportée par les outils d’assistance.</p>
@@ -131,7 +140,7 @@ js:
   &lt;input type="text" aria-label="complément d’adresse"&gt;
   </code></pre>
 
-<h4>Le <code>placeholder</code> et le <code>label</code></h4>
+<h3>Le <code>placeholder</code> et le <code>label</code></h3>
 <p>L’attribut <code>placeholder</code> ne peut pas être utilisé à la place d’un <code>label</code>. En effet&nbsp;:</p>
 <ul>
   <li>le texte du <code>placeholder</code> qui s’affiche dans le champ n’est généralement pas assez contrasté&nbsp;;
@@ -160,7 +169,10 @@ js:
 </code></pre>
 
 <h3>Utilisation de l'attribut <code>autocomplete</code></h3>
-<p>Pour tout champ dont le type est listé dans <a hreflang="en" lang="en" href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>, il faut remplir l'attribut <code>autocomplete</code> du champ avec la valeur adéquate.</p>
+<p>L'attribut <code>autocomplete</code> doit être renseigné pour tous les champs qui demandent à l'utilisateur de saisir des informations personnelles (nom, prénom, adresse, téléphone...). 
+Respecter cette simple pratique permet d'ajouter une fonctionnalité très puissante à vos formulaires pour l'ensemble de vos utilisateurs. En effet, si des informations similaires on déjà été renseignées par l'utilisateur (même sur un autre site), le navigateur sera à même de préremplir l'intégralité du formulaire. Cela fait gagner du temps et évite les erreurs de saisie.</p>
+<p>La liste des valeur possible pour l'attribut <code>autocomplete</code> est disponible dans <a hreflang="en" lang="en" href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.</p>
+
 <div class="form-group">
   <label for="lname">Nom de famille :</label>
   <input id="lname" type="text" autocomplete="family-name" class="form-control">
@@ -170,14 +182,14 @@ js:
 <pre><code class="html">
   &lt;div class="form-group"&gt;
         &lt;label for="lname"&gt;Nom de famille :&lt;/label&gt;
-        &lt;input id="lname" type="text" autocomplete="family-name" class="form-control"&gt;
+        &lt;input id="lname" type="text" <span class="important">autocomplete="family-name"</span> class="form-control"&gt;
         &lt;label for="cc-num"&gt;Numéro de carte de crédit :&lt;/label&gt;
-        &lt;input type="text" id="cc-num" autocomplete="cc-number" class="form-control"&gt;
+        &lt;input type="text" id="cc-num" <span class="important">autocomplete="cc-number"</span> class="form-control"&gt;
   &lt;/div&gt;
 </code></pre>
 
 <h3>Préciser les champs obligatoires</h3>
-<p>Il faut, bien sûr, clairement indiquer pour tout utilisateur le fait qu’un champ soit obligatoire. Ceci peut être fait en utilisant un signe distinctif (mention, pictogramme, image, etc.) mais aussi avec un simple texte (par exemple, «&nbsp;obligatoire&nbsp;») dans le <code>label</code> du champ. Rajouter, si besoin, une mention au début du formulaire pour indiquer que le symbole ou le pictogramme en question signale un champ obligatoire.</p>
+<p>Il faut, bien sûr, clairement indiquer pour tout utilisateur le fait qu’un champ soit obligatoire. Ceci en utilisant un signe distinctif (mention, pictogramme, image, etc.) mais aussi avec un simple texte (par exemple, «&nbsp;obligatoire&nbsp;») dans le <code>label</code> du champ. Ajouter, si besoin, une mention au début du formulaire pour indiquer que le symbole ou le pictogramme en question signale un champ obligatoire.</p>
 <p>Les champs obligatoires doivent aussi être indiqués dans le code à l’aide de l’attribut <abbr>HTML5</abbr> <code>required</code> ou de l’attribut <abbr>ARIA</abbr> <code>aria-required</code> notamment pour les déficients visuels. Leur support par les <abbr>AT</abbr> est maintenant suffisant pour que l'on utilise indifféremment l'un ou l'autre mais pas les deux en même temps.</p>
 
 <pre><code class="html">
@@ -186,17 +198,20 @@ js:
 </code></pre>
 
 <h4>Cas particulier des radio-boutons obligatoires</h4>
-<p>Pour indiquer à un utilisateur d'<abbr>AT</abbr> qu'une série de radio-boutons est obligatoire, vous pouvez tout à fait rajouter un <code>aria-required="true"</code> ou un <code>required</code> sur chacun d'entre eux. Cependant, une autre solution est envisageable, utiliser le <code>role="radiogroup"</code> sur l'élément contenant les radio-boutons. Ici, on utilise, en plus, un <code>aria-labelledby</code> afin de donner une étiquette (nom accessible) pertinente à ce <code>radiogroup</code>.</p>
+<p>Pour indiquer à un utilisateur d'<abbr>AT</abbr> qu'une série de radio-boutons est obligatoire, vous pouvez tout à fait ajouter un <code>aria-required="true"</code> ou un <code>required</code> sur chacun d'entre eux. Cependant, une autre solution est envisageable, utiliser le <code>role="radiogroup"</code> sur l'élément contenant les radio-boutons. Ici, on utilise, en plus, un <code>aria-labelledby</code> afin de donner une étiquette (nom accessible) pertinente à ce <code>radiogroup</code>.</p>
+
+<pre><code class="html">
 &lt;p id="radio1-desc"&gt;Choisissez une couleur de T-shirt.&lt;/p&gt;
-&lt;div class="" role="radiogroup" aria-required="true" aria-labelledby="radio1-desc"&gt;
-		&lt;input type="radio" name="radio1" id="radio1-0"&gt;
-    &lt;label for="radio1-0"&gt;Votre T-shirt en rouge&lt;/label&gt;
-		&lt;input type="radio" name="radio1" id="radio1-1"&gt;
-    &lt;label for="radio1-1"&gt;Votre T-shirt en bleu&lt;/label&gt;
+&lt;div role="radiogroup" aria-required="true" aria-labelledby="radio1-desc"&gt;
+  &lt;input type="radio" name="radio1" id="radio1-0"&gt;
+  &lt;label for="radio1-0"&gt;Votre T-shirt en rouge&lt;/label&gt;
+  &lt;input type="radio" name="radio1" id="radio1-1"&gt;
+  &lt;label for="radio1-1"&gt;Votre T-shirt en bleu&lt;/label&gt;
 &lt;/div&gt;
+</code></pre>
 
 <h3>Préciser le type ou le format attendu</h3>
-<p>Lorsque c’est nécessaire, préciser pour tous les utilisateurs, dans le <code>label</code> du champ, le type ou le format de la donnée attendu. Pour que cette information soit vocalisée automatiquement par les lecteurs d’écran, vous préférerez donc mettre ces informations directement dans la balise <code>label</code>&nbsp;; sinon utiliser un attribut <code>aria-describedby</code> pour référencer du texte visuellement présent dans la page mais hors du <code>label</code>.</p>
+<p>Lorsque c’est nécessaire, préciser pour tous les utilisateurs, dans le <code>label</code> du champ, le type ou le format de la donnée attendu. Pour que cette information soit vocalisée automatiquement par les lecteurs d’écran, vous préférerez mettre ces informations directement dans la balise <code>label</code>&nbsp;; sinon utiliser un attribut <code>aria-describedby</code> pour référencer du texte visuellement présent dans la page mais hors du <code>label</code>.</p>
 <pre><code class="html">
 &lt;div class="form-group"&gt;
       &lt;label for="numero-serie"&gt;Veuillez saisir le numéro de série *&lt;/label&gt;
@@ -206,28 +221,25 @@ js:
 </code></pre>
 
 <h3>L'étiquette visuelle du champ et son nom (accessible)</h3>
-<p>On peut modifier le nom accessible d'un élément de formulaire, donc ce qui sera restitué aux <abbr>AT</abbr>, pour en savoir plus sur [Le nom accessible en HTML](../../articles/le-nom-accessible-en-html/)). Cependant, il ne faut pas que des éléments dont on a modifié le nom accessible soit différents de l'étiquette/intitulé affiché car cela empêche leur utilisation pour des <abbr>AT</abbr> de commande vocale notamment. Le nom accessible et l'étiquette/intitulé doivent avoir des valeurs identiques ou, au moins, le texte de l'étiquette/intitulé doit commencer par la valeur du nom accessible.</p>
+<p>On peut modifier le nom accessible d'un élément de formulaire, donc ce qui sera restitué aux <abbr>AT</abbr>, pour en savoir plus sur <a href="../../../articles/le-nom-accessible-en-html/">le nom accessible en HTML</a>. Cependant, il ne faut pas que des éléments dont on a modifié le nom accessible soit différents de l'étiquette/intitulé affiché car cela empêche leur utilisation pour des <abbr>AT</abbr> de commande vocale notamment. Le nom accessible et l'étiquette/intitulé doivent avoir des valeurs identiques ou, au moins, le texte de l'étiquette/intitulé doit commencer par la valeur du nom accessible.</p>
 
-
-------------------------------------
-mettre un exemple
------------------------------------
-
+<div class="relecture">----------- mettre un exemple ---------------</div>
 
 <h3>Déplacer le focus automatiquement lors de l'apparition d'un nouveau champ</h3>
 <p>Il est parfois tentant, lors de l'activation d'un champ spécifique (par exemple, un bouton radio "Autre, précisez..."), de faire apparaître un nouveau champ tout en y mettant le focus automatiquement. C'est problématique en ce qui concerne l'accessibilité à deux égards&nbsp;:</p>
-- Tout d'abord, ce champ qui apparaît, suite à l'activation d'un élément de formulaire par l'utilisateur, doit venir se placer dans le code et visuellement juste après l'élément qui l'a déclenché donc doit être l'élément suivant à la navigation clavier. Si il n'est pas positionné juste après le déclencheur, il faut explicitement prévenir l'utilisateur.
-- Le focus ne doit pas automatiquement pointer dans ce nouveau champ car c'est imprévisible pour certains utilisateurs. Deux solutions, ne pas pousser automatiquement le focus dans ce champ ou prévenir l'utilisateur avant le déplacement du focus.
+<ul>
+  <li>Tout d'abord, ce champ qui apparaît, suite à l'activation d'un élément de formulaire par l'utilisateur, doit venir se placer dans le code et visuellement juste après l'élément qui l'a déclenché donc doit être l'élément suivant à la navigation clavier. Si il n'est pas positionné juste après le déclencheur, il faut explicitement prévenir l'utilisateur.</li>
+  <li>Le focus ne doit pas automatiquement pointer dans ce nouveau champ car c'est imprévisible pour certains utilisateurs. Deux solutions, ne pas pousser automatiquement le focus dans ce champ ou prévenir l'utilisateur avant le déplacement du focus.</li>
+</ul>
+<div class="relecture">   ⬈ C'est pourtant ce qu'on fait sur le champ rechercher du site des reco ?</div>
 
 <h3>Regrouper les informations de même nature</h3>
 <p>Les champs de même nature doivent être regroupés, si nécessaire (champs ayant la même étiquette ou étiquette
   insuffisante à elle seule pour comprendre quelles données entrer), à l’aide d’une balise <code>fieldset</code>. Le <code>fieldset</code> doit également posséder comme premier enfant une légende explicite (balise <code>legend</code>).
-  Le <code>fieldset/legend</code> est nécessaire, notamment, lorsque le <code>legend</code> est utile à la compréhension ou l’individualisation (différencier des <code>label</code> identiques dans un même formulaire) des balises <code>label</code> incluses dans le <code>fieldset</code>.</p>
+  Le <code>fieldset/legend</code> est nécessaire, notamment, lorsque la légende est utile à la compréhension ou l’individualisation (différencier des <code>label</code> identiques dans un même formulaire) des balises <code>label</code> incluses dans le <code>fieldset</code>.</p>
 
-  ------------------------
-  on propose de doubler avec un aria-describedby pointant sur l'id du legend pour un meilleur support ??
-  --------------------------
-
+<div class="relecture">----------- on propose de doubler avec un aria-describedby pointant sur l'id du legend pour un meilleur support ?? ---------------</div>
+  
 <pre><code class="html">
 &lt;fieldset&gt;
       &lt;legend&gt;Couleur du capot de votre téléphone&lt;/legend&gt;
@@ -260,24 +272,25 @@ mettre un exemple
 &lt;/fieldset&gt;
 </code></pre>
 
------------------------------------------------------------------------
-<h4>Cas particulier d'une même donnée ventilées dans plusieurs champs</h4>
-<p>Par exemple, pour entrer une date sous forme de 3 champs, un pour le jour, un pour le mois et un pour l’année, voici une solution possible&nbsp;:</p>
- 
- plutôt  fieldset / legend + aria-describedby pointant sur id du legend (pour assurer + de support du legend )  ???
+<div class="relecture">
+    <h4>Cas particulier d'une même donnée ventilées dans plusieurs champs</h4>
+    <p>Par exemple, pour entrer une date sous forme de 3 champs, un pour le jour, un pour le mois et un pour l’année, voici une solution possible&nbsp;:</p>
+    
+    plutôt  fieldset / legend + aria-describedby pointant sur id du legend (pour assurer + de support du legend )  ???
 
-<pre><code class="html">
-       &lt;label for="jourNaissance"&gt;Date de naissance&lt;/label&gt;
-       &lt;input type="text" id="jourNaissance" aria-label="jour de naissance (JJ)"&gt;
-       &lt;input type="text" id="adresse" aria-label="mois de naissance (MM)"&gt;
-       &lt;input type="text" id="ville" aria-label="année de naissance (AAAA)"&gt;
-       </code></pre>
----------------------------------------------------------------------
+    <pre><code class="html">
+        &lt;label for="jourNaissance"&gt;Date de naissance&lt;/label&gt;
+        &lt;input type="text" id="jourNaissance" aria-label="jour de naissance (JJ)"&gt;
+        &lt;input type="text" id="adresse" aria-label="mois de naissance (MM)"&gt;
+        &lt;input type="text" id="ville" aria-label="année de naissance (AAAA)"&gt;
+    </code></pre>
+</div>
 
 <h3>Contrôle de saisie et message d'erreur</h3>
 <p>Lors de la validation, si des champs obligatoires ne sont pas renseignés, ou si le format de la donnée saisie n’est pas valide, il faut prévenir l’utilisateur.</p>
 
 <h4>Modifier le titre de page, le <code>title</code></h4>
+<div class="relecture">Obligatoire, recommandé ou bonne pratique ?</div>
 <p>Le titre de la page doit refleter le contenu de celle-ci, donc, lorsqu'un formulaire génère des erreurs d'entrée, il faut l'annoncer à l'utilisateur via une modification du <code>title</code>. Il faut modifier dynamiquement le titre de page pour indiquer que le formulaire est en erreur et le nombre d'erreur commises (par exemple&nbsp;: "4 erreurs dans le formulaire d'inscription - Accueil Orange.com").</p>
 
 
@@ -312,10 +325,10 @@ mettre un exemple
 <p>Si des erreurs de saisie empêchent la validation du formulaire, plutôt que de lister les erreurs au début du formulaire dans une bannière (voir ci-dessus), on peut, pour chaque champ en erreur avertir l’utilisateur localement en ligne. Bien souvent des messages apparaissent à l’écran, cependant par défaut ils ne sont pas vocalisés au lecteur d’écran. Une des solutions consiste à déplacer automatiquement le focus dans le premier champ en erreur. Ceci aura pour effet de faire vocaliser le ou les libellés ou étiquettes du champ de saisie en question dans le ou lesquels le type erreur sera précisé (la date d'inscription est obligatoire, le numéro de sécurité sociale doit contenir 13 chiffres, par exemple) et si besoin des suggestions de corrections (un code valide&nbsp;: 1234-5678, le marquage produit est de la forme 1111-XXX-YYYY, par exemple).</p>
 <p>Dans cet exemple de formulaire accessible, les messages d’erreurs sont déclarés comme des <code>label</code> et sont associés aux champs de saisie. Ainsi, lorsque le focus arrive dans un champ, le lecteur d’écran vocalise le libellé du champ puis le message d’erreur associé.</p>
 
---------------------------------------------------
+<div class="relecture">--------------------------------------------------
 à revoir
 <p>Ce mécanisme est pris en charge directement par le plugin jQuery <a href="http://jqueryvalidation.org/" lang="en" hreflang="en">validate</a>.</p>
------------------------------------------------
+-----------------------------------------------</div>
 
 <pre><code class="html">
 &lt;label <span class="important">for="numero-serie"</span>&gt;Veuillez saisir le numéro de série *&lt;/label&gt;
@@ -323,8 +336,10 @@ mettre un exemple
 &lt;label <span class="important">for="numero-serie"</span> class="error" id="numero-serie-error"&gt;Le champ numéro de série est obligatoire.&lt;/label&gt;
 </code></pre>
 
+<div class="relecture">---- Vérifier si toujours d'actualité -------
 <p><strong>Attention</strong>, bien qu’il soit tout à fait <abbr>HTML</abbr> valide d’utiliser plusieurs <code>label</code> pour un même champ de formulaire, il est pour le moment conseillé de doubler avec un attribut <code>aria-labelledby</code> listant les <code>id</code> des deux (ou plus) <code>label</code> pour que le support soit assuré pour toutes les <abbr>AT</abbr>.
   Consulter <a href="https://www.paciellogroup.com/blog/2016/01/simple-inline-error-message-pattern/" hreflang="en">l’article de Steve Faulkner</a> pour plus d’information sur le sujet.</p>
+</div>
 
 <pre><code class="html">
 &lt;label id="serie-label" for="numero-serie"&gt;Veuillez saisir le numéro de série *&lt;/label&gt;
@@ -335,15 +350,18 @@ mettre un exemple
 <h4>Afficher des messages d’erreur explicites et, si besoin, suggérer des corrections</h4>
 <p>Les messages d’erreur affichés doivent être pertinents et, si besoin, proposer des exemples d’entrée valide dits aussi suggestions de correction.</p>
 <p>Pour les messages d'erreur, quelques règles de bases :</p>
-- Soyez clair et non ambigu
-- Soyez bref et significatif
-- Soyez précis et pertinent
-- Donner des pistes de corrections et moyens de corriger
-- Assurez-vous que les erreurs sont sous forme de texte, éviter les majuscules.
-- Ne vous contentez pas d'utiliser des indicateurs visuels ou seulement la couleur pour signaler les erreurs.
-- Laisser actif en toute circonstance le bouton d'envoi. Certains sites Web activent le bouton d'envoi que si le formulaire est correctement rempli, c'est une mauvaise idée.
-- Fournissez les instructions nécessaires et soyez aussi précis que possible sur les erreurs commises afin de faciliter remplissage des champs par les utilisateurs.
-- Assurez-vous que les erreurs sont visuellement identifiables sur la page Web.
+
+<ul>
+  <li>Soyez clair et non ambigu</li>
+  <li>Soyez bref et significatif</li>
+  <li>Soyez précis et pertinent</li>
+  <li>Donner des pistes de corrections et moyens de corriger</li>
+  <li>Assurez-vous que les erreurs sont sous forme de texte, éviter les majuscules.</li>
+  <li>Ne vous contentez pas d'utiliser des indicateurs visuels ou seulement la couleur pour signaler les erreurs.</li>
+  <li>Laisser actif en toute circonstance le bouton d'envoi. Certains sites Web activent le bouton d'envoi que si le formulaire est correctement rempli, c'est une mauvaise idée.</li>
+  <li>Fournissez les instructions nécessaires et soyez aussi précis que possible sur les erreurs commises afin de faciliter remplissage des champs par les utilisateurs.</li>
+  <li>Assurez-vous que les erreurs sont visuellement identifiables sur la page Web.</li>
+</ul>
 
 <p><strong>Exemple valide&nbsp;:</strong><br>
   <img alt="capture d’écran d’un formulaire affichant des messages d’erreur valides"
