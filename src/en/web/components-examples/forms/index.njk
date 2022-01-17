@@ -23,7 +23,7 @@ js:
 <div class="row">
   <div class="col-md-8">
     <form id="form" class="border border-secondary p-3 mt-2">
-      <div class="form-group">
+      <div class="mb-3">
         <fieldset>
           <legend>Color</legend>
           <div class="custom-control custom-radio custom-control-inline">
@@ -36,21 +36,21 @@ js:
           </div>
         </fieldset>
       </div>
-      <div class="form-group">
+      <div class="mb-3">
         <label for="serial-number">Please enter the serial number *</label>
         <input placeholder="e.g.: TS-4521" type="text" name="serie" data-displayname="serial number"
                class="form-control" id="serial-number" aria-describedby="helpblock" aria-required="true">
       </div>
       <p id="helpblock" class="help-block">Serial number beginning with “TS-” followed by 4 digits.</p>
 
-      <div class="form-group">
+      <div class="mb-3">
         <label for="addresse">Address *</label>
         <input type="text" name="addresse" data-displayname="address" class="form-control" id="addresse"
                aria-required="true">
         <label class="visually-hidden" for="complement">Address complement</label>
         <input type="text" class="form-control mt-2" id="complement">
       </div>
-      <div class="form-group">
+      <div class="mb-3">
         <label for="telephone">Phone *</label>
         <input type="text" name="telephone" data-displayname="phone" class="form-control" id="telephone"
                aria-required="true">
@@ -160,13 +160,13 @@ js:
 </ul>
 <p>In contrast, the <code>placeholder</code> can guide the user, helping to fill a field (for example by describing the
   expected format or value): do not hesitate to use it in this situation.</p>
-<div class="form-group">
+<div class="mb-3">
   <label for="serial-number2">Please enter the serial number *</label>
   <input type="text" name="serie" data-displayname="serial number" class="form-control" id="serial-number2"
          aria-describedby="helpblock" aria-required="true" placeholder="e.g. TS-0000">
 </div>
 <pre><code class="html">
-  &lt;div class="form-group"&gt;
+  &lt;div class="mb-3"&gt;
         &lt;label for="serial-number"&gt;Please enter the serial number *&lt;/label&gt;
         &lt;input type="text" name="serie" data-displayname="serial number" class="form-control" id="serial-number" aria-describedby="helpblock"
         aria-required="true" placeholder="e.g. TS-0000"&gt;
@@ -192,7 +192,7 @@ js:
   by screen readers, add it to the <code>label</code> preferably or otherwise use the <code>aria-describedby</code>
   attribute.</p>
 <pre><code class="html">
-  &lt;div class="form-group"&gt;
+  &lt;div class="mb-3"&gt;
         &lt;label for="serial-number"&gt;Please enter the serial number *&lt;/label&gt;
         &lt;input type="text" id="serial-number" <span class="important">aria-describedby="helpblock"</span> aria-required="true"&gt;
   &lt;/div&gt;

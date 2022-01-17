@@ -23,7 +23,7 @@ js:
 <div class="row pb-3">
   <div class="col-md-8">
     <form id="formulaire" class="border border-secondary p-3 mt-2">
-      <div class="form-group">
+      <div class="mb-3">
         <fieldset>
           <legend>Couleur</legend>
           <div class="custom-control custom-radio custom-control-inline">
@@ -36,21 +36,21 @@ js:
           </div>
         </fieldset>
       </div>
-      <div class="form-group">
+      <div class="mb-3">
         <label for="numero-serie">Veuillez saisir le numéro de série *</label>
         <input placeholder="Exemple: TS-4521" type="text" name="serie" data-displayname="numéro de série"
                class="form-control" id="numero-serie" aria-describedby="helpblock" aria-required="true">
       </div>
       <p id="helpblock" class="help-block">Numéro de série commençant par «&nbsp;TS-&nbsp;» suivi de 4 chiffres.</p>
 
-      <div class="form-group">
+      <div class="mb-3">
         <label for="adresse">Adresse *</label>
         <input type="text" name="adresse" data-displayname="adresse" class="form-control" id="adresse"
                aria-required="true">
         <label class="visually-hidden" for="complement">Complément d’adresse</label>
         <input type="text" class="form-control mt-2" id="complement">
       </div>
-      <div class="form-group">
+      <div class="mb-3">
         <label for="telephone">Téléphone *</label>
         <input type="text" name="telephone" data-displayname="téléphone" class="form-control" id="telephone"
                aria-required="true">
@@ -170,13 +170,13 @@ js:
 <p>En revanche, le <code>placeholder</code> peut servir de guide, d’aide pour remplir le champ sans que cette
   information soit absolument nécessaire (par exemple, proposer une valeur attendue valide)&nbsp;: ne pas hésiter à
   l’utiliser pour ce type de besoin.</p>
-<div class="form-group">
+<div class="mb-3">
   <label for="numero-serie2">Veuillez saisir le numéro de série *</label>
   <input type="text" name="serie" data-displayname="numéro de série" class="form-control" id="numero-serie2"
          aria-describedby="helpblock" aria-required="true" placeholder="exemple : TS-0000">
 </div>
 <pre><code class="html">
-  &lt;div class="form-group"&gt;
+  &lt;div class="mb-3"&gt;
         &lt;label for="numero-serie"&gt;Veuillez saisir le numéro de série *&lt;/label&gt;
         &lt;input type="text" name="serie" data-displayname="numéro de série" class="form-control" id="numero-serie" aria-describedby="helpblock"
         aria-required="true" placeholder="exemple : TS-0000"&gt;
@@ -187,14 +187,14 @@ js:
 <p>Pour tout champ dont le type est listé dans <a lang="en" href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input
     Purposes for User Interface Components</a>, il faut remplir l'attribut <code>autocomplete</code> du champ avec la
   valeur adéquate.</p>
-<div class="form-group">
+<div class="mb-3">
   <label for="lname">Nom de famille :</label>
   <input id="lname" type="text" autocomplete="family-name" class="form-control">
   <label for="cc-num">Numéro de carte de crédit :</label>
   <input type="text" id="cc-num" autocomplete="cc-number" class="form-control">
 </div>
 <pre><code class="html">
-  &lt;div class="form-group"&gt;
+  &lt;div class="mb-3"&gt;
         &lt;label for="lname"&gt;Nom de famille :&lt;/label&gt;
         &lt;input id="lname" type="text" autocomplete="family-name" class="form-control"&gt;
         &lt;label for="cc-num"&gt;Numéro de carte de crédit :&lt;/label&gt;
@@ -222,7 +222,7 @@ js:
   informations dans la balise <code>label</code>&nbsp;; sinon utiliser un attribut <code>aria-describedby</code> pour
   référencer du texte hors du <code>label</code>.</p>
 <pre><code class="html">
-&lt;div class="form-group"&gt;
+&lt;div class="mb-3"&gt;
       &lt;label for="numero-serie"&gt;Veuillez saisir le numéro de série *&lt;/label&gt;
       &lt;input type="text" id="numero-serie" <span class="important">aria-describedby="helpblock"</span> aria-required="true"&gt;
 &lt;/div&gt;

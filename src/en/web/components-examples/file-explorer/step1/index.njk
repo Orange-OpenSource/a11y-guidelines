@@ -10,16 +10,16 @@ js:
 
 <h1>File explorer example</h1>
 
-<div class="row">
-  <label class="control-label">Display mode&nbsp;:&nbsp;</label>
+<div class="d-inline">
+  <label class="form-check-label">Display mode&nbsp;:&nbsp;</label>
 
-  <div class="custom-control custom-radio custom-control-inline">
-    <input id="mode-mosaique" type="radio" class="custom-control-input" name="mode" value="mosaique" checked="checked">
-    <label class="custom-control-label" for="mode-mosaique">Grid</label>
+  <div class="form-check form-check-inline">
+    <input id="mode-mosaique" type="radio" class="form-check-input" name="mode" value="mosaique" checked="checked">
+    <label class="form-check-label" for="mode-mosaique">Grid</label>
   </div>
-  <div class="custom-control custom-radio custom-control-inline">
-    <input id="mode-liste" type="radio" class="custom-control-input" name="mode" value="liste">
-    <label class="custom-control-label" for="mode-liste">List</label>
+  <div class="form-check form-check-inline">
+    <input id="mode-liste" type="radio" class="form-check-input" name="mode" value="liste">
+    <label class="form-check-label" for="mode-liste">List</label>
   </div>
 </div>
 
@@ -28,7 +28,7 @@ js:
   <span>Size</span>
 </div>
 
-<div class="row list clearfix" role="listbox" aria-label="file list, use the arrow keys to move through the grid view" aria-multiselectable="true" tabindex="0">
+<div class="list clearfix" role="listbox" aria-label="file list, use the arrow keys to move through the grid view" aria-multiselectable="true" tabindex="0">
     <ease-file name="picture 201.png" size="1.4MB" thumbnail="./images/1.jpg" type="image" class="clearfix"></ease-file>
     <ease-file name="intro.mp3" size="7.1MB" thumbnail="./images/2.jpg" type="audio" class="clearfix"></ease-file>
     <ease-file name="picture 203.png" size="1.3MB" thumbnail="./images/3.jpg" type="image" class="clearfix"></ease-file>
