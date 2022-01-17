@@ -51,7 +51,7 @@ function addItem(item, noSpeak) {
   button.innerText = item;
 
   let li = document.createElement("li");
-  li.innerHTML = '<span class="sr-only">' + item + '</span>';
+  li.innerHTML = '<span class="visually-hidden">' + item + '</span>';
   li.appendChild(button);
 
   document.getElementById("selection-list").appendChild(li)
@@ -85,7 +85,7 @@ function speak(text, priority) {
   var id = "speak-" + Date.now();
   el.setAttribute("id", id);
   el.setAttribute("aria-live", priority || "polite");
-  el.classList.add("sr-only");
+  el.classList.add("visually-hidden");
   document.body.appendChild(el);
 
   window.setTimeout(function () {

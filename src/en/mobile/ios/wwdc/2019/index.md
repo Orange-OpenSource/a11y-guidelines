@@ -45,7 +45,7 @@ This video available on the official Apple website ([session&nbsp;244](https://d
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#DynamicType-TheFourPrinciples"
            id="DynamicType-TheFourPrinciples_tab"
            role="tab" 
@@ -53,7 +53,7 @@ This video available on the official Apple website ([session&nbsp;244](https://d
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#DynamicType-TextStyles"
            id="DynamicType-TextStyles_tab"
            role="tab" 
@@ -61,7 +61,7 @@ This video available on the official Apple website ([session&nbsp;244](https://d
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#DynamicType-Xcode"
            id="DynamicType-Xcode_tab"
            role="tab" 
@@ -111,7 +111,7 @@ A **new pane** is available with **Xcode 11** to vary the text size and to dynam
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ReduceMotion-TheBasics"
            id="ReduceMotion-TheBasics_tab"
            role="tab" 
@@ -119,7 +119,7 @@ A **new pane** is available with **Xcode 11** to vary the text size and to dynam
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ReduceMotion-AutoplayingVideo"
            id="ReduceMotion-AutoplayingVideo_tab"
            role="tab" 
@@ -127,7 +127,7 @@ A **new pane** is available with **Xcode 11** to vary the text size and to dynam
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ReduceMotion-ScreenTransitions"
            id="ReduceMotion-ScreenTransitions_tab"
            role="tab" 
@@ -180,7 +180,7 @@ Once activated, the `Prefer`&nbsp;`Cross-Fade`&nbsp;`Transitions` option is auto
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#Color-TheBasics"
            id="Color-TheBasics_tab"
            role="tab" 
@@ -188,7 +188,7 @@ Once activated, the `Prefer`&nbsp;`Cross-Fade`&nbsp;`Transitions` option is auto
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#Color-DifferentiateWithoutColor"
            id="Color-DifferentiateWithoutColor_tab"
            role="tab" 
@@ -314,7 +314,7 @@ Quick introduction of VoiceOver with a problem due to an inadequate implementati
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#CustomActions-VoiceOver"
            id="CustomActions-VoiceOver_tab"
            role="tab" 
@@ -322,7 +322,7 @@ Quick introduction of VoiceOver with a problem due to an inadequate implementati
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#CustomActions-SwitchControl"
            id="CustomActions-SwitchControl_tab"
            role="tab" 

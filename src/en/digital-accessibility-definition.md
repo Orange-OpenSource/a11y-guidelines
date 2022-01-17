@@ -23,7 +23,7 @@ It is not a question of increasing the number of information outlets, but of res
 Being disabled is not limited to what other people can see.
 Also, it is not necessarily a permanent situation and it can happen to any of us at some point in our life.
 
-<div class="sr-only">
+<div class="visually-hidden">
     The following quotes are a great example of that:
     <ul>
         <li>The subtitles are useful to me because my mother tongue is not French,</li>

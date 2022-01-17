@@ -23,9 +23,9 @@ tags: componentsExamples_en
 <p>Ideally, it is best to combine all the solutions to make sure it is working properly in all browsers.</p>
 
 
-<p>If you use a framework, it is very likely it already has a class for that. For example if you use <a href="http://boosted.orange.com">Boosted</a> or <a href="http://getbootstrap.com/">Bootstrap</a>, you can use the <code>sr-only</code> <abbr>CSS</abbr> class (“screen reader only”) which is defined as follows:</p>
+<p>If you use a framework, it is very likely it already has a class for that. For example if you use <a href="http://boosted.orange.com">Boosted</a> or <a href="http://getbootstrap.com/">Bootstrap</a>, you can use the <code>visually-hidden</code> <abbr>CSS</abbr> class (“screen reader only”) which is defined as follows:</p>
 <pre><code class="css">
-.sr-only {
+.visually-hidden {
       position: absolute;
       width: 1px;
       height: 1px;
@@ -43,11 +43,11 @@ tags: componentsExamples_en
 <p>Accessible hiding class can be used in many cases. For example, to clarify a link label:</p>
 
 <pre><code class="html">
-&lt;a href="…"&gt;Learn more&lt;span <span class="important">class="sr-only"</span>&gt; about our mobile plans&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…"&gt;Learn more&lt;span <span class="important">class="visually-hidden"</span>&gt; about our mobile plans&lt;/span&gt;&lt;/a&gt;
 </code></pre>
 
 <strong>Example: </strong>
-<p><a href="#">Learn more<span class="sr-only"> about our mobile plans</span></a></p>
+<p><a href="#">Learn more<span class="visually-hidden"> about our mobile plans</span></a></p>
 
 <p>We would have obtained the same result using the <code>aria-label</code> attribute on the link:</p>
 <pre><code class="html">

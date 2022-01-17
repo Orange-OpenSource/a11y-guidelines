@@ -79,7 +79,7 @@ js:
 <h2>Solution pour corriger la vocalisation</h2>
 
 <p>Pour corriger ces problèmes le plus simple est de faire ignorer le prix affiché à l'écran et ajouter un texte en masquage accessible contenant le prix à vocaliser.</p>
-<p>Pour masquer un élément à la synthèse vocale, il suffit d'utiliser l'attribut <code>aria-hidden</code>. Pour ajouter un texte en masquage accessible (texte vocalisé mais non affiché), il suffit d'utiliser une classe CSS de masquage accessible (par exemple la classe <code>sr-only</code> si vous utiliser le framework <a href="http://boosted.orange.com">boosted</a>).</p>
+<p>Pour masquer un élément à la synthèse vocale, il suffit d'utiliser l'attribut <code>aria-hidden</code>. Pour ajouter un texte en masquage accessible (texte vocalisé mais non affiché), il suffit d'utiliser une classe CSS de masquage accessible (par exemple la classe <code>visually-hidden</code> si vous utiliser le framework <a href="http://boosted.orange.com">boosted</a>).</p>
 
 <p class="example" aria-hidden="true">
 à partir de
@@ -87,7 +87,7 @@ js:
     120<sup>,90€</sup><sub>/mois</sub>
 </span></p>
 <p>
-<span class="sr-only">à partir de 120,90€ par mois</span></p>
+<span class="visually-hidden">à partir de 120,90€ par mois</span></p>
 <p>Elément vocalisé "à partir de 120 euros 90 par mois"</p>
 <pre><code class="html">
 &lt;p class="example" aria-hidden="true"&gt;
@@ -96,7 +96,7 @@ js:
 120&lt;sup&gt;,90€&lt;/sup&gt;&lt;sub&gt;/mois&lt;/sub&gt;
 &lt;/span&gt;
 &lt;p&gt;
-&lt;span class="sr-only"&gt;à partir de 120,90€ par mois&lt;/span&gt;
+&lt;span class="visually-hidden"&gt;à partir de 120,90€ par mois&lt;/span&gt;
 </code></pre>
 
 <div class="example2">
@@ -106,7 +106,7 @@ js:
         <s>129,90€</s><br>
         *voir conditions
     </p>
-    <span class="sr-only">à partir de 1€ au lieu de 129,90€ voir conditions</span>
+    <span class="visually-hidden">à partir de 1€ au lieu de 129,90€ voir conditions</span>
 </div>
 
 <p>Élément vocalisé :</p>
@@ -123,7 +123,7 @@ js:
     &lt;s&gt;129,90€&lt;/s&gt;&lt;br&gt;
     *voir conditions
 &lt;/p&gt;
-&lt;span class="sr-only"&gt;à partir de 1€ au lieu de 129,90€ voir conditions&lt;/span&gt;
+&lt;span class="visually-hidden"&gt;à partir de 1€ au lieu de 129,90€ voir conditions&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
 

@@ -1,5 +1,5 @@
 $(document).ready(function() {
 	$(function () {
-	$('[data-toggle="tooltips"]').tooltip()
+	$('[data-bs-toggle="tooltips"]').tooltip()
 	})
 });

@@ -41,7 +41,7 @@ Choisissez les mémos qui vous correspondent :
     <p>          
       <a href="../../res/memos/dev-web/Memo-Web-Orange.pdf" class="btn btn-secondary">
         Télécharger au format PDF (272 Ko)
-        <span class="sr-only">Mémo accessibilité développement Web</span>
+        <span class="visually-hidden">Mémo accessibilité développement Web</span>
       </a>
     </p>
   </div>
@@ -66,7 +66,7 @@ Choisissez les mémos qui vous correspondent :
     <p>          
       <a href="../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-secondary">
         Télécharger au format PDF (335 Ko)
-        <span class="sr-only">Mémo accessibilité les tests Web</span>
+        <span class="visually-hidden">Mémo accessibilité les tests Web</span>
       </a>
     </p>
   </div>
@@ -90,7 +90,7 @@ Choisissez les mémos qui vous correspondent :
     <p>         
       <a href="../../res/memos/android/Memo-Android-Orange.pdf" class="btn btn-secondary">
         Télécharger au format PDF (261 Ko)
-        <span class="sr-only">Mémo accessibilité développement Android</span>
+        <span class="visually-hidden">Mémo accessibilité développement Android</span>
       </a>
     </p>
   </div>
@@ -114,7 +114,7 @@ Choisissez les mémos qui vous correspondent :
     <p>      
       <a href="../../res/memos/ios/Memo-iOS-Orange.pdf" class="btn btn-secondary">
         Télécharger au format PDF (263 Ko)
-        <span class="sr-only">Mémo accessibilité développement iOS</span>
+        <span class="visually-hidden">Mémo accessibilité développement iOS</span>
       </a>
     </p>
   </div>
@@ -137,7 +137,7 @@ Choisissez les mémos qui vous correspondent :
     <p>      
       <a href="../../res/memos/email/Memo-Email-Orange.pdf" class="btn btn-secondary">
         Télécharger au format PDF (283 Ko)
-        <span class="sr-only">Mémo rédiger un email accessible</span>
+        <span class="visually-hidden">Mémo rédiger un email accessible</span>
       </a>
     </p>
   </div>
@@ -158,7 +158,7 @@ Choisissez les mémos qui vous correspondent :
     <p>      
       <a href="../../res/memos/word/Memo-Word-Orange.pdf" class="btn btn-secondary">
         Télécharger au format PDF (236 Ko)
-        <span class="sr-only">Mémo rédiger un document Word accessible</span>
+        <span class="visually-hidden">Mémo rédiger un document Word accessible</span>
       </a>
     </p>
   </div>

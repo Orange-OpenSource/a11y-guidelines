@@ -15,9 +15,10 @@
 {%- endmacro -%}
 
 {%- macro cardNavigation(links) -%}
-<div class="card-deck flex-column flex-md-row">
+<div class="row">
 {%- for link in links -%}
 {%- set isLast = loop.index == links | length -%}
+<div class="col-md-3">
   <div class="card bg-{{ link.theme }} border-secondary {{ "mb-0" if isLast else "mb-4 mb-md-0" }}">
     <div class="p{% if link.icon.name == "editorial-content" %}t{% else %}y{% endif %}-3 px-3 text-center">
       <img src="../images/icons/{{ link.icon.name }}.svg" alt="" class="img-fluid" width="{{ link.icon.width }}" height="{{ link.icon.height }}">
@@ -33,6 +34,7 @@
       {% endif %}
     </div>
   </div>
+</div>
 {%- endfor -%}
 </div>
 {%- endmacro -%}
@@ -71,7 +73,7 @@
         <a href="{{ post.url }}" class="text-decoration-none">{{ post.data.title }}</a>
       </h2>
       {% if displayTags == true and tags %}
-       <span id="post_{{loop.index}}" class="sr-only">{{'tags.list' | translate}}</span>
+       <span id="post_{{loop.index}}" class="visually-hidden">{{'tags.list' | translate}}</span>
         <ul class="list-inline mb-1" aria-labelledby="post_{{loop.index}}">
           {%- for tag in tags -%}
             {%- set tagTranslationKey = 'tags.' + tag -%}
@@ -162,7 +164,7 @@
     </nav>
   {%- elseif mode == "mobile" -%}
     <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         {{ 'toc.title' | translate }}
       </button>
       <div class="dropdown-menu dropdown-menu-right">
@@ -190,7 +192,7 @@
     </nav>
   {%- elseif mode == "mobile" -%}
     <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-bs-toggle="dropdown" aria-expanded="false">
         {{ 'navigation.side.label' | translate }}
       </button>
       <div class="dropdown-menu dropdown-menu-left">
@@ -230,7 +232,7 @@
 </nav>
 {%- elseif mode == "mobile" -%}
 <li class="nav-item d-md-none">
-  <span class="sr-only">{{ 'changelang.label' | translate }}</span>
+  <span class="visually-hidden">{{ 'changelang.label' | translate }}</span>
   <ul class="d-flex list-inline">
     {%- for key, lang in site.locales -%}
       {% set active = locale == lang.code %}

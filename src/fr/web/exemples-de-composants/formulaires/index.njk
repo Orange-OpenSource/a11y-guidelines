@@ -47,7 +47,7 @@ js:
         <label for="adresse">Adresse *</label>
         <input type="text" name="adresse" data-displayname="adresse" class="form-control" id="adresse"
                aria-required="true">
-        <label class="sr-only" for="complement">Complément d’adresse</label>
+        <label class="visually-hidden" for="complement">Complément d’adresse</label>
         <input type="text" class="form-control mt-2" id="complement">
       </div>
       <div class="form-group">
@@ -88,11 +88,11 @@ js:
 
 <h4>Classe <abbr>CSS</abbr> de masquage accessible</h4>
 <p>C’est la méthode utilisée sur le second champ de saisie de l’adresse dans cet exemple de formulaire accessible
-  (utilisation de la classe <code>sr-only</code> de Bootstrap/Boosted).</p>
+  (utilisation de la classe <code>visually-hidden</code> de Bootstrap/Boosted).</p>
 
 <p><strong>Code <abbr>CSS</abbr></strong></p>
 <pre><code class="css">
-  .sr-only {
+  .visually-hidden {
         position: absolute;
         width: 1px;
         height: 1px;
@@ -109,7 +109,7 @@ js:
 <pre><code class="html">
   &lt;label for="adresse"&gt;Adresse *&lt;/label&gt;
   &lt;input name="adresse" data-displayname="adresse" class="form-control" id="adresse" aria-required="true" type="text"&gt;
-  <strong>&lt;label <span class="important">class="sr-only"</span> for="complement"&gt;Complément d’adresse&lt;/label&gt;
+  <strong>&lt;label <span class="important">class="visually-hidden"</span> for="complement"&gt;Complément d’adresse&lt;/label&gt;
   &lt;input class="form-control" id="complement" type="text"&gt;</strong>
   </code></pre>
 

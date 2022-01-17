@@ -202,7 +202,7 @@ function enhanceSearchField () {
 }
 
 window.addEventListener('DOMContentLoaded', function () {
-  initPriorityNav()
+  //initPriorityNav()
   enhanceSearchField()
 
   if (Application.vendors.highlightJS === true) {

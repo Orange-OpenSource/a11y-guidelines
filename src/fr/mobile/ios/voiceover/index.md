@@ -14,21 +14,21 @@ L'activation de <span lang="en">VoiceOver</span> se fait via le menu `Réglages`
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#VoiceOverActivation-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#VoiceOverActivation-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#VoiceOverActivation-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -57,14 +57,14 @@ Il est préférable mais non obligatoire d'**activer la vibration** pour percevo
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#iPhoneVibration-iOS13"
            role="tab" 
            aria-selected="true">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#iPhoneVibration-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>

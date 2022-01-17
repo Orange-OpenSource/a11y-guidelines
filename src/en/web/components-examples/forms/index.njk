@@ -47,7 +47,7 @@ js:
         <label for="addresse">Address *</label>
         <input type="text" name="addresse" data-displayname="address" class="form-control" id="addresse"
                aria-required="true">
-        <label class="sr-only" for="complement">Address complement</label>
+        <label class="visually-hidden" for="complement">Address complement</label>
         <input type="text" class="form-control mt-2" id="complement">
       </div>
       <div class="form-group">
@@ -83,12 +83,12 @@ js:
   You should still provide a label for screen readers and hide it using one of the following 3 methods:</p>
 
 <h4>Accessible hiding</h4>
-<p>This is the method used in the second input field of the address in the accessible form example (using the <code>sr-only</code>
+<p>This is the method used in the second input field of the address in the accessible form example (using the <code>visually-hidden</code>
   Bootstrap/Boosted class).</p>
 
 <p><strong>CSS</strong></p>
 <pre><code class="css">
-.sr-only {
+.visually-hidden {
       position: absolute;
       width: 1px;
       height: 1px;
@@ -104,7 +104,7 @@ js:
 <pre><code class="html">
 &lt;label for="address"&gt;Address *&lt;/label&gt;
 &lt;input name="address" data-displayname="Code" class="form-control" id="address" aria-required="true" type="text"&gt;
-<strong>&lt;label <span class="important">class="sr-only"</span> for="complement"&gt;Address complement&lt;/label&gt;
+<strong>&lt;label <span class="important">class="visually-hidden"</span> for="complement"&gt;Address complement&lt;/label&gt;
 &lt;input class="form-control" id="complement" type="text"&gt;</strong>
 </code></pre>
 

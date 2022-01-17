@@ -121,21 +121,21 @@ Il est donc **très fortement recommandé** de connaître au moins les gestes de
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#VoiceOver-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#VoiceOver-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#VoiceOver-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -197,21 +197,21 @@ Remarque&nbsp;: l'activation de cette fonctionnalité se fait elle aussi via les
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#SwitchControl-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#SwitchControl-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#SwitchControl-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>

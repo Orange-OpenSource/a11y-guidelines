@@ -97,12 +97,12 @@ js:
   <h4>Utiliser une balise de titre</h4>
   <p>D'après des sondages récurrents réalisés par <a href="https://webaim.org">webaim.org</a> auprès d'utilisateurs de lecteurs d'écran on s'aperçoit que les landmarks ne sont pas encore connus de tous. Par sécurité, on peut ajouter également une balise de titre (<code>h1</code>, <code>h2</code>...) avant le tchat.
   </p>
-  <p>Pour que ce titre ne soit pas visible à l'écran, il suffit d'utiliser une classe de <a href="../masquage-accessible/">masquage accessible</a> (<code>sr-only</code>). Cela permettra également aux utilisateurs d'accéder au chat depuis la liste des titres de la page.
+  <p>Pour que ce titre ne soit pas visible à l'écran, il suffit d'utiliser une classe de <a href="../masquage-accessible/">masquage accessible</a> (<code>visually-hidden</code>). Cela permettra également aux utilisateurs d'accéder au chat depuis la liste des titres de la page.
   </p>
 
   <pre><code class="html">
       &lt;div role="region" aria-labelledby="tchat-title"&gt;
-        &lt;h1 id="tchat-title" class="sr-only"&gt;Fenêtre du tchat&lt;/h1&gt;
+        &lt;h1 id="tchat-title" class="visually-hidden"&gt;Fenêtre du tchat&lt;/h1&gt;
         &lt;!-- code du chatbot --&gt;
       &lt;/div&gt;
   </code></pre>
@@ -171,12 +171,12 @@ js:
   <p>
     Pour un utilisateur qui ne voit pas l'écran, cela peut devenir compliqué puisque l'émetteur du message est inséré visuellement (à juste titre) que lorsqu'il y a un changement d'émetteur dans la conversation.
   </p>
-  <p> Pour lever toute ambiguïté, on va indiquer devant chaque message son émetteur pour les utilisateurs qui naviguent à l'aide d'un lecteur d'écran uniquement (utilisation de la classe de masquage accessible <code>sr-only</code>).
+  <p> Pour lever toute ambiguïté, on va indiquer devant chaque message son émetteur pour les utilisateurs qui naviguent à l'aide d'un lecteur d'écran uniquement (utilisation de la classe de masquage accessible <code>visually-hidden</code>).
   </p>
 
   <pre><code class="html">
       &lt;div class="message"&gt;
-        &lt;span <span class="important">class="sr-only"</span>&gt;
+        &lt;span <span class="important">class="visually-hidden"</span>&gt;
           Djingo dit :
         &lt;/span&gt;
         Test message 1
@@ -185,7 +185,7 @@ js:
       ...
 
       &lt;div class="message"&gt;
-        &lt;span <span class="important">class="sr-only"</span>&gt;
+        &lt;span <span class="important">class="visually-hidden"</span>&gt;
           moi dit :
         &lt;/span&gt;
         Test message 1
@@ -260,10 +260,10 @@ js:
   <p>Ces recommandations ont été appliquées au chat disponible sur cette page. N'hésitez pas à consulter le code. Pour toutes remarques, suggestions n'hésitez pas à consulter ou créer une <span lang="en">issue</span> sur notre <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">compte github</a>.</p>
 
   <div role="region" aria-labelledby="tchat-label">
-    <h1 id="tchat-label" class="sr-only" tabindex="-1">Fenêtre du tchat</h1>
+    <h1 id="tchat-label" class="visually-hidden" tabindex="-1">Fenêtre du tchat</h1>
     <div id="chatbot-window">
       <div id="chatbot">
-        <span id="chatbot-title" role="heading" aria-level="1"> Djingo <span class = "sr-only">Fenêtre de discussion</span></span>
+        <span id="chatbot-title" role="heading" aria-level="1"> Djingo <span class = "visually-hidden">Fenêtre de discussion</span></span>
         <span id="chatbot-toolbar">
           <!--<button class="ico" id="ico-contrast" title="High contras&te mode" aria-label="High contras&te mode" role="checkbox"></button>-->
         <button class="ico" id="chatbot-hide" title="Réduire la fenêtre de discussion" aria-label="Réduire la fenêtre de discussion"></button>

@@ -113,11 +113,11 @@ blockquote p::after {
   top: 1.25rem;
 }
 
-.StickySideNavigation a[aria-current] {
+.StickySideNavigation a.active {
   color: #000 !important;
 }
 
-.StickySideNavigation a[aria-current]::before {
+.StickySideNavigation a.active:before {
   background-color: #ff7900;
   bottom: .625rem;
   content: "";
@@ -134,25 +134,6 @@ blockquote p::after {
 .StickySideNavigation ul ul .nav-link {
   padding-left: .5rem;
 }
-
-/**
- * Back to top link
- */
-
-#back-to-top {
-  bottom: 1.25rem;
-  position: fixed;
-  right: 1.25rem;
-  transition: opacity .25s ease;
-}
-
-#back-to-top:hover,
-#back-to-top:focus {
-  color: inherit;
-  text-decoration: underline;
-}
-
-
 
 /*
  * Glossary
@@ -324,4 +305,24 @@ pre code {
   .MobileDropdownNavigationContainer .dropdown ~ .dropdown {
     margin-top: .625rem;
   }
+}
+
+
+/**
+ * Boosted migration fix
+ */
+.form-control.bg-dark:focus {
+  color:#FFF;
+  border-color:#ff7900!important;
+}
+
+/*secondary navigation*/
+.navbar-light .nav-link.active::before {
+  position: absolute;
+  right: 1.25rem;
+  bottom: -.0625rem;
+  left: 1.25rem;
+  height: .25rem;
+  content: "";
+  background-color: #ff7900;
 }

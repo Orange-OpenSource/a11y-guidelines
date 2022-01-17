@@ -121,11 +121,11 @@ button {
   <p><a target="_blank" title="Open example 5" href="examples/5/"><img src="examples/exemple5.png" alt="Open example 5 (new window)"></a></p>
 </div>
 
-<p>It’s better. Visually, we can see two things in each tag, the label and a remove button. Yet with a screen reader we only hear for the moment “Remove XXX from the list.” To correct this, we add a <code>span</code> containing the tag’s label. To prevent it from being displayed on screen (this would double the information), we add to it an accessible hiding class (<code>sr-only</code>). The text will only be read by screen readers.</p>
+<p>It’s better. Visually, we can see two things in each tag, the label and a remove button. Yet with a screen reader we only hear for the moment “Remove XXX from the list.” To correct this, we add a <code>span</code> containing the tag’s label. To prevent it from being displayed on screen (this would double the information), we add to it an accessible hiding class (<code>visually-hidden</code>). The text will only be read by screen readers.</p>
 
 <pre><code class="html">
   &lt;ul&gt;
-    &lt;li&gt;&lt;span class="sr-only"&gt;Alcatel&lt;/span&gt;&lt;button aria-label="Remove Alcatel from the list"&gt;Alcatel&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="visually-hidden"&gt;Alcatel&lt;/span&gt;&lt;button aria-label="Remove Alcatel from the list"&gt;Alcatel&lt;/button&gt;&lt;/li&gt;
   &lt;/ul&gt;
 </code></pre>
 <p>With a screen reader, we now hear each tag’s label, then a button to remove it.</p>

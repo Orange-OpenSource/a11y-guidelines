@@ -79,7 +79,7 @@ from
 <h2> Solution to correct vocalization </h2>
 
 <p>To fix these problems the easiest way is to ignore the price displayed on the screen and add accessible hiding text containing the price to be vocalized.</p>
-<p> To hide an element from speech synthesis, just use the <code>aria-hidden</code> attribute. To add text in accessible hiding (text that is vocalized but not displayed), you only need to use an accessible CSS class (for example, the class <code>sr-only</code> if you use the framework <a href="http://boosted.orange.com">boosted</a>).</p>
+<p> To hide an element from speech synthesis, just use the <code>aria-hidden</code> attribute. To add text in accessible hiding (text that is vocalized but not displayed), you only need to use an accessible CSS class (for example, the class <code>visually-hidden</code> if you use the framework <a href="http://boosted.orange.com">boosted</a>).</p>
 
 <p class="example" aria-hidden="true">
 From
@@ -87,7 +87,7 @@ From
     120<sup>,90€</sup><sub>/month</sub>
 </span></p>
 <p>
-<span class="sr-only">starting from 120.90 € per month</span> </p>
+<span class="visually-hidden">starting from 120.90 € per month</span> </p>
 <p> Vocalized element "from 120 euros 90 per month" </p>
 <pre><code class="html">
 &lt;p class="example" aria-hidden="true"&gt;
@@ -96,7 +96,7 @@ From
     120&lt;sup&gt;.90€&lt;/sup&gt;&lt;sub&gt;/mois&lt;/sub&gt;
 &lt;/span&gt;
 &lt;p&gt;
-&lt;span class="sr-only"&gt;from 120.90€ per month&lt;/span&gt;
+&lt;span class="visually-hidden"&gt;from 120.90€ per month&lt;/span&gt;
 </code></pre>
 
 <div class="example2">
@@ -106,7 +106,7 @@ From
         <s>129,90€</s><br>
         *see conditions
     </p>
-    <span class="sr-only">From 1 € instead of 129.90 € see conditions</span>
+    <span class="visually-hidden">From 1 € instead of 129.90 € see conditions</span>
 </div>
 
 <p>Élément vocalisé :</p>
@@ -123,7 +123,7 @@ From
     &lt;s&gt;129,90€&lt;/s&gt;&lt;br&gt;
     *see conditions
 &lt;/p&gt;
-&lt;span class="sr-only"&gt;From 1 € instead of 129.90 € see conditions&lt;/span&gt;
+&lt;span class="visually-hidden"&gt;From 1 € instead of 129.90 € see conditions&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
 

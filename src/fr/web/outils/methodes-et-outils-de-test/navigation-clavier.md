@@ -15,7 +15,7 @@ Pour tester si votre service est accessible à l’aide du clavier, vous pouvez 
 
 ![présentation des raccourcis clavier](/fr/web/images/clavier.png)
 <table class="table">
-<caption class="sr-only">Liste des raccourcis clavier principaux</caption>
+<caption class="visually-hidden">Liste des raccourcis clavier principaux</caption>
    <thead>
       <tr>
          <th>Interactions</th>
