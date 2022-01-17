@@ -1,83 +1,103 @@
-$(document).ready(function() {
-	$(function () {
+document.addEventListener("DOMContentLoaded", function(event) {
+
+	(function () {
 	
         // Init
-        $("[type=checkbox]").prop("checked", false);
+        document.querySelectorAll("input[type=checkbox]").forEach(checkbox =>{
+            checkbox.checked=false;
+        })
         
-        // On focus
-        $("[role=listbox]").on("focus", function () {
+        
+        document.getElementById("exempleCheckbox").addEventListener("focus", function () {
            // If no selected element, select the first by default
-           if (!$(this).find("[aria-selected=true]").length) {               
-                $(this).find("[role=option]:first").attr("aria-selected", "true").focus().addClass("active");
+           if (this.querySelector("[aria-selected=true]") === null) {    
+               let elementfirstchild = this.querySelector("[role=option]");
+               elementfirstchild.setAttribute("aria-selected", "true");
+               elementfirstchild.focus();
+               elementfirstchild.classList.add("active");
            } else {
-               $(this).find("[aria-selected=true]").focus().addClass("active");
+            let ariaSelectedElement = this.querySelector("[aria-selected=true]");
+            ariaSelectedElement.classList.add("active");
+            ariaSelectedElement.focus();
            }
         });
-        
+
         // On keydown
-        $("[role=listbox]").on("keydown", function (e) {            
-            var currentItem = $(this).find("[aria-selected=true]");          
-            switch (e.keyCode) {
-                case 38:  // Up arrow
-                    if (currentItem.prev().length) {
-                        currentItem.attr("aria-selected", "false");                    
-                        currentItem.prev().attr("aria-selected", "true").focus().addClass("active");
-                    }                    
+
+        document.getElementById("exempleCheckbox").addEventListener("keydown", function (e) {
+            let currentItem = this.querySelector("[aria-selected=true]");
+            switch(e.keyCode){
+                case 38: // up arrow
+                    if(currentItem.previousElementSibling !== null){
+                        currentItem.setAttribute("aria-selected","false");
+                        currentItem.previousElementSibling.setAttribute("aria-selected", "true");
+                        currentItem.previousElementSibling.focus();
+                        currentItem.previousElementSibling.classList.add('active');
+                    }
                     e.preventDefault();
                     break;
                 case 40: // Down arrow
-                    if (currentItem.next().length) {
-                        currentItem.attr("aria-selected", "false");
-                        currentItem.next().attr("aria-selected", "true").focus().addClass("active");
+                    if(currentItem.nextElementSibling !== null){
+                        currentItem.setAttribute("aria-selected","false");
+                        currentItem.nextElementSibling.setAttribute("aria-selected","true");
+                        currentItem.nextElementSibling.focus();
+                        currentItem.nextElementSibling.classList.add('active');
                     }
                     e.preventDefault();
                     break;
-                case 32: // Space                                                                                                              
-                    if (currentItem.attr("aria-checked") === "true") {
-                        currentItem.attr("aria-checked", "false");
-                        currentItem.find("input[type=checkbox]").prop("checked", false);
+                case 32: // Space                                                                                                             
+                    if (currentItem.getAttribute("aria-checked") === "true") {
+                        currentItem.setAttribute("aria-checked", "false");
+                        currentItem.querySelector("input[type=checkbox]").checked = false;
                     } else {                      
-                        currentItem.attr("aria-checked", "true");
-                        currentItem.find("input[type=checkbox]").prop("checked", true);
+                        currentItem.setAttribute("aria-checked", "true");
+                        currentItem.firstElementChild.setAttribute("aria-checked", "true");
+                        currentItem.querySelector("input[type=checkbox]").checked = true;;
                     }
                     e.preventDefault();
-                break;                                      
+                    break;
             }
+
         });
         
        // On click
-       $("[role=option]").on("mousedown", function (e) {                    
-           $(this).parent().find("[aria-selected=true]").attr("aria-selected", "false");
-           $(this).attr("aria-selected", "true").focus();
-           e.preventDefault();
-       });
-       
-       $("label").on("mousedown", function (e) {           
-           e.stopPropagation();
-       });
+       document.querySelectorAll("[role=option]").forEach(option =>{
+            option.addEventListener("mousedown",function(e){
+                this.parentElement.querySelector("[aria-selected=true]").setAttribute("aria-selected", "false")
+                this.setAttribute("aria-selected", "true");
+                this.focus();
+                e.preventDefault();
+            })
+
+            option.addEventListener("focus",function(e){
+            
+                this.parentElement.setAttribute("tabindex", "-1")
+            })
+
+            option.addEventListener("blur",function(e){
+                this.classList.remove("active");
+                this.parentElement.setAttribute("tabindex", "0")
+            })
+        })
+
+        document.querySelectorAll("label").forEach(label =>{
+            label.addEventListener("mousedown",function(e){
+                e.stopPropagation();
+            })
+        })
        
        // checkbox click
-       $("[type=checkbox]").on("click", function (e) {                                 
-           if ($(this).prop("checked")) {
-               $(this).parent().attr("aria-checked", "true");
-           } else {
-               $(this).parent().attr("aria-checked", "false");
-           }
-           e.stopPropagation();
-       });
-       
-       $("[type=checkbox]").on("focus", function (e) {                         
-            $(this).parent().parent().find("[aria-selected=true]").focus();
-       });
-
-       // On focus option
-       $("[role=option]").on("focus", function (e) {
-           $(this).parent().attr("tabindex", "-1");
-       });
-       
-       $("[role=option]").on("blur", function (e) {
-           $(this).removeClass("active");
-           $(this).parent().attr("tabindex", "0");
-       });
-	})
+       document.querySelectorAll("[type=checkbox]").forEach(checkbox =>{
+        checkbox.addEventListener("click",function(e){
+                if(this.checked){
+                    this.parentElement.parentElement.setAttribute("aria-checked", "true");
+                }
+                else{
+                    this.parentElement.parentElement.setAttribute("aria-checked", "false");
+                }
+                e.stopPropagation();
+            })
+        })
+      
+	})();
 });

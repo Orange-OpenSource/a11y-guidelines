@@ -1,27 +1,35 @@
-$(document).ready(function() {
-	$(function () {
-        $("#mode-mosaique" ).prop( "checked", true );
-        
-         $('input[type=radio][name=mode]').change(function() {             
-            if (this.value === "liste") {
-                $("body").addClass("display-list");
-            } else {
-                $("body").removeClass("display-list");
+document.addEventListener("DOMContentLoaded", function(event) {
+
+    (function () {
+        document.getElementById("mode-mosaique").checked=true;
+
+        document.getElementsByName("mode").forEach(element=>{
+           element.onchange = function(e){
+               if( e.target.value === "liste"){
+                    document.body.classList.add("display-list");
+               }
+               else{
+                document.body.classList.remove("display-list");
+               }
             }
-         });
+        });
                   
 	    var list = document.querySelector(".list");
+        var easefile = document.querySelectorAll("ease-file");
         list.addEventListener("focus", function () {
            activeElement = list.querySelector(".active") || list.querySelector("ease-file");
-           $(activeElement).addClass("active").attr("tabindex", "0").focus();
-           $(".list").attr("tabindex", "-1");            
+           activeElement.classList.add("active");
+           activeElement.setAttribute("tabindex","0");
+           activeElement.focus();
+           this.setAttribute("tabindex","-1");       
         });
                 
         Array.prototype.forEach.call(document.querySelectorAll('.list'), function(element) {                
             element.addEventListener('keydown', function (e) {
-                var newIndex = currentIndex = $("ease-file").index($(".list .active"))+1;                          
-                var lastIndex = $("ease-file").length;
-                var maxElementsByRow = Math.floor($(".list")[0].offsetWidth / $("ease-file").first()[0].offsetWidth);
+                
+                var newIndex = currentIndex = (getIndex(easefile) + 1) ;                              
+                var lastIndex = easefile.length;
+                var maxElementsByRow = Math.floor(list.offsetWidth /easefile[0].offsetWidth);
                                                 
                 switch(e.keyCode) {
                     case 16:
@@ -41,19 +49,20 @@ $(document).ready(function() {
                         break;                    
                     case 32: //space
                         if (!e.ctrlKey) {
-                            $(this).find("ease-file").attr("aria-selected", "false");
+                            setAttributeEase(easefile,false);
                         }
-                        if ($(this).find("ease-file.active").attr("aria-selected") === "false") {
-                            $(this).find("ease-file.active").attr("aria-selected", "true");
+                        if (e.target.getAttribute("aria-selected") === "false") {
+                            e.target.setAttribute("aria-selected","true")
                         } else {
-                            $(this).find("ease-file.active").attr("aria-selected", "false");
-                        }                                            
+                            e.target.setAttribute("aria-selected","false")
+                        }        
+                        e.preventDefault();                                  
                         break;
                     case 13: //enter
                         alert("Ouverture du fichier...");
                     case 65: // A
                         if (e.ctrlKey) {
-                            $(".list ease-file").attr("aria-selected", "true");
+                            setAttributeEase(easefile,true);
                             e.preventDefault();
                         }
                 }
@@ -68,51 +77,81 @@ $(document).ready(function() {
                 if (newIndex != currentIndex) {                            
                     if (e.shiftKey) {                                                
                     for (var i=currentIndex; i!=newIndex; i=i+((currentIndex < newIndex)?1:-1)) {                       
-                        $(this).find("ease-file:nth-child(" + i + ")").attr("aria-selected", "true");                                           
+                        easefile[i-1].setAttribute("aria-selected","true")                        
                     }                   
-                    $(this).find("ease-file.active").removeClass("active").attr("tabindex","-1");
-                    $(this).find("ease-file:nth-child(" + newIndex + ")").addClass("active").attr("tabindex","0");
-                    $(this).find("ease-file:nth-child(" + newIndex + ")").attr("aria-selected", "true");
+                    element.setAttribute("aria-selected","true")
+                    easefile[currentIndex-1].classList.remove("active");
+                    easefile[currentIndex-1].setAttribute("tabindex","-1");
+                    easefile[newIndex-1].classList.add("active");
+                    easefile[newIndex-1].setAttribute("tabindex","0");
+                    easefile[newIndex-1].setAttribute("aria-selected", "true");
+                    e.preventDefault();
                     } else if (e.ctrlKey) {
-                        $(this).find("ease-file.active").removeClass("active").attr("tabindex","-1");
-                        $(this).find("ease-file:nth-child(" + newIndex + ")").addClass("active").attr("tabindex","0");                                 
+                        easefile[currentIndex-1].classList.remove("active");
+                        easefile[currentIndex-1].setAttribute("tabindex","-1");
+                        easefile[newIndex-1].classList.add("active");
+                        easefile[newIndex-1].setAttribute("tabindex","0");                                
                     } else {                    
-                        $(this).find("ease-file.active").removeClass("active").attr("tabindex","-1");
-                        $(this).find("ease-file:nth-child(" + newIndex + ")").addClass("active").attr("tabindex","0");                    
+                        easefile[currentIndex-1].classList.remove("active");
+                        easefile[currentIndex-1].setAttribute("tabindex","-1");
+                        easefile[newIndex-1].classList.add("active");
+                        easefile[newIndex-1].setAttribute("tabindex","0");                    
                     } 
                                     
                 }  
-                $("ease-file.active").focus();                          
+                easefile[newIndex-1].focus();                         
             });
         });
         
-        $("ease-file").on("dblclick", function (e) {
-            alert("Ouverture du fichier...");
-        });
-        
-        $("ease-file").on("click", function (e) {
-            var newIndex = currentIndex = $("ease-file").index($(".list .active"))+1;
-            $("ease-file").removeClass("active").attr("tabindex","-1");
-            $(this).addClass("active").attr("tabindex","0");
-            newIndex = $("ease-file").index($(".list .active"))+1;
-            
-            if (e.ctrlKey) {
-                if ($(this).attr("aria-selected") === "true") {
-                    $(this).attr("aria-selected", "false");
-                } else {
-                    $(this).attr("aria-selected", "true");
-                }  
-            } else if (e.shiftKey) {
-                for (var i=currentIndex; i!=newIndex; i=i+((currentIndex < newIndex)?1:-1)) {                       
-                    $(".list").find("ease-file:nth-child(" + i + ")").attr("aria-selected", "true");                                           
-                }                
-                $(this).attr("aria-selected", "true");
-            } else {                
-                $("ease-file").attr("aria-selected", "false");                
+        easefile.forEach(element=>{
+            element.ondblclick = function (e){
+                alert("Ouverture du fichier...");
             }
-            
-            $("ease-file.active").focus();
+
+            element.onclick = function (e){
+                var newIndex = currentIndex = (getIndex(easefile) );
+                easefile[currentIndex].classList.remove("active")
+                easefile[currentIndex].setAttribute("tabindex","-1")
+                element.classList.add("active")
+                element.setAttribute("tabindex","0")
+                newIndex = (getIndex(easefile));
+                
+                if (e.ctrlKey) {
+                    if (element.getAttribute("aria-selected") === "false") {
+                        element.setAttribute("aria-selected","true")
+                    } else {
+                        element.setAttribute("aria-selected","false")
+                    }  
+                } else if (e.shiftKey) {
+                    for (var i=currentIndex; i!=newIndex; i=i+((currentIndex < newIndex)?1:-1)) {        
+                        easefile[i].setAttribute("aria-selected", "true");                                          
+                    }                
+                    element.setAttribute("aria-selected","true");
+                } else {                
+                    setAttributeEase(easefile,false);                
+                }
+                
+                easefile[newIndex].focus();
+            }
         })
-    });
+
+
+        function getIndex(list) {    
+            var found = 0;
+            list.forEach(function (element,index) {
+                if(element.classList.contains("active")){
+                    found = index;
+                    return;
+                }
+            });
+            return found;
+        }
+
+        function setAttributeEase(list , value){
+            list.forEach( element =>{
+                element.setAttribute("aria-selected",value)
+            })
+        }
+    })();
 });
 

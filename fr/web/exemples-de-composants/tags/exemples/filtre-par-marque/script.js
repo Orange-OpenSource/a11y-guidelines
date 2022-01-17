@@ -1,31 +1,44 @@
-$(document).ready(function() {
-  $(function () {
-    $("#brand-list").on("click", function () {
-      var text = $("#brand-list :selected").text()
-      $("#brand-list :selected").remove();
-      addItem(text);
-    });
+document.addEventListener("DOMContentLoaded", function(event) {
 
-    $("#brand-list").on("keydown", function (e) {
-      switch (e.keyCode) {
-        case 13: //enter
-          if ($("#brand-list :selected").length > 1) {
-            addItems($("#brand-list :selected"));
-          } else {
-            addItem($("#brand-list :selected").detach().text());
+  (function () {
+
+    const listbox = document.getElementById("brand-list");
+
+    listbox.onclick = function(e){
+      let text = listbox.value;
+      listbox.remove(listbox.selectedIndex)
+      addItem(text);
+    }
+
+    listbox.onkeydown = function (e){
+      switch(e.keyCode){
+        case 13 : //enter
+          if(listbox.selectedOptions.length>1){
+            addItems(listbox.selectedOptions);
+          }else{
+            addItem(listbox.value)
+            listbox.remove(listbox.selectedIndex)
           }
+          e.preventDefault();
           break;
       }
-    });
+    }
 
-    $("#selection-list").on("click", "button", function () {
-      removeItem($(this));
-    });
+    document.getElementById('selection-list').onclick = function (e){
+      if(e.target.nodeName == "BUTTON"){
+        removeItem(e.target);
+      }
+    }
 
-    $("#addBrands").on("click", function (e) {
-      addItems($("#brand-list :selected"));
-    });
-  })
+    document.getElementById("addBrands").onclick = function (e){
+      if(listbox.selectedOptions.length>1){
+            addItems(listbox.selectedOptions);
+          }else{
+            addItem(listbox.value)
+            listbox.remove(listbox.selectedIndex)
+          }
+    }
+  })();
 });
 
 function addItem(item, noSpeak) {
@@ -33,27 +46,38 @@ function addItem(item, noSpeak) {
     return;
   }
 
-  var link = $("<button>").attr("aria-label", "retirer " + item + " de la liste.").text(item);
-  $("<li>").html('<span class="sr-only">' + item + '</span>').append(link).appendTo("#selection-list");
+  let button = document.createElement("button");
+  button.setAttribute("aria-label","retirer "+item+" de liste.");
+  button.innerText = item;
+
+  let li = document.createElement("li");
+  li.innerHTML = '<span class="sr-only">' + item + '</span>';
+  li.appendChild(button);
+
+  document.getElementById("selection-list").appendChild(li)
   if (!noSpeak) {
-    speak(item + " ajouté à la sélection, " + $("#selection-list li").length + " élément sélectionné");
+    speak(item + " ajouté à la sélection, " + document.getElementById("selection-list").children.length + " élément sélectionné");
   }
 }
 
 function addItems(items) {
-  var itemText, itemsText="";
-  items.each(function (i, item) {
-    itemText = $(item).detach().text();
-    addItem(itemText, true);
-    itemsText += itemText;
-  });
-  speak(itemsText + " ajouté à la sélection, " + $("#selection-list li").length + " élément sélectionné");
+  var itemsText="";
+
+  let listOption = Array.from(items)
+
+  for (let item of listOption) {
+    addItem(item.text)
+    itemsText += item.text+" ";
+    item.parentElement.remove(item.index)
+  }
 }
 
 function removeItem(item) {
-  $("<option>").text(item.text()).appendTo("#brand-list");
-  item.parent().remove();
-  speak(item.text() + " supprimé de la sélection, " + $("#selection-list li").length + " élément sélectionné.");
+  let opt = document.createElement("option");
+  opt.text=item.textContent;
+  document.getElementById("brand-list").add(opt,null);
+  item.parentElement.remove();
+  speak(item.textContent + " supprimé de la sélection, " + document.getElementById("selection-list").children.length + " élément sélectionné.");
 }
 
 function speak(text, priority) {
