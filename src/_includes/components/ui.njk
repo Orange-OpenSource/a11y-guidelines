@@ -67,7 +67,7 @@
 {%- for post in posts %}{% if page.url != post.url -%}
   {% set tags = post.data.tags %}
 
-  <li class="border-bottom border-500 py-3"{% if tags %} data-tags="{{ tags | join(";") }}"{% endif %}>
+  <li class="border-bottom border-light py-3"{% if tags %} data-tags="{{ tags | join(";") }}"{% endif %}>
     <article>
       <h2 class="mb-1">
         <a href="{{ post.url }}" class="text-decoration-none">{{ post.data.title }}</a>
