@@ -1,52 +1,65 @@
-$(document).ready(function() {
-  $("#to").on("blur", function () {
-    addItem($(this).val());
-    $(this).val("");
-  });
+document.addEventListener("DOMContentLoaded", function(event) {
 
-  $("#to").on("keypress", function (e) {
+  const inputTo = document.getElementById("to");
 
-    if (e.which === 44) {       // virgule
-      addItem($(this).val());
-      $(this).val("");
-      e.preventDefault();
-    } else if (e.which === 8) {  // backspace
-      if ($("#to").val() === "") {
-        removeItem($("#selection-list li:last").remove());
+  inputTo.onblur = function (e){
+    addItem(this.value);
+    this.value="";
+    this.parentElement.classList.remove('focus');
+  }
+
+  inputTo.onkeydown = function (e){
+    switch (e.keyCode){
+      case 188 : //virgule
+        addItem(this.value);
+        this.value="";
+        e.preventDefault();
+        break;
+      case 8 : // backspace
+        console.log(document.getElementById("selection-list"));
+      if(this.value === ""){
+        removeItem(document.getElementById("selection-list").lastElementChild);
       }
-    } else if (e.which === 13) {
-      e.preventDefault();
+        e.preventDefault();
+        break;
+      case 13 : //enter
+        e.preventDefault();
+        break;
     }
-  });
+  }
+  
+  inputTo.onfocus = function(e){
+    this.parentElement.classList.add("focus");
+  }
 
-  $("#to").on("focus", function (e) {
-    $(this).parent().addClass("focus");
-  });
-
-  $("#to").on("blur", function (e) {
-    $(this).parent().removeClass("focus");
-  });
-
-  $("#selection-list").on("click", "button", function () {
-    removeItem($(this).parent());
-    $("#to").focus();
-  });
+  document.getElementById("selection-list").onclick = function (e){
+    if(e.target.nodeName == "BUTTON"){
+      removeItem(e.target.parentElement);
+    }
+    inputTo.focus();
+  }
 
 });
 
 function removeItem(item) {
   item.remove();
-  speak(item.find("button").text() + " supprimé des destinataires, " + $("#selection-list li").length + " destinataires sélectionnés");
+  speak(item.querySelector("button").textContent + " supprimé des destinataires, " + document.getElementById("selection-list").children.length + " destinataires sélectionnés");
 }
 
 function addItem(text) {
   if (!text) {
     return;
   }
+  let button = document.createElement("button");
+  button.setAttribute("aria-label","retirer "+text+" de liste.");
+  button.innerText = text;
 
-  var link = $("<button>").attr("aria-label", "retirer " + text + " de la liste.").text(text);
-  $("<li>").html('<span class="sr-only">' + text + '</span>').append(link).appendTo("#selection-list");
-  speak(text + " ajouté aux destinataires, " + $("#selection-list li").length + " destinataires ajoutés");
+  let li = document.createElement("li");
+  li.innerHTML = '<span class="sr-only">' + text + '</span>';
+  li.appendChild(button);
+
+  document.getElementById("selection-list").appendChild(li)
+  speak(text + " ajouté aux destinataires, " + document.getElementById("selection-list").children.length + " élément sélectionné");
 }
 
 function speak(text, priority) {

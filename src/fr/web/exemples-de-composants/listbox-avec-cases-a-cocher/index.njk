@@ -5,6 +5,8 @@ eleventyExcludeFromCollections: true
 tags: componentsExamples_fr
 js:
   - script.js
+css:
+  - script.css
 ---
 
 <h1>Les listes <abbr>ARIA</abbr> (<i lang="en">listbox</i>) avec cases à cocher</h1>
@@ -60,44 +62,53 @@ Dans ce cas, il faut ajouter également une balise <code>label</code>.</p>
 <p>Pour gérer l’interaction à la souris, il suffit de modifier la valeur de l’attribut <code>aria-checked</code> lorsqu’une case à cocher est cliquée.</p>
 
 <pre><code class="js">
- $("[type=checkbox]").on("click", function () {
-     if ($(this).prop("checked")) {
-         $(this).parent().attr("aria-checked", "true");
-     } else {
-         $(this).parent().attr("aria-checked", "false");
-     }
- });
+document.querySelectorAll("[type=checkbox]").forEach(checkbox =>{
+  checkbox.addEventListener("click",function(e){
+      if(this.checked){
+          this.parentElement.parentElement.setAttribute("aria-checked", "true");
+      }
+      else{
+          this.parentElement.parentElement.setAttribute("aria-checked", "false");
+      }
+      e.stopPropagation();
+  })
+})
  </code></pre>
 
 <p>Il ne reste plus qu’à gérer l’interaction au clavier. Un élément doit pouvoir être coché ou décoché à l’aide de la barre espace. On insère ce comportement à la suite du code qui gère déjà les flèches du clavier (cf. <a href="../listbox/">exemple sur les <i lang="en">listbox</i></a>).</p>
 <pre><code class="js">
-  $("[role=listbox]").on("keydown", function (e) {
-  var currentItem = $(this).find("[aria-selected=true]");
-  switch (e.keyCode) {
-      case 38:  // Up arrow
-          if (currentItem.prev().length) {
-              currentItem.attr("aria-selected", "false");
-              currentItem.prev().attr("aria-selected", "true").focus();
-          }
-          e.preventDefault();
-          break;
-      case 40: // Down arrow
-          if (currentItem.next().length) {
-              currentItem.attr("aria-selected", "false");
-              currentItem.next().attr("aria-selected", "true").focus();
-          }
-          e.preventDefault();
-          break;
-<div class="important">            case 32: // Space 
-          if (currentItem.attr("aria-checked") === "true") {
-              currentItem.attr("aria-checked", "false");
-              currentItem.find("input[type=checkbox]").prop("checked", false);
-          } else {
-              currentItem.attr("aria-checked", "true");
-              currentItem.find("input[type=checkbox]").prop("checked", true);
-          }
-          e.preventDefault();
-      break;</div>
+  document.getElementById("exempleCheckbox").addEventListener("keydown", function (e) {
+    let currentItem = this.querySelector("[aria-selected=true]");
+    switch(e.keyCode){
+        case 38: // Up arrow
+            if(currentItem.previousElementSibling !== null){
+                currentItem.setAttribute("aria-selected","false");
+                currentItem.previousElementSibling.setAttribute("aria-selected", "true");
+                currentItem.previousElementSibling.focus();
+                currentItem.previousElementSibling.classList.add('active');
+            }
+            e.preventDefault();
+            break;
+        case 40: // Down arrow
+            if(currentItem.nextElementSibling !== null){
+                currentItem.setAttribute("aria-selected","false");
+                currentItem.nextElementSibling.setAttribute("aria-selected","true");
+                currentItem.nextElementSibling.focus();
+                currentItem.nextElementSibling.classList.add('active');
+            }
+            e.preventDefault();
+            break;
+<div class="important">            case 32: // Space                                                                                                           
+            if (currentItem.getAttribute("aria-checked") === "true") {
+                currentItem.setAttribute("aria-checked", "false");
+                currentItem.querySelector("input[type=checkbox]").checked = false;
+            } else {                      
+                currentItem.setAttribute("aria-checked", "true");
+                currentItem.firstElementChild.setAttribute("aria-checked", "true");
+                currentItem.querySelector("input[type=checkbox]").checked = true;;
+            }
+            e.preventDefault();
+            break;</div>
   }
 });
 </code></pre>
@@ -107,8 +118,8 @@ Dans ce cas, il faut ajouter également une balise <code>label</code>.</p>
 <h3 id="email-list">Liste des emails</h3>
 
 <div class="row">
-  <ul role="listbox" tabindex="0" class="col-md-8 list-group" aria-labelledby="email-list">
-      <li class="list-group-item" tabindex="-1" role="option" aria-checked="false">
+  <ul id="exempleCheckbox" role="listbox" tabindex="0" class="col-md-8 list-group" aria-describedby="email-list">
+      <li class="list-group-item" tabindex="-1" role="option" aria-checked="false" aria-selected="true">
         <div class="custom-control custom-checkbox mb-0">
           <input tabindex="-1" id="check1" class="custom-control-input" type="checkbox">
           <label for="check1" class="custom-control-label"></label>Informations importantes concernant votre compte

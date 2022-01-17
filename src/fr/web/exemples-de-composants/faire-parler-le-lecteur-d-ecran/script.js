@@ -1,8 +1,9 @@
-$(document).ready(function() {
-    $("#btnSpeak").on("click", function () {
-        srSpeak($("#message").val());
-        $("#message").val("");
-    });
+document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementById('btnSpeak').addEventListener('click',function(){
+        let message = document.getElementById('message');
+        srSpeak(message.value);
+        message.value="";
+    })
 });
 
 function srSpeak(text, priority) {
