@@ -36,4 +36,4 @@ La hauteur des éléments contenant le texte a été renseignée avec une unité
 ![capture d’une page avec zoom à 100%](../../../images/zoom-ok.png)
 
 
-Plus d’information dans la rubrique **exemples**&nbsp;: [gestion de l’agrandissement de la taille du texte à 200%](../..//exemples-de-composants/zoom/).  
+Plus d’information dans la rubrique **exemples**&nbsp;: [gestion de l’agrandissement de la taille du texte à 200%](../../../exemples-de-composants/zoom/).  
