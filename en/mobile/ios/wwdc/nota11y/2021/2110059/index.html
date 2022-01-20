@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>What&#39;s new in UIKit - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Latest updates and improvements to UIKit.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-toggle="collapse" data-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Search">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="sr-only">Search</span>
+    </button>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-500" aria-label="Search" placeholder="Search">
+  </form>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          What&#39;s new in UIKit
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#productivity" class="dropdown-item text-wrap">Productivity</a><a href="#ui-refinements" class="dropdown-item text-wrap">UI refinements</a><a href="#api-enhancements" class="dropdown-item text-wrap">API enhancements</a><a href="#performance" class="dropdown-item text-wrap">Performance</a><a href="#security-and-privacy" class="dropdown-item text-wrap">Security and privacy</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2021: What's new in UIKit</h1>
+<p>Find hereafter a detailed summary of the above named video which belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2021/10059/">session 10059</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10059.png" alt="" class="img-fluid"></p>
+<p>&quot;Discover the <strong>latest updates and improvements to UIKit</strong> and learn how to build better iPadOS, iOS, and Mac Catalyst apps. We'll take you through UI refinements, productivity updates, and API enhancements, and help you explore performance improvements and security &amp; privacy features.&quot;<br>
+</br></br>Various contents of this video are indicated hereunder:</p>
+<ul>
+<li>
+<p><a href="#productivity">Productivity</a></p>
+</li>
+<li>
+<p><a href="#ui-refinements">UI refinements</a></p>
+</li>
+<li>
+<p><a href="#api-enhancements">API enhancements</a></p>
+<ul>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#APIEnhancementsButtons_tab').trigger('click');document.getElementById('api-enhancements').scrollIntoView({ behavior: 'smooth', block: 'start' })">Buttons</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#APIEnhancementsSFSymbols_tab').trigger('click');document.getElementById('api-enhancements').scrollIntoView({ behavior: 'smooth', block: 'start' })">SF Symbols</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#APIEnhancementsColors_tab').trigger('click');document.getElementById('api-enhancements').scrollIntoView({ behavior: 'smooth', block: 'start' })">Colors</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#APIEnhancementsScrollView_tab').trigger('click');document.getElementById('api-enhancements').scrollIntoView({ behavior: 'smooth', block: 'start' })">ScrollView</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#APIEnhancementsMiscellaneous_tab').trigger('click');document.getElementById('api-enhancements').scrollIntoView({ behavior: 'smooth', block: 'start' })">Miscellaneous</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#performance">Performance</a></p>
+</li>
+<li>
+<p><a href="#security-and-privacy">Security and privacy</a></p>
+</li>
+</ul>
+<p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="productivity"><a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=39">Productivity</a> <a class="header-anchor" href="#productivity" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>iPad multitasking new features are highlighted with code snippets in <a href="https://developer.apple.com/videos/play/wwdc2021/10059?time=53">demos</a> dealing with:</p>
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2021/10059?time=59">The Mail App</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10059-Productivity_1.png" alt="" class="img-fluid"></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2021/10059?time=126">The pointer selection</a>.</li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2021/10059?time=164">The keyboard shortcuts</a><br>
+<img src="../../../../../images/iOSdev/wwdc21-10059-Productivity_2.png" alt="" class="img-fluid">.</li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2021/10059?time=224">The keyboard focus and navigation</a>.</li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2021/10059?time=280">The Drag and Drop feature</a> between applications also available for iPhone since iOS 15.<br>
+</br></br></li>
+</ul>
+<h2 id="ui-refinements"><a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=335">UI refinements</a> <a class="header-anchor" href="#ui-refinements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>In addition to using more efficiently the SF Symbols, solutions are provided for the <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=341">appearance of UITabBar and UIToolBar</a> that may encounter problems with the absence of background material when scrolled to bottom.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10059-UIRefinements_1.png" alt="" class="img-fluid"><br>
+<img src="../../../../../images/iOSdev/wwdc21-10059-UIRefinements_2.png" alt="" class="img-fluid"></p>
+<p>iOS 15 brought a <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=438">new appearance for headers</a>...</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10059-UIRefinements_3.png" alt="" class="img-fluid"></p>
+<p>... that may be combined with a <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=535">full control over separators</a> and the brand new ability to cover half the screen for sheets (<strong><a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=556">medium high detent</a></strong> functionality).<br>
+<img src="../../../../../images/iOSdev/wwdc21-10059-UIRefinements_4.png" alt="" class="img-fluid"></p>
+<p>Not to mention the return of the scrolling wheels for the <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=583">UIDatePicker</a>.<br>
+</br></br></p>
+<h2 id="api-enhancements"><a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=611">API enhancements</a> <a class="header-anchor" href="#api-enhancements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#APIEnhancementsButtons"
+           id="APIEnhancementsButtons_tab"
+           role="tab" 
+           aria-selected="true">Buttons</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#APIEnhancementsSFSymbols"
+           id="APIEnhancementsSFSymbols_tab"
+           role="tab" 
+           aria-selected="false">SF Symbols</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#APIEnhancementsColors"
+           id="APIEnhancementsColors_tab"
+           role="tab" 
+           aria-selected="false">Colors</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#APIEnhancementsScrollView"
+           id="APIEnhancementsScrollView_tab"
+           role="tab" 
+           aria-selected="false">ScrollView</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-toggle="tab" 
+           href="#APIEnhancementsMiscellaneous"
+           id="APIEnhancementsMiscellaneous_tab"
+           role="tab" 
+           aria-selected="false">Miscellaneous</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="APIEnhancementsButtons" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=617">🎬 (10:17)</a><br>
+</br>To make the buttons more efficient and more customizable, iOS 15 brought many important improvements based on the new <strong>UIButton.Configuration</strong> API:</p>
+<ul>
+<li>New background styles.</li>
+<li>Better resizing with the Dynamic Type feature.</li>
+<li>Multi-line text support.</li>
+</ul>
+<p><img src="../../../../../images/iOSdev/wwdc21-10059-APIButtons_1.png" alt="" class="img-fluid"></p>
+<p>While iOS 14 supported setting menu to UIButton, iOS 15 enables the <code>UIButton.Configuration</code> to display the <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=663">popUp and pullDown</a> menus for the buttons.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10059-APIButtons_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="APIEnhancementsSFSymbols" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=758">🎬 (12:38)</a><br>
+</br>New ways to use colors with the <code>SF Symbols</code> are available with the iOS 15 release.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10059-APISFSymbols_1.png" alt="" class="img-fluid"><br>
+</br>The implementation of these new modes come in handy...</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10059-APISFSymbols_2.png" alt="" class="img-fluid"></p>
+<p>... and the iOS 15 new <code>UIImage API</code> greatly helps the use of the style variants.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10059-APISFSymbols_3.png" alt="" class="img-fluid"><br>
+</br></p>
+</div>
+<div class="tab-pane" id="APIEnhancementsColors" role="tabpanel" >
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=938">🎬 (15:38)</a><br>
+</br>Besides the new <code>UIColor.tintColor</code>, the system colors has been unified accross all the Apple platforms and can be used for all the frameworks.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10059-APIColors_1.png" alt="" class="img-fluid"></p>
+<p>A <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=977">new callback</a> has been introduced in order to be updated in a more efficient way about changing colors with the <code>UIColorPicker View Controller</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10059-APIColors_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="APIEnhancementsScrollView" role="tabpanel" >
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=1146">🎬 (19:06)</a><br>
+</br>Now, closure-based handlers can be used to reconfigure the cells.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10059-APIScrollView_1.png" alt="" class="img-fluid"></p>
+<p></br>The updates of the collection and table views are now easier than ever thanks to the diffable data source enhancements.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10059-APIScrollView_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="APIEnhancementsMiscellaneous" role="tabpanel" >
+<p></br>iOS 15 enables <code>UIContextMenuInteraction</code> to support <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=727">collapsible submenus</a> that don't replace entirely the original menu anymore.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10059-APIMiscellaneous_1.png" alt="" class="img-fluid"></p>
+<p>Regarding accessibility, the <code>Dynamic Type</code> feature adopts some <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=878">content size category limits</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10059-APIMiscellaneous_2.png" alt="" class="img-fluid"></p>
+<p>Introduction of a <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=999">new <code>TextKit</code> version</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10059-APIMiscellaneous_3.png" alt="" class="img-fluid"></p>
+<p>There are many significant improvements focused on the <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=1036">UIScene-based APIs</a> that can be used by the UIKit apps as well. Moreover, <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=1115">new APIs</a> have been also added to deal with the currently sharable content that's being interacting in each scene.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10059-APIMiscellaneous_4.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p></br></br></p>
+<h2 id="performance"><a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=1217">Performance</a> <a class="header-anchor" href="#performance" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Enhancements for smoother scrolling and animations are highlighted using the example of cells that <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=1261">display images</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10059-Performance_1.png" alt="" class="img-fluid"></p>
+<p>Now, an inside process is made for <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=1290">specific image size and type</a> to anticipate the display under the best conditions.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10059-Performance_2.png" alt="" class="img-fluid"></p>
+<p></br></br></p>
+<h2 id="security-and-privacy"><a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=1354">Security and privacy</a> <a class="header-anchor" href="#security-and-privacy" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The new <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=1373">Location Button</a> can be embedded in apps to provide the current location but only when some requirements are completely fulfilled.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10059-Security_1.png" alt="" class="img-fluid"></p>
+<p>In the same way, the <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=1410">copy-paste banner</a> is now removed in iOS 15 adding some new standard paste menu items.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10059-Security_2.png" alt="" class="img-fluid"></p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=1466">standard Data Detectors types</a> have been extended in order to check what type of data is on the pasteboard.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10059-Security_3.png" alt="" class="img-fluid"></p>
+<p>Finally, there's an <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=1513">App-to-Web Click Measurement</a> that preserves privacy of ad clicks and taps.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10059-Security_4.png" alt="" class="img-fluid"></p>
+<p></br></br></br></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#productivity" class="nav-link text-muted">Productivity</a></li><li class="nav-item position-relative">
+            <a href="#ui-refinements" class="nav-link text-muted">UI refinements</a></li><li class="nav-item position-relative">
+            <a href="#api-enhancements" class="nav-link text-muted">API enhancements</a></li><li class="nav-item position-relative">
+            <a href="#performance" class="nav-link text-muted">Performance</a></li><li class="nav-item position-relative">
+            <a href="#security-and-privacy" class="nav-link text-muted">Security and privacy</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link">
+  About
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility" class="nav-link">
+  Accessibility
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2021/2110059.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" aria-label="Back to top">
+      <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+        <span class="d-none d-sm-inline-block">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.min.js" integrity="sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>

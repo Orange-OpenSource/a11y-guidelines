@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>What&#39;s new in Foundation - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Latest updates and improvements to the Foundation framework.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-toggle="collapse" data-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Search">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="sr-only">Search</span>
+    </button>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-500" aria-label="Search" placeholder="Search">
+  </form>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          What&#39;s new in Foundation
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#attributedstring" class="dropdown-item text-wrap">AttributedString</a><a href="#formatters" class="dropdown-item text-wrap">Formatters</a><a href="#grammar-agreement" class="dropdown-item text-wrap">Grammar agreement</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2021: What's new in Foundation</h1>
+<p>Find hereafter a detailed summary of the above named video which belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2021/10109/">session 10109</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109.png" alt="" class="img-fluid"></p>
+<p>&quot;Discover how the latest updates to Foundation can help you improve your app's <strong>localization</strong> and <strong>internationalization</strong> support. Find out about the <strong>new AttributedString</strong>, designed specifically for Swift, and learn how you can <strong>use Markdown</strong> to apply style to your localized strings. Explore the <strong>grammar agreement engine</strong>, which automatically fixes up localized strings so they match grammatical gender and pluralization. And we'll take you through <strong>improvements to date and number formatting</strong> that simplify complex requirements while also improving performance.&quot;<br>
+</br></br>Various contents of this video are indicated hereunder:</p>
+<ul>
+<li>
+<p><a href="#attributedstring">AttributedString</a></p>
+<ul>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#AttributedStringOverview_tab').trigger('click');document.getElementById('attributedstring').scrollIntoView({ behavior: 'smooth', block: 'start' })">Overview</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#AttributedStringExamples_tab').trigger('click');document.getElementById('attributedstring').scrollIntoView({ behavior: 'smooth', block: 'start' })">Examples</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#AttributedStringLocalization_tab').trigger('click');document.getElementById('attributedstring').scrollIntoView({ behavior: 'smooth', block: 'start' })">Localization</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#AttributedStringSerialization_tab').trigger('click');document.getElementById('attributedstring').scrollIntoView({ behavior: 'smooth', block: 'start' })">Serialization</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#formatters">Formatters</a></p>
+<ul>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#FormattersOverview_tab').trigger('click');document.getElementById('formatters').scrollIntoView({ behavior: 'smooth', block: 'start' })">Overview</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#FormattersDateToString_tab').trigger('click');document.getElementById('formatters').scrollIntoView({ behavior: 'smooth', block: 'start' })">Date to String</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#FormattersStringToDate_tab').trigger('click');document.getElementById('formatters').scrollIntoView({ behavior: 'smooth', block: 'start' })">String to Date</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#FormattersNumber_tab').trigger('click');document.getElementById('formatters').scrollIntoView({ behavior: 'smooth', block: 'start' })">Number</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#grammar-agreement">Grammar agreement</a></p>
+<ul>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#GrammarAgreementOverview_tab').trigger('click');document.getElementById('grammar-agreement').scrollIntoView({ behavior: 'smooth', block: 'start' })">Overview</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#GrammarAgreementExamples_tab').trigger('click');document.getElementById('grammar-agreement').scrollIntoView({ behavior: 'smooth', block: 'start' })">Examples</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#GrammarAgreementXcode_tab').trigger('click');document.getElementById('grammar-agreement').scrollIntoView({ behavior: 'smooth', block: 'start' })">Xcode</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></br></p>
+<h2 id="attributedstring"><a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=63">AttributedString</a> <a class="header-anchor" href="#attributedstring" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#AttributedStringOverview"
+           id="AttributedStringOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#AttributedStringExamples"
+           id="AttributedStringExamples_tab"
+           role="tab" 
+           aria-selected="false">Examples</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#AttributedStringLocalization"
+           id="AttributedStringLocalization_tab"
+           role="tab" 
+           aria-selected="false">Localization</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#AttributedStringSerialization"
+           id="AttributedStringSerialization_tab"
+           role="tab" 
+           aria-selected="false">Serialization</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="AttributedStringOverview" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10109?time=66">🎬 (01:06)</a><br>
+<img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringOverview_1.png" alt="" class="img-fluid"><br>
+The initial reference type NSAttributedString now turns into a brand new <strong><a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=124">struct AttributedString</a></strong> that is henceforth a value type with <a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=235">two new views</a>: <strong>characters</strong> and <strong>runs</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringOverview_2.png" alt="" class="img-fluid"></p>
+<p>The <strong>character view</strong> that provides <strong>access to the string</strong> uses indices to reach this goal.<br>
+The <strong>run view</strong> is the <strong>starting location</strong>, <strong>length</strong> and <strong>value</strong> of a <strong>particular attribute</strong>.</p>
+</div>
+<div class="tab-pane" id="AttributedStringExamples" role="tabpanel">
+<p>Some examples are provided to take full advantage of the new <code>AttributedString</code> features: the first one  deals with <a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=171">the basics</a>...<br>
+<img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringOverview_3.png" alt="" class="img-fluid"></p>
+<p>... while the second one highlights the <a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=263">use of indices by the character view</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringOverview_4.png" alt="" class="img-fluid"></p>
+<p>Likewise, examples are detailed to understand the <a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=319"><code>AttributedString</code> <code>runs</code> counting</a>...<br>
+<img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringOverview_5.png" alt="" class="img-fluid"><br>
+<img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringOverview_6.png" alt="" class="img-fluid"></p>
+<p>... and the <a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=397"><code>AttributedString</code> mutation</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringOverview_7.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AttributedStringLocalization" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10109?time=422">🎬 (07:02)</a><br>
+</br>The string interpolation (mix of constants, variables, literals, and expressions by including their values inside a string literal) is used to support localized formatting of <code>AttributedString</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringLocalization_1.png" alt="" class="img-fluid"></p>
+<p>The Xcode compiler automatically <a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=473">generates the strings files</a> when specified in the <code>Build Settings</code> section.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringLocalization_2.png" alt="" class="img-fluid"></p>
+<p>Localized attributed strings can now <a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=486">use Markdown</a> to get their attributes.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringLocalization_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AttributedStringSerialization" role="tabpanel" >
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10109?time=525">🎬 (08:45)</a><br>
+</br>A default Codable protocol conformance is the only thing to do in order to use the <code>AttributedString</code> basic encoding and decoding.</p>
+<p>When using a <strong>custom attribute</strong>, the <strong><a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=598">AttributedStringKey protocol</a></strong> makes the magic by requiring the <strong>type of value</strong> and the <strong>name</strong> for archiving.</p>
+<p>To make it completely <code>Codable</code>, the <a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=647">example</a> highlights the protocols to be opted in: <strong>CodableAttributedStringKey</strong> and <strong>MarkdownDecodableAttributedStringKey</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringSerialization_1.png" alt="" class="img-fluid"></p>
+<p>Many examples are detailed to harness the <a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=689">custom attribute syntax</a> for <code>Markdown</code> not to mention the introduction of the <a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=759"><strong>attribute scope</strong> concept</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringSerialization_2.png" alt="" class="img-fluid"></p>
+<p><strong>Scopes</strong> are a <strong>group of attribute keys</strong> that is extremely useful when decoding from JSON or Markdown.<br>
+The <a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=790">provided example</a> shows up the way to define a scope of attributes while <a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=821">using the keypath syntax</a> in its calling.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringSerialization_3.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p></br></br></p>
+<h2 id="formatters"><a href="https://developer.apple.com/videos/play/wwdc2021/10109?time=871">Formatters</a> <a class="header-anchor" href="#formatters" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#FormattersOverview"
+           id="FormattersOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#FormattersDateToString"
+           id="FormattersDateToString_tab"
+           role="tab" 
+           aria-selected="false">Date to String</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#FormattersStringToDate"
+           id="FormattersStringToDate_tab"
+           role="tab" 
+           aria-selected="false">String to Date</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#FormattersNumber"
+           id="FormattersNumber_tab"
+           role="tab" 
+           aria-selected="false">Number</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="FormattersOverview" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=875">🎬 (14:35)</a><br>
+</br>There's a brand <strong>new Formatter API</strong> whose performance and usability have been improved and devised from the ground up.<br>
+The way to convert the data the formatter is responsible into a localized and user-presentable string follows a <a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=924">new rationale</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringFormatters_1.png" alt="" class="img-fluid"></p>
+<p>This <a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1007">new technique</a> including autocompletion and type safety has been applied to all ten formatters in Foundation.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringFormatters_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="FormattersDateToString" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1023">🎬 (17:03)</a><br>
+</br>Now, very few lines of code are needed to format a date.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringFormattersDateToString_1.png" alt="" class="img-fluid"></p>
+<p>The new formatting follows <a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1163">this pattern</a>: the value to be formatted is the first element, next is the formatted function and, finally, the argument that represents the style.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringFormattersDateToString_2.png" alt="" class="img-fluid"></p>
+<p>There's also a new way to deal with <a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1221">dates intervals</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringFormattersDateToString_3.png" alt="" class="img-fluid"></p>
+<p>A great new feature in formatting is <a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1256">attributed output</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringFormattersDateToString_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="FormattersStringToDate" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1429">🎬 (23:49)</a><br>
+</br>The goal is to parse a <code>Date</code> element and be sure that it's formatted as desired thanks to a <strong>strategy</strong> parameter that is used to tell the parser <strong>what fields to expect in the input</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringFormattersStringToDate_1.png" alt="" class="img-fluid"></p>
+<p>A fixed format may also be used in conjunction with <a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1467">string interpolaton</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringFormattersStringToDate_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="FormattersNumber" role="tabpanel" >
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1513">🎬 (25:13)</a><br>
+</br>Dealing with <code>Number</code> formatting aims at getting the correct output for every user’s locale as the examples show up.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringFormattersNumber.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p></br></br></p>
+<h2 id="grammar-agreement"><a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1622">Grammar agreement</a> <a class="header-anchor" href="#grammar-agreement" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#GrammarAgreementOverview"
+           id="GrammarAgreementOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#GrammarAgreementExamples"
+           id="GrammarAgreementExamples_tab"
+           role="tab" 
+           aria-selected="false">Examples</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#GrammarAgreementXcode"
+           id="GrammarAgreementXcode_tab"
+           role="tab" 
+           aria-selected="false">Xcode</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="GrammarAgreementOverview" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1626">🎬 (27:06)</a><br>
+</br><strong>Agreement</strong> is the adaptation of the gender and the pluralization to the different use cases the application may suggest.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringFormattersGrammarAgreementOverview.png" alt="" class="img-fluid"></p>
+<p>According to the languages, it may <a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1736">become convoluted</a> to deal with all the possible combinations.<br>
+The solution for this problem is the <strong><a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1761">Automatic Grammar Agreement</a></strong> associated with the <strong>inflection</strong> process that will handle these topics relying on some appropriate input parameters.</p>
+</div>
+<div class="tab-pane" id="GrammarAgreementExamples" role="tabpanel">
+<p>This new API <a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1794">effectively handles</a> some situations in which <a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1747">many lines of code</a> were required to get the same result.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringFormattersGrammarAgreementExamples_1.png" alt="" class="img-fluid"></p>
+<p>Besides the gender and the pluralization, it's now possible to take into account the <a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1851">user’s preferred term of address</a> in apps.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringFormattersGrammarAgreementExamples_2.png" alt="" class="img-fluid"></p>
+<p>If there's no information about this user’s preference, an <a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1917"><code>inflection</code> alternative</a> can be appended.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringFormattersGrammarAgreementExamples_3.png" alt="" class="img-fluid"></p>
+<p>A complete <a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1970">demo</a> is also available to notice how it looks like and it works in an app.</p>
+</div>
+<div class="tab-pane" id="GrammarAgreementXcode" role="tabpanel">
+<p>In the complete <a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=1970">demo</a>, export, modify and import the localizations are highlighted using the <a href="https://developer.apple.com/videos/play/wwdc2021/10109/?time=2104">Xcode compiler</a> which makes the job easier.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10109AttributedStringFormattersGrammarAgreementXcode.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p></br></br></br></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#attributedstring" class="nav-link text-muted">AttributedString</a></li><li class="nav-item position-relative">
+            <a href="#formatters" class="nav-link text-muted">Formatters</a></li><li class="nav-item position-relative">
+            <a href="#grammar-agreement" class="nav-link text-muted">Grammar agreement</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link">
+  About
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility" class="nav-link">
+  Accessibility
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2021/2110109.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" aria-label="Back to top">
+      <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+        <span class="d-none d-sm-inline-block">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.min.js" integrity="sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>

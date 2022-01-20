@@ -2,8 +2,10 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>WWDC 2021: Tailor the VoiceOver experience in your data-rich apps - Orange digital accessibility guidelines</title>
+    <title>Formatters - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Learn the best practices to format your data and avoid common mistakes.">
             
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -187,7 +189,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          WWDC 2021: Tailor the VoiceOver experience in your data-rich apps
+          Formatters
         </li>
       </ol>
 </nav>
@@ -200,7 +202,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Table of content
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction-0020" class="dropdown-item text-wrap">Introduction (00:20)</a><a href="#functioning-0229" class="dropdown-item text-wrap">Functioning (02:29)</a><a href="#coding-with-uikit-0457" class="dropdown-item text-wrap">Coding with UIKit (04:57)</a><a href="#coding-with-swiftui-0743" class="dropdown-item text-wrap">Coding with SwiftUI (07:43)</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#dates-and-times" class="dropdown-item text-wrap">Dates and times</a><a href="#measurements" class="dropdown-item text-wrap">Measurements</a><a href="#names" class="dropdown-item text-wrap">Names</a><a href="#lists" class="dropdown-item text-wrap">Lists</a><a href="#numbers" class="dropdown-item text-wrap">Numbers</a><a href="#strings" class="dropdown-item text-wrap">Strings</a></div>
     </nav>
         
       </div>
@@ -212,69 +214,140 @@
         <main id="main-content" class="col-md-9" role="main">
             
           <div class="mt-4">
-          <h1>WWDC 2021: Tailor the VoiceOver experience in your data-rich apps</h1>
-<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2021/10121/">session 121</a>) introduces the <strong>Accessibility Custom Content</strong> feature available since iOS 14 that <strong>eases the way to handle the data-rich presentations</strong> for the VoiceOver users.</p>
-<p><img src="../../../../../../images/iOSdev/wwdc21-121.png" alt="" class="img-fluid"><br>
-<br><br>Various contents and their video timelapse are indicated hereunder:</p>
+          <h1>WWDC 2020: Formatters</h1>
+<p>Find hereafter a detailed summary of the above named video which belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2020/10160/">session 10160</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-10160.png" alt="" class="img-fluid"></p>
+<p>&quot;Save yourself time and frustration: When you display data in your app — including dates, times, measurements, names, lists, numbers, or strings — <strong>learn how to format</strong> it correctly and provide a great experience. We'll walk you through the Formatter APIs as well as how <strong>SwiftUI works with stringsdict</strong>, and show you how they can help do the heavy lifting of formatting data. Learn about <strong>best practices</strong> and how to <strong>avoid common mistakes</strong>.&quot;<br>
+</br></br>Various contents of this video are indicated hereunder:</p>
 <ul>
 <li>
-<p><a href="#introduction-0020">Introduction</a> (00:20)</p>
-</li>
-<li>
-<p><a href="#functioning-0229">Functioning</a> (02:29)</p>
-</li>
-<li>
-<p><a href="#coding-with-uikit-0457">Coding with UIKit</a> (04:57)</p>
-</li>
-<li>
-<p><a href="#coding-with-swiftui-0743">Coding with SwiftUI</a> (07:43) ⟹ <strong>new in iOS 15</strong></p>
-</li>
-</ul>
-<p><br><br></p>
-<h2 id="introduction-0020"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=20">Introduction (00:20)</a> <a class="header-anchor" href="#introduction-0020" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>The use of VoiceOver may quickly become tedious when a bunch of data is presented and when each one of these data isn't of particular interest to the user.<br>
-<img src="../../../../images/iOSdev/wwdc21-121-Intro1.png" alt="" class="img-fluid"><br>
-For a better understanding of the <code>Accessibility Custom Content</code> feature, an <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=37">application</a> is introduced to highlight the points that its implementation will optimize.</p>
-<p>It's mandatory to import the <code>Accessibility</code> framework available since iOS 14 to use the <strong><a href="https://developer.apple.com/documentation/accessibility/axcustomcontentprovider">AXCustomContentProvider</a></strong> protocol and the <strong><a href="https://developer.apple.com/documentation/accessibility/axcustomcontent">AXCustomContent</a></strong> class to insert this feature in an appropriate way.<br>
-<a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=110"></p>
-<p><img src="../../../../images/iOSdev/wwdc21-121-Intro2.png" alt="Accès à l'extrait de la vidéo mentionnant le protocole et la classe utilisées." class="img-fluid"><br>
-<br><br></p>
-<h2 id="functioning-0229"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=149">Functioning (02:29)</a> <a class="header-anchor" href="#functioning-0229" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>A <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=155"><code>dedicated vocalization</code></a> is automatically triggered by VoiceOver to notify the implementation of this feature that provides the user with the opportunity to get more information thanks to the rotor if need be.</p>
-<p><img src="../../../../images/iOSdev/wwdc21-121-Using1.png" alt="" class="img-fluid"><br>
-By selecting the <code>More Content</code> rotor item, the user can access the information highlighted by this vocalization.<br>
-Then, a one finger vertical swipe successively scrolls through each element of the info list ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=192">🎬</a></p>
-<p><img src="../../../../images/iOSdev/wwdc21-121-Using2.png" alt="" class="img-fluid"></p>
-<p>It's important to notice that the <code>Accessibility Custom Content</code> feature must be activated in the user settings to be integrated by VoiceOver in its speech analytics ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=264">🎬</a></p>
-<p><img src="../../../../images/iOSdev/wwdc21-121-Using3.png" alt="" class="img-fluid"><br>
-<br><br></p>
-<h2 id="coding-with-uikit-0457"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=297">Coding with UIKit (04:57)</a> <a class="header-anchor" href="#coding-with-uikit-0457" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Few essential steps must be followed to implement the <code>Accessibility Custom Content</code> feature:</p>
+<p><a href="#dates-and-times">Dates and times</a></p>
 <ul>
 <li>
-<p>Import the <code>Accessibility</code> framework.</p>
+<p><a role="button" style="text-decoration: underline" onclick="$('#DatesAndTimesOverview_tab').trigger('click');document.getElementById('dates-and-times').scrollIntoView({ behavior: 'smooth', block: 'start' })">Overview</a></p>
 </li>
 <li>
-<p>The element holding the feature must adapt the <code>AXCustomContentProvider</code> protocol.</p>
+<p><a role="button" style="text-decoration: underline" onclick="$('#DatesAndTimesComponents_tab').trigger('click');document.getElementById('dates-and-times').scrollIntoView({ behavior: 'smooth', block: 'start' })">Components</a></p>
 </li>
 <li>
-<p>Define the <code>accessibilityCustomContent</code> property with each element that may be vocalized.</p>
+<p><a role="button" style="text-decoration: underline" onclick="$('#DatesAndTimesIntervals_tab').trigger('click');document.getElementById('dates-and-times').scrollIntoView({ behavior: 'smooth', block: 'start' })">Intervals</a></p>
 </li>
 <li>
-<p>Gather all these possible vocalized elements in an array that will be associated with the previously defined property.</p>
+<p><a role="button" style="text-decoration: underline" onclick="$('#DatesAndTimesRelative_tab').trigger('click');document.getElementById('dates-and-times').scrollIntoView({ behavior: 'smooth', block: 'start' })">Relative</a></p>
 </li>
 </ul>
-<p><img src="../../../../images/iOSdev/wwdc21-121-UIKit1.png" alt="" class="img-fluid"></p>
-<p>The <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=388">final result</a> is excellent but might be improved by highlighting a specific item during the initial selection ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=410">🎬</a></p>
-<p><img src="../../../../images/iOSdev/wwdc21-121-UIKit2.png" alt="" class="img-fluid"></p>
-<p>The <a href="../../../development/#custom-content-provider" style="text-decoration: underline;">iOS developer section</a> of this site contains a potential additional information of this feature that have been written last year at the end of the WWDC20.<br>
-<br><br></p>
-<h2 id="coding-with-swiftui-0743"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=463">Coding with SwiftUI (07:43)</a> <a class="header-anchor" href="#coding-with-swiftui-0743" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>The adaptation of the <code>Accessibility Custom Content</code> feature to SwiftUI is a <strong>brand new adjustment in iOS 15</strong>.<br>
-<img src="../../../../images/iOSdev/wwdc21-121-SwiftUI1.png" alt="" class="img-fluid"></p>
-<p>Following the SwiftUI rationale enables a less disparate information layout than the UIKit structure.<br>
-<img src="../../../../images/iOSdev/wwdc21-121-SwiftUI2.png" alt="" class="img-fluid"><br>
-<br><br><br></p>
+</li>
+<li>
+<p><a href="#measurements">Measurements</a></p>
+</li>
+<li>
+<p><a href="#names">Names</a></p>
+</li>
+<li>
+<p><a href="#lists">Lists</a></p>
+</li>
+<li>
+<p><a href="#numbers">Numbers</a></p>
+</li>
+<li>
+<p><a href="#strings">Strings</a></p>
+</li>
+</ul>
+<p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="dates-and-times"><a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=138">Dates and times</a> <a class="header-anchor" href="#dates-and-times" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#DatesAndTimesOverview"
+           id="DatesAndTimesOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#DatesAndTimesComponents"
+           id="DatesAndTimesComponents_tab"
+           role="tab" 
+           aria-selected="false">Components</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#DatesAndTimesIntervals"
+           id="DatesAndTimesIntervals_tab"
+           role="tab" 
+           aria-selected="false">Intervals</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#DatesAndTimesRelative"
+           id="DatesAndTimesRelative_tab"
+           role="tab" 
+           aria-selected="false">Relative</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="DatesAndTimesOverview" role="tabpanel">
+<p>To have an overall view of the formatters efficiency, a couple of examples are revealed.</p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=150">first one</a> highlights the power of the predefined styles in dateformatter...<br>
+<img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimes_1.png" alt="" class="img-fluid"></p>
+<p>... while <a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=172">others</a> point out the impressive performance of the custom templates...<br>
+<img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimes_2.png" alt="" class="img-fluid"></p>
+<p><img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimes_3.png" alt="" class="img-fluid"></p>
+<p>... whose one huge reference for dates is a <a href="https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table">Unicode technical report</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimes_4.png" alt="" class="img-fluid"></p>
+<p>It's crucial to <a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=255">check the  results</a> in different languages when the fields are chosen, even if the <a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=297">order  isn't important</a> at all.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimes_5.png" alt="" class="img-fluid"></p>
+<p>To avoid any risk of misunderstanding, it's <a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=337">highly recommended</a> not to set the template directly into the <code>dateFormatter</code> property.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimes_6.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DatesAndTimesComponents" role="tabpanel">
+<p>Dates can be also set up step by step with <a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=361">some of its components</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimesComponents.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DatesAndTimesIntervals" role="tabpanel">
+<p><a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=366">Range of time</a> is easily displayed with customed formatter.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimesIntervals.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DatesAndTimesRelative" role="tabpanel" >
+<p><a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=379">Relative time pointers</a> can be build instead of indicating a complete date.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimesRelative.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p></br></br></p>
+<h2 id="measurements"><a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=386">Measurements</a> <a class="header-anchor" href="#measurements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Relying on the Weather App, efficacy of the formatters is outlined regarding some measurements (<a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=398">temperature</a>, <a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=414">speed</a> and <a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=419">pressure</a>)...<br>
+<img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimesMeasurements.png" alt="" class="img-fluid"><br>
+... while many <a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=433">other general or custom units</a> can be supported as well.<br>
+</br></br></p>
+<h2 id="names"><a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=451">Names</a> <a class="header-anchor" href="#names" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The components of the <a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=454">name formatting</a> are fully introduced in this part...</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimesNames_1.png" alt="" class="img-fluid"></p>
+<p>... with a deep dive into the use of <a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=497">monograms</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimesNames_2.png" alt="" class="img-fluid"><br>
+</br></br></p>
+<h2 id="lists"><a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=604">Lists</a> <a class="header-anchor" href="#lists" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>In iOS 14, the <code>ListFormatter</code> is updated to abide by the grammatical rules of many languages.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimesLists.png" alt="" class="img-fluid"><br>
+</br></br></p>
+<h2 id="numbers"><a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=696">Numbers</a> <a class="header-anchor" href="#numbers" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The numbers formatting regarding <a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=698">decimal numbers</a> is effortless...<br>
+<img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimesNumbers_1.png" alt="" class="img-fluid"></p>
+<p>... and <a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=738">specific symbols</a> don't hinder in any way the clarity of the display.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimesNumbers_2.png" alt="" class="img-fluid"><br>
+</br></br></p>
+<h2 id="strings"><a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=781">Strings</a> <a class="header-anchor" href="#strings" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The union of <strong>text elements AND a <code>stringdict</code> file</strong> are important in <code>SwiftUI</code> to easily <a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=797">localize strings</a>...</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimesStrings_1.png" alt="" class="img-fluid"></p>
+<p>... that an <a href="https://developer.apple.com/videos/play/wwdc2020/10160/?time=835">example</a> of a photos folder points out.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-10160-DatesAndTimesStrings_2.png" alt="" class="img-fluid"></p>
+<p></br></br></br></p>
 
           </div>
         </main>
@@ -284,10 +357,12 @@ Then, a one finger vertical swipe successively scrolls through each element of t
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Table of content</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#introduction-0020" class="nav-link text-muted">Introduction (00:20)</a></li><li class="nav-item position-relative">
-            <a href="#functioning-0229" class="nav-link text-muted">Functioning (02:29)</a></li><li class="nav-item position-relative">
-            <a href="#coding-with-uikit-0457" class="nav-link text-muted">Coding with UIKit (04:57)</a></li><li class="nav-item position-relative">
-            <a href="#coding-with-swiftui-0743" class="nav-link text-muted">Coding with SwiftUI (07:43)</a></li>
+            <a href="#dates-and-times" class="nav-link text-muted">Dates and times</a></li><li class="nav-item position-relative">
+            <a href="#measurements" class="nav-link text-muted">Measurements</a></li><li class="nav-item position-relative">
+            <a href="#names" class="nav-link text-muted">Names</a></li><li class="nav-item position-relative">
+            <a href="#lists" class="nav-link text-muted">Lists</a></li><li class="nav-item position-relative">
+            <a href="#numbers" class="nav-link text-muted">Numbers</a></li><li class="nav-item position-relative">
+            <a href="#strings" class="nav-link text-muted">Strings</a></li>
       </ul>
     </nav>
             </div>
@@ -322,7 +397,7 @@ Then, a one finger vertical swipe successively scrolls through each element of t
           </a>
         </li>
         <li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/2021/121.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2020/2010160.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
             Report an error on GitHub<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>

@@ -2,8 +2,10 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>WWDC 2021: Tailor the VoiceOver experience in your data-rich apps - Orange digital accessibility guidelines</title>
+    <title>Platforms State of the Union - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Take a look at the Apple platforms that will help to create even better apps.">
             
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -187,7 +189,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
-          WWDC 2021: Tailor the VoiceOver experience in your data-rich apps
+          Platforms State of the Union
         </li>
       </ol>
 </nav>
@@ -200,7 +202,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
         Table of content
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction-0020" class="dropdown-item text-wrap">Introduction (00:20)</a><a href="#functioning-0229" class="dropdown-item text-wrap">Functioning (02:29)</a><a href="#coding-with-uikit-0457" class="dropdown-item text-wrap">Coding with UIKit (04:57)</a><a href="#coding-with-swiftui-0743" class="dropdown-item text-wrap">Coding with SwiftUI (07:43)</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#xcode-cloud" class="dropdown-item text-wrap">Xcode Cloud</a><a href="#swift" class="dropdown-item text-wrap">Swift</a><a href="#switui" class="dropdown-item text-wrap">SwitUI</a><a href="#augmented-reality" class="dropdown-item text-wrap">Augmented Reality</a><a href="#focus" class="dropdown-item text-wrap">Focus</a><a href="#screen-time" class="dropdown-item text-wrap">Screen Time</a><a href="#widgets" class="dropdown-item text-wrap">Widgets</a><a href="#shareplay" class="dropdown-item text-wrap">Shareplay</a></div>
     </nav>
         
       </div>
@@ -212,69 +214,114 @@
         <main id="main-content" class="col-md-9" role="main">
             
           <div class="mt-4">
-          <h1>WWDC 2021: Tailor the VoiceOver experience in your data-rich apps</h1>
-<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2021/10121/">session 121</a>) introduces the <strong>Accessibility Custom Content</strong> feature available since iOS 14 that <strong>eases the way to handle the data-rich presentations</strong> for the VoiceOver users.</p>
-<p><img src="../../../../../../images/iOSdev/wwdc21-121.png" alt="" class="img-fluid"><br>
-<br><br>Various contents and their video timelapse are indicated hereunder:</p>
+          <h1>WWDC 2021: Platforms State of the Union</h1>
+<p>Find hereafter a detailed summary of the above named video which belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2021/102/">session 102</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-102.png" alt="" class="img-fluid"></p>
+<p>&quot;Take a deeper dive into the new tools, technologies, and advances across Apple platforms that will help you create even better apps.&quot;<br>
+</br></br>Various contents of this video are indicated hereunder:</p>
 <ul>
 <li>
-<p><a href="#introduction-0020">Introduction</a> (00:20)</p>
+<p><a href="#xcode-cloud">Xcode Cloud</a></p>
 </li>
 <li>
-<p><a href="#functioning-0229">Functioning</a> (02:29)</p>
+<p><a href="#swift">Swift</a></p>
 </li>
 <li>
-<p><a href="#coding-with-uikit-0457">Coding with UIKit</a> (04:57)</p>
+<p><a href="#switui">SwitUI</a></p>
 </li>
 <li>
-<p><a href="#coding-with-swiftui-0743">Coding with SwiftUI</a> (07:43) ⟹ <strong>new in iOS 15</strong></p>
+<p><a href="#augmented-reality">Augmented Reality</a></p>
+</li>
+<li>
+<p><a href="#focus">Focus</a></p>
+</li>
+<li>
+<p><a href="#screen-time">Screen Time</a></p>
+</li>
+<li>
+<p><a href="#widgets">Widgets</a></p>
+</li>
+<li>
+<p><a href="#shareplay">Shareplay</a></p>
 </li>
 </ul>
-<p><br><br></p>
-<h2 id="introduction-0020"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=20">Introduction (00:20)</a> <a class="header-anchor" href="#introduction-0020" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>The use of VoiceOver may quickly become tedious when a bunch of data is presented and when each one of these data isn't of particular interest to the user.<br>
-<img src="../../../../images/iOSdev/wwdc21-121-Intro1.png" alt="" class="img-fluid"><br>
-For a better understanding of the <code>Accessibility Custom Content</code> feature, an <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=37">application</a> is introduced to highlight the points that its implementation will optimize.</p>
-<p>It's mandatory to import the <code>Accessibility</code> framework available since iOS 14 to use the <strong><a href="https://developer.apple.com/documentation/accessibility/axcustomcontentprovider">AXCustomContentProvider</a></strong> protocol and the <strong><a href="https://developer.apple.com/documentation/accessibility/axcustomcontent">AXCustomContent</a></strong> class to insert this feature in an appropriate way.<br>
-<a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=110"></p>
-<p><img src="../../../../images/iOSdev/wwdc21-121-Intro2.png" alt="Accès à l'extrait de la vidéo mentionnant le protocole et la classe utilisées." class="img-fluid"><br>
-<br><br></p>
-<h2 id="functioning-0229"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=149">Functioning (02:29)</a> <a class="header-anchor" href="#functioning-0229" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>A <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=155"><code>dedicated vocalization</code></a> is automatically triggered by VoiceOver to notify the implementation of this feature that provides the user with the opportunity to get more information thanks to the rotor if need be.</p>
-<p><img src="../../../../images/iOSdev/wwdc21-121-Using1.png" alt="" class="img-fluid"><br>
-By selecting the <code>More Content</code> rotor item, the user can access the information highlighted by this vocalization.<br>
-Then, a one finger vertical swipe successively scrolls through each element of the info list ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=192">🎬</a></p>
-<p><img src="../../../../images/iOSdev/wwdc21-121-Using2.png" alt="" class="img-fluid"></p>
-<p>It's important to notice that the <code>Accessibility Custom Content</code> feature must be activated in the user settings to be integrated by VoiceOver in its speech analytics ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=264">🎬</a></p>
-<p><img src="../../../../images/iOSdev/wwdc21-121-Using3.png" alt="" class="img-fluid"><br>
-<br><br></p>
-<h2 id="coding-with-uikit-0457"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=297">Coding with UIKit (04:57)</a> <a class="header-anchor" href="#coding-with-uikit-0457" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Few essential steps must be followed to implement the <code>Accessibility Custom Content</code> feature:</p>
+<p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="xcode-cloud"><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=167">Xcode Cloud</a> <a class="header-anchor" href="#xcode-cloud" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This <strong>new tool</strong> deeply bound to Xcode and hosted in the cloud aims at supporting development for <strong>all Apple platforms</strong> including continuous integration and delivery service.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-102-XcodeCloud_1.png" alt="" class="img-fluid"><br>
+</br><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=262">Get started</a> with Xcode Cloud in four steps:</p>
 <ul>
 <li>
-<p>Import the <code>Accessibility</code> framework.</p>
+<p>Select the product.</p>
 </li>
 <li>
-<p>The element holding the feature must adapt the <code>AXCustomContentProvider</code> protocol.</p>
+<p>Confirm the workflow.</p>
 </li>
 <li>
-<p>Define the <code>accessibilityCustomContent</code> property with each element that may be vocalized.</p>
+<p>Grant acces to the source code.</p>
 </li>
 <li>
-<p>Gather all these possible vocalized elements in an array that will be associated with the previously defined property.</p>
+<p>Link with App Store Connect.</p>
 </li>
 </ul>
-<p><img src="../../../../images/iOSdev/wwdc21-121-UIKit1.png" alt="" class="img-fluid"></p>
-<p>The <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=388">final result</a> is excellent but might be improved by highlighting a specific item during the initial selection ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=410">🎬</a></p>
-<p><img src="../../../../images/iOSdev/wwdc21-121-UIKit2.png" alt="" class="img-fluid"></p>
-<p>The <a href="../../../development/#custom-content-provider" style="text-decoration: underline;">iOS developer section</a> of this site contains a potential additional information of this feature that have been written last year at the end of the WWDC20.<br>
+<p></br>Many improvements for the <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=487">Tests</a> are highlighted thanks to a <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=530">demo</a>.<br>
+</br>The <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=842">delivery process</a> becomes easier...<br>
+<img src="../../../../../images/iOSdev/wwdc21-102-XcodeCloud_2.png" alt="" class="img-fluid"><br>
+... and <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=892">crash logs</a> are rapidly shown up in the Xcode Organizer.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-102-XcodeCloud_3.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="coding-with-swiftui-0743"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=463">Coding with SwiftUI (07:43)</a> <a class="header-anchor" href="#coding-with-swiftui-0743" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>The adaptation of the <code>Accessibility Custom Content</code> feature to SwiftUI is a <strong>brand new adjustment in iOS 15</strong>.<br>
-<img src="../../../../images/iOSdev/wwdc21-121-SwiftUI1.png" alt="" class="img-fluid"></p>
-<p>Following the SwiftUI rationale enables a less disparate information layout than the UIKit structure.<br>
-<img src="../../../../images/iOSdev/wwdc21-121-SwiftUI2.png" alt="" class="img-fluid"><br>
-<br><br><br></p>
+<h2 id="swift"><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=1119">Swift</a> <a class="header-anchor" href="#swift" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The modern <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=1283">async/await pattern</a> is now built into Swift...<br>
+<img src="../../../../../images/iOSdev/wwdc21-102-Swift_1.png" alt="" class="img-fluid"><br>
+<br>... adding a <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=1388">structured concurrency</a> with its <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=1452">safe model</a> including the new <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=1476">actors</a> objects and the <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=1581">@MainActor</a> annotation.<br>
+<img src="../../../../../images/iOSdev/wwdc21-102-Swift_2.png" alt="" class="img-fluid"></p>
+<h2 id="switui"><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=1766">SwitUI</a> <a class="header-anchor" href="#switui" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Many <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=1808">enhancements</a> have been provided to SwiftUI not to mention <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=1862">accessibility</a>.</p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=2054">Swift Playgrounds 4</a> is the tool to create apps on Ipad, submit them directly to the App Store while bringing this work seamlessly to Xcode.<br>
+<br><br></p>
+<h2 id="augmented-reality"><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=2355">Augmented Reality</a> <a class="header-anchor" href="#augmented-reality" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc21-102-AugmentedReality_1.png" alt="" class="img-fluid"><br>
+Apple has brought <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=2393">RealityKit 2</a> that enables to <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=2444">make a 3D model in minutes</a> ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=2572">demo</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-102-AugmentedReality_2.png" alt="" class="img-fluid"></p>
+<p>A <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=2730">unified Apple graphics platform</a> with a common architecture based on Metal has been created increasing performance and power efficiency.<br>
+<img src="../../../../../images/iOSdev/wwdc21-102-AugmentedReality_3.png" alt="" class="img-fluid"></p>
+<p>Xcode 13 adds powerful new graphics developer tools in order to debug efficiently the GPU code (click on the images below to get the corresponding playback):<br>
+<a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=2970"><br>
+<img src="../../../../../images/iOSdev/wwdc21-102-AugmentedReality_4.png" alt="&quot;playback of the selective shader debugger tool&quot;" class="img-fluid"><br>
+</a><br>
+<a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=2991"><br>
+<img src="../../../../../images/iOSdev/wwdc21-102-AugmentedReality_5.png" alt="playback of the texture converter tool" class="img-fluid"><br>
+</a><br>
+<a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=3023"><br>
+<img src="../../../../../images/iOSdev/wwdc21-102-AugmentedReality_6.png" alt="playback of the metal debugger timeline view tool" class="img-fluid"><br>
+</a></p>
+<h2 id="focus"><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=3113">Focus</a> <a class="header-anchor" href="#focus" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=3128">Notifications</a> now use one of the four interruption levels that may be linked to the <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=3240">brand new summary</a> that can be customized by the user.<br>
+<br><br></p>
+<h2 id="screen-time"><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=3471">Screen Time</a> <a class="header-anchor" href="#screen-time" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc21-102-ScreenTime.png" alt="" class="img-fluid"><br>
+Three new Swift frameworks have been devised in the iOS SDK to enhance the parental controls:</p>
+<ul>
+<li><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=3583">Managed Settings framework</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=3621">Family Controls framework</a></li>
+<li><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=3652">Device Activity framewok</a><br>
+<br><br></li>
+</ul>
+<h2 id="widgets"><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=3735">Widgets</a> <a class="header-anchor" href="#widgets" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Widgets have now a <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=3808">new extra-large size</a> that has been made for taking advantage of the entire width of the screen.<br>
+<img src="../../../../../images/iOSdev/wwdc21-102-Widgets.png" alt="" class="img-fluid"><br>
+Moreover, <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=3836">Smart Stacks</a> are introduced to place multiple widgets on top of each other.</p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=3864">Widget Suggestions</a> is a good way to add dynamically a widget in the stack according to the app it belongs is used.<br>
+<br><br></p>
+<h2 id="shareplay"><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=3950">Shareplay</a> <a class="header-anchor" href="#shareplay" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=3989">Shareplay</a> is the new way to share activities with a group of friends on the device: <strong>group</strong> and <strong>activity</strong> are the most two important concepts in this feature ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=4112">demo</a> to use the Group Activities in a media app for developers.<br>
+<img src="../../../../../images/iOSdev/wwdc21-102-Shareplay_1.png" alt="" class="img-fluid"><br>
+<code>Shareplay</code> is a perfect mean to interact with people in the group <a href="https://developer.apple.com/videos/play/wwdc2021/102/?time=4252">using the same interface</a> with a complete synchronization.<br>
+<img src="../../../../../images/iOSdev/wwdc21-102-Shareplay_2.png" alt="" class="img-fluid"><br>
+</br></br></br></p>
 
           </div>
         </main>
@@ -284,10 +331,14 @@ Then, a one finger vertical swipe successively scrolls through each element of t
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Table of content</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#introduction-0020" class="nav-link text-muted">Introduction (00:20)</a></li><li class="nav-item position-relative">
-            <a href="#functioning-0229" class="nav-link text-muted">Functioning (02:29)</a></li><li class="nav-item position-relative">
-            <a href="#coding-with-uikit-0457" class="nav-link text-muted">Coding with UIKit (04:57)</a></li><li class="nav-item position-relative">
-            <a href="#coding-with-swiftui-0743" class="nav-link text-muted">Coding with SwiftUI (07:43)</a></li>
+            <a href="#xcode-cloud" class="nav-link text-muted">Xcode Cloud</a></li><li class="nav-item position-relative">
+            <a href="#swift" class="nav-link text-muted">Swift</a></li><li class="nav-item position-relative">
+            <a href="#switui" class="nav-link text-muted">SwitUI</a></li><li class="nav-item position-relative">
+            <a href="#augmented-reality" class="nav-link text-muted">Augmented Reality</a></li><li class="nav-item position-relative">
+            <a href="#focus" class="nav-link text-muted">Focus</a></li><li class="nav-item position-relative">
+            <a href="#screen-time" class="nav-link text-muted">Screen Time</a></li><li class="nav-item position-relative">
+            <a href="#widgets" class="nav-link text-muted">Widgets</a></li><li class="nav-item position-relative">
+            <a href="#shareplay" class="nav-link text-muted">Shareplay</a></li>
       </ul>
     </nav>
             </div>
@@ -322,7 +373,7 @@ Then, a one finger vertical swipe successively scrolls through each element of t
           </a>
         </li>
         <li class="nav-item ml-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/2021/121.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2021/21102.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
             Report an error on GitHub<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>

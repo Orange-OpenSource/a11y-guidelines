@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Implementing Dark Mode on iOS - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Hear about the principles and concepts that anchor Dark Mode on iOS.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-toggle="collapse" data-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Search">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="sr-only">Search</span>
+    </button>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-500" aria-label="Search" placeholder="Search">
+  </form>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Implementing Dark Mode on iOS
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#design-overview" class="dropdown-item text-wrap">Design overview</a><a href="#materials" class="dropdown-item text-wrap">Materials</a><a href="#dynamic-colors" class="dropdown-item text-wrap">Dynamic colors</a><a href="#image-variations" class="dropdown-item text-wrap">Image variations</a><a href="#trait-collections" class="dropdown-item text-wrap">Trait Collections</a><a href="#api-updates" class="dropdown-item text-wrap">API updates</a><a href="#demos" class="dropdown-item text-wrap">Demos</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2019: Implementing Dark Mode on iOS</h1>
+<p>Find hereafter a detailed summary of the above named video which belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2019/214/">session 214</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214.png" alt="" class="img-fluid"></p>
+<p>&quot;Hear from the UIKit engineering team about the <strong>principles and concepts</strong> that anchor <strong>Dark Mode</strong> on iOS. Get introduced to the principles of enhancing your app with this new appearance using <strong>dynamic colors</strong> and <strong>images</strong>, and add an experience that people are sure to love.&quot;<br>
+</br></br>Various contents of this video are indicated hereunder:</p>
+<ul>
+<li>
+<p><a href="#design-overview">Design overview</a></p>
+<ul>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#DesignOverviewSemanticColors_tab').trigger('click');document.getElementById('design-overview').scrollIntoView({ behavior: 'smooth', block: 'start' })">Semantic colors</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#DesignOverviewMaterials_tab').trigger('click');document.getElementById('design-overview').scrollIntoView({ behavior: 'smooth', block: 'start' })">Materials</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#DesignOverviewDynamicColors_tab').trigger('click');document.getElementById('design-overview').scrollIntoView({ behavior: 'smooth', block: 'start' })">Dynamic colors</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#materials">Materials</a></p>
+</li>
+<li>
+<p><a href="#dynamic-colors">Dynamic colors</a></p>
+<ul>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#DynamicColorsDarkModeLevels_tab').trigger('click');document.getElementById('dynamic-colors').scrollIntoView({ behavior: 'smooth', block: 'start' })">Dark Mode levels</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#DynamicColorsResolvedColor_tab').trigger('click');document.getElementById('dynamic-colors').scrollIntoView({ behavior: 'smooth', block: 'start' })">Resolved color</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#image-variations">Image variations</a></p>
+</li>
+<li>
+<p><a href="#trait-collections">Trait Collections</a></p>
+<ul>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#TraitCollectionsChanges_tab').trigger('click');document.getElementById('trait-collections').scrollIntoView({ behavior: 'smooth', block: 'start' })">Changes</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#TraitCollectionsUses_tab').trigger('click');document.getElementById('trait-collections').scrollIntoView({ behavior: 'smooth', block: 'start' })">Uses</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#TraitCollectionsOverrides_tab').trigger('click');document.getElementById('trait-collections').scrollIntoView({ behavior: 'smooth', block: 'start' })">Overrides</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#api-updates">API updates</a></p>
+<ul>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#UpdatesStatusBar_tab').trigger('click');document.getElementById('api-updates').scrollIntoView({ behavior: 'smooth', block: 'start' })">Status bar</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#UpdatesActivityIndicator_tab').trigger('click');document.getElementById('api-updates').scrollIntoView({ behavior: 'smooth', block: 'start' })">Activity indicator</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#UpdatesText_tab').trigger('click');document.getElementById('api-updates').scrollIntoView({ behavior: 'smooth', block: 'start' })">Text</a></p>
+</li>
+<li>
+<p><a role="button" style="text-decoration: underline" onclick="$('#UpdatesMiscellaneous_tab').trigger('click');document.getElementById('api-updates').scrollIntoView({ behavior: 'smooth', block: 'start' })">Miscellaneaous</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#demos">Demos</a></p>
+</li>
+</ul>
+<p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="design-overview"><a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=51">Design overview</a> <a class="header-anchor" href="#design-overview" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#DesignOverviewSemanticColors"
+           id="DesignOverviewSemanticColors_tab"
+           role="tab" 
+           aria-selected="true">Semantic&nbsp;colors</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#DesignOverviewMaterials"
+           id="DesignOverviewMaterials_tab"
+           role="tab" 
+           aria-selected="false">Materials</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#DesignOverviewDynamicColors"
+           id="DesignOverviewDynamicColors_tab"
+           role="tab" 
+           aria-selected="false">Dynamic&nbsp;colors</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="DesignOverviewSemanticColors" role="tabpanel">
+<p>There's no need to hard code each color, just name it as it means to <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=96">let UIKit work</a> and automatically adapt the proper color according to the Dark Mode feature.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-DesignOverviewSemanticColors_1.png" alt="" class="img-fluid"></p>
+<p>These semantic dynamic colors are definitely tailored at the <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=154">app views hierarchy</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc19-214-DesignOverviewSemanticColors_2.png" alt="" class="img-fluid"></p>
+<p>By the same token, these are also <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=182">relevant for text</a> in order to highlight the relative imoportance of each element.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-DesignOverviewSemanticColors_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignOverviewMaterials" role="tabpanel">
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=221">blur and vibrancy effects</a> are also completely taken into account in dark and in light mode.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-DesignOverviewMaterials.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignOverviewDynamicColors" role="tabpanel">
+<p>Unlike UIColor before iOS 13, a <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=310">dynamic color</a> may have different values that adapt perfectly to the Dark Mode feature.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-DesignOverviewDynamicColors.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p></br></br></p>
+<h2 id="materials"><a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=738">Materials</a> <a class="header-anchor" href="#materials" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=792"><strong>New vibrancy effect styles</strong></a> have been added in <strong>iOS 13</strong> to provide a better focus.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-Materials_1.png" alt="" class="img-fluid"></p>
+<p>A complete way to use both blur and vibrancy effects is also detailed in a <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=753">pretty simple example</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-Materials_2.png" alt="" class="img-fluid"><br>
+</br></br></p>
+<h2 id="dynamic-colors"><a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1096">Dynamic colors</a> <a class="header-anchor" href="#dynamic-colors" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#DynamicColorsDarkModeLevels"
+           id="DynamicColorsDarkModeLevels_tab"
+           role="tab" 
+           aria-selected="true">Dark&nbsp;Mode&nbsp;levels</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#DynamicColorsResolvedColor"
+           id="DynamicColorsResolvedColor_tab"
+           role="tab" 
+           aria-selected="false">Resolved&nbsp;color</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="DynamicColorsDarkModeLevels" role="tabpanel">
+<p>With the same semantic color, <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1099">two different shades</a> are specially designed for the Dark Mode feature and natively provided for the background.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-DynamicColorsLevels.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DynamicColorsResolvedColor" role="tabpanel">
+<p>The choice of the light or dark <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1164">property of a color</a> is based on the <code>Trait</code> <code>Collection</code> that represents the perfect mean to <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1205">convert a dynamic color</a> to its original value.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-DynamicColorsResolved_1.png" alt="" class="img-fluid"></p>
+<p>While using an asset catalog is an easy way to define a <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1243"><strong>custom dynamic color</strong></a>, it's also possible to make it programmatically using a <strong>closure</strong> that will be called when the color conversion is needed.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-DynamicColorsResolved_2.png" alt="" class="img-fluid"></p>
+<p>New in <strong>iOS 13</strong>, UIKit handles a <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1296">UITraitCollection property</a> whose goal is to provide to certain methods a complete set of trait values describing the current environment.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-DynamicColorsResolved_3.png" alt="" class="img-fluid"></p>
+<p>Some of the new <strong>iOS 13</strong> type property and instance methods used for colors and dealing with traits are detailed in a <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1415">simple example</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-DynamicColorsResolved_4.png" alt="" class="img-fluid"></p>
+<p>When it comes down to finding out if the user interface style changes affects color values, the usage of another <strong>new iOS 13</strong> <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1523">UITraitCollection instance method</a> comes in handy and turns out to be really appropriate to this situation.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-DynamicColorsResolved_5.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p></br></br></p>
+<h2 id="image-variations"><a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1552">Image variations</a> <a class="header-anchor" href="#image-variations" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Even if the UIImageView automatically manages the Dark Mode feature by using an asset catalog, it's also possible to resolve dynamic images programmatically.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-ImageVariations.png" alt="" class="img-fluid"><br>
+</br></br></p>
+<h2 id="trait-collections"><a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1633">Trait Collections</a> <a class="header-anchor" href="#trait-collections" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#TraitCollectionsChanges"
+           id="TraitCollectionsChanges_tab"
+           role="tab" 
+           aria-selected="true">Changes</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#TraitCollectionsUses"
+           id="TraitCollectionsUses_tab"
+           role="tab" 
+           aria-selected="false">Uses</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#TraitCollectionsOverrides"
+           id="TraitCollectionsOverrides_tab"
+           role="tab" 
+           aria-selected="false">Overrides</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="TraitCollectionsChanges" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1666">🎬 (27:46)</a></p>
+<p><strong>New in iOS 13</strong>, traits are predicted <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1689">during initialization</a> and the <code>traitCollectionDidChange</code> method is triggered only when the initial traits are modified.</p>
+<p>To have a better monitoring of this new behavior, <strong>iOS 13</strong> improves the <strong>debug logging</strong> <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1804">with launch argument</a> in Xcode to be aware of the <code>Trait</code> <code>Collections</code> changes and to get all the details of these modifications.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-TraitCollectionsChanges.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="TraitCollectionsUses" role="tabpanel">
+<p>To avoid the <a style="text-decoration: underline;" role="button" onclick="$('#TraitCollectionsChanges_tab').trigger('click');document.getElementById('trait-collections').scrollIntoView({ behavior: 'smooth', block: 'start' })">new prediction behavior</a> and be sure to deal with updated traits, some <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1822">layout dedicated methods</a> are reminded as the <strong>best tools</strong> to be worked with.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-TraitCollectionsUses.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="TraitCollectionsOverrides" role="tabpanel">
+<p>Any <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1890">use cases</a> may bring about different modes inside apps: some views would be in light mode while others might be in dark mode for instance.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-TraitCollectionsOverrides_1.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1917">New API</a> have been introduced in <strong>iOS 13</strong> to reach this goal by <strong>overriding the user interface style property</strong> on view controllers or directly on views.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-TraitCollectionsOverrides_2.png" alt="" class="img-fluid"></p>
+<p>There are already some API to <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1959">change the traits  directly</a> but it's crucial to remember that only the intended traits should be modified.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-TraitCollectionsOverrides_3.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p></br></br></p>
+<h2 id="api-updates"><a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=1992">API updates</a> <a class="header-anchor" href="#api-updates" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#UpdatesStatusBar"
+           id="UpdatesStatusBar_tab"
+           role="tab" 
+           aria-selected="true">Status&nbsp;bar</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#UpdatesActivityIndicator"
+           id="UpdatesActivityIndicator_tab"
+           role="tab" 
+           aria-selected="false">Activity&nbsp;indicator</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#UpdatesText"
+           id="UpdatesText_tab"
+           role="tab" 
+           aria-selected="false">Text</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#UpdatesMiscellaneous"
+           id="UpdatesMiscellaneous_tab"
+           role="tab" 
+           aria-selected="false">Miscellaneous</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="UpdatesStatusBar" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/214/?time=2000">🎬 (33:20)</a></p>
+<p>The Dark Mode feature easily handles the <strong>new status bar appearance</strong> declined in the same way for the <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=2039">UIScrollView's indicator style</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-UpdatesStatusBar.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UpdatesActivityIndicator" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/214/?time=2049">🎬 (34:09)</a></p>
+<p><strong>New activity indicators</strong> are introduced in <strong>iOS 13</strong> and they're now just based on their size.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-UpdatesActivityIndicator_1.png" alt="" class="img-fluid"></p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-UpdatesActivityIndicator_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UpdatesText" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/214/?time=2087">🎬 (34:47)</a></p>
+<p>The text written in some classes has a label based color that automatically adapts to the Dark Mode feature.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-UpdatesText_1.png" alt="" class="img-fluid"></p>
+<p>However, the attributed strings must have a defined <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=2109">foregroundColor key attribute</a> otherwise the text color will be always black irrespective of the mode.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-UpdatesText_2.png" alt="" class="img-fluid"></p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-UpdatesText_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UpdatesMiscellaneous" role="tabpanel" >
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/214/?time=2145">🎬 (35:45)</a></p>
+<p>Finally, some news are exposed regarding the Web Content, <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=2174">tvOS</a> and the <a href="https://developer.apple.com/videos/play/wwdc2019/214/?time=2220">iPad Apps for Mac</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-UpdatesMiscellaneous_1.png" alt="" class="img-fluid"></p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-UpdatesMiscellaneous_2.png" alt="" class="img-fluid"></p>
+<p><img src="../../../../../images/iOSdev/wwdc19-214-UpdatesMiscellaneous_3.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p></br></br></p>
+<h2 id="demos">Demos <a class="header-anchor" href="#demos" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Find hereafter the main outlines of the demos that highlight the best practice to implement the Dark Mode feature.</p>
+<ul>
+<li>
+<p><a alt="" href="https://developer.apple.com/videos/play/wwdc2019/214/?time=375">Launch and test the Dark Mode feature in Xcode.</a></p>
+</li>
+<li>
+<p><a alt="" href="https://developer.apple.com/videos/play/wwdc2019/214/?time=398">Look at the first results with no modifications.</a></p>
+</li>
+<li>
+<p><a alt="" href="https://developer.apple.com/videos/play/wwdc2019/214/?time=418">Set up the background dynamic color.</a></p>
+</li>
+<li>
+<p><a alt="" href="https://developer.apple.com/videos/play/wwdc2019/214/?time=456">Change the interface style instantaneously to point out the changes.</a></p>
+</li>
+<li>
+<p><a alt="" href="https://developer.apple.com/videos/play/wwdc2019/214/?time=468">Adapt the text color.</a></p>
+</li>
+<li>
+<p><a alt="" href="https://developer.apple.com/videos/play/wwdc2019/214/?time=527">Modify an image tint color.</a></p>
+</li>
+<li>
+<p><a alt="" href="https://developer.apple.com/videos/play/wwdc2019/214/?time=608">Change a background image.</a></p>
+</li>
+<li>
+<p><a alt="" href="https://developer.apple.com/videos/play/wwdc2019/214/?time=979">Tailor the blur and vibrancy effects.</a></p>
+</li>
+</ul>
+<p></br></br></br></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#design-overview" class="nav-link text-muted">Design overview</a></li><li class="nav-item position-relative">
+            <a href="#materials" class="nav-link text-muted">Materials</a></li><li class="nav-item position-relative">
+            <a href="#dynamic-colors" class="nav-link text-muted">Dynamic colors</a></li><li class="nav-item position-relative">
+            <a href="#image-variations" class="nav-link text-muted">Image variations</a></li><li class="nav-item position-relative">
+            <a href="#trait-collections" class="nav-link text-muted">Trait Collections</a></li><li class="nav-item position-relative">
+            <a href="#api-updates" class="nav-link text-muted">API updates</a></li><li class="nav-item position-relative">
+            <a href="#demos" class="nav-link text-muted">Demos</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link">
+  About
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility" class="nav-link">
+  Accessibility
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2019/19214.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" aria-label="Back to top">
+      <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+        <span class="d-none d-sm-inline-block">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.min.js" integrity="sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
