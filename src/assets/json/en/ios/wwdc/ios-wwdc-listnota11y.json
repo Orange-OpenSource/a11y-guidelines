@@ -12,6 +12,17 @@
   },
   {
     "themes": "WWDC 2021",
+    "title": "Build interfaces with style",
+    "type": ["Button","ScrollView","SF Symbol"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2021/2110196",
+    "profils": ["All","Accessibility","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
     "title": "Platforms State of the Union",
     "type": ["Notification","Widget"],
     "tests": [],
