@@ -22,8 +22,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     {# styles #}
-    {#<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@{{ vendors.boosted.version }}/dist/css/boosted.min.css" integrity="{{ vendors.boosted.css.integrity }}" crossorigin="anonymous">#}
-    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@{{ vendors.boosted.version }}/dist/css/boosted.min.css" rel="stylesheet" integrity="{{ vendors.boosted.css.integrity }}" crossorigin="anonymous">
     {% if highlightJS == true %}
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@{{ vendors.highlightJS.version }}/build/styles/{{ vendors.highlightJS.theme }}.min.css">
     {% endif %}
@@ -62,8 +61,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/{{ vendors.popper.version }}/umd/popper.min.js" integrity="{{ vendors.popper.integrity }}" crossorigin="anonymous"></script>
     {% endif %}
     {% if boostedJS == true or displayToc == true %}
-      {#<script src="https://cdn.jsdelivr.net/npm/boosted@{{ vendors.boosted.version }}/dist/js/boosted.min.js" integrity="{{ vendors.boosted.js.integrity }}" crossorigin="anonymous"></script> #}
-      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@{{ vendors.boosted.version }}/dist/js/boosted.bundle.min.js" integrity="{{ vendors.boosted.js.integrity }}" crossorigin="anonymous"></script>
     {% endif %}
     {% if jqueryValidate == true %}
       <script src="https://cdn.jsdelivr.net/npm/jquery-validation@{{ vendors.jqueryValidate.version }}/dist/jquery.validate.min.js"></script>
