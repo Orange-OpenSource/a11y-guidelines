@@ -157,7 +157,7 @@ function highlightCodeBlocks () {
 
 function enhanceSearchField () {
   const searchInputSkipLink = document.querySelector('[role="banner"] a[href="#search-input"]')
-  const searchInputContainer = $('#search-input-container') //TODO remove jquery in boosted 5
+  const searchInputContainer = document.getElementById('search-input-container') //TODO remove jquery in boosted 5
   const searchInputToggler = document.getElementById('search-input-toggler')
   const searchInput = document.getElementById('search-input')
 
@@ -168,7 +168,9 @@ function enhanceSearchField () {
     if (searchInputToggler.getAttribute('aria-expanded') === 'true') {
       searchInput.focus()
     } else {
-      searchInputContainer.collapse('show')
+      var bscollapse=new boosted.Collapse(searchInputContainer, {
+        show: true
+      })
     }
   })
 
@@ -196,8 +198,8 @@ function enhanceSearchField () {
   /**
    * Set focus directly in the search box when we open it
    */
-  searchInputContainer.on('shown.bs.collapse', function () {
-    $(this).find('[type="search"]').focus()
+  searchInputContainer.addEventListener('shown.bs.collapse', function () {
+    this.querySelector('[type="search"]').focus();
   })
 }
 

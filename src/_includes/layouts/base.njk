@@ -58,9 +58,6 @@
     </nav>
     <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
     <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
-    {% if jquery == true or boostedJS == true or displayToc == true %}
-      <script src="https://code.jquery.com/jquery-{{ vendors.jquery.version }}.slim.min.js" integrity="{{ vendors.jquery.integrity }}" crossorigin="anonymous"></script>
-    {% endif %}
     {% if popperJS == true %}
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/{{ vendors.popper.version }}/umd/popper.min.js" integrity="{{ vendors.popper.integrity }}" crossorigin="anonymous"></script>
     {% endif %}

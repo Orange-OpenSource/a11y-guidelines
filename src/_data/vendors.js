@@ -12,10 +12,6 @@ module.exports = {
     version: '10.1.1',
     theme: 'a11y-light'
   },
-  jquery: {
-    version: '3.5.1',
-    integrity: 'sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj'
-  },
   jqueryValidate: {
     version: '1.19.2'
   },
