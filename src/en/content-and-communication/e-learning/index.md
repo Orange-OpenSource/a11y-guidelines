@@ -216,8 +216,8 @@ Profits :
 - Simplify keyboard navigation by removing unnecessary elements from the keyboard path
 
 <figure class="figure">
-<img alt="" src="/fr/contenu-et-communication/images/image-deco-1.png" class="w-50 pr-1 float-left">
-<img alt="" src="/fr/contenu-et-communication/images/image-deco-2.png" class="w-50 float-left">
+<img alt="" src="/fr/contenu-et-communication/images/image-deco-1.png" class="w-50 pe-1 float-start">
+<img alt="" src="/fr/contenu-et-communication/images/image-deco-2.png" class="w-50 float-start">
 <figcaption class="figure-caption">
 Examples of decorative images, in these contexts, the figures or the table leg do not provide any information.
 They can therefore be hidden from users of technical aids.

@@ -12,9 +12,9 @@
       }
 
       if (button.classList.contains('tarteaucitronAllow')) {
-        button.classList.add('btn', 'btn-inverse', 'btn-primary', 'ml-2')
+        button.classList.add('btn', 'btn-inverse', 'btn-primary', 'ms-2')
       } else {
-        button.classList.add('btn', 'btn-inverse', 'btn-info', 'ml-2')
+        button.classList.add('btn', 'btn-inverse', 'btn-info', 'ms-2')
       }
     })
   }, { once: true })
@@ -24,9 +24,9 @@
 
     servicesContainer.querySelectorAll('button').forEach(function (button) {
       if (button.classList.contains('tarteaucitronAllow')) {
-        button.classList.add('btn', 'btn-primary', 'btn-inverse', 'ml-2')
+        button.classList.add('btn', 'btn-primary', 'btn-inverse', 'ms-2')
       } else {
-        button.classList.add('btn', 'btn-info', 'ml-2')
+        button.classList.add('btn', 'btn-info', 'ms-2')
       }
     })
   }, { once: true })
@@ -148,7 +148,7 @@ function highlightCodeBlocks () {
     const displayLanguage = displayLanguageList[language] || language
 
     const languageWrapper = document.createElement('div')
-    languageWrapper.classList.add('bg-primary', 'd-inline-block', 'p-2', 'font-weight-bold')
+    languageWrapper.classList.add('bg-primary', 'd-inline-block', 'p-2', 'fw-bold')
     languageWrapper.textContent = displayLanguage
 
     codeBlock.parentNode.insertBefore(languageWrapper, codeBlock)

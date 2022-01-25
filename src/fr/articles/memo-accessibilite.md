@@ -29,7 +29,7 @@ Choisissez les mémos qui vous correspondent :
 
 <div class="row">
   <div class="col-3">
-    <p class="border-right">
+    <p class="border-end">
       <img src="../images/memos/memo-dev-web.png" alt="">
     </p>
   </div>
@@ -53,7 +53,7 @@ Choisissez les mémos qui vous correspondent :
 
 <div class="row">
   <div class="col-3">
-    <p class="border-right">
+    <p class="border-end">
       <img src="../images/memos/memo-tests-web.png" alt="">
     </p>
   </div>
@@ -78,7 +78,7 @@ Choisissez les mémos qui vous correspondent :
 
 <div class="row">
   <div class="col-3">
-    <p class="border-right">
+    <p class="border-end">
       <img src="../images/memos/memo-android.png" alt="">
     </p>
   </div>
@@ -102,7 +102,7 @@ Choisissez les mémos qui vous correspondent :
 
 <div class="row">
   <div class="col-3">
-    <p class="border-right">
+    <p class="border-end">
       <img src="../images/memos/memo-ios.png" alt="">
     </p>
   </div>
@@ -126,7 +126,7 @@ Choisissez les mémos qui vous correspondent :
 
 <div class="row">
   <div class="col-3">
-    <p class="border-right">
+    <p class="border-end">
       <img src="../images/memos/memo-email.png" alt="">
     </p>
   </div>
@@ -147,7 +147,7 @@ Choisissez les mémos qui vous correspondent :
 
 <div class="row">
   <div class="col-3">
-    <p class="border-right">
+    <p class="border-end">
       <img src="../images/memos/memo-word.png" alt="">
     </p>
   </div>
