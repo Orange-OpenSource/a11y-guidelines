@@ -15,11 +15,11 @@
 {%- endmacro -%}
 
 {%- macro cardNavigation(links) -%}
-<div class="row">
+<div class="row row-cols-1 row-cols-md-4 g-4">
 {%- for link in links -%}
 {%- set isLast = loop.index == links | length -%}
-<div class="col-md-3">
-  <div class="card bg-{{ link.theme }} border-secondary {{ "mb-0" if isLast else "mb-4 mb-md-0" }}">
+<div class="col">
+  <div class="card h-100 bg-{{ link.theme }} border-secondary">
     <div class="p{% if link.icon.name == "editorial-content" %}t{% else %}y{% endif %}-3 px-3 text-center">
       <img src="../images/icons/{{ link.icon.name }}.svg" alt="" class="img-fluid" width="{{ link.icon.width }}" height="{{ link.icon.height }}">
     </div>
