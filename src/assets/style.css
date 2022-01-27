@@ -311,6 +311,8 @@ pre code {
 /**
  * Boosted migration fix
  */
+
+ /*search header*/
 .form-control.bg-dark:focus {
   color:#FFF;
   border-color:#ff7900!important;
@@ -325,4 +327,18 @@ pre code {
   height: .25rem;
   content: "";
   background-color: #ff7900;
+}
+
+/*footer*/
+.o-footer {
+    margin-top: 1.875rem;
+    background-color: #000;
+}
+
+.o-footer * {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.125;
+  color: #fff;
+  letter-spacing: -.00625rem;
 }
