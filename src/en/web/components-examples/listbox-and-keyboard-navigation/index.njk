@@ -1,192 +1,142 @@
--- -title : "Listbox and keyboard navigation"
-abstract : "Example of ARIA list (part 2)"
-tags : componentsExamples_en
-css : -style.css
-js : -wgxpath.install.js - script.js
--- - <h1>Listbox and keyboard navigation</h1>
+---
+title: "Listbox and keyboard navigation"
+abstract: "Example of ARIA list (part 2)"
+tags: componentsExamples_en
+css:
+  - style.css
+js:
+  - wgxpath.install.js
+  - script.js
+---
+
+<h1>Listbox and keyboard navigation</h1>
+
 <h2>Introduction</h2>
-<p>For this article, we start from
-  <a href="../listbox-with-checkboxes/">the example of the listbox with checkboxes</a>. The objective is to improve keyboard navigation in order to get close to the W3C / WAI guidelines.</p>
-<h2>
-  <abbr title="Accessible Rich Internet Applications">ARIA</abbr>
-  patterns</h2>
-<p>The W3C maintains online specifications that describe how
-  <abbr>ARIA</abbr>
-  components should behave:
-  <a href="https://www.w3.org/TR/wai-aria-practices-1.1/">
-    <abbr>WAI-ARIA</abbr>
-    Authoring Practices 1.1</a>.</p>
-<p>The
-  <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox">specifications for the listbox</a>
-  tell us that:</p>
+<p>For this article, we start from <a href="../listbox-with-checkboxes/">the example of the listbox with checkboxes</a>. The objective is to improve keyboard navigation in order to get close to the W3C / WAI guidelines.</p>
+
+<h2><abbr title="Accessible Rich Internet Applications">ARIA</abbr> patterns</h2>
+<p>The W3C maintains online specifications that describe how <abbr>ARIA</abbr> components should behave: <a href="https://www.w3.org/TR/wai-aria-practices-1.1/"><abbr>WAI-ARIA</abbr> Authoring Practices 1.1</a>.</p>
+<p>The <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#Listbox">specifications for the listbox</a> tell us that:</p>
 <ul>
-  <li>The list must be focusable (<code>tabindex="0"</code>).</li>
-  <li>The
-    <kbd>up</kbd>
-    /
-    <kbd>down</kbd>
-    arrows must be used to choose the selected item.</li>
-  <li>We must be able to select an item by quickly typing the first few characters (e.g. when pressing the “<kbd>p</kbd>” and “<kbd>h</kbd>” keys, the selection must move to “<strong>Ph</strong>otos”).</li>
-  <li>
-    <kbd>Shift + F10</kbd>
-    must allow to open the focused item context menu if the item has one.</li>
-  <li>In case of a multiple-selection list, the
-    <kbd>Ctrl + a</kbd>
-    shortcut should select all items.</li>
-  <li>The
-    <kbd>Home</kbd>
-    and
-    <kbd>End</kbd>
-    keys must be able to respectively select the first and the last item of the list.</li>
+    <li>The list must be focusable (<code>tabindex="0"</code>).</li>
+    <li>The <kbd>up</kbd> / <kbd>down</kbd> arrows must be used to choose the selected item.</li>
+    <li>We must be able to select an item by quickly typing the first few characters (e.g. when pressing the “<kbd>p</kbd>” and “<kbd>h</kbd>” keys, the selection must move to “<strong>Ph</strong>otos”).</li>
+    <li><kbd>Shift + F10</kbd> must allow to open the focused item context menu if the item has one.</li>
+    <li>In case of a multiple-selection list, the <kbd>Ctrl + a</kbd> shortcut should select all items.</li>
+    <li>The <kbd>Home</kbd> and <kbd>End</kbd> keys must be able to respectively select the first and the last item of the list.</li>
 </ul>
+
 <h2>Example</h2>
 <div class="row">
   <ul role="listbox" tabindex="0" class="col-md-8">
-    <li tabindex="-1" role="option" aria-checked="false">
-      <div class="form-check mb-0">
-        <input tabindex="-1" id="check1" class="form-check-input" type="checkbox">
-          <label for="check1">
-            <span>Important information about your account</span>
-          </label>
-        </div>
+      <li tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check1" class="form-check-input" type="checkbox"><label for="check1">
+              <span>Important information about your account</span></label>
+            </div>
       </li>
       <li tabindex="-1" role="option" aria-checked="false">
-        <div class="form-check mb-0">
-          <input tabindex="-1" id="check2" class="form-check-input" type="checkbox">
-            <label for="check2">
-              <span>Sending message test</span>
-            </label>
-          </div>
-        </li>
-        <li tabindex="-1" role="option" aria-checked="false">
-          <div class="form-check mb-0">
-            <input tabindex="-1" id="check3" class="form-check-input" type="checkbox">
-              <label for="check3">
-                <span>Photos of the weekend at the sea</span>
-              </label>
-            </div>
-          </li>
-          <li tabindex="-1" role="option" aria-checked="false">
             <div class="form-check mb-0">
-              <input tabindex="-1" id="check4" class="form-check-input" type="checkbox">
-                <label for="check4">
-                  <span>Re: Your order N°3642</span>
-                </label>
-              </div>
-            </li>
-            <li tabindex="-1" role="option" aria-checked="false">
-              <div class="form-check mb-0">
-                <input tabindex="-1" id="check5" class="form-check-input" type="checkbox">
-                  <label for="check5">
-                    <span>Re: At noon, it will be the last!</span>
-                  </label>
-                </div>
-              </li>
-              <li tabindex="-1" role="option" aria-checked="false">
-                <div class="form-check mb-0">
-                  <input tabindex="-1" id="check6" class="form-check-input" type="checkbox">
-                    <label for="check6">
-                      <span>
-                        <i lang="fr">Jazz à Vienne</i>
-                        #36 has started!</span>
-                    </label>
-                  </div>
-                </li>
-                <li tabindex="-1" role="option" aria-checked="false">
-                  <div class="form-check mb-0">
-                    <input tabindex="-1" id="check7" class="form-check-input" type="checkbox">
-                      <label for="check7">
-                        <span>Wine order</span>
-                      </label>
-                    </div>
-                  </li>
-                  <li tabindex="-1" role="option" aria-checked="false">
-                    <div class="form-check mb-0">
-                      <input tabindex="-1" id="check8" class="form-check-input" type="checkbox">
-                        <label for="check8">
-                          <span>CDS 2016</span>
-                        </label>
-                      </div>
-                    </li>
-                    <li tabindex="-1" role="option" aria-checked="false">
-                      <input tabindex="-1" id="check9" class="form-check-input" type="checkbox">
-                        <label for="check9">
-                          <span>Work council offers</span>
-                        </label>
-                      </li>
-                      <li tabindex="-1" role="option" aria-checked="false">
-                        <div class="form-check mb-0">
-                          <input tabindex="-1" id="check10" class="form-check-input" type="checkbox">
-                            <label for="check10">
-                              <span>Re: Reading</span>
-                            </label>
-                          </div>
-                        </li>
-                        <li tabindex="-1" role="option" aria-checked="false">
-                          <div class="form-check mb-0">
-                            <input tabindex="-1" id="check11" class="form-check-input" type="checkbox">
-                              <label for="check11">
-                                <span>You have more friends than you can ever imagine</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li tabindex="-1" role="option" aria-checked="false">
-                            <div class="form-check mb-0">
-                              <input tabindex="-1" id="check12" class="form-check-input" type="checkbox">
-                                <label for="check12">
-                                  <span>10 for today</span>
-                                </label>
-                              </div>
-                            </li>
-                            <li tabindex="-1" role="option" aria-checked="false">
-                              <div class="form-check mb-0">
-                                <input tabindex="-1" id="check13" class="form-check-input" type="checkbox">
-                                  <label for="check13">
-                                    <span>Notification: appointment tonight</span>
-                                  </label>
-                                </div>
-                              </li>
-                              <li tabindex="-1" role="option" aria-checked="false">
-                                <div class="form-check mb-0">
-                                  <input tabindex="-1" id="check14" class="form-check-input" type="checkbox">
-                                    <label for="check14">
-                                      <span>More than 20,000 discounted items!</span>
-                                    </label>
-                                  </div>
-                                </li>
-                                <li tabindex="-1" role="option" aria-checked="false">
-                                  <div class="form-check mb-0">
-                                    <input tabindex="-1" id="check15" class="form-check-input" type="checkbox">
-                                      <label for="check15">
-                                        <span>7 stories you shouldn't miss</span>
-                                      </label>
-                                    </div>
-                                  </li>
-                                  <li tabindex="-1" role="option" aria-checked="false">
-                                    <div class="form-check mb-0">
-                                      <input tabindex="-1" id="check16" class="form-check-input" type="checkbox">
-                                        <label for="check16">
-                                          <span>Warning, only 2 days left</span>
-                                        </label>
-                                      </div>
-                                    </li>
-                                    <li tabindex="-1" role="option" aria-checked="false">
-                                      <div class="form-check mb-0">
-                                        <input tabindex="-1" id="check17" class="form-check-input" type="checkbox">
-                                          <label for="check17">
-                                            <span>Your order n°04565</span>
-                                          </label>
-                                        </div>
-                                      </li>
-                                    </ul>
-                                  </div>
-                                  <h2>Implementation</h2>
-                                  <p>The functionality to automatically select the item by typing the first letters is not easy to implement. The
-                                    following example uses
-                                    <abbr title="XML Path Language">XPath</abbr>.</p>
-                                  <p>The first thing to do is listen to the keyboard once the focus is on the list. Depending on the key, it performs an
-                                    action (selecting an item, moving the selected item…).</p>
-                                  <pre><code class="javascript">
+              <input tabindex="-1" id="check2" class="form-check-input" type="checkbox"><label for="check2">
+              <span>Sending message test</span></label>
+            </div>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check3" class="form-check-input" type="checkbox"><label for="check3">
+              <span>Photos of the weekend at the sea</span></label>
+            </div>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check4" class="form-check-input" type="checkbox"><label for="check4">
+              <span>Re: Your order N°3642</span></label>
+            </div>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check5" class="form-check-input" type="checkbox"><label for="check5">
+              <span>Re: At noon, it will be the last!</span></label>
+            </div>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check6" class="form-check-input" type="checkbox"><label for="check6">
+              <span><i lang="fr">Jazz à Vienne</i> #36 has started!</span></label>
+            </div>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check7" class="form-check-input" type="checkbox"><label for="check7">
+              <span>Wine order</span></label>
+            </div>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check8" class="form-check-input" type="checkbox"><label for="check8">
+              <span>CDS 2016</span></label>
+            </div>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+          <input tabindex="-1" id="check9" class="form-check-input" type="checkbox"><label for="check9">
+          <span>Work council offers</span></label>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check10" class="form-check-input" type="checkbox"><label for="check10">
+              <span>Re: Reading</span></label>
+            </div>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check11" class="form-check-input" type="checkbox"><label for="check11">
+              <span>You have more friends than you can ever imagine</span></label>
+            </div>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check12" class="form-check-input" type="checkbox"><label for="check12">
+              <span>10 for today</span></label>
+            </div>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check13" class="form-check-input" type="checkbox"><label for="check13">
+              <span>Notification: appointment tonight</span></label>
+            </div>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check14" class="form-check-input" type="checkbox"><label for="check14">
+              <span>More than 20,000 discounted items!</span></label>
+            </div>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check15" class="form-check-input" type="checkbox"><label for="check15">
+              <span>7 stories you shouldn't miss</span></label>
+            </div>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check16" class="form-check-input" type="checkbox"><label for="check16">
+              <span>Warning, only 2 days left</span></label>
+            </div>
+      </li>
+      <li tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check17" class="form-check-input" type="checkbox"><label for="check17">
+              <span>Your order n°04565</span></label>
+            </div>
+      </li>
+  </ul>
+</div>
+
+<h2>Implementation</h2>
+<p>The functionality to automatically select the item by typing the first letters is not easy to implement. The following example uses <abbr title="XML Path Language">XPath</abbr>.</p>
+<p>The first thing to do is listen to the keyboard once the focus is on the list. Depending on the key, it performs an action (selecting an item, moving the selected item…).</p>
+
+<pre><code class="javascript">
 …
 // Init
 const listbox = document.querySelector("[role=listbox]");
@@ -252,19 +202,3 @@ default:  // Search item starts with
 <p>To search the item in the list, we use the following <abbr>XPath</abbr> query <code>/li/span[starts-with(text(), "the string to search")]</code>. In addition, in order to fix the character case issue, we use the <code>translate</code> function.</p>
 
 <p>Finally, for compatibility issues with Internet Explorer, we use the <a href="https://github.com/google/wicked-good-xpath">Google <abbr>XPath</abbr> polyfill</a>, you just need to include it and install it at page load using: <code>wgxpath.install();</code>.</p>
- 
-                                </li>
-                              </li>
-                            </li>
-                          </li>
-                        </li>
-                      </li>
-                    </li>
-                  </li>
-                </li>
-              </li>
-            </li>
-          </li>
-        </li>
-      </li>
-    </li>
