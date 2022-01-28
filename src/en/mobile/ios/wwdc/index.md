@@ -6,7 +6,7 @@ displayToc: true
 
 # WWDC : World Wide Developers Conference
 
-This section regroups [presentations at the WWDC](https://developer.apple.com/videos/) dealing with accessibility.
+This section regroups [presentations at the WWDC](nota11y/) dealing with accessibility.
 
 Each one of them is detailed with time references to their different contents.
 

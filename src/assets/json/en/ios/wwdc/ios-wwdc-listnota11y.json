@@ -1,0 +1,90 @@
+[
+{
+    "themes": "FAKE",
+    "title": "",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["All","Accessibility","Dark Mode","Debugging","DocC","Formatting","Instruments","Localization","Optimization","Platforms...","Swift","SwiftUI","TextKit","What's new in...","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
+    "title": "Build interfaces with style",
+    "type": ["Button","ScrollView","SF Symbol"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2021/2110196",
+    "profils": ["All","Accessibility","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
+    "title": "Platforms State of the Union",
+    "type": ["Notification","Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2021/21102",
+    "profils": ["All","Platforms...","Swift","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
+    "title": "Streamline your localized strings",
+    "type": ["Attributed String"],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/2110221",
+    "profils": ["All","Localization","Formatting","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
+    "title": "What's new in Foundation",
+    "type": ["Attributed String"],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/2110109",
+    "profils": ["All","What's new in...","Localization","Formatting"]
+  },
+  {
+    "themes": "WWDC 2021",
+    "title": "What's new in UIKit",
+    "type": ["SF Symbol","ScrollView","Button","Scene","UIBar","Menu","Pasteboard"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2021/2110059",
+    "profils": ["All","Accessibility","What's new in..."]
+  },
+   {
+    "themes": "WWDC 2020",
+    "title": "Formatters",
+    "type": ["Attributed String"],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2020/2010160",
+    "profils": ["All","Formatting","SwiftUI"]
+  },
+  {
+    "themes": "WWDC 2019",
+    "title": "Implementing Dark Mode on iOS",
+    "type": ["Materials","UIBar","Attributed String","Activity Indicator"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2019/19214",
+    "profils": ["All","Dark Mode","Xcode"]
+  }
+]

@@ -157,7 +157,7 @@ function highlightCodeBlocks () {
 
 function enhanceSearchField () {
   const searchInputSkipLink = document.querySelector('[role="banner"] a[href="#search-input"]')
-  const searchInputContainer = document.getElementById('search-input-container') //TODO remove jquery in boosted 5
+  const searchInputContainer = document.getElementById('search-input-container') 
   const searchInputToggler = document.getElementById('search-input-toggler')
   const searchInput = document.getElementById('search-input')
 

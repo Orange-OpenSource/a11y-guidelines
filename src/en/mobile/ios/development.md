@@ -2585,7 +2585,7 @@ Using the switch control feature, all the available actions are present at the f
 It's highly recommended to follow the pattern described in the `Example` sheet to get this purpose for a custom component.
 </div></div>
 
-<br><br>**iOS&nbsp;13** intriduced a **new custom actions behavior**: the "actions available" announcement isn't always present anymore.
+<br><br>**iOS&nbsp;13** introduced a **new custom actions behavior**: the "actions available" announcement isn't always present anymore.
 It was previously offered to every element containing custom actions but, now, **it will occur** when you navigate to another element that **contains a different set of actions**.
 
 The purpose is to **prevent repetitive announcements** on elements where the same actions are present as the previous element.

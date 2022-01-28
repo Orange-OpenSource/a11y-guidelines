@@ -70,7 +70,7 @@ Il s’agit de simples phrases demandant de recopier un mot, de résoudre une op
 « De quelle couleur est le ciel ? »  
 
 A condition que les questions restent très simples, ce type de CAPTCHA pose très peu de difficulté aux utilisateurs.
-Comme il est précisé dans [la notice du site acceDe Web](https://www.accede-web.com/notices/graphique/7-formulaires/7-13-tests-de-securite-tests-logiques/) une bonne pratique dans ce cas consiste à prévoir une solution de rafraîchissement, très utile pour les personnes déficientes cognitives.
+Comme il est précisé dans [la notice du site acceDe Web](https://www.accede-web.com/notices/fonctionnelle-graphique/bonnes-pratiques/privilegier-des-tests-de-securite-sous-forme-de-tests-logiques-plutot-que-sous-forme-de-captcha/) une bonne pratique dans ce cas consiste à prévoir une solution de rafraîchissement, très utile pour les personnes déficientes cognitives.
 
 ## Une vérification par email, SMS ou téléphone pour une sécurité renforcée
 
