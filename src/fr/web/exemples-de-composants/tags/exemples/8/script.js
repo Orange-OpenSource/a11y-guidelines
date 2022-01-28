@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     for (let item of listButton) {
         item.onclick = function(e) {
             if(this.parentElement.previousElementSibling != null){
-                console.log(this.parentElement.previousElementSibling)
                 this.parentElement.previousElementSibling.querySelector("button").focus();
             }
             else if (this.parentElement.nextElementSibling != null){

@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         e.preventDefault();
         break;
       case 8 : // backspace
-        console.log(document.getElementById("selection-list"));
       if(this.value === ""){
         removeItem(document.getElementById("selection-list").lastElementChild);
       }

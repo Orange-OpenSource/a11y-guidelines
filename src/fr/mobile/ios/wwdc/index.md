@@ -20,13 +20,15 @@ Précisions sur la façon de **présenter des graphes** avec VoiceOver en prése
 <a href="2021/122/">
     
 ![Accès à la session Incorporer l'accessibilité à vos graphes.](../../images/iOSdev/wwdc21-122.png)
+</a>
 <br><br><br>
     
 ## [2021 - Optimiser VoiceOver dans un contexte riche en données](2021/121/)
 Cette vidéo détaille parfaitement l'implémentation de la fonctionnalité **fournisseur de contenu personnalisé** apparue avec iOS&nbsp;14.
 <a href="2021/121/">
     
-![Accès à la session Optimiser VoiceOver dans un contexte riche en données.](../../images/iOSdev/wwdc21-121.png)
+![Accès à la session Optimiser VoiceOver dans un contexte riche en données.](../../images/iOSdev/wwdc21-121.png)</a>
+</a>
 <br><br><br>
     
 ## [2020 - Efficience du rotor](2020/116/)
@@ -34,6 +36,7 @@ Explications sur la mise en oeuvre du **rotor personnalisé** à l'aide d'une ap
 <a href="2020/116/">
     
 ![Accès à l'efficience du rotor.](../../images/iOSdev/wwdc20-116.png)
+</a>
 <br><br><br>
 
 ## [2020 - Accessibilité avec le contrôle de sélection](2020/019/)
@@ -41,6 +44,7 @@ Des améliorations significatives pour la **navigation avec le contrôle de sél
 <a href="2020/019/">
     
 ![Accès à l'accessibilité avec le contrôle de sélection.](../../images/iOSdev/wwdc20-019.png)
+</a>
 </br></br></br>
 
 ## [2020 - Rendre un visuel accessible](2020/020/)
@@ -48,6 +52,7 @@ Cette présentation met en avant un ensemble de critères et de méthodes pour p
 <a href="2020/020/">
     
 ![Accès à rendre un visuel accessible.](../../images/iOSdev/wwdc20-020.png)
+</a>
 </br></br></br>
 
 ## [2019 - Large Content Viewer](2019/261/)
@@ -55,6 +60,7 @@ Cette courte vidéo concerne la fonctionnalité **Large Content Viewer** apparue
 <a href="2019/261/">
     
 ![Accès aux quelques enseignements en accessibilité.](../../images/iOSdev/wwdc19-261.png)
+</a>
 <br><br><br>
 
 ## [2019 - Quelques enseignements en accessibilité](2019/)
@@ -62,6 +68,7 @@ Cette session regroupe quatre courtes interventions toutes liées à l'accessibi
 <a href="2019/">
     
 ![Accès aux quelques enseignements en accessibilité.](../../images/iOSdev/wwdc19-000.png)
+</a>
 <br><br><br>
 
 ## [2018 - Fournir une expérience exceptionnelle en accessibilité](2018/230/)
@@ -71,6 +78,7 @@ Le détail de leurs mises en oeuvre est exposé aux développeurs par le biais d
 <a href="2018/230/">
     
 ![Accès à fournir une expérience exceptionnelle en accessibilité.](../../images/iOSdev/wwdc18-230.png)
+</a>
 <br><br><br>
     
 ## [2018 - Utiliser une voix synthétisée](2018/236/)
@@ -78,6 +86,7 @@ Cette très courte vidéo présente les éléments principaux à mettre en oeuvr
 <a href="2018/236/">
     
 ![Accès à utiliser une voix synthétisée.](../../images/iOSdev/wwdc18-236.png)
+</a>
 <br><br><br>
     
 ## [2017 - Les nouveautés en accessibilité](2017/215/)
@@ -85,6 +94,7 @@ Présentation des nouvelles fonctionnalités d'accessibilité iOS 11 en associan
 <a href="2017/215/">
     
 ![Accès aux nouveautés en accessibilité 2017.](../../images/iOSdev/wwdc17-215.png)
+</a>
 <br><br><br>
 
 ## [2017 - Application du Dynamic Type](2017/245/)
@@ -94,6 +104,7 @@ Cette vidéo propose à la fois une approche théorique pour bien comprendre les
 <a href="2017/245/">
     
 ![Accès à l'application du dynamic type.](../../images/iOSdev/wwdc17-245.png)
+</a>
 <br><br><br>
 
 ## [2016 - Les nouveautés en accessibilité](2016/202/)
@@ -101,6 +112,7 @@ Présentation des nouvelles fonctionnalités d'accessibilité iOS, MacOS, tvOS e
 <a href="2016/202/">
     
 ![Accès aux nouveautés en accessibilité 2016.](../../images/iOSdev/wwdc16-202.png)
+</a>
 <br><br><br>
     
 ## [2016 - Audit d'une app en accessibilité](2016/407/)
@@ -108,3 +120,4 @@ Après un rappel sur le fonctionnement de <span lang="en">VoiceOver</span> au ni
 <a href="2016/407/">
     
 ![Accès à l'audit d'une app en accessibilité.](../../images/iOSdev/wwdc16-407.png)
+</a>

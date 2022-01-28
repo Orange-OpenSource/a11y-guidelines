@@ -17,12 +17,10 @@ To test if your service is accessible using the keyboard, you can try to navigat
 
 <table class="table">
 <caption class="visually-hidden">List of keyboard shortcuts</caption>
-   <thead>
       <tr>
-         <th>Interactions</th>
-         <th>Shortcuts</th>
+         <th scope="col">Interactions</th>
+         <th scope="col">Shortcuts</th>
       </tr>
-   </thead>
    <tbody>
       <tr>
          <td>To move the focus</td>

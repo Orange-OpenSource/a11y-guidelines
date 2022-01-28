@@ -319,7 +319,14 @@ pre code {
 }
 
 /*secondary navigation*/
-.navbar-light .nav-link.active::before {
+
+.o-nav-local .nav > .nav-item:first-child .active::before {
+
+  left: 0;
+
+}
+.o-nav-local .nav-link.active::before {
+
   position: absolute;
   right: 1.25rem;
   bottom: -.0625rem;
@@ -327,6 +334,13 @@ pre code {
   height: .25rem;
   content: "";
   background-color: #ff7900;
+
+}
+
+.o-nav-local .nav-link {
+  position: relative;
+  padding: .875rem 1.25rem;
+  padding-left: 1.25rem;
 }
 
 /*footer*/
