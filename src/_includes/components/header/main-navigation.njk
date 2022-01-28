@@ -10,7 +10,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="main-menu-list">
-      <ul id="main-menu-list" class="navbar-nav me-auto">
+      <ul class="navbar-nav me-auto">
         {%- for link in navigation.main[locale] -%}
           <li class="nav-item">
             {{ ui.navLink(link) }}
