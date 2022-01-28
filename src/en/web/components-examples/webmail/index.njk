@@ -1,71 +1,82 @@
----
-title: "Webmail ARIA example"
-abstract: "Accessible webmail sample"
-css:
-  - style.css
-js:
-  - script.js
----
-
-<h1>Webmail <abbr>ARIA</abbr> example</h1>
-
-<div class="row">
+-- -title : "Webmail ARIA example"
+abstract : "Accessible webmail sample"
+css : -style.css
+js : -script.js
+-- - <h1>Webmail
+  <abbr>ARIA</abbr>
+  example</h1>
+<div
+  class="row">
   <!-- Liste des dossiers email -->
   <ul id="listbox-ok" role="listbox" tabindex="0" class="col-md-2" aria-label="Folders list">
-      <li tabindex="-1" role="option">Inbox (24) <span class="visually-hidden">unread messages</span></li>
-      <li tabindex="-1" role="option">Sent</li>
-      <li tabindex="-1" role="option">Drafts</li>
-      <li tabindex="-1" role="option">Trash</li>
+    <li tabindex="-1" role="option">Inbox (24)
+      <span class="visually-hidden">unread messages</span>
+    </li>
+    <li tabindex="-1" role="option">Sent</li>
+    <li tabindex="-1" role="option">Drafts</li>
+    <li tabindex="-1" role="option">Trash</li>
   </ul>
-
   <!-- liste des email -->
   <ul id="exempleCheckbox" role="listbox" tabindex="0" class="emails col-md-5" aria-label="Emails list">
-      <li class="unread" tabindex="-1" role="option" aria-checked="false">
-          <div class="form-check mb-0">
-            <input tabindex="-1" id="check1" class="form-check-input" type="checkbox"><label for="check1"></label>
-            <span class="visually-hidden">Unread. </span>Important information about your account
-          </div>
+    <li class="unread" tabindex="-1" role="option" aria-checked="false">
+      <div class="form-check mb-0">
+        <input tabindex="-1" id="check1" class="form-check-input" type="checkbox">
+          <label for="check1">
+            <span class="visually-hidden">Unread.
+            </span>Important information about your account</label>
+        </div>
       </li>
       <li class="unread" tabindex="-1" role="option" aria-checked="false">
-          <div class="form-check mb-0">
-            <input tabindex="-1" id="check2" class="form-check-input" type="checkbox"><label for="check2"></label>
-            <span class="visually-hidden">Unread. </span>Sending message test
+        <div class="form-check mb-0">
+          <input tabindex="-1" id="check2" class="form-check-input" type="checkbox">
+            <label for="check2">
+              <span class="visually-hidden">Unread.
+              </span>Sending message test</label>
           </div>
-      </li>
-      <li tabindex="-1" role="option" aria-checked="false">
+        </li>
+        <li tabindex="-1" role="option" aria-checked="false">
           <div class="form-check mb-0">
-            <input tabindex="-1" id="check3" class="form-check-input" type="checkbox"><label for="check3"></label>
-            Photos of the weekend at the sea
-          </div>
+            <input tabindex="-1" id="check3" class="form-check-input" type="checkbox">
+              <label for="check3">
+                Photos of the weekend at the sea</label>
+            </div>
+          </li>
+          <li class="unread" tabindex="-1" role="option" aria-checked="false">
+            <div class="form-check mb-0">
+              <input tabindex="-1" id="check4" class="form-check-input" type="checkbox">
+                <label for="check4">
+                  <span class="visually-hidden">Unread.
+                  </span>Re: Your order N°3642</label>
+              </div>
+            </li>
+            <li tabindex="-1" role="option" aria-checked="false">
+              <div class="form-check mb-0">
+                <input tabindex="-1" id="check5" class="form-check-input" type="checkbox">
+                  <label for="check5">
+                    Newsletter of the week</label>
+                </div>
+              </li>
+              <li tabindex="-1" role="option" aria-checked="false">
+                <div class="form-check mb-0">
+                  <input tabindex="-1" id="check6" class="form-check-input" type="checkbox">
+                    <label for="check6">
+                      Special offers: -20% discount on several articles</label>
+                  </div>
+                </li>
+                <li tabindex="-1" role="option" aria-checked="false">
+                  <div class="form-check mb-0">
+                    <input tabindex="-1" id="check7" class="form-check-input" type="checkbox">
+                      <label for="check7">
+                        Tonight !</label>
+                    </div>
+                  </li>
+                </ul>
+                <div class="col-md-5">
+                  Reading pane…
+                </div>
+              </div>
+            </li>
+          </li>
+        </li>
       </li>
-      <li class="unread" tabindex="-1" role="option" aria-checked="false">
-          <div class="form-check mb-0">
-            <input tabindex="-1" id="check4" class="form-check-input" type="checkbox"><label for="check4"></label>
-            <span class="visually-hidden">Unread. </span>Re: Your order N°3642
-          </div>
-      </li>
-      <li tabindex="-1" role="option" aria-checked="false">
-          <div class="form-check mb-0">
-            <input tabindex="-1" id="check5" class="form-check-input" type="checkbox"><label for="check5"></label>
-            Newsletter of the week
-          </div>
-      </li>
-      <li tabindex="-1" role="option" aria-checked="false">
-          <div class="form-check mb-0">
-            <input tabindex="-1" id="check6" class="form-check-input" type="checkbox"><label for="check6"></label>
-            Special offers: -20% discount on several articles
-          </div>
-      </li>
-      <li tabindex="-1" role="option" aria-checked="false">
-          <div class="form-check mb-0">
-            <input tabindex="-1" id="check7" class="form-check-input" type="checkbox"><label for="check7"></label>
-            Tonight !
-          </div>
-      </li>
-  </ul>
-
-  <div class="col-md-5">
-      Reading pane…
-  </div>
-
-</div>
+    </li>
