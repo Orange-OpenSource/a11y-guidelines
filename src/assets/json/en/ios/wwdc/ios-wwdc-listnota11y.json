@@ -23,6 +23,17 @@
   },
   {
     "themes": "WWDC 2021",
+    "title": "Localize your SwiftUI app",
+    "type": ["Attributed String"],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/2110220",
+    "profils": ["All","Localization","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
     "title": "Meet the UIKit button system",
     "type": ["Button","Menu"],
     "tests": [],
