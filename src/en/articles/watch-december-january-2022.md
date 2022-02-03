@@ -18,14 +18,18 @@ https://w3c.github.io/captcha-accessibility/
 - WCAG 3.0 not ready to be ready but…: https://yatil.net/blog/wcag-3-is-not-ready-yet
 - Do you need a transcript with podcasts, spoiler: yes: https://www.boia.org/blog/do-i-need-to-write-podcast-transcripts-for-accessibility
 - alt and descriptions in the photo metadata standards of images: https://www.scribelytribe.com/blog/one-giant-leap-for-accessibility-meet-the-new-photo-metadata-standards
-Feedback and accessibility
+
+## Feedback and accessibility
+
 - How to do a11y well with a hHML table basket, great art: https://adrianroselli.com/2022/01/accessible-cart-tables.html
 - Properly manage the alternatives of decorative images alt=””, to read!: https://html5accessibility.com/stuff/2022/01/10/alt-tag-emptiness/
 - ARIA is not the solution, not always: https://dev.to/steady5063/a-tangled-web-of-aria-50nk
 - Accessibility strategy at what3words: https://www.linkedin.com/pulse/accessibility-strategy-gigi-etienne/
 - Why devs don't do accessibility right: https://css-tricks.com/why-dont-developers-take-accessibility-seriously/
 - Misunderstanding of ARIA: https://www.boia.org/blog/5-common-misconceptions-about-wai-aria-and-accessibility
-Accessibility strategy
+
+## Accessibility strategy
+
 - Make a11y in the long run, sustainable in fact: https://tetralogical.com/blog/2021/01/07/sustainable-accessibility/
 - Integrate a11y into the whole team, the basics: https://austingil.com/making-accessibility-more-accessible/
 - Great example of designing an accessible interface component, a reorderable list: https://www.darins.page/articles/designing-a-reorderable-list-component
@@ -48,13 +52,13 @@ Accessibility strategy
 - Better manage focus with CSS: https://css-tricks.com/standardizing-focus-styles-with-css-custom-properties/
 - Visible labels and accessible names (fr): https://www.tanaguru.com/labels-visibles-et-noms-accessibles/
 - A vanillia JS to set a pause button in GIFs, great: https://github.com/adamchaboryk/gifa11y
-- WCAG criterion “2.2.2 pause, hide, stop” and prefers-reduced-motion, how to do it: https://hiddedevries.nl/en/blog/2021-12-03-meeting-2-22- pause-stop-hide-with-prefers-reduced-motion
+- WCAG criterion “2.2.2 pause, hide, stop” and prefers-reduced-motion, how to do it: https://hiddedevries.nl/en/blog/2021-12-03-meeting-2-22-pause-stop-hide-with-prefers-reduced-motion
 - Flash, animation and a11y, the base: https://tetralogical.com/blog/2022/01/10/animations-and-flashing-content/
 - Lots of little tips on this site, here, hide content from all users, nice: https://dev.to/carlosespada/a11y-tips-hide-elements-for-all-users-3f9m
 - Everything you need to know about content headings and the a11y, complete: https://www.a11yproject.com/posts/how-to-accessible-heading-structure/
 - Accessible DOM and chrome devtools: https://developer.chrome.com/blog/full-accessibility-tree/
 - Interesting WCAG valid or invalid field label examples: https://www.tpgi.com/labeling-the-point-scenarios-of-label-misuse-in-wcag/?utm_source=swlinks-tw
-- Difference between HTML and ARIA boolean attributes, all explained: https://hiddedevries.nl/en/blog/2022-01-12-boolean-attributes-in-html-and-aria-whats-the -difference
+- Difference between HTML and ARIA boolean attributes, all explained: https://hiddedevries.nl/en/blog/2022-01-12-boolean-attributes-in-html-and-aria-whats-the-difference
 
 ## Mobile app, mobile web
 
@@ -73,7 +77,7 @@ Accessibility strategy
 
 ## Resources
 
-- Semantic HTML, the basement: https://hiddedevries.nl/en/blog/2022-01-23-more-to-give-than-just-the-div-semantics-and-how-to- get-them-right
+- Semantic HTML, the basement: https://hiddedevries.nl/en/blog/2022-01-23-more-to-give-than-just-the-div-semantics-and-how-to-get-them-right
 - CSS art and a11y: https://alvaromontoro.com/blog/67979/creating-accessible-css-art
 - Several videos on web browsing with assistive technologies, instructive: https://www.lireo.com/how-people-with-disabilities-browse-the-web-using-assistive-technologies-video-series /
 - Reminder for an accessible web dev: https://dev.to/codegino/web-accessibility-cheat-sheet-3774
