@@ -1,7 +1,7 @@
 ---
 title: "Veille #A11y Décembre-Janvier 2022"
 abstract: "Florilèges de ressources en #a11y, Décembre-Janvier 2022"
-date: "2021-11-27"
+date: "2022-02-02"
 tags:
   - veille
 ---
@@ -15,7 +15,7 @@ https://w3c.github.io/captcha-accessibility/ commentaires attendus
 
 ## L’accessibilité dans les lois, les normes et recommandations
 
--	 Editor’s draft de ARIA authoring practices 1.2 en attendant la version finale, les bonnes pratiques d’implémentation d’ARIA (en) :  https://w3c.github.io/aria-practices/#children_presentational 
+-	 Editor’s draft de ARIA authoring practices 1.2 en attendant la version finale, les bonnes pratiques d’implémentation d’ARIA (en) :  https://w3c.github.io/aria-practices/ 
 -	Évolution de la norme sur l’a11y du secteur public en Europe EN 301 549 (en) : https://axesslab.com/en-update/ 
 -	WCAG 3.0 pas prêt d’être prêt mais… (en) : https://yatil.net/blog/wcag-3-is-not-ready-yet 
 -	Faut-il un transcrit avec les podcasts, spoiler : oui (en) : https://www.boia.org/blog/do-i-need-to-write-podcast-transcripts-for-accessibility 
@@ -53,7 +53,7 @@ Stratégie de mise en accessibilité
 -	Critère WCAG “2.2.2 pause, hide, stop” et prefers-reduced-motion, comment faire (en) : https://hiddedevries.nl/en/blog/2021-12-03-meeting-2-22-pause-stop-hide-with-prefers-reduced-motion 
 -	Flash, animation et a11y, la base (en) : https://tetralogical.com/blog/2022/01/10/animations-and-flashing-content/ 
 -	Plein de petites astuces sur ce site, ici, cacher du contenu à tous les utilisateurs, chouette (en) : https://dev.to/carlosespada/a11y-tips-hide-elements-for-all-users-3f9m 
--	Tout ce qu’il faut savoir sur les titres de contenu et l’a11y, complet (en) : https://www.a11yproject.com/posts/how-to-accessible-heading-structure/#wcag-on-headings 
+-	Tout ce qu’il faut savoir sur les titres de contenu et l’a11y, complet (en) : https://www.a11yproject.com/posts/how-to-accessible-heading-structure/ 
 -	DOM Accessible et chrome devtools (en) : https://developer.chrome.com/blog/full-accessibility-tree/ 
 -	Exemples de label de champ valide ou invalide WCAG intéressant (en) : https://www.tpgi.com/labeling-the-point-scenarios-of-label-misuse-in-wcag/?utm_source=swlinks-tw 
 -	Différence entre les attributs booléens HTML et ARIA, tout est expliqué (ne) : https://hiddedevries.nl/en/blog/2022-01-12-boolean-attributes-in-html-and-aria-whats-the-difference 

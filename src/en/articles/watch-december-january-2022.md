@@ -1,7 +1,7 @@
 ---
 title: "#a11y technical watch, December-January 2022"
 abstract: "#a11y anthology, December-January 2022"
-date: "2021-11-27"
+date: "2022-02-02"
 tags:
   - veille
 ---
