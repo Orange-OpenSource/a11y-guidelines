@@ -28,11 +28,11 @@ js:
 <div class="relecture">------------------------ A REVOIR ---------------------------------</div>
 
 <p>Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/">la librairie Boosted</a>. Celle-ci permet
-  d’obtenir des formulaires dont le design est conforme à la charte Orange. Nous utilisons également le plugin jQuery <a href="http://jqueryvalidation.org/" lang="en" hreflang="en">validate</a> pour les contrôles de saisie.</p>
+  d’obtenir des formulaires dont le design est conforme à la charte Orange. Nous utilisons également du javascript pour les contrôles de saisie.</p>
 
 <div class="row pb-3">
   <div class="col-md-8">
-    <form id="formulaire" class="border border-secondary p-3 mt-2">
+    <form id="formulaire" onsubmit="return validateMyForm();" class="border border-secondary p-3 mt-2">
       <div class="form-group">
         <fieldset>
           <legend>Couleur</legend>
@@ -50,6 +50,7 @@ js:
         <label for="numero-serie">Veuillez saisir le numéro de série *</label>
         <input placeholder="Exemple: TS-4521" type="text" name="serie" data-displayname="numéro de série"
                class="form-control" id="numero-serie" aria-describedby="helpblock" aria-required="true">
+        <label id="numero-serie-error" class="error" for="numero-serie" style="display: none;"></label>
       </div>
       <p id="helpblock" class="help-block">Numéro de série commençant par «&nbsp;TS-&nbsp;» suivi de 4 chiffres.</p>
 
@@ -57,6 +58,7 @@ js:
         <label for="adresse">Adresse *</label>
         <input type="text" name="adresse" data-displayname="adresse" class="form-control" id="adresse"
                aria-required="true">
+        <label id="adresse-error" class="error" for="adresse" style="display: none;"></label>
         <label class="sr-only" for="complement">Complément d’adresse</label>
         <input type="text" class="form-control mt-2" id="complement">
       </div>
@@ -64,6 +66,7 @@ js:
         <label for="telephone">Téléphone *</label>
         <input type="text" name="telephone" data-displayname="téléphone" class="form-control" id="telephone"
                aria-required="true">
+        <label id="telephone-error" class="error" for="telephone" style="display: none;"></label>
       </div>
       <button id="envoyer" type="submit" class="btn btn-secondary">Envoyer</button>
     </form>
@@ -325,10 +328,6 @@ Respecter cette simple pratique permet d'ajouter une fonctionnalité très puiss
 <p>Si des erreurs de saisie empêchent la validation du formulaire, plutôt que de lister les erreurs au début du formulaire dans une bannière (voir ci-dessus), on peut, pour chaque champ en erreur avertir l’utilisateur localement en ligne. Bien souvent des messages apparaissent à l’écran, cependant par défaut ils ne sont pas vocalisés au lecteur d’écran. Une des solutions consiste à déplacer automatiquement le focus dans le premier champ en erreur. Ceci aura pour effet de faire vocaliser le ou les libellés ou étiquettes du champ de saisie en question dans le ou lesquels le type erreur sera précisé (la date d'inscription est obligatoire, le numéro de sécurité sociale doit contenir 13 chiffres, par exemple) et si besoin des suggestions de corrections (un code valide&nbsp;: 1234-5678, le marquage produit est de la forme 1111-XXX-YYYY, par exemple).</p>
 <p>Dans cet exemple de formulaire accessible, les messages d’erreurs sont déclarés comme des <code>label</code> et sont associés aux champs de saisie. Ainsi, lorsque le focus arrive dans un champ, le lecteur d’écran vocalise le libellé du champ puis le message d’erreur associé.</p>
 
-<div class="relecture">--------------------------------------------------
-à revoir
-<p>Ce mécanisme est pris en charge directement par le plugin jQuery <a href="http://jqueryvalidation.org/" lang="en" hreflang="en">validate</a>.</p>
------------------------------------------------</div>
 
 <pre><code class="html">
 &lt;label <span class="important">for="numero-serie"</span>&gt;Veuillez saisir le numéro de série *&lt;/label&gt;

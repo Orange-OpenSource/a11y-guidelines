@@ -17,12 +17,12 @@ js:
 
 <h2>Accessible form example</h2>
 <p>In this example, we used the <a href="http://boosted.orange.com/">Boosted library</a>. It provides forms that comply
-  with the Orange design guidelines. We also used the <a href="http://jqueryvalidation.org/">validate</a> jQuery plugin
+  with the Orange design guidelines. We also used the javascript
   for input validation.</p>
 
 <div class="row">
   <div class="col-md-8">
-    <form id="form" class="border border-secondary p-3 mt-2">
+    <form id="form" onsubmit="return validateMyForm();" class="border border-secondary p-3 mt-2">
       <div class="form-group">
         <fieldset>
           <legend>Color</legend>
@@ -40,6 +40,7 @@ js:
         <label for="serial-number">Please enter the serial number *</label>
         <input placeholder="e.g.: TS-4521" type="text" name="serie" data-displayname="serial number"
                class="form-control" id="serial-number" aria-describedby="helpblock" aria-required="true">
+        <label id="serial-number-error" class="error" for="serial-number" style="display: none;"></label>
       </div>
       <p id="helpblock" class="help-block">Serial number beginning with “TS-” followed by 4 digits.</p>
 
@@ -47,6 +48,7 @@ js:
         <label for="addresse">Address *</label>
         <input type="text" name="addresse" data-displayname="address" class="form-control" id="addresse"
                aria-required="true">
+               <label id="addresse-error" class="error" for="addresse" style="display: none;"></label>
         <label class="sr-only" for="complement">Address complement</label>
         <input type="text" class="form-control mt-2" id="complement">
       </div>
@@ -54,6 +56,7 @@ js:
         <label for="telephone">Phone *</label>
         <input type="text" name="telephone" data-displayname="phone" class="form-control" id="telephone"
                aria-required="true">
+        <label id="telephone-error" class="error" for="telephone" style="display: none;"></label>
       </div>
       <button id="send" type="submit" class="btn btn-secondary">Send</button>
     </form>
@@ -254,8 +257,6 @@ js:
 <p>In this accessible form example, error messages are reported as <code>label</code> and are associated with input
   fields. Thus, when the focus moves in a field, the screen reader vocalizes the field label and the associated error
   message.</p>
-<p>This mechanism is supported out of the box by the <a href="http://jqueryvalidation.org/">validate</a> jQuery plugin.
-</p>
 
 <pre><code class="html">
   &lt;label <span class="important">for="serial-number"</span>&gt;Please enter the serial number *&lt;/label&gt;
