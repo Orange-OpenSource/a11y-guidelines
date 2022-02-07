@@ -108,5 +108,16 @@
     "exception": "",
     "raccourcis": "2019/19214",
     "profils": ["All","Dark Mode","Xcode"]
+  },
+  {
+    "themes": "WWDC 2018",
+    "title": "iOS Memory Deep Dive",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2018/18416",
+    "profils": ["All","Instruments","Optimization","Xcode"]
   }
 ]
