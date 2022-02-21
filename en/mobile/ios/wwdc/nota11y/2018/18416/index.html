@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>iOS Memory Deep Dive - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Discover how memory graphs can be used.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-toggle="collapse" data-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Search">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="sr-only">Search</span>
+    </button>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-500" aria-label="Search" placeholder="Search">
+  </form>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          iOS Memory Deep Dive
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#memory-footprint" class="dropdown-item text-wrap">Memory footprint</a><a href="#tools-for-profiling-footprint" class="dropdown-item text-wrap">Tools for profiling footprint</a><a href="#instruments" class="dropdown-item text-wrap">Instruments</a><a href="#xcode" class="dropdown-item text-wrap">Xcode</a><a href="#command-line" class="dropdown-item text-wrap">Command-line</a><a href="#choice" class="dropdown-item text-wrap">Choice</a><a href="#images" class="dropdown-item text-wrap">Images</a><a href="#background-optimization" class="dropdown-item text-wrap">Background optimization</a><a href="#demo" class="dropdown-item text-wrap">Demo</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2018: iOS Memory Deep Dive</h1>
+<p>Find hereafter a detailed summary of the above named video which belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2018/416/">session 416</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416.png" alt="" class="img-fluid"></p>
+<p>&quot;Discover how <strong>memory graphs</strong> can be used to get a close up look at what is contributing to an <strong>app's memory footprint</strong>. Understand the true <strong>memory cost of an image</strong>. Learn some tips and tricks for <strong>reducing the memory footprint</strong> of an app.&quot;<br>
+</br></br>The various contents of this video are indicated hereunder:</p>
+<ul>
+<li>
+<p><a href="#memory-footprint">Memory footprint</a></p>
+</li>
+<li>
+<p><a href="#tools-for-profiling-footprint">Tools for profiling footprint</a></p>
+</li>
+<li>
+<p><a href="#images">Images</a></p>
+</li>
+<li>
+<p><a href="#background-optimization">Background optimization</a></p>
+</li>
+<li>
+<p><a href="#demo">Demo</a></p>
+</li>
+</ul>
+<p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="memory-footprint"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=88">Memory footprint</a> <a class="header-anchor" href="#memory-footprint" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#MemoryFootprintOverview"
+           id="MemoryFootprintOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#MemoryFootprintMemories"
+           id="MemoryFootprintMemories_tab"
+           role="tab" 
+           aria-selected="false">Memories</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#MemoryFootprintFramework"
+           id="MemoryFootprintFramework_tab"
+           role="tab" 
+           aria-selected="false">Framework</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#MemoryFootprintWarning"
+           id="MemoryFootprintWarning_tab"
+           role="tab" 
+           aria-selected="false">Warning</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#MemoryFootprintLimit"
+           id="MemoryFootprintLimit_tab"
+           role="tab" 
+           aria-selected="false">Limit</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="MemoryFootprintOverview" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2018/416/?time=100">🎬 (01:40)</a></p>
+<p>Dealing with the memory footprint always points out the management of the <strong>memory pages</strong> that are detailed in this footage.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-MemoryFootprintOverview.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="MemoryFootprintMemories" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2018/416/?time=203">🎬 (03:23)</a></p>
+<p>An app's segments of memory are divided into three parts: <strong>dirty</strong>, <strong>compressed</strong> and <strong>clean</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-MemoryFootprintMemories_1.png" alt="" class="img-fluid"><br>
+</br></p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=297">memory compressor</a> is a good way to obtain more space with unused pages.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-MemoryFootprintMemories_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="MemoryFootprintFramework" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2018/416/?time=267">🎬 (04:27)</a></p>
+<p>A good practice is to use the singletons and the global initializers of the frameworks to alleviate the amount of dirty memory generated by their usage.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-MemoryFootprintFramework.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="MemoryFootprintWarning" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2018/416/?time=346">🎬 (05:46)</a></p>
+<p>A <strong>memory warning</strong> may be brought about by multiple reasons...<br>
+<img src="../../../../../images/iOSdev/wwdc18-416-MemoryFootprintWarning_1.png" alt="" class="img-fluid"></p>
+<p>... and <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=385">purging the cache memory</a> is not necessary the best way to follow.<br>
+<img src="../../../../../images/iOSdev/wwdc18-416-MemoryFootprintWarning_2.png" alt="" class="img-fluid"></p>
+<p>Finally, the <strong><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=423">cache usage</a> is recommended</strong> but mustn't be overkill failing which the contrary goal might be reached.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-MemoryFootprintWarning_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="MemoryFootprintLimit" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2018/416/?time=456">🎬 (07:36)</a></p>
+<p>The <strong>app's footprint</strong> is clearly defined as the <strong>dirty</strong> and <strong>compressed</strong> memories.</p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=473">Reaching its limit</a> by raising an exception may be induced not only by these memory segments but also by the hardware and functional aspects.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-MemoryFootprintLimit.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p></br></br></p>
+<h2 id="tools-for-profiling-footprint"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=520">Tools for profiling footprint</a> <a class="header-anchor" href="#tools-for-profiling-footprint" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="instruments"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=558">Instruments</a> <a class="header-anchor" href="#instruments" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Using the <strong>Xcode Instruments</strong> is the best way to look into the app's footprint: the <strong>VM Tracker</strong> (dirty and compressed memory) and the <strong>VM Memory Trace</strong> (virtual memory system's performance) are introduced to understand their purposes.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ToolsInstruments.png" alt="" class="img-fluid"></p>
+<h3 id="xcode"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=621">Xcode</a> <a class="header-anchor" href="#xcode" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>As noted sooner in the presentation, Xcode catches an <strong>EXC resource exception</strong> raised when the app's footprint reaches its limit.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ToolsXcode_1.png" alt="" class="img-fluid"></p>
+<p>The <strong>Xcode Memory Debugger</strong> has a <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=639">new design</a> to exploit the Memgraph file format that stores some <strong>information about the memory use</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ToolsXcode_2.png" alt="" class="img-fluid"></p>
+<h3 id="command-line">Command-line <a class="header-anchor" href="#command-line" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>A number of the command-line tools can be used to analyze the Memgraphs in depth.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ToolsCommandLineVmmap"
+           id="ToolsCommandLineVmmap_tab"
+           role="tab" 
+           aria-selected="true">vmmap</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#ToolsCommandLineLeaks"
+           id="ToolsCommandLineLeaks_tab"
+           role="tab" 
+           aria-selected="false">leaks</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#ToolsCommandLineHeap"
+           id="ToolsCommandLineHeap_tab"
+           role="tab" 
+           aria-selected="false">heap</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#ToolsCommandLineMallocHistory"
+           id="ToolsCommandLineMallocHistory_tab"
+           role="tab" 
+           aria-selected="false">malloc_history</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="ToolsCommandLineVmmap" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2018/416/?time=693">🎬 (11:33)</a></p>
+<p>This tool <strong>displays the virtual memory regions</strong> that are allocated to the process whether they're writable or not.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ToolsCommandLineVmmap_1.png" alt="" class="img-fluid"></p>
+<p>The <strong><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=756">awk scripts</a></strong> are also recommended to be inserted in the command lines to provide more efficient and readible results.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ToolsCommandLineVmmap_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ToolsCommandLineLeaks" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2018/416/?time=808">🎬 (13:28)</a></p>
+<p>The <code>leaks</code> command-line exposes the objects responsible for the dirty memories that can't be released.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ToolsCommandLineLeaks.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ToolsCommandLineHeap" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2018/416/?time=854">🎬 (14:14)</a></p>
+<p>The <code>heap</code> tool displays all kind of information regarding the object allocations in the process heap.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ToolsCommandLineHeap.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ToolsCommandLineMallocHistory" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2018/416/?time=943">🎬 (15:43)</a></p>
+<p>In order to <strong>log each object allocation in a Memgraph file</strong>, the <strong>malloc stack logging</strong> must be ticked in the diagnostics tab within the scheme editor using the <code>Live</code> <code>Allocations</code> <code>only</code> option.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ToolsCommandLineMallocHistory_1.png" alt="" class="img-fluid"></p>
+<p>The allocation address passed as an input parameter to the <code>malloc_history</code> command-line will provide <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=975">useful information</a> about the memory segments.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ToolsCommandLineMallocHistory_2.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p></br></br></p>
+<h3 id="choice"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1008">Choice</a> <a class="header-anchor" href="#choice" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The choice of the appropriate tool to use definitely depends on the goal to be reached.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ToolsChoice.png" alt="" class="img-fluid"><br>
+</br></br></p>
+<h2 id="images"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1067">Images</a> <a class="header-anchor" href="#images" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#ImagesOverview"
+           id="ImagesOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#ImagesFormats"
+           id="ImagesFormats_tab"
+           role="tab" 
+           aria-selected="false">Formats</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#ImagesSelection"
+           id="ImagesSelection_tab"
+           role="tab" 
+           aria-selected="false">Selection</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#ImagesDownsampling"
+           id="ImagesDownsampling_tab"
+           role="tab" 
+           aria-selected="false">Downsampling</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="ImagesOverview" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1070">🎬 (17:50)</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ImagesOverview_1.png" alt="" class="img-fluid"></p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1115">complete description</a> of the image processing is the basics to rule and understand the following steps of optimization.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ImagesOverview_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ImagesFormats" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1153">🎬 (19:13)</a></p>
+<p>The <strong>understanding of the different formats</strong> for images is the key to have a better perception of some later potential troublesome effects due to unfortunate initial settings.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ImagesFormats.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ImagesSelection" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1253">🎬 (20:53)</a></p>
+<p>The <strong>recommended use of the API</strong> will provide the most appropriate choice regarding the format.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ImagesSelection_1.png" alt="" class="img-fluid"></p>
+<p>Drawing a circle for a mask is the <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1297">suggested example</a> that exposes the reduce of memory usage with the above recommandations.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ImagesSelection_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ImagesDownsampling" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1351">🎬 (22:31)</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ImagesDownsampling_1.png" alt="" class="img-fluid"></p>
+<p>To <strong>avoid the memory spikes</strong>, it's highly recommended to <strong>use the ImageIO framework</strong> when <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1392">loading an image</a> (displaying partial image during the loading process) or when its original size is huge.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-ImagesDownsampling_2.png" alt="" class="img-fluid"></p>
+<p>While the CPU power is always operated in the downsampling process, it may be advisable to get the properly scaled image instead of initiating actions that will involve the processor to reach the same goal.</p>
+</div>
+</div>
+<p></br></br></p>
+<h2 id="background-optimization"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1425">Background optimization</a> <a class="header-anchor" href="#background-optimization" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-BackgroundOptimization_1.png" alt="" class="img-fluid"></p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-BackgroundOptimization_2.png" alt="" class="img-fluid"></p>
+<p><strong>App lifecycle</strong> and <strong>view controllers appearance cycle</strong> are the best places to handle the actions responsible for providing the most appropriate <strong>memory space</strong> to the system.</p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-BackgroundOptimization_3.png" alt="" class="img-fluid"></p>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-BackgroundOptimization_4.png" alt="" class="img-fluid"></p>
+<p></br></br></p>
+<h2 id="demo"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1540">Demo</a> <a class="header-anchor" href="#demo" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li>
+<p>Filter leaks in a Memgraph file ⟹ <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1676">Xcode</a></p>
+</li>
+<li>
+<p>Evaluate the number of potentially troublesome instances of objects ⟹ <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1715">Xcode</a></p>
+</li>
+<li>
+<p>Estimate the weigh of each generated objects (1/2) ⟹ <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1746">Xcode</a></p>
+</li>
+<li>
+<p>Estimate the weigh of each generated objects (2/2) ⟹ <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1791">vmmap --summary</a></p>
+</li>
+<li>
+<p>Filter the memory allocation of a specific object ⟹ <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1914">vmmap | grep</a></p>
+</li>
+<li>
+<p>Break down the contiguous regions of a big memory assignment ⟹ <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1991">vmmap --verbose</a></p>
+</li>
+<li>
+<p>Reach the detailed information about a memory address ⟹ <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=2083">leaks --traceTree</a></p>
+</li>
+<li>
+<p>Filter the detailed information about a memory address ⟹ <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=2166">Xcode</a></p>
+</li>
+<li>
+<p>Highlight a problematic VM region from a memory address (1/2) ⟹ <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=2295">malloc-history --fullStacks</a></p>
+</li>
+<li>
+<p>Highlight a problematic VM region from a memory address (2/2) ⟹ <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=2371">Xcode</a></p>
+</li>
+<li>
+<p>Point out some problems using the memory report in the debug navigator ⟹ <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=2443">Xcode</a></p>
+</li>
+<li>
+<p>Display the image memory size in the debugger ⟹ <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=2556">Xcode</a></p>
+</li>
+<li>
+<p>Best code practice for scaling and rendering an image ⟹ <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=2725">Xcode</a></p>
+</li>
+</ul>
+</br>
+<p><img src="../../../../../images/iOSdev/wwdc18-416-Demo.png" alt="" class="img-fluid"><br>
+</br></br></br></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#memory-footprint" class="nav-link text-muted">Memory footprint</a></li><li class="nav-item position-relative">
+            <a href="#tools-for-profiling-footprint" class="nav-link text-muted">Tools for profiling footprint</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#instruments" class="nav-link text-muted">Instruments</a></li><li class="nav-item position-relative">
+            <a href="#xcode" class="nav-link text-muted">Xcode</a></li><li class="nav-item position-relative">
+            <a href="#command-line" class="nav-link text-muted">Command-line</a></li><li class="nav-item position-relative">
+            <a href="#choice" class="nav-link text-muted">Choice</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#images" class="nav-link text-muted">Images</a></li><li class="nav-item position-relative">
+            <a href="#background-optimization" class="nav-link text-muted">Background optimization</a></li><li class="nav-item position-relative">
+            <a href="#demo" class="nav-link text-muted">Demo</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link">
+  About
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility" class="nav-link">
+  Accessibility
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2018/18416.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" aria-label="Back to top">
+      <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+        <span class="d-none d-sm-inline-block">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.min.js" integrity="sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
