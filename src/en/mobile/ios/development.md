@@ -1721,8 +1721,6 @@ Writing `accessibilityViewIsModal = true` may not be enough to get the intended 
 
 Indeed, **only the impacted view siblings** aren't taken into account by VoiceOver, all the other ones are.
 
-If the explanations provided in the <a style="text-decoration: underline;" role="button" onclick="$('#modalView-Example_tab').trigger('click');document.getElementById('modalView').scrollIntoView({ behavior: 'smooth', block: 'start' })">Examples</a> tab aren't detailed enough, take a look at this [David&nbsp;RÖNNQVIST&nbsp;article](http://ronnqvi.st/adding-accessible-behavior) containing a pedagogical and interactive illustration that explains how the modal view process works (the 'Implementing accessible modal views' section).
-
 </div>
 <div class="tab-pane" id="modalView-Example" role="tabpanel">
 
@@ -1817,8 +1815,6 @@ Again, all the undesirable elements must be hidden as soon as the modal view is 
 - [Hide&nbsp;elements](#MaskElements)
 
 - [`accessibilityViewIsModal`](https://developer.apple.com/documentation/objectivec/nsobject/1615089-accessibilityviewismodal)
-
-- [David&nbsp;Rönnqvist:&nbsp;"Implementing&nbsp;accessible&nbsp;modal&nbsp;views"](http://ronnqvi.st/adding-accessible-behavior)
 
 - [WWDC&nbsp;2018:&nbsp;Deliver&nbsp;an&nbsp;exceptional&nbsp;accessibility&nbsp;experience](../wwdc/2018/230/#accessibility-modal-view-2502)
 </div>

@@ -23,6 +23,39 @@
   },
   {
     "themes": "WWDC 2021",
+    "title": "Demystify and eliminate hitches in the render phase",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/21hitches",
+    "profils": ["All","Debugging","Instruments","Optimization","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
+    "title": "Explore UI animation hitches and the render loop",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/21hitches",
+    "profils": ["All","Debugging","Instruments","Optimization","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
+    "title": "Find and fix hitches in the commit phase",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/21hitches",
+    "profils": ["All","Debugging","Instruments","Optimization","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
     "title": "Localize your SwiftUI app",
     "type": ["Attributed String"],
     "tests": [],
