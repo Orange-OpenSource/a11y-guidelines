@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Avoid hitches and discover the Render Loop - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Improve the performance of your app&#39;s user interface by identifying scrolling and animation hitches in your app.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark navbar-expand supra">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
+          <a href="/en/" class="nav-link">
+  Home
+</a>
+        </li><li class="nav-item">
+          <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+        </li><li class="nav-item">
+          <a href="/en/web/" class="nav-link">
+  Web
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+        </li><li class="nav-item">
+          <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+        </li><li class="nav-item">
+          <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication
+</a>
+        </li><li class="nav-item">
+          <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+        </li><li class="nav-item d-md-none">
+  <span class="sr-only">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+    </ul>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-toggle="collapse" data-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Search">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="sr-only">Search</span>
+    </button>
+
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-500" aria-label="Search" placeholder="Search">
+  </form>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="location">
+          Avoid hitches and discover the Render Loop
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#hitches" class="dropdown-item text-wrap">Hitches</a><a href="#the-render-loop" class="dropdown-item text-wrap">The Render Loop</a><a href="#process" class="dropdown-item text-wrap">Process</a><a href="#frames" class="dropdown-item text-wrap">Frames</a><a href="#example" class="dropdown-item text-wrap">Example</a><a href="#the-commit-phase" class="dropdown-item text-wrap">The Commit phase</a><a href="#commit-hitch" class="dropdown-item text-wrap">Commit hitch</a><a href="#instruments" class="dropdown-item text-wrap">Instruments</a><a href="#recommendations" class="dropdown-item text-wrap">Recommendations</a><a href="#the-render-phase" class="dropdown-item text-wrap">The Render phase</a><a href="#render-hitch" class="dropdown-item text-wrap">Render hitch</a><a href="#offscreen-pass" class="dropdown-item text-wrap">Offscreen pass</a><a href="#instruments-xcode" class="dropdown-item text-wrap">Instruments &amp; Xcode</a><a href="#recommendations-2" class="dropdown-item text-wrap">Recommendations</a><a href="#hitch-time-measurement" class="dropdown-item text-wrap">Hitch time measurement</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2021: Avoid hitches and discover the Render Loop</h1>
+<p>Find hereafter a detailed summary of three videos that belong to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original videos are available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/tech-talks/10855/">session 10855</a>, <a href="https://developer.apple.com/videos/play/tech-talks/10856/">session 10856</a> and <a href="https://developer.apple.com/videos/play/tech-talks/10857/">session 10857</a>)).</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-Hitches.png" alt="" class="img-fluid"></p>
+<p>&quot;Explore how you can <strong>improve the performance</strong> of your app's user interface by identifying scrolling and animation hitches in your app. We'll take you through how hitches happen in the render loop, and explain how to <strong>measure hitch time ratio</strong> and <strong>fix the issues</strong> that most impact people using your app.&quot;<br>
+</br>&quot;Discover how to <strong>render smoother animations</strong> in your app by troubleshooting the commit phase of your render loop. Dive into the mechanics of this phase, and learn how to use Instruments to <strong>uncover the source of hitches</strong> in your app, eliminate them, and avoid them outright.&quot;<br>
+</br>&quot;When you implement complex view hierarchies in your app, you may run into animation hitches. Demystify how your views are turned into pixels during the render phase, and <strong>learn how to use Instruments</strong> to uncover issues in this part of the render loop. Discover how to <strong>eliminate offscreen passes</strong> and leverage Xcode optimization opportunities in order to <strong>provide a great experience</strong> when using your app.&quot;</p>
+<p></br>The various contents of this video are indicated hereunder:</p>
+<ul>
+<li>
+<p><a href="#hitches">Hitches</a></p>
+</li>
+<li>
+<p><a href="#the-render-loop">The Render  Loop</a></p>
+</li>
+<li>
+<p><a href="#the-commit-phase">The Commit phase</a></p>
+</li>
+<li>
+<p><a href="#the-render-phase">The Render phase</a></p>
+</li>
+<li>
+<p><a href="#hitch-time-measurement">Hitch time measurement</a></p>
+</li>
+</ul>
+<p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="hitches"><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=21">Hitches</a> <a class="header-anchor" href="#hitches" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc21-Hitches_1.png" alt="" class="img-fluid"></p>
+<p>Hitches appear when a user notes a <a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=55">stuttering effect</a> instead of a natural smooth feedback.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-Hitches_2.png" alt="" class="img-fluid"></p>
+<p>The origins of the <strong>hitches</strong> arise from an <strong>incomplete work of the <a href="#the-render-loop">Render Loop</a></strong> on a frame during its time duration and these events are of <strong>two types</strong> that are detailed in depth in the next sections.<br>
+</br></br></p>
+<h2 id="the-render-loop"><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=100">The Render Loop</a> <a class="header-anchor" href="#the-render-loop" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This non-stop process captures the touch events and provides this information to the system for analyzing and displaying the final result.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoop_1.png" alt="" class="img-fluid"></p>
+<p>This work is <strong>highly bound to the device capacity</strong> because the loop happens at its <a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=109">refresh rate</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoop_2.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="process">Process <a class="header-anchor" href="#process" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The <code>Render</code> <code>Loop</code> is a <strong><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=147">three-stage process</a></strong> representing three different steps to be completed to state a frame to be ready.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoopProcess_1.png" alt="" class="img-fluid"></p>
+<p>To accurately specify the functions of this process, various phases have been created in the preceding stages called the <strong><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=195">five phases</a></strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoopProcess_2.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="frames">Frames <a class="header-anchor" href="#frames" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#RenderLoopFramesFrame"
+           id="RenderLoopFramesFrame_tab"
+           role="tab" 
+           aria-selected="true">Frame</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#RenderLoopFramesBuffering"
+           id="RenderLoopFramesBuffering_tab"
+           role="tab" 
+           aria-selected="false">Buffering</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#RenderLoopFramesParallelism"
+           id="RenderLoopFramesParallelism_tab"
+           role="tab" 
+           aria-selected="false">Parallelism</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="RenderLoopFramesFrame" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10855/?time=128">🎬 (02:08)</a></p>
+<p>The <strong>VSYNC event</strong> emitted by the hardware is referring to the ready state that a frame should abide by to provide a smooth user experience.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoopFramesFrame.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="RenderLoopFramesBuffering" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10855/?time=173">🎬 (02:53)</a></p>
+<p>At least <strong>two frames are required</strong> for rendering the desired result but, if some troublesome situations occur, another frame may be necessary.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoopFramesBuffering.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="RenderLoopFramesParallelism" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10855/?time=414">🎬 (06:54)</a></p>
+<p>The <code>Render</code> <code>Loop</code> frames are managed in some parallel processes to guarantee the best result.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoopFramesParallelism.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<h3 id="example">Example <a class="header-anchor" href="#example" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#RenderLoopExampleOverview"
+           id="RenderLoopExampleOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#RenderLoopExampleEvent"
+           id="RenderLoopExampleEvent_tab"
+           role="tab" 
+           aria-selected="false">Event</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#RenderLoopExampleCommit"
+           id="RenderLoopExampleCommit_tab"
+           role="tab" 
+           aria-selected="false">Commit</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#RenderLoopExampleRender1"
+           id="RenderLoopExampleRender1_tab"
+           role="tab" 
+           aria-selected="false">Render prepare</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#RenderLoopExampleRender2"
+           id="RenderLoopExampleRender2_tab"
+           role="tab" 
+           aria-selected="false">Render execute</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="RenderLoopExampleOverview" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10855/?time=251">🎬 (04:11)</a></p>
+<p>A shape made of various elements is unpacked to understand each phase of the <code>Render</code> <code>Loop</code> that displays this graphical element.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoopExampleOverview.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="RenderLoopExampleEvent" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10855/?time=257">🎬 (04:17)</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoopExampleEvent.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="RenderLoopExampleCommit" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10855/?time=296">🎬 (04:56)</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoopExampleCommit.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="RenderLoopExampleRender1" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10855/?time=357">🎬 (05:57)</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoopExampleRender1.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="RenderLoopExampleRender2" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10855/?time=384">🎬 (06:24)</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoopExampleRender2.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p></br></br></p>
+<h2 id="the-commit-phase"><a href="https://developer.apple.com/videos/play/tech-talks/10856/?time=55">The Commit phase</a> <a class="header-anchor" href="#the-commit-phase" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#CommitPhaseOverview"
+           id="CommitPhaseOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#CommitPhaseLayout"
+           id="CommitPhaseLayout_tab"
+           role="tab" 
+           aria-selected="false">Layout</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#CommitPhaseDisplay"
+           id="CommitPhaseDisplay_tab"
+           role="tab" 
+           aria-selected="false">Display</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#CommitPhasePrepare"
+           id="CommitPhasePrepare_tab"
+           role="tab" 
+           aria-selected="false">Prepare</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#CommitPhaseCommit"
+           id="CommitPhaseCommit_tab"
+           role="tab" 
+           aria-selected="false">Commit</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="CommitPhaseOverview" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10856/?time=88">🎬 (01:28)</a></p>
+<p>During this phase, divided into four parts (<strong>Layout</strong>, <strong>Display</strong>, <strong>Prepare</strong> and <strong>Commit</strong>), the app:</p>
+<ul>
+<li>Modifies the interface according to the handled events first,</li>
+<li>Provides the updated layer tree to the render server in a second time.</li>
+</ul>
+</div>
+<div class="tab-pane" id="CommitPhaseLayout" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10856/?time=101">🎬 (01:41)</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesCommitPhaseLayout.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="CommitPhaseDisplay" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10856/?time=116">🎬 (01:56)</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesCommitPhaseDisplay.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="CommitPhasePrepare" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10856/?time=131">🎬 (02:11)</a></p>
+<p>Additional time and memory may be required during this phase if the images must be edited.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesCommitPhasePrepare.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="CommitPhaseCommit" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10856/?time=168">🎬 (02:48)</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesCommitPhaseCommit.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<h3 id="commit-hitch"><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=444">Commit hitch</a> <a class="header-anchor" href="#commit-hitch" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Based on the time taken by the commit, a delay might be necessary to provide an appropriate frame to the render server and then being responsible for the detected hitch.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesCommitPhaseHitch.png" alt="" class="img-fluid"></p>
+</br>
+<h3 id="instruments"><a href="https://developer.apple.com/videos/play/tech-talks/10856/?time=190">Instruments</a> <a class="header-anchor" href="#instruments" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesCommitPhaseInstruments_1.png" alt="" class="img-fluid"></p>
+<p>When hitches frames are detected, the <strong>Animation Hitches</strong> interface is the perfect tool to dive deeper into the proper analysis and find out solutions.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesCommitPhaseInstruments_2.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/tech-talks/10856/?time=276">Useful information</a> is highlighted to understand what's wrong and to easely point out the potential causes of the problems.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesCommitPhaseInstruments_3.png" alt="" class="img-fluid"></p>
+<p>The <strong><a href="https://developer.apple.com/videos/play/tech-talks/10856/?time=331">Time Profiler</a></strong> tool in <code>Instruments</code> can be concomitantly used to look into the code and find out the piece of code responsible for the detected hitches.<br>
+</br></p>
+<h3 id="recommendations"><a href="https://developer.apple.com/videos/play/tech-talks/10856/?time=539">Recommendations</a> <a class="header-anchor" href="#recommendations" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Mainly based on the example that showed up the best practice for avoiding commit hitches, some recommendations are emphasized to apply them as often as possible.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesCommitPhaseRecommendations.png" alt="" class="img-fluid"></p>
+<p></br></br></p>
+<h2 id="the-render-phase"><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=52">The Render phase</a> <a class="header-anchor" href="#the-render-phase" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This phase is <strong>divided into two parts</strong> whose goal is to prepare the layer tree as a pipeline of drawings commands to be executed by the GPU to get a frame ready to be displayed.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhase.png" alt="" class="img-fluid"></p>
+</br>
+<h3 id="render-hitch"><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=493">Render hitch</a> <a class="header-anchor" href="#render-hitch" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>If both render phases haven't been completed on time to make a frame ready to be displayed, then a render hitch occurs.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseHitch.png" alt="" class="img-fluid"></p>
+</br>
+<h3 id="offscreen-pass"><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=254">Offscreen pass</a> <a class="header-anchor" href="#offscreen-pass" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesOffscreenPassOverview.png" alt="" class="img-fluid"></p>
+<p>The offscreen pass happens when it's necessary for the GPU to <strong>switch to a different texture</strong> in order to apply a specific effect to a graphic element.<br>
+</br><strong><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=281">Shadows</a></strong>, <strong><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=293">masks</a></strong>, <strong><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=320">rounded rectangles</a></strong> and <strong><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=338">visual effects</a></strong> are the main types for which the offscreen pass is essential to avoid slowing down the rendering and causing render hitches.<br>
+</br></p>
+<h3 id="instruments-xcode"><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=385">Instruments &amp; Xcode</a> <a class="header-anchor" href="#instruments-xcode" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-toggle="tab" 
+           href="#HitchesRenderPhaseInstrumentsOverview"
+           id="HitchesRenderPhaseInstrumentsOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#HitchesRenderPhaseInstrumentsShadowing"
+           id="HitchesRenderPhaseInstrumentsShadowing_tab"
+           role="tab" 
+           aria-selected="false">Shadowing</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#HitchesRenderPhaseInstrumentsMasking"
+           id="HitchesRenderPhaseInstrumentsMasking_tab"
+           role="tab" 
+           aria-selected="false">Masking</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#HitchesRenderPhaseInstrumentsRoundedRectangles"
+           id="HitchesRenderPhaseInstrumentsRoundedRectangles_tab"
+           role="tab" 
+           aria-selected="false">Rounded&nbsp;rectangles</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-toggle="tab" 
+           href="#HitchesRenderPhaseInstrumentsExport"
+           id="HitchesRenderPhaseInstrumentsExport_tab"
+           role="tab" 
+           aria-selected="false">Export</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="HitchesRenderPhaseInstrumentsOverview" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10857/?time=445">🎬 (07:25)</a></p>
+<p>Besides the information provided in <a href="#instruments">The Commit Phase Instruments</a> part, elements located in the <strong><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=509">Buffer Count</a></strong> column and the <strong><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=561">Render Count</a></strong> column are introduced to detect hitches and find out solutons for this specific phase.<br>
+<img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseInstrumentsOverview_1.png" alt="" class="img-fluid"></p>
+<p>Moreover, the <a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=582">Xcode debugger</a> is significantly used to <strong>look into the layer tree</strong> when problems occur...<br>
+<img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseInstrumentsOverview_2.png" alt="" class="img-fluid"></p>
+<p>... with a <strong><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=648">new Xcode 12 feature</a></strong> to be used as an optimization suggestion.<br>
+<img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseInstrumentsOverview_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="HitchesRenderPhaseInstrumentsShadowing" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10857/?time=701">🎬 (11:41)</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseInstrumentsShadowing_1.png" alt="" class="img-fluid"></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseInstrumentsShadowing_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="HitchesRenderPhaseInstrumentsMasking" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10857/?time=783">🎬 (13:03)</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseInstrumentsMasking_1.png" alt="" class="img-fluid"></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseInstrumentsMasking_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="HitchesRenderPhaseInstrumentsRoundedRectangles" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10857/?time=903">🎬 (15:03)</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseInstrumentsRoundedRectangles_1.png" alt="" class="img-fluid"></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseInstrumentsRoundedRectangles_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="HitchesRenderPhaseInstrumentsExport" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/tech-talks/10857/?time=1009">🎬 (16:49)</a></p>
+<p>Many elements like views, layers and runtime issues can be wrapped in a <strong>sendable file</strong> to be shared with someone having <strong>the same device</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseInstrumentsExport.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<h3 id="recommendations-2"><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=1067">Recommendations</a> <a class="header-anchor" href="#recommendations-2" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseRecommendations_1.png" alt="" class="img-fluid"></p>
+<p><strong>Use the provided APIs</strong> regarding more specifically the masking and the rounded rectangle shapes.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseRecommendations_2.png" alt="" class="img-fluid"></p>
+<p>The <strong>use of <code>maskToBounds</code></strong> is advised for optimizing masking.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseRecommendations_3.png" alt="" class="img-fluid"></p>
+<p></br></br></p>
+<h2 id="hitch-time-measurement"><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=533">Hitch time measurement</a> <a class="header-anchor" href="#hitch-time-measurement" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>A metric called <strong>hitch time ratio</strong> has been introduced to represent the  amount of milliseconds the device is hitching every second.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesHitchTimeMeasurement_1.png" alt="" class="img-fluid"></p>
+<p>After a short <a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=602">example</a> to explain how this new metric works, some <a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=644">thresholds</a> are suggested to use it as best as possible.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-HitchesHitchTimeMeasurement_2.png" alt="" class="img-fluid"><br>
+</br></br></br></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#hitches" class="nav-link text-muted">Hitches</a></li><li class="nav-item position-relative">
+            <a href="#the-render-loop" class="nav-link text-muted">The Render Loop</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#process" class="nav-link text-muted">Process</a></li><li class="nav-item position-relative">
+            <a href="#frames" class="nav-link text-muted">Frames</a></li><li class="nav-item position-relative">
+            <a href="#example" class="nav-link text-muted">Example</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#the-commit-phase" class="nav-link text-muted">The Commit phase</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#commit-hitch" class="nav-link text-muted">Commit hitch</a></li><li class="nav-item position-relative">
+            <a href="#instruments" class="nav-link text-muted">Instruments</a></li><li class="nav-item position-relative">
+            <a href="#recommendations" class="nav-link text-muted">Recommendations</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#the-render-phase" class="nav-link text-muted">The Render phase</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#render-hitch" class="nav-link text-muted">Render hitch</a></li><li class="nav-item position-relative">
+            <a href="#offscreen-pass" class="nav-link text-muted">Offscreen pass</a></li><li class="nav-item position-relative">
+            <a href="#instruments-xcode" class="nav-link text-muted">Instruments &amp; Xcode</a></li><li class="nav-item position-relative">
+            <a href="#recommendations-2" class="nav-link text-muted">Recommendations</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#hitch-time-measurement" class="nav-link text-muted">Hitch time measurement</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link">
+  About
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility" class="nav-link">
+  Accessibility
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ml-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2021/21hitches.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" aria-label="Back to top">
+      <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
+        <span class="d-none d-sm-inline-block">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.min.js" integrity="sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI" crossorigin="anonymous"></script>
+    
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
