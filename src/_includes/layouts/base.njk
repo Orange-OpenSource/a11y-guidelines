@@ -63,9 +63,6 @@
     {% if boostedJS == true or displayToc == true %}
       <script src="https://cdn.jsdelivr.net/npm/boosted@{{ vendors.boosted.version }}/dist/js/boosted.bundle.min.js" integrity="{{ vendors.boosted.js.integrity }}" crossorigin="anonymous"></script>
     {% endif %}
-    {% if jqueryValidate == true %}
-      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@{{ vendors.jqueryValidate.version }}/dist/jquery.validate.min.js"></script>
-    {% endif %}
     {% if highlightJS == true %}
       <script src="/assets/vendors/highlightjs/highlight.js"></script>
     {% endif %}
