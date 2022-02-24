@@ -9,14 +9,6 @@ js:
 - script.js
 ---
 
-<!---- DEBUT - A SUPPRIMER EN FIN DE RELECTURE -->
-<style>
-.relecture {
-  background-color: #ff0;
-}
-</style>
-<!---- FIN - A SUPPRIMER EN FIN DE RELECTURE -->
-
 <h1>Exemples de formulaire</h1>
 
 <h2>Préambule</h2>
@@ -24,8 +16,6 @@ js:
   développement. C’est ce que nous allons voir en détail dans l’exemple de formulaire accessible.</p>
 
 <h2>Exemple de formulaire accessible</h2>
-
-<div class="relecture">------------------------ A REVOIR ---------------------------------</div>
 
 <p>Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/">la librairie Boosted</a>. Celle-ci permet
   d’obtenir des formulaires dont le design est conforme à la charte Orange. Nous utilisons également du javascript pour les contrôles de saisie.</p>
@@ -72,13 +62,10 @@ js:
     </form>
   </div>
 </div>
-<div class="relecture">---------------------------------------------------------</div>
-
 
 <h2>Mise en place</h2>
 <h3>Étiqueter les champs de formulaire</h3>
-<p>Tous les éléments de formulaire doivent être étiquetés avec un libellé pertinent, donc qui, spécifiquement, informe sur le contenu attendu dans le champ, le bouton, le bouton radio la case à cocher ou la liste déroulante. Ainsi, le lecteur d’écran vocalisera automatiquement le libellé du champ de formulaire lors de la sélection de l'élément de formulaire lors de la navigation.
-<span class="relecture">Tournure à revoir⬈</span></p>
+<p>Tous les éléments de formulaire doivent être étiquetés avec un libellé pertinent, donc qui, spécifiquement, informe sur le contenu attendu dans le champ, le bouton, le bouton radio la case à cocher ou la liste déroulante. Ainsi, le lecteur d’écran vocalisera automatiquement le libellé du champ de formulaire lors de la sélection de l'élément de formulaire lors de la navigation.</p>
 <p>De plus, les étiquettes (<code>label</code>) doivent être le moins possible éloignées visuellement de leur champ afin de faciliter leur association (notamment par les malvoyants, déficients cognitifs, les utilisateurs ayant des troubles de l'attention ou de la concentration).</p>
 <p>Il existe plusieurs solutions pour étiqueter un champ de formulaire (autre qu'un bouton).</p>
 
@@ -226,22 +213,17 @@ Respecter cette simple pratique permet d'ajouter une fonctionnalité très puiss
 <h3>L'étiquette visuelle du champ et son nom (accessible)</h3>
 <p>On peut modifier le nom accessible d'un élément de formulaire, donc ce qui sera restitué aux <abbr>AT</abbr>, pour en savoir plus sur <a href="../../../articles/le-nom-accessible-en-html/">le nom accessible en HTML</a>. Cependant, il ne faut pas que des éléments dont on a modifié le nom accessible soit différents de l'étiquette/intitulé affiché car cela empêche leur utilisation pour des <abbr>AT</abbr> de commande vocale notamment. Le nom accessible et l'étiquette/intitulé doivent avoir des valeurs identiques ou, au moins, le texte de l'étiquette/intitulé doit commencer par la valeur du nom accessible.</p>
 
-<div class="relecture">----------- mettre un exemple ---------------</div>
-
 <h3>Déplacer le focus automatiquement lors de l'apparition d'un nouveau champ</h3>
 <p>Il est parfois tentant, lors de l'activation d'un champ spécifique (par exemple, un bouton radio "Autre, précisez..."), de faire apparaître un nouveau champ tout en y mettant le focus automatiquement. C'est problématique en ce qui concerne l'accessibilité à deux égards&nbsp;:</p>
 <ul>
   <li>Tout d'abord, ce champ qui apparaît, suite à l'activation d'un élément de formulaire par l'utilisateur, doit venir se placer dans le code et visuellement juste après l'élément qui l'a déclenché donc doit être l'élément suivant à la navigation clavier. Si il n'est pas positionné juste après le déclencheur, il faut explicitement prévenir l'utilisateur.</li>
   <li>Le focus ne doit pas automatiquement pointer dans ce nouveau champ car c'est imprévisible pour certains utilisateurs. Deux solutions, ne pas pousser automatiquement le focus dans ce champ ou prévenir l'utilisateur avant le déplacement du focus.</li>
 </ul>
-<div class="relecture">   ⬈ C'est pourtant ce qu'on fait sur le champ rechercher du site des reco ?</div>
 
 <h3>Regrouper les informations de même nature</h3>
 <p>Les champs de même nature doivent être regroupés, si nécessaire (champs ayant la même étiquette ou étiquette
   insuffisante à elle seule pour comprendre quelles données entrer), à l’aide d’une balise <code>fieldset</code>. Le <code>fieldset</code> doit également posséder comme premier enfant une légende explicite (balise <code>legend</code>).
   Le <code>fieldset/legend</code> est nécessaire, notamment, lorsque la légende est utile à la compréhension ou l’individualisation (différencier des <code>label</code> identiques dans un même formulaire) des balises <code>label</code> incluses dans le <code>fieldset</code>.</p>
-
-<div class="relecture">----------- on propose de doubler avec un aria-describedby pointant sur l'id du legend pour un meilleur support ?? ---------------</div>
   
 <pre><code class="html">
 &lt;fieldset&gt;
@@ -275,25 +257,22 @@ Respecter cette simple pratique permet d'ajouter une fonctionnalité très puiss
 &lt;/fieldset&gt;
 </code></pre>
 
-<div class="relecture">
-    <h4>Cas particulier d'une même donnée ventilées dans plusieurs champs</h4>
-    <p>Par exemple, pour entrer une date sous forme de 3 champs, un pour le jour, un pour le mois et un pour l’année, voici une solution possible&nbsp;:</p>
-    
-    plutôt  fieldset / legend + aria-describedby pointant sur id du legend (pour assurer + de support du legend )  ???
+  <h4>Cas particulier d'une même donnée ventilées dans plusieurs champs</h4>
+  <p>Par exemple, pour entrer une date sous forme de 3 champs, un pour le jour, un pour le mois et un pour l’année, voici une solution possible&nbsp;:</p>
+  
+  plutôt  fieldset / legend + aria-describedby pointant sur id du legend (pour assurer + de support du legend )  ???
 
-    <pre><code class="html">
-        &lt;label for="jourNaissance"&gt;Date de naissance&lt;/label&gt;
-        &lt;input type="text" id="jourNaissance" aria-label="jour de naissance (JJ)"&gt;
-        &lt;input type="text" id="adresse" aria-label="mois de naissance (MM)"&gt;
-        &lt;input type="text" id="ville" aria-label="année de naissance (AAAA)"&gt;
-    </code></pre>
-</div>
+  <pre><code class="html">
+      &lt;label for="jourNaissance"&gt;Date de naissance&lt;/label&gt;
+      &lt;input type="text" id="jourNaissance" aria-label="jour de naissance (JJ)"&gt;
+      &lt;input type="text" id="adresse" aria-label="mois de naissance (MM)"&gt;
+      &lt;input type="text" id="ville" aria-label="année de naissance (AAAA)"&gt;
+  </code></pre>
 
 <h3>Contrôle de saisie et message d'erreur</h3>
 <p>Lors de la validation, si des champs obligatoires ne sont pas renseignés, ou si le format de la donnée saisie n’est pas valide, il faut prévenir l’utilisateur.</p>
 
 <h4>Modifier le titre de page, le <code>title</code></h4>
-<div class="relecture">Obligatoire, recommandé ou bonne pratique ?</div>
 <p>Le titre de la page doit refleter le contenu de celle-ci, donc, lorsqu'un formulaire génère des erreurs d'entrée, il faut l'annoncer à l'utilisateur via une modification du <code>title</code>. Il faut modifier dynamiquement le titre de page pour indiquer que le formulaire est en erreur et le nombre d'erreur commises (par exemple&nbsp;: "4 erreurs dans le formulaire d'inscription - Accueil Orange.com").</p>
 
 
@@ -335,10 +314,8 @@ Respecter cette simple pratique permet d'ajouter une fonctionnalité très puiss
 &lt;label <span class="important">for="numero-serie"</span> class="error" id="numero-serie-error"&gt;Le champ numéro de série est obligatoire.&lt;/label&gt;
 </code></pre>
 
-<div class="relecture">---- Vérifier si toujours d'actualité -------
 <p><strong>Attention</strong>, bien qu’il soit tout à fait <abbr>HTML</abbr> valide d’utiliser plusieurs <code>label</code> pour un même champ de formulaire, il est pour le moment conseillé de doubler avec un attribut <code>aria-labelledby</code> listant les <code>id</code> des deux (ou plus) <code>label</code> pour que le support soit assuré pour toutes les <abbr>AT</abbr>.
   Consulter <a href="https://www.paciellogroup.com/blog/2016/01/simple-inline-error-message-pattern/" hreflang="en">l’article de Steve Faulkner</a> pour plus d’information sur le sujet.</p>
-</div>
 
 <pre><code class="html">
 &lt;label id="serie-label" for="numero-serie"&gt;Veuillez saisir le numéro de série *&lt;/label&gt;
