@@ -1,44 +1,58 @@
-$(document).ready(function() {
 
-      jQuery.extend(jQuery.validator.messages, {
-            required: "Veuillez renseigner le champ : {0}."
-      });
+  document.getElementById("numero-serie").onchange = function (e){
+      e.target.setAttribute('aria-invalid',"false");
+      document.getElementById("numero-serie-error").textContent="";
+      document.getElementById("numero-serie-error").setAttribute('style',"display:none;");
+        validateRegex(e.target,document.getElementById("numero-serie-error"),"numero de serie",/TS-\d{4}/)
+  }
+  
+  function validateMyForm(event){
+      let numeroSerie = document.getElementById("numero-serie");
+      let numeroSerieError = document.getElementById("numero-serie-error");
+      let adresse = document.getElementById("adresse");
+      let adresseError = document.getElementById("adresse-error");
+      let telephone = document.getElementById("telephone");
+      let telephoneError = document.getElementById("telephone-error");
 
-	jQuery("#formulaire").validate({
-            errorContainer: "#globalErrorMessage",
+      let validTelephone=validateInput(telephone,telephoneError,"telephone");
+      let validAdresse=validateInput(adresse,adresseError,"adresse");
+      let validSerie=validateInput(numeroSerie,numeroSerieError,"numero de serie");
 
-            rules: {
-                  "serie":{
-                        "required": true,
-                        "regex": /TS-\d{4}/
-                  },
-                  "adresse": {
-                        "required": true
-                  },
-                  "telephone": {
-                        "required": true
-                  }
-            },
-            submitHandler: function () { alert("Merci !");}
-      });
+      if( !validSerie || !validAdresse || ! validTelephone ){
+            return false;
+      }
+      return true;
+}
 
-      jQuery.validator.addMethod(
-            "regex",
-            function(value, element, regexp) {
-                  if (regexp.constructor != RegExp) {
-                        regexp = new RegExp(regexp);
-                  } else if (regexp.global) {
-                        regexp.lastIndex = 0;
-                  }
-                  return this.optional(element) || regexp.test(value);
-            },
-            function (regex, input) {
-                  return jQuery.validator.format("Le format du champ {0}, n'est pas valide.", $(input).attr("data-displayname"));
-            }
-      );
+function validateInput(element,elementError,label){
 
-     $.validator.messages.required = function (param, input) {
-            return 'Le champ ' + $(input).attr("data-displayname") + ' est obligatoire.';
-     }
+      element.setAttribute('aria-invalid',"false");
+      elementError.textContent="";
+      elementError.setAttribute('style',"display:none;");
 
-});
+      if( "" == element.value){
+            elementError.textContent="Le champ "+ label +" est obligatoire.";
+            elementError.removeAttribute('style');
+            element.setAttribute('aria-invalid',"true");
+            element.focus();
+            return false;
+      }
+      else if( "numero-serie" == element.id){
+            if ( !validateRegex(element,elementError,label,/TS-\d{4}/)){
+                  element.focus();
+                  return false;  
+            }   
+      }
+
+      return true;
+}
+
+function validateRegex(element,elementError,label,regex){
+      if(null == element.value.match(regex)){
+            elementError.textContent="Le format du champ "+label+", n'est pas valide.";
+            elementError.removeAttribute('style');
+            element.setAttribute('aria-invalid',"true");
+            return false;
+      }
+      return true;
+}
