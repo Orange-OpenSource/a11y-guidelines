@@ -63,7 +63,19 @@ a.text-decoration-none:hover, a.text-decoration-none:focus {
   text-decoration: underline !important;
 }
 
+.supra {
+  padding-top: 0;  
+  border-bottom: 1px solid #333;
+}
 
+.supra .nav-link {
+  font-size: .875rem;
+  padding: .8rem .625rem .425rem .4rem !important;
+}
+
+.supra .navbar-nav {
+  margin: 0 -.46875rem;
+}
 
 /**
  * Typography
