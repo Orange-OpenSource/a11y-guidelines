@@ -16,13 +16,11 @@ To test if your service is accessible using the keyboard, you can try to navigat
 ![keyboard shortcuts illustration](/en/web/images/keyboard.png)
 
 <table class="table">
-<caption class="sr-only">List of keyboard shortcuts</caption>
-   <thead>
+<caption class="visually-hidden">List of keyboard shortcuts</caption>
       <tr>
-         <th>Interactions</th>
-         <th>Shortcuts</th>
+         <th scope="col">Interactions</th>
+         <th scope="col">Shortcuts</th>
       </tr>
-   </thead>
    <tbody>
       <tr>
          <td>To move the focus</td>

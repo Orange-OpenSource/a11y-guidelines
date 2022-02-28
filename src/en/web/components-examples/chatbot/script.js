@@ -4,7 +4,7 @@ title = document.title;
 
 document.getElementById("btnChatbot").onclick = function() {
 	document.getElementById("chatbot-window").style.display = "block";
-	document.getElementById("btnChatbot").classList.add("sr-only");
+	document.getElementById("btnChatbot").classList.add("visually-hidden");
 	forceReadLastMessage();
 	document.getElementById("chat-input").focus();
 };
@@ -16,7 +16,7 @@ document.querySelector("#chatbot form").onsubmit = function(e) {
 
 document.getElementById("chatbot-close").onclick = function() {
 	document.getElementById("chatbot-window").style.display = "none";
-	document.getElementById("btnChatbot").classList.remove("sr-only");	
+	document.getElementById("btnChatbot").classList.remove("visually-hidden");	
 };
 
 document.getElementById("chatbot-hide").onclick = function() {
@@ -44,7 +44,7 @@ document.querySelectorAll("#btnExemple1, #btnExemple2").forEach(function(b){
 
 document.getElementById("btnChoice").onclick = function() {
 	document.getElementById("chatbot-window").style.display = "block";
-	document.getElementById("btnChatbot").classList.add("sr-only");
+	document.getElementById("btnChatbot").classList.add("visually-hidden");
 	document.getElementById("chatbot-window").classList.remove = "chatbot-hidden";	
 	
 	window.setTimeout(function () {
@@ -115,7 +115,7 @@ function rawPush(from, message) {
 		chatContent.appendChild(el);
     }
 	
-    chatContent.querySelector((".messages:last-child")).innerHTML = chatContent.querySelector((".messages:last-child")).innerHTML + '<div class="raw-message"><span class="sr-only">' + from + ' says: </span>' + message + '</div>';    
+    chatContent.querySelector((".messages:last-child")).innerHTML = chatContent.querySelector((".messages:last-child")).innerHTML + '<div class="raw-message"><span class="visually-hidden">' + from + ' says: </span>' + message + '</div>';    
 	
 	chatContent.style.scrollTop = document.getElementById("chat-content").scrollHeight;
     chatContent.scrollTop = chatContent.scrollHeight;
@@ -154,7 +154,7 @@ function push(from, message, silence, id) {
         }
     }
 	
-	chatContent.querySelector((".messages:last-child")).innerHTML = chatContent.querySelector((".messages:last-child")).innerHTML + '<div class="message" ' + id + ' tabindex="-1"><span class="sr-only">' + from + ' says: </span>' + message + '</div>';
+	chatContent.querySelector((".messages:last-child")).innerHTML = chatContent.querySelector((".messages:last-child")).innerHTML + '<div class="message" ' + id + ' tabindex="-1"><span class="visually-hidden">' + from + ' says: </span>' + message + '</div>';
     chatContent.scrollTop = chatContent.scrollHeight;
 }
 

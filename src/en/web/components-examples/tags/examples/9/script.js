@@ -20,7 +20,7 @@ function srSpeak(text, priority) {
     var id = "make-a-screen-reader-talk-" + Date.now();
     el.setAttribute("id", id);
     el.setAttribute("aria-live", priority || "polite");            
-    el.classList.add("sr-only");
+    el.classList.add("visually-hidden");
     document.body.appendChild(el);
     
     window.setTimeout(function () {

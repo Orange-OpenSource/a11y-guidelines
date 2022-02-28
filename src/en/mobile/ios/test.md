@@ -116,21 +116,21 @@ It's **highly recommended** to know the basic gestures before activating this fe
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#VoiceOver-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#VoiceOver-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#VoiceOver-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -188,21 +188,21 @@ Note: this feature can be (de)activated in the device user settings.
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#SwitchControl-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#SwitchControl-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#SwitchControl-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>

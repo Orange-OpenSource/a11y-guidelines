@@ -13,7 +13,7 @@ L’agrandissement du texte seul, n’entraîne pas systématiquement l’appari
 
 Pour agrandir le texte uniquement, il faut cocher l’option «&nbsp;zoom texte seulement&nbsp;» dans Firefox. Pour agrandir le texte de 200%, faire <kbd>Ctrl&nbsp;:+</kbd> quatre fois. 
   
-![capture d’écran de l’option zoom texte seulement, dans Firefox](../../images/zoom-firefox.png) 
+![capture d’écran de l’option zoom texte seulement, dans Firefox](../../../images/zoom-firefox.png) 
 
 ## Quelles conséquences sur le développement ?
 

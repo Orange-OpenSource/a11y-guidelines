@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       ongoingTests: 'ongoing tests',
       noResults: 'No results match your selection',
       withCurrentFilters: 'with current filters',
-      reinitFilters: 'Reinit <span class="sr-only">&nbsp;filters</span>'
+      reinitFilters: 'Reinit <span class="visually-hidden">&nbsp;filters</span>'
     },
     'fr': {
       process : "Procédures",
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       ongoingTests: 'tests en cours',
       noResults: 'Aucun résultat ne correspond à votre sélection',
       withCurrentFilters: 'dans les filtres en cours',
-      reinitFilters: 'Réinitialiser <span class="sr-only">&nbsp;les filtres</span>'
+      reinitFilters: 'Réinitialiser <span class="visually-hidden">&nbsp;les filtres</span>'
     }
   }
 
@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             headingTheme=currentRefTests[i].themes;
             htmlrefTests +='<h2 id="test-'+formatHeading(currentRefTests[i].themes)+'"'+htmlrefTestsClass+'>'+currentRefTests[i].themes+'</h2>';
           }
-          htmlrefTests += '<article class="card"><div class="card-header" id="heading'+i+'"><h3 class="card-title mb-0"><a class="" role="button" data-toggle="collapse" href="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'"><span class="accordion-title h6 mb-0 flex-grow-1">' + currentRefTests[i].title + '</span><span class="badge badge-pill badge-light mr-2 align-self-center">'+((currentRefTests[i].profils[0] == 'Concepteur') ? translate('conception') : translate('development'))+'</span></a></h3>';
+          htmlrefTests += '<article class="accordion-item"><div class="accordion-header" id="heading'+i+'"><h3 class="card-title mb-0"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'"><span class="accordion-title h6 mb-0 flex-grow-1">' + currentRefTests[i].title + '</span><span class="badge bg-light me-2 align-self-center">'+((currentRefTests[i].profils[0] == 'Concepteur') ? translate('conception') : translate('development'))+'</span></a></h3>';
 
           htmlrefTests += '</div><div id="collapse'+i+'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading'+i+'">';
           htmlrefTests += '<div class="card-block"><div class="row">';

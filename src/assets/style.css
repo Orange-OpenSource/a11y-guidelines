@@ -63,7 +63,19 @@ a.text-decoration-none:hover, a.text-decoration-none:focus {
   text-decoration: underline !important;
 }
 
+.supra {
+  padding-top: 0;  
+  border-bottom: 1px solid #333;
+}
 
+.supra .nav-link {
+  font-size: .875rem;
+  padding: .8rem .625rem .425rem .4rem !important;
+}
+
+.supra .navbar-nav {
+  margin: 0 -.46875rem;
+}
 
 /**
  * Typography
@@ -113,11 +125,11 @@ blockquote p::after {
   top: 1.25rem;
 }
 
-.StickySideNavigation a[aria-current] {
+.StickySideNavigation a.active {
   color: #000 !important;
 }
 
-.StickySideNavigation a[aria-current]::before {
+.StickySideNavigation a.active:before {
   background-color: #ff7900;
   bottom: .625rem;
   content: "";
@@ -134,25 +146,6 @@ blockquote p::after {
 .StickySideNavigation ul ul .nav-link {
   padding-left: .5rem;
 }
-
-/**
- * Back to top link
- */
-
-#back-to-top {
-  bottom: 1.25rem;
-  position: fixed;
-  right: 1.25rem;
-  transition: opacity .25s ease;
-}
-
-#back-to-top:hover,
-#back-to-top:focus {
-  color: inherit;
-  text-decoration: underline;
-}
-
-
 
 /*
  * Glossary
@@ -324,4 +317,54 @@ pre code {
   .MobileDropdownNavigationContainer .dropdown ~ .dropdown {
     margin-top: .625rem;
   }
+}
+
+
+/**
+ * Boosted migration fix
+ */
+
+ /*search header*/
+.form-control.bg-dark:focus {
+  color:#FFF;
+  border-color:#ff7900!important;
+}
+
+/*secondary navigation*/
+
+.o-nav-local .nav > .nav-item:first-child .active::before {
+
+  left: 0;
+
+}
+.o-nav-local .nav-link.active::before {
+
+  position: absolute;
+  right: 1.25rem;
+  bottom: -.0625rem;
+  left: 1.25rem;
+  height: .25rem;
+  content: "";
+  background-color: #ff7900;
+
+}
+
+.o-nav-local .nav-link {
+  position: relative;
+  padding: .875rem 1.25rem;
+  padding-left: 1.25rem;
+}
+
+/*footer*/
+.o-footer {
+    margin-top: 1.875rem;
+    background-color: #000;
+}
+
+.o-footer * {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.125;
+  color: #fff;
+  letter-spacing: -.00625rem;
 }

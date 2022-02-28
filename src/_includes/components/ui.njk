@@ -15,16 +15,17 @@
 {%- endmacro -%}
 
 {%- macro cardNavigation(links) -%}
-<div class="card-deck flex-column flex-md-row">
+<div class="row row-cols-1 row-cols-md-4 g-4">
 {%- for link in links -%}
 {%- set isLast = loop.index == links | length -%}
-  <div class="card bg-{{ link.theme }} border-secondary {{ "mb-0" if isLast else "mb-4 mb-md-0" }}">
+<div class="col">
+  <div class="card h-100 bg-{{ link.theme }} border-secondary">
     <div class="p{% if link.icon.name == "editorial-content" %}t{% else %}y{% endif %}-3 px-3 text-center">
       <img src="../images/icons/{{ link.icon.name }}.svg" alt="" class="img-fluid" width="{{ link.icon.width }}" height="{{ link.icon.height }}">
     </div>
     <div class="card-body bg-dark">
       <h3 class="card-title text-primary{% if not link.abstract %} mb-0{% endif %}">
-        <a href="{{ link.href }}" class="text-primary stretched-link">{{ link.label }}</a>
+        <a href="{{ link.href }}" class="link-primary stretched-link">{{ link.label }}</a>
       </h3>
       {% if link.abstract %}
         <p class="card-text">
@@ -33,6 +34,7 @@
       {% endif %}
     </div>
   </div>
+</div>
 {%- endfor -%}
 </div>
 {%- endmacro -%}
@@ -65,13 +67,13 @@
 {%- for post in posts %}{% if page.url != post.url -%}
   {% set tags = post.data.tags %}
 
-  <li class="border-bottom border-500 py-3"{% if tags %} data-tags="{{ tags | join(";") }}"{% endif %}>
+  <li class="border-bottom border-light py-3"{% if tags %} data-tags="{{ tags | join(";") }}"{% endif %}>
     <article>
       <h2 class="mb-1">
         <a href="{{ post.url }}" class="text-decoration-none">{{ post.data.title }}</a>
       </h2>
       {% if displayTags == true and tags %}
-       <span id="post_{{loop.index}}" class="sr-only">{{'tags.list' | translate}}</span>
+       <span id="post_{{loop.index}}" class="visually-hidden">{{'tags.list' | translate}}</span>
         <ul class="list-inline mb-1" aria-labelledby="post_{{loop.index}}">
           {%- for tag in tags -%}
             {%- set tagTranslationKey = 'tags.' + tag -%}
@@ -102,7 +104,7 @@
 {%- macro filtersBar(posts) -%}
 {% set tags = posts | getPostsTags %}
 <div class="hidden-if-no-js o-nav-local navbar-light mb-4 d-flex align-items-center">
-<h2 id="filtersbar_label" class="h6 mb-0 pr-3">{{ 'filtersBar.label' | translate }} :</h2>
+<h2 id="filtersbar_label" class="h6 mb-0 pe-3">{{ 'filtersBar.label' | translate }} :</h2>
 <nav id="filtersbar" aria-labelledby="filtersbar_label" role="navigation">
   <ul class="nav">
     <li class="nav-item">
@@ -162,7 +164,7 @@
     </nav>
   {%- elseif mode == "mobile" -%}
     <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         {{ 'toc.title' | translate }}
       </button>
       <div class="dropdown-menu dropdown-menu-right">
@@ -190,7 +192,7 @@
     </nav>
   {%- elseif mode == "mobile" -%}
     <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-bs-toggle="dropdown" aria-expanded="false">
         {{ 'navigation.side.label' | translate }}
       </button>
       <div class="dropdown-menu dropdown-menu-left">
@@ -207,8 +209,8 @@
 <dl class="Glossary">
   {%- for key, value in glossary -%}
     {%- if (locale == "fr" and key != "ASSISTIVE TECHNOLOGIES" and key != "LARGE TEXT") or (locale == "en" and key != "AIDES TECHNIQUES" and key != "TEXTE DE GRANDE TAILLE") -%}
-      <dt id="{{ key | slugify }}" class="py-2 pl-2 text-right">{{ key }}</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0">{{ value.base | safe }}{{ ", " + value[locale] | safe if value[locale] }}</dd>
+      <dt id="{{ key | slugify }}" class="py-2 ps-2 text-end">{{ key }}</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0">{{ value.base | safe }}{{ ", " + value[locale] | safe if value[locale] }}</dd>
     {%- endif -%}
   {%- endfor -%}
 </dl>
@@ -230,7 +232,7 @@
 </nav>
 {%- elseif mode == "mobile" -%}
 <li class="nav-item d-md-none">
-  <span class="sr-only">{{ 'changelang.label' | translate }}</span>
+  <span class="visually-hidden">{{ 'changelang.label' | translate }}</span>
   <ul class="d-flex list-inline">
     {%- for key, lang in site.locales -%}
       {% set active = locale == lang.code %}

@@ -39,7 +39,7 @@ js:
       var id = "speak-" + Date.now();
       el.setAttribute("id", id);
       el.setAttribute("aria-live", priority || "polite");
-      el.classList.add("sr-only");
+      el.classList.add("visually-hidden");
       document.body.appendChild(el);
 
       window.setTimeout(function () {
@@ -52,12 +52,12 @@ js:
   }
 </code></pre>
 
-<p>Rappel&nbsp;: pour que les messages vocalisés ne soient pas visibles à l'écran vous devez avoir <a href="../masquage-accessible/">une classe de masquage accessible</a> (<code>sr-only</code>) dans vos <abbr>CSS</abbr>.</p>
+<p>Rappel&nbsp;: pour que les messages vocalisés ne soient pas visibles à l'écran vous devez avoir <a href="../masquage-accessible/">une classe de masquage accessible</a> (<code>visually-hidden</code>) dans vos <abbr>CSS</abbr>.</p>
 <h2>Exemple</h2>
 
 <p>Vous pouvez tester cette fonction grâce au formulaire ci-dessous (à tester avec un lecteur d'écran, sinon on n’entend rien).</p>
-<div class="form-group">
-  <label for="message">Message à vocaliser</label>
+<div class="mb-3">
+  <label class="form-label" for="message">Message à vocaliser</label>
   <input type="text" id="message" class="form-control">
 </div>
 <button id="btnSpeak" class="btn btn-secondary">Test</button>

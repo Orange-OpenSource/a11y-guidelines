@@ -15,13 +15,11 @@ Pour tester si votre service est accessible à l’aide du clavier, vous pouvez 
 
 ![présentation des raccourcis clavier](/fr/web/images/clavier.png)
 <table class="table">
-<caption class="sr-only">Liste des raccourcis clavier principaux</caption>
-   <thead>
+<caption class="visually-hidden">Liste des raccourcis clavier principaux</caption>
       <tr>
-         <th>Interactions</th>
-         <th>Raccourcis</th>
+         <th scope="col">Interactions</th>
+         <th scope="col">Raccourcis</th>
       </tr>
-   </thead>
    <tbody>
       <tr>
          <td>Faire avancer le focus</td>

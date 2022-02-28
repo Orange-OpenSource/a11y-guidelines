@@ -13,7 +13,7 @@ Increasing only the text size does not necessarily add a horizontal scrollbar. Y
 
 To enlarge only the text size, tick the “Zoom Text Only” option in Firefox. To enlarge the text by 200% press <kbd>Ctrl +</kbd> four times. 
   
-![screenshot of the “Zoom text only” option, in Firefox](../../images/zoom-firefox.png) 
+![screenshot of the “Zoom text only” option, in Firefox](../../../images/zoom-firefox.png) 
 
 ## What implications for development?
 

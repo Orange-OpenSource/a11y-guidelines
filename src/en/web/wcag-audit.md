@@ -15,7 +15,7 @@ The grid calculates a compliance rate per page audited: this rate is equal to th
 
 The link below opens the grid "WCAG audit" in a new browser tab.   
 
-<a href="https://la-va11ydette.orange.com/?list=wcag-web&lang=en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Open the WCAG grid (new tab)">Open the WCAG checklist <span class="sr-only"> (new tab)</span></a>
+<a href="https://la-va11ydette.orange.com/?list=wcag-web&lang=en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Open the WCAG grid (new tab)">Open the WCAG checklist <span class="visually-hidden"> (new tab)</span></a>
 
 # Evaluation audit
 
@@ -29,4 +29,4 @@ This grid can be used at various projects steps : it may be used by different pr
 
 The link below opens the grid "Evaluation audit" in a new browser tab.   
 
-<a href="https://la-va11ydette.orange.com/?list=audit-web&lang=en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Open the evaluation grid (new tab)">Open the evaluation grid<span class="sr-only"> (new tab)</span></a>
+<a href="https://la-va11ydette.orange.com/?list=audit-web&lang=en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Open the evaluation grid (new tab)">Open the evaluation grid<span class="visually-hidden"> (new tab)</span></a>

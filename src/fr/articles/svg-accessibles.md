@@ -97,16 +97,16 @@ Enfin, ces deux solutions suivantes sont équivalentes et de toute façon à tes
 <pre><code class="html">
 &lt;button&gt;
   &lt;svg focusable="false" aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
-  &lt;span class="sr-only"&gt;Rechercher&lt;/span&gt;
+  &lt;span class="visually-hidden"&gt;Rechercher&lt;/span&gt;
 &lt;/button&gt;
 
 &lt;a href="/Rechercher"&gt;
   &lt;svg focusable="false" aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
-  &lt;span class="sr-only"&gt;Rechercher&lt;/span&gt;
+  &lt;span class="visually-hidden"&gt;Rechercher&lt;/span&gt;
 &lt;/a&gt;
 </code></pre>
 
-La class sr-only permet de cacher le texte sauf aux utilisateurs d’aide technique (masquage accessible).
+La class visually-hidden permet de cacher le texte sauf aux utilisateurs d’aide technique (masquage accessible).
 
 ou
 

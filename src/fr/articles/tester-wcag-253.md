@@ -48,7 +48,7 @@ Sinon il sera impossible de faire une corrélation entre le nom accessible et le
 
 Exemple d'erreur : 
 <pre><code class="html">
-&lt;a href="www.orange.com" target="_blank"&gt; Ouvrir &lt;span class="sr-only"&gt;dans une nouvelle fenêtre &lt;/span&gt; le site d'orange &lt;/a&gt;
+&lt;a href="www.orange.com" target="_blank"&gt; Ouvrir &lt;span class="visually-hidden"&gt;dans une nouvelle fenêtre &lt;/span&gt; le site d'orange &lt;/a&gt;
 </code></pre>
 
 Si on prononce "Ouvrir le site d'orange", le logiciel de reconnaissance vocale ne trouvera pas cet élément. En revanche, si l'on prononce "Ouvrir dans une nouvelle fenêtre le site d'orange" le lien sera activé, puisque c'est son nom accessible.

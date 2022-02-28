@@ -12,7 +12,7 @@ js:
 <div class="row">
   <!-- Liste des dossiers email -->
   <ul id="listbox-ok" role="listbox" tabindex="0" class="col-md-2" aria-label="liste des dossiers">
-      <li tabindex="-1" role="option">Boite de réception (24) <span class="sr-only">messages non lus</span></li>
+      <li tabindex="-1" role="option">Boite de réception (24) <span class="visually-hidden">messages non lus</span></li>
       <li tabindex="-1" role="option">Éléments envoyés</li>
       <li tabindex="-1" role="option">Brouillons</li>
       <li tabindex="-1" role="option">Corbeille</li>
@@ -21,45 +21,38 @@ js:
   <!-- liste des email -->
   <ul id="exempleCheckbox" role="listbox" tabindex="0" class="emails col-md-5" aria-label="liste des emails">
       <li class="unread" tabindex="-1" role="option" aria-checked="false">
-        <div class="custom-control custom-checkbox">
-          <input tabindex="-1" id="check1" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check1"></label>
-          <span class="sr-only">Non lu. </span>Informations importantes concernant votre compte
+        <div class="form-check">
+          <input tabindex="-1" id="check1" class="form-check-input" type="checkbox"><label for="check1"><span class="visually-hidden">Non lu. </span>Informations importantes concernant votre compte</label>
         </div>
       </li>
       <li class="unread" tabindex="-1" role="option" aria-checked="false">
-        <div class="custom-control custom-checkbox">
-          <input tabindex="-1" id="check2" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check2"></label>
-          <span class="sr-only">Non lu. </span>Test envoi d'e-mail
+        <div class="form-check">
+          <input tabindex="-1" id="check2" class="form-check-input" type="checkbox"><label for="check2"><span class="visually-hidden">Non lu. </span>Test envoi d'e-mail</label>
         </div>
       </li>
       <li tabindex="-1" role="option" aria-checked="false">
-        <div class="custom-control custom-checkbox">
-          <input tabindex="-1" id="check3" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check3"></label>
-          Photos du week-end à la mer
+        <div class="form-check">
+          <input tabindex="-1" id="check3" class="form-check-input" type="checkbox"><label for="check3">Photos du week-end à la mer</label>
         </div>
       </li>
       <li class="unread" tabindex="-1" role="option" aria-checked="false">
-        <div class="custom-control custom-checkbox">
-          <input tabindex="-1" id="check4" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check4"></label>
-          <span class="sr-only">Non lu. </span>Re: Votre commande N°3642
+        <div class="form-check">
+          <input tabindex="-1" id="check4" class="form-check-input" type="checkbox"><label for="check4"><span class="visually-hidden">Non lu. </span>Re: Votre commande N°3642</label>
         </div>
       </li>
       <li tabindex="-1" role="option" aria-checked="false">
-        <div class="custom-control custom-checkbox">
-          <input tabindex="-1" id="check5" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check5"></label>
-          Vos actualités de la semaine
+        <div class="form-check">
+          <input tabindex="-1" id="check5" class="form-check-input" type="checkbox"><label for="check5">Vos actualités de la semaine</label>
         </div>
       </li>
       <li tabindex="-1" role="option" aria-checked="false">
-        <div class="custom-control custom-checkbox">
-          <input tabindex="-1" id="check6" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check6"></label>
-          Vente flash : -20% sur un grand nombre d'articles
+        <div class="form-check">
+          <input tabindex="-1" id="check6" class="form-check-input" type="checkbox"><label for="check6">Vente flash : -20% sur un grand nombre d'articles</label>
         </div>
       </li>
       <li tabindex="-1" role="option" aria-checked="false">
-        <div class="custom-control custom-checkbox">
-          <input tabindex="-1" id="check7" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check7"></label>
-          Ce soir !
+        <div class="form-check">
+          <input tabindex="-1" id="check7" class="form-check-input" type="checkbox"><label for="check7">Ce soir !</label>
         </div>
       </li>
   </ul>

@@ -24,7 +24,7 @@ Les situations de handicap identifiées ne sont pas seulement celles que l’on 
 Elles ne sont pas forcement définitives et peuvent atteindre chacun de nous à un moment de sa vie.
 
 &nbsp;
-<div class="sr-only">
+<div class="visually-hidden">
     Les citations suivantes en sont l’illustration&nbsp;:
     <ul>
         <li>Les sous-titres me sont utiles car ma langue maternelle n’est pas le français.</li>

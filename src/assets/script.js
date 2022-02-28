@@ -12,9 +12,9 @@
       }
 
       if (button.classList.contains('tarteaucitronAllow')) {
-        button.classList.add('btn', 'btn-inverse', 'btn-primary', 'ml-2')
+        button.classList.add('btn', 'btn-inverse', 'btn-primary', 'ms-2')
       } else {
-        button.classList.add('btn', 'btn-inverse', 'btn-info', 'ml-2')
+        button.classList.add('btn', 'btn-inverse', 'btn-info', 'ms-2')
       }
     })
   }, { once: true })
@@ -24,9 +24,9 @@
 
     servicesContainer.querySelectorAll('button').forEach(function (button) {
       if (button.classList.contains('tarteaucitronAllow')) {
-        button.classList.add('btn', 'btn-primary', 'btn-inverse', 'ml-2')
+        button.classList.add('btn', 'btn-primary', 'btn-inverse', 'ms-2')
       } else {
-        button.classList.add('btn', 'btn-info', 'ml-2')
+        button.classList.add('btn', 'btn-info', 'ms-2')
       }
     })
   }, { once: true })
@@ -148,7 +148,7 @@ function highlightCodeBlocks () {
     const displayLanguage = displayLanguageList[language] || language
 
     const languageWrapper = document.createElement('div')
-    languageWrapper.classList.add('bg-primary', 'd-inline-block', 'p-2', 'font-weight-bold')
+    languageWrapper.classList.add('bg-primary', 'd-inline-block', 'p-2', 'fw-bold')
     languageWrapper.textContent = displayLanguage
 
     codeBlock.parentNode.insertBefore(languageWrapper, codeBlock)
@@ -157,7 +157,7 @@ function highlightCodeBlocks () {
 
 function enhanceSearchField () {
   const searchInputSkipLink = document.querySelector('[role="banner"] a[href="#search-input"]')
-  const searchInputContainer = $('#search-input-container') //TODO remove jquery in boosted 5
+  const searchInputContainer = document.getElementById('search-input-container') 
   const searchInputToggler = document.getElementById('search-input-toggler')
   const searchInput = document.getElementById('search-input')
 
@@ -168,7 +168,9 @@ function enhanceSearchField () {
     if (searchInputToggler.getAttribute('aria-expanded') === 'true') {
       searchInput.focus()
     } else {
-      searchInputContainer.collapse('show')
+      var bscollapse=new boosted.Collapse(searchInputContainer, {
+        show: true
+      })
     }
   })
 
@@ -196,13 +198,13 @@ function enhanceSearchField () {
   /**
    * Set focus directly in the search box when we open it
    */
-  searchInputContainer.on('shown.bs.collapse', function () {
-    $(this).find('[type="search"]').focus()
+  searchInputContainer.addEventListener('shown.bs.collapse', function () {
+    this.querySelector('[type="search"]').focus();
   })
 }
 
 window.addEventListener('DOMContentLoaded', function () {
-  initPriorityNav()
+  //initPriorityNav()
   enhanceSearchField()
 
   if (Application.vendors.highlightJS === true) {

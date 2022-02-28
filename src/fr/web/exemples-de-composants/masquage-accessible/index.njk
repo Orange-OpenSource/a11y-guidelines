@@ -23,9 +23,9 @@ tags: componentsExamples_fr
 <p>L’idéal étant de mixer les solutions pour garantir le bon fonctionnement sur l’ensemble des navigateurs.</p>
 
 
-<p>Si vous utilisez un framework, il est fort probable que celui-ci embarque une telle classe. Par exemple si vous utilisez <a href="http://boosted.orange.com">Boosted</a> ou <a href="http://getbootstrap.com/">Bootstrap</a>, vous pouvez utiliser la classe <abbr>CSS</abbr> <code>sr-only</code> (screen reader only) dont voici le code&nbsp;:</p>
+<p>Si vous utilisez un framework, il est fort probable que celui-ci embarque une telle classe. Par exemple si vous utilisez <a href="http://boosted.orange.com">Boosted</a> ou <a href="http://getbootstrap.com/">Bootstrap</a>, vous pouvez utiliser la classe <abbr>CSS</abbr> <code>visually-hidden</code> (screen reader only) dont voici le code&nbsp;:</p>
 <pre><code class="css">
-.sr-only {
+.visually-hidden {
       position: absolute;
       width: 1px;
       height: 1px;
@@ -43,11 +43,11 @@ tags: componentsExamples_fr
 <p>La classe de masquage accessible peut s’employer dans beaucoup de cas. Par exemple, pour expliciter le libellé d’un lien&nbsp;:</p>
 
 <pre><code class="html">
-&lt;a href="…"&gt;En savoir plus&lt;span <span class="important">class="sr-only"</span>&gt; sur nos offres mobiles&lt;/span&gt;&lt;/a&gt;
+&lt;a href="…"&gt;En savoir plus&lt;span <span class="important">class="visually-hidden"</span>&gt; sur nos offres mobiles&lt;/span&gt;&lt;/a&gt;
 </code></pre>
 
 <strong>Exemple&nbsp;: </strong>
-<p><a href="#">En savoir plus<span class="sr-only"> sur nos offres mobiles</span></a></p>
+<p><a href="#">En savoir plus<span class="visually-hidden"> sur nos offres mobiles</span></a></p>
 
 <p>On aurait obtenu la même vocalisation si nous avions utilisé un attribut <code>aria-label</code> sur le lien comme ceci&nbsp;:</p>
 <pre><code class="html">
