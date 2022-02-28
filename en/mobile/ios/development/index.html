@@ -21,18 +21,18 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
     
 
 <header role="banner">
-  <div class="navbar navbar-dark navbar-expand supra">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
     <div class="container-lg">
       <nav role="navigation" aria-label="Skip links">
   <ul class="navbar-nav"><li class="nav-item">
@@ -63,42 +63,46 @@
   </div>
   
 
-<div class="navbar navbar-dark navbar-expand-md">
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
   <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
     <a href="/en" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
       <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
     </a>
 
-    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
-          <a href="/en/" class="nav-link">
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto"><li class="nav-item">
+            <a href="/en/" class="nav-link">
   Home
 </a>
-        </li><li class="nav-item">
-          <a href="/en/planning/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/en/planning/" class="nav-link">
   Planning
 </a>
-        </li><li class="nav-item">
-          <a href="/en/web/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/en/web/" class="nav-link">
   Web
 </a>
-        </li><li class="nav-item">
-          <a href="/en/mobile/android/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/en/mobile/android/" class="nav-link">
   Android
 </a>
-        </li><li class="nav-item">
-          <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+          </li><li class="nav-item">
+            <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
   iOS
 </a>
-        </li><li class="nav-item">
-          <a href="/en/content-and-communication/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/en/content-and-communication/" class="nav-link">
   Content and communication
 </a>
-        </li><li class="nav-item">
-          <a href="/en/articles/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/en/articles/" class="nav-link">
   Articles
 </a>
-        </li><li class="nav-item d-md-none">
-  <span class="sr-only">Switch language</span>
+          </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
   <ul class="d-flex list-inline">
       <li class="list-inline-item flex-grow-1">
         <a href="/en/" class="nav-link active" aria-current="true" lang="en">
@@ -111,29 +115,27 @@
         </a>
       </li></ul>
 </li>
-    </ul>
+      </ul>
+    </div>
 
-    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-toggle="collapse" data-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Search">
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-bs-toggle="collapse" data-bs-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Search">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
         <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
       </svg>
 
-      <span class="sr-only">Search</span>
+      <span class="visually-hidden">Search</span>
     </button>
 
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
   </nav>
 </div>
 
 <div id="search-input-container" class="bg-dark collapse">
   <form class="container-lg py-3" role="search">
-    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-500" aria-label="Search" placeholder="Search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-light" aria-label="Search" placeholder="Search">
   </form>
 </div>
 
-  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
               <a href="/en/mobile/ios/design/" class="nav-link">
@@ -170,7 +172,7 @@
         
 
 <nav role="navigation" aria-labelledby="breadcrumb-label">
-  <p id="breadcrumb-label" class="sr-only">You are here:</p>
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
@@ -194,7 +196,7 @@
         
         
           <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Table of content
       </button>
       <div class="dropdown-menu dropdown-menu-right"><a href="#element-trait" class="dropdown-item text-wrap">Element trait</a><a href="#text-alternatives" class="dropdown-item text-wrap">Text alternatives</a><a href="#date-time-and-numbers" class="dropdown-item text-wrap">Date, time and numbers</a><a href="#trigger-a-vocalization" class="dropdown-item text-wrap">Trigger a vocalization</a><a href="#notify-a-content-change" class="dropdown-item text-wrap">Notify a content change</a><a href="#change-the-vocalization-language" class="dropdown-item text-wrap">Change the vocalization language</a><a href="#hide-elements" class="dropdown-item text-wrap">Hide elements</a><a href="#grouping-elements" class="dropdown-item text-wrap">Grouping elements</a><a href="#reading-order" class="dropdown-item text-wrap">Reading order</a><a href="#custom-content-provider" class="dropdown-item text-wrap">Custom content provider</a><a href="#focus-an-element" class="dropdown-item text-wrap">Focus an element</a><a href="#modify-the-focus-area-of-voiceover" class="dropdown-item text-wrap">Modify the focus area of VoiceOver</a><a href="#modal-view" class="dropdown-item text-wrap">Modal view</a><a href="#text-size" class="dropdown-item text-wrap">Text size</a><a href="#truncation-hyphen" class="dropdown-item text-wrap">Truncation hyphen</a><a href="#graphical-elements-size" class="dropdown-item text-wrap">Graphical elements size</a><a href="#large-content-viewer" class="dropdown-item text-wrap">Large Content Viewer</a><a href="#continuous-adjustable-values" class="dropdown-item text-wrap">Continuous adjustable values</a><a href="#custom-actions" class="dropdown-item text-wrap">Custom actions</a><a href="#custom-rotor" class="dropdown-item text-wrap">Custom rotor</a><a href="#accessibility-options" class="dropdown-item text-wrap">Accessibility options</a><a href="#navigation-bar" class="dropdown-item text-wrap">Navigation bar</a><a href="#speech-synthesis" class="dropdown-item text-wrap">Speech synthesis</a><a href="#switch-control" class="dropdown-item text-wrap">Switch Control</a><a href="#vocalized-application-name" class="dropdown-item text-wrap">Vocalized application name</a></div>
@@ -217,35 +219,35 @@
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#TraitElt-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#TraitElt-Details" 
            role="tab" 
            aria-selected="false">Details</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#TraitElt-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#TraitElt-BasicOperations" 
            role="tab" 
            aria-selected="false">Basic operations</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#TraitElt-Links" 
            role="tab" 
            aria-selected="false">Link</a>
@@ -353,28 +355,28 @@ func changeTraits() {
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#textAlt-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#textAlt-Details" 
            role="tab" 
            aria-selected="true">Details</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#textAlt-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#textAlt-Links" 
            role="tab" 
            aria-selected="false">Links</a>
@@ -464,28 +466,28 @@ class ChangeTextView: UIViewController {
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#format-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#format-DateTime" 
            role="tab" 
            aria-selected="false">Date & Time</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#format-Numbers" 
            role="tab" 
            aria-selected="false">Numbers</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#format-PhoneNumbers" 
            role="tab" 
            aria-selected="false">Phone numbers</a>
@@ -658,21 +660,21 @@ class ChangeTextView: UIViewController {
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#triggerVocal-Details" 
            role="tab" 
            aria-selected="true">Details</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#triggerVocal-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#triggerVocal-Links" 
            role="tab" 
            aria-selected="false">Links</a>
@@ -709,28 +711,28 @@ UIAccessibility.post(notification: .announcement,
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#changeNotif-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#changeNotif-Details" 
            role="tab" 
            aria-selected="false">Details</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#changeNotif-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#changeNotif-Links" 
            role="tab" 
            aria-selected="false">Links</a>
@@ -813,21 +815,21 @@ This notification comes along with a vocalization including a sound like announc
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#changeLang-Details" 
            role="tab" 
            aria-selected="true">Details</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#changeLang-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#changeLang-Links" 
            role="tab" 
            aria-selected="false">Link</a>
@@ -869,28 +871,28 @@ This notification comes along with a vocalization including a sound like announc
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#hideElts-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#hideElts-Details" 
            role="tab" 
            aria-selected="false">Details</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#hideElts-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#hideElts-Links" 
            role="tab" 
            aria-selected="false">Links</a>
@@ -1022,21 +1024,21 @@ override func viewDidAppear(_ animated: Bool) {
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#groupElts-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#groupElts-Example1" 
            role="tab" 
            aria-selected="false">Example 1</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#groupElts-Example2"
            id="groupElts-Example2_tab"
            role="tab" 
@@ -1044,7 +1046,7 @@ override func viewDidAppear(_ animated: Bool) {
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#groupElts-Links" 
            role="tab" 
            aria-selected="false">Links</a>
@@ -1298,21 +1300,21 @@ UIAccessibilityElement * elt;
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#readingOrder-Details" 
            role="tab" 
            aria-selected="true">Details</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#readingOrder-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#readingOrder-Links" 
            role="tab" 
            aria-selected="false">Links</a>
@@ -1382,28 +1384,28 @@ UIAccessibilityElement * elt;
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#CuCoPro-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#CuCoPro-Details" 
            role="tab" 
            aria-selected="false">Details</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#CuCoPro-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#CuCoPro-Links" 
            role="tab" 
            aria-selected="false">Links</a>
@@ -1541,28 +1543,28 @@ class ViewController: UIViewController {
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#focusElt-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#focusElt-Details" 
            role="tab" 
            aria-selected="false">Details</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#focusElt-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#focusElt-Links" 
            role="tab" 
            aria-selected="false">Link</a>
@@ -1658,14 +1660,14 @@ extension UIView {
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#focusArea-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#focusArea-Details"
            id="focusArea-Details_tab"
            role="tab" 
@@ -1673,14 +1675,14 @@ extension UIView {
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#focusArea-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#focusArea-Links" 
            role="tab" 
            aria-selected="false">Links</a>
@@ -1825,21 +1827,21 @@ float heightVal;
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#modalView-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#modalView-Details" 
            role="tab" 
            aria-selected="false">Details</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#modalView-Example"
            id="modalView-Example_tab"
            role="tab" 
@@ -1847,7 +1849,7 @@ float heightVal;
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#modalView-Links" 
            role="tab" 
            aria-selected="false">Links</a>
@@ -1958,21 +1960,21 @@ float heightVal;
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#textSize-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#textSize-Details" 
            role="tab" 
            aria-selected="false">Details</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#textSize-Links" 
            role="tab" 
            aria-selected="false">Links</a>
@@ -1987,14 +1989,14 @@ float heightVal;
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#TextSize-iOS13"
            role="tab" 
            aria-selected="true">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#TextSize-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -2118,14 +2120,14 @@ However, it's necessary to keep in mind that these restrictions are recommended 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#truncHyphen-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#truncHyphen-Example" 
            role="tab" 
            aria-selected="false">Example</a>
@@ -2205,21 +2207,21 @@ class TruncationHyphen: UIViewController {
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#graphEltSize-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#graphEltSize-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#graphEltSize-Links" 
            role="tab" 
            aria-selected="false">Links</a>
@@ -2277,28 +2279,28 @@ class TruncationHyphen: UIViewController {
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#largeContentViewer-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#largeContentViewer-Details" 
            role="tab" 
            aria-selected="false">Details</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#largeContentViewer-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#largeContentViewer-Links" 
            role="tab" 
            aria-selected="false">Links</a>
@@ -2438,21 +2440,21 @@ class ButtonViewController: UIViewController {
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#adjustable-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#adjustable-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#adjustable-Links" 
            role="tab" 
            aria-selected="false">Link</a>
@@ -2644,21 +2646,21 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#customActions-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#customActions-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#customActions-Links" 
            role="tab" 
            aria-selected="false">Links</a>
@@ -2672,14 +2674,14 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#CustomActionsVoiceOver"
            role="tab" 
            aria-selected="true">VoiceOver</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#CustomActionsSwitchControl"
            role="tab" 
            aria-selected="false">Switch Control</a>
@@ -2817,21 +2819,21 @@ class CustomActions: UIViewController {
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#rotor-Details" 
            role="tab" 
            aria-selected="true">Details</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#rotor-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#rotor-Link" 
            role="tab" 
            aria-selected="false">Links</a>
@@ -2973,28 +2975,28 @@ class CustomRotor: UIViewController {
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#a11yOptions-States" 
            role="tab" 
            aria-selected="true">States</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#a11yOptions-Events" 
            role="tab" 
            aria-selected="false">Events</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#a11yOptions-Recap" 
            role="tab" 
            aria-selected="false">Recap</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#a11yOptions-Link" 
            role="tab" 
            aria-selected="false">Link</a>
@@ -3090,42 +3092,42 @@ What happens if VoiceOver is disabled? This is exactly the use case when the sys
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#navBar-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#navBar-LeftBarItem" 
            role="tab" 
            aria-selected="false">LeftBarItem</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#navBar-Title" 
            role="tab" 
            aria-selected="false">Title</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#navBar-RightBarItem" 
            role="tab" 
            aria-selected="false">RightBarItem</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#navBar-ReadingOrder" 
            role="tab" 
            aria-selected="false">Reading order</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#navBar-Link" 
            role="tab" 
            aria-selected="false">Link</a>
@@ -3534,35 +3536,35 @@ private func createA11yElts() {
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#speechSyn-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#speechSyn-Details" 
            role="tab" 
            aria-selected="false">Details</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#speechSyn-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#speechSyn-Phonemes" 
            role="tab" 
            aria-selected="false">Phonemes</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#speechSyn-Links" 
            role="tab" 
            aria-selected="false">Links</a>
@@ -3774,14 +3776,14 @@ class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#Phonemes-iOS13"
            role="tab" 
            aria-selected="true">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#Phonemes-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -3845,21 +3847,21 @@ class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#switchCtrl-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#switchCtrl-Custom" 
            role="tab" 
            aria-selected="false">Item mode customization</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#switchCtrl-Link" 
            role="tab" 
            aria-selected="false">Link</a>
@@ -4016,21 +4018,21 @@ class ViewController: UIViewController {
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#appName-Description" 
            role="tab" 
            aria-selected="true">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#appName-Example" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#appName-Link" 
            role="tab" 
            aria-selected="false">Link</a>
@@ -4121,9 +4123,9 @@ class ViewController: UIViewController {
             <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
           </a>
         </li>
-        <li class="nav-item ml-sm-auto">
+        <li class="nav-item ms-sm-auto">
           <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/development.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
-            Report an error on GitHub<span class="sr-only">&nbsp;(new window)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
       </ul>
@@ -4131,22 +4133,18 @@ class ViewController: UIViewController {
   </div>
 </footer>
 
-    <nav role="navigation" aria-label="Back to top">
-      <a href="#" id="back-to-top" class="o-scroll-up static" title="Back to top">
-        <span class="d-none d-sm-inline-block">Back to top</span>
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
       </a>
     </nav>
     <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
     <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
     
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    
-    
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.min.js" integrity="sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI" crossorigin="anonymous"></script>
-    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
     
     
       <script src="/assets/vendors/highlightjs/highlight.js"></script>

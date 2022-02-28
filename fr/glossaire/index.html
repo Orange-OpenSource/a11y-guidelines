@@ -21,7 +21,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
     
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
@@ -30,7 +30,7 @@
     
 
 <header role="banner">
-  <div class="navbar navbar-dark navbar-expand supra">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
     <div class="container-lg">
       <nav role="navigation" aria-label="Liens d&#39;évitements">
   <ul class="navbar-nav"><li class="nav-item">
@@ -61,42 +61,46 @@
   </div>
   
 
-<div class="navbar navbar-dark navbar-expand-md">
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
   <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
     <a href="/fr" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
       <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
     </a>
 
-    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
-          <a href="/fr/" class="nav-link">
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto"><li class="nav-item">
+            <a href="/fr/" class="nav-link">
   Accueil
 </a>
-        </li><li class="nav-item">
-          <a href="/fr/cadrage/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/fr/cadrage/" class="nav-link">
   Cadrage
 </a>
-        </li><li class="nav-item">
-          <a href="/fr/web/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/fr/web/" class="nav-link">
   Web
 </a>
-        </li><li class="nav-item">
-          <a href="/fr/mobile/android/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/fr/mobile/android/" class="nav-link">
   Android
 </a>
-        </li><li class="nav-item">
-          <a href="/fr/mobile/ios/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/fr/mobile/ios/" class="nav-link">
   iOS
 </a>
-        </li><li class="nav-item">
-          <a href="/fr/contenu-et-communication/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/fr/contenu-et-communication/" class="nav-link">
   Contenu et communication
 </a>
-        </li><li class="nav-item">
-          <a href="/fr/articles/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/fr/articles/" class="nav-link">
   Articles
 </a>
-        </li><li class="nav-item d-md-none">
-  <span class="sr-only">Changement de langue</span>
+          </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Changement de langue</span>
   <ul class="d-flex list-inline">
       <li class="list-inline-item flex-grow-1">
         <a href="/en/" class="nav-link" lang="en">
@@ -109,25 +113,23 @@
         </a>
       </li></ul>
 </li>
-    </ul>
+      </ul>
+    </div>
 
-    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-toggle="collapse" data-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Rechercher">
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-bs-toggle="collapse" data-bs-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Rechercher">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
         <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
       </svg>
 
-      <span class="sr-only">Rechercher</span>
+      <span class="visually-hidden">Rechercher</span>
     </button>
 
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
   </nav>
 </div>
 
 <div id="search-input-container" class="bg-dark collapse">
   <form class="container-lg py-3" role="search">
-    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-500" aria-label="Rechercher" placeholder="Rechercher">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-light" aria-label="Rechercher" placeholder="Rechercher">
   </form>
 </div>
 
@@ -140,7 +142,7 @@
         
 
 <nav role="navigation" aria-labelledby="breadcrumb-label">
-  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&amp;nbsp;:</p>
+  <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici&amp;nbsp;:</p>
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item">
@@ -167,53 +169,53 @@
 
 <h1>Glossaire</h1>
 
-<dl class="Glossary"><dt id="aides-techniques" class="py-2 pl-2 text-right">AIDES TECHNIQUES</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='fr'>Une aide technique est un matériel ou logiciel utilisé par une personne en situation de handicap destiné à compenser, limiter ou neutraliser la déficience.</span></dd><dt id="texte-de-grande-taille" class="py-2 pl-2 text-right">TEXTE DE GRANDE TAILLE</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='fr'>Le texte de grande taille est défini comme du texte de 24px ou plus, ou du texte en gras de plus de 19px</span></dd><dt id="api" class="py-2 pl-2 text-right">API</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Application Programming Interface</span>, interface de programmation</dd><dt id="aria" class="py-2 pl-2 text-right">ARIA</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Accessible Rich Internet Applications</span>, applications internet riches accessibles</dd><dt id="at" class="py-2 pl-2 text-right">AT</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Assistive Technology</span>, technologie d’assistance</dd><dt id="css" class="py-2 pl-2 text-right">CSS</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Cascading Stylesheets</span>, feuilles de style en cascade</dd><dt id="dinsic" class="py-2 pl-2 text-right">DINSIC</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='fr'>Direction Interministérielle du Numérique et du Système d’Information et de Communication</dd><dt id="dom" class="py-2 pl-2 text-right">DOM</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Document Object Model</span>, modèle d’objet document</dd><dt id="ease" class="py-2 pl-2 text-right">EASE</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>e-Accessibility Solutions for Everyone</span>, service d’accessibilité numérique chez Orange</dd><dt id="eula" class="py-2 pl-2 text-right">EULA</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>End-User Licence Agreement</span>, contrat utilisateur final</dd><dt id="html" class="py-2 pl-2 text-right">HTML</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>HyperText Markup Language</span>, langage de marquage hypertexte</dd><dt id="html5" class="py-2 pl-2 text-right">HTML5</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>HyperText Markup Language version 5</span>, langage de marquage hypertexte version 5</dd><dt id="id" class="py-2 pl-2 text-right">ID</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Identifier</span>, identifiant</dd><dt id="ide" class="py-2 pl-2 text-right">IDE</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Integrated Development Environment</span>, environnement de développement intégré</dd><dt id="ie" class="py-2 pl-2 text-right">IE</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Microsoft Internet Explorer</span></dd><dt id="ios" class="py-2 pl-2 text-right">iOS</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Apple’s Operating System for mobile and tablet</span>, système d’exploitation d’Apple pour mobile et tablette</dd><dt id="ip" class="py-2 pl-2 text-right">IP</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Internet Protocol</span>, protocole internet</dd><dt id="ipa" class="py-2 pl-2 text-right">IPA</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>International Phonetic Alphabet</span></dd><dt id="iso" class="py-2 pl-2 text-right">ISO</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>International Organization for Standardization</span>, organisation internationale pour la standardisation</dd><dt id="jaws" class="py-2 pl-2 text-right">JAWS</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Job Access With Speech</span>, lecteur d’écran</dd><dt id="jo" class="py-2 pl-2 text-right">JO</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='fr'>Journal Officiel</span></dd><dt id="js" class="py-2 pl-2 text-right">JS</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0">Javascript</dd><dt id="kotlin" class="py-2 pl-2 text-right">KOTLIN</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Kotlin langage</span>, Kotlin est le second langage utilisé pour programmer sur les mobiles Android</dd><dt id="mit" class="py-2 pl-2 text-right">MIT</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Massachussetts Institute of Technology</span>, institut de technologie du Massachussetts</dd><dt id="nvda" class="py-2 pl-2 text-right">NVDA</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>NonVisual Desktop Access</span>, lecteur d’écran</dd><dt id="osx" class="py-2 pl-2 text-right">OSX</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Apple’s Operating System version 10</span>, système d’exploitation d’Apple version 10</dd><dt id="pc" class="py-2 pl-2 text-right">PC</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Personal Computer</span>, ordinateur personnel</dd><dt id="pdf" class="py-2 pl-2 text-right">PDF</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Portable Document Format</span>, format de documents portables</dd><dt id="rgaa" class="py-2 pl-2 text-right">RGAA</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='fr'>Référentiel général d’Amélioration de l'Accessibilité</span></dd><dt id="sdk" class="py-2 pl-2 text-right">SDK</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Software Development Kit</span>, kit de développement logiciel</dd><dt id="seo" class="py-2 pl-2 text-right">SEO</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Search Engine Optimisation</span>, optimisation pour les moteurs de recherche</dd><dt id="spa" class="py-2 pl-2 text-right">SPA</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Single Page Application</span>, application Web monopage</dd><dt id="svg" class="py-2 pl-2 text-right">SVG</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Scalable Vector Graphics</span>, graphique vectoriel adaptable</dd><dt id="tbd" class="py-2 pl-2 text-right">TBD</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>To Be Done</span>, à faire</dd><dt id="tdd" class="py-2 pl-2 text-right">TDD</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Test Driven Development</span>, tests unitaires</dd><dt id="tics" class="py-2 pl-2 text-right">TICS</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='fr'>Technologies de l'Information et de la Communication</span></dd><dt id="tts" class="py-2 pl-2 text-right">TTS</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Text To Speech</span>, conversion texte vers parole</dd><dt id="ui" class="py-2 pl-2 text-right">UI</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>User Interface</span>, interface utilisateur</dd><dt id="url" class="py-2 pl-2 text-right">URL</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Universal Resource Locator</span>, emplacement d’une ressource</dd><dt id="w3c" class="py-2 pl-2 text-right">W3C</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>World Wide Web Consortium</span></dd><dt id="wai" class="py-2 pl-2 text-right">WAI</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Web Accesibility Initiative</span>, initiative pour l’accessibilité web</dd><dt id="wai-aria" class="py-2 pl-2 text-right">WAI-ARIA</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Web Accesibility Initiative: Accessible Rich Internet Applications</span>, applications internet riches accessibles</dd><dt id="wcag" class="py-2 pl-2 text-right">WCAG</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>Web Content Accessibility Guidelines</span>, recommandations d’accessibilité des contenus web</dd><dt id="xhtml" class="py-2 pl-2 text-right">XHTML</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>eXtensible HyperText Markup Language</span>, langage de marquage hypertexte extensible</dd><dt id="xml" class="py-2 pl-2 text-right">XML</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>eXtensible Markup Language</span>, langage de marquage extensible</dd><dt id="xpath" class="py-2 pl-2 text-right">XPath</dt>
-      <dd class="py-2 pr-2 pl-3 mb-0"><span lang='en'>XML Path Language</span>, langage de parcours XML</dd></dl>
+<dl class="Glossary"><dt id="aides-techniques" class="py-2 ps-2 text-end">AIDES TECHNIQUES</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='fr'>Une aide technique est un matériel ou logiciel utilisé par une personne en situation de handicap destiné à compenser, limiter ou neutraliser la déficience.</span></dd><dt id="texte-de-grande-taille" class="py-2 ps-2 text-end">TEXTE DE GRANDE TAILLE</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='fr'>Le texte de grande taille est défini comme du texte de 24px ou plus, ou du texte en gras de plus de 19px</span></dd><dt id="api" class="py-2 ps-2 text-end">API</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Application Programming Interface</span>, interface de programmation</dd><dt id="aria" class="py-2 ps-2 text-end">ARIA</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Accessible Rich Internet Applications</span>, applications internet riches accessibles</dd><dt id="at" class="py-2 ps-2 text-end">AT</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Assistive Technology</span>, technologie d’assistance</dd><dt id="css" class="py-2 ps-2 text-end">CSS</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Cascading Stylesheets</span>, feuilles de style en cascade</dd><dt id="dinsic" class="py-2 ps-2 text-end">DINSIC</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='fr'>Direction Interministérielle du Numérique et du Système d’Information et de Communication</dd><dt id="dom" class="py-2 ps-2 text-end">DOM</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Document Object Model</span>, modèle d’objet document</dd><dt id="ease" class="py-2 ps-2 text-end">EASE</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>e-Accessibility Solutions for Everyone</span>, service d’accessibilité numérique chez Orange</dd><dt id="eula" class="py-2 ps-2 text-end">EULA</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>End-User Licence Agreement</span>, contrat utilisateur final</dd><dt id="html" class="py-2 ps-2 text-end">HTML</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>HyperText Markup Language</span>, langage de marquage hypertexte</dd><dt id="html5" class="py-2 ps-2 text-end">HTML5</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>HyperText Markup Language version 5</span>, langage de marquage hypertexte version 5</dd><dt id="id" class="py-2 ps-2 text-end">ID</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Identifier</span>, identifiant</dd><dt id="ide" class="py-2 ps-2 text-end">IDE</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Integrated Development Environment</span>, environnement de développement intégré</dd><dt id="ie" class="py-2 ps-2 text-end">IE</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Microsoft Internet Explorer</span></dd><dt id="ios" class="py-2 ps-2 text-end">iOS</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Apple’s Operating System for mobile and tablet</span>, système d’exploitation d’Apple pour mobile et tablette</dd><dt id="ip" class="py-2 ps-2 text-end">IP</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Internet Protocol</span>, protocole internet</dd><dt id="ipa" class="py-2 ps-2 text-end">IPA</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>International Phonetic Alphabet</span></dd><dt id="iso" class="py-2 ps-2 text-end">ISO</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>International Organization for Standardization</span>, organisation internationale pour la standardisation</dd><dt id="jaws" class="py-2 ps-2 text-end">JAWS</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Job Access With Speech</span>, lecteur d’écran</dd><dt id="jo" class="py-2 ps-2 text-end">JO</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='fr'>Journal Officiel</span></dd><dt id="js" class="py-2 ps-2 text-end">JS</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0">Javascript</dd><dt id="kotlin" class="py-2 ps-2 text-end">KOTLIN</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Kotlin langage</span>, Kotlin est le second langage utilisé pour programmer sur les mobiles Android</dd><dt id="mit" class="py-2 ps-2 text-end">MIT</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Massachussetts Institute of Technology</span>, institut de technologie du Massachussetts</dd><dt id="nvda" class="py-2 ps-2 text-end">NVDA</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>NonVisual Desktop Access</span>, lecteur d’écran</dd><dt id="osx" class="py-2 ps-2 text-end">OSX</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Apple’s Operating System version 10</span>, système d’exploitation d’Apple version 10</dd><dt id="pc" class="py-2 ps-2 text-end">PC</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Personal Computer</span>, ordinateur personnel</dd><dt id="pdf" class="py-2 ps-2 text-end">PDF</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Portable Document Format</span>, format de documents portables</dd><dt id="rgaa" class="py-2 ps-2 text-end">RGAA</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='fr'>Référentiel général d’Amélioration de l'Accessibilité</span></dd><dt id="sdk" class="py-2 ps-2 text-end">SDK</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Software Development Kit</span>, kit de développement logiciel</dd><dt id="seo" class="py-2 ps-2 text-end">SEO</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Search Engine Optimisation</span>, optimisation pour les moteurs de recherche</dd><dt id="spa" class="py-2 ps-2 text-end">SPA</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Single Page Application</span>, application Web monopage</dd><dt id="svg" class="py-2 ps-2 text-end">SVG</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Scalable Vector Graphics</span>, graphique vectoriel adaptable</dd><dt id="tbd" class="py-2 ps-2 text-end">TBD</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>To Be Done</span>, à faire</dd><dt id="tdd" class="py-2 ps-2 text-end">TDD</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Test Driven Development</span>, tests unitaires</dd><dt id="tics" class="py-2 ps-2 text-end">TICS</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='fr'>Technologies de l'Information et de la Communication</span></dd><dt id="tts" class="py-2 ps-2 text-end">TTS</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Text To Speech</span>, conversion texte vers parole</dd><dt id="ui" class="py-2 ps-2 text-end">UI</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>User Interface</span>, interface utilisateur</dd><dt id="url" class="py-2 ps-2 text-end">URL</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Universal Resource Locator</span>, emplacement d’une ressource</dd><dt id="w3c" class="py-2 ps-2 text-end">W3C</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>World Wide Web Consortium</span></dd><dt id="wai" class="py-2 ps-2 text-end">WAI</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Web Accesibility Initiative</span>, initiative pour l’accessibilité web</dd><dt id="wai-aria" class="py-2 ps-2 text-end">WAI-ARIA</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Web Accesibility Initiative: Accessible Rich Internet Applications</span>, applications internet riches accessibles</dd><dt id="wcag" class="py-2 ps-2 text-end">WCAG</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>Web Content Accessibility Guidelines</span>, recommandations d’accessibilité des contenus web</dd><dt id="xhtml" class="py-2 ps-2 text-end">XHTML</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>eXtensible HyperText Markup Language</span>, langage de marquage hypertexte extensible</dd><dt id="xml" class="py-2 ps-2 text-end">XML</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>eXtensible Markup Language</span>, langage de marquage extensible</dd><dt id="xpath" class="py-2 ps-2 text-end">XPath</dt>
+      <dd class="py-2 pe-2 ps-3 mb-0"><span lang='en'>XML Path Language</span>, langage de parcours XML</dd></dl>
 
     </main>
     
@@ -242,9 +244,9 @@
             <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
           </a>
         </li>
-        <li class="nav-item ml-sm-auto">
+        <li class="nav-item ms-sm-auto">
           <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/glossaire.njk'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
-            Signaler une erreur sur GitHub<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+            Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
       </ul>
@@ -252,22 +254,18 @@
   </div>
 </footer>
 
-    <nav role="navigation" aria-label="Retour en haut de page">
-      <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
-        <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+    <nav role="navigation" class="back-to-top" aria-label="Retour en haut de page">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Retour en haut de page">
+        <span class="visually-hidden">Retour en haut de page</span>
       </a>
     </nav>
     <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
     <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
     
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    
-    
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.min.js" integrity="sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI" crossorigin="anonymous"></script>
-    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
     
     
     <script>

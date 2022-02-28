@@ -21,18 +21,18 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/css/boosted.min.css" integrity="sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body data-spy="scroll" data-target="#toc" style="position:relative;">
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
     
 
 <header role="banner">
-  <div class="navbar navbar-dark navbar-expand supra">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
     <div class="container-lg">
       <nav role="navigation" aria-label="Liens d&#39;évitements">
   <ul class="navbar-nav"><li class="nav-item">
@@ -63,42 +63,46 @@
   </div>
   
 
-<div class="navbar navbar-dark navbar-expand-md">
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
   <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
     <a href="/fr" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
       <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
     </a>
 
-    <ul id="main-menu-list" class="navbar-nav navbar-collapse collapse"><li class="nav-item">
-          <a href="/fr/" class="nav-link">
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto"><li class="nav-item">
+            <a href="/fr/" class="nav-link">
   Accueil
 </a>
-        </li><li class="nav-item">
-          <a href="/fr/cadrage/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/fr/cadrage/" class="nav-link">
   Cadrage
 </a>
-        </li><li class="nav-item">
-          <a href="/fr/web/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/fr/web/" class="nav-link">
   Web
 </a>
-        </li><li class="nav-item">
-          <a href="/fr/mobile/android/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/fr/mobile/android/" class="nav-link">
   Android
 </a>
-        </li><li class="nav-item">
-          <a href="/fr/mobile/ios/" class="nav-link active" aria-current="true">
+          </li><li class="nav-item">
+            <a href="/fr/mobile/ios/" class="nav-link active" aria-current="true">
   iOS
 </a>
-        </li><li class="nav-item">
-          <a href="/fr/contenu-et-communication/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/fr/contenu-et-communication/" class="nav-link">
   Contenu et communication
 </a>
-        </li><li class="nav-item">
-          <a href="/fr/articles/" class="nav-link">
+          </li><li class="nav-item">
+            <a href="/fr/articles/" class="nav-link">
   Articles
 </a>
-        </li><li class="nav-item d-md-none">
-  <span class="sr-only">Changement de langue</span>
+          </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Changement de langue</span>
   <ul class="d-flex list-inline">
       <li class="list-inline-item flex-grow-1">
         <a href="/en/" class="nav-link" lang="en">
@@ -111,29 +115,27 @@
         </a>
       </li></ul>
 </li>
-    </ul>
+      </ul>
+    </div>
 
-    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-toggle="collapse" data-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Rechercher">
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-bs-toggle="collapse" data-bs-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Rechercher">
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
         <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
       </svg>
 
-      <span class="sr-only">Rechercher</span>
+      <span class="visually-hidden">Rechercher</span>
     </button>
 
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
   </nav>
 </div>
 
 <div id="search-input-container" class="bg-dark collapse">
   <form class="container-lg py-3" role="search">
-    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-500" aria-label="Rechercher" placeholder="Rechercher">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-light" aria-label="Rechercher" placeholder="Rechercher">
   </form>
 </div>
 
-  <nav id="secondary-navigation" class="o-nav-local navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
               <a href="/fr/mobile/ios/conception/" class="nav-link">
@@ -170,7 +172,7 @@
         
 
 <nav role="navigation" aria-labelledby="breadcrumb-label">
-  <p id="breadcrumb-label" class="sr-only">Vous êtes ici&amp;nbsp;:</p>
+  <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici&amp;nbsp;:</p>
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
@@ -199,7 +201,7 @@
         
         
           <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sommaire
       </button>
       <div class="dropdown-menu dropdown-menu-right"><a href="#cas-dusage-0048" class="dropdown-item text-wrap">Cas d&#39;usage (00:48)</a><a href="#par-ou-commencer-0203" class="dropdown-item text-wrap">Par où commencer ? (02:03)</a><a href="#avspeechsynthesizerdelegate-0320" class="dropdown-item text-wrap">AVSpeechSynthesizerDelegate (03:20)</a><a href="#demonstration-0411" class="dropdown-item text-wrap">Démonstration (04:11)</a><a href="#choix-de-la-voix-synthetisee-0431" class="dropdown-item text-wrap">Choix de la voix synthétisée (04:31)</a><a href="#debit-vocal-0532" class="dropdown-item text-wrap">Débit vocal (05:32)</a><a href="#hauteur-tonale-et-volume-0615" class="dropdown-item text-wrap">Hauteur tonale et volume (06:15)</a><a href="#phonetique-0654" class="dropdown-item text-wrap">Phonétique (06:54)</a></div>
@@ -346,9 +348,9 @@
             <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
           </a>
         </li>
-        <li class="nav-item ml-sm-auto">
+        <li class="nav-item ms-sm-auto">
           <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/ios/wwdc/2018/236.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
-            Signaler une erreur sur GitHub<span class="sr-only">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ml-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+            Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
       </ul>
@@ -356,22 +358,18 @@
   </div>
 </footer>
 
-    <nav role="navigation" aria-label="Retour en haut de page">
-      <a href="#" id="back-to-top" class="o-scroll-up static" title="Retour en haut de page">
-        <span class="d-none d-sm-inline-block">Retour en haut de page</span>
+    <nav role="navigation" class="back-to-top" aria-label="Retour en haut de page">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Retour en haut de page">
+        <span class="visually-hidden">Retour en haut de page</span>
       </a>
     </nav>
     <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
     <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
     
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    
-    
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@4.6.0/dist/js/boosted.min.js" integrity="sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI" crossorigin="anonymous"></script>
-    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
     
     
       <script src="/assets/vendors/highlightjs/highlight.js"></script>

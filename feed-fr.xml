@@ -416,8 +416,8 @@ element.innerHTML = &#39;&amp;lt;div role=&quot;alert&quot;&amp;gt;Ceci est une 
 &lt;p&gt;Les composants les plus utilisables sont ensuite soumis à des tests utilisateurs.&lt;/p&gt;
 &lt;p&gt;Au terme du benchmark les implémentations retenues sont :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://alphagov.github.io/accessible-autocomplete/examples/&quot; target=&quot;_blank&quot; title=&quot;GOV UK, accessible autocomplete (new window)&quot;&gt;&lt;span lang=&quot;en&quot;&gt;GOV UK, accessible autocomplete&lt;/span&gt; &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/wai-aria-practices-1.1/#combobox&quot; target=&quot;_blank&quot; title=&quot;Pattern WAI ARIA 1.1, combobox (new window)&quot;&gt;Pattern WAI ARIA 1.1, combobox &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://alphagov.github.io/accessible-autocomplete/examples/&quot; target=&quot;_blank&quot; title=&quot;GOV UK, accessible autocomplete (new window)&quot;&gt;&lt;span lang=&quot;en&quot;&gt;GOV UK, accessible autocomplete&lt;/span&gt; &lt;span class=&quot;visually-hidden&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/wai-aria-practices-1.1/#combobox&quot; target=&quot;_blank&quot; title=&quot;Pattern WAI ARIA 1.1, combobox (new window)&quot;&gt;Pattern WAI ARIA 1.1, combobox &lt;span class=&quot;visually-hidden&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;tests-utilisateurs&quot;&gt;Tests utilisateurs &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/#tests-utilisateurs&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Nous avons sollicité des salariés d’Orange en situation de handicap.&lt;/p&gt;
@@ -432,7 +432,7 @@ Les applications métiers et les intranets sont développés pour ces supports.&
 &lt;p&gt;Les associations JAWS / IE et Zoomtext / IE sont les couples testés en priorité lors d’une évaluation de projets internes, car les plus répandus chez nos utilisateurs cibles.&lt;/p&gt;
 &lt;p&gt;Nous avons créé un scénario simple, basé sur des formulaires, utilisant chacun une version différente du composant :&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;abbr title=&quot;site web du gouvernement britannique&quot;&gt;GOV UK &lt;span class=&quot;sr-only&quot;&gt;site du gouvernement britannique&lt;/span&gt;&lt;/abbr&gt; &lt;span lang=&quot;en&quot;&gt;accessible autocomplete&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;abbr title=&quot;site web du gouvernement britannique&quot;&gt;GOV UK &lt;span class=&quot;visually-hidden&quot;&gt;site du gouvernement britannique&lt;/span&gt;&lt;/abbr&gt; &lt;span lang=&quot;en&quot;&gt;accessible autocomplete&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span lang=&quot;en&quot;&gt;Pattern&lt;/span&gt; WAI ARIA 1.1, &lt;span lang=&quot;en&quot;&gt;Combobox with Listbox&lt;/span&gt;, exemple 1&lt;/li&gt;
 &lt;li&gt;&lt;span lang=&quot;en&quot;&gt;Pattern&lt;/span&gt; WAI ARIA 1.1, &lt;span lang=&quot;en&quot;&gt;Combobox with Listbox&lt;/span&gt;, exemple 2&lt;/li&gt;
 &lt;li&gt;&lt;span lang=&quot;en&quot;&gt;Pattern&lt;/span&gt; WAI ARIA 1.1, &lt;span lang=&quot;en&quot;&gt;Combobox with Listbox&lt;/span&gt;, exemple 3&lt;/li&gt;
@@ -506,7 +506,7 @@ Les applications métiers et les intranets sont développés pour ces supports.&
 &lt;li&gt;Le role est directement positionné sur l’&lt;code&gt;input&lt;/code&gt;, contrairement à l’implémentation ARIA 1.1. et conformément à l’implémentation GOV UK et ARIA 1.2 &lt;span lang=&quot;en&quot;&gt;(draft)&lt;/span&gt;,&lt;/li&gt;
 &lt;li&gt;Par contre nous privilégions l’utilisation du &lt;code&gt;aria-control&lt;/code&gt; au &lt;code&gt;aria-owns&lt;/code&gt;, qui nous parait plus adaptée au regard de la description du &lt;span lang=&quot;en&quot;&gt;pattern&lt;/span&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Plus d’informations dans l&#39;article &lt;a href=&quot;https://www.levelaccess.com/differences-aria-1-0-1-1-changes/&quot; target=&quot;_blank&quot; lang=&quot;en&quot; title=&quot;Differences between ARIA 1.0 and 1.1: Changes (new window)&quot;&gt;Differences between ARIA 1.0 and 1.1: Changes &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Plus d’informations dans l&#39;article &lt;a href=&quot;https://www.levelaccess.com/differences-aria-1-0-1-1-changes/&quot; target=&quot;_blank&quot; lang=&quot;en&quot; title=&quot;Differences between ARIA 1.0 and 1.1: Changes (new window)&quot;&gt;Differences between ARIA 1.0 and 1.1: Changes &lt;span class=&quot;visually-hidden&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;listbox&quot;&gt;Listbox &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/#listbox&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Elément UL avec les attributs suivant :&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/autocompletion-listbox.png&quot; alt=&quot;&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
@@ -525,8 +525,8 @@ Les applications métiers et les intranets sont développés pour ces supports.&
 &lt;p&gt;&lt;strong&gt;Remarques&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Pour rappel, cette solution s’avère plus robuste que la gestion de l&#39;élément actif par l’attribut &lt;code&gt;aria-descendant&lt;/code&gt;, plus d’informations :&lt;br /&gt;
-a.	&lt;a href=&quot;https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_roving_tabindex&quot; target=&quot;_blank&quot; title=&quot;Gestion du focus par tabindex (new window)&quot;&gt;Gestion du focus par tabindex &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;
-b.	&lt;a href=&quot;https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_focus_activedescendant)&quot; target=&quot;_blank&quot; title=&quot;Gestion du focus par aria-activedescendant (new window)&quot;&gt;Gestion du focus par aria-activedescendant &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+a.	&lt;a href=&quot;https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_roving_tabindex&quot; target=&quot;_blank&quot; title=&quot;Gestion du focus par tabindex (new window)&quot;&gt;Gestion du focus par tabindex &lt;span class=&quot;visually-hidden&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;br /&gt;
+b.	&lt;a href=&quot;https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_focus_activedescendant)&quot; target=&quot;_blank&quot; title=&quot;Gestion du focus par aria-activedescendant (new window)&quot;&gt;Gestion du focus par aria-activedescendant &lt;span class=&quot;visually-hidden&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;La liste de propositions étant rafraichie dynamiquement nous préservons les attributs &lt;code&gt;aria-posinset&lt;/code&gt; et &lt;code&gt;aria-setsize&lt;/code&gt;, afin de fournir une liste à jour au lecteur d’écran, quelques soit le nombre de propositions.&lt;br /&gt;
 Cela nous paraît plus robuste afin de palier à d&#39;éventuels défauts d&#39;interprétation des lecteurs d&#39;écran.&lt;br /&gt;
 En effet ceux-ci pourraient être induits en erreur dans des cas comme celui-ci, où le contenu d&#39;une liste, et notamment le nombre d&#39;items, est mis à jour dynamiquement.&lt;br /&gt;
@@ -555,7 +555,7 @@ Depuis un périphérique tactile, explorer en utilisant un balayage&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;role = &amp;quot;status&amp;quot;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;aria-live = &amp;quot;polite&amp;quot;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;aria-atomic = &amp;quot;true&amp;quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;class = &amp;quot;sr-only&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;class = &amp;quot;visually-hidden&amp;quot;&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Remarques&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;L’élément &lt;code&gt;DIV&lt;/code&gt; avec l’attribut &lt;code&gt;aria-live&lt;/code&gt; est présent dans le DOM dès le chargement de la page.&lt;/p&gt;
@@ -619,13 +619,13 @@ Le composant GOV UK ne reprend pas ce comportement.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&quot;ressources&quot;&gt;Ressources &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/#ressources&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://alphagov.github.io/accessible-autocomplete/examples/&quot; target=&quot;_blank&quot; title=&quot;GOV UK, accessible autocomplete (new window)&quot;&gt;GOV UK, accessible autocomplete &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://designnotes.blog.gov.uk/2017/04/20/were-building-an-autocomplete/&quot; target=&quot;_blank&quot; title=&quot;Article We’re building an autocomplete (new window)&quot;&gt;Article We’re building an autocomplete &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/wai-aria-practices-1.1/#combobox&quot; target=&quot;_blank&quot; title=&quot;WAI-ARIA Authoring Practices 1.1 Combobox (new window)&quot;&gt;WAI-ARIA Authoring Practices 1.1 Combobox &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://pidila.gitlab.io/select-a11y/&quot; target=&quot;_blank&quot; title=&quot;Select-a11y - demo (new window)&quot;&gt;Select-a11y - demo &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.24a11y.com/2019/select-your-poison/&quot; target=&quot;_blank&quot; title=&quot;Select your poison (new window)&quot;&gt;&lt;span lang=&quot;en&quot;&gt;Select your poison&lt;/span&gt; &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.24a11y.com/2019/select-your-poison-part-2/&quot; target=&quot;_blank&quot; title=&quot;Select your poison part 2 (new window)&quot;&gt;Select your poison part 2 &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.levelaccess.com/differences-aria-1-0-1-1-changes/&quot; target=&quot;_blank&quot; title=&quot;Differences between ARIA 1.0 and 1.1: Changes (new window)&quot;&gt;Differences between ARIA 1.0 and 1.1: Changes &lt;span class=&quot;sr-only&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://alphagov.github.io/accessible-autocomplete/examples/&quot; target=&quot;_blank&quot; title=&quot;GOV UK, accessible autocomplete (new window)&quot;&gt;GOV UK, accessible autocomplete &lt;span class=&quot;visually-hidden&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://designnotes.blog.gov.uk/2017/04/20/were-building-an-autocomplete/&quot; target=&quot;_blank&quot; title=&quot;Article We’re building an autocomplete (new window)&quot;&gt;Article We’re building an autocomplete &lt;span class=&quot;visually-hidden&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/wai-aria-practices-1.1/#combobox&quot; target=&quot;_blank&quot; title=&quot;WAI-ARIA Authoring Practices 1.1 Combobox (new window)&quot;&gt;WAI-ARIA Authoring Practices 1.1 Combobox &lt;span class=&quot;visually-hidden&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pidila.gitlab.io/select-a11y/&quot; target=&quot;_blank&quot; title=&quot;Select-a11y - demo (new window)&quot;&gt;Select-a11y - demo &lt;span class=&quot;visually-hidden&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.24a11y.com/2019/select-your-poison/&quot; target=&quot;_blank&quot; title=&quot;Select your poison (new window)&quot;&gt;&lt;span lang=&quot;en&quot;&gt;Select your poison&lt;/span&gt; &lt;span class=&quot;visually-hidden&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.24a11y.com/2019/select-your-poison-part-2/&quot; target=&quot;_blank&quot; title=&quot;Select your poison part 2 (new window)&quot;&gt;Select your poison part 2 &lt;span class=&quot;visually-hidden&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.levelaccess.com/differences-aria-1-0-1-1-changes/&quot; target=&quot;_blank&quot; title=&quot;Differences between ARIA 1.0 and 1.1: Changes (new window)&quot;&gt;Differences between ARIA 1.0 and 1.1: Changes &lt;span class=&quot;visually-hidden&quot;&gt;(new window)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
@@ -706,15 +706,15 @@ Alors, voici une alternative qui permet de  cacher visuellement le texte pour un
 &lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
 &amp;lt;button&amp;gt;
   &amp;lt;svg focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;!--...--&amp;gt;&amp;lt;/svg&amp;gt;
-  &amp;lt;span class=&quot;sr-only&quot;&amp;gt;Rechercher&amp;lt;/span&amp;gt;
+  &amp;lt;span class=&quot;visually-hidden&quot;&amp;gt;Rechercher&amp;lt;/span&amp;gt;
 &amp;lt;/button&amp;gt;
 
 &amp;lt;a href=&quot;/Rechercher&quot;&amp;gt;
   &amp;lt;svg focusable=&quot;false&quot; aria-hidden=&quot;true&quot;&amp;gt;&amp;lt;!--...--&amp;gt;&amp;lt;/svg&amp;gt;
-  &amp;lt;span class=&quot;sr-only&quot;&amp;gt;Rechercher&amp;lt;/span&amp;gt;
+  &amp;lt;span class=&quot;visually-hidden&quot;&amp;gt;Rechercher&amp;lt;/span&amp;gt;
 &amp;lt;/a&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;La class sr-only permet de cacher le texte sauf aux utilisateurs d’aide technique (masquage accessible).&lt;/p&gt;
+&lt;p&gt;La class visually-hidden permet de cacher le texte sauf aux utilisateurs d’aide technique (masquage accessible).&lt;/p&gt;
 &lt;p&gt;ou&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
 &amp;lt;button aria-label=&quot;Rechercher&quot;&amp;gt;
@@ -1414,7 +1414,7 @@ Cela pour garantir que les utilisateurs &lt;a href=&quot;https://a11y-guidelines
 &lt;p&gt;Sinon il sera impossible de faire une corrélation entre le nom accessible et le texte affiché.&lt;/p&gt;
 &lt;p&gt;Exemple d&#39;erreur :&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
-&amp;lt;a href=&quot;www.orange.com&quot; target=&quot;_blank&quot;&amp;gt; Ouvrir &amp;lt;span class=&quot;sr-only&quot;&amp;gt;dans une nouvelle fenêtre &amp;lt;/span&amp;gt; le site d&#39;orange &amp;lt;/a&amp;gt;
+&amp;lt;a href=&quot;www.orange.com&quot; target=&quot;_blank&quot;&amp;gt; Ouvrir &amp;lt;span class=&quot;visually-hidden&quot;&amp;gt;dans une nouvelle fenêtre &amp;lt;/span&amp;gt; le site d&#39;orange &amp;lt;/a&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Si on prononce &amp;quot;Ouvrir le site d&#39;orange&amp;quot;, le logiciel de reconnaissance vocale ne trouvera pas cet élément. En revanche, si l&#39;on prononce &amp;quot;Ouvrir dans une nouvelle fenêtre le site d&#39;orange&amp;quot; le lien sera activé, puisque c&#39;est son nom accessible.&lt;/p&gt;
 &lt;h2 id=&quot;comment-le-tester&quot;&gt;Comment le tester &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/#comment-le-tester&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
@@ -1572,7 +1572,7 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
 &lt;h2 id=&quot;developper-des-pages-web-accessibles&quot;&gt;Développer des pages Web accessibles &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-des-pages-web-accessibles&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;col-3&quot;&gt;
-    &lt;p class=&quot;border-right&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
       &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-dev-web.png&quot; alt=&quot;&quot; /&gt;
     &lt;/p&gt;
   &lt;/div&gt;
@@ -1584,7 +1584,7 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
     &lt;p&gt;          
       &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/dev-web/Memo-Web-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
         Télécharger au format PDF (272 Ko)
-        &lt;span class=&quot;sr-only&quot;&gt;Mémo accessibilité développement Web&lt;/span&gt;
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo accessibilité développement Web&lt;/span&gt;
       &lt;/a&gt;
     &lt;/p&gt;
   &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
@@ -1593,7 +1593,7 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
 &lt;h2 id=&quot;tester-laccessibilite-de-pages-web&quot;&gt;Tester l&#39;accessibilité de pages Web &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#tester-laccessibilite-de-pages-web&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;col-3&quot;&gt;
-    &lt;p class=&quot;border-right&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
       &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-tests-web.png&quot; alt=&quot;&quot; /&gt;
     &lt;/p&gt;
   &lt;/div&gt;
@@ -1606,7 +1606,7 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
     &lt;p&gt;          
       &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/tests-web/Memo-Tests-Web-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
         Télécharger au format PDF (335 Ko)
-        &lt;span class=&quot;sr-only&quot;&gt;Mémo accessibilité les tests Web&lt;/span&gt;
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo accessibilité les tests Web&lt;/span&gt;
       &lt;/a&gt;
     &lt;/p&gt;
   &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
@@ -1615,7 +1615,7 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
 &lt;h2 id=&quot;developper-une-application-android-accessible&quot;&gt;Développer une application Android accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-une-application-android-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;col-3&quot;&gt;
-    &lt;p class=&quot;border-right&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
       &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-android.png&quot; alt=&quot;&quot; /&gt;
     &lt;/p&gt;
   &lt;/div&gt;
@@ -1627,7 +1627,7 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
     &lt;p&gt;         
       &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/android/Memo-Android-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
         Télécharger au format PDF (261 Ko)
-        &lt;span class=&quot;sr-only&quot;&gt;Mémo accessibilité développement Android&lt;/span&gt;
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo accessibilité développement Android&lt;/span&gt;
       &lt;/a&gt;
     &lt;/p&gt;
   &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
@@ -1636,7 +1636,7 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
 &lt;h2 id=&quot;developper-une-application-ios-accessible&quot;&gt;Développer une application iOS accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-une-application-ios-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;col-3&quot;&gt;
-    &lt;p class=&quot;border-right&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
       &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-ios.png&quot; alt=&quot;&quot; /&gt;
     &lt;/p&gt;
   &lt;/div&gt;
@@ -1648,7 +1648,7 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
     &lt;p&gt;      
       &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/ios/Memo-iOS-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
         Télécharger au format PDF (263 Ko)
-        &lt;span class=&quot;sr-only&quot;&gt;Mémo accessibilité développement iOS&lt;/span&gt;
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo accessibilité développement iOS&lt;/span&gt;
       &lt;/a&gt;
     &lt;/p&gt;
   &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
@@ -1657,7 +1657,7 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
 &lt;h2 id=&quot;rediger-un-email-accessible&quot;&gt;Rédiger un email accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-email-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;col-3&quot;&gt;
-    &lt;p class=&quot;border-right&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
       &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-email.png&quot; alt=&quot;&quot; /&gt;
     &lt;/p&gt;
   &lt;/div&gt;
@@ -1668,7 +1668,7 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
     &lt;p&gt;      
       &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/email/Memo-Email-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
         Télécharger au format PDF (283 Ko)
-        &lt;span class=&quot;sr-only&quot;&gt;Mémo rédiger un email accessible&lt;/span&gt;
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo rédiger un email accessible&lt;/span&gt;
       &lt;/a&gt;
     &lt;/p&gt;
   &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
@@ -1676,7 +1676,7 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
 &lt;h2 id=&quot;rediger-un-document-word-accessible&quot;&gt;Rédiger un document Word accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-document-word-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;col-3&quot;&gt;
-    &lt;p class=&quot;border-right&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
       &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-word.png&quot; alt=&quot;&quot; /&gt;
     &lt;/p&gt;
   &lt;/div&gt;
@@ -1687,7 +1687,7 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
     &lt;p&gt;      
       &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/word/Memo-Word-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
         Télécharger au format PDF (236 Ko)
-        &lt;span class=&quot;sr-only&quot;&gt;Mémo rédiger un document Word accessible&lt;/span&gt;
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo rédiger un document Word accessible&lt;/span&gt;
       &lt;/a&gt;
     &lt;/p&gt;
   &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
