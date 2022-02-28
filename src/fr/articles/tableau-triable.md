@@ -71,29 +71,58 @@ Dans le cas ou vous utilisez un tableau pour faire de la mise en page, vous deve
   <li>assurez vous que le tableau se lit bien de gauche à droite</li>
 </ul>
 
+### Utilisation de NVDA avec les tableaux
+
 ## Exemple de tableau
 
 Nous allons maintenant vous presenter des exemples de tableau accessible.
 
 ### Tableau simple
 
+Le premier exemple sera un tableau avec seulement des entêtes sur les colonnes, nous utiliserons dons l'attribut <code>scope="row"</code> pour que les technologies d'assistance le comprennent.
+
 <table class="table">
- <caption class="h4">Accessibilité des lignes du réseau de surface RATP</caption>
- <tr>
-  <th scope="col">Équipements</th>
-  <th scope="col">Nombre de lignes</th>
-  <th scope="col">Pourcentage du total de lignes</th>
- </tr>
- <tr>
-  <td>Rampe d'accès</td>
-  <td>260</td>
-  <td>70,46 %</td>
- </tr>
- <tr>
-  <td>Annonce sonore</td>
-  <td>318</td>
-  <td>86,17 %</td>
- </tr>
+ <caption class="h4"> Personnes avec leur activités professionnels</caption>
+ <thead>
+  <tr>
+    <th scope="col">Prénom</th>
+    <th scope="col">Nom</th>
+    <th scope="col">Genre</th>
+    <th scope="col">Métier</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>M</td>
+    <td>Inconnu</td>
+  </tr>
+  <tr>
+    <td>Marty</td>
+    <td>McFly</td>
+    <td>M</td>
+    <td>Guitariste</td>
+  </tr>
+  <tr>
+    <td>Ellen</td>
+    <td>Ripley</td>
+    <td>F</td>
+    <td>Astronaute</td>
+  </tr>
+  <tr>
+    <td>Indiana</td>
+    <td>Jones</td>
+    <td>M</td>
+    <td>Archéologue</td>
+  </tr>
+  <tr>
+    <td>Sarah</td>
+    <td>Connors</td>
+    <td>F</td>
+    <td>Serveuse</td>
+  </tr>
+  </tbody>
 </table>
 
 ### Tableau à double entête
