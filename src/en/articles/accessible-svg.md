@@ -97,16 +97,16 @@ Finally, these two following solutions are equivalent and in any case to be test
 <pre> <code class="html">
 &lt;button&gt;
   &lt;svg focusable="false" aria-hidden="true"&gt; &lt;! --...--&gt; &lt;/svg&gt;
-  &lt;span class="sr-only"&gt; Search &lt;/ span&gt;
+  &lt;span class="visually-hidden"&gt; Search &lt;/ span&gt;
 &lt;/ button&gt;
 
 &lt;a href="/ Search"&gt;
   &lt;svg focusable="false" aria-hidden="true"&gt; &lt;! --...--&gt; &lt;/svg&gt;
-  &lt;span class="sr-only"&gt; Search &lt;/span&gt;
+  &lt;span class="visually-hidden"&gt; Search &lt;/span&gt;
 &lt;/ a&gt;
 </code> </pre>
 
-The sr-only class is used to hide the text except to technical help users (accessible masking).
+The visually-hidden class is used to hide the text except to technical help users (accessible masking).
 
 or
 

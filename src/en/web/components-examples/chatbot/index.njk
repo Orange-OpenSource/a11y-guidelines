@@ -93,12 +93,12 @@ js:
       <p>
         According to recurring polls from <a href="https://webaim.org">WebAIM</a> about screen reader users, landmarks are not known by everyone yet. For robustness, we can also add a heading tag (<code>h1</code>, <code>h2</code>...) before the chat.
         </p>
-      <p>To make this heading not visible on the screen, it is enough to use an <a href="../accessible-hiding/">accessible hiding</a> class (<code>sr-only</code>). This also allows users to access the chat from the list of headings on the page.
+      <p>To make this heading not visible on the screen, it is enough to use an <a href="../accessible-hiding/">accessible hiding</a> class (<code>visually-hidden</code>). This also allows users to access the chat from the list of headings on the page.
         </p>
 
       <pre><code class="html">
 &lt;div role="region" aria-labelledby="tchat-title"&gt;
-&lt;h1 id="tchat-title" class="sr-only"&gt;Chat window&lt;/h1&gt;
+&lt;h1 id="tchat-title" class="visually-hidden"&gt;Chat window&lt;/h1&gt;
 &lt;!-- chatbot code --&gt;
 &lt;/div&gt;
   </code></pre>
@@ -164,11 +164,11 @@ outline: .2rem solid #f16e00;
 
   <p>For a user who does not see the screen, it can become complicated since the sender of the message is visually inserted (rightly) only when there is a change of sender in the conversation.
   </p>
-  <p>To be sure, we recommended to indicate in front of each message its transmitter, useful for the users who navigate using a screen reader only (use of the accessible masking class <code>sr-only</code>).
+  <p>To be sure, we recommended to indicate in front of each message its transmitter, useful for the users who navigate using a screen reader only (use of the accessible masking class <code>visually-hidden</code>).
     </p>
    <pre><code class="html">
 &lt;div class="message"&gt;
-&lt;span <span class="important">class="sr-only"</span>&gt;
+&lt;span <span class="important">class="visually-hidden"</span>&gt;
 Djingo says:
 &lt;/span&gt;
 message test 1
@@ -177,7 +177,7 @@ message test 1
 ...
 
 &lt;div class="message"&gt;
-&lt;span <span class="important">class="sr-only"</span>&gt;
+&lt;span <span class="important">class="visually-hidden"</span>&gt;
 I say:
 &lt;/span&gt;
 message test 1
@@ -252,10 +252,10 @@ document.title = "Djingo says…" + title;
 <p>These recommendations have been applied to the chat available on this page. Do not hesitate to consult the code. For any comments or suggestions, create an issue on our <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">github account</a>.</p>
 
 <div role="region" aria-labelledby="tchat-label">
-  <h1 id="tchat-label" class="sr-only" tabindex="-1">Chat window</h1>
+  <h1 id="tchat-label" class="visually-hidden" tabindex="-1">Chat window</h1>
   <div id="chatbot-window">
     <div id="chatbot">
-      <span id="chatbot-title" role="heading" aria-level="1">Djingo <span class="sr-only">Chat window</span></span>
+      <span id="chatbot-title" role="heading" aria-level="1">Djingo <span class="visually-hidden">Chat window</span></span>
       <span id="chatbot-toolbar">
         <button class="ico" id="chatbot-hide" title="Minimize the chat window" aria-label="Minimize the chat window"></button>
         <button class="ico" id="chatbot-show" title="Show the chat window" aria-label="Show the chat window"></button>

@@ -121,11 +121,11 @@ button {
   <p><a target="_blank" title="ouvrir l’exemple 5 (nouvelle fenêtre)" href="exemples/5/"><img src="exemples/exemple5.png" alt="ouvrir l’exemple 5 (nouvelle fenêtre)"></a></p>
 </div>
 
-<p>C’est mieux. Visuellement on voit bien deux choses dans chaque tag, son libellé et un bouton de suppression. Au lecteur d’écran par contre, pour le moment, on n’entend qu’un seul bouton «&nbsp;Retirer xxx de la liste&nbsp;». Pour corriger cela, on ajoute un <code>span</code> contenant l’intitulé du tag. Pour éviter que celui-ci n’apparaisse à l’écran (cela ferait doublon), on lui ajoute une classe de masquage accessible (<code>sr-only</code>). Ainsi, ce texte ne sera visible que par les lecteurs d’écran.</p>
+<p>C’est mieux. Visuellement on voit bien deux choses dans chaque tag, son libellé et un bouton de suppression. Au lecteur d’écran par contre, pour le moment, on n’entend qu’un seul bouton «&nbsp;Retirer xxx de la liste&nbsp;». Pour corriger cela, on ajoute un <code>span</code> contenant l’intitulé du tag. Pour éviter que celui-ci n’apparaisse à l’écran (cela ferait doublon), on lui ajoute une classe de masquage accessible (<code>visually-hidden</code>). Ainsi, ce texte ne sera visible que par les lecteurs d’écran.</p>
 
 <pre><code class="html">
   &lt;ul&gt;
-    &lt;li&gt;&lt;span class="sr-only"&gt;Alcatel&lt;/span&gt;&lt;button aria-label="Retirer Alcatel de la liste"&gt;Alcatel&lt;/button&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="visually-hidden"&gt;Alcatel&lt;/span&gt;&lt;button aria-label="Retirer Alcatel de la liste"&gt;Alcatel&lt;/button&gt;&lt;/li&gt;
   &lt;/ul&gt;
 </code></pre>
 <p>Ainsi au lecteur d’écran, pour chaque tag, on entend son libellé, puis un bouton pour le supprimer.</p>

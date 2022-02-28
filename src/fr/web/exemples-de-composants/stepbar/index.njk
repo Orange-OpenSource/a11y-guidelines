@@ -9,7 +9,7 @@ css:
 
 <h2>Préambule</h2>
 <p>Dans cet exemple nous allons voir comment améliorer la vocalisation d'un composant «&nbsp;<i lang="en">stepbar</i>&nbsp;».</p>
-<p>Pour réaliser cet élément nous utiliserons le composant <a href="https://boosted.orange.com/components/#dropdowns"><i lang="en">stepbar</i></a> disponible dans la librairie <a href="https://boosted.orange.com/">Boosted</a>. Quelques styles ont été modifiés pour le faire tenir sur une seule ligne.</p>
+<p>Pour réaliser cet élément nous utiliserons le composant <a href="https://boosted.orange.com/docs/5.1/components/stepped-process/"><i lang="en">stepbar</i></a> disponible dans la librairie <a href="https://boosted.orange.com/">Boosted</a>. Quelques styles ont été modifiés pour le faire tenir sur une seule ligne.</p>
 
 <h2>Exemple non accessible</h2>
 <p> Voici le rendu final de la <i lang="en">stepbar</i>.
@@ -93,12 +93,12 @@ Visuellement, lorsqu'on voit ce <i lang="en">stepbar</i> nous avons accès aux i
 
 <p>Techniquement, il existe plusieurs solutions pour arriver à ce résultat. On pourrait tenter de masquer les éléments non actifs au lecteur d'écran et modifier la vocalisation de l'élément sélectionné. Néanmoins, étant donné que ce composant évolue en fonction de la largeur de l'écran (design responsive), le plus simple est de masquer totalement ce composant au lecteur d'écran à l'aide d'un attribut <code>aria-hidden="true"</code>. Enfin ajouter un <code>span</code> en <a href="../masquage-accessible/">masquage accessible</a> contenant le texte à vocaliser.</p>
 
-<p>La technique du masquage accessible consiste à masquer du texte à l'écran, mais à faire en sorte que celui-ci soit vocalisé par le lecteur d'écran. Il s'agit d'une simple classe <abbr>CSS</abbr>. Dans les librairies <a href="https://boosted.orange.com/css/#helper-classes-screen-readers">Boosted</a> et <a href="https://getbootstrap.com/css/#helper-classes-screen-readers">Bootstrap</a> il existe par exemple une classe de masquage accessible nommée: <code>sr-only</code>.</p>
+<p>La technique du masquage accessible consiste à masquer du texte à l'écran, mais à faire en sorte que celui-ci soit vocalisé par le lecteur d'écran. Il s'agit d'une simple classe <abbr>CSS</abbr>. Dans les librairies <a href="https://boosted.orange.com/css/#helper-classes-screen-readers">Boosted</a> et <a href="https://getbootstrap.com/css/#helper-classes-screen-readers">Bootstrap</a> il existe par exemple une classe de masquage accessible nommée: <code>visually-hidden</code>.</p>
 <p>Consultez <a href="../masquage-accessible/">l'exemple sur le masquage accessible</a> pour plus d'information.</p>
 
 <h2>Exemple accessible</h2>
 
-<span class="sr-only">Mode de livraison, étape 3 sur 5.</span>
+<span class="visually-hidden">Mode de livraison, étape 3 sur 5.</span>
 <div class="row">
 <ul class="o-wizard-step-bar" data-steps="5" aria-hidden="true">
     <li class="visited">
@@ -131,7 +131,7 @@ Visuellement, lorsqu'on voit ce <i lang="en">stepbar</i> nous avons accès aux i
 <h3>Code de l'exemple accessible</h3>
 <!-- Code de l'exemple accessible -->
 <pre><code class="html">
-&lt;span class="sr-only"&gt;Mode de livraison, étape 3 sur 5.&lt;/span&gt;
+&lt;span class="visually-hidden"&gt;Mode de livraison, étape 3 sur 5.&lt;/span&gt;
 &lt;ul class="o-wizard-step-bar" data-steps="5" aria-hidden="true"&gt;
     &lt;li class="visited"&gt;
       &lt;div class="arrow" aria-hidden="true"&gt;&lt;/div&gt;

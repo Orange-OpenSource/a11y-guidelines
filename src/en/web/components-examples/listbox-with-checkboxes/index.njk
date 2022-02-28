@@ -47,8 +47,8 @@ In this case, we must also add the <code>label</code> tag.</p>
 <pre><code class="html">
   &lt;ul role="listbox" tabindex="0" aria-label="email list"&gt;
       &lt;li tabindex="-1" role="option" aria-checked="false"&gt;
-        &lt;div class="custom-control custom-checkbox mb-0"&gt;
-          &lt;input tabindex="-1" id="check1" class="custom-control-input" type="checkbox"&gt;&lt;label for="check1"&gt;&lt;/label&gt;
+        &lt;div class="form-check mb-0"&gt;
+          &lt;input tabindex="-1" id="check1" class="form-check-input" type="checkbox"&gt;&lt;label for="check1" class="form-check-label"&gt;&lt;/label&gt;
           Important information about your account
         &lt;/div&gt;
       &lt;/li&gt;
@@ -120,27 +120,27 @@ document.querySelectorAll("[type=checkbox]").forEach(checkbox =>{
 <div class="row">
   <ul id="exempleCheckbox" role="listbox" class="list-group" tabindex="0" class="col-md-8" aria-labelledby="email-list">
       <li class="list-group-item" tabindex="-1" role="option" aria-checked="false" aria-selected="true">
-        <div class="custom-control custom-checkbox mb-0">
-          <input tabindex="-1" id="check1" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check1"></label>
-          Important information about your account
+        <div class="form-check mb-0">
+          <input tabindex="-1" id="check1" class="form-check-input" type="checkbox"><label for="check1">
+          Important information about your account</label>
         </div>
       </li>
       <li class="list-group-item" tabindex="-1" role="option" aria-checked="false">
-        <div class="custom-control custom-checkbox mb-0">
-          <input tabindex="-1" id="check2" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check2"></label>
-          Sending message test
+        <div class="form-check mb-0">
+          <input tabindex="-1" id="check2" class="form-check-input" type="checkbox"><label for="check2">
+          Sending message test</label>
         </div>
       </li>
       <li class="list-group-item" tabindex="-1" role="option" aria-checked="false">
-        <div class="custom-control custom-checkbox mb-0">
-          <input tabindex="-1" id="check3" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check3"></label>
-          Photos of the weekend at the sea
+        <div class="form-check mb-0">
+          <input tabindex="-1" id="check3" class="form-check-input" type="checkbox"><label for="check3">
+          Photos of the weekend at the sea</label>
         </div>
       </li>
       <li class="list-group-item" tabindex="-1" role="option" aria-checked="false">
-        <div class="custom-control custom-checkbox mb-0">
-          <input tabindex="-1" id="check4" class="custom-control-input" type="checkbox"><label class="custom-control-label" for="check4"></label>
-          Re: Your order N°3642
+        <div class="form-check mb-0">
+          <input tabindex="-1" id="check4" class="form-check-input" type="checkbox"><label for="check4">
+          Re: Your order N°3642</label>
         </div>
       </li>
   </ul>

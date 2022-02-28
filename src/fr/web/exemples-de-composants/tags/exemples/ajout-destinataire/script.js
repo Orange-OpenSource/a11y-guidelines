@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         e.preventDefault();
         break;
       case 8 : // backspace
-        console.log(document.getElementById("selection-list"));
       if(this.value === ""){
         removeItem(document.getElementById("selection-list").lastElementChild);
       }
@@ -55,7 +54,7 @@ function addItem(text) {
   button.innerText = text;
 
   let li = document.createElement("li");
-  li.innerHTML = '<span class="sr-only">' + text + '</span>';
+  li.innerHTML = '<span class="visually-hidden">' + text + '</span>';
   li.appendChild(button);
 
   document.getElementById("selection-list").appendChild(li)
@@ -67,7 +66,7 @@ function speak(text, priority) {
   var id = "speak-" + Date.now();
   el.setAttribute("id", id);
   el.setAttribute("aria-live", priority || "polite");
-  el.classList.add("sr-only");
+  el.classList.add("visually-hidden");
   document.body.appendChild(el);
 
   window.setTimeout(function () {

@@ -7,7 +7,7 @@ abstract: "Stepbar or multi-step process"
 
 <h2>Introduction</h2>
 <p>In this example we will see how to improve the vocalization of a “stepbar” component.</p>
-<p>To achieve this we will use the <a href="http://boosted.orange.com/components/#dropdowns">stepbar</a> component available in the <a href="http://boosted.orange.com/">Boosted</a> library. Some styles have been modified to fit onto a single line.</p>
+<p>To achieve this we will use the <a href="https://boosted.orange.com/docs/5.1/components/stepped-process/">stepbar</a> component available in the <a href="http://boosted.orange.com/">Boosted</a> library. Some styles have been modified to fit onto a single line.</p>
 
 <h2>Non accessible example</h2>
 <p> Here is the final appearance of the stepbar.
@@ -91,12 +91,12 @@ For the stepbar we decided that the items shouldn't be clickable. So there is no
 
 <p>Technically, there are several ways to achieve this. We could try to hide inactive items from the screen reader and modify the vocalization of the selected item. However, given that this component changes according to the width of the screen (responsive design), the easiest way is to completely hide this component from the screen reader with the <code>aria-hidden="true"</code> attribute. Finally, add an <a href="../accessible-hiding/">accessible hiding</a> <code>span</code> containing the text to vocalize.</p>
 
-<p>Accessible hiding allows to hide a text, but ensures that it is correctly vocalized by the screen reader. It is done through a simple <abbr>CSS</abbr> class. In the <a href="http://boosted.orange.com/css/#helper-classes-screen-readers">Boosted</a> and <a href="http://getbootstrap.com/css/#helper-classes-screen-readers">Bootstrap</a> libraries there is an accessible hiding class named <code>sr-only</code>.</p>
+<p>Accessible hiding allows to hide a text, but ensures that it is correctly vocalized by the screen reader. It is done through a simple <abbr>CSS</abbr> class. In the <a href="http://boosted.orange.com/css/#helper-classes-screen-readers">Boosted</a> and <a href="http://getbootstrap.com/css/#helper-classes-screen-readers">Bootstrap</a> libraries there is an accessible hiding class named <code>visually-hidden</code>.</p>
 <p>See <a href="../accessible-hiding/">the accessible hiding example</a> for more information.</p>
 
 <h2>Accessible example</h2>
 
-<span class="sr-only">Delivery options, step 3 of 5</span>
+<span class="visually-hidden">Delivery options, step 3 of 5</span>
 <div class="row">
 <ul class="o-wizard-step-bar" data-steps="5" aria-hidden="true">
     <li class="visited">
@@ -127,7 +127,7 @@ For the stepbar we decided that the items shouldn't be clickable. So there is no
 <h3>Accessible example code</h3>
 <!-- Accessible example code -->
 <pre><code class="html">
-&lt;span class="sr-only"&gt;Delivery options, step 3 of 5&lt;/span&gt;
+&lt;span class="visually-hidden"&gt;Delivery options, step 3 of 5&lt;/span&gt;
 &lt;ul class="o-wizard-step-bar" data-steps="5" aria-hidden="true"&gt;
     &lt;li class="visited"&gt;
       &lt;div class="arrow" aria-hidden="true"&gt;&lt;/div&gt;

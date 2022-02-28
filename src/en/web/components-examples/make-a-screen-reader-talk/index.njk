@@ -42,7 +42,7 @@ The possible values are:
       var id = "speak-" + Date.now();
       el.setAttribute("id", id);
       el.setAttribute("aria-live", priority || "polite");
-      el.classList.add("sr-only");
+      el.classList.add("visually-hidden");
       document.body.appendChild(el);
 
       window.setTimeout(function () {
@@ -55,14 +55,14 @@ The possible values are:
   }
 </code></pre>
 
-<p>Please remember that for vocalized messages to be hidden from the screen you must use a <a href="../accessible-hiding/index.html">an accessible hiding class</a> (<code>sr-only</code>) in your <abbr>CSS</abbr>.</p>
+<p>Please remember that for vocalized messages to be hidden from the screen you must use a <a href="../accessible-hiding/index.html">an accessible hiding class</a> (<code>visually-hidden</code>) in your <abbr>CSS</abbr>.</p>
 
 <h2>Example</h2>
 
 <p>You can test this function with the form below (test it with a screen reader, otherwise you won’t hear anything).</p>
 
-<div class="form-group">
-  <label for="message">Message to vocalise</label>
+<div class="mb-3">
+  <label class="form-label" for="message">Message to vocalise</label>
   <input type="text" id="message" class="form-control">
 </div>
 <button id="btnSpeak" class="btn btn-secondary">Test</button>

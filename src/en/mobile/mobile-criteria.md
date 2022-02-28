@@ -17,14 +17,14 @@ Two versions are available:
 
 <div class="row">
     <div class="col-xs-12 col-md-6 col-lg-4">
-        <h2 class="sr-only">Android criteria</h2>
+        <h2 class="visually-hidden">Android criteria</h2>
         <a href="../android/design/" class="btn btn-info">
             <img src="../images/android.png" alt="">
             <div>Android accessibility guide</div>
         </a>
     </div>
     <div class="col-xs-12 col-md-6 col-lg-4">
-        <h2 class="sr-only">iOS criteria</h2>
+        <h2 class="visually-hidden">iOS criteria</h2>
         <a href="../ios/design/" class="btn btn-info">
             <img src="../images/iphone.png" alt="">
             <div>iOS accessibility guide</div>

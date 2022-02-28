@@ -2,7 +2,6 @@
 title: "Exemple de formulaire"
 abstract: "Exemple de formulaire accessible."
 tags: componentsExamples_fr
-jqueryValidate: true
 css:
 - style.css
 js:
@@ -26,17 +25,17 @@ js:
       <div class="form-group">
         <fieldset>
           <legend>Couleur</legend>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="blanc" name="couleur" class="custom-control-input" checked>
-            <label class="custom-control-label" for="blanc">Blanc</label>
+          <div class="form-check form-check-inline">
+            <input type="radio" id="blanc" name="couleur" class="form-check-input" checked>
+            <label class="form-check-label" for="blanc">Blanc</label>
           </div>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="noir" name="couleur" class="custom-control-input">
-            <label class="custom-control-label" for="noir">Noir</label>
+          <div class="form-check form-check-inline">
+            <input type="radio" id="noir" name="couleur" class="form-check-input">
+            <label class="form-check-label" for="noir">Noir</label>
           </div>
         </fieldset>
       </div>
-      <div class="form-group">
+      <div class="mb-3">
         <label for="numero-serie">Veuillez saisir le numéro de série *</label>
         <input placeholder="Exemple: TS-4521" type="text" name="serie" data-displayname="numéro de série"
                class="form-control" id="numero-serie" aria-describedby="helpblock" aria-required="true">
@@ -44,15 +43,15 @@ js:
       </div>
       <p id="helpblock" class="help-block">Numéro de série commençant par «&nbsp;TS-&nbsp;» suivi de 4 chiffres.</p>
 
-      <div class="form-group">
+      <div class="mb-3">
         <label for="adresse">Adresse *</label>
         <input type="text" name="adresse" data-displayname="adresse" class="form-control" id="adresse"
                aria-required="true">
         <label id="adresse-error" class="error" for="adresse" style="display: none;"></label>
-        <label class="sr-only" for="complement">Complément d’adresse</label>
+        <label class="visually-hidden" for="complement">Complément d’adresse</label>
         <input type="text" class="form-control mt-2" id="complement">
       </div>
-      <div class="form-group">
+      <div class="mb-3">
         <label for="telephone">Téléphone *</label>
         <input type="text" name="telephone" data-displayname="téléphone" class="form-control" id="telephone"
                aria-required="true">
@@ -79,21 +78,22 @@ js:
 
 <p>Dans de rares cas, il peut s’avérer qu’il ne soit pas nécessaire d’afficher un libellé car sa fonction est grâce au contexte, évidente (champ de recherche proche du bouton avec l'icône loupe, la case à cocher pour sélectionner une ligne de tableau, par exemple). Prévoir tout de même un libellé pour les lecteurs d’écran et le masquer en utilisant une des 3 méthodes suivantes.</p>
 
-<h4>Classe <abbr>CSS</abbr> pour masquage accessible</h4>
-<p>C’est la méthode utilisée sur le second champ de saisie de l’adresse dans cet exemple de formulaire accessible (utilisation de la classe <code>.visually-hidden</code> de Bootstrap/Boosted).</p>
+<h4>Classe <abbr>CSS</abbr> de masquage accessible</h4>
+<p>C’est la méthode utilisée sur le second champ de saisie de l’adresse dans cet exemple de formulaire accessible
+  (utilisation de la classe <code>visually-hidden</code> de Bootstrap/Boosted).</p>
 
 <p><strong>Code <abbr>CSS</abbr></strong></p>
 <pre><code class="css">
   .visually-hidden {
-    position: absolute !important;
-    width: 1px !important;
-    height: 1px !important;
-    padding: 0 !important;
-    margin: -1px !important;
-    overflow: hidden !important;
-    clip: rect(0,0,0,0) !important;
-    white-space: nowrap !important;
-    border: 0 !important;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap; /* added line */
+        border: 0;
   }
   </code></pre>
 
@@ -144,14 +144,15 @@ js:
   <li>il rend les champs de saisie moins visibles que ceux sans <code>placeholder</code>.</li>
 </ul>
 <p>En revanche, le <code>placeholder</code> peut servir de guide, d’aide pour remplir le champ sans que cette
-  information soit absolument nécessaire (par exemple, proposer une valeur attendue valide)&nbsp;: ne pas hésiter à l’utiliser pour ce type de besoin.</p>
+  information soit absolument nécessaire (par exemple, proposer une valeur attendue valide)&nbsp;: ne pas hésiter à
+  l’utiliser pour ce type de besoin.</p>
 <div class="form-group">
   <label for="numero-serie2">Veuillez saisir le numéro de série *</label>
   <input type="text" name="serie" data-displayname="numéro de série" class="form-control" id="numero-serie2"
          aria-describedby="helpblock" aria-required="true" placeholder="exemple : TS-0000">
 </div>
 <pre><code class="html">
-  &lt;div class="form-group"&gt;
+  &lt;div class="mb-3"&gt;
         &lt;label for="numero-serie"&gt;Veuillez saisir le numéro de série *&lt;/label&gt;
         &lt;input type="text" name="serie" data-displayname="numéro de série" class="form-control" id="numero-serie" aria-describedby="helpblock"
         aria-required="true" placeholder="exemple : TS-0000"&gt;
@@ -159,10 +160,9 @@ js:
 </code></pre>
 
 <h3>Utilisation de l'attribut <code>autocomplete</code></h3>
-<p>L'attribut <code>autocomplete</code> doit être renseigné pour tous les champs qui demandent à l'utilisateur de saisir des informations personnelles (nom, prénom, adresse, téléphone...). 
-Respecter cette simple pratique permet d'ajouter une fonctionnalité très puissante à vos formulaires pour l'ensemble de vos utilisateurs. En effet, si des informations similaires on déjà été renseignées par l'utilisateur (même sur un autre site), le navigateur sera à même de préremplir l'intégralité du formulaire. Cela fait gagner du temps et évite les erreurs de saisie.</p>
-<p>La liste des valeur possible pour l'attribut <code>autocomplete</code> est disponible dans <a hreflang="en" lang="en" href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.</p>
-
+<p>Pour tout champ dont le type est listé dans <a lang="en" href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input
+    Purposes for User Interface Components</a>, il faut remplir l'attribut <code>autocomplete</code> du champ avec la
+  valeur adéquate.</p>
 <div class="form-group">
   <label for="lname">Nom de famille :</label>
   <input id="lname" type="text" autocomplete="family-name" class="form-control">
@@ -170,7 +170,7 @@ Respecter cette simple pratique permet d'ajouter une fonctionnalité très puiss
   <input type="text" id="cc-num" autocomplete="cc-number" class="form-control">
 </div>
 <pre><code class="html">
-  &lt;div class="form-group"&gt;
+  &lt;div class="mb-3"&gt;
         &lt;label for="lname"&gt;Nom de famille :&lt;/label&gt;
         &lt;input id="lname" type="text" <span class="important">autocomplete="family-name"</span> class="form-control"&gt;
         &lt;label for="cc-num"&gt;Numéro de carte de crédit :&lt;/label&gt;
@@ -203,7 +203,7 @@ Respecter cette simple pratique permet d'ajouter une fonctionnalité très puiss
 <h3>Préciser le type ou le format attendu</h3>
 <p>Lorsque c’est nécessaire, préciser pour tous les utilisateurs, dans le <code>label</code> du champ, le type ou le format de la donnée attendu. Pour que cette information soit vocalisée automatiquement par les lecteurs d’écran, vous préférerez mettre ces informations directement dans la balise <code>label</code>&nbsp;; sinon utiliser un attribut <code>aria-describedby</code> pour référencer du texte visuellement présent dans la page mais hors du <code>label</code>.</p>
 <pre><code class="html">
-&lt;div class="form-group"&gt;
+&lt;div class="mb-3"&gt;
       &lt;label for="numero-serie"&gt;Veuillez saisir le numéro de série *&lt;/label&gt;
       &lt;input type="text" id="numero-serie" <span class="important">aria-describedby="helpblock"</span> aria-required="true"&gt;ll
 &lt;/div&gt;

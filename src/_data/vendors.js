@@ -1,20 +1,16 @@
 module.exports = {
   boosted: {
-    version: '4.6.0',
+    version: '5.1.3',
     css: {
-      integrity: 'sha384-gqlCljYk+czxYG/OEUHPObOqdFdx4RFpXrAy+z6dbWdeD1ybOujFGA+lKVLnXtxx'
+      integrity: 'sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c'
     },
     js: {
-      integrity: 'sha384-iNhsKqieEna23DDrKXyI9Ze4CeR2yIykw8gQ/AHcSSZTASt2jt+YQdOqqcos7vJI'
+      integrity: 'sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF'
     }
   },
   highlightJS: {
     version: '10.1.1',
     theme: 'a11y-light'
-  },
-  jquery: {
-    version: '3.5.1',
-    integrity: 'sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj'
   },
   jqueryValidate: {
     version: '1.19.2'

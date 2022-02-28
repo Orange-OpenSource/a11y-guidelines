@@ -13,14 +13,14 @@ Two versions are available:
 
 <div class="row">
     <div class="col-xs-12 col-md-6 col-lg-4">
-        <h2 class="sr-only">TalkBack</h2>
+        <h2 class="visually-hidden">TalkBack</h2>
         <a href="../android/talkback/" class="btn btn-info">
             <img src="../images/android.png" alt="">
             <div>TalkBack user guide</div>
         </a>
     </div>
     <div class="col-xs-12 col-md-6 col-lg-4">
-        <h2 class="sr-only">Voiceover</h2>
+        <h2 class="visually-hidden">Voiceover</h2>
         <a href="../ios/voiceover/" class="btn btn-info">
             <img src="../images/iphone.png" alt="">
             <div>VoiceOver user guide</div>

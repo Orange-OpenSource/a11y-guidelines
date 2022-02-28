@@ -2,7 +2,6 @@
 title: "Forms"
 abstract: "Creating accessible forms."
 tags: componentsExamples_en
-jqueryValidate: true
 css:
 - style.css
 js:
@@ -26,17 +25,17 @@ js:
       <div class="form-group">
         <fieldset>
           <legend>Color</legend>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="white" name="color" class="custom-control-input" checked>
-            <label class="custom-control-label" for="white">White</label>
+          <div class="form-check form-check-inline">
+            <input type="radio" id="white" name="color" class="form-check-input" checked>
+            <label class="form-check-label" for="white">White</label>
           </div>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input type="radio" id="black" name="color" class="custom-control-input">
-            <label class="custom-control-label" for="black">Black</label>
+          <div class="form-check form-check-inline">
+            <input type="radio" id="black" name="color" class="form-check-label">
+            <label class="form-check-label" for="black">Black</label>
           </div>
         </fieldset>
       </div>
-      <div class="form-group">
+      <div class="mb-3">
         <label for="serial-number">Please enter the serial number *</label>
         <input placeholder="e.g.: TS-4521" type="text" name="serie" data-displayname="serial number"
                class="form-control" id="serial-number" aria-describedby="helpblock" aria-required="true">
@@ -44,15 +43,15 @@ js:
       </div>
       <p id="helpblock" class="help-block">Serial number beginning with “TS-” followed by 4 digits.</p>
 
-      <div class="form-group">
+      <div class="mb-3">
         <label for="addresse">Address *</label>
         <input type="text" name="addresse" data-displayname="address" class="form-control" id="addresse"
                aria-required="true">
-               <label id="addresse-error" class="error" for="addresse" style="display: none;"></label>
+        <label id="addresse-error" class="error" for="addresse" style="display: none;"></label>
         <label class="sr-only" for="complement">Address complement</label>
         <input type="text" class="form-control mt-2" id="complement">
       </div>
-      <div class="form-group">
+      <div class="mb-3">
         <label for="telephone">Phone *</label>
         <input type="text" name="telephone" data-displayname="phone" class="form-control" id="telephone"
                aria-required="true">
@@ -86,12 +85,12 @@ js:
   You should still provide a label for screen readers and hide it using one of the following 3 methods:</p>
 
 <h4>Accessible hiding</h4>
-<p>This is the method used in the second input field of the address in the accessible form example (using the <code>sr-only</code>
+<p>This is the method used in the second input field of the address in the accessible form example (using the <code>visually-hidden</code>
   Bootstrap/Boosted class).</p>
 
 <p><strong>CSS</strong></p>
 <pre><code class="css">
-.sr-only {
+.visually-hidden {
       position: absolute;
       width: 1px;
       height: 1px;
@@ -107,7 +106,7 @@ js:
 <pre><code class="html">
 &lt;label for="address"&gt;Address *&lt;/label&gt;
 &lt;input name="address" data-displayname="Code" class="form-control" id="address" aria-required="true" type="text"&gt;
-<strong>&lt;label <span class="important">class="sr-only"</span> for="complement"&gt;Address complement&lt;/label&gt;
+<strong>&lt;label <span class="important">class="visually-hidden"</span> for="complement"&gt;Address complement&lt;/label&gt;
 &lt;input class="form-control" id="complement" type="text"&gt;</strong>
 </code></pre>
 
@@ -163,13 +162,13 @@ js:
 </ul>
 <p>In contrast, the <code>placeholder</code> can guide the user, helping to fill a field (for example by describing the
   expected format or value): do not hesitate to use it in this situation.</p>
-<div class="form-group">
+<div class="mb-3">
   <label for="serial-number2">Please enter the serial number *</label>
   <input type="text" name="serie" data-displayname="serial number" class="form-control" id="serial-number2"
          aria-describedby="helpblock" aria-required="true" placeholder="e.g. TS-0000">
 </div>
 <pre><code class="html">
-  &lt;div class="form-group"&gt;
+  &lt;div class="mb-3"&gt;
         &lt;label for="serial-number"&gt;Please enter the serial number *&lt;/label&gt;
         &lt;input type="text" name="serie" data-displayname="serial number" class="form-control" id="serial-number" aria-describedby="helpblock"
         aria-required="true" placeholder="e.g. TS-0000"&gt;
@@ -195,7 +194,7 @@ js:
   by screen readers, add it to the <code>label</code> preferably or otherwise use the <code>aria-describedby</code>
   attribute.</p>
 <pre><code class="html">
-  &lt;div class="form-group"&gt;
+  &lt;div class="mb-3"&gt;
         &lt;label for="serial-number"&gt;Please enter the serial number *&lt;/label&gt;
         &lt;input type="text" id="serial-number" <span class="important">aria-describedby="helpblock"</span> aria-required="true"&gt;
   &lt;/div&gt;

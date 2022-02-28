@@ -15,21 +15,21 @@ This guide aims to present the different accessibility criteria to create an acc
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#images-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#images-Description" 
            role="tab" 
            aria-selected="false">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#images-Check" 
            role="tab" 
            aria-selected="false">Checklist</a>
@@ -67,28 +67,28 @@ Images are often used to convey a lot of informations that must be exposed thank
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#colours-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#colours-Description" 
            role="tab" 
            aria-selected="false">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#colours-Examples" 
            role="tab" 
            aria-selected="false">Examples</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#colours-Check" 
            role="tab" 
            aria-selected="false">Checklist</a>
@@ -168,28 +168,28 @@ The label “film | 8:40 PM…” does not have enough contrast and will not be 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#alternativeText-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#alternativeText-Description" 
            role="tab" 
            aria-selected="false">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#alternativeText-Examples" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#alternativeText-Check" 
            role="tab" 
            aria-selected="false">Checklist</a>
@@ -236,28 +236,28 @@ It is obvious that we must add text alternatives.
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#titleAndHeaders-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#titleAndHeaders-Description" 
            role="tab" 
            aria-selected="false">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#titleAndHeaders-Examples" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#titleAndHeaders-Check" 
            role="tab" 
            aria-selected="false">Checklist</a>
@@ -299,21 +299,21 @@ It makes navigation easier for everyone: at any time, we know where we are in th
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#eltStates-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#eltStates-Description" 
            role="tab" 
            aria-selected="false">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#eltStates-Examples" 
            role="tab" 
            aria-selected="false">Example</a>
@@ -352,14 +352,14 @@ Any item whose status changes when using the application must vocalize its statu
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#stdComponent-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#stdComponent-Description" 
            role="tab" 
            aria-selected="false">Description</a>
@@ -388,28 +388,28 @@ If no standard component corresponds to the need, create a dedicated component b
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#touchTarget-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#touchTarget-Description" 
            role="tab" 
            aria-selected="false">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#touchTarget-Examples" 
            role="tab" 
            aria-selected="false">Examples</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#touchTarget-Check" 
            role="tab" 
            aria-selected="false">Checklist</a>
@@ -449,28 +449,28 @@ In the examples below, the black box corresponds to the size of the interactive 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ghostElt-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ghostElt-Description" 
            role="tab" 
            aria-selected="false">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ghostElt-Examples" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ghostElt-Check" 
            role="tab" 
            aria-selected="false">Checklist</a>
@@ -512,21 +512,21 @@ With the screen reader, no invisible element must be read or take focus when rea
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#contentControl-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#contentControl-Description" 
            role="tab" 
            aria-selected="false">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#contentControl-Check" 
            role="tab" 
            aria-selected="false">Checklist</a>
@@ -557,21 +557,21 @@ All interactive content must be controlled by the user (adding an accessible but
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#changingContent-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#changingContent-Description" 
            role="tab" 
            aria-selected="false">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#changingContent-Check" 
            role="tab" 
            aria-selected="false">Checklist</a>
@@ -613,28 +613,28 @@ Make sure that dynamic changes are vocalized.
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#horizontalScroll-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#horizontalScroll-Description" 
            role="tab" 
            aria-selected="false">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#horizontalScroll-Examples" 
            role="tab" 
            aria-selected="false">Examples</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#horizontalScroll-Check" 
            role="tab" 
            aria-selected="false">Checklist</a>
@@ -684,21 +684,21 @@ When necessary, also add “next” and “previous” buttons.
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#form-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#form-Description" 
            role="tab" 
            aria-selected="false">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#form-Check" 
            role="tab" 
            aria-selected="false">Checklist</a>
@@ -727,28 +727,28 @@ Form fields must vocalize their labels.
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#readingOrder-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#readingOrder-Description" 
            role="tab" 
            aria-selected="false">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#readingOrder-Examples" 
            role="tab" 
            aria-selected="false">Example</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#readingOrder-Check" 
            role="tab" 
            aria-selected="false">Checklist</a>
@@ -793,21 +793,21 @@ Traversal order (VoiceOver) is logical and coherent.
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#language-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#language-Description" 
            role="tab" 
            aria-selected="false">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#language-Check" 
            role="tab" 
            aria-selected="false">Checklist</a>
@@ -841,21 +841,21 @@ The words and the text in a different language than the rest of the application 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#screenOrientation-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#screenOrientation-Description" 
            role="tab" 
            aria-selected="false">Description</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#screenOrientation-Check" 
            role="tab" 
            aria-selected="false">Checklist</a>
@@ -895,7 +895,7 @@ It's highly recommended to :
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#DedicatedScreen-Description" 
            role="tab" 
            aria-selected="true">Description</a>
@@ -921,14 +921,14 @@ However, even if it could be a brilliant idea at first sight, it's definitely **
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#a11yOptions-Objectives" 
            role="tab" 
            aria-selected="true">Objective</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#a11yOptions-Description"
            id="a11yOptions-Description_tab"
            role="tab" 
@@ -936,7 +936,7 @@ However, even if it could be a brilliant idea at first sight, it's definitely **
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#a11yOptions-Check" 
            role="tab" 
            aria-selected="false">Checklist</a>
@@ -1011,21 +1011,21 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#Contrast-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#Contrast-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#Contrast-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -1054,21 +1054,21 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#AssistiveTouch-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#AssistiveTouch-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#AssistiveTouch-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -1096,21 +1096,21 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#Bold-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#Bold-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#Bold-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -1137,21 +1137,21 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ClosedCaption-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ClosedCaption-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ClosedCaption-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -1178,21 +1178,21 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#GrayScale-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#GrayScale-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#GrayScale-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -1219,21 +1219,21 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#GuidedAccess-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#GuidedAccess-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#GuidedAccess-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -1260,21 +1260,21 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#invertColors-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#invertColors-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#invertColors-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -1301,21 +1301,21 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#AudioMono-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#AudioMono-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#AudioMono-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -1342,21 +1342,21 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ReduceMotion-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ReduceMotion-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ReduceMotion-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -1383,14 +1383,14 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#CrossFadeTransition-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#CrossFadeTransition-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
@@ -1413,21 +1413,21 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ReduceTransparency-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ReduceTransparency-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ReduceTransparency-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -1454,21 +1454,21 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ShakeToUndo-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ShakeToUndo-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#ShakeToUndo-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -1495,21 +1495,21 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#SpeakScreen-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#SpeakScreen-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#SpeakScreen-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -1536,21 +1536,21 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#SpeakSelection-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#SpeakSelection-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#SpeakSelection-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -1577,21 +1577,21 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#SwitchControl-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#SwitchControl-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#SwitchControl-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -1618,21 +1618,21 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#VoiceOver-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#VoiceOver-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#VoiceOver-iOS12"
            role="tab" 
            aria-selected="false">iOS 12</a>
@@ -1659,14 +1659,14 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#AutoPlayVideoPreviews-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#AutoPlayVideoPreviews-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
@@ -1691,14 +1691,14 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#DifferentiateWithoutColour-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#DifferentiateWithoutColour-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>
@@ -1721,14 +1721,14 @@ The full list of these options including their purpose and their coding name is 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#OnOffSwitchLabels-iOS15"
            role="tab" 
            aria-selected="true">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#OnOffSwitchLabels-iOS13"
            role="tab" 
            aria-selected="false">iOS 13</a>

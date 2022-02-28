@@ -187,7 +187,7 @@ listbox.querySelectorAll("[type=checkbox]").forEach(function(c){
 function speak(message) {
     var id = "sr-" + Date.now();
 	var span = document.createElement("span");
-	Object.assign(span, {"id": id, "aria-live": "polite", "className": "sr-only"});
+	Object.assign(span, {"id": id, "aria-live": "polite", "className": "visually-hidden"});
     document.body.appendChild(span);
     window.setTimeout(function() {
 		document.getElementById(id).innerText = message;
