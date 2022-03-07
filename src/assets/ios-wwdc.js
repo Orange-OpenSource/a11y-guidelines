@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function(event) {
   const lang = document.documentElement.getAttribute('lang')
 
   if (!lang) {
@@ -248,7 +248,7 @@ $(document).ready(function () {
  		
  				//Ajout du badge si l'élément impacté existe
  				if(currentRefTests[i].resultat[0]) {
- 					htmlrefTests +='<span class="badge badge-pill badge-light mr-2 align-self-center">';
+ 					htmlrefTests +='<span class="badge rounded-pill bg-light mr-2 align-self-center">';
  					htmlrefTests += currentRefTests[i].resultat[0] +'</span>';
  				}
  				htmlrefTests += '</p></a>';
