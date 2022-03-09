@@ -297,6 +297,16 @@ pre code {
   background-color: #eee !important;
 }
 
+.bg-800 {
+  background-color: #595959 !important;
+  color:#fff!important
+}
+
+.bg-900 {
+  background-color: #333333 !important;
+  color:#fff!important
+}
+
 .no-js .hidden-if-no-js {
   display: none !important;
 }
@@ -319,6 +329,12 @@ pre code {
   }
 }
 
+/**
+ * Personna
+ */
+.position-absolute .badge {
+  white-space: normal;
+}
 
 /**
  * Boosted migration fix
