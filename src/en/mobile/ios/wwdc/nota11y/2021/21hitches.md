@@ -64,7 +64,7 @@ To accurately specify the functions of this process, various phases have been cr
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#RenderLoopFramesFrame"
            id="RenderLoopFramesFrame_tab"
            role="tab" 
@@ -72,7 +72,7 @@ To accurately specify the functions of this process, various phases have been cr
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#RenderLoopFramesBuffering"
            id="RenderLoopFramesBuffering_tab"
            role="tab" 
@@ -80,7 +80,7 @@ To accurately specify the functions of this process, various phases have been cr
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#RenderLoopFramesParallelism"
            id="RenderLoopFramesParallelism_tab"
            role="tab" 
@@ -123,7 +123,7 @@ The `Render`&nbsp;`Loop` frames are managed in some parallel processes to guaran
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#RenderLoopExampleOverview"
            id="RenderLoopExampleOverview_tab"
            role="tab" 
@@ -131,7 +131,7 @@ The `Render`&nbsp;`Loop` frames are managed in some parallel processes to guaran
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#RenderLoopExampleEvent"
            id="RenderLoopExampleEvent_tab"
            role="tab" 
@@ -139,7 +139,7 @@ The `Render`&nbsp;`Loop` frames are managed in some parallel processes to guaran
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#RenderLoopExampleCommit"
            id="RenderLoopExampleCommit_tab"
            role="tab" 
@@ -147,7 +147,7 @@ The `Render`&nbsp;`Loop` frames are managed in some parallel processes to guaran
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#RenderLoopExampleRender1"
            id="RenderLoopExampleRender1_tab"
            role="tab" 
@@ -155,7 +155,7 @@ The `Render`&nbsp;`Loop` frames are managed in some parallel processes to guaran
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#RenderLoopExampleRender2"
            id="RenderLoopExampleRender2_tab"
            role="tab" 
@@ -208,7 +208,7 @@ A shape made of various elements is unpacked to understand each phase of the `Re
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#CommitPhaseOverview"
            id="CommitPhaseOverview_tab"
            role="tab" 
@@ -216,7 +216,7 @@ A shape made of various elements is unpacked to understand each phase of the `Re
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#CommitPhaseLayout"
            id="CommitPhaseLayout_tab"
            role="tab" 
@@ -224,7 +224,7 @@ A shape made of various elements is unpacked to understand each phase of the `Re
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#CommitPhaseDisplay"
            id="CommitPhaseDisplay_tab"
            role="tab" 
@@ -232,7 +232,7 @@ A shape made of various elements is unpacked to understand each phase of the `Re
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#CommitPhasePrepare"
            id="CommitPhasePrepare_tab"
            role="tab" 
@@ -240,7 +240,7 @@ A shape made of various elements is unpacked to understand each phase of the `Re
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#CommitPhaseCommit"
            id="CommitPhaseCommit_tab"
            role="tab" 
@@ -350,7 +350,7 @@ The offscreen pass happens when it's necessary for the GPU to **switch to a diff
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#HitchesRenderPhaseInstrumentsOverview"
            id="HitchesRenderPhaseInstrumentsOverview_tab"
            role="tab" 
@@ -358,7 +358,7 @@ The offscreen pass happens when it's necessary for the GPU to **switch to a diff
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#HitchesRenderPhaseInstrumentsShadowing"
            id="HitchesRenderPhaseInstrumentsShadowing_tab"
            role="tab" 
@@ -366,7 +366,7 @@ The offscreen pass happens when it's necessary for the GPU to **switch to a diff
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#HitchesRenderPhaseInstrumentsMasking"
            id="HitchesRenderPhaseInstrumentsMasking_tab"
            role="tab" 
@@ -374,7 +374,7 @@ The offscreen pass happens when it's necessary for the GPU to **switch to a diff
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#HitchesRenderPhaseInstrumentsRoundedRectangles"
            id="HitchesRenderPhaseInstrumentsRoundedRectangles_tab"
            role="tab" 
@@ -382,7 +382,7 @@ The offscreen pass happens when it's necessary for the GPU to **switch to a diff
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
-           data-toggle="tab" 
+           data-bs-toggle="tab" 
            href="#HitchesRenderPhaseInstrumentsExport"
            id="HitchesRenderPhaseInstrumentsExport_tab"
            role="tab" 
