@@ -2,7 +2,7 @@
 title: "Utilisation de l'attribut aria-current"
 abstract: "Les différentes utilisations possibles de l'attribut ARIA : aria-current"
 titleBeforeTag: true
-date: "2022-03-04"
+date: "2022-03-10"
 tags:
   - web
   - intermediate
