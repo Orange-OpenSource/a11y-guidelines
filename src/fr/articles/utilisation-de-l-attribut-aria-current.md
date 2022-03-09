@@ -11,7 +11,7 @@ tags:
 ## Introduction
 L'attribut [aria-current](https://www.w3.org/TR/wai-aria-1.2/#aria-current) sert à indiquer (au niveau du code) l'élément courant dans un ensemble d'éléments. 
 
-Pour faire simple prenons l'exemple d'un  menu de navigation. L'élément courant est généralement mis en évidence par un effet visuel. Pour que cette mise en évidence soit également perçue par les utilisateurs qui utilisent un lecteur d'écran (ou un outil d'assistance quel qu'il soit), il est indispensable de marquer l'élément au niveau code en utilisant l'attribut `aria-current`.
+Pour faire simple, prenons l'exemple d'un menu de navigation. L'élément courant est généralement mis en évidence par un effet visuel. Pour que cette mise en évidence soit également perçue par les utilisateurs qui utilisent un lecteur d'écran (ou un outil d'assistance quel qu'il soit), il est indispensable de marquer l'élément au niveau code en utilisant l'attribut `aria-current`.
 
 ## Utilisation
 
@@ -28,14 +28,14 @@ Le second élément de cette liste sera par exemple vocalisé "**en cours**, tâ
 
 ## Liste des différents usages
 
-L'attribut `aria-current` accèpte les valeurs suivantes : `true`, `page`, `step`, `location`, `date`, `time` et `false`.
+L'attribut `aria-current` accepte les valeurs suivantes : `true`, `page`, `step`, `location`, `date`, `time` et `false`.
 
 - `true` : indique l'élément en cours dans un ensemble d'éléments
 - `step` : indique l'étape en cours
 - `location` : indique l'élément en cours dans un diagramme
-- `date` : indique la date en cours dans un ensemble de date
+- `date` : indique la date courante dans un ensemble de date
 - `time` : indique l'heure en cours
-- `false` (valeur par défault) : n'a pas d'effet
+- `false` (valeur par défaut) : n'a pas d'effet
 
 
 ## Quelques exemples d'usages courants
