@@ -6,7 +6,7 @@
     {%- for item in breadcrumb -%}
       {% set beforeLast = loop.index == breadcrumb | length - 1 %}
       {% if item.isActive %}
-        <li class="breadcrumb-item{% if not beforeLast %} d-none d-sm-flex{% endif %}" aria-current="location">
+        <li class="breadcrumb-item{% if not beforeLast %} d-none d-sm-flex{% endif %}" aria-current="page">
           {{ item.label }}
         </li>
       {% else %}
