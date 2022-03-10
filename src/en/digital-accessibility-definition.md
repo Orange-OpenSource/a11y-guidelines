@@ -7,12 +7,14 @@ abstract: "What is digital accessibility?"
 
 ## What is digital accessibility?
 
-<blockquote class="blockquote" cite="https://www.w3.org/Press/IPO-announce">
+<figure>
+  <blockquote class="blockquote" cite="https://www.w3.org/Press/IPO-announce">
     <p>The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.</p>
-    <footer class="blockquote-footer">
-        Tim Berners-Lee, <abbr title="World Wide Web Consortium">W3C</abbr> Director and inventor of the World Wide Web.
-    </footer>
-</blockquote>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+      Tim Berners-Lee, <abbr title="World Wide Web Consortium">W3C</abbr> Director and inventor of the World Wide Web.
+  </figcaption>
+</figure>
 
 Digital accessibility is about making the access to digital information possible regardless of the nature of a person’s disability and how they consult the information. It involves different technologies such as the Web, videos, Word and PDF documents, but also digital television or mobile phones. 
 
