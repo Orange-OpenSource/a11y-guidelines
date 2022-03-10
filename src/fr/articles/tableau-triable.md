@@ -80,7 +80,7 @@ Dans le cas où, vous utilisez un tableau pour faire de la mise en page, vous de
 <ul>
   <li>l'élément <code>table</code> doit avoir l'attribut <code>role="presentation</code></li>
   <li>les éléments sémantiques propres à un tableau ne doivent pas être utilisés : <code>caption</code>, <code>th</code>, <code>scope</code></li>
-  <li>assurez vous que, s'l existe un ordre de lecture spécifique pour comprendre le contenu, cet ordre suit l'ordre d'apparition dans le code</li>
+  <li>assurez vous que, s'il existe un ordre de lecture spécifique pour comprendre le contenu, cet ordre suit l'ordre d'apparition dans le code</li>
 </ul>
 
 ### Navigation dans un tableau à l'aide des lecteurs d'écran Jaws et NVDA
