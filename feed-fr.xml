@@ -1806,7 +1806,7 @@ Stratégie de mise en accessibilité&lt;/li&gt;
     &amp;lt;li&amp;gt;élément 3&amp;lt;/li&amp;gt;
   &amp;lt;ul&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Le second élément de cette liste sera par exemple vocalisé &amp;quot;&lt;strong&gt;en cours&lt;/strong&gt;, tâche 2&amp;quot; par le lecteur d&#39;écran NVDA.&lt;/p&gt;
+&lt;p&gt;Le second élément de cette liste sera par exemple vocalisé &amp;quot;&lt;strong&gt;en cours&lt;/strong&gt;, élément 2&amp;quot; par le lecteur d&#39;écran NVDA.&lt;/p&gt;
 &lt;h2 id=&quot;liste-des-differents-usages&quot;&gt;Liste des différents usages &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/utilisation-de-l-attribut-aria-current/#liste-des-differents-usages&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;L&#39;attribut &lt;code&gt;aria-current&lt;/code&gt; accepte les valeurs suivantes : &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;page&lt;/code&gt;, &lt;code&gt;step&lt;/code&gt;, &lt;code&gt;location&lt;/code&gt;, &lt;code&gt;date&lt;/code&gt;, &lt;code&gt;time&lt;/code&gt; et &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
 &lt;ul&gt;
