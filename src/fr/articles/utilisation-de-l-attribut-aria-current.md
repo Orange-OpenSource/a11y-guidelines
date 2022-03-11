@@ -24,7 +24,7 @@ Pour indiquer l'élément en cours dans un ensemble d'éléments, il suffit d'aj
   &lt;ul&gt;
 </code></pre>
 
-Le second élément de cette liste sera par exemple vocalisé "**en cours**, tâche 2" par le lecteur d'écran NVDA.
+Le second élément de cette liste sera par exemple vocalisé "**en cours**, élément 2" par le lecteur d'écran NVDA.
 
 ## Liste des différents usages
 
