@@ -366,6 +366,31 @@ pre code {
     color:#ffb4e6 !important
 }
 
+.personna-background{
+    background: url(/assets/images/bosses-amelie.svg) no-repeat bottom;
+    background-size: contain;
+}
+@media (min-width: 1024px) {
+    .step-1 {
+        margin-top: 150px;
+    }
+    .step-2 {
+        margin-top: 100px;
+    }
+    .step-3 {
+        margin-top: 50px;
+    }
+    .pb-lg-personna{
+        padding-bottom: 5.75rem !important
+    }
+}
+
+@media (max-width: 1024px) {
+    .mb-personna{
+        margin-bottom: 5.75rem !important
+    }
+}
+
 /**
  * Boosted migration fix
  */
