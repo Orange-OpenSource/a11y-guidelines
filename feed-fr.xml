@@ -4,7 +4,7 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-02-02T00:00:00Z</updated>
+  <updated>2022-03-10T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -1786,6 +1786,90 @@ Stratégie de mise en accessibilité&lt;/li&gt;
 &lt;li&gt;Media Queries préférences, la base (en) : &lt;a href=&quot;https://12daysofweb.dev/2021/preference-queries/&quot;&gt;https://12daysofweb.dev/2021/preference-queries/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Trouver des profils en a11y, à lire (en) : &lt;a href=&quot;https://www.smashingmagazine.com/2022/01/how-hire-digital-accessibility-roles/&quot;&gt;https://www.smashingmagazine.com/2022/01/how-hire-digital-accessibility-roles/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Utilisation de l&#39;attribut aria-current</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/utilisation-de-l-attribut-aria-current/"/>
+    <updated>2022-03-10T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/utilisation-de-l-attribut-aria-current/</id>
+    <content type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/utilisation-de-l-attribut-aria-current/#introduction&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;L&#39;attribut &lt;a href=&quot;https://www.w3.org/TR/wai-aria-1.2/#aria-current&quot;&gt;aria-current&lt;/a&gt; sert à indiquer (au niveau du code) l&#39;élément courant dans un ensemble d&#39;éléments.&lt;/p&gt;
+&lt;p&gt;Pour faire simple, prenons l&#39;exemple d&#39;un menu de navigation. L&#39;élément courant est généralement mis en évidence par un effet visuel. Pour que cette mise en évidence soit également perçue par les utilisateurs qui utilisent un lecteur d&#39;écran (ou un outil d&#39;assistance quel qu&#39;il soit), il est indispensable de marquer l&#39;élément au niveau code en utilisant l&#39;attribut &lt;code&gt;aria-current&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;utilisation&quot;&gt;Utilisation &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/utilisation-de-l-attribut-aria-current/#utilisation&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Pour indiquer l&#39;élément en cours dans un ensemble d&#39;éléments, il suffit d&#39;ajouter un attribut &lt;code&gt;aria-current&lt;/code&gt; au niveau du code HTML. Dans l&#39;exemple ci-dessous, on utilise la valeur générique &lt;code&gt;true&lt;/code&gt; :&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;élément 1&amp;lt;/li&amp;gt;
+    &amp;lt;li &lt;span class=&quot;important&quot;&gt;aria-current=&quot;true&quot;&lt;/span&gt;&amp;gt;élément 2&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;élément 3&amp;lt;/li&amp;gt;
+  &amp;lt;ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Le second élément de cette liste sera par exemple vocalisé &amp;quot;&lt;strong&gt;en cours&lt;/strong&gt;, tâche 2&amp;quot; par le lecteur d&#39;écran NVDA.&lt;/p&gt;
+&lt;h2 id=&quot;liste-des-differents-usages&quot;&gt;Liste des différents usages &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/utilisation-de-l-attribut-aria-current/#liste-des-differents-usages&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;L&#39;attribut &lt;code&gt;aria-current&lt;/code&gt; accepte les valeurs suivantes : &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;page&lt;/code&gt;, &lt;code&gt;step&lt;/code&gt;, &lt;code&gt;location&lt;/code&gt;, &lt;code&gt;date&lt;/code&gt;, &lt;code&gt;time&lt;/code&gt; et &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;true&lt;/code&gt; : indique l&#39;élément en cours dans un ensemble d&#39;éléments&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;step&lt;/code&gt; : indique l&#39;étape en cours&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;location&lt;/code&gt; : indique l&#39;élément en cours dans un diagramme&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;date&lt;/code&gt; : indique la date courante dans un ensemble de date&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;time&lt;/code&gt; : indique l&#39;heure en cours&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;false&lt;/code&gt; (valeur par défaut) : n&#39;a pas d&#39;effet&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;quelques-exemples-dusages-courants&quot;&gt;Quelques exemples d&#39;usages courants &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/utilisation-de-l-attribut-aria-current/#quelques-exemples-dusages-courants&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;exemples-1-menu-de-navigation&quot;&gt;Exemples 1 : menu de navigation &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/utilisation-de-l-attribut-aria-current/#exemples-1-menu-de-navigation&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Utiliser la valeur &lt;code&gt;page&lt;/code&gt; pour indiquer la page courante dans un ensemble de pages.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/utilisation-de-l-attribut-aria-current/menu-navigation.png&quot; alt=&quot;Menu de navigation proposant 3 éléments : accueil, aide et à propos. L&#39;élément à propos est souligné et affiché d&#39;une couleur différente ce qui permet visuelement de comprendre qu&#39;il s&#39;agit de l&#39;élément en cours de consultation&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+  &amp;lt;nav aria-label=&quot;Navigation principale&quot;&amp;gt;
+    &amp;lt;ul&amp;gt;
+      &amp;lt;li&amp;gt;
+        &amp;lt;a href=&quot;/fr/&quot;&amp;gt;Accueil&amp;lt;/a&amp;gt;
+      &amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;
+        &amp;lt;a href=&quot;/fr/aide/&quot;&amp;gt;Aide&amp;lt;/a&amp;gt;
+      &amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;
+        &amp;lt;a href=&quot;/fr/a-propos/&quot; &lt;span class=&quot;important&quot;&gt;aria-current=&quot;page&quot;&lt;/span&gt;&amp;gt;À propos&amp;lt;/a&amp;gt;
+      &amp;lt;/li&amp;gt;      
+    &amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;exemples-2-systeme-de-pagination&quot;&gt;Exemples 2 : système de pagination &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/utilisation-de-l-attribut-aria-current/#exemples-2-systeme-de-pagination&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Utiliser la valeur &lt;code&gt;page&lt;/code&gt; pour indiquer la page en cours de consultation dans un système de pagination :&lt;br /&gt;
+&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/utilisation-de-l-attribut-aria-current/pagination.png&quot; alt=&quot;Capture d&#39;écran, exemple de système de pagination, un bouton précédent, un bouton suivant et 3 liens intitulés 1, 2 et 3&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+  &amp;lt;ol&amp;gt;
+    &amp;lt;li aria-label=&quot;page 1&quot;&amp;gt;1&amp;lt;/li&amp;gt;
+    &amp;lt;li aria-label=&quot;page 2&quot; &lt;span class=&quot;important&quot;&gt;aria-current=&quot;page&quot;&lt;/span&gt;&amp;gt;2&amp;lt;/li&amp;gt;
+    &amp;lt;li aria-label=&quot;page 3&quot;&amp;gt;3&amp;lt;/li&amp;gt;    
+  &amp;lt;/ol&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;exemples-3-fil-dariane&quot;&gt;Exemples 3 : fil d&#39;Ariane &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/utilisation-de-l-attribut-aria-current/#exemples-3-fil-dariane&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Utiliser la valeur &lt;code&gt;page&lt;/code&gt; pour indiquer la page en cours dans un fil d&#39;Ariane :&lt;br /&gt;
+&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/utilisation-de-l-attribut-aria-current/breadcrumb.png&quot; alt=&quot;Capture d&#39;écran d&#39;un exemple de fil d&#39;Ariane&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+  &amp;lt;ol&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;...&quot;&amp;gt;Accueil&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;...&quot;&amp;gt;Articles&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li &lt;span class=&quot;important&quot;&gt;aria-current=&quot;page&quot;&lt;/span&gt;&amp;gt;Utilisation de l&#39;attribut aria-current&amp;lt;/li&amp;gt;
+  &amp;lt;/ol&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;exemples-4-processus-a-etapes&quot;&gt;Exemples 4 : processus à étapes &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/utilisation-de-l-attribut-aria-current/#exemples-4-processus-a-etapes&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Utiliser la valeur &lt;code&gt;step&lt;/code&gt; pour indiquer l&#39;étape en cours dans un processus à étapes en plusieurs page.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/utilisation-de-l-attribut-aria-current/stepbar.png&quot; alt=&quot;Capture d&#39;écran un composant affichant un processus à étapes tel qu&#39;on peux le trouver sur un site marchant (choix d&#39;un produit, livraison, paiement...). 5 étapes sont visibles, l&#39;étape 3 est mise en valeur (changement de couleur) pour indiquer qu&#39;il s&#39;agit de l&#39;étape en cours.&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+  &amp;lt;ol&amp;gt;
+    &amp;lt;li&amp;gt;Label n°1&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;Label n°2&amp;lt;/li&amp;gt;
+    &amp;lt;li &lt;span class=&quot;important&quot;&gt;aria-current=&quot;step&quot;&lt;/span&gt;&amp;gt;Label n°3&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;Label n°4&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;Label n°5&amp;lt;/li&amp;gt;
+  &amp;lt;/ol&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;exemple-5-selection-dune-date&quot;&gt;Exemple 5 : sélection d&#39;une date &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/utilisation-de-l-attribut-aria-current/#exemple-5-selection-dune-date&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Utiliser la valeur &lt;code&gt;date&lt;/code&gt; dans un composant permettant de sélectionner une date. Un attribut &lt;code&gt;aria-current=&amp;quot;date&amp;quot;&lt;/code&gt; est positionné sur la date du jours tandis qu&#39;un attribut &lt;code&gt;aria-selected=&amp;quot;true&amp;quot;&lt;/code&gt; est positionné sur la date en cours de sélection.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/utilisation-de-l-attribut-aria-current/datepicker.png&quot; alt=&quot;Capture d&#39;écran d&#39;un composant de type datepicker, la date du jour et la date en cours de sélection sont mises en évidence via un changement de couleur.&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>

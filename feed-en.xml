@@ -4,7 +4,7 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-02-02T00:00:00Z</updated>
+  <updated>2022-03-10T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -1453,6 +1453,90 @@ So WCAG 2.2 too, mechanically, are fast approaching, be ready for a jump, not hu
 &lt;li&gt;Media Queries preferences, the base: &lt;a href=&quot;https://12daysofweb.dev/2021/preference-queries/&quot;&gt;https://12daysofweb.dev/2021/preference-queries/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Find profiles in a11y, to read: &lt;a href=&quot;https://www.smashingmagazine.com/2022/01/how-hire-digital-accessibility-roles/&quot;&gt;https://www.smashingmagazine.com/2022/01/how-hire-digital-accessibility-roles/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Using the aria-current attribute </title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/using-aria-current-attribute/"/>
+    <updated>2022-03-10T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/using-aria-current-attribute/</id>
+    <content type="html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/using-aria-current-attribute/#introduction&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&quot;https://www.w3.org/TR/wai-aria-1.2/#aria-current&quot;&gt;aria-current&lt;/a&gt; attribute indicates the element that represents the current item within a container or set of related elements.&lt;/p&gt;
+&lt;p&gt;To put it simply, let&#39;s take the example of a navigation menu. The current element is usually highlighted by a visual effect. So that this highlighting is also perceived by users who use a screen reader (or any assistive technoligies), it is essential to mark the element at code level using the aria attribute &lt;code&gt;aria-current&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;how-to-use-it&quot;&gt;How to use it ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/using-aria-current-attribute/#how-to-use-it&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To indicate the current element in an element set, simply add an &lt;code&gt;aria-current&lt;/code&gt; attribute in the HTML code. For the example below, we use the generic value &lt;code&gt;true&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+  &amp;lt;ul&amp;gt;
+    &amp;lt;li&amp;gt;element 1&amp;lt;/li&amp;gt;
+    &amp;lt;li &lt;span class=&quot;important&quot;&gt;aria-current=&quot;true&quot;&lt;/span&gt;&amp;gt;element 2&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;element 3&amp;lt;/li&amp;gt;
+  &amp;lt;ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The second element of this list will for example be vocalized &amp;quot;&lt;strong&gt;current&lt;/strong&gt;, element 2&amp;quot; by the NVDA screen reader.&lt;/p&gt;
+&lt;h2 id=&quot;uses&quot;&gt;Uses &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/using-aria-current-attribute/#uses&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;aria-current&lt;/code&gt; attribute accepts the following values: &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;page&lt;/code&gt;, &lt;code&gt;step&lt;/code&gt;, &lt;code&gt;location&lt;/code&gt;, &lt;code&gt;date&lt;/code&gt;, &lt;code&gt;time&lt;/code&gt; and &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;true&lt;/code&gt; : indicates the current item within a set&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;step&lt;/code&gt; : indicates the current step within a process&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;location&lt;/code&gt; : indicates the current location within an environment or context.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;date&lt;/code&gt; : indicates the current date within a collection of dates.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;time&lt;/code&gt; : indicates the current time within a set of times&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;false&lt;/code&gt; (default) : does not represent the current item within a set&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;some-examples-of-common-uses&quot;&gt;Some examples of common uses &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/using-aria-current-attribute/#some-examples-of-common-uses&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;examples-1-navigation-menu&quot;&gt;Examples 1: navigation menu &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/using-aria-current-attribute/#examples-1-navigation-menu&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Use the value &lt;code&gt;page&lt;/code&gt; to indicate the current page in a set of pages.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/using-aria-current-attribute/menu-navigation.png&quot; alt=&quot;Navigation menu with 3 items: home, help and about. The about element is underlined and displayed in a different color which visually allows to understand that it is the element currently being consulted &quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+  &amp;lt;nav aria-label=&quot;Main navigation&quot;&amp;gt;
+    &amp;lt;ul&amp;gt;
+      &amp;lt;li&amp;gt;
+        &amp;lt;a href=&quot;/en/&quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+      &amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;
+        &amp;lt;a href=&quot;/en/help/&quot;&amp;gt;Help&amp;lt;/a&amp;gt;
+      &amp;lt;/li&amp;gt;
+      &amp;lt;li&amp;gt;
+        &amp;lt;a href=&quot;/en/about/&quot; &lt;span class=&quot;important&quot;&gt;aria-current=&quot;page&quot;&lt;/span&gt;&amp;gt;About&amp;lt;/a&amp;gt;
+      &amp;lt;/li&amp;gt;      
+    &amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;examples-2-paging-system&quot;&gt;Examples 2: paging system &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/using-aria-current-attribute/#examples-2-paging-system&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Use the &lt;code&gt;page&lt;/code&gt; value to indicate the page being viewed in a paging system:&lt;br /&gt;
+&lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/using-aria-current-attribute/pagination.png&quot; alt=&quot;Screenshot, example of paging system, a previous button, a next button and 3 links labeled 1, 2 and 3 &quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+  &amp;lt;ol&amp;gt;
+    &amp;lt;li aria-label=&quot;page 1&quot;&amp;gt;1&amp;lt;/li&amp;gt;
+    &amp;lt;li aria-label=&quot;page 2&quot; &lt;span class=&quot;important&quot;&gt;aria-current=&quot;page&quot;&lt;/span&gt;&amp;gt;2&amp;lt;/li&amp;gt;
+    &amp;lt;li aria-label=&quot;page 3&quot;&amp;gt;3&amp;lt;/li&amp;gt;    
+  &amp;lt;/ol&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;examples-3-breadcrumb&quot;&gt;Examples 3: breadcrumb &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/using-aria-current-attribute/#examples-3-breadcrumb&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Use the &lt;code&gt;page&lt;/code&gt; value to indicate the current page in a breadcrumb:&lt;br /&gt;
+&lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/using-aria-current-attribute/breadcrumb.png&quot; alt=&quot;Screenshot of a breadcrumb &quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+  &amp;lt;ol&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;...&quot;&amp;gt;Home&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;a href=&quot;...&quot;&amp;gt;Articles&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+    &amp;lt;li &lt;span class=&quot;important&quot;&gt;aria-current=&quot;page&quot;&lt;/span&gt;&amp;gt;Using the aria-current attribute&amp;lt;/li&amp;gt;
+  &amp;lt;/ol&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;examples-4-step-process&quot;&gt;Examples 4: step process &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/using-aria-current-attribute/#examples-4-step-process&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Use the &lt;code&gt;step&lt;/code&gt; value to indicate the current step in a multi-page step process.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/using-aria-current-attribute/stepbar.png&quot; alt=&quot;Screenshot of a component displaying a step-by-step process such as can be found on a merchant site (choice of a product, delivery, payment...). 5 steps are visible, step 3 is highlighted (color change) to indicate that it is the current step. &quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+  &amp;lt;ol&amp;gt;
+    &amp;lt;li&amp;gt;Label n°1&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;Label n°2&amp;lt;/li&amp;gt;
+    &amp;lt;li &lt;span class=&quot;important&quot;&gt;aria-current=&quot;step&quot;&lt;/span&gt;&amp;gt;Label n°3&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;Label n°4&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;Label n°5&amp;lt;/li&amp;gt;
+  &amp;lt;/ol&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;example-5-datepicker&quot;&gt;Example 5: datepicker &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/using-aria-current-attribute/#example-5-datepicker&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Use the &lt;code&gt;date&lt;/code&gt; value in a datepicker component. An &lt;code&gt;aria-current=&amp;quot;date&amp;quot;&lt;/code&gt; attribute is positioned on the current date while an &lt;code&gt;aria-selected=&amp;quot;true&amp;quot;&lt;/code&gt; attribute is positioned on the currently selected date.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/using-aria-current-attribute/datepicker.png&quot; alt=&quot;Screenshot of a datepicker component, today&#39;s date and the date being selected are highlighted.&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
