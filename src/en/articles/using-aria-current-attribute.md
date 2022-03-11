@@ -11,7 +11,7 @@ tags:
 ## Introduction
 The [aria-current](https://www.w3.org/TR/wai-aria-1.2/#aria-current) attribute indicates the element that represents the current item within a container or set of related elements.
 
-To put it simply, let's take the example of a navigation menu. The current element is usually highlighted by a visual effect. So that this highlighting is also perceived by users who use a screen reader (or any assistance tool), it is essential to mark the element at code level using the aria attribute `aria-current`.
+To put it simply, let's take the example of a navigation menu. The current element is usually highlighted by a visual effect. So that this highlighting is also perceived by users who use a screen reader (or any assistive technoligies), it is essential to mark the element at code level using the aria attribute `aria-current`.
 
 ## How to use it ?
 
