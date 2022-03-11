@@ -25,7 +25,7 @@ To indicate the current element in an element set, simply add an `aria-current` 
   &lt;ul&gt;
 </code></pre>
 
-The second element of this list will for example be vocalized "**current**, task 2" by the NVDA screen reader. 
+The second element of this list will for example be vocalized "**current**, element 2" by the NVDA screen reader. 
 
 ## Uses
 
