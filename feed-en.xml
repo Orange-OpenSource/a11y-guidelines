@@ -1478,6 +1478,7 @@ So WCAG 2.2 too, mechanically, are fast approaching, be ready for a jump, not hu
 &lt;p&gt;The &lt;code&gt;aria-current&lt;/code&gt; attribute accepts the following values: &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;page&lt;/code&gt;, &lt;code&gt;step&lt;/code&gt;, &lt;code&gt;location&lt;/code&gt;, &lt;code&gt;date&lt;/code&gt;, &lt;code&gt;time&lt;/code&gt; and &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;true&lt;/code&gt; : indicates the current item within a set&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;page&lt;/code&gt; : indicates the current page within a set&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;step&lt;/code&gt; : indicates the current step within a process&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;location&lt;/code&gt; : indicates the current location within an environment or context.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;date&lt;/code&gt; : indicates the current date within a collection of dates.&lt;/li&gt;

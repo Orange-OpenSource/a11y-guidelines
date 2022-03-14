@@ -1811,6 +1811,7 @@ Stratégie de mise en accessibilité&lt;/li&gt;
 &lt;p&gt;L&#39;attribut &lt;code&gt;aria-current&lt;/code&gt; accepte les valeurs suivantes : &lt;code&gt;true&lt;/code&gt;, &lt;code&gt;page&lt;/code&gt;, &lt;code&gt;step&lt;/code&gt;, &lt;code&gt;location&lt;/code&gt;, &lt;code&gt;date&lt;/code&gt;, &lt;code&gt;time&lt;/code&gt; et &lt;code&gt;false&lt;/code&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;true&lt;/code&gt; : indique l&#39;élément en cours dans un ensemble d&#39;éléments&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;page&lt;/code&gt; : indique la page en cours dans un ensemble de pages&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;step&lt;/code&gt; : indique l&#39;étape en cours&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;location&lt;/code&gt; : indique l&#39;élément en cours dans un diagramme&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;date&lt;/code&gt; : indique la date courante dans un ensemble de date&lt;/li&gt;
