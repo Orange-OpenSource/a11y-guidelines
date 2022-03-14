@@ -32,6 +32,7 @@ The second element of this list will for example be vocalized "**current**, elem
 The `aria-current` attribute accepts the following values: `true`, `page`, `step`, `location`, `date`, `time` and `false`.
 
 - `true` : indicates the current item within a set
+- `page` : indicates the current page within a set
 - `step` : indicates the current step within a process
 - `location` : indicates the current location within an environment or context.
 - `date` : indicates the current date within a collection of dates.

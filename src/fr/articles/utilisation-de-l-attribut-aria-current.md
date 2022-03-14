@@ -31,6 +31,7 @@ Le second élément de cette liste sera par exemple vocalisé "**en cours**, él
 L'attribut `aria-current` accepte les valeurs suivantes : `true`, `page`, `step`, `location`, `date`, `time` et `false`.
 
 - `true` : indique l'élément en cours dans un ensemble d'éléments
+- `page` : indique la page en cours dans un ensemble de pages
 - `step` : indique l'étape en cours
 - `location` : indique l'élément en cours dans un diagramme
 - `date` : indique la date courante dans un ensemble de date
