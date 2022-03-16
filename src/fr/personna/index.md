@@ -1,0 +1,253 @@
+---
+title: "Les personas EASE"
+abstract: "Des gestes simples pour l’inclusion de tous"
+---
+
+# Les personas EASE
+
+## Des gestes simples pour l’inclusion de tous
+
+En France, **12 million de personnes** vivent au quotidien avec une ou plusieurs déficiences. Visibles ou non ces déficiences peuvent créer **des situations de handicap** dans la vie quotidienne d’un grand nombre d’individus, notamment dans leurs usages numériques.
+Ces situations de handicap numérique ne sont pas une fatalité, **nous pouvons collectivement agir pour les éviter**.
+Vous êtes créateur de supports de communication ? Vous participez à l’élaboration d’un projet Web ou d’une application mobile ? Vous utilisez les réseaux sociaux ? **Vous pouvez agir** !
+
+Grâce à ce set de personas, commencer à **découvrir les problématiques** liées aux différentes déficiences, à **éviter les écueils** en matière d’accessibilité et à **apprendre de bonnes pratiques simples** à déployer.
+
+Pour aller plus loin, **ce site** dédié à l’accessibilité numérique vous propose de découvrir des solutions à la portée de tous afin **d’améliorer l’accessibilité** de vos productions.
+
+## 5 personnas pour s'initier à l'accessibilité numérique
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+        <div class="card h-100 bg-900">
+            <svg
+                    class="m-auto p-2"
+                    aria-hidden="true"
+                    focusable="false"
+                    width="46.566666mm"
+                    height="46.566666mm"
+                    viewBox="0 0 46.566666 46.566666"
+                    version="1.1"
+                    id="svg5350"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:svg="http://www.w3.org/2000/svg">
+                    <defs id="defs5347">
+                        <mask id="mask-2" fill="#ffffff">
+                            <circle id="use471" cx="88" cy="88" r="88"/>
+                        </mask>
+                    </defs>
+                    <g id="layer1" transform="translate(63.180996,-43.229683)">
+                        <circle id="Mask" cx="-39.897663" cy="66.513016" r="23.283333" style="fill:#ffffff;stroke-width:0.264583"/>
+                        <g
+                            id="g520"
+                            mask="url(#mask-2)"
+                            style="display:inline"
+                            transform="matrix(0.26458333,0,0,0.26458333,-63.180998,43.229682)">
+                            <g transform="translate(-11,40)" id="Character-/-Girl-/-1-Copy-3">
+                                <g id="Group" transform="translate(39.536089,-4.042328)">
+                                    <g id="Group-21" transform="translate(15.30408,2.425276)">
+                                        <g id="Hair-color">
+                                            <mask id="mask-4" fill="#ffffff">
+                                                <path
+                                                    d="m 91.566858,43.531831 c 0,3.076211 -0.335845,6.079661 -0.9782,8.97801 C 86.240114,72.244487 67.832451,78.979005
+                                                        45.781516,78.979005 20.49925,78.979005 0,67.575598 0,43.531831 0,19.488063 20.49925,0 45.781516,0 c 17.3827,0
+                                                        32.504617,9.2084233 40.258791,22.778518 3.523814,6.168593 5.526551,13.238625 5.526551,20.753313"
+                                                    id="use475"/>
+                                            </mask>
+                                            <path
+                                                d="m 91.566858,43.531831 c 0,3.076211 -0.335845,6.079661 -0.9782,8.97801 C 86.240114,72.244487 67.832451,78.979005
+                                                    45.781516,78.979005 20.49925,78.979005 0,67.575598 0,43.531831 0,19.488063 20.49925,0 45.781516,0 c 17.3827,0
+                                                    32.504617,9.2084233 40.258791,22.778518 3.523814,6.168593 5.526551,13.238625 5.526551,20.753313"
+                                                id="Hair"
+                                                style="fill:#19141e;fill-rule:nonzero"/>
+                                        </g>
+                                        <path
+                                            d="m 53.632448,72.495273 c 0,0 -5.497217,0.154417 -7.840049,-1.062728 l 7.547992,4.506387 z"
+                                            id="Fill-4"
+                                            fill="#cf3e83"/>
+                                        <g id="Face-color" transform="translate(32.309275,39.210703)" fill="#7a5e4b">
+                                            <path
+                                                d="M 19.485531,0.24032363 C 24.839149,4.6194123 32.762942,8.6914187 42.064794,11.459997 41.472455,17.452675
+                                                    39.506192,27.781327 33.574727,31.533029 30.772766,33.304781 25.67006,33.523067 21.323216,33.28457 L 20.326311,45.024703
+                                                    7.4056621,40.21312 c 0,0 3.2249549,-14.26861 1.4981202,-16.890868 C 6.5847569,19.789662 0.38014162,18.651342
+                                                    0.37290913,13.769422 0.37036388,12.323482 1.2592882,9.8200679 4.5416338,9.8152171 8.9475696,9.8091537 8.3196685,14.828108
+                                                    8.3196685,14.828108 12.372606,16.327252 16.503851,6.0582473 19.485531,0.24032363 Z"
+                                                id="Face"/>
+                                        </g>
+                                        <polygon id="Fill-9" fill="#714e46" points="65.078103,61.211842 65.581869,54.029433 68.727752,61.28137 "/>
+                                        <path
+                                            d="m 62.23278,54.344048 c -0.07865,1.44877 -0.974373,2.577388 -2.001461,2.5212 -1.027088,-0.05619 -1.796129,-1.276163
+                                                -1.717907,-2.724934 0.07865,-1.44877 0.974798,-2.577792 2.001461,-2.521604 1.027088,0.05659 1.796554,1.276567
+                                                1.717907,2.725338"
+                                            id="Fill-11"
+                                            fill="#1d1d23"/>
+                                        <path
+                                            d="m 71.87729,54.112543 c -0.07865,1.448771 -0.974373,2.577389 -2.001461,2.521201 -1.027088,-0.05619 -1.796129,-1.276164
+                                                -1.717482,-2.724934 0.07865,-1.44877 0.974373,-2.577792 2.001461,-2.5212 1.027088,0.05619 1.796129,1.276163
+                                                1.717482,2.724933"
+                                            id="Fill-13"
+                                            fill="#1d1d23"/>
+                                        <path
+                                            d="m 64.182802,64.685576 c 0,0 -2.378117,0.72964 -4.76091,-1.789539"
+                                            id="Stroke-15"
+                                            stroke="#24242b"
+                                            stroke-width="3"/>
+                                        <path
+                                            d="m 53.623308,72.495071 c 0,0 -5.497217,0.154417 -7.840049,-1.062324 l 7.547992,4.505983 z"
+                                            id="Fill-17"
+                                            fill="#000000"
+                                            opacity="0.399019"/>
+                                    </g>
+                                </g>
+                                <g id="g501" transform="translate(1.700477,115.61058)">
+                                    <g id="Group-19" transform="translate(47.188235,21.020106)">
+                                        <g id="Shoes" transform="translate(-4.1e-5,197.88014)" fill="#0d0b6d" fill-rule="nonzero">
+                                            <path
+                                                d="m 12.789528,1.848996 9.922115,-0.2046379 1.098449,10.5082939 1.078545,12.112276 H 0 C 3.3169092,14.212042
+                                                    12.889877,12.633689 12.889877,12.633689 Z m 63.065188,2.1097022 -1.020907,8.4721668 c 0,0 18.992509,4.734271
+                                                    26.132221,11.775944 L 65.95748,24.26477 66.88716,0 Z"
+                                                id="path490"/>
+                                        </g>
+                                        <g id="Skin-color" transform="translate(12.812956,196.88976)" fill="#7a5e4b">
+                                            <path
+                                                d="M 1.2962443,0 10.974951,3.2335941 10.920216,13.623994 0,13.142957 Z m 52.5718297,2.8332293 9.407101,3.5553368
+                                                    -0.08086,7.0329979 -9.615263,-0.335937 z"
+                                                id="Skin"/>
+                                        </g>
+                                        <g id="Pants" transform="translate(8.707975)" fill="#2f2f3d" fill-rule="nonzero">
+                                            <path
+                                                d="M 1.9499644,201.88143 C 2.3936565,188.73965 5.258995,105.72528 8.20312,56.336179 10.243274,22.103691
+                                                    25.511257,3.2565025 28.376596,3.9429265e-5 H 64.755199 C 64.821545,0.43730998 69.71833,33.396627 70.614422,102.36196 c
+                                                    0.804451,61.7624 -0.02488,95.52173 -0.128546,99.49187 l -6.6e-5,0.002 1.161834,-0.002 0.0075,5.31704 -18.837838,0.0292
+                                                    -0.0075,-5.31743 0.649531,-0.001 -4.1e-5,-4.2e-4 L 43.893378,93.801867 41.02804,61.454098 19.278835,201.85383 l
+                                                    -1.41e-4,9.1e-4 0.940685,-0.001 -0.328415,5.31704 -19.50337617,0.03 0.32841506,-5.31665 1.23395131,-0.002 z"
+                                                id="path495"/>
+                                        </g>
+                                        <polygon
+                                            id="polygon498"
+                                            fill="#0a0a0f"
+                                            opacity="0.398065"
+                                            points="53.650042,29.811679 52.60011,93.801039 49.736015,61.455241 "/>
+                                    </g>
+                                </g>
+                                <g id="g517" transform="translate(43.362162,68.315344)">
+                                    <g id="g515" transform="translate(4.251192,8.893122)">
+                                        <g id="g505" transform="translate(-3e-6)" fill="#7a5e4b">
+                                            <path
+                                                d="m 98.869323,87.721911 c 2.229247,2.494944 4.944567,5.59658 5.340327,6.335463 0.68614,1.281418 1.95513,7.626656
+                                                    1.89476,8.880186 -0.0608,1.25353 -4.01483,6.88691 -4.01483,6.88691 -2.453361,-0.57158 -0.85109,-3.48084 -0.85109,-3.48084
+                                                    0,0 -2.197863,1.7673 -3.111019,1.73739 -8.604413,-0.27892 -8.143584,-4.4215 -7.940377,-4.94013 0.457003,-1.165
+                                                    2.754347,0.16735 2.754347,0.16735 0,0 -4.416317,-8.519546 -3.352922,-14.480276 l -0.24771,0.02952 L 75.791834,68.332564
+                                                    74.852745,60.334818 37.943468,59.8174 c 0,0 0.31884,-3.270243 -0.467206,-7.995725 -1.024537,-6.180719
+                                                    -7.274215,-17.660931 -7.274215,-17.660931 l -9.658284,13.881355 -7.025056,36.218198 c 0.0372,-0.02236 0.07444,-0.04506
+                                                    0.111725,-0.0681 l 3.199022,9.727862 c 0,0 0.321815,4.066986 0.378781,6.459641 0.05697,2.39265 0.02678,1.82187
+                                                    1.436903,5.51535 0.982451,2.57375 -2.910366,1.52396 -3.899194,0.0517 -1.019861,-1.5183 -1.032189,-7.416456
+                                                    -3.054481,-6.407491 -2.0222926,1.008961 -3.1747908,6.854171 -3.292974,12.449561 -0.018705,0.8788 -0.7681904,1.13468
+                                                    -1.2787586,1.34811 -0.8281323,0.34562 -1.6409603,-2.78193 -1.6409603,-2.78193 0,0 -0.5322493,1.17713 -1.7378874,0.57401
+                                                    -0.4268197,-0.21343 -1.5215018,-2.65863 -1.5215018,-2.65863 0,0 -0.9114556,-1.23413 -1.32424639,-2.56486 C
+                                                    0.16648014,103.55616 -0.19657169,99.272907 0.1082388,98.046465 0.829973,95.146273 2.2948016,90.26348 3.8484694,87.635889
+                                                    3.8199708,87.049441 2.4254579,57.610189 8.8147233,40.373802 14.459882,25.146353 23.060469,8.6091886 31.1033,3.7907335
+                                                    39.37612,-1.1651606 46.828885,0.14455365 53.749401,0.48815153 65.712682,1.0864161 71.630342,0.96514624
+                                                    76.978342,5.6340351 88.133471,15.372003 84.273388,53.846882 84.273388,53.846882 l 14.768217,33.854497 -0.172282,0.02053
+                                                    z"
+                                                id="path503"/>
+                                        </g>
+                                        <path
+                                            d="m 94.698243,91.939315 c 0,0 1.207339,4.33661 5.350977,5.688364 1.44881,0.472549 1.08703,6.050561 4.63848,5.383571"
+                                            id="Stroke-4"
+                                            stroke="#000000"
+                                            stroke-width="3"
+                                            opacity="0.152762"/>
+                                        <path
+                                            d="m 46.485977,0.1058061 1.27478,0.0364936 c -3.3e-5,8.1647e-4 -3.3e-5,8.1647e-4 -3.77e-4,0.0173583 -0.0018,0.10282374
+                                                6.95e-4,0.22499415 0.0105,0.33508185 0.0046,0.0519977 0.01059,0.096512 0.01727,0.13003853 0.154664,0.77645242
+                                                0.891903,6.35219442 2.228535,16.84508362 l -1.266104,0.145824 C 47.425237,7.2113839 46.681128,1.583689
+                                                46.535074,0.85045917 c -0.01564,-0.0785313 -0.02694,-0.1628993 -0.035,-0.25336855 -0.01407,-0.15793527
+                                                -0.01735,-0.31754026 -0.01487,-0.4578009 5.2e-4,-0.025196 5.2e-4,-0.025196 7.75e-4,-0.0334836 z"
+                                            id="Stroke-11"
+                                            fill="#2b2b38"
+                                            fill-rule="nonzero"/>
+                                        <path
+                                            d="m 70.350904,8.048267 c 1.985956,2.466656 3.765658,5.10654 5.314815,7.746318 0.542281,0.924052 1.017244,1.782514
+                                                1.421705,2.553668 0.141924,0.270595 0.265005,0.511182 0.36884,0.719043 0.06286,0.125833 0.105659,0.213488
+                                                0.127997,0.260247 L 76.43839,19.844224 C 76.41908,19.803804 76.3794,19.722536 76.319768,19.603164 76.219453,19.402351
+                                                76.10001,19.168875 75.961857,18.905469 75.566097,18.150905 75.10045,17.309281 74.568288,16.402471 73.047607,13.811216
+                                                71.300761,11.220068 69.355877,8.8044261 67.212448,6.1421826 64.957705,3.8594004 62.613304,2.0718641 L 61.00461,0.84528238
+                                                63.045081,0.97681412 c 0.273199,0.0176108 0.464948,0.14790768 0.642828,0.35710258 2.325214,1.817842 4.550077,4.0900026
+                                                6.662995,6.7143503 z"
+                                            id="Path"
+                                            fill="#2b2b38"
+                                            fill-rule="nonzero"/>
+                                        <line
+                                            x1="30.202171"
+                                            y1="34.160706"
+                                            x2="35.386074"
+                                            y2="26.413582"
+                                            id="line510"
+                                            stroke="#000000"
+                                            stroke-width="3"
+                                            opacity="0.148693"/>
+                                        <g id="T-shirt" transform="translate(31.851931,16.169312)" fill="#ff8ad4">
+                                            <path
+                                                d="M 42.762319,44.161504 6.0915335,43.648128 c 0,0 0.3685784,-3.277923 -0.467206,-7.995724 C 4.7247752,30.577665
+                                                    0.67508935,23.121995 0,21.180465 c 0,0 0.62407504,1.889788 2.923545,-0.633433 3.2925485,-3.612628 14.607947,-20.38626861
+                                                    14.607947,-20.38626861 0,0 10.679421,10.26306661 19.249824,9.94816961 5.907457,-0.2170733 8.022,-8.9133336
+                                                    8.022,-8.9133336 9.467406,19.5648676 -0.981175,17.1334076 -2.040997,42.9659046"
+                                                id="path512"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            <div class="card-body">
+                <h3 class="card-title">Amélie - Déficience visuelle - aveugle</h3>
+                <p class="card-text">Amélie est aveugle de naissance. Maîtrisant parfaitement le Braille, elle est également quasiment bilingue (Licence d’anglais). Par ailleurs, c’est une pianiste plutôt douée.</p>
+                <p class="card-text">Elle travaille depuis une dizaine d’année pour le groupe Orange en tant que téléconseillière.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title">Amélie - Déficience visuelle - aveugle</h3>
+                <p class="card-text">Amélie est aveugle de naissance. Maîtrisant parfaitement le Braille, elle est également quasiment bilingue (Licence d’anglais). Par ailleurs, c’est une pianiste plutôt douée.</p>
+                <p class="card-text">Elle travaille depuis une dizaine d’année pour le groupe Orange en tant que téléconseillière.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title">Amélie - Déficience visuelle - aveugle</h3>
+                <p class="card-text">Amélie est aveugle de naissance. Maîtrisant parfaitement le Braille, elle est également quasiment bilingue (Licence d’anglais). Par ailleurs, c’est une pianiste plutôt douée.</p>
+                <p class="card-text">Elle travaille depuis une dizaine d’année pour le groupe Orange en tant que téléconseillière.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title">Amélie - Déficience visuelle - aveugle</h3>
+                <p class="card-text">Amélie est aveugle de naissance. Maîtrisant parfaitement le Braille, elle est également quasiment bilingue (Licence d’anglais). Par ailleurs, c’est une pianiste plutôt douée.</p>
+                <p class="card-text">Elle travaille depuis une dizaine d’année pour le groupe Orange en tant que téléconseillière.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h3 class="card-title">Amélie - Déficience visuelle - aveugle</h3>
+                <p class="card-text">Amélie est aveugle de naissance. Maîtrisant parfaitement le Braille, elle est également quasiment bilingue (Licence d’anglais). Par ailleurs, c’est une pianiste plutôt douée.</p>
+                <p class="card-text">Elle travaille depuis une dizaine d’année pour le groupe Orange en tant que téléconseillière.</p>
+            </div>
+        </div>
+    </div>
+  
+</div>
+
