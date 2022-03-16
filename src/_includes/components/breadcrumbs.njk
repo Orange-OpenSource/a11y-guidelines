@@ -1,6 +1,6 @@
 {% set breadcrumb = navigation.main | getBreadcrumb(locale, page, title) %}
 
-<nav role="navigation" aria-labelledby="breadcrumb-label">
+<div class="container-lg">
   <p id="breadcrumb-label" class="visually-hidden">{{ 'breadcrumb.label' | translate }}</p>
   <ol class="breadcrumb">
     {%- for item in breadcrumb -%}
@@ -16,4 +16,4 @@
       {% endif %}
     {%- endfor -%}
   </ol>
-</nav>
+</div>

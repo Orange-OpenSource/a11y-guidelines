@@ -36,7 +36,7 @@
   </head>
   <body{% if displayToc == true %} data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;"{% endif %}>
     {% include "partials/header.njk" %}
-    <div class="container-lg pt-2">
+    <nav id="breadcrumb-navigation" role="navigation" aria-labelledby="breadcrumb-label" class="pt-2">    
       {# We don't want to display the breadcrumb on the home pages #}
       {% if not page.url | isHomeUrl %}
         {% include "../components/breadcrumbs.njk" %}
@@ -47,7 +47,7 @@
           {{ ui.toc("mobile") }}
         {% endif %}
       </div>
-    </div>
+    </nav>
     {% block content %}{% endblock %}
     {% include "partials/footer.njk" %}
     <nav role="navigation" class="back-to-top" aria-label="{{ 'backToTop.label' | translate }}">

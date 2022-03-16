@@ -1,7 +1,7 @@
 {% import "../ui.njk" as ui with context %}
 
 {%- if page | shouldDisplaySecondaryNavigation(locale) -%}
-<nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="{{ 'navigation.secondary.label' | translate }}">
+<nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light" role="navigation" aria-label="{{ 'navigation.secondary.label' | translate }}">
   <div class="container-lg">
     <ul class="nav">
       {%- for category in navigation.main[locale] -%}
