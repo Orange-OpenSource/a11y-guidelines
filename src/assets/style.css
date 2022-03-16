@@ -382,6 +382,25 @@ pre code {
     background: url(/assets/images/bosses-amelie.svg) no-repeat bottom;
     background-size: contain;
 }
+
+.personna-name {
+    font-size: 2.5rem;
+}
+
+.personna-job {
+    margin-left: -.5rem;
+    padding: .3rem;
+}
+
+.personna-apps .small {
+    font-size: .75rem;    
+    padding-top: .25rem;    
+}
+
+.personna-apps li {
+    min-width: 4rem;
+}
+
 @media (min-width: 1024px) {
     .step-1 {
         margin-top: 150px;
