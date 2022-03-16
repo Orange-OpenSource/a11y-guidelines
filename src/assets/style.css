@@ -24,6 +24,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    line-height: 1.25;
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -119,6 +123,14 @@ blockquote p::after {
     background-color: #ff7900;
 }
 
+/**
+* Banner & Navigation
+*/
+
+#secondary-navigation, 
+#breadcrumb-navigation {
+    background-color: #fff;
+}
 
 /**
  * Table Of Content and Side navigation
