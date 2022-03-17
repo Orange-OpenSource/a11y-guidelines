@@ -362,16 +362,29 @@ pre code {
     vertical-align: middle;
 }
 *
-.table-personna th[scope=row] {
+.table-personna-pink th[scope=row] {
     background-color: #EDE6F7;
+}
+
+.table-personna-green th[scope=row] {
+    background-color: #BDE6D2;
 }
 
 .text-supporting-pink{
     color:#ffb4e6 !important
 }
 
-.personna-background{
-    background: url(/assets/images/bosses-amelie.svg) no-repeat bottom;
+.text-supporting-green{
+    color:#50be87 !important
+}
+
+.personna-background-pink{
+    background: url(/assets/images/bosses-pink.svg) no-repeat bottom;
+    background-size: contain;
+}
+
+.personna-background-green{
+    background: url(/assets/images/bosses-green.svg) no-repeat bottom;
     background-size: contain;
 }
 @media (min-width: 1024px) {
