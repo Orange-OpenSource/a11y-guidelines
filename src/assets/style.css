@@ -24,6 +24,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    line-height: 1.25;
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -389,6 +393,24 @@ pre code {
     .mb-personna{
         margin-bottom: 5.75rem !important
     }
+}
+
+
+.personna-name {
+    font-size: 2.5rem;
+}
+
+.personna-job {
+    padding: .3rem;
+}
+
+.personna-apps .small {
+    font-size: .75rem;    
+    padding-top: .25rem;    
+}
+
+.personna-apps li {
+    min-width: 4rem;
 }
 
 /**
