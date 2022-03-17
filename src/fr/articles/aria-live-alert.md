@@ -61,7 +61,7 @@ Enfin pour être complet, sachez que le langage <abbr>ARIA</abbr> prévoit égal
 
 
 ## Références
-- [Utilisation du rôle alert](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_alert)
+- [Utilisation du rôle alert](https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [Zones live ARIA](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Zones_live_ARIA)
 - [Utiliser le rôle log](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_log)
 - [Utiliser le rôle status](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_status)
