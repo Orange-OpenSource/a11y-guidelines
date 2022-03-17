@@ -87,6 +87,8 @@ Dans le cas où, vous utilisez un tableau pour faire de la mise en page, vous de
 
 Le fait de créer des tableaux accessible permettra la lecture au lecteur d'écran. Pour naviguer dans un tableau avec Jaws ou NVDA, il existe plusieurs raccourci.
 
+
+#### NVDA
 Pour naviguer rapidement de tableau en tableau dans une page, il suffit d'utiliser sur la touche <kbd>t</kbd>, si on utilise le raccourci <kbd>Maj + t</kbd>, on navigue dans le sens contraire et donc on revient au tableau précédent.
 
 Une fois au sein d'un tableau il existe plusieurs raccourcis afin de s'y déplacer simplement.
@@ -95,6 +97,8 @@ Une fois au sein d'un tableau il existe plusieurs raccourcis afin de s'y déplac
 <li><kbd>Ctrl+alt+flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl+alt+flèche droite</kbd> se déplace sur la colonne de droite.</li>
 <li><kbd>Ctrl+alt+flèche bas</kbd> permet de passer à la ligne suivante en restant sur la même colonne, <kbd>Ctrl+alt+flèche haut</kbd> pour passer à la ligne précédente.</li>
 </ul>
+
+#### Jaws
 
 ## Exemple de tableau
 
