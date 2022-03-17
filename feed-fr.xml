@@ -359,7 +359,7 @@ element.innerHTML = &#39;&amp;lt;div role=&quot;alert&quot;&amp;gt;Ceci est une 
 &lt;p&gt;Enfin pour être complet, sachez que le langage &lt;abbr&gt;ARIA&lt;/abbr&gt; prévoit également quelques roles spécifiques, &lt;strong&gt;status&lt;/strong&gt; et &lt;strong&gt;log&lt;/strong&gt; notamment qui peuvent s&#39;avérer utiles dans certains cas (barre d&#39;état, journalisation, chat…) et qui pour le moment doivent être utilisés en complément de l&#39;attribut &lt;code&gt;aria-live&lt;/code&gt; pour maximiser la prise en charge par les outils d&#39;assistance. Vous trouverez plus d&#39;infos sur ces roles dans les liens ci-dessous.&lt;/p&gt;
 &lt;h2 id=&quot;references&quot;&gt;Références &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/#references&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_alert&quot;&gt;Utilisation du rôle alert&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/Roles/alert_role&quot;&gt;Utilisation du rôle alert&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Zones_live_ARIA&quot;&gt;Zones live ARIA&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_log&quot;&gt;Utiliser le rôle log&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_status&quot;&gt;Utiliser le rôle status&lt;/a&gt;&lt;/li&gt;
