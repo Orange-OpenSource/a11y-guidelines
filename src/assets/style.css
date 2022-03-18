@@ -370,12 +370,20 @@ pre code {
     background-color: #BDE6D2;
 }
 
+.table-personna-purple th[scope=row] {
+    background-color: #FFF1FB;
+}
+
 .text-supporting-pink{
     color:#ffb4e6 !important
 }
 
 .text-supporting-green{
     color:#50be87 !important
+}
+
+.text-supporting-purple{
+    color:#D9C2F0 !important
 }
 
 .personna-background-pink{
@@ -385,6 +393,11 @@ pre code {
 
 .personna-background-green{
     background: url(/assets/images/bosses-green.svg) no-repeat bottom;
+    background-size: contain;
+}
+
+.personna-background-purple{
+    background: url(/assets/images/bosses-purple.svg) no-repeat bottom;
     background-size: contain;
 }
 @media (min-width: 1024px) {
@@ -404,7 +417,7 @@ pre code {
 
 @media (max-width: 1024px) {
     .mb-personna{
-        margin-bottom: 5.75rem !important
+        margin-bottom: 5.75rem;
     }
 }
 
