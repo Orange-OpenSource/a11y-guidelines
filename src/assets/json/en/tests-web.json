@@ -540,6 +540,24 @@
     "profils": ["Developer", "Accessibility Expert"]
   },
   {
+"themes": "General Navigation",
+"title": "Is the overall semantic structure of the document consistent?",
+"type": [
+      "Wave toolbar"
+    ],
+    "testing":[
+      "Launch Wave > Structure",
+      "Examine the hierarchy of ARIA landmarks" ],
+"verify": ["<ul><li>verify that each region of the page has relevant semantics through HTML5 structure tags <code>header</code>, <code>nav</code>…</ li><li>check that the main content is included in a <code>main</code> tag</li><li>check that the <code>main</code> element does not contain repeated elements elsewhere in the page (ex: navigation)</li></ul>"],
+    "results": [
+      "The different regions are clearly identifiable programmatically"
+    ],
+    "exception": "",
+    "shortcuts": "",
+    "profiles": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
+    "wcag": [""]
+  }, 
+  {
     "themes": "Common navigation",
     "title": "Provide skip links",
     "type": [

@@ -638,7 +638,7 @@
 		"themes": "Navigation générale",
 		"title": "La structure sémantique globale du document est-elle cohérente&nbsp;?",
 		"type": [
-      "Wave Toolbar"
+      "Wave toolbar"
     ],
     "tests":[
       "Lancer Wave > Structure",

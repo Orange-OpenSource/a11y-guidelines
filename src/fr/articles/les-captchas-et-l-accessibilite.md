@@ -69,7 +69,7 @@ Il s’agit de simples phrases demandant de recopier un mot, de résoudre une op
 « Quel animal fait miaou ? »  
 « De quelle couleur est le ciel ? »  
 
-A condition que les questions restent très simples, ce type de CAPTCHA pose très peu de difficulté aux utilisateurs.
+À condition que les questions restent très simples, ce type de CAPTCHA pose très peu de difficulté aux utilisateurs.
 Comme il est précisé dans [la notice du site acceDe Web](https://www.accede-web.com/notices/fonctionnelle-graphique/bonnes-pratiques/privilegier-des-tests-de-securite-sous-forme-de-tests-logiques-plutot-que-sous-forme-de-captcha/) une bonne pratique dans ce cas consiste à prévoir une solution de rafraîchissement, très utile pour les personnes déficientes cognitives.
 
 ## Une vérification par email, SMS ou téléphone pour une sécurité renforcée
@@ -80,5 +80,9 @@ C'est à la fois à la fois plus contraignante pour l’utilisateur qui doit com
 
 ## Pour récapituler
 
-Il n’existe pas de solutions parfaites ni pour l’utilisateur, ni en termes de sécurité. L’idée est d’opter pour la technique la plus juste en fonction du service proposé. Il est important par ailleurs en cas d’attaque d’avoir des logs pour analyser et contrer les attaques ultérieures.  
+Il n’existe pas de solutions parfaites ni pour l’utilisateur, ni en termes de sécurité. L’idée est d’opter pour la technique la plus juste en fonction du service proposé. Il est important par ailleurs en cas d’attaque d’avoir des logs pour analyser et contrer les attaques ultérieures. 
+
+## Tester avec de vrais utilisateurs
+
+En tout état de cause, il faut compléter ces captchas et leurs alternatives par des tests utilisateur d'aides techniques pour s'assurer de l'utilisabilité de la solution mise en place. 
 &nbsp;

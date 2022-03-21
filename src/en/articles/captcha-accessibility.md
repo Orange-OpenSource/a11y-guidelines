@@ -76,3 +76,7 @@ This solution is at the same time more constraining for the user who must commun
 ## Summary
 
 There is no perfect solution, either for the user or security-wise. You should opt for the best technique according to the service provided. Also, it is important in the case of attack to have logs to analyse and to prepare for further attacks.
+
+## Test with real users
+
+In any event, these captchas and their alternatives must be supplemented by user tests of assistive technologies to ensure the usability of the solution put in place.
