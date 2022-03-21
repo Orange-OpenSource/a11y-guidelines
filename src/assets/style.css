@@ -321,6 +321,10 @@ pre code {
     color: #fff!important
 }
 
+.bg-800 a {
+    color: #fff!important
+}
+
 .bg-900 {
     background-color: #333333 !important;
     color: #fff!important
@@ -383,6 +387,10 @@ pre code {
     background-color: #D9F0FB;
 }
 
+.table-personna-yellow th[scope=row]{
+    background-color: #FFF5CB;
+}
+
 .text-supporting-pink{
     color:#ffb4e6 !important
 }
@@ -397,6 +405,10 @@ pre code {
 
 .text-supporting-blue{
     color:#4BB4E6 !important
+}
+
+.text-supporting-yellow{
+    color:#fc0 !important
 }
 
 .personna-background-pink{
@@ -416,6 +428,11 @@ pre code {
 
 .personna-background-blue{
     background: url(/assets/images/bosses-blue.svg) no-repeat bottom;
+    background-size: contain;
+}
+
+.personna-background-yellow{
+    background: url(/assets/images/bosses-yellow.svg) no-repeat bottom;
     background-size: contain;
 }
 
