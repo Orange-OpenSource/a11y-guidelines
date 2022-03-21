@@ -361,7 +361,12 @@ pre code {
     color: #f16e00;
     vertical-align: middle;
 }
-*
+
+.bg-supporting-customblue{
+    background-color: #085EBD;
+    color:#fff;
+}
+
 .table-personna-pink th[scope=row] {
     background-color: #EDE6F7;
 }
@@ -374,6 +379,10 @@ pre code {
     background-color: #FFF1FB;
 }
 
+.table-personna-blue th[scope=row]{
+    background-color: #D9F0FB;
+}
+
 .text-supporting-pink{
     color:#ffb4e6 !important
 }
@@ -384,6 +393,10 @@ pre code {
 
 .text-supporting-purple{
     color:#D9C2F0 !important
+}
+
+.text-supporting-blue{
+    color:#4BB4E6 !important
 }
 
 .personna-background-pink{
@@ -400,6 +413,12 @@ pre code {
     background: url(/assets/images/bosses-purple.svg) no-repeat bottom;
     background-size: contain;
 }
+
+.personna-background-blue{
+    background: url(/assets/images/bosses-blue.svg) no-repeat bottom;
+    background-size: contain;
+}
+
 @media (min-width: 1024px) {
     .step-1 {
         margin-top: 150px;
