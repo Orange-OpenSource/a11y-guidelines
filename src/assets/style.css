@@ -354,7 +354,7 @@ pre code {
 
 
 /**
- * Personna
+ * persona
  */
 
 .position-absolute .badge {
@@ -371,23 +371,23 @@ pre code {
     color:#fff;
 }
 
-.table-personna-pink th[scope=row] {
+.table-persona-pink th[scope=row] {
     background-color: #EDE6F7;
 }
 
-.table-personna-green th[scope=row] {
+.table-persona-green th[scope=row] {
     background-color: #BDE6D2;
 }
 
-.table-personna-purple th[scope=row] {
+.table-persona-purple th[scope=row] {
     background-color: #FFF1FB;
 }
 
-.table-personna-blue th[scope=row]{
+.table-persona-blue th[scope=row]{
     background-color: #D9F0FB;
 }
 
-.table-personna-yellow th[scope=row]{
+.table-persona-yellow th[scope=row]{
     background-color: #FFF5CB;
 }
 
@@ -411,27 +411,27 @@ pre code {
     color:#fc0 !important
 }
 
-.personna-background-pink{
+.persona-background-pink{
     background: url(/assets/images/bosses-pink.svg) no-repeat bottom;
     background-size: contain;
 }
 
-.personna-background-green{
+.persona-background-green{
     background: url(/assets/images/bosses-green.svg) no-repeat bottom;
     background-size: contain;
 }
 
-.personna-background-purple{
+.persona-background-purple{
     background: url(/assets/images/bosses-purple.svg) no-repeat bottom;
     background-size: contain;
 }
 
-.personna-background-blue{
+.persona-background-blue{
     background: url(/assets/images/bosses-blue.svg) no-repeat bottom;
     background-size: contain;
 }
 
-.personna-background-yellow{
+.persona-background-yellow{
     background: url(/assets/images/bosses-yellow.svg) no-repeat bottom;
     background-size: contain;
 }
@@ -446,32 +446,32 @@ pre code {
     .step-3 {
         margin-top: 50px;
     }
-    .pb-lg-personna{
+    .pb-lg-persona{
         padding-bottom: 5.75rem !important
     }
 }
 
 @media (max-width: 1024px) {
-    .mb-personna{
+    .mb-persona{
         margin-bottom: 5.75rem;
     }
 }
 
 
-.personna-name {
+.persona-name {
     font-size: 2.5rem;
 }
 
-.personna-job {
+.persona-job {
     padding: .3rem;
 }
 
-.personna-apps .small {
+.persona-apps .small {
     font-size: .75rem;    
     padding-top: .25rem;    
 }
 
-.personna-apps li {
+.persona-apps li {
     min-width: 4rem;
 }
 
