@@ -1,6 +1,4 @@
-{
-	"name": "Audit de tests WEB",
-	"items":[{
+[{
     "themes": "Contenu textuel",
     "title": "Donner un titre aux pages",
     "type": [
@@ -1344,5 +1342,4 @@
     "raccourcis": "",
     "profils": ["Expert Accessibilité"],
     "wcag": ["4.1.2"]
-}
-]}
+}]
