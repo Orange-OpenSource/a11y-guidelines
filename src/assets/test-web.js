@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
       development: 'Développement',
       results : "Résultats",
       justification : "Justification",
-      profiles: 'Profils',
-      tools: 'Outils',
+      profiles: 'Profils&nbsp;',
+      tools: 'Outils&nbsp;',
       allTools: 'Tous les outils',
       exceptions: 'Exceptions',
       ongoingTests: 'tests en cours',
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   function translate(key, to) {
-    const locale = to || lang
+    const locale = to || lang$
 
     if (!locales.hasOwnProperty(locale)) {
       throw new Error(`translate(): Translation's locale \`${locale}\` does not exist`)

@@ -35,7 +35,7 @@
     ],
     "verifier": [
       "Vérifier que les titres sont pertinents et non vides",
-      "Vérifier que les titres s'enchaînent de façon logique",
+      "Vérifier que les titres s’enchainent de façon logique",
       "Vérifier l'absence de sauts dans la hiérarchie des titres"
     ],
     "resultat": [
