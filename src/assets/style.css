@@ -452,8 +452,14 @@ pre code {
 }
 
 @media (max-width: 1024px) {
+    .lg-persona{
+        margin-bottom: 6.10rem;
+    }
+}
+
+@media (min-width: 768px) {
     .mb-persona{
-        margin-bottom: 5.75rem;
+        margin-bottom: 6.10rem;
     }
 }
 

@@ -131,7 +131,6 @@ module.exports = {
           { label: 'Exemples de composants', href: '/fr/web/exemples-de-composants/' }
         ]
       },
-
       {
         label: 'Android',
         href: '/fr/mobile/android/',
@@ -189,7 +188,8 @@ module.exports = {
 		  { label: 'E-learning', href: '/fr/contenu-et-communication/e-learning/' }
         ]
       },
-      { label: 'Articles', href: '/fr/articles/' }
+      { label: 'Articles', href: '/fr/articles/' },
+      { label: 'Persona', href: '/fr/persona/', mainMenu: false }
     ]
   },
   footer: {
