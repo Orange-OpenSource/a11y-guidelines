@@ -45,7 +45,7 @@ L'option d'accessibilité d'agrandissement de la taille des textes, présent dan
 Text(
         text = "Exemple",
         fontSize = 14.sp,
-	modifier = Modifier.width(200.dp).heightIn(0.dp)
+	modifier = Modifier.width(200.dp).heightIn(100.dp)
     )
 
 </code>

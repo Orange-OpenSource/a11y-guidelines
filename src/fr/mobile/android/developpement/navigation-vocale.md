@@ -30,7 +30,6 @@ android:contentDescription="@string/criteria_alt_ex1_cd_txt2"
 &#47;&gt;</code></pre><pre>
 <code class="java">myTextView = (TextView) findViewById(R.id.myTextviewId);
 myTextView.setContentDescription(getString(R.string.criteria_alt_ex1_cd_txt2));</code></pre><pre><code class="kotlin">myTextViewId.contentDescription = getString(R.string.criteria_alt_ex1_cd_txt2)</code></pre>
-<pre><code class="kotlin">myTextViewId.contentDescription = getString(R.string.criteria_alt_ex1_cd_txt2)</code></pre>
 
 
 <pre>

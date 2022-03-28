@@ -44,7 +44,7 @@ The text size magnification accessibility option, in the phone settings.
 Text(
         text = "Exemple",
         fontSize = 14.sp,
-	modifier = Modifier.width(200.dp).heightIn(0.dp)
+	modifier = Modifier.width(200.dp).heightIn(100.dp)
     )
 
 </code>
