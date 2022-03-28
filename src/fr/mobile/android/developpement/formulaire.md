@@ -49,6 +49,19 @@ De plus, il est essentiel d'indiquer à l'utilisateur, pour une bonne compréhen
 &lt;/com.google.android.material.textfield.TextInputLayout&gt;
 </code></pre>
 
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+var username by remember { mutableStateOf("") }
+TextField(
+        value = username,
+        onValueChange = { username = it },
+	label = { Text("Field") }
+    )
+
+</code>
+</pre>
+
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and labels</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or instructions</a>

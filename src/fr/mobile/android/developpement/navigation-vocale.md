@@ -30,7 +30,19 @@ android:contentDescription="@string/criteria_alt_ex1_cd_txt2"
 &#47;&gt;</code></pre><pre>
 <code class="java">myTextView = (TextView) findViewById(R.id.myTextviewId);
 myTextView.setContentDescription(getString(R.string.criteria_alt_ex1_cd_txt2));</code></pre><pre><code class="kotlin">myTextViewId.contentDescription = getString(R.string.criteria_alt_ex1_cd_txt2)</code></pre>
+<pre><code class="kotlin">myTextViewId.contentDescription = getString(R.string.criteria_alt_ex1_cd_txt2)</code></pre>
 
+
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+Image(
+        painterResource(id = R.drawable.ic_launcher_foreground),
+        contentDescription = "Content description for visually impaired"
+    )
+
+</code>
+</pre>
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
@@ -76,6 +88,35 @@ containerView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES /
 mailImageView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO //On masque le bouton-icône pour éviter une redondance d’information
 infobulleTextView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO) //On masque le texte pour éviter une redondance d’information
 </code></pre>
+
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+Box(modifier = Modifier.semantics(mergeDescendants = true) {}) {
+        Image(
+            painterResource(id = R.drawable.ic_launcher_foreground),
+            contentDescription = null,
+            modifier = Modifier.padding(8.dp)
+        )
+        Box (modifier = Modifier.align(Alignment.TopEnd)
+            .background(color = Color.Red, shape = CircleShape)
+            .size(20.dp)) {
+            Text(
+                text = "3",
+                fontSize = 14.sp,
+                color = Color.White,
+                modifier = Modifier
+                    .align(Alignment.Center)
+                    .semantics {
+                        this.contentDescription = "3 mails non lus"
+                    }
+            )
+        }
+
+    }
+
+</code>
+</pre>
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
@@ -202,6 +243,23 @@ Il faut indiquer l’état et la nature des onglets (non internationalisé)&nbsp
         }
     }
 </code></pre>
+
+**Exemple d'états d'un élément avec Jetpack Compose :**
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+val stateSubscribed = stringResource(R.string.subscribed)
+val stateNotSubscribed = stringResource(R.string.not_subscribed)
+Row(
+		modifier = Modifier.semantics { 
+			stateDescription = if (selected) stateSubscribed else stateNotSubscribed
+		}
+		....
+    )
+
+
+</code>
+</pre>
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
@@ -342,6 +400,28 @@ En décomposant l’image&nbsp;:
         ... /&gt;
 </code></pre>
 
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+Image(
+        painterResource(id = R.drawable.montagnard),
+        contentDescription = "null"
+    )
+Image(
+        painterResource(id = R.drawable.setting),
+        contentDescription = stringResource(R.string.settings)
+    )
+Image(
+        painterResource(id = R.drawable.edit),
+        contentDescription = stringResource(R.string.edit)
+    )
+
+</code>
+</pre>
+
+
+
+
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
 
@@ -380,6 +460,26 @@ Il faut veiller à trouver la bonne balance entre la navigation et la vocalisati
         android:text="@string/my_songwriter" /&gt;
 &lt;/ConstraintLayout&gt;</code></pre>
 
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+Row(
+	verticalAlignment = Alignment.CenterVertically,
+	modifier = Modifier.semantics(mergeDescendants = true) {}
+	) {
+Text(
+        text = stringResource(R.string.my_song_title),
+        fontSize = 14.sp,
+    )
+Text(
+        text = stringResource(R.string.my_songwriter),
+        fontSize = 14.sp,
+    )
+}
+
+</code>
+</pre>
+
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
 
@@ -404,6 +504,20 @@ Pour que Talkback puisse reconnaitre les entêtes, il faut ajouter un attribut d
 android:id="@+id/myTextLevel1viewId"
 android:accessibilityHeading="true"
 &#47;&gt;</code></pre>
+
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+
+Text(
+        text = stringResource(R.string.myTextLevel1viewId),
+        fontSize = 14.sp,
+		modifier = Modifier.semantics { heading()}
+    )
+
+
+</code>
+</pre>
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and Labels</a>

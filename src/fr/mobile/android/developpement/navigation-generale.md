@@ -35,6 +35,23 @@ Exemple simple &nbsp;:
     android:margin="8dp"
 &#47;&gt;</code></pre>
 
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+Button(
+        onClick = {
+            println("Click")
+        },
+        modifier = Modifier
+            .border(1.dp, Color.Black)
+            .width(48.dp)
+            .height(48.dp)
+    ) {
+        Text(text = "Click!")
+    }
+</code>
+</pre>
+
 Exemple avec padding &nbsp;:
 <pre><code class="xml">&lt;Button 
     android:text="Click"
@@ -43,6 +60,24 @@ Exemple avec padding &nbsp;:
     android:padding="4dp"
     android:margin="8dp"
 &#47;&gt;</code></pre>
+
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+Button(
+        onClick = {
+            println("Click")
+        },
+        modifier = Modifier
+            .padding(4.dp)
+            .border(1.dp, Color.Black)
+            .width(40.dp)
+            .height(40.dp)
+    ) {
+        Text(text = "Click!")
+    }
+</code>
+</pre>
 
 **Exemples non-valide&nbsp;:** 
 
@@ -60,6 +95,23 @@ Exemple avec padding &nbsp;:
     android:layout_height="40dp"
     android:margin="8dp"
 &#47;&gt;</code></pre>
+
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+Button(
+        onClick = {
+            println("Click")
+        },
+        modifier = Modifier
+            .border(1.dp, Color.Black)
+            .width(40.dp)
+            .height(40.dp)
+    ) {
+        Text(text = "Click!")
+    }
+</code>
+</pre>
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
@@ -94,6 +146,17 @@ Le texte peut poser des problèmes de lisibilité lorsque celui-ci présente une
     android:text="Exemple"
 &#47;&gt;</code></pre>
 
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+Text(
+        text = "Exemple",
+        fontSize = 14.sp,
+    )
+
+</code>
+</pre>
+
 
 **Exemple non valide&nbsp;:** 
 <pre><code class="xml">&lt;TextView
@@ -113,6 +176,18 @@ Le texte peut poser des problèmes de lisibilité lorsque celui-ci présente une
     android:textSize="10sp"
     android:text="Exemple"
 &#47;&gt;</code></pre>
+
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+Text(
+        text = "Exemple",
+        fontSize = 14.sp,
+        fontStyle = FontStyle.Italic
+    )
+
+</code>
+</pre>
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
