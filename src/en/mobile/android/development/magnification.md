@@ -38,6 +38,18 @@ The text size magnification accessibility option, in the phone settings.
     android:text="Exemple"
 &#47;&gt;</code></pre>
 
+<pre>
+<code class="kotlin">
+// With Jetpack Compose
+Text(
+        text = "Exemple",
+        fontSize = 14.sp,
+	modifier = Modifier.width(200.dp).heightIn(0.dp)
+    )
+
+</code>
+</pre>
+
 **Reference <abbr>WCAG</abbr>:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#resize-text">1.4.4 Resize text</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#reflow">1.4.10 Reflow</a>
