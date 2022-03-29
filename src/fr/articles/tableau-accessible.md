@@ -5,7 +5,7 @@ titleBeforeTag: true
 date: "2022-02-18"
 tags:
   - web
-  - advanced
+  - beginner
 ---
 
 
@@ -94,11 +94,22 @@ Pour naviguer rapidement de tableau en tableau dans une page, il suffit d'utilis
 Une fois au sein d'un tableau il existe plusieurs raccourcis afin de s'y déplacer simplement.
 
 <ul>
-<li><kbd>Ctrl+alt+flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl+alt+flèche droite</kbd> se déplace sur la colonne de droite.</li>
-<li><kbd>Ctrl+alt+flèche bas</kbd> permet de passer à la ligne suivante en restant sur la même colonne, <kbd>Ctrl+alt+flèche haut</kbd> pour passer à la ligne précédente.</li>
+<li><kbd>Ctrl + alt + flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl + alt + flèche droite</kbd> se déplace sur la colonne de droite.</li>
+<li><kbd>Ctrl + alt + flèche bas</kbd> permet de passer à la ligne suivante en restant sur la même colonne, <kbd>Ctrl + alt + flèche haut</kbd> pour passer à la ligne précédente.</li>
 </ul>
 
 #### Jaws
+
+Pour Jaws, il faut utiliser la touche <kbd>t</kbd> et <kbd>t + y</kbd> pour naviguer entre les tableaux.
+Pour parcourir un tableau il existe plusieurs raccourcis :
+
+<ul>
+<li><kbd>Insert + ctrl + t</kbd> permet de lister tous les tableaux</li>
+<li><kbd>Ctrl + alt + flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl + alt + flèche droite</kbd> se déplace sur la colonne de droite.</li>
+<li><kbd>Ctrl + alt + flèche bas</kbd> permet de passer à la ligne suivante en restant sur la même colonne, <kbd>Ctrl + alt + flèche haut</kbd> pour passer à la ligne précédente.</li>
+<li><kbd>Windows + num pad 5</kbd> permet de lire toute la ligne.</li>
+<li><kbd>Windows + Pediod (point)</kbd> permet de lire toute la colonne.</li>
+</ul>
 
 ## Exemple de tableau
 
@@ -249,87 +260,45 @@ Dans le tableau ci-dessus, il y a deux choses à retenir&nbsp;:
 
 Sur NVDA, pour tout changement de ligne ou de colonne l'en-tête sera vocalisé.
 
-### Tableau avec colonnes triables
+### Tableau complexe
 
-Pour le dernier exemple, nous allons implémenter un tableau avec des colonnes triables, afin que ce tableau soit accessible il y a certaines règles à suivre.
 
-<table class="table">
- <caption class="h4">Liste des plus gros succès français au box-office mondial</caption>
-  <tr>
-    <th scope="col">Rang</th>
-    <th scope="col">Film</th>
-    <th scope="col">Réalisateur</th>
-    <th scope="col">Année</th>
-    <th scope="col">Recettes</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>Lucy</td>
-    <td>Luc Besson</td>
-    <td>2014</td>
-    <td>463 360 063 $</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>Intouchables</td>
-    <td>Olivier Nakache</td>
-    <td>2011</td>
-    <td>426 588 510 $</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Taken 2</td>
-    <td>Olivier Megaton</td>
-    <td>2012</td>
-    <td>376 141 306 $</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>Taken 3</td>
-    <td>Olivier Megaton</td>
-    <td>2015</td>
-    <td>326 479 141 $</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>Le Cinquième Élément</td>
-    <td>Luc Besson</td>
-    <td>1997</td>
-    <td>263 920 180 $</td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>Bienvenue chez les Ch'tis</td>
-    <td>Dany Boon</td>
-    <td>2008</td>
-    <td>245 144 417 $</td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>Taken</td>
-    <td>Pierre Morel</td>
-    <td>2008</td>
-    <td>226 830 568 $</td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>Valérian et la Cité des mille planètes</td>
-    <td>Luc Besson</td>
-    <td>2017</td>
-    <td>225 874 228 $</td>
-  </tr>
-  <tr>
-    <td>9</td>
-    <td>Le Fabuleux Destin d'Amélie Poulain</td>
-    <td>Jean-Pierre Jeunet</td>
-    <td>2001</td>
-    <td>173 921 954 $</td>
-  </tr>
-  <tr>
-    <td>10</td>
-    <td>Qu'est-ce qu'on a fait au Bon Dieu ?</td>
-    <td>Philippe de Chauveron</td>
-    <td>2014</td>
-    <td>148 480 000 $</td>
-  </tr>
-</table>
+<table class="table text-center">
+    <caption class="visually-hidden position-relative">Synthèse par niveau</caption>
+      <tr>
+        <th id="critere">Critères</th>
+        <th id="conforme" headers="critere" colspan="2">Conformes</th>
+        <th id="non-conforme" headers="critere" colspan="2">Non-conformes</th>
+        <th id="non-applicable" headers="critere" colspan="2">Non-applicables</th>
+        <th id="conformite" rowspan="2" class="bg-light">Taux de conformité </th>
+      </tr>
+      <tr>
+        <th id="niveau">Niveau</th>
+        <th id="debutant-conforme" headers="niveau conforme">Débutant</th>
+        <th id="confirme-conforme" headers="niveau conforme">Confirmé</th>
+        <th id="debutant-non-conforme" headers="niveau non-conforme">Débutant</th>
+        <th id="confirme-non-confrome" headers="niveau non-conforme">Confirmé</th>
+        <th id="debutant-non-applicable" headers="niveau non-applicable">Débutant</th>
+        <th id="confirme-non-applicable" headers="niveau non-applicable">Confirmé</th>
+      </tr>
+      <tr>
+        <th id="accueil">Accueil</th>
+        <td headers="accueil conforme debutant-conforme">17</td>
+        <td headers="accueil conforme confirme-conforme">13</td>
+        <td headers="accueil non-conforme debutant-non-conforme">0</td>
+        <td headers="accueil non-conforme confirme-non-confrome">0</td>
+        <td headers="accueil non-applicable debutant-non-applicable">13</td>
+        <td headers="accueil non-applicable confirme-non-applicable">7</td>
+        <td headers="accueil conformite" class="bg-light">100%</td>
+      </tr>
+      <tr>
+        <th id="article">Article</th>
+        <td headers="article conforme debutant-conforme">17</td>
+        <td headers="article conforme confirme-conforme">12</td>
+        <td headers="article non-conforme debutant-non-conforme">0</td>
+        <td headers="article non-conforme confirme-non-confrome">1</td>
+        <td headers="article non-applicable debutant-non-applicable">13</td>
+        <td headers="article non-applicable confirme-non-applicable">7</td>
+        <td headers="article conformite" class="bg-light">97%</td>
+      </tr>
+  </table>
