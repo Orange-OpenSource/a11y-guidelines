@@ -43,6 +43,7 @@ Button(
             println("Click")
         },
         modifier = Modifier
+            .padding(8.dp) //margin
             .border(1.dp, Color.Black)
             .width(48.dp)
             .height(48.dp)
@@ -69,8 +70,9 @@ Button(
             println("Click")
         },
         modifier = Modifier
-            .padding(4.dp)
+            .padding(8.dp) //margin
             .border(1.dp, Color.Black)
+            .padding(4.dp) //padding
             .width(40.dp)
             .height(40.dp)
     ) {
@@ -104,6 +106,7 @@ Button(
             println("Click")
         },
         modifier = Modifier
+            .padding(8.dp) //margin
             .border(1.dp, Color.Black)
             .width(40.dp)
             .height(40.dp)
@@ -151,7 +154,8 @@ Le texte peut poser des problèmes de lisibilité lorsque celui-ci présente une
 // Avec Jetpack Compose
 Text(
         text = "Exemple",
-        fontSize = 14.sp,
+	fontFamily = FontFamily.SansSerif,
+        fontSize = 14.sp
     )
 
 </code>
@@ -183,7 +187,8 @@ Text(
 Text(
         text = "Exemple",
         fontSize = 14.sp,
-        fontStyle = FontStyle.Italic
+        fontStyle = FontStyle.Italic,
+	fontFamily = FontFamily.SansSerif
     )
 
 </code>
