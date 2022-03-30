@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="222.83mm"
+   height="58.41mm"
+   viewBox="0 0 222.82998 58.410001"
+   version="1.1"
+   id="svg901"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs898">
+    <mask
+       id="mask-2"
+       fill="#ffffff">
+      <circle
+         id="use412"
+         cx="88"
+         cy="88"
+         r="88" />
+    </mask>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(58.617471,-161.76907)"
+     style="display:inline">
+    <g
+       id="Group"
+       transform="matrix(0.26458333,0,0,0.26458333,-71.846646,162.56283)"
+       fill="#ffcc00">
+      <path
+         d="M 129.04178,244 0,230.76679 C 98.588426,227.5491 87.512104,140.7911 164.69142,140.00521 241.87074,139.21933 244.60837,227.5491 316,227.5491"
+         id="Fill-429-Copy"
+         opacity="0.248919" />
+      <path
+         d="M 322.04178,241 193,224.204 C 291.58843,220.12001 280.5121,110.00408 357.69142,109.00662 434.87074,108.00915 437.60837,220.12001 509,220.12001"
+         id="Fill-429"
+         opacity="0.498058" />
+      <path
+         d="M 975,220 C 922.43473,220 870.57279,0 771.52068,0 672.46858,0 635.7546,220 577,220"
+         id="Fill-426" />
+      <path
+         d="M 386,220 C 500.62056,211.81906 489.03745,60.534028 572.50386,60.001341 655.97027,59.468653 662.01638,217.81734 728,217.81734"
+         id="Fill-432"
+         opacity="0.749302" />
+    </g>
+    <rect
+       id="Rectangle-8-Copy-3"
+       fill="#ff7900"
+       x="131.08896"
+       y="161.76907"
+       width="1.5875"
+       height="1.5875"
+       style="stroke-width:0.264583" />
+    <rect
+       id="Rectangle-8-Copy-4"
+       fill="#ff7900"
+       x="21.815849"
+       y="190.87325"
+       width="1.5875"
+       height="1.5875"
+       style="stroke-width:0.264583" />
+    <rect
+       id="Rectangle-8-Copy-5"
+       fill="#ff7900"
+       x="77.907516"
+       y="177.90866"
+       width="1.5875"
+       height="1.5875"
+       style="stroke-width:0.264583" />
+    <rect
+       id="Rectangle-8-Copy-6"
+       fill="#ff7900"
+       x="-29.513317"
+       y="199.07533"
+       width="1.5875"
+       height="1.5875"
+       style="stroke-width:0.264583" />
+  </g>
+</svg>

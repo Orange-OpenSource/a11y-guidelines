@@ -4,7 +4,7 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-03-10T00:00:00Z</updated>
+  <updated>2022-03-30T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -1871,6 +1871,18 @@ Stratégie de mise en accessibilité&lt;/li&gt;
 &lt;h3 id=&quot;exemple-5-selection-dune-date&quot;&gt;Exemple 5 : sélection d&#39;une date &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/utilisation-de-l-attribut-aria-current/#exemple-5-selection-dune-date&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Utiliser la valeur &lt;code&gt;date&lt;/code&gt; dans un composant permettant de sélectionner une date. Un attribut &lt;code&gt;aria-current=&amp;quot;date&amp;quot;&lt;/code&gt; est positionné sur la date du jours tandis qu&#39;un attribut &lt;code&gt;aria-selected=&amp;quot;true&amp;quot;&lt;/code&gt; est positionné sur la date en cours de sélection.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/utilisation-de-l-attribut-aria-current/datepicker.png&quot; alt=&quot;Capture d&#39;écran d&#39;un composant de type datepicker, la date du jour et la date en cours de sélection sont mises en évidence via un changement de couleur.&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Les personas</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/persona/"/>
+    <updated>2022-03-30T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/persona/</id>
+    <content type="html">&lt;p&gt;Des nouveautés sur notre site de recommandations.&lt;br /&gt;
+Ces personas permettent de comprendre les difficultés au quotidien des personnes en situation de handicap quand ils utilisent un ordinateur, une tablette ou un mobile pour rechercher une information ou réaliser une action. Pour chaque persona, sensibilisez-vous à quelques bonnes pratiques d&#39;accessibilité numérique : ces pratiques permettent au plus grand nombre d&#39;avoir accès à Internet en toute autonomie.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/persona/&quot;&gt;Découvrez nos personas&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/persona.png&quot; alt=&quot;exemple d&#39;un persona&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
