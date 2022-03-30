@@ -34,6 +34,24 @@ Classic example:
     android:margin="8dp"
 &#47;&gt;</code></pre>
 
+<pre>
+<code class="kotlin">
+// With Jetpack Compose
+Button(
+        onClick = {
+            println("Click")
+        },
+        modifier = Modifier
+            .padding(8.dp) //margin
+            .border(1.dp, Color.Black)
+            .width(48.dp)
+            .height(48.dp)
+    ) {
+        Text(text = "Click!")
+    }
+</code>
+</pre>
+
 Padding example:
 <pre><code class="xml">&lt;Button 
     android:text="Click"
@@ -42,6 +60,25 @@ Padding example:
     android:padding="4dp"
     android:margin="8dp"
 &#47;&gt;</code></pre>
+
+<pre>
+<code class="kotlin">
+// With Jetpack Compose
+Button(
+        onClick = {
+            println("Click")
+        },
+        modifier = Modifier
+            .padding(8.dp) //margin
+            .border(1.dp, Color.Black)
+            .padding(4.dp) //padding
+            .width(40.dp)
+            .height(40.dp)
+    ) {
+        Text(text = "Click!")
+    }
+</code>
+</pre>
 
 **Invalid examples:** 
 
@@ -59,6 +96,24 @@ Padding example:
     android:layout_height="40dp"
     android:margin="8dp"
 &#47;&gt;</code></pre>
+
+<pre>
+<code class="kotlin">
+// With Jetpack Compose
+Button(
+        onClick = {
+            println("Click")
+        },
+        modifier = Modifier
+            .padding(8.dp) //margin
+            .border(1.dp, Color.Black)
+            .width(40.dp)
+            .height(40.dp)
+    ) {
+        Text(text = "Click!")
+    }
+</code>
+</pre>
 
 
 **Reference <abbr>WCAG</abbr>:**  
@@ -94,6 +149,18 @@ Android natively offers the Roboto font which has 16 variants, including many sa
     android:text="Exemple"
 &#47;&gt;</code></pre>
 
+<pre>
+<code class="kotlin">
+// With Jetpack Compose
+Text(
+        text = "Exemple",
+	fontFamily = FontFamily.SansSerif,
+        fontSize = 14.sp
+    )
+
+</code>
+</pre>
+
 
 **Unvalid example:** 
 <pre><code class="xml">&lt;TextView
@@ -113,6 +180,19 @@ Android natively offers the Roboto font which has 16 variants, including many sa
     android:textSize="10sp"
     android:text="Exemple"
 &#47;&gt;</code></pre>
+
+<pre>
+<code class="kotlin">
+// With Jetpack Compose
+Text(
+        text = "Exemple",
+        fontSize = 14.sp,
+        fontStyle = FontStyle.Italic,
+	fontFamily = FontFamily.SansSerif
+    )
+
+</code>
+</pre>
 
 **Reference <abbr>WCAG</abbr>:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a>
