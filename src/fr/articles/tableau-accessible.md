@@ -107,8 +107,8 @@ Pour parcourir un tableau il existe plusieurs raccourcis :
 <li><kbd>Insert + ctrl + t</kbd> permet de lister tous les tableaux</li>
 <li><kbd>Ctrl + alt + flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl + alt + flèche droite</kbd> se déplace sur la colonne de droite.</li>
 <li><kbd>Ctrl + alt + flèche bas</kbd> permet de passer à la ligne suivante en restant sur la même colonne, <kbd>Ctrl + alt + flèche haut</kbd> pour passer à la ligne précédente.</li>
-<li><kbd>Windows + num pad 5</kbd> permet de lire toute la ligne.</li>
-<li><kbd>Windows + Pediod (point)</kbd> permet de lire toute la colonne.</li>
+<li><kbd>Insert + maj + flèche haut</kbd> permet de lire toute la ligne.</li>
+<li><kbd>Insert + maj + num pad 5</kbd> permet de lire toute la colonne.</li>
 </ul>
 
 ## Exemple de tableau
