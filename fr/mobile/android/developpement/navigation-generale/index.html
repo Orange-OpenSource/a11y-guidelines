@@ -282,6 +282,23 @@
     android:layout_height="48dp"
     android:margin="8dp"
 &#47;&gt;</code></pre>
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+Button(
+        onClick = {
+            println("Click")
+        },
+        modifier = Modifier
+            .padding(8.dp) //margin
+            .border(1.dp, Color.Black)
+            .width(48.dp)
+            .height(48.dp)
+    ) {
+        Text(text = "Click!")
+    }
+</code>
+</pre>
 <p>Exemple avec padding  :</p>
 <pre><code class="xml">&lt;Button 
     android:text="Click"
@@ -290,6 +307,24 @@
     android:padding="4dp"
     android:margin="8dp"
 &#47;&gt;</code></pre>
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+Button(
+        onClick = {
+            println("Click")
+        },
+        modifier = Modifier
+            .padding(8.dp) //margin
+            .border(1.dp, Color.Black)
+            .padding(4.dp) //padding
+            .width(40.dp)
+            .height(40.dp)
+    ) {
+        Text(text = "Click!")
+    }
+</code>
+</pre>
 <p><strong>Exemples non-valide :</strong></p>
 <pre><code class="xml">&lt;Button 
     android:text="Click"
@@ -303,6 +338,23 @@
     android:layout_height="40dp"
     android:margin="8dp"
 &#47;&gt;</code></pre>
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+Button(
+        onClick = {
+            println("Click")
+        },
+        modifier = Modifier
+            .padding(8.dp) //margin
+            .border(1.dp, Color.Black)
+            .width(40.dp)
+            .height(40.dp)
+    ) {
+        Text(text = "Click!")
+    }
+</code>
+</pre>
 <p><strong>Référence <abbr>WCAG</abbr> :</strong></p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#target-size">2.5.5 Target Size</a></li>
@@ -328,6 +380,17 @@
     android:textSize="14sp"
     android:text="Exemple"
 &#47;&gt;</code></pre>
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+Text(
+        text = "Exemple",
+	fontFamily = FontFamily.SansSerif,
+        fontSize = 14.sp
+    )
+
+</code>
+</pre>
 <p><strong>Exemple non valide :</strong></p>
 <pre><code class="xml">&lt;TextView
     android:layout_width="wrap_content"
@@ -344,6 +407,18 @@
     android:textSize="10sp"
     android:text="Exemple"
 &#47;&gt;</code></pre>
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+Text(
+        text = "Exemple",
+        fontSize = 14.sp,
+        fontStyle = FontStyle.Italic,
+	fontFamily = FontFamily.SansSerif
+    )
+
+</code>
+</pre>
 <p><strong>Référence <abbr>WCAG</abbr> :</strong></p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a></li>

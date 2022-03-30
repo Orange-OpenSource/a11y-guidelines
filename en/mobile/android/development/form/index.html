@@ -295,6 +295,18 @@
 
 &lt;/com.google.android.material.textfield.TextInputLayout&gt;
 </code></pre>
+<pre>
+<code class="kotlin">
+// With Jetpack Compose
+var username by remember { mutableStateOf("") }
+TextField(
+        value = username,
+        onValueChange = { username = it },
+	label = { Text("Field") }
+    )
+
+</code>
+</pre>
 <p><strong>Reference <abbr>WCAG</abbr>:</strong></p>
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and labels</a></li>
