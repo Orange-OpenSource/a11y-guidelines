@@ -34,6 +34,17 @@
   },
   {
     "themes": "WWDC 2021",
+    "title": "Discover breakpoint improvements",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/21xcodeLLDB",
+    "profils": ["All","Optimization","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
     "title": "Explore UI animation hitches and the render loop",
     "type": [],
     "tests": [],
@@ -141,6 +152,28 @@
     "exception": "",
     "raccourcis": "2019/19214",
     "profils": ["All","Dark Mode","Xcode"]
+  },
+  {
+    "themes": "WWDC 2019",
+    "title": "LLDB: Beyond 'po'",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/21xcodeLLDB",
+    "profils": ["All","Optimization","Xcode"]
+  },
+  {
+    "themes": "WWDC 2018",
+    "title": "Advanced Debugging with Xcode and LLDB",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/21xcodeLLDB",
+    "profils": ["All","Optimization","Xcode"]
   },
   {
     "themes": "WWDC 2018",

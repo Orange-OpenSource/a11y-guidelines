@@ -1731,8 +1731,6 @@ Quand on souhaite que le lecteur d'écran ne puisse voir et vocaliser qu'une seu
 En fonction de la hiérarchie des vues implémentée au sein d'une application, le simple fait d'écrire `accessibilityViewIsModal = true` risque de ne pas produire toujours l'effet escompté en vocalisant certains éléments situés en arrière-plan.
 
 En effet, **seuls les éléments accessibles situés au même niveau hiérarchique** que la vue impactée sur laquelle cette propriété sera activée **seront exclus de l'analyse <span lang="en">VoiceOver</span>**.
-
-Une illustration pédagogique et interactive présente dans [cet&nbsp;article&nbsp;de&nbsp;David&nbsp;RÖNNQVIST](http://ronnqvi.st/adding-accessible-behavior) (section 'Implementing accessible modal views') permet de parfaitement comprendre graphiquement comment fonctionne une vue modale si les explications fournies dans l'onglet <a style="text-decoration: underline;" role="button" onclick="$('#modalView-Example_tab').trigger('click');document.getElementById('modalView').scrollIntoView({ behavior: 'smooth', block: 'start' })">Exemples</a> ne sont pas suffisamment claires.
 </div>
 <div class="tab-pane" id="modalView-Example" role="tabpanel">
 
@@ -1824,7 +1822,6 @@ Pour application, supposons que nous avons une vue générique contenant des él
 - [Masquer&nbsp;des&nbsp;éléments](#masquer-des-elements)
 
 - [`accessibilityViewIsModal`](https://developer.apple.com/documentation/objectivec/nsobject/1615089-accessibilityviewismodal)
-- [David&nbsp;Rönnqvist&nbsp;:&nbsp;"Implementing&nbsp;accessible&nbsp;modal&nbsp;views"](http://ronnqvi.st/adding-accessible-behavior)
 
 - [WWDC&nbsp;2018&nbsp;:&nbsp;Fournir&nbsp;une&nbsp;expérience&nbsp;exceptionnelle&nbsp;en&nbsp;accessibilité](../wwdc/2018/230/#element-au-premier-plan-2502)
 </div>
