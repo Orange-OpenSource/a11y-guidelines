@@ -12,4 +12,4 @@ Ces personas permettent de comprendre les difficultés au quotidien des personne
 
 <a href="/fr/persona/">Découvrez nos personas</a>
 
-![exemple d'un persona](../images/persona.png)
+![exemple d'un persona](../images/persona-exemple.png)
