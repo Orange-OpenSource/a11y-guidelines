@@ -1889,7 +1889,6 @@ float heightVal;
 <div class="tab-pane" id="modalView-Details" role="tabpanel">
 <p>En fonction de la hiérarchie des vues implémentée au sein d'une application, le simple fait d'écrire <code>accessibilityViewIsModal = true</code> risque de ne pas produire toujours l'effet escompté en vocalisant certains éléments situés en arrière-plan.</p>
 <p>En effet, <strong>seuls les éléments accessibles situés au même niveau hiérarchique</strong> que la vue impactée sur laquelle cette propriété sera activée <strong>seront exclus de l'analyse <span lang="en">VoiceOver</span></strong>.</p>
-<p>Une illustration pédagogique et interactive présente dans <a href="http://ronnqvi.st/adding-accessible-behavior">cet article de David RÖNNQVIST</a> (section 'Implementing accessible modal views') permet de parfaitement comprendre graphiquement comment fonctionne une vue modale si les explications fournies dans l'onglet <a style="text-decoration: underline;" role="button" onclick="$('#modalView-Example_tab').trigger('click');document.getElementById('modalView').scrollIntoView({ behavior: 'smooth', block: 'start' })">Exemples</a> ne sont pas suffisamment claires.</p>
 </div>
 <div class="tab-pane" id="modalView-Example" role="tabpanel">
 <p>Les exemples développés par la suite supposent acquises les connaissances concernant l'affichage/masquage des conteneurs et de leurs contenus : se référer à la rubrique <strong><a href="#masquer-des-elements">Masquer des éléments</a></strong> pour approfondir ces notions si besoin.</p>
@@ -1975,9 +1974,6 @@ float heightVal;
 </li>
 <li>
 <p><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615089-accessibilityviewismodal"><code>accessibilityViewIsModal</code></a></p>
-</li>
-<li>
-<p><a href="http://ronnqvi.st/adding-accessible-behavior">David Rönnqvist : &quot;Implementing accessible modal views&quot;</a></p>
 </li>
 <li>
 <p><a href="../wwdc/2018/230/#element-au-premier-plan-2502">WWDC 2018 : Fournir une expérience exceptionnelle en accessibilité</a></p>
