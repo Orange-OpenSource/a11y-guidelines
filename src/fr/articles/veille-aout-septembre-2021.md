@@ -70,7 +70,7 @@ Bonne lecture !
 
 - TAdER, on vous explique tout sur pourquoi le texte doit pouvoir s’adapter à l’utilisateur dans le numérique à lire (en) : http://www.tader.info/ 
 - Designer pour des déficiences cognitives, bon résumé (en) : https://ux.shopify.com/designing-for-cognitive-disabilities-b2933d58c278 
-- Améliorer les personas utilisateurs (en) : https://www.uxbooth.com/articles/rethinking-user-personas/ 
+- Améliorer les personae utilisateurs (en) : https://www.uxbooth.com/articles/rethinking-user-personas/ 
 
 ## Ressources
 
