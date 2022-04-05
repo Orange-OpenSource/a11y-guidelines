@@ -10,7 +10,7 @@ sideNavigationLinks:
     href: "../../mdan/"
   - label: "Fiches mémo"
     href: "../fiches-memo/"    
-  - label: "Personas"
+  - label: "Personae"
     href: "../../../persona/"    
   - label: "Liens utiles"
     href: "../../liens-utiles/"
@@ -24,6 +24,6 @@ Des ressources et outils pour faciliter la prise en compte de l’accessibilité
 - Informations pour développer accessible avec Flutter
 - mDAN, une application mobile pour se former sur les options d'accessibilité des mobiles et des applications sur Android
 - Des ressources à télécharger
-- Quelques personas
+- Quelques personae
 - Liens vers d'autres ressources dont la documentation officielle de Google
 
