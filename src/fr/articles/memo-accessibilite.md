@@ -22,6 +22,8 @@ Choisissez les mémos qui vous correspondent :
 - [Développer une application iOS accessible](./#developper-une-application-ios-accessible)
 - [Rédiger un Email accessible](./#rediger-un-email-accessible)
 - [Rédiger un document Word accessible](./#rediger-un-document-word-accessible)
+- [Rédiger un document Excel accessible](./#rediger-un-document-excel-accessible)
+- [Rédiger un document PowerPoint accessible](./#rediger-un-document-powerpoint-accessible)
 
 <hr>
 
@@ -159,6 +161,48 @@ Choisissez les mémos qui vous correspondent :
       <a href="../../res/memos/word/Memo-Word-Orange.pdf" class="btn btn-secondary">
         Télécharger au format PDF (236 Ko)
         <span class="visually-hidden">Mémo rédiger un document Word accessible</span>
+      </a>
+    </p>
+  </div>
+</div>
+
+## Rédiger un document Excel accessible
+
+<div class="row">
+  <div class="col-3">
+    <p class="border-end">
+      <img src="../images/memos/memo-excel.png" alt="">
+    </p>
+  </div>
+  <div class="col-xl-9">  
+    <h3 id="desc-word">Description</h4>
+    <p>Rappel des bonnes pratiques pour rédiger un document Excel accessible.</p>
+    <h3 id="tele-word">Téléchargement</h4>
+    <p>      
+      <a href="../../res/memos/excel/Memo-Excel-Orange.pdf" class="btn btn-secondary">
+        Télécharger au format PDF (256 Ko)
+        <span class="visually-hidden">Mémo rédiger un document Excel accessible</span>
+      </a>
+    </p>
+  </div>
+</div>
+
+## Rédiger un document PowerPoint accessible
+
+<div class="row">
+  <div class="col-3">
+    <p class="border-end">
+      <img src="../images/memos/memo-powerpoint.png" alt="">
+    </p>
+  </div>
+  <div class="col-xl-9">  
+    <h3 id="desc-word">Description</h4>
+    <p>Rappel des bonnes pratiques pour rédiger un document PowerPoint accessible.</p>
+    <h3 id="tele-word">Téléchargement</h4>
+    <p>      
+      <a href="../../res/memos/pwp/Memo-PowerPoint-Orange.pdf" class="btn btn-secondary">
+        Télécharger au format PDF (294 Ko)
+        <span class="visually-hidden">Mémo rédiger un document PowerPoint accessible</span>
       </a>
     </p>
   </div>
