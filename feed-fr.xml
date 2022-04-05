@@ -1277,7 +1277,7 @@ Appli mobile&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;TAdER — Text Adaptability is Essential for Reading, on vous explique tout sur pourquoi le texte doit pouvoir s’adapter à l’utilisateur dans le numérique à lire (en) : &lt;a href=&quot;http://www.tader.info/&quot;&gt;http://www.tader.info/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Designer pour des déficiences cognitives, bon résumé (en) : &lt;a href=&quot;https://ux.shopify.com/designing-for-cognitive-disabilities-b2933d58c278&quot;&gt;https://ux.shopify.com/designing-for-cognitive-disabilities-b2933d58c278&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Améliorer les personas utilisateurs (en) : &lt;a href=&quot;https://www.uxbooth.com/articles/rethinking-user-personas/&quot;&gt;https://www.uxbooth.com/articles/rethinking-user-personas/&lt;/a&gt;&lt;br /&gt;
+&lt;li&gt;Améliorer les personae utilisateurs (en) : &lt;a href=&quot;https://www.uxbooth.com/articles/rethinking-user-personas/&quot;&gt;https://www.uxbooth.com/articles/rethinking-user-personas/&lt;/a&gt;&lt;br /&gt;
 Ressources&lt;/li&gt;
 &lt;li&gt;On manque d’études et donc de chiffres sur la handicap en France  &lt;a href=&quot;https://www.slate.fr/story/214940/tribune-france-retard-etudes-handicap-passage-modele-medical-social-changer-connaissances-pratiques-inclusion-enseignement-superieur-recherche&quot;&gt;https://www.slate.fr/story/214940/tribune-france-retard-etudes-handicap-passage-modele-medical-social-changer-connaissances-pratiques-inclusion-enseignement-superieur-recherche&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Quel élément peut contenir quel élément en HTML, indispensable (en) : &lt;a href=&quot;https://caninclude.glitch.me/&quot;&gt;https://caninclude.glitch.me/&lt;/a&gt;&lt;/li&gt;
@@ -1362,7 +1362,7 @@ Donc les WCAG 2.2, elles aussi, mécaniquement, s&#39;approchent à grand pas, s
 &lt;ul&gt;
 &lt;li&gt;TAdER, on vous explique tout sur pourquoi le texte doit pouvoir s’adapter à l’utilisateur dans le numérique à lire (en) : &lt;a href=&quot;http://www.tader.info/&quot;&gt;http://www.tader.info/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Designer pour des déficiences cognitives, bon résumé (en) : &lt;a href=&quot;https://ux.shopify.com/designing-for-cognitive-disabilities-b2933d58c278&quot;&gt;https://ux.shopify.com/designing-for-cognitive-disabilities-b2933d58c278&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Améliorer les personas utilisateurs (en) : &lt;a href=&quot;https://www.uxbooth.com/articles/rethinking-user-personas/&quot;&gt;https://www.uxbooth.com/articles/rethinking-user-personas/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Améliorer les personae utilisateurs (en) : &lt;a href=&quot;https://www.uxbooth.com/articles/rethinking-user-personas/&quot;&gt;https://www.uxbooth.com/articles/rethinking-user-personas/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;ressources&quot;&gt;Ressources &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-aout-septembre-2021/#ressources&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -1875,13 +1875,13 @@ Stratégie de mise en accessibilité&lt;/li&gt;
   </entry>
   
   <entry>
-    <title>Les personas</title>
+    <title>Les personae</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/persona/"/>
     <updated>2022-03-30T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/persona/</id>
     <content type="html">&lt;p&gt;Des nouveautés sur notre site de recommandations.&lt;br /&gt;
-Ces personas permettent de comprendre les difficultés au quotidien des personnes en situation de handicap quand ils utilisent un ordinateur, une tablette ou un mobile pour rechercher une information ou réaliser une action. Pour chaque persona, sensibilisez-vous à quelques bonnes pratiques d&#39;accessibilité numérique : ces pratiques permettent au plus grand nombre d&#39;avoir accès à Internet en toute autonomie.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/persona/&quot;&gt;Découvrez nos personas&lt;/a&gt;&lt;/p&gt;
+Ces personae permettent de comprendre les difficultés au quotidien des personnes en situation de handicap quand ils utilisent un ordinateur, une tablette ou un mobile pour rechercher une information ou réaliser une action. Pour chaque persona, sensibilisez-vous à quelques bonnes pratiques d&#39;accessibilité numérique : ces pratiques permettent au plus grand nombre d&#39;avoir accès à Internet en toute autonomie.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/persona/&quot;&gt;Découvrez nos personae&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/persona-exemple.png&quot; alt=&quot;exemple d&#39;un persona&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
 </content>
   </entry>
