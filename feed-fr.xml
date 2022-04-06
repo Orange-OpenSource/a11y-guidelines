@@ -1567,6 +1567,8 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
 &lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-une-application-ios-accessible&quot;&gt;Développer une application iOS accessible&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-email-accessible&quot;&gt;Rédiger un Email accessible&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-document-word-accessible&quot;&gt;Rédiger un document Word accessible&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-document-excel-accessible&quot;&gt;Rédiger un document Excel accessible&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-une-presentation-powerpoint-accessible&quot;&gt;Rédiger une présentation PowerPoint accessible&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;h2 id=&quot;developper-des-pages-web-accessibles&quot;&gt;Développer des pages Web accessibles &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-des-pages-web-accessibles&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
@@ -1688,6 +1690,44 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
       &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/word/Memo-Word-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
         Télécharger au format PDF (236 Ko)
         &lt;span class=&quot;visually-hidden&quot;&gt;Mémo rédiger un document Word accessible&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;rediger-un-document-excel-accessible&quot;&gt;Rédiger un document Excel accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-document-excel-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-excel.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-word&quot;&gt;Description
+    &lt;p&gt;Rappel des bonnes pratiques pour rédiger un document Excel accessible.&lt;/p&gt;
+    &lt;h3 id=&quot;tele-word&quot;&gt;Téléchargement
+    &lt;p&gt;      
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/excel/Memo-Excel-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Télécharger au format PDF (256 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo rédiger un document Excel accessible&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;rediger-une-presentation-powerpoint-accessible&quot;&gt;Rédiger une présentation PowerPoint accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-une-presentation-powerpoint-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-powerpoint.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-word&quot;&gt;Description
+    &lt;p&gt;Rappel des bonnes pratiques pour rédiger une présentation PowerPoint accessible.&lt;/p&gt;
+    &lt;h3 id=&quot;tele-word&quot;&gt;Téléchargement
+    &lt;p&gt;      
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/pwp/Memo-PowerPoint-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Télécharger au format PDF (294 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo rédiger une présentation PowerPoint accessible&lt;/span&gt;
       &lt;/a&gt;
     &lt;/p&gt;
   &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
