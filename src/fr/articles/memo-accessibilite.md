@@ -23,7 +23,7 @@ Choisissez les mémos qui vous correspondent :
 - [Rédiger un Email accessible](./#rediger-un-email-accessible)
 - [Rédiger un document Word accessible](./#rediger-un-document-word-accessible)
 - [Rédiger un document Excel accessible](./#rediger-un-document-excel-accessible)
-- [Rédiger un document PowerPoint accessible](./#rediger-un-document-powerpoint-accessible)
+- [Rédiger une présentation PowerPoint accessible](./#rediger-une-presentation-powerpoint-accessible)
 
 <hr>
 
@@ -187,7 +187,7 @@ Choisissez les mémos qui vous correspondent :
   </div>
 </div>
 
-## Rédiger un document PowerPoint accessible
+## Rédiger une présentation PowerPoint accessible
 
 <div class="row">
   <div class="col-3">
@@ -197,12 +197,12 @@ Choisissez les mémos qui vous correspondent :
   </div>
   <div class="col-xl-9">  
     <h3 id="desc-word">Description</h4>
-    <p>Rappel des bonnes pratiques pour rédiger un document PowerPoint accessible.</p>
+    <p>Rappel des bonnes pratiques pour rédiger une présentation PowerPoint accessible.</p>
     <h3 id="tele-word">Téléchargement</h4>
     <p>      
       <a href="../../res/memos/pwp/Memo-PowerPoint-Orange.pdf" class="btn btn-secondary">
         Télécharger au format PDF (294 Ko)
-        <span class="visually-hidden">Mémo rédiger un document PowerPoint accessible</span>
+        <span class="visually-hidden">Mémo rédiger une présentation PowerPoint accessible</span>
       </a>
     </p>
   </div>
