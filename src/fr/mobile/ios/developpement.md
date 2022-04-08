@@ -1044,7 +1044,7 @@ int indexSwitch = 1;
 
 Nous avons un 'label', un 'switch control' et un bouton que nous souhaitons regrouper en un seul bloc dont l'activation changera automatiquement l'état du 'switch control' sans avoir à définir une action comme précédemment.
 
-L'idée la plus simple consisterait à placer le 'switch control' au milieu de la nouvelle `frame` créée de façon à avoir son <a style="text-decoration: underline" role="button" onclick="$('#focusArea-Details_tab').trigger('click');document.getElementById('focusArea-Details').scrollIntoView({ behavior: 'smooth', block: 'start' })">accessibilityActivationPoint</a> directement dessus.
+L'idée la plus simple consisterait à placer le 'switch control' au milieu de la nouvelle `frame` créée de façon à avoir son <button class="btn btn-link" onclick="tabPanelFocus('focusArea-Details_tab','focusArea-Details')">accessibilityActivationPoint</button> directement dessus.
 
 Cela n'étant malheureusement pas toujours possible, il va donc falloir créer un élément accessible qui regroupera tous les objets impactés puis définir son **accessibilityActivationPoint** sur le 'switch control'.
 
@@ -1570,7 +1570,7 @@ Dans le cas d’objet modifié dynamiquement ou d’élément ne dérivant pas d
 - **accessibilityPath**&nbsp;: équivalent à `accessibilityFrame` mais permet de définir la zone via des courbes de Bézier.
 
 - **accessibilityActivationPoint**&nbsp;: définit un point de contact au sein de la `frame` dont l'action résultante sera activée par une sélection classique d'élément via un double tap.
-Par défaut, ce point se trouve au centre de la `frame` mais on peut le définir n'importe à l'intérieur de cette dernière, l'idée étant de pouvoir activer un élement facilement lors d'un <a style="text-decoration: underline" role="button" onclick="$('#groupElts-Example2_tab').trigger('click');document.getElementById('groupElts-Example2').scrollIntoView({ behavior: 'smooth', block: 'start' })">regroupement&nbsp;par&nbsp;exemple</a>.
+Par défaut, ce point se trouve au centre de la `frame` mais on peut le définir n'importe à l'intérieur de cette dernière, l'idée étant de pouvoir activer un élement facilement lors d'un <button class="btn btn-link" onclick="tabPanelFocus('groupElts-Example2_tab','groupElts-Example2')">regroupement&nbsp;par&nbsp;exemple</button>.
 
 ![](../../images/iOSdev/ModifierLaZoneDeFocus_2.png)
 

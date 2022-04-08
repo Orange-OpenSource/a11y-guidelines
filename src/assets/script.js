@@ -122,6 +122,9 @@ function initPriorityNav () {
   secondaryNavigation.prioritynav(locales[Application.lang])
 }
 
+
+
+
 function highlightCodeBlocks () {
   hljs.initHighlighting()
 
@@ -201,6 +204,13 @@ function enhanceSearchField () {
   searchInputContainer.addEventListener('shown.bs.collapse', function () {
     this.querySelector('[type="search"]').focus();
   })
+}
+
+function tabPanelFocus (tabTitleID,tabDescriptionID){
+  elementTarget = document.getElementById(tabTitleID)
+  new boosted.Tab(elementTarget).show();
+  elementTarget.focus();
+  document.getElementById(tabDescriptionID).scrollIntoView({ behavior: 'smooth', block: 'start' })
 }
 
 window.addEventListener('DOMContentLoaded', function () {

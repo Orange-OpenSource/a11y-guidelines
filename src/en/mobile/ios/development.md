@@ -1032,7 +1032,7 @@ int indexSwitch = 1;
 
 We have a button, a label and a switch control to be regrouped in a single block whose activation will change the switch control status automatically without defining any action like before.
 
-The easiest way would be to place the switch control in the middle of the created frame in order to locate its <a style="text-decoration: underline" role="button" onclick="$('#focusArea-Details_tab').trigger('click');document.getElementById('focusArea-Details').scrollIntoView({ behavior: 'smooth', block: 'start' })">accessibilityActivationPoint</a> directly on it but, unfortunately, that's not always possible.
+The easiest way would be to place the switch control in the middle of the created frame in order to locate its <button class="btn btn-link" onclick="tabPanelFocus('focusArea-Details_tab','focusArea-Details')">accessibilityActivationPoint</button> directly on it but, unfortunately, that's not always possible.
 
 A new accessible element must then be created to gather all the desired objects and its **accessibilityActivationPoint** has to be defined on the switch control.
 
@@ -1558,7 +1558,7 @@ Usually, for an element inheriting from `UIView`, this area is the «&nbsp;visib
 - **accessibilityActivationPoint**&nbsp;: defines a contact point inside the `frame` whose action will be fired by a double-tap element activation.
 The default value is the midpoint of the `frame` but it can be redefine anywhere inside.
 
-A classical use case could be an easy activation inside a <a style="text-decoration: underline" role="button" onclick="$('#groupElts-Example2_tab').trigger('click');document.getElementById('groupElts-Example2').scrollIntoView({ behavior: 'smooth', block: 'start' })">regroupment&nbsp;of&nbsp;elements</a> for instance.
+A classical use case could be an easy activation inside a <button class="btn btn-link" onclick="tabPanelFocus('groupElts-Example2_tab','groupElts-Example2')">regroupment&nbsp;of&nbsp;elements</button> for instance.
 
 ![](../../images/iOSdev/ModifierLaZoneDeFocus_2.png)
 By keeping this default value, one might unwillingly activate the element in the middle of the frame only by activating the created regroupment.

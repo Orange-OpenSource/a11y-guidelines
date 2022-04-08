@@ -131,7 +131,7 @@ Ces deux éléments permettent de proposer au plus grand nombre une lecture trè
 
 ![](../../images/color_contrast_4.png)
 
-Dans ce cas, l'utilisation de l'option d'accessibilité <a style="text-decoration: underline" role="button" onclick="$('#a11yOptions-Description_tab').trigger('click');document.getElementById('options-daccessibilite').scrollIntoView({ behavior: 'smooth', block: 'start' })">différencier&nbsp;sans&nbsp;couleur</a> va permettre ce type d'affichage **uniquement à la demande de l'utilisateur**.
+Dans ce cas, l'utilisation de l'option d'accessibilité <button class="btn btn-link" onclick="tabPanelFocus('a11yOptions-Description_tab','options-daccessibilite')">différencier&nbsp;sans&nbsp;couleur</button> va permettre ce type d'affichage **uniquement à la demande de l'utilisateur**.
 </br></br>**Outils&nbsp;:**
 
 - l’application **Colour&nbsp;Contrast&nbsp;Analyzer** (version 2.3) permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour mac et windows),
@@ -154,7 +154,7 @@ Dans ce cas, l'utilisation de l'option d'accessibilité <a style="text-decoratio
 
 - Le contraste entre les couleurs de texte et de fond doit aussi être suffisant (à calculer avec <span lang="en">Colour&nbsp;Contrast&nbsp;Analyzer</span> ou avec la fonctionnalité [Color&nbsp;Contrast&nbsp;Calculator](../wwdc/2019#contraste-des-couleurs-0626) de l'outil <span lang="en">Accessibility&nbsp;Inspector</span> depuis Xcode 11).
 
-- Avec l'arrivée du **Mode Sombre** en iOS 13, une attention toute particulière doit être portée sur les contrastes utilisés au sein des différents thèmes et pouvant être modifiés avec l'option d'accessibilité <a style="text-decoration: underline" role="button" onclick="$('#a11yOptions-Description_tab').trigger('click');document.getElementById('a11yOptions-Description').scrollIntoView({ behavior: 'smooth', block: 'start' })">augmenter&nbsp;le&nbsp;contraste</a>.
+- Avec l'arrivée du **Mode Sombre** en iOS 13, une attention toute particulière doit être portée sur les contrastes utilisés au sein des différents thèmes et pouvant être modifiés avec l'option d'accessibilité <button class="btn btn-link" onclick="tabPanelFocus('a11yOptions-Description_tab','a11yOptions-Description')">augmenter&nbsp;le&nbsp;contraste</button>.
 
 - Le <a href="../wwdc/2020/020/" style="text-decoration: underline;">résumé détaillé</a> de la vidéo WWDC 2020 intitulée **<span lang="en">Make Your App Visually Accessible</span>** est un excellent point d'entrée pour se faire une idée précise des directions à suivre (en particulier la partie 'COULEUR & FORMES' - 'Contraste des couleurs').
 </div>

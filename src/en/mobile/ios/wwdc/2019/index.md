@@ -27,18 +27,18 @@ This video available on the official Apple website ([session&nbsp;244](https://d
 <br>Various contents are indicated hereunder:
 
 - **Dynamic Type**
-    - <a role="button" style="text-decoration: underline" onclick="$('#DynamicType-TheFourPrinciples_tab').trigger('click');document.getElementById('dynamic-type').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Four Principles</a>
-    - <a role="button" style="text-decoration: underline" onclick="$('#DynamicType-TextStyles_tab').trigger('click');document.getElementById('dynamic-type').scrollIntoView({ behavior: 'smooth', block: 'start' })">Text Styles</a>
-    - <a role="button" style="text-decoration: underline" onclick="$('#DynamicType-Xcode_tab').trigger('click');document.getElementById('dynamic-type').scrollIntoView({ behavior: 'smooth', block: 'start' })">Xcode</a> ⟹ **iOS 13 new feature**
+    - <button class="btn btn-link" onclick="tabPanelFocus('DynamicType-TheFourPrinciples_tab','dynamic-type')">The Four Principles</button>
+    - <button class="btn btn-link" onclick="tabPanelFocus('DynamicType-TextStyles_tab','dynamic-type')">Text Styles</button>
+    - <button class="btn btn-link" onclick="tabPanelFocus('DynamicType-Xcode_tab','dynamic-type')">Xcode</button> ⟹ **iOS 13 new feature**
 <br>
 - **Reduce motion**
-    - <a role="button" style="text-decoration: underline" onclick="$('#ReduceMotion-TheBasics_tab').trigger('click');document.getElementById('reduce-motion').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Basics</a>
-    - <a role="button" style="text-decoration: underline" onclick="$('#ReduceMotion-AutoplayingVideo_tab').trigger('click');document.getElementById('reduce-motion').scrollIntoView({ behavior: 'smooth', block: 'start' })">Autoplaying Video</a> ⟹ **iOS 13 new feature**
-    - <a role="button" style="text-decoration: underline" onclick="$('#ReduceMotion-ScreenTransitions_tab').trigger('click');document.getElementById('reduce-motion').scrollIntoView({ behavior: 'smooth', block: 'start' })">Screen Transitions</a> ⟹ **iOS 13 new feature**
+    - <button class="btn btn-link" onclick="tabPanelFocus('ReduceMotion-TheBasics_tab','reduce-motion')">The Basics</button>
+    - <button class="btn btn-link" onclick="tabPanelFocus('ReduceMotion-AutoplayingVideo_tab','reduce-motion')">Autoplaying Video</button> ⟹ **iOS 13 new feature**
+    - <button class="btn btn-link" onclick="tabPanelFocus('ReduceMotion-ScreenTransitions_tab','reduce-motion')">Screen Transitions</button> ⟹ **iOS 13 new feature**
 <br>
 - **Color**
-    - <a role="button" style="text-decoration: underline" onclick="$('#Color-TheBasics_tab').trigger('click');document.getElementById('color').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Basics</a>
-    - <a role="button" style="text-decoration: underline" onclick="$('#Color-DifferentiateWithoutColor_tab').trigger('click');document.getElementById('color').scrollIntoView({ behavior: 'smooth', block: 'start' })">Differentiate Without Color</a> ⟹ **iOS 13 new feature**
+    - <button class="btn btn-link" onclick="tabPanelFocus('Color-TheBasics_tab','color')">The Basics</button>
+    - <button class="btn btn-link" onclick="tabPanelFocus('Color-DifferentiateWithoutColor_tab','color')">Differentiate Without Color</button> ⟹ **iOS 13 new feature**
 
 <br><br>
 ### Dynamic Type
@@ -76,11 +76,8 @@ This video available on the official Apple website ([session&nbsp;244](https://d
 <br>The use of `Dynamic`&nbsp;`Type` is based on four principles that are highly recommended to be followed:<br>
 <ul>
   <li>If the text can be dynamic, it must be implemented to reach this purpose.</li>
-    <br>
   <li>Use as much of the screen width as possible.</li>
-    <br>
   <li>Don't truncate text as it grows if it's not the case in the default user interface.</li>
-    <br>
   <li>Scale the glyphs next to text to make the interface look balanced. </li>
 </ul>
 </div>
@@ -300,9 +297,9 @@ This video available on the **official Apple website** ([session&nbsp;250](https
 
 - [Introduction](#introduction-0012) (00:12)
 
-- <a role="button" style="text-decoration: underline" onclick="$('#CustomActions-VoiceOver_tab').trigger('click');document.getElementById('custom-actions').scrollIntoView({ behavior: 'smooth', block: 'start' });">Custom Actions: VoiceOver</a> (03:10)
+- <button class="btn btn-link" onclick="tabPanelFocus('CustomActions-VoiceOver_tab','custom-actions')">Custom Actions: VoiceOver</button> (03:10)
 
-- <a role="button" style="text-decoration: underline" onclick="$('#CustomActions-SwitchControl_tab').trigger('click');document.getElementById('custom-actions').scrollIntoView({ behavior: 'smooth', block: 'start' })">Custom Actions: Switch Control</a> (04:28)
+- <button class="btn btn-link" onclick="tabPanelFocus('ustomActions-SwitchControl_tab','custom-actions')">Custom Actions: Switch Control</button> (04:28)
 
 - [Implementation](#implementation-0759) (07:59) ⟹ **iOS 13 new syntax**
 <br><br><br>
