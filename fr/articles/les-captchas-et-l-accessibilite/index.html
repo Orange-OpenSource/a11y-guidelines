@@ -178,7 +178,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sommaire
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#premier-constat-le-captcha-et-les-utilisateurs" class="dropdown-item text-wrap">Premier constat : le Captcha et les utilisateurs</a><a href="#deuxieme-constat-le-captcha-et-la-securite" class="dropdown-item text-wrap">Deuxième constat : Le CAPTCHA et la sécurité</a><a href="#les-solutions-preconisees" class="dropdown-item text-wrap">Les solutions préconisées</a><a href="#honeypot-et-time-measuring-deux-techniques-simples-a-mettre-en-place-pour-identifier-les-bots" class="dropdown-item text-wrap">HoneyPot et Time measuring, deux techniques  simples à mettre en place pour identifier les bots</a><a href="#des-solutions-anti-spam-et-liste-noire-pour-eliminer-les-requetes-de-bots" class="dropdown-item text-wrap">Des solutions anti-SPAM et liste noire pour éliminer les requêtes de bots</a><a href="#un-test-logique-ou-mathematique-textuel-appele-aussi-captcha-textuel" class="dropdown-item text-wrap">Un test logique ou mathématique textuel, appelé aussi Captcha textuel</a><a href="#une-verification-par-email-sms-ou-telephone-pour-une-securite-renforcee" class="dropdown-item text-wrap">Une vérification par email, SMS ou téléphone pour une sécurité renforcée</a><a href="#pour-recapituler" class="dropdown-item text-wrap">Pour récapituler</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#premier-constat-le-captcha-et-les-utilisateurs" class="dropdown-item text-wrap">Premier constat : le Captcha et les utilisateurs</a><a href="#deuxieme-constat-le-captcha-et-la-securite" class="dropdown-item text-wrap">Deuxième constat : Le CAPTCHA et la sécurité</a><a href="#les-solutions-preconisees" class="dropdown-item text-wrap">Les solutions préconisées</a><a href="#honeypot-et-time-measuring-deux-techniques-simples-a-mettre-en-place-pour-identifier-les-bots" class="dropdown-item text-wrap">HoneyPot et Time measuring, deux techniques  simples à mettre en place pour identifier les bots</a><a href="#des-solutions-anti-spam-et-liste-noire-pour-eliminer-les-requetes-de-bots" class="dropdown-item text-wrap">Des solutions anti-SPAM et liste noire pour éliminer les requêtes de bots</a><a href="#un-test-logique-ou-mathematique-textuel-appele-aussi-captcha-textuel" class="dropdown-item text-wrap">Un test logique ou mathématique textuel, appelé aussi Captcha textuel</a><a href="#une-verification-par-email-sms-ou-telephone-pour-une-securite-renforcee" class="dropdown-item text-wrap">Une vérification par email, SMS ou téléphone pour une sécurité renforcée</a><a href="#pour-recapituler" class="dropdown-item text-wrap">Pour récapituler</a><a href="#tester-avec-de-vrais-utilisateurs" class="dropdown-item text-wrap">Tester avec de vrais utilisateurs</a></div>
     </nav>
         
       </div>
@@ -239,13 +239,15 @@ La seconde technique consiste à mesurer le temps que l’utilisateur met pour s
 « Combien font deux plus deux ? »<br>
 « Quel animal fait miaou ? »<br>
 « De quelle couleur est le ciel ? »</p>
-<p>A condition que les questions restent très simples, ce type de CAPTCHA pose très peu de difficulté aux utilisateurs.<br>
+<p>À condition que les questions restent très simples, ce type de CAPTCHA pose très peu de difficulté aux utilisateurs.<br>
 Comme il est précisé dans <a href="https://www.accede-web.com/notices/fonctionnelle-graphique/bonnes-pratiques/privilegier-des-tests-de-securite-sous-forme-de-tests-logiques-plutot-que-sous-forme-de-captcha/">la notice du site acceDe Web</a> une bonne pratique dans ce cas consiste à prévoir une solution de rafraîchissement, très utile pour les personnes déficientes cognitives.</p>
 <h2 id="une-verification-par-email-sms-ou-telephone-pour-une-securite-renforcee">Une vérification par email, SMS ou téléphone pour une sécurité renforcée <a class="header-anchor" href="#une-verification-par-email-sms-ou-telephone-pour-une-securite-renforcee" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Cette solution consiste à envoyer un email, un SMS ou à téléphoner directement à l’utilisateur pour que celui-ci confirme la transaction en cliquant sur un lien ou en renseignant le code indiqué.</p>
 <p>C'est à la fois à la fois plus contraignante pour l’utilisateur qui doit communiquer des informations personnelles et plus lourd à mettre en place mais c’est une solution très efficace quand un niveau de sécurité fort est nécessaire.</p>
 <h2 id="pour-recapituler">Pour récapituler <a class="header-anchor" href="#pour-recapituler" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Il n’existe pas de solutions parfaites ni pour l’utilisateur, ni en termes de sécurité. L’idée est d’opter pour la technique la plus juste en fonction du service proposé. Il est important par ailleurs en cas d’attaque d’avoir des logs pour analyser et contrer les attaques ultérieures.<br>
+<p>Il n’existe pas de solutions parfaites ni pour l’utilisateur, ni en termes de sécurité. L’idée est d’opter pour la technique la plus juste en fonction du service proposé. Il est important par ailleurs en cas d’attaque d’avoir des logs pour analyser et contrer les attaques ultérieures.</p>
+<h2 id="tester-avec-de-vrais-utilisateurs">Tester avec de vrais utilisateurs <a class="header-anchor" href="#tester-avec-de-vrais-utilisateurs" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>En tout état de cause, il faut compléter ces captchas et leurs alternatives par des tests utilisateur d'aides techniques pour s'assurer de l'utilisabilité de la solution mise en place.<br>
  </p>
 
           </div>
@@ -264,7 +266,8 @@ Comme il est précisé dans <a href="https://www.accede-web.com/notices/fonction
             <a href="#des-solutions-anti-spam-et-liste-noire-pour-eliminer-les-requetes-de-bots" class="nav-link text-muted">Des solutions anti-SPAM et liste noire pour éliminer les requêtes de bots</a></li><li class="nav-item position-relative">
             <a href="#un-test-logique-ou-mathematique-textuel-appele-aussi-captcha-textuel" class="nav-link text-muted">Un test logique ou mathématique textuel, appelé aussi Captcha textuel</a></li><li class="nav-item position-relative">
             <a href="#une-verification-par-email-sms-ou-telephone-pour-une-securite-renforcee" class="nav-link text-muted">Une vérification par email, SMS ou téléphone pour une sécurité renforcée</a></li><li class="nav-item position-relative">
-            <a href="#pour-recapituler" class="nav-link text-muted">Pour récapituler</a></li>
+            <a href="#pour-recapituler" class="nav-link text-muted">Pour récapituler</a></li><li class="nav-item position-relative">
+            <a href="#tester-avec-de-vrais-utilisateurs" class="nav-link text-muted">Tester avec de vrais utilisateurs</a></li>
       </ul>
     </nav>
             </div>

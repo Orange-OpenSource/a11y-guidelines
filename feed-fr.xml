@@ -4,7 +4,7 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-03-30T00:00:00Z</updated>
+  <updated>2022-04-08T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -143,13 +143,15 @@ La seconde technique consiste à mesurer le temps que l’utilisateur met pour s
 « Combien font deux plus deux ? »&lt;br /&gt;
 « Quel animal fait miaou ? »&lt;br /&gt;
 « De quelle couleur est le ciel ? »&lt;/p&gt;
-&lt;p&gt;A condition que les questions restent très simples, ce type de CAPTCHA pose très peu de difficulté aux utilisateurs.&lt;br /&gt;
+&lt;p&gt;À condition que les questions restent très simples, ce type de CAPTCHA pose très peu de difficulté aux utilisateurs.&lt;br /&gt;
 Comme il est précisé dans &lt;a href=&quot;https://www.accede-web.com/notices/fonctionnelle-graphique/bonnes-pratiques/privilegier-des-tests-de-securite-sous-forme-de-tests-logiques-plutot-que-sous-forme-de-captcha/&quot;&gt;la notice du site acceDe Web&lt;/a&gt; une bonne pratique dans ce cas consiste à prévoir une solution de rafraîchissement, très utile pour les personnes déficientes cognitives.&lt;/p&gt;
 &lt;h2 id=&quot;une-verification-par-email-sms-ou-telephone-pour-une-securite-renforcee&quot;&gt;Une vérification par email, SMS ou téléphone pour une sécurité renforcée &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/#une-verification-par-email-sms-ou-telephone-pour-une-securite-renforcee&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Cette solution consiste à envoyer un email, un SMS ou à téléphoner directement à l’utilisateur pour que celui-ci confirme la transaction en cliquant sur un lien ou en renseignant le code indiqué.&lt;/p&gt;
 &lt;p&gt;C&#39;est à la fois à la fois plus contraignante pour l’utilisateur qui doit communiquer des informations personnelles et plus lourd à mettre en place mais c’est une solution très efficace quand un niveau de sécurité fort est nécessaire.&lt;/p&gt;
 &lt;h2 id=&quot;pour-recapituler&quot;&gt;Pour récapituler &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/#pour-recapituler&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Il n’existe pas de solutions parfaites ni pour l’utilisateur, ni en termes de sécurité. L’idée est d’opter pour la technique la plus juste en fonction du service proposé. Il est important par ailleurs en cas d’attaque d’avoir des logs pour analyser et contrer les attaques ultérieures.&lt;br /&gt;
+&lt;p&gt;Il n’existe pas de solutions parfaites ni pour l’utilisateur, ni en termes de sécurité. L’idée est d’opter pour la technique la plus juste en fonction du service proposé. Il est important par ailleurs en cas d’attaque d’avoir des logs pour analyser et contrer les attaques ultérieures.&lt;/p&gt;
+&lt;h2 id=&quot;tester-avec-de-vrais-utilisateurs&quot;&gt;Tester avec de vrais utilisateurs &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/#tester-avec-de-vrais-utilisateurs&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;En tout état de cause, il faut compléter ces captchas et leurs alternatives par des tests utilisateur d&#39;aides techniques pour s&#39;assurer de l&#39;utilisabilité de la solution mise en place.&lt;br /&gt;
  &lt;/p&gt;
 </content>
   </entry>
@@ -1923,6 +1925,113 @@ Stratégie de mise en accessibilité&lt;/li&gt;
 Ces personae permettent de comprendre les difficultés au quotidien des personnes en situation de handicap quand ils utilisent un ordinateur, une tablette ou un mobile pour rechercher une information ou réaliser une action. Pour chaque persona, sensibilisez-vous à quelques bonnes pratiques d&#39;accessibilité numérique : ces pratiques permettent au plus grand nombre d&#39;avoir accès à Internet en toute autonomie.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/persona/&quot;&gt;Découvrez nos personae&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/persona-exemple.png&quot; alt=&quot;exemple d&#39;un persona&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Veille #A11y Février-Mars 2022</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2022/"/>
+    <updated>2022-04-08T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2022/</id>
+    <content type="html">&lt;h1&gt;Veille accessibilité numérique Février-Mars 2022&lt;/h1&gt;
+&lt;p&gt;Quelques infos qui m’ont paru importantes !&lt;br /&gt;
+L’accessibilité des sites publics est inscrite comme obligation dans la loi depuis 2012, encore un combat qui n’avance pas depuis bien trop longtemps, encore des droits des personnes en situation de handicap bafoués par l’administration. Cependant, l’état a beaucoup communiqué sur le chiffre de 40% de démarches dématérialisées accessibles, la réalité est très éloignée de ça : &lt;a href=&quot;https://cncph.fr/chiffres-web-public/&quot;&gt;https://cncph.fr/chiffres-web-public/&lt;/a&gt;.&lt;br /&gt;
+Encore un exemple de non-respect des droits fondamentaux des personnes en situation de handicap, la campagne présidentielle, où les sites et la campagne des candidats sont loin d’être accessibles :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://certam-avh.com/fr/dossiers-thematiques/accessibilite-numerique-la-grande-oubliee-de-la-campagne-presidentielle-2022&quot;&gt;https://certam-avh.com/fr/dossiers-thematiques/accessibilite-numerique-la-grande-oubliee-de-la-campagne-presidentielle-2022&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.temesis.com/blog/accessibilite-classement-des-sites-des-candidats-a-la-presidentielle-2022/&quot;&gt;https://www.temesis.com/blog/accessibilite-classement-des-sites-des-candidats-a-la-presidentielle-2022/&lt;/a&gt;&lt;br /&gt;
+Ce mois-ci aussi, le retour de l’étude one million de WebAim update 2022(en) : &lt;a href=&quot;https://webaim.org/blog/webaim-million-2022/&quot;&gt;https://webaim.org/blog/webaim-million-2022/&lt;/a&gt;&lt;br /&gt;
+Et enfin, la sortie dans notre site de dans notre site de recommandations de 5 personae pour améliorer l’A11y : &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/persona/&quot;&gt;https://a11y-guidelines.orange.com/fr/persona/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;laccessibilite-dans-les-lois-les-normes-et-recommandations&quot;&gt;L’accessibilité dans les lois, les normes et recommandations &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2022/#laccessibilite-dans-les-lois-les-normes-et-recommandations&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;L’EU et les premiers rapports d’accessibilité numérique des différents pays membres(en) : &lt;a href=&quot;https://www.deque.com/blog/eu-runs-worlds-largest-accessibility-test/&quot;&gt;https://www.deque.com/blog/eu-runs-worlds-largest-accessibility-test/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Enfin, une position de l’IAAP (l’assos internationale des pros de l’a11y) sur les surcouches d’a11y (en) : &lt;a href=&quot;https://www.accessibilityassociation.org/s/overlay-position-and-recommendations&quot;&gt;https://www.accessibilityassociation.org/s/overlay-position-and-recommendations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Brève introduction à WCAG3.0 (en) : &lt;a href=&quot;https://faisalonline.com/the-future-of-web-accessibility-wcag-3-0.html&quot;&gt;https://faisalonline.com/the-future-of-web-accessibility-wcag-3-0.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;retours-dexperience-et-accessibilite&quot;&gt;Retours d’expérience et accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2022/#retours-dexperience-et-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Aria-owns n’est pas robuste (en)d : &lt;a href=&quot;https://html5accessibility.com/stuff/2022/02/28/not-so-short-note-on-being-owned/&quot;&gt;https://html5accessibility.com/stuff/2022/02/28/not-so-short-note-on-being-owned/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tout comme aria-describedby, support peu robuste également (en) : &lt;a href=&quot;https://adrianroselli.com/2022/04/accessible-description-exposure.html&quot;&gt;https://adrianroselli.com/2022/04/accessible-description-exposure.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Retour d’ex sur la prise en compte précoce de l’A11y au niveau de l’état du Minnesota (en) : &lt;a href=&quot;https://mn.gov/mnit/about-mnit/accessibility/news/?id=38-522146&quot;&gt;https://mn.gov/mnit/about-mnit/accessibility/news/?id=38-522146&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Améliorer le focus pour un design system, joli (en) : &lt;a href=&quot;https://adhoc.team/2022/02/08/creating-focus-style-for-themable-design-system/&quot;&gt;https://adhoc.team/2022/02/08/creating-focus-style-for-themable-design-system/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;La position des entêtes dans les tableaux html et a11y (en) : &lt;a href=&quot;https://adrianroselli.com/2022/02/column-headers-and-browser-support.html&quot;&gt;https://adrianroselli.com/2022/02/column-headers-and-browser-support.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rendre obligatoire et invalide des radio-boutons d’un fieldset, support (en) : &lt;a href=&quot;https://adrianroselli.com/2022/02/support-for-marking-radio-buttons-required-invalid.html&quot;&gt;https://adrianroselli.com/2022/02/support-for-marking-radio-buttons-required-invalid.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;strategie-de-mise-en-accessibilite&quot;&gt;Stratégie de mise en accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2022/#strategie-de-mise-en-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ABSOLUMENT ultime, critères d’acceptance a11y pour composants web et appli native (en) : &lt;a href=&quot;https://www.magentaa11y.com/&quot;&gt;https://www.magentaa11y.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bien utiliser les rôles aria pour satisfaire WCAG 4.1.2 role, name, value (en) : &lt;a href=&quot;https://ericwbailey.design/writing/it-needs-to-map-back-to-a-role/&quot;&gt;https://ericwbailey.design/writing/it-needs-to-map-back-to-a-role/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bonnes pratiques d’A11y lors de la contractualisation (en) : &lt;a href=&quot;https://github.com/mgifford/a11y-contracting#accessibility-contracting-best-practices&quot;&gt;https://github.com/mgifford/a11y-contracting#accessibility-contracting-best-practices&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Le livre sur la stratégie de mise en a11y (en) : &lt;a href=&quot;https://www.thebookonaccessibility.com/&quot;&gt;https://www.thebookonaccessibility.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Débuter l’a11y quand on est dev, la base (en) : &lt;a href=&quot;https://www.makeuseof.com/what-every-programmer-should-know-about-digital-accessibility/&quot;&gt;https://www.makeuseof.com/what-every-programmer-should-know-about-digital-accessibility/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comparaison des principaux cadriciel JS (en) : &lt;a href=&quot;https://dev.to/steady5063/accessibility-in-javascript-frameworks-part-2-comparing-each-framework-41ch&quot;&gt;https://dev.to/steady5063/accessibility-in-javascript-frameworks-part-2-comparing-each-framework-41ch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;L’a11y et les déficiences motrices de la dextérité fine (en) : &lt;a href=&quot;https://theweco.com/accessibility-limited-fine-motor/&quot;&gt;https://theweco.com/accessibility-limited-fine-motor/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Déficience cognitive et mouvement (en) : &lt;a href=&quot;https://www.tpgi.com/the-impact-of-motion-animation-on-cognitive-disability/&quot;&gt;https://www.tpgi.com/the-impact-of-motion-animation-on-cognitive-disability/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;tester-laccessibilite&quot;&gt;Tester l’accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2022/#tester-laccessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Test avec une reconnaissance vocale l’A11y, à lire (en) : &lt;a href=&quot;https://www.tpgi.com/testing-with-speech-recognition/&quot;&gt;https://www.tpgi.com/testing-with-speech-recognition/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Introduction aux ACT Rules du W3c (en) : &lt;a href=&quot;https://www.boia.org/blog/understanding-the-w3cs-accessibility-conformance-testing-act-requirements&quot;&gt;https://www.boia.org/blog/understanding-the-w3cs-accessibility-conformance-testing-act-requirements&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A11y, tester dans Github avec des Actions (en) : &lt;a href=&quot;https://www.adrianbolonio.com/en/accessibility-github-actions/&quot;&gt;https://www.adrianbolonio.com/en/accessibility-github-actions/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Méthode de surveillance par des tests d’a11y chez &lt;a href=&quot;http://gov.uk/&quot;&gt;gov.uk&lt;/a&gt;, intéressant (en) : &lt;a href=&quot;https://www.gov.uk/guidance/accessibility-monitoring-how-we-test&quot;&gt;https://www.gov.uk/guidance/accessibility-monitoring-how-we-test&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Utiliser le Dom accessible (accessible tree) pour tester (en) : &lt;a href=&quot;https://giovanicamara.com/blog/how-to-use-the-accessibility-tree-for-a11y-testing/&quot;&gt;https://giovanicamara.com/blog/how-to-use-the-accessibility-tree-for-a11y-testing/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Chouette, stratégie de tests a11y en CD/CI (en) : &lt;a href=&quot;https://blog-testproject-io.cdn.ampproject.org/c/s/blog.testproject.io/2022/02/07/accessibility-testing-best-practices-in-ci-cd/?amp=1&quot;&gt;https://blog-testproject-io.cdn.ampproject.org/c/s/blog.testproject.io/2022/02/07/accessibility-testing-best-practices-in-ci-cd/?amp=1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Peut on tester l’a11y sans lecteur d’écran (en) : &lt;a href=&quot;https://www.digitala11y.com/do-we-need-screen-reader-for-accessibility-testing/&quot;&gt;https://www.digitala11y.com/do-we-need-screen-reader-for-accessibility-testing/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Quelques infos sur les possibilités d’automatisation de l’a11y et sur les o$utils (en) : &lt;a href=&quot;https://a11y-automation.dev/&quot;&gt;https://a11y-automation.dev/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tests simples pour améliorer l’a11y (en) : &lt;a href=&quot;https://www.boia.org/blog/4-simple-ways-to-improve-web-accessibility&quot;&gt;https://www.boia.org/blog/4-simple-ways-to-improve-web-accessibility&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Documenter les erreurs d’a11y part 1 et 2, à lire (en) : &lt;a href=&quot;https://convergeaccessibility.com/2022/01/24/how-to-document-accessibility-issues-part-1/&quot;&gt;https://convergeaccessibility.com/2022/01/24/how-to-document-accessibility-issues-part-1/&lt;/a&gt; et &lt;a href=&quot;https://convergeaccessibility.com/2022/03/28/how-to-document-accessibility-issues-part-2/&quot;&gt;https://convergeaccessibility.com/2022/03/28/how-to-document-accessibility-issues-part-2/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;points-techniques-en-accessibilite&quot;&gt;Points techniques en accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2022/#points-techniques-en-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Un module de recherche dynamique accessible, bel exemple (en) : &lt;a href=&quot;https://www.scottohara.me/blog/2022/02/05/dynamic-results.html&quot;&gt;https://www.scottohara.me/blog/2022/02/05/dynamic-results.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tout sur les alternatives aux images dans Twitter (en) : &lt;a href=&quot;https://twitter.com/TwitterA11y/status/1501603777006260226&quot;&gt;https://twitter.com/TwitterA11y/status/1501603777006260226&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;3 conseils pour rendre a11y vos contenus dynamiquement générés (en) : &lt;a href=&quot;https://www.boia.org/blog/dynamically-generated-content-and-accessibility-3-quick-tips&quot;&gt;https://www.boia.org/blog/dynamically-generated-content-and-accessibility-3-quick-tips&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Landmarks, un tour d’horizon (en) : &lt;a href=&quot;https://tetralogical.com/blog/2022/03/18/landmarks/&quot;&gt;https://tetralogical.com/blog/2022/03/18/landmarks/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;aria-labelledby tous les détails de cet attribut magique € : &lt;a href=&quot;https://html5accessibility.com/stuff/2022/04/03/aria-labelledby-usage-notes/&quot;&gt;https://html5accessibility.com/stuff/2022/04/03/aria-labelledby-usage-notes/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Super article sur &amp;lt;div&amp;gt; et a11y, à lire (en) : &lt;a href=&quot;https://www.scottohara.me/blog/2022/01/20/divisive.html&quot;&gt;https://www.scottohara.me/blog/2022/01/20/divisive.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;La sémantique HTML (en) : &lt;a href=&quot;https://gomakethings.com/html-semantics/&quot;&gt;https://gomakethings.com/html-semantics/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Utiliser les régions live ARIA (en) : &lt;a href=&quot;https://www.scottohara.me/blog/2022/02/05/are-we-live.html&quot;&gt;https://www.scottohara.me/blog/2022/02/05/are-we-live.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Le contraste de couleur et a11y, la base (en) : &lt;a href=&quot;https://tetralogical.com/blog/2022/02/04/colour-contrast&quot;&gt;https://tetralogical.com/blog/2022/02/04/colour-contrast&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Informations convoyées par la couleur, la base (en) : &lt;a href=&quot;https://tetralogical.com/blog/2022/02/15/colour-meaning/&quot;&gt;https://tetralogical.com/blog/2022/02/15/colour-meaning/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Limites de temps, la base (en) : &lt;a href=&quot;https://tetralogical.com/blog/2022/03/07/session-timeouts/&quot;&gt;https://tetralogical.com/blog/2022/03/07/session-timeouts/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Le&amp;amp;s titres de rubriques&amp;amp;, la basée (en) : &lt;a href=&quot;https://tetralogical.com/blog/2022/02/28/headings/&quot;&gt;https://tetralogical.com/blog/2022/02/28/headings/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tableau et a11y, les basiques (en) : d &lt;a href=&quot;https://www.theguardian.com/info/2022/feb/22/turning-the-tables-on-accessibility&quot;&gt;https://www.theguardian.com/info/2022/feb/22/turning-the-tables-on-accessibility&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Un autre top 10 des erreurs d’a11y (en) : &lt;a href=&quot;https://www.tpgi.com/ten-common-web-accessibility-issues/&quot;&gt;https://www.tpgi.com/ten-common-web-accessibility-issues/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Quick wins a11y (en) : &lt;a href=&quot;https://css-tricks.com/5-accessibility-quick-wins-you-can-implement-today/&quot;&gt;https://css-tricks.com/5-accessibility-quick-wins-you-can-implement-today/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;appli-mobile-web-mobile&quot;&gt;Appli mobile, web mobile &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2022/#appli-mobile-web-mobile&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Les applis natives accessibles ADA et donc WCAG2.1, un livre blanc (en) : &lt;a href=&quot;https://info.usablenet.com/inclusive-ada-ux-mobile-app-accessibility-principles-wcag2.1&quot;&gt;https://info.usablenet.com/inclusive-ada-ux-mobile-app-accessibility-principles-wcag2.1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tests d’a11y mobile avec VoiceOver (en) : &lt;a href=&quot;https://www.boia.org/blog/how-apple-voiceover-is-used-for-mobile-accessibility-testing&quot;&gt;https://www.boia.org/blog/how-apple-voiceover-is-used-for-mobile-accessibility-testing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Construire des mobile apps accessibles (en) : &lt;a href=&quot;https://increment.com/mobile/best-practices-for-building-accessible-mobile-apps/&quot;&gt;https://increment.com/mobile/best-practices-for-building-accessible-mobile-apps/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ergonomie-ui-ux&quot;&gt;Ergonomie, UI &amp;amp; UX &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2022/#ergonomie-ui-ux&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Un guide sur l’accessibilité pour les designers, chouette, à lire ABSOLUMENT (en) : &lt;a href=&quot;https://stephaniewalter.design/blog/a-designers-guide-to-documenting-accessibility-user-interactions/&quot;&gt;https://stephaniewalter.design/blog/a-designers-guide-to-documenting-accessibility-user-interactions/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Différence entre inclusive design et accessibility design, à lire (en) : &lt;a href=&quot;https://www.boia.org/blog/inclusive-design-vs.-accessible-design-understanding-the-differences&quot;&gt;https://www.boia.org/blog/inclusive-design-vs.-accessible-design-understanding-the-differences&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Utiliser le kit A11y annotation de Figma pour faire de l’a11y en design (en) : &lt;a href=&quot;https://medium.com/designing-atlassian/create-accessible-designs-using-the-figma-a11y-annotation-kit-35371f00dac5&quot;&gt;https://medium.com/designing-atlassian/create-accessible-designs-using-the-figma-a11y-annotation-kit-35371f00dac5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Documenter le design system (en) : &lt;a href=&quot;https://www.youtube.com/watch?v=bpDF3ShKYZQ&quot;&gt;https://www.youtube.com/watch?v=bpDF3ShKYZQ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Utiliser le bon vocabulaire quand on fait du user testing (en) : &lt;a href=&quot;https://axesslab.com/testing-a-scary-word/&quot;&gt;https://axesslab.com/testing-a-scary-word/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;La lisibilité des polices , les bases(en) : &lt;a href=&quot;https://bighack.org/font-accessibility-and-readability-the-basics/&quot;&gt;https://bighack.org/font-accessibility-and-readability-the-basics/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ressources&quot;&gt;Ressources &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2022/#ressources&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Liste des ressources à la suite du CSUN2022, la conférence d’a11y qui fait référence (en) : &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1Tgmba0L6Z0BkHu9Hb3jlZ3IweguAdrja649rzk8X_Dk/&quot;&gt;https://docs.google.com/spreadsheets/d/1Tgmba0L6Z0BkHu9Hb3jlZ3IweguAdrja649rzk8X_Dk/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bonnes pratiques d’a11y pour les déficients en motricité fine (en) : &lt;a href=&quot;https://theweco.com/accessibility-limited-fine-motor/&quot;&gt;https://theweco.com/accessibility-limited-fine-motor/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Des personae en situation de handicap numérique (en) : &lt;a href=&quot;https://www.lexdis.org.uk/2022/04/personas/&quot;&gt;https://www.lexdis.org.uk/2022/04/personas/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Vidéos sur les aides techniques et la navigation internet (en) : &lt;a href=&quot;https://www.youtube.com/playlist?list=PLTqm2yVMMUKVxQ6eYth4_vvbM3IcrSPlk&quot;&gt;https://www.youtube.com/playlist?list=PLTqm2yVMMUKVxQ6eYth4_vvbM3IcrSPlk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Un autre article sur les surcouches d’a11y : &lt;a href=&quot;https://oclock.io/blog/5820/les-outils-de-surcouche-daccessibilite-cest-quoi&quot;&gt;https://oclock.io/blog/5820/les-outils-de-surcouche-daccessibilite-cest-quoi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Encore quelques mythes en a11y (en) : &lt;a href=&quot;https://alvaromontoro.com/blog/67989/myths-about-web-accessibility&quot;&gt;https://alvaromontoro.com/blog/67989/myths-about-web-accessibility&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Choisir son LMS avec de l’a11y dedans : &lt;a href=&quot;https://docs.google.com/document/d/1ziqgBvu2WBG99uaUEuckqFpxMxvvtSw0/edit&quot;&gt;https://docs.google.com/document/d/1ziqgBvu2WBG99uaUEuckqFpxMxvvtSw0/edit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;La preuve que les surcouches d’a11y sont sur la sellette (en) : &lt;a href=&quot;https://adrianroselli.com/2022/03/overlays-underwhelm-a11y-nyc.html&quot;&gt;https://adrianroselli.com/2022/03/overlays-underwhelm-a11y-nyc.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Et hop, un headshot pour Facil’iti (en) : &lt;a href=&quot;https://adrianroselli.com/2022/03/faciliti-will-get-you-sued.html&quot;&gt;https://adrianroselli.com/2022/03/faciliti-will-get-you-sued.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;autres&quot;&gt;Autres &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2022/#autres&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Génial ! jouer à corriger votre code pour le rendre accessible (en) : &lt;a href=&quot;https://a11yphant.com/&quot;&gt;https://a11yphant.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Juste sympa (en) : &lt;a href=&quot;https://daverupert.com/2022/04/what-if-everything-got-better/&quot;&gt;https://daverupert.com/2022/04/what-if-everything-got-better/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
 </feed>
