@@ -111,6 +111,17 @@
   },
   {
     "themes": "WWDC 2021",
+    "title": "Symbolication - Beyond the basics",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/2110211",
+    "profils": ["All","Debugging","Instruments","Optimization","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
     "title": "What's new in Foundation",
     "type": ["Attributed String"],
     "tests": [],

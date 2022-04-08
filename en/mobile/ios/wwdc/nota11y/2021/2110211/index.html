@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Symbolication: Beyond the basics - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Learn how the Symbolication process works and the steps you can take to gain the most insight into your app.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-bs-toggle="collapse" data-bs-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Search">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="visually-hidden">Search</span>
+    </button>
+
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-light" aria-label="Search" placeholder="Search">
+  </form>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Symbolication: Beyond the basics
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#the-basics" class="dropdown-item text-wrap">The basics</a><a href="#back-to-the-file" class="dropdown-item text-wrap">Back to the file</a><a href="#debug-information" class="dropdown-item text-wrap">Debug information</a><a href="#function-starts" class="dropdown-item text-wrap">Function starts</a><a href="#nlist-symbol-table" class="dropdown-item text-wrap">Nlist symbol table</a><a href="#dwarf" class="dropdown-item text-wrap">DWARF</a><a href="#tools-comand-lines" class="dropdown-item text-wrap">Tools &amp; comand lines</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2021: Symbolication - Beyond the basics</h1>
+<p>Find hereafter a detailed summary of the above named video which belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2021/10211/">session 10211</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211.png" alt="" class="img-fluid"></p>
+<p>&quot;Discover how you can <strong>achieve maximum performance</strong> and insightful debugging with your app. <strong>Symbolication</strong> is at the center of tools such as Instruments and LLDB to help <strong>bridge</strong> the layers <strong>between your application's runtime and your source code</strong>. Learn how this process works and the steps you can take to gain the most insight into your app.&quot;</p>
+<p>The various contents of this speech are indicated hereunder:</p>
+<ul>
+<li>
+<p><a href="#the-basics">The basics</a></p>
+</li>
+<li>
+<p><a href="#back-to-the-file">Back to the file</a></p>
+</li>
+<li>
+<p><a href="#debug-information">Debug information</a></p>
+</li>
+<li>
+<p><a href="#tools-comand-lines">Tools &amp; comand lines</a></p>
+</li>
+</ul>
+<p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="the-basics"><a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=43">The basics</a> <a class="header-anchor" href="#the-basics" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Symbolication</strong> is the way to make a <strong>connection</strong> between what's happening during runtime in an app and its pairing lines of code that brought it into being.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10211-Basics_1.png" alt="" class="img-fluid"></p>
+<p><strong><a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=142">Xcode</a></strong> and <strong><a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=169">the command lines</a></strong> are efficient tools to get a <strong>more workable layout</strong> in order to find out the file name and the line number in the code that gave rise to the highlighted issue.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10211-Basics_2.png" alt="" class="img-fluid"></p>
+<p>The symbolication process is divided into <a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=326">two important phases</a> that are detailed in the next sections.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-Basics_3.png" alt="" class="img-fluid"><br>
+</br></br></p>
+<h2 id="back-to-the-file"><a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=352">Back to the file</a> <a class="header-anchor" href="#back-to-the-file" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The connection between the <strong>on disk addresses</strong> and the <strong>runtime addresses</strong> relies on the creation of some binary groups into <strong>segments</strong> that are loaded into memory by the system to provide the app itself.<br>
+</br>The <strong><a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=417">Mach-O header</a></strong> that contains appropriate commands to handle the segments properties is a <strong>mandatory section</strong> to be read by the system before running an app (<a href="https://github.com/aidansteele/osx-abi-macho-file-format-reference/blob/master/Mach-O_File_Format.pdf">Mach-O</a> = format used for all executable binaries and libraries).</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-Back_1.png" alt="" class="img-fluid"></p>
+<p>The link between the runtime and the linker addresses depends on a <strong>random value</strong> generated by the kernel called the <strong><a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=468">ASLR slide</a></strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-Back_2.png" alt="" class="img-fluid"></p>
+<p></br></br></p>
+<h2 id="debug-information"><a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=800">Debug information</a> <a class="header-anchor" href="#debug-information" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>When the app is built, Xcode creates the debug information as <strong>the</strong> connection between the source code and the file addresses that includes different sort of info.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-Debug.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="function-starts"><a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=862">Function starts</a> <a class="header-anchor" href="#function-starts" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>This debug information is just a mean to confirm the existence of a function in code by <a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=884">providing its address</a> thanks to the <code>LC_FUNCTION_STARTS</code> <a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=898">command</a> of the Mach-O header.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugFunctionStarts_1.png" alt="" class="img-fluid"></p>
+<p>A <a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=907">specific command line</a> is also capable of listing all the functions with their starting address.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugFunctionStarts_2.png" alt="" class="img-fluid"></p>
+<p>When a <strong>crash log</strong> lacks function names, this debug information may be of a <a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=928">great help</a> to find out what <strong>function is involved</strong>.<br>
+</br></p>
+<h3 id="nlist-symbol-table">Nlist symbol table <a class="header-anchor" href="#nlist-symbol-table" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#DebugNlistOverview"
+           id="DebugNlistOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DebugNlistDirectSymbol"
+           id="DebugNlistDirectSymbol_tab"
+           role="tab" 
+           aria-selected="false">Direct&nbsp;symbol</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DebugNlistDirectIndirectSymbol"
+           id="DebugNlistDirectIndirectSymbol_tab"
+           role="tab" 
+           aria-selected="false">Indirect&nbsp;symbol</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="DebugNlistOverview" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1006">🎬 (16:46)</a></p>
+<p>This category of debug information differs from the function starts in the specific way that it supplies a <strong>complete structure of details</strong> that may be of <strong>three different types</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugNlistOverview.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DebugNlistDirectSymbol" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1050">🎬 (17:30)</a></p>
+<p>This type gathers both the methods and functions existing in the direct symbol table.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugNlistDirect_1.png" alt="" class="img-fluid"></p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1079">nm</a> and <a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1121">symbols</a> commands <strong>list the direct symbols</strong> of the project with <strong>readable names</strong> easy to understand.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugNlistDirect_2.png" alt="" class="img-fluid"></p>
+<p>It's crucial to notice that <strong>all the methods and functions <a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1161">aren't necessary listed</a></strong> as direct symbols.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugNlistDirect_3.png" alt="" class="img-fluid"></p>
+<p>To <strong>avoid wasting space</strong> keeping useless symbols, it's necessary to <a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1255">handle the <strong>build settings</strong></a> in order to manage how the app is stripped during the build.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugNlistDirect_4.png" alt="" class="img-fluid"></p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1299">display of command lines</a> is a perfect mean to note if some elements may be either never in the direct symbols or simply stripped.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugNlistDirect_5.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DebugNlistDirectIndirectSymbol" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1367">🎬 (22:47)</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugNlistIndirect_1.png" alt="" class="img-fluid"></p>
+<p>This type regroups both the methods and functions that are <strong>used from other frameworks or libraries</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugNlistIndirect_2.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<h3 id="dwarf">DWARF <a class="header-anchor" href="#dwarf" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#DebugDwarfOverview"
+           id="DebugDwarfOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DebugDwarfTypes"
+           id="DebugDwarfTypes_tab"
+           role="tab" 
+           aria-selected="false">Types</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DebugDwarfLine"
+           id="DebugDwarfLine_tab"
+           role="tab" 
+           aria-selected="false">Debug_line</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DebugDwarfInlining"
+           id="DebugDwarfInlining_tab"
+           role="tab" 
+           aria-selected="false">Inlining</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DebugDwarfSymbols"
+           id="DebugDwarfSymbols_tab"
+           role="tab" 
+           aria-selected="false">Debugging&nbsp;symbols</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="DebugDwarfOverview" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1459">🎬 (24:19)</a></p>
+<p>Originally designed along with <strong>ELF</strong> (<strong>E</strong>xecutable and <strong>L</strong>inkable <strong>F</strong>ormat), <strong>DWARF</strong> (<strong>D</strong>ebugging <strong>W</strong>ith <strong>A</strong>ttributed <strong>R</strong>ecord <strong>F</strong>ormats) is a file format used for debugging support that brings about <strong>more detailed debug information</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugDwarfOverview.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DebugDwarfTypes" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1554">🎬 (25:54)</a><br>
+<img src="../../../../../images/iOSdev/wwdc21-10211-DebugDwarfTypes_1.png" alt="" class="img-fluid"></p>
+<p>A <strong><a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1597">subprogram</a></strong> stands for a defined function that is embedded in a compile unit.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugDwarfTypes_2.png" alt="" class="img-fluid"></p>
+<p>This <strong>tree representation</strong> can also be analyzed in depth thanks to a <a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1635">command line return</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugDwarfTypes_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DebugDwarfLine" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1692">🎬 (28:12)</a></p>
+<p>The debug_line stream is the source of the <strong>line table program</strong> that creates a <strong>mapping</strong> between addresses and the corresponding line of code that define the inspected element.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugDwarfLine_1.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1707">Browsing the tree</a> is a good way to figure out the <strong>matching of an element</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugDwarfLine_2.png" alt="" class="img-fluid"></p>
+<p>A <a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1733">command line</a> with <code>atos</code> including the appropriate parameters leads to the same result.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugDwarfLine_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DebugDwarfInlining" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1803">🎬 (30:03)</a></p>
+<p>Inlining is a <strong>routine optimization</strong> performed by the compiler that replaces the function call by the block defining its behavior.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugDwarfInlining_1.png" alt="" class="img-fluid"></p>
+<p>A <a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1832">command line</a> with <code>dwarfdump</code> can look into some relationships to <strong>point out the inlined subroutines</strong> using the <strong>abstract origin</strong> node.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugDwarfInlining_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DebugDwarfSymbols" role="tabpanel">
+<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1914">🎬 (31:54)</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-DebugDwarfSymbols.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<h2 id="tools-comand-lines"><a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1992">Tools &amp; comand lines</a> <a class="header-anchor" href="#tools-comand-lines" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Besides all the examples provided in the previous sections, some pieces of advice are introduced hereafter to ease symbolication:</p>
+<ol>
+<li>
+<p>Optimize the <strong>build settings</strong> for debugging ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=1998">🎬</a></p>
+</li>
+<li>
+<p>Check out the <strong>DSYM existence</strong> and all the <strong>UUIDs</strong> for a specific DSYM ⟹ <code>mdfind</code> and <code>symbols</code> <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=2025">🎬</a></p>
+</li>
+</ol>
+<ul>
+<li>Verify the DSYM size doesn't exceed its maximum ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=2057">🎬</a></li>
+</ul>
+<ol start="3">
+<li>
+<p>Check for <strong>DWARF validity</strong> ⟹ <code>dwarfdump</code> <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=2043">🎬</a></p>
+</li>
+<li>
+<p>Cross-check the UUID of the app build and the DSYM's ⟹ <code>symbols</code> <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=2068">🎬</a></p>
+</li>
+<li>
+<p>Consult the <strong>types of debug information</strong> ⟹ <code>symbols</code> <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=2089">🎬</a></p>
+</li>
+<li>
+<p>Inspect your <strong>entitlements</strong> and your <strong>code signing</strong> ⟹ <code>codesign</code> <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=2107">🎬</a></p>
+</li>
+<li>
+<p>Specify the <strong>architecture for Universal 2</strong> apps ⟹ <code>atos</code>, <code>nm</code>, <code>otool</code> and <code>symbol</code> <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=2152">🎬</a></p>
+</li>
+<li>
+<p>Display the <strong>load commands</strong> located in the Mach-O header ⟹ <code>otool</code> <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=448">🎬</a></p>
+</li>
+<li>
+<p>Evaluate the ASLR slide ⟹ <code>atos</code> <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2021/10211/?time=656">🎬</a></p>
+</li>
+</ol>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#ToolsAndTips1"
+           id="ToolsAndTips1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ToolsAndTips2"
+           id="ToolsAndTips2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ToolsAndTips3"
+           id="ToolsAndTips3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ToolsAndTips4"
+           id="ToolsAndTips4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ToolsAndTips5"
+           id="ToolsAndTips5_tab"
+           role="tab" 
+           aria-selected="false">5</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ToolsAndTips6"
+           id="ToolsAndTips6_tab"
+           role="tab" 
+           aria-selected="false">6</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ToolsAndTips7"
+           id="ToolsAndTips7_tab"
+           role="tab" 
+           aria-selected="false">7</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ToolsAndTips8"
+           id="ToolsAndTips8_tab"
+           role="tab" 
+           aria-selected="false">8</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ToolsAndTips9"
+           id="ToolsAndTips9_tab"
+           role="tab" 
+           aria-selected="false">9</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="ToolsAndTips1" role="tabpanel"> 
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-Tools_1.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ToolsAndTips2" role="tabpanel"> 
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-Tools_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ToolsAndTips3" role="tabpanel"> 
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-Tools_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ToolsAndTips4" role="tabpanel"> 
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-Tools_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ToolsAndTips5" role="tabpanel"> 
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-Tools_5.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ToolsAndTips6" role="tabpanel"> 
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-Tools_6.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ToolsAndTips7" role="tabpanel"> 
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-Tools_7.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ToolsAndTips8" role="tabpanel"> 
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-Tools_8.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ToolsAndTips9" role="tabpanel"> 
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-Tools_9.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+<p></br></br></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10211-WrapUp.png" alt="" class="img-fluid"><br>
+</br></br></br></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#the-basics" class="nav-link text-muted">The basics</a></li><li class="nav-item position-relative">
+            <a href="#back-to-the-file" class="nav-link text-muted">Back to the file</a></li><li class="nav-item position-relative">
+            <a href="#debug-information" class="nav-link text-muted">Debug information</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#function-starts" class="nav-link text-muted">Function starts</a></li><li class="nav-item position-relative">
+            <a href="#nlist-symbol-table" class="nav-link text-muted">Nlist symbol table</a></li><li class="nav-item position-relative">
+            <a href="#dwarf" class="nav-link text-muted">DWARF</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#tools-comand-lines" class="nav-link text-muted">Tools &amp; comand lines</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link">
+  About
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility" class="nav-link">
+  Accessibility
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2021/2110211.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
