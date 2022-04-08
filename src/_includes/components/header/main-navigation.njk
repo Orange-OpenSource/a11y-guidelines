@@ -12,9 +12,11 @@
     <div class="collapse navbar-collapse" id="main-menu-list">
       <ul class="navbar-nav me-auto">
         {%- for link in navigation.main[locale] -%}
-          <li class="nav-item">
-            {{ ui.navLink(link) }}
-          </li>
+          {% if link.mainMenu != false %}
+            <li class="nav-item">
+              {{ ui.navLink(link) }}
+            </li>
+          {%- endif -%}
         {%- endfor -%}
         {{ ui.changelang("mobile") }}
       </ul>

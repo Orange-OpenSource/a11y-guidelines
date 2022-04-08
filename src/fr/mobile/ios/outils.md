@@ -9,7 +9,9 @@ sideNavigationLinks:
   - label: "App m-learning mDAN"
     href: "../../mdan/"
   - label: "Fiches mémo"
-    href: "../fiches-memo/"        
+    href: "../fiches-memo/"       
+  - label: "Personae"
+    href: "../../../persona/" 
   - label: "Liens utiles"
     href: "../../liens-utiles/"
 ---
@@ -21,4 +23,5 @@ Des ressources et outils pour faciliter la prise en compte de l’accessibilité
 - Guide d'utilisation du lecteur d'écran VoiceOver
 - Informations pour développer accessible avec Flutter
 - mDAN, une application mobile pour se former sur les options d'accessibilité des mobiles et des applications sous iOS
+- Quelques personae
 - Liens vers d'autres ressources dont la page officielle de l'accessibilité d'Apple
