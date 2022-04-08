@@ -2,7 +2,7 @@
 title: "Les tableaux dans l'accessibilité"
 abstract: "Toutes nos recommandations pour que les tableaux soit accessibles"
 titleBeforeTag: true
-date: "2022-02-18"
+date: "2022-04-08"
 tags:
   - web
   - beginner
@@ -60,6 +60,8 @@ Il existe aussi la possibilité d'utiliser l'attribut <code>summary</code> pour 
 
 ### Identifier les en-têtes de votre tableau
 
+#### Attributs scope
+
 Pour aider les utilisateurs de technologies d'assistance, il est impératif d'identifier les en-têtes des tableaux, que ce soit pour les lignes ou les colonnes.
 Pour baliser ces en-têtes, il faut utiliser la balise <code>th</code>, celle-ci ne doit jamais être vide.
 
@@ -71,6 +73,20 @@ L'attribut <code>scope</code> permet de lier programmatiquement les cellules aux
   <li><code>&lt;th scope="row"&gt;</code> pour un en-tête ligne</li>
 </ul>
 
+
+#### Attributs id et headers
+
+Certains tableaux sont trop complexes pour identifier une association horizontale ou verticale stricte entre l'entête et les cellules des données.
+L'attribut <code>scope</code> ne permet pas de résoudre ce problème. Il faut utiliser un attribut <code>id</code> unique pour chaque cellule d'en-tête. Pour relier cette en-tête à une cellule, il faudra utiliser l'attribut <code>headers</code> en y rajoutant les id voulu.
+
+Par exemples on a deux cellules d'entêtes, <code>&lt;th id="toto"&gt;Toto&lt;/th&gt;</code> et <code>&lt;th id="tata"&gt;Tata&lt;/th&gt;</code>, le code pour la relier à une cellule de donnée sera <code>&lt;td headers="toto tata"&gt;Tota&lt;/td&gt;</code>
+
+Les tableaux doivent être balisés cette manière que si :
+<ul>
+  <li>Le tableau a des en-têtes de colonnes qui changent au milieu du tableau.</li>
+  <li>Une cellule de données à trois en-têtes ou plus associées.</li>
+</ul>
+
 ### Cas particuliers des tableaux de mise en forme
 
 Dans la mesure du possible <strong> évitez d'utiliser des tableaux pour faire de la mise en pages</strong>. Les tableaux sont utiles pour présenter des données tabulaires avant tout.
@@ -80,12 +96,12 @@ Dans le cas où, vous utilisez un tableau pour faire de la mise en page, vous de
 <ul>
   <li>l'élément <code>table</code> doit avoir l'attribut <code>role="presentation</code></li>
   <li>les éléments sémantiques propres à un tableau ne doivent pas être utilisés : <code>caption</code>, <code>th</code>, <code>scope</code></li>
-  <li>assurez vous que, s'il existe un ordre de lecture spécifique pour comprendre le contenu, cet ordre suit l'ordre d'apparition dans le code</li>
+  <li>assurez-vous que, s'il existe un ordre de lecture spécifique pour comprendre le contenu, cet ordre suit l'ordre d'apparition dans le code</li>
 </ul>
 
 ### Navigation dans un tableau à l'aide des lecteurs d'écran Jaws et NVDA
 
-Le fait de créer des tableaux accessible permettra la lecture au lecteur d'écran. Pour naviguer dans un tableau avec Jaws ou NVDA, il existe plusieurs raccourci.
+Le fait de créer des tableaux accessibles permettra la lecture au lecteur d'écran. Pour naviguer dans un tableau avec Jaws ou NVDA, il existe plusieurs raccourcis.
 
 
 #### NVDA
@@ -100,7 +116,7 @@ Une fois au sein d'un tableau il existe plusieurs raccourcis afin de s'y déplac
 
 #### Jaws
 
-Pour Jaws, il faut utiliser la touche <kbd>t</kbd> et <kbd>t + y</kbd> pour naviguer entre les tableaux.
+Pour Jaws, il faut utiliser la touche <kbd>Y</kbd> et <kbd>Maj + Y</kbd> pour naviguer entre les tableaux.
 Pour parcourir un tableau il existe plusieurs raccourcis :
 
 <ul>
@@ -120,7 +136,7 @@ Nous allons maintenant vous présenter des exemples de tableaux accessibles.
 Le premier exemple est un tableau avec seulement des en-têtes sur les colonnes, nous utilisons donc l'attribut <code>scope="row"</code> pour que les technologies d'assistance le comprennent.
 
 <table class="table">
- <caption class="h4"> Personnes avec leur activités professionnels</caption>
+ <caption class="h4"> Personnes avec leur activité professionnelle</caption>
   <tr>
     <th scope="col">Prénom</th>
     <th scope="col">Nom</th>
@@ -161,7 +177,7 @@ Le premier exemple est un tableau avec seulement des en-têtes sur les colonnes,
 
 <pre><code class="html">
 &lt;table class="table"&gt;
- &lt;caption class="h4"&gt; Personnes avec leur activités professionnelles&lt;/caption&gt;
+ &lt;caption class="h4"&gt; Personnes avec leur activité professionnelle&lt;/caption&gt;
   &lt;tr&gt;
     &lt;th scope="col"&gt;Prénom&lt;/th&gt;
     &lt;th scope="col"&gt;Nom&lt;/th&gt;
@@ -262,8 +278,15 @@ Sur NVDA, pour tout changement de ligne ou de colonne l'en-tête sera vocalisé.
 
 ### Tableau complexe
 
+Dans cet exemple certaines cellules données ont trois en-têtes associés, il faut donc utiliser les attributs <code>id</code> et <code>headers</code>.
 
-<table class="table text-center">
+Vu que le tableau est complexe on peut rajouter une description afin d'aider les gens à comprendre le sens du tableau.
+
+
+<p class="border-top border-light" id="tblDesc">Tableaux permettant de calculer le taux de conformité d'un site internet.<br/>
+Pour chaque page les critères peuvent être conformes, non-conformes ou non-applicables, et ont deux niveaux de difficultés : Débutant ou confirmé<br/>
+</p>
+<table aria-describedby="tblDesc" class="table text-center">
     <caption class="visually-hidden position-relative">Synthèse par niveau</caption>
       <tr>
         <th id="critere">Critères</th>
@@ -302,3 +325,27 @@ Sur NVDA, pour tout changement de ligne ou de colonne l'en-tête sera vocalisé.
         <td headers="article conformite" class="bg-light">97%</td>
       </tr>
   </table>
+
+<pre><code class="html">
+&lt;p class="border-top border-light" id="tblDesc">Description du tableau&lt;/p&gt;
+&lt;table aria-describedby="tblDesc" class="table"&gt;
+ &lt;caption class="visually-hidden position-relative"&gt;Synthèse par niveau&lt;/caption&gt;
+ &lt;tr&gt;
+    &lt;th id="critere"&gt;Critères&lt;/th&gt;
+    &lt;th id="conforme" headers="critere" colspan="2"&gt;Conformes&lt;/th&gt;
+    [...]
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th id="niveau"&gt;Niveau&lt;/th&gt;
+    &lt;th id="debutant-conforme" headers="niveau conforme"&gt;Débutant&lt;/th&gt;
+    &lt;th id="confirme-conforme" headers="niveau conforme"&gt;Débutant&lt;/th&gt;
+    [...]
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th id="accueil"&gt;Accueil&lt;/th&gt;
+    &lt;td headers="accueil conforme debutant-conforme"&gt;17&lt;/td&gt;
+    &lt;td headers="accueil conforme confirme-conforme"&gt;13&lt;/td&gt;
+    [...]
+  &lt;/tr&gt;
+  [...]
+</code></pre>
