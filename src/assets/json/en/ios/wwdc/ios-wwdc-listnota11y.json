@@ -12,6 +12,17 @@
   },
   {
     "themes": "WWDC 2021",
+    "title": "Build interactive tutorials using DocC",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/21docC",
+    "profils": ["All","DocC","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
     "title": "Build interfaces with style",
     "type": ["Button","ScrollView","SF Symbol"],
     "tests": [],
@@ -45,6 +56,17 @@
   },
   {
     "themes": "WWDC 2021",
+    "title": "Elevate your DocC documentation in Xcode",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/21docC",
+    "profils": ["All","DocC","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
     "title": "Explore UI animation hitches and the render loop",
     "type": [],
     "tests": [],
@@ -67,6 +89,17 @@
   },
   {
     "themes": "WWDC 2021",
+    "title": "Host and automate your DocC documentation",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/21docC",
+    "profils": ["All","DocC","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
     "title": "Localize your SwiftUI app",
     "type": ["Attributed String"],
     "tests": [],
@@ -75,6 +108,17 @@
     "exception": "",
     "raccourcis": "2021/2110220",
     "profils": ["All","Localization","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
+    "title": "Meet DocC documentation in Xcode",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/21docC",
+    "profils": ["All","DocC","Xcode"]
   },
   {
     "themes": "WWDC 2021",
