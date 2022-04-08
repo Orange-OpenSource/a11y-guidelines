@@ -74,11 +74,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   //appel des Json
   
 
-  doXHR('../../../assets/json/'+lang+'/tests-web.json', function(errFirst, responseFirst) {  
+  doXHR('https://la-va11ydette.orange.com/json/tests-web-'+lang+'.json', function(errFirst, responseFirst) {  
     if (errFirst) {
       reqError();
     }
-    return doXHR('../../../assets/json/'+lang+'/tests-concepteur.json', function(errSecond, responseSecond) {
+    return doXHR('https://la-va11ydette.orange.com/json/tests-concepteur-'+lang+'.json', function(errSecond, responseSecond) {
       if (errSecond) {
         reqError();
       }
