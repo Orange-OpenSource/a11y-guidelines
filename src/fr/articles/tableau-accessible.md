@@ -56,7 +56,7 @@ exemple de description pour aider la compréhension du tableau complexe
 &lt;/table&gt;
 </code></pre>
 
-Il existe aussi la possibilité d'utiliser l'attribut <code>summary</code> pour donner, en plus, un résumé du contenu d'un tableau, néanmoins cet attribut ne fait plus partie des spécifications HTML 5 et nous ne recommandons pas son utilisation.
+Il y a aussi la possibilité d'utiliser l'attribut <code>summary</code> pour donner, en plus, un résumé du contenu d'un tableau, néanmoins cet attribut ne fait plus partie des spécifications HTML 5 et nous ne recommandons pas son utilisation.
 
 ### Identifier les en-têtes de votre tableau
 
@@ -65,8 +65,8 @@ Il existe aussi la possibilité d'utiliser l'attribut <code>summary</code> pour 
 Pour aider les utilisateurs de technologies d'assistance, il est impératif d'identifier les en-têtes des tableaux, que ce soit pour les lignes ou les colonnes.
 Pour baliser ces en-têtes, il faut utiliser la balise <code>th</code>, celle-ci ne doit jamais être vide.
 
-Une fois que les en-têtes sont créés, il faut associer les cellules de données aux en-têtes dont elles dépendent.
-L'attribut <code>scope</code> permet de lier programmatiquement les cellules aux en-têtes et donc d'identifier, pour les technologies d'assistance, chaque cellule en fonctions de ses en-têtes&nbsp;: 
+Une fois que les en-têtes sont créées, il faut associer les cellules de données aux en-têtes dont elles dépendent.
+L'attribut <code>scope</code> permet de lier programmatiquement les cellules aux en-têtes et donc d'identifier, pour les technologies d'assistance, chaque cellule en liaison avec ses en-têtes&nbsp;: 
 
 <ul>
   <li><code>&lt;th scope="col"&gt;</code> pour un en-tête colonne</li>
@@ -76,38 +76,39 @@ L'attribut <code>scope</code> permet de lier programmatiquement les cellules aux
 
 #### Attributs id et headers
 
-Certains tableaux sont trop complexes pour identifier une association horizontale ou verticale stricte entre l'entête et les cellules des données.
-L'attribut <code>scope</code> ne permet pas de résoudre ce problème. Il faut utiliser un attribut <code>id</code> unique pour chaque cellule d'en-tête. Pour relier cette en-tête à une cellule, il faudra utiliser l'attribut <code>headers</code> en y rajoutant les id voulu.
+Certains tableaux sont trop complexes pour identifier une association horizontale ou verticale stricte (par exemple, fusion de colonnes ou de lignes) entre l'entête et les cellules des données.
+L'attribut <code>scope</code> ne permet pas de résoudre ce problème. Il faut utiliser un attribut <code>id</code> unique pour chaque cellule d'en-tête. Pour relier cette en-tête à une cellule, il faudra utiliser l'attribut <code>headers</code> en y rajoutant les <code>id</code> voulus.
 
-Par exemples on a deux cellules d'entêtes, <code>&lt;th id="toto"&gt;Toto&lt;/th&gt;</code> et <code>&lt;th id="tata"&gt;Tata&lt;/th&gt;</code>, le code pour la relier à une cellule de donnée sera <code>&lt;td headers="toto tata"&gt;Tota&lt;/td&gt;</code>
+Par exemple, on a deux cellules d'entêtes, <code>&lt;th id="toto"&gt;Toto&lt;/th&gt;</code> et <code>&lt;th id="tata"&gt;Tata&lt;/th&gt;</code>, le code pour la relier à une cellule de donnée sera <code>&lt;td headers="toto tata"&gt;Tota&lt;/td&gt;</code>
 
-Les tableaux doivent être balisés cette manière que si :
+Les tableaux doivent utiliser <code>headers/id</code> que si :
 <ul>
-  <li>Le tableau a des en-têtes de colonnes qui changent au milieu du tableau.</li>
+  <li>Le tableau a des en-têtes de colonnes qui changent à l'intérieur du tableau.</li>
   <li>Une cellule de données à trois en-têtes ou plus associées.</li>
+  <li>Des cellules sont fusionnées</li>
 </ul>
 
 ### Cas particuliers des tableaux de mise en forme
 
-Dans la mesure du possible <strong> évitez d'utiliser des tableaux pour faire de la mise en pages</strong>. Les tableaux sont utiles pour présenter des données tabulaires avant tout.
+Dans la mesure du possible <strong>évitez d'utiliser des tableaux pour faire de la mise en pages</strong>. Les tableaux sont faits pour présenter des données tabulaires avant tout et les CSS permettent, maintenant, de se passer de la mise en forme via des tableaux.
 
 Dans le cas où, vous utilisez un tableau pour faire de la mise en page, vous devez respecter ces règles&nbsp;:
 
 <ul>
-  <li>l'élément <code>table</code> doit avoir l'attribut <code>role="presentation</code></li>
+  <li>l'élément <code>table</code> doit avoir l'attribut <code>role="presentation</code> afin de retire la sémantique du tableau</li>
   <li>les éléments sémantiques propres à un tableau ne doivent pas être utilisés : <code>caption</code>, <code>th</code>, <code>scope</code></li>
   <li>assurez-vous que, s'il existe un ordre de lecture spécifique pour comprendre le contenu, cet ordre suit l'ordre d'apparition dans le code</li>
 </ul>
 
 ### Navigation dans un tableau à l'aide des lecteurs d'écran Jaws et NVDA
 
-Le fait de créer des tableaux accessibles permettra la lecture au lecteur d'écran. Pour naviguer dans un tableau avec Jaws ou NVDA, il existe plusieurs raccourcis.
+Le fait de créer des tableaux accessibles permettra une lecture compréhensible de ces données tabulaires avec lecteur d'écran. Pour naviguer dans un tableau avec Jaws ou NVDA, il existe plusieurs raccourcis spécifiques.
 
 
 #### NVDA
 Pour naviguer rapidement de tableau en tableau dans une page, il suffit d'utiliser sur la touche <kbd>t</kbd>, si on utilise le raccourci <kbd>Maj + t</kbd>, on navigue dans le sens contraire et donc on revient au tableau précédent.
 
-Une fois au sein d'un tableau il existe plusieurs raccourcis afin de s'y déplacer simplement.
+Une fois au sein d'un tableau, il existe plusieurs raccourcis afin de s'y déplacer simplement.
 
 <ul>
 <li><kbd>Ctrl + alt + flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl + alt + flèche droite</kbd> se déplace sur la colonne de droite.</li>
@@ -120,7 +121,7 @@ Pour Jaws, il faut utiliser la touche <kbd>Y</kbd> et <kbd>Maj + Y</kbd> pour na
 Pour parcourir un tableau il existe plusieurs raccourcis :
 
 <ul>
-<li><kbd>Insert + ctrl + t</kbd> permet de lister tous les tableaux</li>
+<li><kbd>Insert + Ctrl + t</kbd> permet de lister tous les tableaux</li>
 <li><kbd>Ctrl + alt + flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl + alt + flèche droite</kbd> se déplace sur la colonne de droite.</li>
 <li><kbd>Ctrl + alt + flèche bas</kbd> permet de passer à la ligne suivante en restant sur la même colonne, <kbd>Ctrl + alt + flèche haut</kbd> pour passer à la ligne précédente.</li>
 <li><kbd>Insert + maj + flèche haut</kbd> permet de lire toute la ligne.</li>
@@ -193,7 +194,7 @@ Le premier exemple est un tableau avec seulement des en-têtes sur les colonnes,
   [...]
 </code></pre>
 
-De cette manière, il est possible de naviguer facilement au sein du tableau à l'aide d'un lecteur d'écran. Pour tout changement de colonne l'en-tête sera vocalisé.
+De cette manière, il est possible de naviguer facilement au sein du tableau à l'aide d'un lecteur d'écran. Pour tout changement de colonne l'en-tête sera vocalisée.
 
 Par Exemple, si on est positionné sur la colonne Prénom, et qu'on utilise le raccourci <kbd>Ctrl+alt+fleche droite</kbd> pour passer à la colonne Nom, NVDA vocalise "Nom Colonne 2 + texte de la colonne".
 
@@ -233,7 +234,7 @@ Ce tableau nécessite deux en-têtes, une pour les jours de la semaine et une au
   <th scope="row">13:00 - 15:00</th>
     <td>Ouvert</td>
     <td>Ouvert</td>
-    <td>Fermé</td>
+    $<td>Fermé</td>
     <td>Ouvert</td>
     <td>Ouvert</td>
   </tr>
@@ -271,16 +272,16 @@ Ce tableau nécessite deux en-têtes, une pour les jours de la semaine et une au
 Dans le tableau ci-dessus, il y a deux choses à retenir&nbsp;:
 <ul>
   <li>Veiller à utiliser l'attribut <code>scope="row"</code> pour définir les créneaux horaires comme en-tête.</li>
-  <li>Attention à ne pas mettre un en-tête vide, dans la première ligne un mauvais réflexe est d'utiliser la balise <code>th</code> pour toutes les colonnes, or la première colonne ne sera pas un en-tête vu qu'elle affiche seulement les en-têtes de ligne.</li>
+  <li>Attention à ne pas mettre une en-tête vide dans la première ligne, un mauvais réflexe est d'utiliser la balise <code>th</code> pour toutes les colonnes, or la première colonne ne sera pas une en-tête vu qu'elle affiche seulement les en-têtes de ligne.</li>
 </ul>
 
-Sur NVDA, pour tout changement de ligne ou de colonne l'en-tête sera vocalisé.
+Sur NVDA, pour tout changement de ligne ou de colonne l'en-tête sera vocalisée.
 
 ### Tableau complexe
 
-Dans cet exemple certaines cellules données ont trois en-têtes associés, il faut donc utiliser les attributs <code>id</code> et <code>headers</code>.
+Dans cet exemple, certaines cellules données ont trois en-têtes associées, il faut donc utiliser les attributs <code>id</code> et <code>headers</code>.
 
-Vu que le tableau est complexe on peut rajouter une description afin d'aider les gens à comprendre le sens du tableau.
+Vu que le tableau est complexe, on peut rajouter une description afin d'aider les utilisateurs à comprendre le tableau.
 
 
 <p class="border-top border-light" id="tblDesc">Tableaux permettant de calculer le taux de conformité d'un site internet.<br/>
