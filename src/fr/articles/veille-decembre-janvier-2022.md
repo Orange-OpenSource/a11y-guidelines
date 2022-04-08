@@ -1,7 +1,7 @@
 ---
 title: "Veille #A11y Décembre-Janvier 2022"
 abstract: "Florilèges de ressources en #a11y, Décembre-Janvier 2022"
-date: "2022-04-08"
+date: "2022-02-02"
 tags:
   - veille
 ---
