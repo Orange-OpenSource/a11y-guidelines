@@ -2,7 +2,7 @@
 title: "Les tableaux dans l'accessibilité"
 abstract: "Toutes nos recommandations pour que les tableaux soit accessibles"
 titleBeforeTag: true
-date: "2022-04-08"
+date: "2022-04-11"
 tags:
   - web
   - beginner
@@ -65,7 +65,7 @@ Il y a aussi la possibilité d'utiliser l'attribut <code>summary</code> pour don
 Pour aider les utilisateurs de technologies d'assistance, il est impératif d'identifier les en-têtes des tableaux, que ce soit pour les lignes ou les colonnes.
 Pour baliser ces en-têtes, il faut utiliser la balise <code>th</code>, celle-ci ne doit jamais être vide.
 
-Une fois que les en-têtes sont créées, il faut associer les cellules de données aux en-têtes dont elles dépendent.
+Une fois que les en-têtes sont créés, il faut associer les cellules de données aux en-têtes dont elles dépendent.
 L'attribut <code>scope</code> permet de lier programmatiquement les cellules aux en-têtes et donc d'identifier, pour les technologies d'assistance, chaque cellule en liaison avec ses en-têtes&nbsp;: 
 
 <ul>
@@ -77,14 +77,14 @@ L'attribut <code>scope</code> permet de lier programmatiquement les cellules aux
 #### Attributs id et headers
 
 Certains tableaux sont trop complexes pour identifier une association horizontale ou verticale stricte (par exemple, fusion de colonnes ou de lignes) entre l'entête et les cellules des données.
-L'attribut <code>scope</code> ne permet pas de résoudre ce problème. Il faut utiliser un attribut <code>id</code> unique pour chaque cellule d'en-tête. Pour relier cette en-tête à une cellule, il faudra utiliser l'attribut <code>headers</code> en y rajoutant les <code>id</code> voulus.
+L'attribut <code>scope</code> ne permet pas de résoudre ce problème. Il faut utiliser un attribut <code>id</code> unique pour chaque cellule d'en-tête. Pour relier cet en-tête à une cellule, il faudra utiliser l'attribut <code>headers</code> en y rajoutant les <code>id</code> voulus.
 
-Par exemple, on a deux cellules d'entêtes, <code>&lt;th id="toto"&gt;Toto&lt;/th&gt;</code> et <code>&lt;th id="tata"&gt;Tata&lt;/th&gt;</code>, le code pour la relier à une cellule de donnée sera <code>&lt;td headers="toto tata"&gt;Tota&lt;/td&gt;</code>
+Par exemple, on a deux cellules d'entêtes, <code>&lt;th id="toto"&gt;Toto&lt;/th&gt;</code> et <code>&lt;th id="tata"&gt;Tata&lt;/th&gt;</code>, le code pour la relier à une cellule de donnée sera <code>&lt;td headers="toto tata"&gt;Tota&lt;/td&gt;</code>.
 
 Les tableaux doivent utiliser <code>headers/id</code> que si :
 <ul>
   <li>Le tableau a des en-têtes de colonnes qui changent à l'intérieur du tableau.</li>
-  <li>Une cellule de données à trois en-têtes ou plus associées.</li>
+  <li>Une cellule de données à trois en-têtes ou plus associées (souvent liée à des cellules d'en-têtes qui sont fusionnées)</li>
 </ul>
 
 ### Cas particuliers des tableaux de mise en forme
@@ -94,7 +94,7 @@ Dans la mesure du possible <strong>évitez d'utiliser des tableaux pour faire de
 Dans le cas où, vous utilisez un tableau pour faire de la mise en page, vous devez respecter ces règles&nbsp;:
 
 <ul>
-  <li>l'élément <code>table</code> doit avoir l'attribut <code>role="presentation</code> afin de retire la sémantique du tableau</li>
+  <li>l'élément <code>table</code> doit avoir l'attribut <code>role="presentation</code> afin de retirer la sémantique du tableau</li>
   <li>les éléments sémantiques propres à un tableau ne doivent pas être utilisés : <code>caption</code>, <code>th</code>, <code>scope</code></li>
   <li>assurez-vous que, s'il existe un ordre de lecture spécifique pour comprendre le contenu, cet ordre suit l'ordre d'apparition dans le code</li>
 </ul>
@@ -271,7 +271,7 @@ Ce tableau nécessite deux en-têtes, une pour les jours de la semaine et une au
 
 ### Tableau complexe
 
-Dans cet exemple, certaines cellules données ont trois en-têtes associées, il faut donc utiliser les attributs <code>id</code> et <code>headers</code>.
+Dans cet exemple, certaines cellules données ont trois en-têtes associés, il faut donc utiliser les attributs <code>id</code> et <code>headers</code>.
 
 Vu que le tableau est complexe, on peut rajouter une description afin d'aider les utilisateurs à comprendre le tableau.
 
