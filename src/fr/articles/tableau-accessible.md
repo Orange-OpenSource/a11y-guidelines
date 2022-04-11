@@ -234,7 +234,7 @@ Ce tableau nécessite deux en-têtes, une pour les jours de la semaine et une au
   <th scope="row">13:00 - 15:00</th>
     <td>Ouvert</td>
     <td>Ouvert</td>
-    $<td>Fermé</td>
+    <td>Fermé</td>
     <td>Ouvert</td>
     <td>Ouvert</td>
   </tr>
@@ -269,13 +269,6 @@ Ce tableau nécessite deux en-têtes, une pour les jours de la semaine et une au
   [...]
 </code></pre>
 
-Dans le tableau ci-dessus, il y a deux choses à retenir&nbsp;:
-<ul>
-  <li>Veiller à utiliser l'attribut <code>scope="row"</code> pour définir les créneaux horaires comme en-tête.</li>
-  <li>Attention à ne pas mettre une en-tête vide dans la première ligne, un mauvais réflexe est d'utiliser la balise <code>th</code> pour toutes les colonnes, or la première colonne ne sera pas une en-tête vu qu'elle affiche seulement les en-têtes de ligne.</li>
-</ul>
-
-Sur NVDA, pour tout changement de ligne ou de colonne l'en-tête sera vocalisée.
 
 ### Tableau complexe
 
