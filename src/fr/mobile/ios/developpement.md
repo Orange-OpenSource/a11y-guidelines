@@ -81,6 +81,8 @@ Il existe beaucoup de traits dont les principaux sont fournis ci-dessous&nbsp;:
 </div>
 <div class="tab-pane" id="TraitElt-Example" role="tabpanel">
 
+<div class="code-tab-pane">
+
 <pre><code class="objectivec">
 - (void)customTraits() {
     //Spécification d'un UIPageControl avec le trait ’ajustable’.
@@ -102,12 +104,16 @@ func customTraits() {
 </code></pre>
 
 </div>
+
+</div>
 <div class="tab-pane" id="TraitElt-BasicOperations" role="tabpanel" >
 
 L'attribut `accessibilityTrait` est en réalité un `bitmask` pour lequel chaque élément pris individuellement peut prendre une valeur spécifique.
 
 ![](../../images/iOSdev/Traits.png)
 <br>Il est donc possible d'ajouter et d'enlever plusieurs `traits` présents pour caractériser un élement après avoir vérifié leur existence par exemple.
+
+<div class="code-tab-pane">
 
 <pre><code class="objectivec">
 
@@ -149,6 +155,8 @@ func changeTraits() {
     }
 }
 </code></pre>
+
+</div>
 
 </div>
 <div class="tab-pane" id="TraitElt-Links" role="tabpanel" >
