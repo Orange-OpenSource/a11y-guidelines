@@ -85,7 +85,6 @@ Les tableaux doivent utiliser <code>headers/id</code> que si :
 <ul>
   <li>Le tableau a des en-têtes de colonnes qui changent à l'intérieur du tableau.</li>
   <li>Une cellule de données à trois en-têtes ou plus associées.</li>
-  <li>Des cellules sont fusionnées</li>
 </ul>
 
 ### Cas particuliers des tableaux de mise en forme
