@@ -33,68 +33,94 @@
 })();
 
 /* Tab language IOS */
-(function(){
 
-  document.querySelectorAll('.code-tab-pane').forEach(function(item){
+function automaticTabPan (){
+  var AllLanguage = {
+    "objectivec":{
+      name:"Objective C",
+      class:"item-oc",
+      active:"active show",
+      selected:"aria-selected=\"true\"",
+      classTab:"objc"
+    },
+    "swift":{
+      name:"Swift",
+      class:"item-s",
+      active:"",
+      selected:"aria-selected=\"false\"",
+      classTab:"swift"
+    },
+    "swiftui":{
+      name:"Swift UI",
+      class:"item-sui",
+      active:"",
+      selected:"aria-selected=\"false\"",
+      classTab:"swiftui"
+    },
+  };
+
+  document.querySelectorAll('.code-tab-pane').forEach(function(item,index){
+
     listLanguage =[];
-     item.querySelectorAll('code').forEach(function (code){
-       console.log(code.innerHTML)
-      listLanguage.push({
-        language:code.classList[0],
-        html:code.outerHTML
-      })
-     });
-     console.log(generateTabPan(listLanguage));
+    item.querySelectorAll('code').forEach(function (code){
+      let object = {...AllLanguage[code.classList[0]], ...{html:code.outerHTML}};
+      listLanguage.push(object);
+    });
+    //console.log(item)
+    item.innerHTML=generateTabPan(listLanguage,index);
   });
+}
+function generateTabPan(listLanguage,id){
 
-  function generateTabPan(listLanguage){
-
-    html='<ul class="nav nav-tabs languageinfo" role="tablist">';
-    listLanguage.forEach(element => {
-      html+='<li class="nav-item '+element.language+'" role="presentation">';
-      html+='<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-selected="true">'+element.language+'</button>';
-      html+='</li>';
-    });
-    html+="</ul>"
-    html+='<div class="tab-content languageinfotab">';
-    listLanguage.forEach(element => {
-      html+=' <div class="tab-pane objc show active" id="Description-ObjC" role="tabpanel">';
-      html+=element.html;
-      html+=' </div>';
-    });
-    html+='</div>';
-    return html;
-  }
+  html='<ul class="nav nav-tabs languageinfo" role="tablist">';
+  listLanguage.forEach((element,index) => {
+    uniqueIDTab='tabID-0'+id.toString()+index.toString();
+    uniqueIDPan='tabID-1'+id.toString()+index.toString();
+    html+='<li class="nav-item '+element.class+'" role="presentation">';
+    html+='<button class="nav-link '+ element.active+'" id="'+uniqueIDTab+'" data-bs-toggle="tab" data-bs-target="#'+uniqueIDPan+'" type="button" role="tab" aria-controls="'+uniqueIDPan+'" '+element.selected+'>'+element.name+'</button>';
+    html+='</li>';
+  });
+  html+="</ul>"
+  html+='<div class="tab-content languageinfotab">';
+  listLanguage.forEach((element,index) => {
+    uniqueIDTab='tabID-0'+id.toString()+index.toString();
+    uniqueIDPan='tabID-1'+id.toString()+index.toString();
+    html+=' <div class="tab-pane fade '+element.classTab+' '+ element.active+'" id="'+uniqueIDPan+'" role="tabpanel" aria-labelledby="'+uniqueIDTab+'">';
+    html+='<pre>';
+    html+=element.html;
+    html+='</pre>';
+    html+=' </div>';
+  });
+  html+='</div>';
+  return html;
+}
+function manageEventTabPan(){
 
   function removeActiveClass() {
-    document.querySelectorAll('.languageinfo li a').forEach(function(item){
+    document.querySelectorAll('.languageinfo li button').forEach(function(item){
       item.classList.remove('active');
-      item.setAttribute('tabindex',-1);
       item.setAttribute('aria-selected',false);
     });
     document.querySelectorAll('.languageinfotab div').forEach(function(item){
       item.classList.remove('show');
       item.classList.remove('active');
-      item.setAttribute('tabindex',-1);
       item.setAttribute('aria-hidden',true);
     });
   }
 
   function addActiveClass(classLink, classDiv) {
-    document.querySelectorAll('.'+classLink+' a').forEach(function(item){
+    document.querySelectorAll('.'+classLink+' button').forEach(function(item){
       item.classList.add('active');
-      item.setAttribute('tabindex',0);
       item.setAttribute('aria-selected',true);
     });
     document.querySelectorAll('.'+classDiv).forEach(function(item){
       item.classList.add('show');
       item.classList.add('active');
-      item.setAttribute('tabindex',0);
       item.setAttribute('aria-hidden',false);
     })
   }
 
-  document.querySelectorAll('.item-oc a').forEach(function(item){
+  document.querySelectorAll('.item-oc button').forEach(function(item){
 
     item.addEventListener("click", function(){
 
@@ -104,7 +130,7 @@
     });
   });
 
-  document.querySelectorAll('.item-s a').forEach(function(item){
+  document.querySelectorAll('.item-s button').forEach(function(item){
 
     item.addEventListener("click", function(){
 
@@ -114,7 +140,7 @@
     });
   });
 
-  document.querySelectorAll('.item-sui a').forEach(function(item){
+  document.querySelectorAll('.item-sui button').forEach(function(item){
     item.addEventListener("click", function(){
 
       removeActiveClass();
@@ -122,7 +148,7 @@
 
     });
   });
-})();
+}
 
 /* Filter bar */
 (function () {
@@ -301,6 +327,8 @@ function enhanceSearchField () {
 window.addEventListener('DOMContentLoaded', function () {
   //initPriorityNav()
   enhanceSearchField()
+  automaticTabPan();
+  manageEventTabPan();
 
   if (Application.vendors.highlightJS === true) {
     highlightCodeBlocks()
