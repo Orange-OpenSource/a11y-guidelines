@@ -32,6 +32,124 @@
   }, { once: true })
 })();
 
+/* Tab language IOS */
+
+function automaticTabPan (){
+  var AllLanguage = {
+    "objectivec":{
+      name:"Objective C",
+      class:"item-oc",
+      active:"active show",
+      selected:"aria-selected=\"true\"",
+      classTab:"objc"
+    },
+    "swift":{
+      name:"Swift",
+      class:"item-s",
+      active:"",
+      selected:"aria-selected=\"false\"",
+      classTab:"swift"
+    },
+    "swiftui":{
+      name:"Swift UI",
+      class:"item-sui",
+      active:"",
+      selected:"aria-selected=\"false\"",
+      classTab:"swiftui"
+    },
+  };
+
+  document.querySelectorAll('.code-tab-pane').forEach(function(item,index){
+
+    listLanguage =[];
+    item.querySelectorAll('code').forEach(function (code){
+      let object = {...AllLanguage[code.classList[0]], ...{html:code.outerHTML}};
+      listLanguage.push(object);
+    });
+    //console.log(item)
+    item.innerHTML=generateTabPan(listLanguage,index);
+  });
+}
+function generateTabPan(listLanguage,id){
+
+  html='<ul class="nav nav-tabs languageinfo" role="tablist">';
+  listLanguage.forEach((element,index) => {
+    uniqueIDTab='tabID-0'+id.toString()+index.toString();
+    uniqueIDPan='tabID-1'+id.toString()+index.toString();
+    html+='<li class="nav-item '+element.class+'" role="presentation">';
+    html+='<button class="nav-link '+ element.active+'" id="'+uniqueIDTab+'" data-bs-toggle="tab" data-bs-target="#'+uniqueIDPan+'" type="button" role="tab" aria-controls="'+uniqueIDPan+'" '+element.selected+'>'+element.name+'</button>';
+    html+='</li>';
+  });
+  html+="</ul>"
+  html+='<div class="tab-content languageinfotab">';
+  listLanguage.forEach((element,index) => {
+    uniqueIDTab='tabID-0'+id.toString()+index.toString();
+    uniqueIDPan='tabID-1'+id.toString()+index.toString();
+    html+=' <div class="tab-pane fade '+element.classTab+' '+ element.active+'" id="'+uniqueIDPan+'" role="tabpanel" aria-labelledby="'+uniqueIDTab+'">';
+    html+='<pre>';
+    html+=element.html;
+    html+='</pre>';
+    html+=' </div>';
+  });
+  html+='</div>';
+  return html;
+}
+function manageEventTabPan(){
+
+  function removeActiveClass() {
+    document.querySelectorAll('.languageinfo li button').forEach(function(item){
+      item.classList.remove('active');
+      item.setAttribute('aria-selected',false);
+    });
+    document.querySelectorAll('.languageinfotab div').forEach(function(item){
+      item.classList.remove('show');
+      item.classList.remove('active');
+      item.setAttribute('aria-hidden',true);
+    });
+  }
+
+  function addActiveClass(classLink, classDiv) {
+    document.querySelectorAll('.'+classLink+' button').forEach(function(item){
+      item.classList.add('active');
+      item.setAttribute('aria-selected',true);
+    });
+    document.querySelectorAll('.'+classDiv).forEach(function(item){
+      item.classList.add('show');
+      item.classList.add('active');
+      item.setAttribute('aria-hidden',false);
+    })
+  }
+
+  document.querySelectorAll('.item-oc button').forEach(function(item){
+
+    item.addEventListener("click", function(){
+
+      removeActiveClass();
+      addActiveClass('item-oc', 'objc');
+
+    });
+  });
+
+  document.querySelectorAll('.item-s button').forEach(function(item){
+
+    item.addEventListener("click", function(){
+
+      removeActiveClass();
+      addActiveClass('item-s', 'swift');
+
+    });
+  });
+
+  document.querySelectorAll('.item-sui button').forEach(function(item){
+    item.addEventListener("click", function(){
+
+      removeActiveClass();
+      addActiveClass('item-sui', 'swiftui');
+
+    });
+  });
+}
+
 /* Filter bar */
 (function () {
   const filtersbar = document.getElementById('filtersbar')
@@ -128,34 +246,37 @@ function initPriorityNav () {
 function highlightCodeBlocks () {
   hljs.initHighlighting()
 
-  const codeBlocks = document.querySelectorAll('.hljs')
+  if (Application.vendors.highlightTitle === true) {
 
-  if (!codeBlocks.length) {
-    return
+    const codeBlocks = document.querySelectorAll('.hljs')
+    
+    if (!codeBlocks.length) {
+      return
+    }
+
+    const displayLanguageList = {
+      'css': 'CSS',
+      'html': 'HTML',
+      'java': 'Java',
+      'javascript': 'JavaScript',
+      'json': 'JSON',
+      'kotlin': 'Kotlin',
+      'objectivec':'Objective-C',
+      'swift': 'Swift',
+      'swiftui': 'SwiftUI',
+      'xml': 'XML'
+    }
+
+    codeBlocks.forEach(function (codeBlock) {
+      const language = codeBlock.result.language
+      const displayLanguage = displayLanguageList[language] || language
+      const languageWrapper = document.createElement('div')
+      languageWrapper.classList.add('bg-primary', 'd-inline-block', 'p-2', 'font-weight-bold')
+      languageWrapper.textContent = displayLanguage
+
+      codeBlock.parentNode.insertBefore(languageWrapper, codeBlock)
+    })
   }
-
-  const displayLanguageList = {
-    'css': 'CSS',
-    'html': 'HTML',
-    'java': 'Java',
-    'javascript': 'JavaScript',
-    'json': 'JSON',
-    'kotlin': 'Kotlin',
-    'objectivec':'Objective-C',
-    'swift': 'Swift',
-    'xml': 'XML'
-  }
-
-  codeBlocks.forEach(function (codeBlock) {
-    const language = codeBlock.result.language
-    const displayLanguage = displayLanguageList[language] || language
-
-    const languageWrapper = document.createElement('div')
-    languageWrapper.classList.add('bg-primary', 'd-inline-block', 'p-2', 'fw-bold')
-    languageWrapper.textContent = displayLanguage
-
-    codeBlock.parentNode.insertBefore(languageWrapper, codeBlock)
-  })
 }
 
 function enhanceSearchField () {
@@ -216,6 +337,8 @@ function tabPanelFocus (tabTitleID,tabDescriptionID){
 window.addEventListener('DOMContentLoaded', function () {
   //initPriorityNav()
   enhanceSearchField()
+  automaticTabPan();
+  manageEventTabPan();
 
   if (Application.vendors.highlightJS === true) {
     highlightCodeBlocks()

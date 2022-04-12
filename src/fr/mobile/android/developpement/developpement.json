@@ -1,5 +1,6 @@
 ﻿{
   "highlightJS": true,
+  "highlightTitle":true,
   "displayToc": true,
   "sideNavigationLinks": [
     {
