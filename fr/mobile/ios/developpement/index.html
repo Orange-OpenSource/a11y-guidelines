@@ -298,6 +298,7 @@
 </ul>
 </div>
 <div class="tab-pane" id="TraitElt-Example" role="tabpanel">
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 - (void)customTraits() {
     //Spécification d'un UIPageControl avec le trait ’ajustable’.
@@ -317,10 +318,12 @@ func customTraits() {
 }
 </code></pre>
 </div>
+</div>
 <div class="tab-pane" id="TraitElt-BasicOperations" role="tabpanel" >
 <p>L'attribut <code>accessibilityTrait</code> est en réalité un <code>bitmask</code> pour lequel chaque élément pris individuellement peut prendre une valeur spécifique.</p>
 <p><img src="../../images/iOSdev/Traits.png" alt="" class="img-fluid"><br>
 <br>Il est donc possible d'ajouter et d'enlever plusieurs <code>traits</code> présents pour caractériser un élement après avoir vérifié leur existence par exemple.</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 
 - (void)changeTraits {
@@ -360,6 +363,7 @@ func changeTraits() {
     }
 }
 </code></pre>
+</div>
 </div>
 <div class="tab-pane" id="TraitElt-Links" role="tabpanel" >
 <ul>
@@ -426,6 +430,7 @@ Exemple : « cliquez pour obtenir le résultat ».</p>
 Tout élément dérivant de <code>UIView</code> possède ces attributs qui acceptent une chaîne de caractère les rendant ainsi internationalisables.</p>
 </div>
 <div class="tab-pane" id="textAlt-Example" role="tabpanel" > 
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 @interface ChangeTextView() {
     
@@ -462,6 +467,7 @@ class ChangeTextView: UIViewController {
     }
 }
 </code></pre>
+</div>
 </div>
 <div class="tab-pane" id="textAlt-Links" role="tabpanel" > 
 <ul>
@@ -522,6 +528,7 @@ class ChangeTextView: UIViewController {
 <p><img src="../../images/iOSdev/DateHeureNombres_10.png" alt="" class="img-fluid"><br>
 Il faut absolument formater les données en entrée pour obtenir une vocalisation descriptive naturelle et compréhensible.</p>
 <p><img src="../../images/iOSdev/DateHeureNombres_4.png" alt="" class="img-fluid"></p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"dd/MM/yyyy HH:mm"];
@@ -572,11 +579,13 @@ Il faut absolument formater les données en entrée pour obtenir une vocalisatio
                                                                            unitsStyle: .spellOut)
 </code></pre>
 </div>
+</div>
 <div class="tab-pane" id="format-Numbers" role="tabpanel" >
 <p>En indiquant la valeur d'un nombre directement dans le texte d'un <code>label</code>, la vocalisation se fera sur chacun des chiffres présentés rendant la véritable valeur du nombre difficile à deviner.</p>
 <p><img src="../../images/iOSdev/DateHeureNombres_8.png" alt="" class="img-fluid"></p>
 <p>Comme pour les date et heure, il faut formater la donnée en entrée pour qu'elle puisse être analysée et vocalisée selon la véritable valeur du nombre qu'elle représente.</p>
 <p><img src="../../images/iOSdev/DateHeureNombres_5.png" alt="" class="img-fluid"></p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
     NSNumber * numberValue = @54038921.7;
     
@@ -598,12 +607,14 @@ Il faut absolument formater les données en entrée pour obtenir une vocalisatio
                                                                      number: .spellOut)
 </code></pre>
 </div>
+</div>
 <div class="tab-pane" id="format-PhoneNumbers" role="tabpanel" >
 <p>La problématique liée à la vocalisation d'un numéro de téléphone est identique à celle des nombres puisqu'elle s'appuie entièrement sur le formatage à appliquer avec une prise en compte particulière des chiffres &quot;0&quot;.</p>
 <p>L'exemple donné ci-dessous concerne la numérotation française avec une logique qui peut se décliner à n'importe quel type de format de numérotation.</p>
 <p><img src="../../images/iOSdev/DateHeureNombres_11.png" alt="" class="img-fluid"></p>
 <p>L'idée est de séparer chaque paire de chiffres par une virgule qui va fournir la ponctuation vocale.<br>
 <img src="../../images/iOSdev/DateHeureNombres_6.png" alt="" class="img-fluid"></p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
     NSString * phoneNumberValue = @"06.11.22.33.06";
     NSArray * phoneNumberElts = [phoneNumberValue componentsSeparatedByString:@"."];
@@ -675,6 +686,7 @@ Il faut absolument formater les données en entrée pour obtenir une vocalisatio
 </code></pre>
 </div>
 </div>
+</div>
 <br><br>
 <h2 id="declencher-une-vocalisation">Déclencher une vocalisation <a class="header-anchor" href="#declencher-une-vocalisation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
@@ -714,6 +726,7 @@ Il faut absolument formater les données en entrée pour obtenir une vocalisatio
 </ul>
 </div>
 <div class="tab-pane" id="triggerVocal-Example" role="tabpanel">
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, 
                                 @"Message pour la vocalisation.");
@@ -722,6 +735,7 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification,
 UIAccessibility.post(notification: .announcement,
                      argument: "Message pour la vocalisation.")
 </code></pre>
+</div>
 </div>
 <div class="tab-pane" id="triggerVocal-Links" role="tabpanel">
 <ul>
@@ -790,6 +804,7 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
 </ul>
 </div>
 <div class="tab-pane" id="changeNotif-Example" role="tabpanel">
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 //L'élément 'myLabel' est sélectionné et vocalisé avec sa nouvelle valeur.
 - (IBAction)tapHere:(UIButton *)sender {
@@ -820,6 +835,7 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
                          argument: nil)
 }
 </code></pre>
+</div>
 </div>
 <div class="tab-pane" id="changeNotif-Links" role="tabpanel">
 <ul>
@@ -871,6 +887,7 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
 </div>
 <div class="tab-pane" id="changeLang-Example" role="tabpanel">
 <p>Si on utilise l'attribut <code>accessibilityLanguage</code> sur un <code>UILabel</code>, alors celui-ci sera vocalisé par <span lang="en">VoiceOver</span> dans la nouvelle langue donnée en valeur de l’attribut.<br></p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 - (IBAction)tapHere:(UIButton *)sender {
     
@@ -885,6 +902,7 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
     myLabel.accessibilityLabel = "This is a new label. Thank you."
 }
 </code></pre>
+</div>
 <p>Si l'on souhaite ajouter un mot dans une langue spécifique au sein d'une phrase à prononcer de façon appropriée avec VoiceOver, on peut s'appuyer sur les <strong>Attributed Accessibility Properties</strong> en utilisant un <code>NSAttributedString</code> <a href="https://a11y-guidelines.orange.com/fr/mobile/ios/wwdc/2017/215/#attributed-accessibility-properties-2607">depuis iOS 11</a>.</p>
 </div>
 <div class="tab-pane" id="changeLang-Links" role="tabpanel">
@@ -949,6 +967,7 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
 <div class="tab-pane" id="hideElts-Example" role="tabpanel">
 <p>L'idée est de créer un carré rouge qui va contenir 2 autres carrés (bleu et jaune) pour appliquer les attributs définis dans l'onglet <code>Fonctionnement</code>.</p>
 <p><img src="../../images/iOSdev/MasquerDesElements_1.png" alt="" class="img-fluid"></p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -1031,6 +1050,7 @@ override func viewDidAppear(_ animated: Bool) {
     }
 </code></pre>
 </div>
+</div>
 <div class="tab-pane" id="hideElts-Links" role="tabpanel">
 <ul>
 <li>
@@ -1089,6 +1109,7 @@ override func viewDidAppear(_ animated: Bool) {
 <p>Dans ce cas, on va créer une vue qui va englober les éléments impactés puis implémenter une action qui va indiquer l'action à réaliser en cas d'activation de la zone par l'utilisateur.<br>
 <img src="../../images/iOSdev/GrouperDesElements_1.png" alt="" class="img-fluid"><br>
 Création de l'élément accessible qui va regrouper les éléments souhaités :</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 #import "MyViewController.h"
 #import "MyWrapView.h"
@@ -1132,7 +1153,9 @@ Création de l'élément accessible qui va regrouper les éléments souhaités :
     }
 }
 </code></pre>
+</div>
 <p><br>... et implémentation de la classe utilisée pour définir de façon précise l'<a href="../wwdc/2017/215/#action-par-defaut-3738">action à associer au double tap d'activation</a> :</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 @implementation MyWrapView
 
@@ -1219,11 +1242,13 @@ int indexSwitch = 1;
 }
 </code></pre>
 </div>
+</div>
 <div class="tab-pane" id="groupElts-Example2" role="tabpanel">
 <p>Nous avons un 'label', un 'switch control' et un bouton que nous souhaitons regrouper en un seul bloc dont l'activation changera automatiquement l'état du 'switch control' sans avoir à définir une action comme précédemment.</p>
 <p>L'idée la plus simple consisterait à placer le 'switch control' au milieu de la nouvelle <code>frame</code> créée de façon à avoir son <button class="btn btn-link" onclick="tabPanelFocus('focusArea-Details_tab','focusArea-Details')">accessibilityActivationPoint</button> directement dessus.</p>
 <p>Cela n'étant malheureusement pas toujours possible, il va donc falloir créer un élément accessible qui regroupera tous les objets impactés puis définir son <strong>accessibilityActivationPoint</strong> sur le 'switch control'.</p>
 <p><img src="../../images/iOSdev/GrouperDesElements_2.png" alt="" class="img-fluid"></p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 @interface ActivationPointViewController ()
     
@@ -1308,6 +1333,7 @@ UIAccessibilityElement * elt;
     }
 }
 </code></pre>
+</div>
 <p><br>Une autre possibilité de groupement d'éléments pourrait utiliser l’attribut <strong>shouldGroupAccessibilityChildren</strong>, booléen qui permet d’indiquer à <span lang="en">VoiceOver</span> qu’il doit grouper les enfants de la vue qui porte l’attribut.</p>
 <p>Cela permet notamment de faire des vocalisations uniques ou de définir un ordre de lecture <span lang="en">VoiceOver</span> particulier pour une partie de la page seulement (voir la section <a href="#ordre-de-lecture">Ordre de lecture</a>).</p>
 </div>
@@ -1359,6 +1385,7 @@ UIAccessibilityElement * elt;
 <p>Dans cet exemple, on veut l'ordre suivant : 1, 2, 3, 4, 7, 6, 8, 9, 5.</p>
 <p>On crée deux vues au sein desquelles on incorpore les chiffres qu'on souhaite vocaliser selon un ordre bien précis :</p>
 <p><img src="../../images/iOSdev/OrdreDeLecture_1.png" alt="affichage des vues grise et bleue pour l'exemple" class="img-fluid"></p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
     __weak IBOutlet UIView * blueBlock;
     __weak IBOutlet UIView * greyColumn;
@@ -1395,6 +1422,7 @@ UIAccessibilityElement * elt;
                                            key_5!]
     }
 </code></pre>
+</div>
 </div>
 <div class="tab-pane" id="readingOrder-Links" role="tabpanel">
 <ul>
@@ -1468,6 +1496,7 @@ On peut aussi envisager l'implémentation de cette fonctionnalité dans des list
 <p>L'exemple de code ci-dessous permet d'obtenir tout un tas d'informations présentes sur une image sous forme de données non visuelles mais vocalisables.</p>
 <p>⚠️ Il faut absolument penser à <strong>importer le framework Accessibility</strong> auquel appartient le protocole <code>AXCustomContentProvider</code>. ⚠️</p>
 <p>Après avoir défini la classe pour la vue contenant l'image :</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 //MyCustomView.h
 #import &lt;UIKit/UIKit.h&gt;
@@ -1501,7 +1530,9 @@ class MyCustomView: UIImageView, AXCustomContentProvider {
        }
 }
 </code></pre>
+</div>
 <p>... on crée chaque élément à vocaliser lors du balayage vertical avec un doigt :</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet MyCustomView * myView;
@@ -1549,6 +1580,7 @@ class ViewController: UIViewController {
     }
 }
 </code></pre>
+</div>
 <p><img src="../../images/iOSdev/CustomContentProvider_2.png" alt="" class="img-fluid"><br>
 <img src="../../images/iOSdev/CustomContentProvider_3.png" alt="" class="img-fluid"></p>
 </div>
@@ -1620,6 +1652,7 @@ class ViewController: UIViewController {
 </div>
 <div class="tab-pane" id="focusElt-Example" role="tabpanel">
 <p>L'exemple de code ci-dessous permet de suivre le focus d'un élément accessible identifié par son <code>accessibleIdentifier</code>.</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 #import "UIView+focus.h"
 
@@ -1675,6 +1708,7 @@ extension UIView {
     }
 }
 </code></pre>
+</div>
 </div>
 <div class="tab-pane" id="focusElt-Links" role="tabpanel">
 <ul>
@@ -1738,6 +1772,7 @@ Par défaut, ce point se trouve au centre de la <code>frame</code> mais on peut 
 </div>
 <div class="tab-pane" id="focusArea-Example" role="tabpanel">
 <p><img src="../../images/iOSdev/ModifierLaZoneDeFocus_1.png" alt="" class="img-fluid"></p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 float xVal;
 float yVal;
@@ -1834,6 +1869,7 @@ float heightVal;
     }
 </code></pre>
 </div>
+</div>
 <div class="tab-pane" id="focusArea-Links" role="tabpanel">
 <ul>
 <li>
@@ -1909,6 +1945,7 @@ float heightVal;
 <br>Les vues <code>A1</code> et <code>A3</code> ne sont pas prises en compte par <span lang="en">VoiceOver</span> car elles sont au même niveau de la hiérarchie des vues que <code>A2</code> <strong>MAIS</strong> <code>Parent B</code> (ou éventuellement ses sous-vues) sera vocalisé... ce qui n'est pas souhaité.</p>
 <p><img src="../../images/iOSdev/ModalView_3.png" alt="" class="img-fluid"><br>
 <br>Pour solutionner ce problème, l'idée est de masquer les éléments non désirables dès lors qu'on active la vue modale.</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
     parentA.isAccessibilityElement = NO;
     parentA.accessibilityElementsHidden = NO;
@@ -1929,11 +1966,13 @@ float heightVal;
     parentB.isAccessibilityElement = false
     parentB.accessibilityElementsHidden = true
 </code></pre>
+</div>
 <p><br><strong>Exemple 3</strong> : passer <code>B1.1</code> en vue modale.<br>
 <br>Dans ce cas, les vues <code>parent A</code> et <code>B2</code>  (ou éventuellement leurs sous-vues) sont vocalisées tout comme la vue modale.<br>
 <br>Seule <code>B1.2</code> qui est au même niveau que <code>B1.1</code> n'est pas analysée par <span lang="en">VoiceOver</span>.</p>
 <p><img src="../../images/iOSdev/ModalView_4.png" alt="" class="img-fluid"><br>
 <br>Là encore, il faut masquer tous les éléments accessibles non désirables dès lors qu'on active la vue modale.</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
     parentB.isAccessibilityElement = NO;
     parentB.accessibilityElementsHidden = NO;
@@ -1966,6 +2005,7 @@ float heightVal;
     B2.isAccessibilityElement = false
     B2.accessibilityElementsHidden = true
 </code></pre>
+</div>
 </div>
 <div class="tab-pane" id="modalView-Links" role="tabpanel">
 <ul>
@@ -2046,7 +2086,8 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
 <ul>
 <li>utiliser la police système pour les textes de l’application afin de se faciliter grandement la tâche même si l'utilisation d'autres polices est devenue nettement plus aisée depuis l'arrivée de <code>UIFontMetrics</code> avec iOS11,</li>
 </ul>
- <pre><code class="objectivec">
+ <div class="code-tab-pane">
+<pre><code class="objectivec">
     __weak IBOutlet UILabel * fontHeadline;
     __weak IBOutlet UILabel * fontFootNote;
     
@@ -2070,11 +2111,11 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
     let fontHeadMetrics = UIFontMetrics(forTextStyle: .headline)
     fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
 </code></pre>
-<ul>
-<li>penser à écouter la notification <strong>UIContentSizeCategoryDidChange</strong> qui annonce le changement de la taille du texte à partir des paramètres du téléphone.<br>
-Cette tâche est simplifiée depuis iOS10 où l'attribut <strong>adjustsFontForContentSizeCategory</strong> se charge de la mise à jour automatique de la nouvelle taille de la police système au sein de l'application (cet attribut ne peut s'appliquer aux polices personnalisées qu'avec l'utilisation de <code>UIFontMetrics</code> depuis iOS11).<br>
-Il est aussi possible d'utiliser la méthode <strong><a href="../wwdc/2017/245/#exemple-2432">traitCollectionDidChange</a></strong> du protocole informel <code>UITraitEnvironment</code> qui sera automatiquement appelée dès qu'une modification concernant l'environnement de l'interface iOS surviendra (class/content size, portrait/paysage, constraste des couleurs...),</li>
-</ul>
+</div>
+ - penser à écouter la notification **UIContentSizeCategoryDidChange** qui annonce le changement de la taille du texte à partir des paramètres du téléphone.
+ Cette tâche est simplifiée depuis iOS10 où l'attribut **adjustsFontForContentSizeCategory** se charge de la mise à jour automatique de la nouvelle taille de la police système au sein de l'application (cet attribut ne peut s'appliquer aux polices personnalisées qu'avec l'utilisation de `UIFontMetrics` depuis iOS11).
+Il est aussi possible d'utiliser la méthode **[traitCollectionDidChange](../wwdc/2017/245/#exemple-2432)** du protocole informel `UITraitEnvironment` qui sera automatiquement appelée dès qu'une modification concernant l'environnement de l'interface iOS surviendra (class/content size, portrait/paysage, constraste des couleurs...),
+<div class="code-tab-pane">
 <pre><code class="objectivec">
     //Écoute de la notification annonçant le changement de taille de la police.
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -2107,13 +2148,10 @@ Il est aussi possible d'utiliser la méthode <strong><a href="../wwdc/2017/245/#
         fontFootNote.font = UIFont.preferredFont(forTextStyle: .footnote)
     }
 </code></pre>
+</div>
+ - ne pas oublier d'adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l'utilisation de valeurs dynamiques : penser à paramétrer les éléments inclus dans les navigation/tab/status bar et toolbar qui seront affichés via le **[Large Content Viewer](../wwdc/2019/261)**,
 <ul>
-<li>
-<p>ne pas oublier d'adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l'utilisation de valeurs dynamiques : penser à paramétrer les éléments inclus dans les navigation/tab/status bar et toolbar qui seront affichés via le <strong><a href="../wwdc/2019/261">Large Content Viewer</a></strong>,</p>
-</li>
-<li>
-<p>penser à adapter le <a href="../conception#couleurs">contraste des couleurs</a> à la taille de texte modifiée si nécessaire.</p>
-</li>
+<li>penser à adapter le <a href="../conception#couleurs">contraste des couleurs</a> à la taille de texte modifiée si nécessaire.</li>
 </ul>
 <p><br><strong>Depuis iOS 15</strong>, il est désormais possible de <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=878">limiter les seuils minimal et maximal</a> de modification de taille avec le <span lang="en">Dynamic Type</span> pour un élément <span lang="en">UIView</span> grâce à deux nouvelles propriétés : <strong><a href="https://developer.apple.com/documentation/uikit/uiview/3750924-minimumcontentsizecategory">minimumContentSizeCategory</a></strong> et <strong><a href="https://developer.apple.com/documentation/uikit/uiview/3750923-maximumcontentsizecategory">maximumContentSizeCategory</a></strong>.</p>
 <p>Il est toutefois nécessaire de bien garder à l'esprit que cette nouveauté iOS 15 n'est à utiliser que dans des situations spécifiques qui utilisent déjà le <span lang="en">Dynamic Type</span> mais dont les représentations extrêmes seraient plutôt néfastes à l'expérience utilisateur.</p>
@@ -2168,6 +2206,7 @@ Il est aussi possible d'utiliser la méthode <strong><a href="../wwdc/2017/245/#
 <div class="tab-pane" id="truncHyphen-Example" role="tabpanel">
 <p><img src="../../images/iOSdev/Troncature.png" alt="" class="img-fluid"><br>
 <br>L'idée est de spécifier l'utilisation d'un <code>NSMutableAttributedString</code> auquel on ajoute une propriété de type  <code>NSMutableParagraphStyle</code> comme indiqué par l'exemple ci-dessous :</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 @interface TruncationHyphen () {
     __weak IBOutlet UILabel * myLabel;
@@ -2226,6 +2265,7 @@ class TruncationHyphen: UIViewController {
     }
 }
 </code></pre>
+</div>
 </div>
 </div>
 <br><br>
@@ -2354,6 +2394,7 @@ class TruncationHyphen: UIViewController {
 <div class="tab-pane" id="largeContentViewer-Example" role="tabpanel">
 <p>Si le grossissement extrême d'un élément graphique risque de dégrader l'expérience utilisateur, on peut très simplement implémenter le <code>Large</code> <code>Content</code> <code>Viewer</code> sur cette vue pour obtenir le résultat grossi an milieu d'écran :</p>
 <p><img src="../../images/iOSdev/LargeContentViewer_2.png" alt="" class="img-fluid"></p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 @interface LogoViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView * myView;
@@ -2393,8 +2434,10 @@ class LogoViewController: UIViewController {
     }
 }
 </code></pre>
+</div>
 <p>De la même façon, pour un <strong>élément cliquable</strong> comme un bouton dont le grossissement pourrait devenir problématique, il est tout à fait possible d'utiliser cette fonctionnalité pour afficher son contenu et s'assurer que <strong>son action sera déclenchée dès que le doigt sera relevé</strong> :</p>
 <p><img src="../../images/iOSdev/LargeContentViewer_3.png" alt="" class="img-fluid"></p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 @interface ButtonViewController ()
 @property (weak, nonatomic) IBOutlet UIButton * myButton;
@@ -2440,6 +2483,7 @@ class ButtonViewController: UIViewController {
     }
 }
 </code></pre>
+</div>
 <p>Lorsque la <strong>gestuelle 'appui long' est déjà implémentée sur l'élément impacté</strong>, il est nécessaire d'utiliser la méthode <code>gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)</code> qui permettra de <a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=636">mettre en place concomitamment les deux gestuelles</a>.</p>
 </div>
 <div class="tab-pane" id="largeContentViewer-Links" role="tabpanel">
@@ -2518,6 +2562,7 @@ Certes, rien n'est bloquant mais, si l'on souhaite réellement mettre en place c
 <ul>
 <li>Pour aboutir à ce résultat, on définit tout d'abord une classe conteneur {<span lang="en">stepper</span> + <code>label</code>} qui va permettre la délégation pour la modification ultérieure de la valeur.</li>
 </ul>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 -===== StepperWrapper.h =====-
 NS_ASSUME_NONNULL_BEGIN
@@ -2594,9 +2639,11 @@ class StepperWrapper: UIStackView {
     }
 }
 </code></pre>
+</div>
 <ul>
 <li>Ensuite, il faut redéfinir les 2 méthodes du protocole implémenté pour indiquer ce qu'elles doivent réaliser avant de mettre à jour la valeur modifiée et de la présenter vocalement dans le <span lang="en">ViewController</span>.</li>
 </ul>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 NS_ASSUME_NONNULL_BEGIN
 @interface ContinuousAdjustableValues () &lt;AdjustableForAccessibilityDelegate&gt;
@@ -2664,6 +2711,7 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
     }
 }
 </code></pre>
+</div>
 </div>
 <div class="tab-pane" id="adjustable-Links" role="tabpanel">
 <ul>
@@ -2740,6 +2788,7 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
 <p>Que ce soit pour le lecteur d'écran ou le contrôle de sélection, la réalisation programmatique est exactement la même pour obtenir les actions souhaitées : l'exemple suivant sera illustré pour VoiceOver.</p>
 <p>Une solution consiste à <strong>associer à l'élément sélectionné un tableau d'actions</strong> dont le système se chargera d'indiquer automatiquement la présence en informant vocalement l'utilisateur de leur disponibilité.</p>
 <p><img src="../../images/iOSdev/Actions_2.png" alt="" class="img-fluid"></p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 @interface CustomActions ()
 @property (weak, nonatomic) IBOutlet UILabel * persoElt;
@@ -2822,6 +2871,7 @@ class CustomActions: UIViewController {
     }
 }
 </code></pre>
+</div>
 <p><br>Le code implémenté ci-dessus permet d'obtenir le résultat suivant par balayages successifs sur l'élément accessible sélectionné :</p>
 <p><img src="../../images/iOSdev/Actions_3.png" alt="accès aux actions avec voiceover en utilisant un balayage vers le haut" class="img-fluid"><br>
 <br>Pour plus d'informations sur ce sujet, ne pas hésiter à visualiser la vidéo <strong>Utiliser les actions personnalisées</strong> dont le <a href="../wwdc/2019/#utiliser-les-actions-personnalisees">résumé détaillé</a> se trouve dans la section WWDC de ce site.</p>
@@ -2884,6 +2934,7 @@ class CustomActions: UIViewController {
 </div>
 <div class="tab-pane" id="rotor-Example" role="tabpanel">
 <p>Le code fourni ci-dessous permet de compter et d'afficher le nombre de balayages haut et bas (finalité inutile avec le rotor mais qui permet de mettre en avant sa création programmatique).</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 @interface CustomRotor ()
 @property (weak, nonatomic) IBOutlet UILabel * rotorTitle;
@@ -2977,7 +3028,8 @@ class CustomRotor: UIViewController {
     }
 }
 </code></pre>
-<p><br>Le code implémenté ci-dessus permet d'obtenir le résultat suivant :</p>
+</div>
+<br>Le code implémenté ci-dessus permet d'obtenir le résultat suivant :
 <p><img src="../../images/iOSdev/CustomRotor_2.png" alt="changed display with a rotor option" class="img-fluid"></p>
 <p>L'utilisation d'un rotor personnalisé n'est pas du tout naturelle au sein d'une application, c'est pourquoi il est primordial de <strong>bien annoncer son fonctionnement et sa finalité</strong> pour faciliter au maximum l'expérience utilisateur.</p>
 <p>La majeure différence du rotor avec les actions personnalisées ou encore les valeurs continûment ajustables réside dans sa possible utilisation quel que soit l'élément sélectionné sur l'écran.</p>
@@ -3036,6 +3088,7 @@ class CustomRotor: UIViewController {
 <p>Plusieurs fonctions du <span lang="en">framework</span> <code>UIKit</code> permettent de connaître le statut des options d'accessibilité qui peut être modifié dans les réglages du terminal.</p>
 <p>La plus utile est certainement celle qui permet de savoir si <span lang="en">VoiceOver</span> est activé au moment de l’appel (<strong>UIAccessibilityIsVoiceOverRunning</strong>).</p>
 <p>Une présentation très visuelle de certaines fonctions, peut-être moins utiles à première vue, est faite lors d'une vidéo WWDC dont le contenu est <a href="../wwdc/2018/230/">parfaitement détaillé</a> sur ce site.</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
     BOOL isVoiveOverRunning = (UIAccessibilityIsVoiceOverRunning() ? 1 : 0);
     BOOL isSwitchControlRunning = (UIAccessibilityIsSwitchControlRunning() ? 1 : 0);
@@ -3049,12 +3102,14 @@ class CustomRotor: UIViewController {
     print("VoiceOver vaut \(isVoiceOverRunning) et SwichControl vaut \(isSwitchControlRunning).")
 </code></pre>
 </div>
+</div>
 <div class="tab-pane" id="a11yOptions-Events" role="tabpanel">
 <p>Le système iOS envoie un certain nombre d’événements d’accessibilité à destination des applications lors de la modification des options d’accessibilité.</p>
 <p>Par exemple, si <span lang="en">VoiceOver</span> est désactivé durant l’utilisation de l’application, celle-ci recevra l’événement <strong>UIAccessibilityVoiceOverStatusDidChangeNotification</strong>, ce qui peut être très utile couplé à la fonction <strong>UIAccessibilityIsVoiceOverRunning</strong> grâce à laquelle on peut exécuter un traitement particulier quand <span lang="en">VoiceOver</span> est activé.</p>
 <p>Mais que se passe-t-il si <span lang="en">VoiceOver</span> est désactivé alors que ce traitement a déjà eu lieu ?<br>
 C’est là que les événements système peuvent être utilisés et, en restant à leur écoute, il est possible d’appliquer des traitements spécifiques de manière dynamique.</p>
 <p>Dans l'exemple suivant, on appelle une méthode spécifique au moment où le statut de VoiceOver ou du Switch Control change.</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -3102,6 +3157,7 @@ C’est là que les événements système peuvent être utilisés et, en restant
         print("SWITCH CONTROL est \(switchControlStatus) et VOICE OVER est \(voiceOverStatus).")
     }
 </code></pre>
+</div>
 </div>
 <div class="tab-pane" id="a11yOptions-Recap" role="tabpanel">
 <p>Tous les <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc" style="text-decoration: underline;">événements</a> et les <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc" style="text-decoration: underline;">options d'accessibilité</a> sont disponibles sur la documentation officielle d'Apple.</p>
@@ -3181,15 +3237,18 @@ C’est là que les événements système peuvent être utilisés et, en restant
 </div>
 <div class="tab-pane" id="navBar-LeftBarItem" role="tabpanel">
 <p>Si on ne souhaite modifier que la vocalisation <span lang="en">VoiceOver</span> de cet élément sans en changer l'aspect, il suffit de lui fournir un nouveau <code>label</code> une fois la barre de navigation chargée.</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
     self.navigationController.navigationBar.backItem.accessibilityLabel = @"nouveau label pour le bouton de retour";
 </code></pre>
 <pre><code class="swift">
     navigationController?.navigationBar.backItem?.accessibilityLabel = "nouveau label pour le bouton de retour"
 </code></pre>
+</div>
 <p><br>La personnalisation de cet élément consiste souvent à <strong>afficher un chevron particulier sans texte</strong>.</p>
 <p><img src="../../images/iOSdev/NavigationBar_2.png" alt="" class="img-fluid"><br>
 <br>Les deux façons possibles de réalisation détaillées dans les exemples ci-dessous s'appuient sur le remplacement de l'élément standard par un <strong>UIBarButtonItem</strong> personnalisé avec une simple <strong>image fournie en entrée</strong> qui définit le chevron à présenter :</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
     UIBarButtonItem &#42; _a11yLeftBarButton;
     
@@ -3212,7 +3271,9 @@ C’est là que les événements système peuvent être utilisés et, en restant
     a11yLeftBarButton!.accessibilityLabel = "écran précédent"
     navigationItem.leftBarButtonItem = a11yLeftBarButton
 </code></pre>
+</div>
 <p><br>... ou avec une <strong>UIView</strong> pour laquelle une action doit être ajoutée pour définir le rôle du nouveau bouton : cette implémentation est plus longue que la précédente mais a l'avantage de <strong>fournir une <span lang="en">frame</span></strong> dont on va avoir besoin si l'on souhaite travailler sur l'ordre de lecture des éléments de la barre de navigation par exemple.</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
     var a11yLeftBarButton: UIBarButtonItem?
     
@@ -3246,10 +3307,12 @@ C’est là que les événements système peuvent être utilisés et, en restant
         
     navigationItem.leftBarButtonItem = a11yLeftBarButton
 </code></pre>
+</div>
 <p><br>L'implémentation de l'une ou l'autre de ces solutions va donc dépendre de l'utilisation ultérieure du nouvel élément avec <span lang="en">VoiceOver</span>.</p>
 </div>
 <div class="tab-pane" id="navBar-Title" role="tabpanel">
 <p>De façon à pouvoir utiliser rapidement les propriétés d'accessibilité du titre d'une barre de navigation, le plus simple est d'<strong>implémenter son contenu sous forme de <span lang="en">UIView</span></strong> :</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
     UILabel &#42; a11yTitleLabel = [[UILabel alloc]init];
     a11yTitleLabel.text = @"TITRE";
@@ -3267,9 +3330,11 @@ C’est là que les événements système peuvent être utilisés et, en restant
     navigationItem.titleView?.accessibilityLabel = "vocalisation du titre différente de l'écrit"
 </code></pre>
 </div>
+</div>
 <div class="tab-pane" id="navBar-RightBarItem" role="tabpanel">
 <p><img src="../../images/iOSdev/NavigationBar_3.png" alt="" class="img-fluid"><br>
 <br>À la création d'éléments dans la partie droite de la barre de navigation, l'utilisation de <span lang="en">UIView</span> est recommandée de façon à pouvoir interagir avec <span lang="en">VoiceOver</span> sans effectuer trop de modifications ultérieurement.</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
     UIBarButtonItem &#42; _a11yRightBarButton;
 
@@ -3311,6 +3376,7 @@ C’est là que les événements système peuvent être utilisés et, en restant
     navigationItem.rightBarButtonItem = a11yRightBarButton
 </code></pre>
 </div>
+</div>
 <div class="tab-pane" id="navBar-ReadingOrder" role="tabpanel">
 <p>Généralement, on n'a pas à toucher l'ordre de lecture <span lang="en">VoiceOver</span> pour les éléments de la barre de navigation mais il arrive pourtant que cela soit nécessaire ⟹ exemple d'une page de tutoriel pour laquelle <code>RightBarItem</code> permet de passer à la page suivante.</p>
 <p>De façon à pouvoir illustrer une modification d'ordre de lecture impactant les éléments de la barre de navigation, nous allons supposer que le <code>RightBarItem</code> doit être le dernier élément de la page atteint à l'aide de balayages horizontaux successifs avec un seul doigt.</p>
@@ -3323,6 +3389,7 @@ C’est là que les événements système peuvent être utilisés et, en restant
 <p><img src="../../images/iOSdev/NavigationBar_4.png" alt="" class="img-fluid"></p>
 <p>L'idée est de lire les éléments dans l'ordre suivant : LeftBarItem, titre, Label1, Label2, Label3, bouton 'ACTION', Label4, Label5 et RightBarItem.</p>
 <p>Dans un premier temps, on <strong>personnalise les éléments de la barre de navigation</strong> en s'appuyant sur les exemples de code fournis dans les autres onglets de cette section.</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 @interface NavigationBarReadingOrder() {
     UIBarButtonItem &#42; _a11yLeftBarButton;
@@ -3438,8 +3505,10 @@ class OrderViewController: UIViewController {
     }
 }
 </code></pre>
+</div>
 <p><br>Ensuite, on <strong>crée des éléments accessibles</strong> pour la barre de navigation et on <strong>spécifie l'ordre de lecture</strong> <span lang="en">VoiceOver</span> pour les éléments de la vue à l'aide de son tableau <code>accessibilityElements</code>.</p>
 <p>La vue et la barre de navigation étant deux conteneurs différents, on <strong>cache les éléments de la barre de navigation à <span lang="en">VoiceOver</span></strong> et on les transfère à la vue en les créant avec des coordonnées de focus appropriées.</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 @interface NavigationBarReadingOrder() {
     UIBarButtonItem &#42; _a11yLeftBarButton;
@@ -3548,6 +3617,7 @@ private func createA11yElts() {
                                        a11yRBB]
 }
 </code></pre>
+</div>
 <p><br>Le résultat correspond bien à l'ordre de lecture souhaité à l'aide de balayages successifs avec un doigt pour sélectionner les différents éléments accessibles.<br>
 <img src="../../images/iOSdev/NavigationBar_5.png" alt="" class="img-fluid"><br>
 <img src="../../images/iOSdev/NavigationBar_6.png" alt="" class="img-fluid"></p>
@@ -3621,6 +3691,7 @@ private func createA11yElts() {
   <li>réaliser une pause et repartir de l'endroit d'où l'on vient avec des méthodes d'instance `AVSpeechSynthesizer`.</li>
 </ul>
 <br>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 @interface SpeechSynthesis()  <AVSpeechSynthesizerDelegate> {
 
@@ -3778,8 +3849,10 @@ class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
 }
 </code></pre>
 </div>
+</div>
 <div class="tab-pane" id="speechSyn-Phonemes" role="tabpanel">
 <p>Lorsque des mots ont une consonance bien particulière ou que l'on souhaite réaliser une épellation spécifique, l'utilisation de la phonétique est fortement recommandée pour s'assurer du résultat.</p>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
     NSMutableAttributedString &#42; attrStr = [[NSMutableAttributedString alloc] initWithString:@"blablabla" 
                                                                              attributes:@{AVSpeechSynthesisIPANotationAttribute:@"mɔ̃.daj.fɔ.nə.fɔ̃.ksjɔ.nə.paʀ.fɛ.tə.ˈmɑ̃"}];
@@ -3800,6 +3873,7 @@ class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
 </code></pre>
+</div>
 <p>La génération de cette phonétique peut se faire en passant par les réglages du terminal.</p>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -3916,6 +3990,7 @@ class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
 </li>
 </ul>
 <br>
+<div class="code-tab-pane">
 <pre><code class="objectivec">
 @interface ViewController ()
 
@@ -4031,6 +4106,7 @@ class ViewController: UIViewController {
     }
 }
 </code></pre>
+</div>
 <p><br>Le rendu de ce code est visualisable ci-dessous :</p>
 <p><img src="../../images/iOSdev/ControleDeSelection_1.jpg" alt="rendu final avec le code implémenté" class="img-fluid"></p>
 <p>Les groupes créés permettent d'accéder directement aux éléments qu'ils contiennent dès qu'ils sont activés.</p>
@@ -4181,7 +4257,8 @@ class ViewController: UIViewController {
       const Application = {
         lang: "fr",
         vendors: {
-          highlightJS: true
+          highlightJS: true,
+          highlightTitle: false
         }
       }
     </script>
