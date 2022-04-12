@@ -1201,7 +1201,7 @@ int indexSwitch = 1;
 </div>
 <div class="tab-pane" id="groupElts-Example2" role="tabpanel">
 <p>We have a button, a label and a switch control to be regrouped in a single block whose activation will change the switch control status automatically without defining any action like before.</p>
-<p>The easiest way would be to place the switch control in the middle of the created frame in order to locate its <a style="text-decoration: underline" role="button" onclick="$('#focusArea-Details_tab').trigger('click');document.getElementById('focusArea-Details').scrollIntoView({ behavior: 'smooth', block: 'start' })">accessibilityActivationPoint</a> directly on it but, unfortunately, that's not always possible.</p>
+<p>The easiest way would be to place the switch control in the middle of the created frame in order to locate its <button class="btn btn-link" onclick="tabPanelFocus('focusArea-Details_tab','focusArea-Details')">accessibilityActivationPoint</button> directly on it but, unfortunately, that's not always possible.</p>
 <p>A new accessible element must then be created to gather all the desired objects and its <strong>accessibilityActivationPoint</strong> has to be defined on the switch control.</p>
 <p><img src="../../images/iOSdev/GrouperDesElements_2.png" alt="" class="img-fluid"></p>
 <pre><code class="objectivec">
@@ -1714,7 +1714,7 @@ Usually, for an element inheriting from <code>UIView</code>, this area is the «
 The default value is the midpoint of the <code>frame</code> but it can be redefine anywhere inside.</p>
 </li>
 </ul>
-<p>A classical use case could be an easy activation inside a <a style="text-decoration: underline" role="button" onclick="$('#groupElts-Example2_tab').trigger('click');document.getElementById('groupElts-Example2').scrollIntoView({ behavior: 'smooth', block: 'start' })">regroupment of elements</a> for instance.</p>
+<p>A classical use case could be an easy activation inside a <button class="btn btn-link" onclick="tabPanelFocus('groupElts-Example2_tab','groupElts-Example2')">regroupment of elements</button> for instance.</p>
 <p><img src="../../images/iOSdev/ModifierLaZoneDeFocus_2.png" alt="" class="img-fluid"><br>
 By keeping this default value, one might unwillingly activate the element in the middle of the frame only by activating the created regroupment.</p>
 </div>

@@ -219,17 +219,17 @@
 <ul>
 <li><strong>CUSTOM ROTORS FOR MAPS</strong>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ContextForMaps_tab').trigger('click');document.getElementById('custom-rotors-for-maps').scrollIntoView({ behavior: 'smooth', block: 'start' })">Context</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ImplementationForMaps_tab').trigger('click');document.getElementById('custom-rotors-for-maps').scrollIntoView({ behavior: 'smooth', block: 'start' })">Implementation</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#FinalAppForMaps_tab').trigger('click');document.getElementById('custom-rotors-for-maps').scrollIntoView({ behavior: 'smooth', block: 'start' })">Example</a><br>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ContextForMaps_tab','custom-rotors-for-maps')">Context</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ImplementationForMaps_tab','custom-rotors-for-maps')">Implementation</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('FinalAppForMaps_tab','custom-rotors-for-maps')">Example</button><br>
 <br></li>
 </ul>
 </li>
 <li><strong>CUSTOM ROTORS FOR TEXT</strong>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ContextForText_tab').trigger('click');document.getElementById('custom-rotors-for-text').scrollIntoView({ behavior: 'smooth', block: 'start' })">Context</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ImplementationForText_tab').trigger('click');document.getElementById('custom-rotors-for-text').scrollIntoView({ behavior: 'smooth', block: 'start' })">Implementation</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#FinalAppForText_tab').trigger('click');document.getElementById('custom-rotors-for-text').scrollIntoView({ behavior: 'smooth', block: 'start' })">Example</a></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ContextForText_tab','custom-rotors-for-text')">Context</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ContextForMaps_tab','custom-rotors-for-text')">Implementation</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ContextForMaps_tab','custom-rotors-for-text')">Example</button></li>
 </ul>
 </li>
 </ul>
@@ -319,7 +319,7 @@ Thereafter, according to the presentation configuration, the selection of a titl
 </div>
 <div class="tab-pane" id="ImplementationForText" role="tabpanel">
 <p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10116/?time=461">🎬 (07:41)</a><br>
-</br>Let's improve the example in the <code>Context</code> tab following the same <a style="text-decoration: underline;" role="button" onclick="$('#ImplementationForMaps_tab').trigger('click');document.getElementById('custom-rotors-for-maps').scrollIntoView({ behavior: 'smooth', block: 'start' })">method used for maps</a> but only with one single item whose aim will be to filter the alerts.</p>
+</br>Let's improve the example in the <code>Context</code> tab following the same <button class="btn btn-link" onclick="tabPanelFocus('ImplementationForMaps_tab','custom-rotors-for-maps')">method used for maps</button> but only with one single item whose aim will be to filter the alerts.</p>
 <p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForText_Implementation_1.png" alt="" class="img-fluid"><br>
 </br>As usual when dealing with text, filtering consists of working with range and size for the final implementation.</p>
 <p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForText_Implementation_2.png" alt="" class="img-fluid"></p>

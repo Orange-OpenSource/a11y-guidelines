@@ -249,24 +249,24 @@
 <ul>
 <li><strong>Dynamic Type</strong>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#DynamicType-TheFourPrinciples_tab').trigger('click');document.getElementById('dynamic-type').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Four Principles</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#DynamicType-TextStyles_tab').trigger('click');document.getElementById('dynamic-type').scrollIntoView({ behavior: 'smooth', block: 'start' })">Text Styles</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#DynamicType-Xcode_tab').trigger('click');document.getElementById('dynamic-type').scrollIntoView({ behavior: 'smooth', block: 'start' })">Xcode</a> ⟹ <strong>iOS 13 new feature</strong><br>
+<li><button class="btn btn-link" onclick="tabPanelFocus('DynamicType-TheFourPrinciples_tab','dynamic-type')">The Four Principles</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('DynamicType-TextStyles_tab','dynamic-type')">Text Styles</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('DynamicType-Xcode_tab','dynamic-type')">Xcode</button> ⟹ <strong>iOS 13 new feature</strong><br>
 <br></li>
 </ul>
 </li>
 <li><strong>Reduce motion</strong>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ReduceMotion-TheBasics_tab').trigger('click');document.getElementById('reduce-motion').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Basics</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ReduceMotion-AutoplayingVideo_tab').trigger('click');document.getElementById('reduce-motion').scrollIntoView({ behavior: 'smooth', block: 'start' })">Autoplaying Video</a> ⟹ <strong>iOS 13 new feature</strong></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ReduceMotion-ScreenTransitions_tab').trigger('click');document.getElementById('reduce-motion').scrollIntoView({ behavior: 'smooth', block: 'start' })">Screen Transitions</a> ⟹ <strong>iOS 13 new feature</strong><br>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ReduceMotion-TheBasics_tab','reduce-motion')">The Basics</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ReduceMotion-AutoplayingVideo_tab','reduce-motion')">Autoplaying Video</button> ⟹ <strong>iOS 13 new feature</strong></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ReduceMotion-ScreenTransitions_tab','reduce-motion')">Screen Transitions</button> ⟹ <strong>iOS 13 new feature</strong><br>
 <br></li>
 </ul>
 </li>
 <li><strong>Color</strong>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#Color-TheBasics_tab').trigger('click');document.getElementById('color').scrollIntoView({ behavior: 'smooth', block: 'start' })">The Basics</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#Color-DifferentiateWithoutColor_tab').trigger('click');document.getElementById('color').scrollIntoView({ behavior: 'smooth', block: 'start' })">Differentiate Without Color</a> ⟹ <strong>iOS 13 new feature</strong></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('Color-TheBasics_tab','color')">The Basics</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('Color-DifferentiateWithoutColor_tab','color')">Differentiate Without Color</button> ⟹ <strong>iOS 13 new feature</strong></li>
 </ul>
 </li>
 </ul>
@@ -305,11 +305,8 @@
 <br>The use of <code>Dynamic</code> <code>Type</code> is based on four principles that are highly recommended to be followed:<br></p>
 <ul>
   <li>If the text can be dynamic, it must be implemented to reach this purpose.</li>
-    <br>
   <li>Use as much of the screen width as possible.</li>
-    <br>
   <li>Don't truncate text as it grows if it's not the case in the default user interface.</li>
-    <br>
   <li>Scale the glyphs next to text to make the interface look balanced. </li>
 </ul>
 </div>
@@ -516,10 +513,10 @@ If this option is deactivated, the video control must be regained only under the
 <p><a href="#introduction-0012">Introduction</a> (00:12)</p>
 </li>
 <li>
-<p><a role="button" style="text-decoration: underline" onclick="$('#CustomActions-VoiceOver_tab').trigger('click');document.getElementById('custom-actions').scrollIntoView({ behavior: 'smooth', block: 'start' });">Custom Actions: VoiceOver</a> (03:10)</p>
+<p><button class="btn btn-link" onclick="tabPanelFocus('CustomActions-VoiceOver_tab','custom-actions')">Custom Actions: VoiceOver</button> (03:10)</p>
 </li>
 <li>
-<p><a role="button" style="text-decoration: underline" onclick="$('#CustomActions-SwitchControl_tab').trigger('click');document.getElementById('custom-actions').scrollIntoView({ behavior: 'smooth', block: 'start' })">Custom Actions: Switch Control</a> (04:28)</p>
+<p><button class="btn btn-link" onclick="tabPanelFocus('ustomActions-SwitchControl_tab','custom-actions')">Custom Actions: Switch Control</button> (04:28)</p>
 </li>
 <li>
 <p><a href="#implementation-0759">Implementation</a> (07:59) ⟹ <strong>iOS 13 new syntax</strong><br>

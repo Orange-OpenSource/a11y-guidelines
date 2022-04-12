@@ -230,11 +230,11 @@
 <ul>
 <li><strong>Overview</strong>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#OverviewUserGuide_tab').trigger('click');document.getElementById('OverviewUserGuide').scrollIntoView({ behavior: 'smooth', block: 'start' })">Principles</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#OverviewCustomPurpose_tab').trigger('click');document.getElementById('OverviewCustomPurpose').scrollIntoView({ behavior: 'smooth', block: 'start' })">Customization goal</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#OverviewVoiceOver_tab').trigger('click');document.getElementById('OverviewVoiceOver').scrollIntoView({ behavior: 'smooth', block: 'start' })">VoiceOver impacts</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#OverviewCustomActions_tab').trigger('click');document.getElementById('OverviewCustomActions').scrollIntoView({ behavior: 'smooth', block: 'start' })">Custom actions</a> ⟹ <strong>new in iOS 14</strong></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#OverviewDemo_tab').trigger('click');document.getElementById('OverviewDemo').scrollIntoView({ behavior: 'smooth', block: 'start' })">Demo application</a><br>
+<li><button class="btn btn-link" onclick="tabPanelFocus('OverviewUserGuide_tab','OverviewUserGuide')">Principles</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('OverviewCustomPurpose_tab','OverviewCustomPurpose')">Customization goal</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('OverviewVoiceOver_tab','OverviewVoiceOver')">VoiceOver impacts</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('OverviewCustomActions_tab','OverviewCustomActions')">Custom actions</button> ⟹ <strong>new in iOS 14</strong></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('OverviewDemo_tab','OverviewDemo')">Demo application</button><br>
 <br></li>
 </ul>
 </li>
@@ -242,15 +242,15 @@
 <ul>
 <li><a href="#navigation-improvements-by-ordering">Ordering</a>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ImprovementByOrderingContext_tab').trigger('click');document.getElementById('ImprovementByOrderingContext').scrollIntoView({ behavior: 'smooth', block: 'start' })">Context</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ImprovementByOrderingSolution_tab').trigger('click');document.getElementById('ImprovementByOrderingSolution').scrollIntoView({ behavior: 'smooth', block: 'start' })">Solution</a></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ImprovementByOrderingContext_tab','ImprovementByOrderingContext')">Context</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ImprovementByOrderingSolution_tab','ImprovementByOrderingSolution')">Solution</button></li>
 </ul>
 </li>
 <li><a href="#navigation-improvements-by-taxonomy">Taxonomy</a>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ImprovementByTaxonomyContext_tab').trigger('click');document.getElementById('ImprovementByTaxonomyContext').scrollIntoView({ behavior: 'smooth', block: 'start' })">Context</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ImprovementByTaxonomySolution1_tab').trigger('click');document.getElementById('ImprovementByTaxonomySolution1').scrollIntoView({ behavior: 'smooth', block: 'start' })">Solution 1</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ImprovementByTaxonomySolution2_tab').trigger('click');document.getElementById('ImprovementByTaxonomySolution2').scrollIntoView({ behavior: 'smooth', block: 'start' })">Solution 2</a><br>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ImprovementByTaxonomyContext_tab','ImprovementByTaxonomyContext')">Context</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ImprovementByTaxonomySolution1_tab','ImprovementByTaxonomySolution1')">Solution 1</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ImprovementByTaxonomySolution2_tab','ImprovementByTaxonomySolution2')">Solution 2</button><br>
 <br></li>
 </ul>
 </li>
@@ -258,12 +258,12 @@
 </li>
 <li><strong>Good practice</strong>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices1_tab').trigger('click');document.getElementById('BestPractices1').scrollIntoView({ behavior: 'smooth', block: 'start' })">1.  Check the control switch feature option state.</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices2_tab').trigger('click');document.getElementById('BestPractices2').scrollIntoView({ behavior: 'smooth', block: 'start' })">2.  <code>accessibilityRespondsToUserInteraction</code>.</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices3_tab').trigger('click');document.getElementById('BestPractices3').scrollIntoView({ behavior: 'smooth', block: 'start' })">3.  Confirm destructive behaviors.</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices4_tab').trigger('click');document.getElementById('BestPractices4').scrollIntoView({ behavior: 'smooth', block: 'start' })">4.  No timeouts.</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices5_tab').trigger('click');document.getElementById('BestPractices5').scrollIntoView({ behavior: 'smooth', block: 'start' })">5.  Group elements for scanning efficiency and speed.</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#BestPractices6_tab').trigger('click');document.getElementById('BestPractices6').scrollIntoView({ behavior: 'smooth', block: 'start' })">6.  Don't keep private user info on screen.</a></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('BestPractices1_tab','BestPractices1')">1.  Check the control switch feature option state.</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('BestPractices2_tab','BestPractices2')">2.  <code>accessibilityRespondsToUserInteraction</code>.</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('BestPractices3_tab','BestPractices3')">3.  Confirm destructive behaviors.</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('BestPractices4_tab','BestPractices4')">4.  No timeouts.</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('BestPractices5_tab','BestPractices5')">5.  Group elements for scanning efficiency and speed.</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('BestPractices6_tab','BestPractices6')">6.  Don't keep private user info on screen.</button></li>
 </ul>
 </li>
 </ul>

@@ -340,7 +340,7 @@ For light sensitive persons, a pure black text on a pure white background may si
 </ul>
 <p></br>Adding different forms to differentiate the information provided only by colours may unnecessarily overlay the graphic interface if the user doesn't need them.</p>
 <p><img src="../../images/color_contrast_4.png" alt="" class="img-fluid"><br>
-<br>In this case, the <a style="text-decoration: underline" role="button" onclick="$('#a11yOptions-Description_tab').trigger('click');document.getElementById('a11yOptions-Description').scrollIntoView({ behavior: 'smooth', block: 'start' })">Differentiate Without Colour</a> accessibility option will allow this display <strong>only at the user's demand</strong>.</p>
+<br>In this case, the <button class="btn btn-link" onclick="tabPanelFocus('a11yOptions-Description_tab','a11yOptions-Description')">Differentiate Without Colour</button> accessibility option will allow this display <strong>only at the user's demand</strong>.</p>
 <p></br><strong>Tools:</strong></p>
 <ul>
 <li>
@@ -368,7 +368,7 @@ The label “film | 8:40 PM…” does not have enough contrast and will not be 
 <p>The contrast between the colour of the background and the text must be appropriate (can be measured with the Colour Contrast Analyser tool or with the <a href="../wwdc/2019/#color-contrast-0626">Color Contrast Calculator</a> feature of Accessibility Inspector since Xcode 11).</p>
 </li>
 <li>
-<p>With the <strong>Dark Mode</strong> since iOS 13, special attention must be paid to the contrasts used in the different themes and that can be modified with the <a style="text-decoration: underline" role="button" onclick="$('#a11yOptions-Description_tab').trigger('click');document.getElementById('a11yOptions-Description').scrollIntoView({ behavior: 'smooth', block: 'start' })">Increase Contrast</a> accessibility option.</p>
+<p>With the <strong>Dark Mode</strong> since iOS 13, special attention must be paid to the contrasts used in the different themes and that can be modified with the <button class="btn btn-link" onclick="tabPanelFocus('a11yOptions-Description_tab','a11yOptions-Description')">Increase Contrast</button> accessibility option.</p>
 </li>
 <li>
 <p>The <a href="../wwdc/2020/020/" style="text-decoration: underline;">detailed summary</a> of the WWDC 2020 video entitled <strong>Make Your App Visually Accessible</strong> is a perfect start to follow the appropriate instructions (especially the section 'COLOR &amp; SHAPES' - 'Contrast').</p>

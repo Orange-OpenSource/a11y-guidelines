@@ -219,17 +219,17 @@
 <ul>
 <li><strong>UTILISATION POUR LES PLANS</strong>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ContextForMaps_tab').trigger('click');document.getElementById('utilisation-pour-les-plans').scrollIntoView({ behavior: 'smooth', block: 'start' })">Contexte</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ImplementationForMaps_tab').trigger('click');document.getElementById('utilisation-pour-les-plans').scrollIntoView({ behavior: 'smooth', block: 'start' })">Implémentation</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#FinalAppForMaps_tab').trigger('click');document.getElementById('utilisation-pour-les-plans').scrollIntoView({ behavior: 'smooth', block: 'start' })">Exemple</a><br>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ContextForMaps_tab','utilisation-pour-les-plans')">Contexte</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ImplementationForMaps_tab','utilisation-pour-les-plans')">Implémentation</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('FinalAppForMaps_tab','utilisation-pour-les-plans')">Exemple</button><br>
 <br></li>
 </ul>
 </li>
 <li><strong>UTILISATION POUR LES TEXTES</strong>
 <ul>
-<li><a role="button"  style="text-decoration: underline" onclick="$('#ContextForText_tab').trigger('click');document.getElementById('utilisation-pour-les-textes').scrollIntoView({ behavior: 'smooth', block: 'start' })">Contexte</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ImplementationForText_tab').trigger('click');document.getElementById('utilisation-pour-les-textes').scrollIntoView({ behavior: 'smooth', block: 'start' })">Implémentation</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#FinalAppForText_tab').trigger('click');document.getElementById('utilisation-pour-les-textes').scrollIntoView({ behavior: 'smooth', block: 'start' })">Exemple</a></li>
+<li><a role="button"  style="text-decoration: underline" onclick="tabPanelFocus('ContextForText_tab','utilisation-pour-les-textes')">Contexte</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ImplementationForText_tab','utilisation-pour-les-textes')">Implémentation</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('FinalAppForText_tab','utilisation-pour-les-textes')">Exemple</button></li>
 </ul>
 </li>
 </ul>
@@ -319,7 +319,7 @@ Par la suite, selon la configuration de la présentation, le fait de cliquer sur
 </div>
 <div class="tab-pane" id="ImplementationForText" role="tabpanel">
 <p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10116/?time=461">🎬 (07:41)</a><br>
-</br>Pour reprendre et améliorer l'exemple fourni dans l'onglet <code>Contexte</code>, on va s'appuyer sur ce qui a été implémenté pour <a style="text-decoration: underline;" role="button" onclick="$('#ImplementationForMaps_tab').trigger('click');document.getElementById('utilisation-pour-les-plans').scrollIntoView({ behavior: 'smooth', block: 'start' })">les plans</a> mais avec une seule action à insérer dans le rotor pour filtrer uniquement les alertes remontées.</p>
+</br>Pour reprendre et améliorer l'exemple fourni dans l'onglet <code>Contexte</code>, on va s'appuyer sur ce qui a été implémenté pour <button class="btn btn-link" onclick="tabPanelFocus('ImplementationForMaps_tab','utilisation-pour-les-plans')">les plans</button> mais avec une seule action à insérer dans le rotor pour filtrer uniquement les alertes remontées.</p>
 <p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForText_Implementation_1.png" alt="" class="img-fluid"><br>
 </br>Comme il s'agit de texte, la définition des éléments à filtrer va entièrement se structurer autour de leur emplacement et de leur taille.</p>
 <p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForText_Implementation_2.png" alt="" class="img-fluid"></p>

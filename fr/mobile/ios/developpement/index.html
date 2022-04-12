@@ -1221,7 +1221,7 @@ int indexSwitch = 1;
 </div>
 <div class="tab-pane" id="groupElts-Example2" role="tabpanel">
 <p>Nous avons un 'label', un 'switch control' et un bouton que nous souhaitons regrouper en un seul bloc dont l'activation changera automatiquement l'état du 'switch control' sans avoir à définir une action comme précédemment.</p>
-<p>L'idée la plus simple consisterait à placer le 'switch control' au milieu de la nouvelle <code>frame</code> créée de façon à avoir son <a style="text-decoration: underline" role="button" onclick="$('#focusArea-Details_tab').trigger('click');document.getElementById('focusArea-Details').scrollIntoView({ behavior: 'smooth', block: 'start' })">accessibilityActivationPoint</a> directement dessus.</p>
+<p>L'idée la plus simple consisterait à placer le 'switch control' au milieu de la nouvelle <code>frame</code> créée de façon à avoir son <button class="btn btn-link" onclick="tabPanelFocus('focusArea-Details_tab','focusArea-Details')">accessibilityActivationPoint</button> directement dessus.</p>
 <p>Cela n'étant malheureusement pas toujours possible, il va donc falloir créer un élément accessible qui regroupera tous les objets impactés puis définir son <strong>accessibilityActivationPoint</strong> sur le 'switch control'.</p>
 <p><img src="../../images/iOSdev/GrouperDesElements_2.png" alt="" class="img-fluid"></p>
 <pre><code class="objectivec">
@@ -1730,7 +1730,7 @@ extension UIView {
 </li>
 <li>
 <p><strong>accessibilityActivationPoint</strong> : définit un point de contact au sein de la <code>frame</code> dont l'action résultante sera activée par une sélection classique d'élément via un double tap.<br>
-Par défaut, ce point se trouve au centre de la <code>frame</code> mais on peut le définir n'importe à l'intérieur de cette dernière, l'idée étant de pouvoir activer un élement facilement lors d'un <a style="text-decoration: underline" role="button" onclick="$('#groupElts-Example2_tab').trigger('click');document.getElementById('groupElts-Example2').scrollIntoView({ behavior: 'smooth', block: 'start' })">regroupement par exemple</a>.</p>
+Par défaut, ce point se trouve au centre de la <code>frame</code> mais on peut le définir n'importe à l'intérieur de cette dernière, l'idée étant de pouvoir activer un élement facilement lors d'un <button class="btn btn-link" onclick="tabPanelFocus('groupElts-Example2_tab','groupElts-Example2')">regroupement par exemple</button>.</p>
 </li>
 </ul>
 <p><img src="../../images/iOSdev/ModifierLaZoneDeFocus_2.png" alt="" class="img-fluid"></p>

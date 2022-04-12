@@ -220,26 +220,26 @@
 <br></li>
 <li><strong>Color &amp; shapes</strong>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ColorAndShapesOverview_tab').trigger('click');document.getElementById('color-shapes').scrollIntoView({ behavior: 'smooth', block: 'start' })">Overview</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ColorAndShapesSettings_tab').trigger('click');document.getElementById('color-shapes').scrollIntoView({ behavior: 'smooth', block: 'start' })">User settings</a> ⟹ <strong>new in iOS 14</strong></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ColorAndShapesSFSymbols_tab').trigger('click');document.getElementById('color-shapes').scrollIntoView({ behavior: 'smooth', block: 'start' })">SF Symbols</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ColorAndShapesContrast_tab').trigger('click');document.getElementById('color-shapes').scrollIntoView({ behavior: 'smooth', block: 'start' })">Color contrast</a><br>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ColorAndShapesOverview_tab','color-shapes')">Overview</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ColorAndShapesSettings_tab','color-shapes')">User settings</button> ⟹ <strong>new in iOS 14</strong></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ColorAndShapesSFSymbols_tab','color-shapes')">SF Symbols</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ColorAndShapesContrast_tab','color-shapes')">Color contrast</button><br>
 <br></li>
 </ul>
 </li>
 <li><strong>Text readibility</strong>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#TextReadibilityOverview_tab').trigger('click');document.getElementById('text-readibility').scrollIntoView({ behavior: 'smooth', block: 'start' })">Overview</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#TextReadibilityNotification_tab').trigger('click');document.getElementById('text-readibility').scrollIntoView({ behavior: 'smooth', block: 'start' })">Size text notification</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#TextReadibilityBold_tab').trigger('click');document.getElementById('text-readibility').scrollIntoView({ behavior: 'smooth', block: 'start' })">Bold text</a><br>
+<li><button class="btn btn-link" onclick="tabPanelFocus('TextReadibilityOverview_tab','text-readibility')">Overview</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('TextReadibilityNotification_tab','text-readibility')">Size text notification</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('TextReadibilityBold_tab','text-readibility')">Bold text</button><br>
 <br></li>
 </ul>
 </li>
 <li><strong>Display preferences</strong>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#DisplayPreferencesOverview_tab').trigger('click');document.getElementById('display-preferences').scrollIntoView({ behavior: 'smooth', block: 'start' })">Overview</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#DisplayPreferencesMotion_tab').trigger('click');document.getElementById('display-preferences').scrollIntoView({ behavior: 'smooth', block: 'start' })">Motion sensitivity</a> ⟹ <strong>new in iOS 14</strong></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#DisplayPreferencesTransparency_tab').trigger('click');document.getElementById('display-preferences').scrollIntoView({ behavior: 'smooth', block: 'start' })">Reduce transparency</a></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('DisplayPreferencesOverview_tab','display-preferences')">Overview</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('DisplayPreferencesMotion_tab','display-preferences')">Motion sensitivity</button> ⟹ <strong>new in iOS 14</strong></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('DisplayPreferencesTransparency_tab','display-preferences')">Reduce transparency</button></li>
 </ul>
 </li>
 </ul>
@@ -299,7 +299,7 @@ Unfortunately, that won't be efficient at all for people suffering from dyschrom
 <div class="tab-pane" id="ColorAndShapesSFSymbols" role="tabpanel" >
 <p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=206">🎬 (03:26)</a><br>
 </br>The <code>SF</code> <code>Symbols</code> introduced in iOS 13 automatically adapt to the <code>Dynamic Type</code> feature and the <a href="../../../design/#accessibility-options" style="text-decoration: underline;"><code>Bold</code> <code>Text</code></a> user setting as well so as to alleviate the necessary graphical work for accessibility.<br>
-</br>These elements are discussed in depth in the footage of the <a style="text-decoration: underline;" role="button" onclick="$('#TextReadibilityNotification_tab').trigger('click');document.getElementById('lisibilite-du-texte').scrollIntoView({ behavior: 'smooth', block: 'start' })">notification </a> sheet inside the <code>Text Readibility</code> section.</p>
+</br>These elements are discussed in depth in the footage of the <button class="btn btn-link" onclick="tabPanelFocus('TextReadibilityNotification_tab','lisibilite-du-texte')">notification </button> sheet inside the <code>Text Readibility</code> section.</p>
 </div>
 <div class="tab-pane" id="ColorAndShapesContrast" role="tabpanel" >
 <p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=318">🎬 (05:18)</a><br>

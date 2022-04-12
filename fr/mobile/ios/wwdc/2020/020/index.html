@@ -220,26 +220,26 @@
 <br></li>
 <li><strong>Couleur &amp; formes</strong>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ColorAndShapesOverview_tab').trigger('click');document.getElementById('ColorAndShapes').scrollIntoView({ behavior: 'smooth', block: 'start' })">Généralités</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ColorAndShapesSettings_tab').trigger('click');document.getElementById('couleur-formes').scrollIntoView({ behavior: 'smooth', block: 'start' })">Préférences utilisateurs</a> ⟹ <strong>nouveauté iOS 14</strong></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ColorAndShapesSFSymbols_tab').trigger('click');document.getElementById('couleur-formes').scrollIntoView({ behavior: 'smooth', block: 'start' })">Utilisation des SF Symbol</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#ColorAndShapesContrast_tab').trigger('click');document.getElementById('couleur-formes').scrollIntoView({ behavior: 'smooth', block: 'start' })">Contraste des couleurs</a><br>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ColorAndShapesOverview_tab','ColorAndShapes')">Généralités</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ColorAndShapesSettings_tab','couleur-formes')">Préférences utilisateurs</button> ⟹ <strong>nouveauté iOS 14</strong></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ColorAndShapesSFSymbols_tab','couleur-formes')">Utilisation des SF Symbol</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('ColorAndShapesContrast_tab','couleur-formes')">Contraste des couleurs</button><br>
 <br></li>
 </ul>
 </li>
 <li><strong>Lisibilité du texte</strong>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#TextReadibilityOverview_tab').trigger('click');document.getElementById('lisibilite-du-texte').scrollIntoView({ behavior: 'smooth', block: 'start' })">Généralités</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#TextReadibilityNotification_tab').trigger('click');document.getElementById('lisibilite-du-texte').scrollIntoView({ behavior: 'smooth', block: 'start' })">Notification pour taille de texte modifiée</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#TextReadibilityBold_tab').trigger('click');document.getElementById('lisibilite-du-texte').scrollIntoView({ behavior: 'smooth', block: 'start' })">Texte en gras</a><br>
+<li><button class="btn btn-link" onclick="tabPanelFocus('TextReadibilityOverview_tab','lisibilite-du-texte')">Généralités</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('TextReadibilityNotification_tab','lisibilite-du-texte')">Notification pour taille de texte modifiée</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('TextReadibilityBold_tab','lisibilite-du-texte')">Texte en gras</button><br>
 <br></li>
 </ul>
 </li>
 <li><strong>Préférences utilisateur</strong>
 <ul>
-<li><a role="button" style="text-decoration: underline" onclick="$('#DisplayPreferencesOverview_tab').trigger('click');document.getElementById('preferences-utilisateur').scrollIntoView({ behavior: 'smooth', block: 'start' })">Généralités</a></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#DisplayPreferencesMotion_tab').trigger('click');document.getElementById('preferences-utilisateur').scrollIntoView({ behavior: 'smooth', block: 'start' })">Réduire les actions visuelles</a> ⟹ <strong>nouveauté iOS 14</strong></li>
-<li><a role="button" style="text-decoration: underline" onclick="$('#DisplayPreferencesTransparency_tab').trigger('click');document.getElementById('preferences-utilisateur').scrollIntoView({ behavior: 'smooth', block: 'start' })">Diminuer la transparence</a></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('DisplayPreferencesOverview_tab','preferences-utilisateur')">Généralités</button></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('DisplayPreferencesMotion_tab','preferences-utilisateur')">Réduire les actions visuelles</button> ⟹ <strong>nouveauté iOS 14</strong></li>
+<li><button class="btn btn-link" onclick="tabPanelFocus('DisplayPreferencesTransparency_tab','preferences-utilisateur')">Diminuer la transparence</button></li>
 </ul>
 </li>
 </ul>
@@ -298,7 +298,7 @@ Par la suite, selon la configuration de la présentation, le fait de cliquer sur
 <div class="tab-pane" id="ColorAndShapesSFSymbols" role="tabpanel" >
 <p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=206">🎬 (03:26)</a><br>
 </br>Les éléments <code>SF</code> <code>Symbol</code> sortis avec iOS 13 s'adaptent automatiquement au grossissement de texte ainsi qu'à la préférence système <a href="../../../conception/#options-daccessibilite" style="text-decoration: underline;"><code>Texte</code> <code>en</code> <code>gras</code></a> pour alléger le travail graphique à mettre en place pour l'accessilibilté.<br>
-</br>Ces éléments sont traités plus en détails dans la partie de la vidéo mentionnée dans l'onglet <a style="text-decoration: underline;" role="button" onclick="$('#TextReadibilityNotification_tab').trigger('click');document.getElementById('lisibilite-du-texte').scrollIntoView({ behavior: 'smooth', block: 'start' })">notification </a>du paragraphe suivant.</p>
+</br>Ces éléments sont traités plus en détails dans la partie de la vidéo mentionnée dans l'onglet <button class="btn btn-link" onclick="tabPanelFocus('TextReadibilityNotification_tab','lisibilite-du-texte')">notification </button>du paragraphe suivant.</p>
 </div>
 <div class="tab-pane" id="ColorAndShapesContrast" role="tabpanel" >
 <p><a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=318">🎬 (05:18)</a><br>

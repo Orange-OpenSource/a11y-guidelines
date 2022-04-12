@@ -339,7 +339,7 @@ Par exemple, pour les personnes sensibles à la lumière, l'utilisation d'un tex
 </ul>
 <p></br>Il existe cependant des cas où rajouter des motifs pour différencier les informations véhiculées uniquement par la couleur surcharge inutilement l'interface graphique si l'utilisateur n'en a pas besoin.</p>
 <p><img src="../../images/color_contrast_4.png" alt="" class="img-fluid"></p>
-<p>Dans ce cas, l'utilisation de l'option d'accessibilité <a style="text-decoration: underline" role="button" onclick="$('#a11yOptions-Description_tab').trigger('click');document.getElementById('options-daccessibilite').scrollIntoView({ behavior: 'smooth', block: 'start' })">différencier sans couleur</a> va permettre ce type d'affichage <strong>uniquement à la demande de l'utilisateur</strong>.<br>
+<p>Dans ce cas, l'utilisation de l'option d'accessibilité <button class="btn btn-link" onclick="tabPanelFocus('a11yOptions-Description_tab','options-daccessibilite')">différencier sans couleur</button> va permettre ce type d'affichage <strong>uniquement à la demande de l'utilisateur</strong>.<br>
 </br></br><strong>Outils :</strong></p>
 <ul>
 <li>
@@ -366,7 +366,7 @@ Par exemple, pour les personnes sensibles à la lumière, l'utilisation d'un tex
 <p>Le contraste entre les couleurs de texte et de fond doit aussi être suffisant (à calculer avec <span lang="en">Colour Contrast Analyzer</span> ou avec la fonctionnalité <a href="../wwdc/2019#contraste-des-couleurs-0626">Color Contrast Calculator</a> de l'outil <span lang="en">Accessibility Inspector</span> depuis Xcode 11).</p>
 </li>
 <li>
-<p>Avec l'arrivée du <strong>Mode Sombre</strong> en iOS 13, une attention toute particulière doit être portée sur les contrastes utilisés au sein des différents thèmes et pouvant être modifiés avec l'option d'accessibilité <a style="text-decoration: underline" role="button" onclick="$('#a11yOptions-Description_tab').trigger('click');document.getElementById('a11yOptions-Description').scrollIntoView({ behavior: 'smooth', block: 'start' })">augmenter le contraste</a>.</p>
+<p>Avec l'arrivée du <strong>Mode Sombre</strong> en iOS 13, une attention toute particulière doit être portée sur les contrastes utilisés au sein des différents thèmes et pouvant être modifiés avec l'option d'accessibilité <button class="btn btn-link" onclick="tabPanelFocus('a11yOptions-Description_tab','a11yOptions-Description')">augmenter le contraste</button>.</p>
 </li>
 <li>
 <p>Le <a href="../wwdc/2020/020/" style="text-decoration: underline;">résumé détaillé</a> de la vidéo WWDC 2020 intitulée <strong><span lang="en">Make Your App Visually Accessible</span></strong> est un excellent point d'entrée pour se faire une idée précise des directions à suivre (en particulier la partie 'COULEUR &amp; FORMES' - 'Contraste des couleurs').</p>
