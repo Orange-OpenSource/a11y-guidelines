@@ -133,7 +133,7 @@ These two elements propose to the greatest number a very comfortable reading tha
 </br>Adding different forms to differentiate the information provided only by colours may unnecessarily overlay the graphic interface if the user doesn't need them.
 
 ![](../../images/color_contrast_4.png)
-<br>In this case, the <a style="text-decoration: underline" role="button" onclick="$('#a11yOptions-Description_tab').trigger('click');document.getElementById('a11yOptions-Description').scrollIntoView({ behavior: 'smooth', block: 'start' })">Differentiate&nbsp;Without&nbsp;Colour</a> accessibility option will allow this display **only at the user's demand**.
+<br>In this case, the <button class="btn btn-link" onclick="tabPanelFocus('a11yOptions-Description_tab','a11yOptions-Description')">Differentiate&nbsp;Without&nbsp;Colour</button> accessibility option will allow this display **only at the user's demand**.
 
 </br>**Tools:**
 
@@ -157,7 +157,7 @@ The label “film | 8:40 PM…” does not have enough contrast and will not be 
 
 - The contrast between the colour of the background and the text must be appropriate (can be measured with the Colour Contrast Analyser tool or with the [Color&nbsp;Contrast&nbsp;Calculator](../wwdc/2019/#color-contrast-0626) feature of Accessibility Inspector since Xcode 11).
 
-- With the **Dark Mode** since iOS 13, special attention must be paid to the contrasts used in the different themes and that can be modified with the <a style="text-decoration: underline" role="button" onclick="$('#a11yOptions-Description_tab').trigger('click');document.getElementById('a11yOptions-Description').scrollIntoView({ behavior: 'smooth', block: 'start' })">Increase&nbsp;Contrast</a> accessibility option.
+- With the **Dark Mode** since iOS 13, special attention must be paid to the contrasts used in the different themes and that can be modified with the <button class="btn btn-link" onclick="tabPanelFocus('a11yOptions-Description_tab','a11yOptions-Description')">Increase&nbsp;Contrast</button> accessibility option.
 
 - The <a href="../wwdc/2020/020/" style="text-decoration: underline;">detailed summary</a> of the WWDC 2020 video entitled **Make Your App Visually Accessible** is a perfect start to follow the appropriate instructions (especially the section 'COLOR & SHAPES' - 'Contrast').
 </div>

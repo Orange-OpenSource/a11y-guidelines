@@ -26,18 +26,18 @@ Cette présentation visualisable sur le site développeur officiel d'<span lang=
 <br>Les thèmes abordés au sein de la vidéo sont détaillés ci-dessous :
 
 - **Dynamic Type**
-    - <a role="button" style="text-decoration: underline" onclick="$('#DynamicType-TheFourPrinciples_tab').trigger('click');document.getElementById('dynamic-type').scrollIntoView({ behavior: 'smooth', block: 'start' })">Les quatre principes</a>
-    - <a role="button" style="text-decoration: underline" onclick="$('#DynamicType-TextStyles_tab').trigger('click');document.getElementById('dynamic-type').scrollIntoView({ behavior: 'smooth', block: 'start' })">Les styles de texte</a>
-    - <a role="button" style="text-decoration: underline" onclick="$('#DynamicType-Xcode_tab').trigger('click');document.getElementById('dynamic-type').scrollIntoView({ behavior: 'smooth', block: 'start' })">Xcode</a> ⟹ **nouveauté iOS 13**
+    - <button class="btn btn-link" onclick="tabPanelFocus('DynamicType-TheFourPrinciples_tab','dynamic-type')">Les quatre principes</button>
+    - <button class="btn btn-link" onclick="tabPanelFocus('DynamicType-TextStyles_tab','dynamic-type')">Les styles de texte</button>
+    - <button class="btn btn-link" onclick="tabPanelFocus('DynamicType-Xcode_tab','dynamic-type')">Xcode</button> ⟹ **nouveauté iOS 13**
 <br>
 - **Réduction de mouvement**
-    - <a role="button" style="text-decoration: underline" onclick="$('#ReduceMotion-TheBasics_tab').trigger('click');document.getElementById('reduction-de-mouvement').scrollIntoView({ behavior: 'smooth', block: 'start' })">Fondamentaux</a>
-    - <a role="button" style="text-decoration: underline" onclick="$('#ReduceMotion-AutoplayingVideo_tab').trigger('click');document.getElementById('reduction-de-mouvement').scrollIntoView({ behavior: 'smooth', block: 'start' })">Prévisualisation vidéo</a> ⟹ **nouveauté iOS 13**
-    - <a role="button" style="text-decoration: underline" onclick="$('#ReduceMotion-ScreenTransitions_tab').trigger('click');document.getElementById('reduction-de-mouvement').scrollIntoView({ behavior: 'smooth', block: 'start' })">Transitions entre écrans</a> ⟹ **nouveauté iOS 13**
+    - <button class="btn btn-link" onclick="tabPanelFocus('ReduceMotion-TheBasics_tab','reduction-de-mouvement')">Fondamentaux</button>
+    - <button class="btn btn-link" onclick="tabPanelFocus('ReduceMotion-AutoplayingVideo_tab','reduction-de-mouvement')">Prévisualisation vidéo</button> ⟹ **nouveauté iOS 13**
+    - <button class="btn btn-link" onclick="tabPanelFocus('ReduceMotion-ScreenTransitions_tab','reduction-de-mouvement')">Transitions entre écrans</button> ⟹ **nouveauté iOS 13**
 <br>
 - **Couleur**
-    - <a role="button" style="text-decoration: underline" onclick="$('#Color-TheBasics_tab').trigger('click');document.getElementById('couleur').scrollIntoView({ behavior: 'smooth', block: 'start' })">Fondamentaux</a>
-    - <a role="button" style="text-decoration: underline" onclick="$('#Color-DifferentiateWithoutColor_tab').trigger('click');document.getElementById('couleur').scrollIntoView({ behavior: 'smooth', block: 'start' })">Couleur et forme</a> ⟹ **nouveauté iOS 13**
+    - <button class="btn btn-link" onclick="tabPanelFocus('Color-TheBasics_tab','couleur')">Fondamentaux</button>
+    - <button class="btn btn-link" onclick="tabPanelFocus('Color-DifferentiateWithoutColor_tab','couleur')">Couleur et forme</button> ⟹ **nouveauté iOS 13**
 
 <br><br>
 ### Dynamic Type
@@ -296,9 +296,9 @@ Cette présentation visualisable sur le **site développeur officiel d'<span lan
 
 - [Introduction](#introduction-0012) (00:12)
 
-- <a role="button" style="text-decoration: underline" onclick="$('#CustomActions-VoiceOver_tab').trigger('click');document.getElementById('actions-personnalisees').scrollIntoView({ behavior: 'smooth', block: 'start' })">Actions personnalisées&nbsp;: lecteur d'écran</a> (03:10)
+- <button class="btn btn-link" onclick="tabPanelFocus('CustomActions-VoiceOver_tab','actions-personnalisees')">Actions personnalisées&nbsp;: lecteur d'écran</button> (03:10)
 
-- <a role="button" style="text-decoration: underline" onclick="$('#CustomActions-SwitchControl_tab').trigger('click');document.getElementById('actions-personnalisees').scrollIntoView({ behavior: 'smooth', block: 'start' })">Actions personnalisées&nbsp;: contrôle de sélection</a> (04:28)
+- <button class="btn btn-link" onclick="tabPanelFocus('CustomActions-SwitchControl_tab','actions-personnalisees')">Actions personnalisées&nbsp;: contrôle de sélection</button> (04:28)
 
 - [Implémentation](#implementation-0759) (07:59) ⟹ **nouveauté iOS 13**
 <br><br><br>
