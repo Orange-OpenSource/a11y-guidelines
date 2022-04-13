@@ -81,7 +81,7 @@ L'attribut <code>scope</code> ne permet pas de résoudre ce problème. Il faut u
 
 Par exemple, on a deux cellules d'entêtes, <code>&lt;th id="toto"&gt;Toto&lt;/th&gt;</code> et <code>&lt;th id="tata"&gt;Tata&lt;/th&gt;</code>, le code pour la relier à une cellule de donnée sera <code>&lt;td headers="toto tata"&gt;Tota&lt;/td&gt;</code>.
 
-Les tableaux doivent utiliser <code>headers/id</code> que si :
+Les tableaux doivent utiliser <code>headers/id</code> que si&nbsp;:
 <ul>
   <li>Le tableau a des en-têtes de colonnes qui changent à l'intérieur du tableau.</li>
   <li>Une cellule de données à trois en-têtes ou plus associées (souvent liée à des cellules d'en-têtes qui sont fusionnées)</li>
@@ -89,25 +89,25 @@ Les tableaux doivent utiliser <code>headers/id</code> que si :
 
 ### Cas particuliers des tableaux de mise en forme
 
-Dans la mesure du possible <strong>évitez d'utiliser des tableaux pour faire de la mise en pages</strong>. Les tableaux sont faits pour présenter des données tabulaires avant tout et les CSS permettent, maintenant, de se passer de la mise en forme via des tableaux.
+Dans la mesure du possible <strong>évitez d'utiliser des tableaux pour faire de la mise en page</strong>. Les tableaux sont faits pour présenter des données tabulaires, avant tout, et les CSS permettent, maintenant, de se passer de la mise en forme via des tableaux.
 
 Dans le cas où, vous utilisez un tableau pour faire de la mise en page, vous devez respecter ces règles&nbsp;:
 
 <ul>
-  <li>l'élément <code>table</code> doit avoir l'attribut <code>role="presentation</code> afin de retirer la sémantique du tableau</li>
-  <li>les éléments sémantiques propres à un tableau ne doivent pas être utilisés : <code>caption</code>, <code>th</code>, <code>scope</code></li>
-  <li>assurez-vous que, s'il existe un ordre de lecture spécifique pour comprendre le contenu, cet ordre suit l'ordre d'apparition dans le code</li>
+  <li>l'élément <code>table</code> doit avoir l'attribut <code>role="presentation"</code> afin de retirer la sémantique au tableau</li>
+  <li>les éléments sémantiques propres à un tableau ne doivent pas être utilisés&nbsp;: <code>caption</code>, <code>th</code>, <code>scope</code></li>
+  <li>assurez-vous que, s'il existe un ordre de lecture spécifique pour comprendre le contenu, cet ordre est respecté lorsqu'on lit le tableau en lecture linéaire (qui suit l'ordre d'apparition dans le code)</li>
 </ul>
 
 ### Navigation dans un tableau à l'aide des lecteurs d'écran Jaws et NVDA
 
-Le fait de créer des tableaux accessibles permettra une lecture compréhensible de ces données tabulaires avec lecteur d'écran. Pour naviguer dans un tableau avec Jaws ou NVDA, il existe plusieurs raccourcis spécifiques.
+Le fait de créer des tableaux accessibles permettra une lecture cohérente de ces données tabulaires avec lecteur d'écran. Pour naviguer dans un tableau avec Jaws ou NVDA, il existe plusieurs raccourcis spécifiques.
 
 
 #### NVDA
 Pour naviguer rapidement de tableau en tableau dans une page, il suffit d'utiliser sur la touche <kbd>t</kbd>, si on utilise le raccourci <kbd>Maj + t</kbd>, on navigue dans le sens contraire et donc on revient au tableau précédent.
 
-Une fois au sein d'un tableau, il existe plusieurs raccourcis afin de s'y déplacer simplement.
+Une fois au sein d'un tableau, il existe plusieurs raccourcis afin de se déplacer à l'intérieur simplement.
 
 <ul>
 <li><kbd>Ctrl + alt + flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl + alt + flèche droite</kbd> se déplace sur la colonne de droite.</li>
@@ -117,7 +117,7 @@ Une fois au sein d'un tableau, il existe plusieurs raccourcis afin de s'y dépla
 #### Jaws
 
 Pour Jaws, il faut utiliser la touche <kbd>Y</kbd> et <kbd>Maj + Y</kbd> pour naviguer entre les tableaux.
-Pour parcourir un tableau il existe plusieurs raccourcis :
+Pour parcourir l'intérieur d'un tableau, il existe plusieurs raccourcis&nbsp;:
 
 <ul>
 <li><kbd>Insert + Ctrl + t</kbd> permet de lister tous les tableaux</li>
@@ -133,7 +133,7 @@ Nous allons maintenant vous présenter des exemples de tableaux accessibles.
 
 ### Tableau simple
 
-Le premier exemple est un tableau avec seulement des en-têtes sur les colonnes, nous utilisons donc l'attribut <code>scope="row"</code> pour que les technologies d'assistance le comprennent.
+Le premier exemple est un tableau avec seulement des en-têtes sur les colonnes, nous utilisons donc l'attribut <code>scope="row"</code> pour que les technologies d'assistance l’interprète correctement.
 
 <table class="table">
  <caption class="h4"> Personnes avec leur activité professionnelle</caption>
@@ -193,13 +193,13 @@ Le premier exemple est un tableau avec seulement des en-têtes sur les colonnes,
   [...]
 </code></pre>
 
-De cette manière, il est possible de naviguer facilement au sein du tableau à l'aide d'un lecteur d'écran. Pour tout changement de colonne l'en-tête sera vocalisée.
+De cette manière, il est possible de naviguer facilement au sein du tableau à l'aide d'un lecteur d'écran. De plus, tout changement de cellule d'une colonne à l'autre, l'en-tête sera vocalisée.
 
 Par Exemple, si on est positionné sur la colonne Prénom, et qu'on utilise le raccourci <kbd>Ctrl+alt+fleche droite</kbd> pour passer à la colonne Nom, NVDA vocalise "Nom Colonne 2 + texte de la colonne".
 
 ### Tableau à double en-tête
 
-Dans ce deuxième exemple, le tableau est un emploi du temps permettant de savoir rapidement si le magasin est ouvert ou fermé, en fonction du jour de la semaine et de l'heure.
+Dans ce deuxième exemple, le tableau est un emploi du temps permettant de savoir rapidement, si le magasin est ouvert ou fermé, en fonction du jour de la semaine et de l'heure.
 
 Ce tableau nécessite deux en-têtes, une pour les jours de la semaine et une autre pour le créneau horaire.
 
@@ -277,7 +277,7 @@ Vu que le tableau est complexe, on peut rajouter une description afin d'aider le
 
 
 <p class="border-top border-light" id="tblDesc">Tableaux permettant de calculer le taux de conformité d'un site internet.<br/>
-Pour chaque page les critères peuvent être conformes, non-conformes ou non-applicables, et ont deux niveaux de difficultés : Débutant ou confirmé<br/>
+Pour chaque page les critères peuvent être conformes, non-conformes ou non-applicables, et ont deux niveaux de difficultés&nbsp;: Débutant ou confirmé<br/>
 </p>
 <table aria-describedby="tblDesc" class="table text-center">
     <caption class="visually-hidden position-relative">Synthèse par niveau</caption>
@@ -293,7 +293,7 @@ Pour chaque page les critères peuvent être conformes, non-conformes ou non-app
         <th id="debutant-conforme" headers="niveau conforme">Débutant</th>
         <th id="confirme-conforme" headers="niveau conforme">Confirmé</th>
         <th id="debutant-non-conforme" headers="niveau non-conforme">Débutant</th>
-        <th id="confirme-non-confrome" headers="niveau non-conforme">Confirmé</th>
+        <th id="confirme-non-conforme" headers="niveau non-conforme">Confirmé</th>
         <th id="debutant-non-applicable" headers="niveau non-applicable">Débutant</th>
         <th id="confirme-non-applicable" headers="niveau non-applicable">Confirmé</th>
       </tr>
@@ -302,7 +302,7 @@ Pour chaque page les critères peuvent être conformes, non-conformes ou non-app
         <td headers="accueil conforme debutant-conforme">17</td>
         <td headers="accueil conforme confirme-conforme">13</td>
         <td headers="accueil non-conforme debutant-non-conforme">0</td>
-        <td headers="accueil non-conforme confirme-non-confrome">0</td>
+        <td headers="accueil non-conforme confirme-non-conforme">0</td>
         <td headers="accueil non-applicable debutant-non-applicable">13</td>
         <td headers="accueil non-applicable confirme-non-applicable">7</td>
         <td headers="accueil conformite" class="bg-light">100%</td>
@@ -312,7 +312,7 @@ Pour chaque page les critères peuvent être conformes, non-conformes ou non-app
         <td headers="article conforme debutant-conforme">17</td>
         <td headers="article conforme confirme-conforme">12</td>
         <td headers="article non-conforme debutant-non-conforme">0</td>
-        <td headers="article non-conforme confirme-non-confrome">1</td>
+        <td headers="article non-conforme confirme-non-conforme">1</td>
         <td headers="article non-applicable debutant-non-applicable">13</td>
         <td headers="article non-applicable confirme-non-applicable">7</td>
         <td headers="article conformite" class="bg-light">97%</td>
