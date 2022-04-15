@@ -2,7 +2,7 @@
 title: "Accessibility fact sheets"
 abstract: "Our fact sheets on digital accessibility to download, print and share"
 titleBeforeTag: true
-date: "2022-04-25"
+date: "2022-04-15"
 tags:  
   - web
   - mobile  
