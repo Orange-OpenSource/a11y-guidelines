@@ -7,6 +7,8 @@ abstract: "Create accessible emails for all"
 
 Here is a list of recommendations for writing (or producing templates that generate) messages that are accessible, that is to say, understandable by all.
 
+To complete this article you can also download our [fact sheet on email accessibility](../../articles/fact-sheet-accessibility/).
+
 ## What can be problematic?
 Above all:
 - Images
