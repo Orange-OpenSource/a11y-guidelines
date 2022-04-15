@@ -2,10 +2,10 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>Test by disabling CSS - Orange digital accessibility guidelines</title>
+    <title>Accessibility fact sheets for Android - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <meta name="description" content="Disabling CSS to test compliance with certain best practices and to validate some important accessibility criteria">
+    <meta name="description" content="Fact sheets to download for accessible Android apps">
             
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -22,6 +22,8 @@
     <link rel="icon" href="/assets/images/favicon.ico">
     
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
@@ -83,12 +85,12 @@
 </a>
             </li>
             <li class="nav-item">
-              <a href="/en/web/" class="nav-link active" aria-current="true">
+              <a href="/en/web/" class="nav-link">
   Web
 </a>
             </li>
             <li class="nav-item">
-              <a href="/en/mobile/android/" class="nav-link">
+              <a href="/en/mobile/android/" class="nav-link active" aria-current="true">
   Android
 </a>
             </li>
@@ -143,28 +145,24 @@
   <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/en/web/design/" class="nav-link">
+              <a href="/en/mobile/android/design/" class="nav-link">
   Design
 </a>
             </li><li class="nav-item">
-              <a href="/en/web/develop/" class="nav-link">
+              <a href="/en/mobile/android/development/" class="nav-link">
   Develop
 </a>
             </li><li class="nav-item">
-              <a href="/en/web/test/" class="nav-link">
+              <a href="/en/mobile/android/test/" class="nav-link">
   Test
 </a>
             </li><li class="nav-item">
-              <a href="/en/web/wcag-audit/" class="nav-link">
+              <a href="/en/mobile/android/wcag-audit/" class="nav-link">
   Evaluate
 </a>
             </li><li class="nav-item">
-              <a href="/en/web/toolbox/" class="nav-link active" aria-current="true">
+              <a href="/en/mobile/android/toolbox/" class="nav-link">
   Toolbox
-</a>
-            </li><li class="nav-item">
-              <a href="/en/web/components-examples/" class="nav-link">
-  Component examples
 </a>
             </li></ul>
   </div>
@@ -185,115 +183,30 @@
         </li>
       
       
-        <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/en/web/">Web</a>
-        </li>
-      
-      
         <li class="breadcrumb-item">
-          <a href="/en/web/toolbox/">Toolbox</a>
+          <a href="/en/mobile/android/">Android</a>
         </li>
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
-          Test by disabling CSS
+          Accessibility fact sheets for Android
         </li>
       </ol>
 </nav>
 
       
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
-        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-bs-toggle="dropdown" aria-expanded="false">
-        Topics
-      </button>
-      <div class="dropdown-menu dropdown-menu-left"><a href="https://boosted.orange.com/" class="nav-link dropdown-item">
-  Orange Boosted
-</a><a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link dropdown-item">
-  Methods and test tools
-</a><a href="/en/web/wcag-audit/" class="nav-link dropdown-item">
-  The Va11ydette
-</a><a href="/en/web/toolbox/fact-sheets/" class="nav-link dropdown-item">
-  Fact sheets
-</a><a href="/en/web/useful-links" class="nav-link dropdown-item">
-  Useful links
-</a><a href="/en/glossary/" class="nav-link dropdown-item">
-  Glossary
-</a></div>
-    </nav>
+        
         
       </div>
     </div>
     
-  <div class="container-lg pt-4">
-      <div class="row">
-        
-          <div class="col-md-3">
-            <div class="StickySideNavigation">
-              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
-      <h2 id="side-navigation-label">Topics</h2>
-      <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="https://boosted.orange.com/" class="nav-link text-muted">
-  Orange Boosted
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link text-muted">
-  Methods and test tools
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/web/wcag-audit/" class="nav-link text-muted">
-  The Va11ydette
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/web/toolbox/fact-sheets/" class="nav-link text-muted">
-  Fact sheets
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/web/useful-links" class="nav-link text-muted">
-  Useful links
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/glossary/" class="nav-link text-muted">
-  Glossary
-</a>
-          </li></ul>
-    </nav>
-              
-            </div>
-          </div>
-        
-        <main id="main-content" class="col-md-9" role="main">
-            
-          <div class="mt-4">
-          <h1>Test by disabling CSS</h1>
-<p>Disabling <abbr>CSS</abbr> is a good way to ensure compliance with certain best practices and to validate some important accessibility criteria.<br>
-To disable <abbr>CSS</abbr>, the easiest way is to install the &quot;Web developer toolbar&quot; extension for FireFox or Chrome (<a href="https://chrispederick.com/work/web-developer/">https://chrispederick.com/work/web-developer/</a>). Once this is in place, click on the &quot;CSS&quot; menu, then &quot;Disable all styles&quot;.</p>
-<h2 id="separate-content-from-presentation">Separate content from presentation <a class="header-anchor" href="#separate-content-from-presentation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Although this is only a best practice, the strict separation of <abbr>CSS</abbr> and <abbr>HTML</abbr> is important with regard to quality and maintainability of the code and sometimes has an impact on accessibility, by limiting the possibilities of modifying the visual rendering of the pages.</p>
-<p>By disabling <abbr>CSS</abbr>, the page is displayed with the browser's default styles (blue underlined link, black text, white background, etc.). This is to verify that the content is not styled by inline <abbr>CSS</abbr>.</p>
-<p><img src="../../../images/sansCSS.png" alt="screenshot of a page with CSS disabled" class="img-fluid"></p>
-<h2 id="reading-order-and-hidden-content">Reading order and hidden content <a class="header-anchor" href="#reading-order-and-hidden-content" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>The order of appearance of the content in the code must respect the order of visual display, if this affects comprehension. The problem can arise due, among other things, to the use of these types of <abbr>CSS</abbr> properties: <code>position:</code>, <code>float:</code>, <code>display: flexbox</code> (<a href="https://wiki.csswg.org/spec/css3-flexbox/accessibility">https://wiki.csswg.org/spec/css3-flexbox/accessibility</a>) or <code>display: grid</code> (<a href="https://webdesign.tutsplus.com/articles/a-guide-to-css-grid-and-accessibility--cms-32857">https://webdesign.tutsplus.com/articles/a-guide-to-css-grid-and-accessibility--cms-32857</a>). Indeed, these properties can modify the display order of content.</p>
-<p>Hidden content, which can be displayed by a user action, must also be displayed in the right place on the page so that the reading order is still understandable.</p>
-<p>By disabling <abbr>CSS</abbr>, the page content is displayed in the order of appearance in the code, so it's easy to check that the content is understandable in that order.</p>
-<p><strong>Warning:</strong> In addition, you can see the content visually hidden and intended for assistive technologies (accessible masking) and therefore check its relevance and usefulness.</p>
-<h2 id="content-semantics-and-presentation-table">Content semantics and presentation table <a class="header-anchor" href="#content-semantics-and-presentation-table" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>To be accessible, the content of a page must have a semantic structure that makes it possible to better understand its meaning.</p>
-<p>By disabling <abbr>CSS</abbr>, the page is displayed with the browser's default styles (blue underlined link, black text, white background, etc.). This makes it possible to verify that the content is semantized with lists, emphases, paragraphs, titles... <br /><br>
-And that the content is not laid out with <abbr>HTML</abbr> tables, because therefore it is still displayed as a table even with <abbr>CSS</abbr> disabled. While this is not an accessibility issue, it is a very bad practice.</p>
-<h2 id="information-carried-only-by-color">Information carried only by color <a class="header-anchor" href="#information-carried-only-by-color" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Information should not be carried only by color.</p>
-<p>By disabling <abbr>CSS</abbr>, we disable styles and therefore colors. We can thus verify that information are not conveyed only through a color.</p>
-<h2 id="informative-content-generated-via-css">Informative content generated via CSS <a class="header-anchor" href="#informative-content-generated-via-css" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Content can be generated by <abbr>CSS</abbr> via pseudo-elements (<code>::before</code>,<code> ::after</code>) or the <code>content:</code> property. It is not advisable to generate informative content with such methods because their support is low for older versions of assistive technologies, so avoid and test!<br>
-For the <code>background-image:</code> property, the risk is to display images carrying information in <abbr>CSS</abbr> which will be inaccessible to assistive t&amp;echnologies.</p>
-<p>Disabling <abbr>CSS</abbr> prevents the display of pseudo-elements and ignores the <code>content:</code> property, so we can identify the content generated by <abbr>CSS</abbr> and identify if there is loss of information. For images carrying information inserted in <abbr>CSS</abbr>, they will disappear with <abbr>CSS</abbr> disabled, this is an accessibility issue to be careful of.</p>
+  <main id="main-content" class="container-lg pt-4" role="main">
+      <h1>Accessibility fact sheets for Android</h1>
+<p>Fact sheets in PDF format containing a reminder of the essential criteria to be met to create accessible Android apps.</p>
+<p><a href="../../../articles/fact-sheet-accessibility/">View all fact sheets</a></p>
 
-          </div>
-        </main>
-        
-      </div>
-    </div>
+    </main>
     
 
 <footer id="footer" class="o-footer" role="contentinfo">
@@ -321,7 +234,7 @@ For the <code>background-image:</code> property, the risk is to display images c
           </a>
         </li>
         <li class="nav-item ms-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/toolbox/methods-and-test-tools/css-deactivation.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/android/fact-sheets.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
             Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
@@ -344,11 +257,13 @@ For the <code>background-image:</code> property, the risk is to display images c
       <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
     
     
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
     <script>
       const Application = {
         lang: "en",
         vendors: {
-          highlightJS: false,
+          highlightJS: true,
           highlightTitle: false
         }
       }

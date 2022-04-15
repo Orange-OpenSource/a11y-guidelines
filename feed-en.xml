@@ -4,7 +4,7 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-04-08T00:00:00Z</updated>
+  <updated>2022-04-15T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -1648,5 +1648,203 @@ And finally, a new content in our site of in our site of recommendations, 5 pers
 &lt;li&gt;Just Nice: &lt;a href=&quot;https://daverupert.com/2022/04/what-if-everyth&quot;&gt;https://daverupert.com/2022/04/what-if-everyth&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
+  </entry>
+  
+  <entry>
+    <title>Accessibility fact sheets</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/"/>
+    <updated>2022-04-15T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/</id>
+    <content type="html">&lt;h1&gt;Our fact sheets on digital accessibility&lt;/h1&gt;
+&lt;p&gt;Do not forget the essential information, use our fact sheets!&lt;/p&gt;
+&lt;h2 id=&quot;what-is-this&quot;&gt;What is this ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#what-is-this&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;These are reminders available in PDF format. You can print them on a double-sided sheet and then accordion-fold them to form a small booklet to keep on hand or to share.&lt;/p&gt;
+&lt;h2 id=&quot;fact-sheets-list&quot;&gt;Fact sheets list &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#fact-sheets-list&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Choose the ones that suit you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#create-an-accessible-email&quot;&gt;Create an accessible email&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#create-an-accessible-word-document&quot;&gt;Create an accessible Word document&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#create-an-accessible-excel-document&quot;&gt;Create an accessible Excel document&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#create-an-accessible-powerpoint-presentation&quot;&gt;Create an accessible PowerPoint presentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#develop-accessible-web-pages&quot;&gt;Develop accessible web pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#test-the-accessibility-of-web-pages&quot;&gt;Test the accessibility of web pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#develop-an-accessible-android-application&quot;&gt;Develop an accessible Android application&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#develop-an-accessible-ios-application&quot;&gt;Develop an accessible iOS application&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;create-an-accessible-email&quot;&gt;Create an accessible email &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#create-an-accessible-email&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/memos/memo-email.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-email&quot;&gt;Description
+    &lt;p&gt;Reminder of good practices for writing an accessible email.&lt;/p&gt;
+    &lt;h3 id=&quot;tele-email&quot;&gt;Download
+    &lt;p&gt;      
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/en/res/memos/email/Email-Fact-Sheet-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Download as PDF (249 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Write an accessible email fact sheet&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;create-an-accessible-word-document&quot;&gt;Create an accessible Word document &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#create-an-accessible-word-document&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/memos/memo-word.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-word&quot;&gt;Description
+    &lt;p&gt;Reminder of best practices for writing an accessible Word document.&lt;/p&gt;
+    &lt;h3 id=&quot;tele-word&quot;&gt;Download
+    &lt;p&gt;      
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/en/res/memos/word/Word-Fact-Sheet-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Download as PDF (205 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Write an accessible Word document fact sheet&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;create-an-accessible-excel-document&quot;&gt;Create an accessible Excel document &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#create-an-accessible-excel-document&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/memos/memo-excel.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-word&quot;&gt;Description
+    &lt;p&gt;Reminder of best practices for writing an accessible Excel document.&lt;/p&gt;
+    &lt;h3 id=&quot;tele-word&quot;&gt;Download
+    &lt;p&gt;      
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/en/res/memos/excel/Excel-Fact-Sheet-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Download as PDF (248 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Write an accessible Excel document fact sheet&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;create-an-accessible-powerpoint-presentation&quot;&gt;Create an accessible PowerPoint presentation &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#create-an-accessible-powerpoint-presentation&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/memos/memo-powerpoint.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-word&quot;&gt;Description
+    &lt;p&gt;Reminder of best practices for writing an accessible PowerPoint presentation.&lt;/p&gt;
+    &lt;h3 id=&quot;tele-word&quot;&gt;Download
+    &lt;p&gt;      
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/en/res/memos/pwp/PowerPoint-Fact-Sheet-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Download as PDF (277 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Write an accessible PowerPoint presentation fact sheet&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;develop-accessible-web-pages&quot;&gt;Develop accessible web pages &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#develop-accessible-web-pages&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Coming soon.&lt;/p&gt;
+&lt;div style=&quot;display: none&quot;&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/memos/memo-dev-web.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-web&quot;&gt;Description
+    &lt;p&gt;Fact sheet for web developers.&lt;/p&gt;
+    &lt;p&gt;Reminder of the essential techniques and tools to develop an accessible website.&lt;/p&gt;
+    &lt;h3 id=&quot;tele-web&quot;&gt;Download
+    &lt;p&gt;          
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/en/res/memos/dev-web/Memo-Web-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Download as PDF (272 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Web development accessibility fact sheet&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;test-the-accessibility-of-web-pages&quot;&gt;Test the accessibility of web pages &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#test-the-accessibility-of-web-pages&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Coming soon.&lt;/p&gt;
+&lt;div style=&quot;display: none&quot;&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/memos/memo-tests-web.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-tests-web&quot;&gt;Description
+    &lt;p&gt;Memo for people who perform web accessibility testing.&lt;/p&gt;
+    &lt;p&gt;Reminder of main tools to check the accessibility of a Web page.&lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;        
+    &lt;h3 id=&quot;tele-tests-web&quot;&gt;Download
+    &lt;p&gt;          
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/en/res/memos/tests-web/Memo-Tests-Web-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Download as PDF (335 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Web test accessibility fact sheet&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;develop-an-accessible-android-application&quot;&gt;Develop an accessible Android application &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#develop-an-accessible-android-application&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Coming soon.&lt;/p&gt;
+&lt;div style=&quot;display: none&quot;&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/memos/memo-android.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-android&quot;&gt;Description
+    &lt;p&gt;Memo for Android Developers.&lt;/p&gt;
+    &lt;p&gt;Reminder of the essential techniques and tools for developing an accessible Android application.&lt;/p&gt;
+    &lt;h3 id=&quot;tele-android&quot;&gt;Download
+    &lt;p&gt;         
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/en/res/memos/android/Memo-Android-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Download as PDF (261 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Android development accessibility fact sheet&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;develop-an-accessible-ios-application&quot;&gt;Develop an accessible iOS application &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#develop-an-accessible-ios-application&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Coming soon.&lt;/p&gt;
+&lt;div style=&quot;display: none&quot;&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/memos/memo-ios.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-ios&quot;&gt;Description
+    &lt;p&gt;Fact sheet for iOS developers.&lt;/p&gt;&lt;p&gt;
+    &lt;/p&gt;&lt;p&gt;Reminder of the essential techniques and tools for developing an accessible iOS application.&lt;/p&gt;
+    &lt;h3 id=&quot;tele-ios&quot;&gt;Download
+    &lt;p&gt;      
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/en/res/memos/ios/Memo-iOS-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Download as PDF (263 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;iOS development accessibility fact sheet&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr /&gt;</content>
   </entry>
 </feed>
