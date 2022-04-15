@@ -2,7 +2,7 @@
 title: "Les tableaux dans l'accessibilité"
 abstract: "Toutes nos recommandations pour que les tableaux soit accessibles"
 titleBeforeTag: true
-date: "2022-04-11"
+date: "2022-04-15"
 tags:
   - web
   - beginner
@@ -66,7 +66,7 @@ Pour aider les utilisateurs de technologies d'assistance, il est impératif d'id
 Pour baliser ces en-têtes, il faut utiliser la balise <code>th</code>, celle-ci ne doit jamais être vide.
 
 Une fois que les en-têtes sont créés, il faut associer les cellules de données aux en-têtes dont elles dépendent.
-L'attribut <code>scope</code> permet de lier programmatiquement les cellules aux en-têtes et donc d'identifier, pour les technologies d'assistance, chaque cellule en liaison avec ses en-têtes&nbsp;: 
+L'attribut <code>scope</code> permet de lier programmatiquement les cellules aux en-têtes, et donc aux technologies d'assistances de les identifier. 
 
 <ul>
   <li><code>&lt;th scope="col"&gt;</code> pour un en-tête colonne</li>
@@ -101,7 +101,7 @@ Dans le cas où, vous utilisez un tableau pour faire de la mise en page, vous de
 
 ### Navigation dans un tableau à l'aide des lecteurs d'écran Jaws et NVDA
 
-Le fait de créer des tableaux accessibles permettra une lecture cohérente de ces données tabulaires avec lecteur d'écran. Pour naviguer dans un tableau avec Jaws ou NVDA, il existe plusieurs raccourcis spécifiques.
+Le fait de créer des tableaux accessibles permettra une lecture cohérente de ces données tabulaires avec un lecteur d'écran. Pour naviguer dans un tableau avec Jaws ou NVDA, il existe plusieurs raccourcis spécifiques.
 
 
 #### NVDA
@@ -331,7 +331,7 @@ Pour chaque page les critères peuvent être conformes, non-conformes ou non-app
   &lt;tr&gt;
     &lt;th id="niveau"&gt;Niveau&lt;/th&gt;
     &lt;th id="debutant-conforme" headers="niveau conforme"&gt;Débutant&lt;/th&gt;
-    &lt;th id="confirme-conforme" headers="niveau conforme"&gt;Débutant&lt;/th&gt;
+    &lt;th id="confirme-conforme" headers="niveau conforme"&gt;Confirmé&lt;/th&gt;
     [...]
   &lt;/tr&gt;
   &lt;tr&gt;
