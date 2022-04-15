@@ -12,16 +12,16 @@ tags:
 
 A table is an arrangement of information in rows and columns containing cells that make it easy to compare and highlight information. They allow tabular information to be presented in a two-dimensional grid, such data is easier to read in tabular form.
 
-This allows a user, who does not have a vision problem, to quickly make visual associations between table data and its headings.
+This allows a user, who does not have a vision problem, to quickly make visual associations between table data and its table headings.
 
-However, a blind user will not have access to all these links between the information, it is for this reason that it is important that the tables are implemented with the appropriate HTML markup so that they are the most accessible. possible for assistive technologies.
+However, a blind user will not have access to all these relations between the information, it's the reason why it is important that the tables are implemented with the appropriate HTML markup so that they are the most accessible possible for assistive technologies.
 
 In the rest of this article, we will see the main rules to follow to obtain an accessible table.
 
 ### Add a caption/title to your table
 
 It is important to define a title for your table. Concise and relevant, this text will indicate its content as well as the type of data it contains.
-It must be associated with the table using the <code>caption</code> element and must be the first element after the opening <code>table</code> element. You can also use a <code>h1,h2...</code> title placed in the code just before the table as another way to associate a title.
+It must be associated with the table using the <code>caption</code> element and must be the first element after the opening <code>table</code> tag. You can also use a <code>h1,h2...</code> title placed in the code just before the table as another way to associate a title.
 
 #### Example <code>caption</code>
 <pre><code class="html">
@@ -55,18 +55,18 @@ example of description to help understanding complex table
 &lt;/table&gt;
 </code></pre>
 
-There is also the possibility of using the <code>summary</code> attribute to give, in addition, a summary of the contents of a table, however this attribute is no longer part of the HTML 5 specifications and we do not recommend not its use.
+There is also the possibility of using the <code>summary</code> attribute to give, in addition, a summary of the contents of a table, however this attribute is no longer part of the HTML 5 specifications and we do not recommend its use.
 
 
 ### Identify your table headers
 
 #### Scope attribute
 
-To help assistive technology users, it is imperative to identify table headings, whether for rows or columns.
-To identify these headers, you must use the <code>th</code> element, which must never be empty.
+To help assistive technology users, you must identify table headings, whether for rows or columns.
+To identify these table headers, you must use the <code>th</code> tag, which must never be empty.
 
-Once the headers are created, the data cells must be associated with the headers on which they depend.
-The <code>scope</code> attribute allows cells to be programmatically linked to headers, and therefore assistive technologies to identify them.
+Once the headers are created, the data cells must be associated with the headers on which they rely.
+The <code>scope</code> attribute allows cells to be programmatically linked to headers, and therefore, for assistive technologies, to identify them.
 
 <ul>
    <li><code>&lt;th scope="col"&gt;</code> for a column header</li>
@@ -75,20 +75,20 @@ The <code>scope</code> attribute allows cells to be programmatically linked to h
 
 #### Id and header attributes
 
-Some tables are too complex to identify a strict horizontal or vertical association (for example, merging columns or rows) between the header and the data cells.
-The <code>scope</code> attribute does not solve this problem. A unique <code>id</code> attribute must be used for each header cell. To link this header to a cell, you must use the <code>headers</code> attribute by adding the desired <code>id</code>.
+Some tables are too complex to identify a strict horizontal or vertical association (for example, merged columns or rows) between the header and the data cells.
+The <code>scope</code> attribute does not solve this problem. A unique <code>id</code> attribute must be used for each header cell. To link this header to a cell, you must use the <code>headers</code> attribute and adding the required <code>id</code>.
 
 For example, we have two header cells, <code>&lt;th id="toto"&gt;Toto&lt;/th&gt;</code> and <code>&lt;th id="tata"&gt;Tata&lt;/ th&gt;</code>, the code to link it to a data cell will be <code>&lt;td headers="toto tata"&gt;Tota&lt;/td&gt;</code>.
 
 Tables should use <code>headers/id</code> only if:
 <ul>
-   <li>The table has column headings that change within the table.</li>
+   <li>The table has column/row headings that change within the table.</li>
    <li>A data cell with three or more related headers (often linked to header cells that are merged)</li>
 </ul>
 
 ### Navigating a table using NVDA or JAWS
 
-Creating accessible tables will allow consistent reading of this tabular data with a screen reader. To navigate in a table with Jaws or NVDA, there are several specific shortcuts.
+Creating accessible tables will allow consistent reading of these tabular data with a screen reader. To navigate in a table with Jaws or NVDA, there are several specific shortcuts.
 
 #### NVDA
 To quickly navigate from table to table in a page, just use the <kbd>t</kbd> key, if you use the <kbd>Shift + t</kbd> shortcut, you navigate in the opposite direction and so we return to the previous table.
@@ -103,7 +103,7 @@ Once inside a table, there are several shortcuts to move around easily.
 #### Jaws
 
 For Jaws, you have to use the <kbd>Y</kbd> key and <kbd>Shift + Y</kbd> to navigate between tables.
-To browse inside an array, there are several shortcuts:
+To browse in tables, there are several shortcuts:
 
 <ul>
 <li><kbd>Insert + Ctrl + t</kbd> lists all tables</li>
@@ -179,13 +179,13 @@ The first example is a table with only headers on the columns, so we use the <co
   [...]
 </code></pre>
 
-In this way, it is possible to easily navigate within the table using a screen reader. Also, any cell change from one column to another, the header will be vocalized.
+Like this, it is possible to easily navigate within the table using a screen reader. Also, any cell change from one column, or row, to another, the header will be vocalized.
 
 For example, if we are positioned on the First name column, and we use the shortcut <kbd>Ctrl+alt+right arrow</kbd> to go to the Last name column, NVDA vocalizes "Last Name Column 2 + column text ".
 
 ### Tables with Two Headers 
 
-In this second example, the table is a planning time allowing you to quickly know whether the store is open or closed, depending on the day of the week and the time.
+In this second example, the table is a planning time allowing you to quickly know whether the store is open or not, depending on the day of the week and the time.
 
 This table requires two headers, one for the days of the week and another for the time slot.
 
@@ -256,7 +256,7 @@ This table requires two headers, one for the days of the week and another for th
 
 ### Complex table
 
-In this example, some given cells have three associated headers, so use the <code>id</code> and <code>headers</code> attributes.
+In this example, some given cells have three associated headers, so we have to use the <code>id</code> and <code>headers</code> attributes.
 
 Since the table is complex, we can add a description to help users understand the table.
 

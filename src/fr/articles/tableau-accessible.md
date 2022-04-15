@@ -83,7 +83,7 @@ Par exemple, on a deux cellules d'entêtes, <code>&lt;th id="toto"&gt;Toto&lt;/t
 
 Les tableaux doivent utiliser <code>headers/id</code> que si&nbsp;:
 <ul>
-  <li>Le tableau a des en-têtes de colonnes qui changent à l'intérieur du tableau.</li>
+  <li>Le tableau a des en-têtes de colonnes/lignes qui changent à l'intérieur du tableau.</li>
   <li>Une cellule de données à trois en-têtes ou plus associées (souvent liée à des cellules d'en-têtes qui sont fusionnées)</li>
 </ul>
 
@@ -193,7 +193,7 @@ Le premier exemple est un tableau avec seulement des en-têtes sur les colonnes,
   [...]
 </code></pre>
 
-De cette manière, il est possible de naviguer facilement au sein du tableau à l'aide d'un lecteur d'écran. De plus, tout changement de cellule d'une colonne à l'autre, l'en-tête sera vocalisée.
+De cette manière, il est possible de naviguer facilement au sein du tableau à l'aide d'un lecteur d'écran. De plus, tout changement de cellule d'une colonne, ou une ligne, à l'autre, l'en-tête sera vocalisée.
 
 Par Exemple, si on est positionné sur la colonne Prénom, et qu'on utilise le raccourci <kbd>Ctrl+alt+fleche droite</kbd> pour passer à la colonne Nom, NVDA vocalise "Nom Colonne 2 + texte de la colonne".
 
