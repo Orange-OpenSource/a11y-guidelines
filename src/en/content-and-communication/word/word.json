@@ -8,6 +8,10 @@
     {
       "label": "Check accessibility in Word",
       "href": "/en/content-and-communication/word/test/"
-    }  
+    },
+    {
+      "label": "Word accessibility fact sheet",
+      "href": "/en/content-and-communication/word/fact-sheet/"
+    }     
   ]
 }

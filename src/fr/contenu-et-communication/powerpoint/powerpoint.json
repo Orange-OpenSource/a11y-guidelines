@@ -8,6 +8,10 @@
     {
       "label": "Tester l'accessibilité de votre présentation PowerPoint",
       "href": "/fr/contenu-et-communication/powerpoint/tester/"
-    }  
+    },
+    {
+      "label": "Fiche mémo accessibilité PowerPoint",
+      "href": "/fr/contenu-et-communication/powerpoint/fiche-memo/"
+    }
   ]
 }
