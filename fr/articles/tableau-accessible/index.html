@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>Les tableaux dans l&#39;accessibilité - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Toutes nos recommandations pour que les tableaux soit accessibles">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d&#39;évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Aller à la recherche</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/web/" class="nav-link">
+  Web
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/android/" class="nav-link">
+  Android
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/ios/" class="nav-link">
+  iOS
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/contenu-et-communication/" class="nav-link">
+  Contenu et communication
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/articles/" class="nav-link active" aria-current="true">
+  Articles
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-bs-toggle="collapse" data-bs-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Rechercher">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="visually-hidden">Rechercher</span>
+    </button>
+
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-light" aria-label="Rechercher" placeholder="Rechercher">
+  </form>
+</div>
+
+  
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici&amp;nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Les tableaux dans l&#39;accessibilité
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        Sommaire
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#presentation-generale" class="dropdown-item text-wrap">Présentation générale</a><a href="#mettre-une-legendetitre-a-votre-tableau" class="dropdown-item text-wrap">Mettre une légende/titre à votre tableau</a><a href="#exemple-de-caption" class="dropdown-item text-wrap">Exemple de caption</a><a href="#exemple-de-titre-html" class="dropdown-item text-wrap">Exemple de titre HTML</a><a href="#ajouter-une-description-aux-tableaux-complexes" class="dropdown-item text-wrap">Ajouter une description aux tableaux complexes</a><a href="#identifier-les-en-tetes-de-votre-tableau" class="dropdown-item text-wrap">Identifier les en-têtes de votre tableau</a><a href="#attributs-scope" class="dropdown-item text-wrap">Attributs scope</a><a href="#attributs-id-et-headers" class="dropdown-item text-wrap">Attributs id et headers</a><a href="#cas-particuliers-des-tableaux-de-mise-en-forme" class="dropdown-item text-wrap">Cas particuliers des tableaux de mise en forme</a><a href="#navigation-dans-un-tableau-a-laide-des-lecteurs-decran-jaws-et-nvda" class="dropdown-item text-wrap">Navigation dans un tableau à l&#39;aide des lecteurs d&#39;écran Jaws et NVDA</a><a href="#nvda" class="dropdown-item text-wrap">NVDA</a><a href="#jaws" class="dropdown-item text-wrap">Jaws</a><a href="#exemple-de-tableau" class="dropdown-item text-wrap">Exemple de tableau</a><a href="#tableau-simple" class="dropdown-item text-wrap">Tableau simple</a><a href="#tableau-a-double-en-tete" class="dropdown-item text-wrap">Tableau à double en-tête</a><a href="#tableau-complexe" class="dropdown-item text-wrap">Tableau complexe</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          
+            <h1>Les tableaux dans l&#39;accessibilité</h1>  
+            
+              <span class="visually-hidden" id="filters_label">
+                Thématiques associées :
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="../?tag=web" class="btn btn-dark btn-sm" data-tag="web">Web</a></li>
+              <li class="list-inline-item"><a href="../?tag=beginner" class="btn btn-dark btn-sm" data-tag="beginner">Débutant</a></li>
+              </ul>
+            
+            <time class="text-muted" datetime="2022-04-15T00:00:00.000Z">15 avril 2022</time>
+            
+          <div class="mt-4">
+          <h2 id="presentation-generale">Présentation générale <a class="header-anchor" href="#presentation-generale" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Un tableau est un agencement d'informations en lignes et en colonnes contenant des cellules facilitant la comparaison et la mise en avant des informations. Ils permettent de présenter des informations tabulaires dans une grille en deux dimensions, ces données sont plus faciles à lire sous forme de tableau.</p>
+<p>Cela permet à un utilisateur voyant d'établir rapidement des associations visuelles entre les données du tableau et ses en-têtes.</p>
+<p>En revanche, un utilisateur non-voyant n'aura pas accès à tous ces liens entre les informations, c'est pour cette raison qu'il est important que les tableaux soient implémentés avec le balisage HTML approprié afin qu'ils soient le plus accessible possible pour les technologies d'assistance.</p>
+<p>Dans la suite de cet article, nous allons voir les principales règles à respecter pour obtenir un tableau accessible.</p>
+<h3 id="mettre-une-legendetitre-a-votre-tableau">Mettre une légende/titre à votre tableau <a class="header-anchor" href="#mettre-une-legendetitre-a-votre-tableau" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Il est important de définir un titre à votre tableau. À la fois concis et pertinent, ce texte permettra d'en indiquer le contenu ainsi que le type de données qu'il contient.<br>
+Il doit être associé au tableau grâce à la balise <code>caption</code> et doit être le premier élément après la balise d'ouverture <code>table</code>. On peut aussi utiliser un titre <code>h1,h2...</code> placé dans le code juste avant le tableau comme autre moyen d'associer un titre.</p>
+<h4 id="exemple-de-caption">Exemple de <code>caption</code> <a class="header-anchor" href="#exemple-de-caption" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<pre><code class="html">
+&lt;table&gt;
+    &lt;caption&gt;Emploi du temps 2022&lt;/caption&gt;
+    [...]
+&lt;/table&gt;
+</code></pre>
+<h4 id="exemple-de-titre-html">Exemple de titre HTML <a class="header-anchor" href="#exemple-de-titre-html" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<pre><code class="html">
+&lt;h2&gt;Emploi du temps 2022&lt;/h2&gt;
+&lt;table&gt;
+    [...]
+&lt;/table&gt;
+</code></pre>
+<h3 id="ajouter-une-description-aux-tableaux-complexes">Ajouter une description aux tableaux complexes <a class="header-anchor" href="#ajouter-une-description-aux-tableaux-complexes" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Si vous êtes dans le cas d'un tableau complexe et vous souhaitez fournir un résumé plus détaillé, il est recommandé d'utiliser l'attribut ARIA <code>aria-describedby</code>.<br>
+Il permettra de lier programmatiquement une description à votre tableau.</p>
+<pre><code class="html">
+&lt;p id="info-table"&gt;
+exemple de description pour aider la compréhension du tableau complexe
+&lt;/p&gt;
+
+&lt;table aria-describedby="info-table"&gt;
+    &lt;caption&gt; Emploi du temps 2022 &lt;/caption&gt;
+    [...]
+&lt;/table&gt;
+</code></pre>
+<p>Il y a aussi la possibilité d'utiliser l'attribut <code>summary</code> pour donner, en plus, un résumé du contenu d'un tableau, néanmoins cet attribut ne fait plus partie des spécifications HTML 5 et nous ne recommandons pas son utilisation.</p>
+<h3 id="identifier-les-en-tetes-de-votre-tableau">Identifier les en-têtes de votre tableau <a class="header-anchor" href="#identifier-les-en-tetes-de-votre-tableau" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<h4 id="attributs-scope">Attributs scope <a class="header-anchor" href="#attributs-scope" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Pour aider les utilisateurs de technologies d'assistance, il est impératif d'identifier les en-têtes des tableaux, que ce soit pour les lignes ou les colonnes.<br>
+Pour baliser ces en-têtes, il faut utiliser la balise <code>th</code>, celle-ci ne doit jamais être vide.</p>
+<p>Une fois que les en-têtes sont créés, il faut associer les cellules de données aux en-têtes dont elles dépendent.<br>
+L'attribut <code>scope</code> permet de lier programmatiquement les cellules aux en-têtes, et donc aux technologies d'assistances de les identifier.</p>
+<ul>
+  <li><code>&lt;th scope="col"&gt;</code> pour un en-tête colonne</li>
+  <li><code>&lt;th scope="row"&gt;</code> pour un en-tête ligne</li>
+</ul>
+<h4 id="attributs-id-et-headers">Attributs id et headers <a class="header-anchor" href="#attributs-id-et-headers" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Certains tableaux sont trop complexes pour identifier une association horizontale ou verticale stricte (par exemple, fusion de colonnes ou de lignes) entre l'entête et les cellules des données.<br>
+L'attribut <code>scope</code> ne permet pas de résoudre ce problème. Il faut utiliser un attribut <code>id</code> unique pour chaque cellule d'en-tête. Pour relier cet en-tête à une cellule, il faudra utiliser l'attribut <code>headers</code> en y rajoutant les <code>id</code> voulus.</p>
+<p>Par exemple, on a deux cellules d'entêtes, <code>&lt;th id=&quot;toto&quot;&gt;Toto&lt;/th&gt;</code> et <code>&lt;th id=&quot;tata&quot;&gt;Tata&lt;/th&gt;</code>, le code pour la relier à une cellule de donnée sera <code>&lt;td headers=&quot;toto tata&quot;&gt;Tota&lt;/td&gt;</code>.</p>
+<p>Les tableaux doivent utiliser <code>headers/id</code> que si :</p>
+<ul>
+  <li>Le tableau a des en-têtes de colonnes/lignes qui changent à l'intérieur du tableau.</li>
+  <li>Une cellule de données à trois en-têtes ou plus associées (souvent liée à des cellules d'en-têtes qui sont fusionnées)</li>
+</ul>
+<h3 id="cas-particuliers-des-tableaux-de-mise-en-forme">Cas particuliers des tableaux de mise en forme <a class="header-anchor" href="#cas-particuliers-des-tableaux-de-mise-en-forme" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Dans la mesure du possible <strong>évitez d'utiliser des tableaux pour faire de la mise en page</strong>. Les tableaux sont faits pour présenter des données tabulaires, avant tout, et les CSS permettent, maintenant, de se passer de la mise en forme via des tableaux.</p>
+<p>Dans le cas où, vous utilisez un tableau pour faire de la mise en page, vous devez respecter ces règles :</p>
+<ul>
+  <li>l'élément <code>table</code> doit avoir l'attribut <code>role="presentation"</code> afin de retirer la sémantique au tableau</li>
+  <li>les éléments sémantiques propres à un tableau ne doivent pas être utilisés&nbsp;: <code>caption</code>, <code>th</code>, <code>scope</code></li>
+  <li>assurez-vous que, s'il existe un ordre de lecture spécifique pour comprendre le contenu, cet ordre est respecté lorsqu'on lit le tableau en lecture linéaire (qui suit l'ordre d'apparition dans le code)</li>
+</ul>
+<h3 id="navigation-dans-un-tableau-a-laide-des-lecteurs-decran-jaws-et-nvda">Navigation dans un tableau à l'aide des lecteurs d'écran Jaws et NVDA <a class="header-anchor" href="#navigation-dans-un-tableau-a-laide-des-lecteurs-decran-jaws-et-nvda" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Le fait de créer des tableaux accessibles permettra une lecture cohérente de ces données tabulaires avec un lecteur d'écran. Pour naviguer dans un tableau avec Jaws ou NVDA, il existe plusieurs raccourcis spécifiques.</p>
+<h4 id="nvda">NVDA <a class="header-anchor" href="#nvda" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Pour naviguer rapidement de tableau en tableau dans une page, il suffit d'utiliser sur la touche <kbd>t</kbd>, si on utilise le raccourci <kbd>Maj + t</kbd>, on navigue dans le sens contraire et donc on revient au tableau précédent.</p>
+<p>Une fois au sein d'un tableau, il existe plusieurs raccourcis afin de se déplacer à l'intérieur simplement.</p>
+<ul>
+<li><kbd>Ctrl + alt + flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl + alt + flèche droite</kbd> se déplace sur la colonne de droite.</li>
+<li><kbd>Ctrl + alt + flèche bas</kbd> permet de passer à la ligne suivante en restant sur la même colonne, <kbd>Ctrl + alt + flèche haut</kbd> pour passer à la ligne précédente.</li>
+</ul>
+<h4 id="jaws">Jaws <a class="header-anchor" href="#jaws" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Pour Jaws, il faut utiliser la touche <kbd>Y</kbd> et <kbd>Maj + Y</kbd> pour naviguer entre les tableaux.<br>
+Pour parcourir l'intérieur d'un tableau, il existe plusieurs raccourcis :</p>
+<ul>
+<li><kbd>Insert + Ctrl + t</kbd> permet de lister tous les tableaux</li>
+<li><kbd>Ctrl + alt + flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl + alt + flèche droite</kbd> se déplace sur la colonne de droite.</li>
+<li><kbd>Ctrl + alt + flèche bas</kbd> permet de passer à la ligne suivante en restant sur la même colonne, <kbd>Ctrl + alt + flèche haut</kbd> pour passer à la ligne précédente.</li>
+<li><kbd>Insert + maj + flèche haut</kbd> permet de lire toute la ligne.</li>
+<li><kbd>Insert + maj + num pad 5</kbd> permet de lire toute la colonne.</li>
+</ul>
+<h2 id="exemple-de-tableau">Exemple de tableau <a class="header-anchor" href="#exemple-de-tableau" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Nous allons maintenant vous présenter des exemples de tableaux accessibles.</p>
+<h3 id="tableau-simple">Tableau simple <a class="header-anchor" href="#tableau-simple" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Le premier exemple est un tableau avec seulement des en-têtes sur les colonnes, nous utilisons donc l'attribut <code>scope=&quot;row&quot;</code> pour que les technologies d'assistance l’interprète correctement.</p>
+<table class="table">
+ <caption class="h4"> Personnes avec leur activité professionnelle</caption>
+  <tr>
+    <th scope="col">Prénom</th>
+    <th scope="col">Nom</th>
+    <th scope="col">Genre</th>
+    <th scope="col">Métier</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+    <td>M</td>
+    <td>Inconnu</td>
+  </tr>
+  <tr>
+    <td>Marty</td>
+    <td>McFly</td>
+    <td>M</td>
+    <td>Guitariste</td>
+  </tr>
+  <tr>
+    <td>Ellen</td>
+    <td>Ripley</td>
+    <td>F</td>
+    <td>Astronaute</td>
+  </tr>
+  <tr>
+    <td>Indiana</td>
+    <td>Jones</td>
+    <td>M</td>
+    <td>Archéologue</td>
+  </tr>
+  <tr>
+    <td>Sarah</td>
+    <td>Connors</td>
+    <td>F</td>
+    <td>Serveuse</td>
+  </tr>
+</table>
+<pre><code class="html">
+&lt;table class="table"&gt;
+ &lt;caption class="h4"&gt; Personnes avec leur activité professionnelle&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th scope="col"&gt;Prénom&lt;/th&gt;
+    &lt;th scope="col"&gt;Nom&lt;/th&gt;
+    &lt;th scope="col"&gt;Genre&lt;/th&gt;
+    &lt;th scope="col"&gt;Métier&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;John&lt;/td&gt;
+    &lt;td&gt;Doe&lt;/td&gt;
+    &lt;td&gt;M&lt;/td&gt;
+    &lt;td&gt;Inconnu&lt;/td&gt;
+  &lt;/tr&gt;
+  [...]
+</code></pre>
+<p>De cette manière, il est possible de naviguer facilement au sein du tableau à l'aide d'un lecteur d'écran. De plus, tout changement de cellule d'une colonne, ou une ligne, à l'autre, l'en-tête sera vocalisée.</p>
+<p>Par Exemple, si on est positionné sur la colonne Prénom, et qu'on utilise le raccourci <kbd>Ctrl+alt+fleche droite</kbd> pour passer à la colonne Nom, NVDA vocalise &quot;Nom Colonne 2 + texte de la colonne&quot;.</p>
+<h3 id="tableau-a-double-en-tete">Tableau à double en-tête <a class="header-anchor" href="#tableau-a-double-en-tete" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Dans ce deuxième exemple, le tableau est un emploi du temps permettant de savoir rapidement, si le magasin est ouvert ou fermé, en fonction du jour de la semaine et de l'heure.</p>
+<p>Ce tableau nécessite deux en-têtes, une pour les jours de la semaine et une autre pour le créneau horaire.</p>
+<table class="table">
+ <caption class="h4">Ouverture du magasin de jouets</caption>
+  <tr>
+    <td></td>
+    <th scope="col">Lundi</th>
+    <th scope="col">Mardi</th>
+    <th scope="col">Mercredi</th>
+    <th scope="col">Jeudi</th>
+    <th scope="col">Vendredi</th>
+  </tr>
+  <tr>
+    <th scope="row">09:00 - 11:00</th>
+    <td>Fermé</td>
+    <td>Ouvert</td>
+    <td>Ouvert</td>
+    <td>Ouvert</td>
+    <td>Fermé</td>
+  </tr>
+  <tr>
+    <th scope="row">11:00 - 13:00</th>
+    <td>Ouvert</td>
+    <td>Ouvert</td>
+    <td>Ouvert</td>
+    <td>Ouvert</td>
+    <td>Fermé</td>
+  </tr>
+  <tr>
+  <th scope="row">13:00 - 15:00</th>
+    <td>Ouvert</td>
+    <td>Ouvert</td>
+    <td>Fermé</td>
+    <td>Ouvert</td>
+    <td>Ouvert</td>
+  </tr>
+  <th scope="row">15:00 - 17:00</th>
+    <td>Ouvert</td>
+    <td>Ouvert</td>
+    <td>Fermé</td>
+    <td>Ouvert</td>
+    <td>Ouvert</td>
+  </tr>
+</table>
+<pre><code class="html">
+&lt;table class="table"&gt;
+ &lt;caption class="h4"&gt;Ouverture du magasin de jouet&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;th scope="col"&gt;Lundi&lt;/th&gt;
+    &lt;th scope="col"&gt;Mardi&lt;/th&gt;
+    &lt;th scope="col"&gt;Mercredi&lt;/th&gt;
+    &lt;th scope="col"&gt;Jeudi&lt;/th&gt;
+    &lt;th scope="col"&gt;Vendredi&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope="row"&gt;09:00 - 11:00&lt;/th&gt;
+    &lt;td&gt;Fermé&lt;/td&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+    &lt;td&gt;Fermé&lt;/td&gt;
+    &lt;td&gt;Fermé&lt;/td&gt;
+  &lt;/tr&gt;
+  [...]
+</code></pre>
+<h3 id="tableau-complexe">Tableau complexe <a class="header-anchor" href="#tableau-complexe" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Dans cet exemple, certaines cellules données ont trois en-têtes associés, il faut donc utiliser les attributs <code>id</code> et <code>headers</code>.</p>
+<p>Vu que le tableau est complexe, on peut rajouter une description afin d'aider les utilisateurs à comprendre le tableau.</p>
+<p class="border-top border-light" id="tblDesc">Tableaux permettant de calculer le taux de conformité d'un site internet.<br/>
+Pour chaque page les critères peuvent être conformes, non-conformes ou non-applicables, et ont deux niveaux de difficultés&nbsp;: Débutant ou confirmé<br/>
+</p>
+<table aria-describedby="tblDesc" class="table text-center">
+    <caption class="visually-hidden position-relative">Synthèse par niveau</caption>
+      <tr>
+        <th id="critere">Critères</th>
+        <th id="conforme" headers="critere" colspan="2">Conformes</th>
+        <th id="non-conforme" headers="critere" colspan="2">Non-conformes</th>
+        <th id="non-applicable" headers="critere" colspan="2">Non-applicables</th>
+        <th id="conformite" rowspan="2" class="bg-light">Taux de conformité </th>
+      </tr>
+      <tr>
+        <th id="niveau">Niveau</th>
+        <th id="debutant-conforme" headers="niveau conforme">Débutant</th>
+        <th id="confirme-conforme" headers="niveau conforme">Confirmé</th>
+        <th id="debutant-non-conforme" headers="niveau non-conforme">Débutant</th>
+        <th id="confirme-non-conforme" headers="niveau non-conforme">Confirmé</th>
+        <th id="debutant-non-applicable" headers="niveau non-applicable">Débutant</th>
+        <th id="confirme-non-applicable" headers="niveau non-applicable">Confirmé</th>
+      </tr>
+      <tr>
+        <th id="accueil">Accueil</th>
+        <td headers="accueil conforme debutant-conforme">17</td>
+        <td headers="accueil conforme confirme-conforme">13</td>
+        <td headers="accueil non-conforme debutant-non-conforme">0</td>
+        <td headers="accueil non-conforme confirme-non-conforme">0</td>
+        <td headers="accueil non-applicable debutant-non-applicable">13</td>
+        <td headers="accueil non-applicable confirme-non-applicable">7</td>
+        <td headers="accueil conformite" class="bg-light">100%</td>
+      </tr>
+      <tr>
+        <th id="article">Article</th>
+        <td headers="article conforme debutant-conforme">17</td>
+        <td headers="article conforme confirme-conforme">12</td>
+        <td headers="article non-conforme debutant-non-conforme">0</td>
+        <td headers="article non-conforme confirme-non-conforme">1</td>
+        <td headers="article non-applicable debutant-non-applicable">13</td>
+        <td headers="article non-applicable confirme-non-applicable">7</td>
+        <td headers="article conformite" class="bg-light">97%</td>
+      </tr>
+  </table>
+<pre><code class="html">
+&lt;p class="border-top border-light" id="tblDesc">Description du tableau&lt;/p&gt;
+&lt;table aria-describedby="tblDesc" class="table"&gt;
+ &lt;caption class="visually-hidden position-relative"&gt;Synthèse par niveau&lt;/caption&gt;
+ &lt;tr&gt;
+    &lt;th id="critere"&gt;Critères&lt;/th&gt;
+    &lt;th id="conforme" headers="critere" colspan="2"&gt;Conformes&lt;/th&gt;
+    [...]
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th id="niveau"&gt;Niveau&lt;/th&gt;
+    &lt;th id="debutant-conforme" headers="niveau conforme"&gt;Débutant&lt;/th&gt;
+    &lt;th id="confirme-conforme" headers="niveau conforme"&gt;Confirmé&lt;/th&gt;
+    [...]
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th id="accueil"&gt;Accueil&lt;/th&gt;
+    &lt;td headers="accueil conforme debutant-conforme"&gt;17&lt;/td&gt;
+    &lt;td headers="accueil conforme confirme-conforme"&gt;13&lt;/td&gt;
+    [...]
+  &lt;/tr&gt;
+  [...]
+</code></pre>
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sommaire</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#presentation-generale" class="nav-link text-muted">Présentation générale</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#mettre-une-legendetitre-a-votre-tableau" class="nav-link text-muted">Mettre une légende/titre à votre tableau</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#exemple-de-caption" class="nav-link text-muted">Exemple de caption</a></li><li class="nav-item position-relative">
+            <a href="#exemple-de-titre-html" class="nav-link text-muted">Exemple de titre HTML</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#ajouter-une-description-aux-tableaux-complexes" class="nav-link text-muted">Ajouter une description aux tableaux complexes</a></li><li class="nav-item position-relative">
+            <a href="#identifier-les-en-tetes-de-votre-tableau" class="nav-link text-muted">Identifier les en-têtes de votre tableau</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#attributs-scope" class="nav-link text-muted">Attributs scope</a></li><li class="nav-item position-relative">
+            <a href="#attributs-id-et-headers" class="nav-link text-muted">Attributs id et headers</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#cas-particuliers-des-tableaux-de-mise-en-forme" class="nav-link text-muted">Cas particuliers des tableaux de mise en forme</a></li><li class="nav-item position-relative">
+            <a href="#navigation-dans-un-tableau-a-laide-des-lecteurs-decran-jaws-et-nvda" class="nav-link text-muted">Navigation dans un tableau à l&#39;aide des lecteurs d&#39;écran Jaws et NVDA</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#nvda" class="nav-link text-muted">NVDA</a></li><li class="nav-item position-relative">
+            <a href="#jaws" class="nav-link text-muted">Jaws</a></li></ul></li></ul></li><li class="nav-item position-relative">
+            <a href="#exemple-de-tableau" class="nav-link text-muted">Exemple de tableau</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#tableau-simple" class="nav-link text-muted">Tableau simple</a></li><li class="nav-item position-relative">
+            <a href="#tableau-a-double-en-tete" class="nav-link text-muted">Tableau à double en-tête</a></li><li class="nav-item position-relative">
+            <a href="#tableau-complexe" class="nav-link text-muted">Tableau complexe</a></li></ul></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link">
+  À propos
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/accessibilite" class="nav-link">
+  Accessibilité
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/fr/" class="nav-link">
+  Pré-version sur Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Déploiements sur Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/tableau-accessible.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+            Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Retour en haut de page">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Retour en haut de page">
+        <span class="visually-hidden">Retour en haut de page</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:fr"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>

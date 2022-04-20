@@ -4,7 +4,7 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-04-08T00:00:00Z</updated>
+  <updated>2022-04-15T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -2033,5 +2033,290 @@ Et enfin, la sortie dans notre site de dans notre site de recommandations de 5 p
 &lt;li&gt;Juste sympa (en) : &lt;a href=&quot;https://daverupert.com/2022/04/what-if-everything-got-better/&quot;&gt;https://daverupert.com/2022/04/what-if-everything-got-better/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
+  </entry>
+  
+  <entry>
+    <title>Les tableaux dans l&#39;accessibilité</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/"/>
+    <updated>2022-04-15T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/</id>
+    <content type="html">&lt;h2 id=&quot;presentation-generale&quot;&gt;Présentation générale &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#presentation-generale&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Un tableau est un agencement d&#39;informations en lignes et en colonnes contenant des cellules facilitant la comparaison et la mise en avant des informations. Ils permettent de présenter des informations tabulaires dans une grille en deux dimensions, ces données sont plus faciles à lire sous forme de tableau.&lt;/p&gt;
+&lt;p&gt;Cela permet à un utilisateur voyant d&#39;établir rapidement des associations visuelles entre les données du tableau et ses en-têtes.&lt;/p&gt;
+&lt;p&gt;En revanche, un utilisateur non-voyant n&#39;aura pas accès à tous ces liens entre les informations, c&#39;est pour cette raison qu&#39;il est important que les tableaux soient implémentés avec le balisage HTML approprié afin qu&#39;ils soient le plus accessible possible pour les technologies d&#39;assistance.&lt;/p&gt;
+&lt;p&gt;Dans la suite de cet article, nous allons voir les principales règles à respecter pour obtenir un tableau accessible.&lt;/p&gt;
+&lt;h3 id=&quot;mettre-une-legendetitre-a-votre-tableau&quot;&gt;Mettre une légende/titre à votre tableau &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#mettre-une-legendetitre-a-votre-tableau&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Il est important de définir un titre à votre tableau. À la fois concis et pertinent, ce texte permettra d&#39;en indiquer le contenu ainsi que le type de données qu&#39;il contient.&lt;br /&gt;
+Il doit être associé au tableau grâce à la balise &lt;code&gt;caption&lt;/code&gt; et doit être le premier élément après la balise d&#39;ouverture &lt;code&gt;table&lt;/code&gt;. On peut aussi utiliser un titre &lt;code&gt;h1,h2...&lt;/code&gt; placé dans le code juste avant le tableau comme autre moyen d&#39;associer un titre.&lt;/p&gt;
+&lt;h4 id=&quot;exemple-de-caption&quot;&gt;Exemple de &lt;code&gt;caption&lt;/code&gt; &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#exemple-de-caption&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;table&amp;gt;
+    &amp;lt;caption&amp;gt;Emploi du temps 2022&amp;lt;/caption&amp;gt;
+    [...]
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&quot;exemple-de-titre-html&quot;&gt;Exemple de titre HTML &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#exemple-de-titre-html&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;h2&amp;gt;Emploi du temps 2022&amp;lt;/h2&amp;gt;
+&amp;lt;table&amp;gt;
+    [...]
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;ajouter-une-description-aux-tableaux-complexes&quot;&gt;Ajouter une description aux tableaux complexes &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#ajouter-une-description-aux-tableaux-complexes&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Si vous êtes dans le cas d&#39;un tableau complexe et vous souhaitez fournir un résumé plus détaillé, il est recommandé d&#39;utiliser l&#39;attribut ARIA &lt;code&gt;aria-describedby&lt;/code&gt;.&lt;br /&gt;
+Il permettra de lier programmatiquement une description à votre tableau.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;p id=&quot;info-table&quot;&amp;gt;
+exemple de description pour aider la compréhension du tableau complexe
+&amp;lt;/p&amp;gt;
+
+&amp;lt;table aria-describedby=&quot;info-table&quot;&amp;gt;
+    &amp;lt;caption&amp;gt; Emploi du temps 2022 &amp;lt;/caption&amp;gt;
+    [...]
+&amp;lt;/table&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Il y a aussi la possibilité d&#39;utiliser l&#39;attribut &lt;code&gt;summary&lt;/code&gt; pour donner, en plus, un résumé du contenu d&#39;un tableau, néanmoins cet attribut ne fait plus partie des spécifications HTML 5 et nous ne recommandons pas son utilisation.&lt;/p&gt;
+&lt;h3 id=&quot;identifier-les-en-tetes-de-votre-tableau&quot;&gt;Identifier les en-têtes de votre tableau &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#identifier-les-en-tetes-de-votre-tableau&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&quot;attributs-scope&quot;&gt;Attributs scope &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#attributs-scope&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Pour aider les utilisateurs de technologies d&#39;assistance, il est impératif d&#39;identifier les en-têtes des tableaux, que ce soit pour les lignes ou les colonnes.&lt;br /&gt;
+Pour baliser ces en-têtes, il faut utiliser la balise &lt;code&gt;th&lt;/code&gt;, celle-ci ne doit jamais être vide.&lt;/p&gt;
+&lt;p&gt;Une fois que les en-têtes sont créés, il faut associer les cellules de données aux en-têtes dont elles dépendent.&lt;br /&gt;
+L&#39;attribut &lt;code&gt;scope&lt;/code&gt; permet de lier programmatiquement les cellules aux en-têtes, et donc aux technologies d&#39;assistances de les identifier.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;&amp;lt;th scope=&quot;col&quot;&amp;gt;&lt;/code&gt; pour un en-tête colonne&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;&amp;lt;th scope=&quot;row&quot;&amp;gt;&lt;/code&gt; pour un en-tête ligne&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;attributs-id-et-headers&quot;&gt;Attributs id et headers &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#attributs-id-et-headers&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Certains tableaux sont trop complexes pour identifier une association horizontale ou verticale stricte (par exemple, fusion de colonnes ou de lignes) entre l&#39;entête et les cellules des données.&lt;br /&gt;
+L&#39;attribut &lt;code&gt;scope&lt;/code&gt; ne permet pas de résoudre ce problème. Il faut utiliser un attribut &lt;code&gt;id&lt;/code&gt; unique pour chaque cellule d&#39;en-tête. Pour relier cet en-tête à une cellule, il faudra utiliser l&#39;attribut &lt;code&gt;headers&lt;/code&gt; en y rajoutant les &lt;code&gt;id&lt;/code&gt; voulus.&lt;/p&gt;
+&lt;p&gt;Par exemple, on a deux cellules d&#39;entêtes, &lt;code&gt;&amp;lt;th id=&amp;quot;toto&amp;quot;&amp;gt;Toto&amp;lt;/th&amp;gt;&lt;/code&gt; et &lt;code&gt;&amp;lt;th id=&amp;quot;tata&amp;quot;&amp;gt;Tata&amp;lt;/th&amp;gt;&lt;/code&gt;, le code pour la relier à une cellule de donnée sera &lt;code&gt;&amp;lt;td headers=&amp;quot;toto tata&amp;quot;&amp;gt;Tota&amp;lt;/td&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Les tableaux doivent utiliser &lt;code&gt;headers/id&lt;/code&gt; que si :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Le tableau a des en-têtes de colonnes/lignes qui changent à l&#39;intérieur du tableau.&lt;/li&gt;
+  &lt;li&gt;Une cellule de données à trois en-têtes ou plus associées (souvent liée à des cellules d&#39;en-têtes qui sont fusionnées)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;cas-particuliers-des-tableaux-de-mise-en-forme&quot;&gt;Cas particuliers des tableaux de mise en forme &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#cas-particuliers-des-tableaux-de-mise-en-forme&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Dans la mesure du possible &lt;strong&gt;évitez d&#39;utiliser des tableaux pour faire de la mise en page&lt;/strong&gt;. Les tableaux sont faits pour présenter des données tabulaires, avant tout, et les CSS permettent, maintenant, de se passer de la mise en forme via des tableaux.&lt;/p&gt;
+&lt;p&gt;Dans le cas où, vous utilisez un tableau pour faire de la mise en page, vous devez respecter ces règles :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;l&#39;élément &lt;code&gt;table&lt;/code&gt; doit avoir l&#39;attribut &lt;code&gt;role=&quot;presentation&quot;&lt;/code&gt; afin de retirer la sémantique au tableau&lt;/li&gt;
+  &lt;li&gt;les éléments sémantiques propres à un tableau ne doivent pas être utilisés&amp;nbsp;: &lt;code&gt;caption&lt;/code&gt;, &lt;code&gt;th&lt;/code&gt;, &lt;code&gt;scope&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;assurez-vous que, s&#39;il existe un ordre de lecture spécifique pour comprendre le contenu, cet ordre est respecté lorsqu&#39;on lit le tableau en lecture linéaire (qui suit l&#39;ordre d&#39;apparition dans le code)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;navigation-dans-un-tableau-a-laide-des-lecteurs-decran-jaws-et-nvda&quot;&gt;Navigation dans un tableau à l&#39;aide des lecteurs d&#39;écran Jaws et NVDA &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#navigation-dans-un-tableau-a-laide-des-lecteurs-decran-jaws-et-nvda&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Le fait de créer des tableaux accessibles permettra une lecture cohérente de ces données tabulaires avec un lecteur d&#39;écran. Pour naviguer dans un tableau avec Jaws ou NVDA, il existe plusieurs raccourcis spécifiques.&lt;/p&gt;
+&lt;h4 id=&quot;nvda&quot;&gt;NVDA &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#nvda&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Pour naviguer rapidement de tableau en tableau dans une page, il suffit d&#39;utiliser sur la touche &lt;kbd&gt;t&lt;/kbd&gt;, si on utilise le raccourci &lt;kbd&gt;Maj + t&lt;/kbd&gt;, on navigue dans le sens contraire et donc on revient au tableau précédent.&lt;/p&gt;
+&lt;p&gt;Une fois au sein d&#39;un tableau, il existe plusieurs raccourcis afin de se déplacer à l&#39;intérieur simplement.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;kbd&gt;Ctrl + alt + flèche gauche&lt;/kbd&gt; permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, &lt;kbd&gt;Ctrl + alt + flèche droite&lt;/kbd&gt; se déplace sur la colonne de droite.&lt;/li&gt;
+&lt;li&gt;&lt;kbd&gt;Ctrl + alt + flèche bas&lt;/kbd&gt; permet de passer à la ligne suivante en restant sur la même colonne, &lt;kbd&gt;Ctrl + alt + flèche haut&lt;/kbd&gt; pour passer à la ligne précédente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;jaws&quot;&gt;Jaws &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#jaws&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Pour Jaws, il faut utiliser la touche &lt;kbd&gt;Y&lt;/kbd&gt; et &lt;kbd&gt;Maj + Y&lt;/kbd&gt; pour naviguer entre les tableaux.&lt;br /&gt;
+Pour parcourir l&#39;intérieur d&#39;un tableau, il existe plusieurs raccourcis :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;kbd&gt;Insert + Ctrl + t&lt;/kbd&gt; permet de lister tous les tableaux&lt;/li&gt;
+&lt;li&gt;&lt;kbd&gt;Ctrl + alt + flèche gauche&lt;/kbd&gt; permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, &lt;kbd&gt;Ctrl + alt + flèche droite&lt;/kbd&gt; se déplace sur la colonne de droite.&lt;/li&gt;
+&lt;li&gt;&lt;kbd&gt;Ctrl + alt + flèche bas&lt;/kbd&gt; permet de passer à la ligne suivante en restant sur la même colonne, &lt;kbd&gt;Ctrl + alt + flèche haut&lt;/kbd&gt; pour passer à la ligne précédente.&lt;/li&gt;
+&lt;li&gt;&lt;kbd&gt;Insert + maj + flèche haut&lt;/kbd&gt; permet de lire toute la ligne.&lt;/li&gt;
+&lt;li&gt;&lt;kbd&gt;Insert + maj + num pad 5&lt;/kbd&gt; permet de lire toute la colonne.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;exemple-de-tableau&quot;&gt;Exemple de tableau &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#exemple-de-tableau&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Nous allons maintenant vous présenter des exemples de tableaux accessibles.&lt;/p&gt;
+&lt;h3 id=&quot;tableau-simple&quot;&gt;Tableau simple &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#tableau-simple&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Le premier exemple est un tableau avec seulement des en-têtes sur les colonnes, nous utilisons donc l&#39;attribut &lt;code&gt;scope=&amp;quot;row&amp;quot;&lt;/code&gt; pour que les technologies d&#39;assistance l’interprète correctement.&lt;/p&gt;
+&lt;table class=&quot;table&quot;&gt;
+ &lt;caption class=&quot;h4&quot;&gt; Personnes avec leur activité professionnelle&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th scope=&quot;col&quot;&gt;Prénom&lt;/th&gt;
+    &lt;th scope=&quot;col&quot;&gt;Nom&lt;/th&gt;
+    &lt;th scope=&quot;col&quot;&gt;Genre&lt;/th&gt;
+    &lt;th scope=&quot;col&quot;&gt;Métier&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;John&lt;/td&gt;
+    &lt;td&gt;Doe&lt;/td&gt;
+    &lt;td&gt;M&lt;/td&gt;
+    &lt;td&gt;Inconnu&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Marty&lt;/td&gt;
+    &lt;td&gt;McFly&lt;/td&gt;
+    &lt;td&gt;M&lt;/td&gt;
+    &lt;td&gt;Guitariste&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ellen&lt;/td&gt;
+    &lt;td&gt;Ripley&lt;/td&gt;
+    &lt;td&gt;F&lt;/td&gt;
+    &lt;td&gt;Astronaute&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Indiana&lt;/td&gt;
+    &lt;td&gt;Jones&lt;/td&gt;
+    &lt;td&gt;M&lt;/td&gt;
+    &lt;td&gt;Archéologue&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Sarah&lt;/td&gt;
+    &lt;td&gt;Connors&lt;/td&gt;
+    &lt;td&gt;F&lt;/td&gt;
+    &lt;td&gt;Serveuse&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;table class=&quot;table&quot;&amp;gt;
+ &amp;lt;caption class=&quot;h4&quot;&amp;gt; Personnes avec leur activité professionnelle&amp;lt;/caption&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;th scope=&quot;col&quot;&amp;gt;Prénom&amp;lt;/th&amp;gt;
+    &amp;lt;th scope=&quot;col&quot;&amp;gt;Nom&amp;lt;/th&amp;gt;
+    &amp;lt;th scope=&quot;col&quot;&amp;gt;Genre&amp;lt;/th&amp;gt;
+    &amp;lt;th scope=&quot;col&quot;&amp;gt;Métier&amp;lt;/th&amp;gt;
+  &amp;lt;/tr&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;td&amp;gt;John&amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;Doe&amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;M&amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;Inconnu&amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+  [...]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;De cette manière, il est possible de naviguer facilement au sein du tableau à l&#39;aide d&#39;un lecteur d&#39;écran. De plus, tout changement de cellule d&#39;une colonne, ou une ligne, à l&#39;autre, l&#39;en-tête sera vocalisée.&lt;/p&gt;
+&lt;p&gt;Par Exemple, si on est positionné sur la colonne Prénom, et qu&#39;on utilise le raccourci &lt;kbd&gt;Ctrl+alt+fleche droite&lt;/kbd&gt; pour passer à la colonne Nom, NVDA vocalise &amp;quot;Nom Colonne 2 + texte de la colonne&amp;quot;.&lt;/p&gt;
+&lt;h3 id=&quot;tableau-a-double-en-tete&quot;&gt;Tableau à double en-tête &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#tableau-a-double-en-tete&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Dans ce deuxième exemple, le tableau est un emploi du temps permettant de savoir rapidement, si le magasin est ouvert ou fermé, en fonction du jour de la semaine et de l&#39;heure.&lt;/p&gt;
+&lt;p&gt;Ce tableau nécessite deux en-têtes, une pour les jours de la semaine et une autre pour le créneau horaire.&lt;/p&gt;
+&lt;table class=&quot;table&quot;&gt;
+ &lt;caption class=&quot;h4&quot;&gt;Ouverture du magasin de jouets&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;th scope=&quot;col&quot;&gt;Lundi&lt;/th&gt;
+    &lt;th scope=&quot;col&quot;&gt;Mardi&lt;/th&gt;
+    &lt;th scope=&quot;col&quot;&gt;Mercredi&lt;/th&gt;
+    &lt;th scope=&quot;col&quot;&gt;Jeudi&lt;/th&gt;
+    &lt;th scope=&quot;col&quot;&gt;Vendredi&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope=&quot;row&quot;&gt;09:00 - 11:00&lt;/th&gt;
+    &lt;td&gt;Fermé&lt;/td&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+    &lt;td&gt;Fermé&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th scope=&quot;row&quot;&gt;11:00 - 13:00&lt;/th&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+    &lt;td&gt;Fermé&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+  &lt;th scope=&quot;row&quot;&gt;13:00 - 15:00&lt;/th&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+    &lt;td&gt;Fermé&lt;/td&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;th scope=&quot;row&quot;&gt;15:00 - 17:00&lt;/th&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+    &lt;td&gt;Fermé&lt;/td&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+    &lt;td&gt;Ouvert&lt;/td&gt;
+  
+&lt;/table&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;table class=&quot;table&quot;&amp;gt;
+ &amp;lt;caption class=&quot;h4&quot;&amp;gt;Ouverture du magasin de jouet&amp;lt;/caption&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;th scope=&quot;col&quot;&amp;gt;Lundi&amp;lt;/th&amp;gt;
+    &amp;lt;th scope=&quot;col&quot;&amp;gt;Mardi&amp;lt;/th&amp;gt;
+    &amp;lt;th scope=&quot;col&quot;&amp;gt;Mercredi&amp;lt;/th&amp;gt;
+    &amp;lt;th scope=&quot;col&quot;&amp;gt;Jeudi&amp;lt;/th&amp;gt;
+    &amp;lt;th scope=&quot;col&quot;&amp;gt;Vendredi&amp;lt;/th&amp;gt;
+  &amp;lt;/tr&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;th scope=&quot;row&quot;&amp;gt;09:00 - 11:00&amp;lt;/th&amp;gt;
+    &amp;lt;td&amp;gt;Fermé&amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;Ouvert&amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;Ouvert&amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;Fermé&amp;lt;/td&amp;gt;
+    &amp;lt;td&amp;gt;Fermé&amp;lt;/td&amp;gt;
+  &amp;lt;/tr&amp;gt;
+  [...]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;tableau-complexe&quot;&gt;Tableau complexe &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/#tableau-complexe&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Dans cet exemple, certaines cellules données ont trois en-têtes associés, il faut donc utiliser les attributs &lt;code&gt;id&lt;/code&gt; et &lt;code&gt;headers&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Vu que le tableau est complexe, on peut rajouter une description afin d&#39;aider les utilisateurs à comprendre le tableau.&lt;/p&gt;
+&lt;p class=&quot;border-top border-light&quot; id=&quot;tblDesc&quot;&gt;Tableaux permettant de calculer le taux de conformité d&#39;un site internet.&lt;br /&gt;
+Pour chaque page les critères peuvent être conformes, non-conformes ou non-applicables, et ont deux niveaux de difficultés&amp;nbsp;: Débutant ou confirmé&lt;br /&gt;
+&lt;/p&gt;
+&lt;table aria-describedby=&quot;tblDesc&quot; class=&quot;table text-center&quot;&gt;
+    &lt;caption class=&quot;visually-hidden position-relative&quot;&gt;Synthèse par niveau&lt;/caption&gt;
+      &lt;tr&gt;
+        &lt;th id=&quot;critere&quot;&gt;Critères&lt;/th&gt;
+        &lt;th id=&quot;conforme&quot; headers=&quot;critere&quot; colspan=&quot;2&quot;&gt;Conformes&lt;/th&gt;
+        &lt;th id=&quot;non-conforme&quot; headers=&quot;critere&quot; colspan=&quot;2&quot;&gt;Non-conformes&lt;/th&gt;
+        &lt;th id=&quot;non-applicable&quot; headers=&quot;critere&quot; colspan=&quot;2&quot;&gt;Non-applicables&lt;/th&gt;
+        &lt;th id=&quot;conformite&quot; rowspan=&quot;2&quot; class=&quot;bg-light&quot;&gt;Taux de conformité &lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th id=&quot;niveau&quot;&gt;Niveau&lt;/th&gt;
+        &lt;th id=&quot;debutant-conforme&quot; headers=&quot;niveau conforme&quot;&gt;Débutant&lt;/th&gt;
+        &lt;th id=&quot;confirme-conforme&quot; headers=&quot;niveau conforme&quot;&gt;Confirmé&lt;/th&gt;
+        &lt;th id=&quot;debutant-non-conforme&quot; headers=&quot;niveau non-conforme&quot;&gt;Débutant&lt;/th&gt;
+        &lt;th id=&quot;confirme-non-conforme&quot; headers=&quot;niveau non-conforme&quot;&gt;Confirmé&lt;/th&gt;
+        &lt;th id=&quot;debutant-non-applicable&quot; headers=&quot;niveau non-applicable&quot;&gt;Débutant&lt;/th&gt;
+        &lt;th id=&quot;confirme-non-applicable&quot; headers=&quot;niveau non-applicable&quot;&gt;Confirmé&lt;/th&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th id=&quot;accueil&quot;&gt;Accueil&lt;/th&gt;
+        &lt;td headers=&quot;accueil conforme debutant-conforme&quot;&gt;17&lt;/td&gt;
+        &lt;td headers=&quot;accueil conforme confirme-conforme&quot;&gt;13&lt;/td&gt;
+        &lt;td headers=&quot;accueil non-conforme debutant-non-conforme&quot;&gt;0&lt;/td&gt;
+        &lt;td headers=&quot;accueil non-conforme confirme-non-conforme&quot;&gt;0&lt;/td&gt;
+        &lt;td headers=&quot;accueil non-applicable debutant-non-applicable&quot;&gt;13&lt;/td&gt;
+        &lt;td headers=&quot;accueil non-applicable confirme-non-applicable&quot;&gt;7&lt;/td&gt;
+        &lt;td headers=&quot;accueil conformite&quot; class=&quot;bg-light&quot;&gt;100%&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;th id=&quot;article&quot;&gt;Article&lt;/th&gt;
+        &lt;td headers=&quot;article conforme debutant-conforme&quot;&gt;17&lt;/td&gt;
+        &lt;td headers=&quot;article conforme confirme-conforme&quot;&gt;12&lt;/td&gt;
+        &lt;td headers=&quot;article non-conforme debutant-non-conforme&quot;&gt;0&lt;/td&gt;
+        &lt;td headers=&quot;article non-conforme confirme-non-conforme&quot;&gt;1&lt;/td&gt;
+        &lt;td headers=&quot;article non-applicable debutant-non-applicable&quot;&gt;13&lt;/td&gt;
+        &lt;td headers=&quot;article non-applicable confirme-non-applicable&quot;&gt;7&lt;/td&gt;
+        &lt;td headers=&quot;article conformite&quot; class=&quot;bg-light&quot;&gt;97%&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;p class=&quot;border-top border-light&quot; id=&quot;tblDesc&quot;&gt;Description du tableau&amp;lt;/p&amp;gt;
+&amp;lt;table aria-describedby=&quot;tblDesc&quot; class=&quot;table&quot;&amp;gt;
+ &amp;lt;caption class=&quot;visually-hidden position-relative&quot;&amp;gt;Synthèse par niveau&amp;lt;/caption&amp;gt;
+ &amp;lt;tr&amp;gt;
+    &amp;lt;th id=&quot;critere&quot;&amp;gt;Critères&amp;lt;/th&amp;gt;
+    &amp;lt;th id=&quot;conforme&quot; headers=&quot;critere&quot; colspan=&quot;2&quot;&amp;gt;Conformes&amp;lt;/th&amp;gt;
+    [...]
+  &amp;lt;/tr&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;th id=&quot;niveau&quot;&amp;gt;Niveau&amp;lt;/th&amp;gt;
+    &amp;lt;th id=&quot;debutant-conforme&quot; headers=&quot;niveau conforme&quot;&amp;gt;Débutant&amp;lt;/th&amp;gt;
+    &amp;lt;th id=&quot;confirme-conforme&quot; headers=&quot;niveau conforme&quot;&amp;gt;Confirmé&amp;lt;/th&amp;gt;
+    [...]
+  &amp;lt;/tr&amp;gt;
+  &amp;lt;tr&amp;gt;
+    &amp;lt;th id=&quot;accueil&quot;&amp;gt;Accueil&amp;lt;/th&amp;gt;
+    &amp;lt;td headers=&quot;accueil conforme debutant-conforme&quot;&amp;gt;17&amp;lt;/td&amp;gt;
+    &amp;lt;td headers=&quot;accueil conforme confirme-conforme&quot;&amp;gt;13&amp;lt;/td&amp;gt;
+    [...]
+  &amp;lt;/tr&amp;gt;
+  [...]
+&lt;/code&gt;&lt;/pre&gt;</content>
   </entry>
 </feed>
