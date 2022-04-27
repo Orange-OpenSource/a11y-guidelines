@@ -67,6 +67,17 @@
   },
   {
     "themes": "WWDC 2021",
+    "title": "Explore structured concurrency in Swift",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/21AsyncConcurrency",
+    "profils": ["All","Optimization","Swift"]
+  },
+  {
+    "themes": "WWDC 2021",
     "title": "Explore UI animation hitches and the render loop",
     "type": [],
     "tests": [],
@@ -111,6 +122,17 @@
   },
   {
     "themes": "WWDC 2021",
+    "title": "Meet async/await in Swift",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/21AsyncConcurrency",
+    "profils": ["All","Optimization","Swift"]
+  },
+  {
+    "themes": "WWDC 2021",
     "title": "Meet DocC documentation in Xcode",
     "type": [],
     "tests": [],
@@ -144,6 +166,17 @@
   },
   {
     "themes": "WWDC 2021",
+    "title": "Protect mutable state with Swift actors",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/21AsyncConcurrency",
+    "profils": ["All","Optimization","Swift"]
+  },
+  {
+    "themes": "WWDC 2021",
     "title": "Streamline your localized strings",
     "type": ["Attributed String"],
     "tests": [],
@@ -152,6 +185,17 @@
     "exception": "",
     "raccourcis": "2021/2110221",
     "profils": ["All","Localization","Formatting","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
+    "title": "Swift Concurrency - Behind the Scenes",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/21AsyncConcurrency",
+    "profils": ["All","Optimization","Swift"]
   },
   {
     "themes": "WWDC 2021",
