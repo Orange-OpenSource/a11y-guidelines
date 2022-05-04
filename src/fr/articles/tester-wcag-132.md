@@ -1,34 +1,37 @@
 ---
 title: "Comment tester le WCAG 1.3.2 ? (Ordre Séquentiel Logique)"
-abstract: "Les bonnes pratiques pour tester le critère WCAG 1.3.2"
+abstract: "Les bonnes pratiques pour le critère WCAG 1.3.2"
 titleBeforeTag: true
-date: "2022-04-21"
+date: "2022-05-04"
 tags:
   - web
   - advanced
 ---
 
-## Que signifie le Wcag 1.3.2
+## Que signifie le WCAG 1.3.2
 
 ### Explication générale
 
+Le but du  [critère WCAG 1.3.2](https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence) est de s'assurer que si l'ordre du contenu est important, celui-ci doit être préservé quelle que soit la manière dont il est présenté à l'utilisateur, par exemple si on désactive le CSS ou si on utilise un lecteur d'écran.
 
-/* A RÉECRIRE */
-Le but de [ce critère](https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence) est de s'assurer que si l'ordre du contenu est important, celui-ci doit être préservé quelle que soit la manière dont il est présenté à l'utilisateur, par exemple si on désactive le CSS ou si on utilise un lecteur d'écran.
+L'ordre d'un contenu est <strong>important</strong> si l'ordre du contenu ne peut pas être modifié sans en affecter sa signification.
+Par exemple pour une liste ordonnée ou un tableau, l'ordre du contenu est important, en revanche pour une liste non-ordonné on peut modifier l'ordre de lecture sans que ça n'impacte la compréhension de l'utilisateur.
 
-Fournir un ordre de lecture est important que si ça affecte le sens. Une liste ordonnée est une séquence significative, il faut donc que le sens de lecture soit bien significatif peut importe la manière dont il est présenté à l'utilisateur. En revanche, pour une liste non-ordonnée l'ordre de lecture n'affecte pas le sens.
+Dans une page WEB, la position d'une section de navigation et de la section principale de la page n'affecte pas la signification de la page, que la navigation soit en première ou en deuxième la compréhension de la page ne sera impactée, il n'existe donc pas un ordre de lecture spécifique pour comprendre un contenu dans la page.
+Il existe donc plusieurs ordres de lecture sur une page WEB pour satisfaire le critère de succès.
+
 
 ### Ce qu'il ne faut pas faire
 
 #### Utiliser des espaces blancs pour formater du texte brut
 
 Pour présenter du contenu, il est important de ne pas utiliser des caractères d'espacement, comme les espaces, la tabulation, le saut de ligne ou le retour chariot.
-Dans certains cas, ces caractères sont utilisés pour formater des tableaux, ou des colonne des données dans un contenu textuel. Cette méthode est proscrit car les technologies d'assistances ne se verra pas présenter les informations dans un ordre de lecture logique, et les informations retournées par cette technologie seront incrompréhensible.
+Dans certains cas, ces caractères sont utilisés pour formater des tableaux, ou des colonnes des données dans un contenu textuel. Cette méthode est proscrite car les technologies d'assistances ne se verront pas présenter les informations dans un ordre de lecture logique, et les informations retournées par cette technologie seront incompréhensibles.
 
 
-Ci-dessous, deux exemple qui ne sont pas valides aux lecteurs d'écran.
+Ci-dessous, deux exemples qui ne sont pas valides aux lecteurs d'écran.
 
-##### Exemple de caracères d'espacement pour formater un tableaux.
+##### Exemple de caractère d'espacement pour formater un tableau.
 
 <pre class="border border-light">
 
@@ -45,17 +48,17 @@ Horaires de travail avec Salle de classe
 
 </pre>
 
-On remarque, que la présentation ci-dessus est très visuelle, mais le texte n'est pas adapté, car il est impossible de répresenter les relations tabulaires.
+On remarque, que la présentation ci-dessus est très visuelle, mais le texte n'est pas adapté, car il est impossible de représenter les relations tabulaires.
 Ce qui change le sens de lectures pour les technologies d'assistance. Il faudrait utiliser un tableau ou présenter les informations de manière linéaire.
 
-##### Exemple de caracères d'espacement pour séparer du contenu en deux colonnes.
+##### Exemple de caractère d'espacement pour séparer du contenu en deux colonnes.
 
 <p class="border border-light">
 L’accessibilité numérique vise à rendre possible &emsp;&emsp;&emsp;il ne s’agit pas de démultiplier les <br/>
-l’accès à l’informationnumérique quelle que soit &emsp;&emsp;&emsp;supports de l’information, mais de<br/>
+l’accès à l’information numérique quelle que soit &emsp;&emsp;&emsp;supports de l’information, mais de<br/>
 la nature du handicap des personnes et la façon &emsp;&emsp;&emsp; respecter des règles fonctionnelles, graphiques,  <br/>
 dont chacun consulte l’information. Elle concerne &emsp;&emsp;&emsp; techniques et éditoriales qui permettront à tous <br/>
-différentes technologiescomme le Web, les vidéos &emsp;&emsp;&emsp; d’accéder à l’informationquels que soient leurs <br/>
+différentes technologies comme le Web, les vidéos &emsp;&emsp;&emsp; d’accéder à l’information quels que soient leurs <br/>
 et les documents Word et PDF, mais également la &emsp;&emsp;&emsp; outils de consultation. <br/>
 télévision numérique ou les téléphones mobiles. &emsp;&emsp;&emsp;
 </p>
@@ -64,9 +67,9 @@ Le paragraphe au-dessus n'est pas conforme, des caractères d'espacement sont ut
 
 #### Utiliser un tableau de mise en page
 
-Même si les WCAG n'interdisent pas l'utilisation des tableaux de mise en page, il est recommandé d'utiliser la mise en page en CSS afin de conserver la lecture semantique du contenu. Si un tableau de mise en page est utilisé, il est important que le contenu est un sens lorsqu'il est linéarisé.
+Même si les WCAG n'interdisent pas l'utilisation des tableaux de mise en page, il est recommandé d'utiliser la mise en page en CSS afin de conserver la lecture sémantique du contenu. Si un tableau de mise en page est utilisé, il est important que le contenu est un sens lorsqu'il est linéarisé.
 
-Les tableaux présentent le contenu de manière horizontale et verticale, cependant une technologie d'assistance lit se contenu de manière linéaire, le tableau est lu de haut en bas en lisant l'intégralité de la ligne avant de passer à la suivante.
+Les tableaux présentent le contenu de manière horizontale et verticale, cependant une technologie d'assistance lit ce contenu de manière linéaire, le tableau est lu de haut en bas en lisant l'intégralité de la ligne avant de passer à la suivante.
 
 C'est pour cela qu'il faut faire attention lorsqu'on utilise un tableau de mise en page, il faut bien vérifier que le contenu est compréhensible avec un lecteur d'écran.
 
@@ -91,13 +94,13 @@ C'est pour cela qu'il faut faire attention lorsqu'on utilise un tableau de mise 
 
 Le tableau ci-dessus permet d'afficher un menu, avec le logo sur le côté.
 
-Le problème est qu'au lecteur d'écran l'ordre de lecture est modifié, car au lieu d'énoncer tous les liens du menu, l'image sera vocalisé au milieu de ceux-ci.
+Le problème est qu'au lecteur d'écran l'ordre de lecture est modifié, car au lieu d'énoncer tous les liens du menu, l'image sera vocalisée au milieu de ceux-ci.
 
 #### Utiliser du CSS pour positionner l'information
 
 Pour positionner du contenu, il est recommandé d'utiliser le balisage structurel, afin de le mettre dans le bon ordre de lecture, plutôt que les propriétés de positionnement du CSS. Ça peut engendrer des erreurs, car le contenu peut s'afficher dans un ordre différent dans lequel il se trouve dans le code source.
 
-Si un utilisateur désactive le css, ou utilise un lecteur d'écran la restitution de l'information ne sera plus dans le bon ordre.
+Si un utilisateur désactive le CSS, ou utilise un lecteur d'écran la restitution de l'information ne sera plus dans le bon ordre.
 
 ##### Exemple d'un menu positionner en CSS
 
