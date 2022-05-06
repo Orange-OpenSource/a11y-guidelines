@@ -1,34 +1,34 @@
 {
   "_args": [
     [
-      "tarteaucitronjs@1.8.4",
+      "tarteaucitronjs@1.9.6",
       "/home/runner/work/a11y-guidelines/a11y-guidelines"
     ]
   ],
-  "_from": "tarteaucitronjs@1.8.4",
-  "_id": "tarteaucitronjs@1.8.4",
+  "_from": "tarteaucitronjs@1.9.6",
+  "_id": "tarteaucitronjs@1.9.6",
   "_inBundle": false,
-  "_integrity": "sha512-hwI8ycCQ3rQD1G7NoAAIWbRiSOa5nEcXXP8TR7QFYO0RCqxW6ANd+bLZwrAinFpJ0BxH0yWpjXogLH3lMlkvOQ==",
+  "_integrity": "sha512-WZZek0dGqXASTZSMld2uuXtXUFk0zMCx84C8Ae71kajl9iV6KKeYeZZzrfQRk1TLuKGUZmzyDhnlV5UHGapA3g==",
   "_location": "/tarteaucitronjs",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "tarteaucitronjs@1.8.4",
+    "raw": "tarteaucitronjs@1.9.6",
     "name": "tarteaucitronjs",
     "escapedName": "tarteaucitronjs",
-    "rawSpec": "1.8.4",
+    "rawSpec": "1.9.6",
     "saveSpec": null,
-    "fetchSpec": "1.8.4"
+    "fetchSpec": "1.9.6"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/tarteaucitronjs/-/tarteaucitronjs-1.8.4.tgz",
-  "_spec": "1.8.4",
+  "_resolved": "https://registry.npmjs.org/tarteaucitronjs/-/tarteaucitronjs-1.9.6.tgz",
+  "_spec": "1.9.6",
   "_where": "/home/runner/work/a11y-guidelines/a11y-guidelines",
   "author": {
-    "name": "Amauri.IO"
+    "name": "amauri.io"
   },
   "bugs": {
     "url": "https://github.com/AmauriC/tarteaucitron.js/issues"
@@ -45,6 +45,7 @@
     "cookie"
   ],
   "license": "MIT",
+  "main": "tarteaucitron.js",
   "name": "tarteaucitronjs",
   "repository": {
     "type": "git",
@@ -53,5 +54,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.8.4"
+  "version": "1.9.6"
 }
