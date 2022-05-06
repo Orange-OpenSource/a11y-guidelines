@@ -15,7 +15,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true)
   eleventyConfig.addPlugin(pluginRss)
 
-  eleventyConfig.addPassthroughCopy('src/assets/**/*.!(css|js)') // CSS & JS files are now delegated to PostCSS & Babel
+  eleventyConfig.addPassthroughCopy('src/assets/**/*.{json,woff,woff2}') // Json and Font copy
   eleventyConfig.addPassthroughCopy({ 'src/assets/vendors': 'assets/vendors' })
 
   /**
