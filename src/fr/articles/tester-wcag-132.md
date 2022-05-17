@@ -15,10 +15,10 @@ tags:
 Le but du  [critère WCAG 1.3.2](https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence) est de s'assurer que si l'ordre du contenu est important, celui-ci doit être préservé quelle que soit la manière dont il est présenté à l'utilisateur, par exemple si on désactive le CSS ou si on utilise un lecteur d'écran.
 
 L'ordre d'un contenu est <strong>important</strong> si l'ordre du contenu ne peut pas être modifié sans en affecter sa signification.
-Par exemple pour une liste ordonnée ou un tableau, l'ordre du contenu est important, en revanche pour une liste non-ordonné on peut modifier l'ordre de lecture sans que ça n'impacte la compréhension de l'utilisateur.
+Par exemple, pour une liste ordonnée ou un tableau, l'ordre du contenu est important, en revanche pour une liste non-ordonné, on peut modifier l'ordre de lecture sans que ça n'impacte la compréhension de l'utilisateur.
 
-Dans une page WEB, la position d'une section de navigation et de la section principale de la page n'affecte pas la signification de la page, que la navigation soit en première ou en deuxième la compréhension de la page ne sera impactée, il n'existe donc pas un ordre de lecture spécifique pour comprendre un contenu dans la page.
-Il existe donc plusieurs ordres de lecture sur une page WEB pour satisfaire le critère de succès.
+Dans une page WEB, la position d'une section de navigation et de la section principale de la page, généralement, n'affecte pas la compréhension du contenu de la page, que la navigation soit, en première ou en deuxième, il n'existe donc pas un ordre de lecture spécifique pour comprendre ces deux parties de la page.
+Il peut donc exister plusieurs ordres de lecture sur une page WEB pour satisfaire le critère de succès.
 
 
 ### Ce qu'il ne faut pas faire
