@@ -133,6 +133,17 @@
   },
   {
     "themes": "WWDC 2021",
+    "title": "Meet AsyncSequence",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/2110058",
+    "profils": ["All","Swift"]
+  },
+  {
+    "themes": "WWDC 2021",
     "title": "Meet DocC documentation in Xcode",
     "type": [],
     "tests": [],
