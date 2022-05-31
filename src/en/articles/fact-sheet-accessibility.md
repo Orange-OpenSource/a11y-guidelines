@@ -16,13 +16,17 @@ These are reminders available in PDF format. You can print them on a double-side
 
 ## Fact sheets list
 
-Choose the ones that suit you:
+Office documents:
 - [Create an accessible email](./#create-an-accessible-email)
 - [Create an accessible Word document](./#create-an-accessible-word-document)
 - [Create an accessible Excel document](./#create-an-accessible-excel-document)
 - [Create an accessible PowerPoint presentation](./#create-an-accessible-powerpoint-presentation)
+
+Web pages: 
 - [Develop accessible web pages](./#develop-accessible-web-pages)
 - [Test the accessibility of web pages](./#test-the-accessibility-of-web-pages)
+
+Mobile applications:
 - [Develop an accessible Android application](./#develop-an-accessible-android-application)
 - [Develop an accessible iOS application](./#develop-an-accessible-ios-application)
 

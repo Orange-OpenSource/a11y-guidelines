@@ -15,11 +15,15 @@ Il s'agit de pense-bêtes disponibles au format PDF. Vous pouvez les imprimer su
 
 ## Liste des mémos
 
-Choisissez les mémos qui vous correspondent :
+Pages Web :
 - [Développer des pages Web accessibles](./#developper-des-pages-web-accessibles)
 - [Tester l'accessibilité de pages Web](./#tester-laccessibilite-de-pages-web)
+
+Applications mobiles :
 - [Développer une application Android accessible](./#developper-une-application-android-accessible)
 - [Développer une application iOS accessible](./#developper-une-application-ios-accessible)
+
+Documents office :
 - [Rédiger un Email accessible](./#rediger-un-email-accessible)
 - [Rédiger un document Word accessible](./#rediger-un-document-word-accessible)
 - [Rédiger un document Excel accessible](./#rediger-un-document-excel-accessible)
