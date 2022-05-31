@@ -2,7 +2,7 @@
 title: "Accessibility fact sheets"
 abstract: "Our fact sheets on digital accessibility to download, print and share"
 titleBeforeTag: true
-date: "2022-04-15"
+date: "2022-05-31"
 tags:  
   - web
   - mobile  
@@ -168,9 +168,7 @@ Coming soon.
 <hr>
 
 ## Develop an accessible Android application
-Coming soon.
 
-<div style="display: none">
 <div class="row">
   <div class="col-3">
     <p class="border-end">
@@ -183,20 +181,17 @@ Coming soon.
     <p>Reminder of the essential techniques and tools for developing an accessible Android application.</p>
     <h3 id="tele-android">Download</h4>
     <p>         
-      <a href="../../res/memos/android/Memo-Android-Orange.pdf" class="btn btn-secondary">
-        Download as PDF (261 Ko)
+      <a href="../../res/memos/android/Fact-sheet-Android-Orange.pdf" class="btn btn-secondary">
+        Download as PDF (171 Ko)
         <span class="visually-hidden">Android development accessibility fact sheet</span>
       </a>
     </p>
   </div>
 </div>
-</div>
 <hr>
 
 ## Develop an accessible iOS application
-Coming soon.
 
-<div style="display: none">
 <div class="row">
   <div class="col-3">
     <p class="border-end">
@@ -209,12 +204,11 @@ Coming soon.
     <p>Reminder of the essential techniques and tools for developing an accessible iOS application.</p>
     <h3 id="tele-ios">Download</h4>
     <p>      
-      <a href="../../res/memos/ios/Memo-iOS-Orange.pdf" class="btn btn-secondary">
-        Download as PDF (263 Ko)
+      <a href="../../res/memos/ios/Fact-sheet-iOS-Orange.pdf" class="btn btn-secondary">
+        Download as PDF (198 Ko)
         <span class="visually-hidden">iOS development accessibility fact sheet</span>
       </a>
     </p>
   </div>
-</div>
 </div>
 <hr>
