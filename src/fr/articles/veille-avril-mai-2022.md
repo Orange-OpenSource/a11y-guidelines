@@ -78,7 +78,7 @@ Et enfin, des nouvelles sur WCAG 2.2, repoussé à septembre 2022, voilà pourqu
 - Article de fond sur les méthodes du design inclusif, sérieux (en)&nbsp;: https://www.nngroup.com/articles/inclusisive-design/
 - Changer son approche de design inclusif, point de vue intéressant (en)&nbsp;: https://www.fastcompany.com/90697288/inclusive-design-has-become-so-widely-used-that-its-meaningless-that-has-to-change 
 - Gérer le texte en CSS au dessus d'une image, joli (en)&nbsp;: https://ishadeed.com/article/handling-text-over-image-css/ 
-- Tout sur un bon sélecteur dée langue, gros boulot avec plein d'exemples (en)&nbsp;: https://www.smashingmagazine.com/2022/05/designing-better-language-selector/
+- Tout sur un bon sélecteur de langue, gros boulot avec plein d'exemples (en)&nbsp;: https://www.smashingmagazine.com/2022/05/designing-better-language-selector/
 - Formulaire, étiquettes et instructions, ce n'est pas que de l'accessibilité (en)&nbsp;: https://www.boia.org/blog/why-form-labels-and-instructions-are-important-for-digital-accessibility
 
 ## Ressources
@@ -90,12 +90,12 @@ Et enfin, des nouvelles sur WCAG 2.2, repoussé à septembre 2022, voilà pourqu
 - Sous-titrage dans YouTube, un autre tutoriel (en)&nbsp;: https://jimbyrne.co.uk/use-youtube-to-create-video-captions/ 
 - Quelques conseils de base pour bien débuter en A11y (en)&nbsp;: https://www.boia.org/blog/8-ways-to-make-website-accessibility-easier-and-less-expensive
 - E-learning, introduction à l'accessibilité numérique par le W3c (en)&nbsp;: https://www.edx.org/course/web-accessibility-introduction
-- Chouette illustrations suite à une formation accessibilité&nbsp;: https://stephaniewalter.design/fr/blog/illustrations-citation-formation-accessibilite-interfaces-access42/, en anglais https://stephaniewalter.design/blog/5-illustrations-to-understand-and-promote-accessibility/
+- Chouette illustrations suite à une formation accessibilité&nbsp;: https://stephaniewalter.design/fr/blog/illustrations-citation-formation-accessibilite-interfaces-access42/
 - Une énorme liste de ressources A11y (en)&nbsp;: https://cstrobbe.gitlab.io/AccessibilityResources/contentaccessibility.html
 
 ## Autres
 - Les idées fausses sur l'a11y, joli florilège de notre collègue @nota-bene&nbsp;: https://nota-bene.org/Idees-fausses-et-accessibilite 
-- Un point sur la reconnaissance vocale automatique (en) d: https://www.3playmedia.com/blog/the-state-of-automatic-speech-recognition/
+- Un point sur la reconnaissance vocale automatique (en) : https://www.3playmedia.com/blog/the-state-of-automatic-speech-recognition/
 - Un observatoire de l'a11y en France, à suivre car je ne connais pas&nbsp;: https://observatoire.access-score.org/index.php?p=0
 - Une souris qui s'adapte aux besoin des utilisateurs handicapés (en)&nbsp;: https://www.mac4ever.com/divers/170810-microsoft-presente-une-souris-et-des-boutons-adaptes-aux-utilisateurs-souffrant-d-un-handicap
 - Un guide pour rendre accessible son évènement&nbsp;: https://lesdevalideuses.org/ressources-2/accessibiliser-un-evenement-le-guide/
