@@ -17,8 +17,8 @@ And some new s on WCAG 2.2, it seems to be pushed back to September 2022, here's
 
 ## accessibility in laws and standards
 - Everything about the European directive for web accessibility, it's what makes a11y "compulsory" in Europe: https://web-directive.eu/#toc1
-- A certain computer code of ethics and a11y, it is neither a law nor a standard, but it should be read (in): https://ethics.acm.org/code-of-ethics/using -the-code/case-accessibility-in-software-development/
-- A W3c doc giving advice on ensuring content accessible to cognitively impaired people: dhttps://www.w3.org/TR/coga-usable/
+- A certain computer code of ethics and a11y, it is neither a law nor a standard, but it should be read: https://ethics.acm.org/code-of-ethics/using -the-code/case-accessibility-in-software-development/
+- A W3c doc giving advice on ensuring content accessible to cognitively impaired people: https://www.w3.org/TR/coga-usable/
 - Use of color (WCAG 1.4.1 criterion), some specific examples, well documented: https://www.tpgi.com/well-color-us-surprised-this-sc-can-be-a -tricky-customer/
 
 ## Feedback and accessibility
@@ -26,10 +26,10 @@ And some new s on WCAG 2.2, it seems to be pushed back to September 2022, here's
 - Support for aria-describedby in browsers/AT, teaser: don't be fooled: https://adrianroselli.com/2022/04/accessible-description-exposure.html
 - Accessibility remediation, 4 basic mistakes: https://www.boia.org/blog/4-web-accessibility-remediation-mistakes-to-avoid
 - Free guide, everything to make VueJs accessible: https://accessible-vue.com/read/
-- An accessible, serious web component paginated list: https://www.smashingmagazine.com/2022/04/accessible-filterable-paginated-list-11ty-alpinejs/
-- On A11y overlays and their ineffectiveness https://convergeaccessibility.com/2022/05/09/a-different-view-into-accessibility-overlays/
+- An accessible, serious web component list: https://www.smashingmagazine.com/2022/04/accessible-filterable-paginated-list-11ty-alpinejs/
+- On A11y overlays and their ineffectiveness: https://convergeaccessibility.com/2022/05/09/a-different-view-into-accessibility-overlays/
 - Taking user feedback from bug A11y into account is important: https://www.boia.org/blog/why-form-labels-and-instructions-are-important-for-digital-accessibility
-- One more, why not use a11y's overlays, 6 good reasons: https://university-relations.umn.edu/blog/2022/04/18/6-reasons-avoid-using-web-accessibility-overlays
+- One more, why not using a11y's overlays, 6 good reasons: https://university-relations.umn.edu/blog/2022/04/18/6-reasons-avoid-using-web-accessibility-overlays
 - A11y's 10 mistakes to focus on: https://equalentry.com/10-most-cited-accessibility-issues/
 
 
@@ -94,5 +94,5 @@ And some new s on WCAG 2.2, it seems to be pushed back to September 2022, here's
 ## Others
 - Misconceptions about the a11y, nice anthology of our colleague @nota-bene: https://nota-bene.org/Idees-fausses-et-accessibilite
 - A point on automatic speech recognition d: https://www.3playmedia.com/blog/the-state-of-automatic-speech-recognition/
-- An a11y observatory in France, to follow because I don't know: https://observatoire.access-score.org/index.php?p=0
+- An a11y observatory in France, to follow because I don't know where it goes (fr): https://observatoire.access-score.org/index.php?p=0
 - A mouse that adapts to the needs of disabled users: https://www.mac4ever.com/divers/170810-microsoft-presente-a-mouse-and-buttons-adapted-to-users-with-disabilities
