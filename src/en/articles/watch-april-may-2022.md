@@ -39,7 +39,7 @@ And some new s on WCAG 2.2, it seems to be pushed back to September 2022, here's
 - Progressive improvement and a11y, why: https://meryl.net/accessibility-progress-not-perfection/
 - how to coach a11y: https://www.deque.com/blog/what-is-accessibility-coaching-and-why-does-it-matter/
 - Best practices in terms of contract and accessibility, there's everything: https://github.com/mgifford/a11y-contracting#accessibility-contracting-best-practices
-- Video games and accessibility, what is being done, 3 articles on trends: https://www.jeuxvideo.fr/dossier/419655-handicap-et-jeu-video-le-long-chantier-de-l-accessibilite
+- Video games and accessibility, what is being done, 3 articles on trends (fr): https://www.jeuxvideo.fr/dossier/419655-handicap-et-jeu-video-le-long-chantier-de-l-accessibilite
 - Basic bugs to fix: https://hidde.blog/common-a11y-issues/
 - Perceivable and accessibility, definition: https://www.boia.org/blog/what-is-perceivability-in-web-accessibility-wcag-principles-explained
 - Third party content and service, ensure A11y: https://www.tpgi.com/ensure-third-party-content-is-accessible/
@@ -69,7 +69,7 @@ And some new s on WCAG 2.2, it seems to be pushed back to September 2022, here's
 - Buttons, space and enter, attention: https://adrianroselli.com/2022/04/brief-note-on-buttons-enter-and-space.html
 
 ## Mobile app, mobile web
-- The YouTube channel of devs on Android and a11y, rich (in): https://www.youtube.com/playlist?list=PLWz5rJ2EKKc8OENfLdh3zM5T6IRdlVYKj
+- The YouTube channel of devs on Android and a11y, rich: https://www.youtube.com/playlist?list=PLWz5rJ2EKKc8OENfLdh3zM5T6IRdlVYKj
 
 ## Ergonomics, UI & UX
 - Official guide to making accessible with Axure: https://www.axure.com/blog/approachable-guide-prototyping-accessibility-axure-rp
@@ -92,7 +92,7 @@ And some new s on WCAG 2.2, it seems to be pushed back to September 2022, here's
 - A huge list of a11y resources: https://cstrobbe.gitlab.io/AccessibilityResources/contentaccessibility.html
 
 ## Others
-- Misconceptions about the a11y, nice anthology of our colleague @nota-bene: https://nota-bene.org/Idees-fausses-et-accessibilite
-- A point on automatic speech recognition d: https://www.3playmedia.com/blog/the-state-of-automatic-speech-recognition/
+- Misconceptions about the a11y, nice anthology of our colleague @nota-bene (fr): https://nota-bene.org/Idees-fausses-et-accessibilite
+- A point on automatic speech recognition: https://www.3playmedia.com/blog/the-state-of-automatic-speech-recognition/
 - An a11y observatory in France, to follow because I don't know where it goes (fr): https://observatoire.access-score.org/index.php?p=0
 - A mouse that adapts to the needs of disabled users: https://www.mac4ever.com/divers/170810-microsoft-presente-a-mouse-and-buttons-adapted-to-users-with-disabilities
