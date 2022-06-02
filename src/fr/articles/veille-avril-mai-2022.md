@@ -50,6 +50,7 @@ Et enfin, des nouvelles sur WCAG 2.2, repoussé à septembre 2022, voilà pourqu
 
 ## Tester l’accessibilité
 - Une checklist de qualité bien faite autour WCAG (en) s: https://not-checklist.intopia.digital/
+<<<<<<< HEAD
 - Nouvelle version du bookmarklet pour tester un critère des futures WCAG 2.2, le critère 2.5.8 (en)&nbsp;: https://codepen.io/aardrian/pen/eYyjNVg 
 - Les principales erreurs détectées lors de l'étude Million de WebAim et comment corriger (en)&nbsp;: 
  - https://christianheilmann.com/2022/04/12/one-million-broken-web-sites-and-a-way-to-prevent-that/  
@@ -99,3 +100,54 @@ Et enfin, des nouvelles sur WCAG 2.2, repoussé à septembre 2022, voilà pourqu
 - Un observatoire de l'a11y en France, à suivre car je ne connais pas&nbsp;: https://observatoire.access-score.org/index.php?p=0
 - Une souris qui s'adapte aux besoin des utilisateurs handicapés (en)&nbsp;: https://www.mac4ever.com/divers/170810-microsoft-presente-une-souris-et-des-boutons-adaptes-aux-utilisateurs-souffrant-d-un-handicap
 - Un guide pour rendre accessible son évènement&nbsp;: https://lesdevalideuses.org/ressources-2/accessibiliser-un-evenement-le-guide/
+=======
+- Nouvelle version du bookmarklet pour tester un critère des futures WCAG 2.2, le critère 2.5.8 (en) : https://codepen.io/aardrian/pen/eYyjNVg 
+- Les principales erreurs détectées lors de l'étude Million de WebAim et comment corriger (en) : 
+ - https://christianheilmann.com/2022/04/12/one-million-broken-web-sites-and-a-way-to-prevent-that/  
+ - https://hidde.blog/common-a11y-issues/
+ - https://www.joedolson.com/2022/04/still-plenty-of-work-to-do-the-webaim-million/
+- Tester l'a11y, en construction mais déjà bien (en) : https://racheleditullio.com/projects/accessibility-testing/
+- Tester au clavier (en) : https://dev.to/steady5063/keyboard-testing-the-a11y-enhancement-to-your-definition-of-done-2n7c
+- La checklist pour s'assurer qu'une techno Web peut produire du contenu a11y, brouillon W3c (en) : https://w3c.github.io/apa/fast/checklist.html
+
+## Points techniques en accessibilité
+- Aller plus loin dans l'affrontement rem, em, px et zoom, à lire absolument (en) : https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/ 
+- N'empêchez pas le zoom (en) : https://www.matuzo.at/blog/2022/please-stop-disabling-zoom/
+- Tout sur aria-labelledby, tout savoir (en) : https://html5accessibility.com/stuff/2022/04/03/aria-labelledby-usage-notes/ 
+- Les mauvais exemples d'utilisation des Div et les problèmes que ça engendre (en) : https://www.matuzo.at/blog/2022/divs-are-bad/
+- Le principe de non-interférence en: a11y, absolument à lire : https://access42.net/principe-non-interference-accessibilite-numerique 
+- Les skip-links ou liens d'évitement, être conforme au critère WCAG (en) : https://medium.com/evinced-inc/beam-me-up-methods-to-meet-the-bypass-blocks-success-criterion-83b84acdc599 
+- N'enlevez pas le Outline lors de la prise de focus, un podcast (en) : https://a11yrules.com/podcast/default-focus-outlines-dont-remove-them/
+- Dans la même veine, sur le focus à conserver, voir les commentaires (en) : https://dev.to/colabottles/stop-removing-focus-2o7b 
+- Les boutons, space et enter, attention (en) : https://adrianroselli.com/2022/04/brief-note-on-buttons-enter-and-space.html
+
+## Appli mobile, web mobile
+-  La chaine YouTube des devs sur Android et a11y, riche (en) : https://www.youtube.com/playlist?list=PLWz5rJ2EKKc8OENfLdh3zM5T6IRdlVYKj
+
+## Ergonomie, UI & UX
+- Guide officiel pour faire accessible avec Axure (en) : https://www.axure.com/blog/approachable-guide-prototyping-accessibility-axure-rp
+- Article de fond sur les méthodes du design inclusif, sérieux (en) : https://www.nngroup.com/articles/inclusisive-design/
+- Changer son approche de design inclusif, point de vue intéressant (en) : https://www.fastcompany.com/90697288/inclusive-design-has-become-so-widely-used-that-its-meaningless-that-has-to-change 
+- Gérer le texte en CSS au dessus d'une image, joli (en) : https://ishadeed.com/article/handling-text-over-image-css/ 
+- Tout sur un bon sélecteur dée langue, gros boulot avec plein d'exemples (en) : https://www.smashingmagazine.com/2022/05/designing-better-language-selector/
+- Formulaire, étiquettes et instructions, ce n'est pas que de l'accessibilité (en) : https://www.boia.org/blog/why-form-labels-and-instructions-are-important-for-digital-accessibility
+
+## Ressources
+- Une bonne bibliothèque de composants type fenêtre modale (dialog, alert) web accessibles (en) : https://a11y-dialog.netlify.app/
+- Bonnes pratiques pour un changement de langue (en) :  https://www.smashingmagazine.com/2022/05/designing-better-language-selector/
+- Un livre (gratuit online) sur la mise en place d'une démarche d'a11y, à voir... (en) : https://www.thebookonaccessibility.com/  
+- Le pense-bête de bonnes astuces a11y, pratique (en) : https://dev.to/codegino/web-accessibility-cheat-sheet-3774
+- Pour débuter avec un lecteur d'écran (en) : https://speckyboy.com/testing-your-website-screen-reader/ 
+- Sous-titrage dans YouTube, un autre tutoriel (en) : https://jimbyrne.co.uk/use-youtube-to-create-video-captions/ 
+- Quelques conseils de base pour bien débuter en A11y (en) : https://www.boia.org/blog/8-ways-to-make-website-accessibility-easier-and-less-expensive
+- E-learning, introduction à l'accessibilité numérique par le W3c (en) : https://www.edx.org/course/web-accessibility-introduction
+- Chouette illustrations suite à une formation accessibilité : https://stephaniewalter.design/fr/blog/illustrations-citation-formation-accessibilite-interfaces-access42/, en anglais https://stephaniewalter.design/blog/5-illustrations-to-understand-and-promote-accessibility/
+- Une énorme liste de ressources A11y (en) : https://cstrobbe.gitlab.io/AccessibilityResources/contentaccessibility.html
+
+## Autres
+- Les idées fausses sur l'a11y, joli florilège de notre collègue @nota-bene : https://nota-bene.org/Idees-fausses-et-accessibilite 
+- Un point sur la reconnaissance vocale automatique (en) d: https://www.3playmedia.com/blog/the-state-of-automatic-speech-recognition/
+- Un observatoire de l'a11y en France, à suivre car je ne connais pas : https://observatoire.access-score.org/index.php?p=0
+- Une souris qui s'adapte aux besoin des utilisateurs handicapés (en) : https://www.mac4ever.com/divers/170810-microsoft-presente-une-souris-et-des-boutons-adaptes-aux-utilisateurs-souffrant-d-un-handicap
+- Un guide pour rendre accessible son évènement : https://lesdevalideuses.org/ressources-2/accessibiliser-un-evenement-le-guide/
+>>>>>>> a0df3279 (veille avril mai 2022)
