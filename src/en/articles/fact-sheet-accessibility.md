@@ -2,7 +2,7 @@
 title: "Accessibility fact sheets"
 abstract: "Our fact sheets on digital accessibility to download, print and share"
 titleBeforeTag: true
-date: "2022-04-15"
+date: "2022-05-31"
 tags:  
   - web
   - mobile  
@@ -16,13 +16,17 @@ These are reminders available in PDF format. You can print them on a double-side
 
 ## Fact sheets list
 
-Choose the ones that suit you:
+Office documents:
 - [Create an accessible email](./#create-an-accessible-email)
 - [Create an accessible Word document](./#create-an-accessible-word-document)
 - [Create an accessible Excel document](./#create-an-accessible-excel-document)
 - [Create an accessible PowerPoint presentation](./#create-an-accessible-powerpoint-presentation)
+
+Web pages: 
 - [Develop accessible web pages](./#develop-accessible-web-pages)
 - [Test the accessibility of web pages](./#test-the-accessibility-of-web-pages)
+
+Mobile applications:
 - [Develop an accessible Android application](./#develop-an-accessible-android-application)
 - [Develop an accessible iOS application](./#develop-an-accessible-ios-application)
 
@@ -168,9 +172,7 @@ Coming soon.
 <hr>
 
 ## Develop an accessible Android application
-Coming soon.
 
-<div style="display: none">
 <div class="row">
   <div class="col-3">
     <p class="border-end">
@@ -183,20 +185,17 @@ Coming soon.
     <p>Reminder of the essential techniques and tools for developing an accessible Android application.</p>
     <h3 id="tele-android">Download</h4>
     <p>         
-      <a href="../../res/memos/android/Memo-Android-Orange.pdf" class="btn btn-secondary">
-        Download as PDF (261 Ko)
+      <a href="../../res/memos/android/Fact-sheet-Android-Orange.pdf" class="btn btn-secondary">
+        Download as PDF (171 Ko)
         <span class="visually-hidden">Android development accessibility fact sheet</span>
       </a>
     </p>
   </div>
 </div>
-</div>
 <hr>
 
 ## Develop an accessible iOS application
-Coming soon.
 
-<div style="display: none">
 <div class="row">
   <div class="col-3">
     <p class="border-end">
@@ -209,12 +208,11 @@ Coming soon.
     <p>Reminder of the essential techniques and tools for developing an accessible iOS application.</p>
     <h3 id="tele-ios">Download</h4>
     <p>      
-      <a href="../../res/memos/ios/Memo-iOS-Orange.pdf" class="btn btn-secondary">
-        Download as PDF (263 Ko)
+      <a href="../../res/memos/ios/Fact-sheet-iOS-Orange.pdf" class="btn btn-secondary">
+        Download as PDF (198 Ko)
         <span class="visually-hidden">iOS development accessibility fact sheet</span>
       </a>
     </p>
   </div>
-</div>
 </div>
 <hr>
