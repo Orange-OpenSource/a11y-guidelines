@@ -1,14 +1,14 @@
 ---
-title: "Comment tester le WCAG 1.3.2 ? (Ordre Séquentiel Logique)"
+title: "Qu'est-ce que l'ordre Séquentiel logique (Wcag 1.3.2)"
 abstract: "Les bonnes pratiques pour le critère WCAG 1.3.2"
 titleBeforeTag: true
-date: "2022-05-04"
+date: "2022-06-02"
 tags:
   - web
   - advanced
 ---
 
-## Que signifie le WCAG 1.3.2
+## Qu'est-ce que l'ordre Séquentiel logique (Wcag 1.3.2)
 
 ### Explication générale
 
@@ -26,7 +26,7 @@ Il peut donc exister plusieurs ordres de lecture sur une page WEB pour satisfair
 #### Utiliser des espaces blancs pour formater du texte brut
 
 Pour présenter du contenu, il est important de ne pas utiliser des caractères d'espacement, comme les espaces, la tabulation, le saut de ligne ou le retour chariot.
-Dans certains cas, ces caractères sont utilisés pour formater des tableaux, ou des colonnes des données dans un contenu textuel. Cette méthode est proscrite car les technologies d'assistances ne se verront pas présenter les informations dans un ordre de lecture logique, et les informations retournées par cette technologie seront incompréhensibles.
+Dans certains cas, ces caractères sont utilisés pour formater des tableaux, ou des colonnes des données dans un contenu textuel. Cette méthode est proscrite, car les technologies d'assistances ne se verront pas présenter les informations dans un ordre de lecture logique, et les informations retournées par cette technologie seront incompréhensibles.
 
 
 Ci-dessous, deux exemples qui ne sont pas valides aux lecteurs d'écran.
@@ -100,11 +100,21 @@ Le problème est qu'au lecteur d'écran l'ordre de lecture est modifié, car au 
 
 Pour positionner du contenu, il est recommandé d'utiliser le balisage structurel, afin de le mettre dans le bon ordre de lecture, plutôt que les propriétés de positionnement du CSS. Ça peut engendrer des erreurs, car le contenu peut s'afficher dans un ordre différent dans lequel il se trouve dans le code source.
 
+Il faut faire attention avec l'utilisation des CSS Flexbox, grid et position
+
+<ul>
+  <li>Avec CSS flexbox, évitez d'utiliser la propriété <span lang="en"><code>order</code></span> ou <span lang="en"><code>flex-direction:reverse;</code></span></li>
+  <li>Avec CSS grid, faites attention au placement manuel des éléments sur la grille</li>
+  <li>Avec les propriétés de positionnement, évitez de détacher l'ordre visuel des éléments de l'ordre dans lequel ils apparaissent dans le DOM</li>
+</ul>
+
 Si un utilisateur désactive le CSS, ou utilise un lecteur d'écran la restitution de l'information ne sera plus dans le bon ordre.
 
 ##### Exemple d'un menu positionner en CSS
 
-<div class="border border-light position-relative" style="width: 320px;height:180px">      
+La mise en page ci-dessous a été créé avec du CSS, si vous désactivez le CSS, vous allez remarquer que le sens de lecture sera différent que celui affiché.
+
+<div class="border border-light position-relative mb-3" style="width: 320px;height:180px">      
      <span class="position-absolute top-0 start-0"><strong>Sports</strong></span>       
      <span class="position-absolute top-0 end-0"><strong>Produit</strong></span>       
      <span class="position-absolute top-50 start-0">Football</span>       
@@ -114,6 +124,27 @@ Si un utilisateur désactive le CSS, ou utilise un lecteur d'écran la restituti
      <span class="position-absolute end-0" style="top:75%!important">Accessoires</span>
 </div>
 
-<div class="mt-3">
-La mise en page ci-dessus a été créé avec du CSS, si vous désactivez le CSS, vous allez remarquer que le sens de lecture sera différent que celui affiché.
+
+
+##### Exemple d'onglet où le contenu est positionné avant
+
+Dans l'exemple ci-dessous, des onglets seront affichés avec le contenu qui sera positionné avec des flexbox.
+
+<div class="d-flex flex-column mb-3">
+  <div class="tab-content order-2" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Vous voila présent sur l'onglet Accueil. </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Vous voila présent sur l'onglet Profil.</div>
+  </div>
+  <ul class="nav nav-tabs order-1" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Accueil</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profil</button>
+    </li>
+  </ul>
 </div>
+
+Les éléments sont placés avec l'attribut <span lang="en"><code>order</code></span>, qui n'est pas le même ordre d'affichage dans le dom.
+En désactivant le CSS ou au lecteur d'écran, on constate que la signification des onglets n'est plus la même.
+
