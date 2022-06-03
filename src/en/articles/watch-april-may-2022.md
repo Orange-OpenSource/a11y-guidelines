@@ -8,8 +8,8 @@ tags:
 
 # Digital accessibility watch April-May 2022
 You've lost the force and when you are involved in A11y, you know this feeling, aren't you... turn around and have a look: https://uxdesign.cc/regaining-your-accessibility-spark-a182eee9e8e6
-- A final call for comments for Synchronization Accessibility User Requirements (SAUR): https://lists.w3.org/Archives/Public/public-wai -announce/2022AprJun/0001.html
-The W3c has& launched a New ARIA Authoring Practices Guide website, it's really a good source of clear informations: https://www.w3.org/WAI/ARIA/apg/
+- A final call for comments for Synchronization Accessibility User Requirements (SAUR): https://lists.w3.org/Archives/Public/public-wai-announce/2022AprJun/0001.html
+The W3c has launched a New ARIA Authoring Practices Guide website, it's really a good source of clear informations: https://www.w3.org/WAI/ARIA/apg/
 We continue our journey in the a11y overlays, an excellent response from a questioned expert, to read (in): https://adrianroselli.com/2022/04/my-cease-desist-from-audioeye .html
 And some new s on WCAG 2.2, it seems to be pushed back to September 2022, here's why: https://www.deque.com/blog/why-wcag-2-2-is-still-in-the-oven/
 - and another update on WCAG 2.2 and 3.0: https://www.linkedin.com/pulse/wcag-22-3-status-updates-rachael-bradley-montgomery/
@@ -17,7 +17,7 @@ And some new s on WCAG 2.2, it seems to be pushed back to September 2022, here's
 
 ## accessibility in laws and standards
 - Everything about the European directive for web accessibility, it's what makes a11y "compulsory" in Europe: https://web-directive.eu/#toc1
-- A certain computer code of ethics and a11y, it is neither a law nor a standard, but it should be read: https://ethics.acm.org/code-of-ethics/using -the-code/case-accessibility-in-software-development/
+- A certain computer code of ethics and a11y, it is neither a law nor a standard, but it should be read: https://ethics.acm.org/code-of-ethics/using-the-code/case-accessibility-in-software-development/
 - A W3c doc giving advice on ensuring content accessible to cognitively impaired people: https://www.w3.org/TR/coga-usable/
 - Use of color (WCAG 1.4.1 criterion), some specific examples, well documented: https://www.tpgi.com/well-color-us-surprised-this-sc-can-be-a -tricky-customer/
 
@@ -63,7 +63,7 @@ And some new s on WCAG 2.2, it seems to be pushed back to September 2022, here's
 - Don't Disable Zooming: https://www.matuzo.at/blog/2022/please-stop-disabling-zoom/
 - All about aria-labelledby, all about it: https://html5accessibility.com/stuff/2022/04/03/aria-labelledby-usage-notes/
 - Bad examples of using Divs and the problems they cause: https://www.matuzo.at/blog/2022/divs-are-bad/
-- The skip-links or avoidance links, comply with the WCAG criterion: https://medium.com/evinced-inc/beam-me-up-methods-to-meet-the-bypass-blocks- success-criterion-83b84acdc599
+- The skip-links or avoidance links, comply with the WCAG criterion: https://medium.com/evinced-inc/beam-me-up-methods-to-meet-the-bypass-blocks-success-criterion-83b84acdc599
 - Don't remove the Outline when taking focus, a podcast: https://a11yrules.com/podcast/default-focus-outlines-dont-remove-them/
 - In the same vein, on invisible focus indicator, see comments: https://dev.to/colabottles/stop-removing-focus-2o7b
 - Buttons, space and enter, attention: https://adrianroselli.com/2022/04/brief-note-on-buttons-enter-and-space.html
