@@ -9,7 +9,7 @@ tags:
 # Veille accessibilité numérique Avril-Mai 2022
 Vous avez perdu la gniak, retournez-vous et regardez (en)&nbsp;: https://uxdesign.cc/regaining-your-accessibility-spark-a182eee9e8e6
 - Un appel à commentaire final pour Exigences utilisateur pour l'accessibilité de la synchronisation, en anglais, "Synchronization Accessibility User Requirements (SAUR)" (en)&nbsp;: https://lists.w3.org/Archives/Public/public-wai-announce/2022AprJun/0001.html
-Le Nouveau site du W3c ARIA Authoring Practices Guide qui 8clarifie les choses grandement (en)&nbsp;: https://www.w3.org/WAI/ARIA/apg/
+Le Nouveau site du W3c ARIA Authoring Practices Guide qui clarifie les choses grandement (en)&nbsp;: https://www.w3.org/WAI/ARIA/apg/
 - https://informations.handicap.fr/a-web-parcours-obstacles-internautes-aveugles-32943.php
 - On continue notre voyage dans les surcouches d'a11y, une excellente réponse d'un expert mis en cause, à lire (en)&nbsp;: https://adrianroselli.com/2022/04/my-cease-desist-from-audioeye.html 
 Et enfin, des nouvelles sur WCAG 2.2, repoussé à septembre 2022, voilà pourquoi (en)&nbsp;: https://www.deque.com/blog/why-wcag-2-2-is-still-in-the-oven/ 
@@ -19,7 +19,7 @@ Et enfin, des nouvelles sur WCAG 2.2, repoussé à septembre 2022, voilà pourqu
 ## l'accessibilité dans les lois et les normes
 - Tout sur la directive Européenne pour l'accessibilité web, c'est elle qui rend l'a11y "obligatoire" en Europe (en)&nbsp;: https://web-directive.eu/#toc1 
 - Un certain code éthique informatique et a11y, c'est ni une loi, ni une norme, mais ça devrait, c'est à lire (en)&nbsp;: https://ethics.acm.org/code-of-ethics/using-the-code/case-accessibility-in-software-development/ 
-- Un doc du W3c donnant des conseils pour assurer un contenu accessible aux déficients cognitifs (en)&nbsp;: dhttps://www.w3.org/TR/coga-usable/ 
+- Un doc du W3c donnant des conseils pour assurer un contenu accessible aux déficients cognitifs (en)&nbsp;: https://www.w3.org/TR/coga-usable/ 
 - Utilisation de la couleur (critère WCAG 1.4.1), quelques exemples précis, bien documenté (en)&nbsp;: https://www.tpgi.com/well-color-us-surprised-this-sc-can-be-a-tricky-customer/
 
 ## Retours d’expérience et accessibilité
