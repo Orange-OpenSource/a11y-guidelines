@@ -74,7 +74,7 @@
     "resultat": [],
     "exception": "",
     "raccourcis": "2021/21AsyncConcurrency",
-    "profils": ["All","Optimization","Swift"]
+    "profils": ["All","Swift"]
   },
   {
     "themes": "WWDC 2021",
@@ -129,7 +129,7 @@
     "resultat": [],
     "exception": "",
     "raccourcis": "2021/21AsyncConcurrency",
-    "profils": ["All","Optimization","Swift"]
+    "profils": ["All","Swift"]
   },
   {
     "themes": "WWDC 2021",
@@ -184,7 +184,7 @@
     "resultat": [],
     "exception": "",
     "raccourcis": "2021/21AsyncConcurrency",
-    "profils": ["All","Optimization","Swift"]
+    "profils": ["All","Swift"]
   },
   {
     "themes": "WWDC 2021",
@@ -206,7 +206,7 @@
     "resultat": [],
     "exception": "",
     "raccourcis": "2021/21AsyncConcurrency",
-    "profils": ["All","Optimization","Swift"]
+    "profils": ["All","Swift"]
   },
   {
     "themes": "WWDC 2021",
@@ -218,6 +218,17 @@
     "exception": "",
     "raccourcis": "2021/2110211",
     "profils": ["All","Debugging","Instruments","Optimization","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
+    "title": "Use async/await with URLSession",
+    "type": [""],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/2110095",
+    "profils": ["All","Swift"]
   },
   {
     "themes": "WWDC 2021",
