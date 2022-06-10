@@ -11,6 +11,17 @@
     "profils": ["All","Accessibility","Dark Mode","Debugging","DocC","Formatting","Instruments","Localization","Optimization","Platforms...","Swift","SwiftUI","TextKit","What's new in...","Xcode"]
   },
   {
+    "themes": "WWDC 2022",
+    "title": "What's new in UIKit",
+    "type": ["SF Symbol","ScrollView","UIBar","Materials","Menu","Pasteboard"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/2210068",
+    "profils": ["All","What's new in..."]
+  },
+  {
     "themes": "WWDC 2021",
     "title": "Build interactive tutorials using DocC",
     "type": [],
@@ -222,7 +233,7 @@
   {
     "themes": "WWDC 2021",
     "title": "Use async/await with URLSession",
-    "type": [""],
+    "type": [],
     "tests": [],
     "verifier": [],
     "resultat": [],
