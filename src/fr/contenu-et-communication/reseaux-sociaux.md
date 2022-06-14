@@ -128,3 +128,18 @@ Pour les vidéos sans sous-titres, Instagram permet l’ajout des sous-titres au
 Les story Instagram ne sont pas encore très accessibles.
 Pour communiquer des informations importantes, il est nécessaire de les reporter sur le mur personnel. 
 
+## TikTok
+
+TikTok propose aux utilisateurs des vidéos de contenu divers et varié. 
+L’outil repose essentiellement sur la visualisation de vidéos et peut donc être inaccessible pour une personne sourde ou une personne aveugle par exemple. 
+
+### Synthèse Vocale
+
+La synthèse vocale convertit le texte saisi en une voix off à mesure qu’il apparaît dans la vidéo. 
+
+Pour rendre votre vidéo pour accessible, la synthèse vocale peut être ajoutée pendant l’édition de la vidéo en appuyant sur le texte ajouté puis en sélectionnant « Synthèse vocale ». Une voix synthétique lira clairement votre texte lors de la vidéo. 
+
+Tiktok propose aussi le sous-titrage des paroles ; c’est-à-dire que vous n’avez pas besoin de réécrire ce qu’il se passe ; cependant cette option n’est disponible qu’en anglais et en japonais pour le moment.  (05/22)
+
+
+[Mode d’emploi TikTok](https://www.tiktok.com/accessibility/fr-fr/) 
