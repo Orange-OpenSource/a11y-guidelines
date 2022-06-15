@@ -125,6 +125,7 @@ For videos without subtitles, Instagram allows automatic subtitles to be added:
 <img src="/en/content-and-communication/images/instagram-videos.png" alt="Example of adding subtitles on computer" class="img-fluid" />
 
 ### Stories
+
 Instagram stories are not yet very accessible.
 To communicate important information, it is necessary to put it on the personal wall. 
 
