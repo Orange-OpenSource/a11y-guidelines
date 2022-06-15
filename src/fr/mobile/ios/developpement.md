@@ -945,7 +945,7 @@ Nous avons un 'label' et un 'switch control' que nous souhaitons regrouper et tr
 
 Dans ce cas, on va créer une vue qui va englober les éléments impactés puis implémenter une action qui va indiquer l'action à réaliser en cas d'activation de la zone par l'utilisateur.
 ![](../../images/iOSdev/GrouperDesElements_1.png)
-Création de l'élément accessible qui va regrouper les éléments souhaités :
+Création de l'élément accessible qui va regrouper les éléments souhaités après avoir décoché la case `Accessibility Enabled` dans le storyboard pour les éléments label et switch :
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">
