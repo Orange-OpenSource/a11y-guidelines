@@ -12,6 +12,28 @@
   },
   {
     "themes": "WWDC 2022",
+    "title": "Adopt Variable Color in SF Symbols",
+    "type": ["SF Symbol"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/22SFSymbols",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "What's new in SF Symbols 4",
+    "type": ["SF Symbol"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/22SFSymbols",
+    "profils": ["All","What's new in..."]
+  },
+  {
+    "themes": "WWDC 2022",
     "title": "What's new in UIKit",
     "type": ["SF Symbol","ScrollView","UIBar","Materials","Menu","Pasteboard"],
     "tests": [],
