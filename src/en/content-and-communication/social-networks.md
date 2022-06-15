@@ -125,6 +125,32 @@ For videos without subtitles, Instagram allows automatic subtitles to be added:
 <img src="/en/content-and-communication/images/instagram-videos.png" alt="Example of adding subtitles on computer" class="img-fluid" />
 
 ### Stories
+
 Instagram stories are not yet very accessible.
 To communicate important information, it is necessary to put it on the personal wall. 
+
+
+## TikTok
+
+Tiktok provides users with videos of diverse and varied content.
+
+It is essentially based on viewing videos and may therefore be inaccessible to as deaf or a blind person.
+
+### Text-to-speech
+
+Text-to-speech converts typed text into a voiceover as it appears in the video. This feature is particularly helpful for visually impaired or blind users.
+
+In order to make a video accessible, vocal synthesis can be added while editing the video by taping on the text then selecting “Text-to-speech". A synthetic voice will read the text clearly during the video.
+
+### Auto caption
+
+Auto captions transcribe a video’s spoken audio into text. This feature helps viewers who are deaf or hard of hearing enjoy content without missing context.
+
+Users can add captions during video editing after they’ve uploaded or recorded a video. The text is automatically transcribed and can be edited before it’s displayed on your video.
+
+However, this option in currently only available in English or Japanese. (05/22)
+
+
+[TikTok How-To](https://www.tiktok.com/accessibility/en-us/)
+
 
