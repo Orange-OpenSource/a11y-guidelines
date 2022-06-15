@@ -9,16 +9,36 @@ Produire une présentation PowerPoint accessible nécessite de respecter ces dif
 
 ## Masques de diapositive
 Définir des masques de diapositives est la première chose à faire  et une condition sine qua none pour créer une présentation homogène et accessible.
+
+<img alt="" src="/fr/contenu-et-communication/images/image-masque-de-diapo.png" class="img-fluid">
+
+
 - Ouvrir le mode Masque des diapositives pour mettre en forme vos diapositives (dans l’onglet `Affichage`, sélectionner `Masque des diapositives`).
 - Utiliser les sous-menus `Mise en pages du masque` et `Insérer un espace réservé`.
 - Éviter d’ajouter des Zones de texte ou des Images directement dans la présentation via le menu `Insertion`.
 - Créer autant de masques que de types de diapositives nécessaires.
 <img alt="" src="/fr/contenu-et-communication/images/masques.png" class="img-fluid">
 
+
+-	Prévoir un thème général des masques accessible : 	
+-	Couleurs accessibles cf. chapitre « couleur »
+-	Polices accessibles cf. chapitre « mise en forme » 
+-	Éviter de mettre des effets 
+
+<img alt="" src="/fr/contenu-et-communication/images/image-thème.png" class="img-fluid">
+
+-	Bien choisir une couleur « du thème » pour chaque texte. 
+
+<img alt="" src="/fr/contenu-et-communication/images/image-couleur-theme.png" class="img-fluid">
+
+
+
 Remarque : Si vous modifiez le masque des diapositives ou les mises en pages après avoir créé les différentes diapositives, vous devrez réappliquer les mises en page modifiées aux diapositives existantes de votre présentation en mode Normal.
 
 ## Attributs de la présentation 
+
 ### La langue
+
 Pour qu’un lecteur d’écran puisse restituer correctement le contenu de votre présentation :  
 - La langue principale doit être définie dans le menu : `Fichier > Options > Langue`.
 - Tout changement de langue ponctuel doit être signalé en sélectionnant le groupe de mots concerné puis `Révision > Langue > Définir la langue de vérification`.
@@ -26,11 +46,11 @@ Pour qu’un lecteur d’écran puisse restituer correctement le contenu de votr
 ### Autres propriétés
 Renseigner les champs « Titre », « Auteur » et « Mots clefs » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu `Fichier > Informations`.  
 
-<img alt="" src="/fr/contenu-et-communication/images/attributs.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/Image-info.png" class="img-fluid">
 
 Ces informations accessibles à tous via un simple clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans `Propriétés`, pourront également être lues par un lecteur d’écran.
 
-<img alt="" src="/fr/contenu-et-communication/images/attributs2.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/Image-propriétés.png" class="img-fluid">  &nbsp;
 
 ## Titre des diapositives
 
@@ -41,12 +61,14 @@ donner un titre spécifique à chaque diapositive, à insérer dans la zone : «
 
 Limiter les abréviations et acronymes, et expliciter à la première occurrence ceux qui ne font pas partie du langage courant.
 
-Conserver l’accentuation sur les majuscules (exemple : É ou Ç) : menu **Insertion > Symbole** ou utiliser [les raccourcis clavier](/fr/contenu-et-communication/index#annexes).
-
 ## Mise en forme des contenus
-Utiliser une police de caractères sans serif (sans empattement comme c’est le cas d’Arial et Helvetica) en corps 12 pixels minimum. 
-Commencer les phrases par une majuscule et ne pas abuser des phrases entièrement écrites en majuscules.
+
+Utiliser une police de caractères sans serif (sans empattement comme c’est le cas d’Arial, Calibri et Helvetica) en corps 12 pixels minimum.
+Commencer les phrases par une majuscule et éviter les phrases entièrement écrites en majuscules.
+
+Conserver l’accentuation sur les majuscules ÀÉÈÊÏÔÙÇ ; Cocher l’option « Majuscules accentuées en français » dans le menu `Fichier > Options > Vérification`
 Eviter de justifier le texte et privilégier l’alignement à gauche.
+
 Ne pas utiliser de retour chariot ou de tabulation pour espacer des paragraphes, utiliser les options disponibles via un `clic droit > Paragraphe > Retrait et Espacement`.
 
 <img alt="" src="/fr/contenu-et-communication/images/paragraphe.png" class="img-fluid">  &nbsp;
@@ -79,26 +101,27 @@ Eviter de créer manuellement des listes, utiliser le style « liste » (à puce
 
 ## Images
 Un document peut contenir des images et être accessible, il faut simplement que l’information portée par l’image soit retranscrite textuellement. 
-- **Pour les images porteuses d’informations** : associer un texte de remplacement décrivant le contenu informatif via un `clic droit > Format de l’image > Texte de remplacement > champ « Description »`.
-- **Pour les images décoratives/illustratives** : laisser le champ `description` vide.
+- **Pour les images porteuses d’informations** : associer un texte de remplacement décrivant le contenu informatif via un `clic droit > Modifier le texte de remplacement`.
+- **Pour les images décoratives/illustratives** : cocher `marquer comme décoratif`.
 - **Pour les images informatives complexes** : rédiger un court texte de remplacement et une description détaillée située à proximité de l’image (ou accessible via un lien). Exemple disponible dans [le guide du concepteur RGAA](https://disic.github.io/guide-concepteur/1-images.html#exemple-dune-image-complexe-avec-une-description-d%C3%A9taill%C3%A9e)
 
- <img alt="" src="/fr/contenu-et-communication/images/remplacement.png" class="img-fluid">
+ <img alt="" src="/fr/contenu-et-communication/images/Image-alt-text.png" class="img-fluid">
 
 Pour les graphiques ou schémas : utiliser les composants `SmartArt` plutôt que des images (menu `Insertion > SmartArt`).  
-Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (`Format de l’objet ou de l’image > Texte de remplacement > Description`). 
+Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (`clic droit > modifier le texte de remplacement`). 
 
 ## Liens
 Une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lui lire l’ensemble des liens présents sur une page. Chaque lien sera donc lu en dehors de son contexte visuel et doit donc se suffire à lui-même : 
 * Rédiger des intitulés de liens explicites (compréhensibles hors contexte visuel de la page).
 * Annoncer les liens qui déclenchent l’ouverture d’une nouvelle fenêtre (ajouter « nouvelle fenêtre » dans le libellé).
-<img alt="" src="/fr/contenu-et-communication/images/lien.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/Image-info-bulle.png" class="img-fluid">  &nbsp;
 * Pour chaque fichier téléchargeable, indiquer le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document.
 
 ## Tableaux de données / tableaux de présentation 
-Les tableaux peuvent être difficilement consultables, pour un non-voyant, par exemple. Il faut donc les utiliser avec parcimonie et les structurer le plus simplement possible : 
+La structure des tableaux doit être le plus simple possible : 
 * Éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides.
-* Ajouter une description s'il s'agit d'un tableau complexe, clic droit : `Format de la forme > Texte de remplacement > Description`
+* Ajouter une description s'il s'agit d'un tableau complexe : `clic droit > Texte de remplacement`
+*	`Ne pas insérer une capture d’écran (ou image) d’un tableau Excel`. Depuis Excel, sélectionner un tableau bien identifié en tant que tel, le copier et le coller dans Powerpoint en conservant la mise en forme source.
 
 **Important :** Ne pas utiliser les tableaux à des fins de mise en forme.
 
@@ -110,30 +133,32 @@ La communication audiovisuelle est aujourd’hui très fréquente en entreprise.
 <img alt="" src="/fr/contenu-et-communication/images/video.png" class="img-fluid">  &nbsp;
 
 Tout contenu vidéo doit respecter ces prérequis :
-- Fournir des sous-titres pour restituer l’ensemble des informations véhiculées par la bande son.
-- Fournir une audiodescription si la vidéo présente des informations accessibles seulement via les images.
-- Utiliser des vidéos sans flashs rapides (pas plus de 3 clignotements par seconde).
+
+`Sous-titrage` : contenu textuel synchronisé avec la vidéo donnant accès à la totalité de ce qui est exprimé en audio (dialogue, bruit, musique…)
+
+`Audiodescription` : narration ajoutée pour décrire les détails visuels essentiels à la compréhension de la vidéo (actions, personnages, décors…)
+
+`Transcription` : version textuelle reprenant la totalité de l’information du contenu
+
+**Les exigences selon le type de contenu :**
+
+<img alt="" src="/fr/contenu-et-communication/images/tableautype.png" class="img-fluid">
+
 
 Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-et-communication/composants-animes) pour en savoir plus.
 
-## Ordre de lecture des éléments
-L’ordre de lecture qui sera suivi par une synthèse vocale peut être vérifié depuis le volet de sélection (menu `Accueil > Organiser > Volet de sélection`).  
-**Attention** : l’ordre doit être décroissant car c’est le dernier élément de la liste qui est lu en premier par le lecteur.
-
-<img alt="" src="/fr/contenu-et-communication/images/volet.png" class="img-fluid">  &nbsp;
-
-Il est important de vérifier cet ordre directement dans les masques des diapositives.
-
-## Vérificateur d’accessibilité intégré
-Il est important de contrôler l’accessibilité de la présentation à l'aide du vérificateur d’accessibilité (menu : `Fichier > Vérifier la présence de problèmes > Vérifier l’accessibilité`).
-<img alt="" src="/fr/contenu-et-communication/images/verificateur.png" class="img-fluid">  &nbsp;
 
 ## Convertir une présentation PowerPoint en fichier PDF
 
 Une fois que vous aurez vérifié l'accessiblité de votre présentation (voir la rubrique [Tester l'accessibilité d'une présentation PowerPoint](/fr/contenu-et-communication/powerpoint/tester)), vous pouvez convertir la présentation en <abbr>PDF</abbr> : `Fichier > Enregistrer sous` et de sélectionner le type de fichier <abbr>PDF</abbr>.
 Cocher la case « Balises de structure de document pour l'accessibilité ».
 
-<img alt="" src="/fr/contenu-et-communication/images/export.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/imagepdf.png" class="img-fluid">  &nbsp;
+
+
+## Conseils pour une présentation orale
+
+Exprimer oralement tout ce qui est transmis visuellement. Vous pouvez activer le sous-titrage dans « Sous-titre en direct » dans le menu Diaporama. Si besoin, prévoir un système de vélotypie et/ou une interprétation des signes.
 
 Remarque : pour les présentations de plus de 50 diapositives, il faut conseiller aux lecteurs de modifier le paramètre suivant dans Adobe :
 `Édition > Préférences > Lecture > Option de lecteur d’écran` : « Lire l’intégralité du document »
