@@ -225,7 +225,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sommaire
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#tests-automatiques" class="dropdown-item text-wrap">Tests automatiques</a><a href="#verifications-des-contrastes-de-couleurs" class="dropdown-item text-wrap">Vérifications des contrastes de couleurs</a><a href="#tests-avec-les-syntheses-vocales-jaws-et-nvda" class="dropdown-item text-wrap">Tests avec les synthèses vocales JAWS et NVDA</a><a href="#autres-tests-manuels" class="dropdown-item text-wrap">Autres tests manuels</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#tests-automatiques" class="dropdown-item text-wrap">Tests automatiques</a><a href="#detection-des-problemes-daccessibilite" class="dropdown-item text-wrap">Détection des problèmes d&#39;accessibilité</a><a href="#verifications-des-contrastes-de-couleurs" class="dropdown-item text-wrap">Vérifications des contrastes de couleurs</a><a href="#tests-avec-les-syntheses-vocales-jaws-et-nvda" class="dropdown-item text-wrap">Tests avec les synthèses vocales JAWS et NVDA</a><a href="#autres-tests-manuels" class="dropdown-item text-wrap">Autres tests manuels</a></div>
     </nav>
         
       </div>
@@ -260,14 +260,26 @@
             
           <div class="mt-4">
           <h1>Comment tester l'accessibilité d'une présentation PowerPoint</h1>
+<p>Trois étapes sont à prévoir :</p>
+<ol>
+<li>Les tests automatiques</li>
+<li>La vérification de contrastes</li>
+<li>La vérification vocale</li>
+</ol>
 <h2 id="tests-automatiques">Tests automatiques <a class="header-anchor" href="#tests-automatiques" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Vous pouvez commencer vos tests avec l’outil de vérification de l’accessibilité de Microsoft Office.<br>
-<strong>Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité</strong></p>
-<img alt="" src="/fr/contenu-et-communication/images/word_verification_fr.png" class="img-fluid" />
-<p><strong>Important :</strong> si vous n’avez pas l’option « Vérifier l’accessibilité » dans le document ouvert, faites la manipulation suivante pour la rendre active : enregistrez votre document depuis une version d’Office supérieure (ou égale) à 2010 et au format « .pptx » avec la case « compatibilité avec les versions précédentes » décochée.</p>
+<strong>Menu &gt; Révision &gt; Vérifier l’accessibilité</strong></p>
+<img alt="" src="/fr/contenu-et-communication/images/verif-access.png" class="img-fluid" />
+<p>Pour corriger au fur et à mesure les problèmes d'accessibilité, cocher la case <code>Poursuivre l’exécution du vérificateur pendant que je travaille</code></p>
+<p>L’ordre de lecture qui sera suivi par une synthèse vocale peut être vérifié depuis le volet de sélection: <strong>menu Accueil &gt; Organiser &gt; Volet de sélection</strong>.</p>
+<img alt="" src="/fr/contenu-et-communication/images/ordre-lecture.png" class="img-fluid" />
+<p>Il est important de vérifier cet ordre directement dans les masques des diapositives.</p>
+<h2 id="detection-des-problemes-daccessibilite">Détection des problèmes d'accessibilité <a class="header-anchor" href="#detection-des-problemes-daccessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Erreurs détectées automatiquement par le correcteur d’orthographe (<strong>Fichier &gt; Options &gt; Vérification</strong>) et le vérificateur d’accessibilité:</p>
+<img alt="" src="/fr/contenu-et-communication/images/tableau-pb.png" class="img-fluid" />
 <h2 id="verifications-des-contrastes-de-couleurs">Vérifications des contrastes de couleurs <a class="header-anchor" href="#verifications-des-contrastes-de-couleurs" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Le logiciel <a lang="en" href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> indique si les contrastes de couleurs utilisés sont conformes.</p>
-<img alt="" src="/fr/contenu-et-communication/images/cca.png" class="img-fluid" />  
+<img alt="" src="/fr/contenu-et-communication/images/colourcontrast.png" class="img-fluid" />  
 <h2 id="tests-avec-les-syntheses-vocales-jaws-et-nvda">Tests avec les synthèses vocales JAWS et NVDA <a class="header-anchor" href="#tests-avec-les-syntheses-vocales-jaws-et-nvda" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Afin de poursuivre vos vérifications, vous pouvez tester avec une synthèse vocale.<br>
 Ces tests permettent de naviguer dans la même configuration que les personnes malvoyantes et non-voyantes.</p>
@@ -288,6 +300,7 @@ Ces tests permettent de naviguer dans la même configuration que les personnes m
       <h2 id="toc-title">Sommaire</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
             <a href="#tests-automatiques" class="nav-link text-muted">Tests automatiques</a></li><li class="nav-item position-relative">
+            <a href="#detection-des-problemes-daccessibilite" class="nav-link text-muted">Détection des problèmes d&#39;accessibilité</a></li><li class="nav-item position-relative">
             <a href="#verifications-des-contrastes-de-couleurs" class="nav-link text-muted">Vérifications des contrastes de couleurs</a></li><li class="nav-item position-relative">
             <a href="#tests-avec-les-syntheses-vocales-jaws-et-nvda" class="nav-link text-muted">Tests avec les synthèses vocales JAWS et NVDA</a></li><li class="nav-item position-relative">
             <a href="#autres-tests-manuels" class="nav-link text-muted">Autres tests manuels</a></li>
