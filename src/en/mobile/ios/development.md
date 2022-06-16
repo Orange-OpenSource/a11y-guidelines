@@ -933,7 +933,7 @@ We wish to obtain a 'label' and a 'switch control' as one unique block behaving 
 <br>In this case, a view must be created to encapsulate all the elements and an action must be implemented (only the container must be an accesible element).
 
 ![](../../images/iOSdev/GrouperDesElements_1.png)
-Create your wrapper as an accessible element :
+Create your wrapper as an accessible element after unticking the `Accessibility Enabled` choice in the storyboard for the label and the switch :
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">
