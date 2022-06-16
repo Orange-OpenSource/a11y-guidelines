@@ -5,18 +5,36 @@ abstract: "Que faut-il vérifier au sujet de l'accessibilité de vos documents P
 
 # Comment tester l'accessibilité d'une présentation PowerPoint
 
+Trois étapes sont à prévoir : 
+1. Les tests automatiques
+2. La vérification de contrastes 
+3. La vérification vocale
+
 ## Tests automatiques
 Vous pouvez commencer vos tests avec l’outil de vérification de l’accessibilité de Microsoft Office.  
-**Fichier > Vérifier la présence de problèmes > Vérifier l’accessibilité**
+**Menu > Révision > Vérifier l’accessibilité**
 
-<img alt="" src="/fr/contenu-et-communication/images/word_verification_fr.png" class="img-fluid" />
+<img alt="" src="/fr/contenu-et-communication/images/verif-access.png" class="img-fluid" />
 
-**Important :** si vous n’avez pas l’option « Vérifier l’accessibilité » dans le document ouvert, faites la manipulation suivante pour la rendre active : enregistrez votre document depuis une version d’Office supérieure (ou égale) à 2010 et au format « .pptx » avec la case « compatibilité avec les versions précédentes » décochée. 
+Pour corriger au fur et à mesure les problèmes d'accessibilité, cocher la case `Poursuivre l’exécution du vérificateur pendant que je travaille`
+
+L’ordre de lecture qui sera suivi par une synthèse vocale peut être vérifié depuis le volet de sélection: **menu Accueil > Organiser > Volet de sélection**.
+
+<img alt="" src="/fr/contenu-et-communication/images/ordre-lecture.png" class="img-fluid" />
+
+Il est important de vérifier cet ordre directement dans les masques des diapositives.
+
+## Détection des problèmes d'accessibilité
+
+Erreurs détectées automatiquement par le correcteur d’orthographe (**Fichier > Options > Vérification**) et le vérificateur d’accessibilité:
+
+<img alt="" src="/fr/contenu-et-communication/images/tableau-pb.png" class="img-fluid" />
+
 
 ## Vérifications des contrastes de couleurs 
 Le logiciel <a lang="en" href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> indique si les contrastes de couleurs utilisés sont conformes. 
 
-<img alt="" src="/fr/contenu-et-communication/images/cca.png" class="img-fluid" />  
+<img alt="" src="/fr/contenu-et-communication/images/colourcontrast.png" class="img-fluid" />  
 
 ## Tests avec les synthèses vocales JAWS et NVDA
 Afin de poursuivre vos vérifications, vous pouvez tester avec une synthèse vocale.
