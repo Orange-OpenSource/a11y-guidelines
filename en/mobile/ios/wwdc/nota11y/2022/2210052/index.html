@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>What&#39;s new in SwiftUI - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Discover deep levels of customization and advanced techniques for layout.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-bs-toggle="collapse" data-bs-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Search">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="visually-hidden">Search</span>
+    </button>
+
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-light" aria-label="Search" placeholder="Search">
+  </form>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Evaluate
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          What&#39;s new in SwiftUI
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        Table of content
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#swift-charts" class="dropdown-item text-wrap">Swift Charts</a><a href="#navigation-and-windows" class="dropdown-item text-wrap">Navigation and windows</a><a href="#advanced-controls" class="dropdown-item text-wrap">Advanced controls</a><a href="#controls" class="dropdown-item text-wrap">Controls</a><a href="#tables" class="dropdown-item text-wrap">Tables</a><a href="#sharing" class="dropdown-item text-wrap">Sharing</a><a href="#graphics-and-layout" class="dropdown-item text-wrap">Graphics and layout</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2022: What's new in SwiftUI</h1>
+<p>Find hereafter a detailed summary of the above named video which belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2022//10052/">session 10052</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10052.png" alt="" class="img-fluid"></p>
+<p>&quot;Join us as we share the latest updates and a glimpse into the future of UI framework design. Discover deep levels of customization, <strong>advanced techniques for layout</strong>, elegant strategies for sharing, and rock-solid structural approaches for <strong>designing an app top-to-bottom in SwiftUI</strong>. We'll also have some celebratory fun as we play with the latest <strong>graphical effects</strong> and explore APIs.&quot;<br>
+</br><br>
+The outlines of this speech are indicated hereunder:</p>
+<ul>
+<li>
+<p><a href="#swift-charts">Swift Charts</a></p>
+</li>
+<li>
+<p><a href="#navigation-and-windows">Navigation and windows</a></p>
+</li>
+<li>
+<p><a href="#advanced-controls">Advanced controls</a></p>
+</li>
+<li>
+<p><a href="#sharing">Sharing</a></p>
+</li>
+<li>
+<p><a href="#graphics-and-layout">Graphics and layout</a></p>
+</li>
+</ul>
+<p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="swift-charts"><a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=155">Swift Charts</a> <a class="header-anchor" href="#swift-charts" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-Charts_1.png" alt="" class="img-fluid"></p>
+<p>The <strong>Swift Charts framework</strong> guarantees the basic creation of a chart thanks to <a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=177">few lines of code</a> that only demand data and a dedicated model as incoming parameters.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-Charts_2.png" alt="" class="img-fluid"></p>
+<p>The various chart models may lead to <a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=227">many customizable elements</a> that enhance the user experience.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-Charts_3.png" alt="" class="img-fluid"></p>
+<p>Many features like <strong>Dark Mode</strong>, <strong>localization</strong> or <strong>Dynamic Type</strong> are also <a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=281">taken into account</a> by this framework.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-Charts_4.png" alt="" class="img-fluid"></p>
+<h2 id="navigation-and-windows"><a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=307">Navigation and windows</a> <a class="header-anchor" href="#navigation-and-windows" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>SwiftUI introduces updates in iOS 16 for three common <strong>app navigation patterns</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc22-10052-Navigation.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#SwiftUINavigationStacks"
+           id="SwiftUINavigationStacks_tab"
+           role="tab" 
+           aria-selected="true">Stacks</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUINavigationSplitViews"
+           id="SwiftUINavigationSplitViews_tab"
+           role="tab" 
+           aria-selected="false">Split&nbsp;Views</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUINavigationScenes"
+           id="SwiftUINavigationScenes_tab"
+           role="tab" 
+           aria-selected="false">Scenes</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="SwiftUINavigationStacks" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=337">🎬</a></p>
+<p>The <code>NavigationView</code> structure is deprecated in iOS 16 so as to give way to the brand new <strong>NavigationStack</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc22-10052-NavigationStacks_1.png" alt="" class="img-fluid"></p>
+<p>The things to remember about this new navigation element are twofold:</p>
+<ol>
+<li>The new <a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=388">close binding</a> between the navigation destinations and the data types brings about a finer control of the navigation stack's state thanks to the <strong>navigationDestination</strong> modifier.</li>
+<li>The <a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=414"><code>NavigationLink</code></a> structure can now take a value type as incoming parameter instead of a destination view.</li>
+</ol>
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-NavigationStacks_2.png" alt="" class="img-fluid"></p>
+<p>This new way of using navigation allows to get the <strong>current navigation path as explicit state</strong>.</p>
+</div>
+<div class="tab-pane" id="SwiftUINavigationSplitViews" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=487">🎬</a></p>
+<p>The new <strong>NavigationSplitView</strong> structure aims at presenting views in two or three columns through a navigation pattern...</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-NavigationSplitViews_1.png" alt="" class="img-fluid"></p>
+<p>... and is perfectly adapted for the <a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=529">multiplatform apps</a> that may require a reorganization of the available screen space.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-NavigationSplitViews_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftUINavigationScenes" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=591">🎬</a></p>
+<p>Besides the <code>WindowGroup</code> already embraced in SwiftUI, there's a new <strong>Window</strong> scene in <strong>iOS 16</strong> to present the content in a single window that can be reached thanks to the app's window menu or a shortcut.<br>
+<img src="../../../../../images/iOSdev/wwdc22-10052-NavigationScenes_1.png" alt="" class="img-fluid"></p>
+<p>The opening of this window including its position and size is completely <a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=643">handled by code</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-NavigationScenes_2.png" alt="" class="img-fluid"></p>
+<p>Bars can also be <a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=756">added to the menu</a> either as an app feature or as the app itself.<br>
+<img src="../../../../../images/iOSdev/wwdc22-10052-NavigationScenes_3.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<h2 id="advanced-controls"><a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=799">Advanced controls</a> <a class="header-anchor" href="#advanced-controls" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>A <strong>new visual style</strong> is outlined from System Settings that may bring about some rearrangements of controls to better meet this design in the apps as well on <a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=865">macOS</a> as on <a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=970">iOS</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-Advanced.png" alt="" class="img-fluid"></p>
+<h3 id="controls">Controls <a class="header-anchor" href="#controls" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ol>
+<li>
+<p>The <strong>multiline Textfield</strong> can be scrollable thanks to an enhanced linelimit modifier⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1026">🎬</a></p>
+</li>
+<li>
+<p>The new <strong>MultiDataPicker</strong> handles the multi selections on non adjacent elements⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1061">🎬</a></p>
+</li>
+<li>
+<p>The <strong>mixed-state controls</strong> adapt the results of selections on grouped items⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1088">🎬</a></p>
+</li>
+<li>
+<p>The <strong>button style composition</strong> is an effective way to highlight some elements⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1131">🎬</a></p>
+</li>
+<li>
+<p>The <strong>stepper</strong> can now display a formatted value⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1155">🎬</a></p>
+</li>
+<li>
+<p>The new <strong>accessibilityQuickAction</strong> improves the user experience with less gestures⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1184">🎬</a><br>
+</br></p>
+</li>
+</ol>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#SwiftUIAdvancedControls1"
+           id="SwiftUIAdvancedControls1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUIAdvancedControls2"
+           id="SwiftUIAdvancedControls2tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUIAdvancedControls3"
+           id="SwiftUIAdvancedControls3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUIAdvancedControls4"
+           id="SwiftUIAdvancedControls4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUIAdvancedControls5"
+           id="SwiftUIAdvancedControls5_tab"
+           role="tab" 
+           aria-selected="false">5</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUIAdvancedControls6"
+           id="SwiftUIAdvancedControls6_tab"
+           role="tab" 
+           aria-selected="false">6</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="SwiftUIAdvancedControls1" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-AdvancedControls_1.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftUIAdvancedControls2" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-AdvancedControls_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftUIAdvancedControls3" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-AdvancedControls_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftUIAdvancedControls4" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-AdvancedControls_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftUIAdvancedControls5" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-AdvancedControls_5.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftUIAdvancedControls6" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-AdvancedControls_6.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<h3 id="tables">Tables <a class="header-anchor" href="#tables" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#SwiftUIAdvancedTablesOverview"
+           id="SwiftUIAdvancedTablesOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUIAdvancedTablesContextMenu"
+           id="SwiftUIAdvancedTablesContextMenu_tab"
+           role="tab" 
+           aria-selected="false">ContextMenu</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUIAdvancedTablesToolBar"
+           id="SwiftUIAdvancedTablesToolBar_tab"
+           role="tab" 
+           aria-selected="false">ToolBar</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUIAdvancedTablesSearch"
+           id="SwiftUIAdvancedTablesSearch_tab"
+           role="tab" 
+           aria-selected="false">SearchBar</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="SwiftUIAdvancedTablesOverview" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1214">🎬</a></p>
+<p>Tables are part of iPadOS and iOS apps now but with a different rendering due to the available width of the display.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-AdvancedTablesOverview.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftUIAdvancedTablesContextMenu" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1262">🎬</a></p>
+<p>Actions are accessible in a menu according to the selected element including a possible multi items selection.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-AdvancedTablesContextMenu.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftUIAdvancedTablesToolBar" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1317">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-AdvancedTablesToolBar.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftUIAdvancedTablesSearch" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1392">🎬</a></p>
+<p>To improve the user experience and refine the requests, the SearchBar includes potential <strong>customizable tokens</strong>...</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-AdvancedTablesSearchBar_1.png" alt="" class="img-fluid"></p>
+<p>... and possible <a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1408"><strong>scopes</strong></a> that adapt to the available display of the device.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-AdvancedTablesSearchBar_2.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<h2 id="sharing"><a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1432">Sharing</a> <a class="header-anchor" href="#sharing" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Three different domains are highligted to easily share contents with others and data across applications.<br>
+<img src="../../../../../images/iOSdev/wwdc22-10052-Sharing.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#SwiftUISharingPhotos"
+           id="SwiftUISharingPhotos_tab"
+           role="tab" 
+           aria-selected="true">Photos</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUISharing"
+           id="SwiftUISharing_tab"
+           role="tab" 
+           aria-selected="false">Sharing</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUISharingTransferable"
+           id="SwiftUISharingTransferable_tab"
+           role="tab" 
+           aria-selected="false">Transferable</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="SwiftUISharingPhotos" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1471">🎬</a></p>
+<p>The new PhotosPicker generic structure provides a view for <strong>choosing assets from the photo library</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc22-10052-SharingPhotosPicker.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftUISharing" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1536">🎬</a></p>
+<p>This new structure aims at <strong>controlling a sharing presentation</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc22-10052-Sharing_1.png" alt="" class="img-fluid"></p>
+<p>This view may be also part of a <a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1575">context menu</a> for a better user experience.<br>
+<img src="../../../../../images/iOSdev/wwdc22-10052-Sharing_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftUISharingTransferable" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1597">🎬</a></p>
+<p>This new protocol describes <strong>how types are transferred across applications</strong> such as drag and drop or copy/paste.<br>
+<img src="../../../../../images/iOSdev/wwdc22-10052-SharingTransferable_1.png" alt="" class="img-fluid"></p>
+<p>Many standard types already conform to this protocol that can be <a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1627">readily implemented</a> in some custom types.<br>
+<img src="../../../../../images/iOSdev/wwdc22-10052-SharingTransferable_2.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<h2 id="graphics-and-layout">Graphics and layout <a class="header-anchor" href="#graphics-and-layout" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ol>
+<li>
+<p><strong>Color</strong> has a <strong>new gradient property</strong>⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1694">🎬</a></p>
+</li>
+<li>
+<p>The <strong>ShapeStyle</strong> protocol incorporates a <strong>new shadow modifier</strong>⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1705">🎬</a></p>
+</li>
+<li>
+<p>Xcode 14 provides a <strong>preview variants</strong> feature that now runs in live mode by default⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1743">🎬</a></p>
+</li>
+<li>
+<p>The usual SwiftUI <strong>animation APIs</strong> can be used for <strong>Text</strong>⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1812">🎬</a></p>
+</li>
+<li>
+<p>There's a new <strong>Grid</strong> container view that organizes other views in a <strong>two dimensional layout</strong>⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1853">🎬</a></p>
+</li>
+</ol>
+</br>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#SwiftUIGraphics1"
+           id="SwiftUIGraphics1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUIGraphics2"
+           id="SwiftUIGraphics2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUIGraphics3"
+           id="SwiftUIGraphics3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUIGraphics4"
+           id="SwiftUIGraphics4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftUIGraphics5"
+           id="SwiftUIGraphics5_tab"
+           role="tab" 
+           aria-selected="false">5</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="SwiftUIGraphics1" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-Graphics_1.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftUIGraphics2" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-Graphics_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftUIGraphics3" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-Graphics_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftUIGraphics4" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-Graphics_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftUIGraphics5" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc22-10052-Graphics_5.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<ol start="6">
+<li>And last but not least, the new <a href="https://developer.apple.com/videos/play/wwdc2022/10052/?time=1887"><strong>Layout</strong> protocol</a> permits the customization for the geometry of a collection of views.</li>
+</ol>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Table of content</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#swift-charts" class="nav-link text-muted">Swift Charts</a></li><li class="nav-item position-relative">
+            <a href="#navigation-and-windows" class="nav-link text-muted">Navigation and windows</a></li><li class="nav-item position-relative">
+            <a href="#advanced-controls" class="nav-link text-muted">Advanced controls</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#controls" class="nav-link text-muted">Controls</a></li><li class="nav-item position-relative">
+            <a href="#tables" class="nav-link text-muted">Tables</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#sharing" class="nav-link text-muted">Sharing</a></li><li class="nav-item position-relative">
+            <a href="#graphics-and-layout" class="nav-link text-muted">Graphics and layout</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link">
+  About
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility" class="nav-link">
+  Accessibility
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2022/2210052.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>

@@ -1150,6 +1150,8 @@ int indexSwitch = 1;
     CGRect viewFrame = CGRectUnion(label.frame, aSwitch.frame);
     MyWrapView * wrapView = [[MyWrapView alloc]initWithFrame:viewFrame];
     
+    //The following native array is used here to store elements that aren't accessible
+    //This is done to alleviate the heaviness of the code writing instead of creating another array for the same purpose: please don't do this in a prod app.
     wrapView.accessibilityElements = @[label, aSwitch];
     
     NSString * switchValue = (aSwitch.isOn) ? @"on" : @"off";
@@ -1198,6 +1200,8 @@ int indexSwitch = 1;
         let viewFrame = label.frame.union(aSwitch.frame)
         self.init(frame: viewFrame)
         
+        //The following native array is used here to store elements that aren't accessible
+        //This is done to alleviate the heaviness of the code writing instead of creating another array for the same purpose: please don't do this in a prod app.
         self.accessibilityElements = [label, aSwitch]
         
         let switchValue = (aSwitch.isOn) ? "on" : "off"

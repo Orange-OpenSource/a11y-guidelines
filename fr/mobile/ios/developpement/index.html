@@ -1170,6 +1170,9 @@ int indexSwitch = 1;
     CGRect viewFrame = CGRectUnion(label.frame, aSwitch.frame);
     MyWrapView * wrapView = [[MyWrapView alloc]initWithFrame:viewFrame];
     
+    //L'élément natif ci-dessous est utilisé pour stocker des éléments non accessibles et les atteindre de n'importe où.
+    //Ce choix est fait pour alléger le code et éviter de créer un autre tableau pour atteindre le même objectif.
+    //Il n'est pas recommandé de suivre cette voie dans une application distribuée. 
     wrapView.accessibilityElements = @[label, aSwitch];
     
     NSString * switchValue = (aSwitch.isOn) ? @"activé" : @"désactivé";
@@ -1218,6 +1221,9 @@ int indexSwitch = 1;
         let viewFrame = label.frame.union(aSwitch.frame)
         self.init(frame: viewFrame)
         
+        //L'élément natif ci-dessous est utilisé pour stocker des éléments non accessibles et les atteindre de n'importe où.
+        //Ce choix est fait pour alléger le code et éviter de créer un autre tableau pour atteindre le même objectif.
+        //Il n'est pas recommandé de suivre cette voie dans une application distribuée. 
         self.accessibilityElements = [label, aSwitch]
         
         let switchValue = (aSwitch.isOn) ? "activé" : "désactivé"
