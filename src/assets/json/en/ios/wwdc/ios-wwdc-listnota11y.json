@@ -34,6 +34,17 @@
   },
   {
     "themes": "WWDC 2022",
+    "title": "What's new in SwiftUI",
+    "type": ["Button","Menu","Scene","SF Symbol","UIBar"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/2210052",
+    "profils": ["All","Accessibility","SwiftUI","What's new in..."]
+  },
+  {
+    "themes": "WWDC 2022",
     "title": "What's new in UIKit",
     "type": ["SF Symbol","ScrollView","UIBar","Materials","Menu","Pasteboard"],
     "tests": [],
@@ -41,7 +52,7 @@
     "resultat": ["Design"],
     "exception": "",
     "raccourcis": "2022/2210068",
-    "profils": ["All","What's new in..."]
+    "profils": ["All","SwiftUI","What's new in..."]
   },
   {
     "themes": "WWDC 2021",
