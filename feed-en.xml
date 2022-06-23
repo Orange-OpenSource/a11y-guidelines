@@ -4,7 +4,7 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-06-02T00:00:00Z</updated>
+  <updated>2022-06-23T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -2230,6 +2230,66 @@ And some new s on WCAG 2.2, it seems to be pushed back to September 2022, here&#
 &lt;li&gt;An a11y observatory in France, to follow because I don&#39;t know where it goes (fr): &lt;a href=&quot;https://observatoire.access-score.org/index.php?p=0&quot;&gt;https://observatoire.access-score.org/index.php?p=0&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;A mouse that adapts to the needs of disabled users: &lt;a href=&quot;https://www.mac4ever.com/divers/170810-microsoft-presente-a-mouse-and-buttons-adapted-to-users-with-disabilities&quot;&gt;https://www.mac4ever.com/divers/170810-microsoft-presente-a-mouse-and-buttons-adapted-to-users-with-disabilities&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>How to test the WCAG 2.5.3 ?</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/test-wcag-253/"/>
+    <updated>2022-06-23T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/test-wcag-253/</id>
+    <content type="html">&lt;h2 id=&quot;what-does-wcag-253-mean&quot;&gt;What does WCAG 2.5.3 mean &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/test-wcag-253/#what-does-wcag-253-mean&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;general-explanation&quot;&gt;General explanation &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/test-wcag-253/#general-explanation&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The purpose of &lt;a href=&quot;https://www.w3.org/TR/WCAG21/#label-in-name&quot;&gt;this criterion&lt;/a&gt; is to ensure that if a button, link, or other interface element contains some screen visible text, its &lt;a href=&quot;https://a11y-guidelines.orange.com/en/articles/accessible-name/&quot;&gt;accessible name&lt;/a&gt; must contain at least the same text as the one displayed.&lt;br /&gt;
+This is to ensure that users of technical aids can understand and interact with the component. Indeed, the technical aids are based on the accessible name of the components. For example, a voice recognition user will be able to click on a button simply by pronouncing its accessible name.&lt;/p&gt;
+&lt;p&gt;The visible text and the accessible name do not have to be identical, but the visible text must be present in the accessible name, preferably first.&lt;/p&gt;
+&lt;h3 id=&quot;concrete-example&quot;&gt;Concrete example &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/test-wcag-253/#concrete-example&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;h4 id=&quot;accessible-name&quot;&gt;Accessible name &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/test-wcag-253/#accessible-name&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Let’s take the example of a user using voice recognition software who wants to input and submit a form.&lt;br /&gt;
+&lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/tester-wcag-253/button_send.png&quot; alt=&quot;button with send text&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;button&amp;gt;
+    &amp;lt;img src=&quot;send.png&quot; alt=&quot;Submit&quot;&amp;gt;
+&amp;lt;/button&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The above example may be problematic. The button contains an image with the text &amp;quot;Send&amp;quot; but the alternative text of the image is &amp;quot;Submit&amp;quot;, so its accessible name is &amp;quot;Submit&amp;quot;. Since technologies depend on the accessible name, if the user says &amp;quot;Send&amp;quot;, nothing will happen.&lt;/p&gt;
+&lt;p&gt;To solve the problem, the alternative text must be the same as the image text (&amp;quot;Send&amp;quot;).&lt;/p&gt;
+&lt;h4 id=&quot;accessible-masking&quot;&gt;Accessible masking &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/test-wcag-253/#accessible-masking&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Be careful when using &lt;a href=&quot;https://a11y-guidelines.orange.com/en/web/components-examples/accessible-hiding/&quot;&gt;accessible masking&lt;/a&gt;. It should not be placed in the middle of a visually displayed label.&lt;br /&gt;
+Otherwise, it will be impossible to correlate the accessible name with the displayed text.&lt;/p&gt;
+&lt;p&gt;Example of Error:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;html&quot;&gt;
+&amp;lt;a href=&quot;www.orange.com&quot; target=&quot;_blank&quot;&amp;gt; Open &amp;lt;span class=&quot;visually-hidden&quot;&amp;gt;in new Window &amp;lt;/span&amp;gt; Orange ebsite &amp;lt;/a&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you say, &amp;quot;Open orange website&amp;quot;, the voice recognition software won’t find the element. On the other hand, if we say &amp;quot;Open in a new window orange website&amp;quot; the link will be activated, as it is its accessible name.&lt;/p&gt;
+&lt;h2 id=&quot;how-to-test-it&quot;&gt;How to test it &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/test-wcag-253/#how-to-test-it&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;screen-reader&quot;&gt;Screen reader &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/test-wcag-253/#screen-reader&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The screen reader vocalizes the properties of the element on which you place your focus.&lt;br /&gt;
+Particularly, the following characteristics of the element: its function (link, button, text...), its status and its accessible name. If the accessible name you hear does not match what is textually visible, then the criterion is considered non-compliant.&lt;/p&gt;
+&lt;p&gt;You can use the Lyric Viewer on the screen reader to text-write the characteristics of an item. It is therefore possible to compare the accessible name in textual form read by the screen reader with the text displayed on the component.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/tester-wcag-253/nvda_visionneuse.png&quot; alt=&quot;Exemple of Lyric Viewer&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;order-inspector&quot;&gt;Order inspector &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/test-wcag-253/#order-inspector&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;The best way to check the criterion with the control inspector depends on the browser used.&lt;/p&gt;
+&lt;h4 id=&quot;with-firefox&quot;&gt;With Firefox &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/test-wcag-253/#with-firefox&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Access Control Inspector  (&lt;kbd&gt;Ctrl+ Shift. + i&lt;/kbd&gt;)&lt;/li&gt;
+  &lt;li&gt;Select the accessibility tab&lt;/li&gt;
+  &lt;li&gt;Inspect an item&lt;/li&gt;
+  &lt;li&gt;Look at the properties part, if the name attribute contains at least the displayed text, the criterion is compliant&lt;/li&gt; 
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/tester-wcag-253/FF_name.png&quot; alt=&quot;Firefox Developer Tools panels with Accessibility tab open&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;h4 id=&quot;with-chrome-or-edge-chronium&quot;&gt;With Chrome or Edge Chronium &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/test-wcag-253/#with-chrome-or-edge-chronium&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;Access Control Inspector  (&lt;kbd&gt;Ctrl+ Shift. + i&lt;/kbd&gt;)&lt;/li&gt;
+  &lt;li&gt;Select the Elements tab&lt;/li&gt;
+  &lt;li&gt;Choose the element you want to inspect&lt;/li&gt;
+  &lt;li&gt;
+    Click on the Accessibility tab, this tab can be hidden behind the &quot;more tab&quot; button
+    &lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/tester-wcag-253/more_tab_img.png&quot; alt=&quot;&quot; /&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Look at the part &quot;Computed Properties&quot; if the attribute name contains at least the displayed text, the criterion is compliant&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/tester-wcag-253/Chrome_name.png&quot; alt=&quot;Chrome Developer Tools panels with Accessibility tree open&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
 </content>
   </entry>
 </feed>
