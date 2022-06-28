@@ -55,6 +55,17 @@
     "profils": ["All","SwiftUI","What's new in..."]
   },
   {
+    "themes": "WWDC 2022",
+    "title": "What's new in Xcode",
+    "type": ["SF Symbol"],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22110427",
+    "profils": ["All","Debugging","What's new in...","Xcode"]
+  },
+  {
     "themes": "WWDC 2021",
     "title": "Build interactive tutorials using DocC",
     "type": [],
