@@ -34,6 +34,17 @@
   },
   {
     "themes": "WWDC 2022",
+    "title": "What's new in Swift-DocC",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22110368",
+    "profils": ["All","DocC","Xcode","What's new in..."]
+  },
+  {
+    "themes": "WWDC 2022",
     "title": "What's new in SwiftUI",
     "type": ["Button","Menu","Scene","SF Symbol","UIBar"],
     "tests": [],
