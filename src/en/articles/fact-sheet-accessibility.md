@@ -119,9 +119,8 @@ Mobile applications:
 <hr>
 
 ## Develop accessible web pages
-Coming soon.
 
-<div style="display: none">
+<div>
 <div class="row">
   <div class="col-3">
     <p class="border-end">
@@ -134,8 +133,8 @@ Coming soon.
     <p>Reminder of the essential techniques and tools to develop an accessible website.</p>
     <h3 id="tele-web">Download</h4>
     <p>          
-      <a href="../../res/memos/dev-web/Memo-Web-Orange.pdf" class="btn btn-secondary">
-        Download as PDF (272 Ko)
+      <a href="../../res/memos/dev-web/Web-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
+        Download as PDF (264 Ko)
         <span class="visually-hidden">Web development accessibility fact sheet</span>
       </a>
     </p>
@@ -145,9 +144,8 @@ Coming soon.
 <hr>
 
 ## Test the accessibility of web pages
-Coming soon.
 
-<div style="display: none">
+<div>
 <div class="row">
   <div class="col-3">
     <p class="border-end">
@@ -161,8 +159,8 @@ Coming soon.
     </p>        
     <h3 id="tele-tests-web">Download</h4>
     <p>          
-      <a href="../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-secondary">
-        Download as PDF (335 Ko)
+      <a href="../../res/memos/tests-web/Web-tests-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
+        Download as PDF (325 Ko)
         <span class="visually-hidden">Web test accessibility fact sheet</span>
       </a>
     </p>
