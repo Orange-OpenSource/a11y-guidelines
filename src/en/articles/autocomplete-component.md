@@ -29,7 +29,7 @@ The most usable components are then subjected to user tests.
 At the end of the benchmark, the selected implementations are:
 
 - <a href="https://alphagov.github.io/accessible-autocomplete/examples/" target="_blank" title="GOV UK, accessible autocomplete (new window)">GOV UK, accessible autocomplete<span class="visually-hidden"> (new window)</span></a>
-- <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#combobox" target="_blank" title="Pattern WAI ARIA 1.1, combobox (new window)"> Pattern WAI ARIA 1.1, combobox<span class="visually-hidden"> (new window)</span></a>
+- <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/" target="_blank" title="Pattern WAI ARIA 1.1, combobox (new window)"> Pattern WAI ARIA 1.1, combobox<span class="visually-hidden"> (new window)</span></a>
 
 ## User tests
 
@@ -157,8 +157,8 @@ More information in the article <a href = "https://www.levelaccess.com/differenc
 **Notes**
 
 1. As a reminder, this solution turns out to be more robust than the management of the active element by the `aria-descendant` attribute, more information:
-    a. <a href="https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_roving_tabindex" target="_blank" title="Focus management by tabindex (new window )">Focus management by tabindex<span class="visually-hidden"> (new window)</span></a>
-    b. <a href="https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_focus_activedescendant)" target="_blank" title="Focus management by aria-activedescendant (new window)">Focus management by aria-activedescendant <span class="visually-hidden"> (new window)</span></a>
+    a. <a href="https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_roving_tabindex" target="_blank" title="Focus management by tabindex (new window )">Focus management by tabindex<span class="visually-hidden"> (new window)</span></a>
+    b. <a href="https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#kbd_focus_activedescendant" target="_blank" title="Focus management by aria-activedescendant (new window)">Focus management by aria-activedescendant <span class="visually-hidden"> (new window)</span></a>
 2. As the list of propositions is refreshed dynamically, we preserve the `aria-posinset` and` aria-setsize` attributes, in order to provide an up-to-date list to the screen reader, regardless of the number of propositions.
 This seems to be more robust in order to overcome any errors in the interpretation of screen readers.
 Indeed, these could be misled in cases like this one, where the content of a list, and in particular the number of items, is dynamically updated.
@@ -231,7 +231,7 @@ The GOV UK component does not follow this behavior.
 
 - <a href="https://alphagov.github.io/accessible-autocomplete/examples/" target="_blank" title="GOV UK, accessible autocomplete (new window)"> GOV UK, <span lang = " en "> accessible autocomplete </span> <span class =" visually-hidden "> (new window) </span> </a>
 - <a href ="https://designnotes.blog.gov.uk/2017/04/20/were-building-an-autocomplete/" target = "_ blank" title = "Article We're building an autocomplete (new window ) "> Article <span lang =" en "> We're building an autocomplete </span> <span class =" visually-hidden "> (new window) </span> </a>
-- <a href="https://www.w3.org/TR/wai-aria-practices-1.1/#combobox" target="_blank" title="WAI-ARIA Authoring Practices 1.1 Combobox (new window)"> WAI-ARIA Authoring Practices 1.1 Combobox </span> <span class = "visually-hidden"> (new window) </span> </a>
+- <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/" target="_blank" title="WAI-ARIA Authoring Practices 1.1 Combobox (new window)"> WAI-ARIA Authoring Practices 1.1 Combobox </span> <span class = "visually-hidden"> (new window) </span> </a>
 - <a href="https://pidila.gitlab.io/select-a11y/" target="_blank" title="Select-a11y-demo (new window)"> Select- a11y - demo </span> <span class = "visually-hidden"> (new window) </span> </a>
 - <a href="https://www.24a11y.com/2019/select-your-poison/" target="_blank" title="Select your poison (new window)"> Select your poison </span> <span class = "visually-hidden"> (new window) </span> </a>
 - <a href="https://www.24a11y.com/2019/select-your-poison-part-2/" target="_blank" title="Select your poison part 2 (new window)"> Select your poison part 2 </span> <span class = "visually-hidden"> (new window) </span> </a>
