@@ -2033,8 +2033,7 @@ For each page the criteria can be compliant, non-compliant or not applicable, an
 &lt;/div&gt;
 &lt;hr /&gt;
 &lt;h2 id=&quot;develop-accessible-web-pages&quot;&gt;Develop accessible web pages &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#develop-accessible-web-pages&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Coming soon.&lt;/p&gt;
-&lt;div style=&quot;display: none&quot;&gt;
+&lt;div&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;col-3&quot;&gt;
     &lt;p class=&quot;border-end&quot;&gt;
@@ -2047,8 +2046,8 @@ For each page the criteria can be compliant, non-compliant or not applicable, an
     &lt;p&gt;Reminder of the essential techniques and tools to develop an accessible website.&lt;/p&gt;
     &lt;h3 id=&quot;tele-web&quot;&gt;Download
     &lt;p&gt;          
-      &lt;a href=&quot;https://a11y-guidelines.orange.com/en/res/memos/dev-web/Memo-Web-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
-        Download as PDF (272 Ko)
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/en/res/memos/dev-web/Web-Fact-Sheet-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Download as PDF (264 Ko)
         &lt;span class=&quot;visually-hidden&quot;&gt;Web development accessibility fact sheet&lt;/span&gt;
       &lt;/a&gt;
     &lt;/p&gt;
@@ -2057,8 +2056,7 @@ For each page the criteria can be compliant, non-compliant or not applicable, an
 &lt;/div&gt;
 &lt;hr /&gt;
 &lt;h2 id=&quot;test-the-accessibility-of-web-pages&quot;&gt;Test the accessibility of web pages &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/fact-sheet-accessibility/#test-the-accessibility-of-web-pages&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Coming soon.&lt;/p&gt;
-&lt;div style=&quot;display: none&quot;&gt;
+&lt;div&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;col-3&quot;&gt;
     &lt;p class=&quot;border-end&quot;&gt;
@@ -2072,8 +2070,8 @@ For each page the criteria can be compliant, non-compliant or not applicable, an
     &lt;p&gt;&lt;/p&gt;        
     &lt;h3 id=&quot;tele-tests-web&quot;&gt;Download
     &lt;p&gt;          
-      &lt;a href=&quot;https://a11y-guidelines.orange.com/en/res/memos/tests-web/Memo-Tests-Web-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
-        Download as PDF (335 Ko)
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/en/res/memos/tests-web/Web-tests-Fact-Sheet-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Download as PDF (325 Ko)
         &lt;span class=&quot;visually-hidden&quot;&gt;Web test accessibility fact sheet&lt;/span&gt;
       &lt;/a&gt;
     &lt;/p&gt;
