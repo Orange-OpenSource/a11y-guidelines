@@ -4,7 +4,7 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-06-02T00:00:00Z</updated>
+  <updated>2022-07-12T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -270,51 +270,6 @@ Mais on pourrait aussi utiliser &lt;code&gt;aria-labelledby&lt;/code&gt; pour r�
 &lt;li&gt;lors de l&#39;apparition/disparition de contenu suite une interaction utilisateur qui est annoncé aussi aux &lt;abbr&gt;AT&lt;/abbr&gt; (par exemple, on annonce au lecteur d&#39;écran &amp;quot;ouvert/fermé&amp;quot; pour un menu, un accordéon)&lt;/li&gt;
 &lt;li&gt;pour une système de panneaux, dont l&#39;onglet sélectionné est annoncé aux &lt;abbr&gt;AT&lt;/abbr&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-  </entry>
-  
-  <entry>
-    <title>Les bonnes pratiques pour les liens d’évitements</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/liens-evitement/"/>
-    <updated>2019-06-19T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/liens-evitement/</id>
-    <content type="html">&lt;h2 id=&quot;quest-ce-quun-lien-devitement&quot;&gt;Qu’est-ce qu’un lien d’évitement ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#quest-ce-quun-lien-devitement&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&quot;quest-ce&quot;&gt;Qu&#39;est ce ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#quest-ce&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Les liens d’évitement sont des raccourcis permettant d’accéder directement à une zone de contenu ou d’éviter des régions de la page, afin de naviguer plus rapidement.&lt;br /&gt;
-On peut distinguer 3 types de liens :&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;les liens d&#39;accès rapide : rassemblés en haut de page et permettant d’aller aux principales régions de la page : « Aller au menu », « Aller au contenu », « Aller à la recherche », par exemple&lt;/li&gt;
-&lt;li&gt;les liens d’évitement : positionnés avant la région qu’ils permettent de sauter : « Passer la section », « Passer le chapitre »&lt;/li&gt;
-&lt;li&gt;les liens de navigation interne à une page : « Retour en haut de page », par exemple&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Ces liens d’évitement permettent donc à l’utilisateur d’éviter des parties de pages, que l’on navigue au clavier, que l’on ait du mal à se repérer dans une page longue ou que scroller soit difficile.&lt;/p&gt;
-&lt;h3 id=&quot;pour-qui&quot;&gt;Pour qui ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#pour-qui&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Les liens d’évitement sont précieux pour de multiples utilisateurs :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;les utilisateurs de lecteur d’écran ou ne pouvant utiliser la souris, qui se déplacent donc au clavier uniquement&lt;/li&gt;
-&lt;li&gt;Les utilisateurs qui peinent à naviguer dans une page longue : les déficients moteurs (fatigabilité ou limitations motrices) ou les personnes qui naviguent sur leur smartphone (on évite le swipe, le balayage)&lt;/li&gt;
-&lt;li&gt;les malvoyants, qui utilisent ou pas une loupe d’écran, et ayant du mal à se faire une représentation globale de la topologie de la page&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;quelles-sont-les-types-de-solutions&quot;&gt;Quelles sont les types de solutions ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#quelles-sont-les-types-de-solutions&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;les liens d&#39;accès rapide : la solution la plus répandue, est une série de liens (entre 1 et 6 généralement) positionnés tout en haut de page visuellement et intégrés dans le code juste après l’ouverture de la balise body. Chaque lien pointe vers  une région,  ou toute autre partie importante de la page. Ils sont, généralement, définies avec une taille de police plus petite que le corps du texte ou par défaut cachés et rendus visibles, lors de la navigation clavier, à la prise de focus.&lt;/li&gt;
-&lt;li&gt;Les liens d‘évitement : ces éléments sont positionnés juste avant chaque partie de page ou région à sauter. Ils peuvent être toujours visibles ou bien rendus visibles, lors de la navigation clavier, à la prise de focus.&lt;/li&gt;
-&lt;li&gt;Les liens de navigation internes de type « retour en haut de page » : ils sont souvent collés (position CSS &lt;code&gt;sticky&lt;/code&gt;) tout en bas, côté droit du viewport, toujours visible ou n’apparaissant que lorsqu’on arrive en fin de scroll vertical.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;quelles-sont-les-bonnes-pratiques&quot;&gt;Quelles sont les bonnes pratiques ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#quelles-sont-les-bonnes-pratiques&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;h3 id=&quot;quand-doit-on-mettre-en-place-des-liens-devitement&quot;&gt;Quand doit-on mettre en place des liens d’évitement ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#quand-doit-on-mettre-en-place-des-liens-devitement&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;La première question à se poser est, sur mon site, l’utilisateur a-t-il besoin de liens d’évitement ?&lt;/p&gt;
-&lt;p&gt;Les principales raisons de la mise en place de liens d’évitement :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;la page est longue&lt;/li&gt;
-&lt;li&gt;la navigation contient beaucoup de liens&lt;/li&gt;
-&lt;li&gt;le contenu contient beaucoup de liens (plusieurs menus de navigation, pieds de page faisant office de plan de site…)&lt;/li&gt;
-&lt;li&gt;la page est découpée en de nombreuses parties distinctes (portail, tableau de bord…)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;utiliser-une-solution-hybride&quot;&gt;Utiliser une solution hybride ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#utiliser-une-solution-hybride&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;On a vu que les liens d’accès rapide, peuvent être visibles, ou masqués par défaut pour être affichés uniquement lors de la navigation clavier. Cette dernière option répond souvent à des problématiques esthétiques. Néanmoins, elle supprime le bénéfice que pourraient apporter ces liens aux autres utilisateurs qui n’utilisent pas le clavier (utilisateurs de loupe logicielle par exemple). Une solution, qui permettrait de concilier les avantages des deux techniques, serait de positionner un bouton discret mais affordant au click, en haut de page, permettant de déclencher à la demande l’ouverture et la fermeture du panneau des liens d’accès rapides. On pourrait également penser à une barre horizontale visible tout en haut à l’ouverture de la page et qui disparaît lors du scroll vers le bas de page.&lt;/p&gt;
-&lt;p&gt;Quelle que soit la solution, il faut que les liens d’évitement soient visibles (dans la mesure du possible) et utilisables par tous !&lt;/p&gt;
-&lt;p&gt;Pour toutes remarques, suggestions, n&#39;hésitez pas à consulter ou créer une issue sur notre (&lt;a href=&quot;https://github.com/Orange-OpenSource/a11y-guidelines/issues&quot;&gt;compte github&lt;/a&gt;).&lt;/p&gt;
 </content>
   </entry>
   
@@ -2434,6 +2389,101 @@ Et enfin, des nouvelles sur WCAG 2.2, repoussé à septembre 2022, voilà pourqu
 &lt;li&gt;Une souris qui s&#39;adapte aux besoin des utilisateurs handicapés (en) : &lt;a href=&quot;https://www.mac4ever.com/divers/170810-microsoft-presente-une-souris-et-des-boutons-adaptes-aux-utilisateurs-souffrant-d-un-handicap&quot;&gt;https://www.mac4ever.com/divers/170810-microsoft-presente-une-souris-et-des-boutons-adaptes-aux-utilisateurs-souffrant-d-un-handicap&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Un guide pour rendre accessible son évènement : &lt;a href=&quot;https://lesdevalideuses.org/ressources-2/accessibiliser-un-evenement-le-guide/&quot;&gt;https://lesdevalideuses.org/ressources-2/accessibiliser-un-evenement-le-guide/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Les bonnes pratiques pour les liens d’évitements</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/liens-evitement/"/>
+    <updated>2022-07-12T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/liens-evitement/</id>
+    <content type="html">&lt;h2 id=&quot;quest-ce-quun-lien-devitement&quot;&gt;Qu’est-ce qu’un lien d’évitement ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#quest-ce-quun-lien-devitement&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;quest-ce&quot;&gt;Qu&#39;est ce ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#quest-ce&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Les liens d’évitement sont des raccourcis permettant d’accéder directement à une zone de contenu ou d’éviter des régions de la page, afin de naviguer plus rapidement.&lt;/p&gt;
+&lt;p&gt;On peut distinguer trois types de liens :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;les liens d&#39;accès rapide : rassemblés en haut de page et permettant d’aller aux principales régions de la page : « Aller au menu », « Aller au contenu », « Aller à la recherche », par exemple&lt;/li&gt;
+&lt;li&gt;les liens d’évitement : positionnés avant la région qu’ils permettent de sauter : « Passer la section », « Passer le chapitre »&lt;/li&gt;
+&lt;li&gt;les liens de navigation interne à une page : « Retour en haut de page », par exemple&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Ces liens d’évitement permettent donc à l’utilisateur d’éviter des parties de pages afin de faciliter la navigation, d’accéder au contenu souhaité plus aisément et se focaliser sur le contenu important, que l’on navigue au clavier, que l’on ait du mal à se repérer dans une page longue ou que scroller soit difficile.&lt;/p&gt;
+&lt;h3 id=&quot;pour-qui&quot;&gt;Pour qui ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#pour-qui&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Les liens d’évitement sont précieux pour de multiples utilisateurs :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Les utilisateurs de lecteur d’écran ou ne pouvant utiliser la souris, qui se déplacent donc au clavier uniquement&lt;/li&gt;
+&lt;li&gt;Les utilisateurs qui peinent à naviguer dans une page longue : les déficients moteurs (fatigabilité ou limitations motrices) ou les personnes qui naviguent sur leur smartphone (on évite le swipe, le balayage)&lt;/li&gt;
+&lt;li&gt;Les malvoyants, qui utilisent ou pas une loupe d’écran, et ayant du mal à se faire une représentation globale de la topologie de la page&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On va donc, grâce aux liens d’évitement, limiter l’usage des touches de navigation clavier et plus généralement économiser des gestes lors de la navigation intra-page.&lt;/p&gt;
+&lt;h2 id=&quot;utilisation&quot;&gt;Utilisation  &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#utilisation&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Il s’agit d’un lien pointant soit vers une ancre (balise &lt;code&gt;a&lt;/code&gt; avec un attribut name) soit vers un élément HTML possédant un attribut id.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;body&amp;gt;
+  &amp;lt;a class=&amp;quot;evitement&amp;quot; href=&amp;quot;#contenu&amp;quot;&amp;gt;Aller au contenu&amp;lt;/a&amp;gt;
+  […]
+  &amp;lt;main id=&amp;quot;contenu&amp;quot;&amp;gt;
+     […]
+  &amp;lt;/main&amp;gt;
+  […]
+&amp;lt;/body&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;quelles-sont-les-bonnes-pratiques&quot;&gt;Quelles sont les bonnes pratiques ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#quelles-sont-les-bonnes-pratiques&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Il est possible d’intégrer un lien d’évitement de contenu au site sous forme d’image (type « flèche » par exemple avec un attribut title) apparaissant après avoir fait défiler la page vers le bas. Le lien d’évitement permettra de faire un retour vers le haut de page directement.&lt;br /&gt;
+Ce lien d’évitement ne doit pas empêcher la lecture ou la compréhension de l’information, il doit être le dernier élément ciblable au clavier.&lt;/li&gt;
+&lt;li&gt;Le lien d’évitement doit être atteignable au clavier quel que soit le sens de navigation (TAB ou Shift+TAB).&lt;/li&gt;
+&lt;li&gt;Placer un lien d’évitement sur un « id » fonctionne, mais ciblé le lien d’évitement sur des éléments comme &lt;code&gt;aside /&lt;/code&gt;, &lt;code&gt;footer /&lt;/code&gt; ou &lt;code&gt;main /&lt;/code&gt; permet de rendre le lien d’évitement de contenu moins sensible aux éventuelles modifications. (Changement d’« id », ou simplement non repris dans le code d’une nouvelle page par exemple)&lt;/li&gt;
+&lt;li&gt;les liens d’évitements ou d’accès rapide doivent être visuellement situés au même endroit dans la page et dans le même ordre relatif dans le code source sur l’ensemble des pages du site.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;quand-doit-on-mettre-en-place-des-liens-devitement&quot;&gt;Quand doit-on mettre en place des liens d’évitement ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#quand-doit-on-mettre-en-place-des-liens-devitement&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;La première question à se poser est, sur mon site, l’utilisateur a-t-il besoin de liens d’évitement ?&lt;/p&gt;
+&lt;p&gt;Les principales raisons de la mise en place de liens d’évitement:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;la page est longue&lt;/li&gt;
+&lt;li&gt;la navigation contient beaucoup de liens&lt;/li&gt;
+&lt;li&gt;le contenu contient beaucoup de liens (plusieurs menus de navigation, pieds de page faisant office de plan de site…)&lt;/li&gt;
+&lt;li&gt;la page est découpée en de nombreuses parties distinctes (portail, tableau de bord…)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;il n’existe pas de moyen autre pour naviguer au sein de la page (titre de rubrique, structure sémantique HTML5…)&lt;br /&gt;
+&lt;strong&gt;Note&lt;/strong&gt; : attention pour qu’un lien d’évitement soit fonctionnel, il ne doit pas se contenter de faire défiler la page à l’endroit indiqué (contenu principal par exemple). Il doit permettre à l’utilisateur de «  sauter  » une partie de la page.&lt;br /&gt;
+Si un utilisateur active un lien « Aller au contenu » à l’aide du clavier, au prochain « TAB » de l’utilisateur le focus doit se déplacer dans le contenu principal et non sur le lien d’évitement suivant.&lt;br /&gt;
+Ce focus peut être fait en plaçant une ancre vers le prochain «  id  » à cibler par exemple.&lt;/p&gt;
+&lt;p&gt;Les lecteurs d&#39;écran font la distinction entre le focus système et leur curseur (les lecteurs d&#39;écran utilisent divers autres noms pour cela). Sur VoiceOver d&#39;Apple, il s&#39;appelle le « curseur VO », et NVDA l&#39;appelle « l&#39;objet Navigator », par exemple. Cette distinction est faite puisque le focus système ne peut être défini que sur des éléments focusables. Le rôle du curseur du lecteur d&#39;écran est de définir et de lire des éléments non focusables tels que des paragraphes de textes.&lt;/p&gt;
+&lt;p&gt;Ainsi, Lorsque nous utilisons un lien d&#39;ancrage, le focus système se déplace avec lui. Cependant le curseur du lecteur d&#39;écran se déplacera pour être défini sur l&#39;élément ancré que s&#39;il est focusable. Lorsque l&#39;élément ancré n&#39;est pas focusable, le lien de saut est toujours considéré comme « l&#39;élément actif ».&lt;/p&gt;
+&lt;p&gt;Pour régler cette problématique, on peut mettre une ancre sur l’élément, et utiliser un «  &lt;code&gt;tabindex=-1&lt;/code&gt;  » pour le rendre focusable via Javascript (il restera exclu des éléments focusables via la touche tab).&lt;/p&gt;
+&lt;h3 id=&quot;utiliser-une-solution-hybride&quot;&gt;Utiliser une solution hybride ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#utiliser-une-solution-hybride&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;On a vu que les liens d’accès rapide, peuvent être visibles, ou masqués par défaut pour être affichés uniquement lors de la navigation clavier. Cette dernière option répond souvent à des problématiques esthétiques. Néanmoins, elle supprime le bénéfice que pourraient apporter ces liens aux autres utilisateurs qui n’utilisent pas le clavier (utilisateurs de loupe logicielle par exemple). Une solution, qui permettrait de concilier les avantages des deux techniques, serait de positionner un bouton discret mais affordant au click, en haut de page, permettant de déclencher à la demande l’ouverture et la fermeture du panneau des liens d’accès rapides. On pourrait également penser à une barre horizontale visible tout en haut à l’ouverture de la page et qui disparaît lors du scroll vers le bas de page.&lt;/p&gt;
+&lt;p&gt;Quelle que soit la solution, il faut que les liens d’évitement soient visibles (dans la mesure du possible) et utilisables par tous !&lt;/p&gt;
+&lt;h2 id=&quot;exemples-dusage&quot;&gt;Exemples d’usage &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#exemples-dusage&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt; Exemple 1  :&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;ul id=&amp;quot;evitement&amp;quot;&amp;gt;
+   &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;#contenu&amp;quot;&amp;gt;Aller au contenu&amp;lt;/a&amp;gt;
+   &amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;#menu&amp;quot;&amp;gt;Aller au menu&amp;lt;/a&amp;gt;
+   &amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;
+      &amp;lt;a href=&amp;quot;#recherche&amp;quot;&amp;gt;Aller à la recherche&amp;lt;/a&amp;gt;
+   &amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt; Exemple 2  :&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;p id=&amp;quot;skiplink&amp;quot;&amp;gt;
+   &amp;lt;a href=&amp;quot;#navigation&amp;quot; &amp;gt;Sauter à la navigation&amp;lt;/a&amp;gt;
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;exemples-dusage-particulier&quot;&gt;Exemples d’usage particulier &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/liens-evitement/#exemples-dusage-particulier&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Si les liens d’évitement ne sont pas rendus visibles à l’écran par défaut (pour des questions de design par exemple). Il est important que ceux-ci restent interprétés par les outils d’assistance.&lt;br /&gt;
+La solution consiste à utiliser une classe CSS de masquage accessible. Les frameworks type &lt;strong&gt;Bootstrap&lt;/strong&gt; et &lt;strong&gt;Boosted&lt;/strong&gt; embarquent directement ce type de classe ( &lt;code&gt;visually-hidden&lt;/code&gt;  et  &lt;code&gt;visually-hidden-focusable&lt;/code&gt; ). Ainsi même s’il ne sera pas visible à l’écran, un élément possédant la classe  &lt;code&gt;visually-hidden&lt;/code&gt;  sera correctement vocalisé par un lecteur d’écran.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;a.evitement {
+   position: absolute;
+   left: -99999px;
+}
+a.evitement:focus {
+   position: static;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Pour toutes remarques, suggestions, n&#39;hésitez pas à consulter ou créer une issue sur notre (&lt;a href=&quot;https://github.com/Orange-OpenSource/a11y-guidelines/issues&quot;&gt;compte github&lt;/a&gt;).&lt;/p&gt;
 </content>
   </entry>
 </feed>
