@@ -110,7 +110,7 @@ Quelle que soit la solution, il faut que les liens d’évitement soient visible
 Si les liens d’évitement ne sont pas rendus visibles à l’écran par défaut (pour des questions de design par exemple). Il est important que ceux-ci restent interprétés par les outils d’assistance.
 La solution consiste à utiliser une classe CSS de masquage accessible. Les frameworks type **Bootstrap** et **Boosted** embarquent directement ce type de classe (&nbsp;<code>visually-hidden</code>&nbsp; et &nbsp;<code>visually-hidden-focusable</code>&nbsp;). Ainsi même s’il ne sera pas visible à l’écran, un élément possédant la classe &nbsp;<code>visually-hidden</code>&nbsp; sera correctement vocalisé par un lecteur d’écran.
 
-```html
+```css
 a.evitement {
    position: absolute;
    left: -99999px;
