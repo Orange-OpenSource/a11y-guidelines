@@ -28,4 +28,4 @@ Pour tout le monde en somme&nbsp;!
 ## Je veux mDAN&nbsp;!
 [Le code source est disponible sur github](https://github.com/Orange-OpenSource/m-dan)
 
-Vous pouvez déjà [télécharger la version Android](../mDAN_v2.2.0.apk)
+Vous pouvez déjà [télécharger la version Android](https://play.google.com/store/apps/details?id=com.orange.labs.dan&gl=FR) et [télécharger la version IOS](https://apps.apple.com/fr/app/mdan/id1609463651)
