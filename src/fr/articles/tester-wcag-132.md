@@ -11,12 +11,12 @@ tags:
 
 ## Explication générale
 
-Le but du  [critère WCAG 1.3.2](https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence) est de s'assurer que si l'ordre du contenu est important, celui-ci doit être préservé quelle que soit la manière dont il est présenté à l'utilisateur, par exemple si on désactive le CSS ou si on utilise un lecteur d'écran.
+Le but du  [critère WCAG 1.3.2](https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence) est de s'assurer que si l'ordre du contenu est important. Celui-ci doit être préservé quelle que soit la manière dont il est présenté à l'utilisateur. Par exemple si le CSS est désactivé ou  dans le cadre d’une utilisation d’un lecteur d'écran.
 
 L'ordre d'un contenu est <strong>important</strong> si l'ordre du contenu ne peut pas être modifié sans en affecter sa signification.
-Par exemple, pour une liste ordonnée ou un tableau, l'ordre du contenu est important, en revanche pour une liste non-ordonné, on peut modifier l'ordre de lecture sans que ça n'impacte la compréhension de l'utilisateur.
+Par exemple, pour une liste ordonnée ou un tableau, l'ordre du contenu est important, en revanche pour une liste non-ordonnée, l'ordre de lecture n’a pas d’impacte sur la compréhension de l'utilisateur.
 
-Dans une page WEB, la position d'une section de navigation et de la section principale de la page, généralement, n'affecte pas la compréhension du contenu de la page, que la navigation soit, en première ou en deuxième, il n'existe donc pas un ordre de lecture spécifique pour comprendre ces deux parties de la page.
+Une page WEB peut être composée de plusieurs sections indépendantes ayant des rôles propres. Les positions d'une section de navigation et une section principale de page, n'affectent généralement pas la compréhension du contenu de la page. Que la navigation soit, en haut ou à gauche de l’écran, ne gêne pas la compréhension, même si un ordre de lecture peut être imposé à l’intérieur d’une de ces sections. 
 Il peut donc exister plusieurs ordres de lecture sur une page WEB pour satisfaire le critère de succès.
 
 
@@ -25,8 +25,7 @@ Il peut donc exister plusieurs ordres de lecture sur une page WEB pour satisfair
 ### Utiliser des espaces blancs pour formater du texte brut
 
 Pour présenter du contenu, il est important de ne pas utiliser des caractères d'espacement, comme les espaces, la tabulation, le saut de ligne ou le retour chariot.
-Dans certains cas, ces caractères sont utilisés pour formater des tableaux, ou des colonnes des données dans un contenu textuel. Cette méthode est proscrite, car les technologies d'assistances ne se verront pas présenter les informations dans un ordre de lecture logique, et les informations retournées par cette technologie seront incompréhensibles.
-
+Dans certains cas, ces caractères sont utilisés pour formater des tableaux, ou des colonnes de données dans un contenu textuel. Cette méthode est proscrite, car les technologies d'assistances ne se verront pas présenter les informations dans un ordre de lecture logique, les informations retournées par cette technologie seront donc incompréhensibles.
 
 Ci-dessous, deux exemples qui ne sont pas valides aux lecteurs d'écran.
 
@@ -48,7 +47,7 @@ Horaires de travail avec Salle de classe
 </pre>
 
 On remarque, que la présentation ci-dessus est très visuelle, mais le texte n'est pas adapté, car il est impossible de représenter les relations tabulaires.
-Ce qui change le sens de lectures pour les technologies d'assistance. Il faudrait utiliser un tableau ou présenter les informations de manière linéaire.
+Ce qui change le sens de lecture pour les technologies d'assistance. Il faudrait utiliser un tableau ou présenter les informations de manière linéaire.
 
 #### Exemple de caractère d'espacement pour séparer du contenu en deux colonnes
 
@@ -62,15 +61,16 @@ et les documents Word et PDF, mais également la &emsp;&emsp;&emsp; outils de co
 télévision numérique ou les téléphones mobiles. &emsp;&emsp;&emsp;
 </p>
 
-Le paragraphe au-dessus n'est pas conforme, des caractères d'espacement sont utilisés pour séparer le texte en deux colonnes, mais les technologies d'assistance liront le texte ligne par ligne ce qui affectera donc l'ordre de lecture.
+Le paragraphe au-dessus n'est pas conforme, des caractères d'espacement sont utilisés pour séparer le texte en deux colonnes. Les technologies d'assistance liront le texte ligne par ligne ce qui affectera l'ordre de lecture.
 
 ### Utiliser un tableau de mise en page
 
-Même si les WCAG n'interdisent pas l'utilisation des tableaux de mise en page, il est recommandé d'utiliser la mise en page en CSS afin de conserver la lecture sémantique du contenu. Si un tableau de mise en page est utilisé, il est important que le contenu est un sens lorsqu'il est linéarisé.
+Même si les WCAG n'interdisent pas l'utilisation des tableaux de mise en page, il est recommandé d'utiliser la mise en page en CSS afin de conserver la lecture sémantique du contenu. Si un tableau de mise en page est utilisé, il est important que le contenu ait un sens lorsqu'il est linéarisé.
 
 Les tableaux présentent le contenu de manière horizontale et verticale, cependant une technologie d'assistance lit ce contenu de manière linéaire, le tableau est lu de haut en bas en lisant l'intégralité de la ligne avant de passer à la suivante.
 
-C'est pour cela qu'il faut faire attention lorsqu'on utilise un tableau de mise en page, il faut bien vérifier que le contenu est compréhensible avec un lecteur d'écran.
+C'est pour cela qu'il faut faire attention lorsqu'on utilise un tableau de mise en page, il faut bien vérifier que le contenu soit compréhensible avec un lecteur d'écran.
+
 
 #### Exemple d'un tableau non-valide
 
@@ -97,7 +97,7 @@ Le problème est qu'au lecteur d'écran l'ordre de lecture est modifié, car au 
 
 ### Utiliser du CSS pour positionner l'information
 
-Pour positionner du contenu, il est recommandé d'utiliser le balisage structurel, afin de le mettre dans le bon ordre de lecture, plutôt que les propriétés de positionnement du CSS. Ça peut engendrer des erreurs, car le contenu peut s'afficher dans un ordre différent dans lequel il se trouve dans le code source.
+Pour positionner du contenu dans un ordre de lecture, il est recommandé d'utiliser le balisage structurel, plutôt que les propriétés de positionnement du CSS. Ce dernier  peut engendrer des erreurs, car le contenu peut s'afficher / être interprété dans un ordre différent dans lequel il se trouve dans le code source.
 
 Il faut faire attention avec l'utilisation des CSS Flexbox, grid et position
 
@@ -111,7 +111,7 @@ Si un utilisateur désactive le CSS, ou utilise un lecteur d'écran la restituti
 
 #### Exemple d'un menu positionner en CSS
 
-La mise en page ci-dessous a été créé avec du CSS, si vous désactivez le CSS, vous allez remarquer que le sens de lecture sera différent que celui affiché.
+La mise en page ci-dessous a été créée avec du CSS, si vous désactivez le CSS, vous allez remarquer que le sens de lecture sera différent que celui affiché.
 
 <div class="border border-light position-relative mb-3" style="width: 320px;height:180px">      
      <span class="position-absolute top-0 start-0"><strong>Sports</strong></span>       
@@ -131,8 +131,8 @@ Dans l'exemple ci-dessous, des onglets seront affichés avec le contenu qui sera
 
 <div class="d-flex flex-column mb-3">
   <div class="tab-content order-2" id="myTabContent">
-    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Vous voila présent sur l'onglet Accueil. </div>
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Vous voila présent sur l'onglet Profil.</div>
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Vous voilà présent sur l'onglet Accueil. </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Vous voilà présent sur l'onglet Profil.</div>
   </div>
   <ul class="nav nav-tabs order-1" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
