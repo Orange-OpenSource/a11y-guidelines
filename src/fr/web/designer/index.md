@@ -1,5 +1,5 @@
 ---
-title: "Designer accessible"
+title: "Web - Designer accessible"
 abstract: "Liste des critères WCAG pour la ;conception"
 ---
 

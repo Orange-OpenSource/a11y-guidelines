@@ -1,5 +1,5 @@
 ---
-title: "Liste des critères WCAG pour les tests"
+title: "Web - Liste des critères WCAG pour les tests"
 abstract: "Notre socle de critères destiné aux sites et applications web permettant tester le respect des WCAG"
 displayToc: true
 leftColumn:

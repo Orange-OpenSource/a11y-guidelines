@@ -1,5 +1,5 @@
 ---
-title: "Keyboard navigation"
+title: "Web design - Keyboard navigation"
 abstract: "Keyboard navigation, web accessibility design recommandations"
 ---
 

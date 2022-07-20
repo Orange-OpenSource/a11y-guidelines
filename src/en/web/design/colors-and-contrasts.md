@@ -1,5 +1,5 @@
 ---
-title: "Colors and contrasts"
+title: "Web design - Colors and contrasts"
 abstract: "Colors and contrast, web accessibility design recommandations"
 ---
 

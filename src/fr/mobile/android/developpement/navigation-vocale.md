@@ -1,5 +1,5 @@
 ﻿---
-title: "Navigation vocale"
+title: "Android développer - Navigation vocale"
 abstract: "Quelques recommandations sur le développement d'une application accessible à l'aide du lecteur d'écran sous Android"
 ---
 

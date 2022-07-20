@@ -1,5 +1,5 @@
 ﻿---
-title: "Multimedia"
+title: "Android design - Multimedia"
 abstract: "Multimedia content, accessibility design recommandations with Android"
 ---
 

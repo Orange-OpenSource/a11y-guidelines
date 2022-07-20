@@ -1,5 +1,5 @@
 ---
-title: "Non-textual content"
+title: "Web design - Non-textual content"
 abstract: "Non-textual content, web accessibility design recommandations"
 ---
 

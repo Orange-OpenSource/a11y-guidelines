@@ -1,5 +1,5 @@
 ---
-title: "Navigation générale"
+title: "Web développer - Navigation générale"
 abstract: "Navigation générale, recommendations d'accessibilité web lors du développement"
 ---
 

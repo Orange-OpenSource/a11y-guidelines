@@ -1,5 +1,5 @@
 ---
-title: "Toolbox"
+title: "Web - Toolbox"
 abstract: "Resources, tools and methods to help improving digital accessibility"
 ---
 

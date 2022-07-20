@@ -1,5 +1,5 @@
 ---
-title: "Layout"
+title: "Web develop - Layout"
 abstract: "Layout, web accessibility dev recommandations"
 ---
 

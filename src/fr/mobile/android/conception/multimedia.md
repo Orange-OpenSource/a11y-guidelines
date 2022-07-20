@@ -1,5 +1,5 @@
 ﻿---
-title: "Multimédia"
+title: "Android designer - Multimédia"
 abstract: "Multimédia, recommendations d'accessibilité lors de la conception sous Android"
 ---
 

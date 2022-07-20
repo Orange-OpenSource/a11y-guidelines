@@ -1,5 +1,5 @@
 ---
-title: "Toolbox"
+title: "Android - Toolbox"
 abstract: "Resources and tools to help improving digital accessibility in Android"
 sideNavigationLinks:
   - label: "Talkback screen reader"

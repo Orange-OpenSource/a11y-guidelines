@@ -38,7 +38,7 @@ module.exports = {
           { label: 'Design', href: '/en/web/design/' },
           { label: 'Develop', href: '/en/web/develop/' },
           { label: 'Test', href: '/en/web/test/' },
-          { label: 'Evaluate', href: '/en/web/wcag-audit/' },
+          { label: 'Audit', href: '/en/web/wcag-audit/' },
           { label: 'Toolbox', href: '/en/web/toolbox/' },
           { label: 'Component examples', href: '/en/web/components-examples/' }
         ]
@@ -57,7 +57,7 @@ module.exports = {
           { label: 'Design', href: '/en/mobile/android/design/' },
           { label: 'Develop', href: '/en/mobile/android/development/' },
           { label: 'Test', href: '/en/mobile/android/test/' },
-          { label: 'Evaluate', href: '/en/mobile/android/wcag-audit/' },
+          { label: 'Audit', href: '/en/mobile/android/wcag-audit/' },
           { label: 'Toolbox', href: '/en/mobile/android/toolbox/' }
         ]
       },
@@ -75,7 +75,7 @@ module.exports = {
           { label: 'Design', href: '/en/mobile/ios/design/' },
           { label: 'Develop', href: '/en/mobile/ios/development/' },
           { label: 'Test', href: '/en/mobile/ios/test/' },
-          { label: 'Evaluate', href: '/en/mobile/ios/wcag-audit/' },
+          { label: 'Audit', href: '/en/mobile/ios/wcag-audit/' },
           { label: 'Toolbox', href: '/en/mobile/ios/toolbox/' },
           { label: 'WWDC', href: '/en/mobile/ios/wwdc/' }
         ]
@@ -126,7 +126,7 @@ module.exports = {
           { label: 'Designer', href: '/fr/web/designer/' },
           { label: 'Développer', href: '/fr/web/developper/' },
           { label: 'Tester', href: '/fr/web/tester/' },
-          { label: 'Évaluer', href: '/fr/web/audit-wcag/' },
+          { label: 'Auditer', href: '/fr/web/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/web/outils/' },
           { label: 'Exemples de composants', href: '/fr/web/exemples-de-composants/' }
         ]
@@ -145,7 +145,7 @@ module.exports = {
           { label: 'Designer', href: '/fr/mobile/android/conception/' },
           { label: 'Développer', href: '/fr/mobile/android/developpement/' },
           { label: 'Tester', href: '/fr/mobile/android/test/' },
-          { label: 'Évaluer', href: '/fr/mobile/android/audit-wcag/' },
+          { label: 'Auditer', href: '/fr/mobile/android/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/mobile/android/outils/' }
         ]
       },
@@ -163,7 +163,7 @@ module.exports = {
           { label: 'Designer', href: '/fr/mobile/ios/conception/' },
           { label: 'Développer', href: '/fr/mobile/ios/developpement/' },
           { label: 'Tester', href: '/fr/mobile/ios/test/' },
-          { label: 'Évaluer', href: '/fr/mobile/ios/audit-wcag/' },
+          { label: 'Auditer', href: '/fr/mobile/ios/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/mobile/ios/outils/' },
           { label: 'WWDC', href: '/fr/mobile/ios/wwdc/' }
         ]

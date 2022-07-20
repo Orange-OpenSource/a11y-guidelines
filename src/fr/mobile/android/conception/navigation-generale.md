@@ -1,5 +1,5 @@
 ﻿---
-title: "Navigation générale"
+title: "Android designer - Navigation générale"
 abstract: "Navigation générale, recommendations d'accessibilité lors de la conception sous Android"
 ---
 

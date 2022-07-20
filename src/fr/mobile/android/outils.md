@@ -1,5 +1,5 @@
 ---
-title: "Boite à outils"
+title: "Android - Boite à outils"
 abstract: "Quelques outils pour concevoir et développer une application Android accessible"
 sideNavigationLinks:
   - label: "Lecteur d'écran Talkback"
