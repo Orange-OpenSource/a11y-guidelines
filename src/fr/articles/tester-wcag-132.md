@@ -1,5 +1,5 @@
 ---
-title: "Comment  conserver un ordre séquentiel logique (Wcag 1.3.2)"
+title: "Comment conserver un ordre séquentiel logique (Wcag 1.3.2)"
 abstract: "Les bonnes pratiques pour le critère WCAG 1.3.2"
 titleBeforeTag: true
 date: "2022-07-21"
@@ -14,7 +14,7 @@ tags:
 Le but du [critère WCAG 1.3.2](https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence) est de s'assurer que, si l'ordre du contenu est important, alors, celui-ci doit être préservé quelle que soit la manière dont il est présenté à l'utilisateur. Par exemple, lorsque le CSS est désactivé ou lors de l'utilisation d’un lecteur d'écran.
 
 L'ordre d'un contenu est <strong>important</strong> dès lors que l'ordre du contenu ne peut pas être modifié sans en affecter sa signification.
-Par exemple, pour une liste ordonnée ou un tableau, l'ordre du contenu est important, en revanche pour une liste non-ordonnée, l'ordre de lecture n’a pas d’impacte sur la compréhension de l'utilisateur.
+Par exemple, pour une liste ordonnée ou un tableau, l'ordre du contenu est important, en revanche pour une liste non-ordonnée, l'ordre de lecture n’a pas d’impact sur la compréhension de l'utilisateur.
 
 Une page WEB peut être composée de plusieurs sections indépendantes ayant des rôles spécifiques. Les positions relatives d'une section de navigation et une section principale de page, n'affectent généralement pas la compréhension du contenu de la page. Que la navigation soit, en haut ou à gauche de l’écran, ne gêne pas la compréhension, même si un ordre de lecture peut être imposé à l’intérieur d’une de ces sections. 
 Il peut donc exister plusieurs ordres de lecture sur une page WEB pour satisfaire ce critère.
@@ -27,7 +27,7 @@ Il peut donc exister plusieurs ordres de lecture sur une page WEB pour satisfair
 Pour présenter du contenu, il est important de ne pas utiliser des caractères d'espacement, comme les espaces, la tabulation, le saut de ligne ou le retour chariot.
 Dans certains cas, ces caractères sont utilisés pour formater des tableaux, ou reproduire des colonnes de données dans un contenu textuel. Cette méthode est proscrite, car les technologies d'assistances ne se verront pas présenter les informations dans un ordre de lecture logique, les informations retournées à certains utilisateurs seront donc incompréhensibles.
 
-Ci-dessous, deux exemples qui ne sont pas valides et donc pas compréhensible avec un lecteurs d'écran.
+Ci-dessous, deux exemples qui ne sont pas valides et donc pas compréhensible avec un lecteur d'écran.
 
 #### Exemple de caractère d'espacement pour formater un tableau
 
@@ -61,7 +61,7 @@ et les documents Word et PDF, mais également la &emsp;&emsp;&emsp; outils de co
 télévision numérique ou les téléphones mobiles. &emsp;&emsp;&emsp;
 </p>
 
-Le paragraphe au-dessus n'est pas conforme, des caractères d'espacement sont utilisés pour séparer le texte en deux colonnes. Les technologies d'assistance liront le texte ligne par ligne ce qui serait un ordre de lecture illogique.
+Le paragraphe ci-dessus n'est pas conforme, des caractères d'espacement sont utilisés pour séparer le texte en deux colonnes. Les technologies d'assistance liront le texte ligne par ligne ce qui serait un ordre de lecture illogique.
 
 ### Utiliser un tableau de mise en page
 
@@ -145,5 +145,5 @@ Dans l'exemple ci-dessous, des onglets seront affichés avec le contenu qui sera
 </div>
 
 Les éléments sont placés avec l'attribut <span lang="en"><code>order</code></span>, qui n'est pas le même ordre d'affichage dans le dom.
-En désactivant le CSS ou au lecteur d'écran, on constate que les onglets ne plus en premier la même.
+En désactivant le CSS ou au lecteur d'écran, on constate que les onglets ne plus avant mais après leur propre contenu.
 
