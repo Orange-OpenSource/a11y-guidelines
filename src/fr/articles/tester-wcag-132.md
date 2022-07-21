@@ -46,8 +46,8 @@ Horaires de travail avec Salle de classe
 
 </pre>
 
-On remarque, que la présentation ci-dessus est un formatage uniquement visuel, mais aucune r&elation sémantique ne permet de représenter les relations tabulaires.
-Les technologies d'assistance vont lire le contenu au fur et à mesure qu'il apparait dans le code, donc, dans un ordre illogique et incoompréhensible. Ici, la solution serait d'utiliser un tableau ou présenter les informations de manière linéaire.
+On remarque, que la présentation ci-dessus est un formatage uniquement visuel, mais aucune relation sémantique ne permet de représenter les relations tabulaires.
+Les technologies d'assistance vont lire le contenu au fur et à mesure qu'il apparait dans le code, donc, dans un ordre illogique et incompréhensible. Ici, la solution serait d'utiliser un tableau ou présenter les informations de manière linéaire.
 
 #### Exemple de caractère d'espacement pour séparer du contenu en deux colonnes
 
@@ -99,7 +99,7 @@ Le problème est qu'au lecteur d'écran l'ordre de lecture est différent de cel
 
 Pour positionner du contenu dans un ordre de lecture, il est recommandé d'utiliser le balisage sémantique, plutôt que les propriétés de positionnement du CSS. Ce dernier peut engendrer des erreurs, car le contenu peut s'afficher / être interprété dans un ordre différent de celui du code source.
 
-Donc, si l'oradre de lecture est important, prudence lors de l'utilisation des CSS Flexbox, grid et position à ne pas modifier l'ordre du contenu visuellement par rapport à sa position dans le code.
+Donc, si l'ordre de lecture est important, prudence lors de l'utilisation des CSS Flexbox, grid et position à ne pas modifier l'ordre du contenu visuellement par rapport à sa position dans le code.
 
 <ul>
   <li>Avec CSS flexbox, évitez d'utiliser la propriété <span lang="en"><code>order</code></span> ou <span lang="en"><code>flex-direction:reverse;</code></span></li>
