@@ -145,5 +145,5 @@ Dans l'exemple ci-dessous, des onglets seront affichés avec le contenu qui sera
 </div>
 
 Les éléments sont placés avec l'attribut <span lang="en"><code>order</code></span>, qui n'est pas le même ordre d'affichage dans le dom.
-En désactivant le CSS ou au lecteur d'écran, on constate que les onglets ne plus avant mais après leur propre contenu.
+En désactivant le CSS ou au lecteur d'écran, on constate que les onglets ne sont plus avant mais après leur propre contenu.
 
