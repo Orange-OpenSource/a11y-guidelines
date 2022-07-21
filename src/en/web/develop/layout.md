@@ -130,7 +130,7 @@ Here, the tooltip (tooltip) is delimited by a visible edge and sufficiently cont
 It is very difficult to associate the themes ("par region", "par genre", ...) and the sub-themes in columns, especially since the horizontal borders are too little contrasted.
 
 **Example: The <abbr>HTML5</abbr> and landmarks <abbr>ARIA</abbr> **  
-To give a semantic structure to the main regions of a page, we can use the <abbr> HTML5 </ abbr> structure tags (`main` for the main content of the page,` nav` for the main navigation, `header `for page header,` footer` for footer, `aside` for content complementary to the main content, and others) even if their support by assistive technologies / browsers is not total , it's enough. You can also use, to set up this page structure, [the landmarks <abbr>ARIA</abbr> (Accessible Rich Internet Applications)](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/index.html) and there, the support is much better & nbsp ;!
+To give a semantic structure to the main regions of a page, we can use the <abbr> HTML5 </ abbr> structure tags (`main` for the main content of the page,` nav` for the main navigation, `header `for page header,` footer` for footer, `aside` for content complementary to the main content, and others) even if their support by assistive technologies / browsers is not total , it's enough. You can also use, to set up this page structure, [the landmarks <abbr>ARIA</abbr> (Accessible Rich Internet Applications)](https://www.w3.org/WAI/ARIA/apg/practices/landmark-regions/) and there, the support is much better & nbsp ;!
 
 Setting up this type of semantics allows visually impaired people to identify and understand the organization, the overall structure of the page and thus navigate more easily.
 
