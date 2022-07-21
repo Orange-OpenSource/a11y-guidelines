@@ -2,7 +2,7 @@
 title: "What is Meaningful Sequence (Wcag 1.3.2)"
 abstract: "Best practices for WCAG 1.3.2 criteria"
 titleBeforeTag: true
-date: "2022-06-16"
+date: "2022-07-21"
 tags:
   - web
   - advanced
