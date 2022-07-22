@@ -1,5 +1,5 @@
 ---
-title: "Navigation au clavier"
+title: "Web designer - Navigation au clavier"
 abstract: "Navigation au clavier, recommendations d'accessibilité web lors de la conception"
 ---
 

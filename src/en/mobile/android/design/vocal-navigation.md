@@ -1,5 +1,5 @@
 ﻿---
-title: "Vocal navigation"
+title: "Android design - Vocal navigation"
 abstract: "Vocal navigation, accessibility design recommandations with Android"
 ---
 

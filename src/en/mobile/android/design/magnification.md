@@ -1,5 +1,5 @@
 ﻿---
-title: "Element Magnification"
+title: "Android design - Element Magnification"
 abstract: "Element magnification, accessibility design recommandations with Android"
 ---
 

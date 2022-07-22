@@ -1,5 +1,5 @@
 ﻿---
-title: "Colors and contrasts"
+title: "Android design - Colors and contrasts"
 abstract: "Colors and contrasts, accessibility design recommandations with Android"
 ---
 

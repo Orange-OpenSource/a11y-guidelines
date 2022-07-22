@@ -1,5 +1,5 @@
 ---
-title: "Référentiels et ressources"
+title: "Web - Référentiels et ressources"
 abstract: "Les référentiels d'accessibilité web en vigueur en France et dans le monde"
 ---
 

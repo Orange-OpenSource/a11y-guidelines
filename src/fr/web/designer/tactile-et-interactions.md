@@ -1,5 +1,5 @@
 ---
-title: "Tactile et interactions"
+title: "Web designer - Tactile et interactions"
 abstract: "Tactile et interactions, recommendations d'accessibilité web lors de la conception"
 ---
 

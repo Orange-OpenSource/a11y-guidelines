@@ -1,5 +1,5 @@
 ---
-title: "Navigation générale"
+title: "Web designer - Navigation générale"
 abstract: "Navigation générale, recommendations d'accessibilité web lors de la conception"
 ---
 

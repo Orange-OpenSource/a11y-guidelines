@@ -44,7 +44,7 @@ module.exports = {
       advanced: 'Advanced'
     },
     toc: {
-      title: 'Table of content'
+      title: 'On this page'
     },
     lastPosts: {
       title: 'Last posts',
@@ -119,7 +119,7 @@ module.exports = {
       advanced: 'Avancé'
     },
     toc: {
-      title: 'Sommaire'
+      title: 'Sur cette page'
     },
     lastPosts: {
       title: 'Derniers articles',

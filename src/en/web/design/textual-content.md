@@ -1,5 +1,5 @@
 ---
-title: "Textual content"
+title: "Web design - Textual content"
 abstract: "Textual content, web accessibility design recommandations"
 ---
 

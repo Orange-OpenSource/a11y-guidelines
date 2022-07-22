@@ -1,5 +1,5 @@
 ---
-title: "Resources"
+title: "Web - Resources"
 abstract: "Useful links on digital accessibility"
 ---
 

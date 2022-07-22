@@ -1,5 +1,5 @@
 ---
-title: "Couleurs et contrastes"
+title: "Web développer - Couleurs et contrastes"
 abstract: "Couleurs et contraste, recommendations d'accessibilité web lors du développement"
 ---
 

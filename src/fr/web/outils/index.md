@@ -1,5 +1,5 @@
 ---
-title: "Boite à outils"
+title: "Web - Boite à outils"
 abstract: "Des ressources, outils et méthodes pour faciliter la prise en compte de l’accessibilité numérique"
 ---
 

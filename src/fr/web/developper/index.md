@@ -1,5 +1,5 @@
 ---
-title: "Développer accessible"
+title: "Web - Développer accessible"
 abstract: "Liste des critères WCAG pour le développement"
 ---
 

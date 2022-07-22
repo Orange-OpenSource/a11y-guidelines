@@ -1,5 +1,5 @@
 ﻿---
-title: "Agrandissement des éléments"
+title: "Android développer - Agrandissement des éléments"
 abstract: "Quelques recommandations sur l'agrandissement des textes sous Android"
 ---
 

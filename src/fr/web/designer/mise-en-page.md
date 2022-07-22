@@ -1,5 +1,5 @@
 ---
-title: "Mise en page"
+title: "Web designer - Mise en page"
 abstract: "Mise en page, recommendations d'accessibilité Web lors de la conception"
 ---
 

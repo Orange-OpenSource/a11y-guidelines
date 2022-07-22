@@ -1,5 +1,5 @@
 ---
-title: "Touch and interactions"
+title: "Web design - Touch and interactions"
 abstract: "Touch and interactions, web accessibility design recommandations"
 ---
 

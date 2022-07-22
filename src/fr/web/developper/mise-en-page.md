@@ -1,5 +1,5 @@
 ---
-title: "Mise en page"
+title: "Web développer - Mise en page"
 abstract: "Mise en page, recommendations d'accessibilité web lors du développement"
 ---
 

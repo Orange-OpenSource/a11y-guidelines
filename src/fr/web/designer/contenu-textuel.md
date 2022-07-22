@@ -1,5 +1,5 @@
 ---
-title: "Contenu textuel"
+title: "Web designer - Contenu textuel"
 abstract: "Contenu textuel, recommendations d'accessibilité web lors de la conception"
 ---
 
