@@ -3,7 +3,7 @@ title: "Web designer - Contenu textuel"
 abstract: "Contenu textuel, recommendations d'accessibilité web lors de la conception"
 ---
 
-# Contenu textuel
+# Web designer - Contenu textuel
 
 <p class="lead">S’assurer que les contenus textuels soient structurés avec la sémantique appropriée</p>
 
