@@ -1,5 +1,5 @@
 ---
-title: "Comment conserver un ordre séquentiel logique (Wcag 1.3.2)"
+title: "Comment conserver un ordre séquentiel logique (WCAG 1.3.2)"
 abstract: "Les bonnes pratiques pour le critère WCAG 1.3.2"
 titleBeforeTag: true
 date: "2022-07-21"
@@ -127,7 +127,7 @@ La mise en page ci-dessous a été créée avec du CSS, si vous désactivez le C
 
 #### Exemple d'onglet où le contenu est positionné avant
 
-Dans l'exemple ci-dessous, des onglets seront affichés avec le contenu qui sera positionné avec des flexbox.
+Dans l'exemple ci-dessous, des onglets et leur contenu sont affichés et positionné avec flexbox.
 
 <div class="d-flex flex-column mb-3">
   <div class="tab-content order-2" id="myTabContent">
@@ -144,6 +144,6 @@ Dans l'exemple ci-dessous, des onglets seront affichés avec le contenu qui sera
   </ul>
 </div>
 
-Les éléments sont placés avec l'attribut <span lang="en"><code>order</code></span>, qui n'est pas le même ordre d'affichage dans le dom.
-En désactivant le CSS ou au lecteur d'écran, on constate que les onglets ne sont plus avant mais après leur propre contenu.
+Les éléments sont placés avec l'attribut <span lang="en"><code>order</code></span>, pour modifier l'ordre d'affichage par rapport à celui du DOM.
+En désactivant le CSS ou au lecteur d'écran, on constate que les onglets sont lus après leur propre contenu.
 
