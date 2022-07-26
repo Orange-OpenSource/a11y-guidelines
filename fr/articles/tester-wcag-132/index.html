@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Comment conserver un ordre séquentiel logique (WCAG 1.3.2) - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Les bonnes pratiques pour le critère WCAG 1.3.2">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d&#39;évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Aller à la recherche</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/web/" class="nav-link">
+  Web
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/android/" class="nav-link">
+  Android
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/ios/" class="nav-link">
+  iOS
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/contenu-et-communication/" class="nav-link">
+  Contenu et communication
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/articles/" class="nav-link active" aria-current="true">
+  Articles
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-bs-toggle="collapse" data-bs-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Rechercher">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="visually-hidden">Rechercher</span>
+    </button>
+
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-light" aria-label="Rechercher" placeholder="Rechercher">
+  </form>
+</div>
+
+  
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici&amp;nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Comment conserver un ordre séquentiel logique (WCAG 1.3.2)
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        Sur cette page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#explication-generale" class="dropdown-item text-wrap">Explication générale</a><a href="#ce-quil-ne-faut-pas-faire" class="dropdown-item text-wrap">Ce qu&#39;il ne faut pas faire</a><a href="#utiliser-des-espaces-blancs-pour-formater-du-texte-brut" class="dropdown-item text-wrap">Utiliser des espaces blancs pour formater du texte brut</a><a href="#exemple-de-caractere-despacement-pour-formater-un-tableau" class="dropdown-item text-wrap">Exemple de caractère d&#39;espacement pour formater un tableau</a><a href="#exemple-de-caractere-despacement-pour-separer-du-contenu-en-deux-colonnes" class="dropdown-item text-wrap">Exemple de caractère d&#39;espacement pour séparer du contenu en deux colonnes</a><a href="#utiliser-un-tableau-de-mise-en-page" class="dropdown-item text-wrap">Utiliser un tableau de mise en page</a><a href="#exemple-dun-tableau-non-valide" class="dropdown-item text-wrap">Exemple d&#39;un tableau non-valide</a><a href="#utiliser-du-css-pour-positionner-linformation" class="dropdown-item text-wrap">Utiliser du CSS pour positionner l&#39;information</a><a href="#exemple-dun-menu-positionner-en-css" class="dropdown-item text-wrap">Exemple d&#39;un menu positionner en CSS</a><a href="#exemple-donglet-ou-le-contenu-est-positionne-avant" class="dropdown-item text-wrap">Exemple d&#39;onglet où le contenu est positionné avant</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          
+            <h1>Comment conserver un ordre séquentiel logique (WCAG 1.3.2)</h1>  
+            
+              <span class="visually-hidden" id="filters_label">
+                Thématiques associées :
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="../?tag=web" class="btn btn-dark btn-sm" data-tag="web">Web</a></li>
+              <li class="list-inline-item"><a href="../?tag=advanced" class="btn btn-dark btn-sm" data-tag="advanced">Avancé</a></li>
+              </ul>
+            
+            <time class="text-muted" datetime="2022-07-26T00:00:00.000Z">26 juillet 2022</time>
+            
+          <div class="mt-4">
+          <h2 id="explication-generale">Explication générale <a class="header-anchor" href="#explication-generale" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Le but du <a href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence">critère WCAG 1.3.2</a> est de s'assurer que, si l'ordre du contenu est important, alors, celui-ci doit être préservé quelle que soit la manière dont il est présenté à l'utilisateur. Par exemple, lorsque le CSS est désactivé ou lors de l'utilisation d’un lecteur d'écran.</p>
+<p>L'ordre d'un contenu est <strong>important</strong> dès lors que l'ordre du contenu ne peut pas être modifié sans en affecter sa signification.<br>
+Par exemple, pour une liste ordonnée ou un tableau, l'ordre du contenu est important, en revanche pour une liste non-ordonnée, l'ordre de lecture n’a pas d’impact sur la compréhension de l'utilisateur.</p>
+<p>Une page WEB peut être composée de plusieurs sections indépendantes ayant des rôles spécifiques. Les positions relatives d'une section de navigation et une section principale de page, n'affectent généralement pas la compréhension du contenu de la page. Que la navigation soit, en haut ou à gauche de l’écran, ne gêne pas la compréhension, même si un ordre de lecture peut être imposé à l’intérieur d’une de ces sections.<br>
+Il peut donc exister plusieurs ordres de lecture sur une page WEB pour satisfaire ce critère.</p>
+<h2 id="ce-quil-ne-faut-pas-faire">Ce qu'il ne faut pas faire <a class="header-anchor" href="#ce-quil-ne-faut-pas-faire" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="utiliser-des-espaces-blancs-pour-formater-du-texte-brut">Utiliser des espaces blancs pour formater du texte brut <a class="header-anchor" href="#utiliser-des-espaces-blancs-pour-formater-du-texte-brut" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Pour présenter du contenu, il est important de ne pas utiliser des caractères d'espacement, comme les espaces, la tabulation, le saut de ligne ou le retour chariot.<br>
+Dans certains cas, ces caractères sont utilisés pour formater des tableaux, ou reproduire des colonnes de données dans un contenu textuel. Cette méthode est proscrite, car les technologies d'assistances ne se verront pas présenter les informations dans un ordre de lecture logique, les informations retournées à certains utilisateurs seront donc incompréhensibles.</p>
+<p>Ci-dessous, deux exemples qui ne sont pas valides et donc pas compréhensible avec un lecteur d'écran.</p>
+<h4 id="exemple-de-caractere-despacement-pour-formater-un-tableau">Exemple de caractère d'espacement pour formater un tableau <a class="header-anchor" href="#exemple-de-caractere-despacement-pour-formater-un-tableau" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<pre class="border border-light">
+
+Horaires de travail avec Salle de classe
+ 
+                                                         
+            Lundi                Mardi             Mercredi     
+
+ Matin      9H30-13H             9H30-13H          8H-12H     
+            B201                 B201              A001
+
+ Après-     14h-17h              14h-17h           Repos
+ Midi       A103                 B201
+
+</pre>
+<p>On remarque, que la présentation ci-dessus est un formatage uniquement visuel, mais aucune relation sémantique ne permet de représenter les relations tabulaires.<br>
+Les technologies d'assistance vont lire le contenu au fur et à mesure qu'il apparait dans le code, donc, dans un ordre illogique et incompréhensible. Ici, la solution serait d'utiliser un tableau ou présenter les informations de manière linéaire.</p>
+<h4 id="exemple-de-caractere-despacement-pour-separer-du-contenu-en-deux-colonnes">Exemple de caractère d'espacement pour séparer du contenu en deux colonnes <a class="header-anchor" href="#exemple-de-caractere-despacement-pour-separer-du-contenu-en-deux-colonnes" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p class="border border-light">
+L’accessibilité numérique vise à rendre possible &emsp;&emsp;&emsp;il ne s’agit pas de démultiplier les <br/>
+l’accès à l’information numérique quelle que soit &emsp;&emsp;&emsp;supports de l’information, mais de<br/>
+la nature du handicap des personnes et la façon &emsp;&emsp;&emsp; respecter des règles fonctionnelles, graphiques,  <br/>
+dont chacun consulte l’information. Elle concerne &emsp;&emsp;&emsp; techniques et éditoriales qui permettront à tous <br/>
+différentes technologies comme le Web, les vidéos &emsp;&emsp;&emsp; d’accéder à l’information quels que soient leurs <br/>
+et les documents Word et PDF, mais également la &emsp;&emsp;&emsp; outils de consultation. <br/>
+télévision numérique ou les téléphones mobiles. &emsp;&emsp;&emsp;
+</p>
+<p>Le paragraphe ci-dessus n'est pas conforme, des caractères d'espacement sont utilisés pour séparer le texte en deux colonnes. Les technologies d'assistance liront le texte ligne par ligne ce qui serait un ordre de lecture illogique.</p>
+<h3 id="utiliser-un-tableau-de-mise-en-page">Utiliser un tableau de mise en page <a class="header-anchor" href="#utiliser-un-tableau-de-mise-en-page" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Même si les WCAG n'interdisent pas l'utilisation des tableaux de mise en page, il est recommandé d'utiliser la mise en page en CSS afin de conserver une sémantique au contenu. Si un tableau de mise en page est utilisé, il est important que le contenu ait un sens lorsqu'il est linéarisé.</p>
+<p>Les tableaux présentent le contenu de manière horizontale et verticale, cependant une technologie d'assistance lit ce contenu de manière linéaire, le tableau est lu de haut en bas en lisant l'intégralité de la ligne avant de passer à la suivante.</p>
+<p>C'est pour cela qu'il faut faire attention lorsqu'on utilise un tableau de mise en page, à bien vérifier que le contenu soit également compréhensible avec un lecteur d'écran.</p>
+<h4 id="exemple-dun-tableau-non-valide">Exemple d'un tableau non-valide <a class="header-anchor" href="#exemple-dun-tableau-non-valide" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<table role="presentation" class="m-2 border border-light">
+  <tr>
+    <td><a href="#">Accueil <span class="visually-hidden">(exemple)</span></a></td>
+    <td rowspan="4"><img src="/assets/images/orange-logo.svg" alt="exemple logo" width="100" height="100
+    "></td>
+  </tr>
+  <tr>
+    <td><a href="#">L'équipe <span class="visually-hidden">(exemple)</span></a></td>
+  </tr>
+  <tr>
+    <td><a href="#">Actualités <span class="visually-hidden">(exemple)</span></a></td>
+  </tr>
+  <tr>
+    <td><a href="#">Contact <span class="visually-hidden">(exemple)</span></a></td>
+  </tr>
+</table>
+<p>Le tableau ci-dessus permet d'afficher un menu, avec le logo sur le côté.</p>
+<p>Le problème est qu'au lecteur d'écran l'ordre de lecture est différent de celui affiché, car au lieu d'énoncer tous les liens du menu, l'image sera vocalisée au milieu de ceux-ci.</p>
+<h3 id="utiliser-du-css-pour-positionner-linformation">Utiliser du CSS pour positionner l'information <a class="header-anchor" href="#utiliser-du-css-pour-positionner-linformation" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Pour positionner du contenu dans un ordre de lecture, il est recommandé d'utiliser le balisage sémantique, plutôt que les propriétés de positionnement du CSS. Ce dernier peut engendrer des erreurs, car le contenu peut s'afficher / être interprété dans un ordre différent de celui du code source.</p>
+<p>Donc, si l'ordre de lecture est important, prudence lors de l'utilisation des CSS Flexbox, grid et position à ne pas modifier l'ordre du contenu visuellement par rapport à sa position dans le code.</p>
+<ul>
+  <li>Avec CSS flexbox, évitez d'utiliser la propriété <span lang="en"><code>order</code></span> ou <span lang="en"><code>flex-direction:reverse;</code></span></li>
+  <li>Avec CSS grid, faites attention au placement manuel des éléments sur la grille</li>
+  <li>Avec les propriétés de positionnement, évitez de détacher l'ordre visuel des éléments de l'ordre dans lequel ils apparaissent dans le DOM</li>
+</ul>
+<p>Si un utilisateur désactive le CSS, ou utilise un lecteur d'écran la restitution de l'information ne sera plus dans le bon ordre.</p>
+<h4 id="exemple-dun-menu-positionner-en-css">Exemple d'un menu positionner en CSS <a class="header-anchor" href="#exemple-dun-menu-positionner-en-css" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>La mise en page ci-dessous a été créée avec du CSS, si vous désactivez le CSS, vous allez remarquer que le sens de lecture sera différent de celui affiché.</p>
+<div class="border border-light position-relative mb-3" style="width: 320px;height:180px">      
+     <span class="position-absolute top-0 start-0"><strong>Sports</strong></span>       
+     <span class="position-absolute top-0 end-0"><strong>Produit</strong></span>       
+     <span class="position-absolute top-50 start-0">Football</span>       
+     <span class="position-absolute start-0" style="top:75%!important">Tennis</span>       
+     <span class="position-absolute start-0" style="top:90%!important">Rugby</span>       
+     <span class="position-absolute top-50 end-0">Vêtements</span>       
+     <span class="position-absolute end-0" style="top:75%!important">Accessoires</span>
+</div>
+<h4 id="exemple-donglet-ou-le-contenu-est-positionne-avant">Exemple d'onglet où le contenu est positionné avant <a class="header-anchor" href="#exemple-donglet-ou-le-contenu-est-positionne-avant" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Dans l'exemple ci-dessous, des onglets et leur contenu sont affichés et positionné avec flexbox.</p>
+<div class="d-flex flex-column mb-3">
+  <div class="tab-content order-2" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Vous voilà présent sur l'onglet Accueil. </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Vous voilà présent sur l'onglet Profil.</div>
+  </div>
+  <ul class="nav nav-tabs order-1" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Accueil</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profil</button>
+    </li>
+  </ul>
+</div>
+<p>Les éléments sont placés avec l'attribut <span lang="en"><code>order</code></span>, pour modifier l'ordre d'affichage par rapport à celui du DOM.<br>
+En désactivant le CSS ou au lecteur d'écran, on constate que les onglets sont lus après leur propre contenu.</p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sur cette page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#explication-generale" class="nav-link text-muted">Explication générale</a></li><li class="nav-item position-relative">
+            <a href="#ce-quil-ne-faut-pas-faire" class="nav-link text-muted">Ce qu&#39;il ne faut pas faire</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#utiliser-des-espaces-blancs-pour-formater-du-texte-brut" class="nav-link text-muted">Utiliser des espaces blancs pour formater du texte brut</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#exemple-de-caractere-despacement-pour-formater-un-tableau" class="nav-link text-muted">Exemple de caractère d&#39;espacement pour formater un tableau</a></li><li class="nav-item position-relative">
+            <a href="#exemple-de-caractere-despacement-pour-separer-du-contenu-en-deux-colonnes" class="nav-link text-muted">Exemple de caractère d&#39;espacement pour séparer du contenu en deux colonnes</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#utiliser-un-tableau-de-mise-en-page" class="nav-link text-muted">Utiliser un tableau de mise en page</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#exemple-dun-tableau-non-valide" class="nav-link text-muted">Exemple d&#39;un tableau non-valide</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#utiliser-du-css-pour-positionner-linformation" class="nav-link text-muted">Utiliser du CSS pour positionner l&#39;information</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#exemple-dun-menu-positionner-en-css" class="nav-link text-muted">Exemple d&#39;un menu positionner en CSS</a></li><li class="nav-item position-relative">
+            <a href="#exemple-donglet-ou-le-contenu-est-positionne-avant" class="nav-link text-muted">Exemple d&#39;onglet où le contenu est positionné avant</a></li></ul></li></ul></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link">
+  À propos
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/accessibilite" class="nav-link">
+  Accessibilité
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/fr/" class="nav-link">
+  Pré-version sur Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Déploiements sur Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/tester-wcag-132.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+            Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Retour en haut de page">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Retour en haut de page">
+        <span class="visually-hidden">Retour en haut de page</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:fr"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>

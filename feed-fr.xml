@@ -4,7 +4,7 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-07-12T00:00:00Z</updated>
+  <updated>2022-07-26T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -2484,6 +2484,114 @@ a.evitement:focus {
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Pour toutes remarques, suggestions, n&#39;hésitez pas à consulter ou créer une issue sur notre (&lt;a href=&quot;https://github.com/Orange-OpenSource/a11y-guidelines/issues&quot;&gt;compte github&lt;/a&gt;).&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Comment conserver un ordre séquentiel logique (WCAG 1.3.2)</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/"/>
+    <updated>2022-07-26T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/</id>
+    <content type="html">&lt;h2 id=&quot;explication-generale&quot;&gt;Explication générale &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/#explication-generale&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Le but du &lt;a href=&quot;https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence&quot;&gt;critère WCAG 1.3.2&lt;/a&gt; est de s&#39;assurer que, si l&#39;ordre du contenu est important, alors, celui-ci doit être préservé quelle que soit la manière dont il est présenté à l&#39;utilisateur. Par exemple, lorsque le CSS est désactivé ou lors de l&#39;utilisation d’un lecteur d&#39;écran.&lt;/p&gt;
+&lt;p&gt;L&#39;ordre d&#39;un contenu est &lt;strong&gt;important&lt;/strong&gt; dès lors que l&#39;ordre du contenu ne peut pas être modifié sans en affecter sa signification.&lt;br /&gt;
+Par exemple, pour une liste ordonnée ou un tableau, l&#39;ordre du contenu est important, en revanche pour une liste non-ordonnée, l&#39;ordre de lecture n’a pas d’impact sur la compréhension de l&#39;utilisateur.&lt;/p&gt;
+&lt;p&gt;Une page WEB peut être composée de plusieurs sections indépendantes ayant des rôles spécifiques. Les positions relatives d&#39;une section de navigation et une section principale de page, n&#39;affectent généralement pas la compréhension du contenu de la page. Que la navigation soit, en haut ou à gauche de l’écran, ne gêne pas la compréhension, même si un ordre de lecture peut être imposé à l’intérieur d’une de ces sections.&lt;br /&gt;
+Il peut donc exister plusieurs ordres de lecture sur une page WEB pour satisfaire ce critère.&lt;/p&gt;
+&lt;h2 id=&quot;ce-quil-ne-faut-pas-faire&quot;&gt;Ce qu&#39;il ne faut pas faire &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/#ce-quil-ne-faut-pas-faire&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;utiliser-des-espaces-blancs-pour-formater-du-texte-brut&quot;&gt;Utiliser des espaces blancs pour formater du texte brut &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/#utiliser-des-espaces-blancs-pour-formater-du-texte-brut&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Pour présenter du contenu, il est important de ne pas utiliser des caractères d&#39;espacement, comme les espaces, la tabulation, le saut de ligne ou le retour chariot.&lt;br /&gt;
+Dans certains cas, ces caractères sont utilisés pour formater des tableaux, ou reproduire des colonnes de données dans un contenu textuel. Cette méthode est proscrite, car les technologies d&#39;assistances ne se verront pas présenter les informations dans un ordre de lecture logique, les informations retournées à certains utilisateurs seront donc incompréhensibles.&lt;/p&gt;
+&lt;p&gt;Ci-dessous, deux exemples qui ne sont pas valides et donc pas compréhensible avec un lecteur d&#39;écran.&lt;/p&gt;
+&lt;h4 id=&quot;exemple-de-caractere-despacement-pour-formater-un-tableau&quot;&gt;Exemple de caractère d&#39;espacement pour formater un tableau &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/#exemple-de-caractere-despacement-pour-formater-un-tableau&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;pre class=&quot;border border-light&quot;&gt;
+
+Horaires de travail avec Salle de classe
+ 
+                                                         
+            Lundi                Mardi             Mercredi     
+
+ Matin      9H30-13H             9H30-13H          8H-12H     
+            B201                 B201              A001
+
+ Après-     14h-17h              14h-17h           Repos
+ Midi       A103                 B201
+
+&lt;/pre&gt;
+&lt;p&gt;On remarque, que la présentation ci-dessus est un formatage uniquement visuel, mais aucune relation sémantique ne permet de représenter les relations tabulaires.&lt;br /&gt;
+Les technologies d&#39;assistance vont lire le contenu au fur et à mesure qu&#39;il apparait dans le code, donc, dans un ordre illogique et incompréhensible. Ici, la solution serait d&#39;utiliser un tableau ou présenter les informations de manière linéaire.&lt;/p&gt;
+&lt;h4 id=&quot;exemple-de-caractere-despacement-pour-separer-du-contenu-en-deux-colonnes&quot;&gt;Exemple de caractère d&#39;espacement pour séparer du contenu en deux colonnes &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/#exemple-de-caractere-despacement-pour-separer-du-contenu-en-deux-colonnes&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p class=&quot;border border-light&quot;&gt;
+L’accessibilité numérique vise à rendre possible &amp;emsp;&amp;emsp;&amp;emsp;il ne s’agit pas de démultiplier les &lt;br /&gt;
+l’accès à l’information numérique quelle que soit &amp;emsp;&amp;emsp;&amp;emsp;supports de l’information, mais de&lt;br /&gt;
+la nature du handicap des personnes et la façon &amp;emsp;&amp;emsp;&amp;emsp; respecter des règles fonctionnelles, graphiques,  &lt;br /&gt;
+dont chacun consulte l’information. Elle concerne &amp;emsp;&amp;emsp;&amp;emsp; techniques et éditoriales qui permettront à tous &lt;br /&gt;
+différentes technologies comme le Web, les vidéos &amp;emsp;&amp;emsp;&amp;emsp; d’accéder à l’information quels que soient leurs &lt;br /&gt;
+et les documents Word et PDF, mais également la &amp;emsp;&amp;emsp;&amp;emsp; outils de consultation. &lt;br /&gt;
+télévision numérique ou les téléphones mobiles. &amp;emsp;&amp;emsp;&amp;emsp;
+&lt;/p&gt;
+&lt;p&gt;Le paragraphe ci-dessus n&#39;est pas conforme, des caractères d&#39;espacement sont utilisés pour séparer le texte en deux colonnes. Les technologies d&#39;assistance liront le texte ligne par ligne ce qui serait un ordre de lecture illogique.&lt;/p&gt;
+&lt;h3 id=&quot;utiliser-un-tableau-de-mise-en-page&quot;&gt;Utiliser un tableau de mise en page &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/#utiliser-un-tableau-de-mise-en-page&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Même si les WCAG n&#39;interdisent pas l&#39;utilisation des tableaux de mise en page, il est recommandé d&#39;utiliser la mise en page en CSS afin de conserver une sémantique au contenu. Si un tableau de mise en page est utilisé, il est important que le contenu ait un sens lorsqu&#39;il est linéarisé.&lt;/p&gt;
+&lt;p&gt;Les tableaux présentent le contenu de manière horizontale et verticale, cependant une technologie d&#39;assistance lit ce contenu de manière linéaire, le tableau est lu de haut en bas en lisant l&#39;intégralité de la ligne avant de passer à la suivante.&lt;/p&gt;
+&lt;p&gt;C&#39;est pour cela qu&#39;il faut faire attention lorsqu&#39;on utilise un tableau de mise en page, à bien vérifier que le contenu soit également compréhensible avec un lecteur d&#39;écran.&lt;/p&gt;
+&lt;h4 id=&quot;exemple-dun-tableau-non-valide&quot;&gt;Exemple d&#39;un tableau non-valide &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/#exemple-dun-tableau-non-valide&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;table role=&quot;presentation&quot; class=&quot;m-2 border border-light&quot;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/#&quot;&gt;Accueil &lt;span class=&quot;visually-hidden&quot;&gt;(exemple)&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td rowspan=&quot;4&quot;&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/assets/images/orange-logo.svg&quot; alt=&quot;exemple logo&quot; width=&quot;100&quot; height=&quot;100
+    &quot; /&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/#&quot;&gt;L&#39;équipe &lt;span class=&quot;visually-hidden&quot;&gt;(exemple)&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/#&quot;&gt;Actualités &lt;span class=&quot;visually-hidden&quot;&gt;(exemple)&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/#&quot;&gt;Contact &lt;span class=&quot;visually-hidden&quot;&gt;(exemple)&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;Le tableau ci-dessus permet d&#39;afficher un menu, avec le logo sur le côté.&lt;/p&gt;
+&lt;p&gt;Le problème est qu&#39;au lecteur d&#39;écran l&#39;ordre de lecture est différent de celui affiché, car au lieu d&#39;énoncer tous les liens du menu, l&#39;image sera vocalisée au milieu de ceux-ci.&lt;/p&gt;
+&lt;h3 id=&quot;utiliser-du-css-pour-positionner-linformation&quot;&gt;Utiliser du CSS pour positionner l&#39;information &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/#utiliser-du-css-pour-positionner-linformation&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Pour positionner du contenu dans un ordre de lecture, il est recommandé d&#39;utiliser le balisage sémantique, plutôt que les propriétés de positionnement du CSS. Ce dernier peut engendrer des erreurs, car le contenu peut s&#39;afficher / être interprété dans un ordre différent de celui du code source.&lt;/p&gt;
+&lt;p&gt;Donc, si l&#39;ordre de lecture est important, prudence lors de l&#39;utilisation des CSS Flexbox, grid et position à ne pas modifier l&#39;ordre du contenu visuellement par rapport à sa position dans le code.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Avec CSS flexbox, évitez d&#39;utiliser la propriété &lt;span lang=&quot;en&quot;&gt;&lt;code&gt;order&lt;/code&gt;&lt;/span&gt; ou &lt;span lang=&quot;en&quot;&gt;&lt;code&gt;flex-direction:reverse;&lt;/code&gt;&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;Avec CSS grid, faites attention au placement manuel des éléments sur la grille&lt;/li&gt;
+  &lt;li&gt;Avec les propriétés de positionnement, évitez de détacher l&#39;ordre visuel des éléments de l&#39;ordre dans lequel ils apparaissent dans le DOM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Si un utilisateur désactive le CSS, ou utilise un lecteur d&#39;écran la restitution de l&#39;information ne sera plus dans le bon ordre.&lt;/p&gt;
+&lt;h4 id=&quot;exemple-dun-menu-positionner-en-css&quot;&gt;Exemple d&#39;un menu positionner en CSS &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/#exemple-dun-menu-positionner-en-css&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;La mise en page ci-dessous a été créée avec du CSS, si vous désactivez le CSS, vous allez remarquer que le sens de lecture sera différent de celui affiché.&lt;/p&gt;
+&lt;div class=&quot;border border-light position-relative mb-3&quot; style=&quot;width: 320px;height:180px&quot;&gt;      
+     &lt;span class=&quot;position-absolute top-0 start-0&quot;&gt;&lt;strong&gt;Sports&lt;/strong&gt;&lt;/span&gt;       
+     &lt;span class=&quot;position-absolute top-0 end-0&quot;&gt;&lt;strong&gt;Produit&lt;/strong&gt;&lt;/span&gt;       
+     &lt;span class=&quot;position-absolute top-50 start-0&quot;&gt;Football&lt;/span&gt;       
+     &lt;span class=&quot;position-absolute start-0&quot; style=&quot;top:75%!important&quot;&gt;Tennis&lt;/span&gt;       
+     &lt;span class=&quot;position-absolute start-0&quot; style=&quot;top:90%!important&quot;&gt;Rugby&lt;/span&gt;       
+     &lt;span class=&quot;position-absolute top-50 end-0&quot;&gt;Vêtements&lt;/span&gt;       
+     &lt;span class=&quot;position-absolute end-0&quot; style=&quot;top:75%!important&quot;&gt;Accessoires&lt;/span&gt;
+&lt;/div&gt;
+&lt;h4 id=&quot;exemple-donglet-ou-le-contenu-est-positionne-avant&quot;&gt;Exemple d&#39;onglet où le contenu est positionné avant &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/#exemple-donglet-ou-le-contenu-est-positionne-avant&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;Dans l&#39;exemple ci-dessous, des onglets et leur contenu sont affichés et positionné avec flexbox.&lt;/p&gt;
+&lt;div class=&quot;d-flex flex-column mb-3&quot;&gt;
+  &lt;div class=&quot;tab-content order-2&quot; id=&quot;myTabContent&quot;&gt;
+    &lt;div class=&quot;tab-pane fade show active&quot; id=&quot;home&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;home-tab&quot;&gt;Vous voilà présent sur l&#39;onglet Accueil. &lt;/div&gt;
+    &lt;div class=&quot;tab-pane fade&quot; id=&quot;profile&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;profile-tab&quot;&gt;Vous voilà présent sur l&#39;onglet Profil.&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;ul class=&quot;nav nav-tabs order-1&quot; id=&quot;myTab&quot; role=&quot;tablist&quot;&gt;
+    &lt;li class=&quot;nav-item&quot; role=&quot;presentation&quot;&gt;
+      &lt;button class=&quot;nav-link active&quot; id=&quot;home-tab&quot; data-bs-toggle=&quot;tab&quot; data-bs-target=&quot;#home&quot; type=&quot;button&quot; role=&quot;tab&quot; aria-controls=&quot;home&quot; aria-selected=&quot;true&quot;&gt;Accueil&lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-item&quot; role=&quot;presentation&quot;&gt;
+      &lt;button class=&quot;nav-link&quot; id=&quot;profile-tab&quot; data-bs-toggle=&quot;tab&quot; data-bs-target=&quot;#profile&quot; type=&quot;button&quot; role=&quot;tab&quot; aria-controls=&quot;profile&quot; aria-selected=&quot;false&quot;&gt;Profil&lt;/button&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;Les éléments sont placés avec l&#39;attribut &lt;span lang=&quot;en&quot;&gt;&lt;code&gt;order&lt;/code&gt;&lt;/span&gt;, pour modifier l&#39;ordre d&#39;affichage par rapport à celui du DOM.&lt;br /&gt;
+En désactivant le CSS ou au lecteur d&#39;écran, on constate que les onglets sont lus après leur propre contenu.&lt;/p&gt;
 </content>
   </entry>
 </feed>
