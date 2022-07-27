@@ -16,13 +16,14 @@ En l'absence de spécification, l'accessibilité technique repose exclusivement 
 
 Voici quelques exemples d'informations qui peuvent être ajoutées sur vos design&nbsp;: 
 - Les alternatives textuelles pour les images
+- Le titre de page
 - Les titres à l'intérieur de la page (balises `h1`, `h2`...)
 - La sémantique (listes, paragraphes, citations...)
 - La liste des différentes régions qui composent la page (landmarks)
 - L'ordre de vocalisation des éléments
 - L'ordre de déplacement du focus
 - La présence de raccourcis clavier (Esc pour fermer une boite de dialogue par exemple)
-- La présence de liens d'évitement
+- La présence de liens d'évitement...
 
 <img src="../images/annotations/exemple.png" alt="Exemple de design pourvu d'annotations pour l'accessibilité" title="Exemple de design pourvu d'annotations pour l'accessibilité" class="img-fluid">
 
