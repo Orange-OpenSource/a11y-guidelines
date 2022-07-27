@@ -4,7 +4,7 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-07-26T00:00:00Z</updated>
+  <updated>2022-07-29T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -2592,6 +2592,50 @@ télévision numérique ou les téléphones mobiles. &amp;emsp;&amp;emsp;&amp;em
 &lt;/div&gt;
 &lt;p&gt;Les éléments sont placés avec l&#39;attribut &lt;span lang=&quot;en&quot;&gt;&lt;code&gt;order&lt;/code&gt;&lt;/span&gt;, pour modifier l&#39;ordre d&#39;affichage par rapport à celui du DOM.&lt;br /&gt;
 En désactivant le CSS ou au lecteur d&#39;écran, on constate que les onglets sont lus après leur propre contenu.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Spécifier l&#39;accessibilité de vos design grâce aux annotations</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/annotations-accessibilite/"/>
+    <updated>2022-07-29T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/annotations-accessibilite/</id>
+    <content type="html">&lt;h2 id=&quot;de-quoi-sagit-il&quot;&gt;De quoi s&#39;agit-il ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/annotations-accessibilite/#de-quoi-sagit-il&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Les annotations d&#39;accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent être interprétés par les outils d&#39;assistance (par exemple un lecteur d&#39;écran) et d&#39;anticiper certains risques d&#39;erreur d&#39;accessibilité. Bien que certaines annotations peuvent être ajoutées directement par les designer lors de la phase de conception graphique, d&#39;autres demandent une expertise technique. C&#39;est tout l&#39;intérêt de cette activité qui permet d&#39;engager une réflexion transverse sur l&#39;accessiblité (designer, responsable produit, expert en accessibilité, développeur...).&lt;br /&gt;
+En l&#39;absence de spécification, l&#39;accessibilité technique repose exclusivement sur les épaules des développeurs, or il s&#39;agit avant tout d&#39;un travail d&#39;équipe.&lt;/p&gt;
+&lt;h2 id=&quot;que-doit-on-annoter&quot;&gt;Que doit-on annoter ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/annotations-accessibilite/#que-doit-on-annoter&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Voici quelques exemples d&#39;informations qui peuvent être ajoutées sur vos design :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Les alternatives textuelles pour les images&lt;/li&gt;
+&lt;li&gt;Le titre de page&lt;/li&gt;
+&lt;li&gt;Les titres à l&#39;intérieur de la page (balises &lt;code&gt;h1&lt;/code&gt;, &lt;code&gt;h2&lt;/code&gt;...)&lt;/li&gt;
+&lt;li&gt;La sémantique (listes, paragraphes, citations...)&lt;/li&gt;
+&lt;li&gt;La liste des différentes régions qui composent la page (landmarks)&lt;/li&gt;
+&lt;li&gt;L&#39;ordre de vocalisation des éléments&lt;/li&gt;
+&lt;li&gt;L&#39;ordre de déplacement du focus&lt;/li&gt;
+&lt;li&gt;La présence de raccourcis clavier (Esc pour fermer une boite de dialogue par exemple)&lt;/li&gt;
+&lt;li&gt;La présence de liens d&#39;évitement...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/annotations/exemple.png&quot; alt=&quot;Exemple de design pourvu d&#39;annotations pour l&#39;accessibilité&quot; title=&quot;Exemple de design pourvu d&#39;annotations pour l&#39;accessibilité&quot; class=&quot;img-fluid&quot; /&gt;
+&lt;h2 id=&quot;comment-fait-on&quot;&gt;Comment fait-on ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/annotations-accessibilite/#comment-fait-on&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Quel que soit le logiciel utilisé, il est simple d&#39;annoter des maquettes. Par exemple, à l&#39;aide de puces numérotées qui renvoient vers une description détaillée. Il existe également des kits d&#39;annotation qui proposent des pastilles de couleurs et de formes différentes qui permettent d&#39;annoter rapidement un design. Le meilleur outil est celui qui correspond le mieux à votre façon de travailler. Il peut être différent en fonction des profils et de la taille de votre équipe. Les kits d&#39;annotation proposent une base qu&#39;il ne faut donc pas hésiter à faire évoluer selon vos besoins.&lt;/p&gt;
+&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/annotations/ordre%20de%20lecture.png&quot; alt=&quot;Exemple de design pourvu d&#39;annotations sur l&#39;ordre de lecture des éléments&quot; title=&quot;Exemple de design pourvu d&#39;annotations sur l&#39;ordre de lecture des éléments&quot; class=&quot;img-fluid&quot; /&gt;
+&lt;h2 id=&quot;ressources&quot;&gt;Ressources &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/annotations-accessibilite/#ressources&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Il existe des outils voire des plugins spécifiques pour les principaux outils de maquettage/design  : Figma, Scketch, Zeplin.&lt;br /&gt;
+Mais pour tout autre outil, vous pouvez aussi vous appuyer sur des kits d&#39;annotation qui sont des icones spécifiques utilisables dans tous les environements.&lt;/p&gt;
+&lt;p&gt;Voici quelques ressources qui vous permettront d&#39;approfondir le sujet :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://stephaniewalter.design/blog/a-designers-guide-to-documenting-accessibility-user-interactions/&quot; lang=&quot;en&quot; hreflang=&quot;en&quot;&gt;A Designer’s Guide to Documenting Accessibility &amp;amp; User Interactions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a lang=&quot;en&quot; hreflang=&quot;en&quot; href=&quot;https://medium.com/indeed-design/building-an-accessibility-library-e134e9012c17&quot;&gt;Building an Accessibility Library&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a hreflang=&quot;en&quot; href=&quot;https://www.figma.com/community/file/953682768192596304&quot;&gt;Kit d&#39;annotation pour Figma réalisé par Indeed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a hreflang=&quot;en&quot; href=&quot;https://drive.google.com/file/d/1f4SVHbSCYG4XtZzCnRMmtUfNXANE8FWh/view&quot;&gt;Kit d&#39;annotation pour Scketch réalisé par Stéphanie Walter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a hreflang=&quot;en&quot; href=&quot;https://blog.zeplin.io/introducing-flows-and-annotations-a-new-way-to-communicate-design-intention&quot;&gt;Faire des annotations dans Zeplin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Présentation vidéo Intopia :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a lang=&quot;en&quot; hreflang=&quot;en&quot; href=&quot;https://www.youtube.com/watch?v=Y35jmpS8lQM&amp;feature=youtu.be&amp;ab_channel=InclusiveDesign24%23id24&quot;&gt;Annotating designs for Accessibility / Claire Webber and Sarah Pulis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a hreflang=&quot;en&quot; href=&quot;https://www.figma.com/community/file/1022394680250523675&quot;&gt;Le kit d&#39;annotation pour Figma réalisé par Intopia&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
 </feed>

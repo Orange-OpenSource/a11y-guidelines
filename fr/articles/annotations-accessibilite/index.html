@@ -2,11 +2,11 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">    
-    <title>Accueil - Recommandations accessibilité numérique Orange</title>
+    <title>Spécifier l&#39;accessibilité de vos design grâce aux annotations - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
     
-    <meta name="description" content="Recommandations, méthodes, ressources et outils proposés par le centre de compétences groupe d&#39;Orange sur l&#39;accessibilité numérique">
+    <meta name="description" content="Les annotations d&#39;accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent être interprétés par les outils d&#39;assistance">
             
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -24,10 +24,12 @@
     
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -74,7 +76,7 @@
     <div class="collapse navbar-collapse" id="main-menu-list">
       <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a href="/fr/" class="nav-link active" aria-current="page">
+              <a href="/fr/" class="nav-link">
   Accueil
 </a>
             </li>
@@ -104,7 +106,7 @@
 </a>
             </li>
             <li class="nav-item">
-              <a href="/fr/articles/" class="nav-link">
+              <a href="/fr/articles/" class="nav-link active" aria-current="true">
   Articles
 </a>
             </li><li class="nav-item d-md-none">
@@ -147,183 +149,117 @@
     <div class="container-lg pt-2">
       
       
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici&amp;nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Spécifier l&#39;accessibilité de vos design grâce aux annotations
+        </li>
+      </ol>
+</nav>
+
+      
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        Sur cette page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#de-quoi-sagit-il" class="dropdown-item text-wrap">De quoi s&#39;agit-il ?</a><a href="#que-doit-on-annoter" class="dropdown-item text-wrap">Que doit-on annoter ?</a><a href="#comment-fait-on" class="dropdown-item text-wrap">Comment fait-on ?</a><a href="#ressources" class="dropdown-item text-wrap">Ressources</a></div>
+    </nav>
+        
       </div>
     </div>
     
-<main id="main-content" class="pt-4" role="main">
-  <section class="container-lg">
-    <div class="row">
-      <div class="col-md-7 pb-5"><h1>Accessibilité Numérique Orange</h1>
-<h2 id="en-quelques-mots">En quelques mots <a class="header-anchor" href="#en-quelques-mots" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Recommandations, méthodes, ressources et outils proposés par <span lang="en">EASE</span>, <span lang="en">E-Accessibility Solutions for Everyone</span>, le centre de compétences groupe d'Orange sur l'accessibilité numérique.</p>
-<p>Nous proposons des formations, accompagnons les projets, publions des ressources pour les parties prenantes du numérique et réalisons des audits de conformité.<br>
-Notre expertise couvre les sites Web (e-commerce, e-learning, applications métier, Intranet...), les applications mobile, les documents bureautiques, les réseaux sociaux d'entreprise, les courriels, les progiciels...</p>
-<ul class="list-inline">
-  <li class="list-inline-item pb-2">
-    <a href="definition-accessibilite-numerique" class="btn btn-secondary btn-sm">Définition de l'accessibilité numérique</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="les-situations-de-handicap" class="btn btn-secondary btn-sm">Les situations de handicap</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="solutions-assistance" class="btn btn-secondary btn-sm">Les solutions d'assistance</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="persona/" class="btn btn-secondary btn-sm">Quelques personae</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="glossaire" class="btn btn-secondary btn-sm">Glossaire</a>
-  </li>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          
+            <h1>Spécifier l&#39;accessibilité de vos design grâce aux annotations</h1>  
+            
+              <span class="visually-hidden" id="filters_label">
+                Thématiques associées :
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="../?tag=beginner" class="btn btn-dark btn-sm" data-tag="beginner">Débutant</a></li>
+              </ul>
+            
+            <time class="text-muted" datetime="2022-07-29T00:00:00.000Z">29 juillet 2022</time>
+            
+          <div class="mt-4">
+          <h2 id="de-quoi-sagit-il">De quoi s'agit-il ? <a class="header-anchor" href="#de-quoi-sagit-il" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Les annotations d'accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent être interprétés par les outils d'assistance (par exemple un lecteur d'écran) et d'anticiper certains risques d'erreur d'accessibilité. Bien que certaines annotations peuvent être ajoutées directement par les designer lors de la phase de conception graphique, d'autres demandent une expertise technique. C'est tout l'intérêt de cette activité qui permet d'engager une réflexion transverse sur l'accessiblité (designer, responsable produit, expert en accessibilité, développeur...).<br>
+En l'absence de spécification, l'accessibilité technique repose exclusivement sur les épaules des développeurs, or il s'agit avant tout d'un travail d'équipe.</p>
+<h2 id="que-doit-on-annoter">Que doit-on annoter ? <a class="header-anchor" href="#que-doit-on-annoter" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Voici quelques exemples d'informations qui peuvent être ajoutées sur vos design :</p>
+<ul>
+<li>Les alternatives textuelles pour les images</li>
+<li>Le titre de page</li>
+<li>Les titres à l'intérieur de la page (balises <code>h1</code>, <code>h2</code>...)</li>
+<li>La sémantique (listes, paragraphes, citations...)</li>
+<li>La liste des différentes régions qui composent la page (landmarks)</li>
+<li>L'ordre de vocalisation des éléments</li>
+<li>L'ordre de déplacement du focus</li>
+<li>La présence de raccourcis clavier (Esc pour fermer une boite de dialogue par exemple)</li>
+<li>La présence de liens d'évitement...</li>
 </ul>
-</div>
-      <div class="col-md-5 align-self-end"><img src="/images/home-banner.svg" alt="" class="img-fluid"></div>
-    </div>
-  </section>
-  <div class="bg-supporting-green py-4">
-    <section class="container-lg">
-      <h2>Nos recommandations</h2>
-      <div class="row row-cols-1 row-cols-md-4 g-4"><div class="col">
-  <div class="card h-100 bg-info border-secondary">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/web.svg" alt="" class="img-fluid" width="190" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/web/" class="link-primary stretched-link">Web</a>
-      </h3>
-      
-    </div>
-  </div>
-</div><div class="col">
-  <div class="card h-100 bg-warning border-secondary">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/android.svg" alt="" class="img-fluid" width="72" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/mobile/android/" class="link-primary stretched-link">Android</a>
-      </h3>
-      
-    </div>
-  </div>
-</div><div class="col">
-  <div class="card h-100 bg-warning border-secondary">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/ios.svg" alt="" class="img-fluid" width="72" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/mobile/ios/" class="link-primary stretched-link">iOS</a>
-      </h3>
-      
-    </div>
-  </div>
-</div><div class="col">
-  <div class="card h-100 bg-purple border-secondary">
-    <div class="pt-3 px-3 text-center">
-      <img src="../images/icons/editorial-content.svg" alt="" class="img-fluid" width="131" height="151">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/contenu-et-communication/" class="link-primary stretched-link">Contenu et communication</a>
-      </h3>
-      
-    </div>
-  </div>
-</div></div>
-    </section>
-  </div>
-  <div class="bg-300">
-    <section class="container-lg py-4">
-      <div class="d-flex">
-        <h2>Derniers articles</h2>
-        <div class="ps-3">
-          <a href="articles/" class="btn btn-secondary btn-sm">Voir tous les articles</a>
-        </div>
-      </div>
-      <ol class="list-unstyled row"><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/annotations-accessibilite/" class="text-decoration-none">Spécifier l&#39;accessibilité de vos design grâce aux annotations</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2022-07-29T00:00:00.000Z">29 juillet 2022</time>
-        
-        
-          <p class="my-2">Les annotations d&#39;accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent être interprétés par les outils d&#39;assistance</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/tester-wcag-132/" class="text-decoration-none">Comment conserver un ordre séquentiel logique (WCAG 1.3.2)</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2022-07-26T00:00:00.000Z">26 juillet 2022</time>
-        
-        
-          <p class="my-2">Les bonnes pratiques pour le critère WCAG 1.3.2</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/liens-evitement/" class="text-decoration-none">Les bonnes pratiques pour les liens d’évitements</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2022-07-12T00:00:00.000Z">12 juillet 2022</time>
-        
-        
-          <p class="my-2">Les liens d&#39;évitement, qu&#39;est-ce et comment bien les mettre en œuvre</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/veille-avril-mai-2022/" class="text-decoration-none">Veille #A11y Avril-Mai 2022</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2022-06-02T00:00:00.000Z">02 juin 2022</time>
-        
-        
-          <p class="my-2">Florilège de ressources en #a11y, Avril-Mai 2022</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/tableau-accessible/" class="text-decoration-none">Les tableaux dans l&#39;accessibilité</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2022-04-15T00:00:00.000Z">15 avril 2022</time>
-        
-        
-          <p class="my-2">Toutes nos recommandations pour que les tableaux soit accessibles</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/veille-fevrier-mars-2022/" class="text-decoration-none">Veille #A11y Février-Mars 2022</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2022-04-08T00:00:00.000Z">08 avril 2022</time>
-        
-        
-          <p class="my-2">Florilèges de ressources en #a11y, Février-Mars 2022</p>
-        
-      </article>
-    </li></ol>
-    </section>
-  </div>
-</main>
+<img src="../images/annotations/exemple.png" alt="Exemple de design pourvu d'annotations pour l'accessibilité" title="Exemple de design pourvu d'annotations pour l'accessibilité" class="img-fluid">
+<h2 id="comment-fait-on">Comment fait-on ? <a class="header-anchor" href="#comment-fait-on" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Quel que soit le logiciel utilisé, il est simple d'annoter des maquettes. Par exemple, à l'aide de puces numérotées qui renvoient vers une description détaillée. Il existe également des kits d'annotation qui proposent des pastilles de couleurs et de formes différentes qui permettent d'annoter rapidement un design. Le meilleur outil est celui qui correspond le mieux à votre façon de travailler. Il peut être différent en fonction des profils et de la taille de votre équipe. Les kits d'annotation proposent une base qu'il ne faut donc pas hésiter à faire évoluer selon vos besoins.</p>
+<img src="../images/annotations/ordre de lecture.png" alt="Exemple de design pourvu d'annotations sur l'ordre de lecture des éléments" title="Exemple de design pourvu d'annotations sur l'ordre de lecture des éléments" class="img-fluid">
+<h2 id="ressources">Ressources <a class="header-anchor" href="#ressources" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Il existe des outils voire des plugins spécifiques pour les principaux outils de maquettage/design  : Figma, Scketch, Zeplin.<br>
+Mais pour tout autre outil, vous pouvez aussi vous appuyer sur des kits d'annotation qui sont des icones spécifiques utilisables dans tous les environements.</p>
+<p>Voici quelques ressources qui vous permettront d'approfondir le sujet :</p>
+<ul>
+<li><a href="https://stephaniewalter.design/blog/a-designers-guide-to-documenting-accessibility-user-interactions/" lang="en" hreflang="en">A Designer’s Guide to Documenting Accessibility &amp; User Interactions</a></li>
+<li><a lang="en" hreflang="en" href="https://medium.com/indeed-design/building-an-accessibility-library-e134e9012c17">Building an Accessibility Library</a></li>
+<li><a hreflang="en" href="https://www.figma.com/community/file/953682768192596304">Kit d'annotation pour Figma réalisé par Indeed</a></li>
+<li><a hreflang="en" href="https://drive.google.com/file/d/1f4SVHbSCYG4XtZzCnRMmtUfNXANE8FWh/view">Kit d'annotation pour Scketch réalisé par Stéphanie Walter</a></li>
+<li><a hreflang="en" href="https://blog.zeplin.io/introducing-flows-and-annotations-a-new-way-to-communicate-design-intention">Faire des annotations dans Zeplin</a></li>
+</ul>
+<p>Présentation vidéo Intopia :</p>
+<ul>
+<li><a lang="en" hreflang="en" href="https://www.youtube.com/watch?v=Y35jmpS8lQM&feature=youtu.be&ab_channel=InclusiveDesign24%23id24">Annotating designs for Accessibility / Claire Webber and Sarah Pulis</a></li>
+<li><a hreflang="en" href="https://www.figma.com/community/file/1022394680250523675">Le kit d'annotation pour Figma réalisé par Intopia</a></li>
+</ul>
 
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sur cette page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#de-quoi-sagit-il" class="nav-link text-muted">De quoi s&#39;agit-il ?</a></li><li class="nav-item position-relative">
+            <a href="#que-doit-on-annoter" class="nav-link text-muted">Que doit-on annoter ?</a></li><li class="nav-item position-relative">
+            <a href="#comment-fait-on" class="nav-link text-muted">Comment fait-on ?</a></li><li class="nav-item position-relative">
+            <a href="#ressources" class="nav-link text-muted">Ressources</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     
 
-<footer id="footer" class="o-footer mt-0" role="contentinfo">
+<footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">
       <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
@@ -348,7 +284,7 @@ Notre expertise couvre les sites Web (e-commerce, e-learning, applications méti
           </a>
         </li>
         <li class="nav-item ms-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/annotations-accessibilite.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
             Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
@@ -371,12 +307,14 @@ Notre expertise couvre les sites Web (e-commerce, e-learning, applications méti
       <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
     
     
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
     <script>
       const Application = {
         lang: "fr",
         vendors: {
-          highlightJS: false,
-          highlightTitle: false
+          highlightJS: true,
+          highlightTitle: true
         }
       }
     </script>
