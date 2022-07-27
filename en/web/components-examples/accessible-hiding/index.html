@@ -216,7 +216,7 @@
 <h1>Accessible hiding</h1>
 
 <h2>Introduction</h2>
-<p>Sometimes it is necessary to hide elements in a web page. The conventional way is to use <abbr title="Cascading Stylesheets">CSS</abbr> (<code>display:none;</code> and <code>visibility:hidden;</code>) or the <abbr>HTML</abbr>5 `hidden` attribute. These properties hide elements not only on the screen, but also for screen reader users. Thus, these elements will not be visible nor vocalized by speech synthesis.</p>
+<p>Sometimes it is necessary to hide elements in a web page. The conventional way is to use <abbr title="Cascading Stylesheets">CSS</abbr> (<code>display:none;</code> and <code>visibility:hidden;</code>) or the <abbr>HTML</abbr>5 `hidden` attribute. These properties hide elements not only on the screen, but also for screen reader users. Thus, these elements will not be visible nor vocalized by Assistive technologies (AT).</p>
 <p>In some cases, it may be useful to hide elements on the screen, but make sure they are still vocalised by screen readers. For this, an accessible hiding <abbr>CSS</abbr> class can be used.</p>
 <p>Finally, you may want to display elements on the screen but make sure they are not vocalized. In this case, you can use an <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attribute (<code>aria-hidden</code>).</p>
 
@@ -236,14 +236,15 @@
 <pre><code class="css">
 .visually-hidden {
       position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap; /* added line */
-      border: 0;
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	padding: 0 !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	clip: rect(0,0,0,0) !important;
+	white-space: nowrap !important;
+	border: 0 !important;
 }
 </code></pre>
 <p>If you haven’t got an accessible hiding class yet, the easiest way is to copy and paste the code above.</p>
@@ -268,7 +269,7 @@
 <p>This attribute will hide an element (or group of elements) to screen readers. It has however no effect on the display.</p>
 
 <h3>Implementation</h3>
-<p>To hide an element to screen readers (and child elements), simply add the <code>aria-hidden="true"</code> attribute.</p>
+<p>To hide an element to screen readers (and child elements), simply add the <code>aria-hidden="true"</code> attribute. Content can still be made accessible to ATs via <code>aria-describedby</code> or <code>aria-labelledby</code>.</p>
 <h4>Warning</h4>
 <p>If you put a focusable element in content (even on a parent node) with `aria-hidden =" true "`, it will be present in keyboard navigation but will be empty for <abbr>AT</abbr>. <em>So, don't do it.</em></p>
 
