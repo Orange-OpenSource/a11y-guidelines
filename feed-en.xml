@@ -4,7 +4,7 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-07-26T00:00:00Z</updated>
+  <updated>2022-08-03T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -2398,6 +2398,110 @@ digital television or mobile phones. &amp;emsp;&amp;emsp;&amp;emsp;
 &lt;/div&gt;
 &lt;p&gt;Elements are placed with the &lt;code&gt;order&lt;/code&gt; attribute, which is not the same display order in the DOM.&lt;br /&gt;
 By disabling the CSS or using a screen reader, we see that the tabs are no longer before, and so after, the content of these tabs.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>#a11y technical watch, June-July 2022</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/watch-june-july-2022/"/>
+    <updated>2022-08-03T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/watch-june-july-2022/</id>
+    <content type="html">&lt;h1&gt;Digital accessibility monitoring June-July 2022&lt;/h1&gt;
+&lt;p&gt;We&#39;re talking about Domino again (the pizzas not the game!), spoiler alert: they lost and bingo, headshot: &lt;a href=&quot;https://www.adatitleiii.com/2022/06/robles-v-dominos-settles-after-six-years-of-litigation/&quot;&gt;https://www.adatitleiii.com/2022/06/robles-v-dominos-settles-after-six-years-of-litigation/&lt;/a&gt;.&lt;br /&gt;
+As I always say (warning: assertion by old a11y expert), the problem in accessibility is that we&#39;re doing our best, we spare the goat and the cabbage, another very good example &lt;a href=&quot;https://www.smashingmagazine.com/2022/06/voice-control-usability-considerations-partially-visually-hidden-link-names/&quot;&gt;https://www.smashingmagazine.com/2022/06/voice-control-usability-considerations-partially-visually-hidden-link-names/&lt;/a&gt;&lt;br /&gt;
+Well, again and again, we talk about overlays, a point of view that has consensus in the a11y community: &lt;a href=&quot;https://karlgroves.com/overlays-are-here-to-stay-so-are-male-enhancement-pills/&quot;&gt;https://karlgroves.com/overlays-are-here-to-stay-so-are-male-enhancement-pills/&lt;/a&gt; to go further, a list of best practices: &lt;a href=&quot;https://convergeaccessibility.com/2022/06/20/best-practices-for-overlays-part-2/&quot;&gt;https://convergeaccessibility.com/2022/06/20/best-practices-for-overlays-part-2/&lt;/a&gt;&lt;br /&gt;
+Great news, official release of the translation of WCAG 2.1 in French (fr): &lt;a href=&quot;https://www.w3.org/Translations/WCAG21-fr/&quot;&gt;https://www.w3.org/Translations/WCAG21-fr/&lt;/a&gt;) including yours truly and member of the translation committee.&lt;br /&gt;
+And finally, my quick editorial, latest WCAG 2.2 news (publication still scheduled for September, we&#39;re getting ready) and 3: &lt;a href=&quot;https://whollyaccessible.org/2022/06/02/wcag-2-2-and-wcag-3-status-updates/&quot;&gt;https://whollyaccessible.org/2022/06/02/wcag-2-2-and-wcag-3-status-updates/&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;accessibility-in-laws-and-standards&quot;&gt;accessibility in laws and standards &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-june-july-2022/#accessibility-in-laws-and-standards&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Image alternatives and Twitter &lt;a href=&quot;https://www.lireo.com/what-to-know-twitter-alternative-text-images/&quot;&gt;https://www.lireo.com/what-to-know-twitter-alternative-text-images/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A questionnaire to improve the W3c document &amp;quot;Making Content Usable for People with Cognitive and Learning Disabilities&amp;quot;: &lt;a href=&quot;https://docs.google.com/forms/d/e/1FAIpQLSczlviGQgUNfdo9WXjK4qkY-liq9_gnlt4s76ho-4xhXYSJpg/viewform&quot;&gt;https://docs.google.com/forms/d/e/1FAIpQLSczlviGQgUNfdo9WXjK4qkY-liq9_gnlt4s76ho-4xhXYSJpg/viewform&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Announcement of the publication of the document Synchronization Accessibility User Requirements by W3C/WAI Group: &lt;a href=&quot;https://lists.w3.org/Archives/Public/public-wai-announce/2022JulSep/0001.html&quot;&gt;https://lists.w3.org/Archives/Public/public-wai-announce/2022JulSep/0001.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;feedback-and-accessibility&quot;&gt;Feedback and accessibility &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-june-july-2022/#feedback-and-accessibility&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Disabled user test feedback and article tile, super interesting, to be implemented: &lt;a href=&quot;https://tetralogical.com/blog/2022/07/21/research-insight-accessibility-of-images/&quot;&gt;https://tetralogical.com/blog/2022/07/21/research-insight-accessibility-of-images/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Shoemakers, always the worst shod... : &lt;a href=&quot;https://jpdev.pro/jpdev/blog/entries/0008/index.html&quot;&gt;https://jpdev.pro/jpdev/blog/entries/0008/index.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Super testimony of a unknown disorder, a must to consider more broadly what digital disabilities can be: &lt;a href=&quot;https://www.theverge.com/23191768/animation-accessibility-neurodivergence&quot;&gt;https://www.theverge.com/23191768/animation-accessibility-neurodivergence&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Drag-&amp;amp;-drop, there will be a more, educational: &lt;a href=&quot;https://www.darins.page/articles/screen-readers-drag-drop-1&quot;&gt;https://www.darins.page/articles/screen-readers-drag-drop-1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The mismanaged CSS display property because it breaks the semantics: &lt;a href=&quot;https://adrianroselli.com/2022/07/its-mid-2022-and-browsers-mostly-safari-still-break-accessibility-via-display-properties.html&quot;&gt;https://adrianroselli.com/2022/07/its-mid-2022-and-browsers-mostly-safari-still-break-accessibility-via-display-properties.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;More fieldset/legend issues: &lt;a href=&quot;https://adrianroselli.com/2022/07/use-legend-and-fieldset.html&quot;&gt;https://adrianroselli.com/2022/07/use-legend-and-fieldset.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rex on writing image alt, to think about: &lt;a href=&quot;https://adactio.com/journal/19106&quot;&gt;https://adactio.com/journal/19106&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Practical methods for a11y in a company / organization, part 2, good recommendations: &lt;a href=&quot;https://mn.gov/mnit/media/blog/#/detail/appId/1/id/530635&quot;&gt;https://mn.gov/mnit/media/blog/#/detail/appId/1/id/530635&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Visual affordance, be consistent in placing your interface components: &lt;a href=&quot;https://tink.uk/perceived-affordances-and-the-functionality-mismatch/&quot;&gt;https://tink.uk/perceived-affordances-and-the-functionality-mismatch/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A coding idea for an exclusive button group, to be tested: &lt;a href=&quot;https://lea.verou.me/2022/07/button-group/&quot;&gt;https://lea.verou.me/2022/07/button-group/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;accessibility-strategy&quot;&gt;Accessibility strategy &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-june-july-2022/#accessibility-strategy&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Great background article on Captcha and a11y, a must: &lt;a href=&quot;https://holistica11y.com/definitive-guide-to-captcha-accessibility/#second-analysis-captcha-and-security&quot;&gt;https://holistica11y.com/definitive-guide-to-captcha-accessibility/#second-analysis-captcha-and-security&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Strategy for maintaining a11y: &lt;a href=&quot;https://matthewdeeprose.github.io/objectives&quot;&gt;https://matthewdeeprose.github.io/objectives&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;the basics of the report of bug a11y of an AT, good checklist: &lt;a href=&quot;https://giovanicamara.com/blog/ultimate-guide-to-debugging-accessibility-issues/&quot;&gt;https://giovanicamara.com/blog/ultimate-guide-to-debugging-accessibility-issues/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;One or zero, the a11y is not binary but...: &lt;a href=&quot;https://hidde.blog/accessibility-objectivity/&quot;&gt;https://hidde.blog/accessibility-objectivity/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Variable size of the alternative to an image: &lt;a href=&quot;https://css-tricks.com/just-how-long-should-alt-text-be/&quot;&gt;https://css-tricks.com/just-how-long-should-alt-text-be/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Base for writing user stories a11y: dhttps://tetralogical.com/blog/2022/05/26/how-to-write-user-stories-for-accessibility/&lt;/li&gt;
+&lt;li&gt;Change the management method for the a11y, to read:
+&lt;ul&gt;
+&lt;li&gt;part 1: &lt;a href=&quot;https://www.deque.com/blog/change-management-for-accessibility-part-1/&quot;&gt;https://www.deque.com/blog/change-management-for-accessibility-part-1/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;part 2: &lt;a href=&quot;https://www.deque.com/blog/change-management-for-accessibility-lewins-three-stage-model/&quot;&gt;https://www.deque.com/blog/change-management-for-accessibility-lewins-three-stage-model/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;part 3: &lt;a href=&quot;https://www.deque.com/blog/change-management-for-accessibility-plan-do-check-act-pcda-model/&quot;&gt;https://www.deque.com/blog/change-management-for-accessibility-plan-do-check-act-pcda-model/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;An accessible design system, the advantages: &lt;a href=&quot;https://tetralogical.com/blog/2022/06/24/accessible-design-systems/&quot;&gt;https://tetralogical.com/blog/2022/06/24/accessible-design-systems/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Some ideas for a hitch-free accessibility plan, a checklist: &lt;a href=&quot;https://meiert.com/en/blog/accessibility-get-well-plan/&quot;&gt;https://meiert.com/en/blog/accessibility-get-well-plan/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Basic advice for new a11y developers: &lt;a href=&quot;https://dev.to/eevajonnapanula/my-advice-to-a-developer-new-to-accessibility-a5i&quot;&gt;https://dev.to/eevajonnapanula/my-advice-to-a-developer-new-to-accessibility-a5i&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Doing AAA level is possible and sometimes easy, well thought out: &lt;a href=&quot;https://www.tempertemper.net/blog/bag-some-aaa-wins-where-you-can&quot;&gt;https://www.tempertemper.net/blog/bag-some-aaa-wins-where-you-can&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Accessible social media campaign strategy: &lt;a href=&quot;https://gcs.civilservice.gov.uk/guidance/digital-communication/planning-creating-and-publishing-accessible-social-media-campaigns/&quot;&gt;https://gcs.civilservice.gov.uk/guidance/digital-communication/planning-creating-and-publishing-accessible-social-media-campaigns/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;test-accessibility&quot;&gt;Test accessibility &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-june-july-2022/#test-accessibility&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Another Vallydette?: &lt;a href=&quot;https://not-checklist.intopia.digital/&quot;&gt;https://not-checklist.intopia.digital/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Do we need a screen reader for accessibility testing: &lt;a href=&quot;https://www.digitala11y.com/do-we-need-screen-reader-for-accessibility-testing/&quot;&gt;https://www.digitala11y.com/do-we-need-screen-reader-for-accessibility-testing/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A11y and acceptance, the keyboard nav, fine: &lt;a href=&quot;https://dev.to/steady5063/keyboard-testing-the-a11y-enhancement-to-your-definition-of-done-2n7c&quot;&gt;https://dev.to/steady5063/keyboard-testing-the-a11y-enhancement-to-your-definition-of-done-2n7c&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WCAG 1.14.10 reflow and 1.4.4 text resize criteria, how to test: &lt;a href=&quot;https://yatil.net/blog/resize-text-reflow&quot;&gt;https://yatil.net/blog/resize-text-reflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The main problems of a blind a11y tester: &lt;a href=&quot;https://equalentry.com/accessibility-problems-blind-testers/&quot;&gt;https://equalentry.com/accessibility-problems-blind-testers/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pa11y as a nifty multi-page test reporting tool: &lt;a href=&quot;https://matthiasott.com/notes/generating-accessibility-test-results-with-pa11y-ci&quot;&gt;https://matthiasott.com/notes/generating-accessibility-test-results-with-pa11y-ci&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Use the Wave plugin well: &lt;a href=&quot;https://webaim.org/blog/tips-for-getting-the-most-out-of-wave/&quot;&gt;https://webaim.org/blog/tips-for-getting-the-most-out-of-wave/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A test on the a11y of emails, to read: &lt;a href=&quot;https://emailmarkup.org/en/reports/accessibility/2022-07/&quot;&gt;https://emailmarkup.org/en/reports/accessibility/2022-07/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;technical-points-in-accessibility&quot;&gt;Technical points in accessibility &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-june-july-2022/#technical-points-in-accessibility&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Reminder, do not prevent mobile zoom in the meta, overview of the concern: &lt;a href=&quot;https://www.matuzo.at/blog/2022/please-stop-disabling-zoom/&quot;&gt;https://www.matuzo.at/blog/2022/please-stop-disabling-zoom/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Focus-visible, where are we?: &lt;a href=&quot;https://hidde.blog/focus-visible-more-than-keyboard/&quot;&gt;https://hidde.blog/focus-visible-more-than-keyboard/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Text-overflow in CSS and a11y: &lt;a href=&quot;https://www.tpgi.com/the-ballad-of-text-overflow/&quot;&gt;https://www.tpgi.com/the-ballad-of-text-overflow/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Errors that are easy to correct but very present: &lt;a href=&quot;https://hidde.blog/more-common-a11y-issues/&quot;&gt;https://hidde.blog/more-common-a11y-issues/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Article or section in html, exciting: &lt;a href=&quot;https://www.smashingmagazine.com/2022/07/article-section-elements-accessibility/&quot;&gt;https://www.smashingmagazine.com/2022/07/article-section-elements-accessibility/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Reminder on SPAs and a11y: &lt;a href=&quot;https://www.tpgi.com/single-page-applications/&quot;&gt;https://www.tpgi.com/single-page-applications/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Relevant reflection on the scrollable areas of a page and their usability on the keyboard: &lt;a href=&quot;https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html&quot;&gt;https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Human/Automatic captions, the comparison: &lt;a href=&quot;https://equalentry.com/caption-videos-human-vs-automatic-captions/&quot;&gt;https://equalentry.com/caption-videos-human-vs-automatic-captions/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Secondary titles, slogans, their semantics, to read: &lt;a href=&quot;https://www.tpgi.com/subheadings-subtitles-alternative-titles-and-taglines-in-html/&quot;&gt;https://www.tpgi.com/subheadings-subtitles-alternative-titles-and-taglines-in-html/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The accessibility problems caused by ARIA, good intro: &lt;a href=&quot;https://blog.pope.tech/2022/07/12/what-you-need-to-know-about-aria-and-how-to-fix-common-mistakes/&quot;&gt;https://blog.pope.tech/2022/07/12/what-you-need-to-know-about-aria-and-how-to-fix-common-mistakes/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;mobile-app-mobile-web&quot;&gt;Mobile app, mobile web &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-june-july-2022/#mobile-app-mobile-web&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Intro on why develop accessible: &lt;a href=&quot;https://www.devopsdigest.com/prioritize-mobile-accessibility-or-face-an-uncertain-future&quot;&gt;https://www.devopsdigest.com/prioritize-mobile-accessibility-or-face-an-uncertain-future&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The a11y values ​​in Ios: &lt;a href=&quot;https://mobilea11y.com/blog/accessibility-values/&quot;&gt;https://mobilea11y.com/blog/accessibility-values/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A11y Android: talkback and roles: &lt;a href=&quot;https://tetralogical.com/blog/2022/07/07/android-accessibility-roles-and-talkback/&quot;&gt;https://tetralogical.com/blog/2022/07/07/android-accessibility-roles-and-talkback/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ergonomics-ui-ux&quot;&gt;Ergonomics, UI &amp;amp; UX &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-june-july-2022/#ergonomics-ui-ux&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Absolutely essential toolbox for interface design: &lt;a href=&quot;https://www.digitala11y.com/accessibility-tools-and-resources-for-designers/&quot;&gt;https://www.digitala11y.com/accessibility-tools-and-resources-for-designers/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;3 fundamentals of a11y to know for any good UX/UI designer: &lt;a href=&quot;https://uxdesign.cc/3-accessibility-basics-you-need-to-know-as-a-designer-5e5ea2195738&quot;&gt;https://uxdesign.cc/3-accessibility-basics-you-need-to-know-as-a-designer-5e5ea2195738&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;resources&quot;&gt;Resources &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-june-july-2022/#resources&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Semantics, contrast and anxiety, to read: &lt;a href=&quot;https://sarajw.hashnode.dev/aspects-of-accessibility-a11y-semantics-contrast-and-anxiety&quot;&gt;https://sarajw.hashnode.dev/aspects-of-accessibility-a11y-semantics-contrast-and-anxiety&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;From the excellent a11y team at the BBC, a11y recommendations for HTML products: &lt;a href=&quot;https://www.bbc.co.uk/accessibility/forproducts/guides/html/&quot;&gt;https://www.bbc.co.uk/accessibility/forproducts/guides/html/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lots of great articles on testing in a11y d: &lt;a href=&quot;https://testingaccessibility.com/articles&quot;&gt;https://testingaccessibility.com/articles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Make your podcasts a11y, serious: &lt;a href=&quot;https://podcast-accessibility.com/&quot;&gt;https://podcast-accessibility.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Basic recommendations in a11y by profile, not bad: &lt;a href=&quot;https://accessibility-for-teams.com/&quot;&gt;https://accessibility-for-teams.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Recommendations for accessible social media, lots of good info: &lt;a href=&quot;https://www.accessible-social.com/&quot;&gt;https://www.accessible-social.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Publication of a document on recommendations for accessible virtual meetings: &lt;a href=&quot;https://www.w3.org/blog/2022/07/accessibility-of-remote-meetings-published-as-w3c-group-note/&quot;&gt;https://www.w3.org/blog/2022/07/accessibility-of-remote-meetings-published-as-w3c-group-note/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;10 positive affirmations on the a11y, wep, not agree on everything: &lt;a href=&quot;https://www.deque.com/blog/10-affirmations-good-digital-accessibility/&quot;&gt;https://www.deque.com/blog/10-affirmations-good-digital-accessibility/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;others&quot;&gt;Others &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-june-july-2022/#others&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A jeopardy from a11y, great (eny): &lt;a href=&quot;https://jeopardylabs.com/play/wcag-21-aa&quot;&gt;https://jeopardylabs.com/play/wcag-21-aa&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
 </feed>
