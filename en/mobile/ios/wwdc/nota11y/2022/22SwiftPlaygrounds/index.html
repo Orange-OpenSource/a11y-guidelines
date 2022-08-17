@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Swift Playgrounds - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Learn everything about Swift Playgrounds 4.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-bs-toggle="collapse" data-bs-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Search">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="visually-hidden">Search</span>
+    </button>
+
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-light" aria-label="Search" placeholder="Search">
+  </form>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Swift Playgrounds
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#app-from-scratch" class="dropdown-item text-wrap">App from scratch</a><a href="#guided-instructional-content" class="dropdown-item text-wrap">Guided instructional content</a><a href="#the-guide-module" class="dropdown-item text-wrap">The guide module</a><a href="#the-guide-file" class="dropdown-item text-wrap">The guide file</a><a href="#the-directives" class="dropdown-item text-wrap">The directives</a><a href="#kinds-of-tasks" class="dropdown-item text-wrap">Kinds of tasks</a><a href="#the-code-highlighting" class="dropdown-item text-wrap">The code highlighting</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2022: Swift Playgrounds</h1>
+<p>Find hereafter a detailed summary of two videos that belong to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original videos are available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2022//110348/">session 110348</a>, <a href="https://developer.apple.com/videos/play/wwdc2022//110349/">session 110349</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds.png" alt="" class="img-fluid"></p>
+<p>&quot;Learn how you can easily prototype and <strong>build apps with Swift Playgrounds</strong>. We'll show you how to create an app from a blank project, <strong>build its interface with SwiftUI</strong>, and <strong>use Swift Package Manager</strong> to add extra functionality from an open source package. We'll also explore how you can <strong>debug issues</strong> using Previews and the console and take you through <strong>submitting an app to App Store Connect</strong> for distribution via TestFlight.&quot;</p>
+<p>&quot;Learn how you can <strong>build guided instructional content designed for Swift Playgrounds</strong>. Follow along with us as we explore how you can add a guide to a completed sample code project. We'll demonstrate how to <strong>add tasks</strong> to your learning center to show off <strong>relevant code</strong> and optional <strong>experiment tasks</strong> that encourage learners to extend the project with code of their own.&quot;<br>
+</br><br>
+The structure of this speech is divided into <strong>two main parts</strong> and its subject matter deals with <strong>Swift Playgrounds 4</strong> that introduced app development on iPad and Mac:</p>
+<ul>
+<li>
+<p><a href="#app-from-scratch">Create an app from scratch</a> including:</p>
+<ul>
+<li>
+<p>Using the library and code completion.</p>
+</li>
+<li>
+<p>Sharing a project via an <code>iCloud</code> folder.</p>
+</li>
+<li>
+<p>Using the view previews and the console for debugging.</p>
+</li>
+<li>
+<p>Submitting an app to <code>TestFlight</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="#guided-instructional-content">Build a  guided instructional content</a> by highlighting the new content features.</p>
+</li>
+</ul>
+<p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="app-from-scratch">App from scratch <a class="header-anchor" href="#app-from-scratch" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#AppFromScratchSettings"
+           id="AppFromScratchSettings_tab"
+           role="tab" 
+           aria-selected="true">Settings</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppFromScratchLibrary"
+           id="AppFromScratchLibrary_tab"
+           role="tab" 
+           aria-selected="false">Library</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppFromScratchImportPackages"
+           id="AppFromScratchImportPackages_tab"
+           role="tab" 
+           aria-selected="false">Import&nbsp;packages</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppFromScratchDeviceAbility"
+           id="AppFromScratchDeviceAbility_tab"
+           role="tab" 
+           aria-selected="false">Device&nbsp;ability</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="AppFromScratchSettings" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/110348?time=110">🎬</a></p>
+<p><strong>Revise some app settings</strong> is possible straight from the sidebar.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-AppSettings.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppFromScratchLibrary" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/110348?time=152">🎬</a></p>
+<p><strong>Inserting elements</strong> may be done from the <code>Library</code> window...<br>
+<img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-AppLibrary_1.png" alt="" class="img-fluid"></p>
+<p>... that suggests a variety of snippets for Views, Modifiers, SF Symbols, and Colors.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-AppLibrary_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppFromScratchImportPackages" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/110348?time=222">🎬</a></p>
+<p><strong>Importing the Swift-collection package</strong> may be a good solution to facilitate the code working.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-AppImport.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppFromScratchDeviceAbility" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/110348?time=349">🎬</a></p>
+<p><strong>Implement the use of a specific device capability</strong> inside the app is achieved in no time.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-AppDeviceAbility.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<p>Worthwhile handlings are also outlined to ease the code implementation:</p>
+<ul>
+<li>
+<p>Add <strong>various view previews</strong> through the app <a href="https://developer.apple.com/videos/play/wwdc2022/110348/?time=512">preview</a>.</p>
+</li>
+<li>
+<p><strong>Insert items in an array</strong> using a <a href="https://developer.apple.com/videos/play/wwdc2022/110348/?time=556">dedicated gesture</a>.</p>
+</li>
+<li>
+<p><strong>Show up a message</strong> at the bottom left of the source editor as an appropriate <a href="https://developer.apple.com/videos/play/wwdc2022/110348/?time=705">solution for debugging</a>.</p>
+</li>
+</ul>
+<p></br>Finally, besides the <a href="https://developer.apple.com/videos/play/wwdc2022/110348?time=405">useful way</a> to <strong>share a project</strong> through a shared <code>iCloud</code> folder, <strong>submitting</strong> directly to <code>TestFlight</code> from within <code>Swift</code> <code>Playgrounds</code> becomes <a href="https://developer.apple.com/videos/play/wwdc2022/110348/?time=842">as easy as pie</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-AppTestFlight.png" alt="" class="img-fluid"><br>
+</br></p>
+<h2 id="guided-instructional-content">Guided instructional content <a class="header-anchor" href="#guided-instructional-content" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>This section introduces many ways to create captivating content with <code>Swift</code> <code>Playgrounds</code> <code>4</code> through an <a href="https://developer.apple.com/videos/play/wwdc2022/110349?time=65">app</a> whose features must be showed up and explained to the users thanks to the brand new <strong><a href="https://developer.apple.com/videos/play/wwdc2022/110349?time=138">instructional system</a></strong>.<br>
+</br>This <strong>attractive educational experience</strong> is graphically based on few sections that each have their own purpose.<br>
+<img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-InstructionalSystem.png" alt="" class="img-fluid"></p>
+<h3 id="the-guide-module"><a href="https://developer.apple.com/videos/play/wwdc2022/110349?time=249">The guide module</a> <a class="header-anchor" href="#the-guide-module" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>To insert this <code>instructional</code> <code>system</code>, it's <strong>mandatory</strong> to modify the file structure of the 'swiftpm' project that originally holds the source code at its root by:</p>
+<ol>
+<li>
+<p><strong>Creating an App module</strong> in which all the project's source code and assets must be located while leaving the Package.swift file at the root of the project.<br>
+<img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-GuideModule_1.png" alt="" class="img-fluid"></p>
+</li>
+<li>
+<p><strong>Creating a guide module</strong> inside which a guide file must ne stored.<br>
+<img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-GuideModule_Step2.png" alt="" class="img-fluid"></p>
+</li>
+</ol>
+<h3 id="the-guide-file"><a href="https://developer.apple.com/videos/play/wwdc2022/110349?time=291">The guide file</a> <a class="header-anchor" href="#the-guide-file" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>This file precisely <strong>defines the content</strong> through <strong>directives</strong> that may be seen as containers as well as graphic elements.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-GuideFile.png" alt="" class="img-fluid"></p>
+<h3 id="the-directives">The directives <a class="header-anchor" href="#the-directives" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-DirectivesGuidebook.png" alt="" class="img-fluid"></p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2022/110349?time=311">first directive</a> found in the guide file is the <strong>guidebook</strong> that represents the main container for all the upcoming directives.<br>
+</br></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#DirectivesStep"
+           id="DirectivesStep_tab"
+           role="tab" 
+           aria-selected="true">Step</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DirectivesContentAndMedia"
+           id="DirectivesContentAndMedia_tab"
+           role="tab" 
+           aria-selected="false">ContentAndMedia</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DirectivesTask"
+           id="DirectivesTask_tab"
+           role="tab" 
+           aria-selected="false">Task</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DirectivesPage"
+           id="DirectivesPage_tab"
+           role="tab" 
+           aria-selected="false">Page</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="DirectivesStep" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/110349?time=392">🎬</a></p>
+<p>Used to map out the content, this directive is mandatory to <strong>create tasks</strong> and it must be placed inside a container defined by the <a href="https://developer.apple.com/videos/play/wwdc2022/110349?time=336">guide directive</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-DirectivesStep.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DirectivesContentAndMedia" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/110349/?time=403">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-DirectivesContentAndMedia.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DirectivesTask" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/110349/?time=474">🎬</a></p>
+<p>A task may be seen as a <strong>purpose to be reached by the user</strong> in the learning center.<br>
+It's displayed through a button whose complete implementation relies on the incoming parameters inside the task directive definition.</p>
+<p>Moreover, according to the learning configuration, tasks can be gathered within a <strong><a href="https://developer.apple.com/videos/play/wwdc2022/110349/?time=433">taskGroup directive</a></strong> for a better educational experience.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-DirectivesTask.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DirectivesPage" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/110349/?time=521">🎬</a></p>
+<p>A page acts as a <strong>milestone of the task</strong> to be fulfilled.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-DirectivesPage.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<h3 id="kinds-of-tasks">Kinds of tasks <a class="header-anchor" href="#kinds-of-tasks" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Tasks are of two types: <strong>walkthrough</strong> and <strong>experiment</strong>.</p>
+<p>The <code>walkthrough</code> task is used all along this summary and then won't be described in further details inside this section.<br>
+Take a look at this <a href="https://developer.apple.com/videos/play/wwdc2022/110349/?time=748">complete demo</a> of implementing such a task if need be.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-TaskWalkthrough.png" alt="" class="img-fluid"></p>
+<p>The <strong><a href="https://developer.apple.com/videos/play/wwdc2022/110349/?time=858">experiment task</a></strong> is to let the users <strong>insert a different code than the original one</strong> in order to visualize the immediate visual result through the app.</p>
+<p>Two incoming parameters are crucial to create an <code>experiment</code> task:</p>
+<ol>
+<li>
+<p>The <strong>type</strong> of the task in the definition of the <code>task</code> directive.</p>
+</li>
+<li>
+<p>The permission of inserting some code directly into the source editor through the <strong><a href="https://developer.apple.com/videos/play/wwdc2022/110349/?time=888">isAddable</a></strong> parameter in the definition of the <code>page</code> directive.</p>
+</li>
+</ol>
+<p><img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-TaskExperiment.png" alt="" class="img-fluid"></p>
+<h3 id="the-code-highlighting">The code highlighting <a class="header-anchor" href="#the-code-highlighting" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The way to reach this purpose <a href="https://developer.apple.com/videos/play/wwdc2022/110349/?time=567">for a <code>walkthrough</code> task</a> relies on inserting <strong>two comment lines</strong> that are wrapped around the code to be highlighted.<br>
+<img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-CodeHighlightingW.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2022/110349/?time=947">Regarding the <code>experiment</code> task</a>, only <strong>one comment line</strong> is necessary to indicate the identifier of the experiment task to be tested out.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-SwiftPlaygrounds-CodeHighlightingE.png" alt="" class="img-fluid"></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#app-from-scratch" class="nav-link text-muted">App from scratch</a></li><li class="nav-item position-relative">
+            <a href="#guided-instructional-content" class="nav-link text-muted">Guided instructional content</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#the-guide-module" class="nav-link text-muted">The guide module</a></li><li class="nav-item position-relative">
+            <a href="#the-guide-file" class="nav-link text-muted">The guide file</a></li><li class="nav-item position-relative">
+            <a href="#the-directives" class="nav-link text-muted">The directives</a></li><li class="nav-item position-relative">
+            <a href="#kinds-of-tasks" class="nav-link text-muted">Kinds of tasks</a></li><li class="nav-item position-relative">
+            <a href="#the-code-highlighting" class="nav-link text-muted">The code highlighting</a></li></ul></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link">
+  About
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility" class="nav-link">
+  Accessibility
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2022/22SwiftPlaygrounds.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
