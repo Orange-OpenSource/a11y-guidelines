@@ -276,6 +276,11 @@ pre code {
     text-decoration-thickness: .1rem;
 }
 
+.DocSearch-Prefill{
+    color:  #000;
+    font-weight: bolder; 
+}
+
 
 /**
  * Utilities
