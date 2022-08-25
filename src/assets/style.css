@@ -230,77 +230,50 @@ pre code {
  * Search field
  */
 
-.form-control.bg-dark::placeholder {
-    color: #eee;
+.DocSearch-Button:hover, .DocSearch-Button:focus{
+    box-shadow: inset 0 0 0 .125rem #f16e00 ;
+    
 }
 
-#search-input-toggler {
-    outline-color: #ff7900;
+.DocSearch-Form {
+    box-shadow: #ccc 0 0 0 .125rem inset;
+}   
+
+.DocSearch-Form:focus-within, .DocSearch-Form:focus, .DocSearch-Form:hover {
+    box-shadow: #000 0 0 0 .125rem inset;
 }
 
-#search-input-toggler:hover svg,
-#search-input-toggler:focus svg {
-    fill: #ff7900;
+.DocSearch-Hit{
+    padding: 3px;
 }
 
-.algolia-autocomplete {
-    display: block !important;
+.DocSearch-Hit[aria-selected="true"] a {
+    background-color: #f16e00 ;
+}
+.DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-action, .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-icon, .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-path, .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-text, .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-title, .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-Tree, .DocSearch-Hit[aria-selected="true"] mark {
+    color: #000 !important;
+    background: none;
 }
 
-
-/* Adapt to small screens */
-
-.algolia-autocomplete .ds-dropdown-menu {
-    min-width: 300px;
-    width: 100%;
-}
-
-
-/* Place the search dropdown to the left */
-
-.algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu {
-    right: unset !important;
-}
-
-.algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu::before {
-    left: 3rem;
-    right: unset;
-}
-
-
-/* Customize colors and appearance */
-
-.algolia-autocomplete .algolia-docsearch-suggestion {
-    text-decoration: none;
-}
-
-.algolia-autocomplete .algolia-docsearch-suggestion--category-header {
-    font-weight: 700;
-}
-
-.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
-    color: #666;
-}
-
-.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
-    background-color: #ff7900;
+.DocSearch-Hit-Container, .DocSearch-Hit-action, .DocSearch-Hit-icon, .DocSearch-MagnifierLabel, .DocSearch-Hit-source{
     color: #000;
 }
 
-.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
-    box-shadow: inset 0 -2px 0 0 #ff7900 !important;
+.DocSearch-Hits mark {
+    color: currentColor;
+    background-color: #f16e00;
+}
+.DocSearch-Hit-path, .DocSearch-Help, .DocSearch-Label, .DocSearch-Commands-Key, .DocSearch-Button-Key, .DocSearch-Label, .DocSearch-Button {
+    color:  #666;
 }
 
-
-/* Make sure we have an outline when we navigate through the results with the keyboard */
-
-.algolia-autocomplete .ds-suggestion.ds-cursor .algolia-docsearch-suggestion {
-    outline: .125rem solid #ff7900;
-    outline-offset: -.125rem;
+.DocSearch-Cancel{
+    color:  #000;
+    text-decoration: underline;
 }
 
-.algolia-autocomplete .ds-suggestion.ds-cursor .algolia-docsearch-suggestion--content {
-    background-color: #f6f6f6 !important;
+.DocSearch-Cancel:focus, .DocSearch-Cancel:hover{
+    text-decoration-thickness: .1rem;
 }
 
 
