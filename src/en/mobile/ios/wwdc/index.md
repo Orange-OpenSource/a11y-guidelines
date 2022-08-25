@@ -16,6 +16,14 @@ Most of the illustrations are parts of Apple presentations and are available at 
 <br><br><br>
 
 
+## [2022 - Create accessible Single App Mode experiences](2022/10152/)
+This video outlines different ways to get more control and accessibility to people using apps in **Single App Mode**.
+<a href="2022/10152/">
+    
+![Access to the Bring accessibility to charts in your app video session](../../images/iOSdev/wwdc22-10152.png)
+</a>
+</br></br></br> 
+
 ## [2021 - Bring accessibility to charts in your app](2021/122/)
 This video highlights the **iOS&nbsp;15 new feature** called audio graph that further **improves the data presentation of charts** for the VoiceOver users.
 <a href="2021/122/">

@@ -4,6 +4,10 @@ abstract: "iOS changelog"
 displayToc: false
 ---
 
+**22/08/26** ⟹ WWDC 2022 <a href="../wwdc/2022/10152/">🎬</a> Create accessible Single App Mode experiences
+
+**22/01/03** ⟹ added WWDC detailed summaries <a href="../wwdc/nota11y">🔖</a>
+
 **21/12/01** ⟹ Updates for swift 5.5, Xcode 13 and iOS 15
 
 **21/09/14** ⟹ WWDC 2021 <a href="../wwdc/2021/121/">🎬</a> Tailor the VoiceOver experience in your data-rich apps
