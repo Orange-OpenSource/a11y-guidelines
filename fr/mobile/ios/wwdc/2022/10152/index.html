@@ -2,11 +2,11 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">    
-    <title>WWDC 2021 : Incorporer efficacement l&#39;accessibilité à vos graphes - Recommandations accessibilité numérique Orange</title>
+    <title>WWDC 2022 : Rendre accessible une application en mode Single App - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
     
-    <meta name="description" content="Incorporer efficacement l&#39;accessibilité à vos graphes.">
+    <meta name="description" content="Rendre accessible une application en mode Single App.">
             
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -199,7 +199,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
-          WWDC 2021 : Incorporer efficacement l&#39;accessibilité à vos graphes
+          WWDC 2022 : Rendre accessible une application en mode Single App
         </li>
       </ol>
 </nav>
@@ -212,7 +212,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#presentation-0129" class="dropdown-item text-wrap">Présentation (01:29)</a><a href="#criteres-de-conception-en-accessibilite-visuelle-0644" class="dropdown-item text-wrap">Critères de conception en accessibilité visuelle (06:44)</a><a href="#implementation-classique-1022" class="dropdown-item text-wrap">Implémentation classique (10:22)</a><a href="#implementation-du-graphe-audio-1417" class="dropdown-item text-wrap">Implémentation du graphe audio (14:17)</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#acces-guide" class="dropdown-item text-wrap">Accès guidé</a><a href="#les-modes-single-app" class="dropdown-item text-wrap">Les modes Single App</a><a href="#accessibility-api" class="dropdown-item text-wrap">Accessibility API</a></div>
     </nav>
         
       </div>
@@ -224,102 +224,152 @@
         <main id="main-content" class="col-md-9" role="main">
             
           <div class="mt-4">
-          <h1>WWDC 2021 : Incorporer efficacement l'accessibilité à vos graphes</h1>
-<p>Cette présentation visualisable sur le <strong>site développeur officiel d'<span lang="en">Apple</span></strong> (<a href="https://developer.apple.com/videos/play/wwdc2021/10122/">session 122</a>) explique comment <strong>implémenter l'accessibilité pour la présentation de graphes</strong> en introduisant une <strong>nouveauté iOS 15</strong> pour <span lang="en">VoiceOver</span> de façon très détaillée.</p>
-<p><img src="../../../../images/iOSdev/wwdc21-122.png" alt="" class="img-fluid"><br>
-<br><br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :</p>
+          <h1>WWDC 2022 : Rendre accessible une application en mode Single App</h1>
+<p>Cette présentation visualisable sur le <strong>site développeur officiel d'<span lang="en">Apple</span></strong> (<a href="https://developer.apple.com/videos/play/wwdc2022/10152/">session 10152</a>) présente les différents moyens de <strong>mettre en oeuvre le mode <span lang="en">Single App</span></strong> en détaillant chacune des possibilités offertes par les OS.</p>
+<p><img src="../../../../images/iOSdev/wwdc22-10152.png" alt="" class="img-fluid"><br>
+<br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :</p>
 <ul>
 <li>
-<p><a href="#presentation-0129">Présentation</a> (01:29)</p>
+<p><a href="#acces-guide">Accès guidé</a></p>
 </li>
 <li>
-<p><a href="#criteres-de-conception-en-accessibilite-visuelle-0644">Critères de conception en accessibilité visuelle</a> (06:44)</p>
+<p><a href="#les-modes-single-app">Les modes <span lang="en">Single App</span></a></p>
 </li>
 <li>
-<p><a href="#implementation-classique-1022">Implémentation classique</a> (10:22)</p>
-</li>
-<li>
-<p><a href="#implementation-du-graphe-audio-1417">Implémentation du graphe audio</a> (14:17) ⟹ <strong>nouveauté iOS 15</strong></p>
+<p><a href="#accessibility-api">Accessibility API</a></p>
 </li>
 </ul>
-<p><br><br></p>
-<h2 id="presentation-0129"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=89">Présentation (01:29)</a> <a class="header-anchor" href="#presentation-0129" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>L'idée de cette <strong>nouvelle fonctionnalité iOS 15</strong> réside dans l'introduction d'une sonorisation à intensité variable pour <strong>indiquer les écarts de valeurs sur un graphe</strong> de façon auditive.</p>
-<p>Le <a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=89">premier exemple</a> s'articule autour d'un graphe représentant des données sous forme de courbes.<br>
-<img src="../../../../images/iOSdev/wwdc21-122-Demo1.png" alt="" class="img-fluid"><br>
-<br><br>
-Le <a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=261">second exemple</a> met en avant le traitement graphique d'un nuage de points optimisé pour <span lang="en">VoiceOver</span> afin de favoriser la compréhension vocale des données ainsi exposées.<br>
-<img src="../../../../images/iOSdev/wwdc21-122-Demo2.png" alt="" class="img-fluid"><br>
-Des éléments explicatifs sur le contenu du graphe sont ajoutés en bas d'écran lors de l'activation de cette fonctionnalité.<br>
-<img src="../../../../images/iOSdev/wwdc21-122-Demo3.png" alt="" class="img-fluid"><br>
-Outre le fait de se mettre à la portée de tous, incorporer l'accessibilité à la présentation d'un graphe avec cette nouvelle fonctionnalité apporte une granularité encore plus fine à l'exploitation auditive des données présentées.<br>
-<a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=370"></p>
-<p><img src="../../../../images/iOSdev/wwdc21-122-MakeYourChartsA11Y.png" alt="" class="img-fluid"><br>
-<br><br></p>
-<h2 id="criteres-de-conception-en-accessibilite-visuelle-0644"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=404">Critères de conception en accessibilité visuelle (06:44)</a> <a class="header-anchor" href="#criteres-de-conception-en-accessibilite-visuelle-0644" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Afin de rendre le visuel d'un graphique le plus accessible possible, des critères importants sont exposés et expliqués avec des exemples concrets pour mieux percevoir leur efficacité.</p>
-<ul>
-<li>
-<p>Respecter les seuils de contraste entre les couleurs ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=423">🎬</a></p>
-</li>
-<li>
-<p>Éviter l'utilisation concomitante du rouge et du vert ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=472">🎬</a></p>
-</li>
-<li>
-<p>Éviter l'utilisation simultanée du bleu et du jaune ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=527">🎬</a></p>
-</li>
-<li>
-<p>Utiliser des symboles pour que la couleur ne soit pas le seul canal de transmission d’une information ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=534">🎬</a></p>
-</li>
-<li>
-<p>Limiter au maximum la transparence ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=599">🎬</a></p>
-</li>
-</ul>
-<p>Pour plus d'informations sur ces points, l'ensemble des <a href="../../../conception" style="text-decoration: underline;">critères de conception</a> incluant les <a href="../../../conception/#options-daccessibilite" style="text-decoration: underline;">options d'accessibilité</a> sont disponibles dans la section homonyme iOS de ce site.<br>
-<br><br></p>
-<h2 id="implementation-classique-1022"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=622">Implémentation classique (10:22)</a> <a class="header-anchor" href="#implementation-classique-1022" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Un histogramme sans complexités particulières va servir de socle pour l'exemple d'implémentation basique de VoiceOver.<br>
-<img src="../../../../images/iOSdev/wwdc21-122-BasicExample1.png" alt="" class="img-fluid"><br>
-<br><br>
-Les grandes lignes à suivre peuvent se résumer de la façon suivante :</p>
-<ul>
-<li>
-<p>assimiler le graphe à un <a href="https://developer.apple.com/documentation/uikit/uiaccessibility/uiaccessibilitycontainertype"><code>container</code></a> qui aidera <span lang="en">VoiceOver</span> dans son analyse des données à vocaliser,</p>
-</li>
-<li>
-<p>fournir un label explicatif qui permettra d'identifer parfaitement le graphe dès qu'il sera sélectionné,</p>
-</li>
-<li>
-<p>créer un élément accessible associé à chaque barre dont la donnée graphique doit être vocalisée.</p>
-</li>
-</ul>
-<p><img src="../../../../images/iOSdev/wwdc21-122-BasicExample2.png" alt="" class="img-fluid"><br>
-En suivant cette logique, le <a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=776">rendu final</a> est optimisé et parfaitement compréhensible par un utilisateur <span lang="en">VoiceOver</span>.<br>
-<br><br></p>
-<h2 id="implementation-du-graphe-audio-1417"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=857">Implémentation du graphe audio (14:17)</a> <a class="header-anchor" href="#implementation-du-graphe-audio-1417" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>L'exemple précédent de l'histogramme est repris en y ajoutant quelques propriétés pour mettre en avant l'implémentation de cette <strong>nouvelle fonctionnalité iOS 15</strong>.</p>
-<p><img src="../../../../images/iOSdev/wwdc21-122-AudioGraph1.png" alt="" class="img-fluid"></p>
-<p>Toute la mécanique de fonctionnement est apportée par le <span lang="en">framework <code>Accessibility</code></span> (disponible depuis iOS 14) qui fournit la source de cette nouveauté, le protocole <strong><a href="https://developer.apple.com/documentation/accessibility/axchart">AXChart</a></strong>.</p>
-<p><img src="../../../../images/iOSdev/wwdc21-122-AudioGraph2.png" alt="" class="img-fluid"><br>
-<br><br>
-La seule étape à suivre s'appuie sur la parfaite description de la propriété <strong><a href="https://developer.apple.com/documentation/accessibility/axchart/3746738-accessibilitychartdescriptor"><code>accessibilityChartDescriptor</code></a></strong> en définissant :</p>
-<ul>
-<li>
-<p>les axes <strong><a href="https://developer.apple.com/documentation/accessibility/axnumericdataaxisdescriptor"><code>AXNumericDataAxisDescriptor</code></a></strong> à l'aide des éléments fournis dans le modèle de données,</p>
-</li>
-<li>
-<p>l'ensemble des données à afficher sous forme de <strong><a href="https://developer.apple.com/documentation/accessibility/axdataseriesdescriptor"><code>AXDataSeriesDescriptor</code></a></strong>,</p>
-</li>
-<li>
-<p>retournant l'<code>initializer</code> approprié qui reprend les définitions réalisées dans les étapes précédentes et qui inclue l'élément <code>Summary</code> affiché en bas d'écran.</p>
-</li>
-</ul>
-<p><img src="../../../../images/iOSdev/wwdc21-122-AudioGraph3.png" alt="" class="img-fluid"><br>
-Ces différentes étapes vont permettre d'introduire une <a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=1093">sonorisation à intensité variable</a> pour indiquer les écarts de valeurs de façon auditive pour ce graphe.<br>
-<br><br><br>
-<a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=1159"></p>
-<p><img src="../../../../images/iOSdev/wwdc21-122-Conclusion.png" alt="" class="img-fluid"><br>
-<br><br><br></p>
+</br>
+<p><img src="../../../../images/iOSdev/wwdc22-10152-1.png" alt="" class="img-fluid"></p>
+<p><strong>Les <a href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=19">modes <span lang="en">Single App</span></a></strong> représentent le moyen le plus approprié pour restreindre les droits d'accès à d'autres fonctionnalités que celles proposées par une application.<br>
+<img src="../../../../images/iOSdev/wwdc22-10152-2.png" alt="" class="img-fluid"></p>
+<p>Ces modes peuvent être particulièrement utiles dans les <a href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=71">situations</a> où l'utilisateur ne doit pas accéder à d'autres informations que celles fournies par l'application proposée.</p>
+<p><img src="../../../../images/iOSdev/wwdc22-10152-3.png" alt="" class="img-fluid"></p>
+<p>Le premier mode directement accessible par les réglages d'un terminal est l'accès guidé.<br>
+</br></p>
+<h2 id="acces-guide">Accès guidé <a class="header-anchor" href="#acces-guide" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#GuidedAccessOverview"
+           id="GuidedAccessOverview_tab"
+           role="tab" 
+           aria-selected="true">Présentation</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#GuidedAccessDesign"
+           id="GuidedAccessDesign_tab"
+           role="tab" 
+           aria-selected="false">Design</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#GuidedAccessCustomRestrictions"
+           id="GuidedAccessCustomRestrictions_tab"
+           role="tab" 
+           aria-selected="false">Restrictions&nbsp;personnalisées</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#GuidedAccessExample"
+           id="GuidedAccessExample_tab"
+           role="tab" 
+           aria-selected="false">Exemple</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="GuidedAccessOverview" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps approprié." href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=145">🎬</a></p>
+<p>Cette fonctionnalité permet d'instaurer un <strong>environnement avec des droits d'accès limités</strong> pour l'utilisateur.</p>
+<p>Les façons spécifiques d'allumer et d'<a href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=179">éteindre ce mode</a> s'accompagnent d'<a href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=184">options</a> qui permettent de coller au mieux aux possibilités offertes dans ce cadre.</p>
+<p><img src="../../../../images/iOSdev/wwdc22-10152-GuidedAccessOverview.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="GuidedAccessDesign" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps approprié." href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=235">🎬</a></p>
+<p><img src="../../../../images/iOSdev/wwdc22-10152-GuidedAccessDesign.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="GuidedAccessCustomRestrictions" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps approprié." href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=214">🎬</a></p>
+<p>La flexibilité offerte par ce mode permet d'adapter précisément un cadre aux différentes catégories d'utilisateurs susceptibles d'évoluer en son sein.<br>
+<img src="../../../../images/iOSdev/wwdc22-10152-GuidedAccessCustomRestrictions.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="GuidedAccessExample" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps approprié." href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=288">🎬</a></p>
+<p><img src="../../../../images/iOSdev/wwdc22-10152-GuidedAccessExample_1.png" alt="" class="img-fluid"></p>
+<p>L'étape principale de cette implémentation s'appuie sur la <strong>conformité de l'AppDelegate au protocole <code>UIGuidedAccessRestrictionDelegate</code></strong>.</p>
+<p><img src="../../../../images/iOSdev/wwdc22-10152-GuidedAccessExample_2.png" alt="" class="img-fluid"></p>
+<p>À noter que l'élément <code>UIAccessibility</code> propose une <a href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=373">fonction statique</a> pour <strong>savoir si une restriction personnalisée est mise en oeuvre</strong>.</p>
+<p><img src="../../../../images/iOSdev/wwdc22-10152-GuidedAccessExample_3.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<p>L'accès guidé représente l'<a href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=574">assise</a> des différents modes <span lang="en">Single App</span> introduits programmatiquement dans une appplication.<br>
+<img src="../../../../images/iOSdev/wwdc22-10152-GuidedAccess.png" alt="" class="img-fluid"></p>
+<h2 id="les-modes-single-app">Les modes <span lang="en">Single App</span> <a class="header-anchor" href="#les-modes-single-app" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>La différence majeure entre ces trois modes et l'accès guidé réside dans leur gestion fonctionnelle contrôlée uniquement par le code.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#SingleAppMode"
+           id="SingleAppMode_tab"
+           role="tab" 
+           aria-selected="true">Mode&nbsp;Single&nbsp;App</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SingleAppModeAutonomousMode"
+           id="SingleAppModeAutonomousMode_tab"
+           role="tab" 
+           aria-selected="false">Mode&nbsp;autonome</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SingleAppModeAssessmentMode"
+           id="SingleAppModeAssessmentMode_tab"
+           role="tab" 
+           aria-selected="false">Mode&nbsp;évaluation</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="SingleAppMode" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps approprié." href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=448">🎬</a><br>
+<img src="../../../../images/iOSdev/wwdc22-10152-ModesSingleAppMode_1.png" alt="" class="img-fluid"><br>
+La gestion du terminal qui embarque cette fonctionnalité peut se faire via l'application <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=484">Apple Configurator</a></strong>.</p>
+<p><img src="../../../../images/iOSdev/wwdc22-10152-ModesSingleAppMode_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SingleAppModeAutonomousMode" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps approprié." href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=518">🎬</a><br>
+<img src="../../../../images/iOSdev/wwdc22-10152-ModesAutonomous_1.png" alt="" class="img-fluid"></p>
+<p>L'activation et la désactivation de ce mode sont intégralement gérées par <a href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=555">quelques lignes de code</a>.</p>
+<p><img src="../../../../images/iOSdev/wwdc22-10152-ModesAutonomous_2.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=609">L'observation et la vérification</a> de modifications au sein de ce mode peuvent être notifées par l'élément <code>UIAccessibility</code>.</p>
+<p><img src="../../../../images/iOSdev/wwdc22-10152-ModesAutonomous_3.png" alt="" class="img-fluid"></p>
+<p>&quot;The app which wants to use this API <strong>must have the proper supervision and management</strong>, including allowlisting the <strong>app's bundle ID</strong> as an <strong>allowed application</strong> for Autonomous Single App Mode&quot;⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=624">🎬</a></p>
+<p><img src="../../../../images/iOSdev/wwdc22-10152-ModesAutonomous_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SingleAppModeAssessmentMode" role="tabpanel">
+<p><a alt="Lien vers l'extrait vidéo au temps approprié." href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=639">🎬</a><br>
+<img src="../../../../images/iOSdev/wwdc22-10152-ModesAssessment.png" alt="" class="img-fluid"><br>
+Ce mode est destiné à la <strong>mise en place de tests</strong>et à l'<strong>évaluation scolaire</strong> à l'aide de terminaux qui n'ont pas besoin d'être supervisés comme les deux autres modes.</p>
+<p>Cependant, il est impératif d'avoir une validation Apple sur l'application concernnée pour utiliser le <span lang="en">framework</span> de la configuration de l'évaluation automatique.</p>
+</div>
+</div>
+</br></br>
+<h2 id="accessibility-api"><a href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=688">Accessibility API</a> <a class="header-anchor" href="#accessibility-api" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Les modes précédemment évoqués permettent d'activer et de désactiver des options d'accessibilité dans le but d'améliorer l'expérience utilisateur.</p>
+<p>Une fois de plus, c'est l'application <span lang="en">Apple Configurator</span> qui peut permettre ce type d'actions mais <strong>uniquement avant d'entrer dans le mode</strong> en tant que tel.<br>
+<img src="../../../../images/iOSdev/wwdc22-10152-Accessibility_1.png" alt="" class="img-fluid"></p>
+<p>Cependant, il est aussi possible de réaliser ce genre d'intervention <a href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=764">programmatiquement</a> quand le mode est actif grâce à l'élément <code>UIAccessilibity</code>.</p>
+<p><img src="../../../../images/iOSdev/wwdc22-10152-Accessibility_2.png" alt="" class="img-fluid"><br>
+<img src="../../../../images/iOSdev/wwdc22-10152-Accessibility_3.png" alt="" class="img-fluid"></p>
 
           </div>
         </main>
@@ -329,10 +379,9 @@ Ces différentes étapes vont permettre d'introduire une <a href="https://develo
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Sur cette page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#presentation-0129" class="nav-link text-muted">Présentation (01:29)</a></li><li class="nav-item position-relative">
-            <a href="#criteres-de-conception-en-accessibilite-visuelle-0644" class="nav-link text-muted">Critères de conception en accessibilité visuelle (06:44)</a></li><li class="nav-item position-relative">
-            <a href="#implementation-classique-1022" class="nav-link text-muted">Implémentation classique (10:22)</a></li><li class="nav-item position-relative">
-            <a href="#implementation-du-graphe-audio-1417" class="nav-link text-muted">Implémentation du graphe audio (14:17)</a></li>
+            <a href="#acces-guide" class="nav-link text-muted">Accès guidé</a></li><li class="nav-item position-relative">
+            <a href="#les-modes-single-app" class="nav-link text-muted">Les modes Single App</a></li><li class="nav-item position-relative">
+            <a href="#accessibility-api" class="nav-link text-muted">Accessibility API</a></li>
       </ul>
     </nav>
             </div>
@@ -367,7 +416,7 @@ Ces différentes étapes vont permettre d'introduire une <a href="https://develo
           </a>
         </li>
         <li class="nav-item ms-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/ios/wwdc/2021/122.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/ios/wwdc/2022/10152.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
             Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
