@@ -1,9 +1,9 @@
 ---
 title: "Orange web accessibility guidelines"
-abstract: "The Orange site for digital accessibility"
+abstract: "Web page accessibility resources, criteria, requirements, methods and tools..."
 ---
 
-# Orange web accessibility guidelines  
+# Guidelines and tools for Orange web accessibility  
 
 ***Accessibility, a benefit for all, a need for some!***
 
@@ -20,27 +20,23 @@ abstract: "The Orange site for digital accessibility"
 - in an unfavourable environment: poor luminosity, touchpad while moving, etc.;
 - with specific software that compensates a disability.
   
-## Site organization
+## Organization of this "Web" section
 
-### Essential criteria
-List of the most important criteria according to your profile, based on a subset of the WCAG 2.1 level AA recommendations. A good way to be aware of the main criteria and commit progressively to accessibility.  
+### Designate
+List of the main criteria to take into account in the design phase, based on a subset of the <abbr>WCAG</abbr> (Web Content Accessibility Guidelines) 2.1 level AA criteria.
 
-### Requirements list
-This section is for developers. Everything you need to know to code accessible pages and to perform the tests to validate developments.
+### Develop
+Section for developers, everything you need to know to code accessible, the set of criteria <abbr>WCAG</abbr> (Web Content Accessibility Guidelines) 2.1 level AA, arranged by theme.
 
-### Methods and testing tools
-For those who want to check the accessibility of their websites more or less automatically with tools. Finally, all the technical and methodological tools to review pages.
+### Test
+For those who want to check the accessibility of their pages with more or less automatic tools, whatever your profile: UX/UI designer, developer, tester, accessibility expert. Finally, all the methodological and technical tools to evaluate its pages.
 
-### Open source Orange tools
-Presentation of the Boosted library and the Comfort+ service.
+### Audit
+The Va11ydette, our opensource tool that helps us during our audits and our declarations of conformity. It's a Web application, PWA (Progressive Web App), to test!
 
-### Examples
-Didactic examples for certain types of components or elements of the user interface particularly difficult to make accessible but frequently used. Everything is explained, just go ahead!
+### Toolbox
+Method and internal and external tools that we use in our activity. In particular, the Orange design system, Orange Boosted, our fact sheets to have all the best accessibility practices, Personae to better understand accessibility issues...
 
-These examples use the [Boosted](http://boosted.orange.com/) library. It is based on [Bootstrap](http://getbootstrap.com/) and lets you create and quickly test the accessibility and responsiveness of a website. This library is branded with the Orange colours.
+### Examples of components
 
-### Technical articles
-Technical articles on setting up web accessibility.
-
-### Orange open source solutions
-Presentation of the library [Boosted](http://boosted.orange.com/) and of the service [Confort+ (French)](https://confort-plus.orange.com/).
+Didactic examples for certain types of components or interface elements that are particularly tricky to make accessible and frequently used. Everything is explained there, all you have to do is let yourself be guided!

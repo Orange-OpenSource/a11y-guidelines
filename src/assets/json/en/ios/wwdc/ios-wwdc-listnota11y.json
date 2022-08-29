@@ -8,7 +8,7 @@
     "resultat": [],
     "exception": "",
     "raccourcis": "",
-    "profils": ["All","Accessibility","Dark Mode","Debugging","DocC","Formatting","Instruments","Localization","Optimization","Platforms...","Swift","SwiftUI","TextKit","What's new in...","Xcode"]
+    "profils": ["All","Accessibility","Dark Mode","Debugging","DocC","Formatting","Instruments","Localization","Optimization","Regex","Swift","Swift Playgrounds","SwiftUI","What's new in...","Xcode"]
   },
   {
     "themes": "WWDC 2022",
@@ -23,6 +23,28 @@
   },
   {
     "themes": "WWDC 2022",
+    "title": "Build your first app in Swift Playgrounds",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22SwiftPlaygrounds",
+    "profils": ["All","Swift Playgrounds"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Create engaging content for Swift Playgrounds",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22SwiftPlaygrounds",
+    "profils": ["All","Swift Playgrounds"]
+  },
+  {
+    "themes": "WWDC 2022",
     "title": "Improve the discoverability of your Swift-DocC content",
     "type": [],
     "tests": [],
@@ -30,7 +52,29 @@
     "resultat": [],
     "exception": "",
     "raccourcis": "2022/22SwiftDocC",
-    "profils": ["All","DocC","Xcode","What's new in..."]
+    "profils": ["All","DocC","Xcode"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Meet Swift Regex",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22SwiftRegex",
+    "profils": ["All","Regex"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Swift Regex: Beyond the basics",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22SwiftRegex",
+    "profils": ["All","Regex"]
   },
   {
     "themes": "WWDC 2022",
@@ -52,7 +96,7 @@
     "resultat": [],
     "exception": "",
     "raccourcis": "2022/22110354",
-    "profils": ["All","Instruments","Swift","What's new in..."]
+    "profils": ["All","Instruments","Regex","Swift","What's new in..."]
   },
   {
     "themes": "WWDC 2022",
@@ -261,7 +305,7 @@
     "resultat": ["Design"],
     "exception": "",
     "raccourcis": "2021/21102",
-    "profils": ["All","Platforms...","Swift","SwiftUI","Xcode"]
+    "profils": ["All","Swift","SwiftUI","Xcode"]
   },
   {
     "themes": "WWDC 2021",

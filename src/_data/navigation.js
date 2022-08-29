@@ -100,7 +100,9 @@ module.exports = {
 		  { label: 'E-learning', href: '/en/content-and-communication/e-learning/' }
         ]
       },
-      { label: 'Articles', href: '/en/articles/' }
+      { label: 'Articles', href: '/en/articles/' },
+      { label: 'Persona', href: '/en/persona/', mainMenu: false }
+     
     ],
     'fr': [
       { label: 'Accueil', href: '/fr/' },

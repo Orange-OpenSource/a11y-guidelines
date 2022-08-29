@@ -21,8 +21,16 @@ Le [référentiel WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) n'imp
 
 ### Agrandissement de la taille des caractères
 
-Si le référentiel n'impose pas de taille minimale pour la taille des caractères, [le critère 1.4.4](https://www.w3.org/TR/WCAG21/#resize-text) indique que l'utilisateur doit pouvoir augmenter la taille du texte jusqu'à 200% sans perte de contenu ou de fonctionnalité. Pour être conforme à ce critère il est indispensable de tester dans un navigateur. La procédure pour augmenter la taille du texte est disponible sur la page suivante : [Agrandissement de la taille du texte](/fr/web/outils/methodes-et-outils-de-test/agrandissement-texte/).
-Parfois le dimensionnement de certains blocs de texte, notamment à l'aide de tailles en pixels, peut entraîner des pertes d'informations (textes tronqués), c'est pourquoi il est conseillé d'utiliser des unités relatives (%, em, rem ...).
+Si le référentiel n'impose pas de taille minimale pour la taille des caractères, [le critère 1.4.4](https://www.w3.org/TR/WCAG21/#resize-text) indique que l'utilisateur doit pouvoir augmenter la taille du texte jusqu'à 200% sans perte de contenu ou de fonctionnalité. 
+Pour être conforme à ce critère, il est indispensable de tester dans un navigateur.
+
+le critère peut être validé sous l'une de ces trois conditions d'agrandissement :
+- Un zoom du texte uniquement depuis le navigateur.
+- Un zoom graphique.
+- L'utilisation d'un composant d'interface propre au site.
+
+le dimensionnement de certains blocs de texte, notamment à l'aide de tailles en pixels, peut entraîner des pertes d'informations (textes tronqués), c'est pourquoi il est conseillé d'utiliser des unités relatives (%, em, rem ...).
+La procédure pour augmenter la taille du texte est disponible sur la page suivante : [Agrandissement de la taille du texte](/fr/web/outils/methodes-et-outils-de-test/agrandissement-texte/).
 
 ### Contraste des couleurs
 
