@@ -45,6 +45,28 @@
   },
   {
     "themes": "WWDC 2022",
+    "title": "Design protocol interfaces in Swift",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22SwiftGenericsProtocols",
+    "profils": ["All","Swift"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Embrace Swift generics",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22SwiftGenericsProtocols",
+    "profils": ["All","Swift"]
+  },
+  {
+    "themes": "WWDC 2022",
     "title": "Improve the discoverability of your Swift-DocC content",
     "type": [],
     "tests": [],
