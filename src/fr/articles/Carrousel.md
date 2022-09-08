@@ -2,14 +2,14 @@
 title: "Les bonnes pratiques pour les carrousels"
 abstract: "Les carrousels, qu'est-ce et comment bien les mettre en œuvre"
 titleBeforeTag: true
-date: "2022-08-26"
+date: "2022-09-09"
 tags:
   - web
   - beginner
 ---
 
 ## Pourquoi&nbsp;?
-Le carrousel est un outil de communication dynamique, dont l'utilité n'est clairement pas à la hauteur de sa popularité (<a href="https://erikrunyon.com/2013/01/carousel-interaction-stats/">Carousel Interaction Stats</a>)
+Le carrousel est un outil de communication dynamique, dont l'utilité n'est clairement pas à la hauteur de sa popularité (<a lang="en" hreflang="en" href="https://erikrunyon.com/2013/01/carousel-interaction-stats/">Carousel Interaction Stats</a>)
 Si toutefois vous souhaitez malgré tout en développer un, voici quelques bonnes pratiques à mettre en place pour qu'il soit utilisable.
 
 ### Règles de conformité&nbsp;
@@ -75,5 +75,5 @@ Ci-dessous, un exemple de carrousel accessible au format HTML
 
 - <a href="https://www.adilade.fr/blog/carrousel-accessible-responsive-vanillajs/">Adilade - Carrousel-accessible-responsive-vanillasjs</a>
 - <a href="https://www.accede-web.com/notices/interface-riche/carrousels/">AcceDe Web - carrousels</a>
-- <a href="https://www.w3.org/WAI/tutorials/carousels/">W3C - Carousels Tutorial</a>
-- <a href="https://erikrunyon.com/2013/01/carousel-interaction-stats/">erik runyon - Carousel Interaction Stats</a>
+- <a lang="en" hreflang="en" href="https://www.w3.org/WAI/tutorials/carousels/">W3C - Carousels Tutorial</a>
+- <a lang="en" hreflang="en" href="https://erikrunyon.com/2013/01/carousel-interaction-stats/">erik runyon - Carousel Interaction Stats</a>
