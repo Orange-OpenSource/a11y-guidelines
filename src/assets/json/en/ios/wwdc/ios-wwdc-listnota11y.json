@@ -67,6 +67,17 @@
   },
   {
     "themes": "WWDC 2022",
+    "title": "Get to know Developer Mode",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22DevelopXcode14",
+    "profils": ["All","Xcode"]
+  },
+  {
+    "themes": "WWDC 2022",
     "title": "Improve the discoverability of your Swift-DocC content",
     "type": [],
     "tests": [],
@@ -97,6 +108,17 @@
     "exception": "",
     "raccourcis": "2022/22SwiftRegex",
     "profils": ["All","Regex"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Use Xcode to develop a multiplatform app",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22DevelopXcode14",
+    "profils": ["All","Xcode"]
   },
   {
     "themes": "WWDC 2022",
