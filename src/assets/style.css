@@ -281,6 +281,53 @@ pre code {
     font-weight: bolder; 
 }
 
+.DocSearch-Button-Container {
+    align-items: center;
+    display: flex;
+}
+
+.DocSearch-Button {
+    --docsearch-searchbox-background: #000;
+    --docsearch-searchbox-focus-background: #000;
+    --docsearch-text-color: #fff;
+    margin: 0;
+    border: 0;
+}
+
+.DocSearch-Button-Placeholder {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.DocSearch-Button .DocSearch-Search-Icon {
+    color: #fff;
+}
+
+.DocSearch-Search-Icon {
+    width: 1.875rem;
+    height: 1.875rem;
+    stroke-width: 2;
+}
+
+.DocSearch-Button-Keys {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
 
 /**
  * Utilities
