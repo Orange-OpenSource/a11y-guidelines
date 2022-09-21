@@ -89,6 +89,17 @@
   },
   {
     "themes": "WWDC 2022",
+    "title": "Meet the expanded San Francisco font family",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/22110381",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2022",
     "title": "Meet Swift Regex",
     "type": [],
     "tests": [],
