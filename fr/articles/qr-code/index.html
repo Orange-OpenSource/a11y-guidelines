@@ -2,11 +2,11 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">    
-    <title>Accueil - Recommandations accessibilité numérique Orange</title>
+    <title>Améliorer l&#39;accessibilité des QR Codes - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
     
-    <meta name="description" content="Recommandations, méthodes, ressources et outils proposés par le centre de compétences groupe d&#39;Orange sur l&#39;accessibilité numérique">
+    <meta name="description" content="Quelques recommandations pour rendre accessible les QR Code">
             
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -24,10 +24,12 @@
     
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
     <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -74,7 +76,7 @@
     <div class="collapse navbar-collapse" id="main-menu-list">
       <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a href="/fr/" class="nav-link active" aria-current="page">
+              <a href="/fr/" class="nav-link">
   Accueil
 </a>
             </li>
@@ -104,7 +106,7 @@
 </a>
             </li>
             <li class="nav-item">
-              <a href="/fr/articles/" class="nav-link">
+              <a href="/fr/articles/" class="nav-link active" aria-current="true">
   Articles
 </a>
             </li><li class="nav-item d-md-none">
@@ -147,183 +149,94 @@
     <div class="container-lg pt-2">
       
       
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici&amp;nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Améliorer l&#39;accessibilité des QR Codes
+        </li>
+      </ol>
+</nav>
+
+      
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        Sur cette page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#ils-sont-partout" class="dropdown-item text-wrap">Ils sont partout</a><a href="#quelques-recommandations-pour-le-numerique" class="dropdown-item text-wrap">Quelques recommandations pour le numérique</a></div>
+    </nav>
+        
       </div>
     </div>
     
-<main id="main-content" class="pt-4" role="main">
-  <section class="container-lg">
-    <div class="row">
-      <div class="col-md-7 pb-5"><h1>Accessibilité Numérique Orange</h1>
-<h2 id="en-quelques-mots">En quelques mots <a class="header-anchor" href="#en-quelques-mots" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Recommandations, méthodes, ressources et outils proposés par <span lang="en">EASE</span>, <span lang="en">E-Accessibility Solutions for Everyone</span>, le centre de compétences groupe d'Orange sur l'accessibilité numérique.</p>
-<p>Nous proposons des formations, accompagnons les projets, publions des ressources pour les parties prenantes du numérique et réalisons des audits de conformité.<br>
-Notre expertise couvre les sites Web (e-commerce, e-learning, applications métier, Intranet...), les applications mobile, les documents bureautiques, les réseaux sociaux d'entreprise, les courriels, les progiciels...</p>
-<ul class="list-inline">
-  <li class="list-inline-item pb-2">
-    <a href="definition-accessibilite-numerique" class="btn btn-secondary btn-sm">Définition de l'accessibilité numérique</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="les-situations-de-handicap" class="btn btn-secondary btn-sm">Les situations de handicap</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="solutions-assistance" class="btn btn-secondary btn-sm">Les solutions d'assistance</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="persona/" class="btn btn-secondary btn-sm">Quelques personae</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="glossaire" class="btn btn-secondary btn-sm">Glossaire</a>
-  </li>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          
+            <h1>Améliorer l&#39;accessibilité des QR Codes</h1>  
+            
+              <span class="visually-hidden" id="filters_label">
+                Thématiques associées :
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="../?tag=beginner" class="btn btn-dark btn-sm" data-tag="beginner">Débutant</a></li>
+              </ul>
+            
+            <time class="text-muted" datetime="2022-09-13T00:00:00.000Z">13 septembre 2022</time>
+            
+          <div class="mt-4">
+          <h2 id="ils-sont-partout">Ils sont partout <a class="header-anchor" href="#ils-sont-partout" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Les QR Codes sont de plus en plus utilisés dans le monde physique sur les emballages, les vitrines, dans les musées. Mais également sur les sites Web, pour enrôler votre mobile dans certains processus qui nécessitent un smartphone. Là où le QR Code était réservé il y a quelques années aux utilisateurs avertis, l'intégration native des lecteurs de code dans les smartphones a démocratisé son utilisation.</p>
+<p>Même si on imagine que les QR Codes ne sont pas sans poser de difficulté à certains utilisateurs (en particulier les déficients visuels), il s'agit néanmoins d'un moyen intéressant pour transmettre rapidement de l'information. En effet grâce à un QR Code sur un emballage, une personne malvoyante pourrait par exemple accéder à des informations sur le produit avec l'aide de son smartphone et de son lecteur d'écran.</p>
+<h2 id="quelques-recommandations-pour-le-numerique">Quelques recommandations pour le numérique <a class="header-anchor" href="#quelques-recommandations-pour-le-numerique" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Voici quelques recommandations pour faciliter l'utilisation d'un QR Code affiché dans une page web :</p>
+<ul>
+<li>Vérifier les contrastes des couleurs. Le QR code doit fournir un niveau de contraste suffisant pour être identifiable par l'utilisateur et pour être scanné facilement.</li>
+<li>Ne pas afficher un QR Code seul, accompagnez-le d'un verbe d'action pour prévenir et inciter l'utilisateur à l'utiliser (exemple : &quot;scannez-moi&quot;, &quot;télécharger l'application&quot;...).</li>
+<li>Proposer des QR Code de grande taille. Ou mieux proposer l'affichage du QR Code en plein écran, ainsi le scan en sera facilité.</li>
+<li>Ajouter une alternative textuelle sur votre image de QR Code (attribut <code>alt</code>). Exemple : <code>&lt;img src=&quot;qr-code.png&quot; alt=&quot;QR Code à scanner pour télécharger l'application&quot;&gt;</code>. L'alternative textuelle peut également contenir des informations sur l'emplacement. Exemple : &quot;QR Code affiché au centre de l'écran permettant de télécharger l'application&quot;.</li>
+<li>Enfin si le QR Code permet d'accéder à des informations importantes ou fait partie d'une étape d'un processus, vous devez proposer une alternative permettant de réaliser cette étape d'une autre manière. Exemples : accompagner le QR Code d'un lien permettant d'effectuer l'étape, proposer à l'utilisateur de recevoir un email ou un SMS avec un lien permettant d'effectuer cette étape sur son smartphone sans avoir à utiliser le QR Code.</li>
 </ul>
-</div>
-      <div class="col-md-5 align-self-end"><img src="/images/home-banner.svg" alt="" class="img-fluid"></div>
-    </div>
-  </section>
-  <div class="bg-supporting-green py-4">
-    <section class="container-lg">
-      <h2>Nos recommandations</h2>
-      <div class="row row-cols-1 row-cols-md-4 g-4"><div class="col">
-  <div class="card h-100 bg-info border-secondary">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/web.svg" alt="" class="img-fluid" width="190" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/web/" class="link-primary stretched-link">Web</a>
-      </h3>
-      
-    </div>
-  </div>
-</div><div class="col">
-  <div class="card h-100 bg-warning border-secondary">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/android.svg" alt="" class="img-fluid" width="72" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/mobile/android/" class="link-primary stretched-link">Android</a>
-      </h3>
-      
-    </div>
-  </div>
-</div><div class="col">
-  <div class="card h-100 bg-warning border-secondary">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/ios.svg" alt="" class="img-fluid" width="72" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/mobile/ios/" class="link-primary stretched-link">iOS</a>
-      </h3>
-      
-    </div>
-  </div>
-</div><div class="col">
-  <div class="card h-100 bg-purple border-secondary">
-    <div class="pt-3 px-3 text-center">
-      <img src="../images/icons/editorial-content.svg" alt="" class="img-fluid" width="131" height="151">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/contenu-et-communication/" class="link-primary stretched-link">Contenu et communication</a>
-      </h3>
-      
-    </div>
-  </div>
-</div></div>
-    </section>
-  </div>
-  <div class="bg-300">
-    <section class="container-lg py-4">
-      <div class="d-flex">
-        <h2>Derniers articles</h2>
-        <div class="ps-3">
-          <a href="articles/" class="btn btn-secondary btn-sm">Voir tous les articles</a>
-        </div>
+<figure style="text-align: center;">
+  <img class="img-fluid" style="max-width: 250px" src="../images/qr-code/qr-code.png" alt="qr code pour consulter le site des recommandations accessibilité Orange">
+  <figcaption>Scanner le QR Code pour <a href="https://a11y-guidelines.orange.com/">consulter le site des recommandations accessibilité Orange</a></figcaption>
+</figure>
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sur cette page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#ils-sont-partout" class="nav-link text-muted">Ils sont partout</a></li><li class="nav-item position-relative">
+            <a href="#quelques-recommandations-pour-le-numerique" class="nav-link text-muted">Quelques recommandations pour le numérique</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
       </div>
-      <ol class="list-unstyled row"><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/qr-code/" class="text-decoration-none">Améliorer l&#39;accessibilité des QR Codes</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2022-09-13T00:00:00.000Z">13 septembre 2022</time>
-        
-        
-          <p class="my-2">Quelques recommandations pour rendre accessible les QR Code</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/veille-juin-juillet-2022/" class="text-decoration-none">Veille #A11y Juin-Juillet 2022</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2022-08-03T00:00:00.000Z">03 août 2022</time>
-        
-        
-          <p class="my-2">Florilège de ressources en #a11y, Juin-Juillet 2022</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/annotations-accessibilite/" class="text-decoration-none">Spécifier l&#39;accessibilité de vos design grâce aux annotations</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2022-07-29T00:00:00.000Z">29 juillet 2022</time>
-        
-        
-          <p class="my-2">Les annotations d&#39;accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent être interprétés par les outils d&#39;assistance</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/tester-wcag-132/" class="text-decoration-none">Comment conserver un ordre séquentiel logique (WCAG 1.3.2)</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2022-07-26T00:00:00.000Z">26 juillet 2022</time>
-        
-        
-          <p class="my-2">Les bonnes pratiques pour le critère WCAG 1.3.2</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/liens-evitement/" class="text-decoration-none">Les bonnes pratiques pour les liens d’évitements</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2022-07-12T00:00:00.000Z">12 juillet 2022</time>
-        
-        
-          <p class="my-2">Les liens d&#39;évitement, qu&#39;est-ce et comment bien les mettre en œuvre</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/veille-avril-mai-2022/" class="text-decoration-none">Veille #A11y Avril-Mai 2022</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2022-06-02T00:00:00.000Z">02 juin 2022</time>
-        
-        
-          <p class="my-2">Florilège de ressources en #a11y, Avril-Mai 2022</p>
-        
-      </article>
-    </li></ol>
-    </section>
-  </div>
-</main>
-
+    </div>
     
 
-<footer id="footer" class="o-footer mt-0" role="contentinfo">
+<footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">
       <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
@@ -348,7 +261,7 @@ Notre expertise couvre les sites Web (e-commerce, e-learning, applications méti
           </a>
         </li>
         <li class="nav-item ms-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/qr-code.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
             Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
@@ -371,12 +284,14 @@ Notre expertise couvre les sites Web (e-commerce, e-learning, applications méti
       <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
     
     
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
     <script>
       const Application = {
         lang: "fr",
         vendors: {
-          highlightJS: false,
-          highlightTitle: false
+          highlightJS: true,
+          highlightTitle: true
         }
       }
     </script>

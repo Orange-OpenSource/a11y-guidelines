@@ -4,7 +4,7 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-08-03T00:00:00Z</updated>
+  <updated>2022-09-13T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -2749,5 +2749,28 @@ Et pour finir, mon rapide édito, dernières news WCAG 2.2 (publication toujours
 &lt;li&gt;Un jeopardy d&#39;a11y, super (en) : &lt;a href=&quot;https://jeopardylabs.com/play/wcag-21-aa&quot;&gt;https://jeopardylabs.com/play/wcag-21-aa&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
+  </entry>
+  
+  <entry>
+    <title>Améliorer l&#39;accessibilité des QR Codes</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/qr-code/"/>
+    <updated>2022-09-13T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/qr-code/</id>
+    <content type="html">&lt;h2 id=&quot;ils-sont-partout&quot;&gt;Ils sont partout &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/qr-code/#ils-sont-partout&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Les QR Codes sont de plus en plus utilisés dans le monde physique sur les emballages, les vitrines, dans les musées. Mais également sur les sites Web, pour enrôler votre mobile dans certains processus qui nécessitent un smartphone. Là où le QR Code était réservé il y a quelques années aux utilisateurs avertis, l&#39;intégration native des lecteurs de code dans les smartphones a démocratisé son utilisation.&lt;/p&gt;
+&lt;p&gt;Même si on imagine que les QR Codes ne sont pas sans poser de difficulté à certains utilisateurs (en particulier les déficients visuels), il s&#39;agit néanmoins d&#39;un moyen intéressant pour transmettre rapidement de l&#39;information. En effet grâce à un QR Code sur un emballage, une personne malvoyante pourrait par exemple accéder à des informations sur le produit avec l&#39;aide de son smartphone et de son lecteur d&#39;écran.&lt;/p&gt;
+&lt;h2 id=&quot;quelques-recommandations-pour-le-numerique&quot;&gt;Quelques recommandations pour le numérique &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/qr-code/#quelques-recommandations-pour-le-numerique&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Voici quelques recommandations pour faciliter l&#39;utilisation d&#39;un QR Code affiché dans une page web :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vérifier les contrastes des couleurs. Le QR code doit fournir un niveau de contraste suffisant pour être identifiable par l&#39;utilisateur et pour être scanné facilement.&lt;/li&gt;
+&lt;li&gt;Ne pas afficher un QR Code seul, accompagnez-le d&#39;un verbe d&#39;action pour prévenir et inciter l&#39;utilisateur à l&#39;utiliser (exemple : &amp;quot;scannez-moi&amp;quot;, &amp;quot;télécharger l&#39;application&amp;quot;...).&lt;/li&gt;
+&lt;li&gt;Proposer des QR Code de grande taille. Ou mieux proposer l&#39;affichage du QR Code en plein écran, ainsi le scan en sera facilité.&lt;/li&gt;
+&lt;li&gt;Ajouter une alternative textuelle sur votre image de QR Code (attribut &lt;code&gt;alt&lt;/code&gt;). Exemple : &lt;code&gt;&amp;lt;img src=&amp;quot;qr-code.png&amp;quot; alt=&amp;quot;QR Code à scanner pour télécharger l&#39;application&amp;quot;&amp;gt;&lt;/code&gt;. L&#39;alternative textuelle peut également contenir des informations sur l&#39;emplacement. Exemple : &amp;quot;QR Code affiché au centre de l&#39;écran permettant de télécharger l&#39;application&amp;quot;.&lt;/li&gt;
+&lt;li&gt;Enfin si le QR Code permet d&#39;accéder à des informations importantes ou fait partie d&#39;une étape d&#39;un processus, vous devez proposer une alternative permettant de réaliser cette étape d&#39;une autre manière. Exemples : accompagner le QR Code d&#39;un lien permettant d&#39;effectuer l&#39;étape, proposer à l&#39;utilisateur de recevoir un email ou un SMS avec un lien permettant d&#39;effectuer cette étape sur son smartphone sans avoir à utiliser le QR Code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure style=&quot;text-align: center;&quot;&gt;
+  &lt;img class=&quot;img-fluid&quot; style=&quot;max-width: 250px&quot; src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/qr-code/qr-code.png&quot; alt=&quot;qr code pour consulter le site des recommandations accessibilité Orange&quot; /&gt;
+  &lt;figcaption&gt;Scanner le QR Code pour &lt;a href=&quot;https://a11y-guidelines.orange.com/&quot;&gt;consulter le site des recommandations accessibilité Orange&lt;/a&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;</content>
   </entry>
 </feed>
