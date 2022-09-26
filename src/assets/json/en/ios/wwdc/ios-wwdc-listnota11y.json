@@ -8,7 +8,7 @@
     "resultat": [],
     "exception": "",
     "raccourcis": "",
-    "profils": ["All","Accessibility","Dark Mode","Debugging","DocC","Formatting","Instruments","Localization","Optimization","Regex","Swift","Swift Playgrounds","SwiftUI","What's new in...","Xcode"]
+    "profils": ["All","Accessibility","Dark Mode","Debugging","DocC","Formatting","Instruments","Localization","Optimization","Regex","Shortcuts","Swift","Swift Playgrounds","SwiftUI","What's new in...","Xcode"]
   },
   {
     "themes": "WWDC 2022",
@@ -232,6 +232,17 @@
   },
   {
     "themes": "WWDC 2021",
+    "title": "Design great actions for Shortcuts, Siri, and Suggestions",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2021/21ShortcutsActions",
+    "profils": ["All", "Shortcuts"]
+  },
+  {
+    "themes": "WWDC 2021",
     "title": "Discover breakpoint improvements",
     "type": [],
     "tests": [],
@@ -439,6 +450,17 @@
     "raccourcis": "2021/2110059",
     "profils": ["All","Accessibility","What's new in..."]
   },
+  {
+    "themes": "WWDC 2020",
+    "title": "Feature your actions in the Shortcuts app",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2021/21ShortcutsActions",
+    "profils": ["All", "Shortcuts"]
+  },
    {
     "themes": "WWDC 2020",
     "title": "Formatters",
@@ -452,6 +474,17 @@
   },
   {
     "themes": "WWDC 2019",
+    "title": "Building Great Shortcuts",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2021/21ShortcutsActions",
+    "profils": ["All", "Shortcuts"]
+  },
+  {
+    "themes": "WWDC 2019",
     "title": "Implementing Dark Mode on iOS",
     "type": ["Materials","UIBar","Attributed String","Activity Indicator"],
     "tests": [],
@@ -460,6 +493,17 @@
     "exception": "",
     "raccourcis": "2019/19214",
     "profils": ["All","Dark Mode","Xcode"]
+  },
+  {
+    "themes": "WWDC 2019",
+    "title": "Introducing Parameters for Shortcuts",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2021/21ShortcutsActions",
+    "profils": ["All", "Shortcuts"]
   },
   {
     "themes": "WWDC 2019",
