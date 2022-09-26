@@ -3,7 +3,7 @@ title: "Android développer - Navigation générale"
 abstract: "Recommandations générales pour le développement d'une application Android accessible"
 ---
 
-# Navigation générale
+# Android développer - Navigation générale
 
 ## Avoir des zones de clic suffisamment grandes
 

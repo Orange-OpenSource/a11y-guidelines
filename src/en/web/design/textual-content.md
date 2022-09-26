@@ -3,7 +3,7 @@ title: "Web design - Textual content"
 abstract: "Textual content, web accessibility design recommandations"
 ---
 
-# Textual content
+# Web design - Textual content
 
 <p class="lead">Ensure that textual content is structured with the appropriate semantics</p>
 

@@ -3,7 +3,7 @@ title: "Web design - Forms"
 abstract: "Forms, web accessibility design recommandations"
 ---
 
-# Forms
+# Web design - Forms
 
 <p class="lead">Ensure that the user can effectively complete the forms</p>
 

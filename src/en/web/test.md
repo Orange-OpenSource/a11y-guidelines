@@ -10,7 +10,7 @@ js:
   - /assets/test-web.js
 ---
 
-# WCAG based guidelines for testing
+# Web - WCAG based guidelines for testing
 
 This set of criteria intended for websites and web applications presents the procedures and tools to check compliance with the criteria. Tests are organized by profile and tool. It is aimed at designers, developers, testers, accessibility experts, etc..
 

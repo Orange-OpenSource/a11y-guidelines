@@ -1,9 +1,9 @@
 ﻿---
 title: "Android designer - Agrandissement des éléments"
-abstract: "Agrandir les textes, recommendations d'accessibilité lors de la conception"
+abstract: "Android designer - Agrandir les textes, recommendations d'accessibilité lors de la conception"
 ---
 
-# Agrandissement des éléments
+# Android designer - Agrandissement des éléments
 
 ## Agrandir les textes sans perte d'information
 

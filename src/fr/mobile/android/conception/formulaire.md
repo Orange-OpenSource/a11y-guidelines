@@ -3,7 +3,7 @@ title: "Android designer - Écran de saisie"
 abstract: "Champs de formulaire, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
-# Écran de saisie
+# Android designer - Écran de saisie
 
 ## Avoir des champs de saisie explicites
 

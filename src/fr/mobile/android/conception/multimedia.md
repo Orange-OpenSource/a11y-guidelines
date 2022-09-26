@@ -3,7 +3,7 @@ title: "Android designer - Multimédia"
 abstract: "Multimédia, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
-# Multimédia
+# Android designer - Multimédia
 
 ## Contrôler le contenu multimédia
 

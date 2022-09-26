@@ -3,7 +3,7 @@ title: "Web designer - Tactile et interactions"
 abstract: "Tactile et interactions, recommendations d'accessibilité web lors de la conception"
 ---
 
-# Tactile et interactions
+# Web designer - Tactile et interactions
 
 <p class="lead">S’assurer que l’utilisateur garde le contrôle sur les interactions, en particulier tactiles</p>
 

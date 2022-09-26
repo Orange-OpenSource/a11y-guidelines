@@ -3,7 +3,7 @@ title: "Web design - Non-textual content"
 abstract: "Non-textual content, web accessibility design recommandations"
 ---
 
-# Non-textual content
+# Web design - Non-textual content
 
 <p class="lead">Ensure that an alternative to non-text content is provided to the user.</p>
 

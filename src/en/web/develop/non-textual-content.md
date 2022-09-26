@@ -3,7 +3,7 @@ title: "Web develop - Non-textual content"
 abstract: "Non-textual content, web accessibility dev recommandations"
 ---
 
-# Non-textual content
+# Web develop - Non-textual content
 
 <p class="lead">Ensure that an alternative to non-text content is provided to the user</p>
 

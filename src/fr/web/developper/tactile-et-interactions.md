@@ -3,7 +3,7 @@ title: "Web développer - Tactile et interactions"
 abstract: "Tactile et interactions, recommendations d'accessibilité web lors du développement"
 ---
 
-# Tactile et interactions
+# Web développer - Tactile et interactions
 
 <p class="lead">S’assurer que l’utilisateur garde le contrôle sur les interactions, en particulier tactiles</p>
 

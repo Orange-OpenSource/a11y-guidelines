@@ -3,7 +3,7 @@ title: "Web develop - Layout"
 abstract: "Layout, web accessibility dev recommandations"
 ---
 
-# Layout
+# Web develop - Layout
 
 <p class="lead">Make sure the layout is suitable for the user</p>
 

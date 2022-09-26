@@ -3,7 +3,7 @@ title: "Android - Manual tests: use cases"
 abstract: "Manual tests by reproducing the situation experienced by your users with Android"
 ---
 
-# Manual tests: use cases
+# Android - Manual tests: use cases
 
 Manual tests are those that you will perform yourself, by reproducing the situation experienced by your users, and therefore using their interaction tools. It is even better to have the application tested by real users with disabilities. Several tools must be used, to take into account as many possible situations as possible:
 

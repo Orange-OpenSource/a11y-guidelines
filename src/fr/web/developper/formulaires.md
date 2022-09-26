@@ -3,7 +3,7 @@ title: "Web développer - Formulaires"
 abstract: "Formulaires, recommendations d'accessibilité web lors du développement"
 ---
 
-# Formulaires
+# Web développer - Formulaires
 
 <p class="lead">S’assurer que l’utilisateur puisse efficacement compléter les formulaires</p>
 

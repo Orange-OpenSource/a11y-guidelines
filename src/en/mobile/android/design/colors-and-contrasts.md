@@ -3,7 +3,7 @@ title: "Android design - Colors and contrasts"
 abstract: "Colors and contrasts, accessibility design recommandations with Android"
 ---
 
-# Colors and contrasts
+# Android design - Colors and contrasts
 
 Ensure that the colors used do not cause problems for the user.
 

@@ -3,7 +3,7 @@ title: "Web développer - Navigation clavier"
 abstract: "Navigation clavier, recommendations d'accessibilité web lors du développement"
 ---
 
-# Navigation clavier
+# Web développer - Navigation clavier
 
 <p class="lead">S’assurer que l’utilisateur puisse naviguer uniquement à l’aide du clavier</p>
 

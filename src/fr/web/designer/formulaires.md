@@ -3,7 +3,7 @@ title: "Web designer - Les formulaires"
 abstract: "Formulaires, recommendations d'accessibilité web lors de la conception"
 ---
 
-# Les formulaires
+# Web designer - Les formulaires
 
 <p class="lead">S’assurer que l’utilisateur puisse efficacement compléter les formulaires</p>
 

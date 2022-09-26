@@ -3,7 +3,7 @@ title: "Android design - General navigation"
 abstract: "General navigation, accessibility design recommandations with Android"
 ---
 
-# General navigation
+# Android design - General navigation
 
 ## Have sufficiently large click areas
 

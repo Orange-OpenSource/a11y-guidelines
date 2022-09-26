@@ -3,7 +3,7 @@ title: "Web design - Common navigation"
 abstract: "Commun navigation, web accessibility design recommandations"
 ---
 
-# Common navigation
+# Web design - Common navigation
 
 <p class="lead">Make sure that the user easily navigate within page and more generally in the website</p>
 

@@ -3,7 +3,7 @@ title: "Web - Toolbox"
 abstract: "Resources, tools and methods to help improving digital accessibility"
 ---
 
-# Toolbox
+# Web - Toolbox
 
 Resources, tools and methods to help improving digital accessibility:
 - Boosted to develop Orange-branded and accessible websites

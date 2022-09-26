@@ -3,7 +3,7 @@ title: "Web développer - Contenu non-textuel"
 abstract: "Contenu non-textuel, recommendations d'accessibilité web lors du développement"
 ---
 
-# Contenu non-textuel
+# Web développer - Contenu non-textuel
 
 <p class="lead">S’assurer, qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur</p>
 

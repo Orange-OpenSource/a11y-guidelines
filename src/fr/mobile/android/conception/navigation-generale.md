@@ -3,7 +3,7 @@ title: "Android designer - Navigation générale"
 abstract: "Navigation générale, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
-# Navigation générale
+# Android designer - Navigation générale
 
 ## Avoir des zones de clic suffisamment grandes
 

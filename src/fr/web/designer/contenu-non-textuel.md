@@ -3,7 +3,7 @@ title: "Web designer - Contenu non-textuel"
 abstract: "Contenu non-textuel, recommendations d'accessibilité web lors de la conception"
 ---
 
-# Contenu non-textuel
+# Web designer - Contenu non-textuel
 
 <p class="lead">S’assurer qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur.</p>
 

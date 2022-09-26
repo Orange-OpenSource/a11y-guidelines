@@ -3,7 +3,7 @@ title: "Android développer - Écran de saisie"
 abstract: "Accessibilité des champs de formulaire sous Android"
 ---
 
-# Écran de saisie
+# Android développer - Écran de saisie
 
 ## Avoir des champs de saisie explicites
 

@@ -3,7 +3,7 @@ title: "Android designer - Couleurs et contrastes"
 abstract: "Couleurs et contrastes, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
-# Couleurs et contrastes
+# Android designer - Couleurs et contrastes
 
 S'assurer que les couleurs utilisées ne posent pas de problèmes à l'utilisateur
 

@@ -3,7 +3,7 @@ title: "Android design - Element Magnification"
 abstract: "Element magnification, accessibility design recommandations with Android"
 ---
 
-# Element magnification
+# Android design - Element magnification
 
 ## Enlarge texts without loss of information
 

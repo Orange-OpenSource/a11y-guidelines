@@ -3,7 +3,7 @@ title: "Web develop - Assistive technology"
 abstract: "Assistive technologies, web accessibility dev recommandations"
 ---
 
-# Assistive technology
+# Web develop - Assistive technology
 
 <p class="lead">Allow the screen reader user access to the main features of the application, but also ensure for all users the usability of the application</p>
 

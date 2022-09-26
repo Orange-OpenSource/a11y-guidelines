@@ -3,7 +3,7 @@ title: "Web develop - Textual content"
 abstract: "Textual content, web accessibility dev recommandations"
 ---
 
-# Textual content
+# Web develop - Textual content
 
 <p class="lead">Ensure that textual content is structured with the appropriate semantics</p>
 

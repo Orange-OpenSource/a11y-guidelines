@@ -3,7 +3,7 @@ title: "Web - Référentiels et ressources"
 abstract: "Les référentiels d'accessibilité web en vigueur en France et dans le monde"
 ---
 
-# Référentiels et ressources
+# Web - Référentiels et ressources
 
 ## Le référentiel <abbr>WCAG</abbr>
 
