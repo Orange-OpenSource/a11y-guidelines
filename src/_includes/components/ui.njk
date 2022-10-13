@@ -10,7 +10,7 @@
 {%- set current = "page" if strictlyActive else "true" -%}
 
 <a href="{{ link.href }}" class="nav-link{{ " " + class if class }}{% if active %} active" aria-current="{{ current }}"{% else %}"{% endif %}>
-  {{ link.label }}
+  {{ link.label }} {% if link.label == "Web" %} <span class="visually-hidden">Menu</span> {% endif %}
 </a>
 {%- endmacro -%}
 

@@ -19,7 +19,7 @@ La checklist basée sur le référentiel RGAA est disponible sur la Va11ydette.
 Vous pouvez maintenant auditer un site, en regardant les 106 critères du RGAA.
 Pour tous les critères, les liens redirigent vers le glossaire officiel du RGAA. 
 
-À la fin de votre audit vous aurez accès au pourcentage de conformité globale.
+À la fin de votre audit, vous aurez accès au pourcentage de conformité globale.
 Vous aurez aussi la possibilité, d'exporter votre audit au format excel, afin de restituer au projet toutes les anomalies relevées.
 
 Commencez votre audit sur <a href="https://la-va11ydette.orange.com/?list=rgaa&lang=fr" target="_blank" title="la checklist RGAA (nouvel onglet)">la checklist RGAA</a> 
@@ -28,7 +28,7 @@ Commencez votre audit sur <a href="https://la-va11ydette.orange.com/?list=rgaa&l
 
 ## Ajout des critères de bonnes pratiques sur la checklist WCAG web 
 
-Des nouveautés sont aussi présentes sur la checklist WCAG Web.
+Des nouveautés sont aussi présentes sur <a href="https://la-va11ydette.orange.com/?list=wcag-web&lang=fr" target="_blank" title="la checklist WCAG Web (nouvel onglet)">la checklist Wcab Web</a>.
 
 Précedement il existait deux checklist, une pour faire des déclarations et la deuxième permettait de faire des audits un peu plus poussés.
 Nous avons décidé de supprimer la checklist d'audit afin de se concentrer sur une seule grille d'audit.
