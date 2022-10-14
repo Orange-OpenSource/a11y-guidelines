@@ -4,7 +4,7 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-09-13T00:00:00Z</updated>
+  <updated>2022-10-14T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -2772,5 +2772,31 @@ Et pour finir, mon rapide édito, dernières news WCAG 2.2 (publication toujours
   &lt;img class=&quot;img-fluid&quot; style=&quot;max-width: 250px&quot; src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/qr-code/qr-code.png&quot; alt=&quot;qr code pour consulter le site des recommandations accessibilité Orange&quot; /&gt;
   &lt;figcaption&gt;Scanner le QR Code pour &lt;a href=&quot;https://a11y-guidelines.orange.com/&quot;&gt;consulter le site des recommandations accessibilité Orange&lt;/a&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;</content>
+  </entry>
+  
+  <entry>
+    <title>Nouveautés sur la Va11ydette</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/rgaa-va11ydette/"/>
+    <updated>2022-10-14T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/rgaa-va11ydette/</id>
+    <content type="html">&lt;p&gt;&lt;a href=&quot;https://la-va11ydette.orange.com/&quot; target=&quot;_blank&quot; title=&quot;La Va11ydette (nouvel onglet)&quot;&gt;La Va11ydette&lt;/a&gt; permet de réaliser des audits sur le référentiel WCAG et d&#39;obternir un pourcentage de conformité.&lt;br /&gt;
+Pas mal de changement ont été faits sur la Va11ydette, on va vous faire un récapitulatif.&lt;/p&gt;
+&lt;h2 id=&quot;la-nouvelle-checklist-rgaa-est-disponible&quot;&gt;La nouvelle checklist RGAA est disponible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/rgaa-va11ydette/#la-nouvelle-checklist-rgaa-est-disponible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Vous l&#39;attendiez tous, elle est enfin là !!!&lt;br /&gt;
+La checklist basée sur le référentiel RGAA est disponible sur la Va11ydette.&lt;/p&gt;
+&lt;p&gt;Vous pouvez maintenant auditer un site, en regardant les 106 critères du RGAA.&lt;br /&gt;
+Pour tous les critères, les liens redirigent vers le glossaire officiel du RGAA.&lt;/p&gt;
+&lt;p&gt;À la fin de votre audit, vous aurez accès au pourcentage de conformité globale.&lt;br /&gt;
+Vous aurez aussi la possibilité, d&#39;exporter votre audit au format excel, afin de restituer au projet toutes les anomalies relevées.&lt;/p&gt;
+&lt;p&gt;Commencez votre audit sur &lt;a href=&quot;https://la-va11ydette.orange.com/?list=rgaa&amp;lang=fr&quot; target=&quot;_blank&quot; title=&quot;la checklist RGAA (nouvel onglet)&quot;&gt;la checklist RGAA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/rgaa-exemple.png&quot; alt=&quot;&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ajout-des-criteres-de-bonnes-pratiques-sur-la-checklist-wcag-web&quot;&gt;Ajout des critères de bonnes pratiques sur la checklist WCAG web &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/rgaa-va11ydette/#ajout-des-criteres-de-bonnes-pratiques-sur-la-checklist-wcag-web&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Des nouveautés sont aussi présentes sur &lt;a href=&quot;https://la-va11ydette.orange.com/?list=wcag-web&amp;lang=fr&quot; target=&quot;_blank&quot; title=&quot;la checklist WCAG Web (nouvel onglet)&quot;&gt;la checklist Wcab Web&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Précedement il existait deux checklist, une pour faire des déclarations et la deuxième permettait de faire des audits un peu plus poussés.&lt;br /&gt;
+Nous avons décidé de supprimer la checklist d&#39;audit afin de se concentrer sur une seule grille d&#39;audit.&lt;/p&gt;
+&lt;p&gt;Il est maintenant possible d&#39;activer les critères de bonnes pratiques afin de rendre notre site internet le plus accessible possible.&lt;br /&gt;
+Actuellement 7 critères de bonnes pratiques ont été ajoutés, mais d&#39;autres seront ajoutés dans le futur.&lt;/p&gt;
+&lt;p&gt;Vous voulez contribuer ou proposer des critères de bonnes pratiques ? Faites le sur &lt;a href=&quot;https://github.com/Orange-OpenSource/La-Va11ydette&quot; target=&quot;_blank&quot; title=&quot;le Git Hub de la Va11ydette (nouvel onglet)&quot;&gt;le Git Hub de la Va11ydette&lt;/a&gt;.&lt;/p&gt;
+</content>
   </entry>
 </feed>

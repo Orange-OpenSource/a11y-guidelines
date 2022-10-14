@@ -4,7 +4,7 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-08-03T00:00:00Z</updated>
+  <updated>2022-10-14T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -2502,6 +2502,36 @@ And finally, my quick editorial, latest WCAG 2.2 news (publication still schedul
 &lt;ul&gt;
 &lt;li&gt;A jeopardy from a11y, great (eny): &lt;a href=&quot;https://jeopardylabs.com/play/wcag-21-aa&quot;&gt;https://jeopardylabs.com/play/wcag-21-aa&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>News on the Va11ydette</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/rgaa-va11ydette/"/>
+    <updated>2022-10-14T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/rgaa-va11ydette/</id>
+    <content type="html">&lt;p&gt;&lt;a href=&quot;https://la-va11ydette.orange.com/?lang=en&quot; target=&quot;_blank&quot; title=&quot;The Va11ydette (new window)&quot;&gt;The Va11ydette&lt;/a&gt; makes it possible to carry out audits on the WCAG reference system and to obtain a percentage of compliance.&lt;br /&gt;
+A lot of changes have been made on the Va11ydette, we will give you a summary.&lt;/p&gt;
+&lt;h2 id=&quot;the-new-rgaa-checklist-is-available&quot;&gt;The new RGAA checklist is available &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/rgaa-va11ydette/#the-new-rgaa-checklist-is-available&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;You&#39;ve all been waiting for it, it&#39;s finally here!!!&lt;br /&gt;
+The checklist based on the RGAA repository is available on the Va11ydette.&lt;/p&gt;
+&lt;p&gt;You can now audit a site, looking at the 106 criteria of the RGAA.&lt;br /&gt;
+For all criteria, the links redirect to the official RGAA glossary.&lt;/p&gt;
+&lt;p&gt;At the end of your audit, you will have access to the overall compliance percentage.&lt;br /&gt;
+You will also have the option of exporting your audit in excel format, in order to return to the project all the anomalies noted.&lt;/p&gt;
+&lt;div class=&quot;alert alert-info alert-sm&quot;&gt;
+  &lt;span class=&quot;alert-icon&quot;&gt;&lt;span class=&quot;visually-hidden&quot;&gt;Info&lt;/span&gt;&lt;/span&gt;
+  &lt;p&gt;This checklist is only available in French.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Start your audit on &lt;a href=&quot;https://la-va11ydette.orange.com/?list=rgaa&amp;lang=fr&quot; hreflang=&quot;fr&quot; target=&quot;_blank&quot; title=&quot;the RGAA checklist (new window)&quot;&gt;the RGAA checklist &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://a11y-guidelines.orange.com/en/articles/images/rgaa-exemple.png&quot; alt=&quot;&quot; class=&quot;img-fluid&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;added-good-practice-criteria-to-the-wcag-web-checklist&quot;&gt;Added good practice criteria to the WCAG web checklist &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/rgaa-va11ydette/#added-good-practice-criteria-to-the-wcag-web-checklist&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;New features are also present on the &lt;a href=&quot;https://la-va11ydette.orange.com/?list=wcag-web&amp;lang=en&quot; target=&quot;_blank&quot; title=&quot;WCAG Web checklist (new window)&quot;&gt;WCAG Web checklist&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Previously there were two checklists, one for making declarations and the second allowing for more in-depth audits.&lt;br /&gt;
+We decided to remove the audit checklist in order to focus on a single audit grid.&lt;/p&gt;
+&lt;p&gt;It is now possible to activate the best practice criteria in order to make our website as accessible as possible.&lt;br /&gt;
+Currently 7 good practice criteria have been added, but more will be added in the future.&lt;/p&gt;
+&lt;p&gt;Do you want to contribute or propose criteria for good practices? Do it on &lt;a href=&quot;https://github.com/Orange-OpenSource/La-Va11ydette&quot; target=&quot;_blank&quot; title=&quot;the Va11ydette Git Hub (new window)&quot;&gt;the Va11ydette Git Hub&lt;/a&gt;.&lt;/p&gt;
 </content>
   </entry>
 </feed>
