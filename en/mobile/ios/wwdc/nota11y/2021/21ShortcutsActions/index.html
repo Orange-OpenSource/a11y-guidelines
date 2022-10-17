@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Shortcuts and actions - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Discover the shortcuts app and its actions to significantly provide the user experience.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-bs-toggle="collapse" data-bs-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="Search">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
+        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+      </svg>
+
+      <span class="visually-hidden">Search</span>
+    </button>
+
+  </nav>
+</div>
+
+<div id="search-input-container" class="bg-dark collapse">
+  <form class="container-lg py-3" role="search">
+    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-light" aria-label="Search" placeholder="Search">
+  </form>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Shortcuts and actions
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#shortcuts" class="dropdown-item text-wrap">Shortcuts</a><a href="#parameters" class="dropdown-item text-wrap">Parameters</a><a href="#shortcuts-app" class="dropdown-item text-wrap">Shortcuts app</a><a href="#shortcut-customization" class="dropdown-item text-wrap">Shortcut customization</a><a href="#parameter-resolution" class="dropdown-item text-wrap">Parameter resolution</a><a href="#related-parameters" class="dropdown-item text-wrap">Related parameters</a><a href="#build-discover" class="dropdown-item text-wrap">Build &amp; Discover</a><a href="#actions" class="dropdown-item text-wrap">Actions</a><a href="#overview" class="dropdown-item text-wrap">Overview</a><a href="#efficient-properties" class="dropdown-item text-wrap">Efficient properties</a><a href="#automation" class="dropdown-item text-wrap">Automation</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2021: Shortcuts and actions</h1>
+<p>Find hereafter a detailed summary of four videos that belong to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original videos are available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2019/213/">session 213</a>, <a href="https://developer.apple.com/videos/play/wwdc2019/805/">session 805</a>, <a href="https://developer.apple.com/videos/play/wwdc2020/10084/">session 10084</a> and <a href="https://developer.apple.com/videos/play/wwdc2021/10283/">session 10283</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct_1.png" alt="" class="img-fluid"><br>
+&quot;Parameters take Siri Shortcuts to the next level, enabling an interactive voice experience in Siri with follow-up questions, and allowing people to customize shortcuts in the Shortcuts app, now built into iOS. Walk through <strong>setting up your shortcuts</strong> to take advantage of parameters and learn how your shortcuts can <strong>pass output to other actions</strong> when creating multi-step shortcuts in the Shortcuts app.&quot;</p>
+<p>&quot;Shortcuts enable people to quickly and easily accomplish actions or get things done hands-free using Siri and the Shortcuts app. Join us for a tour of where shortcuts can appear, how you can <strong>customize the experience</strong>, and how your <strong>app's shortcuts can be used with variables and actions from other apps</strong>.&quot;</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct_2.png" alt="" class="img-fluid"><br>
+&quot;Learn foolproof ways to surface your app's actions in the Shortcuts app — and help people quickly set up powerful, personalized shortcuts using system intelligence. We'll detail how to <strong>configure your intents</strong> to appear in the <strong>new Automation Suggestions</strong>, explore how the system surfaces your app's actions for people based on their everyday app usage, and show you how you can <strong>make sure your app appears in all the right places within the Shortcuts app</strong>.&quot;</p>
+<p>&quot;Actions are the <strong>building blocks of shortcuts</strong>. They allow people to take advantage of your app's functionality even when they're not looking at your app's interface. We'll show you how to <strong>design actions</strong> that are useful, easy-to-use, and can be incorporated into <strong>powerful multi-step shortcuts</strong>. You'll also explore enhancements around publishing and sharing shortcuts, ensuring that <strong>people can access your app in the way they want across all of Apple's platforms</strong>.&quot;</p>
+<p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+</br></p>
+<h2 id="shortcuts">Shortcuts <a class="header-anchor" href="#shortcuts" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="parameters">Parameters <a class="header-anchor" href="#parameters" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>There are <a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=35">three different manners</a> for using the shortcut actions.<br>
+<img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsParam_1.png" alt="" class="img-fluid"></p>
+<p>New in <code>iOS</code> <code>13</code>, the <strong><a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=121">conversational shortcuts</a></strong> offer a new way for sharing between the app and the user.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsParam_2.png" alt="" class="img-fluid"></p>
+<p>This <strong>support for parameters</strong> opens up <a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=196">new horizons</a> regarding the user experience.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsParam_3.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="shortcuts-app">Shortcuts app <a class="header-anchor" href="#shortcuts-app" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#ShortcutsAppOverview"
+           id="ShortcutsAppOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ShortcutsAppEditor"
+           id="ShortcutsAppEditor_tab"
+           role="tab" 
+           aria-selected="false">Editor</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ShortcutsAppSiri"
+           id="ShortcutsAppSiri_tab"
+           role="tab" 
+           aria-selected="false">Add&nbsp;to&nbsp;Siri</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="ShortcutsAppOverview" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2019/213/?time=287">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsAppOverview.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ShortcutsAppEditor" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2019/213/?time=367">🎬</a></p>
+<p>A <strong>natural language format</strong>, an action <strong>suggestions pane</strong> and <strong>action's outputs</strong> possibly taken into account for later activity are mainly the <code>iOS</code> <code>13</code> new features in the <code>Shortcut editor</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsAppEditor.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ShortcutsAppSiri" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2019/213/?time=429">🎬</a></p>
+<p>Adding the <strong>&quot;Add to Siri&quot; button</strong> in an app gives rise to an easier and tailored user experience through the <code>iOS 13</code> new design.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsAppSiri.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h3 id="shortcut-customization"><a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=511">Shortcut customization</a> <a class="header-anchor" href="#shortcut-customization" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The <strong>Xcode Intent editor</strong> is the tool to be used for promptly customizing a shortcut.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsCustom.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="parameter-resolution"><a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=756">Parameter resolution</a> <a class="header-anchor" href="#parameter-resolution" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Not only does Xcode produce an <strong>Intent handling protocol</strong> for every defined Intent, but it also provides <strong>Resolve methods</strong> for each parameter that are marked as <strong>configurable</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsParamResol_2.png" alt="" class="img-fluid"></p>
+<p>Understanding the resolution of the Intent parameters relies on its <a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=688">life cycle explanation</a> through its <a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=811"><code>Resolve</code> <code>phase</code></a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsParamResol_1.png" alt="" class="img-fluid"></p>
+<p>The six possible <strong><a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1000">Resolution Result types</a></strong> are to be checked with both <strong><a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1149">Siri and the Shortcuts app</a></strong> so as to be sure of the final rendering.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsParamResol_3.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#ShortcutsParamResol1"
+           id="ShortcutsParamResol1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ShortcutsParamResol2"
+           id="ShortcutsParamResol2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ShortcutsParamResol3"
+           id="ShortcutsParamResol3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ShortcutsParamResol4"
+           id="ShortcutsParamResol4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ShortcutsParamResol5"
+           id="ShortcutsParamResol5_tab"
+           role="tab" 
+           aria-selected="false">5</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ShortcutsParamResol6"
+           id="ShortcutsParamResol6_tab"
+           role="tab" 
+           aria-selected="false">6</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="ShortcutsParamResol1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1025">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsParamResol1.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ShortcutsParamResol2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1050">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsParamResol2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ShortcutsParamResol3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1073">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsParamResol3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ShortcutsParamResol4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1107">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsParamResol4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ShortcutsParamResol5" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1131">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsParamResol5.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ShortcutsParamResol6" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1138">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsParamResol6.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h3 id="related-parameters">Related parameters <a class="header-anchor" href="#related-parameters" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>In some cases, it may be interesting to properly handle parameters that have dependencies on each other so as to offer a wider range of shortcuts creation.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#ShortcutsRelatedParamOverview"
+           id="ShortcutsRelatedParamOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#ShortcutsRelatedParamXcode"
+           id="ShortcutsRelatedParamXcode_tab"
+           role="tab" 
+           aria-selected="false">Xcode</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="ShortcutsRelatedParamOverview" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1162">🎬</a></p>
+<p>The simplest implementation of a shortcut used by <code>Siri</code> for instance, involves no specific dependencies between the parameters.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsRelatedParamOverview_1.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1267">Customizing the shortcut</a> may be also an option for this use case with the <code>Shortcuts</code> <code>App</code>.</p>
+<p>However, diving deeper into the possible choices for the user may lead to <a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1328">conditional relations</a> between some of the parameters.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsRelatedParamOverview_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="ShortcutsRelatedParamXcode" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1670">🎬</a></p>
+<p>Few basic rules are to be followed in order to set up an appropriate shortcut including related parameters.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsRelatedParamXcode_1.png" alt="" class="img-fluid"></p>
+<p>The first step consists in accurately defining the <a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1462">parameter type</a> that will suggest different elements.<br>
+<img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsRelatedParamXcode_4.png" alt="" class="img-fluid"></p>
+<p>Next, the <a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1581">relationship between parameters</a> is to be defined inside the <strong>Parameters section</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsRelatedParamXcode_3.png" alt="" class="img-fluid"></p>
+<p>Finally, the <strong>Shortcuts app section</strong> that highlights the possible combinations of parameters  with a preview for the final rendering will permit a <a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1608">complete definition</a> of the ultimate summaries.<br>
+<img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsRelatedParamXcode_2.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<p>When a group of values is to be exposed for <strong>framing the user's choice</strong>, it's necessary to tick the <strong>Dynamic Options</strong> in <code>Xcode</code> that will automatically produce two additional <a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1705">intent handling protocol methods</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsRelatedParam_1.png" alt="" class="img-fluid"></p>
+<p>Few elements need to be handled in <code>Xcode</code> to reach a <a href="https://developer.apple.com/videos/play/wwdc2019/805/?time=484">simple result</a> with <strong>chained shortcuts</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsRelatedParam_3.png" alt="" class="img-fluid"></p>
+<p>Regarding more complex examples, <strong><a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1786">chaining shortcuts</a></strong> to each other may rely on creating one's own custom type for passing the appropriate information to the next action.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsRelatedParam_2.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="build-discover">Build &amp; Discover <a class="header-anchor" href="#build-discover" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Each component of a shortcut has a <a href="https://developer.apple.com/videos/play/wwdc2019/805?time=74">dedicated purpose</a> that can be defined in the <code>Intent editor</code> of <code>Xcode</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsBuild_1.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#BuildSiri"
+           id="BuildSiri_tab"
+           role="tab" 
+           aria-selected="true">Siri</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#BuildGallery"
+           id="BuildGallery_tab"
+           role="tab" 
+           aria-selected="false">Gallery</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#BuildDonation"
+           id="BuildDonation_tab"
+           role="tab" 
+           aria-selected="false">Donation</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="BuildSiri" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2019/805?time=160">🎬</a></p>
+<p>The simplest way to create a shortcut relies on the app itself through the <strong>Add to Siri</strong> button by following some basic rules to render the best user experience.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsBuildSiri.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="BuildGallery" role="tabpanel">
+<p>Since <code>iOS</code> <code>13</code>, the <code>Shortcuts app</code> contains a <a href="#shortcuts-app"><code>Gallery</code> section</a> inside which various actions are available to be chosen for creating shortcuts too.</p>
+<p>The suggested shortcuts in this <code>Gallery</code> section may be supplied in <a href="https://developer.apple.com/videos/play/wwdc2019/805/?time=305">two ways</a>: <strong>1/</strong> display the most popular user's actions or <strong>2/</strong> set up a predefined list.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsBuildGallery_1.png" alt="" class="img-fluid"></p>
+<p>The first method leans on the concept of <strong>donation</strong> that's explained in the next tabulation element.</p>
+<p>In addition to the methods <a href="https://developer.apple.com/videos/play/wwdc2020/10084/?time=459">previously described</a>, including actions in the <code>Shortcuts</code> <code>Gallery</code> might also depends on the <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10084/?time=536">intents handling</a></strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsBuildGallery_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="BuildDonation" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2019/805?time=339">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsBuildDonation_1.png" alt="" class="img-fluid"></p>
+<p>Not only does this notion permit to display the shortcuts in the <code>Gallery</code>, but it also provides them various <code>iOS</code> native functions in the device⟹ <a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2019/805?time=359">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsBuildDonation_2.png" alt="" class="img-fluid"></p>
+<p>Notify a key parameter in <code>Xcode</code> and donate an action as soon as possible are the best ways to make various options highlight in the <code>Gallery</code> section⟹ <a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2019/805?time=420">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsBuildDonation_3.png" alt="" class="img-fluid"></p>
+<p>Should someone tap on the <a href="https://developer.apple.com/videos/play/wwdc2020/10084/?time=489"><code>Apps</code> button</a>, a list of all the apps that support shortcuts will be displayed.</p>
+<p>Donation created by code is the proper path to follow for pointing out some actions in the appropriate sections⟹ <a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2020/10084/?time=139">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsBuildDonation_4.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h2 id="actions">Actions <a class="header-anchor" href="#actions" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="overview"><a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=34">Overview</a> <a class="header-anchor" href="#overview" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The goal of an action is to provide the user a way to <strong>interact with an app without opening it</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsOverview_1.png" alt="" class="img-fluid"></p>
+<p>A model example of this implementation is the <a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=58">calendar app</a> that permits the creation of various shortcuts through the <a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=147">dedicated app</a> on mac for instance.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsOverview_2.png" alt="" class="img-fluid"></p>
+<p>The <code>Suggestions</code> widget, <code>Search</code> and the <code>Lock</code> screen contain and propose some actions automatically recognized by <code>Siri</code> if <a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=159">donated to the system</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsOverview_3.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="efficient-properties"><a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=218">Efficient properties</a> <a class="header-anchor" href="#efficient-properties" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsProperties_1.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#EPUseful"
+           id="EPUseful_tab"
+           role="tab" 
+           aria-selected="true">Useful</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#EPModular"
+           id="EPModular_tab"
+           role="tab" 
+           aria-selected="false">Modular</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#EPMultimodal"
+           id="EPMultimodal_tab"
+           role="tab" 
+           aria-selected="false">Multimodal</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#EPClear"
+           id="EPClear_tab"
+           role="tab" 
+           aria-selected="false">Clear</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#EPDiscoverable"
+           id="EPDiscoverable_tab"
+           role="tab" 
+           aria-selected="false">Discoverable</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="EPUseful" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=236">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesUseful_1.png" alt="" class="img-fluid"><br>
+Useful means:</p>
+<ul>
+<li><strong>Perform a task outside the app</strong>⟹ the <a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=263">reminder app</a> is a perfect example to highlight this statement. However, a <a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=322">dedicated question</a> may be required when further input parameters are necessary to reach the user's goal.</li>
+</ul>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesUseful_2.png" alt="" class="img-fluid"></p>
+<ul>
+<li><strong>Not too immersive</strong>⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=346">🎬</a></li>
+</ul>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesUseful_3.png" alt="" class="img-fluid"></p>
+<ul>
+<li><strong>Repeatable</strong>⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=402">🎬</a></li>
+</ul>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesUseful_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="EPModular" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=471">🎬</a></p>
+<p>It's better to consider the goal of a bunch of actions as different steps to be followed instead of one single task to be fulfilled.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesModular_1.png" alt="" class="img-fluid"></p>
+<p>This break-up of elements allows a <a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=540">broader extension</a> of their range through many shortcuts.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesModular_2.png" alt="" class="img-fluid"></p>
+<p>Various <a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=652">outgoing properties</a> may be exposed by an action so as to create multiple possible functionalities through other actions.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesModular_3.png" alt="" class="img-fluid"></p>
+<p>When creating actions as per a modular concept, some of them are strongly <a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=708">recommended</a> to be planned first.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesModular_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="EPMultimodal" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=788">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesMultiModal_1.png" alt="" class="img-fluid"></p>
+<p>Sometimes through the <strong><a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=925">Dynamic Enumerations</a></strong>, parameters may be suggested for incoming values at <a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=945">two different times</a>:</p>
+<ul>
+<li><strong>Configuration</strong>, when an action is set up in the <code>Shortcut editor</code>.</li>
+<li><strong>Resolution</strong>, while an action is on the run.</li>
+</ul>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesMultiModal_2.png" alt="" class="img-fluid"></p>
+<p>The crucial interfaces introduced to the user when an action is on the run are called <strong><a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=984">snippets</a></strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesMultiModal_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="EPClear" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=1034">🎬</a></p>
+<p>A new representation of the actions is highlighted in the editor.<br>
+<img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesClear_1.png" alt="" class="img-fluid"></p>
+<p>Some attention elements must be outlined regarding the parameter summaries:</p>
+<ul>
+<li>
+<p>Always begin with a verb⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=1129">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesClear_2.png" alt="" class="img-fluid"></p>
+</li>
+<li>
+<p>Never include optional parameters or punctuation⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=1148">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesClear_3.png" alt="" class="img-fluid"></p>
+</li>
+<li>
+<p>Consider providing a default value⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=1162">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesClear_4.png" alt="" class="img-fluid"></p>
+</li>
+<li>
+<p>People can set any parameter as &quot;Ask Each Time&quot;⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=1188">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesClear_5.png" alt="" class="img-fluid"></p>
+</li>
+</ul>
+</div>
+<div class="tab-pane" id="EPDiscoverable" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=1229">🎬</a></p>
+<p><strong>New sharing methods</strong> have been introduced to distribute the shortcuts and the actions available through an app.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesDiscoverable_1.png" alt="" class="img-fluid"></p>
+<p>Now, the <strong>&quot;Add to Siri&quot;</strong> button automatically <a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=1267">adds the shortcut</a> in its database by means of an intermediate screen if no invocation phrase is suggested.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsPropertiesDiscoverable_2.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsProperties_2.png" alt="" class="img-fluid"><br>
+</br></p>
+<h2 id="automation">Automation <a class="header-anchor" href="#automation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-Automations_2.png" alt="" class="img-fluid"><br>
+Introduced in <code>iOS</code> <code>13</code>, the personal automations have experienced further <strong>improvements in <code>iOS</code> <code>14</code></strong> offering a much wider <a href="https://developer.apple.com/videos/play/wwdc2020/10084/?time=48">spectrum of use</a>...</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-Automations_1.png" alt="" class="img-fluid"></p>
+<p>...and the automation suggestions are still enriched by <a href="https://developer.apple.com/videos/play/wwdc2020/10084/?time=185">donations</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-Automations_3.png" alt="" class="img-fluid"></p>
+<p>As a specific type of automation featured in <code>iOS</code> <code>13</code>, the <strong>Daily Routines</strong> contain useful  and often little known information.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#DailyRoutinesOverview"
+           id="DailyRoutinesOverview_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DailyRoutinesExample"
+           id="DailyRoutinesExample_tab"
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="DailyRoutinesOverview" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2020/10084/?time=260">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-Automations_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DailyRoutinesExample" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2020/10084/?time=303">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-Automations_5.png" alt="" class="img-fluid"></p>
+<p>According to the routine, the <strong>INPlayMediaIntent</strong> and <strong>INStartWorkoutIntent</strong> class objects are to be adopted and donated for informing the system⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2020/10084/?time=391">🎬</a></p>
+</div>
+</div>
+</br></br>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#shortcuts" class="nav-link text-muted">Shortcuts</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#parameters" class="nav-link text-muted">Parameters</a></li><li class="nav-item position-relative">
+            <a href="#shortcuts-app" class="nav-link text-muted">Shortcuts app</a></li><li class="nav-item position-relative">
+            <a href="#shortcut-customization" class="nav-link text-muted">Shortcut customization</a></li><li class="nav-item position-relative">
+            <a href="#parameter-resolution" class="nav-link text-muted">Parameter resolution</a></li><li class="nav-item position-relative">
+            <a href="#related-parameters" class="nav-link text-muted">Related parameters</a></li><li class="nav-item position-relative">
+            <a href="#build-discover" class="nav-link text-muted">Build &amp; Discover</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#actions" class="nav-link text-muted">Actions</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#overview" class="nav-link text-muted">Overview</a></li><li class="nav-item position-relative">
+            <a href="#efficient-properties" class="nav-link text-muted">Efficient properties</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#automation" class="nav-link text-muted">Automation</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2021/21ShortcutsActions.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"apiKey":"a872e031c7e0e72e65e314db546ee3bc","indexName":"a11y-guidelines-orange","inputSelector":"#search-input","algoliaOptions":{"facetFilters":["language:en"]},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
