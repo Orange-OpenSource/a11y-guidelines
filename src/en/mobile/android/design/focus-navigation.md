@@ -3,7 +3,7 @@ title: "Android design - Keyboard navigation & Switch Access"
 abstract: "Keyboard navigation & Switch Access, accessibility design recommandations with Android"
 ---
 
-# Keyboard navigation & Switch Access
+# Android design - Keyboard navigation & Switch Access
 
 ## Access to interactive elements
 

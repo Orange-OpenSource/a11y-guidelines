@@ -3,7 +3,7 @@ title: "Android designer - Navigation vocale"
 abstract: "Navigation à l'aide du lecteur d'écran, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
-# Navigation vocale
+# Android designer - Navigation vocale
 
 
 ## Vocaliser les images

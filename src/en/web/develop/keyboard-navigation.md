@@ -3,7 +3,7 @@ title: "Web develop - Keyboard navigation"
 abstract: "Keyboard navigation, web accessibility dev recommandations"
 ---
 
-# Keyboard navigation
+# Web develop - Keyboard navigation
 
 <p class="lead">Ensure the user can navigate using the keyboard only</p>
 

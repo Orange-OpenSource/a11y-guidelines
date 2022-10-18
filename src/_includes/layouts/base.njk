@@ -27,7 +27,7 @@
     {% if highlightJS == true %}
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@{{ vendors.highlightJS.version }}/build/styles/{{ vendors.highlightJS.theme }}.min.css">
     {% endif %}
-    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css">
     {%- for item in head -%}{{ item | safe }}{%- endfor -%}
@@ -57,7 +57,7 @@
       </a>
     </nav>
     <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
-    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
     {% if popperJS == true %}
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/{{ vendors.popper.version }}/umd/popper.min.js" integrity="{{ vendors.popper.integrity }}" crossorigin="anonymous"></script>
     {% endif %}

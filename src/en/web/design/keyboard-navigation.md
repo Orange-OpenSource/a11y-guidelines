@@ -3,7 +3,7 @@ title: "Web design - Keyboard navigation"
 abstract: "Keyboard navigation, web accessibility design recommandations"
 ---
 
-# Keyboard navigation
+# Web design - Keyboard navigation
 
 <p class="lead">Ensure the user can navigate using the keyboard only</p>
 

@@ -3,7 +3,7 @@ title: "Android - Audit WCAG"
 abstract: "La vallydette, l'outil de test Orange pour les audit d'accessibilité WCAG Android "
 ---
 
-# Audit WCAG
+# Android - Audit WCAG
 
 L’audit WCAG a pour objectif de calculer les taux de conformité mentionnés sur les déclarations d’accessibilité des applications Orange.
 

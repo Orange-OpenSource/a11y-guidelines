@@ -3,7 +3,7 @@ title: "Android develop - General navigation"
 abstract: "General navigation, accessibility dev recommandations with Android"
 ---
 
-# General navigation
+# Android develop - General navigation
 
 ## Have sufficiently large click areas
 

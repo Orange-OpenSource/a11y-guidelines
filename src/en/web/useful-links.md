@@ -3,7 +3,7 @@ title: "Web - Resources"
 abstract: "Useful links on digital accessibility"
 ---
 
-# Resources
+# Web - Resources
 
 ## WCAG
 

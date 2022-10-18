@@ -3,7 +3,7 @@ title: "Web développer - Aides techniques"
 abstract: "Aides techniques, recommendations d'accessibilité web lors du développement"
 ---
 
-# Aides techniques
+# Web développer - Aides techniques
 
 <p class="lead">Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales fonctionnalités de l’application, mais aussi s’assurer pour tous les utilisateurs de l’utilisabilité de l’application</p>
 

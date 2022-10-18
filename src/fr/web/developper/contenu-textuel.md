@@ -3,7 +3,7 @@ title: "Web développer - Contenu textuel"
 abstract: "Contenu textuel, recommendations d'accessibilité web lors du développement"
 ---
 
-# Contenu textuel
+# Web développer - Contenu textuel
 
 <p class="lead">S’assurer que les contenus textuels soient structurés avec la sémantique appropriée</p>
 

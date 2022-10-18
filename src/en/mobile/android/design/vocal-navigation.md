@@ -3,7 +3,7 @@ title: "Android design - Vocal navigation"
 abstract: "Vocal navigation, accessibility design recommandations with Android"
 ---
 
-# Vocal navigation
+# Android design - Vocal navigation
 
 
 ## Vocalize the images

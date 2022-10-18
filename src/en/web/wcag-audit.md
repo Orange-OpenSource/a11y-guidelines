@@ -3,7 +3,7 @@ title: "Web - WCAG audit"
 abstract: "Types of accessibility audits"
 ---
 
-# WCAG conformity audit
+# Web - WCAG conformity audit
 
 The purpose of the WCAG conformity audit is to calculate the compliance rates found in the accessibility statements which are available on Orange websites. 
 

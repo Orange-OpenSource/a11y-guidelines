@@ -3,7 +3,7 @@ title: "Android design - Multimedia"
 abstract: "Multimedia content, accessibility design recommandations with Android"
 ---
 
-# Multimedia
+# Android design - Multimedia
 
 ## Control multimedia content
 

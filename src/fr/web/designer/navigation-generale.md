@@ -3,7 +3,7 @@ title: "Web designer - Navigation générale"
 abstract: "Navigation générale, recommendations d'accessibilité web lors de la conception"
 ---
 
-# Navigation générale
+# Web designer - Navigation générale
 
 <p class="lead">S’assurer que l’utilisateur navigue facilement dans une page et plus globalement dans un site</p>
 

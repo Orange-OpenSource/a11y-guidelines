@@ -3,7 +3,7 @@ title: "Web design - Touch and interactions"
 abstract: "Touch and interactions, web accessibility design recommandations"
 ---
 
-# Touch and interactions
+# Web design - Touch and interactions
 
 <p class="lead">Ensure that the user keeps control over interactions, particularly tactile ones</p>
 

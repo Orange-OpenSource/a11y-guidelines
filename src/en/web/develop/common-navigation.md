@@ -3,7 +3,7 @@ title: "Web develop - Common navigation"
 abstract: "Commun navigation, web accessibility dev recommandations"
 ---
 
-# Common navigation
+# Web develop - Common navigation
 
 <p class="lead">Make sure that the user easily navigate within page and more generally in the website</p>
 

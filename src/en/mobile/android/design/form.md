@@ -3,7 +3,7 @@ title: "Android design - Input screen"
 abstract: "Input fields, accessibility design recommandations with Android"
 ---
 
-# Input screen
+# Android design - Input screen
 
 ## Have explicit input fields
 

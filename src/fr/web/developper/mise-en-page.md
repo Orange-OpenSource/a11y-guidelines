@@ -3,7 +3,7 @@ title: "Web développer - Mise en page"
 abstract: "Mise en page, recommendations d'accessibilité web lors du développement"
 ---
 
-# Mise en page
+# Web développer - Mise en page
 
 <p class="lead">S’assurer que la mise en page soit adaptée à l’utilisateur.</p>
 

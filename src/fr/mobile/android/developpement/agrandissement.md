@@ -3,7 +3,7 @@ title: "Android développer - Agrandissement des éléments"
 abstract: "Quelques recommandations sur l'agrandissement des textes sous Android"
 ---
 
-# Agrandissement des éléments
+# Android développer - Agrandissement des éléments
 
 ## Agrandir les textes sans perte d'information
 

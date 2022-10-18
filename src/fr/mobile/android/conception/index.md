@@ -3,7 +3,7 @@ title: "Les critères incontournables sous Android pour la conception"
 abstract: "Quelques recommandations pour concevoir accessible sous Android"
 ---
 
-# Les critères incontournables sous Android pour la conception
+# Android designer - Les critères incontournables sous Android pour la conception
 
 Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application Android accessible. Chaque critère est présenté en expliquant pour qui ce critère est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle. Les critères sont explicités par des captures d’exemples réels.
 

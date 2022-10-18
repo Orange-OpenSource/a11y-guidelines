@@ -3,7 +3,7 @@ title: "Web develop - Colors and contrasts"
 abstract: "Colors nd contrast, web accessibility dev recommandations"
 ---
 
-# Colors and contrasts
+# Web develop - Colors and contrasts
 
 <p class="lead">Ensure that the colors used are not a problem for the user</p>
 

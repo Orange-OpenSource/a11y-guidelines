@@ -3,7 +3,7 @@ title: "Web designer - Couleurs et contrastes"
 abstract: "Couleurs et contraste, recommendations d'accessibilité web lors de la conception"
 ---
 
-# Couleurs et contrastes
+# Web designer - Couleurs et contrastes
 
 <p class="lead">S’assurer que les couleurs utilisées ne posent pas de problème à l’utilisateur</p>
 

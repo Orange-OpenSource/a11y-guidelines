@@ -13,7 +13,7 @@ module.exports = {
   title: {
     en: 'Orange digital accessibility guidelines',
     fr: 'Recommandations accessibilité numérique Orange'
-  },  
+  },
   rss: {
     title: {
       en: 'Orange digital accessibility guidelines - English',
@@ -22,21 +22,124 @@ module.exports = {
     url: {
       en: '/feed-en.xml',
       fr: '/feed-fr.xml'
-    }     
+    }
   },
   home: {
     lastPosts: {
       limit: 6
     }
   },
+  algolia: {
+    en: {
+      button: {
+        buttonText: 'Search',
+        buttonAriaLabel: 'Search',
+      },
+      modal: {
+        searchBox: {
+          resetButtonTitle: 'Clear the query',
+          resetButtonAriaLabel: 'Clear the query',
+          cancelButtonText: 'Cancel',
+          cancelButtonAriaLabel: 'Cancel',
+        },
+        startScreen: {
+          recentSearchesTitle: 'Recent',
+          noRecentSearchesText: 'No recent searches',
+          saveRecentSearchButtonTitle: 'Save this search',
+          removeRecentSearchButtonTitle: 'Remove this search from history',
+          favoriteSearchesTitle: 'Favorite',
+          removeFavoriteSearchButtonTitle: 'Remove this search from favorites',
+        },
+        errorScreen: {
+          titleText: 'Unable to fetch results',
+          helpText: 'You might want to check your network connection.',
+        },
+        footer: {
+          selectText: 'to select',
+          selectKeyAriaLabel: 'Enter key',
+          navigateText: 'to navigate',
+          navigateUpKeyAriaLabel: 'Arrow up',
+          navigateDownKeyAriaLabel: 'Arrow down',
+          closeText: 'to close',
+          closeKeyAriaLabel: 'Escape key',
+          searchByText: 'Search by',
+        },
+        noResultsScreen: {
+          noResultsText: 'No results for',
+          suggestedQueryText: 'Try searching for',
+          reportMissingResultsText: 'Believe this query should return results?',
+          reportMissingResultsLinkText: 'Let us know.',
+        },
+      }
+    },
+    fr: {
+      button: {
+        buttonText: 'Rechercher',
+        buttonAriaLabel: 'Rechercher',
+      },
+      modal: {
+        searchBox: {
+          resetButtonTitle: 'Effacer la recherche',
+          resetButtonAriaLabel: 'Effacer la recherche',
+          cancelButtonText: 'Annuler',
+          cancelButtonAriaLabel: 'Annuler',
+        },
+        startScreen: {
+          recentSearchesTitle: 'Récent',
+          noRecentSearchesText: 'Aucune recherche récente',
+          saveRecentSearchButtonTitle: 'Sauvegarder cette recherche',
+          removeRecentSearchButtonTitle: 'Supprimer cette recherche de l\'historique',
+          favoriteSearchesTitle: 'Favoris',
+          removeFavoriteSearchButtonTitle: 'Supprimer cette recherche des favoris',
+        },
+        errorScreen: {
+          titleText: 'Impossible de récupérer les résultats',
+          helpText: 'Vous devriez peut-être vérifier votre connexion réseau.',
+        },
+        footer: {
+          selectText: 'pour sélectionner',
+          selectKeyAriaLabel: 'La touche Entrée',
+          navigateText: 'pour naviguer',
+          navigateUpKeyAriaLabel: 'Flèche du haut',
+          navigateDownKeyAriaLabel: 'Flèche du bas',
+          closeText: 'pour fermer',
+          closeKeyAriaLabel: 'La touche échap',
+          searchByText: 'Recherché par',
+        },
+        noResultsScreen: {
+          noResultsText: 'Aucun résulat pour',
+          suggestedQueryText: 'Essayez de rechercher',
+          reportMissingResultsText: 'Vous pensez que cette recherche devrait renvoyer des résultats ?',
+          reportMissingResultsLinkText: 'Faites le nous savoir.',
+        },
+      }
+    }
+  },
+  placeHolder: {
+    en : 'Search doc',
+    fr : 'Rechercher sur le site'
+  },
   getDocSearchConfig: function (locale) {
+    let algoliaTranslations ={};
+    let placeHolder='';
+    if(locale =="fr"){
+      algoliaTranslations=this.algolia.fr
+      placeHolder = this.placeHolder.fr
+    }
+    else{
+      algoliaTranslations=this.algolia.en
+      placeHolder = this.placeHolder.en
+    }
     return {
-      apiKey: 'a872e031c7e0e72e65e314db546ee3bc',
+      appId: 'QML88ZHQMQ',
+      apiKey: '92e5543d97d72ef6a3ba61b241a75b19',
       indexName: 'a11y-guidelines-orange',
-      inputSelector: '#search-input',
-      algoliaOptions: {
+      container: '#search-input',
+      searchParameters: {
         'facetFilters': [`language:${locale}`]
       },
+      placeholder : placeHolder,
+      translations: DocSearchTranslations = algoliaTranslations,
       debug: false // Set debug to true if you want to inspect the dropdown
     }
   },
@@ -53,7 +156,7 @@ module.exports = {
       "cookieslist": true, /* Show the cookie list */
       "adblocker": false, /* Show a Warning if an adblocker is detected */
       "showIcon": false,
-      "AcceptAllCta" : true, /* Show the accept all button when highPrivacy on */
+      "AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
       "highPrivacy": true, /* Disable auto consent */
       "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
       "removeCredit": false, /* Remove credit link */
