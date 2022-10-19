@@ -1,6 +1,6 @@
 ---
 title : "Shortcuts and actions"
-abstract: "Discover the shortcuts app and its actions to significantly provide the user experience."
+abstract: "Discover the shortcuts app and its actions to significantly improve the user experience."
 
 displayToc: true
 ---
