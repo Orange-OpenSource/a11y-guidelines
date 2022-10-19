@@ -45,6 +45,17 @@
   },
   {
     "themes": "WWDC 2022",
+    "title": "Design App Shortcuts",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/2210169",
+    "profils": ["All", "Shortcuts"]
+  },
+  {
+    "themes": "WWDC 2022",
     "title": "Design protocol interfaces in Swift",
     "type": [],
     "tests": [],
