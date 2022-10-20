@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Design App Shortcuts - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Learn how you can surface great features from your app directly in Siri, Spotlight, and the Shortcuts app.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Design App Shortcuts
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#overview" class="dropdown-item text-wrap">Overview</a><a href="#naming" class="dropdown-item text-wrap">Naming</a><a href="#appearance" class="dropdown-item text-wrap">Appearance</a><a href="#interaction" class="dropdown-item text-wrap">Interaction</a><a href="#discovery" class="dropdown-item text-wrap">Discovery</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2022: Design App Shortcuts</h1>
+<p>Find hereafter a detailed summary of the above named video which belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2022//10169/">session 10169</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169.png" alt="" class="img-fluid"></p>
+<p>&quot;Learn how you can <strong>surface great features</strong> from your app directly in <strong>Siri</strong>, <strong>Spotlight</strong>, and the <strong>Shortcuts app</strong>. We'll introduce you to App Shortcuts, provide <strong>best practices</strong> to help you evaluate features in your app that would work well as App Shortcuts, and take you through the process of creating one of your own. Learn how to create clear and memorable names, design custom visuals, collect required information, and create discoverable shortcuts.&quot;</p>
+<p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="overview"><a href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=56">Overview</a> <a class="header-anchor" href="#overview" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Overview_1.png" alt="" class="img-fluid"></p>
+<p><strong>New in <code>iOS 16</code></strong>, the <a href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=95">&quot;Add to Siri&quot;</a> button isn't necessary anymore for making a shortcut ready to be used.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Overview_2.png" alt="" class="img-fluid"></p>
+</br>
+<h2 id="naming">Naming <a class="header-anchor" href="#naming" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Few <a href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=153">basic principles</a> are to be taken into account for creating efficient shortcuts whose maximum number <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=252">can't exceed 10</a></strong> for an app.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Naming_1.png" alt="" class="img-fluid"></p>
+<p>Appearing in some <code>iOS</code> native functionalities, the <a href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=267">shortcut's naming</a> is as essential as the accurate identification of the feature to which it's refering.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Naming_2.png" alt="" class="img-fluid"></p>
+<p>This <a href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=289">designation</a> should be brief and include the localized app name or one of its alternatives provided on the <code>App Store</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Naming_3.png" alt="" class="img-fluid"></p>
+<p>Finally, this naming may insert a <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=412">dynamic parameter</a></strong> that:</p>
+<ul>
+<li>
+<p>Is limited to one in a phrase.</p>
+</li>
+<li>
+<p>Is to be included in an exhaustible list (if need be).</p>
+</li>
+<li>
+<p>Updates and creates as many shortcuts as parameter values.</p>
+</li>
+<li>
+<p>Is never to be completed by optional elements that may be interpreted as dynamic values.</p>
+</li>
+</ul>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Naming_4.png" alt="" class="img-fluid"></p>
+<p>Eventually, an effective naming should encompass the various concepts featured hereabove.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Naming_5.png" alt="" class="img-fluid"></p>
+<h2 id="appearance"><a href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=604">Appearance</a> <a class="header-anchor" href="#appearance" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Appearance_1.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#DesignShortcutsAppearance1"
+           id="DesignShortcutsAppearance1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignShortcutsAppearance2"
+           id="DesignShortcutsAppearance2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignShortcutsAppearance3"
+           id="DesignShortcutsAppearance3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignShortcutsAppearance4"
+           id="DesignShortcutsAppearance4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="DesignShortcutsAppearance1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=621">🎬</a></p>
+<p>The <strong>semi-translucent material</strong> of snippets should be harnessed to the fullest instead of customizing the background area.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Appearance_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignShortcutsAppearance2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=639">🎬</a></p>
+<p>Using <strong>vibrant label colors</strong> ensure both an appropriate contrast and an automatic adjustement of the <code>Dark mode</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Appearance_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignShortcutsAppearance3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=650">🎬</a></p>
+<p>The visual information may be shown up either with <strong>Live Activities</strong> or <strong>Custom Snippets</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Appearance_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignShortcutsAppearance4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=686">🎬</a></p>
+<p><strong>Rehearsals</strong> in snippets are to be <strong>avoided</strong> and the crucial <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=1057">Intent Confirmation</a></strong> used for significant actions should be defined before making sure that <strong>the full-range of <code>iOS</code> devices</strong> is taken into account to offer the best user.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Appearance_5.png" alt="" class="img-fluid"></p>
+<p>The buttons of the <code>Intent Confirmation</code> are always to be <a href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=1088">undoubtedly named</a> for preventing any ambiguity.<br>
+<img src="../../../../../images/iOSdev/wwdc22-10169-Appearance_6.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<p>And new in <code>iOS 16</code>, the support of custom snippets is available for <code>Apple Watch</code>⟹ <a alt="Click to playback the footage at the appropriate time" href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=746">🎬</a></p>
+<p>Among the various ways for <a href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=788">discovering shortcuts</a>, <code>Spotlight</code> points out a <a href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=827">conspicuous symbol</a> on the right side of a shortcut's name...</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Appearance_7.png" alt="" class="img-fluid"></p>
+<p>...  while adopting the <a href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=841">possible order</a> the app shortcuts appear.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Appearance_8.png" alt="" class="img-fluid"><br>
+</br></p>
+<h2 id="interaction">Interaction <a class="header-anchor" href="#interaction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Asking for more information inside shortcuts may rely on three different possible ways.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#DesignShortcutsAskInfo1"
+           id="DesignShortcutsAskInfo1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignShortcutsAskInfo2"
+           id="DesignShortcutsAskInfo2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignShortcutsAskInfo3"
+           id="DesignShortcutsAskInfo3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="DesignShortcutsAskInfo1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=926">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Interaction_1.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignShortcutsAskInfo2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=973">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Interaction_2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignShortcutsAskInfo3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=1000">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Interaction_3.png" alt="" class="img-fluid"></p>
+<p>Were the required parameters well known by the system, the <a href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=1025">request options</a> provided by the <code>App Intent</code> framework should be used to benefit the <code>iOS</code> native features.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Interaction_4.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h2 id="discovery"><a href="https://developer.apple.com/videos/play/wwdc2022/10169/?time=1128">Discovery</a> <a class="header-anchor" href="#discovery" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Two buttons may be added in an app to make its <strong>shortcuts discoverable</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-10169-Discovery.png" alt="" class="img-fluid"></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#overview" class="nav-link text-muted">Overview</a></li><li class="nav-item position-relative">
+            <a href="#naming" class="nav-link text-muted">Naming</a></li><li class="nav-item position-relative">
+            <a href="#appearance" class="nav-link text-muted">Appearance</a></li><li class="nav-item position-relative">
+            <a href="#interaction" class="nav-link text-muted">Interaction</a></li><li class="nav-item position-relative">
+            <a href="#discovery" class="nav-link text-muted">Discovery</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2022/2210169.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
