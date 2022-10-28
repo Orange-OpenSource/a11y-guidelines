@@ -2,7 +2,7 @@
 title: "Les bonnes pratiques pour les carrousels"
 abstract: "Les carrousels, qu'est-ce et comment bien les mettre en œuvre"
 titleBeforeTag: true
-date: "2022-09-09"
+date: "2022-10-28"
 tags:
   - web
   - intermediate
@@ -41,7 +41,7 @@ Afin de rendre tout ceci accessible, nous allons pouvoir nous appuyer sur les at
 - <code>aria-roledescription</code> permet d'indiquer le type de contenu.
 - <code>aria-label</code> permettra d'ajouter de l'information sur les panneaux (numéro courant du panneau et le nombre total de panneau).
 - <code>aria-controls</code> relie les boutons au contenu.
-- <code>aria-selected</code> pour indiquer la postion courante au lecteurs d'écran sur les boutons de la navigation par points.
+- <code>aria-selected</code> pour indiquer la position courante au lecteurs d'écran sur les boutons de la navigation par points.
 
 
 ### Exemple HTML&nbsp;
