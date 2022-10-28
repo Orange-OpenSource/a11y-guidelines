@@ -83,4 +83,4 @@ And finally, a new content in our site of in our site of recommendations, 5 pers
 - And hop, a headshot for Facil'iti: https://adrianroselli.com/2022/03/faciliti-will-get-you-sued.html
 ## Others
 -	Awesome! play and fix your code to make it accessible: https://a11yphant.com/
-- Just Nice: https://daverupert.com/2022/04/what-if-everyth
+- Just Nice: https://daverupert.com/2022/04/what-if-everything-got-better/

@@ -83,7 +83,7 @@ Un titrage de page avec un saut de niveau h2 → h4&nbsp;:
    
 **Outils :**  
 Des extensions à installer dans votre navigateur permettent d'extraire la liste des titres : 
-- L’extension <a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309" hreflang="en" lang="en">HeadingsMaps</a>.
+- L’extension <strong>HeadingsMaps</strong> disponible sur Firefox et chrome.
 - L'extension <a href="https://chrispederick.com/work/web-developer/" lang="en">Web developer</a>.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**

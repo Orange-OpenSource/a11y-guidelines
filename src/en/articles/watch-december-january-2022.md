@@ -17,7 +17,7 @@ https://w3c.github.io/captcha-accessibility/
 - Evolution of the a11y standard for the public sector in Europe EN 301 549: https://axesslab.com/en-update/
 - WCAG 3.0 not ready to be ready but…: https://yatil.net/blog/wcag-3-is-not-ready-yet
 - Do you need a transcript with podcasts, spoiler: yes: https://www.boia.org/blog/do-i-need-to-write-podcast-transcripts-for-accessibility
-- alt and descriptions in the photo metadata standards of images: https://www.scribelytribe.com/blog/one-giant-leap-for-accessibility-meet-the-new-photo-metadata-standards
+- alt and descriptions in the photo metadata standards of images: https://www.scribelytribe.com/post/one-giant-leap-for-accessibility-meet-the-new-photo-metadata-standards
 
 ## Feedback and accessibility
 
@@ -40,7 +40,7 @@ https://w3c.github.io/captcha-accessibility/
 ## Test accessibility=
 
 - Cool a11y tests anyone can do: https://tetralogical.com/blog/2022/01/18/quick-accessibility-tests-anyone-can-do/
-- A tool capable of going further than classic webdrivers for testing a11y, in particular with regard to screen readers, to be tested: https://github.com/bocoup/aria- at-automation
+- A tool capable of going further than classic webdrivers for testing a11y, in particular with regard to screen readers, to be tested: https://github.com/bocoup/aria-at-automation
 - Test accessibility with the keyboard, the base: https://www.edeshseba.info/web-accessibility-and-keyboard-only-testing/
 - Have your content tested by hearing impaired people: https://makeitfable.com/article/user-testing-deaf-hoh/
 - Tests based on WCAG, nice: https://thisiswcag.com/
