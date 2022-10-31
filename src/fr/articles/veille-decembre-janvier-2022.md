@@ -19,7 +19,7 @@ https://w3c.github.io/captcha-accessibility/ commentaires attendus
 -	Évolution de la norme sur l’a11y du secteur public en Europe EN 301 549 (en) : https://axesslab.com/en-update/ 
 -	WCAG 3.0 pas prêt d’être prêt mais… (en) : https://yatil.net/blog/wcag-3-is-not-ready-yet 
 -	Faut-il un transcrit avec les podcasts, spoiler : oui (en) : https://www.boia.org/blog/do-i-need-to-write-podcast-transcripts-for-accessibility 
--	des alt et des descriptions dans les photos metadata standards des images (en) : https://www.scribelytribe.com/blog/one-giant-leap-for-accessibility-meet-the-new-photo-metadata-standards 
+-	des alt et des descriptions dans les photos metadata standards des images (en) : https://www.scribelytribe.com/post/one-giant-leap-for-accessibility-meet-the-new-photo-metadata-standards 
 Retours d’expérience et accessibilité
 -	Comment bien faire de l’a11y avec un panier sous forme de tableau, du grand art (en) : https://adrianroselli.com/2022/01/accessible-cart-tables.html 
 -	Bien gérer les alternatives d’images décoratives alt= » », à lire ! (en) : https://html5accessibility.com/stuff/2022/01/10/alt-tag-emptiness/ 
