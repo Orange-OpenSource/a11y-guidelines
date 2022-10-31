@@ -192,7 +192,7 @@
           <div class="mt-4">
           <p>Les utilisateurs qui naviguent à l'aide d'un lecteur d'écran ne sont pas toujours au courant des modifications apportées dans la page. Lorsqu'une information est actualisée ou lorsqu'un message apparaît il est parfois nécessaire de faire parler le lecteur d'écran pour informer l'utilisateur. Pour ce faire, le language <abbr>ARIA</abbr> dispose du role <code>alert</code> et de l'attribut <code>aria-live</code>.</p>
 <h2 id="le-role-alert">Le role alert <a class="header-anchor" href="#le-role-alert" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Positionné sur un élément HTML, celui-ci permet d'indiquer au lecteur d'écran de vocaliser l'élément automatiquement lors de sa création. Veiller toutefois à utiliser ce rôle uniquement dans les cas appropriés, comme il est clairement indiqué dans la documentation <a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_r%C3%B4le_alert">MDN de Mozilla</a>. De fait de sa nature intrusive, le role alert doit être utilisé avec parcimonie et uniquement dans les situations où l’attention de l’utilisateur est immédiatement requise. Les changements dynamiques de moindre urgence devraient utiliser une méthode moins agressive, telle que <code>aria-live=&quot;polite&quot;</code> ou autres rôles de zone live.</p>
+<p>Positionné sur un élément HTML, celui-ci permet d'indiquer au lecteur d'écran de vocaliser l'élément automatiquement lors de sa création. Veiller toutefois à utiliser ce rôle uniquement dans les cas appropriés, comme il est clairement indiqué dans la documentation <a href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/Roles/alert_role">MDN de Mozilla</a>. De fait de sa nature intrusive, le role alert doit être utilisé avec parcimonie et uniquement dans les situations où l’attention de l’utilisateur est immédiatement requise. Les changements dynamiques de moindre urgence devraient utiliser une méthode moins agressive, telle que <code>aria-live=&quot;polite&quot;</code> ou autres rôles de zone live.</p>
 <p>Pour déclencher une alerte, plusieurs méthodes sont possibles, avec des supports qui différent en fonction du couple navigateur et lecteur d'écran utilisé. Vous pouvez consulter <a href="https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/">l'article de Steve Faulkner (en anglais)</a> à ce sujet.</p>
 <p>Voici quelques exemples de méthodes qui sont bien supportées.</p>
 <h3 id="creer-un-nouvel-element-dans-le-dom">Créer un nouvel élément dans le DOM <a class="header-anchor" href="#creer-un-nouvel-element-dans-le-dom" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
@@ -229,9 +229,9 @@ element.innerHTML = '&lt;div role="alert"&gt;Ceci est une alerte&lt;/div&gt;';
 <h2 id="references">Références <a class="header-anchor" href="#references" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul>
 <li><a href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/Roles/alert_role">Utilisation du rôle alert</a></li>
-<li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Zones_live_ARIA">Zones live ARIA</a></li>
-<li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_log">Utiliser le rôle log</a></li>
-<li><a href="https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_status">Utiliser le rôle status</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">Zones live ARIA</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/Roles/log_role">Utiliser le rôle log</a></li>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/Roles/status_role">Utiliser le rôle status</a></li>
 </ul>
 
           </div>

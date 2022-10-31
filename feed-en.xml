@@ -198,7 +198,6 @@ But we could also use &lt;code&gt;aria-labelledby&lt;/code&gt; to reference anot
 &lt;h2 id=&quot;sources&quot;&gt;Sources &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/accessible-name/#sources&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/accname-1.1/&quot;&gt; Accessible Name and Description Computation 1.1 &lt;/a&gt; by the Accessible Rich Internet Applications Working Group&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://simplyaccessible.com/article/accessible-name/&quot;&gt; Demystifying Accessible Name &lt;/a&gt; by Joe Watkins&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/&quot;&gt; What is an accessible name? &lt;/a&gt; by Léonie Watson&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt; &lt;/p&gt;
@@ -319,8 +318,8 @@ But we could also use &lt;code&gt;aria-labelledby&lt;/code&gt; to reference anot
     <id>https://a11y-guidelines.orange.com/en/articles/aria-live-alert/</id>
     <content type="html">&lt;p&gt;Users who navigate using a screen reader are not always aware of changes made on the page. When information is updated or when a message appears, it is sometimes necessary to make the screen reader speak to inform the user. To do this, the &lt;abbr&gt;ARIA&lt;/abbr&gt; language has the role &lt;code&gt;alert&lt;/code&gt; and the attribute&lt;code&gt; aria-live&lt;/code&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;the-role-alert&quot;&gt;The role alert &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/aria-live-alert/#the-role-alert&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Positioned on an HTML element, this allows you to tell the screen reader to vocalize the element automatically when it is created. However, be sure to use this role only in appropriate cases, as clearly stated in the [Mozilla MDN] documentation (&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/&quot;&gt;https://developer.mozilla.org/fr/docs/Accessibilité/ARIA/Techniques_ARIA/&lt;/a&gt; Use_the_r% C3% B4le_alert). Due to its intrusive nature, role alert should be used sparingly and only in situations where the user&#39;s attention is immediately required. Less urgent dynamic changes should use a less aggressive method, such as &lt;code&gt;aria-live=&amp;quot;polite&amp;quot;&lt;/code&gt; or other live zone roles.&lt;/p&gt;
-&lt;p&gt;To trigger an alert, several methods are possible, with a support that differ depending on the browser and screen reader pair used. You can read [Steve Faulkner&#39;s article] (&lt;a href=&quot;https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/&quot;&gt;https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/&lt;/a&gt;) on this subject.&lt;/p&gt;
+&lt;p&gt;Positioned on an HTML element, this allows you to tell the screen reader to vocalize the element automatically when it is created. However, be sure to use this role only in appropriate cases, as clearly stated in the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role&quot;&gt;Mozilla MDN documentation&lt;/a&gt;. Due to its intrusive nature, role alert should be used sparingly and only in situations where the user&#39;s attention is immediately required. Less urgent dynamic changes should use a less aggressive method, such as &lt;code&gt;aria-live=&amp;quot;polite&amp;quot;&lt;/code&gt; or other live zone roles.&lt;/p&gt;
+&lt;p&gt;To trigger an alert, several methods are possible, with a support that differ depending on the browser and screen reader pair used. You can read &lt;a href=&quot;https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/&quot;&gt;Steve Faulkner&#39;s article&lt;/a&gt; on this subject.&lt;/p&gt;
 &lt;p&gt;Here are some examples of methods that are well supported.&lt;/p&gt;
 &lt;h3 id=&quot;create-a-new-element-in-the-dom&quot;&gt;Create a new element in the DOM &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/aria-live-alert/#create-a-new-element-in-the-dom&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;You can trigger an alert by inserting a new element in the &lt;abbr&gt;DOM&lt;/abbr&gt; via Javascript.&lt;/p&gt;
@@ -355,10 +354,10 @@ element.innerHTML = &#39;&amp;lt;div role =&quot;alert&quot;&amp;gt;This is an a
 &lt;p&gt;Finally, to be complete, know that the &lt;abbr&gt;ARIA&lt;/abbr&gt; language also provides for some specific roles, &lt;strong&gt;status&lt;/strong&gt; and &lt;strong&gt;log&lt;/strong&gt; in particular which can be useful in certain cases (status bar, logging, chat...) and which, for the moment, must be used in addition to the &lt;code&gt;aria-live&lt;/code&gt; attribute to maximize support by the different tools. You can find more info on these roles in the links below.&lt;/p&gt;
 &lt;h2 id=&quot;references&quot;&gt;References &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/aria-live-alert/#references&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_alert&quot;&gt;Use of the alert role&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Zones_live_ARIA&quot;&gt;ARIA live zones&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_log&quot;&gt;Use the log role&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_status&quot;&gt;Use the status role&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role&quot;&gt;Use of the alert role&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live&quot;&gt;ARIA live zones&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/log_role&quot;&gt;Use the log role&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/status_role&quot;&gt;Use the status role&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
@@ -368,7 +367,7 @@ element.innerHTML = &#39;&amp;lt;div role =&quot;alert&quot;&amp;gt;This is an a
     <link href="https://a11y-guidelines.orange.com/en/articles/download-links/"/>
     <updated>2020-09-01T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/download-links/</id>
-    <content type="html">&lt;p&gt;There are different types of links: &lt;a href=&quot;https://a11y-guidelines.orange.com/en/web/develop/general-navigation&quot;&gt;classic links&lt;/a&gt; allowing to reach a new page, [skip links] (/en/articles/skip-links-best-practices) allowing to move within the page and finally those which interest us in this article, the links allowing to download a file.&lt;/p&gt;
+    <content type="html">&lt;p&gt;There are different types of links: &lt;a href=&quot;https://a11y-guidelines.orange.com/en/web/develop/common-navigation&quot;&gt;classic links&lt;/a&gt; allowing to reach a new page, [skip links] (/en/articles/skip-links-best-practices) allowing to move within the page and finally those which interest us in this article, the links allowing to download a file.&lt;/p&gt;
 &lt;p&gt;A link to download a file should respect the following rules:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;its title must be explicit, it must also specify the type and size of the file&lt;/li&gt;
@@ -723,7 +722,10 @@ or, but much more risky ...
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.deque.com/blog/creating-accessible-svgs/&quot;&gt;https://www.deque.com/blog/creating-accessible-svgs/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://weboverhauls.github.io/demos/svg/&quot;&gt;https://weboverhauls.github.io/demos/svg/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.scottohara.me/blog/2019/0&quot;&gt;https://www.scottohara.me/blog/2019/0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html&quot;&gt;https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility&quot;&gt;https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/JeremiePat/svg-accessible/blob/master/slides.md&quot;&gt;https://github.com/JeremiePat/svg-accessible/blob/master/slides.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.sarasoueidan.com/blog/accessible-icon-buttons/&quot;&gt;https://www.sarasoueidan.com/blog/accessible-icon-buttons/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
@@ -1220,7 +1222,6 @@ So WCAG 2.2 too, mechanically, are fast approaching, be ready for a jump, not hu
 &lt;ul&gt;
 &lt;li&gt;On the importance of the order of focusing, an essential concept to understand: &lt;a href=&quot;https://devyarns.com/logical-focus-order/&quot;&gt;https://devyarns.com/logical-focus-order/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Everything about the definition lists, dl: &lt;a href=&quot;https://benmyers.dev/blog/on-the-dl/&quot;&gt;https://benmyers.dev/blog/on-the-dl/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A good image alternative: &lt;a href=&quot;https://jebswebs.net/blog/2021/08/just-what-is-a-good-alternative-description/&quot;&gt;https://jebswebs.net/blog/2021/08/just-what-is-a-good-alternative-description/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Make your website authentication accessible: &lt;a href=&quot;https://www.boia.org/blog/is-your-sites-authentication-process-accessible&quot;&gt;https://www.boia.org/blog/is-your-sites-authentication-process-accessible&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Make online help accessible: &lt;a href=&quot;https://www.boia.org/blog/make-sure-your-websites-help-resources-are-available-and-accessible&quot;&gt;https://www.boia.org/blog/make-sure-your-websites-help-resources-are-available-and-accessible&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Hidden controls and WCAG 2.2, new: &lt;a href=&quot;https://www.boia.org/blog/wcag-2.2-introduces-new-requirements-for-hidden-controls&quot;&gt;https://www.boia.org/blog/wcag-2.2-introduces-new-requirements-for-hidden-controls&lt;/a&gt;&lt;/li&gt;
@@ -1374,7 +1375,7 @@ So WCAG 2.2 too, mechanically, are fast approaching, be ready for a jump, not hu
 &lt;li&gt;Evolution of the a11y standard for the public sector in Europe EN 301 549: &lt;a href=&quot;https://axesslab.com/en-update/&quot;&gt;https://axesslab.com/en-update/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;WCAG 3.0 not ready to be ready but…: &lt;a href=&quot;https://yatil.net/blog/wcag-3-is-not-ready-yet&quot;&gt;https://yatil.net/blog/wcag-3-is-not-ready-yet&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Do you need a transcript with podcasts, spoiler: yes: &lt;a href=&quot;https://www.boia.org/blog/do-i-need-to-write-podcast-transcripts-for-accessibility&quot;&gt;https://www.boia.org/blog/do-i-need-to-write-podcast-transcripts-for-accessibility&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;alt and descriptions in the photo metadata standards of images: &lt;a href=&quot;https://www.scribelytribe.com/blog/one-giant-leap-for-accessibility-meet-the-new-photo-metadata-standards&quot;&gt;https://www.scribelytribe.com/blog/one-giant-leap-for-accessibility-meet-the-new-photo-metadata-standards&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;alt and descriptions in the photo metadata standards of images: &lt;a href=&quot;https://www.scribelytribe.com/post/one-giant-leap-for-accessibility-meet-the-new-photo-metadata-standards&quot;&gt;https://www.scribelytribe.com/post/one-giant-leap-for-accessibility-meet-the-new-photo-metadata-standards&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;feedback-and-accessibility&quot;&gt;Feedback and accessibility &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-december-january-2022/#feedback-and-accessibility&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -1397,7 +1398,7 @@ So WCAG 2.2 too, mechanically, are fast approaching, be ready for a jump, not hu
 &lt;h2 id=&quot;test-accessibility&quot;&gt;Test accessibility= &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-december-january-2022/#test-accessibility&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Cool a11y tests anyone can do: &lt;a href=&quot;https://tetralogical.com/blog/2022/01/18/quick-accessibility-tests-anyone-can-do/&quot;&gt;https://tetralogical.com/blog/2022/01/18/quick-accessibility-tests-anyone-can-do/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;A tool capable of going further than classic webdrivers for testing a11y, in particular with regard to screen readers, to be tested: &lt;a href=&quot;https://github.com/bocoup/aria-&quot;&gt;https://github.com/bocoup/aria-&lt;/a&gt; at-automation&lt;/li&gt;
+&lt;li&gt;A tool capable of going further than classic webdrivers for testing a11y, in particular with regard to screen readers, to be tested: &lt;a href=&quot;https://github.com/bocoup/aria-at-automation&quot;&gt;https://github.com/bocoup/aria-at-automation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Test accessibility with the keyboard, the base: &lt;a href=&quot;https://www.edeshseba.info/web-accessibility-and-keyboard-only-testing/&quot;&gt;https://www.edeshseba.info/web-accessibility-and-keyboard-only-testing/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Have your content tested by hearing impaired people: &lt;a href=&quot;https://makeitfable.com/article/user-testing-deaf-hoh/&quot;&gt;https://makeitfable.com/article/user-testing-deaf-hoh/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Tests based on WCAG, nice: &lt;a href=&quot;https://thisiswcag.com/&quot;&gt;https://thisiswcag.com/&lt;/a&gt;&lt;/li&gt;
@@ -1645,7 +1646,7 @@ And finally, a new content in our site of in our site of recommendations, 5 pers
 &lt;h2 id=&quot;others&quot;&gt;Others &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/en/articles/watch-february-march-2022/#others&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Awesome! play and fix your code to make it accessible: &lt;a href=&quot;https://a11yphant.com/&quot;&gt;https://a11yphant.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Just Nice: &lt;a href=&quot;https://daverupert.com/2022/04/what-if-everyth&quot;&gt;https://daverupert.com/2022/04/what-if-everyth&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Just Nice: &lt;a href=&quot;https://daverupert.com/2022/04/what-if-everything-got-better/&quot;&gt;https://daverupert.com/2022/04/what-if-everything-got-better/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
