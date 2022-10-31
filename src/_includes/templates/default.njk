@@ -39,7 +39,7 @@
             {% endif %}
           {% endif %} 
           {% if cancelDate != true %}
-            <time class="text-muted" datetime="{{ page.date.toISOString() }}">{% localizedDate page.date, locale  %}</time>
+            <p class="text-muted">{{ 'lastUpdate.label' | translate}} <time datetime="{{ page.date.toISOString() }}">{% localizedDate page.date, locale  %}</time></p>
           {% endif %} 
           <div class="mt-4">
           {{ content | safe }}
@@ -57,7 +57,7 @@
   {%- else -%}
     <main id="main-content" class="container-lg pt-4" role="main">
       {% if cancelDate != true %}
-        <time class="text-muted" datetime="{{ page.date.toISOString() }}">{% localizedDate page.date, locale  %}</time>
+        <p class="text-muted">{{ 'lastUpdate.label' | translate}} <time datetime="{{ page.date.toISOString() }}">{% localizedDate page.date, locale  %}</time></p>
       {% endif %}
       {{ content | safe }}
     </main>
