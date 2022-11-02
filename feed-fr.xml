@@ -4,7 +4,7 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-10-14T00:00:00Z</updated>
+  <updated>2022-10-28T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -2792,6 +2792,88 @@ Nous avons décidé de supprimer la checklist d&#39;audit afin de se concentrer 
 &lt;p&gt;Il est maintenant possible d&#39;activer les critères de bonnes pratiques afin de rendre notre site internet le plus accessible possible.&lt;br /&gt;
 Actuellement 7 critères de bonnes pratiques ont été ajoutés, mais d&#39;autres seront ajoutés dans le futur.&lt;/p&gt;
 &lt;p&gt;Vous voulez contribuer ou proposer des critères de bonnes pratiques ? Faites le sur &lt;a href=&quot;https://github.com/Orange-OpenSource/La-Va11ydette&quot; target=&quot;_blank&quot; title=&quot;le Git Hub de la Va11ydette (nouvel onglet)&quot;&gt;le Git Hub de la Va11ydette&lt;/a&gt;.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Les bonnes pratiques pour les carrousels</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/Carrousel/"/>
+    <updated>2022-10-28T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/Carrousel/</id>
+    <content type="html">&lt;h2 id=&quot;pourquoi&quot;&gt;Pourquoi ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/Carrousel/#pourquoi&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Le carrousel est un outil de communication dynamique, dont l&#39;utilité n&#39;est clairement pas à la hauteur de sa popularité (&lt;a lang=&quot;en&quot; hreflang=&quot;en&quot; href=&quot;https://erikrunyon.com/2013/01/carousel-interaction-stats/&quot;&gt;Carousel Interaction Stats&lt;/a&gt;).&lt;br /&gt;
+Si toutefois vous souhaitez malgré tout en développer un, voici quelques bonnes pratiques à mettre en place pour qu&#39;il soit utilisable.&lt;/p&gt;
+&lt;h3 id=&quot;regles-de-conformite&quot;&gt;Règles de conformité  &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/Carrousel/#regles-de-conformite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Pour être conforme, le carrousel doit respecter &lt;strong&gt;au moins une des règles&lt;/strong&gt; ci-dessous :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;La durée du mouvement doit être inférieure ou égale à 5 secondes,&lt;/li&gt;
+&lt;li&gt;ou, l&#39;utilisateur doit pouvoir arrêter et relancer le mouvement,&lt;/li&gt;
+&lt;li&gt;ou, l&#39;utilisateur doit pouvoir afficher et masquer le contenu en mouvement,&lt;/li&gt;
+&lt;li&gt;ou, l&#39;utilisateur doit pouvoir afficher la totalité de l&#39;information sans le mouvement.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;bonnes-pratiques&quot;&gt;Bonnes pratiques  &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/Carrousel/#bonnes-pratiques&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Pour aller un peu plus loin, voici quelques bonnes pratiques supplémentaires :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Il vaut mieux positionner le bouton d&#39;arrêt du carrousel juste avant celui-ci (dans le code), afin d&#39;être atteignable rapidement par l&#39;utilisateur.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Le contenu doit être manipulable avec des raccourcis clavier (touche &lt;code&gt;espace&lt;/code&gt; pour arrêter, &lt;code&gt;Ctrl + flèche &lt;/code&gt; pour «suivant » ou «précédent » etc.).&lt;/li&gt;
+&lt;li&gt;À la prise de focus (clavier ou souris), il est préférable que la rotation du carrousel s&#39;arrête et reprenne lors de la perte du focus.&lt;/li&gt;
+&lt;li&gt;La visualisation de la position courante via la navigation à points permet à l&#39;utilisateur de mieux s&#39;y retrouver et pour finir, il est préférable de ne pas mettre plus de 3 panneaux dans le carrousel.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;comment&quot;&gt;Comment ?  &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/Carrousel/#comment&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Afin de rendre tout ceci accessible, nous allons pouvoir nous appuyer sur les attributs suivants :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;role=&amp;quot;tablist&amp;quot;&lt;/code&gt; doit être appliqué sur l&#39;élément englobant les onglets de pagination.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;role=&amp;quot;tab&amp;quot;&lt;/code&gt; doit être appliqué sur chaque onglet de pagination.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tabindex=&amp;quot;0&amp;quot;&lt;/code&gt; doit être appliqué sur l&#39;onglet de pagination sélectionné, les autres onglet doivent avoir l&#39;attribut &lt;code&gt;tabindex=&amp;quot;-1&amp;quot; &lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tabindex=&amp;quot;-1&amp;quot;&lt;/code&gt; omettra complètement l&#39;élément du focus clavier, cet élément ne sera pas atteignable pour un utilisateur navigant au clavier.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-selected=&amp;quot;true&amp;quot;&lt;/code&gt; doit être appliqué sur l&#39;onglet de pagination sélectionné, les autres onglets doivent avoir l&#39;attribut &lt;code&gt;aria-selected=&amp;quot;false&amp;quot; &lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-hidden=&amp;quot;false&amp;quot;&lt;/code&gt; sur le panneau affiché.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-hidden=&amp;quot;true&amp;quot;&lt;/code&gt; sur les autres panneaux.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-roledescription&lt;/code&gt; permet d&#39;indiquer le type de contenu.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-label&lt;/code&gt; permettra d&#39;ajouter de l&#39;information sur les panneaux (numéro courant du panneau et le nombre total de panneau).&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-controls&lt;/code&gt; relie les boutons au contenu.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aria-selected&lt;/code&gt; pour indiquer la position courante au lecteurs d&#39;écran sur les boutons de la navigation par points.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;exemple-html&quot;&gt;Exemple HTML  &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/Carrousel/#exemple-html&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Ci-dessous, un exemple de carrousel accessible au format HTML :&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-icon btn-secondary carousel-control-play-pause pause mt-1&amp;quot; data-bs-target=&amp;quot;#carouselExamplePause&amp;quot; data-bs-play-text=&amp;quot;Play Carousel&amp;quot; data-bs-pause-text=&amp;quot;Pause Carousel&amp;quot; title=&amp;quot;Pause Carousel&amp;quot;&amp;gt;
+  &amp;lt;span class=&amp;quot;visually-hidden&amp;quot;&amp;gt;Pause Carousel&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;div id=&amp;quot;carouselExamplePause&amp;quot; class=&amp;quot;carousel slide&amp;quot; data-bs-ride=&amp;quot;carousel&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;carousel-indicators&amp;quot;&amp;gt;
+    &amp;lt;button type=&amp;quot;button&amp;quot; data-bs-target=&amp;quot;#carouselExamplePause&amp;quot; data-bs-slide-to=&amp;quot;0&amp;quot; class=&amp;quot;active&amp;quot; aria-current=&amp;quot;true&amp;quot; aria-label=&amp;quot;Slide 1&amp;quot;&amp;gt;&amp;lt;/button&amp;gt;
+    &amp;lt;button type=&amp;quot;button&amp;quot; data-bs-target=&amp;quot;#carouselExamplePause&amp;quot; data-bs-slide-to=&amp;quot;1&amp;quot; aria-label=&amp;quot;Slide 2&amp;quot;&amp;gt;&amp;lt;/button&amp;gt;
+    &amp;lt;button type=&amp;quot;button&amp;quot; data-bs-target=&amp;quot;#carouselExamplePause&amp;quot; data-bs-slide-to=&amp;quot;2&amp;quot; aria-label=&amp;quot;Slide 3&amp;quot;&amp;gt;&amp;lt;/button&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;carousel-inner&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;carousel-item active&amp;quot;&amp;gt;
+      &amp;lt;img src=&amp;quot;...&amp;quot; class=&amp;quot;d-block w-100&amp;quot; alt=&amp;quot;...&amp;quot;&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;quot;carousel-item&amp;quot;&amp;gt;
+      &amp;lt;img src=&amp;quot;...&amp;quot; class=&amp;quot;d-block w-100&amp;quot; alt=&amp;quot;...&amp;quot;&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;quot;carousel-item&amp;quot;&amp;gt;
+      &amp;lt;img src=&amp;quot;...&amp;quot; class=&amp;quot;d-block w-100&amp;quot; alt=&amp;quot;...&amp;quot;&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;button class=&amp;quot;carousel-control-prev&amp;quot; type=&amp;quot;button&amp;quot; data-bs-target=&amp;quot;#carouselExamplePause&amp;quot; data-bs-slide=&amp;quot;prev&amp;quot;&amp;gt;
+    &amp;lt;span class=&amp;quot;carousel-control-prev-icon&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;visually-hidden&amp;quot;&amp;gt;Previous&amp;lt;/span&amp;gt;
+  &amp;lt;/button&amp;gt;
+  &amp;lt;button class=&amp;quot;carousel-control-next&amp;quot; type=&amp;quot;button&amp;quot; data-bs-target=&amp;quot;#carouselExamplePause&amp;quot; data-bs-slide=&amp;quot;next&amp;quot;&amp;gt;
+    &amp;lt;span class=&amp;quot;carousel-control-next-icon&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;quot;visually-hidden&amp;quot;&amp;gt;Next&amp;lt;/span&amp;gt;
+  &amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;sources&quot;&gt;Sources  &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/Carrousel/#sources&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.adilade.fr/blog/carrousel-accessible-responsive-vanillajs/&quot;&gt;Adilade - Carrousel-accessible-responsive-vanillasjs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.accede-web.com/notices/interface-riche/carrousels/&quot;&gt;AcceDe Web - carrousels&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a lang=&quot;en&quot; hreflang=&quot;en&quot; href=&quot;https://www.w3.org/WAI/tutorials/carousels/&quot;&gt;W3C - Carousels Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a lang=&quot;en&quot; hreflang=&quot;en&quot; href=&quot;https://erikrunyon.com/2013/01/carousel-interaction-stats/&quot;&gt;erik runyon - Carousel Interaction Stats&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a lang=&quot;en&quot; hreflang=&quot;en&quot; href=&quot;https://boosted.orange.com/docs/5.2/components/carousel/#content&quot;&gt;Boosted - Carousel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
 </feed>
