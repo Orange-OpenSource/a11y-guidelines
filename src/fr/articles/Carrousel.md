@@ -23,10 +23,10 @@ Pour être conforme, le carrousel doit respecter **au moins une des règles** ci
 ### Bonnes pratiques&nbsp;
 Pour aller un peu plus loin, voici quelques bonnes pratiques supplémentaires&nbsp;:
 
-**Il vaut mieux implémenter le bouton d'arrêt du carrousel au début du code, afin d'être atteignable rapidement par l'utilisateur.**
-Le contenu doit être manipulable avec des raccourcis clavier (touche <code>espace</code> pour arrêter, <code>Ctrl + flèche&nbsp;</code> pour &laquo;suivant&nbsp;&raquo; ou &laquo;précédent&nbsp;&raquo; etc.&nbsp;).
-A la prise de focus (clavier ou souris), il est préférable que la rotation du carrousel s'arrête et reprenne lors de la perte du focus.
-La Visualisation de la position courante via la navigation à points permet à l'utilisateur de mieux s'y retrouver et pour finir, il est préférable de ne pas mettre plus de 3 panneaux dans le carrousel.
+- **Il vaut mieux positionner le bouton d'arrêt du carrousel juste avant celui-ci (dans le code), afin d'être atteignable rapidement par l'utilisateur.**
+- Le contenu doit être manipulable avec des raccourcis clavier (touche <code>espace</code> pour arrêter, <code>Ctrl + flèche&nbsp;</code> pour &laquo;suivant&nbsp;&raquo; ou &laquo;précédent&nbsp;&raquo; etc.).
+- À la prise de focus (clavier ou souris), il est préférable que la rotation du carrousel s'arrête et reprenne lors de la perte du focus.
+- La visualisation de la position courante via la navigation à points permet à l'utilisateur de mieux s'y retrouver et pour finir, il est préférable de ne pas mettre plus de 3 panneaux dans le carrousel.
 
 ## Comment ?&nbsp;
 Afin de rendre tout ceci accessible, nous allons pouvoir nous appuyer sur les attributs suivants&nbsp;:
