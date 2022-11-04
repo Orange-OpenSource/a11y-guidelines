@@ -12,7 +12,7 @@ Un brouillon d'une spécification pas officiel sur AOM (Accessibility Object Mod
 Bientôt les WCAG 2.2, deux réflexions sur cette candidate recommandation (en) : https://www.deque.com/blog/wcag-2-2-is-at-the-candidate-recommendation-stage/ https://intopia.digital/articles/wcag-2-2-hits-candidate-recommendation-but-what-does-it-mean/ https://www.youtube.com/watch?v=eDCd-isluUY. 
 Bon assez de temps perdu, on y va !
 
-## l'accessibilité dans les lois et les normes
+## L'accessibilité dans les lois et les normes
 - Je connaissais pas, juste essentiel, pour tout savoir sur ARIA avec ARIA Authoring Practices Guide (APG) du W3c (en) : https://www.w3.org/WAI/ARIA/apg/
 - Point de vue sur un nouveau critères WCAG 2.2, focus appearence, intéressant (en) : https://hidde.blog/focus-appearance-too-complex/
 - Charte de la communication accessible de l'état Français, de biens beaux engagements, comment dire ? à suivre, hein... : https://www.gouvernement.fr/charte-d-accessibilite-de-la-communication-de-l-etat/ 
