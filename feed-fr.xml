@@ -4,7 +4,7 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-10-28T00:00:00Z</updated>
+  <updated>2022-11-03T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -2873,6 +2873,103 @@ Si toutefois vous souhaitez malgré tout en développer un, voici quelques bonne
 &lt;li&gt;&lt;a lang=&quot;en&quot; hreflang=&quot;en&quot; href=&quot;https://www.w3.org/WAI/tutorials/carousels/&quot;&gt;W3C - Carousels Tutorial&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a lang=&quot;en&quot; hreflang=&quot;en&quot; href=&quot;https://erikrunyon.com/2013/01/carousel-interaction-stats/&quot;&gt;erik runyon - Carousel Interaction Stats&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a lang=&quot;en&quot; hreflang=&quot;en&quot; href=&quot;https://boosted.orange.com/docs/5.2/components/carousel/#content&quot;&gt;Boosted - Carousel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Veille #A11y Août-Octobre 2022</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/veille-aout-septembre-2022/"/>
+    <updated>2022-11-03T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/veille-aout-septembre-2022/</id>
+    <content type="html">&lt;h1&gt;Veille accessibilité numérique Août-Octobre 2022&lt;/h1&gt;
+&lt;p&gt;Bon, gros retard pour cette nouvelle veille, mais la voilà enfin !&lt;br /&gt;
+Un brouillon d&#39;une spécification pas officiel sur AOM (Accessibility Object Model), important pour les aides techniques &lt;a href=&quot;https://wicg.github.io/aom/spec/&quot;&gt;https://wicg.github.io/aom/spec/&lt;/a&gt;.&lt;br /&gt;
+Bientôt les WCAG 2.2, deux réflexions sur cette candidate recommandation (en) : &lt;a href=&quot;https://www.deque.com/blog/wcag-2-2-is-at-the-candidate-recommendation-stage/&quot;&gt;https://www.deque.com/blog/wcag-2-2-is-at-the-candidate-recommendation-stage/&lt;/a&gt; &lt;a href=&quot;https://intopia.digital/articles/wcag-2-2-hits-candidate-recommendation-but-what-does-it-mean/&quot;&gt;https://intopia.digital/articles/wcag-2-2-hits-candidate-recommendation-but-what-does-it-mean/&lt;/a&gt; &lt;a href=&quot;https://www.youtube.com/watch?v=eDCd-isluUY&quot;&gt;https://www.youtube.com/watch?v=eDCd-isluUY&lt;/a&gt;.&lt;br /&gt;
+Bon assez de temps perdu, on y va !&lt;/p&gt;
+&lt;h2 id=&quot;laccessibilite-dans-les-lois-et-les-normes&quot;&gt;L&#39;accessibilité dans les lois et les normes &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-aout-septembre-2022/#laccessibilite-dans-les-lois-et-les-normes&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Je connaissais pas, juste essentiel, pour tout savoir sur ARIA avec ARIA Authoring Practices Guide (APG) du W3c (en) : &lt;a href=&quot;https://www.w3.org/WAI/ARIA/apg/&quot;&gt;https://www.w3.org/WAI/ARIA/apg/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Point de vue sur un nouveau critères WCAG 2.2, focus appearence, intéressant (en) : &lt;a href=&quot;https://hidde.blog/focus-appearance-too-complex/&quot;&gt;https://hidde.blog/focus-appearance-too-complex/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Charte de la communication accessible de l&#39;état Français, de biens beaux engagements, comment dire ? à suivre, hein... : &lt;a href=&quot;https://www.gouvernement.fr/charte-d-accessibilite-de-la-communication-de-l-etat/&quot;&gt;https://www.gouvernement.fr/charte-d-accessibilite-de-la-communication-de-l-etat/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;retours-dexperience-et-accessibilite&quot;&gt;Retours d’expérience et accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-aout-septembre-2022/#retours-dexperience-et-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Un questionnaire pour voir ce qu&#39;ont les gens qui risquent de travailler avec vous en matière d&#39;a11y au delà d&#39;un couche de vernis, à lire (en) : &lt;a href=&quot;https://github.com/scottaohara/accessibility_interview_questions&quot;&gt;https://github.com/scottaohara/accessibility_interview_questions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Obfuscation de lien et a11y : &lt;a href=&quot;https://www.laceneduweb.fr/obfuscation-liens-seo-problemes-accessibilite/&quot;&gt;https://www.laceneduweb.fr/obfuscation-liens-seo-problemes-accessibilite/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Un test utilisateur sur l&#39;accessibilité des images, comment aller plus loin, à lire (en) : &lt;a href=&quot;https://tetralogical.com/blog/2022/07/21/research-insight-accessibility-of-images/&quot;&gt;https://tetralogical.com/blog/2022/07/21/research-insight-accessibility-of-images/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Améliorer l&#39;a11y dans son entreprise, cas d&#39;étude (en) : &lt;a href=&quot;https://www.smashingmagazine.com/2022/08/organization-improved-web-accessibility-case-study/&quot;&gt;https://www.smashingmagazine.com/2022/08/organization-improved-web-accessibility-case-study/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bien rédiger des noms accessibles (en) : &lt;a href=&quot;https://hidde.blog/better-accessible-names/&quot;&gt;https://hidde.blog/better-accessible-names/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Details/summary, encore des bugs (en) : &lt;a href=&quot;https://www.scottohara.me//blog/2022/09/12/details-summary.html&quot;&gt;https://www.scottohara.me//blog/2022/09/12/details-summary.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;strategie-de-mise-en-accessibilite&quot;&gt;Stratégie de mise en accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-aout-septembre-2022/#strategie-de-mise-en-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Comment améliorer pratiquement la prise en compte global de l&#39;a11y au sein d&#39;une structure (en) &lt;a href=&quot;https://www.smashingmagazine.com/2022/08/organization-improved-web-accessibility-case-study/&quot;&gt;https://www.smashingmagazine.com/2022/08/organization-improved-web-accessibility-case-study/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Qr code et a11y, pour tout savoir (en) : &lt;a href=&quot;https://tetralogical.com/blog/2022/08/08/accessibility-and-qr-codes/&quot;&gt;https://tetralogical.com/blog/2022/08/08/accessibility-and-qr-codes/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bien utiliser le Tabindex, complet (en) : &lt;a href=&quot;https://www.a11yproject.com/posts/how-to-use-the-tabindex-attribute/&quot;&gt;https://www.a11yproject.com/posts/how-to-use-the-tabindex-attribute/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;L&#39;accessible name pour les nuls (en) : &lt;a href=&quot;https://baymard.com/blog/names-accessibility&quot;&gt;https://baymard.com/blog/names-accessibility&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rester accessible avec de nombreux contributeurs (en) :&lt;a href=&quot;https://equalizedigital.com/how-to-maintain-accessibility-on-a-website-with-many-contributors/&quot;&gt;https://equalizedigital.com/how-to-maintain-accessibility-on-a-website-with-many-contributors/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Sémantique HTML, la base (en) : &lt;a href=&quot;https://tetralogical.com/blog/2022/10/05/foundations-html-semantics/&quot;&gt;https://tetralogical.com/blog/2022/10/05/foundations-html-semantics/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;L&#39;a11y concerne aussi le backend (en) : &lt;a href=&quot;https://ericwbailey.website/published/yes-accessibility-is-also-a-backend-concern/&quot;&gt;https://ericwbailey.website/published/yes-accessibility-is-also-a-backend-concern/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Utiliser la couleur de manière accessible, complet (en) : &lt;a href=&quot;https://mn.gov/mnit/media/blog/?id=38-544858&quot;&gt;https://mn.gov/mnit/media/blog/?id=38-544858&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Contraste, sémantique et anxiété (en) : &lt;a href=&quot;https://sarajw.hashnode.dev/aspects-of-accessibility-a11y-semantics-contrast-and-anxiety&quot;&gt;https://sarajw.hashnode.dev/aspects-of-accessibility-a11y-semantics-contrast-and-anxiety&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;tester-laccessibilite&quot;&gt;Tester l’accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-aout-septembre-2022/#tester-laccessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Une bibliothèque pour tester au clavier les applis, à essayer (en) : &lt;a href=&quot;https://testingaccessibility.com/introducing-keyboard-testing-library-by-grunet&quot;&gt;https://testingaccessibility.com/introducing-keyboard-testing-library-by-grunet&lt;/a&gt;?&lt;/li&gt;
+&lt;li&gt;Tester avec un lecteur d&#39;écran, un récap... (en) : &lt;a href=&quot;https://dna.babylonhealth.com/accessibility/how-tos/how-to-test-with-a-screen-reader/&quot;&gt;https://dna.babylonhealth.com/accessibility/how-tos/how-to-test-with-a-screen-reader/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tester sur mac avec VoiceOver (en) : &lt;a href=&quot;https://cloudfour.com/thinks/mac-voiceover-testing-the-simple-way/&quot;&gt;https://cloudfour.com/thinks/mac-voiceover-testing-the-simple-way/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Un nouvel outil de tests d&#39;a11y que je ne connais pas ! (en) : &lt;a href=&quot;https://diginclusion.com/hugr&quot;&gt;https://diginclusion.com/hugr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Des outils d&#39;audit RGAA de Copsae : &lt;a href=&quot;https://github.com/copsae/outils-audits-accessibilite&quot;&gt;https://github.com/copsae/outils-audits-accessibilite&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Outîls de test, choix et limites (en) : &lt;a href=&quot;https://knowbility.org/blog/2022/accessibility-checkers-a-good-start-not-a-solution&quot;&gt;https://knowbility.org/blog/2022/accessibility-checkers-a-good-start-not-a-solution&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;points-techniques-en-accessibilite&quot;&gt;Points techniques en accessibilité &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-aout-septembre-2022/#points-techniques-en-accessibilite&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Un bref tour d&#39;horizon sur abréviation/title, où en est on ? spoiler: rien de neuf(en) : &lt;a href=&quot;https://www.tpgi.com/short-note-the-abbreviation-appreciation-society/&quot;&gt;https://www.tpgi.com/short-note-the-abbreviation-appreciation-society/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Aria-label, réflexions et état de l&#39;art, à lire (en) : &lt;a href=&quot;https://ericwbailey.website/published/aria-label-is-a-code-smell/&quot;&gt;https://ericwbailey.website/published/aria-label-is-a-code-smell/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Emoticon, emoji, caractères unicode exotique, un fléau pour l&#39;a11y : &lt;a href=&quot;https://www.lalutineduweb.fr/detournement-unicode-emojis-accessibilite/&quot;&gt;https://www.lalutineduweb.fr/detournement-unicode-emojis-accessibilite/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;5 erreurs sur les titres de contenu, clair et pratique  (en) : &lt;a href=&quot;https://blog.pope.tech/2022/08/04/5-heading-accessibility-issues-and-how-to-fix-them/&quot;&gt;https://blog.pope.tech/2022/08/04/5-heading-accessibility-issues-and-how-to-fix-them/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Le focus outline, la base (en) : &lt;a href=&quot;https://www.matuzo.at/blog/2022/focus-outline/&quot;&gt;https://www.matuzo.at/blog/2022/focus-outline/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Explications du critère 2.1.4 Keyboard shortcuts (en) : &lt;a href=&quot;https://hidde.blog/keyboard-shortcuts/&quot;&gt;https://hidde.blog/keyboard-shortcuts/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Rajouter une Github action Pa11y sur un site Next.js, à voir (en) : &lt;a href=&quot;https://ashleemboyer.com/blog/how-i-added-a-pa11y-ci-github-action-to-my-next-js-site&quot;&gt;https://ashleemboyer.com/blog/how-i-added-a-pa11y-ci-github-action-to-my-next-js-site&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lien ou bouton, bien fait (en) : &lt;a href=&quot;https://ashleemboyer.com/blog/should-i-use-a-button-or-a-link&quot;&gt;https://ashleemboyer.com/blog/should-i-use-a-button-or-a-link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Toujours sur liens et boutons (en) : &lt;a href=&quot;https://kilianvalkhof.com/2022/css-html/when-going-somewhere-does-a-thing-on-links-and-buttons/&quot;&gt;https://kilianvalkhof.com/2022/css-html/when-going-somewhere-does-a-thing-on-links-and-buttons/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Aria-description, où en est on ? (en) : &lt;a href=&quot;https://www.darins.page/articles/aria-description-crash-course&quot;&gt;https://www.darins.page/articles/aria-description-crash-course&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pas aria-label quand un intitulé visible existe (en) : &lt;a href=&quot;https://ashleemboyer.com/blog/don-t-overwrite-visual-labels-with-aria-label&quot;&gt;https://ashleemboyer.com/blog/don-t-overwrite-visual-labels-with-aria-label&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Les différentes techniques pour étiqueter un bouton (en) : &lt;a href=&quot;https://www.matuzo.at/blog/2022/button-baader/&quot;&gt;https://www.matuzo.at/blog/2022/button-baader/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;appli-mobile-web-mobile&quot;&gt;Appli mobile, web mobile &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-aout-septembre-2022/#appli-mobile-web-mobile&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Label et Hints sur Android (en) : &lt;a href=&quot;https://qbalsdon.github.io/android,/labels,/hints,/accessibility,/robust/2022/07/20/labels-and-hints.html&quot;&gt;https://qbalsdon.github.io/android,/labels,/hints,/accessibility,/robust/2022/07/20/labels-and-hints.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;WCAG 2.2 et son implication pour les apps natives mobiles (en) : &lt;a href=&quot;https://www.deque.com/blog/what-wcag-2-2-means-for-native-mobile-accessibility/&quot;&gt;https://www.deque.com/blog/what-wcag-2-2-means-for-native-mobile-accessibility/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Corriger les erreurs d&#39;IOs a11y (en) : &lt;a href=&quot;https://www.deque.com/blog/how-to-fix-common-ios-accessibility-issues/&quot;&gt;https://www.deque.com/blog/how-to-fix-common-ios-accessibility-issues/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;un site ressources sur app mobile et a11y (en) : &lt;a href=&quot;https://mobilea11y.com/&quot;&gt;https://mobilea11y.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bibliothèque d&#39;exemples a11y pour apps mobile (en) : &lt;a href=&quot;https://github.com/appt-org/accessibility-code-examples&quot;&gt;https://github.com/appt-org/accessibility-code-examples&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ergonomie-ui-ux&quot;&gt;Ergonomie, UI &amp;amp; UX &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-aout-septembre-2022/#ergonomie-ui-ux&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Documenter l&#39;a11y en phase de conception, énorme, indispensable : &lt;a href=&quot;https://stephaniewalter.design/fr/blog/documenter-accessibilite-en-phase-de-design/&quot;&gt;https://stephaniewalter.design/fr/blog/documenter-accessibilite-en-phase-de-design/&lt;/a&gt; vidéo (en) : &lt;a href=&quot;https://www.youtube.com/watch?v=eDCd-isluUY&quot;&gt;https://www.youtube.com/watch?v=eDCd-isluUY&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Design et documentation de l&#39;accessibilité, à lire : &lt;a href=&quot;https://stephaniewalter.design/fr/blog/documenter-accessibilite-en-phase-de-design/&quot;&gt;https://stephaniewalter.design/fr/blog/documenter-accessibilite-en-phase-de-design/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Le bouton retour, comment mieux le concevoir/positionner (en) : &lt;a href=&quot;https://www.smashingmagazine.com/2022/08/back-button-ux-design/&quot;&gt;https://www.smashingmagazine.com/2022/08/back-button-ux-design/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Comment bien choisir des testeurs en situation de handicap (en) : &lt;a href=&quot;https://tetralogical.com/blog/2022/08/01/inclusive-user-research-recruiting-participants/&quot;&gt;https://tetralogical.com/blog/2022/08/01/inclusive-user-research-recruiting-participants/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tout sur le contraste de couleur pour les concepteurs (en) : &lt;a href=&quot;https://colorandcontrast.com/#/introduction&quot;&gt;https://colorandcontrast.com/#/introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pour faire de la conception en prenant en compte les déficients cognitifs, intéressant (en) : &lt;a href=&quot;https://www.ab11y.com/articles/ux-principles-that-include-cognitive-accessibility/&quot;&gt;https://www.ab11y.com/articles/ux-principles-that-include-cognitive-accessibility/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Bonnes pratiques UX sur les drag&amp;amp;drop (en) : &lt;a href=&quot;https://pencilandpaper.io/articles/ux-pattern-drag-and-drop/&quot;&gt;https://pencilandpaper.io/articles/ux-pattern-drag-and-drop/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;ressources&quot;&gt;Ressources &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-aout-septembre-2022/#ressources&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Des statistiques sur le handicap, riche (en) : &lt;a href=&quot;https://dequeuniversity.com/resources/disability-statistics&quot;&gt;https://dequeuniversity.com/resources/disability-statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ressources développeur a11y (en) : &lt;a href=&quot;https://web.dev/learn/accessibility/&quot;&gt;https://web.dev/learn/accessibility/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Guide sur les bases d&#39;une formulaire HTML accessible (en) : &lt;a href=&quot;https://blog.pope.tech/2022/10/03/a-beginners-complete-guide-to-form-accessibility-the-5-things-accessible-forms-needs-and-how-to-fix-common-errors/&quot;&gt;https://blog.pope.tech/2022/10/03/a-beginners-complete-guide-to-form-accessibility-the-5-things-accessible-forms-needs-and-how-to-fix-common-errors/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ressources concepteur a11y (en) : &lt;a href=&quot;https://www.a11yproject.com/&quot;&gt;https://www.a11yproject.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Un site ressource sur prendre en compte au niveau du numérique de la santé mentale, la déficience mentale, essentiel (en) : &lt;a href=&quot;https://designpatternsformentalhealth.org/&quot;&gt;https://designpatternsformentalhealth.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Aria et HTML, nouvelle partie dans ce site ressource sur le webdev avec un gros morceau d&#39;a11y (en) : &lt;a href=&quot;https://web.dev/learn/accessibility/aria-html/&quot;&gt;https://web.dev/learn/accessibility/aria-html/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Mythes et réalités du contraste de couleur, complet (en) :  &lt;a href=&quot;https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/&quot;&gt;https://www.smashingmagazine.com/2022/09/realities-myths-contrast-color/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;autres&quot;&gt;Autres &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/veille-aout-septembre-2022/#autres&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Anatomie de la construction d&#39;une navbar web avec de l&#39;a11y dedans, bien (en) : &lt;a href=&quot;https://web.dev/website-navigation/&quot;&gt;https://web.dev/website-navigation/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Des design patterns pour la santé mentale (en) : &lt;a href=&quot;https://ericwbailey.website/published/yes-accessibility-is-also-a-backend-concern/&quot;&gt;https://ericwbailey.website/published/yes-accessibility-is-also-a-backend-concern/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
   </entry>
