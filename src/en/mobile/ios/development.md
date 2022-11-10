@@ -8,7 +8,7 @@ displayToc: true
 
 This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options : through different categories, it explains how to use the accessibility attributes&nbsp;/ methods and provides links to the [`Apple official documentation`](https://developer.apple.com/documentation/uikit/accessibility).
 
-Code snippets are also available to show the different possible implementations {(**Swift&nbsp;5.5**, **Objective&nbsp;C**) + (**Xcode&nbsp;13**, **iOS&nbsp;15**)}.
+Code snippets are also available to show the different possible implementations {(**Swift&nbsp;5.7**, **Objective&nbsp;C**) + (**Xcode&nbsp;14**, **iOS&nbsp;16**)}.
 
 <br><br>
 
@@ -722,6 +722,8 @@ If we use the `accessibilityLanguage` attribute on a `UILabel`, it will be vocal
 
 </div>
 
+<br>
+
 A single word in a foreign language may be added in a sentence with the appropriate pronunciation thanks to the **Attributed Accessibility Properties** using a `NSAttributedString` [since iOS&nbsp;11](https://a11y-guidelines.orange.com/en/mobile/ios/wwdc/2017/215/#attributed-accessibility-properties-2607).
 </div>
 <div class="tab-pane" id="changeLang-Links" role="tabpanel">  
@@ -1389,6 +1391,8 @@ class MyCustomView: UIImageView, AXCustomContentProvider {
 
 </div>
 
+<br>
+
 Then, create each and every element to be vocalized with a one finger vertical swipe:
 
 <div class="code-tab-pane">
@@ -1941,9 +1945,16 @@ Since iOS7, it is possible to make the text size dynamic according to the device
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-bs-toggle="tab" 
+           href="#TextSize-iOS16"
+           role="tab" 
+           aria-selected="true">iOS 16</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-bs-toggle="tab" 
            href="#TextSize-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1954,7 +1965,13 @@ Since iOS7, it is possible to make the text size dynamic according to the device
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="TextSize-iOS13"
+     id="TextSize-iOS16"
+     role="tabpanel">
+    
+![](../../images/iOSdev/TailleDesTextes_iOS16_1.png)
+</div>
+<div class="tab-pane" 
+     id="TextSize-iOS13" 
      role="tabpanel">
     
 ![](../../images/iOSdev/TailleDesTextes_iOS13_1.png)
@@ -2001,6 +2018,9 @@ Since iOS7, it is possible to make the text size dynamic according to the device
 </code></pre>
 
 </div>
+
+<br>
+
  - Listen to the font size settings change event **UIContentSizeCategoryDidChange** or directly use the property **adjustsFontForContentSizeCategory** to have an automatic update of your system font size if you're programming in iOS10 (this attribute applies to custom fonts only with the `UIFontMetrics` class).
 <br>Note that the **[traitCollectionDidChange](../wwdc/2017/245/#Demo)** method that belongs to the `UITraitEnvironment` informal protocol may also be used in this context because it will be called as soon as the iOS interface environment changes (class/content size, portrait/landscape, color contrast).
 <div class="code-tab-pane">
@@ -2040,6 +2060,9 @@ Since iOS7, it is possible to make the text size dynamic according to the device
 </code></pre>
 
 </div>
+
+<br>
+
  - Be careful that the containers fit their contents: using constraints is the best way to perform this task using dynamic values.
  Don't forget to include the settings for the navigation/tab/status bar and toolbar items that will be handled by the **[Large Content Viewer](../wwdc/2019/261/)**.
  
@@ -2331,6 +2354,8 @@ class LogoViewController: UIViewController {
 
 </div>
 
+<br>
+
 In the same way, on a **clickable element** like a button whose magnification may become problematic, it's quite possible to use this feature to display its content and to ensure to **trigger its actions when the finger is up**:
 
 ![](../../images/iOSdev/LargeContentViewer_3.png)
@@ -2385,6 +2410,8 @@ class ButtonViewController: UIViewController {
 </code></pre>
 
 </div>
+
+<br>
 
 When **the long press gesture is already implemented on the graphical element**, it may be interesting to use the `gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)` method that will be helpful to [set&nbsp;up&nbsp;the&nbsp;two&nbsp;gestures&nbsp;simutaneously](https://developer.apple.com/videos/play/wwdc2019/261/?time=636). 
 </div>
@@ -2540,6 +2567,8 @@ class StepperWrapper: UIStackView {
 </code></pre>
 
 </div>
+
+<br>
 
 - Next, the two methods of the implemented protocol must be defined before updating and vocally presenting the new value in the ViewController.
 
@@ -3927,8 +3956,6 @@ When a particular spelling is intended, phonetics is highly recommended to get t
 </ol>
 
 ![](../../images/iOSdev/SpeechSynthesizerEx_3.png)
-
-To get the phonetic expression inside the code, pass it through the mobile `Notes` application to be synchronized with the iCloud one from which a copy-paste becomes easy as a pie.
 </div>
 <div class="tab-pane" id="speechSyn-Links" role="tabpanel">
 
@@ -3951,7 +3978,7 @@ To get the phonetic expression inside the code, pass it through the mobile `Note
 </div>
 <br>
 
-All the speech synthesizer functionalities are introduced in a [WWDC video](../wwdc/2018/236) *(Making iOS talk with AVSpeechSynthesizer)* that's perfectly summarized in the WWDC section of this site.
+All the speech synthesizer functionalities are introduced in a [WWDC video](../wwdc/2018/236) *(Making iOS talk with AVSpeechSynthesizer)* that's summarized in the WWDC section of this site.
 <br><br>
 
 ## Switch Control

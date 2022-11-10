@@ -125,7 +125,7 @@ For light sensitive persons, a pure black text on a pure white background may si
 These two elements propose to the greatest number a very comfortable reading that the contrast unfortunately can't assure on its own (see the end of this section to discover the proper tool for automatic calculations).
 
 ![](../../images/color_contrast_5.png)
-</br>Choosing the appropriate colours finally amounts to **checking each and every contraint** previously exposed for:
+</br>Choosing the appropriate colours finally amounts to **checking each and every constraint** previously exposed for:
 - The **contrast**.
 - The **brightness difference**.
 - The **colour difference**.
