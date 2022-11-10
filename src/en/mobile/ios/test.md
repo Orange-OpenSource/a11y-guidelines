@@ -72,7 +72,6 @@ Besides these basic criteria, there are also fundamental requirements for an acc
 3. [Switch&nbsp;Control](#switch-control)
 
 ![](../../images/ios-test-overview.png)
-<br><br>
 ### Dynamic Type
 To understand how this feature works, it's highly recommended to watch the example in this [WWDC&nbsp;2017&nbsp;video](../wwdc/2017/245/#example-2432) that is detailed in the WWDC part of this site.
 
