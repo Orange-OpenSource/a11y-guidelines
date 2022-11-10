@@ -76,7 +76,6 @@ En plus de ces critères fondamentaux, il y a bien évidemment les incontournabl
 3. [Contrôle&nbsp;de&nbsp;sélection](#controle-de-selection)
 
 ![](../../images/ios-test-overview.png)
-<br><br>
 ### Dynamic Type
 
 Pour bien comprendre comment le grossissement de texte fonctionne, il est fortement recommandé de visionner l'exemple proposé dans la [vidéo&nbsp;WWDC&nbsp;2017](../wwdc/2017/245/#exemple-2432) parfaitement résumée dans la partie WWDC de ce site.

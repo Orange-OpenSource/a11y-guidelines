@@ -4,6 +4,8 @@ abstract: "Historique des mises à jour"
 displayToc: false
 ---
 
+**14/11/22** ⟹ mises à jour (swift 5.7, Xcode 14 et iOS 16)
+
 **26/08/22** ⟹ WWDC 2022 <a href="../wwdc/2022/10152/">🎬</a> Rendre accessible une application en mode Single App
 
 **03/01/22** ⟹ ajout de la liste des résumés détaillés WWDC (⚠️ en anglais uniquement ⚠️) <a href="../../../../en/mobile/ios/wwdc/nota11y">🔖</a>
