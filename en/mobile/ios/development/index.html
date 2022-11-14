@@ -209,7 +209,7 @@
           <div class="mt-4">
           <h1>iOS developer guide</h1>
 <p>This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options : through different categories, it explains how to use the accessibility attributes / methods and provides links to the <a href="https://developer.apple.com/documentation/uikit/accessibility"><code>Apple official documentation</code></a>.</p>
-<p>Code snippets are also available to show the different possible implementations {(<strong>Swift 5.5</strong>, <strong>Objective C</strong>) + (<strong>Xcode 13</strong>, <strong>iOS 15</strong>)}.</p>
+<p>Code snippets are also available to show the different possible implementations {(<strong>Swift 5.7</strong>, <strong>Objective C</strong>) + (<strong>Xcode 14</strong>, <strong>iOS 16</strong>)}.</p>
 <p><br><br></p>
 <h2 id="element-trait">Element trait <a class="header-anchor" href="#element-trait" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
@@ -871,6 +871,7 @@ This notification comes along with a vocalization including a sound like announc
 }
 </code></pre>
 </div>
+<br>
 <p>A single word in a foreign language may be added in a sentence with the appropriate pronunciation thanks to the <strong>Attributed Accessibility Properties</strong> using a <code>NSAttributedString</code> <a href="https://a11y-guidelines.orange.com/en/mobile/ios/wwdc/2017/215/#attributed-accessibility-properties-2607">since iOS 11</a>.</p>
 </div>
 <div class="tab-pane" id="changeLang-Links" role="tabpanel">  
@@ -1503,6 +1504,7 @@ class MyCustomView: UIImageView, AXCustomContentProvider {
 }
 </code></pre>
 </div>
+<br>
 <p>Then, create each and every element to be vocalized with a one finger vertical swipe:</p>
 <div class="code-tab-pane">
 <pre><code class="objectivec">
@@ -2030,9 +2032,16 @@ float heightVal;
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-bs-toggle="tab" 
+           href="#TextSize-iOS16"
+           role="tab" 
+           aria-selected="true">iOS 16</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-bs-toggle="tab" 
            href="#TextSize-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -2043,7 +2052,12 @@ float heightVal;
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="TextSize-iOS13"
+     id="TextSize-iOS16"
+     role="tabpanel">
+<p><img src="../../images/iOSdev/TailleDesTextes_iOS16_1.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" 
+     id="TextSize-iOS13" 
      role="tabpanel">
 <p><img src="../../images/iOSdev/TailleDesTextes_iOS13_1.png" alt="" class="img-fluid"></p>
 </div>
@@ -2086,8 +2100,11 @@ float heightVal;
     fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
 </code></pre>
 </div>
- - Listen to the font size settings change event **UIContentSizeCategoryDidChange** or directly use the property **adjustsFontForContentSizeCategory** to have an automatic update of your system font size if you're programming in iOS10 (this attribute applies to custom fonts only with the `UIFontMetrics` class).
-<br>Note that the **[traitCollectionDidChange](../wwdc/2017/245/#Demo)** method that belongs to the `UITraitEnvironment` informal protocol may also be used in this context because it will be called as soon as the iOS interface environment changes (class/content size, portrait/landscape, color contrast).
+<br>
+<ul>
+<li>Listen to the font size settings change event <strong>UIContentSizeCategoryDidChange</strong> or directly use the property <strong>adjustsFontForContentSizeCategory</strong> to have an automatic update of your system font size if you're programming in iOS10 (this attribute applies to custom fonts only with the <code>UIFontMetrics</code> class).<br>
+<br>Note that the <strong><a href="../wwdc/2017/245/#Demo">traitCollectionDidChange</a></strong> method that belongs to the <code>UITraitEnvironment</code> informal protocol may also be used in this context because it will be called as soon as the iOS interface environment changes (class/content size, portrait/landscape, color contrast).</li>
+</ul>
 <div class="code-tab-pane">
 <pre><code class="objectivec">
     //Listens to the notification dealing with the font size changing from the mobile settings.
@@ -2122,10 +2139,15 @@ float heightVal;
     }
 </code></pre>
 </div>
- - Be careful that the containers fit their contents: using constraints is the best way to perform this task using dynamic values.
- Don't forget to include the settings for the navigation/tab/status bar and toolbar items that will be handled by the **[Large Content Viewer](../wwdc/2019/261/)**.
+<br>
 <ul>
-<li>Don't forget to adapt the <a href="../design#colours">color contrast</a> to the text size.</li>
+<li>
+<p>Be careful that the containers fit their contents: using constraints is the best way to perform this task using dynamic values.<br>
+Don't forget to include the settings for the navigation/tab/status bar and toolbar items that will be handled by the <strong><a href="../wwdc/2019/261/">Large Content Viewer</a></strong>.</p>
+</li>
+<li>
+<p>Don't forget to adapt the <a href="../design#colours">color contrast</a> to the text size.</p>
+</li>
 </ul>
 <p><br><strong>Since iOS 15</strong>, it's now possible to <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=878">set limits on the minimum and maximum sizes of Dynamic Type</a>  thanks two new properties: <strong><a href="https://developer.apple.com/documentation/uikit/uiview/3750924-minimumcontentsizecategory">minimumContentSizeCategory</a></strong> and <strong><a href="https://developer.apple.com/documentation/uikit/uiview/3750923-maximumcontentsizecategory">maximumContentSizeCategory</a></strong>.<br>
 However, it's necessary to keep in mind that these restrictions are recommended for specific situations that already include the size change and for which extreme sizes may worsen the user experience.</p>
@@ -2409,6 +2431,7 @@ class LogoViewController: UIViewController {
 }
 </code></pre>
 </div>
+<br>
 <p>In the same way, on a <strong>clickable element</strong> like a button whose magnification may become problematic, it's quite possible to use this feature to display its content and to ensure to <strong>trigger its actions when the finger is up</strong>:</p>
 <p><img src="../../images/iOSdev/LargeContentViewer_3.png" alt="" class="img-fluid"></p>
 <div class="code-tab-pane">
@@ -2458,6 +2481,7 @@ class ButtonViewController: UIViewController {
 }
 </code></pre>
 </div>
+<br>
 <p>When <strong>the long press gesture is already implemented on the graphical element</strong>, it may be interesting to use the <code>gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)</code> method that will be helpful to <a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=636">set up the two gestures simutaneously</a>.</p>
 </div>
 <div class="tab-pane" id="largeContentViewer-Links" role="tabpanel">
@@ -2610,6 +2634,7 @@ class StepperWrapper: UIStackView {
 }
 </code></pre>
 </div>
+<br>
 <ul>
 <li>Next, the two methods of the implemented protocol must be defined before updating and vocally presenting the new value in the ViewController.</li>
 </ul>
@@ -2754,6 +2779,8 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
 It was previously offered to every element containing custom actions but, now, <strong>it will occur</strong> when you navigate to another element that <strong>contains a different set of actions</strong>.</p>
 <p>The purpose is to <strong>prevent repetitive announcements</strong> on elements where the same actions are present as the previous element.</p>
 <p>However, a rollback has been made by Apple since <strong>the behavior in iOS 15 is now the same as in iOS 12</strong>.</p>
+<p>⚠️ CAUTION : <strong>check the custom actions activation</strong> via '<code>Settings</code> - <code>Accessibility</code> - <code>VoiceOver</code> - <code>Verbosity</code> - <code>Actions</code>' with <code>Speak</code> ticked. ⚠️<br>
+If not, this feature implementation will be ignore by VoiceOver.</p>
 </div>
 <div class="tab-pane" id="customActions-Example" role="tabpanel">
 <p>Whatever the VoiceOver or the Switch Control feature, the implementation to get the desired actions on a custom element is exactly the same: VoiceOver is the option to illustrate the following example.</p>
@@ -3894,7 +3921,6 @@ class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
   <li>Find all the generated elements in the `Pronunciations` page.</li>
 </ol>
 <p><img src="../../images/iOSdev/SpeechSynthesizerEx_3.png" alt="" class="img-fluid"></p>
-<p>To get the phonetic expression inside the code, pass it through the mobile <code>Notes</code> application to be synchronized with the iCloud one from which a copy-paste becomes easy as a pie.</p>
 </div>
 <div class="tab-pane" id="speechSyn-Links" role="tabpanel">
 <ul>
@@ -3915,7 +3941,7 @@ class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
 </div>
 </div>
 <br>
-<p>All the speech synthesizer functionalities are introduced in a <a href="../wwdc/2018/236">WWDC video</a> <em>(Making iOS talk with AVSpeechSynthesizer)</em> that's perfectly summarized in the WWDC section of this site.<br>
+<p>All the speech synthesizer functionalities are introduced in a <a href="../wwdc/2018/236">WWDC video</a> <em>(Making iOS talk with AVSpeechSynthesizer)</em> that's summarized in the WWDC section of this site.<br>
 <br><br></p>
 <h2 id="switch-control">Switch Control <a class="header-anchor" href="#switch-control" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
