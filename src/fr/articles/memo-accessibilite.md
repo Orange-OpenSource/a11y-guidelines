@@ -2,10 +2,11 @@
 title: "Fiches mémo accessibilité"
 abstract: "Nos fiches mémo sur l'accessibilité numérique à télécharger, à imprimer et à partager"
 titleBeforeTag: true
-date: "2021-12-06"
+date: "2022-11-21"
 tags:  
   - web
   - mobile  
+  - beginner
 ---
 # Nos fiches mémo sur l'accessibilité numérique
 N'oubliez pas les informations essentielles, adoptez nos mémos !
