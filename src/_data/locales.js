@@ -9,6 +9,9 @@ module.exports = {
     skiplinks: {
       label: 'Skip links'
     },
+    lastUpdate: {
+      label : "Updated on"
+    },
     navigation: {
       main: {
         label: 'Main navigation',
@@ -83,6 +86,9 @@ module.exports = {
     },
     skiplinks: {
       label: 'Liens d\'évitements'
+    },
+    lastUpdate: {
+      label : "Mis à jour le"
     },
     navigation: {
       main: {
