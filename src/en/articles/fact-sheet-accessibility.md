@@ -2,7 +2,7 @@
 title: "Accessibility fact sheets"
 abstract: "Our fact sheets on digital accessibility to download, print and share"
 titleBeforeTag: true
-date: "2022-05-31"
+date: "2022-11-21"
 tags:  
   - web
   - mobile  
@@ -159,7 +159,7 @@ Mobile applications:
     </p>        
     <h3 id="tele-tests-web">Download</h4>
     <p>          
-      <a href="../../res/memos/tests-web/Web-tests-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-secondary">
         Download as PDF (325 Ko)
         <span class="visually-hidden">Web test accessibility fact sheet</span>
       </a>
