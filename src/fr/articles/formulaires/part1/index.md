@@ -14,37 +14,37 @@ titleBeforeTag: true
 
 Pour qu’un formulaire soit accessible à l’ensemble des utilisateurs, quelques règles doivent être respectées lors du développement.
 
-Nous verrons dans cette première partie comment bien construire son formulaire, puis dans une deuxième partie la soumission d'un formulaire et les étapes de validation.
+Nous verrons, dans cette première partie, comment bien construire son formulaire, puis, dans une deuxième partie, la soumission d'un formulaire et les étapes de validation.
 
-Nous allons développer un formulaire d'inscription afin de voir toutes les subtilités qu'on peut voir dans un formulaire.
+Nous allons développer un formulaire d'inscription afin de voir toutes les subtilités pour rendre un formulaire accessible.
 
 Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/" target="_blank">la librairie Boosted</a>. Celle-ci permet d’obtenir des formulaires dont le design est conforme à la charte Orange.
 
-## Étiqueter mes champs de formulaires
+## Étiqueter les champs de formulaires
 
-Les étiquettes doivent décrire le rôle du champ de formulaire. Afin que tous les utilisateurs puissent avoir accès à la même information, il est important que ces étiquettes soient correctement associées à leurs champs de formulaire. Pour réaliser ceci il existe plusieurs techniques.</p>
+Les étiquettes doivent décrire le rôle du champ de formulaire. Afin que tous les utilisateurs puissent avoir accès à la même information, il est important que ces étiquettes soient correctement associées à leurs champs de formulaire. Pour réaliser ceci il existe plusieurs techniques.
 
 ### La balise label
 
-La solution privilégiée est l'utilisation de la balise <code>label</code>. C'est la mieux supportée par les technologies d'assistance. Il existe deux manière d'utiliser cette balise <code>label</code> :
+La solution privilégiée est l'utilisation de la balise <code>label</code>. C'est la mieux supportée par les technologies d'assistance. Il existe deux manière d'utiliser cette balise <code>label</code>&nbsp;:
 
 <ul>
-  <li>lié explicitement la balise
+  <li>lier explicitement la balise
     <code>label</code>
     avec son champ en renseignant un attribut
     <code>for</code>
     qui correspondra avec l'<code>id</code>
     du champ de formulaire auquel il est associé</li>
-  <li>lié implicitement la balise
+  <li>lier implicitement la balise
     <code>label</code>
     avec son champ, dans ce cas, la balise
     <code>label</code>
-    sera utilisé comme un conteneur en lui imbriquant un champ de formulaire, La première solution est conseillée.</li>
+    sera utilisée comme un conteneur entourant le champ de formulaire, La première solution est conseillée.</li>
 </ul>
 
 #### Exemple 
 
-Exemple d'étiquettes correctement lié de manière explicite :
+Exemple d'étiquettes correctement liées de manière explicite&nbsp;:
 
 <div class="col-md-8">
   <form id="formulaire" class="border border-secondary p-3 my-2">
@@ -63,7 +63,7 @@ Exemple d'étiquettes correctement lié de manière explicite :
   </form>
 </div>
 
-Exemple de code :
+Exemple de code&nbsp;:
 
 <pre>
   <code class="html">
@@ -86,17 +86,17 @@ Exemple de code :
 
 ### Masquer les étiquettes de manière accessible
 
-Dans certains cas, il peut être utile de masquer l'étiquette visuellement. Attention, on peut masquer les étiquettes seulement si le champ est suffisamment clair dans son contexte, par exemple un champ de recherche à côté d'une icone loupe.
+Dans certains cas, il peut être utile de masquer l'étiquette visuellement. Attention, on peut masquer les étiquettes seulement, si, la fonction champ est suffisamment claire et compréhensible dans son contexte, par exemple, un champ de recherche à côté d'une icone loupe.
 
 Même si l'étiquette est masquée visuellement, elle doit toujours être accessible pour les technologies d'assistances.
 
-Cette méthode consiste a utilisée une classe CSS (utilisation de la classe <code>visually-hidden</code> de Bootstrap/Boosted). L’utilisation du masquage accessible permet de masquer l’élément à l’écran tout en conservant sa vocalisation par les outils ou technologies d’assistance (AT). Attention, ne pas utiliser du masquage CSS classique (<code>display: none;</code> ou <code>visibility: hidden;</code>) car l’élément sera masqué également pour les lecteurs d’écran.
+Cette méthode consiste a utiliser une classe CSS (utilisation de la classe <code>visually-hidden</code> de Bootstrap/Boosted) permettant un masquage accessible. L’utilisation du masquage accessible permet de masquer l’élément à l’écran, tout en conservant sa vocalisation par les outils ou technologies d’assistance (AT). Attention, ne pas utiliser du masquage CSS classique (<code>display: none;</code> ou <code>visibility: hidden;</code>) car l’élément sera masqué également pour les lecteurs d’écran.
 
 Consultez l’exemple sur <a href="../../../masquage-accessible/" target="_blank">l’exemple sur le masquage accessible</a> pour plus l’information.
 
 #### Exemple
 
-Nous allons continuer notre formulaire d'inscription en y rajoutant, deux champs d'édition qui correspondrant à l'adresse et le complément d'adresse, on utilisera le masquage accessible pour ce deuxième champ.
+Nous allons continuer notre formulaire d'inscription en y rajoutant deux champs d'édition qui correspondrant à l'adresse et le complément d'adresse, on utilisera le masquage accessible pour ce deuxième champ.
 
 <div class="col-md-8">
   <form id="formulaire2" class="border border-secondary p-3 my-2">
@@ -112,7 +112,7 @@ Nous allons continuer notre formulaire d'inscription en y rajoutant, deux champs
   </form>
 </div>
 
-Exemple de code :
+Exemple de code&nbsp;:
 
 <pre>
   <code class="html">
@@ -142,7 +142,7 @@ Il est aussi possible d'utiliser les  attributs <code>aria-label</code> et <code
   <li>L’attribut <code>aria-label</code> permet de préciser directement un label sous forme d’une chaîne de caractères. Attention l'information ne sera pas donnée visuellement.</li>
 </ul>
 
-Un exemple possible : 
+Un exemple possible&nbsp;: 
 
 <pre>
   <code class="html">
@@ -154,9 +154,9 @@ Un exemple possible :
 
 ### L'attribut title
 
-L’attribut <code>title</code> n’est pas suffisamment robuste pour l’accessibilité sauf dans ce cas précis, en permettant d’étiqueter un champ de formulaire de manière accessible. Il déclenchera également l’affichage d’une info-bulle au survol de l’élément avec la souris, bonne chose pour les déficients cognitifs, les malvoyants.
+L’attribut <code>title</code> n’est pas suffisamment robuste pour être compatible avec l’accessibilité sauf, dans ce cas précis, en permettant d’étiqueter un champ de formulaire de manière accessible. Il déclenchera également l’affichage d’une info-bulle au survol de l’élément avec la souris, bonne chose pour les déficients cognitifs, les novices du numérique.
 
-Attention, nous pourrons être tentés d'utiliser l'attribut <code>placeholder</code>. Cet attribut n'est pas assez robuste, en effet :
+Attention, vous pourrions être tentés d'utiliser l'attribut <code>placeholder</code>. Cet attribut n'est pas assez robuste, en effet&nbsp;:
 
 <ul>
   <li>le texte du <code>placeholder</code> qui s’affiche dans le champ n’est généralement pas assez contrasté&nbsp;;
@@ -174,13 +174,13 @@ En revanche, le <code>placeholder</code> peut servir de guide, d’aide pour rem
 ## Regrouper les champs de même nature
 
 Lorsque nécessaire, il est important de regrouper les champs de même nature, ça permettra de rendre l'ensemble du formulaire plus compréhensible.
-La plupart du temps, on regroupe nos boutons radio, ou nos cases à cocher, afin d'identifier une entête pour ces éléments.
+La plupart du temps, on regroupe nos boutons radio, ou nos cases à cocher, afin d'associer une entête à ces éléments.
 
-Pour les regrouper, on utilise la balise <code>fieldset</code>, qui aura en premier élément la balise <code>legend</code> qui servira d'entête à nos champs de même nature.
+Pour les regrouper, on utilise la balise <code>fieldset</code>, qui aura comme premier enfaant la balise <code>legend</code> qui servira d'entête à nos champs regroupés.
 
 ### Exemple
 
-Dans notre formulaire d'inscription on peut ajouter le genre de notre utilisateur, on va implémenter des boutons radio, et on va le regrouper avec l'entête <strong>Genre</strong>
+Dans notre formulaire d'inscription, on peut ajouter le genre de notre utilisateur. Pour cela, on va implémenter des boutons radio, et les regrouper avec l'entête <strong>Genre</strong>
 
 <div class="col-md-8">
   <form id="formulaire3" class="border border-secondary p-3 my-2">
@@ -203,7 +203,7 @@ Dans notre formulaire d'inscription on peut ajouter le genre de notre utilisateu
   </form>
 </div>
 
-Un exemple possible : 
+Un exemple possible&nbsp;: 
 
 <pre>
   <code class="html">
@@ -232,9 +232,9 @@ Un exemple possible :
 
 ## Préciser le type ou le format attendu
 
-Pour aider l'utilisateur, il est aussi important de lui préciser le type ou le format attendu quand c'est nécessaire. Par exemple pour une date de naissance, il faut lui indiquer le format de saisie (jj/mm/aaaa).
+Pour aider l'utilisateur, il est aussi important de lui préciser le type ou le format attendu lorsque nécessaire. Par exemple, pour une date de naissance, on doit, si besoin, lui indiquer le format de saisie (jj/mm/aaaa).
 
-Pour informer l'utilisateur, on peut :
+Pour informer l'utilisateur, on peut&nbsp;:
 
 <ul>
   <li>fournir les instructions dans le label</li>
@@ -246,7 +246,7 @@ Pour informer l'utilisateur, on peut :
 
 Pour notre formulaire d'inscription, nous allons rajouter un champ mot de passe en précisant le format que l'on souhaite.
 
-Lorsqu'on ajoute un champ mot de passe il est aussi important de laisser la possibilité d'afficher ou de cacher le mot de passe, ça permettra aux utilisateurs atteint de troubles moteurs ou cognitifs de rentrer l'information plus facilement
+Lorsqu'on ajoute un champ mot de passe, il est aussi important de laisser la possibilité d'afficher ou de cacher le mot de passe. Cela permet aux utilisateurs atteint de troubles moteurs, de l'attention ou cognitifs d'éviter d'éventuelles erreurs de saisie.
 
 <div class="col-md-8">
   <form id="formulaire4" class="border border-secondary p-3 my-2">
@@ -274,7 +274,7 @@ Lorsqu'on ajoute un champ mot de passe il est aussi important de laisser la poss
   </form>
 </div>
 
-Un exemple possible : 
+Un exemple possible&nbsp;: 
 
 <pre>
   <code class="html">
@@ -301,7 +301,7 @@ Un exemple possible :
 
 ## Exemple complet
 
-L'exemple complet avec tous les éléments que l'on a passés en revue, dans la deuxième partie on verra comment valider et gérer les messages d'erreurs.
+L'exemple complet avec tous les éléments que l'on a passé en revue, dans la deuxième partie, on verra comment valider le formulaire et gérer les messages d'erreurs.
 
 <div class="col-md-8">
   <form id="formulaire_final" class="border border-secondary p-3 my-2">
