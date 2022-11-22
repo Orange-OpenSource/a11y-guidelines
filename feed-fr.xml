@@ -4,7 +4,7 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com"/>
-  <updated>2022-11-03T00:00:00Z</updated>
+  <updated>2022-11-21T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com</id>
   
   <entry>
@@ -1510,197 +1510,6 @@ En particulier, les caractéristiques suivantes de l&#39;élément : sa fonction
   </entry>
   
   <entry>
-    <title>Fiches mémo accessibilité</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/"/>
-    <updated>2021-12-06T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/</id>
-    <content type="html">&lt;h1&gt;Nos fiches mémo sur l&#39;accessibilité numérique&lt;/h1&gt;
-&lt;p&gt;N&#39;oubliez pas les informations essentielles, adoptez nos mémos !&lt;/p&gt;
-&lt;h2 id=&quot;quest-ce-que-cest&quot;&gt;Qu&#39;est-ce que c&#39;est ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#quest-ce-que-cest&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Il s&#39;agit de pense-bêtes disponibles au format PDF. Vous pouvez les imprimer sur une feuille recto verso puis les plier en accordéon pour former un petit fascicule à conserver sous la main ou à partager.&lt;/p&gt;
-&lt;h2 id=&quot;liste-des-memos&quot;&gt;Liste des mémos &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#liste-des-memos&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Pages Web :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-des-pages-web-accessibles&quot;&gt;Développer des pages Web accessibles&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#tester-laccessibilite-de-pages-web&quot;&gt;Tester l&#39;accessibilité de pages Web&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Applications mobiles :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-une-application-android-accessible&quot;&gt;Développer une application Android accessible&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-une-application-ios-accessible&quot;&gt;Développer une application iOS accessible&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Documents office :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-email-accessible&quot;&gt;Rédiger un Email accessible&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-document-word-accessible&quot;&gt;Rédiger un document Word accessible&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-document-excel-accessible&quot;&gt;Rédiger un document Excel accessible&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-une-presentation-powerpoint-accessible&quot;&gt;Rédiger une présentation PowerPoint accessible&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h2 id=&quot;developper-des-pages-web-accessibles&quot;&gt;Développer des pages Web accessibles &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-des-pages-web-accessibles&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-3&quot;&gt;
-    &lt;p class=&quot;border-end&quot;&gt;
-      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-dev-web.png&quot; alt=&quot;&quot; /&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-xl-9&quot;&gt;  
-    &lt;h3 id=&quot;desc-web&quot;&gt;Description
-    &lt;p&gt;Mémo à destination des développeurs Web.&lt;/p&gt;
-    &lt;p&gt;Rappel des techniques et outils indispensables pour développer un site web accessible.&lt;/p&gt;        
-    &lt;h3 id=&quot;tele-web&quot;&gt;Téléchargement
-    &lt;p&gt;          
-      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/dev-web/Memo-Web-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
-        Télécharger au format PDF (272 Ko)
-        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo accessibilité développement Web&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;h2 id=&quot;tester-laccessibilite-de-pages-web&quot;&gt;Tester l&#39;accessibilité de pages Web &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#tester-laccessibilite-de-pages-web&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-3&quot;&gt;
-    &lt;p class=&quot;border-end&quot;&gt;
-      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-tests-web.png&quot; alt=&quot;&quot; /&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-xl-9&quot;&gt;  
-    &lt;h3 id=&quot;desc-tests-web&quot;&gt;Description
-    &lt;p&gt;Mémo à destination des personnes qui réalisent des tests Web d&#39;accessibilité.&lt;/p&gt;
-    &lt;p&gt;Rappel des outils et des principaux tests à effectuer pour vérifier l&#39;accessibilité d&#39;une page Web.&lt;/p&gt;
-    &lt;p&gt;&lt;/p&gt;        
-    &lt;h3 id=&quot;tele-tests-web&quot;&gt;Téléchargement
-    &lt;p&gt;          
-      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/tests-web/Memo-Tests-Web-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
-        Télécharger au format PDF (335 Ko)
-        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo accessibilité les tests Web&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;h2 id=&quot;developper-une-application-android-accessible&quot;&gt;Développer une application Android accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-une-application-android-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-3&quot;&gt;
-    &lt;p class=&quot;border-end&quot;&gt;
-      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-android.png&quot; alt=&quot;&quot; /&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-xl-9&quot;&gt;  
-    &lt;h3 id=&quot;desc-android&quot;&gt;Description
-    &lt;p&gt;Mémo à destination des développeurs Android.&lt;/p&gt;
-    &lt;p&gt;Rappel des techniques et outils indispensables pour développer un application Android accessible.&lt;/p&gt;
-    &lt;h3 id=&quot;tele-android&quot;&gt;Téléchargement
-    &lt;p&gt;         
-      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/android/Memo-Android-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
-        Télécharger au format PDF (261 Ko)
-        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo accessibilité développement Android&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;h2 id=&quot;developper-une-application-ios-accessible&quot;&gt;Développer une application iOS accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-une-application-ios-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-3&quot;&gt;
-    &lt;p class=&quot;border-end&quot;&gt;
-      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-ios.png&quot; alt=&quot;&quot; /&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-xl-9&quot;&gt;  
-    &lt;h3 id=&quot;desc-ios&quot;&gt;Description
-    &lt;p&gt;Mémo à destination des développeurs iOS.&lt;/p&gt;&lt;p&gt;
-    &lt;/p&gt;&lt;p&gt;Rappel des techniques et outils indispensables pour développer un application iOS accessible.&lt;/p&gt;
-    &lt;h3 id=&quot;tele-ios&quot;&gt;Téléchargement
-    &lt;p&gt;      
-      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/ios/Memo-iOS-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
-        Télécharger au format PDF (263 Ko)
-        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo accessibilité développement iOS&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;hr /&gt;
-&lt;h2 id=&quot;rediger-un-email-accessible&quot;&gt;Rédiger un email accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-email-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-3&quot;&gt;
-    &lt;p class=&quot;border-end&quot;&gt;
-      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-email.png&quot; alt=&quot;&quot; /&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-xl-9&quot;&gt;  
-    &lt;h3 id=&quot;desc-email&quot;&gt;Description
-    &lt;p&gt;Rappel des bonnes pratiques pour rédiger un email accessible.&lt;/p&gt;
-    &lt;h3 id=&quot;tele-email&quot;&gt;Téléchargement
-    &lt;p&gt;      
-      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/email/Memo-Email-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
-        Télécharger au format PDF (283 Ko)
-        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo rédiger un email accessible&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;h2 id=&quot;rediger-un-document-word-accessible&quot;&gt;Rédiger un document Word accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-document-word-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-3&quot;&gt;
-    &lt;p class=&quot;border-end&quot;&gt;
-      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-word.png&quot; alt=&quot;&quot; /&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-xl-9&quot;&gt;  
-    &lt;h3 id=&quot;desc-word&quot;&gt;Description
-    &lt;p&gt;Rappel des bonnes pratiques pour rédiger un document Word accessible.&lt;/p&gt;
-    &lt;h3 id=&quot;tele-word&quot;&gt;Téléchargement
-    &lt;p&gt;      
-      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/word/Memo-Word-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
-        Télécharger au format PDF (236 Ko)
-        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo rédiger un document Word accessible&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;h2 id=&quot;rediger-un-document-excel-accessible&quot;&gt;Rédiger un document Excel accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-document-excel-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-3&quot;&gt;
-    &lt;p class=&quot;border-end&quot;&gt;
-      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-excel.png&quot; alt=&quot;&quot; /&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-xl-9&quot;&gt;  
-    &lt;h3 id=&quot;desc-word&quot;&gt;Description
-    &lt;p&gt;Rappel des bonnes pratiques pour rédiger un document Excel accessible.&lt;/p&gt;
-    &lt;h3 id=&quot;tele-word&quot;&gt;Téléchargement
-    &lt;p&gt;      
-      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/excel/Memo-Excel-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
-        Télécharger au format PDF (256 Ko)
-        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo rédiger un document Excel accessible&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;h2 id=&quot;rediger-une-presentation-powerpoint-accessible&quot;&gt;Rédiger une présentation PowerPoint accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-une-presentation-powerpoint-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-3&quot;&gt;
-    &lt;p class=&quot;border-end&quot;&gt;
-      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-powerpoint.png&quot; alt=&quot;&quot; /&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-xl-9&quot;&gt;  
-    &lt;h3 id=&quot;desc-word&quot;&gt;Description
-    &lt;p&gt;Rappel des bonnes pratiques pour rédiger une présentation PowerPoint accessible.&lt;/p&gt;
-    &lt;h3 id=&quot;tele-word&quot;&gt;Téléchargement
-    &lt;p&gt;      
-      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/pwp/Memo-PowerPoint-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
-        Télécharger au format PDF (294 Ko)
-        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo rédiger une présentation PowerPoint accessible&lt;/span&gt;
-      &lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
-&lt;/div&gt;</content>
-  </entry>
-  
-  <entry>
     <title>Veille #A11y Décembre-Janvier 2022</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/veille-decembre-janvier-2022/"/>
     <updated>2022-02-02T00:00:00Z</updated>
@@ -2972,5 +2781,196 @@ Bon assez de temps perdu, on y va !&lt;/p&gt;
 &lt;li&gt;Des design patterns pour la santé mentale (en) : &lt;a href=&quot;https://ericwbailey.website/published/yes-accessibility-is-also-a-backend-concern/&quot;&gt;https://ericwbailey.website/published/yes-accessibility-is-also-a-backend-concern/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content>
+  </entry>
+  
+  <entry>
+    <title>Fiches mémo accessibilité</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/"/>
+    <updated>2022-11-21T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/</id>
+    <content type="html">&lt;h1&gt;Nos fiches mémo sur l&#39;accessibilité numérique&lt;/h1&gt;
+&lt;p&gt;N&#39;oubliez pas les informations essentielles, adoptez nos mémos !&lt;/p&gt;
+&lt;h2 id=&quot;quest-ce-que-cest&quot;&gt;Qu&#39;est-ce que c&#39;est ? &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#quest-ce-que-cest&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Il s&#39;agit de pense-bêtes disponibles au format PDF. Vous pouvez les imprimer sur une feuille recto verso puis les plier en accordéon pour former un petit fascicule à conserver sous la main ou à partager.&lt;/p&gt;
+&lt;h2 id=&quot;liste-des-memos&quot;&gt;Liste des mémos &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#liste-des-memos&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Pages Web :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-des-pages-web-accessibles&quot;&gt;Développer des pages Web accessibles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#tester-laccessibilite-de-pages-web&quot;&gt;Tester l&#39;accessibilité de pages Web&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Applications mobiles :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-une-application-android-accessible&quot;&gt;Développer une application Android accessible&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-une-application-ios-accessible&quot;&gt;Développer une application iOS accessible&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Documents office :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-email-accessible&quot;&gt;Rédiger un Email accessible&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-document-word-accessible&quot;&gt;Rédiger un document Word accessible&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-document-excel-accessible&quot;&gt;Rédiger un document Excel accessible&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-une-presentation-powerpoint-accessible&quot;&gt;Rédiger une présentation PowerPoint accessible&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;developper-des-pages-web-accessibles&quot;&gt;Développer des pages Web accessibles &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-des-pages-web-accessibles&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-dev-web.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-web&quot;&gt;Description
+    &lt;p&gt;Mémo à destination des développeurs Web.&lt;/p&gt;
+    &lt;p&gt;Rappel des techniques et outils indispensables pour développer un site web accessible.&lt;/p&gt;        
+    &lt;h3 id=&quot;tele-web&quot;&gt;Téléchargement
+    &lt;p&gt;          
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/dev-web/Memo-Web-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Télécharger au format PDF (272 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo accessibilité développement Web&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;tester-laccessibilite-de-pages-web&quot;&gt;Tester l&#39;accessibilité de pages Web &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#tester-laccessibilite-de-pages-web&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-tests-web.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-tests-web&quot;&gt;Description
+    &lt;p&gt;Mémo à destination des personnes qui réalisent des tests Web d&#39;accessibilité.&lt;/p&gt;
+    &lt;p&gt;Rappel des outils et des principaux tests à effectuer pour vérifier l&#39;accessibilité d&#39;une page Web.&lt;/p&gt;
+    &lt;p&gt;&lt;/p&gt;        
+    &lt;h3 id=&quot;tele-tests-web&quot;&gt;Téléchargement
+    &lt;p&gt;          
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/tests-web/Memo-Tests-Web-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Télécharger au format PDF (335 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo accessibilité les tests Web&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;developper-une-application-android-accessible&quot;&gt;Développer une application Android accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-une-application-android-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-android.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-android&quot;&gt;Description
+    &lt;p&gt;Mémo à destination des développeurs Android.&lt;/p&gt;
+    &lt;p&gt;Rappel des techniques et outils indispensables pour développer un application Android accessible.&lt;/p&gt;
+    &lt;h3 id=&quot;tele-android&quot;&gt;Téléchargement
+    &lt;p&gt;         
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/android/Memo-Android-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Télécharger au format PDF (261 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo accessibilité développement Android&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;developper-une-application-ios-accessible&quot;&gt;Développer une application iOS accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#developper-une-application-ios-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-ios.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-ios&quot;&gt;Description
+    &lt;p&gt;Mémo à destination des développeurs iOS.&lt;/p&gt;&lt;p&gt;
+    &lt;/p&gt;&lt;p&gt;Rappel des techniques et outils indispensables pour développer un application iOS accessible.&lt;/p&gt;
+    &lt;h3 id=&quot;tele-ios&quot;&gt;Téléchargement
+    &lt;p&gt;      
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/ios/Memo-iOS-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Télécharger au format PDF (263 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo accessibilité développement iOS&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;rediger-un-email-accessible&quot;&gt;Rédiger un email accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-email-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-email.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-email&quot;&gt;Description
+    &lt;p&gt;Rappel des bonnes pratiques pour rédiger un email accessible.&lt;/p&gt;
+    &lt;h3 id=&quot;tele-email&quot;&gt;Téléchargement
+    &lt;p&gt;      
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/email/Memo-Email-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Télécharger au format PDF (283 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo rédiger un email accessible&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;rediger-un-document-word-accessible&quot;&gt;Rédiger un document Word accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-document-word-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-word.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-word&quot;&gt;Description
+    &lt;p&gt;Rappel des bonnes pratiques pour rédiger un document Word accessible.&lt;/p&gt;
+    &lt;h3 id=&quot;tele-word&quot;&gt;Téléchargement
+    &lt;p&gt;      
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/word/Memo-Word-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Télécharger au format PDF (236 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo rédiger un document Word accessible&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;rediger-un-document-excel-accessible&quot;&gt;Rédiger un document Excel accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-un-document-excel-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-excel.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-word&quot;&gt;Description
+    &lt;p&gt;Rappel des bonnes pratiques pour rédiger un document Excel accessible.&lt;/p&gt;
+    &lt;h3 id=&quot;tele-word&quot;&gt;Téléchargement
+    &lt;p&gt;      
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/excel/Memo-Excel-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Télécharger au format PDF (256 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo rédiger un document Excel accessible&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&quot;rediger-une-presentation-powerpoint-accessible&quot;&gt;Rédiger une présentation PowerPoint accessible &lt;a class=&quot;header-anchor&quot; href=&quot;https://a11y-guidelines.orange.com/fr/articles/memo-accessibilite/#rediger-une-presentation-powerpoint-accessible&quot; aria-labelledby=&quot;a11y_heading_anchor_label&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3&quot;&gt;
+    &lt;p class=&quot;border-end&quot;&gt;
+      &lt;img src=&quot;https://a11y-guidelines.orange.com/fr/articles/images/memos/memo-powerpoint.png&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-xl-9&quot;&gt;  
+    &lt;h3 id=&quot;desc-word&quot;&gt;Description
+    &lt;p&gt;Rappel des bonnes pratiques pour rédiger une présentation PowerPoint accessible.&lt;/p&gt;
+    &lt;h3 id=&quot;tele-word&quot;&gt;Téléchargement
+    &lt;p&gt;      
+      &lt;a href=&quot;https://a11y-guidelines.orange.com/fr/res/memos/pwp/Memo-PowerPoint-Orange.pdf&quot; class=&quot;btn btn-secondary&quot;&gt;
+        Télécharger au format PDF (294 Ko)
+        &lt;span class=&quot;visually-hidden&quot;&gt;Mémo rédiger une présentation PowerPoint accessible&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/h3&gt;&lt;/h3&gt;&lt;/div&gt;
+&lt;/div&gt;</content>
   </entry>
 </feed>
