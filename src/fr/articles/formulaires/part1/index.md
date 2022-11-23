@@ -1,7 +1,7 @@
 ---
 title: "Formulaire partie 1 - Structurer son formulaire"
 abstract: "Exemple de formulaire accessible."
-date: "2022-11-02"
+date: "2022-11-23"
 tags:
   - web
   - intermediate
@@ -92,43 +92,19 @@ Même si l'étiquette est masquée visuellement, elle doit toujours être access
 
 Cette méthode consiste a utiliser une classe CSS (utilisation de la classe <code>visually-hidden</code> de Bootstrap/Boosted) permettant un masquage accessible. L’utilisation du masquage accessible permet de masquer l’élément à l’écran, tout en conservant sa vocalisation par les outils ou technologies d’assistance (AT). Attention, ne pas utiliser du masquage CSS classique (<code>display: none;</code> ou <code>visibility: hidden;</code>) car l’élément sera masqué également pour les lecteurs d’écran.
 
-Consultez l’exemple sur <a href="../../../masquage-accessible/" target="_blank">l’exemple sur le masquage accessible</a> pour plus l’information.
+Consultez l’exemple sur <a href="../../../web/exemples-de-composants/masquage-accessible/" target="_blank">l’exemple sur le masquage accessible</a> pour plus l’information.
 
 #### Exemple
 
-Nous allons continuer notre formulaire d'inscription en y rajoutant deux champs d'édition qui correspondrant à l'adresse et le complément d'adresse, on utilisera le masquage accessible pour ce deuxième champ.
-
-<div class="col-md-8">
-  <form id="formulaire2" class="border border-secondary p-3 my-2">
-    [...]
-    <div class="mb-2">
-      <label for="adresse" class="form-label">Adresse</label>
-      <input type="text" class="form-control" id="adresse"/>
-    </div>
-    <div class="mb-2">
-      <label for="adresse2" class="form-label visually-hidden">Complément d'adresse</label>
-      <input type="text" class="form-control" id="adresse2"/>
-    </div>
-  </form>
-</div>
+Par exemple, nous pourrions utiliser le masquage accessible pour un champ de recherche, si un bouton avec pour libellé recherche, ou une image loupe, est à coté du champ, nous pourrions cacher l'étiquette du champ afin d'éviter une redondance.
 
 Exemple de code&nbsp;:
 
 <pre>
   <code class="html">
-  &lt;div class="col-md-8"&gt;
-    &lt;form id="formulaire" class="border border-secondary p-3 my-2"&gt;
-      [...]
-      &lt;div class="mb-2"&gt;
-        &lt;label for="adresse" class="form-label"&gt;Adresse&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="adresse"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="adresse2" class="form-label visually-hidden"&gt;Complément d'adresse&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="adresse2"/&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
+    &lt;label for="recherche" class="visually-hidden"&gt;Recherche: &lt;/label&gt;
+    &lt;input type="text" name="recherche" id="recherche"&gt;
+    &lt;button type="submit"&gt;Recherche&lt;/button&gt;
   </code>
 </pre> 
 
@@ -146,9 +122,8 @@ Un exemple possible&nbsp;:
 
 <pre>
   <code class="html">
-    &lt;span id="label-adress"&gt;Adresse *&lt;/span&gt;
-    &lt;input type="text" aria-labelledby="label-adress"&gt;
-    &lt;input type="text" aria-label="complément d’adresse"&gt;
+    &lt;input type="text" name="recherche" aria-labelledby="recherche"&gt;
+    &lt;button id="recherche" type="submit" class="icon-loup" aria-label="Recherche"&gt;&lt;/button&gt;
   </code>
 </pre>
 
@@ -156,7 +131,7 @@ Un exemple possible&nbsp;:
 
 L’attribut <code>title</code> n’est pas suffisamment robuste pour être compatible avec l’accessibilité sauf, dans ce cas précis, en permettant d’étiqueter un champ de formulaire de manière accessible. Il déclenchera également l’affichage d’une info-bulle au survol de l’élément avec la souris, bonne chose pour les déficients cognitifs, les novices du numérique.
 
-Attention, vous pourrions être tentés d'utiliser l'attribut <code>placeholder</code>. Cet attribut n'est pas assez robuste, en effet&nbsp;:
+Attention, nous pourrions être tentés d'utiliser l'attribut <code>placeholder</code>. Cet attribut n'est pas assez robuste, en effet&nbsp;:
 
 <ul>
   <li>le texte du <code>placeholder</code> qui s’affiche dans le champ n’est généralement pas assez contrasté&nbsp;;
@@ -176,7 +151,7 @@ En revanche, le <code>placeholder</code> peut servir de guide, d’aide pour rem
 Lorsque nécessaire, il est important de regrouper les champs de même nature, ça permettra de rendre l'ensemble du formulaire plus compréhensible.
 La plupart du temps, on regroupe nos boutons radio, ou nos cases à cocher, afin d'associer une entête à ces éléments.
 
-Pour les regrouper, on utilise la balise <code>fieldset</code>, qui aura comme premier enfaant la balise <code>legend</code> qui servira d'entête à nos champs regroupés.
+Pour les regrouper, on utilise la balise <code>fieldset</code>, qui aura comme premier enfant la balise <code>legend</code> qui servira d'entête à nos champs regroupés.
 
 ### Exemple
 
@@ -254,7 +229,7 @@ Lorsqu'on ajoute un champ mot de passe, il est aussi important de laisser la pos
     <div class="mb-2 input-group">
       <input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/>
       <span class="input-group-text">
-        <button type="button" class="btn btn-icon btn-sm" id="password_visibility" title="Afficher le mot de passe" >
+        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility" title="Afficher le mot de passe" >
           <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
             <defs>
               <style>
@@ -284,7 +259,7 @@ Un exemple possible&nbsp;:
       &lt;div class="mb-2 input-group"&gt;
         &lt;input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/&gt;
         &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-sm" id="password_visibility" title="Afficher le mot de passe" &gt;
+          &lt;button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility" title="Afficher le mot de passe" &gt;
             &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
               [...]
             &lt;/svg&gt;
@@ -301,7 +276,8 @@ Un exemple possible&nbsp;:
 
 ## Exemple complet
 
-L'exemple complet avec tous les éléments que l'on a passé en revue, dans la deuxième partie, on verra comment valider le formulaire et gérer les messages d'erreurs.
+L'exemple complet avec tous les éléments que l'on a passés en revue, dans la deuxième partie, on verra comment valider le formulaire et gérer les messages d'erreurs.
+Pour la suite de l'exercie et compléter notre formulaire d'inscription, nous avons rajouté des champs pour l'adresse (adresse, ville, code postal).
 
 <div class="col-md-8">
   <form id="formulaire_final" class="border border-secondary p-3 my-2">
@@ -313,7 +289,7 @@ L'exemple complet avec tous les éléments que l'on a passé en revue, dans la d
     <div class="mb-2 input-group">
       <input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/>
       <span class="input-group-text">
-        <button type="button" class="btn btn-icon btn-sm" id="password_visibility_final" title="Afficher le mot de passe" >
+        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Afficher le mot de passe" >
           <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
             <defs>
               <style>
@@ -358,8 +334,81 @@ L'exemple complet avec tous les éléments que l'on a passé en revue, dans la d
       <input type="text" class="form-control" id="adresse_final"/>
     </div>
     <div class="mb-2">
-      <label for="adresse2_final" class="form-label visually-hidden">Complément d'adresse</label>
+      <label for="adresse2_final" class="form-label">Complément d'adresse</label>
       <input type="text" class="form-control" id="adresse2_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="ville_final" class="form-label">Ville</label>
+      <input type="text" class="form-control" id="ville_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="cp_final" class="form-label">Code postal</label>
+      <input type="text" class="form-control" id="cp_final"/>
     </div>
   </form>
 </div>
+
+Le code final : 
+<pre>
+  <code class="html">
+  &lt;div class="col-md-8"&gt;
+    &lt;form id="formulaire_final" class="border border-secondary p-3 my-2"&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="email_final" class="form-label"&gt;Email&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="email_final"/&gt;
+      &lt;/div&gt;
+      &lt;label for="password_final" class="form-label"&gt;Mot de passe &lt;/label&gt;
+      &lt;div class="mb-2 input-group"&gt;
+        &lt;input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/&gt;
+        &lt;span class="input-group-text"&gt;
+          &lt;button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Afficher le mot de passe" &gt;
+            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;&lt;/svg&gt;
+          &lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id="passwordHelpBlock_final" class="form-text"&gt;
+          Votre mot de passe doit contenir minimum 6 caractères.
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="name_final" class="form-label"&gt;Nom&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="name_final"/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="firstname_final" class="form-label"&gt;Prénom&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="firstname_final"/&gt;
+      &lt;/div&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Genre&lt;/legend&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M"&gt;
+          &lt;label class="form-check-label" for="M_final"&gt;M&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme"&gt;
+          &lt;label class="form-check-label" for="Mme_final"&gt;Mme&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Non-binaire_final" value="Non-binaire" &gt;
+          &lt;label class="form-check-label" for="Non-binaire_final"&gt;Non-binaire&lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/fieldset&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="adresse_final" class="form-label"&gt;Adresse&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="adresse_final"/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="adresse2_final" class="form-label"&gt;Complément d'adresse&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="adresse2_final"/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="ville_final" class="form-label"&gt;Ville&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="ville_final"/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="cp_final" class="form-label"&gt;Code postal&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="cp_final"/&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  </code>
+</pre>
