@@ -4,6 +4,8 @@ abstract: "iOS changelog"
 displayToc: false
 ---
 
+**22/11/14** ⟹ Updates for swift 5.7, Xcode 14 and iOS 16
+
 **22/08/26** ⟹ WWDC 2022 <a href="../wwdc/2022/10152/">🎬</a> Create accessible Single App Mode experiences
 
 **22/01/03** ⟹ added WWDC detailed summaries <a href="../wwdc/nota11y">🔖</a>

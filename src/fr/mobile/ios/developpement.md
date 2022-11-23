@@ -10,7 +10,7 @@ Ce guide a pour objectif de présenter les différentes notions d’accessibilit
 
 - des explications détaillées concernant les attributs et méthodes d'accessibilité,
 
-- des exemples de code en **Swift&nbsp;5.5** et en **Objective&nbsp;C** sous {**Xcode&nbsp;13** ; **iOS&nbsp;15**},
+- des exemples de code en **Swift&nbsp;5.7** et en **Objective&nbsp;C** sous {**Xcode&nbsp;14** ; **iOS&nbsp;16**},
 
 - des liens vers la [`documentation officielle Apple`](https://developer.apple.com/documentation/uikit/accessibility).
 
@@ -733,6 +733,8 @@ Si on utilise l'attribut `accessibilityLanguage` sur un `UILabel`, alors celui-c
 
 </div>
 
+<br>
+
 Si l'on souhaite ajouter un mot dans une langue spécifique au sein d'une phrase à prononcer de façon appropriée avec VoiceOver, on peut s'appuyer sur les **Attributed Accessibility Properties** en utilisant un `NSAttributedString` [depuis iOS&nbsp;11](https://a11y-guidelines.orange.com/fr/mobile/ios/wwdc/2017/215/#attributed-accessibility-properties-2607).
 </div>
 <div class="tab-pane" id="changeLang-Links" role="tabpanel">
@@ -1338,7 +1340,7 @@ On crée deux vues au sein desquelles on incorpore les chiffres qu'on souhaite v
      id="CuCoPro-Description"
      role="tabpanel">
      
-Cette **nouveauté iOS&nbsp;14** passée incognito lors de la WWDC 2020 est pourtant véritablement essentielle pour améliorer de façon significative le confort d'utilisation de <span lang="en">VoiceOver</span>... même si une [présentation dédiée](../wwdc/2021/121) a été réalisée tardivement lors de la WWDC 2021.
+Cette **nouveauté iOS&nbsp;14** passée incognito lors de la WWDC&nbsp;2020 est pourtant véritablement essentielle pour améliorer de façon significative le confort d'utilisation de <span lang="en">VoiceOver</span>... même si une [présentation dédiée](../wwdc/2021/121) a été réalisée tardivement lors de la WWDC&nbsp;2021.
 
 L'objectif principal du **fournisseur de contenu personnalisé** réside dans une navigation plus rapide au sein d'une interface riche en détails auxquels l'utilisateur peut accéder sans être obligé de subir la vocalisation d'éléments parasites avant d'obtenir ce qui l'intéresse.
 
@@ -1409,6 +1411,8 @@ class MyCustomView: UIImageView, AXCustomContentProvider {
 
 </div>
 
+<br>
+
 ... on crée chaque élément à vocaliser lors du balayage vertical avec un doigt&nbsp;:
 
 <div class="code-tab-pane">
@@ -1471,7 +1475,7 @@ class ViewController: UIViewController {
 
 - [Customized Accessibility Content](https://developer.apple.com/documentation/accessibility/customized_accessibility_content/).
 
-- L'[article de Rob Whitaker](https://mobilea11y.com/blog/custom-accessibility-content/) apporte une belle description pédagogique de cette nouvelle fonctionnalité qu'il est un des seuls aujourd'hui à exposer à l'issue de la WWDC 2020.
+- L'[article de Rob Whitaker](https://mobilea11y.com/blog/custom-accessibility-content/) apporte une belle description pédagogique de cette nouvelle fonctionnalité qu'il est un des seuls à avoir exposé à l'issue de la WWDC 2020.
 
 - [WWDC 2021 : Optimiser VoiceOver dans un contexte riche en données](../wwdc/2021/121).
 </div>
@@ -1949,9 +1953,16 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
            data-bs-toggle="tab" 
+           href="#TextSize-iOS16"
+           role="tab" 
+           aria-selected="true">iOS 16</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link" 
+           data-bs-toggle="tab" 
            href="#TextSize-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="false">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
@@ -1962,7 +1973,13 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
-     id="TextSize-iOS13"
+     id="TextSize-iOS16"
+     role="tabpanel">
+     
+![](../../images/iOSdev/TailleDesTextes_iOS16_1.png)
+</div>
+<div class="tab-pane" 
+     id="TextSize-iOS13" 
      role="tabpanel">
      
 ![](../../images/iOSdev/TailleDesTextes_iOS13_1.png)
@@ -2009,9 +2026,12 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
 </code></pre>
 
 </div>
+
+<br>
+
  - penser à écouter la notification **UIContentSizeCategoryDidChange** qui annonce le changement de la taille du texte à partir des paramètres du téléphone.
  Cette tâche est simplifiée depuis iOS10 où l'attribut **adjustsFontForContentSizeCategory** se charge de la mise à jour automatique de la nouvelle taille de la police système au sein de l'application (cet attribut ne peut s'appliquer aux polices personnalisées qu'avec l'utilisation de `UIFontMetrics` depuis iOS11).
-Il est aussi possible d'utiliser la méthode **[traitCollectionDidChange](../wwdc/2017/245/#exemple-2432)** du protocole informel `UITraitEnvironment` qui sera automatiquement appelée dès qu'une modification concernant l'environnement de l'interface iOS surviendra (class/content size, portrait/paysage, constraste des couleurs...),
+<br>Il est aussi possible d'utiliser la méthode **[traitCollectionDidChange](../wwdc/2017/245/#exemple-2432)** du protocole informel `UITraitEnvironment` qui sera automatiquement appelée dès qu'une modification concernant l'environnement de l'interface iOS surviendra (class/content size, portrait/paysage, constraste des couleurs...),
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">
@@ -2049,6 +2069,9 @@ Il est aussi possible d'utiliser la méthode **[traitCollectionDidChange](../wwd
 </code></pre>
 
 </div>
+
+<br>
+
  - ne pas oublier d'adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l'utilisation de valeurs dynamiques : penser à paramétrer les éléments inclus dans les navigation/tab/status bar et toolbar qui seront affichés via le **[Large Content Viewer](../wwdc/2019/261)**,
  
  - penser à adapter le [contraste des couleurs](../conception#couleurs) à la taille de texte modifiée si nécessaire.
@@ -2213,7 +2236,6 @@ En suivant les différentes étapes ci-dessous, vous obtiendrez l'effet défini 
 ![](../../images/iOSdev/TailleDesEltsGraphiques_4.png)
 
 3. Si un <span lang="en">storyboard</span> est utilisé pour intégrer l'image, cocher `Adjusts Image Size` dans la partie <span lang="en">Image View</span>, sinon mettre à `true` la propriété `adjustsImageSizeForAccessibilityContentSizeCategory` de l'image si cette opération se fait de façon programmatique&nbsp;:
-
 ![](../../images/iOSdev/TailleDesEltsGraphiques_5.png)
 
 4. Si une **barre de tabulation** ou une **barre d'outils** est aussi à intégrer dans l'application, renouveler les 3 étapes précédentes pour chacune des images à utiliser en grossissement de l'onglet au milieu de l'écran puis associer l'image souhaitée aux différents éléments impactés&nbsp;:
@@ -2338,6 +2360,8 @@ class LogoViewController: UIViewController {
 
 </div>
 
+<br>
+
 De la même façon, pour un **élément cliquable** comme un bouton dont le grossissement pourrait devenir problématique, il est tout à fait possible d'utiliser cette fonctionnalité pour afficher son contenu et s'assurer que **son action sera déclenchée dès que le doigt sera relevé**&nbsp;:
 
 ![](../../images/iOSdev/LargeContentViewer_3.png)
@@ -2392,6 +2416,8 @@ class ButtonViewController: UIViewController {
 </code></pre>
 
 </div>
+
+<br>
 
 Lorsque la **gestuelle 'appui long' est déjà implémentée sur l'élément impacté**, il est nécessaire d'utiliser la méthode `gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)` qui permettra de [mettre&nbsp;en&nbsp;place&nbsp;concomitamment&nbsp;les&nbsp;deux&nbsp;gestuelles](https://developer.apple.com/videos/play/wwdc2019/261/?time=636). 
 </div>
@@ -2555,6 +2581,8 @@ class StepperWrapper: UIStackView {
 
 </div>
 
+<br>
+
 - Ensuite, il faut redéfinir les 2 méthodes du protocole implémenté pour indiquer ce qu'elles doivent réaliser avant de mettre à jour la valeur modifiée et de la présenter vocalement dans le <span lang="en">ViewController</span>.
 
 <div class="code-tab-pane">
@@ -2713,6 +2741,10 @@ Pour un composant développé au sein d'une application, il est très fortement 
 Dès que la **liste d'actions** est **différente** sur un élément, **l'annonce reprend** sur ce dernier de façon à faire comprendre à l'utilisateur qu'un nouveau jeu d'actions est à disposition.
 
 Ce comportement qui n'a jamais été présenté ni expliqué par <span lang="en">Apple</span> **n'est plus d'actualité en iOS&nbsp;15** pour revenir au fonctionnement nominal iOS&nbsp;12.
+
+
+⚠️ ATTENTION : **vérifier l'activation des actions personnalisées** dans les réglages utilisateurs via '`Réglages` - `Accessibilité` - `VoiceOver` - `Verbosité` - `Actions`' avec `Énoncer` sélectionné. ⚠️
+Si ce n'est pas le cas, l'implémentation des actions personnalisées sera totalement ignorée par VoiceOver.
 </div>
 
 <div class="tab-pane" id="customActions-Example" role="tabpanel">
@@ -2815,7 +2847,6 @@ class CustomActions: UIViewController {
 
 ![accès aux actions avec voiceover en utilisant un balayage vers le haut](../../images/iOSdev/Actions_3.png)
 <br>Pour plus d'informations sur ce sujet, ne pas hésiter à visualiser la vidéo **Utiliser les actions personnalisées** dont le [résumé&nbsp;détaillé](../wwdc/2019/#utiliser-les-actions-personnalisees) se trouve dans la section WWDC de ce site.
-
 </div>
 <div class="tab-pane" id="customActions-Links" role="tabpanel">
 
@@ -3118,7 +3149,6 @@ Dans l'exemple suivant, on appelle une méthode spécifique au moment où le sta
 <div class="tab-pane" id="a11yOptions-Recap" role="tabpanel">
 
 Tous les <a href="https://developer.apple.com/documentation/uikit/accessibility/notification_names?language=objc" style="text-decoration: underline;">événements</a> et les <a href="https://developer.apple.com/documentation/uikit/accessibility?language=objc" style="text-decoration: underline;">options d'accessibilité</a> sont disponibles sur la documentation officielle d'Apple.
-
 ![](../../images/iOSdev/OptionsA11Y.png)
 </div>
 <div class="tab-pane" id="a11yOptions-Link" role="tabpanel">
@@ -3892,6 +3922,8 @@ Lorsque des mots ont une consonance bien particulière ou que l'on souhaite réa
 
 </div>
 
+<br>
+
 La génération de cette phonétique peut se faire en passant par les réglages du terminal.
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -3945,8 +3977,6 @@ La génération de cette phonétique peut se faire en passant par les réglages 
 </ol>
 
 ![](../../images/iOSdev/SpeechSynthesizerEx_3.png)
-
-Une des possibilités pour copier cette expression dans le code est de passer par l'**application locale `Notes`** dans laquelle on copiera la phonétique pour la synchroniser avec l'**application iCloud `Notes`** d'où on pourra aisément transférer l'information désirée au sein de `Xcode`.
 </div>
 <div class="tab-pane" id="speechSyn-Links" role="tabpanel">
 
@@ -3970,7 +4000,7 @@ Une des possibilités pour copier cette expression dans le code est de passer pa
 </div>
 <br>
 
-L'ensemble des fonctionnalités proposées par le synthétiseur vocal sont présentées dans une [vidéo WWDC](../wwdc/2018/236/) (Utiliser une voix synthétisée avec AVSpeechSynthesizer) parfaitement résumée dans la partie WWDC de ce site.
+L'ensemble des fonctionnalités proposées par le synthétiseur vocal sont présentées dans une [vidéo WWDC](../wwdc/2018/236/) (Utiliser une voix synthétisée avec AVSpeechSynthesizer) résumée dans la partie WWDC de ce site.
 <br><br>
 
 ## Contrôle de sélection
