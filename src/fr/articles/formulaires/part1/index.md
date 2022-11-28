@@ -1,11 +1,11 @@
 ---
 title: "Formulaire partie 1 - Structurer son formulaire"
 abstract: "Exemple de formulaire accessible."
-date: "2022-11-23"
+date: "2022-11-30"
 tags:
   - web
   - intermediate
-js:
+js: 
 - script.js
 titleBeforeTag: true
 ---
@@ -22,11 +22,11 @@ Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/" targe
 
 ## Étiqueter les champs de formulaires
 
-Les étiquettes doivent décrire le rôle du champ de formulaire. Afin que tous les utilisateurs puissent avoir accès à la même information, il est important que ces étiquettes soient correctement associées à leurs champs de formulaire. Pour réaliser ceci il existe plusieurs techniques.
+Les étiquettes doivent décrire le rôle de chaque champ du formulaire. Afin que tous les utilisateurs puissent avoir accès à la même information, il est important que ces étiquettes soient correctement associées à leurs champs de formulaire. Pour réaliser ceci il existe plusieurs techniques.
 
 ### La balise label
 
-La solution privilégiée est l'utilisation de la balise <code>label</code>. C'est la mieux supportée par les technologies d'assistance. Il existe deux manière d'utiliser cette balise <code>label</code>&nbsp;:
+La solution privilégiée est l'utilisation de la balise <code>label</code>. C'est la mieux supportée par les technologies d'assistance. Il existe deux manières d'utiliser cette balise <code>label</code>&nbsp;:
 
 <ul>
   <li>lier explicitement la balise
@@ -86,9 +86,9 @@ Exemple de code&nbsp;:
 
 ### Masquer les étiquettes de manière accessible
 
-Dans certains cas, il peut être utile de masquer l'étiquette visuellement. Attention, on peut masquer les étiquettes seulement, si, la fonction champ est suffisamment claire et compréhensible dans son contexte, par exemple, un champ de recherche à côté d'une icone loupe.
+Dans certains cas, il peut être utile de masquer l'étiquette visuellement. Attention, on peut masquer les étiquettes si et seulement si la fonction champ est suffisamment claire et compréhensible dans son contexte: par exemple, un champ de recherche à côté d'une icone loupe.
 
-Même si l'étiquette est masquée visuellement, elle doit toujours être accessible pour les technologies d'assistances.
+Même si l'étiquette est masquée visuellement, elle doit toujours être accessible pour les technologies d'assistance.
 
 Cette méthode consiste a utiliser une classe CSS (utilisation de la classe <code>visually-hidden</code> de Bootstrap/Boosted) permettant un masquage accessible. L’utilisation du masquage accessible permet de masquer l’élément à l’écran, tout en conservant sa vocalisation par les outils ou technologies d’assistance (AT). Attention, ne pas utiliser du masquage CSS classique (<code>display: none;</code> ou <code>visibility: hidden;</code>) car l’élément sera masqué également pour les lecteurs d’écran.
 
@@ -96,8 +96,7 @@ Consultez l’exemple sur <a href="../../../web/exemples-de-composants/masquage-
 
 #### Exemple
 
-Par exemple, nous pourrions utiliser le masquage accessible pour un champ de recherche, si un bouton avec pour libellé recherche, ou une image loupe, est à coté du champ, nous pourrions cacher l'étiquette du champ afin d'éviter une redondance.
-
+Par exemple, nous pouvons utiliser le masquage accessible pour un champ de recherche, si un bouton avec pour libellé recherche, ou une image loupe, est à coté du champ. Ainsi, l'étiquette du champ est cachée visuellement afin d'éviter une redondance.
 Exemple de code&nbsp;:
 
 <pre>
@@ -110,7 +109,7 @@ Exemple de code&nbsp;:
 
 ### Les attributs ARIA
 
-Il est aussi possible d'utiliser les  attributs <code>aria-label</code> et <code>aria-labelledby</code> pour étiqueter des champs de formulaire, leur support est bon dans les navigateurs et dans les <abbr>AT</abbr> récentes&nbsp;:
+Il est aussi possible d'utiliser les  attributs <code>aria-label</code> et <code>aria-labelledby</code> pour étiqueter des champs de formulaire, car ces attributs sont bien supportés par les navigateurs et dans les <abbr>AT</abbr> récentes&nbsp;:
 
 <ul>
   <li>L’attribut <code>aria-labelledby</code> permet de préciser l’<code>id</code> d’un élément présent dans le code qui sera utilisé pour étiqueter le champ.
@@ -129,14 +128,14 @@ Un exemple possible&nbsp;:
 
 ### L'attribut title
 
-L’attribut <code>title</code> n’est pas suffisamment robuste pour être compatible avec l’accessibilité sauf, dans ce cas précis, en permettant d’étiqueter un champ de formulaire de manière accessible. Il déclenchera également l’affichage d’une info-bulle au survol de l’élément avec la souris, bonne chose pour les déficients cognitifs, les novices du numérique.
+L’attribut <code>title</code> permet d’étiqueter un champ de formulaire de manière accessible. Il déclenchera également l’affichage d’une info-bulle au survol de l’élément avec la souris, bonne chose pour les déficients cognitifs, les novices du numérique.
 
 Attention, nous pourrions être tentés d'utiliser l'attribut <code>placeholder</code>. Cet attribut n'est pas assez robuste, en effet&nbsp;:
 
 <ul>
   <li>le texte du <code>placeholder</code> qui s’affiche dans le champ n’est généralement pas assez contrasté&nbsp;;
   </li>
-  <li>il s’efface à la saisie du contenu dans le champ (entraîne des difficultés en cas de déficience
+  <li>il s’efface à la saisie du contenu dans le champ (entraînant des difficultés en cas de déficience
     cognitive)&nbsp;;
   </li>
   <li>le <code>placeholder</code> n’est pas toujours lu par les aides techniques&nbsp;;</li>
@@ -276,8 +275,8 @@ Un exemple possible&nbsp;:
 
 ## Exemple complet
 
-L'exemple complet avec tous les éléments que l'on a passés en revue, dans la deuxième partie, on verra comment valider le formulaire et gérer les messages d'erreurs.
-Pour la suite de l'exercie et compléter notre formulaire d'inscription, nous avons rajouté des champs pour l'adresse (adresse, ville, code postal).
+L'exemple complet avec tous les éléments que l'on a passés en revue. Dans la deuxième partie, on verra comment valider le formulaire et gérer les messages d'erreurs.
+Pour la suite de l'exercice et compléter notre formulaire d'inscription, nous avons rajouté des champs pour l'adresse (adresse, ville, code postal).
 
 <div class="col-md-8">
   <form id="formulaire_final" class="border border-secondary p-3 my-2">
