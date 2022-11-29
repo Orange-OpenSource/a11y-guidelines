@@ -19,7 +19,7 @@ Bon assez de temps perdu, on y va !
 
 ## Retours d’expérience et accessibilité
 - Un questionnaire pour voir ce qu'ont les gens qui risquent de travailler avec vous en matière d'a11y au delà d'un couche de vernis, à lire (en) : https://github.com/scottaohara/accessibility_interview_questions 
-- Obfuscation de lien et a11y : https://www.laceneduweb.fr/obfuscation-liens-seo-problemes-accessibilite/
+- Obfuscation de lien et a11y : https://www.lalutineduweb.fr/obfuscation-liens-seo-problemes-accessibilite/
 - Un test utilisateur sur l'accessibilité des images, comment aller plus loin, à lire (en) : https://tetralogical.com/blog/2022/07/21/research-insight-accessibility-of-images/ 
 - Améliorer l'a11y dans son entreprise, cas d'étude (en) : https://www.smashingmagazine.com/2022/08/organization-improved-web-accessibility-case-study/
 - Bien rédiger des noms accessibles (en) : https://hidde.blog/better-accessible-names/
