@@ -9,7 +9,7 @@ tags:
 # Digital accessibility watch August-October 2022
 Well, big delay for this new watch, but here it is finally!
 A draft of an unofficial specification on AOM (Accessibility Object Model), important for assistive technologies https://wicg.github.io/aom/spec/.
-Soon WCAG 2.2, two thoughts on this candidate recommendation: https://www.deque.com/blog/wcag-2-2-is-at-the-candidate-recommendation-stage/ https://intopia .digital/articles/wcag-2-2-hits-candidate-recommendation-but-what-does-it-mean/ https://www.youtube.com/watch?v=eDCd-isluUY.
+Soon WCAG 2.2, two thoughts on this candidate recommendation: https://www.deque.com/blog/wcag-2-2-is-at-the-candidate-recommendation-stage/ https://intopia.digital/articles/wcag-2-2-hits-candidate-recommendation-but-what-does-it-mean/ https://www.youtube.com/watch?v=eDCd-isluUY.
 Alright enough wasted time, here we go!
 
 ## accessibility in laws and standards
@@ -19,7 +19,7 @@ Alright enough wasted time, here we go!
 
 ## Feedback and accessibility
 - A questionnaire to see what the people who are likely to work with you have in terms of a11y abilities beyond a coat of varnish, to read : https://github.com/scottaohara/accessibility_interview_questions
-- Link obfuscation and a11y (fr): https://www.laceneduweb.fr/obfuscation-liens-seo-problemes-accessibilite/
+- Link obfuscation and a11y : https://www.lalutineduweb.fr/en/seo-links-obfuscation-accessibility-problems/
 - A user test on the accessibility of images, how to go further, to read: https://tetralogical.com/blog/2022/07/21/research-insight-accessibility-of-images/
 - Improving a11y in your company, case study: https://www.smashingmagazine.com/2022/08/organization-improved-web-accessibility-case-study/
 - Write accessible names well: https://hidde.blog/better-accessible-names/
@@ -51,7 +51,7 @@ Alright enough wasted time, here we go!
 - 5 errors on content titles, clear and practical: https://blog.pope.tech/2022/08/04/5-heading-accessibility-issues-and-how-to-fix-them/
 - The focus outline, the base: https://www.matuzo.at/blog/2022/focus-outline/
 - Explanations of criterion 2.1.4 Keyboard shortcuts: https://hidde.blog/keyboard-shortcuts/
-- Add a Github action Pa11y on a Next.js site, to see: https://ashleemboyer.com/blog/how-i-added-a-pa11y-ci-github-action-to-my-next -js-site
+- Add a Github action Pa11y on a Next.js site, to see: https://ashleemboyer.com/blog/how-i-added-a-pa11y-ci-github-action-to-my-next-js-site
 - Link or button, well done: https://ashleemboyer.com/blog/should-i-use-a-button-or-a-link
 - Always on links and buttons: https://kilianvalkhof.com/2022/css-html/when-going-somewhere-does-a-thing-on-links-and-buttons/
 - Aria-description, what's up, doc?: https://www.darins.page/articles/aria-description-crash-course
