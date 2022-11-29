@@ -19,7 +19,7 @@ Alright enough wasted time, here we go!
 
 ## Feedback and accessibility
 - A questionnaire to see what the people who are likely to work with you have in terms of a11y abilities beyond a coat of varnish, to read : https://github.com/scottaohara/accessibility_interview_questions
-- Link obfuscation and a11y (fr): https://www.lalutineduweb.fr/obfuscation-liens-seo-problemes-accessibilite/
+- Link obfuscation and a11y : https://www.lalutineduweb.fr/en/seo-links-obfuscation-accessibility-problems/
 - A user test on the accessibility of images, how to go further, to read: https://tetralogical.com/blog/2022/07/21/research-insight-accessibility-of-images/
 - Improving a11y in your company, case study: https://www.smashingmagazine.com/2022/08/organization-improved-web-accessibility-case-study/
 - Write accessible names well: https://hidde.blog/better-accessible-names/
