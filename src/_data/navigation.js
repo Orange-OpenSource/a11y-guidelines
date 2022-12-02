@@ -198,12 +198,14 @@ module.exports = {
     en: [
       { label: 'Contact', href: '/en/contact' },
       { label: 'About', href: '/en/about' },
+      { label: 'RSS feed', href: '/feed-en.xml' },
       { label: 'Accessibility', href: '/en/accessibility' },
       { label: 'Pre-release on Netlify', href: 'https://a11y-guidelines-orange.netlify.app/en/' }
     ],
     fr: [
       { label: 'Contact', href: '/fr/contact' },
       { label: 'À propos', href: '/fr/a-propos' },
+      { label: 'Flux rss', href: '/feed-fr.xml' },
       { label: 'Accessibilité', href: '/fr/accessibilite' },
       { label: 'Pré-version sur Netlify', href: 'https://a11y-guidelines-orange.netlify.app/fr/' }
     ]
