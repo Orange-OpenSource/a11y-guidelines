@@ -20,11 +20,11 @@
   <id>{{ metadata.url }}</id>  
   {%- for post in collections.articles_en | reverse %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
-  <item>
+  <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-  </item>
+  </entry>
   {%- endfor %}
 </feed>
