@@ -1,7 +1,7 @@
 ---
 title: "Formulaire partie 1 - Structurer son formulaire"
-abstract: "Exemple de formulaire accessible."
-date: "2022-11-30"
+abstract: "Faire un formulaire accessible, partie 1 : labéliser ses champs et structurer son formulaire"
+date: "2022-12-12"
 tags:
   - web
   - intermediate

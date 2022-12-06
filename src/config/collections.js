@@ -1,6 +1,6 @@
 module.exports = {
   'en': [
-    { name: 'articles', glob: './src/en/articles/*.md' },
+    { name: 'articles', glob: './src/en/articles/**/*.{md,njk}' },
     { name: 'web', glob: './src/en/web/*.md' }
   ],
   'fr': [
