@@ -621,7 +621,11 @@
   },
   {
     "old": "web_EN/exemples/speak",
-    "new": "/en/web/components-examples/make-a-screen-reader-talk"
+    "new": "/en/articles/make-a-screen-reader-talk"
+  },
+  {
+    "old": "/en/web/components-examples/make-a-screen-reader-talk",
+    "new": "/en/articles/make-a-screen-reader-talk"
   },
   {
     "old": "web_EN/exemples/stepbar/stepbar.html",
@@ -1089,7 +1093,11 @@
   },
   {
     "old": "web/exemples/speak/index.html",
-    "new": "/fr/web/exemples-de-composants/faire-parler-le-lecteur-d-ecran"
+    "new": "/fr/articles/faire-parler-le-lecteur-d-ecran"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/faire-parler-le-lecteur-d-ecran",
+    "new": "/fr/articles/faire-parler-le-lecteur-d-ecran"
   },
   {
     "old": "web/exemples/stepbar/stepbar.html",
