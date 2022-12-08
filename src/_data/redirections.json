@@ -601,11 +601,19 @@
   },
   {
     "old": "web_EN/exemples/role-dialog/role-dialog.html",
-    "new": "/en/web/components-examples/dialogs/1"
+    "new": "/en/articles/dialogs/1"
+  },
+  {
+    "old": "/en/web/components-examples/dialogs/1",
+    "new": "/en/articles/dialogs/1"
   },
   {
     "old": "web_EN/exemples/role-dialog2/role-dialog.html",
-    "new": "/en/web/components-examples/dialogs/2"
+    "new": "/en/articles/dialogs/2"
+  },
+  {
+    "old": "/en/web/components-examples/dialogs/2",
+    "new": "/en/articles/dialogs/2"
   },
   {
     "old": "web_EN/exemples/simple-menu/simple-menu.html",
@@ -1061,11 +1069,19 @@
   },
   {
     "old": "web/exemples/role-dialog/role-dialog.html",
-    "new": "/fr/web/exemples-de-composants/boites-de-dialogue/1"
+    "new": "/fr/articles/boites-de-dialogue/1"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/boites-de-dialogue/1",
+    "new": "/fr/articles/boites-de-dialogue/1"
   },
   {
     "old": "web/exemples/role-dialog2/role-dialog.html",
-    "new": "/fr/web/exemples-de-composants/boites-de-dialogue/2"
+    "new": "/fr/articles/boites-de-dialogue/2"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/boites-de-dialogue/2",
+    "new": "/fr/articles/boites-de-dialogue/2"
   },
   {
     "old": "web/exemples/simple-menu/simple-menu.html",
