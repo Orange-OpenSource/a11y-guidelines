@@ -541,7 +541,11 @@
   },
   {
     "old": "web_EN/exemples.html",
-    "new": "/en/web/components-examples"
+    "new": "/en/articles/?tag=component"
+  },
+  {
+    "old": "/en/web/components-examples",
+    "new": "/en/articles/?tag=component"
   },
   {
     "old": "web_EN/exemples/ARIA-clavier",
@@ -577,7 +581,11 @@
   },
   {
     "old": "web_EN/exemples/formulaire",
-    "new": "/en/web/components-examples/forms"
+    "new": "/en/articles/forms"
+  },
+  {
+    "old": "/en/web/components-examples/forms",
+    "new": "/en/articles/forms"
   },
   {
     "old": "web_EN/exemples/iframes-techniques",
@@ -1045,7 +1053,11 @@
   },
   {
     "old": "web/exemples.html",
-    "new": "/fr/web/exemples-de-composants"
+    "new": "/fr/articles/?tag=component"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants",
+    "new": "/fr/articles/?tag=component"
   },
   {
     "old": "web/exemples/ARIA-clavier/index.html",
@@ -1081,7 +1093,11 @@
   },
   {
     "old": "web/exemples/formulaire/index.html",
-    "new": "/fr/web/exemples-de-composants/formulaires"
+    "new": "/fr/articles/formulaires"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/formulaires",
+    "new": "/fr/articles/formulaires"
   },
   {
     "old": "web/exemples/iframes-techniques/index.html",

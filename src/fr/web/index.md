@@ -36,8 +36,3 @@ La Va11ydette, notre outil opensource qui nous aide lors de nos audits et nos d�
 
 ### Boite à outils
 Méthode et outils internes et externe que nous utilisons dans notre activité. Notamment, le design system d'Orange, Orange Boosted, nos Fiches mémo pour avoir toutes les bonnes pratiques d'accessibilité, des Personae pour mieux comprendre les problématiques d'accessibilité...
-
-### Exemples de composants
-
-Des exemples didactiques pour certains types de composants ou d’éléments d’interface  particulièrement délicats à rendre accessibles et fréquemment utilisés. Tout y est expliqué, il n’y a plus qu’à se laisser guider&nbsp;!
-

@@ -97,10 +97,6 @@
 </ol>
 {%- endmacro -%}
 
-{%- macro componentsExamplesList(posts) -%}
-  {{ postsList(posts, false, false, false) }}
-{%- endmacro -%}
-
 {%- macro filtersBar(posts) -%}
 {% set tags = posts | getPostsTags %}
 <div class="hidden-if-no-js o-nav-local navbar-light mb-4 d-flex align-items-center">
