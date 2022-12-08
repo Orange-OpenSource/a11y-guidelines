@@ -549,7 +549,11 @@
   },
   {
     "old": "web_EN/exemples/chatbot",
-    "new": "/en/web/components-examples/chatbot"
+    "new": "/en/articles/chatbot"
+  },
+  {
+    "old": "/en/web/components-examples/chatbot",
+    "new": "/en/articles/chatbot"
   },
   {
     "old": "web_EN/exemples/check-listbox",
@@ -1005,7 +1009,11 @@
   },
   {
     "old": "web/exemples/chatbot/index.html",
-    "new": "/fr/web/exemples-de-composants/chatbot/bonnes-pratiques-pour-un-chatbot"
+    "new": "/fr/articles/bonnes-pratiques-pour-un-chatbot"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/bonnes-pratiques-pour-un-chatbot",
+    "new": "/fr/articles/bonnes-pratiques-pour-un-chatbot"
   },
   {
     "old": "web/exemples/check-listbox/index.html",

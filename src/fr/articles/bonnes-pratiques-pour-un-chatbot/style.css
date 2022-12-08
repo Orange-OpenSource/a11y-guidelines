@@ -46,6 +46,7 @@ button.btn-poll {
     border-bottom: .25rem solid #eee;
     border-top: .25rem solid #666;
     box-shadow: 2px 2px 5px 0px #cfcfcf;
+    z-index: 1;
 }
 
 .btnChatbot {
