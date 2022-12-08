@@ -712,12 +712,24 @@
     "new": "/en/web/components-examples/zoom/examples/1"
   },
   {
+    "old": "/en/web/components-examples/zoom/examples/1",
+    "new": "/en/articles/zoom/examples/1"
+  },
+  {
     "old": "web_EN/exemples/zoom/exemple2.html",
-    "new": "/en/web/components-examples/zoom/examples/2"
+    "new": "/en/articles/zoom/examples/2"
+  },
+  {
+    "old": "/en/web/components-examples/zoom/examples/2",
+    "new": "/en/articles/zoom/examples/2"
   },
   {
     "old": "web_EN/exemples/zoom",
-    "new": "/en/web/components-examples/zoom"
+    "new": "/en/articles/zoom"
+  },
+  {
+    "old": "/en/web/components-examples/zoom",
+    "new": "/en/articles/zoom"
   },
   {
     "old": "web_EN/exigences.html",
@@ -1197,15 +1209,27 @@
   },
   {
     "old": "web/exemples/zoom/exemple1.html",
-    "new": "/fr/web/exemples-de-composants/zoom/exemples/1"
+    "new": "/fr/articles/zoom/exemples/1"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/zoom/exemples/1",
+    "new": "/fr/articles/zoom/exemples/1"
   },
   {
     "old": "web/exemples/zoom/exemple2.html",
-    "new": "/fr/web/exemples-de-composants/zoom/exemples/1"
+    "new": "/fr/articles/zoom/exemples/2"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/zoom/exemples/2",
+    "new": "/fr/articles/zoom/exemples/2"
   },
   {
     "old": "web/exemples/zoom/index.html",
-    "new": "/fr/web/exemples-de-composants/zoom"
+    "new": "/fr/articles/zoom"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/zoom",
+    "new": "/fr/articles/zoom"
   },
   {
     "old": "web/exigences.html",
