@@ -557,7 +557,11 @@
   },
   {
     "old": "web_EN/exemples/check-listbox",
-    "new": "/en/web/components-examples/listbox-with-checkboxes"
+    "new": "/en/articles/listbox-with-checkboxes"
+  },
+  {
+    "old": "/en/web/components-examples/listbox-with-checkboxes",
+    "new": "/en/articles/listbox-with-checkboxes"
   },
   {
     "old": "web_EN/exemples/dynFocus",
@@ -585,11 +589,19 @@
   },
   {
     "old": "web_EN/exemples/listbox-pattern-aria",
-    "new": "/en/web/components-examples/listbox-and-keyboard-navigation"
+    "new": "/en/articles/listbox-and-keyboard-navigation"
+  },
+  {
+    "old": "/en/web/exemples-de-composants/listbox-and-keyboard-navigation",
+    "new": "/en/articles/listbox-and-keyboard-navigation"
   },
   {
     "old": "web_EN/exemples/listbox",
-    "new": "/en/web/components-examples/listbox"
+    "new": "/en/articles/listbox"
+  },
+  {
+    "old": "/en/web/components-examples/listbox",
+    "new": "/en/articles/listbox"
   },
   {
     "old": "web_EN/exemples/masquage/index.html",
@@ -694,10 +706,6 @@
   {
     "old": "web_EN/exemples/tooltip/tooltip.html",
     "new": "/en/web/components-examples/tooltips"
-  },
-  {
-    "old": "web_EN/exemples/webmail/index.html",
-    "new": "/en/web/components-examples/webmail"
   },
   {
     "old": "web_EN/exemples/zoom/exemple1.html",
@@ -1037,7 +1045,11 @@
   },
   {
     "old": "web/exemples/check-listbox/index.html",
-    "new": "/fr/web/exemples-de-composants/listbox-avec-cases-a-cocher"
+    "new": "/fr/articles/listbox-avec-cases-a-cocher"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/listbox-avec-cases-a-cocher",
+    "new": "/fr/articles/listbox-avec-cases-a-cocher"
   },
   {
     "old": "web/exemples/dynFocus/index.html",
@@ -1065,11 +1077,19 @@
   },
   {
     "old": "web/exemples/listbox-pattern-aria/index.html",
-    "new": "/fr/web/exemples-de-composants/listbox-et-navigation-clavier"
+    "new": "/fr/articles/listbox-et-navigation-clavier"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/listbox-et-navigation-clavier",
+    "new": "/fr/articles/listbox-et-navigation-clavier"
   },
   {
     "old": "web/exemples/listbox/index.html",
-    "new": "/fr/web/exemples-de-composants/listbox"
+    "new": "/fr/articles/listbox"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/listbox",
+    "new": "/fr/articles/listbox"
   },
   {
     "old": "web/exemples/masquage/index.html",
@@ -1174,10 +1194,6 @@
   {
     "old": "web/exemples/tooltip/tooltip.html",
     "new": "/fr/web/exemples-de-composants/tooltips"
-  },
-  {
-    "old": "web/exemples/webmail/index.html",
-    "new": "/fr/web/exemples-de-composants/webmail"
   },
   {
     "old": "web/exemples/zoom/exemple1.html",
