@@ -641,7 +641,11 @@
   },
   {
     "old": "web_EN/exemples/tag-exemples/index.html",
-    "new": "/en/web/components-examples/tags/2"
+    "new": "/en/articles/tags/2"
+  },
+  {
+    "old": "/en/web/components-examples/tags/2",
+    "new": "/en/articles/tags/2"
   },
   {
     "old": "web_EN/exemples/tag/exemple1.html",
@@ -681,7 +685,11 @@
   },
   {
     "old": "web_EN/exemples/tag/index.html",
-    "new": "/en/web/components-examples/tags"
+    "new": "/en/articles/tags"
+  },
+  {
+    "old": "/en/web/components-examples/tags",
+    "new": "/en/articles/tags"
   },
   {
     "old": "web_EN/exemples/tooltip/tooltip.html",
@@ -1113,7 +1121,11 @@
   },
   {
     "old": "web/exemples/tag-exemples/index.html",
-    "new": "/fr/web/exemples-de-composants/tags/2"
+    "new": "/fr/articles/tags/2"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/tags/2",
+    "new": "/fr/articles/tags/2"
   },
   {
     "old": "web/exemples/tag/exemple1.html",
@@ -1153,7 +1165,11 @@
   },
   {
     "old": "web/exemples/tag/index.html",
-    "new": "/fr/web/exemples-de-composants/tags"
+    "new": "/fr/articles/tags"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/tags",
+    "new": "/fr/articles/tags"
   },
   {
     "old": "web/exemples/tooltip/tooltip.html",
