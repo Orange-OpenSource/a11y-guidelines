@@ -605,7 +605,11 @@
   },
   {
     "old": "web_EN/exemples/masquage/index.html",
-    "new": "/en/web/components-examples/accessible-hiding"
+    "new": "/en/articles/accessible-hiding"
+  },
+  {
+    "old": "/en/web/components-examples/accessible-hiding",
+    "new": "/en/articles/accessible-hiding"
   },
   {
     "old": "web_EN/exemples/prix/index.html",
@@ -1105,7 +1109,11 @@
   },
   {
     "old": "web/exemples/masquage/index.html",
-    "new": "/fr/web/exemples-de-composants/masquage-accessible"
+    "new": "/fr/articles/masquage-accessible"
+  },
+  {
+    "old": "fr/web/exemples-de-composants/masquage-accessible",
+    "new": "/fr/articles/masquage-accessible"
   },
   {
     "old": "web/exemples/prix/index.html",
