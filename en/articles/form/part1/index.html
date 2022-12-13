@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Form part 1 - Structure your form - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Making an accessible form, part 1: labeling your fields and structuring your form">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link active" aria-current="true">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Form part 1 - Structure your form
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#label-form-fields" class="dropdown-item text-wrap">Label form fields</a><a href="#the-label-element" class="dropdown-item text-wrap">The label element</a><a href="#example" class="dropdown-item text-wrap">Example</a><a href="#hide-labels-in-an-accessible-way" class="dropdown-item text-wrap">Hide labels in an accessible way</a><a href="#example-2" class="dropdown-item text-wrap">Example</a><a href="#aria-attributes" class="dropdown-item text-wrap">ARIA attributes</a><a href="#the-title-attribute" class="dropdown-item text-wrap">The title attribute</a><a href="#associating-related-controls" class="dropdown-item text-wrap">Associating related controls</a><a href="#example-3" class="dropdown-item text-wrap">Example</a><a href="#specify-the-expected-type-or-format" class="dropdown-item text-wrap">Specify the expected type or format</a><a href="#example-4" class="dropdown-item text-wrap">Example</a><a href="#complete-example" class="dropdown-item text-wrap">Complete example</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          
+            <h1>Form part 1 - Structure your form</h1>  
+            
+              <span class="visually-hidden" id="filters_label">
+                Associated themes :
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="../?tag=web" class="btn btn-dark btn-sm" data-tag="web">Web</a></li>
+              <li class="list-inline-item"><a href="../?tag=intermediate" class="btn btn-dark btn-sm" data-tag="intermediate">Intermediate</a></li>
+              </ul>
+            
+            <time class="text-muted" datetime="2022-12-12T00:00:00.000Z">December 12, 2022</time>
+            
+          <div class="mt-4">
+          <h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>For a form to be accessible to all users, a few rules must be respected during development.</p>
+<p>We will see, in this first part, how to properly build your form, then, in a second part, the submission of a form and the validation steps.</p>
+<p>We are going to develop a registration form in order to see all the subtleties to make a form accessible.</p>
+<p>In this example, we used <a href="http://boosted.orange.com/" target="_blank">Boosted library</a>. This allows you to obtain forms whose design complies with the Orange charter.</p>
+<h2 id="label-form-fields">Label form fields <a class="header-anchor" href="#label-form-fields" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Labels should describe the role of each field on the form. In order for all users to have access to the same information, it is important that these labels are correctly associated with their form fields. To achieve this there are several techniques.</p>
+<h3 id="the-label-element">The label element <a class="header-anchor" href="#the-label-element" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The preferred solution is to use the <code>label</code> element. It is best supported by assistive technologies. There are two ways to use this <code>label</code> element:</p>
+<ul>
+   <li>explicitly link the element
+     <code>label</code>
+     with its field by filling in an attribute
+     <code>for</code>
+     which will match with the <code>id</code>
+     of the form field it is associated with</li>
+   <li>implicitly link the element
+     <code>label</code>
+     with its field, in this case, the element
+     <code>label</code>
+     will be used as a container surrounding the form field. The first solution is recommended.</li>
+</ul>
+<h4 id="example">Example <a class="header-anchor" href="#example" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Example of explicitly linked form labels :</p>
+<div class="col-md-8">
+  <form id="formulaire" class="border border-secondary p-3 my-2">
+    <div class="mb-2">
+      <label for="email" class="form-label">E-mail</label>
+      <input type="text" class="form-control" id="email"/>
+    </div>
+    <div class="mb-2">
+      <label for="name" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="name"/>
+    </div>
+    <div class="mb-2">
+      <label for="firstname" class="form-label">Fist Name</label>
+      <input type="text" class="form-control" id="firstname"/>
+    </div>
+  </form>
+</div>
+<p>Sample code :</p>
+<pre>
+  <code class="html">
+  &lt;form id="formulaire" class="border border-secondary p-3 my-2"&gt;
+    &lt;div class="mb-2"&gt;
+        &lt;label for="email" class="form-label"&gt;E-mail&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="email"/&gt;
+    &lt;/div&gt;
+    &lt;div class="mb-2"&gt;
+      &lt;label for="name" class="form-label"&gt;Last Name&lt;/label&gt;
+      &lt;input type="text" class="form-control" id="name"/&gt;
+    &lt;/div&gt;
+    &lt;div class="mb-2"&gt;
+      &lt;label for="firstname" class="form-label"&gt;Fist Name&lt;/label&gt;
+      &lt;input type="text" class="form-control" id="firstname"/&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+  </code>
+</pre>
+<h3 id="hide-labels-in-an-accessible-way">Hide labels in an accessible way <a class="header-anchor" href="#hide-labels-in-an-accessible-way" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>In some cases, it may be useful to hide the label visually. Attention, labels can be hidden if and only if the field function is sufficiently clear and understandable in its context: for example, a search field next to a magnifying glass icon.</p>
+<p>Even though the label is visually hidden, it should still be accessible to assistive technologies.</p>
+<p>This method consists of using a CSS class (using the <code>visually-hidden</code> class from Bootstrap/Boosted) allowing accessible hiding. Using accessible masking allows the element to be hidden from view, while retaining its vocalization by assistive tools or technologies (AT). Be careful, do not use classic CSS masking (<code>display: none;</code> or <code>visibility: hidden;</code>) because the element will also be hidden for screen readers.</p>
+<p>See the example at <a href="../../../web/components-examples/accessible-hiding/" target="_blank">accessible masking example</a> for more information.</p>
+<h4 id="example-2">Example <a class="header-anchor" href="#example-2" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>For example, we can use accessible hiding for a search field, if a button with the search label, or a magnifying glass image, is next to the field. Thus, the field label is visually hidden to avoid redundancy.</p>
+<p>Sample code:</p>
+<pre>
+  <code class="html">
+    &lt;label for="recherche" class="visually-hidden"&gt;Search: &lt;/label&gt;
+    &lt;input type="text" name="search" id="search"&gt;
+    &lt;button type="submit"&gt;Search&lt;/button&gt;
+  </code>
+</pre> 
+<h3 id="aria-attributes">ARIA attributes <a class="header-anchor" href="#aria-attributes" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>It is also possible to use the <code>aria-label</code> and <code>aria-labelledby</code> attributes to label form fields, as these attributes are well supported by browsers and in recent assistive technology:</p>
+<ul>
+   <li>The <code>aria-labelledby</code> attribute is used to specify the <code>id</code> of an element present in the code that will be used to label the field.
+   </li>
+   <li>The <code>aria-label</code> attribute allows you to directly specify a label in the form of a character string. Please note that the information will not be given visually.</li>
+</ul>
+<p>A possible example:</p>
+<pre>
+  <code class="html">
+    &lt;input type="text" name="search" aria-labelledby="search"&gt;
+    &lt;button id="search" type="submit" class="icon-loup" aria-label="Search"&gt;&lt;/button&gt;
+  </code>
+</pre>
+<h3 id="the-title-attribute">The title attribute <a class="header-anchor" href="#the-title-attribute" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The <code>title</code> attribute is used to label a form field in an accessible manner. It will also trigger the display of a tooltip when hovering over the element with the mouse, good thing for the cognitively impaired, digital novices.</p>
+<p>Be careful, we might be tempted to use the <code>placeholder</code> attribute. This attribute is not robust enough, indeed:</p>
+<ul>
+   <li>the <code>placeholder</code> text that displays in the field is usually not high enough contrast;
+   </li>
+   <li>it is erased when entering the content in the control (causing difficulties in the event of a deficiency
+     cognitive);
+   </li>
+   <li>the <code>placeholder</code> is not always read by assistive technology;</li>
+   <li>it makes corrections difficult in case of error if there is no label displayed;</li>
+</ul>
+<p>On the other hand, the <code>placeholder</code> can serve as a guide, an aid to fill in the field without this information being absolutely necessary (for example, proposing a valid expected value): do not hesitate to use for this type of need.</p>
+<h2 id="associating-related-controls">Associating related controls <a class="header-anchor" href="#associating-related-controls" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>When necessary, it is important to group fields of the same nature, this will make the whole form more understandable.<br>
+Most of the time, we group our radio buttons, or our checkboxes, in order to associate a header with these elements.</p>
+<p>To group them, we use the <code>fieldset</code> element, which will have as its first child the <code>legend</code> element that will serve as the header for our grouped fields.</p>
+<h3 id="example-3">Example <a class="header-anchor" href="#example-3" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>In our registration form, we can add the gender of our user. For this, we will implement radio buttons, and group them with the header <strong>Gender</strong></p>
+<div class="col-md-8">
+  <form id="formulaire3" class="border border-secondary p-3 my-2">
+    [...]
+    <fieldset>
+      <legend>Gender</legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M">
+        <label class="form-check-label" for="M">Mr</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme">
+        <label class="form-check-label" for="Mme">Mrs</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="No-binary" >
+        <label class="form-check-label" for="Non-binaire">no-binary</label>
+      </div>
+    </fieldset>
+  </form>
+</div>
+<p>Sample code :</p>
+<pre>
+  <code class="html">
+    &lt;div class="col-md-8"&gt;
+    &lt;form id="formulaire3" class="border border-secondary p-3 my-2"&gt;
+      [...]
+      &lt;fieldset&gt;
+        &lt;legend&gt;Gender&lt;/legend&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M"&gt;
+          &lt;label class="form-check-label" for="M"&gt;Mr&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme"&gt;
+          &lt;label class="form-check-label" for="Mme"&gt;Mrs&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="No-binary" &gt;
+          &lt;label class="form-check-label" for="Non-binaire"&gt;no-binary&lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/fieldset&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  </code>
+</pre>
+<h2 id="specify-the-expected-type-or-format">Specify the expected type or format <a class="header-anchor" href="#specify-the-expected-type-or-format" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>To help the user, it is also important to specify the expected type or format when necessary. For example, for a date of birth, you must, if necessary, indicate the input format (dd/mm/yyyy).</p>
+<p>To inform the user, one can:</p>
+<ul>
+   <li>provide instructions in label</li>
+   <li>use the <code>aria-labelledby</code> or <code>aria-describedby</code> attribute</li>
+</ul>
+<h3 id="example-4">Example <a class="header-anchor" href="#example-4" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>For our registration form, we are going to add a password field, specifying the format that we want.</p>
+<p>When adding a password field, it is also important to allow the possibility of displaying or hiding the password. This allows users with motor, attention or cognitive disorders to avoid possible input errors.</p>
+<div class="col-md-8">
+  <form id="formulaire4" class="border border-secondary p-3 my-2">
+    <label for="password" class="form-label">Password</label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/>
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility" title="Show password" >
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill-rule: evenodd;
+                }
+              </style>
+            </defs>
+            <path id="vision" class="cls-1" d="M513.081,250.129c-4.017,0-8.041-.129-12.081-0.129s-8.064.129-12.081,0.129C301.335,250.129,111.491,382.343,50,500c61.491,117.656,249.335,249.871,436.919,249.871,4.017,0,8.04.129,12.081,0.129s8.064-.129,12.081-0.129C698.665,749.871,888.51,617.656,950,500,888.51,382.343,700.665,250.129,513.081,250.129ZM498.62,680a180,180,0,1,1,180-180A180,180,0,0,1,498.62,680Zm-378.2-179.963c29.782-41.595,77.4-84.081,132.916-117.816a545.263,545.263,0,0,1,55.918-29.695,239.848,239.848,0,0,0,.78,295.942,537.117,537.117,0,0,1-57.553-30.6C197.469,584.226,150.153,541.734,120.417,500.034Zm626.25,117.747a544.106,544.106,0,0,1-60.236,31.655,239.784,239.784,0,0,0-.761-299.823,536.07,536.07,0,0,1,61.852,32.517c55.01,33.642,102.326,76.136,132.061,117.836C849.8,541.564,802.185,584.045,746.667,617.781ZM597.931,453.153a48.227,48.227,0,1,1-62.472-56.6A109.731,109.731,0,1,0,597.931,453.153Z" />
+          </svg>
+        </button>
+      </span>
+    </div>
+    <div id="passwordHelpBlock" class="form-text">
+        Your password must contain at least 6 characters.
+    </div>
+  </form>
+</div>
+<p>Sample code :</p>
+<pre>
+  <code class="html">
+  &lt;div class="col-md-8"&gt;
+    &lt;form id="formulaire4" class="border border-secondary p-3 my-2"&gt;
+      &lt;label for="password" class="form-label"&gt;Password&lt;/label&gt;
+      &lt;div class="mb-2 input-group"&gt;
+        &lt;input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/&gt;
+        &lt;span class="input-group-text"&gt;
+          &lt;button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility" title="Show password" &gt;
+            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+              [...]
+            &lt;/svg&gt;
+          &lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id="passwordHelpBlock" class="form-text"&gt;
+          Your password must contain at least 6 characters.
+        &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  </code>
+</pre>
+<h2 id="complete-example">Complete example <a class="header-anchor" href="#complete-example" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The complete example with all the elements that we have reviewed. In the second part, we will see how to validate the form and manage error messages.<br>
+For the rest of the exercise and to complete our registration form, we have added fields for the address (address, city, postal code).</p>
+<div class="col-md-8">
+  <form id="formulaire_final" class="border border-secondary p-3 my-2">
+    <div class="mb-2">
+      <label for="email_final" class="form-label">E-mail</label>
+      <input type="text" class="form-control" id="email_final"/>
+    </div>
+    <label for="password_final" class="form-label">Password</label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/>
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Show Password" >
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill-rule: evenodd;
+                }
+              </style>
+            </defs>
+            <path id="vision_final" class="cls-1" d="M513.081,250.129c-4.017,0-8.041-.129-12.081-0.129s-8.064.129-12.081,0.129C301.335,250.129,111.491,382.343,50,500c61.491,117.656,249.335,249.871,436.919,249.871,4.017,0,8.04.129,12.081,0.129s8.064-.129,12.081-0.129C698.665,749.871,888.51,617.656,950,500,888.51,382.343,700.665,250.129,513.081,250.129ZM498.62,680a180,180,0,1,1,180-180A180,180,0,0,1,498.62,680Zm-378.2-179.963c29.782-41.595,77.4-84.081,132.916-117.816a545.263,545.263,0,0,1,55.918-29.695,239.848,239.848,0,0,0,.78,295.942,537.117,537.117,0,0,1-57.553-30.6C197.469,584.226,150.153,541.734,120.417,500.034Zm626.25,117.747a544.106,544.106,0,0,1-60.236,31.655,239.784,239.784,0,0,0-.761-299.823,536.07,536.07,0,0,1,61.852,32.517c55.01,33.642,102.326,76.136,132.061,117.836C849.8,541.564,802.185,584.045,746.667,617.781ZM597.931,453.153a48.227,48.227,0,1,1-62.472-56.6A109.731,109.731,0,1,0,597.931,453.153Z" />
+          </svg>
+        </button>
+      </span>
+    </div>
+    <div id="passwordHelpBlock_final" class="form-text">
+        Your password must contain at least 6 characters.
+    </div>
+    <div class="mb-2">
+      <label for="name_final" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="name_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="firstname_final" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="firstname_final"/>
+    </div>
+    <fieldset>
+      <legend>Gender</legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M">
+        <label class="form-check-label" for="M_final">Mr</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme">
+        <label class="form-check-label" for="Mme_final">Mrs</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Non-binaire_final" value="Non-binaire" >
+        <label class="form-check-label" for="Non-binaire_final">Non-binary</label>
+      </div>
+    </fieldset>
+    <div class="mb-2">
+      <label for="adresse_final" class="form-label">Address</label>
+      <input type="text" class="form-control" id="adresse_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="adresse2_final" class="form-label">Additional address</label>
+      <input type="text" class="form-control" id="adresse2_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="ville_final" class="form-label">City</label>
+      <input type="text" class="form-control" id="ville_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="cp_final" class="form-label">Zip code</label>
+      <input type="text" class="form-control" id="cp_final"/>
+    </div>
+  </form>
+</div>
+<p>The final code :</p>
+<pre>
+  <code class="html">
+  &lt;div class="col-md-8"&gt;
+    &lt;form id="formulaire_final" class="border border-secondary p-3 my-2"&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="email_final" class="form-label"&gt;E-mail&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="email_final"/&gt;
+      &lt;/div&gt;
+      &lt;label for="password_final" class="form-label"&gt;Password &lt;/label&gt;
+      &lt;div class="mb-2 input-group"&gt;
+        &lt;input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/&gt;
+        &lt;span class="input-group-text"&gt;
+          &lt;button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Show password" &gt;
+            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;&lt;/svg&gt;
+          &lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id="passwordHelpBlock_final" class="form-text"&gt;
+          Your password must contain at least 6 characters.
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="name_final" class="form-label"&gt;Last Name&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="name_final"/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="firstname_final" class="form-label"&gt;First Name&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="firstname_final"/&gt;
+      &lt;/div&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Gender&lt;/legend&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M"&gt;
+          &lt;label class="form-check-label" for="M_final"&gt;Mr&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme"&gt;
+          &lt;label class="form-check-label" for="Mme_final"&gt;Mrs&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Non-binaire_final" value="No-binary" &gt;
+          &lt;label class="form-check-label" for="Non-binaire_final"&gt;No-binary&lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/fieldset&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="adresse_final" class="form-label"&gt;Address&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="adresse_final"/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="adresse2_final" class="form-label"&gt;Additional address&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="adresse2_final"/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="ville_final" class="form-label"&gt;City&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="ville_final"/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="cp_final" class="form-label"&gt;Zip Code&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="cp_final"/&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  </code>
+</pre>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#label-form-fields" class="nav-link text-muted">Label form fields</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#the-label-element" class="nav-link text-muted">The label element</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#example" class="nav-link text-muted">Example</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#hide-labels-in-an-accessible-way" class="nav-link text-muted">Hide labels in an accessible way</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#example-2" class="nav-link text-muted">Example</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#aria-attributes" class="nav-link text-muted">ARIA attributes</a></li><li class="nav-item position-relative">
+            <a href="#the-title-attribute" class="nav-link text-muted">The title attribute</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#associating-related-controls" class="nav-link text-muted">Associating related controls</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#example-3" class="nav-link text-muted">Example</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#specify-the-expected-type-or-format" class="nav-link text-muted">Specify the expected type or format</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#example-4" class="nav-link text-muted">Example</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#complete-example" class="nav-link text-muted">Complete example</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/form/part1/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script src="script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>

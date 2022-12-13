@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Formulaire partie 1 - Structurer son formulaire - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Faire un formulaire accessible, partie 1 : labéliser ses champs et structurer son formulaire">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d&#39;évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Aller à la recherche</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/fr/" class="nav-link">
+  Accueil 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/cadrage/" class="nav-link">
+  Cadrage 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/ios/" class="nav-link">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/contenu-et-communication/" class="nav-link">
+  Contenu et communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/articles/" class="nav-link active" aria-current="true">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici&amp;nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Formulaire partie 1 - Structurer son formulaire
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        Sur cette page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#etiqueter-les-champs-de-formulaires" class="dropdown-item text-wrap">Étiqueter les champs de formulaires</a><a href="#la-balise-label" class="dropdown-item text-wrap">La balise label</a><a href="#exemple" class="dropdown-item text-wrap">Exemple</a><a href="#masquer-les-etiquettes-de-maniere-accessible" class="dropdown-item text-wrap">Masquer les étiquettes de manière accessible</a><a href="#exemple-2" class="dropdown-item text-wrap">Exemple</a><a href="#les-attributs-aria" class="dropdown-item text-wrap">Les attributs ARIA</a><a href="#lattribut-title" class="dropdown-item text-wrap">L&#39;attribut title</a><a href="#regrouper-les-champs-de-meme-nature" class="dropdown-item text-wrap">Regrouper les champs de même nature</a><a href="#exemple-3" class="dropdown-item text-wrap">Exemple</a><a href="#preciser-le-type-ou-le-format-attendu" class="dropdown-item text-wrap">Préciser le type ou le format attendu</a><a href="#exemple-4" class="dropdown-item text-wrap">Exemple</a><a href="#exemple-complet" class="dropdown-item text-wrap">Exemple complet</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          
+            <h1>Formulaire partie 1 - Structurer son formulaire</h1>  
+            
+              <span class="visually-hidden" id="filters_label">
+                Thématiques associées :
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="../?tag=web" class="btn btn-dark btn-sm" data-tag="web">Web</a></li>
+              <li class="list-inline-item"><a href="../?tag=intermediate" class="btn btn-dark btn-sm" data-tag="intermediate">Intermédiaire</a></li>
+              </ul>
+            
+            <time class="text-muted" datetime="2022-12-12T00:00:00.000Z">12 décembre 2022</time>
+            
+          <div class="mt-4">
+          <h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Pour qu’un formulaire soit accessible à l’ensemble des utilisateurs, quelques règles doivent être respectées lors du développement.</p>
+<p>Nous verrons, dans cette première partie, comment bien construire son formulaire, puis, dans une deuxième partie, la soumission d'un formulaire et les étapes de validation.</p>
+<p>Nous allons développer un formulaire d'inscription afin de voir toutes les subtilités pour rendre un formulaire accessible.</p>
+<p>Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/" target="_blank">la librairie Boosted</a>. Celle-ci permet d’obtenir des formulaires dont le design est conforme à la charte Orange.</p>
+<h2 id="etiqueter-les-champs-de-formulaires">Étiqueter les champs de formulaires <a class="header-anchor" href="#etiqueter-les-champs-de-formulaires" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Les étiquettes doivent décrire le rôle de chaque champ du formulaire. Afin que tous les utilisateurs puissent avoir accès à la même information, il est important que ces étiquettes soient correctement associées à leurs champs de formulaire. Pour réaliser ceci il existe plusieurs techniques.</p>
+<h3 id="la-balise-label">La balise label <a class="header-anchor" href="#la-balise-label" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>La solution privilégiée est l'utilisation de la balise <code>label</code>. C'est la mieux supportée par les technologies d'assistance. Il existe deux manières d'utiliser cette balise <code>label</code> :</p>
+<ul>
+  <li>lier explicitement la balise
+    <code>label</code>
+    avec son champ en renseignant un attribut
+    <code>for</code>
+    qui correspondra avec l'<code>id</code>
+    du champ de formulaire auquel il est associé</li>
+  <li>lier implicitement la balise
+    <code>label</code>
+    avec son champ, dans ce cas, la balise
+    <code>label</code>
+    sera utilisée comme un conteneur entourant le champ de formulaire, La première solution est conseillée.</li>
+</ul>
+<h4 id="exemple">Exemple <a class="header-anchor" href="#exemple" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Exemple d'étiquettes correctement liées de manière explicite :</p>
+<div class="col-md-8">
+  <form id="formulaire" class="border border-secondary p-3 my-2">
+    <div class="mb-2">
+      <label for="email" class="form-label">Email</label>
+      <input type="text" class="form-control" id="email"/>
+    </div>
+    <div class="mb-2">
+      <label for="name" class="form-label">Nom</label>
+      <input type="text" class="form-control" id="name"/>
+    </div>
+    <div class="mb-2">
+      <label for="firstname" class="form-label">Prénom</label>
+      <input type="text" class="form-control" id="firstname"/>
+    </div>
+  </form>
+</div>
+<p>Exemple de code :</p>
+<pre>
+  <code class="html">
+  &lt;form id="formulaire" class="border border-secondary p-3 my-2"&gt;
+    &lt;div class="mb-2"&gt;
+        &lt;label for="email" class="form-label"&gt;Email&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="email"/&gt;
+    &lt;/div&gt;
+    &lt;div class="mb-2"&gt;
+      &lt;label for="name" class="form-label"&gt;Nom&lt;/label&gt;
+      &lt;input type="text" class="form-control" id="name"/&gt;
+    &lt;/div&gt;
+    &lt;div class="mb-2"&gt;
+      &lt;label for="firstname" class="form-label"&gt;Prénom&lt;/label&gt;
+      &lt;input type="text" class="form-control" id="firstname"/&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+  </code>
+</pre>
+<h3 id="masquer-les-etiquettes-de-maniere-accessible">Masquer les étiquettes de manière accessible <a class="header-anchor" href="#masquer-les-etiquettes-de-maniere-accessible" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Dans certains cas, il peut être utile de masquer l'étiquette visuellement. Attention, on peut masquer les étiquettes si et seulement si la fonction champ est suffisamment claire et compréhensible dans son contexte: par exemple, un champ de recherche à côté d'une icone loupe.</p>
+<p>Même si l'étiquette est masquée visuellement, elle doit toujours être accessible pour les technologies d'assistance.</p>
+<p>Cette méthode consiste a utiliser une classe CSS (utilisation de la classe <code>visually-hidden</code> de Bootstrap/Boosted) permettant un masquage accessible. L’utilisation du masquage accessible permet de masquer l’élément à l’écran, tout en conservant sa vocalisation par les outils ou technologies d’assistance (AT). Attention, ne pas utiliser du masquage CSS classique (<code>display: none;</code> ou <code>visibility: hidden;</code>) car l’élément sera masqué également pour les lecteurs d’écran.</p>
+<p>Consultez l’exemple sur <a href="../../../web/exemples-de-composants/masquage-accessible/" target="_blank">l’exemple sur le masquage accessible</a> pour plus l’information.</p>
+<h4 id="exemple-2">Exemple <a class="header-anchor" href="#exemple-2" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Par exemple, nous pouvons utiliser le masquage accessible pour un champ de recherche, si un bouton avec pour libellé recherche, ou une image loupe, est à coté du champ. Ainsi, l'étiquette du champ est cachée visuellement afin d'éviter une redondance.<br>
+Exemple de code :</p>
+<pre>
+  <code class="html">
+    &lt;label for="recherche" class="visually-hidden"&gt;Recherche: &lt;/label&gt;
+    &lt;input type="text" name="recherche" id="recherche"&gt;
+    &lt;button type="submit"&gt;Recherche&lt;/button&gt;
+  </code>
+</pre> 
+<h3 id="les-attributs-aria">Les attributs ARIA <a class="header-anchor" href="#les-attributs-aria" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Il est aussi possible d'utiliser les  attributs <code>aria-label</code> et <code>aria-labelledby</code> pour étiqueter des champs de formulaire, car ces attributs sont bien supportés par les navigateurs et dans les <abbr>AT</abbr> récentes :</p>
+<ul>
+  <li>L’attribut <code>aria-labelledby</code> permet de préciser l’<code>id</code> d’un élément présent dans le code qui sera utilisé pour étiqueter le champ.
+  </li>
+  <li>L’attribut <code>aria-label</code> permet de préciser directement un label sous forme d’une chaîne de caractères. Attention l'information ne sera pas donnée visuellement.</li>
+</ul>
+<p>Un exemple possible :</p>
+<pre>
+  <code class="html">
+    &lt;input type="text" name="recherche" aria-labelledby="recherche"&gt;
+    &lt;button id="recherche" type="submit" class="icon-loup" aria-label="Recherche"&gt;&lt;/button&gt;
+  </code>
+</pre>
+<h3 id="lattribut-title">L'attribut title <a class="header-anchor" href="#lattribut-title" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>L’attribut <code>title</code> permet d’étiqueter un champ de formulaire de manière accessible. Il déclenchera également l’affichage d’une info-bulle au survol de l’élément avec la souris, bonne chose pour les déficients cognitifs, les novices du numérique.</p>
+<p>Attention, nous pourrions être tentés d'utiliser l'attribut <code>placeholder</code>. Cet attribut n'est pas assez robuste, en effet :</p>
+<ul>
+  <li>le texte du <code>placeholder</code> qui s’affiche dans le champ n’est généralement pas assez contrasté&nbsp;;
+  </li>
+  <li>il s’efface à la saisie du contenu dans le champ (entraînant des difficultés en cas de déficience
+    cognitive)&nbsp;;
+  </li>
+  <li>le <code>placeholder</code> n’est pas toujours lu par les aides techniques&nbsp;;</li>
+  <li>il rend les corrections difficiles en cas d’erreur s'il n'existe pas de label affiché&nbsp;;</li>
+</ul>
+<p>En revanche, le <code>placeholder</code> peut servir de guide, d’aide pour remplir le champ sans que cette information soit absolument nécessaire (par exemple, proposer une valeur attendue valide) : ne pas hésiter à l’utiliser pour ce type de besoin.</p>
+<h2 id="regrouper-les-champs-de-meme-nature">Regrouper les champs de même nature <a class="header-anchor" href="#regrouper-les-champs-de-meme-nature" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Lorsque nécessaire, il est important de regrouper les champs de même nature, ça permettra de rendre l'ensemble du formulaire plus compréhensible.<br>
+La plupart du temps, on regroupe nos boutons radio, ou nos cases à cocher, afin d'associer une entête à ces éléments.</p>
+<p>Pour les regrouper, on utilise la balise <code>fieldset</code>, qui aura comme premier enfant la balise <code>legend</code> qui servira d'entête à nos champs regroupés.</p>
+<h3 id="exemple-3">Exemple <a class="header-anchor" href="#exemple-3" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Dans notre formulaire d'inscription, on peut ajouter le genre de notre utilisateur. Pour cela, on va implémenter des boutons radio, et les regrouper avec l'entête <strong>Genre</strong></p>
+<div class="col-md-8">
+  <form id="formulaire3" class="border border-secondary p-3 my-2">
+    [...]
+    <fieldset>
+      <legend>Genre</legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M">
+        <label class="form-check-label" for="M">M</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme">
+        <label class="form-check-label" for="Mme">Mme</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="Non-binaire" >
+        <label class="form-check-label" for="Non-binaire">Non-binaire</label>
+      </div>
+    </fieldset>
+  </form>
+</div>
+<p>Un exemple possible :</p>
+<pre>
+  <code class="html">
+    &lt;div class="col-md-8"&gt;
+    &lt;form id="formulaire3" class="border border-secondary p-3 my-2"&gt;
+      [...]
+      &lt;fieldset&gt;
+        &lt;legend&gt;Genre&lt;/legend&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M"&gt;
+          &lt;label class="form-check-label" for="M"&gt;M&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme"&gt;
+          &lt;label class="form-check-label" for="Mme"&gt;Mme&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="Non-binaire" &gt;
+          &lt;label class="form-check-label" for="Non-binaire"&gt;Non-binaire&lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/fieldset&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  </code>
+</pre>
+<h2 id="preciser-le-type-ou-le-format-attendu">Préciser le type ou le format attendu <a class="header-anchor" href="#preciser-le-type-ou-le-format-attendu" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Pour aider l'utilisateur, il est aussi important de lui préciser le type ou le format attendu lorsque nécessaire. Par exemple, pour une date de naissance, on doit, si besoin, lui indiquer le format de saisie (jj/mm/aaaa).</p>
+<p>Pour informer l'utilisateur, on peut :</p>
+<ul>
+  <li>fournir les instructions dans le label</li>
+  <li>utiliser l'attribut <code>aria-labelledby</code> ou <code>aria-describedby</code></li>
+</ul>
+<h3 id="exemple-4">Exemple <a class="header-anchor" href="#exemple-4" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Pour notre formulaire d'inscription, nous allons rajouter un champ mot de passe en précisant le format que l'on souhaite.</p>
+<p>Lorsqu'on ajoute un champ mot de passe, il est aussi important de laisser la possibilité d'afficher ou de cacher le mot de passe. Cela permet aux utilisateurs atteint de troubles moteurs, de l'attention ou cognitifs d'éviter d'éventuelles erreurs de saisie.</p>
+<div class="col-md-8">
+  <form id="formulaire4" class="border border-secondary p-3 my-2">
+    <label for="password" class="form-label">Mot de passe </label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/>
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility" title="Afficher le mot de passe" >
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill-rule: evenodd;
+                }
+              </style>
+            </defs>
+            <path id="vision" class="cls-1" d="M513.081,250.129c-4.017,0-8.041-.129-12.081-0.129s-8.064.129-12.081,0.129C301.335,250.129,111.491,382.343,50,500c61.491,117.656,249.335,249.871,436.919,249.871,4.017,0,8.04.129,12.081,0.129s8.064-.129,12.081-0.129C698.665,749.871,888.51,617.656,950,500,888.51,382.343,700.665,250.129,513.081,250.129ZM498.62,680a180,180,0,1,1,180-180A180,180,0,0,1,498.62,680Zm-378.2-179.963c29.782-41.595,77.4-84.081,132.916-117.816a545.263,545.263,0,0,1,55.918-29.695,239.848,239.848,0,0,0,.78,295.942,537.117,537.117,0,0,1-57.553-30.6C197.469,584.226,150.153,541.734,120.417,500.034Zm626.25,117.747a544.106,544.106,0,0,1-60.236,31.655,239.784,239.784,0,0,0-.761-299.823,536.07,536.07,0,0,1,61.852,32.517c55.01,33.642,102.326,76.136,132.061,117.836C849.8,541.564,802.185,584.045,746.667,617.781ZM597.931,453.153a48.227,48.227,0,1,1-62.472-56.6A109.731,109.731,0,1,0,597.931,453.153Z" />
+          </svg>
+        </button>
+      </span>
+    </div>
+    <div id="passwordHelpBlock" class="form-text">
+        Votre mot de passe doit contenir minimum 6 caractères.
+    </div>
+  </form>
+</div>
+<p>Un exemple possible :</p>
+<pre>
+  <code class="html">
+  &lt;div class="col-md-8"&gt;
+    &lt;form id="formulaire4" class="border border-secondary p-3 my-2"&gt;
+      &lt;label for="password" class="form-label"&gt;Mot de passe &lt;/label&gt;
+      &lt;div class="mb-2 input-group"&gt;
+        &lt;input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/&gt;
+        &lt;span class="input-group-text"&gt;
+          &lt;button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility" title="Afficher le mot de passe" &gt;
+            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
+              [...]
+            &lt;/svg&gt;
+          &lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id="passwordHelpBlock" class="form-text"&gt;
+          Votre mot de passe doit contenir minimum 6 caractères.
+        &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  </code>
+</pre>
+<h2 id="exemple-complet">Exemple complet <a class="header-anchor" href="#exemple-complet" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>L'exemple complet avec tous les éléments que l'on a passés en revue. Dans la deuxième partie, on verra comment valider le formulaire et gérer les messages d'erreurs.<br>
+Pour la suite de l'exercice et compléter notre formulaire d'inscription, nous avons rajouté des champs pour l'adresse (adresse, ville, code postal).</p>
+<div class="col-md-8">
+  <form id="formulaire_final" class="border border-secondary p-3 my-2">
+    <div class="mb-2">
+      <label for="email_final" class="form-label">Email</label>
+      <input type="text" class="form-control" id="email_final"/>
+    </div>
+    <label for="password_final" class="form-label">Mot de passe </label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/>
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Afficher le mot de passe" >
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill-rule: evenodd;
+                }
+              </style>
+            </defs>
+            <path id="vision_final" class="cls-1" d="M513.081,250.129c-4.017,0-8.041-.129-12.081-0.129s-8.064.129-12.081,0.129C301.335,250.129,111.491,382.343,50,500c61.491,117.656,249.335,249.871,436.919,249.871,4.017,0,8.04.129,12.081,0.129s8.064-.129,12.081-0.129C698.665,749.871,888.51,617.656,950,500,888.51,382.343,700.665,250.129,513.081,250.129ZM498.62,680a180,180,0,1,1,180-180A180,180,0,0,1,498.62,680Zm-378.2-179.963c29.782-41.595,77.4-84.081,132.916-117.816a545.263,545.263,0,0,1,55.918-29.695,239.848,239.848,0,0,0,.78,295.942,537.117,537.117,0,0,1-57.553-30.6C197.469,584.226,150.153,541.734,120.417,500.034Zm626.25,117.747a544.106,544.106,0,0,1-60.236,31.655,239.784,239.784,0,0,0-.761-299.823,536.07,536.07,0,0,1,61.852,32.517c55.01,33.642,102.326,76.136,132.061,117.836C849.8,541.564,802.185,584.045,746.667,617.781ZM597.931,453.153a48.227,48.227,0,1,1-62.472-56.6A109.731,109.731,0,1,0,597.931,453.153Z" />
+          </svg>
+        </button>
+      </span>
+    </div>
+    <div id="passwordHelpBlock_final" class="form-text">
+        Votre mot de passe doit contenir minimum 6 caractères.
+    </div>
+    <div class="mb-2">
+      <label for="name_final" class="form-label">Nom</label>
+      <input type="text" class="form-control" id="name_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="firstname_final" class="form-label">Prénom</label>
+      <input type="text" class="form-control" id="firstname_final"/>
+    </div>
+    <fieldset>
+      <legend>Genre</legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M">
+        <label class="form-check-label" for="M_final">M</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme">
+        <label class="form-check-label" for="Mme_final">Mme</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Non-binaire_final" value="Non-binaire" >
+        <label class="form-check-label" for="Non-binaire_final">Non-binaire</label>
+      </div>
+    </fieldset>
+    <div class="mb-2">
+      <label for="adresse_final" class="form-label">Adresse</label>
+      <input type="text" class="form-control" id="adresse_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="adresse2_final" class="form-label">Complément d'adresse</label>
+      <input type="text" class="form-control" id="adresse2_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="ville_final" class="form-label">Ville</label>
+      <input type="text" class="form-control" id="ville_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="cp_final" class="form-label">Code postal</label>
+      <input type="text" class="form-control" id="cp_final"/>
+    </div>
+  </form>
+</div>
+<p>Le code final :</p>
+<pre>
+  <code class="html">
+  &lt;div class="col-md-8"&gt;
+    &lt;form id="formulaire_final" class="border border-secondary p-3 my-2"&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="email_final" class="form-label"&gt;Email&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="email_final"/&gt;
+      &lt;/div&gt;
+      &lt;label for="password_final" class="form-label"&gt;Mot de passe &lt;/label&gt;
+      &lt;div class="mb-2 input-group"&gt;
+        &lt;input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/&gt;
+        &lt;span class="input-group-text"&gt;
+          &lt;button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Afficher le mot de passe" &gt;
+            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;&lt;/svg&gt;
+          &lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id="passwordHelpBlock_final" class="form-text"&gt;
+          Votre mot de passe doit contenir minimum 6 caractères.
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="name_final" class="form-label"&gt;Nom&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="name_final"/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="firstname_final" class="form-label"&gt;Prénom&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="firstname_final"/&gt;
+      &lt;/div&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Genre&lt;/legend&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M"&gt;
+          &lt;label class="form-check-label" for="M_final"&gt;M&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme"&gt;
+          &lt;label class="form-check-label" for="Mme_final"&gt;Mme&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Non-binaire_final" value="Non-binaire" &gt;
+          &lt;label class="form-check-label" for="Non-binaire_final"&gt;Non-binaire&lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/fieldset&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="adresse_final" class="form-label"&gt;Adresse&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="adresse_final"/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="adresse2_final" class="form-label"&gt;Complément d'adresse&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="adresse2_final"/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="ville_final" class="form-label"&gt;Ville&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="ville_final"/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="cp_final" class="form-label"&gt;Code postal&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="cp_final"/&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  </code>
+</pre>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sur cette page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#etiqueter-les-champs-de-formulaires" class="nav-link text-muted">Étiqueter les champs de formulaires</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#la-balise-label" class="nav-link text-muted">La balise label</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#exemple" class="nav-link text-muted">Exemple</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#masquer-les-etiquettes-de-maniere-accessible" class="nav-link text-muted">Masquer les étiquettes de manière accessible</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#exemple-2" class="nav-link text-muted">Exemple</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#les-attributs-aria" class="nav-link text-muted">Les attributs ARIA</a></li><li class="nav-item position-relative">
+            <a href="#lattribut-title" class="nav-link text-muted">L&#39;attribut title</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#regrouper-les-champs-de-meme-nature" class="nav-link text-muted">Regrouper les champs de même nature</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#exemple-3" class="nav-link text-muted">Exemple</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#preciser-le-type-ou-le-format-attendu" class="nav-link text-muted">Préciser le type ou le format attendu</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#exemple-4" class="nav-link text-muted">Exemple</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#exemple-complet" class="nav-link text-muted">Exemple complet</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link">
+  À propos 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-fr.xml" class="nav-link">
+  Flux rss 
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/accessibilite" class="nav-link">
+  Accessibilité 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/fr/" class="nav-link">
+  Pré-version sur Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Déploiements sur Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/formulaires/part1/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+            Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Retour en haut de page">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Retour en haut de page">
+        <span class="visually-hidden">Retour en haut de page</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script src="script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>

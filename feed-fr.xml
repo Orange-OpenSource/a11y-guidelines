@@ -4,12 +4,28 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2022-11-21T00:00:00Z</updated>
+  <updated>2022-12-13T08:01:57Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>  
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Articles techniques pour la mise en place de l&#39;accessibilité</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/"/>
+    <updated>2022-12-13T08:01:57Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/</id>
+    <content xml:lang="fr" type="html">Les articles en français au sujet de l&#39;accessibilité</content>
+  </entry>
+  
+  <entry>
+    <title>Formulaire partie 1 - Structurer son formulaire</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/formulaires/part1/"/>
+    <updated>2022-12-12T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/formulaires/part1/</id>
+    <content xml:lang="fr" type="html">Faire un formulaire accessible, partie 1 : labéliser ses champs et structurer son formulaire</content>
+  </entry>
   
   <entry>
     <title>Fiches mémo accessibilité</title>

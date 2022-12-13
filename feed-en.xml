@@ -4,12 +4,28 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2022-11-21T00:00:00Z</updated>
+  <updated>2022-12-13T08:01:56Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>  
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Technical articles</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/"/>
+    <updated>2022-12-13T08:01:56Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/</id>
+    <content xml:lang="en" type="html">Technical articles list</content>
+  </entry>
+  
+  <entry>
+    <title>Form part 1 - Structure your form</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/form/part1/"/>
+    <updated>2022-12-12T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/form/part1/</id>
+    <content xml:lang="en" type="html">Making an accessible form, part 1: labeling your fields and structuring your form</content>
+  </entry>
   
   <entry>
     <title>Accessibility fact sheets</title>
