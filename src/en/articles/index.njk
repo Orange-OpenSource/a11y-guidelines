@@ -8,5 +8,20 @@ displayToc: false
 {% set posts = collections.articles_en | reverse %}
 
 <h1 aria-live="polite"><span id="filtersbar_counter" class="hidden-if-no-js">{{ posts | length }}</span>&nbsp;Technical articles</h1>
+<div class="d-flex col-md-5">
+      <input type="search" id="search-article-text" placeholder="Rechercher un article" aria-label="Rechercher un article" class="form-control">
+      <button class="btn btn-primary btn-inverse" id="search_article" aria-label="Lancer la recherche d'un article" title="Lancer la recherche d'un article">
+        <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
+            <defs>
+                <style>
+                .cls-1 {
+                    fill-rule: evenodd;
+                }
+                </style>
+            </defs>
+            <path class="cls-1" d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+        </svg>
+      </button>
+</div>
 
 {{ ui.postsList(posts) }}
