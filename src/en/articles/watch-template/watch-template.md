@@ -2,10 +2,13 @@
 title: "#a11y technical watch, April-May 2022"
 abstract: "#a11y anthology, April-May 2022"
 date: "2022-06-02"
+eleventyExcludeFromCollections: true
 tags:
   - veille
 ---
-# Digital accessibility watch February-Maarch 2022
+// delete eleventyExcludeFromCollections: true
+
+# Digital accessibility watch February-March 2022
 
 
 - 
