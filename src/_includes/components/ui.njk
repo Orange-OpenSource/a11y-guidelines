@@ -63,7 +63,7 @@
 {% if filters == true %}
   {{ filtersBar(posts) }}
 {% endif %}
-<ol class="list-unstyled">
+<ol class="list-unstyled" id="list_article">
 {%- for post in posts %}{% if page.url != post.url -%}
   {% set tags = post.data.tags %}
 
