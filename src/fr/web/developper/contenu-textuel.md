@@ -199,7 +199,7 @@ Pour des données tabulaires&nbsp;:
 **À vérifier&nbsp;:**
 
 - Rappel&nbsp;: ne pas utiliser de tableaux à des fins de mise en page. 
-- La légende (`caption`) peut être remplacée par un titre de section (`hx`) placé avant le tableau.v
+- La légende (`caption`) peut être remplacée par un titre de section (`hx`) placé avant le tableau.
 - Préférer scinder un tableau complexe en plusieurs tableaux plus simples.
 - Les balises `tbody`, `tfoot` et `thead` n’ont aucune influence sur l’accessibilité, il n’y a donc pas d’obligation à les utiliser.
 
