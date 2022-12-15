@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Page de résultats de recherche - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Bonnes pratiques pour les résultats de recherche dans un site.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d&#39;évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Aller à la recherche</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/fr/" class="nav-link">
+  Accueil 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/cadrage/" class="nav-link">
+  Cadrage 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/ios/" class="nav-link">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/contenu-et-communication/" class="nav-link">
+  Contenu et communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/articles/" class="nav-link active" aria-current="true">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici&amp;nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Page de résultats de recherche
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        Sur cette page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Préambule</a><a href="#" class="dropdown-item text-wrap">Le formulaire de recherche</a><a href="#" class="dropdown-item text-wrap">Affichage des résultats</a><a href="#" class="dropdown-item text-wrap">Le titre de page</a><a href="#" class="dropdown-item text-wrap">Chargement et affichage du résultat de la recherche</a><a href="#" class="dropdown-item text-wrap">L&#39;affichage et la sémantique des résultats</a><a href="#" class="dropdown-item text-wrap">La pagination</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          
+            <h1>Page de résultats de recherche</h1>  
+            
+              <span class="visually-hidden" id="filters_label">
+                Thématiques associées :
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="../?tag=component" class="btn btn-dark btn-sm" data-tag="component">Composant</a></li>
+              </ul>
+            
+            <time class="text-muted" datetime="2018-01-10T00:00:00.000Z">10 janvier 2018</time>
+            
+          <div class="mt-4">
+          
+<h2>Préambule</h2>
+<p>La recherche sur le site doit de préférence être une page dédiée spécifique. Pour y accéder, on peut mettre en place dans le menu principal, dans le pied de page..., un lien "Rechercher" ou un icône de loupe qui permet d'aller sur cette page dédiée.</p>
+
+<h2>Le formulaire de recherche</h2>
+<p>Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/">la librairie Boosted</a>. Celle-ci permet d’obtenir des formulaires dont le design est conforme à la charte Orange. </p>
+  <p>Pour une recherche sur le site, il faut ajouter le <code>role="search"</code> afin d'assurer une meilleure identification de la région de recherche, comme ceci&nbsp;: <br />
+<!-- Code du form de recherche -->
+<pre><code class="html">
+      &lt;form class="d-flex" role="search"&gt;
+        &lt;input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Rechercher"&gt;
+        &lt;button class="btn btn-primary" type="submit"&gt;Rechercher&lt;/button&gt;
+      &lt;/form&gt;
+</code></pre>
+</p>
+<p>Nota bene&nbsp;: bien sûr, il est toujours mieux de privilégier une étiquette de champ de formulaire visible pour tout utilisateur, cependant, lorsqu'il n'y a qu'un champ de recherche comme seul élément de formulaire dans la page, c'est envisageable !
+</p>
+<p><strong>Attention&nbsp;:</strong> lorsque plusieurs formulaires de recherche existent dans la page, il faut nommer spécifiquement chaque <code>role="search"</code> avec un <code>aria-label</code> ou <code>aria-labelledby</code>&nbsp;:<br />
+<!-- Code pour 2 form de recherche -->
+<pre><code class="html">
+      &lt;form class="d-flex" role="search" aria-label="Recherche sur tout le site"&gt;
+        &lt;input class="form-control me-2" type="search" placeholder="Rechercher dans le site" aria-label="Rechercher dans le site"&gt;
+        &lt;button class="btn btn-primary" type="submit"&gt;Rechercher&lt;/button&gt;
+      &lt;/form&gt;
+      ...
+      &lt;form class="d-flex" role="search" aria-labelledby="actu"&gt;
+        &lt;h2 id="actu"&gt;Rechercher dans actualité&lt;/h2&gt;
+        &lt;input class="form-control me-2" type="search" placeholder="Rechercher les actualités" aria-label="Rechercher une actu"&gt;
+        &lt;button class="btn btn-primary" type="submit"&gt;Rechercher des actus&lt;/button&gt;
+      &lt;/form&gt;
+</code></pre>
+</p>
+
+<h2>Affichage des résultats</h2>
+<h3>Le titre de page</h3>
+<p>Une fois la recherche lancée, en premier lieu, le titre de page ( <code>title</code>) doit être modifié pour mentionner&nbsp;: <br />
+<ul>
+<li>le fait que nous sommes sur une page de résultats de recherche</li>
+<li>le terme recherché</li>
+<li>le nombre total de résultats</li>
+</ul>
+</p>
+
+<p>Par exemple, "2 résultats pour..... 'Fibre' - Orange.com" </p>
+
+<h3>Chargement et affichage du résultat de la recherche</h3>
+<p>Dans certains cas il semble pratique pour les utilisateurs de privilégier un rechargement asynchrone des résultats afin de ne pas charger une nouvelle page, notez tout de même que cela peut être perturbant pour certains utilisateurs.</p>
+<p>Quoi qu'il en soit, le contenu principal de la page doit afficher les résultats trouvés. Ils doivent se situer juste après le formulaire de recherche afin d'être l'élément suivant de la navigation clavier, juste après le bouton d'envoi de la recherche.</p> 
+<p>Il faut faire précéder les résultats d'un titre de rubrique, reprenant le terme recherché et le nombre total de résultats et, si besoin, en cas de pagination, le nombre de résultats affichés dans la page.</p>
+<p>Ce titre de rubrique doit être notifié aux utilisateurs, y compris ceux utilisant des aides techniques et en particulier, des lecteurs d'écran. Pour cela, nous utilisons de l'<abbr>ARIA</abbr>, le <code>role="alert"</code> permettra une lecture dynamique du contenu de l'élément au <abbr>AT</abbr>, sachant que nous rechargerons à chaque recherche cette partie de page (le <code>role="alert"</code> n'étant lu qu'une fois à la différence de <code>aria-live="true"</code>).</p>
+<!-- Code pour form de recherche et résultats -->
+<pre><code class="html">
+...
+  &lt;form class="d-flex" role="search"&gt;
+    &lt;input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Rechercher dans le site"&gt;
+    &lt;button class="btn btn-primary" type="submit"&gt;Rechercher&lt;/button&gt;
+  &lt;/form&gt;
+  &lt;h2 role="alert"&gt;
+    15 résultats, 5 affichés pour "Fibre" 
+  &lt;/h2&gt;
+...
+</code></pre>
+
+<p>Nota bene &nbsp;: la pagination des résultats de recherche est une bonne option pour éviter des pages de résultats trop longues. Cependant, il ne faut pas utiliser le chargement dynamique infini en particulier au scroll, car il est souvent inaccessible et peu utilisable.</p>
+
+<h3>L'affichage et la sémantique des résultats</h3>
+<p>Sémantiquement, les résultats de la recherche à afficher sont, soit une liste (ordonnée ou pas), soit un tableau de données. Si des filtres, par exemple, permettent de classer les résultats par pertinence, nombre d'occurrences du terme recherché, par date... alors il faudra choisir une liste ordonnée <code>ol</code> ou signifier cet ordre de tri dans le tableau de résultats. Le choix de la sémantique des résultats va dépendre de plusieurs critères&nbsp;:<br />
+<ul>
+<li>le type de données à afficher, par exemple, si les résultats sont une liste de titre d'articles et un chapeau ou un résumé, la liste semble adaptée.</li>
+<li>les données à afficher par résultat, par exemple, si ce sont des produits avec le nom, le prix, des détails... le tableau de données sera préféré du fait de la structure de données plus complexe.</li>
+</ul>
+</p>
+<p>Pour ce qui est de la sémantique de chaque résultat, le titre de l'article, le nom du produit... doivent être un titre de rubrique, le chapeau ou le résumé, les détails... mis dans un paragraphe ou dans une cellule de tableau de données.</p>
+<p>Remarque, il est souhaitable de mettre en emphase visuelle (surligné, souligné...) et sémantique (<code>em</code>, <code>strong</code>...) le terme recherché dans les résultats affichés !</p>
+
+<h3>La pagination</h3>
+<p>Lorsque le nombre de résultats dépasse la dizaine, il est utile de paginer ces résultats. Pour faciliter la navigation, la bonne pratique est de mettre un titre de rubrique de même niveau que celui de chaque résultat  positionné au début du composant de pagination afin de l'identifier.
+
+<!-- Code pour résultats et pagination -->
+<pre><code class="html">
+...
+  &lt;h2 role="alert"&gt;
+    15 résultats, 5 affichés pour "Fibre" 
+  &lt;/h2&gt;
+...
+  &lt;h3&gt;Déploiement de la &lt;strong&gt;fibre&lt;/strong&gt; en 2021 en Rhône-Alpes chez Orange&lt;/h2&gt;
+  &lt;p&gt;Orange prévoit un déploiement accéléré de la &lt;strong&gt;fibre&lt;/strong&gt; dans le zones blanches...&lt;/p&gt;
+...
+  &lt;nav aria-labelledby="pagination"&gt;
+  &lt;h3 id="pagination" class="visually-hidden"&gt;Pagination des résultats de recherche &lt;/h3&gt;
+  &lt;ul class="pagination"&gt;
+...
+</code></pre>
+</p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sur cette page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Préambule</a></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Le formulaire de recherche</a></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Affichage des résultats</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Le titre de page</a></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Chargement et affichage du résultat de la recherche</a></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">L&#39;affichage et la sémantique des résultats</a></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">La pagination</a></li></ul></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link">
+  À propos 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-fr.xml" class="nav-link">
+  Flux rss 
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/accessibilite" class="nav-link">
+  Accessibilité 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/fr/" class="nav-link">
+  Pré-version sur Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Déploiements sur Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/page-resultats-recherche/index.njk'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+            Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Retour en haut de page">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Retour en haut de page">
+        <span class="visually-hidden">Retour en haut de page</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2022 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>

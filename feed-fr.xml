@@ -4,20 +4,12 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2022-12-13T08:01:57Z</updated>
+  <updated>2022-12-12T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>  
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
-  
-  <entry>
-    <title>Articles techniques pour la mise en place de l&#39;accessibilité</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/"/>
-    <updated>2022-12-13T08:01:57Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/</id>
-    <content xml:lang="fr" type="html">Les articles en français au sujet de l&#39;accessibilité</content>
-  </entry>
   
   <entry>
     <title>Formulaire partie 1 - Structurer son formulaire</title>
@@ -276,11 +268,163 @@
   </entry>
   
   <entry>
+    <title>Explorateur de fichier</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/explorateur-de-fichiers/"/>
+    <updated>2018-01-19T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/explorateur-de-fichiers/</id>
+    <content xml:lang="fr" type="html">Exemple d&#39;explorateur de fichier accessible.</content>
+  </entry>
+  
+  <entry>
+    <title>Gestion dynamique du focus</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/gestion-dynamique-du-focus/"/>
+    <updated>2018-01-18T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/gestion-dynamique-du-focus/</id>
+    <content xml:lang="fr" type="html">Gestion du focus des zones qui se mettent à jour dynamiquement dans vos pages.</content>
+  </entry>
+  
+  <entry>
+    <title>Exemple de menu déroulant</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/menu-deroulant/"/>
+    <updated>2018-01-17T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/menu-deroulant/</id>
+    <content xml:lang="fr" type="html">Créer un menu déroulant accessible.</content>
+  </entry>
+  
+  <entry>
+    <title>Gestion de la navigation clavier avec ARIA</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/navigation-clavier-avec-aria/"/>
+    <updated>2018-01-16T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/navigation-clavier-avec-aria/</id>
+    <content xml:lang="fr" type="html">Gérer la navigation clavier avec ARIA et les design patterns</content>
+  </entry>
+  
+  <entry>
+    <title>Régions (landmarks) ARIA</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/landmarks-aria/"/>
+    <updated>2018-01-15T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/landmarks-aria/</id>
+    <content xml:lang="fr" type="html">Mise en place de régions ARIA (landmarks).</content>
+  </entry>
+  
+  <entry>
+    <title>Vocalisation des prix</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/vocalisation-des-prix/"/>
+    <updated>2018-01-14T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/vocalisation-des-prix/</id>
+    <content xml:lang="fr" type="html">Afficher des promos, des prix barrés accessibles.</content>
+  </entry>
+  
+  <entry>
+    <title>Masquer les iframe techniques</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/iframes-techniques/"/>
+    <updated>2018-01-13T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/iframes-techniques/</id>
+    <content xml:lang="fr" type="html">Comment masquer les iframes aux outils d&#39;assistance.</content>
+  </entry>
+  
+  <entry>
+    <title>Exemple masquage accessible et aria-hidden</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/masquage-accessible/"/>
+    <updated>2018-01-12T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/masquage-accessible/</id>
+    <content xml:lang="fr" type="html">Créer des éléments non-visibles à l&#39;écran mais accessibles aux outils d&#39;assistances.</content>
+  </entry>
+  
+  <entry>
+    <title>Gestion de l’agrandissement des caractères</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/zoom/"/>
+    <updated>2018-01-11T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/zoom/</id>
+    <content xml:lang="fr" type="html">Gestion du zoom, agrandissement de la taille du texte</content>
+  </entry>
+  
+  <entry>
+    <title>Page de résultats de recherche</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/page-resultats-recherche/"/>
+    <updated>2018-01-10T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/page-resultats-recherche/</id>
+    <content xml:lang="fr" type="html">Bonnes pratiques pour les résultats de recherche dans un site.</content>
+  </entry>
+  
+  <entry>
+    <title>Les listbox et la navigation au clavier</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/listbox-et-navigation-clavier/"/>
+    <updated>2018-01-09T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/listbox-et-navigation-clavier/</id>
+    <content xml:lang="fr" type="html">Exemple de liste ARIA, gestion de la navigation clavier.</content>
+  </entry>
+  
+  <entry>
+    <title>Les listbox avec cases à cocher</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/listbox-avec-cases-a-cocher/"/>
+    <updated>2018-01-08T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/listbox-avec-cases-a-cocher/</id>
+    <content xml:lang="fr" type="html">Exemple de liste ARIA (partie 2), intégration de cases à cocher.</content>
+  </entry>
+  
+  <entry>
     <title>Les attributs ARIA qui peuvent vous sauver !</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/attributs-aria-qui-peuvent-vous-sauver/"/>
     <updated>2018-01-08T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/attributs-aria-qui-peuvent-vous-sauver/</id>
     <content xml:lang="fr" type="html">Quelques attributs ARIA à connaître pour avoir un nom accessible</content>
+  </entry>
+  
+  <entry>
+    <title>Les listbox</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/listbox/"/>
+    <updated>2018-01-07T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/listbox/</id>
+    <content xml:lang="fr" type="html">Exemple de liste ARIA.</content>
+  </entry>
+  
+  <entry>
+    <title>Créer des tags accessibles 2/2</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/tags/2/"/>
+    <updated>2018-01-06T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/tags/2/</id>
+    <content xml:lang="fr" type="html">Exemple d&#39;étiquettes accessibles (partie 2).</content>
+  </entry>
+  
+  <entry>
+    <title>Créer des tags accessibles 1/2</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/tags/"/>
+    <updated>2018-01-05T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/tags/</id>
+    <content xml:lang="fr" type="html">Exemple d&#39;étiquettes accessibles (partie 1).</content>
+  </entry>
+  
+  <entry>
+    <title>Faire parler le lecteur d&#39;écran à l&#39;aide de JavaScript et ARIA</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/faire-parler-le-lecteur-d-ecran/"/>
+    <updated>2018-01-04T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/faire-parler-le-lecteur-d-ecran/</id>
+    <content xml:lang="fr" type="html">Exemple de code permettant de faire parler la synthèse vocale.</content>
+  </entry>
+  
+  <entry>
+    <title>Les boîtes de dialogue 2/2</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/boites-de-dialogue/2/"/>
+    <updated>2018-01-03T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/boites-de-dialogue/2/</id>
+    <content xml:lang="fr" type="html">Exemple de boite de dialogue accessible (partie 2).</content>
+  </entry>
+  
+  <entry>
+    <title>Les boîtes de dialogue 1/2</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/boites-de-dialogue/1/"/>
+    <updated>2018-01-02T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/boites-de-dialogue/1/</id>
+    <content xml:lang="fr" type="html">Exemple de boite de dialogue accessible (partie 1).</content>
+  </entry>
+  
+  <entry>
+    <title>Bonnes pratiques pour un chatbot</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/bonnes-pratiques-pour-un-chatbot/"/>
+    <updated>2018-01-01T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/bonnes-pratiques-pour-un-chatbot/</id>
+    <content xml:lang="fr" type="html">Créer un chatbot accessible.</content>
   </entry>
   
   <entry>

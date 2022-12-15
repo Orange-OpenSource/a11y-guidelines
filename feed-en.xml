@@ -4,20 +4,12 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2022-12-13T08:01:56Z</updated>
+  <updated>2022-12-12T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>  
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
-  
-  <entry>
-    <title>Technical articles</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/"/>
-    <updated>2022-12-13T08:01:56Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/</id>
-    <content xml:lang="en" type="html">Technical articles list</content>
-  </entry>
   
   <entry>
     <title>Form part 1 - Structure your form</title>
@@ -249,6 +241,150 @@
     <updated>2018-02-08T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/captcha-accessibility/</id>
     <content xml:lang="en" type="html">CAPTCHA and accessibility</content>
+  </entry>
+  
+  <entry>
+    <title>File Explorer</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/file-explorer/"/>
+    <updated>2018-01-19T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/file-explorer/</id>
+    <content xml:lang="en" type="html">Example of accessible file explorer.</content>
+  </entry>
+  
+  <entry>
+    <title>Dynamic focus</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/dynamic-focus/"/>
+    <updated>2018-01-18T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/dynamic-focus/</id>
+    <content xml:lang="en" type="html">Focus management of content that updates dynamically in your pages.</content>
+  </entry>
+  
+  <entry>
+    <title>Dropdown menu</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/dropdown-menu/"/>
+    <updated>2018-01-17T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/dropdown-menu/</id>
+    <content xml:lang="en" type="html">Create an accessible drop-down menu.</content>
+  </entry>
+  
+  <entry>
+    <title>Handling keyboard navigation for ARIA</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/keyboard-navigation-aria/"/>
+    <updated>2018-01-16T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/keyboard-navigation-aria/</id>
+    <content xml:lang="en" type="html">Handling keyboard navigation is one of the mainstays of the W3c WAI ARIA recommendations</content>
+  </entry>
+  
+  <entry>
+    <title>Landmarks ARIA</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/landmarks/"/>
+    <updated>2018-01-15T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/landmarks/</id>
+    <content xml:lang="en" type="html">How to improve page navigation by adding semantics to content that makes it easier to find the major regions of the page</content>
+  </entry>
+  
+  <entry>
+    <title>Price vocalization</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/price-vocalization/"/>
+    <updated>2018-01-14T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/price-vocalization/</id>
+    <content xml:lang="en" type="html">Showing and vocalizing prices.</content>
+  </entry>
+  
+  <entry>
+    <title>Hiding technical iframe</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/technical-iframe/"/>
+    <updated>2018-01-13T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/technical-iframe/</id>
+    <content xml:lang="en" type="html">Hidding iframe to assistive technology.</content>
+  </entry>
+  
+  <entry>
+    <title>Accessible hiding and aria-hidden example</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/accessible-hiding/"/>
+    <updated>2018-01-12T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/accessible-hiding/</id>
+    <content xml:lang="en" type="html">Elements not visible on the screen but accessible to assistive technology.</content>
+  </entry>
+  
+  <entry>
+    <title>Handling Zoom, enlarging text size</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/zoom/"/>
+    <updated>2018-01-11T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/zoom/</id>
+    <content xml:lang="en" type="html">Text size enlargement is used by many users (elderly people, people with visual impairments and people that should wear glasses and don’t…)</content>
+  </entry>
+  
+  <entry>
+    <title>Listbox and keyboard navigation</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/listbox-and-keyboard-navigation/"/>
+    <updated>2018-01-09T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/listbox-and-keyboard-navigation/</id>
+    <content xml:lang="en" type="html">Example of ARIA list (part 3)</content>
+  </entry>
+  
+  <entry>
+    <title>Listbox with checkboxes</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/listbox-with-checkboxes/"/>
+    <updated>2018-01-08T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/listbox-with-checkboxes/</id>
+    <content xml:lang="en" type="html">Example of ARIA list (part 2).</content>
+  </entry>
+  
+  <entry>
+    <title>Listbox</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/listbox/"/>
+    <updated>2018-01-07T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/listbox/</id>
+    <content xml:lang="en" type="html">Example of ARIA list (part 1).</content>
+  </entry>
+  
+  <entry>
+    <title>Creating accessible “tags” 2/2</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/tags/2/"/>
+    <updated>2018-01-06T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/tags/2/</id>
+    <content xml:lang="en" type="html">Sample code to make accessible tags (part 2) examples.</content>
+  </entry>
+  
+  <entry>
+    <title>Creating accessible “tags” 1/2</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/tags/"/>
+    <updated>2018-01-05T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/tags/</id>
+    <content xml:lang="en" type="html">Sample code to make accessible tags (part 1).</content>
+  </entry>
+  
+  <entry>
+    <title>Make a screen reader talk with JavaScript and ARIA</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/make-a-screen-reader-talk/"/>
+    <updated>2018-01-04T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/make-a-screen-reader-talk/</id>
+    <content xml:lang="en" type="html">Sample code to make screen reader speech.</content>
+  </entry>
+  
+  <entry>
+    <title>Dialogs 2/2</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/dialogs/2/"/>
+    <updated>2018-01-03T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/dialogs/2/</id>
+    <content xml:lang="en" type="html">Example of an accessible dialog (part 2).</content>
+  </entry>
+  
+  <entry>
+    <title>Dialogs 1/2</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/dialogs/1/"/>
+    <updated>2018-01-02T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/dialogs/1/</id>
+    <content xml:lang="en" type="html">Example of an accessible dialog (part 1).</content>
+  </entry>
+  
+  <entry>
+    <title>Best practices for a chatbot</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/chatbot/"/>
+    <updated>2018-01-01T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/chatbot/</id>
+    <content xml:lang="en" type="html">Create an accessible chatbot.</content>
   </entry>
   
   <entry>
