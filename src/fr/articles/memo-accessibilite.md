@@ -206,7 +206,7 @@ Documents office :
     <h3 id="tele-word">Téléchargement</h4>
     <p>      
       <a href="../../res/memos/pwp/Memo-PowerPoint-Orange.pdf" class="btn btn-secondary">
-        Télécharger au format PDF (294 Ko)
+        Télécharger au format PDF (302 Ko)
         <span class="visually-hidden">Mémo rédiger une présentation PowerPoint accessible</span>
       </a>
     </p>
