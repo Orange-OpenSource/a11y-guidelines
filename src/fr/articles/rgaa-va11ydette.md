@@ -28,7 +28,7 @@ Commencez votre audit sur <a href="https://la-va11ydette.orange.com/?list=rgaa&l
 
 ## Ajout des critères de bonnes pratiques sur la checklist WCAG web 
 
-Des nouveautés sont aussi présentes sur <a href="https://la-va11ydette.orange.com/?list=wcag-web&lang=fr" target="_blank" title="la checklist WCAG Web (nouvel onglet)">la checklist Wcab Web</a>.
+Des nouveautés sont aussi présentes sur <a href="https://la-va11ydette.orange.com/?list=wcag-web&lang=fr" target="_blank" title="la checklist WCAG Web (nouvel onglet)">la checklist WCAG Web</a>.
 
 Précedement il existait deux checklist, une pour faire des déclarations et la deuxième permettait de faire des audits un peu plus poussés.
 Nous avons décidé de supprimer la checklist d'audit afin de se concentrer sur une seule grille d'audit.
