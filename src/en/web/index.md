@@ -36,7 +36,3 @@ The Va11ydette, our opensource tool that helps us during our audits and our decl
 
 ### Toolbox
 Method and internal and external tools that we use in our activity. In particular, the Orange design system, Orange Boosted, our fact sheets to have all the best accessibility practices, Personae to better understand accessibility issues...
-
-### Examples of components
-
-Didactic examples for certain types of components or interface elements that are particularly tricky to make accessible and frequently used. Everything is explained there, all you have to do is let yourself be guided!

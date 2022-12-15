@@ -39,6 +39,7 @@ module.exports = {
       web: 'Web',
       veille: 'Watch',
       telechargement: 'Download',
+      component: 'Component',
       beginner: 'Beginner',
       intermediate: 'Intermediate',
       advanced: 'Advanced'
@@ -114,6 +115,7 @@ module.exports = {
       technicalArticle: 'Article technique',
       web: 'Web',
       veille: 'Veille',      
+      component: 'Composant',
       beginner: 'Débutant',
       intermediate: 'Intermédiaire',
       advanced: 'Avancé'

@@ -541,7 +541,11 @@
   },
   {
     "old": "web_EN/exemples.html",
-    "new": "/en/web/components-examples"
+    "new": "/en/articles/?tag=component"
+  },
+  {
+    "old": "/en/web/components-examples",
+    "new": "/en/articles/?tag=component"
   },
   {
     "old": "web_EN/exemples/ARIA-clavier",
@@ -549,11 +553,19 @@
   },
   {
     "old": "web_EN/exemples/chatbot",
-    "new": "/en/web/components-examples/chatbot"
+    "new": "/en/articles/chatbot"
+  },
+  {
+    "old": "/en/web/components-examples/chatbot",
+    "new": "/en/articles/chatbot"
   },
   {
     "old": "web_EN/exemples/check-listbox",
-    "new": "/en/web/components-examples/listbox-with-checkboxes"
+    "new": "/en/articles/listbox-with-checkboxes"
+  },
+  {
+    "old": "/en/web/components-examples/listbox-with-checkboxes",
+    "new": "/en/articles/listbox-with-checkboxes"
   },
   {
     "old": "web_EN/exemples/dynFocus",
@@ -569,7 +581,11 @@
   },
   {
     "old": "web_EN/exemples/formulaire",
-    "new": "/en/web/components-examples/forms"
+    "new": "/en/articles/forms"
+  },
+  {
+    "old": "/en/web/components-examples/forms",
+    "new": "/en/articles/forms"
   },
   {
     "old": "web_EN/exemples/iframes-techniques",
@@ -581,15 +597,27 @@
   },
   {
     "old": "web_EN/exemples/listbox-pattern-aria",
-    "new": "/en/web/components-examples/listbox-and-keyboard-navigation"
+    "new": "/en/articles/listbox-and-keyboard-navigation"
+  },
+  {
+    "old": "/en/web/exemples-de-composants/listbox-and-keyboard-navigation",
+    "new": "/en/articles/listbox-and-keyboard-navigation"
   },
   {
     "old": "web_EN/exemples/listbox",
-    "new": "/en/web/components-examples/listbox"
+    "new": "/en/articles/listbox"
+  },
+  {
+    "old": "/en/web/components-examples/listbox",
+    "new": "/en/articles/listbox"
   },
   {
     "old": "web_EN/exemples/masquage/index.html",
-    "new": "/en/web/components-examples/accessible-hiding"
+    "new": "/en/articles/accessible-hiding"
+  },
+  {
+    "old": "/en/web/components-examples/accessible-hiding",
+    "new": "/en/articles/accessible-hiding"
   },
   {
     "old": "web_EN/exemples/prix/index.html",
@@ -597,11 +625,19 @@
   },
   {
     "old": "web_EN/exemples/role-dialog/role-dialog.html",
-    "new": "/en/web/components-examples/dialogs/1"
+    "new": "/en/articles/dialogs/1"
+  },
+  {
+    "old": "/en/web/components-examples/dialogs/1",
+    "new": "/en/articles/dialogs/1"
   },
   {
     "old": "web_EN/exemples/role-dialog2/role-dialog.html",
-    "new": "/en/web/components-examples/dialogs/2"
+    "new": "/en/articles/dialogs/2"
+  },
+  {
+    "old": "/en/web/components-examples/dialogs/2",
+    "new": "/en/articles/dialogs/2"
   },
   {
     "old": "web_EN/exemples/simple-menu/simple-menu.html",
@@ -609,7 +645,11 @@
   },
   {
     "old": "web_EN/exemples/speak",
-    "new": "/en/web/components-examples/make-a-screen-reader-talk"
+    "new": "/en/articles/make-a-screen-reader-talk"
+  },
+  {
+    "old": "/en/web/components-examples/make-a-screen-reader-talk",
+    "new": "/en/articles/make-a-screen-reader-talk"
   },
   {
     "old": "web_EN/exemples/stepbar/stepbar.html",
@@ -625,7 +665,11 @@
   },
   {
     "old": "web_EN/exemples/tag-exemples/index.html",
-    "new": "/en/web/components-examples/tags/2"
+    "new": "/en/articles/tags/2"
+  },
+  {
+    "old": "/en/web/components-examples/tags/2",
+    "new": "/en/articles/tags/2"
   },
   {
     "old": "web_EN/exemples/tag/exemple1.html",
@@ -665,27 +709,39 @@
   },
   {
     "old": "web_EN/exemples/tag/index.html",
-    "new": "/en/web/components-examples/tags"
+    "new": "/en/articles/tags"
+  },
+  {
+    "old": "/en/web/components-examples/tags",
+    "new": "/en/articles/tags"
   },
   {
     "old": "web_EN/exemples/tooltip/tooltip.html",
     "new": "/en/web/components-examples/tooltips"
   },
   {
-    "old": "web_EN/exemples/webmail/index.html",
-    "new": "/en/web/components-examples/webmail"
-  },
-  {
     "old": "web_EN/exemples/zoom/exemple1.html",
     "new": "/en/web/components-examples/zoom/examples/1"
   },
   {
+    "old": "/en/web/components-examples/zoom/examples/1",
+    "new": "/en/articles/zoom/examples/1"
+  },
+  {
     "old": "web_EN/exemples/zoom/exemple2.html",
-    "new": "/en/web/components-examples/zoom/examples/2"
+    "new": "/en/articles/zoom/examples/2"
+  },
+  {
+    "old": "/en/web/components-examples/zoom/examples/2",
+    "new": "/en/articles/zoom/examples/2"
   },
   {
     "old": "web_EN/exemples/zoom",
-    "new": "/en/web/components-examples/zoom"
+    "new": "/en/articles/zoom"
+  },
+  {
+    "old": "/en/web/components-examples/zoom",
+    "new": "/en/articles/zoom"
   },
   {
     "old": "web_EN/exigences.html",
@@ -997,7 +1053,11 @@
   },
   {
     "old": "web/exemples.html",
-    "new": "/fr/web/exemples-de-composants"
+    "new": "/fr/articles/?tag=component"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants",
+    "new": "/fr/articles/?tag=component"
   },
   {
     "old": "web/exemples/ARIA-clavier/index.html",
@@ -1005,11 +1065,19 @@
   },
   {
     "old": "web/exemples/chatbot/index.html",
-    "new": "/fr/web/exemples-de-composants/chatbot/bonnes-pratiques-pour-un-chatbot"
+    "new": "/fr/articles/bonnes-pratiques-pour-un-chatbot"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/bonnes-pratiques-pour-un-chatbot",
+    "new": "/fr/articles/bonnes-pratiques-pour-un-chatbot"
   },
   {
     "old": "web/exemples/check-listbox/index.html",
-    "new": "/fr/web/exemples-de-composants/listbox-avec-cases-a-cocher"
+    "new": "/fr/articles/listbox-avec-cases-a-cocher"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/listbox-avec-cases-a-cocher",
+    "new": "/fr/articles/listbox-avec-cases-a-cocher"
   },
   {
     "old": "web/exemples/dynFocus/index.html",
@@ -1025,7 +1093,11 @@
   },
   {
     "old": "web/exemples/formulaire/index.html",
-    "new": "/fr/web/exemples-de-composants/formulaires"
+    "new": "/fr/articles/formulaires"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/formulaires",
+    "new": "/fr/articles/formulaires"
   },
   {
     "old": "web/exemples/iframes-techniques/index.html",
@@ -1037,15 +1109,27 @@
   },
   {
     "old": "web/exemples/listbox-pattern-aria/index.html",
-    "new": "/fr/web/exemples-de-composants/listbox-et-navigation-clavier"
+    "new": "/fr/articles/listbox-et-navigation-clavier"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/listbox-et-navigation-clavier",
+    "new": "/fr/articles/listbox-et-navigation-clavier"
   },
   {
     "old": "web/exemples/listbox/index.html",
-    "new": "/fr/web/exemples-de-composants/listbox"
+    "new": "/fr/articles/listbox"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/listbox",
+    "new": "/fr/articles/listbox"
   },
   {
     "old": "web/exemples/masquage/index.html",
-    "new": "/fr/web/exemples-de-composants/masquage-accessible"
+    "new": "/fr/articles/masquage-accessible"
+  },
+  {
+    "old": "fr/web/exemples-de-composants/masquage-accessible",
+    "new": "/fr/articles/masquage-accessible"
   },
   {
     "old": "web/exemples/prix/index.html",
@@ -1053,11 +1137,19 @@
   },
   {
     "old": "web/exemples/role-dialog/role-dialog.html",
-    "new": "/fr/web/exemples-de-composants/boites-de-dialogue/1"
+    "new": "/fr/articles/boites-de-dialogue/1"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/boites-de-dialogue/1",
+    "new": "/fr/articles/boites-de-dialogue/1"
   },
   {
     "old": "web/exemples/role-dialog2/role-dialog.html",
-    "new": "/fr/web/exemples-de-composants/boites-de-dialogue/2"
+    "new": "/fr/articles/boites-de-dialogue/2"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/boites-de-dialogue/2",
+    "new": "/fr/articles/boites-de-dialogue/2"
   },
   {
     "old": "web/exemples/simple-menu/simple-menu.html",
@@ -1065,7 +1157,11 @@
   },
   {
     "old": "web/exemples/speak/index.html",
-    "new": "/fr/web/exemples-de-composants/faire-parler-le-lecteur-d-ecran"
+    "new": "/fr/articles/faire-parler-le-lecteur-d-ecran"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/faire-parler-le-lecteur-d-ecran",
+    "new": "/fr/articles/faire-parler-le-lecteur-d-ecran"
   },
   {
     "old": "web/exemples/stepbar/stepbar.html",
@@ -1081,7 +1177,11 @@
   },
   {
     "old": "web/exemples/tag-exemples/index.html",
-    "new": "/fr/web/exemples-de-composants/tags/2"
+    "new": "/fr/articles/tags/2"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/tags/2",
+    "new": "/fr/articles/tags/2"
   },
   {
     "old": "web/exemples/tag/exemple1.html",
@@ -1121,27 +1221,39 @@
   },
   {
     "old": "web/exemples/tag/index.html",
-    "new": "/fr/web/exemples-de-composants/tags"
+    "new": "/fr/articles/tags"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/tags",
+    "new": "/fr/articles/tags"
   },
   {
     "old": "web/exemples/tooltip/tooltip.html",
     "new": "/fr/web/exemples-de-composants/tooltips"
   },
   {
-    "old": "web/exemples/webmail/index.html",
-    "new": "/fr/web/exemples-de-composants/webmail"
+    "old": "web/exemples/zoom/exemple1.html",
+    "new": "/fr/articles/zoom/exemples/1"
   },
   {
-    "old": "web/exemples/zoom/exemple1.html",
-    "new": "/fr/web/exemples-de-composants/zoom/exemples/1"
+    "old": "/fr/web/exemples-de-composants/zoom/exemples/1",
+    "new": "/fr/articles/zoom/exemples/1"
   },
   {
     "old": "web/exemples/zoom/exemple2.html",
-    "new": "/fr/web/exemples-de-composants/zoom/exemples/1"
+    "new": "/fr/articles/zoom/exemples/2"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/zoom/exemples/2",
+    "new": "/fr/articles/zoom/exemples/2"
   },
   {
     "old": "web/exemples/zoom/index.html",
-    "new": "/fr/web/exemples-de-composants/zoom"
+    "new": "/fr/articles/zoom"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/zoom",
+    "new": "/fr/articles/zoom"
   },
   {
     "old": "web/exigences.html",

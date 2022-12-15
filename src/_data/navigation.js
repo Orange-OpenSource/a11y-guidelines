@@ -39,8 +39,7 @@ module.exports = {
           { label: 'Develop', href: '/en/web/develop/' },
           { label: 'Test', href: '/en/web/test/' },
           { label: 'Audit', href: '/en/web/wcag-audit/' },
-          { label: 'Toolbox', href: '/en/web/toolbox/' },
-          { label: 'Component examples', href: '/en/web/components-examples/' }
+          { label: 'Toolbox', href: '/en/web/toolbox/' }
         ]
       },
       {
@@ -129,8 +128,7 @@ module.exports = {
           { label: 'Développer', href: '/fr/web/developper/' },
           { label: 'Tester', href: '/fr/web/tester/' },
           { label: 'Auditer', href: '/fr/web/audit-wcag/' },
-          { label: 'Boite à outils', href: '/fr/web/outils/' },
-          { label: 'Exemples de composants', href: '/fr/web/exemples-de-composants/' }
+          { label: 'Boite à outils', href: '/fr/web/outils/' }
         ]
       },
       {

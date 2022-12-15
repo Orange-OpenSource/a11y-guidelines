@@ -183,7 +183,54 @@ function manageEventTabPan(){
     }
   })
 
-  document.getElementById('filtersbar_counter').innerHTML = `${String(posts.length - hiddenPosts)}&nbsp;`
+  document.getElementById('filtersbar_counter').innerHTML = `${String(posts.length - hiddenPosts)}`
+})();
+
+/* Filter article */
+(function(){
+
+  searchArticleButton = document.getElementById("search_article");
+  if (searchArticleButton !== null) {
+    searchArticleButton.onclick= function (e){
+      // Declare variables
+      var input, filter, ol, li, titleArticle, i, descriptionArticle, compteurArticle;
+      input = document.getElementById("search-article-text").value;
+      filter = input.toUpperCase();
+      ol = document.getElementById("list_article");
+      li = ol.children;
+    
+      // Loop through all list items, and hide those who don't match the search query
+      compteurArticle=0;
+      for (i = 0; i < li.length; i++) {
+        if (typeof li[i].attributes.hidden == "undefined") {
+       
+          titleArticle = li[i].getElementsByTagName("h2")[0].innerText;
+          descriptionArticle = li[i].getElementsByTagName("p")[0].innerText;
+          if (titleArticle.toUpperCase().indexOf(filter) > -1 || descriptionArticle.toUpperCase().indexOf(filter) > -1) {
+            compteurArticle++;
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+        document.getElementById("filtersbar_counter").innerText=compteurArticle;
+      }
+    }
+
+
+    var input = document.getElementById("search-article-text");
+
+    // Execute a function when the user presses a key on the keyboard
+    input.addEventListener("keypress", function(event) {
+      // If the user presses the "Enter" key on the keyboard
+      if (event.key === "Enter") {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("search_article").click();
+      }
+    }); 
+  }
 })();
 
 /* Back to top link */
