@@ -153,6 +153,7 @@ function manageEventTabPan(){
 /* Filter bar */
 (function () {
   const filtersbar = document.getElementById('filtersbar')
+  let tagText='';
 
   if (!filtersbar) {
     return
@@ -162,6 +163,7 @@ function manageEventTabPan(){
     const el = filtersbar.querySelector(`[data-tag="${dataAttributeValue}"]`)
     el.classList.add('active')
     el.setAttribute('aria-current', 'true')
+    tagText=el.innerText
   }
 
   const tagToFilter = (new URL(window.location)).searchParams.get('tag')
@@ -183,11 +185,19 @@ function manageEventTabPan(){
     }
   })
 
+  const locales = {
+    en: 'Articles for the theme '+tagText +' - Orange digital accessibility guidelines',
+    fr:'Articles pour la thématique '+tagText+' - Recommandations accessibilité numérique Orange'
+  }
   document.getElementById('filtersbar_counter').innerHTML = `${String(posts.length - hiddenPosts)}`
+  let title = `${String(posts.length - hiddenPosts)}`+ ' ' +locales[Application.lang];
+  document.title= title;
 })();
 
 /* Filter article */
 (function(){
+
+  const tagToFilter = (new URL(window.location)).searchParams.get('tag')
 
   searchArticleButton = document.getElementById("search_article");
   if (searchArticleButton !== null) {
@@ -213,7 +223,31 @@ function manageEventTabPan(){
             li[i].style.display = "none";
           }
         }
-        document.getElementById("filtersbar_counter").innerText=compteurArticle;
+      }
+      document.getElementById("filtersbar_counter").innerText=compteurArticle;
+
+      if(tagToFilter !== null){
+        var tagText =document.getElementById('filtersbar').querySelector(`[data-tag="${tagToFilter}"]`).innerText;
+      }
+      
+      const locales = {
+        en: {
+           h1 :'found for research \"' + input+'\"',
+           title : compteurArticle + ' Articles'+(tagToFilter ? ' for the theme '+tagText +'' : '')+''+(input ? ' with the search "'+input+'"' : '')+' - Orange digital accessibility guidelines',
+          },
+        fr: {
+          h1 :'trouvés pour la recherche \"' + input+'\"',
+          title: compteurArticle + ' Articles'+(tagToFilter ? ' pour la thématique '+tagText +'' : '')+''+(input ? ' avec la recherche "'+input+'"' : '')+' - Recommandations accessibilité numérique Orange'
+        }
+      }
+
+      document.title = locales[Application.lang].title;
+
+      if(filter == ""){
+        document.getElementById("search_title").innerText="";
+      }
+      else{
+        document.getElementById("search_title").innerText=locales[Application.lang].h1;
       }
     }
 

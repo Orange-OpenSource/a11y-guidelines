@@ -1,5 +1,5 @@
 ---
-title: "Articles techniques pour la mise en place de l'accessibilité"
+title: "Articles"
 abstract: "Les articles en français au sujet de l'accessibilité"
 displayToc: false
 eleventyExcludeFromCollections: true 
@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
 {% import "../../_includes/components/ui.njk" as ui with context %}
 {% set posts = collections.articles_fr | reverse %}
 
-<h1 aria-live="polite"><span id="filtersbar_counter" class="hidden-if-no-js">{{ posts | length }}</span>&nbsp;Articles techniques pour la mise en place de l'accessibilité</h1>
+<h1 aria-live="polite"><span id="filtersbar_counter" class="hidden-if-no-js">{{ posts | length }}</span>&nbsp;Articles techniques <span id="search_title"></span></h1>
 <div class="d-flex col-md-5">
       <input type="search" id="search-article-text" placeholder="Rechercher un article" aria-label="Rechercher un article" class="form-control">
       <button class="btn btn-primary btn-inverse" id="search_article" aria-label="Lancer la recherche d'un article" title="Lancer la recherche d'un article">
