@@ -1,6 +1,6 @@
 ---
 title: "Accessibility fact sheets"
-abstract: "Our fact sheets on digital accessibility to download, print and share"
+abstract: "Our fact sheets on digital accessibility to download, print and share (Web, Android, Ios, Word, Excel, Powerpoint)"
 titleBeforeTag: true
 date: "2022-11-21"
 tags:  

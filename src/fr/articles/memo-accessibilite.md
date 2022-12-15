@@ -1,6 +1,6 @@
 ---
 title: "Fiches mémo accessibilité"
-abstract: "Nos fiches mémo sur l'accessibilité numérique à télécharger, à imprimer et à partager"
+abstract: "Nos fiches mémo sur l'accessibilité numérique à télécharger, à imprimer et à partager (Web, Android, Ios, Word, Excel, Powerpoint)"
 titleBeforeTag: true
 date: "2022-11-21"
 tags:  
