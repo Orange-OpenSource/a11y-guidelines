@@ -11,6 +11,8 @@ La mise en œuvre de ce socle ne permet pas d’obtenir à coup sûr un site acc
 Le respect de la charte Orange appelée la Brand (Design for digital platforms Guideline), disponible sur [le site de la marque Orange](https://design.orange.com/) est un prérequis à l’utilisation de ce socle.
 Certains points déjà présents dans la charte Orange (utilisation des couleurs, alignement du texte…) n’ont pas été repris dans cette liste de critères.
 
+Pour faire des maquettes accessibles, il est utile d'ajouter des annotations à nos maquettes. Pour plus d'informations, <a href="../../articles/annotations-accessibilite" target="_blank">lisez notre article sur les annotations</a>.
+
 Cette version dédiée à la conception n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.
 
 Deux autres versions sont disponibles :
