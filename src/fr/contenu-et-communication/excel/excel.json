@@ -1,0 +1,17 @@
+{
+    "displayToc": true,
+    "sideNavigationLinks": [
+      {
+        "label": "Créer un fichier Excel accessible",
+        "href": "/fr/contenu-et-communication/excel/"
+      },
+      {
+        "label": "Tester l'accessibilité de votre document Excel",
+        "href": "/fr/contenu-et-communication/excel/tester/"
+      },
+      {
+        "label": "Fiche mémo accessibilité Excel",
+        "href": "/fr/contenu-et-communication/excel/fiche-memo/"
+      }
+    ]
+  }
