@@ -30,7 +30,7 @@ Corriger les problèmes détectés à l’aide des solutions proposées.
 Erreurs détectées automatiquement par le correcteur d’orthographe (Fichier > Options > Vérification) et le vérificateur d’accessibilité :
 
 <table class="table">
- <caption class="h3">Quelles erreurs sont-elles détectées par Excel</caption>
+ <caption class="h3">Les erreurs sont-elles détectées par Excel ?</caption>
   <tr>
     <th scope="col">Problème</th>
     <th scope="col">Détecté</th>
