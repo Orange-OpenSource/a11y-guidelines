@@ -10,18 +10,18 @@ Créer un fichier Excel accessible nécessite de respecter plusieurs recommandat
 
 ## Onglet de feuille
 
-Donner un nom unique et explicite à chaque onglet de feuille de calcul (par défaut, le nom commence par "Feuil") et supprimer les feuilles vides
+Donner un nom unique et explicite à chaque onglet de feuille de calcul (par défaut, le nom commence par "Feuil") et supprimer les feuilles vides.
 <figure>
     <img src="/fr/contenu-et-communication/images/excel_feuille_wrong.png" alt="" class="img-fluid my-2" />
     <figcaption>
-        <strong>Exemple incorrect : </strong> les onglets de feuille ont les noms par défaut (Feuil 1, Feuil 2 ...)
+        <strong>Exemple incorrect : </strong> les onglets de feuille ont les noms par défaut (Feuil 1, Feuil 2 ...).
     </figcation>
 </figure>
 
 <figure>
     <img src="/fr/contenu-et-communication/images/excel_feuille_valid.png" alt="" class="img-fluid my-2" />
     <figcaption>
-        <strong>Exemple correct : </strong> les onglets de feuille ont des noms unique et explicite (Janvier, Février ...)
+        <strong>Exemple correct : </strong> les onglets de feuille ont des noms unique et explicite (Janvier, Février ...).
     </figcation>
 </figure>
 
@@ -31,7 +31,7 @@ Définir explicitement les plages de données comme un tableau et prévoir des e
 
 ### Plage de données existante
 
-Se place sur la première cellule de la plage de données (la première cellule de la ligne d'entête s'il y en a une)
+Se placer sur la première cellule de la plage de données (la première cellule de la ligne d'entête s'il y en a une).
 
 <ul>
     <li>Utiliser le menu Insertion > Tableau</li>
@@ -73,7 +73,7 @@ Remarques :
 
 <ul>
     <li>Se placer dans le tableau</li>
-    <li>Menu "Création de tableau" > Cocher "Ligne d'en-tête", "Première colonne" ...</li>
+    <li>Menu "Création de tableau" > cocher "Ligne d'en-tête", "Première colonne" ...</li>
 </ul>
 
 ### Autres recommandations pour les tableaux
@@ -87,7 +87,7 @@ Remarques :
 
 <ul>
     <li>Utiliser une police de caractères <strong>sans sérif</strong> (Arial, Calibri, Helvetica)</li>
-    <li>Conserver les accents sur les lettres capitales : Cocher <strong>l'option "Majuscules accentuées en français"</strong> dans le menu Fichier > Options > Vérification</li>
+    <li>Conserver les accents sur les lettres capitales : cocher <strong>l'option "Majuscules accentuées en français"</strong> dans le menu Fichier > Options > Vérification</li>
     <li>Vérifier l'orthographe et les majuscules accentuées via l'onglet "Révision" > Orthographe</li>
 </ul>
 
@@ -103,12 +103,16 @@ Remarques :
 
 ## Couleurs et contrastes
 
+<ul>
+<li>
+
 Assurer un contraste suffisant entre la couleur du texte et celle de remplissage
 
 <img src="/fr/contenu-et-communication/images/excel_couleur.png" alt="Exemples de contrastes insuffisants entre des arrières-plans de couleurs pastel et un texte en blanc" class="img-fluid my-2" />
 
 <img src="/fr/contenu-et-communication/images/excel_couleur2.png" alt="Exemples correctes de contrastes entre les mêmes couleurs pastel en arrière-plan mais un texte en noir" class="img-fluid my-2" />
-
+</li>
+<li>
 Veiller à ce que la couleur ne soit pas le seul moyen pour transmettre une information.
 Exemple 1: une valeur négative ne doit pas être indiquée par le seul moyen de la couleur rouge ; une solution est d’utiliser le signe ‘-‘   ou de mettre les valeurs négatives entre parenthèses.
 
@@ -121,6 +125,8 @@ Exemple 2 :
 Une personne qui ne distingue pas les couleurs ne pourra pas relier un secteur et un pourcentage des ventes.
 
 <img src="/fr/contenu-et-communication/images/excel_couleur5.png" alt="Répartition de ventes représentée sur un camembert où le pourcentage de ventes est visible à côté de chaque secteur." class="img-fluid my-2" />
+</li>
+</ul>
 
 ## Image, graphique et objet incorporé
 
@@ -137,7 +143,7 @@ Renseigner un texte de remplacement à toute illustration (image, forme, icône,
 
 ## Lien hypertexte
 
-Fournir des intitulés de liens explicites. Exemple : préférer « découvrez nos offres » à « cliquer ici » ou « en savoir plus ». Aller dans Menu Insertion Lien hypertexte, préciser le texte à afficher, l’adresse ou URL et éventuellement une info-bulle qui s’affichera au survol.
+Fournir des intitulés de liens explicites. Exemple : préférer « découvrez nos offres » à « cliquer ici » ou « en savoir plus ». Aller dans Menu > Insertion > Lien hypertexte, préciser le texte à afficher, l’adresse ou URL et éventuellement une info-bulle qui s’affichera au survol.
 
 Pour chaque fichier téléchargeable, indiquer le nom, le format, le poids et la langue du fichier (si différente de celle du document).
 

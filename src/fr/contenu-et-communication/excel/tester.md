@@ -1,7 +1,7 @@
 ---
 title: "Comment tester l'accessibilité de votre document Excel"
 abstract: "Que faut-il vérifier au sujet de l'accessibilité de vos documents Excel ?"
-date: "2023-01-01"
+date: "2022-12-22"
 ---
 
 # Tester l'accessibilité  d'un fichier Excel
