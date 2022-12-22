@@ -10,11 +10,11 @@ Créer un fichier Excel accessible nécessite de respecter plusieurs recommandat
 
 ## Onglet de feuille
 
-Donner un nom unique et explicite à chaque onglet de feuille de calcul (par défaut, le nom commencear "Feuil") et suprrimer les feuilles vides
+Donner un nom unique et explicite à chaque onglet de feuille de calcul (par défaut, le nom commence par "Feuil") et supprimer les feuilles vides
 <figure>
     <img src="/fr/contenu-et-communication/images/excel_feuille_wrong.png" alt="" class="img-fluid my-2" />
     <figcaption>
-        <strong>Exemple incorrect : </strong> les onglets de feuille ont les nom pas défauts (Feuil 1, Feuil 2 ...)
+        <strong>Exemple incorrect : </strong> les onglets de feuille ont les noms pas défauts (Feuil 1, Feuil 2 ...)
     </figcation>
 </figure>
 
@@ -31,7 +31,7 @@ Définir explicitement les plages de données comme un tableau et prévoir des e
 
 ### Plage de données existante
 
-Se place sur la première cellule de la plage de données (la première cellule de la ligne d'entête s'il y en une)
+Se place sur la première cellule de la plage de données (la première cellule de la ligne d'entête s'il y en a une)
 
 <ul>
     <li>Utiliser le menu Insertion > Tableau</li>
@@ -45,7 +45,7 @@ Se place sur la première cellule de la plage de données (la première cellule 
 Puis éventuellement, sur l'onglet "création de tableau"
 
 <ul>
-    <li>Redimensionner le tableau : Proprétés > redimensionner</li>
+    <li>Redimensionner le tableau : Propriétés > redimensionner</li>
     <li>Choisir les options de styles : à bandes, filtre ...</li>
     <li>Donner un nom au tableau</li>
 </ul>
@@ -54,7 +54,7 @@ Remarques :
 
 <ul>
     <li>Un tableau est surtout nécessaire quand il y a de nombreuses lignes et colonnes, et quand le contenu est plus compréhensible avec le rappel du titre de la colonne ou ligne, par exemple quand il y a des nombres.</li>
-    <li>Un tableau ne peut pas avoit des cellules fusionnées.</li>
+    <li>Un tableau ne peut pas avoir des cellules fusionnées.</li>
     <li>Pour savoir si une plage de données a été définie comme un tableau : se positionner sur une cellule : le menu "Insertion > Tableau" apparait grisé et l'onglet "Création de tableau" est visible.</li>
 </ul>
 
@@ -73,7 +73,7 @@ Remarques :
 
 <ul>
     <li>Se placer dans le tableau</li>
-    <li>Mnu "Création de tableau" > Cocher "Ligne d'en-tête", "Première colonne" ...</li>
+    <li>Menu "Création de tableau" > Cocher "Ligne d'en-tête", "Première colonne" ...</li>
 </ul>
 
 ### Autres recommandations pour les tableaux
