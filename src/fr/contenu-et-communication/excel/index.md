@@ -14,7 +14,7 @@ Donner un nom unique et explicite à chaque onglet de feuille de calcul (par dé
 <figure>
     <img src="/fr/contenu-et-communication/images/excel_feuille_wrong.png" alt="" class="img-fluid my-2" />
     <figcaption>
-        <strong>Exemple incorrect : </strong> les onglets de feuille ont les noms pas défauts (Feuil 1, Feuil 2 ...)
+        <strong>Exemple incorrect : </strong> les onglets de feuille ont les noms par défaut (Feuil 1, Feuil 2 ...)
     </figcation>
 </figure>
 
