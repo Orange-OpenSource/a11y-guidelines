@@ -1,7 +1,7 @@
 ---
 title: "Créer un fichier Excel accessible"
 abstract: "Quelques recommandations concernant l'accessibilité d'Excel"
-date: "2023-01-01"
+date: "2022-12-22"
 ---
 
 # Créer un fichier Excel accessible
