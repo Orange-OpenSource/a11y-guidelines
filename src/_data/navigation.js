@@ -181,6 +181,7 @@ module.exports = {
         subLevels: [
           { label: 'Word', href: '/fr/contenu-et-communication/word/' },
           { label: 'Powerpoint', href: '/fr/contenu-et-communication/powerpoint/' },
+          { label: 'Excel', href: '/fr/contenu-et-communication/excel/' },
           { label: 'Documents PDF', href: '/fr/contenu-et-communication/pdf/' },
           { label: 'Réseaux sociaux', href: '/fr/contenu-et-communication/reseaux-sociaux/' },
           { label: 'Emails', href: '/fr/contenu-et-communication/emails/' },
