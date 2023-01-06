@@ -31,7 +31,7 @@ Pour réaliser ceci plusieurs solutions existe :
 
 <ul>
   <li>de manière programmatique, il faut utiliser l'attribut <code>required</code> ou <code>aria-required="true"</code> dans la balise <code>input</code> de nos champs, l'utilisation de ces attributs permettra aux technologies d'assistance que le champ est obligatoire.</li>
-  <li>il faut aussi informer les utilisateurs n'utilisant pas de technologies d'assistance que le champ est obligatoire, il faut donc rajouter une identification visuelle qui ne repose pas uniquement sur la couleur, par exemple (obligatoire) ou un astérisque (*).</li>
+  <li>il faut aussi informer les utilisateurs n'utilisant pas de technologies d'assistance que le champ est obligatoire, il faut donc rajouter une identification visuelle qui ne repose pas uniquement sur la couleur, par exemple (obligatoire), si cette identification n'est pas réalisée de manière textuelle explicite, par exemple un astérisque, il faut expliquer la signification, "Tous les champs obligatoires sont marqués d'un *", qui sera placé au début du formulaire.</li>
 </ul>
 
 #### Exemple
@@ -42,6 +42,7 @@ Il faut donc les spécifier aux utilisateurs.
 
 <div class="col-md-8">
   <form id="formulaire" class="border border-secondary p-3 my-2">
+    <p>Tous les champs obligatoires sont marqués d'un *</p>
     <div class="mb-2">
       <label for="email" class="form-label">Email * </label>
       <input type="text" class="form-control" id="email" required/>
@@ -85,6 +86,7 @@ Il faut donc les spécifier aux utilisateurs.
   <code class="html">
   &lt;div class="col-md-8"&gt;
     &lt;form id="formulaire" class="border border-secondary p-3 my-2"&gt;
+      &lt;p&gt;Tous les champs obligatoires sont marqués d'un *&lt;/p&gt;
       &lt;div class="mb-2"&gt;
         &lt;label for="email" class="form-label"&gt;Email <span class="important">*</span> &lt;/label&gt;
         &lt;input type="text" class="form-control" id="email" <span class="important">required</span>/&gt;
@@ -153,6 +155,7 @@ Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur :
 
 <div class="col-md-8">
   <form id="formulaire_2" class="border border-secondary p-3 my-2">
+    <p>Tous les champs obligatoires sont marqués d'un *</p>
     <div class="mb-2">
       <label for="email_2" class="form-label">Email *</label>
       <input type="text" class="form-control" id="email_2" required/>
@@ -281,6 +284,7 @@ Le code HTML et Javascript complet qui nous a permis de réaliser ce formulaire 
   <code class="html">
   &lt;div class="col-md-8"&gt;
     &lt;form id="formulaire" class="border border-secondary p-3 my-2"&gt;
+      &lt;p&gt;Tous les champs obligatoires sont marqués d'un *&lt;/p&gt;
       &lt;div class="mb-2"&gt;
         &lt;label for="email" class="form-label"&gt;Email *&lt;/label&gt;
         &lt;input type="text" class="form-control" id="email" autocomplete="email" required/&gt;
