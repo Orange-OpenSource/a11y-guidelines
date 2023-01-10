@@ -13,13 +13,13 @@ titleBeforeTag: true
 
 ## Introduction
 
-Nous avons vu dans la première partie comment <a href="../part1/">structurer son formulaire</a> en respectant les critères d'accessibilités.
+Nous avons vu dans la première partie comment <a href="../part1/">structurer son formulaire</a> en respectant les critères d'accessibilité.
 
-Dans cette deuxième partie, nous allons étudier la soumission du formulaire et ses étapes de validations.
+Dans cette deuxième partie, nous allons étudier la soumission du formulaire et ses étapes de validation.
 
 Nous continuerons nos exemples à partir de notre formulaire d'inscription de la partie 1.
 
-Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/" target="_blank">la librairie Boosted</a>. Celle-ci permet d’obtenir des formulaires dont le design est conforme à la charte Orange.
+Dans cet exemple, nous utilisons <a href="http://boosted.orange.com/" target="_blank">la librairie Boosted</a>. Celle-ci permet d’obtenir des formulaires dont le design est conforme à la charte Orange.
 
 ## Soumission d'un formulaire
 
@@ -30,8 +30,8 @@ Dans les formulaires, il est fréquent que des champs soient obligatoires. Ces c
 Pour réaliser ceci plusieurs solutions existe : 
 
 <ul>
-  <li>de manière programmatique, il faut utiliser l'attribut <code>required</code> ou <code>aria-required="true"</code> dans la balise <code>input</code> de nos champs, l'utilisation de ces attributs permettra aux technologies d'assistance que le champ est obligatoire.</li>
-  <li>il faut aussi informer les utilisateurs n'utilisant pas de technologies d'assistance que le champ est obligatoire, il faut donc rajouter une identification visuelle qui ne repose pas uniquement sur la couleur, par exemple (obligatoire), si cette identification n'est pas réalisée de manière textuelle explicite, par exemple un astérisque, il faut expliquer la signification, "Tous les champs obligatoires sont marqués d'un *", qui sera placé au début du formulaire.</li>
+  <li>de manière programmatique, il faut utiliser l'attribut <code>required</code> ou <code>aria-required="true"</code> dans la balise <code>input</code> de nos champs, l'utilisation de ces attributs permettra aux technologies d'assistance d'indiquer que le champ est obligatoire.</li>
+  <li>il faut aussi informer les utilisateurs n'utilisant pas de technologies d'assistance que le champ est obligatoire; il faut donc rajouter une identification visuelle qui ne repose pas uniquement sur la couleur, par exemple ( en mentionnant explicitement "obligatoire"). Si cette identification n'est pas réalisée de manière textuelle explicite, par exemple un astérisque (*), il faut en expliquer la signification comme, "Tous les champs obligatoires sont marqués d'un *", qui sera placée au début du formulaire.</li>
 </ul>
 
 #### Exemple
@@ -121,7 +121,7 @@ Il faut donc les spécifier aux utilisateurs.
 
 Lors de la validation, si des champs obligatoires ne sont pas renseignés, ou si le format de la donnée saisie n'est pas valide, il faut prévenir l'utilisateur.
 
-Il faut :
+Pour réaliser ceci, il faut :
 
 <ul>
   <li>Utiliser l'attribut <code>aria-invalid="true"</code> pour indiquer une erreur de saisie</li>
@@ -131,7 +131,7 @@ Il faut :
 
 Si des messages d'erreurs empêchent la validation du formulaire, plutôt que de lister les erreurs au début du formulaire dans une bannière (voir ci-dessus), on peut, pour chaque champ en erreur avertir l’utilisateur.
 
-Pour chaque champ en erreur, il faut que nos messages soit explicites, ce qui signifie : 
+Pour chaque champ en erreur, il faut que les messages soient explicites, ce qui signifie : 
 
 <ul>
   <li>Soyez clair et non ambigu ("champ invalide" ne suffit pas, préciser quel champ est invalide)</li>
@@ -257,22 +257,22 @@ Dans l'exemple ci-dessus :
 
 <ul>
   <li>Les champs obligatoires qui ne sont pas remplis ont des messages d'erreurs pertinents et uniques (exemple : Le champ email est obligatoire)</li>
-  <li>Les champs avec une entrée invalide ont un message sont précis et donne des suggestions de correction (exemple : Veuillez renseigner un Email valide (nomprenom@gmail.com))</li>
+  <li>Les champs avec une entrée invalide ont un message précis qui donne des suggestions de correction (exemple : Veuillez renseigner un Email valide (nomprenom@gmail.com))</li>
   <li>Les messages d'erreurs sont liés au champ grâce à l'attribut <code>aria-describedby</code> ou <code>aria-labelledby</code>, ce qui permettra aux technologies d'assistances de restituer l'information</li>
-  <li>Le focus clavier est mis sur le premier champ en erreur afin d'éviter à l'utilisateur de remonter tous les formulaires</li>
+  <li>Le focus clavier est mis sur le premier champ en erreur afin de rebalayer tout le formulaire</li>
 </ul>
 
 ### Utilisation de l'attribut autocomplete
 
 L'attribut <code>autocomplete</code> permet de faciliter le remplissage des champs qui contiennent une information personnelle. Tous les champs dont le type est listé dans <a href="https://www.w3.org/TR/WCAG21/#input-purposes" lang="en">7. InputPurposes for User Interface Components</a> doivent contenir l'attribut <code>autocomplete</code>. 
 
-Dans notre exemple d'inscription les champs ci-dessous devront avoir un attribut <code>autocomplete</code> :
+Dans notre exemple les champs ci-dessous devront avoir un attribut <code>autocomplete</code> :
 
 <ul>
-  <li>Email avec <code>autocomplete="email"</code></li>
-  <li>Mot de passe avec <code>autocomplete="new-password"</code></li>
-  <li>Nom avec <code>autocomplete="name"</code></li>
-  <li>Prénom avec <code>autocomplete="given-name"</code></li>
+  <li>Email avec <span lang="en"><code>autocomplete="email"</code></span></li>
+  <li>Mot de passe avec <span lang="en"><code>autocomplete="new-password"</code></span></li>
+  <li>Nom avec <span lang="en"><code>autocomplete="name"</code></span></li>
+  <li>Prénom avec <span lang="en"><code>autocomplete="given-name"</code></span></li>
 </ul>
 
 ## Exemple complet
