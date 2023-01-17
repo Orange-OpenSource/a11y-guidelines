@@ -15,7 +15,7 @@ titleBeforeTag: true
 
 Nous avons vu dans la première partie comment <a href="../part1/">structurer son formulaire</a> en respectant les critères d'accessibilité.
 
-Dans cette deuxième partie, nous allons nous focaliser sur la facilitatiion de la complétude des champs par l'utilisateur et la mise en place d'un système de gestion des erreurs lors de la validation de notre formulaire.
+Dans cette deuxième partie, nous allons faciliter la saisie dans les champs par l'utilisateur et mettre en place d'un système de gestion des erreurs lors de la validation de notre formulaire.
 
 Nous continuerons de baser nos exemples sur notre formulaire d'inscription de la partie 1.
 
@@ -27,7 +27,7 @@ Dans cet exemple, nous utilisons <a href="http://boosted.orange.com/">la librair
 
 Dans les formulaires, il est fréquent que des champs soient obligatoires. Ces champs doivent être indiqués clairement aux utilisateurs.
 
-Pour réaliser ceci, plusieurs solutions existe&nbsp;: 
+Pour réaliser ceci, plusieurs solutions existent&nbsp;: 
 
 <ul>
   <li>de manière programmatique, il faut utiliser l'attribut <code>required</code> ou <code>aria-required="true"</code> dans la balise <code>input</code> de nos champs, l'utilisation de ces attributs permettra aux technologies d'assistance (AT) d'indiquer que le champ est obligatoire.</li>
@@ -129,7 +129,7 @@ Pour réaliser ceci, il faut&nbsp;
   <li>Si besoin, suggérer des corrections</li>
 </ul>
 
-Si des messages d'erreurs empêchent la validation du formulaire, plutôt que de lister les erreurs au début du formulaire dans une bannière (voir ci-dessus), on peut, pour chaque champ en erreur avertir l’utilisateur.
+Si des messages d'erreurs empêchent la validation du formulaire, plutôt que de lister les erreurs au début du formulaire dans une bannière, on peut, pour chaque champ en erreur avertir l’utilisateur (voir ci-dessus).
 
 Pour chaque champ en erreur, il faut que les messages soient explicites, ce qui signifie&nbsp;: 
 
@@ -259,7 +259,7 @@ Dans l'exemple ci-dessus&nbsp;:
   <li>Les champs obligatoires qui ne sont pas remplis ont des messages d'erreurs pertinents et uniques (exemple&nbsp;: Le champ email est obligatoire)</li>
   <li>Les champs avec une entrée invalide ont un message précis qui donne des suggestions de correction (exemple&nbsp;: Veuillez renseigner un Email valide (nomprenom@gmail.com))</li>
   <li>Les messages d'erreurs sont liés au champ grâce à l'attribut <code>aria-describedby</code> ou <code>aria-labelledby</code>, ce qui permettra aux technologies d'assistances de restituer l'information</li>
-  <li>Le focus clavier est mis sur le premier champ en erreur afin de rebalayer tout le formulaire</li>
+  <li>Le focus clavier est mis sur le premier champ en erreur afin pouvoir rebalayer tout le formulaire</li>
 </ul>
 
 ### Utilisation de l'attribut autocomplete
