@@ -194,6 +194,16 @@ function manageEventTabPan(){
   document.title= title;
 })();
 
+/* Filter docsearch */
+(function(){
+  setTimeout(() => {
+    let svgLoupe=document.getElementsByClassName('DocSearch-Search-Icon')[0];
+    svgLoupe.setAttribute('aria-hidden',true)
+    svgLoupe.setAttribute('focusable',false)
+  }, "1000")
+  
+})();
+
 /* Filter article */
 (function(){
 
