@@ -259,7 +259,7 @@ Dans l'exemple ci-dessus&nbsp;:
   <li>Les champs obligatoires qui ne sont pas remplis ont des messages d'erreurs pertinents et uniques (exemple&nbsp;: Le champ email est obligatoire)</li>
   <li>Les champs avec une entrée invalide ont un message précis qui donne des suggestions de correction (exemple&nbsp;: Veuillez renseigner un Email valide (nomprenom@gmail.com))</li>
   <li>Les messages d'erreurs sont liés au champ grâce à l'attribut <code>aria-describedby</code> ou <code>aria-labelledby</code>, ce qui permettra aux technologies d'assistances de restituer l'information</li>
-  <li>Le focus clavier est mis sur le premier champ en erreur afin pouvoir rebalayer tout le formulaire</li>
+  <li>Le focus clavier est mis sur le premier champ en erreur afin de pouvoir rebalayer tout le formulaire</li>
 </ul>
 
 ### Utilisation de l'attribut autocomplete
