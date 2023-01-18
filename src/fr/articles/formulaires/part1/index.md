@@ -5,6 +5,7 @@ date: "2022-12-12"
 tags:
   - web
   - intermediate
+  - component
 js: 
 - script.js
 titleBeforeTag: true
@@ -228,7 +229,7 @@ Lorsqu'on ajoute un champ mot de passe, il est aussi important de laisser la pos
     <div class="mb-2 input-group">
       <input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/>
       <span class="input-group-text">
-        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility" title="Afficher le mot de passe" >
+        <button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" >
           <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
             <defs>
               <style>
@@ -258,7 +259,7 @@ Un exemple possible&nbsp;:
       &lt;div class="mb-2 input-group"&gt;
         &lt;input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/&gt;
         &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility" title="Afficher le mot de passe" &gt;
+          &lt;button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" &gt;
             &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
               [...]
             &lt;/svg&gt;
@@ -288,7 +289,7 @@ Pour la suite de l'exercice et compléter notre formulaire d'inscription, nous a
     <div class="mb-2 input-group">
       <input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/>
       <span class="input-group-text">
-        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Afficher le mot de passe" >
+        <button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility_final" title="Afficher le mot de passe" >
           <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
             <defs>
               <style>
@@ -360,7 +361,7 @@ Le code final :
       &lt;div class="mb-2 input-group"&gt;
         &lt;input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/&gt;
         &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Afficher le mot de passe" &gt;
+          &lt;button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility_final" title="Afficher le mot de passe" &gt;
             &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;&lt;/svg&gt;
           &lt;/button&gt;
         &lt;/span&gt;
@@ -411,3 +412,7 @@ Le code final :
   &lt;/div&gt;
   </code>
 </pre>
+
+## Lien vers la deuxième partie
+
+<a href="../part2/">Formulaire partie 2 - Soumettre son formulaire</a>

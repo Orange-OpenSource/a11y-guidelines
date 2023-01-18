@@ -5,6 +5,7 @@ date: "2022-12-12"
 tags:
   - web
   - intermediate
+  - component
 js: 
 - script.js
 titleBeforeTag: true
