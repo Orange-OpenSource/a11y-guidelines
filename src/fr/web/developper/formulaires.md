@@ -39,7 +39,7 @@ Si cela est pertinent, les champs ont un attribut `autocomplete` afin que l’ut
 
 Pour les boutons radio et les cases à cocher, l’utilisation de la balise `label` est, parfois, à compléter par un autre dispositif (`title`, `aria-labelledby`, `aria-label` ou parfois, `fieldset` et `legend`).
 
-Pour les champs obligatoires, ceci doit être précisé dans le `label` via une image, un symbole texte (`*` par exemple) ou du texte et/ou une propriété `aria-required`.
+Pour les champs obligatoires, ceci doit être précisé dans le `label` via un texte explicite ("obligatoire"), si cette identification n'est pas réalisée de manière explicite, il faut en expliquer la signification comme, "Tous les champs obligatoires sont marqués d'un *",placée en début de formulaire, et/ou une propriété `aria-required`, `required`.
 
 **Objectif utilisateur&nbsp;:**
 
