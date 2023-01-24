@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Formulaire partie 2 - Soumettre son formulaire - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Faire un formulaire accessible, partie 2 : Soumettre son formulaire, champ obligatoire, gestion des erreurs et l&#39;importance de l&#39;attribut autocomplete">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Liens d&#39;évitements">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Aller au menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Aller au contenu</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Aller à la recherche</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Aller au pied de page</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Changement de langue">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+    <a href="/fr" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/fr/" class="nav-link">
+  Accueil 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/cadrage/" class="nav-link">
+  Cadrage 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/ios/" class="nav-link">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/contenu-et-communication/" class="nav-link">
+  Contenu et communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/articles/" class="nav-link active" aria-current="true">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici&amp;nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Formulaire partie 2 - Soumettre son formulaire
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        Sur cette page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#soumission-dun-formulaire" class="dropdown-item text-wrap">Soumission d&#39;un formulaire</a><a href="#champ-obligatoire" class="dropdown-item text-wrap">Champ obligatoire</a><a href="#exemple" class="dropdown-item text-wrap">Exemple</a><a href="#gestion-des-erreurs" class="dropdown-item text-wrap">Gestion des erreurs</a><a href="#exemple-2" class="dropdown-item text-wrap">Exemple</a><a href="#utilisation-de-lattribut-autocomplete" class="dropdown-item text-wrap">Utilisation de l&#39;attribut autocomplete</a><a href="#exemple-complet" class="dropdown-item text-wrap">Exemple complet</a><a href="#lien-vers-la-premiere-partie" class="dropdown-item text-wrap">Lien vers la première partie</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          
+            <h1>Formulaire partie 2 - Soumettre son formulaire</h1>  
+            
+              <span class="visually-hidden" id="filters_label">
+                Thématiques associées :
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="../?tag=web" class="btn btn-dark btn-sm" data-tag="web">Web</a></li>
+              <li class="list-inline-item"><a href="../?tag=intermediate" class="btn btn-dark btn-sm" data-tag="intermediate">Intermédiaire</a></li>
+              <li class="list-inline-item"><a href="../?tag=component" class="btn btn-dark btn-sm" data-tag="component">Composant</a></li>
+              </ul>
+            
+            <time class="text-muted" datetime="2023-01-24T00:00:00.000Z">24 janvier 2023</time>
+            
+          <div class="mt-4">
+          <h2 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Nous avons vu dans la première partie comment <a href="../part1/">structurer son formulaire</a> en respectant les critères d'accessibilité.</p>
+<p>Dans cette deuxième partie, nous allons faciliter la saisie dans les champs par l'utilisateur et mettre en place d'un système de gestion des erreurs lors de la validation de notre formulaire.</p>
+<p>Nous continuerons de baser nos exemples sur notre formulaire d'inscription de la partie 1.</p>
+<p>Dans cet exemple, nous utilisons <a href="http://boosted.orange.com/">la librairie Boosted</a> qui est la déclinaison Web de notre <a href="https://system.design.orange.com/">Orange Design System (ODS)</a>. Celle-ci permet d’obtenir des formulaires dont le design est conforme à la charte Orange.</p>
+<h2 id="soumission-dun-formulaire">Soumission d'un formulaire <a class="header-anchor" href="#soumission-dun-formulaire" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="champ-obligatoire">Champ obligatoire <a class="header-anchor" href="#champ-obligatoire" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Dans les formulaires, il est fréquent que des champs soient obligatoires. Ces champs doivent être indiqués clairement aux utilisateurs.</p>
+<p>Pour réaliser ceci, plusieurs solutions existent :</p>
+<ul>
+  <li>de manière programmatique, il faut utiliser l'attribut <code>required</code> ou <code>aria-required="true"</code> dans la balise <code>input</code> de nos champs, l'utilisation de ces attributs permettra aux technologies d'assistance (AT) d'indiquer que le champ est obligatoire.</li>
+  <li>il faut aussi informer les utilisateurs n'utilisant pas de technologies d'assistance que le champ est obligatoire; il faut donc rajouter une identification visuelle qui ne repose pas uniquement sur la couleur (par exemple, en mentionnant explicitement "obligatoire"). Si cette identification n'est pas réalisée via un texte explicite, par exemple, un astérisque (*), il faut en expliquer la signification, comme par exemple, "Tous les champs obligatoires sont marqués d'un *", qui sera placée au début du formulaire.</li>
+</ul>
+<h4 id="exemple">Exemple <a class="header-anchor" href="#exemple" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Dans notre exemple d'inscription, plusieurs champs peuvent être considérés comme obligatoires afin de valider son inscription : l'email, le mot de passe, le prénom et le nom.</p>
+<p>Il faut donc les spécifier aux utilisateurs.</p>
+<div class="col-md-8">
+  <form id="formulaire" class="border border-secondary p-3 my-2">
+    <p>Tous les champs obligatoires sont marqués d'un *</p>
+    <div class="mb-2">
+      <label for="email" class="form-label">Email * </label>
+      <input type="text" class="form-control" id="email" required/>
+    </div>
+    <label for="password" class="form-label">Mot de passe *</label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password" required aria-describedby="passwordHelpBlock"/>
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" >
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill-rule: evenodd;
+                }
+              </style>
+            </defs>
+            <path class="cls-1" d="M513.081,250.129c-4.017,0-8.041-.129-12.081-0.129s-8.064.129-12.081,0.129C301.335,250.129,111.491,382.343,50,500c61.491,117.656,249.335,249.871,436.919,249.871,4.017,0,8.04.129,12.081,0.129s8.064-.129,12.081-0.129C698.665,749.871,888.51,617.656,950,500,888.51,382.343,700.665,250.129,513.081,250.129ZM498.62,680a180,180,0,1,1,180-180A180,180,0,0,1,498.62,680Zm-378.2-179.963c29.782-41.595,77.4-84.081,132.916-117.816a545.263,545.263,0,0,1,55.918-29.695,239.848,239.848,0,0,0,.78,295.942,537.117,537.117,0,0,1-57.553-30.6C197.469,584.226,150.153,541.734,120.417,500.034Zm626.25,117.747a544.106,544.106,0,0,1-60.236,31.655,239.784,239.784,0,0,0-.761-299.823,536.07,536.07,0,0,1,61.852,32.517c55.01,33.642,102.326,76.136,132.061,117.836C849.8,541.564,802.185,584.045,746.667,617.781ZM597.931,453.153a48.227,48.227,0,1,1-62.472-56.6A109.731,109.731,0,1,0,597.931,453.153Z" />
+          </svg>
+        </button>
+      </span>
+    </div>
+    <div id="passwordHelpBlock" class="form-text">
+        Votre mot de passe doit contenir minimum 6 caractères.
+    </div>
+    <div class="mb-2">
+      <label for="name" class="form-label">Nom *</label>
+      <input type="text" class="form-control" id="name" required/>
+    </div>
+    <div class="mb-2">
+      <label for="firstname" class="form-label">Prénom * </label>
+      <input type="text" class="form-control" id="firstname" required/>
+    </div>
+    <button type="submit" class="btn btn-primary">Soumettre</button>
+  </form>
+</div>
+<p>Exemple de code :</p>
+<pre>
+  <code class="html">
+  &lt;div class="col-md-8"&gt;
+    &lt;form id="formulaire" class="border border-secondary p-3 my-2"&gt;
+      &lt;p&gt;Tous les champs obligatoires sont marqués d'un *&lt;/p&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="email" class="form-label"&gt;Email <span class="important">*</span> &lt;/label&gt;
+        &lt;input type="text" class="form-control" id="email" <span class="important">required</span>/&gt;
+      &lt;/div&gt;
+      &lt;label for="password" class="form-label"&gt;Mot de passe *&lt;/label&gt;
+      &lt;div class="mb-2 input-group"&gt;
+        &lt;input type="password" class="form-control" id="password" required aria-describedby="passwordHelpBlock"/&gt;
+        &lt;span class="input-group-text"&gt;
+          &lt;button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" &gt;
+            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;&lt;/svg&gt;
+          &lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id="passwordHelpBlock" class="form-text"&gt;
+          Votre mot de passe doit contenir minimum 6 caractères.
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="name" class="form-label"&gt;Nom *&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="name" required/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="firstname" class="form-label"&gt;Prénom * &lt;/label&gt;
+        &lt;input type="text" class="form-control" id="firstname" required/&gt;
+      &lt;/div&gt;
+      &lt;button type="submit" class="btn btn-primary"&gt;Soumettre&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  </code>
+</pre>
+<h3 id="gestion-des-erreurs">Gestion des erreurs <a class="header-anchor" href="#gestion-des-erreurs" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Lors de la validation, si des champs obligatoires ne sont pas renseignés, ou si le format de la donnée saisie n'est pas valide, il faut prévenir l'utilisateur.</p>
+<p>Pour réaliser ceci, il faut </p>
+<ul>
+  <li>Utiliser l'attribut <code>aria-invalid="true"</code> pour indiquer une erreur de saisie aux utilisateurs d'AT</li>
+  <li>Afficher des messages d'erreurs explicites pour tous les autres utilisateurs</li>
+  <li>Si besoin, suggérer des corrections</li>
+</ul>
+<p>Si des messages d'erreurs empêchent la validation du formulaire, plutôt que de lister les erreurs au début du formulaire dans une bannière, on peut, pour chaque champ en erreur avertir l’utilisateur (voir ci-dessus).</p>
+<p>Pour chaque champ en erreur, il faut que les messages soient explicites, ce qui signifie :</p>
+<ul>
+  <li>Soyez clair et non ambigu ("champ invalide" ne suffit pas, préciser quel champ est invalide et, si possible, en quoi il est invalide)</li>
+  <li>Soyez précis et pertinent</li>
+  <li>Donner des pistes de corrections et moyens de corriger</li>
+  <li>Assurez-vous que les erreurs sont sous forme de texte, éviter les majuscules.</li>
+  <li>Ne vous contentez pas d'utiliser des indicateurs visuels ou seulement la couleur pour signaler les erreurs.</li>
+  <li>Laisser actif en toute circonstance le bouton d'envoi. Certains sites Web activent le bouton d'envoi que si le formulaire est correctement rempli, c'est une mauvaise idée.</li>
+  <li>Fournissez les instructions nécessaires et soyez aussi précis que possible sur les erreurs commises afin de faciliter remplissage des champs par les utilisateurs.</li>
+  <li>Assurez-vous que les erreurs sont visuellement identifiables sur la page Web.</li>
+</ul>
+<h4 id="exemple-2">Exemple <a class="header-anchor" href="#exemple-2" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur :</p>
+<ul>
+  <li>Pour les champs obligatoires, il faudra préciser quel champ obligatoire est en erreur</li>
+  <li>Pour les champs nécessitant un format de donnée précis, comme l'email, dans le message d'erreur, nous préciserons le champ en erreur et fournirons une aide à la correction</li>
+</ul>
+<div class="col-md-8">
+  <form id="formulaire_2" class="border border-secondary p-3 my-2">
+    <p>Tous les champs obligatoires sont marqués d'un *</p>
+    <div class="mb-2">
+      <label for="email_2" class="form-label">Email *</label>
+      <input type="text" class="form-control" id="email_2" required/>
+      <div id="erroremailDiv" class="alert alert-danger alert-sm d-none">
+        <span class="alert-icon"><span class="visually-hidden">Error</span></span>
+        <p id="erroremail1">Le champ email est obligatoire</p>
+      </div>
+      <div id="erroremailDiv2" class="alert alert-danger alert-sm d-none">
+        <span class="alert-icon"><span class="visually-hidden">Error</span></span>
+        <p id="erroremail2">Veuillez renseigner un Email valide (nomprenom@gmail.com)</p>
+      </div>
+    </div>
+    <label for="password_2" class="form-label">Mot de passe *</label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password_2" aria-describedby="passwordHelpBlock_2" required/>
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility_2" title="Afficher le mot de passe" >
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill-rule: evenodd;
+                }
+              </style>
+            </defs>
+            <path class="cls-1" d="M513.081,250.129c-4.017,0-8.041-.129-12.081-0.129s-8.064.129-12.081,0.129C301.335,250.129,111.491,382.343,50,500c61.491,117.656,249.335,249.871,436.919,249.871,4.017,0,8.04.129,12.081,0.129s8.064-.129,12.081-0.129C698.665,749.871,888.51,617.656,950,500,888.51,382.343,700.665,250.129,513.081,250.129ZM498.62,680a180,180,0,1,1,180-180A180,180,0,0,1,498.62,680Zm-378.2-179.963c29.782-41.595,77.4-84.081,132.916-117.816a545.263,545.263,0,0,1,55.918-29.695,239.848,239.848,0,0,0,.78,295.942,537.117,537.117,0,0,1-57.553-30.6C197.469,584.226,150.153,541.734,120.417,500.034Zm626.25,117.747a544.106,544.106,0,0,1-60.236,31.655,239.784,239.784,0,0,0-.761-299.823,536.07,536.07,0,0,1,61.852,32.517c55.01,33.642,102.326,76.136,132.061,117.836C849.8,541.564,802.185,584.045,746.667,617.781ZM597.931,453.153a48.227,48.227,0,1,1-62.472-56.6A109.731,109.731,0,1,0,597.931,453.153Z" />
+          </svg>
+        </button>
+      </span>
+    </div>
+    <div id="errorpasswordDiv" class="alert alert-danger alert-sm d-none">
+        <span class="alert-icon"><span class="visually-hidden">Error</span></span>
+        <p id="errorpassword1">Le champ Mot de passe est obligatoire</p>
+      </div>
+      <div id="errorpasswordDiv2" class="alert alert-danger alert-sm d-none">
+        <span class="alert-icon"><span class="visually-hidden">Error</span></span>
+        <p id="errorpassword2">Veuillez renseigner un Mot de passe valide (6 caractères minimum)</p>
+      </div>
+    <div id="passwordHelpBlock_2" class="form-text">
+        Votre mot de passe doit contenir minimum 6 caractères.
+    </div>
+    <div class="mb-2">
+      <label for="name_2" class="form-label">Nom *</label>
+      <input type="text" class="form-control" id="name_2" required/>
+      <div id="errorname" class="alert alert-danger alert-sm d-none">
+        <span class="alert-icon"><span class="visually-hidden">Error</span></span>
+        <p id="errorname1">Le champ Nom est obligatoire</p>
+      </div>
+    </div>
+    <div class="mb-2">
+      <label for="firstname_2" class="form-label">Prénom *</label>
+      <input type="text" class="form-control" id="firstname_2" required/>
+      <div id="errorfirstname" class="alert alert-danger alert-sm d-none">
+        <span class="alert-icon"><span class="visually-hidden">Error</span></span>
+        <p id="errorfirstname1">Le champ Prénom est obligatoire</p>
+      </div>
+    </div>
+    <fieldset>
+      <legend>Genre</legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_2" id="M_2" value="M" selected>
+        <label class="form-check-label" for="M_2">M</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_2" id="Mme_2" value="Mme">
+        <label class="form-check-label" for="Mme_2">Mme</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_2" id="Non-binaire_2" value="Non-binaire" >
+        <label class="form-check-label" for="Non-binaire_2">Non-binaire</label>
+      </div>
+    </fieldset>
+    <div class="mb-2">
+      <label for="adresse_2" class="form-label">Adresse</label>
+      <input type="text" class="form-control" id="adresse_2"/>
+    </div>
+    <div class="mb-2">
+      <label for="adresse2_2" class="form-label">Complément d'adresse</label>
+      <input type="text" class="form-control" id="adresse2_2"/>
+    </div>
+    <div class="mb-2">
+      <label for="ville_2" class="form-label">Ville</label>
+      <input type="text" class="form-control" id="ville_2"/>
+    </div>
+    <div class="mb-2">
+      <label for="cp_2" class="form-label">Code postal</label>
+      <input type="text" class="form-control" id="cp_2"/>
+    </div>
+     <button id="submit" class="btn btn-primary">Soumettre</button>
+     <div id="alertsucces" class="alert alert-success d-none" role="alert">
+      <span class="alert-icon"><span class="visually-hidden">Success</span></span>
+      <p>La validation du formulaire est réussi.</p>
+    </div>
+  </form>
+</div>
+<p>Dans l'exemple ci-dessus :</p>
+<ul>
+  <li>Les champs obligatoires qui ne sont pas remplis ont des messages d'erreurs pertinents et uniques (exemple&nbsp;: Le champ email est obligatoire)</li>
+  <li>Les champs avec une entrée invalide ont un message précis qui donne des suggestions de correction (exemple&nbsp;: Veuillez renseigner un Email valide (nomprenom@gmail.com))</li>
+  <li>Les messages d'erreurs sont liés au champ grâce à l'attribut <code>aria-describedby</code> ou <code>aria-labelledby</code>, ce qui permettra aux technologies d'assistances de restituer l'information</li>
+  <li>Le focus clavier est mis sur le premier champ en erreur afin de pouvoir rebalayer tout le formulaire</li>
+</ul>
+<h3 id="utilisation-de-lattribut-autocomplete">Utilisation de l'attribut autocomplete <a class="header-anchor" href="#utilisation-de-lattribut-autocomplete" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>L'attribut <code>autocomplete</code> permet de faciliter le remplissage des champs qui contiennent une information personnelle. Tous les champs dont le type est listé dans <a href="https://www.w3.org/TR/WCAG21/#input-purposes" lang="en">7. InputPurposes for User Interface Components</a> doivent contenir l'attribut <code>autocomplete</code>.</p>
+<p>Dans notre exemple les champs ci-dessous devront avoir un attribut <code>autocomplete</code> :</p>
+<ul>
+  <li>Email avec <span lang="en"><code>autocomplete="email"</code></span></li>
+  <li>Mot de passe avec <span lang="en"><code>autocomplete="new-password"</code></span></li>
+  <li>Nom avec <span lang="en"><code>autocomplete="name"</code></span></li>
+  <li>Prénom avec <span lang="en"><code>autocomplete="given-name"</code></span></li>
+</ul>
+<h2 id="exemple-complet">Exemple complet <a class="header-anchor" href="#exemple-complet" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Le code HTML et Javascript complet qui nous a permis de réaliser ce formulaire d'inscription accessible.</p>
+<pre>
+  <code class="html">
+  &lt;div class="col-md-8"&gt;
+    &lt;form id="formulaire" class="border border-secondary p-3 my-2"&gt;
+      &lt;p&gt;Tous les champs obligatoires sont marqués d'un *&lt;/p&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="email" class="form-label"&gt;Email *&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="email" autocomplete="email" required/&gt;
+        &lt;div id="erroremailDiv" class="alert alert-danger alert-sm d-none"&gt;
+          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Error&lt;/span&gt;&lt;/span&gt;
+          &lt;p id="erroremail1"&gt;Le champ email est obligatoire&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div id="erroremailDiv2" class="alert alert-danger alert-sm d-none"&gt;
+          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Error&lt;/span&gt;&lt;/span&gt;
+          &lt;p id="erroremail2"&gt;Veuillez renseigner un Email valide (nomprenom@gmail.com)&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;label for="password" class="form-label"&gt;Mot de passe *&lt;/label&gt;
+      &lt;div class="mb-2 input-group"&gt;
+        &lt;input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock" autocomplete="new-password" required/&gt;
+        &lt;span class="input-group-text"&gt;
+          &lt;button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" &gt;
+            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;&lt;/svg&gt;
+          &lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div id="errorpasswordDiv" class="alert alert-danger alert-sm d-none"&gt;
+          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Error&lt;/span&gt;&lt;/span&gt;
+          &lt;p id="errorpassword1"&gt;Le champ Mot de passe est obligatoire&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div id="errorpasswordDiv2" class="alert alert-danger alert-sm d-none"&gt;
+          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Error&lt;/span&gt;&lt;/span&gt;
+          &lt;p id="errorpassword2"&gt;Veuillez renseigner un Mot de passe valide (6 caractères minimum)&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;div id="passwordHelpBlock" class="form-text"&gt;
+          Votre mot de passe doit contenir minimum 6 caractères.
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="name" class="form-label"&gt;Nom *&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="name" autocomplete="name" required/&gt;
+        &lt;div id="errorname" class="alert alert-danger alert-sm d-none"&gt;
+          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Error&lt;/span&gt;&lt;/span&gt;
+          &lt;p id="errorname1"&gt;Le champ Nom est obligatoire&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="firstname" class="form-label"&gt;Prénom *&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="firstname" autocomplete="given-name" required/&gt;
+        &lt;div id="errorfirstname" class="alert alert-danger alert-sm d-none"&gt;
+          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Error&lt;/span&gt;&lt;/span&gt;
+          &lt;p id="errorfirstname1"&gt;Le champ Prénom est obligatoire&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Genre&lt;/legend&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M" selected&gt;
+          &lt;label class="form-check-label" for="M"&gt;M&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme"&gt;
+          &lt;label class="form-check-label" for="Mme"&gt;Mme&lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class="form-check form-check-inline"&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="Non-binaire" &gt;
+          &lt;label class="form-check-label" for="Non-binaire"&gt;Non-binaire&lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/fieldset&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="adresse" class="form-label"&gt;Adresse&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="adresse"/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="adresse2" class="form-label"&gt;Complément d'adresse&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="adresse2"/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="ville" class="form-label"&gt;Ville&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="ville"/&gt;
+      &lt;/div&gt;
+      &lt;div class="mb-2"&gt;
+        &lt;label for="cp" class="form-label"&gt;Code postal&lt;/label&gt;
+        &lt;input type="text" class="form-control" id="cp"/&gt;
+      &lt;/div&gt;
+      &lt;button id="submit" class="btn btn-primary"&gt;Soumettre&lt;/button&gt;
+      &lt;div id="alertsucces" class="alert alert-success d-none" role="alert"&gt;
+        &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Success&lt;/span&gt;&lt;/span&gt;
+        &lt;p&gt;La validation du formulaire est réussi.&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  </code>
+</pre>
+<pre>
+  <code class="javascript">
+  document.addEventListener("DOMContentLoaded", function(event) {
+
+    document.getElementById("password_visibility").onclick = function (e){
+        let password = document.getElementById("password");
+        if(password.type=="password"){
+            password.type="text";
+            this.title ="Cacher le mot de passe";
+        }
+        else{
+            password.type="password";
+            this.title ="Afficher le mot de passe";
+        }
+    }
+
+    document.getElementById("submit").onclick = function (e){
+        e.preventDefault();
+
+        let error=false;
+
+        let email = document.getElementById("email");
+        let password = document.getElementById("password");
+        let name = document.getElementById("name");
+        let firstname = document.getElementById("firstname");
+
+        if(firstname.value==""){
+            error=invalid(firstname,"errorfirstname1");
+            document.getElementById("errorfirstname").classList.remove("d-none");
+
+        }
+        else{
+            valid(firstname);
+            document.getElementById("errorfirstname").classList.add("d-none")
+        }
+
+        if(name.value==""){
+            error=invalid(name,"errorname1");
+            document.getElementById("errorname").classList.remove("d-none");
+        }
+        else{
+            valid(name);
+            document.getElementById("errorname").classList.add("d-none")
+        }
+
+        if(password.value==""){
+            error=invalid(password,"errorpassword1 passwordHelpBlock");
+            document.getElementById("errorpasswordDiv").classList.remove("d-none");
+        }
+        else{
+            if(password.value.length>=6){
+                valid(password);
+                document.getElementById("errorpasswordDiv").classList.add("d-none")
+                document.getElementById("errorpasswordDiv2").classList.add("d-none")
+                password.setAttribute("aria-describedby", "passwordHelpBlock");
+            }
+            else{
+                error=invalid(password,"errorpassword2 passwordHelpBlock");
+                document.getElementById("errorpasswordDiv").classList.add("d-none")
+                document.getElementById("errorpasswordDiv2").classList.remove("d-none");
+            }   
+        }
+        if(email.value==""){
+            error=invalid(email,"erroremail1");
+            document.getElementById("erroremailDiv").classList.remove("d-none");
+        }
+        else{
+            if(validateEmail(email.value)){
+                valid(email);
+                document.getElementById("erroremailDiv").classList.add("d-none")
+                document.getElementById("erroremailDiv2").classList.add("d-none")
+            }
+            else{
+                error=invalid(email,"erroremail2");
+                document.getElementById("erroremailDiv").classList.add("d-none")
+                document.getElementById("erroremailDiv2").classList.remove("d-none");
+            }
+            
+        }
+
+        if(error){
+            document.getElementById("alertsucces").classList.add("d-none")
+        }
+        else{
+            document.getElementById("alertsucces").classList.remove("d-none")
+        }
+    }
+
+    function valid (element){
+        element.setAttribute("aria-invalid", false)
+        element.classList.remove("is-invalid");
+        element.removeAttribute("aria-describedby")
+    }
+
+    function invalid(element,errorDiv){
+        element.setAttribute("aria-invalid", true);
+        element.classList.add("is-invalid");
+        element.setAttribute("aria-describedby", errorDiv);
+        element.focus();
+        return true;
+    }
+
+    const validateEmail = (email) => {
+        return String(email)
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          );
+      };
+})
+  </code>
+</pre>
+<h2 id="lien-vers-la-premiere-partie">Lien vers la première partie <a class="header-anchor" href="#lien-vers-la-premiere-partie" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><a href="../part1/">Formulaire partie 1 - Structurer son formulaire</a></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sur cette page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#soumission-dun-formulaire" class="nav-link text-muted">Soumission d&#39;un formulaire</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#champ-obligatoire" class="nav-link text-muted">Champ obligatoire</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#exemple" class="nav-link text-muted">Exemple</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#gestion-des-erreurs" class="nav-link text-muted">Gestion des erreurs</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#exemple-2" class="nav-link text-muted">Exemple</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#utilisation-de-lattribut-autocomplete" class="nav-link text-muted">Utilisation de l&#39;attribut autocomplete</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#exemple-complet" class="nav-link text-muted">Exemple complet</a></li><li class="nav-item position-relative">
+            <a href="#lien-vers-la-premiere-partie" class="nav-link text-muted">Lien vers la première partie</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos" class="nav-link">
+  À propos 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-fr.xml" class="nav-link">
+  Flux rss 
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/accessibilite" class="nav-link">
+  Accessibilité 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/fr/" class="nav-link">
+  Pré-version sur Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Déploiements sur Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/formulaires/part2/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+            Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Retour en haut de page">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Retour en haut de page">
+        <span class="visually-hidden">Retour en haut de page</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script src="script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2023 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
