@@ -4,12 +4,20 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2022-12-12T00:00:00Z</updated>
+  <updated>2023-02-05T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>  
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>#a11y technical watch, October 2022-January 2023</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/watch-october-january-2023/"/>
+    <updated>2023-02-05T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/watch-october-january-2023/</id>
+    <content xml:lang="en" type="html">#a11y anthology, October 2022 -January 2023</content>
+  </entry>
   
   <entry>
     <title>Form part 1 - Structure your form</title>
