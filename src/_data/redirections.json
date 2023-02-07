@@ -585,11 +585,11 @@
   },
   {
     "old": "web_EN/exemples/formulaire",
-    "new": "/en/articles/forms/part1"
+    "new": "/en/articles/form/part1"
   },
   {
     "old": "/en/web/components-examples/forms",
-    "new": "/en/articles/forms/part1"
+    "new": "/en/articles/form/part1"
   },
   {
     "old": "/en/web/components-examples/technical-iframe",
