@@ -204,7 +204,7 @@
 <p>Si certaines informations sont mises à jour dynamiquement dans la page (message de confirmation, chargement en cours, affichage d'erreur…). Il est important de faire en sorte que les lecteurs d'écran annoncent ces modifications. Plusieurs méthodes sont disponibles selon les cas :</p>
 <ul>
 <li>Déplacer le focus sur un élément qui vient d'être mis à jour.</li>
-<li>Utiliser de l'ARIA comme indiqué dans les articles suivants : <a href="https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/">Utiliser ARIA les messages d'état, de statut ou contextuel</a> et <a href="https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/#main-content">L'attribut aria-live et le role alert</a>.</li>
+<li>Utiliser de l'ARIA comme indiqué dans les articles suivants : <a href="https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/">Utiliser ARIA les messages d'état, de statut ou contextuel</a> et <a href="https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/">L'attribut aria-live et le role alert</a>.</li>
 </ul>
 <h2 id="deplacer-le-focus">Déplacer le focus <a class="header-anchor" href="#deplacer-le-focus" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Sur un site web classique, lorsqu'un utilisateur clique sur un lien et qu'une nouvelle page s'affiche, le focus est automatiquement repositionné en haut de page (sur le <code>body</code>). Ainsi pour les utilisateurs qui naviguent à l'aide du clavier, il suffit d'utiliser la touche <code>TAB</code> pour se déplacer dans la page.</p>
@@ -223,7 +223,7 @@
   &lt;!-- contenu de la région --&gt;
 &lt;/div&gt;
 </code></pre>
-<p>Consultez l'article : <a href="https://a11y-guidelines.orange.com/fr/web/exemples-de-composants/landmarks-aria/#main-content">les régions ou landmarks ARIA</a>, pour obtenir plus d'information sur l'utilisation de ces balises.</p>
+<p>Consultez l'article : <a href="https://a11y-guidelines.orange.com/fr/web/exemples-de-composants/landmarks-aria/">les régions ou landmarks ARIA</a>, pour obtenir plus d'information sur l'utilisation de ces balises.</p>
 <h2 id="gerer-lhistorique-du-navigateur">Gérer l'historique du navigateur <a class="header-anchor" href="#gerer-lhistorique-du-navigateur" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Rien de plus agaçant que de sortir d'une application alors qu'on souhaitait simplement revenir à la page précédente en utilisant le bouton <code>précédent</code> du navigateur. C'est pourtant ce qui se produit parfois dans les <abbr lang="en" title="single-page application">SPA</abbr>.</p>
 <p>La solution consiste à manipuler l'historique du navigateur en Javascript à l'aide de l'<a href="https://developer.mozilla.org/fr/docs/Web/API/History_API" lang="en">History API</a>. Celle-ci permet de mémoriser les différents états de l'application et d'y revenir à l'aide des boutons <code>précédent</code> et <code>suivant</code> du navigateur.</p>
