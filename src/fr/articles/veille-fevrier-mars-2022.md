@@ -72,7 +72,7 @@ Et enfin, la sortie dans notre site de dans notre site de recommandations de 5 p
 -	Utiliser le kit A11y annotation de Figma pour faire de l’a11y en design (en)&nbsp;: https://medium.com/designing-atlassian/create-accessible-designs-using-the-figma-a11y-annotation-kit-35371f00dac5 
 -	Documenter le design system (en)&nbsp;: https://www.youtube.com/watch?v=bpDF3ShKYZQ 
 -	Utiliser le bon vocabulaire quand on fait du user testing (en)&nbsp;: https://axesslab.com/testing-a-scary-word/ 
--	La lisibilité des polices , les bases(en)&nbsp;: https://bighack.org/font-accessibility-and-readability-the-basics/ 
+-	La lisibilité des polices , les bases(en)&nbsp;: https://business.scope.org.uk/article/font-accessibility-and-readability-the-basics/ 
 ## Ressources
 -	Liste des ressources à la suite du CSUN2022, la conférence d’a11y qui fait référence (en)&nbsp;: https://docs.google.com/spreadsheets/d/1Tgmba0L6Z0BkHu9Hb3jlZ3IweguAdrja649rzk8X_Dk/ 
 -	Bonnes pratiques d’a11y pour les déficients en motricité fine (en)&nbsp;: https://theweco.com/accessibility-limited-fine-motor/ 

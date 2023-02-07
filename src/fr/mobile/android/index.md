@@ -9,7 +9,7 @@ abstract: "Les critères incontournables pour le développement d'une applicatio
 
 Ce socle de critères destiné aux applications mobiles Android Orange pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité.
 
-Le respect de la charte Orange pour Android, document disponible sur [le site de la marque Orange](http://design.orange.com/) est un prérequis à l’utilisation de ce socle.
+Le respect de la charte Orange pour Android, document disponible sur [le site de la marque Orange](https://design.orange.com/) est un prérequis à l’utilisation de ce socle.
 Certains points déjà présents dans la charte Orange (utilisation des couleurs notamment) n’ont pas été repris dans cette liste de critères.
 
 ## [Pour le développement](developpement/)

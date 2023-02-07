@@ -13,7 +13,7 @@ We had the right to lots of great advent calendars, lots of great things to watc
 - the famous 24 days of web (fr): https://www.24joursdeweb.fr/
 - and a new one (fr): https://www.htmhell.dev/adventcalendar/
 
-In this new year when France has not shone with regard to its a11y report to the European Commission (read about it (fr): https://koena.net/rapport-de-la-france-a-la-commission-europeenne-sur-la-directive-accessibilite-web-rules-du-jeu-modifiees/ ), an opinion that I share on the fact that inaccessibility is often ONLY political (fr): https://www.lalutineduweb.fr/inaccessibilite-politique/
+In this new year when France has not shone with regard to its a11y report to the European Commission (read about it (fr): https://koena.net/rapport-de-la-france-a-la-commission-europeenne-sur-la-directive-accessibilite-web-regles-du-jeu-modifiees/ ), an opinion that I share on the fact that inaccessibility is often ONLY political (fr): https://www.lalutineduweb.fr/inaccessibilite-politique/
 
 Good reading !
 ## Accessibility in laws and standards
