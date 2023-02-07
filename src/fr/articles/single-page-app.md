@@ -31,7 +31,7 @@ Une solution acceptable consiste à déplacer le focus sur le premier titre `<h1
 
 Si certaines informations sont mises à jour dynamiquement dans la page (message de confirmation, chargement en cours, affichage d'erreur…). Il est important de faire en sorte que les lecteurs d'écran annoncent ces modifications. Plusieurs méthodes sont disponibles selon les cas :
 - Déplacer le focus sur un élément qui vient d'être mis à jour.
-- Utiliser de l'ARIA comme indiqué dans les articles suivants : [Utiliser ARIA les messages d'état, de statut ou contextuel](https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/) et [L'attribut aria-live et le role alert](https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/#main-content).
+- Utiliser de l'ARIA comme indiqué dans les articles suivants : [Utiliser ARIA les messages d'état, de statut ou contextuel](https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/) et [L'attribut aria-live et le role alert](https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/).
 
 ## Déplacer le focus
 
@@ -59,7 +59,7 @@ Si votre application possèdent des zones spécifiques, il est recommandé de le
 &lt;/div&gt;
 </code></pre>
 
-Consultez l'article : [les régions ou landmarks ARIA](https://a11y-guidelines.orange.com/fr/web/exemples-de-composants/landmarks-aria/#main-content), pour obtenir plus d'information sur l'utilisation de ces balises.
+Consultez l'article : [les régions ou landmarks ARIA](https://a11y-guidelines.orange.com/fr/web/exemples-de-composants/landmarks-aria/), pour obtenir plus d'information sur l'utilisation de ces balises.
 
 ## Gérer l'historique du navigateur
 
