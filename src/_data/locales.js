@@ -1,5 +1,6 @@
 module.exports = {
   en: {
+    url : "https://a11y-guidelines.orange.com/en",
     breadcrumb: {
       label: "You are here:"
     },
@@ -76,6 +77,7 @@ module.exports = {
     }
   },
   fr: {
+    url : "https://a11y-guidelines.orange.com/fr",
     breadcrumb: {
       label: "Vous êtes ici&nbsp;:"
     },
