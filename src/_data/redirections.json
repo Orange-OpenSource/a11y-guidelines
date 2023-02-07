@@ -569,7 +569,11 @@
   },
   {
     "old": "web_EN/exemples/dynFocus",
-    "new": "/en/web/components-examples/dynamic-focus"
+    "new": "/en/articles/dynamic-focus"
+  },
+  {
+    "old": "/en/web/components-examples/dynamic-focus",
+    "new": "/en/articles/dynamic-focus"
   },
   {
     "old": "web_EN/exemples/files",
@@ -581,19 +585,27 @@
   },
   {
     "old": "web_EN/exemples/formulaire",
-    "new": "/en/articles/forms"
+    "new": "/en/articles/forms/part1"
   },
   {
     "old": "/en/web/components-examples/forms",
-    "new": "/en/articles/forms"
+    "new": "/en/articles/forms/part1"
+  },
+  {
+    "old": "/en/web/components-examples/technical-iframe",
+    "new": "/en/articles/technical-iframe"
   },
   {
     "old": "web_EN/exemples/iframes-techniques",
-    "new": "/en/web/components-examples/technical-iframe"
+    "new": "/en/articles/technical-iframe"
   },
   {
     "old": "web_EN/exemples/landmarks",
-    "new": "/en/web/components-examples/landmarks"
+    "new": "/en/articles/landmarks"
+  },
+  {
+    "old": "/en/web/components-examples/landmarks",
+    "new": "/en/articles/landmarks"
   },
   {
     "old": "web_EN/exemples/listbox-pattern-aria",
@@ -1081,7 +1093,11 @@
   },
   {
     "old": "web/exemples/dynFocus/index.html",
-    "new": "/fr/web/exemples-de-composants/gestion-dynamique-du-focus"
+    "new": "/fr/articles/gestion-dynamique-du-focus"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/gestion-dynamique-du-focus",
+    "new": "/fr/articles/gestion-dynamique-du-focus"
   },
   {
     "old": "web/exemples/files/index.html",
@@ -1093,19 +1109,27 @@
   },
   {
     "old": "web/exemples/formulaire/index.html",
-    "new": "/fr/articles/formulaires"
+    "new": "/fr/articles/formulaires/part1"
   },
   {
     "old": "/fr/web/exemples-de-composants/formulaires",
-    "new": "/fr/articles/formulaires"
+    "new": "/fr/articles/formulaires/part1"
   },
   {
     "old": "web/exemples/iframes-techniques/index.html",
-    "new": "/fr/web/exemples-de-composants/iframes-techniques"
+    "new": "/fr/articles/iframes-techniques"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/iframes-techniques",
+    "new": "/fr/articles/iframes-techniques"
   },
   {
     "old": "web/exemples/landmarks/index.html",
-    "new": "/fr/web/exemples-de-composants/landmarks/landmarks-aria"
+    "new": "/fr/articles/landmarks-aria"
+  },
+  {
+    "old": "/fr/web/exemples-de-composants/landmarks/landmarks-aria",
+    "new": "/fr/articles/landmarks-aria"
   },
   {
     "old": "web/exemples/listbox-pattern-aria/index.html",

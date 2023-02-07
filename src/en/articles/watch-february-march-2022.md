@@ -70,7 +70,7 @@ And finally, a new content in our site of in our site of recommendations, 5 pers
 - Using Figma's A11y annotation kit to design a11y: https://medium.com/designing-atlassian/create-accessible-designs-using-the-figma-a11y-annotation-kit-35371f00dac5
 - Documenting the design system: https://www.youtube.com/watch?v=bpDF3ShKYZQ
 - Use the right vocabulary when doing user testing: https://axesslab.com/testing-a-scary-word/
-- Font accessibility and readability, the basics: https://bighack.org/font-accessibility-and-readability-the-basics/
+- Font accessibility and readability, the basics: https://business.scope.org.uk/article/font-accessibility-and-readability-the-basics/
 ## Resources
 - List of resources following CSUN2022, the a11y conference that refers to: https://docs.google.com/spreadsheets/d/1Tgmba0L6Z0BkHu9Hb3jlZ3IweguAdrja649rzk8X_Dk/
 - a11y's best practices for those with fine motor disabilities: https://theweco.com/accessibility-limited-fine-motor/

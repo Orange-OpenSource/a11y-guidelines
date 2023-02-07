@@ -14,7 +14,7 @@ Toutes ces notions élémentaires et avancées sont illustrées et développées
 ## [Critères de conception](conception/)
 Ce socle de critères pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité.
 
-Le respect de la charte Orange pour iOS, document disponible sur le site de la marque [Orange](http://design.orange.com/), est un prérequis à l’utilisation de ce socle.
+Le respect de la charte Orange pour iOS, document disponible sur le site de la marque [Orange](https://design.orange.com/), est un prérequis à l’utilisation de ce socle.
 
 Certains points déjà présents dans cette charte *(utilisation des couleurs notamment)* n’ont pas été repris dans cette liste de critères.
 
