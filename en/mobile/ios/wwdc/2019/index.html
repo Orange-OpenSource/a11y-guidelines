@@ -216,17 +216,34 @@
 <p><img src="../../../images/iOSdev/wwdc19-000.png" alt="" class="img-fluid"></p>
 <p>This video encompasses four short presentations all available on the <strong>official Apple website</strong>:</p>
 <ul>
-<li>
-<p><a href="#visual-design-accessibility">Visual Design Accessibility</a></p>
+<li><a href="#wwdc-2019-accessibility-lessons">WWDC 2019: Accessibility Lessons</a>
+<ul>
+<li><a href="#visual-design-accessibility">Visual Design Accessibility</a>
+<ul>
+<li><a href="#dynamic-type">Dynamic Type</a></li>
+<li><a href="#reduce-motion">Reduce motion</a></li>
+<li><a href="#color">Color</a></li>
+</ul>
 </li>
-<li>
-<p><a href="#accessibility-inspector">Accessibility Inspector</a></p>
+<li><a href="#accessibility-inspector">Accessibility Inspector</a>
+<ul>
+<li><a href="#introduction-0051">Introduction (00:51)</a></li>
+<li><a href="#audit-0226">Audit (02:26)</a></li>
+<li><a href="#inspection-0340">Inspection (03:40)</a></li>
+<li><a href="#catextlayer-0526">CATextLayer (05:26)</a></li>
+<li><a href="#color-contrast-0626">Color Contrast (06:26)</a></li>
+<li><a href="#conclusion-0824">Conclusion (08:24)</a></li>
+</ul>
 </li>
-<li>
-<p><a href="#writing-great-accessibility-labels">Writing Great Accessibility Labels</a></p>
+<li><a href="#writing-great-accessibility-labels">Writing Great Accessibility Labels</a></li>
+<li><a href="#accessibility-custom-actions">Accessibility Custom Actions</a>
+<ul>
+<li><a href="#introduction-0012">Introduction (00:12)</a></li>
+<li><a href="#custom-actions">Custom Actions</a></li>
+<li><a href="#implementation-0759">Implementation (07:59)</a></li>
+</ul>
 </li>
-<li>
-<p><a href="#accessibility-custom-actions">Accessibility Custom Actions</a></p>
+</ul>
 </li>
 </ul>
 <p><br>Thereafter, according to the presentation configuration, the selection of a title or a timelapse will give rise to the video playback on the Apple website directly at the proper moment.<br>
@@ -306,7 +323,7 @@ Reminder of the 11 text styles available since iOS 11:
 <p><img src="../../../images/iOSdev/wwdc19-244-TextStyles_1.png" alt="" class="img-fluid"></p>
 <p>... and the programmatic way of their implementations:<br>
 <img src="../../../images/iOSdev/wwdc19-244-TextStyles_2.png" alt="" class="img-fluid"></p>
-<p>A more detailed explanation of the <code>Dynamic</code> <code>Type</code> implementation is available in the <a href="../../development#text-size" style="text-decoration: underline;">developers guide section</a>.</p>
+<p>A more detailed explanation of the <code>Dynamic</code> <code>Type</code> implementation is available in the <a href="../../development/#text-size" style="text-decoration: underline;">developers guide section</a>.</p>
 </div>
 <div class="tab-pane" id="DynamicType-Xcode" role="tabpanel" >
 <p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/244/?time=180">🎬 (03:00)</a></p>
@@ -351,7 +368,7 @@ Reminder of the 11 text styles available since iOS 11:
 <img src="../../../images/iOSdev/wwdc19-244-TextStyles_4.png" alt="" class="img-fluid"></p>
 <p>... and of the programmatic way to be aware of its value from the device settings:<br>
 <img src="../../../images/iOSdev/wwdc19-244-TextStyles_5.png" alt="" class="img-fluid"></p>
-<p>A detailed explanation of the accessibility options states and events is available in the <a href="../../development#accessibility-options" style="text-decoration: underline;">developers guide section</a>.</p>
+<p>A detailed explanation of the accessibility options states and events is available in the <a href="../../development/#accessibility-options" style="text-decoration: underline;">developers guide section</a>.</p>
 </div>
 <div class="tab-pane" id="ReduceMotion-AutoplayingVideo" role="tabpanel" >
 <p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/244/?time=257">🎬 (04:17)</a></p>
@@ -402,7 +419,7 @@ If this option is deactivated, the video control must be regained only under the
 <img src="../../../images/iOSdev/wwdc19-244-TextStyles_9.png" alt="" class="img-fluid"></p>
 <p>There's also a programmatic way to be aware of its value so as to subsequently adapt the user interface:<br>
 <img src="../../../images/iOSdev/wwdc19-244-TextStyles_10.png" alt="" class="img-fluid"></p>
-<p>Admittedly, it's highly recommended <a href="../../design#colours" style="text-decoration: underline;">never to transmit information by colors</a> but this situation may be critical for some use cases that must adapt their configuration accordingly (video games for instance).</p>
+<p>Admittedly, it's highly recommended <a href="../../design/#colours" style="text-decoration: underline;">never to transmit information by colors</a> but this situation may be critical for some use cases that must adapt their configuration accordingly (video games for instance).</p>
 <p><img src="../../../images/iOSdev/wwdc19-244-TextStyles_11.png" alt="" class="img-fluid"></p>
 </div>
 </div>
@@ -456,7 +473,7 @@ If this option is deactivated, the video control must be regained only under the
 <p>This example emphasizes the non automatic accessibility handling for this kind of element that must be programmatically implemented to behave like any other accessibility element.<br>
 <br><br></p>
 <h3 id="color-contrast-0626"><a href="https://developer.apple.com/videos/play/wwdc2019/257/?time=386">Color Contrast (06:26)</a> <a class="header-anchor" href="#color-contrast-0626" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Besides the font size, it's also very important to be above a <a href="../../design#colours">contrast ratio</a> to enable sight-impaired people to perfectly understand the whole screen content.</p>
+<p>Besides the font size, it's also very important to be above a <a href="../../design/#colours">contrast ratio</a> to enable sight-impaired people to perfectly understand the whole screen content.</p>
 <p>Once the color contrast issue is detected, a solution is brought about by the <strong>Xcode 11 new feature</strong>: <strong>Color Contrast Calculator</strong>.<br>
 <img src="../../../images/iOSdev/wwdc19-257-ColorContrast.png" alt="" class="img-fluid"><br>
 <br><br></p>
@@ -494,7 +511,7 @@ If this option is deactivated, the video control must be regained only under the
 </li>
 </ul>
 <h2 id="accessibility-custom-actions">Accessibility Custom Actions <a class="header-anchor" href="#accessibility-custom-actions" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2019/250/">session 250</a>) highlights the custom actions for the <a href="../../voiceover/">screen reader</a> and the <a href="../../development#switch-control">Switch Control feature</a> thanks to a demo application that presents the explained concepts.<br>
+<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2019/250/">session 250</a>) highlights the custom actions for the <a href="../../voiceover/">screen reader</a> and the <a href="../../development/#switch-control">Switch Control feature</a> thanks to a demo application that presents the explained concepts.<br>
 <img src="../../../images/iOSdev/wwdc19-250.png" alt="" class="img-fluid"><br>
 <br><br>Various contents and their video timelapse are indicated hereunder:</p>
 <ul>
@@ -538,7 +555,7 @@ If this option is deactivated, the video control must be regained only under the
      id="CustomActions-VoiceOver"
      role="tabpanel">
 <p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/250/?time=190">🎬 (03:10)</a></p>
-<p>The purpose of the <a href="../../development#custom-actions" style="text-decoration: underline;">custom actions</a>  with VoiceOver is clearly explained which helps understand why and in which contexts this functionality must be implemented to significantly improve the user experience.</p>
+<p>The purpose of the <a href="../../development/#custom-actions" style="text-decoration: underline;">custom actions</a>  with VoiceOver is clearly explained which helps understand why and in which contexts this functionality must be implemented to significantly improve the user experience.</p>
 </div>
 <div class="tab-pane" id="CustomActions-SwitchControl" role="tabpanel" >
 <p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/250/?time=268">🎬 (04:28)</a></p>
@@ -549,7 +566,7 @@ If this option is deactivated, the video control must be regained only under the
 </div>
 <p><br><br></p>
 <h3 id="implementation-0759"><a href="https://developer.apple.com/videos/play/wwdc2019/250/?time=479">Implementation (07:59)</a> <a class="header-anchor" href="#implementation-0759" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Since iOS 8, the <a href="../../development#custom-actions">custom actions</a> implementation relies on an Objective C syntax that now fits a Swift form by introducing a <strong>closure</strong> in <strong>iOS 13</strong>.<br>
+<p>Since iOS 8, the <a href="../../development/#custom-actions">custom actions</a> implementation relies on an Objective C syntax that now fits a Swift form by introducing a <strong>closure</strong> in <strong>iOS 13</strong>.<br>
 <img src="../../../images/iOSdev/wwdc19-250-CustomActionsCoding.png" alt="" class="img-fluid"><br>
 <br><br><br></p>
 
@@ -593,11 +610,11 @@ If this option is deactivated, the video control must be regained only under the
   <div class="container-lg">
     <nav class="py-2" role="navigation">
       <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
-            <a href="/en/contact" class="nav-link">
+            <a href="/en/contact/" class="nav-link">
   Contact 
 </a>
           </li><li class="nav-item">
-            <a href="/en/about" class="nav-link">
+            <a href="/en/about/" class="nav-link">
   About 
 </a>
           </li><li class="nav-item">
@@ -605,7 +622,7 @@ If this option is deactivated, the video control must be regained only under the
   RSS feed 
 </a>
           </li><li class="nav-item">
-            <a href="/en/accessibility" class="nav-link">
+            <a href="/en/accessibility/" class="nav-link">
   Accessibility 
 </a>
           </li><li class="nav-item">

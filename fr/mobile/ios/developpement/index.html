@@ -279,7 +279,7 @@
 <p><strong>accessibilityTraitLink</strong> : utile pour définir un label en tant que « lien »,</p>
 </li>
 <li>
-<p><strong>accessibilityTraitHeader</strong> : permet de définir un élément comme un en-tête (voir la section <a href="../conception#titre-et-en-tete">« titre et en-tête »</a>),</p>
+<p><strong>accessibilityTraitHeader</strong> : permet de définir un élément comme un en-tête (voir la section <a href="../conception/#titre-et-en-tete">« titre et en-tête »</a>),</p>
 </li>
 <li>
 <p><strong>accessibilityTraitAdjustable</strong> : permet de définir un élément comme un élément « ajustable », c’est-à-dire un élément dont la valeur instantanée peut être modifiée via un <a href="../voiceover/">geste spécifique</a> de <span lang="en">VoiceOver</span> (balayage avec un doigt vers le haut ou le bas).</p>
@@ -2167,7 +2167,7 @@ Cette tâche est simplifiée depuis iOS10 où l'attribut <strong>adjustsFontForC
 <p>ne pas oublier d'adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l'utilisation de valeurs dynamiques : penser à paramétrer les éléments inclus dans les navigation/tab/status bar et toolbar qui seront affichés via le <strong><a href="../wwdc/2019/261">Large Content Viewer</a></strong>,</p>
 </li>
 <li>
-<p>penser à adapter le <a href="../conception#couleurs">contraste des couleurs</a> à la taille de texte modifiée si nécessaire.</p>
+<p>penser à adapter le <a href="../conception/#couleurs">contraste des couleurs</a> à la taille de texte modifiée si nécessaire.</p>
 </li>
 </ul>
 <p><br><strong>Depuis iOS 15</strong>, il est désormais possible de <a href="https://developer.apple.com/videos/play/wwdc2021/10059/?time=878">limiter les seuils minimal et maximal</a> de modification de taille avec le <span lang="en">Dynamic Type</span> pour un élément <span lang="en">UIView</span> grâce à deux nouvelles propriétés : <strong><a href="https://developer.apple.com/documentation/uikit/uiview/3750924-minimumcontentsizecategory">minimumContentSizeCategory</a></strong> et <strong><a href="https://developer.apple.com/documentation/uikit/uiview/3750923-maximumcontentsizecategory">maximumContentSizeCategory</a></strong>.</p>
@@ -3189,7 +3189,7 @@ C’est là que les événements système peuvent être utilisés et, en restant
 </div>
 <div class="tab-pane" id="a11yOptions-Link" role="tabpanel">
 <ul>
-<li><a href="../conception#options-daccessibilite">Options d'accessibilité</a> (partie conception iOS de ce site)</li>
+<li><a href="../conception/#options-daccessibilite">Options d'accessibilité</a> (partie conception iOS de ce site)</li>
 </ul>
 </div>
 </div>
@@ -4169,7 +4169,7 @@ class ViewController: UIViewController {
 <div class="tab-pane show active"
      id="appName-Description"
      role="tabpanel">
-<p>Même s'il est possible à un utilisateur de personnaliser manuellement la vocalisation du nom d'une application via une <a href="../voiceover#CustomLabel" style="text-decoration: underline;">gestuelle spécifique <span lang="en">VoiceOver</span></a>, cette manipulation est aussi réalisable en programmation.</p>
+<p>Même s'il est possible à un utilisateur de personnaliser manuellement la vocalisation du nom d'une application via une <a href="../voiceover/#CustomLabel" style="text-decoration: underline;">gestuelle spécifique <span lang="en">VoiceOver</span></a>, cette manipulation est aussi réalisable en programmation.</p>
 <p>L'idée est de pouvoir vocaliser proprement les sigles présents sur les icônes applicatives qui sont très expressifs visuellement mais textuellement incompréhensibles.</p>
 </div>
 <div class="tab-pane" id="appName-Example" role="tabpanel">
@@ -4231,11 +4231,11 @@ class ViewController: UIViewController {
   <div class="container-lg">
     <nav class="py-2" role="navigation">
       <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
-            <a href="/fr/contact" class="nav-link">
+            <a href="/fr/contact/" class="nav-link">
   Contact 
 </a>
           </li><li class="nav-item">
-            <a href="/fr/a-propos" class="nav-link">
+            <a href="/fr/a-propos/" class="nav-link">
   À propos 
 </a>
           </li><li class="nav-item">
@@ -4243,7 +4243,7 @@ class ViewController: UIViewController {
   Flux rss 
 </a>
           </li><li class="nav-item">
-            <a href="/fr/accessibilite" class="nav-link">
+            <a href="/fr/accessibilite/" class="nav-link">
   Accessibilité 
 </a>
           </li><li class="nav-item">
