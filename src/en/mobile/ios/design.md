@@ -112,7 +112,7 @@ Colours have a very important role in the transmission of information.
 </br></br>The normal font type will require a higher contrast than the previous case.
 
 ![](../../images/color_contrast_3.png)
-</br> With [Dynamic&nbsp;Type](../development#text-size) whose purpose is to adapt the font size according to the user settings, the contrast isn't necessary fixed and must be adapted to the text size.
+</br> With [Dynamic&nbsp;Type](../development/#text-size) whose purpose is to adapt the font size according to the user settings, the contrast isn't necessary fixed and must be adapted to the text size.
 
 ![](../../images/color_contrast_1.png)
 </br>Abide by the contrast ratio is crucial but a too high contrast accentuates eye strain and may cause a visual sensation of blurring on the text.
@@ -213,7 +213,7 @@ Thanks to the text alternatives, a visually impaired user can use an application
 
 <br>The text alternative of an element is set via the `accessibilityLabel`, `accessibilityHint`, `accessibilityValue` and `accessibilityTrait` (using the `UIAccessibility` protocol available on any child of `UIView`).  
 <br>The order of vocalization (label, value, trait and hint) cannot be changed and the vocalization is done only once.  
-<br>For more technical information on these attributes, please refer to the [text alternatives](../development##text-alternatives) on the developer guide section.
+<br>For more technical information on these attributes, please refer to the [text alternatives](../development/#text-alternatives) on the developer guide section.
 </div>
 <div class="tab-pane" id="alternativeText-Examples" role="tabpanel" >
 Below is a common example of an icon that is associated with a text (badge) to add information.
@@ -600,7 +600,7 @@ There are several types of notification, but the two most used are:
 
 - `UIAccessibilityScreenChangedNotification`: notify a global change.
 
-For more technical information, please check out the corresponding section on the [developer&nbsp;guide&nbsp;for&nbsp;iOS](../development#notify-a-content-change).
+For more technical information, please check out the corresponding section on the [developer&nbsp;guide&nbsp;for&nbsp;iOS](../development/#notify-a-content-change).
 </div>
 <div class="tab-pane" id="changingContent-Check" role="tabpanel" >
 
@@ -780,7 +780,7 @@ A more consistent reading order is `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol +, vol-, p
 
 ![Example of reading order](../../images/order.png)
 
-For more technical information, please check out the corresponding section on the [developer&nbsp;guide&nbsp;for&nbsp;iOS](../development#reading-order).
+For more technical information, please check out the corresponding section on the [developer&nbsp;guide&nbsp;for&nbsp;iOS](../development/#reading-order).
 </div>
 <div class="tab-pane" id="readingOrder-Check" role="tabpanel" >
 

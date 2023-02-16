@@ -123,7 +123,7 @@ Captchas are often the source of difficulties for users. If the implementation o
 
 If no other alternative is possible, it is essential to provide an alternative for captcha only visual or sound by proposing a combination of captcha types: an audio + visual captcha, logical tests (question whose answer is obvious, mathematical simple tests…) + classic visual captcha…
 
-More details on [Captchas](../../../articles/captcha-accessibility).
+More details on [Captchas](../../../articles/captcha-accessibility/).
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>

@@ -86,7 +86,7 @@ Une page contenant un lecteur vidéo dont le focus peut entrer à l’intérieur
 
 Ne pas masquer le focus et si nécessaire accentuer sa visibilité sur tous les éléments focusables, par exemple en modifiant la propriété <abbr>CSS</abbr> `outline`.
 
-Veiller à fournir un niveau de contraste suffisant de 3:1 pour que celui-ci soit visible par tous (cf. [mesurer le niveau de contraste des couleurs](/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs)).
+Veiller à fournir un niveau de contraste suffisant de 3:1 pour que celui-ci soit visible par tous (cf. [mesurer le niveau de contraste des couleurs](/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/)).
 
 Lorsqu’un effet est visible sur un élément au survol de la souris (`:hover` en <abbr>CSS</abbr> par exemple), cet effet doit être également affiché à la prise du focus (`:focus`).
 

@@ -145,12 +145,12 @@ Tout contenu vidéo doit respecter ces prérequis :
 <img alt="" src="/fr/contenu-et-communication/images/tableautype.png" class="img-fluid">
 
 
-Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-et-communication/composants-animes) pour en savoir plus.
+Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-et-communication/composants-animes/) pour en savoir plus.
 
 
 ## Convertir une présentation PowerPoint en fichier PDF
 
-Une fois que vous aurez vérifié l'accessiblité de votre présentation (voir la rubrique [Tester l'accessibilité d'une présentation PowerPoint](/fr/contenu-et-communication/powerpoint/tester)), vous pouvez convertir la présentation en <abbr>PDF</abbr> : `Fichier > Enregistrer sous` et de sélectionner le type de fichier <abbr>PDF</abbr>.
+Une fois que vous aurez vérifié l'accessiblité de votre présentation (voir la rubrique [Tester l'accessibilité d'une présentation PowerPoint](/fr/contenu-et-communication/powerpoint/tester/)), vous pouvez convertir la présentation en <abbr>PDF</abbr> : `Fichier > Enregistrer sous` et de sélectionner le type de fichier <abbr>PDF</abbr>.
 Cocher la case « Balises de structure de document pour l'accessibilité ».
 
 <img alt="" src="/fr/contenu-et-communication/images/imagepdf.png" class="img-fluid">  &nbsp;

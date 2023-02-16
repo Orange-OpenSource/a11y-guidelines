@@ -109,7 +109,7 @@ Les couleurs jouent un rôle très important dans la transmission des informatio
 </br>Ne pas mettre des polices en gras va demander un contraste des couleurs plus fort que dans le cas précédent.
 
 ![](../../images/color_contrast_3.png)
-</br> Avec l’apparition du [Dynamic&nbsp;Type](../developpement#taille-des-textes) permettant de modifier de façon conséquente la taille de police, le contraste des couleurs n’est pas nécessairement figé et doit s’adapter au grossissement souhaité.
+</br> Avec l’apparition du [Dynamic&nbsp;Type](../developpement/#taille-des-textes) permettant de modifier de façon conséquente la taille de police, le contraste des couleurs n’est pas nécessairement figé et doit s’adapter au grossissement souhaité.
 
 ![](../../images/color_contrast_1.png)
 </br>Respecter les seuils de contraste est primordial mais il ne faut pas non plus tomber dans l'extrême car un contraste trop élevé accentue la fatigue oculaire et peut engendrer une sensation visuelle de tremblement sur le texte.
@@ -213,7 +213,7 @@ Grâce aux alternatives textuelles, un utilisateur non voyant peut utiliser une 
 
 <br>L’alternative textuelle d’un élément est renseignée via les attributs `accessibilityLabel`, `accessibilityHint`, `accessibilityValue` et `accessibilityTrait` (via le protocole `UIAccessibility` implémenté par tout élément standard dérivant de `UIView`).
 <br>L’ordre de vocalisation qui est toujours le même (`label`, `value`, `trait` et `hint`) ne peut pas être changé et la vocalisation est réalisée en une seule fois, à l’arrivée sur l’élément.  
-<br>Pour plus d’informations techniques sur ces attributs, il est conseillé de consulter la section [alternatives&nbsp;textuelles](../developpement#alternatives-textuelles) dans le guide pour les développeurs.
+<br>Pour plus d’informations techniques sur ces attributs, il est conseillé de consulter la section [alternatives&nbsp;textuelles](../developpement/#alternatives-textuelles) dans le guide pour les développeurs.
 </div>
 <div class="tab-pane" id="alternativeText-Examples" role="tabpanel" >
 Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (infobulle) pour ajouter de l’information&nbsp;:

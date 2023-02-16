@@ -175,7 +175,7 @@ Dans une première partie, nous décrirons les gestes de base liés à une utili
 </br></br>
 ## Terminal avec configuration sans bouton principal
 L'arrivée sur le marché de l'iPhoneX sous iOS11 avec l'absence de bouton principal a quelque peu bouleversé la gestuelle classique dont on avait l'habitude.
-<br>Ces [nouveaux gestes de base](./iphone-x) ont donc fortement impacté les manipulations <span lang="en">VoiceOver</span> dont les principales sont fournies ci-dessous&nbsp;:
+<br>Ces [nouveaux gestes de base](./iphone-x/) ont donc fortement impacté les manipulations <span lang="en">VoiceOver</span> dont les principales sont fournies ci-dessous&nbsp;:
 - [revenir à l'écran d'accueil,](#BackHome)
 
 - [accéder au multitâche,](#Multitask)
