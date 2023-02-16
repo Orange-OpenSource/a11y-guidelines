@@ -22,7 +22,7 @@ Que ce soit dans la conception, la réalisation ou la vérification, chaque déc
 
 3. Assimiler les [critères&nbsp;de&nbsp;conception](../conception/) pour s'asurer de la bonne voie sur laquelle on s'engage.
 
-4. Pour les [développeurs](../developpement), ne pas hésiter à se créer des projets vierges en n'y incorporant que la partie impactant la fonctionnalité désirée afin de s'assurer qu'elle est parfaitement fonctionnelle et que seul l'environnement au sein de laquelle elle va être introduite risque éventuellement d'altérer son comportement.
+4. Pour les [développeurs](../developpement/), ne pas hésiter à se créer des projets vierges en n'y incorporant que la partie impactant la fonctionnalité désirée afin de s'assurer qu'elle est parfaitement fonctionnelle et que seul l'environnement au sein de laquelle elle va être introduite risque éventuellement d'altérer son comportement.
 
 5. Il faut absolument que les contenus web et les éléments tiers qui pourraient être utilisés au sein de l'application soient eux-mêmes déjà parfaitement accessibles.
 <br><br>
@@ -34,7 +34,7 @@ Cette personne doit s'assurer que des **critères d'acceptations** sont **parfai
 
 - l'équipe **DESIGN** doit réellement se mettre à la place de l'utilisateur de façon à **fournir les préconisations** les plus précises possibles en fonction des demandes projet en amont,
 
-- l'équipe **DÉVELOPPEMENT** doit grandement s'appuyer sur les [vidéos&nbsp;WWDC](../wwdc/) et sur le [guide&nbsp;pour&nbsp;les&nbsp;développeurs](../developpement) afin de **trouver les solutions** les plus appropriées aux différentes situations rencontrées,
+- l'équipe **DÉVELOPPEMENT** doit grandement s'appuyer sur les [vidéos&nbsp;WWDC](../wwdc/) et sur le [guide&nbsp;pour&nbsp;les&nbsp;développeurs](../developpement/) afin de **trouver les solutions** les plus appropriées aux différentes situations rencontrées,
 
 - l'équipe **TEST** doit parfaitement maîtriser la [gestuelle&nbsp;spécifique](../voiceover/) et comprendre toutes les possibilités offertes par iOS pour **réaliser chacun des tests** de façon optimum avant mise en production.
 
@@ -52,11 +52,11 @@ Ce mode vient aussi souvent confirmer et solutionner certains problèmes fonctio
 
 La participation aux tests de cette partie ne nécessite aucune connaissance technique particulière si ce n'est savoir (dés)activer et utiliser des fonctionnalités d'accessibilité iOS.
 
-En plus des [critères&nbsp;de&nbsp;base](../conception/) à respecter, il est primordial de s'assurer que des [options&nbsp;d'accessibilité](../conception#options-daccessibilite) activées par un utilisateur sont parfaitement opérationnelles dans toutes les pages de l'application développée.
+En plus des [critères&nbsp;de&nbsp;base](../conception/) à respecter, il est primordial de s'assurer que des [options&nbsp;d'accessibilité](../conception/#options-daccessibilite) activées par un utilisateur sont parfaitement opérationnelles dans toutes les pages de l'application développée.
 
 Ci-dessous, quelques critères importants à tester impérativement&nbsp;:
 
-- **orientation de l'écran** : il est très fortement recommandé de pouvoir utiliser une application en mode portrait ou paysage. Cette [fonctionnalité](../conception#orientation-de-lecran) doit absolument être vérifiée pour tous les écrans d'une application,
+- **orientation de l'écran** : il est très fortement recommandé de pouvoir utiliser une application en mode portrait ou paysage. Cette [fonctionnalité](../conception/#orientation-de-lecran) doit absolument être vérifiée pour tous les écrans d'une application,
 
 - **limiter les animations visuelles** : lorsque des personnes sont susceptibles d'être plus ou moins gênées par les mouvements visuels, il faut absolument s'assurer que les éventuelles animations proposées répondent bien aux [souhaits&nbsp;de&nbsp;l'utilisateur](../wwdc/2018/230/#mouvement-0848),
 
@@ -99,7 +99,7 @@ Enfin, les quelques points suivants sont à examiner minutieusement&nbsp;:
 
 ![](../../images/ios-test-DynamicType_2.png)
 
-- **les illustrations comme les icônes doivent s'adapter au grossissement souhaité**&nbsp;: l'utilisation du [Large&nbsp;Content&nbsp;Viewer](../wwdc/2019/261/) après un appui long, l'implémentation d'un pinch à 2 doigts afin d’éviter à l’utilisateur d’avoir recours à la fonctionnalité `Zoom` ou encore le simple [grossissement&nbsp;d'un&nbsp;élément&nbsp;graphique](../developpement#taille-des-elements-graphiques) peuvent être des solutions selon les cas rencontrés,
+- **les illustrations comme les icônes doivent s'adapter au grossissement souhaité**&nbsp;: l'utilisation du [Large&nbsp;Content&nbsp;Viewer](../wwdc/2019/261/) après un appui long, l'implémentation d'un pinch à 2 doigts afin d’éviter à l’utilisateur d’avoir recours à la fonctionnalité `Zoom` ou encore le simple [grossissement&nbsp;d'un&nbsp;élément&nbsp;graphique](../developpement/#taille-des-elements-graphiques) peuvent être des solutions selon les cas rencontrés,
 
 - penser à **modifier le grossissement de texte au sein de chaque écran** pour s’assurer que tous ses éléments répondent parfaitement aux contraintes graphiques mises en place,
 
@@ -162,7 +162,7 @@ Il est donc **très fortement recommandé** de connaître au moins les gestes de
 
 Il faut bien avoir à l'esprit que l'**information** diffusée visuellement est assimilée en très peu de temps alors que celle fournie par le lecteur d'écran arrive de façon **séquentielle** à la vitesse de sélections successives d'éléments&nbsp;: un **effort énorme de mémorisation** est à fournir pour avoir une vision synoptique de l'écran et comprendre réellement ce qui est proposé.
 
-Pour mieux comprendre cette situation, il est recommandé de passer son écran en [mode&nbsp;"rideau"](../voiceover#CurtainScreen) puis naviguer comme si on voyait l'écran.
+Pour mieux comprendre cette situation, il est recommandé de passer son écran en [mode&nbsp;"rideau"](../voiceover/#CurtainScreen) puis naviguer comme si on voyait l'écran.
 Cette opération est particulièrement utile lors de **premiers tests sur une application qu'on découvre** car on n'est pas influencé sur le parcours utilisateur qui serait déjà visionné inconsciemment.
 
 En plus des [critères&nbsp;de&nbsp;conception](../conception/) à respecter, quatre grands principes doivent rester à l'esprit lors de tests&nbsp;:
@@ -239,7 +239,7 @@ Comme son nom l'indique, cette partie requiert des connaissances plus ou moins p
 <br>
 ### Contraste des couleurs
 
-Graphiquement, [le&nbsp;contraste&nbsp;des&nbsp;couleurs](../conception#couleurs) est très certainement le plus facilement vérifiable grâce à certains logiciels à installer en local par exemple (Colour Contrast Analyzer...).
+Graphiquement, [le&nbsp;contraste&nbsp;des&nbsp;couleurs](../conception/#couleurs) est très certainement le plus facilement vérifiable grâce à certains logiciels à installer en local par exemple (Colour Contrast Analyzer...).
 
 L'outil <span lang="en">Accessibility Inspector</span> dispose d'une fonctionnalité [<span lang="en">Color Contrast Calculator</span>](../wwdc/2019/#contraste-des-couleurs-0626) depuis Xcode 11 qui permet aussi de réaliser le même type de vérifications.
 <br>Il est aussi très important de prendre en compte la luminosité (valeur > 125) ainsi que la différence de tonalité (valeur > 500) comme indiqué dans la section critères de conception liée aux couleurs.

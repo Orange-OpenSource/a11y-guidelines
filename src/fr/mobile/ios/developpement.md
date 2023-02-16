@@ -74,7 +74,7 @@ Il existe beaucoup de traits dont les principaux sont fournis ci-dessous&nbsp;:
 
 - **accessibilityTraitLink**&nbsp;: utile pour définir un label en tant que «&nbsp;lien&nbsp;»,
 
-- **accessibilityTraitHeader**&nbsp;: permet de définir un élément comme un en-tête (voir la section <a href="../conception#titre-et-en-tete">«&nbsp;titre&nbsp;et&nbsp;en-tête&nbsp;»</a>),
+- **accessibilityTraitHeader**&nbsp;: permet de définir un élément comme un en-tête (voir la section <a href="../conception/#titre-et-en-tete">«&nbsp;titre&nbsp;et&nbsp;en-tête&nbsp;»</a>),
 
 - **accessibilityTraitAdjustable**&nbsp;: permet de définir un élément comme un élément «&nbsp;ajustable&nbsp;», c’est-à-dire un élément dont la valeur instantanée peut être modifiée via un [geste&nbsp;spécifique](../voiceover/) de <span lang="en">VoiceOver</span> (balayage avec un doigt vers le haut ou le bas).
 
@@ -2074,7 +2074,7 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
 
  - ne pas oublier d'adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l'utilisation de valeurs dynamiques : penser à paramétrer les éléments inclus dans les navigation/tab/status bar et toolbar qui seront affichés via le **[Large Content Viewer](../wwdc/2019/261)**,
  
- - penser à adapter le [contraste des couleurs](../conception#couleurs) à la taille de texte modifiée si nécessaire.
+ - penser à adapter le [contraste des couleurs](../conception/#couleurs) à la taille de texte modifiée si nécessaire.
 
 <br>**Depuis iOS&nbsp;15**, il est désormais possible de [limiter les seuils minimal et maximal](https://developer.apple.com/videos/play/wwdc2021/10059/?time=878) de modification de taille avec le <span lang="en">Dynamic Type</span> pour un élément <span lang="en">UIView</span> grâce à deux nouvelles propriétés&nbsp;: **[minimumContentSizeCategory](https://developer.apple.com/documentation/uikit/uiview/3750924-minimumcontentsizecategory)** et **[maximumContentSizeCategory](https://developer.apple.com/documentation/uikit/uiview/3750923-maximumcontentsizecategory)**.
 
@@ -3153,7 +3153,7 @@ Tous les <a href="https://developer.apple.com/documentation/uikit/accessibility/
 </div>
 <div class="tab-pane" id="a11yOptions-Link" role="tabpanel">
 
-- [Options&nbsp;d'accessibilité](../conception#options-daccessibilite) (partie conception iOS de ce site)
+- [Options&nbsp;d'accessibilité](../conception/#options-daccessibilite) (partie conception iOS de ce site)
 </div>
 </div>
 <br><br>
@@ -4216,7 +4216,7 @@ Les groupes créés permettent d'accéder directement aux éléments qu'ils cont
      id="appName-Description"
      role="tabpanel">
      
-Même s'il est possible à un utilisateur de personnaliser manuellement la vocalisation du nom d'une application via une <a href="../voiceover#CustomLabel" style="text-decoration: underline;">gestuelle spécifique <span lang="en">VoiceOver</span></a>, cette manipulation est aussi réalisable en programmation.
+Même s'il est possible à un utilisateur de personnaliser manuellement la vocalisation du nom d'une application via une <a href="../voiceover/#CustomLabel" style="text-decoration: underline;">gestuelle spécifique <span lang="en">VoiceOver</span></a>, cette manipulation est aussi réalisable en programmation.
 
 L'idée est de pouvoir vocaliser proprement les sigles présents sur les icônes applicatives qui sont très expressifs visuellement mais textuellement incompréhensibles.
 </div>

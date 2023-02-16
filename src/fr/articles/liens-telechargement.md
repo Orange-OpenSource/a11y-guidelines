@@ -9,7 +9,7 @@ tags:
 ---
 
 
-Il existe différents types de liens : [les liens classiques](/fr/web/developper/navigation-generale) permettant d'atteindre une nouvelle page, [les liens d'évitement](/fr/articles/liens-evitement) permettant de se déplacer au sein de la page et enfin ceux qui nous intéressent dans cet article : les liens permettant de télécharger un fichier.
+Il existe différents types de liens : [les liens classiques](/fr/web/developper/navigation-generale/) permettant d'atteindre une nouvelle page, [les liens d'évitement](/fr/articles/liens-evitement/) permettant de se déplacer au sein de la page et enfin ceux qui nous intéressent dans cet article : les liens permettant de télécharger un fichier.
 
 Un lien permettant de télécharger un fichier devrait respecter les règles suivantes :
 

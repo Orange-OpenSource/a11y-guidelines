@@ -103,7 +103,7 @@ Exemple d'écran avec le tracé des contours actifs
 ## <span lang="en">Colour Contrast Analyser</span>
 
 Les contrastes de couleurs se vérifient sur les maquettes de l’application, ou via <span lang="en">Accessibility Scanner</span> sur un mobile Android. Si un doute subsiste, il est possible de faire un screenshot de l’application, puis de faire une vérification sur un ordinateur [Mesurer le niveau de contraste des couleurs](../../../../web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/) via l'outil <span lang="en">Colour Contrast Analyser</span>.
-Pour les valeurs à respecter voir la [section concernant les couleurs](../../conception#couleurs).
+Pour les valeurs à respecter voir la [section concernant les couleurs](../../conception/#couleurs).
 
 <span class="licence" lang="en">These images are licensed under a Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/" hreflang="en">openexhibits</a></span>
 

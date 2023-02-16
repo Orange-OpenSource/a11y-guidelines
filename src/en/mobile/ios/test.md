@@ -47,12 +47,12 @@ Sometimes, this mode also confirms and solves any functional problems.
 ## Functional review
 There's no need in having technical knowledge for this part but (de)activate and use iOS accessibility features.
 
-Besides the [design&nbsp;criteria](../design/) to be followed, it's crucial to be sure that the [accessibility&nbsp;options](../design#accessibility-options) activated by a user are operational in the whole application.
+Besides the [design&nbsp;criteria](../design/) to be followed, it's crucial to be sure that the [accessibility&nbsp;options](../design/#accessibility-options) activated by a user are operational in the whole application.
 
 Few important criteria to be imperatively tested are introduced hereunder:
 
 - **Screen orientation**: it's highly recommended to implement the landscape and portrait modes.
-When implemented, this [functionality](../design#screen-orientation) must be checked for each page of the application.
+When implemented, this [functionality](../design/#screen-orientation) must be checked for each page of the application.
 
 - **Reduce motion**: because visual movements may give rise to problems (nausea...) for some people, it's imperative to check the [user&nbsp;settings&nbsp;dealing&nbsp;with&nbsp;animations](../wwdc/2018/230/#motion-0848).
 
@@ -154,7 +154,7 @@ It's **highly recommended** to know the basic gestures before activating this fe
 
 Keep in mind that the visual **information** is assimilated very quickly while the screen reader **sequentially** provides this information at the speed of successive selections of elements: a **huge effort** is necessary to get a synoptic vision of the screen and really understand what's offered.
 
-To better deal with this situation, it's recommended to keep on navigating with the [curtain&nbsp;screen](../voiceover#CurtainScreen) mode that's particularly very useful for the tests of an unknown application because  no human-made memorized information from a previous browsing will be provided.
+To better deal with this situation, it's recommended to keep on navigating with the [curtain&nbsp;screen](../voiceover/#CurtainScreen) mode that's particularly very useful for the tests of an unknown application because  no human-made memorized information from a previous browsing will be provided.
 
 Besides the [design&nbsp;criteria](../design/) to be followed, **four main principles** must be kept in mind when testing:
 
@@ -229,7 +229,7 @@ The use of this section requires more or less special expertise according to wha
 <br>
 ### Colour contrast
 
-The [colour&nbsp;contrast](../design#colours) is certainly the easiest point to be checked thanks to softwares (Colour Contrast Analyzer...).
+The [colour&nbsp;contrast](../design/#colours) is certainly the easiest point to be checked thanks to softwares (Colour Contrast Analyzer...).
 
 Since Xcode 11, the Accessibility Inspector tool provides a specific [Color&nbsp;Contrast&nbsp;Calculator](../wwdc/2019/#color-contrast-0626) feature that reaches the same purpose.
 <br>It's also crucial to take into account the brightness difference (value > 125) and the colour difference (value > 500) as described in the design criteria section dealing with colours.

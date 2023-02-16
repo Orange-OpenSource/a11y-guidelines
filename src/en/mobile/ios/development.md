@@ -70,9 +70,9 @@ There are many available traits and the most commonly used are:
 
 - **accessibilityTraitLink**: useful to define a label as a “link”.
 
-- **accessibilityTraitHeader**: defines an element as a header *(see the <a href="../design#title-and-header">«&nbsp;Title&nbsp;and&nbsp;header&nbsp;»</a> section)*.
+- **accessibilityTraitHeader**: defines an element as a header *(see the <a href="../design/#title-and-header">«&nbsp;Title&nbsp;and&nbsp;header&nbsp;»</a> section)*.
 
-- **accessibilityTraitAdjustable**: defines an element as an “adjustable” element, that is to say an element that users can adjust in a continuous manner, such as a slider or a picker view (see the [VoiceOver&nbsp;user&nbsp;guide](../voiceover) with the one-finger swipe up and down).
+- **accessibilityTraitAdjustable**: defines an element as an “adjustable” element, that is to say an element that users can adjust in a continuous manner, such as a slider or a picker view (see the [VoiceOver&nbsp;user&nbsp;guide](../voiceover/) with the one-finger swipe up and down).
 
 </div>
 <div class="tab-pane" id="TraitElt-Example" role="tabpanel">
@@ -2066,7 +2066,7 @@ Since iOS7, it is possible to make the text size dynamic according to the device
  - Be careful that the containers fit their contents: using constraints is the best way to perform this task using dynamic values.
  Don't forget to include the settings for the navigation/tab/status bar and toolbar items that will be handled by the **[Large Content Viewer](../wwdc/2019/261/)**.
  
- - Don't forget to adapt the [color contrast](../design#colours) to the text size.
+ - Don't forget to adapt the [color contrast](../design/#colours) to the text size.
 
 <br>**Since iOS&nbsp;15**, it's now possible to [set limits on the minimum and maximum sizes of Dynamic Type](https://developer.apple.com/videos/play/wwdc2021/10059/?time=878)  thanks two new properties: **[minimumContentSizeCategory](https://developer.apple.com/documentation/uikit/uiview/3750924-minimumcontentsizecategory)** and **[maximumContentSizeCategory](https://developer.apple.com/documentation/uikit/uiview/3750923-maximumcontentsizecategory)**.
 However, it's necessary to keep in mind that these restrictions are recommended for specific situations that already include the size change and for which extreme sizes may worsen the user experience.
@@ -3139,7 +3139,7 @@ All accessibility <a href="https://developer.apple.com/documentation/uikit/acces
 </div>
 <div class="tab-pane" id="a11yOptions-Link" role="tabpanel">
 
-- [Accessibility&nbsp;options](./../design#accessibility-options) (the iOS conception section of this site)
+- [Accessibility&nbsp;options](./../design/#accessibility-options) (the iOS conception section of this site)
 </div>
 </div>
 <br><br>
@@ -4196,7 +4196,7 @@ class ViewController: UIViewController {
      id="appName-Description"
      role="tabpanel">
      
-The same result as the <a href="../voiceover#CustomLabel" style="text-decoration: underline;">VoiceOver gesture</a> to set a custom label can be reached by code.
+The same result as the <a href="../voiceover/#CustomLabel" style="text-decoration: underline;">VoiceOver gesture</a> to set a custom label can be reached by code.
 
 The rationale behind is to render a better vocalisation for an application name that could be very obscure according to its written abbreviation.
 </div>
