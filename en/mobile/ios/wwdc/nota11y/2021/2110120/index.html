@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Support Full Keyboard Access in your iOS app - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Explore how people can interact with their devices solely through keyboard input, working through a real-life example to discover key APIs. ">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Support Full Keyboard Access in your iOS app
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#overview" class="dropdown-item text-wrap">Overview</a><a href="#actions" class="dropdown-item text-wrap">Actions</a><a href="#focus" class="dropdown-item text-wrap">Focus</a><a href="#labels" class="dropdown-item text-wrap">Labels</a><a href="#shapes" class="dropdown-item text-wrap">Shapes</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2021: Support Full Keyboard Access in your iOS app</h1>
+<p>Find hereafter a detailed summary of the above named video which belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2021/10120/">session 10120</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10120.png" alt="" class="img-fluid"></p>
+<p>&quot;iPhone and iPad support numerous input modes for those with <strong>motor impairments</strong>, including touch interaction modification, Switch Control, and <strong>Full Keyboard Access</strong>. We'll explore how people can interact with their devices solely through <strong>keyboard input</strong>, working through a real-life example to discover key APIs. We'll also take you through some <strong>best practices for supporting motor accessibility</strong> when you integrate Full Keyboard Access in your apps.&quot;</p>
+<p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="overview">Overview <a class="header-anchor" href="#overview" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Apple has been making available a variety of <a href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=103">assistive technologies</a> for many years in order to improve the accessibility for people with <a href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=72">motor impairment</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10120-Overview_AssistiveTechnologies_1.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#AssistiveTechnologiesAssistiveTouch"
+           id="AssistiveTechnologiesAssistiveTouch_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AssistiveTechnologiesSwitchControl"
+           id="AssistiveTechnologiesSwitchControl_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AssistiveTechnologiesVoiceControl"
+           id="AssistiveTechnologiesVoiceControl_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="AssistiveTechnologiesAssistiveTouch" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the assistive touch technology." href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=111">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10120-AssistiveTechnologiesAssistiveTouch.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AssistiveTechnologiesSwitchControl" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the switch control technology." href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=126">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10120-AssistiveTechnologiesSwitchControl.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AssistiveTechnologiesVoiceControl" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the voice control technology." href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=135">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10120-AssistiveTechnologiesVoiceControl.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<p>Introduced in <strong><code>iOS</code> <code>13.4.1</code></strong>, the <strong><a href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=149">Full Keyboard Access</a></strong> technology has significantly improved the previous keyboard support supplied by <code>iOS</code> <code>9</code> through its complementarity with the other already existing assistive technologies.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10120-Overview_AssistiveTechnologies_2.png" alt="" class="img-fluid"></p>
+<p></br>A <a href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=240">demo</a> with the Full Keyboard Access enabled is highlighted so as to elaborate on the main shortcuts for using the <code>Notes</code> app as an example.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10120-Overview_Practice.png" alt="" class="img-fluid"><br>
+</br></p>
+<h2 id="actions"><a href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=406">Actions</a> <a class="header-anchor" href="#actions" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Offering actions through the keyboard relies on two different concepts for completion: the <strong>custom actions</strong> and the <strong>keyboard shortcuts</strong>.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#CustomActions"
+           id="CustomActions_tab"
+           role="tab"⟹
+           aria-selected="true">Custom&nbsp;actions</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#KeyboardShortcuts"
+           id="KeyboardShortcuts_tab"
+           role="tab" 
+           aria-selected="false">Keyboard&nbsp;Shortcuts</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="CustomActions" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=429">🎬</a></p>
+<p>One of the main assets for implementing this kind of actions is the perfect compliance with VoiceOver and Switch Control.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10120-Actions_Custom.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="KeyboardShortcuts" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment." href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=487">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc21-10120-Actions_Shortcuts_1.png" alt="" class="img-fluid"></p>
+<p>This realization is restricted to the keyboard's users only which sets aside other assistive technologies that will need a dedicated implementation to be used.</p>
+<p><img src="../../../../../images/iOSdev/wwdc21-10120-Actions_Shortcuts_2.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<p><a href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=582"><img class="img-fluid" alt="Access to the WWDC video for watching this specific moment of the talk regarding the importance of actions." src="../../../../../images/iOSdev/wwdc21-10120-Actions.png"/><br>
+</a><br>
+</br></p>
+<h2 id="focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=607">Focus</a> <a class="header-anchor" href="#focus" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>It's crucial to take care of the accessible elements that aren't introduced as is for the Full Keyboard Access (deliberately no possible interaction) while keeping a possible interaction for other assistive technologies.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10120-Focus_1.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=708"><img class="img-fluid" alt="Access to the WWDC video for watching this specific moment of the talk regarding the focus." src="../../../../../images/iOSdev/wwdc21-10120-Focus_2.png"/><br>
+</br></p>
+<h2 id="labels"><a href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=784">Labels</a> <a class="header-anchor" href="#labels" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Creating a list of words defining each element likely to be searched (keyboard, voice) is the best way to substantially improve the user experience.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10120-Labels_1.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=855"><img class="img-fluid" alt="Access to the WWDC video for watching this specific moment of the talk regarding the focus." src="../../../../../images/iOSdev/wwdc21-10120-Labels_2.png"/><br>
+</br></p>
+<h2 id="shapes"><a href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=882">Shapes</a> <a class="header-anchor" href="#shapes" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>For visual enhancement, it's better to depict the basic shapes outlines to repoduce them as accurate as possible.<br>
+<img src="../../../../../images/iOSdev/wwdc21-10120-Shapes.png" alt="" class="img-fluid"></p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2021/10120/?time=924">final result</a> of this implementation is highlighted to show up the improvement.</p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#overview" class="nav-link text-muted">Overview</a></li><li class="nav-item position-relative">
+            <a href="#actions" class="nav-link text-muted">Actions</a></li><li class="nav-item position-relative">
+            <a href="#focus" class="nav-link text-muted">Focus</a></li><li class="nav-item position-relative">
+            <a href="#labels" class="nav-link text-muted">Labels</a></li><li class="nav-item position-relative">
+            <a href="#shapes" class="nav-link text-muted">Shapes</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2021/2110120.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2023 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
