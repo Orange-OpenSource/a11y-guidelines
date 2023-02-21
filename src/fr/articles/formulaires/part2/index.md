@@ -160,11 +160,11 @@ Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur&nbsp;
       <label for="email_2" class="form-label">Email *</label>
       <input type="text" class="form-control" id="email_2" required/>
       <div id="erroremailDiv" class="alert alert-danger alert-sm d-none">
-        <span class="alert-icon"><span class="visually-hidden">Error</span></span>
+        <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
         <p id="erroremail1">Le champ email est obligatoire</p>
       </div>
       <div id="erroremailDiv2" class="alert alert-danger alert-sm d-none">
-        <span class="alert-icon"><span class="visually-hidden">Error</span></span>
+        <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
         <p id="erroremail2">Veuillez renseigner un Email valide (nomprenom@gmail.com)</p>
       </div>
     </div>
@@ -187,11 +187,11 @@ Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur&nbsp;
       </span>
     </div>
     <div id="errorpasswordDiv" class="alert alert-danger alert-sm d-none">
-        <span class="alert-icon"><span class="visually-hidden">Error</span></span>
+        <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
         <p id="errorpassword1">Le champ Mot de passe est obligatoire</p>
       </div>
       <div id="errorpasswordDiv2" class="alert alert-danger alert-sm d-none">
-        <span class="alert-icon"><span class="visually-hidden">Error</span></span>
+        <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
         <p id="errorpassword2">Veuillez renseigner un Mot de passe valide (6 caractères minimum)</p>
       </div>
     <div id="passwordHelpBlock_2" class="form-text">
@@ -201,7 +201,7 @@ Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur&nbsp;
       <label for="name_2" class="form-label">Nom *</label>
       <input type="text" class="form-control" id="name_2" required/>
       <div id="errorname" class="alert alert-danger alert-sm d-none">
-        <span class="alert-icon"><span class="visually-hidden">Error</span></span>
+        <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
         <p id="errorname1">Le champ Nom est obligatoire</p>
       </div>
     </div>
@@ -209,7 +209,7 @@ Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur&nbsp;
       <label for="firstname_2" class="form-label">Prénom *</label>
       <input type="text" class="form-control" id="firstname_2" required/>
       <div id="errorfirstname" class="alert alert-danger alert-sm d-none">
-        <span class="alert-icon"><span class="visually-hidden">Error</span></span>
+        <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
         <p id="errorfirstname1">Le champ Prénom est obligatoire</p>
       </div>
     </div>
@@ -246,7 +246,7 @@ Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur&nbsp;
     </div>
      <button id="submit" class="btn btn-primary">Soumettre</button>
      <div id="alertsucces" class="alert alert-success d-none" role="alert">
-      <span class="alert-icon"><span class="visually-hidden">Success</span></span>
+      <span class="alert-icon"><span class="visually-hidden">Succès</span></span>
       <p>La validation du formulaire est réussi.</p>
     </div>
 
@@ -288,11 +288,11 @@ Le code HTML et Javascript complet qui nous a permis de réaliser ce formulaire 
         &lt;label for="email" class="form-label"&gt;Email *&lt;/label&gt;
         &lt;input type="text" class="form-control" id="email" autocomplete="email" required/&gt;
         &lt;div id="erroremailDiv" class="alert alert-danger alert-sm d-none"&gt;
-          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Error&lt;/span&gt;&lt;/span&gt;
+          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Erreur&lt;/span&gt;&lt;/span&gt;
           &lt;p id="erroremail1"&gt;Le champ email est obligatoire&lt;/p&gt;
         &lt;/div&gt;
         &lt;div id="erroremailDiv2" class="alert alert-danger alert-sm d-none"&gt;
-          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Error&lt;/span&gt;&lt;/span&gt;
+          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Erreur&lt;/span&gt;&lt;/span&gt;
           &lt;p id="erroremail2"&gt;Veuillez renseigner un Email valide (nomprenom@gmail.com)&lt;/p&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -306,11 +306,11 @@ Le code HTML et Javascript complet qui nous a permis de réaliser ce formulaire 
         &lt;/span&gt;
       &lt;/div&gt;
       &lt;div id="errorpasswordDiv" class="alert alert-danger alert-sm d-none"&gt;
-          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Error&lt;/span&gt;&lt;/span&gt;
+          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Erreur&lt;/span&gt;&lt;/span&gt;
           &lt;p id="errorpassword1"&gt;Le champ Mot de passe est obligatoire&lt;/p&gt;
         &lt;/div&gt;
         &lt;div id="errorpasswordDiv2" class="alert alert-danger alert-sm d-none"&gt;
-          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Error&lt;/span&gt;&lt;/span&gt;
+          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Erreur&lt;/span&gt;&lt;/span&gt;
           &lt;p id="errorpassword2"&gt;Veuillez renseigner un Mot de passe valide (6 caractères minimum)&lt;/p&gt;
         &lt;/div&gt;
       &lt;div id="passwordHelpBlock" class="form-text"&gt;
@@ -320,7 +320,7 @@ Le code HTML et Javascript complet qui nous a permis de réaliser ce formulaire 
         &lt;label for="name" class="form-label"&gt;Nom *&lt;/label&gt;
         &lt;input type="text" class="form-control" id="name" autocomplete="name" required/&gt;
         &lt;div id="errorname" class="alert alert-danger alert-sm d-none"&gt;
-          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Error&lt;/span&gt;&lt;/span&gt;
+          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Erreur&lt;/span&gt;&lt;/span&gt;
           &lt;p id="errorname1"&gt;Le champ Nom est obligatoire&lt;/p&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -328,7 +328,7 @@ Le code HTML et Javascript complet qui nous a permis de réaliser ce formulaire 
         &lt;label for="firstname" class="form-label"&gt;Prénom *&lt;/label&gt;
         &lt;input type="text" class="form-control" id="firstname" autocomplete="given-name" required/&gt;
         &lt;div id="errorfirstname" class="alert alert-danger alert-sm d-none"&gt;
-          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Error&lt;/span&gt;&lt;/span&gt;
+          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Erreur&lt;/span&gt;&lt;/span&gt;
           &lt;p id="errorfirstname1"&gt;Le champ Prénom est obligatoire&lt;/p&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -365,7 +365,7 @@ Le code HTML et Javascript complet qui nous a permis de réaliser ce formulaire 
       &lt;/div&gt;
       &lt;button id="submit" class="btn btn-primary"&gt;Soumettre&lt;/button&gt;
       &lt;div id="alertsucces" class="alert alert-success d-none" role="alert"&gt;
-        &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Success&lt;/span&gt;&lt;/span&gt;
+        &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Succès&lt;/span&gt;&lt;/span&gt;
         &lt;p&gt;La validation du formulaire est réussi.&lt;/p&gt;
       &lt;/div&gt;
     &lt;/form&gt;
