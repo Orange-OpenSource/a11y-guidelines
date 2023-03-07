@@ -494,6 +494,28 @@
     "raccourcis": "2020/2010160",
     "profils": ["All","Formatting","SwiftUI"]
   },
+   {
+    "themes": "WWDC 2020",
+    "title": "Build for the iPadOS pointer",
+    "type": ["Pointer"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2020/20iPadOSPointer",
+    "profils": ["All"]
+  },
+   {
+    "themes": "WWDC 2020",
+    "title": "Design for the iPadOS pointer",
+    "type": ["Pointer"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2020/20iPadOSPointer",
+    "profils": ["All"]
+  },
   {
     "themes": "WWDC 2019",
     "title": "Building Great Shortcuts",
