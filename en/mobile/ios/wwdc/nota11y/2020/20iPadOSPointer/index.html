@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Design and build for the iPadOS pointer - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Help people who use iPad with a Magic Keyboard, mouse, trackpad or other input device get the most out of your app.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Design and build for the iPadOS pointer
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#design" class="dropdown-item text-wrap">Design</a><a href="#precision" class="dropdown-item text-wrap">Precision</a><a href="#operating-mode" class="dropdown-item text-wrap">Operating mode</a><a href="#pointer-effects" class="dropdown-item text-wrap">Pointer effects</a><a href="#tips-tricks" class="dropdown-item text-wrap">Tips &amp; tricks</a><a href="#customize-combine" class="dropdown-item text-wrap">Customize &amp; combine</a><a href="#pointer-appearance" class="dropdown-item text-wrap">Pointer appearance</a><a href="#material-shape" class="dropdown-item text-wrap">Material &amp; shape</a><a href="#custom-pointer" class="dropdown-item text-wrap">Custom pointer</a><a href="#pointer-interactions" class="dropdown-item text-wrap">Pointer interactions</a><a href="#selection" class="dropdown-item text-wrap">Selection</a><a href="#gestures" class="dropdown-item text-wrap">Gestures</a><a href="#build" class="dropdown-item text-wrap">Build</a><a href="#update-an-app" class="dropdown-item text-wrap">Update an app</a><a href="#custom-ui" class="dropdown-item text-wrap">Custom UI</a><a href="#examples" class="dropdown-item text-wrap">Examples</a><a href="#animations-transitions" class="dropdown-item text-wrap">Animations &amp; transitions</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2020: Design and build for the iPadOS pointer</h1>
+<p>Find hereafter a detailed summary of the above named video which belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original videos are available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2020/10640/">session 10640</a> and <a href="https://developer.apple.com/videos/play/wwdc2020/10093/">session 10093</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-PresentationsPoster.png" alt="" class="img-fluid"></p>
+<p>&quot;Bring the <strong>power of the pointer</strong> to your <strong>iPad app</strong>: We'll show you how Apple's design team approached designing the iPadOS pointer to complement touch input, and how you can customize and refine pointer interactions in your app to make workflows more efficient and gratifying. Discover how the pointer's adaptive precision enables people to <strong>quickly and confidently target interface elements</strong> regardless of their size. We'll also share some <strong>best practices</strong> on adapting the pointer to complement your app's unique needs including how to select <strong>pointer effects</strong> and <strong>design pointer shapes</strong>, integrate trackpad gestures, and keyboard modifiers.&quot;</p>
+<p>&quot;[...] add customizations to the pointer on iPad using <strong>pointer interaction APIs</strong>, create pointer effects for your buttons and custom views, and change the pointer shape in specific areas of your app to highlight them.&quot;</p>
+<p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="design"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/">Design</a> <a class="header-anchor" href="#design" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The main reason why the pointer was added as an iPad support in <strong><code>iOS</code> <code>13.4</code></strong> mainly relies on <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=47">ergonomics</a></strong> while combining its high precision with a <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=47">touch-based interface</a></strong>.</p>
+<h3 id="precision"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=112">Precision</a> <a class="header-anchor" href="#precision" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>When using the iPadOS pointer, the required dexterity may lead to an <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=139">unwanted action</a>...</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-17.png" alt="" class="img-fluid"><br>
+<a id="anchor-adaptivePrecision"></a><br>
+... that may be fixed through the concept of this <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=215">adaptive precision</a></strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-18.png" alt="" class="img-fluid"></p>
+<p>The rationale behind this notion is based on the <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=279">emphasis</a> of the graphic element via an underlying layout.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-19.png" alt="" class="img-fluid"></p>
+<p>Using the standard UIKit elements (including <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=310">text</a>) leads to a <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=409">transparent implementation</a> of the adaptive precision.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-20.png" alt="" class="img-fluid"></p>
+<h3 id="operating-mode"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=530">Operating mode</a> <a class="header-anchor" href="#operating-mode" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-24.png" alt="" class="img-fluid"></p>
+<p>The pointer is actually composed of two elements: a visible true pointer and an invisible <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=548">model pointer</a></strong> that handles the items hovering.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-21.png" alt="" class="img-fluid"><br>
+<a id="anchor-snapping"></a><br>
+When the true pointer is heading to an interactive element and reaches its hit area edge, the model pointer highlights the element through a dedicated animation called <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=561">snapping</a></strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-22.png" alt="" class="img-fluid"></p>
+<p>A pointer movement inside the hit area edges is indicated via a <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=579">parallax effect</a></strong> that ends up when the finger raises up from the trackpad for instance.<br>
+In this case, the true pointer automatically leads to the center of the selected element thanks to the <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=602">recentering</a></strong> control.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-23.png" alt="" class="img-fluid"></p>
+<p>Besides the <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=649">simultaneous use</a> of the pointer and touch, a connection between the pointer speed and the covered distance is generated under the name of <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=674">acceleration curve</a></strong>.<br>
+<a id="anchor-magnetism"></a><br>
+This movement efficiency is also improved by two pointer capabilities: <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=732">inertia</a></strong> and <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=768">magnetism</a></strong> that aim at easing the pointer handling through a smooth and intelligent way for finishing its path after the finger lifts the trackpad.<br>
+Note that any control that supports pointer snapping gets <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=832">magnetism for free</a>.</p>
+<h3 id="pointer-effects"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=861">Pointer effects</a> <a class="header-anchor" href="#pointer-effects" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Three pointer effects are available to bring focus to the interactive elements.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#PointerEffectHighlight"
+           id="PointerEffectHighlight_tab"
+           role="tab" 
+           aria-selected="true">Highlight</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PointerEffectLift"
+           id="PointerEffectLift_tab"
+           role="tab" 
+           aria-selected="false">Lift</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PointerEffectHover"
+           id="PointerEffectHover_tab"
+           role="tab" 
+           aria-selected="false">Hover</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="PointerEffectHighlight" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the highlight pointer effect" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=903">🎬</a></p>
+<p>Used for small controls with no background.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-25.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PointerEffectLift" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the lift pointer effect" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=940">🎬</a></p>
+<p>Used for medium sized elements with a background.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-26.png" alt="" class="img-fluid"><br>
+Besides its goal of highlighting, the <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=999">specular light</a> also shows the movement of the true pointer behind the graphic element.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-27.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PointerEffectHover" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the hover pointer effect" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1035">🎬</a></p>
+<p>Used for larger objects while displaying the true pointer in the foreground.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-28.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h4 id="tips-tricks">Tips &amp; tricks <a class="header-anchor" href="#tips-tricks" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>The main rule to be followed when implementing a pointer effect is the <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1074">Automatic Effect</a> that handles the best effect for an element according to its size and shape.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-29.png" alt="" class="img-fluid"></p>
+<p>Some quick examples are highlighted for helping the design implementation...</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#DesignExamples1"
+           id="DesignExamples1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignExamples2"
+           id="DesignExamples2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignExamples3"
+           id="DesignExamples3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignExamples4"
+           id="DesignExamples4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignExamples5"
+           id="DesignExamples5_tab"
+           role="tab" 
+           aria-selected="false">5</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="DesignExamples1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the following example" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1116">🎬</a></p>
+<p>Apply consistency between the toolbar elements.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-30-1.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignExamples2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the following example" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1167">🎬</a></p>
+<p>Combine effects in cases like the segmented control.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-30-2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignExamples3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the following example" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1200">🎬</a></p>
+<p>Adapt the area around an element for getting the most efficient activation of the pointer effect.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-30-3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignExamples4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the following example" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1240">🎬</a></p>
+<p>Avoid important gaps between elements.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-30-4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignExamples5" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the following example" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1262">🎬</a></p>
+<p>Adapt the <code>Lift</code> effect with the potential shadow of the selected element to avoid unwanted cut out.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-30-5.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<p>... with an interesting suggestion regarding the <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1225">recommended space</a> around a graphic element.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-31.png" alt="" class="img-fluid"></p>
+<h4 id="customize-combine">Customize &amp; combine <a class="header-anchor" href="#customize-combine" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>With the <code>Highlight</code> and <code>Lift</code> effects, it's crucial to <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1288">adapt the corner radius</a></strong> of the graphic elements to reach a perfect rendering.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-32.png" alt="" class="img-fluid"><br>
+Various options should be checked regarding the <code>Hover</code> effect:</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#CombineHoverWithShadow"
+           id="CombineHoverWithShadow_tab"
+           role="tab" 
+           aria-selected="true">Scale&nbsp;up&nbsp;&&nbsp;Shadow</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#CombineHoverWithTinting"
+           id="CombineHoverWithTinting_tab"
+           role="tab" 
+           aria-selected="false">Tinting</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#CombineHoverWithCustomShape"
+           id="CombineHoverWithCustomShape_tab"
+           role="tab" 
+           aria-selected="false">Pointer&nbsp;custom&nbsp;shape</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="CombineHoverWithShadow" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the hover effect with scale up and shadow" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1305">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-33.png" alt="" class="img-fluid"><br>
+It's important to notice that <strong>the shadow shouldn't be implemented without the scaling</strong>.</p>
+</div>
+<div class="tab-pane" id="CombineHoverWithTinting" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the hover effect with tinting" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1323">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-34.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="CombineHoverWithCustomShape" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the hover effect with pointer custom shape" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1344">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-35.png" alt="" class="img-fluid"><br>
+The I-beam tries to stay in the center of the element thanks to the <a href="#anchor-snapping">snapping</a> effect that acts as a magnetic attraction towards the middle of the object.</p>
+</div>
+</div>
+</br></br>
+<h3 id="pointer-appearance"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1456">Pointer appearance</a> <a class="header-anchor" href="#pointer-appearance" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<h4 id="material-shape">Material &amp; shape <a class="header-anchor" href="#material-shape" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>The <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1468">pointer material</a></strong> automatically adapts its colors for a better user experience.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-38.png" alt="" class="img-fluid"></p>
+<p>This material may join the initial <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1545">shape</a></strong> for a modification in order to catch the attention.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-36.png" alt="" class="img-fluid"></p>
+<p>The pointer shape may transform from a circle to a bunch of <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1566">rounded rectangles</a>...<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-37.png" alt="" class="img-fluid"></p>
+<p>... or morph into any <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1591">arbitrary shape</a> whose goal is to show up a different functionnality.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-39.png" alt="" class="img-fluid"></p>
+<h4 id="custom-pointer"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1653">Custom pointer</a> <a class="header-anchor" href="#custom-pointer" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-40.png" alt="" class="img-fluid"></p>
+<p>To create a custom pointer, few rules are necessary to be followed:</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#CustomPointerRules1"
+           id="CustomPointerRules1_tab"
+           role="tab" 
+           aria-selected="true">Rule&nbsp;1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#CustomPointerRules2"
+           id="CustomPointerRules2_tab"
+           role="tab" 
+           aria-selected="false">Rule&nbsp;2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#CustomPointerRules3"
+           id="CustomPointerRules3_tab"
+           role="tab" 
+           aria-selected="false">Rule&nbsp;3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#CustomPointerRules4"
+           id="CustomPointerRules4_tab"
+           role="tab" 
+           aria-selected="false">Rule&nbsp;4</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#CustomPointerRules5"
+           id="CustomPointerRules5_tab"
+           role="tab" 
+           aria-selected="false">Rule&nbsp;5</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#CustomPointerRules6"
+           id="CustomPointerRules6_tab"
+           role="tab" 
+           aria-selected="false">Rule&nbsp;6</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="CustomPointerRules1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the first rule for creating a custom pointer" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1685">🎬</a></p>
+<p>The custom shape must be <strong>simple</strong> and <strong>easy to understand</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-41.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="CustomPointerRules2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the second rule for creating a custom pointer" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1715">🎬</a></p>
+<p>Use a <strong>solid shape</strong> to define the pointer or a <strong>heavy stroke</strong> as a last resort.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-42.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="CustomPointerRules3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the third rule for creating a custom pointer" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1746">🎬</a></p>
+<p>It's recommended the custom shape size and the default size be <strong>as close as possible</strong> in order to keep a visual consistency.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-43.png" alt="" class="img-fluid"></p>
+<p>Should a greater size be inserted, the difference may be acceptable with a <strong>different stroke weight</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-44.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="CustomPointerRules4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the fourth rule for creating a custom pointer" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1792">🎬</a></p>
+<p>The <strong>shape</strong> and the <strong>functionnality</strong> of the pointer must be tightly <strong>connected</strong> so as to be as clearly understood as possible.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-45.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="CustomPointerRules5" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the fifth rule for creating a custom pointer" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1836">🎬</a></p>
+<p>In most cases, the <strong>point of interaction</strong> should be at the <strong>center</strong> of the designed shapes apart from certain special configurations for which the anchor point location could depend on the context.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-46.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="CustomPointerRules6" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the sixth rule for creating a custom pointer" href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1889">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-47.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h3 id="pointer-interactions">Pointer interactions <a class="header-anchor" href="#pointer-interactions" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<h4 id="selection"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1972">Selection</a> <a class="header-anchor" href="#selection" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Using pointers give rise to a better precision in the possible actions already available and it's highly recommended that <strong>new features not be introduced <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=2097">only for pointers</a></strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-48.png" alt="" class="img-fluid"></p>
+<p>Moreover, the <a href="#anchor-adaptivePrecision">adaptive precision</a> of the pointer enhances the <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=2109">low-precision input</a> of some larger interfaces.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-49.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=2189">Hovering</a> a certain area may also provide possible actions the user might want to execute in order to speed up interaction.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-50.png" alt="" class="img-fluid"></p>
+<h4 id="gestures"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=2270">Gestures</a> <a class="header-anchor" href="#gestures" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Customizing a <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=2279">two-finger gesture</a></strong> is an excellent way to improve the user experience but it's crucial to combine the goal and manipulation thereof with the pointer location.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-51.png" alt="" class="img-fluid"></p>
+<p>It's also essential to keep in mind the use of a <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=2375">secondary click</a></strong> that may significantly speed up the access to various functions.<br>
+</br></p>
+<h2 id="build"><a href="https://developer.apple.com/videos/play/wwdc2020/10093/">Build</a> <a class="header-anchor" href="#build" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The pointer coexistence with a touch-based interface comes up with numerous <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=119">system components</a> that have pointer support built in.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-1.png" alt="" class="img-fluid"></p>
+<p>Besides some items (<a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=144">scroll view</a>, <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=154">collection/table view</a>,...), many functions (<a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=176">drag and drop</a>, <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=186">secondary click</a>,...) are also concerned by the pointer interactions:</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#UpdateAppControls"
+           id="UpdateAppControls_tab"
+           role="tab" 
+           aria-selected="true">Controls</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UpdateAppInteractions"
+           id="UpdateAppInteractions_tab"
+           role="tab" 
+           aria-selected="false">Interactions</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UpdateAppGestures"
+           id="UpdateAppGestures_tab"
+           role="tab" 
+           aria-selected="false">Gestures</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="UpdateAppControls" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the app update via controls" href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=222">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-2.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UpdateAppInteractions" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the app update via interactions" href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=240">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UpdateAppGestures" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the app update via gestures" href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=262">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-4.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h3 id="update-an-app">Update an app <a class="header-anchor" href="#update-an-app" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>It's definitely not necessary to modify the pointer effects if they're adapted to the users needs.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-5.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=316">Native controls</a> such as <code>UIButtons</code> have a pointer that's automatically handled by the system...<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-6.png" alt="" class="img-fluid"></p>
+<p>... but, regarding the <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=341">custom views</a>, it's completely up to the developper to manage the behavior thereof.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-7.png" alt="" class="img-fluid"></p>
+<p>In this perspective, these modifications are based on the <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=410">pointer styles</a> divided into two categories: the <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=428">content effect</a></strong> and the <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=480">shape customization</a></strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-8.png" alt="" class="img-fluid"></p>
+<h3 id="custom-ui"><a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=737">Custom UI</a> <a class="header-anchor" href="#custom-ui" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>When creating one's own pointer, it's vital to define the <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=797">interaction areas</a>...<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-8a.png" alt="" class="img-fluid"></p>
+<p>... and adapt the behavior accordingly through the <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=862">delegate</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-8b.png" alt="" class="img-fluid"></p>
+<h3 id="examples">Examples <a class="header-anchor" href="#examples" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#alpha"
+           id="alpha_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#beta"
+           id="beta_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#teta"
+           id="teta_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#berta"
+           id="berta_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="alpha" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding an element size adjustement with the highlight effect" href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=548">🎬</a></p>
+<p>Adapt the right size of a shape regarding the highlight effect.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-9.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="beta" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding an incorrect diffuse blur under a button" href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=622">🎬</a></p>
+<p>Implement the appropriate visual impact with the light effect.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-10.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="teta" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the custom pointer shape" href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=917">🎬</a></p>
+<p>Change the visual illustration of the pointer.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-11.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="berta" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the control of the pointer magnetism" href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=1027">🎬</a></p>
+<p>Customize precisely the pointer behavior according to the actual user's needs.</p>
+<p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-12.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h3 id="animations-transitions"><a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=1160">Animations &amp; transitions</a> <a class="header-anchor" href="#animations-transitions" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Providing better pointer regions may lead to a finest user experience thanks to the <a href="#anchor-magnetism">magnetism</a> pointer capability.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-13.png" alt="" class="img-fluid"></p>
+<p>Moreover, a smooth interaction is also outlined via <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=1209">continuous regions</a> between interactive elements.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-14.png" alt="" class="img-fluid"></p>
+<p>Besides the continuous regions implementation previously exposed, adding <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=1264">coordinated animations</a> may be an efficient way to bring some fluidity to the navigation...<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-15.png" alt="" class="img-fluid"></p>
+<p>... supported by the <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=1292">pointer interaction API</a> that eases this realization.<br>
+<img src="../../../../../images/iOSdev/wwdc20-iOSPointer-16.png" alt="" class="img-fluid"></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#design" class="nav-link text-muted">Design</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#precision" class="nav-link text-muted">Precision</a></li><li class="nav-item position-relative">
+            <a href="#operating-mode" class="nav-link text-muted">Operating mode</a></li><li class="nav-item position-relative">
+            <a href="#pointer-effects" class="nav-link text-muted">Pointer effects</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#tips-tricks" class="nav-link text-muted">Tips &amp; tricks</a></li><li class="nav-item position-relative">
+            <a href="#customize-combine" class="nav-link text-muted">Customize &amp; combine</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#pointer-appearance" class="nav-link text-muted">Pointer appearance</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#material-shape" class="nav-link text-muted">Material &amp; shape</a></li><li class="nav-item position-relative">
+            <a href="#custom-pointer" class="nav-link text-muted">Custom pointer</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#pointer-interactions" class="nav-link text-muted">Pointer interactions</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#selection" class="nav-link text-muted">Selection</a></li><li class="nav-item position-relative">
+            <a href="#gestures" class="nav-link text-muted">Gestures</a></li></ul></li></ul></li><li class="nav-item position-relative">
+            <a href="#build" class="nav-link text-muted">Build</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#update-an-app" class="nav-link text-muted">Update an app</a></li><li class="nav-item position-relative">
+            <a href="#custom-ui" class="nav-link text-muted">Custom UI</a></li><li class="nav-item position-relative">
+            <a href="#examples" class="nav-link text-muted">Examples</a></li><li class="nav-item position-relative">
+            <a href="#animations-transitions" class="nav-link text-muted">Animations &amp; transitions</a></li></ul></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2020/20iPadOSPointer.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2023 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
