@@ -39,7 +39,7 @@ Bonne lecture de printemps !
 - Une autre comparaison d'outils a11y (en) : https://racheleditullio.com/blog/2023/01/comparing-level-access-automated-tools-to-manual-accessibility-testing/
 - Auditer par composants d'une bibliothèque (en) : https://racheleditullio.com/blog/2023/01/component-library-accessibility-audit/
 - Les phases de tests automatiques (en) : https://dev.to/steady5063/a-practical-approach-to-automated-accessibility-1h88
-- Tests de non regression en a11y (en) : https://dev.to/steady5063/automated-accessibility-part-3-regression-tests
+- Tests de non regression en a11y (en) : https://dev.to/steady5063/automated-accessibility-part-3-regression-tests-53cc
 - A-t-on besoin d'un lecteur d'écran pour les tests d'a11y (en) : https://www.digitala11y.com/do-we-need-screen-reader-for-accessibility-testing/
 - Réflexions autour du futur des tests auto en a11y (en) : https://karlgroves.com/automation-is-not-the-enemy/
 ## Points techniques en accessibilité
