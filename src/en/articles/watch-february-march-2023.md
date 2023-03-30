@@ -14,7 +14,7 @@ Funny: the EN 301549 standard (the European standard from WCAG 2.2) used in Aust
 Happy spring reading!
 
 ## Accessibility in laws and standards
-- Thoughts around SC 2.4.11 WCAG focus appearance in WCAG 2.2: https://alastairc.uk/2023/02/focus-appearance-oughts/
+- Thoughts around SC 2.4.11 WCAG focus appearance in WCAG 2.2: https://alastairc.uk/2023/02/focus-appearance-thoughts/
 - Death of SC 4.1.1 validity of the code in WCA4G 2.2: https://medium.com/eleven-ways/the-troublesome-life-and-lamentable-death-of-success-criterion-4- 1-1-ebc57ce31191
 - Legal obligations in France (fr): https://ideance.net/blog/293/loi-accessibilite-numerique-france/
 - Laws on a11y around the world (updated, March 2023): https://www.lflegal.com/2013/05/gaad-legal-2/
@@ -36,7 +36,7 @@ Happy spring reading!
 - Another tools comparison a11y: https://racheleditullio.com/blog/2023/01/comparing-level-access-automated-tools-to-manual-accessibility-testing/
 - Auditor by components of a library: https://racheleditullio.com/blog/2023/01/component-library-accessibility-audit/
 - Automated testing phases: https://dev.to/steady5063/a-practical-approach-to-automated-accessibility-1h88
-- Non regression tests in a11y: https://dev.to/steady5063/automated-accessibility-part-3-regression-tests-53clc
+- Non regression tests in a11y: https://dev.to/steady5063/automated-accessibility-part-3-regression-tests-53cc
 - Do we need a screen reader for a11y's tests: https://www.digitala11y.com/do-we-need-screen-reader-for-accessibility-testing/
 - Reflections on the future of auto testing in a11y: https://karlgroves.com/automation-is-not-the-enemy/
 ## Technical points in accessibility
