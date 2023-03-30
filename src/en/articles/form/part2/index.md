@@ -19,7 +19,7 @@ In this second part, we will make it easier for the user to enter the fields and
 
 We will continue to base our examples on our Part 1 registration form.
 
-In this example, we are using <a href="http://boosted.orange.com/">the Boosted library</a> which is the web version of our <a href="https://system.design. orange.com/">Orange Design System (ODS)</a>. This allows you to obtain forms whose design complies with the Orange charter.
+In this example, we are using <a href="http://boosted.orange.com/">the Boosted library</a> which is the web version of our <a href="https://system.design.orange.com/">Orange Design System (ODS)</a>. This allows you to obtain forms whose design complies with the Orange charter.
 
 ## Submitting a form
 
