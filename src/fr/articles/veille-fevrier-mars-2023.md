@@ -1,7 +1,7 @@
 ---
 title: "Veille #A11y Février-Mars 2023"
-abstract: "Florilège e teste ressources en #a11y, Février-Mars 2023"
-date: "2023-03-23"
+abstract: "Florilège de ressources en #a11y, Février-Mars 2023"
+date: "2023-03-31"
 tags:
   - veille
 ---
