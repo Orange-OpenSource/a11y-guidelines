@@ -7,15 +7,17 @@ tags:
 ---
 # Veille accessibilité numérique Février - March 2023
 
-En ce mois de mars, le rapport français sur la directive européenne sur l'a11y du web est là, mais que de déception : https://koena.net/rapport-de-la-france-a-la-commission-europeenne-sur-la-directive-accessibilite-web-regles-du-jeu-modifiees/. En parallèle, la transposition de l'acte européen sur l'accessibilité des produits et des services est sortie, elle aussi (https://access42.net/transposition-directive-europeenne-ue-2019-882-accessibilite-produits-services). Un énorme espoir de voir les choses s'améliorer pour les personnes en situation de handicap, mais, bon, faut voir ce qu'il en sortira (https://access42.net/impact-directive-europeenne-ue-2019-882-accessibilite-numerique, https://www.yanous.com/news/editorial/edito230303.html https://www.accessibility.org.au/policy/australian-policy/ et 
-https://acteurspublics.fr/articles/christian-volle-les-manquements-aux-obligations-daccessibilite-numerique-doivent-enfin-etre-sanctionnes)
+En ce mois de mars, le rapport français sur la directive européenne sur l'a11y du web est là, mais que de déception : https://koena.net/rapport-de-la-france-a-la-commission-europeenne-sur-la-directive-accessibilite-web-regles-du-jeu-modifiees/. En parallèle, la transposition de l'acte européen sur l'accessibilité des produits et des services est sortie, elle aussi (https://access42.net/transposition-directive-europeenne-ue-2019-882-accessibilite-produits-services). Un énorme espoir de voir les choses s'améliorer pour les personnes en situation de handicap, mais, bon, faut voir ce qu'il en sortira (https://access42.net/impact-directive-europeenne-ue-2019-882-accessibilite-numerique, https://www.yanous.com/news/editorial/edito230303.html et 
+https://acteurspublics.fr/articles/christian-volle-les-manquements-aux-obligations-daccessibilite-numerique-doivent-enfin-etre-sanctionnes). :
+
+Drôle : la norme EN 301549 (la norme européenne issue des WCAG 2.2) utilisée en Australie ((en) https://www.accessibility.org.au/policy/australian-policy/) !
 
 Bonne lecture de printemps !
 
 
 
 ## L'accessibilité dans les lois et les normes 
-- Réflexions autour du SC 2.4.11 apparence du focus des WCAG 2.2 (en) : xhttps://alastairc.uk/2023/02/focus-appearance-thoughts/
+- Réflexions autour du SC 2.4.11 apparence du focus des WCAG 2.2 (en) : https://alastairc.uk/2023/02/focus-appearance-thoughts/
 -	Mort du SC 4.1.1 validité du code dans les WCA4G 2.2 (en) : https://medium.com/eleven-ways/the-troublesome-life-and-lamentable-death-of-success-criterion-4-1-1-ebc57ce31191
 - Les obligations légales en France : https://ideance.net/blog/293/loi-accessibilite-numerique-france/
 - Les lois sur l'a11y dans le monde (mise à jour, mars 2023) (enl) : https://www.lflegal.com/2013/05/gaad-legal-2/

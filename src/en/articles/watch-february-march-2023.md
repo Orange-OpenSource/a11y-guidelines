@@ -6,12 +6,12 @@ tags:
   - veille
 ---
 # Digital accessibility watch February - March 2023
-In this month of March, the French report on the European directive on web a11y is here, but what a disappointment: (fr) https://koena.net/rapport-de-la-france-a-la-commission-europeenne-sur-la-directive-accessibilite-web-regles-du-jeu-modifiees/. In parallel, the transposition of the European act on the accessibility of products and services has also been released ((fr) https://access42.net/transposition-directive-europeenne-ue-2019-882-accessibilite-produits-services). A huge hope to see things improve for people with disabilities, but, well, we have to see what will come out of it ((fr) https://access42.net/impact-directive-europeenne-ue-2019-882-accessibilite-numerique, https://www.yanous.com/news/editorial/edito230303.html, https://www.accessibility.org.au/policy/australian-policy/ and 
+In this month of March, the French report on the European directive on web a11y is here, but what a disappointment: (fr) https://koena.net/rapport-de-la-france-a-la-commission-europeenne-sur-la-directive-accessibilite-web-regles-du-jeu-modifiees/. In parallel, the transposition of the European act on the accessibility of products and services has also been released ((fr) https://access42.net/transposition-directive-europeenne-ue-2019-882-accessibilite-produits-services). A huge hope to see things improve for people with disabilities, but, well, we have to see what will come out of it ((fr) https://access42.net/impact-directive-europeenne-ue-2019-882-accessibilite-numerique, https://www.yanous.com/news/editorial/edito230303.html and 
 https://acteurspublics.fr/articles/christian-volle-les-manquements-aux-obligations-daccessibilite-numerique-doivent-enfin-etre-sanctionnes)
 
-Happy spring reading!
+Funny: the EN 301549 standard (the European standard from WCAG 2.2) used in Australia (https://www.accessibility.org.au/policy/australian-policy/)!
 
-# Digital accessibility monitoring April-May 2022
+Happy spring reading!
 
 ## Accessibility in laws and standards
 - Thoughts around SC 2.4.11 WCAG focus appearance in WCAG 2.2: https://alastairc.uk/2023/02/focus-appearance-oughts/
