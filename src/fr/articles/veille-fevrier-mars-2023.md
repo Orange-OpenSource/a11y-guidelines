@@ -18,9 +18,9 @@ Bonne lecture de printemps !
 
 ## L'accessibilité dans les lois et les normes 
 - Réflexions autour du SC 2.4.11 apparence du focus des WCAG 2.2 (en) : https://alastairc.uk/2023/02/focus-appearance-thoughts/
--	Mort du SC 4.1.1 validité du code dans les WCA4G 2.2 (en) : https://medium.com/eleven-ways/the-troublesome-life-and-lamentable-death-of-success-criterion-4-1-1-ebc57ce31191
+-	Mort du SC 4.1.1 validité du code dans les WCAG 2.2 (en) : https://medium.com/eleven-ways/the-troublesome-life-and-lamentable-death-of-success-criterion-4-1-1-ebc57ce31191
 - Les obligations légales en France : https://ideance.net/blog/293/loi-accessibilite-numerique-france/
-- Les lois sur l'a11y dans le monde (mise à jour, mars 2023) (enl) : https://www.lflegal.com/2013/05/gaad-legal-2/
+- Les lois sur l'a11y dans le monde (mise à jour, mars 2023) (en) : https://www.lflegal.com/2013/05/gaad-legal-2/
 - WCAG 2.2 dernière avancée (en) : https://www.deque.com/blog/wcag-2-2-is-at-the-candidate-recommendation-stage/
 - Taille des zones interactives SC 2.5.5 tour d'horizon (en) : https://craftcms.com/blog/accessible-target-sizes
 - Simplement, le SC 2.4.11 expliqué, bien (en) : https://alastairc.uk/2023/02/focus-appearance-thoughts/
@@ -35,7 +35,7 @@ Bonne lecture de printemps !
 - Calcul intéressant sur le cout de l'inaccessibilité (en) : https://karlgroves.com/understanding-the-cost-of-not-being-accessible/
 - Audit a11y, oui, mais pas que... (en) : https://www.digitala11y.com/connecting-dots-of-an-accessibility-audit/
 ## Tester l’accessibilité
--	Comparaison entre outils de test a11y (en) : https://racheleditullio.com/blog/2023/01/comparing-level-access-automated-tools-to-manual-accessibility-testing/
+-	Comparaison entre outils de test a11y (en) : https://adrianroselli.com/2023/01/comparing-manual-and-free-automated-wcag-reviews.html
 - Une autre comparaison d'outils a11y (en) : https://racheleditullio.com/blog/2023/01/comparing-level-access-automated-tools-to-manual-accessibility-testing/
 - Auditer par composants d'une bibliothèque (en) : https://racheleditullio.com/blog/2023/01/component-library-accessibility-audit/
 - Les phases de tests automatiques (en) : https://dev.to/steady5063/a-practical-approach-to-automated-accessibility-1h88
@@ -63,7 +63,7 @@ Bonne lecture de printemps !
 - Prise en main de Talkback (en) : https://www.a11yproject.com/posts/getting-started-talkback/
 - Tout un site sur apps mobiles natives et web (en) : https://appt.org/en
 ## Ergonomie, UI & UX
--	7 choses& à connaitre pour les designers sur l'a11y (en) : https://medium.com/salesforce-ux/7-things-every-designer-needs-to-know-about-accessibility-64f105f0881b
+-	7 choses à connaitre pour les designers sur l'a11y (en) : https://medium.com/salesforce-ux/7-things-every-designer-needs-to-know-about-accessibility-64f105f0881b
 - Faites des design reviews de vos maquettes (en) : https://adhoc.team/2023/02/22/the-importance-of-adding-accessibility-design-reviews-to-the-design-process/
 - Annotations a11y des maquettes (en) : https://noti.st/cariefisher/Bin4xT/essential-accessibility-annotations-for-a-smoother-design-to-development-handoff#sprK2tQ
 - Bonnes pratiques UX pour les sous-titres (en) : https://www.smashingmagazine.com/2023/01/closed-captions-subtitles-ux/
@@ -71,9 +71,9 @@ Bonne lecture de printemps !
 - Des petits tips pour l'a11y, super (en) : https://bite-sized-a11y.com/
 - Créer accessible avec le design inclusif (en) : https://www.interaction-design.org/literature/article/learn-to-create-accessible-websites-with-the-principles-of-universal-design
 - Afficher le Braille dans NVDA, JAWS et VoiceOver (en) : https://adrianroselli.com/2023/01/jaws-nvda-and-voiceover-braille-viewers.html 
-- Pense-bête HTML sémantique, bien pratique (e&n) : https://webaim.org/resources/htmlcheatsheet/
+- Pense-bête HTML sémantique, bien pratique (en) : https://webaim.org/resources/htmlcheatsheet/
 - Grosse liste de ressources : https://ideance.net/fr/ressources-accessibilite-numerique/
-- Soups-titres auto, un état des lieux et des recos (en) : https://equalentry.com/automatic-captions-experiments-best-practices/
+- Sous-titres auto, un état des lieux et des recos (en) : https://equalentry.com/automatic-captions-experiments-best-practices/
 - Guide pour faire un audit d'a11y (en) : https://www.digitala11y.com/a-definitive-guide-on-how-to-perform-a-web-accessibility-audit/
 - Audits manuels a11y, le guide (en) : https://blog.pope.tech/2023/03/01/a-beginners-guide-to-manual-accessibility-testing/
 ## Autres
