@@ -15,7 +15,7 @@ Happy spring reading!
 
 ## Accessibility in laws and standards
 - Thoughts around SC 2.4.11 WCAG focus appearance in WCAG 2.2: https://alastairc.uk/2023/02/focus-appearance-thoughts/
-- Death of SC 4.1.1 validity of the code in WCA4G 2.2: https://medium.com/eleven-ways/the-troublesome-life-and-lamentable-death-of-success-criterion-4- 1-1-ebc57ce31191
+- Death of SC 4.1.1 validity of the code in WCA4G 2.2: https://medium.com/eleven-ways/the-troublesome-life-and-lamentable-death-of-success-criterion-4-1-1-ebc57ce31191
 - Legal obligations in France (fr): https://ideance.net/blog/293/loi-accessibilite-numerique-france/
 - Laws on a11y around the world (updated, March 2023): https://www.lflegal.com/2013/05/gaad-legal-2/
 - WCAG 2.2 latest advancement: https://www.deque.com/blog/wcag-2-2-is-at-the-candidate-recommendation-stage/
