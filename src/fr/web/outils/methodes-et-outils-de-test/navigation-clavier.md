@@ -57,5 +57,4 @@ Pour tester si votre service est accessible à l’aide du clavier, vous pouvez 
 
 
 **Remarque&nbsp;: sur Mac la navigation au clavier doit être activée au préalable.**  
-Dans Safari &gt; Préférences &gt; Avancées
-Cocher la case *«&nbsp;La touche TAB permet de mettre en surbrillance les objets des pages web&nbsp;»*.
+Dans Safari &gt; Préférences &gt; Avancées, cocher la case *«&nbsp;La touche TAB permet de mettre en surbrillance les objets des pages web&nbsp;»*.
