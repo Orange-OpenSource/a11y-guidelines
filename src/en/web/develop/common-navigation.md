@@ -246,6 +246,8 @@ Therefore, it is necessary to pause the animation when loading the page or to gi
 
 A carousel that automatically scrolls must be paused when the mouse is over it or when it receives the focus.  
 It is also possible to add a “pause” button directly in the interface.
+A carousel that scrolls automatically must have a mechanism that allows the scrolling to be paused, for example a "pause" button.
+The mechanism must allow the user to interact with the rest of the page, stopping or pausing via an event activated only on receive focus or hovering the mouse is not sufficient.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a href="https://www.w3.org/TR/WCAG21/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a>
