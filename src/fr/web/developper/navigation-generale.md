@@ -249,8 +249,8 @@ Il faut donc prévoir une pause au chargement de la page ou un moyen de stopper 
 **Exemple&nbsp;:**  
 ![capture d’écran d’un carrousel disposant d’un bouton pour mettre en pause l’animation](../../images/carrousel.png)  
 
-Un carrousel qui défile automatiquement doit se mettre en pause au survol de la souris ou lorsqu’il a le focus.  
-Il est également possible d’ajouter un bouton «&nbsp;pause&nbsp;» directement dans l’interface.
+Un carrousel qui défile automatiquement doit avoir un mécanisme qui permet de mettre en pause ce défilement, par exemple un bouton «&nbsp;pause&nbsp;».
+Le mécanisme doit permettre à l'utilisateur d'interagir avec le reste de la page, l'arrêt ou la mise en pause via un évenement déclenché uniquement sur la prise du focus ou le survol de la souris n'est pas suffisant.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a>
