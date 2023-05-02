@@ -45,6 +45,28 @@
   },
   {
     "themes": "WWDC 2022",
+    "title": "Design an effective chart",
+    "type": ["Charts"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/22Charts",
+    "profils": ["All","Accessibility","Dark Mode","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Design app experiences with charts",
+    "type": ["Charts"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/22Charts",
+    "profils": ["All","Accessibility","Dark Mode","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2022",
     "title": "Design App Shortcuts",
     "type": [],
     "tests": [],
@@ -89,6 +111,17 @@
   },
   {
     "themes": "WWDC 2022",
+    "title": "Hello Swift Charts",
+    "type": ["Charts"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/22Charts",
+    "profils": ["All","Accessibility","Dark Mode","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2022",
     "title": "Improve the discoverability of your Swift-DocC content",
     "type": [],
     "tests": [],
@@ -119,6 +152,17 @@
     "exception": "",
     "raccourcis": "2022/22SwiftRegex",
     "profils": ["All","Regex"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Swift Charts: Raise the bar",
+    "type": ["Charts"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/22Charts",
+    "profils": ["All","Accessibility","Dark Mode","SwiftUI","Xcode"]
   },
   {
     "themes": "WWDC 2022",

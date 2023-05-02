@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Discover the Swift Charts framework - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Discover this new flexible framework that helps you create charts entirely in SwiftUI that look and feel right at home on all Apple platforms.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Discover the Swift Charts framework
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#design" class="dropdown-item text-wrap">Design</a><a href="#when-to-use-charts" class="dropdown-item text-wrap">When to use charts?</a><a href="#how-to-use-charts" class="dropdown-item text-wrap">How to use charts?</a><a href="#what-is-an-effective-chart" class="dropdown-item text-wrap">What is an effective chart?</a><a href="#the-design-process" class="dropdown-item text-wrap">The design process</a><a href="#the-chart-design-system" class="dropdown-item text-wrap">The chart design system</a><a href="#build" class="dropdown-item text-wrap">Build</a><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#mark-properties" class="dropdown-item text-wrap">Mark properties</a><a href="#mark-combinations" class="dropdown-item text-wrap">Mark combinations</a><a href="#customizations" class="dropdown-item text-wrap">Customizations</a><a href="#accessibility" class="dropdown-item text-wrap">Accessibility</a><a href="#xcode" class="dropdown-item text-wrap">Xcode</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2022: Discover the Swift Charts framework</h1>
+<p>Find hereafter a detailed summary of four videos that belong to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original videos are available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2022/10136/">session 10136</a>, <a href="https://developer.apple.com/videos/play/wwdc2022/10137/">session 10137</a>, <a href="https://developer.apple.com/videos/play/wwdc2022/110340/">session 110340</a> and <a href="https://developer.apple.com/videos/play/wwdc2022/110342/">session 110342</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts-PresentationsPoster.png" alt="" class="img-fluid"></p>
+<p>&quot;Say hello to <strong>Swift Charts</strong> — a flexible <strong>framework</strong> that helps you create charts entirely <strong>in SwiftUI</strong> that look and feel right at home on all Apple platforms.<br>
+Discover how you can use compositional syntax to make informative, delightful, and accessible charts with less code.<br>
+We'll share the building blocks for making visualizations with Swift Charts, and explore how you can change your charts' design with a simple modifier.<br>
+We'll also take you through the <strong>latest updates to Xcode Previews</strong> to help you chart a path toward an engaging experience.&quot;</p>
+<p>&quot;Dive deep into data visualizations: Learn how <strong>Swift Charts and SwiftUI</strong> can help your apps represent complex datasets through a wide variety of chart options.<br>
+We'll show you how to plot different kinds of data and compose marks to create more elaborate charts.<br>
+We'll also take you through Swift Charts' extensive chart customization API to help you <strong>match the style of your charts</strong> to your app.&quot;</p>
+<p>&quot;Learn how to <strong>design focused, approachable, and accessible charts</strong>.<br>
+We'll show you how to design great charts with clear marks, axes, descriptions, interaction, and color and help you <strong>create useful experiences for everyone</strong>.&quot;</p>
+<p>&quot;Learn how you can <strong>enhance your app with charts</strong> to communicate data with more clarity and appeal.<br>
+We'll show you when to use charts and how they work together in a chart design system.&quot;</p>
+<p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="design"><a href="https://developer.apple.com/videos/play/wwdc2022/110342/?time=84">Design</a> <a class="header-anchor" href="#design" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_1.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="when-to-use-charts"><a href="https://developer.apple.com/videos/play/wwdc2022/110342/?time=117">When to use charts?</a> <a class="header-anchor" href="#when-to-use-charts" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_2.png" alt="" class="img-fluid"></p>
+<p>The type of chart is based on the crucial priority to <strong><a href="https://developer.apple.com/videos/play/wwdc2022/110342/?time=144">keep focus</a></strong> on the displayed information to be easily understood by the user.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_3.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="how-to-use-charts">How to use charts? <a class="header-anchor" href="#how-to-use-charts" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Some important elements must be taken into account for providing an efficient chart.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_9.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#DesignChartsDescription"
+           id="DesignChartsDescription_tab"
+           role="tab" 
+           aria-selected="true">Description</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignChartsDetails"
+           id="DesignChartsDetails_tab"
+           role="tab" 
+           aria-selected="false">Details</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignChartsComplexity"
+           id="DesignChartsComplexity_tab"
+           role="tab" 
+           aria-selected="false">Complexity</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignChartsExample"
+           id="DesignChartsExample_tab"
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="DesignChartsDescription" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the chart design through the content description" href="https://developer.apple.com/videos/play/wwdc2022/110342/?time=220">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignChartsDetails" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the chart design through the details" href="https://developer.apple.com/videos/play/wwdc2022/110342/?time=306">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_5.png" alt="" class="img-fluid"></p>
+<p>Adding <a href="https://developer.apple.com/videos/play/wwdc2022/110342/?time=358">dynamic functionalities</a> may be an interesting way of highlighting some specific information.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_6.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignChartsComplexity" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the chart design through the complexity highlighting" href="https://developer.apple.com/videos/play/wwdc2022/110342/?time=478">🎬</a></p>
+<p>When <a href="https://developer.apple.com/videos/play/wwdc2022/110342/?time=435">interactivity</a> is an integral part of a chart, the height and width thereof should be scaled in line with the user experience in order to smoothly display  the different data types.</p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_7.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignChartsExample" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the chart design through an example" href="https://developer.apple.com/videos/play/wwdc2022/110342/?time=526">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_8.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h3 id="what-is-an-effective-chart"><a href="https://developer.apple.com/videos/play/wwdc2022/110340?time=61">What is an effective chart?</a> <a class="header-anchor" href="#what-is-an-effective-chart" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_16.png" alt="" class="img-fluid"></p>
+<p>What are the <a href="https://developer.apple.com/videos/play/wwdc2022/110340?time=104">most significant insights</a> for designing an efficient chart?<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_17.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="the-design-process"><a href="https://developer.apple.com/videos/play/wwdc2022/110340?time=163">The design process</a> <a class="header-anchor" href="#the-design-process" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+ <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#DesignProcessMarks"
+           id="DesignProcessMarks_tab"
+           role="tab" 
+           aria-selected="true">Marks</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignProcessAxes"
+           id="DesignProcessAxes_tab"
+           role="tab" 
+           aria-selected="false">Axes</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignProcessDescriptions"
+           id="DesignProcessDescriptions_tab"
+           role="tab" 
+           aria-selected="false">Descriptions</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignProcessInteraction"
+           id="DesignProcessInteraction_tab"
+           role="tab" 
+           aria-selected="false">Interaction</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignProcessColor"
+           id="DesignProcessColor_tab"
+           role="tab" 
+           aria-selected="false">Color</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="DesignProcessMarks" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the chart design process through the marks" href="https://developer.apple.com/videos/play/wwdc2022/110340/?time=201">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_20.png" alt="" class="img-fluid"></p>
+<p><strong><a href="https://developer.apple.com/videos/play/wwdc2022/10136?time=170">Marks</a></strong> represent the visual elements for each item in the data.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_18.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2022/110340?time=279">Options</a> for a mark may be various but the <strong>goal of the chart</strong> will define the appropriate one.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_19.png" alt="" class="img-fluid"></p>
+<p>Regarding the <a href="https://developer.apple.com/videos/play/wwdc2022/110340?time=368">accessibility</a>, the use of a chart by <strong>impaired people</strong> is also highly possible thanks to the <strong>SwiftUI API's possibilities</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_21.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignProcessAxes" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the chart design process through the axes" href="https://developer.apple.com/videos/play/wwdc2022/110340/?time=505">🎬</a></p>
+<p><strong>Adjusting the ranges of values</strong> is definitely important according to the goal to be reached.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_22.png" alt="" class="img-fluid"></p>
+<p>It's also crucial to <a href="https://developer.apple.com/videos/play/wwdc2022/110340/?time=621">adapt the density</a> of <strong>grid lines and labels</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_23.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignProcessDescriptions" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the chart design process through the descriptions" href="https://developer.apple.com/videos/play/wwdc2022/110340/?time=734">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_24.png" alt="" class="img-fluid"></p>
+<p>As regards the accessibility, including the <a href="https://developer.apple.com/videos/play/wwdc2022/110340/?time=878"><code>Audio</code> <code>Graphs</code> <code>feature</code></a> should facilitate the use of a chart for impaired people.</p>
+</div>
+<div class="tab-pane" id="DesignProcessInteraction" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the chart design process through the interactions" href="https://developer.apple.com/videos/play/wwdc2022/110340/?time=938">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_25.png" alt="" class="img-fluid"></p>
+<p><strong>Interactions</strong> are a great opportunity to <strong>enhance the user experience</strong> through the different ways to introduce data on the same chart.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_26.png" alt="" class="img-fluid"></p>
+<p>One of the most obvious examples is the <a href="https://developer.apple.com/videos/play/wwdc2022/110340/?time=960">mark selection</a> to find out the value thereof.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_27.png" alt="" class="img-fluid"></p>
+<p>This kind of interaction must also be designed and implemented with <a href="https://developer.apple.com/videos/play/wwdc2022/110340/?time=995">all the categories of users</a> in mind.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_28.png" alt="" class="img-fluid"></p>
+<p>And looking more closely at <a href="https://developer.apple.com/videos/play/wwdc2022/110340/?time=1038">VoiceOver</a>, it's crucial to put a special attention to the <strong>labels authoring</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_29.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignProcessColor" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the chart design process through the color" href="https://developer.apple.com/videos/play/wwdc2022/110340/?time=1174">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_30.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2022/110340/?time=1210">Carrying information</a> through colors may be important, but it mustn't be the only way, quite the contrary.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_31.png" alt="" class="img-fluid"></p>
+<p>It's also essential to assist the comprehension regarding the <strong><a href="https://developer.apple.com/videos/play/wwdc2022/110340/?time=1275">meaning of the displayed colors</a></strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_32.png" alt="" class="img-fluid"></p>
+<p>Finally, <strong><a href="https://developer.apple.com/videos/play/wwdc2022/110340/?time=1306">balancing the visual height</a></strong> and <strong><a href="https://developer.apple.com/videos/play/wwdc2022/110340/?time=1371">choosing distinct colors</a></strong> are important steps to be embedded in the design...<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_33.png" alt="" class="img-fluid"></p>
+<p>... including the respect of the <strong><a href="https://developer.apple.com/videos/play/wwdc2022/110340/?time=1415">user settings</a></strong> with an express look at those regarding the accessibility.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_34.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h3 id="the-chart-design-system"><a href="https://developer.apple.com/videos/play/wwdc2022/110342/?time=604">The chart design system</a> <a class="header-anchor" href="#the-chart-design-system" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_15.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#DesignChartSystemFamiliar"
+           id="DesignChartSystemFamiliar_tab"
+           role="tab" 
+           aria-selected="true">Familiar&nbsp;forms</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignChartSystemDifferences"
+           id="DesignChartSystemDifferences_tab"
+           role="tab" 
+           aria-selected="false">Differences</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#DesignChartSystemExample"
+           id="DesignChartSystemExample_tab"
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="DesignChartSystemFamiliar" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the chart design system through the use of familiar forms" href="https://developer.apple.com/videos/play/wwdc2022/110342/?time=615">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_10.png" alt="" class="img-fluid"></p>
+<p>Designing one's forms is also possible inside a <a href="https://developer.apple.com/videos/play/wwdc2022/110342/?time=636">careful frame</a> so as to immediately assist the comprehension regarding the displayed information.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_11.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignChartSystemDifferences" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the chart design system through the importance of the differences between charts" href="https://developer.apple.com/videos/play/wwdc2022/110342/?time=673">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_13.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2022/110342/?time=692">Differences</a> between charts should be emphasized through basic manipulations that keep the user's attention to the slightest details.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_12.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="DesignChartSystemExample" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the chart design system through an example" href="https://developer.apple.com/videos/play/wwdc2022/110342/?time=768">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_14.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h2 id="build">Build <a class="header-anchor" href="#build" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="introduction">Introduction <a class="header-anchor" href="#introduction" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Some examples are explained in details to assist the comprehension of a chart creation.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#BuildExamples1"
+           id="BuildExamples1_tab"
+           role="tab" 
+           aria-selected="true">Example&nbsp;1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#BuildExamples2"
+           id="BuildExamples2_tab"
+           role="tab" 
+           aria-selected="false">Example&nbsp;2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#BuildExamples3"
+           id="BuildExamples3_tab"
+           role="tab" 
+           aria-selected="false">Example&nbsp;3</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="BuildExamples1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the first chart example" href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=199">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_54.png" alt="" class="img-fluid"></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_55.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="BuildExamples2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the second chart example" href="https://developer.apple.com/videos/play/wwdc2022/10136/?time=188">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_40.png" alt="" class="img-fluid"></p>
+<p>First step to display a <a href="https://developer.apple.com/videos/play/wwdc2022/10136?time=558">simple bar chart</a>...<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_39.png" alt="" class="img-fluid"></p>
+<p>... for which a <a href="https://developer.apple.com/videos/play/wwdc2022/10136?time=599">SwiftUI picker</a> is incorporated.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_37.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="BuildExamples3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the third chart example" href="https://developer.apple.com/videos/play/wwdc2022/10136/?time=775">🎬</a></p>
+<p>Combine the data into one multiseries line chart.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_38.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h3 id="mark-properties">Mark properties <a class="header-anchor" href="#mark-properties" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The <code>Swift</code> <code>Charts</code> framework is based on three main <a href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=621">types of data</a>...<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_43.png" alt="" class="img-fluid"></p>
+<p>... that may be <a href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=741">combined</a> with the <strong>six different mark types</strong> and the <strong>six mark properties</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_45.png" alt="" class="img-fluid"></p>
+<p>Following this rationale could lead to a <a href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=760">scale adaptation</a> and a <a href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=866">colour modification</a> for some rendered information.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_46.png" alt="" class="img-fluid"></p>
+<p>Using data within the mark properties is the basis for <a href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=672">creating a chart</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_44.png" alt="" class="img-fluid"></p>
+<p>The creation of charts through <a href="https://developer.apple.com/videos/play/wwdc2022/10136?time=871">marks and their properties</a> leads to various and diversified styles.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_36.png" alt="" class="img-fluid"></p>
+<p>These properties are easy to be adapted according to the way for displaying the information.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#MarksPropertiesBasics"
+           id="MarksPropertiesBasics_tab"
+           role="tab" 
+           aria-selected="true">Basics</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#MarksPropertiesAddSerie"
+           id="MarksPropertiesAddSerie_tab"
+           role="tab" 
+           aria-selected="false">Add&nbsp;a&nbsp;serie</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#MarksPropertiesTailor"
+           id="MarksPropertiesTailor_tab"
+           role="tab" 
+           aria-selected="false">Tailor&nbsp;the&nbsp;chart</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="MarksPropertiesBasics" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the first chart example" href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=314">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_56.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="MarksPropertiesAddSerie" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the second chart example" href="https://developer.apple.com/videos/play/wwdc2022/10136/?time=696">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_57.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="MarksPropertiesTailor" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the third chart example" href="https://developer.apple.com/videos/play/wwdc2022/10136/?time=813">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_58.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h3 id="mark-combinations">Mark combinations <a class="header-anchor" href="#mark-combinations" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_59.png" alt="" class="img-fluid"></p>
+<p>Combining marks is the appropriate way for creating more complex charts.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_60.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#MarksCombination1"
+           id="MarksPropertiesBasics_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#MarksCombination2"
+           id="MarksPropertiesAddSerie_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#MarksCombination3"
+           id="MarksPropertiesTailor_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="MarksCombination1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the first  example for creating a more complex chart" href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=483">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_61.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="MarksCombination2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the second example for creating a more complex chart" href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=523">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_62.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="MarksCombination3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the third example for creating a more complex chart" href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=560">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_63.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h3 id="customizations"><a href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=880">Customizations</a> <a class="header-anchor" href="#customizations" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_47.png" alt="" class="img-fluid"></p>
+<p>Customizations of some chart elements are possible.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_48.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#CustomizationXaxis"
+           id="CustomizationXaxis_tab"
+           role="tab" 
+           aria-selected="true">X-axis</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#CustomizationYaxis"
+           id="CustomizationYaxis_tab"
+           role="tab" 
+           aria-selected="false">Y-axis</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#CustomizationPlotArea"
+           id="CustomizationPlotArea_tab"
+           role="tab" 
+           aria-selected="false">Plot&nbsp;area</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="CustomizationXaxis" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the chart customization for the X-axis" href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=907">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_49.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="CustomizationYaxis" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the chart customization for the Y-axis" href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=1019">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_50.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="CustomizationPlotArea" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the chart customization for the plot area" href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=1092">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_51.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<p><code>Swift</code> <code>Charts</code> also encompasses a <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=1149">ChartProxy</a></strong> to access the scales and plot area of a chart.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_52.png" alt="" class="img-fluid"></p>
+<p>This new structure permits the <strong>storage of data</strong> in state and <strong>drives the chart rendering</strong> thereof through a <a href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=1180">hover or show data effects</a> that highlight its power.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_53.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="accessibility"><a href="https://developer.apple.com/videos/play/wwdc2022/10136?time=444">Accessibility</a> <a class="header-anchor" href="#accessibility" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><code>VoiceOver</code> and the <code>Audio Graphs</code> feature are also taken into account in this new framework by using various <a href="https://developer.apple.com/videos/play/wwdc2022/10137/?time=261">native elements</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_42.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="xcode">Xcode <a class="header-anchor" href="#xcode" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The data visualization in <code>Swift</code> <code>Charts</code> is highly facilitated thanks to the <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10136?time=417">new variant feature</a></strong> in Xcode.<br>
+<img src="../../../../../images/iOSdev/wwdc22-Charts_41.png" alt="" class="img-fluid"></p>
+<p><img src="../../../../../images/iOSdev/wwdc22-Charts_35.png" alt="" class="img-fluid"></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#design" class="nav-link text-muted">Design</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#when-to-use-charts" class="nav-link text-muted">When to use charts?</a></li><li class="nav-item position-relative">
+            <a href="#how-to-use-charts" class="nav-link text-muted">How to use charts?</a></li><li class="nav-item position-relative">
+            <a href="#what-is-an-effective-chart" class="nav-link text-muted">What is an effective chart?</a></li><li class="nav-item position-relative">
+            <a href="#the-design-process" class="nav-link text-muted">The design process</a></li><li class="nav-item position-relative">
+            <a href="#the-chart-design-system" class="nav-link text-muted">The chart design system</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#build" class="nav-link text-muted">Build</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#mark-properties" class="nav-link text-muted">Mark properties</a></li><li class="nav-item position-relative">
+            <a href="#mark-combinations" class="nav-link text-muted">Mark combinations</a></li><li class="nav-item position-relative">
+            <a href="#customizations" class="nav-link text-muted">Customizations</a></li><li class="nav-item position-relative">
+            <a href="#accessibility" class="nav-link text-muted">Accessibility</a></li><li class="nav-item position-relative">
+            <a href="#xcode" class="nav-link text-muted">Xcode</a></li></ul></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2022/22Charts.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2023 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
