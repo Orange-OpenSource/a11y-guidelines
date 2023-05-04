@@ -177,6 +177,17 @@
   },
   {
     "themes": "WWDC 2022",
+    "title": "Track down hangs with Xcode and on-device detection",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/2210082",
+    "profils": ["All","Debugging","Instruments","Xcode"]
+  },
+  {
+    "themes": "WWDC 2022",
     "title": "Use Xcode to develop a multiplatform app",
     "type": [],
     "tests": [],
