@@ -5,3 +5,4 @@ node_modules
 # Output directory
 _site
 
+src/fr/articles/timestamp.md
