@@ -41,7 +41,7 @@ On note aussi le passage de WCAG2.2 en Candidate  recommandation, dernière éta
 - Les composants purement CSS sont (souvent) inaccessibles (en)&nbsp;: https://adrianroselli.com/2023/03/css-only-widgets-are-inaccessible.html
 - Les alternatives d'images par l'exemple (en)&nbsp;: https://blog.pope.tech/2023/03/31/alternative-text-in-the-wild-5-alternative-text-examples/
 - Le nouveau type="search" (en)&nbsp;: https://www.scottohara.me/blog/2023/03/24/search-element.htm
-- Encore sur ce nouvel type="search" (en)&nbsp;: https://alvaromontoro.com/blog/68033/new-html-element-search
+- Encore sur ce nouveau type="search" (en)&nbsp;: https://alvaromontoro.com/blog/68033/new-html-element-search
 - Bannière de gestion des cookies et a11y (en)&nbsp;: https://www.smashingmagazine.com/2023/04/potentially-dangerous-non-accessibility-cookie-notices/
 - Pas de role=presentation/none sur des éléments focusables (en)&nbsp;: https://html5accessibility.com/stuff/2023/05/02/short-note-why-isnt-rolepresentation-none-allowed-on-focusable-elements/
 - Utiliser le mot menu avec précaution (en)&nbsp;: https://adrianroselli.com/2023/05/be-careful-using-menu.html
@@ -89,5 +89,5 @@ On note aussi le passage de WCAG2.2 en Candidate  recommandation, dernière éta
 ## Autres
 
 - Jeux pour tester vos connaissances en a11y (en)&nbsp;: https://trivia11y.com/
-- Plus besoin de tableau dans les Emails (en)&nbsp;: https://fullystacked.net/posts/modern-html-email/
+- Plus besoin de tableaux dans les Emails (en)&nbsp;: https://fullystacked.net/posts/modern-html-email/
 - Tout sur les chiffres afin de les rendre accessible, une anthologie (en)&nbsp;: https://accessiblenumbers.com/

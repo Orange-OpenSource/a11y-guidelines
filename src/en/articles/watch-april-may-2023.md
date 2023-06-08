@@ -45,7 +45,7 @@ We also note the passage of WCAG2.2 to Candidate recommendation, the last step b
 - No role=presentation/none on focusable items: https://html5accessibility.com/stuff/2023/05/02/short-note-why-isnt-rolepresentation-none-allowed-on-focusable-elements/
 - Use the word menu with care: https://adrianroselli.com/2023/05/be-careful-using-menu.html
 - Item sizes and a11y overview: https://www.smashingmagazine.com/2023/04/accessible-tap-target-sizes-rage-taps-clicks/
-- a11y's problems with nested fieldset: https://adamsilver.io/blog/the-problem-with-nested-fieldsets-and-how-to-avoid-them/
+- A11y's problems with nested fieldset: https://adamsilver.io/blog/the-problem-with-nested-fieldsets-and-how-to-avoid-them/
 - Timed modals and a11y: https://www.digitala11y.com/addressing-timeout-modals-navigating-the-nuances-for-inclusive-web-design/
 
 ## Feedback
@@ -84,7 +84,9 @@ We also note the passage of WCAG2.2 to Candidate recommendation, the last step b
 - Washington Post a11y resources: https://build.washingtonpost.com/resources/accessibility
 - Automatic transcription methods: https://www.maxability.co.in/2023/05/13/automatic-captions-an-overview/
 - Guardrails for accessible dev: https://netzartist.de/blog/guardrails-for-better-accessibility-support-in-frontend/
+
 ## Others
+
 - Games to test your a11y knowledge: https://trivia11y.com/
 - No more tables in Emails: https://fullystacked.net/posts/modern-html-email/
 - All about numbers to make them accessible, an anthology: https://accessiblenumbers.com/
