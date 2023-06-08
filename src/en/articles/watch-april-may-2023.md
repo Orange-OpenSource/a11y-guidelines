@@ -6,6 +6,7 @@ tags:
   - veille
 ---
 # Digital accessibility watch April - May 2023
+
 We start with a nice recap on European laws from a11y https://uxplanet.org/understanding-eus-digital-accessibility-rules-ac60e2914b84 because we are progressing slowly but surely... A recap on French laws (fr) https://docs.google.com/spreadsheets/d/12NcJpScAppfIfPKlOwuZzH8Zts_hZGhjdQI9i74McQw/edit#gid=0 and an example, Italy (fr)
 https://www.temesis.com/blog/italy-law-stanca/.
 Then, an important article on (finally) a clear position of the European Disability Forum (EDF) and International Association of Accessibility Professionals (IAAP) on the a11y overlays which do not make sites or apps accessible https://www.edf-feph.org/accessibility-overlays-dont-guarantee-compliance-with-european-legislation/. Especially since Adrian Roselli, a well-known a11y expert, is being sued by one of the sellers of these overlays

@@ -19,7 +19,6 @@ On note aussi le passage de WCAG2.2 en Candidate  recommandation, dernière éta
 
 - Publication officielle par le W3c de Accessible Rich Internet Applications (WAI-ARIA) 1.2 (en) <https://www.w3.org/blog/news/archives/9942>.
 
-
 ## Retours d’expérience et accessibilité
 
 - Reconsidérer nos interventions a11y suite à la dernière Webaim Million (en)&nbsp;: https://yatil.net/blog/accessibility-action
