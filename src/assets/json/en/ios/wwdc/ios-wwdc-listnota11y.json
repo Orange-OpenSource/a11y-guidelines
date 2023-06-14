@@ -8,7 +8,18 @@
     "resultat": [],
     "exception": "",
     "raccourcis": "",
-    "profils": ["All","Accessibility","Dark Mode","Debugging","DocC","Formatting","Keyboard","Instruments","Localization","Optimization","Regex","Shortcuts","Swift","Swift Playgrounds","SwiftUI","What's new in...","Xcode"]
+    "profils": ["All","Accessibility","Dark Mode","Debugging","DocC","Formatting","Instruments","Keyboard","Keynote","Localization","Optimization","Regex","Shortcuts","Swift","Swift Playgrounds","SwiftUI","What's new in...","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Keynote",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23Keynote",
+    "profils": ["All","Keynote"]
   },
   {
     "themes": "WWDC 2022",
