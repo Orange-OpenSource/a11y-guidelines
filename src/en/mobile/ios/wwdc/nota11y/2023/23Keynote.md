@@ -8,7 +8,7 @@ displayToc: true
 # WWDC 2023: Keynote
 Find hereafter a detailed summary of four videos that belong to a [taxonomy&nbsp;of&nbsp;some&nbsp;WWDC&nbsp;footages](../../).
 
-The original videoo is available on the **Apple official website** ([session&nbsp;101](https://developer.apple.com/videos/play/wwdc2023/101/)).
+The original video is available on the **Apple official website** ([session&nbsp;101](https://developer.apple.com/videos/play/wwdc2023/101/)).
 
 ![](../../../../../images/iOSdev/wwdc23-Keynote_Poster.png)
 
