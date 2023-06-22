@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Platforms State of the Union - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Learn about the latest tools, technologies, and advancements to help you create even better apps across Apple platforms.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Platforms State of the Union
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#swift" class="dropdown-item text-wrap">Swift</a><a href="#swiftui" class="dropdown-item text-wrap">SwiftUI</a><a href="#gaming" class="dropdown-item text-wrap">Gaming</a><a href="#video" class="dropdown-item text-wrap">Video</a><a href="#watchos" class="dropdown-item text-wrap">watchOS</a><a href="#accessibility" class="dropdown-item text-wrap">Accessibility</a><a href="#privacy" class="dropdown-item text-wrap">Privacy</a><a href="#app-store" class="dropdown-item text-wrap">App Store</a><a href="#xcode" class="dropdown-item text-wrap">Xcode</a><a href="#visionos" class="dropdown-item text-wrap">visionOS</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2023: Platforms State of the Union</h1>
+<p>Find hereafter a detailed summary of four videos that belong to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2023/102/">session 102</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_Poster.png" alt="" class="img-fluid"></p>
+<p>&quot;Learn about the latest tools, technologies, and advancements to help you create even better apps across Apple platforms, including the all-new visionOS.&quot;<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="swift"><a href="https://developer.apple.com/videos/play/wwdc2023/102?time=243">Swift</a> <a class="header-anchor" href="#swift" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#PSotUSwiftInteroperability"
+           id="PSotUSwiftInteroperability_tab"
+           role="tab" 
+           aria-selected="true">C++&nbsp;interoperability</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUSwiftMacros"
+           id="PSotUSwiftMacros_tab"
+           role="tab" 
+           aria-selected="false">Swift&nbsp;macros</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="PSotUSwiftInteroperability" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the swift interoperability with C++" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=488">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUSwiftMacros" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the swift macros" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=275">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_1.png" alt="" class="img-fluid"></p>
+<p>A <strong>macro</strong> is a new <strong>annotation</strong> encompassing <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=320">generated code</a> that can be easily exposed.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_2.png" alt="" class="img-fluid"></p>
+<p>This <strong>new feature</strong> is a perfect way to revise a boilerplate code into <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=378">less cumbersome</a> lines of code.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_3.png" alt="" class="img-fluid"></p>
+<p>Macros <strong>aren't only native</strong>, they <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=436">can be created</a> according to the needs as well.</p>
+</div>
+</div>
+</br>
+</br></br>
+<h2 id="swiftui"><a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=578">SwiftUI</a> <a class="header-anchor" href="#swiftui" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#PSotUSwiftUIAnimation"
+           id="PSotUSwiftUIAnimation_tab"
+           role="tab" 
+           aria-selected="true">Animation</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUSwiftUIDataFlow"
+           id="PSotUSwiftUIDataFlow_tab"
+           role="tab" 
+           aria-selected="false">Data&nbsp;flow</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUSwiftUIWidgetKit"
+           id="PSotUSwiftUIWidgetKit_tab"
+           role="tab" 
+           aria-selected="true">WidgetKit</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUSwiftUIAppIntents"
+           id="PSotUSwiftUIAppIntents_tab"
+           role="tab" 
+           aria-selected="false">App&nbsp;Intents</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUSwiftUITipKit"
+           id="PSotUSwiftUITipKit_tab"
+           role="tab" 
+           aria-selected="false">TipKit</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUSwiftUIAirDrop"
+           id="PSotUSwiftUIAirDrop_tab"
+           role="tab" 
+           aria-selected="false">AirDrop</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="PSotUSwiftUIAnimation" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the swiftui animations" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=688">🎬</a></p>
+<p>The <code>SwiftUI</code> animations can now rely on the <strong>gesture velocity</strong> and a <strong>spring-based motion</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_7.png" alt="" class="img-fluid"></p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=724"><strong>AnimationPhase</strong></a> new API has also been introduced for rendering multi-part animations.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_8.png" alt="" class="img-fluid"></p>
+<p>Finally, a complete support for <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=806"><strong>keyframing</strong></a> is now included in <code>SwiftUI</code>.</p>
+</div>
+<div class="tab-pane" id="PSotUSwiftUIDataFlow" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the swiftui data flow" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=844">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_9.png" alt="" class="img-fluid"></p>
+<p>The data management can now be done thanks to the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=953">SwiftData</a> framework</strong> based on the new macro system and that seamlessly uses the <code>Codable</code> protocol.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_10.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUSwiftUIWidgetKit" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the widgetkit framework" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=1190">🎬</a></p>
+<p>Not only does this new <code>OS</code> version allow the <strong><code>Widgets</code> rendering</strong> to become nicer in many places...<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_11.png" alt="" class="img-fluid"></p>
+<p>... but it also introduces <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=1318"><strong>interactivity</strong></a> for this type of element.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_13.png" alt="" class="img-fluid"></p>
+<p>The <strong><code>SwiftUI</code>-based architecture</strong> is the <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=1266">key</a> for providing all these new cross-platforms features.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_12.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUSwiftUIAppIntents" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the app intents framework" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=1479">🎬</a></p>
+<p>The presentation and the location of a functionality provided by an app are improved for <code>Spotlight</code>, <code>Siri</code> and <code>Shortcuts</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_14.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUSwiftUITipKit" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the tip kit framework" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=1532">🎬</a></p>
+<p>The <strong>brand new <code>TipKit</code> framework</strong> is going to be of a great help for making users find out some new features of an app.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_15.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUSwiftUIAirDrop" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the air drop framework" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=1579">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_16.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h2 id="gaming"><a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=1649">Gaming</a> <a class="header-anchor" href="#gaming" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The <strong>new <code>Game</code> <code>Porting</code> <code>Toolkit</code></strong> in macOS <code>Sonoma</code> that eases and speeds up the way to develop games relies on <strong>3 steps</strong>:</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#PSotUGaming1"
+           id="PSotUGaming1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUGaming2"
+           id="PSotUGaming2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUGaming3"
+           id="PSotUGaming3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="PSotUGaming1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the gaming first step" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=1684">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_17.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUGaming2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the gaming second step" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=1698">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_18.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUGaming3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the gaming third step" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=1725">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_19.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h2 id="video">Video <a class="header-anchor" href="#video" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#PSotUVideoCamera"
+           id="PSotUVideoCamera_tab"
+           role="tab" 
+           aria-selected="true">Camera</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUVideoConferencing"
+           id="PSotUVideoConferencing_tab"
+           role="tab" 
+           aria-selected="false">Video&nbsp;conferencing</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="PSotUVideoCamera" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the camera improvements" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=1767">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_20.png" alt="" class="img-fluid"></p>
+<p>Besides, the photos <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=1825"><strong>H</strong>igh <strong>D</strong>ynamic <strong>R</strong>ange</a> (<code>HDR</code>) has become an <strong><code>ISO</code> specification</strong> and is now available as an <strong><code>API</code></strong> for a huge <code>OS</code> variety.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_21.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUVideoConferencing" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the video conferencing improvements" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=1918">🎬</a></p>
+<p><strong>Video reactions and effects</strong> are embedded in the camera feedback through the app that can be aware of these new behaviors thanks to the code.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_22.png" alt="" class="img-fluid"></p>
+<p><strong>Screen sharing</strong> <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=1944">becomes easier</a> by means of the <code>ScreenCaptureKit</code> framework  by adding a preview of the possible multiple windows or apps to be watched.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_23.png" alt="" class="img-fluid"></p>
+<p>While the camera support has been added to <code>iPad</code>, the <strong>Continuity Camera</strong> comes in handy for <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=1984">integrating audio and video</a> of <code>tvOS</code> apps.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_24.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h2 id="watchos">watchOS <a class="header-anchor" href="#watchos" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#PSotUWatchDesign"
+           id="PSotUWatchDesign_tab"
+           role="tab" 
+           aria-selected="true">Design</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUWatchExamples"
+           id="PSotUWatchExamples_tab"
+           role="tab" 
+           aria-selected="false">Examples</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUWatchAnimations"
+           id="PSotUWatchAnimations_tab"
+           role="tab" 
+           aria-selected="false">Animations</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUWatchUIComponents"
+           id="PSotUWatchUIComponents_tab"
+           role="tab" 
+           aria-selected="false">UI&nbsp;components</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="PSotUWatchDesign" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the new watch os design" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=2080">🎬</a></p>
+<p><code>watchOS 10</code> brings a <strong>new design</strong> that will improve the user experience thanks to its  partnership with <code>SwiftUI</code> whose huge capacities are the key of these modifications.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_25.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUWatchExamples" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the examples of the new design" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=2112">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_26.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUWatchAnimations" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the animations on watch os" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=2156">🎬</a></p>
+<p>Transitions are eased with the detail view pivot and rely on a spring-based motion.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_27.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUWatchUIComponents" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the user interface components" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=2172">🎬</a></p>
+<p>All the UI major components are automatically updated with the new enhancements.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_28.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<p>In addition to these new features, <strong>widgets improvements</strong> with the new <strong><code>Custom Workout</code></strong> and <strong><code>CoreMotion</code></strong> API finally end up the <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=2327">enhancements list</a> for <code>watchOS 10</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_29.png" alt="" class="img-fluid"></p>
+<h2 id="accessibility"><a href="https://developer.apple.com/videos/play/wwdc2023/102?time=2411">Accessibility</a> <a class="header-anchor" href="#accessibility" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_30.png" alt="" class="img-fluid"></p>
+<p>Two new features have been introduced to improve the user experience regarding the accessibility area:</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#PSotUA11YFeat1"
+           id="PSotUA11YFeat1_tab"
+           role="tab" 
+           aria-selected="true">Pause&nbsp;Animated&nbsp;Images</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUA11YFeat2"
+           id="PSotUA11YFeat2_tab"
+           role="tab" 
+           aria-selected="false">Dim&nbsp;Flashing&nbsp;Lights</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="PSotUA11YFeat1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the pause animated images feature" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=2507">🎬</a></p>
+<p>A brand <strong>new environment value</strong> has been added to detect if an <strong>image</strong> is allowed to be <strong>automatically animated</strong> or must remain motionless.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_31.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUA11YFeat2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the dim flashing lights feature" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=2536">🎬</a></p>
+<p>Once again, a <strong>new environment value</strong> is introduced to <strong>limit the flashing or strobing lights</strong> in <strong>video</strong> contents.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_32.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<p>Notice that the new <code>Apple</code> <code>Vision</code> <code>Pro</code> takes into account many <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=2573">accessibility features</a> that can be implemented inside the <code>visionOS</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_33.png" alt="" class="img-fluid"><br>
+</br></p>
+<h2 id="privacy"><a href="https://developer.apple.com/videos/play/wwdc2023/102?time=2619">Privacy</a> <a class="header-anchor" href="#privacy" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#PSotUPrivacyPrompts"
+           id="PSotUPrivacyPrompts_tab"
+           role="tab" 
+           aria-selected="true">Calendar&nbsp;and&nbsp;Photos</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUPrivacyApp"
+           id="PSotUPrivacyApp_tab"
+           role="tab" 
+           aria-selected="false">App&nbsp;privacy</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUPrivacyComSafe"
+           id="PSotUPrivacyComSafe_tab"
+           role="tab" 
+           aria-selected="false">Communication&nbsp;Safety</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="PSotUPrivacyPrompts" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the app permissions" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=2650">🎬</a></p>
+<p><strong>Dedicated prompts</strong> have been created for the <code>Calendar</code> and <code>Photos</code> permissions for strengthening the privacy.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_34.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUPrivacyApp" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the app privacy" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=2702">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_35.png" alt="" class="img-fluid"></p>
+<p>The new <strong>privacy manifests</strong>, that contain all the <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=2739">privacy practices</a> regarding the third-party SDKs, will be combined by <code>Xcode</code> when distributing the app: it comes in handy for authoring labels in <code>App Store connect</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_36.png" alt="" class="img-fluid"></p>
+<p><strong>Signatures</strong> for third-party SDKs have also been introduced to know the <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=2772">origin of the code</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_37.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUPrivacyComSafe" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the communication safety" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=2810">🎬</a></p>
+<p>The <strong>Sensitive Content Analysis</strong> framework expands the <code>Communication Safety</code> feature spectrum whose main goal was to protect children in <code>Messages</code>.</p>
+<p>Images and videos that contain nudity are now identified on the entire platform with the enhancement of the <strong>Sensitive Content Warning</strong> that blurs the inappropriate content.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_38.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br></br>
+<h2 id="app-store"><a href="https://developer.apple.com/videos/play/wwdc2023/102?time=2920">App Store</a> <a class="header-anchor" href="#app-store" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>StoreKit</strong> empowers SwiftUI to provide a better <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=2959">developer experience</a> for creating an <strong>in-app purchase</strong> interface tailored as well for accessibility as for localisation.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_39.png" alt="" class="img-fluid"></p>
+<p>Finally, <strong>SKAdNetwork</strong> <code>version 5</code> will help to be aware of the <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=3088">advertising relevance</a> inside an app through mesurements.<br>
+</br></p>
+<h2 id="xcode"><a href="https://developer.apple.com/videos/play/wwdc2023/102?time=3163">Xcode</a> <a class="header-anchor" href="#xcode" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#PSotUXcodeSourceEditor"
+           id="PSotUXcodeSourceEditor_tab"
+           role="tab" 
+           aria-selected="true">Source&nbsp;editor</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUXcodePreviews"
+           id="PSotUXcodePreviews_tab"
+           role="tab" 
+           aria-selected="false">Previews</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUXcodeCommits"
+           id="PSotUXcodeCommits_tab"
+           role="tab" 
+           aria-selected="false">Commits</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUXcodeTests"
+           id="PSotUXcodeTests_tab"
+           role="tab" 
+           aria-selected="false">Tests</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUXcodeCloud"
+           id="PSotUXcodeCloud_tab"
+           role="tab" 
+           aria-selected="false">Cloud</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="PSotUXcodeSourceEditor" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the xcode source editor" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=3209">🎬</a></p>
+<p>The <strong>source editor</strong> displays powerful and adaptative completions that come in handy when coding.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_40.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUXcodePreviews" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the xcode previews" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=3258">🎬</a></p>
+<p>The new <code>Swift Macros</code> framework brings about a new syntax for the previews.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_41.png" alt="" class="img-fluid"></p>
+<p>The previews can be used easily for <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=3272">different platforms and devices</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_42.png" alt="" class="img-fluid"><br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_43.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUXcodeCommits" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the xcode commits" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=3298">🎬</a></p>
+<p>The same goal as <code>git staging</code> is included in <code>Xcode 15</code> while all the changes can be reviewed in a single view.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_44.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUXcodeTests" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the xcode tests" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=3334">🎬</a></p>
+<p>The <strong>test report</strong> has been revised for a better explanation of what needs to be done.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_45.png" alt="" class="img-fluid"></p>
+<p>A <strong>detailed view</strong> of the test activities includes a <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=3380">timeline</a> to select a specific moment in the video recording.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_46.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUXcodeCloud" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the xcode cloud" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=3475">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_47.png" alt="" class="img-fluid"></p>
+<p>Many useful <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=3576">optimizations</a> have been carried out in addition to a <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=3537"><code>TestFlight</code></a> <strong>tester notes sharing</strong> and the <strong>macOS notarization</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_48.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="visionos"><a href="https://developer.apple.com/videos/play/wwdc2023/102?time=3656">visionOS</a> <a class="header-anchor" href="#visionos" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#PSotUVisionProFundamentals"
+           id="MacBookAir_tab"
+           role="tab" 
+           aria-selected="true">Fundamentals</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUVisionProBuild"
+           id="PSotUVisionProBuild_tab"
+           role="tab" 
+           aria-selected="false">Building&nbsp;tools</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUVisionProDevTools"
+           id="PSotUVisionProDevTools_tab"
+           role="tab" 
+           aria-selected="false">Dev&nbsp;tools</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#PSotUVisionProKeys"
+           id="PSotUVisionProKeys_tab"
+           role="tab" 
+           aria-selected="false">Key&nbsp;technologies</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="PSotUVisionProFundamentals" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the vision pro fundamentals" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=3731">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_49.png" alt="" class="img-fluid"></p>
+<p>Building your <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=3855">first app</a> is as easy as a pie...<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_50.png" alt="" class="img-fluid"></p>
+<p>... with <code>SwiftUI</code>, <code>RealityKit</code> and <code>ARKit</code> as the appropriate tools to get the best of the new <code>Apple Vision Pro</code> not to mention the accessibility.</p>
+</div>
+<div class="tab-pane" id="PSotUVisionProBuild" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the use of swit u i with the apple vision pro" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=3940">🎬</a></p>
+<p><strong>Depth and 3D objects</strong> are taken into account by <code>SwiftUI</code> with the support of specific modifiers that bring about more details.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_51.png" alt="" class="img-fluid"></p>
+<p>Some <code>UI</code> improvements like <strong>ornaments</strong>, <strong>hover effects</strong> and <strong>materials</strong> are available to render <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=4062">spatial experiences</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_52.png" alt="" class="img-fluid"></p>
+<p>These spatial experiences partially rely on the connection between <code>SwiftUI</code> and <strong><a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=4131"><code>RealityKit</code></a></strong>, including the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=4192">Dynamic foveation</a></strong> technique, the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=4240">MaterialX</a></strong> open standard and the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=4278">RealityView</a></strong> (a new <code>SwiftUI</code> view).<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_53.png" alt="" class="img-fluid"></p>
+<p><strong><a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=4305">ARKit</a></strong> has also a significant impact for creating such renders through the same <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=4345">Anchor concepts</a> as on <code>iOS</code> plus the <strong>Skeletal Hand Tracking</strong> to craft custom gestures.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_54.png" alt="" class="img-fluid"></p>
+<p>Finally, <code>visionOS</code> embeds many <strong><a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=4407">accessibility</a></strong> features by using the same techniques as on the other platforms.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_55.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUVisionProDevTools" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the developer tools for the apple vision pro" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=4490">🎬</a></p>
+<p><code>Xcode</code> is definitely the keystone of the developers tools through the <strong>previews</strong> and the <strong>simulator</strong>...<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_56.png" alt="" class="img-fluid"></p>
+<p>...not to mention its <strong><a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=4607">practical debug visualization</a></strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_57.png" alt="" class="img-fluid"></p>
+<p>The <strong><a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=4647">Reality Composer Pro</a></strong> application has been introduced to prepare the 3D environment to be injected into <code>Xcode</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_58.png" alt="" class="img-fluid"></p>
+<p><code>Vision Pro</code> can also count on <strong><a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=4782"><code>TestFlight</code></a></strong> to get the users feedbacks about these new apps.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_59.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="PSotUVisionProKeys" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the key technologies for the apple vision pro" href="https://developer.apple.com/videos/play/wwdc2023/102/?time=4941">🎬</a></p>
+<p>The 3D model built par <code>visionOS</code> leads to a <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=4961">realistic sound</a> through its <strong>PHASE</strong> spatial audio engine.<br>
+<img src="../../../../../images/iOSdev/wwdc23-PSotU_60.png" alt="" class="img-fluid"></p>
+<p>Besides the <a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=5043">hover effect</a>, <code>Facetime</code> has also been included in <code>visionOS</code> with <strong><a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=5073">SharePlay</a></strong> and the brand new <strong><a href="https://developer.apple.com/videos/play/wwdc2023/102/?time=5103">Persona</a></strong> feature.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-PSotU_61.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#swift" class="nav-link text-muted">Swift</a></li><li class="nav-item position-relative">
+            <a href="#swiftui" class="nav-link text-muted">SwiftUI</a></li><li class="nav-item position-relative">
+            <a href="#gaming" class="nav-link text-muted">Gaming</a></li><li class="nav-item position-relative">
+            <a href="#video" class="nav-link text-muted">Video</a></li><li class="nav-item position-relative">
+            <a href="#watchos" class="nav-link text-muted">watchOS</a></li><li class="nav-item position-relative">
+            <a href="#accessibility" class="nav-link text-muted">Accessibility</a></li><li class="nav-item position-relative">
+            <a href="#privacy" class="nav-link text-muted">Privacy</a></li><li class="nav-item position-relative">
+            <a href="#app-store" class="nav-link text-muted">App Store</a></li><li class="nav-item position-relative">
+            <a href="#xcode" class="nav-link text-muted">Xcode</a></li><li class="nav-item position-relative">
+            <a href="#visionos" class="nav-link text-muted">visionOS</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2023/23PlatformsSotU.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2023 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>

@@ -8,18 +8,29 @@
     "resultat": [],
     "exception": "",
     "raccourcis": "",
-    "profils": ["All","Accessibility","Dark Mode","Debugging","DocC","Formatting","Instruments","Keyboard","Keynote","Localization","Optimization","Regex","Shortcuts","Swift","Swift Playgrounds","SwiftUI","What's new in...","Xcode"]
+    "profils": ["All","Accessibility","Dark Mode","Debugging","DocC","Formatting","Instruments","Keyboard","Keynote","Localization","Optimization","Platforms State...","Regex","Shortcuts","Swift","Swift Playgrounds","SwiftUI","What's new in...","Xcode"]
   },
   {
     "themes": "WWDC 2023",
     "title": "Keynote",
-    "type": [],
+    "type": ["Widget"],
     "tests": [],
     "verifier": [],
     "resultat": ["Design"],
     "exception": "",
     "raccourcis": "2023/23Keynote",
-    "profils": ["All","Keynote"]
+    "profils": ["All","Accessibility","Keyboard","Keynote"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Platforms State of the Union",
+    "type": ["Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23PlatformsSotU",
+    "profils": ["All","Accessibility","Platforms State...","Swift","SwiftUI","Xcode"]
   },
   {
     "themes": "WWDC 2022",
@@ -448,7 +459,7 @@
     "resultat": ["Design"],
     "exception": "",
     "raccourcis": "2021/21102",
-    "profils": ["All","Swift","SwiftUI","Xcode"]
+    "profils": ["All","Platforms State...","Swift","SwiftUI","Xcode"]
   },
   {
     "themes": "WWDC 2021",
