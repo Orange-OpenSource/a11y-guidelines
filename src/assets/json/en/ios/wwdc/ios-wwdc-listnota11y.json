@@ -33,6 +33,17 @@
     "profils": ["All","Accessibility","Platforms State...","Swift","SwiftUI","Xcode"]
   },
   {
+    "themes": "WWDC 2023",
+    "title": "What’s new in Xcode 15",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310165",
+    "profils": ["All","Debugging","DocC","Localization","Swift","What's new in...","Xcode"]
+  },
+  {
     "themes": "WWDC 2022",
     "title": "Adopt Variable Color in SF Symbols",
     "type": ["SF Symbol"],
