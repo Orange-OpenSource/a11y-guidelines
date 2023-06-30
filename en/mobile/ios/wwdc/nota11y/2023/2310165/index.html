@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>What’s new in Xcode 15 - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Discover the latest productivity and performance improvements in Xcode 15.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          What’s new in Xcode 15
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#editing" class="dropdown-item text-wrap">Editing</a><a href="#code-completion" class="dropdown-item text-wrap">Code completion</a><a href="#asset-catalogs" class="dropdown-item text-wrap">Asset catalogs</a><a href="#localization" class="dropdown-item text-wrap">Localization</a><a href="#documentation" class="dropdown-item text-wrap">Documentation</a><a href="#swift-macros" class="dropdown-item text-wrap">Swift macros</a><a href="#previews" class="dropdown-item text-wrap">Previews</a><a href="#navigating" class="dropdown-item text-wrap">Navigating</a><a href="#sharing" class="dropdown-item text-wrap">Sharing</a><a href="#testing" class="dropdown-item text-wrap">Testing</a><a href="#debugging" class="dropdown-item text-wrap">Debugging</a><a href="#distributing" class="dropdown-item text-wrap">Distributing</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2023: What’s new in Xcode 15</h1>
+<p>Find hereafter a detailed summary of a video that belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2023/10165/">session 10165</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10165_Poster.png" alt="" class="img-fluid"></p>
+<p>&quot;Discover the latest productivity and performance improvements in <strong>Xcode 15</strong>. Explore enhancements to <strong>code completion</strong> and Xcode <strong>Previews</strong>, learn about the <strong>test navigator</strong> and <strong>test report</strong>, and find out more about the streamlined <strong>distribution process</strong>. We'll also highlight improved navigation, source control management, and <strong>debugging</strong>.&quot;<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<p>It's now possible to <a href="https://developer.apple.com/videos/play/wwdc2023/10165?time=38">download</a> <code>Xcode</code> for all the platforms alltogether from the <code>App Store</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_1.png" alt="" class="img-fluid"></p>
+<h2 id="editing">Editing <a class="header-anchor" href="#editing" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="code-completion"><a href="https://developer.apple.com/videos/play/wwdc2023/10165?time=92">Code completion</a> <a class="header-anchor" href="#code-completion" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The suggestions indicated by the <code>Xcode</code> completion are smarter and contain <strong>improvements in their presentation</strong> based on a <strong>better outreach of the context</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_2.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="asset-catalogs"><a href="https://developer.apple.com/videos/play/wwdc2023/10165?time=235">Asset catalogs</a> <a class="header-anchor" href="#asset-catalogs" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Images and colors are described as <strong>symbols</strong> in the <code>asset catalogs</code> so as to ensure the safety type of the appropriate element.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_3.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="localization"><a href="https://developer.apple.com/videos/play/wwdc2023/10165?time=269">Localization</a> <a class="header-anchor" href="#localization" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><code>Xcode 15</code> includes a <strong>single editor</strong> for regrouping all the translations at the same place for enhancing the previous localization process that was a little bit of challenging.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_4.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="documentation"><a href="https://developer.apple.com/videos/play/wwdc2023/10165?time=327">Documentation</a> <a class="header-anchor" href="#documentation" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Besides its <strong>new styling</strong>, the <code>Xcode</code> documentation comes with a <strong>preview</strong> that displays a real-time rendering.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10165_5.png" alt="" class="img-fluid"></p>
+</br>
+<h3 id="swift-macros"><a href="https://developer.apple.com/videos/play/wwdc2023/10165?time=425">Swift macros</a> <a class="header-anchor" href="#swift-macros" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>This <strong><code>Swift</code> new feature</strong> relies on <strong>annotations</strong> used for revising a boilerplate code into less cumbersome lines of code by encompassing generated code that can be easily exposed.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_6.png" alt="" class="img-fluid"><br>
+Macros aren't only native, they <strong>can be created according to the needs</strong> as well.</p>
+</br>
+<h3 id="previews"><a href="https://developer.apple.com/videos/play/wwdc2023/10165?time=524">Previews</a> <a class="header-anchor" href="#previews" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Adding previews through the <code>Swift</code> macros leads to <strong>dedicated displays for both <code>UIKit</code> and <code>SwiftUI</code></strong> while providing a brand new <strong>widget transitions animation</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_7.png" alt="" class="img-fluid"></p>
+</br>
+<h2 id="navigating"><a href="https://developer.apple.com/videos/play/wwdc2023/10165?time=603">Navigating</a> <a class="header-anchor" href="#navigating" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The use of the new <code>Xcode 15</code> <strong>bookmarks navigator</strong> via the <code>source control navigator</code> streamlines the <strong>landmarks management</strong> and enhances the <strong>queries criteria</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_8.png" alt="" class="img-fluid"></p>
+</br>
+</br>
+<h2 id="sharing"><a href="https://developer.apple.com/videos/play/wwdc2023/10165?time=740">Sharing</a> <a class="header-anchor" href="#sharing" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The <strong>changes navigator</strong> and the <strong>commit editor</strong> got a makeover in <code>Xcode 15</code> by showing up all the modifications in a single display where changings are still possible before pushing the latest reviews.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10165_9.png" alt="" class="img-fluid"></p>
+</br>
+<h2 id="testing"><a href="https://developer.apple.com/videos/play/wwdc2023/10165?time=894">Testing</a> <a class="header-anchor" href="#testing" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-10165_10.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#Xcode15TestingReport"
+           id="Xcode15TestingReport_tab"
+           role="tab" 
+           aria-selected="true">Test&nbsp;report</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#Xcode15TestingInsights"
+           id="Xcode15TestingInsights_tab"
+           role="tab" 
+           aria-selected="false">Insights</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#Xcode15TestingList"
+           id="Xcode15TestingList_tab"
+           role="tab" 
+           aria-selected="false">Test&nbsp;list</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#Xcode15TestingDetailsView"
+           id="Xcode15TestingDetailsView_tab"
+           role="tab" 
+           aria-selected="false">Test&nbsp;details&nbsp;view</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#Xcode15TestingAutoExplorer"
+           id="Xcode15TestingAutoExplorer_tab"
+           role="tab" 
+           aria-selected="false">Automation&nbsp;explorer</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="Xcode15TestingReport" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the test reports" href="https://developer.apple.com/videos/play/wwdc2023/10165/?time=928">🎬</a></p>
+<p>The test report has been revised for a better explanation of what needs to be done.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_11.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="Xcode15TestingInsights" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the insights test" href="https://developer.apple.com/videos/play/wwdc2023/10165/?time=954">🎬</a></p>
+<p>Insights are made for highlighting the <strong>common failure patterns</strong> and the <strong>longest tests runs</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_12.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="Xcode15TestingList" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the test list" href="https://developer.apple.com/videos/play/wwdc2023/10165/?time=976">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10165_15.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="Xcode15TestingDetailsView" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the test dertails view" href="https://developer.apple.com/videos/play/wwdc2023/10165/?time=1000">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10165_13.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="Xcode15TestingAutoExplorer" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the automation explorer in the tests" href="https://developer.apple.com/videos/play/wwdc2023/10165/?time=1011">🎬</a></p>
+<p>The interactivity of this <strong>new explorer</strong> comes with a <strong>video</strong> and a <strong>timeline</strong> that provide a smooth experience for debugging the <code>UI</code> tests.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_14.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="debugging"><a href="https://developer.apple.com/videos/play/wwdc2023/10165/?time=1044">Debugging</a> <a class="header-anchor" href="#debugging" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><code>Xcode</code> includes the <strong>OSLog</strong> framework for getting <strong>logged messages programmatically</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_16.png" alt="" class="img-fluid"></p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2023/10165/?time=1072">console</a> comes also with many logging features like <strong>severity and metadata</strong> consideration including an improved <strong>filter field</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_17.png" alt="" class="img-fluid"><br>
+</br></p>
+<h2 id="distributing"><a href="https://developer.apple.com/videos/play/wwdc2023/10165?time=1118">Distributing</a> <a class="header-anchor" href="#distributing" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#Xcode15DistributingTestFlight"
+           id="Xcode15DistributingTestFlight_tab"
+           role="tab" 
+           aria-selected="true">TestFlight</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#Xcode15DistributingNotarization"
+           id="Xcode15DistributingNotarization_tab"
+           role="tab" 
+           aria-selected="false">mac&nbsp;OS&nbsp;notarization</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#Xcode15DistributingSignature"
+           id="Xcode15DistributingSignature_tab"
+           role="tab" 
+           aria-selected="false">Signature&nbsp;verification&nbsp;and&nbsp;privacy</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="Xcode15DistributingTestFlight" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding test flight" href="https://developer.apple.com/videos/play/wwdc2023/10165?time=1144">🎬</a></p>
+<p><strong>Test notes</strong> can be included right into the distributed build in order to provide specific information to the users for instance.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_18.png" alt="" class="img-fluid"></p>
+<p>To prevent from releasing an app to the customers whereas it's supposed to be available to the team only, a new <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10165/?time=1264">TestFlight internal testing</a></strong> option has been added to <code>Xcode 15</code>.</p>
+<p>Moreover, <strong>desktop notifications</strong> about the build status can be sent while distributing through <code>App Store Connect</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10165_21.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="Xcode15DistributingNotarization" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the mac os notarization" href="https://developer.apple.com/videos/play/wwdc2023/10165/?time=1158">🎬</a></p>
+<p><strong>Mac apps</strong> are automatically scanned for malicious components thanks to the <strong>Apple notary service</strong> through <code>Xcode Cloud</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_19.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="Xcode15DistributingSignature" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the test list" href="https://developer.apple.com/videos/play/wwdc2023/10165/?time=1185">🎬</a></p>
+<p>Xcode contains <strong>signature verification</strong> for <code>XCFrameworks</code> and a <strong>privacy manifest</strong> for the frameworks.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_20.png" alt="" class="img-fluid"></p>
+<p>A <a href="https://developer.apple.com/videos/play/wwdc2023/10165/?time=1229">detailed report</a> gathering all the manifests that describe the ways sensitive data are used and protected can also be generated.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10165_22.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#editing" class="nav-link text-muted">Editing</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#code-completion" class="nav-link text-muted">Code completion</a></li><li class="nav-item position-relative">
+            <a href="#asset-catalogs" class="nav-link text-muted">Asset catalogs</a></li><li class="nav-item position-relative">
+            <a href="#localization" class="nav-link text-muted">Localization</a></li><li class="nav-item position-relative">
+            <a href="#documentation" class="nav-link text-muted">Documentation</a></li><li class="nav-item position-relative">
+            <a href="#swift-macros" class="nav-link text-muted">Swift macros</a></li><li class="nav-item position-relative">
+            <a href="#previews" class="nav-link text-muted">Previews</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#navigating" class="nav-link text-muted">Navigating</a></li><li class="nav-item position-relative">
+            <a href="#sharing" class="nav-link text-muted">Sharing</a></li><li class="nav-item position-relative">
+            <a href="#testing" class="nav-link text-muted">Testing</a></li><li class="nav-item position-relative">
+            <a href="#debugging" class="nav-link text-muted">Debugging</a></li><li class="nav-item position-relative">
+            <a href="#distributing" class="nav-link text-muted">Distributing</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2023/2310165.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2023 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
