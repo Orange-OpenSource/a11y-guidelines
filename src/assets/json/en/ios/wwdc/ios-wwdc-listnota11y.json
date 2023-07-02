@@ -34,6 +34,17 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "What’s new in SF Symbols 5",
+    "type": ["SF Symbol"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/2310197",
+    "profils": ["All","What's new in..."]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "What’s new in UIKit",
     "type": ["Activity Indicator","Menu","ScrollView","SF Symbol"],
     "tests": [],
