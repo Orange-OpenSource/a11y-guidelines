@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>What’s new in UIKit - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Explore enhancements and updates to UIKit and learn how to build better iOS, iPadOS, and Mac Catalyst apps.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          What’s new in UIKit
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#key-features" class="dropdown-item text-wrap">Key features</a><a href="#xcode-previews" class="dropdown-item text-wrap">Xcode previews</a><a href="#view-controller-lifecycle" class="dropdown-item text-wrap">View controller lifecycle</a><a href="#trait-system" class="dropdown-item text-wrap">Trait system</a><a href="#animated-symbol-images" class="dropdown-item text-wrap">Animated symbol images</a><a href="#empty-states" class="dropdown-item text-wrap">Empty states</a><a href="#internationalization" class="dropdown-item text-wrap">Internationalization</a><a href="#ipados" class="dropdown-item text-wrap">iPadOS</a><a href="#general-enhancements" class="dropdown-item text-wrap">General enhancements</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2023: What’s new in UIKit</h1>
+<p>Find hereafter a detailed summary of a video that belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2023/10055/">session 10055</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_Poster.png" alt="" class="img-fluid"></p>
+<p>&quot;Explore <strong>enhancements and updates to UIKit</strong> and learn how to build better <strong>iOS</strong>, <strong>iPadOS</strong>, and <strong>Mac Catalyst</strong> apps. We'll show you the latest features and improvements in UIKit and share API refinements, performance improvements, and much more.&quot;<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="key-features"><a href="https://developer.apple.com/videos/play/wwdc2023/10055?time=51">Key features</a> <a class="header-anchor" href="#key-features" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="xcode-previews"><a href="https://developer.apple.com/videos/play/wwdc2023/10055?time=86">Xcode previews</a> <a class="header-anchor" href="#xcode-previews" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>A dedicated <strong><code>Swift</code> macro</strong> empowers the <code>Xcode</code> previews for rendering as well a <strong>view controller</strong> as a <strong>single view</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10055_1.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="view-controller-lifecycle"><a href="https://developer.apple.com/videos/play/wwdc2023/10055?time=127">View controller lifecycle</a> <a class="header-anchor" href="#view-controller-lifecycle" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>A new view controller callback appears with <code>iOS 17</code>...<br>
+<img src="../../../../../images/iOSdev/wwdc23-10055_2.png" alt="" class="img-fluid"></p>
+<p>... and is <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10055?time=288">only called once</a></strong> during the appearance transition.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10055_3.png" alt="" class="img-fluid"></p>
+</br>
+<h3 id="trait-system"><a href="https://developer.apple.com/videos/play/wwdc2023/10055?time=310">Trait system</a> <a class="header-anchor" href="#trait-system" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_4.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="animated-symbol-images"><a href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=386">Animated symbol images</a> <a class="header-anchor" href="#animated-symbol-images" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_5.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="empty-states"><a href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=469">Empty states</a> <a class="header-anchor" href="#empty-states" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><code>iOS 17</code> has introduced a new <strong>content configuration</strong> for a content-unavailable view.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#UIKitEmptyStates1"
+           id="UIKitEmptyStates1_tab"
+           role="tab" 
+           aria-selected="true">Definition</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UIKitEmptyStates2"
+           id="UIKitEmptyStates2_tab"
+           role="tab" 
+           aria-selected="false">Example</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UIKitEmptyStates3"
+           id="UIKitEmptyStates3_tab"
+           role="tab" 
+           aria-selected="false">Update</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="UIKitEmptyStates1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the content configuration definition" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=497">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_6.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UIKitEmptyStates2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the examples of the loading configuration" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=523">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_7.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UIKitEmptyStates3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the best place for upadating a content configuration" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=548">🎬</a></p>
+<p>A <strong>new method</strong> has been introduced for <strong>updating</strong> the view controller's content unavailable configuration.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10055_8.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="internationalization"><a href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=599">Internationalization</a> <a class="header-anchor" href="#internationalization" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Many improvements have been made for internationalization in <code>iOS 17</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10055_10.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#UIKiti18n1"
+           id="UIKiti18n1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UIKiti18n2"
+           id="UIKiti18n2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UIKiti18n3"
+           id="UIKiti18n3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="UIKiti18n1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the dynamic line-height adjustment feature" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=632">🎬</a></p>
+<p>A new <code>iOS 17</code> feature called <strong>dynamic line-height adjustment</strong> ensures optimal <strong>text readibility</strong> in many languages by preventing potential collisions or clipping situations.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_9.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UIKiti18n2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the wrapping and hyphenation" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=703">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc23-10055_11.png" alt="" class="img-fluid"></p>
+<p>To tailor both line-height and hyphenation rules for a specific language, a new <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=735">typesettingLanguage</a></strong> property has been defined.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_12.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UIKiti18n3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the best place for upadating a content configuration" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=758">🎬</a></p>
+<p>Specific images variants can be retrieved through the <code>Locale</code> value in an image's configuration.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_13.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="ipados"><a href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=809">iPadOS</a> <a class="header-anchor" href="#ipados" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_14.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#UIKitiPad1"
+           id="UIKitiPad1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UIKitiPad2"
+           id="UIKitiPad2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UIKitiPad3"
+           id="UIKitiPad3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UIKitiPad4"
+           id="UIKitiPad4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UIKitiPad5"
+           id="UIKitiPad5_tab"
+           role="tab" 
+           aria-selected="false">5</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="UIKitiPad1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the window dragging interaction" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=837">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_15.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UIKitiPad2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding sidebar behavior in stage manager" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=887">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_16.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UIKitiPad3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the keyboard scrolling" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1174">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_17.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UIKitiPad4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the improved document support" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=964">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_18.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UIKitiPad5" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the apple pencil" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1017">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_19.png" alt="" class="img-fluid"></p>
+<p><code>iOS 17</code> brings <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1090">new inks</a></strong> with <code>PencilKit</code> whose <a href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1119">backward compatibility</a> must be taken into account to ensure the best possible user experience.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_20.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="general-enhancements"><a href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1202">General enhancements</a> <a class="header-anchor" href="#general-enhancements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_21.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#UIKitEnhancements1"
+           id="UIKitEnhancements1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UIKitEnhancements2"
+           id="UIKitEnhancements2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UIKitEnhancements3"
+           id="UIKitEnhancements3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UIKitEnhancements4"
+           id="UIKitEnhancements4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UIKitEnhancements5"
+           id="UIKitEnhancements5_tab"
+           role="tab" 
+           aria-selected="false">5</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UIKitEnhancements6"
+           id="UIKitEnhancements6_tab"
+           role="tab" 
+           aria-selected="false">6</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UIKitEnhancements7"
+           id="UIKitEnhancements7_tab"
+           role="tab" 
+           aria-selected="false">7</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#UIKitEnhancements8"
+           id="UIKitEnhancements8_tab"
+           role="tab" 
+           aria-selected="false">8</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="UIKitEnhancements1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the collection view improvements" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1223">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc23-10055_22.png" alt="" class="img-fluid"></p>
+<p>Regarding the <strong>self-sizing items</strong>, there's a <a href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1292">new feature</a> in <code>Compositional Layout</code> that's relied on a size based on the the largest item's.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_23.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UIKitEnhancements2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the spring animation parameters" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1383">🎬</a></p>
+<p>A new method for <code>UIView</code> has been defined for implementing the <strong>spring animations</strong> including two <strong>optional</strong> parameters.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_24.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UIKitEnhancements3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the text interactions" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1443">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_25.png" alt="" class="img-fluid"></p>
+<p><strong>Text item actions and menus</strong> have also been <a href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1473">enhanced</a> with <code>iOS 17</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_26.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UIKitEnhancements4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the status bar" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1512">🎬</a></p>
+<p>The <strong>contrast of the status bar</strong> is maintained thanks to the continuous adjustement of its style between dark and light modes.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_27.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UIKitEnhancements5" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the drag and drop feature" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1578">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_28.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UIKitEnhancements6" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the iso hdr image support" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1620">🎬</a></p>
+<p>In <code>iOS 17</code>, <strong>ISO HDR images</strong> are supported by <code>UIKit</code> with the aim of being used by <code>UIImageView</code> and potentially customized by <code>UIGraphicsImageRenderer</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_29.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UIKitEnhancements7" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the page control" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1656">🎬</a></p>
+<p>A new <strong>progress and timer progress API</strong> is available to show up pages with a specific duration.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_30.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="UIKitEnhancements8" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the palette menus" href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1723">🎬</a></p>
+<p><code>iOS 17</code> and <code>iPadOS 17</code> make the <code>Palette menu</code> available in <code>UIKit</code> while also usable with <a href="https://developer.apple.com/videos/play/wwdc2023/10055/?time=1819"><code>tvOS 17</code></a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10055_31.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#key-features" class="nav-link text-muted">Key features</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#xcode-previews" class="nav-link text-muted">Xcode previews</a></li><li class="nav-item position-relative">
+            <a href="#view-controller-lifecycle" class="nav-link text-muted">View controller lifecycle</a></li><li class="nav-item position-relative">
+            <a href="#trait-system" class="nav-link text-muted">Trait system</a></li><li class="nav-item position-relative">
+            <a href="#animated-symbol-images" class="nav-link text-muted">Animated symbol images</a></li><li class="nav-item position-relative">
+            <a href="#empty-states" class="nav-link text-muted">Empty states</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#internationalization" class="nav-link text-muted">Internationalization</a></li><li class="nav-item position-relative">
+            <a href="#ipados" class="nav-link text-muted">iPadOS</a></li><li class="nav-item position-relative">
+            <a href="#general-enhancements" class="nav-link text-muted">General enhancements</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2023/2310055.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2023 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
