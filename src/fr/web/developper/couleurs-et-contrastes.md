@@ -30,15 +30,15 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 
 - S'assurer que le contraste entre la couleur du fond et celle du texte et également pour du texte sous forme d’image porteur d’information, est :
   - De 4.5:1 minimum pour une taille inférieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras
-  - De 3:1 minimum suffit pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras
+  - De 3:1 minimum pour une taille est supérieure à 24px <abbr>CSS</abbr> et 19px <abbr>CSS</abbr> en gras
 - Cas particulier des liens non soulignés&nbsp;: 
   - Ces liens doivent avoir un rapport de contraste de 3:1 avec le texte qui les entoure
   - Ces liens doivent avoir un autre moyen que la couleur permettant de les distinguer au focus clavier ou au survol souris 
-- S'assurer que Les objets graphiques porteurs d'information non-textuelle, les composants d’interface utilisateur et les états de l'interface (focus, hover...) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… 
+- S'assurer que es objets graphiques porteurs d'information non-textuelle, les composants d’interface utilisateur et les états de l'interface (focus, hover...) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… 
 
-On n’est pas tenus d’appliquer ce critère&nbsp;:
+Nous ne sommes pas tenus d'appliquer ce critère&nbsp;:
   -	Si le composant graphique ne peut pas être représenté autrement&nbsp;: drapeau, logotype, photos réelles, captures d'écran, diagrammes d'informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)
-  -	Si un texte, comme un label, un tableau de donnée…, apporte la même information que l’icône ou le graphique.
+  -	Si un texte, comme un label, un tableau de données…, apporte la même information que l’icône ou le graphique.
   -	Si le manque de contraste de l’image n'empêche pas la compréhension du contenu ou d'identifier la fonction 
   - Si un composant d'interface est inactif et donc peut être ignoré par l’utilisateur sans réelle perte d'information.
 - **Attention &nbsp;:** pour des applications principalement utilisées en web mobile ou en mobilité, le niveau de contraste des principaux éléments doit être de 7:1 afin d’assurer une bonne lisibilité pour tous
