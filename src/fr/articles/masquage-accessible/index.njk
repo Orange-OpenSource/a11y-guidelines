@@ -60,7 +60,7 @@ tags:
 <p>Cet attribut permet de masquer un élément (ou un groupe d’éléments) pour les lecteurs d’écran. Celui-ci n’a en revanche aucun effet sur l’affichage à l’écran.</p>
 
 <h3>Mise en œuvre</h3>
-<p>Pour masquer un élément (et ses enfants) aux lecteurs d’écran (ainsi que les éléments enfants), il suffit d’ajouter un attribut <code>aria-hidden="true"</code>. Le contenu peut être toujours rend accessible aux AT via <code>aria-describedby</code> ou <code>aria-labelledby</code>.</p>
+<p>Pour masquer un élément (et ses enfants) aux lecteurs d’écran (ainsi que les éléments enfants), il suffit d’ajouter un attribut <code>aria-hidden="true"</code>. Le contenu peut être toujours rendu accessible aux AT via <code>aria-describedby</code> ou <code>aria-labelledby</code>.</p>
 <h4>Attention</h4>
 <p>Si on met un élément focusable dans du contenu (même sur un noeud parent) possédant un `aria-hidden="true"`, il sera présent à la navigation clavier mais sera vide pour les <abbr>AT</abbr>. <em>Donc, à ne pas faire.</em></p>
 
@@ -68,7 +68,7 @@ tags:
 La capture d’écran suivante montre un lecteur vidéo contenant un certain nombre de boutons (chaîne précédente, chaîne suivante, pause…). Ce lecteur est entouré par deux boutons permettant également d’accéder aux chaînes précédentes et suivantes.</p>
 <p>Visuellement cela ne pose pas de problème. En revanche, lorsqu’on écoute la page avec un lecteur d’écran, on peut trouver curieux d’entendre un bouton vocalisé «&nbsp;Animaux&nbsp;» au début de la page, puis à la fin de la page un bouton vocalisé «&nbsp;Chasse et pêche&nbsp;».</p>
 
-<p><img src="../../images/exemples/masquage/player.png" alt="capture d’écran présentant un lecteur vidéo"></p>
+<p><img src="../images/player.png" alt="capture d’écran présentant un lecteur vidéo"></p>
 
 <p>Pour éviter de perturber l’utilisateur inutilement, le plus simple est de masquer ces deux boutons (pour les lecteurs d’écran) à l’aide d’un attribut <code>aria-hidden</code>.</p>
 
