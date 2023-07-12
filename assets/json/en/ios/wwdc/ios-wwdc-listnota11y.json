@@ -45,6 +45,17 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "What’s new in SwiftUI",
+    "type": ["Button","Charts","Menu","Scene","ScrollView","SF Symbol","Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/2310148",
+    "profils": ["All","Accessibility","Keyboard","SwiftUI","What's new in...","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "What’s new in UIKit",
     "type": ["Activity Indicator","Menu","ScrollView","SF Symbol"],
     "tests": [],

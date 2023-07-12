@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>What’s new in SwiftUI - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Learn how you can use SwiftUI to build great apps for all Apple platforms.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <div class="navbar navbar-dark bg-dark navbar-expand supra d-none d-md-block d-print-block">
+    <div class="container-lg">
+      <nav role="navigation" aria-label="Skip links">
+  <ul class="navbar-nav"><li class="nav-item">
+        <a href="#main-menu" class="nav-link">Go to menu</a>
+      </li><li class="nav-item">
+        <a href="#main-content" class="nav-link">Go to content</a>
+      </li><li class="nav-item hidden-if-no-js">
+        <a href="#search-input" class="nav-link">Go to search</a>
+      </li><li class="nav-item">
+        <a href="#footer" class="nav-link">Go to footer</a>
+      </li></ul>
+</nav>
+
+      <nav role="navigation" aria-label="Switch language">
+  <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</nav>
+    </div>
+  </div>
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          What’s new in SwiftUI
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#scope" class="dropdown-item text-wrap">Scope</a><a href="#scenes" class="dropdown-item text-wrap">Scenes</a><a href="#watch0s-10" class="dropdown-item text-wrap">watch0S 10</a><a href="#widgets" class="dropdown-item text-wrap">Widgets</a><a href="#extensions" class="dropdown-item text-wrap">Extensions</a><a href="#data-flow" class="dropdown-item text-wrap">Data flow</a><a href="#observable" class="dropdown-item text-wrap">@Observable</a><a href="#swiftdata" class="dropdown-item text-wrap">SwiftData</a><a href="#enhancements" class="dropdown-item text-wrap">Enhancements</a><a href="#animations" class="dropdown-item text-wrap">Animations</a><a href="#interactions" class="dropdown-item text-wrap">Interactions</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2023: What’s new in SwiftUI</h1>
+<p>Find hereafter a detailed summary of a video that belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2023/10148/">session 10148</a>).<br>
+<img src="../../../../../images/iOSdev/wwdc23-10148_Poster.png" alt="" class="img-fluid"><br>
+&quot;Learn how you can use <strong>SwiftUI</strong> to build great apps for all Apple platforms. Explore the <strong>latest updates</strong> to SwiftUI and discover new scene types <strong>for visionOS</strong>. Simplify your <strong>data models</strong> with the latest data flow options and learn about the Inspector view. We'll also take you through <strong>enhanced animation APIs</strong>, powerful ScrollView improvements, and a host of refinements to help you make tidier tables, improve focus and keyboard input, and so much more.&quot;<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="scope"><a href="https://developer.apple.com/videos/play/wwdc2023/10148?time=64">Scope</a> <a class="header-anchor" href="#scope" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_1.png" alt="" class="img-fluid"></p>
+<h3 id="scenes"><a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=115">Scenes</a> <a class="header-anchor" href="#scenes" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_2.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIScopeScenes1"
+           id="WNiSwiftUIScopeScenes1_tab"
+           role="tab" 
+           aria-selected="true">2D</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIScopeScenes2"
+           id="WNiSwiftUIScopeScenes2_tab"
+           role="tab" 
+           aria-selected="false">3D</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIScopeScenes3"
+           id="WNiSwiftUIScopeScenes3_tab"
+           role="tab" 
+           aria-selected="false">ImmersiveSpace</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="WNiSwiftUIScopeScenes1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the 2d scene" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=121">🎬</a></p>
+<p>The common <code>SwiftUI</code> containers render a <strong>2D window</strong> by using the native controls.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10148_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIScopeScenes2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the 3d scene" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=150">🎬</a></p>
+<p><strong>Volumetric style</strong> can also be applied to the scenes for bringing more depth in the user experience.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIScopeScenes3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the immersive space" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=176">🎬</a></p>
+<p>The <strong>immersion style</strong> gives rise to an environment that may encompass created objects and effects with the surrounding reality.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_5.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h3 id="watch0s-10"><a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=239">watch0S 10</a> <a class="header-anchor" href="#watch0s-10" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_6.png" alt="" class="img-fluid"></p>
+<p><code>SwiftUI</code> brings a <strong>new design</strong> to <code>watchOS 10</code> while improving the user experience through the <strong>navigation</strong> and the <strong>transitions</strong>, adding a <code>DatePicker</code> and a new <code>Lists</code> selection to these features.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_7.png" alt="" class="img-fluid"><br>
+All the <code>UI</code> major components are automatically updated with the new enhancements.<br>
+</br></p>
+<h3 id="widgets"><a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=354">Widgets</a> <a class="header-anchor" href="#widgets" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><code>SwiftUI</code> enhances the power of the widgets for <code>iOS 17</code> with the <code>Standby Mode</code>, <code>iPadOS 17</code> with the <code>Lock Screen</code>, <code>watchOS 10</code> with the <code>Smart Stack</code> and <code>macOS Sonoma</code> on the desktop.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_8.png" alt="" class="img-fluid"></p>
+<p>Moreover, <code>App Intents</code> introduces <strong>interactivity</strong> for this type of element thanks to the <code>SwiftUI</code>-based architecture to enable this new <a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=392">cross-platform feature</a> that can be defined and refined via the <a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=418"><code>Xcode Previews</code></a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_9.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="extensions"><a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=482">Extensions</a> <a class="header-anchor" href="#extensions" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIExtensions1"
+           id="WNiSwiftUIExtensions1_tab"
+           role="tab" 
+           aria-selected="true">MapKit</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIExtensions2"
+           id="WNiSwiftUIExtensions2_tab"
+           role="tab" 
+           aria-selected="false">Swift&nbsp;Charts</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIExtensions3"
+           id="WNiSwiftUIExtensions3_tab"
+           role="tab" 
+           aria-selected="false">StoreKit</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="WNiSwiftUIExtensions1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the mapkit extension" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=497">🎬</a></p>
+<p>Integrating <code>Maps</code> into an app becomes easier thanks to the expanded <code>SwiftUI</code> support for <code>MapKit</code> while <strong>adding annotations and overlays</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10148_10.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIExtensions2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the swift charts extension" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=526">🎬</a></p>
+<p>Many enhancements are introduced this year like the <strong>donut and pie charts</strong> with the new <code>SectorMark</code>...</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_11.png" alt="" class="img-fluid"></p>
+<p>... and a built-in support for selection.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_13.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIExtensions3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the storekit extension" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=550">🎬</a></p>
+<p><code>SwiftUI</code> provides a better developer experience for creating an <strong>in-app purchase interface</strong> tailored as well for accessibility as for localisation.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_12.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="data-flow"><a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=623">Data flow</a> <a class="header-anchor" href="#data-flow" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_16.png" alt="" class="img-fluid"></p>
+<h3 id="observable"><a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=639">@Observable</a> <a class="header-anchor" href="#observable" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Adding this new macro to define a type brings about a <strong><code>SwiftUI</code> dependencies automation</strong> for read properties with no needed wrapper.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10148_17.png" alt="" class="img-fluid"><br>
+<code>Observable</code> streamlines the use of <code>ObservableObject</code> by pointing out the <code>State</code> and <code>Environment</code> dynamic properties.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_18.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="swiftdata"><a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=796">SwiftData</a> <a class="header-anchor" href="#swiftdata" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The code entirely represents a model through this new framework while replacing <code>Observable</code> by the <strong><code>Model</code> macro</strong> and adding a <strong>model container</strong> with the <strong>new <code>Query</code> dynamic property</strong> for management.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_19.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="enhancements">Enhancements <a class="header-anchor" href="#enhancements" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIDataFlow1"
+           id="WNiSwiftUIDataFlow1_tab"
+           role="tab" 
+           aria-selected="true">DocumentGroup</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIDataFlow2"
+           id="WNiSwiftUIDataFlow2_tab"
+           role="tab" 
+           aria-selected="false">Inspector</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIDataFlow3"
+           id="WNiSwiftUIDataFlow3_tab"
+           role="tab" 
+           aria-selected="false">Dialogs</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIDataFlow5"
+           id="WNiSwiftUIDataFlow5_tab"
+           role="tab" 
+           aria-selected="false">Tables</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="WNiSwiftUIDataFlow1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the document group" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=917">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc23-10148_20.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIDataFlow2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the inspector modifier" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=932">🎬</a></p>
+<p>As a dedicated view in the interface, this modifier <strong>displays details</strong> about the context or the current selection.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_21.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIDataFlow3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the dialogs" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=962">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc23-10148_22.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIDataFlow5" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the tables" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1009">🎬</a></p>
+<p>Persistence and customization of the <strong>columns ordering</strong> is now possible for the tables.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_23.png" alt="" class="img-fluid"></p>
+<p>The <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1029">folder structure</a></strong> is customizable for tables through the <code>DisclosureTableRow</code> coding element.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_24.png" alt="" class="img-fluid"></p>
+<p><strong>Sections</strong> can be <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1050">expanded and collapsed</a></strong> as well via a specified identifier that will indicate the state thereof.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_25.png" alt="" class="img-fluid"></p>
+<p>Finally, the display of <strong>row backgrounds and column headers</strong> with the <strong>prominence of backgrounds</strong> underneath other views have been improved for <a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1081">better refinements</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_26.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="animations"><a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1132">Animations</a> <a class="header-anchor" href="#animations" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_15.png" alt="" class="img-fluid"></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_34.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIAnimations1"
+           id="WNiSwiftUIAnimations1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIAnimations2"
+           id="WNiSwiftUIAnimations2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIAnimations3"
+           id="WNiSwiftUIAnimations3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIAnimations4"
+           id="WNiSwiftUIAnimations4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIAnimations5"
+           id="WNiSwiftUIAnimations5_tab"
+           role="tab" 
+           aria-selected="false">5</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="WNiSwiftUIAnimations1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the keyframe animator" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1142">🎬</a></p>
+<p>This <code>API</code> defines a container that <strong>animates</strong> its content with keyframes, including <strong>multiple properties in parallel</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10148_27.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIAnimations2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the phase animator" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1216">🎬</a></p>
+<p>This <code>API</code> creates a container that <strong>automatically animates a single sequence</strong> of provided phases and that may also encompass an <strong>haptic feedback</strong> with the new sensory <code>API</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_28.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIAnimations3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the visual effects" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1357">🎬</a></p>
+<p><strong>Visual effects</strong> are easily applied thanks to a <strong>geometry proxy</strong> that doesn't take into account any <code>Geometryreader</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_29.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIAnimations4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the style text" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1421">🎬</a></p>
+<p>The <strong>new <code>ShaderLibrary</code></strong> makes <code>Metal</code> shader functions understood by the <code>SwiftUI</code> shape styles.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_30.png" alt="" class="img-fluid"></p>
+<p>The <strong><code>textScale</code> modifier</strong> applied to the units provides a <a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1538">logical text scale</a> relative to the base font which is used.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_32.png" alt="" class="img-fluid"></p>
+<p>The <code>Slider</code> symbol <a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1484">built-in bounce effect</a> can be applied via the <strong>new symbol effect modifier</strong> whose goal is to animate a <code>SF Symbol</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10148_31.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIAnimations5" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the typesetting language" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1565">🎬</a></p>
+<p>The <strong><code>typesettingLanguage</code> modifier</strong> informs <code>SwiftUI</code> that <strong>extra space</strong> might be needed regarding a specific <strong>localized text</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_33.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="interactions"><a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1648">Interactions</a> <a class="header-anchor" href="#interactions" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_14.png" alt="" class="img-fluid"><br>
+<img src="../../../../../images/iOSdev/wwdc23-10148_46.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIInteractions1"
+           id="WNiSwiftUIInteractions1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIInteractions2"
+           id="WNiSwiftUIInteractions2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIInteractions3"
+           id="WNiSwiftUIInteractions3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIInteractions4"
+           id="WNiSwiftUIInteractions4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIInteractions5"
+           id="WNiSwiftUIInteractions5_tab"
+           role="tab" 
+           aria-selected="false">5</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIInteractions6"
+           id="WNiSwiftUIInteractions6_tab"
+           role="tab" 
+           aria-selected="false">6</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIInteractions7"
+           id="WNiSwiftUIInteractions7_tab"
+           role="tab" 
+           aria-selected="false">7</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#WNiSwiftUIInteractions8"
+           id="WNiSwiftUIInteractions8_tab"
+           role="tab" 
+           aria-selected="false">8</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="WNiSwiftUIInteractions1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the scroll transition effects" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1665">🎬</a></p>
+<p><code>SwiftUI</code> streamlines the <strong>scroll transition effects</strong> with a new modifier.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_35.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIInteractions2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the scroll view enhancements" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1693">🎬</a></p>
+<p>New modifiers also improve the <strong>scroll behavior</strong> and the <strong>alignment</strong> of the elements thereof...</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_36.png" alt="" class="img-fluid"></p>
+<p>... while giving importance to the <a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1761">scroll position</a> as well.</p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIInteractions3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the hdr images" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1779">🎬</a></p>
+<p>The <strong>H</strong>igh <strong>D</strong>ynamic <strong>R</strong>ange is supported by <code>SwiftUI</code> that can now render an image at its best.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_37.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIInteractions4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the accessibility zoom" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1809">🎬</a></p>
+<p>Adding the <code>accessibilityZoomAction</code> modifier after a magnification gesture brings about <strong>controlling the zoom</strong>  with assistive technologies through available actions.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_38.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIInteractions5" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the new syntax for the custom colors" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1850">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_39.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIInteractions6" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the menus" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1864">🎬</a></p>
+<p>Menus in toolbars can be easily defined with actions highlighted by icons...</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_40.png" alt="" class="img-fluid"></p>
+<p>... adding a <strong>new picker style</strong> to present the options as a row of compact elements.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_41.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIInteractions7" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the bordered buttons" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1912">🎬</a></p>
+<p>The <strong>circle shape</strong> is available to be used for drawing a button’s border.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_42.png" alt="" class="img-fluid"></p>
+<p>A <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1924">spring loading behavior</a></strong> may be activated to reveal actions for instance.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_43.png" alt="" class="img-fluid"></p>
+<p><code>tvOS 17</code> introduces a <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1943">highlight hover effect</a></strong> to expose a shiny impact.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_44.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="WNiSwiftUIInteractions8" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the hardware keyboards" href="https://developer.apple.com/videos/play/wwdc2023/10148/?time=1962">🎬</a></p>
+<p>An <strong>action</strong> can now be defined for a <strong>hardware keyboard input</strong> while the view has focus.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10148_45.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#scope" class="nav-link text-muted">Scope</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#scenes" class="nav-link text-muted">Scenes</a></li><li class="nav-item position-relative">
+            <a href="#watch0s-10" class="nav-link text-muted">watch0S 10</a></li><li class="nav-item position-relative">
+            <a href="#widgets" class="nav-link text-muted">Widgets</a></li><li class="nav-item position-relative">
+            <a href="#extensions" class="nav-link text-muted">Extensions</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#data-flow" class="nav-link text-muted">Data flow</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#observable" class="nav-link text-muted">@Observable</a></li><li class="nav-item position-relative">
+            <a href="#swiftdata" class="nav-link text-muted">SwiftData</a></li><li class="nav-item position-relative">
+            <a href="#enhancements" class="nav-link text-muted">Enhancements</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#animations" class="nav-link text-muted">Animations</a></li><li class="nav-item position-relative">
+            <a href="#interactions" class="nav-link text-muted">Interactions</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2023/2310148.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.1.3/dist/js/boosted.bundle.min.js" integrity="sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2023 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
