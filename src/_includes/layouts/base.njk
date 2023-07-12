@@ -35,7 +35,7 @@
       <link rel="stylesheet" href="{{ item }}">
     {%- endfor -%}
   </head>
-  <body{% if displayToc == true %} data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;"{% endif %}>
+  <body{% if displayToc == true %} data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;"{% endif %}>
     {% include "partials/header.njk" %}
     <div class="container-lg pt-2">
       {# We don't want to display the breadcrumb on the home pages #}
