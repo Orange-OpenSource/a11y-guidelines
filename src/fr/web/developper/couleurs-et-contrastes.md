@@ -34,7 +34,7 @@ Un niveau de contraste insuffisant sera préjudiciable pour les utilisateurs aya
 - Cas particulier des liens non soulignés&nbsp;: 
   - Ces liens doivent avoir un rapport de contraste de 3:1 avec le texte qui les entoure
   - Ces liens doivent avoir un autre moyen que la couleur permettant de les distinguer au focus clavier ou au survol souris 
-- S'assurer que es objets graphiques porteurs d'information non-textuelle, les composants d’interface utilisateur et les états de l'interface (focus, hover...) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… 
+- S'assurer que les objets graphiques porteurs d'information non-textuelle, les composants d’interface utilisateur et les états de l'interface (focus, hover...) ont un contraste de 3:1. Sont concernés, entre autres&nbsp;: les boutons, les boutons radios, les cases à cocher, les listes de sélection, les menus et volets de navigation, les barres d’outils, les onglets, les carrousels, les curseurs, les barres de progression, les bulles d’aides, les barres de progression, les graphiques… 
 
 Nous ne sommes pas tenus d'appliquer ce critère&nbsp;:
   -	Si le composant graphique ne peut pas être représenté autrement&nbsp;: drapeau, logotype, photos réelles, captures d'écran, diagrammes d'informations médicales utilisant les couleurs de la biologie, dégradés représentant une mesure, cartes de chaleur…)
