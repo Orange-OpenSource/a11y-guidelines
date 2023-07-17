@@ -77,6 +77,17 @@
     "profils": ["All","Debugging","DocC","Localization","Swift","What's new in...","Xcode"]
   },
   {
+    "themes": "WWDC 2023",
+    "title": "What’s new with text and text interactions",
+    "type": ["Attributed String","Menu","ScrollView"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/2310058",
+    "profils": ["All","What's new in..."]
+  },
+  {
     "themes": "WWDC 2022",
     "title": "Adopt Variable Color in SF Symbols",
     "type": ["SF Symbol"],
@@ -199,17 +210,6 @@
   },
   {
     "themes": "WWDC 2022",
-    "title": "Meet the expanded San Francisco font family",
-    "type": [],
-    "tests": [],
-    "verifier": [],
-    "resultat": ["Design"],
-    "exception": "",
-    "raccourcis": "2022/22110381",
-    "profils": ["All"]
-  },
-  {
-    "themes": "WWDC 2022",
     "title": "Meet Swift Regex",
     "type": [],
     "tests": [],
@@ -218,6 +218,17 @@
     "exception": "",
     "raccourcis": "2022/22SwiftRegex",
     "profils": ["All","Regex"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Meet the expanded San Francisco font family",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/22110381",
+    "profils": ["All"]
   },
   {
     "themes": "WWDC 2022",
@@ -593,28 +604,6 @@
     "raccourcis": "2021/2110059",
     "profils": ["All","Accessibility","What's new in..."]
   },
-  {
-    "themes": "WWDC 2020",
-    "title": "Feature your actions in the Shortcuts app",
-    "type": [],
-    "tests": [],
-    "verifier": [],
-    "resultat": ["Design"],
-    "exception": "",
-    "raccourcis": "2021/21ShortcutsActions",
-    "profils": ["All", "Shortcuts"]
-  },
-   {
-    "themes": "WWDC 2020",
-    "title": "Formatters",
-    "type": ["Attributed String"],
-    "tests": [],
-    "verifier": [],
-    "resultat": [],
-    "exception": "",
-    "raccourcis": "2020/2010160",
-    "profils": ["All","Formatting","SwiftUI"]
-  },
    {
     "themes": "WWDC 2020",
     "title": "Build for the iPadOS pointer",
@@ -636,6 +625,28 @@
     "exception": "",
     "raccourcis": "2020/20iPadOSPointer",
     "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2020",
+    "title": "Feature your actions in the Shortcuts app",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2021/21ShortcutsActions",
+    "profils": ["All", "Shortcuts"]
+  },
+   {
+    "themes": "WWDC 2020",
+    "title": "Formatters",
+    "type": ["Attributed String"],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2020/2010160",
+    "profils": ["All","Formatting","SwiftUI"]
   },
   {
     "themes": "WWDC 2019",
