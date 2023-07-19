@@ -34,6 +34,17 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "Unleash the UIKit trait system",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310057",
+    "profils": ["All","SwiftUI"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "What’s new in SF Symbols 5",
     "type": ["SF Symbol"],
     "tests": [],
