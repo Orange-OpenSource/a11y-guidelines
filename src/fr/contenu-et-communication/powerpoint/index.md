@@ -16,16 +16,18 @@ Définir des masques de diapositives est la première chose à faire  et une con
 - Ouvrir le mode Masque des diapositives pour mettre en forme vos diapositives (dans l’onglet `Affichage`, sélectionner `Masque des diapositives`).
 - Utiliser les sous-menus `Mise en pages du masque` et `Insérer un espace réservé`.
 - Éviter d’ajouter des Zones de texte ou des Images directement dans la présentation via le menu `Insertion`.
+-	Prévoir un thème général des masques accessible : 	
+<img alt="" src="/fr/contenu-et-communication/images/image-theme.png" class="img-fluid">
 - Créer autant de masques que de types de diapositives nécessaires.
 <img alt="" src="/fr/contenu-et-communication/images/masques.png" class="img-fluid">
 
 
--	Prévoir un thème général des masques accessible : 	
--	Couleurs accessibles cf. chapitre « couleur »
--	Polices accessibles cf. chapitre « mise en forme » 
+
+-	Couleurs accessibles cf. ci-dessous chapitre « couleur »
+-	Polices accessibles cf. ci-dessous chapitre « mise en forme » 
 -	Éviter de mettre des effets 
 
-<img alt="" src="/fr/contenu-et-communication/images/image-thème.png" class="img-fluid">
+
 
 -	Bien choisir une couleur « du thème » pour chaque texte. 
 
@@ -46,11 +48,11 @@ Pour qu’un lecteur d’écran puisse restituer correctement le contenu de votr
 ### Autres propriétés
 Renseigner les champs « Titre », « Auteur » et « Mots clefs » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu `Fichier > Informations`.  
 
-<img alt="" src="/fr/contenu-et-communication/images/Image-info.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/image-info.png" class="img-fluid">
 
 Ces informations accessibles à tous via un simple clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans `Propriétés`, pourront également être lues par un lecteur d’écran.
 
-<img alt="" src="/fr/contenu-et-communication/images/Image-propriétés.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/image-propriétés.png" class="img-fluid">  &nbsp;
 
 ## Titre des diapositives
 
@@ -66,8 +68,8 @@ Limiter les abréviations et acronymes, et expliciter à la première occurrence
 Utiliser une police de caractères sans serif (sans empattement comme c’est le cas d’Arial, Calibri et Helvetica) en corps 12 pixels minimum.
 Commencer les phrases par une majuscule et éviter les phrases entièrement écrites en majuscules.
 
-Conserver l’accentuation sur les majuscules ÀÉÈÊÏÔÙÇ ; Cocher l’option « Majuscules accentuées en français » dans le menu `Fichier > Options > Vérification`
-Eviter de justifier le texte et privilégier l’alignement à gauche.
+Conserver l’accentuation sur les majuscules À, É, È, Ê, Ï, Ô, Ù, Ç ; Cocher l’option « Majuscules accentuées en français » dans le menu `Fichier > Options > Vérification`
+Éviter de justifier le texte et privilégier l’alignement à gauche.
 
 Ne pas utiliser de retour chariot ou de tabulation pour espacer des paragraphes, utiliser les options disponibles via un `clic droit > Paragraphe > Retrait et Espacement`.
 
@@ -95,7 +97,7 @@ Certaines personnes ne perçoivent pas ou mal les couleurs, il est donc primordi
 </figure>
 
 ## Listes à puces ou numérotées  
-Eviter de créer manuellement des listes, utiliser le style « liste » (à puces ou numérotées) pour énumérer les éléments de même nature.
+Éviter de créer manuellement des listes, utiliser le style « liste » (à puces ou numérotées) pour énumérer les éléments de même nature.
 
 <img alt="" src="/fr/contenu-et-communication/images/puce.png" class="img-fluid">  &nbsp;
 
@@ -105,7 +107,7 @@ Un document peut contenir des images et être accessible, il faut simplement que
 - **Pour les images décoratives/illustratives** : cocher `marquer comme décoratif`.
 - **Pour les images informatives complexes** : rédiger un court texte de remplacement et une description détaillée située à proximité de l’image (ou accessible via un lien). Exemple disponible dans [le guide du concepteur RGAA](https://disic.github.io/guide-concepteur/1-images.html#exemple-dune-image-complexe-avec-une-description-d%C3%A9taill%C3%A9e)
 
- <img alt="" src="/fr/contenu-et-communication/images/Image-alt-text.png" class="img-fluid">
+ <img alt="" src="/fr/contenu-et-communication/images/image-alt-text.png" class="img-fluid">
 
 Pour les graphiques ou schémas : utiliser les composants `SmartArt` plutôt que des images (menu `Insertion > SmartArt`).  
 Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (`clic droit > modifier le texte de remplacement`). 
@@ -114,7 +116,7 @@ Le contenu informatif des graphiques doit être décrit dans le texte de remplac
 Une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lui lire l’ensemble des liens présents sur une page. Chaque lien sera donc lu en dehors de son contexte visuel et doit donc se suffire à lui-même : 
 * Rédiger des intitulés de liens explicites (compréhensibles hors contexte visuel de la page).
 * Annoncer les liens qui déclenchent l’ouverture d’une nouvelle fenêtre (ajouter « nouvelle fenêtre » dans le libellé).
-<img alt="" src="/fr/contenu-et-communication/images/Image-info-bulle.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/image-info-bulle.png" class="img-fluid">  &nbsp;
 * Pour chaque fichier téléchargeable, indiquer le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document.
 
 ## Tableaux de données / tableaux de présentation 
@@ -142,7 +144,30 @@ Tout contenu vidéo doit respecter ces prérequis :
 
 **Les exigences selon le type de contenu :**
 
-<img alt="" src="/fr/contenu-et-communication/images/tableautype.png" class="img-fluid">
+
+<div class="table-responsive">
+    <table class="table">
+        <caption class="visually-hidden">Quelles sont les exigences selon le type de contenu?</caption>
+        <tr>
+            <th class="bg-600" scope="col">Type de contenu</th>
+            <th class="bg-600" scope="col">Sous-titrage</th>
+            <th class="bg-600" scope="col">Audio description</th>
+            <th class="bg-600" scope="col">Transcription</th>
+        </tr>
+        <tr>
+            <th class="bg-600" scope="row">Audio</th>
+            <td>Pas obligatoire</td>
+            <td>Pas obligatoire</td>
+            <td class="bg-supporting-green">Obligatoire</td>
+        </tr>
+        <tr>
+            <th class="bg-600" scope="row">Vidéo</th>
+            <td class="bg-supporting-green">Obligatoire</td>
+            <td class="bg-supporting-green">Obligatoire si présence d'infos uniquement visuelles</td>
+            <td class="bg-supporting-green">Obligatoire si la vidéo contient des éléments interactifs</td>
+        </tr>
+    </table>
+</div>
 
 
 Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-et-communication/composants-animes/) pour en savoir plus.
@@ -150,7 +175,7 @@ Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-et-
 
 ## Convertir une présentation PowerPoint en fichier PDF
 
-Une fois que vous aurez vérifié l'accessiblité de votre présentation (voir la rubrique [Tester l'accessibilité d'une présentation PowerPoint](/fr/contenu-et-communication/powerpoint/tester/)), vous pouvez convertir la présentation en <abbr>PDF</abbr> : `Fichier > Enregistrer sous` et de sélectionner le type de fichier <abbr>PDF</abbr>.
+Une fois que vous aurez vérifié l'accessibilité de votre présentation (voir la rubrique [Tester l'accessibilité d'une présentation PowerPoint](/fr/contenu-et-communication/powerpoint/tester/)), vous pouvez convertir la présentation en <abbr>PDF</abbr> : `Fichier > Enregistrer sous` et de sélectionner le type de fichier <abbr>PDF</abbr>.
 Cocher la case « Balises de structure de document pour l'accessibilité ».
 
 <img alt="" src="/fr/contenu-et-communication/images/imagepdf.png" class="img-fluid">  &nbsp;

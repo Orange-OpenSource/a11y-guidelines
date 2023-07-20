@@ -1,6 +1,6 @@
 ---
 title: "Fiches mémos accessibilité pour Excel"
-abstract: "Fiches mémo à télécharger pour l'accessibilité des présentations Excel"
+abstract: "Fiches mémos à télécharger pour l'accessibilité des présentations Excel"
 date: "2022-12-22"
 ---
 

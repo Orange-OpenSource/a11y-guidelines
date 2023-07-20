@@ -341,6 +341,10 @@ pre code {
     background-color: #eee !important;
 }
 
+.bg-600 {
+    background-color: #999 !important;
+}
+
 .bg-800 {
     background-color: #595959 !important;
     color: #fff!important
