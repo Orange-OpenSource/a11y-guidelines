@@ -48,11 +48,11 @@ Pour qu’un lecteur d’écran puisse restituer correctement le contenu de votr
 ### Autres propriétés
 Renseigner les champs « Titre », « Auteur » et « Mots clefs » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu `Fichier > Informations`.  
 
-<img alt="" src="/fr/contenu-et-communication/images/image-info.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/Image-info.png" class="img-fluid">
 
 Ces informations accessibles à tous via un simple clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans `Propriétés`, pourront également être lues par un lecteur d’écran.
 
-<img alt="" src="/fr/contenu-et-communication/images/image-propriétés.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/Image-propriétés.png" class="img-fluid">  &nbsp;
 
 ## Titre des diapositives
 
@@ -107,7 +107,7 @@ Un document peut contenir des images et être accessible, il faut simplement que
 - **Pour les images décoratives/illustratives** : cocher `marquer comme décoratif`.
 - **Pour les images informatives complexes** : rédiger un court texte de remplacement et une description détaillée située à proximité de l’image (ou accessible via un lien). Exemple disponible dans [le guide du concepteur RGAA](https://disic.github.io/guide-concepteur/1-images.html#exemple-dune-image-complexe-avec-une-description-d%C3%A9taill%C3%A9e)
 
- <img alt="" src="/fr/contenu-et-communication/images/image-alt-text.png" class="img-fluid">
+ <img alt="" src="/fr/contenu-et-communication/images/Image-alt-text.png" class="img-fluid">
 
 Pour les graphiques ou schémas : utiliser les composants `SmartArt` plutôt que des images (menu `Insertion > SmartArt`).  
 Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (`clic droit > modifier le texte de remplacement`). 
@@ -116,7 +116,7 @@ Le contenu informatif des graphiques doit être décrit dans le texte de remplac
 Une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lui lire l’ensemble des liens présents sur une page. Chaque lien sera donc lu en dehors de son contexte visuel et doit donc se suffire à lui-même : 
 * Rédiger des intitulés de liens explicites (compréhensibles hors contexte visuel de la page).
 * Annoncer les liens qui déclenchent l’ouverture d’une nouvelle fenêtre (ajouter « nouvelle fenêtre » dans le libellé).
-<img alt="" src="/fr/contenu-et-communication/images/image-info-bulle.png" class="img-fluid">  &nbsp;
+<img alt="" src="/fr/contenu-et-communication/images/Image-info-bulle.png" class="img-fluid">  &nbsp;
 * Pour chaque fichier téléchargeable, indiquer le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document.
 
 ## Tableaux de données / tableaux de présentation 
