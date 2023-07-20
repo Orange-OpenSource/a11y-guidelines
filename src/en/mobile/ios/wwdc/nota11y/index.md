@@ -23,7 +23,7 @@ The videos that may be of interest to **designers** are highlighted with a **ded
 <section id="refTests"></section>
 
 <section class="visually-hidden" id="wwdcTests" aria-hidden="true">
-   <h2  id="test-wwdc-2023" class="pt-5">WWDC 2023</h2>
+   <h2  id="hhwwdc2023" class="pt-5">WWDC 2023</h2>
    <p id="hwwdc64">WWDC 2023 Keynote</p>
    <p id="hwwdc63">WWDC 2023 Platforms State of the Union</p>
    <p id="hwwdc62">WWDC 2023 What’s new in SF Symbols 5</p>
@@ -31,7 +31,7 @@ The videos that may be of interest to **designers** are highlighted with a **ded
    <p id="hwwdc60">WWDC 2023 What’s new in UIKit</p>
    <p id="hwwdc59">WWDC 2023 What’s new in Xcode 15</p>
    <p id="hwwdc58">WWDC 2023 What’s new with text and text interactions</p>
-   <h2 id="test-wwdc-2022" class="pt-5">WWDC 2022</h2>
+   <h2 id="hhwwdc2022" class="pt-5">WWDC 2022</h2>
    <p id="hwwdc57">WWDC 2022 Adopt Variable Color in SF Symbols</p>
    <p id="hwwdc56">WWDC 2022 Build your first app in Swift Playgrounds</p>
    <p id="hwwdc55">WWDC 2022 Create engaging content for Swift Playgrounds</p>
@@ -55,7 +55,7 @@ The videos that may be of interest to **designers** are highlighted with a **ded
    <p id="hwwdc37">WWDC 2022 What's new in SwiftUI</p>
    <p id="hwwdc36">WWDC 2022 What's new in UIKit</p>
    <p id="hwwdc35">WWDC 2022 What's new in Xcode</p>
-   <h2 id="test-wwdc-2021" class="pt-5">WWDC 2021</h2>
+   <h2 id="hhwwdc2021" class="pt-5">WWDC 2021</h2>
    <p id="hwwdc34">WWDC 2021 Build interactive tutorials using DocC</p>
    <p id="hwwdc33">WWDC 2021 Build interfaces with style</p>
    <p id="hwwdc32">WWDC 2021 Demystify and eliminate hitches in the render phase</p>
@@ -80,17 +80,17 @@ The videos that may be of interest to **designers** are highlighted with a **ded
    <p id="hwwdc13">WWDC 2021 Use async/await with URLSession</p>
    <p id="hwwdc12">WWDC 2021 What's new in Foundation</p>
    <p id="hwwdc11">WWDC 2021 What's new in UIKit</p>
-   <h2 id="test-wwdc-2020" class="pt-5">WWDC 2020</h2>
+   <h2 id="hhwwdc2020" class="pt-5">WWDC 2020</h2>
    <p id="hwwdc10">WWDC 2020 Build for the iPadOS pointer</p>
    <p id="hwwdc9">WWDC 2020 Design for the iPadOS pointer</p>
    <p id="hwwdc8">WWDC 2020 Feature your actions in the Shortcuts app</p>
    <p id="hwwdc7">WWDC 2020 Formatters</p>
-   <h2 id="test-wwdc-2019" class="pt-5">WWDC 2019</h2>
+   <h2 id="hhwwdc2019" class="pt-5">WWDC 2019</h2>
    <p id="hwwdc6">WWDC 2019 LLDB: Building Great Shortcuts</p>
    <p id="hwwdc5">WWDC 2019 Implementing Dark Mode on iOS</p>
    <p id="hwwdc4">WWDC 2019 LLDB: Introducing Parameters for Shortcuts</p>
    <p id="hwwdc3">WWDC 2019 LLDB: Beyond 'po'</p>
-   <h2 id="test-wwdc-2018" class="pt-5">WWDC 2018</h2>
+   <h2 id="hhwwdc2018" class="pt-5">WWDC 2018</h2>
    <p id="hwwdc2">WWDC 2018 Advanced Debugging with Xcode and LLDB</p>
    <p id="hwwdc1">WWDC 2018 iOS Memory Deep Dive</p>
 </section>
