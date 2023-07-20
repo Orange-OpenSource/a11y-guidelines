@@ -45,7 +45,7 @@ Give every slide a unique and descriptive title, it allows screen reader users t
 Avoid abbreviations and acronyms; explain them at the first occurrence.
 
 ## Formatting / layout
-Use familiar sans serif fonts (such as Arial or Calibri), in a larger font size (18pt or larger).
+Use familiar sans serif fonts (such as Arial, Calibri or Helvetica), in a larger font size (18pt or larger) and 12pt for body text.
 Begin all sentences by a capital letter but avoid using all capital letters and excessive italics or underlines.
 Avoid justifying the text; prefer left alignment.
 In order to add white space between sentences and paragraphs, use option: <code>right click</code> on the text and select <code>Paragraph… > Indents and Spacing</code>.
@@ -79,7 +79,7 @@ Always use the appropriate and native functions in order to create lists.
 
 Add alt text to images, shapes or SmartArt graphics in your PowerPoint slides.
 In order to write a good alt text, make sure to convey the content and the purpose of the image and its context in a concise and unambiguous manner.
-Right-click on an image and select <code>Format Picture</code> or <code>Format Shape > Alt Text</code>.
+Right-click on an image and <code>Edit Alt Text</code>.
 
 <img class="center" src="/en/content-and-communication/images/screen6.png" alt=""/>
 

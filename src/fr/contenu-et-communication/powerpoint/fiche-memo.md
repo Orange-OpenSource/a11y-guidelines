@@ -1,6 +1,7 @@
 ---
 title: "Fiches mémos accessibilité pour PowerPoint"
 abstract: "Fiches mémo à télécharger pour l'accessibilité des présentations PowerPoint"
+displayToc: false
 ---
 
 # Fiches mémos accessibilité pour PowerPoint
@@ -8,12 +9,12 @@ abstract: "Fiches mémo à télécharger pour l'accessibilité des présentation
 Notre fiche mémo accessibilité PowerPoint contient un rappel des critères incontournables à respecter pour créer une présentation PowerPoint accessible.
 
 <div class="row">
-  <div class="col-6">
+  <div class="col-3">
     <p class="border-end">
       <img src="../../../articles/images/memos/memo-powerpoint.png" alt="">
     </p>
   </div>
-  <div class="col-xl-6">  
+  <div class="col-xl-9">  
     <h2 id="desc-word">Description</h2>
     <p>Rappel des bonnes pratiques pour rédiger une présentation PowerPoint accessible.</p>
     <h2 id="tele-word">Téléchargement</h2>

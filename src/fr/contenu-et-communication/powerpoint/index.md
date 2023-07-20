@@ -65,7 +65,7 @@ Limiter les abréviations et acronymes, et expliciter à la première occurrence
 
 ## Mise en forme des contenus
 
-Utiliser une police de caractères sans serif (sans empattement comme c’est le cas d’Arial, Calibri et Helvetica) en corps 12 pixels minimum.
+Utiliser une police de caractères sans serif (sans empattement comme c’est le cas d’Arial, Calibri et Helvetica) en corps 12 point minimum et 18 point pour les titres.
 Commencer les phrases par une majuscule et éviter les phrases entièrement écrites en majuscules.
 
 Conserver l’accentuation sur les majuscules À, É, È, Ê, Ï, Ô, Ù, Ç ; Cocher l’option « Majuscules accentuées en français » dans le menu `Fichier > Options > Vérification`
