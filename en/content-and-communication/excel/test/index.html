@@ -2,11 +2,11 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">    
-    <title>Accessibility fact sheets for the Web - Orange digital accessibility guidelines</title>
+    <title>How to test the accessibility of your Excel document - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
     
-    <meta name="description" content="Fact sheets to download for accessible websites">
+    <meta name="description" content="What should you check about the accessibility of your Excel documents?">
             
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -84,7 +84,7 @@
 </a>
             </li>
             <li class="nav-item">
-              <a href="/en/web/" class="nav-link active" aria-current="true">
+              <a href="/en/web/" class="nav-link">
   Web  <span class="visually-hidden">Menu</span> 
 </a>
             </li>
@@ -99,7 +99,7 @@
 </a>
             </li>
             <li class="nav-item">
-              <a href="/en/content-and-communication/" class="nav-link">
+              <a href="/en/content-and-communication/" class="nav-link active" aria-current="true">
   Content and communication 
 </a>
             </li>
@@ -132,24 +132,36 @@
   <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
   <div class="container-lg">
     <ul class="nav"><li class="nav-item">
-              <a href="/en/web/design/" class="nav-link">
-  Design 
+              <a href="/en/content-and-communication/word/" class="nav-link">
+  Word 
 </a>
             </li><li class="nav-item">
-              <a href="/en/web/develop/" class="nav-link">
-  Develop 
+              <a href="/en/content-and-communication/powerpoint/" class="nav-link">
+  Powerpoint 
 </a>
             </li><li class="nav-item">
-              <a href="/en/web/test/" class="nav-link">
-  Test 
+              <a href="/en/content-and-communication/excel/" class="nav-link active" aria-current="true">
+  Excel 
 </a>
             </li><li class="nav-item">
-              <a href="/en/web/wcag-audit/" class="nav-link">
-  Audit 
+              <a href="/en/content-and-communication/pdf/" class="nav-link">
+  PDF documents 
 </a>
             </li><li class="nav-item">
-              <a href="/en/web/toolbox/" class="nav-link active" aria-current="true">
-  Toolbox 
+              <a href="/en/content-and-communication/social-networks/" class="nav-link">
+  Social networks 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/content-and-communication/emails/" class="nav-link">
+  Emails 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/content-and-communication/animated-components/" class="nav-link">
+  Audio/video content 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/content-and-communication/e-learning/" class="nav-link">
+  E-learning 
 </a>
             </li></ul>
   </div>
@@ -171,17 +183,17 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/en/web/">Web</a>
+          <a href="/en/content-and-communication/">Content and communication</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/en/web/toolbox/">Toolbox</a>
+          <a href="/en/content-and-communication/excel/">Excel</a>
         </li>
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
-          Accessibility fact sheets for the Web
+          How to test the accessibility of your Excel document
         </li>
       </ol>
 </nav>
@@ -192,21 +204,20 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Topics
       </button>
-      <div class="dropdown-menu dropdown-menu-left"><a href="https://boosted.orange.com/" class="nav-link dropdown-item">
-  Orange Boosted 
-</a><a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link dropdown-item">
-  Methods and test tools 
-</a><a href="/en/web/wcag-audit/" class="nav-link dropdown-item">
-  The Va11ydette 
-</a><a href="/en/web/toolbox/fact-sheets/" class="nav-link dropdown-item active" aria-current="page">
-  Fact sheets 
-</a><a href="/en/persona/" class="nav-link dropdown-item">
-  Personae 
-</a><a href="/en/web/useful-links/" class="nav-link dropdown-item">
-  Useful links 
-</a><a href="/en/glossary/" class="nav-link dropdown-item">
-  Glossary 
+      <div class="dropdown-menu dropdown-menu-left"><a href="/en/content-and-communication/excel/" class="nav-link dropdown-item">
+  Create an accessible Excel document  
+</a><a href="/en/content-and-communication/excel/test/" class="nav-link dropdown-item active" aria-current="page">
+  Accessibility checking 
+</a><a href="/en/content-and-communication/excel/fact-sheet/" class="nav-link dropdown-item">
+  Accessibility fact sheet for Excel 
 </a></div>
+    </nav>
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#accessibility-issue-detection" class="dropdown-item text-wrap">Accessibility issue detection</a></div>
     </nav>
         
       </div>
@@ -220,32 +231,16 @@
               <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
       <h2 id="side-navigation-label">Topics</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="https://boosted.orange.com/" class="nav-link text-muted">
-  Orange Boosted 
+            <a href="/en/content-and-communication/excel/" class="nav-link text-muted">
+  Create an accessible Excel document  
 </a>
           </li><li class="nav-item position-relative">
-            <a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link text-muted">
-  Methods and test tools 
+            <a href="/en/content-and-communication/excel/test/" class="nav-link text-muted active" aria-current="page">
+  Accessibility checking 
 </a>
           </li><li class="nav-item position-relative">
-            <a href="/en/web/wcag-audit/" class="nav-link text-muted">
-  The Va11ydette 
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/web/toolbox/fact-sheets/" class="nav-link text-muted active" aria-current="page">
-  Fact sheets 
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/persona/" class="nav-link text-muted">
-  Personae 
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/web/useful-links/" class="nav-link text-muted">
-  Useful links 
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/glossary/" class="nav-link text-muted">
-  Glossary 
+            <a href="/en/content-and-communication/excel/fact-sheet/" class="nav-link text-muted">
+  Accessibility fact sheet for Excel 
 </a>
           </li></ul>
     </nav>
@@ -253,61 +248,86 @@
             </div>
           </div>
         
-        <main id="main-content" class="col-md-9" role="main">
+        <main id="main-content" class="col-md-6" role="main">
             
           <div class="mt-4">
-          <h1>Accessibility fact sheets for the Web</h1>
-<p>Memo fact sheets in PDF format containing a reminder of the essential criteria to be met to create or test the accessibility of a website.</p>
-<h2 id="develop-accessible-web-pages">Develop accessible web pages <a class="header-anchor" href="#develop-accessible-web-pages" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<div>
-<div class="row">
-  <div class="col-3">
-    <p class="border-end">
-      <img src="../../../articles/images/memos/memo-dev-web.png" alt="">
-    </p>
-  </div>
-  <div class="col-xl-9">  
-    <h3 id="desc-web">Description</h3>
-    <p>Fact sheet for web developers.</p>
-    <p>Reminder of the essential techniques and tools to develop an accessible website.</p>
-    <h3 id="tele-web">Download</h3>
-    <p>          
-      <a href="../../../res/memos/dev-web/Web-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
-        Download as PDF (264 Ko)
-        <span class="visually-hidden">Web development accessibility fact sheet</span>
-      </a>
-    </p>
-  </div>
-</div>
-</div>
-<hr>
-<h2 id="test-the-accessibility-of-web-pages">Test the accessibility of web pages <a class="header-anchor" href="#test-the-accessibility-of-web-pages" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<div>
-<div class="row">
-  <div class="col-3">
-    <p class="border-end">
-      <img src="../../../articles/images/memos/memo-tests-web.png" alt="">
-    </p>
-  </div>
-  <div class="col-xl-9">  
-    <h3 id="desc-tests-web">Description</h3>
-    <p>Memo for people who perform web accessibility testing.</p>
-    <p>Reminder of main tools to check the accessibility of a Web page.</p>
-    </p>        
-    <h3 id="tele-tests-web">Download</h3>
-    <p>          
-      <a href="../../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-secondary">
-        Download as PDF (325 Ko)
-        <span class="visually-hidden">Web test accessibility fact sheet</span>
-      </a>
-    </p>
-  </div>
-</div>
-</div>
-<p><a href="../../../articles/fact-sheet-accessibility/">View all fact sheets</a></p>
-
+          <h1>Accessibility checking</h1>
+<p>2 Actions :</p>
+<ul>
+    <li>
+        Check spelling :
+        Review menu > Spellings
+        <img src="/en/content-and-communication/images/excel_test.png" alt="" class="img-fluid my-2" />
+    </li>
+    <li>
+    Use the integrated accessibility checker :
+    Menu "Review" > "Check accessibility" 
+    </li>
+</ul>
+Fix detected issues using proposed solutions.
+<img src="/en/content-and-communication/images/excel_test2.png" alt="" class="img-fluid my-2" />
+<h2 id="accessibility-issue-detection">Accessibility issue detection <a class="header-anchor" href="#accessibility-issue-detection" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Errors automatocally detected by the spelling and grammar option (File &gt; Options &gt; Profing) or accessibility checker</p>
+<table class="table">
+ <caption class="h3">Are errors detected by Excel?</caption>
+  <tr>
+    <th scope="col">Issue</th>
+    <th scope="col">Detected</th>
+  </tr>
+  <tr>
+    <td>Sheet with default name (Sheet2)</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Data range not defined as table</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Font without serif</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Accent</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Text formatting</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Color contrasts</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Information given exclusively by color</td>
+    <td>Only for negative numbers</td>
+  </tr>
+  <tr>
+    <td>Hypertext link names</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Image without alternative text</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>Image with irrelevant alternative text</td>
+    <td>No</td>
+  </tr>
+</table>
           </div>
         </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#accessibility-issue-detection" class="nav-link text-muted">Accessibility issue detection</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
         
       </div>
     </div>
@@ -342,7 +362,7 @@
           </a>
         </li>
         <li class="nav-item ms-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/toolbox/fact-sheets.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/content-and-communication/excel/test.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
             Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>

@@ -209,7 +209,7 @@
 </a><a href="/fr/contenu-et-communication/powerpoint/tester/" class="nav-link dropdown-item active" aria-current="page">
   Tester l&#39;accessibilité de votre présentation PowerPoint 
 </a><a href="/fr/contenu-et-communication/powerpoint/fiche-memo/" class="nav-link dropdown-item">
-  Fiches mémo accessibilité PowerPoint 
+  Fiches mémos accessibilité PowerPoint 
 </a></div>
     </nav>
         
@@ -240,7 +240,7 @@
 </a>
           </li><li class="nav-item position-relative">
             <a href="/fr/contenu-et-communication/powerpoint/fiche-memo/" class="nav-link text-muted">
-  Fiches mémo accessibilité PowerPoint 
+  Fiches mémos accessibilité PowerPoint 
 </a>
           </li></ul>
     </nav>
@@ -252,9 +252,10 @@
             
           <div class="mt-4">
           <h1>Comment tester l'accessibilité d'une présentation PowerPoint</h1>
-<p>Trois étapes sont à prévoir :</p>
+<p>Quatres étapes sont à prévoir :</p>
 <ol>
 <li>Les tests automatiques</li>
+<li>La vérification de la pertinence</li>
 <li>La vérification de contrastes</li>
 <li>La vérification vocale</li>
 </ol>
@@ -268,7 +269,63 @@
 <p>Il est important de vérifier cet ordre directement dans les masques des diapositives.</p>
 <h2 id="detection-des-problemes-daccessibilite">Détection des problèmes d'accessibilité <a class="header-anchor" href="#detection-des-problemes-daccessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Erreurs détectées automatiquement par le correcteur d’orthographe (<strong>Fichier &gt; Options &gt; Vérification</strong>) et le vérificateur d’accessibilité:</p>
-<img alt="" src="/fr/contenu-et-communication/images/tableau-pb.png" class="img-fluid" />
+<div class="table-responsive">
+    <table class="table">
+        <caption class="visually-hidden">Quelles sont les erreurs d'accessibilités détectées automatiquement?</caption>
+        <tr>
+            <th class="bg-600" scope="col">Problème</th>
+            <th class="bg-600" scope="col">Détecté</th>
+        </tr>
+        <tr>
+            <td>Mise en forme par masques</td>
+            <td>Non</td>
+        </tr>
+        <tr>
+            <td>Titre de diapositives manquant</td>
+            <td class="bg-supporting-green">Oui</td>
+        </tr>
+        <tr>
+            <td>Titre de diapositives en double</td>
+            <td class="bg-supporting-green">Oui</td>
+        </tr>
+        <tr>
+            <td>Police sans sérif</td>
+            <td>Non</td>
+        </tr>
+        <tr>
+            <td>Accentuation, langue</td>
+            <td class="bg-supporting-green">Oui</td>
+        </tr>
+        <tr>
+            <td>Mise en forme du texte</td>
+            <td>Non</td>
+        </tr>
+        <tr>
+            <td>Contrastes de couleur</td>
+            <td class="bg-supporting-green">Oui</td>
+        </tr>
+        <tr>
+            <td>Libellé d'un lien hypertexte</td>
+            <td>Non</td>
+        </tr>
+        <tr>
+            <td>Images ou tableaux sans texte de remplacement</td>
+            <td class="bg-supporting-green">Oui</td>
+        </tr>
+        <tr>
+            <td>Images ou tableaux avec texte de remplacement non pertinent</td>
+            <td>Non</td>
+        </tr>
+        <tr>
+            <td>Tableaux sans entête</td>
+            <td class="bg-supporting-green">Oui</td>
+        </tr>
+        <tr>
+            <td>Sens de lecture</td>
+            <td class="bg-supporting-green">Oui</td>
+        </tr>
+    </table>
+</div>
 <h2 id="verifications-des-contrastes-de-couleurs">Vérifications des contrastes de couleurs <a class="header-anchor" href="#verifications-des-contrastes-de-couleurs" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p>Le logiciel <a lang="en" href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> indique si les contrastes de couleurs utilisés sont conformes.</p>
 <img alt="" src="/fr/contenu-et-communication/images/colourcontrast.png" class="img-fluid" />  

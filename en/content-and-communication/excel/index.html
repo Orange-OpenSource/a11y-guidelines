@@ -2,11 +2,11 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">    
-    <title>Check accessibility in PowerPoint slides - Orange digital accessibility guidelines</title>
+    <title>Create an accessible Excel document - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
     
-    <meta name="description" content="Automated tests with Office Accessibility Verification Tool">
+    <meta name="description" content="Some Excel Accessibility Recommendations">
             
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -136,11 +136,11 @@
   Word 
 </a>
             </li><li class="nav-item">
-              <a href="/en/content-and-communication/powerpoint/" class="nav-link active" aria-current="true">
+              <a href="/en/content-and-communication/powerpoint/" class="nav-link">
   Powerpoint 
 </a>
             </li><li class="nav-item">
-              <a href="/en/content-and-communication/excel/" class="nav-link">
+              <a href="/en/content-and-communication/excel/" class="nav-link active" aria-current="page">
   Excel 
 </a>
             </li><li class="nav-item">
@@ -182,18 +182,13 @@
         </li>
       
       
-        <li class="breadcrumb-item d-none d-sm-flex">
+        <li class="breadcrumb-item">
           <a href="/en/content-and-communication/">Content and communication</a>
         </li>
       
       
-        <li class="breadcrumb-item">
-          <a href="/en/content-and-communication/powerpoint/">Powerpoint</a>
-        </li>
-      
-      
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
-          Check accessibility in PowerPoint slides
+          Excel
         </li>
       </ol>
 </nav>
@@ -204,12 +199,12 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Topics
       </button>
-      <div class="dropdown-menu dropdown-menu-left"><a href="/en/content-and-communication/powerpoint/" class="nav-link dropdown-item">
-  Create accessible PowerPoint slides 
-</a><a href="/en/content-and-communication/powerpoint/test/" class="nav-link dropdown-item active" aria-current="page">
-  Check accessibility in PowerPoint slides 
-</a><a href="/en/content-and-communication/powerpoint/fact-sheet/" class="nav-link dropdown-item">
-  PowerPoint accessibility fact sheet 
+      <div class="dropdown-menu dropdown-menu-left"><a href="/en/content-and-communication/excel/" class="nav-link dropdown-item active" aria-current="page">
+  Create an accessible Excel document  
+</a><a href="/en/content-and-communication/excel/test/" class="nav-link dropdown-item">
+  Accessibility checking 
+</a><a href="/en/content-and-communication/excel/fact-sheet/" class="nav-link dropdown-item">
+  Accessibility fact sheet for Excel 
 </a></div>
     </nav>
         
@@ -217,7 +212,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#automated-tests" class="dropdown-item text-wrap">Automated tests</a><a href="#office-accessibility-verification-tool" class="dropdown-item text-wrap">Office Accessibility Verification Tool</a><a href="#color-contrasts" class="dropdown-item text-wrap">Color contrasts</a><a href="#screen-reader-jaws-nvda" class="dropdown-item text-wrap">Screen reader: JAWS &amp; NVDA</a><a href="#self-assessment-grids" class="dropdown-item text-wrap">Self-Assessment Grids</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#sheet-tab" class="dropdown-item text-wrap">Sheet tab</a><a href="#data-range-and-table" class="dropdown-item text-wrap">Data range and table</a><a href="#existant-range-of-data" class="dropdown-item text-wrap">Existant range of data</a><a href="#create-a-new-data-range-type-table" class="dropdown-item text-wrap">Create a new data range type table</a><a href="#modifying-a-table" class="dropdown-item text-wrap">Modifying a table</a><a href="#other-table-recommendations" class="dropdown-item text-wrap">Other Table Recommendations</a><a href="#font-accent-and-language" class="dropdown-item text-wrap">Font, accent and language</a><a href="#formatting-layout" class="dropdown-item text-wrap">Formatting / layout</a><a href="#colors-and-contrasts" class="dropdown-item text-wrap">Colors and contrasts</a><a href="#a-user-not-distinguishing-colors-will-not-be-able-to-link-a-sector" class="dropdown-item text-wrap">A user not distinguishing colors will not be able to link a sector</a><a href="#links" class="dropdown-item text-wrap">Links</a><a href="#saving-file" class="dropdown-item text-wrap">Saving file</a><a href="#conversion-in-pdf" class="dropdown-item text-wrap">Conversion in PDF</a></div>
     </nav>
         
       </div>
@@ -231,16 +226,16 @@
               <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
       <h2 id="side-navigation-label">Topics</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="/en/content-and-communication/powerpoint/" class="nav-link text-muted">
-  Create accessible PowerPoint slides 
+            <a href="/en/content-and-communication/excel/" class="nav-link text-muted active" aria-current="page">
+  Create an accessible Excel document  
 </a>
           </li><li class="nav-item position-relative">
-            <a href="/en/content-and-communication/powerpoint/test/" class="nav-link text-muted active" aria-current="page">
-  Check accessibility in PowerPoint slides 
+            <a href="/en/content-and-communication/excel/test/" class="nav-link text-muted">
+  Accessibility checking 
 </a>
           </li><li class="nav-item position-relative">
-            <a href="/en/content-and-communication/powerpoint/fact-sheet/" class="nav-link text-muted">
-  PowerPoint accessibility fact sheet 
+            <a href="/en/content-and-communication/excel/fact-sheet/" class="nav-link text-muted">
+  Accessibility fact sheet for Excel 
 </a>
           </li></ul>
     </nav>
@@ -251,26 +246,114 @@
         <main id="main-content" class="col-md-6" role="main">
             
           <div class="mt-4">
-          <h1>Check accessibility in PowerPoint slides</h1>
-<h2 id="automated-tests">Automated tests <a class="header-anchor" href="#automated-tests" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<h3 id="office-accessibility-verification-tool">Office Accessibility Verification Tool <a class="header-anchor" href="#office-accessibility-verification-tool" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>Start your tests with the Office Accessibility Verification Tool:<br>
-<strong>File &gt; Info &gt; Check for Issues &gt; Check Accessibility</strong></p>
-<img alt="Accessibility checker screenshot" src="../../images/word_verification_en.png" class="img-fluid" />  
-<p><strong>Important:</strong> if you encounter some difficulties, try to save your document from within PowerPoint 2010 in &quot;.pptx&quot; format. The option to &quot;Maintain compatibility with previous versions of Word&quot; has to remains unchecked.</p>
-<h3 id="color-contrasts">Color contrasts <a class="header-anchor" href="#color-contrasts" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p><a href="https://developer.paciellogroup.com/resources/contrastanalyser/">Download Colour Contrast Analyser</a></p>
-<img alt="colour contrast analyser screenshot" src="../../images/cca.png" class="img-fluid" />  
-<h3 id="screen-reader-jaws-nvda">Screen reader: JAWS &amp; NVDA <a class="header-anchor" href="#screen-reader-jaws-nvda" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>To complete the verification, you can test with a screen reader.<br>
-It helps you to simulate the configuration as the visually impaired and blind people.<br>
-<a href="../../../web/toolbox/methods-and-test-tools/navigating-with-a-screen-reader/">For further information to navigate with JAWS &amp; NVDA</a></p>
-<h3 id="self-assessment-grids">Self-Assessment Grids <a class="header-anchor" href="#self-assessment-grids" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+          <h1>Create an accessible Excel document</h1>
+<p>Producing accessible Excel file requires following different recommandations.</p>
+<h2 id="sheet-tab">Sheet tab <a class="header-anchor" href="#sheet-tab" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Give a unique and explicit name to each sheet tab (by default, the name starts with &quot;Sheet&quot;) and delete the empty sheets.</p>
+<figure>
+    <img src="/en/content-and-communication/images/excel_feuille_wrong.png" alt="" class="img-fluid my-2" />
+    <figcaption>
+        <strong>Incorrect example: </strong> sheet tabs have default name (Sheet1, Sheet2, Sheet3 ...).
+    </figcation>
+</figure>
+<figure>
+    <img src="/en/content-and-communication/images/excel_feuille_valid.png" alt="" class="img-fluid my-2" />
+    <figcaption>
+        <strong>Correct example : </strong> sheet tabs have unique and explicit names (January, February, March ...).
+    </figcation>
+</figure>
+<h2 id="data-range-and-table">Data range and table <a class="header-anchor" href="#data-range-and-table" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Define explicitly data range as a table and use row and column header cells.</p>
+<h3 id="existant-range-of-data">Existant range of data <a class="header-anchor" href="#existant-range-of-data" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Move cursor on the first cell in the data range (header row's first cell if there is one).</p>
 <ul>
-<li><a href="../../AXS_assess_grid_WORD_EN.xlsx">Accessibility Assessment Grid for Word (16 ko)</a></li>
-<li><a href="../../AXS_assess_grid_PPT_EN.xlsx">Accessibility Assessment Grid for PowerPoint (16 ko)</a></li>
+    <li>Use the menu Insert / Table</li>
+    <li>Check the range where the table data are located</li>
+    <li>Check "My table has headers" if it's the case</li>
+    <li>Validate "Ok"</li>
 </ul>
-<p>These Grids are designed for self-assessment of the accessibility of Word and PowerPoint documents:</p>
+<img src="/en/content-and-communication/images/excel_tableau.png" alt="" class="img-fluid my-2" />
+<p>Then possibly, from the &quot;Table Design&quot; menu :</p>
+<ul>
+    <li>Resize the table : Properties > Resize Table</li>
+    <li>Choose "Table Style Options" : "Banded Rows" or "Filter button"...</li>
+    <li>Give a name to the table : Properties > Table Name</li>
+</ul>
+<p>Remarks :</p>
+<ul>
+    <li>A table is especially necessary when there are many rows and columns, and when the content is more understandable with the reminder of the title of the column or row, for example when there are numbers.</li>
+    <li>A table cannot have merged cells.</li>
+    <li>To find out if a data range has been defined as a table : move the cursor within one of its cells: the "Insert > Table" menu appears grayed out and the "Creation of table" tab is visible.</li>
+</ul>
+<img src="/en/content-and-communication/images/excel_tableau2.png" alt="" class="img-fluid my-2" />
+<h3 id="create-a-new-data-range-type-table">Create a new data range type table <a class="header-anchor" href="#create-a-new-data-range-type-table" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+    <li>Use the "Insert > Table " menu; Excel create "Column1" heading by default...</li>
+    <li>Replace column headers "Column1", "Column2" by an explicit name</li>
+</ul>
+<img src="/en/content-and-communication/images/excel_tableau3.png" alt="" class="img-fluid my-2" />
+<h3 id="modifying-a-table">Modifying a table <a class="header-anchor" href="#modifying-a-table" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+    <li>Move cursor on a cell of the tab</li>
+    <li>"Table Design" / "Table Style Options" menu > check "Header row" and/or "First column" ...</li>
+</ul>
+<h3 id="other-table-recommendations">Other Table Recommendations <a class="header-anchor" href="#other-table-recommendations" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul>
+    <li>Avoid leaving empty cells and inserting images </li>
+    <li>Do not paste an Excel table into a PowerPoint file with the "image" paste option </li>
+</ul>
+<h2 id="font-accent-and-language">Font, accent and language <a class="header-anchor" href="#font-accent-and-language" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+    <li>Use sans serif fonts (such as Arial, Calibri, Helvetica) </li>
+    <li>If necessary, keep accentuation on capital letters (example: É or Ç): use the option “Enforce accented uppercase in French” in the menu "File" / "Options" / "Proofing"</li>
+    <li>Check spelling and accented capitals via the "Review" tab > Spelling </li>
+</ul>
+<img src="/en/content-and-communication/images/excel_police.png" alt="" class="img-fluid my-2" />
+<h2 id="formatting-layout">Formatting / layout <a class="header-anchor" href="#formatting-layout" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+    <li>Avoid justifying the text, centering or aligning right; prefer left alignment. </li>
+    <li>Begin all sentences by a capital letter but avoid using all capital letters and excessive italics or underlines. </li>
+    <li>Check "Wrap Text" on the cells: right click on the cells, Format cells /Text Control </li>
+</ul>
+<h2 id="colors-and-contrasts">Colors and contrasts <a class="header-anchor" href="#colors-and-contrasts" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul>
+<li>
+<p>Ensure a sufficient contrast between text color and background color (compliant with Orange brand)</p>
+<img src="/en/content-and-communication/images/excel_couleur.png" alt="Examples of insufficient contrast between pastel colored backgrounds and white text" class="img-fluid my-2" />
+<img src="/en/content-and-communication/images/excel_couleur2.png" alt="Correct examples of contrast between the same pastel colors in the background but black text" class="img-fluid my-2" />
+</li>
+<li>
+Ensure that color is not the only way to give information.  
+Example 1: a negative value must not be indicated by the only use of the color red; one solution is to use the ‘-‘ sign or put negative values ​​in parentheses
+<img src="/en/content-and-communication/images/excel_couleur3.png" alt="" class="img-fluid my-2" />
+<p>Example 2 :</p>
+<img src="/en/content-and-communication/images/excel_couleur4.png" alt="Distribution of sales represented on a pie chart with the legend to the right of the graph and only the color linking a sector of sales to its percentage" class="img-fluid my-2" />
+<p>A user not distinguishing colors will not be able to link a sector</p>
+<img src="/en/content-and-communication/images/excel_couleur5.png" alt="Distribution of sales represented on a pie chart where the percentage of sales is visible next to each sector" class="img-fluid my-2" />
+</li>
+</ul>
+<h2 id="a-user-not-distinguishing-colors-will-not-be-able-to-link-a-sector">A user not distinguishing colors will not be able to link a sector <a class="header-anchor" href="#a-user-not-distinguishing-colors-will-not-be-able-to-link-a-sector" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Provide an alternative text for any illustration (image, form, icon, SmartArt...), graphic or embedded file ; Right click on the illustration &gt; Edit Alt text.</p>
+<img src="/en/content-and-communication/images/excel_image.png" alt="The replacement text window offers 2 areas: 1 field to enter the replacement text, 1 check box to mark as decorative" class="img-fluid my-2" />
+<ul>
+    <li>Informative content: provide an alternative text which explains the information presented by the content </li>
+    <li>Decorative content: check "Mark as decorative" and keep the description text box blank. </li>
+    <li>Link content: provide an alternative text that describes the function or destination of the link </li>
+    <li>Complex informative content: provide an alternative text which indicates the location of the detailed content description. This must be equivalent to the information presented by the content and must be nearby or accessible through a link. Example: indicate where are the data of a graphic built from a table.</li>
+</ul>
+<h2 id="links">Links <a class="header-anchor" href="#links" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Provide explicit label names for links. Example: prefer &quot;Discover our offers&quot; to &quot;Click here&quot; or &quot;See more&quot;. Go to Menu Insert / Links, indicate the text to be displayed, the address and eventually a screen tip that will be displayed on hover</p>
+<p>For each downloadable file, indicate its name, format, weight, and file language (if different from the document one)</p>
+<img src="/en/content-and-communication/images/excel_lien.png" alt="" class="img-fluid my-2" />
+<h2 id="saving-file">Saving file <a class="header-anchor" href="#saving-file" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Before saving, cursor must be in A1 cell in each sheet. If there are several sheets, go to the 1rst sheet before saving.</p>
+<h2 id="conversion-in-pdf">Conversion in PDF <a class="header-anchor" href="#conversion-in-pdf" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>It is better to publish the Excel document in PDF format:</p>
+<ul>
+    <li>Menu File / Export / Create a PDF/XPS Document </li>
+    <li>In "Options", verify "document structure tags for accessibility" is checked  (to do once) </li>
+    <li>Publish</li>
+</ul>
 
           </div>
         </main>
@@ -280,12 +363,20 @@ It helps you to simulate the configuration as the visually impaired and blind pe
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">On this page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#automated-tests" class="nav-link text-muted">Automated tests</a>
+            <a href="#sheet-tab" class="nav-link text-muted">Sheet tab</a></li><li class="nav-item position-relative">
+            <a href="#data-range-and-table" class="nav-link text-muted">Data range and table</a>
             <ul><li class="nav-item position-relative">
-            <a href="#office-accessibility-verification-tool" class="nav-link text-muted">Office Accessibility Verification Tool</a></li><li class="nav-item position-relative">
-            <a href="#color-contrasts" class="nav-link text-muted">Color contrasts</a></li><li class="nav-item position-relative">
-            <a href="#screen-reader-jaws-nvda" class="nav-link text-muted">Screen reader: JAWS &amp; NVDA</a></li><li class="nav-item position-relative">
-            <a href="#self-assessment-grids" class="nav-link text-muted">Self-Assessment Grids</a></li></ul></li>
+            <a href="#existant-range-of-data" class="nav-link text-muted">Existant range of data</a></li><li class="nav-item position-relative">
+            <a href="#create-a-new-data-range-type-table" class="nav-link text-muted">Create a new data range type table</a></li><li class="nav-item position-relative">
+            <a href="#modifying-a-table" class="nav-link text-muted">Modifying a table</a></li><li class="nav-item position-relative">
+            <a href="#other-table-recommendations" class="nav-link text-muted">Other Table Recommendations</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#font-accent-and-language" class="nav-link text-muted">Font, accent and language</a></li><li class="nav-item position-relative">
+            <a href="#formatting-layout" class="nav-link text-muted">Formatting / layout</a></li><li class="nav-item position-relative">
+            <a href="#colors-and-contrasts" class="nav-link text-muted">Colors and contrasts</a></li><li class="nav-item position-relative">
+            <a href="#a-user-not-distinguishing-colors-will-not-be-able-to-link-a-sector" class="nav-link text-muted">A user not distinguishing colors will not be able to link a sector</a></li><li class="nav-item position-relative">
+            <a href="#links" class="nav-link text-muted">Links</a></li><li class="nav-item position-relative">
+            <a href="#saving-file" class="nav-link text-muted">Saving file</a></li><li class="nav-item position-relative">
+            <a href="#conversion-in-pdf" class="nav-link text-muted">Conversion in PDF</a></li>
       </ul>
     </nav>
             </div>
@@ -324,7 +415,7 @@ It helps you to simulate the configuration as the visually impaired and blind pe
           </a>
         </li>
         <li class="nav-item ms-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/content-and-communication/powerpoint/test.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/content-and-communication/excel/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
             Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
