@@ -45,15 +45,6 @@ Pour qu’un lecteur d’écran puisse restituer correctement le contenu de votr
 - La langue principale doit être définie dans le menu : `Fichier > Options > Langue`.
 - Tout changement de langue ponctuel doit être signalé en sélectionnant le groupe de mots concerné puis `Révision > Langue > Définir la langue de vérification`.
 
-### Autres propriétés
-Renseigner les champs « Titre », « Auteur » et « Mots clefs » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu `Fichier > Informations`.  
-
-<img alt="" src="/fr/contenu-et-communication/images/Image-info.png" class="img-fluid">
-
-Ces informations accessibles à tous via un simple clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans `Propriétés`, pourront également être lues par un lecteur d’écran.
-
-<img alt="" src="/fr/contenu-et-communication/images/Image-propriétés.png" class="img-fluid">  &nbsp;
-
 ## Titre des diapositives
 
 Pour éviter toute confusion entre des diapositives, notamment si l’utilisateur parcourt une présentation à l’aide d’un lecteur d’écran :  
@@ -65,7 +56,7 @@ Limiter les abréviations et acronymes, et expliciter à la première occurrence
 
 ## Mise en forme des contenus
 
-Utiliser une police de caractères sans serif (sans empattement comme c’est le cas d’Arial, Calibri et Helvetica) en corps 12 point minimum et 18 point pour les titres.
+Utiliser une police de caractères sans serif (sans empattement comme c’est le cas d’Arial, Calibri et Helvetica). Privilégier une taille de 12 points minimum pour du texte (corps) et de 18 points pour les titres.
 Commencer les phrases par une majuscule et éviter les phrases entièrement écrites en majuscules.
 
 Conserver l’accentuation sur les majuscules À, É, È, Ê, Ï, Ô, Ù, Ç ; Cocher l’option « Majuscules accentuées en français » dans le menu `Fichier > Options > Vérification`
@@ -122,7 +113,7 @@ Une personne non-voyante va, pour naviguer plus rapidement dans un document, dem
 ## Tableaux de données / tableaux de présentation 
 La structure des tableaux doit être le plus simple possible : 
 * Éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides.
-* Ajouter une description s'il s'agit d'un tableau complexe : `clic droit > Texte de remplacement`
+* Ajouter une description s'il s'agit d'un tableau complexe : `clic droit > Modifier le texte de remplacement`
 *	`Ne pas insérer une capture d’écran (ou image) d’un tableau Excel`. Depuis Excel, sélectionner un tableau bien identifié en tant que tel, le copier et le coller dans Powerpoint en conservant la mise en forme source.
 
 **Important :** Ne pas utiliser les tableaux à des fins de mise en forme.
@@ -175,7 +166,7 @@ Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-et-
 
 ## Convertir une présentation PowerPoint en fichier PDF
 
-Une fois que vous aurez vérifié l'accessibilité de votre présentation (voir la rubrique [Tester l'accessibilité d'une présentation PowerPoint](/fr/contenu-et-communication/powerpoint/tester/)), vous pouvez convertir la présentation en <abbr>PDF</abbr> : `Fichier > Enregistrer sous` et de sélectionner le type de fichier <abbr>PDF</abbr>.
+Après avoir vérifié l'accessibilité de votre présentation (voir la rubrique [Tester l'accessibilité d'une présentation PowerPoint](/fr/contenu-et-communication/powerpoint/tester/)), vous pouvez convertir la présentation en <abbr>PDF</abbr> : `Fichier > Enregistrer sous` et de sélectionner le type de fichier <abbr>PDF</abbr>.
 Cocher la case « Balises de structure de document pour l'accessibilité ».
 
 <img alt="" src="/fr/contenu-et-communication/images/imagepdf.png" class="img-fluid">  &nbsp;
@@ -183,7 +174,7 @@ Cocher la case « Balises de structure de document pour l'accessibilité ».
 
 ## Conseils pour une présentation orale
 
-Exprimer oralement tout ce qui est transmis visuellement. Vous pouvez activer le sous-titrage dans « Sous-titre en direct » dans le menu Diaporama. Si besoin, prévoir un système de vélotypie et/ou une interprétation des signes.
+Exprimer oralement tout ce qui est transmis visuellement. Vous pouvez activer le sous-titrage dans « Sous-titre en direct » dans le menu Diaporama. Si besoin, prévoir un système de vélotypie(méthode de transcription en temps réel) et/ou une interprétation des signes.
 
 Remarque : pour les présentations de plus de 50 diapositives, il faut conseiller aux lecteurs de modifier le paramètre suivant dans Adobe :
 `Édition > Préférences > Lecture > Option de lecteur d’écran` : « Lire l’intégralité du document »

@@ -41,7 +41,7 @@ Errors automatocally detected by the spelling and grammar option (File > Options
   </tr>
   <tr>
     <td>Data range not defined as table</td>
-    <td>Yes</td>
+    <td>No</td>
   </tr>
   <tr>
     <td>Font without serif</td>

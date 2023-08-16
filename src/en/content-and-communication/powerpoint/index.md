@@ -31,13 +31,6 @@ Note: if you edit the slide layout after you have created the slides, you must r
 The main language must be defined in the tab <code>File > Options > Language</code>.
 Every punctual change of language must be identified by selecting the text and: tab <code>Review > Language > Set proofing language</code>.
 
-### Other properties
-Title, author and tags fields have to be completed in tab <code>File > Info > Properties</code>.
-
-<img class="center" src="/en/content-and-communication/images/screen3.png" alt=""/>
-
-This information is accessible by everyone in Windows Explorer and are readable by the screen readers. 
-
 ## Use unique slide title
 Give every slide a unique and descriptive title, it allows screen reader users to clearly understand which slide they are on.
 
