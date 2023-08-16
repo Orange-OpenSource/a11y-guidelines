@@ -16,16 +16,18 @@ Définir des masques de diapositives est la première chose à faire  et une con
 - Ouvrir le mode Masque des diapositives pour mettre en forme vos diapositives (dans l’onglet `Affichage`, sélectionner `Masque des diapositives`).
 - Utiliser les sous-menus `Mise en pages du masque` et `Insérer un espace réservé`.
 - Éviter d’ajouter des Zones de texte ou des Images directement dans la présentation via le menu `Insertion`.
+-	Prévoir un thème général des masques accessible : 	
+<img alt="" src="/fr/contenu-et-communication/images/image-theme.png" class="img-fluid">
 - Créer autant de masques que de types de diapositives nécessaires.
 <img alt="" src="/fr/contenu-et-communication/images/masques.png" class="img-fluid">
 
 
--	Prévoir un thème général des masques accessible : 	
--	Couleurs accessibles cf. chapitre « couleur »
--	Polices accessibles cf. chapitre « mise en forme » 
+
+-	Couleurs accessibles cf. ci-dessous chapitre « couleur »
+-	Polices accessibles cf. ci-dessous chapitre « mise en forme » 
 -	Éviter de mettre des effets 
 
-<img alt="" src="/fr/contenu-et-communication/images/image-thème.png" class="img-fluid">
+
 
 -	Bien choisir une couleur « du thème » pour chaque texte. 
 
@@ -43,15 +45,6 @@ Pour qu’un lecteur d’écran puisse restituer correctement le contenu de votr
 - La langue principale doit être définie dans le menu : `Fichier > Options > Langue`.
 - Tout changement de langue ponctuel doit être signalé en sélectionnant le groupe de mots concerné puis `Révision > Langue > Définir la langue de vérification`.
 
-### Autres propriétés
-Renseigner les champs « Titre », « Auteur » et « Mots clefs » dans la zone « Propriétés » (colonne de droite), accessible depuis le menu `Fichier > Informations`.  
-
-<img alt="" src="/fr/contenu-et-communication/images/Image-info.png" class="img-fluid">
-
-Ces informations accessibles à tous via un simple clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans `Propriétés`, pourront également être lues par un lecteur d’écran.
-
-<img alt="" src="/fr/contenu-et-communication/images/Image-propriétés.png" class="img-fluid">  &nbsp;
-
 ## Titre des diapositives
 
 Pour éviter toute confusion entre des diapositives, notamment si l’utilisateur parcourt une présentation à l’aide d’un lecteur d’écran :  
@@ -63,11 +56,11 @@ Limiter les abréviations et acronymes, et expliciter à la première occurrence
 
 ## Mise en forme des contenus
 
-Utiliser une police de caractères sans serif (sans empattement comme c’est le cas d’Arial, Calibri et Helvetica) en corps 12 pixels minimum.
+Utiliser une police de caractères sans serif (sans empattement comme c’est le cas d’Arial, Calibri et Helvetica). Privilégier une taille de 12 points minimum pour du texte (corps) et de 18 points pour les titres.
 Commencer les phrases par une majuscule et éviter les phrases entièrement écrites en majuscules.
 
-Conserver l’accentuation sur les majuscules ÀÉÈÊÏÔÙÇ ; Cocher l’option « Majuscules accentuées en français » dans le menu `Fichier > Options > Vérification`
-Eviter de justifier le texte et privilégier l’alignement à gauche.
+Conserver l’accentuation sur les majuscules À, É, È, Ê, Ï, Ô, Ù, Ç ; Cocher l’option « Majuscules accentuées en français » dans le menu `Fichier > Options > Vérification`
+Éviter de justifier le texte et privilégier l’alignement à gauche.
 
 Ne pas utiliser de retour chariot ou de tabulation pour espacer des paragraphes, utiliser les options disponibles via un `clic droit > Paragraphe > Retrait et Espacement`.
 
@@ -95,7 +88,7 @@ Certaines personnes ne perçoivent pas ou mal les couleurs, il est donc primordi
 </figure>
 
 ## Listes à puces ou numérotées  
-Eviter de créer manuellement des listes, utiliser le style « liste » (à puces ou numérotées) pour énumérer les éléments de même nature.
+Éviter de créer manuellement des listes, utiliser le style « liste » (à puces ou numérotées) pour énumérer les éléments de même nature.
 
 <img alt="" src="/fr/contenu-et-communication/images/puce.png" class="img-fluid">  &nbsp;
 
@@ -120,7 +113,7 @@ Une personne non-voyante va, pour naviguer plus rapidement dans un document, dem
 ## Tableaux de données / tableaux de présentation 
 La structure des tableaux doit être le plus simple possible : 
 * Éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides.
-* Ajouter une description s'il s'agit d'un tableau complexe : `clic droit > Texte de remplacement`
+* Ajouter une description s'il s'agit d'un tableau complexe : `clic droit > Modifier le texte de remplacement`
 *	`Ne pas insérer une capture d’écran (ou image) d’un tableau Excel`. Depuis Excel, sélectionner un tableau bien identifié en tant que tel, le copier et le coller dans Powerpoint en conservant la mise en forme source.
 
 **Important :** Ne pas utiliser les tableaux à des fins de mise en forme.
@@ -142,7 +135,30 @@ Tout contenu vidéo doit respecter ces prérequis :
 
 **Les exigences selon le type de contenu :**
 
-<img alt="" src="/fr/contenu-et-communication/images/tableautype.png" class="img-fluid">
+
+<div class="table-responsive">
+    <table class="table">
+        <caption class="visually-hidden">Quelles sont les exigences selon le type de contenu?</caption>
+        <tr>
+            <th class="bg-600" scope="col">Type de contenu</th>
+            <th class="bg-600" scope="col">Sous-titrage</th>
+            <th class="bg-600" scope="col">Audio description</th>
+            <th class="bg-600" scope="col">Transcription</th>
+        </tr>
+        <tr>
+            <th class="bg-600" scope="row">Audio</th>
+            <td>Pas obligatoire</td>
+            <td>Pas obligatoire</td>
+            <td class="bg-supporting-green">Obligatoire</td>
+        </tr>
+        <tr>
+            <th class="bg-600" scope="row">Vidéo</th>
+            <td class="bg-supporting-green">Obligatoire</td>
+            <td class="bg-supporting-green">Obligatoire si présence d'infos uniquement visuelles</td>
+            <td class="bg-supporting-green">Obligatoire si la vidéo contient des éléments interactifs</td>
+        </tr>
+    </table>
+</div>
 
 
 Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-et-communication/composants-animes/) pour en savoir plus.
@@ -150,7 +166,7 @@ Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-et-
 
 ## Convertir une présentation PowerPoint en fichier PDF
 
-Une fois que vous aurez vérifié l'accessiblité de votre présentation (voir la rubrique [Tester l'accessibilité d'une présentation PowerPoint](/fr/contenu-et-communication/powerpoint/tester/)), vous pouvez convertir la présentation en <abbr>PDF</abbr> : `Fichier > Enregistrer sous` et de sélectionner le type de fichier <abbr>PDF</abbr>.
+Après avoir vérifié l'accessibilité de votre présentation (voir la rubrique [Tester l'accessibilité d'une présentation PowerPoint](/fr/contenu-et-communication/powerpoint/tester/)), vous pouvez convertir la présentation en <abbr>PDF</abbr> : `Fichier > Enregistrer sous` et de sélectionner le type de fichier <abbr>PDF</abbr>.
 Cocher la case « Balises de structure de document pour l'accessibilité ».
 
 <img alt="" src="/fr/contenu-et-communication/images/imagepdf.png" class="img-fluid">  &nbsp;
@@ -158,7 +174,7 @@ Cocher la case « Balises de structure de document pour l'accessibilité ».
 
 ## Conseils pour une présentation orale
 
-Exprimer oralement tout ce qui est transmis visuellement. Vous pouvez activer le sous-titrage dans « Sous-titre en direct » dans le menu Diaporama. Si besoin, prévoir un système de vélotypie et/ou une interprétation des signes.
+Exprimer oralement tout ce qui est transmis visuellement. Vous pouvez activer le sous-titrage dans « Sous-titre en direct » dans le menu Diaporama. Si besoin, prévoir un système de vélotypie(méthode de transcription en temps réel) et/ou une interprétation des signes.
 
 Remarque : pour les présentations de plus de 50 diapositives, il faut conseiller aux lecteurs de modifier le paramètre suivant dans Adobe :
 `Édition > Préférences > Lecture > Option de lecteur d’écran` : « Lire l’intégralité du document »
