@@ -9,7 +9,7 @@
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="{{ 'navigation.main.burgerLabel' | translate }}">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="main-menu-list">
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
       <ul class="navbar-nav me-auto">
         {%- for link in navigation.main[locale] -%}
           {% if link.mainMenu != false %}

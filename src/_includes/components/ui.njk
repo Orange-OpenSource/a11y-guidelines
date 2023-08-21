@@ -214,7 +214,6 @@
 
 {%- macro changelang(mode) -%}
 {%- if mode == "supra" -%}
-<nav role="navigation" aria-label="{{ 'changelang.label' | translate }}">
   <ul class="navbar-nav">
     {%- for key, lang in site.locales -%}
       {% set active = locale == lang.code %}
@@ -225,7 +224,6 @@
       </li>
     {%- endfor -%}
   </ul>
-</nav>
 {%- elseif mode == "mobile" -%}
 <li class="nav-item d-md-none">
   <span class="visually-hidden">{{ 'changelang.label' | translate }}</span>

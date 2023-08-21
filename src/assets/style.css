@@ -35,51 +35,6 @@ body {
 }
 
 
-/** 
- * Fix for Boosted (to remove as soon as Boosted removes orange on white colors) 
- */
-
-a:hover,
-a:focus {
-    color: #000;
-}
-
-a:hover {
-    text-decoration-thickness: .1rem;
-}
-
-a:focus {
-    outline-color: #f16e00;
-    outline-offset: .075rem;
-    text-decoration: none;
-}
-
-h2 a:hover,
-h2 a:focus {
-    color: #f16e00;
-    background-color: transparent;
-}
-
-a.text-decoration-none:hover,
-a.text-decoration-none:focus {
-    text-decoration: underline !important;
-}
-
-.supra {
-    padding-top: 0;
-    border-bottom: 1px solid #333;
-}
-
-.supra .nav-link {
-    font-size: .875rem;
-    padding: .8rem .625rem .425rem .4rem !important;
-}
-
-.supra .navbar-nav {
-    margin: 0 -.46875rem;
-}
-
-
 /**
  * Typography
  */
