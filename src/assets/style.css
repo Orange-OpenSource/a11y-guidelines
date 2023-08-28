@@ -288,6 +288,7 @@ pre code {
  * Utilities
  */
 
+
 .bg-200 {
     background-color: #f6f6f6 !important;
 }
@@ -344,6 +345,21 @@ pre code {
 .position-absolute .badge {
     white-space: normal;
 }
+
+.bg-supporting-pink {
+    color: #000 !important;
+}
+
+.bg-supporting-green {
+    color: #000 !important;
+}
+.bg-supporting-purple {
+    color: #000 !important;
+}
+.bg-supporting-yellow {
+    color: #000 !important;
+}
+
 
 .bg-900 li::marker {
     color: #f16e00;
