@@ -24,10 +24,11 @@ The videos that may be of interest to **designers** are highlighted with a **ded
 
 <section class="visually-hidden" id="wwdcTests" aria-hidden="true">
    <h2  id="hhwwdc2023" class="pt-5">WWDC 2023</h2>
-   <p id="hwwdc65">WWDC 2023 Keynote</p>
-   <p id="hwwdc64">WWDC 2023 Platforms State of the Union</p>
-   <p id="hwwdc63">WWDC 2023 Unleash the UIKit trait system</p>
-   <p id="hwwdc62">WWDC 2023 What’s new in SF Symbols 5</p>
+   <p id="hwwdc66">WWDC 2023 Keynote</p>
+   <p id="hwwdc65">WWDC 2023 Platforms State of the Union</p>
+   <p id="hwwdc64">WWDC 2023 Unleash the UIKit trait system</p>
+   <p id="hwwdc63">WWDC 2023 What’s new in SF Symbols 5</p>
+   <p id="hwwdc62">WWDC 2023 What’s new in Swift</p>
    <p id="hwwdc61">WWDC 2023 What’s new in SwiftUI</p>
    <p id="hwwdc60">WWDC 2023 What’s new in UIKit</p>
    <p id="hwwdc59">WWDC 2023 What’s new in Xcode 15</p>
