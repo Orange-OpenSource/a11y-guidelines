@@ -12,6 +12,17 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "Generalize APIs with parameter packs",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310168",
+    "profils": ["All","Swift"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "Keynote",
     "type": ["Widget"],
     "tests": [],

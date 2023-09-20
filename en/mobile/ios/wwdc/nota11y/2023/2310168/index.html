@@ -2,11 +2,11 @@
 <html lang="en" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">    
-    <title>Detailed summaries - Orange digital accessibility guidelines</title>
+    <title>Generalize APIs with parameter packs - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
     
-    <meta name="description" content="Detailed summaries of some WWDC videos.">
+    <meta name="description" content="Abstract over types as well as the number of arguments in generic code.">
             
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -183,7 +183,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
-          Detailed summaries
+          Generalize APIs with parameter packs
         </li>
       </ol>
 </nav>
@@ -192,115 +192,68 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#the-origins" class="dropdown-item text-wrap">The origins</a><a href="#the-fundamentals" class="dropdown-item text-wrap">The fundamentals</a><a href="#implementation" class="dropdown-item text-wrap">Implementation</a></div>
+    </nav>
+        
       </div>
     </div>
     
   <div class="container-lg pt-4">
       <div class="row">
         
-          <div class="col-md-3">
-            <div class="StickySideNavigation">
-              
-              <aside id="filter">
-  <h2>Filters</h2>
-  <div id="feedback" aria-live="polite"></div>
-  <h3>Themes</h3>
-  <ul id="profils" class="list-unstyled"></ul>
-  <h3>Elements</h3>
-  <ul id="types" class="list-unstyled"></ul>
-  <div id="filter-footer"></div>
-</aside>
-
-
-            </div>
-          </div>
-        
         <main id="main-content" class="col-md-9" role="main">
             
           <div class="mt-4">
-          <h1>List of the WWDC detailed summaries</h1>
-<p>This section regroups <a href="https://developer.apple.com/videos/all-videos/">presentations at the WWDC</a> that aren't directly <a href="../">bound to accessibility</a>.</p>
-<p>Each one of them is detailed with <strong>time references</strong> to their different contents.</p>
-<p>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.</p>
-<p>The videos that may be of interest to <strong>designers</strong> are highlighted with a <strong>dedicated mark</strong> at the end of their names.</p>
-<section id="refTests"></section>
-<section class="visually-hidden" id="wwdcTests" aria-hidden="true">
-   <h2  id="hhwwdc2023" class="pt-5">WWDC 2023</h2>
-   <p id="hwwdc67">WWDC 2023 Generalize APIs with parameter packs</p>
-   <p id="hwwdc66">WWDC 2023 Keynote</p>
-   <p id="hwwdc65">WWDC 2023 Platforms State of the Union</p>
-   <p id="hwwdc64">WWDC 2023 Unleash the UIKit trait system</p>
-   <p id="hwwdc63">WWDC 2023 What’s new in SF Symbols 5</p>
-   <p id="hwwdc62">WWDC 2023 What’s new in Swift</p>
-   <p id="hwwdc61">WWDC 2023 What’s new in SwiftUI</p>
-   <p id="hwwdc60">WWDC 2023 What’s new in UIKit</p>
-   <p id="hwwdc59">WWDC 2023 What’s new in Xcode 15</p>
-   <p id="hwwdc58">WWDC 2023 What’s new with text and text interactions</p>
-   <h2 id="hhwwdc2022" class="pt-5">WWDC 2022</h2>
-   <p id="hwwdc57">WWDC 2022 Adopt Variable Color in SF Symbols</p>
-   <p id="hwwdc56">WWDC 2022 Build your first app in Swift Playgrounds</p>
-   <p id="hwwdc55">WWDC 2022 Create engaging content for Swift Playgrounds</p>
-   <p id="hwwdc54">WWDC 2022 Design an effective chart Design</p>
-   <p id="hwwdc53">WWDC 2022 Design app experiences with charts</p>
-   <p id="hwwdc52">WWDC 2022 Design App Shortcuts Design</p>
-   <p id="hwwdc51">WWDC 2022 Design protocol interfaces in Swift</p>
-   <p id="hwwdc50">WWDC 2022 Embrace Swift generics</p>
-   <p id="hwwdc49">WWDC 2022 Get to know Developer Mode</p>
-   <p id="hwwdc48">WWDC 2022 Hello Swift Charts</p>
-   <p id="hwwdc47">WWDC 2022 Improve the discoverability of your Swift-DocC content</p>
-   <p id="hwwdc46">WWDC 2022 Meet the expanded San Francisco font family</p>
-   <p id="hwwdc45">WWDC 2022 Meet Swift Regex</p>
-   <p id="hwwdc44">WWDC 2022 Swift Charts: Raise the bar</p>
-   <p id="hwwdc43">WWDC 2022 Swift Regex: Beyond the basics</p>
-   <p id="hwwdc42">WWDC 2022 Track down hangs with Xcode and on-device detection</p>
-   <p id="hwwdc41">WWDC 2022 Use Xcode to develop a multiplatform app</p>
-   <p id="hwwdc40">WWDC 2022 What's new in SF Symbols 4</p>
-   <p id="hwwdc39">WWDC 2022 What's new in Swift</p>
-   <p id="hwwdc38">WWDC 2022 What's new in Swift-DocC</p>
-   <p id="hwwdc37">WWDC 2022 What's new in SwiftUI</p>
-   <p id="hwwdc36">WWDC 2022 What's new in UIKit</p>
-   <p id="hwwdc35">WWDC 2022 What's new in Xcode</p>
-   <h2 id="hhwwdc2021" class="pt-5">WWDC 2021</h2>
-   <p id="hwwdc34">WWDC 2021 Build interactive tutorials using DocC</p>
-   <p id="hwwdc33">WWDC 2021 Build interfaces with style</p>
-   <p id="hwwdc32">WWDC 2021 Demystify and eliminate hitches in the render phase</p>
-   <p id="hwwdc31">WWDC 2021 Design great actions for Shortcuts, Siri, and Suggestions</p>
-   <p id="hwwdc30">WWDC 2021 Discover breakpoint improvements</p>
-   <p id="hwwdc29">WWDC 2021 Elevate your DocC documentation in Xcode</p>
-   <p id="hwwdc28">WWDC 2021 Explore structured concurrency in Swift</p>
-   <p id="hwwdc27">WWDC 2021 Explore UI animation hitches and the render loop</p>
-   <p id="hwwdc26">WWDC 2021 Find and fix hitches in the commit phase</p>
-   <p id="hwwdc25">WWDC 2021 Host and automate your DocC documentation</p>
-   <p id="hwwdc24">WWDC 2021 Localize your SwiftUI app</p>
-   <p id="hwwdc23">WWDC 2021 Meet async/await in Swift</p>
-   <p id="hwwdc22">WWDC 2021 Meet AsyncSequence</p>
-   <p id="hwwdc21">WWDC 2021 Meet DocC documentation in Xcode</p>
-   <p id="hwwdc20">WWDC 2021 Meet the UIKit button system</p>
-   <p id="hwwdc19">WWDC 2021 Platforms State of the Union</p>
-   <p id="hwwdc18">WWDC 2021 Protect mutable state with Swift actors</p>
-   <p id="hwwdc17">WWDC 2021 Streamline your localized strings</p>
-   <p id="hwwdc16">WWDC 2021 Support Full Keyboard Access in your iOS app</p>
-   <p id="hwwdc15">WWDC 2021 Swift Concurrency - Behind the Scenes</p>
-   <p id="hwwdc14">WWDC 2021 Symbolication - Beyond the basics</p>
-   <p id="hwwdc13">WWDC 2021 Use async/await with URLSession</p>
-   <p id="hwwdc12">WWDC 2021 What's new in Foundation</p>
-   <p id="hwwdc11">WWDC 2021 What's new in UIKit</p>
-   <h2 id="hhwwdc2020" class="pt-5">WWDC 2020</h2>
-   <p id="hwwdc10">WWDC 2020 Build for the iPadOS pointer</p>
-   <p id="hwwdc9">WWDC 2020 Design for the iPadOS pointer</p>
-   <p id="hwwdc8">WWDC 2020 Feature your actions in the Shortcuts app</p>
-   <p id="hwwdc7">WWDC 2020 Formatters</p>
-   <h2 id="hhwwdc2019" class="pt-5">WWDC 2019</h2>
-   <p id="hwwdc6">WWDC 2019 LLDB: Building Great Shortcuts</p>
-   <p id="hwwdc5">WWDC 2019 Implementing Dark Mode on iOS</p>
-   <p id="hwwdc4">WWDC 2019 LLDB: Introducing Parameters for Shortcuts</p>
-   <p id="hwwdc3">WWDC 2019 LLDB: Beyond 'po'</p>
-   <h2 id="hhwwdc2018" class="pt-5">WWDC 2018</h2>
-   <p id="hwwdc2">WWDC 2018 Advanced Debugging with Xcode and LLDB</p>
-   <p id="hwwdc1">WWDC 2018 iOS Memory Deep Dive</p>
-</section>
+          <h1>WWDC 2023: Generalize APIs with parameter packs</h1>
+<p>Find hereafter a detailed summary of a video that belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2023/10168/">session 10168</a>).<br>
+<img src="../../../../../images/iOSdev/wwdc23-10168_Poster.png" alt="" class="img-fluid"><br>
+&quot;Swift parameter packs are a powerful tool to expand what is possible in your generic code while also enabling you to simplify common generic patterns. We'll show you how to <strong>abstract over types as well as the number of arguments in generic code</strong> and simplify common generic patterns to avoid overloads.&quot;<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="the-origins"><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=51">The origins</a> <a class="header-anchor" href="#the-origins" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-10168_1.png" alt="" class="img-fluid"></p>
+<p>Regarding a <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=124">client server example</a>, the number of query arguments may be too large according to the needs.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10168_2.png" alt="" class="img-fluid"></p>
+<p>However, this problem might be partially solved while using the <a href="https://developer.apple.com/videos/play/wwdc2023/10168?time=136">variadic parameters</a> combined with the <a href="https://developer.apple.com/videos/play/wwdc2023/10168?time=172">type erasure</a> notion that give rise to some <a href="https://developer.apple.com/videos/play/wwdc2023/10168?time=154">limitations</a> though.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10168_3.png" alt="" class="img-fluid"><br>
+This kind of situation is typically what <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10168?time=237">parameter packs</a></strong> are for.<br>
+</br></p>
+<h2 id="the-fundamentals"><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=248">The fundamentals</a> <a class="header-anchor" href="#the-fundamentals" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>'A <strong>parameter pack</strong> can hold any quantity of types or values and pack them together to pass them as an argument to a function.'<br>
+<img src="../../../../../images/iOSdev/wwdc23-10168_4.png" alt="" class="img-fluid"></p>
+<p>Handling packs at the <strong>type-level</strong> is a <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=358">major difference</a> with the usual collections thanks to new ways for <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=376">writing code</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10168_5.png" alt="" class="img-fluid"></p>
+<p>It comes in handy to <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=513">avoid boilerplate code</a> in such situations...<br>
+<img src="../../../../../images/iOSdev/wwdc23-10168_6.png" alt="" class="img-fluid"></p>
+<p>...while easily tailoring the <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=655">generic requirements</a> on packs as well.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10168_7.png" alt="" class="img-fluid"><br>
+</br></p>
+<h2 id="implementation"><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=732">Implementation</a> <a class="header-anchor" href="#implementation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>It's recommended the <strong>parentheses be used</strong> for wrapping the pattern expression when the results are embedded in a tuple.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10168_8.png" alt="" class="img-fluid"></p>
+<p>Regarding the <a href="#the-origins">initial example</a>, if the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=871">input and output types need to be different</a></strong>, the code writing may be changed to tailor the parameter pack concept while improving the <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=1013">flow control</a> with the <code>do-catch</code> statement for <strong>handling errors</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10168_9.png" alt="" class="img-fluid"></p>
+</br>
           </div>
         </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#the-origins" class="nav-link text-muted">The origins</a></li><li class="nav-item position-relative">
+            <a href="#the-fundamentals" class="nav-link text-muted">The fundamentals</a></li><li class="nav-item position-relative">
+            <a href="#implementation" class="nav-link text-muted">Implementation</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
         
       </div>
     </div>
@@ -335,7 +288,7 @@
           </a>
         </li>
         <li class="nav-item ms-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2023/2310168.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
             Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
@@ -369,7 +322,7 @@
         }
       }
     </script>
-    <script src="/assets/script.js"></script><script src="/assets/ios-wwdc.js"></script><script>
+    <script src="/assets/script.js"></script><script>
       var tarteaucitronForceLanguage = "en"
       tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
           'site_name': 'accessibility-guidelines',
