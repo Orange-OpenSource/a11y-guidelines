@@ -1,6 +1,7 @@
 ---
 title: "WCAG based guidelines for web development"
 abstract: "Set of criteria for websites and web applications to be taken in account during the development phase"
+displayToc: false
 ---
 
 # WCAG based guidelines for web development

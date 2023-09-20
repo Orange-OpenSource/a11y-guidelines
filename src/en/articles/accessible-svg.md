@@ -43,7 +43,7 @@ second choice:
 
 We add `role="img"` to make sure that with macOS Safari, VoiceOver (old versions) announces "image".
 
-#### SVG online (inline)
+### SVG online (inline)
 <pre> <code class="html">
 &lt;svg viewBox="0 0 440 540" version="1.1" role="img"
   lang="fr" xml:lang="fr"

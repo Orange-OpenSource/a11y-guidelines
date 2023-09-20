@@ -1,6 +1,7 @@
 ﻿---
 title: "Les critères incontournables sous Android pour le développement"
 abstract: "Guide de développement d'une application accessible sous Android"
+displayToc: false
 ---
 
 # Les critères incontournables sous Android pour le développement

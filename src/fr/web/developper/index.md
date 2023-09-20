@@ -1,6 +1,7 @@
 ---
 title: "Web - Développer accessible"
 abstract: "Liste des critères WCAG pour le développement"
+displayToc: false
 ---
 
 # Liste des critères WCAG pour le développement

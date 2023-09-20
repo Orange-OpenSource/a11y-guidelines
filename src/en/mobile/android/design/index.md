@@ -1,6 +1,7 @@
 ﻿---
 title: "Android's essential criteria for design"
 abstract: "Design an accessible Android application for all"
+displayToc: false
 ---
 
 # Android's essential criteria for design
