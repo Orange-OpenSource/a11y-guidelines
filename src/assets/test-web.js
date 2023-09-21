@@ -74,11 +74,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   //appel des Json
   
 
-  doXHR('https://la-va11ydette.orange.com/json/tests-web-'+lang+'.json', function(errFirst, responseFirst) {  
+  doXHR('/assets/json/checklist/tests-web-'+lang+'.json', function(errFirst, responseFirst) {  
     if (errFirst) {
       reqError();
     }
-    return doXHR('https://la-va11ydette.orange.com/json/tests-concepteur-'+lang+'.json', function(errSecond, responseSecond) {
+    return doXHR('/assets/json/checklist/tests-concepteur-'+lang+'.json', function(errSecond, responseSecond) {
       if (errSecond) {
         reqError();
       }
@@ -249,21 +249,42 @@ document.addEventListener("DOMContentLoaded", function(event) {
             headingTheme=currentRefTests[i].themes;
             htmlrefTests +='<h2 id="test-'+formatHeading(currentRefTests[i].themes)+'"'+htmlrefTestsClass+'>'+currentRefTests[i].themes+'</h2>';
           }
-          htmlrefTests += '<article class="accordion-item"><div class="accordion-header" id="heading'+i+'"><h3 class="card-title mb-0"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'"><span class="accordion-title h6 mb-0 flex-grow-1">' + currentRefTests[i].title + '</span><span class="badge bg-light me-2 align-self-center">'+((currentRefTests[i].profils[0] == 'Concepteur')||(currentRefTests[i].profils[0] == 'Designer')  ? translate('conception') : translate('development'))+'</span></a></h3>';
+          htmlrefTests += '<article class="accordion-item"><div class="accordion-header" id="heading'+i+'"><h3 class="card-title mb-0"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'"><span class="accordion-title h6 mb-0 me-2 flex-grow-1">' + currentRefTests[i].title + '</span><span class="badge bg-light me-2 align-self-center">'+((currentRefTests[i].profils[0] == 'Concepteur')||(currentRefTests[i].profils[0] == 'Designer')  ? translate('conception') : translate('development'))+'</span></a></h3>';
 
           htmlrefTests += '</div><div id="collapse'+i+'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading'+i+'">';
           htmlrefTests += '<div class="card-block"><div class="row">';
-          htmlrefTests += '<div class="col-lg-6"><h4>' + translate('process') + '</h4><ol>';
-          for (let j in currentRefTests[i].tests) {
-            htmlrefTests += '<li>' + currentRefTests[i].tests[j] + '</li> ';
+          htmlrefTests += '<div class="col-lg-12"><h4>' + translate('process') + '</h4>';
+
+          if(currentRefTests[i].type.length==0){
+            currentRefTests[i].type.push("")
           }
-          htmlrefTests += '</ol></div>';
-          htmlrefTests += '<div class="col-lg-6"><h4>' + translate('check') + '</h4><ol>';
+          for (let k in currentRefTests[i].type){
+            if(currentRefTests[i].type[k]!=""){
+              htmlrefTests += '<h5 class="fs-6 ms-2">' + translate('tools') + ': '+currentRefTests[i].type[k]+'</h5>';
+            }
+            htmlrefTests += '<ol>';
+            
+            if(Array.isArray(currentRefTests[i].tests[0])){
+              for (let j in currentRefTests[i].tests[k]) {
+                htmlrefTests += '<li>' + currentRefTests[i].tests[k][j] + '</li> ';            
+              } 
+            }
+            else{
+              for (let j in currentRefTests[i].tests) {
+                htmlrefTests += '<li>' + currentRefTests[i].tests[j] + '</li> ';            
+              }
+            }
+              
+              htmlrefTests += '</ol>';
+          }
+
+          htmlrefTests += '</ol></div></div>';
+          htmlrefTests += '<div class="row">';
+          htmlrefTests += '<div class="col-lg-12"><h4>' + translate('check') + '</h4><ol>';
           for (let j in currentRefTests[i].verifier) {
             htmlrefTests += '<li>' +  currentRefTests[i].verifier[j] + '</li> ';
           }
-          htmlrefTests += '</ol></div>';
-          htmlrefTests += '</div>';
+          htmlrefTests += '</ol></div></div>';
           htmlrefTests += '<div class="row">';
           htmlrefTests += '<div class="col-lg-12"><h4>'+((currentRefTests[i].profils[0] == 'Concepteur') ? translate('justification') : translate('results'))+'</h4><ol>';
           for (let j in currentRefTests[i].resultat) {
@@ -277,15 +298,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
             htmlrefTests += '</div>';
             htmlrefTests += '</div>';
           }
-          htmlrefTests += '</div><div class="card-footer text-muted"><b>' + translate('profiles') + ': </b>';
+          htmlrefTests += '</div><div class="card-footer text-muted"><p><b>' + translate('profiles') + ': </b>';
           for (let j in currentRefTests[i].profils) {
             htmlrefTests += currentRefTests[i].profils[j];
             j != ((currentRefTests[i].profils).length-1) ? htmlrefTests +=',  ' : '';
           }
-          htmlrefTests += '<br />'+((currentRefTests[i].type).length > 0 ? '<b>' + translate('tools') + ': </b>' : '');
-          for (let j in currentRefTests[i].type) {
-            htmlrefTests += '<i class="fa fa-tag" aria-hidden="true"></i> ' + currentRefTests[i].type[j] + ' ';
-          }
+          htmlrefTests += '</p>';
           htmlrefTests += '</div>';
           htmlrefTests += '</div></article>';
         }
@@ -323,7 +341,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
           // Chaque "type" dans chaque ligne (test)
           for (let j in refTests[i].type) {
-            types.push(refTests[i].type[j]);
+
+            ( Array.isArray(refTests[i].type[j]) ? types.push(refTests[i].type[j][0]) : types.push(refTests[i].type[j]))
+            
           }
 
           // Chaque "profil" dans chaque ligne (test)
@@ -336,7 +356,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         //let uniqueTypes = types.filter( (value, index, self) => self.indexOf(value) === index );
         uniqueTypes = types.filter(function(value, index, self) {
-          return self.indexOf(value) === index;
+          if(value!=""){
+            return self.indexOf(value) === index;
+          }
         });
 
         //on tri par ordre alphabétique
@@ -382,18 +404,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         let self       = this;
         let runUpdateType = false;
 
-        /*
-        //init array conditions avec valeur Expert Accessibilité
-        arrProfil.push("Expert Accessibilité");
-
-        conditions.unshift(function(item) {
-          return item.profils.indexOf(arrProfil[0]) !== -1;
-        });
-
-        //on nomme la fonction, pour les boutons radio on utilise this.name
-        Object.defineProperty(conditions[0], 'name', {value: this.name, writable: false});
-        */
-
         for (var i = 0; i < checkboxes.length; i++) {
 
           let input = checkboxes[i];
@@ -414,6 +424,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
 
             let indice = arrType.length + arrProfil.length;
+
 
 
             if (indice > 0) {
@@ -444,10 +455,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
                   //on supprime les doublons, nécessaire pour les boutons radio
                   delDoublon(conditions, this.name);
 
-
+                  
                   conditions.unshift(function(item) {
-                    return item.type.indexOf(arrType[0]) !== -1;
+                    return item.type.toString().indexOf(arrType[0]) !== -1;
                   });
+
                   //on nomme la fonction, pour les checkboxes on utilise this.id
                   Object.defineProperty(conditions[0], 'name', {value: this.name, writable: false});
 
