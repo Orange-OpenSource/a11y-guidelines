@@ -2,11 +2,11 @@
 <html lang="fr" dir="ltr" class="no-js">
   <head>
     <meta charset="utf-8">    
-    <title>Accueil - Recommandations accessibilité numérique Orange</title>
+    <title>Sorti des WCAG 2.2 sur la Va11ydette - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
     
-    <meta name="description" content="Recommandations, méthodes, ressources et outils proposés par le centre de compétences groupe d&#39;Orange sur l&#39;accessibilité numérique">
+    <meta name="description" content="Les WCAG 2.2 sont officiellement sortis, la Va11ydette se met à jours.">
             
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -24,10 +24,12 @@
     
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -71,7 +73,7 @@
     <div class="collapse navbar-collapse me-auto" id="main-menu-list">
       <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a href="/fr/" class="nav-link active" aria-current="page">
+              <a href="/fr/" class="nav-link">
   Accueil 
 </a>
             </li>
@@ -101,7 +103,7 @@
 </a>
             </li>
             <li class="nav-item">
-              <a href="/fr/articles/" class="nav-link">
+              <a href="/fr/articles/" class="nav-link active" aria-current="true">
   Articles 
 </a>
             </li><li class="nav-item d-md-none">
@@ -131,183 +133,99 @@
     <div class="container-lg pt-2">
       
       
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici&amp;nbsp;:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Sorti des WCAG 2.2 sur la Va11ydette
+        </li>
+      </ol>
+</nav>
+
+      
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        Sur cette page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#la-va11ydette-se-met-a-jour" class="dropdown-item text-wrap">La Va11ydette se met à jour</a><a href="#nouveaux-criteres" class="dropdown-item text-wrap">Nouveaux critères</a><a href="#creation-dun-changelog" class="dropdown-item text-wrap">Création d&#39;un changelog</a></div>
+    </nav>
+        
       </div>
     </div>
     
-<main id="main-content" class="pt-4" role="main">
-  <section class="container-lg">
-    <div class="row">
-      <div class="col-md-7 pb-5"><h1>Accessibilité Numérique Orange</h1>
-<h2 id="en-quelques-mots">En quelques mots <a class="header-anchor" href="#en-quelques-mots" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Recommandations, méthodes, ressources et outils proposés par <span lang="en">EASE</span>, <span lang="en">E-Accessibility Solutions for Everyone</span>, le centre de compétences groupe d'Orange sur l'accessibilité numérique.</p>
-<p>Nous proposons des formations, accompagnons les projets, publions des ressources pour les parties prenantes du numérique et réalisons des audits de conformité.<br>
-Notre expertise couvre les sites Web (e-commerce, e-learning, applications métier, Intranet...), les applications mobile, les documents bureautiques, les réseaux sociaux d'entreprise, les courriels, les progiciels...</p>
-<ul class="list-inline">
-  <li class="list-inline-item pb-2">
-    <a href="definition-accessibilite-numerique/" class="btn btn-secondary btn-sm">Définition de l'accessibilité numérique</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="les-situations-de-handicap/" class="btn btn-secondary btn-sm">Les situations de handicap</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="solutions-assistance/" class="btn btn-secondary btn-sm">Les solutions d'assistance</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="persona/" class="btn btn-secondary btn-sm">Quelques personae</a>
-  </li>
-  <li class="list-inline-item pb-2">
-    <a href="glossaire/" class="btn btn-secondary btn-sm">Glossaire</a>
-  </li>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          
+            <h1>Sorti des WCAG 2.2 sur la Va11ydette</h1>  
+            
+              <span class="visually-hidden" id="filters_label">
+                Thématiques associées :
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="https://a11y-guidelines.orange.com/fr//articles/?tag=intermediate" class="btn btn-dark btn-sm" data-tag="intermediate">Intermédiaire</a></li>
+              </ul>
+            
+            <time class="text-muted" datetime="2023-10-06T00:00:00.000Z">06 octobre 2023</time>
+            
+          <div class="mt-4">
+          <p>Depuis le 5 octobre 2023, les WCAG 2.2 sont officiellement sorties. Vous pouvez retrouver <a href="https://www.w3.org/TR/2023/REC-WCAG22-20231005/">les recommandations officielles des WCAG 2.2</a>.</p>
+<p>Voici aussi un article qui résume <a href="https://www.w3.org/TR/2023/REC-WCAG22-20231005/">la route parcourue et les nouveautés des WCAG 2.2</a>.</p>
+<h2 id="la-va11ydette-se-met-a-jour">La Va11ydette se met à jour <a class="header-anchor" href="#la-va11ydette-se-met-a-jour" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="nouveaux-criteres">Nouveaux critères <a class="header-anchor" href="#nouveaux-criteres" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><a href="https://la-va11ydette.orange.com/">La Va11ydette</a> a mis ses grilles d'évaluations pour y intégrer les nouveaux critères.</p>
+<p>On y compte 6 nouveaux critères :</p>
+<ul>
+    <li class="my-1"><strong>Si une information est fournie par ou à l'utilisateur dans un même processus, sa saisie n'est t-elle pas redemandée ?</strong>, qui est lié au <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry">WCAG 3.3.7 A</a></li>
+    <li class="my-1"><strong>L'utilisateur peut-il s'authentifier sans utiliser un test s'appuyant sur des fonctions cognitives ?</strong>, qui est lié au <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication">WCAG 3.3.8 AA</a></li>
+    <li class="my-1"><strong>Le focus est-il complètement masqué ?</strong>, lié au <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance-minimum">WCAG 2.4.11 AA</a></li>
+    <li class="my-1"><strong>Si une aide est proposée et répétée sur plusieurs pages, celle-ci est-elle présentée de manière cohérente ?</strong>, lié au <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help">WCAG 3.2.6 A</a></li>
+    <li class="my-1"><strong>La taille des zones cliquables ou tactiles est-elle suffisante ?</strong>, lié au <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">WCAG 2.5.8 AA</a></li>
+    <li class="my-1"><strong>Les fonctionnalités utilisant l'action de glisser et déposer ont-elles une alternative ?</strong>, lié au <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements">WCAG 2.5.7 AA</a></li>
 </ul>
-</div>
-      <div class="col-md-5 align-self-end"><img src="/images/home-banner.svg" alt="" class="img-fluid"></div>
-    </div>
-  </section>
-  <div class="bg-supporting-green py-4">
-    <section class="container-lg">
-      <h2>Nos recommandations</h2>
-      <div class="row row-cols-1 row-cols-md-4 g-4"><div class="col">
-  <div class="card h-100 bg-info border-secondary">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/web.svg" alt="" class="img-fluid" width="190" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/web/" class="link-primary stretched-link">Web</a>
-      </h3>
-      
-    </div>
-  </div>
-</div><div class="col">
-  <div class="card h-100 bg-warning border-secondary">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/android.svg" alt="" class="img-fluid" width="72" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/mobile/android/" class="link-primary stretched-link">Android</a>
-      </h3>
-      
-    </div>
-  </div>
-</div><div class="col">
-  <div class="card h-100 bg-warning border-secondary">
-    <div class="py-3 px-3 text-center">
-      <img src="../images/icons/ios.svg" alt="" class="img-fluid" width="72" height="130">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/mobile/ios/" class="link-primary stretched-link">iOS</a>
-      </h3>
-      
-    </div>
-  </div>
-</div><div class="col">
-  <div class="card h-100 bg-purple border-secondary">
-    <div class="pt-3 px-3 text-center">
-      <img src="../images/icons/editorial-content.svg" alt="" class="img-fluid" width="131" height="151">
-    </div>
-    <div class="card-body bg-dark">
-      <h3 class="card-title text-primary mb-0">
-        <a href="/fr/contenu-et-communication/" class="link-primary stretched-link">Contenu et communication</a>
-      </h3>
-      
-    </div>
-  </div>
-</div></div>
-    </section>
-  </div>
-  <div class="bg-300">
-    <section class="container-lg py-4">
-      <div class="d-flex">
-        <h2>Derniers articles</h2>
-        <div class="ps-3">
-          <a href="articles/" class="btn btn-secondary btn-sm">Voir tous les articles</a>
-        </div>
-      </div>
-      <ol class="list-unstyled row"><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/wcag22-release/" class="text-decoration-none">Sorti des WCAG 2.2 sur la Va11ydette</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2023-10-06T00:00:00.000Z">06 octobre 2023</time>
-        
-        
-          <p class="my-2">Les WCAG 2.2 sont officiellement sortis, la Va11ydette se met à jours.</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/veille-aout-septembre-2023/" class="text-decoration-none">Veille #A11y Août-Septembre 2023</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2023-10-05T00:00:00.000Z">05 octobre 2023</time>
-        
-        
-          <p class="my-2">Florilège de ressources en #a11y, Août-Septembre 2023</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/veille-juin-juillet-2023/" class="text-decoration-none">Veille #A11y Juin-Juillet 2023</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2023-08-05T00:00:00.000Z">05 août 2023</time>
-        
-        
-          <p class="my-2">Florilège de ressources en #a11y, Juin-Juillet 2023</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/veille-avril-mai-2023/" class="text-decoration-none">Veille #A11y Avril-Mai 2023</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2023-06-05T00:00:00.000Z">05 juin 2023</time>
-        
-        
-          <p class="my-2">Florilège de ressources en #a11y, Avril-Mai 2023</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/veille-fevrier-mars-2023/" class="text-decoration-none">Veille #A11y Février-Mars 2023</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2023-03-31T00:00:00.000Z">31 mars 2023</time>
-        
-        
-          <p class="my-2">Florilège de ressources en #a11y, Février-Mars 2023</p>
-        
-      </article>
-    </li><li class="col-md-4 pb-3 d-flex">
-      <article class="bg-white p-3 flex-grow-1">
-        <h3 class="mb-1">
-          <a href="/fr/articles/veille-octobre-janvier-2023/" class="text-decoration-none">Veille #A11y Octobre 2022 -Janvier 2023</a>
-        </h3>
-        
-          <time class="text-muted" datetime="2023-02-05T00:00:00.000Z">05 février 2023</time>
-        
-        
-          <p class="my-2">Florilège de ressources en #a11y, Octobre 2022 -Janvier 2023</p>
-        
-      </article>
-    </li></ol>
-    </section>
-  </div>
-</main>
+<p><img src="../images/wcag22exemple.png" alt="" class="img-fluid"></p>
+<h3 id="creation-dun-changelog">Création d'un changelog <a class="header-anchor" href="#creation-dun-changelog" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Un changelog est désormais disponible pour suivre l'évolution de la grille d'évaluation Web de la Va11ydette.<br>
+<a href="https://github.com/Orange-OpenSource/La-Va11ydette/blob/master/CHANGELOG.md">Le changelog est disponible sur le Git Hub de la Va11ydette</a>.</p>
 
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sur cette page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#la-va11ydette-se-met-a-jour" class="nav-link text-muted">La Va11ydette se met à jour</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#nouveaux-criteres" class="nav-link text-muted">Nouveaux critères</a></li><li class="nav-item position-relative">
+            <a href="#creation-dun-changelog" class="nav-link text-muted">Création d&#39;un changelog</a></li></ul></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     
 
-<footer id="footer" class="o-footer mt-0" role="contentinfo">
+<footer id="footer" class="o-footer" role="contentinfo">
   <div class="container-lg">
     <nav class="py-2" role="navigation">
       <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
@@ -336,7 +254,7 @@ Notre expertise couvre les sites Web (e-commerce, e-learning, applications méti
           </a>
         </li>
         <li class="nav-item ms-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/wcag22-release.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
             Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
@@ -359,12 +277,14 @@ Notre expertise couvre les sites Web (e-commerce, e-learning, applications méti
       <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
     
     
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
     <script>
       const Application = {
         lang: "fr",
         vendors: {
-          highlightJS: false,
-          highlightTitle: false
+          highlightJS: true,
+          highlightTitle: true
         }
       }
     </script>

@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2023-10-05T00:00:00Z</updated>
+  <updated>2023-10-06T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>  
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Sorti des WCAG 2.2 sur la Va11ydette</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/wcag22-release/"/>
+    <updated>2023-10-06T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/wcag22-release/</id>
+    <content xml:lang="fr" type="html">Les WCAG 2.2 sont officiellement sortis, la Va11ydette se met à jours.</content>
+  </entry>
   
   <entry>
     <title>Veille #A11y Août-Septembre 2023</title>
