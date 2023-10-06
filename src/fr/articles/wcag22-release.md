@@ -7,7 +7,7 @@ tags:
   - intermediate
 ---
 
-Depuis le 5 octobre 2023, les WCAG 2.2 sont officielement sortis. Vous pouvez retrouver [les recommandations officielles des WCAG 2.2](https://www.w3.org/TR/2023/REC-WCAG22-20231005/).
+Depuis le 5 octobre 2023, les WCAG 2.2 sont officielement sorties. Vous pouvez retrouver [les recommandations officielles des WCAG 2.2](https://www.w3.org/TR/2023/REC-WCAG22-20231005/).
 
 Voici aussi un article qui résume [la route parcourue et les nouveautés des WCAG 2.2](https://www.w3.org/TR/2023/REC-WCAG22-20231005/).
 
@@ -15,7 +15,7 @@ Voici aussi un article qui résume [la route parcourue et les nouveautés des WC
 
 ### Nouveaux critères
 
-[La Va11ydette](https://la-va11ydette.orange.com/) a mis ces grilles d'évaluations pour y intégrer les nouveaux critères.
+[La Va11ydette](https://la-va11ydette.orange.com/) a mis ses grilles d'évaluations pour y intégrer les nouveaux critères.
 
 On y compte 6 nouveaux critères :
 
