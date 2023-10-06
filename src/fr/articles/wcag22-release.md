@@ -7,7 +7,7 @@ tags:
   - intermediate
 ---
 
-Depuis le 5 octobre 2023, les WCAG 2.2 sont officielement sorties. Vous pouvez retrouver [les recommandations officielles des WCAG 2.2](https://www.w3.org/TR/2023/REC-WCAG22-20231005/).
+Depuis le 5 octobre 2023, les WCAG 2.2 sont officiellement sorties. Vous pouvez retrouver [les recommandations officielles des WCAG 2.2](https://www.w3.org/TR/2023/REC-WCAG22-20231005/).
 
 Voici aussi un article qui résume [la route parcourue et les nouveautés des WCAG 2.2](https://www.w3.org/TR/2023/REC-WCAG22-20231005/).
 
