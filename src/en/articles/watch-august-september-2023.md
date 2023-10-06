@@ -24,8 +24,8 @@ So, end of summer not so calm!
 - The EAA (European Accessibility Act) its implications and even in England: https://www.craigabbott.co.uk/blog/european-accessibility-act-what-you-need-to-know/ ?ref=accessible-mobile-apps-weekly.ghost.io
 - The case of the USA with regard to the accessibility obligation (ADA, American Disability Act) for segments at risk, soon in Europe? : https://karlgroves.com/web-accessibility-in-high-risk-segments/
 - The focus indicator with WCAG 2.2, everything you need to know about this new AAA criterion: https://www.sarasoueidan.com/blog/focus-indicators/
-- The state wants 100% a11y for its sites, we are waiting for the next step...: https://www.numerique.gouv.fr/espace-presse/accessibilite-numerique-a-100-percent-le-government-shifts-up-speed-and-presents-an-order-aimed-at-controlling-the-accessibility-of-public-administration-sites-from-2024/
-- How to meet criteria 4.1.3 Status messages and 1.4.13 Content on hover or focus: https://mn.gov/mnit/media/blog/?id=38-584530#/detail/appId /1/id/584530
+- The French gov wants 100% a11y for its sites, we are waiting for the next step...: (fr): https://www.numerique.gouv.fr/espace-presse/accessibilite-numerique-a-100-percent-le-government-shifts-up-speed-and-presents-an-order-aimed-at-controlling-the-accessibility-of-public-administration-sites-from-2024/
+- How to meet criteria 4.1.3 Status messages and 1.4.13 Content on hover or focus: https://mn.gov/mnit/media/blog/?id=38-584530#/detail/appId/1/id/584530
 
 ## Accessibility strategy
 
