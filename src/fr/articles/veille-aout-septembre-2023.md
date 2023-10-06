@@ -14,6 +14,7 @@ Une petit tour dans les guidelines mobile inspirantes pour que vous vous y metti
 - BBC (GB) : https://www.bbc.co.uk/accessibility/forproducts/guides/mobile/
 - Appt (PAYS-BAS) : https://appt.org/en/guidelines/beginnersguide-accessibility-testing
 - Spotify : https://developer.spotify.com/documentation/accessibility
+
 Et le w3c se mat au développement durable avec ce rapport (en) https://w3c.github.io/sustyweb/.
 
 Donc, fin d'été pas si calme !
@@ -22,7 +23,7 @@ Donc, fin d'été pas si calme !
 ## L'accessibilité dans les lois et les normes 
 
 - Nouvel editor's draft pour l'application des WCAG sur tout ce qui n'est pas web (en)&nbsp;: https://wcag2ict.netlify.app/
-- Le EAA (European Accessibility Act) ses implications et même en Angleterre (en)&nbsp;: https://www.craigabbott.co.uk/blog/european-accessibility-act-what-you-need-to-know/?ref=accessible-mobile-apps-weekly.ghost.io
+- Le EAA (European Accessibility Act) ses implications et même en Angleterre (en)&nbsp;: https://www.craigabbott.co.uk/blog/european-accessibility-act-what-you-need-to-know/
 - Le cas des USA en ce qui concerne l'obligation d'accessibilité (ADA, American Disability Act) pour des segments à risque, bientôt en Europe ? (en)&nbsp;: https://karlgroves.com/web-accessibility-in-high-risk-segments/
 - L'indicateur de prise de focus avec WCAG 2.2, tout savoir sur ce nouveau critère AAA (en)&nbsp;: https://www.sarasoueidan.com/blog/focus-indicators/
 - L'état veut 100% d'a11y pour ses sites, on attend la &suite... : https://www.numerique.gouv.fr/espace-presse/accessibilite-numerique-a-100-percent-le-gouvernement-passe-a-la-vitesse-superieure-et-presente-une-ordonnance-visant-a-controler-laccessibilite-des-sites-des-administrations-publiques-a-compter-2024/
@@ -98,4 +99,4 @@ Donc, fin d'été pas si calme !
 
 ## Autres
 
-- Un cours d'intro sur l'a11y en ligne (en)&nbsp;: https://www.abra.ac/m
+- Un cours d'intro sur l'a11y en ligne (en)&nbsp;: https://www.abra.ac/order?ct=2e43b55d-46fe-4a98-af64-1b15f7d8ee98

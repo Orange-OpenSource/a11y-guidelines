@@ -13,6 +13,7 @@ A quick tour of the inspiring mobile guidelines so you can get started:
 - BBC (GB): https://www.bbc.co.uk/accessibility/forproducts/guides/mobile/
 - Appt (NETHERLANDS): https://appt.org/en/guidelines/beginnersguide-accessibility-testing
 - Spotify: https://developer.spotify.com/documentation/accessibility
+
 And the w3c focuses on sustainable development with this report https://w3c.github.io/sustyweb/.
 
 So, end of summer not so calm!
@@ -21,7 +22,7 @@ So, end of summer not so calm!
 ## Accessibility in laws and standards
 
 - New editor's draft for the application of WCAG on everything that is not web (en): https://wcag2ict.netlify.app/
-- The EAA (European Accessibility Act) its implications and even in England: https://www.craigabbott.co.uk/blog/european-accessibility-act-what-you-need-to-know/ ?ref=accessible-mobile-apps-weekly.ghost.io
+- The EAA (European Accessibility Act) its implications and even in England: https://www.craigabbott.co.uk/blog/european-accessibility-act-what-you-need-to-know/
 - The case of the USA with regard to the accessibility obligation (ADA, American Disability Act) for segments at risk, soon in Europe? : https://karlgroves.com/web-accessibility-in-high-risk-segments/
 - The focus indicator with WCAG 2.2, everything you need to know about this new AAA criterion: https://www.sarasoueidan.com/blog/focus-indicators/
 - The French gov wants 100% a11y for its sites, we are waiting for the next step...: (fr): https://www.numerique.gouv.fr/espace-presse/accessibilite-numerique-a-100-percent-le-government-shifts-up-speed-and-presents-an-order-aimed-at-controlling-the-accessibility-of-public-administration-sites-from-2024/
@@ -29,7 +30,7 @@ So, end of summer not so calm!
 
 ## Accessibility strategy
 
-- Simplify your textual content using AI, to test: https://www.01net.com/actualites/handicap-comment-produit-des-textes-simples-et-intelligiblesgrace-a-l-ia-1942964.html
+- Simplify your textual content using AI, to test (fr): https://www.01net.com/actualites/handicap-comment-produire-des-textes-simples-et-intelligiblesgrace-a-l-ia-1942964.html
 - How to make a11y html tables, to get started: https://blog.pope.tech/2023/08/22/beginners-guide-to-accessible-tables/
 - An e-commerce cart, video: https://www.nicchan.me/blog/talk-developing-an-accessible-add-to-cart-flow/
 - The different types of multiple a11y errors and how to correct them: https://www.tpgi.com/managing-multiple-wcag-failures/
@@ -71,7 +72,7 @@ So, end of summer not so calm!
 
 ## Technical aids
 
-- A reminder for organizing user tests with visually impaired screen reader users: https://www.smashingmagazine.com/2023/06/testing-sites-apps-blind-users-cheat -sheet/
+- A reminder for organizing user tests with visually impaired screen reader users: https://www.smashingmagazine.com/2023/06/testing-sites-apps-blind-users-cheat-sheet/
 - Support for browser video player APIs in AT: https://adrianroselli.com/2023/09/browser-video-players-review.html
 
 ## Mobile app, mobile web
@@ -97,4 +98,4 @@ So, end of summer not so calm!
 
 ## Others
 
-- An introductory course on a11y online: https://www.abra.ac/m
+- An introductory course on a11y online: https://www.abra.ac/order?ct=2e43b55d-46fe-4a98-af64-1b15f7d8ee98
