@@ -1,5 +1,5 @@
 ---
-title: "Sorti des WCAG 2.2 sur la Va11ydette"
+title: "Sortie des WCAG 2.2 sur la Va11ydette"
 abstract: "Les WCAG 2.2 sont officiellement sortis, la Va11ydette se met à jours."
 titleBeforeTag: true
 date: "2023-10-06"
