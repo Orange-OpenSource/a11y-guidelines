@@ -24,6 +24,7 @@ The videos that may be of interest to **designers** are highlighted with a **ded
 
 <section class="visually-hidden" id="wwdcTests" aria-hidden="true">
    <h2  id="hhwwdc2023" class="pt-5">WWDC 2023</h2>
+   <p id="hwwdc70">WWDC 2023 Build programmatic UI with Xcode Previews</p>
    <p id="hwwdc69">WWDC 2023 Expand on Swift macros</p>
    <p id="hwwdc68">WWDC 2023 Generalize APIs with parameter packs</p>
    <p id="hwwdc67">WWDC 2023 Keynote</p>
