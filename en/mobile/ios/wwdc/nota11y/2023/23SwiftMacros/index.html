@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Swift macros - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Discover how Swift macros can help you reduce boilerplate in your codebase and adopt complex features more easily.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Skip links - Switch language">
+   <div class="container-lg">
+      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <a href="#main-menu" class="nav-link">Go to menu</a>
+    </li><li class="nav-item">
+      <a href="#main-content" class="nav-link">Go to content</a>
+    </li><li class="nav-item hidden-if-no-js">
+      <a href="#search-input" class="nav-link">Go to search</a>
+    </li><li class="nav-item">
+      <a href="#footer" class="nav-link">Go to footer</a>
+    </li></ul>
+
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+    </div>
+  </nav>
+  
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Swift macros
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#the-basics" class="dropdown-item text-wrap">The basics</a><a href="#the-roles" class="dropdown-item text-wrap">The roles</a><a href="#the-implementation" class="dropdown-item text-wrap">The implementation</a><a href="#libraries" class="dropdown-item text-wrap">Libraries</a><a href="#correct-writing" class="dropdown-item text-wrap">Correct writing</a><a href="#testing" class="dropdown-item text-wrap">Testing</a><a href="#detailed-example" class="dropdown-item text-wrap">Detailed example</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2023: Swift macros</h1>
+<p>Find hereafter a detailed summary of two videos that belong to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original videos is available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2023/10166/">session 10166</a>, <a href="https://developer.apple.com/videos/play/wwdc2023/10167/">session 10167</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_Poster.png" alt="" class="img-fluid"></p>
+<p>&quot;Discover how <strong>Swift macros</strong> can help you <strong>reduce boilerplate</strong> in your codebase and <strong>adopt complex features</strong> more easily. Learn how macros can analyze code, emit rich compiler errors to guide developers towards correct usage, and generate new code that is automatically incorporated back into your project. We'll also take you through important concepts like <strong>macro roles</strong>, <strong>compiler plugins</strong>, and <strong>syntax trees</strong>.&quot;</p>
+<p>&quot;Discover how you can use Swift macros to make your codebase <strong>more expressive</strong> and <strong>easier to read</strong>. Code along as we explore how macros can help you <strong>avoid writing repetitive code</strong> and find out how to use them in your app. We'll share the <strong>building blocks</strong> of a macro, show you how to <strong>test</strong> it, and take you through how you can <strong>emit compilation errors</strong> from macros.&quot;<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="the-basics"><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=46">The basics</a> <a class="header-anchor" href="#the-basics" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=120">numerous reasons</a> for introducing the <strong>macros with <code>Swift</code> <code>5.9</code></strong> are all different but head alltogether towards the <strong>simplicity of code</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_1.png" alt="" class="img-fluid"></p>
+<p>The <strong>design goals</strong> of these macros are fourthfold.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_5.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#SwiftMacrosDesign1"
+           id="SwiftMacrosDesign1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftMacrosDesign2"
+           id="SwiftMacrosDesign2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftMacrosDesign3"
+           id="SwiftMacrosDesign3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftMacrosDesign4"
+           id="SwiftMacrosDesign4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="SwiftMacrosDesign1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the freestanding and attached macros" href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=158">🎬</a></p>
+<p>Two kinds of macros may be used: the <strong>freestanding</strong> macros...<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_2.png" alt="" class="img-fluid"><br>
+... and the <strong>attached</strong> macros.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftMacrosDesign2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the type checked and validated information" href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=186">🎬</a></p>
+<p>Before using a macro, the <strong>incoming parameters</strong> are validated and the <strong>error warnings</strong> may be taken in to account.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftMacrosDesign3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the way the macros are read in the code" href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=217">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_6.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftMacrosDesign4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the rationale behind a macro writing" href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=242">🎬</a></p>
+<p>The code behind a macro may be reviewed thanks to the <strong><code>Xcode</code> new features</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_7.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<p>A dedicated <a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=291">compiler plugin</a> is assigned to the <strong>macro expansion</strong> that's added as code to the program logic.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_8.png" alt="" class="img-fluid"></p>
+<p>And all that new functioning relies on a basic <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=339">macro declaration</a></strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_9.png" alt="" class="img-fluid"><br>
+</br></p>
+<h2 id="the-roles"><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=376">The roles</a> <a class="header-anchor" href="#the-roles" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The set of rules that handle responsabilities areas of a macro is called a <strong>role</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_10.png" alt="" class="img-fluid"><br>
+The roles for creating <strong>attached</strong> and <strong>freestanding</strong> macros are listed below.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_11.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#SwiftMacrosRoles1"
+           id="SwiftMacrosRoles1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftMacrosRoles2"
+           id="SwiftMacrosRoles2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftMacrosRoles3"
+           id="SwiftMacrosRoles3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftMacrosRoles4"
+           id="SwiftMacrosRoles4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftMacrosRoles5"
+           id="SwiftMacrosRoles5_tab"
+           role="tab" 
+           aria-selected="false">5</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftMacrosRoles6"
+           id="SwiftMacrosRoles6_tab"
+           role="tab" 
+           aria-selected="false">6</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SwiftMacrosRoles7"
+           id="SwiftMacrosRoles7_tab"
+           role="tab" 
+           aria-selected="false">7</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="SwiftMacrosRoles1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the freestanding expression role" href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=423">🎬</a></p>
+<p>This role is made for creating a piece of code that returns a value.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_12.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftMacrosRoles2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the freestanding declaration role" href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=519">🎬</a></p>
+<p>This role is used to create one or more declarations.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_13.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftMacrosRoles3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the attached peer role" href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=658">🎬</a></p>
+<p>This role adds extra declarations to the existing ones.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_14.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftMacrosRoles4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the attached accessor role" href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=735">🎬</a></p>
+<p>This role is meant for macros that handle variables and subscripts for creating accessors.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_15.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftMacrosRoles5" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the attached member attribute role" href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=822">🎬</a></p>
+<p>The goal of this role is to add some attributes to an existing type.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_17.png" alt="" class="img-fluid"></p>
+<p>The <strong>role composition</strong> highlighted in this example is explained below, after the macro roles introduction.</p>
+</div>
+<div class="tab-pane" id="SwiftMacrosRoles6" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the attached member role" href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=934">🎬</a></p>
+<p>Through this role, new declarations may be added to the type the macro is applied to.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_18.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SwiftMacrosRoles7" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the attached conformance role" href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1004">🎬</a></p>
+<p>This role aims at adding a conformance to a protocol.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_19.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<p>The <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=835">role composition</a></strong> should be used for creating macros in order to enrich their range usage and to avoid boilerplate code.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_16.png" alt="" class="img-fluid"><br>
+</br></p>
+<h2 id="the-implementation"><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1067">The implementation</a> <a class="header-anchor" href="#the-implementation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>When a macro has to be used, the <a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1110">compiler creates a process</a> in a secure sandbox where a plugin is launched to get the original code through a potential <em><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1117">external macro</a></em>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_20.png" alt="" class="img-fluid"></p>
+<p>The source code is then parsed into a <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10166?time=227">SwiftSyntax tree</a></strong>...<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_21.png" alt="" class="img-fluid"></p>
+<p>... that highlights its <a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1192">own types</a> including <strong>nodes</strong> that may be <a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1233">tokens</a> or just have child nodes as properties.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_23.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="libraries">Libraries <a class="header-anchor" href="#libraries" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>To fully support the <code>SwiftSyntax tree</code>, dedicated libraires should be imported:</p>
+<ul>
+<li><strong><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1177">SwiftSyntax</a></strong> representing the source code as a tree structure.</li>
+<li><strong><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1324">SwiftSyntaxMacros</a></strong> dealing with necessary types and protocols for macros.</li>
+<li><strong><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1331">SwiftSyntaxBuilder</a></strong> supporting the new generated code through the syntax trees.</li>
+</ul>
+<p><img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_22.png" alt="" class="img-fluid"></p>
+<h3 id="correct-writing"><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=2018">Correct writing</a> <a class="header-anchor" href="#correct-writing" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Unlike many languages that hold <a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=2086">hygienic macro systems</a>, <code>Swift</code> handles the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=2021">name collisions</a></strong> through a dedicated method to be used.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_24.png" alt="" class="img-fluid"></p>
+<p>Moreover, the <strong>names specifiers</strong> that can be used as arguments in macros are <a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=2162">fivefold</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_25.png" alt="" class="img-fluid"></p>
+<p>Should the <strong>macros be reliable</strong>, it's important <a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=2236">some rules</a> be followed so as not to encounter outlandish behaviors.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_26.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="testing"><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=2293">Testing</a> <a class="header-anchor" href="#testing" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Testing macros should be one of the <strong>essential milestones</strong> of the development that relies on a <strong>simple code structure</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_27.png" alt="" class="img-fluid"><br>
+</br></p>
+<h2 id="detailed-example">Detailed example <a class="header-anchor" href="#detailed-example" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Before diving into the different steps for creating a macro, let's look into the <code>Xcode</code> environment to find out some new features regarding this context.</p>
+<ul>
+<li>
+<p>Create a <strong>macro template</strong> ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10166?time=316">🎬</a></p>
+</li>
+<li>
+<p>Test a macro through <strong>unit tests</strong> ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10166?time=538">🎬</a></p>
+</li>
+</ul>
+</br>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2023/10166/?time=708">following phases</a> are meant to be automatically generating an initializer with a macro:</p>
+<ul>
+<li>
+<p><strong>Declare</strong> a macro ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10166?time=849">🎬</a></p>
+</li>
+<li>
+<p><strong>Implement</strong> a macro ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10166?time=882">🎬</a></p>
+</li>
+<li>
+<p>Connect an <code>attached macro</code> with its corresponding <strong>MemberMacro protocol</strong> ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10166?time=906">🎬</a></p>
+</li>
+<li>
+<p>Write the <strong>test case first</strong> ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10166/?time=1011">🎬</a></p>
+</li>
+<li>
+<p>Inspect the <strong>SwiftSyntax tree</strong> of an enum through its syntactic structure ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10166?time=1225">🎬</a></p>
+</li>
+<li>
+<p>Use the <code>Xcode</code> <strong>breakpoint</strong> for macros ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10166?time=1192">🎬</a></p>
+</li>
+<li>
+<p>Add the <strong>macro package</strong> to the Xcode project ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10166?time=1482">🎬</a></p>
+</li>
+<li>
+<p><strong>Expand a macro</strong> to find out what its content is ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10166?time=1556">🎬</a></p>
+</li>
+<li>
+<p>Emit an <strong>error message</strong> and use the <strong>diagnostics</strong> ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10166?time=1681">🎬</a></p>
+</li>
+<li>
+<p>Insert <strong>macro errors</strong> with the <code>Swift Error protocol</code> ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10166?time=1721">🎬</a></p>
+</li>
+</ul>
+</br>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#the-basics" class="nav-link text-muted">The basics</a></li><li class="nav-item position-relative">
+            <a href="#the-roles" class="nav-link text-muted">The roles</a></li><li class="nav-item position-relative">
+            <a href="#the-implementation" class="nav-link text-muted">The implementation</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#libraries" class="nav-link text-muted">Libraries</a></li><li class="nav-item position-relative">
+            <a href="#correct-writing" class="nav-link text-muted">Correct writing</a></li><li class="nav-item position-relative">
+            <a href="#testing" class="nav-link text-muted">Testing</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#detailed-example" class="nav-link text-muted">Detailed example</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2023/23SwiftMacros.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2023 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
