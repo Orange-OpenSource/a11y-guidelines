@@ -24,11 +24,11 @@ Le nom accessible est, par exemple, annoncé par un lecteur d'écran à la prise
 
 Pour accéder au nom (accessible), le plus simple est d'utiliser les outils des navigateurs.
 
-Dans Chrome, il faut, dans les Chrome dev tools (<kbd>Ctrl+ Maj. + i</kbd>), inspecter un élément (onglet "Elements") et ouvrir le panneau "Accessibility" à la place de celui de "Style" (généralement à droite). On accède à l'"Accessibility tree" et dans "Computed properties" au "Name", le nom accessible de l'élément inspecté.
+Dans Chrome, il faut utiliser les Chrome dev tools (<kbd>Ctrl+ Maj. + i</kbd>) pour inspecter un élément et ouvrir le panneau "Accessibility" à la place de celui de "Style" (généralement à droite). On accède à l'"Accessibility tree" et dans "Computed properties" au "Name", le nom accessible de l'élément inspecté.
 
 ![Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert](../../web/images/chrome_name.png)
 
-Dans FireFox, il faut, dans les dev tools (<kbd>Ctrl+ Maj. + i</kbd>), ouvrir l'onglet "Accessibilité" (à afficher les "Options" des dev tools), inspecter un élément. On accède au "Name", le nom accessible de l'élément inspecté.
+Dans FireFox, il faut utiliser les dev tools (<kbd>Ctrl+ Maj. + i</kbd>), ouvrir l'onglet "Accessibilité" (à afficher les "Options" des dev tools), inspecter un élément. On accède au "Name", le nom accessible de l'élément inspecté.
 
 ![Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert](../../web/images/FF_name.png)
 ### Contenu d'une balise
