@@ -18,7 +18,8 @@ let c=document.getElementById("refTests"),d="",f="";for(let g in b){if("FAKE"!=b
 if(f!=b[g].themes){let a="0"===g?"":" class=\"pt-5\"";f=b[g].themes,d+="<h2 id=\"test-"+e(b[g].themes)+"\""+a+" >"+b[g].themes+"</h2>"}d+="<a href=\""+b[g].raccourcis+"\" style=\"text-decoration: none;\">",d+="<p id=\"heading"+g+"\">"+b[g].title+"     ",b[g].resultat[0]&&(d+="<span class=\"badge rounded-pill bg-light mr-2 align-self-center\">",d+=b[g].resultat[0]+"</span>"),d+="</p></a>"}// Affichage de l'ensemble des lignes en HTML
 c.innerHTML=0===b.length?"<div class=\"alert alert-warning\">"+a("noResults")+"</div>":d}},this.DisplayFilters=function(){let b=document.getElementById("filter-footer"),c="";//Id défini dans le fichier 'filters.njk'
 c+="<button id=\"reinit\" class=\"btn btn-secondary\" disabled>"+a("reinitFilters")+"</button>",b.innerHTML=c;let d=document.getElementById("reinit");d.addEventListener("click",function(){l.FetchAll(k),l.FilterByType(),l.UpdateFeedback(!1,k.length)});// Selection de l'élément
-let e=document.getElementById("types"),f=[],g=document.getElementById("profils"),h=[];// Chaque ligne (test)
+let e=document.getElementById("types"),f=[],g=document.getElementById("profils"),h=[];// Selection de l'élément
+// Chaque ligne (test)
 for(let a in k){// Chaque "type" dans chaque ligne (test)
 for(let b in k[a].type)f.push(k[a].type[b]);// Chaque "profil" dans chaque ligne (test)
 for(let b in k[a].profils)h.push(k[a].profils[b])}//let uniqueTypes = types.filter( (value, index, self) => self.indexOf(value) === index );
