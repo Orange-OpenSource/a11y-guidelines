@@ -119,8 +119,8 @@ Permettre la visibilité du focus sur tous les éléments actifs, notamment pour
 Dans les captures d’écran suivantes, le focus est positionné sur le lien «&nbsp;209 SMS/mois&nbsp;».  
 La première capture présente le comportement par défaut (focus représenté par des pointillés).
 Dans la seconde capture, les pointillés ont été supprimés, mais un encadré permet d’indiquer de manière explicite l’emplacement du focus.  
-![capture d’écran présentant l’affichage du focus par défaut](images/focus.png)
-![capture d’écran présentant un comportement personnalisé pour l’affichage du focus](images/focus2.png)
+![capture d’écran présentant l’affichage du focus par défaut](..\..\images/focus.png)
+![capture d’écran présentant un comportement personnalisé pour l’affichage du focus](..\..\images/focus2.png)
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a>
