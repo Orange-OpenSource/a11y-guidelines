@@ -40,6 +40,6 @@
     "string": "^3.3.3"
   },
   "dependencies": {
-    "tarteaucitronjs": "^1.8.4"
+    "tarteaucitronjs": "^1.14.0"
   }
 }
