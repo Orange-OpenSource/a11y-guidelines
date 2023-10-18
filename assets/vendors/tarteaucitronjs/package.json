@@ -1,31 +1,31 @@
 {
   "_args": [
     [
-      "tarteaucitronjs@1.9.6",
+      "tarteaucitronjs@1.14.0",
       "/home/runner/work/a11y-guidelines/a11y-guidelines"
     ]
   ],
-  "_from": "tarteaucitronjs@1.9.6",
-  "_id": "tarteaucitronjs@1.9.6",
+  "_from": "tarteaucitronjs@1.14.0",
+  "_id": "tarteaucitronjs@1.14.0",
   "_inBundle": false,
-  "_integrity": "sha512-WZZek0dGqXASTZSMld2uuXtXUFk0zMCx84C8Ae71kajl9iV6KKeYeZZzrfQRk1TLuKGUZmzyDhnlV5UHGapA3g==",
+  "_integrity": "sha512-NjuzYq6gvoEdzSH9aO2+N3fJdjJ0tdtwrWT8vLYVHoPjoPMha29h5ULN3dHx8VPG1anzZzlBSczVHSe0h1IRpQ==",
   "_location": "/tarteaucitronjs",
   "_phantomChildren": {},
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "tarteaucitronjs@1.9.6",
+    "raw": "tarteaucitronjs@1.14.0",
     "name": "tarteaucitronjs",
     "escapedName": "tarteaucitronjs",
-    "rawSpec": "1.9.6",
+    "rawSpec": "1.14.0",
     "saveSpec": null,
-    "fetchSpec": "1.9.6"
+    "fetchSpec": "1.14.0"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/tarteaucitronjs/-/tarteaucitronjs-1.9.6.tgz",
-  "_spec": "1.9.6",
+  "_resolved": "https://registry.npmjs.org/tarteaucitronjs/-/tarteaucitronjs-1.14.0.tgz",
+  "_spec": "1.14.0",
   "_where": "/home/runner/work/a11y-guidelines/a11y-guidelines",
   "author": {
     "name": "amauri.io"
@@ -54,5 +54,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.9.6"
+  "version": "1.14.0"
 }
