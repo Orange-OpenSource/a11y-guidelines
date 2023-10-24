@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Build programmatic UI with Xcode Previews - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Learn how you can use the #Preview macro on Xcode 15 to quickly iterate on your UI code written in SwiftUI, UIKit, or AppKit.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Skip links - Switch language">
+   <div class="container-lg">
+      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <a href="#main-menu" class="nav-link">Go to menu</a>
+    </li><li class="nav-item">
+      <a href="#main-content" class="nav-link">Go to content</a>
+    </li><li class="nav-item hidden-if-no-js">
+      <a href="#search-input" class="nav-link">Go to search</a>
+    </li><li class="nav-item">
+      <a href="#footer" class="nav-link">Go to footer</a>
+    </li></ul>
+
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+    </div>
+  </nav>
+  
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Build programmatic UI with Xcode Previews
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#overview" class="dropdown-item text-wrap">Overview</a><a href="#previews-contents" class="dropdown-item text-wrap">Previews contents</a><a href="#views" class="dropdown-item text-wrap">Views</a><a href="#widgets" class="dropdown-item text-wrap">Widgets</a><a href="#xcode-features" class="dropdown-item text-wrap">Xcode features</a><a href="#canvas" class="dropdown-item text-wrap">Canvas</a><a href="#mode-of-previews" class="dropdown-item text-wrap">Mode of previews</a><a href="#tips-tricks" class="dropdown-item text-wrap">Tips &amp; tricks</a><a href="#previews-in-a-project" class="dropdown-item text-wrap">Previews in a project</a><a href="#previewing-in-libraries" class="dropdown-item text-wrap">Previewing in libraries</a><a href="#providing-sample-assets" class="dropdown-item text-wrap">Providing sample assets</a><a href="#leveraging-devices" class="dropdown-item text-wrap">Leveraging devices</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2023: Build programmatic UI with Xcode Previews</h1>
+<p>Find hereafter a detailed summary of a video that belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original videos is available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2023/10252/">session 10252</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10252_Poster.png" alt="" class="img-fluid"></p>
+<p>&quot;Learn how you can use the <strong>#Preview macro on <code>Xcode 15</code></strong> to quickly iterate on your UI code written in SwiftUI, UIKit, or AppKit. Explore a collage of unique workflows for <strong>interacting with views right in the canvas</strong>, find out how to <strong>view multiple variations of UI simultaneously</strong>, and discover how you can <strong>travel through your widget's timeline</strong> in seconds to test the transitions between entries. We'll also show you how to add previews to libraries, provide sample assets, and preview your views in your physical devices to leverage their capabilities and existing data.&quot;<br>
+</br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
+</br></p>
+<h2 id="overview"><a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=87">Overview</a> <a class="header-anchor" href="#overview" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Previews</strong> are handled by the <strong>#Preview macro</strong> to return views that are automatically managed by the system when changes are added in the <code>Swift</code> code.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10252_1.png" alt="" class="img-fluid"></p>
+<p>Using the previews leads towards <a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=171">major pros</a> that streamline the code programing.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10252_2.png" alt="" class="img-fluid"><br>
+</br></p>
+<h2 id="previews-contents"><a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=228">Previews contents</a> <a class="header-anchor" href="#previews-contents" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Two different types of elements can be previewed: the <strong>views</strong> and the <strong>widgets</strong>.</p>
+<h3 id="views">Views <a class="header-anchor" href="#views" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-10252_6.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#XcodePreviewsContents1"
+           id="XcodePreviewsContents1_tab"
+           role="tab" 
+           aria-selected="true">SwiftUI</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#XcodePreviewsContents2"
+           id="XcodePreviewsContents2_tab"
+           role="tab" 
+           aria-selected="false">UIKit&nbsp;&&nbsp;Appkit</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="XcodePreviewsContents1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the views with swift ui" href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=283">🎬</a></p>
+<p>Regarded as <a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=312">scenes</a>, the previews may display nested views with added modifiers and <a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=331">dedicated configuration traits</a> if need be.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10252_7.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="XcodePreviewsContents2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the views with uikit and appkit" href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=348">🎬</a></p>
+<p>According to the use case, a view controller might need to be incorporated for getting the sought preview.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10252_8.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h3 id="widgets"><a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=700">Widgets</a> <a class="header-anchor" href="#widgets" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-10252_5.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#XcodePreviewsWidgets1"
+           id="XcodePreviewsWidgets1_tab"
+           role="tab" 
+           aria-selected="true">Timeline&nbsp;provider</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#XcodePreviewsWidgets2"
+           id="XcodePreviewsWidgets2_tab"
+           role="tab" 
+           aria-selected="false">Live&nbsp;activity</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="XcodePreviewsWidgets1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the timeline provider" href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=711">🎬</a></p>
+<p>Regarding the <strong>timeline provider</strong>, the canvas supplies snapshots so as to take a look at the <a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=757">final rendering</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10252_18.png" alt="" class="img-fluid"></p>
+<p>A <strong>specific timeline</strong> for particular entries may also be implemented for <a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=793">assessing</a> special use cases that can be fixed in the canvas thanks to the <a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=826">pin button</a> when going to other files.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10252_19.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="XcodePreviewsWidgets2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the live activity" href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=911">🎬</a></p>
+<p>This type of widget requires two kind of sets: the <strong>live activity attributes</strong> and their possible <strong>states</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10252_4.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="xcode-features"><a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=379">Xcode features</a> <a class="header-anchor" href="#xcode-features" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="canvas"><a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=401">Canvas</a> <a class="header-anchor" href="#canvas" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Before dealing with the previews, it's important to be sure the <strong>canvas mode</strong> is enabled.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10252_9.png" alt="" class="img-fluid"><br>
+When enabled, the canvas is displayed and concomittandly updated as soon as the <a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=424">first preview</a> is implemented.<br>
+</br></p>
+<h3 id="mode-of-previews"><a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=437">Mode of previews</a> <a class="header-anchor" href="#mode-of-previews" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#XcodePreviewsMode1"
+           id="XcodePreviewsMode1_tab"
+           role="tab" 
+           aria-selected="true">Mode&nbsp;1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#XcodePreviewsMode2"
+           id="XcodePreviewsMode2_tab"
+           role="tab" 
+           aria-selected="false">Mode&nbsp;2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#XcodePreviewsMode3"
+           id="XcodePreviewsMode3_tab"
+           role="tab" 
+           aria-selected="false">Mode&nbsp;3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#XcodePreviewsMode4"
+           id="XcodePreviewsMode4_tab"
+           role="tab" 
+           aria-selected="false">Preview&nbsp;environment</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="XcodePreviewsMode1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the first mode of previews" href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=444">🎬</a></p>
+<p>The first mode is the <strong>live mode</strong> that gives rise to interactivity, animations and asynchronous actions through the canvas.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10252_10.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="XcodePreviewsMode2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the second mode of previews" href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=464">🎬</a></p>
+<p>The <strong>static mode</strong> renders a snapshot of the view and enables interactions with the components while changing the code thereof.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10252_11.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="XcodePreviewsMode3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the third mode of previews" href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=526">🎬</a></p>
+<p>The <strong>variants mode</strong> displays the settings for the features provided in the <code>preview environment</code> explained in the next tab.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10252_13.png" alt="" class="img-fluid"></p>
+<p>All the <strong>dynamic type sizes</strong> can be rendered while selecting one of them and enabling to slide towards each other.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10252_14.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="XcodePreviewsMode4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the preview environment" href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=492">🎬</a></p>
+<p>The previews may also be enriched by the <code>Color Scheme</code>, the <code>Orientation</code> and the <code>Dynamic Type</code> feature through the <strong>Device Settings popover</strong> located in the canvas.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10252_12.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h3 id="tips-tricks">Tips &amp; tricks <a class="header-anchor" href="#tips-tricks" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ol>
+<li>Fix the position of <code>SwiftUI</code> elements according to their <a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=552">dynamic type sizes</a> in two steps.</li>
+</ol>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#XcodePreviewsTips1"
+           id="XcodePreviewsTips1_tab"
+           role="tab" 
+           aria-selected="true">Step&nbsp;1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#XcodePreviewsTips2"
+           id="XcodePreviewsTips2_tab"
+           role="tab" 
+           aria-selected="false">Step&nbsp;2</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="XcodePreviewsTips1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the first step" href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=570">🎬</a></p>
+<p>Use a <code>Form</code> instead of a <code>VStack</code> for grouping the controls inside sections.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10252_15.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="XcodePreviewsTips2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the second step" href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=605">🎬</a></p>
+<p>Add a header to the created sections.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10252_16.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<ol start="2">
+<li>Add an <a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=638">image filter</a> inside a view controller.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10252_17.png" alt="" class="img-fluid"></li>
+</ol>
+<h2 id="previews-in-a-project"><a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=959">Previews in a project</a> <a class="header-anchor" href="#previews-in-a-project" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="previewing-in-libraries"><a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=975">Previewing in libraries</a> <a class="header-anchor" href="#previewing-in-libraries" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Previews rely on <a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=1020">three source elements</a> to unravel the <strong>appropriate executable</strong> to be used.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10252_20.png" alt="" class="img-fluid"><br>
+Should <a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=1086">no app exist</a>, the system creates it under a <strong>XCPreviewAgent</strong> for loading the library.</p>
+<p>Based on the suggested <a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=1112">two ways</a> for <strong>improving the libraries previews</strong>, the crucial steps to create a <a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=1152">dedicated app</a> for previews are highlighted and detailed hereafter.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#XcodePreviewsLib1"
+           id="XcodePreviewsLib1_tab"
+           role="tab" 
+           aria-selected="true">Step&nbsp;1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#XcodePreviewsLib2"
+           id="XcodePreviewsLib2_tab"
+           role="tab" 
+           aria-selected="false">Step&nbsp;2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#XcodePreviewsLib3"
+           id="XcodePreviewsLib3_tab"
+           role="tab" 
+           aria-selected="false">Step&nbsp;3</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="XcodePreviewsLib1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the first step for creating an app for previewing" href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=1171">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc23-10252_21.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="XcodePreviewsLib2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the second step for creating an app for previewing" href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=1189">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc23-10252_22.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="XcodePreviewsLib3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the third step for creating an app for previewing" href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=1209">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc23-10252_23.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h3 id="providing-sample-assets"><a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=1226">Providing sample assets</a> <a class="header-anchor" href="#providing-sample-assets" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=1269">Development Assets</a></strong> feature might be of a great help while automatically removing everything inside specific paths when submitting to the <code>App</code> <code>Store</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10252_3.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="leveraging-devices"><a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=1341">Leveraging devices</a> <a class="header-anchor" href="#leveraging-devices" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Previews can be performed through the <strong>preview device picker</strong> located in the canvas:</p>
+<ol>
+<li>In the <strong>Automatic mode</strong>,</li>
+<li>Thanks to a specific <strong>device feature</strong> found out in the middle section,</li>
+<li>With a loaded <strong>simulator device</strong> pointed out with the <code>More</code> submenu.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10252_24.png" alt="" class="img-fluid"></li>
+</ol>
+<p>Besides the simulators, previews may also be displayed on <a href="https://developer.apple.com/videos/play/wwdc2023/10252/?time=1448">real devices</a> including all the features <code>Xcode</code> provides for previewing.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10252_25.png" alt="" class="img-fluid"><br>
+</br></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#overview" class="nav-link text-muted">Overview</a></li><li class="nav-item position-relative">
+            <a href="#previews-contents" class="nav-link text-muted">Previews contents</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#views" class="nav-link text-muted">Views</a></li><li class="nav-item position-relative">
+            <a href="#widgets" class="nav-link text-muted">Widgets</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#xcode-features" class="nav-link text-muted">Xcode features</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#canvas" class="nav-link text-muted">Canvas</a></li><li class="nav-item position-relative">
+            <a href="#mode-of-previews" class="nav-link text-muted">Mode of previews</a></li><li class="nav-item position-relative">
+            <a href="#tips-tricks" class="nav-link text-muted">Tips &amp; tricks</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#previews-in-a-project" class="nav-link text-muted">Previews in a project</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#previewing-in-libraries" class="nav-link text-muted">Previewing in libraries</a></li><li class="nav-item position-relative">
+            <a href="#providing-sample-assets" class="nav-link text-muted">Providing sample assets</a></li><li class="nav-item position-relative">
+            <a href="#leveraging-devices" class="nav-link text-muted">Leveraging devices</a></li></ul></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2023/2310252.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2023 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>

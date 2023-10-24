@@ -12,6 +12,17 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "Build programmatic UI with Xcode Previews",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310252",
+    "profils": ["All","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "Expand on Swift macros",
     "type": [],
     "tests": [],
