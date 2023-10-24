@@ -12,6 +12,39 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "Build programmatic UI with Xcode Previews",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310252",
+    "profils": ["All","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Expand on Swift macros",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/23SwiftMacros",
+    "profils": ["All","Swift"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Generalize APIs with parameter packs",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310168",
+    "profils": ["All","Swift"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "Keynote",
     "type": ["Widget"],
     "tests": [],
@@ -108,6 +141,17 @@
     "exception": "",
     "raccourcis": "2023/2310058",
     "profils": ["All","What's new in..."]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Write Swift macros",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/23SwiftMacros",
+    "profils": ["All","Swift"]
   },
   {
     "themes": "WWDC 2022",
