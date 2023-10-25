@@ -12,6 +12,17 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "Build accessible apps with SwiftUI and UIKit",
+    "type": ["Notification"],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310036",
+    "profils": ["All","Accessibility","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "Build programmatic UI with Xcode Previews",
     "type": [],
     "tests": [],
@@ -38,7 +49,7 @@
     "type": ["Charts"],
     "tests": [],
     "verifier": [],
-    "resultat": [],
+    "resultat": ["Design"],
     "exception": "",
     "raccourcis": "2023/2310037",
     "profils": ["All","Swift","SwiftUI"]
@@ -64,6 +75,17 @@
     "exception": "",
     "raccourcis": "2023/23Keynote",
     "profils": ["All","Accessibility","Keyboard","Keynote"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Perform accessibility audits for your app",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310035",
+    "profils": ["All","Accessibility","Instruments","SwiftUI","Xcode"]
   },
   {
     "themes": "WWDC 2023",
