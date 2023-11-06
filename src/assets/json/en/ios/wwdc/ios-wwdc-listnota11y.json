@@ -34,6 +34,17 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "Design dynamic Live Activities",
+    "type": ["Live Activities"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23LiveActivities",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "Expand on Swift macros",
     "type": [],
     "tests": [],
@@ -78,6 +89,17 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "Meet ActivityKit",
+    "type": ["Live Activities"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23LiveActivities",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "Perform accessibility audits for your app",
     "type": [],
     "tests": [],
@@ -108,6 +130,17 @@
     "exception": "",
     "raccourcis": "2023/2310057",
     "profils": ["All","SwiftUI"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Update Live Activities with push notifications",
+    "type": ["Live Activities"],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/23LiveActivities",
+    "profils": ["All"]
   },
   {
     "themes": "WWDC 2023",

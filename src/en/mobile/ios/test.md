@@ -243,11 +243,20 @@ Since Xcode 11, the Accessibility Inspector tool provides a specific [Color&nbsp
 
 The Xcode <abbr>IDE</abbr> contains a very interesting tool entitled **Accessibility Inspector**.
 
-Its goal and way of being used won't be developed here because they're perfectly explained in these detailed videos [`Auditing`&nbsp;`Your`&nbsp;`Apps`&nbsp;`for`&nbsp;`Accessibility`](../wwdc/2016/407/) and [`Accessibility`&nbsp;`Inspector`](../wwdc/2019/#accessibility-inspector) that are highly recommended to be watched.
+Its goal and way of being used won't be developed here because they're perfectly explained in these detailed videos:
+- [`Auditing`&nbsp;`Your`&nbsp;`Apps`&nbsp;`for`&nbsp;`Accessibility`](../wwdc/2016/407/),
+
+- [`Accessibility`&nbsp;`Inspector`](../wwdc/2019/#accessibility-inspector),
+
+- [`Perform`&nbsp;`accessibility`&nbsp;`audits`&nbsp;`for`&nbsp;`your`&nbsp;`app`](../wwdc/nota11y/2023/2310035/)
+
+... that are highly recommended to be watched.
 <br><br>
 ### Code testing
 
-Many kinds of tests (unit tests...) may be set up by the developers in order to maintain a stable and reliable code over time.
+Many kinds of tests (unit tests...) may be set up by the developers in order to maintain a **stable and reliable code** over time.
 
 These good practice ensure functional continuity by being informed of any deviation introduced in subsequent developments.
+
+Take a look at the [`Perform`&nbsp;`accessibility`&nbsp;`audits`&nbsp;`for`&nbsp;`your`&nbsp;`app`](../wwdc/nota11y/2023/2310035/) video if further information are necessary to include **automation elements** in your tests for instance.
 <br><br>
