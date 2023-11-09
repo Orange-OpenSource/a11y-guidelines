@@ -11,7 +11,12 @@ displayToc: true
 Each one of these features should be seen as an important **human-made** element for the user comfort and not just a functional one.
 
 Whatever the design, implementation or testing area, **every decision** must be particularly **empathetic** to provide the best user experience.
-<br><br>
+
+<a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=56">
+    
+![access to the WWDC video that explains the importance of the accessibility implementation as a major step in the project process](../../images/ios-test-AuditsWWDC.png)
+
+
 ## Fundamental prerequisites
 
 1. Spend as much time as necessary to perfectly control the gestures ([VoiceOver](../voiceover/), Switch Control).
