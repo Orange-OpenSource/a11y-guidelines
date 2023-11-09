@@ -643,7 +643,7 @@
 }, {
 	"themes": "Mise en page",
 	"title": "Permettre d'aérer le texte",
-	"type": ["Bookmarklet"],
+	"type": ["Espacement de texte"],
 	"tests": ["Se rendre sur <a href='https://a11y-guidelines.orange.com/fr/web/designer/mise-en-page/#permettre-daerer-le-texte' target='_blank' aria-label='la page \"Permettre d'aérer le texte\" de ce site de recommandation (nouvelle fenêtre)'>la page \"Permettre d'aérer le texte\" de ce site de recommandation</a>", "Ajouter le bookmarklet à vos favoris", "Consulter la page", "Activer le bookmarklet"], 
 	"verifier": ["Les espacements sont appliqués selon les règles suivantes : <ul><li>La hauteur des lignes doit pouvoir être ajustée à 1.5 fois minimum la taille de la police de caractères</li><li>L'espace situé entre deux paragraphes doit pouvoir être ajusté à 2 fois minimum la taille de la police de caractères</li><li>L'espacement entre les lettres doit pouvoir être ajusté à 0.12 fois minimum la taille de la police de caractères</li><li>L'espacement entre les mots doit pouvoir être ajusté à 0.16 fois minimum la taille de la police de caractères</li></ul>", "Absence de textes tronqués ou superposés"], 
 	"resultat": ["Les espacements ont été appliqués selon les règles. <br/>Les textes ne sont pas tronqués ou superposés"], 
