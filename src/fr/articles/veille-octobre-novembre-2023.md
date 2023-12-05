@@ -9,7 +9,7 @@ tags:
 # Veille accessibilité numérique Octobre-Novembre 2023
 
 Pour la sortie officielle des WCAG 2.2, ce 5 octobre en anglais (https://www.w3.org/TR/2023/REC-WCAG22-20231005/), beaucoup d'articles ont été écrits, en voici quelques uns rassemblés dans ces deux listes : (en) https://www.smashingmagazine.com/2023/10/roundup-wcag-explainers/ eet (en) https://adrianroselli.com/2023/10/obligatory-wcag-2-2-launch-post.html.
-Et bientôt une version Française (en cours)...
+Et bientôt une version Française (en cours) et une prise en compte dans EN 301549 et l'EAA (en, https://cerovac.com/a11y/2023/11/wcag-2-2-will-be-a-part-of-en-301-549-and-with-that-a-part-of-wad-and-eaa/)... alors utilisez le !
 Bonne lecture, bonnes fêtes !
 
 
@@ -68,7 +68,8 @@ Bonne lecture, bonnes fêtes !
 - Le vrai coût de la non-accessibilité (en) : https://www.tpgi.com/the-true-cost-of-not-prioritizing-accessibility/
 -	Les développeurs front ne comprennent pas l'accessibilité (en) : https://gomakethings.com/front-end-devs-really-dont-understand-accessibility/
 - Mythes sur a11y et le clavier (en) : https://tetralogical.com/blog/2023/11/27/keyboard-accessibility-myths-wcag/
-
+- Role, name, value en phase de conception (en) : https://www.deque.com/blog/name-role-value-design/
+- Point de vue sur les toats en a11y, ne pas les utiliser (en) : https://www.erikkroes.nl/blog/burn-your-toast/
 
 ## Aides techniques
 
@@ -83,7 +84,8 @@ Bonne lecture, bonnes fêtes !
 - [ iOS] Reveal collecte les données de votre application pour afficher sa mise en page et ses informations d'accessibilité, pour un audit ultra rapide axé sur l'accessibilité (Version d'essai 14 jours) (en) : https://revealapp.com/
 -	[ iOS] Outil pour inspecter les sites web et webapps sur iOS (payant) (en) : https://yatil.net/blog/inspect-web-ios
 -	[ WCAG] Un article du gouvernement anglo-saxon sur l'application des WCAG aux applis mobiles (en) : https://accessibility.blog.gov.uk/2023/10/18/how-mobile-apps-undergo-accessibility-monitoring/
-- [ iOS] Inspect&er le code web sur iOS (en) : https://yatil.net/blog/inspect-web-ios
+- [ iOS] Inspect&er le code web sur iOS (en) : https://yatil.net/blog/inspect-web-ios:
+- [ iOS] plan de test a11y (en) : https://moba11y.com/blog/ios-accessibility-test-plan/
 
 ## Ergonomie, UI & UX
 

@@ -10,7 +10,7 @@ tags:
 # Digital accessibility monitoring October-November 2023
 
 For the official release of WCAG 2.2, this October 5 in English (https://www.w3.org/TR/2023/REC-WCAG22-20231005/), many articles have been written, here are some of them collected in these are two lists: https://www.smashingmagazine.com/2023/10/roundup-wcag-explainers/ and https://adrianroselli.com/2023/10/obligatory-wcag-2-2-launch-post.html.
-And soon a French version (in progress)...
+And soon a French version (in progress) and will arrive in EN 301549 and EAA (https://cerovac.com/a11y/2023/11/wcag-2-2-will-be-a-part-of-en-301-549-and-with-that-a-part-of-wad-and-eaa/)... So use it now!
 Happy reading, happy end of the year!
 
 ## Accessibility in laws and standards
@@ -68,6 +68,8 @@ Happy reading, happy end of the year!
 - The true cost of non-accessibility: https://www.tpgi.com/the-true-cost-of-not-prioritizing-accessibility/
 - Front-end developers don't understand accessibility: https://gomakethings.com/front-end-devs-really-dont-understand-accessibility/
 - Myths about a11y and the keyboard: https://tetralogical.com/blog/2023/11/27/keyboard-accessibility-myths-wcag/
+- Role, name, value in the design phase: https://www.deque.com/blog/name-role-value-design/
+- Point of view about toasts and a11y, don't use it: https://www.erikkroes.nl/blog/burn-your-toast/
 
 ## Assistive technologies
 
@@ -77,12 +79,13 @@ Happy reading, happy end of the year!
 
 ## Mobile app, mobile web
 
-- [Android] Release of Android 14: some new features in terms of accessibility, notably text zoom up to 200% to comply with WCAG: https://developer.android.com/about/versions/14/summary?hl=fr
-- [iOS] Linter SwiftUI: https://dev.to/steady5063/using-accessibility-rules-with-swiftlint-47cb
-- [iOS] Reveal collects data from your app to display its layout and accessibility information, for a super-fast accessibility-focused audit (14-day trial): https://revealapp.com/
-- [iOS] Tool to inspect websites and webapps on iOS (paying): https://yatil.net/blog/inspect-web-ios
-- [WCAG] An article from the Anglo-Saxon government on the application of WCAG to mobile apps: https://accessibility.blog.gov.uk/2023/10/18/how-mobile-apps-undergo-accessibility-monitoring/
-- [iOS] Inspect web code on iOS: https://yatil.net/blog/inspect-web-ios
+- [ Android] Release of Android 14: some new features in terms of accessibility, notably text zoom up to 200% to comply with WCAG: https://developer.android.com/about/versions/14/summary?hl=fr
+- [ iOS] Linter SwiftUI: https://dev.to/steady5063/using-accessibility-rules-with-swiftlint-47cb
+- [ iOS] Reveal collects data from your app to display its layout and accessibility information, for a super-fast accessibility-focused audit (14-day trial): https://revealapp.com/
+- [ iOS] Tool to inspect websites and webapps on iOS (paying): https://yatil.net/blog/inspect-web-ios
+- [ WCAG] An article from the Anglo-Saxon government on the application of WCAG to mobile apps: https://accessibility.blog.gov.uk/2023/10/18/how-mobile-apps-undergo-accessibility-monitoring/
+- [ iOS] Inspect web code on iOS: https://yatil.net/blog/inspect-web-ios
+- [ iOS] A11y test plan : https://moba11y.com/blog/ios-accessibility-test-plan/
 
 ## Ergonomics, UI & UX
 
