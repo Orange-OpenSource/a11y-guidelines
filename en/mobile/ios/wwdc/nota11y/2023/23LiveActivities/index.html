@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Live Activities - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Learn the best way to create graphically rich layouts for the Live Activities.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Skip links - Switch language">
+   <div class="container-lg">
+      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <a href="#main-menu" class="nav-link">Go to menu</a>
+    </li><li class="nav-item">
+      <a href="#main-content" class="nav-link">Go to content</a>
+    </li><li class="nav-item hidden-if-no-js">
+      <a href="#search-input" class="nav-link">Go to search</a>
+    </li><li class="nav-item">
+      <a href="#footer" class="nav-link">Go to footer</a>
+    </li></ul>
+
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+    </div>
+  </nav>
+  
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Live Activities
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#overview" class="dropdown-item text-wrap">Overview</a><a href="#design" class="dropdown-item text-wrap">Design</a><a href="#lock-screen" class="dropdown-item text-wrap">Lock Screen</a><a href="#standby" class="dropdown-item text-wrap">Standby</a><a href="#dynamic-island" class="dropdown-item text-wrap">Dynamic Island</a><a href="#lifecycle" class="dropdown-item text-wrap">Lifecycle</a><a href="#build-ui" class="dropdown-item text-wrap">Build UI</a><a href="#notifications" class="dropdown-item text-wrap">Notifications</a><a href="#preparations" class="dropdown-item text-wrap">Preparations</a><a href="#first-push-update" class="dropdown-item text-wrap">First push update</a><a href="#debugging-updates-failures" class="dropdown-item text-wrap">Debugging updates failures</a><a href="#priorities" class="dropdown-item text-wrap">Priorities</a><a href="#alerts" class="dropdown-item text-wrap">Alerts</a><a href="#miscellaneous" class="dropdown-item text-wrap">Miscellaneous</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2023: Live Activities</h1>
+<p>Find hereafter a detailed summary of three videos that belong to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original videos are available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2023/10184/">session 10184</a>, <a href="https://developer.apple.com/videos/play/wwdc2023/10185/">session 10185</a>, <a href="https://developer.apple.com/videos/play/wwdc2023/10194/">session 10194</a>).<br>
+<img src="../../../../../images/iOSdev/wwdc23-LiveActivities_Poster.png" alt="" class="img-fluid"><br>
+&quot;Live Activities are a glanceable way for someone to keep track of the progress of a task within your app. We'll teach you how you can <strong>create helpful experiences</strong> for the Lock Screen, the Dynamic Island, and StandBy. Learn how to <strong>update your app's Live Activities</strong>, monitor activity state, and take advantage of WidgetKit and SwiftUI to build richer experiences.&quot;</p>
+<p>&quot;Discover how you can remotely <strong>update Live Activities</strong> in your app when you push content through <strong>Apple Push Notification service</strong> (APNs). We'll show you how to configure your first Live Activity push locally so you can quickly iterate on your implementation. <strong>Learn best practices</strong> for determining your push priority and configuring alerting updates, and explore how to further improve your Live Activities with relevance score and stale date.&quot;</p>
+<p>&quot;Live Activities allow your app to display live information in key system locations on iOS and iPadOS. Learn the best way to <strong>create graphically rich layouts</strong> that update seamlessly on the Lock Screen, in StandBy, and in the Dynamic Island. <strong>Incorporate interactivity and animation</strong> to help people stay in touch with live updating events from your app as they navigate outside of your app.&quot;</p>
+<p></br>Hereafter, the underlined elements <strong>lead directly to the playback of the WWDC video</strong> at the appropriate moment.<br>
+</br></p>
+<h2 id="overview"><a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=41">Overview</a> <a class="header-anchor" href="#overview" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Live Activities</strong> are the best way to follow an event or a task progression in real time instead of using a <a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=41">huge number of notifications</a> to reach the same goal.<br>
+<img src="../../../../../images/iOSdev/wwdc23-LiveActivities_1.png" alt="" class="img-fluid"></p>
+<p>They can be displayed through the <strong>Dynamic Island</strong> available after a certain <a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=66">model of iPhone</a> (the compact, minimal and expanded presentations are explained in the <a href="#build">BuildUI</a> section).</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_2.png" alt="" class="img-fluid"></p>
+<p>The new <strong><a href="https://developer.apple.com/videos/play/wwdc2023/101/?time=1916"><code>Standby</code></a></strong> feature and <strong><code>iPadOS</code> <code>17</code></strong> are <a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=127">good candidates</a> for these activities to improve the user experience supported by the <code>API</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_3.png" alt="" class="img-fluid"></p>
+<p>Based on the <strong>Activity framework</strong> used by <code>SwiftUI</code> and <code>WidgetKit</code>, the <code>Live Activities</code> rely on some <a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=197">best practices</a> to be followed.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_4.png" alt="" class="img-fluid"></p>
+</br>
+<h2 id="design">Design <a class="header-anchor" href="#design" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="lock-screen"><a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=78">Lock Screen</a> <a class="header-anchor" href="#lock-screen" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_11.png" alt="" class="img-fluid"></p>
+<p>Located above the usual notifications on the lock screen, the <code>Live Activities</code> should have a dedicated interface so as to be undoubtedly identified.<br>
+</br></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesLockScreen1"
+           id="LiveActivitiesLockScreen1_tab"
+           role="tab" 
+           aria-selected="true">Personality</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesLockScreen2"
+           id="LiveActivitiesLockScreen2_tab"
+           role="tab" 
+           aria-selected="false">Transitions</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesLockScreen3"
+           id="LiveActivitiesLockScreen3_tab"
+           role="tab" 
+           aria-selected="false">Alerting</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="LiveActivitiesLockScreen1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the personality" href="https://developer.apple.com/videos/play/wwdc2023/10194?time=147">🎬</a></p>
+<p>The importance of maintaining a <strong>graphical consistency</strong> shouldn't be removed in the <code>Dark Mode</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-LiveActivities_12.png" alt="" class="img-fluid"></p>
+<p>Using <a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=182">bold colors</a> is a good way to <strong>highlight some elements</strong> in the widget.<br>
+<img src="../../../../../images/iOSdev/wwdc23-LiveActivities_13.png" alt="" class="img-fluid"></p>
+<p>The layout should <strong>adapt the display of information</strong> according to their <a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=224">relevance</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-LiveActivities_14.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="LiveActivitiesLockScreen2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the transitions" href="https://developer.apple.com/videos/play/wwdc2023/10194?time=278">🎬</a></p>
+<p>Whatever the native default transitions (numeric or replace content transitions...) or some customized ones, <strong>smoothness</strong> with <strong>unoverlapping</strong> and <strong>fading</strong> are important notions to be taken into account for transitions in the widget.</p>
+</div>
+<div class="tab-pane" id="LiveActivitiesLockScreen3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the alerting" href="https://developer.apple.com/videos/play/wwdc2023/10194?time=330">🎬</a></p>
+<p>It's crucial to notify the user by means of an alert if an <strong>update</strong> requires his attention.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_15.png" alt="" class="img-fluid"></p>
+<p>The <strong>standard notification sound</strong> combined with the <strong>screen lighting</strong> are the essential elements that point out an alert that should be highlighted by a specific graphical element as well.</p>
+</div>
+</div>
+</br>
+</br>
+<h3 id="standby"><a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=364">Standby</a> <a class="header-anchor" href="#standby" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>This <code>iOS 17</code> <strong><a href="https://developer.apple.com/videos/play/wwdc2023/101/?time=1916">new feature</a></strong> has an <strong>2X scale-up</strong> process regarding the widget size so as to make the most of the screen size.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_16.png" alt="" class="img-fluid"></p>
+<p>It automatically <strong>tailors the background color</strong> to the <code>Live Activity</code>'s but <a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=387">special attention</a> must be paid to the highlighted graphic elements that divide parts in the widget.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_17.png" alt="" class="img-fluid"></p>
+<p>Besides checking the color contrast for accessibility, it's vital to inspect the widget's in order to have the <a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=442">best rendering</a> that's offered by the <strong>night mode</strong> feature.<br>
+<img src="../../../../../images/iOSdev/wwdc23-LiveActivities_18.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="dynamic-island"><a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=463">Dynamic Island</a> <a class="header-anchor" href="#dynamic-island" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_19.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2023/10194/?time=537">Smoothness and fluidity</a> are the main keywords that go with the <code>Dynamic Island</code> for outlining the essential information through animations.<br>
+<img src="../../../../../images/iOSdev/wwdc23-LiveActivities_20.png" alt="" class="img-fluid"></p>
+<p>It's of a <a href="https://developer.apple.com/videos/play/wwdc2023/10194/?time=577">major importance</a> to have <strong>fluent rounded shapes</strong> with the <code>Dynamic Island</code> edges...</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_21.png" alt="" class="img-fluid"></p>
+<p>... and converting <strong>non rounded shapes</strong> into a blurry element is also a good trick to get an harmonious fit.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_22.png" alt="" class="img-fluid"></p>
+<p>Some necessary advice should be known for perfectly designing the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10194/?time=666">three size classes</a></strong> of the <code>Dynamic Island</code> detailed in the <a href="#build">BuildUI</a> section.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesDesign1"
+           id="LiveActivitiesDesign1_tab"
+           role="tab" 
+           aria-selected="true">Compact</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesDesign2"
+           id="LiveActivitiesDesign2_tab"
+           role="tab" 
+           aria-selected="false">Expanded</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesDesign3"
+           id="LiveActivitiesDesign3_tab"
+           role="tab" 
+           aria-selected="false">Minimal</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="LiveActivitiesDesign1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the compact view" href="https://developer.apple.com/videos/play/wwdc2023/10194/?time=679">🎬</a></p>
+<p>This view aims at keeping on using one's device whithout losing sight on the most important information about some running activities.<br>
+For this purpose, it's highly recommended to <strong>avoid useless spaces</strong> around the <a href="https://developer.apple.com/videos/play/wwdc2023/10194/?time=700">sensor region</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_23.png" alt="" class="img-fluid"></p>
+<p>When <a href="https://developer.apple.com/videos/play/wwdc2023/10194/?time=738">alerting</a> the user about a crucial information, it's better to <strong>expand the view</strong> instead of sending a notification.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_24.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="LiveActivitiesDesign2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the expanded view" href="https://developer.apple.com/videos/play/wwdc2023/10194/?time=759">🎬</a><br>
+<img src="../../../../../images/iOSdev/wwdc23-LiveActivities_26.png" alt="" class="img-fluid"></p>
+<p>When expanded, the view should keep the <strong>same information at the same location</strong> in order to <a href="https://developer.apple.com/videos/play/wwdc2023/10194/?time=797">be coherent</a> and avoid a cognitive work for the user.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_25.png" alt="" class="img-fluid"></p>
+<p>Better is the <a href="https://developer.apple.com/videos/play/wwdc2023/10194/?time=806">refinement</a> regarding the spaces around the graphic items, better will be the user experience and more undetected will be the sensor region.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_27.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="LiveActivitiesDesign3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the minimal view" href="https://developer.apple.com/videos/play/wwdc2023/10194/?time=834">🎬</a></p>
+<p>Appearing when switching between <strong>multiple apps</strong> while <code>Live Activities</code> are still alive, the minimal view aims at providing a relevant information through a teeny-weeny area that must be refined when devising the app.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_28.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="lifecycle"><a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=305">Lifecycle</a> <a class="header-anchor" href="#lifecycle" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesLifecycle1"
+           id="LiveActivitiesLifecycle1_tab"
+           role="tab" 
+           aria-selected="true">Request</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesLifecycle2"
+           id="LiveActivitiesLifecycle2_tab"
+           role="tab" 
+           aria-selected="false">Update</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesLifecycle3"
+           id="LiveActivitiesLifecycle3_tab"
+           role="tab" 
+           aria-selected="false">Observe&nbsp;activity&nbsp;state</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesLifecycle4"
+           id="LiveActivitiesLifecycle4_tab"
+           role="tab" 
+           aria-selected="false">End</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="LiveActivitiesLifecycle1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the lifecycle request" href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=328">🎬</a></p>
+<p>Few milestones are mandatory for this first lifecycle step:</p>
+<ol>
+<li>
+<p>Implement the <strong>ActivityAttributes</strong> protocol to describe the dynamic and static contents.</p>
+</li>
+<li>
+<p>Define a structure to outline the state and the configuration of the activity.</p>
+</li>
+<li>
+<p>Request and start the <code>Live Activity</code>.</p>
+</li>
+</ol>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_5.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="LiveActivitiesLifecycle2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the lifecycle update" href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=470">🎬</a></p>
+<p>When updating an activity, it's important to:</p>
+<ul>
+<li>
+<p><strong>Identify</strong> what needs to be updated,</p>
+</li>
+<li>
+<p><strong>Create an alert</strong> for informing the user the update occurs if need be.</p>
+</li>
+</ul>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_6.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="LiveActivitiesLifecycle3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the lifecycle observable active state" href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=557">🎬</a></p>
+<p>Using the <strong>ActivityStateUpdates</strong> structure is the best way to observe the <strong>four states</strong> an activity may encounter (started, finished, dismissed, stale) so as to provide the appropriate command to be executed as quick as possible.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_7.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="LiveActivitiesLifecycle4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the lifecycle end" href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=603">🎬</a></p>
+<p>Before ending an activity, it's important to <strong>create a final content</strong> combined with the <strong>policy</strong> the system should remove the <code>Live Activity</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_8.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<p><a name="build"></a></p>
+<h2 id="build-ui"><a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=647">Build UI</a> <a class="header-anchor" href="#build-ui" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesBuildUI1"
+           id="LiveActivitiesBuildUI1_tab"
+           role="tab" 
+           aria-selected="true">User&nbsp;interface</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesBuildUI2"
+           id="LiveActivitiesBuildUI2_tab"
+           role="tab" 
+           aria-selected="false">Implemented&nbsp;code</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="LiveActivitiesBuildUI1" role="tabpanel">
+<p>Besides the <strong><code>Lock Screen UI</code></strong> that displays the <code>Live Activities</code> under a usual notification aspect, it's important to notice that the specific <strong><code>Dynamic Island</code></strong> is made up of three distinct presentations:</p>
+<ul>
+<li>
+<p><strong><a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=774">compact</a></strong>: when the owner app is the only one to fire an activity,</p>
+</li>
+<li>
+<p><strong><a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=855">minimal</a></strong>: when more than one app starts a <code>Live Activity</code>,</p>
+</li>
+<li>
+<p><strong><a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=905">expanded</a></strong>: when one of the previous two presentations is touched and held.</p>
+</li>
+</ul>
+</br>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_10.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="LiveActivitiesBuildUI2" role="tabpanel">
+<p>To realize the interface introduced in the previous tab, the <code>Live Activity</code> configuration should be put in the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=650">WidgetBundle</a></strong>.</p>
+<p>The implementation for the <strong><code>Lock</code> <code>Screen</code> <code>UI</code></strong> concerns the <a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=710">first closure</a> of the configuration while the second one deals with the <strong><code>Dynamic</code> <code>Island</code></strong> whose size classes are detailed in the <code>User interface</code> tab of this section.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_9.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+</br>
+<h2 id="notifications">Notifications <a class="header-anchor" href="#notifications" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="preparations"><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=134">Preparations</a> <a class="header-anchor" href="#preparations" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The basic understanding of what the interactions between an app, its content server and the <strong>A</strong>pple <strong>P</strong>ush <strong>N</strong>otification <strong>S</strong>ervice are is of a great help for integrating the push updates.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_29.png" alt="" class="img-fluid"></p>
+<p>Configuring <code>Xcode</code> and implementing the proper code for handling push tokens are madatory milestones.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesNotificationsPreparations1"
+           id="LiveActivitiesNotificationsPreparations1_tab"
+           role="tab" 
+           aria-selected="true">Xcode</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesNotificationsPreparations2"
+           id="LiveActivitiesNotificationsPreparations2_tab"
+           role="tab" 
+           aria-selected="false">Code&nbsp;writing</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="LiveActivitiesNotificationsPreparations1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the xcode configuration" href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=210">🎬</a></p>
+<p>Adding the push notifications service in <code>Xcode</code> is necessary for <code>ActivityKit</code> to request push tokens.<br>
+<img src="../../../../../images/iOSdev/wwdc23-LiveActivities_30.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="LiveActivitiesNotificationsPreparations2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the code to be implemented" href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=233">🎬</a></p>
+<p>Few lines of code are required for enabling and handling push updates.<br>
+<img src="../../../../../images/iOSdev/wwdc23-LiveActivities_31.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<p>Due to the <strong>push token uniqueness for each activity</strong>, it's crucial to be aware of the appropriate one when <a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=335">dealing with the updates</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-LiveActivities_32.png" alt="" class="img-fluid"></p>
+<h3 id="first-push-update"><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=364">First push update</a> <a class="header-anchor" href="#first-push-update" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Sending a push update relies on an <code>HTTP</code> request to <code>APNs</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-LiveActivities_33.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesFirstPushUpdate1"
+           id="LiveActivitiesFirstPushUpdate1_tab"
+           role="tab" 
+           aria-selected="true">Headers</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#LiveActivitiesFirstPushUpdate2"
+           id="LiveActivitiesFirstPushUpdate2_tab"
+           role="tab" 
+           aria-selected="false">Payload</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="LiveActivitiesFirstPushUpdate1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the headers" href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=376">🎬</a></p>
+<p>Besides the normal <code>HTTP</code> headers to be used, the <strong><code>APNs</code> headers are threefold</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_34.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="LiveActivitiesFirstPushUpdate2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the first apns payload" href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=414">🎬</a></p>
+<p>The first <code>APNs</code> payload to be sent is made up of <strong>three essential fields</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_36.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<p>For <a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=502">testing</a>, using <strong>command lines</strong> may be the quickest way to achieve one's goal through executing a <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=565">curl command</a></strong> for sending the <code>APNs</code> request.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_37.png" alt="" class="img-fluid"></p>
+<h3 id="debugging-updates-failures"><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=619">Debugging updates failures</a> <a class="header-anchor" href="#debugging-updates-failures" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_35.png" alt="" class="img-fluid"></p>
+<h3 id="priorities"><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=672">Priorities</a> <a class="header-anchor" href="#priorities" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Priorities have different purposes and their characteristics may impact the way they will be introduced in an app.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_38.png" alt="" class="img-fluid"></p>
+<p>When <a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=775">frequent updates</a> are necessary, useful details have to be taken into account for avoiding the cons of such events.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_39.png" alt="" class="img-fluid"></p>
+<p>Even though enabled, the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=810">user has still control</a></strong> over the updates frequency of which the server needs to be aware.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_40.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="alerts"><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=849">Alerts</a> <a class="header-anchor" href="#alerts" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>In order to point out some elements or events for capturing the user's attention, the <code>APNs</code> payload is added a <a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=861">complementary object</a> for which <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=896">localization</a></strong> and <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=919">sound customization</a></strong> are possible.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_41.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="miscellaneous">Miscellaneous <a class="header-anchor" href="#miscellaneous" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><strong>Ending a <code>Live Activity</code></strong> is triggered thanks to a <a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=946">new event value</a> in the <code>APNs</code> payload.<br>
+<img src="../../../../../images/iOSdev/wwdc23-LiveActivities_42.png" alt="" class="img-fluid"></p>
+<p><strong>Informing</strong> the user of <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=987">outdated updates</a></strong> can be displayed through an <a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=1004">added stale date field</a> in the <code>APNs</code> payload and a <a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=996">dedicated property</a> in the <code>ActivityConfiguration</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_43.png" alt="" class="img-fluid"></p>
+<p><strong>Ordering the notification stack</strong> on the <code>Lock Screen</code> in case of <a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=1027">multiple <code>Live Activities</code></a> is handled by the system with the ones with more important updates set near the top.<br>
+Besides, the most important <code>Live Activity</code> is also displayed in the <code>Dynamic Island</code> by the system that follows the indication of the <strong>relevant-score field</strong> in the <code>APNs</code> payload.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_44.png" alt="" class="img-fluid"><br>
+</br></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#overview" class="nav-link text-muted">Overview</a></li><li class="nav-item position-relative">
+            <a href="#design" class="nav-link text-muted">Design</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#lock-screen" class="nav-link text-muted">Lock Screen</a></li><li class="nav-item position-relative">
+            <a href="#standby" class="nav-link text-muted">Standby</a></li><li class="nav-item position-relative">
+            <a href="#dynamic-island" class="nav-link text-muted">Dynamic Island</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#lifecycle" class="nav-link text-muted">Lifecycle</a></li><li class="nav-item position-relative">
+            <a href="#build-ui" class="nav-link text-muted">Build UI</a></li><li class="nav-item position-relative">
+            <a href="#notifications" class="nav-link text-muted">Notifications</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#preparations" class="nav-link text-muted">Preparations</a></li><li class="nav-item position-relative">
+            <a href="#first-push-update" class="nav-link text-muted">First push update</a></li><li class="nav-item position-relative">
+            <a href="#debugging-updates-failures" class="nav-link text-muted">Debugging updates failures</a></li><li class="nav-item position-relative">
+            <a href="#priorities" class="nav-link text-muted">Priorities</a></li><li class="nav-item position-relative">
+            <a href="#alerts" class="nav-link text-muted">Alerts</a></li><li class="nav-item position-relative">
+            <a href="#miscellaneous" class="nav-link text-muted">Miscellaneous</a></li></ul></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2023/23LiveActivities.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2023 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
