@@ -1,7 +1,7 @@
 ---
-title: "#a11y technical watch, October-November 2021"
-abstract: "#a11y anthology, October-November 2021"
-date: "2021-12-05"
+title: "#a11y technical watch, October-November 2023"
+abstract: "#a11y anthology, October-November 2023"
+date: "2023-12-05"
 tags:
   - veille
 ---
