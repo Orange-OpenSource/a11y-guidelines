@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       profiles: 'Profiles',
       tools: 'Tools',
       allTools: 'All tools',
+      allProfils: 'All profiles',
       exceptions: 'Exceptions',
       ongoingTests: 'ongoing tests',
       noResults: 'No results match your selection',
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       profiles: 'Profils&nbsp;',
       tools: 'Outils&nbsp;',
       allTools: 'Tous les outils',
+      allProfils: 'Tous les profils',
       exceptions: 'Exceptions',
       ongoingTests: 'tests en cours',
       noResults: 'Aucun résultat ne correspond à votre sélection',
@@ -381,7 +383,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         let htmlProfils = '';
 
-
+        htmlProfils += '<li><input type="radio" id="profilAll" name="profil" value="profilAll" checked> <label for="profilAll">' + translate('allProfils') +'</label>';
         for (let i in uniqueProfils) {
           htmlProfils += '<li><input type="radio" id="profil' + i + '" name="profil" value="' + uniqueProfils[i] + '"> <label for="profil' + i + '">' + uniqueProfils[i] + '</label></li>';
         }
@@ -410,7 +412,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
           input.addEventListener('click', function() {
 
-            if ((this.checked && this.name==="profil")){
+            if (this.checked && this.id==="profilAll" ){
+              arrProfil = [];
+
+            }else if ((this.checked && this.name==="profil")){
               arrProfil = [];
               arrProfil.push(input.value);
             }
@@ -469,7 +474,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
               } else {
 
                 //on ajoute le nouveau critère
-                if ((this.checked && this.name==="profil")){
+                if ((this.checked && this.name==="profil" && this.id!="profilAll")){
 
                   //on supprime les doublons, nécessaire pour les boutons radio
                   delDoublon(conditions, this.name);
@@ -516,13 +521,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
               if (runUpdateType) {
                 app.UpdateTypes(uniqueTypes, filteredTest);
               }
-
               app.UpdateFeedback(true,filteredTest.length);
 
 
             } else {
               //aucun critère de sélectionné, on réinitialise la page
               app.FetchAll(refTests);
+              // Filtrage
+              app.FilterByType();
+              app.UpdateFeedback(true,refTests.length);
 
             }
 

@@ -558,7 +558,7 @@
 	"IDorigin": "testWebID-37"
 }, {
 	"themes": "Navigation clavier",
-	"title": "Permettre l'utilisation de  l’application au clavier",
+	"title": "Permettre l'utilisation de l’application au clavier",
 	"type": ["Navigation clavier"],
 	"tests": ["Parcourir la page au clavier à l'aide des touches <kbd>tab</kbd> ou <kbd>shift + tab</kbd>"], 
 	"verifier": ["Tout ce qui peut être fait à la souris peut être fait au clavier et inversement."],
@@ -612,6 +612,20 @@
 	"wcag": ["1.4.11"],
 	"ID": "testWebID-41",
 	"IDorigin": "testWebID-41"
+},{
+	"themes": "Navigation clavier",
+	"title": "j", 
+	"type": ["Navigation clavier"], 
+	"tests": ["Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>", "Parcourir la page au clavier à l'aide de la touche <kbd>Shift + tab</kbd>","Si un composant peut recevoir le focus via JavaScript alors ce cas doit être évalué également."], 
+	"verifier": ["Vérifier qu'à la prise de focus par les différents composants, aucun de ces derniers n'est totalement masqué."], 
+	"resultat": ["Aucun composant n'est totalement masqué à la prise de focus. "], 
+	"exception": "",
+	"raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/navigation-clavier/#sassurer-que-lutilisateur-puisse-toujours-voir-ou-est-positionne-dans-le-viewport-le-composant-qui-recoit-le-focus",
+	"profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+	"wcag": ["2.4.11"],
+	"ID": "",
+	"IDorigin": ""
 }, {
 	"themes": "Mise en page",
 	"title": "Utiliser des tailles relatives et faire du web adaptatif (responsive)",
@@ -864,6 +878,20 @@
 	"wcag": ["2.5.4"],
 	"ID": "testWebID-58", 
 	"IDorigin": "testWebID-58" 
+}, { 
+	"themes": "Tactile et interactions", 
+	"title": "Proposer une alternative aux mouvements de glisser-déposer ", 
+	"type": ["Test manuel"], 
+	"tests": ["Parcourir la page","Identifier tous les mouvements de glisser-déposer qui ne nécessitent pas de trajectoire précise "], 
+	"verifier": ["Tous les mouvements de glisser-déposer possèdent une alternative accessible nécessitant un pointage à contact unique sans action de glisser."], 
+	"resultat": ["Pour tout mouvement de glisser-déposer, une alternative accessible qui nécessite un pointage à contact unique sans mouvement de glisser (action de cliquez sur un point de départ, puis maintenir contact pour déplacer puis relâcher le pointeur au positionnement final)  doit être présente.</br>Exemple : une application dans laquelle on peut déplacer des éléments d'une colonne à l'autre par un geste de glisser-déposer, un bouton sur l'élément permet de sélectionner la colonne dans laquelle on souhaite déplacer l'élément. "], 
+	"exception": "<ul><li>L’action de glisser/déposer est essentielle (jeux de dextérité, par exemple)</li><li>La fonctionnalité est gérée par l'agent utilisateur et non modifiée</li></ul>", 
+	"raccourcis": "", 
+	"moreInfo": "", 
+	"profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"], 
+	"wcag": ["2.5.7"],
+	"ID": "", 
+	"IDorigin": "" 
 }, {
 	"themes": "Tactile et interactions",
 	"title": "Donner accès au contenu quelle que soit l'orientation de l'écran",
