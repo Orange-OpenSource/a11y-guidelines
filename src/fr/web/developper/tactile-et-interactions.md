@@ -61,7 +61,7 @@ Lors d'une interaction gestuelle mono-point, au moins une condition est vraie :
 
 ## Proposer une alternative aux mouvements de glisser-déposer 
 
-**Cible&nbsp;:** tout le monde en particulier les personnes souffrant de handicap moteur, visuel et en mobilité ou naviguant au clavier. 
+**Cible&nbsp;:** tout le monde en particulier les personnes souffrant de handicap moteur, visuel et en mobilité. 
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  

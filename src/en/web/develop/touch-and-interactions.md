@@ -60,7 +60,7 @@ During a single-point gesture interaction, at least one condition is true:
 
 ## Provide an alternative to dragging movement 
 
-**Target&nbsp;:** everyone, in particular people with motor or visual disability and mobility or keyboard user. 
+**Target&nbsp;:** everyone, in particular people with motor or visual disability and mobility. 
 **When&nbsp;:** during design and development.
 
 **Description&nbsp;:**  

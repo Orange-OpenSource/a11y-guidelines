@@ -621,7 +621,7 @@
 	"resultat": ["No interactive element is fully masked when receiving keyboard focus."], 
 	"exception": "",
 	"raccourcis": "",
-	"moreInfo": "http://localhost:8080/en/web/develop/keyboard-navigation/#ensure-that-the-interactive-element-receiving-keyboard-focus-is-always-at-least-partially-visible-in-the-users-viewport",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/keyboard-navigation/#ensure-that-the-interactive-element-receiving-keyboard-focus-is-always-at-least-partially-visible-in-the-users-viewport",
 	"profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
 	"wcag": ["2.4.11"],
 	"ID": "testWebID-41",

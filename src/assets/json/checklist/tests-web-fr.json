@@ -614,7 +614,7 @@
 	"IDorigin": "testWebID-41"
 },{
 	"themes": "Navigation clavier",
-	"title": "j", 
+	"title": "S'assurer que le composant qui reçoit le focus soit visible.", 
 	"type": ["Navigation clavier"], 
 	"tests": ["Parcourir la page au clavier à l'aide de la touche <kbd>tab</kbd>", "Parcourir la page au clavier à l'aide de la touche <kbd>Shift + tab</kbd>","Si un composant peut recevoir le focus via JavaScript alors ce cas doit être évalué également."], 
 	"verifier": ["Vérifier qu'à la prise de focus par les différents composants, aucun de ces derniers n'est totalement masqué."], 
