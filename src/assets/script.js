@@ -1,8 +1,11 @@
 (function () {
   document.documentElement.classList.replace('no-js', 'js')
-  let RGAAWCAG =document.getElementById("RGAAWCAG");
+  let RGAAWCAG = document.getElementsByClassName("RGAAWCAG");
   if(RGAAWCAG!==null){
-    RGAAWCAG.children[0].classList.add("table");
+
+    for (let item of RGAAWCAG){
+      item.children[0].classList.add("table");
+    }
   }
 })();
 
