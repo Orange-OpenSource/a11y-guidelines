@@ -559,6 +559,24 @@
   },
   {
     "themes":"Tactile et interactions",
+    "title":"Proposer une alternative aux mouvement de glisser-déposer",
+    "type": [],
+    "tests": [
+      "Examiner les wireframes et les maquettes graphiques",
+      " Identifier toutes les fonctionnalités de glisser-déposer qui ne nécessitent pas de trajectoire précise"
+    ],
+    "verifier": [
+      "Tous les mouvements de glisser-déposer possèdent une alternative accessible nécessitant un pointage à contact unique sans mouvement de glisser (action de cliquez sur un point de départ, puis maintenir contact pour déplacer puis relâcher le pointeur au positionnement final)."
+    ],
+    "resultat": [
+      "Définition glisser-déposer : Action d'attraper un élément et de le déplacer sans relâcher le bouton de la souris. Certains utilisateurs ont des difficultés à réaliser les mouvements de glisser-déposer, par exemple les utilisateurs de lecteurs d'écrans ou les personnes ayant des troubles moteurs qui n'arriveront pas à effectuer l'action de glisser de manière précise. Pour être accessible, ce type d'action doit pouvoir être également réalisée par une alternative ne nécessitant pas de mouvement de glisser. "
+    ],
+    "exception": "<ul><li>L’action de glisser/déposer est essentielle (jeux de dextérité, par exemple)</li><li>La fonctionnalité est gérée par l'agent utilisateur et non modifiée</li></ul>",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
+    "themes":"Tactile et interactions",
     "title":"Permettre à l’utilisateur de choisir l’orientation de l’écran",
     "type": [],
     "tests": [

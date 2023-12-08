@@ -215,7 +215,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#allow-the-use-of-the-main-features-of-the-application-with-the-keyboard" class="dropdown-item text-wrap">Allow the use of the main features of the application with the keyboard</a><a href="#the-focus-order-must-be-sequential-and-logical-without-keyboard-trap" class="dropdown-item text-wrap">The focus order must be sequential and logical without keyboard trap</a><a href="#make-the-focus-visible-at-all-times" class="dropdown-item text-wrap">Make the focus visible at all times</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#allow-the-use-of-the-main-features-of-the-application-with-the-keyboard" class="dropdown-item text-wrap">Allow the use of the main features of the application with the keyboard</a><a href="#the-focus-order-must-be-sequential-and-logical-without-keyboard-trap" class="dropdown-item text-wrap">The focus order must be sequential and logical without keyboard trap</a><a href="#make-the-focus-visible-at-all-times" class="dropdown-item text-wrap">Make the focus visible at all times</a><a href="#ensure-that-the-interactive-element-receiving-keyboard-focus-is-always-at-least-partially-visible-in-the-users-viewport" class="dropdown-item text-wrap">Ensure that the interactive element receiving keyboard focus is always at least partially visible in the user&#39;s viewport.</a></div>
     </nav>
         
       </div>
@@ -359,6 +359,39 @@ Focus set on the « Apple iPhone 5s argent ».</p>
 <ul>
 <li><a href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a></li>
 </ul>
+<h2 id="ensure-that-the-interactive-element-receiving-keyboard-focus-is-always-at-least-partially-visible-in-the-users-viewport">Ensure that the interactive element receiving keyboard focus is always at least partially visible in the user's viewport. <a class="header-anchor" href="#ensure-that-the-interactive-element-receiving-keyboard-focus-is-always-at-least-partially-visible-in-the-users-viewport" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target :</strong> everyone, especially people without visual impairment and using keyboard navigation and/or attention difficulties and people using a screen magnifier.</p>
+<p><strong>When :</strong> as of conception but mainly during development</p>
+<p><strong>Description :</strong><br>
+When an interactive component receives keyboard focus, this element is not totally hidden by any other content. Pay particular attention to sticky headers and footers as well as modal windows. Also be careful when focus is managed by JavaScript.</p>
+<p><strong>Good Practice :</strong><br>
+It is possible to go further by ensuring that the interactive component receiving keyboard focus is always fully visible in the viewport (criterion 2.4.12 Focus Not Obscured (Enhanced) level AAA) in order to make sure that the user has a full understanding of the nature and function of this component.</p>
+<p><strong>Checklist :</strong></p>
+<ul>
+<li>Scroll through the page with the keyboard using the tab key as well as (Shift+ tab) keys.</li>
+<li>Be sure to test all possible interactions in the page (sticky headers and footers as well as modal windows in particular).</li>
+<li>Pay attention to situations where the viewport is smaller (responsive on mobile, zoom or use of a screen magnifier).</li>
+</ul>
+<p><strong>Complement :</strong></p>
+<ul>
+<li>When the content is in a user-movable content, then only the initial position needs to be tested.</li>
+<li>The element receiving keyboard focus can be hidden by other content opened by the user. If it is possible to unhide the focused element without moving the focus, then the focused element is not considered hidden.</li>
+<li>When the element receiving keyboard focus is hidden by another one with less than 100 percent opacity then the element receiving keyboard focus is considered as not entirely hidden. For this edgecase a special attention for contrasts criterion is needed.</li>
+</ul>
+<p><strong>Users' goal :</strong><br>
+Ensure users always know where in the viewport the element receiving keyboard focus is so they can have a full understanding of the nature and function of this component.</p>
+<p><strong>Passing example :</strong><br>
+A webpage with sticky components that may hide the element receiving keyboard focus is using CSS properties <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding">'scroll-padding-*''</a> to prevent it.</p>
+<p><strong>Failing example :</strong></p>
+<ul>
+<li>A modal dialog appears on screen but the focus is not constrained in it, allowing elements hidden by the modal to receive keyboard focus.</li>
+<li>A chatbot is displayed on the screen in the foreground of the viewport and may hide the element receiving keyboard focus.</li>
+</ul>
+<p><strong>Référence WCAG :</strong></p>
+<ul>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum">2.4.11 Focus Not Obscured (Minimum)</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced">2.4.12 Focus Not Obscured (Enhanced)</a></li>
+</ul>
 
           </div>
         </main>
@@ -370,7 +403,8 @@ Focus set on the « Apple iPhone 5s argent ».</p>
       <ul class="nav flex-column"><li class="nav-item position-relative">
             <a href="#allow-the-use-of-the-main-features-of-the-application-with-the-keyboard" class="nav-link text-muted">Allow the use of the main features of the application with the keyboard</a></li><li class="nav-item position-relative">
             <a href="#the-focus-order-must-be-sequential-and-logical-without-keyboard-trap" class="nav-link text-muted">The focus order must be sequential and logical without keyboard trap</a></li><li class="nav-item position-relative">
-            <a href="#make-the-focus-visible-at-all-times" class="nav-link text-muted">Make the focus visible at all times</a></li>
+            <a href="#make-the-focus-visible-at-all-times" class="nav-link text-muted">Make the focus visible at all times</a></li><li class="nav-item position-relative">
+            <a href="#ensure-that-the-interactive-element-receiving-keyboard-focus-is-always-at-least-partially-visible-in-the-users-viewport" class="nav-link text-muted">Ensure that the interactive element receiving keyboard focus is always at least partially visible in the user&#39;s viewport.</a></li>
       </ul>
     </nav>
             </div>

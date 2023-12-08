@@ -213,7 +213,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#offer-an-alternative-to-complex-gestures" class="dropdown-item text-wrap">Offer an alternative to complex gestures</a><a href="#give-access-to-the-content-regardless-of-the-orientation-of-the-screen" class="dropdown-item text-wrap">Give access to the content regardless of the orientation of the screen</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#provide-an-alternative-to-complex-gestures" class="dropdown-item text-wrap">Provide an alternative to complex gestures</a><a href="#provide-an-alternative-to-dragging-movement" class="dropdown-item text-wrap">Provide an alternative to dragging movement</a><a href="#give-access-to-the-content-regardless-of-the-orientation-of-the-screen" class="dropdown-item text-wrap">Give access to the content regardless of the orientation of the screen</a></div>
     </nav>
         
       </div>
@@ -269,7 +269,7 @@
           <div class="mt-4">
           <h1>Web design - Touch and interactions</h1>
 <p class="lead">Ensure that the user keeps control over interactions, particularly tactile ones</p>
-<h2 id="offer-an-alternative-to-complex-gestures">Offer an alternative to complex gestures <a class="header-anchor" href="#offer-an-alternative-to-complex-gestures" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="provide-an-alternative-to-complex-gestures">Provide an alternative to complex gestures <a class="header-anchor" href="#provide-an-alternative-to-complex-gestures" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p><strong>Target:</strong> everyone in particular, people with motor or visual disability and mobility.<br>
 <strong>When</strong> during design and development.</p>
 <p><strong>Description:</strong><br>
@@ -277,6 +277,25 @@ For each complex gestural interaction, an alternative must be available (for exa
 Similarly for interactions requiring a change of orientation of the screen (tilting, rotation, shaking ...).</p>
 <p><strong>Complex gesture:</strong> any multi-pointer gesture (requiring several fingers), and / or path-bases gesture.<br>
 <strong>Simplified gesture:</strong> an alternative requiring a single pointer (one finger) without path-based gesture.</p>
+<h2 id="provide-an-alternative-to-dragging-movement">Provide an alternative to dragging movement <a class="header-anchor" href="#provide-an-alternative-to-dragging-movement" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target :</strong> everyone, in particular people with motor or visual disability and mobility.<br>
+<strong>When :</strong> during design and development.</p>
+<p><strong>Description :</strong><br>
+For each drag-and-drop interaction, an alternative that does not require a dragging movement is available.<br>
+This criterion only concerns movements where only the starting and end points are taken into account without path-based gesture.<br>
+Dragging movement: Action of clicking on a starting point, then holding contact during movement, then releasing the pointer at the final position. .</p>
+<p><strong>Do :</strong><br>
+A map allows users to drag the map view. The map has also up/down/left/right buttons to move the view. .</p>
+<p><strong>Exception :</strong><br>
+The dragging movement functionality is:</p>
+<ul>
+<li>essential (dexterity games)</li>
+<li>controlled by the user agent and not modified</li>
+</ul>
+<p><strong>Référence <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements">2.5.7 Dragging movements</a></li>
+</ul>
 <h2 id="give-access-to-the-content-regardless-of-the-orientation-of-the-screen">Give access to the content regardless of the orientation of the screen <a class="header-anchor" href="#give-access-to-the-content-regardless-of-the-orientation-of-the-screen" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p><strong>Target:</strong> Everyone in particular, people with motor or visual disability and mobility.<br>
 <strong>When:</strong> during design and development.</p>
@@ -295,7 +314,8 @@ Access to the content must not depend on the orientation of the screen (portrait
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">On this page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#offer-an-alternative-to-complex-gestures" class="nav-link text-muted">Offer an alternative to complex gestures</a></li><li class="nav-item position-relative">
+            <a href="#provide-an-alternative-to-complex-gestures" class="nav-link text-muted">Provide an alternative to complex gestures</a></li><li class="nav-item position-relative">
+            <a href="#provide-an-alternative-to-dragging-movement" class="nav-link text-muted">Provide an alternative to dragging movement</a></li><li class="nav-item position-relative">
             <a href="#give-access-to-the-content-regardless-of-the-orientation-of-the-screen" class="nav-link text-muted">Give access to the content regardless of the orientation of the screen</a></li>
       </ul>
     </nav>

@@ -215,7 +215,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#autoriser-lutilisation-du-zoom" class="dropdown-item text-wrap">Autoriser l&#39;utilisation du zoom</a><a href="#permettre-dannuler-le-declenchement-des-interactions" class="dropdown-item text-wrap">Permettre d&#39;annuler le déclenchement des interactions</a><a href="#proposer-une-alternative-aux-gestuelles-complexes" class="dropdown-item text-wrap">Proposer une alternative aux gestuelles complexes</a><a href="#donner-acces-au-contenu-quelle-que-soit-lorientation-de-lecran" class="dropdown-item text-wrap">Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#autoriser-lutilisation-du-zoom" class="dropdown-item text-wrap">Autoriser l&#39;utilisation du zoom</a><a href="#permettre-dannuler-le-declenchement-des-interactions" class="dropdown-item text-wrap">Permettre d&#39;annuler le déclenchement des interactions</a><a href="#proposer-une-alternative-aux-gestuelles-complexes" class="dropdown-item text-wrap">Proposer une alternative aux gestuelles complexes</a><a href="#proposer-une-alternative-aux-mouvements-de-glisser-deposer" class="dropdown-item text-wrap">Proposer une alternative aux mouvements de glisser-déposer</a><a href="#donner-acces-au-contenu-quelle-que-soit-lorientation-de-lecran" class="dropdown-item text-wrap">Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</a></div>
     </nav>
         
       </div>
@@ -312,6 +312,21 @@ Lors d'une interaction gestuelle mono-point, au moins une condition est vraie :<
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#motion-actuation">2.5.4 Motion Actuation</a></li>
 </ul>
+<h2 id="proposer-une-alternative-aux-mouvements-de-glisser-deposer">Proposer une alternative aux mouvements de glisser-déposer <a class="header-anchor" href="#proposer-une-alternative-aux-mouvements-de-glisser-deposer" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde en particulier les personnes souffrant de handicap moteur, visuel et en mobilité.<br>
+<strong>Quand :</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description :</strong><br>
+Pour chaque interaction de glisser-déposer, vérifier qu'une alternative accessible est disponible et ne demande pas de mouvement de glisser.<br>
+Ce critère concerne seulement les mouvements dont seuls les points de départ et d'arrivée sont pris en compte sans geste basé sur une trajectoire précise.<br>
+Mouvement de glisser : Action de cliquez sur un point de départ, puis maintenir contact pour déplacer puis relâcher le pointeur au positionnement final.</p>
+<p><strong>Exemple valide :</strong><br>
+Par exemple, si on peut glisser-déposer des valeurs dans différentes colonnes, une alternative suffisante serait un bouton qui permet de sélectionner la colonne où déplacer la valeur.</p>
+<p><strong>Exception :</strong><br>
+La fonctionnalité de glisser-déposer est essentielle (un jeu de dextérité par exemple) ou la fonctionnalité est native et gérée par l'agent utilisateur et non modifiée.</p>
+<p><strong>Référence <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements">2.5.7 Dragging movements</a></li>
+</ul>
 <h2 id="donner-acces-au-contenu-quelle-que-soit-lorientation-de-lecran">Donner accès au contenu quelle que soit l'orientation de l'écran <a class="header-anchor" href="#donner-acces-au-contenu-quelle-que-soit-lorientation-de-lecran" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p><strong>Cible :</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br>
 <strong>Quand :</strong> lors de la conception et lors du développement.</p>
@@ -333,6 +348,7 @@ L'accès au contenu ne doit pas dépendre de l'orientation de l'écran (portrait
             <a href="#autoriser-lutilisation-du-zoom" class="nav-link text-muted">Autoriser l&#39;utilisation du zoom</a></li><li class="nav-item position-relative">
             <a href="#permettre-dannuler-le-declenchement-des-interactions" class="nav-link text-muted">Permettre d&#39;annuler le déclenchement des interactions</a></li><li class="nav-item position-relative">
             <a href="#proposer-une-alternative-aux-gestuelles-complexes" class="nav-link text-muted">Proposer une alternative aux gestuelles complexes</a></li><li class="nav-item position-relative">
+            <a href="#proposer-une-alternative-aux-mouvements-de-glisser-deposer" class="nav-link text-muted">Proposer une alternative aux mouvements de glisser-déposer</a></li><li class="nav-item position-relative">
             <a href="#donner-acces-au-contenu-quelle-que-soit-lorientation-de-lecran" class="nav-link text-muted">Donner accès au contenu quelle que soit l&#39;orientation de l&#39;écran</a></li>
       </ul>
     </nav>

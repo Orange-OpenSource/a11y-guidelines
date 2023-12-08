@@ -559,6 +559,24 @@
   },
   {
     "themes": "Touch and interactions",
+    "title": "Provide an alternative to dragging movement ",
+    "type": [],
+    "tests": [
+      "Check wireframes and graphic mockup",
+      "Identify all dragging movement features that do not require a precise path"
+    ],
+    "verifier": [
+      " All dragging movements have an accessible alternative requiring a single pointer without dragging (action of clicking on a starting point, then holding contact during movement, then releasing the pointer to the final position)."
+    ],
+    "resultat": [
+      "Dragging movement definition: Action of grabbing an element and moving it without releasing the mouse button. Some users have difficulties performing drag and drop movements. For example, screen reader users or people with motor disabilities will not be able to perform the dragging action precisely. To be accessible, there must be an alternative to this type of action that does not require a dragging movement. "
+    ],
+    "exception": "The dragging movement functionality is: <ul><li>essential (dexterity game)</li><li>controlled by the user agent and not modified</li></ul>",
+    "raccourcis": "",
+    "profils": ["Designer"]
+  },
+  {
+    "themes": "Touch and interactions",
     "title": "Allow the user to choose the orientation of the screen",
     "type": [],
     "tests": [

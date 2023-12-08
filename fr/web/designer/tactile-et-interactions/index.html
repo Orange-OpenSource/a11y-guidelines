@@ -213,7 +213,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#proposer-une-alternative-aux-gestuelles-complexes" class="dropdown-item text-wrap">Proposer une alternative aux gestuelles complexes</a><a href="#orientation-de-lecran" class="dropdown-item text-wrap">Orientation de l’écran</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#proposer-une-alternative-aux-gestuelles-complexes" class="dropdown-item text-wrap">Proposer une alternative aux gestuelles complexes</a><a href="#proposer-une-alternative-aux-mouvements-de-glisser-deposer" class="dropdown-item text-wrap">Proposer une alternative aux mouvements de glisser-déposer</a><a href="#orientation-de-lecran" class="dropdown-item text-wrap">Orientation de l’écran</a></div>
     </nav>
         
       </div>
@@ -277,6 +277,21 @@ Pour chaque interaction gestuelle complexe, une alternative doit être disponibl
 De même pour les interactions nécessitant un changement d'orientation de l'écran (basculement, rotation, secouement...), une alternative doit exister.</p>
 <p><strong>Gestuelles complexes</strong>: tout geste multipointeurs (nécessitant plusieurs doigts), et/ou nécessitant de suivre une trajectoire précise.<br>
 <strong>Gestuelle simplifiée</strong>: une alternative nécessitant un seul pointeur (un seul doigt) et sans trajectoire précise.</p>
+<h2 id="proposer-une-alternative-aux-mouvements-de-glisser-deposer">Proposer une alternative aux mouvements de glisser-déposer <a class="header-anchor" href="#proposer-une-alternative-aux-mouvements-de-glisser-deposer" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes souffrant de handicap moteur, visuel et en mobilité.<br>
+<strong>Quand :</strong> lors de la conception et lors du développement.</p>
+<p><strong>Description :</strong><br>
+Pour chaque interaction de glisser-déposer, une alternative qui ne nécessite pas de mouvement de glisser est disponible.<br>
+Ce critère concerne seulement les mouvements dont seuls les points de départ et d'arrivée sont pris en compte sans geste basé sur une trajectoire précise.<br>
+Mouvement de glisser : Action de cliquez sur un point de départ, puis maintenir contact pour déplacer, puis relâcher le pointeur au positionnement final.</p>
+<p><strong>Exemple valide :</strong><br>
+Une carte permet aux utilisateurs de faire glisser la vue de la carte, et la carte comporte des boutons haut/bas/gauche/droite pour déplacer également la vue.</p>
+<p><strong>Exception :</strong><br>
+La fonctionnalité de glisser-déposer est essentielle (un jeu de dextérité par exemple) ou la fonctionnalité est native et gérée par l'agent utilisateur et non modifiée.</p>
+<p><strong>Référence <abbr>WCAG</abbr> :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements">2.5.7 Dragging movements</a></li>
+</ul>
 <h2 id="orientation-de-lecran">Orientation de l’écran <a class="header-anchor" href="#orientation-de-lecran" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <p><strong>Cible :</strong> tout le monde et en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.<br>
 <strong>Quand :</strong> lors de la conception et lors du développement.</p>
@@ -296,6 +311,7 @@ L’accès au contenu ne doit pas dépendre de l’orientation de l’écran (po
       <h2 id="toc-title">Sur cette page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
             <a href="#proposer-une-alternative-aux-gestuelles-complexes" class="nav-link text-muted">Proposer une alternative aux gestuelles complexes</a></li><li class="nav-item position-relative">
+            <a href="#proposer-une-alternative-aux-mouvements-de-glisser-deposer" class="nav-link text-muted">Proposer une alternative aux mouvements de glisser-déposer</a></li><li class="nav-item position-relative">
             <a href="#orientation-de-lecran" class="nav-link text-muted">Orientation de l’écran</a></li>
       </ul>
     </nav>

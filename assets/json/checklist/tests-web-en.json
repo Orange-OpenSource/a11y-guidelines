@@ -612,6 +612,20 @@
 	"wcag": ["1.4.11"],
 	"ID": "testWebID-41",
 	"IDorigin": "testWebID-41"
+},{
+	"themes": "Keyboard navigation",
+	"title": "Make sure that the component receiving focus is visible", 
+	"type": ["Keyboard navigation"], 
+	"tests": ["Scroll through the page with the keyboard using the <kbd>tab</kbd> key.","Scroll through the page with the keyboard using the <kbd>Shift + tab</kbd> keys.","Check any element that can receive the focus by JavaScript. "], 
+	"verifier": ["Check that no interactive element is fully hidden when receiving keyboard focus. "], 
+	"resultat": ["No interactive element is fully masked when receiving keyboard focus."], 
+	"exception": "",
+	"raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/keyboard-navigation/#ensure-that-the-interactive-element-receiving-keyboard-focus-is-always-at-least-partially-visible-in-the-users-viewport",
+	"profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
+	"wcag": ["2.4.11"],
+	"ID": "testWebID-41",
+	"IDorigin": "testWebID-41"
 }, {
 	"themes": "Layout",
 	"title": "Use relative sizes and responsive design",
@@ -850,6 +864,21 @@
 	"wcag": ["2.5.1", "2.5.4"],
 	"ID": "testWebID-58",
 	"IDorigin": "testWebID-58"
+},
+{
+	"themes": "Touch and interactions",
+	"title": "Provide an alternative to dragging movement ",
+	"type": ["Manual test"],
+	"tests": ["Browse page", "Identify all dragging movements that don't require a precise path"],
+	"verifier":  ["All dragging movement have an accessible alternative requiring a single pointer without any dragging action."], 
+	"resultat": ["For any dragging movement, an accessible alternative that requires a single pointer without dragging (action of clicking on a starting point, then holding contact during movement, then releasing the pointer to the end point) must be present.<br/>Example: In application where you can move an item from one column to another using a drag and drop gesture, a button on the item allows you to select the column in which you want to move it."],
+	"exception": "The dragging movement functionality is: <ul><li>essential (dexterity games) </li><li>controlled by the user agent and not modified.</li></ul>",
+	"raccourcis": "",
+	"moreInfo": "",
+	"profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
+	"wcag": ["2.5.7"],
+	"ID": "",
+	"IDorigin": ""
 }, {
 	"themes": "Touch and interactions",
 	"title": "Give access to content regardless of screen orientation",

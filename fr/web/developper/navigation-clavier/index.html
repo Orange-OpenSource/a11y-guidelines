@@ -215,7 +215,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#permettre-dutiliser-les-principales-fonctionnalites-de-lapplication-au-clavier" class="dropdown-item text-wrap">Permettre d’utiliser les principales fonctionnalités de l’application au clavier</a><a href="#rendre-le-parcours-du-focus-sequentiel-et-logique-sans-piege-clavier" class="dropdown-item text-wrap">Rendre le parcours du focus séquentiel et logique sans piège clavier</a><a href="#rendre-visible-le-focus-en-toute-circonstance" class="dropdown-item text-wrap">Rendre visible le focus en toute circonstance</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#permettre-dutiliser-les-principales-fonctionnalites-de-lapplication-au-clavier" class="dropdown-item text-wrap">Permettre d’utiliser les principales fonctionnalités de l’application au clavier</a><a href="#rendre-le-parcours-du-focus-sequentiel-et-logique-sans-piege-clavier" class="dropdown-item text-wrap">Rendre le parcours du focus séquentiel et logique sans piège clavier</a><a href="#rendre-visible-le-focus-en-toute-circonstance" class="dropdown-item text-wrap">Rendre visible le focus en toute circonstance</a><a href="#sassurer-que-lutilisateur-puisse-toujours-voir-ou-est-positionne-dans-le-viewport-le-composant-qui-recoit-le-focus" class="dropdown-item text-wrap">S&#39;assurer que l&#39;utilisateur puisse toujours voir où est positionné dans le viewport le composant qui reçoit le focus.</a></div>
     </nav>
         
       </div>
@@ -365,6 +365,39 @@ Dans la seconde capture, les pointillés ont été supprimés, mais un encadré 
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a></li>
 </ul>
+<h2 id="sassurer-que-lutilisateur-puisse-toujours-voir-ou-est-positionne-dans-le-viewport-le-composant-qui-recoit-le-focus">S'assurer que l'utilisateur puisse toujours voir où est positionné dans le viewport le composant qui reçoit le focus. <a class="header-anchor" href="#sassurer-que-lutilisateur-puisse-toujours-voir-ou-est-positionne-dans-le-viewport-le-composant-qui-recoit-le-focus" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde, et en particulier les personnes sans déficience visuelle particulière utilisant la navigation au clavier et/ou déficience(s) cognitive(s) et les utilisateurs de loupe d'écran.</p>
+<p><strong>Quand :</strong> dès la phase de conception mais surtout lors du développement.</p>
+<p><strong>Description :</strong><br>
+Lorsqu'un composant reçoit le focus lors de la navigation au clavier, le composant ne doit pas être totalement masqué. Attention en particulier aux sticky header et footer ainsi qu'aux fenêtres modales. Attention également lorsque le focus est géré en JavaScript.</p>
+<p><strong>Bonne Pratique :</strong><br>
+Il est possible d'aller plus loin en veillant à ce que le composant reste totalement visible à la prise de focus (critère 2.4.12 <span lang="en">Focus Not Obscured (Enhanced) niveau AAA</span>) car cela permet de garantir que l'utilisateur ait connaissance de la fonction du composant.</p>
+<p><strong>A vérifier :</strong></p>
+<ul>
+<li>Penser à utiliser la tabulation avant (tab) et arrière (Shift+ tab) pour vérifier tous les cas de figure.</li>
+<li>Veiller à tester toutes les interactions susceptibles de cacher le composant qui reçoit le focus (notamment les éléments en position fixe ou sticky, modales, menus déroulants,...).</li>
+<li>Attention aux cas où le viewport est réduit (responsive sur mobile, zoom, utilisation d'une loupe d'écran).</li>
+</ul>
+<p><strong>Complément :</strong></p>
+<ul>
+<li>Lorsque le contenu d'une interface configurable peut être repositionné par l'utilisateur, seules les positions initiales du contenu déplaçable par l'utilisateur sont prises en compte pour les tests et la conformité à ce critère de réussite.</li>
+<li>Le contenu ouvert par l'utilisateur peut masquer le composant recevant le focus. Si l'utilisateur peut révéler le composant ciblé sans déplacer le focus alors le composant avec le focus n'est pas considéré comme masqué en raison du contenu créé par l'auteur.</li>
+<li>Si le composant qui reçoit le focus est recouvert par un autre élément dont l'opacité est inférieure à 100 % alors le composant qui reçoit le focus n'est pas totalement masqué et le critère est validé. Attention toutefois à bien évaluer les critères sur les contrastes.</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong><br>
+Permettre aux utilisateurs de la navigation au clavier de toujours savoir où est positionné le composant qui reçoit le focus et quelle est sa fonction.</p>
+<p><strong>Exemple valide :</strong><br>
+Une page avec des composants sticky susceptibles de recouvrir l'élément qui reçoit le focus lors du scroll utilisent les propriétés CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding">'scroll-padding-*''</a> afin d'éviter que les différents éléments de la page ne se recouvrent.</p>
+<p><strong>Exemple non valide :</strong></p>
+<ul>
+<li>Une modale apparaît à l'écran mais le focus n'est pas restreint à l'intérieur de celle-ci. Par conséquent le focus peut être positionné sur des composants recouverts par la modale.</li>
+<li>Un chatbot occupe une partie du viewport et est placé au premier plan recouvrant ainsi totalement le composant qui reçoit le focus</li>
+</ul>
+<p><strong>Référence WCAG :</strong></p>
+<ul>
+<li><a lang="en" href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum">2.4.11 Focus Not Obscured (Minimum)</a></li>
+<li><a lang="en" href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced">2.4.12 Focus Not Obscured (Enhanced)</a></li>
+</ul>
 
           </div>
         </main>
@@ -376,7 +409,8 @@ Dans la seconde capture, les pointillés ont été supprimés, mais un encadré 
       <ul class="nav flex-column"><li class="nav-item position-relative">
             <a href="#permettre-dutiliser-les-principales-fonctionnalites-de-lapplication-au-clavier" class="nav-link text-muted">Permettre d’utiliser les principales fonctionnalités de l’application au clavier</a></li><li class="nav-item position-relative">
             <a href="#rendre-le-parcours-du-focus-sequentiel-et-logique-sans-piege-clavier" class="nav-link text-muted">Rendre le parcours du focus séquentiel et logique sans piège clavier</a></li><li class="nav-item position-relative">
-            <a href="#rendre-visible-le-focus-en-toute-circonstance" class="nav-link text-muted">Rendre visible le focus en toute circonstance</a></li>
+            <a href="#rendre-visible-le-focus-en-toute-circonstance" class="nav-link text-muted">Rendre visible le focus en toute circonstance</a></li><li class="nav-item position-relative">
+            <a href="#sassurer-que-lutilisateur-puisse-toujours-voir-ou-est-positionne-dans-le-viewport-le-composant-qui-recoit-le-focus" class="nav-link text-muted">S&#39;assurer que l&#39;utilisateur puisse toujours voir où est positionné dans le viewport le composant qui reçoit le focus.</a></li>
       </ul>
     </nav>
             </div>
