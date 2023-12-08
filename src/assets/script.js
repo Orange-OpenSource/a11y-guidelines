@@ -1,5 +1,9 @@
 (function () {
   document.documentElement.classList.replace('no-js', 'js')
+  let RGAAWCAG =document.getElementById("RGAAWCAG");
+  if(RGAAWCAG!==null){
+    RGAAWCAG.children[0].classList.add("table");
+  }
 })();
 
 /* Cookie consent banner customization */
