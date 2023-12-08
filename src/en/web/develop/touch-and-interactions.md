@@ -42,7 +42,7 @@ During a single-point gesture interaction, at least one condition is true:
 
 
 
-## Offer an alternative to complex gestures
+## Provide an alternative to complex gestures
 
 **Target:** Everyone, especially people with motor or visual disabilities and mobility.  
 **When:** during design and development.
@@ -58,7 +58,26 @@ During a single-point gesture interaction, at least one condition is true:
 - <a href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a>
 
 
+## Provide an alternative to dragging movement 
 
+**Target&nbsp;:** everyone, in particular people with motor or visual disability and mobility. 
+**When&nbsp;:** during design and development.
+
+**Description&nbsp;:**  
+For each drag-and-drop interaction, verify that an accessible alternative is available and does not require a dragging movement.  
+This criterion only concerns movements where only the starting and end points are taken into account without path-based gesture.  
+Dragging movement: Action of clicking on a starting point, then holding contact during movement, then releasing the pointer to the final position. 
+
+**Do&nbsp;:**  
+For example, if you can drag and drop values into different columns, a sufficient alternative would be a button that allows you to select the column to move the value to.  
+
+**Exception&nbsp;:** 
+The dragging movement functionality is: 
+-  essential (dexterity games) 
+- controlled by the user agent and not modified 
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements">2.5.7 Dragging movements</a>
 
 ## Give access to the content regardless of the orientation of the screen
 
