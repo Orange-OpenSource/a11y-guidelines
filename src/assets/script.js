@@ -1,5 +1,12 @@
 (function () {
   document.documentElement.classList.replace('no-js', 'js')
+  let RGAAWCAG = document.getElementsByClassName("RGAAWCAG");
+  if(RGAAWCAG!==null){
+
+    for (let item of RGAAWCAG){
+      item.children[0].classList.add("table");
+    }
+  }
 })();
 
 /* Cookie consent banner customization */
