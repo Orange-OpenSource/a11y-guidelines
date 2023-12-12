@@ -12,11 +12,9 @@ js:
 
 # List of the WWDC detailed summaries
 
-This section regroups [presentations at the WWDC](https://developer.apple.com/videos/all-videos/) that aren't directly [bound to accessibility](../).
+This section contains a collection of [presentations&nbsp;at&nbsp;the&nbsp;WWDC](https://developer.apple.com/videos/all-videos/) that are summarized in detail with the relevant time codes.
 
-Each one of them is detailed with **time references** to their different contents.
-
-Most of the illustrations are parts of the Apple presentations and may be available at the `Resources` section inside the `Overview` sheet of each video.
+Most of the illustrations are parts of the Apple presentations and may be available inside the `Overview` sheet of each video.
 
 The videos that may be of interest to **designers** are highlighted with a **dedicated mark** at the end of their names.
 
@@ -24,6 +22,8 @@ The videos that may be of interest to **designers** are highlighted with a **ded
 
 <section class="visually-hidden" id="wwdcTests" aria-hidden="true">
    <h2  id="hhwwdc2023" class="pt-5">WWDC 2023</h2>
+   <p id="hwwdc79">WWDC 2023 Bring widgets to life</p>
+   <p id="hwwdc78">WWDC 2023 Bring widgets to new places</p>
    <p id="hwwdc77">WWDC 2023 Build accessible apps with SwiftUI and UIKit</p>
    <p id="hwwdc76">WWDC 2023 Build programmatic UI with Xcode Previews</p>
    <p id="hwwdc75">WWDC 2023 Design dynamic Live Activities</p>
