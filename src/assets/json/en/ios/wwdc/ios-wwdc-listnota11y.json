@@ -12,6 +12,28 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "Bring widgets to life",
+    "type": ["Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23Widgets",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Bring widgets to new places",
+    "type": ["Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23Widgets",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "Build accessible apps with SwiftUI and UIKit",
     "type": ["Notification"],
     "tests": [],
