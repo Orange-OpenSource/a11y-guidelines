@@ -8,7 +8,7 @@
     "resultat": [],
     "exception": "",
     "raccourcis": "",
-    "profils": ["All","Accessibility","Dark Mode","Debugging","DocC","Formatting","Instruments","Keyboard","Keynote","Localization","Optimization","Platforms State...","Regex","Shortcuts","Swift","Swift Playgrounds","SwiftUI","What's new in...","Xcode"]
+    "profils": ["All","Accessibility","Dark Mode","Debugging","DocC","Formatting","Instruments","Keyboard","Keynote","Localization","Optimization","Platforms State...","Regex","Shortcuts","Swift","Swift Playgrounds","SwiftUI","What's new in...","Xcode","Xcode Playgrounds"]
   },
   {
     "themes": "WWDC 2023",
@@ -152,6 +152,17 @@
     "exception": "",
     "raccourcis": "2023/23PlatformsSotU",
     "profils": ["All","Accessibility","Platforms State...","Swift","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Prototype with Xcode Playgrounds",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310250",
+    "profils": ["All","Xcode Playgrounds"]
   },
   {
     "themes": "WWDC 2023",
