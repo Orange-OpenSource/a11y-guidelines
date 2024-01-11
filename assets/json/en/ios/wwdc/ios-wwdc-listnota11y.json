@@ -12,6 +12,17 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "Animate symbols in your app",
+    "type": ["SF Symbol"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23Symbols",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "Bring widgets to life",
     "type": ["Widget"],
     "tests": [],
@@ -53,6 +64,17 @@
     "exception": "",
     "raccourcis": "2023/2310252",
     "profils": ["All","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Create animated symbols",
+    "type": ["SF Symbol"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23Symbols",
+    "profils": ["All"]
   },
   {
     "themes": "WWDC 2023",

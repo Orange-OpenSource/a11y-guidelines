@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Create and animate symbols - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Discover animation presets and learn how to use them with SF Symbols and custom symbols.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Skip links - Switch language">
+   <div class="container-lg">
+      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <a href="#main-menu" class="nav-link">Go to menu</a>
+    </li><li class="nav-item">
+      <a href="#main-content" class="nav-link">Go to content</a>
+    </li><li class="nav-item hidden-if-no-js">
+      <a href="#search-input" class="nav-link">Go to search</a>
+    </li><li class="nav-item">
+      <a href="#footer" class="nav-link">Go to footer</a>
+    </li></ul>
+
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+    </div>
+  </nav>
+  
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Create and animate symbols
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#overview" class="dropdown-item text-wrap">Overview</a><a href="#sf-symbols-app" class="dropdown-item text-wrap">SF Symbols app</a><a href="#custom-symbols" class="dropdown-item text-wrap">Custom symbols</a><a href="#symbol-components" class="dropdown-item text-wrap">Symbol components</a><a href="#symbol-effects" class="dropdown-item text-wrap">Symbol effects</a><a href="#compatibility" class="dropdown-item text-wrap">Compatibility</a><a href="#enhancements" class="dropdown-item text-wrap">Enhancements</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2023: Create and animate symbols</h1>
+<p>Find hereafter a detailed summary of two videos that belong to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original videos are available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2023/10257/">session 10257</a>, <a href="https://developer.apple.com/videos/play/wwdc2023/10258/">session 10258</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_Poster.png" alt="" class="img-fluid"></p>
+<p>&quot;<strong>Discover animation presets</strong> and learn how to use them with <strong>SF Symbols and custom symbols</strong>. We'll show you how to experiment with different options and configurations to find the <strong>perfect animation</strong> for your app. Learn how to update custom symbols for animation using <strong>annotation features</strong>, find out how to modify your custom symbols with <strong>symbol components</strong>, and explore the redesigned export process to help keep symbols looking great on all platforms.&quot;</p>
+<p>&quot;Bring delight to your app with animated symbols. Explore the <strong>new Symbols framework</strong>, which features a unified API to create and configure symbol effects. Learn how <strong>SwiftUI</strong>, <strong>AppKit</strong>, and <strong>UIKit</strong> make it easy to <strong>animate symbols</strong> in user interfaces. Discover tips and tricks to seamlessly integrate the new animations alongside other app content.&quot;</p>
+<p></br>Hereafter, the underlined elements <strong>lead directly to the playback of the WWDC video</strong> at the appropriate moment.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_2.png" alt="" class="img-fluid"></p>
+<h2 id="overview"><a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=15">Overview</a> <a class="header-anchor" href="#overview" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Since their introduction, the <strong>SF Symbols</strong> are meant to be consistent, customizable and expressive to provide the best user experience.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_3.png" alt="" class="img-fluid"></p>
+<p>As a brand <strong>new feature</strong> in 2023, <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10258?time=36">animation</a></strong> is now to be considered as a whole part of symbols.<br>
+<img src="../../../../../images/iOSdev/wwdc23-Symbols_4.png" alt="" class="img-fluid"></p>
+<p>A library of iconography has been made for creating custom symbols with shared <strong>design characteristics</strong> and <strong>accessibility features</strong>: the <strong>SF Symbols app</strong>.<br>
+</br></p>
+<h2 id="sf-symbols-app">SF Symbols app <a class="header-anchor" href="#sf-symbols-app" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>The new <strong>SF Symbols 5</strong> app introduces an <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=112">animation inspector</a></strong> in the sidebar to preview the new animation effects.</p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=133">animation effect selection</a> comes in with <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=153">controls</a></strong> for configuring the animation and with a <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=171">label</a></strong> under the preview area (“Automatic” or “Modified”) to indicate activated custom settings.<br>
+Moreover, the effect name can be <a href="https://developer.apple.com/videos/play/wwdc2023/10257?time=203">copied</a> in code with the appropriate syntax through the button next to the label.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_10.png" alt="" class="img-fluid"></p>
+<p>Note that the controls may vary according to the selected animation effect.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_11.png" alt="" class="img-fluid"></p>
+<h2 id="custom-symbols"><a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=264">Custom symbols</a> <a class="header-anchor" href="#custom-symbols" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Both for the basic <a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=311">variable colors</a> and the pulse animations, a <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=326">new control</a></strong> is available in the annotation list to <strong>specify which layers should be impacted</strong> when the <code>By</code> <code>Layer</code> setting is ticked.</p>
+<p>Based on the motion with the <a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=389">bounce animation</a>, another <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=411">new feature</a></strong> in annotation is introduced for <strong>grouping layers</strong> that animate their sublayers altogether.<br>
+<img src="../../../../../images/iOSdev/wwdc23-Symbols_12.png" alt="" class="img-fluid"></p>
+<p>It's important to keep in mind that the motion animations are <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=367">only for SF Symbols 5</a></strong>.<br>
+</br></p>
+<h2 id="symbol-components"><a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=598">Symbol components</a> <a class="header-anchor" href="#symbol-components" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_13.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#SFSymbolsComponents1"
+           id="SFSymbolsComponents1_tab"
+           role="tab" 
+           aria-selected="true">SF&nbsp;Symbols&nbsp;app</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SFSymbolsComponents2"
+           id="SFSymbolsComponents2_tab"
+           role="tab" 
+           aria-selected="false">Variable&nbsp;templates</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SFSymbolsComponents3"
+           id="SFSymbolsComponents3_tab"
+           role="tab" 
+           aria-selected="false">Weight&nbsp;compensation</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="SFSymbolsComponents1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the sf symbols app" href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=620">🎬</a></p>
+<p><strong>Combining various components</strong>  with a symbol can be quickly performed through few milestones in the <code>Symbol</code> <code>5</code> app to get the <a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=647">relevant elements</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-Symbols_14.png" alt="" class="img-fluid"></p>
+<p>If these new created symbols need to be refined, some <a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=677">dedicated controls</a> are available instead of the common annotation controls.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_15.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SFSymbolsComponents2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the variable templates" href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=728">🎬</a></p>
+<p>The support of the <strong>variable templates</strong> streamlines the creation of the huge amount of symbol components.<br>
+<img src="../../../../../images/iOSdev/wwdc23-Symbols_16.png" alt="" class="img-fluid"></p>
+<p>Finally, if some <strong>refinements</strong> are necessary, the <a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=762">set of previews</a> at the top of the <code>Gallery</code> view and the <code>Override</code> <code>Black</code> checkbox are the best ways to reach your goals.<br>
+<img src="../../../../../images/iOSdev/wwdc23-Symbols_17.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SFSymbolsComponents3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the weight compensation" href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=810">🎬</a></p>
+<p>During a scale change, the system automatically tailors the weight and the thickness of the symbol.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_18.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_1.png" alt="" class="img-fluid"></p>
+<h2 id="symbol-effects"><a href="https://developer.apple.com/videos/play/wwdc2023/10258/?time=108">Symbol effects</a> <a class="header-anchor" href="#symbol-effects" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_9.png" alt="" class="img-fluid"><br>
+As a feature of the Symbols framework, the <a href="https://developer.apple.com/videos/play/wwdc2023/10258?time=123">dot-separated name</a> writing renders the effects with <a href="https://developer.apple.com/videos/play/wwdc2023/10258?time=161">specific options</a> for some of them.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_24.png" alt="" class="img-fluid"></p>
+<p>Each of these effects has its own <a href="https://developer.apple.com/videos/play/wwdc2023/10258?time=273">protocol</a> to describe <strong>four distinct behaviors</strong> highlighted in <code>SwiftUI</code> through a new <a href="https://developer.apple.com/videos/play/wwdc2023/10258?time=311">view modifier</a>.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#SFSymbolsEffects1"
+           id="SFSymbolsEffects1_tab"
+           role="tab" 
+           aria-selected="true">Discrete</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SFSymbolsEffects2"
+           id="SFSymbolsEffects2_tab"
+           role="tab" 
+           aria-selected="false">Indefinite</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SFSymbolsEffects3"
+           id="SFSymbolsEffects3_tab"
+           role="tab" 
+           aria-selected="false">Transition</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SFSymbolsEffects4"
+           id="SFSymbolsEffects4_tab"
+           role="tab" 
+           aria-selected="false">Content&nbsp;Transition</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="SFSymbolsEffects1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the discrete behavior" href="https://developer.apple.com/videos/play/wwdc2023/10258?time=220">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_6.png" alt="" class="img-fluid"></p>
+<p>This kind of effect can be applied <a href="https://developer.apple.com/videos/play/wwdc2023/10258/?time=449">repeatedly</a> and can be <a href="https://developer.apple.com/videos/play/wwdc2023/10258/?time=524">considered as indefinite</a> (see the next tab for more detail).</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_26.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SFSymbolsEffects2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the indefinite behavior" href="https://developer.apple.com/videos/play/wwdc2023/10258?time=230">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_5.png" alt="" class="img-fluid"></p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2023/10258/?time=374">uniqueness</a> of an <strong>indefinite effect</strong> is based on its <strong>eternal existence until it's removed</strong> ⟹ <a href="https://developer.apple.com/videos/play/wwdc2023/10258/?time=389">code example</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_25.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SFSymbolsEffects3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the transition behavior" href="https://developer.apple.com/videos/play/wwdc2023/10258?time=248">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_7.png" alt="" class="img-fluid"></p>
+<p>This effect is used for <strong>showing and hiding symbols</strong> with unique animations: the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10258/?time=710">view hierarchy is adjusted</a></strong> according to the presence of the symbol which might imply specific <a href="https://developer.apple.com/videos/play/wwdc2023/10258/?time=739">code writing</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_28.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SFSymbolsEffects4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the content transition behavior" href="https://developer.apple.com/videos/play/wwdc2023/10258?time=257">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_8.png" alt="" class="img-fluid"></p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2023/10258/?time=565">primary application</a> of this effect is the <strong>switching of two symbols</strong>, which requires only a few lines of code to implement.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_27.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="compatibility"><a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=904">Compatibility</a> <a class="header-anchor" href="#compatibility" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#SFSymbolsCompatibility1"
+           id="SFSymbols1Compatibility_tab"
+           role="tab" 
+           aria-selected="true">Templates</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SFSymbolsCompatibility2"
+           id="SFSymbolsCompatibility2_tab"
+           role="tab" 
+           aria-selected="false">Annotations</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SFSymbolsCompatibility3"
+           id="SFSymbolsCompatibility3_tab"
+           role="tab" 
+           aria-selected="false">Symbols</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="SFSymbolsCompatibility1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the templates export" href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=917">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_19.png" alt="" class="img-fluid"></p>
+<p>This new <strong>wireframe view</strong> for template exportation is combined with a <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=953">dedicated picker</a></strong> to streamline the compatibility with older versions regarding the export.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#SFSymbolsCompatibilityTemplate1"
+           id="SFSymbolsCompatibilityTemplate1_tab"
+           role="tab" 
+           aria-selected="true">SF&nbsp;Symbols&nbsp;3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#SFSymbolsCompatibilityTemplate2"
+           id="SFSymbolsCompatibilityTemplate2_tab"
+           role="tab" 
+           aria-selected="false">SF&nbsp;Symbols&nbsp;2</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="SFSymbolsCompatibilityTemplate1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the compatibility with sf symbols 3" href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=969">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_20.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SFSymbolsCompatibilityTemplate2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the compatibility with sf symbols 2" href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=984">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_21.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+</div>
+<div class="tab-pane" id="SFSymbolsCompatibility2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the annotations export" href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=998">🎬</a></p>
+<p>The exact same template's rationale is followed regarding the <strong>annotations</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-Symbols_22.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="SFSymbolsCompatibility3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the symbols export" href="https://developer.apple.com/videos/play/wwdc2023/10257/?time=1025">🎬</a></p>
+<p>Concerning the symbols, the <strong>system automatically handles the format</strong> to have the appropriate export according to the requested version.<br>
+<img src="../../../../../images/iOSdev/wwdc23-Symbols_23.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="enhancements"><a href="https://developer.apple.com/videos/play/wwdc2023/10258?time=805">Enhancements</a> <a class="header-anchor" href="#enhancements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>With <code>SwiftUI</code>, the symbol effects may be <a href="https://developer.apple.com/videos/play/wwdc2023/10258/?time=857">disabled</a> throughout the view hierarchy via the <strong>symbolEffect</strong> and the <strong>symbolEffectsRemoved</strong> modifiers.<br>
+<img src="../../../../../images/iOSdev/wwdc23-Symbols_29.png" alt="" class="img-fluid"></p>
+<p><strong>Launching the animation</strong> when needed is based on different approaches according to the <a href="https://developer.apple.com/videos/play/wwdc2023/10258/?time=886">environments</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_30.png" alt="" class="img-fluid"></p>
+<p>The use of <strong>variable values</strong> has <a href="https://developer.apple.com/videos/play/wwdc2023/10258/?time=920">become easier</a> for <code>SwiftUI</code>, <code>AppKit</code> and <code>UIKit</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-Symbols_31.png" alt="" class="img-fluid"></p>
+<p><strong><a href="https://developer.apple.com/videos/play/wwdc2023/10258/?time=813">UIBarButtonItem</a></strong> and some UIKit controls take advantage from the symbol effect like the <a href="https://developer.apple.com/videos/play/wwdc2023/10258/?time=834"><code>UISlider</code></a>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-Symbols_32.png" alt="" class="img-fluid"></p>
+</br>
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#overview" class="nav-link text-muted">Overview</a></li><li class="nav-item position-relative">
+            <a href="#sf-symbols-app" class="nav-link text-muted">SF Symbols app</a></li><li class="nav-item position-relative">
+            <a href="#custom-symbols" class="nav-link text-muted">Custom symbols</a></li><li class="nav-item position-relative">
+            <a href="#symbol-components" class="nav-link text-muted">Symbol components</a></li><li class="nav-item position-relative">
+            <a href="#symbol-effects" class="nav-link text-muted">Symbol effects</a></li><li class="nav-item position-relative">
+            <a href="#compatibility" class="nav-link text-muted">Compatibility</a></li><li class="nav-item position-relative">
+            <a href="#enhancements" class="nav-link text-muted">Enhancements</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2023/23Symbols.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
