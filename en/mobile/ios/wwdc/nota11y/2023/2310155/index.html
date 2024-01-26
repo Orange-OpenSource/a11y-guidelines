@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Discover String Catalogs - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Discover how Xcode 15 makes it easy to localize your app.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Skip links - Switch language">
+   <div class="container-lg">
+      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <a href="#main-menu" class="nav-link">Go to menu</a>
+    </li><li class="nav-item">
+      <a href="#main-content" class="nav-link">Go to content</a>
+    </li><li class="nav-item hidden-if-no-js">
+      <a href="#search-input" class="nav-link">Go to search</a>
+    </li><li class="nav-item">
+      <a href="#footer" class="nav-link">Go to footer</a>
+    </li></ul>
+
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+    </div>
+  </nav>
+  
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Discover String Catalogs
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#overview" class="dropdown-item text-wrap">Overview</a><a href="#localizable-strings" class="dropdown-item text-wrap">Localizable strings</a><a href="#definition" class="dropdown-item text-wrap">Definition</a><a href="#string-tables" class="dropdown-item text-wrap">String tables</a><a href="#identification" class="dropdown-item text-wrap">Identification</a><a href="#synchronization" class="dropdown-item text-wrap">Synchronization</a><a href="#string-catalog-editor" class="dropdown-item text-wrap">String Catalog Editor</a><a href="#pluralization" class="dropdown-item text-wrap">Pluralization</a><a href="#export-import" class="dropdown-item text-wrap">Export &amp; import</a><a href="#build-migrate" class="dropdown-item text-wrap">Build &amp; migrate</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2023: Discover String Catalogs</h1>
+<p>Find hereafter a detailed summary of the above named video that belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2023/10155/">session 10155</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_Poster.png" alt="" class="img-fluid"></p>
+<p>&quot;Discover how Xcode 15 makes it easy to <strong>localize your app</strong> by managing all of your strings in one place. We'll show you how to extract, edit, export, and build strings in your project using String Catalogs. We'll also share how you can adopt <strong>String Catalogs</strong> in existing projects at your own pace by choosing which files to migrate.&quot;</p>
+<p></br>Hereafter, the underlined elements <strong>lead directly to the playback of the WWDC video</strong> at the appropriate moment.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_2.png" alt="" class="img-fluid"></p>
+<h2 id="overview"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=57">Overview</a> <a class="header-anchor" href="#overview" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>In order to handle the localization in one single place, the **String Catalogs are introduced in <code>Xcode 15</code> to replace the <code>.strings</code> and <code>.stringsdict</code> files in future releases.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10155_3.png" alt="" class="img-fluid"><br>
+All the <strong>added strings</strong> are <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=110">automatically extracted</a> by <code>Xcode</code> and the <strong>multiplatforms localization</strong> is now <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=169">streamlined</a> for a simpler usage.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_6.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsOverview1"
+           id="StrCatalogsOverview1_tab"
+           role="tab" 
+           aria-selected="true">Overview</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsOverview2"
+           id="StrCatalogsOverview2_tab"
+           role="tab" 
+           aria-selected="false">Filter&nbsp;&&nbsp;sort&nbsp;usage</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="StrCatalogsOverview1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the overview" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=101">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_7.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StrCatalogsOverview2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the basic usages" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1090">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_22.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="localizable-strings">Localizable strings <a class="header-anchor" href="#localizable-strings" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="definition"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=254">Definition</a> <a class="header-anchor" href="#definition" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>A <strong>text wrapper</strong> to be translated into all of the supported languages in an app defines a <strong>localizable string</strong> composed of <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=266">four components</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10155_1.png" alt="" class="img-fluid"></p>
+<h3 id="string-tables"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=344">String tables</a> <a class="header-anchor" href="#string-tables" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>A <strong>string table</strong> is a directory to which each localizable string belongs and that contains <code>.strings</code> and possibly <code>.stringsdict</code> files inside a <strong><code>lproj</code> directory</strong> linked to a specific language.</p>
+<p>This former string table format is now replaced by a single <strong>String Catalog</strong> that <strong>gathers all the localized information</strong> therein and that can also be multiplied <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=379">using the same keys</a>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10155_4.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="identification">Identification <a class="header-anchor" href="#identification" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><code>Xcode</code> can easily find the localizable strings in many places to automatically update the <code>String Catalogs</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_8.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsIdent1"
+           id="StrCatalogsIdent1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsIdent2"
+           id="StrCatalogsIdent2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsIdent3"
+           id="StrCatalogsIdent3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsIdent4"
+           id="StrCatalogsIdent4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsIdent5"
+           id="StrCatalogsIdent5_tab"
+           role="tab" 
+           aria-selected="false">5</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsIdent6"
+           id="StrCatalogsIdent6_tab"
+           role="tab" 
+           aria-selected="false">6</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="StrCatalogsIdent1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the identification in the interface builder" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=627">🎬</a></p>
+<p>With the <code>Interface Builder</code>, each string is <strong>automatically</strong> identified as localizable and updated by <code>Xcode</code> in the <code>String Catalog</code> at each build process.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_10.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StrCatalogsIdent2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the identification in swift ui" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=458">🎬</a></p>
+<p>Defined as a <strong>LocalizedStringKey</strong> type that conforms to the <code>ExpressibleByStringLiteral</code> protocol or written as a <strong>literal inside a view</strong>, a string is automatically considered localizable.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10155_11.png" alt="" class="img-fluid"></p>
+<p><strong>LocalizedStringResource</strong> is the <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=519">recommended type</a> for performing the localizable string lookup at a later time.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_12.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StrCatalogsIdent3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the identification in the info plists" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=658">🎬</a></p>
+<p>An empty <strong>InfoPlist.xcstrings</strong> file added to the sought target will permit <code>Xcode</code> to fulfill the <code>String Catalogs</code> with the appropriate elements at each build process.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_17.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StrCatalogsIdent4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the identification in the swift code" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=538">🎬</a></p>
+<p>Both the <strong>native initializers</strong> for literals and the <strong>LocalizedStringResource</strong> type give rise to an automatic localization recognition by the system.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_13.png" alt="" class="img-fluid"></p>
+<p>To ensure the localizable strings' extraction, the <strong>Use Compiler to Extract Swift Strings</strong> build setting should be <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=565">enabled</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_14.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StrCatalogsIdent5" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the identification in the objective c code" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=584">🎬</a></p>
+<p>Native or custom macros in <code>ObjC</code> lead to an automatic recognition of localization.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_15.png" alt="" class="img-fluid"></p>
+<p>While using this same rationale for the <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=603"><code>C</code> code</a>, it's crucial to define the macros in the <strong>Localized String Macro Names</strong> <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=610">build setting</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_16.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StrCatalogsIdent6" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the identification in the app shortcuts" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=681">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_9.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="synchronization"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=705">Synchronization</a> <a class="header-anchor" href="#synchronization" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_18.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsSynchro1"
+           id="StrCatalogsSynchro1_tab"
+           role="tab" 
+           aria-selected="true">'Management'&nbsp;option</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsSynchro2"
+           id="StrCatalogsSynchro2_tab"
+           role="tab" 
+           aria-selected="false">Localization&nbsp;progress</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsSynchro3"
+           id="StrCatalogsSynchro3_tab"
+           role="tab" 
+           aria-selected="false">Add&nbsp;a&nbsp;new&nbsp;language</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="StrCatalogsSynchro1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the management option" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1114">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_23.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StrCatalogsSynchro2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the localization progress" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1145">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_24.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StrCatalogsSynchro3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the new language addition" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1219">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_25.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="string-catalog-editor"><a href="https://developer.apple.com/videos/play/wwdc2023/10155?time=810">String Catalog Editor</a> <a class="header-anchor" href="#string-catalog-editor" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Each localizable string in this editor has a state indicator for highlighting the translation overall situation.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10155_5.png" alt="" class="img-fluid"><br>
+</br></p>
+<h2 id="pluralization"><a href="https://developer.apple.com/videos/play/wwdc2023/10155?time=874">Pluralization</a> <a class="header-anchor" href="#pluralization" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>When localization comes in, it's important to consider the variation of a string based on the value of its prefixed number.<br>
+A support for <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=932">string variation workflows</a> is part of the <code>String Catalog Editor</code> to solve this problem.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_19.png" alt="" class="img-fluid"></p>
+<p>When <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=946">multiple variables</a> are combined for defining a plural strings situation, <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=986">substitutions</a></strong> become the easy way to deal with it.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10155_20.png" alt="" class="img-fluid"></p>
+<p>Both the <strong>format specifier</strong> and the <strong>position of the argument</strong> to use for the number are pointed out through the <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1049"><code>Xcode</code> inspector</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_21.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsPlural1"
+           id="StrCatalogsPlural1_tab"
+           role="tab" 
+           aria-selected="true">Pluralization</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsPlural2"
+           id="StrCatalogsPlural2_tab"
+           role="tab" 
+           aria-selected="false">Substitutions</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="StrCatalogsPlural1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the basic pluralization example" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1243">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_26.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StrCatalogsPlural2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the substitutions' example" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1283">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_27.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="export-import"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1368">Export &amp; import</a> <a class="header-anchor" href="#export-import" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_28.png" alt="" class="img-fluid"></p>
+<p>The exported localizable content is included in a package called a <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1395">Localization Catalog</a></strong> that contains a specific <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1406">XLIFF file</a></strong> whose format conforms to the String Catalog's if the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1523">Localization Prefers String Catalogs</a></strong> <code>Xcode</code> build setting is enabled.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_29.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsExport1"
+           id="StrCatalogsExport1_tab"
+           role="tab" 
+           aria-selected="true">Export</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsExport2"
+           id="StrCatalogsExport2_tab"
+           role="tab" 
+           aria-selected="false">Import</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsExport3"
+           id="StrCatalogsExport3_tab"
+           role="tab" 
+           aria-selected="false">Test</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="StrCatalogsExport1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the export example" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1565">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_30.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StrCatalogsExport2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the import example" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1591">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_31.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StrCatalogsExport3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the test fo the translations in portuguese" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1626">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_32.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="build-migrate"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1679">Build &amp; migrate</a> <a class="header-anchor" href="#build-migrate" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_33.png" alt="" class="img-fluid"></p>
+<p>Since <code>String Catalogs</code> coexist with the <code>.strings</code> and <code>.stringsdict</code> files, the shift to this new configuration may start <strong>at any time</strong>.<br>
+</br></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsMigrate1"
+           id="StrCatalogsMigrate1_tab"
+           role="tab" 
+           aria-selected="true">Project</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StrCatalogsMigrate2"
+           id="StrCatalogsMigrate2_tab"
+           role="tab" 
+           aria-selected="false">Package</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="StrCatalogsMigrate1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the shift to the string catalog for a project" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1731">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_34.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StrCatalogsMigrate2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the shift to the string catalog for a package" href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1823">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10155_35.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#overview" class="nav-link text-muted">Overview</a></li><li class="nav-item position-relative">
+            <a href="#localizable-strings" class="nav-link text-muted">Localizable strings</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#definition" class="nav-link text-muted">Definition</a></li><li class="nav-item position-relative">
+            <a href="#string-tables" class="nav-link text-muted">String tables</a></li><li class="nav-item position-relative">
+            <a href="#identification" class="nav-link text-muted">Identification</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#synchronization" class="nav-link text-muted">Synchronization</a></li><li class="nav-item position-relative">
+            <a href="#string-catalog-editor" class="nav-link text-muted">String Catalog Editor</a></li><li class="nav-item position-relative">
+            <a href="#pluralization" class="nav-link text-muted">Pluralization</a></li><li class="nav-item position-relative">
+            <a href="#export-import" class="nav-link text-muted">Export &amp; import</a></li><li class="nav-item position-relative">
+            <a href="#build-migrate" class="nav-link text-muted">Build &amp; migrate</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2023/2310155.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>

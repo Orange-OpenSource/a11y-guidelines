@@ -100,6 +100,17 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "Discover String Catalogs",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310155",
+    "profils": ["All","Localization","Swift","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "Expand on Swift macros",
     "type": [],
     "tests": [],
