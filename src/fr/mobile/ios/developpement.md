@@ -282,6 +282,20 @@ class ChangeTextView: UIViewController {
 }
 </code></pre>
 
+<pre><code class="swiftui">
+struct ChangeTextView: View {
+
+    var body: some View {
+        Text("Du texte")
+            .accessibilityLabel(Text("bonjour"))
+            .accessibilityHint(Text("Ceci est un commentaire supplémentaire."))
+            .accessibilityValue(Text("45 pour cent"))
+
+        // Il est possible d'utiliser directement du texte en tant que String plutôt que de passer par les objets de type Text
+    }
+}
+</code></pre>
+
 </div>
 
 </div>

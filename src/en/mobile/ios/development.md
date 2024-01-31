@@ -277,6 +277,20 @@ class ChangeTextView: UIViewController {
 }
 </code></pre>
 
+<pre><code class="swiftui">
+struct ChangeTextView: View {
+
+    var body: some View {
+        Text("Some text")
+            .accessibilityLabel(Text("hello"))
+            .accessibilityHint(Text("This is an added comment."))
+            .accessibilityValue(Text("45 per cent"))
+
+        // You can use also raw strings instead of Text views
+    }
+}
+</code></pre>
+
 </div>
 
 </div>
