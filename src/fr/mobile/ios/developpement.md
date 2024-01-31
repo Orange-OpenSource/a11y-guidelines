@@ -584,6 +584,7 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification,
 </code></pre>
 
 <pre><code class="swift">
+//Cette API peut être utilisée autant pour des projets UIKit que pour des projets SwiftUI
 UIAccessibility.post(notification: .announcement,
                      argument: "Message pour la vocalisation.")
 </code></pre>
@@ -678,13 +679,14 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
 @IBAction func tapHere(_ sender: UIButton) {
         
     myLabel.accessibilityLabel = "Ceci est un nouveau label."
+    //Cette API peut être utilisée autant pour des projets UIKit que pour des projets SwiftUI
     UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
                          argument: myLabel)
 }
     
 //Le premier élément accessible de la page est sélectioné et vocalisé avec un son spécifique.
 @IBAction func clic(_ sender: UIButton) {
-        
+    //Cette API peut être utilisée autant pour des projets UIKit que pour des projets SwiftUI
     UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
                          argument: nil)
 }
@@ -755,7 +757,8 @@ Si on utilise l'attribut `accessibilityLanguage` sur un `UILabel`, alors celui-c
 
 <pre><code class="swift">
 @IBAction func tapHere(_ sender: UIButton) {
-        
+
+    //accessibilityLanguage is not available yet in SwiftUI (only UIKit and AppKit)        
     myLabel.accessibilityLanguage = "en"
     myLabel.accessibilityLabel = "This is a new label. Thank you."
 }
