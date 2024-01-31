@@ -877,7 +877,7 @@ override func viewDidAppear(_ animated: Bool) {
                                             y: 100.0,
                                             width: 40.0,
                                             height: 40.0)
-        let myParentView = UIView.init(frame: parentViewRect)
+        let myRedParentView = UIView.init(frame: parentViewRect)
         myRedParentView.backgroundColor = .red
         
         self.view.addSubview(myRedParentView)
