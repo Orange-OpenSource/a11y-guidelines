@@ -919,6 +919,40 @@ override func viewDidAppear(_ animated: Bool) {
     }
 </code></pre>
 
+<pre><code class="swiftui">
+    var body: some View {
+        VStack {
+        
+            Text("Du texte dans un containeur")
+                .accessibilityHidden(true) // Cache de Voice Over, ne l'est pas par défaut
+        
+            Rectangle()
+                .fill(Color.yellow)
+                .frame(width: 40, height: 40)
+                .accessibilityHidden(false) // Cet item n'est pas accessible
+            
+        
+            Rectangle()
+                .fill(Color.blue)
+                .frame(width: 40, height: 40)
+                .accessibilityHidden(false) // Cet item n'est pas accessible
+            
+            Spacer()
+        }
+        .background(Color.green)
+        .frame(width: 500, height: 500)
+        
+        // Indique que le containeur est accessible mais pas les enfants (i.e. accessibilityElement(children: .ignore)
+        .accessibilityElement()
+        
+        // Ou indique que le containeur contient des élements accessibles sur lesquels itérer individuellement
+        .accessibilityElement(children: .contain)
+        
+        // Ou indique que le containeur contient des élements accessibles mais que c'est l'ensemble qu'il faut traiter
+        .accessibilityElement(children: .combine)
+    }
+</code></pre>
+
 </div>
 
 </div>

@@ -911,6 +911,40 @@ override func viewDidAppear(_ animated: Bool) {
     }
 </code></pre>
 
+<pre><code class="swiftui">
+    var body: some View {
+        VStack {
+        
+            Text("Some text inside my container")
+                .accessibilityHidden(true) // Hide from Voice Over, by default is not
+        
+            Rectangle()
+                .fill(Color.yellow)
+                .frame(width: 40, height: 40)
+                .accessibilityHidden(false) // Precise this item is accessible
+            
+        
+            Rectangle()
+                .fill(Color.blue)
+                .frame(width: 40, height: 40)
+                .accessibilityHidden(false) // Precise this item is accessible
+            
+            Spacer()
+        }
+        .background(Color.green)
+        .frame(width: 500, height: 500)
+        
+        // Precise the container is accessible but children are not, i.e. accessibilityElement(children: .ignore)
+        .accessibilityElement()
+        
+        // Or precise this container contains accessible items to iterate one by one
+        .accessibilityElement(children: .contain)
+        
+        // Or precise this container contains accessible items to iterate as one single item
+        .accessibilityElement(children: .combine)
+    }
+</code></pre>
+
 </div>
 
 </div>
