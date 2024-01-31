@@ -103,6 +103,15 @@ func customTraits() {
 }
 </code></pre>
 
+<pre><code class="swiftui">
+var body: some View {
+    //Spécification d'une vue avec le trait 'bouton'
+    someView.accessibilityAddTraits(.isButton)
+
+    //Ajout des traits 'champs de recherche' et 'selectionné'
+    otherView.accessibilityAddTraits([.isSearchField, .isSelected])
+}
+</code></pre>
 </div>
 
 </div>
@@ -153,6 +162,13 @@ func changeTraits() {
     if (pageControl.accessibilityTraits.rawValue & UIAccessibilityTraits.header.rawValue == UIAccessibilityTraits.header.rawValue) {
         // Tâches à réaliser si le trait '.header' est présent...
     }
+}
+</code></pre>
+
+<pre><code class="swiftui">
+var body: some View {
+    //Suppression du trait 'joue un son'
+    aView.accessibilityRemoveTraits(.playsSound)
 }
 </code></pre>
 

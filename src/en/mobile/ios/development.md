@@ -6,7 +6,7 @@ displayToc: true
 
 # iOS developer guide
 
-This guide aims to present the various iOS <abbr>SDK</abbr> accessibility options : through different categories, it explains how to use the accessibility attributes&nbsp;/ methods and provides links to the [`Apple official documentation`](https://developer.apple.com/documentation/uikit/accessibility).
+This guide aims to present the various iOS <abbr title="Software Development Kit">SDK</abbr> accessibility options: through different categories, it explains how to use the accessibility attributes&nbsp;/ methods and provides links to the `Apple official documentation` for both [`UIKit`](https://developer.apple.com/documentation/uikit/accessibility) and [`SwiftUI`](https://developer.apple.com/documentation/swiftui/accessibility-fundamentals).
 
 Code snippets are also available to show the different possible implementations {(**Swift&nbsp;5.7**, **Objective&nbsp;C**) + (**Xcode&nbsp;14**, **iOS&nbsp;16**)}.
 
@@ -99,6 +99,15 @@ func customTraits() {
 }
 </code></pre>
 
+<pre><code class="swiftui">
+var body: some View {
+    //Add 'button' trait to some view
+    someView.accessibilityAddTraits(.isButton)
+
+    //Precise the other view is both a search field and selected
+    otherView.accessibilityAddTraits([.isSearchField, .isSelected])
+}
+</code></pre>
 </div>
 
 </div>
@@ -151,6 +160,14 @@ func changeTraits() {
     }
 }
 </code></pre>
+
+<pre><code class="swiftui">
+var body: some View {
+    //Remove the trait 'plays sound' to the view
+    aView.accessibilityRemoveTraits(.playsSound)
+}
+</code></pre>
+</div>
 
 </div>
 
