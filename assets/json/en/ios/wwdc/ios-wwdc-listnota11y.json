@@ -89,6 +89,17 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "Debug with structured logging",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/23DebuggingAndTesting",
+    "profils": ["All","Debugging"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "Design dynamic Live Activities",
     "type": ["Live Activities"],
     "tests": [],
@@ -130,6 +141,17 @@
     "exception": "",
     "raccourcis": "2023/2310037",
     "profils": ["All","Swift","SwiftUI"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Fix failures faster with Xcode test reports",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/23DebuggingAndTesting",
+    "profils": ["All","Debugging","Optimization"]
   },
   {
     "themes": "WWDC 2023",
