@@ -1436,6 +1436,30 @@ Two views are created containing the numbers to be spelled out in a specific ord
     }
 </code></pre>
 
+<pre><code class="swiftui">
+var body: some View {
+
+    // The higher the priority is, the sooner the items will be vocalized
+    HStack {
+        VStack { // Natural order of the container will be used
+            Text("1") // Rank 1
+            Text("2") // Rank 2
+            Text("3") // Rank 3
+        }.accessibilitySortPriority(1000) // 1st group to be vocalized
+        VStack {
+            Text("4").accessibilitySortPriority(900) // Rank 4
+            Text("5").accessibilitySortPriority(400) // Rank 9
+            Text("6").accessibilitySortPriority(700) // Rank 6
+        }
+        VStack {
+            Text("7").accessibilitySortPriority(800) // Rank 5
+            Text("8").accessibilitySortPriority(600) // Rank 7
+            Text("9").accessibilitySortPriority(500) // Rank 8
+        }
+    }.accessibilityElement(children: .contain)
+}
+<code></pre>
+
 </div>
 
 </div>
