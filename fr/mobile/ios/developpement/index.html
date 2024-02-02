@@ -210,10 +210,10 @@
 <p>des explications détaillées concernant les attributs et méthodes d'accessibilité,</p>
 </li>
 <li>
-<p>des exemples de code en <strong>Swift 5.7</strong> et en <strong>Objective C</strong> sous {<strong>Xcode 14</strong> ; <strong>iOS 16</strong>},</p>
+<p>des exemples de code en <strong>SwiftUI</strong>, <strong>UIKit avec Swift 5.7</strong> et en <strong>UIKit avec Objective C</strong> sous {<strong>Xcode 14</strong> ; <strong>iOS 16</strong>},</p>
 </li>
 <li>
-<p>des liens vers la <a href="https://developer.apple.com/documentation/uikit/accessibility"><code>documentation officielle Apple</code></a>.</p>
+<p>des liens vers la documentation officielle <a href="https://developer.apple.com/documentation/uikit/accessibility"><code>UIKit</code></a> et <a href="https://developer.apple.com/documentation/swiftui/accessibility-fundamentals"><code>SwiftUI</code></a>.</p>
 </li>
 </ul>
 <p><br><br></p>
@@ -252,7 +252,7 @@
            data-bs-toggle="tab" 
            href="#TraitElt-Links" 
            role="tab" 
-           aria-selected="false">Lien</a>
+           aria-selected="false">Liens</a>
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
@@ -302,6 +302,35 @@ func customTraits() {
     defaultHeaderViewCell.accessibilityTraits = .header
 }
 </code></pre>
+<pre><code class="swiftui">
+var body: some View {
+    //Spécification d'une vue avec le trait 'bouton'
+    someView.accessibilityAddTraits(.isButton)
+
+    //Ajout des traits 'champs de recherche' et 'selectionné'
+    otherView.accessibilityAddTraits([.isSearchField, .isSelected])
+
+    //Ajout d'un trait 'en-tête'
+    view.accessibilityAddTraits(.isHeader)
+
+    //Spécification d'un élément avec le trait ’ajustable’.
+    anotherView
+        .accessibilityElement()
+        .accessibilityValue(Text(index))
+        .accessibilityAdjustableAction { direction in
+            switch direction {
+            case .increment:
+                guard selectedIndex < 5 else { break }
+                index += 1
+            case .decrement:
+                guard selectedIndex > 0 else { break }
+                index -= 1
+            @unknown default:
+                break
+            }
+        }
+}
+</code></pre>
 </div>
 </div>
 <div class="tab-pane" id="TraitElt-BasicOperations" role="tabpanel" >
@@ -348,11 +377,19 @@ func changeTraits() {
     }
 }
 </code></pre>
+<pre><code class="swiftui">
+var body: some View {
+    //Suppression du trait 'joue un son'
+    aView.accessibilityRemoveTraits(.playsSound)
+}
+</code></pre>
 </div>
 </div>
 <div class="tab-pane" id="TraitElt-Links" role="tabpanel" >
 <ul>
-<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615202-accessibilitytraits"><code>accessibilityTraits</code></a></li>
+<li><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615202-accessibilitytraits"><code>accessibilityTraits (UIKit)</code></a></li>
+<li><a href="https://developer.apple.com/documentation/swiftui/view/accessibilityaddtraits(_:)"><code>accessibilityTraits (SwiftUI)</code></a></li>
+<li><a href="https://developer.apple.com/documentation/swiftui/view/accessibilityadjustableaction(_:)/"><code>accessibilityAdjustableAction (SwiftUI)</code></a></li>
 </ul>
 </div>
 </div>
@@ -452,18 +489,40 @@ class ChangeTextView: UIViewController {
     }
 }
 </code></pre>
+<pre><code class="swiftui">
+struct ChangeTextView: View {
+
+    var body: some View {
+        Text("Du texte")
+            .accessibilityLabel(Text("bonjour"))
+            .accessibilityHint(Text("Ceci est un commentaire supplémentaire."))
+            .accessibilityValue(Text("45 pour cent"))
+
+        // Il est possible d'utiliser directement du texte en tant que String plutôt que de passer par les objets de type Text
+    }
+}
+</code></pre>
 </div>
 </div>
 <div class="tab-pane" id="textAlt-Links" role="tabpanel" > 
 <ul>
 <li>
-<p><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615181-accessibilitylabel"><code>accessibilityLabel</code></a></p>
+<p><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint"><code>accessibilityHint (UIKit)</code></a></p>
 </li>
 <li>
-<p><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615117-accessibilityvalue"><code>accessibilityValue</code></a></p>
+<p><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615117-accessibilityvalue"><code>accessibilityValue (UIKit)</code></a></p>
 </li>
 <li>
-<p><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint"><code>accessibilityHint</code></a></p>
+<p><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615093-accessibilityhint"><code>accessibilityHint (UIKit)</code></a></p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/swiftui/view/accessibilitylabel(_:)-5f0zj"><code>accessibilityLabel (SwiftUI)</code></a></p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/swiftui/view/accessibilityvalue(_:)-2bwuz"><code>accessibilityValue (SwiftUI)</code></a></p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/swiftui/view/accessibilityhint(_:)-3i2vu"><code>accessibilityHint (SwiftUI)</code></a></p>
 </li>
 <li>
 <p><a href="../wwdc/2019#la-bonne-redaction-des-labels">La bonne rédaction des labels</a></p>
@@ -563,6 +622,25 @@ Il faut absolument formater les données en entrée pour obtenir une vocalisatio
     hourLabel.accessibilityLabel = DateComponentsFormatter.localizedString(from: hourComponents,
                                                                            unitsStyle: .spellOut)
 </code></pre>
+<pre><code class="swiftui">
+    let dateFormatter: DateFormatter = {
+        let formatter = Dateformatter()
+        formatter.dateFormat = "dd/MM/yyyy HH:mm"
+    }()
+
+    let longDateFormatter: DateFormatter = {
+        let formatter = Dateformatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .medium
+        return formatter
+    }() 
+
+    var body: some View {
+            Text(dateFormatter.string(from: Date()))
+                .accessibiltyLabel(Text("Date"))
+                .accessibilityValue(Text(longDateFormatter.string(from: Date())))
+    }
+</code></pre>
 </div>
 </div>
 <div class="tab-pane" id="format-Numbers" role="tabpanel" >
@@ -590,6 +668,14 @@ Il faut absolument formater les données en entrée pour obtenir une vocalisatio
                                                            
     numberLabel.accessibilityLabel = NumberFormatter.localizedString(from: numberValue,
                                                                      number: .spellOut)
+</code></pre>
+<pre><code class="swiftui">
+    let numberValue = NSNumber(value: 54038921.7)
+
+    var body: some View {
+        Text(NumberFormatter.localizedString(from: numberValue, number: .decimal))
+            .accessibilityLabel(NumberFormatter.localizedString(from: numberValue, number: .spellOut))
+    }
 </code></pre>
 </div>
 </div>
@@ -669,6 +755,8 @@ Il faut absolument formater les données en entrée pour obtenir une vocalisatio
         phoneNumberLabel.text = phoneNumberValue
         phoneNumberLabel.accessibilityLabel = spelledOutString
 </code></pre>
+<pre><code class="swiftui">
+</code></pre>
 </div>
 </div>
 </div>
@@ -717,6 +805,11 @@ UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification,
                                 @"Message pour la vocalisation.");
 </code></pre>
 <pre><code class="swift">
+UIAccessibility.post(notification: .announcement,
+                     argument: "Message pour la vocalisation.")
+</code></pre>
+<pre><code class="swiftui">
+// À appeler par exemple dans un .onAppear{} ou .task{}, avec un délai dans la main Dispatch Queue
 UIAccessibility.post(notification: .announcement,
                      argument: "Message pour la vocalisation.")
 </code></pre>
@@ -798,7 +891,7 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
     UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, myLabel);
 }
 
-//Le premier élément accessible de la page est sélectioné et vocalisé avec un son spécifique.
+//Le premier élément accessible de la page est sélectionné et vocalisé avec un son spécifique.
 - (IBAction)clic:(UIButton *)sender {
     
     UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, nil);
@@ -806,19 +899,23 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
 </code></pre>
 <pre><code class="swift">
 //L'élément 'myLabel' est sélectionné et vocalisé avec sa nouvelle valeur.
+
 @IBAction func tapHere(_ sender: UIButton) {
-        
     myLabel.accessibilityLabel = "Ceci est un nouveau label."
     UIAccessibility.post(notification: UIAccessibility.Notification.layoutChanged,
                          argument: myLabel)
 }
     
-//Le premier élément accessible de la page est sélectioné et vocalisé avec un son spécifique.
+//Le premier élément accessible de la page est sélectionné et vocalisé avec un son spécifique.
+
 @IBAction func clic(_ sender: UIButton) {
-        
+    //Cette API peut être utilisée autant pour des projets UIKit que pour des projets SwiftUI
     UIAccessibility.post(notification: UIAccessibility.Notification.screenChanged,
                          argument: nil)
 }
+</code></pre>
+<pre><code class="swiftui">
+
 </code></pre>
 </div>
 </div>
@@ -882,10 +979,13 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
 </code></pre>
 <pre><code class="swift">
 @IBAction func tapHere(_ sender: UIButton) {
-        
+    //accessibilityLanguage n'est pas encore disponible dans SwiftUI (seulement UIKit et AppKit)                
     myLabel.accessibilityLanguage = "en"
     myLabel.accessibilityLabel = "This is a new label. Thank you."
 }
+</code></pre>
+<pre><code class="swiftui">
+
 </code></pre>
 </div>
 <br>
@@ -1035,18 +1135,59 @@ override func viewDidAppear(_ animated: Bool) {
         theView.isAccessibilityElement = true
     }
 </code></pre>
+<pre><code class="swiftui">
+    var body: some View {
+        VStack {
+        
+            Text("Du texte dans un containeur")
+                .accessibilityHidden(true) // Cache de Voice Over, ne l'est pas par défaut
+        
+            Rectangle()
+                .fill(Color.yellow)
+                .frame(width: 40, height: 40)
+                .accessibilityHidden(false) // Cet item n'est pas accessible
+        
+            Rectangle()
+                .fill(Color.blue)
+                .frame(width: 40, height: 40)
+                .accessibilityHidden(false) // Cet item n'est pas accessible
+            
+            Spacer()
+        }
+        .background(Color.green)
+        .frame(width: 500, height: 500)
+        
+        // Indique que le containeur est accessible mais pas les enfants (i.e. accessibilityElement(children: .ignore)
+        .accessibilityElement()
+        
+        // Ou indique que le containeur contient des élements accessibles sur lesquels itérer individuellement
+        .accessibilityElement(children: .contain)
+        
+        // Ou indique que le containeur contient des élements accessibles mais que c'est l'ensemble qu'il faut traiter
+        .accessibilityElement(children: .combine)
+    }
+</code></pre>
 </div>
 </div>
 <div class="tab-pane" id="hideElts-Links" role="tabpanel">
 <ul>
 <li>
-<p><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615141-isaccessibilityelement"><code>isAccessibilityElement</code></a></p>
+<p><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615141-isaccessibilityelement"><code>isAccessibilityElement (UIKit)</code></a></p>
 </li>
 <li>
-<p><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615080-accessibilityelementshidden"><code>accessibilityElementsHidden</code></a></p>
+<p><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615080-accessibilityelementshidden"><code>accessibilityElementsHidden (UIKit)</code></a></p>
 </li>
 <li>
-<p><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615089-accessibilityviewismodal"><code>accessibilityViewIsModal</code></a></p>
+<p><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615089-accessibilityviewismodal"><code>accessibilityViewIsModal (UIKit)</code></a></p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/swiftui/view/accessibilityelement(children:)"><code>accessibilityElement (SwiftUI)</code></a></p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/swiftui/view/accessibilityhidden(_:)"><code>accessibilityHidden (SwiftUI)</code></a></p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/swiftui/accessibilitytraits/ismodal"><code>isModal</code></a></p>
 </li>
 </ul>
 </div>
@@ -1139,6 +1280,16 @@ Création de l'élément accessible qui va regrouper les éléments souhaités a
     }
 }
 </code></pre>
+<pre><code class="swiftui">
+    @State private var isChecked = false // valeur du switch par défaut
+    
+    HStack(){
+        Text("Texte descriptif")
+        Toggle("Test", isOn: $isChecked)
+    }
+    .accessibilityElement(children: .combine)
+    .accessibilityHint("Texte descriptif groupé avec le bouton")
+</code></pre>
 </div>
 <p><br>... et implémentation de la classe utilisée pour définir de façon précise l'<a href="../wwdc/2017/215/#action-par-defaut-3738">action à associer au double tap d'activation</a> :</p>
 <div class="code-tab-pane">
@@ -1190,16 +1341,13 @@ int indexSwitch = 1;
     let indexLabel = 0
     let indexSwitch = 1
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
-    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
     
     convenience init(with label: UILabel,and aSwitch: UISwitch) {
         
@@ -1218,7 +1366,6 @@ int indexSwitch = 1;
         self.accessibilityHint = "tapez deux fois pour changer sa valeur."
     }
     
-    
     //Fonction appelée par le système quand un double tap est réalisé sur l'élément sélectionné pour l'activer.
     override func accessibilityActivate() -> Bool {
         
@@ -1230,6 +1377,22 @@ int indexSwitch = 1;
         self.accessibilityLabel = "le contrôle est" + switchValue.description
         
         return true
+    }
+}
+</code></pre>
+<pre><code class="swiftui">
+@State var isChecked = false 
+
+var body: some View {
+    HStack(){
+        Text("Texte descriptif : " + (isChecked ? "activé" : "désactivé"))
+        Toggle("Test", isOn: $isChecked)
+    }
+    .accessibilityElement(children: .combine)
+    .accessibilityHint("Texte descriptif groupé avec le bouton")
+    .accessibilityAction {
+        print("Action déclenchée au double tap")
+        isChecked.toggle()
     }
 }
 </code></pre>
@@ -1337,6 +1500,9 @@ UIAccessibilityElement * elt;
 <li>
 <p><a href="https://developer.apple.com/documentation/objectivec/nsobject/1615143-shouldgroupaccessibilitychildren"><code>shouldGroupAccessibilityChildren</code></a></p>
 </li>
+<li>
+<p><a href="https://developer.apple.com/documentation/swiftui/view/accessibilityelement(children:)"><code>accessibilityElement</code></a></p>
+</li>
 </ul>
 </div>
 </div>
@@ -1414,6 +1580,29 @@ UIAccessibilityElement * elt;
                                            key_5!]
     }
 </code></pre>
+<pre><code class="swiftui">
+var body: some View {
+
+    // Plus la priorité est elevée, plus tôt sera vocalisé l'élément
+    HStack {
+        VStack { // On suit l'ordre naturel du containeur
+            Text("1") // Position 1
+            Text("2") // Position 2
+            Text("3") // Position 3
+        }.accessibilitySortPriority(1000) // La vocalisation commence ici
+        VStack {
+            Text("4").accessibilitySortPriority(900) // Position 4
+            Text("5").accessibilitySortPriority(400) // Position 9
+            Text("6").accessibilitySortPriority(700) // Position 6
+        }
+        VStack {
+            Text("7").accessibilitySortPriority(800) // Position 5
+            Text("8").accessibilitySortPriority(600) // Position 7
+            Text("9").accessibilitySortPriority(500) // Position 8
+        }
+    }.accessibilityElement(children: .contain)
+}
+<code></pre>
 </div>
 </div>
 <div class="tab-pane" id="readingOrder-Links" role="tabpanel">
@@ -1470,7 +1659,7 @@ UIAccessibilityElement * elt;
 On peut aussi envisager l'implémentation de cette fonctionnalité dans des listes de cellules comprenant de nombreux détails dont la vocalisation pourrait être réalisée uniquement par ce biais selon l'<strong>intérêt manifesté par l'utilisateur</strong>.</p>
 </div>
 <div class="tab-pane" id="CuCoPro-Details" role="tabpanel">
-<p>Pour utiliser cette fonctionnalité, il est impératif de :</p>
+<p>Pour utiliser cette fonctionnalité avec UIKit, il est impératif de :</p>
 <ul>
 <li>
 <p>se conformer au protocole <strong>AXCustomContentProvider</strong>,</p>
@@ -1482,6 +1671,7 @@ On peut aussi envisager l'implémentation de cette fonctionnalité dans des list
 <p>définir chaque élément <strong>AXCustomContent</strong> avec sa caractéristique (<code>value</code>) ainsi que la famille à laquelle elle appartient (<code>label</code>).</p>
 </li>
 </ul>
+<p>Concernant SwiftUI, l'usage est bien plus simple sans utilisation de <strong>AXCustomContentProvider</strong> ni de l'API <em>Accessibility</em>.</p>
 <p>L'accès à ces informations se fait en <strong>utilisant le rotor</strong> qui contiendra alors un item <strong><code>Plus</code> <code>de</code> <code>contenus</code></strong> qui permettra de vocaliser chaque <code>AXCustomContent</code> par un <strong>balayage vertical avec un doigt</strong> comme pour les <a href="#valeurs-continument-ajustables">valeurs continûment ajustables</a> ou les <a href="#actions-personnalisees">actions personnalisées</a>.</p>
 </div>
 <div class="tab-pane" id="CuCoPro-Example" role="tabpanel">
@@ -1520,6 +1710,16 @@ class MyCustomView: UIImageView, AXCustomContentProvider {
            get { return _accessibilityCustomContent }
            set(newValue) { _accessibilityCustomContent = newValue }
        }
+}
+</code></pre>
+<pre><code class="swiftui">
+var body: some View {
+    Image(...)
+        .accessibilityLabel("logo Orange")
+        .accessibilityHint("utiliser l'élément du rotor intitulé plus de contenus pour obtenir des informations complémentaires")            
+        .accessibilityCustomContent(AccessibilityCustomContentKey("date de création"), Text("1988"))
+        .accessibilityCustomContent(AccessibilityCustomContentKey("siège social"), Text("paris"))
+        .accessibilityCustomContent(AccessibilityCustomContentKey("type de société"), Text("télécommunications"))
 }
 </code></pre>
 </div>
@@ -1701,11 +1901,62 @@ extension UIView {
     }
 }
 </code></pre>
+<pre><code class="swiftui">
+//La propriété wrapper AccessibilityFocusState permet de savoir si l'élément a le focus ou non
+
+struct MyView: View {
+    @AccessibilityFocusState private var isElementFocused: Bool
+    @State private var monTexte = ""
+
+    var body: some View {
+        Form {
+            TextField("Champ d'édition", text: $monTexte)
+                .accessibilityFocused($isElementFocused)
+        }
+        .onChange(of: isElementFocused) { value in
+            print(value)
+        }
+    }
+}
+
+// Il est aussi possible de déplacer le focus automatiquement, par exemple ici lorsqu'une notification change
+//(exemple à retrouver ici https://developer.apple.com/documentation/swiftui/accessibilityfocusstate)
+
+struct CustomNotification: Equatable {
+    var text: String
+    var isPriority: Bool
+}
+
+struct ContentView: View {
+    @Binding var notification: CustomNotification?
+    @AccessibilityFocusState var isNotificationFocused: Bool
+
+    var body: some View {
+        VStack {
+            if let notification = self.notification {
+                Text(notification.text)
+                    .accessibilityFocused($isNotificationFocused)
+            }
+            Text("Un peu de texte pour cette vue.")
+        }
+        .onChange(of: notification) { notification in
+            if (notification?.isPriority == true)  {
+                isNotificationFocused = true
+            }
+        }
+    }
+}
+</code></pre>
 </div>
 </div>
 <div class="tab-pane" id="focusElt-Links" role="tabpanel">
 <ul>
-<li><a href="https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilityfocus"><code>UIAccessibilityFocus</code></a></li>
+<li>
+<p><a href="https://developer.apple.com/documentation/uikit/accessibility/uiaccessibilityfocus"><code>UIAccessibilityFocus</code></a></p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/swiftui/view/accessibilityfocused(_:)/"><code>accessibilityFocused</code></a></p>
+</li>
 </ul>
 </div>
 </div>
@@ -1745,7 +1996,7 @@ extension UIView {
 <div class="tab-pane show active"
      id="focusArea-Description"
      role="tabpanel">
-<p>Dans le cas d’objet modifié dynamiquement ou d’élément ne dérivant pas de <code>UIView</code>, il est possible de déterminer la zone géographique d’accessibilité de cet élément, c’est-à-dire la zone que <span lang="en">VoiceOver</span> met en surbrillance lors du focus.</p>
+<p>Dans le cas d’objet modifié dynamiquement ou d’élément ne dérivant pas de <code>UIView</code>, avec UIKit, il est possible de déterminer la zone géographique d’accessibilité de cet élément, c’est-à-dire la zone que <span lang="en">VoiceOver</span> met en surbrillance lors du focus.</p>
 </div>
 <div class="tab-pane" id="focusArea-Details" role="tabpanel">
 <ul>
@@ -2115,6 +2366,58 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
     let fontHead = UIFont(name: "Chalkduster", size: 30.0)
     let fontHeadMetrics = UIFontMetrics(forTextStyle: .headline)
     fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
+</code></pre>
+<pre><code class="swftui">
+var body: some View {
+    Text("Un peu de texte")
+        // Police système
+        .font(.headline)
+        // Police customisée
+        .font(Font.custom("MyFont", size: 18))
+        // Ou alors une police customisée de définition relative
+        .font(Font.custom("MyFont", size: 18, relativeTo: .title))
+    }
+}
+
+// SwiftUI permet également de savoir si la taille de texte a changé, et permet d'étendre le composant
+// ContentSizeCategory afin de savoir quelle taille de texte est appliquée
+
+// Propriété pour accéder à la taille de texte utilisée
+@Environment(\.sizeCategory) var sizeCategory: ContentSizeCategory
+
+// Une extension à définir pour savoir si la taille de etxte est une des tailles "accessibles"
+// ou une grosse taille de manière plus générale
+extension ContentSizeCategory {
+    
+    var isAccessible: Bool {
+        switch self {
+        case .accessibilityExtraExtraExtraLarge, // 310 %
+             .accessibilityExtraExtraLarge, // 275 %
+             .accessibilityExtraLarge, // 235%
+             .accessibilityLarge, // 190 %
+             .accessibilityMedium: // 160 %
+            return true
+        default:
+            return false
+        }
+    }
+    
+    var isLargeTextUsed: Bool {
+        switch self {
+        case .accessibilityExtraExtraExtraLarge, // 310 %
+             .accessibilityExtraExtraLarge, // 275 %
+             .accessibilityExtraLarge, // 235 %
+             .accessibilityLarge, // 190 %
+             .accessibilityMedium, // 160 %
+             .extraExtraExtraLarge, // 135 %
+             .extraExtraLarge, // 120%
+             .extraLarge: // 110 %
+            return true
+        default:
+            return false
+        }
+    }
+}
 </code></pre>
 </div>
 <br>
@@ -2545,7 +2848,7 @@ class ButtonViewController: UIViewController {
            data-bs-toggle="tab" 
            href="#adjustable-Links" 
            role="tab" 
-           aria-selected="false">Lien</a>
+           aria-selected="false">Liens</a>
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
@@ -2656,6 +2959,40 @@ class StepperWrapper: UIStackView {
     }
 }
 </code></pre>
+<pre><code class="swiftui">
+struct ContentView: View {
+    @State private var value = 5
+
+    VStack {
+        Text("Value: \(value)")
+
+        Button("-") {
+            guard value > 0 else { return }
+            value -= 1
+        }
+
+        Button("+") {
+            guard value < 10 else { return }
+            value += 1
+        }
+    }
+    .accessibilityElement()
+    .accessibilityLabel("Valeur")
+    .accessibilityValue(String(value))    
+    .accessibilityAdjustableAction { direction in
+        switch direction {
+        case .decrement:
+            guard value > 0 else { break }
+            value -= 1
+        case .increment:
+            guard value < 10 else { break }
+            value += 1
+        @unknown default:
+            break
+        }
+    }
+}
+</code></pre>
 </div>
 <br>
 <ul>
@@ -2733,7 +3070,12 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
 </div>
 <div class="tab-pane" id="adjustable-Links" role="tabpanel">
 <ul>
-<li><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitytraitadjustable"><code>UIAccessibilityTraitAdjustable</code></a></li>
+<li>
+<p><a href="https://developer.apple.com/documentation/uikit/uiaccessibilitytraitadjustable"><code>UIAccessibilityTraitAdjustable</code></a></p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/swiftui/modifiedcontent/accessibilityadjustableaction(_:)/"><code>accessibilityAdjustableAction</code></a></p>
+</li>
 </ul>
 </div>
 </div>
@@ -3099,7 +3441,7 @@ class CustomRotor: UIViewController {
            data-bs-toggle="tab" 
            href="#a11yOptions-Link" 
            role="tab" 
-           aria-selected="false">Lien</a>
+           aria-selected="false">Liens</a>
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
@@ -3120,6 +3462,17 @@ class CustomRotor: UIViewController {
     let isSwitchControlRunning = (UIAccessibility.isSwitchControlRunning ? 1 : 0)
         
     print("VoiceOver vaut \(isVoiceOverRunning) et SwichControl vaut \(isSwitchControlRunning).")
+</code></pre>
+<pre><code class="swiftui">
+
+// Booléen pour savoir si une option d'accessibilité est activée
+@Environment(\.accessibilityEnabled) private var accessibilityEnabled
+
+// Booléen pour savoir si Voice Over est activé
+@Environment(\.accessibilityVoiceOverEnabled) private var voiceOverEnabled
+
+// Booléen pour savoir si le contrôle de sélection est activé
+@Environment(\.accessibilitySwitchControlEnabled) private var switchControlEnabled
 </code></pre>
 </div>
 </div>
@@ -3185,7 +3538,18 @@ C’est là que les événements système peuvent être utilisés et, en restant
 </div>
 <div class="tab-pane" id="a11yOptions-Link" role="tabpanel">
 <ul>
-<li><a href="../conception/#options-daccessibilite">Options d'accessibilité</a> (partie conception iOS de ce site)</li>
+<li>
+<p><a href="../conception/#options-daccessibilite">Options d'accessibilité</a> (partie conception iOS de ce site)</p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityenabled/"><code>accessibilityEnabled</code></a></p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityvoiceoverenabled/"><code>accessibilityVoiceOverEnabled</code></a></p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/swiftui/environmentvalues/accessibilityswitchcontrolenabled"><code>accessibilitySwitchControlEnabled</code></a></p>
+</li>
 </ul>
 </div>
 </div>
