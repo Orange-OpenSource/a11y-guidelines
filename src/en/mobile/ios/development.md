@@ -1436,7 +1436,7 @@ Two views are created containing the numbers to be spelled out in a specific ord
     }
 </code></pre>
 
-<!-- # <pre><code class="swiftui">!
+<pre><code class="swiftui">
 var body: some View {
 
      // The higher the priority is, the sooner the items will be vocalized
@@ -1458,8 +1458,7 @@ var body: some View {
         }
     }.accessibilityElement(children: .contain)
 }
-#<code></pre>
-!-->
+</code></pre>
 </div>
 
 </div>
