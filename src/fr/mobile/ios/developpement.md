@@ -1547,7 +1547,7 @@ On peut aussi envisager l'implémentation de cette fonctionnalité dans des list
 </div>
 <div class="tab-pane" id="CuCoPro-Details" role="tabpanel">
 
-Pour utiliser cette fonctionnalité, il est impératif de&nbsp;:
+Pour utiliser cette fonctionnalité avec UIKit, il est impératif de&nbsp;:
 
 - se conformer au protocole **AXCustomContentProvider**,
 
@@ -1556,6 +1556,7 @@ Pour utiliser cette fonctionnalité, il est impératif de&nbsp;:
 - définir chaque élément **AXCustomContent** avec sa caractéristique (`value`) ainsi que la famille à laquelle elle appartient (`label`).
 
 
+Concernant SwiftUI, l'usage est bien plus simple sans utilisation de **AXCustomContentProvider** ni de l'API _Accessibility_.
 
 L'accès à ces informations se fait en **utilisant le rotor** qui contiendra alors un item **`Plus`&nbsp;`de`&nbsp;`contenus`** qui permettra de vocaliser chaque `AXCustomContent` par un **balayage vertical avec un doigt** comme pour les [valeurs continûment ajustables](#valeurs-continument-ajustables) ou les [actions personnalisées](#actions-personnalisees).
 </div>
@@ -1604,6 +1605,16 @@ class MyCustomView: UIImageView, AXCustomContentProvider {
 }
 </code></pre>
 
+<pre><code class="swiftui">
+var body: some View {
+    Image(...)
+        .accessibilityLabel("logo Orange")
+        .accessibilityHint("utiliser l'élément du rotor intitulé plus de contenus pour obtenir des informations complémentaires")            
+        .accessibilityCustomContent(AccessibilityCustomContentKey("date de création"), Text("1988"))
+        .accessibilityCustomContent(AccessibilityCustomContentKey("siège social"), Text("paris"))
+        .accessibilityCustomContent(AccessibilityCustomContentKey("type de société"), Text("télécommunications"))
+}
+</code></pre>
 </div>
 
 <br>

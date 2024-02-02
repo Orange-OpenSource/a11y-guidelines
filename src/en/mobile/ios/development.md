@@ -1527,6 +1527,8 @@ To implement this functionality, it's mandatory to:
 
 - define each and every **AXCustomContent** element with its `value` and the kind of family this value belongs to (`label`).
 
+About SwiftUI, this feature is much simple to use without needing use of **AXCustomContentProvider** neither import of_Accessibility_ API.
+
 The `More`&nbsp;`Content` **rotor item** is the only means to get these information by vocalizing every `AXCustomContent` element thanks to a one finger vertical swipe like the [continuous adjustable values](#continuous-adjustable-values) or the [custom actions](#custom-actions).
 </div>
 <div class="tab-pane" id="CuCoPro-Example" role="tabpanel">
@@ -1628,6 +1630,17 @@ class ViewController: UIViewController {
 
         myView.accessibilityCustomContent = [lastModified, items, type]
     }
+}
+</code></pre>
+
+<pre><code class="swiftui">
+var body: some View {
+    Image(...)
+        .accessibilityLabel("Orange logo")
+        .accessibilityHint("use the rotor item entitled more content to get additional information")            
+        .accessibilityCustomContent(AccessibilityCustomContentKey("date of creation"), Text("1988"))
+        .accessibilityCustomContent(AccessibilityCustomContentKey("registered office location"), Text("paris"))
+        .accessibilityCustomContent(AccessibilityCustomContentKey("type of company"), Text("telecommunications"))
 }
 </code></pre>
 
