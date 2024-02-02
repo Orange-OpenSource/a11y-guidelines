@@ -2281,6 +2281,59 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
     fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
 </code></pre>
 
+<pre><code class="swftui">
+var body: some View {
+    Text("Un peu de texte")
+        // Police système
+        .font(.headline)
+        // Police customisée
+        .font(Font.custom("MyFont", size: 18))
+        // Ou alors une police customisée de définition relative
+        .font(Font.custom("MyFont", size: 18, relativeTo: .title))
+    }
+}
+
+// SwiftUI permet également de savoir si la taille de texte a changé, et permet d'étendre le composant
+// ContentSizeCategory afin de savoir quelle taille de texte est appliquée
+
+// Propriété pour accéder à la taille de texte utilisée
+@Environment(\.sizeCategory) var sizeCategory: ContentSizeCategory
+
+// Une extension à définir pour savoir si la taille de etxte est une des tailles "accessibles"
+// ou une grosse taille de manière plus générale
+extension ContentSizeCategory {
+    
+    var isAccessible: Bool {
+        switch self {
+        case .accessibilityExtraExtraExtraLarge, // 310 %
+             .accessibilityExtraExtraLarge, // 275 %
+             .accessibilityExtraLarge, // 235%
+             .accessibilityLarge, // 190 %
+             .accessibilityMedium: // 160 %
+            return true
+        default:
+            return false
+        }
+    }
+    
+    var isLargeTextUsed: Bool {
+        switch self {
+        case .accessibilityExtraExtraExtraLarge, // 310 %
+             .accessibilityExtraExtraLarge, // 275 %
+             .accessibilityExtraLarge, // 235 %
+             .accessibilityLarge, // 190 %
+             .accessibilityMedium, // 160 %
+             .extraExtraExtraLarge, // 135 %
+             .extraExtraLarge, // 120%
+             .extraLarge: // 110 %
+            return true
+        default:
+            return false
+        }
+    }
+}
+</code></pre>
+
 </div>
 
 <br>

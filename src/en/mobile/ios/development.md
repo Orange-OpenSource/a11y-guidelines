@@ -2261,6 +2261,57 @@ Since iOS7, it is possible to make the text size dynamic according to the device
     fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
 </code></pre>
 
+<pre><code class="swftui">
+var body: some View {
+    Text("Some text")
+        // System font
+        .font(.headline)
+        // Custom font
+        .font(Font.custom("MyFont", size: 18))
+        // Custom font with relative definition
+        .font(Font.custom("MyFont", size: 18, relativeTo: .title))
+    }
+}
+
+// SwiftUI allows to know is the text size has changed and permits to extend ContentSizeCategory to get the current size
+
+// Property to get the current size
+@Environment(\.sizeCategory) var sizeCategory: ContentSizeCategory
+
+// Extension to define to know if the current etxt size is an accessible size or just a large size
+extension ContentSizeCategory {
+    
+    var isAccessible: Bool {
+        switch self {
+        case .accessibilityExtraExtraExtraLarge, // 310 %
+             .accessibilityExtraExtraLarge, // 275 %
+             .accessibilityExtraLarge, // 235%
+             .accessibilityLarge, // 190 %
+             .accessibilityMedium: // 160 %
+            return true
+        default:
+            return false
+        }
+    }
+    
+    var isLargeTextUsed: Bool {
+        switch self {
+        case .accessibilityExtraExtraExtraLarge, // 310 %
+             .accessibilityExtraExtraLarge, // 275 %
+             .accessibilityExtraLarge, // 235 %
+             .accessibilityLarge, // 190 %
+             .accessibilityMedium, // 160 %
+             .extraExtraExtraLarge, // 135 %
+             .extraExtraLarge, // 120%
+             .extraLarge: // 110 %
+            return true
+        default:
+            return false
+        }
+    }
+}
+</code></pre>
+
 </div>
 
 <br>
