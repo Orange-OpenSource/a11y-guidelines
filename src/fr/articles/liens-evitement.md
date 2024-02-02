@@ -2,7 +2,7 @@
 title: "Les bonnes pratiques pour les liens d’évitements"
 abstract: "Les liens d'évitement, qu'est-ce et comment bien les mettre en œuvre"
 titleBeforeTag: true
-date: "2022-07-12"
+date: "2023-06-22"
 tags:
   - web
   - beginner
@@ -16,7 +16,7 @@ Les liens d’évitement sont des raccourcis permettant d’accéder directement
 
 On peut distinguer trois types de liens&nbsp;:
 1. les liens d'accès rapide : rassemblés en haut de page et permettant d’aller aux principales régions de la page&nbsp;: «&nbsp;Aller au menu&nbsp;», «&nbsp;Aller au contenu&nbsp;», «&nbsp;Aller à la recherche&nbsp;», par exemple
-2. les liens d’évitement : positionnés avant la région qu’ils permettent de sauter : «&nbsp;Passer la section&nbsp;», «&nbsp;Passer le chapitre&nbsp;» 
+2. les liens d’évitement : positionnés avant la région qu’ils permettent d'éviter : «&nbsp;Passer la section&nbsp;», «&nbsp;Passer le chapitre&nbsp;» 
 3. les liens de navigation interne à une page : «&nbsp;Retour en haut de page&nbsp;», par exemple
 
 Ces liens d’évitement permettent donc à l’utilisateur d’éviter des parties de pages afin de faciliter la navigation, d’accéder au contenu souhaité plus aisément et se focaliser sur le contenu important, que l’on navigue au clavier, que l’on ait du mal à se repérer dans une page longue ou que scroller soit difficile.
@@ -32,7 +32,7 @@ On va donc, grâce aux liens d’évitement, limiter l’usage des touches de na
 
 ## Utilisation&nbsp;
 
-Il s’agit d’un lien pointant soit vers une ancre (balise <code>a</code> avec un attribut name) soit vers un élément HTML possédant un attribut id.
+Il s’agit généralement d'un lien pointant vers un élément HTML possédant un attribut id.
 
 ```html
 <body>
@@ -50,7 +50,7 @@ Il s’agit d’un lien pointant soit vers une ancre (balise <code>a</code> avec
 1. Il est possible d’intégrer un lien d’évitement de contenu au site sous forme d’image (type « flèche » par exemple avec un attribut title) apparaissant après avoir fait défiler la page vers le bas. Le lien d’évitement permettra de faire un retour vers le haut de page directement.
 Ce lien d’évitement ne doit pas empêcher la lecture ou la compréhension de l’information, il doit être le dernier élément ciblable au clavier.
 2.	Le lien d’évitement doit être atteignable au clavier quel que soit le sens de navigation (TAB ou Shift+TAB).
-3.	Placer un lien d’évitement sur un « id » fonctionne, mais ciblé le lien d’évitement sur des éléments comme <code>aside /</code>, <code>footer /</code> ou <code>main /</code> permet de rendre le lien d’évitement de contenu moins sensible aux éventuelles modifications. (Changement d’« id », ou simplement non repris dans le code d’une nouvelle page par exemple)
+3.	Placer un lien d’évitement sur un « id » fonctionne, mais cibler le lien d’évitement sur des éléments comme <code>aside /</code>, <code>footer /</code> ou <code>main /</code> permet de rendre le lien d’évitement de contenu moins sensible aux éventuelles modifications. (Changement d’« id », ou simplement non repris dans le code d’une nouvelle page par exemple)
 4.	les liens d’évitements ou d’accès rapide doivent être visuellement situés au même endroit dans la page et dans le même ordre relatif dans le code source sur l’ensemble des pages du site.
 
 ### Quand doit-on mettre en place des liens d’évitement&nbsp;?
