@@ -1223,6 +1223,23 @@ int indexSwitch = 1;
 }
 </code></pre>
 
+<pre><code class="swiftui">
+@State var isChecked = false 
+
+var body: some View {
+    HStack(){
+        Text("Some text: " + (isChecked ? "enabled : "disabled"))
+        Toggle("Test", isOn: $isChecked)
+    }
+    .accessibilityElement(children: .combine)
+    .accessibilityHint("Some description text grouped with the button")
+    .accessibilityAction {
+        print("Action triggered on double tap")
+        isChecked.toggle()
+    }
+}
+</code></pre>
+
 </div>
 
 </div>
