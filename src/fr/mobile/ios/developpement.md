@@ -1895,7 +1895,7 @@ struct ContentView: View {
      id="focusArea-Description"
      role="tabpanel">
      
-Dans le cas d’objet modifié dynamiquement ou d’élément ne dérivant pas de `UIView`, il est possible de déterminer la zone géographique d’accessibilité de cet élément, c’est-à-dire la zone que <span lang="en">VoiceOver</span> met en surbrillance lors du focus.
+Dans le cas d’objet modifié dynamiquement ou d’élément ne dérivant pas de `UIView`, avec UIKit, il est possible de déterminer la zone géographique d’accessibilité de cet élément, c’est-à-dire la zone que <span lang="en">VoiceOver</span> met en surbrillance lors du focus.
 </div>
 <div class="tab-pane" id="focusArea-Details" role="tabpanel">
 

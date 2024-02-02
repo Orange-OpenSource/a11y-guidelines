@@ -1866,7 +1866,7 @@ struct ContentView: View {
      id="focusArea-Description"
      role="tabpanel">
      
-In case of dynamically modified element or component not inheriting from `UIView`, it is possible to modify the focus area of accessibility of this element, i.e. the area <span lang="en">VoiceOver</span> highlights when focusing an element.
+In case of dynamically modified element or component not inheriting from `UIView`, with UIKit, it is possible to modify the focus area of accessibility of this element, i.e. the area <span lang="en">VoiceOver</span> highlights when focusing an element.
 </div>
 <div class="tab-pane" id="focusArea-Details" role="tabpanel">
 
