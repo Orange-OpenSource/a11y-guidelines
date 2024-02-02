@@ -44,6 +44,14 @@
   </entry>
   
   <entry>
+    <title>Les bonnes pratiques pour les liens d’évitements</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/liens-evitement/"/>
+    <updated>2023-06-22T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/liens-evitement/</id>
+    <content xml:lang="fr" type="html">Les liens d&#39;évitement, qu&#39;est-ce et comment bien les mettre en œuvre</content>
+  </entry>
+  
+  <entry>
     <title>Veille #A11y Avril-Mai 2023</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/veille-avril-mai-2023/"/>
     <updated>2023-06-05T00:00:00Z</updated>
@@ -145,14 +153,6 @@
     <updated>2022-07-26T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/tester-wcag-132/</id>
     <content xml:lang="fr" type="html">Les bonnes pratiques pour le critère WCAG 1.3.2</content>
-  </entry>
-  
-  <entry>
-    <title>Les bonnes pratiques pour les liens d’évitements</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/liens-evitement/"/>
-    <updated>2022-07-12T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/liens-evitement/</id>
-    <content xml:lang="fr" type="html">Les liens d&#39;évitement, qu&#39;est-ce et comment bien les mettre en œuvre</content>
   </entry>
   
   <entry>
