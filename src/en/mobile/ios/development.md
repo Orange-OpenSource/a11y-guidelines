@@ -1774,6 +1774,52 @@ extension UIView {
 }
 </code></pre>
 
+<pre><code class="swiftui">
+//The property wrapper AccessibilityFocusState allows to know is the element has the focus or not
+
+struct MyView: View {
+    @AccessibilityFocusState private var isElementFocused: Bool
+    @State private var myText = ""
+
+    var body: some View {
+        Form {
+            TextField("Text field", text: $myText)
+                .accessibilityFocused($isElementFocused)
+        }
+        .onChange(of: isElementFocused) { value in
+            print(value)
+        }
+    }
+}
+
+// It is also possible to move the focus automatically, e.g. here when a notification changed (https://developer.apple.com/documentation/swiftui/accessibilityfocusstate)
+
+struct CustomNotification: Equatable {
+    var text: String
+    var isPriority: Bool
+}
+
+struct ContentView: View {
+    @Binding var notification: CustomNotification?
+    @AccessibilityFocusState var isNotificationFocused: Bool
+
+    var body: some View {
+        VStack {
+            if let notification = self.notification {
+                Text(notification.text)
+                    .accessibilityFocused($isNotificationFocused)
+            }
+            Text("The main content for this view.")
+        }
+        .onChange(of: notification) { notification in
+            if (notification?.isPriority == true)  {
+                isNotificationFocused = true
+            }
+        }
+    }
+}
+</code></pre>
+
 </div>
 
 </div>

@@ -1807,13 +1807,13 @@ struct MyView: View {
     @State private var monTexte = ""
 
     var body: some View {
-            Form {
-                TextField("Champ d'édition", text: $monTexte)
-                    .accessibilityFocused($isElementFocused)
-            }
-            .onChange(of: isElementFocused) { value in
-                print(value)
-            }
+        Form {
+            TextField("Champ d'édition", text: $monTexte)
+                .accessibilityFocused($isElementFocused)
+        }
+        .onChange(of: isElementFocused) { value in
+            print(value)
+        }
     }
 }
 
@@ -1835,7 +1835,7 @@ struct ContentView: View {
                 Text(notification.text)
                     .accessibilityFocused($isNotificationFocused)
             }
-            Text("The main content for this view.")
+            Text("Un peu de texte pour cette vue.")
         }
         .onChange(of: notification) { notification in
             if (notification?.isPriority == true)  {
@@ -1844,7 +1844,6 @@ struct ContentView: View {
         }
     }
 }
-
 </code></pre>
 
 </div>
