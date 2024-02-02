@@ -1464,8 +1464,7 @@ On crée deux vues au sein desquelles on incorpore les chiffres qu'on souhaite v
                                            key_5!]
     }
 </code></pre>
-
-<pre><code class="swiftui">
+<!-- <pre><code class="swiftui">
 var body: some View {
 
     // Plus la priorité est elevée, plus tôt sera vocalisé l'élément
@@ -1487,7 +1486,8 @@ var body: some View {
         }
     }.accessibilityElement(children: .contain)
 }
-<code></pre>
+#<code></pre>
+!-->
 </div>
 
 </div>

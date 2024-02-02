@@ -1436,10 +1436,10 @@ Two views are created containing the numbers to be spelled out in a specific ord
     }
 </code></pre>
 
-<pre><code class="swiftui">
+<!-- # <pre><code class="swiftui">!
 var body: some View {
 
-    // The higher the priority is, the sooner the items will be vocalized
+     // The higher the priority is, the sooner the items will be vocalized
     HStack {
         VStack { // Natural order of the container will be used
             Text("1") // Rank 1
@@ -1458,8 +1458,8 @@ var body: some View {
         }
     }.accessibilityElement(children: .contain)
 }
-<code></pre>
-
+#<code></pre>
+!-->
 </div>
 
 </div>
