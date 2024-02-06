@@ -23,6 +23,17 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "Beyond the basics of structured concurrency",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310170",
+    "profils": ["All","Debugging","Instruments","Swift"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "Bring widgets to life",
     "type": ["Widget"],
     "tests": [],
