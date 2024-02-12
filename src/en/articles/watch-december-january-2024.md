@@ -9,11 +9,11 @@ tags:
 
 # Digital accessibility monitoring  December-January 2024
 
-Always relevant, the great articles from the 24-day Advent calendar From the Web (fr): https://www.24joursdeweb.fr/
-“80% of invisible disabilities”, a figure that has always puzzled me, well at least here are some explanations (fr): https://www.24joursdeweb.fr/2023/fact-checking-80-des-handicaps-sont-invisibles/
-Again on these damn overlays, even the EC doesn't like them: https://commission.europa.eu/resources-partners/europa-web-guide/design-content-and -development/accessibility/testing-early-and-regularly/accessibility-overlays_en
-It's official, certain sanctions for non-compliance with a11y laws and the implementation of controls are here (fr): https://www.lefigaro.fr/flash-eco/accessibilite-numerique-les-cancres-de-l-administration-encourent-desormais-des-sanctions-20240101 and https://www.faire-face.fr/2024/01/09/accessibilite-numerique-condamnations-ameliorations/
-A working draft from WF3c for the new version of ARIA, 1.3 which can be commented on until 02/21: https://www.w3.org/news/2024/first-public-working-draft-accessible-rich-internet-applications-wai-aria-1-3/
+- Always relevant, the great articles from the 24-day Advent calendar From the Web (fr): https://www.24joursdeweb.fr/
+- “80% of invisible disabilities”, a figure that has always puzzled me, well at least here are some explanations (fr): https://www.24joursdeweb.fr/2023/fact-checking-80-des-handicaps-sont-invisibles/
+- Again on these damn overlays, even the EC doesn't like them: https://commission.europa.eu/resources-partners/europa-web-guide/design-content-and -development/accessibility/testing-early-and-regularly/accessibility-overlays_en
+- It's official, certain sanctions for non-compliance with a11y laws and the implementation of controls are here (fr): https://www.lefigaro.fr/flash-eco/accessibilite-numerique-les-cancres-de-l-administration-encourent-desormais-des-sanctions-20240101 and https://www.faire-face.fr/2024/01/09/accessibilite-numerique-condamnations-ameliorations/
+- A working draft from WF3c for the new version of ARIA, 1.3 which can be commented on until 02/21: https://www.w3.org/news/2024/first-public-working-draft-accessible-rich-internet-applications-wai-aria-1-3/
 
 ## Accessibility in laws and standards
 
@@ -68,7 +68,7 @@ A working draft from WF3c for the new version of ARIA, 1.3 which can be commente
 
 ## Mobile app, mobile web
 
-- cA demonstration application for components accessible in swiftUI, very very useful for developers: https://github.com/cvs-health/ios-swiftui-accessibility-techniques
+- A demonstration application for components accessible in swiftUI, very very useful for developers: https://github.com/cvs-health/ios-swiftui-accessibility-techniques
 - Adapt a real keyboard to your iPhone: https://www.clicks.tech/
 - “Be My Eyes” is a free app intended for blind or visually impaired people, relying on community support or on chatGPT for the description of the nearby environment: https://www.bemyeyes.com/language/english
 - Some essential resources to know for mobile accessibility: https://dev.to/steady5063/the-ultimate-mobile-accessibility-resource-guide-53gh
