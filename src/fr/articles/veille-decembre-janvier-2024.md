@@ -8,11 +8,11 @@ tags:
 
 # Veille accessibilité numérique Décembre-Janvier 2024
 
-Toujours d'actualité, les chouettes articles du calendrier de l'avent 24j De Web : https://www.24joursdeweb.fr/
-"80% de handicap invisibles", un chiffre qui m'a toujours interrogé, bon au moins voilà quelques explications : https://www.24joursdeweb.fr/2023/fact-checking-80-des-handicaps-sont-invisibles/
-Encore sur ces p**ain d'overlay, les surcouches d'a11y, même la CE ne les aime pas : https://commission.europa.eu/resources-partners/europa-web-guide/design-content-and-development/accessibility/testing-early-and-regularly/accessibility-overlays_en
-C'est officiel, certaines sanctions pour non respect des lois d'a11y et la mise en place des contrôles sont là :  https://www.lefigaro.fr/flash-eco/accessibilite-numerique-les-cancres-de-l-administration-encourent-desormais-des-sanctions-20240101 et https://www.faire-face.fr/2024/01/09/accessibilite-numerique-condamnations-ameliorations/
-Un working draft du WF3c pour la nouvelle version d'ARIA, la 1.3 qui peut être commenté jusqu'au 21/02 (en) : https://www.w3.org/news/2024/first-public-working-draft-accessible-rich-internet-applications-wai-aria-1-3/
+- Toujours d'actualité, les chouettes articles du calendrier de l'avent 24j De Web : https://www.24joursdeweb.fr/
+- "80% de handicap invisibles", un chiffre qui m'a toujours interrogé, bon au moins voilà quelques explications : https://www.24joursdeweb.fr/2023/fact-checking-80-des-handicaps-sont-invisibles/
+- Encore sur ces p**ain d'overlay, les surcouches d'a11y, même la CE ne les aime pas : https://commission.europa.eu/resources-partners/europa-web-guide/design-content-and-development/accessibility/testing-early-and-regularly/accessibility-overlays_en
+- C'est officiel, certaines sanctions pour non respect des lois d'a11y et la mise en place des contrôles sont là :  https://www.lefigaro.fr/flash-eco/accessibilite-numerique-les-cancres-de-l-administration-encourent-desormais-des-sanctions-20240101 et https://www.faire-face.fr/2024/01/09/accessibilite-numerique-condamnations-ameliorations/
+- Un working draft du WF3c pour la nouvelle version d'ARIA, la 1.3 qui peut être commenté jusqu'au 21/02 (en) : https://www.w3.org/news/2024/first-public-working-draft-accessible-rich-internet-applications-wai-aria-1-3/
 
 ## L'accessibilité dans les lois et les normes 
 
@@ -67,19 +67,19 @@ Un working draft du WF3c pour la nouvelle version d'ARIA, la 1.3 qui peut être 
 
 ## Appli mobile, web mobile
 
-- cUne application de démonstration de composants accessibles en swiftUI, très très utile pour les développeurs : https://github.com/cvs-health/ios-swiftui-accessibility-techniques
+- Une application de démonstration de composants accessibles en swiftUI, très très utile pour les développeurs : https://github.com/cvs-health/ios-swiftui-accessibility-techniques
 - Adapter un vrai clavier sur son iPhone : https://www.clicks.tech/
 - "Be My Eyes" est une appli gratuite destinée aux personnes aveugles ou malvoyantes, s'appuyant sur l'entraide de la communauté ou sur chatGPT pour la description de l'environnement proche : https://www.bemyeyes.com/language/french
 - Quelques ressources essentielles à connaître pour l'accessibilité sur mobile : https://dev.to/steady5063/the-ultimate-mobile-accessibility-resource-guide-53gh
 - Tester l'accessibilité de votre app Flutter directement dans votre IDE : https://blog.octo.com/tester-laccessibilite-de-votre-app-flutter-directement-dans-votre-ide
 - Un simulateur d'accessibilité sur iOS : https://ios.moba11y.com/
 - Etude de la société Fable sur les principaux usages et problèmes d'accessibilité mobile : https://makeitfable.com/insights/insights-mobile-accessibility/
-- 
+  
 ## Ergonomie, UI & UX
 
 - N'utiliser pas les boutons toggle, sinon... (en) : https://axesslab.com/toggles-suck/
 - Design et dev en A11y, tous responsables (en) : https://cerovac.com/a11y/2024/01/mind-the-accessibility-gaps-most-of-accessibility-issues-originate-in-design-and-how-to-fix-that/
--Un site peut être à la fois beau et accessible : https://medium.com/@chiaracielo/an-accessible-website-wont-be-beautiful-really-076802c79e90
+- Un site peut être à la fois beau et accessible : https://medium.com/@chiaracielo/an-accessible-website-wont-be-beautiful-really-076802c79e90
 
 ## Ressources
 
