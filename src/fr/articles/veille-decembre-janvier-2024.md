@@ -1,7 +1,7 @@
 ---
 title: "Veille #A11y Décembre-Janvier 2024"
 abstract: "Florilège de ressources en #a11y, Décembre-Janvier 2024"
-date: "2024-01-05"
+date: "2024-02-05"
 tags:
   - veille
 ---
