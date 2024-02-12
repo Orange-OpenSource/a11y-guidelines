@@ -34,7 +34,6 @@ tags:
 - Outils auto d'a11y et shadow DOM (en) : https://matuzo.at/blog/2024/automated-testing-tools-and-web-components
 - Quelques erreurs très communes dans un audit (en) : https://gomakethings.com/basic-accessibility-mistakes-i-often-see-in-audits/
 - Le top 10 des erreurs en 2023 (en) : https://www.tpgi.com/the-top-accessibility-errors-found-in-2023/
-- 
 
 ## Points techniques
 
@@ -67,7 +66,7 @@ tags:
 
 ## Appli mobile, web mobile
 
-- Une application de démonstration de composants accessibles en swiftUI, très très utile pour les développeurs : https://github.com/cvs-health/ios-swiftui-accessibility-techniques
+- Une application de démonstration de composants accessibles en SwiftUI, très très utile pour les développeurs : https://github.com/cvs-health/ios-swiftui-accessibility-techniques
 - Adapter un vrai clavier sur son iPhone : https://www.clicks.tech/
 - "Be My Eyes" est une appli gratuite destinée aux personnes aveugles ou malvoyantes, s'appuyant sur l'entraide de la communauté ou sur chatGPT pour la description de l'environnement proche : https://www.bemyeyes.com/language/french
 - Quelques ressources essentielles à connaître pour l'accessibilité sur mobile : https://dev.to/steady5063/the-ultimate-mobile-accessibility-resource-guide-53gh
