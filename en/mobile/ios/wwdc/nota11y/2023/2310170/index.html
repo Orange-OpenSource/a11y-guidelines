@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Beyond the basics of structured concurrency - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Find out how structured concurrency can help your apps manage tasks.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Skip links - Switch language">
+   <div class="container-lg">
+      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <a href="#main-menu" class="nav-link">Go to menu</a>
+    </li><li class="nav-item">
+      <a href="#main-content" class="nav-link">Go to content</a>
+    </li><li class="nav-item hidden-if-no-js">
+      <a href="#search-input" class="nav-link">Go to search</a>
+    </li><li class="nav-item">
+      <a href="#footer" class="nav-link">Go to footer</a>
+    </li></ul>
+
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+    </div>
+  </nav>
+  
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Beyond the basics of structured concurrency
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#structured-concurrency" class="dropdown-item text-wrap">Structured Concurrency</a><a href="#tasks" class="dropdown-item text-wrap">Tasks</a><a href="#hierarchy" class="dropdown-item text-wrap">Hierarchy</a><a href="#cancellation" class="dropdown-item text-wrap">Cancellation</a><a href="#priority" class="dropdown-item text-wrap">Priority</a><a href="#groups" class="dropdown-item text-wrap">Groups</a><a href="#local-value" class="dropdown-item text-wrap">Local value</a><a href="#swiftlog" class="dropdown-item text-wrap">SwiftLog</a><a href="#traces" class="dropdown-item text-wrap">Traces</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2023: Beyond the basics of structured concurrency</h1>
+<p>Find hereafter a detailed summary of the above named video that belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2023/10170/">session 10170</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_Poster.png" alt="" class="img-fluid"></p>
+<p>&quot;Find out how <strong>structured concurrency</strong> can help your apps manage automatic task cancellation, task priority propagation, and useful task-local value patterns. Learn how to manage resources in your app with useful patterns and the <strong>latest task group APIs</strong>. We'll show you how you can leverage the power of the <strong>task tree</strong> and <strong>task-local values</strong> to gain insight into distributed systems.&quot;</p>
+<p></br>Hereafter, the underlined elements <strong>lead directly to the playback of the WWDC video</strong> at the appropriate moment.<br>
+</br></p>
+<h2 id="structured-concurrency"><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=56">Structured Concurrency</a> <a class="header-anchor" href="#structured-concurrency" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_1.png" alt="" class="img-fluid"><br>
+The <strong>concurrent execution</strong> is based on tasks whose structure define a specific way to handle the situation.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_2.png" alt="" class="img-fluid"></p>
+<p>When the number of tasks to be completed is known, the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10170?time=155"><code>async</code> <code>let</code> syntax</a></strong> can be used to abide by the structure concurrency.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_3.png" alt="" class="img-fluid"></p>
+<p>It's highly recommended to <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10170?time=108">use the structured Tasks</a></strong> so as to let <code>Swift</code> doing smart things such as cancellation whose feasibility is due to the parent-child relationship.<br>
+</br>The unstructured concurrency relies on tasks that aren't part of any hierarchy and so don't have a parent task.<br>
+</br></p>
+<h2 id="tasks">Tasks <a class="header-anchor" href="#tasks" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="hierarchy"><a href="https://developer.apple.com/videos/play/wwdc2023/10170?time=191">Hierarchy</a> <a class="header-anchor" href="#hierarchy" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Following the previous rationale for making soups in the app example, the <code>chopIngredients</code> function points out the typical <strong>task hierarchy</strong> that highlights a <strong>parent-child relationship</strong>.<br>
+</br></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#StructConcurTaskTree1"
+           id="StructConcurTaskTree1_tab"
+           role="tab" 
+           aria-selected="true">Task&nbsp;tree</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StructConcurTaskTree2"
+           id="StructConcurTaskTree2_tab"
+           role="tab" 
+           aria-selected="false">Code&nbsp;example</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="StructConcurTaskTree1" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_5.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StructConcurTaskTree2" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_4.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h3 id="cancellation"><a href="https://developer.apple.com/videos/play/wwdc2023/10170?time=229">Cancellation</a> <a class="header-anchor" href="#cancellation" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_7.png" alt="" class="img-fluid"></p>
+<p>The moment the cancel function occurs will <strong>impact the final behavior</strong> of the rendered code (Ex #1) and determine the way to <strong>catch a potential error</strong> (Ex #2).</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#StructConcurCancel1"
+           id="StructConcurCancel1_tab"
+           role="tab" 
+           aria-selected="true">Ex&nbsp;#1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StructConcurCancel2"
+           id="StructConcurCancel2_tab"
+           role="tab" 
+           aria-selected="false">Ex&nbsp;#2</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="StructConcurCancel1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the first example" href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=272">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_8.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StructConcurCancel2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the second example" href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=298">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_9.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<p>Based on the <strong>cooperative cancellation</strong> mechanism, each task is responsible of its execution management through the implemented code.<br>
+Then, this code must <a href="https://developer.apple.com/videos/play/wwdc2023/10170?time=501">check for cancellation</a> that might be signaled to the task for being stopped as soon as possible.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_10.png" alt="" class="img-fluid"></p>
+<p>When <code>AsyncSequence</code> is involved, the <a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=395"><strong>next</strong> function</a> of the instance of type <code>AsyncIterator</code> that produces elements can be customized to stick as closely to the needs.<br>
+</br>Finally, note that the <code>actors</code> aren't necessary the <a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=448">proper way</a> to modify and read individual properties on the state machine.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_6.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="priority"><a href="https://developer.apple.com/videos/play/wwdc2023/10170?time=515">Priority</a> <a class="header-anchor" href="#priority" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>A <strong>task priority</strong> is defined as communicating to the system how urgent a specific task is.<br>
+This priority level inherited from the parents' in the task tree becomes a <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=548">priority inversion</a></strong> when a high-priority task is waiting on the result of a lower-priority task.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_11.png" alt="" class="img-fluid"></p>
+<p>A structured <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=568">priority escalation</a></strong> comes in when low priority tasks are awaited by a higher priority task to be modified.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_12.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="groups">Groups <a class="header-anchor" href="#groups" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#StructConcurGroups1"
+           id="StructConcurGroups1_tab"
+           role="tab" 
+           aria-selected="true">Pattern&nbsp;#1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StructConcurGroups2"
+           id="StructConcurGroups2_tab"
+           role="tab" 
+           aria-selected="false">Pattern&nbsp;#2</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="StructConcurGroups1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the first pattern" href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=717">🎬</a></p>
+<p>Based on a new <code>API</code>, the tasks' resources are immediately freed when the task is over without holding into the results of completed child tasks.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_14.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StructConcurGroups2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the second pattern" href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=643">🎬</a></p>
+<p>Limiting and managing concurrency may be streamlined by this helpful pattern.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_15.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_13.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="local-value"><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=836">Local value</a> <a class="header-anchor" href="#local-value" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>A task-local value is a <strong>variable</strong> associated with a task hierarchy and declared as a <strong>static property</strong> with a dedicated wrapper.<br>
+This value exists in a <strong>specific scope</strong> and <a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=894">gets back to its original value</a> at the end thereof.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_16.png" alt="" class="img-fluid"></p>
+<p>All tasks but detached ones inherit task-local values from the current task.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_17.png" alt="" class="img-fluid"></p>
+<h2 id="swiftlog"><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1028">SwiftLog</a> <a class="header-anchor" href="#swiftlog" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>It's recommended to utilize the <strong>SwiftLog</strong> <code>API</code> package when dealing with a server-side <code>Swift</code> application or a cross-platform app/library to use crucial elements for debugging: the loggers to get messages in a certain log level.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10170_18.png" alt="" class="img-fluid"></p>
+<p>The <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1039">MetadataProvider</a></strong> <code>API</code> is a valuable tool to combine information and merge into a single object presented by a <code>Logger</code>.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#StructConcurLog1"
+           id="StructConcurLog1_tab"
+           role="tab" 
+           aria-selected="true">Log&nbsp;results</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#StructConcurLog2"
+           id="StructConcurLog2_tab"
+           role="tab" 
+           aria-selected="false">Code&nbsp;writing</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="StructConcurLog1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the log results" href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1094">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_19.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="StructConcurLog2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the code to get the sought logging" href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1054">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_20.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<h2 id="traces"><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1139">Traces</a> <a class="header-anchor" href="#traces" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>Besides the <a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1147"><code>Swift Concurrency</code></a> and the <a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1163"><code>HTTP</code> <code>traffic</code></a> instruments that are useful for debugging, a new <a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1186">open source package</a> for server ecosystem is introduced: <strong>Swift Distributed Tracing</strong></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_21.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1235">Instrument the code</a> with additional information provided thanks to the <strong>withSpan</strong> <code>API</code> or its <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1288">attributes</a></strong> fills the tracing system with appropriate insights into the task hierarchy.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_22.png" alt="" class="img-fluid"></p>
+<p>When timing races give rise to <a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1311">errors</a>, the deep connection between tasks and time in the tree provides useful information in the tracing system to find out the source of the problem.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_23.png" alt="" class="img-fluid"></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10170_24.png" alt="" class="img-fluid"></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#structured-concurrency" class="nav-link text-muted">Structured Concurrency</a></li><li class="nav-item position-relative">
+            <a href="#tasks" class="nav-link text-muted">Tasks</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#hierarchy" class="nav-link text-muted">Hierarchy</a></li><li class="nav-item position-relative">
+            <a href="#cancellation" class="nav-link text-muted">Cancellation</a></li><li class="nav-item position-relative">
+            <a href="#priority" class="nav-link text-muted">Priority</a></li><li class="nav-item position-relative">
+            <a href="#groups" class="nav-link text-muted">Groups</a></li><li class="nav-item position-relative">
+            <a href="#local-value" class="nav-link text-muted">Local value</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#swiftlog" class="nav-link text-muted">SwiftLog</a></li><li class="nav-item position-relative">
+            <a href="#traces" class="nav-link text-muted">Traces</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2023/2310170.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
