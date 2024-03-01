@@ -42,9 +42,21 @@ De cette manière, une succession de taps n'importe où sur l'écran permettra d
 
 ### "Police plus grande" dans le centre de contrôle
 Toujours pour faciliter l'accès aux fonctions d'accessibilité, il est possible d'ajouter le réglage de la taille des textes.
-Aller dans Réglages > Centre de contrôle et sélectionner "Taille du texte"
+Aller dans Réglages > Centre de contrôle et sélectionner "Taille du texte".
+Vous pourrez alors accéder facilement à l'option.
 
 ![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/20e7a11e-d3f8-481d-a021-ec4f7ab4632a)
 
 ## Prise en main des options d'accessibilité
+
+### Tester avec le contrôle de sélection
+Utiliser le contrôle de sélection permet de vérifier principalement deux choses : l'ordre du focus et l'accessibilité des éléments interactifs.
+1. Activer le contrôle de sélection. 
+2. Le focus s'affiche alors et commence à se déplacer d'un conteneur à l'autre (par exemple, le header, la vue principale, la barre de navigation...).
+3. Pour que le focus se déplace à l'intérieur d'un conteneur, il suffit de taper une fois lorsque le focus arrive sur ce conteneur.
+4. Dès lors, un tap supplémentaire fera apparaître les options d'intéractions possibles avec l'élément ayant le focus (tap, défilement haut/bas, glissé...)
+
+![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/6fde5e3b-5084-4199-8e09-0925d3a763cf)
+
+
 
