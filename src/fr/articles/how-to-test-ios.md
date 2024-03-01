@@ -19,12 +19,32 @@ tags:
 Pour plus de facilité, il est recommandé d'ajouter les outils indispensables dans les raccourcis d'accessibilité
 - Réglages > Accessibilité > Raccourci Accessibilité
 - Choisir à minima : "Contrôle de sélection" et "VoiceOver“
-- Vous pouvez aussi ajouter "Contrôle vocal" et "accès complet au clavier"
+- Vous pouvez aussi ajouter "Contrôle vocal" et "Accès complet au clavier"
   
 ![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/74baf176-593e-499e-a0a8-8f1267216b3d)
 
 **Le raccourci d'accessibilité s'active en appuyant 3 fois sur le bouton latéral de l'iPhone.**
 
-Vous pouvez aussi ajouter les raccourcis d’accessibilité au centre de contrôle pour y accéder sans avoir à réaliser la manipulation avec le bouton latéral
+Vous pouvez aussi ajouter les raccourcis d’accessibilité au centre de contrôle (Réglages > Centre de contrôle) pour y accéder sans avoir à réaliser la manipulation avec le bouton latéral.
 
 ![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/423eeffd-e3db-40c4-94ff-041da2ebe565)
+
+### Paramétrage du Contrôle de sélection
+Aller dans Réglages > Accessibilité	> Contrôle de sélection > Boutons
+Sans dispositif externe, il convient de configurer simplement :
+- mode: “Bouton”
+- type: “Ecran” 
+- action: “Sélectionner un élément”
+ 
+![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/0e85631b-a638-4b6e-af34-a3abed2e439a)
+
+De cette manière, une succession de taps n'importe où sur l'écran permettra de contrôler l'avancée du focus et les actions associées (nous détaillerons le principe plus bas dans l'article).
+
+### "Police plus grande" dans le centre de contrôle
+Toujours pour faciliter l'accès aux fonctions d'accessibilité, il est possible d'ajouter le réglage de la taille des textes.
+Aller dans Réglages > Centre de contrôle et sélectionner "Taille du texte"
+
+![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/20e7a11e-d3f8-481d-a021-ec4f7ab4632a)
+
+## Prise en main des options d'accessibilité
+
