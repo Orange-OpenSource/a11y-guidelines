@@ -22,13 +22,13 @@ Pour plus de facilité, il est recommandé d'ajouter les outils indispensables d
 - Réglages > Accessibilité > Raccourci Accessibilité.
 - Choisir : "Contrôle de sélection", "VoiceOver“, "Contrôle vocal" et "Accès complet au clavier".
   
-![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/74baf176-593e-499e-a0a8-8f1267216b3d)
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/74baf176-593e-499e-a0a8-8f1267216b3d)
 
 **Le raccourci d'accessibilité s'active en appuyant 3 fois sur le bouton latéral de l'iPhone.**
 
 Vous pouvez aussi ajouter les raccourcis d’accessibilité au centre de contrôle (Réglages > Centre de contrôle) pour y accéder sans avoir à réaliser la manipulation avec le bouton latéral.
 
-![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/423eeffd-e3db-40c4-94ff-041da2ebe565)
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/423eeffd-e3db-40c4-94ff-041da2ebe565)
 
 ### Paramétrage du Contrôle de sélection
 Aller dans Réglages > Accessibilité	> Contrôle de sélection > Boutons
@@ -37,7 +37,7 @@ Sans dispositif externe, il convient de configurer simplement :
 - type: “Ecran” 
 - action: “Sélectionner un élément”
  
-![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/0e85631b-a638-4b6e-af34-a3abed2e439a)
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/0e85631b-a638-4b6e-af34-a3abed2e439a)
 
 De cette manière, une succession de taps n'importe où sur l'écran permettra de contrôler l'avancée du focus et les actions associées (nous détaillerons le principe plus bas dans l'article).
 
@@ -46,7 +46,7 @@ Toujours pour faciliter l'accès aux fonctions d'accessibilité, il est possible
 Aller dans Réglages > Centre de contrôle et sélectionner "Taille du texte".
 Vous pourrez alors accéder facilement à l'option.
 
-![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/20e7a11e-d3f8-481d-a021-ec4f7ab4632a)
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/20e7a11e-d3f8-481d-a021-ec4f7ab4632a)
 
 ## Prise en main des options d'accessibilité
 
@@ -69,26 +69,26 @@ Utiliser le contrôle de sélection permet de vérifier principalement deux chos
 3. Pour que le focus se déplace à l'intérieur d'un conteneur, il suffit de taper une fois lorsque le focus arrive sur ce conteneur.
 4. Dès lors, un tap supplémentaire fera apparaître les options d'intéractions possibles avec chaque élément ayant le focus (tap, défilement haut/bas, glissé...)
 
-![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/6fde5e3b-5084-4199-8e09-0925d3a763cf)
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/6fde5e3b-5084-4199-8e09-0925d3a763cf)
 
 ### Navigation clavier
 Il est possible d'utiliser son téléphone seulement avec un clavier externe.
 1. Connecter un clavier au téléphone
 2. Activer l’option “Accès complet au clavier”
 
-![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/dd8e2a5a-607c-4f77-921c-be43dfdf5e2e)
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/dd8e2a5a-607c-4f77-921c-be43dfdf5e2e)
 
 3. A présent, toutes les fonctionnalités disponibles à la souris doivent l’être également à l’aide du clavier.
 La navigation se fait de la même manière que pour un clavier sur desktop, touche ```TAB``` pour avancer, ```SHIFT+TAB``` pour reculer, ```ESPACE``` pour activer un élément.
 
 Des combinaisons sont également spécifiques à l'environnement mobile iOS :
 
-![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f3e1bb95-27dc-47ce-9b16-fa89a91079e8)
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f3e1bb95-27dc-47ce-9b16-fa89a91079e8)
 
 4. La navigation clavier permet également de vérifier que l'ordre de navigation est respecté.
 5. Si le focus n'est pas assez visible, il est possible d'augmenter son contraste dans les paramètres de l'option
 
-![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/d1e966c5-bc5b-447f-a8db-b0fea6140fec)
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/d1e966c5-bc5b-447f-a8db-b0fea6140fec)
 
 ### Contrôle vocal
 Lorsque « Contrôle vocal » est activé, vous pouvez énoncer des commandes comme :
@@ -99,18 +99,18 @@ Lorsque « Contrôle vocal » est activé, vous pouvez énoncer des commandes 
 
 Par défaut, le nom des éléments est superposé. Aussi, pour qu'une application soit pilotable de la sorte, il faut que les composants interactifs aient un nom accessible simple et cohérent (en particulier dans le cas d'une image-lien ou image-bouton sans libellé visible).
 
-![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/ec76969b-d442-484e-8a80-c36376dcdc92)
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/ec76969b-d442-484e-8a80-c36376dcdc92)
 
 Il est également possible d'afficher le numéro des éléments ou même une grille numérotée pour les atteindre.
 
 ### Police plus grande
 1. Agrandir la police de caractères à partir du raccourci configuré plus haut
 
-![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/20e7a11e-d3f8-481d-a021-ec4f7ab4632a)
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/20e7a11e-d3f8-481d-a021-ec4f7ab4632a)
 
 2. Il est possible d'activer l'agrandissement de texte jusqu'à 310%, mais les recommandations d'accessibilité demandent un affichage correct jusqu'à 235%.
 
 3. Si l'application a été prévue pour supporter l'agrandissement (Dynamic Type), alors les textes seront correctement restitués, lisibles et sans perte d'information (pas de texte tronqué ni de superposition)
 
-![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f3bd6e96-b44b-44a8-b2f2-cd5136c82993)
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f3bd6e96-b44b-44a8-b2f2-cd5136c82993)
 
