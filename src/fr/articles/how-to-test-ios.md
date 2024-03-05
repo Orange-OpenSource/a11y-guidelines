@@ -80,11 +80,12 @@ Il est possible d'utiliser son téléphone seulement avec un clavier externe.
 
 3. A présent, toutes les fonctionnalités disponibles à la souris doivent l’être également à l’aide du clavier.
 La navigation se fait de la même manière que pour un clavier sur desktop, touche ```TAB``` pour avancer, ```SHIFT+TAB``` pour reculer, ```ESPACE``` pour activer un élément.
-Des combinaisons sont également spécifiques à l'environnement mobile iOS.
-4. La navigation clavier permet également de vérifier que l'ordre de navigation est respecté.
+
+Des combinaisons sont également spécifiques à l'environnement mobile iOS :
 
 ![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f3e1bb95-27dc-47ce-9b16-fa89a91079e8)
 
+4. La navigation clavier permet également de vérifier que l'ordre de navigation est respecté.
 5. Si le focus n'est pas assez visible, il est possible d'augmenter son contraste dans les paramètres de l'option
 
 ![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/d1e966c5-bc5b-447f-a8db-b0fea6140fec)
@@ -111,7 +112,5 @@ Il est également possible d'afficher le numéro des éléments ou même une gri
 
 3. Si l'application a été prévue pour supporter l'agrandissement (Dynamic Type), alors les textes seront correctement restitués, lisibles et sans perte d'information (pas de texte tronqué ni de superposition)
 
-![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/d40af4bc-6397-48e6-9e72-e76bf97a8df4)
-![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/8a186731-ec78-4b2d-b7de-1a42ac265c4e)
-![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/76ef0b5a-382b-48be-847a-4517cf0a512a)
+![image](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f3bd6e96-b44b-44a8-b2f2-cd5136c82993)
 
