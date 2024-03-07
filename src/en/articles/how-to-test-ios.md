@@ -119,3 +119,15 @@ It's also possible to display the number of the elements or even a numbered grid
 3. If the application has been designed to support enlargement (Dynamic Type), then the texts will be correctly rendered, readable and without loss of information (no truncated text or superposition)
 
 ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f3bd6e96-b44b-44a8-b2f2-cd5136c82993)
+
+
+### Dark mode
+Dark mode is used more and more, so it's strongly recommended to test your application by activating “dark mode”
+
+1. Go to Settings > Display & Brightness (or directly from Control Centre)
+
+   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/3f36c173-6744-48ae-98b8-54634993165e)
+
+2. Check that all texts and components are clearly visible and meet the expected contrast levels.
+   
+   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/95b1a4cf-7821-44fe-8f1b-8114ba2094fd)
