@@ -25,6 +25,7 @@ Pour plus de facilité, il est recommandé d'ajouter les outils indispensables d
 
   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/fd64af3b-e1a1-4538-a012-4036639bdca6)
 
+
 **Le raccourci d'accessibilité s'active en appuyant 3 fois sur le bouton latéral de l'iPhone.**
 
 Vous pouvez aussi ajouter les raccourcis d’accessibilité au centre de contrôle (Réglages > Centre de contrôle) pour y accéder sans avoir à réaliser la manipulation avec le bouton latéral.
@@ -46,6 +47,7 @@ Sans dispositif externe, il convient de configurer simplement :
   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/b211ad74-77ff-414c-9fa6-338a8ef29d52)
 
 De cette manière, une succession de taps n'importe où sur l'écran permettra de contrôler l'avancée du focus et les actions associées (nous détaillerons le principe plus bas dans l'article).
+
 
 ## Prise en main des options d'accessibilité
 
@@ -129,7 +131,4 @@ Le mode sombre est de plus en plus utilisé par les utilisateurs, il est donc fo
 2. Vérifier que tous les textes et composants sont bien visibles et respectent les niveaux de contrastes attendus.
    
    ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/95b1a4cf-7821-44fe-8f1b-8114ba2094fd)
-
-
-
 
