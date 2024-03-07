@@ -17,6 +17,7 @@ tags:
 - **Contrôle vocal** : option pour piloter son téléphone entièrement à la voix. Indispensable pour les personnes ne pouvant pas interagir physiquement avec le device ou avec un contacteur externe.
 - **Police plus grande** : permet d'ajuster la taille des polices de caractères dans les applications qui gèrent cette option.
 
+
 ### Paramétrage des raccourcis d'accessibilité
 Pour plus de facilité, il est recommandé d'ajouter les outils indispensables dans les raccourcis d'accessibilité
 - Réglages > Accessibilité > Raccourci Accessibilité.
@@ -31,6 +32,7 @@ Vous pouvez aussi ajouter les raccourcis d’accessibilité au centre de contrô
 Profitez-en pour y ajouter aussi l'option d'agrandissement de texte "Police plus grande"
 
 ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/8c72a0e8-98ef-415e-bf4c-ded390567cf1)
+
 
 ### Paramétrage du Contrôle de sélection
 Aller dans Réglages > Accessibilité	> Contrôle de sélection > Boutons
@@ -58,6 +60,7 @@ En utilisant Voice Over, vous pourrez vérifier que toutes les informations indi
 - les titres des pages doivent être restitués pour permettre aux utilisateurs de s'assurer d'un changement de page et d'en comprendre le contexte,
 - les changements de contenus ou messages temporaires doivent également être lus (alertes, erreurs, changement de contenu...),
 - l'ordre de lecture est cohérent par rapport à la présentation de l'information.
+
  
 ### Contrôle de sélection
 Utiliser le contrôle de sélection permet de vérifier principalement deux choses : l'ordre du focus et l'accessibilité des éléments interactifs.
@@ -67,6 +70,7 @@ Utiliser le contrôle de sélection permet de vérifier principalement deux chos
 4. Dès lors, un tap supplémentaire fera apparaître les options d'intéractions possibles avec chaque élément ayant le focus (tap, défilement haut/bas, glissé...)
 
    ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/6fde5e3b-5084-4199-8e09-0925d3a763cf)
+
 
 ### Navigation clavier
 Il est possible d'utiliser son téléphone seulement avec un clavier externe.
@@ -101,10 +105,11 @@ Par défaut, le nom des éléments est superposé. Aussi, pour qu'une applicatio
 
 Il est également possible d'afficher le numéro des éléments ou même une grille numérotée pour les atteindre.
 
+
 ### Police plus grande
 1. Agrandir la police de caractères à partir du raccourci configuré plus haut
 
-
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/d72cbac8-ce72-42f8-8b13-a36cc2f3bc24)
 
 2. Il est possible d'activer l'agrandissement de texte jusqu'à 310%, mais les recommandations d'accessibilité demandent un affichage correct jusqu'à 235%.
 
@@ -113,7 +118,6 @@ Il est également possible d'afficher le numéro des éléments ou même une gri
 ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f294816e-7f47-4fd8-8cba-cbe70ed8b72b)
 ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/c2963ad0-2e84-4f58-8b2b-14944833f7f8)
 ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/2113c52e-dd58-4dbf-b773-be4bad1a52dc)
-
 
 
 ### Mode sombre
