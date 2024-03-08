@@ -22,24 +22,27 @@ tags:
 For greater convenience, it is recommended to add the essential tools in the accessibility shortcuts
 - Settings > Accessibility > Accessibility Shortcut.
 - Choose : "Switch Control", "VoiceOver“, "Voice Control" and "Full Keyboard Access".
-  
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/74baf176-593e-499e-a0a8-8f1267216b3d)
+
+    ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/79ec9de6-f042-4ef0-8387-0c709766dcc4)
+
 
 **The accessibility shortcut is activated by pressing the side button on the iPhone 3 times.**
 
 You can also add accessibility shortcut to the control center (Settings > Control Centre) to access it without having to operate with the side button.
 
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/423eeffd-e3db-40c4-94ff-041da2ebe565)
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/9a29097a-d353-49c6-ac9c-66443e465f77)
 
 
 ### Switch Control setting
 Go to Settings > Accessibility > Switch Control > Switches
+
 Without external accessory, you can simply configure :
 - mode: "Full Screen"
 - type: “Screen” 
 - action: “Select Item”
- 
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/0e85631b-a638-4b6e-af34-a3abed2e439a)
+
+  ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/df6741a8-d52e-46dc-a900-65f538d2378d)
+
 
 In this way, a succession of taps anywhere on the screen will allow you to control the progress of the focus and the associated actions (we will detail the use further down in the article).
 
@@ -49,7 +52,7 @@ Still to facilitate access to accessibility features, it is possible to add larg
 Go to Settings > Control Centre and select "Text Size".
 You will then be able to easily access the option.
 
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/20e7a11e-d3f8-481d-a021-ec4f7ab4632a)
+    ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/20e7a11e-d3f8-481d-a021-ec4f7ab4632a)
 
 
 ## Getting started with accessibility options
@@ -73,7 +76,8 @@ Using the Switch Control allows you to mainly check two things: the focus order 
 3. To make the focus move inside a container, simply tap once when the focus comes to that container.
 4. Then an additional tap will bring up the possible interaction options with each element having the focus (tap, scroll up/down, drag, etc.)
 
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/6fde5e3b-5084-4199-8e09-0925d3a763cf)
+    ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/500c9aae-f691-47c4-8afc-f5dcfc523811)
+
 
 
 ### Keyboard navigation
@@ -81,19 +85,23 @@ It is possible to use your phone only with an external keyboard.
 1. Connect a keyboard to the phone.
 2. Enable "Full Keyboard Access" option.
 
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/dd8e2a5a-607c-4f77-921c-be43dfdf5e2e)
+    ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/efa80d57-a809-4912-9336-294b34953a6f)
+
 
 3. Now, all features available by touch gestures should also be available with the keyboard.
 Navigation is done in the same way as for a desktop keyboard, ``TAB``` key to move forward, ```SHIFT+TAB``` to go back, ```SPACE``` to activate an element.
 
 Combinations are also specific to the iOS mobile environment:
 
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f3e1bb95-27dc-47ce-9b16-fa89a91079e8)
+    ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/83408f02-edab-4456-bd48-9c7e2e778ffc)
+
+
 
 4. Keyboard navigation also allows you to check that the navigation order is respected.
 5. If the focus is not visible enough, it is possible to increase its contrast in the option settings
 
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/d1e966c5-bc5b-447f-a8db-b0fea6140fec)
+    ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/df67fd18-b39c-475e-b8a8-9636a1470998)
+
 
 
 ### Voice control
@@ -105,7 +113,7 @@ When "Voice Control" is enabled, you can speak commands like:
 
 By default, element names are superimposed.  Also, for an application to be controllable in this way, the interactive components must have a simple and consistent accessible name (in particular in the case of a link image or button image without visible label).
 
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/ec76969b-d442-484e-8a80-c36376dcdc92)
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/c94e478c-eaf1-4589-b4e2-369573079df9)
 
 It's also possible to display the number of the elements or even a numbered grid to reach them.
 
