@@ -30,7 +30,9 @@ For greater convenience, it is recommended to add the essential tools in the acc
 
 You can also add accessibility shortcut to the control center (Settings > Control Centre) to access it without having to operate with the side button.
 
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/9a29097a-d353-49c6-ac9c-66443e465f77)
+Take the opportunity to also add the Large text enlargement option "Larger font"
+
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/e9162977-15bf-44ad-bbdf-683f942683a5)
 
 
 ### Switch Control setting
@@ -43,16 +45,7 @@ Without external accessory, you can simply configure :
 
   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/df6741a8-d52e-46dc-a900-65f538d2378d)
 
-
 In this way, a succession of taps anywhere on the screen will allow you to control the progress of the focus and the associated actions (we will detail the use further down in the article).
-
-
-### "Text Size" in Control centre
-Still to facilitate access to accessibility features, it is possible to add larget text size adjustment.
-Go to Settings > Control Centre and select "Text Size".
-You will then be able to easily access the option.
-
-    ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/20e7a11e-d3f8-481d-a021-ec4f7ab4632a)
 
 
 ## Getting started with accessibility options
@@ -93,9 +86,7 @@ Navigation is done in the same way as for a desktop keyboard, ``TAB``` key to mo
 
 Combinations are also specific to the iOS mobile environment:
 
-    ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/83408f02-edab-4456-bd48-9c7e2e778ffc)
-
-
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/83408f02-edab-4456-bd48-9c7e2e778ffc)
 
 4. Keyboard navigation also allows you to check that the navigation order is respected.
 5. If the focus is not visible enough, it is possible to increase its contrast in the option settings
@@ -121,12 +112,12 @@ It's also possible to display the number of the elements or even a numbered grid
 ### Larger text
 1. Increase the text size using the shortcut configured above
 
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/20e7a11e-d3f8-481d-a021-ec4f7ab4632a)
+![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/d72cbac8-ce72-42f8-8b13-a36cc2f3bc24)
 
 2. It is possible to increase text up to 310%, but accessibility recommendations require a correct display up to 235%.
 3. If the application has been designed to support enlargement (Dynamic Type), then the texts will be correctly rendered, readable and without loss of information (no truncated text or superposition)
 
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f3bd6e96-b44b-44a8-b2f2-cd5136c82993)
+   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/9bc33609-bdee-4a34-8a05-c45a89305b69)
 
 
 ### Dark mode
@@ -134,8 +125,9 @@ Dark mode is used more and more, so it's strongly recommended to test your appli
 
 1. Go to Settings > Display & Brightness (or directly from Control Centre)
 
-   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/3f36c173-6744-48ae-98b8-54634993165e)
+   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/0561fddb-e639-4754-a2c2-7bad673e0a79)
 
 2. Check that all texts and components are clearly visible and meet the expected contrast levels.
    
-   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/95b1a4cf-7821-44fe-8f1b-8114ba2094fd)
+   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/539031f1-910e-4762-801e-8ca34c8fdf8d)
+
