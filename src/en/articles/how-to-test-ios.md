@@ -84,9 +84,9 @@ It is possible to use your phone only with an external keyboard.
 3. Now, all features available by touch gestures should also be available with the keyboard.
 Navigation is done in the same way as for a desktop keyboard, ``TAB``` key to move forward, ```SHIFT+TAB``` to go back, ```SPACE``` to activate an element.
 
-Combinations are also specific to the iOS mobile environment:
+   Combinations are also specific to the iOS mobile environment:
 
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/83408f02-edab-4456-bd48-9c7e2e778ffc)
+   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/83408f02-edab-4456-bd48-9c7e2e778ffc)
 
 4. Keyboard navigation also allows you to check that the navigation order is respected.
 5. If the focus is not visible enough, it is possible to increase its contrast in the option settings
