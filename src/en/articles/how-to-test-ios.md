@@ -82,7 +82,7 @@ It is possible to use your phone only with an external keyboard.
 
 
 3. Now, all features available by touch gestures should also be available with the keyboard.
-Navigation is done in the same way as for a desktop keyboard, ``TAB``` key to move forward, ```SHIFT+TAB``` to go back, ```SPACE``` to activate an element.
+Navigation is done in the same way as for a desktop keyboard, ```TAB``` key to move forward, ```SHIFT+TAB``` to go back, ```SPACE``` to activate an element.
 
    Combinations are also specific to the iOS mobile environment:
 
