@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>HDR images - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Learn how to identify, load, display, and create High Dynamic Range still images in your app.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Skip links - Switch language">
+   <div class="container-lg">
+      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <a href="#main-menu" class="nav-link">Go to menu</a>
+    </li><li class="nav-item">
+      <a href="#main-content" class="nav-link">Go to content</a>
+    </li><li class="nav-item hidden-if-no-js">
+      <a href="#search-input" class="nav-link">Go to search</a>
+    </li><li class="nav-item">
+      <a href="#footer" class="nav-link">Go to footer</a>
+    </li></ul>
+
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+    </div>
+  </nav>
+  
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          HDR images
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#the-basics" class="dropdown-item text-wrap">The basics</a><a href="#edr" class="dropdown-item text-wrap">EDR</a><a href="#new-features" class="dropdown-item text-wrap">New features</a><a href="#read-the-content" class="dropdown-item text-wrap">Read the content</a><a href="#stick-to-edr" class="dropdown-item text-wrap">Stick to EDR</a><a href="#query-headroom" class="dropdown-item text-wrap">Query headroom</a><a href="#tone-mapping" class="dropdown-item text-wrap">Tone-mapping</a><a href="#hdr" class="dropdown-item text-wrap">HDR</a><a href="#display-images" class="dropdown-item text-wrap">Display images</a><a href="#pipeline-details" class="dropdown-item text-wrap">Pipeline details</a><a href="#read" class="dropdown-item text-wrap">Read</a><a href="#modify-write" class="dropdown-item text-wrap">Modify &amp; write</a><a href="#convert" class="dropdown-item text-wrap">Convert</a><a href="#advanced-display" class="dropdown-item text-wrap">Advanced display</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2023: HDR images</h1>
+<p>Find hereafter a detailed summary of two videos that belong to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original videos are available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2022/10113/">session 10113</a>, <a href="https://developer.apple.com/videos/play/wwdc2023/10181/">session 10181</a>).<br>
+<img src="../../../../../images/iOSdev/wwdc23-HDRImg_Poster.png" alt="" class="img-fluid"><br>
+&quot;Learn how to identify, load, display, and create <strong>High Dynamic Range</strong> (HDR) still images in your app. Explore common HDR <strong>concepts</strong> and find out about the latest updates to the ISO specification. Learn how to <strong>identify and display</strong> HDR images with SwiftUI and UIKit, create them from ProRAW and RAW captures, and display them in CALayers. We'll also take you through CoreGraphics support for ISO HDR and share <strong>best practices</strong> for HDR adoption.&quot;</p>
+<p>&quot;EDR is Apple's High Dynamic Range representation and rendering pipeline. Explore how you can <strong>render HDR content using EDR</strong> in your app and unleash the dynamic range capabilities of HDR displays on iPhone and iPad. We'll show how you can take advantage of the native EDR APIs on iOS, provide <strong>best practices</strong> to help you decide when HDR is appropriate, and <strong>share tips for tone-mapping and HDR content rendering</strong>. We'll also introduce you to <strong>Reference Mode</strong> and highlight how it provides a reference response to enable color-critical workflows such as color grading, editing, and content review.&quot;</p>
+<p></br>Hereafter, the underlined elements <strong>lead directly to the playback of the WWDC video</strong> at the appropriate moment.<br>
+</br></p>
+<p>In order to alleviate the writing, the following acronyms will be used throughout this document:</p>
+<ul>
+<li><strong>SDR</strong>  =  <strong>S</strong>tandard  <strong>D</strong>ynamic  <strong>R</strong>ange</li>
+<li><strong>HDR</strong>  =  <strong>H</strong>igh  <strong>D</strong>ynamic  <strong>R</strong>ange</li>
+<li><strong>EDR</strong>  =  <strong>E</strong>xtended  <strong>D</strong>ynamic  <strong>R</strong>ange</li>
+</ul>
+</br>
+<h2 id="the-basics"><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=40">The basics</a> <a class="header-anchor" href="#the-basics" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_1.png" alt="" class="img-fluid"></p>
+<p>The <strong>HDR</strong> display provides a <strong>more contrasted image</strong> that highlights its brightest parts and <strong>improves the <a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=158">image definition</a></strong>.<br>
+Thanks to additional data collected within the <code>iPhone</code> images, the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=364">gain map HDR</a></strong> has the ability to create a <code>HDR</code> image from a <code>SDR</code>'s.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_2.png" alt="" class="img-fluid"></p>
+<p>Besides providing a <strong>better user experience</strong> and being a <strong>cross-platform implementation</strong>, the <a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=183"><code>HDR</code> support</a> is based on a partnership with the <strong>International Standards Organization</strong> through an <a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=202"><code>ISO</code> <code>HDR</code> specification</a> for <code>HDR</code> images with <a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=263">new contents</a> including some additional optional <a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=312">metadata fields</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_3.png" alt="" class="img-fluid"></p>
+<p>The brightest part of an <code>HDR</code> display is called the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=108">headroom</a></strong> that conditions the brightness and the dynamism of the content for permitting the <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=370">EDR</a></strong> (Apple's <code>HDR</code> technology) to impact the <code>SDR</code> and <code>HDR</code> representations.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_6.png" alt="" class="img-fluid"></p>
+<p>The <code>EDR</code> depends on the <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=446">headroom</a></strong> whose value is both related to the <strong>Display Peak Brightness</strong> and the <strong><code>SDR</code> Brightness</strong> which means that it will also rely on the <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=473">device capacities</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_7.png" alt="" class="img-fluid"><br>
+</br></p>
+<h2 id="edr">EDR <a class="header-anchor" href="#edr" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="new-features"><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=141">New features</a> <a class="header-anchor" href="#new-features" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Besides the availability of the <code>EDR</code> <code>API</code> for <code>iOS</code> <code>16</code> and <code>iPadOS</code> <code>16</code>, two other features have been introduced in the <code>WWDC22</code>.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#HDRImgEDRFeat1"
+           id="HDRImgEDRFeat1_tab"
+           role="tab" 
+           aria-selected="true">Reference&nbsp;Mode</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#HDRImgEDRFeat2"
+           id="HDRImgEDRFeat2_tab"
+           role="tab" 
+           aria-selected="false">Sidecar</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="HDRImgEDRFeat1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the reference mode new feature" href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=160">🎬</a></p>
+<p>Supported by <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=229">LumaFusion</a> since <code>WWDC22</code>, the <strong>Reference Mode</strong> enables a color rendering that matches the description of the specification.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="HDRImgEDRFeat2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the new feature with sidecar" href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=286">🎬</a></p>
+<p>As a technology for users willing to use their <code>iPad</code> as a secondary display, <strong>Sidecar</strong> now supports reference-level <code>SDR</code> and <code>HDR</code> contents.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_5.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h3 id="read-the-content"><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=514">Read the content</a> <a class="header-anchor" href="#read-the-content" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The process of reading a <code>HDR</code> content and converting it to a renderable format consists in <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=564">four steps</a></strong> to be perfectly performed.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_8.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="stick-to-edr"><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=687">Stick to EDR</a> <a class="header-anchor" href="#stick-to-edr" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Support the <code>EDR</code> rendering relies on a <strong>two-step process</strong>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-HDRImg_9.png" alt="" class="img-fluid"><br>
+A <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=743">close combination</a> between the pixel format and the color space is essential to support <code>EDR</code> and it <strong>must be followed</strong> otherwise these items will be cropped and downgraded to <code>SDR</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-HDRImg_10.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="query-headroom"><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=791">Query headroom</a> <a class="header-anchor" href="#query-headroom" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Whether on the <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=818"><code>NSScreen</code></a> or <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=837"><code>UIScreen</code></a>, the headroom queries are quite different and head towards various situations according to the needs.<br>
+<img src="../../../../../images/iOSdev/wwdc23-HDRImg_11.png" alt="" class="img-fluid"></p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=882">new <code>APIs</code></a> for <code>iOS</code> lead to accurate conclusions on the <code>EDR</code> content rendering...</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_12.png" alt="" class="img-fluid"></p>
+<p>... and inform about the <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=930">four possible states</a></strong> of the display.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_13.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="tone-mapping">Tone-mapping <a class="header-anchor" href="#tone-mapping" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>This technique is used to map the pixel levels in high dynamic range images to a reduced dynamic range, while trying and retaining the original appearance as close as possible.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_14.png" alt="" class="img-fluid"></p>
+<p>Instead of using the <code>currentEDRHeadroom</code> for a customized rendering, the <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=984">built-in tone mapping</a> may also be used by following <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=1011">three milestones</a> including <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=1036">dedicated constructors</a> for <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=1098">specific color space</a> usage.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_15.png" alt="" class="img-fluid"><br>
+</br></p>
+<h2 id="hdr">HDR <a class="header-anchor" href="#hdr" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="display-images"><a href="https://developer.apple.com/videos/play/wwdc2023/10181?time=406">Display images</a> <a class="header-anchor" href="#display-images" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#HDRImgExamples1"
+           id="HDRImgExamples1_tab"
+           role="tab" 
+           aria-selected="true">UIKit</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#HDRImgExamples2"
+           id="HDRImgExamples2_tab"
+           role="tab" 
+           aria-selected="false">SwiftUI</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="HDRImgExamples1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the ui kit implementation" href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=432">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_19.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="HDRImgExamples2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the swift ui implementation" href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=415">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_20.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<p>The way to handle the <code>HDR</code> content is managed by <strong>three options</strong> of the dynamic range properties (<strong><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=451">high</a></strong>, <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=474">standard</a></strong> and <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=491">constrainedHigh</a></strong>) for which detailed examples are highlighted so as to perfectly understand their usage areas (<a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=505">ex1</a> &amp; <a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=524">ex2</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_16.png" alt="" class="img-fluid"></p>
+<p>It's crucial to <a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=580">follow the latest <code>HDR</code> features</a> to not add workload.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_17.png" alt="" class="img-fluid"></p>
+<p>Even if importing an <a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=642">image in an app</a> is pretty simple, it's not necessary to know if it's <code>HDR</code> but if need be, each platform has its <code>API</code> to <a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=696">reach this goal</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_18.png" alt="" class="img-fluid"></p>
+<p><code>iOS</code> and <code>iPadOS</code> provide <code>APIs</code> to get the <a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=786">maximum display headroom</a> of a device to use <code>HDR</code> when it's <a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=806">appropriate</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_21.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="pipeline-details"><a href="https://developer.apple.com/videos/play/wwdc2023/10181?time=842">Pipeline details</a> <a class="header-anchor" href="#pipeline-details" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Handling <code>HDR</code> images implies specific steps between the source and its renderer (image processing <strong>pipeline</strong>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_22.png" alt="" class="img-fluid"></p>
+<h4 id="read">Read <a class="header-anchor" href="#read" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Reading an image is based on its type and the technical way for its description.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_23.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#HDRImgPipRead1"
+           id="HDRImgPipRead1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#HDRImgPipRead2"
+           id="HDRImgPipRead2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#HDRImgPipRead3"
+           id="HDRImgPipRead3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#HDRImgPipRead4"
+           id="HDRImgPipRead4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#HDRImgPipRead5"
+           id="HDRImgPipRead5_tab"
+           role="tab" 
+           aria-selected="false">5</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="HDRImgPipRead1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the way to read ui image and ns image" href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=898">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_24.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="HDRImgPipRead2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the way to read hdr using core image" href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=930">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_25.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="HDRImgPipRead3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the way to read hdr as sdr using core image" href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=999">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_26.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="HDRImgPipRead4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the way to read gain map hdr using core image" href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1058">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_27.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="HDRImgPipRead5" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the raw files and hdr" href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1124">🎬</a></p>
+<p>The <code>RAW</code> files can be displayed as <code>HDR</code> thanks to the dynamic range within thereof.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_28.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h4 id="modify-write">Modify &amp; write <a class="header-anchor" href="#modify-write" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#HDRImgModifyWrite1"
+           id="HDRImgModifyWrite1_tab"
+           role="tab" 
+           aria-selected="true">Modify</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#HDRImgModifyWrite2"
+           id="HDRImgModifyWrite2_tab"
+           role="tab" 
+           aria-selected="false">Write</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="HDRImgModifyWrite1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the modification" href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1235">🎬</a></p>
+<p>Modifying an image relies on the native <strong><code>HDR</code> CIFilters</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_29.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="HDRImgModifyWrite2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the writing" href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1297">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_30.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h4 id="convert"><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1374">Convert</a> <a class="header-anchor" href="#convert" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_31.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#HDRImgConvert1"
+           id="HDRImgConvert1_tab"
+           role="tab" 
+           aria-selected="true">A</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#HDRImgConvert2"
+           id="HDRImgConvert2_tab"
+           role="tab" 
+           aria-selected="false">B</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#HDRImgConvert3"
+           id="HDRImgConvert3_tab"
+           role="tab" 
+           aria-selected="false">C</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="HDRImgConvert1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the iso hdr compatibility" href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1415">🎬</a></p>
+<p>Alter an image into an <strong><code>IOSurface</code></strong> or a <strong><code>CVPixelBuffer</code></strong> object may be useful as a <code>CALayer</code> content support.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_32.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="HDRImgConvert2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the conversion between ci image and  cv pixel buffer" href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1445">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_33.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="HDRImgConvert3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the conversion from a ci image to a cg image" href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1461">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_34.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h3 id="advanced-display"><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1522">Advanced display</a> <a class="header-anchor" href="#advanced-display" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_35.png" alt="" class="img-fluid"></p>
+<p>It's important to use the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1606">proper classes</a></strong> to render <code>HDR</code> with <code>CALayer</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_36.png" alt="" class="img-fluid"></p>
+<p>It's crucial to take into account the appropriate <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1638">pixel format</a></strong> with the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1659">CGImage flags</a></strong> when handling <code>HDR</code> data.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_37.png" alt="" class="img-fluid"></p>
+<p>Few elements should be considered to enable the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1670">compatibilty</a></strong> of <code>HDR</code> contents with older versions of <code>iOS</code> and <code>macOS</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_38.png" alt="" class="img-fluid"><br>
+</br></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#the-basics" class="nav-link text-muted">The basics</a></li><li class="nav-item position-relative">
+            <a href="#edr" class="nav-link text-muted">EDR</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#new-features" class="nav-link text-muted">New features</a></li><li class="nav-item position-relative">
+            <a href="#read-the-content" class="nav-link text-muted">Read the content</a></li><li class="nav-item position-relative">
+            <a href="#stick-to-edr" class="nav-link text-muted">Stick to EDR</a></li><li class="nav-item position-relative">
+            <a href="#query-headroom" class="nav-link text-muted">Query headroom</a></li><li class="nav-item position-relative">
+            <a href="#tone-mapping" class="nav-link text-muted">Tone-mapping</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#hdr" class="nav-link text-muted">HDR</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#display-images" class="nav-link text-muted">Display images</a></li><li class="nav-item position-relative">
+            <a href="#pipeline-details" class="nav-link text-muted">Pipeline details</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#read" class="nav-link text-muted">Read</a></li><li class="nav-item position-relative">
+            <a href="#modify-write" class="nav-link text-muted">Modify &amp; write</a></li><li class="nav-item position-relative">
+            <a href="#convert" class="nav-link text-muted">Convert</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#advanced-display" class="nav-link text-muted">Advanced display</a></li></ul></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2023/23HDRImages.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
