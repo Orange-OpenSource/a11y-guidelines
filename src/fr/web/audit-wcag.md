@@ -3,7 +3,7 @@ title: "Web - Audit WCAG"
 abstract: "Types d'audit WCAG"
 ---
 
-# Web - Audit de conformité WCAG 
+# Web - Audit de conformité WCAG
 
 L’audit de conformité WCAG a pour objectif de calculer les taux de conformité mentionnés sur les déclarations d’accessibilité des sites Web d’Orange.
 
