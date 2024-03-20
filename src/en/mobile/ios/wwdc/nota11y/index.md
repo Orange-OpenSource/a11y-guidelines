@@ -24,6 +24,7 @@ If you're willing to be informed of the most recent added detailed summaries, pl
 
 <section class="visually-hidden" id="wwdcTests" aria-hidden="true">
    <h2  id="hhwwdc2023" class="pt-5">WWDC 2023</h2>
+   <p id="hwwdc90">WWDC 2023 Analyze hangs with Instruments</p>
    <p id="hwwdc89">WWDC 2023 Animate symbols in your app</p>
    <p id="hwwdc88">WWDC 2023 Beyond the basics of structured concurrency</p>    
    <p id="hwwdc87">WWDC 2023 Bring widgets to life</p>
