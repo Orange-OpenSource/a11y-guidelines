@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>Analyze hangs with Instruments - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Learn how you can take advantage of the latest features in Swift-DocC.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Skip links - Switch language">
+   <div class="container-lg">
+      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <a href="#main-menu" class="nav-link">Go to menu</a>
+    </li><li class="nav-item">
+      <a href="#main-content" class="nav-link">Go to content</a>
+    </li><li class="nav-item hidden-if-no-js">
+      <a href="#search-input" class="nav-link">Go to search</a>
+    </li><li class="nav-item">
+      <a href="#footer" class="nav-link">Go to footer</a>
+    </li></ul>
+
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+    </div>
+  </nav>
+  
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Analyze hangs with Instruments
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#overview" class="dropdown-item text-wrap">Overview</a><a href="#unresponsiveness" class="dropdown-item text-wrap">Unresponsiveness</a><a href="#busy-main-thread" class="dropdown-item text-wrap">Busy Main Thread</a><a href="#excessive-iteration" class="dropdown-item text-wrap">Excessive iteration</a><a href="#significant-duration" class="dropdown-item text-wrap">Significant duration</a><a href="#syncasync" class="dropdown-item text-wrap">Sync/async</a><a href="#blocked-main-thread" class="dropdown-item text-wrap">Blocked Main Thread</a><a href="#usual-case" class="dropdown-item text-wrap">Usual case</a><a href="#tools-probe" class="dropdown-item text-wrap">Tools&#39; probe</a><a href="#tips-tricks" class="dropdown-item text-wrap">Tips &amp; tricks</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2023: Analyze hangs with Instruments</h1>
+<p>Find hereafter a detailed summary of the above named video that belongs to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original video is available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2023/10248/">session 10248</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_Poster.png" alt="" class="img-fluid"></p>
+<p>&quot;User interface elements often mimic real-world interactions, including real-time responses. Apps with a noticeable <strong>delay in user interaction</strong> — a hang — can break that illusion and create frustration. We'll show you how to <strong>use Instruments</strong> to analyze, understand, and fix hangs in your apps on all Apple platforms. Discover how you can efficiently <strong>navigate an Instruments trace document</strong>, <strong>interpret trace data</strong>, and record additional profiling data to better understand your specific hang.&quot;</p>
+<p></br>Hereafter, the underlined elements <strong>lead directly to the playback of the WWDC video</strong> at the appropriate moment.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_22.png" alt="" class="img-fluid"></p>
+<h2 id="overview">Overview <a class="header-anchor" href="#overview" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p>A <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=284">hang</a></strong> is a <strong>delay in the user interaction</strong> that might give rise to an unpleasant experience depending on the blocking duration.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10248_2.png" alt="" class="img-fluid"></p>
+<p><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=92">Finding hangs</a> is based on many items to be aware of in order to save some time for finding out the appropriate solution.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10248_1.png" alt="" class="img-fluid"></p>
+<p>A <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=404">deep comprehension</a> of the <strong>event handling</strong> and the <strong>rendering loop</strong> is crucial to understand why hangs may happen.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10248_3.png" alt="" class="img-fluid"></p>
+<h2 id="unresponsiveness"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=689">Unresponsiveness</a> <a class="header-anchor" href="#unresponsiveness" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_5.png" alt="" class="img-fluid"></p>
+<p>Understand the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2477">relationship</a> between the potential items</strong> in an unresponsive main thread is vital to avoid misinterpretation in the hang analysis.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_20.png" alt="" class="img-fluid"></p>
+<h3 id="busy-main-thread"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=858">Busy Main Thread</a> <a class="header-anchor" href="#busy-main-thread" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_8.png" alt="" class="img-fluid"></p>
+<h4 id="excessive-iteration"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1100">Excessive iteration</a> <a class="header-anchor" href="#excessive-iteration" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_11.png" alt="" class="img-fluid"></p>
+<p>When the source of the problem may be identified, it's important to <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1166">go straight to the code</a> so as to find out its implementation.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10248_12.png" alt="" class="img-fluid"></p>
+<p>In the exposed example, the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1195">LazyVGrid</a></strong> introduced during the <code>WWDC</code> <code>2020</code> is responsible for the problem whose solution provides an immediate and smooth <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1270">rendering</a> after implementation.<br>
+</br></p>
+<h4 id="significant-duration"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1317">Significant duration</a> <a class="header-anchor" href="#significant-duration" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Finding out some delay on <code>iPad</code> is a <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1357">good reason</a> for solving micro hangs.<br>
+Once more, looking into the <code>Instruments</code> and writing an appropriate solution follow few <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1388">milestones</a> for a quick result.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10248_13.png" alt="" class="img-fluid"><br>
+</br></p>
+<h4 id="syncasync"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1680">Sync/async</a> <a class="header-anchor" href="#syncasync" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_14.png" alt="" class="img-fluid"></p>
+<p>Applied to sync or async task, the instruments may measure the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1610">potential delay</a></strong> instead of the actually experienced delay.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_15.png" alt="" class="img-fluid"></p>
+<p>It's important to notice that using a task for a background process may involve an <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1894">execution on the main thread</a></strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_16.png" alt="" class="img-fluid"></p>
+<p>Following the recommendations, the appropriate <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2020">solution</a> provides an immediate <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2056">visual result</a>.<br>
+</br></p>
+<h3 id="blocked-main-thread"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2175">Blocked Main Thread</a> <a class="header-anchor" href="#blocked-main-thread" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>A blocked main thread has a typical signature through the <code>CPU</code> usage.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10248_17.png" alt="" class="img-fluid"></p>
+<h4 id="usual-case">Usual case <a class="header-anchor" href="#usual-case" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>As no data is available in the call tree, the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2213">Thread State Trace</a></strong> instrument will be remarkably helpful along with the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2269">backtrace view</a></strong> that highlights the <code>syscall</code> blocking the thread through the call stack.<br>
+<img src="../../../../../images/iOSdev/wwdc23-10248_18.png" alt="" class="img-fluid"></p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2341">proper solution</a> for this use case lead towards notions to be handled carefully with <code>Swift</code> concurrency.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_19.png" alt="" class="img-fluid"></p>
+<h4 id="tools-probe"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2435">Tools' probe</a> <a class="header-anchor" href="#tools-probe" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_21.png" alt="" class="img-fluid"></p>
+<p>Rely only on the <code>Thread States</code> instrument might be a deception because it may lead to a blocked situation according to the system but definitely not from the user point of view: the <strong><code>Hangs</code> instrument</strong> is clearly <strong>more reliable</strong> to define a genuine <strong>unresponsive blocked thread</strong>.<br>
+</br></p>
+<h2 id="tips-tricks">Tips &amp; tricks <a class="header-anchor" href="#tips-tricks" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<ol>
+<li>
+<p>Install your app on the device and automatically launch the <strong>Instruments</strong> ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=571">🎬</a></p>
+</li>
+<li>
+<p>Find the <strong>main thread</strong> and <strong>focus on the hangs</strong> ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=719">🎬</a></p>
+</li>
+<li>
+<p>Find the <strong>heaviest stack trace</strong> and <strong>filter the call tree view</strong> ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=795">🎬</a></p>
+</li>
+<li>
+<p>Get the <code>SwiftUI</code> <strong>view body</strong> instrument ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1026">🎬</a></p>
+</li>
+<li>
+<p>Increase the height of a <strong>cramped element</strong> ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1078">🎬</a></p>
+</li>
+</ol>
+</br>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#AnalyzeHangsTips1"
+           id="AnalyzeHangsTips1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AnalyzeHangsTips2"
+           id="AnalyzeHangsTips2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AnalyzeHangsTips3"
+           id="AnalyzeHangsTips3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AnalyzeHangsTips4"
+           id="AnalyzeHangsTips4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AnalyzeHangsTips5"
+           id="AnalyzeHangsTips5_tab"
+           role="tab" 
+           aria-selected="false">5</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="AnalyzeHangsTips1" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_4.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AnalyzeHangsTips2" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_6.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AnalyzeHangsTips3" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_7.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AnalyzeHangsTips4" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_9.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AnalyzeHangsTips5" role="tabpanel">
+<p><img src="../../../../../images/iOSdev/wwdc23-10248_10.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#overview" class="nav-link text-muted">Overview</a></li><li class="nav-item position-relative">
+            <a href="#unresponsiveness" class="nav-link text-muted">Unresponsiveness</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#busy-main-thread" class="nav-link text-muted">Busy Main Thread</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#excessive-iteration" class="nav-link text-muted">Excessive iteration</a></li><li class="nav-item position-relative">
+            <a href="#significant-duration" class="nav-link text-muted">Significant duration</a></li><li class="nav-item position-relative">
+            <a href="#syncasync" class="nav-link text-muted">Sync/async</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#blocked-main-thread" class="nav-link text-muted">Blocked Main Thread</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#usual-case" class="nav-link text-muted">Usual case</a></li><li class="nav-item position-relative">
+            <a href="#tools-probe" class="nav-link text-muted">Tools&#39; probe</a></li></ul></li></ul></li><li class="nav-item position-relative">
+            <a href="#tips-tricks" class="nav-link text-muted">Tips &amp; tricks</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2023/2310248.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
