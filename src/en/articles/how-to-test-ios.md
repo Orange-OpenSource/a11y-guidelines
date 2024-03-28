@@ -123,7 +123,7 @@ It's also possible to display the number of the elements or even a numbered grid
 ### Dark mode
 The dark mode is used more and more, so it's strongly recommended to test your application by activating “dark mode”.
 
-1. Go to Settings > Display & Brightness (or directly from Control Centre)4.
+1. Go to Settings > Display & Brightness (or directly from Control Centre).
 
    ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/0561fddb-e639-4754-a2c2-7bad673e0a79)
 
