@@ -12,6 +12,17 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "Analyze hangs with Instruments",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310248",
+    "profils": ["All","Debugging","Instruments","Optimization","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "Animate symbols in your app",
     "type": ["SF Symbol"],
     "tests": [],
@@ -243,6 +254,17 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "Support HDR images in your app",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/23HDRImages",
+    "profils": ["All","Optimization"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "Unleash the UIKit trait system",
     "type": [],
     "tests": [],
@@ -427,6 +449,17 @@
     "exception": "",
     "raccourcis": "2022/22SwiftGenericsProtocols",
     "profils": ["All","Swift"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Explore EDR on iOS",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/23HDRImages",
+    "profils": ["All","Optimization"]
   },
   {
     "themes": "WWDC 2022",
