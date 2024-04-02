@@ -133,6 +133,17 @@
   },
   {
     "themes": "WWDC 2023",
+    "title": "Design Shortcuts for Spotlight",
+    "type": ["Button","Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23AppIntents",
+    "profils": ["All","Shortcuts","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
     "title": "Discover String Catalogs",
     "type": [],
     "tests": [],
@@ -152,6 +163,17 @@
     "exception": "",
     "raccourcis": "2023/23SwiftMacros",
     "profils": ["All","Swift"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Explore enhancements to App Intents",
+    "type": ["Button","Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23AppIntents",
+    "profils": ["All","Shortcuts","Xcode"]
   },
   {
     "themes": "WWDC 2023",
@@ -251,6 +273,17 @@
     "exception": "",
     "raccourcis": "2023/2310250",
     "profils": ["All","Xcode Playgrounds"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Spotlight your app with App Shortcuts",
+    "type": ["Button","Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23AppIntents",
+    "profils": ["All","Shortcuts","Xcode"]
   },
   {
     "themes": "WWDC 2023",
