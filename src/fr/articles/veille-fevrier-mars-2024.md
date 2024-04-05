@@ -11,7 +11,7 @@ tags:
 Beaucoup de choses à lire en ce moment, en particulier la nouvelle mouture de ARIA in HTML du W3c (en) : https://www.w3.org/TR/2024/REC-html-aria-20240216/.
 Hormis cette grosse annonce, un départ bien malheureux pour l'a11y en France, Jean-Pierre Vilain est parti, et pour les personnes engagées en accessibilité, c'est une grande perte : https://access42.net/hommage-jean-pierre-villain/.
 On peut noter aussi la  sortie du RAWeb luxembourgeois, un RGAA en accord complet avec EN301549, la norme européenne : https://accessibilite.public.lu/fr/news/2024-02-08-RAWeb.html.
-Et pour illustrer le manque d'accessibilité pour l'état voici quelques chiffres édifiant sur les 250 démarche en ligne, on rigole, jaune : https://www.temesis.com/blog/moins-de-3-du-top-250-des-demarches-en-ligne-sont-conformes-au-rgaa/.
+Et pour illustrer le manque d'accessibilité pour l'Etat, voici quelques chiffres édifiant sur les 250 démarche en ligne, on rigole, jaune : https://www.temesis.com/blog/moins-de-3-du-top-250-des-demarches-en-ligne-sont-conformes-au-rgaa/.
 Bon papillonnage !
 
 ## L'accessibilité dans les lois et les normes 
@@ -20,12 +20,12 @@ Bon papillonnage !
 - Le critère 3.3.8 Accessible authentification (minimum) expliqué (en) : https://www.tpgi.com/how-to-test-3-3-8-accessible-authentication-minimum/
 - Les titres de section et a11y : https://ideance.net/blog/1831/accessibilite-et-titres-de-section/
 -	Applications mobiles et obligation d’accessibilité : que dit la loi ? https://www.bam.tech/article/applications-mobiles-et-obligation-daccessibilite-que-dit-la-loi
--	Une proposition d'interprétation et des transposition des critères WCAG 2.2 aux applis mobiles (en) : https://getevinced.github.io/mcag/
+-	Une proposition d'interprétation et de transposition des critères WCAG 2.2 aux applis mobiles (en) : https://getevinced.github.io/mcag/
 
 ## Stratégie de mise en accessibilité
 
 - D'après Jacob Nielsen, l'a11y a raté, place aux interfaces individualisées générées par IA, j'suis pas d'accord mais à lire (en) : https://jakobnielsenphd.substack.com/p/accessibility-generative-ui
-- Résultats de la nouvelle étude Milion de WebAim (en) : https://webaim.org/projects/million/
+- Résultats de la nouvelle étude Million de WebAim (en) : https://webaim.org/projects/million/
 - Une réponse à Jacob Nielsen par Adrian Roselli (en) : https://adrianroselli.com/2024/03/jakob-has-jumped-the-shark.html
 - Une autre réponse de la fameuse Léonie Watson à N. Nielsen (en) : https://tink.uk/nielsen-needs-to-think-again/
 - Et encore un retour de baton pour J. Nielsen (en) : https://www.briandeconinck.com/jakob-nielsens-bad-ideas-about-accessibility/
@@ -76,9 +76,9 @@ Bon papillonnage !
 
 - Les barrières d'a11y pour les utilisateurs d'AT sur mobile, chouette résumé (en) : https://www.smashingmagazine.com/2024/02/mobile-accessibility-barriers-assistive-technology-users/
 -	La version bêta d'Abra Desktop est disponible. Cet outil permet de tester l'accessibilité d'une application installée sur un mobile connecté à un Mac (en) : https://abra.ai/products/desktop
--	50+ statistiques d'utilisation du mode sombre Pour 2023 (en) : https://marketsplash.com/fr/statistiques-dutilisation-du-mode-sombre/
+-	50+ statistiques d'utilisation du mode sombre pour 2023 (en) : https://marketsplash.com/fr/statistiques-dutilisation-du-mode-sombre/
 -	Nouveau plugin Android Ally pour les développeurs sur Android Studio (en) : https://plugins.jetbrains.com/plugin/23902-android-ally/
--	Encore l'outil Android Ally mais en version desktop pour testeurs ou développeurs (&en) : https://github.com/qbalsdon/android_ally_issues/
+-	Encore l'outil Android Ally mais en version desktop pour testeurs ou développeurs (en) : https://github.com/qbalsdon/android_ally_issues/
   
 ## Ergonomie, UI & UX
 
