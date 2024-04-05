@@ -11,7 +11,7 @@ tags:
 Lots of things to read at the moment, in particular the new version of ARIA in HTML from the W3c: https://www.w3.org/TR/2024/REC-html-aria-20240216/.
 Apart from this big announcement, a very unfortunate departure for the a11y in France, Jean-Pierre Vilain has left, and for people involved in accessibility, it is a great loss (fr): https://access42.net/hommage-jean-pierre-villain/.
 We can also note the release of the Luxembourg RAWeb, a RGAA in full compliance with EN301549, the European standard (fr): https://accessibilite.public.lu/fr/news/2024-02-08-RAWeb.html.
-And to illustrate the lack of accessibility for the French State here are some edifying figures on the 250 online procedures, we're laughing, yellow (fr):https://www.temesis.com/blog/moins-de-3-du-top-250-des-demarches-en-ligne-sont-conformes-au-rgaa/.
+And to illustrate the lack of accessibility in France, here are some edifying figures on the 250 online procedures, we're laughing, yellow (fr):https://www.temesis.com/blog/moins-de-3-du-top-250-des-demarches-en-ligne-sont-conformes-au-rgaa/.
 Happy fluttering!
 
 ## Accessibility in laws and standards
