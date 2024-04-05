@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2024-03-04T00:00:00Z</updated>
+  <updated>2024-04-05T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>  
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Veille #A11y Février-Mars 2024</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2024/"/>
+    <updated>2024-04-05T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2024/</id>
+    <content xml:lang="fr" type="html">Florilège de ressources en #a11y, Février-Mars 2024</content>
+  </entry>
   
   <entry>
     <title>Tester l&#39;accessibilité d&#39;une application iOS</title>
@@ -22,7 +30,7 @@
   <entry>
     <title>Veille #A11y Décembre-Janvier 2024</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/veille-decembre-janvier-2024/"/>
-    <updated>2024-01-05T00:00:00Z</updated>
+    <updated>2024-02-05T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/veille-decembre-janvier-2024/</id>
     <content xml:lang="fr" type="html">Florilège de ressources en #a11y, Décembre-Janvier 2024</content>
   </entry>
