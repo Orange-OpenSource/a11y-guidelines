@@ -76,7 +76,7 @@ Happy fluttering!
 
 - A11y's barriers for mobile AT users, nice summary: https://www.smashingmagazine.com/2024/02/mobile-accessibility-barriers-assistive-technology-users/
 - Abra Desktop beta is available. This tool allows you to test the accessibility of an application installed on a mobile connected to a Mac: https://abra.ai/products/desktop
-- 50+ dark mode usage statistics For 2023: https://marketsplash.com/fr/dark-mode-usage-statistics/
+- 50+ dark mode usage statistics for 2023: https://marketsplash.com/fr/dark-mode-usage-statistics/
 - New Android Ally plugin for developers on Android Studio: https://plugins.jetbrains.com/plugin/23902-android-ally/
 - Still the Android Ally tool but in desktop version for testers or developers (&en): https://github.com/qbalsdon/android_ally_issues/
   
