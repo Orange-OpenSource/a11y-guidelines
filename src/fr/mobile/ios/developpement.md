@@ -828,10 +828,6 @@ Si on utilise l'attribut `accessibilityLanguage` sur un `UILabel`, alors celui-c
 }
 </code></pre>
 
-<pre><code class="swiftui">
-
-</code></pre>
-
 </div>
 
 <br>
