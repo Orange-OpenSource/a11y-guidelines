@@ -1228,7 +1228,7 @@ int indexSwitch = 1;
 
 var body: some View {
     HStack(){
-        Text("Some text: " + (isChecked ? "enabled : "disabled"))
+        Text("Some text: " + (isChecked ? "enabled" : "disabled"))
         Toggle("Test", isOn: $isChecked)
     }
     .accessibilityElement(children: .combine)
