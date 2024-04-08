@@ -757,10 +757,6 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
 }
 </code></pre>
 
-<pre><code class="swiftui">
-
-</code></pre>
-
 </div>
 
 </div>
