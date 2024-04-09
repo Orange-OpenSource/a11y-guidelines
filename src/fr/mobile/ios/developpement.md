@@ -2003,6 +2003,21 @@ float heightVal;
     }
 </code></pre>
 
+<pre><code class="swiftui">
+    Text("Simple text ayant besoin d'une zone de focus Voice Over plus grande")
+        .border(Color.red)
+        .padding()
+        // Ajouter un overlay va permettre d'aggrandir la zone
+        .overlay(
+            Rectangle()
+            // On aggrandit ainsi la zone
+            .stroke(Color.clear, lineWidth: 20)
+            // Une autre manière d'aggrandir la zone
+            .padding(-20)
+        )
+        .border(Color.blue)
+        .accessibilityElement()
+</code></pre>
 </div>
 
 </div>

@@ -1985,6 +1985,22 @@ float heightVal;
     }
 </code></pre>
 
+<pre><code class="swiftui">
+    Text("Some small text needing bigger focus area")
+        .border(Color.red)
+        .padding()
+        // The overlay does the trick
+        .overlay(
+            Rectangle()
+            // Adjust the lineWidth to expand the hit area
+            .stroke(Color.clear, lineWidth: 20)
+            // Negative padding to expand the hit area
+            .padding(-20)
+        )
+        .border(Color.blue)
+        .accessibilityElement()
+</code></pre>
+
 </div>
 
 </div>
