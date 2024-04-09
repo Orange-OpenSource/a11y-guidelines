@@ -3542,6 +3542,10 @@ La majeure différence du rotor avec les actions personnalisées ou encore les v
 Cependant, si l'élément sélectionné est `ajustable` ou contient des actions personnalisées, **ses actions prévaudront sur celles du rotor**.
 
 L'implémentation d'une telle fonctionnalité au sein d'une application est donc à envisager selon des **besoins bien spécifiques** dont le seul objectif doit être de **faciliter l'expérience utilisateur**.
+
+Ces exemples ne sont valables que pour UIKit. En effet, l'API Swift à l'heure de l'écriture de ces lignes n'est pas isofonctionnelle avec l'API UIKit ; ainsi il n'est pas possible d'avoir un exemple om une vue est mise à jour par glissement vers le haut ou vers le bas du doigt sur le rotor.
+Toutefois il est possible de définir un rotor en SwiftUI avec la méthode [`accessibilityRotor`](https://developer.apple.com/documentation/swiftui/view/accessibilityrotor(_:textranges:)-53aet) et [AccessibilityRotorEntry](https://developer.apple.com/documentation/swiftui/accessibilityrotorentry).
+
 </div>
 <div class="tab-pane" id="rotor-Link" role="tabpanel">
 

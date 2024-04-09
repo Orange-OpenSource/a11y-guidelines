@@ -3483,6 +3483,9 @@ The main difference between a rotor option and a custom action or an adjustable 
 However, if the selected element is adjustable or holds any custom actions, **its actions will prevail over those of the rotor**.
 
 Such a feature must be implemented with **caution** and according to **specific needs** whose only purpose should be to **improve and facilitate the user experience**.
+
+These examples are only valid for UIKit. Indeed, the Swift API at the time of writing these lines is not isofunctional with the UIKit API. Thus it is not possible to have an example where a view is updated by swiping up or down the finger on the rotor. However, it is possible to define a rotor in SwiftUI with the ['accessibilityRotor'](https://developer.apple.com/documentation/swiftui/view/accessibilityrotor(_:textranges:)-53aet) and [AccessibilityRotorEntry](https://developer.apple.com/documentation/swiftui/accessibilityrotorentry) methods.
+
 </div>
 <div class="tab-pane" id="rotor-Link" role="tabpanel">
 
