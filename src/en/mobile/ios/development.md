@@ -3043,7 +3043,7 @@ class StepperWrapper: UIStackView {
 
 <br>
 
-- Next, the two methods of the implemented protocol must be defined before updating and vocally presenting the new value in the ViewController.
+- Then with UIKit, the two methods of the implemented protocol must be defined before updating and vocally presenting the new value in the ViewController.
 
 <div class="code-tab-pane">
 
