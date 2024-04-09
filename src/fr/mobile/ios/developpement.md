@@ -2122,6 +2122,35 @@ Pour application, supposons que nous avons une vue générique contenant des él
     parentB.accessibilityElementsHidden = true
 </code></pre>
 
+<pre><code class="swiftui">
+    // Parent A
+    VStack {
+        Text("A1")
+        Text("A2").accessibilityAddTraits(.isModal)
+        Text("A3")
+    }.background(Color.green)
+        
+    // Parent B
+    VStack {
+        // B1
+        HStack {
+            Text("B1.1")
+            Text("B1.2")
+        }.background(Color.orange)
+        // B2
+        VStack {
+            Text("B2.1")
+            Text("B2.2")
+            Text("B2.3")
+        }.background(Color.yellow)
+    }.background(Color.red)
+        
+    /*
+     Par défaut SwiftUI, les vues parents A et B ne sont pas accessible et sont cachées de Voice Over, 
+     la logique est différente de celle de l'implémentation UIKit.
+     Ne pas oublier par la suite de retirer le trait donné si besoin.
+    */
+</code></pre>
 </div>
 
 <br>**Exemple 3**&nbsp;: passer `B1.1` en vue modale.
@@ -2166,6 +2195,35 @@ Pour application, supposons que nous avons une vue générique contenant des él
     B2.accessibilityElementsHidden = true
 </code></pre>
 
+<pre><code class="swiftui">
+    // Parent A
+    VStack {
+        Text("A1")
+        Text("A2")
+        Text("A3")
+    }.background(Color.green)
+        
+    // Parent B
+    VStack {
+        // B1
+        HStack {
+            Text("B1.1").accessibilityAddTraits(.isModal)
+            Text("B1.2")
+        }.background(Color.orange)
+        // B2
+        VStack {
+            Text("B2.1")
+            Text("B2.2")
+            Text("B2.3")
+        }.background(Color.yellow)
+    }.background(Color.red)
+        
+    /*
+     Par défaut SwiftUI, les vues parents A et B ne sont pas accessible et sont cachées de Voice Over, 
+     la logique est différente de celle de l'implémentation UIKit.
+     Ne pas oublier par la suite de retirer le trait donné si besoin.
+    */
+</code></pre>
 </div>
 </div>
 <div class="tab-pane" id="modalView-Links" role="tabpanel">

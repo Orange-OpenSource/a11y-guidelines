@@ -2109,6 +2109,35 @@ Because `Parent B` is a `Parent A` sibling, `accessibilityViewIsModal = true` is
     parentB.accessibilityElementsHidden = true
 </code></pre>
 
+<pre><code class="swiftui">
+    // Parent A
+    VStack {
+        Text("A1")
+        Text("A2").accessibilityAddTraits(.isModal)
+        Text("A3")
+    }.background(Color.green)
+        
+    // Parent B
+    VStack {
+        // B1
+        HStack {
+            Text("B1.1")
+            Text("B1.2")
+        }.background(Color.orange)
+        // B2
+        VStack {
+            Text("B2.1")
+            Text("B2.2")
+            Text("B2.3")
+        }.background(Color.yellow)
+    }.background(Color.red)
+        
+    /*
+     By default in SwiftUI, views parent A and parent B are not accessible and hidden,
+     no need to hide like with UIKit.
+     Do not forget to remove the trait when needed otherwise no iteration will be done.
+    */
+</code></pre>
 </div>
 
 <br><br>**Example 3**&nbsp;: `B1.1` view as modal.
@@ -2154,6 +2183,35 @@ Again, all the undesirable elements must be hidden as soon as the modal view is 
     B2.accessibilityElementsHidden = true
 </code></pre>
 
+<pre><code class="swiftui">
+    // Parent A
+    VStack {
+        Text("A1")
+        Text("A2")
+        Text("A3")
+    }.background(Color.green)
+        
+    // Parent B
+    VStack {
+        // B1
+        HStack {
+            Text("B1.1").accessibilityAddTraits(.isModal)
+            Text("B1.2")
+        }.background(Color.orange)
+        // B2
+        VStack {
+            Text("B2.1")
+            Text("B2.2")
+            Text("B2.3")
+        }.background(Color.yellow)
+    }.background(Color.red)
+        
+    /*
+     By default in SwiftUI, views parent A and parent B are not accessible and hidden,
+     no need to hide like with UIKit.
+     Do not forget to remove the trait when needed otherwise no iteration will be done.
+    */
+</code></pre>
 </div>
 
 </div>
