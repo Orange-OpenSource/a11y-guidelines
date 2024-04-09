@@ -4729,6 +4729,39 @@ class ViewController: UIViewController {
 }
 </code></pre>
 
+<pre><code class="swiftui">
+    // Les deux premiers boutons auront individuellement le focus Switch Control
+    Button("Test 1") {} // 1
+        .accessibility(identifier: "Test 1")
+    Button("Test 2") {} // 2
+        .accessibility(identifier: "Test 2")
+        
+    // Ensuite le focus sera donné à ce bloc
+    VStack {
+        // Ces deux autres boutons auront individuellement le focus Switch Control
+        Group {
+            Button("Button 1") {} // 3
+                .accessibility(identifier: "Button 1")
+            Button("Button 2") {} // 4
+                .accessibility(identifier: "Button 2")
+        }.accessibilityElement(children: .combine)
+            
+        // Ces deux là seront ignorés
+        Button("Button 3") {}.accessibilityHidden(true)
+        Button("Button 4") {}.accessibilityHidden(true)
+            
+        // Ces deux autres auront à la fin le focus Switch Control individuellement
+        Group {
+            Button("Button 5") {} // 5
+                .accessibility(identifier: "Button 5")
+            Button("Button 6") {} // 6
+                .accessibility(identifier: "Button 6")
+        }
+        .accessibilityElement(children: .combine)
+    }
+    .accessibilityElement(children: .combine)
+</code></pre>
+
 </div>
 
 <br>Le rendu de ce code est visualisable ci-dessous :

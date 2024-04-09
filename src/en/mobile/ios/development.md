@@ -4645,6 +4645,39 @@ class ViewController: UIViewController {
 }
 </code></pre>
 
+<pre><code class="swiftui">
+    // These two items will be focused separately
+    Button("Test 1") {} // 1
+        .accessibility(identifier: "Test 1")
+    Button("Test 2") {} // 2
+        .accessibility(identifier: "Test 2")
+        
+    // Then the focus will be given to this block
+    VStack {
+        // These two items will be focused separately
+        Group {
+            Button("Button 1") {} // 3
+                .accessibility(identifier: "Button 1")
+            Button("Button 2") {} // 4
+                .accessibility(identifier: "Button 2")
+        }.accessibilityElement(children: .combine)
+            
+        // These two will be ignored
+        Button("Button 3") {}.accessibilityHidden(true)
+        Button("Button 4") {}.accessibilityHidden(true)
+            
+        // These two items will be focused separately
+        Group {
+            Button("Button 5") {} // 5
+                .accessibility(identifier: "Button 5")
+            Button("Button 6") {} // 6
+                .accessibility(identifier: "Button 6")
+        }
+        .accessibilityElement(children: .combine)
+    }
+    .accessibilityElement(children: .combine)
+</code></pre>
+
 </div>
 
 <br>The visual rendering is exposed hereunder:
