@@ -2806,6 +2806,13 @@ class LogoViewController: UIViewController {
 }
 </code></pre>
 
+<pre><code class="swftui">
+    Image(systemName: "hand.thumbsup")
+    .accessibilityShowsLargeContentViewer {
+        Label("logo", systemImage: "hand.thumbsup")
+    }
+</code></pre>
+
 </div>
 
 <br>
@@ -2863,11 +2870,23 @@ class ButtonViewController: UIViewController {
 }
 </code></pre>
 
+<pre><code class="swiftui">
+    Button {
+       // Action will be triggered when the button will be released
+    } label: {
+       Image(systemName: "hand.thumbsup")
+    }
+    .accessibilityShowsLargeContentViewer {
+        Label("logo", systemImage: "hand.thumbsup")
+    }
+</code></pre>
+
 </div>
 
 <br>
 
-When **the long press gesture is already implemented on the graphical element**, it may be interesting to use the `gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)` method that will be helpful to [set&nbsp;up&nbsp;the&nbsp;two&nbsp;gestures&nbsp;simutaneously](https://developer.apple.com/videos/play/wwdc2019/261/?time=636). 
+With UIKit, **the long press gesture is already implemented on the graphical element**, it may be interesting to use the `gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)` method that will be helpful to [set&nbsp;up&nbsp;the&nbsp;two&nbsp;gestures&nbsp;simutaneously](https://developer.apple.com/videos/play/wwdc2019/261/?time=636).
+With SwiftUI, you will have to use the [Gestures API](https://developer.apple.com/documentation/swiftui/gestures).
 </div>
 <div class="tab-pane" id="largeContentViewer-Links" role="tabpanel">
 

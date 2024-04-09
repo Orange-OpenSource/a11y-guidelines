@@ -2771,7 +2771,7 @@ Disponible depuis iOS 11, cette fonctionnalité était confinée aux seuls élé
 </div>
 <div class="tab-pane" id="largeContentViewer-Example" role="tabpanel">
 
-Si le grossissement extrême d'un élément graphique risque de dégrader l'expérience utilisateur, on peut très simplement implémenter le `Large`&nbsp;`Content`&nbsp;`Viewer` sur cette vue pour obtenir le résultat grossi an milieu d'écran&nbsp;:
+Si le grossissement extrême d'un élément graphique risque de dégrader l'expérience utilisateur, on peut très simplement implémenter le `Large`&nbsp;`Content`&nbsp;`Viewer` sur cette vue pour obtenir le résultat grossi eu milieu d'écran&nbsp;:
 
 ![](../../images/iOSdev/LargeContentViewer_2.png)
 
@@ -2816,6 +2816,13 @@ class LogoViewController: UIViewController {
         myView.addInteraction(UILargeContentViewerInteraction())
     }
 }
+</code></pre>
+
+<pre><code class="swftui">
+    Image(systemName: "hand.thumbsup")
+    .accessibilityShowsLargeContentViewer {
+        Label("logo", systemImage: "hand.thumbsup")
+    }
 </code></pre>
 
 </div>
@@ -2875,11 +2882,24 @@ class ButtonViewController: UIViewController {
 }
 </code></pre>
 
+<pre><code class="swiftui">
+    Button {
+       // L'action sera déclenchée quand le bouton sera relaché    
+    } label: {
+       Image(systemName: "hand.thumbsup")
+    }
+    .accessibilityShowsLargeContentViewer {
+        Label("logo", systemImage: "hand.thumbsup")
+    }
+</code></pre>
+
 </div>
 
 <br>
 
-Lorsque la **gestuelle 'appui long' est déjà implémentée sur l'élément impacté**, il est nécessaire d'utiliser la méthode `gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)` qui permettra de [mettre&nbsp;en&nbsp;place&nbsp;concomitamment&nbsp;les&nbsp;deux&nbsp;gestuelles](https://developer.apple.com/videos/play/wwdc2019/261/?time=636). 
+Avec UIKit, lorsque la **gestuelle 'appui long' est déjà implémentée sur l'élément impacté**, il est nécessaire d'utiliser la méthode `gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)` qui permettra de [mettre&nbsp;en&nbsp;place&nbsp;concomitamment&nbsp;les&nbsp;deux&nbsp;gestuelles](https://developer.apple.com/videos/play/wwdc2019/261/?time=636).
+Pour SwftUI, il faudra se tourner vers l'API [Gestures](https://developer.apple.com/documentation/swiftui/gestures).
+
 </div>
 <div class="tab-pane" id="largeContentViewer-Links" role="tabpanel">
 
