@@ -3298,6 +3298,22 @@ class CustomActions: UIViewController {
 }
 </code></pre>
 
+<pre><code class="swiftui">
+    var body: some View {
+        Text("A view with custom actions")
+            .accessibilityElement()
+            .accessibilityAction(named: "options") {
+                print("Action OPTIONS selected")
+            }
+            .accessibilityAction(named: "flag") {
+                print("Action FLAG selected")
+            }
+            .accessibilityAction(named: "trash") {
+                print("Action TRASH selected")
+            }
+    }
+</code></pre>
+
 </div>
 
 <br>The code above gives rise to a smoother result thanks to consecutive flicks on the selected accessible element:

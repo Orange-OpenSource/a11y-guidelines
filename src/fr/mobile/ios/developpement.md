@@ -3358,6 +3358,22 @@ class CustomActions: UIViewController {
 }
 </code></pre>
 
+<pre><code class="swiftui">
+    var body: some View {
+        Text("Une vue avec des actions personnalisées")
+            .accessibilityElement()
+            .accessibilityAction(named: "options") {
+                print("Action OPTIONS sélectionnée")
+            }
+            .accessibilityAction(named: "drapeau") {
+                print("Action DRAPEAU sélectionnée")
+            }
+            .accessibilityAction(named: "corbeille") {
+                print("Action CORBEILLE sélectionnée")
+            }
+    }
+</code></pre>
+
 </div>
 
 <br>Le code implémenté ci-dessus permet d'obtenir le résultat suivant par balayages successifs sur l'élément accessible sélectionné&nbsp;:
