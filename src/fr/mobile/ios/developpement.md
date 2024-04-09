@@ -2499,7 +2499,8 @@ Malheureusement, cela n'est pas pris en compte nativement par le système et seu
 <div class="tab-pane" id="truncHyphen-Example" role="tabpanel">
 
 ![](../../images/iOSdev/Troncature.png)
-<br>L'idée est de spécifier l'utilisation d'un `NSMutableAttributedString` auquel on ajoute une propriété de type  `NSMutableParagraphStyle` comme indiqué par l'exemple ci-dessous :
+<br>Avec UIKit, l'idée est de spécifier l'utilisation d'un `NSMutableAttributedString` auquel on ajoute une propriété de type `NSMutableParagraphStyle` comme indiqué par l'exemple ci-dessous.
+Toutefois, ces API ne sont pas encore disponibles avec SwiftUI à l'heure où ces lignes sont écrites ; il convient donc d'aborder le problème différement.
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">
@@ -2558,6 +2559,92 @@ class TruncationHyphen: UIViewController {
                             range: NSMakeRange(0,1))
 
         myLabel.attributedText = myText
+    }
+}
+</code></pre>
+
+<pre><code class="swiftui">
+/*
+ * Le code source ci-dessous a été largement inspiré du package Swift HyphenableText,
+ * dont Alessio Moiso est titulaire du copyright.
+ * Le code source est disponible sous licence MIT à l'adresse https://github.com/MrAsterisco/HyphenableText.
+ * Il est de bon ton de citer l'auteur si le code ci-dessous est copié/collé dans vos projets.
+ */
+
+// Une vue SwiftUI  récupérant la locale et le texte à afficher
+struct HyphenableText: View {
+    @Environment(\.locale) private var locale
+    
+    let text: String
+    let minimumWordLength: Int
+    
+    init(_ text: String, ignoreWordsShorterThan minimumWordLength: Int = 0) {
+        self.text = text
+        self.minimumWordLength = minimumWordLength
+    }
+    
+    var body: some View {
+        Text(text
+            .hyphenateByWord(
+                minimumWordLength: minimumWordLength,
+                withLocale: locale
+            )
+        )
+    }
+}
+
+// Quelques méthodes utilsiateurs ajoutées par extension à String-
+extension String {
+    
+    /// Le symbole du trait d'union
+    static let hyphenSymbol = "\u{00AD}"
+    
+    func hyphenateByWord(minimumWordLength: Int = 0,
+                         withLocale locale: Locale = .autoupdatingCurrent) -> Self {
+        var splits: [String] = split(separator: " ",
+                                     omittingEmptySubsequences: false).map({ String($0) })
+        
+        for (index, substring) in splits.enumerated() {
+            if substring.count >= minimumWordLength {
+                splits[index] = substring.hyphenated(withLocale: locale)
+            }
+        }
+        
+        return splits.joined(separator: " ")
+    }
+    
+    func hyphenated(withLocale locale: Locale = .autoupdatingCurrent,
+                    hyphenCharacter: String = Self.hyphenSymbol) -> Self {
+        let localeRef = locale as CFLocale
+        guard CFStringIsHyphenationAvailableForLocale(localeRef) else {
+            return self
+        }
+        
+        let mutableSelf = NSMutableString(string: self)
+        var hyphenationLocations = Array<Bool>(repeating: false, count: count)
+        let range = CFRangeMake(0, count)
+        
+        for i in 0..<count {
+            let nextLocation = CFStringGetHyphenationLocationBeforeIndex(
+                mutableSelf as CFString,
+                i,
+                range,
+                .zero,
+                localeRef,
+                nil
+            )
+            
+            if nextLocation >= 0 && nextLocation < count {
+                hyphenationLocations[nextLocation] = true
+            }
+        }
+        
+        for i in (0..<count).reversed() {
+            guard hyphenationLocations[i] else { continue }
+            mutableSelf.insert(hyphenCharacter, at: i)
+        }
+        
+        return mutableSelf as String
     }
 }
 </code></pre>

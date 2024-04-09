@@ -2486,7 +2486,7 @@ Unfortunately, the iOS system doesn't handle natively this point that can be imp
 
 ![](../../images/iOSdev/Troncature.png)
 <br>The rationale behind is the use of a `NSMutableAttributedString` with a `NSMutableParagraphStyle` type property as exposed hereunder:
-
+However, these APIs are not yet available with SwiftUI at the time of writing ; it is therefore necessary to approach the problem differently.
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">
@@ -2545,6 +2545,92 @@ class TruncationHyphen: UIViewController {
                             range: NSMakeRange(0,1))
 
         myLabel.attributedText = myText
+    }
+}
+</code></pre>
+
+<pre><code class="swiftui">
+/*
+ * Following source code has been inspired by the HyphenableText Swift Package,
+ * under copyright of Alessio Moiso.
+ * Sources are available under MIT License at https://github.com/MrAsterisco/HyphenableText.
+ * Be nice, keep these details if you copy/paste this code sample.
+ */
+
+// Define your own SwiftUI view
+struct HyphenableText: View {
+    @Environment(\.locale) private var locale
+    
+    let text: String
+    let minimumWordLength: Int
+    
+    init(_ text: String, ignoreWordsShorterThan minimumWordLength: Int = 0) {
+        self.text = text
+        self.minimumWordLength = minimumWordLength
+    }
+    
+    var body: some View {
+        Text(text
+            .hyphenateByWord(
+                minimumWordLength: minimumWordLength,
+                withLocale: locale
+            )
+        )
+    }
+}
+
+// And add new methods to String by extension
+extension String {
+    
+    /// The Unicode character of a soft hyphen.
+    static let hyphenSymbol = "\u{00AD}"
+    
+    func hyphenateByWord(minimumWordLength: Int = 0,
+                         withLocale locale: Locale = .autoupdatingCurrent) -> Self {
+        var splits: [String] = split(separator: " ",
+                                     omittingEmptySubsequences: false).map({ String($0) })
+        
+        for (index, substring) in splits.enumerated() {
+            if substring.count >= minimumWordLength {
+                splits[index] = substring.hyphenated(withLocale: locale)
+            }
+        }
+        
+        return splits.joined(separator: " ")
+    }
+    
+    func hyphenated(withLocale locale: Locale = .autoupdatingCurrent,
+                    hyphenCharacter: String = Self.hyphenSymbol) -> Self {
+        let localeRef = locale as CFLocale
+        guard CFStringIsHyphenationAvailableForLocale(localeRef) else {
+            return self
+        }
+        
+        let mutableSelf = NSMutableString(string: self)
+        var hyphenationLocations = Array<Bool>(repeating: false, count: count)
+        let range = CFRangeMake(0, count)
+        
+        for i in 0..<count {
+            let nextLocation = CFStringGetHyphenationLocationBeforeIndex(
+                mutableSelf as CFString,
+                i,
+                range,
+                .zero,
+                localeRef,
+                nil
+            )
+            
+            if nextLocation >= 0 && nextLocation < count {
+                hyphenationLocations[nextLocation] = true
+            }
+        }
+        
+        for i in (0..<count).reversed() {
+            guard hyphenationLocations[i] else { continue }
+            mutableSelf.insert(hyphenCharacter, at: i)
+        }
+        
+        return mutableSelf as String
     }
 }
 </code></pre>
