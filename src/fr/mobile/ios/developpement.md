@@ -2345,7 +2345,7 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
     fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
 </code></pre>
 
-<pre><code class="swftui">
+<pre><code class="swiftui">
 var body: some View {
     Text("Un peu de texte")
         // Police système

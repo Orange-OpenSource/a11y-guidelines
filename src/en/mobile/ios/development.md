@@ -2334,7 +2334,7 @@ Since iOS7, it is possible to make the text size dynamic according to the device
     fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
 </code></pre>
 
-<pre><code class="swftui">
+<pre><code class="swiftui">
 var body: some View {
     Text("Some text")
         // System font
