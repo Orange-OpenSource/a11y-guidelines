@@ -2818,7 +2818,7 @@ class LogoViewController: UIViewController {
 }
 </code></pre>
 
-<pre><code class="swftui">
+<pre><code class="swiftui">
     Image(systemName: "hand.thumbsup")
     .accessibilityShowsLargeContentViewer {
         Label("logo", systemImage: "hand.thumbsup")
