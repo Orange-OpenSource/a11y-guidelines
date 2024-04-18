@@ -1228,7 +1228,7 @@ int indexSwitch = 1;
 
 var body: some View {
     HStack(){
-        Text("Some text: " + (isChecked ? "enabled : "disabled"))
+        Text("Some text: " + (isChecked ? "enabled" : "disabled"))
         Toggle("Test", isOn: $isChecked)
     }
     .accessibilityElement(children: .combine)
@@ -1985,6 +1985,22 @@ float heightVal;
     }
 </code></pre>
 
+<pre><code class="swiftui">
+    Text("Some small text needing bigger focus area")
+        .border(Color.red)
+        .padding()
+        // The overlay does the trick
+        .overlay(
+            Rectangle()
+            // Adjust the lineWidth to expand the hit area
+            .stroke(Color.clear, lineWidth: 20)
+            // Negative padding to expand the hit area
+            .padding(-20)
+        )
+        .border(Color.blue)
+        .accessibilityElement()
+</code></pre>
+
 </div>
 
 </div>
@@ -2093,6 +2109,35 @@ Because `Parent B` is a `Parent A` sibling, `accessibilityViewIsModal = true` is
     parentB.accessibilityElementsHidden = true
 </code></pre>
 
+<pre><code class="swiftui">
+    // Parent A
+    VStack {
+        Text("A1")
+        Text("A2").accessibilityAddTraits(.isModal)
+        Text("A3")
+    }.background(Color.green)
+        
+    // Parent B
+    VStack {
+        // B1
+        HStack {
+            Text("B1.1")
+            Text("B1.2")
+        }.background(Color.orange)
+        // B2
+        VStack {
+            Text("B2.1")
+            Text("B2.2")
+            Text("B2.3")
+        }.background(Color.yellow)
+    }.background(Color.red)
+        
+    /*
+     By default in SwiftUI, views parent A and parent B are not accessible and hidden,
+     no need to hide like with UIKit.
+     Do not forget to remove the trait when needed otherwise no iteration will be done.
+    */
+</code></pre>
 </div>
 
 <br><br>**Example 3**&nbsp;: `B1.1` view as modal.
@@ -2138,6 +2183,35 @@ Again, all the undesirable elements must be hidden as soon as the modal view is 
     B2.accessibilityElementsHidden = true
 </code></pre>
 
+<pre><code class="swiftui">
+    // Parent A
+    VStack {
+        Text("A1")
+        Text("A2")
+        Text("A3")
+    }.background(Color.green)
+        
+    // Parent B
+    VStack {
+        // B1
+        HStack {
+            Text("B1.1").accessibilityAddTraits(.isModal)
+            Text("B1.2")
+        }.background(Color.orange)
+        // B2
+        VStack {
+            Text("B2.1")
+            Text("B2.2")
+            Text("B2.3")
+        }.background(Color.yellow)
+    }.background(Color.red)
+        
+    /*
+     By default in SwiftUI, views parent A and parent B are not accessible and hidden,
+     no need to hide like with UIKit.
+     Do not forget to remove the trait when needed otherwise no iteration will be done.
+    */
+</code></pre>
 </div>
 
 </div>
@@ -2260,7 +2334,7 @@ Since iOS7, it is possible to make the text size dynamic according to the device
     fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
 </code></pre>
 
-<pre><code class="swftui">
+<pre><code class="swiftui">
 var body: some View {
     Text("Some text")
         // System font
@@ -2412,7 +2486,7 @@ Unfortunately, the iOS system doesn't handle natively this point that can be imp
 
 ![](../../images/iOSdev/Troncature.png)
 <br>The rationale behind is the use of a `NSMutableAttributedString` with a `NSMutableParagraphStyle` type property as exposed hereunder:
-
+However, these APIs are not yet available with SwiftUI at the time of writing ; it is therefore necessary to approach the problem differently.
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">
@@ -2471,6 +2545,92 @@ class TruncationHyphen: UIViewController {
                             range: NSMakeRange(0,1))
 
         myLabel.attributedText = myText
+    }
+}
+</code></pre>
+
+<pre><code class="swiftui">
+/*
+ * Following source code has been inspired by the HyphenableText Swift Package,
+ * under copyright of Alessio Moiso.
+ * Sources are available under MIT License at https://github.com/MrAsterisco/HyphenableText.
+ * Be nice, keep these details if you copy/paste this code sample.
+ */
+
+// Define your own SwiftUI view
+struct HyphenableText: View {
+    @Environment(\.locale) private var locale
+    
+    let text: String
+    let minimumWordLength: Int
+    
+    init(_ text: String, ignoreWordsShorterThan minimumWordLength: Int = 0) {
+        self.text = text
+        self.minimumWordLength = minimumWordLength
+    }
+    
+    var body: some View {
+        Text(text
+            .hyphenateByWord(
+                minimumWordLength: minimumWordLength,
+                withLocale: locale
+            )
+        )
+    }
+}
+
+// And add new methods to String by extension
+extension String {
+    
+    /// The Unicode character of a soft hyphen.
+    static let hyphenSymbol = "\u{00AD}"
+    
+    func hyphenateByWord(minimumWordLength: Int = 0,
+                         withLocale locale: Locale = .autoupdatingCurrent) -> Self {
+        var splits: [String] = split(separator: " ",
+                                     omittingEmptySubsequences: false).map({ String($0) })
+        
+        for (index, substring) in splits.enumerated() {
+            if substring.count >= minimumWordLength {
+                splits[index] = substring.hyphenated(withLocale: locale)
+            }
+        }
+        
+        return splits.joined(separator: " ")
+    }
+    
+    func hyphenated(withLocale locale: Locale = .autoupdatingCurrent,
+                    hyphenCharacter: String = Self.hyphenSymbol) -> Self {
+        let localeRef = locale as CFLocale
+        guard CFStringIsHyphenationAvailableForLocale(localeRef) else {
+            return self
+        }
+        
+        let mutableSelf = NSMutableString(string: self)
+        var hyphenationLocations = Array<Bool>(repeating: false, count: count)
+        let range = CFRangeMake(0, count)
+        
+        for i in 0..< count {
+            let nextLocation = CFStringGetHyphenationLocationBeforeIndex(
+                mutableSelf as CFString,
+                i,
+                range,
+                .zero,
+                localeRef,
+                nil
+            )
+            
+            if nextLocation >= 0 && nextLocation < count {
+                hyphenationLocations[nextLocation] = true
+            }
+        }
+        
+        for i in (0..< count).reversed() {
+            guard hyphenationLocations[i] else { continue }
+            mutableSelf.insert(hyphenCharacter, at: i)
+        }
+        
+        return mutableSelf as String
     }
 }
 </code></pre>
@@ -2646,6 +2806,13 @@ class LogoViewController: UIViewController {
 }
 </code></pre>
 
+<pre><code class="swftui">
+    Image(systemName: "hand.thumbsup")
+    .accessibilityShowsLargeContentViewer {
+        Label("logo", systemImage: "hand.thumbsup")
+    }
+</code></pre>
+
 </div>
 
 <br>
@@ -2703,11 +2870,23 @@ class ButtonViewController: UIViewController {
 }
 </code></pre>
 
+<pre><code class="swiftui">
+    Button {
+       // Action will be triggered when the button will be released
+    } label: {
+       Image(systemName: "hand.thumbsup")
+    }
+    .accessibilityShowsLargeContentViewer {
+        Label("logo", systemImage: "hand.thumbsup")
+    }
+</code></pre>
+
 </div>
 
 <br>
 
-When **the long press gesture is already implemented on the graphical element**, it may be interesting to use the `gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)` method that will be helpful to [set&nbsp;up&nbsp;the&nbsp;two&nbsp;gestures&nbsp;simutaneously](https://developer.apple.com/videos/play/wwdc2019/261/?time=636). 
+With UIKit, **the long press gesture is already implemented on the graphical element**, it may be interesting to use the `gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)` method that will be helpful to [set&nbsp;up&nbsp;the&nbsp;two&nbsp;gestures&nbsp;simutaneously](https://developer.apple.com/videos/play/wwdc2019/261/?time=636).
+With SwiftUI, you will have to use the [Gestures API](https://developer.apple.com/documentation/swiftui/gestures).
 </div>
 <div class="tab-pane" id="largeContentViewer-Links" role="tabpanel">
 
@@ -2864,7 +3043,7 @@ class StepperWrapper: UIStackView {
 
 <br>
 
-- Next, the two methods of the implemented protocol must be defined before updating and vocally presenting the new value in the ViewController.
+- Then with UIKit, the two methods of the implemented protocol must be defined before updating and vocally presenting the new value in the ViewController.
 
 <div class="code-tab-pane">
 
@@ -3119,6 +3298,22 @@ class CustomActions: UIViewController {
 }
 </code></pre>
 
+<pre><code class="swiftui">
+    var body: some View {
+        Text("A view with custom actions")
+            .accessibilityElement()
+            .accessibilityAction(named: "options") {
+                print("Action OPTIONS selected")
+            }
+            .accessibilityAction(named: "flag") {
+                print("Action FLAG selected")
+            }
+            .accessibilityAction(named: "trash") {
+                print("Action TRASH selected")
+            }
+    }
+</code></pre>
+
 </div>
 
 <br>The code above gives rise to a smoother result thanks to consecutive flicks on the selected accessible element:
@@ -3288,6 +3483,9 @@ The main difference between a rotor option and a custom action or an adjustable 
 However, if the selected element is adjustable or holds any custom actions, **its actions will prevail over those of the rotor**.
 
 Such a feature must be implemented with **caution** and according to **specific needs** whose only purpose should be to **improve and facilitate the user experience**.
+
+These examples are only valid for UIKit. Indeed, the Swift API at the time of writing these lines is not isofunctional with the UIKit API. Thus it is not possible to have an example where a view is updated by swiping up or down the finger on the rotor. However, it is possible to define a rotor in SwiftUI with the ['accessibilityRotor'](https://developer.apple.com/documentation/swiftui/view/accessibilityrotor(_:textranges:)-53aet) and [AccessibilityRotorEntry](https://developer.apple.com/documentation/swiftui/accessibilityrotorentry) methods.
+
 </div>
 <div class="tab-pane" id="rotor-Link" role="tabpanel">
 
@@ -4445,6 +4643,39 @@ class ViewController: UIViewController {
                                            thirdGroup]
     }
 }
+</code></pre>
+
+<pre><code class="swiftui">
+    // These two items will be focused separately
+    Button("Test 1") {} // 1
+        .accessibility(identifier: "Test 1")
+    Button("Test 2") {} // 2
+        .accessibility(identifier: "Test 2")
+        
+    // Then the focus will be given to this block
+    VStack {
+        // These two items will be focused separately
+        Group {
+            Button("Button 1") {} // 3
+                .accessibility(identifier: "Button 1")
+            Button("Button 2") {} // 4
+                .accessibility(identifier: "Button 2")
+        }.accessibilityElement(children: .combine)
+            
+        // These two will be ignored
+        Button("Button 3") {}.accessibilityHidden(true)
+        Button("Button 4") {}.accessibilityHidden(true)
+            
+        // These two items will be focused separately
+        Group {
+            Button("Button 5") {} // 5
+                .accessibility(identifier: "Button 5")
+            Button("Button 6") {} // 6
+                .accessibility(identifier: "Button 6")
+        }
+        .accessibilityElement(children: .combine)
+    }
+    .accessibilityElement(children: .combine)
 </code></pre>
 
 </div>
