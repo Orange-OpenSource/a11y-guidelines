@@ -2624,7 +2624,7 @@ extension String {
         var hyphenationLocations = Array<Bool>(repeating: false, count: count)
         let range = CFRangeMake(0, count)
         
-        for i in 0..<count {
+        for i in 0..< count {
             let nextLocation = CFStringGetHyphenationLocationBeforeIndex(
                 mutableSelf as CFString,
                 i,
@@ -2639,7 +2639,7 @@ extension String {
             }
         }
         
-        for i in (0..<count).reversed() {
+        for i in (0..< count).reversed() {
             guard hyphenationLocations[i] else { continue }
             mutableSelf.insert(hyphenCharacter, at: i)
         }
