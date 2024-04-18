@@ -1360,7 +1360,7 @@ int indexSwitch = 1;
 
 var body: some View {
     HStack(){
-        Text("Some text: " + (isChecked ? "enabled : "disabled"))
+        Text("Some text: " + (isChecked ? "enabled" : "disabled"))
         Toggle("Test", isOn: $isChecked)
     }
     .accessibilityElement(children: .combine)
@@ -2080,6 +2080,21 @@ float heightVal;
                              argument: myLabel)
     }
 </code></pre>
+<pre><code class="swiftui">
+    Text("Some small text needing bigger focus area")
+        .border(Color.red)
+        .padding()
+        // The overlay does the trick
+        .overlay(
+            Rectangle()
+            // Adjust the lineWidth to expand the hit area
+            .stroke(Color.clear, lineWidth: 20)
+            // Negative padding to expand the hit area
+            .padding(-20)
+        )
+        .border(Color.blue)
+        .accessibilityElement()
+</code></pre>
 </div>
 </div>
 <div class="tab-pane" id="focusArea-Links" role="tabpanel">
@@ -2178,6 +2193,35 @@ float heightVal;
     parentB.isAccessibilityElement = false
     parentB.accessibilityElementsHidden = true
 </code></pre>
+<pre><code class="swiftui">
+    // Parent A
+    VStack {
+        Text("A1")
+        Text("A2").accessibilityAddTraits(.isModal)
+        Text("A3")
+    }.background(Color.green)
+        
+    // Parent B
+    VStack {
+        // B1
+        HStack {
+            Text("B1.1")
+            Text("B1.2")
+        }.background(Color.orange)
+        // B2
+        VStack {
+            Text("B2.1")
+            Text("B2.2")
+            Text("B2.3")
+        }.background(Color.yellow)
+    }.background(Color.red)
+        
+    /*
+     By default in SwiftUI, views parent A and parent B are not accessible and hidden,
+     no need to hide like with UIKit.
+     Do not forget to remove the trait when needed otherwise no iteration will be done.
+    */
+</code></pre>
 </div>
 <p><br><br><strong>Example 3</strong> : <code>B1.1</code> view as modal.</p>
 <p>In this case, <code>parent A</code> and <code>B2</code> (or possibly their subviews) are vocalized with the modal view: only <code>B1.2</code> isn't read out by VoiceOver because it's <code>B1.1</code> sibling.</p>
@@ -2215,6 +2259,35 @@ float heightVal;
 
     B2.isAccessibilityElement = false
     B2.accessibilityElementsHidden = true
+</code></pre>
+<pre><code class="swiftui">
+    // Parent A
+    VStack {
+        Text("A1")
+        Text("A2")
+        Text("A3")
+    }.background(Color.green)
+        
+    // Parent B
+    VStack {
+        // B1
+        HStack {
+            Text("B1.1").accessibilityAddTraits(.isModal)
+            Text("B1.2")
+        }.background(Color.orange)
+        // B2
+        VStack {
+            Text("B2.1")
+            Text("B2.2")
+            Text("B2.3")
+        }.background(Color.yellow)
+    }.background(Color.red)
+        
+    /*
+     By default in SwiftUI, views parent A and parent B are not accessible and hidden,
+     no need to hide like with UIKit.
+     Do not forget to remove the trait when needed otherwise no iteration will be done.
+    */
 </code></pre>
 </div>
 </div>
@@ -2334,7 +2407,7 @@ float heightVal;
     let fontHeadMetrics = UIFontMetrics(forTextStyle: .headline)
     fontHeadline.font = fontHeadMetrics.scaledFont(for: fontHead!)
 </code></pre>
-<pre><code class="swftui">
+<pre><code class="swiftui">
 var body: some View {
     Text("Some text")
         // System font
@@ -2486,7 +2559,8 @@ However, it's necessary to keep in mind that these restrictions are recommended 
 </div>
 <div class="tab-pane" id="truncHyphen-Example" role="tabpanel">
 <p><img src="../../images/iOSdev/Troncature.png" alt="" class="img-fluid"><br>
-<br>The rationale behind is the use of a <code>NSMutableAttributedString</code> with a <code>NSMutableParagraphStyle</code> type property as exposed hereunder:</p>
+<br>The rationale behind is the use of a <code>NSMutableAttributedString</code> with a <code>NSMutableParagraphStyle</code> type property as exposed hereunder:<br>
+However, these APIs are not yet available with SwiftUI at the time of writing ; it is therefore necessary to approach the problem differently.</p>
 <div class="code-tab-pane">
 <pre><code class="objectivec">
 @interface TruncationHyphen () {
@@ -2543,6 +2617,91 @@ class TruncationHyphen: UIViewController {
                             range: NSMakeRange(0,1))
 
         myLabel.attributedText = myText
+    }
+}
+</code></pre>
+<pre><code class="swiftui">
+/*
+ * Following source code has been inspired by the HyphenableText Swift Package,
+ * under copyright of Alessio Moiso.
+ * Sources are available under MIT License at https://github.com/MrAsterisco/HyphenableText.
+ * Be nice, keep these details if you copy/paste this code sample.
+ */
+
+// Define your own SwiftUI view
+struct HyphenableText: View {
+    @Environment(\.locale) private var locale
+    
+    let text: String
+    let minimumWordLength: Int
+    
+    init(_ text: String, ignoreWordsShorterThan minimumWordLength: Int = 0) {
+        self.text = text
+        self.minimumWordLength = minimumWordLength
+    }
+    
+    var body: some View {
+        Text(text
+            .hyphenateByWord(
+                minimumWordLength: minimumWordLength,
+                withLocale: locale
+            )
+        )
+    }
+}
+
+// And add new methods to String by extension
+extension String {
+    
+    /// The Unicode character of a soft hyphen.
+    static let hyphenSymbol = "\u{00AD}"
+    
+    func hyphenateByWord(minimumWordLength: Int = 0,
+                         withLocale locale: Locale = .autoupdatingCurrent) -> Self {
+        var splits: [String] = split(separator: " ",
+                                     omittingEmptySubsequences: false).map({ String($0) })
+        
+        for (index, substring) in splits.enumerated() {
+            if substring.count >= minimumWordLength {
+                splits[index] = substring.hyphenated(withLocale: locale)
+            }
+        }
+        
+        return splits.joined(separator: " ")
+    }
+    
+    func hyphenated(withLocale locale: Locale = .autoupdatingCurrent,
+                    hyphenCharacter: String = Self.hyphenSymbol) -> Self {
+        let localeRef = locale as CFLocale
+        guard CFStringIsHyphenationAvailableForLocale(localeRef) else {
+            return self
+        }
+        
+        let mutableSelf = NSMutableString(string: self)
+        var hyphenationLocations = Array<Bool>(repeating: false, count: count)
+        let range = CFRangeMake(0, count)
+        
+        for i in 0..< count {
+            let nextLocation = CFStringGetHyphenationLocationBeforeIndex(
+                mutableSelf as CFString,
+                i,
+                range,
+                .zero,
+                localeRef,
+                nil
+            )
+            
+            if nextLocation >= 0 && nextLocation < count {
+                hyphenationLocations[nextLocation] = true
+            }
+        }
+        
+        for i in (0..< count).reversed() {
+            guard hyphenationLocations[i] else { continue }
+            mutableSelf.insert(hyphenCharacter, at: i)
+        }
+        
+        return mutableSelf as String
     }
 }
 </code></pre>
@@ -2715,6 +2874,12 @@ class LogoViewController: UIViewController {
     }
 }
 </code></pre>
+<pre><code class="swftui">
+    Image(systemName: "hand.thumbsup")
+    .accessibilityShowsLargeContentViewer {
+        Label("logo", systemImage: "hand.thumbsup")
+    }
+</code></pre>
 </div>
 <br>
 <p>In the same way, on a <strong>clickable element</strong> like a button whose magnification may become problematic, it's quite possible to use this feature to display its content and to ensure to <strong>trigger its actions when the finger is up</strong>:</p>
@@ -2765,9 +2930,20 @@ class ButtonViewController: UIViewController {
     }
 }
 </code></pre>
+<pre><code class="swiftui">
+    Button {
+       // Action will be triggered when the button will be released
+    } label: {
+       Image(systemName: "hand.thumbsup")
+    }
+    .accessibilityShowsLargeContentViewer {
+        Label("logo", systemImage: "hand.thumbsup")
+    }
+</code></pre>
 </div>
 <br>
-<p>When <strong>the long press gesture is already implemented on the graphical element</strong>, it may be interesting to use the <code>gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)</code> method that will be helpful to <a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=636">set up the two gestures simutaneously</a>.</p>
+<p>With UIKit, <strong>the long press gesture is already implemented on the graphical element</strong>, it may be interesting to use the <code>gestureRecognizer(_:shouldRecognizeSimultaneouslyWith:)</code> method that will be helpful to <a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=636">set up the two gestures simutaneously</a>.<br>
+With SwiftUI, you will have to use the <a href="https://developer.apple.com/documentation/swiftui/gestures">Gestures API</a>.</p>
 </div>
 <div class="tab-pane" id="largeContentViewer-Links" role="tabpanel">
 <ul>
@@ -2921,7 +3097,7 @@ class StepperWrapper: UIStackView {
 </div>
 <br>
 <ul>
-<li>Next, the two methods of the implemented protocol must be defined before updating and vocally presenting the new value in the ViewController.</li>
+<li>Then with UIKit, the two methods of the implemented protocol must be defined before updating and vocally presenting the new value in the ViewController.</li>
 </ul>
 <div class="code-tab-pane">
 <pre><code class="objectivec">
@@ -3154,6 +3330,21 @@ class CustomActions: UIViewController {
     }
 }
 </code></pre>
+<pre><code class="swiftui">
+    var body: some View {
+        Text("A view with custom actions")
+            .accessibilityElement()
+            .accessibilityAction(named: "options") {
+                print("Action OPTIONS selected")
+            }
+            .accessibilityAction(named: "flag") {
+                print("Action FLAG selected")
+            }
+            .accessibilityAction(named: "trash") {
+                print("Action TRASH selected")
+            }
+    }
+</code></pre>
 </div>
 <p><br>The code above gives rise to a smoother result thanks to consecutive flicks on the selected accessible element:</p>
 <p><img src="../../images/iOSdev/Actions_3.png" alt="flick up to vocalize suggested actions with VoiceOver activated" class="img-fluid"><br>
@@ -3319,6 +3510,7 @@ class CustomRotor: UIViewController {
 <p>The main difference between a rotor option and a custom action or an adjustable element relies on the fact that it can be activated whatever the selected element.</p>
 <p>However, if the selected element is adjustable or holds any custom actions, <strong>its actions will prevail over those of the rotor</strong>.</p>
 <p>Such a feature must be implemented with <strong>caution</strong> and according to <strong>specific needs</strong> whose only purpose should be to <strong>improve and facilitate the user experience</strong>.</p>
+<p>These examples are only valid for UIKit. Indeed, the Swift API at the time of writing these lines is not isofunctional with the UIKit API. Thus it is not possible to have an example where a view is updated by swiping up or down the finger on the rotor. However, it is possible to define a rotor in SwiftUI with the <a href="https://developer.apple.com/documentation/swiftui/view/accessibilityrotor(_:textranges:)-53aet">'accessibilityRotor'</a> and <a href="https://developer.apple.com/documentation/swiftui/accessibilityrotorentry">AccessibilityRotorEntry</a> methods.</p>
 </div>
 <div class="tab-pane" id="rotor-Link" role="tabpanel">
 <ul>
@@ -4388,6 +4580,38 @@ class ViewController: UIViewController {
                                            thirdGroup]
     }
 }
+</code></pre>
+<pre><code class="swiftui">
+    // These two items will be focused separately
+    Button("Test 1") {} // 1
+        .accessibility(identifier: "Test 1")
+    Button("Test 2") {} // 2
+        .accessibility(identifier: "Test 2")
+        
+    // Then the focus will be given to this block
+    VStack {
+        // These two items will be focused separately
+        Group {
+            Button("Button 1") {} // 3
+                .accessibility(identifier: "Button 1")
+            Button("Button 2") {} // 4
+                .accessibility(identifier: "Button 2")
+        }.accessibilityElement(children: .combine)
+            
+        // These two will be ignored
+        Button("Button 3") {}.accessibilityHidden(true)
+        Button("Button 4") {}.accessibilityHidden(true)
+            
+        // These two items will be focused separately
+        Group {
+            Button("Button 5") {} // 5
+                .accessibility(identifier: "Button 5")
+            Button("Button 6") {} // 6
+                .accessibility(identifier: "Button 6")
+        }
+        .accessibilityElement(children: .combine)
+    }
+    .accessibilityElement(children: .combine)
 </code></pre>
 </div>
 <p><br>The visual rendering is exposed hereunder:</p>
