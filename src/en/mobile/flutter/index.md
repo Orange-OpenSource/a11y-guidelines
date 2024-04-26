@@ -11,6 +11,8 @@ If you develop applications with Flutter, you should know that it is possible to
 
 For information on the subject, start with [the official accessibility page](https://flutter.dev/docs/development/accessibility-and-localization/accessibility) which does not yet reflect the full range of possibilities.
 
+The Appt foundation gives <a href="https://appt.org/en/docs/flutter/samples">many samples of accessible components in Flutter</href>.
+
 You can also watch the following videos which will allow you to explore some of the concepts in greater depth:
 - <a href="https://www.youtube.com/watch?v=bWbBgbmAdQs">Building in accessibility with Flutter (Flutter Interact '19)</a>
 - <a href="https://youtu.be/YSULAJf6R6M?t=584">Beyond Mobile: Material Design, Adaptable UIs, and Flutter (Google I/O'19)</a>
