@@ -82,7 +82,7 @@ Pour bien comprendre comment le grossissement de texte fonctionne, il est fortem
 
 Afin de prendre en compte un panel conséquent de terminaux, il est conseillé de réaliser les tests sur plusieurs terminaux de taille différente avec lesquels **chaque page devra être visualisée**.
 
-Trois types de grossissement peuvenct être particulièrement étudiés de façon à déterminer le comportement visuel aux extrêmes&nbsp;:
+Trois types de grossissement peuvent être particulièrement étudiés de façon à déterminer le comportement visuel aux extrêmes&nbsp;:
 
 - seuil le plus **bas SANS** accessibilité,
 
