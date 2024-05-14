@@ -20,7 +20,7 @@ Que ce soit dans la conception, la réalisation ou la vérification, chaque déc
 
 2. Visionner les exemples d'utilisation fournis dans les [vidéos&nbsp;WWDC](../wwdc/).
 
-3. Assimiler les [critères&nbsp;de&nbsp;conception](../conception/) pour s'asurer de la bonne voie sur laquelle on s'engage.
+3. Assimiler les [critères&nbsp;de&nbsp;conception](../conception/) pour s'assurer de la bonne voie sur laquelle on s'engage.
 
 4. Pour les [développeurs](../developpement/), ne pas hésiter à se créer des projets vierges en n'y incorporant que la partie impactant la fonctionnalité désirée afin de s'assurer qu'elle est parfaitement fonctionnelle et que seul l'environnement au sein de laquelle elle va être introduite risque éventuellement d'altérer son comportement.
 
@@ -63,7 +63,7 @@ Ci-dessous, quelques critères importants à tester impérativement&nbsp;:
 - **réduire le floutage et la transparence** : victime de problèmes visuels, une personne peut rapidement trouver les effets de flou et de transparence très inconfortables.
 Il faut donc vérifier que l'[atténuation&nbsp;proposée&nbsp;par&nbsp;le&nbsp;système](../wwdc/2018/230/#floutage-et-transparence-0307) est bien prise en compte sur les pages applicatives où ces effets sont implémentés,
 
-- **mode sombre** : le résultat graphique de cette *fonctionnalité iOS 13* doit absolument être vérifié pour s'assurer que les différents contrastes de couleurs utilisées sont conformes aux critères de conception, sans oublier l'option d'accessibilité [augmenter&nbsp;le&nbsp;contraste](../conception/#options-daccessibilite) qui est aussi un élément incontournable à vérifer dans ce contexte.
+- **mode sombre** : le résultat graphique de cette *fonctionnalité iOS 13* doit absolument être vérifié pour s'assurer que les différents contrastes de couleurs utilisées sont conformes aux critères de conception, sans oublier l'option d'accessibilité [augmenter&nbsp;le&nbsp;contraste](../conception/#options-daccessibilite) qui est aussi un élément incontournable à vérifier dans ce contexte.
 
 <br>
 
@@ -75,7 +75,7 @@ En plus de ces critères fondamentaux, il y a bien évidemment les incontournabl
 
 3. [Contrôle&nbsp;de&nbsp;sélection](#controle-de-selection)
 
-![](../../images/ios-test-overview.png)
+![](../../images/ios-test-overview.png)https://a11y-guidelines.orange.com/fr/web/tester/#test-contenu-textuelévaluat
 ### Dynamic Type
 
 Pour bien comprendre comment le grossissement de texte fonctionne, il est fortement recommandé de visionner l'exemple proposé dans la [vidéo&nbsp;WWDC&nbsp;2017](../wwdc/2017/245/#exemple-2432) parfaitement résumée dans la partie WWDC de ce site.
