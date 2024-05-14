@@ -86,7 +86,7 @@ La navigation se fait de la même manière que pour un clavier sur desktop, touc
 
 Des combinaisons sont également spécifiques à l'environnement mobile iOS :
 
-  ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f3e1bb95-27dc-47ce-9b16-fa89a91079e8)
+  ![Shift+TAB pour afficher l'aide, Fn+H pour revenir à l'accueil, Fn+flèche haut pour sélecteur d'app, Fn+C pour centre de contrôle, Fn+N pour centre de notifications](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f3e1bb95-27dc-47ce-9b16-fa89a91079e8)
 
 4. La navigation clavier permet également de vérifier que l'ordre de navigation est respecté.
 5. Si le focus n'est pas assez visible, il est possible d'augmenter son contraste dans les paramètres de l'option
