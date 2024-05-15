@@ -13,7 +13,7 @@ Le projet utilise comme moteur Cypress et PlayWright et se compose de nombreux m
 * le moteur UUV ;
 * Un assistant pour écrire ses test en toute simplicité ;
 * Une extension pour l'IDE JetBrain	 ;
-* Un module UUV A11y -en cour) pour les auditeurs en accessibilité ;
+* Un module UUV A11y (en cours) pour les auditeurs en accessibilité ;
 * Un module pour Flutter.
 
 Disponible sur le projet [gitHub UUV](https://github.com/Orange-OpenSource/uuv). 
