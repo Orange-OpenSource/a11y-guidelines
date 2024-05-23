@@ -212,13 +212,13 @@
 <h2 id="pre-requis-fondamentaux">Pré-requis fondamentaux <a class="header-anchor" href="#pre-requis-fondamentaux" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ol>
 <li>
-<p>Consacrer le temps nécessaire à la maîtrise de la gestuelle (<a href="../voiceover/">VoiceOver</a>, contrôle de sélection).</p>
+<p>Consacrer le temps nécessaire à la maîtrise de la gestuelle (<a href="../voiceover/">guide d'utilisation de VoiceOver)</a>, contrôle de sélection).</p>
 </li>
 <li>
-<p>Visionner les exemples d'utilisation fournis dans les <a href="../wwdc/">vidéos WWDC</a>.</p>
+<p>Visionner les exemples d'utilisation fournis dans les <a href="../wwdc/">vidéos WWDC (Apple Worldwide Developers Conference)</a>.</p>
 </li>
 <li>
-<p>Assimiler les <a href="../conception/">critères de conception</a> pour s'asurer de la bonne voie sur laquelle on s'engage.</p>
+<p>Assimiler les <a href="../conception/">critères de conception</a> pour s'assurer de la bonne voie sur laquelle on s'engage.</p>
 </li>
 <li>
 <p>Pour les <a href="../developpement/">développeurs</a>, ne pas hésiter à se créer des projets vierges en n'y incorporant que la partie impactant la fonctionnalité désirée afin de s'assurer qu'elle est parfaitement fonctionnelle et que seul l'environnement au sein de laquelle elle va être introduite risque éventuellement d'altérer son comportement.</p>
@@ -274,11 +274,11 @@ Ce mode vient aussi souvent confirmer et solutionner certains problèmes fonctio
 Il faut donc vérifier que l'<a href="../wwdc/2018/230/#floutage-et-transparence-0307">atténuation proposée par le système</a> est bien prise en compte sur les pages applicatives où ces effets sont implémentés,</p>
 </li>
 <li>
-<p><strong>mode sombre</strong> : le résultat graphique de cette <em>fonctionnalité iOS 13</em> doit absolument être vérifié pour s'assurer que les différents contrastes de couleurs utilisées sont conformes aux critères de conception, sans oublier l'option d'accessibilité <a href="../conception/#options-daccessibilite">augmenter le contraste</a> qui est aussi un élément incontournable à vérifer dans ce contexte.</p>
+<p><strong>mode sombre</strong> : le résultat graphique de cette <em>fonctionnalité iOS 13</em> doit absolument être vérifié pour s'assurer que les différents contrastes de couleurs utilisées sont conformes aux critères de conception, sans oublier l'option d'accessibilité <a href="../conception/#options-daccessibilite">augmenter le contraste</a> qui est aussi un élément incontournable à vérifier dans ce contexte.</p>
 </li>
 </ul>
 <br>
-<p>En plus de ces critères fondamentaux, il y a bien évidemment les incontournables iOS pour qualifer à minima une application d'accessible :</p>
+<p>En plus de ces critères fondamentaux, il y a bien évidemment les incontournables iOS pour qualifier à minima une application d'accessible :</p>
 <ol>
 <li>
 <p><a href="#dynamic-type">Dynamic Type</a> (grossissement de texte)</p>
@@ -290,7 +290,7 @@ Il faut donc vérifier que l'<a href="../wwdc/2018/230/#floutage-et-transparence
 <p><a href="#controle-de-selection">Contrôle de sélection</a></p>
 </li>
 </ol>
-<p><img src="../../images/ios-test-overview.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-overview.png" alt="Principales options d'accessibilité sur iOS : options utilisateurs, raccourcis &amp; Siri, mode sombre, grossissement de texte, lecteur d'écran, contrôle de sélection" class="img-fluid"></p>
 <h3 id="dynamic-type">Dynamic Type <a class="header-anchor" href="#dynamic-type" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <p>Pour bien comprendre comment le grossissement de texte fonctionne, il est fortement recommandé de visionner l'exemple proposé dans la <a href="../wwdc/2017/245/#exemple-2432">vidéo WWDC 2017</a> parfaitement résumée dans la partie WWDC de ce site.</p>
 <p>Afin de prendre en compte un panel conséquent de terminaux, il est conseillé de réaliser les tests sur plusieurs terminaux de taille différente avec lesquels <strong>chaque page devra être visualisée</strong>.</p>
@@ -307,12 +307,12 @@ Il faut donc vérifier que l'<a href="../wwdc/2018/230/#floutage-et-transparence
 </li>
 </ul>
 <br>
-<p><img src="../../images/ios-test-DynamicType.png" alt="" class="img-fluid"><br>
+<p><img src="../../images/ios-test-DynamicType.png" alt="curseur complètement à gauche : seuil le plus bas sans accessibilité, curseur au milieu : seuil le plus haut sans accessibilité, curseur complètement à droite : seuil le plus haut avec accessibilité" class="img-fluid"><br>
 Enfin, les quelques points suivants sont à examiner minutieusement :</p>
 <ul>
 <li>la <strong>troncature '...' est à éviter</strong> pour laisser place à la coupure du mot impacté identifiée par un trait d'union en fin de phrase,</li>
 </ul>
-<p><img src="../../images/ios-test-DynamicType_2.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-DynamicType_2.png" alt="Exemple de troncature : première ligne &quot;Synchronisa-&quot; et deuxième ligne &quot;tion Wifi&quot;" class="img-fluid"></p>
 <ul>
 <li>
 <p><strong>les illustrations comme les icônes doivent s'adapter au grossissement souhaité</strong> : l'utilisation du <a href="../wwdc/2019/261/">Large Content Viewer</a> après un appui long, l'implémentation d'un pinch à 2 doigts afin d’éviter à l’utilisateur d’avoir recours à la fonctionnalité <code>Zoom</code> ou encore le simple <a href="../developpement/#taille-des-elements-graphiques">grossissement d'un élément graphique</a> peuvent être des solutions selon les cas rencontrés,</p>
@@ -357,13 +357,13 @@ Enfin, les quelques points suivants sont à examiner minutieusement :</p>
 <div class="tab-pane show active"
      id="VoiceOver-iOS15"
      role="tabpanel">
-<p><img src="../../images/ios-test-VO_iOS15.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-VO_iOS15.png" alt="Sur iOS 15 : activer Voice Over à partir du menu Réglages-Accessibilité-Voice Over" class="img-fluid"></p>
 </div>
 <div class="tab-pane" id="VoiceOver-iOS13" role="tabpanel">
-<p><img src="../../images/ios-test-VO_iOS13.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-VO_iOS13.png" alt="Sur iOS 13 : activer Voice Over à partir du menu Réglages-Accessibilité-Voice Over" class="img-fluid"></p>
 </div>
 <div class="tab-pane" id="VoiceOver-iOS12" role="tabpanel" >
-<p><img src="../../images/ios-test-VO_iOS12.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-VO_iOS12.png" alt="Sur iOS 12 : activer Voice Over à partir du menu Général-Accessibilité-Voice Over" class="img-fluid"></p>
 </div></div>
 <p><br>Pour aboutir à une parfaite implémentation de VoiceOver, il ne faut surtout pas croire que chaque élément doit absolument être vocalisé et se contenter de passer au suivant pour renouveler cette opération : ce type de réalisation est tout sauf productif !</p>
 <p>Il faut bien avoir à l'esprit que l'<strong>information</strong> diffusée visuellement est assimilée en très peu de temps alors que celle fournie par le lecteur d'écran arrive de façon <strong>séquentielle</strong> à la vitesse de sélections successives d'éléments : un <strong>effort énorme de mémorisation</strong> est à fournir pour avoir une vision synoptique de l'écran et comprendre réellement ce qui est proposé.</p>
@@ -420,17 +420,17 @@ Cette opération est particulièrement utile lors de <strong>premiers tests sur 
 <div class="tab-pane show active"
      id="SwitchControl-iOS15"
      role="tabpanel">
-<p><img src="../../images/ios-test-SwitchControl_iOS15.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-SwitchControl_iOS15.png" alt="Sur iOS 15 : activer Contrôle de sélection à partir du menu Réglages-Accessibilité-Contrôle de sélection" class="img-fluid"></p>
 </div>
 <div class="tab-pane" id="SwitchControl-iOS13" role="tabpanel">
-<p><img src="../../images/ios-test-SwitchControl_iOS13.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-SwitchControl_iOS13.png" alt="Sur iOS 13 : activer Contrôle de sélection à partir du menu Réglages-Accessibilité-Contrôle de sélection" class="img-fluid"></p>
 </div>
 <div class="tab-pane" id="SwitchControl-iOS12" role="tabpanel" >
-<p><img src="../../images/ios-test-SwitchControl_iOS12.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-SwitchControl_iOS12.png" alt="Sur iOS 12 : activer Contrôle de sélection à partir du menu Général-Accessibilité-Contrôle de sélection" class="img-fluid"></p>
 </div></div>
 <br>
 <h2 id="evaluation-technique">Évaluation technique <a class="header-anchor" href="#evaluation-technique" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>Comme son nom l'indique, cette partie requiert des connaissances plus ou moins pointues selon ce que l'on souhaite vérifer.<br>
+<p>Comme son nom l'indique, cette partie requiert des connaissances plus ou moins pointues selon ce que l'on souhaite vérifier.<br>
 <br></p>
 <h3 id="contraste-des-couleurs">Contraste des couleurs <a class="header-anchor" href="#contraste-des-couleurs" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <p>Graphiquement, <a href="../conception/#couleurs">le contraste des couleurs</a> est très certainement le plus facilement vérifiable grâce à certains logiciels à installer en local par exemple (Colour Contrast Analyzer...).</p>
