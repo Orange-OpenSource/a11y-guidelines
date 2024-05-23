@@ -16,11 +16,11 @@ Que ce soit dans la conception, la réalisation ou la vérification, chaque déc
 <br><br>
 ## Pré-requis fondamentaux
 
-1. Consacrer le temps nécessaire à la maîtrise de la gestuelle ([VoiceOver](../voiceover/), contrôle de sélection).
+1. Consacrer le temps nécessaire à la maîtrise de la gestuelle ([guide d'utilisation de VoiceOver)](../voiceover/), contrôle de sélection).
 
-2. Visionner les exemples d'utilisation fournis dans les [vidéos&nbsp;WWDC](../wwdc/).
+2. Visionner les exemples d'utilisation fournis dans les [vidéos&nbsp;WWDC (Apple Worldwide Developers Conference)](../wwdc/).
 
-3. Assimiler les [critères&nbsp;de&nbsp;conception](../conception/) pour s'asurer de la bonne voie sur laquelle on s'engage.
+3. Assimiler les [critères&nbsp;de&nbsp;conception](../conception/) pour s'assurer de la bonne voie sur laquelle on s'engage.
 
 4. Pour les [développeurs](../developpement/), ne pas hésiter à se créer des projets vierges en n'y incorporant que la partie impactant la fonctionnalité désirée afin de s'assurer qu'elle est parfaitement fonctionnelle et que seul l'environnement au sein de laquelle elle va être introduite risque éventuellement d'altérer son comportement.
 
@@ -63,11 +63,11 @@ Ci-dessous, quelques critères importants à tester impérativement&nbsp;:
 - **réduire le floutage et la transparence** : victime de problèmes visuels, une personne peut rapidement trouver les effets de flou et de transparence très inconfortables.
 Il faut donc vérifier que l'[atténuation&nbsp;proposée&nbsp;par&nbsp;le&nbsp;système](../wwdc/2018/230/#floutage-et-transparence-0307) est bien prise en compte sur les pages applicatives où ces effets sont implémentés,
 
-- **mode sombre** : le résultat graphique de cette *fonctionnalité iOS 13* doit absolument être vérifié pour s'assurer que les différents contrastes de couleurs utilisées sont conformes aux critères de conception, sans oublier l'option d'accessibilité [augmenter&nbsp;le&nbsp;contraste](../conception/#options-daccessibilite) qui est aussi un élément incontournable à vérifer dans ce contexte.
+- **mode sombre** : le résultat graphique de cette *fonctionnalité iOS 13* doit absolument être vérifié pour s'assurer que les différents contrastes de couleurs utilisées sont conformes aux critères de conception, sans oublier l'option d'accessibilité [augmenter&nbsp;le&nbsp;contraste](../conception/#options-daccessibilite) qui est aussi un élément incontournable à vérifier dans ce contexte.
 
 <br>
 
-En plus de ces critères fondamentaux, il y a bien évidemment les incontournables iOS pour qualifer à minima une application d'accessible&nbsp;:
+En plus de ces critères fondamentaux, il y a bien évidemment les incontournables iOS pour qualifier à minima une application d'accessible&nbsp;:
 
 1. [Dynamic Type](#dynamic-type) (grossissement&nbsp;de&nbsp;texte)
 
@@ -75,7 +75,7 @@ En plus de ces critères fondamentaux, il y a bien évidemment les incontournabl
 
 3. [Contrôle&nbsp;de&nbsp;sélection](#controle-de-selection)
 
-![](../../images/ios-test-overview.png)
+![Principales options d'accessibilité sur iOS : options utilisateurs, raccourcis & Siri, mode sombre, grossissement de texte, lecteur d'écran, contrôle de sélection](../../images/ios-test-overview.png)
 ### Dynamic Type
 
 Pour bien comprendre comment le grossissement de texte fonctionne, il est fortement recommandé de visionner l'exemple proposé dans la [vidéo&nbsp;WWDC&nbsp;2017](../wwdc/2017/245/#exemple-2432) parfaitement résumée dans la partie WWDC de ce site.
@@ -92,12 +92,12 @@ Trois types de grossissement peuvent être particulièrement étudiés de façon
 
 <br>
 
-![](../../images/ios-test-DynamicType.png)
+![curseur complètement à gauche : seuil le plus bas sans accessibilité, curseur au milieu : seuil le plus haut sans accessibilité, curseur complètement à droite : seuil le plus haut avec accessibilité](../../images/ios-test-DynamicType.png)
 Enfin, les quelques points suivants sont à examiner minutieusement&nbsp;:
 
 - la **troncature '...' est à éviter** pour laisser place à la coupure du mot impacté identifiée par un trait d'union en fin de phrase,
 
-![](../../images/ios-test-DynamicType_2.png)
+![Exemple de troncature : première ligne "Synchronisa-" et deuxième ligne "tion Wifi"](../../images/ios-test-DynamicType_2.png)
 
 - **les illustrations comme les icônes doivent s'adapter au grossissement souhaité**&nbsp;: l'utilisation du [Large&nbsp;Content&nbsp;Viewer](../wwdc/2019/261/) après un appui long, l'implémentation d'un pinch à 2 doigts afin d’éviter à l’utilisateur d’avoir recours à la fonctionnalité `Zoom` ou encore le simple [grossissement&nbsp;d'un&nbsp;élément&nbsp;graphique](../developpement/#taille-des-elements-graphiques) peuvent être des solutions selon les cas rencontrés,
 
@@ -144,17 +144,17 @@ Il est donc **très fortement recommandé** de connaître au moins les gestes de
      id="VoiceOver-iOS15"
      role="tabpanel">
     
-![](../../images/ios-test-VO_iOS15.png)
+![Sur iOS 15 : activer Voice Over à partir du menu Réglages-Accessibilité-Voice Over](../../images/ios-test-VO_iOS15.png)
 
 </div>
 <div class="tab-pane" id="VoiceOver-iOS13" role="tabpanel">
     
-![](../../images/ios-test-VO_iOS13.png)
+![Sur iOS 13 : activer Voice Over à partir du menu Réglages-Accessibilité-Voice Over](../../images/ios-test-VO_iOS13.png)
 
 </div>
 <div class="tab-pane" id="VoiceOver-iOS12" role="tabpanel" >
     
-![](../../images/ios-test-VO_iOS12.png)
+![Sur iOS 12 : activer Voice Over à partir du menu Général-Accessibilité-Voice Over](../../images/ios-test-VO_iOS12.png)
 
 </div></div>
 
@@ -220,22 +220,22 @@ Remarque&nbsp;: l'activation de cette fonctionnalité se fait elle aussi via les
      id="SwitchControl-iOS15"
      role="tabpanel">
     
-![](../../images/ios-test-SwitchControl_iOS15.png)
+![Sur iOS 15 : activer Contrôle de sélection à partir du menu Réglages-Accessibilité-Contrôle de sélection](../../images/ios-test-SwitchControl_iOS15.png)
 </div>
 <div class="tab-pane" id="SwitchControl-iOS13" role="tabpanel">
     
-![](../../images/ios-test-SwitchControl_iOS13.png)
+![Sur iOS 13 : activer Contrôle de sélection à partir du menu Réglages-Accessibilité-Contrôle de sélection](../../images/ios-test-SwitchControl_iOS13.png)
 </div>
 <div class="tab-pane" id="SwitchControl-iOS12" role="tabpanel" >
 
-![](../../images/ios-test-SwitchControl_iOS12.png)
+![Sur iOS 12 : activer Contrôle de sélection à partir du menu Général-Accessibilité-Contrôle de sélection](../../images/ios-test-SwitchControl_iOS12.png)
 </div></div>
 
 <br>
 
 ## Évaluation technique
 
-Comme son nom l'indique, cette partie requiert des connaissances plus ou moins pointues selon ce que l'on souhaite vérifer.
+Comme son nom l'indique, cette partie requiert des connaissances plus ou moins pointues selon ce que l'on souhaite vérifier.
 <br>
 ### Contraste des couleurs
 
