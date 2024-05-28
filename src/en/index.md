@@ -30,4 +30,7 @@ We offer training, publish resources for digital stakeholders, support projects 
   <li class="list-inline-item pb-2">
     <a href="glossary/" class="btn btn-secondary btn-sm">Glossary</a>
   </li>
+    <li class="list-inline-item pb-2">
+    <a href="en/articles/fact-sheet-accessibility/#fact-sheets-list/" class="btn btn-secondary btn-sm">Fact sheets</a>
+  </li>
 </ul>
