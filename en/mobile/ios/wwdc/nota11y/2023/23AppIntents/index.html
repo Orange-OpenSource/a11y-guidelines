@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js">
+  <head>
+    <meta charset="utf-8">    
+    <title>App Intents, App Shortcuts and Spotlight - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    
+    <meta name="description" content="Learn how to design your shortcut to appear as a top hit in Spotlight.">
+            
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Skip links - Switch language">
+   <div class="container-lg">
+      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <a href="#main-menu" class="nav-link">Go to menu</a>
+    </li><li class="nav-item">
+      <a href="#main-content" class="nav-link">Go to content</a>
+    </li><li class="nav-item hidden-if-no-js">
+      <a href="#search-input" class="nav-link">Go to search</a>
+    </li><li class="nav-item">
+      <a href="#footer" class="nav-link">Go to footer</a>
+    </li></ul>
+
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+    </div>
+  </nav>
+  
+  
+
+<div class="navbar navbar-dark bg-dark navbar-expand-md">
+  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web  <span class="visually-hidden">Menu</span> 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link active" aria-current="true">
+  iOS 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication 
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link">
+  Articles 
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/en/mobile/ios/design/" class="nav-link">
+  Design 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/development/" class="nav-link">
+  Develop 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/test/" class="nav-link">
+  Test 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
+  Audit 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/toolbox/" class="nav-link">
+  Toolbox 
+</a>
+            </li><li class="nav-item">
+              <a href="/en/mobile/ios/wwdc/" class="nav-link active" aria-current="true">
+  WWDC 
+</a>
+            </li></ul>
+  </div>
+</nav>
+</header>
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a href="/en/mobile/ios/">iOS</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a href="/en/mobile/ios/wwdc/">WWDC</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          App Intents, App Shortcuts and Spotlight
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#design" class="dropdown-item text-wrap">Design</a><a href="#app-shortcuts" class="dropdown-item text-wrap">App Shortcuts</a><a href="#basics" class="dropdown-item text-wrap">Basics</a><a href="#intent-shortcut" class="dropdown-item text-wrap">Intent &amp; shortcut</a><a href="#entity-query" class="dropdown-item text-wrap">Entity &amp; query</a><a href="#implementation" class="dropdown-item text-wrap">Implementation</a><a href="#discovery" class="dropdown-item text-wrap">Discovery</a><a href="#ios-17-enhancements" class="dropdown-item text-wrap">iOS 17 enhancements</a><a href="#demo" class="dropdown-item text-wrap">Demo</a><a href="#string-catalog" class="dropdown-item text-wrap">String Catalog</a><a href="#tips-tricks" class="dropdown-item text-wrap">Tips &amp; tricks</a><a href="#results-across-devices" class="dropdown-item text-wrap">Results across devices</a><a href="#app-intents" class="dropdown-item text-wrap">App Intents</a><a href="#widgets" class="dropdown-item text-wrap">Widgets</a><a href="#developer-experience" class="dropdown-item text-wrap">Developer experience</a><a href="#shortcuts-app-integration" class="dropdown-item text-wrap">Shortcuts app integration</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+            
+          <div class="mt-4">
+          <h1>WWDC 2023: App Intents, App Shortcuts and Spotlight</h1>
+<p>Find hereafter a detailed summary of the hereunder named videos that belong to a <a href="../../">taxonomy of some WWDC footages</a>.</p>
+<p>The original ones are available on the <strong>Apple official website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2023/10102/">session 10102</a>, <a href="https://developer.apple.com/videos/play/wwdc2023/10103/">session 10103</a> and <a href="https://developer.apple.com/videos/play/wwdc2023/10193/">session 10193</a>).</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_Poster.png" alt="" class="img-fluid"></p>
+<p>&quot;Discover how to <strong>use App Shortcuts</strong> to surface frequently used features from your app in Spotlight or through Siri. Find out how to <strong>configure search results</strong> for your app and <strong>learn best practices</strong> for creating great App Shortcuts. We'll also show you how to <strong>build great visual and voice experiences</strong> and extend to other Apple devices like Apple Watch and HomePod.&quot;</p>
+<p>&quot;Explore the <strong>latest updates</strong> and learn how you can take advantage of dynamic options and user interactivity to <strong>build better experiences for your App Shortcuts</strong>. We'll share how you can integrate with Apple Pay, structure your code more efficiently, and take your Shortcuts app integration to the next level.&quot;</p>
+<p>&quot;Learn about the <strong>latest updates</strong> to the visual language of App Shortcuts and find out how to <strong>design your shortcut</strong> to appear as a top hit in Spotlight. We'll share how shortcuts can appear on iOS or iPadOS, and show you how to <strong>customize the visual appearance of a shortcut</strong>, personalize its order, select its correct behavior, and <strong>increase discoverability</strong>.&quot;</p>
+<p></br>Hereafter, the underlined elements <strong>lead directly to the playback of the WWDC video</strong> at the appropriate moment.</br></p>
+<h2 id="design"><a href="https://developer.apple.com/videos/play/wwdc2023/10193/?time=44">Design</a> <a class="header-anchor" href="#design" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_1.png" alt="" class="img-fluid"></p>
+<p><strong>Three main principles</strong> come to mind when dealing with the design for <code>Spotlight</code>.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotDesignPrinciple1"
+           id="AppIntShortSpotDesignPrinciple1_tab"
+           role="tab" 
+           aria-selected="true">Principle&nbsp;#1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotDesignPrinciple2"
+           id="AppIntShortSpotDesignPrinciple2_tab"
+           role="tab" 
+           aria-selected="false">Principle&nbsp;#2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotDesignPrinciple3"
+           id="AppIntShortSpotDesignPrinciple3_tab"
+           role="tab" 
+           aria-selected="false">Principle&nbsp;#3</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="AppIntShortSpotDesignPrinciple1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the first principle when designing shortcuts for spotlight" href="https://developer.apple.com/videos/play/wwdc2023/10193/?time=95">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_3.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppIntShortSpotDesignPrinciple2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the second principle when designing shortcuts for spotlight" href="https://developer.apple.com/videos/play/wwdc2023/10193/?time=122">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_4.png" alt="" class="img-fluid"><br>
+<img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_5.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppIntShortSpotDesignPrinciple3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the third principle when designing shortcuts for spotlight" href="https://developer.apple.com/videos/play/wwdc2023/10193/?time=150">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_6.png" alt="" class="img-fluid"></p>
+<p><strong><a href="https://developer.apple.com/videos/play/wwdc2023/10193/?time=182">Personalizing the app shortcuts</a></strong> through the decisions made by the users is also a good mean to improve the predictability.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_7.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<p>In <code>iOS</code> <code>17</code>, starting any search with the <code>Search</code> utility makes it easy to render apps and their shortcuts as well nearby in the top hit as in the <code>Shortcuts</code> app.<br>
+<img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_2.png" alt="" class="img-fluid"></p>
+<p>Few areas should be analyzed in depth regarding the design with <code>Spotlight</code>.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotDesign1"
+           id="AppIntShortSpotDesign1_tab"
+           role="tab" 
+           aria-selected="true">Creation</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotDesign2"
+           id="AppIntShortSpotDesign2_tab"
+           role="tab" 
+           aria-selected="false">Colors</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotDesign3"
+           id="AppIntShortSpotDesign3_tab"
+           role="tab" 
+           aria-selected="false">Behavior</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotDesign4"
+           id="AppIntShortSpotDesign4_tab"
+           role="tab" 
+           aria-selected="false">Discovery</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="AppIntShortSpotDesign1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the creation" href="https://developer.apple.com/videos/play/wwdc2023/10193/?time=253">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_9.png" alt="" class="img-fluid"></p>
+<p>Once the concepts of <strong>action</strong> and <strong>entity</strong> are integrated,  it's crucial to <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10193/?time=290">avert truncations</a></strong> in the names...</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_8.png" alt="" class="img-fluid"><br>
+... and to <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10193/?time=312">maintain a coherence</a></strong> between the shapes of the shortcuts.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_10.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppIntShortSpotDesign2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the colors" href="https://developer.apple.com/videos/play/wwdc2023/10193/?time=366">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_11.png" alt="" class="img-fluid"></p>
+<p>While the background color of the <code>Top</code> <code>Hit</code> in <code>Spotlight</code> may be customized and spread to the <code>Shortcuts</code> app, it's also possible to supply a <a href="https://developer.apple.com/videos/play/wwdc2023/10193/?time=393">secondary tint color</a> to the symbols for highlighting a <strong>two-tone appearance</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_12.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppIntShortSpotDesign3" role="tabpanel">
+<p><strong><a href="https://developer.apple.com/videos/play/wwdc2023/10193/?time=428">App Launch</a></strong>, <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10193/?time=438">Live Activity</a></strong> and <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10193/?time=452">Snippet</a></strong> are the possible options to be followed according to the appropriate screen where it's suggested to the user.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_13.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppIntShortSpotDesign4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the discovery" href="https://developer.apple.com/videos/play/wwdc2023/10193/?time=503">🎬</a></p>
+<p>To make the <code>App Shortcuts</code> discoverable in <code>Spotlight</code>, it's important to <strong>write phrase synonyms</strong> to tailor and direct the search.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_14.png" alt="" class="img-fluid"></p>
+<p>Providing <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10193/?time=531">app name synonyms</a></strong> may be a good mean for some specific situations as well.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_15.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h2 id="app-shortcuts">App Shortcuts <a class="header-anchor" href="#app-shortcuts" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h3 id="basics"><a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=48">Basics</a> <a class="header-anchor" href="#basics" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_16.png" alt="" class="img-fluid"></p>
+<p>Made to ease the app's functionality discovery, the <code>App Shortcuts</code> may be reached from <a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=68">various tools</a> and leads to a high range of <a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=85">outcomes</a> through its usage.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_17.png" alt="" class="img-fluid"></p>
+<h4 id="intent-shortcut"><a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=154">Intent &amp; shortcut</a> <a class="header-anchor" href="#intent-shortcut" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_19.png" alt="" class="img-fluid"></p>
+<p>A <strong>basic app shortcut</strong> is <a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=193">easy to be implemented</a> by following the creations of the <strong>app intent</strong> and the <strong>app shortcut</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_18.png" alt="" class="img-fluid"></p>
+<h4 id="entity-query">Entity &amp; query <a class="header-anchor" href="#entity-query" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>To dive deeper into the possible opportunities, it's important to understand the concepts of <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=333">entities</a></strong> and <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=361">queries</a></strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_20.png" alt="" class="img-fluid"></p>
+<p>Once implemented, the <a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=389">entity</a> and the <a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=421">query</a> elements' code writing leads to an <a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=440">upgraded version</a> of the previous example.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_21.png" alt="" class="img-fluid"></p>
+<h4 id="implementation"><a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=451">Implementation</a> <a class="header-anchor" href="#implementation" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Expanding the previous example to a broader range including <code>Siri</code> and <code>Spotlight</code> gives rise to an <strong>app shortcut implementation</strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_22.png" alt="" class="img-fluid"></p>
+<p>The <a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=603">result</a> relies on the <strong>mandatory notion of updating</strong> the <code>App</code> <code>Shortcut</code> parameters.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_23.png" alt="" class="img-fluid"></p>
+<h4 id="discovery">Discovery <a class="header-anchor" href="#discovery" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p>Finally, the main two ways for finding out the <code>App Shortcuts</code> through the device is based on <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=622">Spotlight</a></strong> and <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=659">Siri Tips</a></strong>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_24.png" alt="" class="img-fluid"><br>
+</br></p>
+<h3 id="ios-17-enhancements"><a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=713">iOS 17 enhancements</a> <a class="header-anchor" href="#ios-17-enhancements" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_25.png" alt="" class="img-fluid"></p>
+<p>New <code>API</code>s have been introduced to support and develop the <code>iOS</code> <code>17</code> features that relate many areas.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_26.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotEnh1"
+           id="AppIntShortSpotEnh1_tab"
+           role="tab" 
+           aria-selected="true">1</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotEnh2"
+           id="AppIntShortSpotEnh2_tab"
+           role="tab" 
+           aria-selected="false">2</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotEnh3"
+           id="AppIntShortSpotEnh3_tab"
+           role="tab" 
+           aria-selected="false">3</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotEnh4"
+           id="AppIntShortSpotEnh4_tab"
+           role="tab" 
+           aria-selected="false">4</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotEnh5"
+           id="AppIntShortSpotEnh5_tab"
+           role="tab" 
+           aria-selected="false">5
+    </a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotEnh6"
+           id="AppIntShortSpotEnh6_tab"
+           role="tab" 
+           aria-selected="false">6</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotEnh7"
+           id="AppIntShortSpotEnh7_tab"
+           role="tab" 
+           aria-selected="false">7</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="AppIntShortSpotEnh1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the colors" href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=775">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_27.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppIntShortSpotEnh2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the entity and thumbnails" href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=789">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_28.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppIntShortSpotEnh3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the titles and the symbols" href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=814">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_29.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppIntShortSpotEnh4" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding siri " href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=827">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_30.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppIntShortSpotEnh5" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the synonyms" href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=911">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_31.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppIntShortSpotEnh6" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the negative phrases" href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=950">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_32.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppIntShortSpotEnh7" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the xcode preview feature" href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=970">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_33.png" alt="" class="img-fluid"></p>
+<p>Check out the <a href="#demo">next section</a> for a better understanding of this <strong>App Shortcuts Preview</strong> new feature of <code>Xcode</code>.</p>
+</div>
+</div>
+</br>
+</br>
+<h4 id="demo"><a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=999">Demo</a> <a class="header-anchor" href="#demo" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_34.png" alt="" class="img-fluid"></p>
+<p>Testing the app in another language like <a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=1090">Mandarin</a> becomes easier when using this <code>Xcode</code> new feature.<br>
+</br></p>
+<h4 id="string-catalog"><a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=1121">String Catalog</a> <a class="header-anchor" href="#string-catalog" aria-labelledby="a11y_heading_anchor_label">#</a></h4>
+<p><code>iOS</code> <code>17</code> brings many enhancements to localize the <code>App Shortcuts</code> trigger phrases.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_37.png" alt="" class="img-fluid"></p>
+<p>The <code>String</code> <code>Catalog</code> format introduced in <code>iOS</code> <code>17</code> is easy to be implemented in your app whatever <code>App Shortcuts</code> has already been integrated or not.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotStrCat1"
+           id="AppIntShortSpotStrCat1_tab"
+           role="tab" 
+           aria-selected="true">New</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotStrCat2"
+           id="AppIntShortSpotStrCat2_tab"
+           role="tab" 
+           aria-selected="false">Migration</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="AppIntShortSpotStrCat1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the creation of a new string catalog" href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=1156">🎬</a></p>
+<p>Creating a new file from your app in <code>Xcode</code> gives rise to the opportunity of building some localized files based on the <code>String</code> <code>Catalog</code> format.<br>
+<img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_35.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppIntShortSpotStrCat2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the migration to the new string catalog" href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=1185">🎬</a></p>
+<p>If the <code>App</code> <code>Shortcuts</code> is already integrated, it's quite easy to migrate the <code>AppShortcuts.strings</code> file to <code>String</code> <code>Catalog</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_36.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h3 id="tips-tricks"><a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=1220">Tips &amp; tricks</a> <a class="header-anchor" href="#tips-tricks" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_38.png" alt="" class="img-fluid"></p>
+<p>It's essential to keep in mind the <code>App</code> <code>Shortcuts</code>' <a href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=1258">limitations</a> that could lessen the impact of <code>Siri</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_39.png" alt="" class="img-fluid"></p>
+</br>
+<h3 id="results-across-devices">Results across devices <a class="header-anchor" href="#results-across-devices" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotDevices1"
+           id="AppIntShortSpotDevices1_tab"
+           role="tab" 
+           aria-selected="true">Apple&nbsp;Watch</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotDevices2"
+           id="AppIntShortSpotDevices2_tab"
+           role="tab" 
+           aria-selected="false">HomePod</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="AppIntShortSpotDevices1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the behavior with the apple watch" href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=1325">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_40.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppIntShortSpotDevices2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the behavior with the homepod" href="https://developer.apple.com/videos/play/wwdc2023/10102/?time=1373">🎬</a></p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_41.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+<h2 id="app-intents">App Intents <a class="header-anchor" href="#app-intents" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><code>App intents</code> are made to expose an app’s capabilities to the system through actions that need the <code>AppIntent</code> protocol approval for their creations and the <code>App Shortcuts</code> with <code>Siri</code> to be highlighted.</p>
+<h3 id="widgets">Widgets <a class="header-anchor" href="#widgets" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The <strong>widget <a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=69">configuration</a></strong> provides more customization for the user programatically inserted inside the <a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=106"><code>Widget</code> extension code</a>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_48.png" alt="" class="img-fluid"></p>
+<p><strong><a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=233">Migrate</a></strong> the existing widgets from <code>SiriKit</code> to <code>App Intents</code> becomes easier thanks to <code>Xcode</code> <code>15</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_49.png" alt="" class="img-fluid"></p>
+<p>The widget <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=341">interactivity</a></strong> is highly improved by the buttons and toggles whose actions can be fired through this interface.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_50.png" alt="" class="img-fluid"></p>
+<p></br>Advanced techniques for configuration also come in with <code>iOS</code> <code>17</code>.</p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#AppIntWidgetsAdvTech1"
+           id="AppIntWidgetsAdvTech1_tab"
+           role="tab" 
+           aria-selected="true">Dynamic&nbsp;options</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntWidgetsAdvTech2"
+           id="AppIntWidgetsAdvTech2_tab"
+           role="tab" 
+           aria-selected="false">Array&nbsp;size</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntWidgetsAdvTech3"
+           id="AppIntWidgetsAdvTech3_tab"
+           role="tab" 
+           aria-selected="false">Smooth&nbsp;user&nbsp;activity</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="AppIntWidgetsAdvTech1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the dynamic options" href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=479">🎬</a></p>
+<p>Aimed at accessing the parameters from the <code>Intents</code>, the <strong>dynamic options</strong> interface comes in with a new <strong>IntentParameterDependency</strong> property wrapper that can be used within <code>DynamicOptionsProvider</code> or <code>Query</code>.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_51.png" alt="" class="img-fluid"></p>
+<p>This dependency might also rely on <a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=604">multiple parameters</a>.</p>
+</div>
+<div class="tab-pane" id="AppIntWidgetsAdvTech2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the array size" href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=650">🎬</a></p>
+<p>Define an <strong>array size</strong> during declaration is now possible while refining which one of these parameters should be displayed according to some conditions.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_52.png" alt="" class="img-fluid"></p>
+</div>
+<div class="tab-pane" id="AppIntWidgetsAdvTech3" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding how to continue the user activity" href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=765">🎬</a></p>
+<p>The action to be performed when a tap occurs on the widget relies on the <strong>widgetConfigurationIntent</strong> method call on the user activity to reach the associated configuration <code>Intent</code> and navigate through the app as desired.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_53.png" alt="" class="img-fluid"></p>
+<p>Note that the new <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=812">RelevantContext</a></strong> type that specifies conditions for relevance regarding the <code>Widget</code> suggestions is the way to follow to optimize the widgets' <code>Smart Stacks</code>.</p>
+</div>
+</div>
+</br>
+</br>
+<h3 id="developer-experience">Developer experience <a class="header-anchor" href="#developer-experience" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>The <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=890">framework support</a></strong> has been enhanced to become more flexible through the new <strong>AppIntentsPackage</strong> protocol to make app intent declarations directly available with the framework.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_54.png" alt="" class="img-fluid"></p>
+<p></br>Instead of defining the <code>App Shortcuts</code> in the main app bundle, it's now possible to create an <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=1047">AppShortcutsProvider</a></strong> and define <code>App Shortcuts</code> in the <code>App Intents</code> extensions thus avoiding to launch the app in the background when its <code>App Shortcut</code> is running.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_55.png" alt="" class="img-fluid"></p>
+<p>The hereabove enhancements are based on the process of data <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=1088">static extraction</a></strong> that has been improved in <code>Xcode</code> <code>15</code> to keep on executing an <code>Intent</code> in the app even if it was initially started in background.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_59.png" alt="" class="img-fluid"></p>
+<p></br>Besides the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=1310">support for Apple Pay</a></strong>, two <code>iOS</code> <code>17</code> significant improvements have been inserted into <code>App Intents</code>.<br>
+<img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_58.png" alt="" class="img-fluid"></p>
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a class="nav-link active"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotImp1"
+           id="AppIntShortSpotImp1_tab"
+           role="tab" 
+           aria-selected="true">ForegroundContinuableIntent</a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a class="nav-link"
+           data-bs-toggle="tab" 
+           href="#AppIntShortSpotImp2"
+           id="AppIntShortSpotImp2_tab"
+           role="tab" 
+           aria-selected="false">RequestToContinueInForeground</a>
+    </li>
+    </ul>
+<div class="tab-content">
+<div class="tab-pane show active" id="AppIntShortSpotImp1" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the ForegroundContinuableIntent protocol" href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=1151">🎬</a></p>
+<p>The <strong>ForegroundContinuableIntent</strong> protocol is the way to follow if it's necessary to keep on executing an <code>Intent</code> in the foreground while it was started in the background.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_56.png" alt="" class="img-fluid"></p>
+<p>The <strong>needsToContinueInForegroundError</strong> method should be used when it's required to <strong>stop the <code>Intent</code> execution</strong> and to perform an action to carry on in the foreground.</p>
+</div>
+<div class="tab-pane" id="AppIntShortSpotImp2" role="tabpanel">
+<p><a alt="Click to playback the footage at the appropriate moment regarding the requestToContinueInForeground method" href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=1233">🎬</a></p>
+<p>As an instance method of the <code>ForegroundContinuableIntent</code> protocol, the <strong>requestToContinueInForeground</strong> should be used when it's asked to the user to continue execution in the foreground without stopping the <code>Intent</code> execution.</p>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_57.png" alt="" class="img-fluid"></p>
+</div>
+</div>
+</br>
+</br>
+<h3 id="shortcuts-app-integration"><a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=1351">Shortcuts app integration</a> <a class="header-anchor" href="#shortcuts-app-integration" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_47.png" alt="" class="img-fluid"><br>
+As the foundation to make an app's functionality revealed through <code>Siri</code> and <code>App Shortcuts</code>, the <strong><code>App Intents</code> usage</strong> relies on the following good practice:</p>
+<ol>
+<li>It's important to get into the habit of using the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=1414">parameter summary</a></strong> to expose clearer information to the user.</li>
+</ol>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_42.png" alt="" class="img-fluid"></p>
+<p>When <code>App Intents</code> should be used in specific circumstances and not opened to the whole app, using the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=1437">isDiscoverable</a></strong> type property is appropriate if it deals with a <strong>widget</strong> or a <strong>button</strong> in a <code>SwiftUI</code> app.<br>
+Introduced in <code>iOS</code> <code>17</code> as a boolean value, the goal of this element is to determine whether <code>Shortcuts</code> and <code>Spotlight</code> can <strong>discover an app intent</strong>.</p>
+<ol start="2">
+<li>The <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=1500">ProgressReportingIntent</a></strong> protocol has been introduced in order to <strong>report progress to the system during its execution</strong>.</li>
+</ol>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_43.png" alt="" class="img-fluid"></p>
+<ol start="3">
+<li>The <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=1542">EnumerableEntityQuery</a></strong> protocol now supersedes the <code>EntityPropertyQuery</code> protocol introduced in <code>iOS</code> <code>16</code> for a simpler and a more scalable search usage even if special attention should be paid to some <a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=1631">significant cases</a>.</li>
+</ol>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_44.png" alt="" class="img-fluid"></p>
+<ol start="4">
+<li>A new <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=1654">resultValueName</a></strong> property has been added to the <code>IntentDescription</code> structure so as to be displayed in the <code>Shortcuts</code> editor as a variable output for instance.</li>
+</ol>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_45.png" alt="" class="img-fluid"></p>
+<ol start="5">
+<li><code>iOS</code> <code>17</code> provides the opportunity to add an <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10103/?time=1707">Intent description</a></strong> for the <code>Find actions</code> whatever the query protocol.</li>
+</ol>
+<p><img src="../../../../../images/iOSdev/wwdc23-AppIntShortSpot_46.png" alt="" class="img-fluid"><br>
+</br></p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#design" class="nav-link text-muted">Design</a></li><li class="nav-item position-relative">
+            <a href="#app-shortcuts" class="nav-link text-muted">App Shortcuts</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#basics" class="nav-link text-muted">Basics</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#intent-shortcut" class="nav-link text-muted">Intent &amp; shortcut</a></li><li class="nav-item position-relative">
+            <a href="#entity-query" class="nav-link text-muted">Entity &amp; query</a></li><li class="nav-item position-relative">
+            <a href="#implementation" class="nav-link text-muted">Implementation</a></li><li class="nav-item position-relative">
+            <a href="#discovery" class="nav-link text-muted">Discovery</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#ios-17-enhancements" class="nav-link text-muted">iOS 17 enhancements</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#demo" class="nav-link text-muted">Demo</a></li><li class="nav-item position-relative">
+            <a href="#string-catalog" class="nav-link text-muted">String Catalog</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#tips-tricks" class="nav-link text-muted">Tips &amp; tricks</a></li><li class="nav-item position-relative">
+            <a href="#results-across-devices" class="nav-link text-muted">Results across devices</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#app-intents" class="nav-link text-muted">App Intents</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#widgets" class="nav-link text-muted">Widgets</a></li><li class="nav-item position-relative">
+            <a href="#developer-experience" class="nav-link text-muted">Developer experience</a></li><li class="nav-item position-relative">
+            <a href="#shortcuts-app-integration" class="nav-link text-muted">Shortcuts app integration</a></li></ul></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About 
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed 
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility 
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify 
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/nota11y/2023/23AppIntents.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: false
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
