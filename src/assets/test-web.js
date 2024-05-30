@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             ongoingTests: 'ongoing tests',
             noResults: 'No results match your selection',
             withCurrentFilters: 'with current filters',
-            reinitFilters: 'Reinit <span class="visually-hidden">&nbsp;filters</span>'
+            reinitFilters: 'Reinit <span class="visually-hidden">&nbsp;filters</span>',
+            filtersTitle: 'Go to filters'
         },
         'fr': {
             process: "Procédures",
@@ -38,7 +39,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             ongoingTests: 'tests en cours',
             noResults: 'Aucun résultat ne correspond à votre sélection',
             withCurrentFilters: 'dans les filtres en cours',
-            reinitFilters: 'Réinitialiser <span class="visually-hidden">&nbsp;les filtres</span>'
+            reinitFilters: 'Réinitialiser <span class="visually-hidden">&nbsp;les filtres</span>',
+            filtersTitle: 'Aller aux filtres'
         }
     }
 
@@ -334,6 +336,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             // Retourne la liste des checkboxes
             this.DisplayFilters = function () {
+
+                // Manage the link to filters in the avoidance links
+                const avoidanceLinks = document.getElementById('avoidanceLinks');
+                const filtersLink = document.createElement('li');
+                if (avoidanceLinks) {
+                    filtersLink.innerHTML = `<a href="#filter" class="nav-link">`+ translate('filtersTitle') + `</a>`;
+                    filtersLink.classList.add("nav-item");
+                    avoidanceLinks.appendChild(filtersLink);
+                }
+                window.addEventListener('beforeunload', function(event) {
+                    avoidanceLinks.removeChild(filtersLink);
+                });
+
                 let elFilterFooter = document.getElementById('filter-footer');
                 let htmlFilterFooter = '';
                 htmlFilterFooter += '<button id="reinit" class="btn btn-secondary hidden">' + translate('reinitFilters') + '</button>';
