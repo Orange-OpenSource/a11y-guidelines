@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 let test = nbTests > 1 ? 'tests' : 'test'
 
                 if (activeFilter) {
-                    elBtnReinit.disabled = false;
+                    elBtnReinit.classList.remove('hidden');
                     htmlFeedback = '<p><div><b>' + nbTests + '</b> ' + test + ' ' + translate('withCurrentFilters') + '</div> <button type="button" class="btn btn-secondary btn-sm mt-2 mb-3" id="reinitLink">' + translate('reinitFilters') + '</a></p>';
                     elFeedback.innerHTML = htmlFeedback;
 
@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
                 } else {
-                    elBtnReinit.disabled = true;
+                    elBtnReinit.classList.add('hidden');
                     htmlFeedback = '<p><b>' + nbTests + '</b> ' + translate('ongoingTests') + '</p>';
                     elFeedback.innerHTML = htmlFeedback;
                 }
@@ -336,7 +336,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
             this.DisplayFilters = function () {
                 let elFilterFooter = document.getElementById('filter-footer');
                 let htmlFilterFooter = '';
-                htmlFilterFooter += '<button id="reinit" class="btn btn-secondary" disabled>' + translate('reinitFilters') + '</button>';
+                htmlFilterFooter += '<button id="reinit" class="btn btn-secondary hidden">' + translate('reinitFilters') + '</button>';
                 elFilterFooter.innerHTML = htmlFilterFooter;
                 let elBtnReinit = document.getElementById('reinit');
 

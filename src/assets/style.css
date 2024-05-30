@@ -531,3 +531,7 @@ pre code {
     color: #fff;
     letter-spacing: -.00625rem;
 }
+
+.hidden {
+    display: none;
+}
