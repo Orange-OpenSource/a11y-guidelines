@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
 {% import "../../_includes/components/ui.njk" as ui with context %}
 {% set posts = collections.articles_en | reverse %}
 
-<h1 aria-live="polite"><span id="filtersbar_counter" class="hidden-if-no-js">{{ posts | length }}</span>&nbsp;Technical articles <span id="search_title"></span></h1>
+<h1 aria-live="polite"><span id="filtersbar_counter" class="hidden-if-no-js">{{ posts | length }}</span><span id="search_title"></span></h1>
 <div class="d-flex col-md-5">
       <input type="search" id="search-article-text" placeholder="Search for an article" aria-label="Search for an article" class="form-control">
       <button class="btn btn-primary btn-inverse" id="search_article" aria-label="Launch the search for an article" title="Launch the search for an article">
