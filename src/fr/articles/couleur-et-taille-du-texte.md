@@ -38,7 +38,7 @@ Le référentiel n'impose pas d'utiliser ni même n'interdit l'utilisation de ce
 &nbsp;
 Le [critère 1.4.3 du référentiel](https://www.w3.org/TR/WCAG21/#contrast-minimum) impose des niveaux de contraste minimums permettant de garantir un confort de lecture suffisant. 
 
-Pour les textes standards : 
+Pour les textes standards (non gras) : 
 - de taille inférieure à 24px : contraste de 4,5:1 minimum
 - de taille supérieure ou égale à 24px : contraste de 3:1 minimum
 
