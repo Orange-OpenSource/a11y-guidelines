@@ -212,10 +212,10 @@
 <h2 id="fundamental-prerequisites">Fundamental prerequisites <a class="header-anchor" href="#fundamental-prerequisites" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
 <ol>
 <li>
-<p>Spend as much time as necessary to perfectly control the gestures (<a href="../voiceover/">VoiceOver</a>, Switch Control).</p>
+<p>Spend as much time as necessary to perfectly control the gestures (<a href="../voiceover/">VoiceOver user guide</a>, Switch Control).</p>
 </li>
 <li>
-<p>Watch the examples provided by the <a href="../wwdc/">WWDC videos</a>.</p>
+<p>Watch the examples provided by the <a href="../wwdc/">WWDC (Apple Worldwide Developers Conference) videos</a>.</p>
 </li>
 <li>
 <p>Assimilate the <a href="../design/">design criteria</a> to be sure that you're following the appropriate working path.</p>
@@ -289,7 +289,7 @@ These effects can be weakened by the system thanks to an <a href="../wwdc/2018/2
 <p><a href="#switch-control">Switch Control</a></p>
 </li>
 </ol>
-<p><img src="../../images/ios-test-overview.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-overview.png" alt="Main accessibility options on iOS: user settings, shortcuts &amp; Siri, dark mode, Dynamic type, Voice Over, Switch control" class="img-fluid"></p>
 <h3 id="dynamic-type">Dynamic Type <a class="header-anchor" href="#dynamic-type" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
 <p>To understand how this feature works, it's highly recommended to watch the example in this <a href="../wwdc/2017/245/#example-2432">WWDC 2017 video</a> that is detailed in the WWDC part of this site.</p>
 <p>Tests should be made with devices having different screen sizes in order to <strong>imperatively check every page</strong>.</p>
@@ -306,12 +306,12 @@ These effects can be weakened by the system thanks to an <a href="../wwdc/2018/2
 </li>
 </ul>
 <br>
-<p><img src="../../images/ios-test-DynamicType.png" alt="" class="img-fluid"><br>
+<p><img src="../../images/ios-test-DynamicType.png" alt="cursor on the very left: lowest threshold without accessibility, cursor on the middle: highest threshold without accessibility, cursor on the very right: highest threshold with accessibility" class="img-fluid"><br>
 The following points must be thoroughly checked:</p>
 <ul>
 <li>The <strong>truncation '...' mustn't be used</strong> and should be replaced by a hyphen at the end of the sentence.</li>
 </ul>
-<p><img src="../../images/ios-test-DynamicType_2.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-DynamicType_2.png" alt="Example of truncation: first line &quot;Accomoda-&quot; and second line &quot;tions&quot;" class="img-fluid"></p>
 <ul>
 <li>
 <p><strong>Illustration and icon sizes must be adapted to the magnification</strong>: use of the <a href="../wwdc/2019/261/">Large Content Viewer</a> feature, a two fingers pinch implementation to avoid the <code>Zoom</code> native feature trigger or only a <a href="../development/#graphical-elements-size">graphical element magnification</a> are possible solutions according to the context.</p>
@@ -356,13 +356,13 @@ The following points must be thoroughly checked:</p>
 <div class="tab-pane show active"
      id="VoiceOver-iOS15"
      role="tabpanel">
-<p><img src="../../images/ios-test-VO_iOS15.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-VO_iOS15.png" alt="On iOS 15: activate Voice Over from the Settings-Accessibility-Voice Over menu" class="img-fluid"></p>
 </div>
 <div class="tab-pane" id="VoiceOver-iOS13" role="tabpanel">
-<p><img src="../../images/ios-test-VO_iOS13.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-VO_iOS13.png" alt="On iOS 13: activate Voice Over from the Settings-Accessibility-Voice Over menu" class="img-fluid"></p>
 </div>
 <div class="tab-pane" id="VoiceOver-iOS12" role="tabpanel" >
-<p><img src="../../images/ios-test-VO_iOS12.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-VO_iOS12.png" alt="On iOS 12: activate Voice Over from the General-Accessibility-Voice Over menu" class="img-fluid"></p>
 </div></div>
 <p><br>Don't believe that every element must be absolutely vocalized one after another: that's definitely the proper way to get a VoiceOver implementation that is anything but effective!</p>
 <p>Keep in mind that the visual <strong>information</strong> is assimilated very quickly while the screen reader <strong>sequentially</strong> provides this information at the speed of successive selections of elements: a <strong>huge effort</strong> is necessary to get a synoptic vision of the screen and really understand what's offered.</p>
@@ -418,13 +418,13 @@ The following points must be thoroughly checked:</p>
 <div class="tab-pane show active"
      id="SwitchControl-iOS15"
      role="tabpanel">
-<p><img src="../../images/ios-test-SwitchControl_iOS15.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-SwitchControl_iOS15.png" alt="On iOS 15: enable Switch Control from the Settings-Accessibility-Switch Control menu" class="img-fluid"></p>
 </div>
 <div class="tab-pane" id="SwitchControl-iOS13" role="tabpanel">
-<p><img src="../../images/ios-test-SwitchControl_iOS13.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-SwitchControl_iOS13.png" alt="On iOS 13: enable Switch Control from the General-Accessibility-Switch Control menu" class="img-fluid"></p>
 </div>
 <div class="tab-pane" id="SwitchControl-iOS12" role="tabpanel" >
-<p><img src="../../images/ios-test-SwitchControl_iOS12.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/ios-test-SwitchControl_iOS12.png" alt="On iOS 12: enable Switch Control from the Settings-Accessibility-Switch Control menu" class="img-fluid"></p>
 </div></div>
 <br>
 <h2 id="technical-review">Technical review <a class="header-anchor" href="#technical-review" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
