@@ -30,7 +30,7 @@ The guidelines do not require the use or even prohibit the use of certain colors
 
 [Criterion 1.4.3 of the standard](https://www.w3.org/TR/WCAG21/#contrast-minimum) details the required contrast levels.
 
-For standard texts:
+For standard texts (not bold):
 - size less than 24px: contrast of 4.5:1 minimum
 - size greater than or equal to 24px: contrast of 3:1 minimum
 
