@@ -19,9 +19,9 @@ Whatever the design, implementation or testing area, **every decision** must be 
 
 ## Fundamental prerequisites
 
-1. Spend as much time as necessary to perfectly control the gestures ([VoiceOver](../voiceover/), Switch Control).
+1. Spend as much time as necessary to perfectly control the gestures ([VoiceOver user guide](../voiceover/), Switch Control).
 
-2. Watch the examples provided by the [WWDC&nbsp;videos](../wwdc/).
+2. Watch the examples provided by the [WWDC(Apple Worldwide Developers Conference)&nbsp;videos](../wwdc/).
 
 3. Assimilate the [design&nbsp;criteria](../design/) to be sure that you're following the appropriate working path.
 
@@ -76,7 +76,7 @@ Besides these basic criteria, there are also fundamental requirements for an acc
 
 3. [Switch&nbsp;Control](#switch-control)
 
-![](../../images/ios-test-overview.png)
+![Main accessibility options on iOS: user settings, shortcuts & Siri, dark mode, Dynamic type, Voice Over, Switch control](../../images/ios-test-overview.png)
 ### Dynamic Type
 To understand how this feature works, it's highly recommended to watch the example in this [WWDC&nbsp;2017&nbsp;video](../wwdc/2017/245/#example-2432) that is detailed in the WWDC part of this site.
 
@@ -92,12 +92,12 @@ Three zoom levels must be particularly scanned to determine the visual behavior 
 
 <br>
 
-![](../../images/ios-test-DynamicType.png)
+![cursor on the very left: lowest threshold without accessibility, cursor on the middle: highest threshold without accessibility, cursor on the very right: highest threshold with accessibility](../../images/ios-test-DynamicType.png)
 The following points must be thoroughly checked:
 
 - The **truncation '...' mustn't be used** and should be replaced by a hyphen at the end of the sentence.
 
-![](../../images/ios-test-DynamicType_2.png)
+![Example of truncation: first line "Accomoda-" and second line "tions"](../../images/ios-test-DynamicType_2.png)
 
 - **Illustration and icon sizes must be adapted to the magnification**: use of the [Large&nbsp;Content&nbsp;Viewer](../wwdc/2019/261/) feature, a two fingers pinch implementation to avoid the `Zoom` native feature trigger or only a [graphical&nbsp;element&nbsp;magnification](../development/#graphical-elements-size) are possible solutions according to the context.
 
@@ -144,15 +144,15 @@ It's **highly recommended** to know the basic gestures before activating this fe
      id="VoiceOver-iOS15"
      role="tabpanel">
     
-![](../../images/ios-test-VO_iOS15.png)
+![On iOS 15: activate Voice Over from the Settings-Accessibility-Voice Over menu](../../images/ios-test-VO_iOS15.png)
 </div>
 <div class="tab-pane" id="VoiceOver-iOS13" role="tabpanel">
     
-![](../../images/ios-test-VO_iOS13.png)
+![On iOS 13: activate Voice Over from the Settings-Accessibility-Voice Over menu](../../images/ios-test-VO_iOS13.png)
 </div>
 <div class="tab-pane" id="VoiceOver-iOS12" role="tabpanel" >
     
-![](../../images/ios-test-VO_iOS12.png)
+![On iOS 12: activate Voice Over from the General-Accessibility-Voice Over menu](../../images/ios-test-VO_iOS12.png)
 </div></div>
 
 <br>Don't believe that every element must be absolutely vocalized one after another: that's definitely the proper way to get a VoiceOver implementation that is anything but effective!
@@ -216,15 +216,15 @@ Note: this feature can be (de)activated in the device user settings.
      id="SwitchControl-iOS15"
      role="tabpanel">
     
-![](../../images/ios-test-SwitchControl_iOS15.png)
+![On iOS 15: enable Switch Control from the Settings-Accessibility-Switch Control menu](../../images/ios-test-SwitchControl_iOS15.png)
 </div>
 <div class="tab-pane" id="SwitchControl-iOS13" role="tabpanel">
     
-![](../../images/ios-test-SwitchControl_iOS13.png)
+![On iOS 13: enable Switch Control from the General-Accessibility-Switch Control menu](../../images/ios-test-SwitchControl_iOS13.png)
 </div>
 <div class="tab-pane" id="SwitchControl-iOS12" role="tabpanel" >
 
-![](../../images/ios-test-SwitchControl_iOS12.png)
+![On iOS 12: enable Switch Control from the Settings-Accessibility-Switch Control menu](../../images/ios-test-SwitchControl_iOS12.png)
 </div></div>
 
 <br>
