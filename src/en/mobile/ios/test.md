@@ -21,7 +21,7 @@ Whatever the design, implementation or testing area, **every decision** must be 
 
 1. Spend as much time as necessary to perfectly control the gestures ([VoiceOver user guide](../voiceover/), Switch Control).
 
-2. Watch the examples provided by the [WWDC(Apple Worldwide Developers Conference)&nbsp;videos](../wwdc/).
+2. Watch the examples provided by the [WWDC (Apple Worldwide Developers Conference)&nbsp;videos](../wwdc/).
 
 3. Assimilate the [design&nbsp;criteria](../design/) to be sure that you're following the appropriate working path.
 
