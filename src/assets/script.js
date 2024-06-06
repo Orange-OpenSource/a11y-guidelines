@@ -173,6 +173,9 @@ function manageEventTabPan() {
         el.classList.add('active')
         el.setAttribute('aria-current', 'true')
         tagText = el.innerText
+        if (dataAttributeValue !== "all") {
+            el.focus();
+        }
     }
 
     const tagToFilter = (new URL(window.location)).searchParams.get('tag')
@@ -221,7 +224,7 @@ function manageEventTabPan() {
     searchArticleButton = document.getElementById("search_article");
     if (searchArticleButton !== null) {
 
-        this.updateTitle = function() {
+        this.updateTitle = function () {
             // Declare variables
             var input, filter, ol, li, titleArticle, i, descriptionArticle, compteurArticle;
             input = document.getElementById("search-article-text").value;
@@ -244,7 +247,7 @@ function manageEventTabPan() {
                     }
                 }
             }
-      document.getElementById("filtersbar_counter").innerText=compteurArticle;
+            document.getElementById("filtersbar_counter").innerText = compteurArticle;
 
             if (tagToFilter !== null) {
                 var tagText = document.getElementById('filtersbar').querySelector(`[data-tag="${tagToFilter}"]`).innerText;
