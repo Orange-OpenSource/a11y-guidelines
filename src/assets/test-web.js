@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             };
 
-            this.UpdateFeedback = function (activeFilter, nbTests) {
+            this.UpdateFeedback = function (activeFilter, nbTests, isRefresh) {
                 let elBtnReinit = document.getElementById('reinit');
                 let elFeedback = document.getElementById('feedback');
                 let htmlFeedback = '';
@@ -231,14 +231,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
                     elreinitLink.addEventListener('click', function () {
                         app.FetchAll(refTests);
                         app.FilterByType();
-                        app.UpdateFeedback(false, refTests.length);
+                        app.UpdateFeedback(false, refTests.length, true);
                     });
-
-
                 } else {
                     elBtnReinit.classList.add('hidden');
                     htmlFeedback = '<p><b>' + nbTests + '</b> ' + translate('ongoingTests') + '</p>';
                     elFeedback.innerHTML = htmlFeedback;
+                    if (isRefresh) {
+                        document.getElementById('profilAll').focus();
+                    }
                 }
 
             };
@@ -341,11 +342,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 const avoidanceLinks = document.getElementById('avoidanceLinks');
                 const filtersLink = document.createElement('li');
                 if (avoidanceLinks) {
-                    filtersLink.innerHTML = `<a href="#filter" class="nav-link">`+ translate('filtersTitle') + `</a>`;
+                    filtersLink.innerHTML = `<a href="#filter" class="nav-link">` + translate('filtersTitle') + `</a>`;
                     filtersLink.classList.add("nav-item");
                     avoidanceLinks.appendChild(filtersLink);
                 }
-                window.addEventListener('beforeunload', function(event) {
+                window.addEventListener('beforeunload', function (event) {
                     avoidanceLinks.removeChild(filtersLink);
                 });
 
@@ -358,7 +359,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 elBtnReinit.addEventListener('click', function () {
                     app.FetchAll(refTests);
                     app.FilterByType();
-                    app.UpdateFeedback(false, refTests.length);
+                    app.UpdateFeedback(false, refTests.length, true);
                 });
 
                 // Selection de l'élément
