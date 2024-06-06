@@ -120,7 +120,7 @@ Documents office :
     <h3 id="tele-ios">Téléchargement</h3>
     <p>      
       <a href="../../res/memos/ios/Memo-iOS-Orange.pdf" class="btn btn-secondary">
-        Télécharger au format PDF (263 Ko)
+        Télécharger au format PDF (1.7 Mo)
         <span class="visually-hidden">Mémo accessibilité développement iOS</span>
       </a>
     </p>
