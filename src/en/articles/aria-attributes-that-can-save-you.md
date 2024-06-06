@@ -49,7 +49,7 @@ At last, `aria-describedby' will add an accessible description in addition to th
 ## Examples
 
 <pre><code class="html">
-&lt;button aria-label="Access Hypertext markup language"&gt;html&lt;/button&gt;
+&lt;button aria-label="Access HTML (Hypertext markup language)"&gt;html&lt;/button&gt;
 </code></pre>
 Screen reader output: "Access Hypertext markup language"
 
