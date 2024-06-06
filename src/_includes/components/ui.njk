@@ -60,9 +60,6 @@
 {%- endmacro -%}
 
 {%- macro postsList(posts, filters = true, displayDate = true, displayTags = true) -%}
-{% if filters == true %}
-  {{ filtersBar(posts) }}
-{% endif %}
 <ol class="list-unstyled" id="list_article">
 {%- for post in posts %}{% if page.url != post.url -%}
   {% set tags = post.data.tags %}
