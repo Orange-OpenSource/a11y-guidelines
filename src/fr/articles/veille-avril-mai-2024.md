@@ -1,7 +1,7 @@
 ---
 title: "Veille #A11y Avril-Mai 2024"
 abstract: "Florilège de ressources en #a11y, Avril-Mai 2024"
-date: "2023-06-07"
+date: "2024-06-07"
 tags:
   - veille
 ---
