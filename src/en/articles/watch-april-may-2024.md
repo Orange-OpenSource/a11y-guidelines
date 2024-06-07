@@ -13,6 +13,7 @@ Here are some reactions:
 - https://www.deque.com/blog/w3c-unveils-174-new-outcomes-for-wcag-3-0/
 - https://cerovac.com/a11y/2024/05/perfect-timing-for-new-wcag-3-guideline-considerations/
 - https://www.w3.org/blog/2024/the-wcag-3-working-draft-update-is-ready-for-your-review/
+
 Let's not forget that May 16 was GAAD (Global Accessibility Awareness Day), everything is here: https://accessibility.day/
 But, even after 25 years of the release of WCAG 1.0, well https://cerovac.com/a11y/2024/05/wcag-after-quarter-of-a-century-we-still-need-more-awareness/
 good reading !

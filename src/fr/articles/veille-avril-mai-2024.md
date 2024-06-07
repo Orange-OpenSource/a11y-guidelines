@@ -1,12 +1,12 @@
 ---
-title: "Veille #A11y Avril-Mai 2023"
-abstract: "Florilège de ressources en #a11y, Avril-Mai 2023"
+title: "Veille #A11y Avril-Mai 2024"
+abstract: "Florilège de ressources en #a11y, Avril-Mai 2024"
 date: "2023-06-07"
 tags:
   - veille
 ---
 
-# Veille accessibilité numérique Avril-Mai 2023
+# Veille accessibilité numérique Avril-Mai 2024
 
 Tout d'abord, je vous encourage à saisir l'ARCOM si vous trouvez des sites pas accessibles ne respectant pas la loi : https://www.temesis.com/blog/saisir-larcom-concernant-laccessibilite-dun-site-est-ce-efficace/, car plus on sera nombreux plus cela aura du poids !
 Ensuite, sortie d'un draft de WCaG 3.0, c'est toujours attendu et scruté (en) : https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/ *
@@ -14,6 +14,7 @@ Voici quelques réactions (en) :
 - https://www.deque.com/blog/w3c-unveils-174-new-outcomes-for-wcag-3-0/ 
 - https://cerovac.com/a11y/2024/05/perfect-timing-for-new-wcag-3-guideline-considerations/ 
 - https://www.w3.org/blog/2024/the-wcag-3-working-draft-update-is-ready-for-your-review/
+
 N'oublions pas que le 16 mai, c'était le GAAD (Global Accessibility Awareness Day), tout est là (en) : https://accessibility.day/
 Mais même après 25 ans de la sortie des WCAG 1.0 ben (en) : https://cerovac.com/a11y/2024/05/wcag-after-quarter-of-a-century-we-still-need-more-awareness/
 bonne& lecture !
