@@ -8,7 +8,7 @@ tags:
 
 # Veille accessibilité numérique Avril-Mai 2024
 
-Tout d'abord, je vous encourage à saisir l'ARCOM si vous trouvez des sites pas accessibles ne respectant pas la loi : https://www.temesis.com/blog/saisir-larcom-concernant-laccessibilite-dun-site-est-ce-efficace/, car plus on sera nombreux plus cela aura du poids !
+Tout d'abord, je vous encourage à saisir l'ARCOM si vous trouvez des sites pas accessibles et donc ne respectant pas la loi : https://www.temesis.com/blog/saisir-larcom-concernant-laccessibilite-dun-site-est-ce-efficace/, car plus on sera nombreux plus cela aura du poids !
 Ensuite, sortie d'un draft de WCaG 3.0, c'est toujours attendu et scruté (en) : https://www.w3.org/WAI/standards-guidelines/wcag/wcag3-intro/ *
 Voici quelques réactions (en) :
 - https://www.deque.com/blog/w3c-unveils-174-new-outcomes-for-wcag-3-0/ 
@@ -48,7 +48,7 @@ bonne& lecture !
 - Un dashboard a11y de tests basé sur axe-core, sympa : https://www.temesis.com/blog/dashboard-des-tests-automatises-daccessibilite/
 - Tester l'a11y pour les créateurs de contenu (en) : https://blog.pope.tech/2024/04/01/a-complete-guide-for-content-creators-to-start-making-accessible-content/
 - Faire des tests utilisateurs a11y quand l'environnement ne l'est pas (en) : https://www.smashingmagazine.com/2024/04/conducting-accessibility-research-inaccessible-ecosystem/
-- Présentations des vantages/inconvénients  de quelques emblématiques outils et méthodes de tests d'a11y (en) : https://mn.gov/mnit/media/blog/?id=38-621624
+- Présentations des avantages/inconvénients  de quelques emblématiques outils et méthodes de tests d'a11y (en) : https://mn.gov/mnit/media/blog/?id=38-621624
 - MàJ des "easy checks" du W3c (en) : https://www.w3.org/WAI/test-evaluate/easy-checks/
 -	Conférence sur les solutions automatisées opensource (en) : https://www.youtube.com/watch?v=l-13Ic75zts
 - On l'a déjà dit mais les tests auto faut faire attention (en) : https://cerovac.com/a11y/2024/04/beware-automatic-tools-over-report-accessibility-issues-and-steal-your-time/
@@ -59,14 +59,14 @@ bonne& lecture !
 - Tout sur l'aria-label, un indispensable (en) : https://html5accessibility.com/stuff/2024/05/22/not-so-short-note-on-aria-label-usage-big-table-edition/
 - Quand utiliser tabindex="0" ? (en) : https://tetralogical.com/blog/2024/04/04/when-to-use-tabindex-0/
 - L'attribut popover, une biblio ay dedans : https://web.dev/blog/popover-api?hl=fr
-- Squarespace et a11y, où en est-onf ? (en) : https://theamycarney.com/2024/04/02/observations-on-squarespace-accessibility/
+- Squarespace et a11y, où en est-on ? (en) : https://theamycarney.com/2024/04/02/observations-on-squarespace-accessibility/
 - Aria-level, où en est-on ? (en) : https://adrianroselli.com/2024/05/level-setting-heading-levels.html
 - Aria mal fait, a11y toute pétée (en) : https://marcus.io/blog/best-intention-barriers-aria
 - Pourquoi WCAG 1.4.4 text resize est important (en) : https://scribe.rip/airbnb-engineering/rethinking-text-resizing-on-web-1047b12d2881
 -	Comment traiter une alternative textuelle longue ? En faisant court (en) : https://adrianroselli.com/2024/04/long-alt.html
-- Améliorer pas petits ajustements l'a11y (en) : https://brucelawson.co.uk/2024/drive-by-accessibility-tweaks/
-- Le s liens d'évitement, c'est bien (surtout quand ils sont visibles) (en) : https://cerovac.com/a11y/2024/04/wcag-bypass-blocks-skip-to-content-improve-user-interaction-speed-and-even-prevent-pain/
-- Le swipe une gestuelle basée sur un cheminement, ça depend du contexte sur(en) : https://www.tpgi.com/is-swiping-a-path-based-gesture/
+- Améliorer par petits ajustements l'a11y (en) : https://brucelawson.co.uk/2024/drive-by-accessibility-tweaks/
+- Les liens d'évitement, c'est bien (surtout quand ils sont visibles) (en) : https://cerovac.com/a11y/2024/04/wcag-bypass-blocks-skip-to-content-improve-user-interaction-speed-and-even-prevent-pain/
+- Le swipe une gestuelle basée sur un cheminement, ça depend du contexte (en) : https://www.tpgi.com/is-swiping-a-path-based-gesture/
 - Liens et boutons avec image, attention aux commandes vocales, à lire (en) : https://www.tempertemper.net/blog/images-as-the-first-thing-in-a-button-or-link
 
 ## Aides techniques
@@ -95,8 +95,8 @@ bonne& lecture !
 
 - Sous-titrer avec Youtube, le tutoriel (en) : https://blog.pope.tech/2024/05/24/a-complete-guide-for-adding-captions-to-youtube-videos/
 - Rendre a11y un PDF avec Acrobat, complet (en) : https://blog.pope.tech/2024/04/25/how-to-check-and-fix-pdf-accessibility-issues/
-- 16 lessons d'a11y pour le GAAD, essentiel (en) : https://www.semanticfish.com/gaad-2024/lessons
-- Podcasts a11y pour le GAA, sympa : https://ideance.net/blog/2117/podcasts-accessibilite-numerique-gaad/
+- 16 leçons d'a11y pour le GAAD, essentiel (en) : https://www.semanticfish.com/gaad-2024/lessons
+- Podcasts a11y pour le GAAD, sympa : https://ideance.net/blog/2117/podcasts-accessibilite-numerique-gaad/
 - Bien décrire une image, bien fait (en) : https://cloudfour.com/thinks/write-alt-text-like-youre-talking-to-a-friend/
 
 ## Autres
