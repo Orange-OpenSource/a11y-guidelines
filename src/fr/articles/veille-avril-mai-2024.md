@@ -58,7 +58,7 @@ bonne& lecture !
 
 - Tout sur l'aria-label, un indispensable (en) : https://html5accessibility.com/stuff/2024/05/22/not-so-short-note-on-aria-label-usage-big-table-edition/
 - Quand utiliser tabindex="0" ? (en) : https://tetralogical.com/blog/2024/04/04/when-to-use-tabindex-0/
-- L'attribut popover, une biblio ay dedans : https://web.dev/blog/popover-api?hl=fr
+- L'attribut popover, une biblio a11y dedans : https://web.dev/blog/popover-api?hl=fr
 - Squarespace et a11y, où en est-on ? (en) : https://theamycarney.com/2024/04/02/observations-on-squarespace-accessibility/
 - Aria-level, où en est-on ? (en) : https://adrianroselli.com/2024/05/level-setting-heading-levels.html
 - Aria mal fait, a11y toute pétée (en) : https://marcus.io/blog/best-intention-barriers-aria
