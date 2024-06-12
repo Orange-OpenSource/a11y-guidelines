@@ -340,9 +340,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                 // Manage the link to filters in the avoidance links
                 const avoidanceLinks = document.getElementById('avoidanceLinks');
+                const filtersTitle = document.getElementById('filtersTitle');
                 const filtersLink = document.createElement('li');
-                if (avoidanceLinks) {
-                    filtersLink.innerHTML = `<a href="#filter" class="nav-link">` + translate('filtersTitle') + `</a>`;
+                if (avoidanceLinks && !filtersTitle) {
+                    filtersLink.innerHTML = `<a id="filtersTitle" href="#filter" class="nav-link">` + translate('filtersTitle') + `</a>`;
                     filtersLink.classList.add("nav-item");
                     avoidanceLinks.appendChild(filtersLink);
                 }
