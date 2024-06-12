@@ -53,7 +53,7 @@ We also note the passage of WCAG2.2 to Candidate recommendation, the last step b
 - Form with read-only fields: https://equalentry.com/accessibility-lessons-context-sensitive-text-alternatives/
 - Visible focus and WCAG2.2, thoughts: https://yatil.net/blog/wcag22-visible-focus
 
-## Assistive Technologies 
+## Assistive technologies 
 
 - Do not change the default AT pronunciation: https://adrianroselli.com/2023/04/dont-override-screen-reader-pronunciation.html
 - A study on how screen reader users use mobiles: https://www.nngroup.com/articles/screen-reader-type-control/
