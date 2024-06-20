@@ -107,10 +107,9 @@ Enfin, les quelques points suivants sont à examiner minutieusement&nbsp;:
 
 Les **tests** à réaliser pour le `Dynamic Type` sont **assez longs** car plusieurs terminaux sont à étudier et chaque écran est à vérifier avec une modification de la taille du texte à faire pour chacun des écrans.
 
-<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562">
-    
-![Accès à la vidéo WWDC mentionnant l'importance du grossissement de texte dans un projet](../../images/ios-test-DynamicTypeWWDC.png)
+<div><q lang="en">My biggest tip is to think about these early on in the design process.</q><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562"> WWDC 2020 - Make Your App Visually Accessible (voir la vidéo)</a></div>
 <br><br>
+
 ### VoiceOver
 
 L'activation du lecteur d'écran natif change radicalement les résultats obtenus par les gestes standards effectués sur l’écran tactile, c'est pourquoi son utilisation demande un certain temps d'adaptation pour une maîtrise de sa [gestuelle&nbsp;spécifique](../voiceover/).

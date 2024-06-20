@@ -108,9 +108,10 @@ The following points must be thoroughly checked:
 All these **tests are quite long to be performed** because every screen is impacted with different devices including the changing of the text size inside each one of them.
 
 <a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562">
-    
-![Access to the WWDC video that explains the importance of the dynamic type feature as a major step in the project process](../../images/ios-test-DynamicTypeWWDC.png)
+
+<div><q lang="en">My biggest tip is to think about these early on in the design process.</q><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562"> WWDC 2020 - Make Your App Visually Accessible (watch the video)</a></div>
 <br><br>
+
 ### VoiceOver
 
 The iOS native screen reader activation drastically changes the visual behavior obtained with the common gestures, that's why its [control](../voiceover/) takes a little while.

@@ -60,9 +60,6 @@
 {%- endmacro -%}
 
 {%- macro postsList(posts, filters = true, displayDate = true, displayTags = true) -%}
-{% if filters == true %}
-  {{ filtersBar(posts) }}
-{% endif %}
 <ol class="list-unstyled" id="list_article">
 {%- for post in posts %}{% if page.url != post.url -%}
   {% set tags = post.data.tags %}
@@ -78,9 +75,9 @@
           {%- for tag in tags -%}
             {%- set tagTranslationKey = 'tags.' + tag -%}
             <li class="list-inline-item">
-              <a href="?tag={{ tag }}" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 {{ tagTranslationKey | translate }}
-              </a>
+              </p>
             </li>
           {%- endfor -%}
         </ul>

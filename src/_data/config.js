@@ -1,4 +1,5 @@
 const S = require('string')
+let headingCount = 0;
 
 module.exports = {
   environment: process.env.ELEVENTY_ENV,
@@ -20,9 +21,14 @@ module.exports = {
       level: 2,
       permalink: true,
       permalinkSymbol: '#',
-      permalinkAttrs: () => ({
-        'aria-labelledby': 'a11y_heading_anchor_label'
-      }),
+      permalinkAttrs: function(slug, state) {
+        headingCount++; // Incrémenter le compteur pour chaque titre
+        const uniqueId = `heading-${headingCount}`;
+        return {
+          'id': uniqueId,
+          'aria-labelledby': uniqueId
+        };
+      },
       slugify: str => S(str).slugify().toString()
     }
   },
