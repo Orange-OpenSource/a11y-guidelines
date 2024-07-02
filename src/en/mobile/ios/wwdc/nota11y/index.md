@@ -18,8 +18,6 @@ Most of the illustrations are parts of the Apple presentations and may be availa
 
 The videos that may be of interest to **designers** are highlighted with a **dedicated mark** at the end of their names.
 
-If you're willing to be informed of the most recent added detailed summaries, please send your email address to **wwdc(point)summaries(arobase)orange(point)com**.
-
 <section id="refTests"></section>
 
 <section class="visually-hidden" id="wwdcTests" aria-hidden="true">
