@@ -107,7 +107,7 @@ Enfin, les quelques points suivants sont à examiner minutieusement&nbsp;:
 
 Les **tests** à réaliser pour le `Dynamic Type` sont **assez longs** car plusieurs terminaux sont à étudier et chaque écran est à vérifier avec une modification de la taille du texte à faire pour chacun des écrans.
 
-<div><q lang="en">My biggest tip is to think about these early on in the design process.</q><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562"> WWDC 2020 - Make Your App Visually Accessible (voir la vidéo)</a></div>
+<div><q lang="en">My biggest tip is to think about these early on in the design process.</q>&nbsp;<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562"><span lang="en">WWDC 2020 - Make Your App Visually Accessible</span> (voir la vidéo)</a></div>
 <br><br>
 
 ### VoiceOver

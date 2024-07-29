@@ -12,10 +12,8 @@ Each one of these features should be seen as an important **human-made** element
 
 Whatever the design, implementation or testing area, **every decision** must be particularly **empathetic** to provide the best user experience.
 
-<a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=56">
-    
-![access to the WWDC video that explains the importance of the accessibility implementation as a major step in the project process](../../images/ios-test-AuditsWWDC.png)
-
+<div><q>[...] an accessible product is a high-quality product.</q>&nbsp;<a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=56">WWDC 2023 - Perform Accessibility Audits For Your App (Watch the video)</a></div>
+<br><br>
 
 ## Fundamental prerequisites
 
@@ -107,9 +105,7 @@ The following points must be thoroughly checked:
 
 All these **tests are quite long to be performed** because every screen is impacted with different devices including the changing of the text size inside each one of them.
 
-<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562">
-
-<div><q lang="en">My biggest tip is to think about these early on in the design process.</q><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562"> WWDC 2020 - Make Your App Visually Accessible (watch the video)</a></div>
+<div><q>My biggest tip is to think about these early on in the design process.</q>&nbsp;<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562">WWDC 2020 - Make Your App Visually Accessible (watch the video)</a></div>
 <br><br>
 
 ### VoiceOver
