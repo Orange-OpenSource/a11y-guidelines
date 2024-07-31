@@ -153,7 +153,7 @@ Dans ce cas, l'utilisation de l'option d'accessibilité <button class="btn btn-l
     
 - La couleur ne doit jamais être le seul canal de transmission d’une information, d’indication d’une action, de sollicitation d’une réponse ou de distinction d’un élément.
 
-- Le contraste entre les couleurs de texte et de fond doit aussi être suffisant (à calculer avec <span lang="en">Colour&nbsp;Contrast&nbsp;Analyzer</span> ou avec la fonctionnalité [Color&nbsp;Contrast&nbsp;Calculator](../wwdc/2019#contraste-des-couleurs-0626) de l'outil <span lang="en">Accessibility&nbsp;Inspector</span> depuis Xcode 11).
+- Le contraste entre les couleurs de texte et de fond doit aussi être suffisant (à calculer avec <span lang="en">Colour&nbsp;Contrast&nbsp;Analyzer</span> ou avec la fonctionnalité [<span lang="en">Color&nbsp;Contrast&nbsp;Calculator</span>](../wwdc/2019#contraste-des-couleurs-0626) de l'outil <span lang="en">Accessibility&nbsp;Inspector</span> depuis Xcode 11).
 
 - Avec l'arrivée du **Mode Sombre** en iOS 13, une attention toute particulière doit être portée sur les contrastes utilisés au sein des différents thèmes et pouvant être modifiés avec l'option d'accessibilité <button class="btn btn-link" onclick="tabPanelFocus('a11yOptions-Description_tab','a11yOptions-Description')">augmenter&nbsp;le&nbsp;contraste</button>.
 

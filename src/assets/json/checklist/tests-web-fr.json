@@ -15,8 +15,8 @@
 }, {
 	"themes": "Contenu textuel", 
     "title": "Donner des titres aux rubriques", 
-    "type": [["HeadingsMap"], ["ANDI"]], 
-    "tests": [["Utiliser HeadingsMap"],["Utiliser ANDI/Structures/Headings"]],  
+    "type": [["<span lang='en'>HeadingsMap</span>"], ["ANDI"]],
+    "tests": [["Utiliser <span lang='en'>HeadingsMap</span>"],["Utiliser ANDI/Structures/Headings"]],
     "verifier": ["Vérifier que les titres sont pertinents, reflètent le contenu de la page et sont non vides", "Vérifier que les titres ont un niveau correspondant à leur poids sémantique dans la structure de la page"], 
     "resultat": ["Tous les contenus, traités visuellement comme des titres, possèdent une sémantique de titre (balises <code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code>)", " Les titres de niveaux sont hiérarchisés de manière à refleter leur poids sémantique"], 
     "exception": "<p>Ne pas tenir compte des titres masqués (<code>visibility:hidden</code>, <code>aria-hidden='true'</code> ou <code>display:none</code>). Si un de ces titres masqués est susceptible d'apparaître, il faut refaire les observations sur la nouvelle structuration du titrage.</p>", 
@@ -225,8 +225,8 @@
 }, { 
 	"themes": "Couleurs et contrastes", 
 	"title": "Assurer un contraste suffisamment élevé entre texte et arrière-plan", 
-	"type": ["Color Contrast Analyser"], 
-	"tests": ["Lancer le Color Contrast Analyser"], 
+	"type": ["<span lang='en'>Color Contrast Analyser</span>"],
+	"tests": ["Lancer le <span lang='en'>Color Contrast Analyser</span>"],
 	"verifier": ["Vérifier que le contraste soit suffisant pour les textes et les textes sous forme d'images", "Vérifier que les liens non-soulignés ont un rapport de contraste suffisant avec le texte environnant et la couleur de fond"], 
 	"resultat": ["<strong>Présence d'éléments textuels ou images sous forme de texte suffisamment contrastés&nbsp;:</strong> <ul><li>Taille inférieure à <code>24px</code>&nbsp;: contraste de 4,5:1</li><li>Taille supérieure ou égale à <code>24px</code>&nbsp;: contraste de 3:1</li></ul></li><li><strong>Pour les textes gras</strong> <ul><li>Taille inférieure à <code>18,5px</code>&nbsp;: contraste de 4,5:1</li><li>Taille supérieure ou égale à <code>18,5px</code>&nbsp;: contraste de 3:1</li></ul>", "Les  liens non-soulignés ont un rapport de contraste de 3:1 avec le texte environnement et la couleur de fond"], 
 	"exception": "N'a pas d'exigence de contraste&nbsp;:<ul><li>Le texte ou les images de texte qui font partie d'un composant d'interface utilisateur inactif, qui sont une décoration pure, qui ne sont visibles par personne ou qui font partie d'une image qui contient un autre contenu visuel important,</li><li>Ainsi que du texte qui fait partie d'un logo ou un nom de marque ou tout logotype</li></ul>", 
@@ -239,8 +239,8 @@
 }, { 
 	"themes": "Couleurs et contrastes", 
 	"title": "Assurer un contraste suffisamment élevé dans les composants d'interface ou les éléments graphiques porteurs d'information", 
-	"type": ["Color Contrast Analyser"], 
-	"tests": ["Lancer le Color Contrast Analyser"], 
+	"type": ["<span lang='en'>Color Contrast Analyser</span>"],
+	"tests": ["Lancer le <span lang='en'>Color Contrast Analyser</span>"],
 	"verifier": ["Vérifier que les graphiques, les icônes, et les composants interactifs graphiques ont un contraste suffisant pour transmettre l'information"], 
 	"resultat": ["Présence d'objets graphiques, d'icônes, et de composants interactifs ayant un contraste de 3:1"], 
 	"exception": "Sont exclus du périmètre&nbsp;: <ul><li>les logos</li><li>un texte, comme un label, un tableau de données, apporte la même information que l’icône ou le graphique</li><li>le manque de contraste de l’image n'empêche pas la compréhension du contenu ou de sa fonction</li><li>le manque de contraste est essentiel pour convoyer l'information</li><li>les composants inactifs</li></ul>", 
@@ -267,7 +267,7 @@
 },{ 
 	"themes": "Couleurs et contrastes", 
 	"title": "S'assurer que l'information est transmise par un autre moyen que la couleur", 
-	"type": ["Color Contrast Analyser"], 
+	"type": ["<span lang='en'>Color Contrast Analyser</span>"],
 	"tests": ["Identifier les éléments utilisant de la couleur pour porter de l'information"], 
 	"verifier": ["Vérifier que la couleur n'est pas le seul moyen de convoyer d'information : <br/>au moins un autre moyen visuel est disponible pour obtenir la même information"], 
 	"resultat": ["L'information transmise par la couleur peut également être obtenue par un texte explicite", "L'information transmise par la couleur est complétée par une autre information visuelle (exemple : des icônes utilisent des couleurs, mais également des formes différentes)", "Cas particulier des liens dans du texte : s'ils ne sont pas soulignés, au focus clavier et au survol souris, fournir un autre moyen que la couleur pour les distinguer."], 
@@ -281,7 +281,7 @@
 }, { 	
 	"themes": "Couleurs et contrastes", 	
 	"title": "S'assurer que les liens sont identifiables par un autre moyen que la couleur", 	
-	"type": ["Color Contrast Analyser"], 	
+	"type": ["<span lang='en'>Color Contrast Analyser</span>"],
 	"tests": ["Parcourir la page", "Identifier les liens dans le corps du texte"], 	
 	"verifier": ["Vérifiez que les liens dans le corps du texte sont identifiables visuellement par un moyen autre que la couleur (souligné, gras, etc.) par rapport au reste du texte", "Si ce n'est pas le cas, s'assurer d'un contraste de 3:1 entre le texte, le fond et les liens et qu'il existe un autre moyen que la couleur pour les identifier au survol et au focus"], 	
 	"resultat": ["Les liens sont identifiables visuellement dans du texte par un autre moyen que la couleur ou par un rapport de contraste suffisant avec le corps du texte"], 	
@@ -420,7 +420,7 @@
 }, {
 	"themes": "Navigation générale",
 	"title": "La structure sémantique globale du document est-elle cohérente&nbsp;?",
-	"type": ["Wave toolbar"],
+	"type": ["<span lang='en'>Wave toolbar</span>"],
 	"tests": ["Lancer Wave > Structure", "Examiner la hiérarchisation des landmarks ARIA"],
 	"verifier": ["<ul><li>vérifier que chaque région de la page possède une sémantique pertinente à travers des balises de structure HTML5 <code>header</code>, <code>nav</code>…</li><li>vérifier que le contenu principal est inclus dans une balise <code>main</code></li><li>vérifier que l'élément <code>main</code> ne contient pas d'éléments répétés ailleurs dans la page (ex&nbsp;: navigation)</li></ul>"],
 	"resultat": ["Les différentes régions sont clairement identifiables programmatiquement"],
