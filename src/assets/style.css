@@ -150,6 +150,10 @@ blockquote p::after {
     text-decoration: none;
 }
 
+a:hover {
+    font-weight: 700;
+}
+
 [role="contentinfo"] svg {
     fill: #fff;
 }
