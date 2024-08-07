@@ -2445,7 +2445,7 @@ extension ContentSizeCategory {
 
 <br>
 
- - ne pas oublier d'adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l'utilisation de valeurs dynamiques : penser à paramétrer les éléments inclus dans les navigation/tab/status bar et toolbar qui seront affichés via le **[Large Content Viewer](../wwdc/2019/261)**,
+ - ne pas oublier d'adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l'utilisation de valeurs dynamiques : penser à paramétrer les éléments inclus dans les navigation/tab/status bar et toolbar qui seront affichés via le **[<span lang="en">Large Content Viewer</span>](../wwdc/2019/261)**,
  
  - penser à adapter le [contraste des couleurs](../conception/#couleurs) à la taille de texte modifiée si nécessaire.
 
@@ -2492,7 +2492,7 @@ Il est toutefois nécessaire de bien garder à l'esprit que cette nouveauté&nbs
      id="truncHyphen-Description"
      role="tabpanel">
      
-L'utilisation du `Dynamic Type` exposé dans le paragraphe précédent s'accompagne indéniablement de la troncature de mots en fonction du grossissement de texte choisi par l'utilisateur.
+L'utilisation du <span lang="en">`Dynamic Type`</span> exposé dans le paragraphe précédent s'accompagne indéniablement de la troncature de mots en fonction du grossissement de texte choisi par l'utilisateur.
 
 Malheureusement, cela n'est pas pris en compte nativement par le système et seule une intervention au niveau programmatique permet d'obtenir ce rendu visuel particulièrement apprécié.
 </div>

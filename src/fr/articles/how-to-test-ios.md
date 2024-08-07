@@ -1,5 +1,5 @@
 ---
-title: "Tester l'accessibilité d'une application iOS"
+title: "Tester l'accessibilité d'une application <span lang='en'>iOS</span>"
 abstract: "Description des principaux outils et méthodes de tests pour évaluer rapidement l'accessibilité d'une application iOS"
 titleBeforeTag: true
 date: "2024-03-04"
@@ -84,7 +84,7 @@ Il est possible d'utiliser son téléphone seulement avec un clavier externe.
 3. A présent, toutes les fonctionnalités disponibles par gestes tactiles doivent l’être également à l’aide du clavier.
 La navigation se fait de la même manière que pour un clavier sur desktop, touche ```TAB``` pour avancer, ```SHIFT+TAB``` pour reculer, ```ESPACE``` pour activer un élément.
 
-Des combinaisons sont également spécifiques à l'environnement mobile iOS :
+Des combinaisons sont également spécifiques à l'environnement mobile <span lang="en">iOS</span> :
 
   ![Shift+TAB pour afficher l'aide, Fn+H pour revenir à l'accueil, Fn+flèche haut pour sélecteur d'app, Fn+C pour centre de contrôle, Fn+N pour centre de notifications](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f3e1bb95-27dc-47ce-9b16-fa89a91079e8)
 
@@ -115,7 +115,7 @@ Il est également possible d'afficher le numéro des éléments ou même une gri
 
 2. Il est possible d'activer l'agrandissement de texte jusqu'à 310%, mais les recommandations d'accessibilité demandent un affichage correct jusqu'à 235%.
 
-3. Si l'application a été prévue pour supporter l'agrandissement (Dynamic Type), alors les textes seront correctement restitués, lisibles et sans perte d'information (pas de texte tronqué ni de superposition)
+3. Si l'application a été prévue pour supporter l'agrandissement (<span lang="en">Dynamic Type</span>), alors les textes seront correctement restitués, lisibles et sans perte d'information (pas de texte tronqué ni de superposition)
 
 ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f294816e-7f47-4fd8-8cba-cbe70ed8b72b)
 ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/c2963ad0-2e84-4f58-8b2b-14944833f7f8)
