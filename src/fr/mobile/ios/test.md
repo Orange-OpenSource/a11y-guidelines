@@ -6,7 +6,7 @@ displayToc: true
 
 # Tester l'accessibilité d'une application <span lang='en'>iOS</span>
 
-Cette page décrit l'ensemble des tests nécessaires à l'évaluation d'une application <span lang='en'>iOS</span> dans le cadre de l'accessibilité.
+Cette page décrit l'ensemble des tests nécessaires à l'évaluation d'une application <span lang="en">iOS</span> dans le cadre de l'accessibilité.
 
 Il est indispensable que **TOUS** les intervenants du projet connaissent les spécificités d'accessibilité <span lang='en'>iOS</span> présentées sur ce site de façon à comprendre parfaitement le lien entre les besoins des utilisateurs et leur implémentation au sein de l'application à développer.
 
