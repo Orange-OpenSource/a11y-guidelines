@@ -6,7 +6,10 @@ tags:
   - veille
 ---
 # Digital accessibility watch June-July 2024
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 We're back to accessibility overlays: https://www.joedolson.com/2024/07/overlays-misunderstand-accessibility/. And we continue with a nice class action lawsuit (it seems impossible in France) against AccessiBe, another overlay: https://www.lflegal.com/2024/07/accessibe-class-action/.
 Finally, some enthusiastic feedback on the magnificent, free and very well-attended A11y Paris conference (fr):
 https://www.temesis.com/blog/a11y-paris-2024-nos-temps-forts/ and https://access42.net/a11y-paris-2024-compte-rendu/.

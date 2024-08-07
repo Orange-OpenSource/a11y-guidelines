@@ -1,7 +1,11 @@
 ---
 title: "Veille #A11y Juin-Juillet 2024"
 abstract: "Florilège de ressources en #a11y, Juin-Juillet 2024"
+<<<<<<< Updated upstream
 date: "2024-08-07"
+=======
+date: "2024-08-05"
+>>>>>>> Stashed changes
 tags:
   - veille
 ---
