@@ -150,10 +150,6 @@ blockquote p::after {
     text-decoration: none;
 }
 
-a:hover {
-    font-weight: 700;
-}
-
 [role="contentinfo"] svg {
     fill: #fff;
 }
@@ -555,4 +551,31 @@ pre code {
 
 .hidden {
     display: none;
+}
+
+/**
+ * For links color accessibility
+ */
+a:hover {
+    font-weight: bold;
+}
+
+a.breadcrumb-focus:hover {
+    font-size: calc(1em + 2px);
+}
+
+a.header-anchor:hover,
+a.nav-link:hover,
+a.article-focus:hover,
+.h2-focus a:hover {
+    color: #F16E00;
+}
+
+:root {
+    --bs-link-hover-color: #000;
+    --bs-link-hover-color-rgb: 0, 0, 0;
+}
+
+.accordion-title.h6 {
+    font-size: 19px;
 }
