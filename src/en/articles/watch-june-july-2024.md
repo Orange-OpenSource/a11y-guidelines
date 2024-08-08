@@ -7,9 +7,11 @@ tags:
 ---
 # Digital accessibility watch June-July 2024
 
-We're back to accessibility overlays: https://www.joedolson.com/2024/07/overlays-misunderstand-accessibility/. And we continue with a nice class action lawsuit (it seems impossible in France) against AccessiBe, another overlay: https://www.lflegal.com/2024/07/accessibe-class-action/.
+We're back to accessibility overlays: https://www.joedolson.com/2024/07/overlays-misunderstand-accessibility/. 
+And we continue with a nice class action lawsuit (it seems impossible in France) against AccessiBe, another overlay: https://www.lflegal.com/2024/07/accessibe-class-action/.
 Finally, some enthusiastic feedback on the magnificent, free and very well-attended A11y Paris conference (fr):
 https://www.temesis.com/blog/a11y-paris-2024-nos-temps-forts/ and https://access42.net/a11y-paris-2024-compte-rendu/.
+
 Still a lot of great content in these months of June and July, no vacation for the a11y!
 
 ## Accessibility in laws and standards
@@ -18,22 +20,22 @@ Still a lot of great content in these months of June and July, no vacation for t
 - Explanations following this draft note part 1, https://www.tpgi.com/new-advice-on-wcag-for-software-and-documents-part-1/ and part 2, https://www.tpgi.com/new-advice-on-wcag-for-software-and-documents-part-2/
 - State of digital accessibility in Europe, digital trust 2024: https://www.digitaltrustindex.eu/
 - European Accessibility Act, the essentials: https://axesslab.com/european-accessibility-act-eaa-what-you-need-to-know/
-- W3c draft note on user requirements for collaborative tools, interesting: https://www.w3.org/TR/ctaur/
+- W3C draft note on user requirements for collaborative tools, interesting: https://www.w3.org/TR/ctaur/
 - Draft note on ethical principles of the web, it was missing: https://www.w3.org/TR/ethical-web-principles/
 
 ## Accessibility implementation strategy
 
 - You should always name your landmarks: https://adrianroselli.com/2024/06/maybe-dont-name-that-landmark.html
-- To anticipate the a11y and not just correct: https://www.deque.com/blog/transform-digital-accessibility-from-a-reactive-break-fix-to-a-proactive-shift-left/
+- To anticipate the a11y and not just fix it: https://www.deque.com/blog/transform-digital-accessibility-from-a-reactive-break-fix-to-a-proactive-shift-left/
 
 ## Testing accessibility
 
 - Usability tests a11y, comparing AT users and those without, to read: https://makeitfable.com/article/fable-webinar-recap-scoping-your-accessibility-research-study/
-- Interesting considerations on SC 1.4.11 non-text contrast, to read: https://yatil.net/blog/non-text-contrast-in-detail-ui-components
+- Interesting considerations on SC "1.4.11 non-text contrast", to read: https://yatil.net/blog/non-text-contrast-in-detail-ui-components
 - Audits, yes, but meh: https://yatil.net/blog/the-infuriating-inefficiency-of-accessibility-audits
 - Testing a11y with modern CSS, a framework: https://heydonworks.com/article/testing-html-with-modern-css/
 - About a11y in Web Platform Tests: https://webkit.org/blog/15400/improving-web-accessibility-with-web-platform-tests/
-- first working draft for the Accessibility Conformance Testing Rules format: https://www.w3.org/news/2024/first-public-working-draft-accessibility-conformance-testing-act-rules-format-1-1/
+- First working draft for the Accessibility Conformance Testing Rules format: https://www.w3.org/news/2024/first-public-working-draft-accessibility-conformance-testing-act-rules-format-1-1/
 - A Chrome extension to test live regions: https://github.com/wizzyfx/nerdeRegionPlugIn
 
 ## Technical points
@@ -52,8 +54,8 @@ Still a lot of great content in these months of June and July, no vacation for t
 - Don't use web.dev: https://adrianroselli.com/2024/07/dont-use-webdev-for-accessibility-info.html
 - Not always easy to have good examples of a11y: https://cerovac.com/a11y/2024/06/why-is-it-so-difficult-to-give-best-in-class-accessibility-examples-of-websites/
 - How I write my alt, Adrian Roselli, practical and effective: https://adrianroselli.com/2024/05/my-approach-to-alt-text.html
-- Feedback on the design pattern (ARIA du W3c) pagination, where it is reiterated that they are a proposal, not an obligation, nor a standard (in): https://adrianroselli.com/2024/07/feedback-on-a-pagination-pattern.html
-- Dungeons and Dragons can inspire you for your replacement texts (in): https://ericwbailey.website/published/dungeons-and-dragons-taught-me-how-to-write-alt-text/
+- Feedback on the design pattern (ARIA du W3C) pagination, where it is reiterated that they are a proposal, not an obligation, nor a standard (in): https://adrianroselli.com/2024/07/feedback-on-a-pagination-pattern.html
+- Dungeons and Dragons can inspire you for your replacement texts: https://ericwbailey.website/published/dungeons-and-dragons-taught-me-how-to-write-alt-text/
 
 ## Assistive technologies
 
@@ -65,10 +67,7 @@ Still a lot of great content in these months of June and July, no vacation for t
 
 ## Mobile app, mobile web
 
-- Tab system on mobile app: https://www.tpgi.com/mobile-tabs-part-1-native-apis/
 - A paid but quality mobile design toolkit by S. Walter: https://shop.stephaniewalter.design/b/mobile-native-apps-accessibility-toolkit-for-designers
-- Wcag applies to mobile, level a: https://html5accessibility.com/stuff/2024/07/08/wcag-level-a-bang-for-your-app-a11y-buck/
-- Wcag applies to mobile, level aa: https://html5accessibility.com/stuff/2024/07/09/peaky-wcag-level-aa-bang-for-your-app-a11y-buck/
 - Accessible tab system part 1 native apis, https://www.tpgi.com/mobile-tabs-part-1-native-apis/, part 2 React native, https://www.tpgi.com/mobile-tabs-part-2-react-native/ and part 3 Flutter, https://www.tpgi.com/mobile-tabs-part-3-flutter/
 - The Appt foundation has just published 100 examples of code accessible in SwiftUI (iOS) and Jetpack Compose (Android), thanks to them! : https://appt.org/en/docs/swiftui/samples and https://appt.org/en/docs/jetpack-compose
 - Apple's explanation of DynamicType implementation (text magnification), video from WWDC24: https://developer.apple.com/videos/play/wwdc2024/10073/
@@ -79,7 +78,7 @@ Still a lot of great content in these months of June and July, no vacation for t
 
 ## Ergonomics, UI & UX
 
-- W3c a11y personas update: https://www.w3.org/WAI/news/2024-06-24/people-use-web/
+- W3C a11y personas update: https://www.w3.org/WAI/news/2024-06-24/people-use-web/
 - User testing and AI, still need humans, phew!: https://makeitfable.com/article/fable-webinar-recap-scoping-your-accessibility-research-study/
 
 ## Eco-design
@@ -94,6 +93,6 @@ Still a lot of great content in these months of June and July, no vacation for t
 
 ## Others
 
-- Article showing the inefficiency of Google's Recaptcha2, to think about (in): https://arxiv.org/pdf/2311.10911
+- Article showing the inefficiency of Google's Recaptcha2, to think about: https://arxiv.org/pdf/2311.10911
 - Manage light/dark web modes (fr): https://www.alsacreations.com/article/lire/1927-Les-modes-d-apparence-Light-mode-et-Dark-mode.html
 - Publication of the first working draft for the eBraille format: https://daisy.github.io/ebraille/published/1.0/
