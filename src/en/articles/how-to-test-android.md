@@ -1,5 +1,5 @@
 ---
-title: "Testing the accessibility of an iOS application"
+title: "Testing the accessibility of an Android application"
 abstract: "Description of the main testing tools and methods to quickly assess the accessibility of an iOS application"
 titleBeforeTag: true
 date: "2024-08-09"
@@ -28,7 +28,9 @@ For easier use, we recommend adding the essential tools to the accessibility sho
 
 **Then choose how you want to access these options: either from the navigation bar or from a floating button. We advise to use the navigation bar, which is more discreet**.
 
-  ![](https://github.com/user-attachments/assets/a6de7363-aa83-419c-a549-ed84c87bd10a)
+  ![](https://github.com/user-attachments/assets/04773a89-c143-402e-9bf5-d85fd55137b9)
+
+
 
 
 ## Getting started with accessibility options
@@ -54,7 +56,8 @@ Navigating is similar to a desktop keyboard, ```TAB``` key to move forward, ```S
 
 Combinations are also specific to the Android mobile environment:
 
-   ![Shortcuts examples: CMD+ENTER for Home, CMD+DEL for Back, ALT+TAB for Recents, ALT+F4 to close the current application, CMD+/ to access keyboard shortcuts.](https://github.com/user-attachments/assets/9d578564-c3ff-4f7b-bd73-a349d6f0cbe3)
+   ![Shortcuts examples: CMD+ENTER for Home, CMD+DEL for Back, ALT+TAB for Recents, ALT+F4 to close the current application, CMD+/ to access keyboard shortcuts.](https://github.com/user-attachments/assets/99bccc16-b3fb-4af8-b8c2-6e712b4367eb)
+
 
 
 3. Keyboard navigation also allows you to check that the navigation order is consistent.
@@ -69,7 +72,8 @@ When "Voice Access" is enabled, you can say commands like:
 
 By default, element names are superimposed.  Also, for an application to be controllable in this way, the interactive components must have a simple and consistent accessible name (in particular in the case of a link image or button image without a visible label).
 
-![](https://github.com/user-attachments/assets/7ba3b950-435d-49a5-8df9-4420b47486d9)
+![](https://github.com/user-attachments/assets/6e28c394-bcdb-4937-9f37-083327e0208a)
+
 
 It's also possible to display the number of the elements or even a numbered grid to reach them.
 
@@ -77,7 +81,8 @@ It's also possible to display the number of the elements or even a numbered grid
 ### Font size
 1. Increase the text size from the menu Settings > Display > Font size and style
 
-   ![](https://github.com/user-attachments/assets/959c0d70-5516-4f74-a78c-9f6e0bd8e17e)
+   ![](https://github.com/user-attachments/assets/759344d4-c227-4401-8dd9-bb75e756aa2d)
+
 
 2. Maximum font size corresponds to a 200% zoom.
 
