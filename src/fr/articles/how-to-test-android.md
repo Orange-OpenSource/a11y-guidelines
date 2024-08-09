@@ -55,7 +55,7 @@ La navigation se fait de la même manière que pour un clavier sur desktop, touc
 
 Des combinaisons sont également spécifiques à l'environnement mobile Android :
 
-![Exemples de raccourcis : CMD+ENTREE pour l'accueil, CMD+SUPPR pour retour, ALT+TAB pour récents, ALT+F4 pour fermer l'application en cours, CMD+! pour accéder aux raccourcis clavier](https://github.com/user-attachments/assets/9d578564-c3ff-4f7b-bd73-a349d6f0cbe3)
+![Exemples de raccourcis : CMD+ENTREE pour l'accueil, CMD+SUPPR pour retour, ALT+TAB pour récents, ALT+F4 pour fermer l'application en cours, CMD+! pour accéder aux raccourcis clavier](https://github.com/user-attachments/assets/46a81d5a-5dcb-4232-a206-8baf39366eb0)
 
 
 3. La navigation clavier permet également de vérifier que l'ordre de navigation est respecté.
