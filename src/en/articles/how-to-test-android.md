@@ -23,13 +23,12 @@ For greater convenience, it is necessary to install some tools from the Google P
 - Voice Access
 
 For easier use, we recommend adding the essential tools to the accessibility shortcuts:
-- Settings > Accessibility > Advanced settings > Accessibility button.
-- Choose at least : "TalkcBack" and "Voice Access".
-
-    ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/79ec9de6-f042-4ef0-8387-0c709766dcc4)
-
+- Settings > Accessibility > Advanced settings > Accessibility button > Select Actions
+- Choose at least : "TalkBack" and "Voice Access".
 
 **Then choose how you want to access these options: either from the navigation bar or from a floating button. We advise to use the navigation bar, which is more discreet**.
+
+  ![](https://github.com/user-attachments/assets/a6de7363-aa83-419c-a549-ed84c87bd10a)
 
 
 ## Getting started with accessibility options
@@ -55,9 +54,10 @@ Navigating is similar to a desktop keyboard, ```TAB``` key to move forward, ```S
 
 Combinations are also specific to the Android mobile environment:
 
-   ![Shift+TAB pour afficher l'aide, Fn+H pour revenir à l'accueil, Fn+flèche haut pour sélecteur d'app, Fn+C pour centre de contrôle, Fn+N pour centre de notifications](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/83408f02-edab-4456-bd48-9c7e2e778ffc)
+   ![Shortcuts examples: CMD+ENTER for Home, CMD+DEL for Back, ALT+TAB for Recents, ALT+F4 to close the current application, CMD+/ to access keyboard shortcuts.](https://github.com/user-attachments/assets/9d578564-c3ff-4f7b-bd73-a349d6f0cbe3)
 
-4. Keyboard navigation also allows you to check that the navigation order is consistent.
+
+3. Keyboard navigation also allows you to check that the navigation order is consistent.
 
 
 ### Voice Access
@@ -69,7 +69,7 @@ When "Voice Access" is enabled, you can say commands like:
 
 By default, element names are superimposed.  Also, for an application to be controllable in this way, the interactive components must have a simple and consistent accessible name (in particular in the case of a link image or button image without a visible label).
 
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/c94e478c-eaf1-4589-b4e2-369573079df9)
+![](https://github.com/user-attachments/assets/7ba3b950-435d-49a5-8df9-4420b47486d9)
 
 It's also possible to display the number of the elements or even a numbered grid to reach them.
 
@@ -77,20 +77,22 @@ It's also possible to display the number of the elements or even a numbered grid
 ### Font size
 1. Increase the text size from the menu Settings > Display > Font size and style
 
+   ![](https://github.com/user-attachments/assets/959c0d70-5516-4f74-a78c-9f6e0bd8e17e)
+
 2. Maximum font size corresponds to a 200% zoom.
 
 3. If the application has been designed to support enlargement (Dynamic Type), then the texts will be correctly rendered, readable, and without loss of information (no truncated text or superposition).
 
-   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/9bc33609-bdee-4a34-8a05-c45a89305b69)
-
+   ![](https://github.com/user-attachments/assets/7cdc7cc8-0969-4c57-b096-409dbff8a63b)  ![](https://github.com/user-attachments/assets/17375194-f66f-4515-9eb6-e20e7ec4cef5)
 
 ### Dark mode
 As the dark mode is used more and more, so it's strongly recommended to test your application by activating “dark mode”.
 
 1. Go to Settings > Display (or directly from Control Centre).
 
-   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/0561fddb-e639-4754-a2c2-7bad673e0a79)
+  ![](https://github.com/user-attachments/assets/5230507a-7afc-4eca-a12b-2afd357c9148)
 
 2. Check that all texts and components are visible and meet the expected contrast levels.
-   
-   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/539031f1-910e-4762-801e-8ca34c8fdf8d)
+    
+  ![](https://github.com/user-attachments/assets/0b910a56-9461-4512-8d42-9b19336b3757)
+

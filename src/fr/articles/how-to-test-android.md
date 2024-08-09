@@ -64,7 +64,7 @@ Des combinaisons sont également spécifiques à l'environnement mobile Android 
 ### Voice Access
 Lorsque « Voice Access » est activé, vous pouvez énoncer des commandes comme :
 - « Retourner à l’écran d’accueil »
-- Appuyer sur *nom de l’élément* »
+- « Appuyer sur *nom de l’élément* »
 - « Ouvrir *nom de l’app* »
 - « Monter le volume »
 
@@ -83,7 +83,7 @@ Il est également possible d'afficher le numéro des éléments ou même une gri
 
 3. Si l'application a été prévue pour supporter l'agrandissement, alors les textes seront correctement restitués, lisibles et sans perte d'information (pas de texte tronqué ni de superposition)
 
-![](https://github.com/user-attachments/assets/7cdc7cc8-0969-4c57-b096-409dbff8a63b)  ![](https://github.com/user-attachments/assets/17375194-f66f-4515-9eb6-e20e7ec4cef5)
+  ![](https://github.com/user-attachments/assets/7cdc7cc8-0969-4c57-b096-409dbff8a63b)  ![](https://github.com/user-attachments/assets/17375194-f66f-4515-9eb6-e20e7ec4cef5)
 
 
 ### Mode sombre
