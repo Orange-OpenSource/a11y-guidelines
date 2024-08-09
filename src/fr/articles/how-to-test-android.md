@@ -28,7 +28,9 @@ Pour plus de facilité, il est recommandé d'ajouter les outils indispensables d
 
 **Choisir ensuite le moyen d'accéder à ces options : soit depuis la barre de navigation soit depuis une touche flottante. Nous vous conseillons d'utliser la barre de navigation qui reste plus discrète**
 
-  ![image](https://github.com/user-attachments/assets/feee1fed-5bf4-433b-9a7e-480056016669)
+  ![](https://github.com/user-attachments/assets/a6de7363-aa83-419c-a549-ed84c87bd10a)
+
+
 
 ## Prise en main des options d'accessibilité
 
@@ -53,7 +55,8 @@ La navigation se fait de la même manière que pour un clavier sur desktop, touc
 
 Des combinaisons sont également spécifiques à l'environnement mobile Android :
 
-![Exemples de raccourcis : CMD+ENTREE pour l'accueil, CMD+SUPPR pour retour, ALT+TAB pour récents, ALT+F4 pour fermer l'application en cours, CMD+! pour accéder aux raccourcis clavier](https://github.com/user-attachments/assets/1c9e4c15-40ae-4db7-9740-fc1de6209383)
+![Exemples de raccourcis : CMD+ENTREE pour l'accueil, CMD+SUPPR pour retour, ALT+TAB pour récents, ALT+F4 pour fermer l'application en cours, CMD+! pour accéder aux raccourcis clavier](https://github.com/user-attachments/assets/9d578564-c3ff-4f7b-bd73-a349d6f0cbe3)
+
 
 3. La navigation clavier permet également de vérifier que l'ordre de navigation est respecté.
 
@@ -65,24 +68,22 @@ Lorsque « Voice Access » est activé, vous pouvez énoncer des commandes com
 - « Ouvrir *nom de l’app* »
 - « Monter le volume »
 
-Par défaut, le nom des éléments est superposé. Aussi, pour qu'une application soit pilotable de la sorte, il faut que les composants interactifs aient un nom accessible simple et cohérent (en particulier dans le cas d'une image-lien ou image-bouton sans libellé visible).
+Il est possible d'afficher les libellés et les numéros des éléments interactifs. Aussi, pour qu'une application soit pilotable de la sorte, il faut que les composants interactifs aient un nom accessible simple et cohérent (en particulier dans le cas d'une image-lien ou image-bouton sans libellé visible).
 
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/3061ff62-cb7f-4b69-ac4f-4c5db5245128)
+![](https://github.com/user-attachments/assets/7ba3b950-435d-49a5-8df9-4420b47486d9)
 
 Il est également possible d'afficher le numéro des éléments ou même une grille numérotée pour les atteindre.
-
 
 ### Taille de police
 1. Agrandir la police de caractères à partir du menu Paramètres > Écran > Taille et style de police
    
-  ![](https://github.com/user-attachments/assets/ca65ff4e-79dc-470d-be74-a532f402ce11)
+  ![](https://github.com/user-attachments/assets/959c0d70-5516-4f74-a78c-9f6e0bd8e17e)
 
-3. L'agrandissement maximal correspond à un zoom de 200%
+2. L'agrandissement maximal correspond à un zoom de 200%
 
-4. Si l'application a été prévue pour supporter l'agrandissement, alors les textes seront correctement restitués, lisibles et sans perte d'information (pas de texte tronqué ni de superposition)
+3. Si l'application a été prévue pour supporter l'agrandissement, alors les textes seront correctement restitués, lisibles et sans perte d'information (pas de texte tronqué ni de superposition)
 
-![](https://github.com/user-attachments/assets/4ace81f9-96c1-49c3-9b89-cb733feea71b)
-![](https://github.com/user-attachments/assets/934976df-2dc3-444d-bd70-5fac671e76f7)
+![](https://github.com/user-attachments/assets/7cdc7cc8-0969-4c57-b096-409dbff8a63b)  ![](https://github.com/user-attachments/assets/17375194-f66f-4515-9eb6-e20e7ec4cef5)
 
 
 ### Mode sombre
@@ -90,8 +91,8 @@ Le mode sombre est de plus en plus utilisé par les utilisateurs, il est donc fo
 
 1. Aller dans Paramètres > Ecran (ou directement depuis le centre de contrôle)
 
-  ![](https://github.com/user-attachments/assets/f589b599-4f72-43af-bd3b-4f9ea2636686)
+  ![](https://github.com/user-attachments/assets/5230507a-7afc-4eca-a12b-2afd357c9148)
 
 2. Vérifier que tous les textes et composants sont bien visibles et respectent les niveaux de contrastes attendus.
    
-   ![](https://github.com/user-attachments/assets/0b910a56-9461-4512-8d42-9b19336b3757)
+  ![](https://github.com/user-attachments/assets/0b910a56-9461-4512-8d42-9b19336b3757)
