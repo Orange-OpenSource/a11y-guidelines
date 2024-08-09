@@ -91,7 +91,8 @@ Le mode sombre est de plus en plus utilisé par les utilisateurs, il est donc fo
 
 1. Aller dans Paramètres > Ecran (ou directement depuis le centre de contrôle)
 
-  ![](https://github.com/user-attachments/assets/5230507a-7afc-4eca-a12b-2afd357c9148)
+  ![](https://github.com/user-attachments/assets/f49f847e-7d9f-4381-816a-55351d6590d5)
+
 
 2. Vérifier que tous les textes et composants sont bien visibles et respectent les niveaux de contrastes attendus.
    
