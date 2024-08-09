@@ -23,14 +23,12 @@ En premier lieu, il est nécessaire d'installer certains outils depuis le Play S
 - Voice Access
 
 Pour plus de facilité, il est recommandé d'ajouter les outils indispensables dans les raccourcis d'accessibilité :
-- Paramètres > Accessibilité > Paramètres avancés > Touche Accessibilité.
-- Choisir à minima: "TalkcBack" et "Voice Access".
-
-  ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/fd64af3b-e1a1-4538-a012-4036639bdca6)
-
+- Paramètres > Accessibilité > Paramètres avancés > Touche Accessibilité > Sélectionner des actions
+- Choisir à minima: "TalkBack" et "Voice Access".
 
 **Choisir ensuite le moyen d'accéder à ces options : soit depuis la barre de navigation soit depuis une touche flottante. Nous vous conseillons d'utliser la barre de navigation qui reste plus discrète**
 
+  ![image](https://github.com/user-attachments/assets/feee1fed-5bf4-433b-9a7e-480056016669)
 
 ## Prise en main des options d'accessibilité
 
@@ -55,9 +53,9 @@ La navigation se fait de la même manière que pour un clavier sur desktop, touc
 
 Des combinaisons sont également spécifiques à l'environnement mobile Android :
 
-  ![Shift+TAB pour afficher l'aide, Fn+H pour revenir à l'accueil, Fn+flèche haut pour sélecteur d'app, Fn+C pour centre de contrôle, Fn+N pour centre de notifications](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f3e1bb95-27dc-47ce-9b16-fa89a91079e8)
+![Exemples de raccourcis : CMD+ENTREE pour l'accueil, CMD+SUPPR pour retour, ALT+TAB pour récents, ALT+F4 pour fermer l'application en cours, CMD+! pour accéder aux raccourcis clavier](https://github.com/user-attachments/assets/1c9e4c15-40ae-4db7-9740-fc1de6209383)
 
-4. La navigation clavier permet également de vérifier que l'ordre de navigation est respecté.
+3. La navigation clavier permet également de vérifier que l'ordre de navigation est respecté.
 
 
 ### Voice Access
@@ -76,14 +74,15 @@ Il est également possible d'afficher le numéro des éléments ou même une gri
 
 ### Taille de police
 1. Agrandir la police de caractères à partir du menu Paramètres > Écran > Taille et style de police
+   
+  ![](https://github.com/user-attachments/assets/ca65ff4e-79dc-470d-be74-a532f402ce11)
 
-2. L'agrandissement maximal correspond à un zoom de 200%
+3. L'agrandissement maximal correspond à un zoom de 200%
 
-3. Si l'application a été prévue pour supporter l'agrandissement, alors les textes seront correctement restitués, lisibles et sans perte d'information (pas de texte tronqué ni de superposition)
+4. Si l'application a été prévue pour supporter l'agrandissement, alors les textes seront correctement restitués, lisibles et sans perte d'information (pas de texte tronqué ni de superposition)
 
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f294816e-7f47-4fd8-8cba-cbe70ed8b72b)
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/c2963ad0-2e84-4f58-8b2b-14944833f7f8)
-![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/2113c52e-dd58-4dbf-b773-be4bad1a52dc)
+![](https://github.com/user-attachments/assets/4ace81f9-96c1-49c3-9b89-cb733feea71b)
+![](https://github.com/user-attachments/assets/934976df-2dc3-444d-bd70-5fac671e76f7)
 
 
 ### Mode sombre
@@ -91,9 +90,8 @@ Le mode sombre est de plus en plus utilisé par les utilisateurs, il est donc fo
 
 1. Aller dans Paramètres > Ecran (ou directement depuis le centre de contrôle)
 
-   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/3f36c173-6744-48ae-98b8-54634993165e)
+  ![](https://github.com/user-attachments/assets/f589b599-4f72-43af-bd3b-4f9ea2636686)
 
 2. Vérifier que tous les textes et composants sont bien visibles et respectent les niveaux de contrastes attendus.
    
-   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/95b1a4cf-7821-44fe-8f1b-8114ba2094fd)
-
+   ![](https://github.com/user-attachments/assets/0b910a56-9461-4512-8d42-9b19336b3757)
