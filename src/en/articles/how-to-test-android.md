@@ -88,14 +88,15 @@ It's also possible to display the number of the elements or even a numbered grid
 
 3. If the application has been designed to support enlargement (Dynamic Type), then the texts will be correctly rendered, readable, and without loss of information (no truncated text or superposition).
 
-   ![](https://github.com/user-attachments/assets/7cdc7cc8-0969-4c57-b096-409dbff8a63b)  ![](https://github.com/user-attachments/assets/17375194-f66f-4515-9eb6-e20e7ec4cef5)
+   ![](https://github.com/user-attachments/assets/aaadf571-bb66-4455-9525-bd21df31bacc)  ![](https://github.com/user-attachments/assets/bac1f246-faeb-4cfc-b5df-4084c530d4e2)
+
 
 ### Dark mode
 As the dark mode is used more and more, so it's strongly recommended to test your application by activating “dark mode”.
 
 1. Go to Settings > Display (or directly from Control Centre).
 
-  ![](https://github.com/user-attachments/assets/5230507a-7afc-4eca-a12b-2afd357c9148)
+  ![](https://github.com/user-attachments/assets/45cea752-8ea2-4be5-ad36-d22f587fb204)
 
 2. Check that all texts and components are visible and meet the expected contrast levels.
     
