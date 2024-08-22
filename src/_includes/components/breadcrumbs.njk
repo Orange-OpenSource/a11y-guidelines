@@ -11,7 +11,7 @@
         </li>
       {% else %}
         <li class="breadcrumb-item{% if not beforeLast %} d-none d-sm-flex{% endif %}">
-          <a href="{{ item.href }}">{{ item.label }}</a>
+          <a class="breadcrumb-focus" href="{{ item.href }}">{{ item.label }}</a>
         </li>
       {% endif %}
     {%- endfor -%}
