@@ -128,7 +128,7 @@ Si la structure des pages est modifiée selon les profils d'utilisation (par exe
 **À vérifier :**
 - Identifier la présence répétée d'éléments d'aide sur différentes pages.
 - Les éléments d'aides apparaissent dans le même ordre RELATIF : tout autre contenu présent dans l'ensemble des pages Web et situé avant l'élément d'aide doit se trouver avant l'élément d'aide sur cette page. Les éléments qui se trouvent après l'élément d'aide sur d'autres pages doivent être après l'élément d'aide sur cette page.
-- Revérifier les points précédents pour chaque mode d'affichage (profils d'utilisation, point de rupture CSS en web,  mode portait/paysage sur mobile)
+- Revérifier les points précédents pour chaque mode d'affichage (profils d'utilisation, point de rupture CSS en web,  mode portait/paysage sur mobile).
 
 NB : Si l'ordre visuel diffère de l'ordre relatif, alors une attention particulière sera accordée aux critères <a href="https://a11y-guidelines.orange.com/fr/web/developper/mise-en-page/#assurer-un-ordre-de-lecture-du-contenu-comprehensible">1.4.4 Resize text</a> et <a href=https://a11y-guidelines.orange.com/fr/web/developper/navigation-clavier/#rendre-le-parcours-du-focus-sequentiel-et-logique-sans-piege-clavier >2.4.3 Parcours du focus</a>.
 
