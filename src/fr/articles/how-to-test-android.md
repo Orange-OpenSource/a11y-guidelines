@@ -11,15 +11,15 @@ tags:
 ## Présentation et paramétrage des options d'accessibilité
 
 ### Présentation des principales options
-- **TalkBack** : c'est le lecteur d'écran pour tous les devices Android. Il permet de vocaliser toutes les informations (utiles) présentes à l'écran. Outil indispensable pour les non-voyants et mal-voyants.
-- **Navigation clavier** : permet d'utiliser son téléphone à partir d'un clavier externe (généralement en bluetooth), utile pour les personnes ayant des difficultés à utiliser l'écran tactile.
+- **TalkBack** : c'est le lecteur d'écran pour tous les appareils Android. Il permet de vocaliser toutes les informations (utiles) présentes à l'écran. Outil indispensable pour les non-voyants et mal-voyants.
+- **Navigation clavier** : permet d'utiliser son téléphone à partir d'un clavier externe (généralement en Bluetooth), utile pour les personnes ayant des difficultés à utiliser l'écran tactile.
 - **Voice Access** : option pour piloter son téléphone entièrement à la voix. Indispensable pour les personnes ne pouvant pas interagir physiquement avec le device ou avec un contacteur externe.
 - **Taille de police** : permet d'ajuster la taille des polices de caractères dans les applications qui gèrent cette option.
 
 
 ### Paramétrage des raccourcis d'accessibilité
-En premier lieu, il est nécessaire d'installer certains outils depuis le Play Store Google:
-- Outils d’accessibilité Android (installera TalkBack et des outils supplémentaires)
+En premier lieu, il est nécessaire d'installer certains outils depuis le Play Store Google :
+- Outils d'accessibilité Android (installera TalkBack et des outils supplémentaires)
 - Voice Access
 
 Pour plus de facilité, il est recommandé d'ajouter les outils indispensables dans les raccourcis d'accessibilité :
@@ -50,7 +50,7 @@ En utilisant TalkBack, vous pourrez vérifier que toutes les informations indisp
 ### Navigation clavier
 Il est possible d'utiliser son téléphone seulement avec un clavier externe.
 1. Connecter un clavier au téléphone
-2. A présent, toutes les fonctionnalités disponibles par gestes tactiles doivent l’être également à l’aide du clavier.
+2. A présent, toutes les fonctionnalités disponibles par gestes tactiles doivent l'être également à l'aide du clavier.
 La navigation se fait de la même manière que pour un clavier sur desktop, touche ```TAB``` pour avancer, ```SHIFT+TAB``` pour reculer, ```ESPACE``` ou ```ENTREE``` pour activer un élément.
 
 Des combinaisons sont également spécifiques à l'environnement mobile Android :
@@ -63,16 +63,14 @@ Des combinaisons sont également spécifiques à l'environnement mobile Android 
 
 ### Voice Access
 Lorsque « Voice Access » est activé, vous pouvez énoncer des commandes comme :
-- « Retourner à l’écran d’accueil »
-- « Appuyer sur *nom de l’élément* »
-- « Ouvrir *nom de l’app* »
+- « Retourner à l'écran d'accueil»
+- « Appuyer sur *nom de l'élément* »
+- « Ouvrir *nom de l'app* »
 - « Monter le volume »
 
-Il est possible d'afficher les libellés et les numéros des éléments interactifs. Aussi, pour qu'une application soit pilotable de la sorte, il faut que les composants interactifs aient un nom accessible simple et cohérent (en particulier dans le cas d'une image-lien ou image-bouton sans libellé visible).
+Une fois Voice Access activé, dites "afficher les libellés", ce qui affichera le nom accessible attribué aux composants sans étiquette visible. Pour qu'une application soit pilotable de la sorte, il faut que les composants interactifs aient un nom accessible simple et cohérent (en particulier dans le cas d'une image-lien ou image-bouton sans libellé visible).
 
 ![](https://github.com/user-attachments/assets/7ba3b950-435d-49a5-8df9-4420b47486d9)
-
-Il est également possible d'afficher le numéro des éléments ou même une grille numérotée pour les atteindre.
 
 ### Taille de police
 1. Agrandir la police de caractères à partir du menu Paramètres > Écran > Taille et style de police

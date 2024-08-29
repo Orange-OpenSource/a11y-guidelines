@@ -70,12 +70,9 @@ When "Voice Access" is enabled, you can say commands like:
 - "Open *app name*"
 - "Turn volume up"
 
-By default, element names are superimposed.  Also, for an application to be controllable in this way, the interactive components must have a simple and consistent accessible name (in particular in the case of a link image or button image without a visible label).
+Once Voice Access has been activated, say "show labels", which will display the accessible name assigned to components without a visible label. For an application to be controllable in this way, the interactive components must have a simple and consistent accessible name (in particular in the case of a link image or button image without a visible label).
 
 ![](https://github.com/user-attachments/assets/6e28c394-bcdb-4937-9f37-083327e0208a)
-
-
-It's also possible to display the number of the elements or even a numbered grid to reach them.
 
 
 ### Font size
@@ -92,7 +89,7 @@ It's also possible to display the number of the elements or even a numbered grid
 
 
 ### Dark mode
-As the dark mode is used more and more, so it's strongly recommended to test your application by activating “dark mode”.
+As the dark mode is used more and more, so it's strongly recommended to test your application by activating 'dark mode'.
 
 1. Go to Settings > Display (or directly from Control Centre).
 
