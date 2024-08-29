@@ -11,7 +11,7 @@ tags:
 ## Presentation and configuration of accessibility options
 
 ### Presentation of the main options
-- **Talkback**: the screen reader for all Android devices.  It allows you to vocalize all the (useful) information present on the screen. It's an essential tool for blind and visually impaired people.
+- **Talkback**: the screen reader for all Android devices. It allows you to vocalize all the (useful) information present on the screen. It's an essential tool for blind and visually impaired people.
 - **Keyboard navigation**: enable this feature to use your phone with an external keyboard (usually via Bluetooth). It's useful for people who have difficulties using the touch screen due, for example, to motor impairment.
 - **Voice Access**: option to control a phone only with the voice. It's essential for people who cannot physically interact with the device or an external contactor.
 - **Font size**: increase text size, only useful with applications that manage this option.
