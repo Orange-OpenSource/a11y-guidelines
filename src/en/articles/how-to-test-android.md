@@ -1,6 +1,6 @@
 ---
 title: "Testing the accessibility of an Android application"
-abstract: "Description of the main testing tools and methods to quickly assess the accessibility of an iOS application"
+abstract: "Description of the main testing tools and methods to quickly assess the accessibility of an Android application"
 titleBeforeTag: true
 date: "2024-08-09"
 tags:
