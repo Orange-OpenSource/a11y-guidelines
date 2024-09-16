@@ -199,7 +199,7 @@ module.exports = {
       { label: 'Contact', href: '/en/contact/' },
       { label: 'About', href: '/en/about/' },
       { label: 'RSS feed', href: '/feed-en.xml' },
-      { label: 'Accessibility:partially compliant', href: '/en/accessibility/' },
+      { label: 'Accessibility: partially compliant', href: '/en/accessibility/' },
       { label: 'Pre-release on Netlify', href: 'https://a11y-guidelines-orange.netlify.app/en/' }
     ],
     fr: [
