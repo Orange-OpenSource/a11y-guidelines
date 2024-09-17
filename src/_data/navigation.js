@@ -15,7 +15,7 @@ module.exports = {
   },
   main: {
     'en': [
-      { label: 'Home', href: '/en/' },
+      { label: 'Test', href: '/en/' },
       {
         label: 'Planning',
         href: '/en/planning/',
