@@ -55,7 +55,7 @@ Since this test is carried out from the Google Play console, this can be a final
 
 ## aXe
 
-aXe is an application available on the Google Play Store and which makes it possible, as well as Accessibility Scanner or the Pre Launch Report from Google, to display accessibility problems. Although redundant with the two previous tools presented in some checks, it is recommended to use it as a complement, since it is able to display different accessibility errors, and will therefore perfectly complement the first exams.
+aXe is an application available on the <span lang="en">Google Play Store</span> and which makes it possible, as well as Accessibility Scanner or the Pre Launch Report from Google, to display accessibility problems. Although redundant with the two previous tools presented in some checks, it is recommended to use it as a complement, since it is able to display different accessibility errors, and will therefore perfectly complement the first exams.
 
 To use aXe, you just need to download the application and then follow the instructions. Using a floating button , an analysis can be launched on the screen of your choice, and the errors report will be immediately produced at the bottom of the screen.
 
