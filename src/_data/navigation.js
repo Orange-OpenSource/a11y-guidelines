@@ -206,7 +206,7 @@ module.exports = {
       { label: 'Contact', href: '/fr/contact/' },
       { label: 'À propos', href: '/fr/a-propos/' },
       { label: 'Flux rss', href: '/feed-fr.xml' },
-      { label: 'Accessibilité&nbsp;: partiellement conforme', href: '/fr/accessibilite/' },
+      { label: 'Accessibilité : partiellement conforme', href: '/fr/accessibilite/' },
       { label: 'Pré-version sur Netlify', href: 'https://a11y-guidelines-orange.netlify.app/fr/' }
     ]
   }
