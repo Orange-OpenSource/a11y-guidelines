@@ -4,12 +4,20 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2024-10-07T00:00:00Z</updated>
+  <updated>2024-10-15T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>  
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Testing the accessibility of an Android application</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/how-to-test-android/"/>
+    <updated>2024-10-15T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/how-to-test-android/</id>
+    <content xml:lang="en" type="html">Description of the main testing tools and methods to quickly assess the accessibility of an Android application</content>
+  </entry>
   
   <entry>
     <title>#a11y technical watch, August-September 2024</title>
