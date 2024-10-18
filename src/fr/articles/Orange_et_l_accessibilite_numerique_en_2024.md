@@ -4,7 +4,7 @@ abstract: "Description des chantiers"
 titleBeforeTag: true
 date: "2024-10-17"
 tags:
-  - intermédiaire
+  - intermediate
   - web
 ---
 # Orange et l'accessibilité numérique en 2024
