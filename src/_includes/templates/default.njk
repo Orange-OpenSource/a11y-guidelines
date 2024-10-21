@@ -32,7 +32,7 @@
               <ul class="list-inline mb-1" aria-labelledby="filters_label">
               {%- for tag in tags -%}
                 {%- set tagTranslationKey = 'tags.' + tag -%}
-                <li class="list-inline-item"><a href="{{'url' | translate}}/articles/?tag={{ tag }}" class="btn btn-dark btn-sm" data-tag="{{ tag }}">{{ tagTranslationKey | translate }}</a></li>
+                <li class="list-inline-item"><div class="tagType" data-tag="{{ tag }}">{{ tagTranslationKey | translate }}</a></li>
               {% endfor -%}
               </ul>
             {% endif %}
