@@ -106,3 +106,51 @@ The site offers, at the same time, a complete and precise main navigation and a 
 
 **Don't:**  
 An application provides a parcel navigation menu and no other way for the user to navigate the pages or locate where the current page is in the tree.
+
+
+
+##  Ensure that the help elements are placed in the same relative order on the pages that include them.
+
+**Target:** Everyone, especially people with visual impairments, cognitive problems or memory loss, to facilitate access to the help mechanism on a website or application.
+
+**When:** when designing.
+
+**Description :** 
+Help elements must be positioned in the same places and in the same relative order (i.e., related to other elements on pages) on all the pages where they are present. 
+For example, in the case of a common header, only the relative order of the content present in it and on all the pages containing the help mechanism should be taken into account.
+The following are considered to be help elements:
+- Human contact details: email, address, telephone, opening hours.
+- Human contact mechanisms: customer chat, contact form, redirect link to external help (social network or other). 
+- Self help options: FAQ, selfcare link, help page, etc. 
+- Fully automated contact mechanisms: chatbot, etc. 
+    
+This criterion does not require the presence of help mechanisms but to ensure their relative order remains the same eveywhere if present.
+
+If the page structure is modified according to the user profile (e.g. visitor profile or logged-in profile), each profile should be checked.
+
+**Bonne pratique :** If possible, the visual order should also be respected.
+
+**À vérifier :**
+- Identify the repeated presence of help elements on different pages. 
+- Help elements appear in the same relative order: any other content present in all the web pages and located before the help element must be located before the help element on this page. Elements located after the help element on other pages must be located after the help element on this page. 
+- Recheck the above points for each display mode (user profiles, CSS breakpoint on the web, portrait/landscape mode on mobile).
+
+NB: If the visual order differs from the relative order, then a particular attention should be paid to criterias <a href=https://a11y-guidelines.orange.com/en/web/develop/layout/#ensure-a-comprehensible-reading-order>1.4.4 Resize text</a> et <a href=https://a11y-guidelines.orange.com/en/web/develop/keyboard-navigation/#the-focus-order-must-be-sequential-and-logical-without-keyboard-trap>2.4.3 Focus order</a>.
+
+**Exceptions :**
+1. Compliant: An element is not positioned visually and exactly in the same place but is in the same order (according to the source code) compared to other common elements on the page.
+2. Compliant: The repositioning of help elements is caused by a display change initiated by the user (change of orientation, page resolution, activation of zoom, etc.).
+3. Compliant: An element such as an ad-hoc promotional link, which only appears on a single page and modifies the relative order of the help mechanism on this single page, can be ignored.
+4. Not applicable: Pages that have nothing in common from a visual and functional point of view (example: on an e-shop website, during payment process, the template may change and the payment page is functionally and visually completely different).
+
+**Users' goal:**
+Enabling users to find help elements easily on a site or application.
+ 
+**Do:**
+A chatbot support button is always in the same place on the different pages.
+
+**Don't:**
+A list of contact details placed in a footer or menu whose elements are ordered differently from one page to another.
+
+**Reference <abbr>WCAG</abbr> :**  
+<a lang="en" href=https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html>3.2.6 Consistent Help</a>
