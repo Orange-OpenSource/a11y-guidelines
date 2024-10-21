@@ -240,7 +240,7 @@ var body: some View {
      id="textAlt-Description"
      role="tabpanel">
      
-Avec VoiceOver, la vocalisation de chaque élément apportant de l'information doit être parfaitement comprise par l'utilisateur pour lui permettre de ne pas avoir à se poser quelque question que ce soit concernant le contenu de la page qu'il consulte.
+Avec <span lang="en">VoiceOver</span>, la vocalisation de chaque élément apportant de l'information doit être parfaitement comprise par l'utilisateur pour lui permettre de ne pas avoir à se poser quelque question que ce soit concernant le contenu de la page qu'il consulte.
 
 Cette précision nécessaire dans l'implémentation de ce mode de fonctionnement est possible en grande partie grâce à 4 attributs&nbsp;: `label`, `hint`, `value` et `trait`.
 </div>
@@ -832,7 +832,7 @@ Si on utilise l'attribut `accessibilityLanguage` sur un `UILabel`, alors celui-c
 
 <br>
 
-Si l'on souhaite ajouter un mot dans une langue spécifique au sein d'une phrase à prononcer de façon appropriée avec VoiceOver, on peut s'appuyer sur les **Attributed Accessibility Properties** en utilisant un `NSAttributedString` [depuis iOS&nbsp;11](https://a11y-guidelines.orange.com/fr/mobile/ios/wwdc/2017/215/#attributed-accessibility-properties-2607).
+Si l'on souhaite ajouter un mot dans une langue spécifique au sein d'une phrase à prononcer de façon appropriée avec <span lang="en">VoiceOver</span>, on peut s'appuyer sur les **Attributed Accessibility Properties** en utilisant un `NSAttributedString` [depuis iOS&nbsp;11](https://a11y-guidelines.orange.com/fr/mobile/ios/wwdc/2017/215/#attributed-accessibility-properties-2607).
 </div>
 <div class="tab-pane" id="changeLang-Links" role="tabpanel">
 
@@ -1674,7 +1674,7 @@ class ViewController: UIViewController {
 
 - L'[article de Rob Whitaker](https://mobilea11y.com/blog/custom-accessibility-content/) apporte une belle description pédagogique de cette nouvelle fonctionnalité qu'il est un des seuls à avoir exposé à l'issue de la WWDC 2020.
 
-- [WWDC 2021 : Optimiser VoiceOver dans un contexte riche en données](../wwdc/2021/121).
+- [WWDC 2021 : Optimiser <span lang="en">VoiceOver</span> dans un contexte riche en données](../wwdc/2021/121).
 </div>
 </div>
 <br><br>
@@ -2953,7 +2953,7 @@ Des éléments graphiques comme le `picker`, le `stepper` ou encore le `slider` 
 
 La méthodologie utilisée pour solutionner cette problématique pour une personne non voyante utilisant <span lang="en">VoiceOver</span> reste la même pour ces trois éléments, c'est pourquoi seul le cas du `stepper` sera traité.
 
-L'implémentation de cet objet graphique est relativement simple mais son utilisation avec VoiceOver requiert quelques ajustements pour obtenir un meilleur parcours utilisateur.
+L'implémentation de cet objet graphique est relativement simple mais son utilisation avec <span lang="en">VoiceOver</span> requiert quelques ajustements pour obtenir un meilleur parcours utilisateur.
 
 Si on crée un <span lang="en">stepper</span> auquel on ajoute un `label` pour afficher sa valeur, on obtient un ensemble d'éléments disjoints.
 ![](../../images/iOSdev/ValeursAjustables_2.png)
@@ -3211,7 +3211,7 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
      id="customActions-Description"
      role="tabpanel">
      
-Certaines manipulations basiques peuvent devenir un vrai casse-tête pour se fondre dans une navigation sereine avec VoiceOver et se transformer en éléments parfaitement accessibles.
+Certaines manipulations basiques peuvent devenir un vrai casse-tête pour se fondre dans une navigation sereine avec <span lang="en">VoiceOver</span> et se transformer en éléments parfaitement accessibles.
 
 Un exemple probant est celui du mail iOS natif qui permet d'accéder à un ensemble d'actions.
 
@@ -3236,9 +3236,9 @@ Un exemple probant est celui du mail iOS natif qui permet d'accéder à un ensem
      id="CustomActionsVoiceOver"
      role="tabpanel">
      
-![accès aux actions d'un mail sans voiceover avec un balayage gauche](../../images/iOSdev/Actions_VoiceOver.png)
+![accès aux actions d'un mail sans <span lang="en">VoiceOver</span> avec un balayage gauche](../../images/iOSdev/Actions_VoiceOver.png)
 
-La gestuelle utilisée sans utilisation du lecteur d'écran ne peut pas convenir à VoiceOver pour obtenir le résultat désiré&nbsp;: un balayage vers la gauche sélectionnerait l'élément accessible suivant au lieu de proposer les actions à réaliser sur le mail sélectionné.
+La gestuelle utilisée sans utilisation du lecteur d'écran ne peut pas convenir à <span lang="en">VoiceOver</span> pour obtenir le résultat désiré&nbsp;: un balayage vers la gauche sélectionnerait l'élément accessible suivant au lieu de proposer les actions à réaliser sur le mail sélectionné.
 
 Dans un cas comme celui-là, il conviendrait de réaliser les opérations décrites dans l'onglet `Exemple` pour donner accès à ces opérations si elles n'étaient pas implémentées nativement.
 </div>
@@ -3261,12 +3261,12 @@ Ce comportement qui n'a jamais été présenté ni expliqué par <span lang="en"
 
 
 ⚠️ ATTENTION : **vérifier l'activation des actions personnalisées** dans les réglages utilisateurs via '`Réglages` - `Accessibilité` - `VoiceOver` - `Verbosité` - `Actions`' avec `Énoncer` sélectionné. ⚠️
-Si ce n'est pas le cas, l'implémentation des actions personnalisées sera totalement ignorée par VoiceOver.
+Si ce n'est pas le cas, l'implémentation des actions personnalisées sera totalement ignorée par <span lang="en">VoiceOver</span>.
 </div>
 
 <div class="tab-pane" id="customActions-Example" role="tabpanel">
 
-Que ce soit pour le lecteur d'écran ou le contrôle de sélection, la réalisation programmatique est exactement la même pour obtenir les actions souhaitées&nbsp;: l'exemple suivant sera illustré pour VoiceOver.
+Que ce soit pour le lecteur d'écran ou le contrôle de sélection, la réalisation programmatique est exactement la même pour obtenir les actions souhaitées&nbsp;: l'exemple suivant sera illustré pour <span lang="en">VoiceOver</span>.
 
 Une solution consiste à **associer à l'élément sélectionné un tableau d'actions** dont le système se chargera d'indiquer automatiquement la présence en informant vocalement l'utilisateur de leur disponibilité.
 
@@ -3378,7 +3378,7 @@ class CustomActions: UIViewController {
 
 <br>Le code implémenté ci-dessus permet d'obtenir le résultat suivant par balayages successifs sur l'élément accessible sélectionné&nbsp;:
 
-![accès aux actions avec voiceover en utilisant un balayage vers le haut](../../images/iOSdev/Actions_3.png)
+![accès aux actions avec <span lang="en">VoiceOver</span> en utilisant un balayage vers le haut](../../images/iOSdev/Actions_3.png)
 <br>Pour plus d'informations sur ce sujet, ne pas hésiter à visualiser la vidéo **Utiliser les actions personnalisées** dont le [résumé&nbsp;détaillé](../wwdc/2019/#utiliser-les-actions-personnalisees) se trouve dans la section WWDC de ce site.
 </div>
 <div class="tab-pane" id="customActions-Links" role="tabpanel">
@@ -3641,7 +3641,7 @@ Par exemple, si <span lang="en">VoiceOver</span> est désactivé durant l’util
 Mais que se passe-t-il si <span lang="en">VoiceOver</span> est désactivé alors que ce traitement a déjà eu lieu&nbsp;?
 C’est là que les événements système peuvent être utilisés et, en restant à leur écoute, il est possible d’appliquer des traitements spécifiques de manière dynamique.
 
-Dans l'exemple suivant, on appelle une méthode spécifique au moment où le statut de VoiceOver ou du Switch Control change.
+Dans l'exemple suivant, on appelle une méthode spécifique au moment où le statut de <span lang="en">VoiceOver</span> ou du Switch Control change.
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">

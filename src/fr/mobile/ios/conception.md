@@ -986,7 +986,7 @@ La liste exhaustive de ces options est fournie ci-dessous en détaillant leur ac
 
 15. [Activer le Contrôle de Sélection](#optionA11Y_switchControl).
 
-16. [Activer VoiceOver](#optionA11Y_voiceOver).
+16. [Activer <span lang="en">VoiceOver</span>](#optionA11Y_voiceOver).
 
 17. [Prévisualisation vidéo](#optionA11Y_autoPlayVideoPreviews).
 
@@ -1619,7 +1619,7 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
 
 <a name="optionA11Y_voiceOver"></a>
 
-- **Activer VoiceOver** (UIAccessibilityIsVoiceOverRunning)&nbsp;: active le lecteur d'écran.
+- **Activer <span lang="en">VoiceOver</span>** (UIAccessibilityIsVoiceOverRunning)&nbsp;: active le lecteur d'écran.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
