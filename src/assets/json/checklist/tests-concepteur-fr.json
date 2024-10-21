@@ -328,6 +328,26 @@
     "profils": ["Concepteur"]
   },
   {
+    "themes": "Navigation générale",
+    "title": "S'assurer que les éléments d'aide sont placés dans le même ordre relatif sur les différentes pages qui les intègrent.",
+    "type": [],
+    "tests": [
+      "Examiner les wireframes et les maquettes graphiques",
+      "Identifier le positionnement des mécanismes d'aide sur l'ensemble des pages."
+    ],
+    "verifier": [
+      "Vérifier l'ordre des mécanismes d'aide sur chaque page",
+      "Si la structure des pages est modifiée selon les profils d'utilisation (par exemple profil visiteur ou profil connecté), il convient de faire la vérification pour chaque profil.",
+      "Si la structure des pages est modifiée selon la taille ou l'orientation de l'écran (point de rupture CSS ou mode portait/paysage), il convient de faire la vérification pour chaque cas."
+    ],
+    "resultat": [
+      "Les éléments d'aide apparaissent dans le même ordre sur chaque page."
+    ],
+    "exception": "<ul><li>Conforme : Le repositionnement des éléments d'aide est engendré par un changement d'affichage à l'initiative de l'utilisateur (changement d'orientation, de résolution de la page, activation du zoom, etc.).</li><li>Non-applicable : Des pages qui n'auraient rien à voir d'un point de vue visuel et fonctionnel (exemple : sur un site de e-commerce, lors du processus de paiement, le peut changer donc la page de paiement est fonctionnellement et visuellement totalement différente).</li></ul>",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
     "themes": "Navigation clavier",
     "title": "Permettre une navigation uniquement clavier",
     "type": [],

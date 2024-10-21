@@ -102,3 +102,51 @@ Le site propose, à la fois, une navigation principale complète et précise et 
 
 **Exemple invalide&nbsp;:**
 Une application offre un menu de navigation parcellaire et aucun autre moyen pour  l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.
+
+
+## S'assurer que les éléments d'aide sont placés dans le même ordre relatif sur les pages qui les intègrent.
+
+**Cible :** tout le monde, en particulier les personnes ayant une déficience visuelle, des troubles cognitifs ou perte de mémoire, afin de faciliter l'accès à l'aide sur un site ou une application.
+
+**Quand :** lors de la conception.
+
+**Description :** 
+Les éléments d'aide doivent être positionnés aux mêmes endroits et dans le même ordre relatif (i.e., par rapport aux autres éléments de contenu des pages) sur toutes les pages où ils sont présents.
+Par exemple, dans le cas d’un en-tête commun, seul l'ordre relatif du contenu présent dans l'en-tête et sur toutes les pages contenant le mécanisme d'aide, doit être pris en compte. 
+Sont considérés comme éléments d'aide : 
+- Les coordonnées permettant de contacter une personne : email, adresse, téléphone, heures d'ouverture.
+- Les mécanismes permettant de contacter une personne :  Chat client, formulaire de contact, lien de redirection vers une aide externe (réseau social ou autre).
+- Les options d'aide en autonomie : FAQ, lien selfcare, page d'assistance, etc.
+- Les systèmes de contact entièrement automatisés : chatbot, etc.
+    
+Ce critère n'impose pas la présence de mécanismes d'aide mais seulement de vérifier, quand ils sont présents, que leur positionnement relatif est le même sur les différents pages du site ou de l'application.
+
+Si la structure des pages est modifiée selon les profils d'utilisation (par exemple profil visiteur ou profil connecté), il convient de faire la vérification pour chaque profil.
+
+**Bonne pratique :** si possible l'ordre visuel doit être aussi respecté. 
+
+**À vérifier :**
+- Identifier la présence répétée d'éléments d'aide sur différentes pages.
+- Les éléments d'aides apparaissent dans le même ordre RELATIF : tout autre contenu présent dans l'ensemble des pages Web et situé avant l'élément d'aide doit se trouver avant l'élément d'aide sur cette page. Les éléments qui se trouvent après l'élément d'aide sur d'autres pages doivent être après l'élément d'aide sur cette page.
+- Revérifier les points précédents pour chaque mode d'affichage (profils d'utilisation, point de rupture CSS en web,  mode portait/paysage sur mobile).
+
+NB : Si l'ordre visuel diffère de l'ordre relatif, alors une attention particulière sera accordée aux critères <a href=https://a11y-guidelines.orange.com/fr/web/developper/mise-en-page/#assurer-un-ordre-de-lecture-du-contenu-comprehensible>1.3.2 Ordre séquentiel logique</a> et <a href=https://a11y-guidelines.orange.com/fr/web/developper/navigation-clavier/#rendre-le-parcours-du-focus-sequentiel-et-logique-sans-piege-clavier>2.4.3 Parcours du focus</a>.
+
+**Exceptions :**
+1. Conforme : Un élément n'est pas positionné visuellement et exactement au même endroit mais pourtant dans le même ordre (selon le code source) par rapport aux autres éléments communs de la page.
+2. Conforme : Le repositionnement des éléments d'aide est engendré par un changement d'affichage à l'initiative de l'utilisateur (changement d'orientation, de résolution de la page, activation du zoom, etc.).
+3. Conforme : Un élément comme un lien promotionnel ad-hoc, qui n'apparaît que sur une seule page et modifie l'ordre relatif du mécanisme d'aide sur cette seule page, peut être ignoré.
+4. Non-applicable : Des pages qui n'auraient rien à voir d'un point de vue visuel et fonctionnel (exemple : sur un site de e-commerce, lors du processus de paiement, le template peut changer et la page de paiement est fonctionnellement et visuellement totalement différente).
+
+**Objectif utilisateur :**
+Permettre aux utilisateurs de retrouver facilement les éléments d'aides sur un site ou une application.
+ 
+**Exemple valide :**
+Un bouton de support par chatbot est toujours présent au même endroit sur les différentes pages.
+
+**Exemple non valide :**
+Une liste de coordonnées placés dans un footer ou un menu dont les éléments sont ordonnés différemment d'une page à l'autre.
+
+**Référence <abbr>WCAG</abbr> :**  
+<a lang="en" href=https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html>3.2.6 Consistent Help</a>
+ 
