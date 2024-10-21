@@ -213,7 +213,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#libelle-des-liens-et-des-boutons" class="dropdown-item text-wrap">Libellé des liens et des boutons</a><a href="#eviter-les-boites-de-dialogues-et-louverture-de-nouvelles-fenetres" class="dropdown-item text-wrap">Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres</a><a href="#fournir-des-liens-devitement" class="dropdown-item text-wrap">Fournir des liens d’évitement</a><a href="#permettre-le-controle-des-animations" class="dropdown-item text-wrap">Permettre le contrôle des animations</a><a href="#situer-explicitement-la-page-dans-le-site-et-fournir-plusieurs-moyens-dy-acceder" class="dropdown-item text-wrap">Situer explicitement la page dans le site et fournir plusieurs moyens d&#39;y accéder</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#libelle-des-liens-et-des-boutons" class="dropdown-item text-wrap">Libellé des liens et des boutons</a><a href="#eviter-les-boites-de-dialogues-et-louverture-de-nouvelles-fenetres" class="dropdown-item text-wrap">Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres</a><a href="#fournir-des-liens-devitement" class="dropdown-item text-wrap">Fournir des liens d’évitement</a><a href="#permettre-le-controle-des-animations" class="dropdown-item text-wrap">Permettre le contrôle des animations</a><a href="#situer-explicitement-la-page-dans-le-site-et-fournir-plusieurs-moyens-dy-acceder" class="dropdown-item text-wrap">Situer explicitement la page dans le site et fournir plusieurs moyens d&#39;y accéder</a><a href="#sassurer-que-les-elements-daide-sont-places-dans-le-meme-ordre-relatif-sur-les-pages-qui-les-integrent" class="dropdown-item text-wrap">S&#39;assurer que les éléments d&#39;aide sont placés dans le même ordre relatif sur les pages qui les intègrent.</a></div>
     </nav>
         
       </div>
@@ -327,6 +327,44 @@ S’assurer que plusieurs systèmes permettent de situer et accéder à une page
 Le site propose, à la fois, une navigation principale complète et précise et un fil d’Ariane.</p>
 <p><strong>Exemple invalide :</strong><br>
 Une application offre un menu de navigation parcellaire et aucun autre moyen pour  l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.</p>
+<h2 id="sassurer-que-les-elements-daide-sont-places-dans-le-meme-ordre-relatif-sur-les-pages-qui-les-integrent">S'assurer que les éléments d'aide sont placés dans le même ordre relatif sur les pages qui les intègrent. <a class="header-anchor" href="#sassurer-que-les-elements-daide-sont-places-dans-le-meme-ordre-relatif-sur-les-pages-qui-les-integrent" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong> tout le monde, en particulier les personnes ayant une déficience visuelle, des troubles cognitifs ou perte de mémoire, afin de faciliter l'accès à l'aide sur un site ou une application.</p>
+<p><strong>Quand :</strong> lors de la conception.</p>
+<p><strong>Description :</strong><br>
+Les éléments d'aide doivent être positionnés aux mêmes endroits et dans le même ordre relatif (i.e., par rapport aux autres éléments de contenu des pages) sur toutes les pages où ils sont présents.<br>
+Par exemple, dans le cas d’un en-tête commun, seul l'ordre relatif du contenu présent dans l'en-tête et sur toutes les pages contenant le mécanisme d'aide, doit être pris en compte.<br>
+Sont considérés comme éléments d'aide :</p>
+<ul>
+<li>Les coordonnées permettant de contacter une personne : email, adresse, téléphone, heures d'ouverture.</li>
+<li>Les mécanismes permettant de contacter une personne :  Chat client, formulaire de contact, lien de redirection vers une aide externe (réseau social ou autre).</li>
+<li>Les options d'aide en autonomie : FAQ, lien selfcare, page d'assistance, etc.</li>
+<li>Les systèmes de contact entièrement automatisés : chatbot, etc.</li>
+</ul>
+<p>Ce critère n'impose pas la présence de mécanismes d'aide mais seulement de vérifier, quand ils sont présents, que leur positionnement relatif est le même sur les différents pages du site ou de l'application.</p>
+<p>Si la structure des pages est modifiée selon les profils d'utilisation (par exemple profil visiteur ou profil connecté), il convient de faire la vérification pour chaque profil.</p>
+<p><strong>Bonne pratique :</strong> si possible l'ordre visuel doit être aussi respecté.</p>
+<p><strong>À vérifier :</strong></p>
+<ul>
+<li>Identifier la présence répétée d'éléments d'aide sur différentes pages.</li>
+<li>Les éléments d'aides apparaissent dans le même ordre RELATIF : tout autre contenu présent dans l'ensemble des pages Web et situé avant l'élément d'aide doit se trouver avant l'élément d'aide sur cette page. Les éléments qui se trouvent après l'élément d'aide sur d'autres pages doivent être après l'élément d'aide sur cette page.</li>
+<li>Revérifier les points précédents pour chaque mode d'affichage (profils d'utilisation, point de rupture CSS en web,  mode portait/paysage sur mobile).</li>
+</ul>
+<p>NB : Si l'ordre visuel diffère de l'ordre relatif, alors une attention particulière sera accordée aux critères <a href=https://a11y-guidelines.orange.com/fr/web/developper/mise-en-page/#assurer-un-ordre-de-lecture-du-contenu-comprehensible>1.3.2 Ordre séquentiel logique</a> et <a href=https://a11y-guidelines.orange.com/fr/web/developper/navigation-clavier/#rendre-le-parcours-du-focus-sequentiel-et-logique-sans-piege-clavier>2.4.3 Parcours du focus</a>.</p>
+<p><strong>Exceptions :</strong></p>
+<ol>
+<li>Conforme : Un élément n'est pas positionné visuellement et exactement au même endroit mais pourtant dans le même ordre (selon le code source) par rapport aux autres éléments communs de la page.</li>
+<li>Conforme : Le repositionnement des éléments d'aide est engendré par un changement d'affichage à l'initiative de l'utilisateur (changement d'orientation, de résolution de la page, activation du zoom, etc.).</li>
+<li>Conforme : Un élément comme un lien promotionnel ad-hoc, qui n'apparaît que sur une seule page et modifie l'ordre relatif du mécanisme d'aide sur cette seule page, peut être ignoré.</li>
+<li>Non-applicable : Des pages qui n'auraient rien à voir d'un point de vue visuel et fonctionnel (exemple : sur un site de e-commerce, lors du processus de paiement, le template peut changer et la page de paiement est fonctionnellement et visuellement totalement différente).</li>
+</ol>
+<p><strong>Objectif utilisateur :</strong><br>
+Permettre aux utilisateurs de retrouver facilement les éléments d'aides sur un site ou une application.</p>
+<p><strong>Exemple valide :</strong><br>
+Un bouton de support par chatbot est toujours présent au même endroit sur les différentes pages.</p>
+<p><strong>Exemple non valide :</strong><br>
+Une liste de coordonnées placés dans un footer ou un menu dont les éléments sont ordonnés différemment d'une page à l'autre.</p>
+<p><strong>Référence <abbr>WCAG</abbr> :</strong><br>
+<a lang="en" href=https://www.w3.org/WAI/WCAG22/Understanding/consistent-help.html>3.2.6 Consistent Help</a></p>
 
           </div>
         </main>
@@ -340,7 +378,8 @@ Une application offre un menu de navigation parcellaire et aucun autre moyen pou
             <a href="#eviter-les-boites-de-dialogues-et-louverture-de-nouvelles-fenetres" class="nav-link text-muted">Éviter les boites de dialogues et l’ouverture de nouvelles fenêtres</a></li><li class="nav-item position-relative">
             <a href="#fournir-des-liens-devitement" class="nav-link text-muted">Fournir des liens d’évitement</a></li><li class="nav-item position-relative">
             <a href="#permettre-le-controle-des-animations" class="nav-link text-muted">Permettre le contrôle des animations</a></li><li class="nav-item position-relative">
-            <a href="#situer-explicitement-la-page-dans-le-site-et-fournir-plusieurs-moyens-dy-acceder" class="nav-link text-muted">Situer explicitement la page dans le site et fournir plusieurs moyens d&#39;y accéder</a></li>
+            <a href="#situer-explicitement-la-page-dans-le-site-et-fournir-plusieurs-moyens-dy-acceder" class="nav-link text-muted">Situer explicitement la page dans le site et fournir plusieurs moyens d&#39;y accéder</a></li><li class="nav-item position-relative">
+            <a href="#sassurer-que-les-elements-daide-sont-places-dans-le-meme-ordre-relatif-sur-les-pages-qui-les-integrent" class="nav-link text-muted">S&#39;assurer que les éléments d&#39;aide sont placés dans le même ordre relatif sur les pages qui les intègrent.</a></li>
       </ul>
     </nav>
             </div>
