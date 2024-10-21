@@ -9,8 +9,8 @@ displayToc: true
 This guide aims to present the different accessibility criteria to create an accessible iOS application.
 <br>Each criterion explains for whom it is important, when it can be implemented, why it is important and the corresponding accessibility rule.
 
-<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555"><img class="img-fluid" alt="Access to the WWDC video highlighting the importance of the visual." src="../../images/conception-intro-wwdc.png"/>
-</a>
+<div><q lang="en">When designing your app, keep text size, weight, and layout in mind for clarity and readability.</q><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555">WWDC 2020 - Make Your App Visually Accessible (watch the video)</a></div>
+
 ## Images
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -954,8 +954,7 @@ It's then primordial :
 
 - To **test** each appropriate option so as to be sure that its purpose is completely taken into account inside the application.
 
-<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783"><img class="img-fluid" alt="Access to the WWDC video that highlights the importance of taking into account the user settings inside an application." src="../../images/displayPreferences-wwdc.png"/>
-</a>
+<div><q lang="en">It's also our duty to listen and respect the setting for users that have it enabled</q><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783">WWDC 2020 - Make Your App Visually Accessible (watch the video)</a></div>
 
 </br>**Target:** everyone.  
 **When:** as of design and during development.

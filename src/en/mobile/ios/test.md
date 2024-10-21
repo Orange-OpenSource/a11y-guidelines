@@ -12,9 +12,7 @@ Each one of these features should be seen as an important **human-made** element
 
 Whatever the design, implementation or testing area, **every decision** must be particularly **empathetic** to provide the best user experience.
 
-<a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=56">
-    
-![access to the WWDC video that explains the importance of the accessibility implementation as a major step in the project process](../../images/ios-test-AuditsWWDC.png)
+<div><q lang="en">An accessible product is a high-quality product</q><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=56"> WWDC 2023 - Perform Accessibility Audits For Your App (watch the video)</a></div>
 
 
 ## Fundamental prerequisites
