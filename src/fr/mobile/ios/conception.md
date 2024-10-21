@@ -8,8 +8,8 @@ displayToc: true
 Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application iOS accessible.
 </br>Chacun de ces critères est présenté en expliquant pour qui il est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle.
 
-<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555"><img class="img-fluid" alt="Accès à la vidéo WWDC mentionnant l'importance du visuel." src="../../images/conception-intro-wwdc.png"/>
-</a>
+<div><q lang="en">When designing your app, keep text size, weight, and layout in mind for clarity and readability.</q><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555">WWDC 2020 - Make Your App Visually Accessible (voir la vidéo)</a></div>
+
 ## Images
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -947,8 +947,7 @@ Les options d'accessibilité présentes dans les réglages du terminal sont tout
 
 - **tester** chacune des options appropriées afin de s'assurer que son effet est bien pris en compte au sein de l'application proposée.
 
-<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783"><img class="img-fluid" alt="Accès à la vidéo WWDC mentionnant l'importance de la prise en compte des réglages utilisateurs au sein d'une application." src="../../images/displayPreferences-wwdc.png"/>
-</a>
+<div><q lang="en">It's also our duty to listen and respect the setting for users that have it enabled</q><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783">WWDC 2020 - Make Your App Visually Accessible (voir la vidéo)</a></div>
 
 **Cible&nbsp;:** tout le monde.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
