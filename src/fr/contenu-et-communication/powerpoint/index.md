@@ -105,9 +105,10 @@ Le contenu informatif des graphiques doit être décrit dans le texte de remplac
 
 ## Liens
 Une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lui lire l’ensemble des liens présents sur une page. Chaque lien sera donc lu en dehors de son contexte visuel et doit donc se suffire à lui-même : 
-* Rédiger des intitulés de liens explicites (compréhensibles hors contexte visuel de la page).
-* Annoncer les liens qui déclenchent l’ouverture d’une nouvelle fenêtre (ajouter « nouvelle fenêtre » dans le libellé).
+* Rédiger des intitulés de liens explicites (compréhensibles hors contexte visuel de la page). 
+Ouvrir la pop-up "Insérer/Modifier un lien hypertexte". Dans le champ "Texte à afficher", saisir le texte qui doit apparaître pour votre lien hypertexte. Saisir dans info-bulle le texte à afficher quand l’utilisateur pointe sur le lien hypertexte (facultatif).
 <img alt="" src="/fr/contenu-et-communication/images/Image-info-bulle.png" class="img-fluid">  &nbsp;
+* Annoncer les liens qui déclenchent l’ouverture d’une nouvelle fenêtre (ajouter « nouvelle fenêtre » dans le libellé).
 * Pour chaque fichier téléchargeable, indiquer le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document.
 
 ## Tableaux de données / tableaux de présentation 
