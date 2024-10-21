@@ -12,8 +12,7 @@ Each one of these features should be seen as an important **human-made** element
 
 Whatever the design, implementation or testing area, **every decision** must be particularly **empathetic** to provide the best user experience.
 
-<div><q>[...] an accessible product is a high-quality product.</q>&nbsp;<a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=56">WWDC 2023 - Perform Accessibility Audits For Your App (Watch the video)</a></div>
-<br><br>
+<div><q>An accessible product is a high-quality product</q><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=56"> WWDC 2023 - Perform Accessibility Audits For Your App (watch the video)</a></div>
 
 ## Fundamental prerequisites
 
