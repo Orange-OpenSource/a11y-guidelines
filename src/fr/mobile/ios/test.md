@@ -109,8 +109,7 @@ Les **tests** à réaliser pour le <span lang="en">`Dynamic Type`</span> sont **
 
 <div><q lang="en">My biggest tip is to think about these early on in the design process.</q>&nbsp;<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562"><span lang="en">WWDC 2020 - Make Your App Visually Accessible</span> (voir la vidéo)</a></div>
 <br><br>
-
-### VoiceOver
+### <span lang="en">VoiceOver</span>
 
 L'activation du lecteur d'écran natif change radicalement les résultats obtenus par les gestes standards effectués sur l’écran tactile, c'est pourquoi son utilisation demande un certain temps d'adaptation pour une maîtrise de sa [gestuelle&nbsp;spécifique](../voiceover/).
 
@@ -157,7 +156,7 @@ Il est donc **très fortement recommandé** de connaître au moins les gestes de
 
 </div></div>
 
-<br>Pour aboutir à une parfaite implémentation de VoiceOver, il ne faut surtout pas croire que chaque élément doit absolument être vocalisé et se contenter de passer au suivant pour renouveler cette opération : ce type de réalisation est tout sauf productif&nbsp;!
+<br>Pour aboutir à une parfaite implémentation de <span lang="en">VoiceOver</span>, il ne faut surtout pas croire que chaque élément doit absolument être vocalisé et se contenter de passer au suivant pour renouveler cette opération : ce type de réalisation est tout sauf productif&nbsp;!
 
 Il faut bien avoir à l'esprit que l'**information** diffusée visuellement est assimilée en très peu de temps alors que celle fournie par le lecteur d'écran arrive de façon **séquentielle** à la vitesse de sélections successives d'éléments&nbsp;: un **effort énorme de mémorisation** est à fournir pour avoir une vision synoptique de l'écran et comprendre réellement ce qui est proposé.
 
@@ -174,7 +173,7 @@ En plus des [critères&nbsp;de&nbsp;conception](../conception/) à respecter, qu
 
 4. l'utilisateur doit réaliser un minimum de sélections au sein de l'écran.
 
-Ici encore, les tests demandent beaucoup de temps et requièrent une forte empathie pour avancer des critiques constructives sur la façon dont l'information vocale doit être diffusée par VoiceOver.
+Ici encore, les tests demandent beaucoup de temps et requièrent une forte empathie pour avancer des critiques constructives sur la façon dont l'information vocale doit être diffusée par <span lang="en">VoiceOver</span>.
 
 Maintenant, **si le lecteur d'écran n'est pas encore implémenté** sur une application déjà en diffusion publique, il est primordial d'en **informer l'utilisateur** dès [sélection&nbsp;de&nbsp;l'icône&nbsp;applicatif](../developpement/#vocalisation-du-nom-de-lapplication) en indiquant très clairement la situation de façon à éviter une consultation catastrophique et décevante.
 <br><br>
