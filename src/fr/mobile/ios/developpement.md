@@ -137,11 +137,7 @@ var body: some View {
 </div>
 
 <div class="tab-pane" id="TraitElt-BasicOperations" role="tabpanel" >
-
-L'attribut `accessibilityTrait` est en réalité un `bitmask` pour lequel chaque élément pris individuellement peut prendre une valeur spécifique.
-
-![](../../images/iOSdev/Traits.png)
-<br>Il est donc possible d'ajouter et d'enlever plusieurs `traits` présents pour caractériser un élement après avoir vérifié leur existence par exemple.
+Il est  possible d'ajouter et d'enlever plusieurs `traits` présents pour caractériser un élement après avoir vérifié leur existence par exemple.
 
 <div class="code-tab-pane">
 
@@ -383,10 +379,10 @@ La lecture des date, heure et nombres n'est pas compliquée mais peut très vite
 
 Si on met directement sous forme de texte la date ou l'heure dans le `label`, on s'aperçoit rapidement que le rendu n'est pas naturel à l'écoute.
 
-![](../../images/iOSdev/DateHeureNombres_10.png)
+![Zéro un barre oblique zéro quatre barre oblique deux mille quinze. Cinq trente](../../images/iOSdev/DateHeureNombres_10.png)
 Il faut absolument formater les données en entrée pour obtenir une vocalisation descriptive naturelle et compréhensible.
 
-![](../../images/iOSdev/DateHeureNombres_4.png)
+![Premier avril deux mille quinze. Cinq heure et trente minutes](../../images/iOSdev/DateHeureNombres_4.png)
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">
@@ -467,11 +463,11 @@ Il faut absolument formater les données en entrée pour obtenir une vocalisatio
 
 En indiquant la valeur d'un nombre directement dans le texte d'un `label`, la vocalisation se fera sur chacun des chiffres présentés rendant la véritable valeur du nombre difficile à deviner.
 
-![](../../images/iOSdev/DateHeureNombres_8.png)
+![cinq quatre zéro trois huit neuf deux un sept](../../images/iOSdev/DateHeureNombres_8.png)
 
 Comme pour les date et heure, il faut formater la donnée en entrée pour qu'elle puisse être analysée et vocalisée selon la véritable valeur du nombre qu'elle représente.
 
-![](../../images/iOSdev/DateHeureNombres_5.png)
+![cinquante-quatre millions trente-huit mille neuf cent vingt et un virgule sept](../../images/iOSdev/DateHeureNombres_5.png)
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">
@@ -513,10 +509,10 @@ La problématique liée à la vocalisation d'un numéro de téléphone est ident
 
 L'exemple donné ci-dessous concerne la numérotation française avec une logique qui peut se décliner à n'importe quel type de format de numérotation.
 
-![](../../images/iOSdev/DateHeureNombres_11.png)
+![zéro six point onze point vingt-deux point trente-trois point zéro six](../../images/iOSdev/DateHeureNombres_11.png)
 
 L'idée est de séparer chaque paire de chiffres par une virgule qui va fournir la ponctuation vocale.
-![](../../images/iOSdev/DateHeureNombres_6.png)
+![zéro six onze vingt-deux trente-trois zéro six](../../images/iOSdev/DateHeureNombres_6.png)
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">
@@ -1555,7 +1551,7 @@ L'accès à ces informations se fait en **utilisant le rotor** qui contiendra al
 
 L'exemple de code ci-dessous permet d'obtenir tout un tas d'informations présentes sur une image sous forme de données non visuelles mais vocalisables.
 
-⚠️ Il faut absolument penser à **importer le framework Accessibility** auquel appartient le protocole `AXCustomContentProvider`. ⚠️
+⚠️ Il faut absolument penser à **importer le framework Accessibility** auquel appartient le protocole `AXCustomContentProvider`.
 
 Après avoir défini la classe pour la vue contenant l'image&nbsp;:
 
@@ -1665,7 +1661,11 @@ class ViewController: UIViewController {
 
 </div>
 
+Exemple d'utilisation :
+Sur le logo de la marque Orange, il est possible d'ajouter du contenu personnalisé consultable à l'aide de l'option "Plus de contenu" du rotor. 
 ![](../../images/iOSdev/CustomContentProvider_2.png)
+
+En utilisant le balayage vertical avec un doigt, il est possible d'entendre "Télécommunications type de société, Paris siège social, 1988 date de création"
 ![](../../images/iOSdev/CustomContentProvider_3.png)
 </div>
 <div class="tab-pane" id="CuCoPro-Links" role="tabpanel">
@@ -2296,19 +2296,19 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
      id="TextSize-iOS16"
      role="tabpanel">
      
-![](../../images/iOSdev/TailleDesTextes_iOS16_1.png)
+![Sur iOS 16 : menu Réglages-Accessibilité-Affichage et taille du texte, activer Police plus grande](../../images/iOSdev/TailleDesTextes_iOS16_1.png)
 </div>
 <div class="tab-pane" 
      id="TextSize-iOS13" 
      role="tabpanel">
      
-![](../../images/iOSdev/TailleDesTextes_iOS13_1.png)
+![Sur iOS 13 : menu Réglages-Accessibilité-Affichage et taille du texte, activer Police plus grande](../../images/iOSdev/TailleDesTextes_iOS13_1.png)
 </div>
 <div class="tab-pane" 
      id="TextSize-iOS12" 
      role="tabpanel">
      
-![](../../images/iOSdev/TailleDesTextes_1.png)
+![Sur iOS 12 : menu Général-Accessibilité, activer Police plus grande](../../images/iOSdev/TailleDesTextes_1.png)
 </div></div>
 
 <br>Quelques points sont néanmoins essentiels pour la bonne utilisation du <span lang="en">Dynamic Type</span> mis à disposition&nbsp;:
