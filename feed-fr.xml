@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2024-10-15T00:00:00Z</updated>
+  <updated>2024-10-17T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>  
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Orange et l&#39;accessibilité numérique en 2024</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/Orange_et_l_accessibilite_numerique_en_2024/"/>
+    <updated>2024-10-17T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/Orange_et_l_accessibilite_numerique_en_2024/</id>
+    <content xml:lang="fr" type="html">Description des chantiers</content>
+  </entry>
   
   <entry>
     <title>Tester l&#39;accessibilité d&#39;une application Android</title>
