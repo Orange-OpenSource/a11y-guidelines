@@ -37,7 +37,7 @@ Lors d'une interaction gestuelle mono-point, au moins une condition est vraie :
 - Terminer la fonction sur l'événement est essentiel. Note : les fonctions qui émulent un appui clavier ou un pavé numérique sont considérées comme essentielles. 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
 
 
 
@@ -56,8 +56,8 @@ Lors d'une interaction gestuelle mono-point, au moins une condition est vraie :
 **Gestuelle simplifiée**: une alternative nécessitant un seul pointeur (un seul doigt) et sans trajectoire précise.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#motion-actuation">2.5.4 Motion Actuation</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#motion-actuation">2.5.4 Motion Actuation</a>
 
 ## Proposer une alternative aux mouvements de glisser-déposer 
 
@@ -87,4 +87,4 @@ La fonctionnalité de glisser-déposer est essentielle (un jeu de dextérité pa
 L'accès au contenu ne doit pas dépendre de l'orientation de l'écran (portrait et paysage). Sauf usage essentiel au fonctionnement de l’application (ex : <span lang="en">serious game</span>).
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#orientation">1.3.4 Orientation</a>

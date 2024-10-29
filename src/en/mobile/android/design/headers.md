@@ -25,4 +25,4 @@ A common mistake is to put a unique title for all the pages of an application (o
 
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#page-titled">2.4.2 Page titled</a> 
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#page-titled">2.4.2 Page titled</a> 
