@@ -1,5 +1,5 @@
 ---
-title: "Liste des critères WCAG pour les tests iOS"
+title: "Critères incontournables sur iOS"
 abstract: "Notre socle de critères destiné aux sites et applications web permettant tester le respect des WCAG"
 displayToc: true
 leftColumn:
