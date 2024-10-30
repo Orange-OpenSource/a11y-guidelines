@@ -98,10 +98,10 @@
 	"IDorigin": "testMobID-7"
 }, {
 	"themes": "Tactile et interactions",
-	"title": "Taille des zones cliquables",
+	"title": "Avoir des zones cliquables suffisamment grandes",
 	"type": ["Test manuel"],
 	"tests": ["Identifier les éléments cliquables."],
-	"verifier": ["Vérifier que les éléments cliquables ne sont pas trop rapprochés entre eux.", "Vérifier que la zone tactile ne nécessite pas une trop grande précision."],
+	"verifier": ["Vérifier que les éléments cliquables ne sont pas trop rapprochés entre eux.", "Vérifier que la zone tactile ne nécessite pas une trop grande précision (taille recommandée : 44pt)."],
 	"resultat": ["La zone tactile de chaque élément et l'espacement entre les composants doivent éviter des erreurs de toucher (appui par erreur ou difficulté à activer un élément)."],
 	"exception": "",
 	"raccourcis": "",
