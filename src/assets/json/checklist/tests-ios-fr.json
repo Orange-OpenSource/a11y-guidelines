@@ -44,7 +44,7 @@
 	"themes": "Navigation clavier",
 	"title": "Permettre l'utilisation de l'application au clavier",
 	"type": ["Clavier bluetooth ou Contrôle de Sélection"],
-	"tests": ["Connecter un clavier bluetooth au mobile iOS (à défaut utiliser le contrôle de sélection).<br>Voir <a href="https://a11y-guidelines.orange.com/fr/articles/how-to-test-ios/">l'article sur la prise en main des fonctionnalités sur iOS</a>.","Parcourir la page au clavier à l'aide des touches <kbd>tab</kbd> ou <kbd>shift + tab</kbd>."], 
+	"tests": ["Connecter un clavier bluetooth au mobile iOS (à défaut utiliser le contrôle de sélection).<br>Voir <a href=https://a11y-guidelines.orange.com/fr/articles/how-to-test-ios/>l'article sur la prise en main des fonctionnalités sur iOS</a>.","Parcourir la page au clavier à l'aide des touches <kbd>tab</kbd> ou <kbd>shift + tab</kbd>."], 
 	"verifier": ["Tout ce qui peut être fait par l'écran tactile peut être fait au clavier et inversement."],
 	"resultat": ["Tous les éléments interactifs sont atteignables et utilisables depuis une navigation clavier."],
 	"exception": "",
