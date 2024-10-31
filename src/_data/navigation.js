@@ -57,7 +57,8 @@ module.exports = {
           { label: 'Develop', href: '/en/mobile/android/development/' },
           { label: 'Test', href: '/en/mobile/android/test/' },
           { label: 'Audit', href: '/en/mobile/android/wcag-audit/' },
-          { label: 'Toolbox', href: '/en/mobile/android/toolbox/' }
+          { label: 'Toolbox', href: '/en/mobile/android/toolbox/' },
+	  { label: 'Checklist', href: '/en/mobile/android/checklist/' }
         ]
       },
       {
@@ -147,7 +148,8 @@ module.exports = {
           { label: 'Développer', href: '/fr/mobile/android/developpement/' },
           { label: 'Tester', href: '/fr/mobile/android/test/' },
           { label: 'Auditer', href: '/fr/mobile/android/audit-wcag/' },
-          { label: 'Boite à outils', href: '/fr/mobile/android/outils/' }
+          { label: 'Boite à outils', href: '/fr/mobile/android/outils/' },
+          { label: 'Checklist', href: '/fr/mobile/android/checklist/' }
         ]
       },
       {
