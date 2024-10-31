@@ -127,7 +127,7 @@
 }, {
 	"themes": "Aides techniques",
 	"title": "S'assurer que tous les composants interactifs ont un nom accessible",
-	"type": ["Voice Over"],
+	"type": ["Contrôle vocal"],
 	"tests": ["Activer le contrôle vocal. Voir <a href=https://a11y-guidelines.orange.com/fr/articles/how-to-test-ios/>l'article sur la prise en main des fonctionnalités sur iOS</a>."],
 	"verifier": ["Vérifier que le nom de chaque composant interactif (boutons, liens, cases à cocher, etc.) s'affiche à l'aide du contrôle vocal."],
 	"resultat": ["Chaque composant identifié doit avoir un nom explicite et cohérent avec la fonction du composant."],
