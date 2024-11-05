@@ -70,7 +70,8 @@ Lorsque « Voice Access » est activé, vous pouvez énoncer des commandes com
 
 Une fois Voice Access activé, dites "afficher les libellés", ce qui affichera le nom accessible attribué aux composants sans étiquette visible. Pour qu'une application soit pilotable de la sorte, il faut que les composants interactifs aient un nom accessible simple et cohérent (en particulier dans le cas d'une image-lien ou image-bouton sans libellé visible).
 
-![](https://github.com/user-attachments/assets/7ba3b950-435d-49a5-8df9-4420b47486d9)
+![Bouton sur une carte, sans étiquette visible mais avec un nom accessible "Ma position"](https://github.com/user-attachments/assets/b703ab5b-93c8-4bf5-b658-ad57e15cc5ac)
+
 
 ### Taille de police
 1. Agrandir la police de caractères à partir du menu Paramètres > Écran > Taille et style de police
