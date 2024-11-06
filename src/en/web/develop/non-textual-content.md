@@ -64,7 +64,7 @@ The <a href="https://chrispederick.com/work/web-developer/"> Web developer </a> 
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
 - <a href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
-- <a href="https://www.w3.org/WAI/WCAG21/Understanding/images-of-text">1.4.5 Images of text</a>
+- <a href="https://www.w3.org/WAI/WCAG22/Understanding/images-of-text">1.4.5 Images of text</a>
 
 
 
