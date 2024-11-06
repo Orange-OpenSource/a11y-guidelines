@@ -35,8 +35,8 @@ Permettre aux utilisateurs (malvoyants, en mobilité, seniors…) d’augmenter 
 Voir l’exemple [gestion du zoom, agrandissement de la taille du texte](../../exemples-de-composants/zoom/) pour plus d’informations.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#resize-text">1.4.4 Resize text</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#reflow">1.4.10 Reflow</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#resize-text">1.4.4 Resize text</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#reflow">1.4.10 Reflow</a>
 
 
 
@@ -72,7 +72,7 @@ Pour faciliter le test, vous pouvez utiliser le bookmarklet suivant (à glisser 
 Permettre aux personnes déficientes visuelles et cognitives d'améliorer le confort de lecture.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#text-spacing">1.4.12 Text Spacing</a>
 
 
 ## Assurer un ordre de lecture du contenu compréhensible
@@ -101,7 +101,7 @@ Un site de presse présente ses articles en trois colonnes. Dans le code, les co
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
 
 
 ## Identifier et conserver la cohérence des regroupements et des différentes régions de la page
@@ -136,8 +136,8 @@ Un site de presse présente ses articles en trois colonnes. Dans le code, les co
   Mettre en place ce type de sémantique permet aux déficients visuels d’identifier et comprendre l’organisation, la structure globale de la page et donc de naviguer plus facilement.
   
   **Référence <abbr>WCAG</abbr>&nbsp;:**  
-  - <a lang="en" href="https://www.w3.org/TR/WCAG21/#consistent-navigation">3.2.3 Consistent Navigation</a>
-  - <a lang="en" href="https://www.w3.org/TR/WCAG21/#consistent-identification">3.2.4 Consistent Identification</a>
+  - <a lang="en" href="https://www.w3.org/TR/WCAG22/#consistent-navigation">3.2.3 Consistent Navigation</a>
+  - <a lang="en" href="https://www.w3.org/TR/WCAG22/#consistent-identification">3.2.4 Consistent Identification</a>
 
 
 
@@ -184,5 +184,5 @@ Permettre aux utilisateurs, via leur agent utilisateur ou aide technique (par ex
 Améliore globalement la maintenabilité.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Images of Text</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#images-of-text">1.4.5 Images of Text</a>

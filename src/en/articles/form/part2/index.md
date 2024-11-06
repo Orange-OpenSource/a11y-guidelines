@@ -264,7 +264,7 @@ In the example above:
 
 ### Using the autocomplete attribute
 
-The <code>autocomplete</code> attribute makes it easier to fill in fields that contain personal information. All fields whose type is listed in <a href="https://www.w3.org/TR/WCAG21/#input-purposes" lang="en">7. InputPurposes for User Interface Components</a> must contain the <code>autocomplete</code> attribute.
+The <code>autocomplete</code> attribute makes it easier to fill in fields that contain personal information. All fields whose type is listed in <a href="https://www.w3.org/TR/WCAG22/#input-purposes" lang="en">7. InputPurposes for User Interface Components</a> must contain the <code>autocomplete</code> attribute.
 
 In our example the fields below should have an <code>autocomplete</code> attribute:
 <ul>

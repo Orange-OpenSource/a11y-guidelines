@@ -33,7 +33,7 @@ Allow users to identify the topic of a page, find and get a clear idea of the co
 `<title>Home</title>`
 
 **<abbr>WCAG</abbr> reference:**
-- <a href="https://www.w3.org/TR/WCAG21/#page-titled">2.4.2 Page Titled</a>
+- <a href="https://www.w3.org/TR/WCAG22/#page-titled">2.4.2 Page Titled</a>
 
 
 

@@ -52,8 +52,8 @@ Faciliter la lecture à tous les utilisateurs, déficients visuels ou personnes 
 L’application <a href="http://www.paciellogroup.com/resources/contrastanalyser/" hreflang="en" lang="en">Colour Contrast Analyser</a> permet de mesurer rapidement des niveaux de contraste de couleurs (gratuit pour Mac et Windows). <a href="../../outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/">Comment utiliser Colour Contrast Analyser</a>, quelques explications. 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contrast (Minimum)</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-contrast">1.4.11 Non-text Contrast</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#contrast-minimum">1.4.3 Contrast (Minimum)</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-contrast">1.4.11 Non-text Contrast</a>
 
 
 
@@ -87,5 +87,5 @@ Pour un graphique type camembert, où chaque partie est colorée différemment, 
 Cet exemple n’est pas valide, car l’information est transmise uniquement par la couleur.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#sensory-characteristics">1.3.3 Sensory Characteristics</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#use-of-color">1.4.1 Use of Color</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#sensory-characteristics">1.3.3 Sensory Characteristics</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#use-of-color">1.4.1 Use of Color</a>

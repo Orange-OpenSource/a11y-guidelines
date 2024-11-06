@@ -34,8 +34,8 @@ The text "film | 20h40 ..." does not have sufficient contrast. It will not be re
 
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contrast minimum</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-contrast">1.4.11 Non text contrast</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#contrast-minimum">1.4.3 Contrast minimum</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-contrast">1.4.11 Non text contrast</a>
 
 <br/><br/>
 
@@ -80,5 +80,5 @@ Do not use color or sensory information (shape, size, sound, orientation, visual
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#sensory-characteristics">1.3.3 Sensory characteristics</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#use-of-color">1.4.1 Use of color</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#sensory-characteristics">1.3.3 Sensory characteristics</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#use-of-color">1.4.1 Use of color</a>

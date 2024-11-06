@@ -53,4 +53,4 @@ The dragging movement functionality is:
 Access to the content must not depend on the orientation of the screen (portrait and landscape) unless a specific display orientation is essential (e.g. serious game).
 
 **<abbr>WCAG</abbr> reference:**  
-- <a href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a>
+- <a href="https://www.w3.org/TR/WCAG22/#orientation">1.3.4 Orientation</a>

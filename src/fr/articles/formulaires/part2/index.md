@@ -264,7 +264,7 @@ Dans l'exemple ci-dessus&nbsp;:
 
 ### Utilisation de l'attribut autocomplete
 
-L'attribut <code>autocomplete</code> permet de faciliter le remplissage des champs qui contiennent une information personnelle. Tous les champs dont le type est listé dans <a href="https://www.w3.org/TR/WCAG21/#input-purposes" lang="en">7. InputPurposes for User Interface Components</a> doivent contenir l'attribut <code>autocomplete</code>. 
+L'attribut <code>autocomplete</code> permet de faciliter le remplissage des champs qui contiennent une information personnelle. Tous les champs dont le type est listé dans <a href="https://www.w3.org/TR/WCAG22/#input-purposes" lang="en">7. InputPurposes for User Interface Components</a> doivent contenir l'attribut <code>autocomplete</code>. 
 
 Dans notre exemple les champs ci-dessous devront avoir un attribut <code>autocomplete</code>&nbsp;:
 <ul>

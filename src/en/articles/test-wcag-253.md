@@ -12,7 +12,7 @@ tags:
 
 ### General explanation
 
-The purpose of [this criterion](https://www.w3.org/TR/WCAG21/#label-in-name) is to ensure that if a button, link, or other interface element contains some screen visible text, its <a href="/en/articles/accessible-name/">accessible name</a> must contain at least the same text as the one displayed.
+The purpose of [this criterion](https://www.w3.org/TR/WCAG22/#label-in-name) is to ensure that if a button, link, or other interface element contains some screen visible text, its <a href="/en/articles/accessible-name/">accessible name</a> must contain at least the same text as the one displayed.
 This is to ensure that users of technical aids can understand and interact with the component. Indeed, the technical aids are based on the accessible name of the components. For example, a voice recognition user will be able to click on a button simply by pronouncing its accessible name.
 
 The visible text and the accessible name do not have to be identical, but the visible text must be present in the accessible name, preferably first.
