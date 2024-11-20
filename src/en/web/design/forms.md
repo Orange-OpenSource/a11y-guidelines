@@ -79,7 +79,8 @@ In the case of a purchase form that asks to enter a billing address and a delive
 For example, this could be a check box that automatically duplicate information already entered.
 
 **Non valid example:**
-On an e-commerce website, a user launches a search with the keyword “coat” and consults the results page. After consulting the details of an item included in the list of results, if the user returns to the search page, the word "coat" no longer appears in the search field and no list of searches already carried out is offered/available.
+On an e-commerce website, a user launches a search with the keyword “coat” and consults the results page.
+After consulting the details of an item included in the list of results, if the user returns to the search page, the word "coat" no longer appears in the search field and no list of searches already carried out is offered/available.
 
 **<abbr>WCAG reference</abbr> :**  
 <a href=https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry>3.3.7 Redundant Entry</a>

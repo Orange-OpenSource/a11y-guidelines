@@ -74,7 +74,8 @@ Dans le cas d’un formulaire d’achat qui demande de saisir une adresse de fac
 Il pourrait s’agir par exemple d’une case à cocher qui permettrait de dupliquer automatiquement les informations déjà saisies.
 
 **Exemple non valide :**
-Sur un site d'e-commerce, un utilisateur lance une recherche avec le mot clé "manteau" et consulte la page de résultat. Après la consultation des détails d'un article faisant partie de la liste des résultats, si l'utilisateur retourne sur la page de recherche, le mot "manteau" n'apparait plus dans le champs de recherche et aucune liste des recherches déjà effectuées n'est proposée/disponible.
+Sur un site d'e-commerce, un utilisateur lance une recherche avec le mot clé "manteau" et consulte la page de résultat. 
+Après la consultation des détails d'un article faisant partie de la liste des résultats, si l'utilisateur retourne sur la page de recherche, le mot "manteau" n'apparait plus dans le champs de recherche et aucune liste des recherches déjà effectuées n'est proposée/disponible.
 
 **Référence <abbr>WCAG</abbr> :**  
 <a lang="en" href=https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry>3.3.7 Redundant Entry</a>
