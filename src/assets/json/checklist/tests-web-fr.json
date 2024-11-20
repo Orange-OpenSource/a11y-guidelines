@@ -822,6 +822,20 @@
 	"wcag": ["1.3.5"],
 	"ID": "testWebID-55",
 	"IDorigin": "testWebID-55"
+},  {
+	"themes": "Formulaires",
+	"title": "Eviter les saisies redondantes",
+	"type": ["Test manuel"],
+	"tests": ["Identifier les processus qui incluent le remplissage des formulaires", "Identifier les champs demandant les même données"],
+	"verifier": ["L'utilisateur ne doit pas saisir deux fois la même information lors du même processus."],
+	"resultat": ["Les champs dont les données ont déjà été saisies sont remplis automatiquement", "OU l'utilisateur peut sélectionner dans une liste une donnée déjà saisie", "OU l'utilisateur peut cocher une case pour remplir automatiquement un formulaire avec des données déjà saisies "],
+	"exception": ["Une activité (jeu de mémoire) où saisir à nouveau une information est essentiel","Des informations de sécurité comme la double saisie d'un mot de passe créé par l'utilisateur","Des informations préalablement renseignées qui ne sont plus valides"],
+	"raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/formulaires/#detecter-identifier-les-erreurs-et-suggerer-des-corrections",
+	"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+	"wcag": ["3.3.7"],
+	"ID": "testWebID-65",
+	"IDorigin": "testWebID-65"
 }, {
 	"themes": "Tactile et interactions",
 	"title": "Autoriser l'utilisation du zoom",
