@@ -45,7 +45,7 @@ Lastly, the wording of the error messages should be explicit.
 
 **Target:**  People with cognitive disabilities (especially with memory difficulties).
 
-**When:** During design.
+**When:** During design and development.
 
 **Description:**  
 The intent of this criteria is to reduce the cognitive effort required by filling out forms with redundant entries.
@@ -78,9 +78,9 @@ Simplify filling out a form for all users, especially those with cognitive and/o
 In the case of a purchase form that asks to enter a billing address and a delivery address, if the user has already entered the billing address and the delivery address is the same, then it must be possible, from the interface, to automatically fill in the delivery address based on the information entered for the billing address.
 For example, this could be a check box that automatically duplicate information already entered.
 
-**Non valid example:**
+**Non-valid example:**
 On an e-commerce website, a user launches a search with the keyword “coat” and consults the results page.
 After consulting the details of an item included in the list of results, if the user returns to the search page, the word "coat" no longer appears in the search field and no list of searches already carried out is offered/available.
 
 **<abbr>WCAG reference</abbr> :**  
-<a href=https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry>3.3.7 Redundant Entry</a>
+<a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry">3.3.7 Redundant Entry</a>
