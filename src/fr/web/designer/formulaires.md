@@ -10,7 +10,8 @@ abstract: "Formulaires, recommendations d'accessibilité web lors de la concepti
 
 ## Rendre utilisables les formulaires
 
-**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles, dyslexiques et les déficients cognitifs.  
+**Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles, dyslexiques et les déficients cognitifs. 
+
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
 **Description&nbsp;:**  
@@ -37,9 +38,11 @@ Enfin les libellés des messages d’erreur doivent être explicites.
 
 ## Limiter les saisies redondantes
 
-**Cible :**  Les personnes avec des déficiences cognitives (notamment avec troubles de la mémoire).  
+**Cible :**  Les personnes avec des déficiences cognitives (notamment avec troubles de la mémoire).
+
 **Quand :** dès la phase de conception.
-**Description :**  
+
+**Description :** 
 Ce critère vise à réduire les efforts cognitifs demandés par le remplissage des formulaires avec des saisies redondantes. 
 
 Les personnes ayant des troubles de la mémoire peuvent avoir des difficultés si un formulaire demande de saisir des informations qui ont été déjà saisies au préalable. Par exemple : devoir saisir une seconde fois son adresse mail.
@@ -50,7 +53,7 @@ L'utilisateur peut donc se retrouver dans l’impossibilité de poursuivre un pa
 Un formulaire dont le processus demande de saisir plusieurs fois les mêmes informations doit remplir automatiquement les champs concernés avec les données déjà saisies ou proposer une liste de données déjà saisies.
 
 **À vérifier :**
-Vérifier que dans un processus qui demande de saisir plusieurs fois certaines informations (par exemple formulaire en plusieurs étapes), au moins l'une des conditions ci-dessous est repectée : 
+Vérifier que dans un processus qui demande de saisir plusieurs fois certaines informations (par exemple formulaire en plusieurs étapes), au moins l'une des conditions ci-dessous est respectée : 
 
 * les champs dont les données ont déjà été saisies sont remplis automatiquement.
 * l'utilisateur peut sélectionner dans une liste une donnée déjà saisie.
@@ -67,7 +70,8 @@ Le fait d'utiliser un système d'autocompletion n'est pas jugé suffisant.
 Simplifier le remplissage d'un formulaire pour tous les utilisateurs, notamment ceux ayant des problèmes cognitifs et/ou moteurs.
 
 **Exemple valide :**
-Dans le cas d’un formulaire d’achat qui demande de saisir une adresse de facturation et une adresse de livraison, si l’utilisateur a déjà saisi l’adresse de facturation et que l’adresse de livraison est la même, il doit alors être possible, depuis l’interface, de remplir automatiquement l’adresse de livraison sur la base des informations saisies pour l’adresse de facturation. Il pourrait s’agir par exemple d’une case à cocher qui permettrait de dupliquer automatiquement les informations déjà saisies.
+Dans le cas d’un formulaire d’achat qui demande de saisir une adresse de facturation et une adresse de livraison, si l’utilisateur a déjà saisi l’adresse de facturation et que l’adresse de livraison est la même, il doit alors être possible, depuis l’interface, de remplir automatiquement l’adresse de livraison sur la base des informations saisies pour l’adresse de facturation. 
+Il pourrait s’agir par exemple d’une case à cocher qui permettrait de dupliquer automatiquement les informations déjà saisies.
 
 **Exemple non valide :**
 Sur un site d'e-commerce, un utilisateur lance une recherche avec le mot clé "manteau" et consulte la page de résultat. Après la consultation des détails d'un article faisant partie de la liste des résultats, si l'utilisateur retourne sur la page de recherche, le mot "manteau" n'apparait plus dans le champs de recherche et aucune liste des recherches déjà effectuées n'est proposée/disponible.
