@@ -213,7 +213,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#rendre-utilisables-les-formulaires" class="dropdown-item text-wrap">Rendre utilisables les formulaires</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#rendre-utilisables-les-formulaires" class="dropdown-item text-wrap">Rendre utilisables les formulaires</a><a href="#limiter-les-saisies-redondantes" class="dropdown-item text-wrap">Limiter les saisies redondantes</a></div>
     </nav>
         
       </div>
@@ -270,8 +270,8 @@
           <h1>Web designer - Les formulaires</h1>
 <p class="lead">S’assurer que l’utilisateur puisse efficacement compléter les formulaires</p>
 <h2 id="rendre-utilisables-les-formulaires">Rendre utilisables les formulaires <a class="header-anchor" href="#rendre-utilisables-les-formulaires" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles, dyslexiques et les déficients cognitifs.<br>
-<strong>Quand :</strong> lors de la conception et lors du développement.</p>
+<p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles, dyslexiques et les déficients cognitifs.</p>
+<p><strong>Quand :</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description :</strong><br>
 Chaque champ de formulaire doit être accompagné d’un libellé (ou d'instructions) permettant d’identifier le rôle du champ, le type de donnée et le format attendu. Ce libellé doit être proche visuellement du champ afin que l'utilisateur fasse facilement le lien entre eux (notamment pour les utilisateurs de zoom, de loupe logicielle, voire sur mobile).</p>
 <p>Les champs en erreur doivent pouvoir être identifiés et, si besoin, suggérer une correction. Ceci s’applique aux champs de saisie, mais également aux autres types de champs (liste déroulante, bouton radio, case à cocher…). Au niveau du développement, ce libellé sera associé au champ de formulaire pour faciliter la navigation à l’aide d’un lecteur d’écran.</p>
@@ -285,6 +285,39 @@ Chaque champ de formulaire doit être accompagné d’un libellé (ou d'instruct
 <img src="../../images/formulaire-ok.png" alt="capture d’écran d’un formulaire affichant des messages d’erreur à la saisie valides" class="img-fluid"></p>
 <p><strong>Exemple non-valide :</strong><br>
 <img src="../../images/formulaire-ko.png" alt="capture d’écran d’un formulaire affichant des messages d’erreur à la saisie non-valides" class="img-fluid"></p>
+<h2 id="limiter-les-saisies-redondantes">Limiter les saisies redondantes <a class="header-anchor" href="#limiter-les-saisies-redondantes" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Cible :</strong>  Les personnes avec des déficiences cognitives (notamment avec troubles de la mémoire).</p>
+<p><strong>Quand :</strong> Lors de la conception et du développement.</p>
+<p><strong>Description :</strong><br>
+Ce critère vise à réduire les efforts cognitifs demandés par le remplissage des formulaires avec des saisies redondantes.</p>
+<p>Les personnes ayant des troubles de la mémoire peuvent avoir des difficultés si un formulaire demande de saisir des informations qui ont été déjà saisies au préalable. Par exemple : devoir saisir une seconde fois son adresse mail.</p>
+<p>Le fait d'obliger l’utilisateur à saisir plusieurs fois les mêmes informations peut entrainer stress ou fatigue cognitive avec le risque de générer des saisies incorrectes.<br>
+L'utilisateur peut donc se retrouver dans l’impossibilité de poursuivre un parcours donné, voire abandonner la tâche.</p>
+<p>Un formulaire dont le processus demande de saisir plusieurs fois les mêmes informations doit remplir automatiquement les champs concernés avec les données déjà saisies ou proposer une liste de données déjà saisies.</p>
+<p><strong>À vérifier :</strong><br>
+Vérifier que dans un processus qui demande de saisir plusieurs fois certaines informations (par exemple formulaire en plusieurs étapes), au moins l'une des conditions ci-dessous est respectée :</p>
+<ul>
+<li>les champs dont les données ont déjà été saisies sont remplis automatiquement.</li>
+<li>l'utilisateur peut sélectionner dans une liste une donnée déjà saisie.</li>
+<li>L'utilisateur peut cocher une case pour remplir automatiquement un champ de formulaire avec des données déjà saisies.</li>
+</ul>
+<p>Le fait d'utiliser le système d'autocompletion fourni par le navigateur n'est pas jugé suffisant.</p>
+<p><strong>Exceptions :</strong></p>
+<ul>
+<li>Une activité (jeu de mémoire) où saisir à nouveau une information est essentiel</li>
+<li>Des informations de sécurité comme la double saisie d'un mot de passe créé par l'utilisateur</li>
+<li>Des informations préalablement renseignées qui ne sont plus valides (session expirée)</li>
+</ul>
+<p><strong>Objectif utilisateur :</strong><br>
+Simplifier le remplissage d'un formulaire pour tous les utilisateurs, notamment ceux ayant des problèmes cognitifs et/ou moteurs.</p>
+<p><strong>Exemple valide :</strong><br>
+Dans le cas d’un formulaire d’achat qui nécessite de saisir une adresse de facturation et une adresse de livraison, si l’utilisateur a déjà saisi l’adresse de facturation et que l’adresse de livraison est la même, il doit alors être possible de remplir automatiquement l’adresse de livraison sur la base des informations saisies pour l’adresse de facturation.<br>
+Il pourrait s’agir par exemple d’une case à cocher qui permettrait de dupliquer automatiquement les informations déjà saisies.</p>
+<p><strong>Exemple non valide :</strong><br>
+Sur un site d'e-commerce, un utilisateur lance une recherche avec le mot clé &quot;manteau&quot; et consulte la page de résultats.<br>
+Après la consultation des détails d'un article faisant partie de la liste des résultats, si l'utilisateur retourne sur la page de recherche, le mot &quot;manteau&quot; n'apparait plus dans le champ de recherche et aucun historique de recherche n'est disponible.</p>
+<p><strong>Référence <abbr>WCAG</abbr> :</strong><br>
+<a lang="en" href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a></p>
 
           </div>
         </main>
@@ -294,7 +327,8 @@ Chaque champ de formulaire doit être accompagné d’un libellé (ou d'instruct
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Sur cette page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#rendre-utilisables-les-formulaires" class="nav-link text-muted">Rendre utilisables les formulaires</a></li>
+            <a href="#rendre-utilisables-les-formulaires" class="nav-link text-muted">Rendre utilisables les formulaires</a></li><li class="nav-item position-relative">
+            <a href="#limiter-les-saisies-redondantes" class="nav-link text-muted">Limiter les saisies redondantes</a></li>
       </ul>
     </nav>
             </div>

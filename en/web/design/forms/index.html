@@ -213,7 +213,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#usable-forms" class="dropdown-item text-wrap">Usable forms</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#usable-forms" class="dropdown-item text-wrap">Usable forms</a><a href="#limit-redundant-entries" class="dropdown-item text-wrap">Limit redundant entries</a></div>
     </nav>
         
       </div>
@@ -270,8 +270,8 @@
           <h1>Web design - Forms</h1>
 <p class="lead">Ensure that the user can effectively complete the forms</p>
 <h2 id="usable-forms">Usable forms <a class="header-anchor" href="#usable-forms" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p><strong>Target:</strong> everyone and especially people with visual impairments, dyslexia and cognitive disabilities.<br>
-<strong>When:</strong> during design and development.</p>
+<p><strong>Target:</strong> everyone and especially people with visual impairments, dyslexia and cognitive disabilities.</p>
+<p><strong>When:</strong> during design and development.</p>
 <p><strong>Description:</strong><br>
 Each form input must be associated with a label identifying the function of the field, the type of data and the expected format. This label should be visually close to the field so we can easily mentally link them (especially for people using zoom or a software magnifier, or even for mobile users).</p>
 <p>Error messages should clearly identify the invalid field, and if necessary suggest a correction. This applies to input fields, but also to other types of fields (drop-down list, radio button, checkbox…). From the development perspective, this label must be associated with the form field to facilitate the navigation with a screen reader.</p>
@@ -287,6 +287,39 @@ Each form input must be associated with a label identifying the function of the 
 <img src="../../images/formulaire-ok.png" alt="screenshot of a form that displays relevant error messages" class="img-fluid"></p>
 <p><strong>Don’t:</strong><br>
 <img src="../../images/formulaire-ko.png" alt="screenshot of a form displaying irrelevant error messages" class="img-fluid"></p>
+<h2 id="limit-redundant-entries">Limit redundant entries <a class="header-anchor" href="#limit-redundant-entries" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<p><strong>Target:</strong>  People with cognitive disabilities (especially with memory difficulties).</p>
+<p><strong>When:</strong> During design and development.</p>
+<p><strong>Description:</strong><br>
+The intent of this criteria is to reduce the cognitive effort required by filling out forms with redundant entries.</p>
+<p>People with memory problems may have difficulty if a form asks to enter information that has already been entered before. For example: having to enter your email address a second time.</p>
+<p>Forcing the user to enter the same information several times can cause stress or cognitive fatigue with the risk of generating incorrect entries.<br>
+The user may find it impossible to continue the customer journey, or even abandon the task.</p>
+<p>Information previously entered by or provided to the user that is required to be entered again in the same process is either auto-populated, or available for the user to select.</p>
+<p><strong>Checklist:</strong><br>
+In a process that requires entering information several times (for example, in a multi-step form), check that at least one of the following conditions is met:</p>
+<ul>
+<li>Fields whose data has already been entered are filled automatically.</li>
+<li>User can select data already entered from a list.</li>
+<li>User can check a box to automatically fill a form field with data already entered.</li>
+</ul>
+<p>Using the autocomplete feature from the browser is not considered sufficient.</p>
+<p><strong>Exceptions:</strong></p>
+<ul>
+<li>Essential uses of input re-entry for things like memory games.</li>
+<li>Security measures such as preventing a password string from being shown or copied.</li>
+<li>When the previously entered information is no longer valid (expired session).</li>
+</ul>
+<p><strong>Benefits:</strong><br>
+Simplify filling out a form for all users, especially those with cognitive and/or motor problems.</p>
+<p><strong>Valid example:</strong><br>
+In the case of a purchase form that needs to enter a billing address and a delivery address, if the user has already entered the billing address and the delivery address is the same, then it must be possible to automatically fill in the delivery address based on the information entered for the billing address.<br>
+For example, this could be a check box that automatically duplicate information already entered.</p>
+<p><strong>Non-valid example:</strong><br>
+On an e-commerce website, a user launches a search with the keyword 'coat' and consults the results page.<br>
+After consulting the details of an item included in the list of results, if the user returns to the search page, the word 'coat' no longer appears in the search field and no search history is available.</p>
+<p><strong><abbr>WCAG reference</abbr>:</strong><br>
+<a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a></p>
 
           </div>
         </main>
@@ -296,7 +329,8 @@ Each form input must be associated with a label identifying the function of the 
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">On this page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#usable-forms" class="nav-link text-muted">Usable forms</a></li>
+            <a href="#usable-forms" class="nav-link text-muted">Usable forms</a></li><li class="nav-item position-relative">
+            <a href="#limit-redundant-entries" class="nav-link text-muted">Limit redundant entries</a></li>
       </ul>
     </nav>
             </div>
