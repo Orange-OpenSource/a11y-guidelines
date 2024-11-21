@@ -826,7 +826,7 @@
 	"themes": "Formulaires",
 	"title": "Eviter les saisies redondantes",
 	"type": ["Test manuel"],
-	"tests": ["Identifier les processus qui incluent le remplissage des formulaires", "Identifier les champs demandant les même données"],
+	"tests": ["Identifier les processus nécessitant une saisie de données", "Identifier les champs demandant des données déjà saisies"],
 	"verifier": ["L'utilisateur ne doit pas saisir deux fois la même information au sein d'une même session ou d'un même processus."],
 	"resultat": ["Les champs dont les données ont déjà été saisies sont remplis automatiquement", "ou, l'utilisateur peut sélectionner dans une liste une donnée déjà saisie", "ou, l'utilisateur peut cocher une case pour remplir automatiquement un formulaire avec des données déjà saisies"],
 	"exception": ["Une activité (jeu de mémoire) où saisir à nouveau une information est essentiel.","Des informations de sécurité comme la double saisie d'un mot de passe créé par l'utilisateur.","Des informations préalablement renseignées qui ne sont plus valides."],
