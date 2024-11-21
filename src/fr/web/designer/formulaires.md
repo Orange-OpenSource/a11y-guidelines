@@ -78,4 +78,4 @@ Sur un site d'e-commerce, un utilisateur lance une recherche avec le mot clé "m
 Après la consultation des détails d'un article faisant partie de la liste des résultats, si l'utilisateur retourne sur la page de recherche, le mot "manteau" n'apparait plus dans le champs de recherche et aucune liste des recherches déjà effectuées n'est proposée/disponible.
 
 **Référence <abbr>WCAG</abbr> :**  
-<a lang="en" href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry>3.3.7 Redundant Entry">3.3.7 Redundant Entry</a>
+<a lang="en" href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry">3.3.7 Redundant Entry>3.3.7 Redundant Entry</a>
