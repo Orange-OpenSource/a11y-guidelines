@@ -57,9 +57,9 @@ Vérifier que dans un processus qui demande de saisir plusieurs fois certaines i
 
 * les champs dont les données ont déjà été saisies sont remplis automatiquement.
 * l'utilisateur peut sélectionner dans une liste une donnée déjà saisie.
-* L'utilisateur peut cocher une case pour remplir automatiquement un formulaire avec des données déjà saisies.
+* L'utilisateur peut cocher une case pour remplir automatiquement un champ de formulaire avec des données déjà saisies.
 
-Le fait d'utiliser un système d'autocompletion n'est pas jugé suffisant.
+Le fait d'utiliser le système d'autocompletion fourni par le navigateur n'est pas jugé suffisant.
 
 **Exceptions :**
 * Une activité (jeu de mémoire) où saisir à nouveau une information est essentiel
@@ -70,12 +70,12 @@ Le fait d'utiliser un système d'autocompletion n'est pas jugé suffisant.
 Simplifier le remplissage d'un formulaire pour tous les utilisateurs, notamment ceux ayant des problèmes cognitifs et/ou moteurs.
 
 **Exemple valide :**
-Dans le cas d’un formulaire d’achat qui demande de saisir une adresse de facturation et une adresse de livraison, si l’utilisateur a déjà saisi l’adresse de facturation et que l’adresse de livraison est la même, il doit alors être possible, depuis l’interface, de remplir automatiquement l’adresse de livraison sur la base des informations saisies pour l’adresse de facturation. 
+Dans le cas d’un formulaire d’achat qui nécessite de saisir une adresse de facturation et une adresse de livraison, si l’utilisateur a déjà saisi l’adresse de facturation et que l’adresse de livraison est la même, il doit alors être possible de remplir automatiquement l’adresse de livraison sur la base des informations saisies pour l’adresse de facturation. 
 Il pourrait s’agir par exemple d’une case à cocher qui permettrait de dupliquer automatiquement les informations déjà saisies.
 
 **Exemple non valide :**
-Sur un site d'e-commerce, un utilisateur lance une recherche avec le mot clé "manteau" et consulte la page de résultat. 
-Après la consultation des détails d'un article faisant partie de la liste des résultats, si l'utilisateur retourne sur la page de recherche, le mot "manteau" n'apparait plus dans le champs de recherche et aucune liste des recherches déjà effectuées n'est proposée/disponible.
+Sur un site d'e-commerce, un utilisateur lance une recherche avec le mot clé "manteau" et consulte la page de résultats. 
+Après la consultation des détails d'un article faisant partie de la liste des résultats, si l'utilisateur retourne sur la page de recherche, le mot "manteau" n'apparait plus dans le champ de recherche et aucun historique de recherche n'est disponible.
 
 **Référence <abbr>WCAG</abbr> :**  
-<a lang="en" href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry">3.3.7 Redundant Entry</a>
+<a lang="en" href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>

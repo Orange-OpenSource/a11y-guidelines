@@ -58,13 +58,13 @@ The user may find it impossible to continue the customer journey, or even abando
 Information previously entered by or provided to the user that is required to be entered again in the same process is either auto-populated, or available for the user to select.
 
 **Checklist:**
-In a process that requires entering information several times (for example multi-step form), check that at least one of following conditions is met:
+In a process that requires entering information several times (for example, in a multi-step form), check that at least one of the following conditions is met:
 
 * Fields whose data has already been entered are filled automatically.
 * User can select data already entered from a list.
-* User can check a box to automatically fill a form with data already entered.
+* User can check a box to automatically fill a form field with data already entered.
 
-Using an auto-completion system is not considered sufficient.
+Using the autocomplete feature from the browser is not considered sufficient.
 
 **Exceptions:**
 * Essential uses of input re-entry for things like memory games.
@@ -75,12 +75,12 @@ Using an auto-completion system is not considered sufficient.
 Simplify filling out a form for all users, especially those with cognitive and/or motor problems.
 
 **Valid example:**
-In the case of a purchase form that asks to enter a billing address and a delivery address, if the user has already entered the billing address and the delivery address is the same, then it must be possible, from the interface, to automatically fill in the delivery address based on the information entered for the billing address.
+In the case of a purchase form that needs to enter a billing address and a delivery address, if the user has already entered the billing address and the delivery address is the same, then it must be possible to automatically fill in the delivery address based on the information entered for the billing address.
 For example, this could be a check box that automatically duplicate information already entered.
 
 **Non-valid example:**
-On an e-commerce website, a user launches a search with the keyword “coat” and consults the results page.
-After consulting the details of an item included in the list of results, if the user returns to the search page, the word "coat" no longer appears in the search field and no list of searches already carried out is offered/available.
+On an e-commerce website, a user launches a search with the keyword 'coat' and consults the results page.
+After consulting the details of an item included in the list of results, if the user returns to the search page, the word 'coat' no longer appears in the search field and no search history is available.
 
-**<abbr>WCAG reference</abbr> :**  
-<a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry">3.3.7 Redundant Entry</a>
+**<abbr>WCAG reference</abbr>:**  
+<a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry.html">3.3.7 Redundant Entry</a>
