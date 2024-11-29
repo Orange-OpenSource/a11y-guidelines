@@ -76,7 +76,8 @@ module.exports = {
           { label: 'Test', href: '/en/mobile/ios/test/' },
           { label: 'Audit', href: '/en/mobile/ios/wcag-audit/' },
           { label: 'Toolbox', href: '/en/mobile/ios/toolbox/' },
-          { label: 'WWDC', href: '/en/mobile/ios/wwdc/' }
+          { label: 'WWDC', href: '/en/mobile/ios/wwdc/' },
+          { label: 'Checklist', href: '/en/mobile/ios/checklist/' }
         ]
       },
       {
@@ -166,7 +167,7 @@ module.exports = {
           { label: 'Tester', href: '/fr/mobile/ios/test/' },
           { label: 'Auditer', href: '/fr/mobile/ios/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/mobile/ios/outils/' },
-          { label: 'WWDC', href: '/fr/mobile/ios/wwdc/' }
+          { label: 'Checklist', href: '/fr/mobile/ios/checklist/' }
         ]
       },
       {
@@ -199,14 +200,14 @@ module.exports = {
       { label: 'Contact', href: '/en/contact/' },
       { label: 'About', href: '/en/about/' },
       { label: 'RSS feed', href: '/feed-en.xml' },
-      { label: 'Accessibility: partially compliant', href: '/en/accessibility/' },
+      { label: 'Accessibility', href: '/en/accessibility/' },
       { label: 'Pre-release on Netlify', href: 'https://a11y-guidelines-orange.netlify.app/en/' }
     ],
     fr: [
       { label: 'Contact', href: '/fr/contact/' },
       { label: 'À propos', href: '/fr/a-propos/' },
       { label: 'Flux rss', href: '/feed-fr.xml' },
-      { label: 'Accessibilité : partiellement conforme', href: '/fr/accessibilite/' },
+      { label: 'Accessibilité', href: '/fr/accessibilite/' },
       { label: 'Pré-version sur Netlify', href: 'https://a11y-guidelines-orange.netlify.app/fr/' }
     ]
   }
