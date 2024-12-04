@@ -40,6 +40,7 @@
     "string": "^3.3.3"
   },
   "dependencies": {
+    "markdown-it-class": "^1.0.0",
     "tarteaucitronjs": "^1.14.0"
   }
 }
