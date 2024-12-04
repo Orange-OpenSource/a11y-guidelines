@@ -1408,11 +1408,11 @@ Il est bien souvent nécessaire d’utiliser l’attribut **shouldGroupAccessibi
 
 Le meilleur exemple pour illustrer cette fonctionnalité est le clavier pour lequel les touches sucessives ne suivent pas forcément l'ordre natif proposé par <span lang="en">VoiceOver</span>.
 
-Dans cet exemple, on veut l'ordre suivant : 1, 2, 3, 4, 7, 6, 8, 9, 5.
+Dans cet exemple, on veut l'ordre suivant : 1, 2, 3, 4, 7, 5, 6, 8, 9.
 
 On crée deux vues au sein desquelles on incorpore les chiffres qu'on souhaite vocaliser selon un ordre bien précis :
 
-![affichage des vues grise et bleue pour l'exemple](../../images/iOSdev/OrdreDeLecture_1.png)
+![affichage des vues grise et bleue pour l'exemple](../../images/iOSdev/OrdreDeLecture_2.png)
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">
@@ -1427,10 +1427,10 @@ On crée deux vues au sein desquelles on incorpore les chiffres qu'on souhaite v
     
     // Lecture des chiffres 6, 8, 9 et 5 au sein du bloc bleu.
     blueBlock.isAccessibilityElement = NO;
-    blueBlock.accessibilityElements = @[key_6,
+    blueBlock.accessibilityElements = @[key_5,
+                                        key_6,
                                         key_8,
-                                        key_9,
-                                        key_5];
+                                        key_9];
 }
 </code></pre>
 
@@ -1446,10 +1446,10 @@ On crée deux vues au sein desquelles on incorpore les chiffres qu'on souhaite v
         
         // Lecture des chiffres 6, 8, 9 et 5 au sein du bloc bleu.
         blueBlock.isAccessibilityElement = false
-        blueBlock.accessibilityElements = [key_6!,
+        blueBlock.accessibilityElements = [key_5!,
+                                           key_6!,
                                            key_8!,
-                                           key_9!,
-                                           key_5!]
+                                           key_9!]
     }
 </code></pre>
 <pre><code class="swiftui">
@@ -1457,20 +1457,20 @@ var body: some View {
 
     // Plus la priorité est elevée, plus tôt sera vocalisé l'élément
     HStack {
-        VStack { // On suit l'ordre naturel du containeur
+        VStack { // On suit l'ordre naturel du containeur gris
             Text("1") // Position 1
             Text("2") // Position 2
             Text("3") // Position 3
-        }.accessibilitySortPriority(1000) // La vocalisation commence ici
-        VStack {
+        }.accessibilitySortPriority(1000)
+        VStack { // deuxième colonne
             Text("4").accessibilitySortPriority(900) // Position 4
-            Text("5").accessibilitySortPriority(400) // Position 9
-            Text("6").accessibilitySortPriority(700) // Position 6
+            Text("5").accessibilitySortPriority(400) // Position 6
+            Text("6").accessibilitySortPriority(700) // Position 7
         }
-        VStack {
+        VStack { // troisième colonne
             Text("7").accessibilitySortPriority(800) // Position 5
-            Text("8").accessibilitySortPriority(600) // Position 7
-            Text("9").accessibilitySortPriority(500) // Position 8
+            Text("8").accessibilitySortPriority(600) // Position 8
+            Text("9").accessibilitySortPriority(500) // Position 9
         }
     }.accessibilityElement(children: .contain)
 }
