@@ -35,7 +35,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Skip links - Switch language">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Go to menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Go to content</a>
@@ -164,17 +164,17 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/en/">Home</a>
+          <a class="breadcrumb-focus" href="/en/">Home</a>
         </li>
       
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/en/web/">Web</a>
+          <a class="breadcrumb-focus" href="/en/web/">Web</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/en/web/develop/">Develop</a>
+          <a class="breadcrumb-focus" href="/en/web/develop/">Develop</a>
         </li>
       
       
@@ -207,7 +207,7 @@
 </a><a href="/en/web/develop/touch-and-interactions/" class="nav-link dropdown-item">
   Touch and interactions 
 </a><a href="/en/web/develop/assistive-technology/" class="nav-link dropdown-item">
-  Assistive technology 
+  Assistive technologies 
 </a></div>
     </nav>
         
@@ -262,7 +262,7 @@
 </a>
           </li><li class="nav-item position-relative">
             <a href="/en/web/develop/assistive-technology/" class="nav-link text-muted">
-  Assistive technology 
+  Assistive technologies 
 </a>
           </li></ul>
     </nav>
@@ -275,7 +275,7 @@
           <div class="mt-4">
           <h1>Web develop - Non-textual content</h1>
 <p class="lead">Ensure that an alternative to non-text content is provided to the user</p>
-<h2 id="set-a-text-alternatives-for-images-and-frames">Set a text alternatives for images and frames <a class="header-anchor" href="#set-a-text-alternatives-for-images-and-frames" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="set-a-text-alternatives-for-images-and-frames" class="h2-focus">Set a text alternatives for images and frames <a class="header-anchor" href="#set-a-text-alternatives-for-images-and-frames" id="heading-1144" aria-labelledby="heading-1144">#</a></h2>
 <p><strong>Target:</strong> everyone and especially people with visual impairments and cognitive limitations.<br>
 <strong>When:</strong> from design and during development.</p>
 <p><strong>Description:</strong></p>
@@ -319,7 +319,7 @@ The <a href="https://chrispederick.com/work/web-developer/"> Web developer </a> 
 <li><a href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a></li>
 <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/images-of-text">1.4.5 Images of text</a></li>
 </ul>
-<h2 id="provide-accessible-audio-or-video-tracks">Provide accessible audio or video tracks <a class="header-anchor" href="#provide-accessible-audio-or-video-tracks" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="provide-accessible-audio-or-video-tracks" class="h2-focus">Provide accessible audio or video tracks <a class="header-anchor" href="#provide-accessible-audio-or-video-tracks" id="heading-1145" aria-labelledby="heading-1145">#</a></h2>
 <p><strong>Target:</strong> everyone and particularly people with visual disabilities, hearing impairments, cognitive limitations, or difficulties with English.<br>
 <strong>When:</strong> during design and development.</p>
 <p><strong>Description:</strong></p>
@@ -349,7 +349,7 @@ The <a href="https://chrispederick.com/work/web-developer/"> Web developer </a> 
 <li><a href="https://www.w3.org/TR/WCAG22/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a></li>
 <li><a href="https://www.w3.org/TR/WCAG22/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a></li>
 </ul>
-<h2 id="avoid-captcha">Avoid captcha <a class="header-anchor" href="#avoid-captcha" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="avoid-captcha" class="h2-focus">Avoid captcha <a class="header-anchor" href="#avoid-captcha" id="heading-1146" aria-labelledby="heading-1146">#</a></h2>
 <p><strong>Target:</strong> Everyone in particular, visually impaired people.<br>
 <strong>When:</strong> during design and development.</p>
 <p><strong>Description:</strong><br>
@@ -459,7 +459,7 @@ Captchas are often the source of difficulties for users. If the implementation o
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <div hidden>Anchor link</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

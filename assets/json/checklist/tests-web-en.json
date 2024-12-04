@@ -908,7 +908,7 @@
 	"ID": "testWebID-59",
 	"IDorigin": "testWebID-59"
 }, {
-	"themes": "Assistive Technologies",
+	"themes": "Assistive technologies",
 	"title": "Make sure the components are understandable and usable with screen readers ",
 	"type": ["Screen reader"],
 	"tests": ["Browse the application","Identify all the components "],

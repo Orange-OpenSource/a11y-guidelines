@@ -35,7 +35,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Aller au contenu</a>
@@ -140,12 +140,12 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/fr/">Accueil</a>
+          <a class="breadcrumb-focus" href="/fr/">Accueil</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/fr/articles/">Articles</a>
+          <a class="breadcrumb-focus" href="/fr/articles/">Articles</a>
         </li>
       
       
@@ -179,9 +179,9 @@
               <span class="visually-hidden" id="filters_label">
                 Thématiques associées :
               </span>
-              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="https://a11y-guidelines.orange.com/fr//articles/?tag=web" class="btn btn-dark btn-sm" data-tag="web">Web</a></li>
-              <li class="list-inline-item"><a href="https://a11y-guidelines.orange.com/fr//articles/?tag=mobile" class="btn btn-dark btn-sm" data-tag="mobile">Mobile</a></li>
-              <li class="list-inline-item"><a href="https://a11y-guidelines.orange.com/fr//articles/?tag=beginner" class="btn btn-dark btn-sm" data-tag="beginner">Débutant</a></li>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><div class="tagType" data-tag="web">Web</a></li>
+              <li class="list-inline-item"><div class="tagType" data-tag="mobile">Mobile</a></li>
+              <li class="list-inline-item"><div class="tagType" data-tag="beginner">Débutant</a></li>
               </ul>
             
             <time class="text-muted" datetime="2022-11-21T00:00:00.000Z">21 novembre 2022</time>
@@ -189,9 +189,9 @@
           <div class="mt-4">
           <h1>Nos fiches mémos sur l'accessibilité numérique</h1>
 <p>N'oubliez pas les informations essentielles, adoptez nos mémos !</p>
-<h2 id="quest-ce-que-cest">Qu'est-ce que c'est ? <a class="header-anchor" href="#quest-ce-que-cest" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="quest-ce-que-cest" class="h2-focus">Qu'est-ce que c'est ? <a class="header-anchor" href="#quest-ce-que-cest" id="heading-446" aria-labelledby="heading-446">#</a></h2>
 <p>Il s'agit de pense-bêtes disponibles au format PDF. Vous pouvez les imprimer sur une feuille recto verso puis les plier en accordéon pour former un petit fascicule à conserver sous la main ou à partager.</p>
-<h2 id="liste-des-memos">Liste des mémos <a class="header-anchor" href="#liste-des-memos" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="liste-des-memos" class="h2-focus">Liste des mémos <a class="header-anchor" href="#liste-des-memos" id="heading-447" aria-labelledby="heading-447">#</a></h2>
 <p>Pages Web :</p>
 <ul>
 <li><a href="./#developper-des-pages-web-accessibles">Développer des pages Web accessibles</a></li>
@@ -210,7 +210,7 @@
 <li><a href="./#rediger-une-presentation-powerpoint-accessible">Rédiger une présentation PowerPoint accessible</a></li>
 </ul>
 <hr>
-<h2 id="developper-des-pages-web-accessibles">Développer des pages Web accessibles <a class="header-anchor" href="#developper-des-pages-web-accessibles" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="developper-des-pages-web-accessibles" class="h2-focus">Développer des pages Web accessibles <a class="header-anchor" href="#developper-des-pages-web-accessibles" id="heading-448" aria-labelledby="heading-448">#</a></h2>
 <div class="row">
   <div class="col-3">
     <p class="border-end">
@@ -231,7 +231,7 @@
   </div>
 </div>
 <hr>
-<h2 id="tester-laccessibilite-de-pages-web">Tester l'accessibilité de pages Web <a class="header-anchor" href="#tester-laccessibilite-de-pages-web" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="tester-laccessibilite-de-pages-web" class="h2-focus">Tester l'accessibilité de pages Web <a class="header-anchor" href="#tester-laccessibilite-de-pages-web" id="heading-449" aria-labelledby="heading-449">#</a></h2>
 <div class="row">
   <div class="col-3">
     <p class="border-end">
@@ -253,7 +253,7 @@
   </div>
 </div>
 <hr>
-<h2 id="developper-une-application-android-accessible">Développer une application Android accessible <a class="header-anchor" href="#developper-une-application-android-accessible" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="developper-une-application-android-accessible" class="h2-focus">Développer une application Android accessible <a class="header-anchor" href="#developper-une-application-android-accessible" id="heading-450" aria-labelledby="heading-450">#</a></h2>
 <div class="row">
   <div class="col-3">
     <p class="border-end">
@@ -274,7 +274,7 @@
   </div>
 </div>
 <hr>
-<h2 id="developper-une-application-ios-accessible">Développer une application iOS accessible <a class="header-anchor" href="#developper-une-application-ios-accessible" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="developper-une-application-ios-accessible" class="h2-focus">Développer une application iOS accessible <a class="header-anchor" href="#developper-une-application-ios-accessible" id="heading-451" aria-labelledby="heading-451">#</a></h2>
 <div class="row">
   <div class="col-3">
     <p class="border-end">
@@ -295,7 +295,7 @@
   </div>
 </div>
 <hr>
-<h2 id="rediger-un-email-accessible">Rédiger un email accessible <a class="header-anchor" href="#rediger-un-email-accessible" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="rediger-un-email-accessible" class="h2-focus">Rédiger un email accessible <a class="header-anchor" href="#rediger-un-email-accessible" id="heading-452" aria-labelledby="heading-452">#</a></h2>
 <div class="row">
   <div class="col-3">
     <p class="border-end">
@@ -314,7 +314,7 @@
     </p>
   </div>
 </div>
-<h2 id="rediger-un-document-word-accessible">Rédiger un document Word accessible <a class="header-anchor" href="#rediger-un-document-word-accessible" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="rediger-un-document-word-accessible" class="h2-focus">Rédiger un document Word accessible <a class="header-anchor" href="#rediger-un-document-word-accessible" id="heading-453" aria-labelledby="heading-453">#</a></h2>
 <div class="row">
   <div class="col-3">
     <p class="border-end">
@@ -333,7 +333,7 @@
     </p>
   </div>
 </div>
-<h2 id="rediger-un-document-excel-accessible">Rédiger un document Excel accessible <a class="header-anchor" href="#rediger-un-document-excel-accessible" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="rediger-un-document-excel-accessible" class="h2-focus">Rédiger un document Excel accessible <a class="header-anchor" href="#rediger-un-document-excel-accessible" id="heading-454" aria-labelledby="heading-454">#</a></h2>
 <div class="row">
   <div class="col-3">
     <p class="border-end">
@@ -352,7 +352,7 @@
     </p>
   </div>
 </div>
-<h2 id="rediger-une-presentation-powerpoint-accessible">Rédiger une présentation PowerPoint accessible <a class="header-anchor" href="#rediger-une-presentation-powerpoint-accessible" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="rediger-une-presentation-powerpoint-accessible" class="h2-focus">Rédiger une présentation PowerPoint accessible <a class="header-anchor" href="#rediger-une-presentation-powerpoint-accessible" id="heading-455" aria-labelledby="heading-455">#</a></h2>
 <div class="row">
   <div class="col-3">
     <p class="border-end">
@@ -495,7 +495,7 @@
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <div hidden>Lien pour ancrage</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

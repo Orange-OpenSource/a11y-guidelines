@@ -35,7 +35,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Aller au contenu</a>
@@ -140,12 +140,12 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/fr/">Accueil</a>
+          <a class="breadcrumb-focus" href="/fr/">Accueil</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/fr/articles/">Articles</a>
+          <a class="breadcrumb-focus" href="/fr/articles/">Articles</a>
         </li>
       
       
@@ -179,7 +179,7 @@
               <span class="visually-hidden" id="filters_label">
                 Thématiques associées :
               </span>
-              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="https://a11y-guidelines.orange.com/fr//articles/?tag=component" class="btn btn-dark btn-sm" data-tag="component">Composant</a></li>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><div class="tagType" data-tag="component">Composant</a></li>
               </ul>
             
             <time class="text-muted" datetime="2018-01-17T00:00:00.000Z">17 janvier 2018</time>
@@ -381,7 +381,7 @@
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <div hidden>Lien pour ancrage</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

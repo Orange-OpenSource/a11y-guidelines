@@ -33,7 +33,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Aller au contenu</a>
@@ -174,17 +174,17 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/fr/">Accueil</a>
+          <a class="breadcrumb-focus" href="/fr/">Accueil</a>
         </li>
       
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/fr/contenu-et-communication/">Contenu et communication</a>
+          <a class="breadcrumb-focus" href="/fr/contenu-et-communication/">Contenu et communication</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/fr/contenu-et-communication/e-learning/">E-learning</a>
+          <a class="breadcrumb-focus" href="/fr/contenu-et-communication/e-learning/">E-learning</a>
         </li>
       
       
@@ -244,7 +244,7 @@
           <h1>Recommandations Momindum Maker</h1>
 <p>Les bonnes pratiques détaillées dans cet article s'appliquent à l'outil <em>Momindum Maker</em>, permettant de créer des présentations vidéos à partir d'un document <em>Powerpoint</em>.<br>
 Il est donc impératif en pré-requis d'appliquer <a href="/fr/contenu-et-communication/powerpoint/">les recommandations Powerpoint</a> sur le document servant de base à la présentation.</p>
-<h2 id="proprietes-du-projet">Propriétés du projet <a class="header-anchor" href="#proprietes-du-projet" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="proprietes-du-projet" class="h2-focus">Propriétés du projet <a class="header-anchor" href="#proprietes-du-projet" id="heading-2238" aria-labelledby="heading-2238">#</a></h2>
 <p>Renseigner au minimum le titre et la langue.</p>
 <ul>
 <li>
@@ -258,7 +258,7 @@ Le choix de langue définit la traduction des éléments de navigation (ex : lec
 </li>
 </ul>
 <p><img alt="" src="/fr/contenu-et-communication/images/titre-presentation.png" class="img-fluid" />   </p>
-<h2 id="proposer-des-alternatives-aux-pistes-audios-et-videos">Proposer des alternatives aux pistes audios et vidéos <a class="header-anchor" href="#proposer-des-alternatives-aux-pistes-audios-et-videos" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="proposer-des-alternatives-aux-pistes-audios-et-videos" class="h2-focus">Proposer des alternatives aux pistes audios et vidéos <a class="header-anchor" href="#proposer-des-alternatives-aux-pistes-audios-et-videos" id="heading-2239" aria-labelledby="heading-2239">#</a></h2>
 <ul>
 <li>
 <p><em>Sous-titres</em></p>
@@ -276,7 +276,7 @@ Le choix de langue définit la traduction des éléments de navigation (ex : lec
 </li>
 </ul>
 <p><img alt="" src="/fr/contenu-et-communication/images/momindum-alternative.png" class="img-fluid" />   </p>
-<h2 id="definir-un-plan">Définir un plan <a class="header-anchor" href="#definir-un-plan" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="definir-un-plan" class="h2-focus">Définir un plan <a class="header-anchor" href="#definir-un-plan" id="heading-2240" aria-labelledby="heading-2240">#</a></h2>
 <ul>
 <li>
 <p><em>Le système de plan généré par Momindum est accessible.</em><br>
@@ -287,13 +287,13 @@ Il peut notamment être utilisé depuis une navigation clavier ou un lecteur d'�
 </li>
 </ul>
 <p><img alt="" src="/fr/contenu-et-communication/images/momindum-plan.png" class="img-fluid" />   </p>
-<h2 id="quizz">Quizz <a class="header-anchor" href="#quizz" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="quizz" class="h2-focus">Quizz <a class="header-anchor" href="#quizz" id="heading-2241" aria-labelledby="heading-2241">#</a></h2>
 <p>Les quizz Momindum sont utilisables (voir néanmoins les remarques dans le paragraphe <a href="/fr/contenu-et-communication/e-learning/momindum/#defauts-daccessibilites">défauts d'accessibilités</a>.</p>
 <ul>
 <li>Proposer néanmoins <em>le résultat sous forme de texte</em>, car l’information (bonne / mauvaise réponse) est donnée uniquement par la couleur (elle sera non perçue par les utilisateurs non-voyants ou malvoyants).</li>
 </ul>
 <p><img alt="" src="/fr/contenu-et-communication/images/momindum-quizz.png" class="img-fluid" />   </p>
-<h2 id="defauts-daccessibilites">Défauts d'accessibilités <a class="header-anchor" href="#defauts-daccessibilites" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="defauts-daccessibilites" class="h2-focus">Défauts d'accessibilités <a class="header-anchor" href="#defauts-daccessibilites" id="heading-2242" aria-labelledby="heading-2242">#</a></h2>
 <p>Si des bonnes pratiques peuvent rendre utilisable une présentation Momindum Maker, des défauts impactants pour les utilisateurs finaux sont tout de même à relever :</p>
 <ul>
 <li>
@@ -406,7 +406,7 @@ Les utilisateurs de lecteur d’écran pourraient être induits en erreur.</li>
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <div hidden>Lien pour ancrage</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

@@ -1,4 +1,5 @@
 /*global tarteaucitron */
+/* min ready */
 tarteaucitron.lang = {
     "middleBarHead": "☝ 🍪",
     "adblock": "Tere! See lehekülg on läbipaistev ja võimaldab Teil valida kolmandate osapoolte teenuseid, mida soovite lubada.",
@@ -14,6 +15,7 @@ tarteaucitron.lang = {
     "personalize": "Isikupärasta",
     "acceptAll": "OK, nõustu kõigiga",
     "close": "Sulge",
+    "closeBanner": "Peida küpsiste bänner",
 
     "privacyUrl": "Privaatsuspoliitika",
     
@@ -79,7 +81,15 @@ tarteaucitron.lang = {
         "title": "Muu",
         "details": "Teenused veebisisu kuvamiseks."
     },
+
+    "google": {
+        "title": "Google'i teenuste konkreetne nõusolek",
+        "details": "Google võib teie andmeid kasutada sihtrühma mõõtmiseks, reklaamide tulemuslikkuse hindamiseks või teile isikupäraste reklaamide pakkumiseks."
+    },
     
     "mandatoryTitle": "Kohustuslikud küpsised",
-    "mandatoryText": "See lehekülg kasutab nõuetekohaseks toimimiseks vajalikke küpsiseid, mida ei saa deaktiveerida."
+    "mandatoryText": "See lehekülg kasutab nõuetekohaseks toimimiseks vajalikke küpsiseid, mida ei saa deaktiveerida.",
+
+    "save": "Salvesta",
+    "ourpartners": "Meie partnerid"
 };

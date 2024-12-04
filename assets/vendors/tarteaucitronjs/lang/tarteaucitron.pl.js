@@ -1,4 +1,5 @@
 /*global tarteaucitron */
+/* min ready */
 tarteaucitron.lang = {
     "middleBarHead": "☝ 🍪",
     "adblock": "Witaj! Ta witryna oferuje daje mozliwość wyboru aktywacji usług zewnętrznych.",
@@ -14,6 +15,7 @@ tarteaucitron.lang = {
     "personalize": "Personalizacja",
     "acceptAll": "OK, akceptuję wszystko",
     "close": "zamknij",
+    "closeBanner": "Ukryj baner dotyczący plików cookie",
 
     "privacyUrl": "Polityka prywatności",
     
@@ -30,6 +32,7 @@ tarteaucitron.lang = {
     "more": "Więcej informacji",
     "source": "Zobacz oficjalną stronę internetową",
     "credit": "Cookies menadżer od tarteaucitron.js",
+    "noServices": "Ta strona nie wykorzystuje żadnych plików cookie wymagających Twojej zgody.",
 
     "toggleInfoBox": "Pokaż/ukryj informacje o zapisie plików cookie",
     "title": "Panel zarządzania plikami cookies",
@@ -78,7 +81,15 @@ tarteaucitron.lang = {
         "title": "Inne",
         "details": "Usługi do wyświetlania treści internetowych."
     },
+
+    "google": {
+        "title": "Specyficzna zgoda na usługi Google",
+        "details": "Google może wykorzystywać Twoje dane do pomiaru zasięgu, wydajności reklamowej lub oferowania spersonalizowanych reklam."
+    },
     
     "mandatoryTitle": "obowiązkowe pliki cookie",
-    "mandatoryText": "Ta strona wykorzystuje pliki cookies niezbędne do jej prawidłowego funkcjonowania, których nie można wyłączyć."
+    "mandatoryText": "Ta strona wykorzystuje pliki cookies niezbędne do jej prawidłowego funkcjonowania, których nie można wyłączyć.",
+
+    "save": "Zapisz",
+    "ourpartners": "Nasi partnerzy"
 };

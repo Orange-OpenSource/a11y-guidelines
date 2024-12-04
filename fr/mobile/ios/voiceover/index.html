@@ -35,7 +35,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Aller au contenu</a>
@@ -168,12 +168,12 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/fr/">Accueil</a>
+          <a class="breadcrumb-focus" href="/fr/">Accueil</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/fr/mobile/ios/">iOS</a>
+          <a class="breadcrumb-focus" href="/fr/mobile/ios/">iOS</a>
         </li>
       
       
@@ -213,21 +213,21 @@
            data-bs-toggle="tab" 
            href="#VoiceOverActivation-iOS15"
            role="tab" 
-           aria-selected="true">iOS 15</a>
+           aria-selected="true" lang="en">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-bs-toggle="tab" 
            href="#VoiceOverActivation-iOS13"
            role="tab" 
-           aria-selected="false">iOS 13</a>
+           aria-selected="false" lang="en">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-bs-toggle="tab" 
            href="#VoiceOverActivation-iOS12"
            role="tab" 
-           aria-selected="false">iOS 12</a>
+           aria-selected="false" lang="en">iOS 12</a>
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
@@ -250,14 +250,14 @@
            data-bs-toggle="tab" 
            href="#iPhoneVibration-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="true" lang="en">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-bs-toggle="tab" 
            href="#iPhoneVibration-iOS12"
            role="tab" 
-           aria-selected="false">iOS 12</a>
+           aria-selected="false" lang="en">iOS 12</a>
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
@@ -278,7 +278,7 @@ Le <strong>balayage</strong> qui consiste à décoller le doigt de l'écran à l
 Le <strong>glissement</strong> qui consiste à réaliser le mouvement défini en gardant continuellement le contact entre le doigt et l'écran.</p>
 <p>Dans une première partie, nous décrirons les gestes de base liés à une utilisation courante de <span lang="en">VoiceOver</span> pour ensuite traiter le cas spécifique de l'iPhone X et finir avec des manipulations peu courantes mais néanmoins très utiles pour l'utilisateur avancé.</p>
 <p></br></br></p>
-<h2 id="gestes-de-bases">Gestes de bases <a class="header-anchor" href="#gestes-de-bases" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="gestes-de-bases" class="h2-focus">Gestes de bases <a class="header-anchor" href="#gestes-de-bases" id="heading-1330" aria-labelledby="heading-1330">#</a></h2>
 <ul class="list-gesture">
   <li class="clearfix">
 <p><img src="../../images/gesture1.png" alt="" class="img-fluid"><br>
@@ -340,7 +340,7 @@ Le <strong>glissement</strong> qui consiste à réaliser le mouvement défini en
   </li>
 </ul>
 <p></br></br></p>
-<h2 id="terminal-avec-configuration-sans-bouton-principal">Terminal avec configuration sans bouton principal <a class="header-anchor" href="#terminal-avec-configuration-sans-bouton-principal" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="terminal-avec-configuration-sans-bouton-principal" class="h2-focus">Terminal avec configuration sans bouton principal <a class="header-anchor" href="#terminal-avec-configuration-sans-bouton-principal" id="heading-1331" aria-labelledby="heading-1331">#</a></h2>
 <p>L'arrivée sur le marché de l'iPhoneX sous iOS11 avec l'absence de bouton principal a quelque peu bouleversé la gestuelle classique dont on avait l'habitude.<br>
 <br>Ces <a href="./iphone-x/">nouveaux gestes de base</a> ont donc fortement impacté les manipulations <span lang="en">VoiceOver</span> dont les principales sont fournies ci-dessous :</p>
 <ul>
@@ -370,7 +370,7 @@ Le <strong>glissement</strong> qui consiste à réaliser le mouvement défini en
 <br>Mouvement : <strong>balayage avec 1 doigt</strong> à partir du haut de l'écran jusqu'à sentir l'émission d'une <strong>double vibration</strong> (environ à la <strong>moitié de l'écran</strong>).</p>
 <p><img src="../../images/iphonex_vo_fr_notification_center.png" alt="" class="img-fluid"></p>
 <p><br><br></p>
-<h2 id="trucs-astuces">Trucs &amp; Astuces <a class="header-anchor" href="#trucs-astuces" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="trucs-astuces" class="h2-focus">Trucs &amp; Astuces <a class="header-anchor" href="#trucs-astuces" id="heading-1332" aria-labelledby="heading-1332">#</a></h2>
 <p>Cette partie contient des manipulations qui ne sont pas forcément toutes très connues mais qui peuvent s'avérer très utiles sur <strong>tout type de terminal</strong> :</p>
 <ul>
 <li>
@@ -586,7 +586,7 @@ Le <strong>glissement</strong> qui consiste à réaliser le mouvement défini en
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <div hidden>Lien pour ancrage</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

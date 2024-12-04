@@ -35,7 +35,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Skip links - Switch language">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Go to menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Go to content</a>
@@ -140,12 +140,12 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/en/">Home</a>
+          <a class="breadcrumb-focus" href="/en/">Home</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/en/articles/">Articles</a>
+          <a class="breadcrumb-focus" href="/en/articles/">Articles</a>
         </li>
       
       
@@ -179,8 +179,8 @@
               <span class="visually-hidden" id="filters_label">
                 Associated themes :
               </span>
-              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="https://a11y-guidelines.orange.com/en//articles/?tag=web" class="btn btn-dark btn-sm" data-tag="web">Web</a></li>
-              <li class="list-inline-item"><a href="https://a11y-guidelines.orange.com/en//articles/?tag=intermediate" class="btn btn-dark btn-sm" data-tag="intermediate">Intermediate</a></li>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><div class="tagType" data-tag="web">Web</a></li>
+              <li class="list-inline-item"><div class="tagType" data-tag="intermediate">Intermediate</a></li>
               </ul>
             
             <time class="text-muted" datetime="2020-09-01T00:00:00.000Z">September 01, 2020</time>
@@ -195,21 +195,21 @@
 <li>this link must open in the current window (no <code>target</code> attribute to open in a new tab)</li>
 </ul>
 <p>In addition, to improve accessibility, providing these informations will allow the user to avoid unnecessary downloads, which is also eco-responsible (green) best practice.</p>
-<h2 id="valid-examples">Valid examples <a class="header-anchor" href="#valid-examples" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="valid-examples" class="h2-focus">Valid examples <a class="header-anchor" href="#valid-examples" id="heading-68" aria-labelledby="heading-68">#</a></h2>
 <p>Here is an example of a link with the necessary information:</p>
 <p>Download the <a href="#">complete review 2020 (PDF, 1.5 MB)</a>.</p>
 <p>It is important that this additional information is present in the title of the link and not just after the link (especially for people who use a screen reader). That said, for aesthetic reasons, it is possible to ensure that the additional information is not underlined, for example:</p>
 <p>Download the <a href="#" style="text-decoration:none"><span style="text-decoration:underline">complete review 2020</span> (PDF, 1.5Mo)</a></p>
-<h2 id="about-the-units">About the units <a class="header-anchor" href="#about-the-units" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="about-the-units" class="h2-focus">About the units <a class="header-anchor" href="#about-the-units" id="heading-69" aria-labelledby="heading-69">#</a></h2>
 <p>In English, the units used to express the weight of the files are written in capital letters (KbB, MB, GB...).</p>
-<h2 id="file-language">File language <a class="header-anchor" href="#file-language" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="file-language" class="h2-focus">File language <a class="header-anchor" href="#file-language" id="heading-70" aria-labelledby="heading-70">#</a></h2>
 <p>For the links allowing to download a document in a language other than that of the current page, it is important to specify it.</p>
 <p>Examples of documents in French on a English site:</p>
 <ul>
 <li><a href="#"><span lang="fr">Bilan complet</span> (French, DOC, 800 KB) </a></li>
 <li><a href="#"><span>Manuel utilisateur</span> (French, PDF, 1.2 MB) </a></li>
 </ul>
-<h2 id="a-small-image-for-decoration-but-not-only">A small image for decoration, but not only <a class="header-anchor" href="#a-small-image-for-decoration-but-not-only" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="a-small-image-for-decoration-but-not-only" class="h2-focus">A small image for decoration, but not only <a class="header-anchor" href="#a-small-image-for-decoration-but-not-only" id="heading-71" aria-labelledby="heading-71">#</a></h2>
 <p>If the file type is known, a small icon next to the file allows the user to identify it more quickly:<br>
 <a style="background-image: url (/images/icons/pdf-icon.svg); background-size:contain; background-repeat:no-repeat; padding-left:2rem;" href="#">complete review 2020 (PDF, 1.5 MB)</a></p>
 
@@ -306,7 +306,7 @@
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <div hidden>Anchor link</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

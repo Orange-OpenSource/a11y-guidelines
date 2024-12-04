@@ -35,7 +35,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Aller au contenu</a>
@@ -168,12 +168,12 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/fr/">Accueil</a>
+          <a class="breadcrumb-focus" href="/fr/">Accueil</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/fr/mobile/ios/">iOS</a>
+          <a class="breadcrumb-focus" href="/fr/mobile/ios/">iOS</a>
         </li>
       
       
@@ -206,9 +206,9 @@
           <h1>Les critères de conception iOS</h1>
 <p>Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application iOS accessible.<br>
 </br>Chacun de ces critères est présenté en expliquant pour qui il est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle.</p>
-<p><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555"><img class="img-fluid" alt="Accès à la vidéo WWDC mentionnant l'importance du visuel." src="../../images/conception-intro-wwdc.png"/><br>
-</a></p>
-<h2 id="images">Images <a class="header-anchor" href="#images" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<div><q lang="en">When designing your app, keep text size, weight, and layout in mind for clarity and readability.</q>&nbsp;<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555">WWDC20 (voir la vidéo)</a></div>
+<br><br>
+<h2 id="images" class="h2-focus">Images <a class="header-anchor" href="#images" id="heading-1186" aria-labelledby="heading-1186">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -258,7 +258,7 @@ Les images sont très souvent utilisées pour transmettre de nombreuses informat
 </ul>
 </div>
 </div><br><br>
-<h2 id="couleurs">Couleurs <a class="header-anchor" href="#couleurs" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="couleurs" class="h2-focus">Couleurs <a class="header-anchor" href="#couleurs" id="heading-1187" aria-labelledby="heading-1187">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -348,7 +348,7 @@ Par exemple, pour les personnes sensibles à la lumière, l'utilisation d'un tex
 <p>La couleur ne doit jamais être le seul canal de transmission d’une information, d’indication d’une action, de sollicitation d’une réponse ou de distinction d’un élément.</p>
 </li>
 <li>
-<p>Le contraste entre les couleurs de texte et de fond doit aussi être suffisant (à calculer avec <span lang="en">Colour Contrast Analyzer</span> ou avec la fonctionnalité <a href="../wwdc/2019#contraste-des-couleurs-0626">Color Contrast Calculator</a> de l'outil <span lang="en">Accessibility Inspector</span> depuis Xcode 11).</p>
+<p>Le contraste entre les couleurs de texte et de fond doit aussi être suffisant (à calculer avec <span lang="en">Colour Contrast Analyzer</span> ou avec la fonctionnalité <a href="../wwdc/2019#contraste-des-couleurs-0626"><span lang="en">Color Contrast Calculator</span></a> de l'outil <span lang="en">Accessibility Inspector</span> depuis Xcode 11).</p>
 </li>
 <li>
 <p>Avec l'arrivée du <strong>Mode Sombre</strong> en iOS 13, une attention toute particulière doit être portée sur les contrastes utilisés au sein des différents thèmes et pouvant être modifiés avec l'option d'accessibilité <button class="btn btn-link" onclick="tabPanelFocus('a11yOptions-Description_tab','a11yOptions-Description')">augmenter le contraste</button>.</p>
@@ -359,7 +359,7 @@ Par exemple, pour les personnes sensibles à la lumière, l'utilisation d'un tex
 </ul>
 </div>
 </div></br></br>
-<h2 id="alternative-textuelle">Alternative textuelle <a class="header-anchor" href="#alternative-textuelle" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="alternative-textuelle" class="h2-focus">Alternative textuelle <a class="header-anchor" href="#alternative-textuelle" id="heading-1188" aria-labelledby="heading-1188">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -430,7 +430,7 @@ Ci-dessous, un exemple fréquent d’une icône qu’on couple avec du texte (in
 </div>
 </div>
 <br><br>
-<h2 id="titre-et-en-tete">Titre et en-tête <a class="header-anchor" href="#titre-et-en-tete" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="titre-et-en-tete" class="h2-focus">Titre et en-tête <a class="header-anchor" href="#titre-et-en-tete" id="heading-1189" aria-labelledby="heading-1189">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -491,7 +491,7 @@ Une erreur commune est de mettre un titre unique pour toutes les pages d’une a
 </div>
 </div>
 <br><br>
-<h2 id="etat-des-elements">État des éléments <a class="header-anchor" href="#etat-des-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="etat-des-elements" class="h2-focus">État des éléments <a class="header-anchor" href="#etat-des-elements" id="heading-1190" aria-labelledby="heading-1190">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -537,7 +537,7 @@ Encore une fois, c’est grâce à l’alternative textuelle du titre de la zone
 </div>
 </div>
 <br><br>
-<h2 id="composant-standard">Composant standard <a class="header-anchor" href="#composant-standard" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="composant-standard" class="h2-focus">Composant standard <a class="header-anchor" href="#composant-standard" id="heading-1191" aria-labelledby="heading-1191">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -570,7 +570,7 @@ Si aucun composant standard ne permet de répondre au besoin, créer un composan
 </div>
 </div>
 <br><br>
-<h2 id="zone-de-clic">Zone de clic <a class="header-anchor" href="#zone-de-clic" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="zone-de-clic" class="h2-focus">Zone de clic <a class="header-anchor" href="#zone-de-clic" id="heading-1192" aria-labelledby="heading-1192">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -625,7 +625,7 @@ Chaque élément cliquable de l’application doit donner à l’utilisateur une
 </div>
 </div>
 <br><br>
-<h2 id="element-fantome">Elément fantôme <a class="header-anchor" href="#element-fantome" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="element-fantome" class="h2-focus">Elément fantôme <a class="header-anchor" href="#element-fantome" id="heading-1193" aria-labelledby="heading-1193">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -679,7 +679,7 @@ Chaque élément cliquable de l’application doit donner à l’utilisateur une
 </div>
 </div>
 <br><br>
-<h2 id="controle-de-contenu">Contrôle de contenu <a class="header-anchor" href="#controle-de-contenu" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="controle-de-contenu" class="h2-focus">Contrôle de contenu <a class="header-anchor" href="#controle-de-contenu" id="heading-1194" aria-labelledby="heading-1194">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -721,7 +721,7 @@ Les contenus interactifs peuvent être maîtrisés par l’utilisateur (bouton a
 </div>
 </div>
 <br><br>
-<h2 id="changement-de-contenu">Changement de contenu <a class="header-anchor" href="#changement-de-contenu" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="changement-de-contenu" class="h2-focus">Changement de contenu <a class="header-anchor" href="#changement-de-contenu" id="heading-1195" aria-labelledby="heading-1195">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -769,7 +769,7 @@ Avec un lecteur d’écran, s’assurer que les modifications dynamiques dans le
 </div>
 </div>
 <br><br>
-<h2 id="scroll-horizontal"><i lang="en">Scroll</i> horizontal <a class="header-anchor" href="#scroll-horizontal" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="scroll-horizontal" class="h2-focus"><i lang="en">Scroll</i> horizontal <a class="header-anchor" href="#scroll-horizontal" id="heading-1196" aria-labelledby="heading-1196">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -836,7 +836,7 @@ Avec un lecteur d’écran, s’assurer que les modifications dynamiques dans le
 </div>
 </div>
 <br><br>
-<h2 id="formulaire">Formulaire <a class="header-anchor" href="#formulaire" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="formulaire" class="h2-focus">Formulaire <a class="header-anchor" href="#formulaire" id="heading-1197" aria-labelledby="heading-1197">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -876,7 +876,7 @@ Les champs de formulaire doivent restituer leurs labels.
 </div>
 </div>
 <br><br>
-<h2 id="ordre-de-lecture">Ordre de lecture <a class="header-anchor" href="#ordre-de-lecture" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="ordre-de-lecture" class="h2-focus">Ordre de lecture <a class="header-anchor" href="#ordre-de-lecture" id="heading-1198" aria-labelledby="heading-1198">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -934,7 +934,7 @@ S'assurer que l’ordre de lecture de <span lang="en">VoiceOver</span> est logiq
 </div>
 </div>
 <br><br>
-<h2 id="langue">Langue <a class="header-anchor" href="#langue" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="langue" class="h2-focus">Langue <a class="header-anchor" href="#langue" id="heading-1199" aria-labelledby="heading-1199">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -976,7 +976,7 @@ Il arrive parfois que certains mots et textes d’une application soient dans un
 </div>
 </div>
 <br><br>
-<h2 id="orientation-de-lecran">Orientation de l’écran <a class="header-anchor" href="#orientation-de-lecran" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="orientation-de-lecran" class="h2-focus">Orientation de l’écran <a class="header-anchor" href="#orientation-de-lecran" id="heading-1200" aria-labelledby="heading-1200">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -1027,7 +1027,7 @@ Il arrive parfois que certains mots et textes d’une application soient dans un
 </div>
 </div>
 <br><br>
-<h2 id="ecran-specifique-accessibilite">Écran spécifique accessibilité <a class="header-anchor" href="#ecran-specifique-accessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="ecran-specifique-accessibilite" class="h2-focus">Écran spécifique accessibilité <a class="header-anchor" href="#ecran-specifique-accessibilite" id="heading-1201" aria-labelledby="heading-1201">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active" 
@@ -1053,7 +1053,7 @@ Il arrive parfois que certains mots et textes d’une application soient dans un
 </div>
 </div>
 <br><br>
-<h2 id="options-daccessibilite">Options d'accessibilité <a class="header-anchor" href="#options-daccessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="options-daccessibilite" class="h2-focus">Options d'accessibilité <a class="header-anchor" href="#options-daccessibilite" id="heading-1202" aria-labelledby="heading-1202">#</a></h2>
 <p><a id="a11yOptions"></a></p>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -1092,9 +1092,8 @@ Il arrive parfois que certains mots et textes d’une application soient dans un
 <p><strong>tester</strong> chacune des options appropriées afin de s'assurer que son effet est bien pris en compte au sein de l'application proposée.</p>
 </li>
 </ul>
-<p><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783"><img class="img-fluid" alt="Accès à la vidéo WWDC mentionnant l'importance de la prise en compte des réglages utilisateurs au sein d'une application." src="../../images/displayPreferences-wwdc.png"/><br>
-</a></p>
-<p><strong>Cible :</strong> tout le monde.<br>
+<div><q lang="en">[...] it's also our duty to listen and respect the setting for users that have it enabled.</q>&nbsp;<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783"><span lang="en">WWDC 2020 - Make Your App Visually Accessible</span> (voir la vidéo)</a></div>
+<p><br><strong>Cible :</strong> tout le monde.<br>
 <strong>Quand :</strong> lors de la conception et lors du développement.</p>
 </div>
 <div class="tab-pane" id="a11yOptions-Description" role="tabpanel" >
@@ -1146,7 +1145,7 @@ Il arrive parfois que certains mots et textes d’une application soient dans un
 <p><a href="#optionA11Y_switchControl">Activer le Contrôle de Sélection</a>.</p>
 </li>
 <li>
-<p><a href="#optionA11Y_voiceOver">Activer VoiceOver</a>.</p>
+<p><a href="#optionA11Y_voiceOver">Activer <span lang="en">VoiceOver</span></a>.</p>
 </li>
 <li>
 <p><a href="#optionA11Y_autoPlayVideoPreviews">Prévisualisation vidéo</a>.</p>
@@ -1723,7 +1722,7 @@ Depuis <strong>iOS 13</strong>, cette option d'accessibilité est désormais une
 </div></div></br>
 <p><a name="optionA11Y_voiceOver"></a></p>
 <ul>
-<li><strong>Activer VoiceOver</strong> (UIAccessibilityIsVoiceOverRunning) : active le lecteur d'écran.</li>
+<li><strong>Activer <span lang="en">VoiceOver</span></strong> (UIAccessibilityIsVoiceOverRunning) : active le lecteur d'écran.</li>
 </ul>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -1960,7 +1959,7 @@ Depuis <strong>iOS 13</strong>, cette option d'accessibilité est désormais une
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <div hidden>Lien pour ancrage</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

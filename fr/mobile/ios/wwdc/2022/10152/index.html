@@ -35,7 +35,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Aller au contenu</a>
@@ -168,17 +168,17 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/fr/">Accueil</a>
+          <a class="breadcrumb-focus" href="/fr/">Accueil</a>
         </li>
       
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/fr/mobile/ios/">iOS</a>
+          <a class="breadcrumb-focus" href="/fr/mobile/ios/">iOS</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/fr/mobile/ios/wwdc/">WWDC</a>
+          <a class="breadcrumb-focus" href="/fr/mobile/ios/wwdc/">WWDC</a>
         </li>
       
       
@@ -231,7 +231,7 @@
 <p><img src="../../../../images/iOSdev/wwdc22-10152-3.png" alt="" class="img-fluid"></p>
 <p>Le premier mode directement accessible par les réglages d'un terminal est l'accès guidé.<br>
 </br></p>
-<h2 id="acces-guide">Accès guidé <a class="header-anchor" href="#acces-guide" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="acces-guide" class="h2-focus">Accès guidé <a class="header-anchor" href="#acces-guide" id="heading-1595" aria-labelledby="heading-1595">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -294,7 +294,7 @@
 </br></br>
 <p>L'accès guidé représente l'<a href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=574">assise</a> des différents modes <span lang="en">Single App</span> introduits programmatiquement dans une application.<br>
 <img src="../../../../images/iOSdev/wwdc22-10152-GuidedAccess.png" alt="" class="img-fluid"></p>
-<h2 id="les-modes-single-app">Les modes <span lang="en">Single App</span> <a class="header-anchor" href="#les-modes-single-app" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="les-modes-single-app" class="h2-focus">Les modes <span lang="en">Single App</span> <a class="header-anchor" href="#les-modes-single-app" id="heading-1596" aria-labelledby="heading-1596">#</a></h2>
 <p>La différence majeure entre ces trois modes et l'accès guidé réside dans leur gestion fonctionnelle contrôlée uniquement par le code.</p>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -347,7 +347,7 @@ Ce mode est destiné à la <strong>mise en place de tests</strong>et à l'<stron
 </div>
 </div>
 </br></br>
-<h2 id="accessibility-api"><a href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=688">Accessibility API</a> <a class="header-anchor" href="#accessibility-api" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="accessibility-api" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2022/10152/?time=688">Accessibility API</a> <a class="header-anchor" href="#accessibility-api" id="heading-1597" aria-labelledby="heading-1597">#</a></h2>
 <p>Les modes précédemment évoqués permettent d'activer et de désactiver des options d'accessibilité dans le but d'améliorer l'expérience utilisateur.</p>
 <p>Une fois de plus, c'est l'application <span lang="en">Apple Configurator</span> qui peut permettre ce type d'actions mais <strong>uniquement avant d'entrer dans le mode</strong> en tant que tel.<br>
 <img src="../../../../images/iOSdev/wwdc22-10152-Accessibility_1.png" alt="" class="img-fluid"></p>
@@ -447,7 +447,7 @@ Ce mode est destiné à la <strong>mise en place de tests</strong>et à l'<stron
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <div hidden>Lien pour ancrage</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

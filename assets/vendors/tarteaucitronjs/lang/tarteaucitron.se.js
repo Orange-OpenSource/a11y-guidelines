@@ -1,4 +1,5 @@
 /*global tarteaucitron */
+/* min ready */
 tarteaucitron.lang = {
     "middleBarHead": "☝ 🍪",
     "adblock": "Hej! Denna webbplats är transparent och låter dig välja de tredjeparts tjänster du vill tillåta.",
@@ -14,6 +15,7 @@ tarteaucitron.lang = {
     "personalize": "Personifiera",
     "acceptAll": "OK, acceptera allt",
     "close": "Stänga",
+    "closeBanner": "Dölj cookies banner",
 
     "privacyUrl": "Integritetspolicy",
 
@@ -30,6 +32,7 @@ tarteaucitron.lang = {
     "more": "Läs mer",
     "source": "Visa den officiella webbplatsen",
     "credit": "Cookies manager av tarteaucitron.js",
+    "noServices": "Denna webbplats använder ingen cookie som kräver ditt samtycke.",
 
     "toggleInfoBox": "Visa / dölj information om lagring av cookies",
     "title": "Cookie- hanteringspanel",
@@ -79,7 +82,15 @@ tarteaucitron.lang = {
         "title": "Övrig",
         "details": "Tjänster för att visa webbinnehåll."
     },
-    
-    "mandatoryTitle": "Mandatory cookies",
-    "mandatoryText": "This site uses cookies necessary for its proper functioning which cannot be deactivated."
+
+    "google": {
+        "title": "Specifikt samtycke för Googles tjänster",
+        "details": "Google kan använda dina data för publikmätning, reklamprestanda eller för att erbjuda dig personligt anpassade annonser."
+    },
+
+    "mandatoryTitle": "Dutkámus čáhci",
+    "mandatoryText": "Dát ođđa veahkehuhtii lea geavahuvvon dutkámus čáhciid buoremus boahtteárvvuin, guhte ii leat deaktiverejuvvon.",
+
+    "save": "Spara",
+    "ourpartners": "Våra partners"
 };

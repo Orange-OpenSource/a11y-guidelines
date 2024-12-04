@@ -35,7 +35,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Aller au contenu</a>
@@ -168,12 +168,12 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/fr/">Accueil</a>
+          <a class="breadcrumb-focus" href="/fr/">Accueil</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/fr/mobile/ios/">iOS</a>
+          <a class="breadcrumb-focus" href="/fr/mobile/ios/">iOS</a>
         </li>
       
       
@@ -217,7 +217,7 @@
 </li>
 </ul>
 <p><br><br></p>
-<h2 id="nature-des-elements">Nature des éléments <a class="header-anchor" href="#nature-des-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="nature-des-elements" class="h2-focus">Nature des éléments <a class="header-anchor" href="#nature-des-elements" id="heading-1207" aria-labelledby="heading-1207">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -334,9 +334,7 @@ var body: some View {
 </div>
 </div>
 <div class="tab-pane" id="TraitElt-BasicOperations" role="tabpanel" >
-<p>L'attribut <code>accessibilityTrait</code> est en réalité un <code>bitmask</code> pour lequel chaque élément pris individuellement peut prendre une valeur spécifique.</p>
-<p><img src="../../images/iOSdev/Traits.png" alt="" class="img-fluid"><br>
-<br>Il est donc possible d'ajouter et d'enlever plusieurs <code>traits</code> présents pour caractériser un élement après avoir vérifié leur existence par exemple.</p>
+Il est  possible d'ajouter et d'enlever plusieurs `traits` présents pour caractériser un élement après avoir vérifié leur existence par exemple.
 <div class="code-tab-pane">
 <pre><code class="objectivec">
 
@@ -394,7 +392,7 @@ var body: some View {
 </div>
 </div>
 <br><br>
-<h2 id="alternatives-textuelles">Alternatives textuelles <a class="header-anchor" href="#alternatives-textuelles" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="alternatives-textuelles" class="h2-focus">Alternatives textuelles <a class="header-anchor" href="#alternatives-textuelles" id="heading-1208" aria-labelledby="heading-1208">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -428,7 +426,7 @@ var body: some View {
 <div class="tab-pane show active"
      id="textAlt-Description"
      role="tabpanel">
-<p>Avec VoiceOver, la vocalisation de chaque élément apportant de l'information doit être parfaitement comprise par l'utilisateur pour lui permettre de ne pas avoir à se poser quelque question que ce soit concernant le contenu de la page qu'il consulte.</p>
+<p>Avec <span lang="en">VoiceOver</span>, la vocalisation de chaque élément apportant de l'information doit être parfaitement comprise par l'utilisateur pour lui permettre de ne pas avoir à se poser quelque question que ce soit concernant le contenu de la page qu'il consulte.</p>
 <p>Cette précision nécessaire dans l'implémentation de ce mode de fonctionnement est possible en grande partie grâce à 4 attributs : <code>label</code>, <code>hint</code>, <code>value</code> et <code>trait</code>.</p>
 </div>
 <div class="tab-pane" id="textAlt-Details" role="tabpanel">
@@ -531,7 +529,7 @@ struct ChangeTextView: View {
 </div>
 </div>
 <br><br>
-<h2 id="date-heure-et-nombres">Date, heure et nombres <a class="header-anchor" href="#date-heure-et-nombres" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="date-heure-et-nombres" class="h2-focus">Date, heure et nombres <a class="header-anchor" href="#date-heure-et-nombres" id="heading-1209" aria-labelledby="heading-1209">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -569,9 +567,9 @@ struct ChangeTextView: View {
 </div>
 <div class="tab-pane" id="format-DateTime" role="tabpanel" >
 <p>Si on met directement sous forme de texte la date ou l'heure dans le <code>label</code>, on s'aperçoit rapidement que le rendu n'est pas naturel à l'écoute.</p>
-<p><img src="../../images/iOSdev/DateHeureNombres_10.png" alt="" class="img-fluid"><br>
+<p><img src="../../images/iOSdev/DateHeureNombres_10.png" alt="Zéro un barre oblique zéro quatre barre oblique deux mille quinze. Cinq trente" class="img-fluid"><br>
 Il faut absolument formater les données en entrée pour obtenir une vocalisation descriptive naturelle et compréhensible.</p>
-<p><img src="../../images/iOSdev/DateHeureNombres_4.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/iOSdev/DateHeureNombres_4.png" alt="Premier avril deux mille quinze. Cinq heure et trente minutes" class="img-fluid"></p>
 <div class="code-tab-pane">
 <pre><code class="objectivec">
     NSDateFormatter * dateFormatter = [[NSDateFormatter alloc]init];
@@ -645,9 +643,9 @@ Il faut absolument formater les données en entrée pour obtenir une vocalisatio
 </div>
 <div class="tab-pane" id="format-Numbers" role="tabpanel" >
 <p>En indiquant la valeur d'un nombre directement dans le texte d'un <code>label</code>, la vocalisation se fera sur chacun des chiffres présentés rendant la véritable valeur du nombre difficile à deviner.</p>
-<p><img src="../../images/iOSdev/DateHeureNombres_8.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/iOSdev/DateHeureNombres_8.png" alt="cinq quatre zéro trois huit neuf deux un sept" class="img-fluid"></p>
 <p>Comme pour les date et heure, il faut formater la donnée en entrée pour qu'elle puisse être analysée et vocalisée selon la véritable valeur du nombre qu'elle représente.</p>
-<p><img src="../../images/iOSdev/DateHeureNombres_5.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/iOSdev/DateHeureNombres_5.png" alt="cinquante-quatre millions trente-huit mille neuf cent vingt et un virgule sept" class="img-fluid"></p>
 <div class="code-tab-pane">
 <pre><code class="objectivec">
     NSNumber * numberValue = @54038921.7;
@@ -682,9 +680,9 @@ Il faut absolument formater les données en entrée pour obtenir une vocalisatio
 <div class="tab-pane" id="format-PhoneNumbers" role="tabpanel" >
 <p>La problématique liée à la vocalisation d'un numéro de téléphone est identique à celle des nombres puisqu'elle s'appuie entièrement sur le formatage à appliquer avec une prise en compte particulière des chiffres &quot;0&quot;.</p>
 <p>L'exemple donné ci-dessous concerne la numérotation française avec une logique qui peut se décliner à n'importe quel type de format de numérotation.</p>
-<p><img src="../../images/iOSdev/DateHeureNombres_11.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/iOSdev/DateHeureNombres_11.png" alt="zéro six point onze point vingt-deux point trente-trois point zéro six" class="img-fluid"></p>
 <p>L'idée est de séparer chaque paire de chiffres par une virgule qui va fournir la ponctuation vocale.<br>
-<img src="../../images/iOSdev/DateHeureNombres_6.png" alt="" class="img-fluid"></p>
+<img src="../../images/iOSdev/DateHeureNombres_6.png" alt="zéro six onze vingt-deux trente-trois zéro six" class="img-fluid"></p>
 <div class="code-tab-pane">
 <pre><code class="objectivec">
     NSString * phoneNumberValue = @"06.11.22.33.06";
@@ -761,7 +759,7 @@ Il faut absolument formater les données en entrée pour obtenir une vocalisatio
 </div>
 </div>
 <br><br>
-<h2 id="declencher-une-vocalisation">Déclencher une vocalisation <a class="header-anchor" href="#declencher-une-vocalisation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="declencher-une-vocalisation" class="h2-focus">Déclencher une vocalisation <a class="header-anchor" href="#declencher-une-vocalisation" id="heading-1210" aria-labelledby="heading-1210">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -827,7 +825,7 @@ UIAccessibility.post(notification: .announcement,
 </div>
 </div>
 <br><br>
-<h2 id="informer-dune-modification-sur-la-page">Informer d’une modification sur la page <a class="header-anchor" href="#informer-dune-modification-sur-la-page" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="informer-dune-modification-sur-la-page" class="h2-focus">Informer d’une modification sur la page <a class="header-anchor" href="#informer-dune-modification-sur-la-page" id="heading-1211" aria-labelledby="heading-1211">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -934,7 +932,7 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
 </div>
 </div>
 <br><br>
-<h2 id="modifier-la-langue-de-vocalisation">Modifier la langue de vocalisation <a class="header-anchor" href="#modifier-la-langue-de-vocalisation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="modifier-la-langue-de-vocalisation" class="h2-focus">Modifier la langue de vocalisation <a class="header-anchor" href="#modifier-la-langue-de-vocalisation" id="heading-1212" aria-labelledby="heading-1212">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -983,7 +981,7 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
 </code></pre>
 </div>
 <br>
-<p>Si l'on souhaite ajouter un mot dans une langue spécifique au sein d'une phrase à prononcer de façon appropriée avec VoiceOver, on peut s'appuyer sur les <strong>Attributed Accessibility Properties</strong> en utilisant un <code>NSAttributedString</code> <a href="https://a11y-guidelines.orange.com/fr/mobile/ios/wwdc/2017/215/#attributed-accessibility-properties-2607">depuis iOS 11</a>.</p>
+<p>Si l'on souhaite ajouter un mot dans une langue spécifique au sein d'une phrase à prononcer de façon appropriée avec <span lang="en">VoiceOver</span>, on peut s'appuyer sur les <strong>Attributed Accessibility Properties</strong> en utilisant un <code>NSAttributedString</code> <a href="https://a11y-guidelines.orange.com/fr/mobile/ios/wwdc/2017/215/#attributed-accessibility-properties-2607">depuis iOS 11</a>.</p>
 </div>
 <div class="tab-pane" id="changeLang-Links" role="tabpanel">
 <ul>
@@ -993,7 +991,7 @@ Le son utilisé pour notifier la modification est similaire à l'arrivée d'une 
 </div>
 <br><br>
 <p><a name="MaskElements"></a></p>
-<h2 id="masquer-des-elements">Masquer des éléments <a class="header-anchor" href="#masquer-des-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="masquer-des-elements" class="h2-focus">Masquer des éléments <a class="header-anchor" href="#masquer-des-elements" id="heading-1213" aria-labelledby="heading-1213">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -1187,7 +1185,7 @@ override func viewDidAppear(_ animated: Bool) {
 </div>
 </div>
 <br><br>
-<h2 id="grouper-des-elements">Grouper des éléments <a class="header-anchor" href="#grouper-des-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="grouper-des-elements" class="h2-focus">Grouper des éléments <a class="header-anchor" href="#grouper-des-elements" id="heading-1214" aria-labelledby="heading-1214">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -1501,7 +1499,7 @@ UIAccessibilityElement * elt;
 </div>
 </div>
 <br><br>
-<h2 id="ordre-de-lecture">Ordre de lecture <a class="header-anchor" href="#ordre-de-lecture" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="ordre-de-lecture" class="h2-focus">Ordre de lecture <a class="header-anchor" href="#ordre-de-lecture" id="heading-1215" aria-labelledby="heading-1215">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -1611,7 +1609,7 @@ var body: some View {
 </div>
 </div>
 <br><br>
-<h2 id="fournisseur-de-contenu-personnalise">Fournisseur de contenu personnalisé <a class="header-anchor" href="#fournisseur-de-contenu-personnalise" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="fournisseur-de-contenu-personnalise" class="h2-focus">Fournisseur de contenu personnalisé <a class="header-anchor" href="#fournisseur-de-contenu-personnalise" id="heading-1216" aria-labelledby="heading-1216">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -1670,7 +1668,7 @@ On peut aussi envisager l'implémentation de cette fonctionnalité dans des list
 </div>
 <div class="tab-pane" id="CuCoPro-Example" role="tabpanel">
 <p>L'exemple de code ci-dessous permet d'obtenir tout un tas d'informations présentes sur une image sous forme de données non visuelles mais vocalisables.</p>
-<p>⚠️ Il faut absolument penser à <strong>importer le framework Accessibility</strong> auquel appartient le protocole <code>AXCustomContentProvider</code>. ⚠️</p>
+<p>⚠️ Il faut absolument penser à <strong>importer le framework Accessibility</strong> auquel appartient le protocole <code>AXCustomContentProvider</code>.</p>
 <p>Après avoir défini la classe pour la vue contenant l'image :</p>
 <div class="code-tab-pane">
 <pre><code class="objectivec">
@@ -1768,7 +1766,10 @@ class ViewController: UIViewController {
 }
 </code></pre>
 </div>
-<p><img src="../../images/iOSdev/CustomContentProvider_2.png" alt="" class="img-fluid"><br>
+<p>Exemple d'utilisation :<br>
+Sur le logo de la marque Orange, il est possible d'ajouter du contenu personnalisé consultable à l'aide de l'option &quot;Plus de contenu&quot; du rotor.<br>
+<img src="../../images/iOSdev/CustomContentProvider_2.png" alt="" class="img-fluid"></p>
+<p>En utilisant le balayage vertical avec un doigt, il est possible d'entendre &quot;Télécommunications type de société, Paris siège social, 1988 date de création&quot;<br>
 <img src="../../images/iOSdev/CustomContentProvider_3.png" alt="" class="img-fluid"></p>
 </div>
 <div class="tab-pane" id="CuCoPro-Links" role="tabpanel">
@@ -1780,13 +1781,13 @@ class ViewController: UIViewController {
 <p>L'<a href="https://mobilea11y.com/blog/custom-accessibility-content/">article de Rob Whitaker</a> apporte une belle description pédagogique de cette nouvelle fonctionnalité qu'il est un des seuls à avoir exposé à l'issue de la WWDC 2020.</p>
 </li>
 <li>
-<p><a href="../wwdc/2021/121">WWDC 2021 : Optimiser VoiceOver dans un contexte riche en données</a>.</p>
+<p><a href="../wwdc/2021/121">WWDC 2021 : Optimiser <span lang="en">VoiceOver</span> dans un contexte riche en données</a>.</p>
 </li>
 </ul>
 </div>
 </div>
 <br><br>
-<h2 id="focus-dun-element">Focus d'un élément <a class="header-anchor" href="#focus-dun-element" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="focus-dun-element" class="h2-focus">Focus d'un élément <a class="header-anchor" href="#focus-dun-element" id="heading-1217" aria-labelledby="heading-1217">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -1955,7 +1956,7 @@ struct ContentView: View {
 </div>
 </div>
 <br><br>
-<h2 id="modifier-la-zone-de-focus-de-voiceover">Modifier la zone de focus de <span lang="en">VoiceOver</span> <a class="header-anchor" href="#modifier-la-zone-de-focus-de-voiceover" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="modifier-la-zone-de-focus-de-voiceover" class="h2-focus">Modifier la zone de focus de <span lang="en">VoiceOver</span> <a class="header-anchor" href="#modifier-la-zone-de-focus-de-voiceover" id="heading-1218" aria-labelledby="heading-1218">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -2138,7 +2139,7 @@ float heightVal;
 </div>
 </div>
 <br><br>
-<h2 id="vue-modale">Vue modale <a class="header-anchor" href="#vue-modale" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="vue-modale" class="h2-focus">Vue modale <a class="header-anchor" href="#vue-modale" id="heading-1219" aria-labelledby="heading-1219">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -2333,7 +2334,7 @@ float heightVal;
 </div>
 </div>
 <br><br>
-<h2 id="taille-des-textes">Taille des textes <a class="header-anchor" href="#taille-des-textes" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="taille-des-textes" class="h2-focus">Taille des textes <a class="header-anchor" href="#taille-des-textes" id="heading-1220" aria-labelledby="heading-1220">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -2389,17 +2390,17 @@ Depuis iOS7, il est possible de modifier dynamiquement la taille des textes d'un
 <div class="tab-pane show active"
      id="TextSize-iOS16"
      role="tabpanel">
-<p><img src="../../images/iOSdev/TailleDesTextes_iOS16_1.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/iOSdev/TailleDesTextes_iOS16_1.png" alt="Sur iOS 16 : menu Réglages-Accessibilité-Affichage et taille du texte, activer Police plus grande" class="img-fluid"></p>
 </div>
 <div class="tab-pane" 
      id="TextSize-iOS13" 
      role="tabpanel">
-<p><img src="../../images/iOSdev/TailleDesTextes_iOS13_1.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/iOSdev/TailleDesTextes_iOS13_1.png" alt="Sur iOS 13 : menu Réglages-Accessibilité-Affichage et taille du texte, activer Police plus grande" class="img-fluid"></p>
 </div>
 <div class="tab-pane" 
      id="TextSize-iOS12" 
      role="tabpanel">
-<p><img src="../../images/iOSdev/TailleDesTextes_1.png" alt="" class="img-fluid"></p>
+<p><img src="../../images/iOSdev/TailleDesTextes_1.png" alt="Sur iOS 12 : menu Général-Accessibilité, activer Police plus grande" class="img-fluid"></p>
 </div></div>
 <p><br>Quelques points sont néanmoins essentiels pour la bonne utilisation du <span lang="en">Dynamic Type</span> mis à disposition :</p>
 <ul>
@@ -2530,7 +2531,7 @@ Cette tâche est simplifiée depuis iOS10 où l'attribut <strong>adjustsFontForC
 <br>
 <ul>
 <li>
-<p>ne pas oublier d'adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l'utilisation de valeurs dynamiques : penser à paramétrer les éléments inclus dans les navigation/tab/status bar et toolbar qui seront affichés via le <strong><a href="../wwdc/2019/261">Large Content Viewer</a></strong>,</p>
+<p>ne pas oublier d'adapter les contraintes graphiques aux éléments susceptibles de voir leur taille modifiée en privilégiant l'utilisation de valeurs dynamiques : penser à paramétrer les éléments inclus dans les navigation/tab/status bar et toolbar qui seront affichés via le <strong><a href="../wwdc/2019/261"><span lang="en">Large Content Viewer</span></a></strong>,</p>
 </li>
 <li>
 <p>penser à adapter le <a href="../conception/#couleurs">contraste des couleurs</a> à la taille de texte modifiée si nécessaire.</p>
@@ -2563,7 +2564,7 @@ Cette tâche est simplifiée depuis iOS10 où l'attribut <strong>adjustsFontForC
 </div>
 </div>
 <br><br>
-<h2 id="trait-dunion-de-troncature">Trait d'union de troncature <a class="header-anchor" href="#trait-dunion-de-troncature" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="trait-dunion-de-troncature" class="h2-focus">Trait d'union de troncature <a class="header-anchor" href="#trait-dunion-de-troncature" id="heading-1221" aria-labelledby="heading-1221">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -2583,7 +2584,7 @@ Cette tâche est simplifiée depuis iOS10 où l'attribut <strong>adjustsFontForC
 <div class="tab-pane show active"
      id="truncHyphen-Description"
      role="tabpanel">
-<p>L'utilisation du <code>Dynamic Type</code> exposé dans le paragraphe précédent s'accompagne indéniablement de la troncature de mots en fonction du grossissement de texte choisi par l'utilisateur.</p>
+<p>L'utilisation du <span lang="en"><code>Dynamic Type</code></span> exposé dans le paragraphe précédent s'accompagne indéniablement de la troncature de mots en fonction du grossissement de texte choisi par l'utilisateur.</p>
 <p>Malheureusement, cela n'est pas pris en compte nativement par le système et seule une intervention au niveau programmatique permet d'obtenir ce rendu visuel particulièrement apprécié.</p>
 </div>
 <div class="tab-pane" id="truncHyphen-Example" role="tabpanel">
@@ -2738,7 +2739,7 @@ extension String {
 </div>
 </div>
 <br><br>
-<h2 id="taille-des-elements-graphiques">Taille des éléments graphiques <a class="header-anchor" href="#taille-des-elements-graphiques" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="taille-des-elements-graphiques" class="h2-focus">Taille des éléments graphiques <a class="header-anchor" href="#taille-des-elements-graphiques" id="heading-1222" aria-labelledby="heading-1222">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -2813,7 +2814,7 @@ extension String {
 </div>
 </div>
 <br><br>
-<h2 id="large-content-viewer">Large Content Viewer <a class="header-anchor" href="#large-content-viewer" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="large-content-viewer" class="h2-focus">Large Content Viewer <a class="header-anchor" href="#large-content-viewer" id="heading-1223" aria-labelledby="heading-1223">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -2997,7 +2998,7 @@ Pour SwftUI, il faudra se tourner vers l'API <a href="https://developer.apple.co
 </div>
 </div>
 <br><br>
-<h2 id="valeurs-continument-ajustables">Valeurs continûment ajustables <a class="header-anchor" href="#valeurs-continument-ajustables" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="valeurs-continument-ajustables" class="h2-focus">Valeurs continûment ajustables <a class="header-anchor" href="#valeurs-continument-ajustables" id="heading-1224" aria-labelledby="heading-1224">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -3030,7 +3031,7 @@ Pour SwftUI, il faudra se tourner vers l'API <a href="https://developer.apple.co
 </div>
 <div class="tab-pane" id="adjustable-Example" role="tabpanel">
 <p>La méthodologie utilisée pour solutionner cette problématique pour une personne non voyante utilisant <span lang="en">VoiceOver</span> reste la même pour ces trois éléments, c'est pourquoi seul le cas du <code>stepper</code> sera traité.</p>
-<p>L'implémentation de cet objet graphique est relativement simple mais son utilisation avec VoiceOver requiert quelques ajustements pour obtenir un meilleur parcours utilisateur.</p>
+<p>L'implémentation de cet objet graphique est relativement simple mais son utilisation avec <span lang="en">VoiceOver</span> requiert quelques ajustements pour obtenir un meilleur parcours utilisateur.</p>
 <p>Si on crée un <span lang="en">stepper</span> auquel on ajoute un <code>label</code> pour afficher sa valeur, on obtient un ensemble d'éléments disjoints.<br>
 <img src="../../images/iOSdev/ValeursAjustables_2.png" alt="" class="img-fluid"></p>
 <p>À partir de là, on s'aperçoit que le focus doit être déplacé pour :</p>
@@ -3250,7 +3251,7 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
 </div>
 </div>
 <br><br>
-<h2 id="actions-personnalisees">Actions personnalisées <a class="header-anchor" href="#actions-personnalisees" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="actions-personnalisees" class="h2-focus">Actions personnalisées <a class="header-anchor" href="#actions-personnalisees" id="heading-1225" aria-labelledby="heading-1225">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -3277,7 +3278,7 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
 <div class="tab-pane show active"
      id="customActions-Description"
      role="tabpanel">
-<p>Certaines manipulations basiques peuvent devenir un vrai casse-tête pour se fondre dans une navigation sereine avec VoiceOver et se transformer en éléments parfaitement accessibles.</p>
+<p>Certaines manipulations basiques peuvent devenir un vrai casse-tête pour se fondre dans une navigation sereine avec <span lang="en">VoiceOver</span> et se transformer en éléments parfaitement accessibles.</p>
 <p>Un exemple probant est celui du mail iOS natif qui permet d'accéder à un ensemble d'actions.</p>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -3299,8 +3300,8 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
 <div class="tab-pane show active"
      id="CustomActionsVoiceOver"
      role="tabpanel">
-<p><img src="../../images/iOSdev/Actions_VoiceOver.png" alt="accès aux actions d'un mail sans voiceover avec un balayage gauche" class="img-fluid"></p>
-<p>La gestuelle utilisée sans utilisation du lecteur d'écran ne peut pas convenir à VoiceOver pour obtenir le résultat désiré : un balayage vers la gauche sélectionnerait l'élément accessible suivant au lieu de proposer les actions à réaliser sur le mail sélectionné.</p>
+<p><img src="../../images/iOSdev/Actions_VoiceOver.png" alt="accès aux actions d'un mail sans VoiceOver avec un balayage gauche" class="img-fluid"></p>
+<p>La gestuelle utilisée sans utilisation du lecteur d'écran ne peut pas convenir à <span lang="en">VoiceOver</span> pour obtenir le résultat désiré : un balayage vers la gauche sélectionnerait l'élément accessible suivant au lieu de proposer les actions à réaliser sur le mail sélectionné.</p>
 <p>Dans un cas comme celui-là, il conviendrait de réaliser les opérations décrites dans l'onglet <code>Exemple</code> pour donner accès à ces opérations si elles n'étaient pas implémentées nativement.</p>
 </div>
 <div class="tab-pane" 
@@ -3314,10 +3315,10 @@ class ContinuousAdjustableValues: UIViewController, AdjustableForAccessibilityDe
 <p>Dès que la <strong>liste d'actions</strong> est <strong>différente</strong> sur un élément, <strong>l'annonce reprend</strong> sur ce dernier de façon à faire comprendre à l'utilisateur qu'un nouveau jeu d'actions est à disposition.</p>
 <p>Ce comportement qui n'a jamais été présenté ni expliqué par <span lang="en">Apple</span> <strong>n'est plus d'actualité en iOS 15</strong> pour revenir au fonctionnement nominal iOS 12.</p>
 <p>⚠️ ATTENTION : <strong>vérifier l'activation des actions personnalisées</strong> dans les réglages utilisateurs via '<code>Réglages</code> - <code>Accessibilité</code> - <code>VoiceOver</code> - <code>Verbosité</code> - <code>Actions</code>' avec <code>Énoncer</code> sélectionné. ⚠️<br>
-Si ce n'est pas le cas, l'implémentation des actions personnalisées sera totalement ignorée par VoiceOver.</p>
+Si ce n'est pas le cas, l'implémentation des actions personnalisées sera totalement ignorée par <span lang="en">VoiceOver</span>.</p>
 </div>
 <div class="tab-pane" id="customActions-Example" role="tabpanel">
-<p>Que ce soit pour le lecteur d'écran ou le contrôle de sélection, la réalisation programmatique est exactement la même pour obtenir les actions souhaitées : l'exemple suivant sera illustré pour VoiceOver.</p>
+<p>Que ce soit pour le lecteur d'écran ou le contrôle de sélection, la réalisation programmatique est exactement la même pour obtenir les actions souhaitées : l'exemple suivant sera illustré pour <span lang="en">VoiceOver</span>.</p>
 <p>Une solution consiste à <strong>associer à l'élément sélectionné un tableau d'actions</strong> dont le système se chargera d'indiquer automatiquement la présence en informant vocalement l'utilisateur de leur disponibilité.</p>
 <p><img src="../../images/iOSdev/Actions_2.png" alt="" class="img-fluid"></p>
 <div class="code-tab-pane">
@@ -3420,7 +3421,7 @@ class CustomActions: UIViewController {
 </code></pre>
 </div>
 <p><br>Le code implémenté ci-dessus permet d'obtenir le résultat suivant par balayages successifs sur l'élément accessible sélectionné :</p>
-<p><img src="../../images/iOSdev/Actions_3.png" alt="accès aux actions avec voiceover en utilisant un balayage vers le haut" class="img-fluid"><br>
+<p><img src="../../images/iOSdev/Actions_3.png" alt="accès aux actions avec VoiceOver en utilisant un balayage vers le haut" class="img-fluid"><br>
 <br>Pour plus d'informations sur ce sujet, ne pas hésiter à visualiser la vidéo <strong>Utiliser les actions personnalisées</strong> dont le <a href="../wwdc/2019/#utiliser-les-actions-personnalisees">résumé détaillé</a> se trouve dans la section WWDC de ce site.</p>
 </div>
 <div class="tab-pane" id="customActions-Links" role="tabpanel">
@@ -3440,7 +3441,7 @@ class CustomActions: UIViewController {
 </ul>
 </div>
 </div><br><br>
-<h2 id="rotor-personnalise">Rotor personnalisé <a class="header-anchor" href="#rotor-personnalise" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="rotor-personnalise" class="h2-focus">Rotor personnalisé <a class="header-anchor" href="#rotor-personnalise" id="heading-1226" aria-labelledby="heading-1226">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -3600,7 +3601,7 @@ Toutefois il est possible de définir un rotor en SwiftUI avec la méthode <a hr
 </div>
 </div>
 <br><br>
-<h2 id="options-daccessibilite">Options d’accessibilité <a class="header-anchor" href="#options-daccessibilite" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="options-daccessibilite" class="h2-focus">Options d’accessibilité <a class="header-anchor" href="#options-daccessibilite" id="heading-1227" aria-labelledby="heading-1227">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -3668,7 +3669,7 @@ Toutefois il est possible de définir un rotor en SwiftUI avec la méthode <a hr
 <p>Par exemple, si <span lang="en">VoiceOver</span> est désactivé durant l’utilisation de l’application, celle-ci recevra l’événement <strong>UIAccessibilityVoiceOverStatusDidChangeNotification</strong>, ce qui peut être très utile couplé à la fonction <strong>UIAccessibilityIsVoiceOverRunning</strong> grâce à laquelle on peut exécuter un traitement particulier quand <span lang="en">VoiceOver</span> est activé.</p>
 <p>Mais que se passe-t-il si <span lang="en">VoiceOver</span> est désactivé alors que ce traitement a déjà eu lieu ?<br>
 C’est là que les événements système peuvent être utilisés et, en restant à leur écoute, il est possible d’appliquer des traitements spécifiques de manière dynamique.</p>
-<p>Dans l'exemple suivant, on appelle une méthode spécifique au moment où le statut de VoiceOver ou du Switch Control change.</p>
+<p>Dans l'exemple suivant, on appelle une méthode spécifique au moment où le statut de <span lang="en">VoiceOver</span> ou du Switch Control change.</p>
 <div class="code-tab-pane">
 <pre><code class="objectivec">
 - (void)viewDidAppear:(BOOL)animated {
@@ -3741,7 +3742,7 @@ C’est là que les événements système peuvent être utilisés et, en restant
 </div>
 </div>
 <br><br>
-<h2 id="barre-de-navigation">Barre de navigation <a class="header-anchor" href="#barre-de-navigation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="barre-de-navigation" class="h2-focus">Barre de navigation <a class="header-anchor" href="#barre-de-navigation" id="heading-1228" aria-labelledby="heading-1228">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -4200,7 +4201,7 @@ private func createA11yElts() {
 </div>
 </div>
 <br><br>
-<h2 id="vocalisation-synthetisee">Vocalisation synthétisée <a class="header-anchor" href="#vocalisation-synthetisee" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="vocalisation-synthetisee" class="h2-focus">Vocalisation synthétisée <a class="header-anchor" href="#vocalisation-synthetisee" id="heading-1229" aria-labelledby="heading-1229">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -4516,7 +4517,7 @@ class SpeechSynthesis: UIViewController, AVSpeechSynthesizerDelegate {
 <br>
 <p>L'ensemble des fonctionnalités proposées par le synthétiseur vocal sont présentées dans une <a href="../wwdc/2018/236/">vidéo WWDC</a> (Utiliser une voix synthétisée avec AVSpeechSynthesizer) résumée dans la partie WWDC de ce site.<br>
 <br><br></p>
-<h2 id="controle-de-selection">Contrôle de sélection <a class="header-anchor" href="#controle-de-selection" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="controle-de-selection" class="h2-focus">Contrôle de sélection <a class="header-anchor" href="#controle-de-selection" id="heading-1230" aria-labelledby="heading-1230">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -4721,7 +4722,7 @@ class ViewController: UIViewController {
 </div>
 </div>
 <br><br>
-<h2 id="vocalisation-du-nom-de-lapplication">Vocalisation du nom de l'application <a class="header-anchor" href="#vocalisation-du-nom-de-lapplication" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="vocalisation-du-nom-de-lapplication" class="h2-focus">Vocalisation du nom de l'application <a class="header-anchor" href="#vocalisation-du-nom-de-lapplication" id="heading-1231" aria-labelledby="heading-1231">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -4878,7 +4879,7 @@ class ViewController: UIViewController {
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <div hidden>Lien pour ancrage</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

@@ -1,42 +1,17 @@
 {
-  "_args": [
-    [
-      "tarteaucitronjs@1.14.0",
-      "/home/runner/work/a11y-guidelines/a11y-guidelines"
-    ]
-  ],
-  "_from": "tarteaucitronjs@1.14.0",
-  "_id": "tarteaucitronjs@1.14.0",
-  "_inBundle": false,
-  "_integrity": "sha512-NjuzYq6gvoEdzSH9aO2+N3fJdjJ0tdtwrWT8vLYVHoPjoPMha29h5ULN3dHx8VPG1anzZzlBSczVHSe0h1IRpQ==",
-  "_location": "/tarteaucitronjs",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "tarteaucitronjs@1.14.0",
-    "name": "tarteaucitronjs",
-    "escapedName": "tarteaucitronjs",
-    "rawSpec": "1.14.0",
-    "saveSpec": null,
-    "fetchSpec": "1.14.0"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/tarteaucitronjs/-/tarteaucitronjs-1.14.0.tgz",
-  "_spec": "1.14.0",
-  "_where": "/home/runner/work/a11y-guidelines/a11y-guidelines",
-  "author": {
-    "name": "amauri.io"
-  },
-  "bugs": {
-    "url": "https://github.com/AmauriC/tarteaucitron.js/issues"
-  },
-  "dependencies": {},
+  "name": "tarteaucitronjs",
+  "version": "1.19.0",
+  "main": "tarteaucitron.js",
   "description": "Comply to the European cookie law",
+  "dependencies": {},
   "devDependencies": {},
-  "homepage": "https://github.com/AmauriC/tarteaucitron.js#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmauriC/tarteaucitron.js.git"
+  },
   "keywords": [
     "cookie",
     "law",
@@ -44,15 +19,10 @@
     "gdpr",
     "cookie"
   ],
+  "author": "amauri.io",
   "license": "MIT",
-  "main": "tarteaucitron.js",
-  "name": "tarteaucitronjs",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AmauriC/tarteaucitron.js.git"
+  "bugs": {
+    "url": "https://github.com/AmauriC/tarteaucitron.js/issues"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "version": "1.14.0"
+  "homepage": "https://github.com/AmauriC/tarteaucitron.js#readme"
 }

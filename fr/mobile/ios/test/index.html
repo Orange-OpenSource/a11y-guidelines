@@ -35,7 +35,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Aller au contenu</a>
@@ -168,12 +168,12 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/fr/">Accueil</a>
+          <a class="breadcrumb-focus" href="/fr/">Accueil</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/fr/mobile/ios/">iOS</a>
+          <a class="breadcrumb-focus" href="/fr/mobile/ios/">iOS</a>
         </li>
       
       
@@ -191,7 +191,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#pre-requis-fondamentaux" class="dropdown-item text-wrap">Pré-requis fondamentaux</a><a href="#environnement-de-travail" class="dropdown-item text-wrap">Environnement de travail</a><a href="#evaluation-fonctionnelle" class="dropdown-item text-wrap">Évaluation fonctionnelle</a><a href="#dynamic-type" class="dropdown-item text-wrap">Dynamic Type</a><a href="#voiceover" class="dropdown-item text-wrap">VoiceOver</a><a href="#controle-de-selection" class="dropdown-item text-wrap">Contrôle de sélection</a><a href="#evaluation-technique" class="dropdown-item text-wrap">Évaluation technique</a><a href="#contraste-des-couleurs" class="dropdown-item text-wrap">Contraste des couleurs</a><a href="#inspection-de-code" class="dropdown-item text-wrap">Inspection de code</a><a href="#tests-lies-au-code" class="dropdown-item text-wrap">Tests liés au code</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#pre-requis-fondamentaux" class="dropdown-item text-wrap">Pré-requis fondamentaux</a><a href="#environnement-de-travail" class="dropdown-item text-wrap">Environnement de travail</a><a href="#evaluation-fonctionnelle" class="dropdown-item text-wrap">Évaluation fonctionnelle</a><a href="#dynamic-type" class="dropdown-item text-wrap">Dynamic Type</a><a href="#controle-de-selection" class="dropdown-item text-wrap">Contrôle de sélection</a><a href="#evaluation-technique" class="dropdown-item text-wrap">Évaluation technique</a><a href="#contraste-des-couleurs" class="dropdown-item text-wrap">Contraste des couleurs</a><a href="#inspection-de-code" class="dropdown-item text-wrap">Inspection de code</a><a href="#tests-lies-au-code" class="dropdown-item text-wrap">Tests liés au code</a></div>
     </nav>
         
       </div>
@@ -203,13 +203,13 @@
         <main id="main-content" class="col-md-9" role="main">
             
           <div class="mt-4">
-          <h1>Tester l'accessibilité d'une application iOS</h1>
-<p>Cette page décrit l'ensemble des tests nécessaires à l'évaluation d'une application iOS dans le cadre de l'accessibilité.</p>
-<p>Il est indispensable que <strong>TOUS</strong> les intervenants du projet connaissent les spécificités d'accessibilité iOS présentées sur ce site de façon à comprendre parfaitement le lien entre les besoins des utilisateurs et leur implémentation au sein de l'application à développer.</p>
+          <h1>Tester l'accessibilité d'une application <span lang='en'>iOS</span></h1>
+<p>Cette page décrit l'ensemble des tests nécessaires à l'évaluation d'une application <span lang="en">iOS</span> dans le cadre de l'accessibilité.</p>
+<p>Il est indispensable que <strong>TOUS</strong> les intervenants du projet connaissent les spécificités d'accessibilité <span lang='en'>iOS</span> présentées sur ce site de façon à comprendre parfaitement le lien entre les besoins des utilisateurs et leur implémentation au sein de l'application à développer.</p>
 <p>Chacune des fonctionnalités doit être vue comme un élément impactant fortement le confort de l'utilisateur, comme une <strong>brique essentielle à connotation humaine</strong> et pas juste fonctionnelle.</p>
 <p>Que ce soit dans la conception, la réalisation ou la vérification, chaque décision se doit d'être particulièrement empathique de façon à fournir la meilleure expérience utilisateur possible.<br>
 <br><br></p>
-<h2 id="pre-requis-fondamentaux">Pré-requis fondamentaux <a class="header-anchor" href="#pre-requis-fondamentaux" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="pre-requis-fondamentaux" class="h2-focus">Pré-requis fondamentaux <a class="header-anchor" href="#pre-requis-fondamentaux" id="heading-1171" aria-labelledby="heading-1171">#</a></h2>
 <ol>
 <li>
 <p>Consacrer le temps nécessaire à la maîtrise de la gestuelle (<a href="../voiceover/">guide d'utilisation de VoiceOver)</a>, contrôle de sélection).</p>
@@ -228,11 +228,11 @@
 <br><br></p>
 </li>
 </ol>
-<h2 id="environnement-de-travail">Environnement de travail <a class="header-anchor" href="#environnement-de-travail" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="environnement-de-travail" class="h2-focus">Environnement de travail <a class="header-anchor" href="#environnement-de-travail" id="heading-1172" aria-labelledby="heading-1172">#</a></h2>
 <p>Quatre grandes familles peuvent être dépeintes au sein de chaque projet :</p>
 <ul>
 <li>
-<p>à l'initiative de tout ce qui va être créé, la <strong>personne en charge de prioriser les fonctionnalités à implémenter</strong> doit parfaitement comprendre les besoins utilisateurs et la façon de les décliner sous iOS.<br>
+<p>à l'initiative de tout ce qui va être créé, la <strong>personne en charge de prioriser les fonctionnalités à implémenter</strong> doit parfaitement comprendre les besoins utilisateurs et la façon de les décliner sous <span lang='en'>iOS</span>.<br>
 Cette personne doit s'assurer que des <strong>critères d'acceptations</strong> sont <strong>parfaitement définis</strong> pour chacune des fonctionnalités et que leur réalisation répond exactement à ce qui était demandé <strong>en vérifiant elle-même le fonctionnement souhaité</strong>,</p>
 </li>
 <li>
@@ -242,11 +242,11 @@ Cette personne doit s'assurer que des <strong>critères d'acceptations</strong> 
 <p>l'équipe <strong>DÉVELOPPEMENT</strong> doit grandement s'appuyer sur les <a href="../wwdc/">vidéos WWDC</a> et sur le <a href="../developpement/">guide pour les développeurs</a> afin de <strong>trouver les solutions</strong> les plus appropriées aux différentes situations rencontrées,</p>
 </li>
 <li>
-<p>l'équipe <strong>TEST</strong> doit parfaitement maîtriser la <a href="../voiceover/">gestuelle spécifique</a> et comprendre toutes les possibilités offertes par iOS pour <strong>réaliser chacun des tests</strong> de façon optimum avant mise en production.</p>
+<p>l'équipe <strong>TEST</strong> doit parfaitement maîtriser la <a href="../voiceover/">gestuelle spécifique</a> et comprendre toutes les possibilités offertes par <span lang='en'>iOS</span> pour <strong>réaliser chacun des tests</strong> de façon optimum avant mise en production.</p>
 </li>
 </ul>
 <p>Quel que soit le mode de fonctionnement <em>(SCRUM, ...)</em>, les fonctions dévolues à chacune de ces équipes doivent être présentes au sein du projet.</p>
-<p>De façon à pouvoir s'assurer que les recommandations d'accessibilité iOS ont bien été prises en compte, deux modes d'évaluation sont à prévoir :</p>
+<p>De façon à pouvoir s'assurer que les recommandations d'accessibilité <span lang='en'>iOS</span> ont bien été prises en compte, deux modes d'évaluation sont à prévoir :</p>
 <ul>
 <li>
 <p><a href="#evaluation-fonctionnelle"><strong>FONCTIONNEL</strong></a> : on s'assure que l'utilisateur peut naviguer parmi tous les écrans sans soucis, en ayant accès à toute l'information visuelle mise à disposition et surtout sans avoir à se poser de questions.<br>
@@ -258,8 +258,8 @@ Ce mode vient aussi souvent confirmer et solutionner certains problèmes fonctio
 <br></p>
 </li>
 </ul>
-<h2 id="evaluation-fonctionnelle">Évaluation fonctionnelle <a class="header-anchor" href="#evaluation-fonctionnelle" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<p>La participation aux tests de cette partie ne nécessite aucune connaissance technique particulière si ce n'est savoir (dés)activer et utiliser des fonctionnalités d'accessibilité iOS.</p>
+<h2 id="evaluation-fonctionnelle" class="h2-focus">Évaluation fonctionnelle <a class="header-anchor" href="#evaluation-fonctionnelle" id="heading-1173" aria-labelledby="heading-1173">#</a></h2>
+<p>La participation aux tests de cette partie ne nécessite aucune connaissance technique particulière si ce n'est savoir (dés)activer et utiliser des fonctionnalités d'accessibilité <span lang='en'>iOS</span>.</p>
 <p>En plus des <a href="../conception/">critères de base</a> à respecter, il est primordial de s'assurer que des <a href="../conception/#options-daccessibilite">options d'accessibilité</a> activées par un utilisateur sont parfaitement opérationnelles dans toutes les pages de l'application développée.</p>
 <p>Ci-dessous, quelques critères importants à tester impérativement :</p>
 <ul>
@@ -274,14 +274,14 @@ Ce mode vient aussi souvent confirmer et solutionner certains problèmes fonctio
 Il faut donc vérifier que l'<a href="../wwdc/2018/230/#floutage-et-transparence-0307">atténuation proposée par le système</a> est bien prise en compte sur les pages applicatives où ces effets sont implémentés,</p>
 </li>
 <li>
-<p><strong>mode sombre</strong> : le résultat graphique de cette <em>fonctionnalité iOS 13</em> doit absolument être vérifié pour s'assurer que les différents contrastes de couleurs utilisées sont conformes aux critères de conception, sans oublier l'option d'accessibilité <a href="../conception/#options-daccessibilite">augmenter le contraste</a> qui est aussi un élément incontournable à vérifier dans ce contexte.</p>
+<p><strong>mode sombre</strong> : le résultat graphique de cette <em>fonctionnalité <span lang='en'>iOS</span> 13</em> doit absolument être vérifié pour s'assurer que les différents contrastes de couleurs utilisées sont conformes aux critères de conception, sans oublier l'option d'accessibilité <a href="../conception/#options-daccessibilite">augmenter le contraste</a> qui est aussi un élément incontournable à vérifier dans ce contexte.</p>
 </li>
 </ul>
 <br>
-<p>En plus de ces critères fondamentaux, il y a bien évidemment les incontournables iOS pour qualifier à minima une application d'accessible :</p>
+<p>En plus de ces critères fondamentaux, il y a bien évidemment les incontournables <span lang='en'>iOS</span> pour qualifier à minima une application d'accessible :</p>
 <ol>
 <li>
-<p><a href="#dynamic-type">Dynamic Type</a> (grossissement de texte)</p>
+<p><a href="#dynamic-type"><span lang="en">Dynamic Type</span></a> (grossissement de texte)</p>
 </li>
 <li>
 <p><a href="#voiceover">VoiceOver</a> (lecteur d'écran)</p>
@@ -291,7 +291,7 @@ Il faut donc vérifier que l'<a href="../wwdc/2018/230/#floutage-et-transparence
 </li>
 </ol>
 <p><img src="../../images/ios-test-overview.png" alt="Principales options d'accessibilité sur iOS : options utilisateurs, raccourcis &amp; Siri, mode sombre, grossissement de texte, lecteur d'écran, contrôle de sélection" class="img-fluid"></p>
-<h3 id="dynamic-type">Dynamic Type <a class="header-anchor" href="#dynamic-type" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<h3 id="dynamic-type"><span lang="en">Dynamic Type</span> <a class="header-anchor" href="#dynamic-type" id="heading-1174" aria-labelledby="heading-1174">#</a></h3>
 <p>Pour bien comprendre comment le grossissement de texte fonctionne, il est fortement recommandé de visionner l'exemple proposé dans la <a href="../wwdc/2017/245/#exemple-2432">vidéo WWDC 2017</a> parfaitement résumée dans la partie WWDC de ce site.</p>
 <p>Afin de prendre en compte un panel conséquent de terminaux, il est conseillé de réaliser les tests sur plusieurs terminaux de taille différente avec lesquels <strong>chaque page devra être visualisée</strong>.</p>
 <p>Trois types de grossissement peuvent être particulièrement étudiés de façon à déterminer le comportement visuel aux extrêmes :</p>
@@ -315,7 +315,7 @@ Enfin, les quelques points suivants sont à examiner minutieusement :</p>
 <p><img src="../../images/ios-test-DynamicType_2.png" alt="Exemple de troncature : première ligne &quot;Synchronisa-&quot; et deuxième ligne &quot;tion Wifi&quot;" class="img-fluid"></p>
 <ul>
 <li>
-<p><strong>les illustrations comme les icônes doivent s'adapter au grossissement souhaité</strong> : l'utilisation du <a href="../wwdc/2019/261/">Large Content Viewer</a> après un appui long, l'implémentation d'un pinch à 2 doigts afin d’éviter à l’utilisateur d’avoir recours à la fonctionnalité <code>Zoom</code> ou encore le simple <a href="../developpement/#taille-des-elements-graphiques">grossissement d'un élément graphique</a> peuvent être des solutions selon les cas rencontrés,</p>
+<p><strong>les illustrations comme les icônes doivent s'adapter au grossissement souhaité</strong> : l'utilisation du <a href="../wwdc/2019/261/"><span lang="en">Large Content Viewer</span></a> après un appui long, l'implémentation d'un pinch à 2 doigts afin d’éviter à l’utilisateur d’avoir recours à la fonctionnalité <code>Zoom</code> ou encore le simple <a href="../developpement/#taille-des-elements-graphiques">grossissement d'un élément graphique</a> peuvent être des solutions selon les cas rencontrés,</p>
 </li>
 <li>
 <p>penser à <strong>modifier le grossissement de texte au sein de chaque écran</strong> pour s’assurer que tous ses éléments répondent parfaitement aux contraintes graphiques mises en place,</p>
@@ -324,11 +324,10 @@ Enfin, les quelques points suivants sont à examiner minutieusement :</p>
 <p>dès que la <strong>correction d’une anomalie</strong> remontée sur un terminal est effective, elle <strong>doit être vérifiée sur les autres terminaux utilisés en tests</strong> afin de s'assurer que le problème est réellement éradiqué.</p>
 </li>
 </ul>
-<p>Les <strong>tests</strong> à réaliser pour le <code>Dynamic Type</code> sont <strong>assez longs</strong> car plusieurs terminaux sont à étudier et chaque écran est à vérifier avec une modification de la taille du texte à faire pour chacun des écrans.</p>
-<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562">
-<p><img src="../../images/ios-test-DynamicTypeWWDC.png" alt="Accès à la vidéo WWDC mentionnant l'importance du grossissement de texte dans un projet" class="img-fluid"><br>
-<br><br></p>
-<h3 id="voiceover">VoiceOver <a class="header-anchor" href="#voiceover" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<p>Les <strong>tests</strong> à réaliser pour le <span lang="en"><code>Dynamic Type</code></span> sont <strong>assez longs</strong> car plusieurs terminaux sont à étudier et chaque écran est à vérifier avec une modification de la taille du texte à faire pour chacun des écrans.</p>
+<div><q lang="en">My biggest tip is to think about these early on in the design process.</q>&nbsp;<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562"><span lang="en">WWDC 2020 - Make Your App Visually Accessible</span> (voir la vidéo)</a></div>
+<br><br>
+### <span lang="en">VoiceOver</span>
 <p>L'activation du lecteur d'écran natif change radicalement les résultats obtenus par les gestes standards effectués sur l’écran tactile, c'est pourquoi son utilisation demande un certain temps d'adaptation pour une maîtrise de sa <a href="../voiceover/">gestuelle spécifique</a>.</p>
 <p>Il est donc <strong>très fortement recommandé</strong> de connaître au moins les gestes de base avant d'activer cette fonctionnalité à partir des réglages du terminal.</p>
 <ul class="nav nav-tabs" role="tablist">
@@ -337,21 +336,21 @@ Enfin, les quelques points suivants sont à examiner minutieusement :</p>
            data-bs-toggle="tab" 
            href="#VoiceOver-iOS15"
            role="tab" 
-           aria-selected="true">iOS 15</a>
+           aria-selected="true" lang="en">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-bs-toggle="tab" 
            href="#VoiceOver-iOS13"
            role="tab" 
-           aria-selected="false">iOS 13</a>
+           aria-selected="false" lang="en">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-bs-toggle="tab" 
            href="#VoiceOver-iOS12"
            role="tab" 
-           aria-selected="false">iOS 12</a>
+           aria-selected="false" lang="en">iOS 12</a>
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
@@ -365,7 +364,7 @@ Enfin, les quelques points suivants sont à examiner minutieusement :</p>
 <div class="tab-pane" id="VoiceOver-iOS12" role="tabpanel" >
 <p><img src="../../images/ios-test-VO_iOS12.png" alt="Sur iOS 12 : activer Voice Over à partir du menu Général-Accessibilité-Voice Over" class="img-fluid"></p>
 </div></div>
-<p><br>Pour aboutir à une parfaite implémentation de VoiceOver, il ne faut surtout pas croire que chaque élément doit absolument être vocalisé et se contenter de passer au suivant pour renouveler cette opération : ce type de réalisation est tout sauf productif !</p>
+<p><br>Pour aboutir à une parfaite implémentation de <span lang="en">VoiceOver</span>, il ne faut surtout pas croire que chaque élément doit absolument être vocalisé et se contenter de passer au suivant pour renouveler cette opération : ce type de réalisation est tout sauf productif !</p>
 <p>Il faut bien avoir à l'esprit que l'<strong>information</strong> diffusée visuellement est assimilée en très peu de temps alors que celle fournie par le lecteur d'écran arrive de façon <strong>séquentielle</strong> à la vitesse de sélections successives d'éléments : un <strong>effort énorme de mémorisation</strong> est à fournir pour avoir une vision synoptique de l'écran et comprendre réellement ce qui est proposé.</p>
 <p>Pour mieux comprendre cette situation, il est recommandé de passer son écran en <a href="../voiceover/#CurtainScreen">mode &quot;rideau&quot;</a> puis naviguer comme si on voyait l'écran.<br>
 Cette opération est particulièrement utile lors de <strong>premiers tests sur une application qu'on découvre</strong> car on n'est pas influencé sur le parcours utilisateur qui serait déjà visionné inconsciemment.</p>
@@ -384,10 +383,10 @@ Cette opération est particulièrement utile lors de <strong>premiers tests sur 
 <p>l'utilisateur doit réaliser un minimum de sélections au sein de l'écran.</p>
 </li>
 </ol>
-<p>Ici encore, les tests demandent beaucoup de temps et requièrent une forte empathie pour avancer des critiques constructives sur la façon dont l'information vocale doit être diffusée par VoiceOver.</p>
+<p>Ici encore, les tests demandent beaucoup de temps et requièrent une forte empathie pour avancer des critiques constructives sur la façon dont l'information vocale doit être diffusée par <span lang="en">VoiceOver</span>.</p>
 <p>Maintenant, <strong>si le lecteur d'écran n'est pas encore implémenté</strong> sur une application déjà en diffusion publique, il est primordial d'en <strong>informer l'utilisateur</strong> dès <a href="../developpement/#vocalisation-du-nom-de-lapplication">sélection de l'icône applicatif</a> en indiquant très clairement la situation de façon à éviter une consultation catastrophique et décevante.<br>
 <br><br></p>
-<h3 id="controle-de-selection">Contrôle de sélection <a class="header-anchor" href="#controle-de-selection" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<h3 id="controle-de-selection">Contrôle de sélection <a class="header-anchor" href="#controle-de-selection" id="heading-1175" aria-labelledby="heading-1175">#</a></h3>
 <p>L'utilisation du <a href="https://support.apple.com/fr-fr/HT201370">contrôle de sélection</a> s'articule autour du mode point et du mode élément.</p>
 <p><img src="../../images/ios-test-SwitchControl.png" alt="" class="img-fluid"></p>
 <p>La sélection des éléments avec le mode élément fonctionne globalement bien quand les éléments proposés sont natifs et que l'application n'est pas trop compliquée graphiquement.</p>
@@ -400,21 +399,21 @@ Cette opération est particulièrement utile lors de <strong>premiers tests sur 
            data-bs-toggle="tab" 
            href="#SwitchControl-iOS15"
            role="tab" 
-           aria-selected="true">iOS 15</a>
+           aria-selected="true" lang="en">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-bs-toggle="tab" 
            href="#SwitchControl-iOS13"
            role="tab" 
-           aria-selected="false">iOS 13</a>
+           aria-selected="false" lang="en">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-bs-toggle="tab" 
            href="#SwitchControl-iOS12"
            role="tab" 
-           aria-selected="false">iOS 12</a>
+           aria-selected="false" lang="en">iOS 12</a>
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
@@ -429,19 +428,19 @@ Cette opération est particulièrement utile lors de <strong>premiers tests sur 
 <p><img src="../../images/ios-test-SwitchControl_iOS12.png" alt="Sur iOS 12 : activer Contrôle de sélection à partir du menu Général-Accessibilité-Contrôle de sélection" class="img-fluid"></p>
 </div></div>
 <br>
-<h2 id="evaluation-technique">Évaluation technique <a class="header-anchor" href="#evaluation-technique" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="evaluation-technique" class="h2-focus">Évaluation technique <a class="header-anchor" href="#evaluation-technique" id="heading-1176" aria-labelledby="heading-1176">#</a></h2>
 <p>Comme son nom l'indique, cette partie requiert des connaissances plus ou moins pointues selon ce que l'on souhaite vérifier.<br>
 <br></p>
-<h3 id="contraste-des-couleurs">Contraste des couleurs <a class="header-anchor" href="#contraste-des-couleurs" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<h3 id="contraste-des-couleurs">Contraste des couleurs <a class="header-anchor" href="#contraste-des-couleurs" id="heading-1177" aria-labelledby="heading-1177">#</a></h3>
 <p>Graphiquement, <a href="../conception/#couleurs">le contraste des couleurs</a> est très certainement le plus facilement vérifiable grâce à certains logiciels à installer en local par exemple (Colour Contrast Analyzer...).</p>
 <p>L'outil <span lang="en">Accessibility Inspector</span> dispose d'une fonctionnalité <a href="../wwdc/2019/#contraste-des-couleurs-0626"><span lang="en">Color Contrast Calculator</span></a> depuis Xcode 11 qui permet aussi de réaliser le même type de vérifications.<br>
 <br>Il est aussi très important de prendre en compte la luminosité (valeur &gt; 125) ainsi que la différence de tonalité (valeur &gt; 500) comme indiqué dans la section critères de conception liée aux couleurs.<br>
 <br><br></p>
-<h3 id="inspection-de-code">Inspection de code <a class="header-anchor" href="#inspection-de-code" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
-<p>L'interface de développement Xcode fournit un outil particulièrement intéressant intitulé <strong>Accessibility Inspector</strong>.</p>
-<p>L'intérêt et l'utilisation de cet outil ne seront pas développés ici car ils sont très bien expliqués dans les vidéos parfaitement détaillées <a href="../wwdc/2016/407/"><code>Audit</code> <code>d'une</code> <code>app</code> <code>en</code> <code>accessibilité</code></a> et <a href="../wwdc/2019/#decouvrir-accessibility-inspector"><code>Découvrir</code> <code>Accessibility</code> <code>Inspector</code></a> dont le visionnage est très fortement recommandé.<br>
+<h3 id="inspection-de-code">Inspection de code <a class="header-anchor" href="#inspection-de-code" id="heading-1178" aria-labelledby="heading-1178">#</a></h3>
+<p>L'interface de développement Xcode fournit un outil particulièrement intéressant intitulé <strong><span lang='en'>Accessibility Inspector</span></strong>.</p>
+<p>L'intérêt et l'utilisation de cet outil ne seront pas développés ici car ils sont très bien expliqués dans les vidéos parfaitement détaillées <a href="../wwdc/2016/407/"><code>Audit</code> <code>d'une</code> <code>app</code> <code>en</code> <code>accessibilité</code></a> et <a href="../wwdc/2019/#decouvrir-accessibility-inspector"><code>Découvrir</code> <span lang="en"><code>Accessibility</code> <code>Inspector</code></span></a> dont le visionnage est très fortement recommandé.<br>
 <br><br></p>
-<h3 id="tests-lies-au-code">Tests liés au code <a class="header-anchor" href="#tests-lies-au-code" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<h3 id="tests-lies-au-code">Tests liés au code <a class="header-anchor" href="#tests-lies-au-code" id="heading-1179" aria-labelledby="heading-1179">#</a></h3>
 <p>De façon à assurer une stabilité temporelle au niveau du code, des tests unitaires et graphiques sont à mettre en place par les développeurs.</p>
 <p>Ces bonnes pratiques permettent de garantir une pérennité fonctionnelle en étant informé d'un éventuel écart introduit lors de développements ultérieurs.</p>
 
@@ -458,7 +457,6 @@ Cette opération est particulièrement utile lors de <strong>premiers tests sur 
             <a href="#evaluation-fonctionnelle" class="nav-link text-muted">Évaluation fonctionnelle</a>
             <ul><li class="nav-item position-relative">
             <a href="#dynamic-type" class="nav-link text-muted">Dynamic Type</a></li><li class="nav-item position-relative">
-            <a href="#voiceover" class="nav-link text-muted">VoiceOver</a></li><li class="nav-item position-relative">
             <a href="#controle-de-selection" class="nav-link text-muted">Contrôle de sélection</a></li></ul></li><li class="nav-item position-relative">
             <a href="#evaluation-technique" class="nav-link text-muted">Évaluation technique</a>
             <ul><li class="nav-item position-relative">
@@ -546,7 +544,7 @@ Cette opération est particulièrement utile lors de <strong>premiers tests sur 
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <div hidden>Lien pour ancrage</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

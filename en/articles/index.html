@@ -35,7 +35,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Skip links - Switch language">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Go to menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Go to content</a>
@@ -140,7 +140,7 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item">
-          <a href="/en/">Home</a>
+          <a class="breadcrumb-focus" href="/en/">Home</a>
         </li>
       
       
@@ -162,25 +162,9 @@
 
 
 
-<h1 aria-live="polite"><span id="filtersbar_counter" class="hidden-if-no-js">62</span>&nbsp;Technical articles <span id="search_title"></span></h1>
-<div class="d-flex col-md-5">
-      <input type="search" id="search-article-text" placeholder="Search for an article" aria-label="Search for an article" class="form-control">
-      <button class="btn btn-primary btn-inverse" id="search_article" aria-label="Launch the search for an article" title="Launch the search for an article">
-        <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
-            <defs>
-                <style>
-                .cls-1 {
-                    fill-rule: evenodd;
-                }
-                </style>
-            </defs>
-            <path class="cls-1" d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
-        </svg>
-      </button>
-</div>
+<h1 aria-live="polite"><span id="filtersbar_counter" class="hidden-if-no-js">62</span><span id="search_title"></span></h1>
 
 
-  
 <div class="hidden-if-no-js o-nav-local navbar-light mb-4 d-flex align-items-center">
 <h2 id="filtersbar_label" class="h6 mb-0 pe-3">Filter by theme  :</h2>
 <nav id="filtersbar" aria-labelledby="filtersbar_label" role="navigation">
@@ -221,23 +205,39 @@
 </nav>
 </div>
 
+<div class="d-flex col-md-5">
+      <input type="search" id="search-article-text" placeholder="Search for an article" aria-label="Search for an article" class="form-control">
+      <button class="btn btn-primary btn-inverse" id="search_article" aria-label="Launch the search for an article" title="Launch the search for an article">
+        <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
+            <defs>
+                <style>
+                .cls-1 {
+                    fill-rule: evenodd;
+                }
+                </style>
+            </defs>
+            <path class="cls-1" d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
+        </svg>
+      </button>
+</div>
+
 <ol class="list-unstyled" id="list_article">
 
   <li class="border-bottom border-light py-3" data-tags="mobile;beginner">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/how-to-test-android/" class="text-decoration-none">Testing the accessibility of an Android application</a>
+        <a href="/en/articles/how-to-test-android/" class="text-decoration-none article-focus">Testing the accessibility of an Android application</a>
       </h2>
       
        <span id="post_1" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_1"><li class="list-inline-item">
-              <a href="?tag=mobile" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Mobile
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Beginner
-              </a>
+              </p>
             </li></ul>
       
       
@@ -253,14 +253,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-august-september-2024/" class="text-decoration-none">#a11y technical watch, August-September 2024</a>
+        <a href="/en/articles/watch-august-september-2024/" class="text-decoration-none article-focus">#a11y technical watch, August-September 2024</a>
       </h2>
       
        <span id="post_2" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_2"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -276,14 +276,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-june-july-2024/" class="text-decoration-none">#a11y technical watch, June-July 2024</a>
+        <a href="/en/articles/watch-june-july-2024/" class="text-decoration-none article-focus">#a11y technical watch, June-July 2024</a>
       </h2>
       
        <span id="post_3" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_3"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -299,14 +299,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-april-may-2024/" class="text-decoration-none">#a11y technical watch, April-May 2024</a>
+        <a href="/en/articles/watch-april-may-2024/" class="text-decoration-none article-focus">#a11y technical watch, April-May 2024</a>
       </h2>
       
        <span id="post_4" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_4"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -322,14 +322,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-february-march-2024/" class="text-decoration-none">#a11y technical watch, February - March 2024</a>
+        <a href="/en/articles/watch-february-march-2024/" class="text-decoration-none article-focus">#a11y technical watch, February - March 2024</a>
       </h2>
       
        <span id="post_5" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_5"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -345,18 +345,18 @@
   <li class="border-bottom border-light py-3" data-tags="mobile;beginner">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/how-to-test-ios/" class="text-decoration-none">Testing the accessibility of an iOS application</a>
+        <a href="/en/articles/how-to-test-ios/" class="text-decoration-none article-focus">Testing the accessibility of an iOS application</a>
       </h2>
       
        <span id="post_6" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_6"><li class="list-inline-item">
-              <a href="?tag=mobile" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Mobile
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Beginner
-              </a>
+              </p>
             </li></ul>
       
       
@@ -372,14 +372,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-december-january-2024/" class="text-decoration-none">#a11y technical watch, December-January 2024</a>
+        <a href="/en/articles/watch-december-january-2024/" class="text-decoration-none article-focus">#a11y technical watch, December-January 2024</a>
       </h2>
       
        <span id="post_7" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_7"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -395,14 +395,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-october-november-2023/" class="text-decoration-none">#a11y technical watch, October-November 2023</a>
+        <a href="/en/articles/watch-october-november-2023/" class="text-decoration-none article-focus">#a11y technical watch, October-November 2023</a>
       </h2>
       
        <span id="post_8" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_8"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -418,14 +418,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-august-september-2023/" class="text-decoration-none">#a11y technical watch, August-September 2023</a>
+        <a href="/en/articles/watch-august-september-2023/" class="text-decoration-none article-focus">#a11y technical watch, August-September 2023</a>
       </h2>
       
        <span id="post_9" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_9"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -441,14 +441,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-june-july-2023/" class="text-decoration-none">#a11y technical watch, June-July 2023</a>
+        <a href="/en/articles/watch-june-july-2023/" class="text-decoration-none article-focus">#a11y technical watch, June-July 2023</a>
       </h2>
       
        <span id="post_10" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_10"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -464,14 +464,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-april-may-2023/" class="text-decoration-none">#a11y technical watch, April-May 2023</a>
+        <a href="/en/articles/watch-april-may-2023/" class="text-decoration-none article-focus">#a11y technical watch, April-May 2023</a>
       </h2>
       
        <span id="post_11" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_11"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -487,14 +487,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-february-march-2023/" class="text-decoration-none">#a11y technical watch, February - March 2023</a>
+        <a href="/en/articles/watch-february-march-2023/" class="text-decoration-none article-focus">#a11y technical watch, February - March 2023</a>
       </h2>
       
        <span id="post_12" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_12"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -510,22 +510,22 @@
   <li class="border-bottom border-light py-3" data-tags="web;intermediate;component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/form/part2/" class="text-decoration-none">Form part 2 - Submit your form</a>
+        <a href="/en/articles/form/part2/" class="text-decoration-none article-focus">Form part 2 - Submit your form</a>
       </h2>
       
        <span id="post_13" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_13"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Intermediate
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -541,14 +541,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-october-january-2023/" class="text-decoration-none">#a11y technical watch, October 2022-January 2023</a>
+        <a href="/en/articles/watch-october-january-2023/" class="text-decoration-none article-focus">#a11y technical watch, October 2022-January 2023</a>
       </h2>
       
        <span id="post_14" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_14"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -564,22 +564,22 @@
   <li class="border-bottom border-light py-3" data-tags="web;intermediate;component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/form/part1/" class="text-decoration-none">Form part 1 - Structure your form</a>
+        <a href="/en/articles/form/part1/" class="text-decoration-none article-focus">Form part 1 - Structure your form</a>
       </h2>
       
        <span id="post_15" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_15"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Intermediate
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -595,22 +595,22 @@
   <li class="border-bottom border-light py-3" data-tags="web;mobile;beginner">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/fact-sheet-accessibility/" class="text-decoration-none">Accessibility fact sheets</a>
+        <a href="/en/articles/fact-sheet-accessibility/" class="text-decoration-none article-focus">Accessibility fact sheets</a>
       </h2>
       
        <span id="post_16" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_16"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=mobile" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Mobile
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Beginner
-              </a>
+              </p>
             </li></ul>
       
       
@@ -626,14 +626,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-august-september-2022/" class="text-decoration-none">#a11y technical watch, August-October 2022</a>
+        <a href="/en/articles/watch-august-september-2022/" class="text-decoration-none article-focus">#a11y technical watch, August-October 2022</a>
       </h2>
       
        <span id="post_17" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_17"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -649,18 +649,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;beginner">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/rgaa-va11ydette/" class="text-decoration-none">News on the Va11ydette</a>
+        <a href="/en/articles/rgaa-va11ydette/" class="text-decoration-none article-focus">News on the Va11ydette</a>
       </h2>
       
        <span id="post_18" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_18"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Beginner
-              </a>
+              </p>
             </li></ul>
       
       
@@ -676,14 +676,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-june-july-2022/" class="text-decoration-none">#a11y technical watch, June-July 2022</a>
+        <a href="/en/articles/watch-june-july-2022/" class="text-decoration-none article-focus">#a11y technical watch, June-July 2022</a>
       </h2>
       
        <span id="post_19" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_19"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -699,18 +699,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;advanced">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/test-wcag-132/" class="text-decoration-none">How to maintain a logical sequential order (Wcag 1.3.2)</a>
+        <a href="/en/articles/test-wcag-132/" class="text-decoration-none article-focus">How to maintain a logical sequential order (Wcag 1.3.2)</a>
       </h2>
       
        <span id="post_20" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_20"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=advanced" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Advanced
-              </a>
+              </p>
             </li></ul>
       
       
@@ -726,18 +726,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/test-wcag-253/" class="text-decoration-none">How to test the WCAG 2.5.3 ?</a>
+        <a href="/en/articles/test-wcag-253/" class="text-decoration-none article-focus">How to test the WCAG 2.5.3 ?</a>
       </h2>
       
        <span id="post_21" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_21"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Intermediate
-              </a>
+              </p>
             </li></ul>
       
       
@@ -753,14 +753,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-april-may-2022/" class="text-decoration-none">#a11y technical watch, April-May 2022</a>
+        <a href="/en/articles/watch-april-may-2022/" class="text-decoration-none article-focus">#a11y technical watch, April-May 2022</a>
       </h2>
       
        <span id="post_22" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_22"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -776,18 +776,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;beginner">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/accessible-table/" class="text-decoration-none">Tables in accessibility</a>
+        <a href="/en/articles/accessible-table/" class="text-decoration-none article-focus">Tables in accessibility</a>
       </h2>
       
        <span id="post_23" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_23"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Beginner
-              </a>
+              </p>
             </li></ul>
       
       
@@ -803,14 +803,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-february-march-2022/" class="text-decoration-none">#a11y technical watch, February-Maarch 2022</a>
+        <a href="/en/articles/watch-february-march-2022/" class="text-decoration-none article-focus">#a11y technical watch, February-Maarch 2022</a>
       </h2>
       
        <span id="post_24" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_24"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -826,18 +826,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/using-aria-current-attribute/" class="text-decoration-none">Using the aria-current attribute </a>
+        <a href="/en/articles/using-aria-current-attribute/" class="text-decoration-none article-focus">Using the aria-current attribute </a>
       </h2>
       
        <span id="post_25" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_25"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Intermediate
-              </a>
+              </p>
             </li></ul>
       
       
@@ -853,14 +853,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-december-january-2022/" class="text-decoration-none">#a11y technical watch, December-January 2022</a>
+        <a href="/en/articles/watch-december-january-2022/" class="text-decoration-none article-focus">#a11y technical watch, December-January 2022</a>
       </h2>
       
        <span id="post_26" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_26"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -876,14 +876,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-october-november-2021/" class="text-decoration-none">#a11y technical watch, October-November 2021</a>
+        <a href="/en/articles/watch-october-november-2021/" class="text-decoration-none article-focus">#a11y technical watch, October-November 2021</a>
       </h2>
       
        <span id="post_27" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_27"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -899,14 +899,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-august-september-2021/" class="text-decoration-none">Digital accessibility watch August - September 2021</a>
+        <a href="/en/articles/watch-august-september-2021/" class="text-decoration-none article-focus">Digital accessibility watch August - September 2021</a>
       </h2>
       
        <span id="post_28" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_28"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -922,14 +922,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-june-july-2021/" class="text-decoration-none">#a11y technical watch, June-July 2021</a>
+        <a href="/en/articles/watch-june-july-2021/" class="text-decoration-none article-focus">#a11y technical watch, June-July 2021</a>
       </h2>
       
        <span id="post_29" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_29"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -945,18 +945,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;beginner">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/font-size-and-colors/" class="text-decoration-none">Text size and color </a>
+        <a href="/en/articles/font-size-and-colors/" class="text-decoration-none article-focus">Text size and color </a>
       </h2>
       
        <span id="post_30" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_30"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Beginner
-              </a>
+              </p>
             </li></ul>
       
       
@@ -972,18 +972,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;beginner">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/disable-elements/" class="text-decoration-none">Disable HTML elements</a>
+        <a href="/en/articles/disable-elements/" class="text-decoration-none article-focus">Disable HTML elements</a>
       </h2>
       
        <span id="post_31" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_31"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Beginner
-              </a>
+              </p>
             </li></ul>
       
       
@@ -999,18 +999,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;advanced">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/single-page-app/" class="text-decoration-none">Recommendations for Single Page Applications</a>
+        <a href="/en/articles/single-page-app/" class="text-decoration-none article-focus">Recommendations for Single Page Applications</a>
       </h2>
       
        <span id="post_32" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_32"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=advanced" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Advanced
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1026,14 +1026,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-march-may-2021/" class="text-decoration-none">Digital accessibility watch March - May  2021</a>
+        <a href="/en/articles/watch-march-may-2021/" class="text-decoration-none article-focus">Digital accessibility watch March - May  2021</a>
       </h2>
       
        <span id="post_33" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_33"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1049,14 +1049,14 @@
   <li class="border-bottom border-light py-3" data-tags="veille">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/watch-january-february-2021/" class="text-decoration-none">Digital accessibility watch January - February  2021</a>
+        <a href="/en/articles/watch-january-february-2021/" class="text-decoration-none article-focus">Digital accessibility watch January - February  2021</a>
       </h2>
       
        <span id="post_34" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_34"><li class="list-inline-item">
-              <a href="?tag=veille" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Watch
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1072,18 +1072,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/accessible-svg/" class="text-decoration-none">SVG images are used more and more on the web but what about their accessibility ?</a>
+        <a href="/en/articles/accessible-svg/" class="text-decoration-none article-focus">SVG images are used more and more on the web but what about their accessibility ?</a>
       </h2>
       
        <span id="post_35" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_35"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Intermediate
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1099,18 +1099,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;advanced">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/autocomplete-component/" class="text-decoration-none">Best practices for the accessibility of an autocompletion component</a>
+        <a href="/en/articles/autocomplete-component/" class="text-decoration-none article-focus">Best practices for the accessibility of an autocompletion component</a>
       </h2>
       
        <span id="post_36" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_36"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=advanced" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Advanced
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1126,18 +1126,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/download-links/" class="text-decoration-none">Some best practices for downloading links</a>
+        <a href="/en/articles/download-links/" class="text-decoration-none article-focus">Some best practices for downloading links</a>
       </h2>
       
        <span id="post_37" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_37"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Intermediate
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1153,18 +1153,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/aria-live-alert/" class="text-decoration-none">The aria-live attribute and the role alert</a>
+        <a href="/en/articles/aria-live-alert/" class="text-decoration-none article-focus">The aria-live attribute and the role alert</a>
       </h2>
       
        <span id="post_38" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_38"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Intermediate
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1180,18 +1180,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;beginner">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/skip-links-best-practices/" class="text-decoration-none">Skip links best practices</a>
+        <a href="/en/articles/skip-links-best-practices/" class="text-decoration-none article-focus">Skip links best practices</a>
       </h2>
       
        <span id="post_39" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_39"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Beginner
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1207,18 +1207,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/aria-status-messages/" class="text-decoration-none">Use ARIA for status messages</a>
+        <a href="/en/articles/aria-status-messages/" class="text-decoration-none article-focus">Use ARIA for status messages</a>
       </h2>
       
        <span id="post_40" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_40"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Intermediate
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1234,25 +1234,25 @@
   <li class="border-bottom border-light py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/accessible-name/" class="text-decoration-none">The accessible name in HTML</a>
+        <a href="/en/articles/accessible-name/" class="text-decoration-none article-focus">The accessible name in HTML</a>
       </h2>
       
        <span id="post_41" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_41"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Intermediate
-              </a>
+              </p>
             </li></ul>
       
       
         <time class="text-muted" datetime="2019-02-20T00:00:00.000Z">February 20, 2019</time>
       
       
-        <p class="my-2">Accessible name, what is it and his link with Assistive Technologies</p>
+        <p class="my-2">Accessible name, what is it and his link with Assistive technologies</p>
       
     </article>
   </li>
@@ -1261,18 +1261,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;intermediate">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/aria-attributes-that-can-save-you/" class="text-decoration-none">ARIA attributes that can save you</a>
+        <a href="/en/articles/aria-attributes-that-can-save-you/" class="text-decoration-none article-focus">ARIA attributes that can save you</a>
       </h2>
       
        <span id="post_42" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_42"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=intermediate" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Intermediate
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1288,18 +1288,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;advanced">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/captcha-accessibility/" class="text-decoration-none">CAPTCHA Accessibility</a>
+        <a href="/en/articles/captcha-accessibility/" class="text-decoration-none article-focus">CAPTCHA Accessibility</a>
       </h2>
       
        <span id="post_43" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_43"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=advanced" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Advanced
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1315,14 +1315,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/file-explorer/" class="text-decoration-none">File Explorer</a>
+        <a href="/en/articles/file-explorer/" class="text-decoration-none article-focus">File Explorer</a>
       </h2>
       
        <span id="post_44" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_44"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1338,14 +1338,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/dynamic-focus/" class="text-decoration-none">Dynamic focus</a>
+        <a href="/en/articles/dynamic-focus/" class="text-decoration-none article-focus">Dynamic focus</a>
       </h2>
       
        <span id="post_45" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_45"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1361,14 +1361,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/dropdown-menu/" class="text-decoration-none">Dropdown menu</a>
+        <a href="/en/articles/dropdown-menu/" class="text-decoration-none article-focus">Dropdown menu</a>
       </h2>
       
        <span id="post_46" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_46"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1384,14 +1384,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/keyboard-navigation-aria/" class="text-decoration-none">Handling keyboard navigation for ARIA</a>
+        <a href="/en/articles/keyboard-navigation-aria/" class="text-decoration-none article-focus">Handling keyboard navigation for ARIA</a>
       </h2>
       
        <span id="post_47" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_47"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1407,14 +1407,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/landmarks/" class="text-decoration-none">Landmarks ARIA</a>
+        <a href="/en/articles/landmarks/" class="text-decoration-none article-focus">Landmarks ARIA</a>
       </h2>
       
        <span id="post_48" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_48"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1430,14 +1430,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/price-vocalization/" class="text-decoration-none">Price vocalization</a>
+        <a href="/en/articles/price-vocalization/" class="text-decoration-none article-focus">Price vocalization</a>
       </h2>
       
        <span id="post_49" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_49"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1453,14 +1453,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/technical-iframe/" class="text-decoration-none">Hiding technical iframe</a>
+        <a href="/en/articles/technical-iframe/" class="text-decoration-none article-focus">Hiding technical iframe</a>
       </h2>
       
        <span id="post_50" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_50"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1476,14 +1476,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/accessible-hiding/" class="text-decoration-none">Accessible hiding and aria-hidden example</a>
+        <a href="/en/articles/accessible-hiding/" class="text-decoration-none article-focus">Accessible hiding and aria-hidden example</a>
       </h2>
       
        <span id="post_51" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_51"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1499,14 +1499,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/zoom/" class="text-decoration-none">Handling Zoom, enlarging text size</a>
+        <a href="/en/articles/zoom/" class="text-decoration-none article-focus">Handling Zoom, enlarging text size</a>
       </h2>
       
        <span id="post_52" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_52"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1522,14 +1522,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/listbox-and-keyboard-navigation/" class="text-decoration-none">Listbox and keyboard navigation</a>
+        <a href="/en/articles/listbox-and-keyboard-navigation/" class="text-decoration-none article-focus">Listbox and keyboard navigation</a>
       </h2>
       
        <span id="post_53" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_53"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1545,14 +1545,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/listbox-with-checkboxes/" class="text-decoration-none">Listbox with checkboxes</a>
+        <a href="/en/articles/listbox-with-checkboxes/" class="text-decoration-none article-focus">Listbox with checkboxes</a>
       </h2>
       
        <span id="post_54" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_54"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1568,14 +1568,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/listbox/" class="text-decoration-none">Listbox</a>
+        <a href="/en/articles/listbox/" class="text-decoration-none article-focus">Listbox</a>
       </h2>
       
        <span id="post_55" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_55"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1591,14 +1591,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/tags/2/" class="text-decoration-none">Creating accessible “tags” 2/2</a>
+        <a href="/en/articles/tags/2/" class="text-decoration-none article-focus">Creating accessible “tags” 2/2</a>
       </h2>
       
        <span id="post_56" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_56"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1614,14 +1614,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/tags/" class="text-decoration-none">Creating accessible “tags” 1/2</a>
+        <a href="/en/articles/tags/" class="text-decoration-none article-focus">Creating accessible “tags” 1/2</a>
       </h2>
       
        <span id="post_57" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_57"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1637,14 +1637,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/make-a-screen-reader-talk/" class="text-decoration-none">Make a screen reader talk with JavaScript and ARIA</a>
+        <a href="/en/articles/make-a-screen-reader-talk/" class="text-decoration-none article-focus">Make a screen reader talk with JavaScript and ARIA</a>
       </h2>
       
        <span id="post_58" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_58"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1660,14 +1660,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/dialogs/2/" class="text-decoration-none">Dialogs 2/2</a>
+        <a href="/en/articles/dialogs/2/" class="text-decoration-none article-focus">Dialogs 2/2</a>
       </h2>
       
        <span id="post_59" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_59"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1683,14 +1683,14 @@
   <li class="border-bottom border-light py-3" data-tags="component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/dialogs/1/" class="text-decoration-none">Dialogs 1/2</a>
+        <a href="/en/articles/dialogs/1/" class="text-decoration-none article-focus">Dialogs 1/2</a>
       </h2>
       
        <span id="post_60" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_60"><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1706,18 +1706,18 @@
   <li class="border-bottom border-light py-3" data-tags="advanced;component">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/chatbot/" class="text-decoration-none">Best practices for a chatbot</a>
+        <a href="/en/articles/chatbot/" class="text-decoration-none article-focus">Best practices for a chatbot</a>
       </h2>
       
        <span id="post_61" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_61"><li class="list-inline-item">
-              <a href="?tag=advanced" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Advanced
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=component" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Component
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1733,18 +1733,18 @@
   <li class="border-bottom border-light py-3" data-tags="web;beginner">
     <article>
       <h2 class="mb-1">
-        <a href="/en/articles/html5-aria/" class="text-decoration-none">HTML5 &amp; ARIA</a>
+        <a href="/en/articles/html5-aria/" class="text-decoration-none article-focus">HTML5 &amp; ARIA</a>
       </h2>
       
        <span id="post_62" class="visually-hidden">Associated themes :</span>
         <ul class="list-inline mb-1" aria-labelledby="post_62"><li class="list-inline-item">
-              <a href="?tag=web" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Web
-              </a>
+              </p>
             </li><li class="list-inline-item">
-              <a href="?tag=beginner" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 Beginner
-              </a>
+              </p>
             </li></ul>
       
       
@@ -1832,7 +1832,7 @@
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <div hidden>Anchor link</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

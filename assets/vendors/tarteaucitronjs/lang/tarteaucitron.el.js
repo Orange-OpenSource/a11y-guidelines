@@ -1,4 +1,5 @@
 /*global tarteaucitron */
+/* min ready */
 tarteaucitron.lang = {
     "middleBarHead": "☝ 🍪",
     "adblock": "Γεια σας! Ο ιστότοπος αυτός σας επιτρέπει να επιλέξετε τις υπηρεσίες που παρέχονται από τρίτους που θα θέλατε να επιτρέψετε.",
@@ -14,6 +15,7 @@ tarteaucitron.lang = {
     "personalize": "Εξατομίκευση",
     "acceptAll": "OK, αποδοχή όλων",
     "close": "Κλείσιμο",
+    "closeBanner": "Απόκρυψη banner cookies",
 
     "privacyUrl": "Πολιτική απορρήτου",
     
@@ -30,6 +32,7 @@ tarteaucitron.lang = {
     "more": "Διαβάστε περισσότερα",
     "source": "Δείτε τον επίσημο ιστότοπο",
     "credit": "Cookies manager by tarteaucitron.js",
+    "noServices": "Αυτός ο ιστότοπος δεν χρησιμοποιεί κανένα cookie που απαιτεί τη συγκατάθεσή σας.",
 
     "toggleInfoBox": "Προβολή/Απόκρυψη πληροφοριών για την αποθήκευση &quot;μπισκότων&quot; (cookies)",
     "title": "Πίνακας διαχείρισης &quot;Μπισκότων&quot; (Cookies)",
@@ -78,7 +81,15 @@ tarteaucitron.lang = {
         "title": "Λοιπές υπηρεσίες",
         "details": "Υπηρεσίες που παρουσιάζουν άλλο περιεχόμενο."
     },
-    
-    "mandatoryTitle": "Mandatory cookies",
-    "mandatoryText": "This site uses cookies necessary for its proper functioning which cannot be deactivated."
+
+    "google": {
+        "title": "Ειδική συγκατάθεση για τις υπηρεσίες της Google",
+        "details": "Η Google μπορεί να χρησιμοποιήσει τα δεδομένα σας για τη μέτρηση του κοινού, τη διαφημιστική απόδοση ή για να σας προσφέρει εξατομικευμένες διαφημίσεις."
+    },
+
+    "mandatoryTitle": "Υποχρεωτικά cookies",
+    "mandatoryText": "Αυτός ο ιστότοπος χρησιμοποιεί cookies που είναι απαραίτητα για τη σωστή λειτουργία του και δεν μπορούν να απενεργοποιηθούν.",
+
+    "save": "Αποθήκευση",
+    "ourpartners": "Οι συνεργάτες μας"
 };

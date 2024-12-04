@@ -35,7 +35,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Aller au contenu</a>
@@ -140,12 +140,12 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/fr/">Accueil</a>
+          <a class="breadcrumb-focus" href="/fr/">Accueil</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/fr/articles/">Articles</a>
+          <a class="breadcrumb-focus" href="/fr/articles/">Articles</a>
         </li>
       
       
@@ -179,7 +179,7 @@
               <span class="visually-hidden" id="filters_label">
                 Thématiques associées :
               </span>
-              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="https://a11y-guidelines.orange.com/fr//articles/?tag=intermediate" class="btn btn-dark btn-sm" data-tag="intermediate">Intermédiaire</a></li>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><div class="tagType" data-tag="intermediate">Intermédiaire</a></li>
               </ul>
             
             <time class="text-muted" datetime="2023-10-06T00:00:00.000Z">06 octobre 2023</time>
@@ -187,8 +187,8 @@
           <div class="mt-4">
           <p>Depuis le 5 octobre 2023, les WCAG 2.2 sont officiellement sortis. Vous pouvez retrouver <a href="https://www.w3.org/TR/2023/REC-WCAG22-20231005/">les recommandations officielles des WCAG 2.2</a>.</p>
 <p>Voici aussi un article qui résume <a href="https://access42.net/wcag-2-2-publication/">la route parcourue et les nouveautés des WCAG 2.2</a>.</p>
-<h2 id="la-va11ydette-se-met-a-jour">La Va11ydette se met à jour <a class="header-anchor" href="#la-va11ydette-se-met-a-jour" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
-<h3 id="nouveaux-criteres">Nouveaux critères <a class="header-anchor" href="#nouveaux-criteres" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<h2 id="la-va11ydette-se-met-a-jour" class="h2-focus">La Va11ydette se met à jour <a class="header-anchor" href="#la-va11ydette-se-met-a-jour" id="heading-712" aria-labelledby="heading-712">#</a></h2>
+<h3 id="nouveaux-criteres">Nouveaux critères <a class="header-anchor" href="#nouveaux-criteres" id="heading-713" aria-labelledby="heading-713">#</a></h3>
 <p><a href="https://la-va11ydette.orange.com/">La Va11ydette</a> a mis à jour ses grilles d'évaluations pour y intégrer les nouveaux critères.</p>
 <p>On y compte 6 nouveaux critères :</p>
 <ul>
@@ -200,7 +200,7 @@
     <li class="my-1"><strong>Les fonctionnalités utilisant l'action de glisser et déposer ont-elles une alternative ?</strong>, lié au <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements">WCAG 2.5.7 AA</a></li>
 </ul>
 <p><img src="../images/wcag22exemple.png" alt="" class="img-fluid"></p>
-<h3 id="creation-dun-changelog">Création d'un changelog <a class="header-anchor" href="#creation-dun-changelog" aria-labelledby="a11y_heading_anchor_label">#</a></h3>
+<h3 id="creation-dun-changelog">Création d'un changelog <a class="header-anchor" href="#creation-dun-changelog" id="heading-714" aria-labelledby="heading-714">#</a></h3>
 <p>Un changelog est désormais disponible pour suivre l'évolution de la grille d'évaluation Web de la Va11ydette.<br>
 <a href="https://github.com/Orange-OpenSource/La-Va11ydette/blob/master/CHANGELOG.md">Le changelog est disponible sur le GitHub de la Va11ydette</a>.</p>
 
@@ -297,7 +297,7 @@
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <div hidden>Lien pour ancrage</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

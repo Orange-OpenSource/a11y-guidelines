@@ -33,7 +33,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Aller au contenu</a>
@@ -174,17 +174,17 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/fr/">Accueil</a>
+          <a class="breadcrumb-focus" href="/fr/">Accueil</a>
         </li>
       
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/fr/contenu-et-communication/">Contenu et communication</a>
+          <a class="breadcrumb-focus" href="/fr/contenu-et-communication/">Contenu et communication</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/fr/contenu-et-communication/word/">Word</a>
+          <a class="breadcrumb-focus" href="/fr/contenu-et-communication/word/">Word</a>
         </li>
       
       
@@ -248,19 +248,19 @@
             
           <div class="mt-4">
           <h1>Comment tester l'accessibilité d'un documents Word</h1>
-<h2 id="tests-automatiques">Tests automatiques <a class="header-anchor" href="#tests-automatiques" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="tests-automatiques" class="h2-focus">Tests automatiques <a class="header-anchor" href="#tests-automatiques" id="heading-2283" aria-labelledby="heading-2283">#</a></h2>
 <p>Vous pouvez commencer vos tests avec l’outil de vérification de l’accessibilité de Microsoft Office.<br>
 <strong>Fichier &gt; Vérifier la présence de problèmes &gt; Vérifier l’accessibilité</strong></p>
 <img alt="capture d'écran du vérificateur d'accessibilité" src="/fr/contenu-et-communication/images/word_verification_fr.png" class="img-fluid" />  
 <p><strong>Important :</strong> si vous n’avez pas l’option « Vérifier l’accessibilité » dans le document ouvert, faites la manipulation suivante pour la rendre active : enregistrez votre document depuis une version d’Office supérieure (ou égale) à 2010 et au format &quot;.docx&quot; avec la case « compatibilité avec les versions précédentes » décochée.</p>
-<h2 id="verifications-des-contrastes-de-couleurs">Vérifications des contrastes de couleurs <a class="header-anchor" href="#verifications-des-contrastes-de-couleurs" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="verifications-des-contrastes-de-couleurs" class="h2-focus">Vérifications des contrastes de couleurs <a class="header-anchor" href="#verifications-des-contrastes-de-couleurs" id="heading-2284" aria-labelledby="heading-2284">#</a></h2>
 <p>Le logiciel <a lang="en" href="https://developer.paciellogroup.com/resources/contrastanalyser/">Colour Contrast Analyser</a> indique si les contrastes de couleurs utilisés sont conformes.</p>
 <img alt="capture d'écran de l'outil colour contrast analyser" src="/fr/contenu-et-communication/images/cca.png" class="img-fluid" />  
-<h2 id="tests-avec-les-syntheses-vocales-jaws-et-nvda">Tests avec les synthèses vocales JAWS et NVDA <a class="header-anchor" href="#tests-avec-les-syntheses-vocales-jaws-et-nvda" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="tests-avec-les-syntheses-vocales-jaws-et-nvda" class="h2-focus">Tests avec les synthèses vocales JAWS et NVDA <a class="header-anchor" href="#tests-avec-les-syntheses-vocales-jaws-et-nvda" id="heading-2285" aria-labelledby="heading-2285">#</a></h2>
 <p>Afin de poursuivre vos vérifications, vous pouvez tester avec une synthèse vocale.<br>
 Ces tests permettent de naviguer dans la même configuration que les personnes malvoyantes et non-voyantes.</p>
 <p><a href="/fr/web/outils/methodes-et-outils-de-test/navigation-lecteur-ecran/">Apprendre la navigation vocale avec JAWS et NVDA</a></p>
-<h2 id="autres-tests-manuels">Autres tests manuels <a class="header-anchor" href="#autres-tests-manuels" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="autres-tests-manuels" class="h2-focus">Autres tests manuels <a class="header-anchor" href="#autres-tests-manuels" id="heading-2286" aria-labelledby="heading-2286">#</a></h2>
 <p>Les grilles suivantes au format Excel permettant de vérifier l’accessibilité de vos documents Word et PowerPoint :</p>
 <ul>
 <li><a href="/fr/contenu-et-communication/grille_eval_AXS_WORD_V1.xlsx">Grille d'évaluation Word</a> (16 Ko)</li>
@@ -358,7 +358,7 @@ Ces tests permettent de naviguer dans la même configuration que les personnes m
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <div hidden>Lien pour ancrage</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

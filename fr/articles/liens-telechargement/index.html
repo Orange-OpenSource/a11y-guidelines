@@ -35,7 +35,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Aller au contenu</a>
@@ -140,12 +140,12 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/fr/">Accueil</a>
+          <a class="breadcrumb-focus" href="/fr/">Accueil</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/fr/articles/">Articles</a>
+          <a class="breadcrumb-focus" href="/fr/articles/">Articles</a>
         </li>
       
       
@@ -179,8 +179,8 @@
               <span class="visually-hidden" id="filters_label">
                 Thématiques associées :
               </span>
-              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><a href="https://a11y-guidelines.orange.com/fr//articles/?tag=web" class="btn btn-dark btn-sm" data-tag="web">Web</a></li>
-              <li class="list-inline-item"><a href="https://a11y-guidelines.orange.com/fr//articles/?tag=intermediate" class="btn btn-dark btn-sm" data-tag="intermediate">Intermédiaire</a></li>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><div class="tagType" data-tag="web">Web</a></li>
+              <li class="list-inline-item"><div class="tagType" data-tag="intermediate">Intermédiaire</a></li>
               </ul>
             
             <time class="text-muted" datetime="2020-07-02T00:00:00.000Z">02 juillet 2020</time>
@@ -195,21 +195,21 @@
 <li>ce lien doit s'ouvrir dans la fenêtre en cours (pas d'attribut <code>target</code> pour ouvrir dans un nouvel onglet)</li>
 </ul>
 <p>En plus de servir l'accessibilité, fournir ces informations permettra à l'utilisateur d'éviter un téléchargement inutile ce qui est également une bonne pratique eco-responsable.</p>
-<h2 id="exemples-valides">Exemples valides <a class="header-anchor" href="#exemples-valides" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="exemples-valides" class="h2-focus">Exemples valides <a class="header-anchor" href="#exemples-valides" id="heading-423" aria-labelledby="heading-423">#</a></h2>
 <p>Voici un exemple de lien présentant les informations nécessaires :</p>
 <p>Télécharger le <a href="#">bilan complet 2020 (PDF, 1.5 Mo)</a>.</p>
 <p>Il est important que ces informations complémentaires soient présentes dans l'intitulé du lien et non juste après le lien (notamment pour les personnes qui utilisent un lecteur d'écran). Cela dit pour des questions esthétiques il est possible de faire en sorte que les informations complémentaires ne soient pas soulignées, exemple :</p>
 <p>Télécharger le <a href="#" style="text-decoration: none"><span style="text-decoration: underline">bilan complet 2020 </span>(PDF, 1.5Mo)</a></p>
-<h2 id="a-propos-des-unites">À propos des unités <a class="header-anchor" href="#a-propos-des-unites" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="a-propos-des-unites" class="h2-focus">À propos des unités <a class="header-anchor" href="#a-propos-des-unites" id="heading-424" aria-labelledby="heading-424">#</a></h2>
 <p>En anglais, les unités utilisées pour exprimer le poids des fichiers s'écrivent en lettres capitales (KB, MB, GB ...).</p>
-<h2 id="langue-du-fichier">Langue du fichier <a class="header-anchor" href="#langue-du-fichier" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="langue-du-fichier" class="h2-focus">Langue du fichier <a class="header-anchor" href="#langue-du-fichier" id="heading-425" aria-labelledby="heading-425">#</a></h2>
 <p>Pour les liens permettant de télécharger un document dans une langue autre que celle de la page courante, il est important de le préciser.</p>
 <p>Exemples de documents en anglais sur un site français :</p>
 <ul>
 <li><a href="#"><span lang="en">Complete review</span> (Anglais, DOC, 800 Ko)</a></li>
 <li><a href="#"><span>Notice d'utilisation</span> (Anglais, PDF, 1.2 Mo)</a></li>
 </ul>
-<h2 id="une-petite-image-pour-la-deco-mais-pas-seulement">Une petite image pour la déco, mais pas seulement <a class="header-anchor" href="#une-petite-image-pour-la-deco-mais-pas-seulement" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="une-petite-image-pour-la-deco-mais-pas-seulement" class="h2-focus">Une petite image pour la déco, mais pas seulement <a class="header-anchor" href="#une-petite-image-pour-la-deco-mais-pas-seulement" id="heading-426" aria-labelledby="heading-426">#</a></h2>
 <p>Si le type de fichier est connu, une petite icône à côté du fichier permet à l'utilisateur de le percevoir plus rapidement :<br>
 <a style="background-image: url(/images/icons/pdf-icon.svg); background-size: contain; background-repeat: no-repeat; padding-left: 2rem;" href="#">bilan complet 2020 (PDF, 1.5 Mo)</a></p>
 
@@ -306,7 +306,7 @@
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <div hidden>Lien pour ancrage</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

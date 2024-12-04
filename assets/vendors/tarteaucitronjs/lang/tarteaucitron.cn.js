@@ -1,4 +1,5 @@
 /*global tarteaucitron */
+/* min ready */
 tarteaucitron.lang = {
     "adblock": "您好！这是一个透明的网站，您可以选择激活不同的第三方服务。",
     "adblock_call": "感谢您停用广告拦截功能并开始个性化设置。",
@@ -13,6 +14,7 @@ tarteaucitron.lang = {
     "acceptAll": "好的，全部接受",
     "personalize": "个性化",
     "close": "关闭",
+    "closeBanner": "隐藏 cookie 横幅",
 
     "privacyUrl": "保密政策",
 
@@ -28,6 +30,7 @@ tarteaucitron.lang = {
     "more": "了解更多",
     "source": "查看官网",
     "credit": "通过tarteaucitron.js管理cookie",
+    "noServices": "本网站不使用任何需要您同意的cookie。",
 
     "toggleInfoBox": "显示/隐藏cookie存储信息。",
     "title": "Cookie管理面板",
@@ -76,7 +79,15 @@ tarteaucitron.lang = {
         "title": "其他",
         "details": "旨在显示网页内容的服务。"
     },
-    
-    "mandatoryTitle": "Mandatory cookies",
-    "mandatoryText": "This site uses cookies necessary for its proper functioning which cannot be deactivated."
+
+    "google": {
+        "title": "Google 服务的特定同意",
+        "details": "Google 可能使用您的数据进行受众测量、广告效果评估，或向您提供个性化广告。"
+    },
+
+    "mandatoryTitle": "强制性Cookie",
+    "mandatoryText": "该网站使用必要的Cookie以保证其正常运行，这些Cookie无法停用。",
+
+    "save": "保存",
+    "ourpartners": "我们的合作伙伴"
 };

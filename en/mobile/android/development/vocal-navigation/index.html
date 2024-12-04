@@ -35,7 +35,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Skip links - Switch language">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Go to menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Go to content</a>
@@ -164,17 +164,17 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/en/">Home</a>
+          <a class="breadcrumb-focus" href="/en/">Home</a>
         </li>
       
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/en/mobile/android/">Android</a>
+          <a class="breadcrumb-focus" href="/en/mobile/android/">Android</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/en/mobile/android/development/">Develop</a>
+          <a class="breadcrumb-focus" href="/en/mobile/android/development/">Develop</a>
         </li>
       
       
@@ -250,7 +250,7 @@
             
           <div class="mt-4">
           <h1>Android develop - Vocal navigation</h1>
-<h2 id="vocalize-the-images">Vocalize the images <a class="header-anchor" href="#vocalize-the-images" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="vocalize-the-images" class="h2-focus">Vocalize the images <a class="header-anchor" href="#vocalize-the-images" id="heading-2330" aria-labelledby="heading-2330">#</a></h2>
 <p><strong>Target:</strong> everyone and in particular people with visual impairments.<br>
 <strong>When:</strong> from design, and during development.</p>
 <p><strong>Description:</strong></p>
@@ -285,7 +285,7 @@ Image(
 <li><a lang="en" href="https://www.w3.org/TR/WCAG22/#images-of-text">1.4.5 Images of Text</a></li>
 </ul>
 <p><br/><br/></p>
-<h2 id="vocalize-all-significant-elements">Vocalize all significant elements <a class="header-anchor" href="#vocalize-all-significant-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="vocalize-all-significant-elements" class="h2-focus">Vocalize all significant elements <a class="header-anchor" href="#vocalize-all-significant-elements" id="heading-2331" aria-labelledby="heading-2331">#</a></h2>
 <p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
 <strong>When:</strong> from design, and during development.</p>
 <p><strong>Description:</strong><br>
@@ -346,7 +346,7 @@ Box(modifier = Modifier.semantics(mergeDescendants = true) {}) {
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a></li>
 </ul>
-<h2 id="vocalize-the-state-of-the-elements">Vocalize the state of the elements <a class="header-anchor" href="#vocalize-the-state-of-the-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="vocalize-the-state-of-the-elements" class="h2-focus">Vocalize the state of the elements <a class="header-anchor" href="#vocalize-the-state-of-the-elements" id="heading-2332" aria-labelledby="heading-2332">#</a></h2>
 <p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
 <strong>When:</strong> during development.</p>
 <p><strong>Description:</strong></p>
@@ -466,7 +466,7 @@ Row(
 <li><a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a></li>
 </ul>
 <p><br/><br/></p>
-<h2 id="write-good-text-alternatives">Write good text alternatives <a class="header-anchor" href="#write-good-text-alternatives" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="write-good-text-alternatives" class="h2-focus">Write good text alternatives <a class="header-anchor" href="#write-good-text-alternatives" id="heading-2333" aria-labelledby="heading-2333">#</a></h2>
 <p><strong>Description:</strong><br>
 Writing good text alternatives is essential to make it easier for screen reader users to understand. Writing a good alternative depends on what you want to describe.</p>
 <ul>
@@ -475,7 +475,7 @@ Writing good text alternatives is essential to make it easier for screen reader 
 <li>Images: the case of images is more complex and is detailed <a href="https://a11y-guidelines.orange.com/en/mobile/android/development/vocal-navigation/#vocalize-the-images">in this chapter</a></li>
 </ul>
 <p><br/><br/></p>
-<h2 id="manage-the-vocalization-order">Manage the vocalization order <a class="header-anchor" href="#manage-the-vocalization-order" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="manage-the-vocalization-order" class="h2-focus">Manage the vocalization order <a class="header-anchor" href="#manage-the-vocalization-order" id="heading-2334" aria-labelledby="heading-2334">#</a></h2>
 <p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
 <strong>When:</strong> from design, and during development.</p>
 <p><strong>Description:</strong></p>
@@ -508,7 +508,7 @@ chainemoinsButton.accessibilityTraversalAfter = chaineplus.id
 <li><a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-order">2.4.3 Focus Order</a></li>
 </ul>
 <p><br/><br/></p>
-<h2 id="vocalize-content-change">Vocalize content change <a class="header-anchor" href="#vocalize-content-change" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="vocalize-content-change" class="h2-focus">Vocalize content change <a class="header-anchor" href="#vocalize-content-change" id="heading-2335" aria-labelledby="heading-2335">#</a></h2>
 <p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
 <strong>When:</strong> from conception, and during development.</p>
 <p><strong>Description:</strong></p>
@@ -549,7 +549,7 @@ myView.announceForAccessibility(getString(R.string.criteria_contentchange_ex1_an
    […]
    android:accessibilityLiveRegion="polite" /&gt;
 </code></pre>
-<h2 id="do-not-vocalize-the-decorative-and-hidden-elements">Do not vocalize the decorative and hidden elements. <a class="header-anchor" href="#do-not-vocalize-the-decorative-and-hidden-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="do-not-vocalize-the-decorative-and-hidden-elements" class="h2-focus">Do not vocalize the decorative and hidden elements. <a class="header-anchor" href="#do-not-vocalize-the-decorative-and-hidden-elements" id="heading-2336" aria-labelledby="heading-2336">#</a></h2>
 <p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
 <strong>When:</strong> from design,  and during development.</p>
 <p><strong>Description:</strong></p>
@@ -609,7 +609,7 @@ Image(
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a></li>
 </ul>
-<h2 id="group-the-elements">Group the elements <a class="header-anchor" href="#group-the-elements" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="group-the-elements" class="h2-focus">Group the elements <a class="header-anchor" href="#group-the-elements" id="heading-2337" aria-labelledby="heading-2337">#</a></h2>
 <p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
 <strong>When:</strong> from design,  and during development.</p>
 <p><strong>Description:</strong></p>
@@ -659,7 +659,7 @@ Text(
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a></li>
 </ul>
-<h2 id="enable-header-navigation">Enable header navigation <a class="header-anchor" href="#enable-header-navigation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="enable-header-navigation" class="h2-focus">Enable header navigation <a class="header-anchor" href="#enable-header-navigation" id="heading-2338" aria-labelledby="heading-2338">#</a></h2>
 <p><strong>Target:</strong> everyone and in particular the visually impaired.<br>
 <strong>When:</strong> from design, and during development.</p>
 <p><strong>Description:</strong></p>
@@ -693,7 +693,7 @@ Text(
 <li><a lang="en" href="https://www.w3.org/TR/WCAG22/#headings-and-labels">2.4.6 Headings and Labels</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a></li>
 </ul>
-<h2 id="hide-elements-from-the-accessibility-api">Hide elements from the accessibility API <a class="header-anchor" href="#hide-elements-from-the-accessibility-api" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="hide-elements-from-the-accessibility-api" class="h2-focus">Hide elements from the accessibility API <a class="header-anchor" href="#hide-elements-from-the-accessibility-api" id="heading-2339" aria-labelledby="heading-2339">#</a></h2>
 <p><strong>Target:</strong> everyone and in particular people with visual and/or motor impairments.<br>
 <strong>When:</strong> from the design phase and during development.</p>
 <p><strong>Description:</strong></p>
@@ -723,7 +723,7 @@ myTextView1.setImportantForAccessibility(4); // JELLY_BEAN<br>
 myTextView2.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS); // KITKAT</code></pre><pre><code class="kotlin">myTextView1.importantForAccessibility = 4 // JELLY_BEAN<br>
 myTextView2.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_NO_HIDE_DESCENDANTS  // KITKAT<br>
 </code></pre></p>
-<h2 id="detect-if-talkback-is-enabled">Detect if TalkBack is enabled <a class="header-anchor" href="#detect-if-talkback-is-enabled" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="detect-if-talkback-is-enabled" class="h2-focus">Detect if TalkBack is enabled <a class="header-anchor" href="#detect-if-talkback-is-enabled" id="heading-2340" aria-labelledby="heading-2340">#</a></h2>
 <p><strong>Description:</strong></p>
 <p>Under Android, it is possible to know if the Accessibility API is enabled, and by extension to know if TalkBack is enabled.</p>
 <p><strong>Example</strong>:</p>
@@ -834,7 +834,7 @@ val isAccessibilityEnabled = am.isEnabled<br>
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <div hidden>Anchor link</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

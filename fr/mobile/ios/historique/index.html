@@ -35,7 +35,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Aller au contenu</a>
@@ -168,12 +168,12 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/fr/">Accueil</a>
+          <a class="breadcrumb-focus" href="/fr/">Accueil</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/fr/mobile/ios/">iOS</a>
+          <a class="breadcrumb-focus" href="/fr/mobile/ios/">iOS</a>
         </li>
       
       
@@ -195,7 +195,7 @@
 <p><strong>26/08/22</strong> ⟹ WWDC 2022 <a href="../wwdc/2022/10152/">🎬</a> Rendre accessible une application en mode Single App</p>
 <p><strong>03/01/22</strong> ⟹ ajout de la liste des résumés détaillés WWDC (⚠️ en anglais uniquement ⚠️) <a href="../../../../en/mobile/ios/wwdc/nota11y">🔖</a></p>
 <p><strong>01/12/21</strong> ⟹ mises à jour (swift 5.5, Xcode 13 et iOS 15)</p>
-<p><strong>14/09/21</strong> ⟹ WWDC 2021 <a href="../wwdc/2021/121/">🎬</a> Optimiser VoiceOver dans un contexte riche en données</p>
+<p><strong>14/09/21</strong> ⟹ WWDC 2021 <a href="../wwdc/2021/121/">🎬</a> Optimiser <span lang="en">VoiceOver</span> dans un contexte riche en données</p>
 <p><strong>09/09/21</strong> ⟹ WWDC 2021 <a href="../wwdc/2021/122/">🎬</a> Incorporer efficacement l'accessibilité à vos graphes</p>
 <p><strong>30/04/21</strong> ⟹ ajouts de critères de conception pour les couleurs <a href="../conception/#couleurs">🔖</a></p>
 <p><strong>19/03/21</strong> ⟹ Fournisseur de contenu personnalisé <a href="../developpement/#fournisseur-de-contenu-personnalise">🔖</a></p>
@@ -281,7 +281,7 @@
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Lien pour ancrage</div>
+    <div hidden>Lien pour ancrage</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

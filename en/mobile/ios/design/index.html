@@ -35,7 +35,7 @@
 <header role="banner">
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Skip links - Switch language">
    <div class="container-lg">
-      <ul class="navbar-nav me-auto"><li class="nav-item">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Go to menu</a>
     </li><li class="nav-item">
       <a href="#main-content" class="nav-link">Go to content</a>
@@ -168,12 +168,12 @@
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
-          <a href="/en/">Home</a>
+          <a class="breadcrumb-focus" href="/en/">Home</a>
         </li>
       
       
         <li class="breadcrumb-item">
-          <a href="/en/mobile/ios/">iOS</a>
+          <a class="breadcrumb-focus" href="/en/mobile/ios/">iOS</a>
         </li>
       
       
@@ -206,9 +206,8 @@
           <h1>iOS design criteria</h1>
 <p>This guide aims to present the different accessibility criteria to create an accessible iOS application.<br>
 <br>Each criterion explains for whom it is important, when it can be implemented, why it is important and the corresponding accessibility rule.</p>
-<p><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555"><img class="img-fluid" alt="Access to the WWDC video highlighting the importance of the visual." src="../../images/conception-intro-wwdc.png"/><br>
-</a></p>
-<h2 id="images">Images <a class="header-anchor" href="#images" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<div><q>When designing your app, keep text size, weight, and layout in mind for clarity and readability.</q><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555">WWDC 2020 - Make Your App Visually Accessible (watch the video)</a></div>
+<h2 id="images" class="h2-focus">Images <a class="header-anchor" href="#images" id="heading-1033" aria-labelledby="heading-1033">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -259,7 +258,7 @@ Images are often used to convey a lot of informations that must be exposed thank
 </div>
 </div>
 <br><br>
-<h2 id="colours">Colours <a class="header-anchor" href="#colours" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="colours" class="h2-focus">Colours <a class="header-anchor" href="#colours" id="heading-1034" aria-labelledby="heading-1034">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -362,7 +361,7 @@ The label “film | 8:40 PM…” does not have enough contrast and will not be 
 </div>
 </div>
 <br><br>
-<h2 id="alternative-text">Alternative text <a class="header-anchor" href="#alternative-text" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="alternative-text" class="h2-focus">Alternative text <a class="header-anchor" href="#alternative-text" id="heading-1035" aria-labelledby="heading-1035">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -430,7 +429,7 @@ It is obvious that we must add text alternatives.</p>
 </div>
 </div>
 <br><br>
-<h2 id="title-and-header">Title and header <a class="header-anchor" href="#title-and-header" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="title-and-header" class="h2-focus">Title and header <a class="header-anchor" href="#title-and-header" id="heading-1036" aria-labelledby="heading-1036">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -492,7 +491,7 @@ It makes navigation easier for everyone: at any time, we know where we are in th
 </div>
 </div>
 <br><br>
-<h2 id="element-states">Element states <a class="header-anchor" href="#element-states" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="element-states" class="h2-focus">Element states <a class="header-anchor" href="#element-states" id="heading-1037" aria-labelledby="heading-1037">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -540,7 +539,7 @@ To set this kind of information, use the <code>accessibilityLabel</code> and <co
 </div>
 </div>
 <br><br>
-<h2 id="standard-components">Standard components <a class="header-anchor" href="#standard-components" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="standard-components" class="h2-focus">Standard components <a class="header-anchor" href="#standard-components" id="heading-1038" aria-labelledby="heading-1038">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -573,7 +572,7 @@ If no standard component corresponds to the need, create a dedicated component b
 </div>
 </div>
 <br><br>
-<h2 id="touch-target">Touch target <a class="header-anchor" href="#touch-target" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="touch-target" class="h2-focus">Touch target <a class="header-anchor" href="#touch-target" id="heading-1039" aria-labelledby="heading-1039">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -627,7 +626,7 @@ If no standard component corresponds to the need, create a dedicated component b
 </div>
 </div>
 <br><br>
-<h2 id="ghost-element">Ghost element <a class="header-anchor" href="#ghost-element" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="ghost-element" class="h2-focus">Ghost element <a class="header-anchor" href="#ghost-element" id="heading-1040" aria-labelledby="heading-1040">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -682,7 +681,7 @@ With the screen reader, no invisible element must be read or take focus when rea
 </div>
 </div>
 <br><br>
-<h2 id="content-control">Content Control <a class="header-anchor" href="#content-control" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="content-control" class="h2-focus">Content Control <a class="header-anchor" href="#content-control" id="heading-1041" aria-labelledby="heading-1041">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -724,7 +723,7 @@ All interactive content must be controlled by the user (adding an accessible but
 </div>
 </div>
 <br><br>
-<h2 id="changing-content">Changing content <a class="header-anchor" href="#changing-content" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="changing-content" class="h2-focus">Changing content <a class="header-anchor" href="#changing-content" id="heading-1042" aria-labelledby="heading-1042">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -776,7 +775,7 @@ If the content has changed dynamically after a user action, it is important that
 </div>
 </div>
 <br><br>
-<h2 id="horizontal-scroll">Horizontal scroll <a class="header-anchor" href="#horizontal-scroll" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="horizontal-scroll" class="h2-focus">Horizontal scroll <a class="header-anchor" href="#horizontal-scroll" id="heading-1043" aria-labelledby="heading-1043">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -843,7 +842,7 @@ Allow screen reader users to scroll horizontally.<br>
 </ul>
 </div>
 </div></br></br>
-<h2 id="form">Form <a class="header-anchor" href="#form" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="form" class="h2-focus">Form <a class="header-anchor" href="#form" id="heading-1044" aria-labelledby="heading-1044">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -883,7 +882,7 @@ Form fields must vocalize their labels.
 </div>
 </div>
 <br><br>
-<h2 id="reading-order">Reading order <a class="header-anchor" href="#reading-order" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="reading-order" class="h2-focus">Reading order <a class="header-anchor" href="#reading-order" id="heading-1045" aria-labelledby="heading-1045">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -942,7 +941,7 @@ A more consistent reading order is <code>1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol +, vo
 </div>
 </div>
 <br><br>
-<h2 id="language">Language <a class="header-anchor" href="#language" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="language" class="h2-focus">Language <a class="header-anchor" href="#language" id="heading-1046" aria-labelledby="heading-1046">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -984,7 +983,7 @@ Sometimes some words and texts of an application are in a different language.</p
 </div>
 </div>
 <br><br>
-<h2 id="screen-orientation">Screen orientation <a class="header-anchor" href="#screen-orientation" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="screen-orientation" class="h2-focus">Screen orientation <a class="header-anchor" href="#screen-orientation" id="heading-1047" aria-labelledby="heading-1047">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -1042,7 +1041,7 @@ Sometimes some words and texts of an application are in a different language.</p
 </div>
 </div>
 <br><br>
-<h2 id="accessibility-dedicated-screen">Accessibility dedicated screen <a class="header-anchor" href="#accessibility-dedicated-screen" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="accessibility-dedicated-screen" class="h2-focus">Accessibility dedicated screen <a class="header-anchor" href="#accessibility-dedicated-screen" id="heading-1048" aria-labelledby="heading-1048">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active" 
@@ -1068,7 +1067,7 @@ Sometimes some words and texts of an application are in a different language.</p
 </div>
 </div>
 <br><br>
-<h2 id="accessibility-options">Accessibility options <a class="header-anchor" href="#accessibility-options" aria-labelledby="a11y_heading_anchor_label">#</a></h2>
+<h2 id="accessibility-options" class="h2-focus">Accessibility options <a class="header-anchor" href="#accessibility-options" id="heading-1049" aria-labelledby="heading-1049">#</a></h2>
 <p><a id="a11yOptions"></a></p>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -1107,8 +1106,8 @@ Sometimes some words and texts of an application are in a different language.</p
 <p>To <strong>test</strong> each appropriate option so as to be sure that its purpose is completely taken into account inside the application.</p>
 </li>
 </ul>
-<p><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783"><img class="img-fluid" alt="Access to the WWDC video that highlights the importance of taking into account the user settings inside an application." src="../../images/displayPreferences-wwdc.png"/><br>
-</a></p>
+<div><q lang="en">It's also our duty to listen and respect the setting for users that have it enabled</q><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783">WWDC 2020 - Make Your App Visually Accessible (watch the video)</a></div>
+<div><q>[...] it's also our duty to listen and respect the setting for users that have it enabled.</q>&nbsp;<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783">WWDC 2020 - Make Your App Visually Accessible (watch the video)</a></div>
 <p></br><strong>Target:</strong> everyone.<br>
 <strong>When:</strong> as of design and during development.</p>
 </div>
@@ -1976,7 +1975,7 @@ Sometimes some words and texts of an application are in a different language.</p
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search doc","translations":{"button":{"buttonText":"Search","buttonAriaLabel":"Search"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>Anchor link</div>
+    <div hidden>Anchor link</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2024 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>

@@ -1,4 +1,5 @@
 /*global tarteaucitron */
+/* min ready */
 tarteaucitron.lang = {
     "middleBarHead": "☝ 🍪",
     "adblock": "Hola! Aquest lloc web és transparent i et dóna l'opció d'activar els serveis de tercers",
@@ -14,6 +15,7 @@ tarteaucitron.lang = {
     "personalize": "Personalitzar",
     "acceptAll": "OK, acceptar totes",
     "close": "Tancar",
+    "closeBanner": "Amaga el banner de galetes",
 
     "privacyUrl": "Política de privacitat",
     
@@ -30,6 +32,7 @@ tarteaucitron.lang = {
     "more": "Llegir més",
     "source": "Veure lloc web oficial",
     "credit": "Gestor de galetes realitzat per tarteaucitron.js",
+    "noServices": "Aquest lloc web no utilitza cap cookie que requereixi el vostre consentiment.",
 
     "toggleInfoBox": "Mostra / oculta la informació sobre emmagatzematge de galetes",
     "title": "Panell de gestió de galetes",
@@ -78,7 +81,15 @@ tarteaucitron.lang = {
         "title": "Altres",
         "details": "Serveis per mostrar contingut web."
     },
+
+    "google": {
+        "title": "Consentiment específic als serveis de Google",
+        "details": "Google pot utilitzar les vostres dades per a la mesura de l'audiència, el rendiment publicitari o per oferir-vos anuncis personalitzats."
+    },
     
     "mandatoryTitle": "Galetes obligatòries",
-    "mandatoryText": "Aquest lloc utilitza galetes necessàries per al seu correcte funcionament que no es poden desactivar (cookies tècniques)."
+    "mandatoryText": "Aquest lloc utilitza galetes necessàries per al seu correcte funcionament que no es poden desactivar (cookies tècniques).",
+
+    "save": "Desar",
+    "ourpartners": "Els nostres socis"
 };

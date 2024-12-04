@@ -1,4 +1,5 @@
 /*global tarteaucitron */
+/* min ready */
 tarteaucitron.lang = {
     "middleBarHead": "☝ 🍪",
     "adblock": "Gudde Moien! Dëse Site ass transparent a gëtt Iech d'Wiel wéi eng Drëtt-Partei Servicer dir aktivéiere wëllt.",
@@ -14,6 +15,7 @@ tarteaucitron.lang = {
     "acceptAll": "Alles akzeptéieren",
     "personalize": "Personaliséieren",
     "close": "Zoumaachen",
+    "closeBanner": "Verstoppen Cookien Banner",
 
     "privacyUrl": "Privatsphär Politik",
 
@@ -80,6 +82,14 @@ tarteaucitron.lang = {
         "details": "Servicer fir Webinhalt ze weisen."
     },
 
+    "google": {
+        "title": "Spezifesch Zoustëmmung fir Google Servicer",
+        "details": "Google kann Är Date fir d'Zilgruppemessung, d'Werbeperformanz oder fir Iech personaliséiert Annoncen ze bidden, benotzen."
+    },
+
     "mandatoryTitle": "Obligatoresch Cookien",
-    "mandatoryText": "Dëse Site benotzt Cookien déi néideg sinn fir säi richtege Fonctionnement. Si kënnen net ausgeschalt ginn."
+    "mandatoryText": "Dëse Site benotzt Cookien déi néideg sinn fir säi richtege Fonctionnement. Si kënnen net ausgeschalt ginn.",
+
+    "save": "Späicheren",
+    "ourpartners": "Eis Partner"
 };
