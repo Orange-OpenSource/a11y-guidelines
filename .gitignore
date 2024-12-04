@@ -1,3 +1,5 @@
-node_modules
-.idea
-_site
+# Ignore docs files
+/_site/
+
+# Folders to ignore
+/node_modules/

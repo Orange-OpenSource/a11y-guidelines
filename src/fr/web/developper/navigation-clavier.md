@@ -35,8 +35,8 @@ Voir [la façon de naviguer au clavier](/fr/web/outils/methodes-et-outils-de-tes
 Une fonctionnalité réalisable uniquement à l’aide du <i lang="en">drag’n’drop</i> et sans équivalent au clavier.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#keyboard">2.1.1 Keyboard</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#keyboard">2.1.1 Keyboard</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#name-role-value">4.1.2 Name, Role, Value</a>
 
 
 
@@ -71,8 +71,8 @@ Dans une page dédiée à la recherche dans le site, on passe, à la navigation 
 Une page contenant un lecteur vidéo dont le focus peut entrer à l’intérieur du lecteur, mais ne peut pas en sortir (piège clavier).        
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#no-keyboard-trap">2.1.2 No Keyboard Trap</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#no-keyboard-trap">2.1.2 No Keyboard Trap</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-order">2.4.3 Focus Order</a>
 
 
 
@@ -123,7 +123,7 @@ Dans la seconde capture, les pointillés ont été supprimés, mais un encadré 
 ![capture d’écran présentant un comportement personnalisé pour l’affichage du focus](../../images/focus2.png)
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-visible">2.4.7 Focus Visible</a>
 
 ## S'assurer que l'utilisateur puisse toujours voir où est positionné dans le viewport le composant qui reçoit le focus. 
 

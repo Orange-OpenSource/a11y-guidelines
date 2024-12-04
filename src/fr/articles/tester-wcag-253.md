@@ -12,7 +12,7 @@ tags:
 
 ### Explication générale
 
-Le but de [ce critère](https://www.w3.org/TR/WCAG21/#label-in-name) est de s'assurer que si un bouton, un lien ou un autre élément d'interface contient du texte visible à l'écran, <a href="/fr/articles/le-nom-accessible-en-html/">son nom accessible</a> doit contenir au moins le même texte que celui affiché.
+Le but de [ce critère](https://www.w3.org/TR/WCAG22/#label-in-name) est de s'assurer que si un bouton, un lien ou un autre élément d'interface contient du texte visible à l'écran, <a href="/fr/articles/le-nom-accessible-en-html/">son nom accessible</a> doit contenir au moins le même texte que celui affiché.
 Cela pour garantir que les utilisateurs [d'aides techniques](/fr/solutions-assistance/) soient capables de comprendre et d'interagir avec le composant. En effet les aides techniques s'appuient sur le nom accessible des composants. Par exemple, un utilisateur de reconnaissance vocale pourra cliquer sur un bouton simplement en prononçant son nom accessible.
 
 Il n'est pas demandé que le texte visible et le nom accessible soient identiques, mais le texte visible doit être présent dans le nom accessible, de préférence en premier.

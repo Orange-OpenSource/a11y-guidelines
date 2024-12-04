@@ -48,4 +48,4 @@ La fonctionnalité de glisser-déposer est essentielle (un jeu de dextérité pa
 L’accès au contenu ne doit pas dépendre de l’orientation de l’écran (portrait et paysage), sauf si une orientation particulière est essentielle pour la compréhension ou l’utilisation du contenu (projection, tableau…).
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#orientation">1.3.4 Orientation</a>

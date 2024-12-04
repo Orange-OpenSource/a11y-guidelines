@@ -18,11 +18,11 @@ Most of the illustrations are parts of the Apple presentations and may be availa
 
 The videos that may be of interest to **designers** are highlighted with a **dedicated mark** at the end of their names.
 
-If you're willing to be informed of the most recent added detailed summaries, please send your email address to **wwdc(point)summaries(arobase)orange(point)com**.
-
 <section id="refTests"></section>
 
 <section class="visually-hidden" id="wwdcTests" aria-hidden="true">
+   <h2  id="hhwwdc2024" class="pt-5">WWDC 2024</h2>
+   <p id="hwwdc94">WWDC 2024 Keynote</p>
    <h2  id="hhwwdc2023" class="pt-5">WWDC 2023</h2>
    <p id="hwwdc93">WWDC 2023 Analyze hangs with Instruments</p>
    <p id="hwwdc92">WWDC 2023 Animate symbols in your app</p>

@@ -6,7 +6,7 @@ tags:
   - veille
 ---
 
-# Veille accessibilité numérique Décembre-Janvier 2024
+# Veille accessibilité numérique Février-Mars 2024
 
 Beaucoup de choses à lire en ce moment, en particulier la nouvelle mouture de ARIA in HTML du W3c (en) : https://www.w3.org/TR/2024/REC-html-aria-20240216/.
 Hormis cette grosse annonce, un départ bien malheureux pour l'a11y en France, Jean-Pierre Vilain est parti, et pour les personnes engagées en accessibilité, c'est une grande perte : https://access42.net/hommage-jean-pierre-villain/.

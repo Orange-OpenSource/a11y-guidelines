@@ -199,7 +199,7 @@
 	"title": "Provide accessible flashes",
 	"type": ["Manual test"],
 	"tests": ["Inspect the animation and video contents of the page that flashes"],
-	"verifier": ["Make sure that any content does not show rapid flashes (more than 3 flashes per second) or the flashes are below the <a href='https://www.w3.org/TR/WCAG21/#dfn-general-flash-and-red-flash-thresholds' target='_blank'>general flash and red flash thresholds</a>."],
+	"verifier": ["Make sure that any content does not show rapid flashes (more than 3 flashes per second) or the flashes are below the <a href='https://www.w3.org/TR/WCAG22/#dfn-general-flash-and-red-flash-thresholds' target='_blank'>general flash and red flash thresholds</a>."],
 	"resultat": ["No rapid flash or beyond the general flash and red flash thresholds."],
 	"exception": "",
 	"raccourcis": "",
@@ -813,7 +813,7 @@
 	"title": "Make sure the autocomplete attribute is present to avoid entry errors",
 	"type": ["Manual test"],
 	"tests": ["Manual test", "Browse the forms", "Fill in the forms with specific information about the user"],
-	"verifier": ["For any field that collects specific information about the user (<a href='https://www.w3.org/TR/WCAG21/#input-purposes' target='_blank' aria-label='exhaustive list (new window)'> exhaustive list </a>), the <code> autocomplete </code> attribute of the field must be present and have an appropriate value "],
+	"verifier": ["For any field that collects specific information about the user (<a href='https://www.w3.org/TR/WCAG22/#input-purposes' target='_blank' aria-label='exhaustive list (new window)'> exhaustive list </a>), the <code> autocomplete </code> attribute of the field must be present and have an appropriate value "],
 	"resultat": ["The <code>autocomplete</code> attribute is:", "present", "and the value of this attribute is relevant"],
 	"exception": [],
 	"raccourcis": "",
@@ -822,6 +822,20 @@
 	"wcag": ["1.3.5"],
 	"ID": "testWebID-55",
 	"IDorigin": "testWebID-55"
+}, {
+	"themes": "Forms",
+	"title": "Avoid redundant entries",
+	"type": ["Manual test"],
+	"tests": ["Identify processes that require data entry.", "Identify the fields requesting the same data previously entered."],
+	"verifier": ["The user does not have to enter the same information twice during the same process or session."],
+	"resultat": ["Fields whose data has already been entered are filled automatically", "or, user can select data already entered from a list", "or, user can check a box to automatically fill a form with data already entered"],
+	"exception": ["Essential uses of input re-entry for things like memory games.", "Security measures such as preventing a password string from being shown or copied.", "When the previously entered information is no longer valid."],
+	"raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/design/forms/#limit-redundant-entries",
+	"profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
+	"wcag": ["3.3.7"],
+	"ID": "testWebID-65",
+	"IDorigin": "testWebID-65"
 }, {
 	"themes": "Touch and interactions",
 	"title": "Allow zooming",

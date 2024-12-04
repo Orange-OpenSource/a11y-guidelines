@@ -31,7 +31,7 @@ Définir des masques de diapositives est la première chose à faire  et une con
 
 -	Bien choisir une couleur « du thème » pour chaque texte. 
 
-<img alt="" src="/fr/contenu-et-communication/images/image-couleur-theme.png" class="img-fluid">
+<img alt="" src="/fr/contenu-et-communication/images/Image-couleur-theme.png" class="img-fluid">
 
 
 

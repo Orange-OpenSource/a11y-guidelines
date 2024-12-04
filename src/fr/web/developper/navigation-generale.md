@@ -70,8 +70,8 @@ Associer à un lien «&nbsp;cliquer ici&nbsp;», un texte caché hors écran&nbs
 Liens «&nbsp;Cliquez ici&nbsp;» ou «&nbsp;Lire la suite…&nbsp;» sans plus de précision.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#link-purpose-link-only"> 2.4.9 Link Purpose (Link Only)</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#label-in-name"> 2.5.3 Label in Name</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#link-purpose-link-only"> 2.4.9 Link Purpose (Link Only)</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#label-in-name"> 2.5.3 Label in Name</a>
 
 
 
@@ -105,7 +105,7 @@ Pour un lien pointant à l’extérieur du site et ouvrant une nouvelle fenêtre
 Pour une image-lien, un attribut `alt="consulter les conditions générales d’utilisation (nouvelle fenêtre)"`.    
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**   
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#on-input">3.2.2 On Input</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#on-input">3.2.2 On Input</a>
 
 
 
@@ -132,7 +132,7 @@ Pour les faire apparaître, placer le focus en haut de la page en cliquant sur l
 ![capture d’écran du site orange.com](../../images/skiplink.png)   
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#bypass-blocks">2.4.1 Bypass Blocks</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#bypass-blocks">2.4.1 Bypass Blocks</a>
 
 
 
@@ -171,11 +171,11 @@ donner à tous les utilisateurs la maîtrise de l'apparition de contenu, des cha
 **Exemple&nbsp;:** un formulaire doit obligatoirement posséder un bouton d’envoi. Il ne doit pas être envoyé automatiquement après la saisie de l’utilisateur.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#content-on-hover-or-focus">1.4.13 Content on Hover or Focus</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#timing-adjustable">2.2.1 Timing Adjustable</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#on-focus">3.2.1 On Focus</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#on-input">3.2.2 On Input</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#character-key-shortcuts">2.1.4 Character key shortcuts</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#content-on-hover-or-focus">1.4.13 Content on Hover or Focus</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#timing-adjustable">2.2.1 Timing Adjustable</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#on-focus">3.2.1 On Focus</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#on-input">3.2.2 On Input</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#character-key-shortcuts">2.1.4 Character key shortcuts</a>
 
 
 
@@ -200,8 +200,8 @@ Le site propose, à la fois, une navigation principale complète et précise et 
 Une application offre un menu de navigation parcellaire et aucun autre moyen pour l’utilisateur de s’orienter dans les pages ou de repérer où se situe la page courante dans l’arborescence.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#multiple-ways">2.4.5 Multiple Ways</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#location">2.4.8 Location</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#multiple-ways">2.4.5 Multiple Ways</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#location">2.4.8 Location</a>
 
 
 
@@ -229,7 +229,7 @@ En <abbr>HTML</abbr>, les rôles spécifiques <abbr>ARIA</abbr> de type `alert`,
 Pour tous les utilisateurs d'<abbr>AT</abbr>, avoir un feedback sur les actions essentielles qu'il effectue.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#status-messages">4.1.3 Status Messages</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#status-messages">4.1.3 Status Messages</a>
 
 
 
@@ -253,5 +253,5 @@ Un carrousel qui défile automatiquement doit avoir un mécanisme qui permet de 
 Le mécanisme doit permettre à l'utilisateur d'interagir avec le reste de la page, l'arrêt ou la mise en pause via un évenement déclenché uniquement sur la prise du focus ou le survol de la souris n'est pas suffisant.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a>
