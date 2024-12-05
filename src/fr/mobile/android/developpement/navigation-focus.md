@@ -46,6 +46,38 @@ Exemple de sélecteur qui prend en compte l’état `state_focused` :
 	&lt;item android:state_focused="true" android:state_selected="true"  android:state_pressed="true" android:drawable="@drawable/draw_selected_pressed_selector" /&gt;
 &lt;/selector&gt;</code></pre>
 
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+@Composable
+fun CustomDrawableSelector(
+    isFocused: Boolean,
+    isSelected: Boolean,
+    isPressed: Boolean
+) {
+    val drawableRes = when {
+        !isFocused && !isSelected && !isPressed -> R.drawable.draw_unselected_selector
+        !isFocused && isSelected && !isPressed -> R.drawable.draw_selected_selector
+        isFocused && !isSelected && !isPressed -> R.drawable.draw_unselected_focused_selector
+        isFocused && isSelected && !isPressed -> R.drawable.draw_selected_focused_selector
+        !isFocused && !isSelected && isPressed -> R.drawable.draw_unselected_pressed_selector
+        !isFocused && isSelected && isPressed -> R.drawable.draw_selected_pressed_selector
+        isFocused && !isSelected && isPressed -> R.drawable.draw_unselected_pressed_selector
+        isFocused && isSelected && isPressed -> R.drawable.draw_selected_pressed_selector
+        else -> R.drawable.draw_unselected_selector // Default fallback
+    }
+
+    Image(
+        painter = painterResource(id = drawableRes),
+        contentDescription = null,
+        modifier = Modifier
+            .size(48.dp) // Adjust size as needed
+    )
+}
+
+</code>
+</pre>
+
 Exemple d'une vue focusable avec la navigation au clavier
 <pre><code>&lt;View android:focusable="true"
               android:layout_width="0px"
