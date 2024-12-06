@@ -29,6 +29,7 @@ Important : Pensez donc à tester vos implémentations sur des cibles navigateur
 </code></pre>
 
 Vous devez vous assurer que la balise `svg` ou un de ses enfants (`<g>`, `<path>`…) ne possède aucun attribut visant à lui fournir un nom accessible (`title`, `desc`, `aria-*`…).
+
 Note : historiquement, l'attribut `focusable="false"` devait aussi être présent pour éviter toute prise de focus sur le SVG par Internet Explorer (>10 et Edge), ceci n'est plus utile sur les navigateurs actuels.
 
 
@@ -45,10 +46,10 @@ en second choix&nbsp;:
 &lt;img src="XXX.svg" role="img" aria-label="texte de remplacement" /&gt;
 </code></pre>
 
-Note : Afin d'assurer un support optimal par les aides techniques et navigateurs, éviter l'usage de `aria-labelledby` pointant sur un texte masqué.
+Note : Afin d'assurer un support optimal par les aides techniques et navigateurs, éviter l'usage de `aria-labelledby` pointant sur un texte masqué :
 
 <pre><code class="html">
-<p id="alt-text" class="visually-hidden">texte de remplacement</p>
+&lt;p id="alt-text" class="visually-hidden">texte de remplacement&lt;/p&gt;
 &lt;img src="XXX.svg" role="img" aria-labelledby="alt-text" /&gt;
 </code></pre>
 
@@ -60,19 +61,17 @@ Le meilleur support pour les SVG est l'affichage en ligne (balise `<svg>`).
 
 <pre><code class="html">
 &lt;svg role="img"&gt;
-  &lt;title&gt; texte de remplacement &lt;/title&gt;
+  &lt;title&gt;texte de remplacement&lt;/title&gt;
   ...
 &lt;/svg&gt;
-</code></pre>
 
-<pre><code class="html">
 &lt;svg role="img" aria-labelledby="alt-text"&gt;
   &lt;title id="alt-text">texte de remplacement&lt;/title&gt;
   ...
 &lt;/svg&gt;
 </code></pre>
 
-Si besoin, pour des images dont le contenu nécessite une description détaillée, il est possible d'utiliser `aria-labelledby` en référençant le « title » et la « desc ».
+Si besoin, pour des images dont le contenu nécessite une description détaillée, il est possible d'utiliser `aria-labelledby` en référençant le « title » et la « desc » :
 
 <pre><code class="html">
 &lt;svg role="img" aria-labelledby="alt-text description"&gt;
@@ -86,11 +85,11 @@ Si besoin, pour des images dont le contenu nécessite une description détaillé
 &lt;/svg&gt;
 </code></pre>
 
-Note : Afin d'assurer un support optimal par les aides techniques et navigateurs, éviter l'uage de `aria-describedby` pour la description.
+Note : Afin d'assurer un support optimal par les aides techniques et navigateurs, éviter l'usage de `aria-describedby` pour la description.
 
-### Les SVG servant de lien ou de bouton
+### Les SVG dans des liens ou boutons
 
-La meilleure solution s'il est possible d'afficher du texte à proximité :
+S'il est possible d'afficher du texte à proximité, la meilleure solution est de simplement masquer le SVG à l'aide de l'attribut `aria-hidden` :
 
 <pre><code class="html">
 &lt;button&gt;
@@ -160,9 +159,9 @@ ou, mais beaucoup plus risqué…
 &lt;/button&gt;
 </code></pre>
 
-## Dernier mots…
+## Dernier mot…
 
-En résumé, un seul conseil pour du SVG accessible, ce serait TESTER et tester encore !
+En résumé, s'il ne fallait retenir qu'un seul conseil pour du SVG accessible, ce serait TESTER et tester encore !
 
 ## Webographie (articles qui m’ont bien, bien aidés)
 
