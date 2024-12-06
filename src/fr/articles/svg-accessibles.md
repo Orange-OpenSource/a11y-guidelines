@@ -17,8 +17,9 @@ Important : Pensez donc à tester vos implémentations sur des cibles navigateur
 
 ### SVG dans une balise `img`
 <pre><code class="html">
-&lt;img src="XXX.svg" alt="" aria-hidden=”true” /&gt;
+&lt;img src="XXX.svg" alt="" aria-hidden="true" /&gt;
 </code></pre>
+
 
 ### SVG en ligne (inline)
 <pre><code class="html">
@@ -29,6 +30,7 @@ Important : Pensez donc à tester vos implémentations sur des cibles navigateur
 
 Vous devez vous assurer que la balise `svg` ou un de ses enfants (`<g>`, `<path>`…) ne possède aucun attribut visant à lui fournir un nom accessible (`title`, `desc`, `aria-*`…).
 Note : historiquement, l'attribut `focusable="false"` devait aussi être présent pour éviter toute prise de focus sur le SVG par Internet Explorer (>10 et Edge), ceci n'est plus utile sur les navigateurs actuels.
+
 
 
 ## Image informative (hors lien ou bouton)
@@ -57,17 +59,17 @@ Note : On rajoute `role="img"` pour s’assurer qu’avec macOS Safari, VoiceOve
 Le meilleur support pour les SVG est l'affichage en ligne (balise `<svg>`).
 
 <pre><code class="html">
-<svg role="img">
-  <title>texte de remplacement</title>
+&lt;svg role="img"&gt;
+  &lt;title&gt; texte de remplacement &lt;/title&gt;
   ...
-</svg>;
+&lt;/svg&gt;
 </code></pre>
 
 <pre><code class="html">
-<svg role="img" aria-labelledby="alt-text">
-  <title id="alt-text">texte de remplacement</title>
+&lt;svg role="img" aria-labelledby="alt-text"&gt;
+  &lt;title id="alt-text">texte de remplacement&lt;/title&gt;
   ...
-</svg>;
+&lt;/svg&gt;
 </code></pre>
 
 Si besoin, pour des images dont le contenu nécessite une description détaillée, il est possible d'utiliser `aria-labelledby` en référençant le « title » et la « desc ».
