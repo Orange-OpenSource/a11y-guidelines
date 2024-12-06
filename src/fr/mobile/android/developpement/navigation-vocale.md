@@ -353,6 +353,22 @@ Il est fréquent de tester la version d’Android avant de déclencher une vocal
    android:accessibilityLiveRegion="polite" /&gt;
 </code></pre>
 
+**Exemple de région live avec jetpackcompose**:
+
+<pre>
+<code class="kotlin">@Composable
+fun PoliteAccessibilityRegion() {
+Column {
+Text(
+text = "Contenu mis à jour pour l'accessibilité",
+modifier = Modifier.accessibilityLiveRegion(AccessibilityLiveRegion.Polite)
+)
+}
+}
+</code></pre>
+
+
+
 ## Ne pas vocaliser les éléments décoratifs et cachés
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
