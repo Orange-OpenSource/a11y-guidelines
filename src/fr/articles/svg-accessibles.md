@@ -11,7 +11,7 @@ tags:
 Mise à jour : décembre 2024
 
 Voici quelques recommandations techniques pour vous aider à intégrer des images SVG accessibles.
-Important : Quelle que soit la solution retenue, le support navigateurs/aides techniques évoluant très rapidement, pensez à tester vos implémentations sur les configurations les plus utilisés par vos utilisateurs.
+Important : Quelle que soit la solution retenue, le support navigateurs/aides techniques évoluant très rapidement, pensez à tester vos implémentations sur les configurations les plus utilisées par vos utilisateurs.
 
 ## Image de décoration
 
@@ -73,7 +73,24 @@ Le meilleur support pour les SVG est l'affichage en ligne (balise `<svg>`).
   &lt;title id="alt-text">texte de remplacement&lt;/title&gt;
   ...
 &lt;/svg&gt;
+
+&lt;svg role="img" aria-label="alt-text"&gt;
+  ...
+&lt;/svg&gt;
 </code></pre>
+
+
+Si vous utilisez l'élément `<use>` pour cloner plusieurs versions du SVG, pensez à le masquer avec `aria-hidden` :
+
+<pre><code class="html">
+&lt;svg role="img"&gt;
+  &lt;title&gt;texte de remplacement&lt;/title&gt;
+    &lt;use href="some-id" fill="blue" x="5" y="5" aria-hidden="true" /&gt;
+
+  ...
+&lt;/svg&gt;
+</code></pre>
+
 
 Si besoin, pour des images dont le contenu nécessite une description détaillée, il est possible d'utiliser `aria-labelledby` en référençant le « title » et la « desc » :
 
@@ -91,7 +108,7 @@ Si besoin, pour des images dont le contenu nécessite une description détaillé
 
 Note : Afin d'assurer un support optimal par les aides techniques et navigateurs, éviter l'usage de `aria-describedby` pour la description.
 
-### Les SVG dans des liens ou boutons
+## Les SVG dans des liens ou boutons
 
 S'il est possible d'afficher du texte à proximité, la meilleure solution est de simplement masquer le SVG à l'aide de l'attribut `aria-hidden` :
 
@@ -128,7 +145,7 @@ Mais comme il n'est pas toujours possible d'afficher un texte (contrainte graphi
 </code></pre>
 
 La classe `visually-hidden` permet également de présenter le texte uniquement aux utilisateurs d'aide technique (masquage accessible). 
-La solution suivante est à la précédente, mais à tester systématiquement dans vos environnements de navigation ciblés (couples navigateur/aide technique) .
+La solution suivante est similaire à la précédente, mais à tester systématiquement dans vos environnements de navigation ciblés (couples navigateur/aide technique) .
 
 <pre><code class="html">
 &lt;button&gt;
@@ -143,7 +160,7 @@ La solution suivante est à la précédente, mais à tester systématiquement da
 </code></pre>
 
 
-Il est aussi possible d'utiliser l'attribut `aria-label`
+Il est aussi possible d'utiliser l'attribut `aria-label` :
 
 <pre><code class="html">
 &lt;button aria-label="Rechercher"&gt;
