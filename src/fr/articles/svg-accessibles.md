@@ -1,5 +1,5 @@
 ---
-title: "Les images SVG sont de plus en plus utilisées sur le web mais qu’en est-il de leur accessibilité ?"
+title: "L'accessibilité des images SVG"
 abstract: "Comment rendre accessibles les images SVG"
 titleBeforeTag: true
 date: "2021-01-01"
@@ -10,14 +10,15 @@ tags:
 
 Mise à jour : décembre 2024
 
-Voici quelques pistes sachant que le support navigateurs/aide techniques évolue très rapidement !
-Important : Pensez donc à tester vos implémentations sur des cibles navigateurs /aides techniques les plus utilisées par vos utilisateurs, cela, quel que soit la solution pour laquelle vous optez. ;
+Voici quelques recommandations techniques pour vous aider à intégrer des images SVG accessibles.
+Important : Quelle que soit la solution retenue, le support navigateurs/aides techniques évoluant très rapidement, pensez à tester vos implémentations sur les configurations les plus utilisés par vos utilisateurs.
 
 ## Image de décoration
 
 ### SVG dans une balise `img`
 <pre><code class="html">
-&lt;img src="XXX.svg" alt="" aria-hidden="true" /&gt;
+&lt;img src="XXX.svg" alt="" aria-hidden="true" 
+/img&gt;
 </code></pre>
 
 
@@ -38,22 +39,25 @@ Note : historiquement, l'attribut `focusable="false"` devait aussi être présen
 
 ### SVG dans une balise `img`
 <pre><code class="html">
-&lt;img src="XXX.svg" role="img" alt="texte de remplacement" /&gt;
+&lt;img src="XXX.svg" role="img" alt="texte de remplacement" 
+/img&gt;
 </code></pre>
 
 en second choix&nbsp;:
 <pre><code class="html">
-&lt;img src="XXX.svg" role="img" aria-label="texte de remplacement" /&gt;
+&lt;img src="XXX.svg" role="img" aria-label="texte de remplacement"
+/img&gt;
 </code></pre>
 
 Note : Afin d'assurer un support optimal par les aides techniques et navigateurs, éviter l'usage de `aria-labelledby` pointant sur un texte masqué :
 
 <pre><code class="html">
 &lt;p id="alt-text" class="visually-hidden">texte de remplacement&lt;/p&gt;
-&lt;img src="XXX.svg" role="img" aria-labelledby="alt-text" /&gt;
+&lt;img src="XXX.svg" role="img" aria-labelledby="alt-text" 
+img/&gt;
 </code></pre>
 
-Note : On rajoute `role="img"` pour s’assurer qu’avec macOS Safari, VoiceOver (anciennes versions) annonce bien « image ».
+Note : On rajoute `role="img"` pour s'assurer qu'avec macOS Safari, VoiceOver (anciennes versions) annonce bien « image ».
 
 ### SVG en ligne (inline)
 
@@ -94,21 +98,21 @@ S'il est possible d'afficher du texte à proximité, la meilleure solution est d
 <pre><code class="html">
 &lt;button&gt;
   &lt;svg focusable="false" aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
-  Rechercher
+  Texte visible
 &lt;/button&gt;
 
 &lt;a href="/Rechercher"&gt;
   &lt;svg focusable="false" aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
-  Rechercher
+  Texte visible
 &lt;/a&gt;
 </code></pre>
 
-Mais comme il n'est pas toujours possible d’afficher un texte (contrainte graphique/design/marketing…), il est conseillé de cacher visuellement un texte tout en le laissant lisible par les aides techniques via `aria-labelledby`&nbsp;:
+Mais comme il n'est pas toujours possible d'afficher un texte (contrainte graphique/design/marketing…), il est conseillé de cacher visuellement un texte tout en le laissant lisible par les aides techniques via `aria-labelledby`&nbsp;:
 
 <pre><code class="html">
 &lt;button aria-labelledby="label"&gt; 
 
-  &lt;span id="label" hidden&gt;Rechercher&lt;/span&gt;
+  &lt;span id="label" hidden&gt;Texte masqué&lt;/span&gt;
 
   &lt;svg aria-hidden="true" focusable="false"&gt;&lt;!--...--&gt;&lt;/svg&gt;
 
@@ -116,15 +120,15 @@ Mais comme il n'est pas toujours possible d’afficher un texte (contrainte grap
 
 &lt;a href="/Rechercher"&gt;
 
-  &lt;span id="label" hidden&gt;Rechercher&lt;/span&gt;
+  &lt;span id="label" hidden&gt;Texte masqué&lt;/span&gt;
 
   &lt;svg aria-hidden="true" focusable="false"&gt;&lt;!--...--&gt;&lt;/svg&gt;
 
 &lt;/a&gt;
 </code></pre>
 
-La solution suivante est équivalente, mais à tester systématiquement dans vos environnements de navigation ciblés (couples navigateur/aide technique) .
-La classe `visually-hidden` permet de présenter le texte uniquement aux utilisateurs d’aide technique (masquage accessible). 
+La classe `visually-hidden` permet également de présenter le texte uniquement aux utilisateurs d'aide technique (masquage accessible). 
+La solution suivante est à la précédente, mais à tester systématiquement dans vos environnements de navigation ciblés (couples navigateur/aide technique) .
 
 <pre><code class="html">
 &lt;button&gt;
@@ -139,31 +143,23 @@ La classe `visually-hidden` permet de présenter le texte uniquement aux utilisa
 </code></pre>
 
 
-ou
+Il est aussi possible d'utiliser l'attribut `aria-label`
 
 <pre><code class="html">
 &lt;button aria-label="Rechercher"&gt;
-  &lt;svg focusable="false" aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+  &lt;svg aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
 &lt;/button&gt;
 
 &lt;a href="/Rechercher" aria-label="Rechercher"&gt;
-  &lt;svg focusable="false" aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+  &lt;svg aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
 &lt;/a&gt;
-
-ou, mais beaucoup plus risqué…
-&lt;button&gt;
-  &lt;svg aria-labelledby="rechercher-icon-title" focusable="false" role=”img”&gt;
-    &lt;title id="rechercher-icon-title"&gt;Rechercher&lt;/title&gt;
-    &lt;!--...--&gt;
-  &lt;/svg&gt;
-&lt;/button&gt;
 </code></pre>
 
 ## Dernier mot…
 
 En résumé, s'il ne fallait retenir qu'un seul conseil pour du SVG accessible, ce serait TESTER et tester encore !
 
-## Webographie (articles qui m’ont bien, bien aidés)
+## Webographie (articles qui m'ont bien, bien aidés)
 
 - https://www.deque.com/blog/creating-accessible-svgs/ 
 - https://weboverhauls.github.io/demos/svg/ 
