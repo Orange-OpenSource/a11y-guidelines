@@ -31,18 +31,22 @@ Important : Quelle que soit la solution retenue, le support navigateurs/aides te
 
 Vous devez vous assurer que la balise `svg` ou un de ses enfants (`<g>`, `<path>`…) ne possède aucun attribut visant à lui fournir un nom accessible (`title`, `desc`, `aria-*`…).
 
-Note : historiquement, l'attribut `focusable="false"` devait aussi être présent pour éviter toute prise de focus sur le SVG par Internet Explorer (>10 et Edge), ceci n'est plus utile sur les navigateurs actuels.
+Note : historiquement, l'attribut `focusable="false"` devait aussi être présent pour éviter toute prise de focus sur le SVG par Internet Explorer et Edge, ceci n'est plus utile sur les navigateurs actuels.
 
 
 
 ## Image informative (hors lien ou bouton)
 
 ### SVG dans une balise `img`
+
+La solution la plus efficace consiste à utiliser l'attribut `alt` :
+
 <pre><code class="html">
 &lt;img src="XXX.svg" role="img" alt="texte de remplacement"&gt;
 </code></pre>
 
-en second choix&nbsp;:
+en second choix, utiliser `aria-label` (mais celà enfrein la première règle d'ARIA, à savoir, ne pas utiliser d'ARIA si une solution native HTML existe)
+&nbsp;:
 <pre><code class="html">
 &lt;img src="XXX.svg" role="img" aria-label="texte de remplacement"&gt;
 </code></pre>
