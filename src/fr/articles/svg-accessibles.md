@@ -30,15 +30,6 @@ Important : Quelle que soit la solution retenue, le support navigateurs/aides te
 </code></pre>
 
 Vous devez vous assurer que la balise `svg` ou un de ses enfants (`<g>`, `<path>`…) ne possède aucun attribut visant à lui fournir un nom accessible (`title`, `desc`, `aria-*`…).
-De même, si vous utilisez l'élément `<use>` pour cloner plusieurs versions du SVG, pensez à le masquer avec `aria-hidden` :
-
-<pre><code class="html">
-&lt;svg role="img"&gt;
-  &lt;title&gt;texte de remplacement&lt;/title&gt;
-    &lt;use href="some-id" fill="blue" x="5" y="5" aria-hidden="true" /&gt;
-  ...
-&lt;/svg&gt;
-</code></pre>
 
 Note : historiquement, l'attribut `focusable="false"` devait aussi être présent pour éviter toute prise de focus sur le SVG par Internet Explorer et Edge, ceci n'est plus utile sur les navigateurs actuels.
 
@@ -105,6 +96,16 @@ Si besoin, pour des images dont le contenu nécessite une description détaillé
 
 Note : Afin d'assurer un support optimal par les aides techniques et navigateurs, éviter l'usage de `aria-describedby` pour la description.
 
+
+Si vous utilisez l'élément `<use>` pour cloner plusieurs versions du SVG, pensez à le masquer avec `aria-hidden` :
+
+<pre><code class="html">
+&lt;svg role="img"&gt;
+  &lt;title&gt;texte de remplacement&lt;/title&gt;
+    &lt;use href="some-id" fill="blue" x="5" y="5" aria-hidden="true" /&gt;
+  ...
+&lt;/svg&gt;
+</code></pre>
 
 
 ## Les SVG dans des liens ou boutons
