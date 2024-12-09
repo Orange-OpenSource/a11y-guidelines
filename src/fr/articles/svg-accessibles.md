@@ -11,20 +11,20 @@ tags:
 Mise à jour : décembre 2024
 
 Voici quelques recommandations techniques pour vous aider à intégrer des images SVG accessibles.
+
 Important : Quelle que soit la solution retenue, le support navigateurs/aides techniques évoluant très rapidement, pensez à tester vos implémentations sur les configurations les plus utilisées par vos utilisateurs.
 
 ## Image de décoration
 
 ### SVG dans une balise `img`
 <pre><code class="html">
-&lt;img src="XXX.svg" alt="" aria-hidden="true" 
-/img&gt;
+&lt;img src="XXX.svg" alt="" aria-hidden="true"&gt;
 </code></pre>
 
 
 ### SVG en ligne (inline)
 <pre><code class="html">
-&lt;svg aria-hidden="true" &gt;
+&lt;svg aria-hidden="true"&gt;
 …
 &lt;/svg&gt;
 </code></pre>
@@ -39,22 +39,19 @@ Note : historiquement, l'attribut `focusable="false"` devait aussi être présen
 
 ### SVG dans une balise `img`
 <pre><code class="html">
-&lt;img src="XXX.svg" role="img" alt="texte de remplacement" 
-/img&gt;
+&lt;img src="XXX.svg" role="img" alt="texte de remplacement"&gt;
 </code></pre>
 
 en second choix&nbsp;:
 <pre><code class="html">
-&lt;img src="XXX.svg" role="img" aria-label="texte de remplacement"
-/img&gt;
+&lt;img src="XXX.svg" role="img" aria-label="texte de remplacement"&gt;
 </code></pre>
 
 Note : Afin d'assurer un support optimal par les aides techniques et navigateurs, éviter l'usage de `aria-labelledby` pointant sur un texte masqué :
 
 <pre><code class="html">
 &lt;p id="alt-text" class="visually-hidden">texte de remplacement&lt;/p&gt;
-&lt;img src="XXX.svg" role="img" aria-labelledby="alt-text" 
-img/&gt;
+&lt;img src="XXX.svg" role="img" aria-labelledby="alt-text"&gt;
 </code></pre>
 
 Note : On rajoute `role="img"` pour s'assurer qu'avec macOS Safari, VoiceOver (anciennes versions) annonce bien « image ».
@@ -79,19 +76,6 @@ Le meilleur support pour les SVG est l'affichage en ligne (balise `<svg>`).
 &lt;/svg&gt;
 </code></pre>
 
-
-Si vous utilisez l'élément `<use>` pour cloner plusieurs versions du SVG, pensez à le masquer avec `aria-hidden` :
-
-<pre><code class="html">
-&lt;svg role="img"&gt;
-  &lt;title&gt;texte de remplacement&lt;/title&gt;
-    &lt;use href="some-id" fill="blue" x="5" y="5" aria-hidden="true" /&gt;
-
-  ...
-&lt;/svg&gt;
-</code></pre>
-
-
 Si besoin, pour des images dont le contenu nécessite une description détaillée, il est possible d'utiliser `aria-labelledby` en référençant le « title » et la « desc » :
 
 <pre><code class="html">
@@ -107,6 +91,19 @@ Si besoin, pour des images dont le contenu nécessite une description détaillé
 </code></pre>
 
 Note : Afin d'assurer un support optimal par les aides techniques et navigateurs, éviter l'usage de `aria-describedby` pour la description.
+
+
+Enfin, si vous utilisez l'élément `<use>` pour cloner plusieurs versions du SVG, pensez à le masquer avec `aria-hidden` :
+
+<pre><code class="html">
+&lt;svg role="img"&gt;
+  &lt;title&gt;texte de remplacement&lt;/title&gt;
+    &lt;use href="some-id" fill="blue" x="5" y="5" aria-hidden="true" /&gt;
+
+  ...
+&lt;/svg&gt;
+</code></pre>
+
 
 ## Les SVG dans des liens ou boutons
 
@@ -128,19 +125,13 @@ Mais comme il n'est pas toujours possible d'afficher un texte (contrainte graphi
 
 <pre><code class="html">
 &lt;button aria-labelledby="label"&gt; 
-
   &lt;span id="label" hidden&gt;Texte masqué&lt;/span&gt;
-
   &lt;svg aria-hidden="true" focusable="false"&gt;&lt;!--...--&gt;&lt;/svg&gt;
-
 &lt;/button&gt; 
 
 &lt;a href="/Rechercher"&gt;
-
   &lt;span id="label" hidden&gt;Texte masqué&lt;/span&gt;
-
   &lt;svg aria-hidden="true" focusable="false"&gt;&lt;!--...--&gt;&lt;/svg&gt;
-
 &lt;/a&gt;
 </code></pre>
 
