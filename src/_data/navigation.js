@@ -131,7 +131,7 @@ module.exports = {
           { label: 'Tester', href: '/fr/web/tester/' },
           { label: 'Auditer', href: '/fr/web/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/web/outils/' },
-          { label: 'Auto-evaluation', href: '/fr/web/checklist-initiale/' }
+          { label: 'Auto-évaluation', href: '/fr/web/checklist-initiale/' }
         ]
       },
       {
