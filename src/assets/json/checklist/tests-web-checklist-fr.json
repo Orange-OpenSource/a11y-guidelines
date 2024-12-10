@@ -8,7 +8,7 @@
 	"exception": "", 
 	"raccourcis": "", 
 	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/contenu-textuel/#donner-un-titre-aux-pages", 
-	"profils": "", 
+    "profils": ["Checklist incontournables"], 
 	"wcag": ["2.4.2"], 
 	"ID": "testWebID-0", 
 	"IDorigin": "testWebID-0" 
@@ -22,7 +22,7 @@
     "exception": "<p>Ne pas tenir compte des titres masqués (<code>visibility:hidden</code>, <code>aria-hidden='true'</code> ou <code>display:none</code>). Si un de ces titres masqués est susceptible d'apparaître, il faut refaire les observations sur la nouvelle structuration du titrage.</p>", 
     "raccourcis": "", 
     "moreInfo": "", 
-    "profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"], 
+    "profils": ["Checklist incontournables"], 
     "wcag": ["2.4.6", "1.3.1"], 
     "ID": "testWebID-1", 
     "IDorigin": "testWebID-1" 
@@ -36,7 +36,7 @@
 	"exception": "",
 	"raccourcis": "",
 	"moreInfo": "",
-	"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+    "profils": ["Checklist incontournables"], 
 	"wcag": ["3.1.1"],
 	"ID": "testWebID-4",
 	"IDorigin": "testWebID-4"
@@ -50,7 +50,7 @@
 	"exception": "",
 	"raccourcis": "",
 	"moreInfo": "",
-	"profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+    "profils": ["Checklist incontournables"], 
 	"wcag": ["1.1.1"],
 	"ID": "testWebID-7",
 	"IDorigin": "testWebID-7"
@@ -64,7 +64,7 @@
 	"exception": ["Du texte qui fait partie d'un composant d'interface utilisateur inactif ou d'un logo, un nom de marque"], 
 	"raccourcis": "", 
 	"moreInfo": [["Lien Color Contrast Analyser : "],["Comment utiliser CCA : https://a11y-guidelines.orange.com/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/"]],
-	"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"], 
+    "profils": ["Checklist incontournables"], 
 	"wcag": ["1.4.3"], 
 	"ID": "testWebID-16", 
 	"IDorigin": "testWebID-16" 
@@ -78,7 +78,7 @@
 	"exception": "", 
 	"raccourcis": "", 
 	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/couleurs-et-contrastes/#ne-pas-utiliser-la-couleur-ou-linformation-sensorielle-comme-seule-source-dinformation", 
-	"profils": ["Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"], 
+    "profils": ["Checklist incontournables"], 
 	"wcag": ["1.4.1"], 
 	"ID": "testWebID-18", 
 	"IDorigin": "testWebID-18" 
@@ -92,7 +92,7 @@
 	"exception": "",
 	"raccourcis": "",
 	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/navigation-generale/#permettre-le-controle-des-animations",
-	"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+    "profils": ["Checklist incontournables"], 
 	"wcag": ["2.2.2"],
 	"ID": "testWebID-37",
 	"IDorigin": "testWebID-37"
@@ -106,7 +106,7 @@
 	"exception": "",
 	"raccourcis": "",
 	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/navigation-clavier/#permettre-dutiliser-les-principales-fonctionnalites-de-lapplication-au-clavier",
-	"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+    "profils": ["Checklist incontournables"], 
 	"wcag": ["2.1.1"],
 	"ID": "testWebID-38",
 	"IDorigin": "testWebID-38"
@@ -120,7 +120,7 @@
 	"exception": "",
 	"raccourcis": "",
 	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/mise-en-page/#utiliser-des-tailles-relatives-et-faire-du-web-adaptatif",
-	"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+    "profils": ["Checklist incontournables"], 
 	"wcag": ["1.4.11"],
 	"ID": "testWebID-42",
 	"IDorigin": "testWebID-42"
@@ -134,7 +134,7 @@
 	"exception": "Lorsque le rôle d'un champ de formulaire est évident et non ambigu (champ de recherche accompagné d'un bouton en forme de loupe, case à cocher pour sélectionner une ligne dans un tableau de données) dans ces cas l'accessible name peut être caché visuellement.",
 	"raccourcis": "",
 	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/formulaires/#rendre-accessibles-les-champs-de-formulaire",
-	"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+    "profils": ["Checklist incontournables"], 
 	"wcag": ["2.4.6", "3.3.2"],
 	"ID": "testWebID-47",
 	"IDorigin": "testWebID-47"
@@ -148,7 +148,7 @@
 	"exception": [],
 	"raccourcis": "",
 	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/formulaires/#detecter-identifier-les-erreurs-et-suggerer-des-corrections",
-	"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+    "profils": ["Checklist incontournables"], 
 	"wcag": ["3.3.3"],
 	"ID": "testWebID-52",
 	"IDorigin": "testWebID-52"
