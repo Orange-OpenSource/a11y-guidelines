@@ -1,7 +1,7 @@
 [{ 
 	"themes": "Contenu textuel", 
 	"title": "Donner un titre aux pages",  
-	"type": "Test manuel - Inspecteur de code", 
+	"type": ["Test manuel - Inspecteur de code"], 
 	"tests": [["Lancer l'inspecteur de code du navigateur et examiner le titre de page (<code>&lt;title&gt;[title]&lt;/title&gt;</code>)"], ["Ou lire le titre présent dans l'onglet du navigateur"]], 
 	"verifier": [["Le titre de page est renseigné"], ["Le titre de page est unique et explicite le contenu de la page", "Le titre de page reflète les modifications du contenu (ex. erreur dans un formulaire, mise à jour asynchrone du contenu…"]], 
 	"resultat": "Chaque page possède un titre unique et descriptif du contenu, <br/>globalement du plus précis vers le plus général. <br/>Exemple :  [résumé du contenu de la page - nom du site]", 
