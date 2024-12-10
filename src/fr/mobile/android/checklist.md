@@ -12,17 +12,15 @@ js:
 
 # Application mobile Android - Liste des critères d'accessibilité incontournables
 
-Ce socle de critères destiné aux applications mobiles Android permet d’éviter les principales erreurs d’accessibilité.
-Sa mise en œuvre ne permet pas d’obtenir à coup sûr une application accessible, mais pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité progressive.
+Ce socle de critères, destiné aux applications mobiles Android, permet d’éviter les principales erreurs d’accessibilité.
+Sa mise en œuvre ne permet pas d’obtenir à coup sûr un site accessible, mais pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité progressive.
 
 Le respect de la charte Orange appelée la Brand (Design for digital platforms Guideline), disponible sur [le site de la marque Orange](https://design.orange.com/) est un prérequis à l’utilisation de ce socle.
+Certains points déjà présents dans la charte Orange (utilisation des couleurs, alignement du texte…) n’ont pas été repris dans cette liste de critères.
 
-La version tests présente les procédures à réaliser afin de valider la conformité de chaque recommandation. Elle s’adresse aux concepteurs, développeurs, qualifieurs, etc. Pour tirer le meilleur partie de ces tests, il faut utiliser une méthode de tests d'accessibilité et des outils.
+Cette grille de tests guidés s’adresse aux concepteurs, développeurs, qualifieurs, product owners, etc.
 
-Deux autres versions sont disponibles :
-
-- **[La version conception](/fr/mobile/ios/designer/)** n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.
-- **[La version développement](/fr/mobile/ios/developper/)** aborde le code et s’adresse aux développeurs, aux responsables techniques, aux équipes de validation, qualification, etc.
+Il convient d'utiliser la méthode de tests et les outils recommandés pour que le résultat soit fiable.
 
 
 <section id="refTests" class="accordion" aria-multiselectable="true">
