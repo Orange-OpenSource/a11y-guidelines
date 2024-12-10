@@ -300,11 +300,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
             htmlrefTests += '</div>';
             htmlrefTests += '</div>';
           }
-          htmlrefTests += '</div><div class="card-footer text-muted"><p><b>' + translate('profiles') + ': </b>';
-          for (let j in currentRefTests[i].profils) {
-            htmlrefTests += currentRefTests[i].profils[j];
-            j != ((currentRefTests[i].profils).length-1) ? htmlrefTests +=',  ' : '';
-          }
           htmlrefTests += '</p>';
           htmlrefTests += '</div>';
           htmlrefTests += '</div></article>';
