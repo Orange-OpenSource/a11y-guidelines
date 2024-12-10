@@ -76,9 +76,7 @@ module.exports = {
           { label: 'Test', href: '/en/mobile/ios/test/' },
           { label: 'Audit', href: '/en/mobile/ios/wcag-audit/' },
           { label: 'Toolbox', href: '/en/mobile/ios/toolbox/' },
-          { label: 'WWDC', href: '/en/mobile/ios/wwdc/' },
-          { label: 'Checklist', href: '/en/mobile/ios/checklist/' }
-        ]
+          { label: 'WWDC', href: '/en/mobile/ios/wwdc/' }        ]
       },
       {
         label: 'Content and communication',
@@ -167,7 +165,7 @@ module.exports = {
           { label: 'Tester', href: '/fr/mobile/ios/test/' },
           { label: 'Auditer', href: '/fr/mobile/ios/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/mobile/ios/outils/' },
-          { label: 'Checklist', href: '/fr/mobile/ios/checklist/' }
+          { label: 'Incontournables', href: '/fr/mobile/ios/checklist/' }
         ]
       },
       {
