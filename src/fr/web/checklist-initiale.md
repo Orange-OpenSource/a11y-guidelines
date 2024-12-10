@@ -12,7 +12,7 @@ js:
 
 # Web - Liste des critères d'accessibilité incontournables
 
-Ce socle de critères destiné aux sites et applications web permet d’éviter les principales erreurs d’accessibilité.
+Ce socle de critères destiné, aux sites et applications web, permet d’éviter les principales erreurs d’accessibilité.
 Sa mise en œuvre ne permet pas d’obtenir à coup sûr un site accessible, mais pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité progressive.
 
 Le respect de la charte Orange appelée la Brand (Design for digital platforms Guideline), disponible sur [le site de la marque Orange](https://design.orange.com/) est un prérequis à l’utilisation de ce socle.
