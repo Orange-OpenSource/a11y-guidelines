@@ -131,7 +131,7 @@
 	"tests": ["Utiliser l'inspecteur du navigateur sur l'onglet \"Accessibilité\""],
 	"verifier": ["Vérifier le nom accessible de chaque champs de formulaire"],
 	"resultat": ["Chaque champs a au moins un nom accessible pertinent et contient au moins le texte de l'étiquette de champ visible à l'écran (un placeholder n'est pas conforme)"],
-	"exception": "Lorsque le rôle d'un champ de formulaire est évident et non ambigu (champ de recherche accompagné d'un bouton en forme de loupe, case à cocher pour sélectionner une ligne dans un tableau de données) dans ces cas le nom accessible peut être caché visuellement.",
+	"exception": "Lorsque le rôle d'un champ de formulaire est évident et non ambigu (par exemple : champ de recherche accompagné d'un bouton en forme de loupe, case à cocher pour sélectionner une ligne dans un tableau de données) dans ces cas le nom accessible peut être caché visuellement.",
 	"raccourcis": "",
 	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/formulaires/#rendre-accessibles-les-champs-de-formulaire",
     "profils": ["Checklist incontournables"], 
