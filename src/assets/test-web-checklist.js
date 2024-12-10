@@ -78,11 +78,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     //appel des Json
 
 
-    doXHR('/assets/json/checklist/tests-web-checklist' + lang + '.json', function (errFirst, responseFirst) {
+    doXHR('/assets/json/checklist/tests-web-checklist-' + lang + '.json', function (errFirst, responseFirst) {
         if (errFirst) {
             reqError();
         }
-        return doXHR('/assets/json/checklist/tests-concepteur-checklist' + lang + '.json', function (errSecond, responseSecond) {
+        return doXHR('/assets/json/checklist/tests-concepteur-checklist-' + lang + '.json', function (errSecond, responseSecond) {
             if (errSecond) {
                 reqError();
             }
