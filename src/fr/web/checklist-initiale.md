@@ -18,9 +18,9 @@ Sa mise en œuvre ne permet pas d’obtenir à coup sûr un site accessible, mai
 Le respect de la charte Orange appelée la Brand (Design for digital platforms Guideline), disponible sur [le site de la marque Orange](https://design.orange.com/) est un prérequis à l’utilisation de ce socle.
 Certains points déjà présents dans la charte Orange (utilisation des couleurs, alignement du texte…) n’ont pas été repris dans cette liste de critères.
 
-Cette grille de tests guidés permet de valider la conformité des principales recommandations d'accessibilité, sans être expert sur le domaine. 
-Elle s’adresse aux concepteurs, développeurs, qualifieurs, product owners, etc. 
-Il convient d'utiliser une méthode de tests d'accessibilité et des outils recommandés.
+Cette grille de tests guidés s’adresse aux concepteurs, développeurs, qualifieurs, product owners, etc.
+
+Il convient d'utiliser la méthode de tests et les outils recommandés pour que le résultat soit fiable.
 
 
 <section id="refTests" class="accordion" aria-multiselectable="true">
