@@ -20,7 +20,7 @@ Dernier conseil, les replays de ParisWeb 2024, la conférence, la seule à voir 
 
 ## Stratégie de mise en accessibilité
 
-- Une lettre a envoyer si votre client veut une surcouche (overlay) d'a11y (en) : https://alistairshepherd.uk/writing/accessibility-overlays-email/
+- Une lettre à envoyer si votre client veut une surcouche (overlay) d'a11y (en) : https://alistairshepherd.uk/writing/accessibility-overlays-email/
 - Stratégie bottom-up design et a11y (en) : https://www.smashingmagazine.com/2024/10/how-bottom-up-design-approach-enhances-site-accessibility/
 - Gérer l'a11y dans les équipes pour que ça marche (en) : https://melsumner.github.io/a11y-at-work
 - Captchas et autres joyeusetés à rendre accessibles (en) : https://2024.wpaccessibility.day/sessions/captchas-and-other-gotchas/
@@ -30,13 +30,13 @@ Dernier conseil, les replays de ParisWeb 2024, la conférence, la seule à voir 
 
 ## Tester l’accessibilité
 
-- AI et tests d'a11y, point de vue (en) : https://html5accessibility.com/stuff/2024/10/10/ai-for-accessibility-conformance-testing-why/
+- IA et tests d'a11y, point de vue (en) : https://html5accessibility.com/stuff/2024/10/10/ai-for-accessibility-conformance-testing-why/
 - Coût d'un audit d'a11y : https://access42.net/services/cout-audit-accessibilite-numerique/
 - Tester avec Cypress et Axe (en) : https://www.deque.com/blog/how-to-test-for-accessibility-with-cypress/
 - Tester son JS pour le rendre a11y (en) : https://www.a11y-collective.com/blog/accessibility-in-javascript/
-- Une checklist A11y de tests pour PowerPoint, pratique (en) : https://creativepro.com/powerpoint-accessibility-checklist/
-- Rappel : les tests auto d'$a11y pour capter des erreur mais pas pour évaluer le niveau (en) : https://cerovac.com/a11y/2024/10/reminder-automatic-accessibility-testing-can-detect-inaccessibility-but-cant-detect-accessibility/
-- Un nouveau référentiel de test, proposé par le gouvernement britannique, pour transposer et tester l'accessibilité des applis mobiles selon les critères WCAG 2.2 (en) : https://github.com/alphagov/wcag-primer/wiki/mobile-app-testing
+- Une checklist a11y de tests pour PowerPoint, pratique (en) : https://creativepro.com/powerpoint-accessibility-checklist/
+- Rappel : les tests auto d'a11y pour capter des erreurs mais pas pour évaluer le niveau (en) : https://cerovac.com/a11y/2024/10/reminder-automatic-accessibility-testing-can-detect-inaccessibility-but-cant-detect-accessibility/
+- Un nouveau référentiel de tests, proposé par le gouvernement britannique, pour transposer et tester l'accessibilité des applis mobiles selon les critères WCAG 2.2 (en) : https://github.com/alphagov/wcag-primer/wiki/mobile-app-testing
 
 ## Points techniques
 
@@ -53,8 +53,8 @@ Dernier conseil, les replays de ParisWeb 2024, la conférence, la seule à voir 
 - Des tooltips accessibles, super (en) : https://css-tricks.com/tooltip-best-practices/
 - IA et tests a11y, non (en) : https://html5accessibility.com/stuff/2024/10/10/ai-for-accessibility-conformance-testing-why/
 - L'a11y, c'est le contenu et le contenant, exemple pour Shopify (en) : https://www.nicchan.me/blog/shopify-accessibility-lawsuits-compliance/
-- éléments disabled et contraste (en) : https://html5accessibility.com/stuff/2024/11/04/disabled-and-obscured/
-- Quelques processus à étapes (scénario utilisateur) clés à rendre a11y (en) : https://www.tpgi.com/are-you-conducting-user-flow-testing-in-these-4-critical-areas/
+- Eléments inactifs et contraste (en) : https://html5accessibility.com/stuff/2024/11/04/disabled-and-obscured/
+- Quelques processus à étapes clés (scénario utilisateur) à rendre a11y (en) : https://www.tpgi.com/are-you-conducting-user-flow-testing-in-these-4-critical-areas/
 
 ## Aides techniques
 
@@ -75,7 +75,7 @@ Dernier conseil, les replays de ParisWeb 2024, la conférence, la seule à voir 
 
 ## Ergonomie, UI & UX
 
-- Une checklist designer de bonnes pratiques a11y (en) : https://accessicart.com/designing-for-accessibility-a-checklist-for-designers/
+- Une checklist de bonnes pratiques pour les designer (en) : https://accessicart.com/designing-for-accessibility-a-checklist-for-designers/
 - L'a11y a besoin de l'utilisabilité (en) : https://blog.usablenet.com/why-accessibility-needs-usability
 
 ## Ressources
