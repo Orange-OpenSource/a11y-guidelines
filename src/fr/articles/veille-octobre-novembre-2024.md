@@ -54,7 +54,7 @@ Dernier conseil, les replays de ParisWeb 2024, la conférence, la seule à voir 
 - IA et tests a11y, non (en) : https://html5accessibility.com/stuff/2024/10/10/ai-for-accessibility-conformance-testing-why/
 - L'a11y, c'est le contenu et le contenant, exemple pour Shopify (en) : https://www.nicchan.me/blog/shopify-accessibility-lawsuits-compliance/
 - Eléments inactifs et contraste (en) : https://html5accessibility.com/stuff/2024/11/04/disabled-and-obscured/
-- Quelques processus à étapes clés (scénario utilisateur) à rendre a11y (en) : https://www.tpgi.com/are-you-conducting-user-flow-testing-in-these-4-critical-areas/
+- Quelques processus à étapes clés (scénario utilisateur) pour tester l'a11y (en) : https://www.tpgi.com/are-you-conducting-user-flow-testing-in-these-4-critical-areas/
 
 ## Aides techniques
 
