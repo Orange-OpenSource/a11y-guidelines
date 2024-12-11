@@ -54,7 +54,7 @@ Last advice, the replays of ParisWeb 2024, the conference, the only one to see i
 - AI and a11y tests, simply no: https://html5accessibility.com/stuff/2024/10/10/ai-for-accessibility-conformance-testing-why/
 - The a11y is the content and the container, example for Shopify: https://www.nicchan.me/blog/shopify-accessibility-lawsuits-compliance/
 - Disabled and contrast elements: https://html5accessibility.com/stuff/2024/11/04/disabled-and-obscured/
-- Some steps (user scenario) key to be made a11y: https://www.tpgi.com/are-you-conducting-user-flow-testing-in-these-4-critical-areas/
+- Some key steps (user scenario) to test a11y : https://www.tpgi.com/are-you-conducting-user-flow-testing-in-these-4-critical-areas/
 
 ## Assistive technologies
 
@@ -74,8 +74,8 @@ Last advice, the replays of ParisWeb 2024, the conference, the only one to see i
 
 ## Ergonomics, UI & UX
 
-- A designer checklist of good practices a11y : https://accessicart.com/designing-for-accessibility-a-checklist-for-designers/
-- a11y needs usability: https://blog.usablenet.com/why-accessibility-needs-usability
+- A designer checklist of good practices : https://accessicart.com/designing-for-accessibility-a-checklist-for-designers/
+- A11y needs usability: https://blog.usablenet.com/why-accessibility-needs-usability
 
 ## Resources
 
