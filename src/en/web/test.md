@@ -26,11 +26,11 @@ Two other versions are available:
   <h2 id="test-textual-content">Textual content</h2>
   <h2 id="test-non-text-content">Non-text content</h2>
   <h2 id="test-colors-and-contrasts">Colors and contrasts</h2>
-  <h2 id="test-common-navigation">Common Navigation</h2>
+  <h2 id="test-common-navigation">Common navigation</h2>
   <h2 id="test-keyboard-navigation">Keyboard navigation</h2>
   <h2 id="test-layout">Layout</h2>
   <h2 id="test-forms">Forms</h2>
   <h2 id="test-touch-and-interactions">Touch and interactions</h2>
-  <h2 id="test-assistive-technologies">Assistive technology</h2>
+  <h2 id="test-assistive-technologies">Assistive technologies</h2>
 </section>
 

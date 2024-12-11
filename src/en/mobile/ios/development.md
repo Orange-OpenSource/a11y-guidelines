@@ -134,9 +134,6 @@ var body: some View {
 </div>
 <div class="tab-pane" id="TraitElt-BasicOperations" role="tabpanel">
 
-The `accessibilityTrait` attribute is actually a `bitmask` in which each element has its own value.
-
-![](../../images/iOSdev/Traits.png)
 <br>It's then possible to add and remove some `traits` after having checked their existence in the bitmask for instance.
 
 <div class="code-tab-pane">
@@ -377,10 +374,10 @@ Using VoiceOver for reading date, time and numbers may become rapidly a headache
 
 The rendering isn't natural if the date or time data are imported text in a `label`.
 
-![](../../images/iOSdev/DateHeureNombres_11.png)
+![Zero one slash zero four slash two thousand and fifteen. Five thirty](../../images/iOSdev/DateHeureNombres_11.png)
 <br>Incoming data must be formatted to obtain a natural and understandable descriptive vocalization.
 
-![](../../images/iOSdev/DateHeureNombres_7.png)
+![the first of April two thousand and fifteen. Five hours thirty minutes](../../images/iOSdev/DateHeureNombres_7.png)
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">
@@ -460,10 +457,10 @@ The rendering isn't natural if the date or time data are imported text in a `lab
 
 If a number is imported as is in a `label`text, the vocalization will be made on each figure rendering a final value that may be hard to be well understood.
 
-![](../../images/iOSdev/DateHeureNombres_12.png)
+![five four zero three eight none two one seven](../../images/iOSdev/DateHeureNombres_12.png)
 <br>As the previous sheet dealing with date and time, the incoming data must be formatted to be analyzed and vocalized according to the proper value of the explained number.
 
-![](../../images/iOSdev/DateHeureNombres_8.png)
+![fifty-four million thirty-eight thousand nine hundred twenty-one point seven](../../images/iOSdev/DateHeureNombres_8.png)
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">
@@ -505,10 +502,10 @@ If a number is imported as is in a `label`text, the vocalization will be made on
 Once more, formatting data is an essential step for a phone number vocalization including the special cases of the "0" figures.
 <br>The example hereunder deals with the french dialing but the rationale behind may be applied to any international type of dialing format.
 
-![default vocalization is not valid for the following phone number : 06.11.22.33.06](../../images/iOSdev/DateHeureNombres_10.png)
+![O six dot eleven dot twenty-two dot thirty-three dot O six](../../images/iOSdev/DateHeureNombres_10.png)
 <br>The idea of this format is based on a comma separation of each pair of figures that will provide the vocal punctuation.
 
-![in this case the phone number is well vocalized](../../images/iOSdev/DateHeureNombres_9.png)
+![zero six eleven twenty-two thirty-three zero six](../../images/iOSdev/DateHeureNombres_9.png)
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">
@@ -1534,7 +1531,7 @@ The `More`&nbsp;`Content` **rotor item** is the only means to get these informat
 
 The following code provides an example to reach some invisible information that are all completely embedded within an image.
 
-⚠️ It's mandatory to **import the Accessibility framework** the `AXCustomContentProvider` protocol belongs to. ⚠️
+⚠️ It's mandatory to **import the Accessibility framework** the `AXCustomContentProvider` protocol belongs to.
 
 First, define the class of the view that contains the image:
 
@@ -1644,8 +1641,10 @@ var body: some View {
 </code></pre>
 
 </div>
-
+Example of use :
+Customized content can be added to the Orange brand logo using the “More content” option on the rotor. 
 ![](../../images/iOSdev/CustomContentProvider_2.png)
+Using the vertical swipe with a finger, it is possible to hear “Telecommunications company type, Paris head office, 1988 creation date”.
 ![](../../images/iOSdev/CustomContentProvider_3.png)
 </div>
 <div class="tab-pane" id="CuCoPro-Links" role="tabpanel">
@@ -2285,19 +2284,19 @@ Since iOS7, it is possible to make the text size dynamic according to the device
      id="TextSize-iOS16"
      role="tabpanel">
     
-![](../../images/iOSdev/TailleDesTextes_iOS16_1.png)
+![On iOS 16 : menu Settings-Accessibility-Display & Text size, activate Larger Text](../../images/iOSdev/TailleDesTextes_iOS16_1.png)
 </div>
 <div class="tab-pane" 
      id="TextSize-iOS13" 
      role="tabpanel">
     
-![](../../images/iOSdev/TailleDesTextes_iOS13_1.png)
+![On iOS 13 : menu Settings-Accessibility-Display & Text size, activate Larger Text](../../images/iOSdev/TailleDesTextes_iOS13_1.png)
 </div>
 <div class="tab-pane" 
      id="TextSize-iOS12" 
      role="tabpanel">
     
-![](../../images/iOSdev/TailleDesTextes_1.png)
+![On iOS 12 : menu General-Accessibility, activate Larger Text](../../images/iOSdev/TailleDesTextes_1.png)
 </div></div>
     
 <br>The following steps should be respected in order to easily use this <abbr>API</abbr>:

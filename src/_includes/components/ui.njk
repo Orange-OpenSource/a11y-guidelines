@@ -45,7 +45,7 @@
     <li class="col-md-4 pb-3 d-flex">
       <article class="bg-white p-3 flex-grow-1">
         <h3 class="mb-1">
-          <a href="{{ post.url }}" class="text-decoration-none">{{ post.data.title }}</a>
+          <a href="{{ post.url }}" class="text-decoration-none article-focus">{{ post.data.title }}</a>
         </h3>
         {% if post.date %}
           <time class="text-muted" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale %}</time>
@@ -60,9 +60,6 @@
 {%- endmacro -%}
 
 {%- macro postsList(posts, filters = true, displayDate = true, displayTags = true) -%}
-{% if filters == true %}
-  {{ filtersBar(posts) }}
-{% endif %}
 <ol class="list-unstyled" id="list_article">
 {%- for post in posts %}{% if page.url != post.url -%}
   {% set tags = post.data.tags %}
@@ -70,7 +67,7 @@
   <li class="border-bottom border-light py-3"{% if tags %} data-tags="{{ tags | join(";") }}"{% endif %}>
     <article>
       <h2 class="mb-1">
-        <a href="{{ post.url }}" class="text-decoration-none">{{ post.data.title }}</a>
+        <a href="{{ post.url }}" class="text-decoration-none article-focus">{{ post.data.title }}</a>
       </h2>
       {% if displayTags == true and tags %}
        <span id="post_{{loop.index}}" class="visually-hidden">{{'tags.list' | translate}}</span>
@@ -78,9 +75,9 @@
           {%- for tag in tags -%}
             {%- set tagTranslationKey = 'tags.' + tag -%}
             <li class="list-inline-item">
-              <a href="?tag={{ tag }}" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 {{ tagTranslationKey | translate }}
-              </a>
+              </p>
             </li>
           {%- endfor -%}
         </ul>
