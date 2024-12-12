@@ -143,7 +143,7 @@
 	"title": "S'assurer que chaque écran possède un titre visible et pertinent",
 	"type": ["Test manuel"],
 	"tests": ["Naviguer dans les différents écrans de l'application."],
-	"verifier": "Un titre est présent sur chaque écran.",
+	"verifier": ["Un titre est présent sur chaque écran."],
 	"resultat": ["Chaque écran doit posséder un titre visible et pertinent par rapport au contexte."],
 	"exception": "",
 	"raccourcis": "",
