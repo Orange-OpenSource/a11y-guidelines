@@ -114,7 +114,7 @@
 	"themes": "Mise en page",
 	"title": "Utiliser des tailles relatives et faire du web adaptatif (responsive)",
 	"type": ["Test manuel"],
-	"tests": ["Avec Firefox, cliquer sur le menu \"Affichage\", sélectionner \"Zoom\" puis \"Agrandir uniquement le texte\" et activer un niveau de zoom à 200%"],
+	"tests": ["Avec Firefox, cliquer sur le menu \"Affichage\", sélectionner \"Zoom\" puis \"Agrandir uniquement le texte\" et activer un niveau de zoom à 200%."],
 	"verifier": ["Vérifier qu'il n'y a pas de contenus tronqués ou masqués et qu'il n'y a pas de fonctionnalités inutilisables."], 
 	"resultat": ["Absence de contenus tronqués ou masqués et absence de fonctionnalités inutilisables"], 
 	"exception": "",
