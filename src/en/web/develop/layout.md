@@ -36,8 +36,8 @@ Allow users (visually impaired, using a device outdoors, elderly people…) to i
 See the example [handling zoom, increasing the text size](../../components-examples/zoom/) for more details.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#resize-text">1.4.4 Resize text</a>
-- <a href="https://www.w3.org/TR/WCAG21/#reflow">1.4.10 Reflow</a>
+- <a href="https://www.w3.org/TR/WCAG22/#resize-text">1.4.4 Resize text</a>
+- <a href="https://www.w3.org/TR/WCAG22/#reflow">1.4.10 Reflow</a>
 
 
 
@@ -74,7 +74,7 @@ To ease the test, use the following bookmarklet (to keep in your bookmarks) : <a
 Improve reading comfort for people with cognitive and visual disabilities.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a>
+- <a href="https://www.w3.org/TR/WCAG22/#text-spacing">1.4.12 Text Spacing</a>
 
 
 ## Ensure a comprehensible reading order
@@ -102,7 +102,7 @@ A press site presents its articles in three columns. In the code, the columns ar
 
 
 **Reference <abbr>WCAG</abbr>:**
-- <a href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful sequence</a>
+- <a href="https://www.w3.org/TR/WCAG22/#meaningful-sequence">1.3.2 Meaningful sequence</a>
 
 
 
@@ -135,8 +135,8 @@ To give a semantic structure to the main regions of a page, we can use the <abbr
 Setting up this type of semantics allows visually impaired people to identify and understand the organization, the overall structure of the page and thus navigate more easily.
 
 **Reference <abbr>WCAG</abbr>:**  
-- <a href="https://www.w3.org/TR/WCAG21/#consistent-navigation">3.2.3 Consistent Navigation</a>
-- <a href="https://www.w3.org/TR/WCAG21/#consistent-identification">3.2.4 Consistent Identification</a>
+- <a href="https://www.w3.org/TR/WCAG22/#consistent-navigation">3.2.3 Consistent Navigation</a>
+- <a href="https://www.w3.org/TR/WCAG22/#consistent-identification">3.2.4 Consistent Identification</a>
 
 
 
@@ -181,5 +181,5 @@ Allow users, via their User Agent or technical assistance (e.g. their browser) t
 Improves maintainability.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**
-- <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
-- <a href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Images of Text</a>
+- <a href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
+- <a href="https://www.w3.org/TR/WCAG22/#images-of-text">1.4.5 Images of Text</a>

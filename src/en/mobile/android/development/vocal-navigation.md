@@ -45,8 +45,8 @@ Image(
 </pre>
 
 **Référence <abbr>WCAG</abbr>:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Images of Text</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#images-of-text">1.4.5 Images of Text</a>
 
 
 <br/><br/>
@@ -120,7 +120,7 @@ Box(modifier = Modifier.semantics(mergeDescendants = true) {}) {
 </pre>
 
 **Reference <abbr>WCAG</abbr>:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 
 
 
@@ -251,7 +251,7 @@ Row(
 </pre>
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 
 <br/><br/>
 
@@ -301,8 +301,8 @@ chainemoinsButton.accessibilityTraversalAfter = chaineplus.id
 
 
 **Reference <abbr>WCAG</abbr>:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-order">2.4.3 Focus Order</a>
 
 <br/><br/>
 
@@ -429,7 +429,7 @@ Image(
 
 
 **Reference <abbr>WCAG</abbr>:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 
 
 ## Group the elements 
@@ -489,7 +489,7 @@ Text(
 
 
 **Reference <abbr>WCAG</abbr>:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 ## Enable header navigation
 
@@ -528,8 +528,8 @@ Text(
 
 
 **Reference <abbr>WCAG</abbr>:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and Labels</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#headings-and-labels">2.4.6 Headings and Labels</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 
 

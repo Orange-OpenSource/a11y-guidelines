@@ -35,9 +35,9 @@ During a single-point gesture interaction, at least one condition is true:
 - Finish the function on the event is essential. Note: Functions that emulate a keyboard or numeric keypad are considered as essential.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a>
-- <a href="https://www.w3.org/TR/WCAG21/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
-- <a href="https://www.w3.org/TR/WCAG21/#motion-actuation">2.5.4 Motion Actuation</a>
+- <a href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a>
+- <a href="https://www.w3.org/TR/WCAG22/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
+- <a href="https://www.w3.org/TR/WCAG22/#motion-actuation">2.5.4 Motion Actuation</a>
 
 
 
@@ -55,7 +55,7 @@ During a single-point gesture interaction, at least one condition is true:
 **Simplified gesture:** an alternative requiring a single pointer (one finger) without path-based gesture.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a>
+- <a href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a>
 
 
 ## Provide an alternative to dragging movement 
@@ -88,4 +88,4 @@ The dragging movement functionality is:
 Access to the content must not depend on the orientation of the screen (portrait and landscape) unless a specific display orientation is essential (e.g. serious game).
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a>
+- <a href="https://www.w3.org/TR/WCAG22/#orientation">1.3.4 Orientation</a>

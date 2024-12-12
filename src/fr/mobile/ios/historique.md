@@ -12,7 +12,7 @@ displayToc: false
 
 **01/12/21** ⟹ mises à jour (swift 5.5, Xcode 13 et iOS 15)
 
-**14/09/21** ⟹ WWDC 2021 <a href="../wwdc/2021/121/">🎬</a> Optimiser VoiceOver dans un contexte riche en données
+**14/09/21** ⟹ WWDC 2021 <a href="../wwdc/2021/121/">🎬</a> Optimiser <span lang="en">VoiceOver</span> dans un contexte riche en données
 
 **09/09/21** ⟹ WWDC 2021 <a href="../wwdc/2021/122/">🎬</a> Incorporer efficacement l'accessibilité à vos graphes
 

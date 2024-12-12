@@ -8,8 +8,9 @@ displayToc: true
 Ce guide a pour objectif de présenter les différents critères d’accessibilité à respecter pour obtenir une application iOS accessible.
 </br>Chacun de ces critères est présenté en expliquant pour qui il est important, quand on peut le mettre en place, pourquoi il est important et la règle d’accessibilité qui en découle.
 
-<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555"><img class="img-fluid" alt="Accès à la vidéo WWDC mentionnant l'importance du visuel." src="../../images/conception-intro-wwdc.png"/>
-</a>
+<div><q lang="en">When designing your app, keep text size, weight, and layout in mind for clarity and readability.</q>&nbsp;<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555">WWDC20 (voir la vidéo)</a></div>
+<br><br>
+
 ## Images
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -152,7 +153,7 @@ Dans ce cas, l'utilisation de l'option d'accessibilité <button class="btn btn-l
     
 - La couleur ne doit jamais être le seul canal de transmission d’une information, d’indication d’une action, de sollicitation d’une réponse ou de distinction d’un élément.
 
-- Le contraste entre les couleurs de texte et de fond doit aussi être suffisant (à calculer avec <span lang="en">Colour&nbsp;Contrast&nbsp;Analyzer</span> ou avec la fonctionnalité [Color&nbsp;Contrast&nbsp;Calculator](../wwdc/2019#contraste-des-couleurs-0626) de l'outil <span lang="en">Accessibility&nbsp;Inspector</span> depuis Xcode 11).
+- Le contraste entre les couleurs de texte et de fond doit aussi être suffisant (à calculer avec <span lang="en">Colour&nbsp;Contrast&nbsp;Analyzer</span> ou avec la fonctionnalité [<span lang="en">Color&nbsp;Contrast&nbsp;Calculator</span>](../wwdc/2019#contraste-des-couleurs-0626) de l'outil <span lang="en">Accessibility&nbsp;Inspector</span> depuis Xcode 11).
 
 - Avec l'arrivée du **Mode Sombre** en iOS 13, une attention toute particulière doit être portée sur les contrastes utilisés au sein des différents thèmes et pouvant être modifiés avec l'option d'accessibilité <button class="btn btn-link" onclick="tabPanelFocus('a11yOptions-Description_tab','a11yOptions-Description')">augmenter&nbsp;le&nbsp;contraste</button>.
 
@@ -947,10 +948,9 @@ Les options d'accessibilité présentes dans les réglages du terminal sont tout
 
 - **tester** chacune des options appropriées afin de s'assurer que son effet est bien pris en compte au sein de l'application proposée.
 
-<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783"><img class="img-fluid" alt="Accès à la vidéo WWDC mentionnant l'importance de la prise en compte des réglages utilisateurs au sein d'une application." src="../../images/displayPreferences-wwdc.png"/>
-</a>
+<div><q lang="en">[...] it's also our duty to listen and respect the setting for users that have it enabled.</q>&nbsp;<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783"><span lang="en">WWDC 2020 - Make Your App Visually Accessible</span> (voir la vidéo)</a></div>
 
-**Cible&nbsp;:** tout le monde.  
+<br>**Cible&nbsp;:** tout le monde.  
 **Quand&nbsp;:** lors de la conception et lors du développement.
 </div>
 <div class="tab-pane" id="a11yOptions-Description" role="tabpanel" >
@@ -987,7 +987,7 @@ La liste exhaustive de ces options est fournie ci-dessous en détaillant leur ac
 
 15. [Activer le Contrôle de Sélection](#optionA11Y_switchControl).
 
-16. [Activer VoiceOver](#optionA11Y_voiceOver).
+16. [Activer <span lang="en">VoiceOver</span>](#optionA11Y_voiceOver).
 
 17. [Prévisualisation vidéo](#optionA11Y_autoPlayVideoPreviews).
 
@@ -1620,7 +1620,7 @@ Depuis **iOS 13**, cette option d'accessibilité est désormais une **<a href="h
 
 <a name="optionA11Y_voiceOver"></a>
 
-- **Activer VoiceOver** (UIAccessibilityIsVoiceOverRunning)&nbsp;: active le lecteur d'écran.
+- **Activer <span lang="en">VoiceOver</span>** (UIAccessibilityIsVoiceOverRunning)&nbsp;: active le lecteur d'écran.
 
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">

@@ -39,8 +39,8 @@ In the examples below, the frame with border corresponds to the size of the inte
 
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#target-size">2.5.5 Target Size</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#target-size">2.5.5 Target Size</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
 
 
 <br/><br/>
@@ -65,7 +65,7 @@ The application can be used in both portrait and landscape mode.
 
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#orientation">1.3.4 Orientation</a>
 
 <br/><br/>
 ## Propose an alternative to gestural actions
@@ -92,8 +92,8 @@ Navigating between several pages using a horizontal swipe (especially with ViewP
 
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#motion-actuation">2.5.4 Motion Actuation</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#motion-actuation">2.5.4 Motion Actuation</a>
 
 <br/><br/>
 ## Have readable texts
@@ -115,7 +115,7 @@ Android natively offers the Roboto font which has 16 variants, including many sa
 
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#text-spacing">1.4.12 Text Spacing</a>
 
 <br/><br/>
 ## Use native components
@@ -151,5 +151,5 @@ However, not all phones use a recent version of Android, it is recommended to pr
 - A timeout has a configurable delay.
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#timing-adjustable">2.2.1 Timing Adjustable</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#timing-adjustable">2.2.1 Timing Adjustable</a>
 

@@ -93,7 +93,7 @@
       {%- endif -%}
       docsearch({{ site.getDocSearchConfig(locale) | dump | safe }});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>{{ 'headingsAnchor.label' | translate }}</div>
+    <div hidden>{{ 'headingsAnchor.label' | translate }}</div>
     {% include "partials/licence.njk" %}
   </body>
 </html>

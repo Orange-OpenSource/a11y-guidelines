@@ -50,7 +50,7 @@ Il s’agit généralement d'un lien pointant vers un élément HTML possédant 
 1. Il est possible d’intégrer un lien d’évitement de contenu au site sous forme d’image (type « flèche » par exemple avec un attribut title) apparaissant après avoir fait défiler la page vers le bas. Le lien d’évitement permettra de faire un retour vers le haut de page directement.
 Ce lien d’évitement ne doit pas empêcher la lecture ou la compréhension de l’information, il doit être le dernier élément ciblable au clavier.
 2.	Le lien d’évitement doit être atteignable au clavier quel que soit le sens de navigation (TAB ou Shift+TAB).
-3.	Placer un lien d’évitement sur un « id » fonctionne, mais cibler le lien d’évitement sur des éléments comme <code>aside /</code>, <code>footer /</code> ou <code>main /</code> permet de rendre le lien d’évitement de contenu moins sensible aux éventuelles modifications. (Changement d’« id », ou simplement non repris dans le code d’une nouvelle page par exemple)
+3.	Placer un lien d’évitement sur un « id » fonctionne, mais cibler le lien d’évitement sur des éléments comme <code lang="en">aside /</code>, <code lang="en">footer /</code> ou <code lang="en">main /</code> permet de rendre le lien d’évitement de contenu moins sensible aux éventuelles modifications. (Changement d’« id », ou simplement non repris dans le code d’une nouvelle page par exemple)
 4.	les liens d’évitements ou d’accès rapide doivent être visuellement situés au même endroit dans la page et dans le même ordre relatif dans le code source sur l’ensemble des pages du site.
 
 ### Quand doit-on mettre en place des liens d’évitement&nbsp;?
@@ -68,7 +68,7 @@ il n’existe pas de moyen autre pour naviguer au sein de la page (titre de rubr
 Si un utilisateur active un lien « Aller au contenu » à l’aide du clavier, au prochain « TAB » de l’utilisateur le focus doit se déplacer dans le contenu principal et non sur le lien d’évitement suivant. 
 Ce focus peut être fait en plaçant une ancre vers le prochain « &nbsp;id&nbsp; » à cibler par exemple.
 
-Les lecteurs d'écran font la distinction entre le focus système et leur curseur (les lecteurs d'écran utilisent divers autres noms pour cela). Sur VoiceOver d'Apple, il s'appelle le «&nbsp;curseur VO&nbsp;», et NVDA l'appelle «&nbsp;l'objet Navigator&nbsp;», par exemple. Cette distinction est faite puisque le focus système ne peut être défini que sur des éléments focusables. Le rôle du curseur du lecteur d'écran est de définir et de lire des éléments non focusables tels que des paragraphes de textes.
+Les lecteurs d'écran font la distinction entre le focus système et leur curseur (les lecteurs d'écran utilisent divers autres noms pour cela). Sur <span lang="en">VoiceOver</span> d'Apple, il s'appelle le «&nbsp;curseur VO&nbsp;», et NVDA l'appelle «&nbsp;l'objet Navigator&nbsp;», par exemple. Cette distinction est faite puisque le focus système ne peut être défini que sur des éléments focusables. Le rôle du curseur du lecteur d'écran est de définir et de lire des éléments non focusables tels que des paragraphes de textes.
 
 Ainsi, Lorsque nous utilisons un lien d'ancrage, le focus système se déplace avec lui. Cependant le curseur du lecteur d'écran se déplacera pour être défini sur l'élément ancré que s'il est focusable. Lorsque l'élément ancré n'est pas focusable, le lien de saut est toujours considéré comme «&nbsp;l'élément actif&nbsp;».
 
@@ -108,7 +108,7 @@ Quelle que soit la solution, il faut que les liens d’évitement soient visible
 ## Exemples d’usage particulier
 
 Si les liens d’évitement ne sont pas rendus visibles à l’écran par défaut (pour des questions de design par exemple). Il est important que ceux-ci restent interprétés par les outils d’assistance.
-La solution consiste à utiliser une classe CSS de masquage accessible. Les frameworks type **Bootstrap** et **Boosted** embarquent directement ce type de classe (&nbsp;<code>visually-hidden</code>&nbsp; et &nbsp;<code>visually-hidden-focusable</code>&nbsp;). Ainsi même s’il ne sera pas visible à l’écran, un élément possédant la classe &nbsp;<code>visually-hidden</code>&nbsp; sera correctement vocalisé par un lecteur d’écran.
+La solution consiste à utiliser une classe CSS de masquage accessible. Les <span lang="en">frameworks</span> type **Bootstrap** et **Boosted** embarquent directement ce type de classe (&nbsp;<code lang="en">visually-hidden</code>&nbsp; et &nbsp;<code lang="en">visually-hidden-focusable</code>&nbsp;). Ainsi même s’il ne sera pas visible à l’écran, un élément possédant la classe &nbsp;<code lang="en">visually-hidden</code>&nbsp; sera correctement vocalisé par un lecteur d’écran.
 
 ```css
 a.evitement {
