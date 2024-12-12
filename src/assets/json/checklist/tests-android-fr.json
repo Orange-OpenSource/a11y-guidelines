@@ -1,10 +1,10 @@
 [{
 	"themes": "Images",
 	"title": "S'assurer que seules les images informatives sont restituées",
-	"type": "Talkback",
-	"tests": "Activer Talkback (voir <a target=_blank href=https://a11y-guidelines.orange.com/fr/articles/how-to-test-android/>l'article sur la prise en main des fonctionnalités sur Android (nouvel onglet)</a>).",
+	"type": ["Talkback"],
+	"tests": ["Activer Talkback (voir <a target=_blank href=https://a11y-guidelines.orange.com/fr/articles/how-to-test-android/>l'article sur la prise en main des fonctionnalités sur Android (nouvel onglet)</a>)."],
 	"verifier": ["Les images informatives ont une alternative restituée par Talkback.", "Les images décoratives sont ignorées."],
-	"resultat": "Seules les images informatives sont restituées.",
+	"resultat": ["Seules les images informatives sont restituées."],
 	"exception": "",
 	"raccourcis": "",
 	"moreInfo": "",
