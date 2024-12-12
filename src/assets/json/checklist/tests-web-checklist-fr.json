@@ -103,7 +103,7 @@
 	"tests": ["Parcourir la page au clavier à l'aide des touches <kbd>Tab</kbd> ou <kbd>shift + Tab</kbd>","Utiliser tous les éléments interactifs (en tapant sur les touches <kbd>Entrer</kbd>, <kbd>Espace</kbd> pour les boutons/liens, et les flèches directionnelles pour certains composants : une série de boutons radio, un système d'onglets…)"],
 	"verifier": [["Tout ce qui peut être fait à la souris peut être fait au clavier et inversement"],["L'ordre de déplacement du focus conserve une logique de lecture et d'utilisation"],["Le focus ne reste pas bloqué sur une partie de la page (piège clavier)"],["L'indicateur de focus (outline) est visible sur tous les éléments interactifs et possède un contraste suffisant"]],
 	"resultat": ["Tous les éléments interactifs sont atteignables en naviguant au clavier", "Tous les éléments interactifs sont utilisables depuis des interactions clavier"],
-	"exception": "",tu m'
+	"exception": "",
 	"raccourcis": "",
 	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/navigation-clavier/#permettre-dutiliser-les-principales-fonctionnalites-de-lapplication-au-clavier",
     "profils": ["Checklist incontournables"], 
