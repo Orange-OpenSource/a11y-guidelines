@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       reinitFilters: 'Reinit <span class="visually-hidden">&nbsp;filters</span>'
     },
     'fr': {
-      process : "Procédures",
+      process : "Procédure",
       check : "A vérifier",
       conception: 'Conception',
       development: 'Développement',

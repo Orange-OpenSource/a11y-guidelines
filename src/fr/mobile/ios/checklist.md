@@ -15,12 +15,10 @@ js:
 Ce socle de critères, destiné aux applications mobiles iOS, permet d’éviter les principales erreurs d’accessibilité.
 Sa mise en œuvre ne permet pas d’obtenir à coup sûr un site accessible, mais pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité progressive.
 
-Le respect de la charte Orange appelée la Brand (Design for digital platforms Guideline), disponible sur [le site de la marque Orange](https://design.orange.com/) est un prérequis à l’utilisation de ce socle.
+Le respect de la charte graphique d’Orange appelée [Design System Orange ](https://design.orange.com/) est un prérequis à l’utilisation de ce socle.
 Certains points déjà présents dans la charte Orange (utilisation des couleurs, alignement du texte…) n’ont pas été repris dans cette liste de critères.
 
-Cette grille de tests guidés s’adresse aux concepteurs, développeurs, qualifieurs, product owners, etc.
-
-Il convient d'utiliser la méthode de tests et les outils recommandés pour que le résultat soit fiable.
+Cette grille de tests guidés s’adresse aux concepteurs, développeurs, qualifieurs, product owners, etc. Il convient de l'utiliser avec les outils recommandés pour que les résultats soient fiables.
 
 
 <section id="refTests" class="accordion" aria-multiselectable="true">
