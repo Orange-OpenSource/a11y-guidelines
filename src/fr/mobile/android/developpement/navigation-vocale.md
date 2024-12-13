@@ -353,7 +353,7 @@ Il est fréquent de tester la version d’Android avant de déclencher une vocal
    android:accessibilityLiveRegion="polite" /&gt;
 </code></pre>
 
-**Exemple de région live avec jetpackcompose**:
+**Exemple de région live avec Jetpack Compose**:
 
 <pre>
 <code class="kotlin">@Composable
