@@ -3,7 +3,7 @@
 	"title": "Donner un titre aux pages",  
 	"type": ["Test manuel - Inspecteur de code"], 
 	"tests": [["Lancer l'inspecteur de code du navigateur et examiner le titre de page (<code>&lt;title&gt;[titre de la page]&lt;/title&gt;</code>)."], ["Ou lire le titre présent dans l'onglet du navigateur."]], 
-	"verifier": ["Le titre de page est renseigné", "Le titre de page est unique et explicite le contenu de la page.", "Le titre de page reflète les modifications du contenu (exemple : erreur dans un formulaire, nombre et termes d'une recherche, étape dans un parcours, mise à jour asynchrone du contenu…)."], 
+	"verifier": ["Le titre de page est renseigné.", "Le titre de page est unique et explicite le contenu de la page.", "Le titre de page reflète les modifications du contenu (exemple : erreur dans un formulaire, nombre et termes d'une recherche, étape dans un parcours, mise à jour asynchrone du contenu…)."], 
 	"resultat": ["Chaque page possède un titre unique et descriptif du contenu, globalement du plus précis vers le plus général (exemple : [résumé du contenu de la page - nom du site])."], 
 	"exception": "", 
 	"raccourcis": "", 
