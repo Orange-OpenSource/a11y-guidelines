@@ -144,7 +144,7 @@
 	"type": ["Test manuel"],
 	"tests": ["Naviguer dans les différents écrans de l'application."],
 	"verifier": ["Un titre est présent sur chaque écran."],
-	"resultat": ["Chaque écran doit posséder un titre visible et pertinent par rapport au contexte."],
+	"resultat": ["Chaque écran doit posséder un titre visible, pertinent par rapport au contexte et si possible unique."],
 	"exception": "",
 	"raccourcis": "",
 	"moreInfo": "http://localhost:8080/fr/mobile/ios/conception/#titre-et-en-tete",
