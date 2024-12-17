@@ -10,11 +10,11 @@ tags:
 
 Mise à jour : décembre 2024
 
-## Qu'est-ce qu’un lien d’évitement&nbsp;?
+## Qu'est-ce qu'un lien d'évitement&nbsp;?
 
 ### Qu'est ce&nbsp;?
 
-Les liens d'évitement sont des raccourcis permettant d’accéder directement à une zone de contenu ou d'éviter des régions de la page afin de naviguer plus rapidement.
+Les liens d'évitement sont des raccourcis permettant d'accéder directement à une zone de contenu ou d'éviter des régions de la page afin de naviguer plus rapidement.
 
 On peut distinguer trois types de liens&nbsp;:
 1. les liens d'accès rapide : rassemblés en haut de page et permettant d'aller aux principales régions de la page&nbsp;: «&nbsp;Aller au menu&nbsp;», «&nbsp;Aller au contenu&nbsp;», «&nbsp;Aller à la recherche&nbsp;», par exemple
@@ -49,24 +49,24 @@ Il s'agit généralement d'un lien pointant vers un élément HTML possédant un
 
 ## Quelles sont les bonnes pratiques&nbsp;?
 
-- Il est possible d'intégrer un lien d’évitement de contenu au site sous forme d’image (type « flèche » par exemple avec un attribut <code>title</code>) apparaissant après avoir fait défiler la page vers le bas. Le lien d’évitement permettra de faire un retour vers le haut de page directement.
+- Il est possible d'intégrer un lien d'évitement de contenu au site sous forme d'image (type « flèche » par exemple avec un attribut <code>title</code>) apparaissant après avoir fait défiler la page vers le bas. Le lien d'évitement permettra de faire un retour vers le haut de page directement.
 Ce lien d’évitement ne doit pas empêcher la lecture ou la compréhension de l’information, il doit être le dernier élément ciblable au clavier.
 - Le lien d’évitement doit être atteignable au clavier quel que soit le sens de navigation (<kbd>TAB</kbd> ou <kbd>Shift</kbd> + <kbd>TAB</kbd>).
-- Placer un lien dévitement sur un <code>id</code> fonctionne, mais cibler le lien d'évitement sur des éléments comme <code>aside</code>, <code>footer</code> ou <code>main</code> permet de rendre le lien d'évitement de contenu moins sensible aux éventuelles modifications. (Changement d’« id », ou simplement non repris dans le code d’une nouvelle page par exemple)
+- Placer un lien dévitement sur un <code>id</code> fonctionne, mais cibler le lien d'évitement sur des éléments comme <code>aside</code>, <code>footer</code> ou <code>main</code> permet de rendre le lien d'évitement de contenu moins sensible aux éventuelles modifications. (Changement d'<code>id</code>, ou simplement non repris dans le code d'une nouvelle page par exemple)
 - les liens d'évitements ou d'accès rapide doivent être visuellement situés au même endroit dans la page et dans le même ordre relatif dans le code source sur l'ensemble des pages du site.
 
 ### Quand doit-on mettre en place des liens d’évitement&nbsp;?
 
-La première question à se poser est, sur mon site, l’utilisateur a-t-il besoin de liens d’évitement ?
+La première question à se poser est, sur mon site, l'utilisateur a-t-il besoin de liens d'évitement ?
 
-Les principales raisons de la mise en place de liens d’évitement:
+Les principales raisons de la mise en place de liens d'évitement:
 - la page est longue
 - la navigation contient beaucoup de liens
 - le contenu contient beaucoup de liens (plusieurs menus de navigation, pieds de page faisant office de plan de site…)
 - la page est découpée en de nombreuses parties distinctes (portail, tableau de bord…)
+- il n’existe pas de moyen autre pour naviguer au sein de la page (titre de rubrique, structure sémantique HTML5…)
 
-il n’existe pas de moyen autre pour naviguer au sein de la page (titre de rubrique, structure sémantique HTML5…)
-**Note** : attention pour qu'un lien d’évitement soit fonctionnel, il ne doit pas se contenter de faire défiler la page à l'endroit indiqué (contenu principal par exemple). Il doit permettre à l'utilisateur de « &nbsp;sauter&nbsp; » une partie de la page.
+**Note** : attention pour qu'un lien d'évitement soit fonctionnel, il ne doit pas se contenter de faire défiler la page à l'endroit indiqué (contenu principal par exemple). Il doit permettre à l'utilisateur de « &nbsp;sauter&nbsp; » une partie de la page.
 Si un utilisateur active un lien « Aller au contenu » à l'aide du clavier, au prochain <kbd>TAB</kbd> de l'utilisateur le focus doit se déplacer dans le contenu principal et non sur le lien d'évitement suivant.
 Ce focus peut être fait en plaçant une ancre vers le prochain <code>id</code> à cibler par exemple.
 
