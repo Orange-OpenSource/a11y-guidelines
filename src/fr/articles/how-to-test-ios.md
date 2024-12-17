@@ -1,5 +1,5 @@
 ---
-title: "Tester l'accessibilité d'une application <span lang='en'>iOS</span>"
+title: "Tester l'accessibilité d'une application iOS"
 abstract: "Description des principaux outils et méthodes de tests pour évaluer rapidement l'accessibilité d'une application iOS"
 titleBeforeTag: true
 date: "2024-03-04"
