@@ -64,7 +64,7 @@ Les principales raisons de la mise en place de liens d'évitement:
 - la navigation contient beaucoup de liens
 - le contenu contient beaucoup de liens (plusieurs menus de navigation, pieds de page faisant office de plan de site…)
 - la page est découpée en de nombreuses parties distinctes (portail, tableau de bord…)
-- il n’existe pas de moyen autre pour naviguer au sein de la page (titre de rubrique, structure sémantique HTML5…)
+- il n'existe pas de moyen autre pour naviguer au sein de la page (titre de rubrique, structure sémantique HTML5…)
 
 **Note** : attention pour qu'un lien d'évitement soit fonctionnel, il ne doit pas se contenter de faire défiler la page à l'endroit indiqué (contenu principal par exemple). Il doit permettre à l'utilisateur de « &nbsp;sauter&nbsp; » une partie de la page.
 Si un utilisateur active un lien « Aller au contenu » à l'aide du clavier, au prochain <kbd>TAB</kbd> de l'utilisateur le focus doit se déplacer dans le contenu principal et non sur le lien d'évitement suivant.
