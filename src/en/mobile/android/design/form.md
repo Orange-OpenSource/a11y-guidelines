@@ -28,9 +28,9 @@ It is essential to indicate to the user, for a good understanding of the input s
 
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and labels</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or instructions</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#identify-input-purpose">1.3.5 Identify input purpose</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#headings-and-labels">2.4.6 Headings and labels</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#labels-or-instructions">3.3.2 Labels or instructions</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#identify-input-purpose">1.3.5 Identify input purpose</a>
 
 
 ## Identify input errors in the form
@@ -52,5 +52,5 @@ It is also recommended to provide the user with a correction suggestion.
 
 
 **Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#error-identification">3.3.1 Error identification</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#error-suggestion">3.3.3 Error suggestion</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#error-identification">3.3.1 Error identification</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#error-suggestion">3.3.3 Error suggestion</a>

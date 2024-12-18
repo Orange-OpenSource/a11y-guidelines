@@ -1,0 +1,5 @@
+# Ignore docs files
+/_site/
+
+# Folders to ignore
+/node_modules/

@@ -27,7 +27,7 @@ Dans certains cas, il semble inutile d’accompagner le champ de formulaire d’
 
 À noter que l’attribut `title` positionné sur une balise de champ de formulaire fait office de libellé tout comme les attributs `aria-label` et `aria-labelledby` (cf. [les attributs ARIA qui peuvent vous sauver](../../../articles/attributs-aria-qui-peuvent-vous-sauver/)) dans cet ordre de préférence.
 
-L'attribut `autocomplete` doit être présent et pertinent pour tous les champs listés dans <a lang="en" href="https://www.w3.org/TR/WCAG21/#input-purposes">7. Input Purposes for User Interface Components</a>.
+L'attribut `autocomplete` doit être présent et pertinent pour tous les champs listés dans <a lang="en" href="https://www.w3.org/TR/WCAG22/#input-purposes">7. Input Purposes for User Interface Components</a>.
 
 **À vérifier&nbsp;:**
 
@@ -60,10 +60,10 @@ Pour les champs avec auto-complétion, facilite la tâche aux déficients moteur
 Consulter [l’exemple de formulaire accessible](../../exemples-de-composants/formulaires/) pour plus d’informations.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels ">2.4.6 Headings and Labels</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or Instructions</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#help">3.3.5 Help</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#identify-input-purpose">1.3.5 Identify input purpose</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#headings-and-labels ">2.4.6 Headings and Labels</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#labels-or-instructions">3.3.2 Labels or Instructions</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#help">3.3.5 Help</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#identify-input-purpose">1.3.5 Identify input purpose</a>
 
 
 
@@ -101,6 +101,6 @@ Guider l’utilisateur en cas d’erreurs permet d’améliorer la compréhensio
 Consulter [l’exemple de formulaire accessible](../../exemples-de-composants/formulaires/) pour plus d’informations.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#error-identification">3.3.1 Error Identification</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#error-suggestion">3.3.3 Error Suggestion</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#error-prevention-legal-financial-data">3.3.4 Error Prevention (Legal, Financial, Data)</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#error-identification">3.3.1 Error Identification</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#error-suggestion">3.3.3 Error Suggestion</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#error-prevention-legal-financial-data">3.3.4 Error Prevention (Legal, Financial, Data)</a>

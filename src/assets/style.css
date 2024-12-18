@@ -111,6 +111,15 @@ blockquote p::after {
     padding-left: .5rem;
 }
 
+.tagType {
+    background-color: black;
+    color: white;
+    padding: 6px 12px 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    margin-bottom: 0;
+}
 
 /*
  * Glossary
@@ -185,32 +194,33 @@ pre code {
  * Search field
  */
 
-.DocSearch-Button:hover, .DocSearch-Button:focus{
-    box-shadow: inset 0 0 0 .125rem #f16e00 ;
-    
+.DocSearch-Button:hover, .DocSearch-Button:focus {
+    box-shadow: inset 0 0 0 .125rem #f16e00;
+
 }
 
 .DocSearch-Form {
     box-shadow: #ccc 0 0 0 .125rem inset;
-}   
+}
 
 .DocSearch-Form:focus-within, .DocSearch-Form:focus, .DocSearch-Form:hover {
     box-shadow: #000 0 0 0 .125rem inset;
 }
 
-.DocSearch-Hit{
+.DocSearch-Hit {
     padding: 3px;
 }
 
 .DocSearch-Hit[aria-selected="true"] a {
-    background-color: #f16e00 ;
+    background-color: #f16e00;
 }
+
 .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-action, .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-icon, .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-path, .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-text, .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-title, .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-Tree, .DocSearch-Hit[aria-selected="true"] mark {
     color: #000 !important;
     background: none;
 }
 
-.DocSearch-Hit-Container, .DocSearch-Hit-action, .DocSearch-Hit-icon, .DocSearch-MagnifierLabel, .DocSearch-Hit-source{
+.DocSearch-Hit-Container, .DocSearch-Hit-action, .DocSearch-Hit-icon, .DocSearch-MagnifierLabel, .DocSearch-Hit-source {
     color: #000;
 }
 
@@ -218,22 +228,23 @@ pre code {
     color: currentColor;
     background-color: #f16e00;
 }
+
 .DocSearch-Hit-path, .DocSearch-Help, .DocSearch-Label, .DocSearch-Commands-Key, .DocSearch-Button-Key, .DocSearch-Label, .DocSearch-Button {
-    color:  #666;
+    color: #666;
 }
 
-.DocSearch-Cancel{
-    color:  #000;
+.DocSearch-Cancel {
+    color: #000;
     text-decoration: underline;
 }
 
-.DocSearch-Cancel:focus, .DocSearch-Cancel:hover{
+.DocSearch-Cancel:focus, .DocSearch-Cancel:hover {
     text-decoration-thickness: .1rem;
 }
 
-.DocSearch-Prefill{
-    color:  #000;
-    font-weight: bolder; 
+.DocSearch-Prefill {
+    color: #000;
+    font-weight: bolder;
 }
 
 .DocSearch-Button-Container {
@@ -303,16 +314,16 @@ pre code {
 
 .bg-800 {
     background-color: #595959 !important;
-    color: #fff!important
+    color: #fff !important
 }
 
 .bg-800 a {
-    color: #fff!important
+    color: #fff !important
 }
 
 .bg-900 {
     background-color: #333333 !important;
-    color: #fff!important
+    color: #fff !important
 }
 
 .no-js .hidden-if-no-js {
@@ -332,7 +343,8 @@ pre code {
     .breadcrumb-item:nth-last-of-type(2)::before {
         transform: rotate(0);
     }
-    .MobileDropdownNavigationContainer .dropdown~.dropdown {
+
+    .MobileDropdownNavigationContainer .dropdown ~ .dropdown {
         margin-top: .625rem;
     }
 }
@@ -353,9 +365,11 @@ pre code {
 .bg-supporting-green {
     color: #000 !important;
 }
+
 .bg-supporting-purple {
     color: #000 !important;
 }
+
 .bg-supporting-yellow {
     color: #000 !important;
 }
@@ -366,9 +380,9 @@ pre code {
     vertical-align: middle;
 }
 
-.bg-supporting-customblue{
+.bg-supporting-customblue {
     background-color: #085EBD;
-    color:#fff;
+    color: #fff;
 }
 
 .table-persona-pink th[scope=row] {
@@ -383,55 +397,55 @@ pre code {
     background-color: #FFF1FB;
 }
 
-.table-persona-blue th[scope=row]{
+.table-persona-blue th[scope=row] {
     background-color: #D9F0FB;
 }
 
-.table-persona-yellow th[scope=row]{
+.table-persona-yellow th[scope=row] {
     background-color: #FFF5CB;
 }
 
-.text-supporting-pink{
-    color:#ffb4e6 !important
+.text-supporting-pink {
+    color: #ffb4e6 !important
 }
 
-.text-supporting-green{
-    color:#50be87 !important
+.text-supporting-green {
+    color: #50be87 !important
 }
 
-.text-supporting-purple{
-    color:#D9C2F0 !important
+.text-supporting-purple {
+    color: #D9C2F0 !important
 }
 
-.text-supporting-blue{
-    color:#4BB4E6 !important
+.text-supporting-blue {
+    color: #4BB4E6 !important
 }
 
-.text-supporting-yellow{
-    color:#fc0 !important
+.text-supporting-yellow {
+    color: #fc0 !important
 }
 
-.persona-background-pink{
+.persona-background-pink {
     background: url(/assets/images/bosses-pink.svg) no-repeat bottom;
     background-size: contain;
 }
 
-.persona-background-green{
+.persona-background-green {
     background: url(/assets/images/bosses-green.svg) no-repeat bottom;
     background-size: contain;
 }
 
-.persona-background-purple{
+.persona-background-purple {
     background: url(/assets/images/bosses-purple.svg) no-repeat bottom;
     background-size: contain;
 }
 
-.persona-background-blue{
+.persona-background-blue {
     background: url(/assets/images/bosses-blue.svg) no-repeat bottom;
     background-size: contain;
 }
 
-.persona-background-yellow{
+.persona-background-yellow {
     background: url(/assets/images/bosses-yellow.svg) no-repeat bottom;
     background-size: contain;
 }
@@ -440,25 +454,28 @@ pre code {
     .step-1 {
         margin-top: 150px;
     }
+
     .step-2 {
         margin-top: 100px;
     }
+
     .step-3 {
         margin-top: 50px;
     }
-    .pb-lg-persona{
+
+    .pb-lg-persona {
         padding-bottom: 5.75rem !important
     }
 }
 
 @media (max-width: 1024px) {
-    .lg-persona{
+    .lg-persona {
         margin-bottom: 6.10rem;
     }
 }
 
 @media (min-width: 768px) {
-    .mb-persona{
+    .mb-persona {
         margin-bottom: 6.10rem;
     }
 }
@@ -473,8 +490,8 @@ pre code {
 }
 
 .persona-apps .small {
-    font-size: .75rem;    
-    padding-top: .25rem;    
+    font-size: .75rem;
+    padding-top: .25rem;
 }
 
 .persona-apps li {
@@ -490,13 +507,13 @@ pre code {
 
 .form-control.bg-dark:focus {
     color: #FFF;
-    border-color: #ff7900!important;
+    border-color: #ff7900 !important;
 }
 
 
 /*secondary navigation*/
 
-.o-nav-local .nav>.nav-item:first-child .active::before {
+.o-nav-local .nav > .nav-item:first-child .active::before {
     left: 0;
 }
 
@@ -530,4 +547,35 @@ pre code {
     line-height: 1.125;
     color: #fff;
     letter-spacing: -.00625rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/**
+ * For links color accessibility
+ */
+a:hover {
+    font-weight: bold;
+}
+
+a.breadcrumb-focus:hover {
+    font-size: calc(1em + 2px);
+}
+
+a.header-anchor:hover,
+a.nav-link:hover,
+a.article-focus:hover,
+.h2-focus a:hover {
+    color: #F16E00;
+}
+
+:root {
+    --bs-link-hover-color: #000;
+    --bs-link-hover-color-rgb: 0, 0, 0;
+}
+
+.accordion-title.h6 {
+    font-size: 19px;
 }
