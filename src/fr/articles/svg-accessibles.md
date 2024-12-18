@@ -12,7 +12,7 @@ Mise à jour : décembre 2024
 
 Voici quelques recommandations techniques pour vous aider à intégrer des images SVG accessibles.
 
-Important : Quelle que soit la solution retenue, le support navigateurs/aides techniques évoluant très rapidement, pensez à tester vos implémentations sur les configurations les plus utilisées par vos utilisateurs.
+Important : quelle que soit la solution retenue, le support navigateurs/aides techniques évoluant très rapidement, pensez à tester vos implémentations sur les configurations les plus utilisées par vos utilisateurs.
 
 ## Image de décoration
 
@@ -45,8 +45,8 @@ La solution la plus efficace consiste à utiliser l'attribut `alt` :
 &lt;img src="XXX.svg" role="img" alt="texte de remplacement"&gt;
 </code></pre>
 
-en second choix, utiliser `aria-label` (mais cela enfreint la première règle d'ARIA, à savoir, ne pas utiliser d'ARIA si une solution native HTML existe)
-&nbsp;:
+en second choix, utiliser `aria-label` (mais cela enfreint la première règle d'ARIA, à savoir, ne pas utiliser d'ARIA si une solution native HTML existe) :
+
 <pre><code class="html">
 &lt;img src="XXX.svg" role="img" aria-label="texte de remplacement"&gt;
 </code></pre>
@@ -58,7 +58,7 @@ Note : Afin d'assurer un support optimal par les aides techniques et navigateurs
 &lt;img src="XXX.svg" role="img" aria-labelledby="alt-text"&gt;
 </code></pre>
 
-Note : On rajoute `role="img"` pour s'assurer qu'avec macOS Safari, VoiceOver (anciennes versions) annonce bien « image ».
+Note : On rajoute `role="img"` pour s'assurer que l'élément soit bien considéré comme une image par les technologies d'assistance.
 
 ### SVG en ligne (inline)
 
