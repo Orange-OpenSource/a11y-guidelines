@@ -128,7 +128,8 @@ module.exports = {
           { label: 'Développer', href: '/fr/web/developper/' },
           { label: 'Tester', href: '/fr/web/tester/' },
           { label: 'Auditer', href: '/fr/web/audit-wcag/' },
-          { label: 'Boite à outils', href: '/fr/web/outils/' }
+          { label: 'Boite à outils', href: '/fr/web/outils/' },
+          { label: 'Incontournables', href: '/fr/web/checklist-initiale/' }
         ]
       },
       {
