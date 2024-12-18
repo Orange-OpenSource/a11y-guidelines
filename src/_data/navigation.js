@@ -57,8 +57,8 @@ module.exports = {
           { label: 'Develop', href: '/en/mobile/android/development/' },
           { label: 'Test', href: '/en/mobile/android/test/' },
           { label: 'Audit', href: '/en/mobile/android/wcag-audit/' },
-          { label: 'Toolbox', href: '/en/mobile/android/toolbox/' }
-        ]
+          { label: 'Toolbox', href: '/en/mobile/android/toolbox/' }        ]
+		 
       },
       {
         label: 'iOS',
@@ -76,7 +76,8 @@ module.exports = {
           { label: 'Test', href: '/en/mobile/ios/test/' },
           { label: 'Audit', href: '/en/mobile/ios/wcag-audit/' },
           { label: 'Toolbox', href: '/en/mobile/ios/toolbox/' },
-          { label: 'WWDC', href: '/en/mobile/ios/wwdc/' }        ]
+          { label: 'WWDC', href: '/en/mobile/ios/wwdc/' }
+        ]
       },
       {
         label: 'Content and communication',
@@ -128,7 +129,8 @@ module.exports = {
           { label: 'Développer', href: '/fr/web/developper/' },
           { label: 'Tester', href: '/fr/web/tester/' },
           { label: 'Auditer', href: '/fr/web/audit-wcag/' },
-          { label: 'Boite à outils', href: '/fr/web/outils/' }
+          { label: 'Boite à outils', href: '/fr/web/outils/' },
+          { label: 'Incontournables', href: '/fr/web/checklist-initiale/' }
         ]
       },
       {
@@ -146,7 +148,8 @@ module.exports = {
           { label: 'Développer', href: '/fr/mobile/android/developpement/' },
           { label: 'Tester', href: '/fr/mobile/android/test/' },
           { label: 'Auditer', href: '/fr/mobile/android/audit-wcag/' },
-          { label: 'Boite à outils', href: '/fr/mobile/android/outils/' }
+          { label: 'Boite à outils', href: '/fr/mobile/android/outils/' },
+          { label: 'Incontournables', href: '/fr/mobile/android/checklist/' }
         ]
       },
       {
@@ -165,7 +168,8 @@ module.exports = {
           { label: 'Tester', href: '/fr/mobile/ios/test/' },
           { label: 'Auditer', href: '/fr/mobile/ios/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/mobile/ios/outils/' },
-          { label: 'Incontournables', href: '/fr/mobile/ios/checklist/' }
+          { label: 'Incontournables', href: '/fr/mobile/ios/checklist/' },
+          { label: 'WWDC', href: '/fr/mobile/ios/wwdc/' }
         ]
       },
       {
@@ -198,14 +202,14 @@ module.exports = {
       { label: 'Contact', href: '/en/contact/' },
       { label: 'About', href: '/en/about/' },
       { label: 'RSS feed', href: '/feed-en.xml' },
-      { label: 'Accessibility', href: '/en/accessibility/' },
+      { label: 'Accessibility: partially compliant', href: '/en/accessibility/' },
       { label: 'Pre-release on Netlify', href: 'https://a11y-guidelines-orange.netlify.app/en/' }
     ],
     fr: [
       { label: 'Contact', href: '/fr/contact/' },
       { label: 'À propos', href: '/fr/a-propos/' },
       { label: 'Flux rss', href: '/feed-fr.xml' },
-      { label: 'Accessibilité', href: '/fr/accessibilite/' },
+      { label: 'Accessibilité : partiellement conforme', href: '/fr/accessibilite/' },
       { label: 'Pré-version sur Netlify', href: 'https://a11y-guidelines-orange.netlify.app/fr/' }
     ]
   }
