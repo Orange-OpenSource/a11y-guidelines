@@ -57,7 +57,8 @@ module.exports = {
           { label: 'Develop', href: '/en/mobile/android/development/' },
           { label: 'Test', href: '/en/mobile/android/test/' },
           { label: 'Audit', href: '/en/mobile/android/wcag-audit/' },
-          { label: 'Toolbox', href: '/en/mobile/android/toolbox/' }        ]
+          { label: 'Toolbox', href: '/en/mobile/android/toolbox/' }        
+	]	 
       },
       {
         label: 'iOS',
@@ -101,7 +102,6 @@ module.exports = {
       },
       { label: 'Articles', href: '/en/articles/' },
       { label: 'Persona', href: '/en/persona/', mainMenu: false }
-     
     ],
     'fr': [
       { label: 'Accueil', href: '/fr/' },
@@ -167,6 +167,7 @@ module.exports = {
           { label: 'Tester', href: '/fr/mobile/ios/test/' },
           { label: 'Auditer', href: '/fr/mobile/ios/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/mobile/ios/outils/' },
+          { label: 'Incontournables', href: '/fr/mobile/ios/checklist/' },
           { label: 'WWDC', href: '/fr/mobile/ios/wwdc/' }
         ]
       },
