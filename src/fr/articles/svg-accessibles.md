@@ -45,7 +45,7 @@ La solution la plus efficace consiste à utiliser l'attribut `alt` :
 &lt;img src="XXX.svg" role="img" alt="texte de remplacement"&gt;
 </code></pre>
 
-en second choix, utiliser `aria-label` (mais celà enfrein la première règle d'ARIA, à savoir, ne pas utiliser d'ARIA si une solution native HTML existe)
+en second choix, utiliser `aria-label` (mais cela enfreint la première règle d'ARIA, à savoir, ne pas utiliser d'ARIA si une solution native HTML existe)
 &nbsp;:
 <pre><code class="html">
 &lt;img src="XXX.svg" role="img" aria-label="texte de remplacement"&gt;
