@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
             filtersTitle: 'Go to filters'
         },
         'fr': {
-            process: "Procédures",
-            check: "A vérifier",
+            process: "Procédure",
+            check: "À vérifier",
             conception: 'Conception',
             development: 'Développement',
             results: "Résultats",
