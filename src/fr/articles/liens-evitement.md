@@ -1,5 +1,5 @@
 ---
-title: "Les bonnes pratiques pour les liens d’évitements"
+title: "Les bonnes pratiques pour les liens d'évitement"
 abstract: "Les liens d'évitement, qu'est-ce et comment bien les mettre en œuvre"
 titleBeforeTag: true
 date: "2023-06-22"
@@ -50,12 +50,12 @@ Il s'agit généralement d'un lien pointant vers un élément HTML possédant un
 ## Quelles sont les bonnes pratiques&nbsp;?
 
 - Il est possible d'intégrer un lien d'évitement de contenu au site sous forme d'image (type « flèche » par exemple avec un attribut <code>title</code>) apparaissant après avoir fait défiler la page vers le bas. Le lien d'évitement permettra de faire un retour vers le haut de page directement.
-Ce lien d’évitement ne doit pas empêcher la lecture ou la compréhension de l’information, il doit être le dernier élément ciblable au clavier.
-- Le lien d’évitement doit être atteignable au clavier quel que soit le sens de navigation (<kbd>TAB</kbd> ou <kbd>Shift</kbd> + <kbd>TAB</kbd>).
+Ce lien d'évitement ne doit pas empêcher la lecture ou la compréhension de l'information, il doit être le dernier élément ciblable au clavier.
+- Le lien d'évitement doit être atteignable au clavier quel que soit le sens de navigation (<kbd>TAB</kbd> ou <kbd>Shift</kbd> + <kbd>TAB</kbd>).
 - Placer un lien dévitement sur un <code>id</code> fonctionne, mais cibler le lien d'évitement sur des éléments comme <code>aside</code>, <code>footer</code> ou <code>main</code> permet de rendre le lien d'évitement de contenu moins sensible aux éventuelles modifications. (Changement d'<code>id</code>, ou simplement non repris dans le code d'une nouvelle page par exemple)
 - les liens d'évitements ou d'accès rapide doivent être visuellement situés au même endroit dans la page et dans le même ordre relatif dans le code source sur l'ensemble des pages du site.
 
-### Quand doit-on mettre en place des liens d’évitement&nbsp;?
+### Quand doit-on mettre en place des liens d'évitement&nbsp;?
 
 La première question à se poser est, sur mon site, l'utilisateur a-t-il besoin de liens d'évitement ?
 

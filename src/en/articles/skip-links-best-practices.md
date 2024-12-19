@@ -58,4 +58,4 @@ We have seen that the quick access links can be visible or hidden by default and
 
 Whatever the solution, the skip links must be visible (as far as possible) and usable by everyone!
 
-For any comments, suggestions, feel free to view or create an issue on our <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">github account </a>.
+For any comments, suggestions, feel free to view or create an issue on our <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">github account</a>.
