@@ -31,7 +31,7 @@ Important : quelle que soit la solution retenue, le support navigateurs/aides te
 
 Vous devez vous assurer que la balise `svg` ou un de ses enfants (`<g>`, `<path>`…) ne possède aucun attribut visant à lui fournir un nom accessible (`title`, `desc`, `aria-*`…).
 
-Note : historiquement, l'attribut `focusable="false"` devait aussi être présent pour éviter toute prise de focus sur le SVG par Internet Explorer et Edge (avant Chromium), ceci n'est plus utile sur les navigateurs actuels (sauf si vos utilisateurs sont  )
+Note : historiquement, l'attribut `focusable="false"` devait aussi être présent pour éviter toute prise de focus sur le SVG par Internet Explorer et Edge (avant Chromium), ceci n'est plus utile sur les navigateurs actuels (sauf si vos utilisateurs utilisent encore des anciens navigateurs mentionnés)
 
 
 
