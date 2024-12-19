@@ -103,7 +103,6 @@ module.exports = {
       },
       { label: 'Articles', href: '/en/articles/' },
       { label: 'Persona', href: '/en/persona/', mainMenu: false }
-     
     ],
     'fr': [
       { label: 'Accueil', href: '/fr/' },
@@ -130,7 +129,8 @@ module.exports = {
           { label: 'Développer', href: '/fr/web/developper/' },
           { label: 'Tester', href: '/fr/web/tester/' },
           { label: 'Auditer', href: '/fr/web/audit-wcag/' },
-          { label: 'Boite à outils', href: '/fr/web/outils/' }
+          { label: 'Boite à outils', href: '/fr/web/outils/' },
+          { label: 'Incontournables', href: '/fr/web/checklist-initiale/' }
         ]
       },
       {
@@ -148,7 +148,8 @@ module.exports = {
           { label: 'Développer', href: '/fr/mobile/android/developpement/' },
           { label: 'Tester', href: '/fr/mobile/android/test/' },
           { label: 'Auditer', href: '/fr/mobile/android/audit-wcag/' },
-          { label: 'Boite à outils', href: '/fr/mobile/android/outils/' }
+          { label: 'Boite à outils', href: '/fr/mobile/android/outils/' },
+          { label: 'Incontournables', href: '/fr/mobile/android/checklist/' }
         ]
       },
       {
@@ -167,6 +168,7 @@ module.exports = {
           { label: 'Tester', href: '/fr/mobile/ios/test/' },
           { label: 'Auditer', href: '/fr/mobile/ios/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/mobile/ios/outils/' },
+          { label: 'Incontournables', href: '/fr/mobile/ios/checklist/' },
           { label: 'WWDC', href: '/fr/mobile/ios/wwdc/' }
         ]
       },
