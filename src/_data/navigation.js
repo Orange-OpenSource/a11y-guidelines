@@ -40,7 +40,7 @@ module.exports = {
           { label: 'Test', href: '/en/web/test/' },
           { label: 'Audit', href: '/en/web/wcag-audit/' },
           { label: 'Toolbox', href: '/en/web/toolbox/' },
-          { label: 'Incontournables', href: '/en/web/must-haves-checklist/' }
+          { label: 'Must-haves', href: '/en/web/must-haves-checklist/' }
         ]
       },
       {
