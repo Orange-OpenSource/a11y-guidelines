@@ -34,7 +34,7 @@ Skip links are valuable for many users:
 
 We will therefore, thanks to skip links, limit the use of keyboard navigation keys and more generally save actions during intra-page navigation.
 
-## Use;
+## Use
 
 It is generally a link pointing to an HTML element with an id attribute.
 
@@ -82,7 +82,7 @@ Whatever the solution, the skip links must be visible (as far as possible) and u
 
 ## Exemples
 
-&nbsp;Exemple 1&nbsp; :
+&nbsp;Exemple 1:
 ```html
 <ul id="skip">
    <li>
