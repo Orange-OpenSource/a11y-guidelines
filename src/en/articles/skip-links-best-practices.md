@@ -32,13 +32,29 @@ Skip links are valuable for many users:
 - Users who are struggling to navigate a large page: motor impaired people (fatigability or motor limitations) or people on their smartphone (this is a way to spare the user from swiping to browse the page)
 - the visually impaired, who use or not a screen magnifier, and have trouble having a global representation of the topology of the page
 
-### What are the types of solutions?
+We will therefore, thanks to skip links, limit the use of keyboard navigation keys and more generally save actions during intra-page navigation.
 
-1. Quick Links: the most common solution, is a series of links (usually between 1 and 6) positioned at the top of the page and embedded in the code just after the body tag. Each link points to a region, or any other important part of the page. They are generally defined with a font size smaller than the body text, or hidden by default and appearing only when keyboard navigation is detected or when listening to focus capture events.
-2. Skip links: these elements are positioned just before each page part or region to skip. They can be always visible or made visible, during keyboard navigation, on focus.
-3. "Back to top" internal navigation links: they are often pinned (CSS <code>sticky</code> position) at the very bottom, right side of the viewport, always visible or appearing only when we're at the end of the vertical scrolling.
+## Use;
+
+It is generally a link pointing to an HTML element with an id attribute.
+
+```html
+<body>
+  <a class="skip" href="#content">Go to content</a>
+  […]
+  <main id="content">
+     […]
+  </main>
+  […]
+</body>
+```
 
 ## What are the best practices?
+
+- It is possible to integrate a skip link in the form of an image (such as an 'arrow' with a <code>title</code> attribute) that appears after scrolling down the page. The skip link will allow for a direct return to the top of the page. This avoidance link should not hinder the reading or understanding of the information; it should be the last keyboard-focusable element.
+- The skip link must be reachable by keyboard navigation and regardless of the direction of navigation.(<kbd>TAB</kbd> ou <kbd>Shift</kbd> + <kbd>TAB</kbd>).
+- Placing a skip link on an <code>id</code> works, but targeting the skip link on elements like <code>aside</code>, <code>footer</code>, or <code>main</code> makes it less sensitive to potential changes (such as an <code>id</code> change, or simply not being included in the code of a new page, for instance).
+- Skip or quick access links should be visually located in the same place on the page and in the same relative order in the source code across all pages of the site.
 
 ### When should skip links be put in place?
 
@@ -52,10 +68,55 @@ The main reasons for setting up skip links:
 - the page is divided into many different parts (portal, dashboard, etc.)
 - there is no other way to navigate within the page (section title, HTML5 semantic structure…)
 
+**Note**: keepn in mind that for a skip link to be functional, it should not merely scroll the page to the indicated location (such as the main content). It must allow the user to 'skip' a part of the page. If a user activates a 'Go to content' link using the keyboard, on the next <kbd>TAB</kbd>, the focus should move to the main content and not to the next avoidance link. This focus can be achieved by placing an anchor to the next <code>id</code> to target, for example."
+
+Thus, when we use an anchor link, the system focus moves with it. However, the screen reader cursor will only move to the anchored element if it is focusable. When the anchored element is not focusable, the jump link is still considered the 'active element'.
+
+To resolve this issue, we can place an anchor on the element and use a <code>tabindex=-1</code> to make it focusable via JavaScript (it will remain excluded from focusable elements when using the <kbd>tab</kbd> key).
+
 ### Using a hybrid solution?
 
 We have seen that the quick access links can be visible or hidden by default and can be displayed according to keyboard navigation. This last option often answers aesthetic problems. Nevertheless, it removes the benefit that these links could bring to other users who do not use the keyboard (users of software magnifiers for example). One solution, which would reconcile the advantages of the two techniques, would be to position a discrete but affording button at the top of the page, to trigger on demand the opening and closing of the quick access links panel. We could also think of a horizontal bar visible at the top of the page opening and disappearing when scrolling down the page.
 
 Whatever the solution, the skip links must be visible (as far as possible) and usable by everyone!
+
+## Exemples d'usage
+
+&nbsp;Exemple 1&nbsp; :
+```html
+<ul id="skip">
+   <li>
+      <a href="#content">Go to content</a>
+   </li>
+   <li>
+      <a href="#menu">Go to menu</a>
+   </li>
+   <li>
+      <a href="#search">Go to search</a>
+   </li>
+</ul>
+```
+
+&nbsp;Exemple 2:
+```html
+<p id="skiplink">
+   <a href="#navigation">Go to navigation</a>
+</p>
+```
+
+## Examples of specific usage
+
+If skip links are not made visible on the screen by default (for design reasons, for example), it is important that they remain interpretable by assistive tools.
+The solution is to use an accessible hiding CSS class. Frameworks like **Bootstrap** and **Boosted** directly include this type of class (<code lang="en">visually-hidden</code>  and <code lang="en">visually-hidden-focusable</code>). Thus, even if it is not visible on the screen, an element with the class <code lang="en">visually-hidden</code> will be correctly vocalized by a screen reader.
+
+```css
+a.evitement {
+   position: absolute;
+   left: -99999px;
+}
+a.evitement:focus {
+   position: static;
+}
+```
 
 For any comments, suggestions, feel free to view or create an issue on our <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">github account</a>.
