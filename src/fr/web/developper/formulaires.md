@@ -47,11 +47,11 @@ Ne pas respecter ces recommandations est un point bloquant pour tout utilisateur
 
 Pour les champs avec auto-complétion, facilite la tâche aux déficients moteur et cognitif, les dyslexiques. Cela permet d’éviter les erreurs de saisie et un gain de temps pour tous.
 
-**Exemple valide&nbsp;:**  
+**Exemples valides&nbsp;:**  
 ![capture d’écran d’un formulaire valide](../../images/formulaire.png)
 ![capture d’écran d’un formulaire label proche du champ](../../images/v_label.jpg)
 
-**Exemple non-valide&nbsp;:**  
+**Exemples non-valides&nbsp;:**  
 ![capture d’écran d’un formulaire auquel il manque un label](../../images/formulaire2.png)
 ![capture d’écran d’un formulaire label loin du champ](../../images/nv_label.jpg)
 
