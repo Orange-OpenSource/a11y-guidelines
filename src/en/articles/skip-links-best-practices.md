@@ -68,7 +68,7 @@ The main reasons for setting up skip links:
 - the page is divided into many different parts (portal, dashboard, etc.)
 - there is no other way to navigate within the page (section title, HTML5 semantic structure…)
 
-**Note**: keepn in mind that for a skip link to be functional, it should not merely scroll the page to the indicated location (such as the main content). It must allow the user to 'skip' a part of the page. If a user activates a 'Go to content' link using the keyboard, on the next <kbd>TAB</kbd>, the focus should move to the main content and not to the next avoidance link. This focus can be achieved by placing an anchor to the next <code>id</code> to target, for example."
+**Note**: keep in mind that for a skip link to be functional, it should not merely scroll the page to the indicated location (such as the main content). It must allow the user to 'skip' a part of the page. If a user activates a 'Go to content' link using the keyboard, on the next <kbd>TAB</kbd>, the focus should move to the main content and not to the next avoidance link. This focus can be achieved by placing an anchor to the next <code>id</code> to target, for example."
 
 Thus, when we use an anchor link, the system focus moves with it. However, the screen reader cursor will only move to the anchored element if it is focusable. When the anchored element is not focusable, the jump link is still considered the 'active element'.
 
@@ -80,7 +80,7 @@ We have seen that the quick access links can be visible or hidden by default and
 
 Whatever the solution, the skip links must be visible (as far as possible) and usable by everyone!
 
-## Exemples d'usage
+## Exemples
 
 &nbsp;Exemple 1&nbsp; :
 ```html

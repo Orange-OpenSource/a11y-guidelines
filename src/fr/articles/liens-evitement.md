@@ -12,7 +12,7 @@ Mise à jour : décembre 2024
 
 ## Qu'est-ce qu'un lien d'évitement&nbsp;?
 
-### Qu'est ce&nbsp;?
+### Qu'est-ce&nbsp;?
 
 Les liens d'évitement sont des raccourcis permettant d'accéder directement à une zone de contenu ou d'éviter des régions de la page afin de naviguer plus rapidement.
 
