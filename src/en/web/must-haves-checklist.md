@@ -10,7 +10,7 @@ js:
   - /assets/test-web-checklist.js
 ---
 
-# Web - WCAG based guidelines for testing
+# List of Essential Accessibility Criteria
 
 This set of criteria, designed for web sites and applications, helps to avoid the main accessibility errors.
 Its implementation does not guarantee an accessible site, but lays the foundations for a progressive approach to accessibility.
