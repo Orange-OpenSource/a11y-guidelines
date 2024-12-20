@@ -12,13 +12,13 @@ Mise à jour : décembre 2024
 
 ## Introduction
 
-Les sites internet sont de plus en plus dynamiques (chargement asynchrone, génération dynamique de contenu) et interactifs (composants d'interface complexes&nbsp;: <i lang="en">slider</i>, <i lang="en">datepicker</i>…). Il est donc très difficile voire impossible de rendre ce genre de composants accessibles avec le <abbr>HTML</abbr> classique.
+Les sites internet sont de plus en plus dynamiques (chargement asynchrone, génération dynamique de contenu) et interactifs (composants d'interface complexes&nbsp;: <span lang="en">slider</span>, <span lang="en">datepicker</span>…). Il est donc très difficile voire impossible de rendre ce genre de composants accessibles avec le <abbr>HTML</abbr> classique.
 
 Même avec l'évolution due au <abbr>HTML5</abbr>, on manque encore d'informations sémantiques à fournir aux aides techniques (lecteurs d'écran, loupes logicielles…), la navigation clavier est souvent impossible, la gestion complexe du focus clavier est absente et les mises à jour des régions dynamiques ne sont pas signalées, notamment aux lecteurs d'écran.
 
 ## Qu'est-ce que c'est&nbsp;?
 
-Pour remédier à ces limitations, le <abbr>W3c</abbr>/<abbr>WAI</abbr> a publié une recommandation appelée <abbr>ARIA</abbr>, pour <i lang="en">Accessible Rich Internet Applications</i>, ainsi qu'une suite de documents traitant de l'utilisation d'<abbr>ARIA</abbr>. Nous sommes à la version 1.1 d'<abbr>ARIA</abbr> et des Authoring Practices, bonnes pratiques d'utilisation d'<abbr>ARIA</abbr>.
+Pour remédier à ces limitations, le <abbr>W3C</abbr>/<abbr>WAI</abbr> a publié une recommandation appelée <abbr>ARIA</abbr>, pour <span lang="en">Accessible Rich Internet Applications</span>, ainsi qu'une suite de documents traitant de l'utilisation d'<abbr>ARIA</abbr>. Nous sommes à la version 1.1 d'<abbr>ARIA</abbr> et des Authoring Practices, bonnes pratiques d'utilisation d'<abbr>ARIA</abbr>.
 
 <abbr>ARIA</abbr> est une sur-couche sémantique à base de couples attribut/valeur utilisables dans les langages de balisage tels que <abbr>HTML</abbr>, <abbr>SVG</abbr>, <abbr>XML</abbr>, etc. Cette recommandation est composée de rôles, d'états et de propriétés qui vont spécifiquement interagir avec les aides techniques (<abbr>AT</abbr>). Grâce à <abbr>ARIA</abbr>, on peut décrire des éléments et leurs comportements en <abbr>HTML</abbr> lorsqu'ils sont nativement non sémantiquement explicites, par exemple, des onglets, les arbres dépliants, des régions dynamiques, les info-bulles, les fenêtres modales. <abbr>ARIA</abbr> définit également comment doit se comporter un composant d'interface avec le clavier afin d'homogénéiser l'expérience des utilisateurs qui naviguent au clavier. **<abbr>ARIA</abbr> prend tout son sens et exprime tout son potentiel lorsqu'il est utilisé dans du <abbr>HTML5</abbr>**.
 
@@ -41,10 +41,10 @@ Dans tous les cas, il faut tester les développements sur les environnements cib
 Dans un environnement maîtrisé (intranet), les environnements cibles sont connus et en nombre fini, on peut donc statuer plus facilement&nbsp;!
 
 ## Webographie
-* <abbr>W3c</abbr>&nbsp;:
+* <abbr>W3C</abbr>&nbsp;:
   * [Spécification <abbr>ARIA</abbr>](http://www.w3.org/TR/wai-aria/)
   * [Mettre en place <abbr>ARIA</abbr>](http://www.w3.org/TR/wai-aria-practices/)
-  * [Utiliser <abbr>ARIA</abbr> en <abbr>HTML</abbr> (5)](http://www.w3.org/TR/aria-in-html/)
+  * [Utiliser <abbr>ARIA</abbr> en <abbr>HTML</abbr>5](http://www.w3.org/TR/aria-in-html/)
   * [Techniques <abbr>ARIA</abbr> dans le wiki du <abbr>W3c</abbr>](https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques)
 * [Introduction à <abbr>ARIA</abbr> chez Site Point](http://www.sitepoint.com/introduction-wai-aria/)
 * [Introduction et liste de liens vers des sources sur <abbr>ARIA</abbr>](http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA)

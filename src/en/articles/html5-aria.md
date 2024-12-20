@@ -16,7 +16,7 @@ Web sites are increasingly dynamic (asynchronous loading, dynamic content genera
 
 Even with the <abbr>HTML5</abbr> change, we still lack semantics to provide technical aids (screen readers, magnifiying software, …), keyboard navigation is often impossible, complex handling of the keyboard focus is missing and live regions are not notified to the user, in particular for the screenreaders.
 
-## What is it ?
+## What is it?
 
 To overcome these limitations, the W3C&nbsp;/ WAI has officially issued a recommendation called <abbr>ARIA</abbr>, standing for Accessible Rich Internet Applications, and several documents on the use of <abbr>ARIA</abbr>. We are currently at the 1.1 version of <abbr>ARIA</abbr> et for the Authoring Practices, an <abbr>ARIA</abbr>best practices.
 
@@ -26,9 +26,9 @@ To overcome these limitations, the W3C&nbsp;/ WAI has officially issued a recomm
 
 ## Support
 
-<abbr>ARIA</abbr> support improves quickly and is already supported :
+<abbr>ARIA</abbr> support improves quickly and is already supported:
 - in modern browsers (Firefox >=3.0, Chrome >=16, Safari >=4, Opera 9.5>=, Internet Explorer 8 for a basic support, Internet Explorer >=9 and Edge for advanced support);
-- in assistive technologies (<abbr>NVDA</abbr> >=2010, Orca >=2 + Firefox only, VoiceOver <abbr>OSX</abbr> >=10.5, iOS >=4, JAWS >=8, Window-Eyes >=7, ZoomText 10 for a basic support, ZoomText >=11 for advanced support). 
+- in assistive technologies (<abbr>NVDA</abbr> >=2010, Orca >=2 + Firefox only, VoiceOver <abbr>OSX</abbr> >=10.5, iOS >=4, JAWS >=8, Window-Eyes >=7, ZoomText 10 for a basic support, ZoomText >=11 for advanced support).
 
 Moreover, the optimal efficiency of the <abbr>ARIA</abbr> compatibility depends heavily on the browser/assistive technology combination: Firefox with <abbr>NVDA</abbr>, Jaws with Internet Explorer or Safari with VoiceOver, for example.
 
@@ -44,7 +44,7 @@ In a well-defined environment (e.g. intranet), target environments are known and
 * W3C:
   * [<abbr>ARIA</abbr> specification](http://www.w3.org/TR/wai-aria/)
   * [<abbr>ARIA</abbr> implementation](http://www.w3.org/TR/wai-aria-practices/)
-  * [Use <abbr>ARIA</abbr> HTML (5)](http://www.w3.org/TR/aria-in-html/)
+  * [Use <abbr>ARIA</abbr> with HTML5](http://www.w3.org/TR/aria-in-html/)
   * [<abbr>ARIA</abbr> techniques in <abbr>WCAG</abbr> 2](https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques)
 * [Introduction to <abbr>ARIA</abbr> by Site Point](http://www.sitepoint.com/introduction-wai-aria/)
 * [Introduction and link list to <abbr>ARIA</abbr> sources](http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA)
