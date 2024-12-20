@@ -1,6 +1,6 @@
 ---
-title: "Web - WCAG based guidelines for testing"
-abstract: "A set of criteria for websites and web applications to present the procedures and tools to check compliance with WCAG"
+title: "Must-haves criteria for Web"
+abstract: "Our essential criteria to be followed for websites and web applications"
 displayToc: true
 leftColumn:
   display: false
