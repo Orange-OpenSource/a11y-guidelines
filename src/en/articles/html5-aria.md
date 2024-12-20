@@ -8,6 +8,8 @@ tags:
   - beginner
 ---
 
+Update: December 2024
+
 ## Introduction
 
 Web sites are increasingly dynamic (asynchronous loading, dynamic content generation) and interactive (rich interface components: slider, datepicker…). So it is very difficult or impossible to make these components accessible with conventional <abbr>HTML</abbr>.
