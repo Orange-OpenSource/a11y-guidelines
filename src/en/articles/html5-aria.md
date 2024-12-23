@@ -22,7 +22,7 @@ To overcome these limitations, the W3C&nbsp;/ WAI has officially issued a recomm
 
 <abbr>ARIA</abbr> is a semantic wrapper based on the attribute&nbsp;/ value combination used in markup languages such as <abbr>HTML</abbr>, <abbr>SVG</abbr>, <abbr>XML</abbr>, etc. This recommendation consists of roles, states and properties that will specifically interact with assistive technologies (<abbr>AT</abbr>). With <abbr>ARIA</abbr>, one can describe elements and behaviours with simple HTML when they do not exist natively, for example tabs, drop-downs, live regions, tooltips, modal windows, etc. <abbr>ARIA</abbr> also defines how an interface component has to behave with the keyboard in order to standardize the user experience with keyboard navigation. **<abbr>ARIA</abbr> makes sense and delivers its full potential when used with <abbr>HTML5</abbr>**.
 
-<abbr>ARIA</abbr> does not add any particular behaviour or any style to <abbr>UI</abbr> components as it is only descriptive. So always make sure presentation is done through <abbr>CSS</abbr>, content control and interaction via Javascript.
+<abbr>ARIA</abbr> does not add any particular behaviour or any style to <abbr>UI</abbr> components as it is only descriptive. So always make sure presentation is done through <abbr>CSS</abbr>, content control and interaction via JavaScript.
 
 ## Support
 

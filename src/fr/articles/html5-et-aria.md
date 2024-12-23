@@ -22,7 +22,7 @@ Pour remédier à ces limitations, le <abbr>W3C</abbr>/<abbr>WAI</abbr> a publi�
 
 <abbr>ARIA</abbr> est une sur-couche sémantique à base de couples attribut/valeur utilisables dans les langages de balisage tels que <abbr>HTML</abbr>, <abbr>SVG</abbr>, <abbr>XML</abbr>, etc. Cette recommandation est composée de rôles, d'états et de propriétés qui vont spécifiquement interagir avec les aides techniques (<abbr>AT</abbr>). Grâce à <abbr>ARIA</abbr>, on peut décrire des éléments et leurs comportements en <abbr>HTML</abbr> lorsqu'ils sont nativement non sémantiquement explicites, par exemple, des onglets, les arbres dépliants, des régions dynamiques, les info-bulles, les fenêtres modales. <abbr>ARIA</abbr> définit également comment doit se comporter un composant d'interface avec le clavier afin d'homogénéiser l'expérience des utilisateurs qui naviguent au clavier. **<abbr>ARIA</abbr> prend tout son sens et exprime tout son potentiel lorsqu'il est utilisé dans du <abbr>HTML5</abbr>**.
 
-Aria ne rajoute aucun comportement particulier ni aucune présentation visuelle aux composants d'interface. Il faut donc toujours assurer la mise en forme grâce aux <abbr>CSS</abbr>, le contrôle du contenu et la gestion de l'interactivité via Javascript.
+Aria ne rajoute aucun comportement particulier ni aucune présentation visuelle aux composants d'interface. Il faut donc toujours assurer la mise en forme grâce aux <abbr>CSS</abbr>, le contrôle du contenu et la gestion de l'interactivité via JavaScript.
 
 ## Le support
 
