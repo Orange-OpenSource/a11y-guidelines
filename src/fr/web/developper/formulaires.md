@@ -186,7 +186,7 @@ Le respect du critère 3.3.9 (AAA) repose sur la non-utilisation dans le process
 Pour un système d'authentification par la saisie d'un identifiant et d'un mot de passe, s'assurer que :
 - l'agent utilisateur (navigateur et applications de gestion de mots de passe) permet le **remplissage automatique des champs "identifiant" et "mot de passe"**
 **ou**
- - l'utilisateur peut **copier** son identifiant puis son mot de passe à partir d'une source locale (ex : application de gestion de mots de passe) pour ensuite les **coller** respectivement dans les champs correspondants du formulaire d'authentification ou dans une interface en ligne de commande. Le **format demandé** par les champs "identifiant" et "mot de passe" doit être le **même que celui des informations** copiées pour éviter à l'utilisateur de devoir transcrire (i.e., saisir et copier) ces informations.
+- l'utilisateur peut **copier** son identifiant puis son mot de passe à partir d'une source locale (ex : application de gestion de mots de passe) pour ensuite les **coller** respectivement dans les champs correspondants du formulaire d'authentification ou dans une interface en ligne de commande. Le **format demandé** par les champs "identifiant" et "mot de passe" doit être le **même que celui des informations** copiées pour éviter à l'utilisateur de devoir transcrire (i.e., saisir et copier) ces informations.
 
 Pour un système d'authentification à 2 facteurs (double authentification), s'assurer :
 - qu'il ne soit pas demandé à l'utilisateur de recopier un **code de vérification**. L'utilisateur doit disposer à minima de l'une des **aides** suivantes :
