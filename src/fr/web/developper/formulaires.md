@@ -180,7 +180,7 @@ Pour être accessible, aucune étape du processus d'authentification ne doit êt
 Le respect du critère 3.3.9 (AAA) repose sur la non-utilisation dans le processus d'authentification des méthodes basées sur :
 - la reconnaissance d'objets courants (images, vidéo, audio)
 - l'identification d'un contenu personnel non textuel (images, vidéo, audio) préalablement fourni au site web par l'utilisateur.
-
+<>
 **À vérifier&nbsp;:**
 
 Pour un système d'authentification par la saisie d'un identifiant et d'un mot de passe, s'assurer que :
@@ -202,11 +202,11 @@ Pour un système d'authentification dont l'une des étapes est un **captcha**, s
 
 **Objectif utilisateur&nbsp;:**
 
-Permettre aux utilisateurs ayant des problèmes cognitifs (mémoire, dyslexie, dyscalculie, capacités cognitives limitées) de s'authentifier .
+Permettre aux utilisateurs ayant des problèmes cognitifs (mémoire, dyslexie, dyscalculie, capacités cognitives limitées) de s'authentifier.
 
 **Exemples valides (AA et AAA)&nbsp;:**
 
-Système d'**authentification à 2 facteurs** : authentification sur le navigateur web d'un ordinateur qui nécessite un **code de vérification reçu par SMS sur le téléphone mobile**. Dans la plupart des cas, il est possible d'envoyer le code sur l'appareil où il peut ensuite être copié-collé, par exemple en le copiant-collant dans un mail sur le téléphone  pour l'envoyer sur l'ordinateur ou en passant une application de presse-papier.
+Système d'**authentification à 2 facteurs** : authentification sur le navigateur web d'un ordinateur qui nécessite un **code de vérification reçu par SMS sur le téléphone mobile**. Dans la plupart des cas, il est possible d'envoyer le code sur l'appareil où il peut ensuite être copié-collé, par exemple en le copiant-collant dans un mail sur le téléphone pour l'envoyer sur l'ordinateur ou en passant une application de presse-papier.
 
 Un site web utilise un **couple identifiant** (nom d'utilisateur ou adresse mail) et **mot de passe pour** l'authentification de la connexion (satisfaisant au critère de réussite "1.3.5 But de l'entrée" et au critère de réussite "4.1.2 : Nom, rôle, valeur"). Le navigateur de l'utilisateur ou une extension de gestionnaire de mot de passe tiers intégrée peut identifier la fonction de ces 2 champs et **remplir automatiquement l'identifiant** et le mot de passe.
 
