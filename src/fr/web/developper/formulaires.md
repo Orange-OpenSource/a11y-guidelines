@@ -108,7 +108,7 @@ Consulter [l’exemple de formulaire accessible](../../exemples-de-composants/fo
 
 
 
-## Authentification accessible
+## Détecter, identifier les erreurs et suggérer des corrections
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles et cognitives, avec un déficit d’attention et les utilisateurs de tactiles (mobile et tablette).
 **Quand&nbsp;:** lors de la conception et lors du développement.
@@ -166,7 +166,7 @@ Consulter [l’exemple de formulaire accessible](../../exemples-de-composants/fo
 
 
 
-## Détecter, identifier les erreurs et suggérer des corrections
+## Authentification accessible
 
 **Cible&nbsp;:** tout le monde, en particulier les personnes avec des déficiences cognitives.
 **Quand&nbsp;:** dès la conception et pendant le développement.
