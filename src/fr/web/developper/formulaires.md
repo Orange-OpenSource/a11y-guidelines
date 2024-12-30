@@ -180,7 +180,7 @@ Pour être accessible, aucune étape du processus d'authentification ne doit êt
 Le respect du critère 3.3.9 (AAA) repose sur la non-utilisation dans le processus d'authentification des méthodes basées sur :
 - la reconnaissance d'objets courants (images, vidéo, audio)
 - l'identification d'un contenu personnel non textuel (images, vidéo, audio) préalablement fourni au site web par l'utilisateur.
-<>
+
 **À vérifier&nbsp;:**
 
 Pour un système d'authentification par la saisie d'un identifiant et d'un mot de passe, s'assurer que :
