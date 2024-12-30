@@ -7,9 +7,6 @@ abstract: "Formulaires, recommendations d'accessibilité web lors du développem
 
 <p class="lead">S’assurer que l’utilisateur puisse efficacement compléter les formulaires</p>
 
-
-
-
 ## Rendre accessibles les champs de formulaire
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles et cognitives, avec un déficit d’attention et les utilisateurs de tactiles (mobile et tablette).
@@ -39,7 +36,7 @@ Si cela est pertinent, les champs ont un attribut `autocomplete` afin que l’ut
 
 Pour les boutons radio et les cases à cocher, l’utilisation de la balise `label` est, parfois, à compléter par un autre dispositif (`title`, `aria-labelledby`, `aria-label` ou parfois, `fieldset` et `legend`).
 
-Pour les champs obligatoires, ceci doit être précisé dans le `label` via un texte explicite ("obligatoire"), si cette identification n'est pas réalisée de manière explicite, il faut en expliquer la signification comme, "Tous les champs obligatoires sont marqués d'un *",placée en début de formulaire, et/ou une propriété `aria-required`, `required`.
+Pour les champs obligatoires, ceci doit être précisé dans le `label` via un texte explicite ("obligatoire"), si cette identification n'est pas réalisée de manière explicite, il faut en expliquer la signification comme, "Tous les champs obligatoires sont marqués d'un *", placée en début de formulaire, et/ou une propriété `aria-required`, `required`.
 
 **Objectif utilisateur&nbsp;:**
 
@@ -108,7 +105,6 @@ Consulter [l’exemple de formulaire accessible](../../exemples-de-composants/fo
 
 
 
-## Détecter, identifier les erreurs et suggérer des corrections
 
 **Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles et cognitives, avec un déficit d’attention et les utilisateurs de tactiles (mobile et tablette).
 **Quand&nbsp;:** lors de la conception et lors du développement.
