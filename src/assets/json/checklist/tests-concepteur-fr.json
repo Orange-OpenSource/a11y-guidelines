@@ -561,7 +561,7 @@
   },
   {
     "themes":"Formulaires",
-    "title":"Vérifier l'accessibilité du parcours d'authentification",
+    "title":"S'assurer que le processus d'authentification est facile à utiliser, sécurisé et ne repose pas exclusivement sur les fonction cognitives",
     "type": [],
     "tests": [
       "Cas 1 - Pour chaque champ de formulaire qui attend la saisie d'un mot de passe ou d'un code : faire le parcours d'authentification.",
