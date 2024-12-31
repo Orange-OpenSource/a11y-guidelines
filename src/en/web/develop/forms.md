@@ -166,6 +166,6 @@ Examples that prevent a user from entering a password or verification code in th
 - A form that asks the user to enter the last 4 digits of their username into 4 different fields.
   Exception: the user can copy the code and paste it into the first field. The characters will be automatically distributed into the following fields.
 
-**Reference <abbr>WCAG</abbr>:**
+**<abbr>WCAG</abbr> reference:**
 - <a href="https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum">3.3.8 Accessible Authentication (Minimum)</a>
 - <a href="https://www.w3.org/TR/WCAG22/#accessible-authentication-enhanced">3.3.9 Accessible Authentication (Enhanced)</a>
