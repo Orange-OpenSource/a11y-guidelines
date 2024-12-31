@@ -62,7 +62,7 @@ In this case setting the `alt` attribute to something other than empty would pro
 **Tools:**
 The <a href="https://chrispederick.com/work/web-developer/"> Web developer </a> extension (ability to display text alternatives for all images). 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference**  
 - <a href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 - <a href="https://www.w3.org/WAI/WCAG22/Understanding/images-of-text">1.4.5 Images of text</a>
 
@@ -95,7 +95,7 @@ Provide access to visual and hearing information for people who cannot access it
 
 Allow audio and video referencing.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference**  
 - <a href="https://www.w3.org/TR/WCAG22/#audio-only-and-video-only-prerecorded">1.2.1 Audio-only and Video-only (Prerecorded)</a>
 - <a href="https://www.w3.org/TR/WCAG22/#captions-prerecorded">1.2.2 Captions (Prerecorded)</a>
 - <a href="https://www.w3.org/TR/WCAG22/#audio-description-or-media-alternative-prerecorded">1.2.3 Audio Description or Media Alternative (Prerecorded)</a>
@@ -125,5 +125,5 @@ If no other alternative is possible, it is essential to provide an alternative f
 
 More details on [Captchas](../../../articles/captcha-accessibility/).
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference**  
 - <a href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>

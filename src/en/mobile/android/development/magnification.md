@@ -50,6 +50,6 @@ Text(
 </code>
 </pre>
 
-**Reference <abbr>WCAG</abbr>:**  
+**<abbr>WCAG</abbr> reference** 
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#resize-text">1.4.4 Resize text</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#reflow">1.4.10 Reflow</a>

@@ -68,7 +68,7 @@ Associate a link labelled “click here” with a hidden label: “order you mob
 **Don’t:**     
 “Click here” or “Read more…” links without clarification.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference**  
 - <a href="https://www.w3.org/TR/WCAG22/#link-purpose-link-only"> 2.4.9 Link Purpose (Link Only)</a>
 - <a href="https://www.w3.org/TR/WCAG22/#label-in-name"> 2.5.3 Label in Name</a>
 
@@ -104,7 +104,7 @@ Avoid the unexpected opening of a window, because this can disturb, disrupt, or 
 **Do:**     
 For any external link and opening a new window, the label could be: “Go to the orange.com site (new window)”, for a picture-link the `alt` attribute could be: “consult the <abbr>EULA</abbr> (new window)”.    
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference**  
 - <a href="https://www.w3.org/TR/WCAG22/#on-input">3.2.2 On Input</a>
 
 
@@ -133,7 +133,7 @@ To make them appear, move the focus on the top of the page by clicking on your b
 
 ![screenshot of the site orange.com](../../images/skiplink.png)   
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference**  
 - <a href="https://www.w3.org/TR/WCAG22/#bypass-blocks">2.4.1 Bypass Blocks</a>
 
 
@@ -168,7 +168,7 @@ To make them appear, move the focus on the top of the page by clicking on your b
 
 **Example:** a form must have a send button. It should not be sent automatically after the user input.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference**  
 - <a href="https://www.w3.org/TR/WCAG22/#content-on-hover-or-focus">1.4.13 Content on Hover or Focus</a>
 - <a href="https://www.w3.org/TR/WCAG22/#timing-adjustable">2.2.1 Timing Adjustable</a>
 - <a href="https://www.w3.org/TR/WCAG22/#on-focus">3.2.1 On Focus</a>
@@ -197,7 +197,7 @@ The site offers, at the same time, a complete and precise main navigation and a 
 **Don't:**  
 An application provides a parcel navigation menu and no other way for the user to navigate the pages or locate where the current page is in the tree.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference**  
 - <a href="https://www.w3.org/TR/WCAG22/#multiple-ways">2.4.5 Multiple Ways</a>
 - <a href="https://www.w3.org/TR/WCAG22/#location">2.4.8 Location</a>
 
@@ -223,7 +223,7 @@ Provide the user with status messages that give him feedback on the action he ha
 **User Objective:**  
     For all users, have feedback on the essential actions it performs.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference**  
 - <a href="https://www.w3.org/TR/WCAG22/#status-messages">4.1.3 Status Messages</a>
 
 
@@ -247,6 +247,6 @@ Therefore, it is necessary to pause the animation when loading the page or to gi
 A carousel that scrolls automatically must have a mechanism that allows the scrolling to be paused, for example a "pause" button.
 The mechanism must allow the user to interact with the rest of the page, stopping or pausing via an event activated only on receive focus or hovering the mouse is not sufficient.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference**  
 - <a href="https://www.w3.org/TR/WCAG22/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a>
 - <a href="https://www.w3.org/TR/WCAG22/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a>
