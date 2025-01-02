@@ -22,7 +22,7 @@ Pour remédier à ces limitations, le <abbr>W3C</abbr>/<abbr>WAI</abbr> a publi�
 
 <abbr>ARIA</abbr> est une sur-couche sémantique à base de couples attribut/valeur utilisables dans les langages de balisage tels que <abbr>HTML</abbr>, <abbr>SVG</abbr>, <abbr>XML</abbr>, etc. Cette recommandation est composée de rôles, d'états et de propriétés qui vont spécifiquement interagir avec les aides techniques (<abbr>AT</abbr>). Grâce à <abbr>ARIA</abbr>, on peut décrire des éléments et leurs comportements en <abbr>HTML</abbr> lorsqu'ils sont nativement non sémantiquement explicites, par exemple, des onglets, les arbres dépliants, des régions dynamiques, les info-bulles, les fenêtres modales. <abbr>ARIA</abbr> définit également comment doit se comporter un composant d'interface avec le clavier afin d'homogénéiser l'expérience des utilisateurs qui naviguent au clavier. **<abbr>ARIA</abbr> prend tout son sens et exprime tout son potentiel lorsqu'il est utilisé dans du <abbr>HTML5</abbr>**.
 
-Aria ne rajoute aucun comportement particulier ni aucune présentation visuelle aux composants d'interface. Il faut donc toujours assurer la mise en forme grâce aux <abbr>CSS</abbr>, le contrôle du contenu et la gestion de l'interactivité via JavaScript.
+<abbr>ARIA</abbr> ne rajoute aucun comportement particulier ni aucune présentation visuelle aux composants d'interface. Il faut donc toujours assurer la mise en forme grâce aux <abbr>CSS</abbr>, le contrôle du contenu et la gestion de l'interactivité via JavaScript.
 
 ## Le support
 
@@ -34,7 +34,7 @@ De plus, l'efficacité optimale de la prise en charge d'<abbr>ARIA</abbr> dépen
 
 ## Faut-il l'utiliser&nbsp;?
 
-Globalement, <abbr>ARIA</abbr> améliore l'accessibilité pour des composants pas nativement présents dans le <abbr>HTML</abbr> (ou pas accessibles notamment certains éléments <abbr>HTML5</abbr>). La robustesse et l'interopérabilité d'<abbr>ARIA</abbr> sont maintenant suffisantes pour qu'[une quarantaine de techniques WCAG 2.1 soient spécifiques à <abbr>ARIA</abbr>](https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques) (contre 10 techniques <abbr>HTML5</abbr>). En conséquence, pour des applications Internet riches, l'<abbr>ARIA</abbr> est incontournable pour leur mise en accessibilité.
+Globalement, <abbr>ARIA</abbr> améliore l'accessibilité pour des composants qui ne sont pas nativement présents dans le <abbr>HTML</abbr> (ou pas accessibles notamment certains éléments <abbr>HTML5</abbr>). La robustesse et l'interopérabilité d'<abbr>ARIA</abbr> sont maintenant suffisantes pour qu'[une quarantaine de techniques WCAG 2.1 soient spécifiques à <abbr>ARIA</abbr>](https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques) (contre 10 techniques <abbr>HTML5</abbr>). En conséquence, pour des applications Internet riches, l'<abbr>ARIA</abbr> est incontournable pour leur mise en accessibilité.
 
 Dans tous les cas, il faut tester les développements sur les environnements cibles (couple navigateurs&nbsp;/ aides techniques). C'est un gros travail absolument nécessaire pour les cas complexes car sur un site ou une application internet classique, il faut, à minima, tester avec Safari/VoiceOver, Jaws/Internet Explorer et Firefox/<abbr>NVDA</abbr>.
 
