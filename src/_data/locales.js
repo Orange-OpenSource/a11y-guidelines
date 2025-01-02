@@ -79,7 +79,7 @@ module.exports = {
   fr: {
     url : "https://a11y-guidelines.orange.com/fr/",
     breadcrumb: {
-      label: "Vous êtes ici\&nbsp;:"
+      label: "Vous êtes ici&amp;nbsp;:"
     },
     changelang: {
       label: 'Changement de langue'
