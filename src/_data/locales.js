@@ -34,7 +34,7 @@ module.exports = {
     },
     tags: {
       componentExample: 'Component example',
-      list : "Associated themes :",
+      list : "Associated themes:",
       mobile: 'Mobile',
       technicalArticle: 'Technical article',
       web: 'Web',
@@ -79,7 +79,7 @@ module.exports = {
   fr: {
     url : "https://a11y-guidelines.orange.com/fr/",
     breadcrumb: {
-      label: "Vous êtes ici&amp;nbsp;:"
+      label: "Vous êtes ici" + encodeURIComponent('&nbsp;') + ":"
     },
     changelang: {
       label: 'Changement de langue'
