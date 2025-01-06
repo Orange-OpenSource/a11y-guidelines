@@ -100,7 +100,7 @@
 	"themes": "Keyboard navigation",
 	"title": "Allow the use of the application with keyboard",
 	"type": ["Keyboard navigation"],
-²	"tests": ["Navigate through the page with the keyboard using the <kbd>shift</kbd> + <kbd>tab</kbd> keys.","Use all interactive elements (by pressing the <kbd>Enter</kbd> and <kbd>Space</kbd> keys for buttons/links, and the arrow keys for some components: a series of radio buttons, a tab system, etc.)."], 
+	"tests": ["Navigate through the page with the keyboard using the <kbd>shift</kbd> + <kbd>tab</kbd> keys.","Use all interactive elements (by pressing the <kbd>Enter</kbd> and <kbd>Space</kbd> keys for buttons/links, and the arrow keys for some components: a series of radio buttons, a tab system, etc.)."], 
 	"verifier": [["Everything that can be done with the mouse can be done using the keyboard and vice-versa"],["The focus movement order maintains a logical reading and usage flow."],["The focus does not get stuck on a part of the page (keyboard trap)."],["The focus indicator (outline) is visible on all interactive elements and has sufficient contrast."]],
 	"resultat": ["All interactive elements can be reached from a keyboard navigation", "All interactive elements are usable with keyboard interactions"],
 	"exception": "",
