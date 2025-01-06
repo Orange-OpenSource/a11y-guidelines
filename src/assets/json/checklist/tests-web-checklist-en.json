@@ -28,7 +28,7 @@
 	"IDorigin": "testWebID-1"
 }, {
 	"themes": "Textual content",
-	"title": "Declaring the main language of the page",
+	"title": "Declare the main language of the page",
 	"type": ["Manual test - Code inspector"],
 	"tests": ["Run the code inspector of the browser.", "Inspect the <code>&lt;html&gt;</code> element."],
 	"verifier": ["Check for the presence of a lang attribute.", "The value of the <code>lang</code> attribute must match the main language of the document. Check <a href='https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes'>ISO 639-1 language codes</a>."],
