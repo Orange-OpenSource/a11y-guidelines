@@ -35,7 +35,7 @@ Allow users (visually impaired, using a device outdoors, elderly people…) to i
 **Example:** 
 See the example [handling zoom, increasing the text size](../../components-examples/zoom/) for more details.
 
-**<abbr>WCAG</abbr> reference**  
+**<abbr>WCAG</abbr> reference:**  
 - <a href="https://www.w3.org/TR/WCAG22/#resize-text">1.4.4 Resize text</a>
 - <a href="https://www.w3.org/TR/WCAG22/#reflow">1.4.10 Reflow</a>
 
@@ -73,7 +73,7 @@ To ease the test, use the following bookmarklet (to keep in your bookmarks) : <a
 **Users’ goal:**
 Improve reading comfort for people with cognitive and visual disabilities.
 
-**<abbr>WCAG</abbr> reference**  
+**<abbr>WCAG</abbr> reference:**  
 - <a href="https://www.w3.org/TR/WCAG22/#text-spacing">1.4.12 Text Spacing</a>
 
 
@@ -134,7 +134,7 @@ To give a semantic structure to the main regions of a page, we can use the <abbr
 
 Setting up this type of semantics allows visually impaired people to identify and understand the organization, the overall structure of the page and thus navigate more easily.
 
-**<abbr>WCAG</abbr> reference** 
+**<abbr>WCAG</abbr> reference:** 
 - <a href="https://www.w3.org/TR/WCAG22/#consistent-navigation">3.2.3 Consistent Navigation</a>
 - <a href="https://www.w3.org/TR/WCAG22/#consistent-identification">3.2.4 Consistent Identification</a>
 
@@ -180,6 +180,6 @@ Allow users, via their User Agent or technical assistance (e.g. their browser) t
 
 Improves maintainability.
 
-**<abbr>WCAG</abbr> reference**
+**<abbr>WCAG</abbr> reference:**
 - <a href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
 - <a href="https://www.w3.org/TR/WCAG22/#images-of-text">1.4.5 Images of Text</a>

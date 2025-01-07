@@ -58,7 +58,7 @@ Example of a view that is not focusable with keyboard navigation but focusable w
               android:layout_height="0px" /&gt;</code></pre>
 
 
-**<abbr>WCAG</abbr> reference** 
+**<abbr>WCAG</abbr> reference:** 
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#keyboard">2.1.1 Keyboard</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#name-role-value">4.1.2 Name, Role, Value</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-visible">2.4.7 Focus Visible</a>
@@ -97,7 +97,7 @@ For more information on [focus management on Android](http://developer.android.c
     ...../&gt;</code></pre>
 
 
-**<abbr>WCAG</abbr> reference** 
+**<abbr>WCAG</abbr> reference:** 
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#no-keyboard-trap">2.1.2 No Keyboard Trap</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-order">2.4.3 Focus Order</a>

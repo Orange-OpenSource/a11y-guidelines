@@ -23,7 +23,7 @@ In addition, multimedia content must be able to be controlled at any time by the
 - For any sound emitted for more than 3 seconds, the user must have the possibility to either stop or pause it, or to control its volume independently of the general volume of the system.
 - There is no automatic start of the video when the page loads.
 
-**<abbr>WCAG</abbr> reference**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#audio-control">1.4.2 Audio Control</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a>
 
@@ -43,7 +43,7 @@ It is essential to provide an access to visual and auditory information for peop
 - Subtitles are available for video content, pre-recorded or not.
 
 
-**<abbr>WCAG</abbr> reference**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#audio-only-and-video-only-prerecorded">1.2.1 Audio-only and Video-only (Prerecorded)</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#captions-prerecorded">1.2.2 Captions (Prerecorded)</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#audio-description-or-media-alternative-prerecorded">1.2.3 Audio Description or Media Alternative (Prerecorded)</a>
@@ -63,5 +63,5 @@ In order to prevent the content of the application from causing epileptic seizur
 - No more than 3 flashes per second.
 
 
-**<abbr>WCAG</abbr> reference**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a>

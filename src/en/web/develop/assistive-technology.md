@@ -29,5 +29,5 @@ Indeed, screen reader users are the most affected by the lack of accessibility, 
 
 Allow the screen reader users to access the main features of the application, but also ensure the usability of the application for all users.
 
-**<abbr>WCAG</abbr> reference**  
+**<abbr>WCAG</abbr> reference:**  
 - [4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG22/#name-role-value)

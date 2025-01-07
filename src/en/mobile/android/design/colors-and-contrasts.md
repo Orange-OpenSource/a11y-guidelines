@@ -33,7 +33,7 @@ The text "film | 20h40 ..." does not have sufficient contrast. It will not be re
 ![screenshot showing text with insufficient contrast](../../../images/contraste.png)  
 
 
-**<abbr>WCAG</abbr> reference**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#contrast-minimum">1.4.3 Contrast minimum</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-contrast">1.4.11 Non text contrast</a>
 

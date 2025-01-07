@@ -30,7 +30,7 @@ The image containing the information of the channel is well vocalized by the scr
 <img src="../../../images/image_desc.jpg" alt="example of a screen with a vocalized informative image" width="300" height="530">
 
 
-**<abbr>WCAG</abbr> reference**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#images-of-text">1.4.5 Images of Text</a>
 
@@ -63,7 +63,7 @@ Example of an icon that is coupled with text (tooltip) to add information. The i
 - The titles of the activities are vocalized
 - Items in a list are vocalized independently of each other.
 
-**<abbr>WCAG</abbr> reference**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 
 <br/><br/>
@@ -84,7 +84,7 @@ In this example, the default reading order is completely dependent on the order 
 - The vocalization order follows an understandable and logical order
 
 
-**<abbr>WCAG</abbr> reference**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-order">2.4.3 Focus Order</a>
 
@@ -156,7 +156,7 @@ In this example, the frame with green border corresponds to the Talkback focus. 
 <img src="../../../images/ghost.png" alt="example of hidden vocalization" width="300" height="530">
 
 
-**<abbr>WCAG</abbr> reference**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 
 
@@ -184,7 +184,7 @@ Several elements are grouped to improve navigation
 <img src="../../../images/regroupement.jpg" alt="example of a screen with elements grouped in a single vocalization" width="300" height="530">
 
 
-**<abbr>WCAG</abbr> reference**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 
@@ -203,7 +203,7 @@ To recognize headers, an attribute in the XML layout must be added to the elemen
 - Headers are navigable with the Talkback Navigation "Heading" setting 
 
 
-**<abbr>WCAG</abbr> reference**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#headings-and-labels">2.4.6 Headings and Labels</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
 

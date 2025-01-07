@@ -116,7 +116,7 @@ Button(
 </pre>
 
 
-**<abbr>WCAG</abbr> reference** 
+**<abbr>WCAG</abbr> reference:** 
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#target-size">2.5.5 Target Size</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
 
@@ -194,7 +194,7 @@ Text(
 </code>
 </pre>
 
-**<abbr>WCAG</abbr> reference** 
+**<abbr>WCAG</abbr> reference:** 
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#text-spacing">1.4.12 Text Spacing</a>
 
 
@@ -221,7 +221,7 @@ However, as not all phones use a recent version of Android, it is recommended to
 
 - A timeout has a configurable delay.
 
-**<abbr>WCAG</abbr> reference** 
+**<abbr>WCAG</abbr> reference:** 
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#timing-adjustable">2.2.1 Timing Adjustable</a>
 
 
