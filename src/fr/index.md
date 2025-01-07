@@ -9,7 +9,7 @@ cardNavigationTitle: "Nos recommandations"
 
 ## En quelques mots
 
-Recommandations, méthodes, ressources et outils proposés par le Centre d'Expertise en Accessibilité Numérique du groupe d'Orange.
+Recommandations, méthodes, ressources et outils proposés par le Centre d'Expertise en Accessibilité Numérique du groupe Orange.
 
 Nous proposons des formations, accompagnons les projets, publions des ressources pour les parties prenantes du numérique et réalisons des audits de conformité.
 Notre expertise couvre les sites Web (e-commerce, e-learning, applications métier, Intranet...), les applications mobile, les documents bureautiques, les réseaux sociaux d'entreprise, les courriels, les progiciels...

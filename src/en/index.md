@@ -9,7 +9,7 @@ cardNavigationTitle: "Our recommendations"
 
 ## In a few words
 
-Guidelines, methods, resources and tools proposed by the Orange Expertise Center for Digital Accessibility.
+Guidelines, methods, resources and tools proposed by the Orange Digital Accessibility Expertise Center.
 
 We offer training, publish resources for digital stakeholders, support projects and perform compliance audits. Our expertise covers websites (e-commerce, e-learning, business applications, Intranet, etc.), mobile applications, office documents, corporate social networks, emails, videos, software packages, etc.
 
