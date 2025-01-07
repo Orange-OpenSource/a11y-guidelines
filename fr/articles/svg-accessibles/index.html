@@ -136,7 +136,7 @@
         
 
 <nav role="navigation" aria-labelledby="breadcrumb-label">
-  <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici&amp;nbsp;:</p>
+  <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici</p>
   <ol class="breadcrumb">
       
         <li class="breadcrumb-item d-none d-sm-flex">
@@ -188,12 +188,12 @@
           <div class="mt-4">
           <p>Voici quelques pistes sachant que le support navigateurs/aide techniques évolue très rapidement !<br>
 Important : Pensez donc à tester vos implémentations sur des cibles navigateurs /aides techniques les plus utilisées par vos utilisateurs, cela, quel que soit la solution pour laquelle vous optez. ;</p>
-<h2 id="image-de-decoration" class="h2-focus">Image de décoration <a class="header-anchor" href="#image-de-decoration" id="heading-479" aria-labelledby="heading-479">#</a></h2>
-<h3 id="svg-dans-une-balise-img">SVG dans une balise <code>img</code> <a class="header-anchor" href="#svg-dans-une-balise-img" id="heading-480" aria-labelledby="heading-480">#</a></h3>
+<h2 id="image-de-decoration" class="h2-focus">Image de décoration <a class="header-anchor" href="#image-de-decoration" id="heading-475" aria-labelledby="heading-475">#</a></h2>
+<h3 id="svg-dans-une-balise-img">SVG dans une balise <code>img</code> <a class="header-anchor" href="#svg-dans-une-balise-img" id="heading-476" aria-labelledby="heading-476">#</a></h3>
 <pre><code class="html">
 &lt;img src="XXX.svg" alt="" aria-hidden=”true” /&gt;
 </code></pre>
-<h3 id="svg-en-ligne-inline">SVG en ligne (inline) <a class="header-anchor" href="#svg-en-ligne-inline" id="heading-481" aria-labelledby="heading-481">#</a></h3>
+<h3 id="svg-en-ligne-inline">SVG en ligne (inline) <a class="header-anchor" href="#svg-en-ligne-inline" id="heading-477" aria-labelledby="heading-477">#</a></h3>
 <pre><code class="html">
 &lt;svg aria-hidden="true" focusable="false"&gt;
 …
@@ -201,8 +201,8 @@ Important : Pensez donc à tester vos implémentations sur des cibles navigateur
 </code></pre>
 <p>On utilise <code>focusable=&quot;false&quot;</code> pour éviter toute prise de focus sur le SVG par IE (&gt;10 et Edge)</p>
 <p>De plus, vous devez vous assurer que la balise <code>svg</code> ou un de ses enfants (<code>&lt;g&gt;</code>, <code>&lt;path&gt;</code>…) ne possède aucun attribut visant à lui fournir un nom accessible (<code>title</code>, <code>desc</code>, <code>aria-*</code>…).</p>
-<h2 id="image-informative-hors-lien-ou-bouton" class="h2-focus">Image informative (hors lien ou bouton) <a class="header-anchor" href="#image-informative-hors-lien-ou-bouton" id="heading-482" aria-labelledby="heading-482">#</a></h2>
-<h3 id="svg-dans-une-balise-img-2">SVG dans une balise <code>img</code> <a class="header-anchor" href="#svg-dans-une-balise-img-2" id="heading-483" aria-labelledby="heading-483">#</a></h3>
+<h2 id="image-informative-hors-lien-ou-bouton" class="h2-focus">Image informative (hors lien ou bouton) <a class="header-anchor" href="#image-informative-hors-lien-ou-bouton" id="heading-478" aria-labelledby="heading-478">#</a></h2>
+<h3 id="svg-dans-une-balise-img-2">SVG dans une balise <code>img</code> <a class="header-anchor" href="#svg-dans-une-balise-img-2" id="heading-479" aria-labelledby="heading-479">#</a></h3>
 <pre><code class="html">
 &lt;img src="XXX.svg" alt="texte de remplacement" role="img" /&gt;
 </code></pre>
@@ -211,7 +211,7 @@ Important : Pensez donc à tester vos implémentations sur des cibles navigateur
 &lt;img src="XXX.svg" aria-label="texte de remplacement" role="img" /&gt;
 </code></pre>
 <p>On rajoute <code>role=&quot;img&quot;</code> pour s’assurer qu’avec macOS Safari, VoiceOver (anciennes versions) annonce bien « image ».</p>
-<h3 id="svg-en-ligne-inline-2">SVG en ligne (inline) <a class="header-anchor" href="#svg-en-ligne-inline-2" id="heading-484" aria-labelledby="heading-484">#</a></h3>
+<h3 id="svg-en-ligne-inline-2">SVG en ligne (inline) <a class="header-anchor" href="#svg-en-ligne-inline-2" id="heading-480" aria-labelledby="heading-480">#</a></h3>
 <pre><code class="html">
 &lt;svg viewBox="0 0 440 540" version="1.1" role="img"
   lang="fr" xml:lang="fr"
@@ -284,9 +284,9 @@ ou, mais beaucoup plus risqué…
   &lt;/svg&gt;
 &lt;/button&gt;
 </code></pre>
-<h2 id="dernier-mots" class="h2-focus">Dernier mots… <a class="header-anchor" href="#dernier-mots" id="heading-485" aria-labelledby="heading-485">#</a></h2>
+<h2 id="dernier-mots" class="h2-focus">Dernier mots… <a class="header-anchor" href="#dernier-mots" id="heading-481" aria-labelledby="heading-481">#</a></h2>
 <p>En résumé, un seul conseil pour du SVG accessible, ce serait TESTER et tester encore !</p>
-<h2 id="webographie-articles-qui-mont-bien-bien-aides" class="h2-focus">Webographie (articles qui m’ont bien, bien aidés) <a class="header-anchor" href="#webographie-articles-qui-mont-bien-bien-aides" id="heading-486" aria-labelledby="heading-486">#</a></h2>
+<h2 id="webographie-articles-qui-mont-bien-bien-aides" class="h2-focus">Webographie (articles qui m’ont bien, bien aidés) <a class="header-anchor" href="#webographie-articles-qui-mont-bien-bien-aides" id="heading-482" aria-labelledby="heading-482">#</a></h2>
 <ul>
 <li><a href="https://www.deque.com/blog/creating-accessible-svgs/">https://www.deque.com/blog/creating-accessible-svgs/</a></li>
 <li><a href="https://weboverhauls.github.io/demos/svg/">https://weboverhauls.github.io/demos/svg/</a></li>
