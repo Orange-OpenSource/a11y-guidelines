@@ -76,7 +76,7 @@ The dragging movement functionality is:
 -  essential (dexterity games) 
 - controlled by the user agent and not modified 
 
-**Référence <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements">2.5.7 Dragging movements</a>
 
 ## Give access to the content regardless of the orientation of the screen

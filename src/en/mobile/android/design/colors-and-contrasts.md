@@ -79,6 +79,6 @@ Do not use color or sensory information (shape, size, sound, orientation, visual
 <img src="../../../images/couleur.png" alt="Dans un cas la couleur et la forme de l’objet porte l’information avec une légende, dans l’autre cas seule la couleur porte l’information." width="300" height="530">
 
 
-**Référence <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#sensory-characteristics">1.3.3 Sensory characteristics</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#use-of-color">1.4.1 Use of color</a>
