@@ -115,7 +115,7 @@
 	"title": "Ensure clickable areas are large enough.",
 	"type": ["Manual test"],
 	"tests": ["Identify clickable elements."],
-	"verifier": ["Clickable elements are sufficiently spaced apart.", "The touch area does not require excessive precision (recommended size: 48dp)."],
+	"verifier": ["Clickable elements are sufficiently spaced apart.", "The touch area does not require excessive precision (recommended size: <code>48dp</code>)."],
 	"resultat": ["The touch area of each element and the spacing between components should prevent touch errors (accidental taps or difficulty to activate an element)."],
 	"exception": "",
 	"raccourcis": "",
