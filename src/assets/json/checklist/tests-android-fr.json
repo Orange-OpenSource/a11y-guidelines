@@ -1,4 +1,18 @@
 [{
+	"themes": "Contenu textuel",
+	"title": "S'assurer que chaque écran possède un titre visible et pertinent",
+	"type": ["Test manuel"],
+	"tests": ["Naviguer dans les différents écrans de l'application."],
+	"verifier": ["Un titre est présent sur chaque écran."],
+	"resultat": ["Chaque écran doit posséder un titre visible, pertinent par rapport au contexte et si possible unique."],
+	"exception": "",
+	"raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/fr/mobile/android/conception/entetes/",
+	"profils": ["Checklist initiale"],
+	"wcag": ["2.4.2"],
+	"ID": "testMobID-10",
+	"IDorigin": "testMobID-10"
+}, {
 	"themes": "Images",
 	"title": "S'assurer que seules les images informatives sont restituées",
 	"type": ["Talkback"],
@@ -138,20 +152,4 @@
 	"wcag": ["4.1.2"],
 	"ID": "testMobID-9",
 	"IDorigin": "testMobID-9"
-}, {
-	"themes": "Contenu textuel",
-	"title": "S'assurer que chaque écran possède un titre visible et pertinent",
-	"type": ["Test manuel"],
-	"tests": ["Naviguer dans les différents écrans de l'application."],
-	"verifier": ["Un titre est présent sur chaque écran."],
-	"resultat": ["Chaque écran doit posséder un titre visible, pertinent par rapport au contexte et si possible unique."],
-	"exception": "",
-	"raccourcis": "",
-	"moreInfo": "https://a11y-guidelines.orange.com/fr/mobile/android/conception/entetes/",
-	"profils": ["Checklist initiale"],
-	"wcag": ["2.4.2"],
-	"ID": "testMobID-10",
-	"IDorigin": "testMobID-10"
 }]
-
-
