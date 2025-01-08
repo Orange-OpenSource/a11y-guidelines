@@ -46,7 +46,7 @@
 	"type": ["Manual test"], 
 	"tests": ["Identify elements using color to convey information."],
 	"verifier": ["Color is not the only means of conveying information: at least one other visual method is available to obtain the same information."], 
-    "resultat": ["Information conveyed by color can also be obtained by means of an explicit text", "The information conveyed by color is complemented by other visual information (e.g., icons use different colors, but also different shapes).", "Special case of links in text: if they are not underlined, provide a means other than color to distinguish them on keyboard focus and mouse hover."], 
+    "resultat": ["Information conveyed by color can also be obtained by means of an explicit text.", "The information conveyed by color is complemented by other visual information (e.g., icons use different colors, but also different shapes).", "Special case of links in text: if they are not underlined, provide a means other than color to distinguish them on keyboard focus and mouse hover."], 
 	"exception": "", 
 	"raccourcis": "", 
 	"moreInfo": "https://a11y-guidelines.orange.com/en/mobile/ios/design/#colours", 
@@ -111,7 +111,7 @@
 	"ID": "testMobID-7",
 	"IDorigin": "testMobID-7"
 }, {
-	"themes": "Tactile et interactions",
+	"themes": "Touchscreen and interactions",
 	"title": "Ensure clickable areas are large enough.",
 	"type": ["Manual test"],
 	"tests": ["Identify clickable elements."],

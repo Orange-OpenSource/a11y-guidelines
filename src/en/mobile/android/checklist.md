@@ -10,7 +10,7 @@ js:
   - /assets/test-android.js
 ---
 
-# List of Essential Accessibility Criteria
+# Android mobile application - List of Essential Accessibility Criteria
 
 This set of criteria, designed for Android applications, helps to avoid the main accessibility errors.
 Its implementation does not guarantee an accessible mobile application, but lays the foundations for a progressive approach to accessibility.
