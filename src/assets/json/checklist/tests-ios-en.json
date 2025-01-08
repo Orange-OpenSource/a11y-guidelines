@@ -1,4 +1,18 @@
 [{
+	"themes": "Textual content",
+	"title": "Set a title for each screen",
+	"type": ["Manual test"],
+	"tests": ["Navigate through the different screens of the application."],
+	"verifier": ["A title is present on each screen."],
+	"resultat": ["Each screen must have a visible title that is relevant to the context and, if possible, unique."],
+	"exception": "",
+	"raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/mobile/ios/design/#title-and-header",
+	"profils": ["Checklist initiale"],
+	"wcag": ["2.4.2"],
+	"ID": "testMobID-10",
+	"IDorigin": "testMobID-10"
+}, {
 	"themes": "Images",
 	"title": "Ensure that only informative images are presented",
 	"type": ["VoiceOver"],
@@ -138,18 +152,4 @@
 	"wcag": ["4.1.2"],
 	"ID": "testMobID-9",
 	"IDorigin": "testMobID-9"
-}, {
-	"themes": "Textual content",
-	"title": "Set a title for each screen",
-	"type": ["Manual test"],
-	"tests": ["Navigate through the different screens of the application."],
-	"verifier": ["A title is present on each screen."],
-	"resultat": ["Each screen must have a visible title that is relevant to the context and, if possible, unique."],
-	"exception": "",
-	"raccourcis": "",
-	"moreInfo": "https://a11y-guidelines.orange.com/en/mobile/ios/design/#title-and-header",
-	"profils": ["Checklist initiale"],
-	"wcag": ["2.4.2"],
-	"ID": "testMobID-10",
-	"IDorigin": "testMobID-10"
 }]

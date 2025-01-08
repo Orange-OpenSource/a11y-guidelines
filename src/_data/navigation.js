@@ -58,7 +58,8 @@ module.exports = {
           { label: 'Develop', href: '/en/mobile/android/development/' },
           { label: 'Test', href: '/en/mobile/android/test/' },
           { label: 'Audit', href: '/en/mobile/android/wcag-audit/' },
-          { label: 'Toolbox', href: '/en/mobile/android/toolbox/' }
+          { label: 'Toolbox', href: '/en/mobile/android/toolbox/' },
+          { label: 'Must-haves', href: '/en/mobile/android/checklist/' }
         ]
       },
       {
@@ -77,6 +78,7 @@ module.exports = {
           { label: 'Test', href: '/en/mobile/ios/test/' },
           { label: 'Audit', href: '/en/mobile/ios/wcag-audit/' },
           { label: 'Toolbox', href: '/en/mobile/ios/toolbox/' },
+          { label: 'Must-haves', href: '/en/mobile/ios/checklist/' },
           { label: 'WWDC', href: '/en/mobile/ios/wwdc/' }
         ]
       },
