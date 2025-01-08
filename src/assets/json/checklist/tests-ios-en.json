@@ -58,7 +58,7 @@
 	"themes": "Keyboard navigation",
 	"title": "Allow the use of the application with keyboard",
 	"type": ["Bluetooth keyboard or Switch Control"],
-	"tests": ["Connect a Bluetooth keyboard to the iOS device (or use Switch Control).<br>See <a target=_blank href=https://a11y-guidelines.orange.com/en/articles/how-to-test-ios/>the article on getting started with features on iOS (new tab)</a>.","Navigate the page using the keyboard keys <kbd>tab</kbd> ou <kbd>shift + tab</kbd>."],  
+	"tests": ["Connect a Bluetooth keyboard to the iOS device (or use Switch Control).<br>See <a target=_blank href=https://a11y-guidelines.orange.com/en/articles/how-to-test-ios/>the article on getting started with features on iOS (new tab)</a>.","Navigate the page using the keyboard keys <kbd>tab</kbd> ou <kbd>shift</kbd> + <kbd>tab</kbd>."], 
 	"verifier": ["Everything that can be done with the touch screen can be done using the keyboard and vice-versa."],
 	"resultat": ["All interactive elements can be reached and used with a keyboard navigation (or use Switch Control)."],
 	"exception": "",
