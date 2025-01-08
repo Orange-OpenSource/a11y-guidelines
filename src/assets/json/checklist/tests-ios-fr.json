@@ -115,7 +115,7 @@
 	"title": "Avoir des zones cliquables suffisamment grandes",
 	"type": ["Test manuel"],
 	"tests": ["Identifier les éléments cliquables."],
-	"verifier": ["Les éléments cliquables sont suffisamment éloignés les uns des autres.", "La zone tactile ne nécessite pas une trop grande précision (taille recommandée : 44pt)."],
+	"verifier": ["Les éléments cliquables sont suffisamment éloignés les uns des autres.", "La zone tactile ne nécessite pas une trop grande précision (taille recommandée : <code>44pt</code>)."],
 	"resultat": ["La zone tactile de chaque élément et l'espacement entre les composants doivent permettre d'éviter des erreurs de toucher (appui par erreur ou difficulté à activer un élément)."],
 	"exception": "",
 	"raccourcis": "",
