@@ -28,7 +28,7 @@ This guided test grid is intended for designers, developers, qualifiers, product
   <h2 id="test-keyboard-navigation">Keyboard navigation</h2>
   <h2 id="test-text-size">Text size</h2>
   <h2 id="test-forms">Forms</h2>
-  <h2 id="test-touchsreen-and-interactions">Touchscreen and interactions</h2>  
+  <h2 id="test-touchscreen-and-interactions">Touchscreen and interactions</h2> 
   <h2 id="test-technical aids">Technical aids</h2>
 </section>
 
