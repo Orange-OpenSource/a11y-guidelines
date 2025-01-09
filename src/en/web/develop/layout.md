@@ -101,7 +101,7 @@ A press site presents its articles in three columns. In the code, the columns ar
  The main menu of a site is present at the very end of the source code (after the footer) but it positioned at the top of the page via <abbr>CSS</abbr>, there's a risk of not being perceived by a screen reader user.
 
 
-**Reference <abbr>WCAG</abbr>:**
+**<abbr>WCAG</abbr> reference:**  
 - <a href="https://www.w3.org/TR/WCAG22/#meaningful-sequence">1.3.2 Meaningful sequence</a>
 
 
