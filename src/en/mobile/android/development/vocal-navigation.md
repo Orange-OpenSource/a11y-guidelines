@@ -360,6 +360,20 @@ It is common to test the Android version before triggering TalkBack vocalization
    android:accessibilityLiveRegion="polite" /&gt;
 </code></pre>
 
+**Example with jetpackcompose**:
+
+<pre>
+<code class="kotlin">@Composable
+fun PoliteAccessibilityRegion() {
+Column {
+Text(
+text = "Contenu mis à jour pour l'accessibilité",
+modifier = Modifier.accessibilityLiveRegion(AccessibilityLiveRegion.Polite)
+)
+}
+}
+</code></pre>
+
 
 ## Do not vocalize the decorative and hidden elements.
 
