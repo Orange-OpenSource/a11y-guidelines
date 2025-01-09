@@ -2,7 +2,7 @@
 title: "Le nom accessible en HTML"
 abstract: "Le nom accessible, qu'est-ce et son rapport avec les technologies d'assistance"
 titleBeforeTag: true
-date: "2018-10-26"
+date: "2018-10-27"
 tags:
   - web
   - intermediate
@@ -24,11 +24,11 @@ Le nom accessible est, par exemple, annoncé par un lecteur d'écran à la prise
 
 Pour accéder au nom (accessible), le plus simple est d'utiliser les outils des navigateurs.
 
-Dans Chrome, il faut, dans les Chrome dev tools (<kbd>Ctrl+ Maj. + i</kbd>), inspecter un élément (onglet "Elements") et ouvrir le panneau "Accessibility" à la place de celui de "Style" (généralement à droite). On accède à l'"Accessibility tree" et dans "Computed properties" au "Name", le nom accessible de l'élément inspecté.
+Dans Chrome, il faut utiliser les Chrome dev tools (<kbd>Ctrl+ Maj. + i</kbd>) pour inspecter un élément et ouvrir le panneau "Accessibility" à la place de celui de "Style" (généralement à droite). On accède à l'"Accessibility tree" et dans "Computed properties" au "Name", le nom accessible de l'élément inspecté.
 
 ![Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert](../../web/images/chrome_name.png)
 
-Dans FireFox, il faut, dans les dev tools (<kbd>Ctrl+ Maj. + i</kbd>), ouvrir l'onglet "Accessibilité" (à afficher les "Options" des dev tools), inspecter un élément. On accède au "Name", le nom accessible de l'élément inspecté.
+Dans FireFox, il faut utiliser les dev tools (<kbd>Ctrl+ Maj. + i</kbd>), ouvrir l'onglet "Accessibilité" (à afficher les "Options" des dev tools), inspecter un élément. On accède au "Name", le nom accessible de l'élément inspecté.
 
 ![Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert](../../web/images/FF_name.png)
 ### Contenu d'une balise
@@ -80,5 +80,4 @@ Plus de détails sur ["Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver"]
 ## Webographie
 
 - <a href="https://www.w3.org/TR/accname-1.1/" lang="en" hreflang="en">Accessible Name and Description Computation 1.1</a> par <span lang="en">the Accessible Rich Internet Applications Working Group</span>
-- <a href="http://simplyaccessible.com/article/accessible-name/" lang="en" hreflang="en">Demystifying accessible name</a> par Joe Watkins
 - <a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/" lang="en" hreflang="en">What is an accessible name?</a> par Léonie Watson

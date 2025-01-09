@@ -3,7 +3,7 @@ title: "Web designer - Contenu non-textuel"
 abstract: "Contenu non-textuel, recommendations d'accessibilité web lors de la conception"
 ---
 
-# Contenu non-textuel
+# Web designer - Contenu non-textuel
 
 <p class="lead">S’assurer qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur.</p>
 
@@ -27,10 +27,10 @@ S’il vous est possible techniquement de réaliser votre visuel via du texte mi
 Seuls cas où la mise en forme peut se faire via une image :
 * Si le [texte sous forme d'image peut être personnalisé visuellement](https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/visual-audio-contrast-text-presentation.html#visually-customizeddef) par l'utilisateur ;
 * Si une [présentation spécifique du texte est essentielle à l'information véhiculée](https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/visual-audio-contrast-text-presentation.html#essentialdef) (exemple : logo contenu du texte ou nom d’une marque).
-Dans ces cas précis, prévoir une alternative textuelle reprenant au moins le texte de l’image et [vérifier les contrastes des couleurs utilisées](/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs). 
+Dans ces cas précis, prévoir une alternative textuelle reprenant au moins le texte de l’image et [vérifier les contrastes des couleurs utilisées](/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/). 
 
 ## Cas particuliers des animations, contenus vidéo et audio
-Pour les éléments non informatifs et purement décoratifs, pas besoin d’alternative textuelle et faire en sorte que l’animation soit [ignorée par les aides techniques](/fr/web/exemples-de-composants/masquage-accessible).
+Pour les éléments non informatifs et purement décoratifs, pas besoin d’alternative textuelle et faire en sorte que l’animation soit [ignorée par les aides techniques](/fr/web/exemples-de-composants/masquage-accessible/).
 
 Pour les animations portant de l’information, prévoir une transcription (de type script) reprenant l’information du contenu sous forme de texte.
 

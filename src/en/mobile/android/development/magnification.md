@@ -3,7 +3,7 @@ title: "Android develop - Element Magnification"
 abstract: "Element magnification, accessibility dev recommandations with Android"
 ---
 
-# Element magnification
+# Android develop - Element magnification
 
 ## Enlarge texts without loss of information
 
@@ -50,6 +50,6 @@ Text(
 </code>
 </pre>
 
-**Reference <abbr>WCAG</abbr>:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#resize-text">1.4.4 Resize text</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#reflow">1.4.10 Reflow</a>
+**<abbr>WCAG</abbr> reference:** 
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#resize-text">1.4.4 Resize text</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#reflow">1.4.10 Reflow</a>

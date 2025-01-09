@@ -12,7 +12,7 @@ Les utilisateurs qui naviguent à l'aide d'un lecteur d'écran ne sont pas toujo
 
 ## Le role alert
 
-Positionné sur un élément HTML, celui-ci permet d'indiquer au lecteur d'écran de vocaliser l'élément automatiquement lors de sa création. Veiller toutefois à utiliser ce rôle uniquement dans les cas appropriés, comme il est clairement indiqué dans la documentation [MDN de Mozilla](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_r%C3%B4le_alert). De fait de sa nature intrusive, le role alert doit être utilisé avec parcimonie et uniquement dans les situations où l’attention de l’utilisateur est immédiatement requise. Les changements dynamiques de moindre urgence devraient utiliser une méthode moins agressive, telle que `aria-live="polite"` ou autres rôles de zone live.
+Positionné sur un élément HTML, celui-ci permet d'indiquer au lecteur d'écran de vocaliser l'élément automatiquement lors de sa création. Veiller toutefois à utiliser ce rôle uniquement dans les cas appropriés, comme il est clairement indiqué dans la documentation [MDN de Mozilla](https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/Roles/alert_role). De fait de sa nature intrusive, le role alert doit être utilisé avec parcimonie et uniquement dans les situations où l’attention de l’utilisateur est immédiatement requise. Les changements dynamiques de moindre urgence devraient utiliser une méthode moins agressive, telle que `aria-live="polite"` ou autres rôles de zone live.
 
 Pour déclencher une alerte, plusieurs méthodes sont possibles, avec des supports qui différent en fonction du couple navigateur et lecteur d'écran utilisé. Vous pouvez consulter [l'article de Steve Faulkner (en anglais)](https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/) à ce sujet.
 
@@ -62,6 +62,6 @@ Enfin pour être complet, sachez que le langage <abbr>ARIA</abbr> prévoit égal
 
 ## Références
 - [Utilisation du rôle alert](https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/Roles/alert_role)
-- [Zones live ARIA](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Zones_live_ARIA)
-- [Utiliser le rôle log](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_log)
-- [Utiliser le rôle status](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_status)
+- [Zones live ARIA](https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+- [Utiliser le rôle log](https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/Roles/log_role)
+- [Utiliser le rôle status](https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/Roles/status_role)

@@ -3,7 +3,7 @@ title: "Android design - Headers"
 abstract: "Headers, accessibility design recommandations with Android"
 ---
 
-# Headers
+# Android design - Headers
 
 ## Have a relevant and unique screen title
 
@@ -24,5 +24,5 @@ A common mistake is to put a unique title for all the pages of an application (o
 <img src="../../../images/header.png" alt="example of irrelevant title (no title)" width="300" height="530">
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#page-titled">2.4.2 Page titled</a> 
+**<abbr>WCAG</abbr> reference:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#page-titled">2.4.2 Page titled</a> 

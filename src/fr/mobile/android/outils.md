@@ -8,7 +8,7 @@ sideNavigationLinks:
     href: "../../flutter/"
   - label: "App m-learning mDAN"
     href: "../../mdan/"
-  - label: "Fiches mémo"
+  - label: "Fiches mémos"
     href: "../fiches-memo/"    
   - label: "Personae"
     href: "../../../persona/"    
@@ -16,7 +16,7 @@ sideNavigationLinks:
     href: "../../liens-utiles/"
 ---
 
-# Boite à outils
+# Android - Boite à outils
 
 Des ressources et outils pour faciliter la prise en compte de l’accessibilité numérique :
 

@@ -3,7 +3,7 @@ title: "Web design - Colors and contrasts"
 abstract: "Colors and contrast, web accessibility design recommandations"
 ---
 
-# Colors and contrasts
+# Web design - Colors and contrasts
 
 <p class="lead">Ensure that the colors used are not a problem for the user</p>
 

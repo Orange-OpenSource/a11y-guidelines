@@ -1,9 +1,9 @@
 ---
-title: "Web develop - Assistive technology"
+title: "Web develop - Assistive technologies"
 abstract: "Assistive technologies, web accessibility dev recommandations"
 ---
 
-# Assistive technology
+# Web develop - Assistive technologies
 
 <p class="lead">Allow the screen reader user access to the main features of the application, but also ensure for all users the usability of the application</p>
 
@@ -29,5 +29,5 @@ Indeed, screen reader users are the most affected by the lack of accessibility, 
 
 Allow the screen reader users to access the main features of the application, but also ensure the usability of the application for all users.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- [4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG21/#name-role-value)
+**<abbr>WCAG</abbr> reference:**  
+- [4.1.2 Name, Role, Value](https://www.w3.org/TR/WCAG22/#name-role-value)

@@ -2,14 +2,14 @@
 
 <div class="navbar navbar-dark bg-dark navbar-expand-md">
   <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="{{ 'navigation.main.label' | translate }}">
-    <a href="/{{ locale }}" class="navbar-brand flex-grow-1 flex-md-grow-0" title="{{ 'header.logoAlt' | translate }}">
+    <a href="/{{ locale }}/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="{{ 'header.logoAlt' | translate }}">
       <img src="/assets/images/orange-logo.svg" alt="{{ 'header.logoAlt' | translate }}" width="50" height="50">
     </a>
 
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="{{ 'navigation.main.burgerLabel' | translate }}">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="main-menu-list">
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
       <ul class="navbar-nav me-auto">
         {%- for link in navigation.main[locale] -%}
           {% if link.mainMenu != false %}
@@ -22,19 +22,7 @@
       </ul>
     </div>
 
-    <button id="search-input-toggler" type="button" class="btn btn-icon collapsed hidden-if-no-js" data-bs-toggle="collapse" data-bs-target="#search-input-container" aria-expanded="false" aria-controls="search-input-container" title="{{ "search.label" | translate }}">
-      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1000 1000" focusable="false" aria-hidden="true" fill="#fff">
-        <path d="M892.285,819.383L666.631,593.728a310.794,310.794,0,0,0,58.05-181.388c0-172.5-139.839-312.34-312.341-312.34S100,239.838,100,412.34,239.838,724.681,412.34,724.681a310.918,310.918,0,0,0,181.4-58.05L819.383,892.275a25.053,25.053,0,0,0,35.342,0l37.56-37.55A25.071,25.071,0,0,0,892.285,819.383ZM412.34,624.732c-117.3,0-212.391-95.092-212.391-212.392S295.04,199.949,412.34,199.949,624.732,295.04,624.732,412.34,529.64,624.732,412.34,624.732Z"/>
-      </svg>
-
-      <span class="visually-hidden">{{ "search.label" | translate }}</span>
-    </button>
+    <div id="search-input"></div>
 
   </nav>
-</div>
-
-<div id="search-input-container" class="bg-dark collapse">
-  <form class="container-lg py-3" role="search">
-    <input id="search-input" type="search" class="form-control form-control-lg bg-dark border-light" aria-label="{{ "search.label" | translate }}" placeholder="{{ "search.label" | translate }}">
-  </form>
 </div>

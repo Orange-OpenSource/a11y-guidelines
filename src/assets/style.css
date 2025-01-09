@@ -35,51 +35,6 @@ body {
 }
 
 
-/** 
- * Fix for Boosted (to remove as soon as Boosted removes orange on white colors) 
- */
-
-a:hover,
-a:focus {
-    color: #000;
-}
-
-a:hover {
-    text-decoration-thickness: .1rem;
-}
-
-a:focus {
-    outline-color: #f16e00;
-    outline-offset: .075rem;
-    text-decoration: none;
-}
-
-h2 a:hover,
-h2 a:focus {
-    color: #f16e00;
-    background-color: transparent;
-}
-
-a.text-decoration-none:hover,
-a.text-decoration-none:focus {
-    text-decoration: underline !important;
-}
-
-.supra {
-    padding-top: 0;
-    border-bottom: 1px solid #333;
-}
-
-.supra .nav-link {
-    font-size: .875rem;
-    padding: .8rem .625rem .425rem .4rem !important;
-}
-
-.supra .navbar-nav {
-    margin: 0 -.46875rem;
-}
-
-
 /**
  * Typography
  */
@@ -156,6 +111,15 @@ blockquote p::after {
     padding-left: .5rem;
 }
 
+.tagType {
+    background-color: black;
+    color: white;
+    padding: 6px 12px 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    margin-bottom: 0;
+}
 
 /*
  * Glossary
@@ -230,83 +194,111 @@ pre code {
  * Search field
  */
 
-.form-control.bg-dark::placeholder {
-    color: #eee;
+.DocSearch-Button:hover, .DocSearch-Button:focus {
+    box-shadow: inset 0 0 0 .125rem #f16e00;
+
 }
 
-#search-input-toggler {
-    outline-color: #ff7900;
+.DocSearch-Form {
+    box-shadow: #ccc 0 0 0 .125rem inset;
 }
 
-#search-input-toggler:hover svg,
-#search-input-toggler:focus svg {
-    fill: #ff7900;
+.DocSearch-Form:focus-within, .DocSearch-Form:focus, .DocSearch-Form:hover {
+    box-shadow: #000 0 0 0 .125rem inset;
 }
 
-.algolia-autocomplete {
-    display: block !important;
+.DocSearch-Hit {
+    padding: 3px;
 }
 
-
-/* Adapt to small screens */
-
-.algolia-autocomplete .ds-dropdown-menu {
-    min-width: 300px;
-    width: 100%;
+.DocSearch-Hit[aria-selected="true"] a {
+    background-color: #f16e00;
 }
 
-
-/* Place the search dropdown to the left */
-
-.algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu {
-    right: unset !important;
+.DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-action, .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-icon, .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-path, .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-text, .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-title, .DocSearch-Hit[aria-selected="true"] .DocSearch-Hit-Tree, .DocSearch-Hit[aria-selected="true"] mark {
+    color: #000 !important;
+    background: none;
 }
 
-.algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu::before {
-    left: 3rem;
-    right: unset;
-}
-
-
-/* Customize colors and appearance */
-
-.algolia-autocomplete .algolia-docsearch-suggestion {
-    text-decoration: none;
-}
-
-.algolia-autocomplete .algolia-docsearch-suggestion--category-header {
-    font-weight: 700;
-}
-
-.algolia-autocomplete .algolia-docsearch-suggestion--subcategory-column {
-    color: #666;
-}
-
-.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
-    background-color: #ff7900;
+.DocSearch-Hit-Container, .DocSearch-Hit-action, .DocSearch-Hit-icon, .DocSearch-MagnifierLabel, .DocSearch-Hit-source {
     color: #000;
 }
 
-.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
-    box-shadow: inset 0 -2px 0 0 #ff7900 !important;
+.DocSearch-Hits mark {
+    color: currentColor;
+    background-color: #f16e00;
 }
 
-
-/* Make sure we have an outline when we navigate through the results with the keyboard */
-
-.algolia-autocomplete .ds-suggestion.ds-cursor .algolia-docsearch-suggestion {
-    outline: .125rem solid #ff7900;
-    outline-offset: -.125rem;
+.DocSearch-Hit-path, .DocSearch-Help, .DocSearch-Label, .DocSearch-Commands-Key, .DocSearch-Button-Key, .DocSearch-Label, .DocSearch-Button {
+    color: #666;
 }
 
-.algolia-autocomplete .ds-suggestion.ds-cursor .algolia-docsearch-suggestion--content {
-    background-color: #f6f6f6 !important;
+.DocSearch-Cancel {
+    color: #000;
+    text-decoration: underline;
+}
+
+.DocSearch-Cancel:focus, .DocSearch-Cancel:hover {
+    text-decoration-thickness: .1rem;
+}
+
+.DocSearch-Prefill {
+    color: #000;
+    font-weight: bolder;
+}
+
+.DocSearch-Button-Container {
+    align-items: center;
+    display: flex;
+}
+
+.DocSearch-Button {
+    --docsearch-searchbox-background: #000;
+    --docsearch-searchbox-focus-background: #000;
+    --docsearch-text-color: #fff;
+    margin: 0;
+    border: 0;
+}
+
+.DocSearch-Button-Placeholder {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.DocSearch-Button .DocSearch-Search-Icon {
+    color: #fff;
+}
+
+.DocSearch-Search-Icon {
+    width: 1.875rem;
+    height: 1.875rem;
+    stroke-width: 2;
+}
+
+.DocSearch-Button-Keys {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }
 
 
 /**
  * Utilities
  */
+
 
 .bg-200 {
     background-color: #f6f6f6 !important;
@@ -316,18 +308,22 @@ pre code {
     background-color: #eee !important;
 }
 
+.bg-600 {
+    background-color: #999 !important;
+}
+
 .bg-800 {
     background-color: #595959 !important;
-    color: #fff!important
+    color: #fff !important
 }
 
 .bg-800 a {
-    color: #fff!important
+    color: #fff !important
 }
 
 .bg-900 {
     background-color: #333333 !important;
-    color: #fff!important
+    color: #fff !important
 }
 
 .no-js .hidden-if-no-js {
@@ -347,7 +343,8 @@ pre code {
     .breadcrumb-item:nth-last-of-type(2)::before {
         transform: rotate(0);
     }
-    .MobileDropdownNavigationContainer .dropdown~.dropdown {
+
+    .MobileDropdownNavigationContainer .dropdown ~ .dropdown {
         margin-top: .625rem;
     }
 }
@@ -361,14 +358,31 @@ pre code {
     white-space: normal;
 }
 
+.bg-supporting-pink {
+    color: #000 !important;
+}
+
+.bg-supporting-green {
+    color: #000 !important;
+}
+
+.bg-supporting-purple {
+    color: #000 !important;
+}
+
+.bg-supporting-yellow {
+    color: #000 !important;
+}
+
+
 .bg-900 li::marker {
     color: #f16e00;
     vertical-align: middle;
 }
 
-.bg-supporting-customblue{
+.bg-supporting-customblue {
     background-color: #085EBD;
-    color:#fff;
+    color: #fff;
 }
 
 .table-persona-pink th[scope=row] {
@@ -383,55 +397,55 @@ pre code {
     background-color: #FFF1FB;
 }
 
-.table-persona-blue th[scope=row]{
+.table-persona-blue th[scope=row] {
     background-color: #D9F0FB;
 }
 
-.table-persona-yellow th[scope=row]{
+.table-persona-yellow th[scope=row] {
     background-color: #FFF5CB;
 }
 
-.text-supporting-pink{
-    color:#ffb4e6 !important
+.text-supporting-pink {
+    color: #ffb4e6 !important
 }
 
-.text-supporting-green{
-    color:#50be87 !important
+.text-supporting-green {
+    color: #50be87 !important
 }
 
-.text-supporting-purple{
-    color:#D9C2F0 !important
+.text-supporting-purple {
+    color: #D9C2F0 !important
 }
 
-.text-supporting-blue{
-    color:#4BB4E6 !important
+.text-supporting-blue {
+    color: #4BB4E6 !important
 }
 
-.text-supporting-yellow{
-    color:#fc0 !important
+.text-supporting-yellow {
+    color: #fc0 !important
 }
 
-.persona-background-pink{
+.persona-background-pink {
     background: url(/assets/images/bosses-pink.svg) no-repeat bottom;
     background-size: contain;
 }
 
-.persona-background-green{
+.persona-background-green {
     background: url(/assets/images/bosses-green.svg) no-repeat bottom;
     background-size: contain;
 }
 
-.persona-background-purple{
+.persona-background-purple {
     background: url(/assets/images/bosses-purple.svg) no-repeat bottom;
     background-size: contain;
 }
 
-.persona-background-blue{
+.persona-background-blue {
     background: url(/assets/images/bosses-blue.svg) no-repeat bottom;
     background-size: contain;
 }
 
-.persona-background-yellow{
+.persona-background-yellow {
     background: url(/assets/images/bosses-yellow.svg) no-repeat bottom;
     background-size: contain;
 }
@@ -440,25 +454,28 @@ pre code {
     .step-1 {
         margin-top: 150px;
     }
+
     .step-2 {
         margin-top: 100px;
     }
+
     .step-3 {
         margin-top: 50px;
     }
-    .pb-lg-persona{
+
+    .pb-lg-persona {
         padding-bottom: 5.75rem !important
     }
 }
 
 @media (max-width: 1024px) {
-    .lg-persona{
+    .lg-persona {
         margin-bottom: 6.10rem;
     }
 }
 
 @media (min-width: 768px) {
-    .mb-persona{
+    .mb-persona {
         margin-bottom: 6.10rem;
     }
 }
@@ -473,8 +490,8 @@ pre code {
 }
 
 .persona-apps .small {
-    font-size: .75rem;    
-    padding-top: .25rem;    
+    font-size: .75rem;
+    padding-top: .25rem;
 }
 
 .persona-apps li {
@@ -490,13 +507,13 @@ pre code {
 
 .form-control.bg-dark:focus {
     color: #FFF;
-    border-color: #ff7900!important;
+    border-color: #ff7900 !important;
 }
 
 
 /*secondary navigation*/
 
-.o-nav-local .nav>.nav-item:first-child .active::before {
+.o-nav-local .nav > .nav-item:first-child .active::before {
     left: 0;
 }
 
@@ -530,4 +547,35 @@ pre code {
     line-height: 1.125;
     color: #fff;
     letter-spacing: -.00625rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/**
+ * For links color accessibility
+ */
+a:hover {
+    font-weight: bold;
+}
+
+a.breadcrumb-focus:hover {
+    font-size: calc(1em + 2px);
+}
+
+a.header-anchor:hover,
+a.nav-link:hover,
+a.article-focus:hover,
+.h2-focus a:hover {
+    color: #F16E00;
+}
+
+:root {
+    --bs-link-hover-color: #000;
+    --bs-link-hover-color-rgb: 0, 0, 0;
+}
+
+.accordion-title.h6 {
+    font-size: 19px;
 }

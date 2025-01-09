@@ -3,7 +3,7 @@ title: "Android develop - General navigation"
 abstract: "General navigation, accessibility dev recommandations with Android"
 ---
 
-# General navigation
+# Android develop - General navigation
 
 ## Have sufficiently large click areas
 
@@ -116,9 +116,9 @@ Button(
 </pre>
 
 
-**Reference <abbr>WCAG</abbr>:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#target-size">2.5.5 Target Size</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
+**<abbr>WCAG</abbr> reference:** 
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#target-size">2.5.5 Target Size</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
 
 
 <br/><br/>
@@ -194,8 +194,8 @@ Text(
 </code>
 </pre>
 
-**Reference <abbr>WCAG</abbr>:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a>
+**<abbr>WCAG</abbr> reference:** 
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#text-spacing">1.4.12 Text Spacing</a>
 
 
 <br/><br/>
@@ -221,8 +221,8 @@ However, as not all phones use a recent version of Android, it is recommended to
 
 - A timeout has a configurable delay.
 
-**Reference <abbr>WCAG</abbr>:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#timing-adjustable">2.2.1 Timing Adjustable</a>
+**<abbr>WCAG</abbr> reference:** 
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#timing-adjustable">2.2.1 Timing Adjustable</a>
 
 
 

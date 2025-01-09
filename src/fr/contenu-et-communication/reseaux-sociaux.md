@@ -13,7 +13,7 @@ Cette partie indique comment rendre vos contenus sur les réseaux sociaux le plu
 - [Conserver l’accentuation sur les majuscules](/fr/contenu-et-communication/#comment-mettre-des-accents-aux-majuscules) (exemple : É ou Ç).
 Sur un mobile, il suffit de maintenir le doigt sur la lettre à accentuer.
 - Si le post est rédigé sur une image ou une couleur de fond, [respecter un contraste suffisant avec le texte](/fr/web/developper/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond).
-Utiliser un [outil pour vérifier le contraste](/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/#main-content).
+Utiliser un [outil pour vérifier le contraste](/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/).
 
 ### Liens
 - Donner des intitulés aux liens qui permettent de comprendre l’action ou la destination du  lien. Exemple : Eviter « Cliquez ici », préférer « Le forfait en détail… ».
@@ -40,7 +40,7 @@ Les images doivent être accompagnées d’un texte de remplacement (cf. ci-dess
   - Si une description d'image et une légende sont renseignées, faire attention à ne pas mettre des informations redondantes dans la mesure du possible
 - Vérifier le contraste de l’image
   - Pour toute image contenant du texte, [vérifier que le contraste est suffisant](/fr/web/developper/couleurs-et-contrastes/#assurer-un-contraste-suffisant-entre-les-couleurs-de-premier-plan-et-de-fond).
-Utiliser un [outil pour vérifier le contraste](/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/#main-content).
+Utiliser un [outil pour vérifier le contraste](/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/).
 
 ### Vidéos
 Toutes les vidéos doivent avoir des sous-titres et si possible une transcription.

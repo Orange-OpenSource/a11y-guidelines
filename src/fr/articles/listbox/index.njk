@@ -1,0 +1,54 @@
+---
+title: "Les listbox"
+abstract: "Exemple de liste ARIA."
+titleBeforeTag: true
+date: "2018-01-07"
+tags:
+  - component
+---
+
+<h2>Introduction</h2>
+
+<p><abbr>ARIA</abbr> met à disposition un grand nombre de composants qui peuvent servir dans les interfaces riches (onglet, accordéon…).
+Nous allons étudier le cas des <i lang="en">listbox</i>. Il s'agit d'un composant qui permet à l’utilisateur de sélectionner un ou plusieurs éléments à partir d’une liste de choix.</p>
+<p>Les éléments d’une <i lang="en">listbox</i> sont statiques, une <i lang="en">listbox</i> n’est pas destinée à recevoir des éléments interactifs (tels que des liens, des boutons…), en revanche celle-ci peut contenir des images à l’inverse d’un <code>select</code>.</p>
+<p>Plus d’infos&nbsp;: <a href="https://w3c.github.io/aria-practices/#Listbox" hreflang="en" lang="en"><abbr>WAI</abbr>-<abbr>ARIA</abbr> Authoring Practices</a>.</p>
+
+<h2>Mise en garde</h2>
+<p>Bien que des progrès soient réalisés à chaque nouvelle version, le support de l’<abbr>ARIA</abbr> est encore partiel pour l’ensemble des lecteurs d’écran. Son utilisation doit être conditionnée par des tests de compatibilité sur l’environnement cible (couple navigateur/lecteur d’écran).</p>
+
+<h2>Mise en place</h2>
+
+<h3>Code <abbr>HTML</abbr></h3>
+<p>Pour créer une <i lang="en">listbox</i>, il suffit d’appliquer le rôle <code>listbox</code> à un conteneur parent. Puis d’appliquer le rôle <code>option</code> aux différentes options de la liste. On n’oubliera pas de rendre cette liste focusable pour les utilisateurs qui naviguent à l’aide du clavier (ajout d’un attribut <code>tabindex="0"</code>) ni d’ajouter un label (<code>aria-label</code> ou <code>aria-labelledby</code>) pour les personnes qui utilisent un lecteur d’écran.</p>
+
+<pre><code class="html">
+&lt;ul role="listbox" tabindex="0" aria-label="liste des dossiers"&gt;
+  &lt;li role="option"&gt;Boite de réception (4) &lt;span class="visually-hidden"&gt;messages non lus&lt;/span&gt;&lt;/li&gt;
+  &lt;li role="option"&gt;Eléments envoyés&lt;/li&gt;
+  &lt;li role="option"&gt;Brouillons&lt;/li&gt;
+  &lt;li role="option"&gt;Corbeille&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>À noter que les balises <code>ul</code> et <code>li</code> pourraient être remplacées par de simples balises <code>div</code>.</p>
+
+<h3>Interactions</h3>
+<p>Pour coller avec le pattern <abbr>ARIA</abbr> de la <i lang="en">listbox</i> (<a href="https://w3c.github.io/aria-practices/#Listbox">WAI-<abbr>ARIA</abbr> Authoring Practices</a>), il est indispensable de gérer quelques interactions à l’aide de code Javascript. Le clavier doit permettre de naviguer dans la liste :</p>
+<ul>
+  <li>Flèche haut pour sélectionner l’élément précédent</li>
+  <li>Flèche bas pour sélectionner l’élément suivant</li>
+</ul>
+
+<p>Pour les listes à sélection multiple : <kbd>shift</kbd> ou <kbd>control</kbd> + flèches haut et bas, barre espace.</p>
+
+<h3>Exemples</h3>
+<p>Le W3C met à disposition <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#examples-7">plusieurs exemples fonctionnels</a>.</p>
+
+<h2>Liens</h2>
+<p>Plus d’infos sur <abbr>ARIA</abbr> et les <i lang="en">listbox</i>&nbsp;:</p>
+<ul>
+  <li><a href="https://w3c.github.io/aria-practices/#Listbox" hreflang="en" lang="en"><abbr>WAI</abbr>-<abbr>ARIA</abbr> Authoring Practices 1.2</a></li>
+  <li><a href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role"><abbr>MDN</abbr> Utiliser le rôle listbox</a></li>
+  <li><a href="https://www.w3.org/TR/wai-aria-1.1/#roles" hreflang="en" lang="en"><abbr>WAI</abbr>-<abbr>ARIA</abbr> The roles model</a></li>
+</ul>

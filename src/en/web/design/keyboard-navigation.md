@@ -3,7 +3,7 @@ title: "Web design - Keyboard navigation"
 abstract: "Keyboard navigation, web accessibility design recommandations"
 ---
 
-# Keyboard navigation
+# Web design - Keyboard navigation
 
 <p class="lead">Ensure the user can navigate using the keyboard only</p>
 
@@ -32,7 +32,7 @@ In the webmail, right-clicking on the “trash” opens a menu to empty the tras
 
 **Description:**  
 The position of the keyboard focus must be visible to all users. By default, the browser surrounds the item with dotted lines or a colored box. This behavior can be modified (we recommend at least `2px` for this dotted box) or replaced (color inversion, changing the background color / text ...) to be made more visible but must not be deleted.
-Be sure to provide a sufficient 3: 1 contrast ratio with the background color to make the focus visible (see [Measure Color Contrast Level](../../toolbox/methods-and-test-tools/color-contrast-level)).
+Be sure to provide a sufficient 3: 1 contrast ratio with the background color to make the focus visible (see [Measure Color Contrast Level](../../toolbox/methods-and-test-tools/color-contrast-level/)).
 Moreover, it is necessary to check the visibility of the focus on all the focusable elements, in particular, because the background color of the element can be the same as the focus and thus, hide it.
 Users navigating using the keyboard (TAB key) need to know the focus position at all times.
 

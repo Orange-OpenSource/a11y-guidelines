@@ -1,5 +1,6 @@
 module.exports = {
   en: {
+    url : "https://a11y-guidelines.orange.com/en/",
     breadcrumb: {
       label: "You are here:"
     },
@@ -33,12 +34,13 @@ module.exports = {
     },
     tags: {
       componentExample: 'Component example',
-      list : "Associated themes :",      
+      list : "Associated themes:",
       mobile: 'Mobile',
       technicalArticle: 'Technical article',
       web: 'Web',
       veille: 'Watch',
       telechargement: 'Download',
+      component: 'Component',
       beginner: 'Beginner',
       intermediate: 'Intermediate',
       advanced: 'Advanced'
@@ -75,8 +77,9 @@ module.exports = {
     }
   },
   fr: {
+    url : "https://a11y-guidelines.orange.com/fr/",
     breadcrumb: {
-      label: "Vous êtes ici&nbsp;:"
+      label: "Vous êtes ici"
     },
     changelang: {
       label: 'Changement de langue'
@@ -113,7 +116,8 @@ module.exports = {
       mobile: 'Mobile',
       technicalArticle: 'Article technique',
       web: 'Web',
-      veille: 'Veille',      
+      veille: 'Veille',
+      component: 'Composant',
       beginner: 'Débutant',
       intermediate: 'Intermédiaire',
       advanced: 'Avancé'

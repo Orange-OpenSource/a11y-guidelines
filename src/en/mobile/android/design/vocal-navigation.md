@@ -3,7 +3,7 @@ title: "Android design - Vocal navigation"
 abstract: "Vocal navigation, accessibility design recommandations with Android"
 ---
 
-# Vocal navigation
+# Android design - Vocal navigation
 
 
 ## Vocalize the images
@@ -30,9 +30,9 @@ The image containing the information of the channel is well vocalized by the scr
 <img src="../../../images/image_desc.jpg" alt="example of a screen with a vocalized informative image" width="300" height="530">
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Images of Text</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#images-of-text">1.4.5 Images of Text</a>
 
 <br/><br/>
 ## Vocalize all significant elements
@@ -63,8 +63,8 @@ Example of an icon that is coupled with text (tooltip) to add information. The i
 - The titles of the activities are vocalized
 - Items in a list are vocalized independently of each other.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 
 <br/><br/>
 ## Manage the vocalization order 
@@ -84,9 +84,9 @@ In this example, the default reading order is completely dependent on the order 
 - The vocalization order follows an understandable and logical order
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-order">2.4.3 Focus Order</a>
 
 <br/><br/>
 ## Vocalize content change
@@ -156,8 +156,8 @@ In this example, the frame with green border corresponds to the Talkback focus. 
 <img src="../../../images/ghost.png" alt="example of hidden vocalization" width="300" height="530">
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 
 
 ## Group the elements 
@@ -184,8 +184,8 @@ Several elements are grouped to improve navigation
 <img src="../../../images/regroupement.jpg" alt="example of a screen with elements grouped in a single vocalization" width="300" height="530">
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 
 ## Enable header navigation
@@ -203,9 +203,9 @@ To recognize headers, an attribute in the XML layout must be added to the elemen
 - Headers are navigable with the Talkback Navigation "Heading" setting 
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and Labels</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#headings-and-labels">2.4.6 Headings and Labels</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 ## Enable navigation by controls
 

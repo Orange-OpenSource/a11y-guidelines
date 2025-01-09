@@ -3,7 +3,7 @@ title: "Android develop - Input screen"
 abstract: "Input fields, accessibility dev recommandations with Android"
 ---
 
-# Input screen
+# Android develop - Input screen
 
 ## Explicitly label input fields
 
@@ -62,7 +62,7 @@ TextField(
 </code>
 </pre>
 
-**Reference <abbr>WCAG</abbr>:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and labels</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or instructions</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#identify-input-purpose">1.3.5 Identify input purpose</a>
+**<abbr>WCAG</abbr> reference:** 
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#headings-and-labels">2.4.6 Headings and labels</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#labels-or-instructions">3.3.2 Labels or instructions</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#identify-input-purpose">1.3.5 Identify input purpose</a>

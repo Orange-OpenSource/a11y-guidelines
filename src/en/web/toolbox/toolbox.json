@@ -19,8 +19,12 @@
       "href": "/en/web/toolbox/fact-sheets/"
     },    
     {
+      "label": "Personae",
+      "href": "/en/persona/"
+    },
+    {
       "label": "Useful links",
-      "href": "/en/web/useful-links"
+      "href": "/en/web/useful-links/"
     },
     {
       "label": "Glossary",

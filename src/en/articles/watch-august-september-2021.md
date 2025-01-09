@@ -54,7 +54,6 @@ Enjoy !
 
 - On the importance of the order of focusing, an essential concept to understand: https://devyarns.com/logical-focus-order/
 - Everything about the definition lists, dl: https://benmyers.dev/blog/on-the-dl/
-- A good image alternative: https://jebswebs.net/blog/2021/08/just-what-is-a-good-alternative-description/
 - Make your website authentication accessible: https://www.boia.org/blog/is-your-sites-authentication-process-accessible
 - Make online help accessible: https://www.boia.org/blog/make-sure-your-websites-help-resources-are-available-and-accessible
 - Hidden controls and WCAG 2.2, new: https://www.boia.org/blog/wcag-2.2-introduces-new-requirements-for-hidden-controls

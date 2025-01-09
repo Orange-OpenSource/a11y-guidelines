@@ -3,7 +3,7 @@ title: "Android designer - Multimédia"
 abstract: "Multimédia, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
-# Multimédia
+# Android designer - Multimédia
 
 ## Contrôler le contenu multimédia
 
@@ -24,8 +24,8 @@ De plus, un contenu multimédia doit pouvoir être contrôlé à tout instant pa
 - Il n'y a pas de démarrage automatique de la vidéo au chargement de la page.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#audio-control">1.4.2 Audio Control</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#audio-control">1.4.2 Audio Control</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a>
 
 ## Transcrire le contenu audio ou vidéo
 
@@ -44,11 +44,11 @@ Il est essentiel de fournir un moyen d’accès à l’information visuelle et a
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded">1.2.1 Audio-only and Video-only (Prerecorded)</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#captions-prerecorded">1.2.2 Captions (Prerecorded)</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded">1.2.3 Audio Description or Media Alternative (Prerecorded)</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#captions-live">1.2.4 Captions (Live)</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#audio-description-prerecorded">1.2.5 Audio Description (Prerecorded)</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#audio-only-and-video-only-prerecorded">1.2.1 Audio-only and Video-only (Prerecorded)</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#captions-prerecorded">1.2.2 Captions (Prerecorded)</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#audio-description-or-media-alternative-prerecorded">1.2.3 Audio Description or Media Alternative (Prerecorded)</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#captions-live">1.2.4 Captions (Live)</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#audio-description-prerecorded">1.2.5 Audio Description (Prerecorded)</a>
 
 
 ## Eviter le contenu à risque épileptique
@@ -64,4 +64,4 @@ Afin d'éviter que le contenu de l'application provoque des crises d'épilepsie,
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a>

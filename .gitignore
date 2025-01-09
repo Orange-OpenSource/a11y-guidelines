@@ -1,7 +1,5 @@
-# IDE & dev things
-.idea
-node_modules
+# Ignore docs files
+/_site/
 
-# Output directory
-_site
-
+# Folders to ignore
+/node_modules/

@@ -3,7 +3,7 @@ title: "Web develop - Touch and interactions"
 abstract: "Touch and interaction, web accessibility dev recommandations"
 ---
 
-# Touch and interactions
+# Web develop - Touch and interactions
 
 <p class="lead">Ensure that the user keeps control over interactions, particularly tactile ones</p>
 
@@ -34,15 +34,15 @@ During a single-point gesture interaction, at least one condition is true:
 - Ability on the up event to reverse any result of the previous down event
 - Finish the function on the event is essential. Note: Functions that emulate a keyboard or numeric keypad are considered as essential.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a>
-- <a href="https://www.w3.org/TR/WCAG21/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
-- <a href="https://www.w3.org/TR/WCAG21/#motion-actuation">2.5.4 Motion Actuation</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a>
+- <a href="https://www.w3.org/TR/WCAG22/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
+- <a href="https://www.w3.org/TR/WCAG22/#motion-actuation">2.5.4 Motion Actuation</a>
 
 
 
 
-## Offer an alternative to complex gestures
+## Provide an alternative to complex gestures
 
 **Target:** Everyone, especially people with motor or visual disabilities and mobility.  
 **When:** during design and development.
@@ -54,11 +54,30 @@ During a single-point gesture interaction, at least one condition is true:
 **Complex gesture:** any multi-pointer gesture (requiring several fingers), and / or path-bases gesture.  
 **Simplified gesture:** an alternative requiring a single pointer (one finger) without path-based gesture.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a>
 
 
+## Provide an alternative to dragging movement 
 
+**Target&nbsp;:** everyone, in particular people with motor or visual disability and mobility. 
+**When&nbsp;:** during design and development.
+
+**Description&nbsp;:**  
+For each drag-and-drop interaction, verify that an accessible alternative is available and does not require a dragging movement.  
+This criterion only concerns movements where only the starting and end points are taken into account without path-based gesture.  
+Dragging movement: Action of clicking on a starting point, then holding contact during movement, then releasing the pointer to the final position. 
+
+**Do&nbsp;:**  
+For example, if you can drag and drop values into different columns, a sufficient alternative would be a button that allows you to select the column to move the value to.  
+
+**Exception&nbsp;:** 
+The dragging movement functionality is: 
+-  essential (dexterity games) 
+- controlled by the user agent and not modified 
+
+**<abbr>WCAG</abbr> reference:**  
+- <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements">2.5.7 Dragging movements</a>
 
 ## Give access to the content regardless of the orientation of the screen
 
@@ -68,5 +87,5 @@ During a single-point gesture interaction, at least one condition is true:
 **Description:**  
 Access to the content must not depend on the orientation of the screen (portrait and landscape) unless a specific display orientation is essential (e.g. serious game).
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a href="https://www.w3.org/TR/WCAG22/#orientation">1.3.4 Orientation</a>

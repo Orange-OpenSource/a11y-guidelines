@@ -9,13 +9,17 @@
       "href": "/fr/web/outils/methodes-et-outils-de-test/"
     },
     {
+      "label": "UUV",
+      "href": "/fr/web/outils/orange-uuv/"
+    },
+    {
       "label": "La Va11ydette",
       "href": "/fr/web/audit-wcag/",
       "external": true,
       "title": "Ouvrir la va11ydette"
     },
     {
-      "label": "Fiches mémo",
+      "label": "Fiches mémos",
       "href": "/fr/web/outils/fiches-memo/"
     },
     {

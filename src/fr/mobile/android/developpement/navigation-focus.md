@@ -3,7 +3,7 @@ title: "Android développer - Navigation au clavier & Switch Access"
 abstract: "Développer une application Android accessible au clavier"
 ---
 
-# Navigation au clavier & Switch Access
+# Android développer - Navigation au clavier & Switch Access
 
 ## Accéder aux éléments interactifs
 
@@ -58,9 +58,9 @@ Exemple d'une vue non focusable avec la navigation au clavier mais focusable au 
               android:layout_height="0px" /&gt;</code></pre>
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#keyboard">2.1.1 Keyboard</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#keyboard">2.1.1 Keyboard</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#name-role-value">4.1.2 Name, Role, Value</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-visible">2.4.7 Focus Visible</a>
 
 
 ## Ordonner la navigation au clavier
@@ -98,8 +98,8 @@ Pour plus d’information sur la [gestion du focus sous Android](http://develope
     ...../&gt;</code></pre>
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#no-keyboard-trap">2.1.2 No Keyboard Trap</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#no-keyboard-trap">2.1.2 No Keyboard Trap</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-order">2.4.3 Focus Order</a>
 
 

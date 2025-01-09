@@ -273,7 +273,7 @@ Donner la possibilité aux utilisateurs d'activiter les sous-titres dès le déb
 
 ### Vidéos accessibles
 
-Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-et-communication/composants-animes) pour en savoir plus.
+Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-et-communication/composants-animes/) pour en savoir plus.
 
 ## Ressources
 

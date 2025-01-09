@@ -58,7 +58,7 @@ If your application has specific areas, it is recommended to assign them a `labe
 &lt;/div&gt;
 </code></pre>
 
-See the article: [ARIA regions or landmarks](https://a11y-guidelines.orange.com/en/web/components-examples/landmarks/#main-content), to get more information on the use of these tags. 
+See the article: [ARIA regions or landmarks](https://a11y-guidelines.orange.com/en/web/components-examples/landmarks/), to get more information on the use of these tags. 
 
 ## Manage browser history 
 

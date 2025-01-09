@@ -40,7 +40,7 @@ module.exports = {
           { label: 'Test', href: '/en/web/test/' },
           { label: 'Audit', href: '/en/web/wcag-audit/' },
           { label: 'Toolbox', href: '/en/web/toolbox/' },
-          { label: 'Component examples', href: '/en/web/components-examples/' }
+          { label: 'Must-haves', href: '/en/web/must-haves-checklist/' }
         ]
       },
       {
@@ -58,7 +58,8 @@ module.exports = {
           { label: 'Develop', href: '/en/mobile/android/development/' },
           { label: 'Test', href: '/en/mobile/android/test/' },
           { label: 'Audit', href: '/en/mobile/android/wcag-audit/' },
-          { label: 'Toolbox', href: '/en/mobile/android/toolbox/' }
+          { label: 'Toolbox', href: '/en/mobile/android/toolbox/' },
+          { label: 'Must-haves', href: '/en/mobile/android/checklist/' }
         ]
       },
       {
@@ -77,6 +78,7 @@ module.exports = {
           { label: 'Test', href: '/en/mobile/ios/test/' },
           { label: 'Audit', href: '/en/mobile/ios/wcag-audit/' },
           { label: 'Toolbox', href: '/en/mobile/ios/toolbox/' },
+          { label: 'Must-haves', href: '/en/mobile/ios/checklist/' },
           { label: 'WWDC', href: '/en/mobile/ios/wwdc/' }
         ]
       },
@@ -93,6 +95,7 @@ module.exports = {
         subLevels: [
           { label: 'Word', href: '/en/content-and-communication/word/' },
           { label: 'Powerpoint', href: '/en/content-and-communication/powerpoint/' },
+          { label: 'Excel', href: '/en/content-and-communication/excel/' },
           { label: 'PDF documents', href: '/en/content-and-communication/pdf/' },
           { label: 'Social networks', href: '/en/content-and-communication/social-networks/' },
           { label: 'Emails', href: '/en/content-and-communication/emails/' },
@@ -102,7 +105,6 @@ module.exports = {
       },
       { label: 'Articles', href: '/en/articles/' },
       { label: 'Persona', href: '/en/persona/', mainMenu: false }
-     
     ],
     'fr': [
       { label: 'Accueil', href: '/fr/' },
@@ -130,7 +132,7 @@ module.exports = {
           { label: 'Tester', href: '/fr/web/tester/' },
           { label: 'Auditer', href: '/fr/web/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/web/outils/' },
-          { label: 'Exemples de composants', href: '/fr/web/exemples-de-composants/' }
+          { label: 'Incontournables', href: '/fr/web/checklist-initiale/' }
         ]
       },
       {
@@ -148,7 +150,8 @@ module.exports = {
           { label: 'Développer', href: '/fr/mobile/android/developpement/' },
           { label: 'Tester', href: '/fr/mobile/android/test/' },
           { label: 'Auditer', href: '/fr/mobile/android/audit-wcag/' },
-          { label: 'Boite à outils', href: '/fr/mobile/android/outils/' }
+          { label: 'Boite à outils', href: '/fr/mobile/android/outils/' },
+          { label: 'Incontournables', href: '/fr/mobile/android/checklist/' }
         ]
       },
       {
@@ -167,6 +170,7 @@ module.exports = {
           { label: 'Tester', href: '/fr/mobile/ios/test/' },
           { label: 'Auditer', href: '/fr/mobile/ios/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/mobile/ios/outils/' },
+          { label: 'Incontournables', href: '/fr/mobile/ios/checklist/' },
           { label: 'WWDC', href: '/fr/mobile/ios/wwdc/' }
         ]
       },
@@ -183,6 +187,7 @@ module.exports = {
         subLevels: [
           { label: 'Word', href: '/fr/contenu-et-communication/word/' },
           { label: 'Powerpoint', href: '/fr/contenu-et-communication/powerpoint/' },
+          { label: 'Excel', href: '/fr/contenu-et-communication/excel/' },
           { label: 'Documents PDF', href: '/fr/contenu-et-communication/pdf/' },
           { label: 'Réseaux sociaux', href: '/fr/contenu-et-communication/reseaux-sociaux/' },
           { label: 'Emails', href: '/fr/contenu-et-communication/emails/' },
@@ -196,15 +201,17 @@ module.exports = {
   },
   footer: {
     en: [
-      { label: 'Contact', href: '/en/contact' },
-      { label: 'About', href: '/en/about' },
-      { label: 'Accessibility', href: '/en/accessibility' },
+      { label: 'Contact', href: '/en/contact/' },
+      { label: 'About', href: '/en/about/' },
+      { label: 'RSS feed', href: '/feed-en.xml' },
+      { label: 'Accessibility: partially compliant', href: '/en/accessibility/' },
       { label: 'Pre-release on Netlify', href: 'https://a11y-guidelines-orange.netlify.app/en/' }
     ],
     fr: [
-      { label: 'Contact', href: '/fr/contact' },
-      { label: 'À propos', href: '/fr/a-propos' },
-      { label: 'Accessibilité', href: '/fr/accessibilite' },
+      { label: 'Contact', href: '/fr/contact/' },
+      { label: 'À propos', href: '/fr/a-propos/' },
+      { label: 'Flux rss', href: '/feed-fr.xml' },
+      { label: 'Accessibilité : partiellement conforme', href: '/fr/accessibilite/' },
       { label: 'Pré-version sur Netlify', href: 'https://a11y-guidelines-orange.netlify.app/fr/' }
     ]
   }
