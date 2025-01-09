@@ -377,7 +377,9 @@ function highlightCodeBlocks() {
             const language = codeBlock.result.language
             const displayLanguage = displayLanguageList[language] || language
             const languageWrapper = document.createElement('p')
+            
             languageWrapper.classList.add('bg-primary', 'd-inline-block', 'p-2', 'font-weight-bold', 'm-0')
+            languageWrapper.classList.add('bg-primary', 'd-inline-block', 'p-2', 'mb-0', 'font-weight-bold')
             languageWrapper.textContent = displayLanguage
 
             codeBlock.parentNode.insertBefore(languageWrapper, codeBlock)
