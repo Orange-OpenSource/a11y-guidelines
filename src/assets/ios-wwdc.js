@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       elements: 'Elements'
     },
     'fr': {
-      process: "Procédures",
+      process: "Procédure",
       check: "A vérifier",
       conception: 'Conception',
       development: 'Développement',

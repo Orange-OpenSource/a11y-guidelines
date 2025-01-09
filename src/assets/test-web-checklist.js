@@ -78,11 +78,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
     //appel des Json
 
 
-    doXHR('/assets/json/checklist/tests-web-' + lang + '.json', function (errFirst, responseFirst) {
+    doXHR('/assets/json/checklist/tests-web-checklist-' + lang + '.json', function (errFirst, responseFirst) {
         if (errFirst) {
             reqError();
         }
-        return doXHR('/assets/json/checklist/tests-concepteur-' + lang + '.json', function (errSecond, responseSecond) {
+        return doXHR('/assets/json/checklist/tests-concepteur-checklist-' + lang + '.json', function (errSecond, responseSecond) {
             if (errSecond) {
                 reqError();
             }
@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                         themeTab.push(headingTheme);
                         htmlrefTests += '<h2 id="test-' + formatHeading(currentRefTests[i].themes) + '"' + htmlrefTestsClass + '>' + currentRefTests[i].themes + '</h2>';
                     }
-                    htmlrefTests += '<article class="accordion-item"><div class="accordion-header" id="heading' + i + '"><h3 class="card-title mb-0"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse' + i + '" aria-expanded="false" aria-controls="collapse' + i + '"><span class="accordion-title h6 mb-0 me-2 flex-grow-1">' + currentRefTests[i].title + '</span><span class="badge bg-light me-2 align-self-center">' + ((currentRefTests[i].profils[0] == 'Concepteur') || (currentRefTests[i].profils[0] == 'Designer') ? translate('conception') : translate('development')) + '</span></a></h3>';
+                    htmlrefTests += '<article class="accordion-item"><div class="accordion-header" id="heading' + i + '"><h3 class="card-title mb-0"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse' + i + '" aria-expanded="false" aria-controls="collapse' + i + '"><span class="accordion-title h6 mb-0 me-2 flex-grow-1">' + currentRefTests[i].title  + '</span></a></h3>';
 
                     htmlrefTests += '</div><div id="collapse' + i + '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading' + i + '">';
                     htmlrefTests += '<div class="card-block"><div class="row">';
@@ -309,11 +309,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                         htmlrefTests += '</div>';
                         htmlrefTests += '</div>';
                     }
-                    htmlrefTests += '</div><div class="card-footer text-muted"><p><b>' + translate('profiles') + ': </b>';
-                    for (let j in currentRefTests[i].profils) {
-                        htmlrefTests += currentRefTests[i].profils[j];
-                        j != ((currentRefTests[i].profils).length - 1) ? htmlrefTests += ',  ' : '';
-                    }
+                    
                     htmlrefTests += '</p>';
                     htmlrefTests += '</div>';
                     htmlrefTests += '</div></article>';
@@ -582,4 +578,3 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
 });
-
