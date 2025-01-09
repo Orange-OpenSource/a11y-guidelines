@@ -44,7 +44,6 @@ Voici quelques ressources qui vous permettront d'approfondir le sujet&nbsp;:
 - <a href="https://stephaniewalter.design/blog/a-designers-guide-to-documenting-accessibility-user-interactions/" lang="en" hreflang="en">A Designer’s Guide to Documenting Accessibility & User Interactions</a>
 - <a lang="en" hreflang="en" href="https://medium.com/indeed-design/building-an-accessibility-library-e134e9012c17">Building an Accessibility Library</a>
 - <a hreflang="en" href="https://www.figma.com/community/file/953682768192596304">Kit d'annotation pour Figma réalisé par Indeed</a>
-- <a hreflang="en" href="https://drive.google.com/file/d/1f4SVHbSCYG4XtZzCnRMmtUfNXANE8FWh/view">Kit d'annotation pour Scketch réalisé par Stéphanie Walter</a>
 - <a hreflang="en" href="https://blog.zeplin.io/introducing-flows-and-annotations-a-new-way-to-communicate-design-intention">Faire des annotations dans Zeplin</a>
 
 Présentation vidéo Intopia&nbsp;:

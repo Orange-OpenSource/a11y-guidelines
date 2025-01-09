@@ -3,7 +3,7 @@ title: "Android designer - Écran de saisie"
 abstract: "Champs de formulaire, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
-# Écran de saisie
+# Android designer - Écran de saisie
 
 ## Avoir des champs de saisie explicites
 
@@ -28,9 +28,9 @@ De plus, il est essentiel d'indiquer à l'utilisateur, pour une bonne compréhen
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and labels</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#labels-or-instructions">3.3.2 Labels or instructions</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#identify-input-purpose">1.3.5 Identify input purpose</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#headings-and-labels">2.4.6 Headings and labels</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#labels-or-instructions">3.3.2 Labels or instructions</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#identify-input-purpose">1.3.5 Identify input purpose</a>
 
 
 ## Identifier les erreurs de saisie
@@ -52,5 +52,5 @@ Il est d'ailleurs recommandé de fournir une suggestion de correction à l'utili
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#error-identification">3.3.1 Error identification</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#error-suggestion">3.3.3 Error suggestion</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#error-identification">3.3.1 Error identification</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#error-suggestion">3.3.3 Error suggestion</a>

@@ -10,7 +10,7 @@ js:
   - /assets/test-web.js
 ---
 
-# Liste des critères WCAG pour les tests
+# Web - Liste des critères WCAG pour les tests
 
 Ce socle de critères destiné aux sites et applications web permet d’éviter les principales erreurs d’accessibilité.
 Sa mise en œuvre ne permet pas d’obtenir à coup sûr un site accessible, mais pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité progressive.

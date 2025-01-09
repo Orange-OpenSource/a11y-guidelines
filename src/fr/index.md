@@ -16,18 +16,21 @@ Notre expertise couvre les sites Web (e-commerce, e-learning, applications méti
 
 <ul class="list-inline">
   <li class="list-inline-item pb-2">
-    <a href="definition-accessibilite-numerique" class="btn btn-secondary btn-sm">Définition de l'accessibilité numérique</a>
+    <a href="definition-accessibilite-numerique/" class="btn btn-secondary btn-sm">Définition de l'accessibilité numérique</a>
   </li>
   <li class="list-inline-item pb-2">
-    <a href="les-situations-de-handicap" class="btn btn-secondary btn-sm">Les situations de handicap</a>
+    <a href="les-situations-de-handicap/" class="btn btn-secondary btn-sm">Les situations de handicap</a>
   </li>
   <li class="list-inline-item pb-2">
-    <a href="solutions-assistance" class="btn btn-secondary btn-sm">Les solutions d'assistance</a>
+    <a href="solutions-assistance/" class="btn btn-secondary btn-sm">Les solutions d'assistance</a>
   </li>
   <li class="list-inline-item pb-2">
     <a href="persona/" class="btn btn-secondary btn-sm">Quelques personae</a>
   </li>
   <li class="list-inline-item pb-2">
-    <a href="glossaire" class="btn btn-secondary btn-sm">Glossaire</a>
+    <a href="glossaire/" class="btn btn-secondary btn-sm">Glossaire</a>
+  </li>
+  <li class="list-inline-item pb-2">
+    <a href="articles/memo-accessibilite/#liste-des-memos/" class="btn btn-secondary btn-sm">Fiches mémos</a>
   </li>
 </ul>

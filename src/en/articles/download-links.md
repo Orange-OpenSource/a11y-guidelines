@@ -8,7 +8,7 @@ tags:
   - intermediate
 ---
 
-There are different types of links: [classic links](/en/web/develop/general-navigation) allowing to reach a new page, [skip links] (/en/articles/skip-links-best-practices) allowing to move within the page and finally those which interest us in this article, the links allowing to download a file.
+There are different types of links: [classic links](/en/web/develop/common-navigation/) allowing to reach a new page, [skip links] (/en/articles/skip-links-best-practices) allowing to move within the page and finally those which interest us in this article, the links allowing to download a file.
 
 A link to download a file should respect the following rules:
 

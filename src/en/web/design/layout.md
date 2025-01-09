@@ -3,7 +3,7 @@ title: "Web design - Layout"
 abstract: "Layout, web accessibility design recommandations"
 ---
 
-# Layout
+# Web design - Layout
 
 <p class="lead">Make sure the layout is suitable for the user</p>
 

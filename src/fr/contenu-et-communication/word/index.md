@@ -115,7 +115,7 @@ Important : si vous utilisez une option de disposition autre que « aligné sur 
 
 ## Contenus audio et vidéo 
 
-Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-et-communication/composants-animes)
+Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-et-communication/composants-animes/)
 
 ## Liens
 

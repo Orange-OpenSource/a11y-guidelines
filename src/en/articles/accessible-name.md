@@ -1,6 +1,6 @@
 ---
 title: "The accessible name in HTML"
-abstract: "Accessible name, what is it and his link with Assistive Technologies"
+abstract: "Accessible name, what is it and his link with Assistive technologies"
 titleBeforeTag: true
 date: "2019-02-20"
 tags:
@@ -80,7 +80,6 @@ More details on ["The attributes <abbr>ARIA</abbr> that can save you"](/en/artic
 ## Sources
 
 - <a href="https://www.w3.org/TR/accname-1.1/"> Accessible Name and Description Computation 1.1 </a> by the Accessible Rich Internet Applications Working Group
-- <a href="http://simplyaccessible.com/article/accessible-name/"> Demystifying Accessible Name </a> by Joe Watkins
 - <a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/"> What is an accessible name? </a> by Léonie Watson
 
 &nbsp;

@@ -4,9 +4,15 @@ abstract: "Historique des mises à jour"
 displayToc: false
 ---
 
+**14/11/22** ⟹ mises à jour (swift 5.7, Xcode 14 et iOS 16)
+
+**26/08/22** ⟹ WWDC 2022 <a href="../wwdc/2022/10152/">🎬</a> Rendre accessible une application en mode Single App
+
+**03/01/22** ⟹ ajout de la liste des résumés détaillés WWDC (⚠️ en anglais uniquement ⚠️) <a href="../../../../en/mobile/ios/wwdc/nota11y">🔖</a>
+
 **01/12/21** ⟹ mises à jour (swift 5.5, Xcode 13 et iOS 15)
 
-**14/09/21** ⟹ WWDC 2021 <a href="../wwdc/2021/121/">🎬</a> Optimiser VoiceOver dans un contexte riche en données
+**14/09/21** ⟹ WWDC 2021 <a href="../wwdc/2021/121/">🎬</a> Optimiser <span lang="en">VoiceOver</span> dans un contexte riche en données
 
 **09/09/21** ⟹ WWDC 2021 <a href="../wwdc/2021/122/">🎬</a> Incorporer efficacement l'accessibilité à vos graphes
 

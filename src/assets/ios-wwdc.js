@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       elements: 'Elements'
     },
     'fr': {
-      process: "Procédures",
+      process: "Procédure",
       check: "A vérifier",
       conception: 'Conception',
       development: 'Développement',
@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             
            			htmlrefTests +='<h2 id="test-'+formatHeading(currentRefTests[i].themes)+'"'+htmlrefTestsClass+' >'+currentRefTests[i].themes+'</h2>';
           		}
- 				htmlrefTests += '<a role="button" href="' + currentRefTests[i].raccourcis + '" style="text-decoration: none;">';
+ 				htmlrefTests += '<a href="' + currentRefTests[i].raccourcis + '" style="text-decoration: none;">';
  				htmlrefTests += '<p id="heading'+i+'">' + currentRefTests[i].title + '     ';
  		
  				//Ajout du badge si l'élément impacté existe

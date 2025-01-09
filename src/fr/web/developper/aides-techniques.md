@@ -3,7 +3,7 @@ title: "Web développer - Aides techniques"
 abstract: "Aides techniques, recommendations d'accessibilité web lors du développement"
 ---
 
-# Aides techniques
+# Web développer - Aides techniques
 
 <p class="lead">Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales fonctionnalités de l’application, mais aussi s’assurer pour tous les utilisateurs de l’utilisabilité de l’application</p>
 
@@ -28,4 +28,4 @@ En effet, les utilisateurs de lecteur d’écran sont les plus impactés par un 
 Permettre à l’utilisateur de lecteur d’écran d’accéder aux principales fonctionnalités de l’application, mais aussi s’assurer pour tous les utilisateurs de l’utilisabilité de l’application.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#name-role-value">4.1.2 Name, Role, Value</a>

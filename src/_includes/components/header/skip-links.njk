@@ -1,9 +1,7 @@
-<nav role="navigation" aria-label="{{ 'skiplinks.label' | translate }}">
-  <ul class="navbar-nav">
-    {%- for link in navigation.top[locale] -%}
-      <li class="nav-item{{ " " + link.itemClass | join(' ') if link.itemClass }}">
-        <a href="{{ link.href }}" class="nav-link">{{ link.label }}</a>
-      </li>
-    {%- endfor -%}
-  </ul>
-</nav>
+<ul id="avoidanceLinks" class="navbar-nav me-auto">
+  {%- for link in navigation.top[locale] -%}
+    <li class="nav-item{{ " " + link.itemClass | join(' ') if link.itemClass }}">
+      <a href="{{ link.href }}" class="nav-link">{{ link.label }}</a>
+    </li>
+  {%- endfor -%}
+</ul>

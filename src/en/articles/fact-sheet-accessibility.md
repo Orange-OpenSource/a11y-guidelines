@@ -1,8 +1,8 @@
 ---
 title: "Accessibility fact sheets"
-abstract: "Our fact sheets on digital accessibility to download, print and share"
+abstract: "Our fact sheets on digital accessibility to download, print and share (Web, Android, Ios, Word, Excel, Powerpoint)"
 titleBeforeTag: true
-date: "2022-05-31"
+date: "2022-11-21"
 tags:  
   - web
   - mobile  
@@ -41,9 +41,9 @@ Mobile applications:
     </p>
   </div>
   <div class="col-xl-9">  
-    <h3 id="desc-email">Description</h4>
+    <h3 id="desc-email">Description</h3>
     <p>Reminder of good practices for writing an accessible email.</p>
-    <h3 id="tele-email">Download</h4>
+    <h3 id="tele-email">Download</h3>
     <p>      
       <a href="../../res/memos/email/Email-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
         Download as PDF (249 Ko)
@@ -62,9 +62,9 @@ Mobile applications:
     </p>
   </div>
   <div class="col-xl-9">  
-    <h3 id="desc-word">Description</h4>
+    <h3 id="desc-word">Description</h3>
     <p>Reminder of best practices for writing an accessible Word document.</p>
-    <h3 id="tele-word">Download</h4>
+    <h3 id="tele-word">Download</h3>
     <p>      
       <a href="../../res/memos/word/Word-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
         Download as PDF (205 Ko)
@@ -83,9 +83,9 @@ Mobile applications:
     </p>
   </div>
   <div class="col-xl-9">  
-    <h3 id="desc-word">Description</h4>
+    <h3 id="desc-word">Description</h3>
     <p>Reminder of best practices for writing an accessible Excel document.</p>
-    <h3 id="tele-word">Download</h4>
+    <h3 id="tele-word">Download</h3>
     <p>      
       <a href="../../res/memos/excel/Excel-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
         Download as PDF (248 Ko)
@@ -104,9 +104,9 @@ Mobile applications:
     </p>
   </div>
   <div class="col-xl-9">  
-    <h3 id="desc-word">Description</h4>
+    <h3 id="desc-word">Description</h3>
     <p>Reminder of best practices for writing an accessible PowerPoint presentation.</p>
-    <h3 id="tele-word">Download</h4>
+    <h3 id="tele-word">Download</h3>
     <p>      
       <a href="../../res/memos/pwp/PowerPoint-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
         Download as PDF (277 Ko)
@@ -128,10 +128,10 @@ Mobile applications:
     </p>
   </div>
   <div class="col-xl-9">  
-    <h3 id="desc-web">Description</h4>
+    <h3 id="desc-web">Description</h3>
     <p>Fact sheet for web developers.</p>
     <p>Reminder of the essential techniques and tools to develop an accessible website.</p>
-    <h3 id="tele-web">Download</h4>
+    <h3 id="tele-web">Download</h3>
     <p>          
       <a href="../../res/memos/dev-web/Web-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
         Download as PDF (264 Ko)
@@ -153,13 +153,13 @@ Mobile applications:
     </p>
   </div>
   <div class="col-xl-9">  
-    <h3 id="desc-tests-web">Description</h4>
+    <h3 id="desc-tests-web">Description</h3>
     <p>Memo for people who perform web accessibility testing.</p>
     <p>Reminder of main tools to check the accessibility of a Web page.</p>
     </p>        
-    <h3 id="tele-tests-web">Download</h4>
+    <h3 id="tele-tests-web">Download</h3>
     <p>          
-      <a href="../../res/memos/tests-web/Web-tests-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-secondary">
         Download as PDF (325 Ko)
         <span class="visually-hidden">Web test accessibility fact sheet</span>
       </a>
@@ -178,7 +178,7 @@ Mobile applications:
     </p>
   </div>
   <div class="col-xl-9">  
-    <h3 id="desc-android">Description</h4>
+    <h3 id="desc-android">Description</h3>
     <p>Memo for Android Developers.</p>
     <p>Reminder of the essential techniques and tools for developing an accessible Android application.</p>
     <h3 id="tele-android">Download</h4>
@@ -201,10 +201,10 @@ Mobile applications:
     </p>
   </div>
   <div class="col-xl-9">  
-    <h3 id="desc-ios">Description</h4>
+    <h3 id="desc-ios">Description</h3>
     <p>Fact sheet for iOS developers.<p>
     <p>Reminder of the essential techniques and tools for developing an accessible iOS application.</p>
-    <h3 id="tele-ios">Download</h4>
+    <h3 id="tele-ios">Download</h3>
     <p>      
       <a href="../../res/memos/ios/Fact-sheet-iOS-Orange.pdf" class="btn btn-secondary">
         Download as PDF (198 Ko)

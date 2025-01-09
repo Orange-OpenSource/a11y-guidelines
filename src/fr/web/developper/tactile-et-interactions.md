@@ -3,7 +3,7 @@ title: "Web développer - Tactile et interactions"
 abstract: "Tactile et interactions, recommendations d'accessibilité web lors du développement"
 ---
 
-# Tactile et interactions
+# Web développer - Tactile et interactions
 
 <p class="lead">S’assurer que l’utilisateur garde le contrôle sur les interactions, en particulier tactiles</p>
 
@@ -37,7 +37,7 @@ Lors d'une interaction gestuelle mono-point, au moins une condition est vraie :
 - Terminer la fonction sur l'événement est essentiel. Note : les fonctions qui émulent un appui clavier ou un pavé numérique sont considérées comme essentielles. 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
 
 
 
@@ -56,11 +56,27 @@ Lors d'une interaction gestuelle mono-point, au moins une condition est vraie :
 **Gestuelle simplifiée**: une alternative nécessitant un seul pointeur (un seul doigt) et sans trajectoire précise.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#motion-actuation">2.5.4 Motion Actuation</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#motion-actuation">2.5.4 Motion Actuation</a>
 
+## Proposer une alternative aux mouvements de glisser-déposer 
 
+**Cible&nbsp;:** tout le monde en particulier les personnes souffrant de handicap moteur, visuel et en mobilité. 
+**Quand&nbsp;:** lors de la conception et lors du développement.
 
+**Description&nbsp;:**  
+Pour chaque interaction de glisser-déposer, vérifier qu'une alternative accessible est disponible et ne demande pas de mouvement de glisser. 
+Ce critère concerne seulement les mouvements dont seuls les points de départ et d'arrivée sont pris en compte sans geste basé sur une trajectoire précise. 
+Mouvement de glisser : Action de cliquez sur un point de départ, puis maintenir contact pour déplacer puis relâcher le pointeur au positionnement final. 
+
+**Exemple valide&nbsp;:**  
+Par exemple, si on peut glisser-déposer des valeurs dans différentes colonnes, une alternative suffisante serait un bouton qui permet de sélectionner la colonne où déplacer la valeur. 
+
+**Exception&nbsp;:** 
+La fonctionnalité de glisser-déposer est essentielle (un jeu de dextérité par exemple) ou la fonctionnalité est native et gérée par l'agent utilisateur et non modifiée. 
+
+**Référence <abbr>WCAG</abbr>&nbsp;:**  
+- <a lang="en" href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements">2.5.7 Dragging movements</a>
 
 ## Donner accès au contenu quelle que soit l'orientation de l'écran
  
@@ -71,4 +87,4 @@ Lors d'une interaction gestuelle mono-point, au moins une condition est vraie :
 L'accès au contenu ne doit pas dépendre de l'orientation de l'écran (portrait et paysage). Sauf usage essentiel au fonctionnement de l’application (ex : <span lang="en">serious game</span>).
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#orientation">1.3.4 Orientation</a>

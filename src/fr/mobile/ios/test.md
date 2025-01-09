@@ -4,11 +4,11 @@ abstract: "Guide pour tester l'accessibilité d'une application mobile iOS"
 displayToc: true
 ---
 
-# Tester l'accessibilité d'une application iOS
+# Tester l'accessibilité d'une application <span lang='en'>iOS</span>
 
-Cette page décrit l'ensemble des tests nécessaires à l'évaluation d'une application iOS dans le cadre de l'accessibilité.
+Cette page décrit l'ensemble des tests nécessaires à l'évaluation d'une application <span lang="en">iOS</span> dans le cadre de l'accessibilité.
 
-Il est indispensable que **TOUS** les intervenants du projet connaissent les spécificités d'accessibilité iOS présentées sur ce site de façon à comprendre parfaitement le lien entre les besoins des utilisateurs et leur implémentation au sein de l'application à développer.
+Il est indispensable que **TOUS** les intervenants du projet connaissent les spécificités d'accessibilité <span lang='en'>iOS</span> présentées sur ce site de façon à comprendre parfaitement le lien entre les besoins des utilisateurs et leur implémentation au sein de l'application à développer.
 
 Chacune des fonctionnalités doit être vue comme un élément impactant fortement le confort de l'utilisateur, comme une **brique essentielle à connotation humaine** et pas juste fonctionnelle.
 
@@ -16,31 +16,31 @@ Que ce soit dans la conception, la réalisation ou la vérification, chaque déc
 <br><br>
 ## Pré-requis fondamentaux
 
-1. Consacrer le temps nécessaire à la maîtrise de la gestuelle ([VoiceOver](../voiceover/), contrôle de sélection).
+1. Consacrer le temps nécessaire à la maîtrise de la gestuelle ([guide d'utilisation de VoiceOver)](../voiceover/), contrôle de sélection).
 
-2. Visionner les exemples d'utilisation fournis dans les [vidéos&nbsp;WWDC](../wwdc/).
+2. Visionner les exemples d'utilisation fournis dans les [vidéos&nbsp;WWDC (Apple Worldwide Developers Conference)](../wwdc/).
 
-3. Assimiler les [critères&nbsp;de&nbsp;conception](../conception/) pour s'asurer de la bonne voie sur laquelle on s'engage.
+3. Assimiler les [critères&nbsp;de&nbsp;conception](../conception/) pour s'assurer de la bonne voie sur laquelle on s'engage.
 
-4. Pour les [développeurs](../developpement), ne pas hésiter à se créer des projets vierges en n'y incorporant que la partie impactant la fonctionnalité désirée afin de s'assurer qu'elle est parfaitement fonctionnelle et que seul l'environnement au sein de laquelle elle va être introduite risque éventuellement d'altérer son comportement.
+4. Pour les [développeurs](../developpement/), ne pas hésiter à se créer des projets vierges en n'y incorporant que la partie impactant la fonctionnalité désirée afin de s'assurer qu'elle est parfaitement fonctionnelle et que seul l'environnement au sein de laquelle elle va être introduite risque éventuellement d'altérer son comportement.
 
 5. Il faut absolument que les contenus web et les éléments tiers qui pourraient être utilisés au sein de l'application soient eux-mêmes déjà parfaitement accessibles.
 <br><br>
 ## Environnement de travail
 Quatre grandes familles peuvent être dépeintes au sein de chaque projet&nbsp;:
 
-- à l'initiative de tout ce qui va être créé, la **personne en charge de prioriser les fonctionnalités à implémenter** doit parfaitement comprendre les besoins utilisateurs et la façon de les décliner sous iOS.
+- à l'initiative de tout ce qui va être créé, la **personne en charge de prioriser les fonctionnalités à implémenter** doit parfaitement comprendre les besoins utilisateurs et la façon de les décliner sous <span lang='en'>iOS</span>.
 Cette personne doit s'assurer que des **critères d'acceptations** sont **parfaitement définis** pour chacune des fonctionnalités et que leur réalisation répond exactement à ce qui était demandé **en vérifiant elle-même le fonctionnement souhaité**,
 
 - l'équipe **DESIGN** doit réellement se mettre à la place de l'utilisateur de façon à **fournir les préconisations** les plus précises possibles en fonction des demandes projet en amont,
 
-- l'équipe **DÉVELOPPEMENT** doit grandement s'appuyer sur les [vidéos&nbsp;WWDC](../wwdc/) et sur le [guide&nbsp;pour&nbsp;les&nbsp;développeurs](../developpement) afin de **trouver les solutions** les plus appropriées aux différentes situations rencontrées,
+- l'équipe **DÉVELOPPEMENT** doit grandement s'appuyer sur les [vidéos&nbsp;WWDC](../wwdc/) et sur le [guide&nbsp;pour&nbsp;les&nbsp;développeurs](../developpement/) afin de **trouver les solutions** les plus appropriées aux différentes situations rencontrées,
 
-- l'équipe **TEST** doit parfaitement maîtriser la [gestuelle&nbsp;spécifique](../voiceover/) et comprendre toutes les possibilités offertes par iOS pour **réaliser chacun des tests** de façon optimum avant mise en production.
+- l'équipe **TEST** doit parfaitement maîtriser la [gestuelle&nbsp;spécifique](../voiceover/) et comprendre toutes les possibilités offertes par <span lang='en'>iOS</span> pour **réaliser chacun des tests** de façon optimum avant mise en production.
 
 Quel que soit le mode de fonctionnement *(SCRUM, ...)*, les fonctions dévolues à chacune de ces équipes doivent être présentes au sein du projet.
 
-De façon à pouvoir s'assurer que les recommandations d'accessibilité iOS ont bien été prises en compte, deux modes d'évaluation sont à prévoir&nbsp;:
+De façon à pouvoir s'assurer que les recommandations d'accessibilité <span lang='en'>iOS</span> ont bien été prises en compte, deux modes d'évaluation sont à prévoir&nbsp;:
 
 - [**FONCTIONNEL**](#evaluation-fonctionnelle)&nbsp;: on s'assure que l'utilisateur peut naviguer parmi tous les écrans sans soucis, en ayant accès à toute l'information visuelle mise à disposition et surtout sans avoir à se poser de questions.
 Le parcours utilisateur doit être fluide, simple et sans équivoque,
@@ -50,34 +50,33 @@ Ce mode vient aussi souvent confirmer et solutionner certains problèmes fonctio
 <br>
 ## Évaluation fonctionnelle
 
-La participation aux tests de cette partie ne nécessite aucune connaissance technique particulière si ce n'est savoir (dés)activer et utiliser des fonctionnalités d'accessibilité iOS.
+La participation aux tests de cette partie ne nécessite aucune connaissance technique particulière si ce n'est savoir (dés)activer et utiliser des fonctionnalités d'accessibilité <span lang='en'>iOS</span>.
 
-En plus des [critères&nbsp;de&nbsp;base](../conception/) à respecter, il est primordial de s'assurer que des [options&nbsp;d'accessibilité](../conception#options-daccessibilite) activées par un utilisateur sont parfaitement opérationnelles dans toutes les pages de l'application développée.
+En plus des [critères&nbsp;de&nbsp;base](../conception/) à respecter, il est primordial de s'assurer que des [options&nbsp;d'accessibilité](../conception/#options-daccessibilite) activées par un utilisateur sont parfaitement opérationnelles dans toutes les pages de l'application développée.
 
 Ci-dessous, quelques critères importants à tester impérativement&nbsp;:
 
-- **orientation de l'écran** : il est très fortement recommandé de pouvoir utiliser une application en mode portrait ou paysage. Cette [fonctionnalité](../conception#orientation-de-lecran) doit absolument être vérifiée pour tous les écrans d'une application,
+- **orientation de l'écran** : il est très fortement recommandé de pouvoir utiliser une application en mode portrait ou paysage. Cette [fonctionnalité](../conception/#orientation-de-lecran) doit absolument être vérifiée pour tous les écrans d'une application,
 
 - **limiter les animations visuelles** : lorsque des personnes sont susceptibles d'être plus ou moins gênées par les mouvements visuels, il faut absolument s'assurer que les éventuelles animations proposées répondent bien aux [souhaits&nbsp;de&nbsp;l'utilisateur](../wwdc/2018/230/#mouvement-0848),
 
 - **réduire le floutage et la transparence** : victime de problèmes visuels, une personne peut rapidement trouver les effets de flou et de transparence très inconfortables.
 Il faut donc vérifier que l'[atténuation&nbsp;proposée&nbsp;par&nbsp;le&nbsp;système](../wwdc/2018/230/#floutage-et-transparence-0307) est bien prise en compte sur les pages applicatives où ces effets sont implémentés,
 
-- **mode sombre** : le résultat graphique de cette *fonctionnalité iOS 13* doit absolument être vérifié pour s'assurer que les différents contrastes de couleurs utilisées sont conformes aux critères de conception, sans oublier l'option d'accessibilité [augmenter&nbsp;le&nbsp;contraste](../conception/#options-daccessibilite) qui est aussi un élément incontournable à vérifer dans ce contexte.
+- **mode sombre** : le résultat graphique de cette *fonctionnalité <span lang='en'>iOS</span> 13* doit absolument être vérifié pour s'assurer que les différents contrastes de couleurs utilisées sont conformes aux critères de conception, sans oublier l'option d'accessibilité [augmenter&nbsp;le&nbsp;contraste](../conception/#options-daccessibilite) qui est aussi un élément incontournable à vérifier dans ce contexte.
 
 <br>
 
-En plus de ces critères fondamentaux, il y a bien évidemment les incontournables iOS pour qualifer à minima une application d'accessible&nbsp;:
+En plus de ces critères fondamentaux, il y a bien évidemment les incontournables <span lang='en'>iOS</span> pour qualifier à minima une application d'accessible&nbsp;:
 
-1. [Dynamic Type](#dynamic-type) (grossissement&nbsp;de&nbsp;texte)
+1. [<span lang="en">Dynamic Type</span>](#dynamic-type) (grossissement&nbsp;de&nbsp;texte)
 
 2. [VoiceOver](#voiceover) (lecteur&nbsp;d'écran)
 
 3. [Contrôle&nbsp;de&nbsp;sélection](#controle-de-selection)
 
-![](../../images/ios-test-overview.png)
-<br><br>
-### Dynamic Type
+![Principales options d'accessibilité sur <span lang='en'>iOS</span> : options utilisateurs, raccourcis & Siri, mode sombre, grossissement de texte, lecteur d'écran, contrôle de sélection](../../images/ios-test-overview.png)
+### <span lang="en">Dynamic Type</span>
 
 Pour bien comprendre comment le grossissement de texte fonctionne, il est fortement recommandé de visionner l'exemple proposé dans la [vidéo&nbsp;WWDC&nbsp;2017](../wwdc/2017/245/#exemple-2432) parfaitement résumée dans la partie WWDC de ce site.
 
@@ -93,26 +92,24 @@ Trois types de grossissement peuvent être particulièrement étudiés de façon
 
 <br>
 
-![](../../images/ios-test-DynamicType.png)
+![curseur complètement à gauche : seuil le plus bas sans accessibilité, curseur au milieu : seuil le plus haut sans accessibilité, curseur complètement à droite : seuil le plus haut avec accessibilité](../../images/ios-test-DynamicType.png)
 Enfin, les quelques points suivants sont à examiner minutieusement&nbsp;:
 
 - la **troncature '...' est à éviter** pour laisser place à la coupure du mot impacté identifiée par un trait d'union en fin de phrase,
 
-![](../../images/ios-test-DynamicType_2.png)
+![Exemple de troncature : première ligne "Synchronisa-" et deuxième ligne "tion Wifi"](../../images/ios-test-DynamicType_2.png)
 
-- **les illustrations comme les icônes doivent s'adapter au grossissement souhaité**&nbsp;: l'utilisation du [Large&nbsp;Content&nbsp;Viewer](../wwdc/2019/261/) après un appui long, l'implémentation d'un pinch à 2 doigts afin d’éviter à l’utilisateur d’avoir recours à la fonctionnalité `Zoom` ou encore le simple [grossissement&nbsp;d'un&nbsp;élément&nbsp;graphique](../developpement#taille-des-elements-graphiques) peuvent être des solutions selon les cas rencontrés,
+- **les illustrations comme les icônes doivent s'adapter au grossissement souhaité**&nbsp;: l'utilisation du [<span lang="en">Large&nbsp;Content&nbsp;Viewer</span>](../wwdc/2019/261/) après un appui long, l'implémentation d'un pinch à 2 doigts afin d’éviter à l’utilisateur d’avoir recours à la fonctionnalité `Zoom` ou encore le simple [grossissement&nbsp;d'un&nbsp;élément&nbsp;graphique](../developpement/#taille-des-elements-graphiques) peuvent être des solutions selon les cas rencontrés,
 
 - penser à **modifier le grossissement de texte au sein de chaque écran** pour s’assurer que tous ses éléments répondent parfaitement aux contraintes graphiques mises en place,
 
 - dès que la **correction d’une anomalie** remontée sur un terminal est effective, elle **doit être vérifiée sur les autres terminaux utilisés en tests** afin de s'assurer que le problème est réellement éradiqué.
 
-Les **tests** à réaliser pour le `Dynamic Type` sont **assez longs** car plusieurs terminaux sont à étudier et chaque écran est à vérifier avec une modification de la taille du texte à faire pour chacun des écrans.
+Les **tests** à réaliser pour le <span lang="en">`Dynamic Type`</span> sont **assez longs** car plusieurs terminaux sont à étudier et chaque écran est à vérifier avec une modification de la taille du texte à faire pour chacun des écrans.
 
-<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562">
-    
-![Accès à la vidéo WWDC mentionnant l'importance du grossissement de texte dans un projet](../../images/ios-test-DynamicTypeWWDC.png)
+<div><q lang="en">My biggest tip is to think about these early on in the design process.</q>&nbsp;<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562"><span lang="en">WWDC 2020 - Make Your App Visually Accessible</span> (voir la vidéo)</a></div>
 <br><br>
-### VoiceOver
+### <span lang="en">VoiceOver</span>
 
 L'activation du lecteur d'écran natif change radicalement les résultats obtenus par les gestes standards effectués sur l’écran tactile, c'est pourquoi son utilisation demande un certain temps d'adaptation pour une maîtrise de sa [gestuelle&nbsp;spécifique](../voiceover/).
 
@@ -124,46 +121,46 @@ Il est donc **très fortement recommandé** de connaître au moins les gestes de
            data-bs-toggle="tab" 
            href="#VoiceOver-iOS15"
            role="tab" 
-           aria-selected="true">iOS 15</a>
+           aria-selected="true" lang="en">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-bs-toggle="tab" 
            href="#VoiceOver-iOS13"
            role="tab" 
-           aria-selected="false">iOS 13</a>
+           aria-selected="false" lang="en">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-bs-toggle="tab" 
            href="#VoiceOver-iOS12"
            role="tab" 
-           aria-selected="false">iOS 12</a>
+           aria-selected="false" lang="en">iOS 12</a>
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
      id="VoiceOver-iOS15"
      role="tabpanel">
     
-![](../../images/ios-test-VO_iOS15.png)
+![Sur <span lang='en'>iOS</span> 15 : activer Voice Over à partir du menu Réglages-Accessibilité-Voice Over](../../images/ios-test-VO_iOS15.png)
 
 </div>
 <div class="tab-pane" id="VoiceOver-iOS13" role="tabpanel">
     
-![](../../images/ios-test-VO_iOS13.png)
+![Sur <span lang='en'>iOS</span> 13 : activer Voice Over à partir du menu Réglages-Accessibilité-Voice Over](../../images/ios-test-VO_iOS13.png)
 
 </div>
 <div class="tab-pane" id="VoiceOver-iOS12" role="tabpanel" >
     
-![](../../images/ios-test-VO_iOS12.png)
+![Sur <span lang='en'>iOS</span> 12 : activer Voice Over à partir du menu Général-Accessibilité-Voice Over](../../images/ios-test-VO_iOS12.png)
 
 </div></div>
 
-<br>Pour aboutir à une parfaite implémentation de VoiceOver, il ne faut surtout pas croire que chaque élément doit absolument être vocalisé et se contenter de passer au suivant pour renouveler cette opération : ce type de réalisation est tout sauf productif&nbsp;!
+<br>Pour aboutir à une parfaite implémentation de <span lang="en">VoiceOver</span>, il ne faut surtout pas croire que chaque élément doit absolument être vocalisé et se contenter de passer au suivant pour renouveler cette opération : ce type de réalisation est tout sauf productif&nbsp;!
 
 Il faut bien avoir à l'esprit que l'**information** diffusée visuellement est assimilée en très peu de temps alors que celle fournie par le lecteur d'écran arrive de façon **séquentielle** à la vitesse de sélections successives d'éléments&nbsp;: un **effort énorme de mémorisation** est à fournir pour avoir une vision synoptique de l'écran et comprendre réellement ce qui est proposé.
 
-Pour mieux comprendre cette situation, il est recommandé de passer son écran en [mode&nbsp;"rideau"](../voiceover#CurtainScreen) puis naviguer comme si on voyait l'écran.
+Pour mieux comprendre cette situation, il est recommandé de passer son écran en [mode&nbsp;"rideau"](../voiceover/#CurtainScreen) puis naviguer comme si on voyait l'écran.
 Cette opération est particulièrement utile lors de **premiers tests sur une application qu'on découvre** car on n'est pas influencé sur le parcours utilisateur qui serait déjà visionné inconsciemment.
 
 En plus des [critères&nbsp;de&nbsp;conception](../conception/) à respecter, quatre grands principes doivent rester à l'esprit lors de tests&nbsp;:
@@ -176,7 +173,7 @@ En plus des [critères&nbsp;de&nbsp;conception](../conception/) à respecter, qu
 
 4. l'utilisateur doit réaliser un minimum de sélections au sein de l'écran.
 
-Ici encore, les tests demandent beaucoup de temps et requièrent une forte empathie pour avancer des critiques constructives sur la façon dont l'information vocale doit être diffusée par VoiceOver.
+Ici encore, les tests demandent beaucoup de temps et requièrent une forte empathie pour avancer des critiques constructives sur la façon dont l'information vocale doit être diffusée par <span lang="en">VoiceOver</span>.
 
 Maintenant, **si le lecteur d'écran n'est pas encore implémenté** sur une application déjà en diffusion publique, il est primordial d'en **informer l'utilisateur** dès [sélection&nbsp;de&nbsp;l'icône&nbsp;applicatif](../developpement/#vocalisation-du-nom-de-lapplication) en indiquant très clairement la situation de façon à éviter une consultation catastrophique et décevante.
 <br><br>
@@ -200,56 +197,56 @@ Remarque&nbsp;: l'activation de cette fonctionnalité se fait elle aussi via les
            data-bs-toggle="tab" 
            href="#SwitchControl-iOS15"
            role="tab" 
-           aria-selected="true">iOS 15</a>
+           aria-selected="true" lang="en">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-bs-toggle="tab" 
            href="#SwitchControl-iOS13"
            role="tab" 
-           aria-selected="false">iOS 13</a>
+           aria-selected="false" lang="en">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-bs-toggle="tab" 
            href="#SwitchControl-iOS12"
            role="tab" 
-           aria-selected="false">iOS 12</a>
+           aria-selected="false" lang="en">iOS 12</a>
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
      id="SwitchControl-iOS15"
      role="tabpanel">
     
-![](../../images/ios-test-SwitchControl_iOS15.png)
+![Sur <span lang='en'>iOS</span> 15 : activer Contrôle de sélection à partir du menu Réglages-Accessibilité-Contrôle de sélection](../../images/ios-test-SwitchControl_iOS15.png)
 </div>
 <div class="tab-pane" id="SwitchControl-iOS13" role="tabpanel">
     
-![](../../images/ios-test-SwitchControl_iOS13.png)
+![Sur <span lang='en'>iOS</span> 13 : activer Contrôle de sélection à partir du menu Réglages-Accessibilité-Contrôle de sélection](../../images/ios-test-SwitchControl_iOS13.png)
 </div>
 <div class="tab-pane" id="SwitchControl-iOS12" role="tabpanel" >
 
-![](../../images/ios-test-SwitchControl_iOS12.png)
+![Sur <span lang='en'>iOS</span> 12 : activer Contrôle de sélection à partir du menu Général-Accessibilité-Contrôle de sélection](../../images/ios-test-SwitchControl_iOS12.png)
 </div></div>
 
 <br>
 
 ## Évaluation technique
 
-Comme son nom l'indique, cette partie requiert des connaissances plus ou moins pointues selon ce que l'on souhaite vérifer.
+Comme son nom l'indique, cette partie requiert des connaissances plus ou moins pointues selon ce que l'on souhaite vérifier.
 <br>
 ### Contraste des couleurs
 
-Graphiquement, [le&nbsp;contraste&nbsp;des&nbsp;couleurs](../conception#couleurs) est très certainement le plus facilement vérifiable grâce à certains logiciels à installer en local par exemple (Colour Contrast Analyzer...).
+Graphiquement, [le&nbsp;contraste&nbsp;des&nbsp;couleurs](../conception/#couleurs) est très certainement le plus facilement vérifiable grâce à certains logiciels à installer en local par exemple (Colour Contrast Analyzer...).
 
 L'outil <span lang="en">Accessibility Inspector</span> dispose d'une fonctionnalité [<span lang="en">Color Contrast Calculator</span>](../wwdc/2019/#contraste-des-couleurs-0626) depuis Xcode 11 qui permet aussi de réaliser le même type de vérifications.
 <br>Il est aussi très important de prendre en compte la luminosité (valeur > 125) ainsi que la différence de tonalité (valeur > 500) comme indiqué dans la section critères de conception liée aux couleurs.
 <br><br>
 ### Inspection de code
 
-L'interface de développement Xcode fournit un outil particulièrement intéressant intitulé **Accessibility Inspector**.
+L'interface de développement Xcode fournit un outil particulièrement intéressant intitulé **<span lang='en'>Accessibility Inspector</span>**.
 
-L'intérêt et l'utilisation de cet outil ne seront pas développés ici car ils sont très bien expliqués dans les vidéos parfaitement détaillées [`Audit`&nbsp;`d'une`&nbsp;`app`&nbsp;`en`&nbsp;`accessibilité`](../wwdc/2016/407/) et [`Découvrir`&nbsp;`Accessibility`&nbsp;`Inspector`](../wwdc/2019/#decouvrir-accessibility-inspector) dont le visionnage est très fortement recommandé.
+L'intérêt et l'utilisation de cet outil ne seront pas développés ici car ils sont très bien expliqués dans les vidéos parfaitement détaillées [`Audit`&nbsp;`d'une`&nbsp;`app`&nbsp;`en`&nbsp;`accessibilité`](../wwdc/2016/407/) et [`Découvrir`&nbsp;<span lang="en">`Accessibility`&nbsp;`Inspector`</span>](../wwdc/2019/#decouvrir-accessibility-inspector) dont le visionnage est très fortement recommandé.
 <br><br>
 ### Tests liés au code
 

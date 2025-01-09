@@ -3,7 +3,7 @@ title: "Android - Manual tests: use cases"
 abstract: "Manual tests by reproducing the situation experienced by your users with Android"
 ---
 
-# Manual tests: use cases
+# Android - Manual tests: use cases
 
 Manual tests are those that you will perform yourself, by reproducing the situation experienced by your users, and therefore using their interaction tools. It is even better to have the application tested by real users with disabilities. Several tools must be used, to take into account as many possible situations as possible:
 
@@ -200,7 +200,7 @@ To test whether this need for accessibility is taken into account by the applica
 
 ## Voice Access
 
-[Voice Access](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.voiceaccess) is an application integrated into [Android Accessibility Suite] (https://play.google.com/store/apps/details?id=com.google.android.marvin .talkback), intended for people with motor disorders. It allows you to control the application by voice instead of the touch screen.
+[Voice Access](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.voiceaccess) is an application integrated into [Android Accessibility Suite] (https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback), intended for people with motor disorders. It allows you to control the application by voice instead of the touch screen.
 
 Among the possible commands:
 - Open "app"

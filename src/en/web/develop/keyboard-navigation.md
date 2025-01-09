@@ -3,7 +3,7 @@ title: "Web develop - Keyboard navigation"
 abstract: "Keyboard navigation, web accessibility dev recommandations"
 ---
 
-# Keyboard navigation
+# Web develop - Keyboard navigation
 
 <p class="lead">Ensure the user can navigate using the keyboard only</p>
 
@@ -38,9 +38,9 @@ Allow users who cannot use the mouse (blind, motor disabled, mobile web, outdoor
 **Don’t:**     
 A functionality only available through drag & drop and without any keyboard equivalent.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#keyboard">2.1.1 Keyboard</a>
-- <a href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a href="https://www.w3.org/TR/WCAG22/#keyboard">2.1.1 Keyboard</a>
+- <a href="https://www.w3.org/TR/WCAG22/#name-role-value">4.1.2 Name, Role, Value</a>
 
 
 ## The focus order must be sequential and logical without keyboard trap
@@ -77,8 +77,8 @@ A page containing a video player where the focus can enter the player, but canno
 
 **<abbr>WCAG</abbr> references:**
 
-- [2.1.2 No Keyboard Trap](https://www.w3.org/TR/WCAG21/#no-keyboard-trap)
-- [2.4.3 Focus Order](https://www.w3.org/TR/WCAG21/#focus-order)
+- [2.1.2 No Keyboard Trap](https://www.w3.org/TR/WCAG22/#no-keyboard-trap)
+- [2.4.3 Focus Order](https://www.w3.org/TR/WCAG22/#focus-order)
 
 
 
@@ -129,6 +129,41 @@ Focus set on the «&nbsp;Apple iPhone 5s argent&nbsp;».
     
 ![screenshot showing a link whose focus is not visible enough](../../images/focus-ko.png)   
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a href="https://www.w3.org/TR/WCAG22/#focus-visible">2.4.7 Focus Visible</a>
 
+## Ensure that the interactive element receiving keyboard focus is always at least partially visible in the user's viewport. 
+
+**Target&nbsp;:** everyone, especially people without visual impairment and using keyboard navigation and/or attention difficulties and people using a screen magnifier. 
+
+**When&nbsp;:** as of conception but mainly during development
+
+**Description&nbsp;:**
+When an interactive component receives keyboard focus, this element is not totally hidden by any other content. Pay particular attention to sticky headers and footers as well as modal windows. Also be careful when focus is managed by JavaScript. 
+
+**Good Practice&nbsp;:**
+It is possible to go further by ensuring that the interactive component receiving keyboard focus is always fully visible in the viewport (criterion 2.4.12 Focus Not Obscured (Enhanced) level AAA) in order to make sure that the user has a full understanding of the nature and function of this component.
+
+**Checklist&nbsp;:**
+- Scroll through the page with the keyboard using the tab key as well as (Shift+ tab) keys.
+- Be sure to test all possible interactions in the page (sticky headers and footers as well as modal windows in particular). 
+- Pay attention to situations where the viewport is smaller (responsive on mobile, zoom or use of a screen magnifier).
+
+**Complement&nbsp;:**
+- When the content is in a user-movable content, then only the initial position needs to be tested.  
+- The element receiving keyboard focus can be hidden by other content opened by the user. If it is possible to unhide the focused element without moving the focus, then the focused element is not considered hidden. 
+- When the element receiving keyboard focus is hidden by another one with less than 100 percent opacity then the element receiving keyboard focus is considered as not entirely hidden. For this edgecase a special attention for contrasts criterion is needed.
+
+**Users' goal&nbsp;:**
+Ensure users always know where in the viewport the element receiving keyboard focus is so they can have a full understanding of the nature and function of this component. 
+
+**Passing example&nbsp;:**
+A webpage with sticky components that may hide the element receiving keyboard focus is using CSS properties ['scroll-padding-*''](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding) to prevent it. 
+
+**Failing example&nbsp;:**
+- A modal dialog appears on screen but the focus is not constrained in it, allowing elements hidden by the modal to receive keyboard focus. 
+- A chatbot is displayed on the screen in the foreground of the viewport and may hide the element receiving keyboard focus. 
+
+**Référence WCAG&nbsp;:**
+- <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum">2.4.11 Focus Not Obscured (Minimum)</a>
+- <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced">2.4.12 Focus Not Obscured (Enhanced)</a>

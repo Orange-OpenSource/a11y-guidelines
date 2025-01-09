@@ -1,9 +1,9 @@
 ﻿---
 title: "Android designer - Agrandissement des éléments"
-abstract: "Agrandir les textes, recommendations d'accessibilité lors de la conception"
+abstract: "Android designer - Agrandir les textes, recommendations d'accessibilité lors de la conception"
 ---
 
-# Agrandissement des éléments
+# Android designer - Agrandissement des éléments
 
 ## Agrandir les textes sans perte d'information
 
@@ -32,6 +32,6 @@ L'option d'accessibilité d'agrandissement de la taille des textes, présent dan
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#resize-text">1.4.4 Resize text</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#reflow">1.4.10 Reflow</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#resize-text">1.4.4 Resize text</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#reflow">1.4.10 Reflow</a>
 

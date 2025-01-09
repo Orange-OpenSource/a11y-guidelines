@@ -77,7 +77,6 @@ Afin de tester toute votre campagne mail, utiliser le site [Accessible email](ht
 - [Fiche mémo sur l'accessibilité des emails](../../articles/memo-accessibilite/)
 - [Tuto Office mails accessibles](https://support.office.com/fr-fr/article/vid%C3%A9o-am%C3%A9liorer-l-accessibilit%C3%A9-des-e-mails-ebf3730a-18f8-4b57-81d1-730086231775)
 - [Tester la prise en charge de l’HTML et du CSS sur les différents clients mails](https://www.caniemail.com/)
-- [Sur quels clients mails tester en priorité (anglais)](https://emails.hteumeuleu.com/which-email-clients-should-you-test-on-b2a892e57606)
 - [Guide le l’accessibilité des mails (anglais)](https://webdesign.tutsplus.com/tutorials/a-beginners-guide-to-email-accessibility--cms-31240)
 - [Guide Litmus : mails accessibles (anglais)](https://litmus.com/blog/ultimate-guide-accessible-emails)
 - [Taille idéale des zones cliquables (anglais)](https://www.smashingmagazine.com/2012/02/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/)

@@ -27,7 +27,7 @@
     {% if highlightJS == true %}
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@{{ vendors.highlightJS.version }}/build/styles/{{ vendors.highlightJS.theme }}.min.css">
     {% endif %}
-    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css">
     {%- for item in head -%}{{ item | safe }}{%- endfor -%}
@@ -35,7 +35,7 @@
       <link rel="stylesheet" href="{{ item }}">
     {%- endfor -%}
   </head>
-  <body{% if displayToc == true %} data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;"{% endif %}>
+  <body{% if displayToc == true %} data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;"{% endif %}>
     {% include "partials/header.njk" %}
     <div class="container-lg pt-2">
       {# We don't want to display the breadcrumb on the home pages #}
@@ -52,12 +52,12 @@
     {% block content %}{% endblock %}
     {% include "partials/footer.njk" %}
     <nav role="navigation" class="back-to-top" aria-label="{{ 'backToTop.label' | translate }}">
-      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="{{ 'backToTop.label' | translate }}">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" title="{{ 'backToTop.label' | translate }}">
         <span class="visually-hidden">{{ 'backToTop.label' | translate }}</span>
       </a>
     </nav>
     <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
-    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
     {% if popperJS == true %}
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/{{ vendors.popper.version }}/umd/popper.min.js" integrity="{{ vendors.popper.integrity }}" crossorigin="anonymous"></script>
     {% endif %}
@@ -93,7 +93,7 @@
       {%- endif -%}
       docsearch({{ site.getDocSearchConfig(locale) | dump | safe }});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>{{ 'headingsAnchor.label' | translate }}</div>
+    <div hidden>{{ 'headingsAnchor.label' | translate }}</div>
     {% include "partials/licence.njk" %}
   </body>
 </html>

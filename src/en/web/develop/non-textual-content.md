@@ -3,7 +3,7 @@ title: "Web develop - Non-textual content"
 abstract: "Non-textual content, web accessibility dev recommandations"
 ---
 
-# Non-textual content
+# Web develop - Non-textual content
 
 <p class="lead">Ensure that an alternative to non-text content is provided to the user</p>
 
@@ -62,9 +62,9 @@ In this case setting the `alt` attribute to something other than empty would pro
 **Tools:**
 The <a href="https://chrispederick.com/work/web-developer/"> Web developer </a> extension (ability to display text alternatives for all images). 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
-- <a href="https://www.w3.org/WAI/WCAG21/Understanding/images-of-text">1.4.5 Images of text</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
+- <a href="https://www.w3.org/WAI/WCAG22/Understanding/images-of-text">1.4.5 Images of text</a>
 
 
 
@@ -95,15 +95,15 @@ Provide access to visual and hearing information for people who cannot access it
 
 Allow audio and video referencing.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#audio-only-and-video-only-prerecorded">1.2.1 Audio-only and Video-only (Prerecorded)</a>
-- <a href="https://www.w3.org/TR/WCAG21/#captions-prerecorded">1.2.2 Captions (Prerecorded)</a>
-- <a href="https://www.w3.org/TR/WCAG21/#audio-description-or-media-alternative-prerecorded">1.2.3 Audio Description or Media Alternative (Prerecorded)</a>
-- <a href="https://www.w3.org/TR/WCAG21/#captions-live">1.2.4 Captions (Live)</a>
-- <a href="https://www.w3.org/TR/WCAG21/#audio-description-prerecorded">1.2.5 Audio Description (Prerecorded)</a>
-- <a href="https://www.w3.org/TR/WCAG21/#audio-control">1.4.2 Audio Control</a>
-- <a href="https://www.w3.org/TR/WCAG21/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a>
-- <a href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a href="https://www.w3.org/TR/WCAG22/#audio-only-and-video-only-prerecorded">1.2.1 Audio-only and Video-only (Prerecorded)</a>
+- <a href="https://www.w3.org/TR/WCAG22/#captions-prerecorded">1.2.2 Captions (Prerecorded)</a>
+- <a href="https://www.w3.org/TR/WCAG22/#audio-description-or-media-alternative-prerecorded">1.2.3 Audio Description or Media Alternative (Prerecorded)</a>
+- <a href="https://www.w3.org/TR/WCAG22/#captions-live">1.2.4 Captions (Live)</a>
+- <a href="https://www.w3.org/TR/WCAG22/#audio-description-prerecorded">1.2.5 Audio Description (Prerecorded)</a>
+- <a href="https://www.w3.org/TR/WCAG22/#audio-control">1.4.2 Audio Control</a>
+- <a href="https://www.w3.org/TR/WCAG22/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a>
+- <a href="https://www.w3.org/TR/WCAG22/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a>
 
 
 
@@ -123,7 +123,7 @@ Captchas are often the source of difficulties for users. If the implementation o
 
 If no other alternative is possible, it is essential to provide an alternative for captcha only visual or sound by proposing a combination of captcha types: an audio + visual captcha, logical tests (question whose answer is obvious, mathematical simple tests…) + classic visual captcha…
 
-More details on [Captchas](../../../articles/captcha-accessibility).
+More details on [Captchas](../../../articles/captcha-accessibility/).
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>

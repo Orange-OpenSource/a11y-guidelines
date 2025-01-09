@@ -1,0 +1,17 @@
+{
+    "displayToc": true,
+    "sideNavigationLinks": [
+      {
+        "label": "Create an accessible Excel document ",
+        "href": "/en/content-and-communication/excel/"
+      },
+      {
+        "label": "Accessibility checking",
+        "href": "/en/content-and-communication/excel/test/"
+      },
+      {
+        "label": "Accessibility fact sheet for Excel",
+        "href": "/en/content-and-communication/excel/fact-sheet/"
+      }
+    ]
+  }

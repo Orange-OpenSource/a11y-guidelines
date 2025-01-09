@@ -3,7 +3,7 @@ title: "Android designer - Couleurs et contrastes"
 abstract: "Couleurs et contrastes, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
-# Couleurs et contrastes
+# Android designer - Couleurs et contrastes
 
 S'assurer que les couleurs utilisées ne posent pas de problèmes à l'utilisateur
 
@@ -34,8 +34,8 @@ Le texte "film | 20h40 …" ne présente pas un contraste suffisant. Celui-ci ne
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contrast minimum</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-contrast">1.4.11 Non text contrast</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#contrast-minimum">1.4.3 Contrast minimum</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-contrast">1.4.11 Non text contrast</a>
 
 <br/><br/>
 
@@ -59,8 +59,8 @@ Ne pas utiliser la couleur ou une information sensorielle (forme, taille, son, o
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#sensory-characteristics">1.3.3 Sensory characteristics</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#use-of-color">1.4.1 Use of color</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#sensory-characteristics">1.3.3 Sensory characteristics</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#use-of-color">1.4.1 Use of color</a>
 
 
 ## S'assurer que le mode sombre est prévu par l'application

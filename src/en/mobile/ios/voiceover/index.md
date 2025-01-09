@@ -173,8 +173,8 @@ First, VoiceOver common gestures will be introduced to be followed by iPhoneX de
 </ul>
 
 </br></br>
-## iPhoneX
-The lack of the home button on the main screen for this device has modified the usual gestures.
+## Devices with no home button
+The lack of the home button on the main screen has modified the usual gestures.
 <br>These [new common gestures](iphone-x/) have induced new VoiceOver behavior for some actions:
 
 - [Go to Home Screen.](#BackHome)
@@ -213,7 +213,7 @@ Hereunder are unusual features that may be useful to a VoiceOver user on **any t
 
 - [Read elements from the selection.](#ReadAllElementsFromSelection)
 
-- [Start/pause the elements vocalization.](#ToggleAutomaticReading)
+- [Pause/resume the elements vocalization.](#ToggleAutomaticReading)
 
 - [Locate the selected element.](#LocateSelectedElement)
 

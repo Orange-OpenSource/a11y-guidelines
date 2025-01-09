@@ -11,12 +11,14 @@ displayToc: true
 Each one of these features should be seen as an important **human-made** element for the user comfort and not just a functional one.
 
 Whatever the design, implementation or testing area, **every decision** must be particularly **empathetic** to provide the best user experience.
-<br><br>
+
+<div><q>An accessible product is a high-quality product</q><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=56"> WWDC 2023 - Perform Accessibility Audits For Your App (watch the video)</a></div>
+
 ## Fundamental prerequisites
 
-1. Spend as much time as necessary to perfectly control the gestures ([VoiceOver](../voiceover/), Switch Control).
+1. Spend as much time as necessary to perfectly control the gestures ([VoiceOver user guide](../voiceover/), Switch Control).
 
-2. Watch the examples provided by the [WWDC&nbsp;videos](../wwdc/).
+2. Watch the examples provided by the [WWDC (Apple Worldwide Developers Conference)&nbsp;videos](../wwdc/).
 
 3. Assimilate the [design&nbsp;criteria](../design/) to be sure that you're following the appropriate working path.
 
@@ -47,12 +49,12 @@ Sometimes, this mode also confirms and solves any functional problems.
 ## Functional review
 There's no need in having technical knowledge for this part but (de)activate and use iOS accessibility features.
 
-Besides the [design&nbsp;criteria](../design/) to be followed, it's crucial to be sure that the [accessibility&nbsp;options](../design#accessibility-options) activated by a user are operational in the whole application.
+Besides the [design&nbsp;criteria](../design/) to be followed, it's crucial to be sure that the [accessibility&nbsp;options](../design/#accessibility-options) activated by a user are operational in the whole application.
 
 Few important criteria to be imperatively tested are introduced hereunder:
 
 - **Screen orientation**: it's highly recommended to implement the landscape and portrait modes.
-When implemented, this [functionality](../design#screen-orientation) must be checked for each page of the application.
+When implemented, this [functionality](../design/#screen-orientation) must be checked for each page of the application.
 
 - **Reduce motion**: because visual movements may give rise to problems (nausea...) for some people, it's imperative to check the [user&nbsp;settings&nbsp;dealing&nbsp;with&nbsp;animations](../wwdc/2018/230/#motion-0848).
 
@@ -71,8 +73,7 @@ Besides these basic criteria, there are also fundamental requirements for an acc
 
 3. [Switch&nbsp;Control](#switch-control)
 
-![](../../images/ios-test-overview.png)
-<br><br>
+![Main accessibility options on iOS: user settings, shortcuts & Siri, dark mode, Dynamic type, Voice Over, Switch control](../../images/ios-test-overview.png)
 ### Dynamic Type
 To understand how this feature works, it's highly recommended to watch the example in this [WWDC&nbsp;2017&nbsp;video](../wwdc/2017/245/#example-2432) that is detailed in the WWDC part of this site.
 
@@ -88,12 +89,12 @@ Three zoom levels must be particularly scanned to determine the visual behavior 
 
 <br>
 
-![](../../images/ios-test-DynamicType.png)
+![cursor on the very left: lowest threshold without accessibility, cursor on the middle: highest threshold without accessibility, cursor on the very right: highest threshold with accessibility](../../images/ios-test-DynamicType.png)
 The following points must be thoroughly checked:
 
 - The **truncation '...' mustn't be used** and should be replaced by a hyphen at the end of the sentence.
 
-![](../../images/ios-test-DynamicType_2.png)
+![Example of truncation: first line "Accomoda-" and second line "tions"](../../images/ios-test-DynamicType_2.png)
 
 - **Illustration and icon sizes must be adapted to the magnification**: use of the [Large&nbsp;Content&nbsp;Viewer](../wwdc/2019/261/) feature, a two fingers pinch implementation to avoid the `Zoom` native feature trigger or only a [graphical&nbsp;element&nbsp;magnification](../development/#graphical-elements-size) are possible solutions according to the context.
 
@@ -103,10 +104,9 @@ The following points must be thoroughly checked:
 
 All these **tests are quite long to be performed** because every screen is impacted with different devices including the changing of the text size inside each one of them.
 
-<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562">
-    
-![Access to the WWDC video that explains the importance of the dynamic type feature as a major step in the project process](../../images/ios-test-DynamicTypeWWDC.png)
+<div><q>My biggest tip is to think about these early on in the design process.</q>&nbsp;<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562">WWDC 2020 - Make Your App Visually Accessible (watch the video)</a></div>
 <br><br>
+
 ### VoiceOver
 
 The iOS native screen reader activation drastically changes the visual behavior obtained with the common gestures, that's why its [control](../voiceover/) takes a little while.
@@ -140,22 +140,22 @@ It's **highly recommended** to know the basic gestures before activating this fe
      id="VoiceOver-iOS15"
      role="tabpanel">
     
-![](../../images/ios-test-VO_iOS15.png)
+![On iOS 15: activate Voice Over from the Settings-Accessibility-Voice Over menu](../../images/ios-test-VO_iOS15.png)
 </div>
 <div class="tab-pane" id="VoiceOver-iOS13" role="tabpanel">
     
-![](../../images/ios-test-VO_iOS13.png)
+![On iOS 13: activate Voice Over from the Settings-Accessibility-Voice Over menu](../../images/ios-test-VO_iOS13.png)
 </div>
 <div class="tab-pane" id="VoiceOver-iOS12" role="tabpanel" >
     
-![](../../images/ios-test-VO_iOS12.png)
+![On iOS 12: activate Voice Over from the General-Accessibility-Voice Over menu](../../images/ios-test-VO_iOS12.png)
 </div></div>
 
 <br>Don't believe that every element must be absolutely vocalized one after another: that's definitely the proper way to get a VoiceOver implementation that is anything but effective!
 
 Keep in mind that the visual **information** is assimilated very quickly while the screen reader **sequentially** provides this information at the speed of successive selections of elements: a **huge effort** is necessary to get a synoptic vision of the screen and really understand what's offered.
 
-To better deal with this situation, it's recommended to keep on navigating with the [curtain&nbsp;screen](../voiceover#CurtainScreen) mode that's particularly very useful for the tests of an unknown application because  no human-made memorized information from a previous browsing will be provided.
+To better deal with this situation, it's recommended to keep on navigating with the [curtain&nbsp;screen](../voiceover/#CurtainScreen) mode that's particularly very useful for the tests of an unknown application because  no human-made memorized information from a previous browsing will be provided.
 
 Besides the [design&nbsp;criteria](../design/) to be followed, **four main principles** must be kept in mind when testing:
 
@@ -212,15 +212,15 @@ Note: this feature can be (de)activated in the device user settings.
      id="SwitchControl-iOS15"
      role="tabpanel">
     
-![](../../images/ios-test-SwitchControl_iOS15.png)
+![On iOS 15: enable Switch Control from the Settings-Accessibility-Switch Control menu](../../images/ios-test-SwitchControl_iOS15.png)
 </div>
 <div class="tab-pane" id="SwitchControl-iOS13" role="tabpanel">
     
-![](../../images/ios-test-SwitchControl_iOS13.png)
+![On iOS 13: enable Switch Control from the General-Accessibility-Switch Control menu](../../images/ios-test-SwitchControl_iOS13.png)
 </div>
 <div class="tab-pane" id="SwitchControl-iOS12" role="tabpanel" >
 
-![](../../images/ios-test-SwitchControl_iOS12.png)
+![On iOS 12: enable Switch Control from the Settings-Accessibility-Switch Control menu](../../images/ios-test-SwitchControl_iOS12.png)
 </div></div>
 
 <br>
@@ -230,7 +230,7 @@ The use of this section requires more or less special expertise according to wha
 <br>
 ### Colour contrast
 
-The [colour&nbsp;contrast](../design#colours) is certainly the easiest point to be checked thanks to softwares (Colour Contrast Analyzer...).
+The [colour&nbsp;contrast](../design/#colours) is certainly the easiest point to be checked thanks to softwares (Colour Contrast Analyzer...).
 
 Since Xcode 11, the Accessibility Inspector tool provides a specific [Color&nbsp;Contrast&nbsp;Calculator](../wwdc/2019/#color-contrast-0626) feature that reaches the same purpose.
 <br>It's also crucial to take into account the brightness difference (value > 125) and the colour difference (value > 500) as described in the design criteria section dealing with colours.
@@ -239,11 +239,20 @@ Since Xcode 11, the Accessibility Inspector tool provides a specific [Color&nbsp
 
 The Xcode <abbr>IDE</abbr> contains a very interesting tool entitled **Accessibility Inspector**.
 
-Its goal and way of being used won't be developed here because they're perfectly explained in these detailed videos [`Auditing`&nbsp;`Your`&nbsp;`Apps`&nbsp;`for`&nbsp;`Accessibility`](../wwdc/2016/407/) and [`Accessibility`&nbsp;`Inspector`](../wwdc/2019/#accessibility-inspector) that are highly recommended to be watched.
+Its goal and way of being used won't be developed here because they're perfectly explained in these detailed videos:
+- [`Auditing`&nbsp;`Your`&nbsp;`Apps`&nbsp;`for`&nbsp;`Accessibility`](../wwdc/2016/407/),
+
+- [`Accessibility`&nbsp;`Inspector`](../wwdc/2019/#accessibility-inspector),
+
+- [`Perform`&nbsp;`accessibility`&nbsp;`audits`&nbsp;`for`&nbsp;`your`&nbsp;`app`](../wwdc/nota11y/2023/2310035/)
+
+... that are highly recommended to be watched.
 <br><br>
 ### Code testing
 
-Many kinds of tests (unit tests...) may be set up by the developers in order to maintain a stable and reliable code over time.
+Many kinds of tests (unit tests...) may be set up by the developers in order to maintain a **stable and reliable code** over time.
 
 These good practice ensure functional continuity by being informed of any deviation introduced in subsequent developments.
+
+Take a look at the [`Perform`&nbsp;`accessibility`&nbsp;`audits`&nbsp;`for`&nbsp;`your`&nbsp;`app`](../wwdc/nota11y/2023/2310035/) video if further information are necessary to include **automation elements** in your tests for instance.
 <br><br>

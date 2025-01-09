@@ -43,7 +43,7 @@ second choice:
 
 We add `role="img"` to make sure that with macOS Safari, VoiceOver (old versions) announces "image".
 
-#### SVG online (inline)
+### SVG online (inline)
 <pre> <code class="html">
 &lt;svg viewBox="0 0 440 540" version="1.1" role="img"
   lang="fr" xml:lang="fr"
@@ -137,4 +137,7 @@ In short, one tip for accessible SVG would be TEST and test again!
 
 - https://www.deque.com/blog/creating-accessible-svgs/
 - https://weboverhauls.github.io/demos/svg/
-- https://www.scottohara.me/blog/2019/0
+- https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html 
+- https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility 
+- https://github.com/JeremiePat/svg-accessible/blob/master/slides.md 
+- https://www.sarasoueidan.com/blog/accessible-icon-buttons/ 

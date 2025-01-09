@@ -3,7 +3,7 @@ title: "Web designer - Mise en page"
 abstract: "Mise en page, recommendations d'accessibilité Web lors de la conception"
 ---
 
-# Mise en page
+# Web designer - Mise en page
 
 <p class="lead">S’assurer que la mise en page soit adaptée à l’utilisateur.</p>
 

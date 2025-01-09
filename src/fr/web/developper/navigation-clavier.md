@@ -3,7 +3,7 @@ title: "Web développer - Navigation clavier"
 abstract: "Navigation clavier, recommendations d'accessibilité web lors du développement"
 ---
 
-# Navigation clavier
+# Web développer - Navigation clavier
 
 <p class="lead">S’assurer que l’utilisateur puisse naviguer uniquement à l’aide du clavier</p>
 
@@ -35,8 +35,8 @@ Voir [la façon de naviguer au clavier](/fr/web/outils/methodes-et-outils-de-tes
 Une fonctionnalité réalisable uniquement à l’aide du <i lang="en">drag’n’drop</i> et sans équivalent au clavier.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#keyboard">2.1.1 Keyboard</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#keyboard">2.1.1 Keyboard</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#name-role-value">4.1.2 Name, Role, Value</a>
 
 
 
@@ -71,8 +71,8 @@ Dans une page dédiée à la recherche dans le site, on passe, à la navigation 
 Une page contenant un lecteur vidéo dont le focus peut entrer à l’intérieur du lecteur, mais ne peut pas en sortir (piège clavier).        
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#no-keyboard-trap">2.1.2 No Keyboard Trap</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#no-keyboard-trap">2.1.2 No Keyboard Trap</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-order">2.4.3 Focus Order</a>
 
 
 
@@ -86,7 +86,7 @@ Une page contenant un lecteur vidéo dont le focus peut entrer à l’intérieur
 
 Ne pas masquer le focus et si nécessaire accentuer sa visibilité sur tous les éléments focusables, par exemple en modifiant la propriété <abbr>CSS</abbr> `outline`.
 
-Veiller à fournir un niveau de contraste suffisant de 3:1 pour que celui-ci soit visible par tous (cf. [mesurer le niveau de contraste des couleurs](/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs)).
+Veiller à fournir un niveau de contraste suffisant de 3:1 pour que celui-ci soit visible par tous (cf. [mesurer le niveau de contraste des couleurs](/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/)).
 
 Lorsqu’un effet est visible sur un élément au survol de la souris (`:hover` en <abbr>CSS</abbr> par exemple), cet effet doit être également affiché à la prise du focus (`:focus`).
 
@@ -119,8 +119,44 @@ Permettre la visibilité du focus sur tous les éléments actifs, notamment pour
 Dans les captures d’écran suivantes, le focus est positionné sur le lien «&nbsp;209 SMS/mois&nbsp;».  
 La première capture présente le comportement par défaut (focus représenté par des pointillés).
 Dans la seconde capture, les pointillés ont été supprimés, mais un encadré permet d’indiquer de manière explicite l’emplacement du focus.  
-![capture d’écran présentant l’affichage du focus par défaut](images/focus.png)
-![capture d’écran présentant un comportement personnalisé pour l’affichage du focus](images/focus2.png)
+![capture d’écran présentant l’affichage du focus par défaut](../../images/focus.png)
+![capture d’écran présentant un comportement personnalisé pour l’affichage du focus](../../images/focus2.png)
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-visible">2.4.7 Focus Visible</a>
+
+## S'assurer que l'utilisateur puisse toujours voir où est positionné dans le viewport le composant qui reçoit le focus. 
+
+**Cible&nbsp;:** tout le monde, et en particulier les personnes sans déficience visuelle particulière utilisant la navigation au clavier et/ou déficience(s) cognitive(s) et les utilisateurs de loupe d'écran. 
+
+**Quand&nbsp;:** dès la phase de conception mais surtout lors du développement.
+
+**Description&nbsp;:**
+Lorsqu'un composant reçoit le focus lors de la navigation au clavier, le composant ne doit pas être totalement masqué. Attention en particulier aux sticky header et footer ainsi qu'aux fenêtres modales. Attention également lorsque le focus est géré en JavaScript. 
+
+**Bonne Pratique&nbsp;:**
+Il est possible d'aller plus loin en veillant à ce que le composant reste totalement visible à la prise de focus (critère 2.4.12 <span lang="en">Focus Not Obscured (Enhanced) niveau AAA</span>) car cela permet de garantir que l'utilisateur ait connaissance de la fonction du composant. 
+
+**A vérifier&nbsp;:**
+- Penser à utiliser la tabulation avant (tab) et arrière (Shift+ tab) pour vérifier tous les cas de figure.
+- Veiller à tester toutes les interactions susceptibles de cacher le composant qui reçoit le focus (notamment les éléments en position fixe ou sticky, modales, menus déroulants,...). 
+- Attention aux cas où le viewport est réduit (responsive sur mobile, zoom, utilisation d'une loupe d'écran).
+
+**Complément&nbsp;:**
+- Lorsque le contenu d'une interface configurable peut être repositionné par l'utilisateur, seules les positions initiales du contenu déplaçable par l'utilisateur sont prises en compte pour les tests et la conformité à ce critère de réussite. 
+- Le contenu ouvert par l'utilisateur peut masquer le composant recevant le focus. Si l'utilisateur peut révéler le composant ciblé sans déplacer le focus alors le composant avec le focus n'est pas considéré comme masqué en raison du contenu créé par l'auteur.
+- Si le composant qui reçoit le focus est recouvert par un autre élément dont l'opacité est inférieure à 100 % alors le composant qui reçoit le focus n'est pas totalement masqué et le critère est validé. Attention toutefois à bien évaluer les critères sur les contrastes. 
+
+**Objectif utilisateur&nbsp;:**
+Permettre aux utilisateurs de la navigation au clavier de toujours savoir où est positionné le composant qui reçoit le focus et quelle est sa fonction. 
+
+**Exemple valide&nbsp;:**
+Une page avec des composants sticky susceptibles de recouvrir l'élément qui reçoit le focus lors du scroll utilisent les propriétés CSS ['scroll-padding-*''](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding) afin d'éviter que les différents éléments de la page ne se recouvrent. 
+
+**Exemple non valide&nbsp;:**
+- Une modale apparaît à l'écran mais le focus n'est pas restreint à l'intérieur de celle-ci. Par conséquent le focus peut être positionné sur des composants recouverts par la modale. 
+- Un chatbot occupe une partie du viewport et est placé au premier plan recouvrant ainsi totalement le composant qui reçoit le focus 
+
+**Référence WCAG&nbsp;:**
+- <a lang="en" href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum">2.4.11 Focus Not Obscured (Minimum)</a>
+- <a lang="en" href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced">2.4.12 Focus Not Obscured (Enhanced)</a>
