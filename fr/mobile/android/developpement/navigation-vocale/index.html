@@ -551,6 +551,18 @@ myView.announceForAccessibility(getString(R.string.criteria_contentchange_ex1_an
    […]
    android:accessibilityLiveRegion="polite" /&gt;
 </code></pre>
+<p><strong>Exemple de région live avec Jetpack Compose</strong>:</p>
+<pre>
+<code class="kotlin">@Composable
+fun PoliteAccessibilityRegion() {
+Column {
+Text(
+text = "Contenu mis à jour pour l'accessibilité",
+modifier = Modifier.accessibilityLiveRegion(AccessibilityLiveRegion.Polite)
+)
+}
+}
+</code></pre>
 <h2 id="ne-pas-vocaliser-les-elements-decoratifs-et-caches" class="h2-focus">Ne pas vocaliser les éléments décoratifs et cachés <a class="header-anchor" href="#ne-pas-vocaliser-les-elements-decoratifs-et-caches" id="heading-2435" aria-labelledby="heading-2435">#</a></h2>
 <p><strong>Cible :</strong> tout le monde et en particulier les personnes déficientes visuelles.<br>
 <strong>Quand :</strong> dès la conception, à la rédaction du contenu et pendant le développement.</p>
