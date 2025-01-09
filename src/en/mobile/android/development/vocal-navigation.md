@@ -44,7 +44,7 @@ Image(
 </code>
 </pre>
 
-**Référence <abbr>WCAG</abbr>:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#images-of-text">1.4.5 Images of Text</a>
 
@@ -485,7 +485,7 @@ Text(
 }
 
 </code>
-</pre>ss
+</pre>
 
 
 **<abbr>WCAG</abbr> reference:** 
