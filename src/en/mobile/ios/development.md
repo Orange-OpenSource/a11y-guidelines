@@ -1392,7 +1392,7 @@ Here's the desired order : 1, 2, 3, 4, 7, 5, 6, 8, 9.
 
 Two views are created containing the numbers to be spelled out in a specific order:
 
-![display of the blue and grey views](../../images/iOSdev/OrdreDeLecture_2.png)
+![](../../images/iOSdev/OrdreDeLecture_2.png)
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">

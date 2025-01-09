@@ -1412,7 +1412,7 @@ Dans cet exemple, on veut l'ordre suivant : 1, 2, 3, 4, 7, 5, 6, 8, 9.
 
 On crée deux vues au sein desquelles on incorpore les chiffres qu'on souhaite vocaliser selon un ordre bien précis :
 
-![affichage des vues grise et bleue pour l'exemple](../../images/iOSdev/OrdreDeLecture_2.png)
+![](../../images/iOSdev/OrdreDeLecture_2.png)
 <div class="code-tab-pane">
 
 <pre><code class="objectivec">
