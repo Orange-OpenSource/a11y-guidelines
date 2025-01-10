@@ -72,13 +72,13 @@ module.exports = function (eleventyConfig) {
         return new Intl.DateTimeFormat(locale, options).format(date)
     })
 
-    eleventyConfig.addShortcode('localizedDate', function (date = null, locale = null) {
+    eleventyConfig.addShortcode('localizedUpdateDate', function (updateDate = null, locale = null) {
         if (date === null) {
-            throw new Error('[localizedDate]: no date provided')
+            throw new Error('[localizedUpdateDate]: no date provided')
         }
 
         if (locale === null) {
-            throw new Error('[localizedDate]: no locale provided')
+            throw new Error('[localizedUpdateDate]: no locale provided')
         }
 
         const options = {
@@ -87,7 +87,7 @@ module.exports = function (eleventyConfig) {
             year: 'numeric'
         }
 
-        return new Intl.DateTimeFormat(locale, options).format(date)
+        return new Intl.DateTimeFormat(locale, options).format(updateDate)
     })
 
     /**
