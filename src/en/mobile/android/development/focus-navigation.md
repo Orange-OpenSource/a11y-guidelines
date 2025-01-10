@@ -46,6 +46,38 @@ Example of a selector including the `state_focused` :
 	&lt;item android:state_focused="true" android:state_selected="true"  android:state_pressed="true" android:drawable="@drawable/draw_selected_pressed_selector" /&gt;
 &lt;/selector&gt;</code></pre>
 
+<pre>
+<code class="kotlin">
+// Avec Jetpack Compose
+@Composable
+fun CustomDrawableSelector(
+    isFocused: Boolean,
+    isSelected: Boolean,
+    isPressed: Boolean
+) {
+    val drawableRes = when {
+        !isFocused && !isSelected && !isPressed -> R.drawable.draw_unselected_selector
+        !isFocused && isSelected && !isPressed -> R.drawable.draw_selected_selector
+        isFocused && !isSelected && !isPressed -> R.drawable.draw_unselected_focused_selector
+        isFocused && isSelected && !isPressed -> R.drawable.draw_selected_focused_selector
+        !isFocused && !isSelected && isPressed -> R.drawable.draw_unselected_pressed_selector
+        !isFocused && isSelected && isPressed -> R.drawable.draw_selected_pressed_selector
+        isFocused && !isSelected && isPressed -> R.drawable.draw_unselected_pressed_selector
+        isFocused && isSelected && isPressed -> R.drawable.draw_selected_pressed_selector
+        else -> R.drawable.draw_unselected_selector // Default fallback
+    }
+
+    Image(
+        painter = painterResource(id = drawableRes),
+        contentDescription = null,
+        modifier = Modifier
+            .size(48.dp) // Adjust size as needed
+    )
+}
+
+</code>
+</pre>
+
 Example of a focusable view with keyboard navigation
 <pre><code>&lt;View android:focusable="true"
               android:layout_width="0px"
@@ -57,8 +89,7 @@ Example of a view that is not focusable with keyboard navigation but focusable w
               android:layout_width="0px"
               android:layout_height="0px" /&gt;</code></pre>
 
-
-**Reference <abbr>WCAG</abbr>:**  
+**<abbr>WCAG</abbr> reference:** 
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#keyboard">2.1.1 Keyboard</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#name-role-value">4.1.2 Name, Role, Value</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-visible">2.4.7 Focus Visible</a>
@@ -97,7 +128,7 @@ For more information on [focus management on Android](http://developer.android.c
     ...../&gt;</code></pre>
 
 
-**Reference <abbr>WCAG</abbr>:**  
+**<abbr>WCAG</abbr> reference:** 
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#no-keyboard-trap">2.1.2 No Keyboard Trap</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-order">2.4.3 Focus Order</a>

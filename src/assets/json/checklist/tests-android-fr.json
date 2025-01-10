@@ -1,4 +1,18 @@
 [{
+	"themes": "Contenu textuel",
+	"title": "S'assurer que chaque écran possède un titre visible et pertinent",
+	"type": ["Test manuel"],
+	"tests": ["Naviguer dans les différents écrans de l'application."],
+	"verifier": ["Un titre est présent sur chaque écran."],
+	"resultat": ["Chaque écran doit posséder un titre visible, pertinent par rapport au contexte et si possible unique."],
+	"exception": "",
+	"raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/fr/mobile/android/conception/entetes/",
+	"profils": ["Checklist initiale"],
+	"wcag": ["2.4.2"],
+	"ID": "testMobID-10",
+	"IDorigin": "testMobID-10"
+}, {
 	"themes": "Images",
 	"title": "S'assurer que seules les images informatives sont restituées",
 	"type": ["Talkback"],
@@ -44,7 +58,7 @@
 	"themes": "Navigation clavier",
 	"title": "Permettre l'utilisation de l'application au clavier",
 	"type": ["Clavier bluetooth ou Switch Access"],
-	"tests": ["Connecter un clavier bluetooth au mobile Android (à défaut utiliser Switch Access).<br>Voir <a target=_blank href=https://a11y-guidelines.orange.com/fr/articles/how-to-test-android/>l'article sur la prise en main des fonctionnalités sur Android (nouvel onglet)</a>.","Parcourir la page au clavier à l'aide des touches <kbd>tab</kbd> ou <kbd>shift + tab</kbd>."], 
+	"tests": ["Connecter un clavier bluetooth au mobile Android (à défaut utiliser Switch Access).<br>Voir <a target=_blank href=https://a11y-guidelines.orange.com/fr/articles/how-to-test-android/>l'article sur la prise en main des fonctionnalités sur Android (nouvel onglet)</a>.","Parcourir la page au clavier à l'aide des touches <kbd>tab</kbd> ou <kbd>shift</kbd> + <kbd>tab</kbd>."], 
 	"verifier": ["Tout ce qui peut être fait par l'écran tactile peut être fait au clavier et inversement."],
 	"resultat": ["Tous les éléments interactifs sont atteignables et utilisables en naviguant au clavier."],
 	"exception": "",
@@ -101,7 +115,7 @@
 	"title": "Avoir des zones cliquables suffisamment grandes",
 	"type": ["Test manuel"],
 	"tests": ["Identifier les éléments cliquables."],
-	"verifier": ["Les éléments cliquables sont suffisamment éloignés les uns des autres.", "La zone tactile ne nécessite pas une trop grande précision (taille recommandée : 48dp)."],
+	"verifier": ["Les éléments cliquables sont suffisamment éloignés les uns des autres.", "La zone tactile ne nécessite pas une trop grande précision (taille recommandée : <code>48dp</code>)."],
 	"resultat": ["La zone tactile de chaque élément et l'espacement entre les composants doivent permettre d'éviter des erreurs de toucher (appui par erreur ou difficulté à activer un élément)."],
 	"exception": "",
 	"raccourcis": "",
@@ -138,20 +152,4 @@
 	"wcag": ["4.1.2"],
 	"ID": "testMobID-9",
 	"IDorigin": "testMobID-9"
-}, {
-	"themes": "Contenu textuel",
-	"title": "S'assurer que chaque écran possède un titre visible et pertinent",
-	"type": ["Test manuel"],
-	"tests": ["Naviguer dans les différents écrans de l'application."],
-	"verifier": ["Un titre est présent sur chaque écran."],
-	"resultat": ["Chaque écran doit posséder un titre visible, pertinent par rapport au contexte et si possible unique."],
-	"exception": "",
-	"raccourcis": "",
-	"moreInfo": "https://a11y-guidelines.orange.com/fr/mobile/android/conception/entetes/",
-	"profils": ["Checklist initiale"],
-	"wcag": ["2.4.2"],
-	"ID": "testMobID-10",
-	"IDorigin": "testMobID-10"
 }]
-
-

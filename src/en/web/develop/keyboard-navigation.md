@@ -38,7 +38,7 @@ Allow users who cannot use the mouse (blind, motor disabled, mobile web, outdoor
 **Don’t:**     
 A functionality only available through drag & drop and without any keyboard equivalent.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a href="https://www.w3.org/TR/WCAG22/#keyboard">2.1.1 Keyboard</a>
 - <a href="https://www.w3.org/TR/WCAG22/#name-role-value">4.1.2 Name, Role, Value</a>
 
@@ -129,7 +129,7 @@ Focus set on the «&nbsp;Apple iPhone 5s argent&nbsp;».
     
 ![screenshot showing a link whose focus is not visible enough](../../images/focus-ko.png)   
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a href="https://www.w3.org/TR/WCAG22/#focus-visible">2.4.7 Focus Visible</a>
 
 ## Ensure that the interactive element receiving keyboard focus is always at least partially visible in the user's viewport. 
