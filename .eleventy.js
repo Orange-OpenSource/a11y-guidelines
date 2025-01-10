@@ -72,6 +72,24 @@ module.exports = function (eleventyConfig) {
         return new Intl.DateTimeFormat(locale, options).format(date)
     })
 
+    eleventyConfig.addShortcode('localizedDate', function (date = null, locale = null) {
+        if (date === null) {
+            throw new Error('[localizedDate]: no date provided')
+        }
+
+        if (locale === null) {
+            throw new Error('[localizedDate]: no locale provided')
+        }
+
+        const options = {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric'
+        }
+
+        return new Intl.DateTimeFormat(locale, options).format(date)
+    })
+
     /**
      * @see https://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference#answer-6394168
      */
