@@ -69,7 +69,7 @@ module.exports = function (eleventyConfig) {
             year: 'numeric'
         }
 
-        return new Intl.DateTimeFormat(locale, options).format(date)
+        return new Intl.DateTimeFormat(locale, options).format(date || updateDate)
     })
 
     /**
