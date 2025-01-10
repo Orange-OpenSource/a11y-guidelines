@@ -37,8 +37,8 @@
               </ul>
             {% endif %}
             <time class="text-muted" datetime="{{ page.date.toISOString() }}">{% localizedDate page.date, locale  %}</time>
-            {% if post.updateDate %}
-              <time class="text-muted" datetime="{{ post.updateDate.toISOString() }}">{% localizedDate post.updateDate, locale %}</time>
+            {% if page.updateDate %}
+              <time class="text-muted" datetime="{{ page.updateDate.toISOString() }}">{% localizedDate page.updateDate, locale %}</time>
             {% endif %}
           {% endif %}
           <div class="mt-4">

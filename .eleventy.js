@@ -54,8 +54,8 @@ module.exports = function (eleventyConfig) {
         return String(new Date().getFullYear())
     })
 
-    eleventyConfig.addShortcode('localizedDate', function (date = null, updateDate = null, locale = null) {
-        if (date || updateDate === null) {
+    eleventyConfig.addShortcode('localizedDate', function (date = null, locale = null) {
+        if (date === null) {
             throw new Error('[localizedDate]: no date provided')
         }
 
@@ -69,7 +69,7 @@ module.exports = function (eleventyConfig) {
             year: 'numeric'
         }
 
-        return new Intl.DateTimeFormat(locale, options).format(date || updateDate)
+        return new Intl.DateTimeFormat(locale, options).format(date)
     })
 
     /**
