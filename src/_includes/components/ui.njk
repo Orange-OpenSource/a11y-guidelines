@@ -50,6 +50,9 @@
         {% if post.date %}
           <time class="text-muted" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale %}</time>
         {% endif %}
+        {% if post.updateDate %}
+          <time class="text-muted" datetime="{{ post.updateDate.toISOString() }}">{% localizedDate post.updateDate, locale %}</time>
+        {% endif %}
         {% if post.data.abstract %}
           <p class="my-2">{{ post.data.abstract }}</p>
         {% endif %}
