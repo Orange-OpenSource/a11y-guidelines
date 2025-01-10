@@ -55,7 +55,7 @@ module.exports = function (eleventyConfig) {
     })
 
     eleventyConfig.addShortcode('localizedDate', function (date = null, locale = null) {
-        if (date === null) {
+        if (date || updateDate === null) {
             throw new Error('[localizedDate]: no date provided')
         }
 
