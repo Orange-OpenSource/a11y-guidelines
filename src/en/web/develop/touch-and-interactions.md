@@ -34,7 +34,7 @@ During a single-point gesture interaction, at least one condition is true:
 - Ability on the up event to reverse any result of the previous down event
 - Finish the function on the event is essential. Note: Functions that emulate a keyboard or numeric keypad are considered as essential.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a>
 - <a href="https://www.w3.org/TR/WCAG22/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
 - <a href="https://www.w3.org/TR/WCAG22/#motion-actuation">2.5.4 Motion Actuation</a>
@@ -54,7 +54,7 @@ During a single-point gesture interaction, at least one condition is true:
 **Complex gesture:** any multi-pointer gesture (requiring several fingers), and / or path-bases gesture.  
 **Simplified gesture:** an alternative requiring a single pointer (one finger) without path-based gesture.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a>
 
 
@@ -76,7 +76,7 @@ The dragging movement functionality is:
 -  essential (dexterity games) 
 - controlled by the user agent and not modified 
 
-**Référence <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements">2.5.7 Dragging movements</a>
 
 ## Give access to the content regardless of the orientation of the screen
@@ -87,5 +87,5 @@ The dragging movement functionality is:
 **Description:**  
 Access to the content must not depend on the orientation of the screen (portrait and landscape) unless a specific display orientation is essential (e.g. serious game).
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a href="https://www.w3.org/TR/WCAG22/#orientation">1.3.4 Orientation</a>

@@ -44,7 +44,7 @@ Image(
 </code>
 </pre>
 
-**Référence <abbr>WCAG</abbr>:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#images-of-text">1.4.5 Images of Text</a>
 
@@ -119,7 +119,7 @@ Box(modifier = Modifier.semantics(mergeDescendants = true) {}) {
 </code>
 </pre>
 
-**Reference <abbr>WCAG</abbr>:**  
+**<abbr>WCAG</abbr> reference:** 
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 
 
@@ -250,7 +250,7 @@ Row(
 </code>
 </pre>
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 
 <br/><br/>
@@ -300,7 +300,7 @@ chainemoinsButton.accessibilityTraversalAfter = chaineplus.id
 - The vocalization order follows an understandable and logical order.
 
 
-**Reference <abbr>WCAG</abbr>:**  
+**<abbr>WCAG</abbr> reference:** 
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-order">2.4.3 Focus Order</a>
 
@@ -358,6 +358,20 @@ It is common to test the Android version before triggering TalkBack vocalization
 <pre><code class="xml">&lt;TextView
    […]
    android:accessibilityLiveRegion="polite" /&gt;
+</code></pre>
+
+**Example with jetpackcompose**:
+
+<pre>
+<code class="kotlin">@Composable
+fun PoliteAccessibilityRegion() {
+Column {
+Text(
+text = "Contenu mis à jour pour l'accessibilité",
+modifier = Modifier.accessibilityLiveRegion(AccessibilityLiveRegion.Polite)
+)
+}
+}
 </code></pre>
 
 
@@ -428,7 +442,7 @@ Image(
 
 
 
-**Reference <abbr>WCAG</abbr>:**  
+**<abbr>WCAG</abbr> reference:** 
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 
 
@@ -485,10 +499,10 @@ Text(
 }
 
 </code>
-</pre>ss
+</pre>
 
 
-**Reference <abbr>WCAG</abbr>:**  
+**<abbr>WCAG</abbr> reference:** 
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 ## Enable header navigation
@@ -527,7 +541,7 @@ Text(
 </pre>
 
 
-**Reference <abbr>WCAG</abbr>:**  
+**<abbr>WCAG</abbr> reference:** 
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#headings-and-labels">2.4.6 Headings and Labels</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
 
