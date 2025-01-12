@@ -38,7 +38,7 @@ In the examples below, the frame with border corresponds to the size of the inte
 <img src="../../../images/clic_ko.png" alt="example of an interactive component with a too small interaction area" width="300" height="55">
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#target-size">2.5.5 Target Size</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
 
@@ -64,7 +64,7 @@ The application can be used in both portrait and landscape mode.
 <img src="../../../images/paysage.jpg" alt="example of a valid screen in landscape mode" width="300" height="170">
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#orientation">1.3.4 Orientation</a>
 
 <br/><br/>
@@ -91,7 +91,7 @@ Navigating between several pages using a horizontal swipe (especially with ViewP
 <img src="../../../images/scroll_h2.png" alt="example of horizontal scroll not accessible, without information about the scroll action." width="300" height="530">
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#motion-actuation">2.5.4 Motion Actuation</a>
 
@@ -114,7 +114,7 @@ Android natively offers the Roboto font which has 16 variants, including many sa
 - There is no italics used
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#text-spacing">1.4.12 Text Spacing</a>
 
 <br/><br/>
@@ -150,6 +150,6 @@ However, not all phones use a recent version of Android, it is recommended to pr
 
 - A timeout has a configurable delay.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
+**<abbr>WCAG</abbr> reference:**  
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#timing-adjustable">2.2.1 Timing Adjustable</a>
 
