@@ -41,7 +41,7 @@ module.exports = {
   },
   "EASE": {
     "base": "<span lang='en'>e-Accessibility Solutions for Everyone</span>",
-    "fr": "service d’accessibilité numérique chez Orange"
+    "fr": "ancien nom du Centre d'Expertise en Accessibilité Numérique du groupe Orange"
   },
   "EULA": {
     "base": "<span lang='en'>End-User Licence Agreement</span>",

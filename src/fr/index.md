@@ -5,7 +5,7 @@ layout: "templates/home"
 cardNavigationTitle: "Nos recommandations"
 ---
 
-# Accessibilité Numérique Orange
+# L'accessibilité numérique chez Orange
 
 ## En quelques mots
 

@@ -5,7 +5,7 @@ layout: "templates/home"
 cardNavigationTitle: "Our recommendations"
 ---
 
-# Orange Digital Accessibility?
+# Digital Accessibility at Orange
 
 ## In a few words
 
