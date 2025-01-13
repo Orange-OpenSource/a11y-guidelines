@@ -91,7 +91,7 @@ module.exports = {
     "en": "French official journal of laws and regulations"
   },
   "JS": {
-    "base": "Javascript",
+    "base": "JavaScript",
   },
   "KOTLIN": {
     "base": "<span lang='en'>Kotlin langage</span>",
