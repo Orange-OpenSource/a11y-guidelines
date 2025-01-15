@@ -55,7 +55,7 @@ For fields with auto-completion, this avoids users input errors.
 
 See [the example of an accessible form](../../components-examples/forms/) for more details.
 
-**Reference <abbr>WCAG</abbr>:**
+**<abbr>WCAG</abbr> reference:**  
 - <a href="https://www.w3.org/TR/WCAG22/#labels-or-instructions">3.3.2 Labels or Instructions</a>
 - <a href="https://www.w3.org/TR/WCAG22/#help">3.3.5 Help</a>
 - <a href="https://www.w3.org/TR/WCAG22/#identify-input-purpose">1.3.5 Identify input purpose</a>
@@ -93,7 +93,7 @@ Guide users when errors happen to improve the understanding and help them correc
 
 See [the accessible form example](../../components-examples/forms/) for more details.
 
-**Reference <abbr>WCAG</abbr>:**
+**<abbr>WCAG</abbr> reference:**  
 - <a href="https://www.w3.org/TR/WCAG22/#error-identification">3.3.1 Error Identification</a>
 - <a href="https://www.w3.org/TR/WCAG22/#error-suggestion">3.3.3 Error Suggestion</a>
 - <a href="https://www.w3.org/TR/WCAG22/#error-prevention-legal-financial-data">3.3.4 Error Prevention (Legal, Financial, Data)</a>

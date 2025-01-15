@@ -1,15 +1,15 @@
 ---
 title: "Accueil"
-abstract: "Recommandations, méthodes, ressources et outils proposés par le centre de compétences groupe d'Orange sur l'accessibilité numérique"
+abstract: "Recommandations, méthodes, ressources et outils proposés par le Centre d'Expertise en Accessibilité Numérique du groupe Orange"
 layout: "templates/home"
 cardNavigationTitle: "Nos recommandations"
 ---
 
-# Accessibilité Numérique Orange
+# L'accessibilité numérique chez Orange
 
 ## En quelques mots
 
-Recommandations, méthodes, ressources et outils proposés par <span lang="en">EASE</span>, <span lang="en">E-Accessibility Solutions for Everyone</span>, le centre de compétences groupe d'Orange sur l'accessibilité numérique.
+Recommandations, méthodes, ressources et outils proposés par le Centre d'Expertise en Accessibilité Numérique du groupe Orange.
 
 Nous proposons des formations, accompagnons les projets, publions des ressources pour les parties prenantes du numérique et réalisons des audits de conformité.
 Notre expertise couvre les sites Web (e-commerce, e-learning, applications métier, Intranet...), les applications mobile, les documents bureautiques, les réseaux sociaux d'entreprise, les courriels, les progiciels...
