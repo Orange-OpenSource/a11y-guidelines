@@ -24,7 +24,7 @@
         {% endif %}
         <main id="main-content" class="col-md-{{ mainContentColumn }}" role="main">
           {% if titleBeforeTag %}
-            <h1>{{ title }}</h1>  
+            <h1>{{ title }}</h1>
             {% if tags %}
               <span class="visually-hidden" id="filters_label">
                 {{'tags.list' | translate}}
@@ -36,8 +36,11 @@
               {% endfor -%}
               </ul>
             {% endif %}
-            <time class="text-muted" datetime="{{ page.date.toISOString() }}">{% localizedDate page.date, locale  %}</time>
-          {% endif %}  
+            <time class="text-muted" datetime="{{ page.date.toISOString() }}">{% localizedDate page.date, locale %}</time>
+            {% if updateDate %}
+              <time class="text-muted" datetime="{{ page.updateDate.toISOString() }}">{% localizedUpdateDate page.updateDate, locale %}</time>
+            {% endif %}
+          {% endif %}
           <div class="mt-4">
           {{ content | safe }}
           </div>
