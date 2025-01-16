@@ -560,6 +560,27 @@
     "profils": ["Designer"]
   },
   {
+    "themes":"Forms",
+    "title":"Ensure that the authentication process is easy to use, secure and do not rely only on a cognitive function test",
+    "type": [],
+    "tests": [
+      "Case 1 - For each form field that requires a password or code to be entered: complete the authentication pathway.",
+      "Case 2 - For each two-factor authentication path, complete the authentication pathway.",
+      "Case 3 - For each authentication journey where one of the steps is a CAPTCHA, ensure that a non cognitive alternative is proposed."
+    ],
+    "verifier": [
+      "Case 1 - Check that the input field allows for the following options: <ul><li>the user to paste in the whole password or the verification code</li><li>the automatic filling of field</li></ul>in the original format in which the password or verification code was created (e.g., case-sensitive).",
+      "All cases - Check that the proposed authentication process does not rely on a cognitive test as described in criteria 3.3.8 and 3.3.9 (e.g., memorizing or entering an login/password which must be accurately reproduced)."
+    ],
+    "resultat": [
+      "Case 1 - Check that the input field allows for the following options: <ul><li>the user to paste in the whole password or the verification code</li><li>the automatic filling of field</li></ul>in the original format in which the password or verification code was created (e.g., case-sensitive).",
+      "All cases - Check that the proposed authentication process does not rely on a cognitive test as described in criteria 3.3.8 and 3.3.9 (e.g., memorizing or entering an login/password which must be accurately reproduced)."
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Designer"]
+  },
+  {
     "themes": "Touch and interactions",
     "title": "Provide an alternative to complex gestures",
     "type": [],
