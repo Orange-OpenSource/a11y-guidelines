@@ -126,20 +126,18 @@ Le respect du critère 3.3.9 (AAA) repose sur la non-utilisation dans le process
 
 **À vérifier&nbsp;:**
 
-- Pour un système d'authentification par la saisie d'un identifiant et d'un mot de passe, s'assurer que l'une des conditions uivantes est remplie :
+Pour un système d'authentification par la saisie d'un identifiant et d'un mot de passe, s'assurer que l'une des conditions suivantes est remplie :
   - l'agent utilisateur (navigateur et applications de gestion de mots de passe) permet le **remplissage automatique des champs "identifiant" et "mot de passe"**
   - l'utilisateur peut **copier** son identifiant puis son mot de passe à partir d'une source locale (ex : application de gestion de mots de passe) pour ensuite les **coller** respectivement dans les champs correspondants du formulaire d'authentification ou dans une interface en ligne de commande. Le **format demandé** par les champs "identifiant" et "mot de passe" doit être le **même que celui des informations** copiées pour éviter à l'utilisateur de devoir transcrire (i.e., saisir et copier) ces informations.
 
-
-- Pour un système d'authentification à 2 facteurs (double authentification), s'assurer que l'une des conditions uivantes est remplie :
+Pour un système d'authentification à 2 facteurs (double authentification), s'assurer que l'une des conditions suivantes est remplie :
   - qu'il ne soit pas demandé à l'utilisateur de recopier un **code de vérification**. L'utilisateur doit disposer à minima de l'une des **aides** suivantes :
     - possibilité de copier-coller le code de vérification à partir d'une application de gestion de mots de passe, d'une application de message textuel ou d'une clé de sécurité logicielle,
     - ou permettre à l'agent utilisateur de remplir le champ automatiquement.
 Note : lorsqu'un code de vérification doit être reçu ou généré par un deuxième appareil (ex : SMS reçu sur un mobile), la possibilité de pouvoir envoyer ce code de vérification au premier appareil n'est pas à évaluer dans ce critère.
   - que le système d'authentification à 2 facteurs ne repose pas sur des codes, mais par exemple sur une clé USB d'authentification, une application tierce (qui peut être ou non sur un 2ème appareil) qui demande à l'utilisateur de confirmer qu'il est bien à l'origine de la requête, une méthode d'authentification proposée par le système d'exploitation de l'appareil.
 
-
-- Pour un système d'authentification dont l'une des étapes est un **captcha**, s'assurer qu'il y a une méthode qui n'inclut pas de test cognitif (retenir, recopier un mot, reconnaitre une image donnée par le site web), sauf si cela repose sur la reconnaissance d'objets ou l'identification d'un contenu personnel non textuel.
+Pour un système d'authentification dont l'une des étapes est un **captcha**, s'assurer qu'il y a une méthode qui n'inclut pas de test cognitif (retenir, recopier un mot, reconnaitre une image donnée par le site web), sauf si cela repose sur la reconnaissance d'objets ou l'identification d'un contenu personnel non textuel.
   - Si l'authentification à double facteur se fait par la reconnaissance d'un contenu personnel non textuel, les conditions de sécurité doivent permettre d'éviter à une tierce personne de deviner quelle est l'image à reconnaitre.
   - Dans le cas où l'utilisateur est obligé de transcrire du texte (ex : création pour la 1ère fois d'un mot de passe qui sera ensuite enregistré dans un logiciel de gestion de mot de passe), la possibilité de montrer les caractères saisis doit être proposée.
 
