@@ -560,6 +560,27 @@
     "profils": ["Concepteur"]
   },
   {
+    "themes":"Formulaires",
+    "title":"S'assurer que le processus d'authentification est facile à utiliser, sécurisé et ne repose pas exclusivement sur les fonction cognitives",
+    "type": [],
+    "tests": [
+      "Cas 1 - Pour chaque champ de formulaire qui attend la saisie d'un mot de passe ou d'un code : faire le parcours d'authentification.",
+      "Cas 2 - Pour chaque parcours d'authentification à double facteur, faire le parcours d'authentification.",
+      "Cas 3 - Pour chaque parcours d'authentification dont l'une des étapes est un captcha, s'assurer qu'une alternative qui ne repose pas sur un test cognitif est proposée."
+    ],
+    "verifier": [
+      "Cas 1 - Vérifier que le champ de saisie permet au choix : <ul><li>à l'utilisateur de coller le mot de passe en entier ou le code de vérification</li><li>le remplissage automatique des champs</li></ul>dans le format initial de création de ce mot de passe ou code de vérification (exemple : respect des majuscules et minuscules).",
+      "Tous les cas - Vérifier que le processus d'authentification proposé ne repose pas sur un test cognitif tel que décrit aux critères 3.3.8 et 3.3.9 (exemple : mémoriser ou saisir un identifiant et un mot de passe qui doivent être recopiés sans erreur)."
+    ],
+    "resultat": [
+      "Cas 1 - Vérifier que le champ de saisie permet au choix : <ul><li>à l'utilisateur de coller le mot de passe en entier ou le code de vérification</li><li>le remplissage automatique des champs</li></ul>dans le format initial (exemple : respect des majuscules et minuscules) de création de ce mot de passe ou code de vérification.",
+      "Tous les cas - Le processus d'authentification proposé ne repose pas sur un test cognitif tel que décrit aux critères 3.3.8 et 3.3.9 (exemple : mémoriser ou saisir un identifiant et un mot de passe qui doivent être recopiés sans erreur)."
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
     "themes":"Tactile et interactions",
     "title":"Proposer une alternative aux gestuelles complexes",
     "type": [],
