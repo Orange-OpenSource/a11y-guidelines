@@ -108,16 +108,16 @@ It is very difficult to associate the themes ("par region", "par genre"...) and 
 **When:** during design and development.
 
 **Description:**  
-- Interactive elements must have a sufficiently large surface area or be adequately spaced to be easily activated, reducing the risk of errors.
-- Interactive elements must measure at least 24 pixels high by 24 pixels wide. It is essential to consider the entire click or touch area, not just the text or image.
+- Interactive elements must have a sufficiently large target size or be adequately spaced to be easily activated, reducing the risk of errors.
+- Interactive elements must measure at least 24 pixels height by 24 pixels width. It is essential to consider the entire click or touch area, not just the text or image.
 
 **Checklist:**
 - Verify the dimensions of interactive elements.
-- Ensure that interactive elements meet a minimum surface area of 24 pixels high by 24 pixels wide, under all display conditions regardless of zoom level or viewport size.
+- Ensure that interactive elements meet a minimum target size of 24 pixels height by 24 pixels width, under all display conditions regardless of zoom level or viewport size.
 
 **Compliant exceptions:**
-- If interactive elements have a surface area smaller than the minimum of 24x24 pixels but are positioned so that a circle with a diameter of 24 pixels centered on each does not overlap with other interactive elements.
-- If the surface area of the interactive element is less than 24x24 pixels but there is a compliant alternative that allows the same action.
+- If interactive elements have a target size smaller than the minimum of 24x24 pixels but are positioned so that a circle with a diameter of 24 pixels centered on each does not overlap with other interactive elements.
+- If the target size of the interactive element is less than 24x24 pixels but there is a compliant alternative that allows the same action.
 - If the interactive element is embedded in a sentence or its size is constrained by the line height of surrounding non-interactive text.
 
 **Non-applicable exceptions**
@@ -130,7 +130,7 @@ Help users to easily select interactive elements, even with motor difficulties a
 **Valid Examples:**
 - Three buttons are displayed on the screen, each measuring 24x24 pixels.
 - A row of buttons is displayed on the screen. Each button has a length greater than 24 pixels, a height of 20 pixels, and a top and bottom margin of 4 pixels.
-- An interactive element has a surface area smaller than 24x24 pixels but is positioned so that a circle with a diameter of 24 pixels centered on it does not overlap with other interactive elements.
+- An interactive element has a target size smaller than 24x24 pixels but is positioned so that a circle with a diameter of 24 pixels centered on it does not overlap with other interactive elements.
 
 **WCAG Reference**
 <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (Minimum)</a>
