@@ -120,7 +120,7 @@ It is very difficult to associate the themes ("par region", "par genre"...) and 
 - If the target size of the interactive element is less than 24x24 pixels but there is a compliant alternative that allows the same action.
 - If the interactive element is embedded in a sentence or its size is constrained by the line height of surrounding non-interactive text.
 
-**Non-applicable exceptions**
+**Non-applicable exceptions:**
 - If the rendering of interactive elements is the default rendering of the user agent.
 - If the size and position of interactive elements are crucial for the content (e.g., markers on a map) or constrained by legal obligations. In this case, it is still recommended to provide alternatives when possible.
 
