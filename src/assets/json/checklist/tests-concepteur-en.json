@@ -484,7 +484,7 @@
   },
   {
     "themes": "Layout",
-    "title": "Define sensitive areas of sufficient size",
+    "title": "Define sufficient target size",
     "type": [],
     "tests": [
       "Examine wireframes and graphic mockups",
