@@ -117,7 +117,7 @@ It is very difficult to associate the themes ("par region", "par genre"...) and 
 
 **Compliant exceptions:**
 - If interactive elements have a target size smaller than the minimum of 24x24 pixels but are positioned so that a circle with a diameter of 24 pixels centered on the target does not overlap with another target or the circle for an undersized target.
-- If the target size of the interactive element is less than 24x24 pixels but there is a compliant alternative that allows the same action.
+- If the target size of the interactive element is less than 24x24 pixels but there is a compliant alternative in the page that allows the same action.
 - If the interactive element is embedded in a sentence or its size is constrained by the line height of surrounding non-interactive text.
 
 **Non-applicable exceptions:**
