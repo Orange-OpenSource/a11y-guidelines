@@ -114,7 +114,7 @@ Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «
 
 **Exceptions conformes :**
 - Si des éléments interactifs ont une surface inférieure à la surface minimale de 24*24 pixels mais sont placés de manière à ce qu'un cercle de 24 pixels de diamètre centré sur chacun d'eux ne chevauche pas d'autres éléments interactifs.
-- Si la surface de l'élément interactif est inférieure à 24*24 pixels mais qu'il existe une alternative conforme permettant de réaliser la même action.
+- Si la surface de l'élément interactif est inférieure à 24*24 pixels mais qu'il existe dans la page une alternative conforme permettant de réaliser la même action.
 - Si l'élément interactif est intégré dans une phrase ou dont la taille est contrainte par la hauteur de ligne du texte non interactif environnant.
 
 **Exceptions non-applicables :**
