@@ -137,7 +137,7 @@ Lorsqu'un composant reçoit le focus lors de la navigation au clavier, le compos
 **Bonne Pratique&nbsp;:**
 Il est possible d'aller plus loin en veillant à ce que le composant reste totalement visible à la prise de focus (critère 2.4.12 <span lang="en">Focus Not Obscured (Enhanced) niveau AAA</span>) car cela permet de garantir que l'utilisateur ait connaissance de la fonction du composant. 
 
-**A vérifier&nbsp;:**
+**À vérifier&nbsp;:**
 - Penser à utiliser la tabulation avant (tab) et arrière (Shift+ tab) pour vérifier tous les cas de figure.
 - Veiller à tester toutes les interactions susceptibles de cacher le composant qui reçoit le focus (notamment les éléments en position fixe ou sticky, modales, menus déroulants,...). 
 - Attention aux cas où le viewport est réduit (responsive sur mobile, zoom, utilisation d'une loupe d'écran).
