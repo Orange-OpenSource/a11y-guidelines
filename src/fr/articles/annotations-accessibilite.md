@@ -20,8 +20,10 @@ Voici quelques exemples d'informations qui peuvent être ajoutées sur vos desig
 - Les titres à l'intérieur de la page (balises `h1`, `h2`...)
 - La sémantique (listes, paragraphes, citations...)
 - La liste des différentes régions qui composent la page (landmarks)
+- Les éléments interactifs (les liens, les boutons...)
 - L'ordre de vocalisation des éléments
 - L'ordre de déplacement du focus
+- Les formulaires (labels, champs obligatoires, messages d'erreur...)
 - La présence de raccourcis clavier (Esc pour fermer une boite de dialogue par exemple)
 - La présence de liens d'évitement...
 
@@ -42,8 +44,10 @@ Mais pour tout autre outil, vous pouvez aussi vous appuyer sur des kits d'annota
 
 Voici quelques ressources qui vous permettront d'approfondir le sujet&nbsp;: 
 - <a href="https://stephaniewalter.design/blog/a-designers-guide-to-documenting-accessibility-user-interactions/" lang="en" hreflang="en">A Designer’s Guide to Documenting Accessibility & User Interactions</a>
+- <a href="https://tangible.is/en/thinking/2024/10/the-value-of-accessibility-annotations-in-inclusive-design" lang="en" hreflang="en">The value of accessibility annotations in inclusive design</a>
 - <a lang="en" hreflang="en" href="https://medium.com/indeed-design/building-an-accessibility-library-e134e9012c17">Building an Accessibility Library</a>
 - <a hreflang="en" href="https://www.figma.com/community/file/953682768192596304">Kit d'annotation pour Figma réalisé par Indeed</a>
+- <a hreflang="en" href="https://www.figma.com/community/file/1311421011482282592">Web Accessibility Annotation Kit by CVS Health</a>
 - <a hreflang="en" href="https://blog.zeplin.io/introducing-flows-and-annotations-a-new-way-to-communicate-design-intention">Faire des annotations dans Zeplin</a>
 
 Présentation vidéo Intopia&nbsp;:
