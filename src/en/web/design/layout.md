@@ -116,7 +116,7 @@ It is very difficult to associate the themes ("par region", "par genre"...) and 
 - Ensure that interactive elements meet a minimum target size of 24 pixels height by 24 pixels width, under all display conditions regardless of zoom level or viewport size.
 
 **Compliant exceptions:**
-- If interactive elements have a target size smaller than the minimum of 24x24 pixels but are positioned so that a circle with a diameter of 24 pixels centered on each does not overlap with other interactive elements.
+- If interactive elements have a target size smaller than the minimum of 24x24 pixels but are positioned so that a circle with a diameter of 24 pixels centered on the target does not overlap with another target or the circle for an undersized target.
 - If the target size of the interactive element is less than 24x24 pixels but there is a compliant alternative that allows the same action.
 - If the interactive element is embedded in a sentence or its size is constrained by the line height of surrounding non-interactive text.
 
