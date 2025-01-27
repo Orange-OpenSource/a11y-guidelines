@@ -98,14 +98,36 @@ Il est très difficile d’associer les thèmes («&nbsp;par région&nbsp;», «
 
 
 
-## Définir des zones sensibles de taille suffisante
 
-**Cible&nbsp;:** tout le monde en particulier les personnes souffrant de handicap moteur ou visuel et en mobilité.  
-**Quand&nbsp;:** lors de la conception et lors du développement.
+## Surface minimale des éléments interactifs
 
-**Description&nbsp;:**  
-Pour les utilisateurs de périphériques tactiles (smartphones, tablettes...), les zones tactiles doivent avoir une taille suffisante pour permettre une navigation aisée. Par ailleurs celles-ci doivent être également suffisamment espacées les unes des autres.
+**Cible :** tout le monde, en particulier les personnes déficientes visuelles et les personnes souffrant de handicap moteur ou en mobilité. 
+**Quand :** dès la phase de conception et lors du développement.
 
-**A vérifier**
-- La taille des zones tactiles doit être de 9mm minimum de largeur et de hauteur.
-- L'espacement entre les zones tactiles ne doit pas être inférieur à 2mm.
+**Description :**  
+- Les éléments interactifs doivent avoir une surface suffisamment grandes ou être suffisamment espacés pour pouvoir être facilement activés afin de réduire les risques d'erreurs.
+- Les éléments interactifs doivent mesurer au moins 24 pixels de haut par 24 pixels de large. Il est nécessaire de prendre en compte la totalité de la zone de clic ou de toucher et pas uniquement le texte ou l'image.
+
+**À vérifier :**
+- Vérifier les dimensions des éléments interactifs.
+- Vérifier que les éléments interactifs respectent une surface minimale de 24 pixels de haut par 24 pixels de large, et ce dans toutes les conditions d'affichage indépendamment du niveau de zoom ou de la taille du viewport notamment.
+
+**Exceptions conformes :**
+- Si des éléments interactifs ont une surface inférieure à la surface minimale de 24*24 pixels mais sont placés de manière à ce qu'un cercle de 24 pixels de diamètre centré sur chacun d'eux ne chevauche pas un autre élément interactif ou le cercle d'un élément sous-dimensionné.
+- Si la surface de l'élément interactif est inférieure à 24*24 pixels mais qu'il existe dans la page une alternative conforme permettant de réaliser la même action.
+- Si l'élément interactif est intégré dans une phrase ou si sa taille est contrainte par la hauteur de ligne du texte non interactif environnant.
+
+**Exceptions non-applicables :**
+- Si le rendu des éléments interactifs est le rendu par défaut de l'agent utilisateur.
+- Si la taille et la position des éléments interactifs sont cruciales pour le contenu (exemple : des repères sur une carte) ou contraintes par une obligation légale. Dans ce cas il est toutefois recommandé de fournir des alternatives lorsque cela est possible.
+
+**Objectif utilisateur :**
+Permettre aux utilisateurs de sélectionner facilement les éléments interactifs, même en cas de difficultés motrices et indépendamment de la taille du terminal utilisé.
+
+**Exemples valides :**
+- Trois boutons sont affichés à l'écran et chacun mesure 24*24 pixels.
+- Une rangée de boutons est affichée à l'écran. Chaque bouton présente une longueur supérieure à 24 pixels, une hauteur de 20 pixels et une marge supérieure et inférieure de 4 pixels.
+- Un élément interactif a une surface inférieure à 24*24 pixels mais est placé de manière à ce qu'un cercle de 24 pixels de diamètre centré sur lui ne chevauche pas d'autres éléments interactifs.
+
+**Référence WCAG :**
+<a lang="en" href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (Minimum)</a>
