@@ -217,7 +217,7 @@
       <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#relative-text-size-and-responsive-design" class="dropdown-item text-wrap">Relative text size and responsive design</a><a href="#allow-text-spacing" class="dropdown-item text-wrap">Allow text spacing</a><a href="#identify-and-maintain-consistency-of-groupings-and-different-regions-of-the-page" class="dropdown-item text-wrap">Identify and maintain consistency of groupings and different regions of the page</a><a href="#define-sensitive-areas-of-sufficient-size" class="dropdown-item text-wrap">Define sensitive areas of sufficient size</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#relative-text-size-and-responsive-design" class="dropdown-item text-wrap">Relative text size and responsive design</a><a href="#allow-text-spacing" class="dropdown-item text-wrap">Allow text spacing</a><a href="#identify-and-maintain-consistency-of-groupings-and-different-regions-of-the-page" class="dropdown-item text-wrap">Identify and maintain consistency of groupings and different regions of the page</a><a href="#minimum-target-size" class="dropdown-item text-wrap">Minimum target size</a></div>
     </nav>
         
       </div>
@@ -334,12 +334,40 @@ Provide ways to identify and visually distinguish the different parts of the pag
 <p><strong>Don't:</strong></p>
 <p><img src="../../images/groupement2.jpg" alt="screenshot of the fnac.com website" class="img-fluid"></p>
 <p>It is very difficult to associate the themes (&quot;par region&quot;, &quot;par genre&quot;...) and the sub-themes in columns, especially since the horizontal borders are not enough contrasted.</p>
-<h2 id="define-sensitive-areas-of-sufficient-size" class="h2-focus">Define sensitive areas of sufficient size <a class="header-anchor" href="#define-sensitive-areas-of-sufficient-size" id="heading-1102" aria-labelledby="heading-1102">#</a></h2>
-<p><strong>Target:</strong> everyone in particular, people with motor or visual disability and mobility.<br>
+<h2 id="minimum-target-size" class="h2-focus">Minimum target size <a class="header-anchor" href="#minimum-target-size" id="heading-1102" aria-labelledby="heading-1102">#</a></h2>
+<p><strong>Target:</strong> Everyone, especially people with visual impairments and those with motor or mobility disabilities.<br>
 <strong>When:</strong> during design and development.</p>
-<p><strong>Description:</strong><br>
-Each sensitive area must have a sufficient size (minimum 9mm width and height).<br>
-In addition, the sensitive areas must be sufficiently spaced from each other (about 2mm minimum).</p>
+<p><strong>Description:</strong></p>
+<ul>
+<li>Interactive elements must have a sufficiently large target size or be adequately spaced to be easily activated, reducing the risk of errors.</li>
+<li>Interactive elements must measure at least 24 pixels height by 24 pixels width. It is essential to consider the entire click or touch area, not just the text or image.</li>
+</ul>
+<p><strong>Checklist:</strong></p>
+<ul>
+<li>Verify the dimensions of interactive elements.</li>
+<li>Ensure that interactive elements meet a minimum target size of 24 pixels height by 24 pixels width, under all display conditions regardless of zoom level or viewport size.</li>
+</ul>
+<p><strong>Compliant exceptions:</strong></p>
+<ul>
+<li>If interactive elements have a target size smaller than the minimum of 24x24 pixels but are positioned so that a circle with a diameter of 24 pixels centered on the target does not overlap with another target or the circle for an undersized target.</li>
+<li>If the target size of the interactive element is less than 24x24 pixels but there is a compliant alternative in the page that allows the same action.</li>
+<li>If the interactive element is embedded in a sentence or its size is constrained by the line height of surrounding non-interactive text.</li>
+</ul>
+<p><strong>Non-applicable exceptions:</strong></p>
+<ul>
+<li>If the rendering of interactive elements is the default rendering of the user agent.</li>
+<li>If the size and position of interactive elements are crucial for the content (e.g., markers on a map) or constrained by legal obligations. In this case, it is still recommended to provide alternatives when possible.</li>
+</ul>
+<p><strong>User goal:</strong><br>
+Help users to easily select interactive elements, even with motor difficulties and regardless of the size of the device used.</p>
+<p><strong>Valid Examples:</strong></p>
+<ul>
+<li>Three buttons are displayed on the screen, each measuring 24x24 pixels.</li>
+<li>A row of buttons is displayed on the screen. Each button has a length greater than 24 pixels, a height of 20 pixels, and a top and bottom margin of 4 pixels.</li>
+<li>An interactive element has a target size smaller than 24x24 pixels but is positioned so that a circle with a diameter of 24 pixels centered on it does not overlap with other interactive elements.</li>
+</ul>
+<p><strong>WCAG Reference</strong><br>
+<a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (Minimum)</a></p>
 
           </div>
         </main>
@@ -352,7 +380,7 @@ In addition, the sensitive areas must be sufficiently spaced from each other (ab
             <a href="#relative-text-size-and-responsive-design" class="nav-link text-muted">Relative text size and responsive design</a></li><li class="nav-item position-relative">
             <a href="#allow-text-spacing" class="nav-link text-muted">Allow text spacing</a></li><li class="nav-item position-relative">
             <a href="#identify-and-maintain-consistency-of-groupings-and-different-regions-of-the-page" class="nav-link text-muted">Identify and maintain consistency of groupings and different regions of the page</a></li><li class="nav-item position-relative">
-            <a href="#define-sensitive-areas-of-sufficient-size" class="nav-link text-muted">Define sensitive areas of sufficient size</a></li>
+            <a href="#minimum-target-size" class="nav-link text-muted">Minimum target size</a></li>
       </ul>
     </nav>
             </div>
