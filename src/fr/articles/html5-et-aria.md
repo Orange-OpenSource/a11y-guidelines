@@ -34,7 +34,7 @@ De plus, l'efficacité optimale de la prise en charge d'<abbr>ARIA</abbr> dépen
 
 ## Faut-il l'utiliser&nbsp;?
 
-Globalement, <abbr>ARIA</abbr> améliore l'accessibilité pour des composants qui ne sont pas nativement présents dans le <abbr>HTML</abbr> (ou pas accessibles notamment certains éléments <abbr>HTML5</abbr>). La robustesse et l'interopérabilité d'<abbr>ARIA</abbr> sont maintenant suffisantes pour qu'[une quarantaine de techniques WCAG 2.1 soient spécifiques à <abbr>ARIA</abbr>](https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques) (contre 10 techniques <abbr>HTML5</abbr>). En conséquence, pour des applications Internet riches, l'<abbr>ARIA</abbr> est incontournable pour leur mise en accessibilité.
+Globalement, <abbr>ARIA</abbr> améliore l'accessibilité pour des composants qui ne sont pas nativement présents dans le <abbr>HTML</abbr> (ou pas accessibles notamment certains éléments <abbr>HTML5</abbr>). En conséquence, pour des applications Internet riches, l'<abbr>ARIA</abbr> est incontournable pour leur mise en accessibilité.
 
 Dans tous les cas, il faut tester les développements sur les environnements cibles (couple navigateurs&nbsp;/ aides techniques). C'est un gros travail absolument nécessaire pour les cas complexes car sur un site ou une application internet classique, il faut, à minima, tester avec Safari/VoiceOver, Jaws/Internet Explorer et Firefox/<abbr>NVDA</abbr>.
 
@@ -45,6 +45,6 @@ Dans un environnement maîtrisé (intranet), les environnements cibles sont conn
   * [Spécification <abbr>ARIA</abbr>](http://www.w3.org/TR/wai-aria/)
   * [Mettre en place <abbr>ARIA</abbr>](http://www.w3.org/TR/wai-aria-practices/)
   * [Utiliser <abbr>ARIA</abbr> en <abbr>HTML</abbr>5](http://www.w3.org/TR/aria-in-html/)
-  * [Techniques <abbr>ARIA</abbr> dans le wiki du <abbr>W3c</abbr>](https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques)
+  * [Techniques <abbr>ARIA</abbr>](https://www.w3.org/WAI/WCAG22/Techniques/)
 * [Introduction à <abbr>ARIA</abbr> chez Site Point](http://www.sitepoint.com/introduction-wai-aria/)
 * [Introduction et liste de liens vers des sources sur <abbr>ARIA</abbr>](http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA)

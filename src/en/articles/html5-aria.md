@@ -34,7 +34,7 @@ Moreover, the optimal efficiency of the <abbr>ARIA</abbr> compatibility depends 
 
 ## Should we use it?
 
-<abbr>ARIA</abbr> improves the accessibility of components that are not natively available in HTML (or inaccessible <abbr>HTML5</abbr> components). <abbr>ARIA</abbr>’s robustness and interoperability is rather complacent, [around forty <abbr>WCAG</abbr> 2.1 techniques are specific to <abbr>ARIA</abbr>](https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques) (10 are <abbr>HTML5</abbr> techniques). Therefore, for rich Internet applications, <abbr>ARIA</abbr> is essential for accessibility implementation.
+<abbr>ARIA</abbr> improves the accessibility of components that are not natively available in HTML (or inaccessible <abbr>HTML5</abbr> components). Therefore, for rich Internet applications, <abbr>ARIA</abbr> is essential for accessibility implementation.
 
 In all cases, you have to test developments in the target environments (browser/assistive technology combinations). This is a tough task, but absolutely necessary for complex cases because on a web site or a traditional web application, you must, at least, test with Safari/VoiceOver, Internet Explorer/Jaws and Firefox/<abbr>NVDA</abbr>.
 
@@ -45,6 +45,6 @@ In a well-defined environment (e.g. intranet), target environments are known and
   * [<abbr>ARIA</abbr> specification](http://www.w3.org/TR/wai-aria/)
   * [<abbr>ARIA</abbr> implementation](http://www.w3.org/TR/wai-aria-practices/)
   * [Use <abbr>ARIA</abbr> with HTML5](http://www.w3.org/TR/aria-in-html/)
-  * [<abbr>ARIA</abbr> techniques in <abbr>WCAG</abbr> 2](https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques)
+  * [<abbr>ARIA</abbr> techniques](https://www.w3.org/WAI/WCAG22/Techniques/)
 * [Introduction to <abbr>ARIA</abbr> by Site Point](http://www.sitepoint.com/introduction-wai-aria/)
 * [Introduction and link list to <abbr>ARIA</abbr> sources](http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA)
