@@ -50,10 +50,6 @@
         {% if post.date %}
           <time class="text-muted" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale %}</time>
         {% endif %}
-        {% if post.updateDate %}
-          {%- set formattedDate = new Date(updateDate) -%}
-          <time class="text-muted" datetime="{{ post.updateDate.toISOString() }}">{{ localizedDate(formattedDate, locale) }}</time>
-        {% endif %}
         {% if post.data.abstract %}
           <p class="my-2">{{ post.data.abstract }}</p>
         {% endif %}
@@ -88,10 +84,6 @@
       {% endif %}
       {% if displayDate == true and post.date %}
         <time class="text-muted" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale  %}</time>
-      {% endif %}
-      {% if displayDate == true and post.updateDate %}
-        {%- set formattedDate = new Date(updateDate) -%}
-        <time class="text-muted" datetime="{{ post.updateDate.toISOString() }}">{{ localizedDate(formattedDate, locale) }}</time>
       {% endif %}
       {% if post.data.abstract %}
         <p class="my-2">{{ post.data.abstract }}</p>
