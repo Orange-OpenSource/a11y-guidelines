@@ -102,9 +102,9 @@ It is very difficult to associate the themes ("par region", "par genre"...) and 
 
 
 
-## Minimum target size
+## Define sensitive areas of sufficient size
 
-**Target:** Everyone, especially people with visual impairments and those with motor or mobility disabilities.  
+**Target:** everyone in particular, people with motor or visual disability and mobility.  
 **When:** during design and development.
 
 **Description:**  
