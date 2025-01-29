@@ -7,7 +7,7 @@ abstract: "Check the presence keyboard shortcuts"
 
 Historically, the bookmarklet used to check keyboard shortcuts (<a href="http://3needs.org/en/testing/code/kb-shortcuts.html">character keys shortcut bookmarklet</a>) does not allow for the verification of all printable characters, particularly accented characters and non-Latin characters.
 
-The bookmarklet proposed below covers more printable characters; here is the range of verified UTF8 codes:
+The bookmarklet proposed below covers more printable characters; here is the range of verified UTF-8 codes:
 
 - C0 Control (0 - 31)
 - Basic Latin (32 - 126)
