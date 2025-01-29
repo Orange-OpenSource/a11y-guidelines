@@ -5,7 +5,7 @@ abstract: "Vérifier la présence de raccourcis clavier"
 
 # Vérifier la présence de raccourcis clavier
 
-Le bookmarklet historiquement utilisé pour vérifier les raccourcis clavier (<a href="http://3needs.org/en/testing/code/kb-shortcuts.html">character keys shortcut bookmarklet</a>) ne permet pas de vérifier tous les caractères imprimables, en particulier les caractères accentués et les caractères non latins.
+Le bookmarklet historiquement utilisé pour vérifier les raccourcis clavier (<a href="http://3needs.org/en/testing/code/kb-shortcuts.html" lang="en" hreflang="en">character keys shortcut bookmarklet</a>) ne permet pas de vérifier tous les caractères imprimables, en particulier les caractères accentués et les caractères non latins.
 
 Le bookmarklet proposé ci-dessous permet de couvrir plus de caractères imprimables, voici la plage des codes UTF8 vérifiés :
 - C0 Control (0 - 31)
