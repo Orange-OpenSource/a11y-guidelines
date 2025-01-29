@@ -488,15 +488,15 @@
     "type": [],
     "tests": [
       "Examine wireframes and graphic mockups",
-      "Identify and measure the interactive elements size"
+      "Identify the interactive elements"
     ],
     "verifier": [
-      "All interactive elements with a minimum surface area of 24x24 CSS pixels are compliant","Interactive elements with a surface area smaller than 24x24 CSS pixels are compliant only if the size of the interactive element in question plus the spacing with nearby interactive elements is at least 24 CSS pixels","The optimum recommendation is to apply a minimum area of 44 CSS pixels (including margin) per interactive element","Criterion also compliant if interactive elements have a target size smaller than the minimum of 24x24 CSS pixels but are positioned so that a circle with a diameter of 24 CSS pixels centered on each does not overlap with other interactive elements","Criterion also compliant if the target size of the interactive element is less than 24x24 CSS pixels but there is a compliant alternative that allows the same action","Criterion also compliant if the interactive element is embedded in a sentence or its size is constrained by the line height of the surrounding non-interactive text"
+      "The dimensions of the interactive elements (links, form elements, boutons) are sufficient (at least 44px by 44px)"
     ],
     "resultat": [
       "A user with motor difficulties may have trouble interacting with a touch application or using a mouse, if the interactive elements are not large enough"
     ],
-    "exception": "This recommendation does not apply in the following cases: <ul><li>If the rendering of interactive elements is the default rendering of the user agent</li><li>If the size and position of interactive elements are crucial for the content (e.g., markers on a map) or constrained by legal obligations. In this case, it is still recommended to provide alternatives when possible.</li></ul>",
+    "exception": "<ul><li>Anchor / internal link to the page </ li><li>Link in the middle of a text block</li><li>Link to a footnote (at the end of a paragraph or sentence) </li><li>Clickable icon inside a text </li></ul> ",
     "raccourcis": "",
     "profils": ["Designer"]
   },
