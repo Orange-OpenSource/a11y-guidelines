@@ -95,5 +95,8 @@
     </script>
     <div hidden>{{ 'headingsAnchor.label' | translate }}</div>
     {% include "partials/licence.njk" %}
+    {% if usefulLinks == true %}
+      <script src="/assets/useful-links.js"></script>
+    {% endif %}
   </body>
 </html>
