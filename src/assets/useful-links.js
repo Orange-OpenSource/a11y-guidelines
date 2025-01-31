@@ -6,7 +6,7 @@ function fetchAndDisplay(url, listId) {
       data.urls.forEach(url => {
         const listItem = document.createElement('li');
         listItem.className = 'list-group-item';
-        listItem.innerHTML = `<a href="${url.url}">${url.name}</a>`;
+        listItem.innerHTML = `<a href="${url.url}" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">${url.name}</a>`;
         urlList.appendChild(listItem);
       });
     })
