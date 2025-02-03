@@ -1,5 +1,5 @@
 ---
-title: "Spécifier l'accessibilité de vos design grâce aux annotations"
+title: "Spécifier l'accessibilité de vos designs grâce aux annotations"
 abstract: "Les annotations d'accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent être interprétés par les outils d'assistance"
 titleBeforeTag: true
 date: "2022-07-29"
@@ -10,12 +10,12 @@ tags:
 
 ## De quoi s'agit-il ?
 
-Les annotations d'accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent être interprétés par les outils d'assistance (par exemple un lecteur d'écran) et d'anticiper certains risques d'erreur d'accessibilité. Bien que certaines annotations peuvent être ajoutées directement par les designer lors de la phase de conception graphique, d'autres demandent une expertise technique. C'est tout l'intérêt de cette activité qui permet d'engager une réflexion transverse sur l'accessiblité (designer, responsable produit, expert en accessibilité, développeur...). 
+Les annotations d'accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent être interprétés par les outils d'assistance (par exemple un lecteur d'écran) et d'anticiper certains risques d'erreur d'accessibilité. Bien que certaines annotations peuvent être ajoutées directement par les designers lors de la phase de conception graphique, d'autres demandent une expertise technique. C'est tout l'intérêt de cette activité qui permet d'engager une réflexion transverse sur l'accessiblité (designer, responsable produit, expert en accessibilité, développeur...). 
 En l'absence de spécification, l'accessibilité technique repose exclusivement sur les épaules des développeurs, or il s'agit avant tout d'un travail d'équipe.
 
 ## Que doit-on annoter ?
 
-Voici quelques exemples d'informations qui peuvent être ajoutées sur vos design&nbsp;: 
+Voici quelques exemples d'informations qui peuvent être ajoutées sur vos designs&nbsp;: 
 - Les alternatives textuelles pour les images
 - Le titre de page
 - Les titres à l'intérieur de la page (balises `h1`, `h2`...)
@@ -41,7 +41,7 @@ Quel que soit le logiciel utilisé, il est simple d'annoter des maquettes. Par e
 ## Ressources
 
 Il existe des outils voire des plugins spécifiques pour les principaux outils de maquettage/design&nbsp; : Figma, Scketch, Zeplin.
-Mais pour tout autre outil, vous pouvez aussi vous appuyer sur des kits d'annotation qui sont des icones spécifiques utilisables dans tous les environements.
+Mais pour tout autre outil, vous pouvez aussi vous appuyer sur des kits d'annotation qui sont des icônes spécifiques utilisables dans tous les environements.
 
 Voici quelques ressources qui vous permettront d'approfondir le sujet&nbsp;: 
 - <a href="https://stephaniewalter.design/blog/a-designers-guide-to-documenting-accessibility-user-interactions/" lang="en" hreflang="en">A Designer’s Guide to Documenting Accessibility & User Interactions</a>
