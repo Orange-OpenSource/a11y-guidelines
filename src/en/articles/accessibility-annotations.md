@@ -1,19 +1,19 @@
 ---
-title: "Spécifier l'accessibilité de vos design grâce aux annotations"
-abstract: "Les annotations d'accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent être interprétés par les outils d'assistance"
+title: "Specify the accessibility of your designs by using annotations"
+abstract: "Accessibility annotations allow you to specify how the different components present on your wireframe should be interpreted by assistance tools"
 titleBeforeTag: true
-date: "2022-07-29"
-updateDate : "2025-01-31"
+date: "2025-02-03"
+updateDate : "2025-02-03"
 tags:
   - beginner
 ---
 
-## De quoi s'agit-il ?
+## What is it about ?
 
 Les annotations d'accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent être interprétés par les outils d'assistance (par exemple un lecteur d'écran) et d'anticiper certains risques d'erreur d'accessibilité. Bien que certaines annotations peuvent être ajoutées directement par les designer lors de la phase de conception graphique, d'autres demandent une expertise technique. C'est tout l'intérêt de cette activité qui permet d'engager une réflexion transverse sur l'accessiblité (designer, responsable produit, expert en accessibilité, développeur...). 
 En l'absence de spécification, l'accessibilité technique repose exclusivement sur les épaules des développeurs, or il s'agit avant tout d'un travail d'équipe.
 
-## Que doit-on annoter ?
+## What should be annotated ?
 
 Voici quelques exemples d'informations qui peuvent être ajoutées sur vos design&nbsp;: 
 - Les alternatives textuelles pour les images
@@ -31,7 +31,7 @@ Voici quelques exemples d'informations qui peuvent être ajoutées sur vos desig
 <img src="../images/annotations/exemple.png" alt="Exemple de design pourvu d'annotations pour l'accessibilité" title="Exemple de design pourvu d'annotations pour l'accessibilité" class="img-fluid">
 
 
-## Comment fait-on ?
+## How to do it ?
 
 Quel que soit le logiciel utilisé, il est simple d'annoter des maquettes. Par exemple, à l'aide de puces numérotées qui renvoient vers une description détaillée. Il existe également des kits d'annotation qui proposent des pastilles de couleurs et de formes différentes qui permettent d'annoter rapidement un design. Le meilleur outil est celui qui correspond le mieux à votre façon de travailler. Il peut être différent en fonction des profils et de la taille de votre équipe. Les kits d'annotation proposent une base qu'il ne faut donc pas hésiter à faire évoluer selon vos besoins.
 
@@ -43,7 +43,7 @@ Quel que soit le logiciel utilisé, il est simple d'annoter des maquettes. Par e
 Il existe des outils voire des plugins spécifiques pour les principaux outils de maquettage/design&nbsp; : Figma, Scketch, Zeplin.
 Mais pour tout autre outil, vous pouvez aussi vous appuyer sur des kits d'annotation qui sont des icones spécifiques utilisables dans tous les environements.
 
-Voici quelques ressources qui vous permettront d'approfondir le sujet&nbsp;: 
+Some examples of information that can be added to your designs:&nbsp;: 
 - <a href="https://stephaniewalter.design/blog/a-designers-guide-to-documenting-accessibility-user-interactions/" lang="en" hreflang="en">A Designer’s Guide to Documenting Accessibility & User Interactions</a>
 - <a href="https://tangible.is/en/thinking/2024/10/the-value-of-accessibility-annotations-in-inclusive-design" lang="en" hreflang="en">The value of accessibility annotations in inclusive design</a>
 - <a lang="en" hreflang="en" href="https://medium.com/indeed-design/building-an-accessibility-library-e134e9012c17">Building an Accessibility Library</a>
