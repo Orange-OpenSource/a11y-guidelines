@@ -73,4 +73,6 @@ For example:
 
 
 ## Conclusion
-We rely on you to use these checklists at the start of each project and regularly throughout the project to ensure no regression.
+We're counting on you to use these checklists at the start of each project, and then regularly throughout the project, to ensure no regression.
+
+This is just the first step, and you must not stop there. Once these criteria are understood and integrated, it will then be possible to focus on other accessibility criteria to further enhance the quality of the developed products.
