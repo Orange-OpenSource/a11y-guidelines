@@ -2,7 +2,7 @@
 title: "Nos critères incontournables"
 abstract: "Présentation de nos checklists de critères incontournables à respecter pour tous les projets web et mobile"
 titleBeforeTag: true
-date: "2025-02-01"
+date: "2025-02-04"
 tags:
   - web
   - mobile

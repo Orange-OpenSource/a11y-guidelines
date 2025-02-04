@@ -2,7 +2,7 @@
 title: "Our must-haves criteria"
 abstract: "Presentation of our must-haves checklists to be followed for all web and mobile projects"
 titleBeforeTag: true
-date: "2025-02-01"
+date: "2025-02-04"
 tags:
   - web
   - mobile
