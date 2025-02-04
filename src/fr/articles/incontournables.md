@@ -73,4 +73,6 @@ Par exemple :
 
 
 ## Pour conclure
-Nous comptons sur vous pour les utiliser à chaque début de projet, puis régulièrement tout au long du projet, afin de garantir la non-régression.
+Nous comptons sur vous pour utiliser ces checklists à chaque début de projet, puis régulièrement tout au long du projet, afin de garantir la non-régression.
+
+Ce n'est que la première marche et il ne faut pas s'arrêter là. Une fois ces critères compris et intégrés, il sera alors possible de se concentrer sur les autres critères d'accessibilité pour aller encore plus loin dans la qualité des produits développés.
