@@ -4,12 +4,20 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2024-12-07T00:00:00Z</updated>
+  <updated>2025-02-04T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>  
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Our must-haves criteria</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/must-haves/"/>
+    <updated>2025-02-04T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/must-haves/</id>
+    <content xml:lang="en" type="html">Presentation of our must-haves checklists to be followed for all web and mobile projects</content>
+  </entry>
   
   <entry>
     <title>#a11y technical watch, October-November 2024</title>

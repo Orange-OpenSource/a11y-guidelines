@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2024-12-07T00:00:00Z</updated>
+  <updated>2025-02-04T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>  
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Nos critères incontournables</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/incontournables/"/>
+    <updated>2025-02-04T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/incontournables/</id>
+    <content xml:lang="fr" type="html">Présentation de nos checklists de critères incontournables à respecter pour tous les projets web et mobile</content>
+  </entry>
   
   <entry>
     <title>Veille #A11y Octobre-Novembre 2024</title>
