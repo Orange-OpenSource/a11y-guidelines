@@ -124,18 +124,18 @@
   },
   {
     "themes": "Non-text content",
-    "title": "Avoid captchas",
+    "title": "Avoid CAPTCHAS",
     "type": [],
     "tests": [
-      "Examine the captcha"
+      "Examine the CAPTCHA"
     ],
     "verifier": [
-      "To solve the captcha, users have the choice between an audio or visual system",
-      "If the captcha is only audio or only visual, an alternative is present in the form of a logical test (a question whose answer is obvious, a simple mathematical test, etc.) Otherwise, another solution to access the functionality secured by the captcha is provided"
+      "To solve the CAPTCHA, users have the choice between an audio or visual system",
+      "If the CAPTCHA is only audio or only visual, an alternative is present in the form of a logical test (a question whose answer is obvious, a simple mathematical test, etc.) Otherwise, another solution to access the functionality secured by the CAPTCHA is provided"
     ],
     "resultat": [
-      "Users deprived of the visual information must be able to solve the captcha by an audio system; samely, those deprived of the auditory information must be able to solve it visually",
-      "Captchas based on a single resolution system must offer an alternative to allow the greatest number of users to have access to it"
+      "Users deprived of the visual information must be able to solve the CAPTCHA by an audio system; samely, those deprived of the auditory information must be able to solve it visually",
+      "CAPTCHAS based on a single resolution system must offer an alternative to allow the greatest number of users to have access to it"
     ],
     "exception": "",
     "raccourcis": "",
