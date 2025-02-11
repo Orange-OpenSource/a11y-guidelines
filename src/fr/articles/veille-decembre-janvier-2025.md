@@ -8,7 +8,7 @@ tags:
 
 # Veille accessibilité numérique Décembre-Janvier 2025
 
-Un petit coucou à un mec que j'aime bien pour son franc-parler, Heydon Pickering ; ses principes de l'a11y sont en Français, et donc, une grande accolade pour l'un des traducteurs, S. Deschamps et bravo aux autres https://github.com/Heydon/principles-of-web-accessibility/blob/main/LISEZ-MOI.md.
+Un petit coucou à un mec que j'aime bien pour son franc-parler, Heydon Pickering ; ses principes de l'a11y sont en français, et donc, une grande accolade pour l'un des traducteurs, S. Deschamps et bravo aux autres https://github.com/Heydon/principles-of-web-accessibility/blob/main/LISEZ-MOI.md.
 
 Et un petit point sur WCAG 3.0, ben ça avance mais à l'allure du W3c (rires) :D : (en) https://www.w3.org/news/2024/updated-drafts-for-review-w3c-accessibility-guidelines-wcag-3-0/ et (en) https://whollyaccessible.org/2024/12/11/wcag-3-december-24-update/.
 
