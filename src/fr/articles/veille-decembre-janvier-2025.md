@@ -31,7 +31,7 @@ Et un petit point sur WCAG 3.0, ben ça avance mais à l'allure du W3c (rires) :
 - Tester avec l'IA, ça peut aider mais... (en) : https://www.tpgi.com/putting-ai-to-the-accessibility-test/
 - Tests manuels et tests auto en a11y, ensemble, c'est mieux (en) : https://blog.pope.tech/2025/01/09/automated-and-manual-accessibility-testing-work-best-together/
 - Liste de tests pour rédiger du contenu accessible (en) : https://digital.accessibility.princeton.edu/checklist
--	Andrew Hick a eu la très bonne idée de classifier les critères WCAG afin de faciliter les tests. Un outil désormais disponible dans plusieurs langues, dont le français : https://www.andrewhick.com/accessibility/wcag-map/fr/
+- Andrew Hick a eu la très bonne idée de classifier les critères WCAG afin de faciliter les tests. Un outil désormais disponible dans plusieurs langues, dont le français : https://www.andrewhick.com/accessibility/wcag-map/fr/
 
 ## Points techniques
 
