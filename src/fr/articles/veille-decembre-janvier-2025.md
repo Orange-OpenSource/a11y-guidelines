@@ -86,7 +86,7 @@ Et un petit point sur WCAG 3.0, ben ça avance mais à l'allure du W3c (rires) :
 
 - Introduction aux coûts et ROI de l'a11y (en) : https://purplebyte.io/blog/costs-roi-metrics-web-accessibility
 - Des persona a11y avec des taches a réaliser pour comprendre leurs difficultés, excellent (en) : https://personas-prototype.herokuapp.com/
--	Une manière interactive d'explorer les WCAG 2.2 (niveaux A et AA) avec des catégories clés (en) : https://wcag-2-point-2-explorer.notion.site/6d8f6cb4081349e99e7bcd85770cca00?v=4f93e67af3c6459593354a480a5db354
+- Une manière interactive d'explorer les WCAG 2.2 (niveaux A et AA) avec des catégories clés (en) : https://wcag-2-point-2-explorer.notion.site/6d8f6cb4081349e99e7bcd85770cca00?v=4f93e67af3c6459593354a480a5db354
 
 ## Autres
 
