@@ -2,7 +2,7 @@
 title: "L'accessibilité des images SVG"
 abstract: "Comment rendre accessibles les images SVG"
 titleBeforeTag: true
-date: "2025-02-14"
+date: "2025-02-28"
 tags:
   - web
   - intermediate
@@ -31,8 +31,7 @@ Important : quelle que soit la solution retenue, le support navigateurs/aides te
 
 Vous devez vous assurer que la balise `svg` ou un de ses enfants (`<g>`, `<path>`…) ne possède aucun attribut visant à lui fournir un nom accessible (`title`, `desc`, `aria-*`…).
 
-Note : historiquement, l'attribut `focusable="false"` devait aussi être présent pour éviter toute prise de focus sur le SVG par Internet Explorer et Edge (avant Chromium), ceci n'est plus utile sur les navigateurs actuels (sauf si vos utilisateurs utilisent encore des anciens navigateurs mentionnés)
-
+Note : historiquement, l'attribut `focusable="false"` devait aussi être présent pour éviter toute prise de focus sur le SVG par Internet Explorer et Edge (avant Chromium), ceci n'est plus utile sur les navigateurs actuels (sauf si vos utilisateurs utilisent encore des anciens navigateurs mentionnés).
 
 
 ## Image informative (hors lien ou bouton)
@@ -59,6 +58,7 @@ Note : Afin d'assurer un support optimal par les aides techniques et navigateurs
 </code></pre>
 
 Note : On rajoute `role="img"` pour s'assurer que l'élément soit bien considéré comme une image par les technologies d'assistance.
+
 
 ### SVG en ligne (inline)
 
@@ -124,7 +124,7 @@ S'il est possible d'afficher du texte à proximité, la meilleure solution est d
 &lt;/a&gt;
 </code></pre>
 
-Mais comme il n'est pas toujours possible d'afficher un texte (contrainte graphique/design/marketing…), il est conseillé de cacher visuellement un texte tout en le laissant lisible par les aides techniques via `aria-labelledby`&nbsp;:
+Mais comme il n'est pas toujours possible d'afficher un texte (contrainte graphique/design/marketing…), il est conseillé de cacher visuellement un texte tout en le laissant lisible par les aides techniques via `aria-labelledby` :
 
 <pre><code class="html" title="html">
 &lt;button aria-labelledby="label"&gt; 
@@ -139,7 +139,7 @@ Mais comme il n'est pas toujours possible d'afficher un texte (contrainte graphi
 </code></pre>
 
 La classe `visually-hidden` permet également de présenter le texte uniquement aux utilisateurs d'aide technique (masquage accessible). 
-La solution suivante est similaire à la précédente, mais à tester systématiquement dans vos environnements de navigation ciblés (couples navigateur/aide technique) .
+La solution suivante est similaire à la précédente, mais à tester systématiquement dans vos environnements de navigation ciblés (couples navigateur/aide technique).
 
 <pre><code class="html" title="html">
 &lt;button&gt;
@@ -152,7 +152,6 @@ La solution suivante est similaire à la précédente, mais à tester systémati
   &lt;span class="visually-hidden"&gt;Rechercher&lt;/span&gt;
 &lt;/a&gt;
 </code></pre>
-
 
 Il est aussi possible d'utiliser l'attribut `aria-label` :
 
