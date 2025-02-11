@@ -2,13 +2,13 @@
 title: "L'accessibilité des images SVG"
 abstract: "Comment rendre accessibles les images SVG"
 titleBeforeTag: true
-date: "2025-01-01"
+date: "2025-02-14"
 tags:
   - web
   - intermediate
 ---
 
-Mise à jour de l'article de 2021.
+Mise à jour de l'article du 01/01/2021.
 
 Voici quelques recommandations techniques pour vous aider à intégrer des images SVG accessibles.
 
