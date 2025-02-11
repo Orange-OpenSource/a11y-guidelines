@@ -41,7 +41,7 @@ Et un petit point sur WCAG 3.0, ben ça avance mais à l'allure du W3c (rires) :
 - Les messages de status, même accessibles, ça peut poser des problèmes (en) : https://cerovac.com/a11y/2024/12/potential-dangers-of-status-messages/
 - Aria-description ne se traduit pas (en) : https://adrianroselli.com/2025/01/aria-description-does-not-translate.html
 - Mettre des textes de remplacement aux images dans BlueSky (en) : https://bsky.app/profile/oedipusnj.bsky.social/post/3jywm7v5vtl2y
--	Le critère WCAG "1.4.10-Redimensionnement" devrait bientôt évoluer, avec de nombreux exemples pour expliquer les cas de conformité ou non : https://deploy-preview-4055--wcag2.netlify.app/understanding/reflow
+- Le critère WCAG "1.4.10-Redimensionnement" devrait bientôt évoluer, avec de nombreux exemples pour expliquer les cas de conformité ou non : https://deploy-preview-4055--wcag2.netlify.app/understanding/reflow
 - Comme toujours, Julie Moynat nous partage ses bons conseils, cette fois cela concerne l'accessibilité des liens qui s’ouvrent dans une nouvelle fenêtre ou onglet : https://www.lalutineduweb.fr/lien-ouverture-nouvelle-fenetre-accessible/
 
 ## Retour d'expérience
