@@ -72,7 +72,7 @@ And a quick update on WCAG 3.0, well it's moving forward but the pace of W3c (la
 
 ## Assistive technologies 
 
-- Some points sometimes ignored points on AT and a11y: https://ericwbailey.website/published/truths-about-digital-accessibility/
+- Some points sometimes ignored on AT and a11y: https://ericwbailey.website/published/truths-about-digital-accessibility/
 - VoiceOver MacOS is not VoiceOver iOS: https://adrianroselli.com/2025/02/which-voiceover.html
 
 ## Ergonomics, UI & UX
