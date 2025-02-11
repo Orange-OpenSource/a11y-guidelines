@@ -55,7 +55,7 @@ Et un petit point sur WCAG 3.0, ben ça avance mais à l'allure du W3c (rires) :
 
 ## Appli mobile, web mobile
 
-- Comme on est jamais aussi bien servi que par soi-même, commençons par rappeler qu'Orange vient de publier des checklists incontournables pour l'auto-évaluation des projets : <a>href="https://a11y-guidelines.orange.com/fr/mobile/android/checklist/"les 11 critères incontournables Android</a> et <a>href="https://a11y-guidelines.orange.com/fr/mobile/ios/checklist/"les 11 critères incontournables iOS</a>
+- Comme on est jamais aussi bien servi que par soi-même, commençons par rappeler qu'Orange vient de publier des checklists incontournables pour l'auto-évaluation des projets : <a href="https://a11y-guidelines.orange.com/fr/mobile/android/checklist/">les 11 critères incontournables Android</a> et <a href="https://a11y-guidelines.orange.com/fr/mobile/ios/checklist/">les 11 critères incontournables iOS</a>
 - Android dévoile 6 nouvelles fonctionnalités, le point sur les changements : https://www.frandroid.com/android/2432052_android-devoile-6-nouvelles-fonctionnalites-le-point-sur-les-changements
 - Vous n'arrivez pas à atteindre certaines parties de l'UI en navigation clavier ? Peut-être avez-vous oublié l'existence des "Groupes de navigation au clavier" (en) : https://cerovac.com/a11y/2024/12/testing-navigation-with-physical-keyboard-on-android-hint-keyboard-navigation-cluster/
 - La compilation du calendrier de l'avent iOS de Daniel Devesa (en) : https://dadederk.github.io/post/2024-12-06-01/
