@@ -51,7 +51,7 @@ It is generally a link pointing to an HTML element with an id attribute.
 
 ## What are the best practices?
 
-- It is possible to integrate a skip link in the form of an image (such as an 'arrow' with a <code>title</code> attribute) that appears after scrolling down the page. The skip link will allow for a direct return to the top of the page. This avoidance link should not hinder the reading or understanding of the information; it should be the last keyboard-focusable element.
+- It is possible to embed a skip link as an image (such as an 'arrow' with a <code>title</code> attribute) that appears after scrolling the page. The skip link returns directly to the top of the page. This avoidance link should not hinder the reading or understanding of the information; it should be the last keyboard-focusable element.
 - The skip link must be reachable by keyboard navigation and regardless of the direction of navigation.(<kbd>TAB</kbd> ou <kbd>Shift</kbd> + <kbd>TAB</kbd>).
 - Placing a skip link on an <code>id</code> works, but targeting the skip link on elements like <code>aside</code>, <code>footer</code>, or <code>main</code> makes it less sensitive to potential changes (such as an <code>id</code> change, or simply not being included in the code of a new page, for instance).
 - Skip or quick access links should be visually located in the same place on the page and in the same relative order in the source code across all pages of the site.
