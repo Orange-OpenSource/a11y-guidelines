@@ -21,7 +21,7 @@ Et un petit point sur WCAG 3.0, ben ça avance mais à l'allure du W3c (rires) :
 
 ## Stratégie de mise en accessibilité
 
--	SUC-o-meter, un nouveau moyen de mesurer l'accessibilité - Aashutosh Kulkarni (A11yTalks - Janvier 2025) : https://www.youtube.com/watch?v=rMfNK91_eeY&si=dRVDwIPLT_RkhYma
+- SUC-o-meter, un nouveau moyen de mesurer l'accessibilité - Aashutosh Kulkarni (A11yTalks - Janvier 2025) : https://www.youtube.com/watch?v=rMfNK91_eeY&si=dRVDwIPLT_RkhYma
 - Captcha et a11y, encore... : https://design.numerique.gouv.fr/articles/2024-11-28-captcha-et-accessibilite/
 - Améliorer l'a11y de l'authentification (en) : https://cerovac.com/a11y/2024/12/improve-accessibility-of-user-authentication/
 
