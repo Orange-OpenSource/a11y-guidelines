@@ -9,6 +9,7 @@ tags:
 # Digital accessibility watch December-January 2025
 
 A quick hello to a guy I like for his frankness, Heydon Pickering; his a11y principles are in French, and so, a big hug for one of the translators, S. Deschamps and bravo to the others (fr) https://github.com/Heydon/principles-of-web-accessibility/blob/main/LISEZ-MOI.md.
+
 And a quick update on WCAG 3.0, well it's moving forward but the pace of W3c (laughs):D: https://www.w3.org/news/2024/updated-drafts-for-review-w3c-accessibility-guidelines-wcag-3-0/ and https://whollyaccessible.org/2024/12/11/wcag-3-december-24-update/.
 
 ## Accessibility in laws, standards and recommendations
@@ -34,27 +35,27 @@ And a quick update on WCAG 3.0, well it's moving forward but the pace of W3c (la
 
 ## Technical points
 
-- The links between seo and a11y: https://www.a11y-collective.com/blog/seo-and-accessibility/
+- The links between SEO and a11y: https://www.a11y-collective.com/blog/seo-and-accessibility/
 - Doing your dynamic regions right: https://access42.net/quand-utiliser-live-regions-aria/
 - Aria-label(ledby), not to be used with any tag, important: https://benmyers.dev/blog/dont-use-aria-label-on-static-text-elements/
 - Status messages, even accessible ones, can cause problems: https://cerovac.com/a11y/2024/12/potential-dangers-of-status-messages/
 - Aria-description does not translate: https://adrianroselli.com/2025/01/aria-description-does-not-translate.html
 - Putting alternative texts to images in BlueSky: https://bsky.app/profile/oedipusnj.bsky.social/post/3jywm7v5vtl2y
-- The WCAG criterion "1.4.10-Resizing" should soon evolve, with many examples to explain the cases of compliance or not: https://deploy-preview-4055--wcag2.netlify.app/understanding/reflow
+- The WCAG criterion "1.4.10-Reflow" should soon evolve, with many examples to explain the cases of compliance or not: https://deploy-preview-4055--wcag2.netlify.app/understanding/reflow
 - As always, Julie Moynat shares her good advice, this time it concerns the accessibility of links that open in a new window or tab (fr): https://www.lalutineduweb.fr/lien-ouverture-nouvelle-fenetre-accessible/
 
 ## Feedback
 
 - Still the same observation: https://carmemias.com/why-are-we-so-rubbish-at-accessibility/
-- Annotation its are not everything, read: https://ericwbailey.website/published/accessibility-annotation-kits-only-annotate/#so%2C-what-can-we-do-about-this%3F
+- Annotation kits are not everything, read: https://ericwbailey.website/published/accessibility-annotation-kits-only-annotate/#so%2C-what-can-we-do-about-this%3F
 - Evolution of the a11y of Luxembourg public sites (fr): https://accessibilite.public.lu/fr/news/2025-01-15-rapport2024.html
 - Thoughts on the profession of a11y specialist: https://blog.hello-bokeh.fr/2025/01/07/accessibility-operations-reflexions-sur-le-metier/
-- A screen reader user and status sites, to read (fr): https://www.sylduch-conseil.fr/creer-espace-pro-site-impots/
+- A screen reader user facing a french governement website, to read (fr): https://www.sylduch-conseil.fr/creer-espace-pro-site-impots/
 - Front devs and a11y, the base: https://martijnhols.nl/blog/accessibility-essentials-every-front-end-developer-should-know
 
 ## Mobile app, mobile web
 
-- Since you can never be better served than by yourself, let's start by recalling that Orange has just published essential checklists for the self-assessment of projects: <a href="https://a11y-guidelines.orange.com/fr/mobile/android/checklist/">the 11 essential criteria Android</a> and <a href="<https://a11y-guidelines.orange.com/fr/mobile/ios/checklist/">the 11 essential iOS criteria</a>
+- Since you can never be better served than by yourself, let's start by recalling that Orange has just published essential checklists for the self-assessment of projects: <a href="https://a11y-guidelines.orange.com/en/mobile/android/checklist/">the 11 essential criteria Android</a> and <a href="<https://a11y-guidelines.orange.com/en/mobile/ios/checklist/">the 11 essential iOS criteria</a>
 - Android unveils 6 new features, an update on the changes: https://www.frandroid.com/android/2432052_android-devoile-6-nouvelles-fonctionnalites-le-point-sur-les-changements
 - You can't reach certain parts of the UI using keyboard navigation? Maybe you forgot about the "Keyboard Navigation Clusters": https://cerovac.com/a11y/2024/12/testing-navigation-with-physical-keyboard-on-android-hint-keyboard-navigation-cluster/
 - Daniel Devesa iOS Advent Calendar Compilation: https://dadederk.github.io/post/2024-12-06-01/
@@ -63,7 +64,7 @@ And a quick update on WCAG 3.0, well it's moving forward but the pace of W3c (la
 - How to address common accessibility issues in iOS mobile apps using SwiftUI: https://www.freecodecamp.org/news/how-to-address-ios-accessibility-challenges-using-swiftui
 - Top 5 accessibility issues in iOS apps: https://dev.to/steady5063/top-5-ios-mobile-app-accessibility-issues-pt-1-51g8
 - A11Y audit feedback on mobile apps at gov.uk: https://accessibility.blog.gov.uk/2025/01/14/accessibility-audit-of-the-met-office-app-outcomes-and-learnings/
-- Mobile Accessibility Advent Calendar (3 articles) Mark Steadman:
+- Another interesting Mobile Advent Calendar (3 articles) by Mark Steadman:
 
 1. Part 1: https://dev.to/steady5063/mobile-accessibility-advent-calendar-part-1-1iac
 2. Part 2: https://dev.to/steady5063/mobile-accessibility-advent-calendar-part-2-39c1
@@ -71,7 +72,7 @@ And a quick update on WCAG 3.0, well it's moving forward but the pace of W3c (la
 
 ## Assistive technologies 
 
-- Some sometimes ignored points on AT and a11y: https://ericwbailey.website/published/truths-about-digital-accessibility/
+- Some points sometimes ignored points on AT and a11y: https://ericwbailey.website/published/truths-about-digital-accessibility/
 - VoiceOver MacOS is not VoiceOver iOS: https://adrianroselli.com/2025/02/which-voiceover.html
 
 ## Ergonomics, UI & UX
@@ -88,5 +89,5 @@ And a quick update on WCAG 3.0, well it's moving forward but the pace of W3c (la
 
 ## Others
 
-- Thoughts on generative AI and a11y): https://htmhell.dev/adventcalendar/2024/7/
-- Ai and a11y, we need humans with disabilities, period, strong opinion: https://ashleemboyer.com/blog/how-to-dehumanize-accessibility-with-ai
+- Thoughts on generative AI and a11y: https://htmhell.dev/adventcalendar/2024/7/
+- AI and a11y, we need humans with disabilities, period, strong opinion: https://ashleemboyer.com/blog/how-to-dehumanize-accessibility-with-ai
