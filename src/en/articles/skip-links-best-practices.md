@@ -32,7 +32,7 @@ Skip links are valuable for many users:
 - Users who are struggling to navigate a large page: motor impaired people (fatigability or motor limitations) or people on their smartphone (this is a way to spare the user from swiping to browse the page)
 - the visually impaired, who use or not a screen magnifier, and have trouble having a global representation of the topology of the page
 
-We will therefore, thanks to skip links, limit the use of keyboard navigation keys and more generally save actions during intra-page navigation.
+We will therefore, thanks to skip links, limit the use of keyboard navigation keys and more generally decrease the gestures to be done when navigating between pages.
 
 ## Use
 
