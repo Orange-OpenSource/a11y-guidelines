@@ -19,7 +19,7 @@ Skip links are shortcuts that allow you to directly access a content area or avo
 We can distinguish 3 types of skip links:
 
 1. **quick access links:** gathered at the top of the page to go to the main regions of the page: "Skip to menu", "Skip to content", "Skip to search", for example
-2. **section skip links:** positioned before the region that they allow to jump: "Skip the section", "Skip the chapter"
+2. **section skip links:** positioned before the region that they allow to skip: "Skip the section", "Skip the chapter"
 3. **In-page navigation links:** "Back to top", for example
 
 These skip links allow the user to avoid parts of pages, if we navigate with the keyboard, or if it is difficult to locate content in a large page or even if scrolling thought the page is difficult.
