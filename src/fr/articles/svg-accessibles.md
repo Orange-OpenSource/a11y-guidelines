@@ -8,7 +8,7 @@ tags:
   - intermediate
 ---
 
-Mise à jour de l'article du 01/01/2021.
+Mise à jour de l'article du 01 Janvier 2021.
 
 Voici quelques recommandations techniques pour vous aider à intégrer des images SVG accessibles.
 

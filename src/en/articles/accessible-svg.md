@@ -8,7 +8,7 @@ tags:
   - intermediate
 ---
 
-Update of article from 2021/01/01.
+Update of article from January 21, 2021.
 
 
 Here are some ideas knowing that the support for browsers and assistive technologies evolves very quickly.
