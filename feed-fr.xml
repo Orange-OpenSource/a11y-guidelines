@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2025-02-04T00:00:00Z</updated>
+  <updated>2025-02-10T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>  
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Veille #A11y Décembre-Janvier 2025</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/veille-decembre-janvier-2025/"/>
+    <updated>2025-02-10T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/veille-decembre-janvier-2025/</id>
+    <content xml:lang="fr" type="html">Florilèges de ressources en #a11y, Décembre-Janvier 2025</content>
+  </entry>
   
   <entry>
     <title>Nos critères incontournables</title>
