@@ -104,7 +104,7 @@ Créer des listes en utilisant le style « liste » (à puces, numérotées ou �
 Décrire l’information portée par l’image dans le champ « description » des propriétés de l’image. 
 
 - **Pour les images porteuses d’informations** : renseigner un texte de remplacement qui reprend le contenu informatif de l’image : **clic droit > Format de l’image > Texte de remplacement > champ « Description »**.
-- **Pour les images décoratives/illustratives** : laisser le champ description vide.
+- **Pour les images décoratives/illustratives** : ajouter un attribut <code>alt</code> vide ou nul, ou un <code>role='presentation'</code> ou <code>'none'</code> ou encore un attribut <code>aria-hidden='true'</code>.
 - **Pour les images informatives complexes** : rédiger un court texte de remplacement (champ « Description ») indiquant l’emplacement de la description détaillée. Celle-ci doit être équivalente à l’information transmise par l’image et doit être à proximité de l’image ou accessible via un lien. 
 - **Pour les images « lien »** : Rédiger un texte de remplacement  (champ « Description ») qui décrit la fonction ou la destination du lien.
 - **Pour les graphiques ou schémas** : utiliser les composants Smart Art plutôt que des images ou une capture d’écran (menu **Insertion > Smart Art**). Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (**Format de l’objet** ou **de l’image > Texte de remplacement > Description**).
