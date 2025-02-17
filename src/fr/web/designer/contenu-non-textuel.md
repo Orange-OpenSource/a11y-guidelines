@@ -15,7 +15,7 @@ abstract: "Contenu non-textuel, recommendations d'accessibilité web lors de la 
 Il faut prévoir une alternative textuelle pour chaque élément non-textuel : images, animation, vidéo, podcast, publicités, boutons, icônes, logos, etc.
 Pour les images, boutons, icônes, logos, etc, les règles sont les suivantes :
 * Pour les images cliquables : préciser la fonction / la cible du lien
-* Pour les images décoratives : ajouter un attribut <code>alt</code> vide ou nul, ou un <code>role='presentation'</code> ou <code>'none'</code> ou encore un attribut <code>aria-hidden='true'</code>.
+* Pour les images décoratives : ajouter un attribut <code>alt</code> vide ou nul (technique privilégiée), ou un <code>role='presentation'</code> ou <code>'none'</code> ou encore un attribut <code>aria-hidden='true'</code>.
 * Pour les images porteuses d’information : alternative textuelle décrivant l’information
 * Pour les images complexes (schémas, graphes…) : prévoir un contenu textuel équivalent adjacent :
   * du texte dans la page
