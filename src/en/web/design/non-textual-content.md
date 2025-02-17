@@ -16,7 +16,7 @@ abstract: "Non-textual content, web accessibility design recommandations"
 A text alternative must be provided for each non-textual element: images, animation, video, podcast, advertisements, buttons, icons, logos, etc.
 For images, buttons, icons, logos, etc., the rules are as follows:
 * For clickable images: specify the function / target of the link
-* For decorative images: add an <code>alt</code> attribute and keep it null or empty, or a <code>role='presentation'</code> or <code>'none'</code> or an <code>aria-hidden='true'</code> attribute
+* For decorative images: add an <code>alt</code> attribute and keep it null or empty (preferred technique), or a <code>role='presentation'</code> or <code>'none'</code> or an <code>aria-hidden='true'</code> attribute
 * For images that convey information: text alternative describing the information
 * For complex images (diagrams, graphs, etc.): provide adjacent equivalent textual content:
   * text in the page
