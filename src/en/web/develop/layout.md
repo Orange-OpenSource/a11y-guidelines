@@ -11,7 +11,7 @@ abstract: "Layout, web accessibility dev recommandations"
 
 ## Use relative size to allow changing text size and responsive design
 
-**Target:** Everyone and especially people with visual impairments, using a device outdoors and elderly people.  
+**Target:** Everyone and especially people with visual impairments, using a device outdoors and elderly people.
 **When:** during development.
 
 **Description:**
@@ -32,10 +32,10 @@ Use relative length units for font size (`em`, `rem`, `%`) and for containers ha
 
 Allow users (visually impaired, using a device outdoors, elderly people…) to increase the font size and enlargement of the page so they can access easily the information.
 
-**Example:** 
+**Example:**
 See the example [handling zoom, increasing the text size](../../components-examples/zoom/) for more details.
 
-**<abbr>WCAG</abbr> reference:**  
+**<abbr>WCAG</abbr> reference:**
 - <a href="https://www.w3.org/TR/WCAG22/#resize-text">1.4.4 Resize text</a>
 - <a href="https://www.w3.org/TR/WCAG22/#reflow">1.4.10 Reflow</a>
 
@@ -44,7 +44,7 @@ See the example [handling zoom, increasing the text size](../../components-examp
 
 ## Allow text spacing
 
-**Target:** Everyone, particularly people with visual disabilities.  
+**Target:** Everyone, particularly people with visual disabilities.
 **When:** as of design and during development.
 
 If the user applies the following settings, the text must remain legible (no truncated content, superimposed):
@@ -54,7 +54,7 @@ If the user applies the following settings, the text must remain legible (no tru
 - The letter spacing must be adjustable to 0.12 times the font size.
 - The word spacing between words must be adjustable to at least 0.16 times the font size.
 
-This can be done by applying the following CSS rules : 
+This can be done by applying the following CSS rules:
 <pre><code class="css">
   * {
       line-height: 1.5!important;
@@ -67,13 +67,13 @@ This can be done by applying the following CSS rules :
   }
 </code></pre>
 
-**Bookmarklet:**  
-To ease the test, use the following bookmarklet (to keep in your bookmarks) : <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Text spacing</a>
+**Bookmarklet:**
+To ease the test, use the following bookmarklet (to keep in your bookmarks): <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Text spacing</a>
 
 **Users’ goal:**
 Improve reading comfort for people with cognitive and visual disabilities.
 
-**<abbr>WCAG</abbr> reference:**  
+**<abbr>WCAG</abbr> reference:**
 - <a href="https://www.w3.org/TR/WCAG22/#text-spacing">1.4.12 Text Spacing</a>
 
 
@@ -101,7 +101,7 @@ A press site presents its articles in three columns. In the code, the columns ar
  The main menu of a site is present at the very end of the source code (after the footer) but it positioned at the top of the page via <abbr>CSS</abbr>, there's a risk of not being perceived by a screen reader user.
 
 
-**<abbr>WCAG</abbr> reference:**  
+**<abbr>WCAG</abbr> reference:**
 - <a href="https://www.w3.org/TR/WCAG22/#meaningful-sequence">1.3.2 Meaningful sequence</a>
 
 
@@ -118,23 +118,23 @@ Provide ways to identify and visually distinguish the different parts of the pag
 - Ensure that the components and groupings that have the same function are identified (visually and semantically) in the same way.
 - Ensure that the areas of the page are clearly delimited (borders, edges, sufficient contrast ...) or that there is a way to visually distinguish the groups (sub-menu, drop-down list ...) as well as the different regions of the page.
 
-**User Objective:**  
+**User Objective:**
 Allow users to identify and locate interface elements in all pages.
 
-**Do:**  
-![screenshot of the site 100% practical](../../images/groupement.jpg)  
+**Do:**
+![screenshot of the site 100% practical](../../images/groupement.jpg)
 Here, the tooltip (tooltip) is delimited by a visible edge and sufficiently contrasted, to identify its content.
 
-**Don't:**  
-![screenshot of the fnac.com website](../../images/groupement2.jpg)  
+**Don't:**
+![screenshot of the fnac.com website](../../images/groupement2.jpg)
 It is very difficult to associate the themes ("par region", "par genre", ...) and the sub-themes in columns, especially since the horizontal borders are too little contrasted.
 
-**Example: The <abbr>HTML5</abbr> and landmarks <abbr>ARIA</abbr> **  
+**Example: The <abbr>HTML5</abbr> and landmarks <abbr>ARIA</abbr> **
 To give a semantic structure to the main regions of a page, we can use the <abbr> HTML5 </ abbr> structure tags (`main` for the main content of the page,` nav` for the main navigation, `header `for page header,` footer` for footer, `aside` for content complementary to the main content, and others) even if their support by assistive technologies / browsers is not total , it's enough. You can also use, to set up this page structure, [the landmarks <abbr>ARIA</abbr> (Accessible Rich Internet Applications)](https://www.w3.org/WAI/ARIA/apg/practices/landmark-regions/) and there, the support is much better & nbsp ;!
 
 Setting up this type of semantics allows visually impaired people to identify and understand the organization, the overall structure of the page and thus navigate more easily.
 
-**<abbr>WCAG</abbr> reference:** 
+**<abbr>WCAG</abbr> reference:**
 - <a href="https://www.w3.org/TR/WCAG22/#consistent-navigation">3.2.3 Consistent Navigation</a>
 - <a href="https://www.w3.org/TR/WCAG22/#consistent-identification">3.2.4 Consistent Identification</a>
 
@@ -144,10 +144,10 @@ Setting up this type of semantics allows visually impaired people to identify an
 
 ## Define sensitive areas of sufficient size
 
-**Target:** Everyone, especially people with motor or visual disabilities and mobility.  
-**When:** during design and development.  
+**Target:** Everyone, especially people with motor or visual disabilities and mobility.
+**When:** during design and development.
 
-**Description:**  
+**Description:**
 Each sensitive area must have a sufficient size (minimum 9mm width and height).
 In addition, the sensitive areas must be sufficiently spaced from each other (about 2mm minimum).
 
@@ -157,16 +157,16 @@ In addition, the sensitive areas must be sufficiently spaced from each other (ab
 
 ## Decoupling content from interaction and presentation
 
-**Target:** Everyone, especially people with visual disabilities, reading or attention difficulties.  
+**Target:** Everyone, especially people with visual disabilities, reading or attention difficulties.
 **When:** during development.
 
 **Description:**
 
-Strictly decouple the content (<abbr>HTML</abbr>), the interaction (Javascript) and presentation (<abbr>CSS</abbr>). 
+Strictly decouple the content (<abbr>HTML</abbr>), the interaction (Javascript) and presentation (<abbr>CSS</abbr>).
 
 **Checklist:**
 
-- Do not use tables to design the page layout, they should be used only for tabular data. 
+- Do not use tables to design the page layout, they should be used only for tabular data.
 - Do not use image to display text, except when the visual presentation cannot be achieved using <abbr>CSS</abbr>.
 - Use <abbr>CSS</abbr> classes rather than manipulating inline <abbr>CSS</abbr> styles in <abbr>HTML</abbr>.
 - Do not use <abbr>CSS</abbr> pseudo-elements (::before, ::after…) to display information (or provide an alternative for screen readers especially).
@@ -183,3 +183,14 @@ Improves maintainability.
 **<abbr>WCAG</abbr> reference:**
 - <a href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
 - <a href="https://www.w3.org/TR/WCAG22/#images-of-text">1.4.5 Images of Text</a>
+
+## Give access to the content regardless of the orientation of the screen
+
+**Target:** Everyone, especially people with motor or visual disabilities and mobility.
+**When:** during design and development.
+
+**Description:**
+Access to the content must not depend on the orientation of the screen (portrait and landscape) unless a specific display orientation is essential (e.g. serious game).
+
+**<abbr>WCAG</abbr> reference:**
+- <a href="https://www.w3.org/TR/WCAG22/#orientation">1.3.4 Orientation</a>
