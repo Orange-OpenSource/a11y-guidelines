@@ -9,7 +9,7 @@ abstract: "Non-textual content, web accessibility design recommandations"
 
 ## Define text alternatives
 
-**Target:** people with visual or hearing impairments, seniors, people with cognitive impairments and search engines.  
+**Target:** people with visual or hearing impairments, seniors, people with cognitive impairments and search engines.
 **When:** from conception and during development.
 
 **Description:**
@@ -33,25 +33,25 @@ In these specific cases, provide a text alternative containing at least the text
 ## Special cases of animations, video and audio content
 For non-informative and purely decorative elements, no need for a text alternative. Just ensure that the [animation is ignored by assistive technologies](/en/web/components-examples/accessible-hiding/).
 For animations carrying information, provide a transcription (script type) containing the information of the content in text form.
-For audio and / or video content, a textual transcription (scripts) and / or subtitles must be provided according to the following rules: 
+For audio and / or video content, a textual transcription (scripts) and / or subtitles must be provided according to the following rules:
 
 - Pre-recorded audio content: textual transcription equivalent to the audio content
-- Pre-recorded video without audio: 
-  - textual transcription at minimum 
-  - or an audio track equivalent to the content of the video 
-- Pre-recorded video (with or without audio): 
-  - textual transcription at minimum 
-  - Relevant and correctly synchronized audio description if necessary 
+- Pre-recorded video without audio:
+  - textual transcription at minimum
+  - or an audio track equivalent to the content of the video
+- Pre-recorded video (with or without audio):
+  - textual transcription at minimum
+  - Relevant and correctly synchronized audio description if necessary
 - Pre-recorded video with audio: transcribed subtitles showing all the content
 - Live video with audio: transcribed subtitles showing all the content
 
-## Examples: 
+## Examples:
 * Decorative image: Empty text alternative (understand: `alt=""`)
-<img alt="screenshot alt text for decorative image" src="../../images/alt_text_deco.png" width="300"/> 
+<img alt="screenshot alt text for decorative image" src="../../images/alt_text_deco.png" width="300"/>
 
-* Clickable image: valid alternative text : "add a TV channel" 
+* Clickable image: valid alternative text : "add a TV channel"
 <img alt="screenshot alt text for Clickable image" src="../../images/image_cliquable.png"/>
 
 ## Related links:
-* [W3C decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) 
+* [W3C decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/)
 * [Other practical cases on the W3C website](https://www.w3.org/WAI/WCAG21/quickref/#non-text-content)

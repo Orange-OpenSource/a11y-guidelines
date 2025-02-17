@@ -12,14 +12,14 @@ abstract: "Contenu non-textuel, recommendations d'accessibilité web lors du dé
 
 ## Fournir un équivalent textuel pour les images et les cadres
 
-**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles ou cognitives.  
+**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles ou cognitives.
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
-**Description&nbsp;:** 
+**Description&nbsp;:**
 
 Avant toutes choses, il ne faut pas utiliser une image-texte lorsque cela n'est pas nécessaire ou que l'image peut être remplacée par une mise en forme du texte en <abbr>CSS</abbr>.
 
-Mettre, dans toute balise `img`, un attribut `alt` pertinent&nbsp;: 
+Mettre, dans toute balise `img`, un attribut `alt` pertinent&nbsp;:
 - Pour les images cliquables&nbsp;: préciser la fonction&nbsp;/ la cible du lien dans l’attribut `alt`.
 - Pour les images porteuses d’information&nbsp;: mettre un `alt` décrivant l’information contenue dans l’image.
 - Pour les images contenant du texte&nbsp;: mettre un attribut `alt` reprenant au moins le texte de l’image.
@@ -63,21 +63,21 @@ Améliorer le référencement naturel.
 <iframe title="contenu publicitaire" id="cool_ads_iframe_/0101/woo_rec_1_300x250_0" height="250" width="300">
 ```
 
-**Exemple d’alternative vide&nbsp;:**  
-Dans l’exemple ci-dessous, le pictogramme à droite n’a pas besoin d’être vocalisé puisque le texte situé à gauche apporte déjà l’information.  
-Renseigner l’attribut `alt` dans ce cas apporterait une information redondante.  
+**Exemple d’alternative vide&nbsp;:**
+Dans l’exemple ci-dessous, le pictogramme à droite n’a pas besoin d’être vocalisé puisque le texte situé à gauche apporte déjà l’information.
+Renseigner l’attribut `alt` dans ce cas apporterait une information redondante.
 
-![exemple d’image décorative](../../images/service-24.png)  
-  
+![exemple d’image décorative](../../images/service-24.png)
+
 ```html
-<h3>Le service 24h garanti</h3>  
+<h3>Le service 24h garanti</h3>
 <img src="service-24.png" alt="">
 ```
 
-**Outils :**  
+**Outils :**
 L'extension <a href="https://chrispederick.com/work/web-developer/" lang="en">Web developer</a> (possibilité d'afficher les alternatives textuelles de toutes les images).
 
-**Référence <abbr>WCAG</abbr>&nbsp;:**  
+**Référence <abbr>WCAG</abbr>&nbsp;:**
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 - <a lang="en" href="https://www.w3.org/WAI/WCAG22/Understanding/images-of-text">1.4.5 Images of text</a>
 
@@ -86,18 +86,18 @@ L'extension <a href="https://chrispederick.com/work/web-developer/" lang="en">We
 
 ## Rendre accessible les pistes audio ou vidéo
 
-**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives et auditives et celles qui maîtrisent mal le français.  
+**Cible&nbsp;:** tout le monde, et en particulier les personnes déficientes visuelles, cognitives et auditives et celles qui maîtrisent mal le français.
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
-**Description&nbsp;:** 
+**Description&nbsp;:**
 
-Pour être accessibles, les contenus multimédias doivent&nbsp;: 
+Pour être accessibles, les contenus multimédias doivent&nbsp;:
 1. proposer une transcription intégrale
-2.	proposer des sous-titres (vidéo uniquement) 
+2.	proposer des sous-titres (vidéo uniquement)
 3.	proposer une audiodescription (vidéo uniquement)
 4.	choisir un lecteur média accessible
 5.	proscrire le démarrage automatique de la vidéo au chargement de la page
-6.	proscrire les vidéos qui présentent plus de 3 flashs à la seconde 
+6.	proscrire les vidéos qui présentent plus de 3 flashs à la seconde
 7. par ailleurs, pour tout son émis de plus de 3 secondes, l'utilisateur doit avoir la possibilité soit de l'arrêter ou de le mettre en pause soit d'en contrôler son volume indépendamment du volume général du système.
 
 Pour plus d'infos consulter [les recommandations accessibilité pour les contenus vidéos, animations et audios Orange](../../../contenu-et-communication/composants-animes/).
@@ -110,7 +110,7 @@ Fournir un moyen d’accès à l’information visuelle et auditive pour des per
 
 Permet le référencement de tout contenu audio et vidéo.
 
-**Référence <abbr>WCAG</abbr>&nbsp;:**  
+**Référence <abbr>WCAG</abbr>&nbsp;:**
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#audio-only-and-video-only-prerecorded">1.2.1 Audio-only and Video-only (Prerecorded)</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#captions-prerecorded">1.2.2 Captions (Prerecorded)</a>
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#audio-description-or-media-alternative-prerecorded">1.2.3 Audio Description or Media Alternative (Prerecorded)</a>
@@ -125,20 +125,20 @@ Permet le référencement de tout contenu audio et vidéo.
 
 ## Éviter les captcha
 
-**Cible&nbsp;:** tout le monde en particulier, les personnes déficientes visuelles.  
+**Cible&nbsp;:** tout le monde en particulier, les personnes déficientes visuelles.
 **Quand&nbsp;:** lors de la conception et lors du développement.
 
-**Description&nbsp;:**  
-Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur&nbsp;: 
+**Description&nbsp;:**
+Les captcha sont souvent la source de difficultés pour les utilisateurs. Si la mise en place d’un système anti-spam ne peut être évitée, il est souhaitable de s’orienter vers une solution plus souple pour l’utilisateur&nbsp;:
 
 - Double authentification
 - Champ de formulaire caché à laisser vide (technique du <span lang="en">honeypot</span>), non-visibles pour l’utilisateur
 - Mise à disposition d’un support téléphonique afin de s’assurer que le client est une vraie personne
 - Un contrôle permettant de s’assurer qu’une même combinaison <abbr>IP</abbr>/<i lang="en">User agent</i> ne tente pas de soumettre le formulaire plus de N fois par seconde.
 
-Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une combinaison de captcha&nbsp;: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test mathématique simple…) + captcha visuel classique… 
+Si aucune autre alternative n’est possible, il est indispensable de prévoir une alternative pour les captcha uniquement visuels ou sonores en proposant une combinaison de captcha&nbsp;: un captcha  audio + visuel, des tests logiques (question dont la réponse est évidente, test mathématique simple…) + captcha visuel classique…
 
 Plus de détails sur [les Captchas](../../../articles/les-captchas-et-l-accessibilite/).
 
-**Référence <abbr>WCAG</abbr>&nbsp;:**  
+**Référence <abbr>WCAG</abbr>&nbsp;:**
 - <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>

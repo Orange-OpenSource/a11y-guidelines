@@ -5,17 +5,17 @@ abstract: "Créer un document Word accessible"
 
 # Créer un document Word accessible
 
-Cette partie décrit la marche à suivre pour rendre vos documents Word accessibles à tous, y compris aux utilisateurs des technologies d’assistance. 
+Cette partie décrit la marche à suivre pour rendre vos documents Word accessibles à tous, y compris aux utilisateurs des technologies d’assistance.
 
 ## Langue
 
 Définir la langue principale du document dans le menu : **Fichier > Options > Langue**.
 
-Signaler tout changement de langue ponctuel en sélectionnant le groupe de mots concerné puis **Révision > Langue > Définir la langue de vérification**. 
+Signaler tout changement de langue ponctuel en sélectionnant le groupe de mots concerné puis **Révision > Langue > Définir la langue de vérification**.
 
-<img alt="" src="/fr/contenu-et-communication/images/word_langue_fr.png" class="img-fluid" /> 
+<img alt="" src="/fr/contenu-et-communication/images/word_langue_fr.png" class="img-fluid" />
 
-Ce sont ces attributs qui permettent  qu’un lecteur d’écran restitue correctement le contenu dans la langue du texter. 
+Ce sont ces attributs qui permettent  qu’un lecteur d’écran restitue correctement le contenu dans la langue du texter.
 
 ## Attributs du fichier
 
@@ -23,21 +23,21 @@ Renseigner les champs « Titre », « Auteur » et « Balises » dans la zone «
 
 Ces informations accessibles à tous via un clic dans Windows sur un fichier (affichage dans la partie basse de la fenêtre de dialogue) ou via un clic droit dans Propriétés, sont aussi lues par un lecteur d’écran.
 
-<img alt="" src="/fr/contenu-et-communication/images/word_attributs_fr.png" class="img-fluid" /> 
+<img alt="" src="/fr/contenu-et-communication/images/word_attributs_fr.png" class="img-fluid" />
 
 ## Titres 
 
-Utiliser les styles « Titre » et « Sous-titre » du menu **Accueil** (Titre 1, Titre 2, etc.). 
+Utiliser les styles « Titre » et « Sous-titre » du menu **Accueil** (Titre 1, Titre 2, etc.).
 
-Définir des intitulés clairs et précis, qui reflètent le contenu du paragraphe concerné. 
+Définir des intitulés clairs et précis, qui reflètent le contenu du paragraphe concerné.
 
 Ceci permet de structurer le document et d’accéder directement à un contenu spécifique.
 
 ## Table des matières
 
-Insérer une table des matières via le menu **Références > Table des matières**. 
+Insérer une table des matières via le menu **Références > Table des matières**.
 
-Cela permet aux utilisateurs de trouver des informations plus aisément dans le document. 
+Cela permet aux utilisateurs de trouver des informations plus aisément dans le document.
 
 ## Rédaction des contenus
 
@@ -55,25 +55,25 @@ Commencer les phrases par une majuscule, ne pas écrire de phrase tout en majusc
 
 Éviter de justifier le texte, de le centrer ou de l’aligner à droite ; préférer l’alignement à gauche.
 
-<img alt="" src="/fr/contenu-et-communication/images/word_mise_en_forme_fr.png" class="img-fluid" /> 
+<img alt="" src="/fr/contenu-et-communication/images/word_mise_en_forme_fr.png" class="img-fluid" />
 
-Ne pas utiliser les zones de textes, leurs contenus n’est pas interprété par les lecteurs d’écran. 
+Ne pas utiliser les zones de textes, leurs contenus n’est pas interprété par les lecteurs d’écran.
 
-Ne pas utiliser les retours chariots pour sauter des lignes ou les tabulations successives (touche « Tab » du clavier <img alt="" src="/fr/contenu-et-communication/images/word_tab_fr.png" />) pour mettre en forme le contenu. 
+Ne pas utiliser les retours chariots pour sauter des lignes ou les tabulations successives (touche « Tab » du clavier <img alt="" src="/fr/contenu-et-communication/images/word_tab_fr.png" />) pour mettre en forme le contenu.
 
-Utiliser les fonctions Retrait, Espacement : 
+Utiliser les fonctions Retrait, Espacement :
 - Menu **Mise en page > Paragraphe > Retrait** ou **Espacement** ou **Clic droit : « Paragraphe… »**
 
-<img alt="" src="/fr/contenu-et-communication/images/word_retrait_fr.png" class="img-fluid" /> 
+<img alt="" src="/fr/contenu-et-communication/images/word_retrait_fr.png" class="img-fluid" />
 
-Remarque : le menu « Tabulations… » accessible dans la fenêtre « Paragraphe » permet d’ajuster la taille des tabulations (ajuste « Taquets par défaut ») : 
+Remarque : le menu « Tabulations… » accessible dans la fenêtre « Paragraphe » permet d’ajuster la taille des tabulations (ajuste « Taquets par défaut ») :
 
-<img alt="" src="/fr/contenu-et-communication/images/word_tab1_fr.png" class="img-fluid" /> 
-<img alt="" src="/fr/contenu-et-communication/images/word_tab2_fr.png" class="img-fluid" /> 
+<img alt="" src="/fr/contenu-et-communication/images/word_tab1_fr.png" class="img-fluid" />
+<img alt="" src="/fr/contenu-et-communication/images/word_tab2_fr.png" class="img-fluid" />
 
 Utiliser l’option « Colonnes » de l’onglet **Mise en page** pour créer une mise en page sous forme de colonnes, et non les tableaux.
 
-Utiliser le saut de page via le menu **Insertion > Saut de page** pour passer à la page suivante. 
+Utiliser le saut de page via le menu **Insertion > Saut de page** pour passer à la page suivante.
 
 Numéroter les pages (menu **Insertion > Numéro de page**) pour permettre aux utilisateurs de se repérer dans le document.
 
@@ -85,9 +85,9 @@ Assurer un niveau de [contraste suffisant entre la couleur du texte et celle de 
 
 S’assurer que [la couleur n’est pas le seul moyen utilisé pour communiquer l’information](/fr/web/designer/couleurs-et-contrastes/#ne-pas-utiliser-la-couleur-ou-linformation-sensorielle-comme-seule-source-dinformation).
 
-<img alt="" src="/fr/contenu-et-communication/images/word_contrastes1_fr.png" class="img-fluid" /> 
+<img alt="" src="/fr/contenu-et-communication/images/word_contrastes1_fr.png" class="img-fluid" />
 
-**Exemple incorrect** : l'information est transmise uniquement par la couleur. 
+**Exemple incorrect** : l'information est transmise uniquement par la couleur.
 
 <img alt="" src="/fr/contenu-et-communication/images/word_contrastes2_fr.png" class="img-fluid" />
 
@@ -97,21 +97,21 @@ S’assurer que [la couleur n’est pas le seul moyen utilisé pour communiquer 
 
 Créer des listes en utilisant le style « liste » (à puces, numérotées ou à plusieurs niveaux) pour énumérer les éléments de même nature.
 
-<img alt="" src="/fr/contenu-et-communication/images/word_liste_fr.png" class="img-fluid" /> 
+<img alt="" src="/fr/contenu-et-communication/images/word_liste_fr.png" class="img-fluid" />
 
 ## Images
 
-Décrire l’information portée par l’image dans le champ « description » des propriétés de l’image. 
+Décrire l’information portée par l’image dans le champ « description » des propriétés de l’image.
 
 - **Pour les images porteuses d’informations** : renseigner un texte de remplacement qui reprend le contenu informatif de l’image : **clic droit > Format de l’image > Texte de remplacement > champ « Description »**.
 - **Pour les images décoratives/illustratives** : ajouter un attribut <code>alt</code> vide ou nul, ou un <code>role='presentation'</code> ou <code>'none'</code> ou encore un attribut <code>aria-hidden='true'</code>.
-- **Pour les images informatives complexes** : rédiger un court texte de remplacement (champ « Description ») indiquant l’emplacement de la description détaillée. Celle-ci doit être équivalente à l’information transmise par l’image et doit être à proximité de l’image ou accessible via un lien. 
+- **Pour les images informatives complexes** : rédiger un court texte de remplacement (champ « Description ») indiquant l’emplacement de la description détaillée. Celle-ci doit être équivalente à l’information transmise par l’image et doit être à proximité de l’image ou accessible via un lien.
 - **Pour les images « lien »** : Rédiger un texte de remplacement  (champ « Description ») qui décrit la fonction ou la destination du lien.
 - **Pour les graphiques ou schémas** : utiliser les composants Smart Art plutôt que des images ou une capture d’écran (menu **Insertion > Smart Art**). Le contenu informatif des graphiques doit être décrit dans le texte de remplacement (**Format de l’objet** ou **de l’image > Texte de remplacement > Description**).
 
-<img alt="" src="/fr/contenu-et-communication/images/word_remplacement_fr.png" class="img-fluid" /> 
+<img alt="" src="/fr/contenu-et-communication/images/word_remplacement_fr.png" class="img-fluid" />
 
-Important : si vous utilisez une option de disposition autre que « aligné sur le texte » (via un **clic droit sur l’image > renvoyer à la ligne automatiquement** ou le menu **Outils Image > Organiser**), l’image et le texte présent dans la description de l’image seront ignorés par certains lecteurs d’écran.  
+Important : si vous utilisez une option de disposition autre que « aligné sur le texte » (via un **clic droit sur l’image > renvoyer à la ligne automatiquement** ou le menu **Outils Image > Organiser**), l’image et le texte présent dans la description de l’image seront ignorés par certains lecteurs d’écran.
 
 ## Contenus audio et vidéo 
 
@@ -121,36 +121,36 @@ Consultez [nos recommandations sur les contenus audio et vidéo](/fr/contenu-et-
 
 Rédiger des intitulés de lien clairs et explicites, ils doivent se suffire à eux-mêmes afin qu’on en comprenne leur destination.
 
-En effet, une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lister l’ensemble des liens présents sur une page. Chaque intitulé de lien sera donc, lu isolé de son contexte visuel. 
+En effet, une personne non-voyante va, pour naviguer plus rapidement dans un document, demander à son lecteur d’écran de lister l’ensemble des liens présents sur une page. Chaque intitulé de lien sera donc, lu isolé de son contexte visuel.
 
-Signaler les liens qui déclenchent l’ouverture d’une nouvelle fenêtre : 
-- menu **Insertion > Lien hypertexte > Info-bulle** : ajouter « nouvelle fenêtre » dans le libellé 
+Signaler les liens qui déclenchent l’ouverture d’une nouvelle fenêtre :
+- menu **Insertion > Lien hypertexte > Info-bulle** : ajouter « nouvelle fenêtre » dans le libellé
 
 Enfin, renseigner le nom, le format, le poids et la langue du fichier si celle-ci est différente de la langue principale du document pour un lien qui permet de télécharger un fichier. 
 
-<img alt="" src="/fr/contenu-et-communication/images/word_lien_fr.png" class="img-fluid" /> 
+<img alt="" src="/fr/contenu-et-communication/images/word_lien_fr.png" class="img-fluid" />
 
 ## Tableaux de données
 
-Structurer le plus simplement possible les tableaux de données : éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides. 
+Structurer le plus simplement possible les tableaux de données : éviter de fusionner des cellules, d’insérer des images ou de laisser des cellules vides.
 
-Les tableaux sont des composants difficilement accessibles pour un non-voyant. Il faut donc les utiliser avec parcimonie. 
+Les tableaux sont des composants difficilement accessibles pour un non-voyant. Il faut donc les utiliser avec parcimonie.
 
 Ajouter une description s'il s'agit d'un tableau complexe, **clic droit : Format de la forme > Texte de remplacement > Description**.
 
-Enfin, les tableaux ne doivent pas être utilisés à des fins de mise en forme. 
+Enfin, les tableaux ne doivent pas être utilisés à des fins de mise en forme.
 
 ## Convertir en fichier PDF
 
-Après avoir vérifié l'accessibilité de votre document (voir la rubrique [Tester l'accessibilité de votre document Word](/fr/contenu-et-communication/word/tester/)), vous pouvez, si besoin, le convertir en fichier PDF. 
+Après avoir vérifié l'accessibilité de votre document (voir la rubrique [Tester l'accessibilité de votre document Word](/fr/contenu-et-communication/word/tester/)), vous pouvez, si besoin, le convertir en fichier PDF.
 
-Pour transformer votre document en <abbr>PDF</abbr>, aller dans le menu : **Fichier > Enregistrer sous** puis de sélectionner le type de fichier **PDF**. 
+Pour transformer votre document en <abbr>PDF</abbr>, aller dans le menu : **Fichier > Enregistrer sous** puis de sélectionner le type de fichier **PDF**.
 
 La case à cocher « Balises de structure de document pour l’accessibilité » doit être cochée.
 
 À noter qu’avec Word 2010, les documents PDF générés peuvent présenter des problèmes d’accessibilité (notamment au niveau de la vocalisation des images). Ces problèmes ont été corrigés dans les versions ultérieures de Microsoft Office.
 
-<img alt="" src="/fr/contenu-et-communication/images/word_pdf_fr.png" class="img-fluid" /> 
+<img alt="" src="/fr/contenu-et-communication/images/word_pdf_fr.png" class="img-fluid" />
 
 Pour vérifier l’accessibilité d’un document PDF, consultez la [rubrique PDF accessible](/fr/contenu-et-communication/pdf/) de notre site.
 
