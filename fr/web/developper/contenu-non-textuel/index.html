@@ -279,7 +279,7 @@
           <div class="mt-4">
           <h1>Web développer - Contenu non-textuel</h1>
 <p class="lead">S’assurer, qu’une alternative aux contenus non-textuels soit proposée à l’utilisateur</p>
-<h2 id="fournir-un-equivalent-textuel-pour-les-images-et-les-cadres" class="h2-focus">Fournir un équivalent textuel pour les images et les cadres <a class="header-anchor" href="#fournir-un-equivalent-textuel-pour-les-images-et-les-cadres" id="heading-1309" aria-labelledby="heading-1309">#</a></h2>
+<h2 id="fournir-un-equivalent-textuel-pour-les-images-et-les-cadres" class="h2-focus">Fournir un équivalent textuel pour les images et les cadres <a class="header-anchor" href="#fournir-un-equivalent-textuel-pour-les-images-et-les-cadres" id="heading-1293" aria-labelledby="heading-1293">#</a></h2>
 <p><strong>Cible :</strong> tout le monde, et en particulier les personnes déficientes visuelles ou cognitives.<br>
 <strong>Quand :</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description :</strong></p>
@@ -289,7 +289,7 @@
 <li>Pour les images cliquables : préciser la fonction / la cible du lien dans l’attribut <code>alt</code>.</li>
 <li>Pour les images porteuses d’information : mettre un <code>alt</code> décrivant l’information contenue dans l’image.</li>
 <li>Pour les images contenant du texte : mettre un attribut <code>alt</code> reprenant au moins le texte de l’image.</li>
-<li>Pour les images décoratives : mettre un attribut <code>alt</code> vide.</li>
+<li>Pour les images décoratives : vérifier que l'attribut <code>alt</code> est vide ou nul (technique privilégiée), ou que l'image porte un <code>role='presentation'</code> ou <code>'none'</code> ou encore un attribut <code>aria-hidden='true'</code>.</li>
 <li>Pour les images dont le contenu du <code>alt</code> serait trop long (schémas, graphes…), mettre à proximité de l’image à décrire, sa description sous forme de texte dans la page ou, un lien pointant vers une page <abbr>HTML</abbr> contenant cette description.</li>
 </ul>
 <p>Mettre un attribut <code>title</code> décrivant le contenu et/ou la fonction de toute <code>frame</code> ou <code>iframe</code>. Si la <code>frame</code> ou <code>iframe</code> ne porte pas d’information pour l’utilisateur (purement technique), la rendre invisible cf. exemple: <a href="../../exemples-de-composants/iframes-techniques/">Masquer les iframe techniques de manière accessible</a>. Dans ce cas pas besoin de <code>title</code>.</p>
@@ -320,7 +320,7 @@
 Dans l’exemple ci-dessous, le pictogramme à droite n’a pas besoin d’être vocalisé puisque le texte situé à gauche apporte déjà l’information.<br>
 Renseigner l’attribut <code>alt</code> dans ce cas apporterait une information redondante.</p>
 <p><img src="../../images/service-24.png" alt="exemple d’image décorative" class="img-fluid"></p>
-<pre><code class="language-html">&lt;h3&gt;Le service 24h garanti&lt;/h3&gt;  
+<pre><code class="language-html">&lt;h3&gt;Le service 24h garanti&lt;/h3&gt;
 &lt;img src=&quot;service-24.png&quot; alt=&quot;&quot;&gt;
 </code></pre>
 <p><strong>Outils :</strong><br>
@@ -330,7 +330,7 @@ L'extension <a href="https://chrispederick.com/work/web-developer/" lang="en">We
 <li><a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a></li>
 <li><a lang="en" href="https://www.w3.org/WAI/WCAG22/Understanding/images-of-text">1.4.5 Images of text</a></li>
 </ul>
-<h2 id="rendre-accessible-les-pistes-audio-ou-video" class="h2-focus">Rendre accessible les pistes audio ou vidéo <a class="header-anchor" href="#rendre-accessible-les-pistes-audio-ou-video" id="heading-1310" aria-labelledby="heading-1310">#</a></h2>
+<h2 id="rendre-accessible-les-pistes-audio-ou-video" class="h2-focus">Rendre accessible les pistes audio ou vidéo <a class="header-anchor" href="#rendre-accessible-les-pistes-audio-ou-video" id="heading-1294" aria-labelledby="heading-1294">#</a></h2>
 <p><strong>Cible :</strong> tout le monde, et en particulier les personnes déficientes visuelles, cognitives et auditives et celles qui maîtrisent mal le français.<br>
 <strong>Quand :</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description :</strong></p>
@@ -360,7 +360,7 @@ L'extension <a href="https://chrispederick.com/work/web-developer/" lang="en">We
 <li><a lang="en" href="https://www.w3.org/TR/WCAG22/#pause-stop-hide">2.2.2 Pause, Stop, Hide</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG22/#three-flashes-or-below-threshold">2.3.1 Three Flashes or Below Threshold</a></li>
 </ul>
-<h2 id="eviter-les-captcha" class="h2-focus">Éviter les captcha <a class="header-anchor" href="#eviter-les-captcha" id="heading-1311" aria-labelledby="heading-1311">#</a></h2>
+<h2 id="eviter-les-captcha" class="h2-focus">Éviter les captcha <a class="header-anchor" href="#eviter-les-captcha" id="heading-1295" aria-labelledby="heading-1295">#</a></h2>
 <p><strong>Cible :</strong> tout le monde en particulier, les personnes déficientes visuelles.<br>
 <strong>Quand :</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description :</strong><br>
