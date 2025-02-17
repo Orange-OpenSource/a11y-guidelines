@@ -41,7 +41,7 @@ For audio and / or video content, a textual transcription (scripts) and / or sub
   - or an audio track equivalent to the content of the video
 - Pre-recorded video (with or without audio):
   - textual transcription at minimum
-  - Relevant and correctly synchronized audio description if necessary
+  - relevant and correctly synchronized audio description if necessary
 - Pre-recorded video with audio: transcribed subtitles showing all the content
 - Live video with audio: transcribed subtitles showing all the content
 
