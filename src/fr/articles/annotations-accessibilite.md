@@ -40,7 +40,7 @@ Quel que soit le logiciel utilisé, il est simple d'annoter des maquettes. Par e
 
 ## Ressources
 
-Il existe des outils voire des plugins spécifiques pour les principaux outils de maquettage/design&nbsp; : Figma, Scketch, Zeplin.
+Il existe des outils voire des plugins spécifiques pour les principaux outils de maquettage/design&nbsp; : Figma, Sketch, Zeplin.
 Mais pour tout autre outil, vous pouvez aussi vous appuyer sur des kits d'annotation qui sont des icônes spécifiques utilisables dans tous les environements.
 
 Voici quelques ressources qui vous permettront d'approfondir le sujet&nbsp;: 
