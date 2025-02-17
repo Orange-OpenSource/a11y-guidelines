@@ -22,7 +22,7 @@ All `img` tags should have an `alt` attribute with a relevant description:
 - For clickable images: specify the function&nbsp;/ link target in the `alt` attribute,
 - For images carrying information: add an `alt` attribute describing the information contained in the image
 - For images containing text: add an `alt` attribute containing at least the text from the image,
-- For decorative images: add an <code>alt</code> attribute and keep it null or empty, or s a <code>role='presentation'</code> or <code>'none'</code> or an <code>aria-hidden='true'</code> attribute,
+- For decorative images: add an <code>alt</code> attribute and keep it null or empty, or a <code>role='presentation'</code> or <code>'none'</code> or an <code>aria-hidden='true'</code> attribute,
 - For images having `alt` attributes that won’t be convenient when the text is too long (diagrams, graphs…), add a describing text close to the image, or add a link pointing to an <abbr>HTML</abbr> page with the description.
 
 Add a `title` attribute to describe all `frame` or `iframe` content or function. If a `frame` or `iframe` doesn't convey information for the user (only technical), render it invisible, see example: [Hidden accessible frames technics](../../components-examples/technical-iframe/)
