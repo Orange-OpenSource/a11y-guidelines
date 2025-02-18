@@ -12,7 +12,7 @@ abstract: "Layout, web accessibility design recommandations"
 
 ## Relative text size and responsive design
 
-**Target:** everyone and especially people with visual impairments, using a device outdoors and elderly people.  
+**Target:** everyone and especially people with visual impairments, using a device outdoors and elderly people.
 **When:** during development.
 
 **Description:**
@@ -21,31 +21,31 @@ The text size should be able to be doubled (set the zoom, text only, to 200% in 
 In addition, we must ensure to make responsive web design, so provide different displays in screen type widths (break points) before the development phase.
 
 Moreover, some design choices may or may not facilitate the implementation of this criterion during development, so it is important to think about it from the start.
-**Example:**    
-The screenshot below shows a page with the zoom set to 100%.  
-![screenshot showing a page zoomed to 100%](../../images/zoom.png)    
-  
-&nbsp;  
-**Do:**  
-Zoom set to 200%.  
-![screenshot with 200% zoom and readable text](../../images/zoom-ok.png)    
-  
-&nbsp;  
-**Don’t:**  
-Zoom set to 200%. In this case the height of the text container did not resized according to text size.  
-![screenshot with 200% zoom and truncated text](../../images/zoom-ko.png)  
+**Example:**
+The screenshot below shows a page with the zoom set to 100%.
+![screenshot showing a page zoomed to 100%](../../images/zoom.png)
+
+&nbsp;
+**Do:**
+Zoom set to 200%.
+![screenshot with 200% zoom and readable text](../../images/zoom-ok.png)
+
+&nbsp;
+**Don’t:**
+Zoom set to 200%. In this case the height of the text container did not resized according to text size.
+![screenshot with 200% zoom and truncated text](../../images/zoom-ko.png)
 
 
 
 
 ## Allow text spacing
 
-**Target:** Everyone, especially people with visual and dyslexic disabilities.  
+**Target:** Everyone, especially people with visual and dyslexic disabilities.
 **When:** as of graphic design and during development.
 
 Even if it is during the development phase that we will ensure the validity of this criterion, it is important, from the design phase, to think about the height of the lines and the spacing of the paragraphs and text. It is generally accepted that a line height (line-height) of 1.5 makes it possible to obtain a good readability of the text, for example an article in English entitled: <a href="https://www.invisionapp.com/blog/line-spacing/"> Why you should go big with line spacing </a>.
 
-**Description:**  
+**Description:**
 If the user applies the following settings, the text must remain legible (no truncated content, superimposed):
 
 - The height of the lines must be able to be adjusted to 1.5 times minimum the size of the font.
@@ -66,7 +66,7 @@ For information, the criteria mentioned above is like applying the following CSS
   }
 </code></pre>
 
-**Bookmarklet:**  
+**Bookmarklet:**
 To make the test easier, you can use the following bookmarklet that will apply these styles to your browser's current page (bookmarklet to slide in your bookmarks bar):  <a href="javascript:s%20=%20document.createElement(%22style%22)%3Bs.setAttribute(%22type%22%2C%22text%2Fcss%22)%3Bt%3Ddocument.createTextNode(%22*%20%7Bline-height%3A%201.5!important%3B%20letter-spacing%3A.12em!important%3B%20word-spacing%3A%20.16em%20!important%3B%7D%20p%7Bmargin-bottom%3A%202em!important%3B%20%7D%22)%3Bs.appendChild(t)%3Bh%20%3D%20document.getElementsByTagName(%22head%22)%5B0%5D%3Bh.appendChild(s)%3Bvoid(0)%3B">Text spacing</a>
 
 
@@ -78,7 +78,7 @@ To make the test easier, you can use the following bookmarklet that will apply t
 
 **When:** when designing.
 
-**Description:**  
+**Description:**
 Provide ways to identify and visually distinguish the different parts of the page and ensure the consistency of these regions or groupings in all pages.
 
 **Checklist:**
@@ -104,10 +104,10 @@ It is very difficult to associate the themes ("par region", "par genre"...) and 
 
 ## Minimum target size
 
-**Target:** Everyone, especially people with visual impairments and those with motor or mobility disabilities.  
+**Target:** Everyone, especially people with visual impairments and those with motor or mobility disabilities.
 **When:** during design and development.
 
-**Description:**  
+**Description:**
 - Interactive elements must have a sufficiently large target size or be adequately spaced to be easily activated, reducing the risk of errors.
 - Interactive elements must measure at least 24 pixels height by 24 pixels width. It is essential to consider the entire click or touch area, not just the text or image.
 
@@ -134,3 +134,14 @@ Help users to easily select interactive elements, even with motor difficulties a
 
 **WCAG Reference**
 <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">2.5.8 Target Size (Minimum)</a>
+
+## Give access to the content regardless of the orientation of the screen
+
+**Target:** Everyone in particular, people with motor or visual disability and mobility.
+**When:** during design and development.
+
+**Description:**
+Access to the content must not depend on the orientation of the screen (portrait and landscape) unless a specific display orientation is essential (e.g. serious game).
+
+**<abbr>WCAG</abbr> reference:**
+- <a href="https://www.w3.org/TR/WCAG22/#orientation">1.3.4 Orientation</a>

@@ -159,7 +159,7 @@
 	"tests": ["Check images with informative text"],
 	"verifier": ["Check that the text in the form of an image cannot be formatted via CSS"],
 	"resultat": ["All informative text, where possible, is present in the code and formatted via CSS"],
-	"exception": "Essential images (logo, captcha, brand, etc.)",
+	"exception": "Essential images (logo, CAPTCHA, brand, etc.)",
 	"raccourcis": "",
 	"profils": ["Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
 	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/non-textual-content/#set-a-text-alternatives-for-images-and-frames",
@@ -210,11 +210,11 @@
 	"IDorigin": "testWebID-14"
 }, {
 	"themes": "Non-text content",
-	"title": "Avoid captchas",
+	"title": "Avoid CAPTCHAS",
 	"type": ["Manual test"],
-	"tests": ["Inspect the captcha"],
-	"verifier": ["Verify that for any visual-only or sound-only captcha, at least one of the alternatives below is given: <ul><li>audio + visual captcha </li><li> logical tests (question whose answer is obvious, simple mathematical test...)</li><li>There is another solution to access the functionality secured by CAPTCHA</li></ul>"],
-	"resultat": ["The page proposes at least one of the solutions below: <ul><li>captcha audio + visual</li><li>captcha audio or visual + logical tests (question with obvious answer, simple mathematical test...)</li></ul>"],
+	"tests": ["Inspect the CAPTCHA"],
+	"verifier": ["Verify that for any visual-only or sound-only CAPTCHA, at least one of the alternatives below is given: <ul><li>audio + visual CAPTCHA </li><li> logical tests (question whose answer is obvious, simple mathematical test...)</li><li>There is another solution to access the functionality secured by CAPTCHA</li></ul>"],
+	"resultat": ["The page proposes at least one of the solutions below: <ul><li>CAPTCHA audio + visual</li><li>CAPTCHA audio or visual + logical tests (question with obvious answer, simple mathematical test...)</li></ul>"],
 	"exception": "",
 	"raccourcis": "",
 	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/non-textual-content/#avoid-captcha",
@@ -697,6 +697,20 @@
 	"ID": "testWebID-46",
 	"IDorigin": "testWebID-46"
 }, {
+	"themes": "Layout",
+	"title": "Give access to content regardless of screen orientation",
+	"type": ["Manual test - Mobile-based"],
+	"tests": ["View content in portrait orientation", "View content in landscape orientation"],
+	"verifier": ["Verify that content and functionality are available in both orientations (no loss of information, no truncated elements)"],
+	"resultat": ["The site's content is usable and readable whatever the orientation of the screen"],
+	"exception": "",
+	"raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/touch-and-interactions/#give-access-to-the-content-regardless-of-the-orientation-of-the-screen",
+	"profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
+	"wcag": ["1.3.4"],
+	"ID": "testWebID-59",
+	"IDorigin": "testWebID-59"
+}, {
 	"themes": "Forms",
 	"title": "Make sure an accessible name is associated with each form field",
 	"type": ["aXe"],
@@ -893,20 +907,6 @@
 	"wcag": ["2.5.7"],
 	"ID": "",
 	"IDorigin": ""
-}, {
-	"themes": "Touch and interactions",
-	"title": "Give access to content regardless of screen orientation",
-	"type": ["Manual test - Mobile-based"],
-	"tests": ["View content in portrait orientation", "View content in landscape orientation"],
-	"verifier": ["Verify that content and functionality are available in both orientations (no loss of information, no truncated elements)"],
-	"resultat": ["The site's content is usable and readable whatever the orientation of the screen"],
-	"exception": "",
-	"raccourcis": "",
-	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/touch-and-interactions/#give-access-to-the-content-regardless-of-the-orientation-of-the-screen",
-	"profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
-	"wcag": ["1.3.4"],
-	"ID": "testWebID-59",
-	"IDorigin": "testWebID-59"
 }, {
 	"themes": "Assistive technologies",
 	"title": "Make sure the components are understandable and usable with screen readers ",

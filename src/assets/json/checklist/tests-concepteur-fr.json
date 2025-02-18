@@ -124,18 +124,18 @@
   },
   {
     "themes": "Contenu non-textuel",
-    "title": "Éviter les captchas",
+    "title": "Éviter les CAPTCHAS",
     "type": [],
     "tests": [
-      "Examiner le captcha"
+      "Examiner le CAPTCHA"
     ],
     "verifier": [
-      "Pour résoudre le captcha, les utilisateurs ont le choix entre un système audio ou visuel",
-      "Si le captcha est uniquement audio ou uniquement visuel, une alternative est présente sous la forme d'un test logique (une question dont la réponse est évidente, un test mathématique simple… ). A défaut, une autre solution d'accès à la fonctionnalité sécurisée par le captcha est proposée"
+      "Pour résoudre le CAPTCHA, les utilisateurs ont le choix entre un système audio ou visuel",
+      "Si le CAPTCHA est uniquement audio ou uniquement visuel, une alternative est présente sous la forme d'un test logique (une question dont la réponse est évidente, un test mathématique simple… ). A défaut, une autre solution d'accès à la fonctionnalité sécurisée par le CAPTCHA est proposée"
     ],
     "resultat": [
-      "Les utilisateurs privés de l'information visuelle doivent pouvoir résoudre le captcha par un système audio ; de la même façon ceux privés de l'information auditive doivent pouvoir le résoudre visuellement",
-      "Les captchas reposant sur un seul système de résolution doivent proposer une alternative pour permettre au plus grand nombre d'utilisateurs d'y avoir accès"
+      "Les utilisateurs privés de l'information visuelle doivent pouvoir résoudre le CAPTCHA par un système audio ; de la même façon ceux privés de l'information auditive doivent pouvoir le résoudre visuellement",
+      "Les CAPTCHAS reposant sur un seul système de résolution doivent proposer une alternative pour permettre au plus grand nombre d'utilisateurs d'y avoir accès"
     ],
     "exception": "",
     "raccourcis": "",
@@ -501,6 +501,23 @@
     "profils": ["Concepteur"]
   },
   {
+    "themes":"Tactile et interactions",
+    "title":"Permettre à l'utilisateur de choisir l'orientation de l'écran",
+    "type": [],
+    "tests": [
+      "Examiner les wireframes et les maquettes graphiques"
+    ],
+    "verifier": [
+      "La conception de tous les écrans a été pensée pour permettre une interaction en mode portrait et en mode paysage"
+    ],
+    "resultat": [
+      "Certains utilisateurs sont obligés de fixer le mode de consultation, mode portrait ou mode paysage uniquement (tablette fixée sur un fauteuil roulant par exemple). Il est donc important que ces utilisateurs puissent consulter toutes les informations et utiliser toutes les fonctionnalités dans les 2 orientations"
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
     "themes":"Formulaires",
     "title":"Faciliter la complétion des formulaires ",
     "type": [],
@@ -566,7 +583,7 @@
     "tests": [
       "Cas 1 - Pour chaque champ de formulaire qui attend la saisie d'un mot de passe ou d'un code : faire le parcours d'authentification.",
       "Cas 2 - Pour chaque parcours d'authentification à double facteur, faire le parcours d'authentification.",
-      "Cas 3 - Pour chaque parcours d'authentification dont l'une des étapes est un captcha, s'assurer qu'une alternative qui ne repose pas sur un test cognitif est proposée."
+      "Cas 3 - Pour chaque parcours d'authentification dont l'une des étapes est un CAPTCHA, s'assurer qu'une alternative qui ne repose pas sur un test cognitif est proposée."
     ],
     "verifier": [
       "Cas 1 - Vérifier que le champ de saisie permet au choix : <ul><li>à l'utilisateur de coller le mot de passe en entier ou le code de vérification</li><li>le remplissage automatique des champs</li></ul>dans le format initial de création de ce mot de passe ou code de vérification (exemple : respect des majuscules et minuscules).",
@@ -613,23 +630,6 @@
       "Définition glisser-déposer : Action d'attraper un élément et de le déplacer sans relâcher le bouton de la souris. Certains utilisateurs ont des difficultés à réaliser les mouvements de glisser-déposer, par exemple les utilisateurs de lecteurs d'écrans ou les personnes ayant des troubles moteurs qui n'arriveront pas à effectuer l'action de glisser de manière précise. Pour être accessible, ce type d'action doit pouvoir être également réalisée par une alternative ne nécessitant pas de mouvement de glisser. "
     ],
     "exception": "<ul><li>L'action de glisser/déposer est essentielle (jeux de dextérité, par exemple)</li><li>La fonctionnalité est gérée par l'agent utilisateur et non modifiée</li></ul>",
-    "raccourcis": "",
-    "profils": ["Concepteur"]
-  },
-  {
-    "themes":"Tactile et interactions",
-    "title":"Permettre à l'utilisateur de choisir l'orientation de l'écran",
-    "type": [],
-    "tests": [
-      "Examiner les wireframes et les maquettes graphiques"
-    ],
-    "verifier": [
-      "La conception de tous les écrans a été pensée pour permettre une interaction en mode portrait et en mode paysage"
-    ],
-    "resultat": [
-      "Certains utilisateurs sont obligés de fixer le mode de consultation, mode portrait ou mode paysage uniquement (tablette fixée sur un fauteuil roulant par exemple). Il est donc important que ces utilisateurs puissent consulter toutes les informations et utiliser toutes les fonctionnalités dans les 2 orientations"
-    ],
-    "exception": "",
     "raccourcis": "",
     "profils": ["Concepteur"]
   }
