@@ -55,6 +55,9 @@ module.exports = function (eleventyConfig) {
     })
 
     eleventyConfig.addShortcode('localizedDate', function (date = null, locale = null) {
+
+        const dateObject = date instanceof Date ? date : new Date(date);
+
         if (date === null) {
             throw new Error('[localizedDate]: no date provided')
         }
@@ -69,16 +72,14 @@ module.exports = function (eleventyConfig) {
             year: 'numeric'
         }
 
-        return new Intl.DateTimeFormat(locale, options).format(date)
+        return new Intl.DateTimeFormat(locale, options).format(dateObject)
     })
 
-    eleventyConfig.addFilter("formatDate", function(date) {
-        return new Date(date).toLocaleDateString('fr-FR', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-        });
-    })
+    eleventyConfig.addFilter('toISOString', function(date) {
+        if (!date) return '';
+        const dateObject = date instanceof Date ? date : new Date(date);
+        return dateObject.toISOString();
+    });
 
     /**
      * @see https://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference#answer-6394168
@@ -230,7 +231,16 @@ module.exports = function (eleventyConfig) {
     // Create collections & dynamically suffix their name by the locale key
     for (let locale in collections) {
         collections[locale].forEach(collection => {
-            eleventyConfig.addCollection(`${collection.name}_${locale}`, c => c.getFilteredByGlob(collection.glob))
+            eleventyConfig.addCollection(`${collection.name}_${locale}`, c =>
+                c.getFilteredByGlob(collection.glob)
+                    .sort((a, b) => {
+                        const dateA = a.data.updateDate || a.date;
+                        const dateB = b.data.updateDate || b.date;
+                        if (!dateA) return 1;
+                        if (!dateB) return -1;
+                        return new Date(dateA).getTime() - new Date(dateB).getTime();
+                    })
+            )
         })
     }
 
