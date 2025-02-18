@@ -32,6 +32,9 @@ module.exports = {
       label: 'Filter by theme ',
       all: "All"
     },
+    articleUpdate: {
+      label: 'This article was updated on'
+    },
     tags: {
       componentExample: 'Component example',
       list : "Associated themes:",
@@ -108,6 +111,9 @@ module.exports = {
     filtersBar: {
       label: 'Filtrer par thématique',
       all: 'Tout'
+    },
+    articleUpdate: {
+      label: 'Cet article a été mis à jour le'
     },
     tags: {
       componentExample: 'Exemple de composant',

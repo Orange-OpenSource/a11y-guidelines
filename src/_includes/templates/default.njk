@@ -38,7 +38,7 @@
             {% endif %}
             <time class="text-muted" datetime="{{ page.date.toISOString() }}">{% localizedDate page.date, locale %}</time>
             {% if updateDate %}
-              <p class="text-muted">Cet article a été mis à jour le {{ updateDate | formatDate }}</p
+              <p class="text-muted">{{ 'articleUpdate.label' | translate }} {{ updateDate | formatDate }}</p
             {% endif %}
           {% endif %}
           <div class="mt-4">
