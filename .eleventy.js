@@ -72,6 +72,14 @@ module.exports = function (eleventyConfig) {
         return new Intl.DateTimeFormat(locale, options).format(date)
     })
 
+    eleventyConfig.addFilter("formatDate", function(date) {
+        return new Date(date).toLocaleDateString('fr-FR', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+        });
+    })
+
     /**
      * @see https://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference#answer-6394168
      */
