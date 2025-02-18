@@ -33,7 +33,7 @@ module.exports = {
       all: "All"
     },
     articleUpdate: {
-      label: 'This article was updated on'
+      label: 'Update of the article from'
     },
     tags: {
       componentExample: 'Component example',
@@ -113,7 +113,7 @@ module.exports = {
       all: 'Tout'
     },
     articleUpdate: {
-      label: 'Cet article a été mis à jour le'
+      label: 'Mise à jour de l\'article du'
     },
     tags: {
       componentExample: 'Exemple de composant',

@@ -36,15 +36,16 @@
               {% endfor -%}
               </ul>
             {% endif %}
-            <time class="text-muted" datetime="{{ (updatedDate or page.date) | toISOString }}">
-              {% if updatedDate %}
-                {% localizedDate updatedDate, locale %}
-              {% else %}
+            {% if updateDate %}
+              <time class="text-muted d-block" datetime="{{ updateDate | toISOString }}">
+                {% localizedDate updateDate, locale %}
+              </time>
+              <time class="text-muted d-block" datetime="{{ page.date | toISOString }}">
+                {{ 'articleUpdate.label' | translate }}
                 {% localizedDate page.date, locale %}
-              {% endif %}
-            </time>
-            {% if updatedDate %}
-              <time class="text-muted" datetime="{{ page.date | toISOString }}">{{ 'articleUpdate.label' | translate }} {% localizedDate page.date, locale %}</time>
+              </time>
+            {% else %}
+              <time class="text-muted" datetime="{{ page.date.toISOString() }}">{% localizedDate page.date, locale  %}</time>
             {% endif %}
           {% endif %}
           <div class="mt-4">
