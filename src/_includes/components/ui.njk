@@ -84,13 +84,13 @@
         </ul>
       {% endif %}
       {% if updateDate %}
-        <p class="text-muted" >
+        <p class="text-muted mb-0">
           <span class="visually-hidden">{{ 'releaseDate.label' | translate }}</span>
           <time datetime="{{ updateDate | toISOString }}">
             {% localizedDate updateDate, locale %}
           </time>
         </p>
-        <p class="text-muted" >
+        <p class="text-muted mb-0">
           {{ 'articleUpdate.label' | translate }}
           <time datetime="{{ post.date | toISOString }}">
             {% localizedDate post.date, locale %}
