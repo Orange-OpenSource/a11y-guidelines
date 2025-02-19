@@ -8,9 +8,6 @@ tags:
   - web
   - intermediate
 ---
-
-Mise à jour de l'article du 01 Janvier 2021.
-
 Voici quelques recommandations techniques pour vous aider à intégrer des images SVG accessibles.
 
 Important : quelle que soit la solution retenue, le support navigateurs/aides techniques évoluant très rapidement, pensez à tester vos implémentations sur les configurations les plus utilisées par vos utilisateurs.
