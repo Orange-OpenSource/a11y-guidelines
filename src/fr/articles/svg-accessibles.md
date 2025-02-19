@@ -2,7 +2,8 @@
 title: "L'accessibilité des images SVG"
 abstract: "Comment rendre accessibles les images SVG"
 titleBeforeTag: true
-date: "2025-02-28"
+date: "2021-01-01"
+updateDate: "2025-02-28"
 tags:
   - web
   - intermediate
