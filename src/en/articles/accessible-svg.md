@@ -2,15 +2,12 @@
 title: "SVG images accessibility"
 abstract: "How to make SVG images accessible"
 titleBeforeTag: true
-date: "2025-02-28"
+date: "2021-01-01"
+updateDate: "2025-02-28"
 tags:
   - web
   - intermediate
 ---
-
-Update of article from January 21, 2021.
-
-
 Here are some ideas knowing that the support for browsers and assistive technologies evolves very quickly.
 
 Important: Whatever solution is chosen, as browser support and assistive technologies evolve rapidly, make sure to test your implementations on the configurations most commonly used by your users.
