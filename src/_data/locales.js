@@ -35,6 +35,9 @@ module.exports = {
     articleUpdate: {
       label: 'Update of the article from'
     },
+    releaseDate: {
+      label: 'Publication date'
+    },
     tags: {
       componentExample: 'Component example',
       list : "Associated themes:",
@@ -114,6 +117,9 @@ module.exports = {
     },
     articleUpdate: {
       label: 'Mise à jour de l\'article du'
+    },
+    releaseDate: {
+      label: 'Date de parution'
     },
     tags: {
       componentExample: 'Exemple de composant',
