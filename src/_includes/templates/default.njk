@@ -39,15 +39,15 @@
             {% if updateDate %}
               <p class="text-muted" >
                 <span class="visually-hidden">{{ 'releaseDate.label' | translate }}</span>
-                <timedatetime="{{ updateDate | toISOString }}">
+                <time datetime="{{ updateDate | toISOString }}">
                   {% localizedDate updateDate, locale %}
-                </timedatetime=>
+                </time>
               </p>
               <p class="text-muted" >
                 {{ 'articleUpdate.label' | translate }}
-                <timedatetime="{{ page.date | toISOString }}">
+                <time datetime="{{ page.date | toISOString }}">
                   {% localizedDate page.date, locale %}
-                </timedatetime=>
+                </time>
               </p>
             {% else %}
               <time class="text-muted" datetime="{{ page.date.toISOString() }}">{% localizedDate page.date, locale  %}</time>
