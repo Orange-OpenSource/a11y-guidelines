@@ -78,14 +78,3 @@ The dragging movement functionality is:
 
 **<abbr>WCAG</abbr> reference:**  
 - <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements">2.5.7 Dragging movements</a>
-
-## Give access to the content regardless of the orientation of the screen
-
-**Target:** Everyone, especially people with motor or visual disabilities and mobility.  
-**When:** during design and development.
-
-**Description:**  
-Access to the content must not depend on the orientation of the screen (portrait and landscape) unless a specific display orientation is essential (e.g. serious game).
-
-**<abbr>WCAG</abbr> reference:**  
-- <a href="https://www.w3.org/TR/WCAG22/#orientation">1.3.4 Orientation</a>

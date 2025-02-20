@@ -125,7 +125,7 @@
 	"ID": "testMobID-11",
 	"IDorigin": "testMobID-11"
 }, {
-	"themes": "Tactile et interactions",
+	"themes": "Mise en page",
 	"title": "Donner accès au contenu quelle que soit l'orientation de l'écran",
 	"type": ["Test manuel"],
 	"tests": ["Consulter le contenu en orientation portrait.", "Consulter le contenu en orientation paysage."],

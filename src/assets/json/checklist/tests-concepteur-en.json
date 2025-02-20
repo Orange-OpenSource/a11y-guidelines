@@ -501,6 +501,23 @@
     "profils": ["Designer"]
   },
   {
+    "themes": "Layout",
+    "title": "Allow the user to choose the orientation of the screen",
+    "type": [],
+    "tests": [
+      "Examine wireframes and graphic mockups"
+    ],
+    "verifier": [
+      "The layout of all screens has been designed to allow interaction in portrait and landscape mode"
+    ],
+    "resultat": [
+      "Some users are forced to display their screen in portrait mode or landscape mode only (tablet mounted on a wheelchair for example). It is therefore important that these users can view all the information and use all the features in the 2 orientations "
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Designer"]
+  },
+  {
     "themes": "Forms",
     "title": "Facilitate the completion of forms",
     "type": [],
@@ -613,23 +630,6 @@
       "Dragging movement definition: Action of grabbing an element and moving it without releasing the mouse button. Some users have difficulties performing drag and drop movements. For example, screen reader users or people with motor disabilities will not be able to perform the dragging action precisely. To be accessible, there must be an alternative to this type of action that does not require a dragging movement. "
     ],
     "exception": "The dragging movement functionality is: <ul><li>essential (dexterity game)</li><li>controlled by the user agent and not modified</li></ul>",
-    "raccourcis": "",
-    "profils": ["Designer"]
-  },
-  {
-    "themes": "Touch and interactions",
-    "title": "Allow the user to choose the orientation of the screen",
-    "type": [],
-    "tests": [
-      "Examine wireframes and graphic mockups"
-    ],
-    "verifier": [
-      "The layout of all screens has been designed to allow interaction in portrait and landscape mode"
-    ],
-    "resultat": [
-      "Some users are forced to display their screen in portrait mode or landscape mode only (tablet mounted on a wheelchair for example). It is therefore important that these users can view all the information and use all the features in the 2 orientations "
-    ],
-    "exception": "",
     "raccourcis": "",
     "profils": ["Designer"]
   }

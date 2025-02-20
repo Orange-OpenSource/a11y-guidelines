@@ -63,6 +63,7 @@
 <ol class="list-unstyled" id="list_article">
 {%- for post in posts %}{% if page.url != post.url -%}
   {% set tags = post.data.tags %}
+  {% set updateDate = post.data.updateDate %}
 
   <li class="border-bottom border-light py-3"{% if tags %} data-tags="{{ tags | join(";") }}"{% endif %}>
     <article>
@@ -82,8 +83,23 @@
           {%- endfor -%}
         </ul>
       {% endif %}
-      {% if displayDate == true and post.date %}
-        <time class="text-muted" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale  %}</time>
+      {% if updateDate %}
+        <p class="text-muted mb-0">
+          <span class="visually-hidden">{{ 'releaseDate.label' | translate }}</span>
+          <time datetime="{{ updateDate | toISOString }}">
+            {% localizedDate updateDate, locale %}
+          </time>
+        </p>
+        <p class="text-muted mb-0">
+          {{ 'articleUpdate.label' | translate }}
+          <time datetime="{{ post.date | toISOString }}">
+            {% localizedDate post.date, locale %}
+          </time>
+        </p>
+      {% else %}
+        {% if displayDate == true and post.date %}
+          <time class="text-muted d-block" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale  %}</time>
+        {% endif %}
       {% endif %}
       {% if post.data.abstract %}
         <p class="my-2">{{ post.data.abstract }}</p>
@@ -131,8 +147,8 @@
         {%- for heading in headings -%}
           {%- if heading.level > level %}
             <ul>
-          {%- elseif first == false -%}            
-            </li>          
+          {%- elseif first == false -%}
+            </li>
           {%- endif -%}
 
           {%- if heading.level < level %}
@@ -144,7 +160,7 @@
 
           <li class="nav-item position-relative">
             <a href="#{{ heading.id }}" class="nav-link text-muted">{{ heading.text }}</a>
-          
+
           {%- set level = heading.level -%}
           {%- set first = false -%}
         {%- endfor -%}

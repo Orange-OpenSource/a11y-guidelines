@@ -697,6 +697,20 @@
 	"ID": "testWebID-46",
 	"IDorigin": "testWebID-46"
 }, {
+	"themes": "Layout",
+	"title": "Give access to content regardless of screen orientation",
+	"type": ["Manual test - Mobile-based"],
+	"tests": ["View content in portrait orientation", "View content in landscape orientation"],
+	"verifier": ["Verify that content and functionality are available in both orientations (no loss of information, no truncated elements)"],
+	"resultat": ["The site's content is usable and readable whatever the orientation of the screen"],
+	"exception": "",
+	"raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/touch-and-interactions/#give-access-to-the-content-regardless-of-the-orientation-of-the-screen",
+	"profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
+	"wcag": ["1.3.4"],
+	"ID": "testWebID-59",
+	"IDorigin": "testWebID-59"
+}, {
 	"themes": "Forms",
 	"title": "Make sure an accessible name is associated with each form field",
 	"type": ["aXe"],
@@ -893,20 +907,6 @@
 	"wcag": ["2.5.7"],
 	"ID": "",
 	"IDorigin": ""
-}, {
-	"themes": "Touch and interactions",
-	"title": "Give access to content regardless of screen orientation",
-	"type": ["Manual test - Mobile-based"],
-	"tests": ["View content in portrait orientation", "View content in landscape orientation"],
-	"verifier": ["Verify that content and functionality are available in both orientations (no loss of information, no truncated elements)"],
-	"resultat": ["The site's content is usable and readable whatever the orientation of the screen"],
-	"exception": "",
-	"raccourcis": "",
-	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/touch-and-interactions/#give-access-to-the-content-regardless-of-the-orientation-of-the-screen",
-	"profils": ["Qualifier - initial checklist", "Qualifier - advanced checklist", "Developer", "Accessibility Expert"],
-	"wcag": ["1.3.4"],
-	"ID": "testWebID-59",
-	"IDorigin": "testWebID-59"
 }, {
 	"themes": "Assistive technologies",
 	"title": "Make sure the components are understandable and usable with screen readers ",

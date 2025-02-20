@@ -28,6 +28,10 @@ body {
     line-height: 1.25;
 }
 
+strong {
+    overflow-wrap: break-word;
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
