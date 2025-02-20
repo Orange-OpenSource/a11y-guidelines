@@ -3,7 +3,7 @@ title: "Check the presence keyboard shortcuts"
 abstract: "Check the presence keyboard shortcuts"
 ---
 
-# Check the presence keyboard shortcuts
+# Check the presence of keyboard shortcuts
 
 Historically, the bookmarklet used to check keyboard shortcuts (<a href="http://3needs.org/en/testing/code/kb-shortcuts.html">character keys shortcut bookmarklet</a>) does not allow for the verification of all printable characters, particularly accented characters and non-Latin characters.
 
