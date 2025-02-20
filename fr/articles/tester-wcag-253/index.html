@@ -188,13 +188,13 @@
             
           
           <div class="mt-4">
-          <h2 id="que-signifie-le-wcag-253" class="h2-focus">Que signifie le WCAG 2.5.3 <a class="header-anchor" href="#que-signifie-le-wcag-253" id="heading-548" aria-labelledby="heading-548">#</a></h2>
-<h3 id="explication-generale">Explication générale <a class="header-anchor" href="#explication-generale" id="heading-549" aria-labelledby="heading-549">#</a></h3>
+          <h2 id="que-signifie-le-wcag-253" class="h2-focus">Que signifie le WCAG 2.5.3 <a class="header-anchor" href="#que-signifie-le-wcag-253" id="heading-538" aria-labelledby="heading-538">#</a></h2>
+<h3 id="explication-generale">Explication générale <a class="header-anchor" href="#explication-generale" id="heading-539" aria-labelledby="heading-539">#</a></h3>
 <p>Le but de <a href="https://www.w3.org/TR/WCAG22/#label-in-name">ce critère</a> est de s'assurer que si un bouton, un lien ou un autre élément d'interface contient du texte visible à l'écran, <a href="/fr/articles/le-nom-accessible-en-html/">son nom accessible</a> doit contenir au moins le même texte que celui affiché.<br>
 Cela pour garantir que les utilisateurs <a href="/fr/solutions-assistance/">d'aides techniques</a> soient capables de comprendre et d'interagir avec le composant. En effet les aides techniques s'appuient sur le nom accessible des composants. Par exemple, un utilisateur de reconnaissance vocale pourra cliquer sur un bouton simplement en prononçant son nom accessible.</p>
 <p>Il n'est pas demandé que le texte visible et le nom accessible soient identiques, mais le texte visible doit être présent dans le nom accessible, de préférence en premier.</p>
-<h3 id="exemple-concret">Exemple concret <a class="header-anchor" href="#exemple-concret" id="heading-550" aria-labelledby="heading-550">#</a></h3>
-<h4 id="nom-accessible">Nom accessible <a class="header-anchor" href="#nom-accessible" id="heading-551" aria-labelledby="heading-551">#</a></h4>
+<h3 id="exemple-concret">Exemple concret <a class="header-anchor" href="#exemple-concret" id="heading-540" aria-labelledby="heading-540">#</a></h3>
+<h4 id="nom-accessible">Nom accessible <a class="header-anchor" href="#nom-accessible" id="heading-541" aria-labelledby="heading-541">#</a></h4>
 <p>Prenons l'exemple d'un utilisateur navigant à l'aide d'un logiciel de reconnaissance vocale souhaitant saisir et soumettre un formulaire.<br>
 <img src="../images/tester-wcag-253/button_send.png" alt="bouton avec le texte envoyer" class="img-fluid"></p>
 <pre><code class="html">
@@ -209,7 +209,7 @@ Cela pour garantir que les utilisateurs <a href="/fr/solutions-assistance/">d'ai
     &lt;img src="envoyer.png" alt="Envoyer"&gt;
 &lt;/button&gt;
 </code></pre>
-<h4 id="masquage-accessible">Masquage accessible <a class="header-anchor" href="#masquage-accessible" id="heading-552" aria-labelledby="heading-552">#</a></h4>
+<h4 id="masquage-accessible">Masquage accessible <a class="header-anchor" href="#masquage-accessible" id="heading-542" aria-labelledby="heading-542">#</a></h4>
 <p>Il faut faire attention lorsqu'on utilise du <a href="/fr/web/exemples-de-composants/masquage-accessible/">masquage accessible</a>. Celui-ci ne doit pas être placé au milieu d'un intitulé affiché visuellement.</p>
 <p>Sinon il sera impossible de faire une corrélation entre le nom accessible et le texte affiché.</p>
 <p>Exemple d'erreur :</p>
@@ -217,15 +217,15 @@ Cela pour garantir que les utilisateurs <a href="/fr/solutions-assistance/">d'ai
 &lt;a href="www.orange.com" target="_blank"&gt; Ouvrir &lt;span class="visually-hidden"&gt;dans une nouvelle fenêtre &lt;/span&gt; le site d'orange &lt;/a&gt;
 </code></pre>
 <p>Si on prononce &quot;Ouvrir le site d'orange&quot;, le logiciel de reconnaissance vocale ne trouvera pas cet élément. En revanche, si l'on prononce &quot;Ouvrir dans une nouvelle fenêtre le site d'orange&quot; le lien sera activé, puisque c'est son nom accessible.</p>
-<h2 id="comment-le-tester" class="h2-focus">Comment le tester <a class="header-anchor" href="#comment-le-tester" id="heading-553" aria-labelledby="heading-553">#</a></h2>
-<h3 id="lecteur-decran">Lecteur d'écran <a class="header-anchor" href="#lecteur-decran" id="heading-554" aria-labelledby="heading-554">#</a></h3>
+<h2 id="comment-le-tester" class="h2-focus">Comment le tester <a class="header-anchor" href="#comment-le-tester" id="heading-543" aria-labelledby="heading-543">#</a></h2>
+<h3 id="lecteur-decran">Lecteur d'écran <a class="header-anchor" href="#lecteur-decran" id="heading-544" aria-labelledby="heading-544">#</a></h3>
 <p>Le lecteur d'écran vocalise les propriétés de l'élément sur lequel vous placez votre focus.<br>
 En particulier, les caractéristiques suivantes de l'élément : sa fonction (lien, bouton, texte ...), son statut et son nom accessible. Si le nom accessible que vous entendez ne correspond pas à ce qui est textuellement visible, alors le critère est considéré comme non-conforme.</p>
 <p>Vous pouvez utiliser la visionneuse de paroles du lecteur d'écran afin de retranscrire de manière textuelle les caractéristiques d'un élément. Il est donc possible de comparer le nom accessible sous forme textuelle lu par le lecteur d'écran avec le texte affiché sur le composant.</p>
 <p><img src="../images/tester-wcag-253/nvda_visionneuse.png" alt="Exemple de visionneuse de parole" class="img-fluid"></p>
-<h3 id="inspecteur-de-commande">Inspecteur de commande <a class="header-anchor" href="#inspecteur-de-commande" id="heading-555" aria-labelledby="heading-555">#</a></h3>
+<h3 id="inspecteur-de-commande">Inspecteur de commande <a class="header-anchor" href="#inspecteur-de-commande" id="heading-545" aria-labelledby="heading-545">#</a></h3>
 <p>Le moyen de vérifier le critère avec l'inspecteur de commande dépend du navigateur utilisé.</p>
-<h4 id="avec-firefox">Avec Firefox <a class="header-anchor" href="#avec-firefox" id="heading-556" aria-labelledby="heading-556">#</a></h4>
+<h4 id="avec-firefox">Avec Firefox <a class="header-anchor" href="#avec-firefox" id="heading-546" aria-labelledby="heading-546">#</a></h4>
 <ol>
   <li>Accéder à l'inspecteur de commande (<kbd>Ctrl+ Maj. + i</kbd>)</li>
   <li>Sélectionner l'onglet accessibilité</li>
@@ -233,7 +233,7 @@ En particulier, les caractéristiques suivantes de l'élément : sa fonction (li
   <li>Regarder la partie propriétés, si l'attribut <span lang="en">name</span> contient au moins le texte qui est affiché le critère est conforme</li> 
 </ol>
 <p><img src="../images/tester-wcag-253/FF_name.png" alt="Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert" class="img-fluid"></p>
-<h4 id="avec-chrome-ou-bien-edge-chronium">Avec Chrome ou bien Edge Chronium <a class="header-anchor" href="#avec-chrome-ou-bien-edge-chronium" id="heading-557" aria-labelledby="heading-557">#</a></h4>
+<h4 id="avec-chrome-ou-bien-edge-chronium">Avec Chrome ou bien Edge Chronium <a class="header-anchor" href="#avec-chrome-ou-bien-edge-chronium" id="heading-547" aria-labelledby="heading-547">#</a></h4>
 <ol>
   <li>Accéder à l'inspecteur de commande (<kbd>Ctrl+ Maj. + i</kbd>)</li>
   <li>Sélectionner l'onglet Éléments</li>
@@ -347,7 +347,7 @@ En particulier, les caractéristiques suivantes de l'élément : sa fonction (li
           'phase': 'prod'
         }];
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
-        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher","buttonAriaLabel":"Rechercher"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher sur le site","buttonAriaLabel":"Rechercher sur le site"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
     </script>
     <div hidden>Lien pour ancrage</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2025 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
