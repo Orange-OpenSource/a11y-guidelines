@@ -1,9 +1,9 @@
-<aside id="filter">
+<aside id="filter" class="zut">
   <h2>{{ 'wcagFilters.title' | translate }}</h2>
   <div id="feedback" aria-live="polite"></div>
-  <h3>{{ 'wcagFilters.profiles' | translate }}</h3>
-  <ul id="profils" class="list-unstyled"></ul>
-  <h3>{{ 'wcagFilters.tools' | translate }}</h3>
-  <ul id="types" class="list-unstyled"></ul>
+  <h3 id="profilesFilter">{{ 'wcagFilters.profiles' | translate }}</h3>
+  <ul id="profils" class="list-unstyled" role="group" aria-labelledby="profilesFilter"></ul>
+  <h3 id="toolsFilter">{{ 'wcagFilters.tools' | translate }}</h3>
+  <ul id="types" class="list-unstyled" role="group" aria-labelledby="toolsFilter"></ul>
   <div id="filter-footer"></div>
 </aside>
