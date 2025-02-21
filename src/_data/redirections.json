@@ -1574,5 +1574,9 @@
   {
     "old": "web/fondamentaux-nontech.html",
     "new": "/fr/web/designer"
+  },
+  {
+    "old": "web/outils/orange-uuv/",
+    "new": "/fr/web/outils/"
   }
 ]

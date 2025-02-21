@@ -501,6 +501,23 @@
     "profils": ["Concepteur"]
   },
   {
+    "themes":"Tactile et interactions",
+    "title":"Permettre à l'utilisateur de choisir l'orientation de l'écran",
+    "type": [],
+    "tests": [
+      "Examiner les wireframes et les maquettes graphiques"
+    ],
+    "verifier": [
+      "La conception de tous les écrans a été pensée pour permettre une interaction en mode portrait et en mode paysage"
+    ],
+    "resultat": [
+      "Certains utilisateurs sont obligés de fixer le mode de consultation, mode portrait ou mode paysage uniquement (tablette fixée sur un fauteuil roulant par exemple). Il est donc important que ces utilisateurs puissent consulter toutes les informations et utiliser toutes les fonctionnalités dans les 2 orientations"
+    ],
+    "exception": "",
+    "raccourcis": "",
+    "profils": ["Concepteur"]
+  },
+  {
     "themes":"Formulaires",
     "title":"Faciliter la complétion des formulaires ",
     "type": [],
@@ -613,23 +630,6 @@
       "Définition glisser-déposer : Action d'attraper un élément et de le déplacer sans relâcher le bouton de la souris. Certains utilisateurs ont des difficultés à réaliser les mouvements de glisser-déposer, par exemple les utilisateurs de lecteurs d'écrans ou les personnes ayant des troubles moteurs qui n'arriveront pas à effectuer l'action de glisser de manière précise. Pour être accessible, ce type d'action doit pouvoir être également réalisée par une alternative ne nécessitant pas de mouvement de glisser. "
     ],
     "exception": "<ul><li>L'action de glisser/déposer est essentielle (jeux de dextérité, par exemple)</li><li>La fonctionnalité est gérée par l'agent utilisateur et non modifiée</li></ul>",
-    "raccourcis": "",
-    "profils": ["Concepteur"]
-  },
-  {
-    "themes":"Tactile et interactions",
-    "title":"Permettre à l'utilisateur de choisir l'orientation de l'écran",
-    "type": [],
-    "tests": [
-      "Examiner les wireframes et les maquettes graphiques"
-    ],
-    "verifier": [
-      "La conception de tous les écrans a été pensée pour permettre une interaction en mode portrait et en mode paysage"
-    ],
-    "resultat": [
-      "Certains utilisateurs sont obligés de fixer le mode de consultation, mode portrait ou mode paysage uniquement (tablette fixée sur un fauteuil roulant par exemple). Il est donc important que ces utilisateurs puissent consulter toutes les informations et utiliser toutes les fonctionnalités dans les 2 orientations"
-    ],
-    "exception": "",
     "raccourcis": "",
     "profils": ["Concepteur"]
   }

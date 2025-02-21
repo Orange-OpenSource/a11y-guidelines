@@ -697,6 +697,20 @@
 	"ID": "testWebID-46",
 	"IDorigin": "testWebID-46"
 }, {
+	"themes": "Mise en page",
+	"title": "Donner accès au contenu quelle que soit l'orientation de l'écran",
+	"type": ["Test manuel - Basé sur le mobile"],
+	"tests": ["Consulter le contenu en orientation portrait", "Consulter le contenu en orientation paysage"],
+	"verifier": ["Vérifier que le contenu et les fonctionnalités sont disponibles dans les 2 orientations (pas de perte d'information, pas d'éléments tronqués)"],
+	"resultat": ["Le contenu du site est utilisable et lisible quelque soit l'orientation de l'écran"],
+	"exception": "",
+	"raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/tactile-et-interactions/#donner-acces-au-contenu-quelle-que-soit-lorientation-de-lecran",
+	"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
+	"wcag": ["1.3.4"],
+	"ID": "testWebID-59",
+	"IDorigin": "testWebID-59"
+}, {
 	"themes": "Formulaires",
 	"title": "S'assurer qu'un nom accessible est associé à chaque champ de formulaire",
 	"type": ["aXe"],
@@ -906,20 +920,6 @@
 	"wcag": ["2.5.7"],
 	"ID": "", 
 	"IDorigin": "" 
-}, {
-	"themes": "Tactile et interactions",
-	"title": "Donner accès au contenu quelle que soit l'orientation de l'écran",
-	"type": ["Test manuel - Basé sur le mobile"],
-	"tests": ["Consulter le contenu en orientation portrait", "Consulter le contenu en orientation paysage"],
-	"verifier": ["Vérifier que le contenu et les fonctionnalités sont disponibles dans les 2 orientations (pas de perte d'information, pas d'éléments tronqués)"],
-	"resultat": ["Le contenu du site est utilisable et lisible quelque soit l'orientation de l'écran"],
-	"exception": "",
-	"raccourcis": "",
-	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/tactile-et-interactions/#donner-acces-au-contenu-quelle-que-soit-lorientation-de-lecran",
-	"profils": ["Qualifieur - checklist initiale", "Qualifieur - checklist avancée", "Développeur", "Expert Accessibilité"],
-	"wcag": ["1.3.4"],
-	"ID": "testWebID-59",
-	"IDorigin": "testWebID-59"
 }, {
 	"themes": "Aides techniques",
 	"title": "S'assurer que tous les composants sont compréhensibles et utilisables avec les assistances techniques",
