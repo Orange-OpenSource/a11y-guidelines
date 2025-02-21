@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                 if (activeFilter) {
                     elBtnReinit.classList.remove('hidden');
-                    htmlFeedback = '<p><div><b>' + nbTests + '</b> ' + test + ' ' + translate('withCurrentFilters') + '</div> <button type="button" class="btn btn-secondary btn-sm mt-2 mb-3" id="reinitLink">' + translate('reinitFilters') + '</a></p>';
+                    htmlFeedback = '<p><b>' + nbTests + '</b> ' + test + ' ' + translate('withCurrentFilters') + '</p>';
                     elFeedback.innerHTML = htmlFeedback;
 
                     let elreinitLink = document.getElementById('reinitLink');
