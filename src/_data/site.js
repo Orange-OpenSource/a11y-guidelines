@@ -32,8 +32,8 @@ module.exports = {
   algolia: {
     en: {
       button: {
-        buttonText: 'Search',
-        buttonAriaLabel: 'Search',
+        buttonText: 'Search in entire website',
+        buttonAriaLabel: 'Search in entire website',
       },
       modal: {
         searchBox: {
@@ -74,8 +74,8 @@ module.exports = {
     },
     fr: {
       button: {
-        buttonText: 'Rechercher',
-        buttonAriaLabel: 'Rechercher',
+        buttonText: 'Rechercher sur le site',
+        buttonAriaLabel: 'Rechercher sur le site',
       },
       modal: {
         searchBox: {
@@ -116,7 +116,7 @@ module.exports = {
     }
   },
   placeHolder: {
-    en : 'Search doc',
+    en : 'Search in entire website',
     fr : 'Rechercher sur le site'
   },
   getDocSearchConfig: function (locale) {
