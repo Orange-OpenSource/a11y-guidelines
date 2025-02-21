@@ -192,7 +192,8 @@ module.exports = {
           { label: 'Réseaux sociaux', href: '/fr/contenu-et-communication/reseaux-sociaux/' },
           { label: 'Emails', href: '/fr/contenu-et-communication/emails/' },
           { label: 'Contenus audios/vidéos', href: '/fr/contenu-et-communication/composants-animes/' },
-		  { label: 'E-learning', href: '/fr/contenu-et-communication/e-learning/' }
+		      { label: 'E-learning', href: '/fr/contenu-et-communication/e-learning/' },
+          { label: 'Incontournables', href: '/fr/contenu-et-communication/incontournables/' }
         ]
       },
       { label: 'Articles', href: '/fr/articles/' },
