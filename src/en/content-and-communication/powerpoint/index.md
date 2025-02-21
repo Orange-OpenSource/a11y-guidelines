@@ -138,4 +138,4 @@ To check the accessibility of a PDF document, see the <a href="/en/content-and-c
 ## For more detailed information
 - [PowerPoint Accessibility, WebAIM](https://webaim.org/techniques/powerpoint/)
 - [Microsoft Accessibility Support website](https://support.office.com/en-us/article/Make-your-PowerPoint-presentations-accessible-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25)
-- <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" lang="fr">Créer des documents bureautiques accessibles (french)</a>, Direction interministérielle du numérique (DINUM) 
+- <a href="https://disic.github.io/guides-documents_bureautiques_accessibles/html/" hreflang="fr" lang="fr">Créer des documents bureautiques accessibles (french)</a>, Direction interministérielle du numérique (DINUM) 
