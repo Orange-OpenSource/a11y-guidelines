@@ -23,7 +23,8 @@ N’utiliser pour les tailles de police et pour les éléments conteneurs que de
 - Les éléments de formulaire doivent, eux aussi, posséder des tailles relatives pour s’agrandir.
 - Penser à rendre fluides les conteneurs des textes afin qu’ils puissent s’agrandir lorsque les textes sont zoomés.
 - Dans Firefox, faire Affichage>Zoom>Zoom texte seulement, utiliser les réglages du zoom pour atteindre 200%. Vérifier qu’il n’y a pas de perte d’information (disparition ou chevauchement de texte).
-- Le contenu doit s'adapter à la largeur de l'écran, il doit être consultable (sauf besoin particulier: carte, tableau, diagramme...) sans scroll horizontal même pour une largeur de la zone d'affichage (<span lang="en">vewport</span>) réduite à 320 pixels CSS.
+- Le contenu doit s'adapter à la largeur de l'écran, il doit être consultable (sauf besoin particulier : carte, tableau, diagramme...) sans scroll horizontal pour une zone d'affichage (<span lang="en">viewport</span>) réduite à 320 pixels CSS de large pour les contenus dont le sens de lecture est horizontal ou sans scroll vertical pour une zone d'affichage (<span lang="en">viewport</span>) réduite à 256 pixels CSS de haut pour les contenus dont le sens de lecture est vertical.
+
 Note : 320 pixels CSS est équivalent à un viewport à 1280px CSS avec un zoom global (toute la page) à 400%.
 
 ![capture d’écran réglage du zoom dans Firefox](../../images/zoom-200.png)
