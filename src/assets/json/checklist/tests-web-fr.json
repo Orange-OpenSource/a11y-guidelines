@@ -646,7 +646,7 @@
 	"type": ["Test manuel"],
 	"tests": ["Pour les contenus dont le sens de lecture est vertical : dimensionner le viewport à 320 px CSS de large ou utiliser un smartphone de cette taille", "Pour les contenus dont le sens de lecture est horizontal : dimensionner le viewport à 256 px CSS de haut ou utiliser un smartphone de cette taille"],
 	"verifier": ["Vérifier l'absence de barre de défilement horizontale pour les contenus dont le sens de lecture est vertical", "Vérifier l'absence de barre de défilement verticale pour les contenus dont le sens de lecture est horizontal"],
-	"resultat": ["Absence de barre de défilement horizontale lorsque la largeur d'affichage est fixée à 320 px CSS", "Absence de barre de défilement verticale lorsque la hauteur d'affichage est fixée à 256 px CSS"],
+	"resultat": ["Vérifier qu'il n'y a pas de perte d'information ou de fonctionnalité sans devoir défiler dans plus d'une dimension"],
 	"exception": "Certains contenus tels que des cartes, tableaux de données, jeux, etc. peuvent nécessiter un scroll à 2 dimensions, et donc la présence éventuelle d'une barre de défilement horizontale et verticale.",
 	"raccourcis": "",
 	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/mise-en-page/#utiliser-des-tailles-relatives-et-faire-du-web-adaptatif",

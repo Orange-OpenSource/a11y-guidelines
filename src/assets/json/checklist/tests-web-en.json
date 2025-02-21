@@ -645,7 +645,7 @@
 	"title": "Check that the content can be presented without loss of information or functionality and without having to scroll in more than one direction",
 	"type": ["Manual test"],
 	"tests": ["For content with a vertical scrolling direction: resize the window to 320 CSS pixels wide or use a smartphone of that size", "For content with an horizontal scrolling direction: resize the window to 256 CSS pixels high or use a smartphone of that size"],
-	"verifier": ["Check for the absence of horizontal scroll bar for content with a vertical reading direction", "Check for the absence of vertical scroll bar for content with an horizontal reading direction"],
+	"verifier": ["Check that there is no loss of information or functionality without having to scroll in more than one direction"],
 	"resultat": ["No horizontal scroll bar when the display width is set to 320 CSS pixels", "No vertical scroll bar when the display high is set to 256 CSS pixels"],
 	"exception": "Some content such as maps, data tables, games, etc. may require a 2-dimensional scroll and therefore the possible display of an horizontal and a vertical scrolling bar",
 	"raccourcis": "",
