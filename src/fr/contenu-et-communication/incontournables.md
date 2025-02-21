@@ -10,12 +10,12 @@ js:
   - /assets/test-docs.js
 ---
 
-# Documentation - Liste des critères d'accessibilité incontournables
+# Documentation - Liste des critères incontournables d'accessibilité 
 
 Ce socle de critères, destiné aux documentations et contenus de communication, permet d’éviter les principales erreurs d’accessibilité.
 Sa mise en œuvre ne permet pas d’obtenir à coup sûr des documents accessibles, mais pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité progressive.
 
-Cette grille de vérification s’adresse aux concepteurs et rédacteurs de contenus utilisés à des fins de communication interne ou externe, tels que : Word, Powerpoint, PDF, emails, contenus audio/vidéo. Il convient de l'utiliser avec les outils recommandés pour que les résultats soient fiables.
+Cette grille de vérification s’adresse aux concepteurs et rédacteurs de contenus utilisés à des fins de communication interne ou externe. Ces recommandations sont valables pour les contenus générés depuis la suite Microsoft Office (Word, Powerpoint, Outlook, Excel), les PDF et les contenus audio/vidéo. Il convient toutefois de respecter les principes décrits pour tout autre format moyen de communication électronique.
 
 
 <section id="refTests" class="accordion" aria-multiselectable="true">
