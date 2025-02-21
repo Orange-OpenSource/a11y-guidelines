@@ -29,6 +29,6 @@ The bookmarklet proposed below covers more printable characters; here is the ran
 Copy-paste the following code into your favorite browser's bookmarks:
 
 ```
-javascript:(function(){var n=32,end=8365,key=function(){var char=String.fromCharCode(n);console.log(n+': '+char);var e=document.createEvent('Event');e.initEvent('keydown',true,false);e.key=char;e.which=n;e.keyCode=n;e.charCode=n;document.getElementsByTagName('BODY')[0].dispatchEvent(e);e=document.createEvent('Event');e.initEvent('keypress',true,false);e.key=char;e.which=n;e.keyCode=n;e.charCode=n;document.getElementsByTagName('BODY')[0].dispatchEvent(e);e=document.createEvent('Event');e.initEvent('keyup',true,false);e.
+javascript:(function(){var n=32,end=8365,key=function(){var char=String.fromCharCode(n);console.log(n+': '+char);var e=document.createEvent('Event');e.initEvent('keydown',true,false);e.key=char;e.which=n;e.keyCode=n;e.charCode=n;document.getElementsByTagName('BODY')[0].dispatchEvent(e);e=document.createEvent('Event');e.initEvent('keypress',true,false);e.key=char;e.which=n;e.keyCode=n;e.charCode=n;document.getElementsByTagName('BODY')[0].dispatchEvent(e);e=document.createEvent('Event');e.initEvent('keyup',true,false);e.key=String.fromCharCode(n);e.which = n;e.keyCode=n;e.charCode=n;document.getElementsByTagName('BODY')[0].dispatchEvent(e); n++; if(n<end){if(n==256) n=8364; x=window.setTimeout(key, 20);}}})();
 
 ```
