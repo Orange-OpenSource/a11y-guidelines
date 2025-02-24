@@ -112,7 +112,7 @@
 	"IDorigin": "testDocID-9" 
 }, {
 	"themes": "Contenus audio et vidéo",
-	"title": "Vérifier la présence de sous-titres et transcription textuelle",
+	"title": "Vérifier la présence de sous-titres et audio-description",
 	"type": ["Test manuel"],
 	"tests": ["Identifier chaque contenu audio/vidéo."],
 	"resultat": ["Chaque contenu audio/vidéo doit être accompagné de sous-titres synchronisés.","Si jugé nécessaire, les vidéos doivent également être accompagnées d'une audio-description."],
