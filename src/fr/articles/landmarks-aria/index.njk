@@ -2,7 +2,8 @@
 title: "Régions (landmarks) ARIA"
 abstract: "Mise en place de régions ARIA (landmarks)."
 titleBeforeTag: true
-date: "2025-01-30"
+date: "2018-01-15"
+updateDate: "2025-02-24"
 tags:
   - component
 css:
@@ -14,13 +15,11 @@ css:
 
 <h2>Théorie</h2>
 <p>Pour ajouter de la sémantique HTML au contenu d'une page, 2 possibilités :</p>
-<ol>
+<ul>
   <li>
-    <p><u>Pour une page <em>en HTML5</em></u> (recommandé) : utiliser les <em>balises sémantiques </em>(<code>main</code>, <code>header</code>, <code>footer</code>, <code>aside</code>, ...) qui y ont été introduites.
+    <p>Pour une page <em>en HTML5</em> (recommandé) : utiliser les <em>balises sémantiques </em>(<code>main</code>, <code>header</code>, <code>footer</code>, <code>aside</code>, ...) qui y ont été introduites.
     Ces balises doivent être utilisées seules, sans les rôles <abbr>ARIA</abbr> correspondants, car leur support est bon dans la grande majorité des navigateurs et des aides techniques.</p>
 
-    <p>Exemple&nbsp;:</p>
-    <p class="bg-primary d-inline-block p-2 mb-0 font-weight-bold">HTML</p>
     <pre class="mb-0"><code class="html">
     &lt;head&gt;
       […]
@@ -64,10 +63,8 @@ css:
   </li>
 
   <li>
-    <p></p><u>Pour une page qui n'est <em>pas en HTML5</em></u> : ajouter des <em>régions (<i lang="en">landmarks</i>) <abbr>ARIA</abbr></em></p>
+    <p>Pour une page qui n'est <em>pas en HTML5</em> : ajouter des <em>régions (<i lang="en">landmarks</i>) <abbr>ARIA</abbr></em></p>
 
-    <p>Exemple&nbsp;:</p>
-    <p class="bg-primary d-inline-block p-2 mb-0 font-weight-bold">HTML</p>
     <pre><code class="html">
     &lt;head&gt;
       […]
@@ -108,7 +105,7 @@ css:
     &lt;/body&gt;
     </code></pre>
   </li>
-</ol>
+</ul>
 
 <h3 class="mt-4 mb-0" id="equivalence">Correspance entre les balises HTML5 et les régions (<i lang="en">landmarks</i>) ARIA</h3>
   <table class="table mt-2 mb-4">
@@ -137,11 +134,11 @@ css:
         </tr>
           <tr>
           <td><code>form</code></td>
-          <td><code>role="form"</code> s'il y a un nom accessible donné par aria-labelledby, aria-label ou title</td>
+          <td><code>role="form"</code> s'il y a un nom accessible donné par <code>aria-labelledby</code>, <code>aria-label</code> ou <code>title</code></td>
         </tr>
         <tr>
           <td><code>section</code></td>
-          <td><code>role="region"</code> s'il y a un nom accessible donné par aria-labelledby, aria-label ou title</code> ou <code>aria-label</code></td>
+          <td><code>role="region"</code> s'il y a un nom accessible donné par <code>aria-labelledby</code>, <code>aria-label</code> ou <code>title</code></td>
         </tr>
         <tr>
           <td><code>aside</code></td>
@@ -161,8 +158,9 @@ css:
   <li>La balise <code>aside</code> ou l'attribut <code>role="complementary"</code> est à utiliser pour identifier du contenu annexe au contenu principal de la page (information complémentaire, publicité…).</li>
   <li>La balise <code>footer</code> ou l'attribut <code>role="contentinfo"</code> permet d’identifier le pied de page. A n'utiliser qu'une seule fois dans la page.</li>
 </ul>
-<p>Ces 4 balises ou attributs de région (<i lang="en">landmarks</i>) <abbr>ARIA</abbr> doivent être placés directement dans une balise <code>body</code> (et pas dans une autre balise elle-même imbriquée dans la balise <code>body</code>).</p>
-<ul class="usages">
+<p>Les 4 balises ou attributs de région (<i lang="en">landmarks</i>) <abbr>ARIA</abbr> ci-dessus doivent être placés directement dans une balise <code>body</code> (et pas dans une autre balise elle-même imbriquée dans la balise <code>body</code>).</p>
+
+<ul class="usages mt-4">
   <li>La balise <code>nav</code> ou l'attribut <code>role="navigation"</code> permet d’identifier les principaux éléments de navigation internes au site. Les bonnes pratiques demandent que l’on utilise au maximum 3 balises <code>nav</code> ou <code>role=navigation</code> dans une même page.</li>
   <li>La balise <code>form</code> ou l'attribut <code>role="form"</code> est à utiliser pour identifier un formulaire.</li>
   <li>L'attribut de région (<i lang="en">landmarks</i>) <abbr>ARIA</abbr> <code>role=search</code> (il n'y a pas de balise HTML équivalente) est à utiliser pour identifier un formulaire de recherche dans le site.</li>
@@ -179,7 +177,6 @@ css:
       <li>un attribut <code>aria-describedby</code> qui pointe sur le titre d'entête dont on veut utiliser le contenu comme nom accessible, si la région a un titre d'entête.</li>
     </ul>
     <p>Exemple d'une page avec 3 régions de navigation :</p>
-    <p class="bg-primary d-inline-block p-2 mb-0 font-weight-bold">HTML</p>
     <pre><code class="html">
     &lt;nav aria-label="Menu principal"&gt;[…]&lt;/nav&gt;
     &lt;nav aria-label="Menu secondaire"&gt;[…]&lt;/nav&gt;
@@ -204,5 +201,5 @@ css:
 
 <h3 class="mt-4">Ressources</h3>
 <ul>
-<li>https://www.w3.org/WAI/ARIA/apg/practices/landmark-regions/</li>
+  <li><a href="https://www.w3.org/WAI/ARIA/apg/practices/landmark-regions/" hreflang="en">Landmark Regions specification</a></li>
 </ul>
