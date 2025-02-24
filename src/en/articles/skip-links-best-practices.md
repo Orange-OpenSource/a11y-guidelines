@@ -9,8 +9,6 @@ tags:
   - beginner
 ---
 
-Update: December 2024
-
 ## What is an skip link?
 
 ### What is it?

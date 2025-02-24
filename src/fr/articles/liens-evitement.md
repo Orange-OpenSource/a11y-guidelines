@@ -9,8 +9,6 @@ tags:
   - beginner
 ---
 
-Mise à jour : décembre 2024
-
 ## Qu'est-ce qu'un lien d'évitement&nbsp;?
 
 ### Qu'est-ce&nbsp;?
