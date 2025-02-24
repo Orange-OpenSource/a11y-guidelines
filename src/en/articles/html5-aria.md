@@ -3,12 +3,11 @@ title: "HTML5 & ARIA"
 abstract: "HTML 5 and ARIA introduction"
 titleBeforeTag: true
 date: "2016-09-08"
+updateDate: "2025-02-24"
 tags:
   - web
   - beginner
 ---
-
-Update: December 2024
 
 ## Introduction
 
@@ -18,7 +17,7 @@ Even with the <abbr>HTML5</abbr> change, we still lack semantics to provide tech
 
 ## What is it?
 
-To overcome these limitations, the W3C&nbsp;/ WAI has officially issued a recommendation called <abbr>ARIA</abbr>, standing for Accessible Rich Internet Applications, and several documents on the use of <abbr>ARIA</abbr>. We are currently at the 1.1 version of <abbr>ARIA</abbr> et for the Authoring Practices, an <abbr>ARIA</abbr>best practices.
+To overcome these limitations, the W3C&nbsp;/ WAI has officially issued a recommendation called <abbr>ARIA</abbr>, standing for Accessible Rich Internet Applications, and several documents on the use of <abbr>ARIA</abbr>. We are currently at the 1.2 version of <abbr>ARIA</abbr> et for the Authoring Practices, an <abbr>ARIA</abbr>best practices.
 
 <abbr>ARIA</abbr> is a semantic wrapper based on the attribute&nbsp;/ value combination used in markup languages such as <abbr>HTML</abbr>, <abbr>SVG</abbr>, <abbr>XML</abbr>, etc. This recommendation consists of roles, states and properties that will specifically interact with assistive technologies (<abbr>AT</abbr>). With <abbr>ARIA</abbr>, one can describe elements and behaviours with simple HTML when they do not exist natively, for example tabs, drop-downs, live regions, tooltips, modal windows, etc. <abbr>ARIA</abbr> also defines how an interface component has to behave with the keyboard in order to standardize the user experience with keyboard navigation. **<abbr>ARIA</abbr> makes sense and delivers its full potential when used with <abbr>HTML5</abbr>**.
 
@@ -42,7 +41,7 @@ In a well-defined environment (e.g. intranet), target environments are known and
 
 ## Webography
 * W3C:
-  * [<abbr>ARIA</abbr> specification](http://www.w3.org/TR/wai-aria/)
+  * [<abbr>ARIA</abbr> specification 1.2](http://www.w3.org/TR/wai-aria/)
   * [<abbr>ARIA</abbr> implementation](http://www.w3.org/TR/wai-aria-practices/)
   * [Use <abbr>ARIA</abbr> with HTML5](http://www.w3.org/TR/aria-in-html/)
   * [<abbr>ARIA</abbr> techniques](https://www.w3.org/WAI/WCAG22/Techniques/)

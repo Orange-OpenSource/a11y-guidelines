@@ -3,12 +3,11 @@ title: "HTML5 & ARIA"
 abstract: "Introduction HTML 5 et ARIA"
 titleBeforeTag: true
 date: "2016-09-16"
+updateDate: "2025-02-24"
 tags:
   - web
   - beginner
 ---
-
-Mise à jour : décembre 2024
 
 ## Introduction
 
@@ -18,7 +17,7 @@ Même avec l'évolution due au <abbr>HTML5</abbr>, on manque encore d'informatio
 
 ## Qu'est-ce que c'est&nbsp;?
 
-Pour remédier à ces limitations, le <abbr>W3C</abbr>/<abbr>WAI</abbr> a publié une recommandation appelée <abbr>ARIA</abbr>, pour <span lang="en">Accessible Rich Internet Applications</span>, ainsi qu'une suite de documents traitant de l'utilisation d'<abbr>ARIA</abbr>. Nous sommes à la version 1.1 d'<abbr>ARIA</abbr> et des Authoring Practices, bonnes pratiques d'utilisation d'<abbr>ARIA</abbr>.
+Pour remédier à ces limitations, le <abbr>W3C</abbr>/<abbr>WAI</abbr> a publié une recommandation appelée <abbr>ARIA</abbr>, pour <span lang="en">Accessible Rich Internet Applications</span>, ainsi qu'une suite de documents traitant de l'utilisation d'<abbr>ARIA</abbr>. Nous sommes à la version 1.2 d'<abbr>ARIA</abbr> et des Authoring Practices, bonnes pratiques d'utilisation d'<abbr>ARIA</abbr>.
 
 <abbr>ARIA</abbr> est une sur-couche sémantique à base de couples attribut/valeur utilisables dans les langages de balisage tels que <abbr>HTML</abbr>, <abbr>SVG</abbr>, <abbr>XML</abbr>, etc. Cette recommandation est composée de rôles, d'états et de propriétés qui vont spécifiquement interagir avec les aides techniques (<abbr>AT</abbr>). Grâce à <abbr>ARIA</abbr>, on peut décrire des éléments et leurs comportements en <abbr>HTML</abbr> lorsqu'ils sont nativement non sémantiquement explicites, par exemple, des onglets, les arbres dépliants, des régions dynamiques, les info-bulles, les fenêtres modales. <abbr>ARIA</abbr> définit également comment doit se comporter un composant d'interface avec le clavier afin d'homogénéiser l'expérience des utilisateurs qui naviguent au clavier. **<abbr>ARIA</abbr> prend tout son sens et exprime tout son potentiel lorsqu'il est utilisé dans du <abbr>HTML5</abbr>**.
 
@@ -42,7 +41,7 @@ Dans un environnement maîtrisé (intranet), les environnements cibles sont conn
 
 ## Webographie
 * <abbr>W3C</abbr>&nbsp;:
-  * [Spécification <abbr>ARIA</abbr>](http://www.w3.org/TR/wai-aria/)
+  * [Spécification <abbr>ARIA</abbr> 1.2](http://www.w3.org/TR/wai-aria/)
   * [Mettre en place <abbr>ARIA</abbr>](http://www.w3.org/TR/wai-aria-practices/)
   * [Utiliser <abbr>ARIA</abbr> en <abbr>HTML</abbr>5](http://www.w3.org/TR/aria-in-html/)
   * [Techniques <abbr>ARIA</abbr>](https://www.w3.org/WAI/WCAG22/Techniques/)
