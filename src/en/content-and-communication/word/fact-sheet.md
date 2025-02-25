@@ -19,7 +19,7 @@ Our Word accessibility fact sheet contains a reminder of the essential criteria 
     <p>Reminder of best practices for writing an accessible Word document.</p>
     <h2 id="tele-word">Download</h2>
     <p>      
-      <a href="../../../res/memos/word/Word-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
+      <a href="../../../res/memos/word/Word-Fact-Sheet-Orange.pdf" class="btn btn-outline-secondary">
         Download as PDF (205 Ko)
         <span class="visually-hidden">Write an accessible Word document fact sheet</span>
       </a>

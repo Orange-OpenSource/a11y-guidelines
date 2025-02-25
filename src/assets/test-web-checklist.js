@@ -309,7 +309,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                         htmlrefTests += '</div>';
                         htmlrefTests += '</div>';
                     }
-                    
+
                     htmlrefTests += '</p>';
                     htmlrefTests += '</div>';
                     htmlrefTests += '</div></article>';
@@ -349,7 +349,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
                 let elFilterFooter = document.getElementById('filter-footer');
                 let htmlFilterFooter = '';
-                htmlFilterFooter += '<button id="reinit" class="btn btn-secondary hidden">' + translate('reinitFilters') + '</button>';
+                htmlFilterFooter += '<button id="reinit" class="btn btn-outline-secondary hidden">' + translate('reinitFilters') + '</button>';
                 elFilterFooter.innerHTML = htmlFilterFooter;
                 let elBtnReinit = document.getElementById('reinit');
 

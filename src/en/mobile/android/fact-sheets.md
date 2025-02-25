@@ -19,7 +19,7 @@ Fact sheets in PDF format containing a reminder of the essential criteria to be 
     <p>Reminder of the essential techniques and tools for developing an accessible Android application.</p>
     <h2 id="tele-android">Download</h2>
     <p>         
-      <a href="../../../res/memos/android/Fact-sheet-Android-Orange.pdf" class="btn btn-secondary">
+      <a href="../../../res/memos/android/Fact-sheet-Android-Orange.pdf" class="btn btn-outline-secondary">
         Download as PDF (171 Ko)
         <span class="visually-hidden">Android development accessibility fact sheet</span>
       </a>

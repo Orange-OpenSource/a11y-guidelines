@@ -15,4 +15,4 @@ The grid calculates a compliance rate per screen audited: this rate is equal to 
 
 The link below opens the grid in a new browser tab.   
 
-<a href="https://la-va11ydette.orange.com/?list=wcag-ios&lang=en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Open the va11ydette (new tab)">Open the va11ydette <span class="visually-hidden"> (new tab)</span></a>
+<a href="https://la-va11ydette.orange.com/?list=wcag-ios&lang=en" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary" title="Open the va11ydette (new tab)">Open the va11ydette <span class="visually-hidden"> (new tab)</span></a>

@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         // if (activeFilter) {
         //   elBtnReinit.disabled = false;
-        //   htmlFeedback = '<p><div><b>'+nbTests+'</b> ' + test + ' ' + translate('withCurrentFilters') + '</div> <button type="button" class="btn btn-secondary btn-sm mt-2 mb-3" id="reinitLink">' + translate('reinitFilters') + '</a></p>';
+        //   htmlFeedback = '<p><div><b>'+nbTests+'</b> ' + test + ' ' + translate('withCurrentFilters') + '</div> <button type="button" class="btn btn-outline-secondary btn-sm mt-2 mb-3" id="reinitLink">' + translate('reinitFilters') + '</a></p>';
         //   elFeedback.innerHTML = htmlFeedback;
 
         //   let elreinitLink = document.getElementById('reinitLink');
@@ -265,18 +265,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
               htmlrefTests += '<h5 class="fs-6 ms-2">' + translate('tools') + ': '+currentRefTests[i].type[k]+'</h5>';
             }
             htmlrefTests += '<ol>';
-            
+
             if(Array.isArray(currentRefTests[i].tests[0])){
               for (let j in currentRefTests[i].tests[k]) {
-                htmlrefTests += '<li>' + currentRefTests[i].tests[k][j] + '</li> ';            
-              } 
+                htmlrefTests += '<li>' + currentRefTests[i].tests[k][j] + '</li> ';
+              }
             }
             else{
               for (let j in currentRefTests[i].tests) {
-                htmlrefTests += '<li>' + currentRefTests[i].tests[j] + '</li> ';            
+                htmlrefTests += '<li>' + currentRefTests[i].tests[j] + '</li> ';
               }
             }
-              
+
               htmlrefTests += '</ol>';
           }
 
@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       this.DisplayFilters = function() {
         let elFilterFooter = document.getElementById('filter-footer');
         let htmlFilterFooter = '';
-        htmlFilterFooter += '<button id="reinit" class="btn btn-secondary" disabled>' + translate('reinitFilters') + '</button>';
+        htmlFilterFooter += '<button id="reinit" class="btn btn-outline-secondary" disabled>' + translate('reinitFilters') + '</button>';
         elFilterFooter.innerHTML = htmlFilterFooter;
         let elBtnReinit = document.getElementById('reinit');
 

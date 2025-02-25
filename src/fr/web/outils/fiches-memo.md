@@ -21,7 +21,7 @@ Des fiches mémos au format PDF contenant un rappel des critères incontournable
     <p>Rappel des techniques et outils indispensables pour développer un site web accessible.</p>        
     <h3 id="tele-web">Téléchargement</h3>
     <p>          
-      <a href="../../../res/memos/dev-web/Memo-Web-Orange.pdf" class="btn btn-secondary">
+      <a href="../../../res/memos/dev-web/Memo-Web-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (272 Ko)
         <span class="visually-hidden">Mémo accessibilité développement Web</span>
       </a>
@@ -46,7 +46,7 @@ Des fiches mémos au format PDF contenant un rappel des critères incontournable
     </p>        
     <h3 id="tele-tests-web">Téléchargement</h3>
     <p>          
-      <a href="../../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-secondary">
+      <a href="../../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (335 Ko)
         <span class="visually-hidden">Mémo accessibilité les tests Web</span>
       </a>

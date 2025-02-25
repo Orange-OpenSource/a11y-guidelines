@@ -46,7 +46,7 @@ Documents office :
     <p>Rappel des techniques et outils indispensables pour développer un site web accessible.</p>        
     <h3 id="tele-web">Téléchargement</h3>
     <p>          
-      <a href="../../res/memos/dev-web/Memo-Web-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/dev-web/Memo-Web-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (272 Ko)
         <span class="visually-hidden">Mémo accessibilité développement Web</span>
       </a>
@@ -71,7 +71,7 @@ Documents office :
     </p>        
     <h3 id="tele-tests-web">Téléchargement</h3>
     <p>          
-      <a href="../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (335 Ko)
         <span class="visually-hidden">Mémo accessibilité les tests Web</span>
       </a>
@@ -95,7 +95,7 @@ Documents office :
     <p>Rappel des techniques et outils indispensables pour développer un application Android accessible.</p>
     <h3 id="tele-android">Téléchargement</h3>
     <p>         
-      <a href="../../res/memos/android/Memo-Android-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/android/Memo-Android-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (261 Ko)
         <span class="visually-hidden">Mémo accessibilité développement Android</span>
       </a>
@@ -119,7 +119,7 @@ Documents office :
     <p>Rappel des techniques et outils indispensables pour développer un application iOS accessible.</p>
     <h3 id="tele-ios">Téléchargement</h3>
     <p>      
-      <a href="../../res/memos/ios/Memo-iOS-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/ios/Memo-iOS-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (1.7 Mo)
         <span class="visually-hidden">Mémo accessibilité développement iOS</span>
       </a>
@@ -142,7 +142,7 @@ Documents office :
     <p>Rappel des bonnes pratiques pour rédiger un email accessible.</p>
     <h3 id="tele-email">Téléchargement</h3>
     <p>      
-      <a href="../../res/memos/email/Memo-Email-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/email/Memo-Email-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (283 Ko)
         <span class="visually-hidden">Mémo rédiger un email accessible</span>
       </a>
@@ -163,7 +163,7 @@ Documents office :
     <p>Rappel des bonnes pratiques pour rédiger un document Word accessible.</p>
     <h3 id="tele-word">Téléchargement</h3>
     <p>      
-      <a href="../../res/memos/word/Memo-Word-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/word/Memo-Word-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (236 Ko)
         <span class="visually-hidden">Mémo rédiger un document Word accessible</span>
       </a>
@@ -184,7 +184,7 @@ Documents office :
     <p>Rappel des bonnes pratiques pour rédiger un document Excel accessible.</p>
     <h3 id="tele-word">Téléchargement</h3>
     <p>      
-      <a href="../../res/memos/excel/Memo-Excel-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/excel/Memo-Excel-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (256 Ko)
         <span class="visually-hidden">Mémo rédiger un document Excel accessible</span>
       </a>
@@ -205,7 +205,7 @@ Documents office :
     <p>Rappel des bonnes pratiques pour rédiger une présentation PowerPoint accessible.</p>
     <h3 id="tele-word">Téléchargement</h3>
     <p>      
-      <a href="../../res/memos/pwp/Memo-PowerPoint-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/pwp/Memo-PowerPoint-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (294 Ko)
         <span class="visually-hidden">Mémo rédiger une présentation PowerPoint accessible</span>
       </a>

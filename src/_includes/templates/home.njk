@@ -20,7 +20,7 @@
       <div class="d-flex">
         <h2>{{ 'lastPosts.title' | translate }}</h2>
         <div class="ps-3">
-          <a href="articles/" class="btn btn-secondary btn-sm">{{ 'lastPosts.seeAll' | translate }}</a>
+          <a href="articles/" class="btn btn-outline-secondary btn-sm">{{ 'lastPosts.seeAll' | translate }}</a>
         </div>
       </div>
       {{ ui.lastPosts(collections["articles_" + locale], site.home.lastPosts.limit) }}
