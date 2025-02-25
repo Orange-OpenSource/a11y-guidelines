@@ -11,13 +11,13 @@ css:
 ---
 
 <h2>Préambule</h2>
-<p>Dans cet article, nous allons voir comment améliorer la navigation dans une page web en ajoutant de la sémantique HTML à son contenu. L'objectif est de permettre aux assisstances techniques (exemple : lecteur d'écran) de repérer plus facilement les grandes régions de la page.</p>
+<p>Dans cet article, nous allons voir comment améliorer la navigation dans une page web en ajoutant de la sémantique <abbr>HTML</abbr> à son contenu. L'objectif est de permettre aux assistances techniques (exemple : lecteur d'écran) de repérer plus facilement les grandes régions de la page.</p>
 
 <h2>Théorie</h2>
-<p>Pour ajouter de la sémantique HTML au contenu d'une page, 2 possibilités :</p>
+<p>Pour ajouter de la sémantique <abbr>HTML</abbr> au contenu d'une page, 2 possibilités :</p>
 <ul>
   <li>
-    <p>Pour une page <em>en HTML5</em> (recommandé) : utiliser les <em>balises sémantiques </em>(<code>main</code>, <code>header</code>, <code>footer</code>, <code>aside</code>, ...) qui y ont été introduites.
+    <p>Pour une page <em>en <abbr>HTML5</abbr></em> (recommandé) : utiliser les <em>balises sémantiques </em>(<code>main</code>, <code>header</code>, <code>footer</code>, <code>aside</code>, etc.) qui y ont été introduites.
     Ces balises doivent être utilisées seules, sans les rôles <abbr>ARIA</abbr> correspondants, car leur support est bon dans la grande majorité des navigateurs et des aides techniques.</p>
 
     <pre class="mb-0"><code class="html">
@@ -63,7 +63,7 @@ css:
   </li>
 
   <li>
-    <p>Pour une page qui n'est <em>pas en HTML5</em> : ajouter des <em>régions (<i lang="en">landmarks</i>) <abbr>ARIA</abbr></em></p>
+    <p>Pour une page qui n'est <em>pas en <abbr>HTML5</abbr></em> : ajouter des <em>régions (<i lang="en">landmarks</i>) <abbr>ARIA</abbr></em>.</p>
 
     <pre><code class="html">
     &lt;head&gt;
@@ -107,12 +107,12 @@ css:
   </li>
 </ul>
 
-<h3 class="mt-4 mb-0" id="equivalence">Correspance entre les balises HTML5 et les régions (<i lang="en">landmarks</i>) ARIA</h3>
+<h3 class="mt-4 mb-0" id="equivalence">Correspance entre les balises <abbr>HTML5</abbr> et les régions (<i lang="en">landmarks</i>) <abbr>ARIA</abbr></h3>
   <table class="table mt-2 mb-4">
       <caption class="visually-hidden" aria-labelledby="equivalence"></caption>
       <thead>
         <tr>
-          <th class="table-column1-width">Balises HTML5</th>
+          <th class="table-column1-width">Balises <abbr>HTML5</abbr></th>
           <th>Régions <abbr>ARIA</abbr></th>
         </tr>
       </thead>
@@ -161,9 +161,9 @@ css:
 <p>Les 4 balises ou attributs de région (<i lang="en">landmarks</i>) <abbr>ARIA</abbr> ci-dessus doivent être placés directement dans une balise <code>body</code> (et pas dans une autre balise elle-même imbriquée dans la balise <code>body</code>).</p>
 
 <ul class="usages mt-4">
-  <li>La balise <code>nav</code> ou l'attribut <code>role="navigation"</code> permet d’identifier les principaux éléments de navigation internes au site. Les bonnes pratiques demandent que l’on utilise au maximum 3 balises <code>nav</code> ou <code>role=navigation</code> dans une même page.</li>
+  <li>La balise <code>nav</code> ou l'attribut <code>role="navigation"</code> permet d’identifier les principaux éléments de navigation internes au site. Les bonnes pratiques demandent que l’on utilise au maximum 3 balises <code>nav</code> ou <code>role="navigation"</code> dans une même page.</li>
   <li>La balise <code>form</code> ou l'attribut <code>role="form"</code> est à utiliser pour identifier un formulaire.</li>
-  <li>L'attribut de région (<i lang="en">landmarks</i>) <abbr>ARIA</abbr> <code>role=search</code> (il n'y a pas de balise HTML équivalente) est à utiliser pour identifier un formulaire de recherche dans le site.</li>
+  <li>L'attribut de région (<i lang="en">landmarks</i>) <abbr>ARIA</abbr> <code>role="search"</code> (il n'y a pas de balise <abbr>HTML</abbr> équivalente) est à utiliser pour identifier un formulaire de recherche dans le site.</li>
   <li>La balise <code>section</code> ou l'attribut <code>role="region"</code> permet de regrouper du contenu (ex : chapitres d'un livre, grandes parties d'une page d'accueil, ...) thématiquement.</li>
   <li>La balise <code>article</code> ou l'attribut <code>role="article"</code> est à utiliser pour une portion autonome de la page, qui est en général réutilisable (exemple : article ou commentaire de blog, article d'un journal, ...)</li>
 </ul>
@@ -186,7 +186,7 @@ css:
   </li>
 
   <li>
-    <p>Tout le contenu doit être inclus dans les balises <abbr>HTML</abbr>5 ou attributs de région (<i lang="en">landmarks</i>) <abbr>ARIA</abbr> de structure. Ceci permet aux utilisateurs de ne pas oublier du contenu qu'ils n'auraient pas trouvé.</p>
+    <p>Tout le contenu doit être inclus dans les balises <abbr>HTML5</abbr> ou attributs de région (<i lang="en">landmarks</i>) <abbr>ARIA</abbr> de structure. Ceci permet aux utilisateurs de ne pas oublier du contenu qu'ils n'auraient pas trouvé.</p>
   </li>
 
   <li><p> Exception : Les boites de dialogue modales n'ont pas besion dêtre imbriquées dans une balise de région.</p></li>
@@ -194,9 +194,8 @@ css:
   
 
 <h3>Régions <abbr>ARIA</abbr> (<i lang="en">landmarks</i>), utilisateurs et aides techniques</h3>
-
-  <p>Les balises <abbr>HTML5</abbr> qui définissent les grandes régions de la page ont un support suffisant avec les aides techniques (lecteurs d’écran, loupes logicielles…). On doit donc les utiliser pour structurer sa page sans leur adjoindre le rôle de région ARIA (<i lang="en">landmark</i>) correspondant.</p>
-  <p>Mettre en place ce régions <abbr>ARIA</abbr> (<i lang="en">landmarks</i>) est une bonne pratique, car elle peut améliorer la navigation de certains utilisateurs sans impacter celle des autres, c’est un plus indéniable&nbsp;!</p>
+<p>Les balises <abbr>HTML5</abbr> qui définissent les grandes régions de la page ont un support suffisant avec les aides techniques (lecteurs d’écran, loupes logicielles…). On doit donc les utiliser pour structurer sa page sans leur adjoindre le rôle de région <abbr>ARIA</abbr> (<i lang="en">landmark</i>) correspondant.</p>
+<p>Mettre en place ce régions <abbr>ARIA</abbr> (<i lang="en">landmarks</i>) est une bonne pratique, car elle peut améliorer la navigation de certains utilisateurs sans impacter celle des autres, c’est un plus indéniable&nbsp;!</p>
 
 
 <h3 class="mt-4">Ressources</h3>
