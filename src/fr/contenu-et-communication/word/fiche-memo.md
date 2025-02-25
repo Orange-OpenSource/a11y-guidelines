@@ -19,7 +19,7 @@ Notre fiche mémo accessibilité Word contient un rappel des critères incontour
     <p>Rappel des bonnes pratiques pour rédiger une présentation Word accessible.</p>
     <h2 id="tele-word">Téléchargement</h2>
     <p>      
-      <a href="../../../res/memos/word/Memo-Word-Orange.pdf" class="btn btn-secondary">
+      <a href="../../../res/memos/word/Memo-Word-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (256 Ko)
         <span class="visually-hidden">Mémo rédiger une présentation Word accessible</span>
       </a>

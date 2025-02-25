@@ -51,7 +51,7 @@ Il faut donc les spécifier aux utilisateurs.
     <div class="mb-2 input-group">
       <input type="password" class="form-control" id="password" required aria-describedby="passwordHelpBlock"/>
       <span class="input-group-text">
-        <button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" >
+        <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" >
           <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
             <defs>
               <style>
@@ -95,7 +95,7 @@ Il faut donc les spécifier aux utilisateurs.
       &lt;div class="mb-2 input-group"&gt;
         &lt;input type="password" class="form-control" id="password" required aria-describedby="passwordHelpBlock"/&gt;
         &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" &gt;
+          &lt;button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" &gt;
             &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;&lt;/svg&gt;
           &lt;/button&gt;
         &lt;/span&gt;
@@ -172,7 +172,7 @@ Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur&nbsp;
     <div class="mb-2 input-group">
       <input type="password" class="form-control" id="password_2" aria-describedby="passwordHelpBlock_2" required/>
       <span class="input-group-text">
-        <button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility_2" title="Afficher le mot de passe" >
+        <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility_2" title="Afficher le mot de passe" >
           <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
             <defs>
               <style>
@@ -300,7 +300,7 @@ Le code HTML et Javascript complet qui nous a permis de réaliser ce formulaire 
       &lt;div class="mb-2 input-group"&gt;
         &lt;input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock" autocomplete="new-password" required/&gt;
         &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" &gt;
+          &lt;button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" &gt;
             &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;&lt;/svg&gt;
           &lt;/button&gt;
         &lt;/span&gt;

@@ -51,7 +51,7 @@ They must therefore be specified to users.
     <div class="mb-2 input-group">
       <input type="password" class="form-control" id="password" required aria-describedby="passwordHelpBlock"/>
       <span class="input-group-text">
-        <button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility" title="Show password" >
+        <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility" title="Show password" >
           <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
             <defs>
               <style>
@@ -95,7 +95,7 @@ They must therefore be specified to users.
       &lt;div class="mb-2 input-group"&gt;
         &lt;input type="password" class="form-control" id="password" required aria-describedby="passwordHelpBlock"/&gt;
         &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility" title="Show password" &gt;
+          &lt;button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility" title="Show password" &gt;
             &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;&lt;/svg&gt;
           &lt;/button&gt;
         &lt;/span&gt;
@@ -172,7 +172,7 @@ In our registration example, several fields may be in error:
     <div class="mb-2 input-group">
       <input type="password" class="form-control" id="password_2" aria-describedby="passwordHelpBlock_2" required/>
       <span class="input-group-text">
-        <button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility_2" title="Show password" >
+        <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility_2" title="Show password" >
           <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
             <defs>
               <style>
@@ -300,7 +300,7 @@ The full HTML and Javascript code that allowed us to make this accessible regist
     &lt;div class="mb-2 input-group"&gt;
       &lt;input type="password" class="form-control" id="password_2" aria-describedby="passwordHelpBlock_2" required/&gt;
       &lt;span class="input-group-text"&gt;
-        &lt;button type="button" class="btn btn-icon btn-secondary btn-sm" id="password_visibility_2" title="Show password" &gt;
+        &lt;button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility_2" title="Show password" &gt;
           &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;
             &lt;defs&gt;
               &lt;style&gt;
