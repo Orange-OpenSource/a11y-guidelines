@@ -309,7 +309,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                         htmlrefTests += '</div>';
                         htmlrefTests += '</div>';
                     }
-                    
+
                     htmlrefTests += '</p>';
                     htmlrefTests += '</div>';
                     htmlrefTests += '</div></article>';

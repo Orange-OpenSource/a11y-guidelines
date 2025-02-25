@@ -265,18 +265,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
               htmlrefTests += '<h5 class="fs-6 ms-2">' + translate('tools') + ': '+currentRefTests[i].type[k]+'</h5>';
             }
             htmlrefTests += '<ol>';
-            
+
             if(Array.isArray(currentRefTests[i].tests[0])){
               for (let j in currentRefTests[i].tests[k]) {
-                htmlrefTests += '<li>' + currentRefTests[i].tests[k][j] + '</li> ';            
-              } 
+                htmlrefTests += '<li>' + currentRefTests[i].tests[k][j] + '</li> ';
+              }
             }
             else{
               for (let j in currentRefTests[i].tests) {
-                htmlrefTests += '<li>' + currentRefTests[i].tests[j] + '</li> ';            
+                htmlrefTests += '<li>' + currentRefTests[i].tests[j] + '</li> ';
               }
             }
-              
+
               htmlrefTests += '</ol>';
           }
 
@@ -340,7 +340,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           for (let j in refTests[i].type) {
 
             ( Array.isArray(refTests[i].type[j]) ? types.push(refTests[i].type[j][0]) : types.push(refTests[i].type[j]))
-            
+
           }
 
           // Chaque "profil" dans chaque ligne (test)

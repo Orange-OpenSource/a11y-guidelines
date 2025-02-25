@@ -265,18 +265,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
               htmlrefTests += '<h5 class="fs-6 ms-2">' + translate('tools') + ': '+currentRefTests[i].type[k]+'</h5>';
             }
             htmlrefTests += '<ol>';
-            
+
             if(Array.isArray(currentRefTests[i].tests[0])){
               for (let j in currentRefTests[i].tests[k]) {
-                htmlrefTests += '<li>' + currentRefTests[i].tests[k][j] + '</li> ';            
-              } 
+                htmlrefTests += '<li>' + currentRefTests[i].tests[k][j] + '</li> ';
+              }
             }
             else{
               for (let j in currentRefTests[i].tests) {
-                htmlrefTests += '<li>' + currentRefTests[i].tests[j] + '</li> ';            
+                htmlrefTests += '<li>' + currentRefTests[i].tests[j] + '</li> ';
               }
             }
-              
+
               htmlrefTests += '</ol>';
           }
 
