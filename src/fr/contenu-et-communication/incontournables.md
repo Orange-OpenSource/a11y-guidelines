@@ -1,5 +1,5 @@
 ---
-title: "Critères incontournables - Documentation"
+title: "Critères incontournables pour la documentation"
 abstract: "Notre socle de critères incontournables à respecter et destiné aux documents et contenus de communication"
 displayToc: true
 leftColumn:
@@ -27,5 +27,5 @@ Cette grille de vérification s’adresse aux concepteurs et rédacteurs de cont
   <h2 id="test-liens">Liens</h2>
   <h2 id="test-ordre-de-lecture">Ordre de lecture</h2>
   <h2 id="test-contenus-audio-et-video">Contenus audio et vidéo</h2>
-  <h2 id="test-verifier-son-document">Vérifier son document</h2>
+  <h2 id="test-inspecteur-daccessibilite">Inspecteur d'accessibilité</h2>
 </section>

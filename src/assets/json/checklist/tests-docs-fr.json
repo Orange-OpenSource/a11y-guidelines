@@ -1,8 +1,8 @@
 [{
 	"themes": "Structure du document",
-	"title": "Vérifier que le document possède un titre principal",
+	"title": "Donner un titre principal au document",
 	"type": ["Test manuel"],
-	"tests": ["Vérifier la présence du titre dans les propriétés du document : <ul><li><strong>Microsoft Office</strong> : aller dans \"Fichier\" > \"Informations\" puis vérifier la propriété \"Titre\".</li><li><strong>Adobe Acrobat</strong> : aller dans \"Fichier\" > \"Propriétés\" > onglet \"Description\" puis vérifier la propriété \"Titre\".</li></ul>"],
+	"tests": ["Le titre est présent dans les propriétés du document : <ul><li><strong>Microsoft Office</strong> : aller dans \"Fichier\" > \"Informations\" (ou \"Propriétés\" sur Mac) puis vérifier la propriété \"Titre\".</li><li><strong>Adobe Acrobat</strong> : aller dans \"Fichier\" > \"Propriétés\" > onglet \"Description\" puis vérifier la propriété \"Titre\".</li></ul>"],
 	"resultat": ["Le titre doit être présent dans les propriétés du document."], 
 	"moreInfo": "",
 	"profils": ["Checklist initiale"],
@@ -11,10 +11,10 @@
 	"IDorigin": "testDocID-1"
 }, {
 	"themes": "Structure du document",
-	"title": "Vérifier que le document est structuré par des titres de section",
+	"title": "Structurer le document par des titres de section",
 	"type": ["Test manuel"],
 	"tests": ["Utiliser des niveaux de titres pertinents pour structurer le document.","Avec <strong>Microsoft Office</strong>, utiliser les styles de titres et sous-titres puis vérifier leur pertinence et leur clarté en activant le mode navigation par titres depuis \"Affichage\" > \"Volet de navigation\" ou \"Mode Plan\"."],
-	"resultat": ["Des titres et sous-titres sont présents et explicites, permettant de faire ressortir clairement l'organisation du document"], 
+	"resultat": ["Des titres et sous-titres sont présents et explicites, permettant de faire ressortir clairement la structure du document"], 
 	"moreInfo": "",
 	"profils": ["Checklist initiale"],
 	"wcag": ["2"],
@@ -24,9 +24,9 @@
 	"themes": "Couleurs et contrastes", 
 	"title": "Assurer un contraste des textes suffisant", 
 	"type": ["Color Contrast Analyser"], 
-	"tests": ["Assurer un contraste suffisant entre les textes et l'arrière-plan :<ul><li>Ne pas utiliser de texte blanc sur fond orange et réciproquement.</li><li>De même, ne pas utiliser le blanc en combinaison avec les couleurs secondaires de la charte.</li></ul>"], 
+	"tests": ["Assurer un contraste suffisant entre les textes et l'arrière-plan :<ul><li>Ne pas utiliser de texte blanc sur fond orange et réciproquement.</li><li>De même, ne pas utiliser le blanc en combinaison avec les couleurs secondaires de la charte Orange.</li></ul>"], 
 	"resultat": ["Les textes doivent pouvoir être lus sans difficulté.","Avec <strong>Microsoft Office</strong>, utiliser la vérification d'accessibilité depuis \"Révision\" > \"Vérifier l'accessibilité\" pour s'assurer qu'il n'y a pas de problème de contraste."],
-	"exception": "Si vous devez absolument utiliser du orange en combinaison avec du blanc, cela ne peut se faire qu'avec du orange dit \"accessible\" #F6E00 et pour des textes de tailles supérieures à 14pt. En dehors ce cas, la combinaison orange/blanc est à proscrire.",
+	"exception": "Si vous devez absolument utiliser du orange en combinaison avec du blanc, cela ne peut se faire qu'avec du orange dit \"accessible\" #F6E00 et pour des textes de taille supérieure à 19 pt. En dehors ce cas, la combinaison orange/blanc est à proscrire.",
 	"raccourcis": "", 
 	"moreInfo": "", 
 	"profils": ["Checklist initiale"], 
@@ -35,7 +35,7 @@
 	"IDorigin": "testDocID-3" 
 }, { 
 	"themes": "Couleurs et contrastes", 
-	"title": "Vérifier que l'information est transmise par un autre moyen que la couleur", 
+	"title": "S'assurer que l'information est transmise par un autre moyen que la couleur", 
 	"type": ["Test manuel"], 
 	"tests": ["Identifier les éléments utilisant de la couleur pour porter de l'information."], 
 	"resultat": ["L'information transmise par la couleur peut également être obtenue par un texte explicite.", "L'information transmise par la couleur est complétée par une autre information visuelle (exemple : icônes utilisant des couleurs et des formes différentes)."],
@@ -48,10 +48,10 @@
 	"IDorigin": "testDocID-4" 
 }, {
 	"themes": "Images",
-	"title": "Vérifier que les images ou éléments graphiques informatifs ont une alternative textuelle ",
+	"title": "S'assurer que les images ou éléments graphiques informatifs ont une alternative textuelle",
 	"type": ["Test manuel"],
-	"tests": ["Identifier tous les éléments graphiques (non-textuels) porteurs d'informations : photos, dessins, graphiques, schémas, icônes, etc.","Avec <strong>Microsoft Office</strong>, faire un clic-droit sur une image puis \"Afficher le texte de remplacement\" pour compléter l'alternative textuelle."],
-	"resultat": ["Chaque élement graphique porteur d'information doit avoir une alternative textuelle fournissant une information équivalente.","Avec <strong>Microsoft Office</strong>, utiliser la vérification d'accessibilité depuis \"Révision\" > \"Vérifier l'accessibilité\" pour s'assurer qu'il n'y a pas d'élément sans texte de remplacement."],
+	"tests": ["Identifier toutes les images et éléments graphiques (non-textuels) porteurs d'informations : graphiques, schémas, icônes, etc.","Avec <strong>Microsoft Office</strong>, faire un clic-droit sur une image puis \"Afficher le texte de remplacement\" pour compléter l'alternative textuelle."],
+	"resultat": ["Chaque élement graphique porteur d'information doit avoir une alternative textuelle fournissant une information équivalente.","Avec <strong>Microsoft Office</strong>, utiliser la vérification d'accessibilité depuis \"Révision\" > \"Vérifier l'accessibilité\" > \"Texte de remplacement\" pour s'assurer qu'il n'y a pas d'élément sans texte de remplacement."],
 	"raccourcis": "",
 	"moreInfo": "",
 	"profils": ["Checklist initiale"],
@@ -60,7 +60,7 @@
 	"IDorigin": "testDocID-5" 
 }, {
 	"themes": "Tableaux",
-	"title": "Vérifier que des tableaux ne sont pas utilisés pour de la mise en forme",
+	"title": "Ne pas utiliser les tableaux pour de la mise en forme",
 	"type": ["Test manuel"],
 	"tests": ["Les tableaux doivent être utilisés pour présenter des données et non pour faire de la mise en forme (colonnage par exemple).","Vérifier la présence d'en-têtes : \"Création de tabeau\">\"Ligne d'en-tête\".","Vérifier la présence d'un titre et d'une description sur chaque tableau : clic-droit > \"Propriétés\">\"Texte de remplacement\".","Éviter l'utilisation de cellules fusionnées."],
 	"resultat": ["Les tableaux ne sont pas utilisés pour de la mise en forme.","Les tableaux sont correctement structurés."],
@@ -89,7 +89,7 @@
 	"title": "Vérifier que les liens sont explicites",
 	"type": ["Test manuel"],
 	"tests": ["Identifier tous les liens (textes ou images) disponibles dans le document.","Si nécessaire faire un clic-droit > \"Modifier le lien\" pour vérifier l'URL et le texte affiché."], 
-	"resultat": ["S'assurer que les liens sont suffisamment clairs et explicites.","Éviter les liens sous forme d'image sans texte à proximité pour expliquer le contexte.","Ne pas utiliser de termes génériques comme \"Cliquez ici\".","Au sein du même document,ne pas utiliser des liens portant le même nom pointant vers des adresses différentes.","S'assurer que les liens sont bien différenciés du reste du contenu texte (soulignement ou couleur distincte).","Éviter les liens sous forme d'URL en privilégiant un texte court et pertinent."],
+	"resultat": ["S'assurer que les liens sont suffisamment clairs et explicites.","Éviter les liens sous forme d'image sans texte à proximité pour expliquer le contexte.","Ne pas utiliser de termes génériques comme \"Cliquez ici\".","Au sein du même document,ne pas utiliser des liens portant le même nom pointant vers des URLs différentes.","S'assurer que les liens sont bien différenciés du reste du contenu texte (soulignement ou couleur distincte).","Éviter les liens sous forme d'URL en privilégiant un texte court et pertinent."],
 	"exception": "",
 	"raccourcis": "",
 	"moreInfo": "",
@@ -102,7 +102,7 @@
 	"title": "Vérifier l'ordre de lecture",
 	"type": ["Test manuel"],
 	"tests": ["Vérifier l'ordre de présentation des informations : de préférence de gauche à droite et de haut en bas pour respecter au maxium l'ordre naturel de lecture.","Utiliser la touche <kbd>TAB</kbd> du clavier pour vérifier que les liens et autres éléments interactifs sont atteints selon un ordre logique."], 
-	"resultat": ["L'ordre naturel de lecture et de navigation est respecté."],
+	"resultat": ["L'ordre naturel de lecture et de navigation sont respectés."],
 	"exception": "",
 	"raccourcis": "",
 	"moreInfo": "",
@@ -112,10 +112,10 @@
 	"IDorigin": "testDocID-9" 
 }, {
 	"themes": "Contenus audio et vidéo",
-	"title": "Vérifier la présence de sous-titres et audio-description",
+	"title": "Vérifier la présence de sous-titres et d'une transcription textuelle",
 	"type": ["Test manuel"],
-	"tests": ["Identifier chaque contenu audio/vidéo."],
-	"resultat": ["Chaque contenu audio/vidéo doit être accompagné de sous-titres synchronisés.","Une transcription textuelle doit restituer l'ensemble des informations importantes véhiculées par le contenu (dialogues, animations, noms, lieux, etc.)","Si jugé nécessaire, les vidéos doivent également être accompagnées d'une audio-description."],
+	"tests": ["Identifier chaque contenu audio et vidéo."],
+	"resultat": ["Chaque contenu audio et vidéo doit être accompagné de sous-titres synchronisés.","Une transcription textuelle doit restituer l'ensemble des informations importantes véhiculées par le contenu (dialogues, animations, noms, lieux, etc.)","Si jugé nécessaire, les vidéos doivent également être accompagnées d'une audio-description."],
 	"raccourcis": "",
 	"moreInfo": "",
 	"profils": ["Checklist initiale"],
@@ -123,7 +123,7 @@
 	"ID": "testDocID-10",
 	"IDorigin": "testDocID-10" 
 }, {
-	"themes": "Vérifier son document",
+	"themes": "Inspecteur d'accessibilité",
 	"title": "Utiliser l'inspecteur d'accessibilité",
 	"type": ["Test manuel"],
 	"tests": ["Avec <strong>Microsoft Office</strong>, utiliser la vérification d'accessibilité depuis \"Révision\" > \"Vérifier l'accessibilité\".","Pour les PDF, le meilleur moyen d'assurer l'accessibilité d'un document est de partir d'une source déjà accessible (Word, Powerpoint, etc.). Si vous disposez d'une licence <strong>Adobe Acrobat Pro</strong>, vous pouvez utiliser la vérification d'accessibilité depuis \"Outils\" > \"Vérification complète de l'accessibilité\"."],
@@ -136,6 +136,3 @@
 	"ID": "testDocID-11",
 	"IDorigin": "testDocID-11" 
 }]
-
-
-

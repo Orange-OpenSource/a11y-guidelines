@@ -100,7 +100,8 @@ module.exports = {
           { label: 'Social networks', href: '/en/content-and-communication/social-networks/' },
           { label: 'Emails', href: '/en/content-and-communication/emails/' },
           { label: 'Audio/video content', href: '/en/content-and-communication/animated-components/' },
-		  { label: 'E-learning', href: '/en/content-and-communication/e-learning/' }
+          { label: 'E-learning', href: '/en/content-and-communication/e-learning/' },
+          { label: 'Must-haves', href: '/en/content-and-communication/must-haves/' }
         ]
       },
       { label: 'Articles', href: '/en/articles/' },
