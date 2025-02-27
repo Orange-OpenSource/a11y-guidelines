@@ -125,7 +125,7 @@
 	"ID": "testMobID-11",
 	"IDorigin": "testMobID-11"
 }, {
-	"themes": "Touchscreen and interactions",
+	"themes": "Layout",
 	"title": "Provide access to content regardless of screen orientation",
 	"type": ["Manual test"],
 	"tests": ["Check the content in portrait orientation.", "Check the content in landscape orientation."],
