@@ -11,9 +11,9 @@
     "IDorigin": "testDocID-1"
 }, {
     "themes": "Document Structure",
-    "title": "Structure the document with section titles",
+    "title": "Structure the document with headings",
     "type": ["Manual Test"],
-    "tests": ["Use relevant heading levels to structure the document.","With <strong>Microsoft Office</strong>, use heading and subheading styles and check their relevance and clarity by activating the navigation mode by headings from \"View\" > \"Navigation Pane\" or \"Outline\"."],
+    "tests": ["Use relevant heading levels to structure the document.","With <strong>Microsoft Office</strong>, check their relevance and clarity by activating the navigation mode by headings from \"View\" > \"Navigation Pane\" or \"Outline\"."],
     "resultat": ["Headings and subheadings are present and explicit, clearly highlighting the structure of the document."], 
     "moreInfo": "",
     "profils": ["Initial Checklist"],
@@ -22,11 +22,11 @@
     "IDorigin": "testDocID-2"
 }, { 
     "themes": "Colors and Contrasts", 
-    "title": "Ensure sufficient text contrast", 
+    "title": "Ensure sufficient contrast between text and background", 
     "type": ["Color Contrast Analyzer"], 
-    "tests": ["Ensure sufficient contrast between text and background:<ul><li>Do not use white text on an orange background and vice versa.</li><li>Similarly, do not use white in combination with the secondary colors of the Orange palette.</li></ul>"], 
-    "resultat": ["Text must be readable without difficulty.","With <strong>Microsoft Office</strong>, use the accessibility checker from \"Review\" > \"Check Accessibility\" to ensure there are no contrast issues."],
-    "exception": "If you must absolutely use orange in combination with white, it can only be done with so-called \"accessible\" orange #F6E00 and for text sizes greater than 19pt. Except this case, the orange/white combination should not be used.",
+    "tests": ["Ensure sufficient contrast between text and background:<ul><li>Do not use white text on an orange background and vice versa.</li><li>Do not use white in combination with the secondary colors of the Orange palette.</li><li>With <strong>Microsoft Office</strong>, use the accessibility checker from \"Review\" > \"Check Accessibility\" to ensure there are no contrast issues.</li></ul>"], 
+    "resultat": ["Text must be readable without difficulty.","No contrast issues detected by the accessibility checker."],
+    "exception": "If you must absolutely use some orange in combination with white, you must only use the so-called \"accessible\" orange #F6E00 and a font size greater than 19pt. Except this case, the orange/white combination shall not be used.",
     "raccourcis": "", 
     "moreInfo": "", 
     "profils": ["Initial Checklist"], 
@@ -35,10 +35,10 @@
     "IDorigin": "testDocID-3" 
 }, { 
     "themes": "Colors and Contrasts", 
-    "title": "Ensure that information is conveyed by other means than color", 
+    "title": "Ensure that information is not conveyed only by color", 
     "type": ["Manual Test"], 
     "tests": ["Identify elements using color to convey information."], 
-    "resultat": ["Information conveyed by color can also be obtained through explicit text.", "Information conveyed by color is complemented by another visual information (e.g., icons using different colors and shapes)."],
+    "resultat": ["Information conveyed by color is also conveyed through an explicit text.", "Or, information conveyed by color is complemented by another visual information (e.g., icons using different colors and shapes)."],
     "exception": "", 
     "raccourcis": "", 
     "moreInfo": "", 
@@ -51,7 +51,7 @@
     "title": "Ensure that informative images or graphic elements have a textual alternative",
     "type": ["Manual Test"],
     "tests": ["Identify all images and graphic elements (non-textual) conveying information: graphs, diagrams, icons, etc.","With <strong>Microsoft Office</strong>, right-click on an image and then \"Edit Alt Text\" to complete the textual alternative."],
-    "resultat": ["Each graphic element conveying information must have a textual alternative providing equivalent information.","With <strong>Microsoft Office</strong>, use the accessibility checker from \"Review\" > \"Check Accessibility\" > \"Alt Text\" to ensure there are no elements without alt text."],
+    "resultat": ["Each graphic element conveying information must have a textual alternative providing equivalent information.","With <strong>Microsoft Office</strong>, run \"Review\" > \"Check Accessibility\" > \"Alt Text\" to ensure there are no informative element without alt text."],
     "raccourcis": "",
     "moreInfo": "",
     "profils": ["Initial Checklist"],
@@ -62,7 +62,7 @@
     "themes": "Tables",
     "title": "Do not use tables for formatting",
     "type": ["Manual Test"],
-    "tests": ["Tables must be used to present data and not for layout (e.g., column display).","Check for the presence of headers: \"Create Table\">\"Header Row\".","Check for the presence of a title and description on each table: right-click > \"Properties\">\"Alt Text\".","Avoid using merged cells."],
+    "tests": ["Tables must be used to present data and not for layout (e.g., column display).","Check for the presence of headers: \"Create Table\">\"Header Row\" should be checked.","Check for the presence of a title and description for each table: right-click > \"Properties\">\"Alt Text\".","Avoid using merged cells."],
     "resultat": ["Tables are not used for layout.","Tables are correctly structured."],
     "exception": "",
     "raccourcis": "",
@@ -73,10 +73,10 @@
     "IDorigin": "testDocID-6" 
 }, {
     "themes": "Lists",
-    "title": "Check the structure of lists",
+    "title": "Structure lists",
     "type": ["Manual Test"],
-    "tests": ["Identify lists of elements (bulleted or numbered lists)."],
-    "resultat": ["Bullet points should be used for items where order is not important. If order is important, then use numbered lists (1,2,3... / a,b,c...)."],
+    "tests": ["Identify lists of elements (bulleted or numbered lists).","In Microsoft Office, use bullets (for unordered lists) or numbers (for ordered lists) to create well-structured lists."],
+    "resultat": ["Bullet points must be used for items where order is not important. If order is important, then use numbered lists (1,2,3... / a,b,c...)."],
     "exception": "",
     "raccourcis": "",
     "moreInfo": "",
@@ -86,9 +86,9 @@
     "IDorigin": "testDocID-7" 
 }, {
     "themes": "Links",
-    "title": "Check that links are explicit",
+    "title": "Give explicit links",
     "type": ["Manual Test"],
-    "tests": ["Identify all links (text or images) available in the document.","If necessary, right-click > \"Edit Link\" to check the URL and displayed text."], 
+    "tests": ["Identify all links (text or images) available in the document.","In Microsoft Office, if needed right-click > \"Edit Link\" to check and modify the URL and displayed text."], 
     "resultat": ["Ensure that links are sufficiently clear and explicit.","Avoid image links without nearby text to explain the context.","Do not use generic terms like \"Click here\".","Within the same document, do not use links with the same name pointing to different URLs.","Ensure that links are well differentiated from the rest of the text content (underline or distinct color).","Avoid links in the form of URLs, prefer short and relevant text."],
     "exception": "",
     "raccourcis": "",
@@ -99,7 +99,7 @@
     "IDorigin": "testDocID-8" 
 }, {
     "themes": "Reading Order",
-    "title": "Check the reading order",
+    "title": "Ensure logical reading order",
     "type": ["Manual Test"],
     "tests": ["Check the order of information presentation: preferably from left to right and top to bottom to respect the natural reading order as much as possible.","Use the <kbd>TAB</kbd> key on the keyboard to check that links and other interactive elements are reached in a logical order."], 
     "resultat": ["The natural reading and navigation order are respected."],
@@ -112,9 +112,9 @@
     "IDorigin": "testDocID-9" 
 }, {
     "themes": "Audio and Video Content",
-    "title": "Check for the presence of subtitles and a textual transcript",
+    "title": "Provide subtitles and textual transcript",
     "type": ["Manual Test"],
-    "tests": ["Identify each audio and video content."],
+    "tests": ["Identify each audio and video content and check that subtitles and transcript are provided."],
     "resultat": ["Each audio and video content must be accompanied by synchronized subtitles.","A textual transcript must convey all important information conveyed by the content (dialogues, animations, names, places, etc.)","If deemed necessary, videos must also be accompanied by an audio description."],
     "raccourcis": "",
     "moreInfo": "",
@@ -126,7 +126,7 @@
     "themes": "Accessibility Inspector",
     "title": "Use the accessibility inspector",
     "type": ["Manual Test"],
-    "tests": ["With <strong>Microsoft Office</strong>, use the accessibility checker from \"Review\" > \"Check Accessibility\".","For PDFs, the best way to ensure the accessibility of a document is to start from an already accessible source (Word, PowerPoint, etc.). If you have an <strong>Adobe Acrobat Pro</strong> license, you can use the accessibility checker from \"Tools\" > \"Accessibility Check\"."],
+    "tests": ["With <strong>Microsoft Office</strong>, use the accessibility checker from \"Review\" > \"Check Accessibility\".","For PDF document, the best way to ensure the accessibility of a document is to start from an already accessible source (Word, PowerPoint, etc.). If you have an <strong>Adobe Acrobat Pro</strong> license, you can use the accessibility checker from \"Tools\" > \"Accessibility Check\"."],
     "resultat": ["Ensure that there are no more automatically detected accessibility errors.","Check warnings that require review."],
     "exception": "",
     "raccourcis": "",
