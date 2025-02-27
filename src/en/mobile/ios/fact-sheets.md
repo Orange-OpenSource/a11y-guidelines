@@ -19,7 +19,7 @@ Fact sheets in PDF format containing a reminder of the essential criteria to be 
     <p>Reminder of the essential techniques and tools for developing an accessible iOS application.</p>
     <h2 id="tele-ios">Download</h2>
     <p>      
-      <a href="../../../res/memos/ios/Fact-sheet-iOS-Orange.pdf" class="btn btn-secondary">
+      <a href="../../../res/memos/ios/Fact-sheet-iOS-Orange.pdf" class="btn btn-outline-secondary">
         Download as PDF (198 Ko)
         <span class="visually-hidden">iOS development accessibility fact sheet</span>
       </a>

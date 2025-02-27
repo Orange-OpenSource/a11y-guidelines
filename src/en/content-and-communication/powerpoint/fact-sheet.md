@@ -19,7 +19,7 @@ Our PowerPoint accessibility fact sheet contains a reminder of the essential cri
     <p>Reminder of good practices for writing an accessible PowerPoint.</p>
     <h2 id="tele-word">Download</h2>
     <p>      
-      <a href="../../../res/memos/pwp/PowerPoint-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
+      <a href="../../../res/memos/pwp/PowerPoint-Fact-Sheet-Orange.pdf" class="btn btn-outline-secondary">
          Download as PDF (277 Ko)
         <span class="visually-hidden">Write an accessible PowerPoint presentation fact sheet</span>
       </a>
