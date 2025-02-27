@@ -19,7 +19,7 @@ Des fiches mémos au format PDF contenant un rappel des critères incontournable
     <p>Rappel des techniques et outils indispensables pour développer un application Android accessible.</p>
     <h2 id="tele-android">Téléchargement</h2>
     <p>         
-      <a href="../../../res/memos/android/Memo-Android-Orange.pdf" class="btn btn-secondary">
+      <a href="../../../res/memos/android/Memo-Android-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (261 Ko)
         <span class="visually-hidden">Mémo accessibilité développement Android</span>
       </a>

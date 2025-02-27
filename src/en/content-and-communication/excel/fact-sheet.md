@@ -19,7 +19,7 @@ Our Excel accessibility fact sheet contains a reminder of the essential criteria
     <p>Reminder of good practices for writing an accessible Excel.</p>
     <h2 id="tele-word">Download</h2>
     <p>      
-      <a href="../../../res/memos/excel/Excel-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
+      <a href="../../../res/memos/excel/Excel-Fact-Sheet-Orange.pdf" class="btn btn-outline-secondary">
          Download as PDF (277 Ko)
         <span class="visually-hidden">Write an accessible Excel presentation fact sheet</span>
       </a>

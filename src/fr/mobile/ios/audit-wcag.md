@@ -15,4 +15,4 @@ La grille calcule un taux de conformité par écran audité : ce taux est égal 
 
 Le lien ci-dessous entraine l'ouverture de la grille dans un nouvel onglet du navigateur.  
 
-<a href="https://la-va11ydette.orange.com/?list=wcag-ios&lang=fr" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Ouvrir la va11ydette (nouvelle fenêtre)">Ouvrir la va11ydette<span class="visually-hidden"> (nouvelle fenêtre)</span></a>
+<a href="https://la-va11ydette.orange.com/?list=wcag-ios&lang=fr" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary" title="Ouvrir la va11ydette (nouvelle fenêtre)">Ouvrir la va11ydette<span class="visually-hidden"> (nouvelle fenêtre)</span></a>
