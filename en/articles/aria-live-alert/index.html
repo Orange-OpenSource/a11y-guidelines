@@ -22,7 +22,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
@@ -160,7 +160,7 @@
         
         
           <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
       <div class="dropdown-menu dropdown-menu-right"><a href="#the-role-alert" class="dropdown-item text-wrap">The role alert</a><a href="#create-a-new-element-in-the-dom" class="dropdown-item text-wrap">Create a new element in the DOM</a><a href="#add-a-role-alert-on-an-existing-element" class="dropdown-item text-wrap">Add a role alert on an existing element</a><a href="#using-innerhtml" class="dropdown-item text-wrap">Using innerHTML</a><a href="#the-aria-live-attribute" class="dropdown-item text-wrap">The aria-live attribute</a><a href="#references" class="dropdown-item text-wrap">References</a></div>
@@ -189,24 +189,24 @@
           
           <div class="mt-4">
           <p>Users who navigate using a screen reader are not always aware of changes made on the page. When information is updated or when a message appears, it is sometimes necessary to make the screen reader speak to inform the user. To do this, the <abbr>ARIA</abbr> language has the role <code>alert</code> and the attribute<code> aria-live</code>.</p>
-<h2 id="the-role-alert" class="h2-focus">The role alert <a class="header-anchor" href="#the-role-alert" id="heading-16" aria-labelledby="heading-16">#</a></h2>
+<h2 id="the-role-alert" class="h2-focus">The role alert <a class="header-anchor" href="#the-role-alert" id="heading-39" aria-labelledby="heading-39">#</a></h2>
 <p>Positioned on an HTML element, this allows you to tell the screen reader to vocalize the element automatically when it is created. However, be sure to use this role only in appropriate cases, as clearly stated in the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role">Mozilla MDN documentation</a>. Due to its intrusive nature, role alert should be used sparingly and only in situations where the user's attention is immediately required. Less urgent dynamic changes should use a less aggressive method, such as <code>aria-live=&quot;polite&quot;</code> or other live zone roles.</p>
 <p>To trigger an alert, several methods are possible, with a support that differ depending on the browser and screen reader pair used. You can read <a href="https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/">Steve Faulkner's article</a> on this subject.</p>
 <p>Here are some examples of methods that are well supported.</p>
-<h3 id="create-a-new-element-in-the-dom">Create a new element in the DOM <a class="header-anchor" href="#create-a-new-element-in-the-dom" id="heading-17" aria-labelledby="heading-17">#</a></h3>
+<h3 id="create-a-new-element-in-the-dom">Create a new element in the DOM <a class="header-anchor" href="#create-a-new-element-in-the-dom" id="heading-40" aria-labelledby="heading-40">#</a></h3>
 <p>You can trigger an alert by inserting a new element in the <abbr>DOM</abbr> via Javascript.</p>
 <pre> <code class="html"> &lt;span role="alert"&gt; This is an alert message. &lt;/span&gt; </code> </pre>
-<h3 id="add-a-role-alert-on-an-existing-element">Add a role alert on an existing element <a class="header-anchor" href="#add-a-role-alert-on-an-existing-element" id="heading-18" aria-labelledby="heading-18">#</a></h3>
+<h3 id="add-a-role-alert-on-an-existing-element">Add a role alert on an existing element <a class="header-anchor" href="#add-a-role-alert-on-an-existing-element" id="heading-41" aria-labelledby="heading-41">#</a></h3>
 <p>The triggering of an alert can also be done by adding a <code>role=&quot;alert&quot;</code> dynamically to an existing element via Javascript.</p>
 <pre> <code class="js">
 document.getElementById('alert').setAttribute("role", "alert");
 </code> </pre>
-<h3 id="using-innerhtml">Using innerHTML <a class="header-anchor" href="#using-innerhtml" id="heading-19" aria-labelledby="heading-19">#</a></h3>
+<h3 id="using-innerhtml">Using innerHTML <a class="header-anchor" href="#using-innerhtml" id="heading-42" aria-labelledby="heading-42">#</a></h3>
 <p>Create an alert via the <code>innerHTML</code> property.</p>
 <pre> <code class="js">
 element.innerHTML = '&lt;div role ="alert"&gt;This is an alert&lt;/div&gt;';
 </code> </pre>
-<h2 id="the-aria-live-attribute" class="h2-focus">The <code>aria-live</code> attribute <a class="header-anchor" href="#the-aria-live-attribute" id="heading-20" aria-labelledby="heading-20">#</a></h2>
+<h2 id="the-aria-live-attribute" class="h2-focus">The <code>aria-live</code> attribute <a class="header-anchor" href="#the-aria-live-attribute" id="heading-43" aria-labelledby="heading-43">#</a></h2>
 <p>Positioned on an HTML element, the <code>aria-live</code> attribute is used to indicate to the screen reader that any modification made to its content will result in vocalization by the screen reader.</p>
 <p>Three values ​​are possible:</p>
 <ul>
@@ -224,7 +224,7 @@ element.innerHTML = '&lt;div role ="alert"&gt;This is an alert&lt;/div&gt;';
 <li><strong>aria-relevant:</strong> indicates which type of change triggers a vocalization, possible values: additions (default), removals, all.</li>
 </ul>
 <p>Finally, to be complete, know that the <abbr>ARIA</abbr> language also provides for some specific roles, <strong>status</strong> and <strong>log</strong> in particular which can be useful in certain cases (status bar, logging, chat...) and which, for the moment, must be used in addition to the <code>aria-live</code> attribute to maximize support by the different tools. You can find more info on these roles in the links below.</p>
-<h2 id="references" class="h2-focus">References <a class="header-anchor" href="#references" id="heading-21" aria-labelledby="heading-21">#</a></h2>
+<h2 id="references" class="h2-focus">References <a class="header-anchor" href="#references" id="heading-44" aria-labelledby="heading-44">#</a></h2>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role">Use of the alert role</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live">ARIA live zones</a></li>
@@ -295,17 +295,17 @@ element.innerHTML = '&lt;div role ="alert"&gt;This is an alert&lt;/div&gt;';
 </footer>
 
     <nav role="navigation" class="back-to-top" aria-label="Back to top">
-      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" title="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" title="Back to top">
         <span class="visually-hidden">Back to top</span>
       </a>
     </nav>
     <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
     
     
       <script src="/assets/vendors/highlightjs/highlight.js"></script>

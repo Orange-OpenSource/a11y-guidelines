@@ -22,7 +22,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
@@ -160,7 +160,7 @@
         
         
           <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
       <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#utilisation" class="dropdown-item text-wrap">Utilisation</a><a href="#liste-des-differents-usages" class="dropdown-item text-wrap">Liste des différents usages</a><a href="#quelques-exemples-dusages-courants" class="dropdown-item text-wrap">Quelques exemples d&#39;usages courants</a><a href="#exemples-1-menu-de-navigation" class="dropdown-item text-wrap">Exemples 1 : menu de navigation</a><a href="#exemples-2-systeme-de-pagination" class="dropdown-item text-wrap">Exemples 2 : système de pagination</a><a href="#exemples-3-fil-dariane" class="dropdown-item text-wrap">Exemples 3 : fil d&#39;Ariane</a><a href="#exemples-4-processus-a-etapes" class="dropdown-item text-wrap">Exemples 4 : processus à étapes</a><a href="#exemple-5-selection-dune-date" class="dropdown-item text-wrap">Exemple 5 : sélection d&#39;une date</a></div>
@@ -188,10 +188,10 @@
             
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-576" aria-labelledby="heading-576">#</a></h2>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-558" aria-labelledby="heading-558">#</a></h2>
 <p>L'attribut <a href="https://www.w3.org/TR/wai-aria-1.2/#aria-current">aria-current</a> sert à indiquer (au niveau du code) l'élément courant dans un ensemble d'éléments.</p>
 <p>Pour faire simple, prenons l'exemple d'un menu de navigation. L'élément courant est généralement mis en évidence par un effet visuel. Pour que cette mise en évidence soit également perçue par les utilisateurs qui utilisent un lecteur d'écran (ou un outil d'assistance quel qu'il soit), il est indispensable de marquer l'élément au niveau code en utilisant l'attribut <code>aria-current</code>.</p>
-<h2 id="utilisation" class="h2-focus">Utilisation <a class="header-anchor" href="#utilisation" id="heading-577" aria-labelledby="heading-577">#</a></h2>
+<h2 id="utilisation" class="h2-focus">Utilisation <a class="header-anchor" href="#utilisation" id="heading-559" aria-labelledby="heading-559">#</a></h2>
 <p>Pour indiquer l'élément en cours dans un ensemble d'éléments, il suffit d'ajouter un attribut <code>aria-current</code> au niveau du code HTML. Dans l'exemple ci-dessous, on utilise la valeur générique <code>true</code> :</p>
 <pre><code class="html">
   &lt;ul&gt;
@@ -201,7 +201,7 @@
   &lt;ul&gt;
 </code></pre>
 <p>Le second élément de cette liste sera par exemple vocalisé &quot;<strong>en cours</strong>, élément 2&quot; par le lecteur d'écran NVDA.</p>
-<h2 id="liste-des-differents-usages" class="h2-focus">Liste des différents usages <a class="header-anchor" href="#liste-des-differents-usages" id="heading-578" aria-labelledby="heading-578">#</a></h2>
+<h2 id="liste-des-differents-usages" class="h2-focus">Liste des différents usages <a class="header-anchor" href="#liste-des-differents-usages" id="heading-560" aria-labelledby="heading-560">#</a></h2>
 <p>L'attribut <code>aria-current</code> accepte les valeurs suivantes : <code>true</code>, <code>page</code>, <code>step</code>, <code>location</code>, <code>date</code>, <code>time</code> et <code>false</code>.</p>
 <ul>
 <li><code>true</code> : indique l'élément en cours dans un ensemble d'éléments</li>
@@ -212,8 +212,8 @@
 <li><code>time</code> : indique l'heure en cours</li>
 <li><code>false</code> (valeur par défaut) : n'a pas d'effet</li>
 </ul>
-<h2 id="quelques-exemples-dusages-courants" class="h2-focus">Quelques exemples d'usages courants <a class="header-anchor" href="#quelques-exemples-dusages-courants" id="heading-579" aria-labelledby="heading-579">#</a></h2>
-<h3 id="exemples-1-menu-de-navigation">Exemples 1 : menu de navigation <a class="header-anchor" href="#exemples-1-menu-de-navigation" id="heading-580" aria-labelledby="heading-580">#</a></h3>
+<h2 id="quelques-exemples-dusages-courants" class="h2-focus">Quelques exemples d'usages courants <a class="header-anchor" href="#quelques-exemples-dusages-courants" id="heading-561" aria-labelledby="heading-561">#</a></h2>
+<h3 id="exemples-1-menu-de-navigation">Exemples 1 : menu de navigation <a class="header-anchor" href="#exemples-1-menu-de-navigation" id="heading-562" aria-labelledby="heading-562">#</a></h3>
 <p>Utiliser la valeur <code>page</code> pour indiquer la page courante dans un ensemble de pages.</p>
 <p><img src="../images/utilisation-de-l-attribut-aria-current/menu-navigation.png" alt="Menu de navigation proposant 3 éléments : accueil, aide et à propos. L'élément à propos est souligné et affiché d'une couleur différente ce qui permet visuelement de comprendre qu'il s'agit de l'élément en cours de consultation" class="img-fluid"></p>
 <pre><code class="html">
@@ -230,7 +230,7 @@
       &lt;/li&gt;      
     &lt;/ul&gt;
 </code></pre>
-<h3 id="exemples-2-systeme-de-pagination">Exemples 2 : système de pagination <a class="header-anchor" href="#exemples-2-systeme-de-pagination" id="heading-581" aria-labelledby="heading-581">#</a></h3>
+<h3 id="exemples-2-systeme-de-pagination">Exemples 2 : système de pagination <a class="header-anchor" href="#exemples-2-systeme-de-pagination" id="heading-563" aria-labelledby="heading-563">#</a></h3>
 <p>Utiliser la valeur <code>page</code> pour indiquer la page en cours de consultation dans un système de pagination :<br>
 <img src="../images/utilisation-de-l-attribut-aria-current/pagination.png" alt="Capture d'écran, exemple de système de pagination, un bouton précédent, un bouton suivant et 3 liens intitulés 1, 2 et 3" class="img-fluid"></p>
 <pre><code class="html">
@@ -240,7 +240,7 @@
     &lt;li aria-label="page 3"&gt;3&lt;/li&gt;    
   &lt;/ol&gt;
 </code></pre>
-<h3 id="exemples-3-fil-dariane">Exemples 3 : fil d'Ariane <a class="header-anchor" href="#exemples-3-fil-dariane" id="heading-582" aria-labelledby="heading-582">#</a></h3>
+<h3 id="exemples-3-fil-dariane">Exemples 3 : fil d'Ariane <a class="header-anchor" href="#exemples-3-fil-dariane" id="heading-564" aria-labelledby="heading-564">#</a></h3>
 <p>Utiliser la valeur <code>page</code> pour indiquer la page en cours dans un fil d'Ariane :<br>
 <img src="../images/utilisation-de-l-attribut-aria-current/breadcrumb.png" alt="Capture d'écran d'un exemple de fil d'Ariane" class="img-fluid"></p>
 <pre><code class="html">
@@ -250,7 +250,7 @@
     &lt;li <span class="important">aria-current="page"</span>&gt;Utilisation de l'attribut aria-current&lt;/li&gt;
   &lt;/ol&gt;
 </code></pre>
-<h3 id="exemples-4-processus-a-etapes">Exemples 4 : processus à étapes <a class="header-anchor" href="#exemples-4-processus-a-etapes" id="heading-583" aria-labelledby="heading-583">#</a></h3>
+<h3 id="exemples-4-processus-a-etapes">Exemples 4 : processus à étapes <a class="header-anchor" href="#exemples-4-processus-a-etapes" id="heading-565" aria-labelledby="heading-565">#</a></h3>
 <p>Utiliser la valeur <code>step</code> pour indiquer l'étape en cours dans un processus à étapes en plusieurs page.</p>
 <p><img src="../images/utilisation-de-l-attribut-aria-current/stepbar.png" alt="Capture d'écran un composant affichant un processus à étapes tel qu'on peux le trouver sur un site marchant (choix d'un produit, livraison, paiement...). 5 étapes sont visibles, l'étape 3 est mise en valeur (changement de couleur) pour indiquer qu'il s'agit de l'étape en cours." class="img-fluid"></p>
 <pre><code class="html">
@@ -262,7 +262,7 @@
     &lt;li&gt;Label n°5&lt;/li&gt;
   &lt;/ol&gt;
 </code></pre>
-<h3 id="exemple-5-selection-dune-date">Exemple 5 : sélection d'une date <a class="header-anchor" href="#exemple-5-selection-dune-date" id="heading-584" aria-labelledby="heading-584">#</a></h3>
+<h3 id="exemple-5-selection-dune-date">Exemple 5 : sélection d'une date <a class="header-anchor" href="#exemple-5-selection-dune-date" id="heading-566" aria-labelledby="heading-566">#</a></h3>
 <p>Utiliser la valeur <code>date</code> dans un composant permettant de sélectionner une date. Un attribut <code>aria-current=&quot;date&quot;</code> est positionné sur la date du jours tandis qu'un attribut <code>aria-selected=&quot;true&quot;</code> est positionné sur la date en cours de sélection.</p>
 <p><img src="../images/utilisation-de-l-attribut-aria-current/datepicker.png" alt="Capture d'écran d'un composant de type datepicker, la date du jour et la date en cours de sélection sont mises en évidence via un changement de couleur." class="img-fluid"></p>
 
@@ -332,17 +332,17 @@
 </footer>
 
     <nav role="navigation" class="back-to-top" aria-label="Retour en haut de page">
-      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" title="Retour en haut de page">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" title="Retour en haut de page">
         <span class="visually-hidden">Retour en haut de page</span>
       </a>
     </nav>
     <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
     
     
       <script src="/assets/vendors/highlightjs/highlight.js"></script>

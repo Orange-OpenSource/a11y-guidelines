@@ -11,13 +11,13 @@ let d=a[c];if(d.name==b){let b=a.indexOf(d);a.splice(b,1)}}return a}function g(b
 // Retourne les tests filtrés
 this.UpdateTypes=function(a,b){let c=[];for(let d in b)for(let a in b[d].type)c.push(b[d].type[a]);let d=c.filter(function(a,b,c){return c.indexOf(a)===b});for(let c in a){var e=document.getElementById("type"+c);e.disabled=!0;var f=document.getElementById("labelType"+c);f.classList.add("disabled")}for(let c in a)for(let b in d)if(a[c]==d[b]){var e=document.getElementById("type"+c);e.disabled=!1;var f=document.getElementById("labelType"+c);f.classList.remove("disabled")}},this.UpdateFeedback=function(a,b){let c=document.getElementById("reinit"),d=1<b?"tests":"test";//         let elFeedback = document.getElementById('feedback');
 if(a){c.disabled=!1;/* 
-          htmlFeedback = '<button type="button" class="btn btn-secondary btn-sm mt-2 mb-3" id="reinitLink">' + translate('reinitFilters') + '';
+          htmlFeedback = '<button type="button" class="btn btn-outline-secondary btn-sm mt-2 mb-3" id="reinitLink">' + translate('reinitFilters') + '';
           elFeedback.innerHTML = htmlFeedback;
  */let a=document.getElementById("reinitLink");a.addEventListener("click",function(){l.FetchAll(k),l.FilterByType(),l.UpdateFeedback(!1,k.length)})}else c.disabled=!0},this.FetchAll=function(b){// Selection de l'élément
 let c=document.getElementById("refTests"),d="",f="";for(let g in b){if("FAKE"!=b[g].themes){//Ne pas présenter le premier élément du fichier .json qui n'est là que pour trier alphabétiquement les thèmes.
 if(f!=b[g].themes){let a="0"===g?"":" class=\"pt-5\"";f=b[g].themes,d+="<h2 id=\"test-"+e(b[g].themes)+"\""+a+" >"+b[g].themes+"</h2>"}d+="<a href=\""+b[g].raccourcis+"\" style=\"text-decoration: none;\">",d+="<p id=\"heading"+g+"\">"+b[g].title+"     ",b[g].resultat[0]&&(d+="<span class=\"badge rounded-pill bg-light mr-2 align-self-center\">",d+=b[g].resultat[0]+"</span>"),d+="</p></a>"}// Affichage de l'ensemble des lignes en HTML
 c.innerHTML=0===b.length?"<div class=\"alert alert-warning\">"+a("noResults")+"</div>":d}},this.DisplayFilters=function(){let b=document.getElementById("filter-footer"),c="";//Id défini dans le fichier 'filters.njk'
-c+="<button id=\"reinit\" class=\"btn btn-secondary\" disabled>"+a("reinitFilters")+"</button>",b.innerHTML=c;let d=document.getElementById("reinit");d.addEventListener("click",function(){l.FetchAll(k),l.FilterByType(),l.UpdateFeedback(!1,k.length)});// Selection de l'élément
+c+="<button id=\"reinit\" class=\"btn btn-outline-secondary\" disabled>"+a("reinitFilters")+"</button>",b.innerHTML=c;let d=document.getElementById("reinit");d.addEventListener("click",function(){l.FetchAll(k),l.FilterByType(),l.UpdateFeedback(!1,k.length)});// Selection de l'élément
 let e=document.getElementById("types"),f=[],g=document.getElementById("profils"),h=[];// Selection de l'élément
 // Chaque ligne (test)
 for(let a in k){// Chaque "type" dans chaque ligne (test)

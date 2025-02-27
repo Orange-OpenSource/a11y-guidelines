@@ -22,7 +22,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-Q3wzptfwnbw1u019drn+ouP2GvlrCu/YVFXSu5YNe4jBpuFwU738RcnKa8PVyj8u" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
@@ -197,7 +197,7 @@
         
         
           <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
       <div class="dropdown-menu dropdown-menu-right"><a href="#memory-footprint" class="dropdown-item text-wrap">Memory footprint</a><a href="#tools-for-profiling-footprint" class="dropdown-item text-wrap">Tools for profiling footprint</a><a href="#instruments" class="dropdown-item text-wrap">Instruments</a><a href="#xcode" class="dropdown-item text-wrap">Xcode</a><a href="#command-line" class="dropdown-item text-wrap">Command-line</a><a href="#choice" class="dropdown-item text-wrap">Choice</a><a href="#images" class="dropdown-item text-wrap">Images</a><a href="#background-optimization" class="dropdown-item text-wrap">Background optimization</a><a href="#demo" class="dropdown-item text-wrap">Demo</a></div>
@@ -238,7 +238,7 @@
 <p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
 </br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
 </br></p>
-<h2 id="memory-footprint" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=88">Memory footprint</a> <a class="header-anchor" href="#memory-footprint" id="heading-1649" aria-labelledby="heading-1649">#</a></h2>
+<h2 id="memory-footprint" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=88">Memory footprint</a> <a class="header-anchor" href="#memory-footprint" id="heading-1646" aria-labelledby="heading-1646">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -317,16 +317,16 @@
 </div>
 </div>
 <p></br></br></p>
-<h2 id="tools-for-profiling-footprint" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=520">Tools for profiling footprint</a> <a class="header-anchor" href="#tools-for-profiling-footprint" id="heading-1650" aria-labelledby="heading-1650">#</a></h2>
-<h3 id="instruments"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=558">Instruments</a> <a class="header-anchor" href="#instruments" id="heading-1651" aria-labelledby="heading-1651">#</a></h3>
+<h2 id="tools-for-profiling-footprint" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=520">Tools for profiling footprint</a> <a class="header-anchor" href="#tools-for-profiling-footprint" id="heading-1647" aria-labelledby="heading-1647">#</a></h2>
+<h3 id="instruments"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=558">Instruments</a> <a class="header-anchor" href="#instruments" id="heading-1648" aria-labelledby="heading-1648">#</a></h3>
 <p>Using the <strong>Xcode Instruments</strong> is the best way to look into the app's footprint: the <strong>VM Tracker</strong> (dirty and compressed memory) and the <strong>VM Memory Trace</strong> (virtual memory system's performance) are introduced to understand their purposes.</p>
 <p><img src="../../../../../images/iOSdev/wwdc18-416-ToolsInstruments.png" alt="" class="img-fluid"></p>
-<h3 id="xcode"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=621">Xcode</a> <a class="header-anchor" href="#xcode" id="heading-1652" aria-labelledby="heading-1652">#</a></h3>
+<h3 id="xcode"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=621">Xcode</a> <a class="header-anchor" href="#xcode" id="heading-1649" aria-labelledby="heading-1649">#</a></h3>
 <p>As noted sooner in the presentation, Xcode catches an <strong>EXC resource exception</strong> raised when the app's footprint reaches its limit.</p>
 <p><img src="../../../../../images/iOSdev/wwdc18-416-ToolsXcode_1.png" alt="" class="img-fluid"></p>
 <p>The <strong>Xcode Memory Debugger</strong> has a <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=639">new design</a> to exploit the Memgraph file format that stores some <strong>information about the memory use</strong>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc18-416-ToolsXcode_2.png" alt="" class="img-fluid"></p>
-<h3 id="command-line">Command-line <a class="header-anchor" href="#command-line" id="heading-1653" aria-labelledby="heading-1653">#</a></h3>
+<h3 id="command-line">Command-line <a class="header-anchor" href="#command-line" id="heading-1650" aria-labelledby="heading-1650">#</a></h3>
 <p>A number of the command-line tools can be used to analyze the Memgraphs in depth.</p>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -389,11 +389,11 @@
 </div>
 </div>
 <p></br></br></p>
-<h3 id="choice"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1008">Choice</a> <a class="header-anchor" href="#choice" id="heading-1654" aria-labelledby="heading-1654">#</a></h3>
+<h3 id="choice"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1008">Choice</a> <a class="header-anchor" href="#choice" id="heading-1651" aria-labelledby="heading-1651">#</a></h3>
 <p>The choice of the appropriate tool to use definitely depends on the goal to be reached.</p>
 <p><img src="../../../../../images/iOSdev/wwdc18-416-ToolsChoice.png" alt="" class="img-fluid"><br>
 </br></br></p>
-<h2 id="images" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1067">Images</a> <a class="header-anchor" href="#images" id="heading-1655" aria-labelledby="heading-1655">#</a></h2>
+<h2 id="images" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1067">Images</a> <a class="header-anchor" href="#images" id="heading-1652" aria-labelledby="heading-1652">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -456,14 +456,14 @@
 </div>
 </div>
 <p></br></br></p>
-<h2 id="background-optimization" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1425">Background optimization</a> <a class="header-anchor" href="#background-optimization" id="heading-1656" aria-labelledby="heading-1656">#</a></h2>
+<h2 id="background-optimization" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1425">Background optimization</a> <a class="header-anchor" href="#background-optimization" id="heading-1653" aria-labelledby="heading-1653">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc18-416-BackgroundOptimization_1.png" alt="" class="img-fluid"></p>
 <p><img src="../../../../../images/iOSdev/wwdc18-416-BackgroundOptimization_2.png" alt="" class="img-fluid"></p>
 <p><strong>App lifecycle</strong> and <strong>view controllers appearance cycle</strong> are the best places to handle the actions responsible for providing the most appropriate <strong>memory space</strong> to the system.</p>
 <p><img src="../../../../../images/iOSdev/wwdc18-416-BackgroundOptimization_3.png" alt="" class="img-fluid"></p>
 <p><img src="../../../../../images/iOSdev/wwdc18-416-BackgroundOptimization_4.png" alt="" class="img-fluid"></p>
 <p></br></br></p>
-<h2 id="demo" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1540">Demo</a> <a class="header-anchor" href="#demo" id="heading-1657" aria-labelledby="heading-1657">#</a></h2>
+<h2 id="demo" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1540">Demo</a> <a class="header-anchor" href="#demo" id="heading-1654" aria-labelledby="heading-1654">#</a></h2>
 <ul>
 <li>
 <p>Filter leaks in a Memgraph file ⟹ <a href="https://developer.apple.com/videos/play/wwdc2018/416/?time=1676">Xcode</a></p>
@@ -575,17 +575,17 @@
 </footer>
 
     <nav role="navigation" class="back-to-top" aria-label="Back to top">
-      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" title="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" title="Back to top">
         <span class="visually-hidden">Back to top</span>
       </a>
     </nav>
     <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.1/dist/js/boosted.bundle.min.js" integrity="sha384-0biCFbLg/2tCnFChlPpLx46RGI2/8UP1Uk6n0Q0ATM7D0SbB4s1yTQcOjLV96X3h" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
     
     
       <script src="/assets/vendors/highlightjs/highlight.js"></script>
