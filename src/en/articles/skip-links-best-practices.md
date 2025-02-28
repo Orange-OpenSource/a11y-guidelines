@@ -9,7 +9,7 @@ tags:
   - beginner
 ---
 
-## What is an skip link?
+## What is a skip link?
 
 ### What is it?
 
