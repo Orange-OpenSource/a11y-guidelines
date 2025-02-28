@@ -100,7 +100,8 @@ module.exports = {
           { label: 'Social networks', href: '/en/content-and-communication/social-networks/' },
           { label: 'Emails', href: '/en/content-and-communication/emails/' },
           { label: 'Audio/video content', href: '/en/content-and-communication/animated-components/' },
-		  { label: 'E-learning', href: '/en/content-and-communication/e-learning/' }
+          { label: 'E-learning', href: '/en/content-and-communication/e-learning/' },
+          { label: 'Must-haves', href: '/en/content-and-communication/must-haves/' }
         ]
       },
       { label: 'Articles', href: '/en/articles/' },
@@ -192,7 +193,8 @@ module.exports = {
           { label: 'Réseaux sociaux', href: '/fr/contenu-et-communication/reseaux-sociaux/' },
           { label: 'Emails', href: '/fr/contenu-et-communication/emails/' },
           { label: 'Contenus audios/vidéos', href: '/fr/contenu-et-communication/composants-animes/' },
-		  { label: 'E-learning', href: '/fr/contenu-et-communication/e-learning/' }
+		      { label: 'E-learning', href: '/fr/contenu-et-communication/e-learning/' },
+          { label: 'Incontournables', href: '/fr/contenu-et-communication/incontournables/' }
         ]
       },
       { label: 'Articles', href: '/fr/articles/' },
