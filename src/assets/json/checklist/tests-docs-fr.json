@@ -26,7 +26,7 @@
 	"type": ["Color Contrast Analyser"],
 	"tests": ["Assurer un contraste suffisant entre les textes et l'arrière-plan :<ul><li>Ne pas utiliser de texte blanc sur fond orange et réciproquement.</li><li>Ne pas utiliser le blanc en combinaison avec les couleurs secondaires de la charte Orange.</li><li>Dans <strong>Microsoft Office</strong>, utiliser la vérification d'accessibilité depuis \"Révision\" > \"Vérifier l'accessibilité\" pour s'assurer qu'il n'y a pas de problème de contraste.</li></ul>"],
 	"resultat": ["Les textes doivent pouvoir être lus sans difficulté.","Aucun problème de contraste détecté par le vérificateur d'accessibilité."],
-	"exception": "Si vous devez absolument utiliser du orange en combinaison avec du blanc, utiliser obligatoirement du orange dit \"accessible\" #F6E00 et une taille de police supérieure à 19pt. En dehors ce cas, la combinaison orange/blanc est à proscrire.",
+	"exception": "Si vous devez utiliser du orange en combinaison avec du blanc, utiliser obligatoirement du orange dit \"accessible\" #F6E00 et une taille de police supérieure à 19pt. En dehors ce cas, la combinaison orange/blanc est à proscrire.",
 	"raccourcis": "",
 	"moreInfo": "",
 	"profils": ["Checklist initiale"],
