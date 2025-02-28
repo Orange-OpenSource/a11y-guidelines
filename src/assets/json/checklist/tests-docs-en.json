@@ -4,16 +4,18 @@
     "type": ["Manual Test"],
     "tests": ["The title is present in the document properties: <ul><li><strong>Microsoft Office</strong>: go to \"File\" > \"Info\" (or \"Properties\" on Mac) and check the \"Title\" property.</li><li><strong>Adobe Acrobat</strong>: go to \"File\" > \"Properties\" > \"Description\" tab and check the \"Title\" property.</li></ul>"],
     "resultat": ["The title must be present in the document properties."],
+    "resultat": ["The title must be present in the document properties."],
     "moreInfo": "",
     "profils": ["Initial Checklist"],
     "wcag": ["1"],
     "ID": "testDocID-1",
     "IDorigin": "testDocID-1"
-}, {
+  }, {
     "themes": "Document Structure",
     "title": "Structure the document with headings",
     "type": ["Manual Test"],
     "tests": ["Use relevant heading levels to structure the document.","In <strong>Microsoft Office</strong>, check their relevance and clarity by activating the navigation mode by headings from \"View\" > \"Navigation Pane\" or \"Outline\"."],
+    "resultat": ["Headings and subheadings are present and explicit, clearly highlighting the structure of the document."],
     "resultat": ["Headings and subheadings are present and explicit, clearly highlighting the structure of the document."],
     "moreInfo": "",
     "profils": ["Initial Checklist"],
@@ -26,6 +28,11 @@
     "type": ["Color Contrast Analyzer"],
     "tests": ["Ensure sufficient contrast between text and background:<ul><li>Do not use white text on an orange background and vice versa.</li><li>Do not use white in combination with the secondary colors of the Orange palette.</li><li>In <strong>Microsoft Office</strong>, use the accessibility checker from \"Review\" > \"Check Accessibility\" to ensure there are no contrast issues.</li></ul>"],
     "resultat": ["Text must be readable without difficulty.","No contrast issues detected by the accessibility checker."],
+    "exception": "If you must use some orange in combination with white, you must only use the so-called \"accessible\" orange #F6E00 and a font size greater than 19pt. Except this case, the orange/white combination shall not be used.",
+    "raccourcis": "",
+    "moreInfo": "",
+    "profils": ["Initial Checklist"],
+    "wcag": ["3"],
     "exception": "If you must use some orange in combination with white, you must only use the so-called \"accessible\" orange #F6E00 and a font size greater than 19pt. Except this case, the orange/white combination shall not be used.",
     "raccourcis": "",
     "moreInfo": "",
@@ -44,9 +51,14 @@
     "moreInfo": "",
     "profils": ["Initial Checklist"],
     "wcag": ["4"],
+    "exception": "",
+    "raccourcis": "",
+    "moreInfo": "",
+    "profils": ["Initial Checklist"],
+    "wcag": ["4"],
     "ID": "testDocID-4",
-    "IDorigin": "testDocID-4" 
-}, {
+    "IDorigin": "testDocID-4"
+  }, {
     "themes": "Images",
     "title": "Ensure that informative images or graphic elements have a textual alternative",
     "type": ["Manual Test"],
@@ -57,8 +69,8 @@
     "profils": ["Initial Checklist"],
     "wcag": ["5"],
     "ID": "testDocID-5",
-    "IDorigin": "testDocID-5" 
-}, {
+    "IDorigin": "testDocID-5"
+  }, {
     "themes": "Tables",
     "title": "Do not use tables for layout",
     "type": ["Manual Test"],
@@ -70,11 +82,12 @@
     "profils": ["Initial Checklist"],
     "wcag": ["6"],
     "ID": "testDocID-6",
-    "IDorigin": "testDocID-6" 
-}, {
+    "IDorigin": "testDocID-6"
+  }, {
     "themes": "Lists",
     "title": "Structure lists",
     "type": ["Manual Test"],
+    "tests": ["Identify lists of elements (bulleted or numbered lists).","In <strong>Microsoft Office</strong>, use bullets (for unordered lists) or numbers (for ordered lists) to create well-structured lists."],
     "tests": ["Identify lists of elements (bulleted or numbered lists).","In <strong>Microsoft Office</strong>, use bullets (for unordered lists) or numbers (for ordered lists) to create well-structured lists."],
     "resultat": ["Bullet points must be used for items where order is not important. If order is important, then use numbered lists (1,2,3... / a,b,c...)."],
     "exception": "",
@@ -83,8 +96,8 @@
     "profils": ["Initial Checklist"],
     "wcag": ["7"],
     "ID": "testDocID-7",
-    "IDorigin": "testDocID-7" 
-}, {
+    "IDorigin": "testDocID-7"
+  }, {
     "themes": "Links",
     "title": "Give explicit links",
     "type": ["Manual Test"],
@@ -96,11 +109,12 @@
     "profils": ["Initial Checklist"],
     "wcag": ["8"],
     "ID": "testDocID-8",
-    "IDorigin": "testDocID-8" 
-}, {
+    "IDorigin": "testDocID-8"
+  }, {
     "themes": "Reading Order",
     "title": "Ensure logical reading order",
     "type": ["Manual Test"],
+    "tests": ["Check the order of information presentation: preferably from left to right and top to bottom to respect the natural reading order as much as possible.","Use the <kbd>TAB</kbd> key on the keyboard to check that links and other interactive elements are reached in a logical order."],
     "tests": ["Check the order of information presentation: preferably from left to right and top to bottom to respect the natural reading order as much as possible.","Use the <kbd>TAB</kbd> key on the keyboard to check that links and other interactive elements are reached in a logical order."],
     "resultat": ["The natural reading and navigation order are respected."],
     "exception": "",
@@ -109,8 +123,8 @@
     "profils": ["Initial Checklist"],
     "wcag": ["9"],
     "ID": "testDocID-9",
-    "IDorigin": "testDocID-9" 
-}, {
+    "IDorigin": "testDocID-9"
+  }, {
     "themes": "Audio and Video Content",
     "title": "Provide subtitles and textual transcript",
     "type": ["Manual Test"],
@@ -121,8 +135,8 @@
     "profils": ["Initial Checklist"],
     "wcag": ["10"],
     "ID": "testDocID-10",
-    "IDorigin": "testDocID-10" 
-}, {
+    "IDorigin": "testDocID-10"
+  }, {
     "themes": "Accessibility Inspector",
     "title": "Use the accessibility inspector",
     "type": ["Manual Test"],
@@ -134,5 +148,5 @@
     "profils": ["Initial Checklist"],
     "wcag": ["11"],
     "ID": "testDocID-11",
-    "IDorigin": "testDocID-11" 
-}]
+    "IDorigin": "testDocID-11"
+  }]
