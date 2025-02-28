@@ -12,7 +12,7 @@ js:
 
 # Documentation - List of Essential Accessibility Criteria
 
-This set of criteria, intended for documentation and communication content, helps avoid the main accessibility errors. Its implementation does not guarantee accessible documents, but lays the foundations for a progressive approach to accessibility.
+This set of criteria, intended for documentation and communication content, helps avoiding the main accessibility errors. Its implementation does not guarantee accessible documents, but lays the foundations for a progressive approach to accessibility.
 
 This checklist is aimed at designers and writers of content used for internal or external communication purposes. These recommendations apply to content generated from the Microsoft Office suite (Word, PowerPoint, Outlook, Excel), PDFs, and audio/video media. However, it is essential to adhere to the principles described for any other electronic communication format.
 
