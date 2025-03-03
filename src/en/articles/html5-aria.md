@@ -3,7 +3,7 @@ title: "HTML5 & ARIA"
 abstract: "HTML 5 and ARIA introduction"
 titleBeforeTag: true
 date: "2016-09-08"
-updateDate: "2025-02-24"
+updateDate: "2025-03-14"
 tags:
   - web
   - beginner
