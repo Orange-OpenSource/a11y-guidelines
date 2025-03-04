@@ -89,12 +89,12 @@ Documents office :
       <img src="../images/memos/memo-android.png" alt="">
     </p>
   </div>
-  <div class="col-xl-9">  
+  <div class="col-xl-9">
     <h3 id="desc-android">Description</h3>
     <p>Mémo à destination des développeurs Android.</p>
     <p>Rappel des techniques et outils indispensables pour développer un application Android accessible.</p>
     <h3 id="tele-android">Téléchargement</h3>
-    <p>         
+    <p>
       <a href="../../res/memos/android/Memo-Android-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (261 Ko)
         <span class="visually-hidden">Mémo accessibilité développement Android</span>
@@ -113,12 +113,12 @@ Documents office :
       <img src="../images/memos/memo-ios.png" alt="">
     </p>
   </div>
-  <div class="col-xl-9">  
+  <div class="col-xl-9">
     <h3 id="desc-ios">Description</h3>
     <p>Mémo à destination des développeurs iOS.<p>
-    <p>Rappel des techniques et outils indispensables pour développer un application iOS accessible.</p>
+    <p>Rappel des techniques et outils indispensables pour développer une application iOS accessible.</p>
     <h3 id="tele-ios">Téléchargement</h3>
-    <p>      
+    <p>
       <a href="../../res/memos/ios/Memo-iOS-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (1.7 Mo)
         <span class="visually-hidden">Mémo accessibilité développement iOS</span>
@@ -137,11 +137,11 @@ Documents office :
       <img src="../images/memos/memo-email.png" alt="">
     </p>
   </div>
-  <div class="col-xl-9">  
+  <div class="col-xl-9">
     <h3 id="desc-email">Description</h3>
     <p>Rappel des bonnes pratiques pour rédiger un email accessible.</p>
     <h3 id="tele-email">Téléchargement</h3>
-    <p>      
+    <p>
       <a href="../../res/memos/email/Memo-Email-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (283 Ko)
         <span class="visually-hidden">Mémo rédiger un email accessible</span>
