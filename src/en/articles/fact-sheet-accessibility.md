@@ -45,7 +45,7 @@ Mobile applications:
     <p>Reminder of good practices for writing an accessible email.</p>
     <h3 id="tele-email">Download</h3>
     <p>      
-      <a href="../../res/memos/email/Email-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/email/Email-Fact-Sheet-Orange.pdf" class="btn btn-outline-secondary">
         Download as PDF (249 Ko)
         <span class="visually-hidden">Write an accessible email fact sheet</span>
       </a>
@@ -66,7 +66,7 @@ Mobile applications:
     <p>Reminder of best practices for writing an accessible Word document.</p>
     <h3 id="tele-word">Download</h3>
     <p>      
-      <a href="../../res/memos/word/Word-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/word/Word-Fact-Sheet-Orange.pdf" class="btn btn-outline-secondary">
         Download as PDF (205 Ko)
         <span class="visually-hidden">Write an accessible Word document fact sheet</span>
       </a>
@@ -87,7 +87,7 @@ Mobile applications:
     <p>Reminder of best practices for writing an accessible Excel document.</p>
     <h3 id="tele-word">Download</h3>
     <p>      
-      <a href="../../res/memos/excel/Excel-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/excel/Excel-Fact-Sheet-Orange.pdf" class="btn btn-outline-secondary">
         Download as PDF (248 Ko)
         <span class="visually-hidden">Write an accessible Excel document fact sheet</span>
       </a>
@@ -108,7 +108,7 @@ Mobile applications:
     <p>Reminder of best practices for writing an accessible PowerPoint presentation.</p>
     <h3 id="tele-word">Download</h3>
     <p>      
-      <a href="../../res/memos/pwp/PowerPoint-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/pwp/PowerPoint-Fact-Sheet-Orange.pdf" class="btn btn-outline-secondary">
         Download as PDF (277 Ko)
         <span class="visually-hidden">Write an accessible PowerPoint presentation fact sheet</span>
       </a>
@@ -133,7 +133,7 @@ Mobile applications:
     <p>Reminder of the essential techniques and tools to develop an accessible website.</p>
     <h3 id="tele-web">Download</h3>
     <p>          
-      <a href="../../res/memos/dev-web/Web-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/dev-web/Web-Fact-Sheet-Orange.pdf" class="btn btn-outline-secondary">
         Download as PDF (264 Ko)
         <span class="visually-hidden">Web development accessibility fact sheet</span>
       </a>
@@ -159,7 +159,7 @@ Mobile applications:
     </p>        
     <h3 id="tele-tests-web">Download</h3>
     <p>          
-      <a href="../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-outline-secondary">
         Download as PDF (325 Ko)
         <span class="visually-hidden">Web test accessibility fact sheet</span>
       </a>
@@ -183,7 +183,7 @@ Mobile applications:
     <p>Reminder of the essential techniques and tools for developing an accessible Android application.</p>
     <h3 id="tele-android">Download</h4>
     <p>         
-      <a href="../../res/memos/android/Fact-sheet-Android-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/android/Fact-sheet-Android-Orange.pdf" class="btn btn-outline-secondary">
         Download as PDF (171 Ko)
         <span class="visually-hidden">Android development accessibility fact sheet</span>
       </a>
@@ -206,7 +206,7 @@ Mobile applications:
     <p>Reminder of the essential techniques and tools for developing an accessible iOS application.</p>
     <h3 id="tele-ios">Download</h3>
     <p>      
-      <a href="../../res/memos/ios/Fact-sheet-iOS-Orange.pdf" class="btn btn-secondary">
+      <a href="../../res/memos/ios/Fact-sheet-iOS-Orange.pdf" class="btn btn-outline-secondary">
         Download as PDF (198 Ko)
         <span class="visually-hidden">iOS development accessibility fact sheet</span>
       </a>
