@@ -1,14 +1,14 @@
 {%- import "../components/ui.njk" as ui with context -%}
 <!doctype html>
-<html lang="{{ locale }}" dir="ltr" class="no-js">
+<html lang="{{ locale }}" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
-    <meta charset="utf-8">    
+    <meta charset="utf-8">
     <title>{{ title }} - {{ site.title[locale] }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     {% if abstract %}
     <meta name="description" content="{{ abstract }}">
-    {% endif %}        
+    {% endif %}
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
