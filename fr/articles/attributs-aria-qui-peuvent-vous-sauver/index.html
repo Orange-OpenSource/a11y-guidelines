@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="fr" dir="ltr" class="no-js">
+<html lang="fr" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
-    <meta charset="utf-8">    
+    <meta charset="utf-8">
     <title>Les attributs ARIA qui peuvent vous sauver ! - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
     <meta name="description" content="Quelques attributs ARIA à connaître pour avoir un nom accessible">
-            
+    
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
@@ -33,7 +33,7 @@
     
 
 <header role="banner">
-  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
+  <nav class="navbar navbar-expand-lg supra" aria-label="Liens d&#39;évitements - Changement de langue" data-bs-theme="dark">
    <div class="container-lg">
       <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
@@ -58,11 +58,11 @@
       </li></ul>
     </div>
   </nav>
-  
+
   
 
-<div class="navbar navbar-dark bg-dark navbar-expand-md">
-  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+<div class="navbar navbar-expand-md" data-bs-theme="dark">
+  <nav id="main-menu" class="container-lg justify-content-md-start align-items-center" role="navigation" aria-label="Navigation principale">
     <a href="/fr/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
       <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
     </a>
@@ -188,12 +188,12 @@
             
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-401" aria-labelledby="heading-401">#</a></h2>
-<h3 id="nom-et-description-accessible">Nom et description accessible <a class="header-anchor" href="#nom-et-description-accessible" id="heading-402" aria-labelledby="heading-402">#</a></h3>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-409" aria-labelledby="heading-409">#</a></h2>
+<h3 id="nom-et-description-accessible">Nom et description accessible <a class="header-anchor" href="#nom-et-description-accessible" id="heading-410" aria-labelledby="heading-410">#</a></h3>
 <p>Un nom accessible (pour aller plus loin, <a href="../le-nom-accessible-en-html/">Le nom accessible en HTML</a>) est l'information qui permet à l'aide technique (<abbr>AT</abbr>), par exemple, un lecteur d'écran ou une loupe logicielle, d'identifier l'élément (tag <abbr>HTML</abbr>) en question. Il peut être fourni par l'intitulé ou le contenu d'un élément, un attribut (par exemple, un attribut <code>alt</code> pour une image) ou par un élément associé (par exemple, une balise <code>label</code> pour un champ <code>input</code>).</p>
 <p>Une description accessible est une information plus étendue qui est utilisée par l'<abbr>AT</abbr> lui permettant de compléter le nom accessible en précisant et rajoutant du sens là ou le nom accessible n'est pas suffisant.</p>
 <p>Le  comme la description accessible peuvent être visuellement perceptible ou pas (intitulé de lien : visible, alternative d'image : cachée et utilisable que par une <abbr>AT</abbr>...)</p>
-<h3 id="les-attributs-aria-aria-label-aria-labelledby-et-aria-describedby">Les attributs <abbr>ARIA</abbr> : <code>aria-label</code>, <code>aria-labelledby</code> et <code>aria-describedby</code> <a class="header-anchor" href="#les-attributs-aria-aria-label-aria-labelledby-et-aria-describedby" id="heading-403" aria-labelledby="heading-403">#</a></h3>
+<h3 id="les-attributs-aria-aria-label-aria-labelledby-et-aria-describedby">Les attributs <abbr>ARIA</abbr> : <code>aria-label</code>, <code>aria-labelledby</code> et <code>aria-describedby</code> <a class="header-anchor" href="#les-attributs-aria-aria-label-aria-labelledby-et-aria-describedby" id="heading-411" aria-labelledby="heading-411">#</a></h3>
 <p>Trois attributs <abbr>ARIA</abbr> sont très bien supportés par les navigateurs et les <abbr>AT</abbr>: <code>aria-label</code>, <code>aria-labelledby</code> et <code>aria-describedby</code>. Ils permettent de rajouter de l'information à un élément <abbr>HTML</abbr> :</p>
 <ul>
 <li><code>aria-label</code>, <code>aria-labelledby</code> permettent de donner un nom accessible à un élément</li>
@@ -207,14 +207,14 @@
 <li>les éléments avec un des  <a href="https://www.w3.org/TR/wai-aria-1.1/#widget_roles" lang="en" hreflang="en">rôles de widget d'<abbr>ARIA</abbr> (27 pour <abbr>ARIA</abbr> 1.1)</a>.</li>
 </ul>
 <p>Pour tout autre élément <abbr>HTML</abbr>, ces trois attributs <abbr>ARIA</abbr> ont un support peu robuste voire aléatoire selon les couples <abbr>AT</abr>/navigateur, donc ne pas l'utiliser comme seul moyen de passer une information nécessaire.</p>
-<h2 id="faut-il-les-utiliser-et-comment" class="h2-focus">Faut-il les utiliser et comment ? <a class="header-anchor" href="#faut-il-les-utiliser-et-comment" id="heading-404" aria-labelledby="heading-404">#</a></h2>
+<h2 id="faut-il-les-utiliser-et-comment" class="h2-focus">Faut-il les utiliser et comment ? <a class="header-anchor" href="#faut-il-les-utiliser-et-comment" id="heading-412" aria-labelledby="heading-412">#</a></h2>
 <p>Oui, on peut utiliser ces trois attributs <abbr>ARIA</abbr> sur les éléments avec lesquels cela fonctionne (voir ci-dessus) pour passer une information essentielle, spécifiquement aux <abbr>AT</abbr>.</p>
 <p>Il faut savoir que <code>aria-label</code> doit contenir, comme valeur, une chaîne de caractères qui sera le nom accessible. Alors que pour <code>aria-labelledby</code> et <code>aria-describedby</code>, la valeur de cet attribut référence le  ou les (séparée par un espace) <code>id</code> d'éléments (auto référencement possible) de la page dont le contenu sera utilisé comme nom accessible de l'élément portant l'attribut <abbr>Aria</abbr>.</p>
 <p>Lorsqu'on utilise <code>aria-label</code> ou <code>aria-labelledby</code> sur un élément, le contenu ou l'intitulé de cet élément n'est plus restitué au <abbr>AT</abbr>, mais remplacé par le nom accessible (pour <code>aria-label</code> le contenu de cet attribut, pour <code>aria-labelledby</code> le contenu de l'élément référencé). Donc, seul, le nom accessible doit donner l'ensemble des informations nécessaires à l'<abbr>AT</abbr> et donc à l'utilisateur.</p>
 <p><strong>Important :</strong> l'<code>aria-labelledby</code> peut admettre plusieurs valeurs séparées par un espace et peut s'auto-référencer. Il fonctionne aussi avec du contenu généré par pseudo-classes <abbr>CSS</abbr> <code>::before</code> ou <code>::after</code>. On peut également référencer un contenu masqué visuellement par : <abbr>CSS</abbr>,  <code>visibility:hidden;</code> ou <code>display:none;</code>, et avec l'attribut <abbr>HTML</abbr>5 <code>hidden</code>. Cependant, les bonnes pratiques demandent que si l'interface est telle qu'il n'est pas possible d'avoir une étiquette textuelle visible à l'écran, il est préférable d'utiliser <code>aria-label</code> plutôt que <code>aria-labelledby</code>.</p>
 <p>Lorsque les deux attributs <code>aria-labelledby</code> et <code>aria-label</code> sont utilisés, les agents utilisateurs donnent la priorité (et donc sera le seul contenu restitué) à <code>aria-labelledby</code> lors du calcul de la propriété de nom accessible.</p>
 <p>Quant à lui, <code>aria-describedby</code> va rajouter au nom accessible de l'élément, une description accessible, plus longue ou plus complète, logiquement, que le nom accessible.</p>
-<h2 id="exemples" class="h2-focus">Exemples <a class="header-anchor" href="#exemples" id="heading-405" aria-labelledby="heading-405">#</a></h2>
+<h2 id="exemples" class="h2-focus">Exemples <a class="header-anchor" href="#exemples" id="heading-413" aria-labelledby="heading-413">#</a></h2>
 <pre><code class="html">
 &lt;button aria-label="accéder au code html (Hypertext markup language)"&gt;html&lt;/button&gt;
 </code></pre>

@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="fr" dir="ltr" class="no-js">
+<html lang="fr" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
-    <meta charset="utf-8">    
+    <meta charset="utf-8">
     <title>Web développer - Tactile et interactions - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
     <meta name="description" content="Tactile et interactions, recommendations d&#39;accessibilité web lors du développement">
-            
+    
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
@@ -33,7 +33,7 @@
     
 
 <header role="banner">
-  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
+  <nav class="navbar navbar-expand-lg supra" aria-label="Liens d&#39;évitements - Changement de langue" data-bs-theme="dark">
    <div class="container-lg">
       <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
@@ -58,11 +58,11 @@
       </li></ul>
     </div>
   </nav>
-  
+
   
 
-<div class="navbar navbar-dark bg-dark navbar-expand-md">
-  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+<div class="navbar navbar-expand-md" data-bs-theme="dark">
+  <nav id="main-menu" class="container-lg justify-content-md-start align-items-center" role="navigation" aria-label="Navigation principale">
     <a href="/fr/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
       <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
     </a>
@@ -279,12 +279,12 @@
           <div class="mt-4">
           <h1>Web développer - Tactile et interactions</h1>
 <p class="lead">S’assurer que l’utilisateur garde le contrôle sur les interactions, en particulier tactiles</p>
-<h2 id="autoriser-lutilisation-du-zoom" class="h2-focus">Autoriser l'utilisation du zoom <a class="header-anchor" href="#autoriser-lutilisation-du-zoom" id="heading-1334" aria-labelledby="heading-1334">#</a></h2>
+<h2 id="autoriser-lutilisation-du-zoom" class="h2-focus">Autoriser l'utilisation du zoom <a class="header-anchor" href="#autoriser-lutilisation-du-zoom" id="heading-1325" aria-labelledby="heading-1325">#</a></h2>
 <p><strong>Cible :</strong> tout le monde en particulier les personnes déficientes visuelles.<br>
 <strong>Quand :</strong> lors du développement.</p>
 <p><strong>Description :</strong><br>
 L'utilisateur doit être capable de zoomer le contenu de la page facilement sur périphérique tactile (smartphone, tablette...). Cette fonctionnalité de base offerte par le navigateur ne doit pas être désactivée au niveau du code (ne pas utiliser de balise <code>meta</code> interdisant le zoom).</p>
-<h2 id="permettre-dannuler-le-declenchement-des-interactions" class="h2-focus">Permettre d'annuler le déclenchement des interactions <a class="header-anchor" href="#permettre-dannuler-le-declenchement-des-interactions" id="heading-1335" aria-labelledby="heading-1335">#</a></h2>
+<h2 id="permettre-dannuler-le-declenchement-des-interactions" class="h2-focus">Permettre d'annuler le déclenchement des interactions <a class="header-anchor" href="#permettre-dannuler-le-declenchement-des-interactions" id="heading-1326" aria-labelledby="heading-1326">#</a></h2>
 <p><strong>Cible :</strong> Facilite l'annulation pour tous les utilisateurs en cas d'erreur sur la cible.<br>
 Aide les personnes ayant des déficiences visuelles, des limitations cognitives et des déficiences motrices.<br>
 Les personnes incapables de détecter les changements de contexte sont moins susceptibles d'être désorientées lors de la navigation sur un site.</p>
@@ -301,7 +301,7 @@ Lors d'une interaction gestuelle mono-point, au moins une condition est vraie :<
 <ul>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG22/#pointer-cancellation">2.5.2 Pointer Cancellation</a></li>
 </ul>
-<h2 id="proposer-une-alternative-aux-gestuelles-complexes" class="h2-focus">Proposer une alternative aux gestuelles complexes <a class="header-anchor" href="#proposer-une-alternative-aux-gestuelles-complexes" id="heading-1336" aria-labelledby="heading-1336">#</a></h2>
+<h2 id="proposer-une-alternative-aux-gestuelles-complexes" class="h2-focus">Proposer une alternative aux gestuelles complexes <a class="header-anchor" href="#proposer-une-alternative-aux-gestuelles-complexes" id="heading-1327" aria-labelledby="heading-1327">#</a></h2>
 <p><strong>Cible :</strong> tout le monde en particulier les personnes souffrant de handicap moteur ou visuel, de troubles cognitifs ou d'apprentissage et en mobilité. Les utilisateurs qui ne peuvent pas (avec précision) effectuer des gestes complexes avec un pointeur. Les utilisateurs novices qui ignorent souvent la prise en charge de gestes de pointeur complexes.</p>
 <p><strong>Quand :</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description :</strong></p>
@@ -316,7 +316,7 @@ Lors d'une interaction gestuelle mono-point, au moins une condition est vraie :<
 <li><a lang="en" href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a></li>
 <li><a lang="en" href="https://www.w3.org/TR/WCAG22/#motion-actuation">2.5.4 Motion Actuation</a></li>
 </ul>
-<h2 id="proposer-une-alternative-aux-mouvements-de-glisser-deposer" class="h2-focus">Proposer une alternative aux mouvements de glisser-déposer <a class="header-anchor" href="#proposer-une-alternative-aux-mouvements-de-glisser-deposer" id="heading-1337" aria-labelledby="heading-1337">#</a></h2>
+<h2 id="proposer-une-alternative-aux-mouvements-de-glisser-deposer" class="h2-focus">Proposer une alternative aux mouvements de glisser-déposer <a class="header-anchor" href="#proposer-une-alternative-aux-mouvements-de-glisser-deposer" id="heading-1328" aria-labelledby="heading-1328">#</a></h2>
 <p><strong>Cible :</strong> tout le monde en particulier les personnes souffrant de handicap moteur, visuel et en mobilité.<br>
 <strong>Quand :</strong> lors de la conception et lors du développement.</p>
 <p><strong>Description :</strong><br>

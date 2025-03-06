@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="fr" dir="ltr" class="no-js">
+<html lang="fr" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
-    <meta charset="utf-8">    
+    <meta charset="utf-8">
     <title>Accessibilité sous iOS - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
     <meta name="description" content="Guide pour la conception et le développement d&#39;une application mobile accessible sous iOS">
-            
+    
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
@@ -33,7 +33,7 @@
     
 
 <header role="banner">
-  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
+  <nav class="navbar navbar-expand-lg supra" aria-label="Liens d&#39;évitements - Changement de langue" data-bs-theme="dark">
    <div class="container-lg">
       <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
@@ -58,11 +58,11 @@
       </li></ul>
     </div>
   </nav>
-  
+
   
 
-<div class="navbar navbar-dark bg-dark navbar-expand-md">
-  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+<div class="navbar navbar-expand-md" data-bs-theme="dark">
+  <nav id="main-menu" class="container-lg justify-content-md-start align-items-center" role="navigation" aria-label="Navigation principale">
     <a href="/fr/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
       <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
     </a>
@@ -194,20 +194,20 @@
 <p>De façon à pouvoir implémenter au mieux l'accessibilité au sein d'applications iOS, la parfaite compréhension d'un ensemble de notions est nécessaire pour apporter la meilleure expérience utilisateur possible.</p>
 <p>Pour connaître et suivre les différentes évolutions mises en oeuvre côté iOS, n'hésitez pas à consulter de temps à autres l'<a href="historique/">historique des modifications</a> mis en place.</p>
 <p>Toutes ces notions élémentaires et avancées sont illustrées et développées dans les différentes rubriques ci-dessous :</p>
-<h2 id="criteres-de-conception" class="h2-focus"><a href="conception/">Critères de conception</a> <a class="header-anchor" href="#criteres-de-conception" id="heading-1260" aria-labelledby="heading-1260">#</a></h2>
+<h2 id="criteres-de-conception" class="h2-focus"><a href="conception/">Critères de conception</a> <a class="header-anchor" href="#criteres-de-conception" id="heading-1243" aria-labelledby="heading-1243">#</a></h2>
 <p>Ce socle de critères pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité.</p>
 <p>Le respect de la charte Orange pour iOS, document disponible sur le site de la marque <a href="https://design.orange.com/">Orange</a>, est un prérequis à l’utilisation de ce socle.</p>
 <p>Certains points déjà présents dans cette charte <em>(utilisation des couleurs notamment)</em> n’ont pas été repris dans cette liste de critères.</p>
-<h2 id="guide-pour-les-developpeurs" class="h2-focus"><a href="developpement/">Guide pour les développeurs</a> <a class="header-anchor" href="#guide-pour-les-developpeurs" id="heading-1261" aria-labelledby="heading-1261">#</a></h2>
+<h2 id="guide-pour-les-developpeurs" class="h2-focus"><a href="developpement/">Guide pour les développeurs</a> <a class="header-anchor" href="#guide-pour-les-developpeurs" id="heading-1244" aria-labelledby="heading-1244">#</a></h2>
 <p>L'aide au développement a pour vocation d’aider les développeurs avec les éléments programmatiques d’accessibilité disponibles sous iOS.</p>
 <p>L'intérêt principal de cette partie réside dans tous les exemples concrets comprenant des illustrations et des exemples de code <em>(ObjC et Swift)</em> qui permettront aux développeurs de trouver rapidement une solution à leurs problèmes.</p>
-<h2 id="voiceover" class="h2-focus"><a href="voiceover/">VoiceOver</a> <a class="header-anchor" href="#voiceover" id="heading-1262" aria-labelledby="heading-1262">#</a></h2>
+<h2 id="voiceover" class="h2-focus"><a href="voiceover/">VoiceOver</a> <a class="header-anchor" href="#voiceover" id="heading-1245" aria-labelledby="heading-1245">#</a></h2>
 <p>Afin de comprendre parfaitement les problématiques liées au lecteur d'écran, toutes les gestuelles sont illustrées et expliquées de façon détaillée.</p>
 <p>La maîtrise parfaite de ces gestes permet de mettre en place une application qui colle au mieux aux attentes des utilisateurs, l'effort à fournir pour la pratique se faisant tant au niveau des concepteurs que des développeurs et des testeurs.</p>
-<h2 id="wwdc" class="h2-focus"><a href="wwdc/">WWDC</a> <a class="header-anchor" href="#wwdc" id="heading-1263" aria-labelledby="heading-1263">#</a></h2>
+<h2 id="wwdc" class="h2-focus"><a href="wwdc/">WWDC</a> <a class="header-anchor" href="#wwdc" id="heading-1246" aria-labelledby="heading-1246">#</a></h2>
 <p>Cette section regroupe des présentations concernant l'accessibilité faites par Apple à la World Wide Developers Conference présentée chaque année.</p>
 <p>Chacune de ces présentations est détaillée et chaque thème décrit fait référence à une indication temporelle au sein de la vidéo de façon à pouvoir le visualiser le plus rapidement possible.</p>
-<h2 id="tests" class="h2-focus"><a href="test/">Tests</a> <a class="header-anchor" href="#tests" id="heading-1264" aria-labelledby="heading-1264">#</a></h2>
+<h2 id="tests" class="h2-focus"><a href="test/">Tests</a> <a class="header-anchor" href="#tests" id="heading-1247" aria-labelledby="heading-1247">#</a></h2>
 <p>Cette partie contient l'ensemble des tests à réaliser afin de s'assurer que les recommandations iOS sont bien suivies.</p>
 
     </main>

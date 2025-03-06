@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="fr" dir="ltr" class="no-js">
+<html lang="fr" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
-    <meta charset="utf-8">    
+    <meta charset="utf-8">
     <title>WWDC 2021 : Incorporer efficacement l&#39;accessibilité à vos graphes - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
     <meta name="description" content="Incorporer efficacement l&#39;accessibilité à vos graphes.">
-            
+    
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
@@ -33,7 +33,7 @@
     
 
 <header role="banner">
-  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Liens d&#39;évitements - Changement de langue">
+  <nav class="navbar navbar-expand-lg supra" aria-label="Liens d&#39;évitements - Changement de langue" data-bs-theme="dark">
    <div class="container-lg">
       <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Aller au menu</a>
@@ -58,11 +58,11 @@
       </li></ul>
     </div>
   </nav>
-  
+
   
 
-<div class="navbar navbar-dark bg-dark navbar-expand-md">
-  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Navigation principale">
+<div class="navbar navbar-expand-md" data-bs-theme="dark">
+  <nav id="main-menu" class="container-lg justify-content-md-start align-items-center" role="navigation" aria-label="Navigation principale">
     <a href="/fr/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
       <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
     </a>
@@ -231,7 +231,7 @@
 </li>
 </ul>
 <p><br><br></p>
-<h2 id="presentation-0129" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=89">Présentation (01:29)</a> <a class="header-anchor" href="#presentation-0129" id="heading-1644" aria-labelledby="heading-1644">#</a></h2>
+<h2 id="presentation-0129" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=89">Présentation (01:29)</a> <a class="header-anchor" href="#presentation-0129" id="heading-1647" aria-labelledby="heading-1647">#</a></h2>
 <p>L'idée de cette <strong>nouvelle fonctionnalité iOS 15</strong> réside dans l'introduction d'une sonorisation à intensité variable pour <strong>indiquer les écarts de valeurs sur un graphe</strong> de façon auditive.</p>
 <p>Le <a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=89">premier exemple</a> s'articule autour d'un graphe représentant des données sous forme de courbes.<br>
 <img src="../../../../images/iOSdev/wwdc21-122-Demo1.png" alt="" class="img-fluid"><br>
@@ -244,7 +244,7 @@ Outre le fait de se mettre à la portée de tous, incorporer l'accessibilité à
 <a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=370"></p>
 <p><img src="../../../../images/iOSdev/wwdc21-122-MakeYourChartsA11Y.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="criteres-de-conception-en-accessibilite-visuelle-0644" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=404">Critères de conception en accessibilité visuelle (06:44)</a> <a class="header-anchor" href="#criteres-de-conception-en-accessibilite-visuelle-0644" id="heading-1645" aria-labelledby="heading-1645">#</a></h2>
+<h2 id="criteres-de-conception-en-accessibilite-visuelle-0644" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=404">Critères de conception en accessibilité visuelle (06:44)</a> <a class="header-anchor" href="#criteres-de-conception-en-accessibilite-visuelle-0644" id="heading-1648" aria-labelledby="heading-1648">#</a></h2>
 <p>Afin de rendre le visuel d'un graphique le plus accessible possible, des critères importants sont exposés et expliqués avec des exemples concrets pour mieux percevoir leur efficacité.</p>
 <ul>
 <li>
@@ -265,7 +265,7 @@ Outre le fait de se mettre à la portée de tous, incorporer l'accessibilité à
 </ul>
 <p>Pour plus d'informations sur ces points, l'ensemble des <a href="../../../conception/" style="text-decoration: underline;">critères de conception</a> incluant les <a href="../../../conception/#options-daccessibilite" style="text-decoration: underline;">options d'accessibilité</a> sont disponibles dans la section homonyme iOS de ce site.<br>
 <br><br></p>
-<h2 id="implementation-classique-1022" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=622">Implémentation classique (10:22)</a> <a class="header-anchor" href="#implementation-classique-1022" id="heading-1646" aria-labelledby="heading-1646">#</a></h2>
+<h2 id="implementation-classique-1022" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=622">Implémentation classique (10:22)</a> <a class="header-anchor" href="#implementation-classique-1022" id="heading-1649" aria-labelledby="heading-1649">#</a></h2>
 <p>Un histogramme sans complexités particulières va servir de socle pour l'exemple d'implémentation basique de VoiceOver.<br>
 <img src="../../../../images/iOSdev/wwdc21-122-BasicExample1.png" alt="" class="img-fluid"><br>
 <br><br>
@@ -284,7 +284,7 @@ Les grandes lignes à suivre peuvent se résumer de la façon suivante :</p>
 <p><img src="../../../../images/iOSdev/wwdc21-122-BasicExample2.png" alt="" class="img-fluid"><br>
 En suivant cette logique, le <a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=776">rendu final</a> est optimisé et parfaitement compréhensible par un utilisateur <span lang="en">VoiceOver</span>.<br>
 <br><br></p>
-<h2 id="implementation-du-graphe-audio-1417" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=857">Implémentation du graphe audio (14:17)</a> <a class="header-anchor" href="#implementation-du-graphe-audio-1417" id="heading-1647" aria-labelledby="heading-1647">#</a></h2>
+<h2 id="implementation-du-graphe-audio-1417" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=857">Implémentation du graphe audio (14:17)</a> <a class="header-anchor" href="#implementation-du-graphe-audio-1417" id="heading-1650" aria-labelledby="heading-1650">#</a></h2>
 <p>L'exemple précédent de l'histogramme est repris en y ajoutant quelques propriétés pour mettre en avant l'implémentation de cette <strong>nouvelle fonctionnalité iOS 15</strong>.</p>
 <p><img src="../../../../images/iOSdev/wwdc21-122-AudioGraph1.png" alt="" class="img-fluid"></p>
 <p>Toute la mécanique de fonctionnement est apportée par le <span lang="en">framework <code>Accessibility</code></span> (disponible depuis iOS 14) qui fournit la source de cette nouveauté, le protocole <strong><a href="https://developer.apple.com/documentation/accessibility/axchart">AXChart</a></strong>.</p>

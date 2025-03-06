@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en" dir="ltr" class="no-js">
+<html lang="en" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
-    <meta charset="utf-8">    
+    <meta charset="utf-8">
     <title>Generalize APIs with parameter packs - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
     <meta name="description" content="Abstract over types as well as the number of arguments in generic code.">
-            
+    
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
@@ -33,7 +33,7 @@
     
 
 <header role="banner">
-  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="Skip links - Switch language">
+  <nav class="navbar navbar-expand-lg supra" aria-label="Skip links - Switch language" data-bs-theme="dark">
    <div class="container-lg">
       <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
       <a href="#main-menu" class="nav-link">Go to menu</a>
@@ -58,11 +58,11 @@
       </li></ul>
     </div>
   </nav>
-  
+
   
 
-<div class="navbar navbar-dark bg-dark navbar-expand-md">
-  <nav id="main-menu" class="container-lg justify-content-md-start" role="navigation" aria-label="Main navigation">
+<div class="navbar navbar-expand-md" data-bs-theme="dark">
+  <nav id="main-menu" class="container-lg justify-content-md-start align-items-center" role="navigation" aria-label="Main navigation">
     <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
       <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
     </a>
@@ -219,7 +219,7 @@
 &quot;Swift parameter packs are a powerful tool to expand what is possible in your generic code while also enabling you to simplify common generic patterns. We'll show you how to <strong>abstract over types as well as the number of arguments in generic code</strong> and simplify common generic patterns to avoid overloads.&quot;<br>
 </br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
 </br></p>
-<h2 id="the-origins" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=51">The origins</a> <a class="header-anchor" href="#the-origins" id="heading-2140" aria-labelledby="heading-2140">#</a></h2>
+<h2 id="the-origins" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=51">The origins</a> <a class="header-anchor" href="#the-origins" id="heading-2161" aria-labelledby="heading-2161">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc23-10168_1.png" alt="" class="img-fluid"></p>
 <p>Regarding a <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=124">client server example</a>, the number of query arguments may be too large according to the needs.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10168_2.png" alt="" class="img-fluid"></p>
@@ -227,7 +227,7 @@
 <p><img src="../../../../../images/iOSdev/wwdc23-10168_3.png" alt="" class="img-fluid"><br>
 This kind of situation is typically what <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10168?time=237">parameter packs</a></strong> are for.<br>
 </br></p>
-<h2 id="the-fundamentals" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=248">The fundamentals</a> <a class="header-anchor" href="#the-fundamentals" id="heading-2141" aria-labelledby="heading-2141">#</a></h2>
+<h2 id="the-fundamentals" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=248">The fundamentals</a> <a class="header-anchor" href="#the-fundamentals" id="heading-2162" aria-labelledby="heading-2162">#</a></h2>
 <p>'A <strong>parameter pack</strong> can hold any quantity of types or values and pack them together to pass them as an argument to a function.'<br>
 <img src="../../../../../images/iOSdev/wwdc23-10168_4.png" alt="" class="img-fluid"></p>
 <p>Handling packs at the <strong>type-level</strong> is a <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=358">major difference</a> with the usual collections thanks to new ways for <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=376">writing code</a>.</p>
@@ -237,7 +237,7 @@ This kind of situation is typically what <strong><a href="https://developer.appl
 <p>...while easily tailoring the <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=655">generic requirements</a> on packs as well.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10168_7.png" alt="" class="img-fluid"><br>
 </br></p>
-<h2 id="implementation" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=732">Implementation</a> <a class="header-anchor" href="#implementation" id="heading-2142" aria-labelledby="heading-2142">#</a></h2>
+<h2 id="implementation" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=732">Implementation</a> <a class="header-anchor" href="#implementation" id="heading-2163" aria-labelledby="heading-2163">#</a></h2>
 <p>It's recommended the <strong>parentheses be used</strong> for wrapping the pattern expression when the results are embedded in a tuple.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10168_8.png" alt="" class="img-fluid"></p>
 <p>Regarding the <a href="#the-origins">initial example</a>, if the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=871">input and output types need to be different</a></strong>, the code writing may be changed to tailor the parameter pack concept while improving the <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=1013">flow control</a> with the <code>do-catch</code> statement for <strong>handling errors</strong>.</p>
