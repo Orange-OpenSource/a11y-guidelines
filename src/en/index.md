@@ -25,10 +25,10 @@ We offer training, publish resources for digital stakeholders, support projects 
     <a href="assistive-technologies/" class="btn btn-outline-secondary btn-sm">Assistive technologies</a>
   </li>
    <li class="list-inline-item pb-2">
-    <a href="persona/" class="btn btn-outline-secondary btn-outline-sm">Some personae</a>
+    <a href="persona/" class="btn btn-outline-secondary btn-sm">Some personae</a>
   </li>
   <li class="list-inline-item pb-2">
-    <a href="glossary/" class="btn btn-outline-secondary btn-outline-sm">Glossary</a>
+    <a href="glossary/" class="btn btn-outline-secondary btn-sm">Glossary</a>
   </li>
     <li class="list-inline-item pb-2">
     <a href="articles/fact-sheet-accessibility/#fact-sheets-list/" class="btn btn-outline-secondary btn-sm">Fact sheets</a>
