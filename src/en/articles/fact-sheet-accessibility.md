@@ -36,9 +36,7 @@ Mobile applications:
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-email.png" alt="">
-    </p>
+    <img src="../images/memos/memo-email.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-email">Description</h3>
@@ -53,13 +51,13 @@ Mobile applications:
   </div>
 </div>
 
+<hr>
+
 ## Create an accessible Word document
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-word.png" alt="">
-    </p>
+    <img src="../images/memos/memo-word.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-word">Description</h3>
@@ -74,13 +72,13 @@ Mobile applications:
   </div>
 </div>
 
+<hr>
+
 ## Create an accessible Excel document
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-excel.png" alt="">
-    </p>
+    <img src="../images/memos/memo-excel.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-word">Description</h3>
@@ -95,13 +93,13 @@ Mobile applications:
   </div>
 </div>
 
+<hr>
+
 ## Create an accessible PowerPoint presentation
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-powerpoint.png" alt="">
-    </p>
+    <img src="../images/memos/memo-powerpoint.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-word">Description</h3>
@@ -121,50 +119,48 @@ Mobile applications:
 ## Develop accessible web pages
 
 <div>
-<div class="row">
-  <div class="col-3">
-    <p class="border-end">
+  <div class="row">
+    <div class="col-3">
       <img src="../images/memos/memo-dev-web.png" alt="">
-    </p>
-  </div>
-  <div class="col-xl-9">
-    <h3 id="desc-web">Description</h3>
-    <p>Fact sheet for web developers.</p>
-    <p>Reminder of the essential techniques and tools to develop an accessible website.</p>
-    <h3 id="tele-web">Download</h3>
-    <p>
-      <a href="../../res/memos/dev-web/Web-Fact-Sheet-Orange.pdf" class="btn btn-outline-secondary">
-        Download as PDF (264 Ko)
-        <span class="visually-hidden">Web development accessibility fact sheet</span>
-      </a>
-    </p>
+    </div>
+    <div class="col-xl-9">
+      <h3 id="desc-web">Description</h3>
+      <p>Fact sheet for web developers.</p>
+      <p>Reminder of the essential techniques and tools to develop an accessible website.</p>
+      <h3 id="tele-web">Download</h3>
+      <p>
+        <a href="../../res/memos/dev-web/Web-Fact-Sheet-Orange.pdf" class="btn btn-outline-secondary">
+          Download as PDF (264 Ko)
+          <span class="visually-hidden">Web development accessibility fact sheet</span>
+        </a>
+      </p>
+    </div>
   </div>
 </div>
-</div>
+
+<hr>
 
 ## Test the accessibility of web pages
 
 <div>
-<div class="row">
-  <div class="col-3">
-    <p class="border-end">
+  <div class="row">
+    <div class="col-3">
       <img src="../images/memos/memo-tests-web.png" alt="">
-    </p>
+    </div>
+    <div class="col-xl-9">
+      <h3 id="desc-tests-web">Description</h3>
+      <p>Memo for people who perform web accessibility testing.</p>
+      <p>Reminder of main tools to check the accessibility of a Web page.</p>
+      </p>
+      <h3 id="tele-tests-web">Download</h3>
+      <p>
+        <a href="../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-outline-secondary">
+          Download as PDF (325 Ko)
+          <span class="visually-hidden">Web test accessibility fact sheet</span>
+        </a>
+      </p>
+    </div>
   </div>
-  <div class="col-xl-9">
-    <h3 id="desc-tests-web">Description</h3>
-    <p>Memo for people who perform web accessibility testing.</p>
-    <p>Reminder of main tools to check the accessibility of a Web page.</p>
-    </p>
-    <h3 id="tele-tests-web">Download</h3>
-    <p>
-      <a href="../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-outline-secondary">
-        Download as PDF (325 Ko)
-        <span class="visually-hidden">Web test accessibility fact sheet</span>
-      </a>
-    </p>
-  </div>
-</div>
 </div>
 
 <hr>
@@ -173,9 +169,7 @@ Mobile applications:
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-android.png" alt="">
-    </p>
+    <img src="../images/memos/memo-android.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-android">Description</h3>
@@ -191,13 +185,13 @@ Mobile applications:
   </div>
 </div>
 
+<hr>
+
 ## Develop an accessible iOS application
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-ios.png" alt="">
-    </p>
+    <img src="../images/memos/memo-ios.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-ios">Description</h3>

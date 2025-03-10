@@ -36,9 +36,7 @@ Documents office :
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-dev-web.png" alt="">
-    </p>
+    <img src="../images/memos/memo-dev-web.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-web">Description</h3>
@@ -54,13 +52,13 @@ Documents office :
   </div>
 </div>
 
+<hr>
+
 ## Tester l'accessibilité de pages Web
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-tests-web.png" alt="">
-    </p>
+    <img src="../images/memos/memo-tests-web.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-tests-web">Description</h3>
@@ -83,9 +81,7 @@ Documents office :
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-android.png" alt="">
-    </p>
+    <img src="../images/memos/memo-android.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-android">Description</h3>
@@ -101,13 +97,13 @@ Documents office :
   </div>
 </div>
 
+<hr>
+
 ## Développer une application iOS accessible
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-ios.png" alt="">
-    </p>
+    <img src="../images/memos/memo-ios.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-ios">Description</h3>
@@ -129,9 +125,7 @@ Documents office :
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-email.png" alt="">
-    </p>
+    <img src="../images/memos/memo-email.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-email">Description</h3>
@@ -146,13 +140,13 @@ Documents office :
   </div>
 </div>
 
+<hr>
+
 ## Rédiger un document Word accessible
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-word.png" alt="">
-    </p>
+    <img src="../images/memos/memo-word.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-word">Description</h3>
@@ -167,13 +161,13 @@ Documents office :
   </div>
 </div>
 
+<hr>
+
 ## Rédiger un document Excel accessible
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-excel.png" alt="">
-    </p>
+    <img src="../images/memos/memo-excel.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-word">Description</h3>
@@ -188,13 +182,13 @@ Documents office :
   </div>
 </div>
 
+<hr>
+
 ## Rédiger une présentation PowerPoint accessible
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-powerpoint.png" alt="">
-    </p>
+    <img src="../images/memos/memo-powerpoint.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-word">Description</h3>
