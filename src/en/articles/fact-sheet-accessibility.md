@@ -141,7 +141,6 @@ Mobile applications:
   </div>
 </div>
 </div>
-<hr>
 
 ## Test the accessibility of web pages
 
@@ -167,6 +166,7 @@ Mobile applications:
   </div>
 </div>
 </div>
+
 <hr>
 
 ## Develop an accessible Android application
@@ -190,7 +190,6 @@ Mobile applications:
     </p>
   </div>
 </div>
-<hr>
 
 ## Develop an accessible iOS application
 
@@ -213,4 +212,3 @@ Mobile applications:
     </p>
   </div>
 </div>
-<hr>

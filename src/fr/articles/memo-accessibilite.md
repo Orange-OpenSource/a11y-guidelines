@@ -54,8 +54,6 @@ Documents office :
   </div>
 </div>
 
-<hr>
-
 ## Tester l'accessibilité de pages Web
 
 <div class="row">
@@ -102,8 +100,6 @@ Documents office :
     </p>
   </div>
 </div>
-
-<hr>
 
 ## Développer une application iOS accessible
 
