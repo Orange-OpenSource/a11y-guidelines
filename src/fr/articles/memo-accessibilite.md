@@ -3,9 +3,9 @@ title: "Fiches mémos accessibilité"
 abstract: "Nos fiches mémos sur l'accessibilité numérique à télécharger, à imprimer et à partager (Web, Android, Ios, Word, Excel, Powerpoint)"
 titleBeforeTag: true
 date: "2022-11-21"
-tags:  
+tags:
   - web
-  - mobile  
+  - mobile
   - beginner
 ---
 # Nos fiches mémos sur l'accessibilité numérique
@@ -36,16 +36,14 @@ Documents office :
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-dev-web.png" alt="">
-    </p>
+    <img src="../images/memos/memo-dev-web.png" alt="">
   </div>
-  <div class="col-xl-9">  
+  <div class="col-xl-9">
     <h3 id="desc-web">Description</h3>
     <p>Mémo à destination des développeurs Web.</p>
-    <p>Rappel des techniques et outils indispensables pour développer un site web accessible.</p>        
+    <p>Rappel des techniques et outils indispensables pour développer un site web accessible.</p>
     <h3 id="tele-web">Téléchargement</h3>
-    <p>          
+    <p>
       <a href="../../res/memos/dev-web/Memo-Web-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (272 Ko)
         <span class="visually-hidden">Mémo accessibilité développement Web</span>
@@ -60,17 +58,15 @@ Documents office :
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-tests-web.png" alt="">
-    </p>
+    <img src="../images/memos/memo-tests-web.png" alt="">
   </div>
-  <div class="col-xl-9">  
+  <div class="col-xl-9">
     <h3 id="desc-tests-web">Description</h3>
     <p>Mémo à destination des personnes qui réalisent des tests Web d'accessibilité.</p>
     <p>Rappel des outils et des principaux tests à effectuer pour vérifier l'accessibilité d'une page Web.</p>
-    </p>        
+    </p>
     <h3 id="tele-tests-web">Téléchargement</h3>
-    <p>          
+    <p>
       <a href="../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (335 Ko)
         <span class="visually-hidden">Mémo accessibilité les tests Web</span>
@@ -85,9 +81,7 @@ Documents office :
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-android.png" alt="">
-    </p>
+    <img src="../images/memos/memo-android.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-android">Description</h3>
@@ -109,9 +103,7 @@ Documents office :
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-ios.png" alt="">
-    </p>
+    <img src="../images/memos/memo-ios.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-ios">Description</h3>
@@ -133,9 +125,7 @@ Documents office :
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-email.png" alt="">
-    </p>
+    <img src="../images/memos/memo-email.png" alt="">
   </div>
   <div class="col-xl-9">
     <h3 id="desc-email">Description</h3>
@@ -150,19 +140,19 @@ Documents office :
   </div>
 </div>
 
+<hr>
+
 ## Rédiger un document Word accessible
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-word.png" alt="">
-    </p>
+    <img src="../images/memos/memo-word.png" alt="">
   </div>
-  <div class="col-xl-9">  
+  <div class="col-xl-9">
     <h3 id="desc-word">Description</h3>
     <p>Rappel des bonnes pratiques pour rédiger un document Word accessible.</p>
     <h3 id="tele-word">Téléchargement</h3>
-    <p>      
+    <p>
       <a href="../../res/memos/word/Memo-Word-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (236 Ko)
         <span class="visually-hidden">Mémo rédiger un document Word accessible</span>
@@ -171,19 +161,19 @@ Documents office :
   </div>
 </div>
 
+<hr>
+
 ## Rédiger un document Excel accessible
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-excel.png" alt="">
-    </p>
+    <img src="../images/memos/memo-excel.png" alt="">
   </div>
-  <div class="col-xl-9">  
+  <div class="col-xl-9">
     <h3 id="desc-word">Description</h3>
     <p>Rappel des bonnes pratiques pour rédiger un document Excel accessible.</p>
     <h3 id="tele-word">Téléchargement</h3>
-    <p>      
+    <p>
       <a href="../../res/memos/excel/Memo-Excel-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (256 Ko)
         <span class="visually-hidden">Mémo rédiger un document Excel accessible</span>
@@ -192,19 +182,19 @@ Documents office :
   </div>
 </div>
 
+<hr>
+
 ## Rédiger une présentation PowerPoint accessible
 
 <div class="row">
   <div class="col-3">
-    <p class="border-end">
-      <img src="../images/memos/memo-powerpoint.png" alt="">
-    </p>
+    <img src="../images/memos/memo-powerpoint.png" alt="">
   </div>
-  <div class="col-xl-9">  
+  <div class="col-xl-9">
     <h3 id="desc-word">Description</h3>
     <p>Rappel des bonnes pratiques pour rédiger une présentation PowerPoint accessible.</p>
     <h3 id="tele-word">Téléchargement</h3>
-    <p>      
+    <p>
       <a href="../../res/memos/pwp/Memo-PowerPoint-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (294 Ko)
         <span class="visually-hidden">Mémo rédiger une présentation PowerPoint accessible</span>
