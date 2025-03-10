@@ -454,6 +454,10 @@ pre code {
     background-size: contain;
 }
 
+[class*="persona-background-"] {
+    overflow-wrap: break-word;
+}
+
 @media (min-width: 1024px) {
     .step-1 {
         margin-top: 150px;
