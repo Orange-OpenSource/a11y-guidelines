@@ -19,6 +19,18 @@ em {
   text-align: center;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
 .underover {
   text-decoration: underline overline #ff3028;
 }
@@ -46,14 +58,17 @@ h2 {
   margin-top: 3rem;
 }
 
-.summary h4 {
+.summary .pie {
   text-align: center;
   font-size: 1em;
   border-bottom: 0;
+  line-height: 1.1;
+  letter-spacing: -.025rem;
 }
 
-.summary h4 span {
+.summary .pie span {
   font-size: 3em;
+  font-weight: 700;
 }
 
 .pie-noncompliant {
