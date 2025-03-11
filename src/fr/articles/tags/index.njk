@@ -9,14 +9,14 @@ tags:
 ---
 
 <h2>Préambule</h2>
-<p>Dans cet exemple, nous allons voir comment réaliser des "tags" accessibles. Vous savez, ces boutons que nous utilisons pour taguer du contenu, pour afficher une liste de destinataires...</p>
+<p>Dans cet article, nous allons voir comment réaliser des tags accessibles. Vous savez, ces boutons que nous utilisons pour taguer du contenu, pour afficher une liste de destinataires...</p>
 
 <h2>Rendu final</h2>
-<p>Voici un exemple de rendu graphique&nbsp;:</p>
-<img src="exemples/tag.png" alt="capture d’écran de plusieurs tag dans une page web">
+<p>Voici un exemple de rendu graphique :</p>
+<img src="exemples/tag.png" alt="capture d'écran de plusieurs tag dans une page web">
 
-<h2>Structure HTML</h2>
-<p>Comme les tags ne se promènent jamais seuls, nous allons créer une liste HTML. Ainsi, un utilisateur qui navigue à l'aide d’un lecteur d’écran entendra directement le nombre de tags affichés : "Liste de x éléments".
+<h2 class="mt-3">Structure HTML</h2>
+<p>Comme les tags ne se promènent jamais seuls, nous allons créer une liste HTML. Ainsi, un utilisateur qui navigue à l'aide d'un lecteur d'écran entendra directement le nombre de tags affichés : "Liste de x éléments".
 </p>
 
 <pre><code class="html">
@@ -34,7 +34,7 @@ tags:
   <a target="_blank" title="Ouvrir l'exemple 1 (nouvelle fenêtre)" href="exemples/1/"><img src="exemples/exemple1.png" alt="ouvrir l'exemple 1 (nouvelle fenêtre)"></a>
 </div>
 
-<h2>Suppression d'un tag</h2>
+<h2 class="mt-3">Suppression d'un tag</h2>
 <p>Un tag doit pouvoir être supprimé. Nous allons ajouter un bouton "Supprimer" sur chaque élément de notre liste. Pour les utilisateurs qui ne voient pas l'écran et qui naviguent à l'aide d'un lecteur d'écran, un simple bouton "Supprimer" n'est pas suffisant. Nous allons ajouter le nom du tag dans l'intitulé du bouton pour ôter toute ambiguïté. Exemple : "Sony, Retirer Sony de la liste".</p>
 <p>L'utilisation d'un vrai bouton rend cette fonctionnalité accessible au lecteur d’écran, mais également aux personnes qui ne peuvent pas utiliser une souris et qui naviguent à l'aide du clavier en déplaçant le focus (touche <kbd>Tab</kbd>). En effet, un bouton est focusable nativement.</p>
 
