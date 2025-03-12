@@ -27,8 +27,8 @@ em {
   flex-direction: column-reverse;
 }
 
-.align-items-start {
-  align-items: flex-start;
+.align-items-center {
+  align-items: center;
 }
 
 .underover {
