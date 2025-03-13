@@ -40,10 +40,15 @@ Dans tous les cas, il faut tester les développements sur les environnements cib
 Dans un environnement maîtrisé (intranet), les environnements cibles sont connus et en nombre fini, on peut donc statuer plus facilement&nbsp;!
 
 ## Webographie
-* <abbr>W3C</abbr>&nbsp;:
-  * [Spécification <abbr>ARIA</abbr> 1.2](http://www.w3.org/TR/wai-aria/)
-  * [Mettre en place <abbr>ARIA</abbr>](http://www.w3.org/TR/wai-aria-practices/)
-  * [Utiliser <abbr>ARIA</abbr> en <abbr>HTML</abbr>5](http://www.w3.org/TR/aria-in-html/)
-  * [Techniques <abbr>ARIA</abbr>](https://www.w3.org/WAI/WCAG22/Techniques/)
-* [Introduction à <abbr>ARIA</abbr> chez Site Point](http://www.sitepoint.com/introduction-wai-aria/)
-* [Introduction et liste de liens vers des sources sur <abbr>ARIA</abbr>](http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA)
+<ul>
+  <li><abbr>W3C</abbr>&nbsp;:
+    <ul>
+      <li><a href="http://www.w3.org/TR/wai-aria/" hreflang="en">Spécification <abbr>ARIA</abbr> 1.2 (en)</a></li>
+      <li><a href="http://www.w3.org/TR/wai-aria-practices/" hreflang="en">Mettre en place <abbr>ARIA (en)</abbr></a></li>
+      <li><a href="http://www.w3.org/TR/aria-in-html/" hreflang="en">Utiliser <abbr>ARIA</abbr> en <abbr>HTML</abbr>5 (en)</a></li>
+      <li><a href="https://www.w3.org/WAI/WCAG22/Techniques/" hreflang="en">Techniques <abbr>ARIA</abbr> (en)</a></li>
+    </ul>
+  </li>
+  <li><a href="http://www.sitepoint.com/introduction-wai-aria/" hreflang="en">Introduction à <abbr>ARIA</abbr> chez Site Point (en)</a></li>
+  <li><a href="http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA">Introduction et liste de liens vers des sources sur <abbr>ARIA</abbr></a></li>
+</ul>

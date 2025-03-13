@@ -40,10 +40,15 @@ In all cases, you have to test developments in the target environments (browser/
 In a well-defined environment (e.g. intranet), target environments are known and in a finite number, so it gets easier!
 
 ## Webography
-* W3C:
-  * [<abbr>ARIA</abbr> specification 1.2](http://www.w3.org/TR/wai-aria/)
-  * [<abbr>ARIA</abbr> implementation](http://www.w3.org/TR/wai-aria-practices/)
-  * [Use <abbr>ARIA</abbr> with HTML5](http://www.w3.org/TR/aria-in-html/)
-  * [<abbr>ARIA</abbr> techniques](https://www.w3.org/WAI/WCAG22/Techniques/)
-* [Introduction to <abbr>ARIA</abbr> by Site Point](http://www.sitepoint.com/introduction-wai-aria/)
-* [Introduction and link list to <abbr>ARIA</abbr> sources](http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA)
+<ul>
+  <li>W3C:
+    <ul>
+      <li><a href="http://www.w3.org/TR/wai-aria/"><abbr>ARIA</abbr> specification</a></li>
+      <li><a href="http://www.w3.org/TR/wai-aria-practices/"><abbr>ARIA</abbr> implementation</a></li>
+      <li><a href="http://www.w3.org/TR/aria-in-html/">Use <abbr>ARIA</abbr> HTML (5)</a></li>
+      <li><a href="https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques"><abbr>ARIA</abbr> techniques in <abbr>WCAG</abbr> 2</a></li>
+    </ul>
+  </li>
+      <li><a href="http://www.sitepoint.com/introduction-wai-aria/">Introduction to <abbr>ARIA</abbr> by Site Point</a></li>
+      <li><a href="http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA">Introduction and link list to <abbr>ARIA</abbr> sources</a></li>
+</ul>
