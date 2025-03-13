@@ -49,6 +49,6 @@ In a well-defined environment (e.g. intranet), target environments are known and
       <li><a href="https://www.w3.org/WAI/GL/wiki/Category:ARIA_Techniques"><abbr>ARIA</abbr> techniques in <abbr>WCAG</abbr> 2</a></li>
     </ul>
   </li>
-      <li><a href="http://www.sitepoint.com/introduction-wai-aria/">Introduction to <abbr>ARIA</abbr> by Site Point</a></li>
-      <li><a href="http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA">Introduction and link list to <abbr>ARIA</abbr> sources</a></li>
+  <li><a href="http://www.sitepoint.com/introduction-wai-aria/">Introduction to <abbr>ARIA</abbr> by Site Point</a></li>
+  <li><a href="http://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA">Introduction and link list to <abbr>ARIA</abbr> sources</a></li>
 </ul>
