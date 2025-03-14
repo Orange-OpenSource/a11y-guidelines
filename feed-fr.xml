@@ -12,6 +12,14 @@
   </author>
   
   <entry>
+    <title>HTML5 &amp; ARIA</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/html5-et-aria/"/>
+    <updated>2016-09-16T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/html5-et-aria/</id>
+    <content xml:lang="fr" type="html">Introduction HTML 5 et ARIA</content>
+  </entry>
+  
+  <entry>
     <title>Les bonnes pratiques pour les liens d&#39;évitement</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/liens-evitement/"/>
     <updated>2023-06-22T00:00:00Z</updated>
@@ -577,13 +585,5 @@
     <updated>2018-01-01T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/bonnes-pratiques-pour-un-chatbot/</id>
     <content xml:lang="fr" type="html">Créer un chatbot accessible.</content>
-  </entry>
-  
-  <entry>
-    <title>HTML5 &amp; ARIA</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/html5-et-aria/"/>
-    <updated>2016-09-16T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/html5-et-aria/</id>
-    <content xml:lang="fr" type="html">Introduction HTML 5 et ARIA</content>
   </entry>
 </feed>
