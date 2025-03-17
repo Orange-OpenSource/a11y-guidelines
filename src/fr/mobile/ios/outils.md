@@ -23,5 +23,5 @@ Des ressources et outils pour faciliter la prise en compte de l’accessibilité
 - Guide d'utilisation du lecteur d'écran <span lang="en">VoiceOver</span>
 - Informations pour développer accessible avec Flutter
 - mDAN, une application mobile pour se former sur les options d'accessibilité des mobiles et des applications sous iOS
-- Quelques personae
+- Quelques personas
 - Liens vers d'autres ressources dont la page officielle de l'accessibilité d'Apple
