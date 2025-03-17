@@ -9,9 +9,9 @@ sideNavigationLinks:
   - label: "App m-learning mDAN"
     href: "../../mdan/"
   - label: "Fiches mémos"
-    href: "../fiches-memo/"       
-  - label: "Personae"
-    href: "../../../persona/" 
+    href: "../fiches-memo/"
+  - label: "Personas"
+    href: "../../../persona/"
   - label: "Liens utiles"
     href: "../../liens-utiles/"
 ---
