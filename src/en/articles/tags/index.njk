@@ -9,7 +9,7 @@ tags:
 ---
 
 <h2>Preamble</h2>
-<p>In this example we will create accessible tags — you know, these buttons we use to categorize content or add a list of recipients, etc.</p>
+<p>In this article we will create accessible tags — you know, these buttons we use to categorize content or add a list of recipients, etc.</p>
 
 <h2>Final design</h2>
 <p>Here is an example of the expected design:</p>
@@ -31,7 +31,7 @@ tags:
 
 <div class="exemple">
   <h3>Step 1</h3>
-  <a target="_blank" title="Open step 1" href="examples/1/"><img src="examples/step1.png" alt=" Open step 1 (new window)"></a>
+  <a target="_blank" title="Open step 1" href="examples/1/"><img src="examples/step1.png" alt="Open step 1 (new window)"></a>
 </div>
 
 <h2>Removing a tag</h2>
@@ -71,7 +71,7 @@ tags:
   <p><a target="_blank" title="Open step 3" href="examples/3/"><img src="examples/step3.png" alt="Open step 3 (new window)"></a></p>
 </div>
 
-<p>But wait, we've just lost screen reader users. The buttons are now vocalized as "X". We can fix this for example with the <code>aria-label</code> attribute.</p>
+<p>But wait, we've just lost screen reader users. The buttons are now vocalized as "X". We can fix this by giving a proper accessible name to these buttons, for example, by using the <code>aria-label</code> attribute.</p>
 
 <pre><code class="html">
   &lt;ul&gt;
@@ -123,7 +123,7 @@ button {
   <p><a target="_blank" title="Open step 5" href="examples/5/"><img src="examples/step5.png" alt="Open step 5 (new window)"></a></p>
 </div>
 
-<p>It's better. Visually, we can see two things in each tag, the label and a remove button. Yet with a screen reader we only hear for the moment "Remove XXX from the list". To correct this, we add a <code>span</code> containing the tag's label. To prevent it from being displayed on screen (this would double the information), we add to it an accessible hiding class (<code>visually-hidden</code>). The text will only be read by screen readers.</p>
+<p>It's better. Visually, we can see two things in each tag, the label and a remove button. Yet with a screen reader we only hear for the moment "Remove x from the list". To correct this, we add a <code>span</code> containing the tag's label. To prevent it from being displayed on screen (this would double the information), we add to it an accessible hiding class (<code>visually-hidden</code>). The text will only be read by screen readers.</p>
 
 <pre><code class="html">
   &lt;ul&gt;
