@@ -9,14 +9,14 @@ tags:
 ---
 
 <h2>Preamble</h2>
-<p>In this article we will create accessible tags — you know, these buttons we use to categorize content or add a list of recipients, etc.</p>
+<p>In this article, we will create accessible tags — you know, these buttons we use to categorize content or add a list of recipients, etc.</p>
 
 <h2>Final design</h2>
 <p>Here is an example of the expected design:</p>
 <img src="examples/tag.png" alt="Screenshot of several tags in a web page">
 
 <h2 class="mt-3"><abbr>HTML</abbr> structure</h2>
-<p>As tags do not wander on their own, we will create an <abbr>HTML</abbr> list. Thus a user browsing with a screen reader will directly hear the number of tags on display. "List of X elements...".
+<p>As tags do not wander on their own, we will create an <abbr>HTML</abbr> list. Thus, a user browsing with a screen reader will directly hear the number of tags on display: "List of X elements...".
 </p>
 
 <pre><code class="html">
@@ -35,8 +35,8 @@ tags:
 </div>
 
 <h2 class="mt-3">Removing a tag</h2>
-<p>One must be able to remove a tag. We will add a "Remove" button on each element in our list. For users who cannot see the screen and browse with a screen reader, a plain "Remove" button is not sufficient. We will add the tag name in the button's label to disambiguate, i.e. "Remove Sony from the list".</p>
-<p>The use of a real button makes this functionality accessible to the screen reader, but also to people who cannot use a mouse and rely on a keyboard to move the focus (with the <kbd>tab</kbd> key). A button can indeed be focused naturally.</p>
+<p>One must be able to remove a tag. We will add a 'Remove' button on each element in our list. For users who cannot see the screen and browse with a screen reader, a plain 'Remove' button is not sufficient. We will add the tag name to the button's label to disambiguate, i.e., 'Remove Sony from the list.'</p>
+<p>The use of a real button makes this functionality accessible to the screen reader, but also to people who cannot use a mouse and rely on a keyboard to move the focus (with the <kbd>Tab</kbd> key). A button can indeed be focused naturally.</p>
 
 <pre><code class="html">
   &lt;ul&gt;
@@ -53,7 +53,7 @@ tags:
   <p><a target="_blank" title="Open step 2" href="examples/2/"><img src="examples/step2.png" alt="Open step 2 (new window)"></a></p>
 </div>
 
-<p>And <span lang="fr">voilà!</span> Simple and accessible tags. OK, it's not very beautiful so far.</p>
+<p>Here we present simple and accessible tags. Admittedly, their appearance is not particularly appealing at this stage.</p>
 
 <h2>Let's decorate</h2>
 <p>Now that our tags are accessible, we can decorate them. The ideal solution would be to make them look like the first illustration at the beginning of this article. We have several solutions.</p>
@@ -71,7 +71,7 @@ tags:
   <p><a target="_blank" title="Open step 3" href="examples/3/"><img src="examples/step3.png" alt="Open step 3 (new window)"></a></p>
 </div>
 
-<p>But wait, we've just lost screen reader users. The buttons are now vocalized as "X". We can fix this by giving a proper accessible name to these buttons, for example, by using the <code>aria-label</code> attribute.</p>
+<p>But wait, we've just lost screen reader users. The buttons are now vocalized as 'X'. We can fix this by giving a proper accessible name to these buttons, for example, by using the <code>aria-label</code> attribute.</p>
 
 <pre><code class="html">
   &lt;ul&gt;
@@ -97,7 +97,7 @@ button {
 
 <h2>Optimisation</h2>
 
-<p>It works but it's not perfect. You have to aim precisely to remove a tag, because the cross-shaped button is not that big. It's not very nice to use and may really be a problem for people with a trembling hand or who have difficulties using a mouse.</p>
+<p>It works, but it's not perfect. You have to aim precisely to remove a tag because the cross-shaped button is a bit small. It's not very user-friendly and could be a problem for people with a trembling hand or those who have difficulties using a mouse.</p>
 
 <p>Since we know that removing is the only possible action, we could extend the clickable zone to the whole tag. Hence, even if you slightly miss the target, the remove action will be taken into account.</p>
 
@@ -123,7 +123,7 @@ button {
   <p><a target="_blank" title="Open step 5" href="examples/5/"><img src="examples/step5.png" alt="Open step 5 (new window)"></a></p>
 </div>
 
-<p>It's better. Visually, we can see two things in each tag, the label and a remove button. Yet with a screen reader we only hear for the moment "Remove x from the list". To correct this, we add a <code>span</code> containing the tag's label. To prevent it from being displayed on screen (this would double the information), we add to it an accessible hiding class (<code>visually-hidden</code>). The text will only be read by screen readers.</p>
+<p>It's better. Visually, we can see two things in each tag: the label and a remove button. However, with a screen reader, we currently only hear for the moment 'Remove x from the list'. To correct this, we add a <code>span</code> containing the tag's label. To prevent it from being displayed on screen (this would double the information), we add to it an accessible hiding class (<code>visually-hidden</code>). The text will only be read by screen readers.</p>
 
 <pre><code class="html">
   &lt;ul&gt;
@@ -137,7 +137,7 @@ button {
   <p><a target="_blank" title="Open step 6" href="examples/6/"><img src="examples/step6.png" alt="Open step 6 (new window)"></a></p>
 </div>
 
-<p>We still have one last problem: if we navigate the page with a keyboard (moving the focus with the <kbd>tab</kbd> key), we don't know on which button the focus is.</p>
+<p>We still have one last problem: if we navigate the page with a keyboard (moving the focus with the <kbd>Tab</kbd> key), we don't know on which button the focus is.</p>
 
 <p>We add a bit of <abbr>CSS</abbr> to give emphasis to the focus. We also take the opportunity to do the same for hover.</p>
 
@@ -154,7 +154,7 @@ button {
 </div>
 
 <h2>Optimisation (again)</h2>
-<p>Our tags are accessible. Yet when we remove one tag with the keyboard, the focus stays on the vanished tag; so we don't know where the focus is. This can be easily fixed with a bit of JavaScript. We can focus the previous element, for example:</p>
+<p>Our tags are accessible. However, when we remove one tag with the keyboard, the focus stays on the vanished tag; thus we don't know where the focus is. This can be easily fixed with a bit of JavaScript. We can focus on the previous element, for example:</p>
 
 <pre><code class="javascript">
   $("button").on("click", function () {
@@ -168,7 +168,7 @@ button {
   <p><a target="_blank" title="Open step 8" href="examples/8/"><img src="examples/step8.png" alt="Open step 8 (new window)"></a></p>
 </div>
 
-<p>When a tag is removed, we see it disappears from the screen. But if we want a screen reader user to be sure that the tag was removed, we'll have to vocalise a confirmation message to the user.</p>
+<p>When a tag is removed, we see it disappear from the screen. However, if we want a screen reader user to be sure that the tag was removed, we'll have to vocalize a confirmation message to the user.</p>
 <p>To manage this, we can use our <a href="../make-a-screen-reader-talk/">JavaScript srSpeak function</a>, which uses ARIA to make the screen reader speak.</p>
 
 <pre><code class="javascript">
@@ -184,4 +184,4 @@ button {
   <p><a target="_blank" title="Open step 9" href="examples/9/"><img src="examples/step9.png" alt="Open step 9 (new window)"></a></p>
 </div>
 
-<p>This time, our tags are genuinely accessible fot mouse, keyboard and screen reader users.</p>
+<p>This time, our tags are genuinely accessible for mouse, keyboard, and screen reader users.</p>
