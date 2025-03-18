@@ -15,7 +15,7 @@ tags:
 <p>Here is an example of the expected design:</p>
 <img src="examples/tag.png" alt="Screenshot of several tags in a web page">
 
-<h2><abbr>HTML</abbr> structure</h2>
+<h2 class="mt-3"><abbr>HTML</abbr> structure</h2>
 <p>As tags do not wander on their own, we will create an <abbr>HTML</abbr> list. Thus a user browsing with a screen reader will directly hear the number of tags on display. "List of X elements...".
 </p>
 
@@ -34,8 +34,8 @@ tags:
   <a target="_blank" title="Open step 1" href="examples/1/"><img src="examples/step1.png" alt="Open step 1 (new window)"></a>
 </div>
 
-<h2>Removing a tag</h2>
-<p>One must be able to remove a tag. We will add a “Remove” button on each element in our list. For users who cannot see the screen and browse with a screen reader, a plain "Remove" button is not sufficient. We will add the tag name in the button's label to disambiguate, i.e. "Remove Sony from the list".</p>
+<h2 class="mt-3">Removing a tag</h2>
+<p>One must be able to remove a tag. We will add a "Remove" button on each element in our list. For users who cannot see the screen and browse with a screen reader, a plain "Remove" button is not sufficient. We will add the tag name in the button's label to disambiguate, i.e. "Remove Sony from the list".</p>
 <p>The use of a real button makes this functionality accessible to the screen reader, but also to people who cannot use a mouse and rely on a keyboard to move the focus (with the <kbd>tab</kbd> key). A button can indeed be focused naturally.</p>
 
 <pre><code class="html">
