@@ -19,7 +19,7 @@ abstract: "Ressources pour l'accessibilité des pages web, critères, exigences,
 - Avec tous types de matériel&nbsp;: navigateurs, <abbr>PC</abbr>, Mac, téléphones mobiles, tablettes
 - Dans un contexte dégradé&nbsp;: mauvaise luminosité, <i lang="en">touchpad</i> en mobilité, etc.
 - Avec des logiciels spécifiques de compensation du handicap
-  
+
 ## Organisation de cette rubrique "Web"
 
 ### Designer
@@ -35,4 +35,4 @@ Pour ceux qui veulent vérifier l’accessibilité de leurs pages avec des outil
 La Va11ydette, notre outil opensource qui nous aide lors de nos audits et nos déclarations de conformité. C'est une application Web, PWA (Progressive Web App), à tester&nbsp;!
 
 ### Boite à outils
-Méthode et outils internes et externe que nous utilisons dans notre activité. Notamment, le design system d'Orange, Orange Boosted, nos Fiches mémos pour avoir toutes les bonnes pratiques d'accessibilité, des Personae pour mieux comprendre les problématiques d'accessibilité...
+Méthode et outils internes et externe que nous utilisons dans notre activité. Notamment, le design system d'Orange, Orange Boosted, nos Fiches mémos pour avoir toutes les bonnes pratiques d'accessibilité, des Personas pour mieux comprendre les problématiques d'accessibilité...
