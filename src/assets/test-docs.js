@@ -7,40 +7,38 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   const locales = {
     'en': {
-      process: "Process",
-      check: "To check",
+      process : "Process",
+      check : "To check",
       conception: 'Design',
       development: 'Development',
-      results: "Results",
+      results : "Results",
       justification : "Justification",
       profiles: 'Profiles',
       tools: 'Tools',
-      allTools: 'All',
+      allTools: 'All tools',
+      // allProfils: 'All profiles',
       exceptions: 'Exceptions',
       ongoingTests: 'ongoing tests',
       noResults: 'No results match your selection',
       withCurrentFilters: 'with current filters',
-      reinitFilters: 'Reinit <span class="sr-only">&nbsp;filters</span>',
-      themes: 'Themes',
-      elements: 'Elements'
+      reinitFilters: 'Reinit <span class="visually-hidden">&nbsp;filters</span>'
     },
     'fr': {
-      process: "Procédure",
-      check: "À vérifier",
+      process : "Procédure",
+      check : "À vérifier",
       conception: 'Conception',
       development: 'Développement',
-      results: "Résultats",
-      justification: "Justification",
-      profiles: 'Profils',
-      tools: 'Outils',
+      results : "Résultats",
+      justification : "Justification",
+      profiles: 'Profils&nbsp;',
+      tools: 'Outils&nbsp;',
       allTools: 'Tous les outils',
+      // allProfils: 'Tous les profils',
       exceptions: 'Exceptions',
       ongoingTests: 'tests en cours',
       noResults: 'Aucun résultat ne correspond à votre sélection',
       withCurrentFilters: 'dans les filtres en cours',
-      reinitFilters: 'Réinitialiser <span class="sr-only">&nbsp;les filtres</span>',
-      themes: 'Thèmes',
-      elements: 'Éléments'
+      reinitFilters: 'Réinitialiser <span class="visually-hidden">&nbsp;les filtres</span>'
     }
   }
 
@@ -76,13 +74,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   }
 
   //appel des Json
+  
 
-
-  doXHR('../../../../../assets/json/'+lang+'/ios/wwdc/ios-wwdc-listnota11y.json', function(errFirst, responseFirst) {  
+  doXHR('/assets/json/checklist/tests-docs-'+lang+'.json', function(errFirst, responseFirst) {  
     if (errFirst) {
       reqError();
     }
-    return doXHR('../../../../../assets/json/'+lang+'/ios/wwdc/ios-wwdc-listnota11yempty.json', function(errSecond, responseSecond) {
+    return doXHR('/assets/json/checklist/tests-concepteur-docs-'+lang+'.json', function(errSecond, responseSecond) {
       if (errSecond) {
         reqError();
       }
@@ -99,25 +97,34 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   //on concatene les 2 jsons en les réorganisant par tests
   function compareReorder(a, b) {
+
     // si les titres sont identiques, on regroupe par titre
     for (var i = 0; i < a.length; i++) {
+
       let testA = a[i].title;
 
+
       for (var j = 0; j < b.length; j++) {
+
         var testB = b[j].title;
 
         if (testA==testB){
           a.splice(i++, 0,  b[j]);
           b.splice(j, 1);
+
         }
+
       }
+
     }
 
     //sinon on regroupe les tests par themes
     for (var i = 0; i < a.length; i++) {
+
       let testC = a[i].themes;
 
       for (var j = 0; j < b.length; j++) {
+
         var testD = b[j].themes;
 
         if (testC==testD){
@@ -129,9 +136,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
     return a;
   }
 
+  // function encode(str){
+
+  // str=str.replace(/[\x26\x0A\<>'"^]/gi, function(r){return"&#"+r.charCodeAt(0)+";"});
+  // str=str.replace(/\&#60;code\&#62;([\s\S]*?)\&#60;\/code\&#62;/g, '<code>$1</code>');
+
+  // return str;
+  // }
+
 
   function formatHeading(str){
-  
     str = str.toLowerCase();
     str = str.replace(/é|è|ê/g,"e");
     str = str.replace(/ /g,"-");
@@ -198,32 +212,28 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
       this.UpdateFeedback = function(activeFilter, nbTests) {
         let elBtnReinit = document.getElementById('reinit');
-//         let elFeedback = document.getElementById('feedback');
+        let elFeedback = document.getElementById('feedback');
         let htmlFeedback = '';
         let test = nbTests > 1 ? 'tests' : 'test'
 
-        if (activeFilter) {
-          elBtnReinit.disabled = false;
-/* 
-          htmlFeedback = '<button type="button" class="btn btn-outline-secondary btn-sm mt-2 mb-3" id="reinitLink">' + translate('reinitFilters') + '';
-          elFeedback.innerHTML = htmlFeedback;
- */
+        // if (activeFilter) {
+        //   elBtnReinit.disabled = false;
+        //   htmlFeedback = '<p><div><b>'+nbTests+'</b> ' + test + ' ' + translate('withCurrentFilters') + '</div> <button type="button" class="btn btn-secondary btn-sm mt-2 mb-3" id="reinitLink">' + translate('reinitFilters') + '</a></p>';
+        //   elFeedback.innerHTML = htmlFeedback;
 
-          let elreinitLink = document.getElementById('reinitLink');
-          elreinitLink.addEventListener('click', function() {
-            app.FetchAll(refTests);
-            app.FilterByType();
-            app.UpdateFeedback(false, refTests.length);
-          });
+        //   let elreinitLink = document.getElementById('reinitLink');
+        //   elreinitLink.addEventListener('click', function() {
+        //     app.FetchAll(refTests);
+        //     app.FilterByType();
+        //     app.UpdateFeedback(false, refTests.length);
+        //   });
 
-        } else {
+
+        // } else {
           elBtnReinit.disabled = true;
-/* 
           htmlFeedback = '<p><b>'+nbTests+'</b> ' + translate('ongoingTests') + '</p>';
           elFeedback.innerHTML = htmlFeedback;
- */
-
-        }
+        //}
 
       };
 
@@ -234,35 +244,83 @@ document.addEventListener("DOMContentLoaded", function(event) {
         let htmlrefTests = '';
         let headingTheme = '';
 
+        //on boucle dans le tableau passé en paramètre de la fonction
         for (let i in currentRefTests) {
-        		if(currentRefTests[i].themes != "FAKE"){//Ne pas présenter le premier élément du fichier .json qui n'est là que pour trier alphabétiquement les thèmes.
-          		if(headingTheme!=currentRefTests[i].themes){
-          		
-            			let htmlrefTestsClass = i === '0' ? '' : ' class="pt-5"'
-            			headingTheme=currentRefTests[i].themes;
+          if(headingTheme!=currentRefTests[i].themes){
+            let htmlrefTestsClass = i === '0' ? '' : ' class="pt-5"'
+            headingTheme=currentRefTests[i].themes;
+            htmlrefTests +='<h2 id="test-'+formatHeading(currentRefTests[i].themes)+'"'+htmlrefTestsClass+'>'+currentRefTests[i].themes+'</h2>';
+          }
+          htmlrefTests += '<article class="accordion-item"><div class="accordion-header" id="heading'+i+'"><h3 class="card-title mb-0"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'"><span class="accordion-title h6 mb-0 me-2 flex-grow-1">' + currentRefTests[i].title +'</span></a></h3>';
+
+          htmlrefTests += '</div><div id="collapse'+i+'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading'+i+'">';
+          htmlrefTests += '<div class="card-block"><div class="row">';
+          htmlrefTests += '<div class="col-lg-12"><h4>' + translate('process') + '</h4>';
+
+          if(currentRefTests[i].type.length==0){
+            currentRefTests[i].type.push("")
+          }
+          for (let k in currentRefTests[i].type){
+            // *** on n'affiche pas les outils ***
+            // if(currentRefTests[i].type[k]!=""){
+            //   htmlrefTests += '<h5 class="fs-6 ms-2">' + translate('tools') + ': '+currentRefTests[i].type[k]+'</h5>';
+            // }
+            htmlrefTests += '<ol>';
             
-           			htmlrefTests +='<h2 id="test-'+formatHeading(currentRefTests[i].themes)+'"'+htmlrefTestsClass+' >'+currentRefTests[i].themes+'</h2>';
-          		}
- 				htmlrefTests += '<a href="' + currentRefTests[i].raccourcis + '" style="text-decoration: none;">';
- 				htmlrefTests += '<p id="heading'+i+'">' + currentRefTests[i].title + '     ';
- 		
- 				//Ajout du badge si l'élément impacté existe
- 				if(currentRefTests[i].resultat[0]) {
- 					htmlrefTests +='<span class="badge rounded-pill bg-light mr-2 align-self-center">';
- 					htmlrefTests += currentRefTests[i].resultat[0] +'</span>';
- 				}
- 				htmlrefTests += '</p></a>';
-        		}
-        		// Affichage de l'ensemble des lignes en HTML
-        		currentRefTests.length===0 ?  elrefTests.innerHTML = '<div class="alert alert-warning">' + translate('noResults') + '</div>' : elrefTests.innerHTML = htmlrefTests;
-		}
+            if(Array.isArray(currentRefTests[i].tests[0])){
+              for (let j in currentRefTests[i].tests[k]) {
+                htmlrefTests += '<li>' + currentRefTests[i].tests[k][j] + '</li> ';            
+              } 
+            }
+            else{
+              for (let j in currentRefTests[i].tests) {
+                htmlrefTests += '<li>' + currentRefTests[i].tests[j] + '</li> ';            
+              }
+            }
+              
+              htmlrefTests += '</ol>';
+          }
+
+          htmlrefTests += '</ol></div></div>';
+         
+          // *** on n'affiche pas la partie "Vérifier" ***
+
+          // htmlrefTests += '<div class="row">';
+          // htmlrefTests += '<div class="col-lg-12"><h4>' + translate('check') + '</h4><ol>';
+          // for (let j in currentRefTests[i].verifier) {
+          //   htmlrefTests += '<li>' +  currentRefTests[i].verifier[j] + '</li> ';
+          //}
+          //htmlrefTests += '</ol></div></div>';
+
+          htmlrefTests += '<div class="row">';
+          htmlrefTests += '<div class="col-lg-12"><h4>'+((currentRefTests[i].profils[0] == 'Concepteur') ? translate('justification') : translate('results'))+'</h4><ol>';
+          for (let j in currentRefTests[i].resultat) {
+            htmlrefTests += '<li>' + currentRefTests[i].resultat[j] + '</li> ';
+          }
+          htmlrefTests += '</ol></div>';
+          htmlrefTests += '</div>';
+          if (currentRefTests[i].exception) {
+            htmlrefTests += '<div class="row"><div class="col-lg-12" ><h4>' + translate('exceptions') + '</h4>';
+            htmlrefTests += '<p>' + currentRefTests[i].exception + '</p> ';
+            htmlrefTests += '</div>';
+            htmlrefTests += '</div>';
+          }
+          htmlrefTests += '</p>';
+          htmlrefTests += '</div>';
+          htmlrefTests += '</div></article>';
+        }
+
+        // Affichage de l'ensemble des lignes en HTML
+        currentRefTests.length===0 ?  elrefTests.innerHTML = '<div class="alert alert-warning">' + translate('noResults') + '</div>' : elrefTests.innerHTML = htmlrefTests;
+
       };
+
 
       // Retourne la liste des checkboxes
       this.DisplayFilters = function() {
-        let elFilterFooter = document.getElementById('filter-footer');//Id défini dans le fichier 'filters.njk'
+        let elFilterFooter = document.getElementById('filter-footer');
         let htmlFilterFooter = '';
-        htmlFilterFooter += '<button id="reinit" class="btn btn-outline-secondary" disabled>' + translate('reinitFilters') + '</button>';
+        htmlFilterFooter += '<button id="reinit" class="btn btn-secondary" disabled>' + translate('reinitFilters') + '</button>';
         elFilterFooter.innerHTML = htmlFilterFooter;
         let elBtnReinit = document.getElementById('reinit');
 
@@ -285,7 +343,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
           // Chaque "type" dans chaque ligne (test)
           for (let j in refTests[i].type) {
-            types.push(refTests[i].type[j]);
+
+            ( Array.isArray(refTests[i].type[j]) ? types.push(refTests[i].type[j][0]) : types.push(refTests[i].type[j]))
+            
           }
 
           // Chaque "profil" dans chaque ligne (test)
@@ -298,7 +358,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         //let uniqueTypes = types.filter( (value, index, self) => self.indexOf(value) === index );
         uniqueTypes = types.filter(function(value, index, self) {
-          return self.indexOf(value) === index;
+          if(value!=""){
+            return self.indexOf(value) === index;
+          }
         });
 
         //on tri par ordre alphabétique
@@ -320,7 +382,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         });
 
         let htmlProfils = '';
-
 
         for (let i in uniqueProfils) {
           htmlProfils += '<li><input type="radio" id="profil' + i + '" name="profil" value="' + uniqueProfils[i] + '"> <label for="profil' + i + '">' + uniqueProfils[i] + '</label></li>';
@@ -350,7 +411,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
           input.addEventListener('click', function() {
 
-            if ((this.checked && this.name==="profil")){
+            if (this.checked && this.id==="profilAll" ){
+              arrProfil = [];
+
+            }else if ((this.checked && this.name==="profil")){
               arrProfil = [];
               arrProfil.push(input.value);
             }
@@ -366,9 +430,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
             let indice = arrType.length + arrProfil.length;
 
 
+
             if (indice > 0) {
 
               if (indice == 1) {
+
+                //on réinitialise les conditions
+                //conditions = [];
 
                 //on ajoute le premier critère
                 if ((arrProfil.length===1)){
@@ -391,10 +459,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
                   //on supprime les doublons, nécessaire pour les boutons radio
                   delDoublon(conditions, this.name);
 
-
+                  
                   conditions.unshift(function(item) {
-                    return item.type.indexOf(arrType[0]) !== -1;
+                    return item.type.toString().indexOf(arrType[0]) !== -1;
                   });
+
                   //on nomme la fonction, pour les checkboxes on utilise this.id
                   Object.defineProperty(conditions[0], 'name', {value: this.name, writable: false});
 
@@ -404,7 +473,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
               } else {
 
                 //on ajoute le nouveau critère
-                if ((this.checked && this.name==="profil")){
+                if ((this.checked && this.name==="profil" && this.id!="profilAll")){
 
                   //on supprime les doublons, nécessaire pour les boutons radio
                   delDoublon(conditions, this.name);
@@ -415,9 +484,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
                   //on nomme la fonction, pour les boutons radio on utilise this.name
                   Object.defineProperty(conditions[0], 'name', {value: this.name, writable: false});
+
                   runUpdateType = true;
+
                 }
-                
                 if ((this.checked && this.name==="types" && this.id!="allType")){
 
                   //on supprime les doublons, nécessaire pour les boutons radio
@@ -427,13 +497,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     return item.type.indexOf(arrType[0]) !== -1;
                   });
 
+
                   Object.defineProperty(conditions[0], 'name', {value: this.name, writable: false});
 
                   runUpdateType = false;
+
                 }
               }
 
+
               //on applique tous les filtres stockés dans conditions
+              //filteredTest = self.refTests.filter(function(d) {
               filteredTest = refTests.filter(function(d) {
                 return conditions.every(function(c) {
                   return c(d);
@@ -446,16 +520,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
               if (runUpdateType) {
                 app.UpdateTypes(uniqueTypes, filteredTest);
               }
-
               app.UpdateFeedback(true,filteredTest.length);
+
 
             } else {
               //aucun critère de sélectionné, on réinitialise la page
               app.FetchAll(refTests);
+              // Filtrage
+              app.FilterByType();
+              app.UpdateFeedback(true,refTests.length);
+
             }
+
           });
+
         }
+
       };
+
     }
     // Affichage de tous les tests
     app.FetchAll(refTests);

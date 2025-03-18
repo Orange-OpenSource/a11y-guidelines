@@ -175,7 +175,7 @@ Cocher la case « Balises de structure de document pour l'accessibilité ».
 
 ## Conseils pour une présentation orale
 
-Exprimer oralement tout ce qui est transmis visuellement. Vous pouvez activer le sous-titrage dans « Sous-titre en direct » dans le menu Diaporama. Si besoin, prévoir un système de vélotypie(méthode de transcription en temps réel) et/ou une interprétation des signes.
+Exprimer oralement tout ce qui est transmis visuellement. Vous pouvez activer le sous-titrage dans « Sous-titre en direct » dans le menu Diaporama. Si besoin, prévoir un système de vélotypie (méthode de transcription en temps réel) et/ou une interprétation des signes.
 
 Remarque : pour les présentations de plus de 50 diapositives, il faut conseiller aux lecteurs de modifier le paramètre suivant dans Adobe :
 `Édition > Préférences > Lecture > Option de lecteur d’écran` : « Lire l’intégralité du document »
@@ -186,5 +186,6 @@ Pour vérifier l’accessibilité d’un document PDF, consultez la [rubrique PD
 
 ## Ressources
 
-- [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).
-- <a href="https://webaim.org/techniques/powerpoint/" hreflang="en">Accessibilité PowerPoint, WebAIM</a> (anglais).
+- [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), Direction interministérielle du numérique (DINUM)
+- <a href="https://webaim.org/techniques/powerpoint/" hreflang="en">Accessibilité PowerPoint, WebAIM (anglais)</a> 
+- <a href="https://support.office.com/en-us/article/Make-your-PowerPoint-presentations-accessible-6f7772b2-2f33-4bd2-8ca7-dae3b2b3ef25" hreflang="en">Microsoft Accessibility Support website (anglais)</a> 
