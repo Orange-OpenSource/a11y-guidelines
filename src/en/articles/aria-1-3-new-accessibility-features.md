@@ -3,7 +3,8 @@ title: "New Features in ARIA Version 1.3: A Guide for Developers"
 abstract: "Explore the new features introduced in ARIA version 1.3. This article provides practical examples and explains how these enhancements improve web application accessibility for all users."
 date: "2025-03-18"
 tags:
-  - veille
+  - web
+  - advanced
 ---
 
 # Introduction

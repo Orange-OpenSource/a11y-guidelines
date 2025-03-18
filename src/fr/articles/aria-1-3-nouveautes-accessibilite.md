@@ -3,7 +3,8 @@ title: "Nouveautés de la version 1.3 de la norme ARIA : Guide pour les dévelop
 abstract: "Découvrez les nouvelles fonctionnalités de la version 1.3 de la norme ARIA. Cet article fournit des exemples pratiques et explique comment ces améliorations renforcent l'accessibilité des applications web pour tous les utilisateurs."
 date: "2025-03-18"
 tags:
-  - veille
+  - web
+  - advanced
 ---
 
 # Introduction
