@@ -428,14 +428,6 @@
   </entry>
   
   <entry>
-    <title>Explorateur de fichier</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/explorateur-de-fichiers/"/>
-    <updated>2018-01-19T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/explorateur-de-fichiers/</id>
-    <content xml:lang="fr" type="html">Exemple d&#39;explorateur de fichier accessible.</content>
-  </entry>
-  
-  <entry>
     <title>Gestion dynamique du focus</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/gestion-dynamique-du-focus/"/>
     <updated>2018-01-18T00:00:00Z</updated>
