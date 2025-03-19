@@ -13,7 +13,7 @@ La version 1.3 de la norme <abbr>ARIA</abbr> (Accessible Rich Internet Applicati
 
 ## Nouveaux attributs ARIA
 
-1. aria-braillelabel
+### aria-braillelabel
 
 Description : cet attribut permet de fournir une étiquette spécifique pour les utilisateurs de dispositifs braille. Il est particulièrement utile pour les éléments interactifs, comme les boutons ou les liens, où une étiquette claire est essentielle pour la compréhension.
 
@@ -25,7 +25,7 @@ Exemple d'utilisation :
 
 Impact utilisateur : les utilisateurs de dispositifs braille bénéficieront d'une meilleure compréhension des actions disponibles, ce qui peut améliorer leur expérience de navigation et leur autonomie.
 
-2. aria-brailleroledescription
+### aria-brailleroledescription
 
 Description : cet attribut fournit une description du rôle d'un élément pour les utilisateurs de dispositifs braille. Cela aide à contextualiser la fonction d'un élément, en particulier dans des interfaces complexes.
 
@@ -42,7 +42,7 @@ Exemple d'utilisation :
 
 Impact utilisateur : les utilisateurs de dispositifs braille auront une meilleure compréhension de la structure de la page, ce qui facilite la navigation et l'interaction avec le contenu.
 
-3. aria-details
+### aria-details
 
 Description : cet attribut a été modifié dans la version 1.3 d'<abbr>ARIA</abbr> pour permettre la référence à plusieurs <code>id</code>. Il permet ainsi de référencer un ou plusieurs éléments qui fournissent des informations supplémentaires sur un autre élément, offrant ainsi un contexte plus riche.
 
@@ -60,7 +60,7 @@ Exemple d'utilisation :
 
 Impact utilisateur : les utilisateurs, notamment ceux utilisant des lecteurs d'écran, bénéficieront d'une meilleure compréhension des éléments, ce qui peut réduire la confusion et améliorer l'expérience globale.
 
-4. aria-description
+### aria-description
 
 Description : cet attribut permet de fournir une description d'un élément, offrant ainsi des informations contextuelles supplémentaires aux utilisateurs.
 
@@ -74,7 +74,7 @@ Impact utilisateur : les utilisateurs auront accès à des informations supplém
 
 ## Nouveaux rôles ARIA
 
-1. role="suggestion"
+### role="suggestion"
 
 Description : ce rôle est utilisé pour indiquer qu'un élément fournit une suggestion ou une recommandation à l'utilisateur.
 
@@ -88,7 +88,7 @@ Exemple d'utilisation :
 
 Impact utilisateur : les utilisateurs peuvent recevoir des conseils utiles qui améliorent leur expérience et les aident à naviguer plus efficacement dans l'application.
 
-2. role="comment"
+### role="comment"
 
 Description : ce rôle est utilisé pour fournir des instructions ou des conseils sur la manière d'utiliser un élément ou une fonctionnalité.
 
@@ -102,7 +102,7 @@ Exemple d'utilisation :
 
 Impact utilisateur : les utilisateurs bénéficieront d'instructions claires qui les aident à interagir avec les éléments de manière plus efficace.
 
-3. role="mark"
+### role="mark"
 
 Description : le rôle <code>mark</code> est utilisé pour indiquer un texte qui a été mis en surbrillance ou qui est d'une importance particulière dans le contenu.
 
