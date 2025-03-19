@@ -1,16 +1,17 @@
 ---
 title: "Nouveautés de la version 1.3 de la norme ARIA : guide pour les développeurs"
 abstract: "Découvrez les nouvelles fonctionnalités de la version 1.3 de la norme ARIA. Cet article fournit des exemples pratiques et explique comment ces améliorations renforcent l'accessibilité des applications web pour tous les utilisateurs."
+titleBeforeTag: true
 date: "2025-03-18"
 tags:
   - web
   - advanced
 ---
 
-# Introduction
+## Introduction
 La version 1.3 de la norme <abbr>ARIA</abbr> (Accessible Rich Internet Applications) apporte des améliorations significatives pour l'accessibilité des applications web. Cet article vise à informer les développeurs web et mobile, ainsi que toute personne intéressée par l'accessibilité numérique, des nouveaux attributs et rôles introduits, de leur utilisation, et de l'impact qu'ils peuvent avoir sur l'expérience utilisateur.
 
-# Nouveaux attributs ARIA
+## Nouveaux attributs ARIA
 
 1. aria-braillelabel
 
@@ -43,14 +44,17 @@ Impact utilisateur : les utilisateurs de dispositifs braille auront une meilleur
 
 3. aria-details
 
-Description : cet attribut permet de référencer un élément qui fournit des informations supplémentaires sur un autre élément. Cela est particulièrement utile pour les éléments qui nécessitent des explications contextuelles.
+Description : cet attribut a été modifié dans la version 1.3 d'<abbr>ARIA</abbr> pour permettre la référence à plusieurs <code>id</code>. Il permet ainsi de référencer un ou plusieurs éléments qui fournissent des informations supplémentaires sur un autre élément, offrant ainsi un contexte plus riche.
 
 Exemple d'utilisation :
 
 ```html
-<button aria-details="details1">En savoir plus</button>
+<button aria-details="details1 details2">En savoir plus</button>
 <div id="details1" hidden>
   <p>Voici des informations supplémentaires sur ce bouton.</p>
+</div>
+<div id="details2" hidden>
+  <p>Consultez également notre guide d'utilisation.</p>
 </div>
 ```
 
@@ -68,9 +72,37 @@ Exemple d'utilisation :
 
 Impact utilisateur : les utilisateurs auront accès à des informations supplémentaires qui peuvent les aider à remplir des formulaires ou à interagir avec des éléments de manière plus efficace.
 
-# Nouveaux rôles ARIA
+## Nouveaux rôles ARIA
 
-1. role="mark"
+1. role="suggestion"
+
+Description : ce rôle est utilisé pour indiquer qu'un élément fournit une suggestion ou une recommandation à l'utilisateur.
+
+Exemple d'utilisation :
+
+```html
+<div role="suggestion">
+  <p>Nous vous recommandons d'essayer notre nouvelle fonctionnalité !</p>
+</div>
+```
+
+Impact utilisateur : les utilisateurs peuvent recevoir des conseils utiles qui améliorent leur expérience et les aident à naviguer plus efficacement dans l'application.
+
+2. role="comment"
+
+Description : ce rôle est utilisé pour fournir des instructions ou des conseils sur la manière d'utiliser un élément ou une fonctionnalité.
+
+Exemple d'utilisation :
+
+```html
+<div role="comment">
+  <p>Pour utiliser cette fonctionnalité, cliquez sur le bouton et suivez les instructions à l'écran.</p>
+</div>
+```
+
+Impact utilisateur : les utilisateurs bénéficieront d'instructions claires qui les aident à interagir avec les éléments de manière plus efficace.
+
+3. role="mark"
 
 Description : le rôle <code>mark</code> est utilisé pour indiquer un texte qui a été mis en surbrillance ou qui est d'une importance particulière dans le contenu.
 
@@ -82,20 +114,21 @@ Exemple d'utilisation :
 
 Impact utilisateur : les utilisateurs de lecteurs d'écran peuvent être informés des éléments importants dans le contenu, ce qui améliore leur capacité à saisir les points clés.
 
+## Cas d'utilisation
 
-
-# Cas d'utilisation
-
-## Applications de messagerie
+### Applications de messagerie
 Dans une application de messagerie, l'utilisation de <code>aria-braillelabel</code> et <code>aria-brailleroledescription</code> peut améliorer l'expérience utilisateur en fournissant des étiquettes claires pour les boutons d'action, permettant aux utilisateurs de comprendre rapidement les options disponibles.
 
-## Interfaces de navigation
+### Interfaces de navigation
 Pour les interfaces de navigation, <code>aria-details</code> et <code>aria-description</code> peuvent être utilisés pour donner un contexte supplémentaire sur les éléments de navigation, rendant l'expérience plus intuitive pour tous les utilisateurs, en particulier ceux utilisant des technologies d'assistance.
 
-# Conclusion
+### Suggestions et instructions
+L'utilisation des nouveaux rôles <code>suggestion</code> et <code>comment</code> peut aider à guider les utilisateurs dans l'utilisation des fonctionnalités de l'application, en leur fournissant des conseils et des instructions claires.
+
+## Conclusion
 La version 1.3 de la norme <abbr>ARIA</abbr> introduit des attributs et rôles essentiels qui améliorent l'accessibilité des applications web. En intégrant ces nouveautés, les développeurs peuvent créer des expériences plus inclusives pour tous les utilisateurs, en particulier ceux qui dépendent de technologies d'assistance. N'hésitez pas à explorer ces nouveautés et à les appliquer dans vos projets pour garantir une meilleure accessibilité numérique.
 
-# Webographie
+## Webographie
 <ul>
   <li><a href="https://w3c.github.io/aria/" hreflang="en">WAI-ARIA 1.3 draft (en)</a></li>
   <li><a href="https://www.craigabbott.co.uk/blog/a-look-at-the-new-wai-aria-1-3-draft/" hreflang="en">A look at the new WAI-ARIA 1.3 draft (en)</a></li>
