@@ -1,5 +1,5 @@
 ---
-title: "TotallyMouse"
+title: "Tota11yMouse"
 abstract: "La dernière innovation en matière d'accessibilité, sortie des cartons d'Orange"
 titleBeforeTag: true
 date: "2025-04-01"
@@ -14,11 +14,13 @@ Dans le domaine de l'accessibilité, la communauté d'experts est formelle, l'IA
 
 Aujourd'hui, il est temps pour nous de vous dévoiler une innovation : depuis des mois et dans le plus grans secret, le Centre d'Expertise en Accessibilité Numérique et les ergonomes de XDLAB ont mis au point une souris "doppée à l'IA" pour accompagner les designers et développeurs d'Orange à créer des produits et services Web accessibles, sans avoir les connaissances nécessaires.
 
+Nous vous présentons Tota11yMouse, la souris du futur !
+
 
 ##  Quelle est cette innovation en détails ?
 Visuellement, on pourrait penser que c'est une souris comme une autre, mais l'innovation réside dans ses raccourcis directs aux fonctions d'accessibilité depuis les boutons latéraux, mais également dans sa capacité à détecter les déficiences de l'utilisateur.
 
-[Titre : Tota11yMouse propulsée à l'IA. Deux boutons latéraux permettant la détection de handicap (expérimental) et d'accéder aux fonctions d'accessibilité. Un bouton sur le haut permet d'activer l'assistance IA avec plusieurs fonctionnalités décrite dans cet article](./images/TotallyMouse.png)
+![Titre : Tota11yMouse propulsée à l'IA. Deux boutons latéraux permettant la détection de handicap (expérimental) et d'accéder aux fonctions d'accessibilité. Un bouton sur le haut permet d'activer l'assistance IA avec plusieurs fonctionnalités décrite dans cet article](./images/TotallyMouse.png)
 
 
 ### Accès direct aux fonctionnalités d'accessibilité
