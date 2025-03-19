@@ -76,27 +76,39 @@ User impact: users will have access to additional information that can help them
 
 ### role="suggestion"
 
-Description: This role is used to indicate that an element provides a suggestion or recommendation to the user.
+Description: this role is used to programmatically indicate that a change has been made in a text. This allows users to understand that there are options or proposed corrections in the text that they can consider or apply.
 
 Example usage:
 
 ```html
-<div role="suggestion">
-  <p>We recommend trying our new feature!</p>
-</div>
+<p>
+  The best pets are
+  <span role="suggestion">
+    <span role="deletion">dogs.</span>
+    <span role="insertion">T. Rex.</span>
+  </span>
+</p>
 ```
 
 User impact: users can receive helpful advice that enhances their experience and helps them navigate more effectively through the application.
 
 ### role="comment"
 
-Description: This role is used to provide instructions or guidance on how to use an element or feature.
+Description: this role is used to programmatically indicate comment areas.
 
 Example usage:
 
 ```html
-<div role="comment">
-  <p>To use this feature, click the button and follow the on-screen instructions.</p>
+<div role="comment" aria-labelledby="comment-1-header">
+  <header id="comment-1-header">
+    <h4>John Doe</h4>
+    <time datetime="2024-01-29">
+      January 29, 2024
+    </time>
+  </header>
+  <p>
+    Great article! It really helped me understand the importance of accessibility.
+  </p>
 </div>
 ```
 

@@ -76,27 +76,39 @@ Impact utilisateur : les utilisateurs auront accès à des informations supplém
 
 ### role="suggestion"
 
-Description : ce rôle est utilisé pour indiquer qu'un élément fournit une suggestion ou une recommandation à l'utilisateur.
+Description : ce rôle est utilisé pour indiquer programmatiquement qu'une modification a été faite dans un texte. Cela permet aux utilisateurs de comprendre qu'il y a des options ou des corrections proposées dans le texte qu'ils peuvent considérer ou appliquer.
 
 Exemple d'utilisation :
 
 ```html
-<div role="suggestion">
-  <p>Nous vous recommandons d'essayer notre nouvelle fonctionnalité !</p>
-</div>
+<p>
+  Les meilleurs animaux de compagnie sont
+  <span role="suggestion">
+    <span role="deletion">les chiens.</span>
+    <span role="insertion">les T-rex.</span>
+  </span>
+</p>
 ```
 
 Impact utilisateur : les utilisateurs peuvent recevoir des conseils utiles qui améliorent leur expérience et les aident à naviguer plus efficacement dans l'application.
 
 ### role="comment"
 
-Description : ce rôle est utilisé pour fournir des instructions ou des conseils sur la manière d'utiliser un élément ou une fonctionnalité.
+Description : ce rôle est utilisé signaler programmatiquement les zones de commentaires.
 
 Exemple d'utilisation :
 
 ```html
-<div role="comment">
-  <p>Pour utiliser cette fonctionnalité, cliquez sur le bouton et suivez les instructions à l'écran.</p>
+<div role="comment" aria-labelledby="comment-1-header">
+  <header id="comment-1-header">
+    <h4>John Doe</h4>
+    <time datetime="2024-01-29">
+      January 29, 2024
+    </time>
+  </header>
+  <p>
+    Great article! It really helped me understand the importance of accessibility.
+  </p>
 </div>
 ```
 
