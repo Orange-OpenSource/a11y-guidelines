@@ -104,12 +104,12 @@ User impact: users will benefit from clear instructions that help them interact 
 
 ### role="mark"
 
-Description: the mark role is used to indicate text that has been highlighted or is of particular importance within the content.
+Description: the <code>mark</code> role is used to indicate text that has been highlighted or is of particular importance within the content.
 
 Example usage:
 
 ```html
-<p>This text is <mark>important</mark> for understanding.</p>
+<p>This text is <span role="mark">important</span> for understanding.</p>
 ```
 
 User impact: screen reader users can be informed about important elements in the content, improving their ability to grasp key points.

@@ -109,7 +109,7 @@ Description : le rôle <code>mark</code> est utilisé pour indiquer un texte qui
 Exemple d'utilisation :
 
 ```html
-<p>Ce texte est <mark>important</mark> pour la compréhension.</p>
+<p>Ce texte est <span role="mark">important</span> pour la compréhension.</p>
 ```
 
 Impact utilisateur : les utilisateurs de lecteurs d'écran peuvent être informés des éléments importants dans le contenu, ce qui améliore leur capacité à saisir les points clés.
