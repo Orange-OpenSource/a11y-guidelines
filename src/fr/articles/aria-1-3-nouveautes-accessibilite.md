@@ -82,37 +82,7 @@ Exemple d'utilisation :
 
 Impact utilisateur : les utilisateurs de lecteurs d'écran peuvent être informés des éléments importants dans le contenu, ce qui améliore leur capacité à saisir les points clés.
 
-2. role="complementary"
 
-Description : le rôle <code>complementary</code> désigne un contenu qui complète le contenu principal, mais qui n'est pas essentiel à sa compréhension. Cela aide à structurer le contenu de manière logique.
-
-Exemple d'utilisation :
-
-```html
-<aside role="complementary">
-  <h2>Articles connexes</h2>
-  <ul>
-    <li><a href="#article1">Article 1</a></li>
-    <li><a href="#article2">Article 2</a></li>
-  </ul>
-</aside>
-```
-
-Impact utilisateur : les utilisateurs peuvent naviguer plus facilement dans le contenu complémentaire, ce qui enrichit leur expérience et leur compréhension globale.
-
-3. role="description"
-
-Description : le rôle <code>description</code> est utilisé pour fournir des informations supplémentaires sur un élément, souvent utilisé en conjonction avec d'autres rôles.
-
-Exemple d'utilisation :
-
-```html
-<div role="description">
-  <p>Ceci est une description détaillée de l'élément.</p>
-</div>
-```
-
-Impact utilisateur : les utilisateurs bénéficieront d'une meilleure compréhension des éléments, ce qui peut les aider à interagir plus efficacement avec le contenu.
 
 # Cas d'utilisation
 
