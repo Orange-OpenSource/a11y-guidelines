@@ -64,7 +64,7 @@ User impact: users, especially those using screen readers, will benefit from a b
 
 Description: this attribute allows providing a description of an element, offering additional contextual information to users.
 
-Example Usage:
+Example usage:
 
 ```html
 <input type="text" aria-description="Please enter your email address." />
