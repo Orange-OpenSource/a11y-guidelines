@@ -50,10 +50,10 @@ Example usage:
 
 ```html
 <button aria-details="details1 details2">Learn more</button>
-<div id="details1" hidden>
+<div id="details1">
   <p>Here is additional information about this button.</p>
 </div>
-<div id="details2" hidden>
+<div id="details2">
   <p>Also, check our user guide.</p>
 </div>
 ```
