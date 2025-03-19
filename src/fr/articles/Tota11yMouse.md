@@ -20,7 +20,7 @@ Nous vous présentons Tota11yMouse, la souris du futur !
 ##  Quelle est cette innovation en détails ?
 Visuellement, on pourrait penser que c'est une souris comme une autre, mais l'innovation réside dans ses raccourcis directs aux fonctions d'accessibilité depuis les boutons latéraux, mais également dans sa capacité à détecter les déficiences de l'utilisateur.
 
-![Titre : Tota11yMouse propulsée à l'IA. Deux boutons latéraux permettant la détection de handicap (expérimental) et d'accéder aux fonctions d'accessibilité. Un bouton sur le haut permet d'activer l'assistance IA avec plusieurs fonctionnalités décrite dans cet article](./images/TotallyMouse.png)
+![Titre : Tota11yMouse propulsée à l'IA. Deux boutons latéraux permettant la détection de handicap (expérimental) et d'accéder aux fonctions d'accessibilité. Un bouton sur le haut permet d'activer l'assistance IA avec plusieurs fonctionnalités décrite dans cet article](../images/TotallyMouse.png)
 
 
 ### Accès direct aux fonctionnalités d'accessibilité
