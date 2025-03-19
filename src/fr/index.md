@@ -25,7 +25,7 @@ Notre expertise couvre les sites Web (e-commerce, e-learning, applications méti
     <a href="solutions-assistance/" class="btn btn-outline-secondary btn-sm">Les solutions d'assistance</a>
   </li>
   <li class="list-inline-item pb-2">
-    <a href="persona/" class="btn btn-outline-secondary btn-sm">Quelques personae</a>
+    <a href="persona/" class="btn btn-outline-secondary btn-sm">Quelques personas</a>
   </li>
   <li class="list-inline-item pb-2">
     <a href="glossaire/" class="btn btn-outline-secondary btn-sm">Glossaire</a>

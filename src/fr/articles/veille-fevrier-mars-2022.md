@@ -14,7 +14,7 @@ Encore un exemple de non-respect des droits fondamentaux des personnes en situat
 -	https://certam-avh.com/fr/dossiers-thematiques/accessibilite-numerique-la-grande-oubliee-de-la-campagne-presidentielle-2022 
 -	https://www.temesis.com/blog/accessibilite-classement-des-sites-des-candidats-a-la-presidentielle-2022/ 
 Ce mois-ci aussi, le retour de l’étude one million de WebAim update 2022(en)&nbsp;: https://webaim.org/blog/webaim-million-2022/ 
-Et enfin, la sortie dans notre site de dans notre site de recommandations de 5 personae pour améliorer l’A11y&nbsp;: https://a11y-guidelines.orange.com/fr/persona/ 
+Et enfin, la sortie dans notre site de dans notre site de recommandations de 5 personas pour améliorer l’A11y&nbsp;: https://a11y-guidelines.orange.com/fr/persona/ 
 ## L’accessibilité dans les lois, les normes et recommandations
 -	L’EU et les premiers rapports d’accessibilité numérique des différents pays membres(en)&nbsp;: https://www.deque.com/blog/eu-runs-worlds-largest-accessibility-test/
 -	Enfin, une position de l’IAAP (l’assos internationale des pros de l’a11y) sur les surcouches d’a11y (en)&nbsp;: https://www.accessibilityassociation.org/s/overlay-position-and-recommendations 
@@ -76,7 +76,7 @@ Et enfin, la sortie dans notre site de dans notre site de recommandations de 5 p
 ## Ressources
 -	Liste des ressources à la suite du CSUN2022, la conférence d’a11y qui fait référence (en)&nbsp;: https://docs.google.com/spreadsheets/d/1Tgmba0L6Z0BkHu9Hb3jlZ3IweguAdrja649rzk8X_Dk/ 
 -	Bonnes pratiques d’a11y pour les déficients en motricité fine (en)&nbsp;: https://theweco.com/accessibility-limited-fine-motor/ 
--	Des personae en situation de handicap numérique (en)&nbsp;: https://www.lexdis.org.uk/2022/04/personas/ 
+-	Des personas en situation de handicap numérique (en)&nbsp;: https://www.lexdis.org.uk/2022/04/personas/ 
 -	Vidéos sur les aides techniques et la navigation internet (en)&nbsp;: https://www.youtube.com/playlist?list=PLTqm2yVMMUKVxQ6eYth4_vvbM3IcrSPlk 
 -	Un autre article sur les surcouches d’a11y&nbsp;: https://oclock.io/blog/5820/les-outils-de-surcouche-daccessibilite-cest-quoi 
 -	Encore quelques mythes en a11y (en)&nbsp;: https://alvaromontoro.com/blog/67989/myths-about-web-accessibility 
