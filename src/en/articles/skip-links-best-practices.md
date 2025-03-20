@@ -23,6 +23,8 @@ We can distinguish 3 types of skip links:
 
 These skip links allow the user to avoid parts of pages, if we navigate with the keyboard, or if it is difficult to locate content in a large page or even if scrolling thought the page is difficult.
 
+Skip links are the first links on the page, and this makes sense as they allow users to navigate more easily. However, they may not be the first focusable elements when, for example, a cookie management banner is presented to the user. Indeed, the user must take action on the cookie banner before navigating the site, regardless of the position of the banner on the page.
+
 ### For whom?
 
 Skip links are valuable for many users:
@@ -51,13 +53,13 @@ It is generally a link pointing to an HTML element with an id attribute.
 ## What are the best practices?
 
 - It is possible to embed a skip link as an image (such as an 'arrow' with a <code>title</code> attribute) that appears after scrolling the page. The skip link returns directly to the top of the page. This avoidance link should not hinder the reading or understanding of the information; it should be the last keyboard-focusable element.
-- The skip link must be reachable by keyboard navigation and independent of the navigation direction.(<kbd>TAB</kbd> ou <kbd>Shift</kbd> + <kbd>TAB</kbd>).
+- The skip link must be reachable by keyboard navigation and independent of the navigation direction.(<kbd>Tab</kbd> ou <kbd>Shift</kbd> + <kbd>Tab</kbd>).
 - Placing a skip link on an <code>id</code> works, but targeting the skip link on elements like <code>aside</code>, <code>footer</code>, or <code>main</code> makes it less sensitive to potential changes (such as an <code>id</code> change, or simply not being included in the code of a new page, for instance).
 - Skip or quick access links should be visually located in the same place on the page and in the same relative order in the source code across all pages of the site.
 
 ### When should skip links be put in place?
 
-The first question to ask is: on my site, does the user need skip links?
+The first question to ask is: on my siteand more specifically on a business application/SaaS, does the user need skip links?
 
 The main reasons for setting up skip links:
 
@@ -67,11 +69,11 @@ The main reasons for setting up skip links:
 - the page is divided into many different parts (portal, dashboard, etc.)
 - there is no other way to navigate within the page (section title, HTML5 semantic structure…)
 
-**Note**: keep in mind that for a skip link to be functional, it should not merely scroll the page to the indicated location (such as the main content). It must allow the user to 'skip' a part of the page. If a user activates a 'Go to content' link using the keyboard, on the next <kbd>TAB</kbd>, the focus should move to the main content and not to the next avoidance link. This focus can be achieved by placing an anchor to the next <code>id</code> to target, for example."
+**Note**: keep in mind that for a skip link to be functional, it should not merely scroll the page to the indicated location (such as the main content). It must allow the user to 'skip' a part of the page. If a user activates a 'Go to content' link using the keyboard, on the next <kbd>Tab</kbd>, the focus should move to the main content and not to the next avoidance link. This focus can be achieved by placing an anchor to the next <code>id</code> to target, for example."
 
 Thus, when we use an anchor link, the system focus moves with it. However, the screen reader cursor will only move to the anchored element if it is focusable. When the anchored element is not focusable, the skip link is still considered the 'active element'.
 
-To resolve this issue, we can place an anchor on the element and use a <code>tabindex=-1</code> to make it focusable via JavaScript (it will remain excluded from focusable elements when using the <kbd>tab</kbd> key).
+To resolve this issue, we can place an anchor on the element and use a <code>tabindex=-1</code> to make it focusable via JavaScript (it will remain excluded from focusable elements when using the <kbd>Tab</kbd> key).
 
 ### Using a hybrid solution?
 
@@ -117,5 +119,11 @@ a.evitement:focus {
    position: static;
 }
 ```
+
+## Key points:
+- On a page, there can be three types of skip links (quick access links, escape links, and internal navigation links).
+- Skip links position the user in the requested area and do not just scroll the page (focus management).
+- Quick access links target the fixed elements in pages layouts (<code>footer</code>, <code>main</code>, <code>banner</code>, etc.). They are more robust.
+- Skip  links are particularly useful and used in business applications / SaaS or back-office.
 
 For any comments, suggestions, feel free to view or create an issue on our <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">github account</a>.

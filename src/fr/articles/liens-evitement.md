@@ -22,6 +22,8 @@ On peut distinguer trois types de liens&nbsp;:
 
 Ces liens d'évitement permettent donc à l'utilisateur d'éviter des parties de pages afin de faciliter la navigation, d'accéder au contenu souhaité plus aisément et se focaliser sur le contenu important, que l'on navigue au clavier, que l'on ait du mal à se repérer dans une page longue ou que scroller soit difficile.
 
+Les liens d'évitement sont les premiers liens dans la page et cela est logique car ils permettent aux utilisateurs de naviguer plus simplement. Pourtant, ils peuvent ne pas être les premiers éléments focusables, quand, par exemple, on propose à l'utilisateur un bandeau de gestion des cookies. En effet, l'utilisateur doit réaliser une action sur le bandeau de cookies avant de naviguer sur le site, et cela, quelle que soit la position du bandeau dans la page.
+
 ### Pour qui&nbsp;?
 
 Les liens d'évitement sont précieux pour de multiples utilisateurs&nbsp;:
@@ -49,13 +51,13 @@ Il s'agit généralement d'un lien pointant vers un élément HTML possédant un
 ## Quelles sont les bonnes pratiques&nbsp;?
 
 - Il est possible d'intégrer un lien d'évitement de contenu au site sous forme d'image (type «&nbsp;flèche&nbsp;» par exemple avec un attribut <code>title</code>) apparaissant après avoir fait défiler la page vers le bas. Le lien d'évitement permettra de faire un retour vers le haut de page directement. Ce lien d'évitement ne doit pas empêcher la lecture ou la compréhension de l'information, il doit être le dernier élément ciblable au clavier.
-- Le lien d'évitement doit être atteignable au clavier quel que soit le sens de navigation (<kbd>TAB</kbd> ou <kbd>Shift</kbd> + <kbd>TAB</kbd>).
+- Le lien d'évitement doit être atteignable au clavier quel que soit le sens de navigation (<kbd>Tab</kbd> ou <kbd>Shift</kbd> + <kbd>Tab</kbd>).
 - Placer un lien dévitement sur un <code>id</code> fonctionne, mais cibler le lien d'évitement sur des éléments comme <code>aside</code>, <code>footer</code> ou <code>main</code> permet de rendre le lien d'évitement de contenu moins sensible aux éventuelles modifications. (Changement d'<code>id</code>, ou simplement non repris dans le code d'une nouvelle page par exemple)
 - les liens d'évitements ou d'accès rapide doivent être visuellement situés au même endroit dans la page et dans le même ordre relatif dans le code source sur l'ensemble des pages du site.
 
 ### Quand doit-on mettre en place des liens d'évitement&nbsp;?
 
-La première question à se poser est, sur mon site, l'utilisateur a-t-il besoin de liens d'évitement ?
+La première question à se poser est, sur mon site et plus particulièrement sur une application métier / SaaS, l'utilisateur a-t-il besoin de liens d'évitement ?
 
 Les principales raisons de la mise en place de liens d'évitement:
 - la page est longue
@@ -65,12 +67,12 @@ Les principales raisons de la mise en place de liens d'évitement:
 - il n'existe pas de moyen autre pour naviguer au sein de la page (titre de rubrique, structure sémantique HTML5…)
 
 **Note** : attention pour qu'un lien d'évitement soit fonctionnel, il ne doit pas se contenter de faire défiler la page à l'endroit indiqué (contenu principal par exemple). Il doit permettre à l'utilisateur de «&nbsp;sauter&nbsp;» une partie de la page.
-Si un utilisateur active un lien «&nbsp;Aller au contenu&nbsp;» à l'aide du clavier, au prochain <kbd>TAB</kbd> de l'utilisateur le focus doit se déplacer dans le contenu principal et non sur le lien d'évitement suivant.
+Si un utilisateur active un lien «&nbsp;Aller au contenu&nbsp;» à l'aide du clavier, au prochain <kbd>Tab</kbd> de l'utilisateur le focus doit se déplacer dans le contenu principal et non sur le lien d'évitement suivant.
 Ce focus peut être fait en plaçant une ancre vers le prochain <code>id</code> à cibler par exemple.
 
 Ainsi, lorsque nous utilisons un lien d'ancrage, le focus système se déplace avec lui. Cependant le curseur du lecteur d'écran se déplacera pour être défini sur l'élément ancré que s'il est focusable. Lorsque l'élément ancré n'est pas focusable, le lien de saut est toujours considéré comme «&nbsp;l'élément actif&nbsp;».
 
-Pour régler cette problématique, on peut mettre une ancre sur l'élément, et utiliser un <code>tabindex=-1</code> pour le rendre focusable via JavaScript (il restera exclu des éléments focusables via la touche <kbd>tab</kbd>).
+Pour régler cette problématique, on peut mettre une ancre sur l'élément, et utiliser un <code>tabindex=-1</code> pour le rendre focusable via JavaScript (il restera exclu des éléments focusables via la touche <kbd>Tab</kbd>).
 
 
 ### Utiliser une solution hybride&nbsp;?
@@ -117,5 +119,12 @@ a.evitement:focus {
    position: static;
 }
 ```
+
+## À retenir :
+- Sur une page, on peut avoir trois types de liens d'évitement (liens d'accès rapide, liens d'évitement et liens de navigation interne).
+- Les liens d'évitement positionnent l'utilisateur sur la zone demandée et ne se contentent pas de faire défiler la page (gestion du focus).
+- Les liens d'accès rapides ciblent plutôt les éléments fixes des gabarits de pages (<code>footer</code>, <code>main</code>, <code>banner</code>, etc.). Ils sont plus robustes.
+- Les liens d'évitement sont particulièrement utiles et utilisés dans des applications métiers / SaaS ou back-office.
+
 
 Pour toutes remarques, suggestions, n'hésitez pas à consulter ou créer une issue sur notre <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">compte github</a>.
