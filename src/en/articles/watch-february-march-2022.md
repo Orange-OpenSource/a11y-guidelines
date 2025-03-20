@@ -12,7 +12,7 @@ Another example of non-respect of the fundamental rights of people with disabili
 - https://certam-avh.com/fr/dossiers-thematiques/accessibilite-numerique-la-grande-oubliee-de-la-campagne-presidentielle-2022
 - https://www.temesis.com/blog/accessibilite-classement-des-sites-des-candidats-a-la-presidentielle-2022/
 Also this month, the return of the one million study from WebAim update 2022: https://webaim.org/blog/webaim-million-2022/
-And finally, a new content in our site of in our site of recommendations, 5 personae to improve A11y (fr): https://a11y-guidelines.orange.com/fr/persona/
+And finally, a new content in our site of in our site of recommendations, 5 personas to improve A11y (fr): https://a11y-guidelines.orange.com/fr/persona/
 ## Accessibility in laws, standards and recommendations
 - The EU and the first digital accessibility reports of the different member countries: https://www.deque.com/blog/eu-runs-worlds-largest-accessibility-test/
 - Finally, a position of the IAAP (the international association of a11y pros) on a11y overlays: https://www.accessibilityassociation.org/s/overlay-position-and-recommendations
