@@ -15,4 +15,4 @@ The grid calculates a compliance rate per page audited: this rate is equal to th
 
 The link below opens the grid "WCAG audit" in a new browser tab.
 
-<a href="https://la-va11ydette.orange.com/?list=wcag-web&lang=en" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Open the WCAG grid (new tab)">Open the WCAG checklist <span class="visually-hidden"> (new tab)</span></a>
+<a href="https://la-va11ydette.orange.com/?list=wcag-web&lang=en" target="_blank" rel="noopener noreferrer" class="btn btn-outline-secondary" title="Open the WCAG grid (new tab)">Open the WCAG checklist <span class="visually-hidden"> (new tab)</span></a>

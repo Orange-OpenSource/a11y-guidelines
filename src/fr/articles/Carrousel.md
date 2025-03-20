@@ -48,7 +48,7 @@ Afin de rendre tout ceci accessible, nous allons pouvoir nous appuyer sur les at
 Ci-dessous, un exemple de carrousel accessible au format HTML&nbsp;:
 
 ```html
-<button type="button" class="btn btn-icon btn-secondary carousel-control-play-pause pause mt-1" data-bs-target="#carouselExamplePause" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">
+<button type="button" class="btn btn-icon btn-outline-secondary carousel-control-play-pause pause mt-1" data-bs-target="#carouselExamplePause" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">
   <span class="visually-hidden">Pause Carousel</span>
 </button>
 <div id="carouselExamplePause" class="carousel slide" data-bs-ride="carousel">

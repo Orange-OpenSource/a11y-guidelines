@@ -58,7 +58,7 @@ Ergonomie, UI & UX
 
 - TAdER — Text Adaptability is Essential for Reading, on vous explique tout sur pourquoi le texte doit pouvoir s’adapter à l’utilisateur dans le numérique à lire (en) : http://www.tader.info/ 
 - Designer pour des déficiences cognitives, bon résumé (en) : https://ux.shopify.com/designing-for-cognitive-disabilities-b2933d58c278 
-- Améliorer les personae utilisateurs (en) : https://www.uxbooth.com/articles/rethinking-user-personas/ 
+- Améliorer les personas utilisateurs (en) : https://www.uxbooth.com/articles/rethinking-user-personas/ 
 Ressources
 - On manque d’études et donc de chiffres sur la handicap en France  https://www.slate.fr/story/214940/tribune-france-retard-etudes-handicap-passage-modele-medical-social-changer-connaissances-pratiques-inclusion-enseignement-superieur-recherche 
 - Quel élément peut contenir quel élément en HTML, indispensable (en) : https://caninclude.glitch.me/ 

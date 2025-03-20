@@ -22,7 +22,7 @@ Memo fact sheets in PDF format containing a reminder of the essential criteria t
     <p>Reminder of the essential techniques and tools to develop an accessible website.</p>
     <h3 id="tele-web">Download</h3>
     <p>          
-      <a href="../../../res/memos/dev-web/Web-Fact-Sheet-Orange.pdf" class="btn btn-secondary">
+      <a href="../../../res/memos/dev-web/Web-Fact-Sheet-Orange.pdf" class="btn btn-outline-secondary">
         Download as PDF (264 Ko)
         <span class="visually-hidden">Web development accessibility fact sheet</span>
       </a>
@@ -48,7 +48,7 @@ Memo fact sheets in PDF format containing a reminder of the essential criteria t
     </p>        
     <h3 id="tele-tests-web">Download</h3>
     <p>          
-      <a href="../../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-secondary">
+      <a href="../../../res/memos/tests-web/Memo-Tests-Web-Orange.pdf" class="btn btn-outline-secondary">
         Download as PDF (325 Ko)
         <span class="visually-hidden">Web test accessibility fact sheet</span>
       </a>
