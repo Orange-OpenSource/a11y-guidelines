@@ -175,4 +175,10 @@ En résumé, s'il ne fallait retenir qu'un seul conseil pour du SVG accessible, 
 - https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility 
 - https://github.com/JeremiePat/svg-accessible/blob/master/slides.md 
 - https://www.sarasoueidan.com/blog/accessible-icon-buttons/
-- https://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/
+<a href="https://www.deque.com/blog/creating-accessible-svgs/" hreflang="en">XXX</a>
+<a href="https://weboverhauls.github.io/demos/svg/" hreflang="en">XXX</a>
+<a href="https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html" hreflang="en">XXX</a>
+<a href="https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility" hreflang="en">XXX</a>
+<a href="https://github.com/JeremiePat/svg-accessible/blob/master/slides.md" hreflang="en">XXX</a>
+<a href="https://www.sarasoueidan.com/blog/accessible-icon-buttons/" hreflang="en">XXX</a>
+<a href="https://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/" hreflang="en">XXX</a>
