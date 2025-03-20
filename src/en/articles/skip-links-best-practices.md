@@ -120,7 +120,7 @@ a.evitement:focus {
 }
 ```
 
-## Key points:
+## Key points
 - On a page, there can be three types of skip links (quick access links, escape links, and internal navigation links).
 - Skip links position the user in the requested area and do not just scroll the page (focus management).
 - Quick access links target the fixed elements in pages layouts (<code>footer</code>, <code>main</code>, <code>banner</code>, etc.). They are more robust.

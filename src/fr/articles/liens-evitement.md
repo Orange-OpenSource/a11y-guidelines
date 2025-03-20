@@ -120,7 +120,7 @@ a.evitement:focus {
 }
 ```
 
-## À retenir :
+## À retenir
 - Sur une page, on peut avoir trois types de liens d'évitement (liens d'accès rapide, liens d'évitement et liens de navigation interne).
 - Les liens d'évitement positionnent l'utilisateur sur la zone demandée et ne se contentent pas de faire défiler la page (gestion du focus).
 - Les liens d'accès rapides ciblent plutôt les éléments fixes des gabarits de pages (<code>footer</code>, <code>main</code>, <code>banner</code>, etc.). Ils sont plus robustes.
