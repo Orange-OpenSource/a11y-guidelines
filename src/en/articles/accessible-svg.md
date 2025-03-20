@@ -3,7 +3,7 @@ title: "SVG images accessibility"
 abstract: "How to make SVG images accessible"
 titleBeforeTag: true
 date: "2021-01-01"
-updateDate: "2025-02-28"
+updateDate: "2025-03-28"
 tags:
   - web
   - intermediate
@@ -167,10 +167,10 @@ In short, one tip for accessible SVG would be TEST and test again!
 
 ## Ressources (articles that have helped me a lot)
 
-- https://www.deque.com/blog/creating-accessible-svgs/
-- https://weboverhauls.github.io/demos/svg/
-- https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html 
-- https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility 
-- https://github.com/JeremiePat/svg-accessible/blob/master/slides.md 
-- https://www.sarasoueidan.com/blog/accessible-icon-buttons/
-- https://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/
+<a href="https://www.deque.com/blog/creating-accessible-svgs/">Creating Accessible SVGs - Deque</a>
+<a href="https://weboverhauls.github.io/demos/svg/">Accessible SVG test page</a>
+<a href="https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html">Contextually Marking up accessible images and SVGs - Scott O'Hara</a>
+<a href="https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility">SVG Icons and Screen Reader Accessibility</a>
+<a href="https://github.com/JeremiePat/svg-accessible/blob/master/slides.md">SVG Accessible ! - Github Jeremie Patonnier</a>
+<a href="https://www.sarasoueidan.com/blog/accessible-icon-buttons/">Accessible Icon Buttons - Sara Soueidan</a>
+<a href="https://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/">Accessible SVGs: Perfect Patterns For Screen Reader Users - Smahsing Magazine</a>
