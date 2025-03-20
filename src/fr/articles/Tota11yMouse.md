@@ -10,9 +10,9 @@ tags:
 ## Introduction
 Il y a quelques semaines, Orange a annoncé un <a href="https://newsroom.orange.com/orange-et-mistral-ai-signent-un-partenariat-strategique-pour-accelerer-le-developpement-de-lia-en-europe/">partenariat avec Mistral AI</a> pour accélérer le développement de l’IA en Europe.
 
-Dans le domaine de l'accessibilité, la communauté d'experts est formelle, l'IA va révolutionner nos métiers et les sites web seront, sans nul doute, 100% accessibles d'ici 2 ou 3 ans (voir les liens à la fin de l'article).
+Dans le domaine de l'accessibilité, la communauté d'experts est formelle : l'IA va révolutionner nos métiers et les sites web seront, sans nul doute, 100% accessibles d'ici 2 ou 3 ans (voir les liens à la fin de l'article).
 
-Aujourd'hui, il est temps pour nous de vous dévoiler une innovation : depuis des mois et dans le plus grans secret, le Centre d'Expertise en Accessibilité Numérique et les ergonomes de XDLAB ont mis au point une souris "doppée à l'IA" pour accompagner les designers et développeurs d'Orange à créer des produits et services Web accessibles, sans avoir les connaissances nécessaires.
+Aujourd'hui, il est temps pour nous de vous dévoiler une innovation : depuis des mois et dans le plus grand secret, le Centre d'Expertise en Accessibilité Numérique et les ergonomes de XDLAB ont mis au point une souris "propulsée à l'IA" pour accompagner les designers et développeurs d'Orange à créer des produits et services Web accessibles, sans avoir les connaissances nécessaires.
 
 Nous vous présentons Tota11yMouse, la souris du futur !
 
@@ -30,13 +30,13 @@ Plus besoin de passer des heures à chercher la <strong>balise HTML ou l'attribu
 Par exemple, une étiquette de formulaire sera automatiquement rattachée à son champ de formulaire grâce à la balise <code>label</code> et à l'attribut <code>for</code> pointant sur l'identifiant du champ de saisie.
 
 Outre le balisage sémantique, il sera également possible de corriger le <strong>contraste de couleurs</strong> des textes de manière automatique.
-Finis les textes en blanc sur fond orange qui donnent un niveau de contraste insuffisant, même en utilisant le orange dit "accessible". 
-D'un simple clic, les textes passeront en noir. Dans le cas de textes orange sur fond blanc, les textes seront corrigés en gris foncé ou noir pour permettre à tous les utilisateurs de lire confortablement.
+Finis les textes en blanc sur fond orange (ou inversement) qui donnent un niveau de contraste insuffisant, même en utilisant le orange dit "accessible". 
+D'un simple clic, les textes passeront en noir pour permettre à tous les utilisateurs de lire confortablement.
 
 Une autre innovation concerne la principale source d'erreurs sur les sites web, à savoir les <strong>alternatives aux images</strong>. 
 Grâce à cette souris, l'image sera automatiquement analysée par l'IA intégrée et une alternative pertinente sera fournie avec une fiabilité de 90% (tests réalisés auprès d'un échantillon de 28 utilisateurs non-voyants).
 
-Enfin, la <strong>rédaction de mails ou des documents Powerpoint</strong> étant une activité quotidienne chez Orange, nous avons également intégré l'inspecteur d'accessibilité de Microsoft directement dans les options de raccourcis, afin que vous n'ayez plus à chercher vous-mêmes le bouton "Vérifier l'accessibilité" présent dans le menu "Révision".
+Enfin, la <strong>rédaction de mails ou de documents PowerPoint</strong> étant une activité quotidienne chez Orange, nous avons également intégré l'inspecteur d'accessibilité de Microsoft directement dans les options de raccourcis, afin que vous n'ayez plus à chercher vous-mêmes le bouton "Vérifier l'accessibilité" présent dans le menu "Révision".
 
 
 ### Innovation expérimentale
@@ -47,17 +47,22 @@ Cette fonctionnalité est encore à l'état expérimental mais nous pouvons déj
 - la souris possèdera des micro-capteurs capables d'interpréter les moindres tremblements ou lenteurs de la main,
 - la caméra du PC permettra d'analyser les yeux et les expressions du visage pour détecter une cécité ou des difficultés de compréhension et enverra les informations à la souris qui ajustera les réglages en conséquence.
 
+## Verbatims
+Voici quelques retours de nos beta-testeurs :
+<blockquote>"La prise en main de la souris est agréable, je gagne un temps fou sur le développement des pages. Par contre le pointeur de la souris est trop petit, du coup je dois faire de longs trajets et cela me fait mal au poignet."</blockquote><p>Vincent B., développeur Web.</p>
+<blockquote>"Quand la souris détecte une image, la Tota11yMouse se met à vibrer. Une vibration longue indique que l’IA travaille sur la génération de l’alternative de l'image. Dès que c’est terminé, sur les haut-parleurs de l’ordinateur on peut entendre "Miaou, Miaou" ce qui précède la vocalisation de l’alternative de l’image."</blockquote><p>Viviane H., éditrice de contenus et mal-voyante.</p>
 
 ## La sortie officielle, c'est pour quand ?
-Malheureusement, tout ceci n'est que pure fiction car l'intelligence artificielle ne permet pas, malgré ce que vous pourrez entendre, de rendre vos sites accessibles.
+Vous l'aurez compris, tout ceci n'est que pure fiction car l'intelligence artificielle ne permet pas, malgré ce que vous pourrez entendre, de rendre vos sites accessibles.
 
 Pour que les sites web et applications mobiles d'Orange soient conformes aux exigences d'accessibilité (RGAA ou WCAG), la seule méthode reconnue à ce jour est :
-- de se former (voir nos playlists de formations internes),
-- de suivre les recommandations des experts du Centre d'Expertise en Accessibilité Numérique,
-- de tester ses livrables,
-- de faire tester par des utilisateurs en situation de handicap."
+- se former,
+- suivre les standards et les recommandations (notamment celles disponibles sur ce site),
+- tester ses livrables, notamment à l'aide de nos checklists "incontournables" disponibles pour <a href=/fr/web/checklist-initiale>Web</a>, <a href=/fr/android/checklist>Android</a>, <a href=/fr/ios/checklist>iOS</a> et <a href=/fr/contenu-et-communication/incontournables>documentation</a>,
+- mettre en place des <a href="/fr/methode-tests-utilisateur/#methode-de-test-daccessibilite-avec-des-dutilisateurs">tests utilisateurs.</a>
 
-Quelques ressources intéressantes à lire sur le sujet :
+## Quelques ressources :
+Des réflexions intéressantes sur le sujet :
 - https://adrianroselli.com/2025/03/be-wary-of-accessibility-guarantees-from-anyone.html
 - https://yatil.net/blog/values
 - https://www.linkedin.com/posts/karlgroves_glad-to-see-the-pushback-happening-against-activity-7300540174772387840-Lo6q/
