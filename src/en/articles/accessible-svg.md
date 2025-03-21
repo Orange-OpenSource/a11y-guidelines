@@ -26,7 +26,7 @@ Important: Whatever solution is chosen, as browser support and assistive technol
 &lt;/svg&gt;
 </code></pre>
 
-In addition, you must make sure that the `svg` tag or one of its children (`<g>`,`<path>`...) does not have any attribute to provide it with an accessible name (` title`, `desc `,` aria- * `…).
+In addition, you must make sure that the `svg` tag or one of its children (`<g>`,`<path>`...) does not have any attribute to provide it with an accessible name (`title`, `desc`, `aria- *`, …).
 
 Note: Historically, the `focusable="false"` attribute was also required to prevent any focus on the SVG by Internet Explorer and Edge (before Chromium). This is no longer necessary in current browsers (unless your users are still using the older mentioned browsers).
 
