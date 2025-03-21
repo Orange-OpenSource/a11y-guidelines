@@ -165,7 +165,7 @@ It is also possible to use the `aria-label` attribute:
 
 In short, one tip for accessible SVG would be TEST and test again!
 
-## Ressources (articles that have helped me a lot)
+## Webography (articles that have helped me a lot)
 
 <a href="https://www.deque.com/blog/creating-accessible-svgs/">Creating Accessible SVGs - Deque</a>
 <a href="https://weboverhauls.github.io/demos/svg/">Accessible SVG test page</a>
