@@ -169,10 +169,10 @@ En résumé, s'il ne fallait retenir qu'un seul conseil pour du SVG accessible, 
 
 ## Webographie (articles qui m'ont bien, bien aidés)
 
-<a href="https://www.deque.com/blog/creating-accessible-svgs/" hreflang="en">Creating Accessible SVGs - Deque</a>
-<a href="https://weboverhauls.github.io/demos/svg/" hreflang="en">Accessible SVG test page</a>
-<a href="https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html" hreflang="en">Contextually Marking up accessible images and SVGs - Scott O'Hara</a>
-<a href="https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility" hreflang="en">SVG Icons and Screen Reader Accessibility</a>
-<a href="https://github.com/JeremiePat/svg-accessible/blob/master/slides.md" hreflang="en">SVG Accessible ! - Github Jeremie Patonnier</a>
-<a href="https://www.sarasoueidan.com/blog/accessible-icon-buttons/" hreflang="en">Accessible Icon Buttons - Sara Soueidan</a>
-<a href="https://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/" hreflang="en">Accessible SVGs: Perfect Patterns For Screen Reader Users - Smahsing Magazine</a>
+<a href="https://www.deque.com/blog/creating-accessible-svgs/" hreflang="en">Creating Accessible SVGs - Deque (en)</a>
+<a href="https://weboverhauls.github.io/demos/svg/" hreflang="en">Accessible SVG test page (en)</a>
+<a href="https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html" hreflang="en">Contextually Marking up accessible images and SVGs - Scott O'Hara (en)</a>
+<a href="https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility" hreflang="en">SVG Icons and Screen Reader Accessibility (en)</a>
+<a href="https://github.com/JeremiePat/svg-accessible/blob/master/slides.md" hreflang="en">SVG Accessible ! - Github Jeremie Patonnier (en)</a>
+<a href="https://www.sarasoueidan.com/blog/accessible-icon-buttons/" hreflang="en">Accessible Icon Buttons - Sara Soueidan (en)</a>
+<a href="https://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/" hreflang="en">Accessible SVGs: Perfect Patterns For Screen Reader Users - Smahsing Magazine (en)</a>
