@@ -171,6 +171,6 @@ In short, one tip for accessible SVG would be TEST and test again!
 <a href="https://weboverhauls.github.io/demos/svg/">Accessible SVG test page</a>
 <a href="https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html">Contextually Marking up accessible images and SVGs - Scott O'Hara</a>
 <a href="https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility">SVG Icons and Screen Reader Accessibility</a>
-<a href="https://github.com/JeremiePat/svg-accessible/blob/master/slides.md">SVG Accessible ! - Github Jeremie Patonnier</a>
+<a href="https://github.com/JeremiePat/svg-accessible/blob/master/en/slides.md">SVG Accessible ! - Github Jeremie Patonnier</a>
 <a href="https://www.sarasoueidan.com/blog/accessible-icon-buttons/">Accessible Icon Buttons - Sara Soueidan</a>
-<a href="https://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/">Accessible SVGs: Perfect Patterns For Screen Reader Users - Smahsing Magazine</a>
+<a href="https://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/">Accessible SVGs: Perfect Patterns For Screen Reader Users - Smashing Magazine</a>
