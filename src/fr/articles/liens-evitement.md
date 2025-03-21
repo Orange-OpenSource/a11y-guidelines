@@ -126,5 +126,4 @@ a.evitement:focus {
 - Les liens d'accès rapides ciblent plutôt les éléments fixes des gabarits de pages (<code>footer</code>, <code>main</code>, <code>banner</code>, etc.). Ils sont plus robustes.
 - Les liens d'évitement sont particulièrement utiles et utilisés dans des applications métiers / SaaS ou back-office.
 
-
 Pour toutes remarques, suggestions, n'hésitez pas à consulter ou créer une issue sur notre <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">compte github</a>.
