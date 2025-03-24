@@ -59,7 +59,7 @@ It is generally a link pointing to an HTML element with an id attribute.
 
 ### When should skip links be put in place?
 
-The first question to ask is: on my siteand more specifically on a business application/SaaS, does the user need skip links?
+The first question to ask is: on my site and more specifically on a business application/SaaS, does the user need skip links?
 
 The main reasons for setting up skip links:
 
