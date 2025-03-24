@@ -49,8 +49,8 @@ Cette fonctionnalité est encore à l'état expérimental mais nous pouvons déj
 
 ## Verbatims
 Voici quelques retours de nos beta-testeurs :
-<blockquote>"La prise en main de la souris est agréable, je gagne un temps fou sur le développement des pages. Par contre le pointeur de la souris est trop petit, du coup je dois faire de longs trajets et cela me fait mal au poignet."</blockquote><p>Vincent B., développeur Web.</p>
-<blockquote>"Quand la souris détecte une image, la Tota11yMouse se met à vibrer. Une vibration longue indique que l’IA travaille sur la génération de l’alternative de l'image. Dès que c’est terminé, sur les haut-parleurs de l’ordinateur on peut entendre "Miaou, Miaou" ce qui précède la vocalisation de l’alternative de l’image."</blockquote><p>Viviane H., éditrice de contenus et mal-voyante.</p>
+<figure><blockquote class="blockquote"><p>La prise en main de la souris est agréable, je gagne un temps fou sur le développement des pages. Par contre le pointeur de la souris est trop petit, du coup je dois faire de longs trajets et cela me fait mal au poignet.</p></blockquote><figcaption class="blockquote-footer">Vincent B., développeur Web.</figcaption></figure>
+<figure><blockquote  class="blockquote"><p>Quand la souris détecte une image, la Tota11yMouse se met à vibrer. Une vibration longue indique que l’IA travaille sur la génération de l’alternative de l'image. Dès que c’est terminé, sur les haut-parleurs de l’ordinateur on peut entendre "Miaou, Miaou" qui annonce la vocalisation de l’alternative de l’image.</p></blockquote><figcaption class="blockquote-footer">Viviane H., éditrice de contenus et mal-voyante.</figcaption></figure>
 
 ## La sortie officielle, c'est pour quand ?
 Vous l'aurez compris, tout ceci n'est que pure fiction car l'intelligence artificielle ne permet pas, malgré ce que vous pourrez entendre, de rendre vos sites accessibles.
@@ -61,7 +61,7 @@ Pour que les sites web et applications mobiles d'Orange soient conformes aux exi
 - tester ses livrables, notamment à l'aide de nos checklists "incontournables" disponibles pour <a href=/fr/web/checklist-initiale>Web</a>, <a href=/fr/android/checklist>Android</a>, <a href=/fr/ios/checklist>iOS</a> et <a href=/fr/contenu-et-communication/incontournables>documentation</a>,
 - mettre en place des <a href="/fr/methode-tests-utilisateur/#methode-de-test-daccessibilite-avec-des-dutilisateurs">tests utilisateurs.</a>
 
-## Quelques ressources :
+## Quelques ressources
 Des réflexions intéressantes sur le sujet :
 - https://adrianroselli.com/2025/03/be-wary-of-accessibility-guarantees-from-anyone.html
 - https://yatil.net/blog/values
