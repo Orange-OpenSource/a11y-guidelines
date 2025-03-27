@@ -8,7 +8,7 @@ tags:
 ---
 
 ## Introduction
-A few weeks ago, Orange announced a <a href="https://newsroom.orange.com/orange-and-mistral-ai-join-forces-to-accelerate-artificial-intelligence-development-in-europe/?lang=eng">partnership with Mistral AI</a> to accelerate the development of Artificial Intelligence (IA) in Europe.
+A few weeks ago, Orange announced a <a href="https://newsroom.orange.com/orange-and-mistral-ai-join-forces-to-accelerate-artificial-intelligence-development-in-europe/?lang=eng">partnership with Mistral AI</a> to accelerate the development of Artificial Intelligence (AI) in Europe.
 
 In the field of accessibility, the expert community is formal: AI is going to revolutionize our businesses, and websites will, without a doubt, be 100% accessible within 2 or 3 years (see links at the end of the article).
 
