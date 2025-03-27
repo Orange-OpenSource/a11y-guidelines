@@ -8,7 +8,7 @@ tags:
 ---
 
 ## Introduction
-Il y a quelques semaines, Orange a annoncé un <a href="https://newsroom.orange.com/orange-et-mistral-ai-signent-un-partenariat-strategique-pour-accelerer-le-developpement-de-lia-en-europe/">partenariat avec Mistral AI</a> pour accélérer le développement de l’<abbr>IA</abbr> en Europe.
+Il y a quelques semaines, Orange a annoncé un <a href="https://newsroom.orange.com/orange-et-mistral-ai-signent-un-partenariat-strategique-pour-accelerer-le-developpement-de-lia-en-europe/">partenariat avec Mistral AI</a> pour accélérer le développement de l’Intelligence Artificielle (IA) en Europe.
 
 Dans le domaine de l'accessibilité, la communauté d'experts est formelle : l'IA va révolutionner nos métiers et les sites web seront, sans nul doute, 100% accessibles d'ici 2 ou 3 ans (voir les liens à la fin de l'article).
 
