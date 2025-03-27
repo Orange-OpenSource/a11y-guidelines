@@ -8,9 +8,9 @@ tags:
 ---
 
 ## Introduction
-A few weeks ago, Orange announced a <a href="https://newsroom.orange.com/orange-and-mistral-ai-join-forces-to-accelerate-artificial-intelligence-development-in-europe/?lang=eng">partnership with Mistral AI</a> to accelerate the development of AI in Europe.
+A few weeks ago, Orange announced a <a href="https://newsroom.orange.com/orange-and-mistral-ai-join-forces-to-accelerate-artificial-intelligence-development-in-europe/?lang=eng">partnership with Mistral AI</a> to accelerate the development of <abbr>AI</abbr> in Europe.
 
-In the field of accessibility, the expert community is formal: AI is going to revolutionize our businesses and websites will, without a doubt, be 100% accessible within 2 or 3 years (see links at the end of the article).
+In the field of accessibility, the expert community is formal: AI is going to revolutionize our businesses, and websites will, without a doubt, be 100% accessible within 2 or 3 years (see links at the end of the article).
 
 Today, it's time for us to unveil an innovation: for months and in the greatest secrecy, the Digital Accessibility Expertise Centre and XDLAB ergonomists have been developing an “AI-powered” mouse to help Orange designers and developers create accessible web products and services, without having the necessary knowledge.
 
@@ -26,7 +26,7 @@ Visually, you might think it's a mouse like any other, but the innovation lies i
 ### Direct access to accessibility features
 A side button allows you to activate accessibility features on the element targeted by the mouse pointer.
 
-No more spending hours looking for the <strong>appropriate HTML tag or attribute</strong>, detection is automatic based on the context of the page and the elements surrounding the component. 
+No more spending hours looking for the <strong>appropriate HTML tag or attribute</strong>; detection is automatic based on the context of the page and the elements surrounding the component. 
 For example, a form label will automatically be attached to its form field using the <code>label</code> tag and the <code>for</code> attribute pointing to the input field's ID.
 
 In addition to semantic tagging, it will also be possible to automatically correct the <strong>color contrast</strong> of texts.
@@ -43,12 +43,12 @@ As you can see in the image, a second side button will allow users to go even fu
 
 This feature is still experimental, but we can already reveal the main principles:
 
-- The mouse will have micro-sensors capable of interpreting the slightest tremors or slowness of the hand,
+- The mouse will have micro-sensors capable of interpreting the slightest tremors or slowness of the hand.
 - The PC camera will analyze the eyes and facial expressions to detect blindness or comprehension difficulties and will send the information to the mouse, which will adjust the settings accordingly.
 
 ## Testimonials
-Here are some feedbacks from our beta testers:
-<figure><blockquote class="blockquote"><p>The mouse is comfortable to use, and I save a lot of time on page development. However, the mouse pointer is too small, so I have to make long trips, which hurts my wrist.</p></blockquote><figcaption class="blockquote-footer">Vincent B., Web Developer.</figcaption></figure>
+Here is some feedback from our beta testers:
+<figure><blockquote class="blockquote"><p>The mouse is comfortable to use, and I save a lot of time on page development. However, the mouse pointer is too small, so I have to make long movements, which hurts my wrist.</p></blockquote><figcaption class="blockquote-footer">Vincent B., Web Developer.</figcaption></figure>
 <figure><blockquote class="blockquote"><p>When the mouse detects an image, the Tota11yMouse starts to vibrate. A long vibration indicates that the AI is working on generating the image alternative. Once it's done, you can hear "Meow, Meow" from the computer speakers, announcing the vocalization of the image alternative.</p></blockquote><figcaption class="blockquote-footer">Viviane H., Content Editor and Visually Impaired.</figcaption></figure>
 
 ## When is the official release?

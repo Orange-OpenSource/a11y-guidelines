@@ -8,7 +8,7 @@ tags:
 ---
 
 ## Introduction
-Il y a quelques semaines, Orange a annoncé un <a href="https://newsroom.orange.com/orange-et-mistral-ai-signent-un-partenariat-strategique-pour-accelerer-le-developpement-de-lia-en-europe/">partenariat avec Mistral AI</a> pour accélérer le développement de l’IA en Europe.
+Il y a quelques semaines, Orange a annoncé un <a href="https://newsroom.orange.com/orange-et-mistral-ai-signent-un-partenariat-strategique-pour-accelerer-le-developpement-de-lia-en-europe/">partenariat avec Mistral AI</a> pour accélérer le développement de l’<abbr>IA</abbr> en Europe.
 
 Dans le domaine de l'accessibilité, la communauté d'experts est formelle : l'IA va révolutionner nos métiers et les sites web seront, sans nul doute, 100% accessibles d'ici 2 ou 3 ans (voir les liens à la fin de l'article).
 
@@ -42,9 +42,9 @@ Enfin, la <strong>rédaction de mails ou de documents PowerPoint</strong> étant
 ### Innovation expérimentale
 Comme vous pouvez le voir sur l'image, un deuxième bouton latéral permettra d'aller encore plus loin dans l'aide aux utilisateurs, en détectant automatiquement le handicap auquel est confronté l'utilisateur. 
 
-Cette fonctionnalité est encore à l'état expérimental mais nous pouvons déjà vous en dévoiler les grands principes.
+Cette fonctionnalité est encore à l'état expérimental mais nous pouvons déjà vous en dévoiler les grands principes :
 
-- la souris possèdera des micro-capteurs capables d'interpréter les moindres tremblements ou lenteurs de la main,
+- la souris possèdera des micro-capteurs capables d'interpréter les moindres tremblements ou lenteurs de la main.
 - la caméra du PC permettra d'analyser les yeux et les expressions du visage pour détecter une cécité ou des difficultés de compréhension et enverra les informations à la souris qui ajustera les réglages en conséquence.
 
 ## Verbatims
