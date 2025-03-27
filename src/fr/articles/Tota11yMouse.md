@@ -57,12 +57,12 @@ Vous l'aurez compris, tout ceci n'est que pure fiction car l'intelligence artifi
 
 Pour que les sites web et applications mobiles d'Orange soient conformes aux exigences d'accessibilité (RGAA ou WCAG), la seule méthode reconnue à ce jour est :
 - se former,
-- suivre les standards et les recommandations (notamment celles disponibles sur ce site),
-- tester ses livrables, notamment à l'aide de nos checklists "incontournables" disponibles pour <a href=/fr/web/checklist-initiale>Web</a>, <a href=/fr/android/checklist>Android</a>, <a href=/fr/ios/checklist>iOS</a> et <a href=/fr/contenu-et-communication/incontournables>documentation</a>,
-- mettre en place des <a href="/fr/methode-tests-utilisateur/#methode-de-test-daccessibilite-avec-des-dutilisateurs">tests utilisateurs.</a>
+- suivre les standards et <a href=https://a11y-guidelines.orange.com/fr/>nos recommandations</a>,
+- tester ses livrables, notamment à l'aide de nos checklists "incontournables" disponibles pour <a href=https://a11y-guidelines.orange.com/fr/web/checklist-initiale>Web</a>, <a href=https://a11y-guidelines.orange.com/fr/mobile/android/checklist>Android</a>, <a href=https://a11y-guidelines.orange.com/fr/mobile/ios/checklist>iOS</a> et <a href=https://a11y-guidelines.orange.com/fr/contenu-et-communication/incontournables>documentation</a>,
+- mettre en place des <a href="https://a11y-guidelines.orange.com/fr/methode-tests-utilisateur/#methode-de-test-daccessibilite-avec-des-dutilisateurs">tests utilisateurs.</a>
 
 ## Quelques ressources
 Des réflexions intéressantes sur le sujet :
-- https://adrianroselli.com/2025/03/be-wary-of-accessibility-guarantees-from-anyone.html
-- https://yatil.net/blog/values
-- https://www.linkedin.com/posts/karlgroves_glad-to-see-the-pushback-happening-against-activity-7300540174772387840-Lo6q/
+- <a href=https://adrianroselli.com/2025/03/be-wary-of-accessibility-guarantees-from-anyone.html hreflang="en">Be Wary of Accessibility Guarantees from Anyone - Adrian Roselli (en)</a>
+- <a href=https://yatil.net/blog/values hreflang="en">Values - Eric Eggert (en)</a>
+- <a href=https://www.linkedin.com/posts/karlgroves_glad-to-see-the-pushback-happening-against-activity-7300540174772387840-Lo6q/>Post Linkedin - Karl Groves</a>

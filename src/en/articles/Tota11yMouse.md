@@ -56,12 +56,12 @@ As you may have guessed, all of this is pure fiction because artificial intellig
 
 For Orange's websites and mobile applications to comply with accessibility requirements (RGAA or WCAG), the only recognized method to date is:
 - Get trained,
-- Follow standards and recommendations (especially those available on this site),
-- Test your deliverables, notably using our "essential" checklists available for <a href=/en/web/must-haves-checklist>Web</a>, <a href=/en/mobile/android/checklist>Android</a>, <a href=/en/mobile/ios/checklist>iOS</a>, and <a href=/en/content-and-communication/must-haves>documentation</a>,
-- Conduct <a href="/en/accessibility-user-testing/#accessibility-user-testing">user tests.</a>
+- Follow standards and <a href=https://a11y-guidelines.orange.com/en/>our recommendations</a>,
+- Test your deliverables, notably using our "essential" checklists available for <a href=https://a11y-guidelines.orange.com/en/web/must-haves-checklist>Web</a>, <a href=https://a11y-guidelines.orange.com/en/mobile/android/checklist>Android</a>, <a href=https://a11y-guidelines.orange.com/en/mobile/ios/checklist>iOS</a>, and <a href=https://a11y-guidelines.orange.com/en/content-and-communication/must-haves>documentation</a>,
+- Conduct <a href="https://a11y-guidelines.orange.com/en/accessibility-user-testing/#accessibility-user-testing">user tests.</a>
 
 ## Some resources
 Interesting reflections on the subject:
-- https://adrianroselli.com/2025/03/be-wary-of-accessibility-guarantees-from-anyone.html
-- https://yatil.net/blog/values
-- https://www.linkedin.com/posts/karlgroves_glad-to-see-the-pushback-happening-against-activity-7300540174772387840-Lo6q/
+- <a href=https://adrianroselli.com/2025/03/be-wary-of-accessibility-guarantees-from-anyone.html>Be Wary of Accessibility Guarantees from Anyone - Adrian Roselli</a>
+- <a href=https://yatil.net/blog/values>Values - Eric Eggert</a>
+- <a href=https://www.linkedin.com/posts/karlgroves_glad-to-see-the-pushback-happening-against-activity-7300540174772387840-Lo6q/> Linkedin post - Karl Groves</a>
