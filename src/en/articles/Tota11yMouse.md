@@ -12,7 +12,7 @@ A few weeks ago, Orange announced a <a href="https://newsroom.orange.com/orange-
 
 In the field of accessibility, the expert community is formal: AI is going to revolutionize our businesses, and websites will, without a doubt, be 100% accessible within 2 or 3 years (see links at the end of the article).
 
-Today, it's time for us to unveil an innovation: for months and in the greatest secrecy, the Digital Accessibility Expertise Centre and XDLAB ergonomists have been developing an “AI-powered” mouse to help Orange designers and developers create accessible web products and services, without having the necessary knowledge.
+Today, it's time for us to unveil an innovation: for months and in the greatest secrecy, the ODACE (Orange Digital ACcessibility Expertise centre) team and XDLAB ergonomists have been developing an “AI-powered” mouse to help Orange designers and developers create accessible web products and services, without having the necessary knowledge.
 
 We present you Tota11yMouse, the mouse of the future!
 
