@@ -199,8 +199,8 @@
             
           
           <div class="mt-4">
-          <h2 id="quest-ce-quun-lien-devitement" class="h2-focus">Qu'est-ce qu'un lien d'évitement ? <a class="header-anchor" href="#quest-ce-quun-lien-devitement" id="heading-468" aria-labelledby="heading-468">#</a></h2>
-<h3 id="quest-ce">Qu'est-ce ? <a class="header-anchor" href="#quest-ce" id="heading-469" aria-labelledby="heading-469">#</a></h3>
+          <h2 id="quest-ce-quun-lien-devitement" class="h2-focus">Qu'est-ce qu'un lien d'évitement ? <a class="header-anchor" href="#quest-ce-quun-lien-devitement" id="heading-469" aria-labelledby="heading-469">#</a></h2>
+<h3 id="quest-ce">Qu'est-ce ? <a class="header-anchor" href="#quest-ce" id="heading-470" aria-labelledby="heading-470">#</a></h3>
 <p>Les liens d'évitement sont des raccourcis permettant d'accéder directement à une zone de contenu ou d'éviter des régions de la page afin de naviguer plus rapidement.</p>
 <p>On peut distinguer trois types de liens :</p>
 <ol>
@@ -209,7 +209,7 @@
 <li>les liens de navigation interne à une page : « Retour en haut de page », par exemple</li>
 </ol>
 <p>Ces liens d'évitement permettent donc à l'utilisateur d'éviter des parties de pages afin de faciliter la navigation, d'accéder au contenu souhaité plus aisément et se focaliser sur le contenu important, que l'on navigue au clavier, que l'on ait du mal à se repérer dans une page longue ou que scroller soit difficile.</p>
-<h3 id="pour-qui">Pour qui ? <a class="header-anchor" href="#pour-qui" id="heading-470" aria-labelledby="heading-470">#</a></h3>
+<h3 id="pour-qui">Pour qui ? <a class="header-anchor" href="#pour-qui" id="heading-471" aria-labelledby="heading-471">#</a></h3>
 <p>Les liens d'évitement sont précieux pour de multiples utilisateurs :</p>
 <ul>
 <li>Les utilisateurs de lecteur d'écran ou ne pouvant utiliser la souris, qui se déplacent donc au clavier uniquement</li>
@@ -217,7 +217,7 @@
 <li>Les malvoyants, qui utilisent ou pas une loupe d'écran, et ayant du mal à se faire une représentation globale de la topologie de la page</li>
 </ul>
 <p>On va donc, grâce aux liens d'évitement, limiter l'usage des touches de navigation clavier et plus généralement économiser des gestes lors de la navigation intra-page.</p>
-<h2 id="utilisation" class="h2-focus">Utilisation  <a class="header-anchor" href="#utilisation" id="heading-471" aria-labelledby="heading-471">#</a></h2>
+<h2 id="utilisation" class="h2-focus">Utilisation  <a class="header-anchor" href="#utilisation" id="heading-472" aria-labelledby="heading-472">#</a></h2>
 <p>Il s'agit généralement d'un lien pointant vers un élément HTML possédant un attribut <code>id</code>.</p>
 <pre><code class="language-html">&lt;body&gt;
   &lt;a class=&quot;evitement&quot; href=&quot;#contenu&quot;&gt;Aller au contenu&lt;/a&gt;
@@ -228,14 +228,14 @@
   […]
 &lt;/body&gt;
 </code></pre>
-<h2 id="quelles-sont-les-bonnes-pratiques" class="h2-focus">Quelles sont les bonnes pratiques ? <a class="header-anchor" href="#quelles-sont-les-bonnes-pratiques" id="heading-472" aria-labelledby="heading-472">#</a></h2>
+<h2 id="quelles-sont-les-bonnes-pratiques" class="h2-focus">Quelles sont les bonnes pratiques ? <a class="header-anchor" href="#quelles-sont-les-bonnes-pratiques" id="heading-473" aria-labelledby="heading-473">#</a></h2>
 <ul>
 <li>Il est possible d'intégrer un lien d'évitement de contenu au site sous forme d'image (type « flèche » par exemple avec un attribut <code>title</code>) apparaissant après avoir fait défiler la page vers le bas. Le lien d'évitement permettra de faire un retour vers le haut de page directement. Ce lien d'évitement ne doit pas empêcher la lecture ou la compréhension de l'information, il doit être le dernier élément ciblable au clavier.</li>
 <li>Le lien d'évitement doit être atteignable au clavier quel que soit le sens de navigation (<kbd>TAB</kbd> ou <kbd>Shift</kbd> + <kbd>TAB</kbd>).</li>
 <li>Placer un lien dévitement sur un <code>id</code> fonctionne, mais cibler le lien d'évitement sur des éléments comme <code>aside</code>, <code>footer</code> ou <code>main</code> permet de rendre le lien d'évitement de contenu moins sensible aux éventuelles modifications. (Changement d'<code>id</code>, ou simplement non repris dans le code d'une nouvelle page par exemple)</li>
 <li>les liens d'évitements ou d'accès rapide doivent être visuellement situés au même endroit dans la page et dans le même ordre relatif dans le code source sur l'ensemble des pages du site.</li>
 </ul>
-<h3 id="quand-doit-on-mettre-en-place-des-liens-devitement">Quand doit-on mettre en place des liens d'évitement ? <a class="header-anchor" href="#quand-doit-on-mettre-en-place-des-liens-devitement" id="heading-473" aria-labelledby="heading-473">#</a></h3>
+<h3 id="quand-doit-on-mettre-en-place-des-liens-devitement">Quand doit-on mettre en place des liens d'évitement ? <a class="header-anchor" href="#quand-doit-on-mettre-en-place-des-liens-devitement" id="heading-474" aria-labelledby="heading-474">#</a></h3>
 <p>La première question à se poser est, sur mon site, l'utilisateur a-t-il besoin de liens d'évitement ?</p>
 <p>Les principales raisons de la mise en place de liens d'évitement:</p>
 <ul>
@@ -250,10 +250,10 @@ Si un utilisateur active un lien « Aller au contenu » à l'aide du clavier, 
 Ce focus peut être fait en plaçant une ancre vers le prochain <code>id</code> à cibler par exemple.</p>
 <p>Ainsi, lorsque nous utilisons un lien d'ancrage, le focus système se déplace avec lui. Cependant le curseur du lecteur d'écran se déplacera pour être défini sur l'élément ancré que s'il est focusable. Lorsque l'élément ancré n'est pas focusable, le lien de saut est toujours considéré comme « l'élément actif ».</p>
 <p>Pour régler cette problématique, on peut mettre une ancre sur l'élément, et utiliser un <code>tabindex=-1</code> pour le rendre focusable via JavaScript (il restera exclu des éléments focusables via la touche <kbd>tab</kbd>).</p>
-<h3 id="utiliser-une-solution-hybride">Utiliser une solution hybride ? <a class="header-anchor" href="#utiliser-une-solution-hybride" id="heading-474" aria-labelledby="heading-474">#</a></h3>
+<h3 id="utiliser-une-solution-hybride">Utiliser une solution hybride ? <a class="header-anchor" href="#utiliser-une-solution-hybride" id="heading-475" aria-labelledby="heading-475">#</a></h3>
 <p>On a vu que les liens d'accès rapide peuvent être visibles ou masqués par défaut pour être affichés uniquement lors de la navigation clavier. Cette dernière option répond souvent à des problématiques esthétiques. Néanmoins, elle supprime le bénéfice que pourraient apporter ces liens aux autres utilisateurs qui n'utilisent pas le clavier (utilisateurs de loupe logicielle par exemple). Une solution, qui permettrait de concilier les avantages des deux techniques, serait de positionner un bouton discret mais affordant au click, en haut de page, permettant de déclencher à la demande l'ouverture et la fermeture du panneau des liens d’accès rapides. On pourrait également penser à une barre horizontale visible tout en haut à l'ouverture de la page et qui disparaît lors du scroll vers le bas de page.</p>
 <p>Quelle que soit la solution, il faut que les liens d'évitement soient visibles (dans la mesure du possible) et utilisables par tous !</p>
-<h2 id="exemples-dusage" class="h2-focus">Exemples d'usage <a class="header-anchor" href="#exemples-dusage" id="heading-475" aria-labelledby="heading-475">#</a></h2>
+<h2 id="exemples-dusage" class="h2-focus">Exemples d'usage <a class="header-anchor" href="#exemples-dusage" id="heading-476" aria-labelledby="heading-476">#</a></h2>
 <p> Exemple 1 :</p>
 <pre><code class="language-html">&lt;ul id=&quot;evitement&quot;&gt;
    &lt;li&gt;
@@ -272,7 +272,7 @@ Ce focus peut être fait en plaçant une ancre vers le prochain <code>id</code> 
    &lt;a href=&quot;#navigation&quot;&gt;Sauter à la navigation&lt;/a&gt;
 &lt;/p&gt;
 </code></pre>
-<h2 id="exemples-dusage-particulier" class="h2-focus">Exemples d'usage particulier <a class="header-anchor" href="#exemples-dusage-particulier" id="heading-476" aria-labelledby="heading-476">#</a></h2>
+<h2 id="exemples-dusage-particulier" class="h2-focus">Exemples d'usage particulier <a class="header-anchor" href="#exemples-dusage-particulier" id="heading-477" aria-labelledby="heading-477">#</a></h2>
 <p>Si les liens d'évitement ne sont pas rendus visibles à l'écran par défaut (pour des questions de design par exemple). Il est important que ceux-ci restent interprétés par les outils d'assistance.<br>
 La solution consiste à utiliser une classe CSS de masquage accessible. Les frameworks type <strong>Bootstrap</strong> et <strong>Boosted</strong> embarquent directement ce type de classe (<code lang="en">visually-hidden</code> et <code lang="en">visually-hidden-focusable</code>). Ainsi même s'il ne sera pas visible à l'écran, un élément possédant la classe <code lang="en">visually-hidden</code> sera correctement vocalisé par un lecteur d'écran.</p>
 <pre><code class="language-css">a.evitement {

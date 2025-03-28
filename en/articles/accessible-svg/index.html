@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
-    <title>SVG images are used more and more on the web but what about their accessibility ? - Orange digital accessibility guidelines</title>
+    <title>SVG images accessibility - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
@@ -150,7 +150,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
-          SVG images are used more and more on the web but what about their accessibility ?
+          SVG images accessibility
         </li>
       </ol>
 </nav>
@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#decorative-image" class="dropdown-item text-wrap">Decorative image</a><a href="#svg-in-an-img-tag" class="dropdown-item text-wrap">SVG in an img tag</a><a href="#svg-online-inline" class="dropdown-item text-wrap">SVG online (inline)</a><a href="#informative-image-without-link-or-button" class="dropdown-item text-wrap">Informative image (without link or button)</a><a href="#svg-in-an-img-tag-2" class="dropdown-item text-wrap">SVG in an img tag</a><a href="#svg-online-inline-2" class="dropdown-item text-wrap">SVG online (inline)</a><a href="#last-words" class="dropdown-item text-wrap">Last words ...</a><a href="#ressources-articles-that-have-helped-me-a-lot" class="dropdown-item text-wrap">Ressources (articles that have helped me a lot)</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#decorative-image" class="dropdown-item text-wrap">Decorative image</a><a href="#svg-in-an-img-tag" class="dropdown-item text-wrap">SVG in an img tag</a><a href="#inline-svg" class="dropdown-item text-wrap">Inline SVG</a><a href="#informative-image-without-link-or-button" class="dropdown-item text-wrap">Informative image (without link or button)</a><a href="#svg-in-an-img-tag-2" class="dropdown-item text-wrap">SVG in an img tag</a><a href="#inline-svg-2" class="dropdown-item text-wrap">Inline SVG</a><a href="#svg-in-links-or-buttons" class="dropdown-item text-wrap">SVG in links or buttons</a><a href="#last-words" class="dropdown-item text-wrap">Last words ...</a><a href="#webography-articles-that-have-helped-me-a-lot" class="dropdown-item text-wrap">Webography (articles that have helped me a lot)</a></div>
     </nav>
         
       </div>
@@ -174,7 +174,7 @@
         
         <main id="main-content" class="col-md-9" role="main">
           
-            <h1>SVG images are used more and more on the web but what about their accessibility ?</h1>
+            <h1>SVG images accessibility</h1>
             
               <span class="visually-hidden" id="filters_label">
                 Associated themes:
@@ -184,120 +184,147 @@
               </ul>
             
             
-              <time class="text-muted" datetime="2021-01-01T00:00:00.000Z">January 01, 2021</time>
+              <p class="text-muted mb-0">
+                <span class="visually-hidden">Publication date</span>
+                <time datetime="2025-03-28T00:00:00.000Z">
+                  March 28, 2025
+                </time>
+              </p>
+              <p class="text-muted mb-0" >
+                Update of the article from
+                <time datetime="2021-01-01T00:00:00.000Z">
+                  January 01, 2021
+                </time>
+              </p>
             
           
           <div class="mt-4">
-          <p>Here are some ideas knowing that the support for browsers and assistive technologies evolves very quickly!<br>
-Important: So remember to test your implementations on the browsers/assistive technologies targets the most used by your users, whatever the solution for which you choose.</p>
-<h2 id="decorative-image" class="h2-focus">Decorative image <a class="header-anchor" href="#decorative-image" id="heading-21" aria-labelledby="heading-21">#</a></h2>
-<h3 id="svg-in-an-img-tag">SVG in an <code>img</code> tag <a class="header-anchor" href="#svg-in-an-img-tag" id="heading-22" aria-labelledby="heading-22">#</a></h3>
-<pre> <code class="html">
+          <p>Here are some ideas knowing that the support for browsers and assistive technologies evolves very quickly.</p>
+<p>Important: Whatever solution is chosen, as browser support and assistive technologies evolve rapidly, make sure to test your implementations on the configurations most commonly used by your users.</p>
+<h2 id="decorative-image" class="h2-focus">Decorative image <a class="header-anchor" href="#decorative-image" id="heading-23" aria-labelledby="heading-23">#</a></h2>
+<h3 id="svg-in-an-img-tag">SVG in an <code>img</code> tag <a class="header-anchor" href="#svg-in-an-img-tag" id="heading-24" aria-labelledby="heading-24">#</a></h3>
+<pre><code class="html" title="html">
 &lt;img src="XXX.svg" alt="" aria-hidden="true" /&gt;
-</code> </pre>
-<h3 id="svg-online-inline">SVG online (inline) <a class="header-anchor" href="#svg-online-inline" id="heading-23" aria-labelledby="heading-23">#</a></h3>
-<pre> <code class="html">
-&lt;svg aria-hidden="true" focusable="false"&gt;
-...
+</code></pre>
+<h3 id="inline-svg">Inline SVG <a class="header-anchor" href="#inline-svg" id="heading-25" aria-labelledby="heading-25">#</a></h3>
+<pre><code class="html" title="html">
+&lt;svg aria-hidden="true"&gt;
+…
 &lt;/svg&gt;
-</code> </pre>
-<p>We use <code>focusable =&quot;false&quot;</code> to avoid any focus on SVG by <abbr>IE</abbr> (&gt; 10 and Edge)</p>
-<p>In addition, you must make sure that the <code>svg</code> tag or one of its children (<code>&lt;g&gt;</code>,<code>&lt;path&gt;</code>...) does not have any attribute to provide it with an accessible name (<code> title</code>, <code>desc </code>,<code>aria- *</code>…).</p>
-<h2 id="informative-image-without-link-or-button" class="h2-focus">Informative image (without link or button) <a class="header-anchor" href="#informative-image-without-link-or-button" id="heading-24" aria-labelledby="heading-24">#</a></h2>
-<h3 id="svg-in-an-img-tag-2">SVG in an <code>img</code> tag <a class="header-anchor" href="#svg-in-an-img-tag-2" id="heading-25" aria-labelledby="heading-25">#</a></h3>
-<pre> <code class="html">
-&lt;img src ="XXX.svg" alt="alternative text" role="img" /&gt;
-</code> </pre>
-<p>second choice:</p>
-<pre> <code class="html">
-&lt;img src="XXX.svg" aria-label="replacement text" role="img" /&gt;
-</code> </pre>
-<p>We add <code>role=&quot;img&quot;</code> to make sure that with macOS Safari, VoiceOver (old versions) announces &quot;image&quot;.</p>
-<h3 id="svg-online-inline-2">SVG online (inline) <a class="header-anchor" href="#svg-online-inline-2" id="heading-26" aria-labelledby="heading-26">#</a></h3>
-<pre> <code class="html">
-&lt;svg viewBox="0 0 440 540" version="1.1" role="img"
-  lang="fr" xml:lang="fr"
-  aria-labelledby="title description"&gt;
-
-  &lt;title id="title"&gt;Gross revenue 2019&lt;/title&gt;
-
-  &lt;desc id="description"&gt;
-    This diagram shows the income for the year 2019, as a percentage of the total and in absolute value. The total income is 20.3 million Euros and is divided into 6.9 million (34%) for the first quarter, 2.1 million (10%) for the second, 10.3 million for the third (51%) and 1 million in the last quarter (5%).
-  &lt;/desc&gt;
-
+</code></pre>
+<p>In addition, you must make sure that the <code>svg</code> tag or one of its children (<code>&lt;g&gt;</code>,<code>&lt;path&gt;</code>...) does not have any attribute to provide it with an accessible name (<code>title</code>, <code>desc</code>, <code>aria- *</code>, …).</p>
+<p>Note: Historically, the <code>focusable=&quot;false&quot;</code> attribute was also required to prevent any focus on the SVG by Internet Explorer and Edge (before Chromium). This is no longer necessary in current browsers (unless your users are still using the older mentioned browsers).</p>
+<h2 id="informative-image-without-link-or-button" class="h2-focus">Informative image (without link or button) <a class="header-anchor" href="#informative-image-without-link-or-button" id="heading-26" aria-labelledby="heading-26">#</a></h2>
+<h3 id="svg-in-an-img-tag-2">SVG in an <code>img</code> tag <a class="header-anchor" href="#svg-in-an-img-tag-2" id="heading-27" aria-labelledby="heading-27">#</a></h3>
+<p>The most effective solution is to use the <code>alt</code> attribute:</p>
+<pre><code class="html" title="html">
+&lt;img src="XXX.svg" role="img" alt="replacement text"&gt;
+</code></pre>
+<p>As a second choice, use <code>aria-label</code> (but this violates the first rule of ARIA, which is to avoid using ARIA if a native HTML solution exists):</p>
+<pre><code class="html" title="html">
+&lt;img src="XXX.svg" role="img" aria-label="replacement text"&gt;
+</code></pre>
+<p>Note: To ensure optimal support by assistive technologies and browsers, avoid using <code>aria-labelledby</code> pointing to hidden text:</p>
+<pre><code class="html" title="html">
+&lt;p id="alt-text" class="visually-hidden">replacement text&lt;/p&gt;
+&lt;img src="XXX.svg" role="img" aria-labelledby="alt-text"&gt;
+</code></pre>
+<p>Note: Add <code>role=&quot;img&quot;</code> to ensure that the element is properly recognized as an image by assistive technologies.</p>
+<h3 id="inline-svg-2">Inline SVG <a class="header-anchor" href="#inline-svg-2" id="heading-28" aria-labelledby="heading-28">#</a></h3>
+<p>The best support for SVG is inline display (<code>&lt;svg&gt;</code> tag).</p>
+<pre><code class="html" title="html">
+&lt;svg role="img"&gt;
+  &lt;title&gt;replacement text&lt;/title&gt;
   ...
 &lt;/svg&gt;
-</code> </pre>
-<p>The best support for SVGs is to display them inline.</p>
-<p>You must use <code>aria-labelledby</code> as the first choice by referencing the &quot;title&quot; and the &quot;desc&quot; (avoid <code>aria-describedby</code> for the &quot;desc&quot;, still bad support) to ensure maximum support.<br>
-SVGs serving as a link or button</p>
-<p>Several possible choices:</p>
-<pre> <code class="html">
+
+&lt;svg role="img" aria-labelledby="alt-text"&gt;
+  &lt;title id="alt-text">replacement text&lt;/title&gt;
+  ...
+&lt;/svg&gt;
+
+&lt;svg role="img" aria-label="alt-text"&gt;
+  ...
+&lt;/svg&gt;
+</code></pre>
+<p>If needed, for images whose content requires a detailed description, it is possible to use <code>aria-labelledby</code> referencing the title and desc:</p>
+<pre><code class="html" title="html">
+&lt;svg role="img" aria-labelledby="alt-text description"&gt;
+
+  &lt;title id="alt-text"&gt;short replacement text&lt;/title&gt;
+
+  &lt;desc id="description"&gt;
+    Detailed description of the information given by the image.
+  &lt;/desc&gt;
+  ...
+&lt;/svg&gt;
+</code></pre>
+<p>Note: To ensure optimal support by assistive technologies and browsers, avoid using <code>aria-describedby</code> for the description.</p>
+<p>If you use the <code>&lt;use&gt;</code> element to clone multiple versions of the SVG, remember to hide it with <code>aria-hidden</code>:</p>
+<pre><code class="html" title="html">
+&lt;svg role="img"&gt;
+  &lt;title&gt;replacement text&lt;/title&gt;
+    &lt;use href="some-id" fill="blue" x="5" y="5" aria-hidden="true" /&gt;
+  ...
+&lt;/svg&gt;
+</code></pre>
+<h2 id="svg-in-links-or-buttons" class="h2-focus">SVG in links or buttons <a class="header-anchor" href="#svg-in-links-or-buttons" id="heading-29" aria-labelledby="heading-29">#</a></h2>
+<p>If it is possible to display text nearby, the best solution is to simply hide the SVG using the <code>aria-hidden</code> attribute:</p>
+<pre><code class="html" title="html">
 &lt;button&gt;
-  &lt;svg focusable="false" aria-hidden="true"&gt; &lt;! --...-- &gt; &lt;/svg&gt;
-  Search
+  &lt;svg aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+  Visible text
+&lt;/button&gt;
+
+&lt;a href="/Rechercher"&gt;
+  &lt;svg aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+  Visible text
+&lt;/a&gt;
+</code></pre>
+<p>However, since it is not always possible to display text (due to graphic/design/marketing constraints), it is recommended to visually hide text while keeping it readable by assistive technologies using <code>aria-labelledby</code>:</p>
+<pre><code class="html" title="html">
+&lt;button aria-labelledby="label"&gt; 
+  &lt;span id="label" hidden&gt;Hidden text&lt;/span&gt;
+  &lt;svg aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+&lt;/button&gt; 
+
+&lt;a href="/Rechercher"&gt;
+  &lt;span id="label" hidden&gt;Hidden text&lt;/span&gt;
+  &lt;svg aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+&lt;/a&gt;
+</code></pre>
+<p>The <code>visually-hidden</code> class also allows text to be presented only to assistive technology users (accessible hiding). The following solution is similar to the previous one but should be systematically tested in your targeted browsing environments (browser/assistive technology pairs).</p>
+<pre><code class="html" title="html">
+&lt;button&gt;
+  &lt;svg aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+  &lt;span class="visually-hidden"&gt;Search&lt;/span&gt;
 &lt;/button&gt;
 
 &lt;a href="/Search"&gt;
-  &lt;svg focusable="false" aria-hidden="true"&gt; &lt;! --...-- &gt; &lt;/svg&gt;
-  Search
+  &lt;svg aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+  &lt;span class="visually-hidden"&gt;Search&lt;/span&gt;
 &lt;/a&gt;
-</code> </pre>
-<p>We use <code>focusable=&quot;false&quot;</code> to avoid any focus on the SVG in addition to the link <code>a</code>) by IE 10.<br>
-This is the best solution, the most robust but is not always possible to display a text (graphic / design / marketing constraint...).<br>
-So, here is an alternative that allows to visually hide the text for a button or a link while leaving it readable by assistive technologies via <code>aria-labelledby</code>:</p>
-<pre> <code class="html">
-&lt;button aria-labelledby="label"&gt;
-
-  &lt;span id="label" hidden&gt;Search&lt;/span&gt;
-
-  &lt;svg aria-hidden="true" focusable="false"&gt; &lt;!--...--&gt; &lt;/svg&gt;
-
-&lt;/button&gt;
-</code> </pre>
-<p>Finally, these two following solutions are equivalent and in any case to be tested in your targeted navigation environments (browser / assistive technologies pairs).</p>
-<pre> <code class="html">
-&lt;button&gt;
-  &lt;svg focusable="false" aria-hidden="true"&gt; &lt;! --...--&gt; &lt;/svg&gt;
-  &lt;span class="visually-hidden"&gt; Search &lt;/ span&gt;
-&lt;/ button&gt;
-
-&lt;a href="/ Search"&gt;
-  &lt;svg focusable="false" aria-hidden="true"&gt; &lt;! --...--&gt; &lt;/svg&gt;
-  &lt;span class="visually-hidden"&gt; Search &lt;/span&gt;
-&lt;/ a&gt;
-</code> </pre>
-<p>The visually-hidden class is used to hide the text except to technical help users (accessible masking).</p>
-<p>or</p>
-<pre> <code class="html">
+</code></pre>
+<p>It is also possible to use the <code>aria-label</code> attribute:</p>
+<pre><code class="html" title="html">
 &lt;button aria-label="Search"&gt;
-  &lt;svg focusable="false" aria-hidden="true"&gt; &lt;! --...--&gt; &lt;/svg&gt;
-&lt;/ button&gt;
+  &lt;svg aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+&lt;/button&gt;
 
-&lt;a href="/ Search" aria-label="Search"&gt;
-  &lt;svg focusable="false" aria-hidden="true"&gt; &lt;! --...--&gt; &lt;/svg&gt;
-&lt;/ a&gt;
-
-or, but much more risky ...
-
-&lt;button&gt;
-  &lt;svg aria-labelledby="search-icon-title" focusable="false" role=”img”&gt;
-    &lt;title id="search-icon-title"&gt;Search&lt;/title&gt;
-    &lt;! --...--&gt;
-  &lt;/svg&gt;
-&lt;/ button&gt;
-</code> </pre>
-<h2 id="last-words" class="h2-focus">Last words ... <a class="header-anchor" href="#last-words" id="heading-27" aria-labelledby="heading-27">#</a></h2>
+&lt;a href="/Search" aria-label="Search"&gt;
+  &lt;svg aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
+&lt;/a&gt;
+</code></pre>
+<h2 id="last-words" class="h2-focus">Last words ... <a class="header-anchor" href="#last-words" id="heading-30" aria-labelledby="heading-30">#</a></h2>
 <p>In short, one tip for accessible SVG would be TEST and test again!</p>
-<h2 id="ressources-articles-that-have-helped-me-a-lot" class="h2-focus">Ressources (articles that have helped me a lot) <a class="header-anchor" href="#ressources-articles-that-have-helped-me-a-lot" id="heading-28" aria-labelledby="heading-28">#</a></h2>
-<ul>
-<li><a href="https://www.deque.com/blog/creating-accessible-svgs/">https://www.deque.com/blog/creating-accessible-svgs/</a></li>
-<li><a href="https://weboverhauls.github.io/demos/svg/">https://weboverhauls.github.io/demos/svg/</a></li>
-<li><a href="https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html">https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html</a></li>
-<li><a href="https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility">https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility</a></li>
-<li><a href="https://github.com/JeremiePat/svg-accessible/blob/master/slides.md">https://github.com/JeremiePat/svg-accessible/blob/master/slides.md</a></li>
-<li><a href="https://www.sarasoueidan.com/blog/accessible-icon-buttons/">https://www.sarasoueidan.com/blog/accessible-icon-buttons/</a></li>
-</ul>
+<h2 id="webography-articles-that-have-helped-me-a-lot" class="h2-focus">Webography (articles that have helped me a lot) <a class="header-anchor" href="#webography-articles-that-have-helped-me-a-lot" id="heading-31" aria-labelledby="heading-31">#</a></h2>
+<p><a href="https://www.deque.com/blog/creating-accessible-svgs/">Creating Accessible SVGs - Deque</a><br>
+<a href="https://weboverhauls.github.io/demos/svg/">Accessible SVG test page</a><br>
+<a href="https://www.scottohara.me/blog/2019/05/22/contextual-images-svgs-and-a11y.html">Contextually Marking up accessible images and SVGs - Scott O'Hara</a><br>
+<a href="https://www.slideshare.net/webaxe/svg-icons-and-screen-reader-accessibility">SVG Icons and Screen Reader Accessibility</a><br>
+<a href="https://github.com/JeremiePat/svg-accessible/blob/master/en/slides.md">SVG Accessible ! - Github Jeremie Patonnier</a><br>
+<a href="https://www.sarasoueidan.com/blog/accessible-icon-buttons/">Accessible Icon Buttons - Sara Soueidan</a><br>
+<a href="https://www.smashingmagazine.com/2021/05/accessible-svg-patterns-comparison/">Accessible SVGs: Perfect Patterns For Screen Reader Users - Smashing Magazine</a></p>
 
           </div>
         </main>
@@ -310,13 +337,14 @@ or, but much more risky ...
             <a href="#decorative-image" class="nav-link text-muted">Decorative image</a>
             <ul><li class="nav-item position-relative">
             <a href="#svg-in-an-img-tag" class="nav-link text-muted">SVG in an img tag</a></li><li class="nav-item position-relative">
-            <a href="#svg-online-inline" class="nav-link text-muted">SVG online (inline)</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#inline-svg" class="nav-link text-muted">Inline SVG</a></li></ul></li><li class="nav-item position-relative">
             <a href="#informative-image-without-link-or-button" class="nav-link text-muted">Informative image (without link or button)</a>
             <ul><li class="nav-item position-relative">
             <a href="#svg-in-an-img-tag-2" class="nav-link text-muted">SVG in an img tag</a></li><li class="nav-item position-relative">
-            <a href="#svg-online-inline-2" class="nav-link text-muted">SVG online (inline)</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#inline-svg-2" class="nav-link text-muted">Inline SVG</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#svg-in-links-or-buttons" class="nav-link text-muted">SVG in links or buttons</a></li><li class="nav-item position-relative">
             <a href="#last-words" class="nav-link text-muted">Last words ...</a></li><li class="nav-item position-relative">
-            <a href="#ressources-articles-that-have-helped-me-a-lot" class="nav-link text-muted">Ressources (articles that have helped me a lot)</a></li>
+            <a href="#webography-articles-that-have-helped-me-a-lot" class="nav-link text-muted">Webography (articles that have helped me a lot)</a></li>
       </ul>
     </nav>
             </div>

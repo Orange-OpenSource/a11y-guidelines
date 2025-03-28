@@ -12,6 +12,14 @@
   </author>
   
   <entry>
+    <title>SVG images accessibility</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/accessible-svg/"/>
+    <updated>2021-01-01T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/accessible-svg/</id>
+    <content xml:lang="en" type="html">How to make SVG images accessible</content>
+  </entry>
+  
+  <entry>
     <title>HTML5 &amp; ARIA</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/html5-aria/"/>
     <updated>2016-09-08T00:00:00Z</updated>
@@ -321,14 +329,6 @@
     <updated>2021-02-19T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/watch-january-february-2021/</id>
     <content xml:lang="en" type="html">#a11y anthology, January-February 2021</content>
-  </entry>
-  
-  <entry>
-    <title>SVG images are used more and more on the web but what about their accessibility ?</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/accessible-svg/"/>
-    <updated>2021-01-01T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/accessible-svg/</id>
-    <content xml:lang="en" type="html">How to make SVG images accessible</content>
   </entry>
   
   <entry>
