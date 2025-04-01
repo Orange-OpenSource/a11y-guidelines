@@ -4,12 +4,20 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2025-02-10T00:00:00Z</updated>
+  <updated>2025-04-01T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>  
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Tota11yMouse</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/Tota11yMouse/"/>
+    <updated>2025-04-01T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/Tota11yMouse/</id>
+    <content xml:lang="en" type="html">The latest innovation in accessibility, straight from Orange&#39;s labs</content>
+  </entry>
   
   <entry>
     <title>SVG images accessibility</title>
