@@ -16,7 +16,7 @@ Une réflexion sur le métier d'expert a11y (https://blog.hello-bokeh.fr/2025/01
 ## L’accessibilité dans les lois, les normes et recommandations
 
 - Le "comment" de la traduction officielle des WCAG 2.2 en français : https://access42.net/publication-traduction-francais-wcag-2-2/
-- Une  brouillon du WAI "Accessibility of machine learning and generative AI" (en) : https://raw.githack.com/w3c/ai-accessibility/FPWD-ai-accessbility/index.html
+- Un brouillon du WAI "Accessibility of machine learning and generative AI" (en) : https://raw.githack.com/w3c/ai-accessibility/FPWD-ai-accessbility/index.html
 - EAA (European Accessibility Act) en détails (en) : https://tetralogical.com/blog/2025/03/19/understanding-the-eaa/
 - EAA expliqué, encore mieux (en) : https://digitalaccessibilitycentre.org/blogs/NewEAA-20241217.html
 - Les exigences issues de EAA, donc EN301549 par technologies et par déficiences (en) : https://digitalaccessibilitycentre.org/blogs/EN-301-549-Requirements.html
