@@ -10,7 +10,8 @@ tags:
 
 Hello, on the occasion of a celebration celebrating the 20th anniversary of the French 2005 law, the beginning of the implementation of digital accessibility (fr, https://www.lalutineduweb.fr/loi-accessibilite-numerique-20-ans/), even if it's not moving very quickly, happy birthday!
 We're finally moving on to the official translation of WCAG 2.2 into French, (in) https://www.w3.org/Translations/WCAG22-fr/, good news.
-With the arrival of the EAA, I thought that salaries in a11y were sure to improve, at least in Europe, and, also, cause there's a shortage of professionals. Here's a way to compare https://webaim.org/projects/salary/. A reflection on the A11y expert job (https://blog.hello-bokeh.fr/2025/01/07/accessibility-operations-reflexions-sur-le-metier/) following reading Devon Persing's The Accessibility Operations Guidebook, which echoes my concerns. It makes me want to read it...
+With the arrival of the EAA, I thought that salaries in a11y were sure to improve, at least in Europe, and, also, cause there's a shortage of professionals. Here's a way to compare https://webaim.org/projects/salary/.
+A reflection on the A11y expert job (https://blog.hello-bokeh.fr/2025/01/07/accessibility-operations-reflexions-sur-le-metier/) following reading Devon Persing's The Accessibility Operations Guidebook, which echoes my concerns. It makes me want to read it...
 
 ## Accessibility in laws, standards, and recommendations
 
@@ -20,7 +21,7 @@ With the arrival of the EAA, I thought that salaries in a11y were sure to improv
 - EAA explained, even better: https://digitalaccessibilitycentre.org/blogs/NewEAA-20241217.html
 - EAA requirements, including EN301549, by technology and by disability: https://digitalaccessibilitycentre.org/blogs/EN-301-549-Requirements.html
 - France's report for the WAD (Web Accessibility Directive): (fr) https://ec.europa.eu/newsroom/dae/redirection/document/113780, https://ec.europa.eu/newsroom/dae/redirection/document/113781
-- Call for comments on the draft Accessibility Roles and Responsibilities Mapping (ARRM): https://lists.w3.org/Archives/Public/public-wai-announce/2025JanMar/0001.html
+- Call for comments on the Accessibility Roles and Responsibilities Mapping (ARRM) draft: https://lists.w3.org/Archives/Public/public-wai-announce/2025JanMar/0001.html
 - The ARRM draft: https://www.w3.org/WAI/planning/arrm/
 
 ## Accessibility Implementation Strategy
@@ -34,7 +35,7 @@ With the arrival of the EAA, I thought that salaries in a11y were sure to improv
 ## Testing accessibility
 
 - Automatable or not for all WCAG criteria, a quick overview: https://html5accessibility.com/stuff/2025/03/27/mind-the-wcag-automation-gap/
-- A brief overview of WCAG criteria that can be automatically tested, spoiler: there aren't many: https://html5accessibility.com/stuff/2025/03/24/a-tools-errand/
+- A brief overview of WCAG criteria that can be automatically tested (spoiler: there aren't many): https://html5accessibility.com/stuff/2025/03/24/a-tools-errand/
 - Feedback from A. Roselli on "A11y will soon be fully testable by AI" at the AxeCon, not so sure aout that: https://adrianroselli.com/2025/03/be-wary-of-accessibility-guarantees-from-anyone.html
 - Eric Eggert explains why his values ​​(and ours) contradict companies selling dreams via AI: https://yatil.net/blog/values
 - A "how-to" on testing A11y, well done: https://www.a11y-collective.com/blog/how-to-check-web-accessibility/
@@ -42,19 +43,19 @@ With the arrival of the EAA, I thought that salaries in a11y were sure to improv
 - What automated testing tools do and don't: https://www.a11yproject.com/posts/automated-tools-can-ensure-full-accessibility-compliance/
 - FAQ on A11y user testing (UX search): https://makeitfable.com/article/accessibility-research-faqs/
 - User testing and A11y, it's essential: https://nicolas-steenhout.com/usability-testing-is-critical/
-- WCAG SC 2.5.2 Pointer Cancellation with a bookmarklet (fr): https://www.temesis.com/blog/pointer-cancellation-inspector-un-outil-pour-verifier-l-application-de-wcag-2-5-2-rgaa-13-11/
+- "WCAG SC 2.5.2 Pointer Cancellation" testing with a bookmarklet (fr): https://www.temesis.com/blog/pointer-cancellation-inspector-un-outil-pour-verifier-l-application-de-wcag-2-5-2-rgaa-13-11/
 - Functional tests for a progressive implementation of A11Y: https://assistivlabs.com/articles/end-to-end-testing-and-continuous-accessibility
-- A bookmarklet for testing WCAG SC 1.3.5 Identifying the input objective, very useful: https://github.com/MewenLeHo/detectAutocomplete/tree/main>
+- A bookmarklet for testing "WCAG SC 1.3.5 Identifying the input objective", very useful: https://github.com/MewenLeHo/detectAutocomplete/tree/main>
 
 ## Technical points
 
-- Cascading problem during a responsive reflow, some tips: https://adrianroselli.com/2025/02/1-4-10-adversarial-conformance.html
+- Cascading problems during a responsive reflow, some tips: https://adrianroselli.com/2025/02/1-4-10-adversarial-conformance.html
 - A quick look at skip links: https://www.tempertemper.net/blog/skip-links-what-why-and-how
 - Accessible star rating, the basics: https://netzartist.de/notes/accessible-rating-stars/
 - Popover and a11y, where are we?: https://www.scottohara.me/blog/2025/03/14/popovers.html
 - Form and A11y, some points: https://blog.pope.tech/2023/09/26/form-accessibility-and-usability-beyond-the-basics/
 - Update of the visually-hidden CSS class for accessible hiding (fr): https://www.ffoodd.fr/masquage-accessible-de-pointe/
-- Keyboard and menu navigation: https://www.tempertemper.net/blog/how-navigation-should-work-for-keyboard-users
+- Keyboard and navigation menu: https://www.tempertemper.net/blog/how-navigation-should-work-for-keyboard-users
 - Keyboard and button group navigation: https://www.tempertemper.net/blog/how-button-groups-should-work-for-keyboard-users
 - Tutorial for creating an accessible burger button for mobile web (fr): https://ideance.net/blog/3025/creer-un-bouton-menu-hamburger-accessible/
 
@@ -72,14 +73,14 @@ With the arrival of the EAA, I thought that salaries in a11y were sure to improv
 - Our friends at Temesis have given us an article on accessible development on Flutter## Assistive technologies## Assistive technologies (fr): https://www.temesis.com/blog/ameliorer-laccessibilite-de-vos-applications-flutter/
 - Mobile accessibility experts, you'll struggle (a little) less. Thank you, Luxembourg, for this welcome update: https://accessibilite.public.lu/fr/news/2025-02-20-RAAM1.1
 - Android's "Expressive Captions" feature uses artificial intelligence to add emotion to captions: https://blog.google/products/android/google-android-expressive-captions/
-- Tutorials for creating accessible apps for Apple platforms, cool: https://www.youtube.com/playlist?list=PLuw8_F_SfjQZiNRa4Gjl_mEy9OVl71d5H
+- Tutorials for creating accessible apps on Apple platforms, cool: https://www.youtube.com/playlist?list=PLuw8_F_SfjQZiNRa4Gjl_mEy9OVl71d5H
 - New Eye Tracking feature on iPhone (iOS 18) and iPad: https://www.youtube.com/watch?v=7QquF_QqsdE
 
 ## Assistive technologies
 
 - Reading of special characters by ATs: https://www.elevenways.be/en/articles/screenreaders-special-characters
 - How to use aria-describedby: https://www.a11y-collective.com/blog/aria-describedby/
-- An interesting point of view: don't use screen readers for testing: https://www.erikkroes.nl/blog/dont-test-accessibility-with-a-screen-reader/
+- An interesting point of view, don't use screen readers for testing: https://www.erikkroes.nl/blog/dont-test-accessibility-with-a-screen-reader/
 
 ## Ergonomics, UI & UX
 
@@ -105,8 +106,8 @@ With the arrival of the EAA, I thought that salaries in a11y were sure to improv
 - Many other recaps of the CSUN ATC 2025: https://www.webaxe.org/csun-2025-reviews/
 - CSUN 2025 Resource Lists: https://docs.google.com/spreadsheets/d/1OqmkBLPSfPDtRq_pMWcKcVCCWpfvwdeXHDtM7xk0ZHM/edit?gid=80757841#gid=80757841
 - Eric Eggert offers us a random, fun W3C-WAI resource per day: https://yatil.net/blog/wai-a-day
-- WCAG with a Pokemon twist, Catch 'em all!: https://a11ynews.substack.com/p/the-pokedex-of-accessibility
-- A nice list of lots of tools, open-source, paid, free, etc. Always good to know: https://pdfa.org/tools-for-accessible-pdf/
+- WCAG with a Pokemon twist, catch 'em all!: https://a11ynews.substack.com/p/the-pokedex-of-accessibility
+- A nice list of lots of PDF tools, open-source, paid, free, etc. Always good to know: https://pdfa.org/tools-for-accessible-pdf/
 
 ## Other
 
