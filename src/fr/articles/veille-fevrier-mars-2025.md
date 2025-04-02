@@ -35,7 +35,7 @@ Une réflexion sur le métier d'expert a11y (https://blog.hello-bokeh.fr/2025/01
 ## Tester l’accessibilité
 
 - Automatisable ou pas pour tous les critères WCAG, mise au point (en) : https://html5accessibility.com/stuff/2025/03/27/mind-the-wcag-automation-gap/
--	Petit tour d'horizon des critères WCAG testables automatiquement, spoiler : il n'y en a pas beaucoup (en) : https://html5accessibility.com/stuff/2025/03/24/a-tools-errand/
+- Petit tour d'horizon des critères WCAG testables automatiquement, spoiler : il n'y en a pas beaucoup (en) : https://html5accessibility.com/stuff/2025/03/24/a-tools-errand/
 - Retours d'A. Roselli sur "l'a11y sera bientôt entièrement testable par IA" à l'AxeCon, pas sûr (en) : https://adrianroselli.com/2025/03/be-wary-of-accessibility-guarantees-from-anyone.html
 - Eric Eggert nous explique pourquoi ses valeurs (et les nôtres) rentrent en contradiction avec les compagnies qui vendent du rêve via l'IA (en) : https://yatil.net/blog/values
 - Un "comment on fait ?" sur tester l'a11y, bien (en) : https://www.a11y-collective.com/blog/how-to-check-web-accessibility/
