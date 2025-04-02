@@ -9,8 +9,8 @@ tags:
 # Digital accessibility watch February-March 2025
 
 Hello, on the occasion of a celebration celebrating the 20th anniversary of the French 2005 law, the beginning of the implementation of digital accessibility (fr, https://www.lalutineduweb.fr/loi-accessibilite-numerique-20-ans/), even if it's not moving very quickly, happy birthday!
-We're finally moving on to the official translation of WCAG 2.2 into French, (in) https://www.w3.org/Translations/WCAG22-fr/, good news.
-With the arrival of the EAA, I thought that salaries in a11y were sure to improve, at least in Europe, and, also, cause there's a shortage of professionals. Here's a way to compare https://webaim.org/projects/salary/.
+We're finally moving on to the official translation of WCAG 2.2 into French, (fr) https://www.w3.org/Translations/WCAG22-fr/, good news.
+With the arrival of the EAA, I thought that salaries in a11y were sure to improve, at least in Europe, and cause a shortage of professionals. Here's a way to compare https://webaim.org/projects/salary/.
 A reflection on the A11y expert job (https://blog.hello-bokeh.fr/2025/01/07/accessibility-operations-reflexions-sur-le-metier/) following reading Devon Persing's The Accessibility Operations Guidebook, which echoes my concerns. It makes me want to read it...
 
 ## Accessibility in laws, standards, and recommendations
