@@ -61,7 +61,7 @@ Une réflexion sur le métier d'expert a11y (https://blog.hello-bokeh.fr/2025/01
 ## Retour d'expérience
 
 - Une histoire d'utilisateur aveugle du web, témoignage : https://www.iamtamara.design/fr/blog/aveugle-internet
-- Rapport sur l'a11y 2022-2024 des sites gouvernementaux du Royaume Uni, intéressant (en) : https://www.gov.uk/government/publications/accessibility-monitoring-of-public-sector-websites-and-mobile-apps-from-2022-to-2024/
+- Rapport sur l'a11y 2022-2024 des sites gouvernementaux du Royaume-Uni, intéressant (en) : https://www.gov.uk/government/publications/accessibility-monitoring-of-public-sector-websites-and-mobile-apps-from-2022-to-2024/
 - Le role=tooltip, oui mais pour du contenu pas essentiel (en) : https://www.tpgi.com/tooltips-are-presentational/ 
 
 ## Appli mobile, web mobile
