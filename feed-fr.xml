@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2025-04-01T00:00:00Z</updated>
+  <updated>2025-04-02T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>  
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Veille #A11y Février-Mars 2025</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2025/"/>
+    <updated>2025-04-02T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2025/</id>
+    <content xml:lang="fr" type="html">Florilèges de ressources en #a11y, Février-Mars 2025</content>
+  </entry>
   
   <entry>
     <title>Tota11yMouse</title>
