@@ -105,7 +105,7 @@ Une réflexion sur le métier d'expert a11y (https://blog.hello-bokeh.fr/2025/01
 - Plein d'autres récap du CSUN ATC 2025 (en) : https://www.webaxe.org/csun-2025-reviews/
 - Listes de ressources CSUN 2025 (en) : https://docs.google.com/spreadsheets/d/1OqmkBLPSfPDtRq_pMWcKcVCCWpfvwdeXHDtM7xk0ZHM/edit?gid=80757841#gid=80757841
 - Eric Eggert nous propose une ressource du W3C-WAI par jour, au hasard, sympa (en) : https://yatil.net/blog/wai-a-day
-- Les WCAG à la sauce Pokemon, attrapez-les tous ! (en) : https://a11ynews.substack.com/p/the-pokedex-of-accessibility
+- Les WCAG à la sauce Pokémon, attrapez-les tous ! (en) : https://a11ynews.substack.com/p/the-pokedex-of-accessibility
 - Une jolie liste de plein d'outils pour les PDF, open-source, payants, gratuits etc. Toujours bon à connaitre (en) : https://pdfa.org/tools-for-accessible-pdf/
 
 ## Autres
