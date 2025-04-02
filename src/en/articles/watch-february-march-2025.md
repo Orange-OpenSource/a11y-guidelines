@@ -45,7 +45,7 @@ A reflection on the A11y expert job (https://blog.hello-bokeh.fr/2025/01/07/acce
 - User testing and A11y, it's essential: https://nicolas-steenhout.com/usability-testing-is-critical/
 - "WCAG SC 2.5.2 Pointer Cancellation" testing with a bookmarklet (fr): https://www.temesis.com/blog/pointer-cancellation-inspector-un-outil-pour-verifier-l-application-de-wcag-2-5-2-rgaa-13-11/
 - Functional tests for a progressive implementation of A11Y: https://assistivlabs.com/articles/end-to-end-testing-and-continuous-accessibility
-- A bookmarklet for testing "WCAG SC 1.3.5 Identifying the input objective", very useful: https://github.com/MewenLeHo/detectAutocomplete/tree/main>
+- A bookmarklet for testing "WCAG SC 1.3.5 Identifying the input objective", very useful: https://github.com/MewenLeHo/detectAutocomplete
 
 ## Technical points
 
