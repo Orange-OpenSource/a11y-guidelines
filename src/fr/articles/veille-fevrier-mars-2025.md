@@ -45,7 +45,7 @@ Une réflexion sur le métier d'expert a11y (https://blog.hello-bokeh.fr/2025/01
 - Tests utilisateurs et a11y, c'est essentiel (en) : https://nicolas-steenhout.com/usability-testing-is-critical/
 - Tester le critère "WCAG 2.5.2 pointer cancellation" avec un bookmarklet : https://www.temesis.com/blog/pointer-cancellation-inspector-un-outil-pour-verifier-l-application-de-wcag-2-5-2-rgaa-13-11/
 - Tests fonctionnels pour une amélioration progressive de l'a11y (en) : https://assistivlabs.com/articles/end-to-end-testing-and-continuous-accessibility
-- Un bookmarklet pour tester le critère "WCAG 1.3.5: Identify Input Purpose", bien pratique : https://github.com/MewenLeHo/detectAutocomplete/tree/main
+- Un bookmarklet pour tester le critère "WCAG 1.3.5: Identify Input Purpose", bien pratique : https://github.com/MewenLeHo/detectAutocomplete
 
 ## Points techniques
 
