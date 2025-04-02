@@ -1,7 +1,7 @@
 ---
 title: "Veille #A11y Février-Mars 2025"
 abstract: "Florilèges de ressources en #a11y, Février-Mars 2025"
-date: "2025-04-05"
+date: "2025-04-02"
 tags:
   - veille
 ---
