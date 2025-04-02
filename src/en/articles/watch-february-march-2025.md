@@ -106,7 +106,7 @@ A reflection on the A11y expert job (https://blog.hello-bokeh.fr/2025/01/07/acce
 - Many other recaps of the CSUN ATC 2025: https://www.webaxe.org/csun-2025-reviews/
 - CSUN 2025 Resource Lists: https://docs.google.com/spreadsheets/d/1OqmkBLPSfPDtRq_pMWcKcVCCWpfvwdeXHDtM7xk0ZHM/edit?gid=80757841#gid=80757841
 - Eric Eggert offers us a random, fun W3C-WAI resource per day: https://yatil.net/blog/wai-a-day
-- WCAG with a Pokemon twist, catch 'em all!: https://a11ynews.substack.com/p/the-pokedex-of-accessibility
+- WCAG with a Pokémon twist, catch 'em all!: https://a11ynews.substack.com/p/the-pokedex-of-accessibility
 - A nice list of lots of PDF tools, open-source, paid, free, etc. Always good to know: https://pdfa.org/tools-for-accessible-pdf/
 
 ## Other
