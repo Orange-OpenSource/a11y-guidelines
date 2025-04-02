@@ -30,7 +30,7 @@ A reflection on the A11y expert job (https://blog.hello-bokeh.fr/2025/01/07/acce
 - An uncommon type of digital disability and how to do things well: https://www.tpgi.com/an-aura-of-accessibility/
 - Collaborative approach to A11y: https://www.linkedin.com/pulse/accessibility-blame-game-fallacy-lazy-developer-jason-day-gzhfe/
 - Clear responsibilities: https://cerovac.com/a11y/2025/03/accessibility-requires-clear-responsabilités-or-it-will-fail/
-- A11y for autism, ADHD, and dyslexia: https://intopia.digital/articles/making-digital-spaces-more-inclusive/)
+- A11y for autism, ADHD, and dyslexia: https://intopia.digital/articles/making-digital-spaces-more-inclusive/
 
 ## Testing accessibility
 
