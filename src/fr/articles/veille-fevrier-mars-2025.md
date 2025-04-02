@@ -10,7 +10,8 @@ tags:
 
 Hello, on a fêté les 20 ans de la loi de 2005, début de la mise en place d'accessibilité numérique (https://www.lalutineduweb.fr/loi-accessibilite-numerique-20-ans/), même si ça avance pas trop vite, bon anniversaire !
 On enchaine avec, enfin, la traduction officielle des WCAG 2.2 en Français, (en) https://www.w3.org/Translations/WCAG22-fr/, une bonne nouvelle.
-Avec l'arrivée de l'EAA, je pensais que les salaires en a11y allaient s'améliorer, pas sûr pourtant on manque de professionnels, voici un moyen de comparer (en) https://webaim.org/projects/salary/. Une réflexion sur le métier d'expert a11y (https://blog.hello-bokeh.fr/2025/01/07/accessibility-operations-reflexions-sur-le-metier/) suite à la lecture de "The Accessibility Operations Guidebook" de Devon Persing qui fait écho à mes préoccupations, ça donne envie de le lire...
+Avec l'arrivée de l'EAA, je pensais que les salaires en a11y allaient s'améliorer, pas sûr pourtant on manque de professionnels, voici un moyen de comparer (en) https://webaim.org/projects/salary/. 
+Une réflexion sur le métier d'expert a11y (https://blog.hello-bokeh.fr/2025/01/07/accessibility-operations-reflexions-sur-le-metier/) suite à la lecture de "The Accessibility Operations Guidebook" de Devon Persing qui fait écho à mes préoccupations, ça donne envie de le lire...
 
 ## L’accessibilité dans les lois, les normes et recommandations
 
