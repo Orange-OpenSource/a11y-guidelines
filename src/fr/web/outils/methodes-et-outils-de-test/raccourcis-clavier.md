@@ -28,6 +28,6 @@ Le bookmarklet proposé ci-dessous permet de couvrir plus de caractères imprima
 Copier et coller le code suivant dans un marque-page de votre navigateur préféré :
 
 ```
-javascript:(function(){var n=32,end=8365,key=function(){var char=String.fromCharCode(n);console.log(n+': '+char);var e=document.createEvent('Event');e.initEvent('keydown',true,false);e.key=char;e.which=n;e.keyCode=n;e.charCode=n;document.getElementsByTagName('BODY')[0].dispatchEvent(e);e=document.createEvent('Event');e.initEvent('keypress',true,false);e.key=char;e.which=n;e.keyCode=n;e.charCode=n;document.getElementsByTagName('BODY')[0].dispatchEvent(e);e=document.createEvent('Event');e.initEvent('keyup',true,false);e.
+javascript:(function(){var n=32;var end=8365;key();function key(){console.log(n+': '+String.fromCharCode(n));e=document.createEvent('Event');e.initEvent('keydown', true, false);e.key=String.fromCharCode(n);e.which = n;e.keyCode=n;e.charCode=n;document.getElementsByTagName('BODY')[0].dispatchEvent(e);e=document.createEvent('Event');e.initEvent('keypress', true, false);e.key=String.fromCharCode(n);e.which = n;e.keyCode=n;e.charCode=n;document.getElementsByTagName('BODY')[0].dispatchEvent(e);e=document.createEvent('Event');e.initEvent('keyup', true, false);e.key=String.fromCharCode(n);e.which = n;e.keyCode=n;e.charCode=n;document.getElementsByTagName('BODY')[0].dispatchEvent(e); n++; if(n<end){if(n==256) n=8364; x=window.setTimeout(key, 20);}}})();
 
 ```

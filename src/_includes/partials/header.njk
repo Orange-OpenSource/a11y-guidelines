@@ -1,13 +1,13 @@
 {% import "../components/ui.njk" as ui with context %}
 
 <header role="banner">
-  <nav class="navbar navbar-dark navbar-expand-lg bg-dark supra" aria-label="{{ 'skiplinks.label' | translate }} - {{ 'changelang.label' | translate }}">
+  <nav class="navbar navbar-expand-lg supra" aria-label="{{ 'skiplinks.label' | translate }} - {{ 'changelang.label' | translate }}" data-bs-theme="dark">
    <div class="container-lg">
       {% include "components/header/skip-links.njk" %}
       {{ ui.changelang("supra") }}
     </div>
   </nav>
-  
+
   {% include "components/header/main-navigation.njk" %}
   {% include "components/header/secondary-navigation.njk" %}
 </header>
