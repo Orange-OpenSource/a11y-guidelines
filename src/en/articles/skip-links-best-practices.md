@@ -59,7 +59,7 @@ It is generally a link pointing to an HTML element with an id attribute.
 
 ### When should skip links be put in place?
 
-The first question to ask is: on my site and more specifically on a business application/SaaS, does the user need skip links?
+The first question to ask is: does the user need skip links onmy site?
 
 The main reasons for setting up skip links:
 
@@ -73,7 +73,9 @@ The main reasons for setting up skip links:
 
 Thus, when we use an anchor link, the system focus moves with it. However, the screen reader cursor will only move to the anchored element if it is focusable. When the anchored element is not focusable, the skip link is still considered the 'active element'.
 
-To resolve this issue, we can place an anchor on the element and use a <code>tabindex=-1</code> to make it focusable via JavaScript (it will remain excluded from focusable elements when using the <kbd>Tab</kbd> key).
+To resolve this issue, we can place an anchor on the element and use a <code>tabindex="-1"</code> to make it focusable via JavaScript (it will remain excluded from focusable elements when using the <kbd>Tab</kbd> key).
+
+**Note**: skip links are also important for business applications, whose content is typically very dense and complex.
 
 ### Using a hybrid solution?
 
@@ -124,6 +126,6 @@ a.evitement:focus {
 - On a page, there can be three types of skip links (quick access links, escape links, and internal navigation links).
 - Skip links position the user in the requested area and do not just scroll the page (focus management).
 - Quick access links target the fixed elements in pages layouts (<code>footer</code>, <code>main</code>, <code>banner</code>, etc.). They are more robust.
-- Skip  links are particularly useful and used in business applications / SaaS or back-office.
+- Skip  links are particularly useful and used in business applications or back-office.
 
 For any comments, suggestions, feel free to view or create an issue on our <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">github account</a>.

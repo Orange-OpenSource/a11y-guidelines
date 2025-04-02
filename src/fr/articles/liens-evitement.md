@@ -57,7 +57,7 @@ Il s'agit généralement d'un lien pointant vers un élément HTML possédant un
 
 ### Quand doit-on mettre en place des liens d'évitement&nbsp;?
 
-La première question à se poser est, sur mon site et plus particulièrement sur une application métier / SaaS, l'utilisateur a-t-il besoin de liens d'évitement ?
+La première question à se poser est : l'utilisateur a-t-il besoin de liens d'évitement sur mon site ?
 
 Les principales raisons de la mise en place de liens d'évitement:
 - la page est longue
@@ -72,12 +72,13 @@ Ce focus peut être fait en plaçant une ancre vers le prochain <code>id</code> 
 
 Ainsi, lorsque nous utilisons un lien d'ancrage, le focus système se déplace avec lui. Cependant le curseur du lecteur d'écran se déplacera pour être défini sur l'élément ancré que s'il est focusable. Lorsque l'élément ancré n'est pas focusable, le lien de saut est toujours considéré comme «&nbsp;l'élément actif&nbsp;».
 
-Pour régler cette problématique, on peut mettre une ancre sur l'élément, et utiliser un <code>tabindex=-1</code> pour le rendre focusable via JavaScript (il restera exclu des éléments focusables via la touche <kbd>Tab</kbd>).
+Pour régler cette problématique, on peut mettre une ancre sur l'élément, et utiliser un <code>tabindex="-1"</code> pour le rendre focusable via JavaScript (il restera exclu des éléments focusables via la touche <kbd>Tab</kbd>).
 
+**Note** : les liens d'accès rapide sont également importants dans le cas des applications métiers, dont le contenu est généralement très dense et complexe.
 
 ### Utiliser une solution hybride&nbsp;?
 
-On a vu que les liens d'accès rapide peuvent être visibles ou masqués par défaut pour être affichés uniquement lors de la navigation clavier. Cette dernière option répond souvent à des problématiques esthétiques. Néanmoins, elle supprime le bénéfice que pourraient apporter ces liens aux autres utilisateurs qui n'utilisent pas le clavier (utilisateurs de loupe logicielle par exemple). Une solution, qui permettrait de concilier les avantages des deux techniques, serait de positionner un bouton discret mais affordant au click, en haut de page, permettant de déclencher à la demande l'ouverture et la fermeture du panneau des liens d'accès rapides. On pourrait également penser à une barre horizontale visible tout en haut à l'ouverture de la page et qui disparaît lors du scroll vers le bas de page.
+On a vu que les liens d'accès rapide peuvent être visibles ou masqués par défaut pour être affichés uniquement lors de la navigation clavier. Cette dernière option répond souvent à des problématiques esthétiques. Néanmoins, elle supprime le bénéfice que pourraient apporter ces liens aux autres utilisateurs qui n'utilisent pas le clavier (utilisateurs de loupe logicielle par exemple). Une solution, qui permettrait de concilier les avantages des deux techniques, serait de positionner un bouton discret mais affordant au clic, en haut de page, permettant de déclencher à la demande l'ouverture et la fermeture du panneau des liens d'accès rapides. On pourrait également penser à une barre horizontale visible tout en haut à l'ouverture de la page et qui disparaît lors du scroll vers le bas de page.
 
 Quelle que soit la solution, il faut que les liens d'évitement soient visibles (dans la mesure du possible) et utilisables par tous !
 
@@ -124,6 +125,6 @@ a.evitement:focus {
 - Sur une page, on peut avoir trois types de liens d'évitement (liens d'accès rapide, liens d'évitement et liens de navigation interne).
 - Les liens d'évitement positionnent l'utilisateur sur la zone demandée et ne se contentent pas de faire défiler la page (gestion du focus).
 - Les liens d'accès rapides ciblent plutôt les éléments fixes des gabarits de pages (<code>footer</code>, <code>main</code>, <code>banner</code>, etc.). Ils sont plus robustes.
-- Les liens d'évitement sont particulièrement utiles et utilisés dans des applications métiers / SaaS ou back-office.
+- Les liens d'évitement sont particulièrement utiles et utilisés dans des applications métiers ou back-office.
 
 Pour toutes remarques, suggestions, n'hésitez pas à consulter ou créer une issue sur notre <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">compte github</a>.
