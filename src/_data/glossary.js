@@ -1,6 +1,6 @@
 module.exports = {
   "AFFORDANCE": {
-    "fr": "Qualité ou propriété d'un objet qui définit ses usages possibles ou rend clair comment il peut être utilisé par sa seule apparence. Ce terme est utilisé en français, principalement dans les domaines du design, de l'ergonomie et de la psychologie cognitive. Il est souvent employé tel quel, sans traduction, en raison de son caractère technique et spécifique.",
+    "base": "<span lang='fr'>Qualité ou propriété d'un objet qui définit ses usages possibles ou rend clair comment il peut être utilisé par sa seule apparence. Ce terme est utilisé en français, principalement dans les domaines du design, de l'ergonomie et de la psychologie cognitive. Il est souvent employé tel quel, sans traduction, en raison de son caractère technique et spécifique.<span lang='fr'>",
     "en": "The quality or property of an object that defines its possible uses or makes clear how it can be used."
   },
   "AIDES TECHNIQUES": {
