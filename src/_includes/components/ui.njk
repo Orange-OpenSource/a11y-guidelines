@@ -235,7 +235,11 @@
   {%- for key, value in glossary -%}
     {%- if (locale == "fr" and key != "ASSISTIVE TECHNOLOGIES" and key != "LARGE TEXT") or (locale == "en" and key != "AIDES TECHNIQUES" and key != "TEXTE DE GRANDE TAILLE") -%}
       <dt id="{{ key | slugify }}" class="py-2 ps-2 text-end">{{ key }}</dt>
-      <dd class="py-2 pe-2 ps-3 mb-0">{{ value.base | safe }}{{ ", " + value[locale] | safe if value[locale] }}</dd>
+      {%- if key == "AFFORDANCE" -%}
+        <dd class="py-2 pe-2 ps-3 mb-0">{{ value[locale] | safe if value[locale] }}</dd>
+      {%- else -%}
+        <dd class="py-2 pe-2 ps-3 mb-0">{{ value.base | safe }}{{ ", " + value[locale] | safe if value[locale] }}</dd>
+      {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
 </dl>
