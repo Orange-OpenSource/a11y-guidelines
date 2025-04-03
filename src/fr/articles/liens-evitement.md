@@ -22,7 +22,7 @@ On peut distinguer trois types de liens&nbsp;:
 
 Ces liens d'évitement permettent donc à l'utilisateur d'éviter des parties de pages afin de faciliter la navigation, d'accéder au contenu souhaité plus aisément et se focaliser sur le contenu important, que l'on navigue au clavier, que l'on ait du mal à se repérer dans une page longue ou que scroller soit difficile.
 
-Les liens d'évitement sont les premiers liens dans la page et cela est logique car ils permettent aux utilisateurs de naviguer plus simplement. Pourtant, ils peuvent ne pas être les premiers éléments focusables, quand, par exemple, on propose à l'utilisateur un bandeau de gestion des cookies. En effet, l'utilisateur doit réaliser une action sur le bandeau de cookies avant de naviguer sur le site, et cela, quelle que soit la position du bandeau dans la page.
+Les liens d'évitement sont souvent les premiers liens présents dans la page car ils permettent aux utilisateurs de naviguer plus simplement. Pourtant, ils peuvent ne pas être les premiers éléments focusables, quand, par exemple, on propose à l'utilisateur un bandeau de gestion des cookies. En effet, l'utilisateur doit réaliser une action sur le bandeau de cookies avant de naviguer sur le site, et cela, quelle que soit la position du bandeau dans la page.
 
 ### Pour qui&nbsp;?
 
@@ -78,7 +78,7 @@ Pour régler cette problématique, on peut mettre une ancre sur l'élément, et 
 
 ### Utiliser une solution hybride&nbsp;?
 
-On a vu que les liens d'accès rapide peuvent être visibles ou masqués par défaut pour être affichés uniquement lors de la navigation clavier. Cette dernière option répond souvent à des problématiques esthétiques. Néanmoins, elle supprime le bénéfice que pourraient apporter ces liens aux autres utilisateurs qui n'utilisent pas le clavier (utilisateurs de loupe logicielle par exemple). Une solution, qui permettrait de concilier les avantages des deux techniques, serait de positionner un bouton discret mais affordant au clic, en haut de page, permettant de déclencher à la demande l'ouverture et la fermeture du panneau des liens d'accès rapides. On pourrait également penser à une barre horizontale visible tout en haut à l'ouverture de la page et qui disparaît lors du scroll vers le bas de page.
+On a vu que les liens d'accès rapide peuvent être visibles ou masqués par défaut pour être affichés uniquement lors de la navigation clavier. Cette dernière option répond souvent à des problématiques esthétiques. Néanmoins, elle supprime le bénéfice que pourraient apporter ces liens aux autres utilisateurs qui n'utilisent pas le clavier (utilisateurs de loupe logicielle par exemple). Une solution, qui permettrait de concilier les avantages des deux techniques, serait de positionner un bouton discret mais <a href="/fr/glossaire/#:~:text=Glossaire-,AFFORDANCE,-Qualit%C3%A9%20ou%20propri%C3%A9t%C3%A9">affordant</a> au clic, en haut de page, permettant de déclencher à la demande l'ouverture et la fermeture du panneau des liens d'accès rapides. On pourrait également penser à une barre horizontale visible tout en haut à l'ouverture de la page et qui disparaît lors du scroll vers le bas de page.
 
 Quelle que soit la solution, il faut que les liens d'évitement soient visibles (dans la mesure du possible) et utilisables par tous !
 

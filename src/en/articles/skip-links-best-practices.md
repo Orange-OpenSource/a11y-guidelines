@@ -59,7 +59,7 @@ It is generally a link pointing to an HTML element with an id attribute.
 
 ### When should skip links be put in place?
 
-The first question to ask is: does the user need skip links onmy site?
+The first question to ask is: does the user need skip links on my site?
 
 The main reasons for setting up skip links:
 
@@ -79,7 +79,7 @@ To resolve this issue, we can place an anchor on the element and use a <code>tab
 
 ### Using a hybrid solution?
 
-We have seen that the quick access links can be visible or hidden by default and can be displayed according to keyboard navigation. This last option often answers aesthetic problems. Nevertheless, it removes the benefit that these links could bring to other users who do not use the keyboard (users of software magnifiers for example). One solution, which would reconcile the advantages of the two techniques, would be to position a discrete but affording button at the top of the page, to trigger on demand the opening and closing of the quick access links panel. We could also think of a horizontal bar visible at the top of the page opening and disappearing when scrolling down the page.
+We have seen that the quick access links can be visible or hidden by default and can be displayed according to keyboard navigation. This last option often answers aesthetic problems. Nevertheless, it removes the benefit that these links could bring to other users who do not use the keyboard (users of software magnifiers for example). One solution, which would reconcile the advantages of the two techniques, would be to position a discrete but <a href="/en/glossary/#:~:text=Glossary-,AFFORDANCE,-The%20quality%20or">affording</a> button at the top of the page, to trigger on demand the opening and closing of the quick access links panel. We could also think of a horizontal bar visible at the top of the page opening and disappearing when scrolling down the page.
 
 Whatever the solution, the skip links must be visible (as far as possible) and usable by everyone!
 
