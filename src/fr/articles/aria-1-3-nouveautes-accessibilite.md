@@ -99,17 +99,16 @@ Description : ce rôle est utilisé signaler programmatiquement les zones de com
 Exemple d'utilisation :
 
 ```html
-<div role="comment" aria-labelledby="comment-1-header">
-  <header id="comment-1-header">
-    <h4>John Doe</h4>
-    <time datetime="2024-01-29">
-      January 29, 2024
-    </time>
-  </header>
-  <p>
-    Great article! It really helped me understand the importance of accessibility.
-  </p>
-</div>
+<article>
+  <h1>Mon article de blog</h1>
+  <div class="comments-section">
+    <div role="comment" aria-labelledby="user1">
+      <h3 id="user1">Marie</h3>
+      <time datetime="2024-01-20">20/01/2024</time>
+      <p>Super article, merci !</p>
+    </div>
+  </div>
+</article>
 ```
 
 Impact utilisateur : les utilisateurs bénéficieront d'instructions claires qui les aident à interagir avec les éléments de manière plus efficace.

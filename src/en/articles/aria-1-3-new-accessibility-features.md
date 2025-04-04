@@ -99,17 +99,16 @@ Description: this role is used to programmatically indicate comment areas.
 Example usage:
 
 ```html
-<div role="comment" aria-labelledby="comment-1-header">
-  <header id="comment-1-header">
-    <h4>John Doe</h4>
-    <time datetime="2024-01-29">
-      January 29, 2024
-    </time>
-  </header>
-  <p>
-    Great article! It really helped me understand the importance of accessibility.
-  </p>
-</div>
+<article>
+  <h1>My Blog Post</h1>
+  <div class="comments-section">
+    <div role="comment" aria-labelledby="user1">
+      <h3 id="user1">Mary</h3>
+      <time datetime="2024-01-20">01/20/2024</time>
+      <p>Great article, thanks!</p>
+    </div>
+  </div>
+</article>
 ```
 
 User impact: users will benefit from clear instructions that help them interact with elements more effectively.
