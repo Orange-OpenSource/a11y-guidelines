@@ -140,7 +140,7 @@ L'utilisation des nouveaux rôles <code>suggestion</code> et <code>comment</code
 La version 1.3 de la norme <abbr>ARIA</abbr> introduit des attributs et rôles essentiels qui améliorent l'accessibilité des applications web. En intégrant ces nouveautés, les développeurs peuvent créer des expériences plus inclusives pour tous les utilisateurs, en particulier ceux qui dépendent de technologies d'assistance. N'hésitez pas à explorer ces nouveautés et à les appliquer dans vos projets pour garantir une meilleure accessibilité numérique.
 
 ## Webographie
-<ul>
+<ul lang="en">
   <li><a href="https://w3c.github.io/aria/" hreflang="en">WAI-ARIA 1.3 draft (en)</a></li>
   <li><a href="https://www.craigabbott.co.uk/blog/a-look-at-the-new-wai-aria-1-3-draft/" hreflang="en">A look at the new WAI-ARIA 1.3 draft (en)</a></li>
 </ul>
