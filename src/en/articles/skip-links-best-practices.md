@@ -3,7 +3,7 @@ title: "Skip links best practices"
 abstract: "Skip links, what is it and how to implement them"
 titleBeforeTag: true
 date: "2019-06-19"
-updateDate: "2025-05-09"
+updateDate: "2025-04-11"
 tags:
   - web
   - beginner

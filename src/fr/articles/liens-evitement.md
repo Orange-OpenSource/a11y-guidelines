@@ -3,7 +3,7 @@ title: "Les bonnes pratiques pour les liens d'évitement"
 abstract: "Les liens d'évitement, qu'est-ce et comment bien les mettre en œuvre"
 titleBeforeTag: true
 date: "2023-06-22"
-updateDate: "2025-05-09"
+updateDate: "2025-04-11"
 tags:
   - web
   - beginner
