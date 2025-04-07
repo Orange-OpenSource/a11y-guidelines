@@ -25,7 +25,7 @@ We offer training, publish resources for digital stakeholders, support projects 
     <a href="assistive-technologies/" class="btn btn-outline-secondary btn-sm">Assistive technologies</a>
   </li>
    <li class="list-inline-item pb-2">
-    <a href="persona/" class="btn btn-outline-secondary btn-sm">Some personae</a>
+    <a href="persona/" class="btn btn-outline-secondary btn-sm">Some personas</a>
   </li>
   <li class="list-inline-item pb-2">
     <a href="glossary/" class="btn btn-outline-secondary btn-sm">Glossary</a>
