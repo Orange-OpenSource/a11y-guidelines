@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#what-is-a-skip-link" class="dropdown-item text-wrap">What is a skip link?</a><a href="#what-is-it" class="dropdown-item text-wrap">What is it?</a><a href="#for-whom" class="dropdown-item text-wrap">For whom?</a><a href="#use" class="dropdown-item text-wrap">Use</a><a href="#what-are-the-best-practices" class="dropdown-item text-wrap">What are the best practices?</a><a href="#when-should-skip-links-be-put-in-place" class="dropdown-item text-wrap">When should skip links be put in place?</a><a href="#using-a-hybrid-solution" class="dropdown-item text-wrap">Using a hybrid solution?</a><a href="#exemples" class="dropdown-item text-wrap">Exemples</a><a href="#examples-of-specific-usage" class="dropdown-item text-wrap">Examples of specific usage</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#what-is-a-skip-link" class="dropdown-item text-wrap">What is a skip link?</a><a href="#what-is-it" class="dropdown-item text-wrap">What is it?</a><a href="#for-whom" class="dropdown-item text-wrap">For whom?</a><a href="#use" class="dropdown-item text-wrap">Use</a><a href="#what-are-the-best-practices" class="dropdown-item text-wrap">What are the best practices?</a><a href="#when-should-skip-links-be-put-in-place" class="dropdown-item text-wrap">When should skip links be put in place?</a><a href="#using-a-hybrid-solution" class="dropdown-item text-wrap">Using a hybrid solution?</a><a href="#exemples" class="dropdown-item text-wrap">Exemples</a><a href="#examples-of-specific-usage" class="dropdown-item text-wrap">Examples of specific usage</a><a href="#key-points" class="dropdown-item text-wrap">Key points</a></div>
     </nav>
         
       </div>
@@ -186,8 +186,8 @@
             
               <p class="text-muted mb-0">
                 <span class="visually-hidden">Publication date</span>
-                <time datetime="2025-02-28T00:00:00.000Z">
-                  February 28, 2025
+                <time datetime="2025-04-11T00:00:00.000Z">
+                  April 11, 2025
                 </time>
               </p>
               <p class="text-muted mb-0" >
@@ -199,8 +199,8 @@
             
           
           <div class="mt-4">
-          <h2 id="what-is-a-skip-link" class="h2-focus">What is a skip link? <a class="header-anchor" href="#what-is-a-skip-link" id="heading-146" aria-labelledby="heading-146">#</a></h2>
-<h3 id="what-is-it">What is it? <a class="header-anchor" href="#what-is-it" id="heading-147" aria-labelledby="heading-147">#</a></h3>
+          <h2 id="what-is-a-skip-link" class="h2-focus">What is a skip link? <a class="header-anchor" href="#what-is-a-skip-link" id="heading-129" aria-labelledby="heading-129">#</a></h2>
+<h3 id="what-is-it">What is it? <a class="header-anchor" href="#what-is-it" id="heading-130" aria-labelledby="heading-130">#</a></h3>
 <p>Skip links are shortcuts that allow you to directly access a content area or avoid some areas of the page, so you can navigate faster.</p>
 <p>We can distinguish 3 types of skip links:</p>
 <ol>
@@ -209,7 +209,8 @@
 <li><strong>In-page navigation links:</strong> &quot;Back to top&quot;, for example</li>
 </ol>
 <p>These skip links allow the user to avoid parts of pages, if we navigate with the keyboard, or if it is difficult to locate content in a large page or even if scrolling thought the page is difficult.</p>
-<h3 id="for-whom">For whom? <a class="header-anchor" href="#for-whom" id="heading-148" aria-labelledby="heading-148">#</a></h3>
+<p>Skip links are the first links on the page, and this makes sense as they allow users to navigate more easily. However, they may not be the first focusable elements when, for example, a cookie management banner is presented to the user. Indeed, the user must take action on the cookie banner before navigating the site, regardless of the position of the banner on the page.</p>
+<h3 id="for-whom">For whom? <a class="header-anchor" href="#for-whom" id="heading-131" aria-labelledby="heading-131">#</a></h3>
 <p>Skip links are valuable for many users:</p>
 <ul>
 <li>Screen reader users or people unable to use the mouse, so they only navigate with the keyboard</li>
@@ -217,7 +218,7 @@
 <li>the visually impaired, who use or not a screen magnifier, and have trouble having a global representation of the topology of the page</li>
 </ul>
 <p>We will therefore, thanks to skip links, limit the use of keyboard navigation keys and more generally decrease the gestures to be done when navigating between pages.</p>
-<h2 id="use" class="h2-focus">Use <a class="header-anchor" href="#use" id="heading-149" aria-labelledby="heading-149">#</a></h2>
+<h2 id="use" class="h2-focus">Use <a class="header-anchor" href="#use" id="heading-132" aria-labelledby="heading-132">#</a></h2>
 <p>It is generally a link pointing to an HTML element with an id attribute.</p>
 <pre><code class="language-html">&lt;body&gt;
   &lt;a class=&quot;skip&quot; href=&quot;#content&quot;&gt;Go to content&lt;/a&gt;
@@ -228,15 +229,15 @@
   […]
 &lt;/body&gt;
 </code></pre>
-<h2 id="what-are-the-best-practices" class="h2-focus">What are the best practices? <a class="header-anchor" href="#what-are-the-best-practices" id="heading-150" aria-labelledby="heading-150">#</a></h2>
+<h2 id="what-are-the-best-practices" class="h2-focus">What are the best practices? <a class="header-anchor" href="#what-are-the-best-practices" id="heading-133" aria-labelledby="heading-133">#</a></h2>
 <ul>
 <li>It is possible to embed a skip link as an image (such as an 'arrow' with a <code>title</code> attribute) that appears after scrolling the page. The skip link returns directly to the top of the page. This avoidance link should not hinder the reading or understanding of the information; it should be the last keyboard-focusable element.</li>
-<li>The skip link must be reachable by keyboard navigation and independent of the navigation direction.(<kbd>TAB</kbd> ou <kbd>Shift</kbd> + <kbd>TAB</kbd>).</li>
+<li>The skip link must be reachable by keyboard navigation and independent of the navigation direction.(<kbd>Tab</kbd> ou <kbd>Shift</kbd> + <kbd>Tab</kbd>).</li>
 <li>Placing a skip link on an <code>id</code> works, but targeting the skip link on elements like <code>aside</code>, <code>footer</code>, or <code>main</code> makes it less sensitive to potential changes (such as an <code>id</code> change, or simply not being included in the code of a new page, for instance).</li>
 <li>Skip or quick access links should be visually located in the same place on the page and in the same relative order in the source code across all pages of the site.</li>
 </ul>
-<h3 id="when-should-skip-links-be-put-in-place">When should skip links be put in place? <a class="header-anchor" href="#when-should-skip-links-be-put-in-place" id="heading-151" aria-labelledby="heading-151">#</a></h3>
-<p>The first question to ask is: on my site, does the user need skip links?</p>
+<h3 id="when-should-skip-links-be-put-in-place">When should skip links be put in place? <a class="header-anchor" href="#when-should-skip-links-be-put-in-place" id="heading-134" aria-labelledby="heading-134">#</a></h3>
+<p>The first question to ask is: does the user need skip links on my site?</p>
 <p>The main reasons for setting up skip links:</p>
 <ul>
 <li>the page is long</li>
@@ -245,13 +246,14 @@
 <li>the page is divided into many different parts (portal, dashboard, etc.)</li>
 <li>there is no other way to navigate within the page (section title, HTML5 semantic structure…)</li>
 </ul>
-<p><strong>Note</strong>: keep in mind that for a skip link to be functional, it should not merely scroll the page to the indicated location (such as the main content). It must allow the user to 'skip' a part of the page. If a user activates a 'Go to content' link using the keyboard, on the next <kbd>TAB</kbd>, the focus should move to the main content and not to the next avoidance link. This focus can be achieved by placing an anchor to the next <code>id</code> to target, for example.&quot;</p>
+<p><strong>Note</strong>: keep in mind that for a skip link to be functional, it should not merely scroll the page to the indicated location (such as the main content). It must allow the user to 'skip' a part of the page. If a user activates a 'Go to content' link using the keyboard, on the next <kbd>Tab</kbd>, the focus should move to the main content and not to the next avoidance link. This focus can be achieved by placing an anchor to the next <code>id</code> to target, for example.&quot;</p>
 <p>Thus, when we use an anchor link, the system focus moves with it. However, the screen reader cursor will only move to the anchored element if it is focusable. When the anchored element is not focusable, the skip link is still considered the 'active element'.</p>
-<p>To resolve this issue, we can place an anchor on the element and use a <code>tabindex=-1</code> to make it focusable via JavaScript (it will remain excluded from focusable elements when using the <kbd>tab</kbd> key).</p>
-<h3 id="using-a-hybrid-solution">Using a hybrid solution? <a class="header-anchor" href="#using-a-hybrid-solution" id="heading-152" aria-labelledby="heading-152">#</a></h3>
-<p>We have seen that the quick access links can be visible or hidden by default and can be displayed according to keyboard navigation. This last option often answers aesthetic problems. Nevertheless, it removes the benefit that these links could bring to other users who do not use the keyboard (users of software magnifiers for example). One solution, which would reconcile the advantages of the two techniques, would be to position a discrete but affording button at the top of the page, to trigger on demand the opening and closing of the quick access links panel. We could also think of a horizontal bar visible at the top of the page opening and disappearing when scrolling down the page.</p>
+<p>To resolve this issue, we can place an anchor on the element and use a <code>tabindex=&quot;-1&quot;</code> to make it focusable via JavaScript (it will remain excluded from focusable elements when using the <kbd>Tab</kbd> key).</p>
+<p><strong>Note</strong>: skip links are also important for business applications, whose content is typically very dense and complex.</p>
+<h3 id="using-a-hybrid-solution">Using a hybrid solution? <a class="header-anchor" href="#using-a-hybrid-solution" id="heading-135" aria-labelledby="heading-135">#</a></h3>
+<p>We have seen that the quick access links can be visible or hidden by default and can be displayed according to keyboard navigation. This last option often answers aesthetic problems. Nevertheless, it removes the benefit that these links could bring to other users who do not use the keyboard (users of software magnifiers for example). One solution, which would reconcile the advantages of the two techniques, would be to position a discrete but <a href="/en/glossary/#:~:text=Glossary-,AFFORDANCE,-The%20quality%20or" target="_blank" title="Affording : See the definition in the glossary (new window)">affording<span class="visually-hidden"> (new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"></path></svg></a> button at the top of the page, to trigger on demand the opening and closing of the quick access links panel. We could also think of a horizontal bar visible at the top of the page opening and disappearing when scrolling down the page.</p>
 <p>Whatever the solution, the skip links must be visible (as far as possible) and usable by everyone!</p>
-<h2 id="exemples" class="h2-focus">Exemples <a class="header-anchor" href="#exemples" id="heading-153" aria-labelledby="heading-153">#</a></h2>
+<h2 id="exemples" class="h2-focus">Exemples <a class="header-anchor" href="#exemples" id="heading-136" aria-labelledby="heading-136">#</a></h2>
 <p> Exemple 1:</p>
 <pre><code class="language-html">&lt;ul id=&quot;skip&quot;&gt;
    &lt;li&gt;
@@ -270,7 +272,7 @@
    &lt;a href=&quot;#navigation&quot;&gt;Go to navigation&lt;/a&gt;
 &lt;/p&gt;
 </code></pre>
-<h2 id="examples-of-specific-usage" class="h2-focus">Examples of specific usage <a class="header-anchor" href="#examples-of-specific-usage" id="heading-154" aria-labelledby="heading-154">#</a></h2>
+<h2 id="examples-of-specific-usage" class="h2-focus">Examples of specific usage <a class="header-anchor" href="#examples-of-specific-usage" id="heading-137" aria-labelledby="heading-137">#</a></h2>
 <p>If skip links are not made visible on the screen by default (for design reasons, for example), it is important that they remain interpretable by assistive tools.<br>
 The solution is to use an accessible hiding CSS class. Frameworks like <strong>Bootstrap</strong> and <strong>Boosted</strong> directly include this type of class (<code lang="en">visually-hidden</code>  and <code lang="en">visually-hidden-focusable</code>). Thus, even if it is not visible on the screen, an element with the class <code lang="en">visually-hidden</code> will be correctly vocalized by a screen reader.</p>
 <pre><code class="language-css">a.evitement {
@@ -281,6 +283,13 @@ a.evitement:focus {
    position: static;
 }
 </code></pre>
+<h2 id="key-points" class="h2-focus">Key points <a class="header-anchor" href="#key-points" id="heading-138" aria-labelledby="heading-138">#</a></h2>
+<ul>
+<li>On a page, there can be three types of skip links (quick access links, escape links, and internal navigation links).</li>
+<li>Skip links position the user in the requested area and do not just scroll the page (focus management).</li>
+<li>Quick access links target the fixed elements in pages layouts (<code>footer</code>, <code>main</code>, <code>banner</code>, etc.). They are more robust.</li>
+<li>Skip  links are particularly useful and used in business applications or back-office.</li>
+</ul>
 <p>For any comments, suggestions, feel free to view or create an issue on our <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">github account</a>.</p>
 
           </div>
@@ -301,7 +310,8 @@ a.evitement:focus {
             <a href="#when-should-skip-links-be-put-in-place" class="nav-link text-muted">When should skip links be put in place?</a></li><li class="nav-item position-relative">
             <a href="#using-a-hybrid-solution" class="nav-link text-muted">Using a hybrid solution?</a></li></ul></li><li class="nav-item position-relative">
             <a href="#exemples" class="nav-link text-muted">Exemples</a></li><li class="nav-item position-relative">
-            <a href="#examples-of-specific-usage" class="nav-link text-muted">Examples of specific usage</a></li>
+            <a href="#examples-of-specific-usage" class="nav-link text-muted">Examples of specific usage</a></li><li class="nav-item position-relative">
+            <a href="#key-points" class="nav-link text-muted">Key points</a></li>
       </ul>
     </nav>
             </div>

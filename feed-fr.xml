@@ -12,6 +12,14 @@
   </author>
   
   <entry>
+    <title>Les bonnes pratiques pour les liens d&#39;évitement</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/liens-evitement/"/>
+    <updated>2023-06-22T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/liens-evitement/</id>
+    <content xml:lang="fr" type="html">Les liens d&#39;évitement, qu&#39;est-ce et comment bien les mettre en œuvre</content>
+  </entry>
+  
+  <entry>
     <title>Veille #A11y Février-Mars 2025</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/veille-fevrier-mars-2025/"/>
     <updated>2025-04-02T00:00:00Z</updated>
@@ -41,14 +49,6 @@
     <updated>2016-09-16T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/html5-et-aria/</id>
     <content xml:lang="fr" type="html">Introduction HTML 5 et ARIA</content>
-  </entry>
-  
-  <entry>
-    <title>Les bonnes pratiques pour les liens d&#39;évitement</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/liens-evitement/"/>
-    <updated>2023-06-22T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/liens-evitement/</id>
-    <content xml:lang="fr" type="html">Les liens d&#39;évitement, qu&#39;est-ce et comment bien les mettre en œuvre</content>
   </entry>
   
   <entry>
