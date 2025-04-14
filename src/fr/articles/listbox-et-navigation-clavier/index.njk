@@ -7,23 +7,21 @@ tags:
   - component
 css:
   - style.css
-js:
-  - wgxpath.install.js
+js: 
   - script.js
 ---
 
 <h2>Introduction</h2>
-<p>Pour cet article, nous repartons de <a href="../listbox-avec-cases-a-cocher/">l’exemple sur les <i lang="en">listbox</i> avec cases à cocher</a>. L’objectif est d’améliorer la navigation au clavier afin de se rapprocher des spécifications <i lang="en">design patterns</i> du <abbr>W3C</abbr>/<abbr>WAI</abbr>.</p>
+<p>Pour cet article, nous repartons de <a href="../listbox-avec-cases-a-cocher/">l’exemple sur les <i lang="en">listbox</i> ou zone de liste avec cases à cocher</a>. L’objectif est d’améliorer la navigation au clavier afin de se rapprocher des spécifications <i lang="en">design patterns</i> ou modèle de conception du <abbr>W3C</abbr>/<abbr>WAI</abbr>.</p>
 
 <h2>Les patterns <abbr>ARIA</abbr></h2>
-<p>Le <abbr>W3C</abbr> maintient en ligne des spécifications qui décrivent comment doivent se comporter les composants <abbr>ARIA</abbr>&nbsp;: <a href="https://www.w3.org/WAI/ARIA/apg/patterns/" hreflang="en" lang="en"><abbr>WAI</abbr>-<abbr>ARIA</abbr> Authoring Practices 1.1</a>.</p>
-<p>La <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/" hreflang="en">spécification concernant les <i lang="en">listbox</i></a> nous apprend que&nbsp;:</p>
+<p>Le <abbr>W3C</abbr> maintient en ligne des spécifications qui décrivent comment doivent se comporter les composants <abbr>ARIA</abbr>&nbsp;: <a href="https://www.w3.org/WAI/ARIA/apg/patterns/" hreflang="en" lang="en"><abbr>WAI</abbr>-<abbr>ARIA</abbr> Authoring Practices Guide</a>.</p>
+<p>La <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction" hreflang="en">spécification concernant les <i lang="en">listbox</i></a> nous apprend, par exemple, que&nbsp;:</p>
 <ul>
     <li>La liste doit être focusable (tabindex="0").</li>
     <li>Les flèches haut/bas doivent pouvoir servir à choisir l’élément sélectionné.</li>
     <li>On doit pouvoir sélectionner un élément en tapant rapidement ses premiers caractères (ex.&nbsp;: si on appuie sur les touches <kbd>p</kbd> et <kbd>h</kbd>, la sélection doit se déplacer sur "<strong>Ph</strong>otos").</li>
-    <li>Les touches <kbd>Shift + F10</kbd> doivent permettre d’ouvrir le menu contextuel de l’élément focusé si un menu contextuel est disponible.</li>
-    <li>Dans le cas d’une liste à sélection multiple, le raccourci <kbd>Ctrl+a</kbd> doit permettre de sélectionner tous les éléments.</li>
+    <li>Dans le cas d’une liste à sélection multiple, le raccourci <kbd>Ctrl</kbd> + <kbd>a</kbd> doit permettre de sélectionner tous les éléments.</li>
     <li>Les touches <kbd>Début</kbd> et <kbd>Fin</kbd> doivent permettre de sélectionner les éléments depuis le début ou la fin de la liste.</li>
 </ul>
 
@@ -201,5 +199,3 @@ default:  // Search item starts with
 
 <p>Pour rechercher l’élément dans la liste, nous utilisons la requête <code>XPath</code> suivante&nbsp;: <code>/li/span[starts-with(text(), "la chaine à rechercher")]</code>.
 De plus, pour s’affranchir de la casse des caractères, nous utilisons la fonction <code>translate</code>.</p>
-
-<p>Enfin pour la compatibilité avec Internet Explorer, nous utilisons le <a href="https://github.com/google/wicked-good-xpath">polyfill Xpath de Google</a> qu’il suffit d’inclure dans la page et de charger à l’aide de la ligne de code <code>wgxpath.install();</code> au chargement de la page.</p>
