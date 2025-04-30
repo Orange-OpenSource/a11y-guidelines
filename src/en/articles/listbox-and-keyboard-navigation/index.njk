@@ -3,12 +3,12 @@ title: "Listbox and keyboard navigation"
 abstract: "Example of ARIA list (part 3)"
 titleBeforeTag: true
 date: "2018-01-09"
+updateDate: "2025-04-30"
 tags:
   - component
 css:
   - style.css
 js:
-  - wgxpath.install.js
   - script.js
 ---
 
@@ -19,7 +19,7 @@ js:
 
 <h2><abbr title="Accessible Rich Internet Applications">ARIA</abbr> patterns</h2>
 <p>The W3C maintains online specifications that describe how <abbr>ARIA</abbr> components should behave: <a href="https://www.w3.org/WAI/ARIA/apg/patterns/"><abbr>WAI-ARIA</abbr> Authoring Practices 1.1</a>.</p>
-<p>The <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/">specifications for the listbox</a> tell us that:</p>
+<p>The <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/keyboardinteraction">specifications for the listbox</a> tell us for example that:</p>
 <ul>
     <li>The list must be focusable (<code>tabindex="0"</code>).</li>
     <li>The <kbd>up</kbd> / <kbd>down</kbd> arrows must be used to choose the selected item.</li>
@@ -68,7 +68,7 @@ js:
               <span><i lang="fr">Jazz à Vienne</i> #36 has started!</span></label>
             </div>
       </li>
-      <li tabindex="-1" role="option" aria-checked="false">
+      <li tabindex="-1" role="option" aria-checked="false">l
             <div class="form-check mb-0">
               <input tabindex="-1" id="check7" class="form-check-input" type="checkbox"><label for="check7">
               <span>Wine order</span></label>
@@ -204,4 +204,4 @@ default:  // Search item starts with
 
 <p>To search the item in the list, we use the following <abbr>XPath</abbr> query <code>/li/span[starts-with(text(), "the string to search")]</code>. In addition, in order to fix the character case issue, we use the <code>translate</code> function.</p>
 
-<p>Finally, for compatibility issues with Internet Explorer, we use the <a href="https://github.com/google/wicked-good-xpath">Google <abbr>XPath</abbr> polyfill</a>, you just need to include it and install it at page load using: <code>wgxpath.install();</code>.</p>
+<
