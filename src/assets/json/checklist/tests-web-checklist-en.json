@@ -112,7 +112,7 @@
 	"IDorigin": "testWebID-38"
 }, {
 	"themes": "Layout",
-	"title": "Use relative sizes and responsive design",
+	"title": "Use relative sizes",
 	"type": ["Manual test"],
 	"tests": ["With Firefox, from the 'View' menu, select 'Zoom' and then 'Zoom Text Only' and set the zoom level to 200%."],
 	"verifier": ["There is no truncated or hidden content and no unusable features."],
