@@ -12,6 +12,30 @@
   </author>
   
   <entry>
+    <title>Listbox and keyboard navigation</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/listbox-and-keyboard-navigation/"/>
+    <updated>2018-01-09T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/listbox-and-keyboard-navigation/</id>
+    <content xml:lang="en" type="html">Example of ARIA list (part 3)</content>
+  </entry>
+  
+  <entry>
+    <title>Listbox with checkboxes</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/listbox-with-checkboxes/"/>
+    <updated>2018-01-08T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/listbox-with-checkboxes/</id>
+    <content xml:lang="en" type="html">Example of ARIA list (part 2).</content>
+  </entry>
+  
+  <entry>
+    <title>Listbox</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/listbox/"/>
+    <updated>2018-01-07T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/listbox/</id>
+    <content xml:lang="en" type="html">Example of ARIA list (part 1).</content>
+  </entry>
+  
+  <entry>
     <title>Skip links best practices</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/skip-links-best-practices/"/>
     <updated>2019-06-19T00:00:00Z</updated>
@@ -465,30 +489,6 @@
     <updated>2018-01-11T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/zoom/</id>
     <content xml:lang="en" type="html">Text size enlargement is used by many users (elderly people, people with visual impairments and people that should wear glasses and don’t…)</content>
-  </entry>
-  
-  <entry>
-    <title>Listbox and keyboard navigation</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/listbox-and-keyboard-navigation/"/>
-    <updated>2018-01-09T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/listbox-and-keyboard-navigation/</id>
-    <content xml:lang="en" type="html">Example of ARIA list (part 3)</content>
-  </entry>
-  
-  <entry>
-    <title>Listbox with checkboxes</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/listbox-with-checkboxes/"/>
-    <updated>2018-01-08T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/listbox-with-checkboxes/</id>
-    <content xml:lang="en" type="html">Example of ARIA list (part 2).</content>
-  </entry>
-  
-  <entry>
-    <title>Listbox</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/listbox/"/>
-    <updated>2018-01-07T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/listbox/</id>
-    <content xml:lang="en" type="html">Example of ARIA list (part 1).</content>
   </entry>
   
   <entry>

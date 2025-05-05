@@ -183,7 +183,18 @@
               </ul>
             
             
-              <time class="text-muted" datetime="2018-01-07T00:00:00.000Z">January 07, 2018</time>
+              <p class="text-muted mb-0">
+                <span class="visually-hidden">Publication date</span>
+                <time datetime="2025-05-05T00:00:00.000Z">
+                  May 05, 2025
+                </time>
+              </p>
+              <p class="text-muted mb-0" >
+                Update of the article from
+                <time datetime="2018-01-07T00:00:00.000Z">
+                  January 07, 2018
+                </time>
+              </p>
             
           
           <div class="mt-4">
@@ -196,7 +207,7 @@ The items of a listbox are static, a listbox is not intended to receive interact
 <p>More info: <a href="https://w3c.github.io/aria-practices/#Listbox"><abbr>WAI-ARIA</abbr> Authoring Practices</a>.</p>
 
 <h2>Caution</h2>
-<p>Although improvements are being made with each new version, support for <abbr>ARIA</abbr> is still partial for all screen readers. Its use should be conditioned by compatibility tests on the target environments (browser/screen reader combinations).</p>
+<p>Although improvements have been made, support for <abbr>ARIA</abbr> is still partial for all screen readers. Its use should be conditioned by compatibility tests on the target environments (browser/screen reader combinations).</p>
 
 <h2>Implementation</h2>
 
@@ -212,10 +223,10 @@ The items of a listbox are static, a listbox is not intended to receive interact
 &lt;/ul&gt;
 </code></pre>
 
-<p>Note that the <code>ul</code> and <code>li</code> tags could be replaced by simple <code>div</code> tags.</p>
+<p>Note that the <code>ul</code> and <code>li</code> tags could be replaced by simple <code>div</code> tags, their semantics are overloaded by the <abbr>ARIA</abbr> roles.</p>
 
 <h3>Interactions</h3>
-<p>To stick with the pattern of the <abbr>ARIA</abbr> listbox (<a href="https://w3c.github.io/aria-practices/#Listbox"><abbr>WAI-ARIA</abbr> Authoring Practices</a>), we must handle some interactions using JavaScript.</p>
+<p>To stick with the pattern of the <abbr>ARIA</abbr> listbox (<a href="https://w3c.github.io/aria-practices/#Listbox"><abbr>WAI-ARIA</abbr> Authoring Practices - listbox</a>), we must handle some interactions using JavaScript.</p>
 
 <p>Keyboard interaction:</p>
 <ul>
@@ -231,8 +242,9 @@ The items of a listbox are static, a listbox is not intended to receive interact
 <h2>Links</h2>
 More information on <abbr>ARIA</abbr> and listbox:
 <ul>
-  <li><a href="https://w3c.github.io/aria-practices/#Listbox"><abbr>WAI-ARIA</abbr> Authoring Practices 1.2</a></li>
-  <li><a href="https://www.w3.org/TR/wai-aria-1.1/#roles">The listbox role model</a></li>
+  <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/"><abbr>WAI</abbr>-<abbr>ARIA</abbr> Authoring Practices Guide: listbox</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"><abbr>MDN</abbr> Using listbox role</a></li>
+  <li><a href="https://www.w3.org/TR/wai-aria-1.2/#listbox"><abbr>WAI</abbr>-<abbr>ARIA</abbr> The roles model: listbox</a></li>
 </ul>
 
           </div>

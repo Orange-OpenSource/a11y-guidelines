@@ -12,6 +12,30 @@
   </author>
   
   <entry>
+    <title>Les listbox et la navigation au clavier</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/listbox-et-navigation-clavier/"/>
+    <updated>2018-01-09T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/listbox-et-navigation-clavier/</id>
+    <content xml:lang="fr" type="html">Exemple de liste ARIA, gestion de la navigation clavier.</content>
+  </entry>
+  
+  <entry>
+    <title>Les listbox avec cases à cocher</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/listbox-avec-cases-a-cocher/"/>
+    <updated>2018-01-08T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/listbox-avec-cases-a-cocher/</id>
+    <content xml:lang="fr" type="html">Exemple de liste ARIA (partie 2), intégration de cases à cocher.</content>
+  </entry>
+  
+  <entry>
+    <title>Les listbox</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/listbox/"/>
+    <updated>2018-01-07T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/listbox/</id>
+    <content xml:lang="fr" type="html">Exemple de liste ARIA.</content>
+  </entry>
+  
+  <entry>
     <title>Les bonnes pratiques pour les liens d&#39;évitement</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/liens-evitement/"/>
     <updated>2023-06-22T00:00:00Z</updated>
@@ -516,35 +540,11 @@
   </entry>
   
   <entry>
-    <title>Les listbox et la navigation au clavier</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/listbox-et-navigation-clavier/"/>
-    <updated>2018-01-09T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/listbox-et-navigation-clavier/</id>
-    <content xml:lang="fr" type="html">Exemple de liste ARIA, gestion de la navigation clavier.</content>
-  </entry>
-  
-  <entry>
-    <title>Les listbox avec cases à cocher</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/listbox-avec-cases-a-cocher/"/>
-    <updated>2018-01-08T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/listbox-avec-cases-a-cocher/</id>
-    <content xml:lang="fr" type="html">Exemple de liste ARIA (partie 2), intégration de cases à cocher.</content>
-  </entry>
-  
-  <entry>
     <title>Les attributs ARIA qui peuvent vous sauver !</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/attributs-aria-qui-peuvent-vous-sauver/"/>
     <updated>2018-01-08T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/attributs-aria-qui-peuvent-vous-sauver/</id>
     <content xml:lang="fr" type="html">Quelques attributs ARIA à connaître pour avoir un nom accessible</content>
-  </entry>
-  
-  <entry>
-    <title>Les listbox</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/listbox/"/>
-    <updated>2018-01-07T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/listbox/</id>
-    <content xml:lang="fr" type="html">Exemple de liste ARIA.</content>
   </entry>
   
   <entry>
