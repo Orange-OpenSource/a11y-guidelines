@@ -112,7 +112,7 @@
 	"IDorigin": "testWebID-38"
 }, {
 	"themes": "Mise en page",
-	"title": "Utiliser des tailles relatives et faire du web adaptatif (responsive)",
+	"title": "Utiliser des tailles relatives",
 	"type": ["Test manuel"],
 	"tests": ["Avec Firefox, à partir du menu \"Affichage\", sélectionner \"Zoom\" puis \"Agrandir uniquement le texte\" et activer un niveau de zoom à 200%."],
 	"verifier": ["Il n'y a ni contenus tronqués ou masqués ni fonctionnalités inutilisables."], 
