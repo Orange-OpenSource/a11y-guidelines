@@ -22,7 +22,7 @@
   <link href="{{ permalink | absoluteUrl(metadata.feedUrl) }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
   <updated>{{ collections.articles_fr | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-  <id>{{ metadata.url }}</id>  
+  <id>{{ metadata.url }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
     <email>{{ metadata.author.email }}</email>
@@ -32,7 +32,7 @@
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <updated>{{ (post.data.updateDate or post.date) | jsDate | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content xml:lang="{{ metadata.language }}" type="html">{{ post.data.abstract | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>

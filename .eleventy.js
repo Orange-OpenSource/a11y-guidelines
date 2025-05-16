@@ -81,6 +81,13 @@ module.exports = function (eleventyConfig) {
         return dateObject.toISOString();
     });
 
+    // Convert a value to a native JavaScript Date object.
+    // Useful when working with date filters like `dateToRfc3339` that require a proper Date instance.
+    // Ensures compatibility even if the original value is a string or other non-Date type.
+    eleventyConfig.addFilter("jsDate", function (value) {
+        return new Date(value);
+    });
+
     /**
      * @see https://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference#answer-6394168
      */
