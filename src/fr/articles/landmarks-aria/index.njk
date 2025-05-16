@@ -1,8 +1,9 @@
 ---
-title: "Régions (landmarks) ARIA"
+title: "Structurer une page avec les régions (landmarks) ARIA"
 abstract: "Mise en place de régions ARIA (landmarks)."
 titleBeforeTag: true
 date: "2018-01-15"
+updateDate: "2025-05-09"
 tags:
   - component
 css:
@@ -10,128 +11,224 @@ css:
 ---
 
 <h2>Préambule</h2>
-<p>Dans cet exemple, nous allons voir comment améliorer la navigation dans la page en ajoutant de la sémantique au contenu permettant de repérer plus facilement les grandes régions de la page.</p>
+
+<p class="mb-0">Dans cet article, nous allons voir comment <b>améliorer la navigation dans une page web</b> en structurant son contenu de manière programmatique grâce à l'utilisation d'éléments sémantiques <abbr>HTML</abbr>.</p>
+<p>Cette structure va permettre aux utilisateurs qui naviguent à l'aide d'une <b>assistance technique</b> (exemple : lecteur d'écran) ou uniquement au <b>clavier</b> de pouvoir se faire, via leurs outils d'assistance, une représentation du contenu de la page sans avoir besoin de la parcourir. Cela représente donc un gain notable de temps et d'énergie.</p>
+<p class="mb-0">L'utilisation de ces éléments sémantiques constitue une <b>bonne pratique</b>, qu'il est fortement conseillé d'appliquer dans toutes les pages web compte-tenu de la facilité de sa mise en oeuvre et du confort de navigation qu'elle procure. </p>
+<p>À noter : Cette bonne pratique n'est pas une obligation édictée par les WCAG. Elle peut cependant le devenir dans le cadre plus large du <a href="https://www.w3.org/Translations/NOTE-UNDERSTANDING-WCAG20-fr/navigation-mechanisms-skip.html#:~:text=Avantages%20sp%C3%A9cifiques%20du%20crit%C3%A8re%20de%20succ%C3%A8s%202.4.1%20%3A&text=Les%20personnes%20qui%20n%27utilisent,la%20zone%20principale%20du%20contenu.">critère 2.4.1 "Contourner des blocs"</a>. </p>
+
 <h2>Théorie</h2>
-<p> <abbr>HTML5</abbr> introduit de nouvelles balises, notamment des balises sémantiques (<code>main</code>, <code>aside</code>, <code>footer</code> et <code>header</code>, ...).</p>
-<p>Ces balises doivent être utilisées seules sans les rôles <abbr>ARIA</abbr> correspondants car leur support est bon dans la grande majorité des navigateurs et des aides techniques.</p>
-
-Pour une page en <abbr>HTML5</abbr>&nbsp;:
-
-<pre><code class="html">
-&lt;head&gt;
-  …
-  &lt;title&gt;Titre de la page&lt;/title&gt;
-  …
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;header&gt;
-    &lt;h1&gt;…&lt;/h1&gt;
-    &lt;nav&gt;…navigation…&lt;/nav&gt;
-    &lt;p&gt;en tête de page&nbsp;: logo, baseline…&lt;/p&gt;
-    …
-  &lt;/header&gt;
-  &lt;main&gt;
-     &lt;nav aria-label="Fil d’Ariane"&gt;[…]&lt;/nav&gt;
-     &lt;section&gt;
-       &lt;header&gt;
-         &lt;h1&gt;Actualités&lt;/h1&gt;
-         &lt;p&gt; 21 juin 2018 - Fête de la musique&lt;/p&gt;
-       &lt;/header&gt;
-       &lt;p&gt;contenu de la section&lt;/p&gt;
-       &lt;footer&gt;
-         &lt;p&gt;contenu du pied de section&nbsp;: copyright…&lt;/p&gt;
-         …
-       &lt;/footer&gt;
-    &lt;/section&gt;
-    &lt;article&gt;
-    […]
-    &lt;/article&gt;
-
-    […]
-
-  &lt;/main&gt;
-  &lt;aside&gt;
-    &lt;p&gt;contenu annexe en relation avec le contenu principal&lt;/p&gt;
-    […]
-  &lt;/aside&gt;
-  &lt;footer&gt;
-    &lt;p&gt;contenu du pied de page&nbsp;: copyright…&lt;/p&gt;
-    […]
-  &lt;/footer&gt;
-&lt;/body&gt;
-</code></pre>
-
-Pour une page qui n’est pas en <abbr>HTML5</abbr>, ajouter les <i lang="en">landmarks</i> <abbr>ARIA</abbr>&nbsp;:
-
-<pre><code class="html">
-&lt;head&gt;
-  …
-&lt;title&gt;Titre de la page&lt;/title&gt;
-  …
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div role="banner"&gt;
-    &lt;h1&gt;…&lt;/h1&gt;
-    &lt;div role="navigation"&gt;…navigation…&lt;/div&gt;
-    &lt;p&gt;en tête de page&nbsp;: logo, baseline…&lt;/p&gt;
-    …
-  &lt;/div&gt;
-&lt;div role="main"&gt;
-&lt;div role="navigation" aria-label="Fil d’Ariane"&gt;[…]&lt;/nav&gt;
-  &lt;div role="region"&gt;
-    &lt;div role="header"&gt;
-      &lt;h1&gt;Actualités&lt;/h1&gt;
-      &lt;p&gt; 21 juin 2018 - Fête de la musique&lt;/p&gt;
-    &lt;/header&gt;
-    &lt;p&gt;contenu de la région&lt;/p&gt;
-    &lt;div role="contentinfo"&gt;
-      &lt;p&gt;contenu du pied de région&nbsp;: copyright…&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div role="article"&gt;
-  […]
-  &lt;/div&gt;
-
-[…]
-
-&lt;/div&gt;
-&lt;div role="complementary"&gt;
-  &lt;p&gt;contenu annexe en relation avec le contenu principal&lt;/p&gt;
-    […]
-  &lt;/div&gt;
-&lt;div role="contentinfo"&gt;
-  &lt;p&gt;contenu du pied de page&nbsp;: copyright…&lt;/p&gt;
-    […]
-&lt;/div&gt;
-&lt;/body&gt;
-</code></pre>
-
-
-<h3>Usages</h3>
+<p>Pour ajouter de la sémantique <abbr>HTML</abbr> au contenu d'une page, 2 possibilités :</p>
 <ul>
-  <li>Il ne peut y avoir qu’une seule balise <code>main</code> ou donc un seul <code>role=main</code> par page afin d’identifier le contenu principal d’une page.</li>
-  <li>La balise <code>section</code> ou <code>role=region</code> permet de thématiquement regrouper du contenu, par exemple, des chapitres d'un livre, les grandes parties d'une page d'accueil...</li>
-  <li>La balise <code>article</code> ou <code>role=article</code> est une portion autonome de la page, en général, réutilisable, par exemple, un article de blog, d'un journal, un commentaire d'un blog...</li>
-  <li>Le <code>role=navigation</code> ou la balise <code>nav</code> permet d’identifier les principales navigations internes au site. Les bonnes pratiques demandent que l’on utilise 3 balises ou rôles <code>nav</code>ou navigation maximum par page.</li>
-  <li>La balise <code>footer</code> ou le <code>role=contentinfo</code> permettent d’identifier le pied de page. Il doit être unique dans la page, sauf lorsqu'il est présent dans des balises <code>section</code>, <code>role=region</code> ou <code>article</code>, <code>role=article</code>.</li>
-  <li>La balise <code>header</code> ou <code>role=header</code> identifie l’en-tête de la page. Lui aussi doit être unique, sauf lorsqu'il est présent dans des balises <code>section</code>, <code>role=region</code> ou <code>article</code>, <code>role=article</code>.</li>
-  <li>Pour identifier le formulaire de recherche dans le site, on utilisera seul le <code>role=search</code> <abbr>ARIA</abbr>.</li>
-  <li>Si besoin, le contenu annexe au contenu principal de la page (information complémentaire, publicité…) doit être identifié en utilisant la balise <code>aside</code> ou le <code>role=complementary</code>.</li>
+  <li>
+    <p>Pour une page <em>en <abbr>HTML5</abbr></em> (recommandé) : utiliser les <em>balises sémantiques</em> (<code>main</code>, <code>header</code>, <code>footer</code>, <code>aside</code>, etc.) qui y ont été introduites.
+    Ces balises doivent être utilisées seules, sans les rôles <abbr>ARIA</abbr> correspondants, car leur support est bon dans la grande majorité des navigateurs et des aides techniques.</p>
 
+    <pre class="mb-0"><code class="html">
+    &lt;head&gt;
+      […]
+      &lt;title&gt;Titre de la page&lt;/title&gt;
+      […]
+    &lt;/head&gt;
+
+    &lt;body&gt;
+      &lt;header&gt;
+        &lt;img&gt;logo&lt;/img&gt;
+        &lt;h1&gt;Nom de l'application&lt;/h1&gt;
+        &lt;nav&gt;…navigation…&lt;/nav&gt;
+        […]
+      &lt;/header&gt;
+
+      &lt;main&gt;
+        &lt;nav aria-label="Fil d’Ariane"&gt;[…]&lt;/nav&gt;
+        &lt;section&gt;
+          &lt;h1&gt;Actualités&lt;/h1&gt;
+          &lt;p&gt; 21 juin 2018 - Fête de la musique&lt;/p&gt;
+          &lt;p&gt;…contenu de la section…&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;article&gt;
+          […]
+        &lt;/article&gt;
+        […]
+      &lt;/main&gt;
+
+      &lt;aside&gt;
+        &lt;p&gt;…contenu annexe en relation avec le contenu principal…&lt;/p&gt;
+        […]
+      &lt;/aside&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;…contenu du pied de page&nbsp;: copyright…&lt;/p&gt;
+        […]
+      &lt;/footer&gt;
+    &lt;/body&gt;
+    </code></pre>
+    <br>
+  </li>
+
+  <li>
+    <p>Pour une page qui n'est <em>pas en <abbr>HTML5</abbr></em> : ajouter des <em>régions (<span lang="en">landmarks</span>) <abbr>ARIA</abbr></em>.</p>
+
+    <pre><code class="html">
+    &lt;head&gt;
+      […]
+      &lt;title&gt;Titre de la page&lt;/title&gt;
+      […]
+    &lt;/head&gt;
+
+    &lt;body&gt;
+      &lt;div role="banner"&gt;
+        &lt;img&gt;logo&lt;/img&gt;
+        &lt;h1&gt;Nom de l'application&lt;/h1&gt;
+        &lt;div role="navigation"&gt;…navigation…&lt;/div&gt;
+        […]
+      &lt;/div&gt;
+
+      &lt;div role="main"&gt;
+        &lt;div role="navigation" aria-label="Fil d’Ariane"&gt;[…]&lt;/nav&gt;
+        &lt;div role="region"&gt;
+          &lt;h1&gt;Actualités&lt;/h1&gt;
+          &lt;p&gt; 21 juin 2018 - Fête de la musique&lt;/p&gt;
+          &lt;p&gt;…contenu de la région…&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div role="article"&gt;
+          […]
+        &lt;/div&gt;
+        […]
+      &lt;/div&gt;
+
+      &lt;div role="complementary"&gt;
+        &lt;p&gt;…contenu annexe en relation avec le contenu principal…&lt;/p&gt;
+        […]
+      &lt;/div&gt;
+
+      &lt;div role="contentinfo"&gt;
+        &lt;p&gt;…contenu du pied de page&nbsp;: copyright…&lt;/p&gt;
+        […]
+      &lt;/div&gt;
+    &lt;/body&gt;
+    </code></pre>
+  </li>
 </ul>
-<h3>Bonnes pratiques</h3>
-<p>Toutes ces landmarks/régions peuvent s'appuyer sur les attributs <abbr>ARIA</abbr> que sont <code>aria-label</code>, <code>aria-labelledby</code>` et <code>aria-describedby</code> afin de leur fournir un nom accessible plus spécifique. </p>
-<p>Notamment quand plusieurs landmarks de même types sont présents dans la page, il peut être pertinent de leur donner une description via ces attributs <abbr>ARIA</abbr>.</p>
-<p>Exemple d'une page à trois régions de navigation :<br/>
-<pre><code class="html">
-  &lt;nav aria-label="Menu principal"&gt;[…]&lt;/nav&gt;
-  &lt;nav aria-label="Menu secondaire"&gt;[…]&lt;/nav&gt;
-  &lt;nav aria-label="Fil d’Ariane"&gt;[…]&lt;/nav&gt;
-</code></pre>
-</p>
-<p>Plus de détails sur <a href="../../articles/attributs-aria-qui-peuvent-vous-sauver/">"Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver"</a>.</p>
 
-<p>Autre bonne pratique, il faut que tout le contenu soit inclus dans les <i lang="en">Landmarks</i>/balises <abbr>HTML</abbr>5 de structure. Ceci permet aux utilisateurs de ne pas oublier du contenu qu'ils n'auraient pas trouvé.</p>
-  <h3><i lang="en">Landmarks</i>, utilisateurs et aides techniques</h3>
-  <p>Les balises <abbr>HTML5</abbr> définissant les grandes régions de la page ont un support suffisant avec les aides techniques (lecteurs d’écran, loupes logicielles…). On doit donc les utiliser pour structurer sa page sans leur adjoindre des rôles <i lang="en">Landmarks</i>.</p>
-  <p>Mettre en place ces <i lang="en">landmarks</i> <abbr>ARIA</abbr> est une bonne pratique, car elle peut améliorer la navigation de certains utilisateurs sans impacter celle des autres, c’est un plus indéniable&nbsp;!</p>
+<h3 class="mt-4 mb-0" id="equivalence">Correspondance entre les balises <abbr>HTML5</abbr> et les régions (<span lang="en">landmarks</span>) <abbr>ARIA</abbr></h3>
+  <table class="table mt-2 mb-4">
+      <caption class="visually-hidden" aria-labelledby="equivalence"></caption>
+      <thead>
+        <tr>
+          <th class="table-column1-width">Balises <abbr>HTML5</abbr></th>
+          <th>Régions <abbr>ARIA</abbr></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>header</code></td>
+          <td><code>role="banner"</code> seulement dans certains cas (voir <a href="#usages">Usages</a> ci-dessous)</td>
+        </tr>
+        <tr>
+          <td><code>nav</code></td>
+          <td><code>role="navigation"</code></td>
+        </tr>
+        <tr>
+          <td><code>search - pas de balise HTML5</code></td>
+          <td><code>role="search"</code></td>
+        </tr>
+          <td><code>main</code></td>
+          <td><code>role="main"</code></td>
+        </tr>
+          <tr>
+          <td><code>form</code></td>
+          <td><code>role="form"</code></td>
+        </tr>
+        <tr>
+          <td><code>section</code></td>
+          <td><code>role="region"</code></td>
+        </tr>
+        <tr>
+          <td><code>aside</code></td>
+          <td><code>role="complementary"</code></td>
+        </tr>
+        <tr>
+          <td><code>footer</code></td>
+          <td><code>role="contentinfo"</code> seulement dans certains cas (voir <a href="#usages">Usages</a> ci-dessous)</td>
+        </tr>
+      </tbody>
+  </table>
+
+<h3 id="usages" class="mt-4">Usages</h3>
+  <h4 id="header">header</h4>
+  <p class="mb-0">La balise <code>header</code> (ou l'attribut de région <abbr>ARIA</abbr> <code>role="header"</code>) permet d'identifier l’en-tête de la page. Cela est vrai uniquement si cet élément est placé dans une balise <code>body</code>,
+      soit comme enfant direct, soit dans une balise HTML autre que <code>article</code>, <code>aside</code>, <code>main</code>, <code>nav</code> et <code>section</code>.</p>
+  <p>De manière générale et pour simplifier, il est conseillé d'utiliser la balise <code>header</code> (ou l'attribut de région <abbr>ARIA</abbr> <code>role="header"</code>) une seule fois par page.</p>
+
+  <h4 id="nav">nav</h4>
+  <p class="mb-0">La balise <code>nav</code> (ou l'attribut attribut de région <abbr>ARIA</abbr> <code>role="navigation"</code>) permet d’identifier les principaux éléments de navigation internes au site. 
+  <p class="mb-0">Il est conseillé d'utiliser au maximum 3 balises <code>nav</code> (ou <code>role="navigation"</code>) dans une même page.</p>
+  <p>Chaque <code>nav</code> doit avoir un nom accessible (voir <a href="#bonnes_pratiques">Bonnes pratiques</a>).</nav></p>
+ 
+  <h4 id="search">role="search"</h4>
+  <p>L'attribut de région <abbr>ARIA</abbr> <code>role="search"</code> (pas de balise <abbr>HTML</abbr> équivalente) est à utiliser pour identifier un formulaire de recherche dans le site ou pour filtrer du contenu présent dans la page.</p>
+ 
+  <h4 id="main">main</h4>
+  <p class="mb-0">La balise <code>main</code> (ou l'attribut de région <abbr>ARIA</abbr> <code>role="main"</code>) permet d'identifier le contenu principal de la page.</p>
+  <p class="mb-0">Cet élément, dont la présence est obligatoire dans chaque page HTML, n'est à utiliser qu'une seule fois par page et uniquement comme enfant des balises HTML <code>body</code>, <code>html</code>, <code>div</code> et <code>form</code>. </p>
+  <p class="mb-0">Note : si une page HTML contient un <code>iframe</code>, celui-ci peut également contenir une balise <code>main</code> (ou un attribut <code>role="main"</code>) car c'est une page autonome</code>.</li></p>
+  <p>Pour plus détails, voir <a href="https://adrianroselli.com/2025/04/mainlining-mains.html" lang="en" hreflang="en">Mainlining Mains</a>.</p>
+
+  <h4 id="form">form</h4>
+  <p class="mb-0">La balise <code>form</code> (ou l'attribut de région <abbr>ARIA</abbr> <code>role="form"</code>) est à utiliser pour identifier un formulaire. Ces enfants seront des balises d'éléments de formulaires comme les balises <code>input</code>, <code>select</code>, <code>textarea</code> ou <code>button</code>.</p>
+  <p>Il peut y avoir plusieurs balises <code>form</code> (ou attributs <code>role="form"</code>) dans une même page. Dans ce cas, y ajouter un nom accessible unique (voir <a href="#bonnes_pratiques">Bonnes pratiques</a>).</p>
+  
+  <h4 id="section">section</h4>
+  <p class="mb-0">La balise <code>section</code> (ou l'attribut de région <abbr>ARIA</abbr> <code>role="region"</code>) permet de regrouper du contenu (ex : chapitres d'un livre, grandes parties d'une page d'accueil, ...) thématiquement.</p>
+  <p>Plusieurs balises <code>section</code> (ou attributs <code>role="region"</code>) peuvent être présents dans la page. Un nom accessible unique est requis pour chaque occurence (voir <a href="#bonnes_pratiques">Bonnes pratiques</a>).</p>
+  
+  <h4 id="aside">aside</h4>
+  <p class="mb-0">La balise <code>aside</code> (ou l'attribut de région <abbr>ARIA</abbr> <code>role="complementary"</code>) est à utiliser pour identifier du contenu annexe au contenu principal de la page (information complémentaire, publicité…).</p>
+  <p class="mb-0">Cet élément est à placer comme enfant direct de la base <code>body</code>.</p>
+  <p> Il peut y avoir plusieurs balises <code>aside</code> (ou attributs <code>role="complementary"</code>) dans une même page. Dans ce cas, y ajouter systématiquement un nom accessible unique (voir <a href="#bonnes_pratiques">Bonnes pratiques</a>).</p>
+
+  <h4 id="footer">footer</h4>
+  <p class="mb-0">La balise <code>footer</code> (ou l'attribut de région <abbr>ARIA</abbr> <code>role="contentinfo"</code>) permet d’identifier le pied de page. Cela est vrai uniquement si cet élément est placé dans une balise <code>body</code>,
+      soit comme enfant direct, soit dans une balise HTML autre que <code>article</code>, <code>aside</code>, <code>main</code>, <code>nav</code> et <code>section</code>.</p>
+  <p class="mb-0">De manière générale et pour simplifier, il est conseillé d'utiliser la balise <code>footer</code> (ou l'attribut de région <abbr>ARIA</abbr> <code>role="contentinfo"</code>) une seule fois par page.</p>
+  <p class="mb-0">Note : si une page HTML contient un <code>iframe</code>, celui-ci peut également contenir une balise <code>main</code> (ou un attribut <code>role="main"</code>) car c'est une page autonome</code>.</li></p>
+
+
+<h3 class="mt-4" id="bonnes_pratiques">Bonnes pratiques</h3>
+<ul>
+  <li>
+    <p class="mb-1">Quand plusieurs régions (span lang="en">landmarks</span>) de même type sont présentes dans la page, il peut être pertinent de donner à chacune un nom accessible différent pour permettre aux utilisateurs d'assistance technique de les différencier. Un nom accessible s'ajoute, selon le cas, dans : </p>
+    <ul>
+      <li>un attribut <code>aria-label</code>, si la région n'a pas de titre d'entête (exemple : texte dans une balise <code>h1</code> à <code>h6</code>)</li>
+      <li>un attribut <code>aria-labellededby</code> qui pointe sur le titre d'entête dont on veut utiliser le contenu comme nom accessible, si la région a un titre d'entête.</li>
+      <li>un attribut <code>aria-describedby</code> qui pointe sur le titre d'entête dont on veut utiliser le contenu comme complément au nom accessible, si la région a un titre d'entête et un nom accessible donné par un attribut <code>aria-label</code>.</li>
+    </ul>
+ 
+    <p class="mt-3">Exemple d'une page avec 3 régions de navigation :</p>
+    <pre><code class="html">
+    &lt;nav aria-label="Menu principal"&gt;[…]&lt;/nav&gt;
+    &lt;nav aria-label="Menu secondaire"&gt;[…]&lt;/nav&gt;
+    &lt;nav aria-label="Fil d’Ariane"&gt;[…]&lt;/nav&gt;
+    </code></pre>
+    <p class="mt-0">Plus de détails sur <a href="../../articles/attributs-aria-qui-peuvent-vous-sauver/">"Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver"</a>.</p>
+  </li>
+
+  <li>
+    <p>Tout le contenu de la page doit être inclus dans les balises <abbr>HTML5</abbr> ou attributs de région (<span lang="en">landmarks</span>) <abbr>ARIA</abbr> de structure. Ceci permet aux utilisateurs d'avoir accès de tout le contenu, même celui qu'ils n'auraient pas trouvé.</p>
+  </li>
+
+  <li><p> Exception : Les boites de dialogue modales n'ont pas besoin dêtre imbriquées dans une balise de région.</p></li>
+</ul>
+  
+
+<h3 id="landmarks_users_tech_aids">Régions <abbr>ARIA</abbr> (<span lang="en">landmarks</span>), utilisateurs et aides techniques</h3>
+<p>Les balises <abbr>HTML5</abbr> qui définissent les grandes régions de la page ont un support suffisant avec les aides techniques (lecteurs d’écran, loupes logicielles…). On doit donc les utiliser pour structurer sa page sans leur adjoindre le rôle de région <abbr>ARIA</abbr> (<span lang="en">landmark</span>) correspondant.</p>
+<p>Mettre en place ces régions <abbr>ARIA</abbr> (<span lang="en">landmarks</span>) est une bonne pratique, car elle peut améliorer la navigation de certains utilisateurs sans impacter celle des autres, c’est un plus indéniable&nbsp;!</p>
+
+
+<h3 id="resources" class="mt-4">Ressources</h3>
+<ul lang="en">
+  <li><a href="https://www.w3.org/WAI/ARIA/apg/practices/landmark-regions/" hreflang="en">Landmark Regions specification</a></li>
+  <li><a href="https://blog.logrocket.com/html-landmarks-understanding-applying/" hreflang="en">Understanding HTML landmarks and how to apply them</a></li>
+</ul>
