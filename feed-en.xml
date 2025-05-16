@@ -12,6 +12,14 @@
   </author>
   
   <entry>
+    <title>Creating accessible tags 1/2</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/tags/"/>
+    <updated>2018-01-05T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/tags/</id>
+    <content xml:lang="en" type="html">Sample code to make accessible tags (part 1).</content>
+  </entry>
+  
+  <entry>
     <title>Listbox and keyboard navigation</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/listbox-and-keyboard-navigation/"/>
     <updated>2018-01-09T00:00:00Z</updated>
@@ -497,14 +505,6 @@
     <updated>2018-01-06T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/tags/2/</id>
     <content xml:lang="en" type="html">Sample code to make accessible tags (part 2) examples.</content>
-  </entry>
-  
-  <entry>
-    <title>Creating accessible “tags” 1/2</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/tags/"/>
-    <updated>2018-01-05T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/tags/</id>
-    <content xml:lang="en" type="html">Sample code to make accessible tags (part 1).</content>
   </entry>
   
   <entry>

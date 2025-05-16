@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
-    <title>Creating accessible “tags” 1/2 - Orange digital accessibility guidelines</title>
+    <title>Creating accessible tags 1/2 - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
@@ -150,7 +150,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
-          Creating accessible “tags” 1/2
+          Creating accessible tags 1/2
         </li>
       </ol>
 </nav>
@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Preamble</a><a href="#" class="dropdown-item text-wrap">Final design</a><a href="#" class="dropdown-item text-wrap">HTML structure</a><a href="#" class="dropdown-item text-wrap">Example 1</a><a href="#" class="dropdown-item text-wrap">Removing a tag</a><a href="#" class="dropdown-item text-wrap">Example 2</a><a href="#" class="dropdown-item text-wrap">Let’s decorate</a><a href="#" class="dropdown-item text-wrap">Example 3</a><a href="#" class="dropdown-item text-wrap">Example 4</a><a href="#" class="dropdown-item text-wrap">Optimisation</a><a href="#" class="dropdown-item text-wrap">Example 5</a><a href="#" class="dropdown-item text-wrap">Example 6</a><a href="#" class="dropdown-item text-wrap">Example 7</a><a href="#" class="dropdown-item text-wrap">Optimisation (again)</a><a href="#" class="dropdown-item text-wrap">Example 8</a><a href="#" class="dropdown-item text-wrap">Example 9</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Preamble</a><a href="#" class="dropdown-item text-wrap">Final design</a><a href="#" class="dropdown-item text-wrap">HTML structure</a><a href="#" class="dropdown-item text-wrap">Step 1</a><a href="#" class="dropdown-item text-wrap">Removing a tag</a><a href="#" class="dropdown-item text-wrap">Step 2</a><a href="#" class="dropdown-item text-wrap">Let&#39;s decorate</a><a href="#" class="dropdown-item text-wrap">Step 3</a><a href="#" class="dropdown-item text-wrap">Step 4</a><a href="#" class="dropdown-item text-wrap">Optimisation</a><a href="#" class="dropdown-item text-wrap">Step 5</a><a href="#" class="dropdown-item text-wrap">Step 6</a><a href="#" class="dropdown-item text-wrap">Step 7</a><a href="#" class="dropdown-item text-wrap">Optimisation (again)</a><a href="#" class="dropdown-item text-wrap">Step 8</a><a href="#" class="dropdown-item text-wrap">Step 9</a></div>
     </nav>
         
       </div>
@@ -174,7 +174,7 @@
         
         <main id="main-content" class="col-md-9" role="main">
           
-            <h1>Creating accessible “tags” 1/2</h1>
+            <h1>Creating accessible tags 1/2</h1>
             
               <span class="visually-hidden" id="filters_label">
                 Associated themes:
@@ -183,20 +183,31 @@
               </ul>
             
             
-              <time class="text-muted" datetime="2018-01-05T00:00:00.000Z">January 05, 2018</time>
+              <p class="text-muted mb-0">
+                <span class="visually-hidden">Publication date</span>
+                <time datetime="2025-05-16T00:00:00.000Z">
+                  May 16, 2025
+                </time>
+              </p>
+              <p class="text-muted mb-0" >
+                Update of the article from
+                <time datetime="2018-01-05T00:00:00.000Z">
+                  January 05, 2018
+                </time>
+              </p>
             
           
           <div class="mt-4">
           
 <h2>Preamble</h2>
-<p>In this example we will create accessible “tags” — you know, these buttons we use to categorize content or add a list of recipients, etc.</p>
+<p>In this article, we will create accessible tags — you know, these buttons we use to categorize content or add a list of recipients, etc.</p>
 
 <h2>Final design</h2>
 <p>Here is an example of the expected design:</p>
 <img src="examples/tag.png" alt="Screenshot of several tags in a web page">
 
-<h2><abbr>HTML</abbr> structure</h2>
-<p>As tags do not wander on their own, we will create an <abbr>HTML</abbr> list. Thus a user browsing with a screen reader will directly hear the number of tags on display. “List of X elements…”.
+<h2 class="mt-3"><abbr>HTML</abbr> structure</h2>
+<p>Tags usually come in an <abbr>HTML</abbr> list. Thus, a user browsing with a screen reader will directly hear the number of tags on display: 'List of X elements...'.
 </p>
 
 <pre><code class="html">
@@ -210,13 +221,13 @@
 </code></pre>
 
 <div class="exemple">
-  <h3>Example 1</h3>
-  <a target="_blank" title="Open example 1" href="examples/1/"><img src="examples/exemple1.png" alt=" Open example 1 (new window)"></a>
+  <h3>Step 1</h3>
+  <a target="_blank" title="Open step 1" href="examples/1/"><img src="examples/step1.png" alt="Open step 1 (new window)"></a>
 </div>
 
-<h2>Removing a tag</h2>
-<p>One must be able to remove a tag. We will add a “Remove” button on each element in our list. For users who cannot see the screen and browse with a screen reader, a plain “Remove” button is not sufficient. We will add the tag name in the button’s label to disambiguate, i.e. “Remove Sony from the list”.</p>
-<p>The use of a real button makes this functionality accessible to the screen reader, but also to people who cannot use a mouse and rely on a keyboard to move the focus (with the <kbd>tab</kbd> key). A button can indeed be focused naturally.</p>
+<h2 class="mt-3">Removing a tag</h2>
+<p>One must be able to remove a tag. We will add a 'Remove' button on each element in our list. For users who cannot see the screen and browse with a screen reader, a plain 'Remove' button is not sufficient. We will add the tag name to the button's label to disambiguate, i.e., 'Remove Sony from the list.'</p>
+<p>The use of a real button makes this functionality accessible to the screen reader, but also to people who cannot use a mouse and rely on a keyboard to move the focus (with the <kbd>Tab</kbd> key). A button can indeed be focused naturally.</p>
 
 <pre><code class="html">
   &lt;ul&gt;
@@ -229,16 +240,16 @@
 </code></pre>
 
 <div class="exemple">
-  <h3>Example 2</h3>
-  <p><a target="_blank" title="Open example 2" href="examples/2/"><img src="examples/exemple2.png" alt="Open example 2 (new window)"></a></p>
+  <h3>Step 2</h3>
+  <p><a target="_blank" title="Open step 2" href="examples/2/"><img src="examples/step2.png" alt="Open step 2 (new window)"></a></p>
 </div>
 
-<p>And <i lang="fr">voilà!</i> Simple and accessible tags. OK, it’s not very beautiful so far.</p>
+<p>Here we present simple and accessible tags. Admittedly, their appearance is not particularly appealing at this stage.</p>
 
-<h2>Let’s decorate</h2>
+<h2>Let's decorate</h2>
 <p>Now that our tags are accessible, we can decorate them. The ideal solution would be to make them look like the first illustration at the beginning of this article. We have several solutions.</p>
 
-<p>For example, we can start by replacing the button’s text by an “X” or a cross-shaped icon.</p>
+<p>For example, we can start by replacing the button's text by an 'X' or a cross-shaped icon.</p>
 
 <pre><code class="html">
   &lt;ul&gt;
@@ -247,11 +258,11 @@
 </code></pre>
 
 <div class="exemple">
-  <h3>Example 3</h3>
-  <p><a target="_blank" title="Open example 3" href="examples/3/"><img src="examples/exemple3.png" alt="Open example 3 (new window)"></a></p>
+  <h3>Step 3</h3>
+  <p><a target="_blank" title="Open step 3" href="examples/3/"><img src="examples/step3.png" alt="Open step 3 (new window)"></a></p>
 </div>
 
-<p>But wait, we’ve just lost screen reader users. The buttons are now vocalized as “X”. We can fix this for example with the <code>aria-label</code> attribute.</p>
+<p>But wait, we've just lost screen reader users. The buttons are now vocalized as 'X'. We can fix this by giving a proper accessible name to these buttons, for example, by using the <code>aria-label</code> attribute.</p>
 
 <pre><code class="html">
   &lt;ul&gt;
@@ -259,7 +270,7 @@
   &lt;/ul&gt;
 </code></pre>
 
-<p>We’ll add some <abbr>CSS</abbr> to hide the button background and borders.</p>
+<p>We'll add some <abbr>CSS</abbr> to hide the button background and borders.</p>
 
 <pre><code class="css">
 button {
@@ -271,13 +282,13 @@ button {
 </code></pre>
 
 <div class="exemple">
-  <h3>Example 4</h3>
-  <p><a target="_blank" title="Open example 4" href="examples/4/"><img src="examples/exemple4.png" alt="Open example 4 (new window)"></a></p>
+  <h3>Step 4</h3>
+  <p><a target="_blank" title="Open step 4" href="examples/4/"><img src="examples/step4.png" alt="Open step 4 (new window)"></a></p>
 </div>
 
 <h2>Optimisation</h2>
 
-<p>It works but it’s not perfect. You have to aim precisely to remove a tag, because the cross-shaped button is not that big. It’s not very nice to use and may really be a problem for people with a trembling hand or who have difficulties using a mouse.</p>
+<p>It works, but it's not perfect. You have to aim precisely to remove a tag because the cross-shaped button is a bit small. It's not very user-friendly and could be a problem for people with a trembling hand or those who have difficulties using a mouse.</p>
 
 <p>Since we know that removing is the only possible action, we could extend the clickable zone to the whole tag. Hence, even if you slightly miss the target, the remove action will be taken into account.</p>
 
@@ -299,25 +310,25 @@ button {
 </code></pre>
 
 <div class="exemple">
-  <h3>Example 5</h3>
-  <p><a target="_blank" title="Open example 5" href="examples/5/"><img src="examples/exemple5.png" alt="Open example 5 (new window)"></a></p>
+  <h3>Step 5</h3>
+  <p><a target="_blank" title="Open step 5" href="examples/5/"><img src="examples/step5.png" alt="Open step 5 (new window)"></a></p>
 </div>
 
-<p>It’s better. Visually, we can see two things in each tag, the label and a remove button. Yet with a screen reader we only hear for the moment “Remove XXX from the list.” To correct this, we add a <code>span</code> containing the tag’s label. To prevent it from being displayed on screen (this would double the information), we add to it an accessible hiding class (<code>visually-hidden</code>). The text will only be read by screen readers.</p>
+<p>It's better. Visually, we can see two things in each tag: the label and a remove button. However, with a screen reader, we currently only hear for the moment 'Remove x from the list'. To correct this, we add a <code>span</code> containing the tag's label. To prevent it from being displayed on screen (this would double the information), we add to it an accessible hiding class (<code>visually-hidden</code>). The text will only be read by screen readers.</p>
 
 <pre><code class="html">
   &lt;ul&gt;
     &lt;li&gt;&lt;span class="visually-hidden"&gt;Alcatel&lt;/span&gt;&lt;button aria-label="Remove Alcatel from the list"&gt;Alcatel&lt;/button&gt;&lt;/li&gt;
   &lt;/ul&gt;
 </code></pre>
-<p>With a screen reader, we now hear each tag’s label, then a button to remove it.</p>
+<p>With a screen reader, we now hear each tag's label, then a button to remove it.</p>
 
 <div class="exemple">
-  <h3>Example 6</h3>
-  <p><a target="_blank" title="Open example 6" href="examples/6/"><img src="examples/exemple6.png" alt="Open example 6 (new window)"></a></p>
+  <h3>Step 6</h3>
+  <p><a target="_blank" title="Open step 6" href="examples/6/"><img src="examples/step6.png" alt="Open step 6 (new window)"></a></p>
 </div>
 
-<p>We still have one last problem: if we navigate the page with a keyboard (moving the focus with the <kbd>tab</kbd> key), we don’t know on which button the focus is.</p>
+<p>We still have one last problem: if we navigate the page with a keyboard (moving the focus with the <kbd>Tab</kbd> key), we don't know on which button the focus is.</p>
 
 <p>We add a bit of <abbr>CSS</abbr> to give emphasis to the focus. We also take the opportunity to do the same for hover.</p>
 
@@ -329,12 +340,12 @@ button {
 </code></pre>
 
 <div class="exemple">
-  <h3>Example 7</h3>
-  <p><a target="_blank" title="Open example 7" href="examples/7/"><img src="examples/exemple7.png" alt="Open example 7 (new window)"></a></p>
+  <h3>Step 7</h3>
+  <p><a target="_blank" title="Open step 7" href="examples/7/"><img src="examples/step7.png" alt="Open step 7 (new window)"></a></p>
 </div>
 
 <h2>Optimisation (again)</h2>
-<p>Our tags are accessible. Yet when we remove one tag with the keyboard, the focus stays on the vanished tag; so we don’t know where the focus is. This can be easily fixed with a bit of Javascript. We can focus the previous element, for example:</p>
+<p>Our tags are accessible. However, when we remove one tag with the keyboard, the focus stays on the vanished tag; thus we don't know where the focus is. This can be easily fixed with a bit of JavaScript. We can focus on the previous element, for example:</p>
 
 <pre><code class="javascript">
   $("button").on("click", function () {
@@ -344,12 +355,12 @@ button {
 </code></pre>
 
 <div class="exemple">
-  <h3>Example 8</h3>
-  <p><a target="_blank" title="Open example 8" href="examples/8/"><img src="examples/exemple8.png" alt="Open example 8 (new window)"></a></p>
+  <h3>Step 8</h3>
+  <p><a target="_blank" title="Open step 8" href="examples/8/"><img src="examples/step8.png" alt="Open step 8 (new window)"></a></p>
 </div>
 
-<p>When a tag is removed, we see it disappears from the screen. But if we want a screen reader user to be sure that the tag was removed, we’ll have to vocalise a confirmation message to the user.</p>
-<p>To manage this, we can use our <a href="../make-a-screen-reader-talk/">Javascript srSpeak function</a>, which uses ARIA to make the screen reader speak.</p>
+<p>When a tag is removed, we see it disappear from the screen. However, if we want a screen reader user to be sure that the tag was removed, we'll have to vocalize a confirmation message to the user.</p>
+<p>To manage this, we can use our <a href="../make-a-screen-reader-talk/">JavaScript srSpeak function</a>, which uses ARIA to make the screen reader speak.</p>
 
 <pre><code class="javascript">
   $("button").on("click", function () {
@@ -360,11 +371,11 @@ button {
 </code></pre>
 
 <div class="exemple">
-  <h3>Example 9</h3>
-  <p><a target="_blank" title="Open example 9" href="examples/9/"><img src="examples/exemple9.png" alt="Open example 9 (new window)"></a></p>
+  <h3>Step 9</h3>
+  <p><a target="_blank" title="Open step 9" href="examples/9/"><img src="examples/step9.png" alt="Open step 9 (new window)"></a></p>
 </div>
 
-<p>This time, our “tags” are genuinely accessible to the mouse, to the keyboard and to the screen reader.</p>
+<p>This time, our tags are genuinely accessible for mouse, keyboard, and screen reader users.</p>
 
           </div>
         </main>
@@ -378,23 +389,23 @@ button {
             <a href="#" class="nav-link text-muted">Final design</a></li><li class="nav-item position-relative">
             <a href="#" class="nav-link text-muted">HTML structure</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Example 1</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Step 1</a></li></ul></li><li class="nav-item position-relative">
             <a href="#" class="nav-link text-muted">Removing a tag</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Example 2</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Let’s decorate</a>
+            <a href="#" class="nav-link text-muted">Step 2</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Let&#39;s decorate</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Example 3</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Example 4</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Step 3</a></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Step 4</a></li></ul></li><li class="nav-item position-relative">
             <a href="#" class="nav-link text-muted">Optimisation</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Example 5</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Example 6</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Example 7</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Step 5</a></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Step 6</a></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Step 7</a></li></ul></li><li class="nav-item position-relative">
             <a href="#" class="nav-link text-muted">Optimisation (again)</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Example 8</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Example 9</a></li></ul></li>
+            <a href="#" class="nav-link text-muted">Step 8</a></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Step 9</a></li></ul></li>
       </ul>
     </nav>
             </div>
