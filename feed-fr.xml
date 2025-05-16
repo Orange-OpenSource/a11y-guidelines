@@ -12,6 +12,14 @@
   </author>
   
   <entry>
+    <title>Créer des tags accessibles 2/2</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/tags/2/"/>
+    <updated>2018-01-06T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/tags/2/</id>
+    <content xml:lang="fr" type="html">Exemple d&#39;étiquettes accessibles (partie 2).</content>
+  </entry>
+  
+  <entry>
     <title>Créer des tags accessibles 1/2</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/tags/"/>
     <updated>2018-01-05T00:00:00Z</updated>
@@ -553,14 +561,6 @@
     <updated>2018-01-08T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/attributs-aria-qui-peuvent-vous-sauver/</id>
     <content xml:lang="fr" type="html">Quelques attributs ARIA à connaître pour avoir un nom accessible</content>
-  </entry>
-  
-  <entry>
-    <title>Créer des tags accessibles 2/2</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/tags/2/"/>
-    <updated>2018-01-06T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/tags/2/</id>
-    <content xml:lang="fr" type="html">Exemple d&#39;étiquettes accessibles (partie 2).</content>
   </entry>
   
   <entry>
