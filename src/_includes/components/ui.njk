@@ -48,23 +48,23 @@
         <h3 class="mb-1">
           <a href="{{ post.url }}" class="text-decoration-none article-focus">{{ post.data.title }}</a>
         </h3>
-        {% if updateDate %}
-          <p class="text-muted mb-0">
-            <span class="visually-hidden">{{ 'releaseDate.label' | translate }}</span>
-            <time datetime="{{ updateDate | toISOString }}">
-              {% localizedDate updateDate, locale %}
-            </time>
-          </p>
+        {% set effectiveDate = post | effectiveDate %}
+        {% set isUpdated = post.data.updateDate and post.data.updateDate != post.date %}
+
+        <p class="text-muted mb-0">
+          <span class="visually-hidden">{{ 'releaseDate.label' | translate }}</span>
+          <time datetime="{{ effectiveDate | toISOString }}">
+            {% localizedDate effectiveDate, locale %}
+          </time>
+        </p>
+
+        {% if isUpdated %}
           <p class="text-muted mb-0">
             {{ 'articleUpdate.label' | translate }}
             <time datetime="{{ post.date | toISOString }}">
               {% localizedDate post.date, locale %}
             </time>
           </p>
-        {% else %}
-          {% if post.date %}
-            <time class="text-muted" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale %}</time>
-          {% endif %}
         {% endif %}
         {% if post.data.abstract %}
           <p class="my-2">{{ post.data.abstract }}</p>
@@ -99,23 +99,23 @@
           {%- endfor -%}
         </ul>
       {% endif %}
-      {% if updateDate %}
-        <p class="text-muted mb-0">
-          <span class="visually-hidden">{{ 'releaseDate.label' | translate }}</span>
-          <time datetime="{{ updateDate | toISOString }}">
-            {% localizedDate updateDate, locale %}
-          </time>
-        </p>
+      {% set effectiveDate = post | effectiveDate %}
+      {% set isUpdated = post.data.updateDate and post.data.updateDate != post.date %}
+
+      <p class="text-muted mb-0">
+        <span class="visually-hidden">{{ 'releaseDate.label' | translate }}</span>
+        <time datetime="{{ effectiveDate | toISOString }}">
+          {% localizedDate effectiveDate, locale %}
+        </time>
+      </p>
+
+      {% if isUpdated %}
         <p class="text-muted mb-0">
           {{ 'articleUpdate.label' | translate }}
           <time datetime="{{ post.date | toISOString }}">
             {% localizedDate post.date, locale %}
           </time>
         </p>
-      {% else %}
-        {% if displayDate == true and post.date %}
-          <time class="text-muted d-block" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale  %}</time>
-        {% endif %}
       {% endif %}
       {% if post.data.abstract %}
         <p class="my-2">{{ post.data.abstract }}</p>

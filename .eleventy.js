@@ -88,6 +88,24 @@ module.exports = function (eleventyConfig) {
         return new Date(value);
     });
 
+    // Returns the most relevant date for a post.
+    // Uses the update date if available, otherwise falls back to the original publication date.
+    eleventyConfig.addFilter("effectiveDate", (post) => {
+        return post.data.updateDate || post.date;
+    });
+
+    // Finds the latest date in a collection of posts.
+    // Uses effectiveDate to determine the most relevant date for each post.
+    eleventyConfig.addFilter("latestDate", (collection) => {
+        if (!collection || !collection.length) return new Date();
+
+        return collection.reduce((latest, post) => {
+            const postDate = eleventyConfig.getFilter("effectiveDate")(post);
+            if (!latest) return postDate;
+            return postDate > latest ? postDate : latest;
+        }, null);
+    });
+
     /**
      * @see https://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference#answer-6394168
      */
