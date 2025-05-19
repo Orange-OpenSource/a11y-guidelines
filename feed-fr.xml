@@ -5,7 +5,7 @@
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
   <updated>2025-04-02T00:00:00Z</updated>
-  <id>https://a11y-guidelines.orange.com/</id>  
+  <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
@@ -14,7 +14,7 @@
   <entry>
     <title>Créer des tags accessibles 2/2</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/tags/2/"/>
-    <updated>2018-01-06T00:00:00Z</updated>
+    <updated>2025-05-16T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/tags/2/</id>
     <content xml:lang="fr" type="html">Exemple d&#39;étiquettes accessibles (partie 2).</content>
   </entry>
@@ -22,7 +22,7 @@
   <entry>
     <title>Créer des tags accessibles 1/2</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/tags/"/>
-    <updated>2018-01-05T00:00:00Z</updated>
+    <updated>2025-05-16T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/tags/</id>
     <content xml:lang="fr" type="html">Exemple d&#39;étiquettes accessibles (partie 1).</content>
   </entry>
@@ -30,7 +30,7 @@
   <entry>
     <title>Les listbox et la navigation au clavier</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/listbox-et-navigation-clavier/"/>
-    <updated>2018-01-09T00:00:00Z</updated>
+    <updated>2025-05-05T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/listbox-et-navigation-clavier/</id>
     <content xml:lang="fr" type="html">Exemple de liste ARIA, gestion de la navigation clavier.</content>
   </entry>
@@ -38,7 +38,7 @@
   <entry>
     <title>Les listbox avec cases à cocher</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/listbox-avec-cases-a-cocher/"/>
-    <updated>2018-01-08T00:00:00Z</updated>
+    <updated>2025-05-05T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/listbox-avec-cases-a-cocher/</id>
     <content xml:lang="fr" type="html">Exemple de liste ARIA (partie 2), intégration de cases à cocher.</content>
   </entry>
@@ -46,7 +46,7 @@
   <entry>
     <title>Les listbox</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/listbox/"/>
-    <updated>2018-01-07T00:00:00Z</updated>
+    <updated>2025-05-05T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/listbox/</id>
     <content xml:lang="fr" type="html">Exemple de liste ARIA.</content>
   </entry>
@@ -54,7 +54,7 @@
   <entry>
     <title>Les bonnes pratiques pour les liens d&#39;évitement</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/liens-evitement/"/>
-    <updated>2023-06-22T00:00:00Z</updated>
+    <updated>2025-04-11T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/liens-evitement/</id>
     <content xml:lang="fr" type="html">Les liens d&#39;évitement, qu&#39;est-ce et comment bien les mettre en œuvre</content>
   </entry>
@@ -78,7 +78,7 @@
   <entry>
     <title>L&#39;accessibilité des images SVG</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/svg-accessibles/"/>
-    <updated>2021-01-01T00:00:00Z</updated>
+    <updated>2025-03-28T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/svg-accessibles/</id>
     <content xml:lang="fr" type="html">Comment rendre accessibles les images SVG</content>
   </entry>
@@ -86,7 +86,7 @@
   <entry>
     <title>HTML5 &amp; ARIA</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/html5-et-aria/"/>
-    <updated>2016-09-16T00:00:00Z</updated>
+    <updated>2025-03-14T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/html5-et-aria/</id>
     <content xml:lang="fr" type="html">Introduction HTML 5 et ARIA</content>
   </entry>

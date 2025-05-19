@@ -5,7 +5,7 @@
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
   <updated>2025-04-02T00:00:00Z</updated>
-  <id>https://a11y-guidelines.orange.com/</id>  
+  <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
@@ -14,7 +14,7 @@
   <entry>
     <title>Creating accessible tags 2/2</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/tags/2/"/>
-    <updated>2018-01-06T00:00:00Z</updated>
+    <updated>2025-05-16T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/tags/2/</id>
     <content xml:lang="en" type="html">Sample code to make accessible tags (part 2) examples.</content>
   </entry>
@@ -22,7 +22,7 @@
   <entry>
     <title>Creating accessible tags 1/2</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/tags/"/>
-    <updated>2018-01-05T00:00:00Z</updated>
+    <updated>2025-05-16T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/tags/</id>
     <content xml:lang="en" type="html">Sample code to make accessible tags (part 1).</content>
   </entry>
@@ -30,7 +30,7 @@
   <entry>
     <title>Listbox and keyboard navigation</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/listbox-and-keyboard-navigation/"/>
-    <updated>2018-01-09T00:00:00Z</updated>
+    <updated>2025-05-05T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/listbox-and-keyboard-navigation/</id>
     <content xml:lang="en" type="html">Example of ARIA list (part 3)</content>
   </entry>
@@ -38,7 +38,7 @@
   <entry>
     <title>Listbox with checkboxes</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/listbox-with-checkboxes/"/>
-    <updated>2018-01-08T00:00:00Z</updated>
+    <updated>2025-05-05T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/listbox-with-checkboxes/</id>
     <content xml:lang="en" type="html">Example of ARIA list (part 2).</content>
   </entry>
@@ -46,7 +46,7 @@
   <entry>
     <title>Listbox</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/listbox/"/>
-    <updated>2018-01-07T00:00:00Z</updated>
+    <updated>2025-05-05T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/listbox/</id>
     <content xml:lang="en" type="html">Example of ARIA list (part 1).</content>
   </entry>
@@ -54,7 +54,7 @@
   <entry>
     <title>Skip links best practices</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/skip-links-best-practices/"/>
-    <updated>2019-06-19T00:00:00Z</updated>
+    <updated>2025-04-11T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/skip-links-best-practices/</id>
     <content xml:lang="en" type="html">Skip links, what is it and how to implement them</content>
   </entry>
@@ -78,7 +78,7 @@
   <entry>
     <title>SVG images accessibility</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/accessible-svg/"/>
-    <updated>2021-01-01T00:00:00Z</updated>
+    <updated>2025-03-28T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/accessible-svg/</id>
     <content xml:lang="en" type="html">How to make SVG images accessible</content>
   </entry>
@@ -86,7 +86,7 @@
   <entry>
     <title>HTML5 &amp; ARIA</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/html5-aria/"/>
-    <updated>2016-09-08T00:00:00Z</updated>
+    <updated>2025-03-14T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/html5-aria/</id>
     <content xml:lang="en" type="html">HTML 5 and ARIA introduction</content>
   </entry>
