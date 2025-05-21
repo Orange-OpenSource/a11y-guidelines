@@ -16,12 +16,21 @@
 }
 ---
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Debug information -->
+<!--
+{% for post in collections.articles_fr %}
+  Title: {{ post.data.title }}
+  Date: {{ post.date }}
+  UpdateDate: {{ post.data.updateDate }}
+  EffectiveDate: {{ post.data.updateDate or post.date }}
+{% endfor %}
+-->
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.subtitle }}</subtitle>
   <link href="{{ permalink | absoluteUrl(metadata.feedUrl) }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
-  <updated>{{ collections.articles_fr | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <updated>{{ collections.articles_fr | latestDate | jsDate | dateToRfc3339 }}</updated>
   <id>{{ metadata.url }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
