@@ -22,7 +22,7 @@ css:
 <ul>
   <li>
     <p>Pour une page <em>en <abbr>HTML5</abbr></em> (recommandé) : utiliser les <em>balises sémantiques</em> (<code>main</code>, <code>header</code>, <code>footer</code>, <code>aside</code>, etc.) qui y ont été introduites.
-    Ces balises doivent être utilisées seules, sans les rôles <abbr>ARIA</abbr> correspondants, car leur support est bon dans la grande majorité des navigateurs et des aides techniques.</p>
+    Ces balises peuvent être utilisées seules, sans les rôles <abbr>ARIA</abbr> correspondants, car leur support est bon dans la grande majorité des navigateurs et des aides techniques.</p>
 
     <pre class="mb-0"><code class="html">
     &lt;head&gt;
@@ -164,7 +164,7 @@ css:
   <h4 id="nav">nav</h4>
   <p class="mb-0">La balise <code>nav</code> (ou l'attribut attribut de région <abbr>ARIA</abbr> <code>role="navigation"</code>) permet d’identifier les principaux éléments de navigation internes au site. 
   <p class="mb-0">Il est conseillé d'utiliser au maximum 3 balises <code>nav</code> (ou <code>role="navigation"</code>) dans une même page.</p>
-  <p>Chaque <code>nav</code> doit avoir un nom accessible (voir <a href="#bonnes_pratiques">Bonnes pratiques</a>).</nav></p>
+  <p>Lorsque plusieurs <code>nav</code> sont utilisées, elles doit avoir un nom accessible pour les identifier (voir <a href="#bonnes_pratiques">Bonnes pratiques</a>).</nav></p>
  
   <h4 id="search">role="search"</h4>
   <p>L'attribut de région <abbr>ARIA</abbr> <code>role="search"</code> (pas de balise <abbr>HTML</abbr> équivalente) est à utiliser pour identifier un formulaire de recherche dans le site ou pour filtrer du contenu présent dans la page.</p>
@@ -181,7 +181,7 @@ css:
   
   <h4 id="section">section</h4>
   <p class="mb-0">La balise <code>section</code> (ou l'attribut de région <abbr>ARIA</abbr> <code>role="region"</code>) permet de regrouper du contenu (ex : chapitres d'un livre, grandes parties d'une page d'accueil, ...) thématiquement.</p>
-  <p>Plusieurs balises <code>section</code> (ou attributs <code>role="region"</code>) peuvent être présents dans la page. Un nom accessible unique est requis pour chaque occurence (voir <a href="#bonnes_pratiques">Bonnes pratiques</a>).</p>
+  <p>Plusieurs balises <code>section</code> (ou attributs <code>role="region"</code>) peuvent être présents dans la page. Un nom accessible unique est requis pour chaque occurrence (voir <a href="#bonnes_pratiques">Bonnes pratiques</a>).</p>
   
   <h4 id="aside">aside</h4>
   <p class="mb-0">La balise <code>aside</code> (ou l'attribut de région <abbr>ARIA</abbr> <code>role="complementary"</code>) est à utiliser pour identifier du contenu annexe au contenu principal de la page (information complémentaire, publicité…).</p>
@@ -215,10 +215,10 @@ css:
   </li>
 
   <li>
-    <p>Tout le contenu de la page doit être inclus dans les balises <abbr>HTML5</abbr> ou attributs de région (<span lang="en">landmarks</span>) <abbr>ARIA</abbr> de structure. Ceci permet aux utilisateurs d'avoir accès de tout le contenu, même celui qu'ils n'auraient pas trouvé.</p>
+    <p>Tout le contenu de la page doit être inclus dans les balises <abbr>HTML5</abbr> ou des région (<span lang="en">landmarks</span>) <abbr>ARIA</abbr> de structure. Ceci permet aux utilisateurs d'avoir accès à tout le contenu, même celui qu'ils n'auraient pas trouvé car en dehors de ces balises.</p>
   </li>
 
-  <li><p> Exception : Les boites de dialogue modales n'ont pas besoin dêtre imbriquées dans une balise de région.</p></li>
+  <li><p> Exception : Les boites de dialogue modales n'ont pas besoin d'être imbriquées dans une balise de région.</p></li>
 </ul>
   
 
