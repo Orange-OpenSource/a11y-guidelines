@@ -7,7 +7,7 @@ abstract: "Cadre légal de l'accessibilité numérique"
 
 Quelques lois françaises ou de l’union européenne à propos de l’accessibilité numérique.
 
-## Loi française, loi pour une République numérique – article 47-1 de la loi du 11 février 2005 
+## Loi française: loi pour une République numérique – article 47-1 de la loi du 11 février 2005 
 
 S'ajoute à cette loi, le décret du 24 juillet 2019 n° 2019-768 relatif à l'accessibilité aux personnes handicapées des services de communication au public en ligne.
 Elle concerne toutes les entreprises privées dont le chiffre d’affaires est supérieur à 250 millions d’euros.
@@ -38,7 +38,7 @@ La dimension internationale du Groupe Orange, présent dans 26 pays, justifie la
 
 Le risque de sanction est de 50 000 € par service et celle-ci peut être renouvelée 6 mois après la constatation initale.
  
-## Loi européenne, European Accessibility Act (EAA) ou acte européen sur l’accessibilité - Directive (UE) 2019/882 du 17 avril 2019 relative aux exigences en matière d’accessibilité applicables aux produits et services
+## Loi européenne: European Accessibility Act (EAA) ou acte européen sur l’accessibilité - Directive (UE) 2019/882 du 17 avril 2019 relative aux exigences en matière d’accessibilité applicables aux produits et services
 -	Cette directive doit être déclinée par tous les États membres
 -	Elle est transposée en France avec l'article 16 de la loi du 9 mars 2023
 -	Toutes les mesures sont applicables à partir du 28 juin 2025
