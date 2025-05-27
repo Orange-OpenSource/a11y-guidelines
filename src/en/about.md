@@ -5,7 +5,7 @@ abstract: "About this website"
 
 # About
 
-Documentation under the [CC BY SA 3.0 licence](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENCE), source code of this site and examples are available [on GitHub](https://github.com/Orange-OpenSource/a11y-guidelines).  
+Documentation under the [CC BY SA 3.0 licence](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE), source code of this site and examples are available [on GitHub](https://github.com/Orange-OpenSource/a11y-guidelines).  
 
 The Orange logo and some images or screenshots are property of Orange:
 
