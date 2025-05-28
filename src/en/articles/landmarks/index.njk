@@ -1,136 +1,204 @@
 ---
 title: "Landmarks ARIA"
-abstract: "How to improve page navigation by adding semantics to content that makes it easier to find the major regions of the page"
+abstract: "Setting up ARIA landmarks"
 titleBeforeTag: true
 date: "2018-01-15"
+updateDate: "2025-02-24"
 tags:
   - component
+css:
+  - style.css
 ---
 
-    <h2>Introduction</h2>
-    <p>In this example, we'll see how to improve page navigation by adding semantics to content that makes it easier to find the major regions of the page.</p>
-    <h2> Theory</h2>
-    <p><abbr>HTML5</abbr> introduces new tags, including semantic tags (<code>main</code> , <code>aside</code> , <code>footer</code> , and <code>header</code> , ...).</p>
-    <p>These tags should be used alone without the corresponding <abbr>ARIA</abbr> roles because their support is good in the vast majority of browsers and assistive devices.</p>
+<h2>Introduction</h2>
+<p>In this acticle, we'll see how to improve page navigation of a web page by adding <abbr>HTML</abbr> semantics to its content. The aim is to make it easier for assistive devices (e.g., screen readers) to locate the main areas of the page.</p>
 
-    For a page in <abbr>HTML5</abbr>:
-
-  <pre><code class="html">
-  &lt;head&gt;
-    …
-    &lt;title&gt;Titre de la page&lt;/title&gt;
-    …
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;header&gt;
-      &lt;h1&gt;…&lt;/h1&gt;
-      &lt;nav&gt;…navigation…&lt;/nav&gt;
-      &lt;p&gt;page header&nbsp;: logo, baseline…&lt;/p&gt;
-      …
-    &lt;/header&gt;
-    &lt;main&gt;
-       &lt;nav aria-label="Breadcrumb"&gt;[…]&lt;/nav&gt;
-       &lt;section&gt;
-         &lt;header&gt;
-           &lt;h1&gt;News&lt;/h1&gt;
-           &lt;p&gt;June 21th, 2018 - Music festival&lt;/p&gt;
-         &lt;/header&gt;
-         &lt;p&gt;section's content&lt;/p&gt;
-         &lt;footer&gt;
-           &lt;p&gt;section footer content &nbsp;: copyright…&lt;/p&gt;
-           …
-         &lt;/footer&gt;
-      &lt;/section&gt;
-      &lt;article&gt;
-      […]
-      &lt;/article&gt;
-
-      […]
-
-    &lt;/main&gt;
-    &lt;aside&gt;
-      &lt;p&gt;aside's content&lt;/p&gt;
-      […]
-    &lt;/aside&gt;
-    &lt;footer&gt;
-      &lt;p&gt;footer content&nbsp;: copyright…&lt;/p&gt;
-      […]
-    &lt;/footer&gt;
-  &lt;/body&gt;
- </code> </pre>
-
-  For a page that is not in <abbr>HTML5</abbr>, add the landmarks <abbr>ARIA</abbr>:
-
-<pre><code class="html">
-&lt;head&gt;
-    …
-  &lt;title&gt;Page title&lt;/title&gt;
-    …
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div role="banner"&gt;
-      &lt;h1&gt;…&lt;/h1&gt;
-      &lt;div role="navigation"&gt;…navigation…&lt;/div&gt;
-      &lt;p&gt;page header&nbsp;: logo, baseline…&lt;/p&gt;
-      …
-    &lt;/div&gt;
-  &lt;div role="main"&gt;
-  &lt;div role="navigation" aria-label="Breadcrumb"&gt;[…]&lt;/nav&gt;
-    &lt;div role="region"&gt;
-      &lt;div role="header"&gt;
-        &lt;h1&gt;News&lt;/h1&gt;
-        &lt;p&gt;June 21th, 2018 - Music festival&lt;/p&gt;
-      &lt;/header&gt;
-      &lt;p&gt;region's content&lt;/p&gt;
-      &lt;div role="contentinfo"&gt;
-        &lt;p&gt;region footer content&nbsp;: copyright…&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div role="article"&gt;
-    […]
-    &lt;/div&gt;
-
-  […]
-
-  &lt;/div&gt;
-  &lt;div role="complementary"&gt;
-    &lt;p&gt;aside's content&lt;/p&gt;
-      […]
-    &lt;/div&gt;
-  &lt;div role="contentinfo"&gt;
-    &lt;p&gt;footer content&nbsp;: copyright…&lt;/p&gt;
-      […]
-  &lt;/div&gt;
-&lt;/body&gt;
-</code> </pre>
-
-
-<h3>Usage </h3>
+<h2> Theory</h2>
+<p>To add <abbr>HTML</abbr> semantics to a page content, there are two possibilities:</p>
 <ul>
-  <li>There can only be one <code>main</code> tag or one <code>role=main</code> per page to identify the main content of a page. </li>
-  <li>The <code>section</code> or <code>role=region</code> tag is used to thematically group content, for example, chapters of a book, large parts of a page of Home... </li>
-  <li>The <code>article</code> or <code>role=article</code> tag is an autonomous portion of the page, usually reusable, for example, a blog post, a newspaper, a comment of a blog... </li>
-  <li>The <code>role=navigation</code> or the <code>nav</code> tag identifies the main navigations internal to the site. Good practice requires that you use 3 <code>nav</code> tags maximum per page. </li>
-  <li> The <code>footer</code> tag or the <code>role=contentinfo</code> identifies the footer. It must be unique in the page, except when it is present in <code>section</code> tags, <code>role=region</code> or <code>article</code> , <code>role=article</code> . </li>
-  <li> The tag <code>header</code> or <code>role = header</code> identifies the header of the page. It must also be unique, except when it is present in <code>section</code> tags, <code>role=region</code> or <code>article</code>, <code>role=article</code>.</li>
-  <li> To identify the search form in the site, we will use <code>role=search</code> <abbr>ARIA</abbr> alone.</li>
-  <li> If necessary, the content annexed to the main content of the page (additional information, advertising...) must be identified by using the <code>aside</code> tag or the <code>role=complementary</code>.</li>
+  <li>
+    <p>For a page <em>in <abbr>HTML5</abbr></em> (recommended) : use the <em>semantic tags </em>(<code>main</code>, <code>header</code>, <code>footer</code>, <code>aside</code>, etc.) that were introduced.
+    These tags should be used on their own, without the corresponding <abbr>ARIA</abbr> roles, as they are well supported by the vast majority of browsers and assistive devices.</p>
+
+    <pre class="mb-0"><code class="html">
+    &lt;head&gt;
+      […]
+      &lt;title&gt;Page title&lt;/title&gt;
+      […]
+    &lt;/head&gt;
+
+    &lt;body&gt;
+      &lt;header&gt;
+        &lt;img&gt;logo&lt;/img&gt;
+        &lt;h1&gt;Application name&lt;/h1&gt;
+        &lt;nav&gt;…navigation…&lt;/nav&gt;
+        […]
+      &lt;/header&gt;
+
+      &lt;main&gt;
+        &lt;nav aria-label="Breadcrumb"&gt;[…]&lt;/nav&gt;
+        &lt;section&gt;
+          &lt;h1&gt;News&lt;/h1&gt;
+          &lt;p&gt;June 21th, 2018 - Music festival&lt;/p&gt;
+          &lt;p&gt;…section content…&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;article&gt;
+          […]
+        &lt;/article&gt;
+        […]
+      &lt;/main&gt;
+
+      &lt;aside&gt;
+        &lt;p&gt;…side content related to the main content…&lt;/p&gt;
+        […]
+      &lt;/aside&gt;
+
+      &lt;footer&gt;
+        &lt;p&gt;…footer content&nbsp;: copyright…&lt;/p&gt;
+        […]
+      &lt;/footer&gt;
+    &lt;/body&gt;
+    </code></pre>
+    <br>
+  </li>
+
+  <li>
+    <p>For a <em>non-<abbr>HTML5</abbr></em> page: add <em><abbr>ARIA</abbr> landmarks</em>.</p>
+
+    <pre><code class="html">
+    &lt;head&gt;
+      […]
+      &lt;title&gt;Page title&lt;/title&gt;
+      […]
+    &lt;/head&gt;
+
+    &lt;body&gt;
+      &lt;div role="banner"&gt;
+        &lt;img&gt;logo&lt;/img&gt;
+        &lt;h1&gt;Application name&lt;/h1&gt;
+        &lt;div role="navigation"&gt;…navigation…&lt;/div&gt;
+        […]
+      &lt;/div&gt;
+
+      &lt;div role="main"&gt;
+        &lt;div role="navigation" aria-label="Breadcrumb"&gt;[…]&lt;/nav&gt;
+        &lt;div role="region"&gt;
+          &lt;h1&gt;News&lt;/h1&gt;
+          &lt;p&gt;June 21th, 2018 - Music festival&lt;/p&gt;
+          &lt;p&gt;…section content…&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div role="article"&gt;
+          […]
+        &lt;/div&gt;
+        […]
+      &lt;/div&gt;
+
+      &lt;div role="complementary"&gt;
+        &lt;p&gt;…side content related to the main content…&lt;/p&gt;
+        […]
+      &lt;/div&gt;
+
+      &lt;div role="contentinfo"&gt;
+        &lt;p&gt;…footer content&nbsp;: copyright…&lt;/p&gt;
+        […]
+      &lt;/div&gt;
+    &lt;/body&gt;
+    </code></pre>
+  </li>
 </ul>
 
-<h3>Best practice</h3>
+<h3 class="mt-4 mb-0" id="equivalence">Correlation between <abbr>HTML5</abbr> tags and <abbr>ARIA</abbr> landmarks</h3>
+  <table class="table mt-2 mb-4">
+      <caption class="visually-hidden" aria-labelledby="equivalence"></caption>
+      <thead>
+        <tr>
+          <th class="table-column1-width"><abbr>HTML5</abbr> tags</th>
+          <th><abbr>ARIA</abbr> landmarks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>header</code></td>
+          <td><code>role="banner"</code> only if placed in a <code>body</code> tag</td>
+        </tr>
+        <tr>
+          <td><code>nav</code></td>
+          <td><code>role="navigation"</code></td>
+        </tr>
+        <tr>
+          <td><code>--</code></td>
+          <td><code>role="search"</code></td>
+        </tr>
+          <td><code>main</code></td>
+          <td><code>role="main"</code></td>
+        </tr>
+          <tr>
+          <td><code>form</code></td>
+          <td><code>role="form"</code> if there is an accessible name given by <code>aria-labelledby</code>, <code>aria-label</code> or <code>title</code></td>
+        </tr>
+        <tr>
+          <td><code>section</code></td>
+          <td><code>role="region"</code> if there is an accessible name given by <code>aria-labelledby</code>, <code>aria-label</code> or <code>title</code></td>
+        </tr>
+        <tr>
+          <td><code>aside</code></td>
+          <td><code>role="complementary"</code></td>
+        </tr>
+        <tr>
+          <td><code>footer</code></td>
+          <td><code>role="contentinfo"</code> only if placed in a <code>body</code> tag</td>
+        </tr>
+      </tbody>
+  </table>
 
-<p>All these landmarks can rely on the <abbr>ARIA</abbr> attributes that are <code>aria-label</code>, <code>aria-labelledby</code> and <code>aria-describedby</code> to provide them with a more relevant accessible name.</p>
-<p> Especially when several landmarks of the same type are present in the page, it may be important to give them a description via these <abbr>ARIA</abbr> attributes. </p>
-<p>Example of a page with three navigation regions: </p>
-<pre><code class = "html">
- &lt;nav aria-label="Main Menu"&gt; [...] &lt;/nav &gt;
- &lt;nav aria-label="Secondary Menu"&gt; [...] &lt;/nav&gt;
- &lt;nav aria-label="breadcrumb trail"&gt; [...] &lt;/nav&gt;
-</code></pre>
-<p>More details on <a href="../../articles/aria-attributes-that-can-save-you/"> "The <abbr>ARIA</abbr> attributes that can save you" </a>.</p>
+<h3 class="mt-4">Uses</h3>
+<ul class="usages">
+  <li>The <code>header</code> tag or the <abbr>ARIA</abbr> landmark attribute <code>role="header"</code> identifies the page header. To be used only once in the page.</li>
+  <li>The <code>main</code> tag or the <code>role="main"</code> attribute identifies the page's main content. To be used only once on the page.</li> 
+  <li>The <code>aside</code> tag or the <code>role="complementary"</code> attribute is used to identify side content to the page's main content (additional information, advertising, etc.).</li>
+  <li>The <code>footer</code> tag or the <code>role="contentinfo"</code> attribute identifies the footer. To be used only once on the page.</li>
+</ul>
+<p>The 4 <abbr>ARIA</abbr> landmark tags or attributes above must be placed directly in a <code>body</code> tag (and not in another tag itself nested within the <code>body</code>).</p>  
+  
+<ul class="usages mt-4">  
+  <li>The <code>nav</code> tag or the <code>role="navigation"</code> attribute identifies the site's main internal navigation elements. Best practice dictates that a maximum of 3 <code>nav</code> tags or <code>role="navigation"</code> should be used on a single page.</li>
+  <li>The <code>form</code> tag or the <code>role="form"</code> attribute should be used to identify a form.</li>
+  <li>The <abbr>ARIA</abbr> landmark attribute <code>role="search"</code> (there is no equivalent <abbr>HTML</abbr> tag) is used to identify a search form on the site.</li>
+  <li>The <code>section</code> tag or the <code>role="region"</code> attribute can be used to group content (e.g., chapters in a book, large parts of a home page, etc.) thematically.</li>
+  <li>The <code>article</code> tag or the <code>role="article"</code> attribute is used for an autonomous portion of the site.</li>
+</ul>
 
-<p>Another best practice is that all content must be included in the Landmarks / <abbr>HTML</abbr>5 structure tags. This allows users to not forget content that they would not have found. </p>
+<h3 class="mt-4">Best practice</h3>
+<ul class="usages">
+  <li>
+    <p>When several landmarks of the same type are present on the page, it may be appropriate to give each one a different accessible name by adding it:</p>
+    <ul class="usages">
+      <li>an <code>aria-label</code> attribute, if the landmark doesn't have a header title (e.g., text in an <code>h1</code> to <code>h6</code> tag)</li>
+      <li>an <code>aria-describedby</code> attribute which points to the header title whose content we want to use as an accessible name, if the landmark has a header title.</li>
+    </ul>
+    <p>Example of a page with 3 navigation landmarks:</p>
+    <pre><code class = "html">
+    &lt;nav aria-label="Main Menu"&gt; [...] &lt;/nav &gt;
+    &lt;nav aria-label="Secondary Menu"&gt; [...] &lt;/nav&gt;
+    &lt;nav aria-label="Breadcrumb trail"&gt; [...] &lt;/nav&gt;
+    </code></pre>
+    <p>More details on <a href="../../articles/aria-attributes-that-can-save-you/"> "The <abbr>ARIA</abbr> attributes that can save you" </a>.</p>
+  </li>
 
-<h3>Landmarks, users and assistive devices</h3>
-<p> The <abbr>HTML5</abbr> tags defining the main regions of the page have sufficient support with assistive technologies (screen readers, magnifying software...). We must therefore use them to structure his page without adding roles Landmarks.</p>
-<p>Setting up these landmarks <abbr>ARIA</abbr> is a good practice, because it can improve the browsing of some users without impacting that of others. It's really a best practice! </p>
+  <li>
+    <p>All content must be included in <abbr>HTML5</abbr> tags or structural <abbr>ARIA</abbr> landmark attributes. This ensures that users don't forget content they didn't find.</p>
+  </li>
+
+  <li><p> Exception: Modal dialog boxes do not need to be nested within a landmark tag.</p></li>
+</ul>
+
+
+<h3><abbr>ARIA</abbr> landmarks, users and assistive devices</h3>
+<p>The <abbr>HTML5</abbr> tags that define the page's main landmarks have sufficient support with assistive devices (screen readers, software magnifiers, etc.). They should therefore be used to structure the page without the corresponding <abbr>ARIA</abbr> landmark role.</p>
+<p>Setting up these <abbr>ARIA</abbr> landmarks is a good practice because it can improve the browsing of some users without impacting that of others. It's really a best practice&nbsp;!</p>
+
+
+<h3 class="mt-4">Resources</h3>
+<ul>
+  <li><a href="https://www.w3.org/WAI/ARIA/apg/practices/landmark-regions/" hreflang="en">Landmark Regions specification</a></li>
+</ul>
