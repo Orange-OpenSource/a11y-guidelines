@@ -9,11 +9,11 @@ tags:
 ---
 
 Dans cet article, nous allons tenter de répondre aux questions suivantes concernant l'accessibilité des textes dans les pages Web:
-- Quelle taille faut-il utiliser pour les textes ?
-- Quelle est la taille de police minimale à respecter ?
-- Quelle couleur puis-je utiliser pour le texte ?
+- Quelle taille faut-il utiliser pour les textes&nbsp;?
+- Quelle est la taille de police minimale à respecter&nbsp;?
+- Quelle couleur puis-je utiliser pour le texte&nbsp;?
 
-## Qu'en dit le référenciel ?
+ ## Qu'en dit le référentiel&nbsp;?
 
 Le [référentiel WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) n'impose pas de taille minimale ni de couleurs pour les textes. Ceci dit deux critères permettant de répondre à ces questions méritent notre attention : 
 - <a href="https://www.w3.org/TR/WCAG22/#resize-text" lang="en">1.4.4 Resize text</a>
@@ -24,18 +24,21 @@ Le [référentiel WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) n'imp
 Si le référentiel n'impose pas de taille minimale pour la taille des caractères, [le critère 1.4.4](https://www.w3.org/TR/WCAG22/#resize-text) indique que l'utilisateur doit pouvoir augmenter la taille du texte jusqu'à 200% sans perte de contenu ou de fonctionnalité. 
 Pour être conforme à ce critère, il est indispensable de tester dans un navigateur.
 
-le critère peut être validé sous l'une de ces trois conditions d'agrandissement :
+le critère peut être validé sous l'une de ces trois conditions d'agrandissement&nbsp;:
 - Un zoom du texte uniquement depuis le navigateur.
 - Un zoom graphique.
 - L'utilisation d'un composant d'interface propre au site.
 
-le dimensionnement de certains blocs de texte, notamment à l'aide de tailles en pixels, peut entraîner des pertes d'informations (textes tronqués), c'est pourquoi il est conseillé d'utiliser des unités relatives (%, em, rem ...).
+le dimensionnement de certains blocs de texte, notamment à l'aide de tailles en pixels, peut entraîner des pertes d'informations (textes tronqués, qui se chevauchent), c'est pourquoi il est conseillé d'utiliser des unités relatives (%, em, rem...).
+
 La procédure pour augmenter la taille du texte est disponible sur la page suivante : [Agrandissement de la taille du texte](/fr/web/outils/methodes-et-outils-de-test/agrandissement-texte/).
+
+**Note&nbsp;:** chez Orange nous avons décidé que le critère serait testé que pour une taille du texte seulement, agrandie à 200% et pas par les deux autres méthodes possibles. Nous pensons, en effet, que cela permet plus de confort aux utilisateurs même si cela demande plus de travail aux développeurs.
 
 ### Contraste des couleurs
 
-Le référentiel n'impose pas d'utiliser ni même n'interdit l'utilisation de certaines couleurs pour les textes. Cela dit, un texte gris clair sur fond blanc par exemple pourra poser des difficultés. Il est donc indispensable de vérifier que la couleur du texte et la couleur du fond fournissent un niveau de contraste suffisant (cf. niveaux ci-dessous). Celui-ci peut être <a href="/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/">mesuré très simplement à l'aide d'outils</a>.
-&nbsp;
+Le référentiel n'impose pas d'utiliser, ni même, n'interdit l'utilisation de certaines couleurs pour les textes. Cela dit, un texte gris clair sur fond blanc par exemple pourra poser des difficultés. Il est donc indispensable de vérifier que la couleur du texte et la couleur du fond fournissent un niveau de contraste suffisant (cf. niveaux ci-dessous). Celui-ci peut être <a href="/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/">mesuré très simplement à l'aide d'outils</a>.
+
 Le [critère 1.4.3 du référentiel](https://www.w3.org/TR/WCAG22/#contrast-minimum) impose des niveaux de contraste minimums permettant de garantir un confort de lecture suffisant. 
 
 Pour les textes standards (non gras) : 
@@ -51,7 +54,7 @@ Pour les liens non-soulignés
 
 Le critère mentionne quelques exceptions soumises à aucune contrainte, notamment les textes des éléments inactifs (un bouton apparaissant grisé par exemple), les textes faisant partie d'un logo ou un nom de marque.
 
-## Et, les utilisateurs dans tout ça ?
+## Et, les utilisateurs dans tout ça&nbsp;?
 
 Comme on vient de le voir, le référentiel n'impose pas de taille minimale car il part du principe qu'il est possible d'agrandir le texte si nécessaire. Dans les faits les utilisateurs n'ajustent pas toujours la taille du texte à leurs besoins, par manque d'habitude ou par méconnaissance des possibilités qui leur sont offertes. C'est pourquoi il est important que la taille par défaut soit suffisante pour garantir un confort de lecture qui donne envie de poursuivre sur le site. 
 
