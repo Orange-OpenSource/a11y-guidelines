@@ -24,7 +24,7 @@ Le [référentiel WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) n'imp
 Si le référentiel n'impose pas de taille minimale pour la taille des caractères, [le critère 1.4.4](https://www.w3.org/TR/WCAG22/#resize-text) indique que l'utilisateur doit pouvoir augmenter la taille du texte jusqu'à 200% sans perte de contenu ou de fonctionnalité. 
 Pour être conforme à ce critère, il est indispensable de tester dans un navigateur.
 
-le critère peut être validé sous l'une de ces trois conditions d'agrandissement&nbsp;:
+Le critère peut être validé selon l'une de ces trois conditions d'agrandissement&nbsp;:
 - Un zoom du texte uniquement depuis le navigateur.
 - Un zoom graphique.
 - L'utilisation d'un composant d'interface propre au site.
