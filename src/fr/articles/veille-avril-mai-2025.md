@@ -62,7 +62,7 @@ Et pour finir, l'étude annuelle de WebAim sur 1 million de site internet, toujo
 - Texte de remplacement aux images dans les reseaux sociaux, comment faire (en) : https://blog.pope.tech/2025/04/02/a-guide-to-alt-text-across-popular-tools/
 - Figma site produit des sites inaccessibles (en) : https://adrianroselli.com/2025/05/do-not-publish-your-designs-on-the-web-with-figma-sites.html
 - encore un retour (en) : https://www.joedolson.com/2025/05/the-true-path-to-garbage-code-figma-sites/
--	Témoignage très intéressant à propos des barrières liées à l'ergonomie mobile (en) : https://makeitfable.com/article/mobile-usability-reality-check-for-inclusive-ux/
+- Témoignage très intéressant à propos des barrières liées à l'ergonomie mobile (en) : https://makeitfable.com/article/mobile-usability-reality-check-for-inclusive-ux/
 
 ## Appli mobile, web mobile
 
