@@ -19,7 +19,7 @@ Notre fiche mémo accessibilité PowerPoint contient un rappel des critères inc
     <p>Rappel des bonnes pratiques pour rédiger une présentation PowerPoint accessible.</p>
     <h2 id="tele-word">Téléchargement</h2>
     <p>      
-      <a href="../../../res/memos/pwp/Memo-PowerPoint-Orange.pdf" class="btn btn-secondary">
+      <a href="../../../res/memos/pwp/Memo-PowerPoint-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (294 Ko)
         <span class="visually-hidden">Mémo rédiger une présentation PowerPoint accessible</span>
       </a>

@@ -20,7 +20,7 @@ Notre fiche mémo accessibilité Excel contient un rappel des critères incontou
     <p>Rappel des bonnes pratiques pour rédiger une présentation Excel accessible.</p>
     <h2 id="tele-word">Téléchargement</h2>
     <p>      
-      <a href="../../../res/memos/excel/Memo-Excel-Orange.pdf" class="btn btn-secondary">
+      <a href="../../../res/memos/excel/Memo-Excel-Orange.pdf" class="btn btn-outline-secondary">
         Télécharger au format PDF (236 Ko)
         <span class="visually-hidden">Mémo rédiger une présentation Excel accessible</span>
       </a>

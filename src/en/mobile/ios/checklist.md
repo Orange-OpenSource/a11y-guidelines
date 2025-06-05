@@ -4,7 +4,7 @@ abstract: "Our essential criteria to be followed for iOS applications"
 displayToc: true
 leftColumn:
   display: false
-  components: 
+  components:
     - "wcag-tests-filters"
 js:
   - /assets/test-ios.js
@@ -28,7 +28,8 @@ This guided test grid is intended for designers, developers, qualifiers, product
   <h2 id="test-keyboard-navigation">Keyboard navigation</h2>
   <h2 id="test-text-size">Text size</h2>
   <h2 id="test-forms">Forms</h2>
-  <h2 id="test-touchscreen-and-interactions">Touchscreen and interactions</h2> 
+  <h2 id="test-touchscreen-and-interactions">Touchscreen and interactions</h2>
+  <h2 id="test-layout">Layout</h2>
   <h2 id="test-technical-aids">Technical aids</h2>
 </section>
 

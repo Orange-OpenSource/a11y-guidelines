@@ -3,6 +3,7 @@ title: "Les listbox avec cases à cocher"
 abstract: "Exemple de liste ARIA (partie 2), intégration de cases à cocher."
 titleBeforeTag: true
 date: "2018-01-08"
+updateDate: "2025-05-05"
 tags:
   - component
 js:
@@ -13,7 +14,7 @@ css:
 
 
 <h2>Introduction</h2>
-<p>Dans cet exemple, nous repartons de <a href="../listbox/">l’exemple sur les <i lang="en">listbox</i></a> auquel nous ajoutons des cases à cocher. Nous obtiendrons un composant qui nous permettra de sélectionner un élément parmi une liste de choix, comme une <i lang="en">listbox</i> classique, mais qui permettra également de cocher certains éléments. Un composant qu’on pourrait typiquement trouver dans un webmail.</p>
+<p>Dans cet exemple, nous repartons de <a href="../listbox/">l’exemple sur les <i lang="en">listbox</i> ou zone de liste</a> auquel nous ajoutons des cases à cocher. Nous obtiendrons un composant qui nous permettra de sélectionner un élément parmi une liste de choix, comme une <i lang="en">listbox</i> classique, mais qui permettra également de cocher certains éléments. Un composant qu’on pourrait typiquement trouver dans un webmail.</p>
 
 <h2>Mise en garde</h2>
 <p>Bien que des progrès soient réalisés à chaque nouvelle version, le support d’<abbr>ARIA</abbr> est encore partiel pour l’ensemble des lecteurs d’écran. Son utilisation doit être conditionnée par des tests de compatibilité sur l’environnement cible (couple navigateur/lecteur d’écran).</p>
@@ -156,11 +157,12 @@ document.querySelectorAll("[type=checkbox]").forEach(checkbox =>{
 
 <h2>Exemple webmail</h2>
 <p>Voici une maquette statique qui met en œuvre le composant <i lang="en">listbox</i> de cet exemple et celui de l’exemple sur les <a href="../listbox/"><i lang="en">listbox</i> classiques</a>.</p>
-<a class="btn btn-secondary" target="_blank" href="webmail/">Ouvrir le webmail</a>
+<a class="btn btn-outline-secondary" target="_blank" href="webmail/">Ouvrir le webmail</a>
 
 <h2>Liens</h2>
 <p>Plus d’infos sur <abbr>ARIA</abbr> et les <i lang="en">listbox</i>&nbsp;:</p>
-<ul lang="en">
-  <li><a hreflang="en" href="http://w3c.github.io/aria/practices/aria-practices.html#Listbox"><abbr>WAI</abbr>-<abbr>ARIA</abbr> Authoring Practices 1.1</a></li>
-  <li><a hreflang="en" href="https://www.w3.org/TR/wai-aria-1.1/#roles">The roles model</a></li>
+<ul>
+  <li><a href=ttps://www.w3.org/WAI/ARIA/apg/patterns/listbox/" hreflang="en" lang="en"><abbr>WAI</abbr>-<abbr>ARIA</abbr> Authoring Practices Guide: listbox</a></li>
+  <li><a href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/Roles/listbox_role"><abbr>MDN</abbr> Utiliser le rôle listbox</a></li>
+  <li><a href="https://www.w3.org/TR/wai-aria-1.2/#listbox" hreflang="en" lang="en"><abbr>WAI</abbr>-<abbr>ARIA</abbr> The roles model: listbox</a></li>
 </ul>
