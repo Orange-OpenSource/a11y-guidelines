@@ -1,7 +1,7 @@
 ---
 title: "#a11y technical watch, April-May 2025"
 abstract: "#a11y anthology, April-May 2025"
-date: "2025-06-07"
+date: "2025-06-05"
 tags:
   - veille
 ---
