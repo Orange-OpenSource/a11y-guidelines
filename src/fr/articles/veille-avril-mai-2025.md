@@ -93,7 +93,7 @@ Et pour finir, l'étude annuelle de WebAim sur 1 million de site internet, toujo
 - Les bénéfices de l'IA pour les personnes handicapées (en) : https://bestcolleges.indiatoday.in/news-detail/ai-for-the-win-how-pwds-are-benefiting-from-ai-tools
 - Des tests d'a11y avec de l'AI, POC intéressant (en) : https://devblogs.microsoft.com/semantic-kernel/guest-blog-letting-ai-help-make-the-world-more-accessible-analyzing-website-accessibility-with-semantic-kernel-and-omniparser/
 - Retours et tests de aXe assistant, rien de transcendant (en) : https://www.craigabbott.co.uk/blog/deque-axe-assistant-first-impressions/
--	Attention au Vibe Coding, notamment en ce qui concerne les questions d'accessibilité (en) : https://cerovac.com/a11y/2025/04/beware-of-vibe-accessibility/
+- Attention au Vibe Coding, notamment en ce qui concerne les questions d'accessibilité (en) : https://cerovac.com/a11y/2025/04/beware-of-vibe-accessibility/
 
 ## Ressources
 
