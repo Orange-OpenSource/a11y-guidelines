@@ -8,7 +8,7 @@ tags:
   - beginner
 ---
 
-Dans cet article, nous allons tenter de répondre aux questions suivantes concernant l'accessibilité des textes dans les pages Web:
+Dans cet article, nous allons tenter de répondre aux questions suivantes concernant l'accessibilité des textes dans les pages Web&nbsp;:
 - Quelle taille faut-il utiliser pour les textes&nbsp;?
 - Quelle est la taille de police minimale à respecter&nbsp;?
 - Quelle couleur puis-je utiliser pour le texte&nbsp;?
