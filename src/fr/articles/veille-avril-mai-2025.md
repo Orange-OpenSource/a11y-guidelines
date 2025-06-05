@@ -66,7 +66,7 @@ Et pour finir, l'étude annuelle de WebAim sur 1 million de site internet, toujo
 
 ## Appli mobile, web mobile
 
--	Le premier draft des WCAG 2.2 appliqués aux Applications Mobile (WCAG2Mobile) vient de sortir (en) : https://www.w3.org/TR/wcag2mobile-22/
+- Le premier draft des WCAG 2.2 appliqués aux Applications Mobile (WCAG2Mobile) vient de sortir (en) : https://www.w3.org/TR/wcag2mobile-22/
 -	Super synthèse de TPGI sur les outils, techniques et bonnes pratiques pour tester les apps mobiles iOS (en) : https://www.tpgi.com/csun-recap-testing-mobile-apps-tools-techniques-and-best-practices-part-1-ios/
 -	Même chose pour les apps mobiles Android (en): https://www.tpgi.com/csun-recap-testing-mobile-apps-tools-techniques-and-best-practices-part-2-android/
 -	Un rapport d'ArcTouch et de Fable qui évalue l'accessibilité de 50 applications Android et iOS de premier plan dans cinq secteurs d'activité, à télécharger (en) : https://arctouch.com/state-of-mobile-app-accessibility#panel-2RbqZjLfMkS99qZnuUqpZH
