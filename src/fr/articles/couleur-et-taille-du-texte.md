@@ -16,7 +16,7 @@ Dans cet article, nous allons tenter de répondre aux questions suivantes concer
 ## Qu'en dit le référentiel&nbsp;?
 
 Le [référentiel WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) n'impose pas de taille minimale ni de couleurs pour les textes. Ceci dit deux critères permettant de répondre à ces questions méritent notre attention : 
-- <a href="https://www.w3.org/TR/WCAG22/#resize-text" lang="en">1.4.4 Resize text</a>
+- <a href="https://www.w3.org/TR/WCAG22/#resize-text" lang="en" hreflang="en">1.4.4 Resize text</a>
 - <a href="https://www.w3.org/TR/WCAG22/#contrast-minimum" lang="en">1.4.3 Contrast (Minimum)</a>
 
 ### Agrandissement de la taille des caractères
