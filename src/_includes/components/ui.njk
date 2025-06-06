@@ -42,30 +42,32 @@
 {%- macro lastPosts(posts, max) -%}
 <ol class="list-unstyled row">
   {%- for post in posts | reverse | limit(max) -%}
-  {% set updateDate = post.data.updateDate %}
+    {% set rawDate = post.data.updateDate or post.date %}
+    {% set effectiveDate = rawDate | jsDate %}
+    {% set isUpdated = post.data.updateDate and post.data.updateDate != post.date %}
+
     <li class="col-md-4 pb-3 d-flex">
       <article class="bg-white p-3 flex-grow-1">
         <h3 class="mb-1">
           <a href="{{ post.url }}" class="text-decoration-none article-focus">{{ post.data.title }}</a>
         </h3>
-        {% if updateDate %}
-          <p class="text-muted mb-0">
-            <span class="visually-hidden">{{ 'releaseDate.label' | translate }}</span>
-            <time datetime="{{ updateDate | toISOString }}">
-              {% localizedDate updateDate, locale %}
-            </time>
-          </p>
+
+        <p class="text-muted mb-0">
+          <span class="visually-hidden">{{ 'releaseDate.label' | translate }}</span>
+          <time datetime="{{ effectiveDate | toISOString }}">
+            {% localizedDate effectiveDate, locale %}
+          </time>
+        </p>
+
+        {% if isUpdated %}
           <p class="text-muted mb-0">
             {{ 'articleUpdate.label' | translate }}
-            <time datetime="{{ post.date | toISOString }}">
+            <time datetime="{{ post.date | jsDate | toISOString }}">
               {% localizedDate post.date, locale %}
             </time>
           </p>
-        {% else %}
-          {% if post.date %}
-            <time class="text-muted" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale %}</time>
-          {% endif %}
         {% endif %}
+
         {% if post.data.abstract %}
           <p class="my-2">{{ post.data.abstract }}</p>
         {% endif %}
@@ -79,7 +81,8 @@
 <ol class="list-unstyled" id="list_article">
 {%- for post in posts %}{% if page.url != post.url -%}
   {% set tags = post.data.tags %}
-  {% set updateDate = post.data.updateDate %}
+  {% set effectiveDate = post | effectiveDate %}
+  {% set isUpdated = post.data.updateDate and post.data.updateDate != post.date %}
 
   <li class="border-bottom border-light py-3"{% if tags %} data-tags="{{ tags | join(";") }}"{% endif %}>
     <article>
@@ -99,22 +102,21 @@
           {%- endfor -%}
         </ul>
       {% endif %}
-      {% if updateDate %}
+      {% if displayDate == true %}
         <p class="text-muted mb-0">
           <span class="visually-hidden">{{ 'releaseDate.label' | translate }}</span>
-          <time datetime="{{ updateDate | toISOString }}">
-            {% localizedDate updateDate, locale %}
+          <time datetime="{{ effectiveDate | jsDate | toISOString }}">
+            {% localizedDate effectiveDate, locale %}
           </time>
         </p>
-        <p class="text-muted mb-0">
-          {{ 'articleUpdate.label' | translate }}
-          <time datetime="{{ post.date | toISOString }}">
-            {% localizedDate post.date, locale %}
-          </time>
-        </p>
-      {% else %}
-        {% if displayDate == true and post.date %}
-          <time class="text-muted d-block" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale  %}</time>
+
+        {% if isUpdated %}
+          <p class="text-muted mb-0">
+            {{ 'articleUpdate.label' | translate }}
+            <time datetime="{{ post.date | jsDate | toISOString }}">
+              {% localizedDate post.date, locale %}
+            </time>
+          </p>
         {% endif %}
       {% endif %}
       {% if post.data.abstract %}
