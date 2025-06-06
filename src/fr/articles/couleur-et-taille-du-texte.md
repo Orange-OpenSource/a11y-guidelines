@@ -15,7 +15,7 @@ Dans cet article, nous allons tenter de répondre aux questions suivantes concer
 
 ## Qu'en dit le référentiel&nbsp;?
 
-Le [référentiel WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) n'impose pas de taille minimale ni de couleurs pour les textes. Ceci dit deux critères permettant de répondre à ces questions méritent notre attention : 
+Le [référentiel WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) n'impose pas de taille minimale ni de couleurs pour les textes. Deux critères permettant de répondre à ces questions méritent notre attention&nbsp;:
 - <a href="https://www.w3.org/TR/WCAG22/#resize-text" lang="en" hreflang="en">1.4.4 Resize text</a>
 - <a href="https://www.w3.org/TR/WCAG22/#contrast-minimum" lang="en">1.4.3 Contrast (Minimum)</a>
 
@@ -33,7 +33,7 @@ le dimensionnement de certains blocs de texte, notamment à l'aide de tailles en
 
 La procédure pour augmenter la taille du texte est disponible sur la page suivante : [Agrandissement de la taille du texte](/fr/web/outils/methodes-et-outils-de-test/agrandissement-texte/).
 
-**Note&nbsp;:** chez Orange nous avons décidé que le critère serait testé que pour une taille du texte seulement, agrandie à 200% et pas par les deux autres méthodes possibles. Nous pensons, en effet, que cela permet plus de confort aux utilisateurs même si cela demande plus de travail aux développeurs.
+**Note&nbsp;:** chez Orange nous avons décidé que ce critère ne serait évalué que pour une taille de texte agrandie à 200% seulement et pas par les deux autres méthodes possibles. Nous pensons, en effet, que cela permet plus de confort aux utilisateurs même si cela demande plus de travail aux développeurs.
 
 ### Contraste des couleurs
 
@@ -54,7 +54,7 @@ Pour les liens non-soulignés
 
 Le critère mentionne quelques exceptions soumises à aucune contrainte, notamment les textes des éléments inactifs (un bouton apparaissant grisé par exemple), les textes faisant partie d'un logo ou un nom de marque.
 
-## Et, les utilisateurs dans tout ça&nbsp;?
+## Et qu'en est-il des utilisateurs&nbsp;?
 
 Comme on vient de le voir, le référentiel n'impose pas de taille minimale car il part du principe qu'il est possible d'agrandir le texte si nécessaire. Dans les faits les utilisateurs n'ajustent pas toujours la taille du texte à leurs besoins, par manque d'habitude ou par méconnaissance des possibilités qui leur sont offertes. C'est pourquoi il est important que la taille par défaut soit suffisante pour garantir un confort de lecture qui donne envie de poursuivre sur le site. 
 
