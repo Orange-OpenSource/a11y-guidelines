@@ -4,23 +4,21 @@ abstract: "Description de l'European Accessibility Act et des actions possibles"
 titleBeforeTag: true
 date: "2025-06-01"
 tags:
-  - intermediate
-  - web
-  - mobile
-  - 
+  - all
 ---
 # L'EAA, European Accessibility Act
+À partir du 28 juin 2025 pour tous les nouveaux produits ou services numériques se doivent d'être accessibles à toutes et tous.
+Chez Orange, il faut mettre à disposition une déclaration d’accessibilité qui est le résultat d’une évaluation de la conformité du produit ou du service par rapport à la norme EN 301 549 qui spécifie les exigences techniques d’accessibilité pour les technologies de l'information et de la communication et sur laquelle s’appuie l’European Accessibility Act.
 
-L’accessibilité numérique vise à rendre possible l’accès à l’information numérique quelle que soit la nature du handicap des personnes et la façon dont chacun consulte l’information. Elle concerne différents aspects des services digitaux utilisés aujourd’hui comme les pages web, les applications mobiles, les documents Word et PDF etc. Il s’agit de respecter des règles fonctionnelles, graphiques, techniques et éditoriales qui permettront à tous d’accéder à l’information et aux services quels que soient leurs outils de consultation.
+## Vous y préparer, la première action se former
+[«&nbsp;Suivre l'e-learning sur l'accessibilité numérique&nbsp;»](https://orange.csod.com/ui/lms-learning-details/app/course/6a573c9c-9a0a-4285-97d1-841325a42bf4)
+[«&nbsp;S'inscrire la sensibilisation sur l'accessibilité numérique avec un escape game d'une heure&nbsp;»](https://orange.csod.com/ui/lms-learning-details/app/event/92f6ad77-277a-41d6-a614-29a976cfbf64)
 
-À partir du 28 juin 2025 pour tous les nouveaux services numériques et du 28 juin 2030 pour les services numériques existants, il faudra mettre à disposition, sur le site ou l’application mobile, une déclaration d’accessibilité qui est le résultat d’une évaluation de la conformité du service par rapport à la norme EN 301 549 qui spécifie les exigences techniques d’accessibilité et sur laquelle s’appuie l’European Accessibility Act. 
-Sont concernés, tous les services liés à l’e-commerce, à la téléphonie, aux médias audiovisuels, au secteur bancaire et au transport. 
-En cas de non respect des nouvelles règles d’accessibilité des produits et services, les sanctions pourraient aller jusqu’à une amende de 300 000 euros.
+## Vous y préparer, le deuxième action se mettre en conformité
+[«&nbsp;Mettre en place les incontournables pour le web&nbsp;»](https://a11y-guidelines.orange.com/fr/web/checklist-initiale/)
+[«&nbsp;Mettre en place les incontournables pour Andoid&nbsp;»](https://a11y-guidelines.orange.com/fr/mobile/android/checklist/)
+[«&nbsp;Mettre en place les incontournables pour iOS&nbsp;»](https://a11y-guidelines.orange.com/fr/mobile/ios/checklist/)
+[«&nbsp;Mettre en place les incontournables pour les documents numériques&nbsp;»](https://a11y-guidelines.orange.com/fr/contenu-et-communication/incontournables/)
 
-## Première action possible
-Se former&nbsp;: (à remplir avec les liens Orange Learning)
-
-## Autre action, connaître le minimum attendu
-Les incontournables web
-Les incontournables mobile
-Les incontournables document
+N'oubliez pas, l’accessibilité numérique vise à rendre possible l’accès à l’information quelle que soit la nature du handicap des personnes et la façon dont chacun consulte cette information. Elle concerne différents aspects des services digitaux utilisés aujourd’hui comme les appareils, les pages web, les applications mobiles, les documents PDF ou autres. 
+Il s’agit de respecter des règles fonctionnelles, graphiques, techniques et éditoriales qui permettront à tous d’accéder à l’information et aux services proposés.
