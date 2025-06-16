@@ -31,7 +31,7 @@
 	"title": "Assurer un contraste suffisamment élevé entre texte et arrière-plan", 
 	"type": ["Accessibility Scanner"], 
 	"tests": ["Installer et lancer <a href='https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor'>Accessibility Scanner</a> sur le mobile."],
-	"verifier": ["Vérifier les résultats d'Accessibility Scanner et vérifier manuellement les alertes sur les contrastes insuffisants sur les textes ou éléments graphiques."], 
+	"verifier": ["Vérifier les alertes d'Accessibility Scanner concernant les contrastes insuffisants sur les textes ou éléments graphiques."], 
 	"resultat": ["<strong>Présence d'éléments textuels ou d'images sous forme de texte suffisamment contrastés&nbsp;:</strong> <ul><li>Taille inférieure à <code>18pt</code> (corps de texte) : contraste minimum de 4,5:1 (7:1 recommandé).</li><li>Taille supérieure ou égale à <code>18pt</code> (titres) : contraste minimum de 3:1 (4.5:1 recommandé).</li></ul></li><li><strong>Pour les textes gras</strong> <ul><li>Taille inférieure à <code>14pt</code> : contraste minimum de 4,5:1 (7:1 recommandé).</li><li>Taille supérieure ou égale à <code>14pt</code> : contraste minimum de 3:1 (4.5:1 recommandé).</li></ul>"], 
 	"exception": "Du texte qui fait partie d'un composant d'interface utilisateur inactif ou d'un logo, un nom de marque.", 
 	"raccourcis": "", 
