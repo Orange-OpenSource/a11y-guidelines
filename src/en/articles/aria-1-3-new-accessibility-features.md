@@ -2,7 +2,7 @@
 title: "New features in ARIA version 1.3: a guide for developers"
 abstract: "Explore the new features introduced in ARIA version 1.3. This article provides practical examples and explains how these enhancements improve web application accessibility for all users."
 titleBeforeTag: true
-date: "2025-03-18"
+date: "2025-06-20"
 tags:
   - web
   - advanced
