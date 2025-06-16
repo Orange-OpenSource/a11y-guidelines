@@ -29,9 +29,9 @@
 }, { 
 	"themes": "Colors and contrasts",
 	"title": "Provide enough contrast between text and background",
-	"type": ["Color Contrast Analyser"], 
-	"tests": ["Take a screenshot.", "Inspect the screenshot with Color Contrast Analyser on PC or Mac."], 
-	"verifier": ["Contrast is sufficient to identify texts or images of text."], 
+	"type": ["Accessibility Scanner"],
+	"tests": ["Install and run <a href='https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor'>Accessibility Scanner</a> on mobile phone."],
+	"verifier": ["Check Accessibility Scanner results and manually verify warnings about insufficient contrasts on texts or graphical elements."], 
 	"resultat": ["<strong>Presence of text elements or images in text form with sufficient contrast:</strong><ul><li>Size less than <code>18pt</code> (body text): minimum contrast of 4.5:1 (7:1 recommended).</li><li>Size greater than or equal to <code>18pt</code> (headings): minimum contrast of 3:1 (4.5:1 recommended).</li></ul></li><li><strong>For bold text:</strong> <ul><li>Size less than <code>14pt</code>: minimum contrast of 4.5:1 (7:1 recommended).</li><li>Size greater than or equal to <code>14pt</code>: minimum contrast of 3:1 (4.5:1 recommended).</li></ul>"], 
 	"exception": "Text that is part of an inactive user interface component or a logo, a brand name.", 
 	"raccourcis": "", 

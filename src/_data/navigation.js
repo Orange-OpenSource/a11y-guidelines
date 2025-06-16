@@ -40,7 +40,7 @@ module.exports = {
           { label: 'Test', href: '/en/web/test/' },
           { label: 'Audit', href: '/en/web/wcag-audit/' },
           { label: 'Toolbox', href: '/en/web/toolbox/' },
-          { label: 'Must-haves', href: '/en/web/must-haves-checklist/' }
+          { label: 'Our 11 Essentials', href: '/en/web/must-haves-checklist/' }
         ]
       },
       {
@@ -59,7 +59,7 @@ module.exports = {
           { label: 'Test', href: '/en/mobile/android/test/' },
           { label: 'Audit', href: '/en/mobile/android/wcag-audit/' },
           { label: 'Toolbox', href: '/en/mobile/android/toolbox/' },
-          { label: 'Must-haves', href: '/en/mobile/android/checklist/' }
+          { label: 'Our 11 Essentials', href: '/en/mobile/android/checklist/' }
         ]
       },
       {
@@ -78,7 +78,7 @@ module.exports = {
           { label: 'Test', href: '/en/mobile/ios/test/' },
           { label: 'Audit', href: '/en/mobile/ios/wcag-audit/' },
           { label: 'Toolbox', href: '/en/mobile/ios/toolbox/' },
-          { label: 'Must-haves', href: '/en/mobile/ios/checklist/' },
+          { label: 'Our 11 Essentials', href: '/en/mobile/ios/checklist/' },
           { label: 'WWDC', href: '/en/mobile/ios/wwdc/' }
         ]
       },
@@ -101,7 +101,7 @@ module.exports = {
           { label: 'Emails', href: '/en/content-and-communication/emails/' },
           { label: 'Audio/video content', href: '/en/content-and-communication/animated-components/' },
           { label: 'E-learning', href: '/en/content-and-communication/e-learning/' },
-          { label: 'Must-haves', href: '/en/content-and-communication/must-haves/' }
+          { label: 'Our 11 Essentials', href: '/en/content-and-communication/must-haves/' }
         ]
       },
       { label: 'Articles', href: '/en/articles/' },
@@ -133,7 +133,7 @@ module.exports = {
           { label: 'Tester', href: '/fr/web/tester/' },
           { label: 'Auditer', href: '/fr/web/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/web/outils/' },
-          { label: 'Incontournables', href: '/fr/web/checklist-initiale/' }
+          { label: 'Nos 11 Incontournables', href: '/fr/web/checklist-initiale/' }
         ]
       },
       {
@@ -152,7 +152,7 @@ module.exports = {
           { label: 'Tester', href: '/fr/mobile/android/test/' },
           { label: 'Auditer', href: '/fr/mobile/android/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/mobile/android/outils/' },
-          { label: 'Incontournables', href: '/fr/mobile/android/checklist/' }
+          { label: 'Nos 11 Incontournables', href: '/fr/mobile/android/checklist/' }
         ]
       },
       {
@@ -171,7 +171,7 @@ module.exports = {
           { label: 'Tester', href: '/fr/mobile/ios/test/' },
           { label: 'Auditer', href: '/fr/mobile/ios/audit-wcag/' },
           { label: 'Boite à outils', href: '/fr/mobile/ios/outils/' },
-          { label: 'Incontournables', href: '/fr/mobile/ios/checklist/' },
+          { label: 'Nos 11 Incontournables', href: '/fr/mobile/ios/checklist/' },
           { label: 'WWDC', href: '/fr/mobile/ios/wwdc/' }
         ]
       },
@@ -194,7 +194,7 @@ module.exports = {
           { label: 'Emails', href: '/fr/contenu-et-communication/emails/' },
           { label: 'Contenus audios/vidéos', href: '/fr/contenu-et-communication/composants-animes/' },
 		      { label: 'E-learning', href: '/fr/contenu-et-communication/e-learning/' },
-          { label: 'Incontournables', href: '/fr/contenu-et-communication/incontournables/' }
+          { label: 'Nos 11 Incontournables', href: '/fr/contenu-et-communication/incontournables/' }
         ]
       },
       { label: 'Articles', href: '/fr/articles/' },
