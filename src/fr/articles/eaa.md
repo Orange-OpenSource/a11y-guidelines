@@ -4,7 +4,9 @@ abstract: "Description de l'European Accessibility Act et des actions possibles"
 titleBeforeTag: true
 date: "2025-06-01"
 tags:
-  - all
+  - web
+  - mobile
+  - beginner
 ---
 # L'EAA, European Accessibility Act
 À partir du 28 juin 2025 pour tous les nouveaux produits ou services numériques se doivent d'être accessibles à toutes et tous.
