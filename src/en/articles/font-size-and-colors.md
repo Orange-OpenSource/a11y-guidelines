@@ -25,7 +25,7 @@ The [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) do not impose a mi
 If the guidelines do not impose a minimum size for characters, [criterion 1.4.4](https://www.w3.org/TR/WCAG22/#resize-text) indicates that the user must be able to increase text size up to 200% without loss of content or functionality. To comply with this criterion, it is essential to test. The procedure for increasing text size is available on the following page: [Text Size Enlargement](https://a11y-guidelines.orange.com/en/web/toolbox/methods-and-test-tools/text-zoom/).
 Sometimes, the sizing of certain blocks of text, particularly when using pixel sizes, can lead to the loss of information (truncated or overlapped texts). It is therefore advisable to use relative units (%, em, rem, etc.). 
 
-The method for increasing text size is available here: [Text size enlargement](/en/web/toolbox/methods-and-test-tools/text-zoom/).
+The procedure for increasing text size is available on the following page: [Text size enlargement](/en/web/toolbox/methods-and-test-tools/text-zoom/).
 
 **Note:** at Orange, we decided to use 200% text only size enlargement to evaluate this criterion and not by the other two possible methods. We believe that this provides greater comfort for users, even if it requires more work for developers.
 
