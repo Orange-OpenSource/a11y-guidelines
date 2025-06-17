@@ -16,7 +16,7 @@ Pour tout applicatif Orange, nous mettons à disposition une déclaration d’ac
 [«&nbsp;Suivre l'e-learning sur l'accessibilité numérique&nbsp;»](https://orange.csod.com/ui/lms-learning-details/app/course/6a573c9c-9a0a-4285-97d1-841325a42bf4)
 [«&nbsp;S'inscrire à la sensibilisation sur l'accessibilité numérique avec un escape game d'une heure&nbsp;»](https://orange.csod.com/ui/lms-learning-details/app/event/92f6ad77-277a-41d6-a614-29a976cfbf64)
 
-## Vous y préparer, le deuxième action se mettre en conformité
+## Vous y préparer, la deuxième action : se mettre en conformité
 [«&nbsp;Mettre en place les incontournables pour le web&nbsp;»](https://a11y-guidelines.orange.com/fr/web/checklist-initiale/)
 [«&nbsp;Mettre en place les incontournables pour Andoid&nbsp;»](https://a11y-guidelines.orange.com/fr/mobile/android/checklist/)
 [«&nbsp;Mettre en place les incontournables pour iOS&nbsp;»](https://a11y-guidelines.orange.com/fr/mobile/ios/checklist/)
