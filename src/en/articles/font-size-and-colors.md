@@ -33,7 +33,7 @@ The procedure for increasing text size is available on the following page: [Text
 
 ### Color contrast
 
-The guidelines do not require the use of, or even prohibit the use of, certain colors for text. However, a light gray text on a white background, for example, could be difficult. It is therefore essential to check that the text color and the background color provide a sufficient level of contrast (see levels below). This can be done easily with help [of tools](https://a11y-guidelines.orange.com/en/web/toolbox/methods-and-test-tools/color-contrast-level/).
+The guidelines do not require or prohibit the use of certain colors for text. However, a light gray text on a white background, for example, could pose difficulties. It is therefore essential to check that the text color and the background color provide a sufficient level of contrast (see levels below). This can be done easily with help [of tools](https://a11y-guidelines.orange.com/en/web/toolbox/methods-and-test-tools/color-contrast-level/).
 
 [Criterion 1.4.3 of the standard](https://www.w3.org/TR/WCAG22/#contrast-minimum) details the required contrast levels.
 
