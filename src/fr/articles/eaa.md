@@ -9,7 +9,7 @@ tags:
   - beginner
 ---
 # L'EAA, European Accessibility Act
-À partir du 28 juin 2025, tous les nouveaux produits ou services numériques d'Orange se doivent d'être accessibles à toutes et tous.
+À partir du 28 juin 2025, tous les nouveaux produits ou services d'Orange se doivent d'être accessibles à toutes et tous.
 Pour tout applicatif Orange, nous mettons à disposition une déclaration d’accessibilité, résultat d’une évaluation de la conformité du produit ou du service par rapport à la norme EN 301 549. Cette norme liste l'ensemble des exigences techniques d’accessibilité pour les technologies de l'information et de la communication. EN 301 549 eest le documet normatif sur lequel s’appuie l’European Accessibility Act et sa version définitive sera publiée en Février 2026.
 
 ## Vous y préparer, la première action se former
