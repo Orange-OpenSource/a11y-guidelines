@@ -3,7 +3,7 @@ title: "Text size and color "
 abstract: "What size and what colors should the texts adopt?"
 titleBeforeTag: true
 date: "2021-07-05"
-updateDate: "2025-06-13"
+updateDate: "2025-06-28"
 tags:
   - web
   - beginner
