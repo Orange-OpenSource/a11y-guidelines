@@ -1,5 +1,5 @@
 ---
-title: "EAA, êtes vous prêts?"
+title: "EAA, êtes-vous prêts ?"
 abstract: "Description de l'European Accessibility Act et des actions possibles"
 titleBeforeTag: true
 date: "2025-06-01"
