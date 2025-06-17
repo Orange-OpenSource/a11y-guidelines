@@ -18,7 +18,7 @@ Pour tout applicatif Orange, nous mettons à disposition une déclaration d’ac
 
 ## Vous y préparer, la deuxième action : se mettre en conformité
 [«&nbsp;Mettre en place les incontournables pour le web&nbsp;»](https://a11y-guidelines.orange.com/fr/web/checklist-initiale/)
-[«&nbsp;Mettre en place les incontournables pour Andoid&nbsp;»](https://a11y-guidelines.orange.com/fr/mobile/android/checklist/)
+[«&nbsp;Mettre en place les incontournables pour Android&nbsp;»](https://a11y-guidelines.orange.com/fr/mobile/android/checklist/)
 [«&nbsp;Mettre en place les incontournables pour iOS&nbsp;»](https://a11y-guidelines.orange.com/fr/mobile/ios/checklist/)
 [«&nbsp;Mettre en place les incontournables pour les documents numériques&nbsp;»](https://a11y-guidelines.orange.com/fr/contenu-et-communication/incontournables/)
 
