@@ -24,10 +24,12 @@
     
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -101,7 +103,7 @@
 </a>
             </li>
             <li class="nav-item">
-              <a href="/en/articles/" class="nav-link">
+              <a href="/en/articles/" class="nav-link active" aria-current="true">
   Articles
 </a>
             </li><li class="nav-item d-md-none">
@@ -137,8 +139,13 @@
   <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
   <ol class="breadcrumb">
       
-        <li class="breadcrumb-item">
+        <li class="breadcrumb-item d-none d-sm-flex">
           <a class="breadcrumb-focus" href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-focus" href="/en/articles/">Articles</a>
         </li>
       
       
@@ -152,17 +159,43 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#get-ready-the-first-thing-to-do-get-trained" class="dropdown-item text-wrap">Get ready, the first thing to do : get trained</a><a href="#get-ready-the-second-thing-to-do-apply-11-accessibility-essentials" class="dropdown-item text-wrap">Get ready, the second thing to do : apply 11 accessibility essentials</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main">
-      <h1>EAA, European Accessibility Act</h1>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          
+            <h1>EAA, are you ready?</h1>
+            
+              <span class="visually-hidden" id="filters_label">
+                Associated themes:
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><div class="tagType" data-tag="web">Web</a></li>
+              <li class="list-inline-item"><div class="tagType" data-tag="mobile">Mobile</a></li>
+              <li class="list-inline-item"><div class="tagType" data-tag="beginner">Beginner</a></li>
+              </ul>
+            
+            
+              <time class="text-muted" datetime="2025-06-01T00:00:00.000Z">June 01, 2025</time>
+            
+          
+          <div class="mt-4">
+          <h1>EAA, European Accessibility Act</h1>
 <p>In Europe, starting June 28th 2025, all the products and services that Orange releases must be accessible.<br>
 Every product or service made by or for Orange can get an accessibility statement, it describes the results of an assessment of the compliancy with the standard EN 301 549. This standard specifies the accessibility requirements for information and communications technology such as devices, websites, mobile apps or digital documents. EN 301 549 is the standard on which the European Accessibility Act is based, its final version will be released in February 2026.</p>
-<h2 id="get-ready-the-first-thing-to-do-get-trained" class="h2-focus">Get ready, the first thing to do : get trained <a class="header-anchor" href="#get-ready-the-first-thing-to-do-get-trained" id="heading-1" aria-labelledby="heading-1">#</a></h2>
+<h2 id="get-ready-the-first-thing-to-do-get-trained" class="h2-focus">Get ready, the first thing to do : get trained <a class="header-anchor" href="#get-ready-the-first-thing-to-do-get-trained" id="heading-80" aria-labelledby="heading-80">#</a></h2>
 <p><a href="https://orange.csod.com/ui/lms-learning-details/app/course/4be37d72-c183-4e44-b8e8-de112cb173d1">« Get your digital accessibility visa »</a><br>
 <a href="https://orange.csod.com/ui/lms-learning-details/app/event/92f6ad77-277a-41d6-a614-29a976cfbf64">« Register to the digital accessibility awareness training that includes a 1 hour escape game »</a></p>
-<h2 id="get-ready-the-second-thing-to-do-apply-11-accessibility-essentials" class="h2-focus">Get ready, the second thing to do : apply 11 accessibility essentials <a class="header-anchor" href="#get-ready-the-second-thing-to-do-apply-11-accessibility-essentials" id="heading-2" aria-labelledby="heading-2">#</a></h2>
+<h2 id="get-ready-the-second-thing-to-do-apply-11-accessibility-essentials" class="h2-focus">Get ready, the second thing to do : apply 11 accessibility essentials <a class="header-anchor" href="#get-ready-the-second-thing-to-do-apply-11-accessibility-essentials" id="heading-81" aria-labelledby="heading-81">#</a></h2>
 <p><a href="https://a11y-guidelines.orange.com/en/web/must-haves-checklist/">« Apply 11 essentials for a website »</a><br>
 <a href="https://a11y-guidelines.orange.com/en/mobile/android/checklist/">« Apply 11 essentials for an Android application »</a><br>
 <a href="https://a11y-guidelines.orange.com/en/mobile/ios/checklist/">« Apply 11 essentials for an iOS application »</a><br>
@@ -170,7 +203,23 @@ Every product or service made by or for Orange can get an accessibility statemen
 <p>Don't forget, accessibility is here to allow the access to an information to all people, regardless of disability type or severity of impairment.<br>
 A set of functional, graphic, tecnical and editorial guidelines must be followed in order to allow everyone to have access to a product or service.</p>
 
-    </main>
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#get-ready-the-first-thing-to-do-get-trained" class="nav-link text-muted">Get ready, the first thing to do : get trained</a></li><li class="nav-item position-relative">
+            <a href="#get-ready-the-second-thing-to-do-apply-11-accessibility-essentials" class="nav-link text-muted">Get ready, the second thing to do : apply 11 accessibility essentials</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     
 
 <footer id="footer" class="o-footer" role="contentinfo">
@@ -202,7 +251,7 @@ A set of functional, graphic, tecnical and editorial guidelines must be followed
           </a>
         </li>
         <li class="nav-item ms-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/eaa.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/eaa.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
             Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
@@ -225,12 +274,14 @@ A set of functional, graphic, tecnical and editorial guidelines must be followed
       <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
     
     
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
     <script>
       const Application = {
         lang: "en",
         vendors: {
-          highlightJS: false,
-          highlightTitle: false
+          highlightJS: true,
+          highlightTitle: true
         }
       }
     </script>
