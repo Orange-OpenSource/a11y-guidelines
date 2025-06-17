@@ -1578,5 +1578,37 @@
   {
     "old": "web/outils/orange-uuv/",
     "new": "/fr/web/outils/"
+  },
+  {
+    "old": "/en/web/must-haves-checklist",
+    "new": "/en/web/essentials-checklist"
+  },
+  {
+    "old": "/en/mobile/android/checklist",
+    "new": "/en/mobile/android/essentials-checklist"
+  },
+  {
+    "old": "/en/mobile/ios/checklist",
+    "new": "/en/mobile/ios/essentials-checklist"
+  },
+  {
+    "old": "/en/content-and-communication/must-haves",
+    "new": "/en/content-and-communication/essentials-checklist"
+  },
+  {
+    "old": "/fr/web/checklist-initiale",
+    "new": "/fr/web/checklist-incontournables"
+  },
+  {
+    "old": "/fr/mobile/android/checklist",
+    "new": "/fr/mobile/android/checklist-incontournables"
+  },
+  {
+    "old": "/fr/mobile/ios/checklist",
+    "new": "/fr/mobile/ios/checklist-incontournables"
+  },
+  {
+    "old": "/fr/contenu-et-communication/incontournables",
+    "new": "/fr/contenu-et-communication/checklist-incontournables"
   }
 ]
