@@ -11,7 +11,9 @@ tags:
 
 # EAA, European Accessibility Act
 In Europe, starting June 28th 2025, all the products and services that Orange releases must be accessible.
-Every product or service made by or for Orange can get an accessibility statement, it describes the results of an assessment of the compliancy with the standard EN 301 549. This standard specifies the accessibility requirements for information and communications technology such as devices, websites, mobile apps or digital documents. EN 301 549 is the standard on which the European Accessibility Act is based, its final version will be released in February 2026.
+Every product or service made by or for Orange can get an accessibility statement, it describes the results of an assessment of the compliancy with the standard EN 301 549. 
+
+This standard specifies the accessibility requirements for information and communications technology such as devices, websites, mobile apps or digital documents. EN 301 549 is the standard on which the European Accessibility Act is based, its final version will be released in February 2026.
 
 ## Get ready, the first thing to do : get trained
 - [Get your digital accessibility visa](https://orange.csod.com/ui/lms-learning-details/app/course/4be37d72-c183-4e44-b8e8-de112cb173d1)
