@@ -7,13 +7,20 @@ tags:
   - component
 ---
 
-<h2>Préambule</h2>
-<p>Dans cet exemple nous allons utiliser le <a href="https://boosted.orange.com/docs/5.1/components/dropdowns/">menu déroulant</a> disponible dans la librairie <a href="https://boosted.orange.com/">Boosted</a>. Cette librairie basée sur Bootstrap permet de concevoir rapidement des interfaces accessibles aux couleurs de la charte Orange.</p>
+<h2>Introduction</h2>
 
-<p>L'exemple d'implémentation décrit ci-dessous est aussi bien adapté aux menus de navigation comme aux composants unitaires présentant une liste d'actions.</p>
+<p>Les menus déroulants permettent d’organiser et d’afficher des options de navigation ou des actions de manière compacte et structurée. Cependant, s’ils ne sont pas correctement développé, ils créer des problèmes d’accessibilité pour de nombreux utilisateurs.</p>
+<p>Un menu déroulant accessible garantit une navigation fluide et intuitive pour tous, en respectant la conformité et les recommandations des normes (<abbr>WCAG</abbr>, <abbr>RGAA</abbr>, <abbr>EN301549</abbr> etc.).</p>
+<p>Dans les exemples suivants, nous allons utiliser le <a href="https://boosted.orange.com/docs/5.1/components/dropdowns/">menu déroulant</a> disponible dans la librairie <a href="https://boosted.orange.com/">Boosted</a>. Cette librairie basée sur Bootstrap permet de concevoir rapidement des interfaces accessibles aux couleurs de la charte Orange et conforme aux normes WCAG et au <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/">motif de conception aria combobox</a></p>
 
-<h2>Rendu final</h2>
-<p>Voici le rendu de notre menu.</p>
+<h2>Menu déroulant</h2>
+<p>Pour que le menu déroulant soit accessible, il faudra faire attention aux points suivants :</p>
+<ul>
+<li>Permettre la navigation à la souris et au clavier (navigation avec la touche <kbd>Tab</kbd>, activation avec <kbd>Entrée</kbd> ou <kbd>Espace</kbd>, déplacement avec les flèches directionnelles).</li>
+<li>Être compatible avec les technologies d’assistance(<abbr>AT</abbr>), en fournissant une sémantique, des rôles et des attributs adaptés.(<code>aria-expanded</code> et <code>aria-current</code> par exemple)</i>
+<li>Une visibilité et un contraste suffisants pour une bonne lisibilité des textes et du focus au clavier.</li>
+<li>Le comportement du menu déroulant et de la sélection d'un élément doit être prévisible et cohérent pour éviter toute confusion.</li>
+</ul>
 
 <!-- Final menu -->
 <div class="dropdown">
@@ -35,12 +42,12 @@ tags:
 <!-- Code de l'exemple 1 -->
 <pre><code class="html">
 &lt;div class="dropdown"&gt;
-  &lt;button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown"&gt;
+  &lt;button class="btn btn-outline-secondary dropdown-toggle" aria-expanded="false" type="button" id="dropdownMenu1" data-bs-toggle="dropdown"&gt;
     Mon compte
     &lt;span class="caret"&gt;&lt;/span&gt;
   &lt;/button&gt;
   &lt;ul class="dropdown-menu"&gt;
-    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mon panier&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#" &gt;Mon panier&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mes commandes&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mes informations&lt;/a&gt;&lt;/li&gt;
     &lt;li role="separator" class="dropdown-divider"&gt;&lt;/li&gt;
@@ -50,7 +57,6 @@ tags:
 </code></pre>
 
 <h2>Place aux tests</h2>
-<p>Pour que ce menu soit accessible, il doit être utilisable, à la souris, au clavier et au lecteur d'écran.</p>
 
 <h3>Navigation au clavier</h3>
  <dl>
