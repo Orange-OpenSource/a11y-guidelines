@@ -3,6 +3,7 @@ title: "Text size and color "
 abstract: "What size and what colors should the texts adopt?"
 titleBeforeTag: true
 date: "2021-07-05"
+updateDate: "2025-06-20"
 tags:
   - web
   - beginner
@@ -13,16 +14,18 @@ In this article, we will try to answer the following questions concerning the ac
 - What is the minimum font size to respect?
 - What color can I use for the text? 
 
-## What do the guidelines say ?
+## What do the guidelines say?
 
-The [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) do not impose a minimum size or colors for texts. However two criteria must be taken into consideration:
+The [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) do not impose a minimum size or colors for texts. However, two criteria must be taken into consideration:
 - <a href="https://www.w3.org/TR/WCAG22/#resize-text"> 1.4.4 Resize text </a>
 - <a href="https://www.w3.org/TR/WCAG22/#contrast-minimum"> 1.4.3 Contrast (Minimum) </a> 
 
 ### Text size enlargement
 
-If the guidelines do not impose a minimum size for characters, [criterion 1.4.4](https://www.w3.org/TR/WCAG22/#resize-text) indicates that the user must be able to increase text size up to 200% without loss of content or functionality. To comply with this criterion, it is essential to test. The procedure to increase text size is available on the following page: [Text size enlargement](https://a11y-guidelines.orange.com/en/web/toolbox/methods-and-test-tools/text-zoom/).
-Sometimes the sizing of certain blocks of text, in particular using sizes in pixels, can lead to loss of information (truncated texts), it is therefore advisable to use relative units (%, em, rem ...). 
+If the guidelines do not specify a minimum size for characters, [criterion 1.4.4](https://www.w3.org/TR/WCAG22/#resize-text) indicates that users must be able to increase text size up to 200% without loss of content or functionality. To comply with this criterion, it is essential to test. The procedure for increasing text size is available on the following page: [Text Size Enlargement](https://a11y-guidelines.orange.com/en/web/toolbox/methods-and-test-tools/text-zoom/).
+Sometimes the sizing of certain blocks of text, in particular using sizes in pixels, can lead to loss of information (truncated or overlaped texts), it is therefore advisable to use relative units (%, em, rem...). 
+
+**Note:** At Orange, we have decided that this criterion will only be evaluated for text size enlarged to 200%, and not by the other two possible methods. We believe this provides greater comfort for users, even if it requires more work for developers.
 
 ### Color contrast
 
@@ -43,8 +46,8 @@ For non-underlined links
 
 The criterion mentions a few exceptions subject to no constraint, in particular the texts of inactive elements (a button appearing grayed out for example), the texts forming part of a logo or a brand name. 
 
-## What about users ?
+## What about users?
 
-The guidelines do not impose a minimum size because it assumes that it is possible to enlarge the text if necessary. In fact, users do not always adjust the size of the text to their needs, due to a lack of habit or ignorance of the possibilities offered to them. This is why it is important that the default size is sufficient to ensure reading comfort.
+The guidelines do not impose a minimum size because it assumes that it is possible to enlarge the text if necessary. In fact, users do not always adjust the size of the text to their needs, due to a lack of habit or ignorance of the possibilities offered to them. This is why the default size must be sufficient to ensure reading comfort.
 
-The size and the color are not the only characteristics which come into play on the readability of a text, indeed the typeface or the use of text in italics can have important consequences. You will find some additional recommendations on this subject in the [editorial content section ](https://a11y-guidelines.orange.com/en/content-and-communication/).
+The size and the color are not the only characteristics that come into play on the readability of a text, indeed, the typeface or the use of text in italics can have important consequences. You will find some additional recommendations on this subject in the [editorial content section ](https://a11y-guidelines.orange.com/en/content-and-communication/).
