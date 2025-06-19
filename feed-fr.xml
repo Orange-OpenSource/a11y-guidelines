@@ -12,6 +12,14 @@
   </author>
   
   <entry>
+    <title>Taille et couleur des textes</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/couleur-et-taille-du-texte/"/>
+    <updated>2025-06-20T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/couleur-et-taille-du-texte/</id>
+    <content xml:lang="fr" type="html">Quelle taille et quelles couleurs doit ont adopter pour les textes ?</content>
+  </entry>
+  
+  <entry>
     <title>Veille #A11y Avril-Mai 2025</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/veille-avril-mai-2025/"/>
     <updated>2025-06-05T00:00:00Z</updated>
@@ -409,14 +417,6 @@
     <updated>2021-08-03T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/veille-juin-juillet-2021/</id>
     <content xml:lang="fr" type="html">Florilèges de ressources en #a11y, Juin-Juillet 2021</content>
-  </entry>
-  
-  <entry>
-    <title>Taille et couleur des textes</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/couleur-et-taille-du-texte/"/>
-    <updated>2021-07-05T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/couleur-et-taille-du-texte/</id>
-    <content xml:lang="fr" type="html">Quelle taille et quelles couleurs doit ont adopter pour les textes ?</content>
   </entry>
   
   <entry>

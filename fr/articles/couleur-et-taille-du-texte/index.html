@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#quen-dit-le-referenciel" class="dropdown-item text-wrap">Qu&#39;en dit le référenciel ?</a><a href="#agrandissement-de-la-taille-des-caracteres" class="dropdown-item text-wrap">Agrandissement de la taille des caractères</a><a href="#contraste-des-couleurs" class="dropdown-item text-wrap">Contraste des couleurs</a><a href="#et-les-utilisateurs-dans-tout-ca" class="dropdown-item text-wrap">Et, les utilisateurs dans tout ça ?</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#quen-dit-le-referentiel" class="dropdown-item text-wrap">Qu&#39;en dit le référentiel ?</a><a href="#agrandissement-de-la-taille-des-caracteres" class="dropdown-item text-wrap">Agrandissement de la taille des caractères</a><a href="#contraste-des-couleurs" class="dropdown-item text-wrap">Contraste des couleurs</a><a href="#et-quen-est-il-des-utilisateurs" class="dropdown-item text-wrap">Et qu&#39;en est-il des utilisateurs ?</a></div>
     </nav>
         
       </div>
@@ -184,37 +184,48 @@
               </ul>
             
             
-              <time class="text-muted" datetime="2021-07-05T00:00:00.000Z">05 juillet 2021</time>
+              <p class="text-muted mb-0">
+                <span class="visually-hidden">Date de parution</span>
+                <time datetime="2025-06-20T00:00:00.000Z">
+                  20 juin 2025
+                </time>
+              </p>
+              <p class="text-muted mb-0" >
+                Mise à jour de l&#39;article du
+                <time datetime="2021-07-05T00:00:00.000Z">
+                  05 juillet 2021
+                </time>
+              </p>
             
           
           <div class="mt-4">
-          <p>Dans cet article, nous allons tenter de répondre aux questions suivantes concernant l'accessibilité des textes dans les pages Web:</p>
+          <p>Dans cet article, nous allons tenter de répondre aux questions suivantes concernant l'accessibilité des textes dans les pages Web :</p>
 <ul>
-<li>Quelle taille faut-il utiliser pour les textes ?</li>
-<li>Quelle est la taille de police minimale à respecter ?</li>
-<li>Quelle couleur puis-je utiliser pour le texte ?</li>
+<li>Quelle taille faut-il utiliser pour les textes ?</li>
+<li>Quelle est la taille de police minimale à respecter ?</li>
+<li>Quelle couleur puis-je utiliser pour le texte ?</li>
 </ul>
-<h2 id="quen-dit-le-referenciel" class="h2-focus">Qu'en dit le référenciel ? <a class="header-anchor" href="#quen-dit-le-referenciel" id="heading-452" aria-labelledby="heading-452">#</a></h2>
-<p>Le <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">référentiel WCAG</a> n'impose pas de taille minimale ni de couleurs pour les textes. Ceci dit deux critères permettant de répondre à ces questions méritent notre attention :</p>
+<h2 id="quen-dit-le-referentiel" class="h2-focus">Qu'en dit le référentiel ? <a class="header-anchor" href="#quen-dit-le-referentiel" id="heading-454" aria-labelledby="heading-454">#</a></h2>
+<p>Le <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">référentiel WCAG</a> n'impose pas de taille minimale ni de couleurs pour les textes. Deux critères permettant de répondre à ces questions méritent notre attention :</p>
 <ul>
-<li><a href="https://www.w3.org/TR/WCAG22/#resize-text" lang="en">1.4.4 Resize text</a></li>
+<li><a href="https://www.w3.org/TR/WCAG22/#resize-text" lang="en" hreflang="en">1.4.4 Resize text</a></li>
 <li><a href="https://www.w3.org/TR/WCAG22/#contrast-minimum" lang="en">1.4.3 Contrast (Minimum)</a></li>
 </ul>
-<h3 id="agrandissement-de-la-taille-des-caracteres">Agrandissement de la taille des caractères <a class="header-anchor" href="#agrandissement-de-la-taille-des-caracteres" id="heading-453" aria-labelledby="heading-453">#</a></h3>
+<h3 id="agrandissement-de-la-taille-des-caracteres">Agrandissement de la taille des caractères <a class="header-anchor" href="#agrandissement-de-la-taille-des-caracteres" id="heading-455" aria-labelledby="heading-455">#</a></h3>
 <p>Si le référentiel n'impose pas de taille minimale pour la taille des caractères, <a href="https://www.w3.org/TR/WCAG22/#resize-text">le critère 1.4.4</a> indique que l'utilisateur doit pouvoir augmenter la taille du texte jusqu'à 200% sans perte de contenu ou de fonctionnalité.<br>
 Pour être conforme à ce critère, il est indispensable de tester dans un navigateur.</p>
-<p>le critère peut être validé sous l'une de ces trois conditions d'agrandissement :</p>
+<p>Le critère peut être validé selon l'une de ces trois conditions d'agrandissement :</p>
 <ul>
 <li>Un zoom du texte uniquement depuis le navigateur.</li>
 <li>Un zoom graphique.</li>
 <li>L'utilisation d'un composant d'interface propre au site.</li>
 </ul>
-<p>le dimensionnement de certains blocs de texte, notamment à l'aide de tailles en pixels, peut entraîner des pertes d'informations (textes tronqués), c'est pourquoi il est conseillé d'utiliser des unités relatives (%, em, rem ...).<br>
-La procédure pour augmenter la taille du texte est disponible sur la page suivante : <a href="/fr/web/outils/methodes-et-outils-de-test/agrandissement-texte/">Agrandissement de la taille du texte</a>.</p>
-<h3 id="contraste-des-couleurs">Contraste des couleurs <a class="header-anchor" href="#contraste-des-couleurs" id="heading-454" aria-labelledby="heading-454">#</a></h3>
-<p>Le référentiel n'impose pas d'utiliser ni même n'interdit l'utilisation de certaines couleurs pour les textes. Cela dit, un texte gris clair sur fond blanc par exemple pourra poser des difficultés. Il est donc indispensable de vérifier que la couleur du texte et la couleur du fond fournissent un niveau de contraste suffisant (cf. niveaux ci-dessous). Celui-ci peut être <a href="/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/">mesuré très simplement à l'aide d'outils</a>.<br>
- <br>
-Le <a href="https://www.w3.org/TR/WCAG22/#contrast-minimum">critère 1.4.3 du référentiel</a> impose des niveaux de contraste minimums permettant de garantir un confort de lecture suffisant.</p>
+<p>le dimensionnement de certains blocs de texte, notamment à l'aide de tailles en pixels, peut entraîner des pertes d'informations (textes tronqués, qui se chevauchent), c'est pourquoi il est conseillé d'utiliser des unités relatives (%, em, rem...).</p>
+<p>La procédure pour augmenter la taille du texte est disponible sur la page suivante : <a href="/fr/web/outils/methodes-et-outils-de-test/agrandissement-texte/">Agrandissement de la taille du texte</a>.</p>
+<p><strong>Note :</strong> chez Orange nous avons décidé que ce critère ne serait évalué que pour une taille de texte agrandie à 200% seulement et pas par les deux autres méthodes possibles. Nous pensons, en effet, que cela permet plus de confort aux utilisateurs même si cela demande plus de travail aux développeurs.</p>
+<h3 id="contraste-des-couleurs">Contraste des couleurs <a class="header-anchor" href="#contraste-des-couleurs" id="heading-456" aria-labelledby="heading-456">#</a></h3>
+<p>Le référentiel n'impose pas d'utiliser, ni même, n'interdit l'utilisation de certaines couleurs pour les textes. Cela dit, un texte gris clair sur fond blanc par exemple pourra poser des difficultés. Il est donc indispensable de vérifier que la couleur du texte et la couleur du fond fournissent un niveau de contraste suffisant (cf. niveaux ci-dessous). Celui-ci peut être <a href="/fr/web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/">mesuré très simplement à l'aide d'outils</a>.</p>
+<p>Le <a href="https://www.w3.org/TR/WCAG22/#contrast-minimum">critère 1.4.3 du référentiel</a> impose des niveaux de contraste minimums permettant de garantir un confort de lecture suffisant.</p>
 <p>Pour les textes standards (non gras) :</p>
 <ul>
 <li>de taille inférieure à 24px : contraste de 4,5:1 minimum</li>
@@ -230,7 +241,7 @@ Le <a href="https://www.w3.org/TR/WCAG22/#contrast-minimum">critère 1.4.3 du r�
 <li>contraste de 3:1 minimum avec le texte environnement et la couleur de fond</li>
 </ul>
 <p>Le critère mentionne quelques exceptions soumises à aucune contrainte, notamment les textes des éléments inactifs (un bouton apparaissant grisé par exemple), les textes faisant partie d'un logo ou un nom de marque.</p>
-<h2 id="et-les-utilisateurs-dans-tout-ca" class="h2-focus">Et, les utilisateurs dans tout ça ? <a class="header-anchor" href="#et-les-utilisateurs-dans-tout-ca" id="heading-455" aria-labelledby="heading-455">#</a></h2>
+<h2 id="et-quen-est-il-des-utilisateurs" class="h2-focus">Et qu'en est-il des utilisateurs ? <a class="header-anchor" href="#et-quen-est-il-des-utilisateurs" id="heading-457" aria-labelledby="heading-457">#</a></h2>
 <p>Comme on vient de le voir, le référentiel n'impose pas de taille minimale car il part du principe qu'il est possible d'agrandir le texte si nécessaire. Dans les faits les utilisateurs n'ajustent pas toujours la taille du texte à leurs besoins, par manque d'habitude ou par méconnaissance des possibilités qui leur sont offertes. C'est pourquoi il est important que la taille par défaut soit suffisante pour garantir un confort de lecture qui donne envie de poursuivre sur le site.</p>
 <p>La taille et la couleur ne sont pas les seules caractéristiques qui entrent en jeu sur la lisibilité d'un texte, en effet la police de caractères ou l'utilisation de texte en italique peut avoir des conséquences importantes. Vous trouverez quelques recommandations complémentaires à ce sujet dans la section <a href="https://a11y-guidelines.orange.com/fr/contenu-et-communication/">contenu et communication</a>.</p>
 
@@ -242,11 +253,11 @@ Le <a href="https://www.w3.org/TR/WCAG22/#contrast-minimum">critère 1.4.3 du r�
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Sur cette page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#quen-dit-le-referenciel" class="nav-link text-muted">Qu&#39;en dit le référenciel ?</a>
+            <a href="#quen-dit-le-referentiel" class="nav-link text-muted">Qu&#39;en dit le référentiel ?</a>
             <ul><li class="nav-item position-relative">
             <a href="#agrandissement-de-la-taille-des-caracteres" class="nav-link text-muted">Agrandissement de la taille des caractères</a></li><li class="nav-item position-relative">
             <a href="#contraste-des-couleurs" class="nav-link text-muted">Contraste des couleurs</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#et-les-utilisateurs-dans-tout-ca" class="nav-link text-muted">Et, les utilisateurs dans tout ça ?</a></li>
+            <a href="#et-quen-est-il-des-utilisateurs" class="nav-link text-muted">Et qu&#39;en est-il des utilisateurs ?</a></li>
       </ul>
     </nav>
             </div>
