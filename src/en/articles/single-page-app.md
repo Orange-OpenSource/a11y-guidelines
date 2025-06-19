@@ -3,6 +3,7 @@ title: "Recommendations for Single Page Applications"
 abstract: "Recommendations for Single Page Applications"
 titleBeforeTag: true
 date: "2021-06-25"
+updateDate: "2025-09-01"
 tags:
   - web
   - advanced
