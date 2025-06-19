@@ -12,6 +12,14 @@
   </author>
   
   <entry>
+    <title>Text size and color </title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/font-size-and-colors/"/>
+    <updated>2025-06-20T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/font-size-and-colors/</id>
+    <content xml:lang="en" type="html">What size and what colors should the texts adopt?</content>
+  </entry>
+  
+  <entry>
     <title>#a11y technical watch, April-May 2025</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/watch-april-may-2025/"/>
     <updated>2025-06-05T00:00:00Z</updated>
@@ -361,14 +369,6 @@
     <updated>2021-08-03T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/watch-june-july-2021/</id>
     <content xml:lang="en" type="html">#a11y anthology, June-July 2021</content>
-  </entry>
-  
-  <entry>
-    <title>Text size and color </title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/font-size-and-colors/"/>
-    <updated>2021-07-05T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/font-size-and-colors/</id>
-    <content xml:lang="en" type="html">What size and what colors should the texts adopt?</content>
   </entry>
   
   <entry>
