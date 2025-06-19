@@ -44,7 +44,7 @@ For bold texts:
 For non-underlined links
 - contrast of 3:1 minimum with the surrounding text and with the background color
 
-The criterion mentions a few exceptions subject to no constraint, in particular the texts of inactive elements (a button appearing grayed out for example), the texts forming part of a logo or a brand name. 
+The criterion mentions a few exceptions subject to no constraint, in particular the texts of inactive elements (e.g., a grayed-out button), the texts forming part of a logo or a brand name. 
 
 ## What about users?
 
