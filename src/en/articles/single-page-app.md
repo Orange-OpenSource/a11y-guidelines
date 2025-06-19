@@ -17,7 +17,7 @@ A <a href="https://developer.mozilla.org/en-US/docs/Glossary/SPA">single-page we
 ## Update page title
 Browsing through an <abbr title="single-page application">SPA</abbr> does not cause the browser to reload the page. No reloading means no modification of the page title (`title` tag). However, it is important that [each page has a unique title](https://a11y-guidelines.orange.com/en/web/develop/textual-content/#set-a-title-for-each-page).
 
-It will therefore be necessary to update the pagr title via Javascript (`document.title`). Refer to the documentation of the framework used to know if an implementation of this mechanism is proposed or if it must be created from scratch. 
+It will therefore be necessary to update the page title via Javascript (`document.title`). Refer to the documentation of the framework used to know if an implementation of this mechanism is proposed or if it must be created from scratch. 
 
 ## Notify user of page changes 
 
