@@ -21,7 +21,7 @@
   <subtitle>{{ metadata.subtitle }}</subtitle>
   <link href="{{ permalink | absoluteUrl(metadata.feedUrl) }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
-  <updated>{{ collections.articles_fr | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <updated>{{ collections.articles_fr | latestDate | jsDate | dateToRfc3339 }}</updated>
   <id>{{ metadata.url }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
