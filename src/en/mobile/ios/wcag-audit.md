@@ -7,7 +7,7 @@ abstract: "The purpose of the WCAG audit is to calculate the compliance rates fo
 
 The purpose of the WCAG audit is to calculate the compliance rates found in the accessibility statements which are available on Orange apps.
 
-Orange has developed a grid of questions called the va11ydette. This grid is built using several questions covering 50 criteria of the WCAG version 2.2 levels A and AA, applicable to mobile applications.
+Orange has created an evaluation checklist called the Va11ydette. This tool splits the 50 WCAG 2.2 level A and AA criteria for mobile applications into a series of questions.
 
 The grid calculates a compliance rate per screen audited: this rate is equal to the sum of the criteria that are compliant, divided by the number of criteria that are applicable. It also calculates the average compliance rate, which corresponds to the average of the compliance rates of the screens tested. 
 
