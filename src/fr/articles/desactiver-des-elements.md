@@ -9,7 +9,7 @@ tags:
   - beginner
 ---
 
-En règle générale, la désactivation d'un élément interactif est utilisée pour empêcher l'utilisateur d'interagir avec ce composant ou avec ses descendants.
+En règle générale, la désactivation d'un élément interactif sert à empêcher l'utilisateur d'interagir avec ce composant ou avec ses descendants.
 
 Cette technique est à utiliser avec parcimonie, en fonction des composants et du contexte d'utilisation.
 
