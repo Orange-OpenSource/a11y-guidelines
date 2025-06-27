@@ -34,7 +34,7 @@ Il est ainsi possible de désactiver un champ ``input`` ou une zone de saisie ``
 ```
 
 Si `disabled` est utilisé sur un `<fieldset>`, les éléments enfants sont également désactivés. 
-Dans l'exemple ci-dessous, l'``input``, la ``checkbox`` et le ``select`` sont désactivés car ils héritent de la désactivation sur le ``fieldset``&nbsp;:
+Dans l'exemple ci-dessous, l'`input`, la `checkbox` et le `select` sont désactivés car ils héritent de la désactivation sur le `fieldset`&nbsp;:
 ```html
 <fieldset id="groupe" disabled>
     <input name="foo"> 
