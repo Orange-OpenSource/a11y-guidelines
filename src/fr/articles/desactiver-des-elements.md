@@ -58,7 +58,7 @@ De la même manière, sur un ``select``, l'attribut ``disabled`` aura un effet s
 </select>
 ```
 
-Il est aussi possible de désactiver une seule ``option`` présent dans le ``select``&nbsp;:
+Il est aussi possible de désactiver une seule `option` présent dans le `select`&nbsp;:
 ```html
 <label for="fruit-select" >Choisir un fruit :</label>
 <select name="fruits" id="fruit-select">
