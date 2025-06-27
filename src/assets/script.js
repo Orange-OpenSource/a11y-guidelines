@@ -216,6 +216,38 @@ function manageEventTabPan() {
 
 })();
 
+/* Filter docsearch */
+(function () {
+    setTimeout(() => {
+        let svgLoupe = document.getElementsByClassName('DocSearch-Search-Icon')[0];
+        svgLoupe.setAttribute('aria-hidden', true);
+        svgLoupe.setAttribute('focusable', false);
+    }, 1000);
+})();
+
+// Ajoutez ici le script pour récupérer et surligner le terme recherché
+(function() {
+  // Vérifier si un terme recherché est stocké
+  document.addEventListener('DOMContentLoaded', () => {
+    const term = localStorage.getItem('searchTerm');
+    if (term) {
+      highlightTermInPage(term);
+      localStorage.removeItem('searchTerm');
+    }
+  });
+
+  function highlightTermInPage(term) {
+    if (!term) return;
+    const bodyHTML = document.body.innerHTML;
+    const regex = new RegExp(`(${escapeRegExp(term)})`, 'gi');
+    document.body.innerHTML = bodyHTML.replace(regex, '<mark>$1</mark>');
+  }
+
+  function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+})();
+
 /* Filter article */
 (function () {
 
