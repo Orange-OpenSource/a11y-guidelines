@@ -27,7 +27,7 @@ Cependant, cette technique n'est pas recommandée pour un bouton de soumission d
 
 Comme pour un bouton, un champ de formulaire est désactivé avec l'attribut `disabled`.
 
-Il est ainsi possible de désactiver un champ ``input`` ou une zone de saisie ``textarea``&nbsp;:
+Il est ainsi possible de désactiver un champ `input` ou une zone de saisie `textarea`&nbsp;:
 ```html
 <input type="text" name="address" disabled>
 <textarea id="area" name="comment" disabled>This is a disabled comment</textarea>
