@@ -21,7 +21,7 @@ Il est possible de désactiver un bouton en lui ajoutant simplement l'attribut `
 <button disabled>Supprimer</button>
 ```
 
-Cependant, cette technique n'est pas recommandée pour un bouton de soumission de formulaire pour diverses raisons, notamment : faible contraste, bouton non focusable, aucune information donnée à l'utilisateur.
+Cependant, cette technique n'est pas recommandée pour un bouton de soumission de formulaire pour diverses raisons, notamment : faible contraste, bouton non atteignable au clavier, aucune information donnée à l'utilisateur.
 
 ## Désactiver un champ de formulaire
 
@@ -47,7 +47,7 @@ Dans l'exemple ci-dessous, l'`input`, la `checkbox` et le `select` sont désacti
 </fieldset>
 ```
 
-De la même manière, sur un ``select``, l'attribut ``disabled`` aura un effet sur tous les choix&nbsp;:
+De la même manière, sur un `select`, l'attribut `disabled` aura un effet sur tous les choix&nbsp;:
 ```html
 <label for="fruit-select" >Choisir un fruit :</label>
 <select name="fruit" id="fruit-select" disabled>
@@ -71,7 +71,7 @@ Il est aussi possible de désactiver une seule `option` présent dans le `select
 
 ## Désactiver un lien
 
-Pour désactiver un lien, l'utilisation de l'attribut `disabled` n'est pas autorisée. Il est tout de même possible de désactiver un lien en suivant les 3 étapes suivantes&nbsp;: 
+Pour désactiver un lien, l'utilisation de l'attribut `disabled` n'est pas autorisée. Cependant, il est possible de simuler une désactivation en suivant ces trois étapes&nbsp;: 
 - supprimer l'attribut `href` pour qu'il ne puisse plus recevoir le focus
 - ajouter un `role="link"` pour qu'il soit toujours considéré comme un lien par les lecteurs d'écran
 - ajouter un attribut `aria-disabled="true"` pour qu'il soit indiqué comme étant désactivé  
@@ -80,7 +80,7 @@ Pour désactiver un lien, l'utilisation de l'attribut `disabled` n'est pas autor
 
 ## Webographie
 <ul>
-  <li><a href="https://www.scottohara.me/blog/2021/05/28/disabled-links.html" hreflang="en">Disabling a link - Scott O'Hara (en)</a>.</li>
+  <li><a href="https://www.scottohara.me/blog/2021/05/28/disabled-links.html" hreflang="en">Disabling a link - Scott O'Hara (en)</a></li>
   <li><a href="https://adamsilver.io/blog/the-problem-with-disabled-buttons-and-what-to-do-instead/" hreflang="en">The problem with disabled buttons and what to do instead - Adam Silver (en)</a></li>
   <li><a href="https://adrianroselli.com/2024/02/dont-disable-form-controls.html" hreflang="en">Don’t Disable Form Controls - Adrian Roselli</a></li>
 </ul>
