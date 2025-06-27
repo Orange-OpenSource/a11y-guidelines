@@ -216,18 +216,9 @@ function manageEventTabPan() {
 
 })();
 
-/* Filter docsearch */
-(function () {
-    setTimeout(() => {
-        let svgLoupe = document.getElementsByClassName('DocSearch-Search-Icon')[0];
-        svgLoupe.setAttribute('aria-hidden', true);
-        svgLoupe.setAttribute('focusable', false);
-    }, 1000);
-})();
-
-// Ajoutez ici le script pour récupérer et surligner le terme recherché
+// Higjlit searche term in result page
 (function() {
-  // Vérifier si un terme recherché est stocké
+  // Check searched word in localStorage
   document.addEventListener('DOMContentLoaded', () => {
     const term = localStorage.getItem('searchTerm');
     if (term) {
