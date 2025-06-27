@@ -208,34 +208,53 @@ function manageEventTabPan() {
 
 /* Filter docsearch */
 (function () {
-    setTimeout(() => {
-        let svgLoupe = document.getElementsByClassName('DocSearch-Search-Icon')[0];
-        svgLoupe.setAttribute('aria-hidden', true)
-        svgLoupe.setAttribute('focusable', false)
-    }, "1000")
-
+  setTimeout(() => {
+    let svgLoupe = document.getElementsByClassName("DocSearch-Search-Icon")[0];
+    svgLoupe.setAttribute("aria-hidden", true);
+    svgLoupe.setAttribute("focusable", false);
+  }, "1000");
 })();
 
-// Higjlit searche term in result page
-(function() {
-  // Check searched word in localStorage
-  document.addEventListener('DOMContentLoaded', () => {
-    const term = localStorage.getItem('searchTerm');
+/* Highlight searche term in result page */
+(function () {
+  document.addEventListener("DOMContentLoaded", () => {
+    // Retrieve the searched term from localStorage
+    const term = localStorage.getItem("searchTerm");
     if (term) {
+      // Highlight the term in the page content
       highlightTermInPage(term);
-      localStorage.removeItem('searchTerm');
+      // Remove the term from storage after highlighting
+      localStorage.removeItem("searchTerm");
     }
   });
 
+  // Function to highlight all occurrences of the term in the page
   function highlightTermInPage(term) {
-    if (!term) return;
-    const bodyHTML = document.body.innerHTML;
-    const regex = new RegExp(`(${escapeRegExp(term)})`, 'gi');
-    document.body.innerHTML = bodyHTML.replace(regex, '<mark>$1</mark>');
+    if (!term) return; // Exit if no term provided
+
+    function walk(node) {
+      if (node.nodeType === 3) {
+        const regex = new RegExp(`(${escapeRegExp(term)})`, "gi");
+        if (regex.test(node.nodeValue)) {
+          const span = document.createElement("span");
+          span.innerHTML = node.nodeValue.replace(regex, "<mark>$1</mark>");
+          node.parentNode.replaceChild(span, node);
+        }
+      }
+      else if (
+        node.nodeType === 1 &&
+        node.tagName !== "SCRIPT" &&
+        node.tagName !== "STYLE"
+      ) {
+        Array.from(node.childNodes).forEach(walk);
+      }
+    }
+
+    walk(document.body);
   }
 
   function escapeRegExp(string) {
-    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   }
 })();
 
