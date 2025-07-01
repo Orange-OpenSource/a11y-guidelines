@@ -36,21 +36,23 @@
               {% endfor -%}
               </ul>
             {% endif %}
-            {% if updateDate %}
+            {% set pageObj = { data: { updateDate: updateDate }, date: page.date } %}
+            {% set effectiveDate = pageObj | effectiveDate %}
+
+            <p class="text-muted mb-0">
+              <span class="visually-hidden">{{ 'releaseDate.label' | translate }}</span>
+              <time datetime="{{ effectiveDate | toISOString }}">
+                {% localizedDate effectiveDate, locale %}
+              </time>
+            </p>
+
+            {% if updateDate and updateDate != page.date %}
               <p class="text-muted mb-0">
-                <span class="visually-hidden">{{ 'releaseDate.label' | translate }}</span>
-                <time datetime="{{ updateDate | toISOString }}">
-                  {% localizedDate updateDate, locale %}
-                </time>
-              </p>
-              <p class="text-muted mb-0" >
                 {{ 'articleUpdate.label' | translate }}
                 <time datetime="{{ page.date | toISOString }}">
                   {% localizedDate page.date, locale %}
                 </time>
               </p>
-            {% else %}
-              <time class="text-muted" datetime="{{ page.date.toISOString() }}">{% localizedDate page.date, locale  %}</time>
             {% endif %}
           {% endif %}
           <div class="mt-4">
