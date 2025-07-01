@@ -136,7 +136,8 @@ module.exports = {
       indexName: 'a11y-guidelines-orange',
       container: '#search-input',
       searchParameters: {
-        'facetFilters': [`language:${locale}`]
+        'facetFilters': [`language:${locale}`],
+        attributesToHighlight: ["title", "content"]
       },
       placeholder : placeHolder,
       translations: DocSearchTranslations = algoliaTranslations,
