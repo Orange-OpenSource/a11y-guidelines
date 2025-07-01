@@ -215,7 +215,7 @@ function manageEventTabPan() {
   }, "1000");
 })();
 
-/* Highlight searche term in result page */
+/* Highlight searched term in result page */
 (function () {
   document.addEventListener("DOMContentLoaded", () => {
     // Retrieve the searched term from localStorage

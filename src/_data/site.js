@@ -141,7 +141,11 @@ module.exports = {
       },
       placeholder : placeHolder,
       translations: DocSearchTranslations = algoliaTranslations,
-      debug: false // Set debug to true if you want to inspect the dropdown
+      debug: false, // Set debug to true if you want to inspect the dropdown
+      onSelect: (event) => {
+        const searchTerm = event.query;
+        localStorage.setItem('searchTerm', searchTerm);
+      }
     }
   },
   tracking: {
