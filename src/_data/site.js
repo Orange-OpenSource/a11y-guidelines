@@ -165,7 +165,6 @@ module.exports = {
       //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for multisite */
       "readmoreLink": "/cookiespolicy", /* Change the default readmore link */
       "mandatory": false, /* Show a message about mandatory cookies */
-      "googleConsentMode": true, /* Activer le Google Consent Mode v2 pour Google ads & GA4 */
     }
   }
 }
