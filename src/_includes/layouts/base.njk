@@ -89,7 +89,7 @@
           'phase': '{{ site.tracking.phase }}'
         }];
         tarteaucitron.user.googletagmanagerId = "{{ site.tracking.googletagmanagerId }}";
-        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
+        (tarteaucitron.job = tarteaucitron.job || []).push('gcmanalyticsstorage');
       {%- endif -%}
       docsearch({{ site.getDocSearchConfig(locale) | dump | safe }});
     </script>
