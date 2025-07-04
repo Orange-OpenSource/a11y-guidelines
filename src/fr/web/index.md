@@ -23,10 +23,10 @@ abstract: "Ressources pour l'accessibilité des pages web, critères, exigences,
 ## Organisation de cette rubrique "Web"
 
 ### Designer
-Liste des critères principaux à prendre en compte en phase de maquettage, basés sur un sous-ensemble des recommandations <abbr>WCAG</abbr> (Web Content Accessibility Guidelines) 2.1 niveau AA.
+Liste des critères principaux à prendre en compte en phase de maquettage, basés sur un sous-ensemble des recommandations <abbr>WCAG</abbr> (Web Content Accessibility Guidelines) 2.2 niveau AA.
 
 ### Développer
-Section à destination des développeurs. Tout ce qu’il faut savoir pour coder accessible, l'ensemble des critères <abbr>WCAG</abbr> (Web Content Accessibility Guidelines) 2.1 niveau AA, rangés par thématique.
+Section à destination des développeurs. Tout ce qu’il faut savoir pour coder accessible, l'ensemble des critères <abbr>WCAG</abbr> (Web Content Accessibility Guidelines) 2.2 niveau AA, rangés par thématique.
 
 ### Tester
 Pour ceux qui veulent vérifier l’accessibilité de leurs pages avec des outils plus ou moins automatiques quel que soit votre profil : designer UX/UI, développeur, testeur, expert accessibilité. Enfin, tout l’outillage méthodologique et technique pour évaluer ses pages.
