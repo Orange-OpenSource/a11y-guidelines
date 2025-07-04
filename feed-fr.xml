@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2025-06-20T00:00:00Z</updated>
+  <updated>2025-07-04T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Recommandations pour les Single Page Applications (SPA)</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/single-page-app/"/>
+    <updated>2025-07-04T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/single-page-app/</id>
+    <content xml:lang="fr" type="html">Recommandations pour les Single Page Applications</content>
+  </entry>
   
   <entry>
     <title>Taille et couleur des textes</title>
@@ -425,14 +433,6 @@
     <updated>2021-07-01T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/desactiver-des-elements/</id>
     <content xml:lang="fr" type="html">Comment désactiver des éléments d&#39;une page ?</content>
-  </entry>
-  
-  <entry>
-    <title>Recommandations pour les Single Page Applications (SPA)</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/single-page-app/"/>
-    <updated>2021-06-16T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/single-page-app/</id>
-    <content xml:lang="fr" type="html">Recommandations pour les Single Page Applications</content>
   </entry>
   
   <entry>
