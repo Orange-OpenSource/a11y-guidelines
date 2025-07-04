@@ -23,10 +23,10 @@ abstract: "Web page accessibility resources, criteria, requirements, methods and
 ## Organization of this "Web" section
 
 ### Designate
-List of the main criteria to take into account in the design phase, based on a subset of the <abbr>WCAG</abbr> (Web Content Accessibility Guidelines) 2.1 level AA criteria.
+List of the main criteria to take into account in the design phase, based on a subset of the <abbr>WCAG</abbr> (Web Content Accessibility Guidelines) 2.2 level AA criteria.
 
 ### Develop
-Section for developers, everything you need to know to code accessible, the set of criteria <abbr>WCAG</abbr> (Web Content Accessibility Guidelines) 2.1 level AA, arranged by theme.
+Section for developers, everything you need to know to code accessible, the set of criteria <abbr>WCAG</abbr> (Web Content Accessibility Guidelines) 2.2 level AA, arranged by theme.
 
 ### Test
 For those who want to check the accessibility of their pages with more or less automatic tools, whatever your profile: UX/UI designer, developer, tester, accessibility expert. Finally, all the methodological and technical tools to evaluate its pages.
