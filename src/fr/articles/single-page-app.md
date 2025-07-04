@@ -3,6 +3,7 @@ title: "Recommandations pour les Single Page Applications (SPA)"
 abstract: "Recommandations pour les Single Page Applications"
 titleBeforeTag: true
 date: "2021-06-16"
+updateDate: "2025-07-04"
 tags:
   - web
   - advanced
@@ -22,30 +23,31 @@ Il faudra donc veiller à mettre à jour le titre de la page via Javascript (`do
 
 ## Prévenir l'utilisateur des changements de page
 
-Les lecteurs d'écran utilisés par les personnes malvoyantes informent l'utilisateur automatiquement dès qu'une nouvelle page est chargée par le navigateur. Dans le cadre d'une <abbr lang="en" title="single-page application">SPA</abbr>, les changements de page n'entraînent pas de rechargement par le navigateur. Le lecteur d'écran n'a donc aucun moyen de prévenir l'utilisateur.
+Les lecteurs d'écran utilisés par les personnes malvoyantes informent l'utilisateur automatiquement dès qu'une nouvelle page est chargée par le navigateur. Dans le cadre d'une <abbr lang="en" title="single-page application">SPA</abbr>, les changements de page n'entraînent pas de rechargement par le navigateur, un lecteur d'écran n'a donc aucun moyen de prévenir l'utilisateur.
 
-Une solution acceptable consiste à déplacer le focus sur le premier titre `<h1>` de la page courante. Ceci entraînerra sa lecture par le lecteur d'écran, ainsi l'utilisateur sera prévenu qu'une nouvelle page est affichée.
-À noter que par défaut une balise `<h1>` n'est pas focusable. Pour L'autoriser à recevoir le focus via Javascript, il suffit de lui ajouter un attribut `tabindex="-1"`.
+Une solution acceptable consiste à déplacer le focus sur le premier titre `<h1>` de la page courante. Ceci entraînera sa lecture par le lecteur d'écran, ainsi l'utilisateur sera prévenu qu'une nouvelle page est affichée.
+À noter que par défaut une balise `<h1>` n'est pas focusable. Pour l'autoriser à recevoir le focus via Javascript, il suffit de lui ajouter un attribut `tabindex="-1"`.
 
 ## Prévenir l'utilisateur des mises à jour à l'intérieur de la page
 
-Si certaines informations sont mises à jour dynamiquement dans la page (message de confirmation, chargement en cours, affichage d'erreur…). Il est important de faire en sorte que les lecteurs d'écran annoncent ces modifications. Plusieurs méthodes sont disponibles selon les cas :
+Si certaines informations sont mises à jour dynamiquement dans la page (message de confirmation, chargement en cours, affichage d'erreur…), il est important de faire en sorte que les lecteurs d'écran annoncent ces modifications. Plusieurs méthodes sont disponibles selon les cas :
 - Déplacer le focus sur un élément qui vient d'être mis à jour.
-- Utiliser de l'ARIA comme indiqué dans les articles suivants : [Utiliser ARIA les messages d'état, de statut ou contextuel](https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/) et [L'attribut aria-live et le role alert](https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/).
+- Utiliser de l'ARIA comme indiqué dans les articles suivants : [Utiliser ARIA, les messages d'état, de statut ou contextuel](https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/) et [L'attribut aria-live et le role alert](https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/).
 
 ## Déplacer le focus
 
-Sur un site web classique, lorsqu'un utilisateur clique sur un lien et qu'une nouvelle page s'affiche, le focus est automatiquement repositionné en haut de page (sur le `body`). Ainsi pour les utilisateurs qui naviguent à l'aide du clavier, il suffit d'utiliser la touche `TAB` pour se déplacer dans la page.
+Sur un site web classique, lorsqu'un utilisateur clique sur un lien et qu'une nouvelle page s'affiche, le focus est automatiquement repositionné en haut de page (sur le `body`). Ainsi, pour les utilisateurs qui naviguent à l'aide du clavier, il suffit d'utiliser la touche `TAB` pour se déplacer dans la page.
 
-Dans une <abbr lang="en" title="single-page application">SPA</abbr>, si un utilisateur clique sur un bouton qui entraîne une mise jour du contenu, le focus n'est pas déplacé (il reste sur le bouton). Plus important encore, si le changement de page a fait disparaître l'élément sur lequel était positionné le focus, l'utilisateur ne sait plus où il est dans la page. Cela peut également entraîner des problèmes de vocalisation pour les personnes qui naviguent à l'aide d'un lecteur d'écran.
+Dans une <abbr lang="en" title="single-page application">SPA</abbr>, si un utilisateur clique sur un bouton qui entraîne une mise jour du contenu, le focus n'est pas déplacé (il reste sur le bouton).
+Plus important encore, si le changement de contenu fait disparaître l'élément sur lequel était positionné le focus, l'utilisateur ne sait plus où il se trouve dans la page. Cela peut également entraîner des problèmes de vocalisation pour les utilisateurs de lecteur d'écran.
 
-Il est donc important de veiller à déplacer le focus via Javascript lorsque cela est nécessaire. De même si une boite de dialogue modale est affichée à l'écran, le focus doit être positionné dans la boite lors de son apparition puis replacé sur l'élément d'origine (un bouton par exemple) lors de sa disparition.
+Il est donc important de veiller à déplacer le focus via Javascript lorsque cela est nécessaire. De même, si une boite de dialogue (fenêtre modale) est affichée à l'écran, le focus doit être positionné dans la modale lors de son apparition puis replacé sur l'élément déclencheur (un bouton par exemple) lors de sa disparition.
 
-## Utiliser la sémantique HTML 5
+## Utiliser la sémantique HTML5
 
 Les <abbr lang="en" title="single-page application">SPA</abbr> sont souvent utilisées dans le cadre d'applications Web. L'utilisateur doit composer parfois avec une interface qui s'apparente plus a une application native qu'à celle d'un site Web. Il est important de veiller à identifier correctement les différentes zones : navigation, contenu, zone de recherche…
 
-Si votre application possèdent des zones spécifiques, il est recommandé de leur attribuer un `label` afin qu'elles soient rapidement identifiables. Par exemple à l'aide d'une balise `<region>` et d'un attribut `aria-label` ou `aria-labelledby`.
+Si votre application possède des zones spécifiques, il est recommandé de leur attribuer un `label` afin qu'elles soient rapidement identifiables. Par exemple, à l'aide d'une balise `<region>` et d'un attribut `aria-label` ou `aria-labelledby`.
 
 <pre><code class="html">
 &lt;div role="region" aria-label="moniteur d'activité"&gt;
@@ -73,7 +75,7 @@ La solution consiste à manipuler l'historique du navigateur en Javascript à l'
 - Prévenir l'utilisateur des changements de page 
 - Prévenir l'utilisateur des mises à jour à l'intérieur de la page (ARIA)
 - Déplacer le focus
-- Utiliser la sémantique HTML 5
+- Utiliser la sémantique HTML5
 - Gérer l'historique du navigateur (<span lang="en">History API</span>)
 
 ## Liens utiles 
