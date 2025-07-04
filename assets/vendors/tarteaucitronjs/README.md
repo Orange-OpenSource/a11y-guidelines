@@ -41,7 +41,8 @@ tarteaucitron.init({
     "serviceDefaultState": "wait", /* Default state (true - wait - false) */
 
     "showAlertSmall": false, /* Show the small banner on bottom right */
-    "cookieslist": false, /* Show the cookie list */
+    "cookieslist": false, /* Show the cookie list in a mini banner */
+    "cookieslistEmbed": false, /* Show the cookie list on the control panel */
     
     "showIcon": true, /* Show cookie icon to manage cookies */
     // "iconSrc": "", /* Optional: URL or base64 encoded image */
@@ -140,12 +141,12 @@ tarteaucitronCustomText = {
   'engage-twitter': 'Follow us on Twitter!'
 };
 ```
-
+<!--
 # Thanks to the sponsors 😊
 
-| ![Amaury Cleuziou](https://avatars.githubusercontent.com/u/26336203?v=4&s=60) | ![Route4me](https://tarteaucitron.io/images/route4me-min.png) |   |
-|---|---------------------------------------------------------------|---|
-|  [Amaury Cleuziou](https://github.com/MoryCorp) - first sponsor 🎉 | [Route Optimizer and Route Planner Software](https://route4me.com)                              |  |
-| |                                                               |   |
-
+| ![Amaury Cleuziou](https://avatars.githubusercontent.com/u/26336203?v=4&s=60) |                                                              |   |
+|---|--------------------------------------------------------------|---|
+|  [Amaury Cleuziou](https://github.com/MoryCorp) - first sponsor 🎉 |                                                              |  |
+| |                                                              |   |
+-->
 
