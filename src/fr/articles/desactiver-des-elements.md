@@ -78,9 +78,19 @@ Pour désactiver un lien, l'utilisation de l'attribut `disabled` n'est pas autor
 
 <pre><code class="html">&lt;a role="link" aria-disabled="true"&gt;Lien désactivé&lt;/a&gt;</code></pre>
 
+
+## L'attribut de lecture seule `read-only`
+
+L'attribut booléen `read-only` contrôle la possibilité ou non d'éditer un champ texte.
+
+Il ne faut pas utiliser cet attribut pour désactiver d'autres éléments (notamment les cases à cocher ou les boutons radio), car cela est justement le rôle de l'attribut `disabled`.
+
+La principale différence entre les 2 techniques réside dans le fait qu'un élément en lecture sera toujours atteignable au clavier et restitué par les aides techniques ; cela peut avoir un intérêt pour vérifier, sans pouvoir modifier, une information précédemment renseignée (par exemple : un email, une date de naissance, un numéro de téléphone, etc.).
+
 ## Webographie
 <ul>
   <li><a href="https://www.scottohara.me/blog/2021/05/28/disabled-links.html" hreflang="en">Disabling a link - Scott O'Hara (en)</a></li>
   <li><a href="https://adamsilver.io/blog/the-problem-with-disabled-buttons-and-what-to-do-instead/" hreflang="en">The problem with disabled buttons and what to do instead - Adam Silver (en)</a></li>
   <li><a href="https://adrianroselli.com/2024/02/dont-disable-form-controls.html" hreflang="en">Don’t Disable Form Controls - Adrian Roselli (en)</a></li>
+  <li><a href="https://adrianroselli.com/2024/11/avoid-read-only-controls.html" hreflang="en">Avoid Read-only Controls (en)</a></li>
 </ul>
