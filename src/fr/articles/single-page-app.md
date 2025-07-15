@@ -3,6 +3,7 @@ title: "Recommandations pour les Single Page Applications (SPA)"
 abstract: "Recommandations pour les Single Page Applications"
 titleBeforeTag: true
 date: "2021-06-16"
+updateDate: "2025-09-15"
 tags:
   - web
   - advanced
