@@ -81,6 +81,40 @@ module.exports = function (eleventyConfig) {
         return dateObject.toISOString();
     });
 
+    // Convert a value to a native JavaScript Date object.
+    // Useful when working with date filters like `dateToRfc3339` that require a proper Date instance.
+    // Ensures compatibility even if the original value is a string or other non-Date type.
+    eleventyConfig.addFilter("jsDate", function (value) {
+        return new Date(value);
+    });
+
+    // Returns the most relevant date for a post.
+    // Uses the update date if available, otherwise falls back to the original publication date.
+    eleventyConfig.addFilter("effectiveDate", (post) => {
+        if (!post) return null;
+        if (!post.data) return post.date || null;
+        return post.data.updateDate || post.date;
+    });
+
+    // Finds the latest date in a collection of posts.
+    // Uses effectiveDate to determine the most relevant date for each post.
+    eleventyConfig.addFilter("latestDate", (collection) => {
+        if (!collection || !collection.length) return new Date();
+
+        const jsDateFilter = eleventyConfig.getFilter("jsDate");
+
+        return collection.reduce((latest, post) => {
+            // Get the effective date (update date or publication date)
+            const postDate = post.data && post.data.updateDate ? post.data.updateDate : post.date;
+
+            // Convert to a JavaScript Date object
+            const postDateObj = jsDateFilter(postDate);
+
+            if (!latest) return postDateObj;
+            return postDateObj > latest ? postDateObj : latest;
+        }, null);
+    });
+
     /**
      * @see https://stackoverflow.com/questions/6393943/convert-javascript-string-in-dot-notation-into-an-object-reference#answer-6394168
      */
