@@ -63,7 +63,7 @@ In addition, the competent authority may impose a daily penalty in addition to t
 
 ## Directive (UE) 2016/2012 – Web Accessibility Directive
 
-- This directive is transposed by law n° 2018-771 of 5 September 2018, supplemented by decree n° 2019-768 and the ministerial order of 20 September 2019 on the general accessibility improvement reference framework.
+- This directive is transposed by law no. 2018-771 of 5 September 2018, supplemented by decree no. 2019-768 and the ministerial order of 20 September 2019 on the general accessibility improvement reference framework.
 - In France, the law lays down obligations not only for the public sector, but also for all private companies with a 250+ million euros turnover.
 
 ### Scope: a limited number of services
