@@ -5,7 +5,7 @@ abstract: "Cadre légal de l'accessibilité numérique en Europe"
 
 # Cadre applicable en matière d'accessibilité dans d’autres pays européens 
 
-Pour les acteurs privés, le cadre légal en matière d'accessibilité découle de la transposition de la directive européenne (UE) 2019/882, dite _European Accessibility Act_ (EAA).
+Pour les acteurs privés, le cadre légal en matière d'accessibilité découle de la transposition de la directive européenne (UE) 2019/882, dite European Accessibility Act (EAA).
 
 ## Cadre applicable au Luxembourg
 - La directive (UE) 2019/882 est transposée en droit luxembourgeois par la loi du 8 mars 2023 amendée par la loi du 29 aout 2023.
@@ -17,7 +17,7 @@ La transposition luxembourgeoise de l’EAA dispose des exigences de la directiv
 
 Les obligations pour les entreprises sont les mêmes que pour la [France](https://a11y-guidelines.orange.com/fr/cadrage/cadre-legal-francais/).
 
-### Contrôle et Sanctions&nbsp;:**
+### Contrôle et Sanctions&nbsp;:
 
 **Autorité de contrôle&nbsp;:**
 
