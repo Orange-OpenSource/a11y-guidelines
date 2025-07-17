@@ -1,61 +1,95 @@
 ---
-title: "Accessibility regulations"
-abstract: "Synthesis of regulations focused on digital accessibility in France and E.U."
+title: "Legal Framework for Digital Accessibility"
+abstract: "Legal Framework for Digital Accessibility in France"
 ---
 
-# Accessibility regulations
+# Applicable Framework in France
 
-Synthesis of regulations focused on digital accessibility in France and E.U.
+The legal framework for digital accessibility in France is largely based on European Union law. It is based on two directives:
 
-## Law for a digital republic – Decree 2019-768 regarding the access for the disabled to digital services provided by the government or large businesses (France)
-The Access for the disabled to various digital services is made mandatory to ensure digital inclusion. The decree published on July 24, 2019 specifies the accessibility obligations of digital services, in particular for private companies whose turnover in France is greater than 250 million euros.
+- Directive (EU) 2016/2012, known as the Web Accessibility Directive, on the accessibility of websites and mobile applications of public sector organizations.
+- Directive (EU) 2019/882, the European Accessibility Act, on the accessibility of certain products and services.
 
-**Scope of digital services:**
--	Internet sites, extranet, intranet, business applications
--	Mobile applications
--	Pre-recorded office, audio and video files
--	Software packages
+French law on digital accessibility is thus structured around this dual system of obligations for both private and public operators.
 
-**Large companies must:**
--	Publish a multi-year accessibility plan over a maximum of 3 years with an action plan for the current year (for example, Orange's multi-year plan)
--	Train all digital stakeholders: decision-maker, buyer, product manager, designer, developer, testers, content publisher ...
+## Directive (UE) 2019/882 – European Accessibility Act
 
-**Digital services must:**
--	be compliant to international standard, such as WCAG 2.1 level AA
--	provide an accessibility statement including the compliance status, the non-accessible content, the method used, contact information for users to report a problem…
+- This directive was transposed into French law by article 16 of law no. 2023-171 of 9 March 2023, supplemented by multiple reglementary provisions.
+- The law comes into force on June 28, 2025, in line with the European calendar.
 
-**Start from**
-- October 1, 2019
-  - websites, intranet, extranet, office files (published after 1/10/2019)
-- October 1, 2020: 
-  - Internet *, intranet, extranet sites (published before 1/10/2019)
-  - Office files (published after 9/23/2018 or required for a process)
-  - Pre-recorded audios and videos (published after 9/23/2020)
-- July 1, 2021: 
-  - Mobile applications (updated after 9/23/2019 or required for a process)
-  - Software packages
+### Scope: Products and services put on the market or modified after June 28, 2025
 
-The fine can go up to 20,000 euros per service and per year.
+**Services covered:**
 
-## The European accessibility act - Directive (EU) 2019/882 of 17 April 2019 on the accessibility requirements for products and services
-- Laws to be published by Member States by 28 June 2022
-- All measures to be applied from 28 June 2025
-- Measures apply even if a service, or part of a service, is subcontracted to a third party
-- Personnel to be properly and continuously trained
+- Electronic communication services.
+- Services providing access to audiovisual media services (such as websites, mobile applications, applications mobiles, multimedia players, TV channel programs and on-demand platforms).
+- Certain elements relating to passenger transport services (such as websites or mobile applications).
+- Consumer banking services.
+- E-books and their dedicated software.
+- E-commerce services (websites or mobile applications whereby companies sell their products or services online).
 
-**Scope: products and services placed on the market (or updated) after 28 June 2025**
+**Products covered:**
+- Consumer general purpose computer hardware systems and their operating systems.
+- Self-service terminals (such as card readers or vending machines).
+- Terminal equipment with interactive computing capability, used for accessing audiovisual media services and for electronic communication services.
+- E-readers.
 
-**Services:**
-- E-commerce (i.e. websites or mobile applications in which companies sell their products or services online)
-- Consumer banking services
-- Services providing access to audio-visual media services (e.g. websites, mobile apps, set-top box-based applications, media players, electronic program guides of TV channels and video of demand platforms)
-- Electronic communication services (i.e. telephony services)
+### Obligations for businesses: 
 
-Accessibility Guidelines to be applied: WCAG 2.1 AA  
+Accessibility requirements are aligned with harmonized standard EN 301 549 (next version available February 2026), equivalent to WCAG 2.1 level AA. Harmonized standards for non-digital accessibility requirements for products or assistive services are not yet available. Their publication is expected by March 2026. 
 
-**Products:**
-- Self-service terminals: automated teller machines, ticketing machines, interactive self-service terminals providing information
-- Terminal equipment with interactive computing capability, used for accessing audiovisual media service
+**Obligations for services:**
+- Compliance of services concerned.
+- Publication of an accessibility statement.
 
-Guidelines for products should be detailed by then
+**Obligations for products:**
+- Compliance of products concerned.
+- Carrying out of a conformity assessment procedure and publication of an EU declaration of conformity (cf. Annex III to decision n° 768/2008/CE).
 
+### Surveillance and Sanctions: 
+
+**Surveillance Authorities:**
+
+- Autorité de Régulation de la Communication Audiovisuelle et Numérique (ARCOM)
+- Direction Générale de la Concurrence, de la Consommation, et de la Répression des Fraudes (DGCCRF)
+- Autorité de Régulation des Communications Electroniques, des Postes et de la Distribution de la Presse (ARCEP)
+- For the banking sector only: Autorité de Contrôle Prudentiel et de Résolution (ACPR), Autorité des Marchés Financiers (AMF) et Banque de France.
+
+**Sanctions:**
+
+Failure to comply with legal accessibility requirements can result in a fifth-class fine (contravention de 5e classe) of up to €7,500 for legal entities. In the event of a duly documented repeat offence, this penalty can be increased to €75,000.
+
+In addition, the competent authority may impose a daily penalty in addition to the compliance injunction, set at a maximum of €3,000 per day of delay, up to a cumulative ceiling of €300,000.
+
+## Directive (UE) 2016/2012 – Web Accessibility Directive
+
+- This directive is transposed by law n° 2018-771 of 5 September 2018, supplemented by decree n° 2019-768 and the ministerial order of 20 September 2019 on the general accessibility improvement reference framework.
+- In France, the law lays down obligations not only for the public sector, but also for all private companies with a 250+ million euros turnover.
+
+### Scope: a limited number of services
+
+- Websites, extranet, intranet, business applications.
+- Mobile applications.
+- Software packages.
+
+**Obligations for businesses:**
+- Publication of a multi-year accessibility plan covering a maximum of 3 years, with an action plan for the current year ([for example, Orange's multi-year plan](https://gallery.orange.com/element?id=410806)).
+- Training for all digital stakeholders (such as decision-makers, buyers, product managers, designers, developers and communicators).
+- Publication of an accessibility declaration for each website or mobile application, with a "non-compliant", "partially compliant" or "fully compliant" statement on the home page.
+- Compliance of digital services concerned.
+
+**Obligations for each digital service:** 
+- Accessibility statement specifying level of compliance, non-conformities, tools used for testing, a means for users to report problems.
+- Compliance with the _référentiel général d'amélioration de l'accessibilité_ (RGAA).
+
+The international dimension of the Orange Group, present in 26 countries, justifies considering the Web Content Accessibility Guidelines (WCAG) technical reference in its latest available version 2.2. However, the Orange Group provides a table of correspondences between the criteria of these 2 standards, which is available in French via the following link ([Correspondence between RGAA and WCAG](https://a11y-guidelines.orange.com/fr/cadrage/correspondance-rgaa-wcag/)).
+
+### Surveillance and Sanctions
+
+**Surveillance authority:**
+
+- Autorité de Régulation de la Communication Audiovisuelle et Numérique (ARCOM).
+
+**Sanctions:**
+
+- The penalty is €50,000 per service and can be renewed 6 months after the initial finding.
