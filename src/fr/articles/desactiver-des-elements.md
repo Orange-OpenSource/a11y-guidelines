@@ -91,5 +91,5 @@ La principale différence entre les 2 techniques réside dans le fait qu'un él�
   <li><a href="https://www.scottohara.me/blog/2021/05/28/disabled-links.html" hreflang="en">Disabling a link - Scott O'Hara (en)</a></li>
   <li><a href="https://adamsilver.io/blog/the-problem-with-disabled-buttons-and-what-to-do-instead/" hreflang="en">The problem with disabled buttons and what to do instead - Adam Silver (en)</a></li>
   <li><a href="https://adrianroselli.com/2024/02/dont-disable-form-controls.html" hreflang="en">Don’t Disable Form Controls - Adrian Roselli (en)</a></li>
-  <li><a href="https://adrianroselli.com/2024/11/avoid-read-only-controls.html" hreflang="en">Avoid Read-only Controls (en)</a></li>
+  <li><a href="https://adrianroselli.com/2024/11/avoid-read-only-controls.html" hreflang="en">Avoid Read-only Controls - Adrian Roselli  (en)</a></li>
 </ul>
