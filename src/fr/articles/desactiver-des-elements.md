@@ -81,9 +81,7 @@ Pour désactiver un lien, l'utilisation de l'attribut `disabled` n'est pas autor
 
 ## L'attribut de lecture seule `read-only`
 
-L'attribut booléen `read-only` contrôle la possibilité ou non d'éditer un champ texte.
-
-Il ne faut pas utiliser cet attribut pour désactiver d'autres éléments (notamment les cases à cocher ou les boutons radio), car cela est justement le rôle de l'attribut `disabled`.
+L'attribut booléen `read-only` contrôle la possibilité ou non d'éditer un champ texte. Il ne faut pas utiliser cet attribut pour désactiver d'autres éléments (boutons et autres éléments interactifs) car cela est justement le rôle de l'attribut `disabled`.
 
 La principale différence entre les 2 techniques réside dans le fait qu'un élément en lecture seule sera toujours atteignable au clavier et restitué par les aides techniques ; cela peut avoir un intérêt pour vérifier, sans pouvoir modifier, une information précédemment renseignée (par exemple : un email, une date de naissance, un numéro de téléphone, etc.).
 
