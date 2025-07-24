@@ -7,10 +7,44 @@ abstract: "Legal Framework for Digital Accessibility in France"
 
 The legal framework for digital accessibility in France is largely based on European Union law. It is based on two directives:
 
-- Directive (EU) 2016/2012, known as the Web Accessibility Directive, on the accessibility of websites and mobile applications of public sector organizations.
-- Directive (EU) 2019/882, the European Accessibility Act, on the accessibility of certain products and services.
+- Directive (EU) 2016/2012, known as the [Web Accessibility Directive](https://a11y-guidelines.orange.com/en/planning/legal-framework-in-france/#directive-ue-20162012-web-accessibility-directive), on the accessibility of websites and mobile applications.
+- Directive (EU) 2019/882, the [European Accessibility Act](https://a11y-guidelines.orange.com/en/planning/legal-framework-in-france/#directive-ue-2019882-european-accessibility-act), on the accessibility of certain products and services.
 
 French law on digital accessibility is thus structured around this dual system of obligations for both private and public operators.
+
+## Directive (UE) 2016/2012 – Web Accessibility Directive
+
+- This directive is transposed by law no. 2018-771 of 5 September 2018, supplemented by decree no. 2019-768 and the ministerial order of 20 September 2019 on the general accessibility improvement reference framework.
+- In France, the law lays down obligations not only for the public sector, but also for all private companies with a 250+ million euros turnover.
+- Additional obligations exist through the law no. 2016-1321 of 7 October 2016 for a Digital Republic.
+
+### Scope: a limited number of services
+
+- Websites, extranet, intranet, business applications.
+- Mobile applications.
+- Software packages.
+
+**Obligations for businesses:**
+- Publication of a multi-year accessibility plan covering a maximum of 3 years, with an action plan for the current year ([for example, Orange's multi-year plan](https://gallery.orange.com/element?id=410806)).
+- Training for all digital stakeholders (such as decision-makers, buyers, product managers, designers, developers and communicators).
+- Publication of an accessibility declaration for each website or mobile application, with a "non-compliant", "partially compliant" or "fully compliant" statement on the home page.
+- Compliance of digital services concerned.
+
+**Obligations for each digital service:** 
+- Accessibility statement specifying level of compliance, non-conformities, tools used for testing, a means for users to report problems.
+- Compliance with the _référentiel général d'amélioration de l'accessibilité_ (RGAA).
+
+The international dimension of the Orange Group, present in 26 countries, justifies considering the Web Content Accessibility Guidelines (WCAG) technical reference in its latest available version 2.2. However, the Orange Group provides a table of correspondences between the criteria of these 2 standards, which is available in French via the following link ([Correspondence between RGAA and WCAG](https://a11y-guidelines.orange.com/fr/cadrage/correspondance-rgaa-wcag/)).
+
+### Surveillance and Sanctions
+
+**Surveillance authority:**
+
+- Autorité de Régulation de la Communication Audiovisuelle et Numérique (ARCOM).
+
+**Sanctions:**
+
+- The penalty is €50,000 per service and can be renewed 6 months after the initial finding.
 
 ## Directive (UE) 2019/882 – European Accessibility Act
 
@@ -61,35 +95,3 @@ Failure to comply with legal accessibility requirements can result in a fifth-cl
 
 In addition, the competent authority may impose a daily penalty in addition to the compliance injunction, set at a maximum of €3,000 per day of delay, up to a cumulative ceiling of €300,000.
 
-## Directive (UE) 2016/2012 – Web Accessibility Directive
-
-- This directive is transposed by law no. 2018-771 of 5 September 2018, supplemented by decree no. 2019-768 and the ministerial order of 20 September 2019 on the general accessibility improvement reference framework.
-- In France, the law lays down obligations not only for the public sector, but also for all private companies with a 250+ million euros turnover.
-
-### Scope: a limited number of services
-
-- Websites, extranet, intranet, business applications.
-- Mobile applications.
-- Software packages.
-
-**Obligations for businesses:**
-- Publication of a multi-year accessibility plan covering a maximum of 3 years, with an action plan for the current year ([for example, Orange's multi-year plan](https://gallery.orange.com/element?id=410806)).
-- Training for all digital stakeholders (such as decision-makers, buyers, product managers, designers, developers and communicators).
-- Publication of an accessibility declaration for each website or mobile application, with a "non-compliant", "partially compliant" or "fully compliant" statement on the home page.
-- Compliance of digital services concerned.
-
-**Obligations for each digital service:** 
-- Accessibility statement specifying level of compliance, non-conformities, tools used for testing, a means for users to report problems.
-- Compliance with the _référentiel général d'amélioration de l'accessibilité_ (RGAA).
-
-The international dimension of the Orange Group, present in 26 countries, justifies considering the Web Content Accessibility Guidelines (WCAG) technical reference in its latest available version 2.2. However, the Orange Group provides a table of correspondences between the criteria of these 2 standards, which is available in French via the following link ([Correspondence between RGAA and WCAG](https://a11y-guidelines.orange.com/fr/cadrage/correspondance-rgaa-wcag/)).
-
-### Surveillance and Sanctions
-
-**Surveillance authority:**
-
-- Autorité de Régulation de la Communication Audiovisuelle et Numérique (ARCOM).
-
-**Sanctions:**
-
-- The penalty is €50,000 per service and can be renewed 6 months after the initial finding.
