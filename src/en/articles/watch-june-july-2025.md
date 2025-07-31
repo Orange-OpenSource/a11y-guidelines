@@ -116,7 +116,7 @@ Still lots to read during these holidays!
 - Motion Sensitivity and How to Do It Right on the Web: https://www.freecodecamp.org/news/web-sensitivity-how-to-design-accessible-animations/
 - List of games based on their accessibility: https://caniplaythat.com/
 - To make a conference accessible (fr): https://access42.net/conference-presentation-accessible-bonnes-pratiques-outils/
-- The experience of an a11y expert, so True: https://cerovac.com/a11y/2025/06/youre-not-an-accessibility-specialist-until-youve/
+- The experience of an a11y expert, so true: https://cerovac.com/a11y/2025/06/youre-not-an-accessibility-specialist-until-youve/
 - Reading order in PowerPoint: https://access42.net/ordre-lecture-powerpoint-accessibilite/
 - Interesting videos on A11Y by Intopia: https://www.youtube.com/@intopia
 
