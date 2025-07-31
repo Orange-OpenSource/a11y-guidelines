@@ -131,6 +131,6 @@ Encore beaucoup de choses à lire pendant ces vacances !
 - L'accessibilité est également importante pour les jeux vidéos et les consoles, la Nintendo Switch 2 fait office d'exemple en la matière (en) : https://www.theverge.com/nintendo/686591/nintendo-switch-2-accessibility-features-analysis
 - Un moyen de faire avancer l'a11y ? (en) : https://sightlessscribbles.com/posts/20250724/
 - Rapport de mi-année pour les plaintes de l'ADA (en) : https://blog.usablenet.com/2025-midyear-accessibility-lawsuit-report-key-legal-trends
-- Quand lever des drapeaux rouges pour l'accessibilité (en) : https://accessiblelink.substack.com/p/red-flags-for-accessibilityhttps://accessiblelink.substack.com/p/red-flags-for-accessibility
+- Quand lever des drapeaux rouges pour l'accessibilité (en) : https://accessiblelink.substack.com/p/red-flags-for-accessibility
 - Un avis sur l'avancée de l'a11y que je partage (en) : https://steady.page/en/075ca46e-c27f-49fb-946a-f1aa90a08e0d/posts/a1113fe6-287b-4dfe-a06d-28ff8ec0cc70
 - Des annonces pas adaptées aux métiers de l'a11y (en) : https://www.craigabbott.co.uk/blog/mission-impossible-accessibility-job-roles/
