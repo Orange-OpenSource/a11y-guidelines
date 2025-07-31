@@ -138,7 +138,7 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
           <td><code>main</code></td>
           <td><code>role="main"</code></td>
         </tr>
-          <tr>
+        <tr>
           <td><code>form</code></td>
           <td><code>role="form"</code></td>
         </tr>
@@ -173,7 +173,7 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
  
   <h4 id="main">main</h4>
   <p>La balise <code>main</code> (ou l'attribut de région <abbr>ARIA</abbr> <code>role="main"</code>) permet d'identifier le contenu principal de la page.</p>
-  <p>Cet élément, dont la présence est obligatoire dans chaque page <abbr>HTML</abbr>, n'est à utiliser qu'une seule fois par page et uniquement comme enfant des balises <abbr>HTML</abbr> <code>body</code>, <code>html</code>, <code>div</code> et <code>form</code>. </p>
+  <p>Cet élément, dont la présence est obligatoire dans chaque page <abbr>HTML</abbr>, n'est à utiliser qu'une seule fois par page et uniquement comme enfant des balises <abbr>HTML</abbr> <code>body</code>, <code>html</code>, <code>div</code> et <code>form</code>.</p>
   <p>Note : si une page <abbr>HTML</abbr> contient un <code>iframe</code>, celui-ci peut également contenir une balise <code>main</code> (ou un attribut <code>role="main"</code>) car c'est une page autonome.</p>
   <p>Pour plus détails, voir <a href="https://adrianroselli.com/2025/04/mainlining-mains.html" lang="en" hreflang="en">Mainlining Mains</a>.</p>
 
@@ -188,7 +188,7 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
   <h4 id="aside">aside</h4>
   <p>La balise <code>aside</code> (ou l'attribut de région <abbr>ARIA</abbr> <code>role="complementary"</code>) est à utiliser pour identifier du contenu annexe au contenu principal de la page (information complémentaire, publicité…).</p>
   <p>Cet élément est à placer comme enfant direct de la base <code>body</code>.</p>
-  <p> Il peut y avoir plusieurs balises <code>aside</code> (ou attributs <code>role="complementary"</code>) dans une même page. Dans ce cas, y ajouter systématiquement un nom accessible unique (voir <a href="#bonnes_pratiques">Bonnes pratiques</a>).</p>
+  <p>Il peut y avoir plusieurs balises <code>aside</code> (ou attributs <code>role="complementary"</code>) dans une même page. Dans ce cas, y ajouter systématiquement un nom accessible unique (voir <a href="#bonnes_pratiques">Bonnes pratiques</a>).</p>
 
   <h4 id="footer-tag">footer</h4>
   <p>La balise <code>footer</code> (ou l'attribut de région <abbr>ARIA</abbr> <code>role="contentinfo"</code>) permet d’identifier le pied de page. Cela est vrai uniquement si cet élément est placé dans une balise <code>body</code>,
@@ -200,10 +200,10 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
 <h3 class="mt-4" id="bonnes_pratiques">Bonnes pratiques</h3>
 <ul>
   <li>
-    <p class="mb-1">Quand plusieurs régions (<span lang="en">landmarks</span>) de même type sont présentes dans la page, il peut être pertinent de donner à chacune un nom accessible différent pour permettre aux utilisateurs d'assistance technique de les différencier. Un nom accessible s'ajoute, selon le cas, dans : </p>
+    <p class="mb-1">Quand plusieurs régions (<span lang="en">landmarks</span>) de même type sont présentes dans la page, il peut être pertinent de donner à chacune un nom accessible différent pour permettre aux utilisateurs d'assistance technique de les différencier. Un nom accessible s'ajoute, selon le cas, dans :</p>
     <ul>
       <li>un attribut <code>aria-labelledby</code> qui pointe sur le titre d'entête dont on veut utiliser le contenu comme nom accessible, si la région a un titre d'entête.</li>
-      <li>un attribut <code>aria-label</code>, si la région n'a pas de titre d'entête (exemple : texte dans une balise <code>h1</code> à <code>h6</code>)</li>
+      <li>un attribut <code>aria-label</code>, si la région n'a pas de titre d'entête (exemple : texte dans une balise <code>h1</code> à <code>h6</code>).</li>
     </ul>
     <p class="mt-2"><i>Note : </i>un attribut <code>aria-describedby</code> pointant sur un élément dont on veut utiliser le contenu comme complément au nom accessible (description accessible) peut aussi permettre de préciser la fonction d'une région.</p>
  
@@ -220,7 +220,9 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
     <p>Tout le contenu de la page doit être inclus dans les balises <abbr>HTML5</abbr> ou des régions (<span lang="en">landmarks</span>) <abbr>ARIA</abbr> de structure. Ceci permet aux utilisateurs d'avoir accès à tout le contenu, même celui qu'ils n'auraient pas trouvé car en dehors de ces balises.</p>
   </li>
 
-  <li><p> Exception : Les boites de dialogue modales n'ont pas besoin d'être imbriquées dans une balise de région.</p></li>
+  <li>
+    <p> Exception : Les boites de dialogue modales n'ont pas besoin d'être imbriquées dans une balise de région.</p>
+  </li>
 </ul>
   
 
