@@ -117,7 +117,7 @@ Encore beaucoup de choses à lire pendant ces vacances !
 ## Ressources
 
 - Réflexions sur Wcag 2.2 et 3.0, pas faux (en) ; https://blog.logrocket.com/ux-design/wcag-3-vs-2-ux/
-- Faire et le prouver plutôt que le dire qu'on fait de l'a11y (en) : https://afixt.com/designing-for-cognitive-disabilities-best-practices-for-an-inclusive-web/
+- Faire et le prouver plutôt que dire qu'on fait de l'a11y (en) : https://afixt.com/designing-for-cognitive-disabilities-best-practices-for-an-inclusive-web/
 - 4 lightning talks du A11yNYC (en) : https://equalentry.com/accessibility-lightning-talks/ 
 - Sensibilité aux mouvements et commet bien faire sur le web (en) : https://www.freecodecamp.org/news/web-sensitivity-how-to-design-accessible-animations/
 - List de jeux en fonction de leur accessibilité (en) : https://caniplaythat.com/
