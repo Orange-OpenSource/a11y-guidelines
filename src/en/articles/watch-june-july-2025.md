@@ -64,7 +64,7 @@ Still lots to read during these holidays!
 
 ## Back From experience
 
-- CSS that break A11y, read (fr): <https://www.alsacreations.com/article/lire/1951-quand-css-casse-accessibilite.html>
+- CSS that break A11y, read (fr): https://www.alsacreations.com/article/lire/1951-quand-css-casse-accessibilite.html
 - A request for Google products, make it A11y from the design stage: https://adrianroselli.com/2025/05/my-request-to-google-on-accessibility.html
 - Where to put focus when opening a modal: https://adrianroselli.com/2025/06/where-to-put-focus-when-opening-a-modal-dialog.html
 - Shame on making code that's ugly and therefore not A11y: https://heydonworks.com/article/pride-shame-and-accessibility/
