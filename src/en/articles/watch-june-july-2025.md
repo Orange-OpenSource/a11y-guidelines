@@ -110,7 +110,7 @@ Still lots to read during these holidays!
 
 ## Resources
 
-- Thoughts on WCAG 2.2 and 3.0, Not Wrong; https://blog.logrocket.com/ux-design/wcag-3-vs-2-ux/
+- Thoughts on WCAG 2.2 and 3.0, not Wrong: https://blog.logrocket.com/ux-design/wcag-3-vs-2-ux/
 - Do it and prove it rather than say you're doing a11y: https://afixt.com/designing-for-cognitive-disabilities-best-practices-for-an-inclusive-web/
 - 4 Lightning Talks from A11yNYC: https://equalentry.com/accessibility-lightning-talks/
 - Motion Sensitivity and How to Do It Right on the Web: https://www.freecodecamp.org/news/web-sensitivity-how-to-design-accessible-animations/
