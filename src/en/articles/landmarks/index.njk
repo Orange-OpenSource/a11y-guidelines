@@ -23,7 +23,7 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
 <ul>
   <li>
     <p>For an <em><abbr>HTML5</abbr> page</em> (recommended): use the <em>semantic tags</em> (<code>main</code>, <code>header</code>, <code>footer</code>, <code>aside</code>, etc.) that have been introduced.
-      These tags can be used on their own, without the corresponding <abbr>ARIA</abbr> roles, as they are well supported by the vast majority of browsers and technical aids.</p>
+      These tags can be used independently of the corresponding <abbr>ARIA</abbr> roles, as they are well supported by the vast majority of browsers and assistive technologies.</p>
 
     <pre><code class="html">
     &lt;head&gt;
@@ -156,7 +156,6 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
         </tr>
       </tbody>
   </table>
-
 <h3 id="usages" class="mt-4">Usage </h3>
   <h4 id="header">header</h4>
   <p>The <code>header</code> tag (or the <abbr>ARIA</abbr> landmark attribute <code>role="header"</code>) identifies the page header. This is only true if this element is placed in a <code>body</code> tag,
@@ -217,18 +216,18 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
   </li>
 
   <li>
-    <p>All page content must be included in <abbr>HTML5</abbr> tags of in <abbr>ARIA</abbr> structure landmarks. This allows users to access all content, even that which they may not have found outside these tags.</p>
+    <p>All page content must be included in <abbr>HTML5</abbr> tags of in <abbr>ARIA</abbr> structure landmarks. This allows users to access all content, even the one not easily discoverable, because outdside these tags.</p>
   </li>
 
-  <li>
+  <
     <p>Exception: Modal dialog boxes do not need to be nested within a region tag.</p>
   </li>
 </ul>
 
 <h3 id="landmarks_users_tech_aids"><abbr>ARIA</abbr> landmarks, users and assistive technologies</h3>
 <p>The <abbr>HTML5</abbr> tags defining the main regions of the page have sufficient support with assistive technologies (screen readers, magnifying software...). We must therefore use them to structure our page without adding <abbr>ARIA</abbr> landmark roles.</p>
-<p>Setting up these landmarks <abbr>ARIA</abbr> is a good practice, because it can improve the browsing of some users without impacting that of others. It's really a best practice!</p>
-
+<p>Setting up these landmarks <abbr>ARIA</abbr> is a good practice, because it can improve the browsing of some users without impacting that of others. It's an important  best practice!</p>
+:
 <h3 id="resources" class="mt-4">Ressources</h3>
 <ul>
   <li><a href="https://www.w3.org/WAI/ARIA/apg/practices/landmark-regions/">Landmark Regions specification</a></li>
