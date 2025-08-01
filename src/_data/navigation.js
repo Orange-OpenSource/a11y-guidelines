@@ -20,7 +20,8 @@ module.exports = {
         label: 'Planning',
         href: '/en/planning/',
         subLevels: [
-          { label: 'Accessibility regulations', href: '/en/planning/accessibility-regulations/' },
+          { label: 'Legal framework in France', href: '/en/planning/legal-framework-in-france/' },
+	  { label: 'Legal framework in Europe', href: '/en/planning/legal-framework-in-other-countries/' },
           { label: 'Testing method', href: '/en/planning/testing-method/' }
         ]
       },
@@ -113,7 +114,8 @@ module.exports = {
         label: 'Cadrage',
         href: '/fr/cadrage/',
         subLevels: [
-          { label: 'Cadre légal', href: '/fr/cadrage/cadre-legal/' },
+          { label: 'Cadre légal français', href: '/fr/cadrage/cadre-legal-francais/' },
+	  { label: 'Cadre légal en Europe', href: '/fr/cadrage/cadre-legal-en-europe/' },
           { label: 'Méthode de test', href: '/fr/cadrage/methode-de-test/' }
         ]
       },
