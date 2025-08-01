@@ -50,7 +50,7 @@ Encore beaucoup de choses à lire pendant ces vacances !
 ## Points techniques
 
 - Ce qu'il faut ou pas traduire (en) : https://www.tpgi.com/translating-accessibility/
-- Nom accessible et étiquette, mise au poing (en) : https://html5accessibility.com/stuff/2025/07/14/a-label-and-a-name-walk-into-a-bar/
+- Nom accessible et étiquette, mise au point (en) : https://html5accessibility.com/stuff/2025/07/14/a-label-and-a-name-walk-into-a-bar/
 - Où mettre le focus à l'ouverture d'une modale (en) : https://adrianroselli.com/2025/06/where-to-put-focus-when-opening-a-modal-dialog.html
 - ARIA-selected expliqué (en) : https://www.a11y-collective.com/blog/aria-selected/
 - Le FALC comme outil d'a11y, bone pratique rédactionnelle : https://blog.ipedis.com/langage-clair-accessibilite-cognitive-et-accessibilite-numerique?_hsmi=369355244
