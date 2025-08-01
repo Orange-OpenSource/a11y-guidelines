@@ -13,7 +13,7 @@ css:
 <h2>Introduction</h2>
 
 <p>In this article, we'll look at how to <span class="fw-bold">improve web page navigation</span> by programmatically structuring content using semantic <abbr>HTML</abbr> elements.</p>
-<p>This structure will enable users who navigate with a <span class="fw-bold">technical aid</span> (e.g., a screen reader) or only with the <span class="fw-bold">keyboard</span>, to be able to visualize the page content via their assistance tools, without having to browse through it. This saves a considerable amount of time and energy.</p>
+<p>This structure will enable users who navigate with <span class="fw-bold">assistive technologies</span> (e.g., a screen reader) or only with the <span class="fw-bold">keyboard</span>, to better understand the page content through their assistance tools, without having to browse through it. This saves a considerable amount of time and energy.</p>
 <p>The use of these semantic elements is a <span class="fw-bold">best practice</span> that we strongly recommend for all web pages, given the ease of implementation and the ease of navigation it provides.</p>
 <p>Please note: This best practice is not a requirement of the WCAG. However, it may become one in the broader context of <a href="https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks">criterion 2.4.1 “Bypass Blocks (Level A)”</a>. To find out more about its implementation, see <a href="https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA11">Technique ARIA11:
 Using ARIA landmarks to identify regions of a page</a>.</p>
@@ -59,7 +59,7 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
       &lt;/aside&gt;
 
       &lt;footer&gt;
-        &lt;p&gt;…footer content&nbsp;: copyright…&lt;/p&gt;
+        &lt;p&gt;…footer content: copyright…&lt;/p&gt;
         […]
       &lt;/footer&gt;
     &lt;/body&gt;
@@ -104,7 +104,7 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
         &lt;/div&gt;
 
         &lt;div role="contentinfo"&gt;
-          &lt;p&gt;…footer content&nbsp;: copyright…&lt;/p&gt;
+          &lt;p&gt;…footer content: copyright…&lt;/p&gt;
           […]
         &lt;/div&gt;
       &lt;/body&gt;
@@ -189,7 +189,7 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
   <p>This element is to be placed as a direct child of the <code>body</code> tag.</p>
   <p>There may be several <code>aside</code> tags (or <code>role="complementary"</code> attributes) on the same page. In this case, systematically add a unique accessible name to each one (see <a href="#best_practices">Best practices</a>).</p>
 
-  <h4 id="footer">footer</h4>
+  <h4 id="footer-tag">footer</h4>
   <p>The <code>footer</code> tag (or the <abbr>ARIA</abbr> landmark attribute <code>role="contentinfo"</code>) is used to identify the footer. This is only true if this element is placed in a <code>body</code> tag,
       either as a direct child, or in an <abbr>HTML</abbr> tag other than <code>article</code>, <code>aside</code>, <code>main</code>, <code>nav</code> and <code>section</code>.</p>
   <p>To simplify things, we recommend using the <code>footer</code> tag (or the <abbr>ARIA</abbr> landmark attribute <code>role="contentinfo"</code>) only once per page.</p>
@@ -206,8 +206,8 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
     </ul>
     <p class="mt-2"><i>Note: </i>an <code>aria-describedby</code> attribute, pointing to an element whose content you want to use as a complement to the accessible name (accessible description), can also be used to specify the function of a region.</p>
  
-    <p class="mt-3>Example of a page with three navigation landmarks:</p>
-    <pre><code class = "html">
+    <p class="mt-3">Example of a page with three navigation landmarks:</p>
+    <pre><code class="html">
     &lt;nav aria-label="Main menu"&gt;[…]&lt;/nav &gt;
     &lt;nav aria-label="Secondary menu"&gt;[…]&lt;/nav&gt;
     &lt;nav aria-label="Breadcrumb"&gt;[…]&lt;/nav&gt;
@@ -216,10 +216,10 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
   </li>
 
   <li>
-    <p>All page content must be included in <abbr>HTML5</abbr> tags of in <abbr>ARIA</abbr> structure landmarks. This allows users to access all content, even the one not easily discoverable, because outdside these tags.</p>
+    <p>All page content must be included in <abbr>HTML5</abbr> tags of in <abbr>ARIA</abbr> structure landmarks. This allows users to access all content, even the one not easily discoverable, because outside of these tags.</p>
   </li>
 
-  <
+  <li>
     <p>Exception: Modal dialog boxes do not need to be nested within a region tag.</p>
   </li>
 </ul>
