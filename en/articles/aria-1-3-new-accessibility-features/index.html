@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>New features in ARIA version 1.3: a guide for developers - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
+    
+    <meta name="description" content="Explore the new features introduced in ARIA version 1.3. This article provides practical examples and explains how these enhancements improve web application accessibility for all users.">
+    
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <nav class="navbar navbar-expand-lg supra" aria-label="Skip links - Switch language" data-bs-theme="dark">
+   <div class="container-lg">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
+      <a href="#main-menu" class="nav-link">Go to menu</a>
+    </li><li class="nav-item">
+      <a href="#main-content" class="nav-link">Go to content</a>
+    </li><li class="nav-item hidden-if-no-js">
+      <a href="#search-input" class="nav-link">Go to search</a>
+    </li><li class="nav-item">
+      <a href="#footer" class="nav-link">Go to footer</a>
+    </li></ul>
+
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+    </div>
+  </nav>
+
+  
+
+<div class="navbar navbar-expand-md" data-bs-theme="dark">
+  <nav id="main-menu" class="container-lg justify-content-md-start align-items-center" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link active" aria-current="true">
+  Articles
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  
+</header>
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a class="breadcrumb-focus" href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-focus" href="/en/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          New features in ARIA version 1.3: a guide for developers
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#new-aria-attributes" class="dropdown-item text-wrap">New ARIA attributes</a><a href="#aria-braillelabel" class="dropdown-item text-wrap">aria-braillelabel</a><a href="#aria-brailleroledescription" class="dropdown-item text-wrap">aria-brailleroledescription</a><a href="#aria-details" class="dropdown-item text-wrap">aria-details</a><a href="#aria-description" class="dropdown-item text-wrap">aria-description</a><a href="#new-aria-roles" class="dropdown-item text-wrap">New ARIA roles</a><a href="#rolesuggestion" class="dropdown-item text-wrap">role=&quot;suggestion&quot;</a><a href="#rolecomment" class="dropdown-item text-wrap">role=&quot;comment&quot;</a><a href="#rolemark" class="dropdown-item text-wrap">role=&quot;mark&quot;</a><a href="#use-cases" class="dropdown-item text-wrap">Use cases</a><a href="#messaging-applications" class="dropdown-item text-wrap">Messaging applications</a><a href="#navigation-interfaces" class="dropdown-item text-wrap">Navigation interfaces</a><a href="#suggestions-and-instructions" class="dropdown-item text-wrap">Suggestions and Instructions</a><a href="#conclusion" class="dropdown-item text-wrap">Conclusion</a><a href="#webography" class="dropdown-item text-wrap">Webography</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          
+            <h1>New features in ARIA version 1.3: a guide for developers</h1>
+            
+              <span class="visually-hidden" id="filters_label">
+                Associated themes:
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><div class="tagType" data-tag="web">Web</a></li>
+              <li class="list-inline-item"><div class="tagType" data-tag="advanced">Advanced</a></li>
+              </ul>
+            
+            
+            
+
+            <p class="text-muted mb-0">
+              <span class="visually-hidden">Publication date</span>
+              <time datetime="2025-08-01T00:00:00.000Z">
+                August 01, 2025
+              </time>
+            </p>
+
+            
+          
+          <div class="mt-4">
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-39" aria-labelledby="heading-39">#</a></h2>
+<p>Version 1.3 of the <abbr>ARIA</abbr> (Accessible Rich Internet Applications) standard brings significant improvements to the accessibility of web applications. This article aims to inform web and mobile developers, as well as anyone interested in digital accessibility, about the new attributes and roles introduced, their usage, and the impact they can have on user experience.</p>
+<h2 id="new-aria-attributes" class="h2-focus">New ARIA attributes <a class="header-anchor" href="#new-aria-attributes" id="heading-40" aria-labelledby="heading-40">#</a></h2>
+<h3 id="aria-braillelabel">aria-braillelabel <a class="header-anchor" href="#aria-braillelabel" id="heading-41" aria-labelledby="heading-41">#</a></h3>
+<p>Description: this attribute allows developers to provide a specific label for users of braille devices. It is particularly useful for interactive elements, such as buttons or links, where a clear label is essential for understanding.</p>
+<p>Example usage:</p>
+<pre><code class="language-html">&lt;button aria-braillelabel=&quot;Send message&quot;&gt;Send&lt;/button&gt;
+</code></pre>
+<p>User impact: braille device users will benefit from a better understanding of available actions, which can enhance their navigation experience and autonomy.</p>
+<h3 id="aria-brailleroledescription">aria-brailleroledescription <a class="header-anchor" href="#aria-brailleroledescription" id="heading-42" aria-labelledby="heading-42">#</a></h3>
+<p>Description: this attribute provides a description of an element's role for users of braille devices. It helps to contextualize the function of an element, especially in complex interfaces.</p>
+<p>Example usage:</p>
+<pre><code class="language-html">&lt;div role=&quot;navigation&quot; aria-brailleroledescription=&quot;Main navigation menu&quot;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<p>User impact: braille device users will have a better understanding of the page structure, making navigation and interaction with content easier.</p>
+<h3 id="aria-details">aria-details <a class="header-anchor" href="#aria-details" id="heading-43" aria-labelledby="heading-43">#</a></h3>
+<p>Description: this attribute has been modified in the version 1.3 of <abbr>ARIA</abbr> to allow referencing multiple <code>is</code>. It thus allows referencing one or more elements that provide additional information about another element, offering a richer context.</p>
+<p>Example usage:</p>
+<pre><code class="language-html">&lt;button aria-details=&quot;details1 details2&quot;&gt;Learn more&lt;/button&gt;
+&lt;div id=&quot;details1&quot;&gt;
+  &lt;p&gt;Here is additional information about this button.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&quot;details2&quot;&gt;
+  &lt;p&gt;Also, check our user guide.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>User impact: users, especially those using screen readers, will benefit from a better understanding of elements, reducing confusion and enhancing the overall experience.</p>
+<h3 id="aria-description">aria-description <a class="header-anchor" href="#aria-description" id="heading-44" aria-labelledby="heading-44">#</a></h3>
+<p>Description: this attribute allows providing a description of an element, offering additional contextual information to users.</p>
+<p>Example usage:</p>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; aria-description=&quot;Please enter your email address.&quot; /&gt;
+</code></pre>
+<p>User impact: users will have access to additional information that can help them fill out forms or interact with elements more effectively.</p>
+<h2 id="new-aria-roles" class="h2-focus">New ARIA roles <a class="header-anchor" href="#new-aria-roles" id="heading-45" aria-labelledby="heading-45">#</a></h2>
+<h3 id="rolesuggestion">role=&quot;suggestion&quot; <a class="header-anchor" href="#rolesuggestion" id="heading-46" aria-labelledby="heading-46">#</a></h3>
+<p>Description: this role is used to programmatically indicate that a change has been made in a text. This allows users to understand that there are options or proposed corrections in the text that they can consider or apply.</p>
+<p>Example usage:</p>
+<pre><code class="language-html">&lt;p&gt;
+  The best pets are
+  &lt;span role=&quot;suggestion&quot;&gt;
+    &lt;span role=&quot;deletion&quot;&gt;dogs.&lt;/span&gt;
+    &lt;span role=&quot;insertion&quot;&gt;T. Rex.&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/p&gt;
+</code></pre>
+<p>User impact: users can receive helpful advice that enhances their experience and helps them navigate more effectively through the application.</p>
+<h3 id="rolecomment">role=&quot;comment&quot; <a class="header-anchor" href="#rolecomment" id="heading-47" aria-labelledby="heading-47">#</a></h3>
+<p>Description: this role is used to programmatically indicate comment areas.</p>
+<p>Example usage:</p>
+<pre><code class="language-html">&lt;article&gt;
+  &lt;h1&gt;My Blog Post&lt;/h1&gt;
+  &lt;div class=&quot;comments-section&quot;&gt;
+    &lt;div role=&quot;comment&quot; aria-labelledby=&quot;user1&quot;&gt;
+      &lt;h3 id=&quot;user1&quot;&gt;Mary&lt;/h3&gt;
+      &lt;time datetime=&quot;2024-01-20&quot;&gt;01/20/2024&lt;/time&gt;
+      &lt;p&gt;Great article, thanks!&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+</code></pre>
+<p>User impact: users will benefit from clear instructions that help them interact with elements more effectively.</p>
+<h3 id="rolemark">role=&quot;mark&quot; <a class="header-anchor" href="#rolemark" id="heading-48" aria-labelledby="heading-48">#</a></h3>
+<p>Description: the <code>mark</code> role is used to indicate text that has been highlighted or is of particular importance within the content.</p>
+<p>Example usage:</p>
+<pre><code class="language-html">&lt;p&gt;This text is &lt;span role=&quot;mark&quot;&gt;important&lt;/span&gt; for understanding.&lt;/p&gt;
+</code></pre>
+<p>User impact: screen reader users can be informed about important elements in the content, improving their ability to grasp key points.</p>
+<h2 id="use-cases" class="h2-focus">Use cases <a class="header-anchor" href="#use-cases" id="heading-49" aria-labelledby="heading-49">#</a></h2>
+<h3 id="messaging-applications">Messaging applications <a class="header-anchor" href="#messaging-applications" id="heading-50" aria-labelledby="heading-50">#</a></h3>
+<p>In a messaging application, using <code>aria-braillelabel</code> and <code>aria-brailleroledescription</code> can enhance the user experience by providing clear labels for action buttons, allowing users to quickly understand available options.</p>
+<h3 id="navigation-interfaces">Navigation interfaces <a class="header-anchor" href="#navigation-interfaces" id="heading-51" aria-labelledby="heading-51">#</a></h3>
+<p>For navigation interfaces, <code>aria-details</code> and <code>aria-description</code> can be used to provide additional context about navigation elements, making the experience more intuitive for all users, especially those using assistive technologies.</p>
+<h3 id="suggestions-and-instructions">Suggestions and Instructions <a class="header-anchor" href="#suggestions-and-instructions" id="heading-52" aria-labelledby="heading-52">#</a></h3>
+<p>Using the new roles <code>suggestion</code> and <code>comment</code> can help guide users in using the application's features by providing them with advice and clear instructions.</p>
+<h2 id="conclusion" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-53" aria-labelledby="heading-53">#</a></h2>
+<p>Version 1.3 of the <abbr>ARIA</abbr> standard introduces essential attributes and roles that enhance the accessibility of web applications. By integrating these new features, developers can create more inclusive experiences for all users, particularly those who rely on assistive technologies. Feel free to explore these new features and apply them in your projects to ensure better digital accessibility.</p>
+<h2 id="webography" class="h2-focus">Webography <a class="header-anchor" href="#webography" id="heading-54" aria-labelledby="heading-54">#</a></h2>
+<ul>
+  <li><a href="https://w3c.github.io/aria/">WAI-ARIA 1.3 draft</a></li>
+  <li><a href="https://www.craigabbott.co.uk/blog/a-look-at-the-new-wai-aria-1-3-draft/">A look at the new WAI-ARIA 1.3 draft</a></li>
+</ul>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#new-aria-attributes" class="nav-link text-muted">New ARIA attributes</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#aria-braillelabel" class="nav-link text-muted">aria-braillelabel</a></li><li class="nav-item position-relative">
+            <a href="#aria-brailleroledescription" class="nav-link text-muted">aria-brailleroledescription</a></li><li class="nav-item position-relative">
+            <a href="#aria-details" class="nav-link text-muted">aria-details</a></li><li class="nav-item position-relative">
+            <a href="#aria-description" class="nav-link text-muted">aria-description</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#new-aria-roles" class="nav-link text-muted">New ARIA roles</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#rolesuggestion" class="nav-link text-muted">role=&quot;suggestion&quot;</a></li><li class="nav-item position-relative">
+            <a href="#rolecomment" class="nav-link text-muted">role=&quot;comment&quot;</a></li><li class="nav-item position-relative">
+            <a href="#rolemark" class="nav-link text-muted">role=&quot;mark&quot;</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#use-cases" class="nav-link text-muted">Use cases</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#messaging-applications" class="nav-link text-muted">Messaging applications</a></li><li class="nav-item position-relative">
+            <a href="#navigation-interfaces" class="nav-link text-muted">Navigation interfaces</a></li><li class="nav-item position-relative">
+            <a href="#suggestions-and-instructions" class="nav-link text-muted">Suggestions and Instructions</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#conclusion" class="nav-link text-muted">Conclusion</a></li><li class="nav-item position-relative">
+            <a href="#webography" class="nav-link text-muted">Webography</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility: partially compliant
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/aria-1-3-new-accessibility-features.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" title="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"]},"placeholder":"Search in entire website","translations":{"button":{"buttonText":"Search in entire website","buttonAriaLabel":"Search in entire website"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2025 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
