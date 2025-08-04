@@ -196,16 +196,16 @@
             
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-474" aria-labelledby="heading-474">#</a></h2>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-464" aria-labelledby="heading-464">#</a></h2>
 <p>La version 1.3 de la norme <abbr>ARIA</abbr> (Accessible Rich Internet Applications) apporte des améliorations significatives pour l'accessibilité des applications web. Cet article vise à informer les développeurs web et mobile, ainsi que toute personne intéressée par l'accessibilité numérique, des nouveaux attributs et rôles introduits, de leur utilisation, et de l'impact qu'ils peuvent avoir sur l'expérience utilisateur.</p>
-<h2 id="nouveaux-attributs-aria" class="h2-focus">Nouveaux attributs ARIA <a class="header-anchor" href="#nouveaux-attributs-aria" id="heading-475" aria-labelledby="heading-475">#</a></h2>
-<h3 id="aria-braillelabel">aria-braillelabel <a class="header-anchor" href="#aria-braillelabel" id="heading-476" aria-labelledby="heading-476">#</a></h3>
+<h2 id="nouveaux-attributs-aria" class="h2-focus">Nouveaux attributs ARIA <a class="header-anchor" href="#nouveaux-attributs-aria" id="heading-465" aria-labelledby="heading-465">#</a></h2>
+<h3 id="aria-braillelabel">aria-braillelabel <a class="header-anchor" href="#aria-braillelabel" id="heading-466" aria-labelledby="heading-466">#</a></h3>
 <p>Description : cet attribut permet de fournir une étiquette spécifique pour les utilisateurs de dispositifs braille. Il est particulièrement utile pour les éléments interactifs, comme les boutons ou les liens, où une étiquette claire est essentielle pour la compréhension.</p>
 <p>Exemple d'utilisation :</p>
 <pre><code class="language-html">&lt;button aria-braillelabel=&quot;Envoyer le message&quot;&gt;Envoyer&lt;/button&gt;
 </code></pre>
 <p>Impact utilisateur : les utilisateurs de dispositifs braille bénéficieront d'une meilleure compréhension des actions disponibles, ce qui peut améliorer leur expérience de navigation et leur autonomie.</p>
-<h3 id="aria-brailleroledescription">aria-brailleroledescription <a class="header-anchor" href="#aria-brailleroledescription" id="heading-477" aria-labelledby="heading-477">#</a></h3>
+<h3 id="aria-brailleroledescription">aria-brailleroledescription <a class="header-anchor" href="#aria-brailleroledescription" id="heading-467" aria-labelledby="heading-467">#</a></h3>
 <p>Description : cet attribut fournit une description du rôle d'un élément pour les utilisateurs de dispositifs braille. Cela aide à contextualiser la fonction d'un élément, en particulier dans des interfaces complexes.</p>
 <p>Exemple d'utilisation :</p>
 <pre><code class="language-html">&lt;div role=&quot;navigation&quot; aria-brailleroledescription=&quot;Menu principal de navigation&quot;&gt;
@@ -216,7 +216,7 @@
 &lt;/div&gt;
 </code></pre>
 <p>Impact utilisateur : les utilisateurs de dispositifs braille auront une meilleure compréhension de la structure de la page, ce qui facilite la navigation et l'interaction avec le contenu.</p>
-<h3 id="aria-details">aria-details <a class="header-anchor" href="#aria-details" id="heading-478" aria-labelledby="heading-478">#</a></h3>
+<h3 id="aria-details">aria-details <a class="header-anchor" href="#aria-details" id="heading-468" aria-labelledby="heading-468">#</a></h3>
 <p>Description : cet attribut a été modifié dans la version 1.3 d'<abbr>ARIA</abbr> pour permettre la référence à plusieurs <code>id</code>. Il permet ainsi de référencer un ou plusieurs éléments qui fournissent des informations supplémentaires sur un autre élément, offrant ainsi un contexte plus riche.</p>
 <p>Exemple d'utilisation :</p>
 <pre><code class="language-html">&lt;button aria-details=&quot;details1 details2&quot;&gt;En savoir plus&lt;/button&gt;
@@ -228,14 +228,14 @@
 &lt;/div&gt;
 </code></pre>
 <p>Impact utilisateur : les utilisateurs, notamment ceux utilisant des lecteurs d'écran, bénéficieront d'une meilleure compréhension des éléments, ce qui peut réduire la confusion et améliorer l'expérience globale.</p>
-<h3 id="aria-description">aria-description <a class="header-anchor" href="#aria-description" id="heading-479" aria-labelledby="heading-479">#</a></h3>
+<h3 id="aria-description">aria-description <a class="header-anchor" href="#aria-description" id="heading-469" aria-labelledby="heading-469">#</a></h3>
 <p>Description : cet attribut permet de fournir une description d'un élément, offrant ainsi des informations contextuelles supplémentaires aux utilisateurs.</p>
 <p>Exemple d'utilisation :</p>
 <pre><code class="language-html">&lt;input type=&quot;text&quot; aria-description=&quot;Veuillez entrer votre adresse e-mail.&quot; /&gt;
 </code></pre>
 <p>Impact utilisateur : les utilisateurs auront accès à des informations supplémentaires qui peuvent les aider à remplir des formulaires ou à interagir avec des éléments de manière plus efficace.</p>
-<h2 id="nouveaux-roles-aria" class="h2-focus">Nouveaux rôles ARIA <a class="header-anchor" href="#nouveaux-roles-aria" id="heading-480" aria-labelledby="heading-480">#</a></h2>
-<h3 id="rolesuggestion">role=&quot;suggestion&quot; <a class="header-anchor" href="#rolesuggestion" id="heading-481" aria-labelledby="heading-481">#</a></h3>
+<h2 id="nouveaux-roles-aria" class="h2-focus">Nouveaux rôles ARIA <a class="header-anchor" href="#nouveaux-roles-aria" id="heading-470" aria-labelledby="heading-470">#</a></h2>
+<h3 id="rolesuggestion">role=&quot;suggestion&quot; <a class="header-anchor" href="#rolesuggestion" id="heading-471" aria-labelledby="heading-471">#</a></h3>
 <p>Description : ce rôle est utilisé pour indiquer programmatiquement qu'une modification a été faite dans un texte. Cela permet aux utilisateurs de comprendre qu'il y a des options ou des corrections proposées dans le texte qu'ils peuvent considérer ou appliquer.</p>
 <p>Exemple d'utilisation :</p>
 <pre><code class="language-html">&lt;p&gt;
@@ -247,7 +247,7 @@
 &lt;/p&gt;
 </code></pre>
 <p>Impact utilisateur : les utilisateurs peuvent recevoir des conseils utiles qui améliorent leur expérience et les aident à naviguer plus efficacement dans l'application.</p>
-<h3 id="rolecomment">role=&quot;comment&quot; <a class="header-anchor" href="#rolecomment" id="heading-482" aria-labelledby="heading-482">#</a></h3>
+<h3 id="rolecomment">role=&quot;comment&quot; <a class="header-anchor" href="#rolecomment" id="heading-472" aria-labelledby="heading-472">#</a></h3>
 <p>Description : ce rôle est utilisé signaler programmatiquement les zones de commentaires.</p>
 <p>Exemple d'utilisation :</p>
 <pre><code class="language-html">&lt;article&gt;
@@ -262,22 +262,22 @@
 &lt;/article&gt;
 </code></pre>
 <p>Impact utilisateur : les utilisateurs bénéficieront d'instructions claires qui les aident à interagir avec les éléments de manière plus efficace.</p>
-<h3 id="rolemark">role=&quot;mark&quot; <a class="header-anchor" href="#rolemark" id="heading-483" aria-labelledby="heading-483">#</a></h3>
+<h3 id="rolemark">role=&quot;mark&quot; <a class="header-anchor" href="#rolemark" id="heading-473" aria-labelledby="heading-473">#</a></h3>
 <p>Description : le rôle <code>mark</code> est utilisé pour indiquer un texte qui a été mis en surbrillance ou qui est d'une importance particulière dans le contenu.</p>
 <p>Exemple d'utilisation :</p>
 <pre><code class="language-html">&lt;p&gt;Ce texte est &lt;span role=&quot;mark&quot;&gt;important&lt;/span&gt; pour la compréhension.&lt;/p&gt;
 </code></pre>
 <p>Impact utilisateur : les utilisateurs de lecteurs d'écran peuvent être informés des éléments importants dans le contenu, ce qui améliore leur capacité à saisir les points clés.</p>
-<h2 id="cas-dutilisation" class="h2-focus">Cas d'utilisation <a class="header-anchor" href="#cas-dutilisation" id="heading-484" aria-labelledby="heading-484">#</a></h2>
-<h3 id="applications-de-messagerie">Applications de messagerie <a class="header-anchor" href="#applications-de-messagerie" id="heading-485" aria-labelledby="heading-485">#</a></h3>
+<h2 id="cas-dutilisation" class="h2-focus">Cas d'utilisation <a class="header-anchor" href="#cas-dutilisation" id="heading-474" aria-labelledby="heading-474">#</a></h2>
+<h3 id="applications-de-messagerie">Applications de messagerie <a class="header-anchor" href="#applications-de-messagerie" id="heading-475" aria-labelledby="heading-475">#</a></h3>
 <p>Dans une application de messagerie, l'utilisation de <code>aria-braillelabel</code> et <code>aria-brailleroledescription</code> peut améliorer l'expérience utilisateur en fournissant des étiquettes claires pour les boutons d'action, permettant aux utilisateurs de comprendre rapidement les options disponibles.</p>
-<h3 id="interfaces-de-navigation">Interfaces de navigation <a class="header-anchor" href="#interfaces-de-navigation" id="heading-486" aria-labelledby="heading-486">#</a></h3>
+<h3 id="interfaces-de-navigation">Interfaces de navigation <a class="header-anchor" href="#interfaces-de-navigation" id="heading-476" aria-labelledby="heading-476">#</a></h3>
 <p>Pour les interfaces de navigation, <code>aria-details</code> et <code>aria-description</code> peuvent être utilisés pour donner un contexte supplémentaire sur les éléments de navigation, rendant l'expérience plus intuitive pour tous les utilisateurs, en particulier ceux utilisant des technologies d'assistance.</p>
-<h3 id="suggestions-et-instructions">Suggestions et instructions <a class="header-anchor" href="#suggestions-et-instructions" id="heading-487" aria-labelledby="heading-487">#</a></h3>
+<h3 id="suggestions-et-instructions">Suggestions et instructions <a class="header-anchor" href="#suggestions-et-instructions" id="heading-477" aria-labelledby="heading-477">#</a></h3>
 <p>L'utilisation des nouveaux rôles <code>suggestion</code> et <code>comment</code> peut aider à guider les utilisateurs dans l'utilisation des fonctionnalités de l'application, en leur fournissant des conseils et des instructions claires.</p>
-<h2 id="conclusion" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-488" aria-labelledby="heading-488">#</a></h2>
+<h2 id="conclusion" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-478" aria-labelledby="heading-478">#</a></h2>
 <p>La version 1.3 de la norme <abbr>ARIA</abbr> introduit des attributs et rôles essentiels qui améliorent l'accessibilité des applications web. En intégrant ces nouveautés, les développeurs peuvent créer des expériences plus inclusives pour tous les utilisateurs, en particulier ceux qui dépendent de technologies d'assistance. N'hésitez pas à explorer ces nouveautés et à les appliquer dans vos projets pour garantir une meilleure accessibilité numérique.</p>
-<h2 id="webographie" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-489" aria-labelledby="heading-489">#</a></h2>
+<h2 id="webographie" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-479" aria-labelledby="heading-479">#</a></h2>
 <ul lang="en">
   <li><a href="https://w3c.github.io/aria/" hreflang="en">WAI-ARIA 1.3 draft (en)</a></li>
   <li><a href="https://www.craigabbott.co.uk/blog/a-look-at-the-new-wai-aria-1-3-draft/" hreflang="en">A look at the new WAI-ARIA 1.3 draft (en)</a></li>
@@ -389,7 +389,7 @@
           'phase': 'prod'
         }];
         tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
-        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher sur le site","buttonAriaLabel":"Rechercher sur le site"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"],"attributesToHighlight":["title","content"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher sur le site","buttonAriaLabel":"Rechercher sur le site"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
     </script>
     <div hidden>Lien pour ancrage</div>
     <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2025 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
