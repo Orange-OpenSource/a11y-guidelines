@@ -48,7 +48,32 @@ No update is expected until March 2026, creating a 9-month compliance vacuum bet
 
 The EAA also distributes compliance responsibilities between actors, divided in four categories: manufacturers, importers, and distributors for products, as well as service providers for services. Figure 1 presents such obligations.
 
-![Compliance and Responsibilities Table](path/to/your/table-image.png)
+![Figure 1. Comparative Table of the Obligations for Operators](src/en/articles/images/figure 1 EAA law.png)
 
 <details>
-<summary>Click to view the table data (accessible text version)</summary>
+<summary>Click to view the alternative text</summary>
+
+This table presents the various accessibility obligations applicable to different types of economic operators. The table is structured with the types of obligation in rows and the four categories of economic operators in columns: Producer, Importer, Distributor and Service Provider. 
+
+Compliance with accessibility requirements is mandatory for producers and service providers.
+
+The conformity assessment procedure and technical documentation are fully required for producers, while importers and distributors have lighter obligations in this area. 
+
+A declaration of accessibility is only required from service providers. 
+
+Corrective measures in the event of non-compliance are mandatory for all economic players. 
+
+Non-compliance registers must be kept for 5 years by producers and importers, while service providers must maintain them for as long as their service is in operation.
+
+Cooperation with the competent authorities and long-term compliance procedures are required of all economic players. 
+
+Finally, only service providers are required to set up feedback mechanisms.</details>
+
+## A Homogeneous Transposition Mosaic
+
+Directives are essential tools of EU law but require to be translated into national legal orders, a process known as ‘transposition.' Directives only bind Member states to minimum requirements but do not prevent them from implementing more stringent measures.
+
+In the case of the EAA, the transposition process has been relatively homogeneous, following the harmonizing spirit of the directive. Figure 2 illustrates how different Member States have incorporated the EAA's requirements into their national legal frameworks, highlighting both the consistency in core provisions and the minor variations in implementation timelines and enforcement mechanisms.
+
+![Figure 2. Comparative Transposition Table](src/en/articles/images/figure 1 EAA law.png)
+
