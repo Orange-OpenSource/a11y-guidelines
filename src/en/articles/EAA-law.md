@@ -48,7 +48,7 @@ No update is expected until March 2026, creating a 9-month compliance vacuum bet
 
 The EAA also distributes compliance responsibilities between actors, divided in four categories: manufacturers, importers, and distributors for products, as well as service providers for services. Figure 1 presents such obligations.
 
-![Figure 1. Comparative Table of the Obligations for Operators](src/en/articles/images/figure 1 EAA law.png)
+![Title: Figure 1. Comparative Table of the Obligations for Operators.](src/en/articles/images/figure-1-EAA-law.png)
 
 <details>
 <summary>Click to view the alternative text</summary>
