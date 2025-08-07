@@ -10,7 +10,7 @@ tags:
 
 # Towards an Accessible Digital Single Market: A Critical Analysis of the European Accessibility Act
 
-The belief in barrier-free and equitable access to the Internet and digital sphere is at the core of the historicity of the Internet. However, this foundational principle remains conspicuously unrealized. Millions of individuals find themselves systematically excluded from digital participation, not due to inherent limitations, but rather because these spaces have failed to incorporate universal design principles from their inception. How is a person with color vision deficiency expected to differentiate between elements when chromatic distinction serves as the sole differentiating characteristic? How might a visually impaired individual navigate digital applications when screen-reading technologies cannot interpret poorly structured interface components? How can elderly users engage in e-commerce when attempts to magnify content compromises the structural integrity of the website? These are not theoretical abstractions, but daily obstacles encountered by large segments of the population in their digitThe belief in barrier-free and equitable access to the Internet and digital sphere is at the core of the historicity of the Internet [1]. However, this foundational principle remains conspicuously unrealized. Millions of individuals find themselves systematically excluded from digital participation, not due to inherent limitations, but rather because these spaces have failed to incorporate universal design principles from their inception. How is a person with color vision deficiency expected to differentiate between elements when chromatic distinction serves as the sole differentiating characteristic? How might a visually impaired individual navigate digital applications when screen-reading technologies cannot interpret poorly structured interface components? How can elderly users engage in e-commerce when attempts to magnify content compromises the structural integrity of the website? These are not theoretical abstractions, but daily obstacles encountered by large segments of the population in their digital interactions.
+The belief in barrier-free and equitable access to the Internet and digital sphere is at the core of the historicity of the Internet. However, this foundational principle remains conspicuously unrealized. Millions of individuals find themselves systematically excluded from digital participation, not due to inherent limitations, but rather because these spaces have failed to incorporate universal design principles from their inception. How is a person with color vision deficiency expected to differentiate between elements when chromatic distinction serves as the sole differentiating characteristic? How might a visually impaired individual navigate digital applications when screen-reading technologies cannot interpret poorly structured interface components? How can elderly users engage in e-commerce when attempts to magnify content compromises the structural integrity of the website? These are not theoretical abstractions, but daily obstacles encountered by large segments of the population in their digital interactions.
 
 This issue grows increasingly urgent as the digital sphere expands exponentially. Having access to this space is not merely a practicality, but an essential component of daily life. From e-commerce to tax filing to healthcare, the digital space is everywhere.
 
@@ -75,5 +75,35 @@ Directives are essential tools of EU law but require to be translated into natio
 
 In the case of the EAA, the transposition process has been relatively homogeneous, following the harmonizing spirit of the directive. Figure 2 illustrates how different Member States have incorporated the EAA's requirements into their national legal frameworks, highlighting both the consistency in core provisions and the minor variations in implementation timelines and enforcement mechanisms.
 
-![Figure 2. Comparative Transposition Table](src/en/articles/images/figure 1 EAA law.png)
+![Title: Figure 2. Comparative Transposition Table](../images/figure-2-EAA-law.png)
 
+<details>
+<summary>Click to view the alternative text</summary>
+
+This table compares the transposition of the European Accessibility Directive (EAA) in different countries. The table is organized into six columns, detailing respectively the countries, their transposition status, applicable obligations, supervisory authorities, maximum penalties incurred, and national specificities.
+
+France has transposed the EAA with an extensive interpretation by the DGCCRF, providing for sanctions of up to €75,000 for penalties and €300,000 for penalties. The supervisory authorities are generally Arcom, the DGCCRF and ARCEP. For the banking sector, they are the Banque de France, the AMF and the ACPR.
+
+Luxembourg has also transposed the EAA. Appeals to the OSAPS are open to all. Sanctions of up to €15,000 administrative and €1,000,000 penal are provided for. The OSAPS is in charge of inspections. 
+
+Belgium has only partially transposed the EAA, without any specific features, with BIPT as the general authority and administrative penalties of €200,000. For banking and e-commerce services, the Economic Inspectorate monitors the market. Administrative penalties of €8,000 and criminal penalties of €16,000 are provided for. 
+
+Slovakia has transposed the EAA with specific temporal limits and administrative sanctions of 30 000 € as a general rule and are imposed by the Slovak Trade Inspection. For telecommunications however, it is up to Teleoff to impose sanctions of up to 3 000 €.
+
+Poland has transposed the EAA and included consumer-related obligations with a sui generis surveillance system and sanctions reaching up to 80 000 zlotys.
+
+Spain has transposed the EAA without specificities, except for its fragmented sectorial surveillance and sanction regime.
+
+Moldova is not yet an EU member and has therefore not transposed the EAA. Legislative work is being done. No additional information is known regarding surveillance and sanctions.
+
+Romania has fully transposed the EAA without specificities. Sectorial authorities control the market and sanctions of up to 3 000 € exist.
+
+</details>
+
+## Conclusion
+
+The European Accessibility Act marks considerable progress toward digital inclusion, extending accessibility requirements across products and services throughout their lifecycle.
+
+Yet the EAA embodies critical contradictions. Its market-oriented framework reduces accessibility to a consumer right rather than a social imperative. More immediately problematic is the implementation gap: economic operators face compliance obligations without the harmonized standards necessary to fulfill them.
+
+Far from polished, far from pristine, the EAA nonetheless represents our striving to form a more perfect Union. Its impact will ultimately depend not on aspirational language but on robust enforcement and whether economic operators embrace accessibility as a core design principle rather than a regulatory burden.
