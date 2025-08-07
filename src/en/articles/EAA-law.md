@@ -50,8 +50,8 @@ The EAA also distributes compliance responsibilities between actors, divided in 
 
 ![Title: Figure 1. Comparative Table of the Obligations for Operators.](../images/figure-1-EAA-law.png)
 
-<details>
-<summary>Click to view the alternative text</summary>
+
+<details> <summary>Click to view the alternative text</summary>
 
 This table presents the various accessibility obligations applicable to different types of economic operators. The table is structured with the types of obligation in rows and the four categories of economic operators in columns: Producer, Importer, Distributor and Service Provider. 
 
@@ -77,8 +77,8 @@ In the case of the EAA, the transposition process has been relatively homogeneou
 
 ![Title: Figure 2. Comparative Transposition Table](../images/figure-2-EAA-law.png)
 
-<details>
-<summary>Click to view the alternative text</summary>
+
+<details> <summary>Click to view the alternative text</summary>
 
 This table compares the transposition of the European Accessibility Directive (EAA) in different countries. The table is organized into six columns, detailing respectively the countries, their transposition status, applicable obligations, supervisory authorities, maximum penalties incurred, and national specificities.
 
@@ -96,9 +96,7 @@ Spain has transposed the EAA without specificities, except for its fragmented se
 
 Moldova is not yet an EU member and has therefore not transposed the EAA. Legislative work is being done. No additional information is known regarding surveillance and sanctions.
 
-Romania has fully transposed the EAA without specificities. Sectorial authorities control the market and sanctions of up to 3 000 € exist.
-
-</details>
+Romania has fully transposed the EAA without specificities. Sectorial authorities control the market and sanctions of up to 3 000 € exist.</details>
 
 ## Conclusion
 
