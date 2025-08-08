@@ -5,7 +5,7 @@ titleBeforeTag: true
 date: "2025-08-07"
 tags:
   - web
-  - débutant
+  - beginner
   - mobile
 ---
 
