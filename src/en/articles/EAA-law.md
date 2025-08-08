@@ -2,6 +2,7 @@
 title: "Towards an Accessible Digital Single Market: A Critical Analysis of the European Accessibility Act"
 abstract: "Critical analysis of the European Accessibility Act"
 date: "2025-08-07"
+titleBeforeTag: true
 tags:
   - web
   - mobile
