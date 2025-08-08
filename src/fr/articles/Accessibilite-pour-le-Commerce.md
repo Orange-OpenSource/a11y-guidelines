@@ -5,8 +5,8 @@ titleBeforeTag: true
 date: "2025-08-08"
 tags:
   - web
-  - débutant
   - mobile
+  - beginner
 ---
 
 # Au-delà de la conformité : Un argument commercial en faveur de l'accessibilité numérique dans l'Union européenne
