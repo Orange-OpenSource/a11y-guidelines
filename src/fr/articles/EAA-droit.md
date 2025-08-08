@@ -53,7 +53,7 @@ L'EAA répartit également les responsabilités en matière de conformité entre
 
 ![Titre : Tableau 1. Tableau comparatif des obligations des opérateurs.](../images/image-1-EAA-droit.png)
 
-<details> <summary>Clicker pour voir l'alternatice textuelle</summary>
+<details> <summary>Cliquer pour voir l'alternative textuelle</summary>
 
 Ce tableau présente les différentes obligations d'accessibilité applicables selon le type d'acteur économique. Le tableau est structuré avec les types d'obligations en lignes et les quatre catégories d'acteurs économiques en colonnes : Producteur, Importateur, Distributeur et Fournisseur de services. 
 
@@ -78,6 +78,25 @@ Les directives sont des outils essentiels du droit européen, mais elles doivent
 Dans le cas de l'EAA, le processus de transposition a été relativement homogène, conformément à l'esprit d'harmonisation de la directive. Le tableau ci-dessous illustre la manière dont les différents États membres ont intégré les exigences de l'EAA dans leurs cadres juridiques nationaux, en soulignant à la fois la cohérence des dispositions fondamentales et les variations mineures dans les délais de mise en œuvre et les mécanismes d'application.
 
 ![Titre : Tableau 2. Tableau comparatif des transpositions.](../images/image-2-EAA-droit.png)
+
+<details> <summary>Cliquer pour voir l'alternative textuelle</summary>
+
+Ce tableau présente la comparaison de la transposition de la directive d'accessibilité européenne (EAA) dans différents pays. Le tableau est organisé en six colonnes qui détaillent respectivement les pays, leur statut de transposition, les obligations applicables, les autorités de contrôle, les sanctions maximales encourues et les spécificités nationales.
+
+La France a transposé l'EAA avec une interprétation extensive par la DGCCRF et prévoit des sanctions allant jusqu'à 75 000 € pour les pénalités et 300 000 € pour les astreintes. Les autorités de contrôle sont de façon générale l'Arcom, la DGCCRF et l'ARCEP. Pour le secteur bancaire, c'est la Banque de France, l'AMF, et l'ACPR.
+
+Le Luxembourg a également transposé l'EAA. Les recours devant l'OSAPS sont possibles par tous. Des sanctions pouvant atteindre 15 000 € administratives et 1 000 000 € pénales sont prévues. C'est l'OSAPS qui se charge du contrôle. 
+
+La Belgique n'a réalisé qu'une transposition partielle de l'EAA sans spécificités particulières, avec l'IBPT comme autorité générale et des sanctions administratives de 200 000 €. Pour les services bancaires et de commerce électronique, c'est l'Inspection économique qui surveille le marché. Des sanctions administratives de 8 000 € et pénales de 16 000 € sont prévues. 
+
+La Slovaquie a transposé l'EAA avec des limites temporelles spécifiques et des sanctions administratives de 30 000 € de façon générale et sont imposées par l'Inspection slovaque du commerce. Pour les télécommunications en revanche, c'est Teleoff qui s'occupe de mettre des sanctions atteignant 3 000 €. 
+
+La Pologne a transposé l'EAA en incluant des obligations relatives au droit des consommateurs avec un système de contrôle sui generis, c'est-à-dire un système unique en son genre, et des sanctions pouvant atteindre 80 000 zlotys. 
+
+L'Espagne a transposé l'EAA sans spécificités particulières, avec diverses autorités sectorielles et un régime de sanctions très variant selon les secteurs. 
+La Moldavie n'étant pas encore membre de l'Union européenne et simplement pays candidat n'a pas encore transposé l'EAA, un travail législatif est en cours, sans autorités désignées ni sanctions prévues.
+
+La Roumanie a transposé l’EAA sans spécificités particulières. Diverses autorités sectorielles existent avec des sanctions pouvant atteindre 3 000 €. </details>
 
 ## Conclusion
 
