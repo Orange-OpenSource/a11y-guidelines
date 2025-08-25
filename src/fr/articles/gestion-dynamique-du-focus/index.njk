@@ -2,7 +2,8 @@
 title: "Gestion dynamique du focus"
 abstract: "Gestion du focus des zones qui se mettent à jour dynamiquement dans vos pages."
 titleBeforeTag: true
-date: "2025-07-16"
+date: "2018-01-18"
+updateDate: "2025-07-16"
 tags:
   - component
 css:
@@ -33,7 +34,7 @@ js:
 <p>Ce cas est le plus courant, le contenu est modifié dans le DOM sans recharger la page entière, seul le DOM est modifié par addition ou suppression du contenu lors d’une action utilisateur . (par exemple, affichage des résultats d’un moteur de recherche, apparition d’une modale).</p>
 <h3>Gestion de l’ajout de contenu</h3>
 <ol>
-<li>Prévenir l’utilisateur de l’apparition de contenu (par exemple, pour un sous-menu à déplier, on peut ajouter un texte «&nbsp;déplier&nbsp;» et mettre une propriété <code>aria-haspopup</code>). Si ce contenu est susceptible de disparaître (popin, par exemple), garder en mémoire l’élément déclenchant l’apparition pour y remettre le focus lors de la disparition.</li>
+<li>Prévenir l’utilisateur de l’apparition de contenu (par exemple, pour un sous-menu à déplier, on peut ajouter un texte «&nbsp;déplier&nbsp;» et mettre une propriété <code>aria-haspopup</code>). Si ce contenu est susceptible de disparaître (popin, par exemple), garder en mémoire l’élément déclenchant l’apparition pour lui redonner le focus lors de la disparition.</li>
 <li>Insérer le nouveau contenu juste après l’élément déclencheur dans le code source (exemple&nbsp;: menu dépliant),</li>
 <li>Déplacer le focus sur un élément pertinent du nouveau contenu (le container, un titre, un lien, un bouton…).</li>
 </ol>
