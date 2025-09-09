@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2025-08-05T00:00:00Z</updated>
+  <updated>2025-09-05T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Structurer une page avec les régions (landmarks) ARIA</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/landmarks-aria/"/>
+    <updated>2025-09-05T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/landmarks-aria/</id>
+    <content xml:lang="fr" type="html">Mise en place de régions ARIA (landmarks).</content>
+  </entry>
   
   <entry>
     <title>Veille #A11y Juin-Juillet 2025</title>
@@ -537,14 +545,6 @@
     <updated>2018-01-16T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/navigation-clavier-avec-aria/</id>
     <content xml:lang="fr" type="html">Gérer la navigation clavier avec ARIA et les design patterns</content>
-  </entry>
-  
-  <entry>
-    <title>Régions (landmarks) ARIA</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/landmarks-aria/"/>
-    <updated>2018-01-15T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/landmarks-aria/</id>
-    <content xml:lang="fr" type="html">Mise en place de régions ARIA (landmarks).</content>
   </entry>
   
   <entry>

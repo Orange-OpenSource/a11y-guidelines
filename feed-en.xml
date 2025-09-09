@@ -4,12 +4,20 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2025-08-05T00:00:00Z</updated>
+  <updated>2025-09-05T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Structuring a page with ARIA landmarks</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/landmarks/"/>
+    <updated>2025-09-05T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/landmarks/</id>
+    <content xml:lang="en" type="html">Setting up ARIA landmarks.</content>
+  </entry>
   
   <entry>
     <title>#a11y technical watch, June-July 2025</title>
@@ -497,14 +505,6 @@
     <updated>2018-01-16T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/keyboard-navigation-aria/</id>
     <content xml:lang="en" type="html">Handling keyboard navigation is one of the mainstays of the W3c WAI ARIA recommendations</content>
-  </entry>
-  
-  <entry>
-    <title>Landmarks ARIA</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/landmarks/"/>
-    <updated>2018-01-15T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/landmarks/</id>
-    <content xml:lang="en" type="html">How to improve page navigation by adding semantics to content that makes it easier to find the major regions of the page</content>
   </entry>
   
   <entry>
