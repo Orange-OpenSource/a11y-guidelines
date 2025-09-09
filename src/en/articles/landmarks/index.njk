@@ -3,7 +3,7 @@ title: "Structuring a page with ARIA landmarks"
 abstract: "Setting up ARIA landmarks."
 titleBeforeTag: true
 date: "2018-01-15"
-updateDate: "2025-05-30"
+updateDate: "2025-09-05"
 tags:
   - component
 css:
@@ -156,6 +156,7 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
         </tr>
       </tbody>
   </table>
+
 <h3 id="usages" class="mt-4">Usage </h3>
   <h4 id="header">header</h4>
   <p>The <code>header</code> tag (or the <abbr>ARIA</abbr> landmark attribute <code>role="header"</code>) identifies the page header. This is only true if this element is placed in a <code>body</code> tag,
@@ -178,7 +179,7 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
 
   <h4 id="form">form</h4>
   <p>The <code>form</code> tag (or the <abbr>ARIA</abbr> landmark attribute <code>role="form"</code>) is used to identify a form. Its children will be form element tags such as <code>input</code>, <code>select</code>, <code>textarea</code> or <code>button</code>.</p>
-  <p>There can be several <code>form</code> tags (or <code>role="form"</code> attributes) on the same page. In this case, add a unique accessible name (see <a href="#best_practices">Best prctices</a>).</p>
+  <p>There can be several <code>form</code> tags (or <code>role="form"</code> attributes) on the same page. In this case, add a unique accessible name (see <a href="#best_practices">Best practices</a>).</p>
   
   <h4 id="section">section</h4>
   <p>The <code>section</code> tag (or the <abbr>ARIA</abbr> landmark attribute <code>role="region"</code>) can be used to group content (e.g., chapters of a book, large sections of a home page, etc.) thematically.</p>
@@ -212,7 +213,7 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
     &lt;nav aria-label="Secondary menu"&gt;[…]&lt;/nav&gt;
     &lt;nav aria-label="Breadcrumb"&gt;[…]&lt;/nav&gt;
     </code></pre>
-    <p class="mt-0">More details on <a href="../../articles/aria-attributes-that-can-save-you/"> "The <abbr>ARIA</abbr> attributes that can save you"</a>.</p>
+    <p class="mt-0">More details on "<a href="../../articles/aria-attributes-that-can-save-you/">The <abbr>ARIA</abbr> attributes that can save you</a>".</p>
   </li>
 
   <li>
@@ -226,8 +227,9 @@ Using ARIA landmarks to identify regions of a page</a>.</p>
 
 <h3 id="landmarks_users_tech_aids"><abbr>ARIA</abbr> landmarks, users and assistive technologies</h3>
 <p>The <abbr>HTML5</abbr> tags defining the main regions of the page have sufficient support with assistive technologies (screen readers, magnifying software...). We must therefore use them to structure our page without adding <abbr>ARIA</abbr> landmark roles.</p>
-<p>Setting up these landmarks <abbr>ARIA</abbr> is a good practice, because it can improve the browsing of some users without impacting that of others. It's an important  best practice!</p>
-:
+<p>Setting up these landmarks <abbr>ARIA</abbr> is a good practice, because it can improve the browsing of some users without impacting that of others. It's an important best practice!</p>
+
+
 <h3 id="resources" class="mt-4">Ressources</h3>
 <ul>
   <li><a href="https://www.w3.org/WAI/ARIA/apg/practices/landmark-regions/">Landmark Regions specification</a></li>
