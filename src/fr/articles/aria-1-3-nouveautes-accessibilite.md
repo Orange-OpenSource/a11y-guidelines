@@ -99,7 +99,8 @@ Exemple d'utilisation :
 <button type="button" aria-keyshortcuts="Esc">Fermer la modale</button>
 ```
 
-Impact utilisateur : informer les utilisateurs et permettre à tous les utilisateurs de connaître les raccourcis claviers à leur disposition pour faciliter la navigation.
+Impact utilisateur : informer les utilisateurs et permettre à tous les utilisateurs de connaître les raccourcis claviers disponibles pour faciliter la navigation.
+
 
 ### aria-placeholder
 
