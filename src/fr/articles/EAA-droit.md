@@ -1,5 +1,5 @@
 ---
-title: "Vers un marché unique numérique accessible&nbsp;: une analyse critique du European Accessibility Act"
+title: "Vers un marché unique numérique accessible : une analyse critique du European Accessibility Act"
 abstract: "Une analyse critique de l'EAA"
 titleBeforeTag: true
 date: "2025-08-07"
@@ -20,7 +20,7 @@ Il ne s'agit pas d'abstractions théoriques, mais d'obstacles quotidiens rencont
 
 Cette question devient de plus en plus urgente à mesure que la sphère numérique croît. L'accès à cet espace n'est pas seulement une question de praticité, mais un élément essentiel de la vie quotidienne. Du commerce électronique à la déclaration d'impôts en passant par les soins de santé, le numérique est omniprésent.
 
-C'est sur la base de cette double constatation : l'omniprésence de l'exclusion numérique et la numérisation croissante de l'économie, que l'Union Européenne (UE) a adopté en 2019 la directive (UE) 2019/882, appelé aussi le European Accessibility Act (EAA). Cette législation vise à améliorer l'accessibilité d'une gamme complète de produits et de services dans les pays de l'UE, tentant ainsi de concilier la promesse fondatrice de l'Internet, à savoir l'accès universel, avec le statu quo discriminatoire.
+C'est sur la base de cette double constatation : l'omniprésence de l'exclusion numérique et la numérisation croissante de l'économie, que l'Union Européenne a adopté en 2019 la directive (UE) 2019/882, appelé aussi le European Accessibility Act (EAA). Cette législation vise à améliorer l'accessibilité d'une gamme complète de produits et de services dans les pays de l'UE, tentant ainsi de concilier la promesse fondatrice de l'Internet, à savoir l'accès universel, avec le statu quo discriminatoire.
 
 ## La loi européenne sur l'accessibilité&nbsp;: contexte, cadre et champ d'application
 
@@ -74,7 +74,7 @@ Aucune mise à jour n'est prévue avant mars 2026, ce qui crée un vide juridiqu
 
 L'EAA répartit également les responsabilités en matière de conformité entre les différents acteurs, répartis en quatre catégories : les fabricants, les importateurs et les distributeurs pour les produits, ainsi que les prestataires de services pour les services. Le tableau présent ci-dessous décrit ces obligations.
 
-![Titre : Tableau 1. Tableau comparatif des obligations des opérateurs.](../images/image-1-EAA-droit.png)
+![Tableau comparatif des obligations des opérateurs](../images/image-1-EAA-droit.png)
 
 <details><summary>Cliquer pour voir l'alternative textuelle</summary>
 
@@ -100,7 +100,7 @@ Les directives sont des outils essentiels du droit européen, mais elles doivent
 
 Dans le cas de l'EAA, le processus de transposition a été relativement homogène, conformément à l'esprit d'harmonisation de la directive. Le tableau ci-dessous illustre la manière dont les différents États membres ont intégré les exigences de l'EAA dans leurs cadres juridiques nationaux, en soulignant à la fois la cohérence des dispositions fondamentales et les variations mineures dans les délais de mise en œuvre et les mécanismes d'application.
 
-![Titre : Tableau 2. Tableau comparatif des transpositions.](../images/image-2-EAA-droit.png)
+![Tableau comparatif des transpositions](../images/image-2-EAA-droit.png)
 
 <details> <summary>Cliquer pour voir l'alternative textuelle</summary>
 
@@ -123,7 +123,7 @@ La Roumanie a transposé l’EAA sans spécificités particulières. Diverses au
 
 ## Conclusion
 
-Le European Accessibility Act marque une avancée considérable vers l'inclusion numérique, en étendant les exigences d'accessibilité à un vaste ensemble de produits et services tout au long de leur cycle de vie.
+L'European Accessibility Act marque une avancée considérable vers l'inclusion numérique, en étendant les exigences d'accessibilité à un vaste ensemble de produits et services tout au long de leur cycle de vie.
 
 Cependant, l'EAA souffre de contradictions fondamentales. Son cadre, axé sur le marché, réduit l'accessibilité à un droit des consommateurs plutôt qu'à un impératif social. Plus problématique encore est le fossé entre la législation et sa mise en œuvre : les opérateurs économiques sont confrontés à des obligations de conformité sans disposer des normes harmonisées nécessaires pour les respecter.
 
