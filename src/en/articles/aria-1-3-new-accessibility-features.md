@@ -47,7 +47,7 @@ User impact: braille device users will have a better understanding of the page s
 
 ### aria-details
 
-Description: this attribute has been modified in the version 1.3 of <abbr>ARIA</abbr> to allow referencing multiple <code>is</code>. It thus allows referencing one or more elements that provide additional information about another element, offering a richer context.
+Description: this attribute has been modified in the version 1.3 of <abbr>ARIA</abbr> to allow referencing multiple <code>id</code> attributes. It thus allows referencing one or more elements that provide additional information about another element, offering a richer context.
 
 Example usage:
 

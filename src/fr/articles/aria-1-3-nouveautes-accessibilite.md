@@ -135,7 +135,7 @@ Impact utilisateur : les utilisateurs peuvent recevoir des conseils utiles qui a
 
 ### role="comment"
 
-Description : ce rôle est utilisé signaler programmatiquement les zones de commentaires.
+Description : ce rôle est utilisé pour signaler programmatiquement les zones de commentaires.
 
 Exemple d'utilisation :
 
