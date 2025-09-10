@@ -77,7 +77,8 @@ Impact utilisateur : les utilisateurs auront accès à des informations supplém
 
 ### aria-errormessage
 
-Description : cet attribut permet de lier un message d'erreur à un élement de formulaire. Le mesage d'erreur est alors vocalisé par les technologies d'assistance uniquement si l'élément de fomulaire est invalide (<code>aria-invalid="true"</code>).
+Description : cet attribut permet de lier un message d'erreur à un élément de formulaire. Le message d'erreur est alors vocalisé par les technologies d'assistance uniquement si l'élément de formulaire est invalide (<code>aria-invalid="true"</code>).
+
 
 Exemple d'utilisation :
 
