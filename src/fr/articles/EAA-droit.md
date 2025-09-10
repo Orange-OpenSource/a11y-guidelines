@@ -9,8 +9,6 @@ tags:
   - mobile
 ---
 
-# Vers un marché unique numérique accessible&nbsp;: une analyse critique du European Accessibility Act
-
 La conviction qu'il doit exister un accès sans barrières et équitable à Internet et au numérique est au cœur de l'historicité d'Internet. Cependant, ce principe fondamental reste manifestement inachevé. Des millions de personnes se trouvent systématiquement exclues du numérique, non pas en raison de limitations inhérentes, mais plutôt parce que ces espaces n'ont pas intégré les principes de conception universelle dès leur création.
 - Comment une personne daltonienne peut-elle différencier les éléments lorsque la distinction chromatique est la seule caractéristique différenciante ?
 - Comment une personne non-voyante peut-elle naviguer dans les applications numériques lorsque les technologies de lecture d'écran ne peuvent pas interpréter les composants d'interface mal structurés ?
@@ -74,7 +72,7 @@ Aucune mise à jour n'est prévue avant mars 2026, ce qui crée un vide juridiqu
 
 L'EAA répartit également les responsabilités en matière de conformité entre les différents acteurs, répartis en quatre catégories : les fabricants, les importateurs et les distributeurs pour les produits, ainsi que les prestataires de services pour les services. Le tableau présent ci-dessous décrit ces obligations.
 
-![Tableau comparatif des obligations des opérateurs](../images/image-1-EAA-droit.png)
+![Tableau comparatif des obligations des opérateurs. Une description détaillée est présente sous l'image."](../images/image-1-EAA-droit.png)
 
 <details><summary>Cliquer pour voir l'alternative textuelle</summary>
 
@@ -100,7 +98,7 @@ Les directives sont des outils essentiels du droit européen, mais elles doivent
 
 Dans le cas de l'EAA, le processus de transposition a été relativement homogène, conformément à l'esprit d'harmonisation de la directive. Le tableau ci-dessous illustre la manière dont les différents États membres ont intégré les exigences de l'EAA dans leurs cadres juridiques nationaux, en soulignant à la fois la cohérence des dispositions fondamentales et les variations mineures dans les délais de mise en œuvre et les mécanismes d'application.
 
-![Tableau comparatif des transpositions](../images/image-2-EAA-droit.png)
+![Tableau comparatif des transpositions. Une description détaillée est présente sous l'image.](../images/image-2-EAA-droit.png)
 
 <details> <summary>Cliquer pour voir l'alternative textuelle</summary>
 
