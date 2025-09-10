@@ -9,8 +9,6 @@ tags:
   - beginner
 ---
 
-# Au-delà de la conformité : Un argument commercial en faveur de l'accessibilité numérique dans l'Union européenne
-
 Pourquoi l'accessibilité est-elle importante ? Deux réponses viennent immédiatement à l'esprit. Premièrement, le cadre juridique européen évolue vers une rigueur croissante, incitant les entreprises à éviter les sanctions associées aux infractions réglementaires. La seconde réponse puise ses racines dans la philosophie politique : lorsqu'Amartya Sen défend l'égalité des capabilités, il articule une conception où la liberté collective exige non seulement des droits formels, mais également la capacité effective de participer à la société – objectif que l'accessibilité cherche précisément à concrétiser.
 
 Ces deux perspectives, bien que pertinentes, ne saisissent pas pleinement l'impératif stratégique qui s'impose aux entreprises. La conformité juridique se limite à une simple gestion des risques, tandis que les arguments philosophiques trouvent rarement écho dans les délibérations d’entreprise Or, le calendrier d'implémentation de l'accessibilité constitue une décision stratégique déterminante qui influence directement tant l'exposition aux risques que le potentiel de création de valeur pour les entreprises européennes confrontées à l'application de l'EAA. L'argument en faveur de l'accessibilité émerge ainsi lorsqu'elle est envisagée comme une stratégie proactive plutôt que comme une obligation subie (une approche réactive qui échoue invariablement à générer et à capturer une quelconque valeur commerciale substantielle).
