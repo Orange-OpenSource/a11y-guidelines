@@ -106,7 +106,8 @@ Impact utilisateur : informer les utilisateurs et permettre à tous les utilisat
 
 ### aria-placeholder
 
-Description : cet attribut permet d'ajouter un placeholder à des éléments de formulaire <span lang="en">custom</span> qui ne supportent pas nativement l'attribut <code>placeholder</code>, par exemple une <code>div</code> avec un attribut <code>contenteditable</code>.
+Description : cet attribut permet d'ajouter un placeholder à des éléments de formulaire personnalisés qui ne supportent pas nativement l'attribut <code>placeholder</code>, par exemple une <code>div</code> avec un attribut <code>contenteditable</code>.
+
 
 Exemple d'utilisation :
 
