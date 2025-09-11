@@ -92,7 +92,8 @@ Impact utilisateur : les utilisateurs pourront plus facilement comprendre et cor
 
 ### aria-keyshortcuts
 
-Description : cet attribut permet de mettre en évidence dans le DOM les éventuels raccourcis clavier à la disposition des utilisateurs.
+Description : cet attribut permet de mettre en évidence, dans le DOM, les éventuels raccourcis clavier à la disposition des utilisateurs.
+
 
 Exemple d'utilisation :
 
