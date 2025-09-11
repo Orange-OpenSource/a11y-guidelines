@@ -25,7 +25,7 @@ js:
 
 <p>S’il n’y a aucun moyen de faire du chargement asynchrone, il faut au moins&nbsp;:</p>
 <ol>
-<li>Prévenir l’utilisateur de ce rechargement de page avec un message de type «&nbsp;Chargement en cours, veuillez patientez&nbsp;» (on peut, par exemple, placer le focus sur le message, utiliser role="alart", aria-busy ou aria-live...) pour éviter la perte de contexte.</li>
+<li>Prévenir l’utilisateur de ce rechargement de page avec un message de type «&nbsp;Chargement en cours, veuillez patientez&nbsp;» (on peut, par exemple, placer le focus sur le message, utiliser role="alert", aria-busy ou aria-live...) pour éviter la perte de contexte.</li>
 <li>Au rechargement, placer le focus sur le contenu généré ou, lors d’une disparition de contenu, sur l’élément déclenchant (s’il existe toujours après rechargement) ou bien positionner le focus juste avant le contenu qui a été retiré.</li>
 <li>S’assurer que le parcours du focus reste logique et séquentiel après l'apparition ou la disparition du contenu.</li>
 </ol>
