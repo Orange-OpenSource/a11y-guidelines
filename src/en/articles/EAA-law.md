@@ -30,7 +30,7 @@ On the other hand, inclusion remains circumscribed to market-related activities,
 
 **A broad yet restricted scope**
 
-The directive covers multiple products and services (see [article 2](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019L0882#art_2). Yet, what is particularly striking is that it does not just apply to isolated designed objects, but rather to entire supply chains. Where the directive requires accessibility, it extends beyond the primary product to encompass all elements that support its function (including related products, instructions, packaging, and aftersales support.)
+The directive covers multiple products and services (see [article 2](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32019L0882#art_2)). Yet, what is particularly striking is that it does not just apply to isolated designed objects, but rather to entire supply chains. Where the directive requires accessibility, it extends beyond the primary product to encompass all elements that support its function (including related products, instructions, packaging, and aftersales support.)
 
 The products covered by the EAA are:
 - consumer general purpose computer hardware systems and operating systems for those hardware systems,
