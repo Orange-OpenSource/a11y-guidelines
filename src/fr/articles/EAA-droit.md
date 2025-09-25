@@ -2,7 +2,7 @@
 title: "Vers un marché unique numérique accessible : une analyse critique du European Accessibility Act"
 abstract: "Une analyse critique de l'EAA"
 titleBeforeTag: true
-date: "2025-08-07"
+date: "2025-10-03"
 tags:
   - web
   - beginner
@@ -27,6 +27,7 @@ L'EAA n'est pas la première législation relative à l'accessibilité. En 2016,
 Cependant, l'accessibilité numérique se trouve aujourd'hui à un tournant avec l'introduction de l'EAA. La loi introduit des obligations pour un nombre très large de produits et de services, tant pour les acteurs privés que publics. De plus, alors que la loi n'exigeait jusqu'à présent que la transparence, l'EAA impose désormais une conformité stricte et totale.
 
 À ce stade de notre analyse, il convient déjà de souligner l'importance du cadre discursif dans lequel s'inscrit l'EAA. L'«&nbsp;esprit de la loi&nbsp;» (plutôt qu'une approche strictement textuelle) fait de l'accessibilité une barrière non tarifaire qui entrave le véritable potentiel du marché unique de l'UE. Les normes d'accessibilité divergentes entre les États membres sont principalement conçues comme des obstacles à la libre circulation des biens et des services. C'est ce cadre néolibéral typique de l’Europe post-Maastrichtienne, visant à protéger le marché de l’influence du politique, qui prévaut ici.
+
 Le handicap n'est pas une question sociale, mais une question de consommateur. Ce cadre axé sur le marché présente à la fois avantages et limites. 
 D'une part, la conformité est facilitée par des critères bien définis à l'échelle de l'UE qui créent une sécurité réglementaire pour les acteurs économiques. 
 D'autre part, l'inclusion reste limitée aux activités liées au marché, ce qui conduit à négliger l'inclusion sociale globale au-delà du contexte purement économique.
@@ -64,7 +65,7 @@ Cependant, elles ne constituent pas vraiment des lignes directrices applicables 
 
 Ces normes harmonisées offrent des avantages considérables. Outre le fait qu'elles fournissent des lignes directrices claires, elles réduisent considérablement le risque de non-conformité. Les autorités réglementaires ne peuvent pas contester la conformité sur la base de ces normes, alors qu'elles pourraient contester les efforts individuels (intrinsèquement semi-subjectifs) visant à se conformer directement aux exigences de la directive.
 
-La conformité aux normes harmonisées devient ainsi la seule voie pratique pour se conformer à la loi (et, pour les régulateurs, le seul mécanisme fiable pour en garantir la mise en œuvre). Cependant, il est important de noter que les normes harmonisées couvrant l'EAA font toujours défaut. Jusqu'à présent, l'accessibilité du web était garantie par la norme [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf). Celle-ci n'a pas encore été mise à jour. En outre, de nouvelles normes doivent être adoptées pour les produits physiques et le service après-vente couverts par l'EAA. 
+La conformité aux normes harmonisées devient ainsi la seule voie pratique pour se conformer à la loi (et, pour les régulateurs, le seul mécanisme fiable pour en garantir la mise en œuvre). Cependant, il est important de noter que les normes harmonisées couvrant l'EAA font toujours défaut. Jusqu'à présent, l'accessibilité du web était garantie par la norme [EN 301 549 (fichier PDF)](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf). Celle-ci n'a pas encore été mise à jour. En outre, de nouvelles normes doivent être adoptées pour les produits physiques et le service après-vente couverts par l'EAA. 
 
 Aucune mise à jour n'est prévue avant mars 2026, ce qui crée un vide juridique de 9 mois entre la date de mise en œuvre obligatoire du 28 juin 2025 et la disponibilité des normes de conformité définitives. Ce vide réglementaire place les organisations dans une position intenable : elles sont légalement tenues de se conformer à des normes qui n'existent pas encore.
 
@@ -72,7 +73,7 @@ Aucune mise à jour n'est prévue avant mars 2026, ce qui crée un vide juridiqu
 
 L'EAA répartit également les responsabilités en matière de conformité entre les différents acteurs, répartis en quatre catégories : les fabricants, les importateurs et les distributeurs pour les produits, ainsi que les prestataires de services pour les services. Le tableau présent ci-dessous décrit ces obligations.
 
-![Tableau comparatif des obligations des opérateurs. Une description détaillée est présente sous l'image."](../images/image-1-EAA-droit.png)
+![Tableau comparatif des obligations des opérateurs. Une description détaillée est présente sous l'image.](../images/image-1-EAA-droit.png)
 
 <details><summary>Cliquer pour voir l'alternative textuelle</summary>
 
