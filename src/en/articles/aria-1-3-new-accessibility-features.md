@@ -3,7 +3,7 @@ title: "New features in ARIA version 1.3: a guide for developers"
 abstract: "Explore the new features introduced in ARIA version 1.3. This article provides practical examples and explains how these enhancements improve web application accessibility for all users."
 titleBeforeTag: true
 date: "2025-08-01"
-updateDate: "2025-09-08"
+updateDate: "2025-10-06"
 tags:
   - web
   - advanced
@@ -12,7 +12,7 @@ tags:
 This article is regularly updated based on the new features announced in version 1.3 of the <abbr>ARIA</abbr> standard.
 
 ## Introduction
-Version 1.3 of the <abbr>ARIA</abbr> (Accessible Rich Internet Applications) standard brings significant improvements to the accessibility of web applications. This article aims to inform web and mobile developers, as well as anyone interested in digital accessibility, about the new attributes and roles introduced, their usage, and the impact they can have on user experience.
+Version 1.3 of the <abbr>ARIA</abbr> (Accessible Rich Internet Applications) standard introduces significant improvements for web application accessibility. This article aims to present the new attributes and roles introduced, their usage, and the impact they can have on the user experience.
 
 ## New ARIA attributes
 

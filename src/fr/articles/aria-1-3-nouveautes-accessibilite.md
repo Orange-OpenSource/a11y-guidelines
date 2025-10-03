@@ -3,7 +3,7 @@ title: "Nouveautés de la version 1.3 de la norme ARIA : guide pour les dévelop
 abstract: "Découvrez les nouvelles fonctionnalités de la version 1.3 de la norme ARIA. Cet article fournit des exemples pratiques et explique comment ces améliorations renforcent l'accessibilité des applications web pour tous les utilisateurs."
 titleBeforeTag: true
 date: "2025-08-01"
-updateDate: "2025-09-08"
+updateDate: "2025-10-06"
 tags:
   - web
   - advanced
@@ -12,7 +12,7 @@ tags:
 Cet article est régulièrement mis à jour en fonction des nouveautés annoncées dans la nouvelle version 1.3 de la norme <abbr>ARIA</abbr>.
 
 ## Introduction
-La version 1.3 de la norme <abbr>ARIA</abbr> (Accessible Rich Internet Applications) apporte des améliorations significatives pour l'accessibilité des applications web. Cet article vise à informer les développeurs web et mobile, ainsi que toute personne intéressée par l'accessibilité numérique, des nouveaux attributs et rôles introduits, de leur utilisation, et de l'impact qu'ils peuvent avoir sur l'expérience utilisateur.
+La version 1.3 de la norme <abbr>ARIA</abbr> (Accessible Rich Internet Applications) des améliorations importantes pour l'accessibilité des applications web. Cet article a pour objectif de présenter les nouveaux attributs et rôles introduits, leur utilisation, ainsi que l'impact qu'ils peuvent avoir sur l'expérience utilisateur.
 
 ## Nouveaux attributs ARIA
 
