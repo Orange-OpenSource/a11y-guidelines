@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#nouveaux-attributs-aria" class="dropdown-item text-wrap">Nouveaux attributs ARIA</a><a href="#aria-braillelabel" class="dropdown-item text-wrap">aria-braillelabel</a><a href="#aria-brailleroledescription" class="dropdown-item text-wrap">aria-brailleroledescription</a><a href="#aria-details" class="dropdown-item text-wrap">aria-details</a><a href="#aria-description" class="dropdown-item text-wrap">aria-description</a><a href="#nouveaux-roles-aria" class="dropdown-item text-wrap">Nouveaux rôles ARIA</a><a href="#rolesuggestion" class="dropdown-item text-wrap">role=&quot;suggestion&quot;</a><a href="#rolecomment" class="dropdown-item text-wrap">role=&quot;comment&quot;</a><a href="#rolemark" class="dropdown-item text-wrap">role=&quot;mark&quot;</a><a href="#cas-dutilisation" class="dropdown-item text-wrap">Cas d&#39;utilisation</a><a href="#applications-de-messagerie" class="dropdown-item text-wrap">Applications de messagerie</a><a href="#interfaces-de-navigation" class="dropdown-item text-wrap">Interfaces de navigation</a><a href="#suggestions-et-instructions" class="dropdown-item text-wrap">Suggestions et instructions</a><a href="#conclusion" class="dropdown-item text-wrap">Conclusion</a><a href="#webographie" class="dropdown-item text-wrap">Webographie</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#nouveaux-attributs-aria" class="dropdown-item text-wrap">Nouveaux attributs ARIA</a><a href="#aria-braillelabel" class="dropdown-item text-wrap">aria-braillelabel</a><a href="#aria-brailleroledescription" class="dropdown-item text-wrap">aria-brailleroledescription</a><a href="#aria-details" class="dropdown-item text-wrap">aria-details</a><a href="#aria-description" class="dropdown-item text-wrap">aria-description</a><a href="#aria-errormessage" class="dropdown-item text-wrap">aria-errormessage</a><a href="#aria-keyshortcuts" class="dropdown-item text-wrap">aria-keyshortcuts</a><a href="#aria-placeholder" class="dropdown-item text-wrap">aria-placeholder</a><a href="#nouveaux-roles-aria" class="dropdown-item text-wrap">Nouveaux rôles ARIA</a><a href="#rolesuggestion" class="dropdown-item text-wrap">role=&quot;suggestion&quot;</a><a href="#rolecomment" class="dropdown-item text-wrap">role=&quot;comment&quot;</a><a href="#rolemark" class="dropdown-item text-wrap">role=&quot;mark&quot;</a><a href="#rolecode-et-roletime" class="dropdown-item text-wrap">role=&quot;code&quot; et role=&quot;time&quot;</a><a href="#roleimage" class="dropdown-item text-wrap">role=&quot;image&quot;</a><a href="#cas-dutilisation" class="dropdown-item text-wrap">Cas d&#39;utilisation</a><a href="#applications-de-messagerie" class="dropdown-item text-wrap">Applications de messagerie</a><a href="#interfaces-de-navigation" class="dropdown-item text-wrap">Interfaces de navigation</a><a href="#suggestions-et-instructions" class="dropdown-item text-wrap">Suggestions et instructions</a><a href="#conclusion" class="dropdown-item text-wrap">Conclusion</a><a href="#webographie" class="dropdown-item text-wrap">Webographie</a></div>
     </nav>
         
       </div>
@@ -188,24 +188,32 @@
 
             <p class="text-muted mb-0">
               <span class="visually-hidden">Date de parution</span>
-              <time datetime="2025-08-01T00:00:00.000Z">
-                01 août 2025
+              <time datetime="2025-10-06T00:00:00.000Z">
+                06 octobre 2025
               </time>
             </p>
 
             
+              <p class="text-muted mb-0">
+                Mise à jour de l&#39;article du
+                <time datetime="2025-08-01T00:00:00.000Z">
+                  01 août 2025
+                </time>
+              </p>
+            
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-451" aria-labelledby="heading-451">#</a></h2>
-<p>La version 1.3 de la norme <abbr>ARIA</abbr> (Accessible Rich Internet Applications) apporte des améliorations significatives pour l'accessibilité des applications web. Cet article vise à informer les développeurs web et mobile, ainsi que toute personne intéressée par l'accessibilité numérique, des nouveaux attributs et rôles introduits, de leur utilisation, et de l'impact qu'ils peuvent avoir sur l'expérience utilisateur.</p>
-<h2 id="nouveaux-attributs-aria" class="h2-focus">Nouveaux attributs ARIA <a class="header-anchor" href="#nouveaux-attributs-aria" id="heading-452" aria-labelledby="heading-452">#</a></h2>
-<h3 id="aria-braillelabel">aria-braillelabel <a class="header-anchor" href="#aria-braillelabel" id="heading-453" aria-labelledby="heading-453">#</a></h3>
+          <p>Cet article est régulièrement mis à jour en fonction des nouveautés annoncées dans la nouvelle version 1.3 de la norme <abbr>ARIA</abbr>.</p>
+<h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-473" aria-labelledby="heading-473">#</a></h2>
+<p>La version 1.3 de la norme <abbr>ARIA</abbr> (Accessible Rich Internet Applications) des améliorations importantes pour l'accessibilité des applications web. Cet article a pour objectif de présenter les nouveaux attributs et rôles introduits, leur utilisation, ainsi que l'impact qu'ils peuvent avoir sur l'expérience utilisateur.</p>
+<h2 id="nouveaux-attributs-aria" class="h2-focus">Nouveaux attributs ARIA <a class="header-anchor" href="#nouveaux-attributs-aria" id="heading-474" aria-labelledby="heading-474">#</a></h2>
+<h3 id="aria-braillelabel">aria-braillelabel <a class="header-anchor" href="#aria-braillelabel" id="heading-475" aria-labelledby="heading-475">#</a></h3>
 <p>Description : cet attribut permet de fournir une étiquette spécifique pour les utilisateurs de dispositifs braille. Il est particulièrement utile pour les éléments interactifs, comme les boutons ou les liens, où une étiquette claire est essentielle pour la compréhension.</p>
 <p>Exemple d'utilisation :</p>
 <pre><code class="language-html">&lt;button aria-braillelabel=&quot;Envoyer le message&quot;&gt;Envoyer&lt;/button&gt;
 </code></pre>
 <p>Impact utilisateur : les utilisateurs de dispositifs braille bénéficieront d'une meilleure compréhension des actions disponibles, ce qui peut améliorer leur expérience de navigation et leur autonomie.</p>
-<h3 id="aria-brailleroledescription">aria-brailleroledescription <a class="header-anchor" href="#aria-brailleroledescription" id="heading-454" aria-labelledby="heading-454">#</a></h3>
+<h3 id="aria-brailleroledescription">aria-brailleroledescription <a class="header-anchor" href="#aria-brailleroledescription" id="heading-476" aria-labelledby="heading-476">#</a></h3>
 <p>Description : cet attribut fournit une description du rôle d'un élément pour les utilisateurs de dispositifs braille. Cela aide à contextualiser la fonction d'un élément, en particulier dans des interfaces complexes.</p>
 <p>Exemple d'utilisation :</p>
 <pre><code class="language-html">&lt;div role=&quot;navigation&quot; aria-brailleroledescription=&quot;Menu principal de navigation&quot;&gt;
@@ -216,7 +224,7 @@
 &lt;/div&gt;
 </code></pre>
 <p>Impact utilisateur : les utilisateurs de dispositifs braille auront une meilleure compréhension de la structure de la page, ce qui facilite la navigation et l'interaction avec le contenu.</p>
-<h3 id="aria-details">aria-details <a class="header-anchor" href="#aria-details" id="heading-455" aria-labelledby="heading-455">#</a></h3>
+<h3 id="aria-details">aria-details <a class="header-anchor" href="#aria-details" id="heading-477" aria-labelledby="heading-477">#</a></h3>
 <p>Description : cet attribut a été modifié dans la version 1.3 d'<abbr>ARIA</abbr> pour permettre la référence à plusieurs <code>id</code>. Il permet ainsi de référencer un ou plusieurs éléments qui fournissent des informations supplémentaires sur un autre élément, offrant ainsi un contexte plus riche.</p>
 <p>Exemple d'utilisation :</p>
 <pre><code class="language-html">&lt;button aria-details=&quot;details1 details2&quot;&gt;En savoir plus&lt;/button&gt;
@@ -228,14 +236,34 @@
 &lt;/div&gt;
 </code></pre>
 <p>Impact utilisateur : les utilisateurs, notamment ceux utilisant des lecteurs d'écran, bénéficieront d'une meilleure compréhension des éléments, ce qui peut réduire la confusion et améliorer l'expérience globale.</p>
-<h3 id="aria-description">aria-description <a class="header-anchor" href="#aria-description" id="heading-456" aria-labelledby="heading-456">#</a></h3>
+<h3 id="aria-description">aria-description <a class="header-anchor" href="#aria-description" id="heading-478" aria-labelledby="heading-478">#</a></h3>
 <p>Description : cet attribut permet de fournir une description d'un élément, offrant ainsi des informations contextuelles supplémentaires aux utilisateurs.</p>
 <p>Exemple d'utilisation :</p>
-<pre><code class="language-html">&lt;input type=&quot;text&quot; aria-description=&quot;Veuillez entrer votre adresse e-mail.&quot; /&gt;
+<pre><code class="language-html">&lt;input type=&quot;mail&quot; aria-description=&quot;Veuillez entrer votre adresse e-mail.&quot; /&gt;
 </code></pre>
 <p>Impact utilisateur : les utilisateurs auront accès à des informations supplémentaires qui peuvent les aider à remplir des formulaires ou à interagir avec des éléments de manière plus efficace.</p>
-<h2 id="nouveaux-roles-aria" class="h2-focus">Nouveaux rôles ARIA <a class="header-anchor" href="#nouveaux-roles-aria" id="heading-457" aria-labelledby="heading-457">#</a></h2>
-<h3 id="rolesuggestion">role=&quot;suggestion&quot; <a class="header-anchor" href="#rolesuggestion" id="heading-458" aria-labelledby="heading-458">#</a></h3>
+<h3 id="aria-errormessage">aria-errormessage <a class="header-anchor" href="#aria-errormessage" id="heading-479" aria-labelledby="heading-479">#</a></h3>
+<p>Description : cet attribut permet de lier un message d'erreur à un élément de formulaire. Le message d'erreur est alors vocalisé par les technologies d'assistance uniquement si l'élément de formulaire est invalide (<code>aria-invalid=&quot;true&quot;</code>).</p>
+<p>Exemple d'utilisation :</p>
+<pre><code class="language-html">&lt;label for=&quot;mail&quot;&gt;Adresse mail&lt;/label&gt;
+&lt;input type=&quot;email&quot; id=&quot;mail&quot; aria-invalid=&quot;true&quot; aria-errormessage=&quot;erreurMail&quot; /&gt;
+&lt;p id=&quot;erreurMail&quot;&gt;Erreur : cette adresse mail n'est pas valide&lt;/p&gt;
+</code></pre>
+<p>Impact utilisateur : les utilisateurs pourront plus facilement comprendre et corriger les erreurs en remplisant un formulaire.</p>
+<h3 id="aria-keyshortcuts">aria-keyshortcuts <a class="header-anchor" href="#aria-keyshortcuts" id="heading-480" aria-labelledby="heading-480">#</a></h3>
+<p>Description : cet attribut permet de mettre en évidence, dans le DOM, les éventuels raccourcis clavier à la disposition des utilisateurs.</p>
+<p>Exemple d'utilisation :</p>
+<pre><code class="language-html">&lt;button type=&quot;button&quot; aria-keyshortcuts=&quot;Esc&quot;&gt;Fermer la modale&lt;/button&gt;
+</code></pre>
+<p>Impact utilisateur : informer les utilisateurs et permettre à tous les utilisateurs de connaître les raccourcis claviers disponibles pour faciliter la navigation.</p>
+<h3 id="aria-placeholder">aria-placeholder <a class="header-anchor" href="#aria-placeholder" id="heading-481" aria-labelledby="heading-481">#</a></h3>
+<p>Description : cet attribut permet d'ajouter un placeholder à des éléments de formulaire personnalisés qui ne supportent pas nativement l'attribut <code>placeholder</code>, par exemple une <code>div</code> avec un attribut <code>contenteditable</code>.</p>
+<p>Exemple d'utilisation :</p>
+<pre><code class="language-html">&lt;div contenteditable=&quot;true&quot; aria-placeholder=&quot;Tapez un message&quot;&gt;...&lt;/div&gt;
+</code></pre>
+<p>Impact utilisateur : meilleure compréhension des utilisateurs.</p>
+<h2 id="nouveaux-roles-aria" class="h2-focus">Nouveaux rôles ARIA <a class="header-anchor" href="#nouveaux-roles-aria" id="heading-482" aria-labelledby="heading-482">#</a></h2>
+<h3 id="rolesuggestion">role=&quot;suggestion&quot; <a class="header-anchor" href="#rolesuggestion" id="heading-483" aria-labelledby="heading-483">#</a></h3>
 <p>Description : ce rôle est utilisé pour indiquer programmatiquement qu'une modification a été faite dans un texte. Cela permet aux utilisateurs de comprendre qu'il y a des options ou des corrections proposées dans le texte qu'ils peuvent considérer ou appliquer.</p>
 <p>Exemple d'utilisation :</p>
 <pre><code class="language-html">&lt;p&gt;
@@ -247,8 +275,8 @@
 &lt;/p&gt;
 </code></pre>
 <p>Impact utilisateur : les utilisateurs peuvent recevoir des conseils utiles qui améliorent leur expérience et les aident à naviguer plus efficacement dans l'application.</p>
-<h3 id="rolecomment">role=&quot;comment&quot; <a class="header-anchor" href="#rolecomment" id="heading-459" aria-labelledby="heading-459">#</a></h3>
-<p>Description : ce rôle est utilisé signaler programmatiquement les zones de commentaires.</p>
+<h3 id="rolecomment">role=&quot;comment&quot; <a class="header-anchor" href="#rolecomment" id="heading-484" aria-labelledby="heading-484">#</a></h3>
+<p>Description : ce rôle est utilisé pour signaler programmatiquement les zones de commentaires.</p>
 <p>Exemple d'utilisation :</p>
 <pre><code class="language-html">&lt;article&gt;
   &lt;h1&gt;Mon article de blog&lt;/h1&gt;
@@ -262,25 +290,31 @@
 &lt;/article&gt;
 </code></pre>
 <p>Impact utilisateur : les utilisateurs bénéficieront d'instructions claires qui les aident à interagir avec les éléments de manière plus efficace.</p>
-<h3 id="rolemark">role=&quot;mark&quot; <a class="header-anchor" href="#rolemark" id="heading-460" aria-labelledby="heading-460">#</a></h3>
+<h3 id="rolemark">role=&quot;mark&quot; <a class="header-anchor" href="#rolemark" id="heading-485" aria-labelledby="heading-485">#</a></h3>
 <p>Description : le rôle <code>mark</code> est utilisé pour indiquer un texte qui a été mis en surbrillance ou qui est d'une importance particulière dans le contenu.</p>
 <p>Exemple d'utilisation :</p>
 <pre><code class="language-html">&lt;p&gt;Ce texte est &lt;span role=&quot;mark&quot;&gt;important&lt;/span&gt; pour la compréhension.&lt;/p&gt;
 </code></pre>
 <p>Impact utilisateur : les utilisateurs de lecteurs d'écran peuvent être informés des éléments importants dans le contenu, ce qui améliore leur capacité à saisir les points clés.</p>
-<h2 id="cas-dutilisation" class="h2-focus">Cas d'utilisation <a class="header-anchor" href="#cas-dutilisation" id="heading-461" aria-labelledby="heading-461">#</a></h2>
-<h3 id="applications-de-messagerie">Applications de messagerie <a class="header-anchor" href="#applications-de-messagerie" id="heading-462" aria-labelledby="heading-462">#</a></h3>
+<h3 id="rolecode-et-roletime">role=&quot;code&quot; et role=&quot;time&quot; <a class="header-anchor" href="#rolecode-et-roletime" id="heading-486" aria-labelledby="heading-486">#</a></h3>
+<p>Description : le <code>role=&quot;code&quot;</code> et le <code>role=&quot;time&quot;</code> reproduisent la sémantique des éléments HTML <code>code</code> et <code>time</code>.</p>
+<p>Impact utilisateur : conserver une bonne sémantique dans les cas où il n'est pas possible d'utiliser les éléments HTML en raison de contraintes techniques.</p>
+<h3 id="roleimage">role=&quot;image&quot; <a class="header-anchor" href="#roleimage" id="heading-487" aria-labelledby="heading-487">#</a></h3>
+<p>Description : le <code>role=&quot;image&quot;</code> est créé en remplacement du <code>role=&quot;img&quot;</code> afin d'harmoniser les noms des différents rôles <abbr>ARIA</abbr>. <code>role=&quot;img&quot;</code> reste valide pour des raisons de rétrocompatibilité.</p>
+<h2 id="cas-dutilisation" class="h2-focus">Cas d'utilisation <a class="header-anchor" href="#cas-dutilisation" id="heading-488" aria-labelledby="heading-488">#</a></h2>
+<h3 id="applications-de-messagerie">Applications de messagerie <a class="header-anchor" href="#applications-de-messagerie" id="heading-489" aria-labelledby="heading-489">#</a></h3>
 <p>Dans une application de messagerie, l'utilisation de <code>aria-braillelabel</code> et <code>aria-brailleroledescription</code> peut améliorer l'expérience utilisateur en fournissant des étiquettes claires pour les boutons d'action, permettant aux utilisateurs de comprendre rapidement les options disponibles.</p>
-<h3 id="interfaces-de-navigation">Interfaces de navigation <a class="header-anchor" href="#interfaces-de-navigation" id="heading-463" aria-labelledby="heading-463">#</a></h3>
+<h3 id="interfaces-de-navigation">Interfaces de navigation <a class="header-anchor" href="#interfaces-de-navigation" id="heading-490" aria-labelledby="heading-490">#</a></h3>
 <p>Pour les interfaces de navigation, <code>aria-details</code> et <code>aria-description</code> peuvent être utilisés pour donner un contexte supplémentaire sur les éléments de navigation, rendant l'expérience plus intuitive pour tous les utilisateurs, en particulier ceux utilisant des technologies d'assistance.</p>
-<h3 id="suggestions-et-instructions">Suggestions et instructions <a class="header-anchor" href="#suggestions-et-instructions" id="heading-464" aria-labelledby="heading-464">#</a></h3>
+<h3 id="suggestions-et-instructions">Suggestions et instructions <a class="header-anchor" href="#suggestions-et-instructions" id="heading-491" aria-labelledby="heading-491">#</a></h3>
 <p>L'utilisation des nouveaux rôles <code>suggestion</code> et <code>comment</code> peut aider à guider les utilisateurs dans l'utilisation des fonctionnalités de l'application, en leur fournissant des conseils et des instructions claires.</p>
-<h2 id="conclusion" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-465" aria-labelledby="heading-465">#</a></h2>
+<h2 id="conclusion" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-492" aria-labelledby="heading-492">#</a></h2>
 <p>La version 1.3 de la norme <abbr>ARIA</abbr> introduit des attributs et rôles essentiels qui améliorent l'accessibilité des applications web. En intégrant ces nouveautés, les développeurs peuvent créer des expériences plus inclusives pour tous les utilisateurs, en particulier ceux qui dépendent de technologies d'assistance. N'hésitez pas à explorer ces nouveautés et à les appliquer dans vos projets pour garantir une meilleure accessibilité numérique.</p>
-<h2 id="webographie" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-466" aria-labelledby="heading-466">#</a></h2>
+<h2 id="webographie" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-493" aria-labelledby="heading-493">#</a></h2>
 <ul lang="en">
   <li><a href="https://w3c.github.io/aria/" hreflang="en">WAI-ARIA 1.3 draft (en)</a></li>
   <li><a href="https://www.craigabbott.co.uk/blog/a-look-at-the-new-wai-aria-1-3-draft/" hreflang="en">A look at the new WAI-ARIA 1.3 draft (en)</a></li>
+  <li><a href="https://webaim.org/blog/up-and-coming-aria/" hreflang="en">Up and Coming ARIA (en)</a></li>
 </ul>
 
           </div>
@@ -297,12 +331,17 @@
             <a href="#aria-braillelabel" class="nav-link text-muted">aria-braillelabel</a></li><li class="nav-item position-relative">
             <a href="#aria-brailleroledescription" class="nav-link text-muted">aria-brailleroledescription</a></li><li class="nav-item position-relative">
             <a href="#aria-details" class="nav-link text-muted">aria-details</a></li><li class="nav-item position-relative">
-            <a href="#aria-description" class="nav-link text-muted">aria-description</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#aria-description" class="nav-link text-muted">aria-description</a></li><li class="nav-item position-relative">
+            <a href="#aria-errormessage" class="nav-link text-muted">aria-errormessage</a></li><li class="nav-item position-relative">
+            <a href="#aria-keyshortcuts" class="nav-link text-muted">aria-keyshortcuts</a></li><li class="nav-item position-relative">
+            <a href="#aria-placeholder" class="nav-link text-muted">aria-placeholder</a></li></ul></li><li class="nav-item position-relative">
             <a href="#nouveaux-roles-aria" class="nav-link text-muted">Nouveaux rôles ARIA</a>
             <ul><li class="nav-item position-relative">
             <a href="#rolesuggestion" class="nav-link text-muted">role=&quot;suggestion&quot;</a></li><li class="nav-item position-relative">
             <a href="#rolecomment" class="nav-link text-muted">role=&quot;comment&quot;</a></li><li class="nav-item position-relative">
-            <a href="#rolemark" class="nav-link text-muted">role=&quot;mark&quot;</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#rolemark" class="nav-link text-muted">role=&quot;mark&quot;</a></li><li class="nav-item position-relative">
+            <a href="#rolecode-et-roletime" class="nav-link text-muted">role=&quot;code&quot; et role=&quot;time&quot;</a></li><li class="nav-item position-relative">
+            <a href="#roleimage" class="nav-link text-muted">role=&quot;image&quot;</a></li></ul></li><li class="nav-item position-relative">
             <a href="#cas-dutilisation" class="nav-link text-muted">Cas d&#39;utilisation</a>
             <ul><li class="nav-item position-relative">
             <a href="#applications-de-messagerie" class="nav-link text-muted">Applications de messagerie</a></li><li class="nav-item position-relative">

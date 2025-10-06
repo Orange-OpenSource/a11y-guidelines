@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2025-09-05T00:00:00Z</updated>
+  <updated>2025-10-06T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Nouveautés de la version 1.3 de la norme ARIA : guide pour les développeurs</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/aria-1-3-nouveautes-accessibilite/"/>
+    <updated>2025-10-06T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/aria-1-3-nouveautes-accessibilite/</id>
+    <content xml:lang="fr" type="html">Découvrez les nouvelles fonctionnalités de la version 1.3 de la norme ARIA. Cet article fournit des exemples pratiques et explique comment ces améliorations renforcent l&#39;accessibilité des applications web pour tous les utilisateurs.</content>
+  </entry>
   
   <entry>
     <title>Structurer une page avec les régions (landmarks) ARIA</title>
@@ -25,14 +33,6 @@
     <updated>2025-08-05T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/veille-juin-juillet-2025/</id>
     <content xml:lang="fr" type="html">Florilèges de ressources en #a11y, Juin-Juillet 2025</content>
-  </entry>
-  
-  <entry>
-    <title>Nouveautés de la version 1.3 de la norme ARIA : guide pour les développeurs</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/aria-1-3-nouveautes-accessibilite/"/>
-    <updated>2025-08-01T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/aria-1-3-nouveautes-accessibilite/</id>
-    <content xml:lang="fr" type="html">Découvrez les nouvelles fonctionnalités de la version 1.3 de la norme ARIA. Cet article fournit des exemples pratiques et explique comment ces améliorations renforcent l&#39;accessibilité des applications web pour tous les utilisateurs.</content>
   </entry>
   
   <entry>
