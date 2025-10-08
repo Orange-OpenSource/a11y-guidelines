@@ -15,7 +15,7 @@ This technique should be used sparingly, depending on the components and the con
 
 ## Disable a button
 
-It is possible to disable a button by simply adding the `disabled`:
+It is possible to disable a button by simply adding the `disabled` attribute:
 ```html
 <button disabled>Delete</button>
 ```
@@ -26,7 +26,7 @@ However, this technique is not recommended for a form submission button for vari
 
 Like a button, a form field is disabled using the `disabled` attribute.
 
-It is thus possible to disable an `input` field or a `textarea` input area:
+It is thus possible to disable an `input` field or a `textarea`:
 ```html
 <input type="text" name="address" disabled>
 <textarea id="area" name="comment" disabled>This is a disabled comment</textarea>
@@ -55,7 +55,7 @@ Similarly, on a `select`, the `disabled` attribute will affect all options withi
 </select>
 ```
 
-It is also possible to disabled a single `option` within a `select`:
+It is also possible to disable a single `option` within a `select`:
 ```html
 <label for="fruit-select" >Choose a fruit:</label>
 <select name="fruits" id="fruit-select">
