@@ -8,12 +8,15 @@ tags:
 
 # Digital accessibility watch August - September 2025
 
-A new WCAG 3.0 Working Draft has been released, and it's getting clearer... (en) https://www.w3.org/TR/wcag-3.0/.
+A new WCAG 3.0 Working Draft has been released, and it's getting clearer... (en): https://www.w3.org/TR/wcag-3.0/.
 Some reactions (en): https://a11yblog.com/2025/09/11/what-to-expect-in-wcag-3-0/, https://medium.com/@chukreiev/new-wcag-3-0-in-september-2025-what-changed-how-it-differs-from-wcag-2-x-and-what-to-do-next-fc13824aa821.
+
 An update of WCAG EM: https://w3c.github.io/wai-wcag-em/.
+
 Good news: a new version of Comfort Plus is now available at https://confort-plus.orange.com/.
 
-By the way, Orange was a silver partner of the Paris Web 2025 conference for this twentieth edition. Always a lot of great talks, especially Tamara Sredojevic's (https://www.iamtamara.design/)! A few other reviews: https://www.alsacreations.com/actu/lire/1966-Paris-web-2025-inclusivite-au-coeur.html, https://www.sfeir.dev/front/paris-web-2025-deux-jours-parmi-les-bisounours-jour-1/.
+By the way, Orange was a silver partner of the Paris Web 2025 conference for this twentieth edition. Always a lot of great talks, especially Tamara Sredojevic's (https://www.iamtamara.design/)!
+A few other reviews: https://www.alsacreations.com/actu/lire/1966-Paris-web-2025-inclusivite-au-coeur.html, https://www.sfeir.dev/front/paris-web-2025-deux-jours-parmi-les-bisounours-jour-1/.
 
 Lots to read during these two months, which should have been quiet!
 
@@ -27,33 +30,33 @@ Lots to read during these two months, which should have been quiet!
 - 2.4.3 Focus order: https://tarnoff.info/2025/08/25/a11y-101-2-4-3-focus-order/
 - 2.4.11, 2.4.12 Focus not obscured, details: https://a11y-blog.dev/en/articles/wcag-focus-not-obscured/
 - 1.4.4 Resize text: https://www.dennisdeacon.com/web/accessibility/testing-methods-resize-text/
-- The laws of A11y: https://www.tempertemper.net/blog/making-sense-of-accessibility-and-the-law
+- The laws of a11y: https://www.tempertemper.net/blog/making-sense-of-accessibility-and-the-law
 - 2.4.1 Bypass blocks: https://tarnoff.info/2025/08/04/a11y-101-2-4-1-bypass-blocks/
-- What is/is not the WCAG and the EAA: https://www.getstark.co/blog/wcag-vs-eaa/
+- What are/are not the WCAG and the EAA: https://www.getstark.co/blog/wcag-vs-eaa/
 - 2.4.4 Link Purpose: https://tarnoff.info/2025/09/22/a11y-101-2-4-4-link-purpose-in-context/
 
 ## Accessibility Implementation Strategy
 
-- The different means of remediation in A11y, great: https://equalizedigital.com/how-to-scope-accessibility-remediation/
+- The different means of remediation in a11y, great: https://equalizedigital.com/how-to-scope-accessibility-remediation/
 - Everything about accessible emails, a real treasure (fr): https://www.badsender.com/guides/accessibilite-et-email/#h-les-bonnes-pratiques-d-accessibilite-a-mettre-en-place-dans-le-code-de-vos-emails
 - Accessible components?: https://hidde.blog/component-conformance/
-- Figures and data on the economics of A11y: https://www.nascio.org/wp-content/uploads/2025/08/NASCIO_The-Economic-Case-for-Digital-Accessibility_2025_a11y.pdf
-- Complex data, how to make it A11y: https://blog.pope.tech/2025/09/08/how-to-make-complex-data-accessible-for-users-with-disabilities/
-- The biggest flaws in A11y that are leading to legal action (in the US): https://tarnoff.info/2025/09/01/how-to-minimize-legal-risks-in-accessibility-compliance/
+- Figures and data on the economics of a11y: https://www.nascio.org/wp-content/uploads/2025/08/NASCIO_The-Economic-Case-for-Digital-Accessibility_2025_a11y.pdf
+- Complex datas, how to make them accessible: https://blog.pope.tech/2025/09/08/how-to-make-complex-data-accessible-for-users-with-disabilities/
+- The biggest flaws in a11y that are leading to legal action (in the US): https://tarnoff.info/2025/09/01/how-to-minimize-legal-risks-in-accessibility-compliance/
 - Longevity of WCAG and video: https://yatil.net/blog/wcags-longevity
 - A11y is a journey, with no final destination: https://www.dennisdeacon.com/web/accessibility/digital-accessibility-is-a-journey-not-a-destination/
-- Why there are so few A11y bug bounties: https://chrisyoong.com/blog/why-is-big-tech-not-running-accessibility-bug-bounties
-- How much should you spend on A11y: https://karlgroves.com/how-much-should-you-spend-on-accessibility/
+- Why are there so few a11y bug bounties?: https://chrisyoong.com/blog/why-is-big-tech-not-running-accessibility-bug-bounties
+- How much should you spend on a11y?: https://karlgroves.com/how-much-should-you-spend-on-accessibility/
 - Horizontal scroller, not a good idea: https://adrianroselli.com/2025/08/horizontal-scrolling-containers-are-not-a-content-strategy.html
-- Strategy LMS (Learning Management System) accessibility strategy: https://blog.pope.tech/2025/09/30/learning-management-system-lms-accessibility-strategy/
+- LMS (Learning Management System) accessibility strategy: https://blog.pope.tech/2025/09/30/learning-management-system-lms-accessibility-strategy/
 - Universal Design and Inclusive Design, two levers for accessibility: https://www.tpgi.com/universal-design-vs-inclusive-design/
 - Accessibility benefits everyone, yes, but it's not the primary objective (fr): https://ideance.net/blog/4393/accessibilite-confort-recentrer-les-priorites/
 
 ## Testing Accessibility
 
-- An A11y Audit Guide for projects that require it: https://www.microassist.com/digital-accessibility/web-accessibility-audit-buyers-guide/
+- An a11y Audit Guide for projects that require it: https://www.microassist.com/digital-accessibility/web-accessibility-audit-buyers-guide/
 - Design System Audit: https://archive.fo/bPvT1
-- "Best Practices" to Use with precautions: 
+- "Best Practices" to use with precautions: 
   - https://www.craigabbott.co.uk/blog/best-practice-is-just-your-opinion/ 
   - https://yatil.net/blog/about-best-practices
 - Test 1.4.5 Images of text: https://www.dennisdeacon.com/web/accessibility/testing-methods-images-of-text/
@@ -66,19 +69,19 @@ Lots to read during these two months, which should have been quiet!
 - Button or link? Link or button? A final reminder on when and how to use them: https://www.a11y-collective.com/blog/button-vs-link/
 - An accessible flip card: https://www.tpgi.com/creating-a-truly-accessible-flip-card/
 - Secrets of the output tag, how to use it: https://denodell.com/blog/html-best-kept-secret-output-tag
-- When A11y isn't so easy, video: https://a11ytalks.com/posts/2025-sep
+- When a11y isn't so easy, video: https://a11ytalks.com/posts/2025-sep
 - Polite/assertive, live regions explained: https://rightsaidjames.com/2025/08/aria-live-regions-when-to-use-polite-assertive/
 - Data table with clickable rows, accessible: https://www.oidaisdes.org/table-with-clickable-rows.en/
 - Issue with audio description in WCAG: https://adrianroselli.com/2025/08/1-2-5-adversarial-conformance.html
 - No nested scroll bars, never: https://buttondown.com/access-ability/archive/nested-scroll-bars-are-the-one-of-the-biggest/
-- Making Captcha accessible: https://ozewai.org/blog/technical-articles/accessibility-issues-of-captcha/
+- Making accessible CAPTCHA : https://ozewai.org/blog/technical-articles/accessibility-issues-of-captcha/
 
 ## Feedback
 
-- The A11y is primarily cultural, more than technical. I really liked this one, read it (fr): https://a11yconcern.substack.com/p/laccessibilite-un-enjeu-plus-culturel
-- Captcha, A11y and Luxembourg (fr): https://accessibilite.public.lu/fr/news/2025-09-22-captchas.html
-- Threats to A11y: https://alice.boxhall.au/articles/a-threat-model-for-accessibility-on-the-web/
-- Rendering A11y graphs: https://blog.khanacademy.org/rebuilding-graphs-for-accessibility-inside-khan-academys-inclusive-design/
+- The a11y is primarily cultural, more than technical. I really liked this one, read it (fr): https://a11yconcern.substack.com/p/laccessibilite-un-enjeu-plus-culturel
+- CAPTCHA, a11y and Luxembourg (fr): https://accessibilite.public.lu/fr/news/2025-09-22-captchas.html
+- Threats to a11y: https://alice.boxhall.au/articles/a-threat-model-for-accessibility-on-the-web/
+- Rendering a11y graphs: https://blog.khanacademy.org/rebuilding-graphs-for-accessibility-inside-khan-academys-inclusive-design/
 
 ## Mobile app, mobile web
 
@@ -112,24 +115,24 @@ Lots to read during these two months, which should have been quiet!
 
 ## Resources
 
-- Some arguments for those who don't want to use A11y: https://chrisyoong.com/blog/types-of-accessibility-push-
-- Dyslexia and A11y: https://buttondown.com/access-ability/archive/designing-for-dyslexia-accessibility-requirements/
+- Some arguments for those who don't want to use a11y: https://chrisyoong.com/blog/types-of-accessibility-push-
+- Dyslexia and a11y: https://buttondown.com/access-ability/archive/designing-for-dyslexia-accessibility-requirements/
 - From Word to a tagged PDF, everything you need to know: https://accessingenuity.com/blogs/articles-resources-briefs/steps-for-converting-a-microsoft-word-file-to-pdf-to-include-the-tag-structure
 - VPAT and ACR explained: https://knowbility.org/blog/2025/accessibility-conformance-report-acr-what-it-is-why-you-need-it-and-how-it-works
 - Writing for an a11y web: https://www.a11y-collective.com/blog/accessible-writing/
 - Inclusive Design 24 #ID24 videos: https://www.youtube.com/playlist?list=PLn7dsvRdQEfFTeoA8kZcsASPbYi2rf4C0
 - Digital learning and a11y: https://www.formabilite.fr/
 - Rendered PDFs Accessible via free tools: https://piccalil.li/blog/a-guide-to-creating-accessible-pdfs-using-free-tools/
-- A11y and movement: for whom, why, and how, informative: https://buttondown.com/access-ability/archive/pseudomotion-motion-sensitivity-and-accessibility/
+- A11y and movement, for whom, why, and how, informative: https://buttondown.com/access-ability/archive/pseudomotion-motion-sensitivity-and-accessibility/
 - Neurodivergence and non-visual blindness, to read: https://buttondown.com/access-ability/archive/the-many-blindnesses-of-neurodivergence-that-have/
 - Content headings, explanatory video: https://blog.pope.tech/2025/08/11/how-to-create-better-and-more-accessible-heading-structures/
-- 5 A11y mistakes in the structure of level headings, video: https://blog.pope.tech/2025/08/11/5-heading-accessibility-issues-to-avoid/
-- b, i, em and strong, when and how to use it (fr): https://www.alsacreations.com/article/lire/552-strong-b-em-i-quelle-balise-utiliser-et-pourquoi.html
+- Five a11y mistakes in the structure of level headings, video: https://blog.pope.tech/2025/08/11/5-heading-accessibility-issues-to-avoid/
+- b, i, em and strong tags, when and how to use it (fr): https://www.alsacreations.com/article/lire/552-strong-b-em-i-quelle-balise-utiliser-et-pourquoi.html
 - Field labels: https://www.tpgi.com/more-than-just-text-the-real-power-of-labels/
 - The focus indicator, explanations: https://www.a11y-collective.com/blog/focus-indicator/
 
 ## Other
 
-- Avoiding the word help in A11y (fr): https://yatil.net/blog/avoiding-the-word-help
+- Avoiding the word "help" in a11y (fr): https://yatil.net/blog/avoiding-the-word-help
 - Inclusive language, think about it too: https://tetralogical.com/blog/2025/09/09/championing-inclusive-language/
 - Dialog tag and role popover, when use them: https://mayank.co/notes/popover-vs-dialog/6
