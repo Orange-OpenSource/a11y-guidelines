@@ -16,7 +16,7 @@ An update of WCAG EM: https://w3c.github.io/wai-wcag-em/.
 Good news: a new version of Comfort Plus is now available at https://confort-plus.orange.com/.
 
 By the way, Orange was a silver partner of the Paris Web 2025 conference for this twentieth edition. Always a lot of great talks, especially Tamara Sredojevic's (https://www.iamtamara.design/)!
-A few other reviews: https://www.alsacreations.com/actu/lire/1966-Paris-web-2025-inclusivite-au-coeur.html, https://www.sfeir.dev/front/paris-web-2025-deux-jours-parmi-les-bisounours-jour-1/.
+A few other reviews (fr): https://www.alsacreations.com/actu/lire/1966-Paris-web-2025-inclusivite-au-coeur.html, https://www.sfeir.dev/front/paris-web-2025-deux-jours-parmi-les-bisounours-jour-1/, https://access42.net/paris-web-2025-compte-rendu/.
 
 Lots to read during these two months, which should have been quiet!
 
