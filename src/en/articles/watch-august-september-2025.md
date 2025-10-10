@@ -9,9 +9,11 @@ tags:
 # Digital accessibility watch August - September 2025
 
 A new WCAG 3.0 Working Draft has been released, and it's getting clearer... (en) https://www.w3.org/TR/wcag-3.0/.
-Some reactions (en): https://a11yblog.com/2025/09/11/what-to-expect-in-wcag-3-0/ https://w3c.github.io/wai-wcag-em/, https://confort-plus.orange.com/.
+Some reactions (en): https://a11yblog.com/2025/09/11/what-to-expect-in-wcag-3-0/, https://medium.com/@chukreiev/new-wcag-3-0-in-september-2025-what-changed-how-it-differs-from-wcag-2-x-and-what-to-do-next-fc13824aa821.
+An update of WCAG EM: https://w3c.github.io/wai-wcag-em/.
+Good news: a new version of Comfort Plus is now available at https://confort-plus.orange.com/.
 
-And Orange was a silver partner of the Paris Web 2025 conference for this twentieth edition. Always a lot of great talks, especially Tamara Sredojevic's (https://www.iamtamara.design/)! A few other reviews: https://www.alsacreations.com/actu/lire/1966-Paris-web-2025-inclusivite-au-coeur.html, https://www.sfeir.dev/front/paris-web-2025-deux-jours-parmi-les-bisounours-jour-1/.
+By the way, Orange was a silver partner of the Paris Web 2025 conference for this twentieth edition. Always a lot of great talks, especially Tamara Sredojevic's (https://www.iamtamara.design/)! A few other reviews: https://www.alsacreations.com/actu/lire/1966-Paris-web-2025-inclusivite-au-coeur.html, https://www.sfeir.dev/front/paris-web-2025-deux-jours-parmi-les-bisounours-jour-1/.
 
 Lots to read during these two months, which should have been quiet!
 
