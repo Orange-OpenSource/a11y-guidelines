@@ -10,8 +10,11 @@ tags:
 
 Sortie d'un nouveau Working Draft de WCAG 3.0, ça se précise... (en) https://www.w3.org/TR/wcag-3.0/.
 Quelques réactions (en) : https://a11yblog.com/2025/09/11/what-to-expect-in-wcag-3-0/, https://medium.com/@chukreiev/new-wcag-3-0-in-september-2025-what-changed-how-it-differs-from-wcag-2-x-and-what-to-do-next-fc13824aa821.
+
 Une mise à jour de WCAG EM: https://w3c.github.io/wai-wcag-em/.
+
 Grande nouvelle : une nouvelle version de Comfort Plus est disponible, https://confort-plus.orange.com/.
+
 Et puis, Orange était partenaire silver de la conférence Paris Web 2025 pour cette vingtième édition. Toujours beaucoup de conf chouettes, notamment celle de Tamara Sredojevic (https://www.iamtamara.design/) !
 Quelques autres avis : https://www.alsacreations.com/actu/lire/1966-Paris-web-2025-inclusivite-au-coeur.html, https://www.sfeir.dev/front/paris-web-2025-deux-jours-parmi-les-bisounours-jour-1/, https://access42.net/paris-web-2025-compte-rendu/.
 
