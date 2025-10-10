@@ -47,7 +47,7 @@ Beaucoup de choses à lire pour ces 2 mois qui auraient du être calmes !
 - Quel budget consacrer à l'a11y ? (en) : https://karlgroves.com/how-much-should-you-spend-on-accessibility/
 - Les ascenseurs horizontaux ne sont une bonne idée (en) : https://adrianroselli.com/2025/08/horizontal-scrolling-containers-are-not-a-content-strategy.html
 - Stratégie de mise en accessibilité des LMS (Learning Management System) (en) : https://blog.pope.tech/2025/09/30/learning-management-system-lms-accessibility-strategy/
--	La conception universelle et la conception inclusive, deux leviers pour l'accessibilité (en) : https://www.tpgi.com/universal-design-vs-inclusive-design/
+- La conception universelle et la conception inclusive, deux leviers pour l'accessibilité (en) : https://www.tpgi.com/universal-design-vs-inclusive-design/
 -	"L'accessibilité bénéficie à tout le monde", oui mais ce n'est pas l'objectif premier : https://ideance.net/blog/4393/accessibilite-confort-recentrer-les-priorites/
 
 ## Tester l’accessibilité
