@@ -130,6 +130,6 @@ Beaucoup de choses à lire pour ces 2 mois qui auraient du êtr&e calmes !
 
 ## Autres
 
-- Éviter le mot aide en a11y (en) : https://www.alsacreations.com/article/lire/552-strong-b-em-i-quelle-balise-utiliser-et-pourquoi.html
+- Éviter le mot aide en a11y (en) : https://yatil.net/blog/avoiding-the-word-help
 - Le langage inclusif, y penser aussi (en) : https://tetralogical.com/blog/2025/09/09/championing-inclusive-language/
 - Balise dialog et role popover, quand les utiliser (en) : https://mayank.co/notes/popover-vs-dialog/6

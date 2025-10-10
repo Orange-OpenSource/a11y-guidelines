@@ -130,6 +130,6 @@ Lots to read during these two months, which should have been quiet!
 
 ## Other
 
-- Avoiding the word help in A11y (fr): https://www.alsacreations.com/article/lire/552-strong-b-em-i-quelle-balise-utiliser-et-pourquoi.html
+- Avoiding the word help in A11y (fr): https://yatil.net/blog/avoiding-the-word-help
 - Inclusive language, think about it too: https://tetralogical.com/blog/2025/09/09/championing-inclusive-language/
 - Dialog tag and role popover, when use them: https://mayank.co/notes/popover-vs-dialog/6
