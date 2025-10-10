@@ -83,7 +83,7 @@ Beaucoup de choses à lire pour ces 2 mois qui auraient du être calmes !
 
 ## Appli mobile, web mobile
 
--	Un rappel des principales recommandations pour rendre les applications mobiles conformes aux WCAG 2.2 (en) : https://blog.usablenet.com/mobile-app-accessibility-guidelines
+- Un rappel des principales recommandations pour rendre les applications mobiles conformes aux WCAG 2.2 (en) : https://blog.usablenet.com/mobile-app-accessibility-guidelines
 - Pourquoi les premières versions de l'interface Liquid Glass d'Apple posaient des problèmes de lisibilité (en) : https://blog.pope.tech/2025/08/11/5-heading-accessibility-issues-to-avoid/
 - En parlant de Liquid Glass, tuto pour le désactiver (en) : https://www.geeky-gadgets.com/turn-off-liquid-glass-in-ios-26/
 
