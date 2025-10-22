@@ -3,7 +3,7 @@ title: "Disable HTML elements"
 abstract: "How to disable HTML elements in the page?"
 titleBeforeTag: true
 date: "2021-07-01"
-updateDate: "2025-09-01"
+updateDate: "2025-10-31"
 tags:
   - web
   - beginner

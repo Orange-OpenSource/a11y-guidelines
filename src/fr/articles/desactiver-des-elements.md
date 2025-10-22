@@ -3,7 +3,7 @@ title: "Désactiver des éléments HTML"
 abstract: "Comment désactiver des éléments d'une page ?"
 titleBeforeTag: true
 date: "2021-07-01"
-updateDate: "2025-09-01"
+updateDate: "2025-10-31"
 tags:
   - web
   - beginner
