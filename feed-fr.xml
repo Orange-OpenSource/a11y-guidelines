@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2025-10-10T00:00:00Z</updated>
+  <updated>2025-10-31T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Désactiver des éléments HTML</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/desactiver-des-elements/"/>
+    <updated>2025-10-31T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/desactiver-des-elements/</id>
+    <content xml:lang="fr" type="html">Comment désactiver des éléments d&#39;une page ?</content>
+  </entry>
   
   <entry>
     <title>Veille #A11y Août-Septembre 2025</title>
@@ -457,14 +465,6 @@
     <updated>2021-08-03T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/veille-juin-juillet-2021/</id>
     <content xml:lang="fr" type="html">Florilèges de ressources en #a11y, Juin-Juillet 2021</content>
-  </entry>
-  
-  <entry>
-    <title>Désactiver des éléments HTML</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/desactiver-des-elements/"/>
-    <updated>2021-07-01T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/desactiver-des-elements/</id>
-    <content xml:lang="fr" type="html">Comment désactiver des éléments d&#39;une page ?</content>
   </entry>
   
   <entry>

@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#desactiver-un-champ-de-formulaire" class="dropdown-item text-wrap">Désactiver un champ de formulaire</a><a href="#desactiver-un-lien" class="dropdown-item text-wrap">Désactiver un lien</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#desactiver-un-bouton" class="dropdown-item text-wrap">Désactiver un bouton</a><a href="#desactiver-un-champ-de-formulaire" class="dropdown-item text-wrap">Désactiver un champ de formulaire</a><a href="#desactiver-un-lien" class="dropdown-item text-wrap">Désactiver un lien</a><a href="#lattribut-de-lecture-seule-read-only" class="dropdown-item text-wrap">L&#39;attribut de lecture seule read-only</a><a href="#webographie" class="dropdown-item text-wrap">Webographie</a></div>
     </nav>
         
       </div>
@@ -188,21 +188,37 @@
 
             <p class="text-muted mb-0">
               <span class="visually-hidden">Date de parution</span>
-              <time datetime="2021-07-01T00:00:00.000Z">
-                01 juillet 2021
+              <time datetime="2025-10-31T00:00:00.000Z">
+                31 octobre 2025
               </time>
             </p>
 
             
+              <p class="text-muted mb-0">
+                Mise à jour de l&#39;article du
+                <time datetime="2021-07-01T00:00:00.000Z">
+                  01 juillet 2021
+                </time>
+              </p>
+            
           
           <div class="mt-4">
-          <h2 id="desactiver-un-champ-de-formulaire" class="h2-focus">Désactiver un champ de formulaire <a class="header-anchor" href="#desactiver-un-champ-de-formulaire" id="heading-522" aria-labelledby="heading-522">#</a></h2>
-<p>Pour désactiver un champ de formulaire il suffit de lui attribuer l'attribut <code>disabled</code> :</p>
+          <p>La désactivation d'un élément interactif sert à empêcher l'utilisateur d'interagir avec ce composant ou avec ses descendants.</p>
+<p>Cette technique est à utiliser avec parcimonie, en fonction des composants et du contexte d'utilisation.</p>
+<h2 id="desactiver-un-bouton" class="h2-focus">Désactiver un bouton <a class="header-anchor" href="#desactiver-un-bouton" id="heading-519" aria-labelledby="heading-519">#</a></h2>
+<p>Il est possible de désactiver un bouton en lui ajoutant simplement l'attribut <code>disabled</code> :</p>
 <pre><code class="language-html">&lt;button disabled&gt;Supprimer&lt;/button&gt;
-&lt;input type=&quot;text&quot; name=&quot;address&quot; disabled&gt;
 </code></pre>
-<p>Si <code>disable</code> est utilisé sur un <code>&lt;fieldset&gt;</code>, les éléments enfants sont désactivés.</p>
-<pre><code class="language-html">&lt;fieldset id=&quot;groupe&quot; disabled&gt; 
+<p>Cependant, cette technique n'est pas recommandée pour un bouton de soumission de formulaire pour diverses raisons, notamment : faible contraste, bouton non atteignable au clavier, aucune information donnée à l'utilisateur.</p>
+<h2 id="desactiver-un-champ-de-formulaire" class="h2-focus">Désactiver un champ de formulaire <a class="header-anchor" href="#desactiver-un-champ-de-formulaire" id="heading-520" aria-labelledby="heading-520">#</a></h2>
+<p>Comme pour un bouton, un champ de formulaire est désactivé avec l'attribut <code>disabled</code>.</p>
+<p>Il est ainsi possible de désactiver un champ <code>input</code> ou une zone de saisie <code>textarea</code> :</p>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; name=&quot;address&quot; disabled&gt;
+&lt;textarea id=&quot;area&quot; name=&quot;comment&quot; disabled&gt;This is a disabled comment&lt;/textarea&gt;
+</code></pre>
+<p>Si <code>disabled</code> est utilisé sur un <code>&lt;fieldset&gt;</code>, les éléments enfants sont également désactivés.<br>
+Dans l'exemple ci-dessous, l'<code>input</code>, la <code>checkbox</code> et le <code>select</code> sont désactivés car ils héritent de la désactivation sur le <code>fieldset</code> :</p>
+<pre><code class="language-html">&lt;fieldset id=&quot;groupe&quot; disabled&gt;
     &lt;input name=&quot;foo&quot;&gt; 
     &lt;input type=&quot;checkbox&quot; name=&quot;bar&quot;&gt; 
     &lt;select name=&quot;values&quot;&gt; 
@@ -212,15 +228,43 @@
     &lt;/select&gt;
 &lt;/fieldset&gt;
 </code></pre>
-<h2 id="desactiver-un-lien" class="h2-focus">Désactiver un lien <a class="header-anchor" href="#desactiver-un-lien" id="heading-523" aria-labelledby="heading-523">#</a></h2>
-<p>Pour désactiver un lien, contrairement à la technique précédente, l'utilisation de l'attribut <code>disabled</code> n'est pas autorisée. Il est tout de même possible de désactiver un lien en suivant les 3 étapes suivantes :</p>
+<p>De la même manière, sur un <code>select</code>, l'attribut <code>disabled</code> aura un effet sur tous les choix :</p>
+<pre><code class="language-html">&lt;label for=&quot;fruit-select&quot; &gt;Choisir un fruit :&lt;/label&gt;
+&lt;select name=&quot;fruit&quot; id=&quot;fruit-select&quot; disabled&gt;
+  &lt;option value=&quot;&quot;&gt;Sélectionner un fruit&lt;/option&gt;
+  &lt;option value=&quot;pomme&quot; disabled&gt;Pomme&lt;/option&gt;
+  &lt;option value=&quot;banane&quot;&gt;Banane&lt;/option&gt;
+  &lt;option value=&quot;orange&quot;&gt;Orange&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<p>Il est aussi possible de désactiver une seule <code>option</code> présent dans le <code>select</code> :</p>
+<pre><code class="language-html">&lt;label for=&quot;fruit-select&quot; &gt;Choisir un fruit :&lt;/label&gt;
+&lt;select name=&quot;fruits&quot; id=&quot;fruit-select&quot;&gt;
+  &lt;option value=&quot;&quot;&gt;Sélectionner un fruit&lt;/option&gt;
+  &lt;option value=&quot;pomme&quot; disabled&gt;Pomme&lt;/option&gt;
+  &lt;option value=&quot;banane&quot;&gt;Banane&lt;/option&gt;
+  &lt;option value=&quot;orange&quot;&gt;Orange&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<h2 id="desactiver-un-lien" class="h2-focus">Désactiver un lien <a class="header-anchor" href="#desactiver-un-lien" id="heading-521" aria-labelledby="heading-521">#</a></h2>
+<p>Pour désactiver un lien, l'utilisation de l'attribut <code>disabled</code> n'est pas autorisée. Cependant, il est possible de simuler une désactivation en suivant ces trois étapes :</p>
 <ul>
 <li>supprimer l'attribut <code>href</code> pour qu'il ne puisse plus recevoir le focus</li>
 <li>ajouter un <code>role=&quot;link&quot;</code> pour qu'il soit toujours considéré comme un lien par les lecteurs d'écran</li>
 <li>ajouter un attribut <code>aria-disabled=&quot;true&quot;</code> pour qu'il soit indiqué comme étant désactivé</li>
 </ul>
 <pre><code class="html">&lt;a role="link" aria-disabled="true"&gt;Lien désactivé&lt;/a&gt;</code></pre>
-<p>Consultez l'excellent article de Scott O'Hara sur le sujet : <a href="https://www.scottohara.me/blog/2021/05/28/disabled-links.html" hreflang="en" lang="en">Disabling a link</a>.</p>
+<h2 id="lattribut-de-lecture-seule-read-only" class="h2-focus">L'attribut de lecture seule <code>read-only</code> <a class="header-anchor" href="#lattribut-de-lecture-seule-read-only" id="heading-522" aria-labelledby="heading-522">#</a></h2>
+<p>L'attribut booléen <code>read-only</code> contrôle la possibilité ou non d'éditer un champ texte.<br>
+Il ne faut pas utiliser cet attribut pour désactiver d'autres éléments (boutons et autres éléments interactifs), car cela est justement le rôle de l'attribut <code>disabled</code>.</p>
+<p>La principale différence entre les deux techniques réside dans le fait qu'un élément en lecture seule sera toujours atteignable au clavier et restitué par les aides techniques ; cela peut avoir un intérêt pour vérifier, sans pouvoir modifier, une information précédemment renseignée (par exemple : un email, une date de naissance, un numéro de téléphone, etc.).</p>
+<h2 id="webographie" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-523" aria-labelledby="heading-523">#</a></h2>
+<ul>
+  <li><a href="https://www.scottohara.me/blog/2021/05/28/disabled-links.html" hreflang="en">Disabling a link - Scott O'Hara (en)</a></li>
+  <li><a href="https://adamsilver.io/blog/the-problem-with-disabled-buttons-and-what-to-do-instead/" hreflang="en">The problem with disabled buttons and what to do instead - Adam Silver (en)</a></li>
+  <li><a href="https://adrianroselli.com/2024/02/dont-disable-form-controls.html" hreflang="en">Don’t Disable Form Controls - Adrian Roselli (en)</a></li>
+  <li><a href="https://adrianroselli.com/2024/11/avoid-read-only-controls.html" hreflang="en">Avoid Read-only Controls - Adrian Roselli (en)</a></li>
+</ul>
 
           </div>
         </main>
@@ -230,8 +274,11 @@
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Sur cette page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#desactiver-un-bouton" class="nav-link text-muted">Désactiver un bouton</a></li><li class="nav-item position-relative">
             <a href="#desactiver-un-champ-de-formulaire" class="nav-link text-muted">Désactiver un champ de formulaire</a></li><li class="nav-item position-relative">
-            <a href="#desactiver-un-lien" class="nav-link text-muted">Désactiver un lien</a></li>
+            <a href="#desactiver-un-lien" class="nav-link text-muted">Désactiver un lien</a></li><li class="nav-item position-relative">
+            <a href="#lattribut-de-lecture-seule-read-only" class="nav-link text-muted">L&#39;attribut de lecture seule read-only</a></li><li class="nav-item position-relative">
+            <a href="#webographie" class="nav-link text-muted">Webographie</a></li>
       </ul>
     </nav>
             </div>
