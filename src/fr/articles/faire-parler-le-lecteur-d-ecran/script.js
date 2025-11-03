@@ -21,6 +21,12 @@ function speak(message, priority = "polite") {
     region.classList.add("visually-hidden");
 
     document.body.appendChild(region);
+    
+    if (priority === "assertive") {
+        speechSynthesis.cancel();
+    }
+    speechSynthesis.cancel();
+    speechSynthesis.speak(new SpeechSynthesisUtterance(message));
 
     setTimeout(() => {
         region.textContent = message;
