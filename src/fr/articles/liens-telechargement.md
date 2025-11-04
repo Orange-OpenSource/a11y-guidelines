@@ -11,7 +11,7 @@ tags:
 
 Il existe différents types de liens : [les liens classiques](/fr/web/developper/navigation-generale/) permettant d'atteindre une nouvelle page, [les liens d'évitement](/fr/articles/liens-evitement/) permettant de se déplacer au sein de la page et enfin ceux qui nous intéressent dans cet article : les liens permettant de télécharger un fichier.
 
-Un lien permettant de télécharger un fichier devrait, à la fois , pour des raisons d'accessibilité et d'ergonomie, respecter les règles suivantes :
+Un lien permettant de télécharger un fichier devrait, à la fois, pour des raisons d'accessibilité et d'ergonomie, respecter les règles suivantes :
 
 - son intitulé doit être explicite, il doit également préciser le type et le poids du fichier
 - son intitulé doit préciser la langue du document lorsque celui-ci est rédigé dans une langue différente que celle de la page courante
@@ -26,7 +26,7 @@ Voici un exemple de lien présentant les informations nécessaires :
   
 Télécharger le <a href="#">bilan complet 2020 (PDF, 1,5 Mo)</a>.
 
-Il est important que ces informations complémentaires soient présentes dans l'intitulé du lien et non juste après le lien (notamment pour les personnes qui utilisent un lecteur d'écran). Cela dit pour des questions esthétiques, il est possible de faire en sorte que les informations complémentaires ne soient pas soulignées, exemple :  
+Il est important que ces informations complémentaires soient présentes dans l'intitulé du lien et non juste après le lien (notamment pour les personnes qui utilisent un lecteur d'écran). Cela dit, pour des questions esthétiques, il est possible de faire en sorte que les informations complémentaires ne soient pas soulignées, exemple :  
   
 Télécharger le <a href="#" style="text-decoration: none"><span style="text-decoration: underline">bilan complet 2020 </span>(PDF, 1,5 Mo)</a>
 
@@ -47,4 +47,4 @@ Exemples de documents en anglais sur un site français :
 Si le type de fichier est connu, une petite icône à côté du fichier permet à l'utilisateur de le percevoir plus rapidement :
 <a style="background-image: url(/images/icons/pdf-icon.svg); background-size: contain; background-repeat: no-repeat; padding-left: 2rem;" href="#">bilan complet 2025 (PDF, 1,5 Mo)</a>
 ou
-<a href="#"><img src="pdf.jpg" alt="fichier PDF" />bilan complet 2025 (1,5 Mo)</a>
+<a href="#"><img src="/images/icons/pdf-icon.svg" alt="PDF file" width="16" height="16" /> Bilan complet 2025 (1,5 Mo)</a>

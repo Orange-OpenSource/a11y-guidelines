@@ -8,16 +8,16 @@ tags:
   - intermediate
 ---
 
-There are different types of links: [classic links](/en/web/develop/common-navigation/) allowing to reach a new page, [skip links] (/en/articles/skip-links-best-practices) allowing to move within the page and finally those which interest us in this article, the links allowing to download a file.
+There are different types of links: [classic links](/en/web/develop/common-navigation/) allowing users to reach a new page, [skip links] (/en/articles/skip-links-best-practices) allowing users to move within the page and finally those which are the focus of this article, the links allowing users to download a file.
 
-A link to download a file should respect, at the same time, for accessibility and ergonomics reasons, the following rules:
+A link to download a file should, for both accessibility and usability reasons, adhere to the following guidelines:
 
 - its title must be explicit, it must also specify the type and size of the file
 - its title must specify the language of the document when it is written in a language different from that of the current page
 - this link must be made using a `<a>` tag (and not a `<button>` tag)
 - this link must open in the current window (no `target` attribute to open in a new tab)
 
-In addition, to improve accessibility and ergonomics, providing these informations will allow the user to avoid unnecessary downloads, which is also eco-sustainable (green) best practice.
+In addition, to improve accessibility and usability, providing this information will allow the user to avoid unnecessary downloads, which is also an eco-sustainable best practice.
 
 ## Valid examples
 
@@ -46,4 +46,4 @@ Examples of documents in French on a English site:
 If the file type is known, a small icon next to the file allows the user to identify it more quickly:
 <a style="background-image: url (/images/icons/pdf-icon.svg); background-size:contain; background-repeat:no-repeat; padding-left:2rem;" href="#">complete review 2025 (PDF, 1.5 MB)</a>
 or
-<a href="#"><img src="pdf.jpg" alt="PDF file" />complete review 2025 (1,5 Mo)</a>
+<a href="#"><img src="/images/icons/pdf-icon.svg" alt="PDF file" width="16" height="16" /> Complete review 2025 (1,5 Mo)</a>
