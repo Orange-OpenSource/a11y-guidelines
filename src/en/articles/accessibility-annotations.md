@@ -2,46 +2,47 @@
 title: "Specify the accessibility of your designs by using annotations"
 abstract: "Accessibility annotations allow you to specify how the different components present on your wireframe should be interpreted by assistance tools"
 titleBeforeTag: true
-date: "2025-02-03"
-updateDate : "2025-02-03"
+date: "2025-11-04"
+updateDate : "2025-11-04"
 tags:
   - beginner
 ---
 
 ## What is it about ?
 
-Les annotations d'accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent être interprétés par les outils d'assistance (par exemple un lecteur d'écran) et d'anticiper certains risques d'erreur d'accessibilité. Bien que certaines annotations peuvent être ajoutées directement par les designer lors de la phase de conception graphique, d'autres demandent une expertise technique. C'est tout l'intérêt de cette activité qui permet d'engager une réflexion transverse sur l'accessiblité (designer, responsable produit, expert en accessibilité, développeur...). 
-En l'absence de spécification, l'accessibilité technique repose exclusivement sur les épaules des développeurs, or il s'agit avant tout d'un travail d'équipe.
+Accessibility annotations specify how the various components on a screen should be interpreted by assistive tools (like a screen reader) and help to anticipate several accessibility error risks. while some annotations can be added directly by designers during the graphic design phase, others require technical expertise.
+This is the main benefit of this activity, which encourages a cross-disciplinary reflection on accessibility (designer, product manager, accessibility expert, developer, etc.).
+Without these specifications, technical accessibility rest solely on the shoulders of developers, so it must be above all a team effort.
 
 ## What should be annotated ?
 
-Voici quelques exemples d'informations qui peuvent être ajoutées sur vos design&nbsp;: 
-- Les alternatives textuelles pour les images
-- Le titre de page
-- Les titres à l'intérieur de la page (balises `h1`, `h2`...)
-- La sémantique (listes, paragraphes, citations...)
-- La liste des différentes régions qui composent la page (landmarks)
-- Les éléments interactifs (les liens, les boutons...)
-- L'ordre de vocalisation des éléments
-- L'ordre de déplacement du focus
-- Les formulaires (labels, champs obligatoires, messages d'erreur...)
-- La présence de raccourcis clavier (Esc pour fermer une boite de dialogue par exemple)
-- La présence de liens d'évitement...
+Some informations that can be added to your designs&nbsp;: 
+- Text alternative for images
+- Title of each page
+- Headings (HTML tags `h1`, `h2`...)
+- Semantics (lists, paragraphs, quotations, etc.)
+- list of the different page regions (landmarks)
+- Interactive components (links, buttons...)
+- Reading order of components with screen reader
+- Focus moving order
+- Forms (labels, mandatory fields, error messages...)
+- Keyboard shortcuts (for example Esc to close a dialog box)
+- Skip links...
 
-<img src="../images/annotations/exemple.png" alt="Exemple de design pourvu d'annotations pour l'accessibilité" title="Exemple de design pourvu d'annotations pour l'accessibilité" class="img-fluid">
+<img src="../images/annotations/update_example_en.png" alt="Design example with accessibility annotations" title="Design example with accessibility annotations" class="img-fluid">
 
 
 ## How to do it ?
 
-Quel que soit le logiciel utilisé, il est simple d'annoter des maquettes. Par exemple, à l'aide de puces numérotées qui renvoient vers une description détaillée. Il existe également des kits d'annotation qui proposent des pastilles de couleurs et de formes différentes qui permettent d'annoter rapidement un design. Le meilleur outil est celui qui correspond le mieux à votre façon de travailler. Il peut être différent en fonction des profils et de la taille de votre équipe. Les kits d'annotation proposent une base qu'il ne faut donc pas hésiter à faire évoluer selon vos besoins.
+Whatever software used, annotating mockups is really easy. For example, you can use numbered bullet points that link to a detailed description. There are also annotation kits that offer stickers with different colors and shapes that allow you to quickly annotate your designs. The best tool is the one that best suits your way of working. It may vary depending on the profiles and size of your team. Annotation kits provide a foundation that you should feel free to adapt to your needs.
 
-<img src="../images/annotations/ordre de lecture.png" alt="Exemple de design pourvu d'annotations sur l'ordre de lecture des éléments" title="Exemple de design pourvu d'annotations sur l'ordre de lecture des éléments" class="img-fluid">
+<img src="../images/annotations/reading_order-en.png" alt="Design example with annotations and reading order" title="Design example with annotations and reading order" class="img-fluid">
 
 
 ## Ressources
 
-Il existe des outils voire des plugins spécifiques pour les principaux outils de maquettage/design&nbsp; : Figma, Scketch, Zeplin.
-Mais pour tout autre outil, vous pouvez aussi vous appuyer sur des kits d'annotation qui sont des icones spécifiques utilisables dans tous les environements.
+There are specific tools or plugins for major design/mockup tools like Figma, Sketch, Zeplin.&nbsp;
+For any other tools, you can also use annotation kit which specific icons usable in all environments.
 
 Some examples of information that can be added to your designs:&nbsp;: 
 - <a href="https://stephaniewalter.design/blog/a-designers-guide-to-documenting-accessibility-user-interactions/" lang="en" hreflang="en">A Designer’s Guide to Documenting Accessibility & User Interactions</a>
@@ -49,11 +50,13 @@ Some examples of information that can be added to your designs:&nbsp;:
 - <a lang="en" hreflang="en" href="https://medium.com/indeed-design/building-an-accessibility-library-e134e9012c17">Building an Accessibility Library</a>
 - <a hreflang="en" href="https://blog.zeplin.io/introducing-flows-and-annotations-a-new-way-to-communicate-design-intention">Introducing Flows and Annotations</a>
 - <a lang="en" hreflang="en" href="https://www.youtube.com/watch?v=Y35jmpS8lQM&feature=youtu.be&ab_channel=InclusiveDesign24%23id24">Annotating designs for Accessibility / Claire Webber and Sarah Pulis</a>
+- <a lang="en" hreflang="en" href="https://tetralogical.com/blog/2025/09/23/annotating-designs-using-common-language/">Annotating designs using common language / Craig Abbott</a>
 
-Quelques plugins pour ajouter des annotations sous Figma&nbsp;: 
-- <a hreflang="en" href="https://www.figma.com/community/file/953682768192596304">Accessibility Annotation Kit réalisé par Indeed</a>
+Some Figma plugins to add accessibility annotations&nbsp;: 
+- <a hreflang="en" href="https://www.figma.com/community/file/953682768192596304">Accessibility Annotation Kit by Indeed</a>
 - <a hreflang="en" href="https://www.figma.com/community/file/1311421011482282592">Web Accessibility Annotation Kit by CVS Health</a>
 - <a hreflang="en" href="https://www.figma.com/comunity/plugin/1085612091163821851">axe for Designers by Deque Systems</a>
 - <a hreflang="en" href="https://www.figma.com/community/file/1022394680250523675">Intopia's accessibility annotation kit</a>
+- <a hreflang="en" href="https://www.figma.com/community/plugin/731310036968334777/accessibility-assistant">Accessibility Assistant by Microsoft Design</a>
 
 
