@@ -28,7 +28,7 @@ Voici quelques exemples d'informations qui peuvent être ajoutées sur vos desig
 - La présence de raccourcis clavier (Esc pour fermer une boite de dialogue par exemple)
 - La présence de liens d'évitement...
 
-<img src="../images/annotations/exemple.png" alt="Exemple de design pourvu d'annotations pour l'accessibilité" title="Exemple de design pourvu d'annotations pour l'accessibilité" class="img-fluid">
+<img src="../images/annotations/maj_exemple.png" alt="Exemple de design pourvu d'annotations pour l'accessibilité" title="Exemple de design pourvu d'annotations pour l'accessibilité" class="img-fluid">
 
 
 ## Comment fait-on ?
@@ -40,8 +40,8 @@ Quel que soit le logiciel utilisé, il est simple d'annoter des maquettes. Par e
 
 ## Ressources
 
-Il existe des outils voire des plugins spécifiques pour les principaux outils de maquettage/design&nbsp; : Figma, Sketch, Zeplin.
-Mais pour tout autre outil, vous pouvez aussi vous appuyer sur des kits d'annotation qui sont des icônes spécifiques utilisables dans tous les environements.
+Pour les principaux outils de maquettage/design comme Figma, Sketch, Zeplin, il existe de nombreux outils ou plugins spécifiques.
+Pour tout autre outil, vous pouvez aussi vous appuyer sur des kits d'annotation qui sont des icônes spécifiques utilisables dans tous les environements.
 
 Voici quelques ressources qui vous permettront d'approfondir le sujet&nbsp;: 
 - <a href="https://stephaniewalter.design/blog/a-designers-guide-to-documenting-accessibility-user-interactions/" lang="en" hreflang="en">A Designer’s Guide to Documenting Accessibility & User Interactions</a>
