@@ -28,7 +28,7 @@ Voici quelques exemples d'informations qui peuvent être ajoutées sur vos desig
 - La présence de raccourcis clavier (Esc pour fermer une boite de dialogue par exemple)
 - La présence de liens d'évitement...
 
-<img src="../images/annotations/maj_exemple.png" alt="Exemple de design pourvu d'annotations pour l'accessibilité" title="Exemple de design pourvu d'annotations pour l'accessibilité" class="img-fluid">
+<img src="../images/annotations/exemple_fr.png" alt="Exemple de design pourvu d'annotations pour l'accessibilité" title="Exemple de design pourvu d'annotations pour l'accessibilité" class="img-fluid">
 
 
 ## Comment fait-on ?
