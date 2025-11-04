@@ -29,14 +29,14 @@ Some informations that can be added to your designs&nbsp;:
 - Keyboard shortcuts (for example Esc to close a dialog box)
 - Skip links...
 
-<img src="../images/annotations/update_example_en.png" alt="Design example with accessibility annotations" title="Design example with accessibility annotations" class="img-fluid">
+<img src="../images/annotations/example_en.png" alt="Design example with accessibility annotations" title="Design example with accessibility annotations" class="img-fluid">
 
 
 ## How to do it ?
 
 Whatever software used, annotating mockups is really easy. For example, you can use numbered bullet points that link to a detailed description. There are also annotation kits that offer stickers with different colors and shapes that allow you to quickly annotate your designs. The best tool is the one that best suits your way of working. It may vary depending on the profiles and size of your team. Annotation kits provide a foundation that you should feel free to adapt to your needs.
 
-<img src="../images/annotations/reading_order-en.png" alt="Design example with annotations and reading order" title="Design example with annotations and reading order" class="img-fluid">
+<img src="../images/annotations/reading_order_en.png" alt="Design example with annotations and reading order" title="Design example with annotations and reading order" class="img-fluid">
 
 
 ## Ressources
