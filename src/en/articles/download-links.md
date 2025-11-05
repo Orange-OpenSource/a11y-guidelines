@@ -44,6 +44,6 @@ Examples of documents in French on a English site:
 ## A small image for decoration, but not only
 
 If the file type is known, a small icon next to the file allows the user to identify it more quickly:
-<a style="background-image: url (/images/icons/pdf-icon.svg); background-size:contain; background-repeat:no-repeat; padding-left:2rem;" href="#">complete review 2025 (PDF, 1.5 MB)</a>
+<a style="background-image: url(/images/icons/pdf-icon.svg); background-size:contain; background-repeat:no-repeat; padding-left:2rem;" href="#">Complete review 2025 (PDF, 1.5 MB)</a>
 or
 <a href="#"><img src="/images/icons/pdf-icon.svg" alt="PDF file" width="16" height="16" /> Complete review 2025 (1,5 Mo)</a>
