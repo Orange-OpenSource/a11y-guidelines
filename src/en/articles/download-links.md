@@ -8,7 +8,7 @@ tags:
   - intermediate
 ---
 
-There are different types of links: [classic links](/en/web/develop/common-navigation/) allowing users to reach a new page, [skip links] (/en/articles/skip-links-best-practices) allowing users to move within the page and finally those which are the focus of this article, the links allowing users to download a file.
+There are different types of links: [classic links](/en/web/develop/common-navigation/) allowing users to reach a new page, [skip links](/en/articles/skip-links-best-practices) allowing users to move within the page and finally those which are the focus of this article, the links allowing users to download a file.
 
 A link to download a file should, for both accessibility and usability reasons, adhere to the following guidelines:
 
