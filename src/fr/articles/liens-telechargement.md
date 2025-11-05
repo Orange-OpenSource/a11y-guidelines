@@ -45,6 +45,6 @@ Exemples de documents en anglais sur un site français :
 ## Une petite image pour la déco, mais pas seulement
 
 Si le type de fichier est connu, une petite icône à côté du fichier permet à l'utilisateur de le percevoir plus rapidement :
-<a style="background-image: url(/images/icons/pdf-icon.svg); background-size: contain; background-repeat: no-repeat; padding-left: 2rem;" href="#">bilan complet 2025 (PDF, 1,5 Mo)</a>
+<a style="background-image: url(/images/icons/pdf-icon.svg); background-size: contain; background-repeat: no-repeat; padding-left: 2rem;" href="#">Bilan complet 2025 (PDF, 1,5 Mo)</a>
 ou
 <a href="#"><img src="/images/icons/pdf-icon.svg" alt="PDF file" width="16" height="16" /> Bilan complet 2025 (1,5 Mo)</a>
