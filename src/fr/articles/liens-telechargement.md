@@ -3,6 +3,7 @@ title: "Les bonnes pratiques pour les liens de téléchargement"
 abstract: "Comment rendre accessible les liens de téléchargement"
 titleBeforeTag: true
 date: "2020-07-02"
+updateDate: "2025-11-14"
 tags:
   - web
   - intermediate
