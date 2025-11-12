@@ -3,6 +3,7 @@ title: "Les tableaux dans l'accessibilité"
 abstract: "Toutes nos recommandations pour que les tableaux soit accessibles"
 titleBeforeTag: true
 date: "2022-04-15"
+updateDate: "2025-12-05"
 tags:
   - web
   - beginner
