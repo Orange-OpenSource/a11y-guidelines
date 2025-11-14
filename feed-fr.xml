@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2025-10-31T00:00:00Z</updated>
+  <updated>2025-11-14T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Les bonnes pratiques pour les liens de téléchargement</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/liens-telechargement/"/>
+    <updated>2025-11-14T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/liens-telechargement/</id>
+    <content xml:lang="fr" type="html">Comment rendre accessible les liens de téléchargement</content>
+  </entry>
   
   <entry>
     <title>Désactiver des éléments HTML</title>
@@ -489,14 +497,6 @@
     <updated>2020-12-23T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/recommandations-autocompletion/</id>
     <content xml:lang="fr" type="html">Présentation de notre démarche et des recommandations pour les composants d&#39;autocomplétion</content>
-  </entry>
-  
-  <entry>
-    <title>Les bonnes pratiques pour les liens de téléchargement</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/liens-telechargement/"/>
-    <updated>2020-07-02T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/liens-telechargement/</id>
-    <content xml:lang="fr" type="html">Comment rendre accessible les liens de téléchargement</content>
   </entry>
   
   <entry>
