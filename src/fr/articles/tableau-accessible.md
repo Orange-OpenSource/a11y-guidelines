@@ -69,7 +69,7 @@ exemple de description pour aider à la compréhension du tableau complexe
 
 ### Identifier les en-têtes de votre tableau
 
-#### Tableaux simples : attributs scope
+#### Tableaux simples : attribut scope
 
 Pour aider les utilisateurs de technologies d'assistance, il est impératif d'identifier les en-têtes des tableaux, que ce soit pour les lignes ou les colonnes.
 Pour baliser ces en-têtes, il faut utiliser la balise <code>th</code>, celle-ci ne doit jamais être vide.
