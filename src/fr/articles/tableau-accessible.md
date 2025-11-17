@@ -33,7 +33,7 @@ Il doit être associé au tableau grâce à la balise <code>caption</code> et do
 &lt;/table&gt;
 </code></pre>
 
-Une autre façon de donner un titre est l'utilisation des attributs <code>aria-labelledby</code> ou <code>aria-label</code> sur la balise <table>
+Une autre façon de donner un titre est l'utilisation des attributs <code>aria-labelledby</code> ou <code>aria-label</code> sur la balise <code>table</code>.
 #### Exemple avec <code>aria-label</code>
 <pre><code class="html">
 &lt;table aria-label="titre du tableau"&gt;
@@ -41,7 +41,7 @@ Une autre façon de donner un titre est l'utilisation des attributs <code>aria-l
 &lt;/table&gt;
 </code></pre>
 
-En dernier recours, il est également possible d'utiliser l'attribut <code>title</code>, un titre doit cependant être visible
+En dernier recours, il est également possible d'utiliser l'attribut <code>title</code>, un titre doit cependant être visible.
 #### Exemple avec <code>title</code>
 <pre><code class="html">
 &lt;h2 id="titre"&gt; Emploi du temps 2022&lt;/h2&gt;
@@ -71,8 +71,7 @@ exemple de description pour aider à la compréhension du tableau complexe
 
 #### Tableaux simples : attribut scope
 
-Pour aider les utilisateurs de technologies d'assistance, il est impératif d'identifier les en-têtes des tableaux, que ce soit pour les lignes ou les colonnes.
-Pour baliser ces en-têtes, il faut utiliser la balise <code>th</code>, celle-ci ne doit jamais être vide.
+Pour aider les utilisateurs de technologies d'assistance, il est impératif d'identifier les en-têtes des tableaux, que ce soit pour les lignes ou les colonnes. Pour baliser ces en-têtes, il faut utiliser la balise <code>th</code>, celle-ci ne doit jamais être vide.
 
 Une fois que les en-têtes sont créés, il faut associer les cellules de données aux en-têtes dont elles dépendent.
 L'attribut <code>scope</code> permet de lier programmatiquement les cellules aux en-têtes, et donc aux technologies d'assistances de les identifier. 
@@ -104,8 +103,8 @@ Si toutefois vous utilisez un tableau pour faire de la mise en page, vous devez 
 
 <ul>
   <li>l'élément <code>table</code> doit avoir l'attribut <code>role="presentation"</code> ou <code>role="none"</code> afin de retirer la sémantique au tableau</li>
-  <li>les éléments sémantiques propres à un tableau ne doivent pas être utilisés&nbsp;: <code>caption</code>, <code>th</code>, <code>scope</code></li>, <code>headers</code>
-  <li>assurez-vous que, s'il existe un ordre de lecture spécifique pour comprendre le contenu, cet ordre est respecté lorsqu'on lit le tableau en lecture linéaire (qui suit l'ordre d'apparition dans le code)</li>
+  <li>les éléments sémantiques propres à un tableau ne doivent pas être utilisés&nbsp;: <code>caption</code>, <code>th</code>, <code>scope</code>, <code>headers</code>,</li>
+  <li>assurez-vous que, s'il existe un ordre de lecture spécifique pour comprendre le contenu, cet ordre est respecté lorsqu'on lit le tableau en lecture linéaire (qui suit l'ordre d'apparition dans le code).</li>
 </ul>
 
 ### Navigation dans un tableau à l'aide des lecteurs d'écran Jaws et NVDA
@@ -129,7 +128,7 @@ Pour Jaws, il faut utiliser la touche <kbd>y</kbd> et <kbd>Maj + y</kbd> pour na
 Pour parcourir l'intérieur d'un tableau, il existe plusieurs raccourcis&nbsp;:
 
 <ul>
-<li><kbd>Insert + Ctrl + t</kbd> permet de lister tous les tableaux</li>
+<li><kbd>Insert + Ctrl + t</kbd> permet de lister tous les tableaux.</li>
 <li><kbd>Ctrl + Alt + flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl + Alt + flèche droite</kbd> se déplace sur la colonne de droite.</li>
 <li><kbd>Ctrl + Alt + flèche bas</kbd> permet de passer à la ligne suivante en restant sur la même colonne, <kbd>Ctrl + Alt + flèche haut</kbd> pour passer à la ligne précédente.</li>
 <li><kbd>Insert + Maj + flèche haut</kbd> permet de lire toute la ligne.</li>
