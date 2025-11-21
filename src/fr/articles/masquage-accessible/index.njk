@@ -9,9 +9,9 @@ tags:
 ---
 
 <h2>Introduction</h2>
-<p>Il est parfois nécessaire de masquer des éléments dans une page web. La méthode classique est d'utiliser du <abbr>CSS</abbr> (<code>display:none;</code> et <code>visibility:hidden;</code>). Ces deux propriétés, comme l'attribut <abbr>HTML5</abbr> <code>hidden</code>, permettent de masquer des éléments non seulement à l'écran mais aussi aux utilisateurs de lecteurs d'écran. Ces éléments ne seront donc ni visibles ni vocalisés par les aides techniques (<abbr>AT</abbr>).</p>
+<p>Il est parfois nécessaire de masquer des éléments dans une page web. La méthode classique consiste à utiliser du <abbr>CSS</abbr> (<code>display:none;</code> et <code>visibility:hidden;</code>). Ces deux propriétés, comme l'attribut <abbr>HTML5</abbr> <code>hidden</code>, permettent de masquer des éléments non seulement à l'écran, mais aussi aux utilisateurs de lecteurs d'écran. Ces éléments ne seront donc ni visibles ni vocalisés par les aides techniques (<abbr>AT</abbr>).</p>
 <p>Dans certains cas, il peut être utile de masquer des éléments à l'écran tout en conservant l'information pour les utilisateurs de lecteurs d'écran. Pour cela, on utilisera une classe <abbr>CSS</abbr> de «&nbsp;masquage accessible&nbsp;».</p>
-<p>Enfin, il reste un cas utile&nbsp;: afficher des éléments à l'écran, mais faire en sorte qu'ils ne soient pas vocalisés. Dans ce cas, on utilisera un attribut <abbr>ARIA</abbr> (<code>aria-hidden</code>).</p>
+<p>Enfin, il existe un autre cas utile&nbsp;: afficher des éléments à l'écran, mais faire en sorte qu'ils ne soient pas vocalisés. Dans ce cas, on utilisera un attribut <abbr>ARIA</abbr> (<code>aria-hidden</code>).</p>
 
 <h2>Le masquage accessible</h2>
 <p>Masquer un élément de manière accessible permet de le faire disparaître à l'écran tout en le conservant pour les utilisateurs d'<abbr>AT</abbr>, en particulier les lecteurs d'écran. Techniquement, la solution consiste à appliquer une classe <abbr>CSS</abbr> sur l'élément qui ne doit pas être visible.</p>
@@ -22,9 +22,9 @@ tags:
       <li>Utiliser les propriétés <code>text-indent</code> ou <code>clip</code>.</li>
       <li>…</li>
     </ul>
-<p>L'idéal est de combiner les solutions pour garantir le bon fonctionnement sur l'ensemble des navigateurs.</p>
+<p>L'idéal est de combiner ces solutions pour garantir le bon fonctionnement sur l'ensemble des navigateurs.</p>
 
-<p>Si vous utilisez un framework, il est fort probable que celui-ci embarque une telle classe. Par exemple, si vous utilisez <a href="http://boosted.orange.com">Boosted</a> ou <a href="http://getbootstrap.com/">Bootstrap</a>, vous pouvez employer la classe <abbr>CSS</abbr> <code>visually-hidden</code> (ou <code>sr-only</code>, abbéviation de <span lang="en">screen reader only</span>, pour les versions plus anciennes) dont voici le code&nbsp;:</p>
+<p>Si vous utilisez un framework, il est fort probable que celui-ci embarque une telle classe. Par exemple, si vous utilisez <a href="http://boosted.orange.com">Boosted</a> ou <a href="http://getbootstrap.com/">Bootstrap</a>, vous pouvez employer la classe <abbr>CSS</abbr> <code>visually-hidden</code> (ou <code>sr-only</code>, abréviation de <span lang="en">screen reader only</span>, pour les versions plus anciennes) dont voici le code&nbsp;:</p>
 
 <pre><code class="css">
 .visually-hidden {
@@ -42,7 +42,7 @@ tags:
 <p>Si vous n'avez aucune classe de masquage accessible, le plus simple est de copier-coller le code ci-dessus.</p>
 
 <h3>Mise en œuvre</h3>
-<p>La classe de masquage accessible peut s'employer dans beaucoup de cas. Par exemple, pour expliciter le libellé d'un lien&nbsp;:</p>
+<p>La classe de masquage accessible peut s'employer dans de nombreux cas. Par exemple, pour expliciter le libellé d'un lien&nbsp;:</p>
 
 <pre><code class="html">
 &lt;a href="…"&gt;En savoir plus&lt;span <span class="important">class="visually-hidden"</span>&gt; sur nos offres mobiles&lt;/span&gt;&lt;/a&gt;
@@ -51,7 +51,7 @@ tags:
 <strong>Exemple&nbsp;:</strong>
 <p><a href="#">En savoir plus<span class="visually-hidden"> sur nos offres mobiles</span></a></p>
 
-<p>On aurait obtenu la même vocalisation si nous avions utilisé un attribut <code>aria-label</code> sur le lien comme ceci&nbsp;:</p>
+<p>On aurait obtenu la même vocalisation si nous avions utilisé un attribut <code>aria-label</code> sur le lien, comme ceci&nbsp;:</p>
 
 <pre><code class="html">
 &lt;a href="…" aria-label="En savoir plus sur nos offres mobiles"&gt;En savoir plus&lt;/a&gt;
@@ -60,7 +60,7 @@ tags:
 <p>La solution utilisant la classe de masquage accessible offre néanmoins un avantage par rapport à la solution <code>aria-label</code>. Si le <abbr>CSS</abbr> est désactivé (ou remplacé par des styles personnalisés adaptés à un certain handicap numérique, par exemple), les textes en masquage accessible apparaîtront automatiquement à l'écran.</p>
 
 <h2>L'attribut <code>aria-hidden</code></h2>
-<p>Cet attribut permet de masquer un élément (ou un groupe d'éléments) pour les lecteurs d'écran. Celui-ci n'a en revanche aucun effet sur l'affichage à l'écran.</p>
+<p>Cet attribut permet de masquer un élément (ou un groupe d'éléments) pour les lecteurs d'écran. Cet atrtibut n'a en revanche aucun effet sur l'affichage à l'écran.</p>
 
 <h3>Mise en œuvre</h3>
 <p>Pour masquer un élément (et ses enfants) aux lecteurs d'écran, il suffit d'ajouter un attribut <code>aria-hidden="true"</code>. Le contenu peut toujours être rendu accessible aux <abbr>AT</abbr> grâce à <code>aria-describedby</code> ou <code>aria-labelledby</code>.</p>
