@@ -10,7 +10,7 @@ tags:
 
 
 <h2>Introduction</h2>
-<p>Sometimes it is necessary to hide elements in a web page. The conventional way is to use <abbr>CSS</abbr> (<code>display:none;</code> and <code>visibility:hidden;</code>) or the <abbr>HTML</abbr>5 `hidden` attribute. These properties hide elements not only on the screen, but also for screen reader users. Thus, these elements will not be visible nor vocalized by Assistive technologies (AT).</p>
+<p>Sometimes it is necessary to hide elements in a web page. The conventional way is to use <abbr>CSS</abbr> (<code>display:none;</code> and <code>visibility:hidden;</code>) or the <abbr>HTML</abbr>5 <code>hidden</code> attribute. These properties hide elements not only on the screen, but also for screen reader users. Thus, these elements will not be visible nor vocalized by Assistive technologies (AT).</p>
 <p>In some cases, it may be useful to hide elements on the screen, but make sure they are still vocalised by screen readers. For this, an accessible hiding <abbr>CSS</abbr> class can be used.</p>
 <p>Finally, you may want to display elements on the screen but make sure they are not vocalized. In this case, you can use an <abbr>ARIA</abbr> attribute (<code>aria-hidden</code>).</p>
 
@@ -19,7 +19,7 @@ tags:
 
 <p>There are several solutions for this type of <abbr>CSS</abbr> class:</p>
     <ul>
-      <li>Setting the element’s size to 0.</li>
+      <li>Setting the element's size to 0.</li>
       <li>Positioning the element off the screen (<code>left: -1000px; top: -1000px;</code>).</li>
       <li>Using <code>text-indent</code> or <code>clip</code> properties.</li>
       <li>…</li>
@@ -67,7 +67,7 @@ tags:
 <h3>Implementation</h3>
 <p>To hide an element to screen readers (and child elements), simply add the <code>aria-hidden="true"</code> attribute. Content can still be made accessible to ATs via <code>aria-describedby</code> or <code>aria-labelledby</code>.</p>
 <h4>Warning</h4>
-<p>If you put a focusable element in content (even on a parent node) with `aria-hidden ="true"`, it will be present in keyboard navigation but will be empty for <abbr>AT</abbr>. <em>So, don't do it.</em></p>
+<p>If you put a focusable element in content (even on a parent node) with <code>aria-hidden ="true"</code>, it will be present in keyboard navigation but will be empty for <abbr>AT</abbr>. <em>So, don't do it.</em></p>
 
 <strong>Example: </strong>
 <p>The following screenshot shows a video player with a number of buttons (previous channel, next channel, pause…). This player is surrounded by two buttons also providing access to previous and next channels.</p>
