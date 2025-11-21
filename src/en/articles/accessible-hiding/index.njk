@@ -10,12 +10,13 @@ tags:
 
 
 <h2>Introduction</h2>
-<p>Sometimes it is necessary to hide elements in a web page. The conventional way is to use <abbr title="Cascading Stylesheets">CSS</abbr> (<code>display:none;</code> and <code>visibility:hidden;</code>) or the <abbr>HTML</abbr>5 `hidden` attribute. These properties hide elements not only on the screen, but also for screen reader users. Thus, these elements will not be visible nor vocalized by Assistive technologies (AT).</p>
+<p>Sometimes it is necessary to hide elements in a web page. The conventional way is to use <abbr>CSS</abbr> (<code>display:none;</code> and <code>visibility:hidden;</code>) or the <abbr>HTML</abbr>5 `hidden` attribute. These properties hide elements not only on the screen, but also for screen reader users. Thus, these elements will not be visible nor vocalized by Assistive technologies (AT).</p>
 <p>In some cases, it may be useful to hide elements on the screen, but make sure they are still vocalised by screen readers. For this, an accessible hiding <abbr>CSS</abbr> class can be used.</p>
-<p>Finally, you may want to display elements on the screen but make sure they are not vocalized. In this case, you can use an <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attribute (<code>aria-hidden</code>).</p>
+<p>Finally, you may want to display elements on the screen but make sure they are not vocalized. In this case, you can use an <abbr>ARIA</abbr> attribute (<code>aria-hidden</code>).</p>
 
 <h2>Accessible hiding</h2>
-<p>Accessible hiding allows an element to disappear from the screen, while being accessible to screen reader users. Technically, the solution is to add a <abbr>CSS</abbr> class on the element that should not be visible.</p>
+<p>Accessible hiding allows to hide an element0 from the screen, while keeping it available for assistive technologies, especially screen readers. Technically, the solution is to add a <abbr>CSS</abbr> class on the element that should not be visible.</p>
+
 <p>There are several solutions for this type of <abbr>CSS</abbr> class:</p>
     <ul>
       <li>Setting the element’s size to 0.</li>
@@ -26,10 +27,11 @@ tags:
 <p>Ideally, it is best to combine all the solutions to make sure it is working properly in all browsers.</p>
 
 
-<p>If you use a framework, it is very likely it already has a class for that. For example if you use <a href="http://boosted.orange.com">Boosted</a> or <a href="http://getbootstrap.com/">Bootstrap</a>, you can use the <code>visually-hidden</code> <abbr>CSS</abbr> class (“screen reader only”) which is defined as follows:</p>
+<p>If you use a framework, it is very likely it already has a class for that. For example if you use <a href="http://boosted.orange.com">Boosted</a> or <a href="http://getbootstrap.com/">Bootstrap</a>, you can use the <code>visually-hidden</code> <abbr>CSS</abbr> class (or <code>sr-only</code> for older versions) which is defined as follows:</p>
+
 <pre><code class="css">
 .visually-hidden {
-      position: absolute;
+  position: absolute;
 	position: absolute !important;
 	width: 1px !important;
 	height: 1px !important;
@@ -41,7 +43,8 @@ tags:
 	border: 0 !important;
 }
 </code></pre>
-<p>If you haven’t got an accessible hiding class yet, the easiest way is to copy and paste the code above.</p>
+
+<p>If you haven't got an accessible hiding class yet, the easiest way is to copy and paste the code above.</p>
 
 <h3>Implementation</h3>
 <p>Accessible hiding class can be used in many cases. For example, to clarify a link label:</p>
@@ -50,7 +53,7 @@ tags:
 &lt;a href="…"&gt;Learn more&lt;span <span class="important">class="visually-hidden"</span>&gt; about our mobile plans&lt;/span&gt;&lt;/a&gt;
 </code></pre>
 
-<strong>Example: </strong>
+<strong>Example:</strong>
 <p><a href="#">Learn more<span class="visually-hidden"> about our mobile plans</span></a></p>
 
 <p>We would have obtained the same result using the <code>aria-label</code> attribute on the link:</p>
@@ -65,15 +68,13 @@ tags:
 <h3>Implementation</h3>
 <p>To hide an element to screen readers (and child elements), simply add the <code>aria-hidden="true"</code> attribute. Content can still be made accessible to ATs via <code>aria-describedby</code> or <code>aria-labelledby</code>.</p>
 <h4>Warning</h4>
-<p>If you put a focusable element in content (even on a parent node) with `aria-hidden =" true "`, it will be present in keyboard navigation but will be empty for <abbr>AT</abbr>. <em>So, don't do it.</em></p>
+<p>If you put a focusable element in content (even on a parent node) with `aria-hidden ="true"`, it will be present in keyboard navigation but will be empty for <abbr>AT</abbr>. <em>So, don't do it.</em></p>
 
 <strong>Example: </strong>
 <p>The following screenshot shows a video player with a number of buttons (previous channel, next channel, pause…). This player is surrounded by two buttons also providing access to previous and next channels.</p>
-<p>Visually this is not a problem. Although, when listening to the page with a screen reader, one can find it curious to hear an “Animals” button vocalized at the beginning of the page, and a “Hunting and Fishing” button vocalized at the end of page.</p>
+<p>Visually this is not a problem. Although, when listening to the page with a screen reader, one can find it curious to hear an 'Animals' button vocalized at the beginning of the page, and a “Hunting and Fishing” button vocalized at the end of page.</p>
 
 <img src="../images/player.png" alt="screenshot showing a video player">
-
-<br><br>
 
 <p>To avoid disturbing the user unnecessarily, the easiest way is to hide these buttons (for screen readers) with the <code>aria-hidden</code> attribute.</p>
 
