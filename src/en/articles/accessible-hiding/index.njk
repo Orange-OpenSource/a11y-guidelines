@@ -12,10 +12,10 @@ tags:
 <h2>Introduction</h2>
 <p>Sometimes it is necessary to hide elements in a web page. The conventional way is to use <abbr>CSS</abbr> (<code>display:none;</code> and <code>visibility:hidden;</code>) or the <abbr>HTML</abbr>5 <code>hidden</code> attribute. These properties hide elements not only on the screen, but also for screen reader users. Thus, these elements will not be visible nor vocalized by Assistive technologies (AT).</p>
 <p>In some cases, it may be useful to hide elements on the screen, but make sure they are still vocalised by screen readers. For this, an accessible hiding <abbr>CSS</abbr> class can be used.</p>
-<p>Finally, you may want to display elements on the screen but make sure they are not vocalized. In this case, you can use an <abbr>ARIA</abbr> attribute (<code>aria-hidden</code>).</p>
+<p>Finally, you may want to display elements on the screen but make sure they are not vocalized. In this case, you can use <abbr>HTML</abbr>5 <code>inert</code> attribute or an <abbr>ARIA</abbr> attribute (<code>aria-hidden</code>).</p>
 
 <h2>Accessible hiding</h2>
-<p>Accessible hiding allows to hide an element0 from the screen, while keeping it available for assistive technologies, especially screen readers. Technically, the solution is to add a <abbr>CSS</abbr> class on the element that should not be visible.</p>
+<p>Accessible hiding allows to hide an element from the screen, while keeping it available for assistive technologies, especially screen readers. Technically, the solution is to add a <abbr>CSS</abbr> class on the element that should not be visible.</p>
 
 <p>There are several solutions for this type of <abbr>CSS</abbr> class:</p>
     <ul>

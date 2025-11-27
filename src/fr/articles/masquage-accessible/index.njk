@@ -11,7 +11,7 @@ tags:
 <h2>Introduction</h2>
 <p>Il est parfois nécessaire de masquer des éléments dans une page web. La méthode classique consiste à utiliser du <abbr>CSS</abbr> (<code>display:none;</code> et <code>visibility:hidden;</code>). Ces deux propriétés, comme l'attribut <abbr>HTML5</abbr> <code>hidden</code>, permettent de masquer des éléments non seulement à l'écran, mais aussi aux utilisateurs de lecteurs d'écran. Ces éléments ne seront donc ni visibles ni vocalisés par les aides techniques (<abbr>AT</abbr>).</p>
 <p>Dans certains cas, il peut être utile de masquer des éléments à l'écran tout en conservant l'information pour les utilisateurs de lecteurs d'écran. Pour cela, on utilisera une classe <abbr>CSS</abbr> de «&nbsp;masquage accessible&nbsp;».</p>
-<p>Enfin, il existe un autre cas utile&nbsp;: afficher des éléments à l'écran, mais faire en sorte qu'ils ne soient pas vocalisés. Dans ce cas, on utilisera un attribut <abbr>ARIA</abbr> (<code>aria-hidden</code>).</p>
+<p>Enfin, il existe un autre cas utile&nbsp;: afficher des éléments à l'écran, mais faire en sorte qu'ils ne soient pas vocalisés. Dans ce cas, on utilisera un attribut <abbr>HTML5</abbr> <code>inert</code> ou bien un attribut <abbr>ARIA</abbr> (<code>aria-hidden</code>).</p>
 
 <h2>Le masquage accessible</h2>
 <p>Masquer un élément de manière accessible permet de le faire disparaître à l'écran tout en le conservant pour les utilisateurs d'<abbr>AT</abbr>, en particulier les lecteurs d'écran. Techniquement, la solution consiste à appliquer une classe <abbr>CSS</abbr> sur l'élément qui ne doit pas être visible.</p>
@@ -49,6 +49,7 @@ tags:
 	overflow: hidden !important;
 }
 </code></pre>
+
 <p>Si vous ne disposez d'aucune classe de masquage accessible, le plus simple est de copier-coller le code ci-dessus.</p>
 
 <h3>Mise en œuvre</h3>
