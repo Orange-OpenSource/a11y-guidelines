@@ -24,19 +24,29 @@ tags:
     </ul>
 <p>L'idéal est de combiner ces solutions pour garantir le bon fonctionnement sur l'ensemble des navigateurs.</p>
 
-<p>Si vous utilisez un framework, il est fort probable que celui-ci embarque une telle classe. Par exemple, si vous utilisez <a href="http://boosted.orange.com">Boosted</a> ou <a href="http://getbootstrap.com/">Bootstrap</a>, vous pouvez employer la classe <abbr>CSS</abbr> <code>visually-hidden</code> (ou <code>sr-only</code>, abréviation de <span lang="en">screen reader only</span>, pour les versions plus anciennes) dont voici le code&nbsp;:</p>
+<p>Si vous utilisez un framework, il est fort probable que celui-ci embarque déjà une telle classe. Par exemple, si vous utilisez <a href="http://boosted.orange.com">Boosted</a> ou <a href="http://getbootstrap.com/">Bootstrap</a>, vous pouvez employer la classe <abbr>CSS</abbr> <code>visually-hidden</code> (ou <code>sr-only</code>, abréviation de <span lang="en">screen reader only</span>, pour les versions plus anciennes) dont voici le code&nbsp;:</p>
 
 <pre><code class="css">
-.visually-hidden {
-	position: absolute !important;
-	width: 1px !important;
+.visually-hidden,
+.visually-hidden-focusable:not(:focus, :focus-within) {
+	border: 0 !important;
+	clip-path: inset(50%) !important;
 	height: 1px !important;
-	padding: 0 !important;
 	margin: -1px !important;
 	overflow: hidden !important;
-	clip: rect(0, 0, 0, 0) !important;
+	padding: 0 !important;
+	width: 1px !important;
 	white-space: nowrap !important;
-	border: 0 !important;
+}
+
+.visually-hidden:not(caption),
+.visually-hidden-focusable:not(caption):not(:focus, :focus-within){
+	position: absolute !important;
+}
+
+.visually-hidden *,
+.visually-hidden-focusable:not(:focus, :focus-within) * {
+	overflow: hidden !important;
 }
 </code></pre>
 <p>Si vous ne disposez d'aucune classe de masquage accessible, le plus simple est de copier-coller le code ci-dessus.</p>
@@ -81,3 +91,9 @@ La capture d'écran suivante montre un lecteur vidéo contenant un certain nombr
       &lt;div class="nextPreviousChannelName OrangeMedium"&gt;Animaux&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+
+<h2>Webographie</h2>
+<ul>
+  <li><a href="https://www.ffoodd.fr/masquage-accessible-de-pointe/">Masquage accessible de pointe</a></li>
+  <li><a href="https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034" lang="en" href="en">Improved .visually-hidden (en)</a></li>
+</ul>

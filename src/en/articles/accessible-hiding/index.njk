@@ -30,16 +30,26 @@ tags:
 <p>If you use a framework, it is very likely it already has a class for that. For example if you use <a href="http://boosted.orange.com">Boosted</a> or <a href="http://getbootstrap.com/">Bootstrap</a>, you can use the <code>visually-hidden</code> <abbr>CSS</abbr> class (or <code>sr-only</code> for older versions) which is defined as follows:</p>
 
 <pre><code class="css">
-.visually-hidden {
-	position: absolute !important;
-	width: 1px !important;
+.visually-hidden,
+.visually-hidden-focusable:not(:focus, :focus-within) {
+	border: 0 !important;
+	clip-path: inset(50%) !important;
 	height: 1px !important;
-	padding: 0 !important;
 	margin: -1px !important;
 	overflow: hidden !important;
-	clip: rect(0,0,0,0) !important;
+	padding: 0 !important;
+	width: 1px !important;
 	white-space: nowrap !important;
-	border: 0 !important;
+}
+
+.visually-hidden:not(caption),
+.visually-hidden-focusable:not(caption):not(:focus, :focus-within){
+	position: absolute !important;
+}
+
+.visually-hidden *,
+.visually-hidden-focusable:not(:focus, :focus-within) * {
+	overflow: hidden !important;
 }
 </code></pre>
 
@@ -82,3 +92,9 @@ tags:
       &lt;div class="nextPreviousChannelName OrangeMedium" &gt;Animals&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+
+<h2>Webography</h2>
+<ul>
+  <li><a href="https://www.ffoodd.fr/masquage-accessible-de-pointe/" lang="fr" href="fr">Masquage accessible de pointe (fr)</a></li>
+  <li><a href="https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034">Improved .visually-hidden</a></li>
+</ul>
