@@ -4,12 +4,20 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2025-11-14T00:00:00Z</updated>
+  <updated>2025-11-28T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Handling Zoom, enlarging text size</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/zoom/"/>
+    <updated>2025-11-28T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/zoom/</id>
+    <content xml:lang="en" type="html">Text size enlargement is used by many users (elderly people, people with visual impairments and people that should wear glasses and don’t…)</content>
+  </entry>
   
   <entry>
     <title>Some best practices for downloading links</title>
@@ -537,14 +545,6 @@
     <updated>2018-01-12T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/accessible-hiding/</id>
     <content xml:lang="en" type="html">Elements not visible on the screen but accessible to assistive technology.</content>
-  </entry>
-  
-  <entry>
-    <title>Handling Zoom, enlarging text size</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/zoom/"/>
-    <updated>2018-01-11T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/zoom/</id>
-    <content xml:lang="en" type="html">Text size enlargement is used by many users (elderly people, people with visual impairments and people that should wear glasses and don’t…)</content>
   </entry>
   
   <entry>
