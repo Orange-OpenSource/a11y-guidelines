@@ -3,6 +3,7 @@ title: "Les attributs ARIA qui peuvent vous sauver !"
 abstract: "Quelques attributs ARIA à connaître pour avoir un nom accessible"
 titleBeforeTag: true
 date: "2018-01-08"
+updateDate: "2025-12-05"
 tags:
   - web
   - intermediate
