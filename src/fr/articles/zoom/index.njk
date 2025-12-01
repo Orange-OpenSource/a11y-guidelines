@@ -3,6 +3,7 @@ title: "Gestion de l’agrandissement des caractères"
 abstract: "Gestion du zoom, agrandissement de la taille du texte"
 titleBeforeTag: true
 date: "2018-01-11"
+updateDate: "2025-11-28"
 tags:
   - component
 css:
@@ -11,13 +12,14 @@ css:
 
 <h2>Préambule</h2>
 <p>
-      L’agrandissement de la taille des caractères est utilisé par beaucoup d’utilisateurs (les personnes senior, les personnes malvoyantes, les personnes qui devraient porter une paire de lunettes mais qui n’en portent pas…). Les recommandations d’accessibilité préconisent la possibilité d’agrandir la taille du texte et seulement du texte par deux (200%) sans perte d’information. À ce niveau de zoom, la présentation peut être altérée, mais le texte doit rester lisible (pas de texte tronqué ni superposé).
+      L’agrandissement de la taille des caractères est utilisé par beaucoup d’utilisateurs (les personnes seniors, les personnes malvoyantes, les personnes qui devraient porter une paire de lunettes mais qui n’en portent pas…). Les recommandations d’accessibilité préconisent la possibilité d’agrandir la taille du texte et seulement du texte par deux (200%) ou l'utilisation du zoom global de la page à 200%, tout cela sans chevauchement ou perte de contenu ou de fonctionnalités. À ce niveau de zoom, la présentation peut être altérée, mais le texte doit rester lisible (pas de texte tronqué ni superposé).
 </p>
 
 <h2>Zoom par défaut du navigateur</h2>
 <p>
       Tous les navigateurs récents offrent désormais la possibilité de zoomer la page. Cette option permet d’agrandir la totalité de la page (les textes, les images, l’espacement entre les différentes zones de la page…).
-      Cette option, bien que satisfaisante pour les utilisateurs occasionnels, a l’inconvénient de faire apparaître une barre de défilement horizontal qui rend la lecture de la page difficile.
+      Cette option, bien que satisfaisante pour les utilisateurs occasionnels, a l’inconvénient de faire apparaitre une barre de défilement horizontal qui rend la lecture de la page difficile pour certains.
+      Chez Orange, nous avons décidé d'utiliser comme seule méthode de test pour le critère  WCAG 1.4.4 Resize Text, le <strong>zoom du texte seulement à 200%</strong>.
 </p>
 
 <h3>Mise en évidence du problème</h3>
@@ -26,7 +28,7 @@ css:
       La boutique accessoires pour Smartphone d’Orange regroupe les dernières nouveautés audio, enceintes connectées et les meilleurs casques sans fil (bluetooth), des coques de protection originales, un choix de batteries et câbles de connexion pour personnaliser votre mobile. Nous avons sélectionné des coques pour iPhone, Samsung Galaxy,.. pour vous apporter des produits de qualité au meilleur prix.La boutique accessoires pour Smartphone d’Orange regroupe les dernières nouveautés audio, enceintes connectées et les meilleurs casques sans fil (bluetooth), des coques de protection originales, un choix de batteries et câbles de connexion pour personnaliser votre mobile. Nous avons sélectionné des coques pour iPhone, Samsung Galaxy,.. pour vous apporter des produits de qualité au meilleur prix.
 </div>
 <br>
-<p>Ce premier exemple simule le zoom par défaut du navigateur. La totalité de la page s’agrandit, deux barres de défilement apparaissent (horizontal et vertical). Le texte est difficile à lire.</p>
+<p>Ce premier exemple simule le zoom par défaut du navigateur. La totalité de la page s’agrandit, deux barres de défilement apparaissent (horizontal et vertical). Le texte est difficile à lire dans sa totalité sans manipulations.</p>
 
 <div class="zoom">
       <div>
@@ -34,20 +36,21 @@ css:
       </div>
 </div>
 <br>
-<p>Dans ce deuxième exemple, on simule uniquement l’agrandissement de la taille du texte. Ici, la largeur de la page reste inchangée, cela entraîne uniquement l’apparition d’un ascenseur vertical. La lecture du texte est beaucoup plus simple.</p>
+<p>Dans ce deuxième exemple, on simule uniquement l’agrandissement de la taille du texte. Ici, la largeur de la page reste inchangée, cela entraine uniquement l’apparition d’un ascenseur vertical. La lecture du texte est beaucoup plus simple.</p>
 <div class="zoom">
       La boutique accessoires pour Smartphone d’Orange regroupe les dernières nouveautés audio, enceintes connectées et les meilleurs casques sans fil (bluetooth), des coques de protection originales, un choix de batteries et câbles de connexion pour personnaliser votre mobile. Nous avons sélectionné des coques pour iPhone, Samsung Galaxy,.. pour vous apporter des produits de qualité au meilleur prix.La boutique accessoires pour Smartphone d’Orange regroupe les dernières nouveautés audio, enceintes connectées et les meilleurs casques sans fil (bluetooth), des coques de protection originales, un choix de batteries et câbles de connexion pour personnaliser votre mobile. Nous avons sélectionné des coques pour iPhone, Samsung Galaxy,.. pour vous apporter des produits de qualité au meilleur prix.
 </div>
+<br>
 
 <h2>Zoom de la taille du texte uniquement</h2>
-<p>
-      Heureusement certains navigateurs permettent d’agrandir uniquement la taille du texte. C’est le cas de Firefox par exemple (option disponible dans le menu Affichage&nbsp;&gt; Zoom&nbsp;&gt; Zoom texte seulement).
-</p>
+<p>Heureusement certains navigateurs permettent d’agrandir uniquement la taille du texte. C’est le cas de Firefox par exemple (option disponible dans le menu Affichage&nbsp;&gt; Zoom&nbsp;&gt; Zoom texte seulement).</p>
 <p><img alt="capture d’écran de l’option Zoom texte seulement dans Firefox" src="../../web/images/zoom-firefox.png"></p>
 
 <p>Lorsque cette option est activée, il se peut que votre page ne s’affiche pas correctement avec un zoom à 200% (dans Firefox faire quatre fois <kbd>Ctrl+</kbd>). Bien souvent, il s’agit d’un problème lié à l’utilisation d’unités non-relatives telles que les pixels ou les points (<code>px</code>, <code>pt</code>).</p>
 <h2>Les unités relatives</h2>
-<p>   L’utilisation d’unités relatives pour le texte telles que les <code>%</code>, les <code>em</code>, ou les <code>rem</code>, mais également dans le dimensionnement des zones de l’écran (taille des <code>div</code>) permet de résoudre les problèmes. En effet, si le texte peut être zoomé alors les <i lang="en">containers</i> doivent aussi suivre l’augmentation de la taille pour ne pas tronquer ou faire se chevaucher le texte.</p>
+<p>L’utilisation d’unités relatives pour le texte telles que les <code>%</code>, les <code>em</code>, ou les <code>rem</code>, mais également dans le dimensionnement des zones de l’écran (taille des <code>div</code>) permet de résoudre les problèmes. En effet, si le texte peut être zoomé alors les <i lang="en">containers</i> doivent aussi suivre l’augmentation de la taille pour ne pas tronquer ou faire se chevaucher le texte.</p>
+
+<p>Le zoom texte seulement permet de résoudre plus de situations problématiques pour certains utilisateurs que la vérification avec le zoom global navigateur et permet donc une plus grande robustesse du code front.</p>
 
 <h3>Exemple non-valide</h3>
 
@@ -70,4 +73,4 @@ par une hauteur variable en fonction de la taille des caractères&nbsp;:<br>
 
 <h2>Conclusion</h2>
 
-<p>Il est indispensable de tester vos pages avec le zoom à 200% et l’option «&nbsp;Zoom texte seulement&nbsp;» activée. C’est la seule façon de vérifier si vos pages restent lisibles. Bien qu’il s’agisse de corrections mineures à apporter, celles-ci peuvent changer totalement la façon dont l’information sera perçue par certains utilisateurs.</p>
+<p>Il est indispensable de tester vos pages avec le zoom à 200% et l’option «&nbsp;Zoom texte seulement&nbsp;» activée. C'est ce que nous préconisons chez Orange et c'est la seule façon de vérifier si vos pages restent bien lisibles quelle que soit la taille de l'écran. Bien que ces développements ne sont souvent que de bonnes pratiques de responsive web design (conception adaptative web) voire des corrections mineures à apporter, celles-ci peuvent améliorer drastiquement la façon dont l’information sera perçue par certains utilisateurs.</p>
