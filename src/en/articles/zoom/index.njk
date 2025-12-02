@@ -3,6 +3,7 @@ title: "Handling Zoom, enlarging text size"
 abstract: "Text size enlargement is used by many users (elderly people, people with visual impairments and people that should wear glasses and don’t…)"
 titleBeforeTag: true
 date: "2018-01-11"
+updateDate: "2025-11-28"
 tags:
   - component
 css:
@@ -11,13 +12,14 @@ css:
 
 <h2>Introduction</h2>
 <p>
-      Text size enlargement is used by many users (elderly people, people with visual impairments and people that should wear glasses and don’t…). One of the accessibility requirements is being able to enlarge the text up to 200% without loss of information. At this zoom level, the presentation may be altered, but the text must remain readable (no text must be truncated or superposed).
+Text size enlargement is used by many users (elderly people, people with visual impairments and people that should wear glasses and don’t…). There are two accessibility requirements, one is being able to enlarge the text up to 200% without loss of information and the second one is using the global browser's zooming at 200%, all this without overlapping, loss of content or functionalities. At this zoom level, the presentation may be altered, but the text must remain readable (no text must be truncated or superposed).
 </p>
 
 <h2>Default zoom level</h2>
 <p>
       All current browsers offer the possibility to zoom the page. This option enlarges the entire page (text, images, the spacing between the different areas of the page…).
-      Although this option is appropriate for occasional users, the drawback is that it adds horizontal scrollbars that make reading difficult.
+      Although this option is appropriate for occasional users, the drawback is that it adds horizontal scrollbars that make reading difficult for some users.
+      At Orange, we have decided to use as the only test method for the WCAG 1.4.4 Resize Text criterion, the text zoom only at 200%.
 </p>
 
 <h3>Identifying the problem</h3>
@@ -26,7 +28,7 @@ css:
       The Orange Smartphone accessories shop brings the latest audio, connected speakers and the best wireless headsets (Bluetooth), original protective cases, choice of batteries and connecting cables to customize your mobile. We selected cases for iPhone, Samsung Galaxy,.. to bring you quality products at the best price. Explore the full range of accessories for smartphones and tablets. Buy yours here.
 </div>
 <br>
-<p>The following example simulates the browser default zoom. The entire page is enlarged, two scrollbars appear (horizontal and vertical). The text is difficult to read.</p>
+<p>The following example simulates the browser default zoom. The entire page is enlarged, two scrollbars appear (horizontal and vertical). The text is difficult to read without interactions.</p>
 
 <div class="zoom">
       <div>
@@ -41,8 +43,7 @@ css:
 
 <h2>Zoom text only</h2>
 <p>
-     Fortunately, some browsers allow enlarging only the text size. This is the case for Firefox (available from the View menu &gt; Zoom &gt; Zoom text only).
-</p>
+     Fortunately, some browsers allow enlarging only the text size. This is the case for Firefox (available from the View menu &gt; Zoom &gt; Zoom text only).</p>
 <img alt="screenshot of the text zoom option in Firefox" src="../../web/images/zoom-firefox.png">
 <br><br>
 <p>When this option is enabled with a 200% zoom (in Firefox press <kbd>Ctrl +</kbd> four times), your page may not be displayed correctly. It is often because non-relative length units (<code>px</code>, <code>pt</code>) are used.</p>
@@ -71,4 +72,4 @@ Or more easily, keeping the pixels, but specifying a minimum height:<br>
 
 <h2>Conclusion</h2>
 
-<p>It is essential to test your pages with the zoom set to 200% and “Zoom Text Only” option enabled. This is the only way to check if your pages are readable. Although corrections can be minor, they can totally change the way information is perceived by some users.</p>
+<p>It is essential to test your pages with the zoom set to 200% and “Zoom Text Only” option enabled. This is what we recommend at Orange, and it's the only way to ensure your pages remain readable regardless of screen size. While these developments are often simply best practices in responsive web design, or even minor corrections, they can drastically improve how information is perceived by some users.</p>
