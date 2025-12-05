@@ -2,7 +2,7 @@
 title: "L'attribut aria-live et le role alert"
 abstract: "Quand et comment utiliser les roles et attributs de type live"
 titleBeforeTag: true
-date: "2020-01-08"
+date: "2025-12-05"
 tags:
   - web
   - intermediate
@@ -98,5 +98,6 @@ Enfin pour être complet, sachez que le langage <abbr>ARIA</abbr> prévoit égal
 ## Références
 - [Utilisation du rôle alert](https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [Zones live ARIA](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Zones_live_ARIA)
+- [Aria-live et ses analogues](https://access42.net/live-regions-aria-live-analogues-alert-log-status)
 - [Utiliser le rôle log](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_log)
 - [Utiliser le rôle status](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_status)
