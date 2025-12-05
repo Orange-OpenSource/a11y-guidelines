@@ -8,9 +8,9 @@ tags:
   - intermediate
 ---
   
-Les utilisateurs qui naviguent à l'aide d'un lecteur d'écran ne sont pas toujours au courant des modifications apportées dans la page. Lorsqu'une information est actualisée ou lorsqu'un message apparaît il est parfois nécessaire de faire parler le lecteur d'écran pour informer l'utilisateur. Pour ce faire, le language <abbr>ARIA</abbr> dispose du role `alert` et de l'attribut `aria-live`.
-
+Les utilisateurs qui naviguent à l’aide d’un lecteur d’écran ne sont pas toujours informés des changements qui surviennent dans une page. Lorsqu’une information est mise à jour ou qu’un message apparaît, il peut être nécessaire de provoquer une annonce vocale afin d’en avertir l’utilisateur. Pour répondre à ce besoin, le langage <abbr>ARIA</abbr> propose notamment le rôle alert et l’attribut aria-live.
 ## Le role alert
+
 
 Le rôle alert, appliqué à un élément HTML, informe le lecteur d’écran qu’il doit vocaliser automatiquement le contenu de cet élément dès sa création. Ce comportement, conçu pour attirer immédiatement l’attention de l’utilisateur, en fait un outil puissant, mais aussi potentiellement intrusif.
 
@@ -89,8 +89,8 @@ Le lecteur d’écran interrompt immédiatement sa tâche en cours pour annoncer
   
 Des attributs supplémentaires permettent de modifier finement le comportement par défaut d'`aria-live`&nbsp;:
 
-- **aria-atomic&nbsp;:**  true ou false (défaut), permet d'indiquer si la totalité de la zone live doit être lue (true) ou seulement la partie modifiée (false).
-- **aria-relevant&nbsp;:** indique quel type de changement déclenche une vocalisation, valeurs possibles&nbsp;: additions (défaut), removals, all.
+- **aria-atomic&nbsp;:**  true ou false (défaut), Indique si l’assistant vocal doit lire l’ensemble de la zone live (true) ou uniquement la partie modifiée (false).
+- **aria-relevant&nbsp;:** détermine quels types de changements déclenchent une vocalisation, valeurs possibles&nbsp;: additions (défaut; annonce uniquement les nouveaux contenus ajoutés ), removals(annonce les éléments supprimés), all(annonce tous les changements).
 
 Enfin pour être complet, sachez que le langage <abbr>ARIA</abbr> prévoit également quelques roles spécifiques, **status** et **log** notamment qui peuvent s'avérer utiles dans certains cas (barre d'état, journalisation, chat…) et qui pour le moment doivent être utilisés en complément de l'attribut `aria-live` pour maximiser la prise en charge par les outils d'assistance. Vous trouverez plus d'infos sur ces roles dans les liens ci-dessous.
 
