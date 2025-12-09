@@ -105,7 +105,7 @@ Voilà, bonnes fêtes à tous !
 - Rédiger accessible pour le web (en) : https://www.a11y-collective.com/blog/accessible-writing/
 - Les risque pour l'a11y sur le web (en) : https://alice.boxhall.au/articles/a-threat-model-for-accessibility-on-the-web/
 - Concevoir accessible pour la dyslexie, quelques points essentiels (en) : https://buttondown.com/access-ability/archive/designing-for-dyslexia-accessibility-requirements/
-- Alt texte dans Word et PPT et le passage en PDF (en) : https://webaim.org/blog/word-and-powerpoint-alt-text-roundup/
+- Alternative textuelle dans Word et PPT et le passage en PDF (en) : https://webaim.org/blog/word-and-powerpoint-alt-text-roundup/
 ## Autres
 
 - Un avis tranché, pas de mauvais acteurs dans les conf d'a11y (en) : https://chrisyoong.com/blog/inviting-harmful-actors-into-genuine-accessibility-spaces-is-dangerous
