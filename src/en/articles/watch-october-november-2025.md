@@ -8,7 +8,7 @@ tags:
 
 # Digital accessibility watch October-November 2025
 
-To start, here are two great tech and a11y advent calendars: (fr) https://www.24joursdeweb.fr/ and https://www.htmhell.dev/adventcalendar/.
+To start, here are two great tech and a11y advent calendars (fr): https://www.24joursdeweb.fr/ and https://www.htmhell.dev/adventcalendar/.
 
 And then there's progress (it's becoming clearer...) regarding the complaints filed by ApiDV (Accompanying, Promoting, Integrating Visually Impaired People) against major retailers for non-compliance with the EAA (Accessibility Advisory Agreement), and finally, its transposition into French law (fr):
 
