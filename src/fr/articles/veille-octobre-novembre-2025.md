@@ -51,7 +51,7 @@ Voilà, bonnes fêtes à tous !
 - Le nom accessible décortiqué (en) : https://www.tpgi.com/accessible-names-and-labels-understanding-what-works-and-what-doesnt/
 - Aria-selected, ce qu'il faut savoir (en) : https://www.a11y-collective.com/blog/aria-selected/
 - Un bon indicateur de focus (en) : https://www.a11y-collective.com/blog/focus-indicator/
-- Élément interactif, dialog html et tabindex (en) : https://matuzo.at/blog/2025/whats-an-interactive-element
+- Élément interactif, dialog HTML et tabindex (en) : https://matuzo.at/blog/2025/whats-an-interactive-element
 - Aria-hidden="true" et a11y expliqué : https://access42.net/attribut-aria-hidden-true-accessibilite/
 - Quand une recherche n'a rien trouvé, bien faire (en) : https://buttondown.com/access-ability/archive/why-every-search-needs-an-announced-empty-state/
 - Un point complet sur les tableaux de données HTML (en) : https://adrianroselli.com/2025/10/talkin-tables-at-a11yto-conf.html
