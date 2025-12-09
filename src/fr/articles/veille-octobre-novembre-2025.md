@@ -18,7 +18,7 @@ Voilà, bonnes fêtes à tous !
 
 ## L’accessibilité dans les lois, les normes et recommandations
 
-- RaWeb intègre EN301549 : https://access42.net/references-clients/raweb-referentiel-accessibilite-web-luxembourg/
+- RaWeb intègre EN 301549 : https://access42.net/references-clients/raweb-referentiel-accessibilite-web-luxembourg/
 - Satisfaire à l'EAA (en) : https://www.deque.com/blog/understanding-compliance-and-conformance-in-the-eaa-era/
 - Explications sur WCAG 2.4.5 Multiple ways (en) : https://tarnoff.info/2025/10/27/a11y-101-2-4-5-multiple-ways/
 
