@@ -40,7 +40,7 @@ Voilà, bonnes fêtes à tous !
 - Tester avec des utilisateurs avec handicap (en) : https://intopia.digital/articles/user-testing-with-people-with-disabilities/w
 - Tester WCAG par Dennis Deacon, plein d'articles sur presque tous les critères, à lire (en) : https://www.dennisdeacon.com/web/accessibility/
 - Les tests manuels en a11y (en) : https://blog.pope.tech/2025/10/29/manual-testing-webinar/
-- Pdf accessibility checker 2026, à télécharger (en) : https://pac.pdf-accessibility.org/en/download
+- PDF Accessibility Checker (PAC) 2026, à télécharger (en) : https://pac.pdf-accessibility.org/en/download
 
 ## Points techniques
 
