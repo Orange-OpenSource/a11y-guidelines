@@ -109,4 +109,4 @@ Voilà, bonnes fêtes à tous !
 ## Autres
 
 - Un avis tranché, pas de mauvais acteurs dans les conf d'a11y (en) : https://chrisyoong.com/blog/inviting-harmful-actors-into-genuine-accessibility-spaces-is-dangerous
-- Une interview d'une experte du FALC, karine Bardary : https://www.lunaweb.fr/actualites/podcasts/sld-35-karine-bardary-experte-en-accessibilite-web-et-falc/
+- Une interview d'une experte du FALC, Karine Bardary : https://www.lunaweb.fr/actualites/podcasts/sld-35-karine-bardary-experte-en-accessibilite-web-et-falc/
