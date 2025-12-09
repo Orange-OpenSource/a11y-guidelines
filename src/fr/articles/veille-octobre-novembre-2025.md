@@ -84,7 +84,7 @@ Voilà, bonnes fêtes à tous !
 - Modales et non-modale, différences (en) : https://www.a11y-collective.com/blog/modal-vs-dialog/
 - A11y et le design d'interaction (en) : https://www.alicia.design/post/interaction-design-and-accessibility-ux-without-barriers
 - Guide des principes de design inclusif (en) : https://tetralogical.com/blog/2025/10/07/guide-to-the-inclusive-design-principles/
-- La couleur dans les carte (en) : https://designsystem.gov.scot/guidance/maps/using-colour-in-maps
+- La couleur dans les cartes (en) : https://designsystem.gov.scot/guidance/maps/using-colour-in-maps
 - Fermer ce qu'on a ouvert quand l'utilisateur s'en va (en) : https://buttondown.com/access-ability/archive/why-you-need-to-close-open-objects-when-users/
 - Les toolkits d'a11y dans Figma (en) : https://www.linkedin.com/posts/vitalyfriedman_ux-accessibility-activity-7135568572046544896-mWsN/
 
