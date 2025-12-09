@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Veille #A11y Octobre-Novembre 2025 - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
+    
+    <meta name="description" content="Florilèges de ressources en #a11y, Octobre-Novembre 2025">
+    
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <nav class="navbar navbar-expand-lg supra" aria-label="Liens d&#39;évitements - Changement de langue" data-bs-theme="dark">
+   <div class="container-lg">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
+      <a href="#main-menu" class="nav-link">Aller au menu</a>
+    </li><li class="nav-item">
+      <a href="#main-content" class="nav-link">Aller au contenu</a>
+    </li><li class="nav-item hidden-if-no-js">
+      <a href="#search-input" class="nav-link">Aller à la recherche</a>
+    </li><li class="nav-item">
+      <a href="#footer" class="nav-link">Aller au pied de page</a>
+    </li></ul>
+
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+    </div>
+  </nav>
+
+  
+
+<div class="navbar navbar-expand-md" data-bs-theme="dark">
+  <nav id="main-menu" class="container-lg justify-content-md-start align-items-center" role="navigation" aria-label="Navigation principale">
+    <a href="/fr/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/web/" class="nav-link">
+  Web
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/android/" class="nav-link">
+  Android
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/ios/" class="nav-link">
+  iOS
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/contenu-et-communication/" class="nav-link">
+  Contenu et communication
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/articles/" class="nav-link active" aria-current="true">
+  Articles
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  
+</header>
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a class="breadcrumb-focus" href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-focus" href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Veille #A11y Octobre-Novembre 2025
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        Sur cette page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#laccessibilite-dans-les-lois-les-normes-et-recommandations" class="dropdown-item text-wrap">L’accessibilité dans les lois, les normes et recommandations</a><a href="#strategie-de-mise-en-accessibilite" class="dropdown-item text-wrap">Stratégie de mise en accessibilité</a><a href="#tester-laccessibilite" class="dropdown-item text-wrap">Tester l’accessibilité</a><a href="#points-techniques" class="dropdown-item text-wrap">Points techniques</a><a href="#retour-dexperience" class="dropdown-item text-wrap">Retour d&#39;expérience</a><a href="#appli-mobile-web-mobile" class="dropdown-item text-wrap">Appli mobile, web mobile</a><a href="#aides-techniques" class="dropdown-item text-wrap">Aides techniques</a><a href="#ergonomie-ui-ux" class="dropdown-item text-wrap">Ergonomie, UI &amp; UX</a><a href="#ia" class="dropdown-item text-wrap">IA</a><a href="#ressources" class="dropdown-item text-wrap">Ressources</a><a href="#autres" class="dropdown-item text-wrap">Autres</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          
+          <div class="mt-4">
+          <h1>Veille accessibilité numérique Octobre-Novembre 2025</h1>
+<p>Pour commencer, deux chouettes calendriers de l'avent tech et a11y : <a href="https://www.24joursdeweb.fr/">https://www.24joursdeweb.fr/</a> et <a href="https://www.htmhell.dev/adventcalendar/">https://www.htmhell.dev/adventcalendar/</a>.</p>
+<p>Et puis les avancées (ça se précise...) en ce qui concerne les plaintes contre des grands nom de la distribution par ApiDV (Accompagner, Promouvoir, Intégrer les Déficients Visuels) pour non respect de l'EAA, enfin la transcription en droit français :</p>
+<ul>
+<li><a href="https://les-enovateurs.com/breves/auchan-carrefour-leclerc-picard-inaccessibilite-sites-justice">https://les-enovateurs.com/breves/auchan-carrefour-leclerc-picard-inaccessibilite-sites-justice</a></li>
+<li><a href="https://www.interetaagir.org/assignation-en-refere-des-entreprises-auchan-carrefour-e-leclerc-et-picard-surgeles/">https://www.interetaagir.org/assignation-en-refere-des-entreprises-auchan-carrefour-e-leclerc-et-picard-surgeles/</a>.</li>
+</ul>
+<p>Voilà, bonnes fêtes à tous !</p>
+<h2 id="laccessibilite-dans-les-lois-les-normes-et-recommandations" class="h2-focus">L’accessibilité dans les lois, les normes et recommandations <a class="header-anchor" href="#laccessibilite-dans-les-lois-les-normes-et-recommandations" id="heading-949" aria-labelledby="heading-949">#</a></h2>
+<ul>
+<li>RaWeb intègre EN 301549 : <a href="https://access42.net/references-clients/raweb-referentiel-accessibilite-web-luxembourg/">https://access42.net/references-clients/raweb-referentiel-accessibilite-web-luxembourg/</a></li>
+<li>Satisfaire à l'EAA (en) : <a href="https://www.deque.com/blog/understanding-compliance-and-conformance-in-the-eaa-era/">https://www.deque.com/blog/understanding-compliance-and-conformance-in-the-eaa-era/</a></li>
+<li>Explications sur WCAG 2.4.5 Multiple ways (en) : <a href="https://tarnoff.info/2025/10/27/a11y-101-2-4-5-multiple-ways/">https://tarnoff.info/2025/10/27/a11y-101-2-4-5-multiple-ways/</a></li>
+</ul>
+<h2 id="strategie-de-mise-en-accessibilite" class="h2-focus">Stratégie de mise en accessibilité <a class="header-anchor" href="#strategie-de-mise-en-accessibilite" id="heading-950" aria-labelledby="heading-950">#</a></h2>
+<ul>
+<li>Un texte de remplacement doit aussi long que nécessaire (en) : <a href="https://chrisyoong.com/blog/the-100-150-or-200-characters-alt-text-rule-is-a-myth">https://chrisyoong.com/blog/the-100-150-or-200-characters-alt-text-rule-is-a-myth</a></li>
+<li>Pas de titres dans le header (en) : <a href="https://css-tricks.com/headings-semantics-fluidity-and-styling-oh-my/">https://css-tricks.com/headings-semantics-fluidity-and-styling-oh-my/</a></li>
+<li>Les tests auto vous mentent (en) : <a href="https://chrisyoong.com/blog/your-accessibility-score-is-lying-to-you">https://chrisyoong.com/blog/your-accessibility-score-is-lying-to-you</a></li>
+<li>A11y durable pour des grandes structures, trois articles structurants (en) :
+<ul>
+<li><a href="https://tetralogical.com/blog/2025/11/07/sustainable-accessibility-in-complex-organisations-organisational-realities/">https://tetralogical.com/blog/2025/11/07/sustainable-accessibility-in-complex-organisations-organisational-realities/</a></li>
+<li><a href="https://tetralogical.com/blog/2025/11/07/sustainable-accessibility-in-complex-organisations-strategic-foundations/">https://tetralogical.com/blog/2025/11/07/sustainable-accessibility-in-complex-organisations-strategic-foundations/</a></li>
+<li><a href="https://tetralogical.com/blog/2025/11/07/sustainable-accessibility-in-complex-organisations-external-factors/">https://tetralogical.com/blog/2025/11/07/sustainable-accessibility-in-complex-organisations-external-factors/</a></li>
+</ul>
+</li>
+<li>Shopify et a11y (en) : <a href="https://adrianroselli.com/2025/11/shopify-needs-a-mirrorfy.html">https://adrianroselli.com/2025/11/shopify-needs-a-mirrorfy.html</a></li>
+<li>Les anomalies d'a11y ne doivent pas être juste mises dans le backlog (en) : <a href="https://intopia.digital/articles/straight-to-the-pool-room-the-pitfalls-of-placing-accessibility-issues-in-the-backlog/">https://intopia.digital/articles/straight-to-the-pool-room-the-pitfalls-of-placing-accessibility-issues-in-the-backlog/</a></li>
+<li>Relancer la machine quand l'a11y stagne (en) : <a href="https://buttondown.com/access-ability/archive/when-accessibility-progress-plateaus-how-to/">https://buttondown.com/access-ability/archive/when-accessibility-progress-plateaus-how-to/</a></li>
+</ul>
+<h2 id="tester-laccessibilite" class="h2-focus">Tester l’accessibilité <a class="header-anchor" href="#tester-laccessibilite" id="heading-951" aria-labelledby="heading-951">#</a></h2>
+<ul>
+<li>Tester avec des utilisateurs avec handicap (en) : <a href="https://intopia.digital/articles/user-testing-with-people-with-disabilities/w">https://intopia.digital/articles/user-testing-with-people-with-disabilities/w</a></li>
+<li>Tester WCAG par Dennis Deacon, plein d'articles sur presque tous les critères, à lire (en) : <a href="https://www.dennisdeacon.com/category/web/accessibility/">https://www.dennisdeacon.com/category/web/accessibility/</a></li>
+<li>Les tests manuels en a11y (en) : <a href="https://blog.pope.tech/2025/10/29/manual-testing-webinar/">https://blog.pope.tech/2025/10/29/manual-testing-webinar/</a></li>
+<li>PDF Accessibility Checker (PAC) 2026, à télécharger (en) : <a href="https://pac.pdf-accessibility.org/en/download">https://pac.pdf-accessibility.org/en/download</a></li>
+</ul>
+<h2 id="points-techniques" class="h2-focus">Points techniques <a class="header-anchor" href="#points-techniques" id="heading-952" aria-labelledby="heading-952">#</a></h2>
+<ul>
+<li>Valider un formulaire accessible, exemples de code (en) : <a href="https://blog.pope.tech/2025/09/30/accessible-form-validation-with-examples-and-code/">https://blog.pope.tech/2025/09/30/accessible-form-validation-with-examples-and-code/</a></li>
+<li>Une flip card accessible (en) : <a href="https://www.tpgi.com/creating-a-truly-accessible-flip-card/">https://www.tpgi.com/creating-a-truly-accessible-flip-card/</a></li>
+<li>Tableaux de données et a11y (en) : <a href="https://www.tpgi.com/tables-beyond-rows-and-columns/">https://www.tpgi.com/tables-beyond-rows-and-columns/</a></li>
+<li>Tout sur les liens et les boutons, un super condensé (en) : <a href="https://www.tpgi.com/link-vs-button-choosing-the-right-element-for-the-right-job/">https://www.tpgi.com/link-vs-button-choosing-the-right-element-for-the-right-job/</a></li>
+<li>Le nom accessible décortiqué (en) : <a href="https://www.tpgi.com/accessible-names-and-labels-understanding-what-works-and-what-doesnt/">https://www.tpgi.com/accessible-names-and-labels-understanding-what-works-and-what-doesnt/</a></li>
+<li>Aria-selected, ce qu'il faut savoir (en) : <a href="https://www.a11y-collective.com/blog/aria-selected/">https://www.a11y-collective.com/blog/aria-selected/</a></li>
+<li>Un bon indicateur de focus (en) : <a href="https://www.a11y-collective.com/blog/focus-indicator/">https://www.a11y-collective.com/blog/focus-indicator/</a></li>
+<li>Élément interactif, dialog HTML et tabindex (en) : <a href="https://matuzo.at/blog/2025/whats-an-interactive-element">https://matuzo.at/blog/2025/whats-an-interactive-element</a></li>
+<li>aria-hidden=&quot;true&quot; et a11y expliqué : <a href="https://access42.net/attribut-aria-hidden-true-accessibilite/">https://access42.net/attribut-aria-hidden-true-accessibilite/</a></li>
+<li>Quand une recherche n'a rien trouvé, bien faire (en) : <a href="https://buttondown.com/access-ability/archive/why-every-search-needs-an-announced-empty-state/">https://buttondown.com/access-ability/archive/why-every-search-needs-an-announced-empty-state/</a></li>
+<li>Un point complet sur les tableaux de données HTML (en) : <a href="https://adrianroselli.com/2025/10/talkin-tables-at-a11yto-conf.html">https://adrianroselli.com/2025/10/talkin-tables-at-a11yto-conf.html</a></li>
+<li>Dialog comment bien faire (en) : <a href="https://jaredcunha.com/blog/html-dialog-getting-accessibility-and-ux-right">https://jaredcunha.com/blog/html-dialog-getting-accessibility-and-ux-right</a></li>
+<li>Quelques attributs d'état ARIA expliqués (en) : <a href="https://www.tpgi.com/what-state-aria-in/">https://www.tpgi.com/what-state-aria-in/</a></li>
+</ul>
+<h2 id="retour-dexperience" class="h2-focus">Retour d'expérience <a class="header-anchor" href="#retour-dexperience" id="heading-953" aria-labelledby="heading-953">#</a></h2>
+<ul>
+<li>Même Github n'aime pas les toasts (en) : <a href="https://primer.style/accessibility/toasts/">https://primer.style/accessibility/toasts/</a></li>
+</ul>
+<h2 id="appli-mobile-web-mobile" class="h2-focus">Appli mobile, web mobile <a class="header-anchor" href="#appli-mobile-web-mobile" id="heading-954" aria-labelledby="heading-954">#</a></h2>
+<ul>
+<li>Quelques nouveautés d'accessibilité par Google : <a href="https://www.youtube.com/watch?v=h1a7O6UzBdY">https://www.youtube.com/watch?v=h1a7O6UzBdY</a></li>
+<li>Une conférence pour tout savoir sur la gestion du focus sur Android (droidcon Berlin 2025) : <a href="https://www.youtube.com/watch?v=Ou-mws7GX_A">https://www.youtube.com/watch?v=Ou-mws7GX_A</a></li>
+<li>Concevoir des applications Android inclusives et accessibles (droidcon Bangladesh 2025) : <a href="https://www.youtube.com/watch?v=NURCk-joKqk">https://www.youtube.com/watch?v=NURCk-joKqk</a></li>
+<li>Une librairie fournissant des exemples de tests automatisés sur iOS, par Mark Steadman : <a href="https://github.com/Steady5063/iOS-Automated-Accessibility-Example-Lib?ref=appt.news">https://github.com/Steady5063/iOS-Automated-Accessibility-Example-Lib?ref=appt.news</a></li>
+<li>Un guide pratique pour l'accessibilité sur Flutter (en) : <a href="https://www.thedroidsonroids.com/blog/flutter-accessibility-guide-part-1">https://www.thedroidsonroids.com/blog/flutter-accessibility-guide-part-1</a></li>
+<li>Comment un simple rôle bouton peut rendre une app accessible (en) : <a href="https://axesslab.com/how-button-traits-can-make-a-chaotic-ios-app-accessible/">https://axesslab.com/how-button-traits-can-make-a-chaotic-ios-app-accessible/</a></li>
+</ul>
+<h2 id="aides-techniques" class="h2-focus">Aides techniques <a class="header-anchor" href="#aides-techniques" id="heading-955" aria-labelledby="heading-955">#</a></h2>
+<ul>
+<li>Mauvaise compréhension de ce que sont les lecteurs d'écran (en) : <a href="https://tetralogical.com/blog/2025/10/14/common-misconceptions-about-screen-readers/">https://tetralogical.com/blog/2025/10/14/common-misconceptions-about-screen-readers/</a></li>
+<li>Le temps accessible, tests sur Jaws, VoiceOver et NVDA (en) : <a href="https://ozewai.org/blog/newsletter/accessible-time-format/">https://ozewai.org/blog/newsletter/accessible-time-format/</a></li>
+<li>Les labels implicites et commande vocales, à faire (en) : <a href="https://gomakethings.com/implicit-labels-arent/">https://gomakethings.com/implicit-labels-arent/</a></li>
+<li>Y'a pas que tab dans les lecteurs d'écran (en) : <a href="https://tarnoff.info/2025/11/03/quick-tip-use-more-than-tab-in-screen-readers/">https://tarnoff.info/2025/11/03/quick-tip-use-more-than-tab-in-screen-readers/</a></li>
+</ul>
+<h2 id="ergonomie-ui-ux" class="h2-focus">Ergonomie, UI &amp; UX <a class="header-anchor" href="#ergonomie-ui-ux" id="heading-956" aria-labelledby="heading-956">#</a></h2>
+<ul>
+<li>Discussion entre designer sur l'a11y : <a href="https://www.tamarasredojevic.com/fr/writing/design-accessibilite-ludovic-evelin">https://www.tamarasredojevic.com/fr/writing/design-accessibilite-ludovic-evelin</a></li>
+<li>Modale et non-modale, différences (en) : <a href="https://www.a11y-collective.com/blog/modal-vs-dialog/">https://www.a11y-collective.com/blog/modal-vs-dialog/</a></li>
+<li>A11y et le design d'interaction (en) : <a href="https://www.alicia.design/post/interaction-design-and-accessibility-ux-without-barriers">https://www.alicia.design/post/interaction-design-and-accessibility-ux-without-barriers</a></li>
+<li>Guide des principes de design inclusif (en) : <a href="https://tetralogical.com/blog/2025/10/07/guide-to-the-inclusive-design-principles/">https://tetralogical.com/blog/2025/10/07/guide-to-the-inclusive-design-principles/</a></li>
+<li>La couleur dans les cartes (en) : <a href="https://designsystem.gov.scot/guidance/maps/using-colour-in-maps">https://designsystem.gov.scot/guidance/maps/using-colour-in-maps</a></li>
+<li>Fermer ce qu'on a ouvert quand l'utilisateur s'en va (en) : <a href="https://buttondown.com/access-ability/archive/why-you-need-to-close-open-objects-when-users/">https://buttondown.com/access-ability/archive/why-you-need-to-close-open-objects-when-users/</a></li>
+<li>Les toolkits d'a11y dans Figma (en) : <a href="https://www.linkedin.com/posts/vitalyfriedman_ux-accessibility-activity-7135568572046544896-mWsN/">https://www.linkedin.com/posts/vitalyfriedman_ux-accessibility-activity-7135568572046544896-mWsN/</a></li>
+</ul>
+<h2 id="ia" class="h2-focus">IA <a class="header-anchor" href="#ia" id="heading-957" aria-labelledby="heading-957">#</a></h2>
+<ul>
+<li>AI inévitable, non (en) : <a href="https://yatil.net/blog/ai-is-inevitable-is-bullshit">https://yatil.net/blog/ai-is-inevitable-is-bullshit</a></li>
+<li>AI, tests auto et a11y, le point d'étape (en) : <a href="https://cerovac.com/a11y/2025/11/ai-will-soon-deliver-code-that-will-pass-automatic-testing-by-default/">https://cerovac.com/a11y/2025/11/ai-will-soon-deliver-code-that-will-pass-automatic-testing-by-default/</a></li>
+<li>Open AI, Aria et a11y, pas bien (en) : <a href="https://adrianroselli.com/2025/10/openai-aria-and-seo-making-the-web-worse.html">https://adrianroselli.com/2025/10/openai-aria-and-seo-making-the-web-worse.html</a></li>
+<li>Génération de code via AI et a11y, il manque de sources propres (en) : <a href="https://www.aaron-gustafson.com/notebook/identifying-accessibility-data-gaps-in-codegen-models/">https://www.aaron-gustafson.com/notebook/identifying-accessibility-data-gaps-in-codegen-models/</a></li>
+<li>Encore une preuve que l'AI génère un code pas accessible (en) : <a href="https://dl.acm.org/doi/full/10.1145/3663547.3759755">https://dl.acm.org/doi/full/10.1145/3663547.3759755</a></li>
+<li>AI générant du code plus accessible mais bon... (en) : <a href="https://hidde.blog/teaching-llms-or-companies/">https://hidde.blog/teaching-llms-or-companies/</a></li>
+<li>Des prompts pour des erreurs courantes, à essayer (en) : <a href="https://www.forbes.com/councils/forbesbusinesscouncil/2025/10/31/ai-prompts-for-web-accessibility-testing/">https://www.forbes.com/councils/forbesbusinesscouncil/2025/10/31/ai-prompts-for-web-accessibility-testing/</a></li>
+</ul>
+<h2 id="ressources" class="h2-focus">Ressources <a class="header-anchor" href="#ressources" id="heading-958" aria-labelledby="heading-958">#</a></h2>
+<ul>
+<li>Les services aux consommateurs et l'a11y (en) : <a href="https://www.avh.asso.fr/nos-solutions/accessibilite/accessibilite-numerique/accessibilite-des-produits-et-des-services/accessibilite-des-services">https://www.avh.asso.fr/nos-solutions/accessibilite/accessibilite-numerique/accessibilite-des-produits-et-des-services/accessibilite-des-services</a></li>
+<li>Pourquoi WCAG 2.2 n'a plus le critère 4.1.1 Parsing, à lire (en) : <a href="https://www.tpgi.com/understanding-the-removal-of-4-1-1-parsing-in-wcag-2-2/">https://www.tpgi.com/understanding-the-removal-of-4-1-1-parsing-in-wcag-2-2/</a></li>
+<li>Rédiger accessible pour le web (en) : <a href="https://www.a11y-collective.com/blog/accessible-writing/">https://www.a11y-collective.com/blog/accessible-writing/</a></li>
+<li>Les risques pour l'a11y sur le web (en) : <a href="https://alice.boxhall.au/articles/a-threat-model-for-accessibility-on-the-web/">https://alice.boxhall.au/articles/a-threat-model-for-accessibility-on-the-web/</a></li>
+<li>Concevoir accessible pour la dyslexie, quelques points essentiels (en) : <a href="https://buttondown.com/access-ability/archive/designing-for-dyslexia-accessibility-requirements/">https://buttondown.com/access-ability/archive/designing-for-dyslexia-accessibility-requirements/</a></li>
+<li>Alternative textuelle dans Word et PPT et le passage en PDF (en) : <a href="https://webaim.org/blog/word-and-powerpoint-alt-text-roundup/">https://webaim.org/blog/word-and-powerpoint-alt-text-roundup/</a></li>
+</ul>
+<h2 id="autres" class="h2-focus">Autres <a class="header-anchor" href="#autres" id="heading-959" aria-labelledby="heading-959">#</a></h2>
+<ul>
+<li>Un avis tranché, pas de mauvais acteurs dans les conf d'a11y (en) : <a href="https://chrisyoong.com/blog/inviting-harmful-actors-into-genuine-accessibility-spaces-is-dangerous">https://chrisyoong.com/blog/inviting-harmful-actors-into-genuine-accessibility-spaces-is-dangerous</a></li>
+<li>Une interview d'une experte du FALC, Karine Bardary : <a href="https://www.lunaweb.fr/actualites/podcasts/sld-35-karine-bardary-experte-en-accessibilite-web-et-falc/">https://www.lunaweb.fr/actualites/podcasts/sld-35-karine-bardary-experte-en-accessibilite-web-et-falc/</a></li>
+</ul>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sur cette page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#laccessibilite-dans-les-lois-les-normes-et-recommandations" class="nav-link text-muted">L’accessibilité dans les lois, les normes et recommandations</a></li><li class="nav-item position-relative">
+            <a href="#strategie-de-mise-en-accessibilite" class="nav-link text-muted">Stratégie de mise en accessibilité</a></li><li class="nav-item position-relative">
+            <a href="#tester-laccessibilite" class="nav-link text-muted">Tester l’accessibilité</a></li><li class="nav-item position-relative">
+            <a href="#points-techniques" class="nav-link text-muted">Points techniques</a></li><li class="nav-item position-relative">
+            <a href="#retour-dexperience" class="nav-link text-muted">Retour d&#39;expérience</a></li><li class="nav-item position-relative">
+            <a href="#appli-mobile-web-mobile" class="nav-link text-muted">Appli mobile, web mobile</a></li><li class="nav-item position-relative">
+            <a href="#aides-techniques" class="nav-link text-muted">Aides techniques</a></li><li class="nav-item position-relative">
+            <a href="#ergonomie-ui-ux" class="nav-link text-muted">Ergonomie, UI &amp; UX</a></li><li class="nav-item position-relative">
+            <a href="#ia" class="nav-link text-muted">IA</a></li><li class="nav-item position-relative">
+            <a href="#ressources" class="nav-link text-muted">Ressources</a></li><li class="nav-item position-relative">
+            <a href="#autres" class="nav-link text-muted">Autres</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact/" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos/" class="nav-link">
+  À propos
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-fr.xml" class="nav-link">
+  Flux rss
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/accessibilite/" class="nav-link">
+  Accessibilité : partiellement conforme
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/fr/" class="nav-link">
+  Pré-version sur Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Déploiements sur Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/veille-octobre-novembre-2025.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+            Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Retour en haut de page">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" title="Retour en haut de page">
+        <span class="visually-hidden">Retour en haut de page</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"],"attributesToHighlight":["title","content"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher sur le site","buttonAriaLabel":"Rechercher sur le site"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
+    </script>
+    <div hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2025 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
