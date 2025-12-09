@@ -110,5 +110,5 @@ That's all, happy holidays everyone!
 
 ## Other
 
-- A firm opinion, no bad actors in a11y conferences: https://chrisyoong.com/blog/inviting-harmful-actors-into-genuine-accessibility-spaces-is-dangerous
+- A strong opinion, no bad actors in a11y conferences: https://chrisyoong.com/blog/inviting-harmful-actors-into-genuine-accessibility-spaces-is-dangerous
 - An interview with Easy-to-Read and Understand (FALC) expert Karine Bardary (fr): https://www.lunaweb.fr/actualites/podcasts/sld-35-karine-bardary-experte-en-accessibilite-web-et-falc/
