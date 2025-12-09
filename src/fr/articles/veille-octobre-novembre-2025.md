@@ -24,7 +24,7 @@ Voilà, bonnes fêtes à tous !
 
 ## Stratégie de mise en accessibilité
 
-- Un texte de remplacement doit aussi long que nécessaire (&en) : https://chrisyoong.com/blog/the-100-150-or-200-characters-alt-text-rule-is-a-myth
+- Un texte de remplacement doit aussi long que nécessaire (en) : https://chrisyoong.com/blog/the-100-150-or-200-characters-alt-text-rule-is-a-myth
 - Pas de titres dans le header (en) : https://css-tricks.com/headings-semantics-fluidity-and-styling-oh-my/
 - Les tests auto vous mentent (en) : https://chrisyoong.com/blog/your-accessibility-score-is-lying-to-you
 - A11y durable pour des grandes structures, trois articles structurants (en) : 
