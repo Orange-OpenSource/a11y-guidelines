@@ -103,7 +103,7 @@ Voilà, bonnes fêtes à tous !
 - Les services aux consommateurs et l'a11y (en) : https://www.avh.asso.fr/nos-solutions/accessibilite/accessibilite-numerique/accessibilite-des-produits-et-des-services/accessibilite-des-services
 - Pourquoi WCAG 2.2 n'a plus le critère 4.1.1 Parsing, à lire (en) : https://www.tpgi.com/understanding-the-removal-of-4-1-1-parsing-in-wcag-2-2/
 - Rédiger accessible pour le web (en) : https://www.a11y-collective.com/blog/accessible-writing/
-- Les risque pour l'a11y sur le web (en) : https://alice.boxhall.au/articles/a-threat-model-for-accessibility-on-the-web/
+- Les risques pour l'a11y sur le web (en) : https://alice.boxhall.au/articles/a-threat-model-for-accessibility-on-the-web/
 - Concevoir accessible pour la dyslexie, quelques points essentiels (en) : https://buttondown.com/access-ability/archive/designing-for-dyslexia-accessibility-requirements/
 - Alternative textuelle dans Word et PPT et le passage en PDF (en) : https://webaim.org/blog/word-and-powerpoint-alt-text-roundup/
 ## Autres
