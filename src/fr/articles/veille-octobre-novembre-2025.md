@@ -54,7 +54,7 @@ Voilà, bonnes fêtes à tous !
 - Élément interactif, dialog html et tabindex (en) : https://matuzo.at/blog/2025/whats-an-interactive-element
 - Aria-hidden="true" et a11y expliqué : https://access42.net/attribut-aria-hidden-true-accessibilite/
 - Quand une recherche n'a rien trouvé, bien faire (en) : https://buttondown.com/access-ability/archive/why-every-search-needs-an-announced-empty-state/
-- Un point complet sur les tableaux de données html (en) : https://adrianroselli.com/2025/10/talkin-tables-at-a11yto-conf.html
+- Un point complet sur les tableaux de données HTML (en) : https://adrianroselli.com/2025/10/talkin-tables-at-a11yto-conf.html
 - Dialog comment bien faire (en) : https://jaredcunha.com/blog/html-dialog-getting-accessibility-and-ux-right
 - Quelques attributs d'état ARIA expliqués (en) : https://www.tpgi.com/what-state-aria-in/
 
