@@ -39,7 +39,7 @@ That's all, happy holidays everyone!
 ## Testing Accessibility
 
 - User Testing with People with Disabilities: https://intopia.digital/articles/user-testing-with-people-with-disabilities/w
-- Testing WCAG by Dennis Deacon, full of articles on almost all criteria, worth reading: https://www.dennisdeacon.com/web/accessibility/
+- Testing WCAG by Dennis Deacon, full of articles on almost all criteria, worth reading: https://www.dennisdeacon.com/category/web/accessibility/
 - Manual testing in a11y: https://blog.pope.tech/2025/10/29/manual-testing-webinar/
 - PDF Accessibility Checker 2026, downloadable: https://pac.pdf-accessibility.org/en/download
 
