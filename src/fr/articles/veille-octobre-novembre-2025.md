@@ -74,7 +74,7 @@ Voilà, bonnes fêtes à tous !
 ## Aides techniques
 
 - Mauvaise compréhension de ce que sont les lecteurs d'écran (en) : https://tetralogical.com/blog/2025/10/14/common-misconceptions-about-screen-readers/
-- Le temps accessible, tests sur Jaws, VoiceOver et Nvda (en) : https://ozewai.org/blog/newsletter/accessible-time-format/
+- Le temps accessible, tests sur Jaws, VoiceOver et NVDA (en) : https://ozewai.org/blog/newsletter/accessible-time-format/
 - Les labels implicites et commande vocales, à faire (en) : https://gomakethings.com/implicit-labels-arent/
 - Y'a pas que tab dans les lecteurs d'écran (en) : https://tarnoff.info/2025/11/03/quick-tip-use-more-than-tab-in-screen-readers/
 
