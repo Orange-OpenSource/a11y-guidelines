@@ -77,7 +77,7 @@ That's all, happy holidays everyone!
 - Misconceptions about screen readers: https://tetralogical.com/blog/2025/10/14/common-misconceptions-about-screen-readers/
 - Accessible time, tests on JAWS, VoiceOver, and NVDA: https://ozewai.org/blog/newsletter/accessible-time-format/
 - Implicit labels and voice commands, to do: https://gomakethings.com/implicit-labels-arent/
-- There's More than just tabs in screen readers: https://tarnoff.info/2025/11/03/quick-tip-use-more-than-tab-in-screen-readers/
+- There's more than just tabs in screen readers: https://tarnoff.info/2025/11/03/quick-tip-use-more-than-tab-in-screen-readers/
 
 ## Ergonomics, UI & UX
 
