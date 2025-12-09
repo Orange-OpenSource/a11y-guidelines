@@ -64,12 +64,12 @@ Voilà, bonnes fêtes à tous !
 
 ## Appli mobile, web mobile
 
--	Quelques nouveautés d'accessibilité par Google : https://www.youtube.com/watch?v=h1a7O6UzBdY
--	Une conférence pout tout savoir sur la gestion du focus sur Android (droidcon Berlin 2025) : https://www.youtube.com/watch?v=Ou-mws7GX_A
--	Concevoir des applications Android inclusives et accessibles (droidcon Bangladesh 2025) : https://www.youtube.com/watch?v=NURCk-joKqk
--	Une librairie fournissant des exemples de tests automatisés sur iOS, par Mark Steadman : https://github.com/Steady5063/iOS-Automated-Accessibility-Example-Lib?ref=appt.news
--	Un guide pratique pour l'accessibilité sur Flutter (en) : https://www.thedroidsonroids.com/blog/flutter-accessibility-guide-part-1
--	Comment un simple rôle bouton peut rendre une app accessible (en) : https://axesslab.com/how-button-traits-can-make-a-chaotic-ios-app-accessible/
+- Quelques nouveautés d'accessibilité par Google : https://www.youtube.com/watch?v=h1a7O6UzBdY
+- Une conférence pour tout savoir sur la gestion du focus sur Android (droidcon Berlin 2025) : https://www.youtube.com/watch?v=Ou-mws7GX_A
+- Concevoir des applications Android inclusives et accessibles (droidcon Bangladesh 2025) : https://www.youtube.com/watch?v=NURCk-joKqk
+- Une librairie fournissant des exemples de tests automatisés sur iOS, par Mark Steadman : https://github.com/Steady5063/iOS-Automated-Accessibility-Example-Lib?ref=appt.news
+- Un guide pratique pour l'accessibilité sur Flutter (en) : https://www.thedroidsonroids.com/blog/flutter-accessibility-guide-part-1
+- Comment un simple rôle bouton peut rendre une app accessible (en) : https://axesslab.com/how-button-traits-can-make-a-chaotic-ios-app-accessible/
 
 ## Aides techniques
 
