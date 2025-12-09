@@ -81,7 +81,7 @@ Voilà, bonnes fêtes à tous !
 ## Ergonomie, UI & UX
 
 - Discussion entre designer sur l'a11y : https://www.tamarasredojevic.com/fr/writing/design-accessibilite-ludovic-evelin
-- Modales et non-modale, différences (en) : https://www.a11y-collective.com/blog/modal-vs-dialog/
+- Modale et non-modale, différences (en) : https://www.a11y-collective.com/blog/modal-vs-dialog/
 - A11y et le design d'interaction (en) : https://www.alicia.design/post/interaction-design-and-accessibility-ux-without-barriers
 - Guide des principes de design inclusif (en) : https://tetralogical.com/blog/2025/10/07/guide-to-the-inclusive-design-principles/
 - La couleur dans les cartes (en) : https://designsystem.gov.scot/guidance/maps/using-colour-in-maps
