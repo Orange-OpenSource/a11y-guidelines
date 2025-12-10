@@ -16,7 +16,7 @@ Without these specifications, technical accessibility rests solely on the should
 
 ## What should be annotated ?
 
-Some informations that can be added to your designs&nbsp;: 
+Some information that can be added to your designs: 
 - Text alternative for images
 - Title of each page
 - Headings (HTML tags `h1`, `h2`...)
