@@ -34,7 +34,7 @@ Some information that can be added to your designs:
 
 ## How to do it ?
 
-Whatever software used, annotating mockups is really easy. For example, you can use numbered bullet points that link to a detailed description. There are also annotation kits that offer stickers with different colors and shapes that allow you to quickly annotate your designs. The best tool is the one that best suits your way of working. It may vary depending on the profiles and size of your team. Annotation kits provide a foundation that you should feel free to adapt to your needs.
+Whatever software used, annotating mockups is really easy. For example, you can use numbered bullet points that link to a detailed description. There are also annotation kits or plugins that offer stickers with different colors and shapes that allow you to quickly annotate your designs. The best tool is the one that best suits your way of working. It may vary depending on the profiles and size of your team. Annotation kits, as plugins, provide a foundation that you should feel free to adapt to your needs.
 
 <img src="../images/annotations/reading-order-en.png" alt="Design example with annotations and reading order" title="Design example with annotations and reading order" class="img-fluid">
 
