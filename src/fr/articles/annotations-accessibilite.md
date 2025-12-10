@@ -1,6 +1,6 @@
 ---
 title: "Spécifier l'accessibilité de vos designs grâce aux annotations"
-abstract: "Les annotations d'accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent être interprétés par les outils d'assistance"
+abstract: "Les annotations d'accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent interagir avec les utilisateurs et être interprétés par les outils d'assistance"
 titleBeforeTag: true
 date: "2022-07-29"
 updateDate : "2025-11-04"
