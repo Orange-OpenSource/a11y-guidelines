@@ -1,6 +1,6 @@
 ---
 title: "Specify the accessibility of your designs by using annotations"
-abstract: "Accessibility annotations allow you to specify how the different components present on your wireframe should be interpreted by assistance tools"
+abstract: "Accessibility annotations allow you to specify how the different components present on your wireframe should interact with users and be interpreted by assistance tools"
 titleBeforeTag: true
 date: "2025-11-04"
 updateDate : "2025-11-04"
