@@ -69,7 +69,8 @@ tags:
 <pre><code class="html">
 &lt;a href="…" aria-label="Learn more about our mobile plans"&gt;Learn more&lt;/a&gt;
 </code></pre>
-<p>The accessible hiding class solution still offers an advantage compared to the <code>aria-label</code> solution. If the <abbr>CSS</abbr> is disabled (replaced with a custom <abbr>CSS</abbr> adapted to a certain disability, for example), the hidden accessibly text will be displayed.</p>
+
+The accessible hiding class solution still offers several advantages compared to the <code>aria-label</code> solution. If the <abbr>CSS</abbr> is disabled (replaced with a custom <abbr>CSS</abbr> adapted to a certain disability, for example), the hidden accessibly text will be displayed. During automatic page translation, the <code>aria-label</code> will not be translated. Furthermore, since <code>aria-label</code> is not very visible in the code, developers may forget to update or modify it.
 
 <h2><code>aria-hidden</code> attribute</h2>
 <p>This attribute will hide an element (or group of elements) to screen readers. It has however no effect on the display.</p>
@@ -98,4 +99,6 @@ tags:
   <li><a href="https://www.ffoodd.fr/masquage-accessible-de-pointe/" lang="fr" href="fr">Masquage accessible de pointe (fr)</a></li>
   <li><a href="https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034">Improved .visually-hidden</a></li>
   <li><a href="https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/">The "inert" attribute is finally coming to the web</a></li>
+  <li><a href="https://access42.net/attribut-aria-hidden-true-accessibilite/" lang="fr" href="fr">Comment utiliser l'attribut aria-hidden="true" de manière accessible ?</a></li>
+  <li><a href="https://adrianroselli.com/2019/11/aria-label-does-not-translate.html">aria-label Does Not Translate</a></li>
 </ul>
