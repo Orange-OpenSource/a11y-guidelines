@@ -52,7 +52,7 @@ Some examples of information that can be added to your designs:
 - <a lang="en" hreflang="en" href="https://www.youtube.com/watch?v=Y35jmpS8lQM&feature=youtu.be&ab_channel=InclusiveDesign24%23id24">Annotating designs for Accessibility / Claire Webber and Sarah Pulis</a>
 - <a lang="en" hreflang="en" href="https://tetralogical.com/blog/2025/09/23/annotating-designs-using-common-language/">Annotating designs using common language / Craig Abbott</a>
 
-Some Figma plugins to add accessibility annotations&nbsp;: 
+Some Figma plugins to add accessibility annotations: 
 - <a hreflang="en" href="https://www.figma.com/community/file/953682768192596304">Accessibility Annotation Kit by Indeed</a>
 - <a hreflang="en" href="https://www.figma.com/community/file/1311421011482282592">Web Accessibility Annotation Kit by CVS Health</a>
 - <a hreflang="en" href="https://www.figma.com/comunity/plugin/1085612091163821851">axe for Designers by Deque Systems</a>
