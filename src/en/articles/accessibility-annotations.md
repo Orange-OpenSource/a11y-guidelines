@@ -44,7 +44,7 @@ Whatever software used, annotating mockups is really easy. For example, you can 
 There are specific tools or plugins for major design/mockup tools like Figma, Sketch, Zeplin.&nbsp;
 For any other tools, you can also use annotation kit which specific icons usable in all environments.
 
-Some examples of information that can be added to your designs:&nbsp;: 
+Some examples of information that can be added to your designs: 
 - <a href="https://stephaniewalter.design/blog/a-designers-guide-to-documenting-accessibility-user-interactions/" lang="en" hreflang="en">A Designer’s Guide to Documenting Accessibility & User Interactions</a>
 - <a href="https://tangible.is/en/thinking/2024/10/the-value-of-accessibility-annotations-in-inclusive-design" lang="en" hreflang="en">The value of accessibility annotations in inclusive design</a>
 - <a lang="en" hreflang="en" href="https://medium.com/indeed-design/building-an-accessibility-library-e134e9012c17">Building an Accessibility Library</a>
