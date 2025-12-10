@@ -20,7 +20,7 @@ Some information that can be added to your designs:
 - Text alternative for images
 - Title of each page
 - Headings (HTML tags `h1`, `h2`...)
-- Semantics (lists, paragraphs, quotations, etc.)
+- Semantics (lists, paragraphs, quotations...)
 - list of the different page regions (landmarks)
 - Interactive components (links, buttons...)
 - Reading order of components with screen reader
