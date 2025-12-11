@@ -58,6 +58,3 @@ Quelques plugins pour ajouter des annotations sous Figma&nbsp;:
 - <a hreflang="en" href="https://www.figma.com/community/file/1022394680250523675">Intopia's accessibility annotation kit</a>
 - <a hreflang="en" href="https://www.figma.com/community/plugin/731310036968334777/accessibility-assistant">Accessibility Assistant by Microsoft Design</a>
 
-
-
- 
