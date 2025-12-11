@@ -14,7 +14,7 @@ Accessibility annotations specify how the various components on a screen should 
 This is the main benefit of this activity, which encourages a cross-disciplinary reflection on accessibility (designer, product manager, accessibility expert, developer, etc.).
 Without these specifications, technical accessibility rests solely on the shoulders of developers, while it must be, above all, a team effort.
 
-## What should be annotated ?
+## What should be annotated?
 
 Some information that can be added to your designs: 
 - Text alternative for images
