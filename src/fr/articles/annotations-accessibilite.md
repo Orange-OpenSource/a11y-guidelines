@@ -47,7 +47,7 @@ Voici quelques ressources qui vous permettront d'approfondir le sujet&nbsp;:
 - <a href="https://stephaniewalter.design/blog/a-designers-guide-to-documenting-accessibility-user-interactions/" lang="en" hreflang="en">A Designer’s Guide to Documenting Accessibility & User Interactions</a>
 - <a href="https://tangible.is/en/thinking/2024/10/the-value-of-accessibility-annotations-in-inclusive-design" lang="en" hreflang="en">The value of accessibility annotations in inclusive design</a>
 - <a lang="en" hreflang="en" href="https://medium.com/indeed-design/building-an-accessibility-library-e134e9012c17">Building an Accessibility Library</a>
-- <a hreflang="en" href="https://blog.zeplin.io/introducing-flows-and-annotations-a-new-way-to-communicate-design-intention">Introducing Flows and Annotations</a>
+- <a lang="en" hreflang="en" href="https://blog.zeplin.io/introducing-flows-and-annotations-a-new-way-to-communicate-design-intention">Introducing Flows and Annotations</a>
 - <a lang="en" hreflang="en" href="https://www.youtube.com/watch?v=Y35jmpS8lQM&feature=youtu.be&ab_channel=InclusiveDesign24%23id24">Annotating designs for Accessibility / Claire Webber and Sarah Pulis</a>
 - <a lang="en" hreflang="en" href="https://tetralogical.com/blog/2025/09/23/annotating-designs-using-common-language/">Annotating designs using common language / Craig Abbott</a>
 
