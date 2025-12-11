@@ -8,7 +8,7 @@ tags:
   - beginner
 ---
 
-## What is it about ?
+## What is it about?
 
 Accessibility annotations specify how the various components on a screen should be interpreted by assistive tools (like a screen reader) and help to anticipate several accessibility error risks. while some annotations can be added directly by designers during the graphic design phase, others require technical expertise.
 This is the main benefit of this activity, which encourages a cross-disciplinary reflection on accessibility (designer, product manager, accessibility expert, developer, etc.).
