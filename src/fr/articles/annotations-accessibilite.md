@@ -52,9 +52,9 @@ Voici quelques ressources qui vous permettront d'approfondir le sujet&nbsp;:
 - <a lang="en" hreflang="en" href="https://tetralogical.com/blog/2025/09/23/annotating-designs-using-common-language/">Annotating designs using common language / Craig Abbott</a>
 
 Quelques plugins pour ajouter des annotations sous Figma&nbsp;: 
-- <a hreflang="en" href="https://www.figma.com/community/file/953682768192596304">Accessibility Annotation Kit réalisé par Indeed</a>
-- <a hreflang="en" href="https://www.figma.com/community/file/1311421011482282592">Web Accessibility Annotation Kit by CVS Health</a>
-- <a hreflang="en" href="https://www.figma.com/community/plugin/1085612091163821851/axe-for-designers-a-free-accessibility-plugin">axe for Designers by Deque Systems</a>
-- <a hreflang="en" href="https://www.figma.com/community/file/1022394680250523675">Intopia's accessibility annotation kit</a>
-- <a hreflang="en" href="https://www.figma.com/community/plugin/731310036968334777/accessibility-assistant">Accessibility Assistant by Microsoft Design</a>
+- <a lang="en" hreflang="en" href="https://www.figma.com/community/file/953682768192596304">Accessibility Annotation Kit réalisé par Indeed</a>
+- <a lang="en" hreflang="en" href="https://www.figma.com/community/file/1311421011482282592">Web Accessibility Annotation Kit by CVS Health</a>
+- <a lang="en" hreflang="en" href="https://www.figma.com/community/plugin/1085612091163821851/axe-for-designers-a-free-accessibility-plugin">axe for Designers by Deque Systems</a>
+- <a lang="en" hreflang="en" href="https://www.figma.com/community/file/1022394680250523675">Intopia's accessibility annotation kit</a>
+- <a lang="en" hreflang="en" href="https://www.figma.com/community/plugin/731310036968334777/accessibility-assistant">Accessibility Assistant by Microsoft Design</a>
 
