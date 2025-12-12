@@ -6,20 +6,20 @@ tags:
   - web
   - intermediate
   - component
-js: 
+js:
 - script.js
 titleBeforeTag: true
 ---
 
 ## Introduction
 
-Pour qu’un formulaire soit accessible à l’ensemble des utilisateurs, quelques règles doivent être respectées lors du développement.
+Pour qu'un formulaire soit accessible à l'ensemble des utilisateurs, quelques règles doivent être respectées lors du développement.
 
-Nous verrons, dans cette première partie, comment bien construire son formulaire, puis, dans une deuxième partie, la soumission d'un formulaire et les étapes de validation.
+Nous verrons dans cette première partie comment bien construire le formulaire, puis, dans la deuxième partie, la soumission et les étapes de validation.
 
 Nous allons développer un formulaire d'inscription afin de voir toutes les subtilités pour rendre un formulaire accessible.
 
-Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/" target="_blank">la librairie Boosted</a>. Celle-ci permet d’obtenir des formulaires dont le design est conforme à la charte Orange.
+Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/" target="_blank">la librairie Boosted</a>. Celle-ci permet d'obtenir des formulaires dont le design est conforme à la charte Orange.
 
 ## Étiqueter les champs de formulaires
 
@@ -35,15 +35,15 @@ La solution privilégiée est l'utilisation de la balise <code>label</code>. C'e
     avec son champ en renseignant un attribut
     <code>for</code>
     qui correspondra avec l'<code>id</code>
-    du champ de formulaire auquel il est associé</li>
+    du champ de formulaire auquel il est associé (solution conseillée),</li>
   <li>lier implicitement la balise
     <code>label</code>
     avec son champ, dans ce cas, la balise
     <code>label</code>
-    sera utilisée comme un conteneur entourant le champ de formulaire, La première solution est conseillée.</li>
+    sera utilisée comme un conteneur entourant le champ de formulaire.</li>
 </ul>
 
-#### Exemple 
+#### Exemple
 
 Exemple d'étiquettes correctement liées de manière explicite&nbsp;:
 
@@ -87,13 +87,13 @@ Exemple de code&nbsp;:
 
 ### Masquer les étiquettes de manière accessible
 
-Dans certains cas, il peut être utile de masquer l'étiquette visuellement. Attention, on peut masquer les étiquettes si et seulement si la fonction champ est suffisamment claire et compréhensible dans son contexte: par exemple, un champ de recherche à côté d'une icone loupe.
+Dans certains cas, il peut être utile de masquer l'étiquette visuellement. Attention, on peut masquer les étiquettes si et seulement si la fonction champ est suffisamment claire et compréhensible dans son contexte: par exemple, un champ de recherche à côté d'une icône loupe.
 
 Même si l'étiquette est masquée visuellement, elle doit toujours être accessible pour les technologies d'assistance.
 
-Cette méthode consiste a utiliser une classe CSS (utilisation de la classe <code>visually-hidden</code> de Bootstrap/Boosted) permettant un masquage accessible. L’utilisation du masquage accessible permet de masquer l’élément à l’écran, tout en conservant sa vocalisation par les outils ou technologies d’assistance (AT). Attention, ne pas utiliser du masquage CSS classique (<code>display: none;</code> ou <code>visibility: hidden;</code>) car l’élément sera masqué également pour les lecteurs d’écran.
+Cette méthode consiste a utiliser une classe CSS (utilisation de la classe <code>visually-hidden</code> de Bootstrap/Boosted) permettant un masquage accessible. L'utilisation du masquage accessible permet de masquer l'élément à l'écran, tout en conservant sa vocalisation par les outils ou technologies d'assistance (AT). Attention, ne pas utiliser du masquage CSS classique (<code>display: none;</code> ou <code>visibility: hidden;</code>) car l'élément sera masqué également pour les lecteurs d'écran.
 
-Consultez l’exemple sur <a href="../../../web/exemples-de-composants/masquage-accessible/" target="_blank">l’exemple sur le masquage accessible</a> pour plus l’information.
+Consultez l'exemple sur <a href="../../../web/exemples-de-composants/masquage-accessible/" target="_blank">l'exemple sur le masquage accessible</a> pour plus d'informations.
 
 #### Exemple
 
@@ -106,19 +106,19 @@ Exemple de code&nbsp;:
     &lt;input type="text" name="recherche" id="recherche"&gt;
     &lt;button type="submit"&gt;Recherche&lt;/button&gt;
   </code>
-</pre> 
+</pre>
 
 ### Les attributs ARIA
 
-Il est aussi possible d'utiliser les  attributs <code>aria-label</code> et <code>aria-labelledby</code> pour étiqueter des champs de formulaire, car ces attributs sont bien supportés par les navigateurs et dans les <abbr>AT</abbr> récentes&nbsp;:
+Il est aussi possible d'utiliser les attributs <code>aria-label</code> et <code>aria-labelledby</code> pour étiqueter des champs de formulaire, car ces attributs sont bien supportés par les navigateurs et dans les <abbr>AT</abbr> récentes&nbsp;:
 
 <ul>
-  <li>L’attribut <code>aria-labelledby</code> permet de préciser l’<code>id</code> d’un élément présent dans le code qui sera utilisé pour étiqueter le champ.
+  <li>L'attribut <code>aria-labelledby</code> permet de préciser l'<code>id</code> d'un élément présent dans le code qui sera utilisé pour étiqueter le champ.
   </li>
-  <li>L’attribut <code>aria-label</code> permet de préciser directement un label sous forme d’une chaîne de caractères. Attention l'information ne sera pas donnée visuellement.</li>
+  <li>L'attribut <code>aria-label</code> permet de préciser directement un label sous forme d'une chaîne de caractères. Attention l'information ne sera pas donnée visuellement.</li>
 </ul>
 
-Un exemple possible&nbsp;: 
+Un exemple possible&nbsp;:
 
 <pre>
   <code class="html">
@@ -129,21 +129,21 @@ Un exemple possible&nbsp;:
 
 ### L'attribut title
 
-L’attribut <code>title</code> permet d’étiqueter un champ de formulaire de manière accessible. Il déclenchera également l’affichage d’une info-bulle au survol de l’élément avec la souris, bonne chose pour les déficients cognitifs, les novices du numérique.
+L'attribut <code>title</code> permet d'étiqueter un champ de formulaire de manière accessible. Il déclenchera également l'affichage d'une info-bulle au survol de l'élément avec la souris, bonne chose pour les déficients cognitifs, les novices du numérique.
 
 Attention, nous pourrions être tentés d'utiliser l'attribut <code>placeholder</code>. Cet attribut n'est pas assez robuste, en effet&nbsp;:
 
 <ul>
-  <li>le texte du <code>placeholder</code> qui s’affiche dans le champ n’est généralement pas assez contrasté&nbsp;;
+  <li>le texte du <code>placeholder</code> qui s'affiche dans le champ n'est généralement pas assez contrasté&nbsp;;
   </li>
-  <li>il s’efface à la saisie du contenu dans le champ (entraînant des difficultés en cas de déficience
+  <li>il s'efface à la saisie du contenu dans le champ (entraînant des difficultés en cas de déficience
     cognitive)&nbsp;;
   </li>
-  <li>le <code>placeholder</code> n’est pas toujours lu par les aides techniques&nbsp;;</li>
-  <li>il rend les corrections difficiles en cas d’erreur s'il n'existe pas de label affiché&nbsp;;</li>
+  <li>le <code>placeholder</code> n'est pas toujours lu par les aides techniques&nbsp;;</li>
+  <li>il rend les corrections difficiles en cas d'erreur s'il n'existe pas de label affiché&nbsp;;</li>
 </ul>
 
-En revanche, le <code>placeholder</code> peut servir de guide, d’aide pour remplir le champ sans que cette information soit absolument nécessaire (par exemple, proposer une valeur attendue valide)&nbsp;: ne pas hésiter à l’utiliser pour ce type de besoin.
+En revanche, le <code>placeholder</code> peut servir de guide, d'aide pour remplir le champ sans que cette information soit absolument nécessaire (par exemple, proposer une valeur attendue valide)&nbsp;: ne pas hésiter à l'utiliser pour ce type de besoin.
 
 
 ## Regrouper les champs de même nature
@@ -171,14 +171,14 @@ Dans notre formulaire d'inscription, on peut ajouter le genre de notre utilisate
         <label class="form-check-label" for="Mme">Mme</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="Non-binaire" >
-        <label class="form-check-label" for="Non-binaire">Non-binaire</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="non-binaire" value="Non-binaire" >
+        <label class="form-check-label" for="non-binaire">Non-binaire</label>
       </div>
     </fieldset>
   </form>
 </div>
 
-Un exemple possible&nbsp;: 
+Un exemple possible&nbsp;:
 
 <pre>
   <code class="html">
@@ -196,8 +196,8 @@ Un exemple possible&nbsp;:
           &lt;label class="form-check-label" for="Mme"&gt;Mme&lt;/label&gt;
         &lt;/div&gt;
         &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="Non-binaire" &gt;
-          &lt;label class="form-check-label" for="Non-binaire"&gt;Non-binaire&lt;/label&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="non-binaire" value="Non-binaire" &gt;
+          &lt;label class="form-check-label" for="non-binaire"&gt;Non-binaire&lt;/label&gt;
         &lt;/div&gt;
       &lt;/fieldset&gt;
     &lt;/form&gt;
@@ -219,9 +219,9 @@ Pour informer l'utilisateur, on peut&nbsp;:
 
 ### Exemple
 
-Pour notre formulaire d'inscription, nous allons rajouter un champ mot de passe en précisant le format que l'on souhaite.
+Pour notre formulaire d'inscription, nous allons rajouter un champ de mot de passe en précisant le format que l'on souhaite.
 
-Lorsqu'on ajoute un champ mot de passe, il est aussi important de laisser la possibilité d'afficher ou de cacher le mot de passe. Cela permet aux utilisateurs atteint de troubles moteurs, de l'attention ou cognitifs d'éviter d'éventuelles erreurs de saisie.
+Lorsqu'on ajoute un champ mot de passe, il est aussi important de laisser la possibilité d'afficher ou de cacher le mot de passe. Cela permet aux utilisateurs atteints de troubles moteurs, de l'attention ou cognitifs d'éviter d'éventuelles erreurs de saisie.
 
 <div class="col-md-8">
   <form id="formulaire4" class="border border-secondary p-3 my-2">
@@ -244,12 +244,12 @@ Lorsqu'on ajoute un champ mot de passe, il est aussi important de laisser la pos
       </span>
     </div>
     <div id="passwordHelpBlock" class="form-text">
-        Votre mot de passe doit contenir minimum 6 caractères.
+        Votre mot de passe doit contenir au moins 6 caractères.
     </div>
   </form>
 </div>
 
-Un exemple possible&nbsp;: 
+Un exemple possible&nbsp;:
 
 <pre>
   <code class="html">
@@ -325,8 +325,8 @@ Pour la suite de l'exercice et compléter notre formulaire d'inscription, nous a
         <label class="form-check-label" for="Mme_final">Mme</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Non-binaire_final" value="Non-binaire" >
-        <label class="form-check-label" for="Non-binaire_final">Non-binaire</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="non-binaire_final" value="Non-binaire" >
+        <label class="form-check-label" for="non-binaire_final">Non-binaire</label>
       </div>
     </fieldset>
     <div class="mb-2">
@@ -348,7 +348,7 @@ Pour la suite de l'exercice et compléter notre formulaire d'inscription, nous a
   </form>
 </div>
 
-Le code final : 
+Le code final :
 <pre>
   <code class="html">
   &lt;div class="col-md-8"&gt;
@@ -388,8 +388,8 @@ Le code final :
           &lt;label class="form-check-label" for="Mme_final"&gt;Mme&lt;/label&gt;
         &lt;/div&gt;
         &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Non-binaire_final" value="Non-binaire" &gt;
-          &lt;label class="form-check-label" for="Non-binaire_final"&gt;Non-binaire&lt;/label&gt;
+          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="non-binaire_final" value="Non-binaire" &gt;
+          &lt;label class="form-check-label" for="Non-binaire_final"&gt;non-binaire&lt;/label&gt;
         &lt;/div&gt;
       &lt;/fieldset&gt;
       &lt;div class="mb-2"&gt;
