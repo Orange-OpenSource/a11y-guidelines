@@ -2,6 +2,7 @@
 title: "Formulaire partie 1 - Structurer son formulaire"
 abstract: "Faire un formulaire accessible, partie 1 : labéliser ses champs et structurer son formulaire"
 date: "2022-12-12"
+updateDate: "2026-01-01"
 tags:
   - web
   - intermediate
