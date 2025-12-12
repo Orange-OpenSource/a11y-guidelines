@@ -14,6 +14,7 @@ tags:
 
 Un nom accessible est l'information qui permet à l'Aide Technique (<abbr>AT</abbr>), comme un lecteur d'écran ou une loupe logicielle, d'identifier l'élément (tag <abbr>HTML</abbr>) en question. Il peut être fourni par l'intitulé ou le contenu d'un élément, un attribut (exemple : un attribut `alt` pour une image) ou par un élément associé (exemple: une balise `label` pour un champ `input`). Pour aller plus loin, [Le nom accessible en HTML](../le-nom-accessible-en-html/).
 
+
 Une description accessible est une information plus étendue qui est utilisée par l'<abbr>AT</abbr>, lui permettant de compléter le nom accessible en précisant et rajoutant du sens, là où le nom accessible n'est pas suffisant.
 
 Le nom comme la description accessible peuvent être visuellement perceptible ou non (exemples : intitulé de lien&nbsp; "visible", ou alternative d'image&nbsp;"cachée et utilisable que par une <abbr>AT</abbr>", ...)
