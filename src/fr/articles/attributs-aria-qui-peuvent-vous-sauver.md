@@ -3,7 +3,7 @@ title: "Les attributs ARIA qui peuvent vous sauver !"
 abstract: "Quelques attributs ARIA à connaître pour avoir un nom accessible"
 titleBeforeTag: true
 date: "2018-01-08"
-updateDate: "2025-12-11"
+updateDate: "2025-12-12"
 tags:
   - web
   - intermediate
@@ -12,25 +12,25 @@ tags:
 ## Introduction
 ### Nom et description accessible
 
-Un nom accessible est l'information qui permet à l'Aide Technique (<abbr>AT</abbr>), comme un lecteur d'écran ou une loupe logicielle, d'identifier l'élément (tag <abbr>HTML</abbr>) en question. Il peut être fourni par l'intitulé ou le contenu d'un élément, un attribut ( exemple : un attribut `alt` pour une image) ou par un élément associé (exemple: une balise `label` pour un champ `input`). Pour aller plus loin, [Le nom accessible en HTML](../le-nom-accessible-en-html/).
+Un nom accessible est l'information qui permet à l'Aide Technique (<abbr>AT</abbr>), comme un lecteur d'écran ou une loupe logicielle, d'identifier l'élément (tag <abbr>HTML</abbr>) en question. Il peut être fourni par l'intitulé ou le contenu d'un élément, un attribut (exemple : un attribut `alt` pour une image) ou par un élément associé (exemple: une balise `label` pour un champ `input`). Pour aller plus loin, [Le nom accessible en HTML](../le-nom-accessible-en-html/).
 
 Une description accessible est une information plus étendue qui est utilisée par l'<abbr>AT</abbr>, lui permettant de compléter le nom accessible en précisant et rajoutant du sens, là où le nom accessible n'est pas suffisant.
 
-Le nom comme la description accessible peuvent être visuellement perceptible ou pas (exemple : intitulé de lien&nbsp;: visible, ou alternative d'image&nbsp;: cachée et utilisable que par une <abbr>AT</abbr>, ...)
+Le nom comme la description accessible peuvent être visuellement perceptible ou non (exemples : intitulé de lien&nbsp; "visible", ou alternative d'image&nbsp;"cachée et utilisable que par une <abbr>AT</abbr>", ...)
 
 ### Les attributs <abbr>ARIA</abbr>&nbsp;: `aria-label`, `aria-labelledby` et `aria-describedby`
 
 Trois attributs <abbr>ARIA</abbr> sont très bien supportés par les navigateurs et les <abbr>AT</abbr>: `aria-label`, `aria-labelledby` et `aria-describedby`. Ils permettent de rajouter de l'information à un élément <abbr>HTML</abbr>&nbsp;:
-- `aria-label`, `aria-labelledby` permettent de donner un nom accessible à un élément.
+- `aria-label`, et `aria-labelledby` permettent de donner un nom accessible à un élément.
 - `aria-describedby` permet d’ajouter, si nécessaire, une description accessible à un élément, en complément de son nom accessible.
 
 Cependant, ces attributs <abbr>ARIA</abbr> ne fonctionnent bien qu'avec certains éléments :
 - les éléments interactifs&nbsp;: `a` (avec un attribut `href`), `audio` et `video` (avec un attribut `controls`), `input` (sauf si `type="hidden"`), `select`, `button` et `textarea`.
-- les éléments `img` et `iframe`.
-- les éléments possédant un rôle de landmark explicite, donc, avec un attribut `role` ou un landmark implicite (une balise de structure <abbr>HTML5</abbr>&nbsp;: `header`, `footer`, `main`, `nav`, `aside` et `section`). 
-- les éléments ayant l'un des <a href="https://www.w3.org/TR/wai-aria-1.1/#widget_roles" lang="en" hreflang="en">rôles de widget définis par <abbr>ARIA</abbr> (au nombre de 27 dans la version <abbr>ARIA</abbr> 1.1)</a>.
+- les éléments : `img` et `iframe`.
+- les éléments possédant un rôle de landmark explicite, ayant un attribut `role` ou un landmark implicite (une balise de structure <abbr>HTML5</abbr>&nbsp;: `header`, `footer`, `main`, `nav`, `aside` et `section`). 
+- les éléments ayant l'un des <a href="https://www.w3.org/TR/wai-aria-1.1/#widget_roles" lang="en" hreflang="en">rôles de widget définis par <abbr>ARIA</abbr></a> (au nombre de 27 dans la version <abbr>ARIA</abbr> 1.1).
 
-Pour tout autre élément <abbr>HTML</abbr>, ces trois attributs <abbr>ARIA</abbr> ont un support peu robuste voire aléatoire selon les couples <abbr>AT</abr>/navigateur. Il ne faut donc pas les utiliser comme seul moyen de passer une information nécessaire.
+Pour tout autre élément <abbr>HTML</abbr>, ces trois attributs <abbr>ARIA</abbr> ont un support peu robuste, voire aléatoire, selon les couples <abbr>AT</abr>/navigateur. Il ne faut donc pas les utiliser comme seul moyen de passer une information nécessaire.
 
 ## Faut-il les utiliser et comment&nbsp;?
 	
@@ -41,7 +41,7 @@ Il faut savoir que `aria-label` doit contenir, comme valeur, une chaîne de cara
 <pre><code class="html">
 &lt;button aria-label="Accéder au code HTML (HyperText Markup Language)"&gt;html&lt;/button&gt;
 </code></pre>
-Sortie pour un lecteur d'écran : "Accéder au code HTML (HyperText Markup Language), bouton"
+Sortie pour un lecteur d'écran : "Accéder au code HTML (HyperText Markup Language), bouton".
 
 Pour `aria-labelledby` et `aria-describedby`, la valeur de l’attribut correspond à un ou plusieurs `id` d’éléments (séparés par un espace) de la page. Le contenu de ces éléments est utilisé comme nom accessible pour l’élément portant l’attribut <abbr>Aria</abbr>, l’auto-référencement étant possible.
 
@@ -49,13 +49,13 @@ Lorsqu'on utilise `aria-label` ou `aria-labelledby` sur un élément, le contenu
 
 **Important&nbsp;:** L'`aria-labelledby` peut admettre plusieurs valeurs séparées par un espace et peut s'auto-référencer. Il fonctionne aussi avec du contenu généré par pseudo-classes <abbr>CSS</abbr> `::before` ou `::after`. On peut également référencer un contenu masqué visuellement par&nbsp;: <abbr>CSS</abbr> (`visibility:hidden;` ou `display:none;`) ou avec l'attribut <abbr>HTML</abbr>5 `hidden`. Cependant, les bonnes pratiques demandent que si l'interface ne permet pas d’afficher une étiquette textuelle visible à l’écran, il est préférable d'utiliser `aria-label` plutôt qu'`aria-labelledby`. 
 
-Lorsque les deux attributs `aria-labelledby` et `aria-label` sont utilisés, les agents utilisateurs donnent la priorité à `aria-labelledby` pour la restitution du contenu, lors du calcul de la propriété de nom accessible, exemple :
+Lorsque les deux attributs `aria-labelledby` et `aria-label` sont utilisés, les agents utilisateurs donnent la priorité à `aria-labelledby` pour la restitution du contenu, lors du calcul de la propriété du nom accessible, exemple :
 
 <pre><code class="html">
 &lt;h2 id="titre"&gt;Code de la page HTML&lt;/h2&gt;
 &lt;button aria-label="accéder au code HyperText Markup Language" aria-labelledby="titre"&gt;html&lt;/buttton&gt;
 </code></pre>
-Sortie pour un lecteur d'écran : "Code de la page HTML, bouton"
+Sortie pour un lecteur d'écran : "Code de la page HTML, bouton".
 
 L’attribut `aria-describedby` a pour fonction d’ajouter une description accessible à un élément, en complément de son nom accessible.
 Cette description, souvent plus longue ou plus détaillée que le nom accessible, permet de fournir des informations supplémentaires à l’utilisateur, exemples :
@@ -64,10 +64,10 @@ Cette description, souvent plus longue ou plus détaillée que le nom accessible
 &lt;h3 id="titre"&gt;Code de la page de formulaire de connexion&lt;/h3&gt;
 &lt;button aria-label="Accéder au code HTML" aria-describedby="titre"&gt;html&lt;/buttton&gt;
 </code></pre>
-Sortie pour un lecteur d'écran : "Accéder au code HTML, bouton, Code de la page de formulaire de connexion"
+Sortie pour un lecteur d'écran : "Accéder au code HTML, bouton, Code de la page de formulaire de connexion".
 ou
 <pre><code class="html">
 &lt;h3 id="titre"&gt;Code de la page de formulaire de connexion&lt;/h3&gt;
 &lt;button id="code" aria-describedby="titre"&gt;Accéder au code HTML&lt;/buttton&gt;
 </code></pre>
-Sortie pour un lecteur d'écran : "Accéder au code HTML, bouton, Code de la page de formulaire de connexion"
+Sortie pour un lecteur d'écran : "Accéder au code HTML, bouton, Code de la page de formulaire de connexion".
