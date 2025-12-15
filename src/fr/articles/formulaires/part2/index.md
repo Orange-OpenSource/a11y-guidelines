@@ -2,11 +2,12 @@
 title: "Formulaire partie 2 - Soumettre son formulaire"
 abstract: "Faire un formulaire accessible, partie 2 : Soumettre son formulaire, champ obligatoire, gestion des erreurs et l'importance de l'attribut autocomplete"
 date: "2023-01-24"
+updateDate: "2026-01-01"
 tags:
   - web
   - intermediate
   - component
-js: 
+js:
 - script.js
 titleBeforeTag: true
 ---
@@ -27,7 +28,7 @@ Dans cet exemple, nous utilisons <a href="http://boosted.orange.com/">la librair
 
 Dans les formulaires, il est fréquent que des champs soient obligatoires. Ces champs doivent être indiqués clairement aux utilisateurs.
 
-Pour réaliser ceci, plusieurs solutions existent&nbsp;: 
+Pour réaliser ceci, plusieurs solutions existent&nbsp;:
 
 <ul>
   <li>de manière programmatique, il faut utiliser l'attribut <code>required</code> ou <code>aria-required="true"</code> dans la balise <code>input</code> de nos champs, l'utilisation de ces attributs permettra aux technologies d'assistance (AT) d'indiquer que le champ est obligatoire.</li>
@@ -73,7 +74,7 @@ Il faut donc les spécifier aux utilisateurs.
       <input type="text" class="form-control" id="name" required/>
     </div>
     <div class="mb-2">
-      <label for="firstname" class="form-label">Prénom * </label>
+      <label for="firstname" class="form-label">Prénom *</label>
       <input type="text" class="form-control" id="firstname" required/>
     </div>
     <button type="submit" class="btn btn-primary">Soumettre</button>
@@ -433,7 +434,7 @@ Le code HTML et Javascript complet qui nous a permis de réaliser ce formulaire 
                 error=invalid(password,"errorpassword2 passwordHelpBlock");
                 document.getElementById("errorpasswordDiv").classList.add("d-none")
                 document.getElementById("errorpasswordDiv2").classList.remove("d-none");
-            }   
+            }
         }
         if(email.value==""){
             error=invalid(email,"erroremail1");
@@ -450,7 +451,7 @@ Le code HTML et Javascript complet qui nous a permis de réaliser ce formulaire 
                 document.getElementById("erroremailDiv").classList.add("d-none")
                 document.getElementById("erroremailDiv2").classList.remove("d-none");
             }
-            
+
         }
 
         if(error){

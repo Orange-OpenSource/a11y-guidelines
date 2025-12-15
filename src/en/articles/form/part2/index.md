@@ -2,11 +2,12 @@
 title: "Form part 2 - Submit your form"
 abstract: "Making a form accessible, part 2: Submitting your form, required field, error handling and the importance of the autocomplete attribute"
 date: "2023-02-21"
+updateDate: "2026-01-01"
 tags:
   - web
   - intermediate
   - component
-js: 
+js:
 - script.js
 titleBeforeTag: true
 ---
@@ -80,7 +81,7 @@ They must therefore be specified to users.
   </form>
 </div>
 
-  Example code&nbsp;:
+Example code:
 
 <pre>
   <code class="html">
@@ -121,7 +122,7 @@ They must therefore be specified to users.
 
 During validation, if mandatory fields are not filled in, or if the format of the data entered is not valid, the user must be informed.
 
-To achieve this, you need&nbsp;
+To achieve this, you need:
 
 <ul>
    <li>Use the <code>aria-invalid="true"</code> attribute to indicate an input error to AT users</li>
@@ -455,7 +456,7 @@ The full HTML and Javascript code that allowed us to make this accessible regist
                 error=invalid(password,"errorpassword2 passwordHelpBlock_2");
                 document.getElementById("errorpasswordDiv").classList.add("d-none")
                 document.getElementById("errorpasswordDiv2").classList.remove("d-none");
-            }   
+            }
         }
         if(email.value==""){
             error=invalid(email,"erroremail1");
@@ -472,7 +473,7 @@ The full HTML and Javascript code that allowed us to make this accessible regist
                 document.getElementById("erroremailDiv").classList.add("d-none")
                 document.getElementById("erroremailDiv2").classList.remove("d-none");
             }
-            
+
         }
 
         if(error){
