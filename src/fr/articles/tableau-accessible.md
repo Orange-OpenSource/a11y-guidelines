@@ -329,7 +329,7 @@ Pour chaque page auditée, les critères peuvent être conformes, non-conformes 
 <pre><code class="html">
 &lt;p class="border-top border-light" id="tblDesc">Description du tableau&lt;/p&gt;
 &lt;table aria-describedby="tblDesc" class="table"&gt;
- &lt;caption class="visually-hidden position-relative"&gt;Synthèse par niveau&lt;/caption&gt;
+ &lt;caption class="visually-hidden position-relative"&gt;Synthèse par niveaux&lt;/caption&gt;
  &lt;tr&gt;
     &lt;th id="critere"&gt;Critères&lt;/th&gt;
     &lt;th id="conforme" headers="critere" colspan="2"&gt;Conformes&lt;/th&gt;
