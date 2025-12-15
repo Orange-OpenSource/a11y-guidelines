@@ -66,9 +66,9 @@ Il faut donc les spécifier aux utilisateurs.
         </button>
       </span>
     </div>
-    <div id="passwordHelpBlock" class="form-text">
-        Votre mot de passe doit contenir minimum 6 caractères.
-    </div>
+    <p id="passwordHelpBlock" class="form-text mb-0">
+      Votre mot de passe doit contenir minimum 6 caractères.
+    </p>
     <div class="mb-2">
       <label for="name" class="form-label">Nom *</label>
       <input type="text" class="form-control" id="name" required/>
@@ -81,42 +81,40 @@ Il faut donc les spécifier aux utilisateurs.
   </form>
 </div>
 
-  Exemple de code&nbsp;:
+Exemple de code&nbsp;:
 
-<pre>
-  <code class="html">
-  &lt;div class="col-md-8"&gt;
-    &lt;form id="formulaire" class="border border-secondary p-3 my-2"&gt;
-      &lt;p&gt;Tous les champs obligatoires sont marqués d'un *&lt;/p&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="email" class="form-label"&gt;Email <span class="important">*</span> &lt;/label&gt;
-        &lt;input type="text" class="form-control" id="email" <span class="important">required</span>/&gt;
-      &lt;/div&gt;
-      &lt;label for="password" class="form-label"&gt;Mot de passe *&lt;/label&gt;
-      &lt;div class="mb-2 input-group"&gt;
-        &lt;input type="password" class="form-control" id="password" required aria-describedby="passwordHelpBlock"/&gt;
-        &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" &gt;
-            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;&lt;/svg&gt;
-          &lt;/button&gt;
-        &lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div id="passwordHelpBlock" class="form-text"&gt;
-          Votre mot de passe doit contenir minimum 6 caractères.
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="name" class="form-label"&gt;Nom *&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="name" required/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="firstname" class="form-label"&gt;Prénom * &lt;/label&gt;
-        &lt;input type="text" class="form-control" id="firstname" required/&gt;
-      &lt;/div&gt;
-      &lt;button type="submit" class="btn btn-primary"&gt;Soumettre&lt;/button&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
-  </code>
-</pre>
+```html
+<div class="col-md-8">
+  <form id="formulaire" class="border border-secondary p-3 my-2">
+    <p>Tous les champs obligatoires sont marqués d'un *</p>
+    <div class="mb-2">
+      <label for="email" class="form-label">Email <span class="important">*</span></label>
+      <input type="text" class="form-control" id="email"/>
+    </div>
+    <label for="password" class="form-label">Mot de passe *</label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password" required aria-describedby="passwordHelpBlock"/>
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" >
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"></svg>
+        </button>
+      </span>
+    </div>
+    <p id="passwordHelpBlock" class="form-text mb-0">
+      Votre mot de passe doit contenir minimum 6 caractères.
+    </p>
+    <div class="mb-2">
+      <label for="name" class="form-label">Nom *</label>
+      <input type="text" class="form-control" id="name" required/>
+    </div>
+    <div class="mb-2">
+      <label for="firstname" class="form-label">Prénom * </label>
+      <input type="text" class="form-control" id="firstname" required/>
+    </div>
+    <button type="submit" class="btn btn-primary">Soumettre</button>
+  </form>
+</div>
+```
 
 ### Gestion des erreurs
 
@@ -195,9 +193,9 @@ Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur&nbsp;
         <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
         <p id="errorpassword2">Veuillez renseigner un Mot de passe valide (6 caractères minimum)</p>
       </div>
-    <div id="passwordHelpBlock_2" class="form-text">
-        Votre mot de passe doit contenir minimum 6 caractères.
-    </div>
+    <p id="passwordHelpBlock_2" class="form-text mb-0">
+      Votre mot de passe doit contenir minimum 6 caractères.
+    </p>
     <div class="mb-2">
       <label for="name_2" class="form-label">Nom *</label>
       <input type="text" class="form-control" id="name_2" required/>
@@ -265,7 +263,7 @@ Dans l'exemple ci-dessus&nbsp;:
 
 ### Utilisation de l'attribut autocomplete
 
-L'attribut <code>autocomplete</code> permet de faciliter le remplissage des champs qui contiennent une information personnelle. Tous les champs dont le type est listé dans <a href="https://www.w3.org/TR/WCAG22/#input-purposes" lang="en">7. InputPurposes for User Interface Components</a> doivent contenir l'attribut <code>autocomplete</code>. 
+L'attribut <code>autocomplete</code> permet de faciliter le remplissage des champs qui contiennent une information personnelle. Tous les champs dont le type est listé dans <a href="https://www.w3.org/TR/WCAG22/#input-purposes" lang="en" hreflang="en">7. InputPurposes for User Interface Components</a> doivent contenir l'attribut <code>autocomplete</code>.
 
 Dans notre exemple les champs ci-dessous devront avoir un attribut <code>autocomplete</code>&nbsp;:
 <ul>
@@ -278,214 +276,202 @@ Dans notre exemple les champs ci-dessous devront avoir un attribut <code>autocom
 ## Exemple complet
 
 
-Le code HTML et Javascript complet qui nous a permis de réaliser ce formulaire d'inscription accessible.
+Le code HTML et JavaScript complet qui nous a permis de réaliser ce formulaire d'inscription accessible.
 
-<pre>
-  <code class="html">
-  &lt;div class="col-md-8"&gt;
-    &lt;form id="formulaire" class="border border-secondary p-3 my-2"&gt;
-      &lt;p&gt;Tous les champs obligatoires sont marqués d'un *&lt;/p&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="email" class="form-label"&gt;Email *&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="email" autocomplete="email" required/&gt;
-        &lt;div id="erroremailDiv" class="alert alert-danger alert-sm d-none"&gt;
-          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Erreur&lt;/span&gt;&lt;/span&gt;
-          &lt;p id="erroremail1"&gt;Le champ email est obligatoire&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div id="erroremailDiv2" class="alert alert-danger alert-sm d-none"&gt;
-          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Erreur&lt;/span&gt;&lt;/span&gt;
-          &lt;p id="erroremail2"&gt;Veuillez renseigner un Email valide (nomprenom@gmail.com)&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;label for="password" class="form-label"&gt;Mot de passe *&lt;/label&gt;
-      &lt;div class="mb-2 input-group"&gt;
-        &lt;input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock" autocomplete="new-password" required/&gt;
-        &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" &gt;
-            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;&lt;/svg&gt;
-          &lt;/button&gt;
-        &lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div id="errorpasswordDiv" class="alert alert-danger alert-sm d-none"&gt;
-          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Erreur&lt;/span&gt;&lt;/span&gt;
-          &lt;p id="errorpassword1"&gt;Le champ Mot de passe est obligatoire&lt;/p&gt;
-        &lt;/div&gt;
-        &lt;div id="errorpasswordDiv2" class="alert alert-danger alert-sm d-none"&gt;
-          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Erreur&lt;/span&gt;&lt;/span&gt;
-          &lt;p id="errorpassword2"&gt;Veuillez renseigner un Mot de passe valide (6 caractères minimum)&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;div id="passwordHelpBlock" class="form-text"&gt;
-          Votre mot de passe doit contenir minimum 6 caractères.
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="name" class="form-label"&gt;Nom *&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="name" autocomplete="name" required/&gt;
-        &lt;div id="errorname" class="alert alert-danger alert-sm d-none"&gt;
-          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Erreur&lt;/span&gt;&lt;/span&gt;
-          &lt;p id="errorname1"&gt;Le champ Nom est obligatoire&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="firstname" class="form-label"&gt;Prénom *&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="firstname" autocomplete="given-name" required/&gt;
-        &lt;div id="errorfirstname" class="alert alert-danger alert-sm d-none"&gt;
-          &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Erreur&lt;/span&gt;&lt;/span&gt;
-          &lt;p id="errorfirstname1"&gt;Le champ Prénom est obligatoire&lt;/p&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;fieldset&gt;
-        &lt;legend&gt;Genre&lt;/legend&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M" selected&gt;
-          &lt;label class="form-check-label" for="M"&gt;M&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme"&gt;
-          &lt;label class="form-check-label" for="Mme"&gt;Mme&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="Non-binaire" &gt;
-          &lt;label class="form-check-label" for="Non-binaire"&gt;Non-binaire&lt;/label&gt;
-        &lt;/div&gt;
-      &lt;/fieldset&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="adresse" class="form-label"&gt;Adresse&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="adresse"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="adresse2" class="form-label"&gt;Complément d'adresse&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="adresse2"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="ville" class="form-label"&gt;Ville&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="ville"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="cp" class="form-label"&gt;Code postal&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="cp"/&gt;
-      &lt;/div&gt;
-      &lt;button id="submit" class="btn btn-primary"&gt;Soumettre&lt;/button&gt;
-      &lt;div id="alertsucces" class="alert alert-success d-none" role="alert"&gt;
-        &lt;span class="alert-icon"&gt;&lt;span class="visually-hidden"&gt;Succès&lt;/span&gt;&lt;/span&gt;
-        &lt;p&gt;La validation du formulaire est réussi.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
-  </code>
-</pre>
+```html
+<div class="col-md-8">
+  <form id="formulaire" class="border border-secondary p-3 my-2">
+    <p>Tous les champs obligatoires sont marqués d'un *</p>
+    <div class="mb-2">
+      <label for="email" class="form-label">Email *</label>
+      <input type="text" class="form-control" id="email" autocomplete="email" required />
+      <div id="erroremailDiv" class="alert alert-danger alert-sm d-none">
+        <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
+        <p id="erroremail1">Le champ email est obligatoire</p>
+      </div>
+      <div id="erroremailDiv2" class="alert alert-danger alert-sm d-none">
+        <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
+        <p id="erroremail2">Veuillez renseigner un Email valide (nomprenom@gmail.com)</p>
+      </div>
+    </div>
+    <label for="password" class="form-label">Mot de passe *</label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"
+        autocomplete="new-password" required />
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility"
+          title="Afficher le mot de passe">
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" viewBox="0 0 1000 1000"></svg>
+        </button>
+      </span>
+    </div>
+    <div id="errorpasswordDiv" class="alert alert-danger alert-sm d-none">
+      <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
+      <p id="errorpassword1">Le champ Mot de passe est obligatoire</p>
+    </div>
+    <div id="errorpasswordDiv2" class="alert alert-danger alert-sm d-none">
+      <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
+      <p id="errorpassword2">Veuillez renseigner un Mot de passe valide (6 caractères minimum)</p>
+    </div>
+    <p id="passwordHelpBlock" class="form-text mb-0">
+      Votre mot de passe doit contenir minimum 6 caractères.
+    </p>
+    <div class="mb-2">
+      <label for="name" class="form-label">Nom *</label>
+      <input type="text" class="form-control" id="name" autocomplete="name" required />
+      <div id="errorname" class="alert alert-danger alert-sm d-none">
+        <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
+        <p id="errorname1">Le champ Nom est obligatoire</p>
+      </div>
+    </div>
+    <div class="mb-2">
+      <label for="firstname" class="form-label">Prénom *</label>
+      <input type="text" class="form-control" id="firstname" autocomplete="given-name" required />
+      <div id="errorfirstname" class="alert alert-danger alert-sm d-none">
+        <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
+        <p id="errorfirstname1">Le champ Prénom est obligatoire</p>
+      </div>
+    </div>
+    <fieldset>
+      <legend>Genre</legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M" selected>
+        <label class="form-check-label" for="M">M</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme">
+        <label class="form-check-label" for="Mme">Mme</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="Non-binaire">
+        <label class="form-check-label" for="Non-binaire">Non-binaire</label>
+      </div>
+    </fieldset>
+    <div class="mb-2">
+      <label for="adresse" class="form-label">Adresse</label>
+      <input type="text" class="form-control" id="adresse" />
+    </div>
+    <div class="mb-2">
+      <label for="adresse2" class="form-label">Complément d'adresse</label>
+      <input type="text" class="form-control" id="adresse2" />
+    </div>
+    <div class="mb-2">
+      <label for="ville" class="form-label">Ville</label>
+      <input type="text" class="form-control" id="ville" />
+    </div>
+    <div class="mb-2">
+      <label for="cp" class="form-label">Code postal</label>
+      <input type="text" class="form-control" id="cp" />
+    </div>
+    <button id="submit" class="btn btn-primary">Soumettre</button>
+    <div id="alertsucces" class="alert alert-success d-none" role="alert">
+      <span class="alert-icon"><span class="visually-hidden">Succès</span></span>
+      <p>La validation du formulaire est réussi.</p>
+    </div>
+  </form>
+</div>
+```
 
-<pre>
-  <code class="javascript">
-  document.addEventListener("DOMContentLoaded", function(event) {
+```javascript
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.getElementById("password_visibility").onclick = function (e) {
+    let password = document.getElementById("password");
+    if (password.type == "password") {
+      password.type = "text";
+      this.title = "Cacher le mot de passe";
+    } else {
+      password.type = "password";
+      this.title = "Afficher le mot de passe";
+    }
+  };
 
-    document.getElementById("password_visibility").onclick = function (e){
-        let password = document.getElementById("password");
-        if(password.type=="password"){
-            password.type="text";
-            this.title ="Cacher le mot de passe";
-        }
-        else{
-            password.type="password";
-            this.title ="Afficher le mot de passe";
-        }
+  document.getElementById("submit").onclick = function (e) {
+    e.preventDefault();
+
+    let error = false;
+
+    let email = document.getElementById("email");
+    let password = document.getElementById("password");
+    let name = document.getElementById("name");
+    let firstname = document.getElementById("firstname");
+
+    if (firstname.value == "") {
+      error = invalid(firstname, "errorfirstname1");
+      document.getElementById("errorfirstname").classList.remove("d-none");
+    } else {
+      valid(firstname);
+      document.getElementById("errorfirstname").classList.add("d-none");
     }
 
-    document.getElementById("submit").onclick = function (e){
-        e.preventDefault();
-
-        let error=false;
-
-        let email = document.getElementById("email");
-        let password = document.getElementById("password");
-        let name = document.getElementById("name");
-        let firstname = document.getElementById("firstname");
-
-        if(firstname.value==""){
-            error=invalid(firstname,"errorfirstname1");
-            document.getElementById("errorfirstname").classList.remove("d-none");
-
-        }
-        else{
-            valid(firstname);
-            document.getElementById("errorfirstname").classList.add("d-none")
-        }
-
-        if(name.value==""){
-            error=invalid(name,"errorname1");
-            document.getElementById("errorname").classList.remove("d-none");
-        }
-        else{
-            valid(name);
-            document.getElementById("errorname").classList.add("d-none")
-        }
-
-        if(password.value==""){
-            error=invalid(password,"errorpassword1 passwordHelpBlock");
-            document.getElementById("errorpasswordDiv").classList.remove("d-none");
-        }
-        else{
-            if(password.value.length>=6){
-                valid(password);
-                document.getElementById("errorpasswordDiv").classList.add("d-none")
-                document.getElementById("errorpasswordDiv2").classList.add("d-none")
-                password.setAttribute("aria-describedby", "passwordHelpBlock");
-            }
-            else{
-                error=invalid(password,"errorpassword2 passwordHelpBlock");
-                document.getElementById("errorpasswordDiv").classList.add("d-none")
-                document.getElementById("errorpasswordDiv2").classList.remove("d-none");
-            }
-        }
-        if(email.value==""){
-            error=invalid(email,"erroremail1");
-            document.getElementById("erroremailDiv").classList.remove("d-none");
-        }
-        else{
-            if(validateEmail(email.value)){
-                valid(email);
-                document.getElementById("erroremailDiv").classList.add("d-none")
-                document.getElementById("erroremailDiv2").classList.add("d-none")
-            }
-            else{
-                error=invalid(email,"erroremail2");
-                document.getElementById("erroremailDiv").classList.add("d-none")
-                document.getElementById("erroremailDiv2").classList.remove("d-none");
-            }
-
-        }
-
-        if(error){
-            document.getElementById("alertsucces").classList.add("d-none")
-        }
-        else{
-            document.getElementById("alertsucces").classList.remove("d-none")
-        }
+    if (name.value == "") {
+      error = invalid(name, "errorname1");
+      document.getElementById("errorname").classList.remove("d-none");
+    } else {
+      valid(name);
+      document.getElementById("errorname").classList.add("d-none");
     }
 
-    function valid (element){
-        element.setAttribute("aria-invalid", false)
-        element.classList.remove("is-invalid");
-        element.removeAttribute("aria-describedby")
+    if (password.value == "") {
+      error = invalid(password, "errorpassword1 passwordHelpBlock");
+      document.getElementById("errorpasswordDiv").classList.remove("d-none");
+    } else {
+      if (password.value.length >= 6) {
+        valid(password);
+        document.getElementById("errorpasswordDiv").classList.add("d-none");
+        document.getElementById("errorpasswordDiv2").classList.add("d-none");
+        password.setAttribute("aria-describedby", "passwordHelpBlock");
+      } else {
+        error = invalid(password, "errorpassword2 passwordHelpBlock");
+        document.getElementById("errorpasswordDiv").classList.add("d-none");
+        document.getElementById("errorpasswordDiv2").classList.remove("d-none");
+      }
+    }
+    if (email.value == "") {
+      error = invalid(email, "erroremail1");
+      document.getElementById("erroremailDiv").classList.remove("d-none");
+    } else {
+      if (validateEmail(email.value)) {
+        valid(email);
+        document.getElementById("erroremailDiv").classList.add("d-none");
+        document.getElementById("erroremailDiv2").classList.add("d-none");
+      } else {
+        error = invalid(email, "erroremail2");
+        document.getElementById("erroremailDiv").classList.add("d-none");
+        document.getElementById("erroremailDiv2").classList.remove("d-none");
+      }
     }
 
-    function invalid(element,errorDiv){
-        element.setAttribute("aria-invalid", true);
-        element.classList.add("is-invalid");
-        element.setAttribute("aria-describedby", errorDiv);
-        element.focus();
-        return true;
+    if (error) {
+      document.getElementById("alertsucces").classList.add("d-none");
+    } else {
+      document.getElementById("alertsucces").classList.remove("d-none");
     }
+  };
 
-    const validateEmail = (email) => {
-        return String(email)
-          .toLowerCase()
-          .match(
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-          );
-      };
-})
-  </code>
-</pre>
+  function valid(element) {
+    element.setAttribute("aria-invalid", false);
+    element.classList.remove("is-invalid");
+    element.removeAttribute("aria-describedby");
+  }
+
+  function invalid(element, errorDiv) {
+    element.setAttribute("aria-invalid", true);
+    element.classList.add("is-invalid");
+    element.setAttribute("aria-describedby", errorDiv);
+    element.focus();
+    return true;
+  }
+
+  const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
+});
+```
 
 ## Lien vers la première partie
 
