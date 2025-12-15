@@ -2,7 +2,7 @@
 title: "Au-delà de la conformité : un argument commercial en faveur de l'accessibilité numérique dans l'Union européenne"
 abstract: "Article présentant les opportunités commerciales relatives à l'accessibilité numérique"
 titleBeforeTag: true
-date: "2025-10-03"
+date: "2025-12-19"
 tags:
   - web
   - mobile
