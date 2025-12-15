@@ -2,7 +2,7 @@
 title: "Beyond Compliance: The Strategic Business Case for Digital Accessibility in the European Union"
 abstract: "An evidence-based article on the business case for digital accessibility."
 titleBeforeTag: true
-date: "2025-10-03"
+date: "2025-12-19"
 tags:
   - web
   - mobile
