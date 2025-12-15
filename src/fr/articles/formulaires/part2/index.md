@@ -16,9 +16,9 @@ titleBeforeTag: true
 
 Nous avons vu dans la première partie comment <a href="../part1/">structurer son formulaire</a> en respectant les critères d'accessibilité.
 
-Dans cette deuxième partie, nous allons faciliter la saisie dans les champs par l'utilisateur et mettre en place d'un système de gestion des erreurs lors de la validation de notre formulaire.
+Dans cette deuxième partie, nous allons faciliter la saisie dans les champs pour les utilisateurs et mettre en place un système de gestion des erreurs lors de la validation du formulaire.
 
-Nous continuerons de baser nos exemples sur notre formulaire d'inscription de la partie 1.
+Nous continuerons à baser nos exemples sur le formulaire d'inscription de la partie 1.
 
 Dans cet exemple, nous utilisons <a href="http://boosted.orange.com/">la librairie Boosted</a> qui est la déclinaison Web de notre <a href="https://system.design.orange.com/">Orange Design System (ODS)</a>. Celle-ci permet d’obtenir des formulaires dont le design est conforme à la charte Orange.
 
@@ -32,7 +32,7 @@ Pour réaliser ceci, plusieurs solutions existent&nbsp;:
 
 <ul>
   <li>de manière programmatique, il faut utiliser l'attribut <code>required</code> ou <code>aria-required="true"</code> dans la balise <code>input</code> de nos champs, l'utilisation de ces attributs permettra aux technologies d'assistance (AT) d'indiquer que le champ est obligatoire.</li>
-  <li>il faut aussi informer les utilisateurs n'utilisant pas de technologies d'assistance que le champ est obligatoire; il faut donc rajouter une identification visuelle qui ne repose pas uniquement sur la couleur (par exemple, en mentionnant explicitement "obligatoire"). Si cette identification n'est pas réalisée via un texte explicite, par exemple, un astérisque (*), il faut en expliquer la signification, comme par exemple, "Tous les champs obligatoires sont marqués d'un *", qui sera placée au début du formulaire.</li>
+  <li>il faut aussi informer les utilisateurs n'utilisant pas de technologies d'assistance que le champ est obligatoire; il faut donc ajouter une identification visuelle qui ne repose pas uniquement sur la couleur (par exemple, en mentionnant explicitement "obligatoire"). Si cette identification n'est pas réalisée via un texte explicite, par exemple, un astérisque (*), il faut en expliquer la signification, comme par exemple, "Tous les champs obligatoires sont marqués d'un *", qui sera placée au début du formulaire.</li>
 </ul>
 
 #### Exemple
@@ -45,7 +45,7 @@ Il faut donc les spécifier aux utilisateurs.
   <form id="formulaire" class="border border-secondary p-3 my-2">
     <p>Tous les champs obligatoires sont marqués d'un *</p>
     <div class="mb-2">
-      <label for="email" class="form-label">Email * </label>
+      <label for="email" class="form-label">Email *</label>
       <input type="text" class="form-control" id="email" required/>
     </div>
     <label for="password" class="form-label">Mot de passe *</label>
@@ -67,7 +67,7 @@ Il faut donc les spécifier aux utilisateurs.
       </span>
     </div>
     <p id="passwordHelpBlock" class="form-text mb-0">
-      Votre mot de passe doit contenir minimum 6 caractères.
+      Votre mot de passe doit contenir au moins 6 caractères.
     </p>
     <div class="mb-2">
       <label for="name" class="form-label">Nom *</label>
@@ -101,7 +101,7 @@ Exemple de code&nbsp;:
       </span>
     </div>
     <p id="passwordHelpBlock" class="form-text mb-0">
-      Votre mot de passe doit contenir minimum 6 caractères.
+      Votre mot de passe doit contenir au moins 6 caractères.
     </p>
     <div class="mb-2">
       <label for="name" class="form-label">Nom *</label>
@@ -124,22 +124,22 @@ Pour réaliser ceci, il faut&nbsp;
 
 <ul>
   <li>Utiliser l'attribut <code>aria-invalid="true"</code> pour indiquer une erreur de saisie aux utilisateurs d'AT</li>
-  <li>Afficher des messages d'erreurs explicites pour tous les autres utilisateurs</li>
+  <li>Afficher des messages d'erreur explicites pour tous les autres utilisateurs</li>
   <li>Si besoin, suggérer des corrections</li>
 </ul>
 
-Si des messages d'erreurs empêchent la validation du formulaire, plutôt que de lister les erreurs au début du formulaire dans une bannière, on peut, pour chaque champ en erreur avertir l’utilisateur (voir ci-dessus).
+Si des messages d'erreur empêchent la validation du formulaire, plutôt que de lister les erreurs dans une bannière au début du formulaire, on peut avertir l’utilisateur pour chaque champ en erreur.
 
-Pour chaque champ en erreur, il faut que les messages soient explicites, ce qui signifie&nbsp;: 
+Pour chaque champ en erreur, il faut que les messages soient explicites, ce qui signifie&nbsp;:
 
 <ul>
-  <li>Soyez clair et non ambigu ("champ invalide" ne suffit pas, préciser quel champ est invalide et, si possible, en quoi il est invalide)</li>
+  <li>Soyez clair et non ambigu ("champ invalide" ne suffit pas, précisez quel champ est invalide et, si possible, en quoi il est invalide)</li>
   <li>Soyez précis et pertinent</li>
-  <li>Donner des pistes de corrections et moyens de corriger</li>
-  <li>Assurez-vous que les erreurs sont sous forme de texte, éviter les majuscules.</li>
+  <li>Donnez des pistes de corrections et moyens de corriger</li>
+  <li>Assurez-vous que les erreurs sont sous forme de texte et évitez l'utilisation systématique des majuscules.</li>
   <li>Ne vous contentez pas d'utiliser des indicateurs visuels ou seulement la couleur pour signaler les erreurs.</li>
   <li>Laisser actif en toute circonstance le bouton d'envoi. Certains sites Web activent le bouton d'envoi que si le formulaire est correctement rempli, c'est une mauvaise idée.</li>
-  <li>Fournissez les instructions nécessaires et soyez aussi précis que possible sur les erreurs commises afin de faciliter remplissage des champs par les utilisateurs.</li>
+  <li>Fournissez les instructions nécessaires et soyez aussi précis que possible sur les erreurs commises afin de faciliter le remplissage des champs par les utilisateurs.</li>
   <li>Assurez-vous que les erreurs sont visuellement identifiables sur la page Web.</li>
 </ul>
 
@@ -187,14 +187,14 @@ Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur&nbsp;
     </div>
     <div id="errorpasswordDiv" class="alert alert-danger alert-sm d-none">
         <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
-        <p id="errorpassword1">Le champ Mot de passe est obligatoire</p>
+        <p id="errorpassword1">Le champ mot de passe est obligatoire</p>
       </div>
       <div id="errorpasswordDiv2" class="alert alert-danger alert-sm d-none">
         <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
-        <p id="errorpassword2">Veuillez renseigner un Mot de passe valide (6 caractères minimum)</p>
+        <p id="errorpassword2">Veuillez renseigner un mot de passe valide (6 caractères minimum)</p>
       </div>
     <p id="passwordHelpBlock_2" class="form-text mb-0">
-      Votre mot de passe doit contenir minimum 6 caractères.
+      Votre mot de passe doit contenir au moins 6 caractères.
     </p>
     <div class="mb-2">
       <label for="name_2" class="form-label">Nom *</label>
@@ -215,7 +215,7 @@ Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur&nbsp;
     <fieldset>
       <legend>Genre</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_2" id="M_2" value="M" selected>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_2" id="M_2" value="M" checked>
         <label class="form-check-label" for="M_2">M</label>
       </div>
       <div class="form-check form-check-inline">
@@ -246,7 +246,7 @@ Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur&nbsp;
      <button id="submit" class="btn btn-primary">Soumettre</button>
      <div id="alertsucces" class="alert alert-success d-none" role="alert">
       <span class="alert-icon"><span class="visually-hidden">Succès</span></span>
-      <p>La validation du formulaire est réussi.</p>
+      <p>La validation du formulaire est réussie.</p>
     </div>
 
   </form>
@@ -255,9 +255,9 @@ Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur&nbsp;
 Dans l'exemple ci-dessus&nbsp;:
 
 <ul>
-  <li>Les champs obligatoires qui ne sont pas remplis ont des messages d'erreurs pertinents et uniques (exemple&nbsp;: Le champ email est obligatoire)</li>
+  <li>Les champs obligatoires qui ne sont pas remplis ont des messages d'erreur pertinents et uniques (exemple&nbsp;: Le champ email est obligatoire)</li>
   <li>Les champs avec une entrée invalide ont un message précis qui donne des suggestions de correction (exemple&nbsp;: Veuillez renseigner un Email valide (nomprenom@gmail.com))</li>
-  <li>Les messages d'erreurs sont liés au champ grâce à l'attribut <code>aria-describedby</code> ou <code>aria-labelledby</code>, ce qui permettra aux technologies d'assistances de restituer l'information</li>
+  <li>Les messages d'erreur sont liés au champ grâce à l'attribut <code>aria-describedby</code> ou <code>aria-labelledby</code>, ce qui permettra aux technologies d'assistances de restituer l'information</li>
   <li>Le focus clavier est mis sur le premier champ en erreur afin de pouvoir rebalayer tout le formulaire</li>
 </ul>
 
@@ -308,14 +308,14 @@ Le code HTML et JavaScript complet qui nous a permis de réaliser ce formulaire 
     </div>
     <div id="errorpasswordDiv" class="alert alert-danger alert-sm d-none">
       <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
-      <p id="errorpassword1">Le champ Mot de passe est obligatoire</p>
+      <p id="errorpassword1">Le champ mot de passe est obligatoire</p>
     </div>
     <div id="errorpasswordDiv2" class="alert alert-danger alert-sm d-none">
       <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
-      <p id="errorpassword2">Veuillez renseigner un Mot de passe valide (6 caractères minimum)</p>
+      <p id="errorpassword2">Veuillez renseigner un mot de passe valide (6 caractères minimum)</p>
     </div>
     <p id="passwordHelpBlock" class="form-text mb-0">
-      Votre mot de passe doit contenir minimum 6 caractères.
+      Votre mot de passe doit contenir au moins 6 caractères.
     </p>
     <div class="mb-2">
       <label for="name" class="form-label">Nom *</label>
@@ -336,7 +336,7 @@ Le code HTML et JavaScript complet qui nous a permis de réaliser ce formulaire 
     <fieldset>
       <legend>Genre</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M" selected>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M" checked>
         <label class="form-check-label" for="M">M</label>
       </div>
       <div class="form-check form-check-inline">
@@ -367,7 +367,7 @@ Le code HTML et JavaScript complet qui nous a permis de réaliser ce formulaire 
     <button id="submit" class="btn btn-primary">Soumettre</button>
     <div id="alertsucces" class="alert alert-success d-none" role="alert">
       <span class="alert-icon"><span class="visually-hidden">Succès</span></span>
-      <p>La validation du formulaire est réussi.</p>
+      <p>La validation du formulaire est réussie.</p>
     </div>
   </form>
 </div>
