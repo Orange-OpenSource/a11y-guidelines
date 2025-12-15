@@ -3,7 +3,7 @@ title: "Les attributs ARIA qui peuvent vous sauver !"
 abstract: "Quelques attributs ARIA à connaître pour avoir un nom accessible"
 titleBeforeTag: true
 date: "2018-01-08"
-updateDate: "2025-12-12"
+updateDate: "2025-12-15"
 tags:
   - web
   - intermediate
@@ -66,7 +66,6 @@ Cette description, souvent plus longue ou plus détaillée que le nom accessible
 &lt;button aria-label="Accéder au code HTML" aria-describedby="titre"&gt;html&lt;/buttton&gt;
 </code></pre>
 Sortie pour un lecteur d'écran : "Accéder au code HTML, bouton, Code de la page de formulaire de connexion".
-ou
 <pre><code class="html">
 &lt;h3 id="titre"&gt;Code de la page de formulaire de connexion&lt;/h3&gt;
 &lt;button id="code" aria-describedby="titre"&gt;Accéder au code HTML&lt;/buttton&gt;
