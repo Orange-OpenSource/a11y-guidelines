@@ -3,13 +3,16 @@ title: "Nouveautés de la version 1.3 de la norme ARIA : guide pour les dévelop
 abstract: "Découvrez les nouvelles fonctionnalités de la version 1.3 de la norme ARIA. Cet article fournit des exemples pratiques et explique comment ces améliorations renforcent l'accessibilité des applications web pour tous les utilisateurs."
 titleBeforeTag: true
 date: "2025-08-01"
+updateDate: "2025-10-06"
 tags:
   - web
   - advanced
 ---
 
+Cet article est régulièrement mis à jour en fonction des nouveautés annoncées dans la nouvelle version 1.3 de la norme <abbr>ARIA</abbr>.
+
 ## Introduction
-La version 1.3 de la norme <abbr>ARIA</abbr> (Accessible Rich Internet Applications) apporte des améliorations significatives pour l'accessibilité des applications web. Cet article vise à informer les développeurs web et mobile, ainsi que toute personne intéressée par l'accessibilité numérique, des nouveaux attributs et rôles introduits, de leur utilisation, et de l'impact qu'ils peuvent avoir sur l'expérience utilisateur.
+La version 1.3 de la norme <abbr>ARIA</abbr> (Accessible Rich Internet Applications) des améliorations importantes pour l'accessibilité des applications web. Cet article a pour objectif de présenter les nouveaux attributs et rôles introduits, leur utilisation, ainsi que l'impact qu'ils peuvent avoir sur l'expérience utilisateur.
 
 ## Nouveaux attributs ARIA
 
@@ -67,10 +70,52 @@ Description : cet attribut permet de fournir une description d'un élément, off
 Exemple d'utilisation :
 
 ```html
-<input type="text" aria-description="Veuillez entrer votre adresse e-mail." />
+<input type="mail" aria-description="Veuillez entrer votre adresse e-mail." />
 ```
 
 Impact utilisateur : les utilisateurs auront accès à des informations supplémentaires qui peuvent les aider à remplir des formulaires ou à interagir avec des éléments de manière plus efficace.
+
+### aria-errormessage
+
+Description : cet attribut permet de lier un message d'erreur à un élément de formulaire. Le message d'erreur est alors vocalisé par les technologies d'assistance uniquement si l'élément de formulaire est invalide (<code>aria-invalid="true"</code>).
+
+
+Exemple d'utilisation :
+
+```html
+<label for="mail">Adresse mail</label>
+<input type="email" id="mail" aria-invalid="true" aria-errormessage="erreurMail" />
+<p id="erreurMail">Erreur : cette adresse mail n'est pas valide</p>
+```
+
+Impact utilisateur : les utilisateurs pourront plus facilement comprendre et corriger les erreurs en remplisant un formulaire.
+
+### aria-keyshortcuts
+
+Description : cet attribut permet de mettre en évidence, dans le DOM, les éventuels raccourcis clavier à la disposition des utilisateurs.
+
+
+Exemple d'utilisation :
+
+```html
+<button type="button" aria-keyshortcuts="Esc">Fermer la modale</button>
+```
+
+Impact utilisateur : informer les utilisateurs et permettre à tous les utilisateurs de connaître les raccourcis claviers disponibles pour faciliter la navigation.
+
+
+### aria-placeholder
+
+Description : cet attribut permet d'ajouter un placeholder à des éléments de formulaire personnalisés qui ne supportent pas nativement l'attribut <code>placeholder</code>, par exemple une <code>div</code> avec un attribut <code>contenteditable</code>.
+
+
+Exemple d'utilisation :
+
+```html
+<div contenteditable="true" aria-placeholder="Tapez un message">...</div>
+```
+
+Impact utilisateur : meilleure compréhension des utilisateurs.
 
 ## Nouveaux rôles ARIA
 
@@ -94,7 +139,7 @@ Impact utilisateur : les utilisateurs peuvent recevoir des conseils utiles qui a
 
 ### role="comment"
 
-Description : ce rôle est utilisé signaler programmatiquement les zones de commentaires.
+Description : ce rôle est utilisé pour signaler programmatiquement les zones de commentaires.
 
 Exemple d'utilisation :
 
@@ -125,6 +170,16 @@ Exemple d'utilisation :
 
 Impact utilisateur : les utilisateurs de lecteurs d'écran peuvent être informés des éléments importants dans le contenu, ce qui améliore leur capacité à saisir les points clés.
 
+### role="code" et role="time"
+
+Description : le <code>role="code"</code> et le <code>role="time"</code> reproduisent la sémantique des éléments HTML <code>code</code> et <code>time</code>.
+
+Impact utilisateur : conserver une bonne sémantique dans les cas où il n'est pas possible d'utiliser les éléments HTML en raison de contraintes techniques.
+
+### role="image"
+
+Description : le <code>role="image"</code> est créé en remplacement du <code>role="img"</code> afin d'harmoniser les noms des différents rôles <abbr>ARIA</abbr>. <code>role="img"</code> reste valide pour des raisons de rétrocompatibilité.
+
 ## Cas d'utilisation
 
 ### Applications de messagerie
@@ -143,4 +198,5 @@ La version 1.3 de la norme <abbr>ARIA</abbr> introduit des attributs et rôles e
 <ul lang="en">
   <li><a href="https://w3c.github.io/aria/" hreflang="en">WAI-ARIA 1.3 draft (en)</a></li>
   <li><a href="https://www.craigabbott.co.uk/blog/a-look-at-the-new-wai-aria-1-3-draft/" hreflang="en">A look at the new WAI-ARIA 1.3 draft (en)</a></li>
+  <li><a href="https://webaim.org/blog/up-and-coming-aria/" hreflang="en">Up and Coming ARIA (en)</a></li>
 </ul>

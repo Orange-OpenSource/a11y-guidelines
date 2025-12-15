@@ -3,13 +3,16 @@ title: "New features in ARIA version 1.3: a guide for developers"
 abstract: "Explore the new features introduced in ARIA version 1.3. This article provides practical examples and explains how these enhancements improve web application accessibility for all users."
 titleBeforeTag: true
 date: "2025-08-01"
+updateDate: "2025-10-06"
 tags:
   - web
   - advanced
 ---
 
+This article is regularly updated based on the new features announced in version 1.3 of the <abbr>ARIA</abbr> standard.
+
 ## Introduction
-Version 1.3 of the <abbr>ARIA</abbr> (Accessible Rich Internet Applications) standard brings significant improvements to the accessibility of web applications. This article aims to inform web and mobile developers, as well as anyone interested in digital accessibility, about the new attributes and roles introduced, their usage, and the impact they can have on user experience.
+Version 1.3 of the <abbr>ARIA</abbr> (Accessible Rich Internet Applications) standard introduces significant improvements for web application accessibility. This article aims to present the new attributes and roles introduced, their usage, and the impact they can have on the user experience.
 
 ## New ARIA attributes
 
@@ -44,7 +47,7 @@ User impact: braille device users will have a better understanding of the page s
 
 ### aria-details
 
-Description: this attribute has been modified in the version 1.3 of <abbr>ARIA</abbr> to allow referencing multiple <code>is</code>. It thus allows referencing one or more elements that provide additional information about another element, offering a richer context.
+Description: this attribute has been modified in the version 1.3 of <abbr>ARIA</abbr> to allow referencing multiple <code>id</code> attributes. It thus allows referencing one or more elements that provide additional information about another element, offering a richer context.
 
 Example usage:
 
@@ -67,10 +70,48 @@ Description: this attribute allows providing a description of an element, offeri
 Example usage:
 
 ```html
-<input type="text" aria-description="Please enter your email address." />
+<input type="email" aria-description="Please enter your email address." />
 ```
 
 User impact: users will have access to additional information that can help them fill out forms or interact with elements more effectively.
+
+### aria-errormessage
+
+Description: this attribute allows linking an error message to a form element. The error message is then vocalized by assistive technologies only if the form element is invalid (<code>aria-invalid="true"</code>).
+
+Example usage:
+
+```html
+<label for="mail">Email address</label>
+<input type="email" id="mail" aria-invalid="true" aria-errormessage="mailError" />
+<p id="mailError">Error: enter a valid email address</p>
+```
+
+User impact: users will be able to understand and correct errors more easily when filling out a form.
+
+### aria-keyshortcuts
+
+Description: this attribute allows highlighting in the DOM any keyboard shortcuts available to users.
+
+Example usage:
+
+```html
+<button type="button" aria-keyshortcuts="Esc">Close dialog</button>
+```
+
+User impact: inform users and enable all users to know the available keyboard shortcuts to facilitate navigation.
+
+### aria-placeholder
+
+Description: this attribute allows adding a placeholder to custom form elements that do not natively support the placeholder attribute, such as a <code>div</code> with a <code>contenteditable</code> attribute.
+
+Example usage:
+
+```html
+<div contenteditable="true" aria-placeholder="Write your message">...</div>
+```
+
+User impact: better understanding of users.
 
 ## New ARIA roles
 
@@ -125,6 +166,16 @@ Example usage:
 
 User impact: screen reader users can be informed about important elements in the content, improving their ability to grasp key points.
 
+### role="code" and role="time"
+
+Description: <code>role="code"</code> and <code>role="time"</code> reproduce the semantics of the HTML elements <code>code</code> and <code>time</code>.
+
+User impact: maintain good semantics in cases where it is not possible to use native HTML elements due to technical constraints.
+
+### role="image"
+
+Description: <code>role="image"</code> is created as a replacement for <code>role="img"</code> to harmonize the names of different <abbr>ARIA</abbr> roles. <code>role="img"</code> remains valid for backward compatibility reasons.
+
 ## Use cases
 
 ### Messaging applications
@@ -143,4 +194,5 @@ Version 1.3 of the <abbr>ARIA</abbr> standard introduces essential attributes an
 <ul>
   <li><a href="https://w3c.github.io/aria/">WAI-ARIA 1.3 draft</a></li>
   <li><a href="https://www.craigabbott.co.uk/blog/a-look-at-the-new-wai-aria-1-3-draft/">A look at the new WAI-ARIA 1.3 draft</a></li>
+  <li><a href="https://webaim.org/blog/up-and-coming-aria/">Up and Coming ARIA</a></li>
 </ul>
