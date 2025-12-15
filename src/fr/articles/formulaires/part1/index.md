@@ -67,24 +67,22 @@ Exemple d'étiquettes correctement liées de manière explicite&nbsp;:
 
 Exemple de code&nbsp;:
 
-<pre>
-  <code class="html">
-  &lt;form id="formulaire" class="border border-secondary p-3 my-2"&gt;
-    &lt;div class="mb-2"&gt;
-        &lt;label for="email" class="form-label"&gt;Email&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="email"/&gt;
-    &lt;/div&gt;
-    &lt;div class="mb-2"&gt;
-      &lt;label for="name" class="form-label"&gt;Nom&lt;/label&gt;
-      &lt;input type="text" class="form-control" id="name"/&gt;
-    &lt;/div&gt;
-    &lt;div class="mb-2"&gt;
-      &lt;label for="firstname" class="form-label"&gt;Prénom&lt;/label&gt;
-      &lt;input type="text" class="form-control" id="firstname"/&gt;
-    &lt;/div&gt;
-  &lt;/form&gt;
-  </code>
-</pre>
+```html
+<form id="formulaire" class="border border-secondary p-3 my-2">
+  <div class="mb-2">
+    <label for="email" class="form-label">Email</label>
+    <input type="text" class="form-control" id="email"/>
+  </div>
+  <div class="mb-2">
+    <label for="name" class="form-label">Nom</label>
+    <input type="text" class="form-control" id="name"/>
+  </div>
+  <div class="mb-2">
+    <label for="firstname" class="form-label">Prénom</label>
+    <input type="text" class="form-control" id="firstname"/>
+  </div>
+</form>
+```
 
 ### Masquer les étiquettes de manière accessible
 
@@ -101,13 +99,11 @@ Consultez l'exemple sur <a href="../../../web/exemples-de-composants/masquage-ac
 Par exemple, nous pouvons utiliser le masquage accessible pour un champ de recherche, si un bouton avec pour libellé recherche, ou une image loupe, est à coté du champ. Ainsi, l'étiquette du champ est cachée visuellement afin d'éviter une redondance.
 Exemple de code&nbsp;:
 
-<pre>
-  <code class="html">
-    &lt;label for="recherche" class="visually-hidden"&gt;Recherche: &lt;/label&gt;
-    &lt;input type="text" name="recherche" id="recherche"&gt;
-    &lt;button type="submit"&gt;Recherche&lt;/button&gt;
-  </code>
-</pre>
+```html
+<label for="recherche" class="visually-hidden">Recherche: </label>
+<input type="text" name="recherche" id="recherche">
+<button type="submit">Recherche</button>
+```
 
 ### Les attributs ARIA
 
@@ -121,12 +117,10 @@ Il est aussi possible d'utiliser les attributs <code>aria-label</code> et <code>
 
 Un exemple possible&nbsp;:
 
-<pre>
-  <code class="html">
-    &lt;input type="text" name="recherche" aria-labelledby="recherche"&gt;
-    &lt;button id="recherche" type="submit" class="icon-loup" aria-label="Recherche"&gt;&lt;/button&gt;
-  </code>
-</pre>
+```html
+<input type="text" name="recherche" aria-labelledby="recherche">
+<button id="recherche" type="submit" class="icon-loup" aria-label="Recherche"></button>
+```
 
 ### L'attribut title
 
@@ -181,30 +175,28 @@ Dans notre formulaire d'inscription, on peut ajouter le genre de notre utilisate
 
 Un exemple possible&nbsp;:
 
-<pre>
-  <code class="html">
-    &lt;div class="col-md-8"&gt;
-    &lt;form id="formulaire3" class="border border-secondary p-3 my-2"&gt;
-      [...]
-      &lt;fieldset&gt;
-        &lt;legend&gt;Genre&lt;/legend&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M"&gt;
-          &lt;label class="form-check-label" for="M"&gt;M&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme"&gt;
-          &lt;label class="form-check-label" for="Mme"&gt;Mme&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="non-binaire" value="Non-binaire" &gt;
-          &lt;label class="form-check-label" for="non-binaire"&gt;Non-binaire&lt;/label&gt;
-        &lt;/div&gt;
-      &lt;/fieldset&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
-  </code>
-</pre>
+```html
+<div class="col-md-8">
+  <form id="formulaire3" class="border border-secondary p-3 my-2">
+    [...]
+    <fieldset>
+      <legend>Genre</legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M">
+        <label class="form-check-label" for="M">M</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme">
+        <label class="form-check-label" for="Mme">Mme</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="non-binaire" value="Non-binaire" >
+        <label class="form-check-label" for="non-binaire">Non-binaire</label>
+      </div>
+    </fieldset>
+  </form>
+</div>
+```
 
 ## Préciser le type ou le format attendu
 
@@ -244,36 +236,34 @@ Lorsqu'on ajoute un champ mot de passe, il est aussi important de laisser la pos
         </button>
       </span>
     </div>
-    <div id="passwordHelpBlock" class="form-text">
+    <p id="passwordHelpBlock" class="form-text mb-0">
         Votre mot de passe doit contenir au moins 6 caractères.
-    </div>
+    </p>
   </form>
 </div>
 
 Un exemple possible&nbsp;:
 
-<pre>
-  <code class="html">
-  &lt;div class="col-md-8"&gt;
-    &lt;form id="formulaire4" class="border border-secondary p-3 my-2"&gt;
-      &lt;label for="password" class="form-label"&gt;Mot de passe &lt;/label&gt;
-      &lt;div class="mb-2 input-group"&gt;
-        &lt;input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/&gt;
-        &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" &gt;
-            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
-              [...]
-            &lt;/svg&gt;
-          &lt;/button&gt;
-        &lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div id="passwordHelpBlock" class="form-text"&gt;
-          Votre mot de passe doit contenir minimum 6 caractères.
-        &lt;/div&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
-  </code>
-</pre>
+```html
+<div class="col-md-8">
+  <form id="formulaire4" class="border border-secondary p-3 my-2">
+    <label for="password" class="form-label">Mot de passe </label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/>
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" >
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            [...]
+          </svg>
+        </button>
+      </span>
+    </div>
+    <p id="passwordHelpBlock" class="form-text mb-0">
+        Votre mot de passe doit contenir minimum 6 caractères.
+      </p>
+  </form>
+</div>
+```
 
 ## Exemple complet
 
@@ -304,9 +294,9 @@ Pour la suite de l'exercice et compléter notre formulaire d'inscription, nous a
         </button>
       </span>
     </div>
-    <div id="passwordHelpBlock_final" class="form-text">
+    <p id="passwordHelpBlock_final" class="form-text mb-0">
         Votre mot de passe doit contenir minimum 6 caractères.
-    </div>
+    </p>
     <div class="mb-2">
       <label for="name_final" class="form-label">Nom</label>
       <input type="text" class="form-control" id="name_final"/>
@@ -350,69 +340,68 @@ Pour la suite de l'exercice et compléter notre formulaire d'inscription, nous a
 </div>
 
 Le code final :
-<pre>
-  <code class="html">
-  &lt;div class="col-md-8"&gt;
-    &lt;form id="formulaire_final" class="border border-secondary p-3 my-2"&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="email_final" class="form-label"&gt;Email&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="email_final"/&gt;
-      &lt;/div&gt;
-      &lt;label for="password_final" class="form-label"&gt;Mot de passe &lt;/label&gt;
-      &lt;div class="mb-2 input-group"&gt;
-        &lt;input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/&gt;
-        &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility_final" title="Afficher le mot de passe" &gt;
-            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;&lt;/svg&gt;
-          &lt;/button&gt;
-        &lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div id="passwordHelpBlock_final" class="form-text"&gt;
-          Votre mot de passe doit contenir minimum 6 caractères.
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="name_final" class="form-label"&gt;Nom&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="name_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="firstname_final" class="form-label"&gt;Prénom&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="firstname_final"/&gt;
-      &lt;/div&gt;
-      &lt;fieldset&gt;
-        &lt;legend&gt;Genre&lt;/legend&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M"&gt;
-          &lt;label class="form-check-label" for="M_final"&gt;M&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme"&gt;
-          &lt;label class="form-check-label" for="Mme_final"&gt;Mme&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="non-binaire_final" value="Non-binaire" &gt;
-          &lt;label class="form-check-label" for="Non-binaire_final"&gt;non-binaire&lt;/label&gt;
-        &lt;/div&gt;
-      &lt;/fieldset&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="adresse_final" class="form-label"&gt;Adresse&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="adresse_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="adresse2_final" class="form-label"&gt;Complément d'adresse&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="adresse2_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="ville_final" class="form-label"&gt;Ville&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="ville_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="cp_final" class="form-label"&gt;Code postal&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="cp_final"/&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
-  </code>
-</pre>
+
+```html
+<div class="col-md-8">
+  <form id="formulaire_final" class="border border-secondary p-3 my-2">
+    <div class="mb-2">
+      <label for="email_final" class="form-label">Email</label>
+      <input type="text" class="form-control" id="email_final"/>
+    </div>
+    <label for="password_final" class="form-label">Mot de passe </label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/>
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility_final" title="Afficher le mot de passe" >
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"></svg>
+        </button>
+      </span>
+    </div>
+    <p id="passwordHelpBlock_final" class="form-text mb-0">
+      Votre mot de passe doit contenir minimum 6 caractères.
+    </p>
+    <div class="mb-2">
+      <label for="name_final" class="form-label">Nom</label>
+      <input type="text" class="form-control" id="name_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="firstname_final" class="form-label">Prénom</label>
+      <input type="text" class="form-control" id="firstname_final"/>
+    </div>
+    <fieldset>
+      <legend>Genre</legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M">
+        <label class="form-check-label" for="M_final">M</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme">
+        <label class="form-check-label" for="Mme_final">Mme</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="non-binaire_final" value="Non-binaire" >
+        <label class="form-check-label" for="Non-binaire_final">non-binaire</label>
+      </div>
+    </fieldset>
+    <div class="mb-2">
+      <label for="adresse_final" class="form-label">Adresse</label>
+      <input type="text" class="form-control" id="adresse_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="adresse2_final" class="form-label">Complément d'adresse</label>
+      <input type="text" class="form-control" id="adresse2_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="ville_final" class="form-label">Ville</label>
+      <input type="text" class="form-control" id="ville_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="cp_final" class="form-label">Code postal</label>
+      <input type="text" class="form-control" id="cp_final"/>
+    </div>
+  </form>
+</div>
+```
 
 ## Lien vers la deuxième partie
 
