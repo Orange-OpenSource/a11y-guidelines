@@ -256,7 +256,7 @@ Ce tableau nécessite deux en-têtes, un en-tête de colonne pour les jours de l
 
 <pre><code class="html">
 &lt;table class="table"&gt;
- &lt;caption class="h4"&gt;Ouverture du magasin de jouet&lt;/caption&gt;
+ &lt;caption class="h4"&gt;Ouverture du magasin de jouets&lt;/caption&gt;
   &lt;tr&gt;
     &lt;td&gt;&lt;/td&gt;
     &lt;th scope="col"&gt;Lundi&lt;/th&gt;
