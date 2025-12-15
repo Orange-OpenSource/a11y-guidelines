@@ -32,7 +32,7 @@ To achieve this, several solutions exist:
 
 <ul>
    <li>Programmatically, you must use the <code>required</code> or <code>aria-required="true"</code> attribute in the <code>input</code> tag of our fields, using these attributes will allow assistive technologies (AT) to indicate that the field is required.</li>
-   <li>Users who do not use assistive technologies must also be informed that the field is mandatory. Add a visual identification that is not based solely on color (for example, by explicitly mentioning 'mandatory'). If this identification is not made via explicit text, for example, an asterisk (*), the meaning must be explained, such as, for example, 'All mandatory fields are marked with an *', which will be placed beginning of the form.</li>
+   <li>Users who do not use assistive technologies must also be informed that the field is mandatory. Add a visual identification that is not based solely on color (for example, by explicitly mentioning 'mandatory'). If this identification is not made via explicit text, for example, an asterisk (*), the meaning must be explained, such as, for example, 'All mandatory fields are marked with an *', which will be placed at the beginning of the form.</li>
 </ul>
 
 #### Example
@@ -248,7 +248,7 @@ In our registration example, several fields may be in error:
      <button id="submit" class="btn btn-primary">Submit</button>
      <div id="alertsuccess" class="alert alert-success d-none" role="alert">
       <span class="alert-icon"><span class="visually-hidden">Success</span></span>
-      <p>The validation of the form is successful.</p>
+      <p>The form has been successfully validated.</p>
     </div>
 
   </form>
@@ -259,7 +259,7 @@ In the example above:
 <ul>
    <li>Mandatory fields that are not completed have relevant and unique error messages (example: The email field is mandatory).</li>
    <li>Fields with an invalid entry have a specific message that gives suggestions for correction (example: Please enter a valid Email (lastnamefirstname@gmail.com)).</li>
-   <li>Error messages are linked to the field using the <code>aria-describedby</code> or <code>aria-labelledby</code> attribute, which will allow assistive technologies to render the 'information'.</li>
+   <li>Error messages are linked to the field using the <code>aria-describedby</code> or <code>aria-labelledby</code> attribute, which will allow assistive technologies to render the information.</li>
    <li>The keyboard focus is put on the first field in error in order to be able to rescan the whole form.</li>
 </ul>
 
@@ -373,9 +373,9 @@ The full HTML and JavaScript code that allowed us to make this accessible regist
       <input type="text" class="form-control" id="cp_2"/>
     </div>
      <button id="submit" class="btn btn-primary">Submit</button>
-     <div id="alertsucces" class="alert alert-success d-none" role="alert">
+     <div id="alertsuccess" class="alert alert-success d-none" role="alert">
       <span class="alert-icon"><span class="visually-hidden">Success</span></span>
-      <p>The validation of the form is successful.</p>
+      <p>The form has been successfully validated.</p>
     </div>
   </form>
 </div>
@@ -462,9 +462,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
     if (error) {
-      document.getElementById("alertsucces").classList.add("d-none");
+      document.getElementById("alertsuccess").classList.add("d-none");
     } else {
-      document.getElementById("alertsucces").classList.remove("d-none");
+      document.getElementById("alertsuccess").classList.remove("d-none");
     }
   };
 
