@@ -348,7 +348,7 @@ Le code final :
       <label for="email_final" class="form-label">Email</label>
       <input type="text" class="form-control" id="email_final"/>
     </div>
-    <label for="password_final" class="form-label">Mot de passe </label>
+    <label for="password_final" class="form-label">Mot de passe</label>
     <div class="mb-2 input-group">
       <input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/>
       <span class="input-group-text">

@@ -2,11 +2,12 @@
 title: "Form part 1 - Structure your form"
 abstract: "Making an accessible form, part 1: labeling your fields and structuring your form"
 date: "2022-12-12"
+updateDate: "2026-01-01"
 tags:
   - web
   - intermediate
   - component
-js: 
+js:
 - script.js
 titleBeforeTag: true
 ---
@@ -43,9 +44,9 @@ The preferred solution is to use the <code>label</code> element. It is best supp
      will be used as a container surrounding the form field. The first solution is recommended.</li>
 </ul>
 
-#### Example 
+#### Example
 
-Example of explicitly linked form labels :
+Example of explicitly linked form labels:
 
 <div class="col-md-8">
   <form id="formulaire" class="border border-secondary p-3 my-2">
@@ -64,26 +65,24 @@ Example of explicitly linked form labels :
   </form>
 </div>
 
-Sample code :
+Sample code:
 
-<pre>
-  <code class="html">
-  &lt;form id="formulaire" class="border border-secondary p-3 my-2"&gt;
-    &lt;div class="mb-2"&gt;
-        &lt;label for="email" class="form-label"&gt;E-mail&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="email"/&gt;
-    &lt;/div&gt;
-    &lt;div class="mb-2"&gt;
-      &lt;label for="name" class="form-label"&gt;Last Name&lt;/label&gt;
-      &lt;input type="text" class="form-control" id="name"/&gt;
-    &lt;/div&gt;
-    &lt;div class="mb-2"&gt;
-      &lt;label for="firstname" class="form-label"&gt;Fist Name&lt;/label&gt;
-      &lt;input type="text" class="form-control" id="firstname"/&gt;
-    &lt;/div&gt;
-  &lt;/form&gt;
-  </code>
-</pre>
+```html
+  <form id="formulaire" class="border border-secondary p-3 my-2">
+    <div class="mb-2">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="text" class="form-control" id="email"/>
+    </div>
+    <div class="mb-2">
+      <label for="name" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="name"/>
+    </div>
+    <div class="mb-2">
+      <label for="firstname" class="form-label">Fist Name</label>
+      <input type="text" class="form-control" id="firstname"/>
+    </div>
+  </form>
+```
 
 ### Hide labels in an accessible way
 
@@ -101,13 +100,11 @@ For example, we can use accessible hiding for a search field, if a button with t
 
 Sample code:
 
-<pre>
-  <code class="html">
-    &lt;label for="recherche" class="visually-hidden"&gt;Search: &lt;/label&gt;
-    &lt;input type="text" name="search" id="search"&gt;
-    &lt;button type="submit"&gt;Search&lt;/button&gt;
-  </code>
-</pre> 
+```html
+<label for="recherche" class="visually-hidden">Search:</label>
+<input type="text" name="search" id="search">
+<button type="submit">Search</button>
+```
 
 ### ARIA attributes
 
@@ -121,12 +118,10 @@ It is also possible to use the <code>aria-label</code> and <code>aria-labelledby
 
 A possible example:
 
-<pre>
-  <code class="html">
-    &lt;input type="text" name="search" aria-labelledby="search"&gt;
-    &lt;button id="search" type="submit" class="icon-loup" aria-label="Search"&gt;&lt;/button&gt;
-  </code>
-</pre>
+```html
+<input type="text" name="search" aria-labelledby="search">
+<button id="search" type="submit" class="icon-loup" aria-label="Search"></button>
+```
 
 ### The title attribute
 
@@ -178,32 +173,30 @@ In our registration form, we can add the gender of our user. For this, we will i
   </form>
 </div>
 
-Sample code&nbsp;: 
+Sample code:
 
-<pre>
-  <code class="html">
-    &lt;div class="col-md-8"&gt;
-    &lt;form id="formulaire3" class="border border-secondary p-3 my-2"&gt;
-      [...]
-      &lt;fieldset&gt;
-        &lt;legend&gt;Gender&lt;/legend&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M"&gt;
-          &lt;label class="form-check-label" for="M"&gt;Mr&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme"&gt;
-          &lt;label class="form-check-label" for="Mme"&gt;Mrs&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="No-binary" &gt;
-          &lt;label class="form-check-label" for="Non-binaire"&gt;no-binary&lt;/label&gt;
-        &lt;/div&gt;
-      &lt;/fieldset&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
-  </code>
-</pre>
+```html
+<div class="col-md-8">
+  <form id="formulaire3" class="border border-secondary p-3 my-2">
+    [...]
+    <fieldset>
+      <legend>Gender</legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M">
+        <label class="form-check-label" for="M">Mr</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme">
+        <label class="form-check-label" for="Mme">Mrs</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="No-binary" >
+        <label class="form-check-label" for="Non-binaire">no-binary</label>
+      </div>
+    </fieldset>
+  </form>
+</div>
+```
 
 ## Specify the expected type or format
 
@@ -243,36 +236,34 @@ When adding a password field, it is also important to allow the possibility of d
         </button>
       </span>
     </div>
-    <div id="passwordHelpBlock" class="form-text">
-        Your password must contain at least 6 characters.
-    </div>
+    <p id="passwordHelpBlock" class="form-text mb-0">
+      Your password must contain at least 6 characters.
+    </p>
   </form>
 </div>
 
-Sample code&nbsp;: 
+Sample code:
 
-<pre>
-  <code class="html">
-  &lt;div class="col-md-8"&gt;
-    &lt;form id="formulaire4" class="border border-secondary p-3 my-2"&gt;
-      &lt;label for="password" class="form-label"&gt;Password&lt;/label&gt;
-      &lt;div class="mb-2 input-group"&gt;
-        &lt;input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/&gt;
-        &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility" title="Show password" &gt;
-            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
-              [...]
-            &lt;/svg&gt;
-          &lt;/button&gt;
-        &lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div id="passwordHelpBlock" class="form-text"&gt;
-          Your password must contain at least 6 characters.
-        &lt;/div&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
-  </code>
-</pre>
+```html
+<div class="col-md-8">
+  <form id="formulaire4" class="border border-secondary p-3 my-2">
+    <label for="password" class="form-label">Password</label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/>
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility" title="Show password" >
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            [...]
+          </svg>
+        </button>
+      </span>
+    </div>
+    <p id="passwordHelpBlock" class="form-text mb-0">
+      Your password must contain at least 6 characters.
+    </p>
+  </form>
+</div>
+```
 
 ## Complete example
 
@@ -303,9 +294,9 @@ For the rest of the exercise and to complete our registration form, we have adde
         </button>
       </span>
     </div>
-    <div id="passwordHelpBlock_final" class="form-text">
-        Your password must contain at least 6 characters.
-    </div>
+    <p id="passwordHelpBlock_final" class="form-text mb-0">
+      Your password must contain at least 6 characters.
+    </p>
     <div class="mb-2">
       <label for="name_final" class="form-label">Last Name</label>
       <input type="text" class="form-control" id="name_final"/>
@@ -348,70 +339,69 @@ For the rest of the exercise and to complete our registration form, we have adde
   </form>
 </div>
 
-The final code : 
-<pre>
-  <code class="html">
-  &lt;div class="col-md-8"&gt;
-    &lt;form id="formulaire_final" class="border border-secondary p-3 my-2"&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="email_final" class="form-label"&gt;E-mail&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="email_final"/&gt;
-      &lt;/div&gt;
-      &lt;label for="password_final" class="form-label"&gt;Password &lt;/label&gt;
-      &lt;div class="mb-2 input-group"&gt;
-        &lt;input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/&gt;
-        &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Show password" &gt;
-            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;&lt;/svg&gt;
-          &lt;/button&gt;
-        &lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div id="passwordHelpBlock_final" class="form-text"&gt;
-          Your password must contain at least 6 characters.
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="name_final" class="form-label"&gt;Last Name&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="name_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="firstname_final" class="form-label"&gt;First Name&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="firstname_final"/&gt;
-      &lt;/div&gt;
-      &lt;fieldset&gt;
-        &lt;legend&gt;Gender&lt;/legend&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M"&gt;
-          &lt;label class="form-check-label" for="M_final"&gt;Mr&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme"&gt;
-          &lt;label class="form-check-label" for="Mme_final"&gt;Mrs&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Non-binaire_final" value="No-binary" &gt;
-          &lt;label class="form-check-label" for="Non-binaire_final"&gt;No-binary&lt;/label&gt;
-        &lt;/div&gt;
-      &lt;/fieldset&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="adresse_final" class="form-label"&gt;Address&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="adresse_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="adresse2_final" class="form-label"&gt;Additional address&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="adresse2_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="ville_final" class="form-label"&gt;City&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="ville_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="cp_final" class="form-label"&gt;Zip Code&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="cp_final"/&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
-  </code>
-</pre>
+The final code:
+
+```html
+<div class="col-md-8">
+  <form id="formulaire_final" class="border border-secondary p-3 my-2">
+    <div class="mb-2">
+      <label for="email_final" class="form-label">E-mail</label>
+      <input type="text" class="form-control" id="email_final"/>
+    </div>
+    <label for="password_final" class="form-label">Password</label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/>
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Show password" >
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"></svg>
+        </button>
+      </span>
+    </div>
+    <p id="passwordHelpBlock_final" class="form-text mb-0">
+      Your password must contain at least 6 characters.
+    </p>
+    <div class="mb-2">
+      <label for="name_final" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="name_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="firstname_final" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="firstname_final"/>
+    </div>
+    <fieldset>
+      <legend>Gender</legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M">
+        <label class="form-check-label" for="M_final">Mr</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme">
+        <label class="form-check-label" for="Mme_final">Mrs</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Non-binaire_final" value="No-binary" >
+        <label class="form-check-label" for="Non-binaire_final">No-binary</label>
+      </div>
+    </fieldset>
+    <div class="mb-2">
+      <label for="adresse_final" class="form-label">Address</label>
+      <input type="text" class="form-control" id="adresse_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="adresse2_final" class="form-label">Additional address</label>
+      <input type="text" class="form-control" id="adresse2_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="ville_final" class="form-label">City</label>
+      <input type="text" class="form-control" id="ville_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="cp_final" class="form-label">Zip Code</label>
+      <input type="text" class="form-control" id="cp_final"/>
+    </div>
+  </form>
+</div>
+```
 
 ## Link to part two
 
