@@ -33,7 +33,7 @@ Il doit être associé au tableau grâce à la balise <code>caption</code> et do
 &lt;/table&gt;
 </code></pre>
 
-Une autre façon de donner un titre est l'utilisation des attributs <code>aria-labelledby</code> ou <code>aria-label</code> sur la balise <code>table</code>.
+Une autre façon de donner un titre est l'utilisation des attributs <code>aria-labelledby</code> ou <code>aria-label</code> sur la balise <code>table</code>, un titre doit cependant être visible.
 #### Exemple avec <code>aria-label</code>
 <pre><code class="html">
 &lt;table aria-label="titre du tableau"&gt;
