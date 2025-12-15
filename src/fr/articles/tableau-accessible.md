@@ -1,6 +1,6 @@
 ---
 title: "Les tableaux dans l'accessibilité"
-abstract: "Toutes nos recommandations pour que les tableaux soit accessibles"
+abstract: "Toutes nos recommandations pour que les tableaux soient accessibles"
 titleBeforeTag: true
 date: "2022-04-15"
 updateDate: "2025-12-05"
@@ -23,7 +23,7 @@ Dans la suite de cet article, nous allons voir les principales règles à respec
 
 ### Mettre une légende/titre à votre tableau
 
-Il est important de définir un titre à votre tableau. À la fois concis et pertinent, ce texte doit permettre de comprendre la nature ainsi que le type de données qu'il contient.
+Il est important de donner un titre à votre tableau. À la fois concis et pertinent, ce texte doit permettre de comprendre la nature ainsi que le type de données qu'il contient.
 Il doit être associé au tableau grâce à la balise <code>caption</code> et doit être le premier élément après la balise d'ouverture <code>table</code>. 
 #### Exemple avec <code>caption</code>
 <pre><code class="html">
@@ -74,7 +74,7 @@ exemple de description pour aider à la compréhension du tableau complexe
 Pour aider les utilisateurs de technologies d'assistance, il est impératif d'identifier les en-têtes des tableaux, que ce soit pour les lignes ou les colonnes. Pour baliser ces en-têtes, il faut utiliser la balise <code>th</code>, celle-ci ne doit jamais être vide.
 
 Une fois que les en-têtes sont créés, il faut associer les cellules de données aux en-têtes dont elles dépendent.
-L'attribut <code>scope</code> permet de lier programmatiquement les cellules aux en-têtes, et donc aux technologies d'assistances de les identifier. 
+L'attribut <code>scope</code> permet de lier programmatiquement les cellules aux en-têtes, et donc aux technologies d'assistance de les identifier. 
 
 <ul>
   <li><code>&lt;th scope="col"&gt;</code> pour un en-tête colonne</li>
@@ -84,15 +84,15 @@ L'attribut <code>scope</code> permet de lier programmatiquement les cellules aux
 
 #### Tableaux complexes : attributs id et headers
 
-Certains tableaux sont trop complexes pour identifier une association horizontale ou verticale stricte entre l'en-tête et les cellules des données (par exemples, fusion de colonnes ou de lignes ou en-têtes à plusieurs niveaux).
+Certains tableaux sont trop complexes pour identifier une association horizontale ou verticale stricte entre l'en-tête et les cellules des données (par exemple, fusion de colonnes ou de lignes ou en-têtes à plusieurs niveaux).
 L'attribut <code>scope</code> ne permet pas de restituer cette organisation. Il faut utiliser un attribut <code>id</code> unique pour chaque cellule d'en-tête. Pour relier cet en-tête à une cellule, il faudra utiliser l'attribut <code>headers</code> en y rajoutant les <code>id</code> voulus.
 
-Par exemple, supposons deux cellules d'entêtes, <code>&lt;th id="toto"&gt;Toto&lt;/th&gt;</code> et <code>&lt;th id="tata"&gt;Tata&lt;/th&gt;</code>, le code pour la relier à une cellule de donnée sera <code>&lt;td headers="toto tata"&gt;Tota&lt;/td&gt;</code>.
+Par exemple, supposons deux cellules d'en-têtes, <code>&lt;th id="toto"&gt;Toto&lt;/th&gt;</code> et <code>&lt;th id="tata"&gt;Tata&lt;/th&gt;</code>, le code pour la relier à une cellule de donnée sera <code>&lt;td headers="toto tata"&gt;Tota&lt;/td&gt;</code>.
 
-Un tableau doit utiliser <code>headers/id</code> que si&nbsp;:
+Un tableau doit utiliser <code>headers/id</code> uniquement si&nbsp;:
 <ul>
   <li>Ce tableau a des en-têtes de colonnes/lignes qui changent à l'intérieur du tableau.</li>
-  <li>Une cellule de données à trois en-têtes ou plus associés (souvent lié à des cellules d'en-têtes qui sont fusionnées)</li>
+  <li>Une cellule de données ayant trois en-têtes ou plus associés (souvent liée à des cellules d'en-têtes qui sont fusionnées)</li>
 </ul>
 
 ### Cas particuliers des tableaux de mise en forme
@@ -113,18 +113,18 @@ Le fait de créer des tableaux accessibles permettra une lecture cohérente de c
 
 
 #### NVDA
-Pour naviguer rapidement de tableau en tableau dans une page, il suffit d'utiliser sur la touche <kbd>t</kbd>. Si on utilise le raccourci <kbd>Maj + t</kbd>, on navigue dans le sens contraire et donc on revient au tableau précédent.
+Pour naviguer rapidement de tableau en tableau dans une page, il suffit d'utiliser sur la touche <kbd>t</kbd>. Si on utilise le raccourci <kbd>Maj</kbd> + <kbd>t</kbd>, on navigue dans le sens contraire et donc on revient au tableau précédent.
 
-À l'intérieur d'un tableau, il existe plusieurs raccourcis afin de se déplacer à l'intérieur simplement :
+À l'intérieur d'un tableau, il existe plusieurs raccourcis afin de se déplacer à l'intérieur simplement&nbsp;:
 
 <ul>
-<li><kbd>Ctrl + Alt + flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl + Alt + flèche droite</kbd> se déplace sur la colonne de droite.</li>
-<li><kbd>Ctrl + Alt + flèche bas</kbd> permet de passer à la ligne suivante en restant sur la même colonne, <kbd>Ctrl + Alt + flèche haut</kbd> pour passer à la ligne précédente.</li>
+<li><kbd>Ctrl<kbd> + <kbd>Alt</kbd> + <kbd>flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>flèche droite</kbd> se déplace sur la colonne de droite.</li>
+<li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>flèche bas</kbd> permet de passer à la ligne suivante en restant sur la même colonne, <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>flèche haut</kbd> pour passer à la ligne précédente.</li>
 </ul>
 
 #### Jaws
 
-Pour Jaws, il faut utiliser la touche <kbd>y</kbd> et <kbd>Maj + y</kbd> pour naviguer entre les tableaux.
+Pour Jaws, il faut utiliser la touche <kbd>y</kbd> et <kbd>Maj</kbd> + <kbd>y</kbd> pour naviguer entre les tableaux.
 Pour parcourir l'intérieur d'un tableau, il existe plusieurs raccourcis&nbsp;:
 
 <ul>
@@ -203,7 +203,7 @@ Le premier exemple est un tableau avec seulement des en-têtes sur les colonnes,
 
 De cette manière, il est possible de naviguer facilement au sein du tableau à l'aide d'un lecteur d'écran, tout changement de cellule (d'une colonne, ou d'une ligne à l'autre) étant restitué avec l'en-tête associé.
 
-Par exemple, si on est positionné sur la colonne "Prénom" et qu'on utilise le raccourci <kbd>Ctrl+Alt+fleche droite</kbd> pour passer à la colonne "Nom", NVDA vocalise _"Nom Colonne 2 + texte de la colonne"_.
+Par exemple, si on est positionné sur la colonne "Prénom" et qu'on utilise le raccourci <kbd>Ctrl+Alt+flèche droite</kbd> pour passer à la colonne "Nom", NVDA vocalise _"Nom Colonne 2 + texte de la colonne"_.
 
 ### Tableau à double en-tête
 
@@ -284,7 +284,7 @@ Dans cet exemple, certaines cellules données ont trois en-têtes associés, il 
 Comme le tableau est complexe, on peut ajouter une description afin d'aider les utilisateurs à comprendre la nature et la structure du tableau.
 
 <p class="border-top border-light" id="tblDesc">Tableaux permettant de calculer le taux de conformité d'un site internet.<br/>
-Pour chaque page auditée, les critères peuvent être conformes, non-conformes ou non-applicables et sont repartis selon deux niveaux de difficultés&nbsp;: Débutant ou Confirmé<br/>
+Pour chaque page auditée, les critères peuvent être conformes, non-conformes ou non-applicables et sont répartis selon deux niveaux de difficultés&nbsp;: Débutant ou Confirmé<br/>
 </p>
 <table aria-describedby="tblDesc" class="table text-center">
     <caption class="visually-hidden position-relative">Synthèse par niveaux</caption>
