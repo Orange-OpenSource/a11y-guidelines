@@ -141,7 +141,7 @@ Nous allons maintenant vous présenter des exemples de tableaux accessibles.
 
 ### Tableau simple
 
-Le premier exemple est un tableau avec seulement des en-têtes sur les colonnes, nous utilisons donc l'attribut <code>scope="row"</code> pour que les technologies d'assistance l’interprète correctement.
+Le premier exemple est un tableau avec seulement des en-têtes sur les colonnes, nous utilisons donc l'attribut <code>scope="col"</code> pour que les technologies d'assistance l’interprète correctement.
 
 <table class="table">
  <caption class="h4"> Personnes avec leur activité professionnelle</caption>
