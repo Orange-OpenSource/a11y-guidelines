@@ -561,7 +561,8 @@ pre code {
  * For links color accessibility
  */
 a:hover {
-    font-weight: bold;
+    text-decoration-color: #F15E00;
+    text-decoration-thickness: .2em;
 }
 
 a.breadcrumb-focus:hover {
