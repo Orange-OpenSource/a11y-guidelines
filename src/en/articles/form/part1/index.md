@@ -16,32 +16,23 @@ titleBeforeTag: true
 
 For a form to be accessible to all users, a few rules must be respected during development.
 
-We will see, in this first part, how to properly build your form, then, in a second part, the submission of a form and the validation steps.
+In this first part, we will show how to build your form. In the second part, we will cover form submission and validation.
 
-We are going to develop a registration form in order to see all the subtleties to make a form accessible.
+We will build a registration form to demonstrate the accessibility considerations.
 
 In this example, we used <a href="http://boosted.orange.com/" target="_blank">Boosted library</a>. This allows you to obtain forms whose design complies with the Orange charter.
 
 ## Label form fields
 
-Labels should describe the role of each field on the form. In order for all users to have access to the same information, it is important that these labels are correctly associated with their form fields. To achieve this there are several techniques.
+Labels should describe the role of each field on the form. In order for all users to have access to the same information, it is important that these labels are correctly associated with their form fields. To achieve this, there are several techniques.
 
 ### The label element
 
 The preferred solution is to use the <code>label</code> element. It is best supported by assistive technologies. There are two ways to use this <code>label</code> element:
 
 <ul>
-   <li>explicitly link the element
-     <code>label</code>
-     with its field by filling in an attribute
-     <code>for</code>
-     which will match with the <code>id</code>
-     of the form field it is associated with</li>
-   <li>implicitly link the element
-     <code>label</code>
-     with its field, in this case, the element
-     <code>label</code>
-     will be used as a container surrounding the form field. The first solution is recommended.</li>
+   <li>explicitly link a <code>label</code> to a field by using the for attribute that matches the field's <code>id</code></li>
+   <li>implicitly wrap the field with the <code>label</code> element.</li>
 </ul>
 
 #### Example
@@ -51,7 +42,7 @@ Example of explicitly linked form labels:
 <div class="col-md-8">
   <form id="formulaire" class="border border-secondary p-3 my-2">
     <div class="mb-2">
-      <label for="email" class="form-label">E-mail</label>
+      <label for="email" class="form-label">Email</label>
       <input type="text" class="form-control" id="email"/>
     </div>
     <div class="mb-2">
@@ -59,7 +50,7 @@ Example of explicitly linked form labels:
       <input type="text" class="form-control" id="name"/>
     </div>
     <div class="mb-2">
-      <label for="firstname" class="form-label">Fist Name</label>
+      <label for="firstname" class="form-label">First Name</label>
       <input type="text" class="form-control" id="firstname"/>
     </div>
   </form>
@@ -70,7 +61,7 @@ Sample code:
 ```html
   <form id="formulaire" class="border border-secondary p-3 my-2">
     <div class="mb-2">
-        <label for="email" class="form-label">E-mail</label>
+        <label for="email" class="form-label">Email</label>
         <input type="text" class="form-control" id="email"/>
     </div>
     <div class="mb-2">
@@ -78,7 +69,7 @@ Sample code:
       <input type="text" class="form-control" id="name"/>
     </div>
     <div class="mb-2">
-      <label for="firstname" class="form-label">Fist Name</label>
+      <label for="firstname" class="form-label">First Name</label>
       <input type="text" class="form-control" id="firstname"/>
     </div>
   </form>
@@ -86,11 +77,11 @@ Sample code:
 
 ### Hide labels in an accessible way
 
-In some cases, it may be useful to hide the label visually. Attention, labels can be hidden if and only if the field function is sufficiently clear and understandable in its context: for example, a search field next to a magnifying glass icon.
+In some cases, it may be useful to hide the label visually. Note: labels can be hidden only if the field function is sufficiently clear and understandable in its context: for example, a search field next to a magnifying glass icon.
 
 Even though the label is visually hidden, it should still be accessible to assistive technologies.
 
-This method consists of using a CSS class (using the <code>visually-hidden</code> class from Bootstrap/Boosted) allowing accessible hiding. Using accessible masking allows the element to be hidden from view, while retaining its vocalization by assistive tools or technologies (AT). Be careful, do not use classic CSS masking (<code>display: none;</code> or <code>visibility: hidden;</code>) because the element will also be hidden for screen readers.
+This method uses a CSS class (for example, the <code>visually-hidden</code> class from Bootstrap/Boosted) to hide content accessibly. Using accessible hiding keeps the element visually hidden while remaining available to assistive technologies (e.g. spoken by screen readers). Avoid using display:none or <code>visibility:hidden</code>, because these also hide content from screen readers.
 
 See the example at <a href="../../../web/components-examples/accessible-hiding/" target="_blank">accessible masking example</a> for more information.
 
@@ -101,14 +92,14 @@ For example, we can use accessible hiding for a search field, if a button with t
 Sample code:
 
 ```html
-<label for="recherche" class="visually-hidden">Search:</label>
+<label for="search" class="visually-hidden">Search:</label>
 <input type="text" name="search" id="search">
 <button type="submit">Search</button>
 ```
 
 ### ARIA attributes
 
-It is also possible to use the <code>aria-label</code> and <code>aria-labelledby</code> attributes to label form fields, as these attributes are well supported by browsers and in recent assistive technology:
+It is also possible to use the <code>aria-label</code> and <code>aria-labelledby</code> attributes to label form fields. Support is generally good but varies by assistive technology and browser version, so test with your target assistive technologies (NVDA, JAWS, VoiceOver, TalkBack, etc.) and browsers.
 
 <ul>
    <li>The <code>aria-labelledby</code> attribute is used to specify the <code>id</code> of an element present in the code that will be used to label the field.
@@ -125,25 +116,24 @@ A possible example:
 
 ### The title attribute
 
-The <code>title</code> attribute is used to label a form field in an accessible manner. It will also trigger the display of a tooltip when hovering over the element with the mouse, good thing for the cognitively impaired, digital novices.
+The <code>title</code> attribute can provide a tooltip but is not a reliable substitute for a label. It will also trigger the display of a tooltip when hovering over the element with the mouse, which can help users with cognitive impairments and novice users. In addition, <code>title</code> is often not exposed to keyboard-only users and not consistently read by screen readers.
 
-Be careful, we might be tempted to use the <code>placeholder</code> attribute. This attribute is not robust enough, indeed:
+Never use <code>placeholder</code> as the only label; <code>placeholders</code> are not a replacement for labels and are not reliably read or persistent:
 
 <ul>
    <li>the <code>placeholder</code> text that displays in the field is usually not high enough contrast;
    </li>
-   <li>it is erased when entering the content in the control (causing difficulties in the event of a deficiency
-     cognitive);
+   <li>it is erased when entering the content in the control (causing difficulties for users with cognitive impairments);
    </li>
    <li>the <code>placeholder</code> is not always read by assistive technology;</li>
    <li>it makes corrections difficult in case of error if there is no label displayed;</li>
 </ul>
 
-On the other hand, the <code>placeholder</code> can serve as a guide, an aid to fill in the field without this information being absolutely necessary (for example, proposing a valid expected value): do not hesitate to use for this type of need.
+On the other hand, the <code>placeholder</code> can serve as a guide, an aid to fill in the field without this information being absolutely necessary (for example, proposing a valid expected value). Use placeholders for such purposes only (as examples), not as labels.
 
 ## Associating related controls
 
-When necessary, it is important to group fields of the same nature, this will make the whole form more understandable.
+When necessary, group fields of the same type. This makes the form easier to understand.
 Most of the time, we group our radio buttons, or our checkboxes, in order to associate a header with these elements.
 
 To group them, we use the <code>fieldset</code> element, which will have as its first child the <code>legend</code> element that will serve as the header for our grouped fields.
@@ -158,16 +148,16 @@ In our registration form, we can add the gender of our user. For this, we will i
     <fieldset>
       <legend>Gender</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M">
-        <label class="form-check-label" for="M">Mr</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="male">
+        <label class="form-check-label" for="male">Male</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme">
-        <label class="form-check-label" for="Mme">Mrs</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="female">
+        <label class="form-check-label" for="female">Female</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="No-binary" >
-        <label class="form-check-label" for="Non-binaire">no-binary</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="non-binary" value="Non-binary" >
+        <label class="form-check-label" for="non-binary">Non-binary</label>
       </div>
     </fieldset>
   </form>
@@ -182,16 +172,16 @@ Sample code:
     <fieldset>
       <legend>Gender</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M">
-        <label class="form-check-label" for="M">Mr</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="male" value="male">
+        <label class="form-check-label" for="male">Male</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme">
-        <label class="form-check-label" for="Mme">Mrs</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="female" value="female">
+        <label class="form-check-label" for="female">Female</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="No-binary" >
-        <label class="form-check-label" for="Non-binaire">no-binary</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="non-binary" value="Non-binary" >
+        <label class="form-check-label" for="non-binary">Non-binary</label>
       </div>
     </fieldset>
   </form>
@@ -200,12 +190,12 @@ Sample code:
 
 ## Specify the expected type or format
 
-To help the user, it is also important to specify the expected type or format when necessary. For example, for a date of birth, you must, if necessary, indicate the input format (dd/mm/yyyy).
+To help the user, it is also important to specify the expected type or format when necessary. For example, indicate the expected input format for a date of birth when needed (e.g. dd/mm/yyyy).
 
 To inform the user, one can:
 
 <ul>
-   <li>provide instructions in label</li>
+   <li>provide instructions in the label</li>
    <li>use the <code>aria-labelledby</code> or <code>aria-describedby</code> attribute</li>
 </ul>
 
@@ -214,7 +204,7 @@ To inform the user, one can:
 
 For our registration form, we are going to add a password field, specifying the format that we want.
 
-When adding a password field, it is also important to allow the possibility of displaying or hiding the password. This allows users with motor, attention or cognitive disorders to avoid possible input errors.
+When adding a password field, it is also important to allow the possibility of displaying or hiding the password. This helps users with motor, attention, or cognitive impairments avoid input errors.
 
 <div class="col-md-8">
   <form id="formulaire4" class="border border-secondary p-3 my-2">
@@ -268,12 +258,12 @@ Sample code:
 ## Complete example
 
 The complete example with all the elements that we have reviewed. In the second part, we will see how to validate the form and manage error messages.
-For the rest of the exercise and to complete our registration form, we have added fields for the address (address, city, postal code).
+For the rest of the exercise and to complete our registration form, we have added fields for the address (address, city, zip code).
 
 <div class="col-md-8">
   <form id="formulaire_final" class="border border-secondary p-3 my-2">
     <div class="mb-2">
-      <label for="email_final" class="form-label">E-mail</label>
+      <label for="email_final" class="form-label">Email</label>
       <input type="text" class="form-control" id="email_final"/>
     </div>
     <label for="password_final" class="form-label">Password</label>
@@ -308,16 +298,16 @@ For the rest of the exercise and to complete our registration form, we have adde
     <fieldset>
       <legend>Gender</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M">
-        <label class="form-check-label" for="M_final">Mr</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="male_final" value="male">
+        <label class="form-check-label" for="male_final">Male</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme">
-        <label class="form-check-label" for="Mme_final">Mrs</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="female_final" value="female">
+        <label class="form-check-label" for="female_final">Female</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Non-binaire_final" value="Non-binaire" >
-        <label class="form-check-label" for="Non-binaire_final">Non-binary</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="non-binary_final" value="non-binary" >
+        <label class="form-check-label" for="non-binary_final">Non-binary</label>
       </div>
     </fieldset>
     <div class="mb-2">
@@ -333,7 +323,7 @@ For the rest of the exercise and to complete our registration form, we have adde
       <input type="text" class="form-control" id="ville_final"/>
     </div>
     <div class="mb-2">
-      <label for="cp_final" class="form-label">Zip code</label>
+      <label for="cp_final" class="form-label">Zip Code</label>
       <input type="text" class="form-control" id="cp_final"/>
     </div>
   </form>
@@ -345,7 +335,7 @@ The final code:
 <div class="col-md-8">
   <form id="formulaire_final" class="border border-secondary p-3 my-2">
     <div class="mb-2">
-      <label for="email_final" class="form-label">E-mail</label>
+      <label for="email_final" class="form-label">Email</label>
       <input type="text" class="form-control" id="email_final"/>
     </div>
     <label for="password_final" class="form-label">Password</label>
@@ -371,16 +361,16 @@ The final code:
     <fieldset>
       <legend>Gender</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M">
-        <label class="form-check-label" for="M_final">Mr</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="male_final" value="male">
+        <label class="form-check-label" for="male_final">Male</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme">
-        <label class="form-check-label" for="Mme_final">Mrs</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="female_final" value="female">
+        <label class="form-check-label" for="female_final">Female</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Non-binaire_final" value="No-binary" >
-        <label class="form-check-label" for="Non-binaire_final">No-binary</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="non-binary_final" value="Non-binary" >
+        <label class="form-check-label" for="non-binary_final">Non-binary</label>
       </div>
     </fieldset>
     <div class="mb-2">
