@@ -16,7 +16,7 @@ titleBeforeTag: true
 
 We saw in the first part how to <a href="../part1/">structure your form</a> while respecting accessibility criteria.
 
-In this second part, we will make it easier for the user to enter the fields and set up an error management system when validating our form.
+In this second part, we will make it easier for the user to complete the form fields and set up an error management system when validating our form.
 
 We will continue to base our examples on our Part 1 registration form.
 
@@ -31,15 +31,15 @@ In forms, it is common for fields to be required. These fields should be made cl
 To achieve this, several solutions exist:
 
 <ul>
-   <li>programmatically, you must use the <code>required</code> or <code>aria-required="true"</code> attribute in the <code>input</code> tag of our fields , using these attributes will allow assistive technologies (AT) to indicate that the field is required.</li>
-   <li>users not using assistive technologies must also be informed that the field is mandatory; it is therefore necessary to add a visual identification that is not based solely on the color (for example, by explicitly mentioning "mandatory"). If this identification is not made via explicit text, for example, an asterisk (*), the meaning must be explained, such as, for example, "All mandatory fields are marked with an *", which will be placed beginning of the form.</li>
+   <li>Programmatically, you must use the <code>required</code> or <code>aria-required="true"</code> attribute in the <code>input</code> tag of our fields, using these attributes will allow assistive technologies (AT) to indicate that the field is required.</li>
+   <li>Users who do not use assistive technologies must also be informed that the field is mandatory. Add a visual identification that is not based solely on color (for example, by explicitly mentioning 'mandatory'). If this identification is not made via explicit text, for example, an asterisk (*), the meaning must be explained, such as, for example, 'All mandatory fields are marked with an *', which will be placed beginning of the form.</li>
 </ul>
 
 #### Example
 
 In our registration example, several fields can be considered mandatory in order to validate your registration: email, password, first name and last name.
 
-They must therefore be specified to users.
+They must therefore be clearly indicated to users.
 
 <div class="col-md-8">
   <form id="formulaire" class="border border-secondary p-3 my-2">
@@ -89,7 +89,7 @@ Example code:
     <p>All mandatory fields are marked with an *</p>
     <div class="mb-2">
       <label for="email" class="form-label">Email <span class="important">*</span> </label>
-      <input type="text" class="form-control" id="email" <span class="important">required</span>/>
+      <input type="text" class="form-control" id="email" />
     </div>
     <label for="password" class="form-label">Password *</label>
     <div class="mb-2 input-group">
@@ -135,13 +135,13 @@ If error messages prevent the validation of the form, rather than listing the er
 For each field in error, the messages must be explicit, which means:
 
 <ul>
-   <li>Be clear and unambiguous ("invalid field" is not enough, specify which field is invalid and, if possible, how it is invalid)</li>
+   <li>Be clear and unambiguous ('invalid field' is not enough, specify which field is invalid and, if possible, how it is invalid)</li>
    <li>Be specific and relevant</li>
    <li>Provide suggestions for corrections and ways to correct</li>
-   <li>Make sure errors are in plain text, avoid capitals.</li>
+   <li>Make sure error messages are in plain text. Avoid ALL‑CAPS</li>
    <li>Don't just use visual cues or just color to point out errors.</li>
    <li>Leave the send button active in all circumstances. Some websites enable the submit button only if the form is filled out correctly, it's a bad idea.</li>
-   <li>Provide the necessary instructions and be as specific as possible on the errors made in order to facilitate the filling of the fields by the users.</li>
+   <li>Provide clear, specific instructions to help users complete the fields.</li>
    <li>Make sure errors are visually identifiable on the web page.</li>
 </ul>
 
@@ -189,7 +189,7 @@ In our registration example, several fields may be in error:
     </div>
     <div id="errorpasswordDiv" class="alert alert-danger alert-sm d-none">
         <span class="alert-icon"><span class="visually-hidden">Error</span></span>
-        <p id="errorpassword1">The Password field is requirede</p>
+        <p id="errorpassword1">The Password field is required</p>
       </div>
       <div id="errorpasswordDiv2" class="alert alert-danger alert-sm d-none">
         <span class="alert-icon"><span class="visually-hidden">Error</span></span>
@@ -207,7 +207,7 @@ In our registration example, several fields may be in error:
       </div>
     </div>
     <div class="mb-2">
-      <label for="firstname_2" class="form-label">Fist Name *</label>
+      <label for="firstname_2" class="form-label">First Name *</label>
       <input type="text" class="form-control" id="firstname_2" required/>
       <div id="errorfirstname" class="alert alert-danger alert-sm d-none">
         <span class="alert-icon"><span class="visually-hidden">Error</span></span>
@@ -246,7 +246,7 @@ In our registration example, several fields may be in error:
       <input type="text" class="form-control" id="cp_2"/>
     </div>
      <button id="submit" class="btn btn-primary">Submit</button>
-     <div id="alertsucces" class="alert alert-success d-none" role="alert">
+     <div id="alertsuccess" class="alert alert-success d-none" role="alert">
       <span class="alert-icon"><span class="visually-hidden">Success</span></span>
       <p>The validation of the form is successful.</p>
     </div>
@@ -257,15 +257,15 @@ In our registration example, several fields may be in error:
 In the example above:
 
 <ul>
-   <li>Mandatory fields that are not completed have relevant and unique error messages (example: The email field is mandatory)</li>
-   <li>Fields with an invalid entry have a specific message that gives suggestions for correction (example: Please enter a valid Email (lastnamefirstname@gmail.com))</li>
-   <li>Error messages are linked to the field using the <code>aria-describedby</code> or <code>aria-labelledby</code> attribute, which will allow assistive technologies to render the 'information</li>
-   <li>The keyboard focus is put on the first field in error in order to be able to rescan the whole form</li>
+   <li>Mandatory fields that are not completed have relevant and unique error messages (example: The email field is mandatory).</li>
+   <li>Fields with an invalid entry have a specific message that gives suggestions for correction (example: Please enter a valid Email (lastnamefirstname@gmail.com)).</li>
+   <li>Error messages are linked to the field using the <code>aria-describedby</code> or <code>aria-labelledby</code> attribute, which will allow assistive technologies to render the 'information'.</li>
+   <li>The keyboard focus is put on the first field in error in order to be able to rescan the whole form.</li>
 </ul>
 
 ### Using the autocomplete attribute
 
-The <code>autocomplete</code> attribute makes it easier to fill in fields that contain personal information. All fields whose type is listed in <a href="https://www.w3.org/TR/WCAG22/#input-purposes">7. InputPurposes for User Interface Components</a> must contain the <code>autocomplete</code> attribute.
+The <code>autocomplete</code> attribute makes it easier to fill in fields that contain personal information. All fields whose type is listed in <a href="https://www.w3.org/TR/WCAG22/#input-purposes">7. Input Purposes for User Interface Components</a> must contain the <code>autocomplete</code> attribute.
 
 In our example the fields below should have an <code>autocomplete</code> attribute:
 <ul>
@@ -316,7 +316,7 @@ The full HTML and JavaScript code that allowed us to make this accessible regist
     </div>
     <div id="errorpasswordDiv" class="alert alert-danger alert-sm d-none">
         <span class="alert-icon"><span class="visually-hidden">Error</span></span>
-        <p id="errorpassword1">The Password field is requirede</p>
+        <p id="errorpassword1">The Password field is required</p>
       </div>
       <div id="errorpasswordDiv2" class="alert alert-danger alert-sm d-none">
         <span class="alert-icon"><span class="visually-hidden">Error</span></span>
@@ -334,7 +334,7 @@ The full HTML and JavaScript code that allowed us to make this accessible regist
       </div>
     </div>
     <div class="mb-2">
-      <label for="firstname_2" class="form-label">Fist Name *</label>
+      <label for="firstname_2" class="form-label">First Name *</label>
       <input type="text" class="form-control" id="firstname_2" required/>
       <div id="errorfirstname" class="alert alert-danger alert-sm d-none">
         <span class="alert-icon"><span class="visually-hidden">Error</span></span>

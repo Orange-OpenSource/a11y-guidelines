@@ -108,7 +108,7 @@ Exemple de code&nbsp;:
       <input type="text" class="form-control" id="name" required/>
     </div>
     <div class="mb-2">
-      <label for="firstname" class="form-label">Prénom * </label>
+      <label for="firstname" class="form-label">Prénom *</label>
       <input type="text" class="form-control" id="firstname" required/>
     </div>
     <button type="submit" class="btn btn-primary">Soumettre</button>
@@ -138,7 +138,7 @@ Pour chaque champ en erreur, il faut que les messages soient explicites, ce qui 
   <li>Donnez des pistes de corrections et moyens de corriger</li>
   <li>Assurez-vous que les erreurs sont sous forme de texte et évitez l'utilisation systématique des majuscules.</li>
   <li>Ne vous contentez pas d'utiliser des indicateurs visuels ou seulement la couleur pour signaler les erreurs.</li>
-  <li>Laisser actif en toute circonstance le bouton d'envoi. Certains sites Web activent le bouton d'envoi que si le formulaire est correctement rempli, c'est une mauvaise idée.</li>
+  <li>Laissez actif en toute circonstance le bouton d'envoi. Certains sites Web activent le bouton d'envoi que si le formulaire est correctement rempli, c'est une mauvaise idée.</li>
   <li>Fournissez les instructions nécessaires et soyez aussi précis que possible sur les erreurs commises afin de faciliter le remplissage des champs par les utilisateurs.</li>
   <li>Assurez-vous que les erreurs sont visuellement identifiables sur la page Web.</li>
 </ul>
@@ -257,7 +257,7 @@ Dans l'exemple ci-dessus&nbsp;:
 <ul>
   <li>Les champs obligatoires qui ne sont pas remplis ont des messages d'erreur pertinents et uniques (exemple&nbsp;: Le champ email est obligatoire)</li>
   <li>Les champs avec une entrée invalide ont un message précis qui donne des suggestions de correction (exemple&nbsp;: Veuillez renseigner un Email valide (nomprenom@gmail.com))</li>
-  <li>Les messages d'erreur sont liés au champ grâce à l'attribut <code>aria-describedby</code> ou <code>aria-labelledby</code>, ce qui permettra aux technologies d'assistances de restituer l'information</li>
+  <li>Les messages d'erreur sont liés au champ grâce à l'attribut <code>aria-describedby</code> ou <code>aria-labelledby</code>, ce qui permettra aux technologies d'assistance de restituer l'information</li>
   <li>Le focus clavier est mis sur le premier champ en erreur afin de pouvoir rebalayer tout le formulaire</li>
 </ul>
 
