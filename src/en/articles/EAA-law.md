@@ -1,7 +1,7 @@
 ---
 title: "Towards an Accessible Digital Single Market: A Critical Analysis of the European Accessibility Act"
 abstract: "Critical analysis of the European Accessibility Act"
-date: "2025-10-03"
+date: "2025-12-19"
 titleBeforeTag: true
 tags:
   - web
