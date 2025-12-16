@@ -2,7 +2,7 @@
 title: "Vers un marché unique numérique accessible : une analyse critique du European Accessibility Act"
 abstract: "Une analyse critique de l'EAA"
 titleBeforeTag: true
-date: "2025-19-12"
+date: "2025-12-19"
 tags:
   - web
   - beginner
