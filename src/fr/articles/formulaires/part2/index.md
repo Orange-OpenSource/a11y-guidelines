@@ -213,18 +213,14 @@ Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur&nbsp;
       </div>
     </div>
     <fieldset>
-      <legend>Genre</legend>
+      <legend>Déjà client ?</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_2" id="M_2" value="M" checked>
-        <label class="form-check-label" for="M_2">M</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_2" id="oui_2" value="oui" checked>
+        <label class="form-check-label" for="oui_2">Oui</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_2" id="Mme_2" value="Mme">
-        <label class="form-check-label" for="Mme_2">Mme</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_2" id="Non-binaire_2" value="Non-binaire" >
-        <label class="form-check-label" for="Non-binaire_2">Non-binaire</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_2" id="non_2" value="non">
+        <label class="form-check-label" for="non_2">Non</label>
       </div>
     </fieldset>
     <div class="mb-2">
@@ -334,18 +330,14 @@ Le code HTML et JavaScript complet qui nous a permis de réaliser ce formulaire 
       </div>
     </div>
     <fieldset>
-      <legend>Genre</legend>
+      <legend>Déjà client ?</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M" checked>
-        <label class="form-check-label" for="M">M</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="oui" value="oui" checked>
+        <label class="form-check-label" for="oui">Oui</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme">
-        <label class="form-check-label" for="Mme">Mme</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="Non-binaire">
-        <label class="form-check-label" for="Non-binaire">Non-binaire</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="non" value="non">
+        <label class="form-check-label" for="non">Non</label>
       </div>
     </fieldset>
     <div class="mb-2">
