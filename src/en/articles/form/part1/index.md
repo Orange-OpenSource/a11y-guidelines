@@ -31,7 +31,7 @@ Labels should describe the role of each field on the form. In order for all user
 The preferred solution is to use the <code>label</code> element. It is best supported by assistive technologies. There are two ways to use this <code>label</code> element:
 
 <ul>
-   <li>explicitly link a <code>label</code> to a field by using the for attribute that matches the field's <code>id</code></li>
+   <li>explicitly link a <code>label</code> to a field by using the for attribute that matches the field's <code>id</code> (best solution),</li>
    <li>implicitly wrap the field with the <code>label</code> element.</li>
 </ul>
 
@@ -81,7 +81,7 @@ In some cases, it may be useful to hide the label visually. Note: labels can be 
 
 Even though the label is visually hidden, it should still be accessible to assistive technologies.
 
-This method uses a CSS class (for example, the <code>visually-hidden</code> class from Bootstrap/Boosted) to hide content accessibly. Using accessible hiding keeps the element visually hidden while remaining available to assistive technologies (e.g. spoken by screen readers). Avoid using display:none or <code>visibility:hidden</code>, because these also hide content from screen readers.
+This method uses a CSS class (for example, the <code>visually-hidden</code> class from Bootstrap/Boosted) to hide content accessibly. Using accessible hiding keeps the element visually hidden while remaining available to assistive technologies (e.g. spoken by screen readers). Avoid using <code>display:none</code> or <code>visibility:hidden</code>, because these also hide content from screen readers.
 
 See the example at <a href="../../../web/components-examples/accessible-hiding/" target="_blank">accessible masking example</a> for more information.
 
@@ -102,8 +102,7 @@ Sample code:
 It is also possible to use the <code>aria-label</code> and <code>aria-labelledby</code> attributes to label form fields. Support is generally good but varies by assistive technology and browser version, so test with your target assistive technologies (NVDA, JAWS, VoiceOver, TalkBack, etc.) and browsers.
 
 <ul>
-   <li>The <code>aria-labelledby</code> attribute is used to specify the <code>id</code> of an element present in the code that will be used to label the field.
-   </li>
+   <li>The <code>aria-labelledby</code> attribute is used to specify the <code>id</code> of an element present in the code that will be used to label the field.</li>
    <li>The <code>aria-label</code> attribute allows you to directly specify a label in the form of a character string. Please note that the information will not be given visually.</li>
 </ul>
 
@@ -270,7 +269,7 @@ For the rest of the exercise and to complete our registration form, we have adde
     <div class="mb-2 input-group">
       <input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/>
       <span class="input-group-text">
-        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Show Password" >
+        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Show password" >
           <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
             <defs>
               <style>

@@ -86,7 +86,7 @@ Exemple de code&nbsp;:
 
 ### Masquer les étiquettes de manière accessible
 
-Dans certains cas, il peut être utile de masquer l'étiquette visuellement. Attention, on peut masquer les étiquettes si et seulement si la fonction champ est suffisamment claire et compréhensible dans son contexte: par exemple, un champ de recherche à côté d'une icône loupe.
+Dans certains cas, il peut être utile de masquer l'étiquette visuellement. Attention, on peut masquer les étiquettes si et seulement si la fonction champ est suffisamment claire et compréhensible dans son contexte : par exemple, un champ de recherche à côté d'une icône loupe.
 
 Même si l'étiquette est masquée visuellement, elle doit toujours être accessible pour les technologies d'assistance.
 
@@ -107,7 +107,7 @@ Exemple de code&nbsp;:
 
 ### Les attributs ARIA
 
-Il est aussi possible d'utiliser les attributs <code>aria-label</code> et <code>aria-labelledby</code> pour étiqueter des champs de formulaire, car ces attributs sont bien supportés par les navigateurs et dans les <abbr>AT</abbr> récentes&nbsp;:
+Il est aussi possible d'utiliser les attributs <code>aria-label</code> et <code>aria-labelledby</code> pour étiqueter des champs de formulaire. Le support est généralement bon, mais varie selon la technologie d'assistance et la version du navigateur ; testez donc avec les technologies d'assistance (NVDA, JAWS, VoiceOver, TalkBack, etc.) et les navigateurs ciblés.
 
 <ul>
   <li>L'attribut <code>aria-labelledby</code> permet de préciser l'<code>id</code> d'un élément présent dans le code qui sera utilisé pour étiqueter le champ.
@@ -124,7 +124,7 @@ Un exemple possible&nbsp;:
 
 ### L'attribut title
 
-L'attribut <code>title</code> permet d'étiqueter un champ de formulaire de manière accessible. Il déclenchera également l'affichage d'une info-bulle au survol de l'élément avec la souris, bonne chose pour les déficients cognitifs, les novices du numérique.
+L'attribut <code>title</code> permet d'étiqueter un champ de formulaire de manière accessible, mais ne constitue pas pour autant un substitut fiable à une étiquette visible. Il déclenche également l'affichage d'une infobulle au survol de l'élément avec la souris, ce qui peut aider les utilisateurs présentant des troubles cognitifs et les utilisateurs débutants. De plus, l'attribut <code>title</code> n'est souvent pas accessible aux utilisateurs ne naviguant qu'au clavier et n'est pas lu de manière fiable par les lecteurs d'écran.
 
 Attention, nous pourrions être tentés d'utiliser l'attribut <code>placeholder</code>. Cet attribut n'est pas assez robuste, en effet&nbsp;:
 
@@ -205,7 +205,7 @@ Pour aider l'utilisateur, il est aussi important de lui préciser le type ou le 
 Pour informer l'utilisateur, on peut&nbsp;:
 
 <ul>
-  <li>fournir les instructions dans le label</li>
+  <li>fournir les instructions dans l'étiquette visible</li>
   <li>utiliser l'attribut <code>aria-labelledby</code> ou <code>aria-describedby</code></li>
 </ul>
 
@@ -276,7 +276,7 @@ Pour la suite de l'exercice et compléter notre formulaire d'inscription, nous a
       <label for="email_final" class="form-label">Email</label>
       <input type="text" class="form-control" id="email_final"/>
     </div>
-    <label for="password_final" class="form-label">Mot de passe </label>
+    <label for="password_final" class="form-label">Mot de passe</label>
     <div class="mb-2 input-group">
       <input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/>
       <span class="input-group-text">
@@ -380,7 +380,7 @@ Le code final :
       </div>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="non-binaire_final" value="Non-binaire" >
-        <label class="form-check-label" for="Non-binaire_final">non-binaire</label>
+        <label class="form-check-label" for="non-binaire_final">non-binaire</label>
       </div>
     </fieldset>
     <div class="mb-2">
