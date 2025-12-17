@@ -151,24 +151,20 @@ Pour les regrouper, on utilise la balise <code>fieldset</code>, qui aura comme p
 
 ### Exemple
 
-Dans notre formulaire d'inscription, on peut ajouter le genre de notre utilisateur. Pour cela, on va implémenter des boutons radio, et les regrouper avec l'entête <strong>Genre</strong>
+Dans notre formulaire d'inscription, on peut ajouter le genre de notre utilisateur. Pour cela, on va implémenter des boutons radio, et les regrouper avec l'entête <strong>Déjà client ?</strong>
 
 <div class="col-md-8">
   <form id="formulaire3" class="border border-secondary p-3 my-2">
     [...]
     <fieldset>
-      <legend>Genre</legend>
+      <legend>Déjà client ?</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M">
-        <label class="form-check-label" for="M">M</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="oui" value="oui">
+        <label class="form-check-label" for="oui">Oui</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme">
-        <label class="form-check-label" for="Mme">Mme</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="non-binaire" value="Non-binaire" >
-        <label class="form-check-label" for="non-binaire">Non-binaire</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="non" value="non">
+        <label class="form-check-label" for="non">Non</label>
       </div>
     </fieldset>
   </form>
@@ -181,18 +177,14 @@ Un exemple possible&nbsp;:
   <form id="formulaire3" class="border border-secondary p-3 my-2">
     [...]
     <fieldset>
-      <legend>Genre</legend>
+      <legend>Déjà client ?</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M">
-        <label class="form-check-label" for="M">M</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="oui" value="oui">
+        <label class="form-check-label" for="oui">Oui</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme">
-        <label class="form-check-label" for="Mme">Mme</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="non-binaire" value="Non-binaire" >
-        <label class="form-check-label" for="non-binaire">Non-binaire</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="non" value="non">
+        <label class="form-check-label" for="non">Non</label>
       </div>
     </fieldset>
   </form>
@@ -307,18 +299,14 @@ Pour la suite de l'exercice et compléter notre formulaire d'inscription, nous a
       <input type="text" class="form-control" id="firstname_final"/>
     </div>
     <fieldset>
-      <legend>Genre</legend>
+      <legend>Déjà client ?</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M">
-        <label class="form-check-label" for="M_final">M</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="oui_final" value="oui">
+        <label class="form-check-label" for="oui_final">Oui</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme">
-        <label class="form-check-label" for="Mme_final">Mme</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="non-binaire_final" value="Non-binaire" >
-        <label class="form-check-label" for="non-binaire_final">Non-binaire</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="non_final" value="non">
+        <label class="form-check-label" for="non_final">Non</label>
       </div>
     </fieldset>
     <div class="mb-2">
@@ -370,18 +358,14 @@ Le code final :
       <input type="text" class="form-control" id="firstname_final"/>
     </div>
     <fieldset>
-      <legend>Genre</legend>
+      <legend>Déjà client ?</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M">
-        <label class="form-check-label" for="M_final">M</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="oui_final" value="oui">
+        <label class="form-check-label" for="oui_final">Oui</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme">
-        <label class="form-check-label" for="Mme_final">Mme</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="non-binaire_final" value="Non-binaire" >
-        <label class="form-check-label" for="non-binaire_final">non-binaire</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="non_final" value="non">
+        <label class="form-check-label" for="non_final">Non</label>
       </div>
     </fieldset>
     <div class="mb-2">
