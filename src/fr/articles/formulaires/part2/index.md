@@ -187,7 +187,7 @@ Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur&nbsp;
     </div>
     <div id="errorpasswordDiv" class="alert alert-danger alert-sm d-none">
         <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
-        <p id="errorpassword1">Le champ mot de passe est obligatoire</p>
+        <p id="errorpassword1">Le champ Mot de passe est obligatoire</p>
       </div>
       <div id="errorpasswordDiv2" class="alert alert-danger alert-sm d-none">
         <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
@@ -308,7 +308,7 @@ Le code HTML et JavaScript complet qui nous a permis de réaliser ce formulaire 
     </div>
     <div id="errorpasswordDiv" class="alert alert-danger alert-sm d-none">
       <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
-      <p id="errorpassword1">Le champ mot de passe est obligatoire</p>
+      <p id="errorpassword1">Le champ Mot de passe est obligatoire</p>
     </div>
     <div id="errorpasswordDiv2" class="alert alert-danger alert-sm d-none">
       <span class="alert-icon"><span class="visually-hidden">Erreur</span></span>
