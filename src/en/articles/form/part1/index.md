@@ -140,13 +140,13 @@ To group them, we use the <code>fieldset</code> element, which will have as its 
 
 ### Example
 
-In our registration form, we can add the gender of our user. For this, we will implement radio buttons, and group them with the header <strong>Returning client?</strong>
+In our registration form, we can add the gender of our user. For this, we will implement radio buttons, and group them with the header <strong>Returning customer?</strong>
 
 <div class="col-md-8">
   <form id="formulaire3" class="border border-secondary p-3 my-2">
     [...]
     <fieldset>
-      <legend>Returning client?</legend>
+      <legend>Returning customer?</legend>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="yes" value="yes">
         <label class="form-check-label" for="yes">Yes</label>
@@ -166,7 +166,7 @@ Sample code:
   <form id="formulaire3" class="border border-secondary p-3 my-2">
     [...]
     <fieldset>
-      <legend>Returning client?</legend>
+      <legend>Returning customer?</legend>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="yes" value="yes">
         <label class="form-check-label" for="yes">Yes</label>
@@ -288,7 +288,7 @@ For the rest of the exercise and to complete our registration form, we have adde
       <input type="text" class="form-control" id="firstname_final"/>
     </div>
     <fieldset>
-      <legend>Returning client?</legend>
+      <legend>Returning customer?</legend>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="yes_final" value="yes">
         <label class="form-check-label" for="yes_final">Yes</label>
@@ -347,7 +347,7 @@ The final code:
       <input type="text" class="form-control" id="firstname_final"/>
     </div>
     <fieldset>
-      <legend>Returning client?</legend>
+      <legend>Returning customer?</legend>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="yes_final" value="yes">
         <label class="form-check-label" for="yes_final">Yes</label>
