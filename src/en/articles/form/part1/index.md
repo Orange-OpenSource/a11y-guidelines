@@ -109,8 +109,9 @@ It is also possible to use the <code>aria-label</code> and <code>aria-labelledby
 A possible example:
 
 ```html
-<input type="text" name="search" aria-labelledby="search">
-<button id="search" type="submit" class="icon-loup" aria-label="Search"></button>
+<h2 id="id-search">Rechercher</h2>
+<input type="text" name="search" aria-labelledby="id-search">
+<button type="submit" class="icon-search" aria-label="Search"></button>
 ```
 
 ### The title attribute

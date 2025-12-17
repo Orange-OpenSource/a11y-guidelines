@@ -100,7 +100,7 @@ Par exemple, nous pouvons utiliser le masquage accessible pour un champ de reche
 Exemple de code&nbsp;:
 
 ```html
-<label for="recherche" class="visually-hidden">Recherche: </label>
+<label for="recherche" class="visually-hidden">Recherche :</label>
 <input type="text" name="recherche" id="recherche">
 <button type="submit">Recherche</button>
 ```
@@ -118,8 +118,9 @@ Il est aussi possible d'utiliser les attributs <code>aria-label</code> et <code>
 Un exemple possible&nbsp;:
 
 ```html
-<input type="text" name="recherche" aria-labelledby="recherche">
-<button id="recherche" type="submit" class="icon-loup" aria-label="Recherche"></button>
+<h2 id="id-recherche">Rechercher</h2>
+<input type="text" name="recherche" aria-labelledby="id-recherche">
+<button type="submit" class="icon-loupe" aria-label="Recherche"></button>
 ```
 
 ### L'attribut title
