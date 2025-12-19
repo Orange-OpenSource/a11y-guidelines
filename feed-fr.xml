@@ -4,12 +4,28 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2025-12-10T00:00:00Z</updated>
+  <updated>2025-12-19T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Vers un marché unique numérique accessible : une analyse critique du European Accessibility Act</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/EAA-droit/"/>
+    <updated>2025-12-19T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/EAA-droit/</id>
+    <content xml:lang="fr" type="html">Une analyse critique de l&#39;EAA</content>
+  </entry>
+  
+  <entry>
+    <title>Au-delà de la conformité : un argument commercial en faveur de l&#39;accessibilité numérique dans l&#39;Union européenne</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/Accessibilite-pour-le-Commerce/"/>
+    <updated>2025-12-19T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/Accessibilite-pour-le-Commerce/</id>
+    <content xml:lang="fr" type="html">Article présentant les opportunités commerciales relatives à l&#39;accessibilité numérique</content>
+  </entry>
   
   <entry>
     <title>Veille #A11y Octobre-Novembre 2025</title>

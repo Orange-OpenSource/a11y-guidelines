@@ -196,29 +196,29 @@
             
           
           <div class="mt-4">
-          <h2 id="presentation-generale" class="h2-focus">Présentation générale <a class="header-anchor" href="#presentation-generale" id="heading-649" aria-labelledby="heading-649">#</a></h2>
+          <h2 id="presentation-generale" class="h2-focus">Présentation générale <a class="header-anchor" href="#presentation-generale" id="heading-663" aria-labelledby="heading-663">#</a></h2>
 <p>Un tableau est un agencement d'informations en lignes et en colonnes contenant des cellules facilitant la comparaison et la mise en avant des informations. Ils permettent de présenter des informations tabulaires dans une grille en deux dimensions, ces données sont plus faciles à lire sous forme de tableau.</p>
 <p>Cela permet à un utilisateur voyant d'établir rapidement des associations visuelles entre les données du tableau et ses en-têtes.</p>
 <p>En revanche, un utilisateur non-voyant n'aura pas accès à tous ces liens entre les informations, c'est pour cette raison qu'il est important que les tableaux soient implémentés avec le balisage HTML approprié afin qu'ils soient le plus accessible possible pour les technologies d'assistance.</p>
 <p>Dans la suite de cet article, nous allons voir les principales règles à respecter pour obtenir un tableau accessible.</p>
-<h3 id="mettre-une-legendetitre-a-votre-tableau">Mettre une légende/titre à votre tableau <a class="header-anchor" href="#mettre-une-legendetitre-a-votre-tableau" id="heading-650" aria-labelledby="heading-650">#</a></h3>
+<h3 id="mettre-une-legendetitre-a-votre-tableau">Mettre une légende/titre à votre tableau <a class="header-anchor" href="#mettre-une-legendetitre-a-votre-tableau" id="heading-664" aria-labelledby="heading-664">#</a></h3>
 <p>Il est important de définir un titre à votre tableau. À la fois concis et pertinent, ce texte permettra d'en indiquer le contenu ainsi que le type de données qu'il contient.<br>
 Il doit être associé au tableau grâce à la balise <code>caption</code> et doit être le premier élément après la balise d'ouverture <code>table</code>. On peut aussi utiliser un titre <code>h1,h2...</code> placé dans le code juste avant le tableau comme autre moyen d'associer un titre.</p>
-<h4 id="exemple-de-caption">Exemple de <code>caption</code> <a class="header-anchor" href="#exemple-de-caption" id="heading-651" aria-labelledby="heading-651">#</a></h4>
+<h4 id="exemple-de-caption">Exemple de <code>caption</code> <a class="header-anchor" href="#exemple-de-caption" id="heading-665" aria-labelledby="heading-665">#</a></h4>
 <pre><code class="html">
 &lt;table&gt;
     &lt;caption&gt;Emploi du temps 2022&lt;/caption&gt;
     [...]
 &lt;/table&gt;
 </code></pre>
-<h4 id="exemple-de-titre-html">Exemple de titre HTML <a class="header-anchor" href="#exemple-de-titre-html" id="heading-652" aria-labelledby="heading-652">#</a></h4>
+<h4 id="exemple-de-titre-html">Exemple de titre HTML <a class="header-anchor" href="#exemple-de-titre-html" id="heading-666" aria-labelledby="heading-666">#</a></h4>
 <pre><code class="html">
 &lt;h2&gt;Emploi du temps 2022&lt;/h2&gt;
 &lt;table&gt;
     [...]
 &lt;/table&gt;
 </code></pre>
-<h3 id="ajouter-une-description-aux-tableaux-complexes">Ajouter une description aux tableaux complexes <a class="header-anchor" href="#ajouter-une-description-aux-tableaux-complexes" id="heading-653" aria-labelledby="heading-653">#</a></h3>
+<h3 id="ajouter-une-description-aux-tableaux-complexes">Ajouter une description aux tableaux complexes <a class="header-anchor" href="#ajouter-une-description-aux-tableaux-complexes" id="heading-667" aria-labelledby="heading-667">#</a></h3>
 <p>Si vous êtes dans le cas d'un tableau complexe et vous souhaitez fournir un résumé plus détaillé, il est recommandé d'utiliser l'attribut ARIA <code>aria-describedby</code>.<br>
 Il permettra de lier programmatiquement une description à votre tableau.</p>
 <pre><code class="html">
@@ -232,8 +232,8 @@ exemple de description pour aider la compréhension du tableau complexe
 &lt;/table&gt;
 </code></pre>
 <p>Il y a aussi la possibilité d'utiliser l'attribut <code>summary</code> pour donner, en plus, un résumé du contenu d'un tableau, néanmoins cet attribut ne fait plus partie des spécifications HTML 5 et nous ne recommandons pas son utilisation.</p>
-<h3 id="identifier-les-en-tetes-de-votre-tableau">Identifier les en-têtes de votre tableau <a class="header-anchor" href="#identifier-les-en-tetes-de-votre-tableau" id="heading-654" aria-labelledby="heading-654">#</a></h3>
-<h4 id="attributs-scope">Attributs scope <a class="header-anchor" href="#attributs-scope" id="heading-655" aria-labelledby="heading-655">#</a></h4>
+<h3 id="identifier-les-en-tetes-de-votre-tableau">Identifier les en-têtes de votre tableau <a class="header-anchor" href="#identifier-les-en-tetes-de-votre-tableau" id="heading-668" aria-labelledby="heading-668">#</a></h3>
+<h4 id="attributs-scope">Attributs scope <a class="header-anchor" href="#attributs-scope" id="heading-669" aria-labelledby="heading-669">#</a></h4>
 <p>Pour aider les utilisateurs de technologies d'assistance, il est impératif d'identifier les en-têtes des tableaux, que ce soit pour les lignes ou les colonnes.<br>
 Pour baliser ces en-têtes, il faut utiliser la balise <code>th</code>, celle-ci ne doit jamais être vide.</p>
 <p>Une fois que les en-têtes sont créés, il faut associer les cellules de données aux en-têtes dont elles dépendent.<br>
@@ -242,7 +242,7 @@ L'attribut <code>scope</code> permet de lier programmatiquement les cellules aux
   <li><code>&lt;th scope="col"&gt;</code> pour un en-tête colonne</li>
   <li><code>&lt;th scope="row"&gt;</code> pour un en-tête ligne</li>
 </ul>
-<h4 id="attributs-id-et-headers">Attributs id et headers <a class="header-anchor" href="#attributs-id-et-headers" id="heading-656" aria-labelledby="heading-656">#</a></h4>
+<h4 id="attributs-id-et-headers">Attributs id et headers <a class="header-anchor" href="#attributs-id-et-headers" id="heading-670" aria-labelledby="heading-670">#</a></h4>
 <p>Certains tableaux sont trop complexes pour identifier une association horizontale ou verticale stricte (par exemple, fusion de colonnes ou de lignes) entre l'entête et les cellules des données.<br>
 L'attribut <code>scope</code> ne permet pas de résoudre ce problème. Il faut utiliser un attribut <code>id</code> unique pour chaque cellule d'en-tête. Pour relier cet en-tête à une cellule, il faudra utiliser l'attribut <code>headers</code> en y rajoutant les <code>id</code> voulus.</p>
 <p>Par exemple, on a deux cellules d'entêtes, <code>&lt;th id=&quot;toto&quot;&gt;Toto&lt;/th&gt;</code> et <code>&lt;th id=&quot;tata&quot;&gt;Tata&lt;/th&gt;</code>, le code pour la relier à une cellule de donnée sera <code>&lt;td headers=&quot;toto tata&quot;&gt;Tota&lt;/td&gt;</code>.</p>
@@ -251,7 +251,7 @@ L'attribut <code>scope</code> ne permet pas de résoudre ce problème. Il faut u
   <li>Le tableau a des en-têtes de colonnes/lignes qui changent à l'intérieur du tableau.</li>
   <li>Une cellule de données à trois en-têtes ou plus associées (souvent liée à des cellules d'en-têtes qui sont fusionnées)</li>
 </ul>
-<h3 id="cas-particuliers-des-tableaux-de-mise-en-forme">Cas particuliers des tableaux de mise en forme <a class="header-anchor" href="#cas-particuliers-des-tableaux-de-mise-en-forme" id="heading-657" aria-labelledby="heading-657">#</a></h3>
+<h3 id="cas-particuliers-des-tableaux-de-mise-en-forme">Cas particuliers des tableaux de mise en forme <a class="header-anchor" href="#cas-particuliers-des-tableaux-de-mise-en-forme" id="heading-671" aria-labelledby="heading-671">#</a></h3>
 <p>Dans la mesure du possible <strong>évitez d'utiliser des tableaux pour faire de la mise en page</strong>. Les tableaux sont faits pour présenter des données tabulaires, avant tout, et les CSS permettent, maintenant, de se passer de la mise en forme via des tableaux.</p>
 <p>Dans le cas où, vous utilisez un tableau pour faire de la mise en page, vous devez respecter ces règles :</p>
 <ul>
@@ -259,16 +259,16 @@ L'attribut <code>scope</code> ne permet pas de résoudre ce problème. Il faut u
   <li>les éléments sémantiques propres à un tableau ne doivent pas être utilisés&nbsp;: <code>caption</code>, <code>th</code>, <code>scope</code></li>
   <li>assurez-vous que, s'il existe un ordre de lecture spécifique pour comprendre le contenu, cet ordre est respecté lorsqu'on lit le tableau en lecture linéaire (qui suit l'ordre d'apparition dans le code)</li>
 </ul>
-<h3 id="navigation-dans-un-tableau-a-laide-des-lecteurs-decran-jaws-et-nvda">Navigation dans un tableau à l'aide des lecteurs d'écran Jaws et NVDA <a class="header-anchor" href="#navigation-dans-un-tableau-a-laide-des-lecteurs-decran-jaws-et-nvda" id="heading-658" aria-labelledby="heading-658">#</a></h3>
+<h3 id="navigation-dans-un-tableau-a-laide-des-lecteurs-decran-jaws-et-nvda">Navigation dans un tableau à l'aide des lecteurs d'écran Jaws et NVDA <a class="header-anchor" href="#navigation-dans-un-tableau-a-laide-des-lecteurs-decran-jaws-et-nvda" id="heading-672" aria-labelledby="heading-672">#</a></h3>
 <p>Le fait de créer des tableaux accessibles permettra une lecture cohérente de ces données tabulaires avec un lecteur d'écran. Pour naviguer dans un tableau avec Jaws ou NVDA, il existe plusieurs raccourcis spécifiques.</p>
-<h4 id="nvda">NVDA <a class="header-anchor" href="#nvda" id="heading-659" aria-labelledby="heading-659">#</a></h4>
+<h4 id="nvda">NVDA <a class="header-anchor" href="#nvda" id="heading-673" aria-labelledby="heading-673">#</a></h4>
 <p>Pour naviguer rapidement de tableau en tableau dans une page, il suffit d'utiliser sur la touche <kbd>t</kbd>, si on utilise le raccourci <kbd>Maj + t</kbd>, on navigue dans le sens contraire et donc on revient au tableau précédent.</p>
 <p>Une fois au sein d'un tableau, il existe plusieurs raccourcis afin de se déplacer à l'intérieur simplement.</p>
 <ul>
 <li><kbd>Ctrl + alt + flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl + alt + flèche droite</kbd> se déplace sur la colonne de droite.</li>
 <li><kbd>Ctrl + alt + flèche bas</kbd> permet de passer à la ligne suivante en restant sur la même colonne, <kbd>Ctrl + alt + flèche haut</kbd> pour passer à la ligne précédente.</li>
 </ul>
-<h4 id="jaws">Jaws <a class="header-anchor" href="#jaws" id="heading-660" aria-labelledby="heading-660">#</a></h4>
+<h4 id="jaws">Jaws <a class="header-anchor" href="#jaws" id="heading-674" aria-labelledby="heading-674">#</a></h4>
 <p>Pour Jaws, il faut utiliser la touche <kbd>Y</kbd> et <kbd>Maj + Y</kbd> pour naviguer entre les tableaux.<br>
 Pour parcourir l'intérieur d'un tableau, il existe plusieurs raccourcis :</p>
 <ul>
@@ -278,9 +278,9 @@ Pour parcourir l'intérieur d'un tableau, il existe plusieurs raccourcis :</p>
 <li><kbd>Insert + maj + flèche haut</kbd> permet de lire toute la ligne.</li>
 <li><kbd>Insert + maj + num pad 5</kbd> permet de lire toute la colonne.</li>
 </ul>
-<h2 id="exemple-de-tableau" class="h2-focus">Exemple de tableau <a class="header-anchor" href="#exemple-de-tableau" id="heading-661" aria-labelledby="heading-661">#</a></h2>
+<h2 id="exemple-de-tableau" class="h2-focus">Exemple de tableau <a class="header-anchor" href="#exemple-de-tableau" id="heading-675" aria-labelledby="heading-675">#</a></h2>
 <p>Nous allons maintenant vous présenter des exemples de tableaux accessibles.</p>
-<h3 id="tableau-simple">Tableau simple <a class="header-anchor" href="#tableau-simple" id="heading-662" aria-labelledby="heading-662">#</a></h3>
+<h3 id="tableau-simple">Tableau simple <a class="header-anchor" href="#tableau-simple" id="heading-676" aria-labelledby="heading-676">#</a></h3>
 <p>Le premier exemple est un tableau avec seulement des en-têtes sur les colonnes, nous utilisons donc l'attribut <code>scope=&quot;row&quot;</code> pour que les technologies d'assistance l’interprète correctement.</p>
 <table class="table">
  <caption class="h4"> Personnes avec leur activité professionnelle</caption>
@@ -340,7 +340,7 @@ Pour parcourir l'intérieur d'un tableau, il existe plusieurs raccourcis :</p>
 </code></pre>
 <p>De cette manière, il est possible de naviguer facilement au sein du tableau à l'aide d'un lecteur d'écran. De plus, tout changement de cellule d'une colonne, ou une ligne, à l'autre, l'en-tête sera vocalisée.</p>
 <p>Par Exemple, si on est positionné sur la colonne Prénom, et qu'on utilise le raccourci <kbd>Ctrl+alt+fleche droite</kbd> pour passer à la colonne Nom, NVDA vocalise &quot;Nom Colonne 2 + texte de la colonne&quot;.</p>
-<h3 id="tableau-a-double-en-tete">Tableau à double en-tête <a class="header-anchor" href="#tableau-a-double-en-tete" id="heading-663" aria-labelledby="heading-663">#</a></h3>
+<h3 id="tableau-a-double-en-tete">Tableau à double en-tête <a class="header-anchor" href="#tableau-a-double-en-tete" id="heading-677" aria-labelledby="heading-677">#</a></h3>
 <p>Dans ce deuxième exemple, le tableau est un emploi du temps permettant de savoir rapidement, si le magasin est ouvert ou fermé, en fonction du jour de la semaine et de l'heure.</p>
 <p>Ce tableau nécessite deux en-têtes, une pour les jours de la semaine et une autre pour le créneau horaire.</p>
 <table class="table">
@@ -406,7 +406,7 @@ Pour parcourir l'intérieur d'un tableau, il existe plusieurs raccourcis :</p>
   &lt;/tr&gt;
   [...]
 </code></pre>
-<h3 id="tableau-complexe">Tableau complexe <a class="header-anchor" href="#tableau-complexe" id="heading-664" aria-labelledby="heading-664">#</a></h3>
+<h3 id="tableau-complexe">Tableau complexe <a class="header-anchor" href="#tableau-complexe" id="heading-678" aria-labelledby="heading-678">#</a></h3>
 <p>Dans cet exemple, certaines cellules données ont trois en-têtes associés, il faut donc utiliser les attributs <code>id</code> et <code>headers</code>.</p>
 <p>Vu que le tableau est complexe, on peut rajouter une description afin d'aider les utilisateurs à comprendre le tableau.</p>
 <p class="border-top border-light" id="tblDesc">Tableaux permettant de calculer le taux de conformité d'un site internet.<br/>

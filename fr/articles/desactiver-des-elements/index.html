@@ -205,12 +205,12 @@
           <div class="mt-4">
           <p>La désactivation d'un élément interactif sert à empêcher l'utilisateur d'interagir avec ce composant ou avec ses descendants.</p>
 <p>Cette technique est à utiliser avec parcimonie, en fonction des composants et du contexte d'utilisation.</p>
-<h2 id="desactiver-un-bouton" class="h2-focus">Désactiver un bouton <a class="header-anchor" href="#desactiver-un-bouton" id="heading-523" aria-labelledby="heading-523">#</a></h2>
+<h2 id="desactiver-un-bouton" class="h2-focus">Désactiver un bouton <a class="header-anchor" href="#desactiver-un-bouton" id="heading-544" aria-labelledby="heading-544">#</a></h2>
 <p>Il est possible de désactiver un bouton en lui ajoutant simplement l'attribut <code>disabled</code> :</p>
 <pre><code class="language-html">&lt;button disabled&gt;Supprimer&lt;/button&gt;
 </code></pre>
 <p>Cependant, cette technique n'est pas recommandée pour un bouton de soumission de formulaire pour diverses raisons, notamment : faible contraste, bouton non atteignable au clavier, aucune information donnée à l'utilisateur.</p>
-<h2 id="desactiver-un-champ-de-formulaire" class="h2-focus">Désactiver un champ de formulaire <a class="header-anchor" href="#desactiver-un-champ-de-formulaire" id="heading-524" aria-labelledby="heading-524">#</a></h2>
+<h2 id="desactiver-un-champ-de-formulaire" class="h2-focus">Désactiver un champ de formulaire <a class="header-anchor" href="#desactiver-un-champ-de-formulaire" id="heading-545" aria-labelledby="heading-545">#</a></h2>
 <p>Comme pour un bouton, un champ de formulaire est désactivé avec l'attribut <code>disabled</code>.</p>
 <p>Il est ainsi possible de désactiver un champ <code>input</code> ou une zone de saisie <code>textarea</code> :</p>
 <pre><code class="language-html">&lt;input type=&quot;text&quot; name=&quot;address&quot; disabled&gt;
@@ -246,7 +246,7 @@ Dans l'exemple ci-dessous, l'<code>input</code>, la <code>checkbox</code> et le 
   &lt;option value=&quot;orange&quot;&gt;Orange&lt;/option&gt;
 &lt;/select&gt;
 </code></pre>
-<h2 id="desactiver-un-lien" class="h2-focus">Désactiver un lien <a class="header-anchor" href="#desactiver-un-lien" id="heading-525" aria-labelledby="heading-525">#</a></h2>
+<h2 id="desactiver-un-lien" class="h2-focus">Désactiver un lien <a class="header-anchor" href="#desactiver-un-lien" id="heading-546" aria-labelledby="heading-546">#</a></h2>
 <p>Pour désactiver un lien, l'utilisation de l'attribut <code>disabled</code> n'est pas autorisée. Cependant, il est possible de simuler une désactivation en suivant ces trois étapes :</p>
 <ul>
 <li>supprimer l'attribut <code>href</code> pour qu'il ne puisse plus recevoir le focus</li>
@@ -254,11 +254,11 @@ Dans l'exemple ci-dessous, l'<code>input</code>, la <code>checkbox</code> et le 
 <li>ajouter un attribut <code>aria-disabled=&quot;true&quot;</code> pour qu'il soit indiqué comme étant désactivé</li>
 </ul>
 <pre><code class="html">&lt;a role="link" aria-disabled="true"&gt;Lien désactivé&lt;/a&gt;</code></pre>
-<h2 id="lattribut-de-lecture-seule-read-only" class="h2-focus">L'attribut de lecture seule <code>read-only</code> <a class="header-anchor" href="#lattribut-de-lecture-seule-read-only" id="heading-526" aria-labelledby="heading-526">#</a></h2>
+<h2 id="lattribut-de-lecture-seule-read-only" class="h2-focus">L'attribut de lecture seule <code>read-only</code> <a class="header-anchor" href="#lattribut-de-lecture-seule-read-only" id="heading-547" aria-labelledby="heading-547">#</a></h2>
 <p>L'attribut booléen <code>read-only</code> contrôle la possibilité ou non d'éditer un champ texte.<br>
 Il ne faut pas utiliser cet attribut pour désactiver d'autres éléments (boutons et autres éléments interactifs), car cela est justement le rôle de l'attribut <code>disabled</code>.</p>
 <p>La principale différence entre les deux techniques réside dans le fait qu'un élément en lecture seule sera toujours atteignable au clavier et restitué par les aides techniques ; cela peut avoir un intérêt pour vérifier, sans pouvoir modifier, une information précédemment renseignée (par exemple : un email, une date de naissance, un numéro de téléphone, etc.).</p>
-<h2 id="webographie" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-527" aria-labelledby="heading-527">#</a></h2>
+<h2 id="webographie" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-548" aria-labelledby="heading-548">#</a></h2>
 <ul>
   <li><a href="https://www.scottohara.me/blog/2021/05/28/disabled-links.html" hreflang="en">Disabling a link - Scott O'Hara (en)</a></li>
   <li><a href="https://adamsilver.io/blog/the-problem-with-disabled-buttons-and-what-to-do-instead/" hreflang="en">The problem with disabled buttons and what to do instead - Adam Silver (en)</a></li>

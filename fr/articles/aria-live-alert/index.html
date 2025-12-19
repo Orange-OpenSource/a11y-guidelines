@@ -197,24 +197,24 @@
           
           <div class="mt-4">
           <p>Les utilisateurs qui naviguent à l'aide d'un lecteur d'écran ne sont pas toujours au courant des modifications apportées dans la page. Lorsqu'une information est actualisée ou lorsqu'un message apparaît il est parfois nécessaire de faire parler le lecteur d'écran pour informer l'utilisateur. Pour ce faire, le language <abbr>ARIA</abbr> dispose du role <code>alert</code> et de l'attribut <code>aria-live</code>.</p>
-<h2 id="le-role-alert" class="h2-focus">Le role alert <a class="header-anchor" href="#le-role-alert" id="heading-542" aria-labelledby="heading-542">#</a></h2>
+<h2 id="le-role-alert" class="h2-focus">Le role alert <a class="header-anchor" href="#le-role-alert" id="heading-538" aria-labelledby="heading-538">#</a></h2>
 <p>Positionné sur un élément HTML, celui-ci permet d'indiquer au lecteur d'écran de vocaliser l'élément automatiquement lors de sa création. Veiller toutefois à utiliser ce rôle uniquement dans les cas appropriés, comme il est clairement indiqué dans la documentation <a href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/Roles/alert_role">MDN de Mozilla</a>. De fait de sa nature intrusive, le role alert doit être utilisé avec parcimonie et uniquement dans les situations où l’attention de l’utilisateur est immédiatement requise. Les changements dynamiques de moindre urgence devraient utiliser une méthode moins agressive, telle que <code>aria-live=&quot;polite&quot;</code> ou autres rôles de zone live.</p>
 <p>Pour déclencher une alerte, plusieurs méthodes sont possibles, avec des supports qui différent en fonction du couple navigateur et lecteur d'écran utilisé. Vous pouvez consulter <a href="https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/">l'article de Steve Faulkner (en anglais)</a> à ce sujet.</p>
 <p>Voici quelques exemples de méthodes qui sont bien supportées.</p>
-<h3 id="creer-un-nouvel-element-dans-le-dom">Créer un nouvel élément dans le DOM <a class="header-anchor" href="#creer-un-nouvel-element-dans-le-dom" id="heading-543" aria-labelledby="heading-543">#</a></h3>
+<h3 id="creer-un-nouvel-element-dans-le-dom">Créer un nouvel élément dans le DOM <a class="header-anchor" href="#creer-un-nouvel-element-dans-le-dom" id="heading-539" aria-labelledby="heading-539">#</a></h3>
 <p>On peut déclencher une alerte en insérant un nouvel élément dans le <abbr>DOM</abbr> via Javascript.</p>
 <pre><code class="html">&lt;span role="alert"&gt;Ceci est un message d'alerte.&lt;/span&gt;</code></pre>
-<h3 id="ajouter-un-role-alert-sur-un-element-existant">Ajouter un role alert sur un élément existant <a class="header-anchor" href="#ajouter-un-role-alert-sur-un-element-existant" id="heading-544" aria-labelledby="heading-544">#</a></h3>
+<h3 id="ajouter-un-role-alert-sur-un-element-existant">Ajouter un role alert sur un élément existant <a class="header-anchor" href="#ajouter-un-role-alert-sur-un-element-existant" id="heading-540" aria-labelledby="heading-540">#</a></h3>
 <p>Le déclenchement d'une alerte peut également s'effectuer en ajoutant un <code>role=&quot;alert&quot;</code>, à un élément existant, dynamiquement via Javascript.</p>
 <pre><code class="js">
 document.getElementById('alert').setAttribute("role", "alert");
 </code></pre>
-<h3 id="utiliser-innerhtml">Utiliser innerHTML <a class="header-anchor" href="#utiliser-innerhtml" id="heading-545" aria-labelledby="heading-545">#</a></h3>
+<h3 id="utiliser-innerhtml">Utiliser innerHTML <a class="header-anchor" href="#utiliser-innerhtml" id="heading-541" aria-labelledby="heading-541">#</a></h3>
 <p>Créer une alerte via la propriété innerHTML.</p>
 <pre><code class="js">
 element.innerHTML = '&lt;div role="alert"&gt;Ceci est une alerte&lt;/div&gt;';
 </code></pre>
-<h2 id="lattribut-aria-live" class="h2-focus">L'attribut <code>aria-live</code> <a class="header-anchor" href="#lattribut-aria-live" id="heading-546" aria-labelledby="heading-546">#</a></h2>
+<h2 id="lattribut-aria-live" class="h2-focus">L'attribut <code>aria-live</code> <a class="header-anchor" href="#lattribut-aria-live" id="heading-542" aria-labelledby="heading-542">#</a></h2>
 <p>Positionné sur un élément HTML, l'attribut <code>aria-live</code> permet d'indiquer au lecteur d'écran que toute modification apportée à son contenu entraînera une vocalisation par le lecteur d'écran.</p>
 <p>Trois valeurs sont possibles :</p>
 <ul>
@@ -232,7 +232,7 @@ element.innerHTML = '&lt;div role="alert"&gt;Ceci est une alerte&lt;/div&gt;';
 <li><strong>aria-relevant :</strong> indique quel type de changement déclenche une vocalisation, valeurs possibles : additions (défaut), removals, all.</li>
 </ul>
 <p>Enfin pour être complet, sachez que le langage <abbr>ARIA</abbr> prévoit également quelques roles spécifiques, <strong>status</strong> et <strong>log</strong> notamment qui peuvent s'avérer utiles dans certains cas (barre d'état, journalisation, chat…) et qui pour le moment doivent être utilisés en complément de l'attribut <code>aria-live</code> pour maximiser la prise en charge par les outils d'assistance. Vous trouverez plus d'infos sur ces roles dans les liens ci-dessous.</p>
-<h2 id="references" class="h2-focus">Références <a class="header-anchor" href="#references" id="heading-547" aria-labelledby="heading-547">#</a></h2>
+<h2 id="references" class="h2-focus">Références <a class="header-anchor" href="#references" id="heading-543" aria-labelledby="heading-543">#</a></h2>
 <ul>
 <li><a href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/Roles/alert_role">Utilisation du rôle alert</a></li>
 <li><a href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">Zones live ARIA</a></li>

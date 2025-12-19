@@ -4,12 +4,28 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2025-12-10T00:00:00Z</updated>
+  <updated>2025-12-19T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Towards an Accessible Digital Single Market: A Critical Analysis of the European Accessibility Act</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/EAA-law/"/>
+    <updated>2025-12-19T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/EAA-law/</id>
+    <content xml:lang="en" type="html">Critical analysis of the European Accessibility Act</content>
+  </entry>
+  
+  <entry>
+    <title>Beyond Compliance: The Strategic Business Case for Digital Accessibility in the European Union</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/Accessibility-for-Business/"/>
+    <updated>2025-12-19T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/Accessibility-for-Business/</id>
+    <content xml:lang="en" type="html">An evidence-based article on the business case for digital accessibility.</content>
+  </entry>
   
   <entry>
     <title>#a11y technical watch, October-November 2025</title>

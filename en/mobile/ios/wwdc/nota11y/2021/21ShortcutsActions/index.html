@@ -223,8 +223,8 @@
 <p>&quot;Actions are the <strong>building blocks of shortcuts</strong>. They allow people to take advantage of your app's functionality even when they're not looking at your app's interface. We'll show you how to <strong>design actions</strong> that are useful, easy-to-use, and can be incorporated into <strong>powerful multi-step shortcuts</strong>. You'll also explore enhancements around publishing and sharing shortcuts, ensuring that <strong>people can access your app in the way they want across all of Apple's platforms</strong>.&quot;</p>
 <p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
 </br></p>
-<h2 id="shortcuts" class="h2-focus">Shortcuts <a class="header-anchor" href="#shortcuts" id="heading-2004" aria-labelledby="heading-2004">#</a></h2>
-<h3 id="parameters">Parameters <a class="header-anchor" href="#parameters" id="heading-2005" aria-labelledby="heading-2005">#</a></h3>
+<h2 id="shortcuts" class="h2-focus">Shortcuts <a class="header-anchor" href="#shortcuts" id="heading-2014" aria-labelledby="heading-2014">#</a></h2>
+<h3 id="parameters">Parameters <a class="header-anchor" href="#parameters" id="heading-2015" aria-labelledby="heading-2015">#</a></h3>
 <p>There are <a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=35">three different manners</a> for using the shortcut actions.<br>
 <img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsParam_1.png" alt="" class="img-fluid"></p>
 <p>New in <code>iOS</code> <code>13</code>, the <strong><a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=121">conversational shortcuts</a></strong> offer a new way for sharing between the app and the user.</p>
@@ -232,7 +232,7 @@
 <p>This <strong>support for parameters</strong> opens up <a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=196">new horizons</a> regarding the user experience.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsParam_3.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="shortcuts-app">Shortcuts app <a class="header-anchor" href="#shortcuts-app" id="heading-2006" aria-labelledby="heading-2006">#</a></h3>
+<h3 id="shortcuts-app">Shortcuts app <a class="header-anchor" href="#shortcuts-app" id="heading-2016" aria-labelledby="heading-2016">#</a></h3>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -276,11 +276,11 @@
 </div>
 </div>
 </br></br>
-<h3 id="shortcut-customization"><a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=511">Shortcut customization</a> <a class="header-anchor" href="#shortcut-customization" id="heading-2007" aria-labelledby="heading-2007">#</a></h3>
+<h3 id="shortcut-customization"><a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=511">Shortcut customization</a> <a class="header-anchor" href="#shortcut-customization" id="heading-2017" aria-labelledby="heading-2017">#</a></h3>
 <p>The <strong>Xcode Intent editor</strong> is the tool to be used for promptly customizing a shortcut.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsCustom.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="parameter-resolution"><a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=756">Parameter resolution</a> <a class="header-anchor" href="#parameter-resolution" id="heading-2008" aria-labelledby="heading-2008">#</a></h3>
+<h3 id="parameter-resolution"><a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=756">Parameter resolution</a> <a class="header-anchor" href="#parameter-resolution" id="heading-2018" aria-labelledby="heading-2018">#</a></h3>
 <p>Not only does Xcode produce an <strong>Intent handling protocol</strong> for every defined Intent, but it also provides <strong>Resolve methods</strong> for each parameter that are marked as <strong>configurable</strong>.<br>
 <img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsParamResol_2.png" alt="" class="img-fluid"></p>
 <p>Understanding the resolution of the Intent parameters relies on its <a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=688">life cycle explanation</a> through its <a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=811"><code>Resolve</code> <code>phase</code></a>.</p>
@@ -364,7 +364,7 @@
 </div>
 </div>
 </br></br>
-<h3 id="related-parameters">Related parameters <a class="header-anchor" href="#related-parameters" id="heading-2009" aria-labelledby="heading-2009">#</a></h3>
+<h3 id="related-parameters">Related parameters <a class="header-anchor" href="#related-parameters" id="heading-2019" aria-labelledby="heading-2019">#</a></h3>
 <p>In some cases, it may be interesting to properly handle parameters that have dependencies on each other so as to offer a wider range of shortcuts creation.</p>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -413,7 +413,7 @@
 <p>Regarding more complex examples, <strong><a href="https://developer.apple.com/videos/play/wwdc2019/213/?time=1786">chaining shortcuts</a></strong> to each other may rely on creating one's own custom type for passing the appropriate information to the next action.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsRelatedParam_2.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="build-discover">Build &amp; Discover <a class="header-anchor" href="#build-discover" id="heading-2010" aria-labelledby="heading-2010">#</a></h3>
+<h3 id="build-discover">Build &amp; Discover <a class="header-anchor" href="#build-discover" id="heading-2020" aria-labelledby="heading-2020">#</a></h3>
 <p>Each component of a shortcut has a <a href="https://developer.apple.com/videos/play/wwdc2019/805?time=74">dedicated purpose</a> that can be defined in the <code>Intent editor</code> of <code>Xcode</code>.<br>
 <img src="../../../../../images/iOSdev/wwdc21-ShortAct-ShortcutsBuild_1.png" alt="" class="img-fluid"></p>
 <ul class="nav nav-tabs" role="tablist">
@@ -469,8 +469,8 @@
 </div>
 </div>
 </br></br>
-<h2 id="actions" class="h2-focus">Actions <a class="header-anchor" href="#actions" id="heading-2011" aria-labelledby="heading-2011">#</a></h2>
-<h3 id="overview"><a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=34">Overview</a> <a class="header-anchor" href="#overview" id="heading-2012" aria-labelledby="heading-2012">#</a></h3>
+<h2 id="actions" class="h2-focus">Actions <a class="header-anchor" href="#actions" id="heading-2021" aria-labelledby="heading-2021">#</a></h2>
+<h3 id="overview"><a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=34">Overview</a> <a class="header-anchor" href="#overview" id="heading-2022" aria-labelledby="heading-2022">#</a></h3>
 <p>The goal of an action is to provide the user a way to <strong>interact with an app without opening it</strong>.<br>
 <img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsOverview_1.png" alt="" class="img-fluid"></p>
 <p>A model example of this implementation is the <a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=58">calendar app</a> that permits the creation of various shortcuts through the <a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=147">dedicated app</a> on mac for instance.</p>
@@ -478,7 +478,7 @@
 <p>The <code>Suggestions</code> widget, <code>Search</code> and the <code>Lock</code> screen contain and propose some actions automatically recognized by <code>Siri</code> if <a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=159">donated to the system</a>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsOverview_3.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="efficient-properties"><a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=218">Efficient properties</a> <a class="header-anchor" href="#efficient-properties" id="heading-2013" aria-labelledby="heading-2013">#</a></h3>
+<h3 id="efficient-properties"><a href="https://developer.apple.com/videos/play/wwdc2021/10283/?time=218">Efficient properties</a> <a class="header-anchor" href="#efficient-properties" id="heading-2023" aria-labelledby="heading-2023">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsProperties_1.png" alt="" class="img-fluid"></p>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -598,7 +598,7 @@ Useful means:</p>
 </br></br>
 <p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-ActionsProperties_2.png" alt="" class="img-fluid"><br>
 </br></p>
-<h2 id="automation" class="h2-focus">Automation <a class="header-anchor" href="#automation" id="heading-2014" aria-labelledby="heading-2014">#</a></h2>
+<h2 id="automation" class="h2-focus">Automation <a class="header-anchor" href="#automation" id="heading-2024" aria-labelledby="heading-2024">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-Automations_2.png" alt="" class="img-fluid"><br>
 Introduced in <code>iOS</code> <code>13</code>, the personal automations have experienced further <strong>improvements in <code>iOS</code> <code>14</code></strong> offering a much wider <a href="https://developer.apple.com/videos/play/wwdc2020/10084/?time=48">spectrum of use</a>...</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-ShortAct-Automations_1.png" alt="" class="img-fluid"></p>
