@@ -1,6 +1,6 @@
 ---
 title: "Handling keyboard navigation for ARIA"
-abstract: "Handling keyboard navigation is one of the mainstays of the W3c WAI ARIA recommendations"
+abstract: "Handling keyboard navigation is one of the mainstays of the W3C WAI ARIA recommendations"
 titleBeforeTag: true
 date: "2018-01-16"
 updateDate: "2026-01-01"
@@ -9,22 +9,28 @@ tags:
 ---
 
 ## Introduction
-Handling keyboard navigation is one of the mainstays of the <abbr>W3c</abbr>/<abbr>WAI</abbr> <abbr>ARIA</abbr> recommendations (Accessible Rich Internet Applications). The goal is to standardize keyboard navigation in each interface components on a web page.  
-Generally, keyboard navigation between <abbr>UI</abbr> components (widgets) is 'classically' done by tabbing. However, inside a widget, keyboard navigation has to be fine-tuned following the design patterns that are part of the <abbr>ARIA</abbr> recommendation.
+Handling keyboard navigation is one of the mainstays of the W3C/WAI ARIA recommendations (Accessible Rich Internet Applications). The goal is to standardize keyboard navigation in each interface component on a web page.
+Generally, keyboard navigation between UI components (widgets) is done by tabbing. However, inside a widget, keyboard navigation must be fine‑tuned by following the design patterns that are part of the ARIA recommendation.
 
-## Design patterns
+## ARIA and keyboard interactions
 
-### TabIndex
-In HTML5, <abbr>ARIA</abbr> makes `tabindex` available to all visible elements and allows the use of:
+### tabindex
+In HTML5, the global attribute `tabindex` can be used on most rendered elements. It allows the following uses:
 
-- a negative value (`-1`) for components that must not be accessible with keyboard navigation, but can receive focus programmatically;
-- a value set to `0`, which allows the element to receive the focus like all natively focusable elements.
+- a negative value (`tabindex="-1"`) which removes the element from the sequential tab order (it is not reachable via the Tab key), but it can receive focus programmatically (for example `element.focus()`) or with a click;
+- a value of `tabindex="0"` which allows the element to enter the natural tab order and receive focus like natively focusable elements.
 
+Avoid using positive `tabindex` values (> 0) except in very well‑justified cases: they change the tab order and are hard to maintain.
 
-### Design Patterns
-In <abbr>ARIA</abbr>, the main goal is to standardize keyboard interactions by making keyboard navigation identical to a desktop application (“thick client”). It is therefore necessary to implement the keyboard behaviour on each widget according to its type (accordion, navigation bar, tool bar, potentiometer...) by following [<abbr>ARIA</abbr>design patterns](https://www.w3.org/WAI/ARIA/apg/patterns/). In addition to that, design patterns also give a way to implement the <abbr>ARIA</abbr> properties and states in order to make the widget accessible depending on its type.
+### Design patterns
+With ARIA, the main goal is to standardize keyboard interactions by making keyboard navigation similar to that of a desktop application. For each widget, implement keyboard behaviour according to its type (accordion, navigation menu, toolbar, slider, etc.) by referring to the ARIA design patterns: https://www.w3.org/WAI/ARIA/apg/patterns/. In addition to keyboard navigation, these design patterns describe how to implement ARIA properties and states to make a widget accessible depending on its type.
 
-### User tests
-To validate the usability for people with disabilities and the robustness according to user agents (assistive aids and browsers), the web site must be tested at least by screen reader users (this is the most affected population by wrong implementation of design patterns).  
-In any case, you have to test developments in a combination of target environments (browsers/assistive technologies combination). This is a tough but absolutely necessary task for complex cases because on a web site or a traditional web application, you must, at least, test with Safari/VoiceOver, Edge/JAWS and Firefox/NVDA.  
-These user tests will allow you to validate that your widget is ergonomic which means that it is usable for this type of users and by extension for all users benefiting from accessibility (remember that 15% of the total population is said to have a disability of some sort or other).
+### User testing
+To validate usability for people with disabilities and robustness with user agents (assistive technologies and browsers), it is recommended to have your components tested by people who use screen readers, at minimum. Test your developments on the target environments (browser + assistive technology combinations). This is a substantial but essential effort. At minimum, test with the following combinations:
+
+- macOS: Safari + VoiceOver
+- Windows (Chromium): Chrome/Edge + NVDA
+- Windows (Chromium): Chrome/Edge + JAWS (if your users rely on it)
+- Windows: Firefox + NVDA
+
+These user tests will allow you to validate that your widget is usable for these users and, by extension, for all users benefiting from accessibility. For reference, <a href="https://www.who.int/news-room/fact-sheets/detail/disability-and-health">16% of the world population has a disability according to <abbr>>WHO</abbr data</a>.

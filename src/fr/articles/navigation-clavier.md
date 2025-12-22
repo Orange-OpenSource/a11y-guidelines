@@ -19,7 +19,9 @@ Globalement, la navigation entre les composants d'interface se fait classiquemen
 En <abbr>HTML5</abbr>, l'attribut global `tabindex` peut être utilisé sur la plupart des éléments rendus à l'écran. Il autorise notamment les usages suivants&nbsp;:
 
 - d'une valeur négative (`tabindex="-1"`) qui retire l'élément de l'ordre de tabulation séquentielle (il n'est pas atteignable au clavier via la touche <kbd>Tab</kbd>), mais il peut recevoir le focus par script (`element.focus()`) ou par un clic.
-- d'une valeur `tabindex="0"` qui permet à l'élément d'entrer dans l'ordre de tabulation naturel et de recevoir le focus comme les éléments nativement focusables. Évitez d'utiliser des valeurs `tabindex` positives (supérieures à 0) sauf cas très justifiés : elles modifient l'ordre de tabulation et sont difficiles à maintenir.
+- d'une valeur `tabindex="0"` qui permet à l'élément d'entrer dans l'ordre de tabulation naturel et de recevoir le focus comme les éléments nativement focusables.
+
+Évitez d'utiliser des valeurs `tabindex` positives (supérieures à 0) sauf cas très justifiés : elles modifient l'ordre de tabulation et sont difficiles à maintenir.
 
 ### Patrons de conception
 Avec <abbr>ARIA</abbr>, l'objectif est d'homogénéiser les interactions clavier en visant une navigation similaire à celle d'une application de bureau.
@@ -35,4 +37,4 @@ Testez vos développements sur les environnements cibles (combinaisons navigateu
 - Windows (Chromium)&nbsp;: Chrome/Edge + JAWS (si vos utilisateurs l'utilisent)
 - Windows&nbsp;: Firefox + NVDA
 
-Ces tests utilisateurs vont vous permettre de valider que votre composant est utilisable pour ce type d'utilisateurs et, par extension, pour l'ensemble des utilisateurs bénéficiant de l'accessibilité. Pour rappel, <a href="https://www.who.int/fr/news-room/fact-sheets/detail/disability-and-health">16&nbsp;% de la population mondiale présente un handicap d'après les données de l'OMS</a>
+Ces tests utilisateurs vont vous permettre de valider que votre composant est utilisable pour ce type d'utilisateurs et, par extension, pour l'ensemble des utilisateurs bénéficiant de l'accessibilité. Pour rappel, <a href="https://www.who.int/fr/news-room/fact-sheets/detail/disability-and-health">16&nbsp;% de la population mondiale présente un handicap d'après les données de l'OMS</a>.
