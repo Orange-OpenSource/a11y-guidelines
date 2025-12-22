@@ -1,6 +1,6 @@
 ---
 title: "Best practices for carousels"
-abstract: "Carousels: what are they and how to implement them properly?"
+abstract: "Carousels: what they are and how to implement them correctly"
 titleBeforeTag: true
 date: "2026-01-01"
 tags:
@@ -9,13 +9,13 @@ tags:
 ---
 
 ## Why
-The carousel is a dynamic communication tool whose usefulness clearly does not match its popularity (<a href="https://erikrunyon.com/2013/01/carousel-interaction-stats/">Carousel Interaction Stats</a>).
-If, despite everything, you want to develop one, here are some good practices to put in place to make it usable.
+Carousels are a dynamic communication tool that are widely used despite offering limited accessibility and user experience benefits (<a href="https://erikrunyon.com/2013/01/carousel-interaction-stats/">Carousel Interaction Stats</a>).
+If, despite everything, you want to develop one, here are some best practices to help make it accessible and usable.
 
 ### Compliance rules
-To be compliant, the carousel must satisfy **at least one** of the following rules:
+To meet <abbr>WCAG</abbr> requirements, a carousel must satisfy **at least one** of the following::
 
-- The duration of motion must be less than or equal to 5 seconds.
+- The duration of motion must be less than or equal to 5 seconds (in accordance with the rules defined in Success Criterion <a href="https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html">2.2.2: Pause, Stop, Hide (Level A)</a>).
 - The user must be able to stop and restart the motion.
 - The user must be able to show and hide the moving content.
 - The user must be able to view all information without motion.
@@ -23,10 +23,10 @@ To be compliant, the carousel must satisfy **at least one** of the following rul
 ### Best practices
 To go a little further, here are some additional best practices:
 
-- **It is better to position the carousel stop button just before it (in the code), so that the user can reach it quickly.**
-- Content must be usable by keyboard: <kbd>Space</kbd> key to stop, <kbd>Ctrl</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd> arrow to navigate between slides, etc. <a href="https://www.w3.org/WAI/ARIA/apg/patterns/carousel/">The full list of keyboard interactions is detailed in the ARIA carousel design pattern</a>.
-- It is preferable to stop rotation on focus and restart it when focus is lost.
-- Displaying the current position via dot navigation helps the user orient themselves. Finally, it is preferable not to include more than three panels in the carousel.
+- **It is preferable to position the stop button immediately before the carousel in the DOM order so the button is easily reached by keyboard navigation.**
+- Content must be usable with a keyboard: the <kbd>Space</kbd> key to pause/stop and <kbd>Ctrl</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd> arrow keys to navigate between slides, etc. <a href="https://www.w3.org/WAI/ARIA/apg/patterns/carousel/">The full list of keyboard interactions is detailed in the WAI-ARIA Authoring Practices (APG) carousel pattern</a>.
+- Pause the rotation when the carousel receives focus; resume it when the carousel loses focus.
+- Displaying the current position via dot navigation helps users orient themselves. Finally, avoid including more than three slides.
 
 ## How?
 To make all this accessible, we can rely on the following attributes:
@@ -35,14 +35,12 @@ To make all this accessible, we can rely on the following attributes:
 - `role="tab"` should be applied to each pagination tab.
 - `tabindex="0"` should be applied to the selected pagination tab; the other tabs should have the attribute `tabindex="-1"`.
 - `tabindex="-1"` removes the element from the tab order: it will not be reachable via keyboard navigation.
-- `aria-selected="true"` should be applied to the selected pagination tab; the other tabs should have the attribute `aria-selected="false"`.
-- `aria-hidden="false"` on the displayed panel.
-- `aria-hidden="true"` on the other panels.
+- `aria-selected="true"` to indicate the current position to screen readers on the dot navigation buttons; the other buttons should have the attribute `aria-selected="false"`.
+- `aria-hidden="false"` on the displayed slide.
+- `aria-hidden="true"` on the other slides.
 - `aria-roledescription` allows indicating the type of content.
-- `aria-label` can be used to add information about the panels (current panel number and the total number of panels).
+- `aria-label` can be used to add information about the slides (current slide number and the total number of slides).
 - `aria-controls` links the buttons to the content.
-- `aria-selected` to indicate the current position to screen readers on the dot navigation buttons.
-
 
 ### HTML example
 Below is an example of an accessible carousel in HTML format:
