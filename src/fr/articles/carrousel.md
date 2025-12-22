@@ -49,14 +49,14 @@ Afin de rendre tout ceci accessible, nous allons nous appuyer sur les attributs 
 Ci-dessous, un exemple de carrousel accessible au format HTML&nbsp;:
 
 ```html
-<button type="button" class="btn btn-icon btn-outline-secondary carousel-control-play-pause pause mt-1" data-bs-target="#carouselExamplePause" data-bs-play-text="Play Carousel" data-bs-pause-text="Pause Carousel" title="Pause Carousel">
-  <span class="visually-hidden">Pause Carousel</span>
+<button type="button" class="btn btn-icon btn-outline-secondary carousel-control-play-pause pause mt-1" data-bs-target="#carouselExamplePause" data-bs-play-text="Lecture" data-bs-pause-text="Pause" title="Pause">
+  <span class="visually-hidden">Pause</span>
 </button>
 <div id="carouselExamplePause" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositive 1"></button>
+    <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="1" aria-label="Diapositive 2"></button>
+    <button type="button" data-bs-target="#carouselExamplePause" data-bs-slide-to="2" aria-label="Diapositive 3"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -71,11 +71,11 @@ Ci-dessous, un exemple de carrousel accessible au format HTML&nbsp;:
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExamplePause" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
+    <span class="visually-hidden">Précédent</span>
   </button>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExamplePause" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
+    <span class="visually-hidden">Suivant</span>
   </button>
 </div>
 ```
