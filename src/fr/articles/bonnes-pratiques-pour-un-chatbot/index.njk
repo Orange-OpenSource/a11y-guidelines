@@ -14,7 +14,8 @@ js:
 ---
 
 <h2>Avant-propos</h2>
-<p>Dans cet article, les termes <span lang="en">chatbot, tchat et chat</span> se réfèrent à une fenêtre de dialogue qui
+<p>Dans cet article, les termes <span lang="en">chatbot</span>, <span lang="en">tchat</span> et <span
+    lang="en">chat</span> se réfèrent à une fenêtre de dialogue qui
   permet d'engager une conversation écrite avec un opérateur ou une intelligence artificielle, parfois également
   appelée
   agent conversationnel.</p>
@@ -24,8 +25,8 @@ js:
 <p>Cet article détaille un certain nombre de points techniques sur lesquels il faut être vigilant. Si l'objectif est de
   développer un chatbot pour un site Orange, il convient dans un premier temps de consulter les recommandations de la
   marque à ce sujet disponibles sur le site&nbsp;: <a href="https://design.orange.com/guidelines">design.orange.com</a>
-  <span lang="en">(Conversational UI
-    guideline)</span>.</p>
+  <span lang="en">(Conversational UI guidelines)</span>.
+</p>
 
 <h2>2. Accéder au chatbot</h2>
 <p>
@@ -55,7 +56,6 @@ js:
 <p>
   Testez-les, à l'aide de la souris et à l'aide du clavier&nbsp;:
 </p>
-<p>
 <ul class="btn-list">
   <li><button id="btnExemple1" class="btnChatbot">Contact</button>&nbsp;: bouton focusable (balise
     <code>&lt;button&gt;</code>).
@@ -64,7 +64,6 @@ js:
     <code>&lt;span&gt;</code>).
   </li>
 </ul>
-</p>
 
 <h3>Navigation avec une loupe d'écran</h3>
 <p>
@@ -91,10 +90,8 @@ js:
 <p>La présence d'un bouton pour accéder au chatbot, en bas à droite, suffira à faire comprendre à certains utilisateurs
   qu'un chatbot est disponible sur la page. Cela dit, pour les utilisateurs aveugles ou malvoyants qui naviguent avec
   un lecteur d'écran, cela risque de poser des difficultés. En effet, pour entendre ce bouton, placé bien souvent à la
-  fin du code, il faudrait que l'utilisateur écoute la page en entier jusqu'à la dernière ligne. Donc, il devrait
-  écouter
-  la totalité du pied de page qui contient souvent de nombreux liens. En pratique, on se doute que ce n'est pas ce que
-  font les utilisateurs.
+  fin du code, il faudrait que l'utilisateur écoute la page en entier jusqu'à la dernière ligne. En pratique,
+  l'utilisateur devrait écouter la page jusqu'à la fin, y compris le pied de page, ce qui est peu réaliste.
 </p>
 <p>
   Dans ce cas de figure, un utilisateur malvoyant n'aura donc tout simplement pas connaissance de ce bouton, il ne
@@ -114,19 +111,20 @@ js:
 
 <p>Les liens d'évitement permettent d'accéder directement à une zone spécifique de la page. Ils sont insérés en haut de
   page et donc vocalisés en premier. La présence d'un lien d'évitement «&nbsp;accéder au tchat&nbsp;» permettant
-  d'aller directement au chatbot aidera l'utilisateur àanticiper son utilisation. Ces liens d'évitements peuvent être
-  masqués à l'écran, même si ce n'est pas à privilégier (grâce au <a href="../masquage-accessible/">masquage accessible</a>).</p>
+  d'aller directement au chatbot aidera l'utilisateur à anticiper son utilisation. Ces liens d'évitement peuvent être
+  masqués à l'écran, même si ce n'est pas à privilégier (grâce au <a href="../masquage-accessible/">masquage
+    accessible</a>).</p>
 <p>Attention aux anglicismes. Remarquez ici l'utilisation du mot «tchat» et non «chat». À l'écoute, le second mot est
   vocalisé comme l'animal (sans l'accent anglais cela peut prêter à confusion).
 </p>
 <p>La présence des liens d'évitement a également un effet positif pour les personnes qui naviguent au clavier. Par
-  exemple, sur la page que vous consultez actuellement, des liens d'évitements sont disponibles. Ils sont masqués par
+  exemple, sur la page que vous consultez actuellement, des liens d'évitement sont disponibles. Ils sont masqués par
   défaut et deviennent visibles à la prise du focus. Pour les faire apparaître, vous pouvez cliquer dans la barre
   d'adresse de votre navigateur puis appuyer plusieurs fois sur la touche <kbd>Tab</kbd> (pour positionner le focus en
   début de page).
 </p>
 <img class="screenshot img-fluid" src="images/skiplinks.png"
-  alt="capture d'écran des liens d'évitements qui s'affichent sur cette page lors de la navigation au clavier">
+  alt="capture d'écran des liens d'évitement qui s'affichent sur cette page lors de la navigation au clavier">
 
 <h4>Utiliser des landmarks ARIA</h4>
 
@@ -215,7 +213,7 @@ js:
 <h3>Navigation avec un lecteur d'écran</h3>
 
 <h4>Labelliser les éléments interactifs</h4>
-<p>Des étiquettes ont été ajoutés sur le champ de saisie et sur le bouton envoyer à l'aide d'un attribut
+<p>Des étiquettes ont été ajoutées sur le champ de saisie et sur le bouton envoyer à l'aide d'un attribut
   <code>aria-label</code> ou <code>title</code>. Ainsi, un utilisateur malvoyant utilisant un lecteur d'écran entendra
   qu'il s'agit du champ permettant de saisir le message à envoyer.
 </p>
@@ -244,16 +242,16 @@ js:
 </p>
 
 <p>
-  En regardant l'image précédente, on s'aperçoit que ce message est aligné à droite, il suffit de remonter en haut de
-  la pile des messages pour trouver l'émetteur&nbsp;: «moi».
+  En regardant l'image précédente, on s'aperçoit que ce message est aligné à droite, il suffit de remonter la pile des
+  messages pour trouver l'émetteur&nbsp;: «moi».
 </p>
 
 <p>
   Pour un utilisateur qui ne voit pas l'écran, cela peut devenir compliqué puisque l'émetteur du message est inséré
   visuellement (à juste titre) uniquement lorsqu'il y a un changement d'émetteur dans la conversation.
 </p>
-<p> Pour lever toute ambiguïté, on va indiquer devant chaque message son émetteur pour les utilisateurs qui naviguent à
-  l'aide d'un lecteur d'écran uniquement (utilisation de la classe de masquage accessible
+<p> Pour lever toute ambiguïté, on va indiquer devant chaque message son émetteur uniquement pour les utilisateurs qui
+  utilisent un lecteur d'écran (utilisation de la classe de masquage accessible
   <code>visually-hidden</code>).
 </p>
 
@@ -287,7 +285,8 @@ js:
 
 <h4>Sons</h4>
 
-<p>Les <a hreflang=en lang href="https://system.design.orange.com/0c1af118d/p/142bf5-conversational">Conversational UI
+<p>Les <a hreflang="en" lang="en"
+    href="https://system.design.orange.com/0c1af118d/p/142bf5-conversational">Conversational UI
     guidelines</a> précisent les fichiers audio à utiliser. Il est important d'émettre un son à l'envoi et à la
   réception des messages. C'est utile pour tout le monde mais, en particulier, pour les
   personnes malvoyantes. Elles auront confirmation que leur message a été envoyé sans avoir besoin d'aller lire le fil
@@ -374,7 +373,7 @@ js:
       <span id="chatbot-title" role="heading" aria-level="1">Djingo <span class="visually-hidden">Fenêtre de
           discussion</span></span>
       <span id="chatbot-toolbar">
-        <!--<button class="ico" id="ico-contrast" title="High contras&te mode" aria-label="High contraste mode" role="checkbox"></button>-->
+        <!--<button class="ico" id="ico-contrast" title="High contraste mode" aria-label="High contraste mode" role="checkbox"></button>-->
         <button class="ico" id="chatbot-hide" title="Réduire la fenêtre de discussion"
           aria-label="Réduire la fenêtre de discussion"></button>
         <button class="ico" id="chatbot-show" title="Afficher la fenêtre de discussion"
@@ -388,7 +387,7 @@ js:
       <form>
         <input type="text" aria-label="message à envoyer" id="chat-input" autocomplete="off"
           placeholder="Saisir votre message...">
-        <input type="submit" title="Envoyer ce message" value="envoyer" aria-label="Envoyer">
+        <input type="submit" title="Envoyer ce message" value="Envoyer" aria-label="Envoyer">
       </form>
     </div>
   </div>
