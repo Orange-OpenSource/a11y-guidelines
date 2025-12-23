@@ -59,14 +59,14 @@ js:
 </p>
 <p>In the screenshot below taken on Windows, the button is hidden by a tooltip from an item in the Windows bar:
 </p>
-<p><img class="screenshot" src="images/zoom.png" alt="screenshot of the contact button partially hidden by a tooltip">
-</p>
+<img class="screenshot" src="images/zoom.png" alt="screenshot of the contact button partially hidden by a tooltip">
+
 <p>
   Same example but this time with a small margin between the button and the edge of the window:
 </p>
-<p><img class="screenshot" src="images/zoom-ok.png"
-    alt="screenshot of the visible contact button despite the presence of a tooltip">
-</p>
+<img class="screenshot" src="images/zoom-ok.png"
+  alt="screenshot of the visible contact button despite the presence of a tooltip">
+
 <h3>Screen reader navigation</h3>
 <p>The presence of a button to access the chatbot, in the lower right, is enough to make some users understand that a
   chatbot is available on the page. But, for blind or visually impaired users who are navigating with a screen reader,
@@ -97,9 +97,9 @@ js:
   focus is on them. To make them appear, you can click in the address bar of your browser then press the <kbd>Tab</kbd>
   key several times (to locate the focus at the beginning of the page).
 </p>
-<p><img class="screenshot img-fluid" src="images/skiplinks.png"
-    alt="screenshot of the skip links that appear on this page when navigating with the keyboard">
-</p>
+<img class="screenshot img-fluid" src="images/skiplinks.png"
+  alt="screenshot of the skip links that appear on this page when navigating with the keyboard">
+
 
 <h4>Use <abbr>ARIA</abbr> landmarks</h4>
 
@@ -119,8 +119,8 @@ js:
   This code is used to define a “chat window” area in the page. This allows people who use a screen reader to access the
   chat from the list of regions. The screenshot below was obtained by displaying the list of regions from the
   <abbr>NVDA</abbr> screen reader:<br>
-  <img class="screenshot img-fluid" src="images/region.png" alt="list of regions in NVDA">
 </p>
+<img class="screenshot img-fluid" src="images/region.png" alt="list of regions in NVDA">
 
 <p>With only two small ARIA attributes, navigation is greatly simplified.</p>
 
@@ -141,9 +141,9 @@ js:
 &lt;!-- chatbot code --&gt;
 &lt;/div&gt;
   </code></pre>
-<p>
-  <img class="screenshot img-fluid" src="images/title.png" alt="screenshot, list of headings in NVDA">
-</p>
+
+<img class="screenshot img-fluid" src="images/title.png" alt="screenshot, list of headings in NVDA">
+
 
 <h2>3. Chatbot accessibility</h2>
 
@@ -176,14 +176,14 @@ outline: .2rem solid #f16e00;
   The width of the chat window can affect the reading comfort. Indeed, if it is too wide, reading the chat with
   magnifying software can become tedious. Especially if the user has to scroll to read the entire line on the chat.
 </p>
+
 <p>In the screenshot below (screen magnifier at 600%), the window is too wide, the user will have to move the visible
   area to the left and right to browse through the chat window: </p>
-<p><img class="screenshot" src="images/chatbot-zoom-ko.png" alt="screenshot of a chat window too large">
-</p>
+<img class="screenshot img-fluid" src="images/chatbot-zoom-ko.png" alt="screenshot of a chat window too large">
+
 <p>The screenshot below was taken with the chat window visible on this page. Here, with a 600% zoom, it is possible to
   read the entire chat without moving the visible portion of the screen.</p>
-<p><img class="screenshot" src="images/chatbot-zoom-ok.png" alt="screenshot of a chat window of enough width">
-</p>
+<img class="screenshot img-fluid" src="images/chatbot-zoom-ok.png" alt="screenshot of a chat window of enough width">
 
 <h3>Navigating with a screen reader</h3>
 
@@ -210,8 +210,7 @@ outline: .2rem solid #f16e00;
 
 <h4>Identify the sender of a message</h4>
 <p>Can you identify who the sender of the message “Test message 2” is in the screenshot below?</p>
-<p><img class="screenshot img-fluid" src="images/chat1.png" alt="screenshot of a conversation via a chat window">
-</p>
+<img class="screenshot img-fluid" src="images/chat1.png" alt="screenshot of a conversation via a chat window">
 
 <p>Looking at the image above, we see that this message is aligned to the right, just go up the stack of messages
   aligned to the right to find the sender: “me”.</p>
@@ -265,8 +264,8 @@ message test 1
   browser tab title.
 </p>
 
-<p><img class="screenshot img-fluid" src="images/window-title.png"
-    alt="screenshot of a browser tab with a title starting with: Djingo says…"></p>
+<img class="screenshot img-fluid" src="images/window-title.png"
+  alt="screenshot of a browser tab with a title starting with: Djingo says…"></p>
 
 <p>This change must be made when a message arrives and the focus is not in the chat input field (focus elsewhere in the
   page or on another tab). Do not forget to reset the window title when the user focuses the input field again.
