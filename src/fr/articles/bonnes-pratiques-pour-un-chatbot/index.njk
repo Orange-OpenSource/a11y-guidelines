@@ -32,12 +32,10 @@ js:
 <p>
   Avant d'utiliser un chatbot, bien souvent il est nécessaire de faire apparaître celui-ci en cliquant sur un bouton
   situé dans un coin de la page. L'utilisateur doit être en mesure de découvrir par lui-même qu'il a la possibilité
-  d'utiliser un chatbot sur la page qu'il consulte. C'est pourquoi il est important d'utiliser un bouton dont le
-  libellé
-  est suffisamment explicite. Celui-ci peut dépendre du contexte mais par exemple sur un site marchand des boutons
-  intitulés&nbsp;: «&nbsp;Nous contacter&nbsp;», «&nbsp;Un problème avec votre commande&nbsp;?&nbsp;» sont des
-  propositions
-  valides.
+  d'utiliser un chatbot sur la page qu'il consulte. Le libellé dépend du contexte. Par exemple, sur un site marchand,
+  des boutons intitulés&nbsp;: «&nbsp;Nous contacter&nbsp;», «&nbsp;Un problème avec votre commande&nbsp;?&nbsp;» sont
+  des
+  propositions valides.
 </p>
 
 <h3>Navigation au clavier</h3>
@@ -112,13 +110,13 @@ js:
 <h4>Ajouter des liens d'évitement</h4>
 
 <p>Les liens d'évitement permettent d'accéder directement à une zone spécifique de la page. Ils sont insérés en haut de
-  page et donc vocalisés en premier. La présence d'un lien d'évitement «&nbsp;accéder au tchat&nbsp;» permettant
-  d'aller directement au chatbot aidera l'utilisateur à anticiper son utilisation. Ces liens d'évitement peuvent être
-  masqués à l'écran, même si ce n'est pas à privilégier (grâce au <a href="../masquage-accessible/">masquage
-    accessible</a>).</p>
+  page et donc vocalisés en premier. La présence d'un lien d'évitement «&nbsp;accéder au tchat&nbsp;» vers le chatbot
+  aide l'utilisateur à anticiper son usage. Ces liens d'évitement peuvent être masqués à l'écran, même si ce n'est pas à
+  privilégier (grâce au <a href="../masquage-accessible/">masquage accessible</a>).</p>
 <p>Attention aux anglicismes. Remarquez ici l'utilisation du mot «tchat» et non «chat». À l'écoute, le second mot est
   vocalisé comme l'animal (sans l'accent anglais cela peut prêter à confusion).
 </p>
+
 <p>La présence des liens d'évitement a également un effet positif pour les personnes qui naviguent au clavier. Par
   exemple, sur la page que vous consultez actuellement, des liens d'évitement sont disponibles. Ils sont masqués par
   défaut et deviennent visibles à la prise du focus. Pour les faire apparaître, vous pouvez cliquer dans la barre
@@ -174,7 +172,7 @@ js:
 
 <h3>Navigation au clavier</h3>
 <p>Concernant la navigation au clavier, il suffit de vérifier en navigant sans l'aide de la souris, qu'il est possible
-  de cliquer sur l'ensemble des boutons (touche <code>Tab</code> pour déplacer le focus, touche <code>entrée</code>
+  de cliquer sur l'ensemble des boutons (touche <kbd>Tab</kbd> pour déplacer le focus, touche <kbd>Entrée</kbd>
   pour activer un bouton) et qu'il est possible de saisir et d'envoyer des messages.</p>
 <p>Après quelques échanges dans le chat, une barre de défilement apparaît. Il faut également s'assurer que celle-ci soit
   utilisable à l'aide des flèches du clavier. C'est le cas nativement dans Firefox, par contre pour Chrome il a été
@@ -212,7 +210,7 @@ js:
 <h3>Navigation avec un lecteur d'écran</h3>
 
 <h4>Labelliser les éléments interactifs</h4>
-<p>Des étiquettes ont été ajoutées sur le champ de saisie et sur le bouton envoyer à l'aide d'un attribut
+<p>Des étiquettes ont été ajoutées sur le champ de saisie et sur le bouton «&nbsp;Envoyer&nbsp;» à l'aide d'un attribut
   <code>aria-label</code> ou <code>title</code>. Ainsi, un utilisateur malvoyant utilisant un lecteur d'écran entendra
   qu'il s'agit du champ permettant de saisir le message à envoyer.
 </p>
@@ -324,14 +322,15 @@ js:
 <strong>Gestion du focus</strong>
 <p>Pour simplifier la navigation au clavier, lorsque le choix est proposé à l'utilisateur, plutôt que de mettre le focus
   dans le champ de saisie du chat, celui est déplacé sur le texte qui précède les boutons. Ceci permet ensuite à
-  l'utilisateur de naviguer sur le premier choix en appuyant une seule fois sur la touche <code>Tab</code>.</p>
+  l'utilisateur de naviguer sur le premier choix en appuyant une seule fois sur la touche <kbd>Tab</kbd>.</p>
 <p>Pour positionner le focus sur l'élément textuel (un élément <code>&lt;div&gt;</code> dans cet exemple) qui n'est pas
   focusable par défaut, il est nécessaire de lui ajouter un attribut <code>tabindex="-1"</code>, ainsi il peut
   recevoir
   le focus via JavaScript. Pour rappel, cet attribut peut prendre les valeurs suivantes&nbsp;:</p>
 <ul>
-  <li>tabindex = 0&nbsp;: l'élément est focusable au clavier (touche <code>Tab</code>) et via JavaScript.</li>
-  <li>tabindex = -1&nbsp;: l'élément est focusable via JavaScript uniquement.</li>
+  <li><code>tabindex="0"</code>&nbsp;: l'élément est focusable au clavier (touche <kbd>Tab</kbd>) et via JavaScript.
+  </li>
+  <li><code>tabindex="-1"</code>&nbsp;: l'élément est focusable via JavaScript uniquement.</li>
 </ul>
 
 <strong>Navigation avec un lecteur d'écran</strong>
