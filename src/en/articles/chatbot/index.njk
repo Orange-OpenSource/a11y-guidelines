@@ -38,8 +38,9 @@ js:
   <code>button</code> element in the markup., as is the case on this page
   (contact button located at the bottom right of the page).
 </p>
-<strong>Example:</strong>
-<p>The two buttons below look identical when used with the mouse. However, if you try to use them when navigating with
+
+<p><strong>Example:</strong><br>
+  The two buttons below look identical when used with the mouse. However, if you try to use them when navigating with
   the <kbd>Tab</kbd> key, the second button (using a <code>&lt;span&gt;</code> tag) is not focusable. In the latter
   case, a user who navigates using the keyboard will not be able to open the chatbot.
 </p>
@@ -74,9 +75,7 @@ js:
   user to listen to the entire page to the last line. Thus, they should listen to the whole footer generally containing
   many links. In reality, it is not what users do.
 </p>
-<p> In this case, a visually impaired user is not aware of this button, so they are not able to access the chat.
-</p>
-<p>
+<p> In this case, a visually impaired user is not aware of this button, so they are not able to access the chat.<br>
   <strong> There are several ways to avoid this problem:</strong>
 </p>
 <ul>
@@ -254,10 +253,9 @@ message test 1
     Conversational UI guidelines</a>
   specify the audio files to use. It is important to make a sound when sending and receiving messages. This is useful
   for everyone but, especially, for the visually impaired. They have confirmation that their message has been sent
-  without needing to read the message thread for example. </p>
+  without needing to read the message thread for example.</p>
 
 <h4>Window title</h4>
-
 <p>To complete the audio alert, it is also important to change the title of the window when receiving a message. This
   allows the user who has been absent, to detect, at a glance, that a message has arrived even if it is on another tab
   of the browser. Similarly, for a user who navigates with a screen reader, it is very easy to access at any time the
@@ -287,7 +285,7 @@ document.title = "Djingo says…" + title;
 <p>In this example, the user must make a choice. In this case, it is necessary to take some precautions to simplify
   navigation.</p>
 
-<strong>Focus Management</strong>
+<h5>Focus Management</h5>
 <p>To simplify the keyboard navigation, rather than focusing the chat input field, the focus is moved to the text
   preceding the buttons. This then allows the user to navigate the first choice by pressing the <kbd>Tab</kbd> key once.
 </p>
@@ -299,7 +297,7 @@ document.title = "Djingo says…" + title;
   <li> tabindex = -1: the element is focusable via JavaScript only.</li>
 </ul>
 
-<strong>Navigation with a screen reader</strong>
+<h5>Navigation with a screen reader</h5>
 <p>When focus is moved to an item, the screen reader automatically vocalizes it. But in our case, the
   <code>aria-live</code> attribute already allows to automatically vocalize any addition in the chat window. To avoid
   double vocalization in this case, make sure to temporarily disable the <code>aria-live</code>.
