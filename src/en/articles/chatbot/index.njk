@@ -15,7 +15,7 @@ js:
 
 <h1>Designing an accessible chatbot</h1>
 
-<h2> Introduction </h2>
+<h2>Introduction</h2>
 <p>In this article, the terms “chatbot” and “chat” refer to a dialogue window that allows you to engage in a written
   conversation with an operator or an artificial intelligence, sometimes also called conversational agent. </p>
 
@@ -27,30 +27,29 @@ js:
 
 <h2> 2. Go to the chatbot</h2>
 <p>Before using a chatbot, it is often necessary to make it appear by clicking on a button located in a corner of the
-  page. The user must be able to discover that he has the chance to use a chatbot on the page he consults. This is why
-  it is important to use a button whose label is sufficiently explicit. It depend on the context: for example, on a
+  page. Users must be able to discover that they have the option to use a chatbot on the page they are viewing. This is
+  why
+  it is important to use a button whose label is sufficiently explicit. It depends on the context: for example, on an
   e-commerce site, label such as “Contact us”, or “A problem with your order?” are valid proposals.
 </p>
 
-<h3> Keyboard Navigation </h3>
-<p> It is sufficient to put a button in a corner of the page provided that it is accessible, in particular, using the
-  keyboard only. Be sure to use a real button (<code>&lt;button&gt;</code>) in the code, as is the case on this page
+<h3> Keyboard Navigation</h3>
+<p>It is sufficient to place a button in a corner of the page, provided it is keyboard‑accessible. Use a real
+  <code>button</code> element in the markup., as is the case on this page
   (contact button located at the bottom right of the page).
 </p>
-<strong> Example: </strong>
+<strong>Example:</strong>
 <p>The two buttons below look identical when used with the mouse. However, if you try to use them when navigating with
   the <kbd>Tab</kbd> key, the second button (using a <code>&lt;span&gt;</code> tag) is not focusable. In the latter
   case, a user who navigates using the keyboard will not be able to open the chatbot.
 </p>
-<p>Test them, using the mouse and using the keyboard: </p>
-<p>
+<p>Test them, using the mouse and using the keyboard:</p>
 <ul class="btn-list">
   <li><button id="btnExample1" class="btnChatbot">Contact</button>: focusable button (<code> &lt;button&gt;</code> tag).
   </li>
   <li><span id="btnExample2" class="btnChatbot ko">Contact</span>: non-focusable button (<code>&lt;span&gt;</code> tag).
   </li>
 </ul>
-</p>
 
 <h3>Browsing with a screen magnifier</h3>
 <p>For users with a screen magnifier, it is advisable not to locate the contact button too close to the edge of the
@@ -78,18 +77,18 @@ js:
 <p> In this case, a visually impaired user is not aware of this button, so they are not able to access the chat.
 </p>
 <p>
-  <strong> There are several ways to avoid this problem: </strong>
+  <strong> There are several ways to avoid this problem:</strong>
+</p>
 <ul>
   <li>Add skip links on the page</li>
   <li>Use <abbr>ARIA</abbr></li>
   <li>Use a title tag</li>
 </ul>
-</p>
 
 <h4>Add skip links</h4>
 
 <p>Skip links provide direct access to a specific area of ​​the page. They are inserted at the top of the page and thus,
-  vocalized first. The presence of a skip link “skip to chat” to go directly to the chatbot will allow the user to
+  vocalized first. The presence of a skip link “skip to chat” to go directly to the chatbot will allow users to
   anticipate its use. These skip links can be hidden on the screen, even if it’s not the best choice (thanks to <a
     href="../accessible-hiding/">accessible hiding</a>).
 </p>
@@ -123,7 +122,7 @@ js:
   <img class="screenshot img-fluid" src="images/region.png" alt="list of regions in NVDA">
 </p>
 
-<p> So with only two little <abbr>ARIA</abbr> attributes, we greatly simplify navigation. </p>
+<p>With only two small ARIA attributes, navigation is greatly simplified.</p>
 
 <h4>Use a title tag</h4>
 <p>
@@ -156,7 +155,7 @@ js:
   and to type and send messages.</p>
 <p>After a few exchanges in the chat, a scroll bar appears. It must also be ensured that the chat can be used with the
   arrow keys. This is the case natively in Firefox, but for Chrome it is necessary to make this element focusable using
-  a <code>tabindex</code>attribute.</p>
+  a <code>tabindex</code> attribute.</p>
 
 <pre><code class="html">
 &lt;div id="chat-content" <span class="important">tabindex="0"</span>&gt;
@@ -172,12 +171,12 @@ outline: .2rem solid #f16e00;
 <p><img class="screenshot img-fluid" src="images/chat-scroll.png"
     alt="screenshot of the chat window with the focus positioned on the item to scroll through the messages"></p>
 
-<h3>Browsing with a screen magnifier </h3>
+<h3>Browsing with a screen magnifier</h3>
 <p>
   The width of the chat window can affect the reading comfort. Indeed, if it is too wide, reading the chat with
   magnifying software can become tedious. Especially if the user has to scroll to read the entire line on the chat.
 </p>
-<p>In the screenshot below (screen magnifier on 600%), the window is too wide, the user will have to move the visible
+<p>In the screenshot below (screen magnifier at 600%), the window is too wide, the user will have to move the visible
   area to the left and right to browse through the chat window: </p>
 <p><img class="screenshot" src="images/chatbot-zoom-ko.png" alt="screenshot of a chat window too large">
 </p>
@@ -186,12 +185,13 @@ outline: .2rem solid #f16e00;
 <p><img class="screenshot" src="images/chatbot-zoom-ok.png" alt="screenshot of a chat window of enough width">
 </p>
 
-<h3> Navigating with a screen reader </h3>
+<h3>Navigating with a screen reader</h3>
 
 <h4>Labelling interactive elements</h4>
 <p>Labels have been added to the input field and the send button using a <code>title</code> or an
   <code>aria-label</code> attribute. Thus, a visually impaired user using a screen reader will hear that it is the field
-  to type the message to send.</p>
+  to type the message to send.
+</p>
 <pre><code class="html">
 &lt;input class="text" title="Message to send" <span class="important"> aria-label="message to send"</span> id="chat-input" autocomplete="off" placeholder="Enter your message ... "&gt;
 &lt;input type="submit" title="Send this message" <span class="important"> aria-label="Send" </span>&gt;
@@ -251,8 +251,8 @@ message test 1
     </code></pre>
 
 <h4>Sounds</h4>
-
-<p>The <a href="https://design.orange.com/guidelines">Orange Brand recommendations</a> (Conversational UI guideline)
+<p>The <a href="https://system.design.orange.com/0c1af118d/p/142bf5-conversational">Orange Brand recommendations for
+    Conversational UI guidelines</a>
   specify the audio files to use. It is important to make a sound when sending and receiving messages. This is useful
   for everyone but, especially, for the visually impaired. They have confirmation that their message has been sent
   without needing to read the message thread for example. </p>
@@ -293,8 +293,8 @@ document.title = "Djingo says…" + title;
   preceding the buttons. This then allows the user to navigate the first choice by pressing the <kbd>Tab</kbd> key once.
 </p>
 <p>To locate the focus on the textual element (a <code>&lt;div&gt;</code>in this example) that is not focusable by
-  default, it is necessary to add a <code>tabindex="- 1"</code> attribute, so it can receive focus via JavaScript. As a
-  reminder, this attribute can take the following values: </p>
+  default, it is necessary to add a <code>tabindex="-1"</code> attribute, so it can receive focus via JavaScript. As a
+  reminder, this attribute can take the following values:</p>
 <ul>
   <li> tabindex = 0: the element is focusable on the keyboard (<kbd>Tab</kbd> key) and via JavaScript.</li>
   <li> tabindex = -1: the element is focusable via JavaScript only.</li>
@@ -303,7 +303,8 @@ document.title = "Djingo says…" + title;
 <strong>Navigation with a screen reader</strong>
 <p>When focus is moved to an item, the screen reader automatically vocalizes it. But in our case, the
   <code>aria-live</code> attribute already allows to automatically vocalize any addition in the chat window. To avoid
-  double vocalization in this case, make sure to temporarily disable the <code>aria-live</code>. </p>
+  double vocalization in this case, make sure to temporarily disable the <code>aria-live</code>.
+</p>
 <pre><code class="js">
   // Deactivation of aria-live (avoid double vocalization)
   document.getElementById("chat-container").setAttribute("aria-live", "off");
