@@ -80,9 +80,9 @@ Ci-dessous, un exemple de carrousel accessible au format HTML&nbsp;:
 
 ### Webographie
 
-- <a lang="en" hreflang="en" href="https://www.w3.org/WAI/ARIA/apg/patterns/carousel/">Carousel (Slide Show or Image Rotator) Pattern</a>
-- <a lang="en" hreflang="en" href="https://boosted.orange.com/docs/5.3/components/carousel/">Boosted documentation about Carousel</a>
-- <a lang="en" hreflang="en" href="https://erikrunyon.com/2013/01/carousel-interaction-stats/">Carousel Interaction Stats</a>
-- <a lang="en" hreflang="en" href="https://www.w3.org/WAI/tutorials/carousels/">W3C - Carousels Tutorial</a>
+- <a lang="en" hreflang="en" href="https://www.w3.org/WAI/ARIA/apg/patterns/carousel/">Carousel (Slide Show or Image Rotator) Pattern (en)</a>
+- <a lang="en" hreflang="en" href="https://boosted.orange.com/docs/5.3/components/carousel/">Boosted documentation about Carousel (en)</a>
+- <a lang="en" hreflang="en" href="https://erikrunyon.com/2013/01/carousel-interaction-stats/">Carousel Interaction Stats (en)</a>
+- <a lang="en" hreflang="en" href="https://www.w3.org/WAI/tutorials/carousels/">W3C - Carousels Tutorial (en)</a>
 - <a href="https://www.adilade.fr/blog/carrousel-accessible-responsive-vanillajs/">Un carrousel accessible et responsive en Vanilla JS</a>
 - <a href="https://www.accede-web.com/notices/interface-riche/carrousels/">AcceDe Web - carrousels</a>

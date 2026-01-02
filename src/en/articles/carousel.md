@@ -83,5 +83,5 @@ Below is an example of an accessible carousel in HTML format:
 - <a href="https://boosted.orange.com/docs/5.3/components/carousel/">Boosted documentation about Carousel</a>
 - <a href="https://erikrunyon.com/2013/01/carousel-interaction-stats/">Carousel Interaction Stats</a>
 - <a href="https://www.w3.org/WAI/tutorials/carousels/">W3C - Carousels Tutorial</a>
-- <a lang="fr" hreflang="fr" href="https://www.adilade.fr/blog/carrousel-accessible-responsive-vanillajs/">Un carrousel accessible et responsive en Vanilla JS</a>
-- <a lang="fr" hreflang="fr" href="https://www.accede-web.com/notices/interface-riche/carrousels/">AcceDe Web - carrousels</a>
+- <a lang="fr" hreflang="fr" href="https://www.adilade.fr/blog/carrousel-accessible-responsive-vanillajs/">Un carrousel accessible et responsive en Vanilla JS (fr)</a>
+- <a lang="fr" hreflang="fr" href="https://www.accede-web.com/notices/interface-riche/carrousels/">AcceDe Web - carrousels (fr)</a>
