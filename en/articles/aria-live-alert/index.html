@@ -197,24 +197,24 @@
           
           <div class="mt-4">
           <p>Users who navigate using a screen reader are not always aware of changes made on the page. When information is updated or when a message appears, it is sometimes necessary to make the screen reader speak to inform the user. To do this, the <abbr>ARIA</abbr> language has the role <code>alert</code> and the attribute<code> aria-live</code>.</p>
-<h2 id="the-role-alert" class="h2-focus">The role alert <a class="header-anchor" href="#the-role-alert" id="heading-72" aria-labelledby="heading-72">#</a></h2>
+<h2 id="the-role-alert" class="h2-focus">The role alert <a class="header-anchor" href="#the-role-alert" id="heading-46" aria-labelledby="heading-46">#</a></h2>
 <p>Positioned on an HTML element, this allows you to tell the screen reader to vocalize the element automatically when it is created. However, be sure to use this role only in appropriate cases, as clearly stated in the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role">Mozilla MDN documentation</a>. Due to its intrusive nature, role alert should be used sparingly and only in situations where the user's attention is immediately required. Less urgent dynamic changes should use a less aggressive method, such as <code>aria-live=&quot;polite&quot;</code> or other live zone roles.</p>
 <p>To trigger an alert, several methods are possible, with a support that differ depending on the browser and screen reader pair used. You can read <a href="https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/">Steve Faulkner's article</a> on this subject.</p>
 <p>Here are some examples of methods that are well supported.</p>
-<h3 id="create-a-new-element-in-the-dom">Create a new element in the DOM <a class="header-anchor" href="#create-a-new-element-in-the-dom" id="heading-73" aria-labelledby="heading-73">#</a></h3>
+<h3 id="create-a-new-element-in-the-dom">Create a new element in the DOM <a class="header-anchor" href="#create-a-new-element-in-the-dom" id="heading-47" aria-labelledby="heading-47">#</a></h3>
 <p>You can trigger an alert by inserting a new element in the <abbr>DOM</abbr> via Javascript.</p>
 <pre> <code class="html"> &lt;span role="alert"&gt; This is an alert message. &lt;/span&gt; </code> </pre>
-<h3 id="add-a-role-alert-on-an-existing-element">Add a role alert on an existing element <a class="header-anchor" href="#add-a-role-alert-on-an-existing-element" id="heading-74" aria-labelledby="heading-74">#</a></h3>
+<h3 id="add-a-role-alert-on-an-existing-element">Add a role alert on an existing element <a class="header-anchor" href="#add-a-role-alert-on-an-existing-element" id="heading-48" aria-labelledby="heading-48">#</a></h3>
 <p>The triggering of an alert can also be done by adding a <code>role=&quot;alert&quot;</code> dynamically to an existing element via Javascript.</p>
 <pre> <code class="js">
 document.getElementById('alert').setAttribute("role", "alert");
 </code> </pre>
-<h3 id="using-innerhtml">Using innerHTML <a class="header-anchor" href="#using-innerhtml" id="heading-75" aria-labelledby="heading-75">#</a></h3>
+<h3 id="using-innerhtml">Using innerHTML <a class="header-anchor" href="#using-innerhtml" id="heading-49" aria-labelledby="heading-49">#</a></h3>
 <p>Create an alert via the <code>innerHTML</code> property.</p>
 <pre> <code class="js">
 element.innerHTML = '&lt;div role ="alert"&gt;This is an alert&lt;/div&gt;';
 </code> </pre>
-<h2 id="the-aria-live-attribute" class="h2-focus">The <code>aria-live</code> attribute <a class="header-anchor" href="#the-aria-live-attribute" id="heading-76" aria-labelledby="heading-76">#</a></h2>
+<h2 id="the-aria-live-attribute" class="h2-focus">The <code>aria-live</code> attribute <a class="header-anchor" href="#the-aria-live-attribute" id="heading-50" aria-labelledby="heading-50">#</a></h2>
 <p>Positioned on an HTML element, the <code>aria-live</code> attribute is used to indicate to the screen reader that any modification made to its content will result in vocalization by the screen reader.</p>
 <p>Three values ​​are possible:</p>
 <ul>
@@ -232,7 +232,7 @@ element.innerHTML = '&lt;div role ="alert"&gt;This is an alert&lt;/div&gt;';
 <li><strong>aria-relevant:</strong> indicates which type of change triggers a vocalization, possible values: additions (default), removals, all.</li>
 </ul>
 <p>Finally, to be complete, know that the <abbr>ARIA</abbr> language also provides for some specific roles, <strong>status</strong> and <strong>log</strong> in particular which can be useful in certain cases (status bar, logging, chat...) and which, for the moment, must be used in addition to the <code>aria-live</code> attribute to maximize support by the different tools. You can find more info on these roles in the links below.</p>
-<h2 id="references" class="h2-focus">References <a class="header-anchor" href="#references" id="heading-77" aria-labelledby="heading-77">#</a></h2>
+<h2 id="references" class="h2-focus">References <a class="header-anchor" href="#references" id="heading-51" aria-labelledby="heading-51">#</a></h2>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role">Use of the alert role</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live">ARIA live zones</a></li>
@@ -337,7 +337,7 @@ element.innerHTML = '&lt;div role ="alert"&gt;This is an alert&lt;/div&gt;';
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"],"attributesToHighlight":["title","content"]},"placeholder":"Search in entire website","translations":{"button":{"buttonText":"Search in entire website","buttonAriaLabel":"Search in entire website"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
     </script>
     <div hidden>Anchor link</div>
-    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2025 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2026 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>
 </html>

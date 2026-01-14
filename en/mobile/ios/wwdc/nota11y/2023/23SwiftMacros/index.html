@@ -220,7 +220,7 @@
 <p>&quot;Discover how you can use Swift macros to make your codebase <strong>more expressive</strong> and <strong>easier to read</strong>. Code along as we explore how macros can help you <strong>avoid writing repetitive code</strong> and find out how to use them in your app. We'll share the <strong>building blocks</strong> of a macro, show you how to <strong>test</strong> it, and take you through how you can <strong>emit compilation errors</strong> from macros.&quot;<br>
 </br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
 </br></p>
-<h2 id="the-basics" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=46">The basics</a> <a class="header-anchor" href="#the-basics" id="heading-2387" aria-labelledby="heading-2387">#</a></h2>
+<h2 id="the-basics" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=46">The basics</a> <a class="header-anchor" href="#the-basics" id="heading-2403" aria-labelledby="heading-2403">#</a></h2>
 <p>The <a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=120">numerous reasons</a> for introducing the <strong>macros with <code>Swift</code> <code>5.9</code></strong> are all different but head alltogether towards the <strong>simplicity of code</strong>.<br>
 <img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_1.png" alt="" class="img-fluid"></p>
 <p>The <strong>design goals</strong> of these macros are fourthfold.</p>
@@ -289,7 +289,7 @@
 <p>And all that new functioning relies on a basic <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=339">macro declaration</a></strong>.<br>
 <img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_9.png" alt="" class="img-fluid"><br>
 </br></p>
-<h2 id="the-roles" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=376">The roles</a> <a class="header-anchor" href="#the-roles" id="heading-2388" aria-labelledby="heading-2388">#</a></h2>
+<h2 id="the-roles" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=376">The roles</a> <a class="header-anchor" href="#the-roles" id="heading-2404" aria-labelledby="heading-2404">#</a></h2>
 <p>The set of rules that handle responsabilities areas of a macro is called a <strong>role</strong>.<br>
 <img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_10.png" alt="" class="img-fluid"><br>
 The roles for creating <strong>attached</strong> and <strong>freestanding</strong> macros are listed below.</p>
@@ -395,7 +395,7 @@ The roles for creating <strong>attached</strong> and <strong>freestanding</stron
 <p>The <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=835">role composition</a></strong> should be used for creating macros in order to enrich their range usage and to avoid boilerplate code.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_16.png" alt="" class="img-fluid"><br>
 </br></p>
-<h2 id="the-implementation" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1067">The implementation</a> <a class="header-anchor" href="#the-implementation" id="heading-2389" aria-labelledby="heading-2389">#</a></h2>
+<h2 id="the-implementation" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1067">The implementation</a> <a class="header-anchor" href="#the-implementation" id="heading-2405" aria-labelledby="heading-2405">#</a></h2>
 <p>When a macro has to be used, the <a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1110">compiler creates a process</a> in a secure sandbox where a plugin is launched to get the original code through a potential <em><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1117">external macro</a></em>.<br>
 <img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_20.png" alt="" class="img-fluid"></p>
 <p>The source code is then parsed into a <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10166?time=227">SwiftSyntax tree</a></strong>...<br>
@@ -403,7 +403,7 @@ The roles for creating <strong>attached</strong> and <strong>freestanding</stron
 <p>... that highlights its <a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1192">own types</a> including <strong>nodes</strong> that may be <a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1233">tokens</a> or just have child nodes as properties.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_23.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="libraries">Libraries <a class="header-anchor" href="#libraries" id="heading-2390" aria-labelledby="heading-2390">#</a></h3>
+<h3 id="libraries">Libraries <a class="header-anchor" href="#libraries" id="heading-2406" aria-labelledby="heading-2406">#</a></h3>
 <p>To fully support the <code>SwiftSyntax tree</code>, dedicated libraires should be imported:</p>
 <ul>
 <li><strong><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1177">SwiftSyntax</a></strong> representing the source code as a tree structure.</li>
@@ -411,7 +411,7 @@ The roles for creating <strong>attached</strong> and <strong>freestanding</stron
 <li><strong><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=1331">SwiftSyntaxBuilder</a></strong> supporting the new generated code through the syntax trees.</li>
 </ul>
 <p><img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_22.png" alt="" class="img-fluid"></p>
-<h3 id="correct-writing"><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=2018">Correct writing</a> <a class="header-anchor" href="#correct-writing" id="heading-2391" aria-labelledby="heading-2391">#</a></h3>
+<h3 id="correct-writing"><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=2018">Correct writing</a> <a class="header-anchor" href="#correct-writing" id="heading-2407" aria-labelledby="heading-2407">#</a></h3>
 <p>Unlike many languages that hold <a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=2086">hygienic macro systems</a>, <code>Swift</code> handles the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=2021">name collisions</a></strong> through a dedicated method to be used.<br>
 <img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_24.png" alt="" class="img-fluid"></p>
 <p>Moreover, the <strong>names specifiers</strong> that can be used as arguments in macros are <a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=2162">fivefold</a>.<br>
@@ -419,11 +419,11 @@ The roles for creating <strong>attached</strong> and <strong>freestanding</stron
 <p>Should the <strong>macros be reliable</strong>, it's important <a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=2236">some rules</a> be followed so as not to encounter outlandish behaviors.<br>
 <img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_26.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="testing"><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=2293">Testing</a> <a class="header-anchor" href="#testing" id="heading-2392" aria-labelledby="heading-2392">#</a></h3>
+<h3 id="testing"><a href="https://developer.apple.com/videos/play/wwdc2023/10167/?time=2293">Testing</a> <a class="header-anchor" href="#testing" id="heading-2408" aria-labelledby="heading-2408">#</a></h3>
 <p>Testing macros should be one of the <strong>essential milestones</strong> of the development that relies on a <strong>simple code structure</strong>.<br>
 <img src="../../../../../images/iOSdev/wwdc23-SwiftMacros_27.png" alt="" class="img-fluid"><br>
 </br></p>
-<h2 id="detailed-example" class="h2-focus">Detailed example <a class="header-anchor" href="#detailed-example" id="heading-2393" aria-labelledby="heading-2393">#</a></h2>
+<h2 id="detailed-example" class="h2-focus">Detailed example <a class="header-anchor" href="#detailed-example" id="heading-2409" aria-labelledby="heading-2409">#</a></h2>
 <p>Before diving into the different steps for creating a macro, let's look into the <code>Xcode</code> environment to find out some new features regarding this context.</p>
 <ul>
 <li>
@@ -567,7 +567,7 @@ The roles for creating <strong>attached</strong> and <strong>freestanding</stron
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"],"attributesToHighlight":["title","content"]},"placeholder":"Search in entire website","translations":{"button":{"buttonText":"Search in entire website","buttonAriaLabel":"Search in entire website"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
     </script>
     <div hidden>Anchor link</div>
-    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2025 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2026 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>
 </html>

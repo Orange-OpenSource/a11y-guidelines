@@ -220,20 +220,20 @@
 <p>&quot;Discover how you can find, debug, and fix <strong>test failures</strong> faster with the <strong>test report</strong> in Xcode and Xcode Cloud. Learn how Xcode identifies failure patterns to help you find the right place to start investigating. We'll also show you how to use the UI automation explorer and video recordings to understand the events that led up to your <strong>UI test failure</strong>.&quot;</p>
 <p></br>Hereafter, the underlined elements <strong>lead directly to the playback of the WWDC video</strong> at the appropriate moment.<br>
 </br></p>
-<h2 id="debugging" class="h2-focus">Debugging <a class="header-anchor" href="#debugging" id="heading-2335" aria-labelledby="heading-2335">#</a></h2>
-<h3 id="console"><a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=49">Console</a> <a class="header-anchor" href="#console" id="heading-2336" aria-labelledby="heading-2336">#</a></h3>
+<h2 id="debugging" class="h2-focus">Debugging <a class="header-anchor" href="#debugging" id="heading-2321" aria-labelledby="heading-2321">#</a></h2>
+<h3 id="console"><a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=49">Console</a> <a class="header-anchor" href="#console" id="heading-2322" aria-labelledby="heading-2322">#</a></h3>
 <p><code>Xcode 15</code> provides a brand <strong>new <code>Debug Console</code></strong> with many features to be pointed out hereunder.</p>
-<h4 id="metadata"><a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=73">Metadata</a> <a class="header-anchor" href="#metadata" id="heading-2337" aria-labelledby="heading-2337">#</a></h4>
+<h4 id="metadata"><a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=73">Metadata</a> <a class="header-anchor" href="#metadata" id="heading-2323" aria-labelledby="heading-2323">#</a></h4>
 <p>The metadata can be customized through an <strong>options button</strong> and its content is cleverly placed below each log.<br>
 <img src="../../../../../images/iOSdev/wwdc23-DebugAndTesting_1.png" alt="" class="img-fluid"></p>
-<h4 id="log-preview"><a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=112">Log preview</a> <a class="header-anchor" href="#log-preview" id="heading-2338" aria-labelledby="heading-2338">#</a></h4>
+<h4 id="log-preview"><a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=112">Log preview</a> <a class="header-anchor" href="#log-preview" id="heading-2324" aria-labelledby="heading-2324">#</a></h4>
 <p>Besides the different options to be displayed below each log, it's also possible to have a quick overview of a single log by <strong>pressing the space bar</strong> after the selection thereof.<br>
 <img src="../../../../../images/iOSdev/wwdc23-DebugAndTesting_2.png" alt="" class="img-fluid"></p>
-<h4 id="filtering-methods"><a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=141">Filtering methods</a> <a class="header-anchor" href="#filtering-methods" id="heading-2339" aria-labelledby="heading-2339">#</a></h4>
+<h4 id="filtering-methods"><a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=141">Filtering methods</a> <a class="header-anchor" href="#filtering-methods" id="heading-2325" aria-labelledby="heading-2325">#</a></h4>
 <p>The new <code>Debug Console</code> provides some methods for offering <strong>various filterings</strong>: use the <a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=160">filter bar</a>, select the sought <a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=175">log types</a> and <a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=185">second click</a> a log.<br>
 <img src="../../../../../images/iOSdev/wwdc23-DebugAndTesting_3.png" alt="" class="img-fluid"><br>
 </br></p>
-<h4 id="examples"><a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=215">Examples</a> <a class="header-anchor" href="#examples" id="heading-2340" aria-labelledby="heading-2340">#</a></h4>
+<h4 id="examples"><a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=215">Examples</a> <a class="header-anchor" href="#examples" id="heading-2326" aria-labelledby="heading-2326">#</a></h4>
 <ol>
 <li>
 <p>Use the <strong>category filter</strong> from the displayed popup⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=269">🎬</a><br>
@@ -245,7 +245,7 @@
 </br></p>
 </li>
 </ol>
-<h3 id="lldb"><a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=445">LLDB</a> <a class="header-anchor" href="#lldb" id="heading-2341" aria-labelledby="heading-2341">#</a></h3>
+<h3 id="lldb"><a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=445">LLDB</a> <a class="header-anchor" href="#lldb" id="heading-2327" aria-labelledby="heading-2327">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc23-DebugAndTesting_6.png" alt="" class="img-fluid"><br>
 Using <code>po</code> or <code>p</code>might become cumbersome when there's <a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=400">no conformance</a> to the <code>CustomStringConvertible</code> protocol on the specific element.<br>
 <img src="../../../../../images/iOSdev/wwdc23-DebugAndTesting_7.png" alt="" class="img-fluid"></p>
@@ -253,15 +253,15 @@ Using <code>po</code> or <code>p</code>might become cumbersome when there's <a h
 <img src="../../../../../images/iOSdev/wwdc23-DebugAndTesting_8.png" alt="" class="img-fluid"><br>
 The expression length has caused the <code>p</code> and <code>po</code> <a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=502">aliases replacement</a> with this print command.<br>
 </br></p>
-<h3 id="unified-logging">Unified Logging <a class="header-anchor" href="#unified-logging" id="heading-2342" aria-labelledby="heading-2342">#</a></h3>
+<h3 id="unified-logging">Unified Logging <a class="header-anchor" href="#unified-logging" id="heading-2328" aria-labelledby="heading-2328">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc23-DebugAndTesting_9.png" alt="" class="img-fluid"><br>
 Based on the rationale that <code>OSLog</code> is for <a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=565">debugging</a>, specific approaches to code writing may be <a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=636">more appropriate</a>...<br>
 <img src="../../../../../images/iOSdev/wwdc23-DebugAndTesting_10.png" alt="" class="img-fluid"></p>
 <p>... to provide log information in the <a href="https://developer.apple.com/videos/play/wwdc2023/10226/?time=671">most efficient manner</a> that can be easily parsed and examined later.<br>
 <img src="../../../../../images/iOSdev/wwdc23-DebugAndTesting_11.png" alt="" class="img-fluid"><br>
 </br></p>
-<h2 id="testing" class="h2-focus">Testing <a class="header-anchor" href="#testing" id="heading-2343" aria-labelledby="heading-2343">#</a></h2>
-<h3 id="the-basics"><a href="https://developer.apple.com/videos/play/wwdc2023/10175/?time=66">The basics</a> <a class="header-anchor" href="#the-basics" id="heading-2344" aria-labelledby="heading-2344">#</a></h3>
+<h2 id="testing" class="h2-focus">Testing <a class="header-anchor" href="#testing" id="heading-2329" aria-labelledby="heading-2329">#</a></h2>
+<h3 id="the-basics"><a href="https://developer.apple.com/videos/play/wwdc2023/10175/?time=66">The basics</a> <a class="header-anchor" href="#the-basics" id="heading-2330" aria-labelledby="heading-2330">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc23-DebugAndTesting_14.png" alt="" class="img-fluid"><br>
 Highlighting key terms about the <code>Xcode</code> testing gives rise to a better understanding of the tests structure concepts.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-DebugAndTesting_13.png" alt="" class="img-fluid"></p>
@@ -270,7 +270,7 @@ Highlighting key terms about the <code>Xcode</code> testing gives rise to a bett
 <p>The combination of the above explained notions lead towards a <a href="https://developer.apple.com/videos/play/wwdc2023/10175/?time=196">structured idea</a> of testing.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-DebugAndTesting_16.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="overview"><a href="https://developer.apple.com/videos/play/wwdc2023/10175/?time=267">Overview</a> <a class="header-anchor" href="#overview" id="heading-2345" aria-labelledby="heading-2345">#</a></h3>
+<h3 id="overview"><a href="https://developer.apple.com/videos/play/wwdc2023/10175/?time=267">Overview</a> <a class="header-anchor" href="#overview" id="heading-2331" aria-labelledby="heading-2331">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc23-DebugAndTesting_17.png" alt="" class="img-fluid"></p>
 <p>The <strong>test report</strong> has been revised to provide a better user experience of what needs to be done for both the unit tests and the <code>UI</code> tests.</p>
 <ul class="nav nav-tabs" role="tablist">
@@ -306,7 +306,7 @@ Highlighting key terms about the <code>Xcode</code> testing gives rise to a bett
 </div>
 </br>
 </br>
-<h3 id="example"><a href="https://developer.apple.com/videos/play/wwdc2023/10175/?time=660">Example</a> <a class="header-anchor" href="#example" id="heading-2346" aria-labelledby="heading-2346">#</a></h3>
+<h3 id="example"><a href="https://developer.apple.com/videos/play/wwdc2023/10175/?time=660">Example</a> <a class="header-anchor" href="#example" id="heading-2332" aria-labelledby="heading-2332">#</a></h3>
 <p>The automation explorer is synchronously updated with the events within the test activity layer, moving the scrubber to the appropriate moments.<br>
 <img src="../../../../../images/iOSdev/wwdc23-DebugAndTesting_20.png" alt="" class="img-fluid"></p>
 <p>Fixing a failure through the test details view may be quite simple and quick by using these new above pieces that make the test debugging experience interactive like never before.<br>
@@ -417,7 +417,7 @@ Highlighting key terms about the <code>Xcode</code> testing gives rise to a bett
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"],"attributesToHighlight":["title","content"]},"placeholder":"Search in entire website","translations":{"button":{"buttonText":"Search in entire website","buttonAriaLabel":"Search in entire website"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
     </script>
     <div hidden>Anchor link</div>
-    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2025 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2026 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>
 </html>

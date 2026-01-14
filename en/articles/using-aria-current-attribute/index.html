@@ -196,10 +196,10 @@
             
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-229" aria-labelledby="heading-229">#</a></h2>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-199" aria-labelledby="heading-199">#</a></h2>
 <p>The <a href="https://www.w3.org/TR/wai-aria-1.2/#aria-current">aria-current</a> attribute indicates the element that represents the current item within a container or set of related elements.</p>
 <p>To put it simply, let's take the example of a navigation menu. The current element is usually highlighted by a visual effect. So that this highlighting is also perceived by users who use a screen reader (or any assistive technoligies), it is essential to mark the element at code level using the aria attribute <code>aria-current</code>.</p>
-<h2 id="how-to-use-it" class="h2-focus">How to use it ? <a class="header-anchor" href="#how-to-use-it" id="heading-230" aria-labelledby="heading-230">#</a></h2>
+<h2 id="how-to-use-it" class="h2-focus">How to use it ? <a class="header-anchor" href="#how-to-use-it" id="heading-200" aria-labelledby="heading-200">#</a></h2>
 <p>To indicate the current element in an element set, simply add an <code>aria-current</code> attribute in the HTML code. For the example below, we use the generic value <code>true</code>:</p>
 <pre><code class="html">
   &lt;ul&gt;
@@ -209,7 +209,7 @@
   &lt;ul&gt;
 </code></pre>
 <p>The second element of this list will for example be vocalized &quot;<strong>current</strong>, element 2&quot; by the NVDA screen reader.</p>
-<h2 id="uses" class="h2-focus">Uses <a class="header-anchor" href="#uses" id="heading-231" aria-labelledby="heading-231">#</a></h2>
+<h2 id="uses" class="h2-focus">Uses <a class="header-anchor" href="#uses" id="heading-201" aria-labelledby="heading-201">#</a></h2>
 <p>The <code>aria-current</code> attribute accepts the following values: <code>true</code>, <code>page</code>, <code>step</code>, <code>location</code>, <code>date</code>, <code>time</code> and <code>false</code>.</p>
 <ul>
 <li><code>true</code> : indicates the current item within a set</li>
@@ -220,8 +220,8 @@
 <li><code>time</code> : indicates the current time within a set of times</li>
 <li><code>false</code> (default) : does not represent the current item within a set</li>
 </ul>
-<h2 id="some-examples-of-common-uses" class="h2-focus">Some examples of common uses <a class="header-anchor" href="#some-examples-of-common-uses" id="heading-232" aria-labelledby="heading-232">#</a></h2>
-<h3 id="examples-1-navigation-menu">Examples 1: navigation menu <a class="header-anchor" href="#examples-1-navigation-menu" id="heading-233" aria-labelledby="heading-233">#</a></h3>
+<h2 id="some-examples-of-common-uses" class="h2-focus">Some examples of common uses <a class="header-anchor" href="#some-examples-of-common-uses" id="heading-202" aria-labelledby="heading-202">#</a></h2>
+<h3 id="examples-1-navigation-menu">Examples 1: navigation menu <a class="header-anchor" href="#examples-1-navigation-menu" id="heading-203" aria-labelledby="heading-203">#</a></h3>
 <p>Use the value <code>page</code> to indicate the current page in a set of pages.</p>
 <p><img src="../images/using-aria-current-attribute/menu-navigation.png" alt="Navigation menu with 3 items: home, help and about. The about element is underlined and displayed in a different color which visually allows to understand that it is the element currently being consulted " class="img-fluid"></p>
 <pre><code class="html">
@@ -238,7 +238,7 @@
       &lt;/li&gt;      
     &lt;/ul&gt;
 </code></pre>
-<h3 id="examples-2-paging-system">Examples 2: paging system <a class="header-anchor" href="#examples-2-paging-system" id="heading-234" aria-labelledby="heading-234">#</a></h3>
+<h3 id="examples-2-paging-system">Examples 2: paging system <a class="header-anchor" href="#examples-2-paging-system" id="heading-204" aria-labelledby="heading-204">#</a></h3>
 <p>Use the <code>page</code> value to indicate the page being viewed in a paging system:<br>
 <img src="../images/using-aria-current-attribute/pagination.png" alt="Screenshot, example of paging system, a previous button, a next button and 3 links labeled 1, 2 and 3 " class="img-fluid"></p>
 <pre><code class="html">
@@ -248,7 +248,7 @@
     &lt;li aria-label="page 3"&gt;3&lt;/li&gt;    
   &lt;/ol&gt;
 </code></pre>
-<h3 id="examples-3-breadcrumb">Examples 3: breadcrumb <a class="header-anchor" href="#examples-3-breadcrumb" id="heading-235" aria-labelledby="heading-235">#</a></h3>
+<h3 id="examples-3-breadcrumb">Examples 3: breadcrumb <a class="header-anchor" href="#examples-3-breadcrumb" id="heading-205" aria-labelledby="heading-205">#</a></h3>
 <p>Use the <code>page</code> value to indicate the current page in a breadcrumb:<br>
 <img src="../images/using-aria-current-attribute/breadcrumb.png" alt="Screenshot of a breadcrumb " class="img-fluid"></p>
 <pre><code class="html">
@@ -258,7 +258,7 @@
     &lt;li <span class="important">aria-current="page"</span>&gt;Using the aria-current attribute&lt;/li&gt;
   &lt;/ol&gt;
 </code></pre>
-<h3 id="examples-4-step-process">Examples 4: step process <a class="header-anchor" href="#examples-4-step-process" id="heading-236" aria-labelledby="heading-236">#</a></h3>
+<h3 id="examples-4-step-process">Examples 4: step process <a class="header-anchor" href="#examples-4-step-process" id="heading-206" aria-labelledby="heading-206">#</a></h3>
 <p>Use the <code>step</code> value to indicate the current step in a multi-page step process.</p>
 <p><img src="../images/using-aria-current-attribute/stepbar.png" alt="Screenshot of a component displaying a step-by-step process such as can be found on a merchant site (choice of a product, delivery, payment...). 5 steps are visible, step 3 is highlighted (color change) to indicate that it is the current step. " class="img-fluid"></p>
 <pre><code class="html">
@@ -270,7 +270,7 @@
     &lt;li&gt;Label n°5&lt;/li&gt;
   &lt;/ol&gt;
 </code></pre>
-<h3 id="example-5-datepicker">Example 5: datepicker <a class="header-anchor" href="#example-5-datepicker" id="heading-237" aria-labelledby="heading-237">#</a></h3>
+<h3 id="example-5-datepicker">Example 5: datepicker <a class="header-anchor" href="#example-5-datepicker" id="heading-207" aria-labelledby="heading-207">#</a></h3>
 <p>Use the <code>date</code> value in a datepicker component. An <code>aria-current=&quot;date&quot;</code> attribute is positioned on the current date while an <code>aria-selected=&quot;true&quot;</code> attribute is positioned on the currently selected date.</p>
 <p><img src="../images/using-aria-current-attribute/datepicker.png" alt="Screenshot of a datepicker component, today's date and the date being selected are highlighted." class="img-fluid"></p>
 
@@ -374,7 +374,7 @@
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"],"attributesToHighlight":["title","content"]},"placeholder":"Search in entire website","translations":{"button":{"buttonText":"Search in entire website","buttonAriaLabel":"Search in entire website"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
     </script>
     <div hidden>Anchor link</div>
-    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2025 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2026 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>
 </html>

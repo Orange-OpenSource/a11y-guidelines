@@ -196,10 +196,10 @@
             
           
           <div class="mt-4">
-          <h2 id="pourquoi" class="h2-focus">Pourquoi ? <a class="header-anchor" href="#pourquoi" id="heading-481" aria-labelledby="heading-481">#</a></h2>
+          <h2 id="pourquoi" class="h2-focus">Pourquoi ? <a class="header-anchor" href="#pourquoi" id="heading-485" aria-labelledby="heading-485">#</a></h2>
 <p>Le carrousel est un outil de communication dynamique, dont l'utilité n'est clairement pas à la hauteur de sa popularité (<a lang="en" hreflang="en" href="https://erikrunyon.com/2013/01/carousel-interaction-stats/">Carousel Interaction Stats</a>).<br>
 Si toutefois vous souhaitez malgré tout en développer un, voici quelques bonnes pratiques à mettre en place pour qu'il soit utilisable.</p>
-<h3 id="regles-de-conformite">Règles de conformité  <a class="header-anchor" href="#regles-de-conformite" id="heading-482" aria-labelledby="heading-482">#</a></h3>
+<h3 id="regles-de-conformite">Règles de conformité  <a class="header-anchor" href="#regles-de-conformite" id="heading-486" aria-labelledby="heading-486">#</a></h3>
 <p>Pour être conforme, le carrousel doit respecter <strong>au moins une des règles</strong> ci-dessous :</p>
 <ul>
 <li>La durée du mouvement doit être inférieure ou égale à 5 secondes,</li>
@@ -207,7 +207,7 @@ Si toutefois vous souhaitez malgré tout en développer un, voici quelques bonne
 <li>ou, l'utilisateur doit pouvoir afficher et masquer le contenu en mouvement,</li>
 <li>ou, l'utilisateur doit pouvoir afficher la totalité de l'information sans le mouvement.</li>
 </ul>
-<h3 id="bonnes-pratiques">Bonnes pratiques  <a class="header-anchor" href="#bonnes-pratiques" id="heading-483" aria-labelledby="heading-483">#</a></h3>
+<h3 id="bonnes-pratiques">Bonnes pratiques  <a class="header-anchor" href="#bonnes-pratiques" id="heading-487" aria-labelledby="heading-487">#</a></h3>
 <p>Pour aller un peu plus loin, voici quelques bonnes pratiques supplémentaires :</p>
 <ul>
 <li><strong>Il vaut mieux positionner le bouton d'arrêt du carrousel juste avant celui-ci (dans le code), afin d'être atteignable rapidement par l'utilisateur.</strong></li>
@@ -215,7 +215,7 @@ Si toutefois vous souhaitez malgré tout en développer un, voici quelques bonne
 <li>À la prise de focus (clavier ou souris), il est préférable que la rotation du carrousel s'arrête et reprenne lors de la perte du focus.</li>
 <li>La visualisation de la position courante via la navigation à points permet à l'utilisateur de mieux s'y retrouver et pour finir, il est préférable de ne pas mettre plus de 3 panneaux dans le carrousel.</li>
 </ul>
-<h2 id="comment" class="h2-focus">Comment ?  <a class="header-anchor" href="#comment" id="heading-484" aria-labelledby="heading-484">#</a></h2>
+<h2 id="comment" class="h2-focus">Comment ?  <a class="header-anchor" href="#comment" id="heading-488" aria-labelledby="heading-488">#</a></h2>
 <p>Afin de rendre tout ceci accessible, nous allons pouvoir nous appuyer sur les attributs suivants :</p>
 <ul>
 <li><code>role=&quot;tablist&quot;</code> doit être appliqué sur l'élément englobant les onglets de pagination.</li>
@@ -230,7 +230,7 @@ Si toutefois vous souhaitez malgré tout en développer un, voici quelques bonne
 <li><code>aria-controls</code> relie les boutons au contenu.</li>
 <li><code>aria-selected</code> pour indiquer la position courante au lecteurs d'écran sur les boutons de la navigation par points.</li>
 </ul>
-<h3 id="exemple-html">Exemple HTML  <a class="header-anchor" href="#exemple-html" id="heading-485" aria-labelledby="heading-485">#</a></h3>
+<h3 id="exemple-html">Exemple HTML  <a class="header-anchor" href="#exemple-html" id="heading-489" aria-labelledby="heading-489">#</a></h3>
 <p>Ci-dessous, un exemple de carrousel accessible au format HTML :</p>
 <pre><code class="language-html">&lt;button type=&quot;button&quot; class=&quot;btn btn-icon btn-outline-secondary carousel-control-play-pause pause mt-1&quot; data-bs-target=&quot;#carouselExamplePause&quot; data-bs-play-text=&quot;Play Carousel&quot; data-bs-pause-text=&quot;Pause Carousel&quot; title=&quot;Pause Carousel&quot;&gt;
   &lt;span class=&quot;visually-hidden&quot;&gt;Pause Carousel&lt;/span&gt;
@@ -262,7 +262,7 @@ Si toutefois vous souhaitez malgré tout en développer un, voici quelques bonne
   &lt;/button&gt;
 &lt;/div&gt;
 </code></pre>
-<h3 id="sources">Sources  <a class="header-anchor" href="#sources" id="heading-486" aria-labelledby="heading-486">#</a></h3>
+<h3 id="sources">Sources  <a class="header-anchor" href="#sources" id="heading-490" aria-labelledby="heading-490">#</a></h3>
 <ul>
 <li><a href="https://www.adilade.fr/blog/carrousel-accessible-responsive-vanillajs/">Adilade - Carrousel-accessible-responsive-vanillasjs</a></li>
 <li><a href="https://www.accede-web.com/notices/interface-riche/carrousels/">AcceDe Web - carrousels</a></li>
@@ -369,7 +369,7 @@ Si toutefois vous souhaitez malgré tout en développer un, voici quelques bonne
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"],"attributesToHighlight":["title","content"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher sur le site","buttonAriaLabel":"Rechercher sur le site"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résulat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
     </script>
     <div hidden>Lien pour ancrage</div>
-    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2025 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2026 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>
 </html>

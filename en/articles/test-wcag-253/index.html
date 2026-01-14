@@ -196,13 +196,13 @@
             
           
           <div class="mt-4">
-          <h2 id="what-does-wcag-253-mean" class="h2-focus">What does WCAG 2.5.3 mean <a class="header-anchor" href="#what-does-wcag-253-mean" id="heading-198" aria-labelledby="heading-198">#</a></h2>
-<h3 id="general-explanation">General explanation <a class="header-anchor" href="#general-explanation" id="heading-199" aria-labelledby="heading-199">#</a></h3>
+          <h2 id="what-does-wcag-253-mean" class="h2-focus">What does WCAG 2.5.3 mean <a class="header-anchor" href="#what-does-wcag-253-mean" id="heading-189" aria-labelledby="heading-189">#</a></h2>
+<h3 id="general-explanation">General explanation <a class="header-anchor" href="#general-explanation" id="heading-190" aria-labelledby="heading-190">#</a></h3>
 <p>The purpose of <a href="https://www.w3.org/TR/WCAG22/#label-in-name">this criterion</a> is to ensure that if a button, link, or other interface element contains some screen visible text, its <a href="/en/articles/accessible-name/">accessible name</a> must contain at least the same text as the one displayed.<br>
 This is to ensure that users of technical aids can understand and interact with the component. Indeed, the technical aids are based on the accessible name of the components. For example, a voice recognition user will be able to click on a button simply by pronouncing its accessible name.</p>
 <p>The visible text and the accessible name do not have to be identical, but the visible text must be present in the accessible name, preferably first.</p>
-<h3 id="concrete-example">Concrete example <a class="header-anchor" href="#concrete-example" id="heading-200" aria-labelledby="heading-200">#</a></h3>
-<h4 id="accessible-name">Accessible name <a class="header-anchor" href="#accessible-name" id="heading-201" aria-labelledby="heading-201">#</a></h4>
+<h3 id="concrete-example">Concrete example <a class="header-anchor" href="#concrete-example" id="heading-191" aria-labelledby="heading-191">#</a></h3>
+<h4 id="accessible-name">Accessible name <a class="header-anchor" href="#accessible-name" id="heading-192" aria-labelledby="heading-192">#</a></h4>
 <p>Let’s take the example of a user using voice recognition software who wants to input and submit a form.<br>
 <img src="../images/tester-wcag-253/button_send.png" alt="button with send text" class="img-fluid"></p>
 <pre><code class="html">
@@ -212,7 +212,7 @@ This is to ensure that users of technical aids can understand and interact with 
 </code></pre>
 <p>The above example may be problematic. The button contains an image with the text &quot;Send&quot; but the alternative text of the image is &quot;Submit&quot;, so its accessible name is &quot;Submit&quot;. Since technologies depend on the accessible name, if the user says &quot;Send&quot;, nothing will happen.</p>
 <p>To solve the problem, the alternative text must be the same as the image text (&quot;Send&quot;).</p>
-<h4 id="accessible-masking">Accessible masking <a class="header-anchor" href="#accessible-masking" id="heading-202" aria-labelledby="heading-202">#</a></h4>
+<h4 id="accessible-masking">Accessible masking <a class="header-anchor" href="#accessible-masking" id="heading-193" aria-labelledby="heading-193">#</a></h4>
 <p>Be careful when using <a href="/en/web/components-examples/accessible-hiding/">accessible masking</a>. It should not be placed in the middle of a visually displayed label.<br>
 Otherwise, it will be impossible to correlate the accessible name with the displayed text.</p>
 <p>Example of Error:</p>
@@ -220,15 +220,15 @@ Otherwise, it will be impossible to correlate the accessible name with the displ
 &lt;a href="www.orange.com" target="_blank"&gt; Open &lt;span class="visually-hidden"&gt;in new Window &lt;/span&gt; Orange ebsite &lt;/a&gt;
 </code></pre>
 <p>If you say, &quot;Open orange website&quot;, the voice recognition software won’t find the element. On the other hand, if we say &quot;Open in a new window orange website&quot; the link will be activated, as it is its accessible name.</p>
-<h2 id="how-to-test-it" class="h2-focus">How to test it <a class="header-anchor" href="#how-to-test-it" id="heading-203" aria-labelledby="heading-203">#</a></h2>
-<h3 id="screen-reader">Screen reader <a class="header-anchor" href="#screen-reader" id="heading-204" aria-labelledby="heading-204">#</a></h3>
+<h2 id="how-to-test-it" class="h2-focus">How to test it <a class="header-anchor" href="#how-to-test-it" id="heading-194" aria-labelledby="heading-194">#</a></h2>
+<h3 id="screen-reader">Screen reader <a class="header-anchor" href="#screen-reader" id="heading-195" aria-labelledby="heading-195">#</a></h3>
 <p>The screen reader vocalizes the properties of the element on which you place your focus.<br>
 Particularly, the following characteristics of the element: its function (link, button, text...), its status and its accessible name. If the accessible name you hear does not match what is textually visible, then the criterion is considered non-compliant.</p>
 <p>You can use the Lyric Viewer on the screen reader to text-write the characteristics of an item. It is therefore possible to compare the accessible name in textual form read by the screen reader with the text displayed on the component.</p>
 <p><img src="../images/tester-wcag-253/nvda_visionneuse.png" alt="Exemple of Lyric Viewer" class="img-fluid"></p>
-<h3 id="order-inspector">Order inspector <a class="header-anchor" href="#order-inspector" id="heading-205" aria-labelledby="heading-205">#</a></h3>
+<h3 id="order-inspector">Order inspector <a class="header-anchor" href="#order-inspector" id="heading-196" aria-labelledby="heading-196">#</a></h3>
 <p>The best way to check the criterion with the control inspector depends on the browser used.</p>
-<h4 id="with-firefox">With Firefox <a class="header-anchor" href="#with-firefox" id="heading-206" aria-labelledby="heading-206">#</a></h4>
+<h4 id="with-firefox">With Firefox <a class="header-anchor" href="#with-firefox" id="heading-197" aria-labelledby="heading-197">#</a></h4>
 <ol>
   <li>Access Control Inspector  (<kbd>Ctrl+ Shift. + i</kbd>)</li>
   <li>Select the accessibility tab</li>
@@ -236,7 +236,7 @@ Particularly, the following characteristics of the element: its function (link, 
   <li>Look at the properties part, if the name attribute contains at least the displayed text, the criterion is compliant</li> 
 </ol>
 <p><img src="../images/tester-wcag-253/FF_name.png" alt="Firefox Developer Tools panels with Accessibility tab open" class="img-fluid"></p>
-<h4 id="with-chrome-or-edge-chronium">With Chrome or Edge Chronium <a class="header-anchor" href="#with-chrome-or-edge-chronium" id="heading-207" aria-labelledby="heading-207">#</a></h4>
+<h4 id="with-chrome-or-edge-chronium">With Chrome or Edge Chronium <a class="header-anchor" href="#with-chrome-or-edge-chronium" id="heading-198" aria-labelledby="heading-198">#</a></h4>
 <ol>
   <li>Access Control Inspector  (<kbd>Ctrl+ Shift. + i</kbd>)</li>
   <li>Select the Elements tab</li>
@@ -353,7 +353,7 @@ Particularly, the following characteristics of the element: its function (link, 
         (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"],"attributesToHighlight":["title","content"]},"placeholder":"Search in entire website","translations":{"button":{"buttonText":"Search in entire website","buttonAriaLabel":"Search in entire website"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
     </script>
     <div hidden>Anchor link</div>
-    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2025 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2026 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
 
   </body>
 </html>
