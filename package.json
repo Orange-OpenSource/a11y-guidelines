@@ -41,6 +41,6 @@
   },
   "dependencies": {
     "markdown-it-class": "^1.0.0",
-    "tarteaucitronjs": "^1.22.0"
+    "tarteaucitronjs": "^1.29.0"
   }
 }
