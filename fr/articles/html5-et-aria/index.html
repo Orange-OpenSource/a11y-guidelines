@@ -203,25 +203,25 @@
             
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-562" aria-labelledby="heading-562">#</a></h2>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-575" aria-labelledby="heading-575">#</a></h2>
 <p>Les sites internet sont de plus en plus dynamiques (chargement asynchrone, génération dynamique de contenu) et interactifs (composants d'interface complexes : <span lang="en">slider</span>, <span lang="en">datepicker</span>…). Il est donc très difficile voire impossible de rendre ce genre de composants accessibles avec le <abbr>HTML</abbr> classique.</p>
 <p>Même avec l'évolution due au <abbr>HTML5</abbr>, on manque encore d'informations sémantiques à fournir aux aides techniques (lecteurs d'écran, loupes logicielles…), la navigation clavier est souvent impossible, la gestion complexe du focus clavier est absente et les mises à jour des régions dynamiques ne sont pas signalées, notamment aux lecteurs d'écran.</p>
-<h2 id="quest-ce-que-cest" class="h2-focus">Qu'est-ce que c'est ? <a class="header-anchor" href="#quest-ce-que-cest" id="heading-563" aria-labelledby="heading-563">#</a></h2>
+<h2 id="quest-ce-que-cest" class="h2-focus">Qu'est-ce que c'est ? <a class="header-anchor" href="#quest-ce-que-cest" id="heading-576" aria-labelledby="heading-576">#</a></h2>
 <p>Pour remédier à ces limitations, le <abbr>W3C</abbr>/<abbr>WAI</abbr> a publié une recommandation appelée <abbr>ARIA</abbr>, pour <span lang="en">Accessible Rich Internet Applications</span>, ainsi qu'une suite de documents traitant de l'utilisation d'<abbr>ARIA</abbr>. Nous sommes à la version 1.2 d'<abbr>ARIA</abbr> et des Authoring Practices, bonnes pratiques d'utilisation d'<abbr>ARIA</abbr>.</p>
 <p><abbr>ARIA</abbr> est une sur-couche sémantique à base de couples attribut/valeur utilisables dans les langages de balisage tels que <abbr>HTML</abbr>, <abbr>SVG</abbr>, <abbr>XML</abbr>, etc. Cette recommandation est composée de rôles, d'états et de propriétés qui vont spécifiquement interagir avec les aides techniques (<abbr>AT</abbr>). Grâce à <abbr>ARIA</abbr>, on peut décrire des éléments et leurs comportements en <abbr>HTML</abbr> lorsqu'ils sont nativement non sémantiquement explicites, par exemple, des onglets, les arbres dépliants, des régions dynamiques, les info-bulles, les fenêtres modales. <abbr>ARIA</abbr> définit également comment doit se comporter un composant d'interface avec le clavier afin d'homogénéiser l'expérience des utilisateurs qui naviguent au clavier. <strong><abbr>ARIA</abbr> prend tout son sens et exprime tout son potentiel lorsqu'il est utilisé dans du <abbr>HTML5</abbr></strong>.</p>
 <p><abbr>ARIA</abbr> ne rajoute aucun comportement particulier ni aucune présentation visuelle aux composants d'interface. Il faut donc toujours assurer la mise en forme grâce aux <abbr>CSS</abbr>, le contrôle du contenu et la gestion de l'interactivité via JavaScript.</p>
-<h2 id="le-support" class="h2-focus">Le support <a class="header-anchor" href="#le-support" id="heading-564" aria-labelledby="heading-564">#</a></h2>
+<h2 id="le-support" class="h2-focus">Le support <a class="header-anchor" href="#le-support" id="heading-577" aria-labelledby="heading-577">#</a></h2>
 <p>Le support d'<abbr>ARIA</abbr> s'améliore constamment et est déjà présent depuis longtemps :</p>
 <ul>
 <li>Dans les navigateurs modernes (Firefox &gt;=3.0, Chrome &gt;=16, Safari &gt;=4, Opera &gt;=9.5, Internet Explorer 8 pour un support basique, Internet Explorer &gt;=9 et Edge pour un support avancé).</li>
 <li>Dans les aides techniques (<abbr>NVDA</abbr> &gt;=2010, Orca &gt;= 2 + Firefox uniquement, VoiceOver <abbr>OSX</abbr> &gt;=10.5, <abbr>iOS</abbr> &gt;=4, <abbr>JAWS</abbr> &gt;=8, Window-Eyes &gt;=7, ZoomText 10 pour un support basique, ZoomText &gt;=11 pour un support avancé).</li>
 </ul>
 <p>De plus, l'efficacité optimale de la prise en charge d'<abbr>ARIA</abbr> dépend du couple navigateur / aide technique : Firefox avec <abbr>NVDA</abbr>, Jaws avec Internet Explorer et Safari avec VoiceOver, par exemple.</p>
-<h2 id="faut-il-lutiliser" class="h2-focus">Faut-il l'utiliser ? <a class="header-anchor" href="#faut-il-lutiliser" id="heading-565" aria-labelledby="heading-565">#</a></h2>
+<h2 id="faut-il-lutiliser" class="h2-focus">Faut-il l'utiliser ? <a class="header-anchor" href="#faut-il-lutiliser" id="heading-578" aria-labelledby="heading-578">#</a></h2>
 <p>Globalement, <abbr>ARIA</abbr> améliore l'accessibilité pour des composants qui ne sont pas nativement présents dans le <abbr>HTML</abbr> (ou pas accessibles notamment certains éléments <abbr>HTML5</abbr>). En conséquence, pour des applications Internet riches, l'<abbr>ARIA</abbr> est incontournable pour leur mise en accessibilité.</p>
 <p>Dans tous les cas, il faut tester les développements sur les environnements cibles (couple navigateurs / aides techniques). C'est un gros travail absolument nécessaire pour les cas complexes car sur un site ou une application internet classique, il faut, à minima, tester avec Safari/VoiceOver, Jaws/Internet Explorer et Firefox/<abbr>NVDA</abbr>.</p>
 <p>Dans un environnement maîtrisé (intranet), les environnements cibles sont connus et en nombre fini, on peut donc statuer plus facilement !</p>
-<h2 id="webographie" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-566" aria-labelledby="heading-566">#</a></h2>
+<h2 id="webographie" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-579" aria-labelledby="heading-579">#</a></h2>
 <ul>
   <li><abbr>W3C</abbr>&nbsp;:
     <ul>

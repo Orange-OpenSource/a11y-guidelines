@@ -196,29 +196,29 @@
             
           
           <div class="mt-4">
-          <h2 id="general-presentation" class="h2-focus">General presentation <a class="header-anchor" href="#general-presentation" id="heading-22" aria-labelledby="heading-22">#</a></h2>
+          <h2 id="general-presentation" class="h2-focus">General presentation <a class="header-anchor" href="#general-presentation" id="heading-24" aria-labelledby="heading-24">#</a></h2>
 <p>A table is an arrangement of information in rows and columns containing cells that make it easy to compare and highlight information. They allow tabular information to be presented in a two-dimensional grid, such data is easier to read in tabular form.</p>
 <p>This allows a user, who does not have a vision problem, to quickly make visual associations between table data and its table headings.</p>
 <p>However, a blind user will not have access to all these relations between the information, it's the reason why it is important that the tables are implemented with the appropriate HTML markup so that they are the most accessible possible for assistive technologies.</p>
 <p>In the rest of this article, we will see the main rules to follow to obtain an accessible table.</p>
-<h3 id="add-a-captiontitle-to-your-table">Add a caption/title to your table <a class="header-anchor" href="#add-a-captiontitle-to-your-table" id="heading-23" aria-labelledby="heading-23">#</a></h3>
+<h3 id="add-a-captiontitle-to-your-table">Add a caption/title to your table <a class="header-anchor" href="#add-a-captiontitle-to-your-table" id="heading-25" aria-labelledby="heading-25">#</a></h3>
 <p>It is important to define a title for your table. Concise and relevant, this text will indicate its content as well as the type of data it contains.<br>
 It must be associated with the table using the <code>caption</code> element and must be the first element after the opening <code>table</code> tag. You can also use a <code>h1,h2...</code> title placed in the code just before the table as another way to associate a title.</p>
-<h4 id="example-caption">Example <code>caption</code> <a class="header-anchor" href="#example-caption" id="heading-24" aria-labelledby="heading-24">#</a></h4>
+<h4 id="example-caption">Example <code>caption</code> <a class="header-anchor" href="#example-caption" id="heading-26" aria-labelledby="heading-26">#</a></h4>
 <pre><code class="html">
 &lt;table&gt;
     &lt;caption&gt;Time planning 2022&lt;/caption&gt;
     [...]
 &lt;/table&gt;
 </code></pre>
-<h4 id="example-html-title">Example HTML title <a class="header-anchor" href="#example-html-title" id="heading-25" aria-labelledby="heading-25">#</a></h4>
+<h4 id="example-html-title">Example HTML title <a class="header-anchor" href="#example-html-title" id="heading-27" aria-labelledby="heading-27">#</a></h4>
 <pre><code class="html">
 &lt;h2&gt;Time planning 2022&lt;/h2&gt;
 &lt;table&gt;
     [...]
 &lt;/table&gt;
 </code></pre>
-<h3 id="add-a-description-for-complex-table">Add a description for complex table <a class="header-anchor" href="#add-a-description-for-complex-table" id="heading-26" aria-labelledby="heading-26">#</a></h3>
+<h3 id="add-a-description-for-complex-table">Add a description for complex table <a class="header-anchor" href="#add-a-description-for-complex-table" id="heading-28" aria-labelledby="heading-28">#</a></h3>
 <p>If you have a complex table and want to provide a more detailed summary, it is recommended to use the ARIA <code>aria-describedby</code> attribute.<br>
 It will programmatically link a description to your table.</p>
 <pre><code class="html">
@@ -232,8 +232,8 @@ example of description to help understanding complex table
 &lt;/table&gt;
 </code></pre>
 <p>There is also the possibility of using the <code>summary</code> attribute to give, in addition, a summary of the contents of a table, however this attribute is no longer part of the HTML 5 specifications and we do not recommend its use.</p>
-<h3 id="identify-your-table-headers">Identify your table headers <a class="header-anchor" href="#identify-your-table-headers" id="heading-27" aria-labelledby="heading-27">#</a></h3>
-<h4 id="scope-attribute">Scope attribute <a class="header-anchor" href="#scope-attribute" id="heading-28" aria-labelledby="heading-28">#</a></h4>
+<h3 id="identify-your-table-headers">Identify your table headers <a class="header-anchor" href="#identify-your-table-headers" id="heading-29" aria-labelledby="heading-29">#</a></h3>
+<h4 id="scope-attribute">Scope attribute <a class="header-anchor" href="#scope-attribute" id="heading-30" aria-labelledby="heading-30">#</a></h4>
 <p>To help assistive technology users, you must identify table headings, whether for rows or columns.<br>
 To identify these table headers, you must use the <code>th</code> tag, which must never be empty.</p>
 <p>Once the headers are created, the data cells must be associated with the headers on which they rely.<br>
@@ -242,7 +242,7 @@ The <code>scope</code> attribute allows cells to be programmatically linked to h
    <li><code>&lt;th scope="col"&gt;</code> for a column header</li>
    <li><code>&lt;th scope="row"&gt;</code> for a row header</li>
 </ul>
-<h4 id="id-and-header-attributes">Id and header attributes <a class="header-anchor" href="#id-and-header-attributes" id="heading-29" aria-labelledby="heading-29">#</a></h4>
+<h4 id="id-and-header-attributes">Id and header attributes <a class="header-anchor" href="#id-and-header-attributes" id="heading-31" aria-labelledby="heading-31">#</a></h4>
 <p>Some tables are too complex to identify a strict horizontal or vertical association (for example, merged columns or rows) between the header and the data cells.<br>
 The <code>scope</code> attribute does not solve this problem. A unique <code>id</code> attribute must be used for each header cell. To link this header to a cell, you must use the <code>headers</code> attribute and adding the required <code>id</code>.</p>
 <p>For example, we have two header cells, <code>&lt;th id=&quot;toto&quot;&gt;Toto&lt;/th&gt;</code> and <code>&lt;th id=&quot;tata&quot;&gt;Tata&lt;/ th&gt;</code>, the code to link it to a data cell will be <code>&lt;td headers=&quot;toto tata&quot;&gt;Tota&lt;/td&gt;</code>.</p>
@@ -251,16 +251,16 @@ The <code>scope</code> attribute does not solve this problem. A unique <code>id<
    <li>The table has column/row headings that change within the table.</li>
    <li>A data cell with three or more related headers (often linked to header cells that are merged)</li>
 </ul>
-<h3 id="navigating-a-table-using-nvda-or-jaws">Navigating a table using NVDA or JAWS <a class="header-anchor" href="#navigating-a-table-using-nvda-or-jaws" id="heading-30" aria-labelledby="heading-30">#</a></h3>
+<h3 id="navigating-a-table-using-nvda-or-jaws">Navigating a table using NVDA or JAWS <a class="header-anchor" href="#navigating-a-table-using-nvda-or-jaws" id="heading-32" aria-labelledby="heading-32">#</a></h3>
 <p>Creating accessible tables will allow consistent reading of these tabular data with a screen reader. To navigate in a table with Jaws or NVDA, there are several specific shortcuts.</p>
-<h4 id="nvda">NVDA <a class="header-anchor" href="#nvda" id="heading-31" aria-labelledby="heading-31">#</a></h4>
+<h4 id="nvda">NVDA <a class="header-anchor" href="#nvda" id="heading-33" aria-labelledby="heading-33">#</a></h4>
 <p>To quickly navigate from table to table in a page, just use the <kbd>t</kbd> key, if you use the <kbd>Shift + t</kbd> shortcut, you navigate in the opposite direction and so we return to the previous table.</p>
 <p>Once inside a table, there are several shortcuts to move around easily.</p>
 <ul>
 <li><kbd>Ctrl + alt + left arrow</kbd> moves to the left column while keeping the same line, <kbd>Ctrl + alt + right arrow</kbd> moves to the column right.</li>
 <li><kbd>Ctrl + alt + down arrow</kbd> moves to the next line while staying on the same column, <kbd>Ctrl + alt + up arrow</kbd> moves to the previous line. </li>
 </ul>
-<h4 id="jaws">Jaws <a class="header-anchor" href="#jaws" id="heading-32" aria-labelledby="heading-32">#</a></h4>
+<h4 id="jaws">Jaws <a class="header-anchor" href="#jaws" id="heading-34" aria-labelledby="heading-34">#</a></h4>
 <p>For Jaws, you have to use the <kbd>Y</kbd> key and <kbd>Shift + Y</kbd> to navigate between tables.<br>
 To browse in tables, there are several shortcuts:</p>
 <ul>
@@ -270,9 +270,9 @@ To browse in tables, there are several shortcuts:</p>
 <li><kbd>Insert + shift + up arrow</kbd> reads the entire line.</li>
 <li><kbd>Insert + shift + num pad 5</kbd> reads the entire column.</li>
 </ul>
-<h2 id="table-example" class="h2-focus">Table example <a class="header-anchor" href="#table-example" id="heading-33" aria-labelledby="heading-33">#</a></h2>
+<h2 id="table-example" class="h2-focus">Table example <a class="header-anchor" href="#table-example" id="heading-35" aria-labelledby="heading-35">#</a></h2>
 <p>We will now show you examples of accessible tables.</p>
-<h3 id="simple-table">Simple table <a class="header-anchor" href="#simple-table" id="heading-34" aria-labelledby="heading-34">#</a></h3>
+<h3 id="simple-table">Simple table <a class="header-anchor" href="#simple-table" id="heading-36" aria-labelledby="heading-36">#</a></h3>
 <p>The first example is a table with only headers on the columns, so we use the <code>scope=&quot;row&quot;</code> attribute for assistive technologies to interpret it correctly.</p>
 <table class="table">
   <caption class="h4">People with their professional activity</caption>
@@ -332,7 +332,7 @@ To browse in tables, there are several shortcuts:</p>
 </code></pre>
 <p>Like this, it is possible to easily navigate within the table using a screen reader. Also, any cell change from one column, or row, to another, the header will be vocalized.</p>
 <p>For example, if we are positioned on the First name column, and we use the shortcut <kbd>Ctrl+alt+right arrow</kbd> to go to the Last name column, NVDA vocalizes &quot;Last Name Column 2 + column text &quot;.</p>
-<h3 id="tables-with-two-headers">Tables with Two Headers <a class="header-anchor" href="#tables-with-two-headers" id="heading-35" aria-labelledby="heading-35">#</a></h3>
+<h3 id="tables-with-two-headers">Tables with Two Headers <a class="header-anchor" href="#tables-with-two-headers" id="heading-37" aria-labelledby="heading-37">#</a></h3>
 <p>In this second example, the table is a planning time allowing you to quickly know whether the store is open or not, depending on the day of the week and the time.</p>
 <p>This table requires two headers, one for the days of the week and another for the time slot.</p>
 <table class="table">
@@ -398,7 +398,7 @@ To browse in tables, there are several shortcuts:</p>
    &lt;/tr&gt;
    [...]
 </code></pre>
-<h3 id="complex-table">Complex table <a class="header-anchor" href="#complex-table" id="heading-36" aria-labelledby="heading-36">#</a></h3>
+<h3 id="complex-table">Complex table <a class="header-anchor" href="#complex-table" id="heading-38" aria-labelledby="heading-38">#</a></h3>
 <p>In this example, some given cells have three associated headers, so we have to use the <code>id</code> and <code>headers</code> attributes.</p>
 <p>Since the table is complex, we can add a description to help users understand the table.</p>
 <p class="border-top border-light" id="tblDesc">Tables for calculating the compliance rate of a website.<br/>

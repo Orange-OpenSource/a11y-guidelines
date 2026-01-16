@@ -201,7 +201,7 @@
 <p>We therefore decided to carry out an inventory in order to define several functional guidelines.</p>
 <p>The end goal is to offer a ready-to-use component for projects.</p>
 <p>In this article, we present our method and the guidelines adopted.</p>
-<h2 id="our-method" class="h2-focus">Our method <a class="header-anchor" href="#our-method" id="heading-78" aria-labelledby="heading-78">#</a></h2>
+<h2 id="our-method" class="h2-focus">Our method <a class="header-anchor" href="#our-method" id="heading-81" aria-labelledby="heading-81">#</a></h2>
 <p>We want to build on existing patterns wherever possible.</p>
 <p>First, upstream audits are carried out on several components by an accessibility expert in order to ensure an initial selection.</p>
 <p>The most usable components are then subjected to user tests.</p>
@@ -210,7 +210,7 @@
 <li><a href="https://alphagov.github.io/accessible-autocomplete/examples/" target="_blank" title="GOV UK, accessible autocomplete (new window)">GOV UK, accessible autocomplete<span class="visually-hidden"> (new window)</span></a></li>
 <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/" target="_blank" title="Pattern WAI ARIA 1.1, combobox (new window)"> Pattern WAI ARIA 1.1, combobox<span class="visually-hidden"> (new window)</span></a></li>
 </ul>
-<h2 id="user-tests" class="h2-focus">User tests <a class="header-anchor" href="#user-tests" id="heading-79" aria-labelledby="heading-79">#</a></h2>
+<h2 id="user-tests" class="h2-focus">User tests <a class="header-anchor" href="#user-tests" id="heading-82" aria-labelledby="heading-82">#</a></h2>
 <p>We contacted Orange employees with disabilities.</p>
 <ul>
 <li>Documentalist, JAWS and IE11 user</li>
@@ -229,7 +229,7 @@ Business applications and intranets are developed for these browsers.</p>
 <li>WAI ARIA 1.1 pattern, Combobox with Listbox, example 3</li>
 </ul>
 <p><img src="../images/page-test.png" alt="" class="img-fluid"></p>
-<h3 id="summary-of-feedbacks">Summary of feedbacks <a class="header-anchor" href="#summary-of-feedbacks" id="heading-80" aria-labelledby="heading-80">#</a></h3>
+<h3 id="summary-of-feedbacks">Summary of feedbacks <a class="header-anchor" href="#summary-of-feedbacks" id="heading-83" aria-labelledby="heading-83">#</a></h3>
 <p><strong>with JAWS:</strong></p>
 <p>In the ARIA versions, examples 2 and 3, the user is not informed that this is an autocompletion field.</p>
 <p><strong>with NVDA:</strong></p>
@@ -245,7 +245,7 @@ Business applications and intranets are developed for these browsers.</p>
 </ul>
 <p><strong>with ZoomText:</strong></p>
 <p>The user does not see any significant differences between the four implementations.</p>
-<h3 id="mobile-tests">Mobile tests <a class="header-anchor" href="#mobile-tests" id="heading-81" aria-labelledby="heading-81">#</a></h3>
+<h3 id="mobile-tests">Mobile tests <a class="header-anchor" href="#mobile-tests" id="heading-84" aria-labelledby="heading-84">#</a></h3>
 <p>In addition, mobile tests are carried out by accessibility experts on the same test pages.</p>
 <p><strong>Tested versions:</strong></p>
 <ul>
@@ -264,7 +264,7 @@ Business applications and intranets are developed for these browsers.</p>
 <li>When the list is displayed, no automatic vocalization is started</li>
 <li>The user does not know that are the suggested proposals</li>
 </ul>
-<h2 id="conclusion-of-tests" class="h2-focus">Conclusion of tests <a class="header-anchor" href="#conclusion-of-tests" id="heading-82" aria-labelledby="heading-82">#</a></h2>
+<h2 id="conclusion-of-tests" class="h2-focus">Conclusion of tests <a class="header-anchor" href="#conclusion-of-tests" id="heading-85" aria-labelledby="heading-85">#</a></h2>
 <p>It appears that with the assistive technologies and browers tested, the implementation of GOV UK is more robust.</p>
 <p>The ARIA pattern relies on focus management by <code>aria-activedescendant</code>, unlike the GOV UK component which relies on the <code>focus()</code>method.</p>
 <p>It's possible that these different implementations that impacts the behavior on mobile.</p>
@@ -273,10 +273,10 @@ Business applications and intranets are developed for these browsers.</p>
 <p>Here again the behavior on mobile is not the one expected, the list of proposals is not perceived.</p>
 <p>However, for the rest the pattern used is similar to the GOV UK implementation (for example the <code>role=&quot;combobox&quot;</code> is now positioned directly on the <code>input</code>, unlike in the ARIA version 1.1).</p>
 <p>At this stage, taking into account user feedback and blockages on mobile, we are orienting our choice on the GOV UK component, moreover reinforced by the evolution that the ARIA 1.2 pattern seems to take.</p>
-<h2 id="guidelines" class="h2-focus">Guidelines <a class="header-anchor" href="#guidelines" id="heading-83" aria-labelledby="heading-83">#</a></h2>
+<h2 id="guidelines" class="h2-focus">Guidelines <a class="header-anchor" href="#guidelines" id="heading-86" aria-labelledby="heading-86">#</a></h2>
 <p>You understand, we relied heavily on the GOV UK component.</p>
 <p>The differences with the initial component are commented directly in the guidelines.</p>
-<h3 id="combobox">Combobox <a class="header-anchor" href="#combobox" id="heading-84" aria-labelledby="heading-84">#</a></h3>
+<h3 id="combobox">Combobox <a class="header-anchor" href="#combobox" id="heading-87" aria-labelledby="heading-87">#</a></h3>
 <p><strong>Input text with the following attributes:</strong></p>
 <p><img src="../images/autocompletion-combobox.png" alt="" class="img-fluid"></p>
 <ul>
@@ -298,7 +298,7 @@ Business applications and intranets are developed for these browsers.</p>
 <li>On the other hand, we favor the use of <code>aria-control</code> over<code> aria-owns</code>, which seems more suitable with regard to the description of pattern.<br>
 More information in the article <a href = "https://www.levelaccess.com/differences-aria-1-0-1-1-changes/" target="_blank" title="Differences between ARIA 1.0 and 1.1: Changes (new window)">Differences between ARIA 1.0 and 1.1: Changes <span class = "visually-hidden">(new window)</span></a></li>
 </ol>
-<h3 id="listbox">Listbox <a class="header-anchor" href="#listbox" id="heading-85" aria-labelledby="heading-85">#</a></h3>
+<h3 id="listbox">Listbox <a class="header-anchor" href="#listbox" id="heading-88" aria-labelledby="heading-88">#</a></h3>
 <p><strong>UL element with the following attributes:</strong></p>
 <p><img src="../images/autocompletion-listbox.png" alt="" class="img-fluid"></p>
 <ul>
@@ -323,7 +323,7 @@ This seems to be more robust in order to overcome any errors in the interpretati
 Indeed, these could be misled in cases like this one, where the content of a list, and in particular the number of items, is dynamically updated.<br>
 For information, this implementation is not preserved in the ARIA 1.2 draft.</li>
 </ol>
-<h3 id="feedback-messages">Feedback messages <a class="header-anchor" href="#feedback-messages" id="heading-86" aria-labelledby="heading-86">#</a></h3>
+<h3 id="feedback-messages">Feedback messages <a class="header-anchor" href="#feedback-messages" id="heading-89" aria-labelledby="heading-89">#</a></h3>
 <ul>
 <li>A message to indicate the interactions, example from GOV UK:</li>
 </ul>
@@ -354,7 +354,7 @@ From a touch device, explore using a swipe</p>
 <p>At initialization, the <code>DIV</code> is empty to avoid unwanted vocalization.</p>
 <p>The messages are dynamically integrated according to the actions of the user.</p>
 <p>A message is returned as soon as it is included in the LIVE area.</p>
-<h3 id="interactions">Interactions <a class="header-anchor" href="#interactions" id="heading-87" aria-labelledby="heading-87">#</a></h3>
+<h3 id="interactions">Interactions <a class="header-anchor" href="#interactions" id="heading-90" aria-labelledby="heading-90">#</a></h3>
 <ul>
 <li><strong>Enter the proposals:</strong> down arrows (input to first item)</li>
 <li><strong>Navigation between the proposals:</strong> up and down arrows (no tabulation)</li>
@@ -394,7 +394,7 @@ Here we are choosing to align with the native behavior of autocompletion.<br>
 The GOV UK component does not follow this behavior.</li>
 <li>The arrows allow you to reposition yourself in the combobox, again we choose to align ourselves with the native behavior (unlike this time the ARIA 1.2 pattern draft </span>)</li>
 </ol>
-<h3 id="resources">Resources <a class="header-anchor" href="#resources" id="heading-88" aria-labelledby="heading-88">#</a></h3>
+<h3 id="resources">Resources <a class="header-anchor" href="#resources" id="heading-91" aria-labelledby="heading-91">#</a></h3>
 <ul>
 <li><a href="https://alphagov.github.io/accessible-autocomplete/examples/" target="_blank" title="GOV UK, accessible autocomplete (new window)"> GOV UK, <span lang = " en "> accessible autocomplete </span> <span class =" visually-hidden "> (new window) </span> </a></li>
 <li><a href ="https://designnotes.blog.gov.uk/2017/04/20/were-building-an-autocomplete/" target = "_ blank" title = "Article We're building an autocomplete (new window ) "> Article <span lang =" en "> We're building an autocomplete </span> <span class =" visually-hidden "> (new window) </span> </a></li>

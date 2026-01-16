@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2025-12-19T00:00:00Z</updated>
+  <updated>2026-01-16T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Exemple de masquage accessible et d&#39;utilisation de aria-hidden</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/masquage-accessible/"/>
+    <updated>2026-01-16T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/masquage-accessible/</id>
+    <content xml:lang="fr" type="html">Créer des éléments invisibles à l&#39;écran mais accessibles aux outils d&#39;assistance.</content>
+  </entry>
   
   <entry>
     <title>Vers un marché unique numérique accessible : une analyse critique du European Accessibility Act</title>
@@ -601,14 +609,6 @@
     <updated>2018-01-13T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/iframes-techniques/</id>
     <content xml:lang="fr" type="html">Comment masquer les iframes aux outils d&#39;assistance.</content>
-  </entry>
-  
-  <entry>
-    <title>Exemple masquage accessible et aria-hidden</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/masquage-accessible/"/>
-    <updated>2018-01-12T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/masquage-accessible/</id>
-    <content xml:lang="fr" type="html">Créer des éléments non-visibles à l&#39;écran mais accessibles aux outils d&#39;assistances.</content>
   </entry>
   
   <entry>

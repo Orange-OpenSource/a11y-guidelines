@@ -234,7 +234,7 @@ The various contents of this speech are indicated hereunder:</p>
 <p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
 </br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
 </br></p>
-<h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-1934" aria-labelledby="heading-1934">#</a></h2>
+<h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-1928" aria-labelledby="heading-1928">#</a></h2>
 <p><a href="https://developer.apple.com/videos/play/wwdc2021/10058/?time=142">AsyncSequence</a> suspends on each element and receives values asynchronously while completing with success or stopping when an error is thrown.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-10058-Definition.png" alt="" class="img-fluid"></p>
 <p>This <a href="https://developer.apple.com/videos/play/wwdc2021/10058/?time=198">asynchronous behavior</a> comes from an usual sequence whose iterator process is altered by the compiler with the new <code> async/await</code> syntax commonly used in Swift concurrency.</p>
@@ -244,7 +244,7 @@ The various contents of this speech are indicated hereunder:</p>
 <p><a href="https://developer.apple.com/videos/play/wwdc2021/10058/?time=402">Cancelling an iteration</a> may also be scheduled when desired by wrapping it in a <code>Task</code>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-10058-Introduction_3.png" alt="" class="img-fluid"><br>
 </br></p>
-<h2 id="apis" class="h2-focus">APIs <a class="header-anchor" href="#apis" id="heading-1935" aria-labelledby="heading-1935">#</a></h2>
+<h2 id="apis" class="h2-focus">APIs <a class="header-anchor" href="#apis" id="heading-1929" aria-labelledby="heading-1929">#</a></h2>
 <p>Some new AsyncSequence APIs have been introduced to point out the simplicity of their implementation in different areas:</p>
 <ul>
 <li>
@@ -268,7 +268,7 @@ The various contents of this speech are indicated hereunder:</p>
 Thus, they can be used to turn a complexed logic into an easier one so as to get values from async sequences.<br>
 <img src="../../../../../images/iOSdev/wwdc21-10058-APIs_5.png" alt="" class="img-fluid"><br>
 </br></p>
-<h2 id="adopting-asyncsequence" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10058/?time=628">Adopting AsyncSequence</a> <a class="header-anchor" href="#adopting-asyncsequence" id="heading-1936" aria-labelledby="heading-1936">#</a></h2>
+<h2 id="adopting-asyncsequence" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10058/?time=628">Adopting AsyncSequence</a> <a class="header-anchor" href="#adopting-asyncsequence" id="heading-1930" aria-labelledby="heading-1930">#</a></h2>
 <p><strong>AsyncStream</strong> is the easiest way to <strong>create one's own asynchronous sequences</strong> for callbacks that are called multiple times and some delegates that both are <a href="https://developer.apple.com/videos/play/wwdc2021/10058/?time=780">good candidates</a> for async sequences.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-10058-AdoptAsyncSeq_1.png" alt="" class="img-fluid"></p>
 <p><a href="https://developer.apple.com/videos/play/wwdc2021/10058/?time=670">Customizing</a> an async sequence is facilitated by the <strong>functions and variables of the continuation structure</strong>.</p>
@@ -276,7 +276,7 @@ Thus, they can be used to turn a complexed logic into an easier one so as to get
 <p>The <code>for-await-in</code> syntax provides a <a href="https://developer.apple.com/videos/play/wwdc2021/10058/?time=751">significant flexibility</a> regarding the async sequences created thanks to the Asyncstream generic type.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-10058-AdoptAsyncSeq_3.png" alt="" class="img-fluid"><br>
 </br></p>
-<h2 id="example" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10058/?time=36">Example</a> <a class="header-anchor" href="#example" id="heading-1937" aria-labelledby="heading-1937">#</a></h2>
+<h2 id="example" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10058/?time=36">Example</a> <a class="header-anchor" href="#example" id="heading-1931" aria-labelledby="heading-1931">#</a></h2>
 <p>An example of async sequence of lines is introduced to point out the <strong>responsiveness</strong> when each line is received while showing off the possible use of <strong>regular sequences</strong> with the <code>async/await</code> syntax.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-10058-Example_1.png" alt="" class="img-fluid"><br>
 <img src="../../../../../images/iOSdev/wwdc21-10058-Example_2.png" alt="" class="img-fluid"><br>
