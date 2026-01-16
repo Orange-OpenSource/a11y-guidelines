@@ -203,7 +203,7 @@ Le premier exemple est un tableau avec seulement des en-têtes sur les colonnes,
 
 De cette manière, il est possible de naviguer facilement au sein du tableau à l'aide d'un lecteur d'écran, tout changement de cellule (d'une colonne, ou d'une ligne à l'autre) étant restitué avec l'en-tête associé.
 
-Par exemple, si on est positionné sur la colonne "Prénom" et qu'on utilise le raccourci <kbd>Ctrl+Alt+flèche droite</kbd> pour passer à la colonne "Nom", NVDA vocalise _"Nom Colonne 2 + texte de la colonne"_.
+Par exemple, si on est positionné sur la colonne "Prénom" et qu'on utilise le raccourci <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>flèche droite</kbd> pour passer à la colonne "Nom", NVDA vocalise _"Nom Colonne 2 + texte de la colonne"_.
 
 ### Tableau à double en-tête
 
