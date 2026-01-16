@@ -128,11 +128,11 @@ Pour Jaws, il faut utiliser la touche <kbd>y</kbd> et <kbd>Maj</kbd> + <kbd>y</k
 Pour parcourir l'intérieur d'un tableau, il existe plusieurs raccourcis&nbsp;:
 
 <ul>
-<li><kbd>Insert + Ctrl + t</kbd> permet de lister tous les tableaux.</li>
-<li><kbd>Ctrl + Alt + flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl + Alt + flèche droite</kbd> se déplace sur la colonne de droite.</li>
-<li><kbd>Ctrl + Alt + flèche bas</kbd> permet de passer à la ligne suivante en restant sur la même colonne, <kbd>Ctrl + Alt + flèche haut</kbd> pour passer à la ligne précédente.</li>
-<li><kbd>Insert + Maj + flèche haut</kbd> permet de lire toute la ligne.</li>
-<li><kbd>Insert + Maj + num pad 5</kbd> permet de lire toute la colonne.</li>
+<li><kbd>Insert</kbd> + <kbd>Ctrl</kbd> + <kbd>T</kbd> permet de lister tous les tableaux.</li>
+<li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>flèche gauche</kbd> permet de se déplacer sur la colonne de gauche tout en gardant la même ligne, <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>flèche droite</kbd> se déplace sur la colonne de droite.</li>
+<li><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>flèche bas</kbd> permet de passer à la ligne suivante en restant sur la même colonne, <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>flèche haut</kbd> pour passer à la ligne précédente.</li>
+<li><kbd>Insert</kbd> + <kbd>Maj</kbd> + <kbd>flèche haut</kbd> permet de lire toute la ligne.</li>
+<li><kbd>Insert</kbd> + <kbd>Maj</kbd> + <kbd>num pad 5</kbd> permet de lire toute la colonne.</li>
 </ul>
 
 ## Exemples de tableaux
