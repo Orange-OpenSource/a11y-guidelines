@@ -3,7 +3,7 @@ title: "Les tableaux dans l'accessibilité"
 abstract: "Toutes nos recommandations pour que les tableaux soient accessibles"
 titleBeforeTag: true
 date: "2022-04-15"
-updateDate: "2025-12-05"
+updateDate: "2026-01-30"
 tags:
   - web
   - beginner
@@ -25,6 +25,7 @@ Dans la suite de cet article, nous allons voir les principales règles à respec
 
 Il est important de donner un titre à votre tableau. À la fois concis et pertinent, ce texte doit permettre de comprendre la nature ainsi que le type de données qu'il contient.
 Il doit être associé au tableau grâce à la balise <code>caption</code> et doit être le premier élément après la balise d'ouverture <code>table</code>. 
+
 #### Exemple avec <code>caption</code>
 <pre><code class="html">
 &lt;table&gt;
@@ -34,6 +35,7 @@ Il doit être associé au tableau grâce à la balise <code>caption</code> et do
 </code></pre>
 
 Une autre façon de donner un titre est l'utilisation des attributs <code>aria-labelledby</code> ou <code>aria-label</code> sur la balise <code>table</code>, un titre doit cependant être visible.
+
 #### Exemple avec <code>aria-label</code>
 <pre><code class="html">
 &lt;table aria-label="titre du tableau"&gt;
@@ -42,6 +44,7 @@ Une autre façon de donner un titre est l'utilisation des attributs <code>aria-l
 </code></pre>
 
 En dernier recours, il est également possible d'utiliser l'attribut <code>title</code>, un titre doit cependant être visible.
+
 #### Exemple avec <code>title</code>
 <pre><code class="html">
 &lt;h2 id="titre"&gt; Emploi du temps 2022&lt;/h2&gt;
@@ -144,7 +147,7 @@ Nous allons maintenant vous présenter des exemples de tableaux accessibles.
 Le premier exemple est un tableau avec seulement des en-têtes sur les colonnes, nous utilisons donc l'attribut <code>scope="col"</code> pour que les technologies d'assistance l’interprète correctement.
 
 <table class="table">
- <caption class="h4"> Personnes avec leur activité professionnelle</caption>
+ <caption class="h4">Personnes avec leur activité professionnelle</caption>
   <tr>
     <th scope="col">Prénom</th>
     <th scope="col">Nom</th>
