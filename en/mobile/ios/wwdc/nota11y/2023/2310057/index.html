@@ -219,7 +219,7 @@
 &quot;Discover powerful enhancements to the <strong>trait system in UIKit</strong>. Learn how you can define <strong>custom traits</strong> to add your own data to UITraitCollection, modify the data propagated to view controllers and views with <strong>trait override APIs</strong>, and adopt APIs to improve flexibility and performance. We'll also show you how to <strong>bridge UIKit traits with SwiftUI</strong> environment keys to seamlessly access data from both UIKit and SwiftUI components in your app.&quot;<br>
 </br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
 </br></p>
-<h2 id="traits" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10057?time=60">Traits</a> <a class="header-anchor" href="#traits" id="heading-2175" aria-labelledby="heading-2175">#</a></h2>
+<h2 id="traits" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10057?time=60">Traits</a> <a class="header-anchor" href="#traits" id="heading-2190" aria-labelledby="heading-2190">#</a></h2>
 <p><em>Traits</em> are built-in pieces of data that are automatically propagated through the app thanks to the <em>trait collections</em>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10057_1.png" alt="" class="img-fluid"></p>
 <p><code>iOS</code> <code>17</code> has brought some <em>new <code>API</code>s</em> for streamlining the work with trait collections.</p>
@@ -254,19 +254,19 @@
 </div>
 </br>
 </br>
-<h3 id="trait-environment"><a href="https://developer.apple.com/videos/play/wwdc2023/10057/?time=183">Trait environment</a> <a class="header-anchor" href="#trait-environment" id="heading-2176" aria-labelledby="heading-2176">#</a></h3>
+<h3 id="trait-environment"><a href="https://developer.apple.com/videos/play/wwdc2023/10057/?time=183">Trait environment</a> <a class="header-anchor" href="#trait-environment" id="heading-2191" aria-labelledby="heading-2191">#</a></h3>
 <p>The <strong>trait environments</strong> (window scenes, windows,...) have their own trait collection and are connected through the objects hierarchy for conveying their content.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10057_4.png" alt="" class="img-fluid"></p>
 <p>The <a href="https://developer.apple.com/videos/play/wwdc2023/10057/?time=235">trait collection inheritance</a> has been modified in <code>iOS</code> <code>17</code> in order to have a <strong>direct link between a view controller and its view’s superview</strong> instead of inheriting the trait collection from the parent view controller.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10057_5.png" alt="" class="img-fluid"></p>
-<h3 id="trait-update"><a href="https://developer.apple.com/videos/play/wwdc2023/10057/?time=351">Trait update</a> <a class="header-anchor" href="#trait-update" id="heading-2177" aria-labelledby="heading-2177">#</a></h3>
+<h3 id="trait-update"><a href="https://developer.apple.com/videos/play/wwdc2023/10057/?time=351">Trait update</a> <a class="header-anchor" href="#trait-update" id="heading-2192" aria-labelledby="heading-2192">#</a></h3>
 <p>According to the brand new flow of traits in <code>iOS</code> <code>17</code>, the <strong>view controller trait update</strong> changes in some important aspects...</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10057_6.png" alt="" class="img-fluid"></p>
 <p>... whilst affecting the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10057/?time=423">view trait update</a></strong> as well.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10057_7.png" alt="" class="img-fluid"><br>
 </br></p>
-<h2 id="new-features-capabilities" class="h2-focus">New features &amp; capabilities <a class="header-anchor" href="#new-features-capabilities" id="heading-2178" aria-labelledby="heading-2178">#</a></h2>
-<h3 id="custom-traits"><a href="https://developer.apple.com/videos/play/wwdc2023/10057?time=464">Custom traits</a> <a class="header-anchor" href="#custom-traits" id="heading-2179" aria-labelledby="heading-2179">#</a></h3>
+<h2 id="new-features-capabilities" class="h2-focus">New features &amp; capabilities <a class="header-anchor" href="#new-features-capabilities" id="heading-2193" aria-labelledby="heading-2193">#</a></h2>
+<h3 id="custom-traits"><a href="https://developer.apple.com/videos/play/wwdc2023/10057?time=464">Custom traits</a> <a class="header-anchor" href="#custom-traits" id="heading-2194" aria-labelledby="heading-2194">#</a></h3>
 <p>Uses for custom traits are disparate and should be exploited in <strong>added-value cases</strong>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10057_8.png" alt="" class="img-fluid"></p>
 <ul class="nav nav-tabs" role="tablist">
@@ -307,7 +307,7 @@
 <img src="../../../../../images/iOSdev/wwdc23-10057_12.png" alt="" class="img-fluid"><br>
 ... not to mention the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10057/?time=845">Objective-C coding</a></strong> that takes into account this alternative.<br>
 </br></p>
-<h3 id="override-traits"><a href="https://developer.apple.com/videos/play/wwdc2023/10057?time=872">Override traits</a> <a class="header-anchor" href="#override-traits" id="heading-2180" aria-labelledby="heading-2180">#</a></h3>
+<h3 id="override-traits"><a href="https://developer.apple.com/videos/play/wwdc2023/10057?time=872">Override traits</a> <a class="header-anchor" href="#override-traits" id="heading-2195" aria-labelledby="heading-2195">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc23-10057_13.png" alt="" class="img-fluid"></p>
 <p><code>iOS</code> <code>17</code> has introduced a <strong>new property</strong> for modifying data within the trait hierarchy.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10057_14.png" alt="" class="img-fluid"></p>
@@ -316,7 +316,7 @@
 <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10057/?time=1121">Best practices</a></strong> are pointed out for maximizing the performance when <strong>overriding traits</strong>.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10057_16.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="handle-changes"><a href="https://developer.apple.com/videos/play/wwdc2023/10057?time=1188">Handle changes</a> <a class="header-anchor" href="#handle-changes" id="heading-2181" aria-labelledby="heading-2181">#</a></h3>
+<h3 id="handle-changes"><a href="https://developer.apple.com/videos/play/wwdc2023/10057?time=1188">Handle changes</a> <a class="header-anchor" href="#handle-changes" id="heading-2196" aria-labelledby="heading-2196">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc23-10057_17.png" alt="" class="img-fluid"></p>
 <p><strong>Managing changes for traits</strong> may be embedded in a threefold goal:</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10057_18.png" alt="" class="img-fluid"></p>
@@ -370,7 +370,7 @@
 <img src="../../../../../images/iOSdev/wwdc23-10057_24.png" alt="" class="img-fluid"></p>
 <p>These registrations are <a href="https://developer.apple.com/videos/play/wwdc2023/10057/?time=1468">automatically cleaned up</a> but can be manually unregistered if need be.</p>
 </br>
-<h2 id="swiftui-bridging" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10057?time=1525">SwiftUI bridging</a> <a class="header-anchor" href="#swiftui-bridging" id="heading-2182" aria-labelledby="heading-2182">#</a></h2>
+<h2 id="swiftui-bridging" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10057?time=1525">SwiftUI bridging</a> <a class="header-anchor" href="#swiftui-bridging" id="heading-2197" aria-labelledby="heading-2197">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc23-10057_25.png" alt="" class="img-fluid"></p>
 <p>The <strong>compatibility between <code>UIKit</code> and <code>SwiftUI</code></strong> relies on the <a href="https://developer.apple.com/videos/play/wwdc2023/10057/?time=1569"><code>UITraitBridgedEnvironmentKey</code> protocol</a> that connects the environment key in <code>SwiftUI</code> and the trait in <code>UIKit</code>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10057_26.png" alt="" class="img-fluid"></p>

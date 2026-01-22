@@ -196,18 +196,18 @@
             
           
           <div class="mt-4">
-          <h2 id="general-explanation" class="h2-focus">General explanation <a class="header-anchor" href="#general-explanation" id="heading-189" aria-labelledby="heading-189">#</a></h2>
+          <h2 id="general-explanation" class="h2-focus">General explanation <a class="header-anchor" href="#general-explanation" id="heading-179" aria-labelledby="heading-179">#</a></h2>
 <p>The purpose of <a href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence">WCAG 1.3.2 criterion</a> is to ensure that, if the order of the content matters, it must be preserved regardless of how it is presented to the user. For example, if you browse with CSS disabled or when you use a screen reader.</p>
 <p>The order of content is <strong>important</strong> if the order of the content cannot be changed without affecting its meaning.<br>
 For example, for an ordered list or a table, the order of the content is important, on the other hand for an unordered list, the reading order has no impact on the user's understanding of the content.</p>
 <p>A WEB page can be composed of several independent sections having specific roles. The relative positions of a navigation section and a main page section generally do not affect the understanding of the page content. Whether the navigation is at the top or on the left of the screen, does not interfere with understanding, even if a reading order can be imposed within one of these sections.<br>
 There can therefore be several reading orders on a WEB page to satisfy the success criterion.</p>
-<h2 id="what-you-should-not-do" class="h2-focus">What you should not do <a class="header-anchor" href="#what-you-should-not-do" id="heading-190" aria-labelledby="heading-190">#</a></h2>
-<h3 id="use-white-space-to-format-plain-text">Use white space to format plain text <a class="header-anchor" href="#use-white-space-to-format-plain-text" id="heading-191" aria-labelledby="heading-191">#</a></h3>
+<h2 id="what-you-should-not-do" class="h2-focus">What you should not do <a class="header-anchor" href="#what-you-should-not-do" id="heading-180" aria-labelledby="heading-180">#</a></h2>
+<h3 id="use-white-space-to-format-plain-text">Use white space to format plain text <a class="header-anchor" href="#use-white-space-to-format-plain-text" id="heading-181" aria-labelledby="heading-181">#</a></h3>
 <p>When presenting content, it is important not to use space characters, such as spaces, tabs, line feeds or carriage returns.<br>
 In some cases, these characters are used to format tables, or reproduce columns of data in textual content. This method is prohibited because assistive technologies will not be presented with the information in a logical reading order, so the information returned to some users will be incomprehensible.</p>
 <p>Below are two examples that are invalid and therefore not understandable with screen readers.</p>
-<h4 id="example-of-a-blank-character-to-format-a-tables">Example of a blank character to format a tables <a class="header-anchor" href="#example-of-a-blank-character-to-format-a-tables" id="heading-192" aria-labelledby="heading-192">#</a></h4>
+<h4 id="example-of-a-blank-character-to-format-a-tables">Example of a blank character to format a tables <a class="header-anchor" href="#example-of-a-blank-character-to-format-a-tables" id="heading-182" aria-labelledby="heading-182">#</a></h4>
 <pre class="border border-light">
 
 Working hours with Classroom
@@ -226,7 +226,7 @@ Afternoon   2 p.m                2 p.m             Break
 </pre>
 <p>Note that the presentation above is a purely a visual formatting, but no semantic relationship can represent tabular relationships.<br>
 Assistive technologies will read the content as it appears in the code, therefore, in an illogical and incomprehensible order. Here, the solution would be to use a table or present the information in a linear maner.</p>
-<h4 id="example-of-a-blank-character-to-separate-content-into-two-columns">Example of a blank character to separate content into two columns <a class="header-anchor" href="#example-of-a-blank-character-to-separate-content-into-two-columns" id="heading-193" aria-labelledby="heading-193">#</a></h4>
+<h4 id="example-of-a-blank-character-to-separate-content-into-two-columns">Example of a blank character to separate content into two columns <a class="header-anchor" href="#example-of-a-blank-character-to-separate-content-into-two-columns" id="heading-183" aria-labelledby="heading-183">#</a></h4>
 <p class="border border-light">
 Digital accessibility aims to make possible &emsp;&emsp;&emsp;&emsp; it is not a question of multiplying <br/>
 access to digital information whatever &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;media, but from<br/>
@@ -237,11 +237,11 @@ and Word and PDF documents, but also the &emsp;&emsp;&emsp;&emsp; consulting too
 digital television or mobile phones. &emsp;&emsp;&emsp;
 </p>
 <p>The paragraph above does not conform, space characters are used to separate the text into two columns. Assistive technologies will read the text line by line which would be an illogical reading order.</p>
-<h3 id="use-a-layout-table">Use a layout table <a class="header-anchor" href="#use-a-layout-table" id="heading-194" aria-labelledby="heading-194">#</a></h3>
+<h3 id="use-a-layout-table">Use a layout table <a class="header-anchor" href="#use-a-layout-table" id="heading-184" aria-labelledby="heading-184">#</a></h3>
 <p>Although WCAG does not prohibit the use of layout tables, it is recommended to use layout in CSS in order to maintain the semantic reading of the content. If a layout table is used, it is important that the content makes sense when linearized.</p>
 <p>Tables present content horizontally and vertically, however an assistive technology reads this content in a linear way, the table is read from top to bottom reading the entire row before moving on to the next.</p>
 <p>Therefore, you have to be careful when using a layout table, you have to check that the content is understandable with a screen reader.</p>
-<h4 id="example-of-an-invalid-table">Example of an invalid table <a class="header-anchor" href="#example-of-an-invalid-table" id="heading-195" aria-labelledby="heading-195">#</a></h4>
+<h4 id="example-of-an-invalid-table">Example of an invalid table <a class="header-anchor" href="#example-of-an-invalid-table" id="heading-185" aria-labelledby="heading-185">#</a></h4>
 <table role="presentation" class="m-2 border border-light">
   <tr>
     <td><a href="#">Home <span class="visually-hidden">(exemple)</span></a></td>
@@ -260,7 +260,7 @@ digital television or mobile phones. &emsp;&emsp;&emsp;
 </table>
 <p>The table above displays a menu, with the logo on the side.</p>
 <p>The problem is that, with a screen reader, the reading order is changed, because, instead of stating all the menu links, the image will be vocalized in the middle of them.</p>
-<h3 id="use-css-to-position-information">Use CSS to position information <a class="header-anchor" href="#use-css-to-position-information" id="heading-196" aria-labelledby="heading-196">#</a></h3>
+<h3 id="use-css-to-position-information">Use CSS to position information <a class="header-anchor" href="#use-css-to-position-information" id="heading-186" aria-labelledby="heading-186">#</a></h3>
 <p>To position content in a reading order, it is recommended to use structural markup, rather than CSS positioning properties. The latter can lead to errors, as the content can be displayed/interpreted in a different order than it is in the source code.</p>
 <p>So, if the reading order is important, be careful, when using CSS Flexbox, grid and position, not to change the visual order of the content compared to its position in the code:</p>
 <ul>
@@ -269,7 +269,7 @@ digital television or mobile phones. &emsp;&emsp;&emsp;
    <li>With positioning properties, avoid detaching the visual order of elements from the order in which they appear in the DOM</li>
 </ul>
 <p>If a user disables CSS, or uses a screen reader, the rendering of information will no longer be in the correct order.</p>
-<h4 id="example-of-a-position-menu-in-css">Example of a position menu in CSS <a class="header-anchor" href="#example-of-a-position-menu-in-css" id="heading-197" aria-labelledby="heading-197">#</a></h4>
+<h4 id="example-of-a-position-menu-in-css">Example of a position menu in CSS <a class="header-anchor" href="#example-of-a-position-menu-in-css" id="heading-187" aria-labelledby="heading-187">#</a></h4>
 <p>The layout below was created with CSS, if you disable the CSS, you will notice that the reading direction will be different than the one displayed.</p>
 <div class="border border-light position-relative mb-3" style="width: 320px;height:180px">      
      <span class="position-absolute top-0 start-0"><strong>Sports</strong></span>       
@@ -280,7 +280,7 @@ digital television or mobile phones. &emsp;&emsp;&emsp;
      <span class="position-absolute top-50 end-0">Clothes</span>       
      <span class="position-absolute end-0" style="top:75%!important">Accessories</span>
 </div>
-<h4 id="example-of-a-tab-where-the-content-is-positioned-before">Example of a tab where the content is positioned before <a class="header-anchor" href="#example-of-a-tab-where-the-content-is-positioned-before" id="heading-198" aria-labelledby="heading-198">#</a></h4>
+<h4 id="example-of-a-tab-where-the-content-is-positioned-before">Example of a tab where the content is positioned before <a class="header-anchor" href="#example-of-a-tab-where-the-content-is-positioned-before" id="heading-188" aria-labelledby="heading-188">#</a></h4>
 <p>In the example below, tabs will be displayed with content that will be positioned with flexboxes.</p>
 <div class="d-flex flex-column mb-3">
   <div class="tab-content order-2" id="myTabContent">

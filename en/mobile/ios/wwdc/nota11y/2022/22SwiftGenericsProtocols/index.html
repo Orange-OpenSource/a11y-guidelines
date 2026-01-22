@@ -242,7 +242,7 @@
 <p><img src="../../../../../images/iOSdev/wwdc22-SwiftGenericsProtocols_1.png" alt="" class="img-fluid"></p>
 <p>When code snippets turn out to be <a href="https://developer.apple.com/videos/play/wwdc2022/110352?time=184">iterative</a>, it might be interesting to implement some abstract code by using <strong>polymorphism</strong> in the first place.<br>
 </br></p>
-<h2 id="polymorphism" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2022/110352?time=231">Polymorphism</a> <a class="header-anchor" href="#polymorphism" id="heading-2133" aria-labelledby="heading-2133">#</a></h2>
+<h2 id="polymorphism" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2022/110352?time=231">Polymorphism</a> <a class="header-anchor" href="#polymorphism" id="heading-2127" aria-labelledby="heading-2127">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc22-SwiftGenericsProtocols-Polymorphism_1.png" alt="" class="img-fluid"></p>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -289,9 +289,9 @@
 </div>
 </div>
 </br></br>
-<h2 id="basics-for-generic-code" class="h2-focus">Basics for generic code <a class="header-anchor" href="#basics-for-generic-code" id="heading-2134" aria-labelledby="heading-2134">#</a></h2>
+<h2 id="basics-for-generic-code" class="h2-focus">Basics for generic code <a class="header-anchor" href="#basics-for-generic-code" id="heading-2128" aria-labelledby="heading-2128">#</a></h2>
 <p>The best way to get rid of some problematic situations using polymorphism is based on <strong><a href="https://developer.apple.com/videos/play/wwdc2022/110352/?time=495">building an interface</a></strong> that won't take the implementation details into account.</p>
-<h3 id="protocol"><a href="https://developer.apple.com/videos/play/wwdc2022/110352?time=524">Protocol</a> <a class="header-anchor" href="#protocol" id="heading-2135" aria-labelledby="heading-2135">#</a></h3>
+<h3 id="protocol"><a href="https://developer.apple.com/videos/play/wwdc2022/110352?time=524">Protocol</a> <a class="header-anchor" href="#protocol" id="heading-2129" aria-labelledby="heading-2129">#</a></h3>
 <p>In this perspective, Swift leans on a protocol to <strong>describe the functionality of conforming types</strong> in conjuction with <strong>associated types</strong> acting as placeholders for concrete types inside this protocol.<br>
 <img src="../../../../../images/iOSdev/wwdc22-SwiftGenericsProtocols-BasicsProtocol_1.png" alt="" class="img-fluid"></p>
 <p>The best way to set up a refined conception is based on the <a href="https://developer.apple.com/videos/play/wwdc2022/110352/?time=666">powerful expression</a> of <strong>named type parameters and trailing <code>where</code> clauses</strong>...<br>
@@ -300,7 +300,7 @@
 <p><img src="../../../../../images/iOSdev/wwdc22-SwiftGenericsProtocols-BasicsProtocol_3.png" alt="" class="img-fluid"></p>
 <p>However, this improvement may be avoided in some <a href="https://developer.apple.com/videos/play/wwdc2022/110352/?time=1091">specific situations</a>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc22-SwiftGenericsProtocols-BasicsProtocol_4.png" alt="" class="img-fluid"></p>
-<h3 id="some">Some <a class="header-anchor" href="#some" id="heading-2136" aria-labelledby="heading-2136">#</a></h3>
+<h3 id="some">Some <a class="header-anchor" href="#some" id="heading-2130" aria-labelledby="heading-2130">#</a></h3>
 <p>The <strong>abstract type</strong> prefixed by the <code>some</code> keyword was introduced in <code>Swift</code> <code>5.1</code> as an <strong><a href="https://developer.apple.com/videos/play/wwdc2022/110352/?time=868">opaque type</a></strong>...<br>
 <img src="../../../../../images/iOSdev/wwdc22-SwiftGenericsProtocols-Some_1.png" alt="" class="img-fluid"></p>
 <p>... that isn't analyzed the same way depending on its role that will give rise to different assessings of its <strong>underlying type</strong>.</p>
@@ -353,7 +353,7 @@
 <p><img src="../../../../../images/iOSdev/wwdc22-SwiftGenericsProtocols-Some_2.png" alt="" class="img-fluid"></p>
 <p>Using the <code>some</code> keyword implies having the <strong>same type</strong> for all the elements <a href="https://developer.apple.com/videos/play/wwdc2022/110352?time=1239">inside an array</a> (the underlying type is fixed and can't vary).</p>
 <p><img src="../../../../../images/iOSdev/wwdc22-SwiftGenericsProtocols-Some_3.png" alt="" class="img-fluid"></p>
-<h3 id="any">Any <a class="header-anchor" href="#any" id="heading-2137" aria-labelledby="heading-2137">#</a></h3>
+<h3 id="any">Any <a class="header-anchor" href="#any" id="heading-2131" aria-labelledby="heading-2131">#</a></h3>
 <p>The static type prefixed by the <code>any</code> keyword introduced in <code>Swift</code> <code>5.6</code> is appointed an <strong><a href="https://developer.apple.com/videos/play/wwdc2022/110352/?time=1300">existential type</a></strong> and is represented by a <strong>specific structure in memory</strong>.</p>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -404,7 +404,7 @@ This compiler behavior aims at <strong>exposing the existential type content by 
 <p></br>Using the <code>any</code> keyword entitles to <strong>store any concrete type dynamically</strong> within an array unlike the <code>some</code> keyword.</p>
 <p><img src="../../../../../images/iOSdev/wwdc22-SwiftGenericsProtocols-Any.png" alt="" class="img-fluid"></p>
 </br>
-<h2 id="hide-identify" class="h2-focus">Hide &amp; Identify <a class="header-anchor" href="#hide-identify" id="heading-2138" aria-labelledby="heading-2138">#</a></h2>
+<h2 id="hide-identify" class="h2-focus">Hide &amp; Identify <a class="header-anchor" href="#hide-identify" id="heading-2132" aria-labelledby="heading-2132">#</a></h2>
 <p>Protocols can now include <strong><a href="https://developer.apple.com/videos/play/wwdc2022/110353/?time=740">primary associated types</a></strong> to specify the type for a given associated type as a generic constraint.</p>
 <p><img src="../../../../../images/iOSdev/wwdc22-SwiftGenericsProtocols-HideIdentity_1.png" alt="" class="img-fluid"><br>
 <a id="ConstainedResultType"></a><br>
