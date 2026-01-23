@@ -22,7 +22,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
@@ -219,17 +219,17 @@
 &quot;Explore the <strong>latest updates to SF Symbols</strong>, Apple's library of iconography designed to integrate seamlessly with San Francisco, the system font for Apple platforms. Learn about <strong>symbol animations</strong>: a collection of expressive, configurable animations that can make your interface feel more lively and improve user feedback. See how to draw for animation when <strong>creating your own custom symbols</strong>, and discover the latest additions to the <strong>SF Symbols library</strong>.&quot;<br>
 </br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
 </br></p>
-<h2 id="animation" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10197?time=53">Animation</a> <a class="header-anchor" href="#animation" id="heading-2271" aria-labelledby="heading-2271">#</a></h2>
+<h2 id="animation" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10197?time=53">Animation</a> <a class="header-anchor" href="#animation" id="heading-2307" aria-labelledby="heading-2307">#</a></h2>
 <p>Through the years, the symbols have known many enhancements to lead to the <strong>brand new animation feature</strong> in 2023.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10197_5.png" alt="" class="img-fluid"></p>
 <p>Before diving deeper into this new feature, there are <strong>two concepts</strong> to be aware of.</p>
-<h3 id="the-symbol-layers"><a href="https://developer.apple.com/videos/play/wwdc2023/10197/?time=146">The symbol layers</a> <a class="header-anchor" href="#the-symbol-layers" id="heading-2272" aria-labelledby="heading-2272">#</a></h3>
+<h3 id="the-symbol-layers"><a href="https://developer.apple.com/videos/play/wwdc2023/10197/?time=146">The symbol layers</a> <a class="header-anchor" href="#the-symbol-layers" id="heading-2308" aria-labelledby="heading-2308">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc23-10197_6.png" alt="" class="img-fluid"><br>
 Based on this notion, an <a href="https://developer.apple.com/videos/play/wwdc2023/10197/?time=174">alternative</a> is <strong>animating the whole symbol</strong> or <strong>animating by layer</strong> according to the use case.</br></br></p>
-<h3 id="the-space-in-animation"><a href="https://developer.apple.com/videos/play/wwdc2023/10197/?time=198">The space in animation</a> <a class="header-anchor" href="#the-space-in-animation" id="heading-2273" aria-labelledby="heading-2273">#</a></h3>
+<h3 id="the-space-in-animation"><a href="https://developer.apple.com/videos/play/wwdc2023/10197/?time=198">The space in animation</a> <a class="header-anchor" href="#the-space-in-animation" id="heading-2309" aria-labelledby="heading-2309">#</a></h3>
 <p>This concept is crucial to provide an <strong>optic depth</strong> to a symbol.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10197_7.png" alt="" class="img-fluid"></p>
-<h3 id="the-animation-library"><a href="https://developer.apple.com/videos/play/wwdc2023/10197/?time=277">The animation library</a> <a class="header-anchor" href="#the-animation-library" id="heading-2274" aria-labelledby="heading-2274">#</a></h3>
+<h3 id="the-animation-library"><a href="https://developer.apple.com/videos/play/wwdc2023/10197/?time=277">The animation library</a> <a class="header-anchor" href="#the-animation-library" id="heading-2310" aria-labelledby="heading-2310">#</a></h3>
 <p>This library provides some <strong>configurable presets</strong> to drive a full realization of the <code>SF Symbols 5</code> animation feature:<br>
 <img src="../../../../../images/iOSdev/wwdc23-10197_8.png" alt="" class="img-fluid"></p>
 <ul class="nav nav-tabs" role="tablist">
@@ -316,14 +316,14 @@ Based on the concept of <strong>directionality</strong>, the major objective of 
 </div>
 </br>
 </br>
-<h2 id="drawing-for-animation" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10197?time=817">Drawing for animation</a> <a class="header-anchor" href="#drawing-for-animation" id="heading-2275" aria-labelledby="heading-2275">#</a></h2>
+<h2 id="drawing-for-animation" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10197?time=817">Drawing for animation</a> <a class="header-anchor" href="#drawing-for-animation" id="heading-2311" aria-labelledby="heading-2311">#</a></h2>
 <p>After creating the shapes using vector drawings, it's essential to separate the elements that will be part of the potential different animations.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10197_3.png" alt="" class="img-fluid"></p>
 <p>Once in the <code>SF Symbols app</code>, the <strong>symbol's layers are annotated</strong> to define the <a href="https://developer.apple.com/videos/play/wwdc2023/10197/?time=911">proper animations</a>.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10197_4.png" alt="" class="img-fluid"></p>
 <p>Then, animation presets can be <a href="https://developer.apple.com/videos/play/wwdc2023/10197/?time=966">visualized</a> even with no erase layers to be involved but, in this case, the <a href="https://developer.apple.com/videos/play/wwdc2023/10197/?time=984">result will be different</a>.<br>
 </br></p>
-<h2 id="new-symbols" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10197?time=1051">New symbols</a> <a class="header-anchor" href="#new-symbols" id="heading-2276" aria-labelledby="heading-2276">#</a></h2>
+<h2 id="new-symbols" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10197?time=1051">New symbols</a> <a class="header-anchor" href="#new-symbols" id="heading-2312" aria-labelledby="heading-2312">#</a></h2>
 <p>Many categories (Automotive, Gaming, Weather...) have been expanded through the new additions in <code>SF symbols 5</code>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10197_1.png" alt="" class="img-fluid"><br>
 </br><br>
@@ -402,7 +402,7 @@ Based on the concept of <strong>directionality</strong>, the major objective of 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
     
     
       <script src="/assets/vendors/highlightjs/highlight.js"></script>

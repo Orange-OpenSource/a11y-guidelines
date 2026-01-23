@@ -22,7 +22,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
@@ -196,12 +196,12 @@
             
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-73" aria-labelledby="heading-73">#</a></h2>
-<h3 id="accessible-name-and-description">Accessible name and description <a class="header-anchor" href="#accessible-name-and-description" id="heading-74" aria-labelledby="heading-74">#</a></h3>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-210" aria-labelledby="heading-210">#</a></h2>
+<h3 id="accessible-name-and-description">Accessible name and description <a class="header-anchor" href="#accessible-name-and-description" id="heading-211" aria-labelledby="heading-211">#</a></h3>
 <p>An accessible name is the information that allows assistive technology (<abbr>AT</abbr>), for example, a screen reader or a magnification program, to identify a given element (<abbr>HTML</abbr> tag). It can be provided by the title or content of an element, an attribute (for example, an <code>alt</code> attribute for an image) or by an associated element (for example, a <code>label</code> tag for a <code>input</code> field).</p>
 <p>An accessible description is more extensive information that is used by the <abbr>AT</abbr> allowing it to complete the accessible name by specifying and adding meaning where the accessible name is not sufficient.</p>
 <p>The accessible name as the accessible description can be visually noticeable or not (link title: visible, alternative image: hidden and usable only by <abbr>AT</abbr>...)</p>
-<h3 id="aria-attributes-aria-label-aria-labelledby-and-aria-describedby"><abbr>ARIA</abbr> attributes: <code>aria-label</code>, <code>aria-labelledby</code> and <code>aria-describedby</code> <a class="header-anchor" href="#aria-attributes-aria-label-aria-labelledby-and-aria-describedby" id="heading-75" aria-labelledby="heading-75">#</a></h3>
+<h3 id="aria-attributes-aria-label-aria-labelledby-and-aria-describedby"><abbr>ARIA</abbr> attributes: <code>aria-label</code>, <code>aria-labelledby</code> and <code>aria-describedby</code> <a class="header-anchor" href="#aria-attributes-aria-label-aria-labelledby-and-aria-describedby" id="heading-212" aria-labelledby="heading-212">#</a></h3>
 <p>Three <abbr>ARIA</abbr> attributes are very well supported by browsers and <abbr>AT</abbr>: <code>aria-label</code>, <code>aria-labelledby</code> and <code>aria-describedby</code>. They allow to add extra information to an <abbr>HTML</abbr> tag:</p>
 <ul>
 <li><code>aria-label</code>, <code>aria-labelledby</code> allow to give an accessible name to an element</li>
@@ -215,14 +215,14 @@
 <li>One of the <a href="https://www.w3.org/TR/wai-aria-1.1/#widget_roles" lang="en" hreflang="en"><abbr>ARIA</abbr> widget roles (27 in <abbr>ARIA</abbr> 1.1)</a>.</li>
 </ul>
 <p>For any other <abbr>HTML</abbr> element, these three <abbr>ARIA</abbr> attributes have few or even random support depending on the <abbr>AT</abr> / browser pair, so do not use as the only way of giving necessary information.</p>
-<h2 id="should-it-be-used-and-how" class="h2-focus">Should it be used and how? <a class="header-anchor" href="#should-it-be-used-and-how" id="heading-76" aria-labelledby="heading-76">#</a></h2>
+<h2 id="should-it-be-used-and-how" class="h2-focus">Should it be used and how? <a class="header-anchor" href="#should-it-be-used-and-how" id="heading-213" aria-labelledby="heading-213">#</a></h2>
 <p>Yes, we can use these three <abbr>ARIA</abbr> attributes on the elements with which it works (see above) to pass essential information specifically to <abbr>AT</abbr>.</p>
 <p>You should know that <code>aria-label</code> must contain, as a value, a string of characters that will be the accessible name. While for <code>aria-labelledby</code> and <code>aria-describedby</code>, the value of this attribute references one or more (space separated) <code>id</code> (auto referencing possible) of page elements whose content will be used as the accessible name of the element.</p>
 <p>When using <code>aria-label</code> or<code> aria-labelledby</code> on an element, the content or title of that element is no longer rendered to <abbr>AT</abbr> but replaced by the accessible name (for <code>aria-label</code> the contents of this attribute, for<code> aria-labelledby</code> the contents of the referenced element). Therefore, only the accessible name must give all the necessary information to <abbr>AT</abbr> and therefore to the user.</p>
 <p><strong>Important:</strong> attribute <code>aria-labelledby</code> can admit several values separated by a space and can self-refer. It also works with pseudo-class generated content <abbr>CSS</abbr> <code>::before</code> or<code> ::after</code>. You can also reference content that is visually hidden by: <abbr>CSS</abbr>,  <code>visibility: hidden;</code> or <code>display: none;</code>, and with the <abbr>HTML</abbr>5 attribute <code>hidden</code>. However, best practices require that if the interface is such that it is not possible to have a visible text label on the screen, it is better to use <code>aria-label</code> rather than <code>aria-labelledby</code>.</p>
 <p>When the two attributes <code>aria-labelledby</code> and<code> aria-label</code> are used, user agents give priority to aria-labelledby when calculating the accessible name property.</p>
 <p>At last, `aria-describedby' will add an accessible description in addition to the accessible name of the element.</p>
-<h2 id="examples" class="h2-focus">Examples <a class="header-anchor" href="#examples" id="heading-77" aria-labelledby="heading-77">#</a></h2>
+<h2 id="examples" class="h2-focus">Examples <a class="header-anchor" href="#examples" id="heading-214" aria-labelledby="heading-214">#</a></h2>
 <pre><code class="html">
 &lt;button aria-label="Access html (Hypertext markup language)"&gt;html&lt;/button&gt;
 </code></pre>
@@ -310,7 +310,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
     
     
       <script src="/assets/vendors/highlightjs/highlight.js"></script>

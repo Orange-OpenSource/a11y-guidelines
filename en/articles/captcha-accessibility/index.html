@@ -22,7 +22,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
@@ -196,12 +196,12 @@
             
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-97" aria-labelledby="heading-97">#</a></h2>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-79" aria-labelledby="heading-79">#</a></h2>
 <p>A CAPTCHA (“Completely Automated Public Turing-test to tell Computers and Humans Apart”) is an automated test aimed at telling apart a human user from a software program. It is often used on forms to prevent spam.<br>
 There are several types of CAPTCHAs, most of them are visual tests that ask the user to type a series of deformed letters displayed on the screen.</p>
 <p><img src="../../web/images/captchas/captcha.png" alt="Visual captcha screenshot" class="img-fluid"><br>
 <strong>Example of a visual CAPTCHA</strong></p>
-<h2 id="first-analysis-captchas-and-users" class="h2-focus">First analysis: CAPTCHAs and users <a class="header-anchor" href="#first-analysis-captchas-and-users" id="heading-98" aria-labelledby="heading-98">#</a></h2>
+<h2 id="first-analysis-captchas-and-users" class="h2-focus">First analysis: CAPTCHAs and users <a class="header-anchor" href="#first-analysis-captchas-and-users" id="heading-80" aria-labelledby="heading-80">#</a></h2>
 <p>CAPTCHAs are often problematic, even for savvy users. It is often necessary to undergo several trials before giving the right answer to a CAPTCHA. For some users a CAPTCHA is a no-go, plain and simple. For example a blind user cannot solve a visual CAPTCHA. Even if some sites provide alternatives, like audio CAPTCHAs in addition to visual CAPTCHAs, it actually seldom works. It’s even the first source of difficulty quoted by visually impaired users according to <a href="https://webaim.org/projects/screenreadersurvey7">WebAIM’s latest survey at the end of 2017</a>:</p>
 <p><img src="../../web/images/captchas/webaim.png" alt="Graph from webaim survey" class="img-fluid"></p>
 <p><strong>CAPTCHAs pointed out by visually impaired users as most common annoyance (2017 WebAIM survey)</strong></p>
@@ -212,23 +212,23 @@ This is why Google is trying to find alternatives to differentiate between a hum
 <strong>No CAPTCHA by Google</strong></p>
 <p>Even if this solution is more efficient, it is still not satisfactory from an accessibility point of view because, in case of doubt, a standard CAPTCHA is displayed. It is often the case for a user who does not use a mouse but a keyboard, or for a screen reader user (visually impaired users). You must thus always provide an alternative contact means (email, telephone, etc.) in the case when the CAPTCHA cannot be filled.<br>
 Between users that cannot input the CAPTCHA text and those who don’t understand what’s expected of them, adding a CAPTCHA is not benign regarding the audience of a site. Considering CAPTCHAs are problematic to many users, the first recommendation is to <strong>not use a CAPTCHA</strong>.</p>
-<h2 id="second-analysis-captcha-and-security" class="h2-focus">Second analysis: CAPTCHA and security <a class="header-anchor" href="#second-analysis-captcha-and-security" id="heading-99" aria-labelledby="heading-99">#</a></h2>
+<h2 id="second-analysis-captcha-and-security" class="h2-focus">Second analysis: CAPTCHA and security <a class="header-anchor" href="#second-analysis-captcha-and-security" id="heading-81" aria-labelledby="heading-81">#</a></h2>
 <p>In <a href="https://security.googleblog.com/2014/12/are-you-robot-introducing-no-captcha.html">a 2014 article by Google</a>, we read that artificial intelligence get a 99.8% score when solving “even the most difficult variant of distorted text” – thus getting a better score than a real user! Services can guess which font was used in an image, or whether the image contains an object (a cat, a car, a hat, etc.). Same conclusion in this more recent article <a href="https://medium.com/mlmemoirs/breaking-captcha-using-machine-learning-in-0-05-seconds-9feefb997694">Breaking CAPTCHA Using Machine Learning in 0.05 Seconds</a>.<br>
 Considering this (users bouncing from the site in frustration and uncertain security), we come back to our first recommendation: <strong>do not use a CAPTCHA</strong>.</p>
-<h2 id="recommended-solutions" class="h2-focus">Recommended solutions <a class="header-anchor" href="#recommended-solutions" id="heading-100" aria-labelledby="heading-100">#</a></h2>
+<h2 id="recommended-solutions" class="h2-focus">Recommended solutions <a class="header-anchor" href="#recommended-solutions" id="heading-82" aria-labelledby="heading-82">#</a></h2>
 <p>Our idea is, first, to determine risks and to ask ourselves the following questions:</p>
 <ul>
 <li>What are the risks in case of an attack?</li>
 <li>What is the real need, between bouncing bots off and providing a secured solution?</li>
 </ul>
 <p>According to our answers, we will be able to provide the solution most fit to the problem.</p>
-<h2 id="honeypot-and-time-measuring-two-simple-techniques-to-put-in-place-to-identify-bots" class="h2-focus">HoneyPot and Time measuring, two simple techniques to put in place to identify bots <a class="header-anchor" href="#honeypot-and-time-measuring-two-simple-techniques-to-put-in-place-to-identify-bots" id="heading-101" aria-labelledby="heading-101">#</a></h2>
+<h2 id="honeypot-and-time-measuring-two-simple-techniques-to-put-in-place-to-identify-bots" class="h2-focus">HoneyPot and Time measuring, two simple techniques to put in place to identify bots <a class="header-anchor" href="#honeypot-and-time-measuring-two-simple-techniques-to-put-in-place-to-identify-bots" id="heading-83" aria-labelledby="heading-83">#</a></h2>
 <p>These two techniques are transparent for the user, and the risks they pose are very limited.<br>
 The first solution consists in adding a hidden field in the form. This will never be filled by a user. If you detect server-side that the field was filled, it must be malevolent software.<br>
 The second technique consists in measuring the time it takes for the user to fill the form. If it is very fast, there’s a good chance that it’s malevolent software.</p>
-<h2 id="anti-spam-and-denylist-solutions-to-remove-bot-requests" class="h2-focus">Anti-spam and denylist solutions to remove bot requests <a class="header-anchor" href="#anti-spam-and-denylist-solutions-to-remove-bot-requests" id="heading-102" aria-labelledby="heading-102">#</a></h2>
+<h2 id="anti-spam-and-denylist-solutions-to-remove-bot-requests" class="h2-focus">Anti-spam and denylist solutions to remove bot requests <a class="header-anchor" href="#anti-spam-and-denylist-solutions-to-remove-bot-requests" id="heading-84" aria-labelledby="heading-84">#</a></h2>
 <p>It is also possible, server-side, to triage information with anti-spam software and automatically remove submissions from malevolent software by analysing content data and the originating IP.</p>
-<h2 id="a-logical-or-mathematical-test-also-called-textual-captcha" class="h2-focus">A logical or mathematical test, also called textual CAPTCHA <a class="header-anchor" href="#a-logical-or-mathematical-test-also-called-textual-captcha" id="heading-103" aria-labelledby="heading-103">#</a></h2>
+<h2 id="a-logical-or-mathematical-test-also-called-textual-captcha" class="h2-focus">A logical or mathematical test, also called textual CAPTCHA <a class="header-anchor" href="#a-logical-or-mathematical-test-also-called-textual-captcha" id="heading-85" aria-labelledby="heading-85">#</a></h2>
 <p>This is done through a simple sentence asking the user to copy a word, to solve a simple mathematical operation, etc.</p>
 <ul>
 <li>“Copy the word: ‘House’”</li>
@@ -238,12 +238,12 @@ The second technique consists in measuring the time it takes for the user to fil
 </ul>
 <p>Under the condition that the questions stay very basic, this kind of CAPTCHA will not be problematic to users.<br>
 A good practice in this case will be to provide a refresh solution, which will be very helpful for people with cognitive impairments.</p>
-<h2 id="an-email-sms-or-phone-verification-for-reinforced-security" class="h2-focus">An email, SMS or phone verification for reinforced security <a class="header-anchor" href="#an-email-sms-or-phone-verification-for-reinforced-security" id="heading-104" aria-labelledby="heading-104">#</a></h2>
+<h2 id="an-email-sms-or-phone-verification-for-reinforced-security" class="h2-focus">An email, SMS or phone verification for reinforced security <a class="header-anchor" href="#an-email-sms-or-phone-verification-for-reinforced-security" id="heading-86" aria-labelledby="heading-86">#</a></h2>
 <p>This solution consists in sending an email, an SMS or in calling directly the user to make sure they can confirm the transaction, by clicking on a link or by sending the code they received.<br>
 This solution is at the same time more constraining for the user who must communicate personal information and more tedious to put in place, but it’s a very efficient solution when the security level needs to be high.</p>
-<h2 id="summary" class="h2-focus">Summary <a class="header-anchor" href="#summary" id="heading-105" aria-labelledby="heading-105">#</a></h2>
+<h2 id="summary" class="h2-focus">Summary <a class="header-anchor" href="#summary" id="heading-87" aria-labelledby="heading-87">#</a></h2>
 <p>There is no perfect solution, either for the user or security-wise. You should opt for the best technique according to the service provided. Also, it is important in the case of attack to have logs to analyse and to prepare for further attacks.</p>
-<h2 id="test-with-real-users" class="h2-focus">Test with real users <a class="header-anchor" href="#test-with-real-users" id="heading-106" aria-labelledby="heading-106">#</a></h2>
+<h2 id="test-with-real-users" class="h2-focus">Test with real users <a class="header-anchor" href="#test-with-real-users" id="heading-88" aria-labelledby="heading-88">#</a></h2>
 <p>In any event, these captchas and their alternatives must be supplemented by user tests of assistive technologies to ensure the usability of the solution put in place.</p>
 
           </div>
@@ -322,7 +322,7 @@ This solution is at the same time more constraining for the user who must commun
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
     
     
       <script src="/assets/vendors/highlightjs/highlight.js"></script>

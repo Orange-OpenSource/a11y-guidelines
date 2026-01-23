@@ -22,7 +22,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
@@ -240,25 +240,25 @@
 <p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
 </br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
 </br></p>
-<h2 id="hitches" class="h2-focus"><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=21">Hitches</a> <a class="header-anchor" href="#hitches" id="heading-2025" aria-labelledby="heading-2025">#</a></h2>
+<h2 id="hitches" class="h2-focus"><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=21">Hitches</a> <a class="header-anchor" href="#hitches" id="heading-2070" aria-labelledby="heading-2070">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc21-Hitches_1.png" alt="" class="img-fluid"></p>
 <p>Hitches appear when a user notes a <a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=55">stuttering effect</a> instead of a natural smooth feedback.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-Hitches_2.png" alt="" class="img-fluid"></p>
 <p>The origins of the <strong>hitches</strong> arise from an <strong>incomplete work of the <a href="#the-render-loop">Render Loop</a></strong> on a frame during its time duration and these events are of <strong>two types</strong> that are detailed in depth in the next sections.<br>
 </br></br></p>
-<h2 id="the-render-loop" class="h2-focus"><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=100">The Render Loop</a> <a class="header-anchor" href="#the-render-loop" id="heading-2026" aria-labelledby="heading-2026">#</a></h2>
+<h2 id="the-render-loop" class="h2-focus"><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=100">The Render Loop</a> <a class="header-anchor" href="#the-render-loop" id="heading-2071" aria-labelledby="heading-2071">#</a></h2>
 <p>This non-stop process captures the touch events and provides this information to the system for analyzing and displaying the final result.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoop_1.png" alt="" class="img-fluid"></p>
 <p>This work is <strong>highly bound to the device capacity</strong> because the loop happens at its <a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=109">refresh rate</a>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoop_2.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="process">Process <a class="header-anchor" href="#process" id="heading-2027" aria-labelledby="heading-2027">#</a></h3>
+<h3 id="process">Process <a class="header-anchor" href="#process" id="heading-2072" aria-labelledby="heading-2072">#</a></h3>
 <p>The <code>Render</code> <code>Loop</code> is a <strong><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=147">three-stage process</a></strong> representing three different steps to be completed to state a frame to be ready.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoopProcess_1.png" alt="" class="img-fluid"></p>
 <p>To accurately specify the functions of this process, various phases have been created in the preceding stages called the <strong><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=195">five phases</a></strong>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderLoopProcess_2.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="frames">Frames <a class="header-anchor" href="#frames" id="heading-2028" aria-labelledby="heading-2028">#</a></h3>
+<h3 id="frames">Frames <a class="header-anchor" href="#frames" id="heading-2073" aria-labelledby="heading-2073">#</a></h3>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -303,7 +303,7 @@
 </div>
 </div>
 </br>
-<h3 id="example">Example <a class="header-anchor" href="#example" id="heading-2029" aria-labelledby="heading-2029">#</a></h3>
+<h3 id="example">Example <a class="header-anchor" href="#example" id="heading-2074" aria-labelledby="heading-2074">#</a></h3>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -370,7 +370,7 @@
 </div>
 </div>
 <p></br></br></p>
-<h2 id="the-commit-phase" class="h2-focus"><a href="https://developer.apple.com/videos/play/tech-talks/10856/?time=55">The Commit phase</a> <a class="header-anchor" href="#the-commit-phase" id="heading-2030" aria-labelledby="heading-2030">#</a></h2>
+<h2 id="the-commit-phase" class="h2-focus"><a href="https://developer.apple.com/videos/play/tech-talks/10856/?time=55">The Commit phase</a> <a class="header-anchor" href="#the-commit-phase" id="heading-2075" aria-labelledby="heading-2075">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -441,11 +441,11 @@
 </div>
 </div>
 </br>
-<h3 id="commit-hitch"><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=444">Commit hitch</a> <a class="header-anchor" href="#commit-hitch" id="heading-2031" aria-labelledby="heading-2031">#</a></h3>
+<h3 id="commit-hitch"><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=444">Commit hitch</a> <a class="header-anchor" href="#commit-hitch" id="heading-2076" aria-labelledby="heading-2076">#</a></h3>
 <p>Based on the time taken by the commit, a delay might be necessary to provide an appropriate frame to the render server and then being responsible for the detected hitch.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesCommitPhaseHitch.png" alt="" class="img-fluid"></p>
 </br>
-<h3 id="instruments"><a href="https://developer.apple.com/videos/play/tech-talks/10856/?time=190">Instruments</a> <a class="header-anchor" href="#instruments" id="heading-2032" aria-labelledby="heading-2032">#</a></h3>
+<h3 id="instruments"><a href="https://developer.apple.com/videos/play/tech-talks/10856/?time=190">Instruments</a> <a class="header-anchor" href="#instruments" id="heading-2077" aria-labelledby="heading-2077">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesCommitPhaseInstruments_1.png" alt="" class="img-fluid"></p>
 <p>When hitches frames are detected, the <strong>Animation Hitches</strong> interface is the perfect tool to dive deeper into the proper analysis and find out solutions.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesCommitPhaseInstruments_2.png" alt="" class="img-fluid"></p>
@@ -453,24 +453,24 @@
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesCommitPhaseInstruments_3.png" alt="" class="img-fluid"></p>
 <p>The <strong><a href="https://developer.apple.com/videos/play/tech-talks/10856/?time=331">Time Profiler</a></strong> tool in <code>Instruments</code> can be concomitantly used to look into the code and find out the piece of code responsible for the detected hitches.<br>
 </br></p>
-<h3 id="recommendations"><a href="https://developer.apple.com/videos/play/tech-talks/10856/?time=539">Recommendations</a> <a class="header-anchor" href="#recommendations" id="heading-2033" aria-labelledby="heading-2033">#</a></h3>
+<h3 id="recommendations"><a href="https://developer.apple.com/videos/play/tech-talks/10856/?time=539">Recommendations</a> <a class="header-anchor" href="#recommendations" id="heading-2078" aria-labelledby="heading-2078">#</a></h3>
 <p>Mainly based on the example that showed up the best practice for avoiding commit hitches, some recommendations are emphasized to apply them as often as possible.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesCommitPhaseRecommendations.png" alt="" class="img-fluid"></p>
 <p></br></br></p>
-<h2 id="the-render-phase" class="h2-focus"><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=52">The Render phase</a> <a class="header-anchor" href="#the-render-phase" id="heading-2034" aria-labelledby="heading-2034">#</a></h2>
+<h2 id="the-render-phase" class="h2-focus"><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=52">The Render phase</a> <a class="header-anchor" href="#the-render-phase" id="heading-2079" aria-labelledby="heading-2079">#</a></h2>
 <p>This phase is <strong>divided into two parts</strong> whose goal is to prepare the layer tree as a pipeline of drawings commands to be executed by the GPU to get a frame ready to be displayed.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhase.png" alt="" class="img-fluid"></p>
 </br>
-<h3 id="render-hitch"><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=493">Render hitch</a> <a class="header-anchor" href="#render-hitch" id="heading-2035" aria-labelledby="heading-2035">#</a></h3>
+<h3 id="render-hitch"><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=493">Render hitch</a> <a class="header-anchor" href="#render-hitch" id="heading-2080" aria-labelledby="heading-2080">#</a></h3>
 <p>If both render phases haven't been completed on time to make a frame ready to be displayed, then a render hitch occurs.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseHitch.png" alt="" class="img-fluid"></p>
 </br>
-<h3 id="offscreen-pass"><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=254">Offscreen pass</a> <a class="header-anchor" href="#offscreen-pass" id="heading-2036" aria-labelledby="heading-2036">#</a></h3>
+<h3 id="offscreen-pass"><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=254">Offscreen pass</a> <a class="header-anchor" href="#offscreen-pass" id="heading-2081" aria-labelledby="heading-2081">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesOffscreenPassOverview.png" alt="" class="img-fluid"></p>
 <p>The offscreen pass happens when it's necessary for the GPU to <strong>switch to a different texture</strong> in order to apply a specific effect to a graphic element.<br>
 </br><strong><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=281">Shadows</a></strong>, <strong><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=293">masks</a></strong>, <strong><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=320">rounded rectangles</a></strong> and <strong><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=338">visual effects</a></strong> are the main types for which the offscreen pass is essential to avoid slowing down the rendering and causing render hitches.<br>
 </br></p>
-<h3 id="instruments-xcode"><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=385">Instruments &amp; Xcode</a> <a class="header-anchor" href="#instruments-xcode" id="heading-2037" aria-labelledby="heading-2037">#</a></h3>
+<h3 id="instruments-xcode"><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=385">Instruments &amp; Xcode</a> <a class="header-anchor" href="#instruments-xcode" id="heading-2082" aria-labelledby="heading-2082">#</a></h3>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -545,14 +545,14 @@
 </div>
 </div>
 </br>
-<h3 id="recommendations-2"><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=1067">Recommendations</a> <a class="header-anchor" href="#recommendations-2" id="heading-2038" aria-labelledby="heading-2038">#</a></h3>
+<h3 id="recommendations-2"><a href="https://developer.apple.com/videos/play/tech-talks/10857/?time=1067">Recommendations</a> <a class="header-anchor" href="#recommendations-2" id="heading-2083" aria-labelledby="heading-2083">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseRecommendations_1.png" alt="" class="img-fluid"></p>
 <p><strong>Use the provided APIs</strong> regarding more specifically the masking and the rounded rectangle shapes.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseRecommendations_2.png" alt="" class="img-fluid"></p>
 <p>The <strong>use of <code>maskToBounds</code></strong> is advised for optimizing masking.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesRenderPhaseRecommendations_3.png" alt="" class="img-fluid"></p>
 <p></br></br></p>
-<h2 id="hitch-time-measurement" class="h2-focus"><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=533">Hitch time measurement</a> <a class="header-anchor" href="#hitch-time-measurement" id="heading-2039" aria-labelledby="heading-2039">#</a></h2>
+<h2 id="hitch-time-measurement" class="h2-focus"><a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=533">Hitch time measurement</a> <a class="header-anchor" href="#hitch-time-measurement" id="heading-2084" aria-labelledby="heading-2084">#</a></h2>
 <p>A metric called <strong>hitch time ratio</strong> has been introduced to represent the  amount of milliseconds the device is hitching every second.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-HitchesHitchTimeMeasurement_1.png" alt="" class="img-fluid"></p>
 <p>After a short <a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=602">example</a> to explain how this new metric works, some <a href="https://developer.apple.com/videos/play/tech-talks/10855/?time=644">thresholds</a> are suggested to use it as best as possible.</p>
@@ -643,7 +643,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
     
     
       <script src="/assets/vendors/highlightjs/highlight.js"></script>

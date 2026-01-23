@@ -22,7 +22,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
@@ -244,10 +244,10 @@
 </ul>
 <p>Par la suite, le fait de cliquer sur un titre permet d'ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.<br>
 <br><br></p>
-<h2 id="cas-dusage-0048" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=48">Cas d'usage (00:48)</a> <a class="header-anchor" href="#cas-dusage-0048" id="heading-1846" aria-labelledby="heading-1846">#</a></h2>
+<h2 id="cas-dusage-0048" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=48">Cas d'usage (00:48)</a> <a class="header-anchor" href="#cas-dusage-0048" id="heading-1891" aria-labelledby="heading-1891">#</a></h2>
 <p>Les différentes utilisations possibles de cette fonctionnalité sont décrites dans cette partie.<br>
 <br><br></p>
-<h2 id="par-ou-commencer-0203" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=123">Par où commencer ? (02:03)</a> <a class="header-anchor" href="#par-ou-commencer-0203" id="heading-1847" aria-labelledby="heading-1847">#</a></h2>
+<h2 id="par-ou-commencer-0203" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=123">Par où commencer ? (02:03)</a> <a class="header-anchor" href="#par-ou-commencer-0203" id="heading-1892" aria-labelledby="heading-1892">#</a></h2>
 <p>Pour utiliser une voix synthétisée, il est primordial de <strong>créer</strong> tout d'abord <strong>une instance <code>AVSpeechSynthesizer</code></strong> en s'assurant de son existence programmatique jusqu'à la fin de la vocalisation souhaitée.<br>
 <img src="../../../../images/iOSdev/wwdc18-236-Basics_1.png" alt="" class="img-fluid"><br>
 <br>Il faut ensuite <strong>décrire sous forme de texte ce qui doit être vocalisé</strong> et fournir le résultat obtenu à l'instance précédente.<br>
@@ -256,7 +256,7 @@
 <img src="../../../../images/iOSdev/wwdc18-236-Basics_3.png" alt="" class="img-fluid"><br>
 <br>Cette session devra être explicitement désactivée à la disparition de l'instance <code>AVSpeechSynthesizer</code>.<br>
 <br><br></p>
-<h2 id="avspeechsynthesizerdelegate-0320" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=200">AVSpeechSynthesizerDelegate (03:20)</a> <a class="header-anchor" href="#avspeechsynthesizerdelegate-0320" id="heading-1848" aria-labelledby="heading-1848">#</a></h2>
+<h2 id="avspeechsynthesizerdelegate-0320" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=200">AVSpeechSynthesizerDelegate (03:20)</a> <a class="header-anchor" href="#avspeechsynthesizerdelegate-0320" id="heading-1893" aria-labelledby="heading-1893">#</a></h2>
 <p>Ce protocole comprend un <strong>ensemble de méthodes optionnelles permettant de gérer certains événements du synthétiseur vocal</strong> :</p>
 <ul>
 <li>
@@ -271,25 +271,25 @@
 </ul>
 <p><img src="../../../../images/iOSdev/wwdc18-236-AVSpeechSynthesizerDelegate.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="demonstration-0411" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=251">Démonstration (04:11)</a> <a class="header-anchor" href="#demonstration-0411" id="heading-1849" aria-labelledby="heading-1849">#</a></h2>
+<h2 id="demonstration-0411" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=251">Démonstration (04:11)</a> <a class="header-anchor" href="#demonstration-0411" id="heading-1894" aria-labelledby="heading-1894">#</a></h2>
 <p>Exemple très simple d'une vocalisation synthétisée s'appuyant sur les méthodes du protocole <code>AVSpeechSynthesizerDelegate</code>.<br>
 <img src="../../../../images/iOSdev/wwdc18-236-Demo.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="choix-de-la-voix-synthetisee-0431" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=271">Choix de la voix synthétisée (04:31)</a> <a class="header-anchor" href="#choix-de-la-voix-synthetisee-0431" id="heading-1850" aria-labelledby="heading-1850">#</a></h2>
+<h2 id="choix-de-la-voix-synthetisee-0431" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=271">Choix de la voix synthétisée (04:31)</a> <a class="header-anchor" href="#choix-de-la-voix-synthetisee-0431" id="heading-1895" aria-labelledby="heading-1895">#</a></h2>
 <p>La voix synthétisée par <strong>défaut</strong> est celle du <strong>langage défini dans les préférences du terminal</strong>.<br>
 <img src="../../../../images/iOSdev/wwdc18-236-TheRightVoice_1.png" alt="" class="img-fluid"><br>
 <br>Il est toutefois possible de définir cette dernière en spécifiant le langage désiré ou en utilisant un identifiant propre à une voix téléchargée.<br>
 <img src="../../../../images/iOSdev/wwdc18-236-TheRightVoice_2.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="debit-vocal-0532" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=332">Débit vocal (05:32)</a> <a class="header-anchor" href="#debit-vocal-0532" id="heading-1851" aria-labelledby="heading-1851">#</a></h2>
+<h2 id="debit-vocal-0532" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=332">Débit vocal (05:32)</a> <a class="header-anchor" href="#debit-vocal-0532" id="heading-1896" aria-labelledby="heading-1896">#</a></h2>
 <p>La vitesse du débit vocal peut être modifiée avec des coefficients multiplicateurs plus ou moins importants selon la valeur programmatique implémentée.<br>
 <img src="../../../../images/iOSdev/wwdc18-236-SpeechRate.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="hauteur-tonale-et-volume-0615" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=375">Hauteur tonale et volume (06:15)</a> <a class="header-anchor" href="#hauteur-tonale-et-volume-0615" id="heading-1852" aria-labelledby="heading-1852">#</a></h2>
+<h2 id="hauteur-tonale-et-volume-0615" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=375">Hauteur tonale et volume (06:15)</a> <a class="header-anchor" href="#hauteur-tonale-et-volume-0615" id="heading-1897" aria-labelledby="heading-1897">#</a></h2>
 <p>Ces deux propriétés vocales sont facilement personnalisables en notant bien que l'augmentation du volume de la voix ne modifie absolument pas le volume système.<br>
 <img src="../../../../images/iOSdev/wwdc18-236-PitchAndVolume.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="phonetique-0654" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=414">Phonétique (06:54)</a> <a class="header-anchor" href="#phonetique-0654" id="heading-1853" aria-labelledby="heading-1853">#</a></h2>
+<h2 id="phonetique-0654" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2018/236/?time=414">Phonétique (06:54)</a> <a class="header-anchor" href="#phonetique-0654" id="heading-1898" aria-labelledby="heading-1898">#</a></h2>
 <p>La prononciation de certains mots pouvant parfois prêter à confusion, il est très pratique d'utiliser la phonétique pour s'assurer de la vocalisation appropriée.<br>
 <br>Côté développement, on s'appuie sur les <strong><span lang="en">Attributed Strings</span></strong> pour utiliser l'alphabet phonétique international <em>(<abbr>IPA</abbr>)</em>, ces éléments pouvant aussi servir à spécifier une langue différente uniquement pour une partie de la phrase à vocaliser par exemple.<br>
 <img src="../../../../images/iOSdev/wwdc18-236-IPA.png" alt="" class="img-fluid"><br>
@@ -369,7 +369,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
     
     
       <script src="/assets/vendors/highlightjs/highlight.js"></script>

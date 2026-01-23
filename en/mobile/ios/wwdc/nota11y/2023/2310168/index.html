@@ -22,7 +22,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
@@ -219,7 +219,7 @@
 &quot;Swift parameter packs are a powerful tool to expand what is possible in your generic code while also enabling you to simplify common generic patterns. We'll show you how to <strong>abstract over types as well as the number of arguments in generic code</strong> and simplify common generic patterns to avoid overloads.&quot;<br>
 </br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
 </br></p>
-<h2 id="the-origins" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=51">The origins</a> <a class="header-anchor" href="#the-origins" id="heading-2234" aria-labelledby="heading-2234">#</a></h2>
+<h2 id="the-origins" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=51">The origins</a> <a class="header-anchor" href="#the-origins" id="heading-2286" aria-labelledby="heading-2286">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc23-10168_1.png" alt="" class="img-fluid"></p>
 <p>Regarding a <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=124">client server example</a>, the number of query arguments may be too large according to the needs.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10168_2.png" alt="" class="img-fluid"></p>
@@ -227,7 +227,7 @@
 <p><img src="../../../../../images/iOSdev/wwdc23-10168_3.png" alt="" class="img-fluid"><br>
 This kind of situation is typically what <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10168?time=237">parameter packs</a></strong> are for.<br>
 </br></p>
-<h2 id="the-fundamentals" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=248">The fundamentals</a> <a class="header-anchor" href="#the-fundamentals" id="heading-2235" aria-labelledby="heading-2235">#</a></h2>
+<h2 id="the-fundamentals" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=248">The fundamentals</a> <a class="header-anchor" href="#the-fundamentals" id="heading-2287" aria-labelledby="heading-2287">#</a></h2>
 <p>'A <strong>parameter pack</strong> can hold any quantity of types or values and pack them together to pass them as an argument to a function.'<br>
 <img src="../../../../../images/iOSdev/wwdc23-10168_4.png" alt="" class="img-fluid"></p>
 <p>Handling packs at the <strong>type-level</strong> is a <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=358">major difference</a> with the usual collections thanks to new ways for <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=376">writing code</a>.</p>
@@ -237,7 +237,7 @@ This kind of situation is typically what <strong><a href="https://developer.appl
 <p>...while easily tailoring the <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=655">generic requirements</a> on packs as well.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10168_7.png" alt="" class="img-fluid"><br>
 </br></p>
-<h2 id="implementation" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=732">Implementation</a> <a class="header-anchor" href="#implementation" id="heading-2236" aria-labelledby="heading-2236">#</a></h2>
+<h2 id="implementation" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=732">Implementation</a> <a class="header-anchor" href="#implementation" id="heading-2288" aria-labelledby="heading-2288">#</a></h2>
 <p>It's recommended the <strong>parentheses be used</strong> for wrapping the pattern expression when the results are embedded in a tuple.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10168_8.png" alt="" class="img-fluid"></p>
 <p>Regarding the <a href="#the-origins">initial example</a>, if the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=871">input and output types need to be different</a></strong>, the code writing may be changed to tailor the parameter pack concept while improving the <a href="https://developer.apple.com/videos/play/wwdc2023/10168/?time=1013">flow control</a> with the <code>do-catch</code> statement for <strong>handling errors</strong>.</p>
@@ -312,7 +312,7 @@ This kind of situation is typically what <strong><a href="https://developer.appl
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
     
     
       <script src="/assets/vendors/highlightjs/highlight.js"></script>

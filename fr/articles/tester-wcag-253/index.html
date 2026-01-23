@@ -22,7 +22,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
@@ -196,13 +196,13 @@
             
           
           <div class="mt-4">
-          <h2 id="que-signifie-le-wcag-253" class="h2-focus">Que signifie le WCAG 2.5.3 <a class="header-anchor" href="#que-signifie-le-wcag-253" id="heading-663" aria-labelledby="heading-663">#</a></h2>
-<h3 id="explication-generale">Explication générale <a class="header-anchor" href="#explication-generale" id="heading-664" aria-labelledby="heading-664">#</a></h3>
+          <h2 id="que-signifie-le-wcag-253" class="h2-focus">Que signifie le WCAG 2.5.3 <a class="header-anchor" href="#que-signifie-le-wcag-253" id="heading-419" aria-labelledby="heading-419">#</a></h2>
+<h3 id="explication-generale">Explication générale <a class="header-anchor" href="#explication-generale" id="heading-420" aria-labelledby="heading-420">#</a></h3>
 <p>Le but de <a href="https://www.w3.org/TR/WCAG22/#label-in-name">ce critère</a> est de s'assurer que si un bouton, un lien ou un autre élément d'interface contient du texte visible à l'écran, <a href="/fr/articles/le-nom-accessible-en-html/">son nom accessible</a> doit contenir au moins le même texte que celui affiché.<br>
 Cela pour garantir que les utilisateurs <a href="/fr/solutions-assistance/">d'aides techniques</a> soient capables de comprendre et d'interagir avec le composant. En effet les aides techniques s'appuient sur le nom accessible des composants. Par exemple, un utilisateur de reconnaissance vocale pourra cliquer sur un bouton simplement en prononçant son nom accessible.</p>
 <p>Il n'est pas demandé que le texte visible et le nom accessible soient identiques, mais le texte visible doit être présent dans le nom accessible, de préférence en premier.</p>
-<h3 id="exemple-concret">Exemple concret <a class="header-anchor" href="#exemple-concret" id="heading-665" aria-labelledby="heading-665">#</a></h3>
-<h4 id="nom-accessible">Nom accessible <a class="header-anchor" href="#nom-accessible" id="heading-666" aria-labelledby="heading-666">#</a></h4>
+<h3 id="exemple-concret">Exemple concret <a class="header-anchor" href="#exemple-concret" id="heading-421" aria-labelledby="heading-421">#</a></h3>
+<h4 id="nom-accessible">Nom accessible <a class="header-anchor" href="#nom-accessible" id="heading-422" aria-labelledby="heading-422">#</a></h4>
 <p>Prenons l'exemple d'un utilisateur navigant à l'aide d'un logiciel de reconnaissance vocale souhaitant saisir et soumettre un formulaire.<br>
 <img src="../images/tester-wcag-253/button_send.png" alt="bouton avec le texte envoyer" class="img-fluid"></p>
 <pre><code class="html">
@@ -217,7 +217,7 @@ Cela pour garantir que les utilisateurs <a href="/fr/solutions-assistance/">d'ai
     &lt;img src="envoyer.png" alt="Envoyer"&gt;
 &lt;/button&gt;
 </code></pre>
-<h4 id="masquage-accessible">Masquage accessible <a class="header-anchor" href="#masquage-accessible" id="heading-667" aria-labelledby="heading-667">#</a></h4>
+<h4 id="masquage-accessible">Masquage accessible <a class="header-anchor" href="#masquage-accessible" id="heading-423" aria-labelledby="heading-423">#</a></h4>
 <p>Il faut faire attention lorsqu'on utilise du <a href="/fr/web/exemples-de-composants/masquage-accessible/">masquage accessible</a>. Celui-ci ne doit pas être placé au milieu d'un intitulé affiché visuellement.</p>
 <p>Sinon il sera impossible de faire une corrélation entre le nom accessible et le texte affiché.</p>
 <p>Exemple d'erreur :</p>
@@ -225,15 +225,15 @@ Cela pour garantir que les utilisateurs <a href="/fr/solutions-assistance/">d'ai
 &lt;a href="www.orange.com" target="_blank"&gt; Ouvrir &lt;span class="visually-hidden"&gt;dans une nouvelle fenêtre &lt;/span&gt; le site d'orange &lt;/a&gt;
 </code></pre>
 <p>Si on prononce &quot;Ouvrir le site d'orange&quot;, le logiciel de reconnaissance vocale ne trouvera pas cet élément. En revanche, si l'on prononce &quot;Ouvrir dans une nouvelle fenêtre le site d'orange&quot; le lien sera activé, puisque c'est son nom accessible.</p>
-<h2 id="comment-le-tester" class="h2-focus">Comment le tester <a class="header-anchor" href="#comment-le-tester" id="heading-668" aria-labelledby="heading-668">#</a></h2>
-<h3 id="lecteur-decran">Lecteur d'écran <a class="header-anchor" href="#lecteur-decran" id="heading-669" aria-labelledby="heading-669">#</a></h3>
+<h2 id="comment-le-tester" class="h2-focus">Comment le tester <a class="header-anchor" href="#comment-le-tester" id="heading-424" aria-labelledby="heading-424">#</a></h2>
+<h3 id="lecteur-decran">Lecteur d'écran <a class="header-anchor" href="#lecteur-decran" id="heading-425" aria-labelledby="heading-425">#</a></h3>
 <p>Le lecteur d'écran vocalise les propriétés de l'élément sur lequel vous placez votre focus.<br>
 En particulier, les caractéristiques suivantes de l'élément : sa fonction (lien, bouton, texte ...), son statut et son nom accessible. Si le nom accessible que vous entendez ne correspond pas à ce qui est textuellement visible, alors le critère est considéré comme non-conforme.</p>
 <p>Vous pouvez utiliser la visionneuse de paroles du lecteur d'écran afin de retranscrire de manière textuelle les caractéristiques d'un élément. Il est donc possible de comparer le nom accessible sous forme textuelle lu par le lecteur d'écran avec le texte affiché sur le composant.</p>
 <p><img src="../images/tester-wcag-253/nvda_visionneuse.png" alt="Exemple de visionneuse de parole" class="img-fluid"></p>
-<h3 id="inspecteur-de-commande">Inspecteur de commande <a class="header-anchor" href="#inspecteur-de-commande" id="heading-670" aria-labelledby="heading-670">#</a></h3>
+<h3 id="inspecteur-de-commande">Inspecteur de commande <a class="header-anchor" href="#inspecteur-de-commande" id="heading-426" aria-labelledby="heading-426">#</a></h3>
 <p>Le moyen de vérifier le critère avec l'inspecteur de commande dépend du navigateur utilisé.</p>
-<h4 id="avec-firefox">Avec Firefox <a class="header-anchor" href="#avec-firefox" id="heading-671" aria-labelledby="heading-671">#</a></h4>
+<h4 id="avec-firefox">Avec Firefox <a class="header-anchor" href="#avec-firefox" id="heading-427" aria-labelledby="heading-427">#</a></h4>
 <ol>
   <li>Accéder à l'inspecteur de commande (<kbd>Ctrl+ Maj. + i</kbd>)</li>
   <li>Sélectionner l'onglet accessibilité</li>
@@ -241,7 +241,7 @@ En particulier, les caractéristiques suivantes de l'élément : sa fonction (li
   <li>Regarder la partie propriétés, si l'attribut <span lang="en">name</span> contient au moins le texte qui est affiché le critère est conforme</li> 
 </ol>
 <p><img src="../images/tester-wcag-253/FF_name.png" alt="Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert" class="img-fluid"></p>
-<h4 id="avec-chrome-ou-bien-edge-chronium">Avec Chrome ou bien Edge Chronium <a class="header-anchor" href="#avec-chrome-ou-bien-edge-chronium" id="heading-672" aria-labelledby="heading-672">#</a></h4>
+<h4 id="avec-chrome-ou-bien-edge-chronium">Avec Chrome ou bien Edge Chronium <a class="header-anchor" href="#avec-chrome-ou-bien-edge-chronium" id="heading-428" aria-labelledby="heading-428">#</a></h4>
 <ol>
   <li>Accéder à l'inspecteur de commande (<kbd>Ctrl+ Maj. + i</kbd>)</li>
   <li>Sélectionner l'onglet Éléments</li>
@@ -334,7 +334,7 @@ En particulier, les caractéristiques suivantes de l'élément : sa fonction (li
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
     
     
       <script src="/assets/vendors/highlightjs/highlight.js"></script>

@@ -22,7 +22,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
@@ -221,7 +221,7 @@
 <p>&quot;Live Activities allow your app to display live information in key system locations on iOS and iPadOS. Learn the best way to <strong>create graphically rich layouts</strong> that update seamlessly on the Lock Screen, in StandBy, and in the Dynamic Island. <strong>Incorporate interactivity and animation</strong> to help people stay in touch with live updating events from your app as they navigate outside of your app.&quot;</p>
 <p></br>Hereafter, the underlined elements <strong>lead directly to the playback of the WWDC video</strong> at the appropriate moment.<br>
 </br></p>
-<h2 id="overview" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=41">Overview</a> <a class="header-anchor" href="#overview" id="heading-2333" aria-labelledby="heading-2333">#</a></h2>
+<h2 id="overview" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=41">Overview</a> <a class="header-anchor" href="#overview" id="heading-2415" aria-labelledby="heading-2415">#</a></h2>
 <p><strong>Live Activities</strong> are the best way to follow an event or a task progression in real time instead of using a <a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=41">huge number of notifications</a> to reach the same goal.<br>
 <img src="../../../../../images/iOSdev/wwdc23-LiveActivities_1.png" alt="" class="img-fluid"></p>
 <p>They can be displayed through the <strong>Dynamic Island</strong> available after a certain <a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=66">model of iPhone</a> (the compact, minimal and expanded presentations are explained in the <a href="#build">BuildUI</a> section).</p>
@@ -231,8 +231,8 @@
 <p>Based on the <strong>Activity framework</strong> used by <code>SwiftUI</code> and <code>WidgetKit</code>, the <code>Live Activities</code> rely on some <a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=197">best practices</a> to be followed.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_4.png" alt="" class="img-fluid"></p>
 </br>
-<h2 id="design" class="h2-focus">Design <a class="header-anchor" href="#design" id="heading-2334" aria-labelledby="heading-2334">#</a></h2>
-<h3 id="lock-screen"><a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=78">Lock Screen</a> <a class="header-anchor" href="#lock-screen" id="heading-2335" aria-labelledby="heading-2335">#</a></h3>
+<h2 id="design" class="h2-focus">Design <a class="header-anchor" href="#design" id="heading-2416" aria-labelledby="heading-2416">#</a></h2>
+<h3 id="lock-screen"><a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=78">Lock Screen</a> <a class="header-anchor" href="#lock-screen" id="heading-2417" aria-labelledby="heading-2417">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_11.png" alt="" class="img-fluid"></p>
 <p>Located above the usual notifications on the lock screen, the <code>Live Activities</code> should have a dedicated interface so as to be undoubtedly identified.<br>
 </br></p>
@@ -285,7 +285,7 @@
 </div>
 </br>
 </br>
-<h3 id="standby"><a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=364">Standby</a> <a class="header-anchor" href="#standby" id="heading-2336" aria-labelledby="heading-2336">#</a></h3>
+<h3 id="standby"><a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=364">Standby</a> <a class="header-anchor" href="#standby" id="heading-2418" aria-labelledby="heading-2418">#</a></h3>
 <p>This <code>iOS 17</code> <strong><a href="https://developer.apple.com/videos/play/wwdc2023/101/?time=1916">new feature</a></strong> has an <strong>2X scale-up</strong> process regarding the widget size so as to make the most of the screen size.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_16.png" alt="" class="img-fluid"></p>
 <p>It automatically <strong>tailors the background color</strong> to the <code>Live Activity</code>'s but <a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=387">special attention</a> must be paid to the highlighted graphic elements that divide parts in the widget.</p>
@@ -293,7 +293,7 @@
 <p>Besides checking the color contrast for accessibility, it's vital to inspect the widget's in order to have the <a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=442">best rendering</a> that's offered by the <strong>night mode</strong> feature.<br>
 <img src="../../../../../images/iOSdev/wwdc23-LiveActivities_18.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="dynamic-island"><a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=463">Dynamic Island</a> <a class="header-anchor" href="#dynamic-island" id="heading-2337" aria-labelledby="heading-2337">#</a></h3>
+<h3 id="dynamic-island"><a href="https://developer.apple.com/videos/play/wwdc2023/10194?time=463">Dynamic Island</a> <a class="header-anchor" href="#dynamic-island" id="heading-2419" aria-labelledby="heading-2419">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_19.png" alt="" class="img-fluid"></p>
 <p><a href="https://developer.apple.com/videos/play/wwdc2023/10194/?time=537">Smoothness and fluidity</a> are the main keywords that go with the <code>Dynamic Island</code> for outlining the essential information through animations.<br>
 <img src="../../../../../images/iOSdev/wwdc23-LiveActivities_20.png" alt="" class="img-fluid"></p>
@@ -353,7 +353,7 @@ For this purpose, it's highly recommended to <strong>avoid useless spaces</stron
 </div>
 </br>
 </br>
-<h2 id="lifecycle" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=305">Lifecycle</a> <a class="header-anchor" href="#lifecycle" id="heading-2338" aria-labelledby="heading-2338">#</a></h2>
+<h2 id="lifecycle" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=305">Lifecycle</a> <a class="header-anchor" href="#lifecycle" id="heading-2420" aria-labelledby="heading-2420">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -432,7 +432,7 @@ For this purpose, it's highly recommended to <strong>avoid useless spaces</stron
 </br>
 </br>
 <p><a name="build"></a></p>
-<h2 id="build-ui" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=647">Build UI</a> <a class="header-anchor" href="#build-ui" id="heading-2339" aria-labelledby="heading-2339">#</a></h2>
+<h2 id="build-ui" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10184/?time=647">Build UI</a> <a class="header-anchor" href="#build-ui" id="heading-2421" aria-labelledby="heading-2421">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -477,8 +477,8 @@ For this purpose, it's highly recommended to <strong>avoid useless spaces</stron
 </br>
 </br>
 </br>
-<h2 id="notifications" class="h2-focus">Notifications <a class="header-anchor" href="#notifications" id="heading-2340" aria-labelledby="heading-2340">#</a></h2>
-<h3 id="preparations"><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=134">Preparations</a> <a class="header-anchor" href="#preparations" id="heading-2341" aria-labelledby="heading-2341">#</a></h3>
+<h2 id="notifications" class="h2-focus">Notifications <a class="header-anchor" href="#notifications" id="heading-2422" aria-labelledby="heading-2422">#</a></h2>
+<h3 id="preparations"><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=134">Preparations</a> <a class="header-anchor" href="#preparations" id="heading-2423" aria-labelledby="heading-2423">#</a></h3>
 <p>The basic understanding of what the interactions between an app, its content server and the <strong>A</strong>pple <strong>P</strong>ush <strong>N</strong>otification <strong>S</strong>ervice are is of a great help for integrating the push updates.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_29.png" alt="" class="img-fluid"></p>
 <p>Configuring <code>Xcode</code> and implementing the proper code for handling push tokens are madatory milestones.</p>
@@ -516,7 +516,7 @@ For this purpose, it's highly recommended to <strong>avoid useless spaces</stron
 </br>
 <p>Due to the <strong>push token uniqueness for each activity</strong>, it's crucial to be aware of the appropriate one when <a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=335">dealing with the updates</a>.<br>
 <img src="../../../../../images/iOSdev/wwdc23-LiveActivities_32.png" alt="" class="img-fluid"></p>
-<h3 id="first-push-update"><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=364">First push update</a> <a class="header-anchor" href="#first-push-update" id="heading-2342" aria-labelledby="heading-2342">#</a></h3>
+<h3 id="first-push-update"><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=364">First push update</a> <a class="header-anchor" href="#first-push-update" id="heading-2424" aria-labelledby="heading-2424">#</a></h3>
 <p>Sending a push update relies on an <code>HTTP</code> request to <code>APNs</code>.<br>
 <img src="../../../../../images/iOSdev/wwdc23-LiveActivities_33.png" alt="" class="img-fluid"></p>
 <ul class="nav nav-tabs" role="tablist">
@@ -553,9 +553,9 @@ For this purpose, it's highly recommended to <strong>avoid useless spaces</stron
 </br>
 <p>For <a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=502">testing</a>, using <strong>command lines</strong> may be the quickest way to achieve one's goal through executing a <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=565">curl command</a></strong> for sending the <code>APNs</code> request.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_37.png" alt="" class="img-fluid"></p>
-<h3 id="debugging-updates-failures"><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=619">Debugging updates failures</a> <a class="header-anchor" href="#debugging-updates-failures" id="heading-2343" aria-labelledby="heading-2343">#</a></h3>
+<h3 id="debugging-updates-failures"><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=619">Debugging updates failures</a> <a class="header-anchor" href="#debugging-updates-failures" id="heading-2425" aria-labelledby="heading-2425">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_35.png" alt="" class="img-fluid"></p>
-<h3 id="priorities"><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=672">Priorities</a> <a class="header-anchor" href="#priorities" id="heading-2344" aria-labelledby="heading-2344">#</a></h3>
+<h3 id="priorities"><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=672">Priorities</a> <a class="header-anchor" href="#priorities" id="heading-2426" aria-labelledby="heading-2426">#</a></h3>
 <p>Priorities have different purposes and their characteristics may impact the way they will be introduced in an app.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_38.png" alt="" class="img-fluid"></p>
 <p>When <a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=775">frequent updates</a> are necessary, useful details have to be taken into account for avoiding the cons of such events.</p>
@@ -563,11 +563,11 @@ For this purpose, it's highly recommended to <strong>avoid useless spaces</stron
 <p>Even though enabled, the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=810">user has still control</a></strong> over the updates frequency of which the server needs to be aware.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_40.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="alerts"><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=849">Alerts</a> <a class="header-anchor" href="#alerts" id="heading-2345" aria-labelledby="heading-2345">#</a></h3>
+<h3 id="alerts"><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=849">Alerts</a> <a class="header-anchor" href="#alerts" id="heading-2427" aria-labelledby="heading-2427">#</a></h3>
 <p>In order to point out some elements or events for capturing the user's attention, the <code>APNs</code> payload is added a <a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=861">complementary object</a> for which <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=896">localization</a></strong> and <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=919">sound customization</a></strong> are possible.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-LiveActivities_41.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="miscellaneous">Miscellaneous <a class="header-anchor" href="#miscellaneous" id="heading-2346" aria-labelledby="heading-2346">#</a></h3>
+<h3 id="miscellaneous">Miscellaneous <a class="header-anchor" href="#miscellaneous" id="heading-2428" aria-labelledby="heading-2428">#</a></h3>
 <p><strong>Ending a <code>Live Activity</code></strong> is triggered thanks to a <a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=946">new event value</a> in the <code>APNs</code> payload.<br>
 <img src="../../../../../images/iOSdev/wwdc23-LiveActivities_42.png" alt="" class="img-fluid"></p>
 <p><strong>Informing</strong> the user of <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=987">outdated updates</a></strong> can be displayed through an <a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=1004">added stale date field</a> in the <code>APNs</code> payload and a <a href="https://developer.apple.com/videos/play/wwdc2023/10185/?time=996">dedicated property</a> in the <code>ActivityConfiguration</code>.</p>
@@ -659,7 +659,7 @@ Besides, the most important <code>Live Activity</code> is also displayed in the 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
     
     
       <script src="/assets/vendors/highlightjs/highlight.js"></script>

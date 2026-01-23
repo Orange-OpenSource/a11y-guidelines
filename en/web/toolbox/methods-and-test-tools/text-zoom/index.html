@@ -22,7 +22,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="stylesheet" href="/assets/style.css">
@@ -257,12 +257,12 @@
           
           <div class="mt-4">
           <h1>Text size enlargement</h1>
-<h2 id="how-to-test" class="h2-focus">How to test? <a class="header-anchor" href="#how-to-test" id="heading-1632" aria-labelledby="heading-1632">#</a></h2>
+<h2 id="how-to-test" class="h2-focus">How to test? <a class="header-anchor" href="#how-to-test" id="heading-1677" aria-labelledby="heading-1677">#</a></h2>
 <p>One of the accessibility requirements is being able to enlarge the text up to 200% —only the text size, not the entire page. Actually when you use the browser default zoom it enlarges the entire page adding vertical and horizontal scrollbars. For example, reading a blog could be very tedious because you would have to scroll all the time to access the content.</p>
 <p>Increasing only the text size does not necessarily add a horizontal scrollbar. You must verify that at this zoom level (200%), the text remains readable. No text must be truncated or superposed. Information must be accessible even if the presentation can be somewhat altered.</p>
 <p>To enlarge only the text size, tick the “Zoom Text Only” option in Firefox. To enlarge the text by 200% press <kbd>Ctrl +</kbd> four times.</p>
 <p><img src="../../../images/zoom-firefox.png" alt="screenshot of the “Zoom text only” option, in Firefox" class="img-fluid"></p>
-<h2 id="what-implications-for-development" class="h2-focus">What implications for development? <a class="header-anchor" href="#what-implications-for-development" id="heading-1633" aria-labelledby="heading-1633">#</a></h2>
+<h2 id="what-implications-for-development" class="h2-focus">What implications for development? <a class="header-anchor" href="#what-implications-for-development" id="heading-1678" aria-labelledby="heading-1678">#</a></h2>
 <p>If your page is not displayed correctly when you enlarge the text, it might be because you use the pixel as length unit for text size and container size (height or width of a <code>div</code>...).<br>
 To fix display issues when the zoom is set to 200%, it is not necessary to remove all pixels units from all your code but correct only the unreadable content (replacing <code>px</code> by <code>%</code>, <code>em</code> or <code>rem</code>).</p>
 <p><strong>Example with 100% zoom</strong><br>
@@ -332,7 +332,7 @@ The height of the elements containing the text has been set with a relative unit
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
     
     
     <script>

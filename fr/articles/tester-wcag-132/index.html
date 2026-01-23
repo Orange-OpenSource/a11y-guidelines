@@ -22,7 +22,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
@@ -196,18 +196,18 @@
             
           
           <div class="mt-4">
-          <h2 id="explication-generale" class="h2-focus">Explication générale <a class="header-anchor" href="#explication-generale" id="heading-707" aria-labelledby="heading-707">#</a></h2>
+          <h2 id="explication-generale" class="h2-focus">Explication générale <a class="header-anchor" href="#explication-generale" id="heading-155" aria-labelledby="heading-155">#</a></h2>
 <p>Le but du <a href="https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence">critère WCAG 1.3.2</a> est de s'assurer que, si l'ordre du contenu est important, alors, celui-ci doit être préservé quelle que soit la manière dont il est présenté à l'utilisateur. Par exemple, lorsque le CSS est désactivé ou lors de l'utilisation d’un lecteur d'écran.</p>
 <p>L'ordre d'un contenu est <strong>important</strong> dès lors que l'ordre du contenu ne peut pas être modifié sans en affecter sa signification.<br>
 Par exemple, pour une liste ordonnée ou un tableau, l'ordre du contenu est important, en revanche pour une liste non-ordonnée, l'ordre de lecture n’a pas d’impact sur la compréhension de l'utilisateur.</p>
 <p>Une page WEB peut être composée de plusieurs sections indépendantes ayant des rôles spécifiques. Les positions relatives d'une section de navigation et une section principale de page, n'affectent généralement pas la compréhension du contenu de la page. Que la navigation soit, en haut ou à gauche de l’écran, ne gêne pas la compréhension, même si un ordre de lecture peut être imposé à l’intérieur d’une de ces sections.<br>
 Il peut donc exister plusieurs ordres de lecture sur une page WEB pour satisfaire ce critère.</p>
-<h2 id="ce-quil-ne-faut-pas-faire" class="h2-focus">Ce qu'il ne faut pas faire <a class="header-anchor" href="#ce-quil-ne-faut-pas-faire" id="heading-708" aria-labelledby="heading-708">#</a></h2>
-<h3 id="utiliser-des-espaces-blancs-pour-formater-du-texte-brut">Utiliser des espaces blancs pour formater du texte brut <a class="header-anchor" href="#utiliser-des-espaces-blancs-pour-formater-du-texte-brut" id="heading-709" aria-labelledby="heading-709">#</a></h3>
+<h2 id="ce-quil-ne-faut-pas-faire" class="h2-focus">Ce qu'il ne faut pas faire <a class="header-anchor" href="#ce-quil-ne-faut-pas-faire" id="heading-156" aria-labelledby="heading-156">#</a></h2>
+<h3 id="utiliser-des-espaces-blancs-pour-formater-du-texte-brut">Utiliser des espaces blancs pour formater du texte brut <a class="header-anchor" href="#utiliser-des-espaces-blancs-pour-formater-du-texte-brut" id="heading-157" aria-labelledby="heading-157">#</a></h3>
 <p>Pour présenter du contenu, il est important de ne pas utiliser des caractères d'espacement, comme les espaces, la tabulation, le saut de ligne ou le retour chariot.<br>
 Dans certains cas, ces caractères sont utilisés pour formater des tableaux, ou reproduire des colonnes de données dans un contenu textuel. Cette méthode est proscrite, car les technologies d'assistances ne se verront pas présenter les informations dans un ordre de lecture logique, les informations retournées à certains utilisateurs seront donc incompréhensibles.</p>
 <p>Ci-dessous, deux exemples qui ne sont pas valides et donc pas compréhensible avec un lecteur d'écran.</p>
-<h4 id="exemple-de-caractere-despacement-pour-formater-un-tableau">Exemple de caractère d'espacement pour formater un tableau <a class="header-anchor" href="#exemple-de-caractere-despacement-pour-formater-un-tableau" id="heading-710" aria-labelledby="heading-710">#</a></h4>
+<h4 id="exemple-de-caractere-despacement-pour-formater-un-tableau">Exemple de caractère d'espacement pour formater un tableau <a class="header-anchor" href="#exemple-de-caractere-despacement-pour-formater-un-tableau" id="heading-158" aria-labelledby="heading-158">#</a></h4>
 <pre class="border border-light">
 
 Horaires de travail avec Salle de classe
@@ -224,7 +224,7 @@ Horaires de travail avec Salle de classe
 </pre>
 <p>On remarque, que la présentation ci-dessus est un formatage uniquement visuel, mais aucune relation sémantique ne permet de représenter les relations tabulaires.<br>
 Les technologies d'assistance vont lire le contenu au fur et à mesure qu'il apparait dans le code, donc, dans un ordre illogique et incompréhensible. Ici, la solution serait d'utiliser un tableau ou présenter les informations de manière linéaire.</p>
-<h4 id="exemple-de-caractere-despacement-pour-separer-du-contenu-en-deux-colonnes">Exemple de caractère d'espacement pour séparer du contenu en deux colonnes <a class="header-anchor" href="#exemple-de-caractere-despacement-pour-separer-du-contenu-en-deux-colonnes" id="heading-711" aria-labelledby="heading-711">#</a></h4>
+<h4 id="exemple-de-caractere-despacement-pour-separer-du-contenu-en-deux-colonnes">Exemple de caractère d'espacement pour séparer du contenu en deux colonnes <a class="header-anchor" href="#exemple-de-caractere-despacement-pour-separer-du-contenu-en-deux-colonnes" id="heading-159" aria-labelledby="heading-159">#</a></h4>
 <p class="border border-light">
 L’accessibilité numérique vise à rendre possible &emsp;&emsp;&emsp;il ne s’agit pas de démultiplier les <br/>
 l’accès à l’information numérique quelle que soit &emsp;&emsp;&emsp;supports de l’information, mais de<br/>
@@ -235,11 +235,11 @@ et les documents Word et PDF, mais également la &emsp;&emsp;&emsp; outils de co
 télévision numérique ou les téléphones mobiles. &emsp;&emsp;&emsp;
 </p>
 <p>Le paragraphe ci-dessus n'est pas conforme, des caractères d'espacement sont utilisés pour séparer le texte en deux colonnes. Les technologies d'assistance liront le texte ligne par ligne ce qui serait un ordre de lecture illogique.</p>
-<h3 id="utiliser-un-tableau-de-mise-en-page">Utiliser un tableau de mise en page <a class="header-anchor" href="#utiliser-un-tableau-de-mise-en-page" id="heading-712" aria-labelledby="heading-712">#</a></h3>
+<h3 id="utiliser-un-tableau-de-mise-en-page">Utiliser un tableau de mise en page <a class="header-anchor" href="#utiliser-un-tableau-de-mise-en-page" id="heading-160" aria-labelledby="heading-160">#</a></h3>
 <p>Même si les WCAG n'interdisent pas l'utilisation des tableaux de mise en page, il est recommandé d'utiliser la mise en page en CSS afin de conserver une sémantique au contenu. Si un tableau de mise en page est utilisé, il est important que le contenu ait un sens lorsqu'il est linéarisé.</p>
 <p>Les tableaux présentent le contenu de manière horizontale et verticale, cependant une technologie d'assistance lit ce contenu de manière linéaire, le tableau est lu de haut en bas en lisant l'intégralité de la ligne avant de passer à la suivante.</p>
 <p>C'est pour cela qu'il faut faire attention lorsqu'on utilise un tableau de mise en page, à bien vérifier que le contenu soit également compréhensible avec un lecteur d'écran.</p>
-<h4 id="exemple-dun-tableau-non-valide">Exemple d'un tableau non-valide <a class="header-anchor" href="#exemple-dun-tableau-non-valide" id="heading-713" aria-labelledby="heading-713">#</a></h4>
+<h4 id="exemple-dun-tableau-non-valide">Exemple d'un tableau non-valide <a class="header-anchor" href="#exemple-dun-tableau-non-valide" id="heading-161" aria-labelledby="heading-161">#</a></h4>
 <table role="presentation" class="m-2 border border-light">
   <tr>
     <td><a href="#">Accueil <span class="visually-hidden">(exemple)</span></a></td>
@@ -258,7 +258,7 @@ télévision numérique ou les téléphones mobiles. &emsp;&emsp;&emsp;
 </table>
 <p>Le tableau ci-dessus permet d'afficher un menu, avec le logo sur le côté.</p>
 <p>Le problème est qu'au lecteur d'écran l'ordre de lecture est différent de celui affiché, car au lieu d'énoncer tous les liens du menu, l'image sera vocalisée au milieu de ceux-ci.</p>
-<h3 id="utiliser-du-css-pour-positionner-linformation">Utiliser du CSS pour positionner l'information <a class="header-anchor" href="#utiliser-du-css-pour-positionner-linformation" id="heading-714" aria-labelledby="heading-714">#</a></h3>
+<h3 id="utiliser-du-css-pour-positionner-linformation">Utiliser du CSS pour positionner l'information <a class="header-anchor" href="#utiliser-du-css-pour-positionner-linformation" id="heading-162" aria-labelledby="heading-162">#</a></h3>
 <p>Pour positionner du contenu dans un ordre de lecture, il est recommandé d'utiliser le balisage sémantique, plutôt que les propriétés de positionnement du CSS. Ce dernier peut engendrer des erreurs, car le contenu peut s'afficher / être interprété dans un ordre différent de celui du code source.</p>
 <p>Donc, si l'ordre de lecture est important, prudence lors de l'utilisation des CSS Flexbox, grid et position à ne pas modifier l'ordre du contenu visuellement par rapport à sa position dans le code.</p>
 <ul>
@@ -267,7 +267,7 @@ télévision numérique ou les téléphones mobiles. &emsp;&emsp;&emsp;
   <li>Avec les propriétés de positionnement, évitez de détacher l'ordre visuel des éléments de l'ordre dans lequel ils apparaissent dans le DOM</li>
 </ul>
 <p>Si un utilisateur désactive le CSS, ou utilise un lecteur d'écran la restitution de l'information ne sera plus dans le bon ordre.</p>
-<h4 id="exemple-dun-menu-positionner-en-css">Exemple d'un menu positionner en CSS <a class="header-anchor" href="#exemple-dun-menu-positionner-en-css" id="heading-715" aria-labelledby="heading-715">#</a></h4>
+<h4 id="exemple-dun-menu-positionner-en-css">Exemple d'un menu positionner en CSS <a class="header-anchor" href="#exemple-dun-menu-positionner-en-css" id="heading-163" aria-labelledby="heading-163">#</a></h4>
 <p>La mise en page ci-dessous a été créée avec du CSS, si vous désactivez le CSS, vous allez remarquer que le sens de lecture sera différent de celui affiché.</p>
 <div class="border border-light position-relative mb-3" style="width: 320px;height:180px">      
      <span class="position-absolute top-0 start-0"><strong>Sports</strong></span>       
@@ -278,7 +278,7 @@ télévision numérique ou les téléphones mobiles. &emsp;&emsp;&emsp;
      <span class="position-absolute top-50 end-0">Vêtements</span>       
      <span class="position-absolute end-0" style="top:75%!important">Accessoires</span>
 </div>
-<h4 id="exemple-donglet-ou-le-contenu-est-positionne-avant">Exemple d'onglet où le contenu est positionné avant <a class="header-anchor" href="#exemple-donglet-ou-le-contenu-est-positionne-avant" id="heading-716" aria-labelledby="heading-716">#</a></h4>
+<h4 id="exemple-donglet-ou-le-contenu-est-positionne-avant">Exemple d'onglet où le contenu est positionné avant <a class="header-anchor" href="#exemple-donglet-ou-le-contenu-est-positionne-avant" id="heading-164" aria-labelledby="heading-164">#</a></h4>
 <p>Dans l'exemple ci-dessous, des onglets et leur contenu sont affichés et positionné avec flexbox.</p>
 <div class="d-flex flex-column mb-3">
   <div class="tab-content order-2" id="myTabContent">
@@ -377,7 +377,7 @@ En désactivant le CSS ou au lecteur d'écran, on constate que les onglets sont 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
     
     
       <script src="/assets/vendors/highlightjs/highlight.js"></script>

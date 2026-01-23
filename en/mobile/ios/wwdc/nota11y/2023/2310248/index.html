@@ -22,7 +22,7 @@
     <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
     <link rel="icon" href="/assets/images/favicon.ico">
     
-    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
@@ -219,31 +219,31 @@
 <p>&quot;User interface elements often mimic real-world interactions, including real-time responses. Apps with a noticeable <strong>delay in user interaction</strong> — a hang — can break that illusion and create frustration. We'll show you how to <strong>use Instruments</strong> to analyze, understand, and fix hangs in your apps on all Apple platforms. Discover how you can efficiently <strong>navigate an Instruments trace document</strong>, <strong>interpret trace data</strong>, and record additional profiling data to better understand your specific hang.&quot;</p>
 <p></br>Hereafter, the underlined elements <strong>lead directly to the playback of the WWDC video</strong> at the appropriate moment.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10248_22.png" alt="" class="img-fluid"></p>
-<h2 id="overview" class="h2-focus">Overview <a class="header-anchor" href="#overview" id="heading-2277" aria-labelledby="heading-2277">#</a></h2>
+<h2 id="overview" class="h2-focus">Overview <a class="header-anchor" href="#overview" id="heading-2329" aria-labelledby="heading-2329">#</a></h2>
 <p>A <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=284">hang</a></strong> is a <strong>delay in the user interaction</strong> that might give rise to an unpleasant experience depending on the blocking duration.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10248_2.png" alt="" class="img-fluid"></p>
 <p><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=92">Finding hangs</a> is based on many items to be aware of in order to save some time for finding out the appropriate solution.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10248_1.png" alt="" class="img-fluid"></p>
 <p>A <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=404">deep comprehension</a> of the <strong>event handling</strong> and the <strong>rendering loop</strong> is crucial to understand why hangs may happen.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10248_3.png" alt="" class="img-fluid"></p>
-<h2 id="unresponsiveness" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=689">Unresponsiveness</a> <a class="header-anchor" href="#unresponsiveness" id="heading-2278" aria-labelledby="heading-2278">#</a></h2>
+<h2 id="unresponsiveness" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=689">Unresponsiveness</a> <a class="header-anchor" href="#unresponsiveness" id="heading-2330" aria-labelledby="heading-2330">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc23-10248_5.png" alt="" class="img-fluid"></p>
 <p>Understand the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2477">relationship</a> between the potential items</strong> in an unresponsive main thread is vital to avoid misinterpretation in the hang analysis.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10248_20.png" alt="" class="img-fluid"></p>
-<h3 id="busy-main-thread"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=858">Busy Main Thread</a> <a class="header-anchor" href="#busy-main-thread" id="heading-2279" aria-labelledby="heading-2279">#</a></h3>
+<h3 id="busy-main-thread"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=858">Busy Main Thread</a> <a class="header-anchor" href="#busy-main-thread" id="heading-2331" aria-labelledby="heading-2331">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc23-10248_8.png" alt="" class="img-fluid"></p>
-<h4 id="excessive-iteration"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1100">Excessive iteration</a> <a class="header-anchor" href="#excessive-iteration" id="heading-2280" aria-labelledby="heading-2280">#</a></h4>
+<h4 id="excessive-iteration"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1100">Excessive iteration</a> <a class="header-anchor" href="#excessive-iteration" id="heading-2332" aria-labelledby="heading-2332">#</a></h4>
 <p><img src="../../../../../images/iOSdev/wwdc23-10248_11.png" alt="" class="img-fluid"></p>
 <p>When the source of the problem may be identified, it's important to <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1166">go straight to the code</a> so as to find out its implementation.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10248_12.png" alt="" class="img-fluid"></p>
 <p>In the exposed example, the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1195">LazyVGrid</a></strong> introduced during the <code>WWDC</code> <code>2020</code> is responsible for the problem whose solution provides an immediate and smooth <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1270">rendering</a> after implementation.<br>
 </br></p>
-<h4 id="significant-duration"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1317">Significant duration</a> <a class="header-anchor" href="#significant-duration" id="heading-2281" aria-labelledby="heading-2281">#</a></h4>
+<h4 id="significant-duration"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1317">Significant duration</a> <a class="header-anchor" href="#significant-duration" id="heading-2333" aria-labelledby="heading-2333">#</a></h4>
 <p>Finding out some delay on <code>iPad</code> is a <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1357">good reason</a> for solving micro hangs.<br>
 Once more, looking into the <code>Instruments</code> and writing an appropriate solution follow few <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1388">milestones</a> for a quick result.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10248_13.png" alt="" class="img-fluid"><br>
 </br></p>
-<h4 id="syncasync"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1680">Sync/async</a> <a class="header-anchor" href="#syncasync" id="heading-2282" aria-labelledby="heading-2282">#</a></h4>
+<h4 id="syncasync"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1680">Sync/async</a> <a class="header-anchor" href="#syncasync" id="heading-2334" aria-labelledby="heading-2334">#</a></h4>
 <p><img src="../../../../../images/iOSdev/wwdc23-10248_14.png" alt="" class="img-fluid"></p>
 <p>Applied to sync or async task, the instruments may measure the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=1610">potential delay</a></strong> instead of the actually experienced delay.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10248_15.png" alt="" class="img-fluid"></p>
@@ -251,19 +251,19 @@ Once more, looking into the <code>Instruments</code> and writing an appropriate 
 <p><img src="../../../../../images/iOSdev/wwdc23-10248_16.png" alt="" class="img-fluid"></p>
 <p>Following the recommendations, the appropriate <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2020">solution</a> provides an immediate <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2056">visual result</a>.<br>
 </br></p>
-<h3 id="blocked-main-thread"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2175">Blocked Main Thread</a> <a class="header-anchor" href="#blocked-main-thread" id="heading-2283" aria-labelledby="heading-2283">#</a></h3>
+<h3 id="blocked-main-thread"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2175">Blocked Main Thread</a> <a class="header-anchor" href="#blocked-main-thread" id="heading-2335" aria-labelledby="heading-2335">#</a></h3>
 <p>A blocked main thread has a typical signature through the <code>CPU</code> usage.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10248_17.png" alt="" class="img-fluid"></p>
-<h4 id="usual-case">Usual case <a class="header-anchor" href="#usual-case" id="heading-2284" aria-labelledby="heading-2284">#</a></h4>
+<h4 id="usual-case">Usual case <a class="header-anchor" href="#usual-case" id="heading-2336" aria-labelledby="heading-2336">#</a></h4>
 <p>As no data is available in the call tree, the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2213">Thread State Trace</a></strong> instrument will be remarkably helpful along with the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2269">backtrace view</a></strong> that highlights the <code>syscall</code> blocking the thread through the call stack.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10248_18.png" alt="" class="img-fluid"></p>
 <p>The <a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2341">proper solution</a> for this use case lead towards notions to be handled carefully with <code>Swift</code> concurrency.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10248_19.png" alt="" class="img-fluid"></p>
-<h4 id="tools-probe"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2435">Tools' probe</a> <a class="header-anchor" href="#tools-probe" id="heading-2285" aria-labelledby="heading-2285">#</a></h4>
+<h4 id="tools-probe"><a href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=2435">Tools' probe</a> <a class="header-anchor" href="#tools-probe" id="heading-2337" aria-labelledby="heading-2337">#</a></h4>
 <p><img src="../../../../../images/iOSdev/wwdc23-10248_21.png" alt="" class="img-fluid"></p>
 <p>Rely only on the <code>Thread States</code> instrument might be a deception because it may lead to a blocked situation according to the system but definitely not from the user point of view: the <strong><code>Hangs</code> instrument</strong> is clearly <strong>more reliable</strong> to define a genuine <strong>unresponsive blocked thread</strong>.<br>
 </br></p>
-<h2 id="tips-tricks" class="h2-focus">Tips &amp; tricks <a class="header-anchor" href="#tips-tricks" id="heading-2286" aria-labelledby="heading-2286">#</a></h2>
+<h2 id="tips-tricks" class="h2-focus">Tips &amp; tricks <a class="header-anchor" href="#tips-tricks" id="heading-2338" aria-labelledby="heading-2338">#</a></h2>
 <ol>
 <li>
 <p>Install your app on the device and automatically launch the <strong>Instruments</strong> ⟹ <a alt="Click to playback the video footage." href="https://developer.apple.com/videos/play/wwdc2023/10248/?time=571">🎬</a></p>
@@ -420,7 +420,7 @@ Once more, looking into the <code>Instruments</code> and writing an appropriate 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     
     
-      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
     
     
       <script src="/assets/vendors/highlightjs/highlight.js"></script>
