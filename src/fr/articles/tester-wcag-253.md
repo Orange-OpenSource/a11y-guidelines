@@ -8,18 +8,18 @@ tags:
   - intermediate
 ---
 
-## 🎯 Objectif du critère
+## Objectif du critère
 
 Le critère **WCAG 2.5.3 – Label in Name** vise à garantir que lorsqu’un élément interactif (bouton, lien, champ, etc.) affiche du texte visible à l’écran, ce texte soit également présent dans son **<a href="/src/fr/articles/le-nom-accessible-en-html.md">nom accessible</a>**.  
 
 Cela permet aux utilisateurs [d'aides techniques](/src/fr/solutions-assistance.md) (en particulier de logiciels de reconnaissance vocale) de comprendre et d’interagir correctement avec l’interface.  
 En effet, ces outils s’appuient sur le **nom accessible** pour identifier et activer les éléments.  
 
-> 💡 Le texte visible n’a pas besoin d’être **strictement identique** au nom accessible, mais il doit **au minimum être inclus** dans celui-ci — idéalement au **début**.
+> Le texte visible n’a pas besoin d’être **strictement identique** au nom accessible, mais il doit **au minimum être inclus** dans celui-ci — idéalement au **début**.
 
 ---
 
-## 🧩 Exemple concret
+## Exemple concret
 
 ### Exemple problématique
 
@@ -35,7 +35,7 @@ Prenons l'exemple d'un utilisateur naviguant à l'aide d'un logiciel de reconnai
 Dans cet exemple, le bouton affiche visuellement le mot **« Envoyer »** (dans l’image), mais le texte alternatif est **« Soumettre »**.
 Le nom accessible du bouton devient donc *Soumettre*.
 
-➡️ Résultat : un utilisateur de reconnaissance vocale qui dit « Cliquer sur Envoyer » ne pourra pas activer le bouton, car l’assistant ne reconnaîtra pas ce nom.
+Résultat : un utilisateur de reconnaissance vocale qui dit « Cliquer sur Envoyer » ne pourra pas activer le bouton, car l’assistant ne reconnaîtra pas ce nom.
 
 ---
 
@@ -52,7 +52,7 @@ Le critère **WCAG 2.5.3 est donc respecté**.
 
 ---
 
-## ⚠️ Attention au masquage accessible
+## Attention au masquage accessible
 
 Lorsque vous utilisez des éléments masqués visuellement (via des classes telles que `.visually-hidden`), évitez de les insérer **au milieu** d’un intitulé visible.
 Sinon, le nom accessible ne correspondra plus à l'intitulé que l’utilisateur voit.
@@ -70,11 +70,11 @@ Mais l’utilisateur voit seulement :
 
 > « Ouvrir le site d’Orange »
 
-➡️ En reconnaissance vocale, dire « Ouvrir le site d’Orange » **ne fonctionnera pas**, car ce texte ne correspond pas au nom accessible réel.
+En reconnaissance vocale, dire « Ouvrir le site d’Orange » **ne fonctionnera pas**, car ce texte ne correspond pas au nom accessible réel.
 
 ---
 
-## 🧪 Comment tester la conformité
+## Comment tester la conformité
 
 ### 1. Avec un lecteur d’écran
 
@@ -90,7 +90,7 @@ Le lecteur d’écran vocalise :
 2. Écoutez le nom lu pour chaque bouton ou lien.
 3. Si ce nom **ne correspond pas** au texte visible, le critère **n’est pas conforme**.
 
-💡 Certains lecteurs proposent une *visionneuse de paroles* permettant d’afficher le nom accessible sous forme textuelle, ce qui facilite la comparaison avec le texte affiché.
+Certains lecteurs proposent une *visionneuse de paroles* permettant d’afficher le nom accessible sous forme textuelle, ce qui facilite la comparaison avec le texte affiché.
 
 ---
 
@@ -109,7 +109,7 @@ Le moyen de vérifier le critère avec l'inspecteur de commande dépend du navig
   
 ![Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert](../images/tester-wcag-253/FF_name.png)
 
-#### 🔍 Sous Chrome ou Edge Chromium
+#### Sous Chrome ou Edge Chromium
 
 1. Ouvrir l’inspecteur de commande : `Ctrl + Maj + I`
 2. Sélectionner l’onglet **Éléments**
@@ -121,7 +121,7 @@ Le moyen de vérifier le critère avec l'inspecteur de commande dépend du navig
 
 ![Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert](../images/tester-wcag-253/Chrome_name.png)
 
-## 📋 En résumé
+## En résumé
 
 Pour respecter le critère **WCAG 2.5.3**, assurez-vous que :
 
