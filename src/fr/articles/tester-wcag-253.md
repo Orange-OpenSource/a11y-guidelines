@@ -100,7 +100,7 @@ Certains lecteurs proposent une *visionneuse de paroles* permettant d’afficher
 
 Le moyen de vérifier le critère avec l'inspecteur de commande dépend du navigateur utilisé.
 
-#### 🔍 Sous Firefox
+#### Sous Firefox
 
 1. Ouvrir l’inspecteur de commande : `Ctrl + Maj + I`
 2. Sélectionner l’onglet **Accessibilité**
