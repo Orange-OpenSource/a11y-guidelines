@@ -3,21 +3,23 @@ title: "Accessible hiding and aria-hidden example"
 abstract: "Elements not visible on the screen but accessible to assistive technology."
 titleBeforeTag: true
 date: "2018-01-12"
+updateDate: "2026-01-16"
 tags:
   - component
 ---
 
 
 <h2>Introduction</h2>
-<p>Sometimes it is necessary to hide elements in a web page. The conventional way is to use <abbr title="Cascading Stylesheets">CSS</abbr> (<code>display:none;</code> and <code>visibility:hidden;</code>) or the <abbr>HTML</abbr>5 `hidden` attribute. These properties hide elements not only on the screen, but also for screen reader users. Thus, these elements will not be visible nor vocalized by Assistive technologies (AT).</p>
+<p>Sometimes it is necessary to hide elements in a web page. The conventional way is to use <abbr>CSS</abbr> (<code>display:none;</code> and <code>visibility:hidden;</code>) or the <abbr>HTML</abbr>5 <code>hidden</code> attribute. These properties hide elements not only on the screen, but also for screen reader users. Thus, these elements will not be visible nor vocalized by Assistive technologies (AT).</p>
 <p>In some cases, it may be useful to hide elements on the screen, but make sure they are still vocalised by screen readers. For this, an accessible hiding <abbr>CSS</abbr> class can be used.</p>
-<p>Finally, you may want to display elements on the screen but make sure they are not vocalized. In this case, you can use an <abbr title="Accessible Rich Internet Applications">ARIA</abbr> attribute (<code>aria-hidden</code>).</p>
+<p>Finally, you may want to display elements on the screen but make sure they are not vocalized. In this case, you can use <abbr>HTML</abbr>5 <code>inert</code> attribute or an <abbr>ARIA</abbr> attribute (<code>aria-hidden</code>).</p>
 
 <h2>Accessible hiding</h2>
-<p>Accessible hiding allows an element to disappear from the screen, while being accessible to screen reader users. Technically, the solution is to add a <abbr>CSS</abbr> class on the element that should not be visible.</p>
+<p>Accessible hiding allows to hide an element from the screen, while keeping it available for assistive technologies, especially screen readers. Technically, the solution is to add a <abbr>CSS</abbr> class on the element that should not be visible.</p>
+
 <p>There are several solutions for this type of <abbr>CSS</abbr> class:</p>
     <ul>
-      <li>Setting the element’s size to 0.</li>
+      <li>Setting the element's size to 0.</li>
       <li>Positioning the element off the screen (<code>left: -1000px; top: -1000px;</code>).</li>
       <li>Using <code>text-indent</code> or <code>clip</code> properties.</li>
       <li>…</li>
@@ -25,22 +27,33 @@ tags:
 <p>Ideally, it is best to combine all the solutions to make sure it is working properly in all browsers.</p>
 
 
-<p>If you use a framework, it is very likely it already has a class for that. For example if you use <a href="http://boosted.orange.com">Boosted</a> or <a href="http://getbootstrap.com/">Bootstrap</a>, you can use the <code>visually-hidden</code> <abbr>CSS</abbr> class (“screen reader only”) which is defined as follows:</p>
+<p>If you use a framework, it is very likely it already has a class for that. For example if you use <a href="http://boosted.orange.com">Boosted</a> or <a href="http://getbootstrap.com/">Bootstrap</a>, you can use the <code>visually-hidden</code> <abbr>CSS</abbr> class (or <code>sr-only</code> for older versions) which is defined as follows:</p>
+
 <pre><code class="css">
-.visually-hidden {
-      position: absolute;
-	position: absolute !important;
-	width: 1px !important;
+.visually-hidden,
+.visually-hidden-focusable:not(:focus, :focus-within) {
+	border: 0 !important;
+	clip-path: inset(50%) !important;
 	height: 1px !important;
-	padding: 0 !important;
 	margin: -1px !important;
 	overflow: hidden !important;
-	clip: rect(0,0,0,0) !important;
+	padding: 0 !important;
+	width: 1px !important;
 	white-space: nowrap !important;
-	border: 0 !important;
+}
+
+.visually-hidden:not(caption),
+.visually-hidden-focusable:not(caption):not(:focus, :focus-within){
+	position: absolute !important;
+}
+
+.visually-hidden *,
+.visually-hidden-focusable:not(:focus, :focus-within) * {
+	overflow: hidden !important;
 }
 </code></pre>
-<p>If you haven’t got an accessible hiding class yet, the easiest way is to copy and paste the code above.</p>
+
+<p>If you haven't got an accessible hiding class yet, the easiest way is to copy and paste the code above.</p>
 
 <h3>Implementation</h3>
 <p>Accessible hiding class can be used in many cases. For example, to clarify a link label:</p>
@@ -49,14 +62,15 @@ tags:
 &lt;a href="…"&gt;Learn more&lt;span <span class="important">class="visually-hidden"</span>&gt; about our mobile plans&lt;/span&gt;&lt;/a&gt;
 </code></pre>
 
-<strong>Example: </strong>
+<strong>Example:</strong>
 <p><a href="#">Learn more<span class="visually-hidden"> about our mobile plans</span></a></p>
 
 <p>We would have obtained the same result using the <code>aria-label</code> attribute on the link:</p>
 <pre><code class="html">
 &lt;a href="…" aria-label="Learn more about our mobile plans"&gt;Learn more&lt;/a&gt;
 </code></pre>
-<p>The accessible hiding class solution still offers an advantage compared to the <code>aria-label</code> solution. If the <abbr>CSS</abbr> is disabled (replaced with a custom <abbr>CSS</abbr> adapted to a certain disability, for example), the hidden accessibly text will be displayed.</p>
+
+The accessible hiding class solution still offers several advantages compared to the <code>aria-label</code> solution. If the <abbr>CSS</abbr> is disabled (replaced with a custom <abbr>CSS</abbr> adapted to a certain disability, for example), the hidden accessibly text will be displayed. During automatic page translation, the <code>aria-label</code> will not be translated. Furthermore, since <code>aria-label</code> is not very visible in the code, developers may forget to update or modify it.
 
 <h2><code>aria-hidden</code> attribute</h2>
 <p>This attribute will hide an element (or group of elements) to screen readers. It has however no effect on the display.</p>
@@ -64,15 +78,13 @@ tags:
 <h3>Implementation</h3>
 <p>To hide an element to screen readers (and child elements), simply add the <code>aria-hidden="true"</code> attribute. Content can still be made accessible to ATs via <code>aria-describedby</code> or <code>aria-labelledby</code>.</p>
 <h4>Warning</h4>
-<p>If you put a focusable element in content (even on a parent node) with `aria-hidden =" true "`, it will be present in keyboard navigation but will be empty for <abbr>AT</abbr>. <em>So, don't do it.</em></p>
+<p>If you put a focusable element in content (even on a parent node) with <code>aria-hidden ="true"</code>, it will be present in keyboard navigation but will be empty for <abbr>AT</abbr>. <em>So, don't do it.</em></p>
 
 <strong>Example: </strong>
 <p>The following screenshot shows a video player with a number of buttons (previous channel, next channel, pause…). This player is surrounded by two buttons also providing access to previous and next channels.</p>
-<p>Visually this is not a problem. Although, when listening to the page with a screen reader, one can find it curious to hear an “Animals” button vocalized at the beginning of the page, and a “Hunting and Fishing” button vocalized at the end of page.</p>
+<p>Visually this is not a problem. Although, when listening to the page with a screen reader, one can find it curious to hear an 'Animals' button vocalized at the beginning of the page, and a “Hunting and Fishing” button vocalized at the end of page.</p>
 
 <img src="../images/player.png" alt="screenshot showing a video player">
-
-<br><br>
 
 <p>To avoid disturbing the user unnecessarily, the easiest way is to hide these buttons (for screen readers) with the <code>aria-hidden</code> attribute.</p>
 
@@ -81,3 +93,12 @@ tags:
       &lt;div class="nextPreviousChannelName OrangeMedium" &gt;Animals&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+
+<h2>Webography</h2>
+<ul>
+  <li><a href="https://www.ffoodd.fr/masquage-accessible-de-pointe/" lang="fr" href="fr">Masquage accessible de pointe (fr)</a></li>
+  <li><a href="https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034">Improved .visually-hidden</a></li>
+  <li><a href="https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/">The "inert" attribute is finally coming to the web</a></li>
+  <li><a href="https://access42.net/attribut-aria-hidden-true-accessibilite/" lang="fr" href="fr">Comment utiliser l'attribut aria-hidden="true" de manière accessible ? (fr)</a></li>
+  <li><a href="https://adrianroselli.com/2019/11/aria-label-does-not-translate.html">aria-label Does Not Translate</a></li>
+</ul>
