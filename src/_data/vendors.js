@@ -1,11 +1,11 @@
 module.exports = {
   boosted: {
-    version: '5.3.3',
+    version: '5.3.8',
     css: {
-      integrity: 'sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR'
+      integrity: 'sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY'
     },
     js: {
-      integrity: 'sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/'
+      integrity: 'sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m'
     }
   },
   highlightJS: {
