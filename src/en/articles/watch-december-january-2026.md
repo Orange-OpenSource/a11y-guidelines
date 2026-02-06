@@ -8,12 +8,14 @@ tags:
 # Digital Accessibility Watch December-January 2026
 
 And there we go! Another year of A11y monitoring...
-The single government portal for Declarations of Non-Conformity or requests for exemptions from digital accessibility obligations is finally here, and it's "normally" mandatory (fr): https://demarche.numerique.gouv.fr/commencer/exemption-accessibilite-num.
+
+The single government portal for non-conformity statements or requests for exemptions from digital accessibility obligations is finally here, and it's "normally" mandatory (fr): https://demarche.numerique.gouv.fr/commencer/exemption-accessibilite-num.
+
 The upcoming version of the digital accessibility guidelines (WCAG 3) is progressing, but slowly: https://html5accessibility.com/stuff/2026/01/16/last-week-in-wai-3/. 
 
 On a completely different note, Paris Web 2026: here are the first announcements from this essential conference: https://www.paris-web.fr/actualites/2026/01/en-route-vers-la-21e-edition.
 
-I also wanted to mention Dennis Deacon's monumental work on how to test WCAG 2.2, a veritable bible: https://www.dennisdeacon.com/category/web/accessibility/.
+I also wanted to mention Dennis Deacon's monumental work on how to test WCAG 2.2, a real bible: https://www.dennisdeacon.com/category/web/accessibility/.
 
 ## Accessibility in Laws, Standards, and Guidelines
 
@@ -34,7 +36,7 @@ I also wanted to mention Dennis Deacon's monumental work on how to test WCAG 2.2
 ## Testing Accessibility
 
 - Be wary of automated tools, even for digital documents: https://access42.net/accessibilite-documents-bureautiques-outils-tests-automatiques/
-- WCAG 2.4.6 tester for AAA concurrent input mechanisms: https://www.dennisdeacon.com/web/accessibility/testing-methods-concurrent-input-mechanisms/
+- WCAG 2.5.6 AAA test method for concurrent input mechanisms: https://www.dennisdeacon.com/web/accessibility/testing-methods-concurrent-input-mechanisms/
 - Explanation of WCAG 1.4.5 text overlays: https://chrisyoong.com/blog/germany-rejects-accessibility-overlays-for-eaa-compliance
 - 5 tests you can run on any component: https://zeroheight.com/blog/5-accessibility-checks-to-run-on-every-component/
 - Yet another reason to Don't rely too heavily on automated testing tools; shadow DOM and a11y tools: https://matuzo.at/blog/2024/automated-testing-tools-and-web-components
@@ -48,7 +50,7 @@ I also wanted to mention Dennis Deacon's monumental work on how to test WCAG 2.2
 - WCAG Compliance: https://yatil.net/blog/meeting-wcag-is-an-achievement
 - The HTML time element: https://nolanlawson.com/2025/12/14/the-time-element-should-actually-do-something/
 - The hidden attribute="until-found", it can be useful (fr): https://www.alsacreations.com/astuce/lire/1975-L039attribut-hidden-until-found.html
-- First Aria rule: https://www.htmhell.dev/adventcalendar/2025/10/
+- First ARIA rule: https://www.htmhell.dev/adventcalendar/2025/10/
 - Math formula and a11y: https://www.htmhell.dev/adventcalendar/2025/12/
 - A short, effective course in web semantics: https://www.htmhell.dev/adventcalendar/2025/19/
 - Complex tables and a11y (fr): https://www.24joursdeweb.fr/2025/des-tableaux-de-donnees-complexes-accessibles-c-est-possible
@@ -61,13 +63,13 @@ I also wanted to mention Dennis Deacon's monumental work on how to test WCAG 2.2
 
 ## User Experience, User Interface
 
-- Reading a VPAT, PAccessibility Template: https://adrianroselli.com/2026/01/how-i-evaluate-an-acr-vpat.html
+- Reading a VPAT, Voluntary Product Accessibility Template: https://adrianroselli.com/2026/01/how-i-evaluate-an-acr-vpat.html
 - ARIA yes, but only if needed: https://www.maxdesign.com.au/articles/role-button.html
 - Compliance and a11y (fr): https://www.24joursdeweb.fr/2025/n-opposons-pas-conformite-et-accessibilite
 - Aria-busy is not robust: https://gerardkcohen.me/writing/2025/aria-busy-not-your-friend.html
 - Shadow DOM and a11y: https://gomakethings.com/death-to-the-shadow-dom/
 - Good subtitles for the hearing impaired (fr): https://access42.net/interview-celine-ripolles-traductrice-sous-titreuse-accessibilite/
-- Still on the shadow DOM: https://gomakethings.com/no-seriously-the-shadow-dom-sucks/
+- More about the shadow DOM: https://gomakethings.com/no-seriously-the-shadow-dom-sucks/
 - A11y at Decathlon (fr): https://www.24joursdeweb.fr/2025/le-marathon-de-l-accessibilite-numerique-chez-decathlon
 - When you're affected, you see things differently (fr): https://www.24joursdeweb.fr/2025/comment-ma-cataracte-a-modifie-mon-approche-de-l-accessibilite
 - Auditing a11y in a constrained environment (fr): https://www.24joursdeweb.fr/2025/comment-auditer-en-environnement-restreint
@@ -94,7 +96,7 @@ I also wanted to mention Dennis Deacon's monumental work on how to test WCAG 2.2
 - Building a specific AI agent for a11y, neat: https://www.last-child.com/build-ai-brain-a11y.html
 - Improving a11y and learning through AI-generated transcripts: https://aijourn.com/from-video-to-text-how-ai-transcription-improves-accessibility-and-learning/
 - Inaccessible download links: https://blindaccessjournal.com/2025/12/when-download-links-arent-links-a-critical-accessibility-failure-in-ai-tools-blind-people-depend-on/
-- Building AI around A1Y: https://www.last-child.com/build-ai-brain-a11y.html
+- Building AI around a11y: https://www.last-child.com/build-ai-brain-a11y.html
 
 ## Resources
 
@@ -106,7 +108,7 @@ I also wanted to mention Dennis Deacon's monumental work on how to test WCAG 2.2
 - Misconceptions about a11y implementation: https://tetralogical.com/blog/2025/12/18/common-misconceptions-about-implementing-accessibility/
 - Misconceptions about a11y tests: https://tetralogical.com/blog/2026/01/07/common-misconceptions-about-testing-accessibility/
 - Nothing is completely accessible: https://adrianroselli.com/2025/12/you-cant-make-something-accessible-to-everyone.html
-- a11y carousel (fr): https://www.24joursdeweb.fr/2025/concevoir-et-developper-un-carrousel-accessible-aux-personnes-handicapees
+- A11y carousel (fr): https://www.24joursdeweb.fr/2025/concevoir-et-developper-un-carrousel-accessible-aux-personnes-handicapees
 - Designing a responsible digital service (fr): https://www.24joursdeweb.fr/2025/concevoir-un-service-numerique-responsable-dans-une-organisation-produit
 - Well-known products of inclusive design: https://makeitfable.com/article/accessibility-is-the-origin-of-human-centered-design/
 - Some predictions for 2026:
@@ -116,8 +118,8 @@ I also wanted to mention Dennis Deacon's monumental work on how to test WCAG 2.2
 
 ## Other
 
-- A game questions about the A11Y, nice: https://www.accessionaire.com/
-- Administration Trump and a11y, sad: https://zeldman.com/2025/12/13/accessibility-is-a-human-right-cruelty-a-human-wrong/
+- A quizz about a11y, nice: https://www.accessionaire.com/
+- Trump administration and a11y, sad: https://zeldman.com/2025/12/13/accessibility-is-a-human-right-cruelty-a-human-wrong/
 - Misconceptions about disability: https://tetralogical.com/blog/2025/12/03/common-misconceptions-about-disability/
 - Products designed for people with disabilities but useful for everyone, very interesting (fr): https://emmanuelle-aboaf.netlify.app/blog/article/quand-les-innovations-pensees-pour-les-personnes-handicapees-deviennent-universelles
-- Recruiting people with disabilities: https://hrreview.co.uk/analysis/analysis-diversity/henny-swan-accessible-recruitment-is-everyones-business/384388
+- Recruiting people with disabilities: https://hrreview.co.uk/analysis/analysis-diversity/henny-swan-accessible-recruitment-is-everyones-business/38438
