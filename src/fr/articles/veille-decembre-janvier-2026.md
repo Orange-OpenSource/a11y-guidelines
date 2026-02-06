@@ -1,7 +1,7 @@
 ---
 title: "Veille #A11y Décembre-Janvier 2026"
 abstract: "Florilèges de ressources en #a11y, Décembre-Janvier 2026"
-date: "2025-02-06"
+date: "2026-02-09"
 tags:
   - veille
 ---
@@ -9,10 +9,13 @@ tags:
 # Veille accessibilité numérique Décembre-Janvier 2026
 
 Et hop! Encore une nouvelle année de veille A11y...
-Le guichet unique d'état pour les Déclaration de non-conformité ou l'invocation d'une exemption aux obligations d'accessibilité numérique est enfin là et c'est "normalement" une obligation : https://demarche.numerique.gouv.fr/commencer/exemption-accessibilite-num.
+
+Le guichet unique d'état pour les déclarations de non-conformité ou l'invocation d'une exemption aux obligations d'accessibilité numérique est enfin là et c'est "normalement" une obligation : https://demarche.numerique.gouv.fr/commencer/exemption-accessibilite-num.
 
 La nouvelle future version des recommandations d'accessibilité numérique (WCAG 3) avance mais doucement (en) : https://html5accessibility.com/stuff/2026/01/16/last-week-in-wai-3/.
+
 Tout autre chose, Paris Web 2026, voici les premières annonces de cette conférence incontournable : https://www.paris-web.fr/actualites/2026/01/en-route-vers-la-21e-edition.
+
 Je voulais aussi signaler un travail pharaonique de Dennis Deacon sur comment tester les WCAG 2.2, une vraie bible (en) : https://www.dennisdeacon.com/category/web/accessibility/.
 
 ## L’accessibilité dans les lois, les normes et recommandations
@@ -29,27 +32,27 @@ Je voulais aussi signaler un travail pharaonique de Dennis Deacon sur comment te
 - Conformité et a11y: https://www.24joursdeweb.fr/2025/n-opposons-pas-conformite-et-accessibilite
 - Utiliser le DAMM (Digital Accessibility Maturity Model) (en) : https://www.last-child.com/using-maturity-models.html
 - Quelle méthode d'amélioration progressive pour l'a11y (en) : https://buttondown.com/access-ability/archive/what-continuous-improvement-model-is-best-for/
-- Intégré l'a11y comme exigence de base (en) : https://michaelharshbarger.com/insights/accessibility-core-requirement.html
+- Intégrer l'a11y comme exigence de base (en) : https://michaelharshbarger.com/insights/accessibility-core-requirement.html
 
 ## Tester l’accessibilité
 
 - Méfiez vous des outils auto même pour les documents numériques : https://access42.net/accessibilite-documents-bureautiques-outils-tests-automatiques/
-- Tester WCAG 2.4.6 concurrent input mechanisms AAA (en) : https://www.dennisdeacon.com/web/accessibility/testing-methods-concurrent-input-mechanisms/
-- Explications sur WCAG 1.4.5 images of text (en) : https://chrisyoong.com/blog/germany-rejects-accessibility-overlays-for-eaa-compliance
+- Tester WCAG 2.5.6 Modalités d’entrées concurrentes AAA (en) : https://www.dennisdeacon.com/web/accessibility/testing-methods-concurrent-input-mechanisms/
+- Explications sur WCAG 1.4.5 Texte sous forme d’image (en) : https://chrisyoong.com/blog/germany-rejects-accessibility-overlays-for-eaa-compliance
 - 5 tests qu'on peut faire sur tout composant (en) : https://zeroheight.com/blog/5-accessibility-checks-to-run-on-every-component/
 - Encore une raison pour ne pas trop croire les outils de tests auto, shadow DOM et outils a11y (en) : https://matuzo.at/blog/2024/automated-testing-tools-and-web-components
 - Tester 2.4.11 Focus non caché (en) : https://tarnoff.info/2025/12/08/a11y-101-2-4-11-focus-not-obscured-minimum/
 
 ## Points techniques
 
-- Les moyen de cacher du contenu et a11y (en) : https://www.maxdesign.com.au/articles/hidden-content.html
+- Les moyens de cacher du contenu et a11y (en) : https://www.maxdesign.com.au/articles/hidden-content.html
 - Un point complet sur les tableaux de données, à lire : https://www.24joursdeweb.fr/2025/des-tableaux-de-donnees-complexes-accessibles-c-est-possible
-- Accéder au shadowDom : https://www.24joursdeweb.fr/2025/prendre-en-compte-les-web-components-dans-vos-scripts
+- Accéder au shadow DOM : https://www.24joursdeweb.fr/2025/prendre-en-compte-les-web-components-dans-vos-scripts
 - Conformité WCAG (en) : https://yatil.net/blog/meeting-wcag-is-an-achievement
-- l'élément time html pes top (en) : https://nolanlawson.com/2025/12/14/the-time-element-should-actually-do-something/
+- L'élément time html pes top (en) : https://nolanlawson.com/2025/12/14/the-time-element-should-actually-do-something/
 - L'attribut hidden="until-found", ça peut servir (en) : https://www.alsacreations.com/astuce/lire/1975-L039attribut-hidden-until-found.html
-- Première règle d'aria (en) : https://www.htmhell.dev/adventcalendar/2025/10/
-- Formule de math et a11y (en) : https://www.htmhell.dev/adventcalendar/2025/12/
+- Première règle d'ARIA (en) : https://www.htmhell.dev/adventcalendar/2025/10/
+- Formule de maths et a11y (en) : https://www.htmhell.dev/adventcalendar/2025/12/
 - Petit cours de sémantique web, efficace (en) : https://www.htmhell.dev/adventcalendar/2025/19/
 - Tableaux complexes et a11y : https://www.24joursdeweb.fr/2025/des-tableaux-de-donnees-complexes-accessibles-c-est-possible
 - Title et a11y : https://www.24joursdeweb.fr/2025/title-ce-faux-ami-de-l-accessibilite
@@ -92,10 +95,10 @@ Je voulais aussi signaler un travail pharaonique de Dennis Deacon sur comment te
 
 ## IA
 
-- Construire un AI agent spécifique pour l'a11y, à lire (en) : https://www.last-child.com/build-ai-brain-a11y.html
-- Améliorer l'a11y et l'apprentissage via des transcriptions générées par AI (en) : https://aijourn.com/from-video-to-text-how-ai-transcription-improves-accessibility-and-learning/
+- Construire un agent IA spécifique pour l'a11y, à lire (en) : https://www.last-child.com/build-ai-brain-a11y.html
+- Améliorer l'a11y et l'apprentissage via des transcriptions générées par IA (en) : https://aijourn.com/from-video-to-text-how-ai-transcription-improves-accessibility-and-learning/
 - Des liens de téléchargement inaccessibles (en) : https://blindaccessjournal.com/2025/12/when-download-links-arent-links-a-critical-accessibility-failure-in-ai-tools-blind-people-depend-on/
-- Créer une AI autour de l'a11y (en) : https://www.last-child.com/build-ai-brain-a11y.html
+- Créer une IA autour de l'a11y (en) : https://www.last-child.com/build-ai-brain-a11y.html
 
 ## Ressources
 
