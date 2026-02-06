@@ -25,7 +25,7 @@ I also wanted to mention Dennis Deacon's monumental work on how to test WCAG 2.2
 ## Accessibility Implementation Strategy
 
 - A11y and the media (fr): https://www.24joursdeweb.fr/2025/quand-l-obligation-legale-rejoint-la-mission-des-medias-d-informer-tous-les-publics
-- Design systems and a11y, some ideas (fr): https://www.24joursdeweb.fr/2025/le-design-system-de-la-fabrique-de-
+- Design systems and a11y, some ideas (fr): https://www.24joursdeweb.fr/2025/le-design-system-de-la-fabrique-de-noel
 - The race for numbers, or compliance percentages: https://buttondown.com/access-ability/archive/dont-fall-into-the-accessibility-gradescore-trap/
 - Create a sustainable a11y program: https://equalentry.com/accessibility-program-sustainability/
 - Compliance and a11y accessibility (fr): https://www.24joursdeweb.fr/2025/n-opposons-pas-conformite-et-accessibilite
