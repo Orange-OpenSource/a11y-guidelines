@@ -64,7 +64,7 @@ Je voulais aussi signaler un travail pharaonique de Dennis Deacon sur comment te
 - Lire un VPAT, Voluntary Product Accessibility Template (en) : https://adrianroselli.com/2026/01/how-i-evaluate-an-acr-vpat.html
 - ARIA oui mais que si besoin (en) : https://www.maxdesign.com.au/articles/role-button.html
 - Conformité et a11y : https://www.24joursdeweb.fr/2025/n-opposons-pas-conformite-et-accessibilite
-- Aria-busy n'est pas robuste (en) ; https://gerardkcohen.me/writing/2025/aria-busy-not-your-friend.html
+- aria-busy n'est pas robuste (en) ; https://gerardkcohen.me/writing/2025/aria-busy-not-your-friend.html
 - Shadow DOM et a11y (en) : https://gomakethings.com/death-to-the-shadow-dom/
 - Les bons sous-titrages pour déficients auditifs : https://access42.net/interview-celine-ripolles-traductrice-sous-titreuse-accessibilite/
 - Toujours sur le shadow DOM (en) : https://gomakethings.com/no-seriously-the-shadow-dom-sucks/
