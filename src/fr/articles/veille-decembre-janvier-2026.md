@@ -26,7 +26,7 @@ Je voulais aussi signaler un travail pharaonique de Dennis Deacon sur comment te
 ## Stratégie de mise en accessibilité
 
 - A11y et médias : https://www.24joursdeweb.fr/2025/quand-l-obligation-legale-rejoint-la-mission-des-medias-d-informer-tous-les-publics
-- Design system et a11y, quelques pistes : https://www.24joursdeweb.fr/2025/le-design-system-de-la-fabrique-de-
+- Design system et a11y, quelques pistes : https://www.24joursdeweb.fr/2025/le-design-system-de-la-fabrique-de-noel
 - La course au chiffres, ou pourcentage de conformité (en) : https://buttondown.com/access-ability/archive/dont-fall-into-the-accessibility-gradescore-trap/
 - Faire un programme d'a11y durable (en) : https://equalentry.com/accessibility-program-sustainability/
 - Conformité et a11y: https://www.24joursdeweb.fr/2025/n-opposons-pas-conformite-et-accessibilite
