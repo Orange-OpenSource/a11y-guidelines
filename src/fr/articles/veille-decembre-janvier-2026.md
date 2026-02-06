@@ -103,7 +103,7 @@ Je voulais aussi signaler un travail pharaonique de Dennis Deacon sur comment te
 - Des points à mettre en place pour être plus inclusif et a11y (en) : https://myblurredworld.com/2026/01/04/26-actions-you-can-take-to-create-inclusion-in-2026/
 - Une étude équivalente à Web Million pour avoir une vision de haut de l'a11y (en) : https://almanac.httparchive.org/en/2025/accessibility
 - Mauvaises interprétations des WCAG (en) ; https://tetralogical.com/blog/2025/12/10/common-misconceptions-about-wcag/
-- EEn quoi l'a11y aide les femmes, angle de vue intéressant (en) : https://a11ywithdiana.substack.com/p/how-web-accessibility-specifically
+- En quoi l'a11y aide les femmes, angle de vue intéressant (en) : https://a11ywithdiana.substack.com/p/how-web-accessibility-specifically
 - Mauvaises interprétations sur l'implémentation de l'a11y (en) : https://tetralogical.com/blog/2025/12/18/common-misconceptions-about-implementing-accessibility/
 - Idées reçues sur les tests d'a11y (en) : https://tetralogical.com/blog/2026/01/07/common-misconceptions-about-testing-accessibility/
 - Rien n'est complètement accessible (en) : https://adrianroselli.com/2025/12/you-cant-make-something-accessible-to-everyone.html
