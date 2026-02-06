@@ -49,7 +49,7 @@ Je voulais aussi signaler un travail pharaonique de Dennis Deacon sur comment te
 - Un point complet sur les tableaux de données, à lire : https://www.24joursdeweb.fr/2025/des-tableaux-de-donnees-complexes-accessibles-c-est-possible
 - Accéder au shadow DOM : https://www.24joursdeweb.fr/2025/prendre-en-compte-les-web-components-dans-vos-scripts
 - Conformité WCAG (en) : https://yatil.net/blog/meeting-wcag-is-an-achievement
-- L'élément time html pes top (en) : https://nolanlawson.com/2025/12/14/the-time-element-should-actually-do-something/
+- L'élément time html (en) : https://nolanlawson.com/2025/12/14/the-time-element-should-actually-do-something/
 - L'attribut hidden="until-found", ça peut servir (en) : https://www.alsacreations.com/astuce/lire/1975-L039attribut-hidden-until-found.html
 - Première règle d'ARIA (en) : https://www.htmhell.dev/adventcalendar/2025/10/
 - Formule de maths et a11y (en) : https://www.htmhell.dev/adventcalendar/2025/12/
