@@ -100,7 +100,7 @@ Je voulais aussi signaler un travail pharaonique de Dennis Deacon sur comment te
 ## Ressources
 
 - Comment faire une audiodescription pour Youtube (en) : https://www.3playmedia.com/blog/how-to-add-audio-description-to-youtube-videos/
-- Des poin:ts à mettre en place pour être plus inclusif et a11y (en) : https://myblurredworld.com/2026/01/04/26-actions-you-can-take-to-create-inclusion-in-2026/
+- Des points à mettre en place pour être plus inclusif et a11y (en) : https://myblurredworld.com/2026/01/04/26-actions-you-can-take-to-create-inclusion-in-2026/
 - Une étude équivalente à Web Million pour avoir une vision de haut de l'a11y (en) : https://almanac.httparchive.org/en/2025/accessibility
 - Mauvaises interprétations des WCAG (en) ; https://tetralogical.com/blog/2025/12/10/common-misconceptions-about-wcag/
 - EEn quoi l'a11y aide les femmes, angle de vue intéressant (en) : https://a11ywithdiana.substack.com/p/how-web-accessibility-specifically
