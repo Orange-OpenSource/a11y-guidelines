@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2026-01-16T00:00:00Z</updated>
+  <updated>2026-02-09T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Veille #A11y Décembre-Janvier 2026</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/veille-decembre-janvier-2026/"/>
+    <updated>2026-02-09T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/veille-decembre-janvier-2026/</id>
+    <content xml:lang="fr" type="html">Florilèges de ressources en #a11y, Décembre-Janvier 2026</content>
+  </entry>
   
   <entry>
     <title>Exemple de masquage accessible et d&#39;utilisation de aria-hidden</title>

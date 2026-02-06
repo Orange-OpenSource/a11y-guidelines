@@ -237,7 +237,7 @@ The various contents of this speech are indicated hereunder:</p>
 <p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
 </br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
 </br></p>
-<h2 id="swift-concurrency" class="h2-focus">Swift Concurrency <a class="header-anchor" href="#swift-concurrency" id="heading-2037" aria-labelledby="heading-2037">#</a></h2>
+<h2 id="swift-concurrency" class="h2-focus">Swift Concurrency <a class="header-anchor" href="#swift-concurrency" id="heading-2059" aria-labelledby="heading-2059">#</a></h2>
 <p>In order to improve the efficiency at different levels, the usual Grand Central Dispatch process has moved to the <strong>new Concurrency Model</strong> in <strong>iOS 15</strong> including:</p>
 <ul>
 <li>
@@ -301,7 +301,7 @@ These thread context switches are <strong>replaced by the continuations</strong>
 </br></br>
 <p>Serialization and avoidance of data races are ensured by the <strong>Actor protocol</strong> detailed in the <a href="#actors">devoted part</a>.<br>
 </br></br></p>
-<h2 id="async-await" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10132/?time=28">Async-await</a> <a class="header-anchor" href="#async-await" id="heading-2038" aria-labelledby="heading-2038">#</a></h2>
+<h2 id="async-await" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10132/?time=28">Async-await</a> <a class="header-anchor" href="#async-await" id="heading-2060" aria-labelledby="heading-2060">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc21-Concurrency-AsyncAwait-Intro.png" alt="" class="img-fluid"></p>
 <p>Based on the differences between functions that are <a href="https://developer.apple.com/videos/play/wwdc2021/10132/?time=982">async</a> or <a href="https://developer.apple.com/videos/play/wwdc2021/10132/?time=919">not</a>, the <code>async-await</code> syntax can also be <strong>applied to <a href="https://developer.apple.com/videos/play/wwdc2021/10132/?time=796">properties</a></strong> that can thus behave asynchronously.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-Concurrency-AsyncAwait-Properties.png" alt="" class="img-fluid"></p>
@@ -391,12 +391,12 @@ These thread context switches are <strong>replaced by the continuations</strong>
 </div>
 </div>
 </br></br>
-<h2 id="tasks" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=34">Tasks</a> <a class="header-anchor" href="#tasks" id="heading-2039" aria-labelledby="heading-2039">#</a></h2>
+<h2 id="tasks" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=34">Tasks</a> <a class="header-anchor" href="#tasks" id="heading-2061" aria-labelledby="heading-2061">#</a></h2>
 <p>This <strong>new feature in Swift</strong> is introduced through an <a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=111">example</a> to point out its special connection with the new <code>async/await</code> syntax based on structured programming.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-Concurrency-TasksIntro.png" alt="" class="img-fluid"></p>
 <p><a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=237">Tasks</a> are of <strong>four different types</strong> that are described in details hereafter.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-Concurrency-TasksOverview.png" alt="" class="img-fluid"></p>
-<h3 id="async-let"><a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=291">Async-let</a> <a class="header-anchor" href="#async-let" id="heading-2040" aria-labelledby="heading-2040">#</a></h3>
+<h3 id="async-let"><a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=291">Async-let</a> <a class="header-anchor" href="#async-let" id="heading-2062" aria-labelledby="heading-2062">#</a></h3>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -454,23 +454,23 @@ These thread context switches are <strong>replaced by the continuations</strong>
 </div>
 </div>
 </br></br>
-<h3 id="group"><a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=773">Group</a> <a class="header-anchor" href="#group" id="heading-2041" aria-labelledby="heading-2041">#</a></h3>
+<h3 id="group"><a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=773">Group</a> <a class="header-anchor" href="#group" id="heading-2063" aria-labelledby="heading-2063">#</a></h3>
 <p>A task group is a form of structured concurrency that is designed to provide a dynamic amount of concurrency.</p>
 <p>When a specific <strong>dynamic amount of concurency tasks</strong> is required, the task group is the type to be implemented using the <a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=838">withThrowingTaskgroup</a> function to <strong>ceate child tasks</strong> thanks to the group's async method.</p>
 <p>An <a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=992">example</a> for downloading thumbnails highlights the new <code>for-await</code> loop to access an asynchronous sequence of values and explains the cancellation automation.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-Concurrency-Tasks-TaskGroup.png" alt="" class="img-fluid"></p>
 <p><strong>Manual cancellation of all tasks</strong> before exiting the block is also possible thanks to the <strong>cancelAll</strong> method applied to the group itself.</p>
-<h3 id="unstructured"><a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=1137">Unstructured</a> <a class="header-anchor" href="#unstructured" id="heading-2042" aria-labelledby="heading-2042">#</a></h3>
+<h3 id="unstructured"><a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=1137">Unstructured</a> <a class="header-anchor" href="#unstructured" id="heading-2064" aria-labelledby="heading-2064">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc21-Concurrency-Tasks-UnstructuredOverview.png" alt="" class="img-fluid"></p>
 <p>An interesting <a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=1197">example</a> is introduced to deliver an appropriate way to use this kind of task and to define the context in which it can be inserted.<br>
 <img src="../../../../../images/iOSdev/wwdc21-Concurrency-Tasks-UnstructuredExample.png" alt="" class="img-fluid"></p>
 <p><a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=1333">Cancellation</a> for unstructured tasks isn't automatic and <strong>must be implemented</strong> to be taken into account.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-Concurrency-Tasks-UnstructuredCancellation.png" alt="" class="img-fluid"></p>
-<h3 id="detached"><a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=1403">Detached</a> <a class="header-anchor" href="#detached" id="heading-2043" aria-labelledby="heading-2043">#</a></h3>
+<h3 id="detached"><a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=1403">Detached</a> <a class="header-anchor" href="#detached" id="heading-2065" aria-labelledby="heading-2065">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc21-Concurrency-Tasks-DetachedOverview.png" alt="" class="img-fluid"></p>
 <p>The combination of the structured concurrency inside of a detached task is carried out in an <a href="https://developer.apple.com/videos/play/wwdc2021/10134/?time=1435">example</a> performing the creation of a group with no error returns by using the <code>withTaskGroup</code> method.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-Concurrency-Tasks-DetachedExample.png" alt="" class="img-fluid"></p>
-<h2 id="actors" class="h2-focus">Actors <a class="header-anchor" href="#actors" id="heading-2044" aria-labelledby="heading-2044">#</a></h2>
+<h2 id="actors" class="h2-focus">Actors <a class="header-anchor" href="#actors" id="heading-2066" aria-labelledby="heading-2066">#</a></h2>
 <p>Set up concurrent programs may lead to different situations pointed out in a basic counter example:</p>
 <ol>
 <li>
@@ -495,7 +495,7 @@ These thread context switches are <strong>replaced by the continuations</strong>
 <p>Execution switching from one actor to another is called the <strong><a href="https://developer.apple.com/videos/play/wwdc2021/10254/?time=1852">actor hopping</a></strong> giving rise to the <strong><a href="https://developer.apple.com/videos/play/wwdc2021/10254/?time=2109">actor reentrancy</a></strong> notion that leads to a better scheduling and resource utilization.</p>
 <p>Actors <strong>guarantee <a href="https://developer.apple.com/videos/play/wwdc2021/10254/?time=1689">mutual exclusion</a></strong> while executing at most one method call at a time.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-Concurrency-ActorsMutualExclusion.png" alt="" class="img-fluid"></p>
-<h3 id="isolation"><a href="https://developer.apple.com/videos/play/wwdc2021/10133/?time=797">Isolation</a> <a class="header-anchor" href="#isolation" id="heading-2045" aria-labelledby="heading-2045">#</a></h3>
+<h3 id="isolation"><a href="https://developer.apple.com/videos/play/wwdc2021/10133/?time=797">Isolation</a> <a class="header-anchor" href="#isolation" id="heading-2067" aria-labelledby="heading-2067">#</a></h3>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -541,7 +541,7 @@ These thread context switches are <strong>replaced by the continuations</strong>
 </div>
 </div>
 </br></br>
-<h3 id="sendable">Sendable <a class="header-anchor" href="#sendable" id="heading-2046" aria-labelledby="heading-2046">#</a></h3>
+<h3 id="sendable">Sendable <a class="header-anchor" href="#sendable" id="heading-2068" aria-labelledby="heading-2068">#</a></h3>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -596,7 +596,7 @@ These thread context switches are <strong>replaced by the continuations</strong>
 </div>
 </div>
 </br>
-<h3 id="main-actor"><a href="https://developer.apple.com/videos/play/wwdc2021/10133/?time=1408">Main actor</a> <a class="header-anchor" href="#main-actor" id="heading-2047" aria-labelledby="heading-2047">#</a></h3>
+<h3 id="main-actor"><a href="https://developer.apple.com/videos/play/wwdc2021/10133/?time=1408">Main actor</a> <a class="header-anchor" href="#main-actor" id="heading-2069" aria-labelledby="heading-2069">#</a></h3>
 <p>Using the <a href="https://developer.apple.com/videos/play/wwdc2021/10133/?time=1496">@MainActor attribute</a> indicates that the examined element is <strong>working on the main thread</strong>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc21-Concurrency-ActorsMainActor_1.png" alt="" class="img-fluid"></p>
 <p>This <a href="https://developer.apple.com/videos/play/wwdc2021/10133/?time=1580">attribute on a specific type</a> ensures that its scope <strong>spreads all over the methods and properties</strong> of this type while giving the opportunity to get rid of it thanks to the <code>nonisolated</code> keyword.</p>

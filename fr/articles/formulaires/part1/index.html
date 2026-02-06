@@ -197,14 +197,14 @@
             
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-24" aria-labelledby="heading-24">#</a></h2>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-33" aria-labelledby="heading-33">#</a></h2>
 <p>Pour qu’un formulaire soit accessible à l’ensemble des utilisateurs, quelques règles doivent être respectées lors du développement.</p>
 <p>Nous verrons, dans cette première partie, comment bien construire son formulaire, puis, dans une deuxième partie, la soumission d'un formulaire et les étapes de validation.</p>
 <p>Nous allons développer un formulaire d'inscription afin de voir toutes les subtilités pour rendre un formulaire accessible.</p>
 <p>Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/" target="_blank">la librairie Boosted</a>. Celle-ci permet d’obtenir des formulaires dont le design est conforme à la charte Orange.</p>
-<h2 id="etiqueter-les-champs-de-formulaires" class="h2-focus">Étiqueter les champs de formulaires <a class="header-anchor" href="#etiqueter-les-champs-de-formulaires" id="heading-25" aria-labelledby="heading-25">#</a></h2>
+<h2 id="etiqueter-les-champs-de-formulaires" class="h2-focus">Étiqueter les champs de formulaires <a class="header-anchor" href="#etiqueter-les-champs-de-formulaires" id="heading-34" aria-labelledby="heading-34">#</a></h2>
 <p>Les étiquettes doivent décrire le rôle de chaque champ du formulaire. Afin que tous les utilisateurs puissent avoir accès à la même information, il est important que ces étiquettes soient correctement associées à leurs champs de formulaire. Pour réaliser ceci il existe plusieurs techniques.</p>
-<h3 id="la-balise-label">La balise label <a class="header-anchor" href="#la-balise-label" id="heading-26" aria-labelledby="heading-26">#</a></h3>
+<h3 id="la-balise-label">La balise label <a class="header-anchor" href="#la-balise-label" id="heading-35" aria-labelledby="heading-35">#</a></h3>
 <p>La solution privilégiée est l'utilisation de la balise <code>label</code>. C'est la mieux supportée par les technologies d'assistance. Il existe deux manières d'utiliser cette balise <code>label</code> :</p>
 <ul>
   <li>lier explicitement la balise
@@ -219,7 +219,7 @@
     <code>label</code>
     sera utilisée comme un conteneur entourant le champ de formulaire, La première solution est conseillée.</li>
 </ul>
-<h4 id="exemple">Exemple <a class="header-anchor" href="#exemple" id="heading-27" aria-labelledby="heading-27">#</a></h4>
+<h4 id="exemple">Exemple <a class="header-anchor" href="#exemple" id="heading-36" aria-labelledby="heading-36">#</a></h4>
 <p>Exemple d'étiquettes correctement liées de manière explicite :</p>
 <div class="col-md-8">
   <form id="formulaire" class="border border-secondary p-3 my-2">
@@ -256,12 +256,12 @@
   &lt;/form&gt;
   </code>
 </pre>
-<h3 id="masquer-les-etiquettes-de-maniere-accessible">Masquer les étiquettes de manière accessible <a class="header-anchor" href="#masquer-les-etiquettes-de-maniere-accessible" id="heading-28" aria-labelledby="heading-28">#</a></h3>
+<h3 id="masquer-les-etiquettes-de-maniere-accessible">Masquer les étiquettes de manière accessible <a class="header-anchor" href="#masquer-les-etiquettes-de-maniere-accessible" id="heading-37" aria-labelledby="heading-37">#</a></h3>
 <p>Dans certains cas, il peut être utile de masquer l'étiquette visuellement. Attention, on peut masquer les étiquettes si et seulement si la fonction champ est suffisamment claire et compréhensible dans son contexte: par exemple, un champ de recherche à côté d'une icone loupe.</p>
 <p>Même si l'étiquette est masquée visuellement, elle doit toujours être accessible pour les technologies d'assistance.</p>
 <p>Cette méthode consiste a utiliser une classe CSS (utilisation de la classe <code>visually-hidden</code> de Bootstrap/Boosted) permettant un masquage accessible. L’utilisation du masquage accessible permet de masquer l’élément à l’écran, tout en conservant sa vocalisation par les outils ou technologies d’assistance (AT). Attention, ne pas utiliser du masquage CSS classique (<code>display: none;</code> ou <code>visibility: hidden;</code>) car l’élément sera masqué également pour les lecteurs d’écran.</p>
 <p>Consultez l’exemple sur <a href="../../../web/exemples-de-composants/masquage-accessible/" target="_blank">l’exemple sur le masquage accessible</a> pour plus l’information.</p>
-<h4 id="exemple-2">Exemple <a class="header-anchor" href="#exemple-2" id="heading-29" aria-labelledby="heading-29">#</a></h4>
+<h4 id="exemple-2">Exemple <a class="header-anchor" href="#exemple-2" id="heading-38" aria-labelledby="heading-38">#</a></h4>
 <p>Par exemple, nous pouvons utiliser le masquage accessible pour un champ de recherche, si un bouton avec pour libellé recherche, ou une image loupe, est à coté du champ. Ainsi, l'étiquette du champ est cachée visuellement afin d'éviter une redondance.<br>
 Exemple de code :</p>
 <pre>
@@ -271,7 +271,7 @@ Exemple de code :</p>
     &lt;button type="submit"&gt;Recherche&lt;/button&gt;
   </code>
 </pre> 
-<h3 id="les-attributs-aria">Les attributs ARIA <a class="header-anchor" href="#les-attributs-aria" id="heading-30" aria-labelledby="heading-30">#</a></h3>
+<h3 id="les-attributs-aria">Les attributs ARIA <a class="header-anchor" href="#les-attributs-aria" id="heading-39" aria-labelledby="heading-39">#</a></h3>
 <p>Il est aussi possible d'utiliser les  attributs <code>aria-label</code> et <code>aria-labelledby</code> pour étiqueter des champs de formulaire, car ces attributs sont bien supportés par les navigateurs et dans les <abbr>AT</abbr> récentes :</p>
 <ul>
   <li>L’attribut <code>aria-labelledby</code> permet de préciser l’<code>id</code> d’un élément présent dans le code qui sera utilisé pour étiqueter le champ.
@@ -285,7 +285,7 @@ Exemple de code :</p>
     &lt;button id="recherche" type="submit" class="icon-loup" aria-label="Recherche"&gt;&lt;/button&gt;
   </code>
 </pre>
-<h3 id="lattribut-title">L'attribut title <a class="header-anchor" href="#lattribut-title" id="heading-31" aria-labelledby="heading-31">#</a></h3>
+<h3 id="lattribut-title">L'attribut title <a class="header-anchor" href="#lattribut-title" id="heading-40" aria-labelledby="heading-40">#</a></h3>
 <p>L’attribut <code>title</code> permet d’étiqueter un champ de formulaire de manière accessible. Il déclenchera également l’affichage d’une info-bulle au survol de l’élément avec la souris, bonne chose pour les déficients cognitifs, les novices du numérique.</p>
 <p>Attention, nous pourrions être tentés d'utiliser l'attribut <code>placeholder</code>. Cet attribut n'est pas assez robuste, en effet :</p>
 <ul>
@@ -298,11 +298,11 @@ Exemple de code :</p>
   <li>il rend les corrections difficiles en cas d’erreur s'il n'existe pas de label affiché&nbsp;;</li>
 </ul>
 <p>En revanche, le <code>placeholder</code> peut servir de guide, d’aide pour remplir le champ sans que cette information soit absolument nécessaire (par exemple, proposer une valeur attendue valide) : ne pas hésiter à l’utiliser pour ce type de besoin.</p>
-<h2 id="regrouper-les-champs-de-meme-nature" class="h2-focus">Regrouper les champs de même nature <a class="header-anchor" href="#regrouper-les-champs-de-meme-nature" id="heading-32" aria-labelledby="heading-32">#</a></h2>
+<h2 id="regrouper-les-champs-de-meme-nature" class="h2-focus">Regrouper les champs de même nature <a class="header-anchor" href="#regrouper-les-champs-de-meme-nature" id="heading-41" aria-labelledby="heading-41">#</a></h2>
 <p>Lorsque nécessaire, il est important de regrouper les champs de même nature, ça permettra de rendre l'ensemble du formulaire plus compréhensible.<br>
 La plupart du temps, on regroupe nos boutons radio, ou nos cases à cocher, afin d'associer une entête à ces éléments.</p>
 <p>Pour les regrouper, on utilise la balise <code>fieldset</code>, qui aura comme premier enfant la balise <code>legend</code> qui servira d'entête à nos champs regroupés.</p>
-<h3 id="exemple-3">Exemple <a class="header-anchor" href="#exemple-3" id="heading-33" aria-labelledby="heading-33">#</a></h3>
+<h3 id="exemple-3">Exemple <a class="header-anchor" href="#exemple-3" id="heading-42" aria-labelledby="heading-42">#</a></h3>
 <p>Dans notre formulaire d'inscription, on peut ajouter le genre de notre utilisateur. Pour cela, on va implémenter des boutons radio, et les regrouper avec l'entête <strong>Genre</strong></p>
 <div class="col-md-8">
   <form id="formulaire3" class="border border-secondary p-3 my-2">
@@ -349,14 +349,14 @@ La plupart du temps, on regroupe nos boutons radio, ou nos cases à cocher, afin
   &lt;/div&gt;
   </code>
 </pre>
-<h2 id="preciser-le-type-ou-le-format-attendu" class="h2-focus">Préciser le type ou le format attendu <a class="header-anchor" href="#preciser-le-type-ou-le-format-attendu" id="heading-34" aria-labelledby="heading-34">#</a></h2>
+<h2 id="preciser-le-type-ou-le-format-attendu" class="h2-focus">Préciser le type ou le format attendu <a class="header-anchor" href="#preciser-le-type-ou-le-format-attendu" id="heading-43" aria-labelledby="heading-43">#</a></h2>
 <p>Pour aider l'utilisateur, il est aussi important de lui préciser le type ou le format attendu lorsque nécessaire. Par exemple, pour une date de naissance, on doit, si besoin, lui indiquer le format de saisie (jj/mm/aaaa).</p>
 <p>Pour informer l'utilisateur, on peut :</p>
 <ul>
   <li>fournir les instructions dans le label</li>
   <li>utiliser l'attribut <code>aria-labelledby</code> ou <code>aria-describedby</code></li>
 </ul>
-<h3 id="exemple-4">Exemple <a class="header-anchor" href="#exemple-4" id="heading-35" aria-labelledby="heading-35">#</a></h3>
+<h3 id="exemple-4">Exemple <a class="header-anchor" href="#exemple-4" id="heading-44" aria-labelledby="heading-44">#</a></h3>
 <p>Pour notre formulaire d'inscription, nous allons rajouter un champ mot de passe en précisant le format que l'on souhaite.</p>
 <p>Lorsqu'on ajoute un champ mot de passe, il est aussi important de laisser la possibilité d'afficher ou de cacher le mot de passe. Cela permet aux utilisateurs atteint de troubles moteurs, de l'attention ou cognitifs d'éviter d'éventuelles erreurs de saisie.</p>
 <div class="col-md-8">
@@ -407,7 +407,7 @@ La plupart du temps, on regroupe nos boutons radio, ou nos cases à cocher, afin
   &lt;/div&gt;
   </code>
 </pre>
-<h2 id="exemple-complet" class="h2-focus">Exemple complet <a class="header-anchor" href="#exemple-complet" id="heading-36" aria-labelledby="heading-36">#</a></h2>
+<h2 id="exemple-complet" class="h2-focus">Exemple complet <a class="header-anchor" href="#exemple-complet" id="heading-45" aria-labelledby="heading-45">#</a></h2>
 <p>L'exemple complet avec tous les éléments que l'on a passés en revue. Dans la deuxième partie, on verra comment valider le formulaire et gérer les messages d'erreurs.<br>
 Pour la suite de l'exercice et compléter notre formulaire d'inscription, nous avons rajouté des champs pour l'adresse (adresse, ville, code postal).</p>
 <div class="col-md-8">
@@ -542,7 +542,7 @@ Pour la suite de l'exercice et compléter notre formulaire d'inscription, nous a
   &lt;/div&gt;
   </code>
 </pre>
-<h2 id="lien-vers-la-deuxieme-partie" class="h2-focus">Lien vers la deuxième partie <a class="header-anchor" href="#lien-vers-la-deuxieme-partie" id="heading-37" aria-labelledby="heading-37">#</a></h2>
+<h2 id="lien-vers-la-deuxieme-partie" class="h2-focus">Lien vers la deuxième partie <a class="header-anchor" href="#lien-vers-la-deuxieme-partie" id="heading-46" aria-labelledby="heading-46">#</a></h2>
 <p><a href="../part2/">Formulaire partie 2 - Soumettre son formulaire</a></p>
 
           </div>
