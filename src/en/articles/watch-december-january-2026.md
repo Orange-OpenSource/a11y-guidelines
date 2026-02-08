@@ -58,7 +58,7 @@ I also wanted to mention Dennis Deacon's monumental work on how to test WCAG 2.2
 - Important points on the a11y DOM: https://www.maxdesign.com.au/articles/assumptions.html
 - Text fields and a11y: https://inklusivo.nl/blog/accessible-text-field-anatomy/
 - List style: none and a11y: https://www.maxdesign.com.au/articles/lists.html
-- Two articles to read together, all about aria-labelledby: https://www.maxdesign.com.au/articles/aria-labelledby.html and https://www.maxdesign.com.au/articles/test-cases-labelledby-describeby.html
+- Two articles to read together, all about aria-labelledby: https://www.maxdesign.com.au/articles/aria-labelledby.html and https://www.maxdesign.com.au/articles/test-cases-labelledby-describedby.html
 - Shadow DOM and browser display: https://www.maxdesign.com.au/articles/the-shadow-dom.html
 
 ## User Experience, User Interface
