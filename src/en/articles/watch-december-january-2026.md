@@ -25,7 +25,7 @@ I also wanted to mention Dennis Deacon's monumental work on how to test WCAG 2.2
 ## Accessibility Implementation Strategy
 
 - A11y and the media (fr): https://www.24joursdeweb.fr/2025/quand-l-obligation-legale-rejoint-la-mission-des-medias-d-informer-tous-les-publics
-- Design systems and a11y, some ideas (fr): https://www.24joursdeweb.fr/2025/le-design-system-de-la-fabrique-de-
+- Design systems and a11y, some ideas (fr): https://www.24joursdeweb.fr/2025/le-design-system-de-la-fabrique-de-noel
 - The race for numbers, or compliance percentages: https://buttondown.com/access-ability/archive/dont-fall-into-the-accessibility-gradescore-trap/
 - Create a sustainable a11y program: https://equalentry.com/accessibility-program-sustainability/
 - Compliance and a11y accessibility (fr): https://www.24joursdeweb.fr/2025/n-opposons-pas-conformite-et-accessibilite
@@ -58,7 +58,7 @@ I also wanted to mention Dennis Deacon's monumental work on how to test WCAG 2.2
 - Important points on the a11y DOM: https://www.maxdesign.com.au/articles/assumptions.html
 - Text fields and a11y: https://inklusivo.nl/blog/accessible-text-field-anatomy/
 - List style: none and a11y: https://www.maxdesign.com.au/articles/lists.html
-- Two articles to read together, all about aria-labelledby: https://www.maxdesign.com.au/articles/aria-labelledby.html and https://www.maxdesign.com.au/articles/test-cases-labelledby-describeby.html
+- Two articles to read together, all about aria-labelledby: https://www.maxdesign.com.au/articles/aria-labelledby.html and https://www.maxdesign.com.au/articles/test-cases-labelledby-describedby.html
 - Shadow DOM and browser display: https://www.maxdesign.com.au/articles/the-shadow-dom.html
 
 ## User Experience, User Interface
