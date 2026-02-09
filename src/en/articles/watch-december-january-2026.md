@@ -54,7 +54,7 @@ I also wanted to mention Dennis Deacon's monumental work on how to test WCAG 2.2
 - Math formula and a11y: https://www.htmhell.dev/adventcalendar/2025/12/
 - A short, effective course in web semantics: https://www.htmhell.dev/adventcalendar/2025/19/
 - Complex tables and a11y (fr): https://www.24joursdeweb.fr/2025/des-tableaux-de-donnees-complexes-accessibles-c-est-possible
-- Titles and a11y (fr): https://www:.24joursdeweb.fr/2025/title-ce-faux-ami-de-l-accessibilite
+- Titles and a11y (fr): https://www.24joursdeweb.fr/2025/title-ce-faux-ami-de-l-accessibilite
 - Important points on the a11y DOM: https://www.maxdesign.com.au/articles/assumptions.html
 - Text fields and a11y: https://inklusivo.nl/blog/accessible-text-field-anatomy/
 - List style: none and a11y: https://www.maxdesign.com.au/articles/lists.html
