@@ -257,12 +257,12 @@
           
           <div class="mt-4">
           <h1>Text size enlargement</h1>
-<h2 id="how-to-test" class="h2-focus">How to test? <a class="header-anchor" href="#how-to-test" id="heading-1699" aria-labelledby="heading-1699">#</a></h2>
+<h2 id="how-to-test" class="h2-focus">How to test? <a class="header-anchor" href="#how-to-test" id="heading-1747" aria-labelledby="heading-1747">#</a></h2>
 <p>One of the accessibility requirements is being able to enlarge the text up to 200% —only the text size, not the entire page. Actually when you use the browser default zoom it enlarges the entire page adding vertical and horizontal scrollbars. For example, reading a blog could be very tedious because you would have to scroll all the time to access the content.</p>
 <p>Increasing only the text size does not necessarily add a horizontal scrollbar. You must verify that at this zoom level (200%), the text remains readable. No text must be truncated or superposed. Information must be accessible even if the presentation can be somewhat altered.</p>
 <p>To enlarge only the text size, tick the “Zoom Text Only” option in Firefox. To enlarge the text by 200% press <kbd>Ctrl +</kbd> four times.</p>
 <p><img src="../../../images/zoom-firefox.png" alt="screenshot of the “Zoom text only” option, in Firefox" class="img-fluid"></p>
-<h2 id="what-implications-for-development" class="h2-focus">What implications for development? <a class="header-anchor" href="#what-implications-for-development" id="heading-1700" aria-labelledby="heading-1700">#</a></h2>
+<h2 id="what-implications-for-development" class="h2-focus">What implications for development? <a class="header-anchor" href="#what-implications-for-development" id="heading-1748" aria-labelledby="heading-1748">#</a></h2>
 <p>If your page is not displayed correctly when you enlarge the text, it might be because you use the pixel as length unit for text size and container size (height or width of a <code>div</code>...).<br>
 To fix display issues when the zoom is set to 200%, it is not necessary to remove all pixels units from all your code but correct only the unreadable content (replacing <code>px</code> by <code>%</code>, <code>em</code> or <code>rem</code>).</p>
 <p><strong>Example with 100% zoom</strong><br>
