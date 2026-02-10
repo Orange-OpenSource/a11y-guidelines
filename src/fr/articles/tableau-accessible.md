@@ -90,7 +90,7 @@ L'attribut <code>scope</code> permet de lier programmatiquement les cellules aux
 Certains tableaux sont trop complexes pour identifier une association horizontale ou verticale stricte entre l'en-tête et les cellules des données (par exemple, fusion de colonnes ou de lignes ou en-têtes à plusieurs niveaux).
 L'attribut <code>scope</code> ne permet pas de restituer cette organisation. Il faut utiliser un attribut <code>id</code> unique pour chaque cellule d'en-tête. Pour relier cet en-tête à une cellule, il faudra utiliser l'attribut <code>headers</code> en y rajoutant les <code>id</code> voulus.
 
-Par exemple, supposons deux cellules d'en-têtes, <code>&lt;th id="toto"&gt;Toto&lt;/th&gt;</code> et <code>&lt;th id="tata"&gt;Tata&lt;/th&gt;</code>, le code pour la relier à une cellule de donnée sera <code>&lt;td headers="toto tata"&gt;Tota&lt;/td&gt;</code>.
+Par exemple, supposons deux cellules d'en-têtes, <code>&lt;th id="toto"&gt;Toto&lt;/th&gt;</code> et <code>&lt;th id="tata"&gt;Tata&lt;/th&gt;</code>, le code pour la relier à une cellule de données sera <code>&lt;td headers="toto tata"&gt;Tota&lt;/td&gt;</code>.
 
 Un tableau doit utiliser <code>headers/id</code> uniquement si&nbsp;:
 <ul>
