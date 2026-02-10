@@ -17,7 +17,7 @@ This allows a sighted user to quickly make visual associations between table dat
 
 However, a blind user will not have access to all these relations between the information, it's the reason why it is important that a table is implemented with the appropriate HTML markup so that it is correctly rendered by assistive technologies.
 
-In the rest of this article, we will see the main rules to follow to obtain an accessible table.
+In the rest of this article, we will see the main rules to follow to create an accessible table.
 
 ### Add a caption/title to your table
 
@@ -27,7 +27,7 @@ It must be associated with the table using the <code>caption</code> element and 
 #### Example using <code>caption</code>
 <pre><code class="html">
 &lt;table&gt;
-    &lt;caption&gt;Time planning 2022&lt;/caption&gt;
+    &lt;caption&gt;2022 timetable&lt;/caption&gt;
     [...]
 &lt;/table&gt;
 </code></pre>
@@ -135,13 +135,13 @@ To browse in tables, there are several shortcuts:
 <li><kbd>Insert</kbd> + <kbd>Shift</kbd> + <kbd>5</kbd> reads the entire column.</li>
 </ul>
 
-## Table example
+## Table examples
 
 We will now show you examples of accessible tables.
 
 ### Simple table
 
-The first example is a table with only headers on the columns, so we use the <code>scope="row"</code> attribute for assistive technologies to interpret it correctly.
+The first example is a table with only headers on the columns, so we use the <code>scope="col"</code> attribute for assistive technologies to interpret it correctly.
 
 <table class="table">
   <caption class="h4">People with their professional activity</caption>
