@@ -11,7 +11,7 @@ tags:
 
 ## General presentation
 
-A table is an arrangement of information in rows and columns containing cells that make it easy to compare and highlight information. It allows tabular information to be presented in a two-dimensional grid, such data is easier to read in tabular form.
+A table is an arrangement of information in rows and columns containing cells that make it easy to compare and highlight information. It allows tabular data to be presented in a two-dimensional grid, such data is easier to read in tabular form.
 
 This allows a sighted user to quickly make visual associations between table data and its table headings.
 
@@ -245,6 +245,7 @@ This table requires two headers, one for the days of the week and another for th
      <td>Open</td>
      <td>Open</td>
    </tr>
+   <tr>
    <th scope="row">15:00 - 17:00</th>
      <td>Open</td>
      <td>Open</td>
