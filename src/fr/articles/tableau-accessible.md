@@ -12,7 +12,7 @@ tags:
 
 ## Présentation générale
 
-Un tableau est un agencement d'informations en lignes et en colonnes contenant des cellules facilitant la comparaison et la mise en avant des informations.
+Un tableau est un agencement d'informations en lignes et en colonnes contenant des cellules facilitant la comparaison et la mise en avant des données.
 Il permet de présenter des informations tabulaires dans une grille en deux dimensions, ces données étant souvent plus faciles à lire sous forme de tableau. 
 
 Cela permet à un utilisateur voyant d'établir rapidement des associations visuelles entre les données du tableau et ses en-têtes.
