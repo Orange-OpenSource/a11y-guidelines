@@ -248,6 +248,7 @@ Ce tableau nécessite deux en-têtes, un en-tête de colonne pour les jours de l
     <td>Ouvert</td>
     <td>Ouvert</td>
   </tr>
+  <tr>
   <th scope="row">15:00 - 17:00</th>
     <td>Ouvert</td>
     <td>Ouvert</td>
