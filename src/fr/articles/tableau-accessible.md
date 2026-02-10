@@ -43,7 +43,7 @@ Une autre façon de donner un titre est l'utilisation des attributs <code>aria-l
 &lt;/table&gt;
 </code></pre>
 
-En dernier recours, il est également possible d'utiliser l'attribut <code>title</code>, un titre doit cependant être visible.
+En dernier recours, il est également possible d'utiliser l'attribut <code>title</code>. Le titre doit cependant être visible.
 
 #### Exemple avec <code>title</code>
 <pre><code class="html">
