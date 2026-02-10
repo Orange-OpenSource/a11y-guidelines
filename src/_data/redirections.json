@@ -72,10 +72,6 @@
     "new": "/en/planning"
   },
   {
-    "old": "index.html",
-    "new": "/fr"
-  },
-  {
     "old": "methode-tests-utilisateur.html",
     "new": "/fr/methode-tests-utilisateur"
   },
