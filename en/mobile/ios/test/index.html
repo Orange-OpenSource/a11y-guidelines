@@ -212,7 +212,7 @@
 <p>Each one of these features should be seen as an important <strong>human-made</strong> element for the user comfort and not just a functional one.</p>
 <p>Whatever the design, implementation or testing area, <strong>every decision</strong> must be particularly <strong>empathetic</strong> to provide the best user experience.</p>
 <div><q>An accessible product is a high-quality product</q><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=56"> WWDC 2023 - Perform Accessibility Audits For Your App (watch the video)</a></div>
-<h2 id="fundamental-prerequisites" class="h2-focus">Fundamental prerequisites <a class="header-anchor" href="#fundamental-prerequisites" id="heading-1449" aria-labelledby="heading-1449">#</a></h2>
+<h2 id="fundamental-prerequisites" class="h2-focus">Fundamental prerequisites <a class="header-anchor" href="#fundamental-prerequisites" id="heading-1444" aria-labelledby="heading-1444">#</a></h2>
 <ol>
 <li>
 <p>Spend as much time as necessary to perfectly control the gestures (<a href="../voiceover/">VoiceOver user guide</a>, Switch Control).</p>
@@ -231,7 +231,7 @@
 <br><br></p>
 </li>
 </ol>
-<h2 id="working-environment" class="h2-focus">Working environment <a class="header-anchor" href="#working-environment" id="heading-1450" aria-labelledby="heading-1450">#</a></h2>
+<h2 id="working-environment" class="h2-focus">Working environment <a class="header-anchor" href="#working-environment" id="heading-1445" aria-labelledby="heading-1445">#</a></h2>
 <p>Four different groups may be described as parts of every project:</p>
 <ul>
 <li>
@@ -259,7 +259,7 @@ Sometimes, this mode also confirms and solves any functional problems.<br>
 <br></p>
 </li>
 </ul>
-<h2 id="functional-review" class="h2-focus">Functional review <a class="header-anchor" href="#functional-review" id="heading-1451" aria-labelledby="heading-1451">#</a></h2>
+<h2 id="functional-review" class="h2-focus">Functional review <a class="header-anchor" href="#functional-review" id="heading-1446" aria-labelledby="heading-1446">#</a></h2>
 <p>There's no need in having technical knowledge for this part but (de)activate and use iOS accessibility features.</p>
 <p>Besides the <a href="../design/">design criteria</a> to be followed, it's crucial to be sure that the <a href="../design/#accessibility-options">accessibility options</a> activated by a user are operational in the whole application.</p>
 <p>Few important criteria to be imperatively tested are introduced hereunder:</p>
@@ -293,7 +293,7 @@ These effects can be weakened by the system thanks to an <a href="../wwdc/2018/2
 </li>
 </ol>
 <p><img src="../../images/ios-test-overview.png" alt="Main accessibility options on iOS: user settings, shortcuts &amp; Siri, dark mode, Dynamic type, Voice Over, Switch control" class="img-fluid"></p>
-<h3 id="dynamic-type">Dynamic Type <a class="header-anchor" href="#dynamic-type" id="heading-1452" aria-labelledby="heading-1452">#</a></h3>
+<h3 id="dynamic-type">Dynamic Type <a class="header-anchor" href="#dynamic-type" id="heading-1447" aria-labelledby="heading-1447">#</a></h3>
 <p>To understand how this feature works, it's highly recommended to watch the example in this <a href="../wwdc/2017/245/#example-2432">WWDC 2017 video</a> that is detailed in the WWDC part of this site.</p>
 <p>Tests should be made with devices having different screen sizes in order to <strong>imperatively check every page</strong>.</p>
 <p>Three zoom levels must be particularly scanned to determine the visual behavior at extremes:</p>
@@ -329,7 +329,7 @@ The following points must be thoroughly checked:</p>
 <p>All these <strong>tests are quite long to be performed</strong> because every screen is impacted with different devices including the changing of the text size inside each one of them.</p>
 <div><q>My biggest tip is to think about these early on in the design process.</q>&nbsp;<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=562">WWDC 2020 - Make Your App Visually Accessible (watch the video)</a></div>
 <br><br>
-<h3 id="voiceover">VoiceOver <a class="header-anchor" href="#voiceover" id="heading-1453" aria-labelledby="heading-1453">#</a></h3>
+<h3 id="voiceover">VoiceOver <a class="header-anchor" href="#voiceover" id="heading-1448" aria-labelledby="heading-1448">#</a></h3>
 <p>The iOS native screen reader activation drastically changes the visual behavior obtained with the common gestures, that's why its <a href="../voiceover/">control</a> takes a little while.</p>
 <p>It's <strong>highly recommended</strong> to know the basic gestures before activating this feature in the device user settings.</p>
 <ul class="nav nav-tabs" role="tablist">
@@ -387,7 +387,7 @@ The following points must be thoroughly checked:</p>
 <p>All these <strong>tests are quite long to be performed</strong> and they require a strong empathy to suggest constructive criticism  of the vocally VoiceOver information.</p>
 <p>Morevover, <strong>if the screen reader isn't implemented yet</strong>, it's essential to <strong>inform the user</strong> about this situation once the <a href="../development/#vocalized-application-name">application icon is selected</a> so as to avoid disappointement and possible frustration.<br>
 <br><br></p>
-<h3 id="switch-control">Switch Control <a class="header-anchor" href="#switch-control" id="heading-1454" aria-labelledby="heading-1454">#</a></h3>
+<h3 id="switch-control">Switch Control <a class="header-anchor" href="#switch-control" id="heading-1449" aria-labelledby="heading-1449">#</a></h3>
 <p>The accessibility <a href="https://support.apple.com/en-us/HT201370">Switch Control</a> feature revolves around the <strong>point mode</strong> and the <strong>item mode</strong>.</p>
 <p><img src="../../images/ios-test-SwitchControl.png" alt="" class="img-fluid"></p>
 <p>The element selection using the item mode works fine when the user interface isn't too complicated and uses native elements.</p>
@@ -429,15 +429,15 @@ The following points must be thoroughly checked:</p>
 <p><img src="../../images/ios-test-SwitchControl_iOS12.png" alt="On iOS 12: enable Switch Control from the Settings-Accessibility-Switch Control menu" class="img-fluid"></p>
 </div></div>
 <br>
-<h2 id="technical-review" class="h2-focus">Technical review <a class="header-anchor" href="#technical-review" id="heading-1455" aria-labelledby="heading-1455">#</a></h2>
+<h2 id="technical-review" class="h2-focus">Technical review <a class="header-anchor" href="#technical-review" id="heading-1450" aria-labelledby="heading-1450">#</a></h2>
 <p>The use of this section requires more or less special expertise according to what must be checked.<br>
 <br></p>
-<h3 id="colour-contrast">Colour contrast <a class="header-anchor" href="#colour-contrast" id="heading-1456" aria-labelledby="heading-1456">#</a></h3>
+<h3 id="colour-contrast">Colour contrast <a class="header-anchor" href="#colour-contrast" id="heading-1451" aria-labelledby="heading-1451">#</a></h3>
 <p>The <a href="../design/#colours">colour contrast</a> is certainly the easiest point to be checked thanks to softwares (Colour Contrast Analyzer...).</p>
 <p>Since Xcode 11, the Accessibility Inspector tool provides a specific <a href="../wwdc/2019/#color-contrast-0626">Color Contrast Calculator</a> feature that reaches the same purpose.<br>
 <br>It's also crucial to take into account the brightness difference (value &gt; 125) and the colour difference (value &gt; 500) as described in the design criteria section dealing with colours.<br>
 <br><br></p>
-<h3 id="code-review">Code review <a class="header-anchor" href="#code-review" id="heading-1457" aria-labelledby="heading-1457">#</a></h3>
+<h3 id="code-review">Code review <a class="header-anchor" href="#code-review" id="heading-1452" aria-labelledby="heading-1452">#</a></h3>
 <p>The Xcode <abbr>IDE</abbr> contains a very interesting tool entitled <strong>Accessibility Inspector</strong>.</p>
 <p>Its goal and way of being used won't be developed here because they're perfectly explained in these detailed videos:</p>
 <ul>
@@ -453,7 +453,7 @@ The following points must be thoroughly checked:</p>
 </ul>
 <p>... that are highly recommended to be watched.<br>
 <br><br></p>
-<h3 id="code-testing">Code testing <a class="header-anchor" href="#code-testing" id="heading-1458" aria-labelledby="heading-1458">#</a></h3>
+<h3 id="code-testing">Code testing <a class="header-anchor" href="#code-testing" id="heading-1453" aria-labelledby="heading-1453">#</a></h3>
 <p>Many kinds of tests (unit tests...) may be set up by the developers in order to maintain a <strong>stable and reliable code</strong> over time.</p>
 <p>These good practice ensure functional continuity by being informed of any deviation introduced in subsequent developments.</p>
 <p>Take a look at the <a href="../wwdc/nota11y/2023/2310035/"><code>Perform</code> <code>accessibility</code> <code>audits</code> <code>for</code> <code>your</code> <code>app</code></a> video if further information are necessary to include <strong>automation elements</strong> in your tests for instance.<br>
