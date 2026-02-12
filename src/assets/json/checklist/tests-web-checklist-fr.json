@@ -83,20 +83,6 @@
 	"ID": "testWebID-18", 
 	"IDorigin": "testWebID-18" 
 }, {
-	"themes": "Navigation générale",
-	"title": "Permettre le contrôle des animations",
-	"type": ["Test manuel"],
-	"tests": ["Identifier tout contenu en mouvement, mis à jour automatiquement, clignotant ou en défilement, durant plus de 5 secondes et lancé automatiquement (exemple : un carrousel)."],
-	"verifier": [["Pour chaque contenu animé, un mécanisme est présent pour permettre à l'utilisateur de le mettre en pause ou de le masquer."], ["Ce mécanisme est accessible à la souris et à la navigation clavier."]],
-	"resultat": ["L'utilisateur peut mettre pause ou masquer les animations, les mouvements, les mises à jour ou les clignotements."],
-	"exception": "",
-	"raccourcis": "",
-	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/navigation-generale/#permettre-le-controle-des-animations",
-    "profils": ["Checklist incontournables"], 
-	"wcag": ["2.2.2"],
-	"ID": "testWebID-37",
-	"IDorigin": "testWebID-37"
-}, {
 	"themes": "Navigation clavier",
 	"title": "Permettre l'utilisation de l'application au clavier",
 	"type": ["Navigation clavier"],
@@ -124,6 +110,20 @@
 	"wcag": ["1.4.11"],
 	"ID": "testWebID-42",
 	"IDorigin": "testWebID-42"
+}, {
+	"themes": "Mise en page",
+	"title": "S'assurer que le contenu présenté peut être réduit sans perte d'information",
+	"type": ["Test manuel"],
+	"tests": ["Utiliser l'inspecteur de code du navigateur", "Accéder à la vue adaptative avec les touches <kbd>Ctrl + shift + M</kbd> ou cliquer sur l'onglet \"vu adaptative\"."],
+	"verifier": [["Pour les contenus dont le sens de défilement est vertical : réduire la fenêtre à 320px de large."], ["Pour les contenus dont le sens de défilement est horizontal : réduire la fenêtre à 256px de haut."]],
+	"resultat": [["L'utilisateur peut accéder à l'ensemble du contenu sans nécessité de défillement horizontalement ou verticalement."], ["La barre de défilement est présente, mais son utilisation n'est pas nécessaire pour accéder au contenu informatif ou pour utiliser les fonctionnalités de la page."]],
+	"exception": "Le critère est non applicable pour des contenus nécessitant les deux dimensions pour être compréhensibles comme des images, cartes, présentations, tableaux de données, jeux, etc.",
+	"raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/fr/web/developper/mise-en-page/#utiliser-des-tailles-relatives-et-faire-du-web-adaptatif",
+    "profils": ["Checklist incontournables"], 
+	"wcag": ["2.2.2"],
+	"ID": "testWebID-37",
+	"IDorigin": "testWebID-37"
 }, {
 	"themes": "Formulaires",
 	"title": "S'assurer qu'un nom accessible est associé à chaque champ de formulaire",
