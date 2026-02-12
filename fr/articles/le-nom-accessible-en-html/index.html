@@ -196,33 +196,33 @@
             
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-230" aria-labelledby="heading-230">#</a></h2>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-358" aria-labelledby="heading-358">#</a></h2>
 <p>Le nom (<span lang="en">name</span>) du composant d'interface est appelé aussi nom accessible  (<span lang="en">accessible name</span>), c'est globalement ce nom qui va être exposé à la technologie d'assistance <abbr>AT</abbr> via l'<abbr>API</abbr> d'accessibilité (<span lang="en">accessibility <abbr>API</abbr></span>). Ce nom est calculé par le navigateur via un algorithme appelé <a href="https://www.w3.org/TR/accname-1.1/"><span lang="en">Accessible Name and Description Computation 1.1</span></a>.<br>
 En fait, pour faire simple, le navigateur va générer un arbre accessible (<span lang="en">accessibility tree</span>) à partir du <span lang="en">Document Model Object</span> (<abbr>DOM</abbr>) dans lequel une grande majorité des éléments <abbr>HTML</abbr> (ceux qui n'ont qu'un but de présentation, ex. : balises <code>div</code> et <code>span</code> n'en ont pas l'utilité) ont besoin d'un nom (accessible) pour être correctement identifiés par l'<abbr>AT</abbr>.</p>
 <p>Le nom accessible est issu du contenu d'une balise, d'attributs de cette balise ou d'un élément qui lui est associé.</p>
-<h2 id="en-pratique-comment-ca-marche" class="h2-focus">En pratique, comment ça marche ? <a class="header-anchor" href="#en-pratique-comment-ca-marche" id="heading-231" aria-labelledby="heading-231">#</a></h2>
+<h2 id="en-pratique-comment-ca-marche" class="h2-focus">En pratique, comment ça marche ? <a class="header-anchor" href="#en-pratique-comment-ca-marche" id="heading-359" aria-labelledby="heading-359">#</a></h2>
 <p>Le nom accessible est, par exemple, annoncé par un lecteur d'écran à la prise de focus sur cet élément mais le rôle de l'élément est aussi ajouté (lien, graphique, bouton...).</p>
-<h3 id="acceder-au-nom-accessible-via-le-navigateur">Accéder au nom accessible via le navigateur <a class="header-anchor" href="#acceder-au-nom-accessible-via-le-navigateur" id="heading-232" aria-labelledby="heading-232">#</a></h3>
+<h3 id="acceder-au-nom-accessible-via-le-navigateur">Accéder au nom accessible via le navigateur <a class="header-anchor" href="#acceder-au-nom-accessible-via-le-navigateur" id="heading-360" aria-labelledby="heading-360">#</a></h3>
 <p>Pour accéder au nom (accessible), le plus simple est d'utiliser les outils des navigateurs.</p>
 <p>Dans Chrome, il faut utiliser les Chrome dev tools (<kbd>Ctrl+ Maj. + i</kbd>) pour inspecter un élément et ouvrir le panneau &quot;Accessibility&quot; à la place de celui de &quot;Style&quot; (généralement à droite). On accède à l'&quot;Accessibility tree&quot; et dans &quot;Computed properties&quot; au &quot;Name&quot;, le nom accessible de l'élément inspecté.</p>
 <p><img src="../../web/images/chrome_name.png" alt="Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert" class="img-fluid"></p>
 <p>Dans FireFox, il faut utiliser les dev tools (<kbd>Ctrl+ Maj. + i</kbd>), ouvrir l'onglet &quot;Accessibilité&quot; (à afficher les &quot;Options&quot; des dev tools), inspecter un élément. On accède au &quot;Name&quot;, le nom accessible de l'élément inspecté.</p>
 <p><img src="../../web/images/FF_name.png" alt="Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert" class="img-fluid"></p>
-<h3 id="contenu-dune-balise">Contenu d'une balise <a class="header-anchor" href="#contenu-dune-balise" id="heading-233" aria-labelledby="heading-233">#</a></h3>
+<h3 id="contenu-dune-balise">Contenu d'une balise <a class="header-anchor" href="#contenu-dune-balise" id="heading-361" aria-labelledby="heading-361">#</a></h3>
 <p><code>&lt;a href=&quot;canard.html&quot;&gt;canards en plastique&lt;/a&gt;</code></p>
 <p>Ici, le nom du lien est le contenu (libellé) de celui-ci : &quot;canards en plastique&quot;. Un utilisateur de lecteur d'écran à la prise de focus sur cet élément entendra : &quot;canards en plastique lien&quot;. Pour un utilisateur de commande vocale, pour cliquer sur ce lien, dira : &quot;cliquer canards en plastique lien&quot;.</p>
 <p>Donc, un élément de ce type <code>&lt;button type=”submit”&gt;&lt;/button&gt;</code> sans intitulé, ne sera pas accessible, bien sûr !</p>
 <p>Également, on peut additionner les éléments pour donner un nom.</p>
 <p><code>&lt;button type=”submit”&gt;Acheter &lt;img alt=&quot;le canard en plastique&quot; src=&quot;canard.jpg&quot;&gt;&lt;/button&gt;</code></p>
 <p>Ce bouton aura lui un nom accessible qui est le contenu du bouton : l'intitulé textuel, &quot;Acheter &quot; plus le <code>alt</code> de l'image : &quot;le canard en plastique&quot; donc &quot;Acheter le canard en plastique&quot;.</p>
-<h3 id="element-associe">Élément associé <a class="header-anchor" href="#element-associe" id="heading-234" aria-labelledby="heading-234">#</a></h3>
+<h3 id="element-associe">Élément associé <a class="header-anchor" href="#element-associe" id="heading-362" aria-labelledby="heading-362">#</a></h3>
 <p>Par ailleurs, pour les éléments de formulaire, le nom accessible est le <code>label</code> lorsqu’il est programmatiquement associé à l'élément via l'attribut <code>for</code> référençant l'<code>id</code> du champ.</p>
 <pre><code class="html">
 &lt;label for="search"&gt;Rechercher&lt;/label&gt;
 &lt;input id="search" type="text"&gt;
 </code></pre>
 <p>Avec ce code, le lecteur d'écran dira : &quot;Rechercher édition&quot;.</p>
-<h3 id="avec-aria-aussi">Avec <abbr>ARIA</abbr> aussi ! <a class="header-anchor" href="#avec-aria-aussi" id="heading-235" aria-labelledby="heading-235">#</a></h3>
+<h3 id="avec-aria-aussi">Avec <abbr>ARIA</abbr> aussi ! <a class="header-anchor" href="#avec-aria-aussi" id="heading-363" aria-labelledby="heading-363">#</a></h3>
 <p><abbr>ARIA</abbr> va pouvoir nous aider pour donner un nom à un élément <abbr>HTML</abbr>, en utilisant <code>aria-label</code> et <code>aria-labelledby</code>.</p>
 <pre><code class="html">
 &lt;button class="navbar-toggler" type="button" aria-label="Ouverture menu navigation" ... &gt;
@@ -237,7 +237,7 @@ Mais on pourrait aussi utiliser <code>aria-labelledby</code> pour référencer u
 </code></pre>
 <p>Lors de la prise de focus sur le champ, le lecteur d'écran annonce &quot;Rechercher sur le site édition&quot;.</p>
 <p>Plus de détails sur <a href="../attributs-aria-qui-peuvent-vous-sauver/">&quot;Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver&quot;</a>.</p>
-<h2 id="webographie" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-236" aria-labelledby="heading-236">#</a></h2>
+<h2 id="webographie" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-364" aria-labelledby="heading-364">#</a></h2>
 <ul>
 <li><a href="https://www.w3.org/TR/accname-1.1/" lang="en" hreflang="en">Accessible Name and Description Computation 1.1</a> par <span lang="en">the Accessible Rich Internet Applications Working Group</span></li>
 <li><a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/" lang="en" hreflang="en">What is an accessible name?</a> par Léonie Watson</li>

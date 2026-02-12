@@ -196,9 +196,9 @@
             
           
           <div class="mt-4">
-          <h2 id="status-message-and-accessibility" class="h2-focus">Status message and accessibility <a class="header-anchor" href="#status-message-and-accessibility" id="heading-366" aria-labelledby="heading-366">#</a></h2>
+          <h2 id="status-message-and-accessibility" class="h2-focus">Status message and accessibility <a class="header-anchor" href="#status-message-and-accessibility" id="heading-221" aria-labelledby="heading-221">#</a></h2>
 <p>The WCAG 2.1 criterion <a href="https://www.w3.org/TR/WCAG22/#status-messages">4.1.3 Status Messages</a> requires that important informations for the user, which do not induce a change of context (no opening of a new window, no focus on the content, no modification of the content or the viewport), are seen via properties and roles (<abbr>ARIA</abbr>) by anyone using <abbr>AT</abbr> without taking focus on the message.</p>
-<h2 id="some-examples-of-status-messages" class="h2-focus">Some examples of status messages <a class="header-anchor" href="#some-examples-of-status-messages" id="heading-367" aria-labelledby="heading-367">#</a></h2>
+<h2 id="some-examples-of-status-messages" class="h2-focus">Some examples of status messages <a class="header-anchor" href="#some-examples-of-status-messages" id="heading-222" aria-labelledby="heading-222">#</a></h2>
 <p>When a user presses a search button, the content of the page is updated asynchronously to add the search results displayed in a region below the search button. The message &quot;XX results found&quot; is at the top of this new content. A screen reader will have to announce &quot;XX results have been found&quot;. In this case, the information provided to the user is important and must be given immediately, so we will use the role <code>&quot;alert&quot;</code>.</p>
 <pre><code class="language-html">&lt;h2 role=&quot;alert&quot;&gt;
     5 results were found
@@ -243,7 +243,7 @@
 &lt;/div&gt;
 </code></pre>
 <p>Sometimes we want to provide messages only for screen readers, without having to display them visually. In this case too, you need to use these <abbr>ARIA</abbr> roles to push the message to <abbr>AT</abbr> and in particular to the screen readers without displaying them on the screen.</p>
-<h2 id="status-messages-that-are-not" class="h2-focus">Status messages that are not! <a class="header-anchor" href="#status-messages-that-are-not" id="heading-368" aria-labelledby="heading-368">#</a></h2>
+<h2 id="status-messages-that-are-not" class="h2-focus">Status messages that are not! <a class="header-anchor" href="#status-messages-that-are-not" id="heading-223" aria-labelledby="heading-223">#</a></h2>
 <p>The basic rule is that if the focus is moved or the context is returned to users of <abbr>AT</abbr>, it is not a status message:</p>
 <ul>
 <li>a modal that requires a user action, on which the focus is set</li>

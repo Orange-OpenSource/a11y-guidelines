@@ -235,24 +235,24 @@
 </ul>
 <p>Thereafter, according to the presentation configuration, the selection of a title or a timelapse will give rise to the video playback on the Apple website directly at the appropriate moment.<br>
 <br><br></p>
-<h2 id="dynamic-type-0057" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=57">Dynamic Type (00:57)</a> <a class="header-anchor" href="#dynamic-type-0057" id="heading-1916" aria-labelledby="heading-1916">#</a></h2>
+<h2 id="dynamic-type-0057" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=57">Dynamic Type (00:57)</a> <a class="header-anchor" href="#dynamic-type-0057" id="heading-1812" aria-labelledby="heading-1812">#</a></h2>
 <p>Reminder on the Dynamic Type feature whose goal is to <strong>customize the text size</strong> thanks to the user settings.<br>
 <img src="../../../../images/iOSdev/wwdc19-261-DynamicType.png" alt="" class="img-fluid"><br>
 <br>The <a href="../../../development/#text-size">iOS developers guide section</a> of this site contains many useful information about the implementation of this feature.<br>
 <br><br></p>
-<h2 id="large-content-viewer-0154" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=114">Large Content Viewer (01:54)</a> <a class="header-anchor" href="#large-content-viewer-0154" id="heading-1917" aria-labelledby="heading-1917">#</a></h2>
+<h2 id="large-content-viewer-0154" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=114">Large Content Viewer (01:54)</a> <a class="header-anchor" href="#large-content-viewer-0154" id="heading-1813" aria-labelledby="heading-1813">#</a></h2>
 <p>This feature introduced in iOS 11 and <strong>available only for the accessibility text sizes</strong> allows people with low vision to use UIKit bar elements as effective as the Dynamic Type grows the text size.<br>
 <img src="../../../../images/iOSdev/wwdc19-261-LargeContentViewer_1.png" alt="" class="img-fluid"><br>
 <br>To trigger this functionnality, the user must <strong>long press</strong> the element to see a larger version, <strong>drag his finger along the bottom bar</strong> to find out all the bar items and let it go to activate the proper one.<br>
 <img src="../../../../images/iOSdev/wwdc19-261-LargeContentViewer_2.png" alt="" class="img-fluid"><br>
 <br>It's important to notice that <strong>'scaling with Dynamic Type is always preferred to showing the Large Content Viewer'</strong> that must be implemented <strong>'only for the case when your custom UI cannot grow in size'</strong>.<br>
 <br><br></p>
-<h2 id="image-settings-0402" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=242">Image settings (04:02)</a> <a class="header-anchor" href="#image-settings-0402" id="heading-1918" aria-labelledby="heading-1918">#</a></h2>
+<h2 id="image-settings-0402" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=242">Image settings (04:02)</a> <a class="header-anchor" href="#image-settings-0402" id="heading-1814" aria-labelledby="heading-1814">#</a></h2>
 <p>In this part of the video, all the image characteristics are reviewed to get as smooth and detailed a rendering as possible when the image is getting larger, as indicated in the <a href="../../../development/#graphical-elements-size">iOS developers guide section</a>.<br>
 <br>The Xcode Interface Builder can be associated to some lines of code for this purpose:<br>
 <img src="../../../../images/iOSdev/wwdc19-261-ImageSettings.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="custom-views-0452" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=292">Custom Views (04:52)</a> <a class="header-anchor" href="#custom-views-0452" id="heading-1919" aria-labelledby="heading-1919">#</a></h2>
+<h2 id="custom-views-0452" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=292">Custom Views (04:52)</a> <a class="header-anchor" href="#custom-views-0452" id="heading-1815" aria-labelledby="heading-1815">#</a></h2>
 <p>When implementing the Dynamic Type feature, <strong>iOS 13</strong> allows to <strong>show the same UI that's shown for standard UIKit bar items</strong>.<br>
 <img src="../../../../images/iOSdev/wwdc19-261-CustomViews_1.png" alt="" class="img-fluid"><br>
 <br>The <strong><code>UILargeContentViewerItem</code> protocol</strong> (<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=335">05:35</a>) defines the needed information for the large content viewer and is <strong>already implemented by the UIView class</strong> that provides setters as well (no need to subclass and override):<br>
@@ -264,7 +264,7 @@
 <br>Finally, the delegate of the gesture interaction contains some specific options (<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=472">07:52</a>) to provide custom actions:<br>
 <img src="../../../../images/iOSdev/wwdc19-261-CustomViews_5.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="examples-0915" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=555">Examples (09:15)</a> <a class="header-anchor" href="#examples-0915" id="heading-1920" aria-labelledby="heading-1920">#</a></h2>
+<h2 id="examples-0915" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=555">Examples (09:15)</a> <a class="header-anchor" href="#examples-0915" id="heading-1816" aria-labelledby="heading-1816">#</a></h2>
 <p>The first example deals with <strong>standard UIKit views</strong>.<br>
 <img src="../../../../images/iOSdev/wwdc19-261-Examples_1.png" alt="" class="img-fluid"><br>
 <br>The second example takes into account <strong>custom classes for some buttons</strong> (<a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=593">09:53</a>) whose properties must be overriden to be well defined.<br>

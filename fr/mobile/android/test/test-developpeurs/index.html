@@ -243,7 +243,7 @@
           <div class="mt-4">
           <h1>Tests des développeurs : analyse du code</h1>
 <p>Cette étape permet de remonter directement des problèmes d’accessibilité pendant la phase de développement et provoque des erreurs de build de l’application, ou divers warnings. Le développeur doit ainsi les corriger directement pour pouvoir builder son application et la faire fonctionner, ce qui la rend d’office plus accessible avant même de la faire passer par des tests manuels, ou par des outils d’analyse. De plus, cela évite les possibles régressions d’accessibilité.</p>
-<h2 id="lint" class="h2-focus"><span lang="en">Lint</span> <a class="header-anchor" href="#lint" id="heading-2695" aria-labelledby="heading-2695">#</a></h2>
+<h2 id="lint" class="h2-focus"><span lang="en">Lint</span> <a class="header-anchor" href="#lint" id="heading-2768" aria-labelledby="heading-2768">#</a></h2>
 <p>Le développeur peut en premier lieu utiliser l’outil <span lang="en">Lint</span> dans Android Studio, sur son application, afin de faire une première passe sur les problèmes d’accessibilités.<br>
 5 problèmes d’accessibilités peuvent être remontés grâce à <span lang="en">Lint</span> :</p>
 <ul>
@@ -255,7 +255,7 @@
 </ul>
 <p><strong>Exemple de rapport Lint sous Android Studio :</strong></p>
 <img src="../../../images/lint.png" alt="capture d’écran présentant un rapport de l'outil Lint, qui affiche une erreur d'accessibilité" width="80%">
-<h2 id="tests-automatises-espresso" class="h2-focus">Tests automatisés : Espresso <a class="header-anchor" href="#tests-automatises-espresso" id="heading-2696" aria-labelledby="heading-2696">#</a></h2>
+<h2 id="tests-automatises-espresso" class="h2-focus">Tests automatisés : Espresso <a class="header-anchor" href="#tests-automatises-espresso" id="heading-2769" aria-labelledby="heading-2769">#</a></h2>
 <p>Espresso est un framework permettant de tester son UI sous Android. On peut alors y intégrer le framework ATF (<span lang="en">Accessibility Test Framework</span>), qui va ajouter une couche de tests concernant l’accessibilité.</p>
 <p>Aucun test explicite n’a besoin d’être écrit. Une fois ATF intégré aux tests Expresso, les vérifications d’accessibilité se rajoutent automatiquement. ATF fonctionne cependant avec les <span lang="en">ViewAction</span>, c’est-à-dire qu’il va effectuer automatiquement la vérification d’accessibilité sur les interactions <span lang="en">ViewAction</span> mis en place dans les tests Espresso. De plus, pour activer les vérifications d’accessibilité, il faut faire appel à la fonction <code>AccessibilityChecks.enable()</code> dans la suite de tests.</p>
 <p>Voici comment l’intégrer :</p>
@@ -276,11 +276,11 @@ companion object {
 }
 </code></pre>
 <p>C’est ainsi que, dans le cas où l’on réalise dans la suite de test un <code>ViewAction.click()</code> sur un bouton qui ne correspond pas à la taille requise pour un élément interactif, le test apparaitra en erreur jusqu’à ce que le problème d’accessibilité soit résolu.</p>
-<h3 id="realiser-les-tests-automatises-daccessibilite-sur-lensemble-de-lecran">Réaliser les tests automatisés d’accessibilité sur l’ensemble de l’écran <a class="header-anchor" href="#realiser-les-tests-automatises-daccessibilite-sur-lensemble-de-lecran" id="heading-2697" aria-labelledby="heading-2697">#</a></h3>
+<h3 id="realiser-les-tests-automatises-daccessibilite-sur-lensemble-de-lecran">Réaliser les tests automatisés d’accessibilité sur l’ensemble de l’écran <a class="header-anchor" href="#realiser-les-tests-automatises-daccessibilite-sur-lensemble-de-lecran" id="heading-2770" aria-labelledby="heading-2770">#</a></h3>
 <p>L’automatisation du test d’accessibilité selon les <span lang="en">ViewAction</span> peut cependant devenir limitant. C’est pourquoi, on peut indiquer lors de l’activation de ATF, que l’on souhaite faire les validations depuis la vue racine. Ainsi, toutes les vues seront testées, sans besoin d’ajouter de <span lang="en">ViewActions</span>. Pour ce faire, il faut remplacer  <code>AccessibilityChecks.enable()</code> par <code>AccessibilityChecks.enable().setRunChecksFromRootView(true)</code></p>
-<h3 id="loguer-les-erreurs-daccessibilite-plutot-que-de-provoquer-lechec-des-tests">Loguer les erreurs d’accessibilité plutôt que de provoquer l'échec des tests <a class="header-anchor" href="#loguer-les-erreurs-daccessibilite-plutot-que-de-provoquer-lechec-des-tests" id="heading-2698" aria-labelledby="heading-2698">#</a></h3>
+<h3 id="loguer-les-erreurs-daccessibilite-plutot-que-de-provoquer-lechec-des-tests">Loguer les erreurs d’accessibilité plutôt que de provoquer l'échec des tests <a class="header-anchor" href="#loguer-les-erreurs-daccessibilite-plutot-que-de-provoquer-lechec-des-tests" id="heading-2771" aria-labelledby="heading-2771">#</a></h3>
 <p>Il est possible de loguer les erreurs d’accessibilité afin de les voir apparaitre dans le logcat d’Android Studio, plutôt que de provoquer l'échec des tests Espresso, même si cela n’est pas conseillé. Cela ne doit être utilisé que dans un cadre temporaire. Pour ce faire, il faut ajouter la fonction suivante : <code>AccessibilityChecks.enable().setThrowExceptionForErrors(false)</code></p>
-<h3 id="creer-une-whitelist">Créer une whitelist <a class="header-anchor" href="#creer-une-whitelist" id="heading-2699" aria-labelledby="heading-2699">#</a></h3>
+<h3 id="creer-une-whitelist">Créer une whitelist <a class="header-anchor" href="#creer-une-whitelist" id="heading-2772" aria-labelledby="heading-2772">#</a></h3>
 <p>Plutôt que d'afficher toutes les erreurs d’accessibilité dans le logcat, il est possible de créer une <span lang="en">whitelist</span> pour ne loguer que celles que l’on souhaite, tout en conservant les autres en erreur. Pour cela, il faut ajouter la fonction suivante :<br>
 <code>AccessibilityChecks.enable().setRunChecksFromRootView(true).setSuppressingResultMatcher(matchesView(anyOf(withId(R.id.buttonPlus))))</code></p>
 <p>Dans cet exemple, la vue ayant pour id <strong><span lang="en">buttonPlus</span></strong> ne sera pas indiquée en erreur en cas de problème d’accessibilité, mais sera affichée dans le logcat.</p>
