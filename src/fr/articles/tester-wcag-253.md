@@ -54,7 +54,7 @@ Le critère **WCAG 2.5.3 est donc respecté**.
 
 ## Attention au masquage accessible
 
-les contenus masqué ne doivent pas être insérés dans le nom visible (mais plutôt à la fin), sinon, le critère sera non-conforme et l'élément pas utilisable avec une dictée vocale.
+Les contenus masqués ne doivent pas être insérés dans le nom visible (mais plutôt à la fin), sinon le critère sera non-conforme et l'élément ne sera pas utilisable avec une dictée vocale.
 
 ### Exemple d’erreur 
 <pre><code class="html">
