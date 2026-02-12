@@ -83,20 +83,6 @@
 	"ID": "testWebID-18",
 	"IDorigin": "testWebID-18"
 }, {
-	"themes": "Common navigation",
-	"title": "Allow control of animations", 
-    "type": ["Manual test"], 
-    "tests": ["Identify any content that is moving, auto-updated, flashing, or scrolling for more than 5 seconds and starts automatically (for example a carousel)."], 
-    "verifier": ["For each content, a mechanism is present to allow the user to pause it or hide it.", "This mechanism is accessible with mouse and keyboard navigation."], 
-    "resultat": ["User can pause or hide animations, movements, updates or blinks."], 
-    "exception": "", 
-	"raccourcis": "",
-	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/common-navigation/#allowing-animations-control",
-	"profils": "",
-	"wcag": ["2.2.2"],
-	"ID": "testWebID-37",
-	"IDorigin": "testWebID-37"
-}, {
 	"themes": "Keyboard navigation",
 	"title": "Allow the use of the application with keyboard",
 	"type": ["Keyboard navigation"],
@@ -124,6 +110,20 @@
 	"wcag": ["1.4.11"],
 	"ID": "testWebID-42",
 	"IDorigin": "testWebID-42"
+}, {
+	"themes": "Layout",
+	"title": "Ensure that the presented content can be resized without loss of information",
+	"type": ["Manual Test"],
+	"tests": ["Use the browser's code inspector", "Access the responsive view with the keys <kbd>Ctrl + shift + M</kbd> or click on the \"Toggle device toolbar\" tab."],
+	"verifier": [["For contents with a vertical scrolling direction: reduce the window to 320px wide."], ["For contents with a horizontal scrolling direction: reduce the window to 256px tall."]],
+	"resultat": [["The user can access all the content without the need for horizontal or vertical scrolling."], ["The scrollbar is present, but its use is not necessary to access the informative content or to use the page's features."]],
+	"exception": "The criterion is not applicable for contents that require both dimensions to be understandable, such as images, maps, presentations, data tables, games, etc.",
+	"raccourcis": "",
+	"moreInfo": "https://a11y-guidelines.orange.com/en/web/develop/layout/#use-relative-sizes-and-make-the-web-responsive",
+    "profils": ["Essential Checklist"],
+	"wcag": ["2.2.2"],
+	"ID": "testWebID-37",
+	"IDorigin": "testWebID-37"
 }, {
 	"themes": "Forms",
 	"title": "Make sure an accessible name is associated with each form field",
