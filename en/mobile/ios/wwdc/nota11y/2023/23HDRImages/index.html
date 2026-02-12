@@ -227,7 +227,7 @@
 <li><strong>EDR</strong>  =  <strong>E</strong>xtended  <strong>D</strong>ynamic  <strong>R</strong>ange</li>
 </ul>
 </br>
-<h2 id="the-basics" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=40">The basics</a> <a class="header-anchor" href="#the-basics" id="heading-2435" aria-labelledby="heading-2435">#</a></h2>
+<h2 id="the-basics" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=40">The basics</a> <a class="header-anchor" href="#the-basics" id="heading-2407" aria-labelledby="heading-2407">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_1.png" alt="" class="img-fluid"></p>
 <p>The <strong>HDR</strong> display provides a <strong>more contrasted image</strong> that highlights its brightest parts and <strong>improves the <a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=158">image definition</a></strong>.<br>
 Thanks to additional data collected within the <code>iPhone</code> images, the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=364">gain map HDR</a></strong> has the ability to create a <code>HDR</code> image from a <code>SDR</code>'s.</p>
@@ -239,8 +239,8 @@ Thanks to additional data collected within the <code>iPhone</code> images, the <
 <p>The <code>EDR</code> depends on the <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=446">headroom</a></strong> whose value is both related to the <strong>Display Peak Brightness</strong> and the <strong><code>SDR</code> Brightness</strong> which means that it will also rely on the <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=473">device capacities</a>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_7.png" alt="" class="img-fluid"><br>
 </br></p>
-<h2 id="edr" class="h2-focus">EDR <a class="header-anchor" href="#edr" id="heading-2436" aria-labelledby="heading-2436">#</a></h2>
-<h3 id="new-features"><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=141">New features</a> <a class="header-anchor" href="#new-features" id="heading-2437" aria-labelledby="heading-2437">#</a></h3>
+<h2 id="edr" class="h2-focus">EDR <a class="header-anchor" href="#edr" id="heading-2408" aria-labelledby="heading-2408">#</a></h2>
+<h3 id="new-features"><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=141">New features</a> <a class="header-anchor" href="#new-features" id="heading-2409" aria-labelledby="heading-2409">#</a></h3>
 <p>Besides the availability of the <code>EDR</code> <code>API</code> for <code>iOS</code> <code>16</code> and <code>iPadOS</code> <code>16</code>, two other features have been introduced in the <code>WWDC22</code>.</p>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -274,17 +274,17 @@ Thanks to additional data collected within the <code>iPhone</code> images, the <
 </div>
 </br>
 </br>
-<h3 id="read-the-content"><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=514">Read the content</a> <a class="header-anchor" href="#read-the-content" id="heading-2438" aria-labelledby="heading-2438">#</a></h3>
+<h3 id="read-the-content"><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=514">Read the content</a> <a class="header-anchor" href="#read-the-content" id="heading-2410" aria-labelledby="heading-2410">#</a></h3>
 <p>The process of reading a <code>HDR</code> content and converting it to a renderable format consists in <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=564">four steps</a></strong> to be perfectly performed.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_8.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="stick-to-edr"><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=687">Stick to EDR</a> <a class="header-anchor" href="#stick-to-edr" id="heading-2439" aria-labelledby="heading-2439">#</a></h3>
+<h3 id="stick-to-edr"><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=687">Stick to EDR</a> <a class="header-anchor" href="#stick-to-edr" id="heading-2411" aria-labelledby="heading-2411">#</a></h3>
 <p>Support the <code>EDR</code> rendering relies on a <strong>two-step process</strong>.<br>
 <img src="../../../../../images/iOSdev/wwdc23-HDRImg_9.png" alt="" class="img-fluid"><br>
 A <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=743">close combination</a> between the pixel format and the color space is essential to support <code>EDR</code> and it <strong>must be followed</strong> otherwise these items will be cropped and downgraded to <code>SDR</code>.<br>
 <img src="../../../../../images/iOSdev/wwdc23-HDRImg_10.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="query-headroom"><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=791">Query headroom</a> <a class="header-anchor" href="#query-headroom" id="heading-2440" aria-labelledby="heading-2440">#</a></h3>
+<h3 id="query-headroom"><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=791">Query headroom</a> <a class="header-anchor" href="#query-headroom" id="heading-2412" aria-labelledby="heading-2412">#</a></h3>
 <p>Whether on the <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=818"><code>NSScreen</code></a> or <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=837"><code>UIScreen</code></a>, the headroom queries are quite different and head towards various situations according to the needs.<br>
 <img src="../../../../../images/iOSdev/wwdc23-HDRImg_11.png" alt="" class="img-fluid"></p>
 <p>The <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=882">new <code>APIs</code></a> for <code>iOS</code> lead to accurate conclusions on the <code>EDR</code> content rendering...</p>
@@ -292,14 +292,14 @@ A <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=743">clo
 <p>... and inform about the <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=930">four possible states</a></strong> of the display.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_13.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="tone-mapping">Tone-mapping <a class="header-anchor" href="#tone-mapping" id="heading-2441" aria-labelledby="heading-2441">#</a></h3>
+<h3 id="tone-mapping">Tone-mapping <a class="header-anchor" href="#tone-mapping" id="heading-2413" aria-labelledby="heading-2413">#</a></h3>
 <p>This technique is used to map the pixel levels in high dynamic range images to a reduced dynamic range, while trying and retaining the original appearance as close as possible.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_14.png" alt="" class="img-fluid"></p>
 <p>Instead of using the <code>currentEDRHeadroom</code> for a customized rendering, the <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=984">built-in tone mapping</a> may also be used by following <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=1011">three milestones</a> including <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=1036">dedicated constructors</a> for <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=1098">specific color space</a> usage.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_15.png" alt="" class="img-fluid"><br>
 </br></p>
-<h2 id="hdr" class="h2-focus">HDR <a class="header-anchor" href="#hdr" id="heading-2442" aria-labelledby="heading-2442">#</a></h2>
-<h3 id="display-images"><a href="https://developer.apple.com/videos/play/wwdc2023/10181?time=406">Display images</a> <a class="header-anchor" href="#display-images" id="heading-2443" aria-labelledby="heading-2443">#</a></h3>
+<h2 id="hdr" class="h2-focus">HDR <a class="header-anchor" href="#hdr" id="heading-2414" aria-labelledby="heading-2414">#</a></h2>
+<h3 id="display-images"><a href="https://developer.apple.com/videos/play/wwdc2023/10181?time=406">Display images</a> <a class="header-anchor" href="#display-images" id="heading-2415" aria-labelledby="heading-2415">#</a></h3>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -338,10 +338,10 @@ A <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=743">clo
 <p><code>iOS</code> and <code>iPadOS</code> provide <code>APIs</code> to get the <a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=786">maximum display headroom</a> of a device to use <code>HDR</code> when it's <a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=806">appropriate</a>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_21.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="pipeline-details"><a href="https://developer.apple.com/videos/play/wwdc2023/10181?time=842">Pipeline details</a> <a class="header-anchor" href="#pipeline-details" id="heading-2444" aria-labelledby="heading-2444">#</a></h3>
+<h3 id="pipeline-details"><a href="https://developer.apple.com/videos/play/wwdc2023/10181?time=842">Pipeline details</a> <a class="header-anchor" href="#pipeline-details" id="heading-2416" aria-labelledby="heading-2416">#</a></h3>
 <p>Handling <code>HDR</code> images implies specific steps between the source and its renderer (image processing <strong>pipeline</strong>).</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_22.png" alt="" class="img-fluid"></p>
-<h4 id="read">Read <a class="header-anchor" href="#read" id="heading-2445" aria-labelledby="heading-2445">#</a></h4>
+<h4 id="read">Read <a class="header-anchor" href="#read" id="heading-2417" aria-labelledby="heading-2417">#</a></h4>
 <p>Reading an image is based on its type and the technical way for its description.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_23.png" alt="" class="img-fluid"></p>
 <ul class="nav nav-tabs" role="tablist">
@@ -411,7 +411,7 @@ A <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=743">clo
 </div>
 </br>
 </br>
-<h4 id="modify-write">Modify &amp; write <a class="header-anchor" href="#modify-write" id="heading-2446" aria-labelledby="heading-2446">#</a></h4>
+<h4 id="modify-write">Modify &amp; write <a class="header-anchor" href="#modify-write" id="heading-2418" aria-labelledby="heading-2418">#</a></h4>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -443,7 +443,7 @@ A <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=743">clo
 </div>
 </br>
 </br>
-<h4 id="convert"><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1374">Convert</a> <a class="header-anchor" href="#convert" id="heading-2447" aria-labelledby="heading-2447">#</a></h4>
+<h4 id="convert"><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1374">Convert</a> <a class="header-anchor" href="#convert" id="heading-2419" aria-labelledby="heading-2419">#</a></h4>
 <p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_31.png" alt="" class="img-fluid"></p>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -488,7 +488,7 @@ A <a href="https://developer.apple.com/videos/play/wwdc2022/10113/?time=743">clo
 </div>
 </br>
 </br>
-<h3 id="advanced-display"><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1522">Advanced display</a> <a class="header-anchor" href="#advanced-display" id="heading-2448" aria-labelledby="heading-2448">#</a></h3>
+<h3 id="advanced-display"><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1522">Advanced display</a> <a class="header-anchor" href="#advanced-display" id="heading-2420" aria-labelledby="heading-2420">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_35.png" alt="" class="img-fluid"></p>
 <p>It's important to use the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10181/?time=1606">proper classes</a></strong> to render <code>HDR</code> with <code>CALayer</code>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-HDRImg_36.png" alt="" class="img-fluid"></p>

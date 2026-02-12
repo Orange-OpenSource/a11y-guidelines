@@ -197,20 +197,20 @@
             
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-38" aria-labelledby="heading-38">#</a></h2>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-24" aria-labelledby="heading-24">#</a></h2>
 <p>Nous avons vu dans la première partie comment <a href="../part1/">structurer son formulaire</a> en respectant les critères d'accessibilité.</p>
 <p>Dans cette deuxième partie, nous allons faciliter la saisie dans les champs par l'utilisateur et mettre en place d'un système de gestion des erreurs lors de la validation de notre formulaire.</p>
 <p>Nous continuerons de baser nos exemples sur notre formulaire d'inscription de la partie 1.</p>
 <p>Dans cet exemple, nous utilisons <a href="http://boosted.orange.com/">la librairie Boosted</a> qui est la déclinaison Web de notre <a href="https://system.design.orange.com/">Orange Design System (ODS)</a>. Celle-ci permet d’obtenir des formulaires dont le design est conforme à la charte Orange.</p>
-<h2 id="soumission-dun-formulaire" class="h2-focus">Soumission d'un formulaire <a class="header-anchor" href="#soumission-dun-formulaire" id="heading-39" aria-labelledby="heading-39">#</a></h2>
-<h3 id="champ-obligatoire">Champ obligatoire <a class="header-anchor" href="#champ-obligatoire" id="heading-40" aria-labelledby="heading-40">#</a></h3>
+<h2 id="soumission-dun-formulaire" class="h2-focus">Soumission d'un formulaire <a class="header-anchor" href="#soumission-dun-formulaire" id="heading-25" aria-labelledby="heading-25">#</a></h2>
+<h3 id="champ-obligatoire">Champ obligatoire <a class="header-anchor" href="#champ-obligatoire" id="heading-26" aria-labelledby="heading-26">#</a></h3>
 <p>Dans les formulaires, il est fréquent que des champs soient obligatoires. Ces champs doivent être indiqués clairement aux utilisateurs.</p>
 <p>Pour réaliser ceci, plusieurs solutions existent :</p>
 <ul>
   <li>de manière programmatique, il faut utiliser l'attribut <code>required</code> ou <code>aria-required="true"</code> dans la balise <code>input</code> de nos champs, l'utilisation de ces attributs permettra aux technologies d'assistance (AT) d'indiquer que le champ est obligatoire.</li>
   <li>il faut aussi informer les utilisateurs n'utilisant pas de technologies d'assistance que le champ est obligatoire; il faut donc rajouter une identification visuelle qui ne repose pas uniquement sur la couleur (par exemple, en mentionnant explicitement "obligatoire"). Si cette identification n'est pas réalisée via un texte explicite, par exemple, un astérisque (*), il faut en expliquer la signification, comme par exemple, "Tous les champs obligatoires sont marqués d'un *", qui sera placée au début du formulaire.</li>
 </ul>
-<h4 id="exemple">Exemple <a class="header-anchor" href="#exemple" id="heading-41" aria-labelledby="heading-41">#</a></h4>
+<h4 id="exemple">Exemple <a class="header-anchor" href="#exemple" id="heading-27" aria-labelledby="heading-27">#</a></h4>
 <p>Dans notre exemple d'inscription, plusieurs champs peuvent être considérés comme obligatoires afin de valider son inscription : l'email, le mot de passe, le prénom et le nom.</p>
 <p>Il faut donc les spécifier aux utilisateurs.</p>
 <div class="col-md-8">
@@ -287,7 +287,7 @@
   &lt;/div&gt;
   </code>
 </pre>
-<h3 id="gestion-des-erreurs">Gestion des erreurs <a class="header-anchor" href="#gestion-des-erreurs" id="heading-42" aria-labelledby="heading-42">#</a></h3>
+<h3 id="gestion-des-erreurs">Gestion des erreurs <a class="header-anchor" href="#gestion-des-erreurs" id="heading-28" aria-labelledby="heading-28">#</a></h3>
 <p>Lors de la validation, si des champs obligatoires ne sont pas renseignés, ou si le format de la donnée saisie n'est pas valide, il faut prévenir l'utilisateur.</p>
 <p>Pour réaliser ceci, il faut </p>
 <ul>
@@ -307,7 +307,7 @@
   <li>Fournissez les instructions nécessaires et soyez aussi précis que possible sur les erreurs commises afin de faciliter remplissage des champs par les utilisateurs.</li>
   <li>Assurez-vous que les erreurs sont visuellement identifiables sur la page Web.</li>
 </ul>
-<h4 id="exemple-2">Exemple <a class="header-anchor" href="#exemple-2" id="heading-43" aria-labelledby="heading-43">#</a></h4>
+<h4 id="exemple-2">Exemple <a class="header-anchor" href="#exemple-2" id="heading-29" aria-labelledby="heading-29">#</a></h4>
 <p>Dans notre exemple d'inscription, plusieurs champs peuvent être en erreur :</p>
 <ul>
   <li>Pour les champs obligatoires, il faudra préciser quel champ obligatoire est en erreur</li>
@@ -418,7 +418,7 @@
   <li>Les messages d'erreurs sont liés au champ grâce à l'attribut <code>aria-describedby</code> ou <code>aria-labelledby</code>, ce qui permettra aux technologies d'assistances de restituer l'information</li>
   <li>Le focus clavier est mis sur le premier champ en erreur afin de pouvoir rebalayer tout le formulaire</li>
 </ul>
-<h3 id="utilisation-de-lattribut-autocomplete">Utilisation de l'attribut autocomplete <a class="header-anchor" href="#utilisation-de-lattribut-autocomplete" id="heading-44" aria-labelledby="heading-44">#</a></h3>
+<h3 id="utilisation-de-lattribut-autocomplete">Utilisation de l'attribut autocomplete <a class="header-anchor" href="#utilisation-de-lattribut-autocomplete" id="heading-30" aria-labelledby="heading-30">#</a></h3>
 <p>L'attribut <code>autocomplete</code> permet de faciliter le remplissage des champs qui contiennent une information personnelle. Tous les champs dont le type est listé dans <a href="https://www.w3.org/TR/WCAG22/#input-purposes" lang="en">7. InputPurposes for User Interface Components</a> doivent contenir l'attribut <code>autocomplete</code>.</p>
 <p>Dans notre exemple les champs ci-dessous devront avoir un attribut <code>autocomplete</code> :</p>
 <ul>
@@ -427,7 +427,7 @@
   <li>Nom avec <span lang="en"><code>autocomplete="name"</code></span></li>
   <li>Prénom avec <span lang="en"><code>autocomplete="given-name"</code></span></li>
 </ul>
-<h2 id="exemple-complet" class="h2-focus">Exemple complet <a class="header-anchor" href="#exemple-complet" id="heading-45" aria-labelledby="heading-45">#</a></h2>
+<h2 id="exemple-complet" class="h2-focus">Exemple complet <a class="header-anchor" href="#exemple-complet" id="heading-31" aria-labelledby="heading-31">#</a></h2>
 <p>Le code HTML et Javascript complet qui nous a permis de réaliser ce formulaire d'inscription accessible.</p>
 <pre>
   <code class="html">
@@ -634,7 +634,7 @@
 })
   </code>
 </pre>
-<h2 id="lien-vers-la-premiere-partie" class="h2-focus">Lien vers la première partie <a class="header-anchor" href="#lien-vers-la-premiere-partie" id="heading-46" aria-labelledby="heading-46">#</a></h2>
+<h2 id="lien-vers-la-premiere-partie" class="h2-focus">Lien vers la première partie <a class="header-anchor" href="#lien-vers-la-premiere-partie" id="heading-32" aria-labelledby="heading-32">#</a></h2>
 <p><a href="../part1/">Formulaire partie 1 - Structurer son formulaire</a></p>
 
           </div>

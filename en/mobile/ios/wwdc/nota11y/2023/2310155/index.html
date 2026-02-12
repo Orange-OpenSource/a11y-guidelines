@@ -219,7 +219,7 @@
 <p>&quot;Discover how Xcode 15 makes it easy to <strong>localize your app</strong> by managing all of your strings in one place. We'll show you how to extract, edit, export, and build strings in your project using String Catalogs. We'll also share how you can adopt <strong>String Catalogs</strong> in existing projects at your own pace by choosing which files to migrate.&quot;</p>
 <p></br>Hereafter, the underlined elements <strong>lead directly to the playback of the WWDC video</strong> at the appropriate moment.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10155_2.png" alt="" class="img-fluid"></p>
-<h2 id="overview" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=57">Overview</a> <a class="header-anchor" href="#overview" id="heading-2301" aria-labelledby="heading-2301">#</a></h2>
+<h2 id="overview" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=57">Overview</a> <a class="header-anchor" href="#overview" id="heading-2273" aria-labelledby="heading-2273">#</a></h2>
 <p>In order to handle the localization in one single place, the <strong>String Catalogs</strong> are introduced in <code>Xcode 15</code> to replace the <code>.strings</code> and <code>.stringsdict</code> files in future releases.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10155_3.png" alt="" class="img-fluid"><br>
 All the <strong>added strings</strong> are <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=110">automatically extracted</a> by <code>Xcode</code> and the <strong>multiplatforms localization</strong> is now <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=169">streamlined</a> for a simpler usage.</p>
@@ -254,16 +254,16 @@ All the <strong>added strings</strong> are <a href="https://developer.apple.com/
 </div>
 </br>
 </br>
-<h2 id="localizable-strings" class="h2-focus">Localizable strings <a class="header-anchor" href="#localizable-strings" id="heading-2302" aria-labelledby="heading-2302">#</a></h2>
-<h3 id="definition"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=254">Definition</a> <a class="header-anchor" href="#definition" id="heading-2303" aria-labelledby="heading-2303">#</a></h3>
+<h2 id="localizable-strings" class="h2-focus">Localizable strings <a class="header-anchor" href="#localizable-strings" id="heading-2274" aria-labelledby="heading-2274">#</a></h2>
+<h3 id="definition"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=254">Definition</a> <a class="header-anchor" href="#definition" id="heading-2275" aria-labelledby="heading-2275">#</a></h3>
 <p>A <strong>text wrapper</strong> to be translated into all of the supported languages in an app defines a <strong>localizable string</strong> composed of <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=266">four components</a>.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10155_1.png" alt="" class="img-fluid"></p>
-<h3 id="string-tables"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=344">String tables</a> <a class="header-anchor" href="#string-tables" id="heading-2304" aria-labelledby="heading-2304">#</a></h3>
+<h3 id="string-tables"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=344">String tables</a> <a class="header-anchor" href="#string-tables" id="heading-2276" aria-labelledby="heading-2276">#</a></h3>
 <p>A <strong>string table</strong> is a directory to which each localizable string belongs and that contains <code>.strings</code> and possibly <code>.stringsdict</code> files inside a <strong><code>lproj</code> directory</strong> linked to a specific language.</p>
 <p>This former string table format is now replaced by a single <strong>String Catalog</strong> that <strong>gathers all the localized information</strong> therein and that can also be multiplied <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=379">using the same keys</a>.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10155_4.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="identification">Identification <a class="header-anchor" href="#identification" id="heading-2305" aria-labelledby="heading-2305">#</a></h3>
+<h3 id="identification">Identification <a class="header-anchor" href="#identification" id="heading-2277" aria-labelledby="heading-2277">#</a></h3>
 <p><code>Xcode</code> can easily find the localizable strings in many places to automatically update the <code>String Catalogs</code>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10155_8.png" alt="" class="img-fluid"></p>
 <ul class="nav nav-tabs" role="tablist">
@@ -355,7 +355,7 @@ All the <strong>added strings</strong> are <a href="https://developer.apple.com/
 </div>
 </br>
 </br>
-<h2 id="synchronization" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=705">Synchronization</a> <a class="header-anchor" href="#synchronization" id="heading-2306" aria-labelledby="heading-2306">#</a></h2>
+<h2 id="synchronization" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=705">Synchronization</a> <a class="header-anchor" href="#synchronization" id="heading-2278" aria-labelledby="heading-2278">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc23-10155_18.png" alt="" class="img-fluid"></p>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -399,11 +399,11 @@ All the <strong>added strings</strong> are <a href="https://developer.apple.com/
 </div>
 </br>
 </br>
-<h2 id="string-catalog-editor" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10155?time=810">String Catalog Editor</a> <a class="header-anchor" href="#string-catalog-editor" id="heading-2307" aria-labelledby="heading-2307">#</a></h2>
+<h2 id="string-catalog-editor" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10155?time=810">String Catalog Editor</a> <a class="header-anchor" href="#string-catalog-editor" id="heading-2279" aria-labelledby="heading-2279">#</a></h2>
 <p>Each localizable string in this editor has a state indicator for highlighting the translation overall situation.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10155_5.png" alt="" class="img-fluid"><br>
 </br></p>
-<h2 id="pluralization" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10155?time=874">Pluralization</a> <a class="header-anchor" href="#pluralization" id="heading-2308" aria-labelledby="heading-2308">#</a></h2>
+<h2 id="pluralization" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10155?time=874">Pluralization</a> <a class="header-anchor" href="#pluralization" id="heading-2280" aria-labelledby="heading-2280">#</a></h2>
 <p>When localization comes in, it's important to consider the variation of a string based on the value of its prefixed number.<br>
 A support for <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=932">string variation workflows</a> is part of the <code>String Catalog Editor</code> to solve this problem.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10155_19.png" alt="" class="img-fluid"></p>
@@ -441,7 +441,7 @@ A support for <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?t
 </div>
 </br>
 </br>
-<h2 id="export-import" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1368">Export &amp; import</a> <a class="header-anchor" href="#export-import" id="heading-2309" aria-labelledby="heading-2309">#</a></h2>
+<h2 id="export-import" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1368">Export &amp; import</a> <a class="header-anchor" href="#export-import" id="heading-2281" aria-labelledby="heading-2281">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc23-10155_28.png" alt="" class="img-fluid"></p>
 <p>The exported localizable content is included in a package called a <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1395">Localization Catalog</a></strong> that contains a specific <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1406">XLIFF file</a></strong> whose format conforms to the String Catalog's if the <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1523">Localization Prefers String Catalogs</a></strong> <code>Xcode</code> build setting is enabled.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10155_29.png" alt="" class="img-fluid"></p>
@@ -487,7 +487,7 @@ A support for <a href="https://developer.apple.com/videos/play/wwdc2023/10155/?t
 </div>
 </br>
 </br>
-<h2 id="build-migrate" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1679">Build &amp; migrate</a> <a class="header-anchor" href="#build-migrate" id="heading-2310" aria-labelledby="heading-2310">#</a></h2>
+<h2 id="build-migrate" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10155/?time=1679">Build &amp; migrate</a> <a class="header-anchor" href="#build-migrate" id="heading-2282" aria-labelledby="heading-2282">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc23-10155_33.png" alt="" class="img-fluid"></p>
 <p>Since <code>String Catalogs</code> coexist with the <code>.strings</code> and <code>.stringsdict</code> files, the shift to this new configuration may start <strong>at any time</strong>.<br>
 </br></p>
