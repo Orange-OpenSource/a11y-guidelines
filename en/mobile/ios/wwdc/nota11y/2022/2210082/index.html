@@ -219,7 +219,7 @@ We'll take you through the latest detection mechanisms for iOS to help <strong>t
 <p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
 </br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
 </br></p>
-<h2 id="hangs-definition" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=67">Hangs definition</a> <a class="header-anchor" href="#hangs-definition" id="heading-2143" aria-labelledby="heading-2143">#</a></h2>
+<h2 id="hangs-definition" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=67">Hangs definition</a> <a class="header-anchor" href="#hangs-definition" id="heading-2136" aria-labelledby="heading-2136">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc22-10082-1.png" alt="" class="img-fluid"></p>
 <p>The <strong>three phases</strong> of the <a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=153">app-development process</a>...<br>
 <img src="../../../../../images/iOSdev/wwdc22-10082-2.png" alt="" class="img-fluid"></p>
@@ -235,25 +235,25 @@ We'll take you through the latest detection mechanisms for iOS to help <strong>t
 </br>
 Some of them are partially explained and detailed in the following sections reflecting the three aforementioned phases.
 </br></br>
-<h2 id="development" class="h2-focus">Development <a class="header-anchor" href="#development" id="heading-2144" aria-labelledby="heading-2144">#</a></h2>
+<h2 id="development" class="h2-focus">Development <a class="header-anchor" href="#development" id="heading-2137" aria-labelledby="heading-2137">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc22-10082-5.png" alt="" class="img-fluid"></p>
-<h3 id="thread-performance-checker"><a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=283">Thread Performance Checker</a> <a class="header-anchor" href="#thread-performance-checker" id="heading-2145" aria-labelledby="heading-2145">#</a></h3>
+<h3 id="thread-performance-checker"><a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=283">Thread Performance Checker</a> <a class="header-anchor" href="#thread-performance-checker" id="heading-2138" aria-labelledby="heading-2138">#</a></h3>
 <p>This tool notifies in the <code>Xcode</code> <code>Issue</code> <code>Navigator</code> when it detects <strong>priority inversions</strong> or <strong>non-UI work</strong> on the <strong>app main thread</strong>.<br>
 <img src="../../../../../images/iOSdev/wwdc22-10082-3.png" alt="" class="img-fluid"></p>
-<h3 id="time-profiler"><a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=356">Time Profiler</a> <a class="header-anchor" href="#time-profiler" id="heading-2146" aria-labelledby="heading-2146">#</a></h3>
+<h3 id="time-profiler"><a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=356">Time Profiler</a> <a class="header-anchor" href="#time-profiler" id="heading-2139" aria-labelledby="heading-2139">#</a></h3>
 <p>This tool <strong>detects hangs</strong> and labels them directly in the corresponding <strong>process track</strong>.<br>
 <img src="../../../../../images/iOSdev/wwdc22-10082-4.png" alt="" class="img-fluid"><br>
 This new feature enables to highlight the <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=431">main thread unresponsiveness</a></strong> awaiting for another thread return.<br>
 </br></p>
-<h3 id="hang-tracing"><a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=486">Hang tracing</a> <a class="header-anchor" href="#hang-tracing" id="heading-2147" aria-labelledby="heading-2147">#</a></h3>
+<h3 id="hang-tracing"><a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=486">Hang tracing</a> <a class="header-anchor" href="#hang-tracing" id="heading-2140" aria-labelledby="heading-2140">#</a></h3>
 <p>This instrument may be used to <strong>configure a hang duration threshold</strong> in order to find specific periods of unresponsiveness.<br>
 </br></p>
-<h2 id="beta" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=519">Beta</a> <a class="header-anchor" href="#beta" id="heading-2148" aria-labelledby="heading-2148">#</a></h2>
+<h2 id="beta" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=519">Beta</a> <a class="header-anchor" href="#beta" id="heading-2141" aria-labelledby="heading-2141">#</a></h2>
 <p>The <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=540">on-device hang detection</a></strong> is used for development-signed or TestFlight apps, and <strong>notifies hangs</strong> in real time while supporting diagnostics by providing the main steps with no specific details.</p>
 <p><img src="../../../../../images/iOSdev/wwdc22-10082-6.png" alt="" class="img-fluid"></p>
 <p>The <strong><a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=670">tailspin</a></strong> in <code>Instruments</code> may be of a great interest if a more advanced study of the diagnostic is necessary.<br>
 </br></p>
-<h2 id="public-release" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=742">Public release</a> <a class="header-anchor" href="#public-release" id="heading-2149" aria-labelledby="heading-2149">#</a></h2>
+<h2 id="public-release" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=742">Public release</a> <a class="header-anchor" href="#public-release" id="heading-2142" aria-labelledby="heading-2142">#</a></h2>
 <p><code>Xcode</code> <code>14</code> supports <a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=755">hangs reports</a> directly from the users devices.<br>
 <img src="../../../../../images/iOSdev/wwdc22-10082-7.png" alt="" class="img-fluid"></p>
 <p>Monitoring the power and performance metrics goes with a new <strong>notifications alert button</strong> to be informed of an important and unexpected <a href="https://developer.apple.com/videos/play/wwdc2022/10082/?time=894">hangs rate</a>.<br>

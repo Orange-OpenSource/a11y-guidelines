@@ -243,7 +243,7 @@ The outlines of this speech are indicated hereunder:</p>
 <p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
 </br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
 </br></p>
-<h2 id="overview" class="h2-focus">Overview <a class="header-anchor" href="#overview" id="heading-2218" aria-labelledby="heading-2218">#</a></h2>
+<h2 id="overview" class="h2-focus">Overview <a class="header-anchor" href="#overview" id="heading-2211" aria-labelledby="heading-2211">#</a></h2>
 <p>The <a href="https://developer.apple.com/videos/play/wwdc2022/110357?time=130">regular expression</a> (<strong>regex</strong>) used in Swift may be authored in <strong><a href="https://developer.apple.com/videos/play/wwdc2022/110358/?time=18">three different ways</a></strong> including its own derivative Regex that's more readable than the traditional regex syntax.</p>
 <p><img src="../../../../../images/iOSdev/wwdc22-SwiftRegex-overview_1.png" alt="" class="img-fluid"></p>
 <p>When the <code>Regex</code> string is known at compile-time, it may be wise to <a href="https://developer.apple.com/videos/play/wwdc2022/110358/?time=64">use a regex literal</a> in order to allow the compiler to check for syntax errors.</p>
@@ -254,7 +254,7 @@ The outlines of this speech are indicated hereunder:</p>
 <p><img src="../../../../../images/iOSdev/wwdc22-SwiftRegex-overview_4.png" alt="" class="img-fluid"></p>
 <p>For instance, the <code>NegativeLookahead</code> regex component asserts that what immediately follows the current position in the string doesn't match the specified content.<br>
 </br></p>
-<h2 id="working-mode" class="h2-focus">Working mode <a class="header-anchor" href="#working-mode" id="heading-2219" aria-labelledby="heading-2219">#</a></h2>
+<h2 id="working-mode" class="h2-focus">Working mode <a class="header-anchor" href="#working-mode" id="heading-2212" aria-labelledby="heading-2212">#</a></h2>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -299,7 +299,7 @@ The outlines of this speech are indicated hereunder:</p>
 </div>
 </div>
 </br>
-<h2 id="basic-elements" class="h2-focus">Basic elements <a class="header-anchor" href="#basic-elements" id="heading-2220" aria-labelledby="heading-2220">#</a></h2>
+<h2 id="basic-elements" class="h2-focus">Basic elements <a class="header-anchor" href="#basic-elements" id="heading-2213" aria-labelledby="heading-2213">#</a></h2>
 <p>A bunch of elements to be used for building efficient regex is suggested hereafter.</p>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -375,7 +375,7 @@ The outlines of this speech are indicated hereunder:</p>
 </br>
 <p>Take a look at the <a href="#example">Example</a> section to dive deeper into the different ways to be followed for an efficient regex building.<br>
 </br></p>
-<h2 id="string-unicode" class="h2-focus">String &amp; Unicode <a class="header-anchor" href="#string-unicode" id="heading-2221" aria-labelledby="heading-2221">#</a></h2>
+<h2 id="string-unicode" class="h2-focus">String &amp; Unicode <a class="header-anchor" href="#string-unicode" id="heading-2214" aria-labelledby="heading-2214">#</a></h2>
 <p>A Character is a <a href="https://developer.apple.com/videos/play/wwdc2022/110357/?time=759">collection of Unicode scalars</a> that may contain an invisible codepoint called <strong>variation-selector 16</strong> to inform that the preceeding character should be displayed as an emoji.</p>
 <p><img src="../../../../../images/iOSdev/wwdc22-SwiftRegex-StringUnicode_1.png" alt="" class="img-fluid"></p>
 <p>The String and Character comparisons abide by the <strong><a href="https://developer.apple.com/videos/play/wwdc2022/110357/?time=852">Unicode Canonical Equivalence</a></strong>...</p>
@@ -385,12 +385,12 @@ The outlines of this speech are indicated hereunder:</p>
 <p>Useful instance methods are available to handle an element at the <a href="https://developer.apple.com/videos/play/wwdc2022/110357/?time=949">Unicode Scalar level</a>.</p>
 <p><img src="../../../../../images/iOSdev/wwdc22-SwiftRegex-StringUnicode_4.png" alt="" class="img-fluid"><br>
 </br></p>
-<h2 id="existing-parsers" class="h2-focus">Existing parsers <a class="header-anchor" href="#existing-parsers" id="heading-2222" aria-labelledby="heading-2222">#</a></h2>
+<h2 id="existing-parsers" class="h2-focus">Existing parsers <a class="header-anchor" href="#existing-parsers" id="heading-2215" aria-labelledby="heading-2215">#</a></h2>
 <p><code>Foundation</code> provides some useful <a href="https://developer.apple.com/videos/play/wwdc2022/110357/?time=683">date parsers</a> that come in handy for string processing.</p>
 <p><img src="../../../../../images/iOSdev/wwdc22-SwiftRegex-existingParsers-date.png" alt="" class="img-fluid"></p>
 <p>In order to parse the duration floating-point number, it's possible to <a href="https://developer.apple.com/videos/play/wwdc2022/110358/?time=1088">implement an existing parser</a> inside a regex through the  definition of one's parser type and make it conform to a dedicated protocol.<br>
 <img src="../../../../../images/iOSdev/wwdc22-SwiftRegex-existingParsers-number.png" alt="" class="img-fluid"></p>
-<h2 id="example" class="h2-focus">Example <a class="header-anchor" href="#example" id="heading-2223" aria-labelledby="heading-2223">#</a></h2>
+<h2 id="example" class="h2-focus">Example <a class="header-anchor" href="#example" id="heading-2216" aria-labelledby="heading-2216">#</a></h2>
 <p>First, a good tip to detect and standardise a <a href="https://developer.apple.com/videos/play/wwdc2022/110357?time=233">field separator</a> between strings may be to <strong>use a single instance method</strong> instead of combining some of them with a <strong>regex literal</strong> to get the same result.</p>
 <p><img src="../../../../../images/iOSdev/wwdc22-SwiftRegex-Examples_1.png" alt="" class="img-fluid"></p>
 <p>Then, a <a href="https://developer.apple.com/videos/play/wwdc2022/110358/?time=341">complete example</a> including each milestone is detailed to get the appropriate results.</p>

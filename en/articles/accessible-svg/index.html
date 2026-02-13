@@ -205,12 +205,12 @@
           <div class="mt-4">
           <p>Here are some ideas knowing that the support for browsers and assistive technologies evolves very quickly.</p>
 <p>Important: Whatever solution is chosen, as browser support and assistive technologies evolve rapidly, make sure to test your implementations on the configurations most commonly used by your users.</p>
-<h2 id="decorative-image" class="h2-focus">Decorative image <a class="header-anchor" href="#decorative-image" id="heading-186" aria-labelledby="heading-186">#</a></h2>
-<h3 id="svg-in-an-img-tag">SVG in an <code>img</code> tag <a class="header-anchor" href="#svg-in-an-img-tag" id="heading-187" aria-labelledby="heading-187">#</a></h3>
+<h2 id="decorative-image" class="h2-focus">Decorative image <a class="header-anchor" href="#decorative-image" id="heading-331" aria-labelledby="heading-331">#</a></h2>
+<h3 id="svg-in-an-img-tag">SVG in an <code>img</code> tag <a class="header-anchor" href="#svg-in-an-img-tag" id="heading-332" aria-labelledby="heading-332">#</a></h3>
 <pre><code class="html" title="html">
 &lt;img src="XXX.svg" alt="" aria-hidden="true" /&gt;
 </code></pre>
-<h3 id="inline-svg">Inline SVG <a class="header-anchor" href="#inline-svg" id="heading-188" aria-labelledby="heading-188">#</a></h3>
+<h3 id="inline-svg">Inline SVG <a class="header-anchor" href="#inline-svg" id="heading-333" aria-labelledby="heading-333">#</a></h3>
 <pre><code class="html" title="html">
 &lt;svg aria-hidden="true"&gt;
 …
@@ -218,8 +218,8 @@
 </code></pre>
 <p>In addition, you must make sure that the <code>svg</code> tag or one of its children (<code>&lt;g&gt;</code>,<code>&lt;path&gt;</code>...) does not have any attribute to provide it with an accessible name (<code>title</code>, <code>desc</code>, <code>aria- *</code>, …).</p>
 <p>Note: Historically, the <code>focusable=&quot;false&quot;</code> attribute was also required to prevent any focus on the SVG by Internet Explorer and Edge (before Chromium). This is no longer necessary in current browsers (unless your users are still using the older mentioned browsers).</p>
-<h2 id="informative-image-without-link-or-button" class="h2-focus">Informative image (without link or button) <a class="header-anchor" href="#informative-image-without-link-or-button" id="heading-189" aria-labelledby="heading-189">#</a></h2>
-<h3 id="svg-in-an-img-tag-2">SVG in an <code>img</code> tag <a class="header-anchor" href="#svg-in-an-img-tag-2" id="heading-190" aria-labelledby="heading-190">#</a></h3>
+<h2 id="informative-image-without-link-or-button" class="h2-focus">Informative image (without link or button) <a class="header-anchor" href="#informative-image-without-link-or-button" id="heading-334" aria-labelledby="heading-334">#</a></h2>
+<h3 id="svg-in-an-img-tag-2">SVG in an <code>img</code> tag <a class="header-anchor" href="#svg-in-an-img-tag-2" id="heading-335" aria-labelledby="heading-335">#</a></h3>
 <p>The most effective solution is to use the <code>alt</code> attribute:</p>
 <pre><code class="html" title="html">
 &lt;img src="XXX.svg" role="img" alt="replacement text"&gt;
@@ -234,7 +234,7 @@
 &lt;img src="XXX.svg" role="img" aria-labelledby="alt-text"&gt;
 </code></pre>
 <p>Note: Add <code>role=&quot;img&quot;</code> to ensure that the element is properly recognized as an image by assistive technologies.</p>
-<h3 id="inline-svg-2">Inline SVG <a class="header-anchor" href="#inline-svg-2" id="heading-191" aria-labelledby="heading-191">#</a></h3>
+<h3 id="inline-svg-2">Inline SVG <a class="header-anchor" href="#inline-svg-2" id="heading-336" aria-labelledby="heading-336">#</a></h3>
 <p>The best support for SVG is inline display (<code>&lt;svg&gt;</code> tag).</p>
 <pre><code class="html" title="html">
 &lt;svg role="img"&gt;
@@ -272,7 +272,7 @@
   ...
 &lt;/svg&gt;
 </code></pre>
-<h2 id="svg-in-links-or-buttons" class="h2-focus">SVG in links or buttons <a class="header-anchor" href="#svg-in-links-or-buttons" id="heading-192" aria-labelledby="heading-192">#</a></h2>
+<h2 id="svg-in-links-or-buttons" class="h2-focus">SVG in links or buttons <a class="header-anchor" href="#svg-in-links-or-buttons" id="heading-337" aria-labelledby="heading-337">#</a></h2>
 <p>If it is possible to display text nearby, the best solution is to simply hide the SVG using the <code>aria-hidden</code> attribute:</p>
 <pre><code class="html" title="html">
 &lt;button&gt;
@@ -319,9 +319,9 @@
   &lt;svg aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
 &lt;/a&gt;
 </code></pre>
-<h2 id="last-words" class="h2-focus">Last words ... <a class="header-anchor" href="#last-words" id="heading-193" aria-labelledby="heading-193">#</a></h2>
+<h2 id="last-words" class="h2-focus">Last words ... <a class="header-anchor" href="#last-words" id="heading-338" aria-labelledby="heading-338">#</a></h2>
 <p>In short, one tip for accessible SVG would be TEST and test again!</p>
-<h2 id="webography-articles-that-have-helped-me-a-lot" class="h2-focus">Webography (articles that have helped me a lot) <a class="header-anchor" href="#webography-articles-that-have-helped-me-a-lot" id="heading-194" aria-labelledby="heading-194">#</a></h2>
+<h2 id="webography-articles-that-have-helped-me-a-lot" class="h2-focus">Webography (articles that have helped me a lot) <a class="header-anchor" href="#webography-articles-that-have-helped-me-a-lot" id="heading-339" aria-labelledby="heading-339">#</a></h2>
 <ul>
   <li><a href="https://www.deque.com/blog/creating-accessible-svgs/">Creating Accessible SVGs - Deque</a></li>
   <li><a href="https://weboverhauls.github.io/demos/svg/">Accessible SVG test page</a></li>

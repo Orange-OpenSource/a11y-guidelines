@@ -196,10 +196,10 @@
             
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-429" aria-labelledby="heading-429">#</a></h2>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-301" aria-labelledby="heading-301">#</a></h2>
 <p>L'attribut <a href="https://www.w3.org/TR/wai-aria-1.2/#aria-current">aria-current</a> sert à indiquer (au niveau du code) l'élément courant dans un ensemble d'éléments.</p>
 <p>Pour faire simple, prenons l'exemple d'un menu de navigation. L'élément courant est généralement mis en évidence par un effet visuel. Pour que cette mise en évidence soit également perçue par les utilisateurs qui utilisent un lecteur d'écran (ou un outil d'assistance quel qu'il soit), il est indispensable de marquer l'élément au niveau code en utilisant l'attribut <code>aria-current</code>.</p>
-<h2 id="utilisation" class="h2-focus">Utilisation <a class="header-anchor" href="#utilisation" id="heading-430" aria-labelledby="heading-430">#</a></h2>
+<h2 id="utilisation" class="h2-focus">Utilisation <a class="header-anchor" href="#utilisation" id="heading-302" aria-labelledby="heading-302">#</a></h2>
 <p>Pour indiquer l'élément en cours dans un ensemble d'éléments, il suffit d'ajouter un attribut <code>aria-current</code> au niveau du code HTML. Dans l'exemple ci-dessous, on utilise la valeur générique <code>true</code> :</p>
 <pre><code class="html">
   &lt;ul&gt;
@@ -209,7 +209,7 @@
   &lt;ul&gt;
 </code></pre>
 <p>Le second élément de cette liste sera par exemple vocalisé &quot;<strong>en cours</strong>, élément 2&quot; par le lecteur d'écran NVDA.</p>
-<h2 id="liste-des-differents-usages" class="h2-focus">Liste des différents usages <a class="header-anchor" href="#liste-des-differents-usages" id="heading-431" aria-labelledby="heading-431">#</a></h2>
+<h2 id="liste-des-differents-usages" class="h2-focus">Liste des différents usages <a class="header-anchor" href="#liste-des-differents-usages" id="heading-303" aria-labelledby="heading-303">#</a></h2>
 <p>L'attribut <code>aria-current</code> accepte les valeurs suivantes : <code>true</code>, <code>page</code>, <code>step</code>, <code>location</code>, <code>date</code>, <code>time</code> et <code>false</code>.</p>
 <ul>
 <li><code>true</code> : indique l'élément en cours dans un ensemble d'éléments</li>
@@ -220,8 +220,8 @@
 <li><code>time</code> : indique l'heure en cours</li>
 <li><code>false</code> (valeur par défaut) : n'a pas d'effet</li>
 </ul>
-<h2 id="quelques-exemples-dusages-courants" class="h2-focus">Quelques exemples d'usages courants <a class="header-anchor" href="#quelques-exemples-dusages-courants" id="heading-432" aria-labelledby="heading-432">#</a></h2>
-<h3 id="exemples-1-menu-de-navigation">Exemples 1 : menu de navigation <a class="header-anchor" href="#exemples-1-menu-de-navigation" id="heading-433" aria-labelledby="heading-433">#</a></h3>
+<h2 id="quelques-exemples-dusages-courants" class="h2-focus">Quelques exemples d'usages courants <a class="header-anchor" href="#quelques-exemples-dusages-courants" id="heading-304" aria-labelledby="heading-304">#</a></h2>
+<h3 id="exemples-1-menu-de-navigation">Exemples 1 : menu de navigation <a class="header-anchor" href="#exemples-1-menu-de-navigation" id="heading-305" aria-labelledby="heading-305">#</a></h3>
 <p>Utiliser la valeur <code>page</code> pour indiquer la page courante dans un ensemble de pages.</p>
 <p><img src="../images/utilisation-de-l-attribut-aria-current/menu-navigation.png" alt="Menu de navigation proposant 3 éléments : accueil, aide et à propos. L'élément à propos est souligné et affiché d'une couleur différente ce qui permet visuelement de comprendre qu'il s'agit de l'élément en cours de consultation" class="img-fluid"></p>
 <pre><code class="html">
@@ -238,7 +238,7 @@
       &lt;/li&gt;      
     &lt;/ul&gt;
 </code></pre>
-<h3 id="exemples-2-systeme-de-pagination">Exemples 2 : système de pagination <a class="header-anchor" href="#exemples-2-systeme-de-pagination" id="heading-434" aria-labelledby="heading-434">#</a></h3>
+<h3 id="exemples-2-systeme-de-pagination">Exemples 2 : système de pagination <a class="header-anchor" href="#exemples-2-systeme-de-pagination" id="heading-306" aria-labelledby="heading-306">#</a></h3>
 <p>Utiliser la valeur <code>page</code> pour indiquer la page en cours de consultation dans un système de pagination :<br>
 <img src="../images/utilisation-de-l-attribut-aria-current/pagination.png" alt="Capture d'écran, exemple de système de pagination, un bouton précédent, un bouton suivant et 3 liens intitulés 1, 2 et 3" class="img-fluid"></p>
 <pre><code class="html">
@@ -248,7 +248,7 @@
     &lt;li aria-label="page 3"&gt;3&lt;/li&gt;    
   &lt;/ol&gt;
 </code></pre>
-<h3 id="exemples-3-fil-dariane">Exemples 3 : fil d'Ariane <a class="header-anchor" href="#exemples-3-fil-dariane" id="heading-435" aria-labelledby="heading-435">#</a></h3>
+<h3 id="exemples-3-fil-dariane">Exemples 3 : fil d'Ariane <a class="header-anchor" href="#exemples-3-fil-dariane" id="heading-307" aria-labelledby="heading-307">#</a></h3>
 <p>Utiliser la valeur <code>page</code> pour indiquer la page en cours dans un fil d'Ariane :<br>
 <img src="../images/utilisation-de-l-attribut-aria-current/breadcrumb.png" alt="Capture d'écran d'un exemple de fil d'Ariane" class="img-fluid"></p>
 <pre><code class="html">
@@ -258,7 +258,7 @@
     &lt;li <span class="important">aria-current="page"</span>&gt;Utilisation de l'attribut aria-current&lt;/li&gt;
   &lt;/ol&gt;
 </code></pre>
-<h3 id="exemples-4-processus-a-etapes">Exemples 4 : processus à étapes <a class="header-anchor" href="#exemples-4-processus-a-etapes" id="heading-436" aria-labelledby="heading-436">#</a></h3>
+<h3 id="exemples-4-processus-a-etapes">Exemples 4 : processus à étapes <a class="header-anchor" href="#exemples-4-processus-a-etapes" id="heading-308" aria-labelledby="heading-308">#</a></h3>
 <p>Utiliser la valeur <code>step</code> pour indiquer l'étape en cours dans un processus à étapes en plusieurs page.</p>
 <p><img src="../images/utilisation-de-l-attribut-aria-current/stepbar.png" alt="Capture d'écran un composant affichant un processus à étapes tel qu'on peux le trouver sur un site marchant (choix d'un produit, livraison, paiement...). 5 étapes sont visibles, l'étape 3 est mise en valeur (changement de couleur) pour indiquer qu'il s'agit de l'étape en cours." class="img-fluid"></p>
 <pre><code class="html">
@@ -270,7 +270,7 @@
     &lt;li&gt;Label n°5&lt;/li&gt;
   &lt;/ol&gt;
 </code></pre>
-<h3 id="exemple-5-selection-dune-date">Exemple 5 : sélection d'une date <a class="header-anchor" href="#exemple-5-selection-dune-date" id="heading-437" aria-labelledby="heading-437">#</a></h3>
+<h3 id="exemple-5-selection-dune-date">Exemple 5 : sélection d'une date <a class="header-anchor" href="#exemple-5-selection-dune-date" id="heading-309" aria-labelledby="heading-309">#</a></h3>
 <p>Utiliser la valeur <code>date</code> dans un composant permettant de sélectionner une date. Un attribut <code>aria-current=&quot;date&quot;</code> est positionné sur la date du jours tandis qu'un attribut <code>aria-selected=&quot;true&quot;</code> est positionné sur la date en cours de sélection.</p>
 <p><img src="../images/utilisation-de-l-attribut-aria-current/datepicker.png" alt="Capture d'écran d'un composant de type datepicker, la date du jour et la date en cours de sélection sont mises en évidence via un changement de couleur." class="img-fluid"></p>
 

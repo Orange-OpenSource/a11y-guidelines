@@ -205,12 +205,12 @@
           <div class="mt-4">
           <p>Voici quelques recommandations techniques pour vous aider à intégrer des images SVG accessibles.</p>
 <p>Important : quelle que soit la solution retenue, le support navigateurs/aides techniques évoluant très rapidement, pensez à tester vos implémentations sur les configurations les plus utilisées par vos utilisateurs.</p>
-<h2 id="image-de-decoration" class="h2-focus">Image de décoration <a class="header-anchor" href="#image-de-decoration" id="heading-394" aria-labelledby="heading-394">#</a></h2>
-<h3 id="svg-dans-une-balise-img">SVG dans une balise <code>img</code> <a class="header-anchor" href="#svg-dans-une-balise-img" id="heading-395" aria-labelledby="heading-395">#</a></h3>
+<h2 id="image-de-decoration" class="h2-focus">Image de décoration <a class="header-anchor" href="#image-de-decoration" id="heading-266" aria-labelledby="heading-266">#</a></h2>
+<h3 id="svg-dans-une-balise-img">SVG dans une balise <code>img</code> <a class="header-anchor" href="#svg-dans-une-balise-img" id="heading-267" aria-labelledby="heading-267">#</a></h3>
 <pre><code class="html" title="html">
 &lt;img src="XXX.svg" alt="" aria-hidden="true"&gt;
 </code></pre>
-<h3 id="svg-en-ligne-inline">SVG en ligne (inline) <a class="header-anchor" href="#svg-en-ligne-inline" id="heading-396" aria-labelledby="heading-396">#</a></h3>
+<h3 id="svg-en-ligne-inline">SVG en ligne (inline) <a class="header-anchor" href="#svg-en-ligne-inline" id="heading-268" aria-labelledby="heading-268">#</a></h3>
 <pre><code class="html" title="html">
 &lt;svg aria-hidden="true"&gt;
 …
@@ -218,8 +218,8 @@
 </code></pre>
 <p>Vous devez vous assurer que la balise <code>svg</code> ou un de ses enfants (<code>&lt;g&gt;</code>, <code>&lt;path&gt;</code>…) ne possède aucun attribut visant à lui fournir un nom accessible (<code>title</code>, <code>desc</code>, <code>aria-*</code>…).</p>
 <p>Note : historiquement, l'attribut <code>focusable=&quot;false&quot;</code> devait aussi être présent pour éviter toute prise de focus sur le SVG par Internet Explorer et Edge (avant Chromium), ceci n'est plus utile sur les navigateurs actuels (sauf si vos utilisateurs utilisent encore des anciens navigateurs mentionnés).</p>
-<h2 id="image-informative-hors-lien-ou-bouton" class="h2-focus">Image informative (hors lien ou bouton) <a class="header-anchor" href="#image-informative-hors-lien-ou-bouton" id="heading-397" aria-labelledby="heading-397">#</a></h2>
-<h3 id="svg-dans-une-balise-img-2">SVG dans une balise <code>img</code> <a class="header-anchor" href="#svg-dans-une-balise-img-2" id="heading-398" aria-labelledby="heading-398">#</a></h3>
+<h2 id="image-informative-hors-lien-ou-bouton" class="h2-focus">Image informative (hors lien ou bouton) <a class="header-anchor" href="#image-informative-hors-lien-ou-bouton" id="heading-269" aria-labelledby="heading-269">#</a></h2>
+<h3 id="svg-dans-une-balise-img-2">SVG dans une balise <code>img</code> <a class="header-anchor" href="#svg-dans-une-balise-img-2" id="heading-270" aria-labelledby="heading-270">#</a></h3>
 <p>La solution la plus efficace consiste à utiliser l'attribut <code>alt</code> :</p>
 <pre><code class="html" title="html">
 &lt;img src="XXX.svg" role="img" alt="texte de remplacement"&gt;
@@ -234,7 +234,7 @@
 &lt;img src="XXX.svg" role="img" aria-labelledby="alt-text"&gt;
 </code></pre>
 <p>Note : On rajoute <code>role=&quot;img&quot;</code> pour s'assurer que l'élément soit bien considéré comme une image par les technologies d'assistance.</p>
-<h3 id="svg-en-ligne-inline-2">SVG en ligne (inline) <a class="header-anchor" href="#svg-en-ligne-inline-2" id="heading-399" aria-labelledby="heading-399">#</a></h3>
+<h3 id="svg-en-ligne-inline-2">SVG en ligne (inline) <a class="header-anchor" href="#svg-en-ligne-inline-2" id="heading-271" aria-labelledby="heading-271">#</a></h3>
 <p>Le meilleur support pour les SVG est l'affichage en ligne (balise <code>&lt;svg&gt;</code>).</p>
 <pre><code class="html" title="html">
 &lt;svg role="img"&gt;
@@ -272,7 +272,7 @@
   ...
 &lt;/svg&gt;
 </code></pre>
-<h2 id="les-svg-dans-des-liens-ou-boutons" class="h2-focus">Les SVG dans des liens ou boutons <a class="header-anchor" href="#les-svg-dans-des-liens-ou-boutons" id="heading-400" aria-labelledby="heading-400">#</a></h2>
+<h2 id="les-svg-dans-des-liens-ou-boutons" class="h2-focus">Les SVG dans des liens ou boutons <a class="header-anchor" href="#les-svg-dans-des-liens-ou-boutons" id="heading-272" aria-labelledby="heading-272">#</a></h2>
 <p>S'il est possible d'afficher du texte à proximité, la meilleure solution est de simplement masquer le SVG à l'aide de l'attribut <code>aria-hidden</code> :</p>
 <pre><code class="html" title="html">
 &lt;button&gt;
@@ -320,9 +320,9 @@ La solution suivante est similaire à la précédente, mais à tester systémati
   &lt;svg aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
 &lt;/a&gt;
 </code></pre>
-<h2 id="dernier-mot" class="h2-focus">Dernier mot… <a class="header-anchor" href="#dernier-mot" id="heading-401" aria-labelledby="heading-401">#</a></h2>
+<h2 id="dernier-mot" class="h2-focus">Dernier mot… <a class="header-anchor" href="#dernier-mot" id="heading-273" aria-labelledby="heading-273">#</a></h2>
 <p>En résumé, s'il ne fallait retenir qu'un seul conseil pour du SVG accessible, ce serait TESTER et tester encore !</p>
-<h2 id="webographie-articles-qui-mont-bien-bien-aides" class="h2-focus">Webographie (articles qui m'ont bien, bien aidés) <a class="header-anchor" href="#webographie-articles-qui-mont-bien-bien-aides" id="heading-402" aria-labelledby="heading-402">#</a></h2>
+<h2 id="webographie-articles-qui-mont-bien-bien-aides" class="h2-focus">Webographie (articles qui m'ont bien, bien aidés) <a class="header-anchor" href="#webographie-articles-qui-mont-bien-bien-aides" id="heading-274" aria-labelledby="heading-274">#</a></h2>
 <ul lang="en">
   <li><a href="https://www.deque.com/blog/creating-accessible-svgs/" hreflang="en">Creating Accessible SVGs - Deque (en)</a></li>
   <li><a href="https://weboverhauls.github.io/demos/svg/" hreflang="en">Accessible SVG test page (en)</a></li>

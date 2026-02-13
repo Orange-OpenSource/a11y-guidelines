@@ -219,23 +219,23 @@
 <p>&quot;Discover how you can <strong>test your app for accessibility</strong> with every build. Learn how to <strong>perform automated audits</strong> for accessibility using XCTest and find out how to <strong>interpret the results</strong>. We'll also share enhancements to the accessibility API that can help you <strong>improve UI test coverage</strong>.&quot;<br>
 </br>Hereafter, the underlined elements <strong>lead directly to the playback of the WWDC video</strong> at the appropriate moment.<br>
 </br></p>
-<h2 id="overview" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=39">Overview</a> <a class="header-anchor" href="#overview" id="heading-2224" aria-labelledby="heading-2224">#</a></h2>
+<h2 id="overview" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=39">Overview</a> <a class="header-anchor" href="#overview" id="heading-2252" aria-labelledby="heading-2252">#</a></h2>
 <p>The <a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=98">Accessibility Inspector</a> is the <code>Xcode</code> developer tool that <strong>performs audits</strong> and <strong>analyzes the issues</strong> to provide a complete list of accessiblity problems to be solved in the <a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=124">sample app</a> that will be used throughout this session.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10035_1.png" alt="" class="img-fluid"></p>
-<h2 id="perform-an-audit" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=151">Perform an audit</a> <a class="header-anchor" href="#perform-an-audit" id="heading-2225" aria-labelledby="heading-2225">#</a></h2>
+<h2 id="perform-an-audit" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=151">Perform an audit</a> <a class="header-anchor" href="#perform-an-audit" id="heading-2253" aria-labelledby="heading-2253">#</a></h2>
 <p>Pressing the <code>Run Audit</code> button displays a screen including a filter for showing specific types of items in the main table that will point out the issues.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10035_2.png" alt="" class="img-fluid"></p>
 <p>Using the new <strong>performAccessibilityAudit</strong> method on the <code>XCUIApplication</code> is the appropriate way to <a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=172">automate audits</a> in the <code>UI</code> tests (<a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=202">demo</a>).<br>
 <img src="../../../../../images/iOSdev/wwdc23-10035_3.png" alt="" class="img-fluid"><br>
 In order to continuously keep on testing despite the potential issues, it's crucial to adapt the <strong>continueAfterFailure</strong> instance property to the <a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=278">suitable value</a> before <a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=293">launching the tests</a>.<br>
 </br></p>
-<h2 id="issues" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=304">Issues</a> <a class="header-anchor" href="#issues" id="heading-2226" aria-labelledby="heading-2226">#</a></h2>
+<h2 id="issues" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=304">Issues</a> <a class="header-anchor" href="#issues" id="heading-2254" aria-labelledby="heading-2254">#</a></h2>
 <p>The <code>Source Editor</code> displays all the issues in correspondence with the line to which it relates.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10035_5.png" alt="" class="img-fluid"></p>
-<h3 id="report-navigator"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=321">Report Navigator</a> <a class="header-anchor" href="#report-navigator" id="heading-2227" aria-labelledby="heading-2227">#</a></h3>
+<h3 id="report-navigator"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=321">Report Navigator</a> <a class="header-anchor" href="#report-navigator" id="heading-2255" aria-labelledby="heading-2255">#</a></h3>
 <p>Instead of investigating by one's own, it may be wise to involve the <strong>Report Navigator</strong> for getting more relevant information that provide accurate details.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10035_4.png" alt="" class="img-fluid"></p>
-<h3 id="handling-the-audit-issues"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=362">Handling the audit issues</a> <a class="header-anchor" href="#handling-the-audit-issues" id="heading-2228" aria-labelledby="heading-2228">#</a></h3>
+<h3 id="handling-the-audit-issues"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=362">Handling the audit issues</a> <a class="header-anchor" href="#handling-the-audit-issues" id="heading-2256" aria-labelledby="heading-2256">#</a></h3>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -268,12 +268,12 @@ In order to continuously keep on testing despite the potential issues, it's cruc
 </div>
 </br>
 </br>
-<h3 id="filtered-issues"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=574">Filtered issues</a> <a class="header-anchor" href="#filtered-issues" id="heading-2229" aria-labelledby="heading-2229">#</a></h3>
+<h3 id="filtered-issues"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=574">Filtered issues</a> <a class="header-anchor" href="#filtered-issues" id="heading-2257" aria-labelledby="heading-2257">#</a></h3>
 <p>In order to <strong>set aside some false-positive issues</strong>, the <code>performAccessibilityAudit</code> method comes in handy with its two incoming parameters: the <a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=602">first one</a> filters the types to be audited and the <a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=625">second one</a> defines the way to be executed through a closure.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10035_8.png" alt="" class="img-fluid"></p>
-<h2 id="caveats" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=702">Caveats</a> <a class="header-anchor" href="#caveats" id="heading-2230" aria-labelledby="heading-2230">#</a></h2>
+<h2 id="caveats" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=702">Caveats</a> <a class="header-anchor" href="#caveats" id="heading-2258" aria-labelledby="heading-2258">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc23-10035_9.png" alt="" class="img-fluid"></p>
-<h2 id="automation-elements" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=787">Automation elements</a> <a class="header-anchor" href="#automation-elements" id="heading-2231" aria-labelledby="heading-2231">#</a></h2>
+<h2 id="automation-elements" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10035/?time=787">Automation elements</a> <a class="header-anchor" href="#automation-elements" id="heading-2259" aria-labelledby="heading-2259">#</a></h2>
 <p>Following the same rationale as the <code>accessibilityElements</code>, the <strong>automationElements</strong> property defines an array of the elements in the container to be part of the automation.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10035_10.png" alt="" class="img-fluid"><br>
 This new instance property turns out to be efficient when it becomes important to expose elements for automation but not for accessibility and vice versa.<br>
