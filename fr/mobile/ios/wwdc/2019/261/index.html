@@ -235,24 +235,24 @@
 </ul>
 <p>Par la suite, selon la configuration de la présentation, le fait de cliquer sur un titre ou un temps indiqué permet d'ouvrir la vidéo <span lang="en">Apple</span> directement au moment spécifié.<br>
 <br><br></p>
-<h2 id="dynamic-type-0057" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=57">Dynamic Type (00:57)</a> <a class="header-anchor" href="#dynamic-type-0057" id="heading-1921" aria-labelledby="heading-1921">#</a></h2>
+<h2 id="dynamic-type-0057" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=57">Dynamic Type (00:57)</a> <a class="header-anchor" href="#dynamic-type-0057" id="heading-1925" aria-labelledby="heading-1925">#</a></h2>
 <p>Petit rappel sur la fonctionnalité <span lang="en">Dynamic Type</span> dont le but est de <strong>permettre l'adaptation graphique à la taille des polices</strong> modifiable dans les réglages utilisateurs.<br>
 <img src="../../../../images/iOSdev/wwdc19-261-DynamicType.png" alt="" class="img-fluid"><br>
 <br>Une explication détaillée de l'implémentation de cette fonctionnalité est disponible dans la partie <a href="../../../developpement/#taille-des-textes">guide pour les développeurs</a>.<br>
 <br><br></p>
-<h2 id="large-content-viewer-0154" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=114">Large Content Viewer (01:54)</a> <a class="header-anchor" href="#large-content-viewer-0154" id="heading-1922" aria-labelledby="heading-1922">#</a></h2>
+<h2 id="large-content-viewer-0154" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=114">Large Content Viewer (01:54)</a> <a class="header-anchor" href="#large-content-viewer-0154" id="heading-1926" aria-labelledby="heading-1926">#</a></h2>
 <p>Cette fonctionnalité iOS 11 <strong>disponible uniquement quand l'option <code>Tailles</code> <code>de</code> <code>police</code> <code>plus</code> <code>grandes</code> est activée</strong> permet de rendre très efficace le grossissement des éléments de barres (navigation, onglets...) pour les personnes souhaitant grossir la taille des polices à l'aide du <span lang="en">Dynamic Type</span>.<br>
 <img src="../../../../images/iOSdev/wwdc19-261-LargeContentViewer_1.png" alt="" class="img-fluid"><br>
 Le déclenchement de cette fonctionnalité s'effectue par un <strong>appui long</strong> sur l'élément concerné que l'on peut <strong>laisser glisser</strong> sur les éléments voisins pour les grossir à leur tour et finalement activer celui sur lequel on <strong>relève le doigt de l'écran</strong>.<br>
 <img src="../../../../images/iOSdev/wwdc19-261-LargeContentViewer_2.png" alt="" class="img-fluid"><br>
 <br>Il est très important d'avoir à l'esprit que les modifications de taille liées au <span lang="en">Dynamic Type</span> doivent toujours être implémentées de façon <strong>P.R.I.O.R.I.T.A.I.R.E.</strong> : le <span lang="en">Large Content Viewer</span> n'est à utiliser qu'à partir du moment où <strong>l'élément graphique impacté ne peut pas répondre aux changements souhaités</strong>.<br>
 <br><br></p>
-<h2 id="images-0402" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=242">Images (04:02)</a> <a class="header-anchor" href="#images-0402" id="heading-1923" aria-labelledby="heading-1923">#</a></h2>
+<h2 id="images-0402" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=242">Images (04:02)</a> <a class="header-anchor" href="#images-0402" id="heading-1927" aria-labelledby="heading-1927">#</a></h2>
 <p>Dans cette partie de la vidéo, toutes les caractéristiques des images à importer sont passées en revue pour obtenir une excellente définition du rendu après grossissement comme détaillé dans la partie <a href="../../../developpement/#taille-des-elements-graphiques">guide pour les développeurs</a>.<br>
 <br>L'interface graphique de Xcode peut être utilisée conjointement à du code pour obtenir le résultat escompté.<br>
 <img src="../../../../images/iOSdev/wwdc19-261-ImageSettings.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="custom-views-0452" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=292">Custom Views (04:52)</a> <a class="header-anchor" href="#custom-views-0452" id="heading-1924" aria-labelledby="heading-1924">#</a></h2>
+<h2 id="custom-views-0452" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=292">Custom Views (04:52)</a> <a class="header-anchor" href="#custom-views-0452" id="heading-1928" aria-labelledby="heading-1928">#</a></h2>
 <p>En implémentant le <span lang="en">Dynamic Type</span>, <strong>iOS 13</strong> rend possible un <strong>même rendu graphique</strong> pour un élément standard UIKit d'une barre (navigation, onglets...) et pour une <span lang="en">UIView</span>.<br>
 <img src="../../../../images/iOSdev/wwdc19-261-CustomViews_1.png" alt="" class="img-fluid"><br>
 <br>Le <strong>protocole <code>UILargeContentViewerItem</code></strong> (<a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=335">05:35</a>) définit toutes les informations nécessaires au <span lang="en">Large Content Viewer</span> ⟹ la classe <strong>UIView se conforme à ce protocole</strong> par défaut :<br>
@@ -264,7 +264,7 @@ Le déclenchement de cette fonctionnalité s'effectue par un <strong>appui long<
 <br>Pour finir, le <code>delegate</code> de cette interaction tactile contient un ensemble d'options (<a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=472">07:52</a>) qui permettent de réaliser certaines actions :<br>
 <img src="../../../../images/iOSdev/wwdc19-261-CustomViews_5.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="exemples-0915" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=555">Exemples (09:15)</a> <a class="header-anchor" href="#exemples-0915" id="heading-1925" aria-labelledby="heading-1925">#</a></h2>
+<h2 id="exemples-0915" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2019/261/?time=555">Exemples (09:15)</a> <a class="header-anchor" href="#exemples-0915" id="heading-1929" aria-labelledby="heading-1929">#</a></h2>
 <p>Le premier exemple concerne les <strong>éléments UIKit standards</strong>.<br>
 <img src="../../../../images/iOSdev/wwdc19-261-Examples_1.png" alt="" class="img-fluid"><br>
 <br>Le second exemple traite de <strong>classes personnalisées pour des boutons</strong> (<a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2019/261/?time=593">09:53</a>) dont certaines propriétés doivent être redéfinies pour une parfaite implémentation du <span lang="en">Large Content Viewer</span>.<br>

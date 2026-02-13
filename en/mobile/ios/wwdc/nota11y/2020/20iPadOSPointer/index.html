@@ -221,9 +221,9 @@
 <p></br>Most of the illustrations are parts of the Apple presentations and may be available at the <code>Resources</code> section inside the <code>Overview</code> sheet of each video.<br>
 </br>Hereafter, the underlined elements lead directly to the playback of the WWDC video at the appropriate moment.<br>
 </br></p>
-<h2 id="design" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/">Design</a> <a class="header-anchor" href="#design" id="heading-1984" aria-labelledby="heading-1984">#</a></h2>
+<h2 id="design" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/">Design</a> <a class="header-anchor" href="#design" id="heading-1988" aria-labelledby="heading-1988">#</a></h2>
 <p>The main reason why the pointer was added as an iPad support in <strong><code>iOS</code> <code>13.4</code></strong> mainly relies on <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=47">ergonomics</a></strong> while combining its high precision with a <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=47">touch-based interface</a></strong>.</p>
-<h3 id="precision"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=112">Precision</a> <a class="header-anchor" href="#precision" id="heading-1985" aria-labelledby="heading-1985">#</a></h3>
+<h3 id="precision"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=112">Precision</a> <a class="header-anchor" href="#precision" id="heading-1989" aria-labelledby="heading-1989">#</a></h3>
 <p>When using the iPadOS pointer, the required dexterity may lead to an <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=139">unwanted action</a>...</p>
 <p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-17.png" alt="" class="img-fluid"><br>
 <a id="anchor-adaptivePrecision"></a><br>
@@ -233,7 +233,7 @@
 <p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-19.png" alt="" class="img-fluid"></p>
 <p>Using the standard UIKit elements (including <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=310">text</a>) leads to a <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=409">transparent implementation</a> of the adaptive precision.</p>
 <p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-20.png" alt="" class="img-fluid"></p>
-<h3 id="operating-mode"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=530">Operating mode</a> <a class="header-anchor" href="#operating-mode" id="heading-1986" aria-labelledby="heading-1986">#</a></h3>
+<h3 id="operating-mode"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=530">Operating mode</a> <a class="header-anchor" href="#operating-mode" id="heading-1990" aria-labelledby="heading-1990">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-24.png" alt="" class="img-fluid"></p>
 <p>The pointer is actually composed of two elements: a visible true pointer and an invisible <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=548">model pointer</a></strong> that handles the items hovering.<br>
 <img src="../../../../../images/iOSdev/wwdc20-iOSPointer-21.png" alt="" class="img-fluid"><br>
@@ -247,7 +247,7 @@ In this case, the true pointer automatically leads to the center of the selected
 <a id="anchor-magnetism"></a><br>
 This movement efficiency is also improved by two pointer capabilities: <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=732">inertia</a></strong> and <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=768">magnetism</a></strong> that aim at easing the pointer handling through a smooth and intelligent way for finishing its path after the finger lifts the trackpad.<br>
 Note that any control that supports pointer snapping gets <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=832">magnetism for free</a>.</p>
-<h3 id="pointer-effects"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=861">Pointer effects</a> <a class="header-anchor" href="#pointer-effects" id="heading-1987" aria-labelledby="heading-1987">#</a></h3>
+<h3 id="pointer-effects"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=861">Pointer effects</a> <a class="header-anchor" href="#pointer-effects" id="heading-1991" aria-labelledby="heading-1991">#</a></h3>
 <p>Three pointer effects are available to bring focus to the interactive elements.</p>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -295,7 +295,7 @@ Besides its goal of highlighting, the <a href="https://developer.apple.com/video
 </div>
 </div>
 </br></br>
-<h4 id="tips-tricks">Tips &amp; tricks <a class="header-anchor" href="#tips-tricks" id="heading-1988" aria-labelledby="heading-1988">#</a></h4>
+<h4 id="tips-tricks">Tips &amp; tricks <a class="header-anchor" href="#tips-tricks" id="heading-1992" aria-labelledby="heading-1992">#</a></h4>
 <p>The main rule to be followed when implementing a pointer effect is the <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1074">Automatic Effect</a> that handles the best effect for an element according to its size and shape.<br>
 <img src="../../../../../images/iOSdev/wwdc20-iOSPointer-29.png" alt="" class="img-fluid"></p>
 <p>Some quick examples are highlighted for helping the design implementation...</p>
@@ -371,7 +371,7 @@ Besides its goal of highlighting, the <a href="https://developer.apple.com/video
 </br></br>
 <p>... with an interesting suggestion regarding the <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1225">recommended space</a> around a graphic element.<br>
 <img src="../../../../../images/iOSdev/wwdc20-iOSPointer-31.png" alt="" class="img-fluid"></p>
-<h4 id="customize-combine">Customize &amp; combine <a class="header-anchor" href="#customize-combine" id="heading-1989" aria-labelledby="heading-1989">#</a></h4>
+<h4 id="customize-combine">Customize &amp; combine <a class="header-anchor" href="#customize-combine" id="heading-1993" aria-labelledby="heading-1993">#</a></h4>
 <p>With the <code>Highlight</code> and <code>Lift</code> effects, it's crucial to <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1288">adapt the corner radius</a></strong> of the graphic elements to reach a perfect rendering.</p>
 <p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-32.png" alt="" class="img-fluid"><br>
 Various options should be checked regarding the <code>Hover</code> effect:</p>
@@ -418,8 +418,8 @@ The I-beam tries to stay in the center of the element thanks to the <a href="#an
 </div>
 </div>
 </br></br>
-<h3 id="pointer-appearance"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1456">Pointer appearance</a> <a class="header-anchor" href="#pointer-appearance" id="heading-1990" aria-labelledby="heading-1990">#</a></h3>
-<h4 id="material-shape">Material &amp; shape <a class="header-anchor" href="#material-shape" id="heading-1991" aria-labelledby="heading-1991">#</a></h4>
+<h3 id="pointer-appearance"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1456">Pointer appearance</a> <a class="header-anchor" href="#pointer-appearance" id="heading-1994" aria-labelledby="heading-1994">#</a></h3>
+<h4 id="material-shape">Material &amp; shape <a class="header-anchor" href="#material-shape" id="heading-1995" aria-labelledby="heading-1995">#</a></h4>
 <p>The <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1468">pointer material</a></strong> automatically adapts its colors for a better user experience.<br>
 <img src="../../../../../images/iOSdev/wwdc20-iOSPointer-38.png" alt="" class="img-fluid"></p>
 <p>This material may join the initial <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1545">shape</a></strong> for a modification in order to catch the attention.<br>
@@ -428,7 +428,7 @@ The I-beam tries to stay in the center of the element thanks to the <a href="#an
 <img src="../../../../../images/iOSdev/wwdc20-iOSPointer-37.png" alt="" class="img-fluid"></p>
 <p>... or morph into any <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1591">arbitrary shape</a> whose goal is to show up a different functionnality.<br>
 <img src="../../../../../images/iOSdev/wwdc20-iOSPointer-39.png" alt="" class="img-fluid"></p>
-<h4 id="custom-pointer"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1653">Custom pointer</a> <a class="header-anchor" href="#custom-pointer" id="heading-1992" aria-labelledby="heading-1992">#</a></h4>
+<h4 id="custom-pointer"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1653">Custom pointer</a> <a class="header-anchor" href="#custom-pointer" id="heading-1996" aria-labelledby="heading-1996">#</a></h4>
 <p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-40.png" alt="" class="img-fluid"></p>
 <p>To create a custom pointer, few rules are necessary to be followed:</p>
 <ul class="nav nav-tabs" role="tablist">
@@ -515,20 +515,20 @@ The I-beam tries to stay in the center of the element thanks to the <a href="#an
 </div>
 </div>
 </br></br>
-<h3 id="pointer-interactions">Pointer interactions <a class="header-anchor" href="#pointer-interactions" id="heading-1993" aria-labelledby="heading-1993">#</a></h3>
-<h4 id="selection"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1972">Selection</a> <a class="header-anchor" href="#selection" id="heading-1994" aria-labelledby="heading-1994">#</a></h4>
+<h3 id="pointer-interactions">Pointer interactions <a class="header-anchor" href="#pointer-interactions" id="heading-1997" aria-labelledby="heading-1997">#</a></h3>
+<h4 id="selection"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=1972">Selection</a> <a class="header-anchor" href="#selection" id="heading-1998" aria-labelledby="heading-1998">#</a></h4>
 <p>Using pointers give rise to a better precision in the possible actions already available and it's highly recommended that <strong>new features not be introduced <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=2097">only for pointers</a></strong>.<br>
 <img src="../../../../../images/iOSdev/wwdc20-iOSPointer-48.png" alt="" class="img-fluid"></p>
 <p>Moreover, the <a href="#anchor-adaptivePrecision">adaptive precision</a> of the pointer enhances the <a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=2109">low-precision input</a> of some larger interfaces.</p>
 <p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-49.png" alt="" class="img-fluid"></p>
 <p><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=2189">Hovering</a> a certain area may also provide possible actions the user might want to execute in order to speed up interaction.<br>
 <img src="../../../../../images/iOSdev/wwdc20-iOSPointer-50.png" alt="" class="img-fluid"></p>
-<h4 id="gestures"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=2270">Gestures</a> <a class="header-anchor" href="#gestures" id="heading-1995" aria-labelledby="heading-1995">#</a></h4>
+<h4 id="gestures"><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=2270">Gestures</a> <a class="header-anchor" href="#gestures" id="heading-1999" aria-labelledby="heading-1999">#</a></h4>
 <p>Customizing a <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=2279">two-finger gesture</a></strong> is an excellent way to improve the user experience but it's crucial to combine the goal and manipulation thereof with the pointer location.</p>
 <p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-51.png" alt="" class="img-fluid"></p>
 <p>It's also essential to keep in mind the use of a <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10640/?time=2375">secondary click</a></strong> that may significantly speed up the access to various functions.<br>
 </br></p>
-<h2 id="build" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2020/10093/">Build</a> <a class="header-anchor" href="#build" id="heading-1996" aria-labelledby="heading-1996">#</a></h2>
+<h2 id="build" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2020/10093/">Build</a> <a class="header-anchor" href="#build" id="heading-2000" aria-labelledby="heading-2000">#</a></h2>
 <p>The pointer coexistence with a touch-based interface comes up with numerous <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=119">system components</a> that have pointer support built in.</p>
 <p><img src="../../../../../images/iOSdev/wwdc20-iOSPointer-1.png" alt="" class="img-fluid"></p>
 <p>Besides some items (<a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=144">scroll view</a>, <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=154">collection/table view</a>,...), many functions (<a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=176">drag and drop</a>, <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=186">secondary click</a>,...) are also concerned by the pointer interactions:</p>
@@ -573,7 +573,7 @@ The I-beam tries to stay in the center of the element thanks to the <a href="#an
 </div>
 </div>
 </br></br>
-<h3 id="update-an-app">Update an app <a class="header-anchor" href="#update-an-app" id="heading-1997" aria-labelledby="heading-1997">#</a></h3>
+<h3 id="update-an-app">Update an app <a class="header-anchor" href="#update-an-app" id="heading-2001" aria-labelledby="heading-2001">#</a></h3>
 <p>It's definitely not necessary to modify the pointer effects if they're adapted to the users needs.<br>
 <img src="../../../../../images/iOSdev/wwdc20-iOSPointer-5.png" alt="" class="img-fluid"></p>
 <p><a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=316">Native controls</a> such as <code>UIButtons</code> have a pointer that's automatically handled by the system...<br>
@@ -582,12 +582,12 @@ The I-beam tries to stay in the center of the element thanks to the <a href="#an
 <img src="../../../../../images/iOSdev/wwdc20-iOSPointer-7.png" alt="" class="img-fluid"></p>
 <p>In this perspective, these modifications are based on the <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=410">pointer styles</a> divided into two categories: the <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=428">content effect</a></strong> and the <strong><a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=480">shape customization</a></strong>.<br>
 <img src="../../../../../images/iOSdev/wwdc20-iOSPointer-8.png" alt="" class="img-fluid"></p>
-<h3 id="custom-ui"><a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=737">Custom UI</a> <a class="header-anchor" href="#custom-ui" id="heading-1998" aria-labelledby="heading-1998">#</a></h3>
+<h3 id="custom-ui"><a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=737">Custom UI</a> <a class="header-anchor" href="#custom-ui" id="heading-2002" aria-labelledby="heading-2002">#</a></h3>
 <p>When creating one's own pointer, it's vital to define the <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=797">interaction areas</a>...<br>
 <img src="../../../../../images/iOSdev/wwdc20-iOSPointer-8a.png" alt="" class="img-fluid"></p>
 <p>... and adapt the behavior accordingly through the <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=862">delegate</a>.<br>
 <img src="../../../../../images/iOSdev/wwdc20-iOSPointer-8b.png" alt="" class="img-fluid"></p>
-<h3 id="examples">Examples <a class="header-anchor" href="#examples" id="heading-1999" aria-labelledby="heading-1999">#</a></h3>
+<h3 id="examples">Examples <a class="header-anchor" href="#examples" id="heading-2003" aria-labelledby="heading-2003">#</a></h3>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -645,7 +645,7 @@ The I-beam tries to stay in the center of the element thanks to the <a href="#an
 </div>
 </div>
 </br></br>
-<h3 id="animations-transitions"><a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=1160">Animations &amp; transitions</a> <a class="header-anchor" href="#animations-transitions" id="heading-2000" aria-labelledby="heading-2000">#</a></h3>
+<h3 id="animations-transitions"><a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=1160">Animations &amp; transitions</a> <a class="header-anchor" href="#animations-transitions" id="heading-2004" aria-labelledby="heading-2004">#</a></h3>
 <p>Providing better pointer regions may lead to a finest user experience thanks to the <a href="#anchor-magnetism">magnetism</a> pointer capability.<br>
 <img src="../../../../../images/iOSdev/wwdc20-iOSPointer-13.png" alt="" class="img-fluid"></p>
 <p>Moreover, a smooth interaction is also outlined via <a href="https://developer.apple.com/videos/play/wwdc2020/10093/?time=1209">continuous regions</a> between interactive elements.<br>

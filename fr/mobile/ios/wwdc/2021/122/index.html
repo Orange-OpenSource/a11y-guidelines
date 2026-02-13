@@ -231,7 +231,7 @@
 </li>
 </ul>
 <p><br><br></p>
-<h2 id="presentation-0129" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=89">Présentation (01:29)</a> <a class="header-anchor" href="#presentation-0129" id="heading-1955" aria-labelledby="heading-1955">#</a></h2>
+<h2 id="presentation-0129" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=89">Présentation (01:29)</a> <a class="header-anchor" href="#presentation-0129" id="heading-1959" aria-labelledby="heading-1959">#</a></h2>
 <p>L'idée de cette <strong>nouvelle fonctionnalité iOS 15</strong> réside dans l'introduction d'une sonorisation à intensité variable pour <strong>indiquer les écarts de valeurs sur un graphe</strong> de façon auditive.</p>
 <p>Le <a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=89">premier exemple</a> s'articule autour d'un graphe représentant des données sous forme de courbes.<br>
 <img src="../../../../images/iOSdev/wwdc21-122-Demo1.png" alt="" class="img-fluid"><br>
@@ -244,7 +244,7 @@ Outre le fait de se mettre à la portée de tous, incorporer l'accessibilité à
 <a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=370"></p>
 <p><img src="../../../../images/iOSdev/wwdc21-122-MakeYourChartsA11Y.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="criteres-de-conception-en-accessibilite-visuelle-0644" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=404">Critères de conception en accessibilité visuelle (06:44)</a> <a class="header-anchor" href="#criteres-de-conception-en-accessibilite-visuelle-0644" id="heading-1956" aria-labelledby="heading-1956">#</a></h2>
+<h2 id="criteres-de-conception-en-accessibilite-visuelle-0644" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=404">Critères de conception en accessibilité visuelle (06:44)</a> <a class="header-anchor" href="#criteres-de-conception-en-accessibilite-visuelle-0644" id="heading-1960" aria-labelledby="heading-1960">#</a></h2>
 <p>Afin de rendre le visuel d'un graphique le plus accessible possible, des critères importants sont exposés et expliqués avec des exemples concrets pour mieux percevoir leur efficacité.</p>
 <ul>
 <li>
@@ -265,7 +265,7 @@ Outre le fait de se mettre à la portée de tous, incorporer l'accessibilité à
 </ul>
 <p>Pour plus d'informations sur ces points, l'ensemble des <a href="../../../conception/" style="text-decoration: underline;">critères de conception</a> incluant les <a href="../../../conception/#options-daccessibilite" style="text-decoration: underline;">options d'accessibilité</a> sont disponibles dans la section homonyme iOS de ce site.<br>
 <br><br></p>
-<h2 id="implementation-classique-1022" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=622">Implémentation classique (10:22)</a> <a class="header-anchor" href="#implementation-classique-1022" id="heading-1957" aria-labelledby="heading-1957">#</a></h2>
+<h2 id="implementation-classique-1022" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=622">Implémentation classique (10:22)</a> <a class="header-anchor" href="#implementation-classique-1022" id="heading-1961" aria-labelledby="heading-1961">#</a></h2>
 <p>Un histogramme sans complexités particulières va servir de socle pour l'exemple d'implémentation basique de VoiceOver.<br>
 <img src="../../../../images/iOSdev/wwdc21-122-BasicExample1.png" alt="" class="img-fluid"><br>
 <br><br>
@@ -284,7 +284,7 @@ Les grandes lignes à suivre peuvent se résumer de la façon suivante :</p>
 <p><img src="../../../../images/iOSdev/wwdc21-122-BasicExample2.png" alt="" class="img-fluid"><br>
 En suivant cette logique, le <a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=776">rendu final</a> est optimisé et parfaitement compréhensible par un utilisateur <span lang="en">VoiceOver</span>.<br>
 <br><br></p>
-<h2 id="implementation-du-graphe-audio-1417" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=857">Implémentation du graphe audio (14:17)</a> <a class="header-anchor" href="#implementation-du-graphe-audio-1417" id="heading-1958" aria-labelledby="heading-1958">#</a></h2>
+<h2 id="implementation-du-graphe-audio-1417" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10122/?time=857">Implémentation du graphe audio (14:17)</a> <a class="header-anchor" href="#implementation-du-graphe-audio-1417" id="heading-1962" aria-labelledby="heading-1962">#</a></h2>
 <p>L'exemple précédent de l'histogramme est repris en y ajoutant quelques propriétés pour mettre en avant l'implémentation de cette <strong>nouvelle fonctionnalité iOS 15</strong>.</p>
 <p><img src="../../../../images/iOSdev/wwdc21-122-AudioGraph1.png" alt="" class="img-fluid"></p>
 <p>Toute la mécanique de fonctionnement est apportée par le <span lang="en">framework <code>Accessibility</code></span> (disponible depuis iOS 14) qui fournit la source de cette nouveauté, le protocole <strong><a href="https://developer.apple.com/documentation/accessibility/axchart">AXChart</a></strong>.</p>

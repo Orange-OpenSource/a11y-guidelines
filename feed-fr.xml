@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2026-02-09T00:00:00Z</updated>
+  <updated>2026-02-13T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Spécifier l&#39;accessibilité de vos designs grâce aux annotations</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/annotations-accessibilite/"/>
+    <updated>2026-02-13T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/annotations-accessibilite/</id>
+    <content xml:lang="fr" type="html">Les annotations d&#39;accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent interagir avec les utilisateurs et être interprétés par les outils d&#39;assistance</content>
+  </entry>
   
   <entry>
     <title>Veille #A11y Décembre-Janvier 2026</title>
@@ -425,14 +433,6 @@
     <updated>2022-08-03T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/veille-juin-juillet-2022/</id>
     <content xml:lang="fr" type="html">Florilège de ressources en #a11y, Juin-Juillet 2022</content>
-  </entry>
-  
-  <entry>
-    <title>Spécifier l&#39;accessibilité de vos design grâce aux annotations</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/annotations-accessibilite/"/>
-    <updated>2022-07-29T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/annotations-accessibilite/</id>
-    <content xml:lang="fr" type="html">Les annotations d&#39;accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent être interprétés par les outils d&#39;assistance</content>
   </entry>
   
   <entry>

@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Specify the accessibility of your designs by using annotations - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
+    
+    <meta name="description" content="Accessibility annotations allow you to specify how the different components present on your wireframe should interact with users and be interpreted by assistance tools">
+    
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <nav class="navbar navbar-expand-lg supra" aria-label="Skip links - Switch language" data-bs-theme="dark">
+   <div class="container-lg">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
+      <a href="#main-menu" class="nav-link">Go to menu</a>
+    </li><li class="nav-item">
+      <a href="#main-content" class="nav-link">Go to content</a>
+    </li><li class="nav-item hidden-if-no-js">
+      <a href="#search-input" class="nav-link">Go to search</a>
+    </li><li class="nav-item">
+      <a href="#footer" class="nav-link">Go to footer</a>
+    </li></ul>
+
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+    </div>
+  </nav>
+
+  
+
+<div class="navbar navbar-expand-md" data-bs-theme="dark">
+  <nav id="main-menu" class="container-lg justify-content-md-start align-items-center" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link active" aria-current="true">
+  Articles
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  
+</header>
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a class="breadcrumb-focus" href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-focus" href="/en/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Specify the accessibility of your designs by using annotations
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#what-is-it-about" class="dropdown-item text-wrap">What is it about?</a><a href="#what-should-be-annotated" class="dropdown-item text-wrap">What should be annotated?</a><a href="#how-to-do-it" class="dropdown-item text-wrap">How to do it?</a><a href="#ressources" class="dropdown-item text-wrap">Ressources</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          
+            <h1>Specify the accessibility of your designs by using annotations</h1>
+            
+              <span class="visually-hidden" id="filters_label">
+                Associated themes:
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><span class="tagType d-inline-block" data-tag="beginner">Beginner</span></li>
+              </ul>
+            
+            
+            
+
+            <p class="text-muted mb-0">
+              <span class="visually-hidden">Publication date</span>
+              <time datetime="2026-02-13T00:00:00.000Z">
+                February 13, 2026
+              </time>
+            </p>
+
+            
+              <p class="text-muted mb-0">
+                Update of the article from
+                <time datetime="2025-11-04T00:00:00.000Z">
+                  November 04, 2025
+                </time>
+              </p>
+            
+          
+          <div class="mt-4">
+          <h2 id="what-is-it-about" class="h2-focus">What is it about? <a class="header-anchor" href="#what-is-it-about" id="heading-478" aria-labelledby="heading-478">#</a></h2>
+<p>Accessibility annotations specify how the various components on a screen should be interpreted by assistive tools (like a screen reader) and help to anticipate several accessibility error risks. while some annotations can be added directly by designers during the graphic design phase, others require technical expertise.<br>
+This is the main benefit of this activity, which encourages a cross-disciplinary reflection on accessibility (designer, product manager, accessibility expert, developer, etc.).<br>
+Without these specifications, technical accessibility rests solely on the shoulders of developers, while it must be, above all, a team effort.</p>
+<h2 id="what-should-be-annotated" class="h2-focus">What should be annotated? <a class="header-anchor" href="#what-should-be-annotated" id="heading-479" aria-labelledby="heading-479">#</a></h2>
+<p>Some information that can be added to your designs:</p>
+<ul>
+<li>Text alternative for images</li>
+<li>Title of each page</li>
+<li>Headings (HTML tags <code>h1</code>, <code>h2</code>...)</li>
+<li>Semantics (lists, paragraphs, quotations...)</li>
+<li>list of the different page regions (landmarks)</li>
+<li>Interactive components (links, buttons...)</li>
+<li>Reading order of components with screen reader</li>
+<li>Focus moving order</li>
+<li>Forms (labels, mandatory fields, error messages...)</li>
+<li>Keyboard shortcuts (for example Esc to close a dialog box)</li>
+<li>Skip links...</li>
+</ul>
+<img src="../images/annotations/example-en.png" alt="Design example with accessibility annotations" title="Design example with accessibility annotations" class="img-fluid">
+<h2 id="how-to-do-it" class="h2-focus">How to do it? <a class="header-anchor" href="#how-to-do-it" id="heading-480" aria-labelledby="heading-480">#</a></h2>
+<p>Whatever software used, annotating mockups is really easy. For example, you can use numbered bullet points that link to a detailed description. There are also annotation kits or plugins that offer stickers with different colors and shapes that allow you to quickly annotate your designs. The best tool is the one that best suits your way of working. It may vary depending on the profiles and size of your team. Annotation kits, as plugins, provide a foundation that you should feel free to adapt to your needs.</p>
+<img src="../images/annotations/reading-order-en.png" alt="Design example with annotations and reading order" title="Design example with annotations and reading order" class="img-fluid">
+<h2 id="ressources" class="h2-focus">Ressources <a class="header-anchor" href="#ressources" id="heading-481" aria-labelledby="heading-481">#</a></h2>
+<p>There are specific tools or plugins for major design/mockup tools like Figma, Sketch, Zeplin. <br>
+For any other tools, you can also use annotation kit which specific icons usable in all environments.</p>
+<p>Some examples of information that can be added to your designs:</p>
+<ul>
+<li><a href="https://stephaniewalter.design/blog/a-designers-guide-to-documenting-accessibility-user-interactions/" hreflang="en">A Designer’s Guide to Documenting Accessibility &amp; User Interactions</a></li>
+<li><a href="https://tangible.is/en/thinking/2024/10/the-value-of-accessibility-annotations-in-inclusive-design" hreflang="en">The value of accessibility annotations in inclusive design</a></li>
+<li><a hreflang="en" href="https://medium.com/indeed-design/building-an-accessibility-library-e134e9012c17">Building an Accessibility Library</a></li>
+<li><a hreflang="en" href="https://blog.zeplin.io/introducing-flows-and-annotations-a-new-way-to-communicate-design-intention">Introducing Flows and Annotations</a></li>
+<li><a hreflang="en" href="https://www.youtube.com/watch?v=Y35jmpS8lQM&feature=youtu.be&ab_channel=InclusiveDesign24%23id24">Annotating designs for Accessibility / Claire Webber and Sarah Pulis</a></li>
+<li><a hreflang="en" href="https://tetralogical.com/blog/2025/09/23/annotating-designs-using-common-language/">Annotating designs using common language / Craig Abbott</a></li>
+</ul>
+<p>Some Figma plugins to add accessibility annotations:</p>
+<ul>
+<li><a hreflang="en" href="https://www.figma.com/community/file/953682768192596304">Accessibility Annotation Kit by Indeed</a></li>
+<li><a hreflang="en" href="https://www.figma.com/community/file/1311421011482282592">Web Accessibility Annotation Kit by CVS Health</a></li>
+<li><a hreflang="en" href="https://www.figma.com/comunity/plugin/1085612091163821851">axe for Designers by Deque Systems</a></li>
+<li><a hreflang="en" href="https://www.figma.com/community/file/1022394680250523675">Intopia's accessibility annotation kit</a></li>
+<li><a hreflang="en" href="https://www.figma.com/community/plugin/731310036968334777/accessibility-assistant">Accessibility Assistant by Microsoft Design</a></li>
+</ul>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#what-is-it-about" class="nav-link text-muted">What is it about?</a></li><li class="nav-item position-relative">
+            <a href="#what-should-be-annotated" class="nav-link text-muted">What should be annotated?</a></li><li class="nav-item position-relative">
+            <a href="#how-to-do-it" class="nav-link text-muted">How to do it?</a></li><li class="nav-item position-relative">
+            <a href="#ressources" class="nav-link text-muted">Ressources</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility: partially compliant
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/accessibility-annotations.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" title="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"],"attributesToHighlight":["title","content"]},"placeholder":"Search in entire website","translations":{"button":{"buttonText":"Search in entire website","buttonAriaLabel":"Search in entire website"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2026 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>

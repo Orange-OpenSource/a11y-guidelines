@@ -4,12 +4,20 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2026-02-09T00:00:00Z</updated>
+  <updated>2026-02-13T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Specify the accessibility of your designs by using annotations</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/accessibility-annotations/"/>
+    <updated>2026-02-13T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/accessibility-annotations/</id>
+    <content xml:lang="en" type="html">Accessibility annotations allow you to specify how the different components present on your wireframe should interact with users and be interpreted by assistance tools</content>
+  </entry>
   
   <entry>
     <title>#a11y technical watch, December-January 2026</title>
