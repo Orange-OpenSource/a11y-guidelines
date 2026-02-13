@@ -3,7 +3,7 @@ title: "Specify the accessibility of your designs by using annotations"
 abstract: "Accessibility annotations allow you to specify how the different components present on your wireframe should interact with users and be interpreted by assistance tools"
 titleBeforeTag: true
 date: "2025-11-04"
-updateDate : "2026-02-13"
+updateDate: "2026-02-13"
 tags:
   - beginner
 ---
@@ -24,25 +24,25 @@ Some information that can be added to your designs:
 - list of the different page regions (landmarks)
 - Interactive components (links, buttons...)
 - Reading order of components with screen reader
-- Focus moving order
+- Focus order
 - Forms (labels, mandatory fields, error messages...)
-- Keyboard shortcuts (for example Esc to close a dialog box)
+- Keyboard shortcuts (for example, Esc to close a dialog box)
 - Skip links...
 
-<img src="../images/annotations/example-en.png" alt="Design example with accessibility annotations" title="Design example with accessibility annotations" class="img-fluid">
+<img src="../../images/annotations/example-en.png" alt="Design example with accessibility annotations" title="Design example with accessibility annotations" class="img-fluid">
 
 
 ## How to do it?
 
-Whatever software used, annotating mockups is really easy. For example, you can use numbered bullet points that link to a detailed description. There are also annotation kits or plugins that offer stickers with different colors and shapes that allow you to quickly annotate your designs. The best tool is the one that best suits your way of working. It may vary depending on the profiles and size of your team. Annotation kits, as plugins, provide a foundation that you should feel free to adapt to your needs.
+Whatever software is used, annotating mockups is really easy. For example, you can use numbered bullet points that link to a detailed description. There are also annotation kits or plugins that offer stickers with different colors and shapes that allow you to quickly annotate your designs. The best tool is the one that best suits your way of working. It may vary depending on the profiles and size of your team. Annotation kits, as plugins, provide a foundation that you should feel free to adapt to your needs.
 
-<img src="../images/annotations/reading-order-en.png" alt="Design example with annotations and reading order" title="Design example with annotations and reading order" class="img-fluid">
+<img src="../../images/annotations/reading-order-en.png" alt="Design example with annotations and reading order" title="Design example with annotations and reading order" class="img-fluid">
 
 
 ## Ressources
 
 There are specific tools or plugins for major design/mockup tools like Figma, Sketch, Zeplin.&nbsp;
-For any other tools, you can also use annotation kit which specific icons usable in all environments.
+For any other tools, you can also use the annotation kit, which has specific icons usable in all environments.
 
 Some examples of information that can be added to your designs: 
 - <a href="https://stephaniewalter.design/blog/a-designers-guide-to-documenting-accessibility-user-interactions/" hreflang="en">A Designer’s Guide to Documenting Accessibility & User Interactions</a>
