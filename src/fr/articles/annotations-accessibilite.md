@@ -10,7 +10,7 @@ tags:
 
 ## De quoi s'agit-il ?
 
-Les annotations d'accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent être interprétés par les outils d'assistance (par exemple un lecteur d'écran) et d'anticiper certains risques d'erreur d'accessibilité. Bien que certaines annotations peuvent être ajoutées directement par les designers lors de la phase de conception graphique, d'autres demandent une expertise technique. C'est tout l'intérêt de cette activité qui permet d'engager une réflexion transverse sur l'accessibilité (designer, responsable produit, expert en accessibilité, développeur...). 
+Les annotations d'accessibilité permettent de spécifier comment les différents composants présents sur un écran doivent être interprétés par les outils d'assistance (par exemple un lecteur d'écran) et d'anticiper certains risques d'erreur d'accessibilité. Bien que certaines annotations puissent être ajoutées directement par les designers lors de la phase de conception graphique, d'autres demandent une expertise technique. C'est tout l'intérêt de cette activité qui permet d'engager une réflexion transverse sur l'accessibilité (designer, responsable produit, expert en accessibilité, développeur...). 
 En l'absence de spécification, l'accessibilité technique repose exclusivement sur les épaules des développeurs, or il s'agit avant tout d'un travail d'équipe.
 
 ## Que doit-on annoter ?
@@ -57,5 +57,3 @@ Quelques plugins pour ajouter des annotations sous Figma&nbsp;:
 - <a lang="en" hreflang="en" href="https://www.figma.com/community/plugin/1085612091163821851/axe-for-designers-a-free-accessibility-plugin">axe for Designers by Deque Systems</a>
 - <a lang="en" hreflang="en" href="https://www.figma.com/community/file/1022394680250523675">Intopia's accessibility annotation kit</a>
 - <a lang="en" hreflang="en" href="https://www.figma.com/community/plugin/731310036968334777/accessibility-assistant">Accessibility Assistant by Microsoft Design</a>
-
-:::::::::
