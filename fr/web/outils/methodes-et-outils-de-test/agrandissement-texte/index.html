@@ -257,12 +257,12 @@
           
           <div class="mt-4">
           <h1>Agrandissement de la taille du texte</h1>
-<h2 id="comment-on-teste" class="h2-focus">Comment on teste ? <a class="header-anchor" href="#comment-on-teste" id="heading-1676" aria-labelledby="heading-1676">#</a></h2>
+<h2 id="comment-on-teste" class="h2-focus">Comment on teste ? <a class="header-anchor" href="#comment-on-teste" id="heading-1723" aria-labelledby="heading-1723">#</a></h2>
 <p>Une des recommandations d’accessibilité est la possibilité pour l’utilisateur d’agrandir la taille du texte à 200%. Il s’agit bien d’agrandir uniquement le texte et non l’ensemble de la page. En effet, si vous utilisez le zoom par défaut du navigateur, toute la page est agrandie, ce qui entraîne l’apparition systématique d’ascenseurs horizontaux et verticaux. La lecture d’un article de blog par exemple devient fastidieuse puisqu’il faut jouer constamment avec l’ascenseur horizontal.</p>
 <p>L’agrandissement du texte seul, n’entraîne pas systématiquement l’apparition de barres de défilement horizontale. Vous devez vérifier qu’a ce niveau de zoom (200%), le texte reste lisible. Aucun texte ne doit être tronqué, ni superposé. L’information doit rester accessible même si la présentation peut être quelque peu altérée.</p>
 <p>Pour agrandir le texte uniquement, il faut cocher l’option « zoom texte seulement » dans Firefox. Pour agrandir le texte de 200%, faire <kbd>Ctrl :+</kbd> quatre fois.</p>
 <p><img src="../../../images/zoom-firefox.png" alt="capture d’écran de l’option zoom texte seulement, dans Firefox" class="img-fluid"></p>
-<h2 id="quelles-consequences-sur-le-developpement" class="h2-focus">Quelles conséquences sur le développement ? <a class="header-anchor" href="#quelles-consequences-sur-le-developpement" id="heading-1677" aria-labelledby="heading-1677">#</a></h2>
+<h2 id="quelles-consequences-sur-le-developpement" class="h2-focus">Quelles conséquences sur le développement ? <a class="header-anchor" href="#quelles-consequences-sur-le-developpement" id="heading-1724" aria-labelledby="heading-1724">#</a></h2>
 <p>Si votre page ne s’affiche pas correctement lorsque vous agrandissez le texte, il se peut que ceci soit lié à l’utilisation du pixel comme unité pour dimensionner la taille des textes et la taille des éléments (hauteur ou largeur des <code>div</code>…).<br>
 Pour corriger les problèmes d’affichage lorsque le zoom est à 200%, il ne s’agit pas nécessairement de tout revoir et de supprimer les pixels définitivement. L’idée est de revoir uniquement les éléments qui posent un problème (remplacer les <code>px</code> par des <code>em</code>, <code>rem</code> ou <code>%</code>).</p>
 <p><strong>Exemple zoom à 100%</strong><br>

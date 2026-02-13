@@ -243,7 +243,7 @@
           <div class="mt-4">
           <h1>Scan de l'application : les outils d'analyse</h1>
 <p>Les outils d’analyse complètent parfaitement la première approche, afin de détecter d’autres problèmes d’accessibilité potentiels, comme ceux liés à la taille des boutons, aux contrastes des couleurs etc…</p>
-<h2 id="accessibility-scanner" class="h2-focus">Accessibility Scanner <a class="header-anchor" href="#accessibility-scanner" id="heading-2692" aria-labelledby="heading-2692">#</a></h2>
+<h2 id="accessibility-scanner" class="h2-focus">Accessibility Scanner <a class="header-anchor" href="#accessibility-scanner" id="heading-2765" aria-labelledby="heading-2765">#</a></h2>
 <p>Le <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor">scanner</a> est téléchargeable sur le playstore.</p>
 <p>Le scanner prend des captures d’écran de la page et vérifie :</p>
 <ul>
@@ -254,7 +254,7 @@
 <p>Attention, il ne s'agit que d'une aide à la vérification, l’outil remonte parfois des faux positifs.</p>
 <p>Certaines de ces vérifications font doublon avec <code>lint</code>.<br>
 En cas de doute sur les contrastes, <a href="https://developer.paciellogroup.com/resources/contrastanalyser/"><span lang="en">Colour contrast analysor</span></a> permet de faire un diagnostic plus précis.</p>
-<h3 id="mode-operatoire">Mode opératoire : <a class="header-anchor" href="#mode-operatoire" id="heading-2693" aria-labelledby="heading-2693">#</a></h3>
+<h3 id="mode-operatoire">Mode opératoire : <a class="header-anchor" href="#mode-operatoire" id="heading-2766" aria-labelledby="heading-2766">#</a></h3>
 <ul>
 <li>Activer le scanner dans les <strong>paramètres/accessibilité/Accessibility Scanner</strong> (paramètres/accessibilité/Services installés/Accessibility Scanner avec la surcouche de Samsung). Cela affiche un “<span lang="en">floating action button</span>” sur l’écran.</li>
 <li>Actionner le bouton sur les écrans à tester. Une capture d’écran est réalisée et la liste des corrections suggérées s’affiche.</li>
@@ -264,7 +264,7 @@ En cas de doute sur les contrastes, <a href="https://developer.paciellogroup.com
 <img src="../../../images/scanner_floating.jpg" alt="capture d’écran présentant l'application Orange TV, avec le bouton flottant permettant de déclencher le scan" width="50%">
 <p>Le rapport ainsi généré par <span lang="en">Accessibility Scanner</span> une fois le bouton cliqué.</p>
 <img src="../../../images/scanner_report.jpg" alt="capture d’écran présentant le rapport de l'outil Accessibility Scanner" width="50%">  
-<h2 id="google-play-pre-launch-report" class="h2-focus"><span lang="en">Google Play - Pre Launch Report</span> <a class="header-anchor" href="#google-play-pre-launch-report" id="heading-2694" aria-labelledby="heading-2694">#</a></h2>
+<h2 id="google-play-pre-launch-report" class="h2-focus"><span lang="en">Google Play - Pre Launch Report</span> <a class="header-anchor" href="#google-play-pre-launch-report" id="heading-2767" aria-labelledby="heading-2767">#</a></h2>
 <p>Proche de l’analyse effectuée par <span lang="en">Accessibility Scanner, Google Play</span>  est en mesure de générer des rapports d’accessibilité après avoir transféré son application sur la console développeur. Celui-ci, s’appuyant sur le même Framework que l’application <span lang="en">Accessibility Scanner</span>, vérifie notamment 3 exigences <span lang="en">UI</span> au sein de l’application :</p>
 <ul>
 <li>La zone utilisée pour les éléments interactifs : un bouton trop petit sera alors indiqué dans le rapport par exemple</li>
@@ -274,7 +274,7 @@ En cas de doute sur les contrastes, <a href="https://developer.paciellogroup.com
 <p>Ce test étant réalisé depuis la console <span lang="en">Google Play</span>, cela peut être une dernière vérification faite par le Product Owner lui-même, avant de pousser en production l’application, et ainsi constater que les critères d’accessibilité ont bien été respectés.</p>
 <p><strong>Exemple de rapport généré par <span lang="en">Google Play Report</span> :</strong></p>
 <p><img src="../../../images/google_report.png" alt="capture d’écran présentant un rapport d'accessibilité, sur la console développeur" class="img-fluid"></p>
-<h2 id="axe" class="h2-focus">aXe <a class="header-anchor" href="#axe" id="heading-2695" aria-labelledby="heading-2695">#</a></h2>
+<h2 id="axe" class="h2-focus">aXe <a class="header-anchor" href="#axe" id="heading-2768" aria-labelledby="heading-2768">#</a></h2>
 <p>aXe est une application présente sur le <span lang="en">Google Play Store</span> et qui permet, de même que <span lang="en">Accessibility Scanner</span> ou que le <span lang="en">Pre Launch Report</span> de Google, d’afficher les problèmes d’accessibilité au sein des différents écrans de son application. Bien que redondant avec les deux outils précédents présentés dans certaines vérifications, il est recommandé de l’utiliser en complément, puisqu’il sera en mesure d’afficher des erreurs différentes d’accessibilité, et complètera donc parfaitement les premiers examens, pour avoir un compte rendu plus complet.</p>
 <p>L’utilisation d’aXe est très facile, puisqu’il suffit de télécharger l’application et de se laisser ensuite guider. A l’aide d’un <span lang="en">floating buton</span>, une analyse pourra être lancée sur l’écran de son choix, et les rapports d’erreurs seront immédiatement retranscrits au bas de l’écran.</p>
 <p><strong>Exemple d'utilisation de aXe :</strong></p>
@@ -282,12 +282,12 @@ En cas de doute sur les contrastes, <a href="https://developer.paciellogroup.com
 <img src="../../../images/aXe_floating.jpg" alt="capture d’écran de l'application Orange TV, avec le bouton aXe permettant de déclencher le scan" width="50%">   
 <p>Le rapport ainsi généré par aXe une fois le bouton cliqué.</p>
 <img src="../../../images/aXe_report.jpg" alt="capture d’écran présentant le rapport de l'outil aXe" width="50%">   
-<h2 id="ui-automator-view" class="h2-focus"><span lang="en">UI Automator View</span> <a class="header-anchor" href="#ui-automator-view" id="heading-2696" aria-labelledby="heading-2696">#</a></h2>
+<h2 id="ui-automator-view" class="h2-focus"><span lang="en">UI Automator View</span> <a class="header-anchor" href="#ui-automator-view" id="heading-2769" aria-labelledby="heading-2769">#</a></h2>
 <p><span lang="en">UI Automator View</span> est un outil présent dans le SDK Android, qui permet de scanner et d’analyser les composants UI d’une application Android. Cela permet ainsi de voir la hiérarchie des vues et les différentes propriétés pour chacune d’elle.<br>
 Bien que n’étant pas un outil dédié à l’accessibilité, celui-ci peut être utilisé afin d’analyser plus en détail un problème d’accessibilité rencontré, et ainsi mieux en comprendre l’origine.</p>
 <p>Pour utiliser cet outil, vous avez donc besoin d’installer le SDK Android. Une fois celui-ci installé, vous devriez pouvoir trouver l’outil au chemin suivant : <strong>C:\users\username\AppData\Local\Android\sdk\tools\uiautomatorviewer.bat</strong></p>
 <p>Il est ainsi possible de l’utiliser au sein d’une application présente sur son téléphone, si celui-ci a le mode développeur activé et qu’il est connecté via un câble USB à l’ordinateur sur lequel <span lang="en">UI Automator View/<span> est lancé. Une fois ces conditions réunies, il suffit de cliquer sur le bouton <span lang="en">Device Screenshot</span> dans l’outil pour lancer l’analyse des composants UI de l’écran affiché sur le téléphone.</p>
-<h2 id="outil-trace-des-contours" class="h2-focus">Outil tracé des contours <a class="header-anchor" href="#outil-trace-des-contours" id="heading-2697" aria-labelledby="heading-2697">#</a></h2>
+<h2 id="outil-trace-des-contours" class="h2-focus">Outil tracé des contours <a class="header-anchor" href="#outil-trace-des-contours" id="heading-2770" aria-labelledby="heading-2770">#</a></h2>
 <p>Il est possible sous Android d’afficher les contours des différentes vues d’une application, ce qui permet de détecter les possibles problématiques liées aux dimensions des éléments, de vérifier des marges suffisantes entre divers éléments, et de vérifier que chaque zone sensible a une taille suffisante.<br>
 Pour ce faire, il suffit de naviguer dans les paramètres, puis dans les options pour les développeurs du téléphone, et d’activer l’option « Afficher les contours » dans la catégorie « Tracé »</p>
 <p><strong>Exemple d'utilisation du tracé des contours :</strong></p>
@@ -295,7 +295,7 @@ Pour ce faire, il suffit de naviguer dans les paramètres, puis dans les options
 <img src="../../../images/contour_param.jpg" alt="capture d’écran présentant l'écran des paramètres, avec la checkbox permettant d'activer ou de désactiver l'affichage des contours" width="50%"> 
 <p>Exemple d'écran avec le tracé des contours actifs</p>
 <img src="../../../images/contour_UI.jpg" alt="capture d’écran présentant un écran de l'application Orange TV, en ayant le tracé des contours des différentes vues" width="50%"> 
-<h2 id="colour-contrast-analyser" class="h2-focus"><span lang="en">Colour Contrast Analyser</span> <a class="header-anchor" href="#colour-contrast-analyser" id="heading-2698" aria-labelledby="heading-2698">#</a></h2>
+<h2 id="colour-contrast-analyser" class="h2-focus"><span lang="en">Colour Contrast Analyser</span> <a class="header-anchor" href="#colour-contrast-analyser" id="heading-2771" aria-labelledby="heading-2771">#</a></h2>
 <p>Les contrastes de couleurs se vérifient sur les maquettes de l’application, ou via <span lang="en">Accessibility Scanner</span> sur un mobile Android. Si un doute subsiste, il est possible de faire un screenshot de l’application, puis de faire une vérification sur un ordinateur <a href="../../../../web/outils/methodes-et-outils-de-test/mesurer-contraste-couleurs/">Mesurer le niveau de contraste des couleurs</a> via l'outil <span lang="en">Colour Contrast Analyser</span>.<br>
 Pour les valeurs à respecter voir la <a href="../../conception/#couleurs">section concernant les couleurs</a>.</p>
 <p><span class="licence" lang="en">These images are licensed under a Creative Commons Share Alike 2.0 license. Photo credit: <a href="http://www.flickr.com/people/27512715@N02/" hreflang="en">openexhibits</a></span></p>
