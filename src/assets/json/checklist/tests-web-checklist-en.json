@@ -114,7 +114,7 @@
 	"themes": "Layout",
 	"title": "Ensure that the presented content can be resized without loss of information",
 	"type": ["Manual Test"],
-	"tests": ["Use the browser's code inspector", "Access the responsive view with the keys <kbd>Ctrl + shift + M</kbd> or click on the \"Toggle device toolbar\" tab."],
+	"tests": ["Use the browser's code inspector", "Access the responsive view with the keys <kbd>Ctrl</kbd> + <kbd>shift</kbd> + <kbd>M</kbd> or click on the \"Toggle device toolbar\" tab."],
 	"verifier": [["For contents with a vertical scrolling direction: reduce the window to 320px wide."], ["For contents with a horizontal scrolling direction: reduce the window to 256px tall."]],
 	"resultat": [["The user can access all the content without the need for horizontal or vertical scrolling."], ["The scrollbar is present, but its use is not necessary to access the informative content or to use the page's features."]],
 	"exception": "The criterion is not applicable for contents that require both dimensions to be understandable, such as images, maps, presentations, data tables, games, etc.",
