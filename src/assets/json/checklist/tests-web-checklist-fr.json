@@ -114,7 +114,7 @@
 	"themes": "Mise en page",
 	"title": "S'assurer que le contenu présenté peut être réduit sans perte d'information",
 	"type": ["Test manuel"],
-	"tests": ["Utiliser l'inspecteur de code du navigateur", "Accéder à la vue adaptative avec les touches <kbd>Ctrl + shift + M</kbd> ou cliquer sur l'onglet \"vue adaptative\"."],
+	"tests": ["Utiliser l'inspecteur de code du navigateur", "Accéder à la vue adaptative avec les touches <kbd>Ctrl</kbd> + <kbd>shift</kbd> + <kbd>M</kbd> ou cliquer sur l'onglet \"vue adaptative\"."],
 	"verifier": [["Pour les contenus dont le sens de défilement est vertical : réduire la fenêtre à 320px de large."], ["Pour les contenus dont le sens de défilement est horizontal : réduire la fenêtre à 256px de haut."]],
 	"resultat": [["L'utilisateur peut accéder à l'ensemble du contenu sans nécessité de défillement horizontal ou vertical."], ["La barre de défilement est présente, mais son utilisation n'est pas nécessaire pour accéder au contenu informatif ou pour utiliser les fonctionnalités de la page."]],
 	"exception": "Le critère est non applicable pour des contenus nécessitant les deux dimensions pour être compréhensibles comme des images, cartes, présentations, tableaux de données, jeux, etc.",
