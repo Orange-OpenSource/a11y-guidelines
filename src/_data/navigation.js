@@ -158,7 +158,7 @@ module.exports = {
             href: "/fr/cadrage/cadre-legal-en-europe/",
           },
           { label: "Méthode de test", href: "/fr/cadrage/methode-de-test/" },
-          { label: "Correspondance", href: "/fr/cadrage/correspondance-rgaa-wcag/" }
+          { label: "Correspondance RGAA et WCAG", href: "/fr/cadrage/correspondance-rgaa-wcag/" }
         ],
       },
       {
