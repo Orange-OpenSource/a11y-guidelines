@@ -79,35 +79,38 @@ js:
 
 <h2>Solution pour corriger la vocalisation</h2>
 
-<p>Pour corriger ces problèmes le plus simple est de faire ignorer le prix affiché à l'écran et ajouter un texte en masquage accessible contenant le prix à vocaliser.</p>
-<p>Pour masquer un élément à la synthèse vocale, il suffit d'utiliser l'attribut <code>aria-hidden</code>. Pour ajouter un texte en masquage accessible (texte vocalisé mais non affiché), il suffit d'utiliser une classe CSS de masquage accessible (par exemple la classe <code>visually-hidden</code> si vous utiliser le framework <a href="http://boosted.orange.com">boosted</a>).</p>
+<p>Pour corriger ces problèmes le plus simple est de permettre d'ignorer les caractères qui peuvent potentiellement poser problème aux AT et en particulier les lecteurs d'écran, en lecture vocale ou Braille, par exemple.</p>
+<p>Pour masquer un élément à la synthèse vocale, il suffit d'utiliser l'attribut <code>aria-hidden="true"</code>. Pour ajouter un texte en masquage accessible (texte vocalisé mais non affiché), il suffit d'utiliser une classe CSS de masquage accessible (par exemple la classe <code>sr-only</code> si vous utiliser le framework <a href="http://boosted.orange.com">boosted</a>).</p>
 
-<p class="example" aria-hidden="true">
+<p class="example">
+<p class="example"> <!-- aria-hidden="true" removed -->
 à partir de
 <span class="price">
-    120<sup>,90€</sup><sub>/mois</sub>
-</span></p>
-<p>
-<span class="visually-hidden">à partir de 120,90€ par mois</span></p>
-<p>Elément vocalisé "à partir de 120 euros 90 par mois"</p>
+120<span class="cents">,90€</span>
+<span class="sr-only">par </span>
+<span class="payment-cycle"><span aria-hidden="true">/</span>mois</span>
+</span>
+</p>
+<p>Élément vocalisé "à partir de 120 euros 90 par mois"</p>
 <pre><code class="html">
-&lt;p class="example" aria-hidden="true"&gt;
+&lt;p class="example"&gt;
 à partir de
 &lt;span class="price"&gt;
-120&lt;sup&gt;,90€&lt;/sup&gt;&lt;sub&gt;/mois&lt;/sub&gt;
+120&lt;span class="cents"&gt;,90€&lt;/span&gt;
+&lt;span class="sr-only"&gt;par &lt;/span&gt;
+&lt;span&gt;&lt;span aria-hidden="true"&gt;/&lt;/span&gt;mois&lt;/span&gt;
 &lt;/span&gt;
 &lt;p&gt;
-&lt;span class="visually-hidden"&gt;à partir de 120,90€ par mois&lt;/span&gt;
 </code></pre>
 
 <div class="example2">
     <img src="images/phone.png" alt="téléphones Orange">
-    <p aria-hidden="true">
-        <strong>à partir de </strong><span class="price">1€*</span>
-        <s>129,90€</s><br>
-        *voir conditions
-    </p>
-    <span class="visually-hidden">à partir de 1€ au lieu de 129,90€ voir conditions</span>
+<p>
+    <strong>à partir de </strong><span class="price">1€<span aria-hidden="true">*</span></span>
+    <span class="sr-only"> au lieu de </span>
+    <s>129,90€</s><br>
+    <span aria-hidden="true">*</span>voir conditions
+</p>
 </div>
 
 <p>Élément vocalisé :</p>
@@ -120,9 +123,10 @@ js:
 &lt;div class="example2"&gt;
 &lt;img src="./images/phone.png" alt="téléphones Orange"&gt;
 &lt;p aria-hidden="true"&gt;
-    &lt;strong&gt;à partir de &lt;/strong&gt;&lt;span class="price"&gt;1€*&lt;/span&gt;
+    &lt;strong&gt;à partir de &lt;/strong&gt;&lt;span class="price"&gt;1€&lt;span aria-hidden="true"&gt;*&lt;/span&gt;&lt;/span&gt;
+    &lt; au lieu de &lt;/span&gt;
     &lt;s&gt;129,90€&lt;/s&gt;&lt;br&gt;
-    *voir conditions
+    &lt;span aria-hidden="true"&gt;*&lt;/span&gt;voir conditions
 &lt;/p&gt;
 &lt;span class="visually-hidden"&gt;à partir de 1€ au lieu de 129,90€ voir conditions&lt;/span&gt;
 &lt;/div&gt;
@@ -131,5 +135,5 @@ js:
 <h2>Importance de la sémantique</h2>
 <p>La solution à base de texte en masquage accessible a le mérite de fonctionner avec l'ensemble des outils d'assistance, cela dit il est important de porter une attention particulière aux balises HTML utilisées.</p>
 
-<p>Ajouter de la sémantique dans le code HTML permet d'améliorer la prise en charge des outils d'assistance. Il est possible d'afficher un texte barré à l'aide d'une balise <code>&lt;span&gt;</code> et d'une classe CSS, cela dit l'utilisation d'une balise appropriée <code>&lt;s&gt;</code> ou <code>&lt;del&gt;</code> apporte du sens à votre code.
+<p>Ajouter de la sémantique dans le code HTML permet d'améliorer la prise en charge par les outils d'assistance. Il est possible d'afficher un texte barré à l'aide d'une balise <code>&lt;span&gt;</code> et d'une classe CSS, cela dit l'utilisation d'une balise appropriée <code>&lt;s&gt;</code> ou <code>&lt;del&gt;</code> apporte du sens à votre code.
 Le lecteur d'écran NVDA par exemple indique automatiquement que le texte est barré lorsqu'il est inséré dans une balise <code>&lt;del&gt;</code>. Même si le support de ces balises n'est pas encore complet, il est important de veiller à choisir les balises HTML appropriées en fonction de vos besoins.</p>
