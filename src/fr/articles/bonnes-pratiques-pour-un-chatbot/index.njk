@@ -14,8 +14,8 @@ js:
 ---
 
 <h2>Avant-propos</h2>
-<p>Dans cet article, les termes <span lang="en">chatbot</span>, <span lang="en">tchat</span> et <span
-    lang="en">chat</span> se réfèrent à une fenêtre de dialogue qui
+<p>Dans cet article, les termes <span lang="en">chatbot</span> et <span lang="en">chat</span> se réfèrent à une fenêtre
+  de dialogue qui
   permet d'engager une conversation écrite avec un opérateur ou une intelligence artificielle, parfois également
   appelée
   agent conversationnel.</p>
@@ -70,7 +70,7 @@ js:
   souris parfois moins précis. Si l'utilisateur ne vise pas précisément le bouton de contact, des info-bulles
   provenant
   d'éléments affichés en-dehors de la fenêtre peuvent venir masquer le bouton. Dans ce cas l'utilisateur risque de ne
-  pas s'apercevoir qu'un chat est disponible.
+  pas s'apercevoir qu'un <span lang="en">chat</span> est disponible.
 </p>
 <p>Dans la capture d'écran ci-dessous prise sous Windows, le bouton est masqué par une info-bulle provenant d'un élément
   présent dans la barre Windows&nbsp;:
@@ -95,7 +95,7 @@ js:
 </p>
 <p>
   Dans ce cas de figure, un utilisateur malvoyant n'aura donc tout simplement pas connaissance de ce bouton, il ne
-  pourra donc pas accéder au chat.
+  pourra donc pas accéder au <span lang="en">chat</span>.
 </p>
 <p>
   <strong>Plusieurs solutions pour éviter ce problème sont disponibles&nbsp;:</strong>
@@ -110,12 +110,9 @@ js:
 <h4>Ajouter des liens d'évitement</h4>
 
 <p>Les liens d'évitement permettent d'accéder directement à une zone spécifique de la page. Ils sont insérés en haut de
-  page et donc vocalisés en premier. La présence d'un lien d'évitement «&nbsp;accéder au tchat&nbsp;» vers le chatbot
+  page et donc vocalisés en premier. La présence d'un lien d'évitement «&nbsp;accéder au chat&nbsp;» vers le chatbot
   aide l'utilisateur à anticiper son usage. Ces liens d'évitement peuvent être masqués à l'écran, même si ce n'est pas à
   privilégier (grâce au <a href="../masquage-accessible/">masquage accessible</a>).</p>
-<p>Attention aux anglicismes. Remarquez ici l'utilisation du mot «tchat» et non «chat». À l'écoute, le second mot est
-  vocalisé comme l'animal (sans l'accent anglais cela peut prêter à confusion).
-</p>
 
 <p>La présence des liens d'évitement a également un effet positif pour les personnes qui naviguent au clavier. Par
   exemple, sur la page que vous consultez actuellement, des liens d'évitement sont disponibles. Ils sont masqués par
@@ -134,13 +131,14 @@ js:
 </p>
 
 <pre><code class="html">
-    &lt;div role="region" aria-label="fenêtre du tchat"&gt;
+    &lt;div role="region" aria-label="fenêtre du chat"&gt;
       &lt;!-- code du chatbot --&gt;
     &lt;/div&gt;
   </code></pre>
 
 <p>Ce code permet de définir une zone «&nbsp;fenêtre de chat&nbsp;» dans la page. Cela permet aux personnes qui
-  utilisent un lecteur d'écran d'accéder au tchat depuis la liste des régions. La capture d'écran ci-dessous a été
+  utilisent un lecteur d'écran d'accéder au <span lang="en">chat</span> depuis la liste des régions. La capture d'écran
+  ci-dessous a été
   obtenue en affichant la liste des régions depuis le lecteur d'écran NVDA&nbsp;:
 </p>
 <img class="screenshot img-fluid" src="images/region.png" alt="liste des régions dans NVDA">
@@ -150,16 +148,16 @@ js:
 <h4>Utiliser une balise de titre</h4>
 <p>D'après des sondages récurrents réalisés par <a href="https://webaim.org">webaim.org</a> auprès d'utilisateurs de
   lecteurs d'écran on s'aperçoit que les landmarks ne sont pas encore connus de tous. Par sécurité, on peut ajouter
-  également une balise de titre (<code>h1</code>, <code>h2</code>...) avant le tchat.
+  également une balise de titre (<code>h1</code>, <code>h2</code>...) avant le <span lang="en">chat</span>.
 </p>
 <p>Pour que ce titre ne soit pas visible à l'écran, il suffit d'utiliser une classe de <a
     href="../masquage-accessible/">masquage accessible</a> (<code>visually-hidden</code>). Cela permettra également
-  aux utilisateurs d'accéder au chat depuis la liste des titres de la page.
+  aux utilisateurs d'accéder au <span lang="en">chat</span> depuis la liste des titres de la page.
 </p>
 
 <pre><code class="html">
-      &lt;div role="region" aria-labelledby="tchat-title"&gt;
-        &lt;h1 id="tchat-title" class="visually-hidden"&gt;Fenêtre du tchat&lt;/h1&gt;
+      &lt;div role="region" aria-labelledby="chat-title"&gt;
+        &lt;h1 id="chat-title" class="visually-hidden"&gt;Fenêtre du chat&lt;/h1&gt;
         &lt;!-- code du chatbot --&gt;
       &lt;/div&gt;
   </code></pre>
@@ -174,7 +172,8 @@ js:
 <p>Concernant la navigation au clavier, il suffit de vérifier en navigant sans l'aide de la souris, qu'il est possible
   de cliquer sur l'ensemble des boutons (touche <kbd>Tab</kbd> pour déplacer le focus, touche <kbd>Entrée</kbd>
   pour activer un bouton) et qu'il est possible de saisir et d'envoyer des messages.</p>
-<p>Après quelques échanges dans le chat, une barre de défilement apparaît. Il faut également s'assurer que celle-ci soit
+<p>Après quelques échanges dans le <span lang="en">chat</span>, une barre de défilement apparaît. Il faut également
+  s'assurer que celle-ci soit
   utilisable à l'aide des flèches du clavier. C'est le cas nativement dans Firefox, par contre pour Chrome il a été
   nécessaire de rendre cet élément focusable à l'aide d'un attribut <code>tabindex</code>.</p>
 
@@ -194,17 +193,21 @@ js:
   alt="capture d'écran de la fenêtre de chat avec le focus positionné sur l'élément permettant de faire défiler les messages">
 
 <h3>Navigation avec une loupe d'écran</h3>
-<p>La largeur de la fenêtre de chat peut avoir une incidence sur le confort de lecture. En effet, si, celle-ci est trop
-  large, la lecture du chat à l'aide d'une loupe peut devenir fastidieuse. Notamment si, l'utilisateur est obligé de
-  faire défiler l'écran pour lire la totalité d'une ligne du chat.
+<p>La largeur de la fenêtre de <span lang="en">chat</span> peut avoir une incidence sur le confort de lecture. En effet,
+  si, celle-ci est trop
+  large, la lecture du <span lang="en">chat</span> à l'aide d'une loupe peut devenir fastidieuse. Notamment si,
+  l'utilisateur est obligé de
+  faire défiler l'écran pour lire la totalité d'une ligne du <span lang="en">chat</span>.
 </p>
 <p>Dans la capture d'écran ci-dessous (loupe d'écran à 600%), la fenêtre est trop large, l'utilisateur devra déplacer la
   zone visible à gauche et à droite pour parcourir la fenêtre de chat&nbsp;:</p>
 
-<img class="screenshot img-fluid" src="images/chatbot-zoom-ko.png" alt="capture d'écran d'une fenêtre de chat trop large">
+<img class="screenshot img-fluid" src="images/chatbot-zoom-ko.png"
+  alt="capture d'écran d'une fenêtre de chat trop large">
 
-<p>La capture d'écran ci-dessous a été prise avec la fenêtre de chat visible sur cette page. Ici, avec un zoom de 600%,
-  il est possible de lire la totalité du chat sans déplacer la portion d'écran visible.</p>
+<p>La capture d'écran ci-dessous a été prise avec la fenêtre de <span lang="en">chat</span> visible sur cette page. Ici,
+  avec un zoom de 600%,
+  il est possible de lire la totalité du <span lang="en">chat</span> sans déplacer la portion d'écran visible.</p>
 
 <img class="screenshot img-fluid" src="images/chatbot-zoom-ok.png"
   alt="capture d'écran d'une fenêtre de chat de largeur satisfaisante">
@@ -221,7 +224,7 @@ js:
         &lt;input type="submit" title="Envoyer ce message" <span class="important">aria-label="envoyer"</span>&gt;
     </code></pre>
 
-<p>La même chose sur les boutons permettant de réduire et de fermer la fenêtre du chat.</p>
+<p>La même chose sur les boutons permettant de réduire et de fermer la fenêtre du <span lang="en">chat</span>.</p>
 
 <h4>Prévenir l'utilisateur de l'arrivée d'un nouveau message</h4>
 <p>Bien que les messages reçus apparaissent à l'écran, le lecteur d'écran ne les vocalisera pas automatiquement par
@@ -302,7 +305,8 @@ js:
   alt="capture d'écran d'un onglet du navigateur avec un titre commençant par&nbsp;: Djingo dit ...">
 
 <p>Cette modification doit être effectuée lorsqu'un message arrive et que le focus n'est pas dans le champ de saisie du
-  chat (focus ailleurs dans la page ou sur un autre onglet). Ne pas oublier de réinitialiser le titre de la fenêtre
+  <span lang="en">chat</span> (focus ailleurs dans la page ou sur un autre onglet). Ne pas oublier de réinitialiser le
+  titre de la fenêtre
   lorsque l'utilisateur positionne à nouveau le focus dans ce champ de saisie.
 </p>
 
@@ -323,7 +327,8 @@ js:
   options. Dans ce cas de figure, il est nécessaire de prendre quelques précautions pour simplifier la navigation.</p>
 <strong>Gestion du focus</strong>
 <p>Pour simplifier la navigation au clavier, lorsque le choix est proposé à l'utilisateur, plutôt que de mettre le focus
-  dans le champ de saisie du chat, celui est déplacé sur le texte qui précède les boutons. Ceci permet ensuite à
+  dans le champ de saisie du <span lang="en">chat</span>, celui est déplacé sur le texte qui précède les boutons. Ceci
+  permet ensuite à
   l'utilisateur de naviguer sur le premier choix en appuyant une seule fois sur la touche <kbd>Tab</kbd>.</p>
 <p>Pour positionner le focus sur l'élément textuel (un élément <code>&lt;div&gt;</code> dans cet exemple) qui n'est pas
   focusable par défaut, il est nécessaire de lui ajouter un attribut <code>tabindex="-1"</code>, ainsi il peut
@@ -338,8 +343,9 @@ js:
 <strong>Navigation avec un lecteur d'écran</strong>
 <p>Lorsque le focus est déplacé sur un élément, le lecteur d'écran vocalise automatiquement celui-ci. Or dans notre cas,
   l'attribut <code>aria-live</code> permet déjà de vocaliser de manière automatique tout ajout dans la fenêtre du
-  chat.
-  Pour éviter une double vocalisation dans ce cas il faut veiller à désactiver temporairement l'aria-live.</p>
+  <span lang="en">chat</span>.
+  Pour éviter une double vocalisation dans ce cas il faut veiller à désactiver temporairement l'aria-live.
+</p>
 
 <pre><code class="js">
     // Désactivation de l'aria-live (pour éviter une double vocalisation)
@@ -361,12 +367,13 @@ js:
   </code></pre>
 
 <h2>Conclusion</h2>
-<p>Ces recommandations ont été appliquées au chat disponible sur cette page. N'hésitez pas à consulter le code. Pour
+<p>Ces recommandations ont été appliquées au <span lang="en">chat</span> disponible sur cette page. N'hésitez pas à
+  consulter le code. Pour
   toutes remarques, suggestions n'hésitez pas à consulter ou créer une <span lang="en">issue</span> sur notre <a
     href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">compte GitHub</a>.</p>
 
-<div role="region" aria-labelledby="tchat-label">
-  <h1 id="tchat-label" class="visually-hidden" tabindex="-1">Fenêtre du tchat</h1>
+<div role="region" aria-labelledby="chat-label">
+  <h1 id="chat-label" class="visually-hidden" tabindex="-1">Fenêtre du chat</h1>
   <div id="chatbot-window">
     <div id="chatbot">
       <span id="chatbot-title" role="heading" aria-level="1">Djingo <span class="visually-hidden">Fenêtre de
