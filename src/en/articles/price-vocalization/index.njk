@@ -81,35 +81,37 @@ from
 
 <h2> Solution to correct vocalization </h2>
 
-<p>To fix these problems the easiest way is to ignore the price displayed on the screen and add accessible hiding text containing the price to be vocalized.</p>
+<p>To fix these problems, the simplest solution is to allow ignoring characters that could potentially cause problems for ATs and especially screen readers, for example, in speech reading or Braille.</p>
 <p> To hide an element from speech synthesis, just use the <code>aria-hidden</code> attribute. To add text in accessible hiding (text that is vocalized but not displayed), you only need to use an accessible CSS class (for example, the class <code>visually-hidden</code> if you use the framework <a href="http://boosted.orange.com">boosted</a>).</p>
 
-<p class="example" aria-hidden="true">
+<p class="example">
 From
 <span class="price">
-    120<sup>,90€</sup><sub>/month</sub>
-</span></p>
-<p>
-<span class="visually-hidden">starting from 120.90 € per month</span> </p>
+120<span class="cents">,90€</span>
+<span class="visually-hidden"> per </span>
+<span class="payment-cycle"><span aria-hidden="true">/</span>month</span>
+</span>
+</p>
 <p> Vocalized element "from 120 euros 90 per month" </p>
 <pre><code class="html">
-&lt;p class="example" aria-hidden="true"&gt;
-From
+&lt;p class="example"&gt;
+From 
 &lt;span class="price"&gt;
-    120&lt;sup&gt;.90€&lt;/sup&gt;&lt;sub&gt;/mois&lt;/sub&gt;
+120&lt;span class="cents"&gt;,90€&lt;/span&gt;
+&lt;span class="sr-only"&gt; per &lt;/span&gt;
+&lt;span&gt;&lt;span aria-hidden="true"&gt;/&lt;/span&gt;month&lt;/span&gt;
 &lt;/span&gt;
 &lt;p&gt;
-&lt;span class="visually-hidden"&gt;from 120.90€ per month&lt;/span&gt;
 </code></pre>
 
 <div class="example2">
     <img src="images/phone.png" alt="Orange phones">
-    <p aria-hidden="true">
-        <strong>From </strong><span class="price">1€*</span>
-        <s>129,90€</s><br>
-        *see conditions
-    </p>
-    <span class="visually-hidden">From 1 € instead of 129.90 € see conditions</span>
+<p>
+    <strong>from </strong><span class="price">1€<span aria-hidden="true">*</span></span>
+    <span class="visually-hidden"> instead of </span>
+    <s>129,90€</s><br>
+    <span aria-hidden="true">*</span>see conditions
+</p>
 </div>
 
 <p>Élément vocalisé :</p>
@@ -122,11 +124,11 @@ From
 &lt;div class="example2"&gt;
 &lt;img src="./images/phone.png" alt="Orange phones"&gt;
 &lt;p aria-hidden="true"&gt;
-    &lt;strong&gt;From &lt;/strong&gt;&lt;span class="price"&gt;1€*&lt;/span&gt;
+    &lt;strong&gt;from &lt;/strong&gt;&lt;span class="price"&gt;1€&lt;span aria-hidden="true"&gt;*&lt;/span&gt;&lt;/span&gt;
+    &lt;span&gt; instead of &lt;/span&gt;
     &lt;s&gt;129,90€&lt;/s&gt;&lt;br&gt;
-    *see conditions
+    &lt;span aria-hidden="true"&gt;*&lt;/span&gt;see conditions
 &lt;/p&gt;
-&lt;span class="visually-hidden"&gt;From 1 € instead of 129.90 € see conditions&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
 

@@ -3,6 +3,7 @@ title: "Vocalisation des prix"
 abstract: "Afficher des promos, des prix barrés accessibles."
 titleBeforeTag: true
 date: "2018-01-14"
+updateDate: "2026-02-27"
 tags:
   - component
 css:
@@ -83,10 +84,10 @@ js:
 <p>Pour masquer un élément à la synthèse vocale, il suffit d'utiliser l'attribut <code>aria-hidden="true"</code>. Pour ajouter un texte en masquage accessible (texte vocalisé mais non affiché), il suffit d'utiliser une classe CSS de masquage accessible (par exemple la classe <code>visually-hidden</code> si vous utiliser le framework <a href="http://boosted.orange.com">Boosted</a>).</p>
 
 <p class="example">
-à partir de
+à partir de 
 <span class="price">
 120<span class="cents">,90€</span>
-<span class="visually-hidden">par </span>
+<span class="visually-hidden" >par </span>
 <span class="payment-cycle"><span aria-hidden="true">/</span>mois</span>
 </span>
 </p>
@@ -127,7 +128,6 @@ js:
     &lt;s&gt;129,90€&lt;/s&gt;&lt;br&gt;
     &lt;span aria-hidden="true"&gt;*&lt;/span&gt;voir conditions
 &lt;/p&gt;
-&lt;span class="visually-hidden"&gt;à partir de 1€ au lieu de 129,90€ voir conditions&lt;/span&gt;
 &lt;/div&gt;
 </code></pre>
 
