@@ -10,7 +10,7 @@ tags:
 ---
    
 ## Message d'état et accessibilité
-Le critère <a lang="en" href="https://www.w3.org/TR/WCAG22/#status-messages">4.1.3 Status Messages</a> des WCAG demande que les informations importantes pour l'utilisateur, qui n'induisent pas de changement de contexte (pas d'ouverture d'une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu ou du <span lang="en">viewport</span>), soient perçues via des propriétés et rôles (<abbr>ARIA</abbr>) par toute personne utilisant une <abbr>AT</abbr> sans prise de focus sur le message.
+Le critère <a lang="en" href="https://www.w3.org/TR/WCAG22/#status-messages">4.1.3 Status Messages</a> des WCAG demande que les informations importantes pour l'utilisateur, qui n'induisent pas de changement de contexte (pas d'ouverture d'une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu ou du <span lang="en">viewport</span>), soient perçues via des propriétés et rôles <abbr>ARIA</abbr> (Accessible Rich Internet Applications) par toute personne utilisant une <abbr>AT</abbr> (Aide Technique) sans prise de focus sur le message.
 
 ## Quelques exemple de messages d'état ou contextuels
 
