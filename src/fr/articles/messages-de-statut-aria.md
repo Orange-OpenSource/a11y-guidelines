@@ -55,7 +55,8 @@ Après soumission d'un formulaire, un texte de confirmation est ajouté au formu
 </div>
 ```
 
-Lorsqu'un utilisateur remplit un formulaire mais certaines des données entrées sont incorrectes, du texte est ajouté en haut du formulaire existant indique "XX erreurs dans le formulaire". Le lecteur d'écran annonce le message "Formulaire non envoyé car XX erreurs de validation" et liste les erreurs liées au champ en erreur (ceci ne dispense pas de donner les détails de l'erreur pour chaque champ incorrectement rempli). L'information d'erreur dans le formulaire est importante, urgente, et demand&e une interaction utilisateur, donc on utilise  le rôle `"alertdialog"`.
+Lorsqu'un utilisateur remplit un formulaire contenant des données incorrectes, du texte est ajouté en haut du formulaire indiquant : "XX erreurs dans le formulaire". Le lecteur d'écran annonce le message "Formulaire non envoyé car XX erreurs de validation" et liste les erreurs liées aux champs en erreur (ceci ne dispense pas de donner les détails de l'erreur pour chaque champ incorrectement rempli).
+L'information d'erreur dans le formulaire est importante, urgente, et demande une interaction utilisateur, donc on utilise  le rôle `"alertdialog"`.
 
 ```html
 <div role="alertdialog" aria-labelledby="errors">
