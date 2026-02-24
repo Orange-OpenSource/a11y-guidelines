@@ -24,7 +24,7 @@ tags:
 </p>
 <p>Nota bene&nbsp;: bien sûr, il est toujours mieux de privilégier une étiquette de champ de formulaire visible pour tout utilisateur, cependant, lorsqu'il n'y a qu'un champ de recherche comme seul élément de formulaire dans la page, c'est envisageable !
 </p>
-<p><strong>Attention&nbsp;:</strong> lorsque plusieurs formulaires de recherche existent dans la page, il faut nommer spécifiquement chaque <code>role="search"</code> avec un <code>aria-label</code> ou <code>aria-labelledby</code>&nbsp;:<br />
+<p><strong>Attention&nbsp;:</strong> lorsque plusieurs formulaires de recherche existent sur la page, il faut nommer spécifiquement chaque <code>role="search"</code> avec un <code>aria-label</code> ou <code>aria-labelledby</code>&nbsp;:<br />
 <!-- Code pour 2 form de recherche -->
 <pre><code class="html">
       &lt;form class="d-flex" role="search" aria-label="Recherche sur tout le site"&gt;
@@ -42,20 +42,20 @@ tags:
 
 <h2>Affichage des résultats</h2>
 <h3>Le titre de page</h3>
-<p>Une fois la recherche lancée, en premier lieu, le titre de page ( <code>title</code>) doit être modifié pour mentionner&nbsp;: </p>
+<p>Une fois la recherche lancée, en premier lieu, le titre de page (<code>title</code>) doit être modifié pour mentionner&nbsp;: </p>
 <ul>
 <li>Le fait que nous sommes sur une page de résultats de recherche.</li>
 <li>Le terme recherché.</li>
 <li>Le nombre total de résultats.</li>
 </ul>
 
-<p>Par exemple, "2 résultats pour..... 'Fibre' - Orange.com" </p>
+<p>Par exemple, "2 résultats pour... 'Fibre' - Orange.com" </p>
 
 <h3>Chargement et affichage du résultat de la recherche</h3>
-<p>Dans certains cas, il semble pratique pour les utilisateurs de privilégier un rechargement asynchrone des résultats afin de ne pas charger une nouvelle page, notez tout de même que cela peut être perturbant pour certains utilisateurs.</p>
+<p>Dans certains cas, il semble pratique pour les utilisateurs de privilégier un rechargement asynchrone des résultats afin de ne pas charger une nouvelle page&nbsp;; notez tout de même que cela peut être perturbant pour certains utilisateurs.</p>
 <p>Quoi qu'il en soit, le contenu principal de la page doit afficher les résultats trouvés. Ils doivent se situer juste après le formulaire de recherche afin d'être l'élément suivant de la navigation clavier, juste après le bouton d'envoi de la recherche.</p> 
 <p>Il faut faire précéder les résultats d'un titre de rubrique, reprenant le terme recherché et le nombre total de résultats et, si besoin, en cas de pagination, le nombre de résultats affichés dans la page.</p>
-<p>Ce titre de rubrique doit être notifié aux utilisateurs, y compris ceux utilisant des aides techniques et en particulier, des lecteurs d'écran. Pour cela, nous utilisons de l'<abbr>ARIA</abbr>, le <code>role="alert"</code> permettra une lecture dynamique du contenu de l'élément aux <abbr>AT</abbr>, sachant que nous rechargerons à chaque recherche cette partie de page (le <code>role="alert"</code> n'étant lu qu'une fois à la différence de <code>aria-live="true"</code>).</p>
+<p>Ce titre de rubrique doit être notifié aux utilisateurs, y compris ceux utilisant des aides techniques et en particulier des lecteurs d'écran. Pour cela, nous utilisons de l'<abbr>ARIA</abbr>, le <code>role="alert"</code> permettra une lecture dynamique du contenu de l'élément aux <abbr>AT</abbr>, sachant que nous rechargerons à chaque recherche cette partie de page (le <code>role="alert"</code> n'étant lu qu'une fois à la différence de <code>aria-live="true"</code>).</p>
 <!-- Code pour form de recherche et résultats -->
 <pre><code class="html">
 ...
@@ -74,12 +74,12 @@ tags:
 <h3>L'affichage et la sémantique des résultats</h3>
 <p>Sémantiquement, les résultats de la recherche à afficher sont, soit une liste (ordonnée ou pas), soit un tableau de données. Si des filtres, par exemple, permettent de classer les résultats par pertinence, nombre d'occurrences du terme recherché, par date... alors il faudra choisir une liste ordonnée <code>ol</code> ou signifier cet ordre de tri dans le tableau de résultats. Le choix de la sémantique des résultats va dépendre de plusieurs critères&nbsp;:</p>
 <ul>
-<li>Le type de données à afficher, par exemple, si les résultats sont une liste de titre d'articles et un chapeau ou un résumé, la liste semble adaptée.</li>
+<li>Le type de données à afficher, par exemple, si les résultats sont une liste de titres d'articles et un chapeau ou un résumé, la liste semble adaptée.</li>
 <li>Les données à afficher par résultat, par exemple, si ce sont des produits avec le nom, le prix, des détails... le tableau de données sera préféré du fait de la structure de données plus complexe.</li>
 </ul>
 
-<p>Pour ce qui est de la sémantique de chaque résultat, le titre de l'article, le nom du produit... doivent être un titre de rubrique, le chapeau ou le résumé, les détails... mis dans un paragraphe ou dans une cellule de tableau de données.</p>
-<p>Remarque, il est souhaitable de mettre en emphase visuelle (surligné, souligné...) et sémantique (<code>mark</code>) le terme recherché dans les résultats affichés !</p>
+<p>Pour ce qui est de la sémantique de chaque résultat, le titre de l'article, le nom du produit… doivent être un titre de rubrique, le chapeau ou le résumé, les détails… mis dans un paragraphe ou dans une cellule de tableau de données.</p>
+<p>Remarque, il est souhaitable de mettre en emphase visuelle (surligné, souligné…) et sémantique (<code>mark</code>) le terme recherché dans les résultats affichés !</p>
 
 <h3>La pagination</h3>
 <p>Lorsque le nombre de résultats dépasse la dizaine, il est utile de paginer ces résultats. Pour faciliter la navigation, la bonne pratique est de mettre un titre de rubrique de même niveau que celui de chaque résultat positionné au début du composant de pagination afin de l'identifier.
@@ -92,7 +92,7 @@ tags:
   &lt;/h2&gt;
 ...
   &lt;h3&gt;Déploiement de la &lt;strong&gt;fibre&lt;/strong&gt; en 2021 en Rhône-Alpes chez Orange&lt;/h2&gt;
-  &lt;p&gt;Orange prévoit un déploiement accéléré de la &lt;strong&gt;fibre&lt;/strong&gt; dans le zones blanches...&lt;/p&gt;
+  &lt;p&gt;Orange prévoit un déploiement accéléré de la &lt;strong&gt;fibre&lt;/strong&gt; dans les zones blanches…&lt;/p&gt;
 ...
   &lt;nav aria-labelledby="pagination"&gt;
   &lt;h3 id="pagination" class="visually-hidden"&gt;Pagination des résultats de recherche &lt;/h3&gt;
