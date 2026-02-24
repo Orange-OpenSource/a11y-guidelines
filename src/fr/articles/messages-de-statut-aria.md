@@ -47,7 +47,7 @@ Une application affiche une barre de progression pour indiquer l'état d'une mis
 </div>
 ```
 
-Après qu'un utilisateur a soumis un formulaire, un texte de confirmation est ajouté au formulaire existant&nbsp;: "Votre formulaire a été soumis avec succès". Le lecteur d'écran annonce ce message important via le rôle `"alert"`.
+Après soumission d'un formulaire, un texte de confirmation est ajouté au formulaire existant&nbsp;: "Votre formulaire a été soumis avec succès". Le lecteur d'écran annonce ce message important via le rôle `"alert"`.
 
 ```html
 <div role="alert">
