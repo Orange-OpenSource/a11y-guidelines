@@ -22,7 +22,8 @@ Lorsqu'un utilisateur appuie sur un bouton de recherche, le contenu de la page e
 </h2>
 ```
 
-Lorsqu'un utilisateur après avoir choisi un article, appuie sur un bouton "Ajouter au panier", une mention textuelle "1 élément ajouté, 4 articles dans le panier" apparait temporairement près de l'icône du panier. Un lecteur d'écran devra annoncer automatiquement "un article ajouté au panier, le panier contient actuellement 4 articles". Ici, l'information à pousser à l'utilisateur est moins cruciale que précédemment donc on utilisera le rôle `"status"`.
+Après avoir choisi un article, l'utilisateur appuie sur un bouton "Ajouter au panier", une mention textuelle "1 élément ajouté, 4 articles dans le panier" apparait temporairement près de l'icône du panier. Un lecteur d'écran devra annoncer automatiquement "un article ajouté au panier, le panier contient actuellement 4 articles".
+Ici, l'information à restituer à l'utilisateur est moins cruciale que précédemment donc on utilisera le rôle `"status"`.
 
 ```html
 <p role="status">
