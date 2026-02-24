@@ -12,7 +12,7 @@ tags:
 ## Message d'état et accessibilité
 Le critère <a lang="en" href="https://www.w3.org/TR/WCAG22/#status-messages">4.1.3 Status Messages</a> des WCAG demande que les informations importantes pour l'utilisateur, qui n'induisent pas de changement de contexte (pas d'ouverture d'une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu ou du <span lang="en">viewport</span>), soient perçues via des propriétés et rôles <abbr>ARIA</abbr> (Accessible Rich Internet Applications) par toute personne utilisant une <abbr>AT</abbr> (Aide Technique) sans prise de focus sur le message.
 
-## Quelques exemple de messages d'état ou contextuels
+## Quelques exemples de messages d'état ou contextuels
 
 Lorsqu'un utilisateur appuie sur un bouton de recherche, le contenu de la page est mis à jour de manière asynchrone pour ajouter les résultats de la recherche  affichés dans une région située sous le bouton de recherche. Le message "XX résultats trouvés" s'affiche en haut de ce nouveau contenu. Un lecteur d'écran devra annoncer "XX résultats ont été trouvés". Dans ce cas, l'information fournie à l'utilisateur est importante et doit être immédiatement donnée, donc on utilisera le rôle `"alert"`.
 
