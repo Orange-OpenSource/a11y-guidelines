@@ -8,7 +8,7 @@ tags:
 ---
 
 <h2>Introduction</h2>
-<p>Site search should preferably be implemented as a dedicated page. To access it, you can add a "Search" link or a magnifying glass icon in the main menu, footer, or a form that, when validated with the search term, redirects to this dedicated page.</p>
+<p>Site search should be implemented as a dedicated page. To access it, you can add a "Search" link or a magnifying glass icon in the main menu, footer, or a form that, when validated with the search term, redirects to this dedicated page.</p>
 
 <h2>The Search Form</h2>
 <p>In this example, we used <a href="http://boosted.orange.com/">the Boosted Library</a>, which provides forms that comply with Orange's design guidelines.</p>
@@ -41,7 +41,7 @@ tags:
 
 <h2>Displaying Results</h2>
 <h3>Page Title</h3>
-<p>Once the search is launched, first of all the page title ( <code>title</code>) should be updated to indicate: </p>
+<p>Once the search is launched, first of all, the page title ( <code>title</code>) should be updated to indicate: </p>
 <ul>
 <li>That the page is a search results page.</li>
 <li>The search term.</li>
@@ -51,8 +51,8 @@ tags:
 <p>For example: "2 results for ..... 'Fiber' - Orange.com" </p>
 
 <h3>Loading and Displaying Search Results</h3>
-<p>In some cases, it seems convenient for users to prefer asynchronous reloading of results in order to avoid loading a new page. However, note that this can be disruptive for some users.</p>
-<p>In any cases, the main content of the page must display the results found. These must be placed immediately after the search form to that they are the next element in keyboard navigation, right after the search submit button</p> 
+<p>In some cases, it seems convenient for users to prefer asynchronous result reloading to avoid loading a new page. However, note that this can be disruptive for some users.</p>
+<p>In any cases, the main content of the page must display the results found. These must be placed immediately after the search form so that they are the next element in keyboard navigation, right after the search submit button</p> 
 <p>The results must be preceded by a section heading that includes the search term and the total number of results. If pagination is used, it should also include the number of results displayed on the current page.</p>
 <p>This section heading must be notified to users, including those using assistive technologies, particularly screen readers. To achieve this, we use <abbr>ARIA</abbr>: <code>role="alert"</code> will enable dynamic reading of the element's content by <abbr>AT</abbr> (assistive technologies), given that we reload this page section with each search (note that <code>role="alert"</code> is read only once, unlike <code>aria-live="true"</code>).</p>
 <!-- Code pour form de recherche et résultats -->
@@ -77,7 +77,7 @@ tags:
 <li>Data to display per result: For example, if these are products with name, price, details, etc., a data table would be preferred due to the more complex data structure.</li>
 </ul>
 
-<p>Regarding the semantics of each individual result, the article title, product name, etc., should be a section heading, while the lead paragraph, summary, details, etc., should be placed in a paragraph or data table cell.</p>
+<p>Regarding the semantics of each result, the article title, product name, etc., should be a section heading, while the lead paragraph, summary, details, etc., should be placed in a paragraph or data table cell.</p>
 <p>Note: It's recommended to highlight the search term in the displayed results both visually (highlighted, underlined, etc.) and semantically (using <code>em</code>, <code>strong</code>, etc.)!</p>
 
 <h3>Pagination</h3>
@@ -87,10 +87,10 @@ tags:
 <pre><code class="html">
 ...
   &lt;h2 role="alert"&gt;
-    15 results, 5 displyed for "Fiber" 
+    15 results, 5 displayed for "Fiber" 
   &lt;/h2&gt;
 ...
-  &lt;h3&gt;&lt;strong&gt;Fiber&lt;/strong&gt; deplyment in 2021 in Rhône-Alpes by Orange&lt;/h2&gt;
+  &lt;h3&gt;&lt;strong&gt;Fiber&lt;/strong&gt; deployment in 2021 in Rhône-Alpes by Orange&lt;/h2&gt;
   &lt;p&gt;Orange plans an accelerated deployment of &lt;strong&gt;fiber&lt;/strong&gt; in uncovered areas...&lt;/p&gt;
 ...
   &lt;nav aria-labelledby="pagination"&gt;
@@ -98,4 +98,5 @@ tags:
   &lt;ul class="pagination"&gt;
 ...
 </code></pre>
+
 </p>
