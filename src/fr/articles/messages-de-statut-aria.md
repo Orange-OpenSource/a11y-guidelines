@@ -68,7 +68,7 @@ L'information d'erreur dans le formulaire est importante, urgente, et demande un
 </div>
 ```
 
-Une fois qu'un utilisateur, dans une application de gestion documentaire en ligne, a inséré un nouveau document dans un répertoire, une notification toast (message de feedback en popup) affiche le message "Le document YYY est bien enregistré dans le répertoire XXX", qui est également lu par un lecteur d'écran sans caractère d'urgence grâce au rôle `"statut"`.
+Dans une application de gestion documentaire en ligne, l'utilisateur insère un nouveau document dans un répertoire, une notification toast (message de feedback en popup) affiche le message "Le document YYY est bien enregistré dans le répertoire XXX", qui est également lu par un lecteur d'écran sans caractère d'urgence grâce au rôle `"statut"`.
 
 ```html
 <p role="status">
