@@ -12,7 +12,7 @@ tags:
 <p>La recherche sur le site doit de préférence être une page spécifique. Pour y accéder, on peut mettre en place dans le menu principal, dans le pied de page..., un lien "Rechercher" ou un icône de loupe, ainsi qu'un formulaire qui, lorsqu'il est validé avec le terme recherché, permet d'aller sur cette page dédiée.</p>
 
 <h2>Le formulaire de recherche</h2>
-<p>Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/">la bibliothèque Boosted</a>. Celle-ci permet d’obtenir des formulaires dont le design est conforme à la charte Orange. </p>
+<p>Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/">la bibliothèque Boosted</a>. Celle-ci permet d'obtenir des formulaires dont le design est conforme à la charte Orange. </p>
 <p>Pour une recherche sur le site, il faut ajouter le <code>role="search"</code> afin d'assurer une meilleure identification de la région de recherche, comme ceci&nbsp;: <br />
 <!-- Code du form de recherche -->
 <pre><code class="html">
@@ -42,13 +42,12 @@ tags:
 
 <h2>Affichage des résultats</h2>
 <h3>Le titre de page</h3>
-<p>Une fois la recherche lancée, en premier lieu, le titre de page ( <code>title</code>) doit être modifié pour mentionner&nbsp;: <br />
+<p>Une fois la recherche lancée, en premier lieu, le titre de page ( <code>title</code>) doit être modifié pour mentionner&nbsp;: </p>
 <ul>
-<li>le fait que nous sommes sur une page de résultats de recherche</li>
-<li>le terme recherché</li>
-<li>le nombre total de résultats</li>
+<li>Le fait que nous sommes sur une page de résultats de recherche.</li>
+<li>Le terme recherché.</li>
+<li>Le nombre total de résultats.</li>
 </ul>
-</p>
 
 <p>Par exemple, "2 résultats pour..... 'Fibre' - Orange.com" </p>
 
@@ -56,7 +55,7 @@ tags:
 <p>Dans certains cas, il semble pratique pour les utilisateurs de privilégier un rechargement asynchrone des résultats afin de ne pas charger une nouvelle page, notez tout de même que cela peut être perturbant pour certains utilisateurs.</p>
 <p>Quoi qu'il en soit, le contenu principal de la page doit afficher les résultats trouvés. Ils doivent se situer juste après le formulaire de recherche afin d'être l'élément suivant de la navigation clavier, juste après le bouton d'envoi de la recherche.</p> 
 <p>Il faut faire précéder les résultats d'un titre de rubrique, reprenant le terme recherché et le nombre total de résultats et, si besoin, en cas de pagination, le nombre de résultats affichés dans la page.</p>
-<p>Ce titre de rubrique doit être notifié aux utilisateurs, y compris ceux utilisant des aides techniques et en particulier, des lecteurs d'écran. Pour cela, nous utilisons de l'<abbr>ARIA</abbr>, le <code>role="alert"</code> permettra une lecture dynamique du contenu de l'élément au <abbr>AT</abbr>, sachant que nous rechargerons à chaque recherche cette partie de page (le <code>role="alert"</code> n'étant lu qu'une fois à la différence de <code>aria-live="true"</code>).</p>
+<p>Ce titre de rubrique doit être notifié aux utilisateurs, y compris ceux utilisant des aides techniques et en particulier, des lecteurs d'écran. Pour cela, nous utilisons de l'<abbr>ARIA</abbr>, le <code>role="alert"</code> permettra une lecture dynamique du contenu de l'élément aux <abbr>AT</abbr>, sachant que nous rechargerons à chaque recherche cette partie de page (le <code>role="alert"</code> n'étant lu qu'une fois à la différence de <code>aria-live="true"</code>).</p>
 <!-- Code pour form de recherche et résultats -->
 <pre><code class="html">
 ...
@@ -73,17 +72,17 @@ tags:
 <p>Nota bene &nbsp;: la pagination des résultats de recherche est une bonne option pour éviter des pages de résultats trop longues. Cependant, il ne faut pas utiliser le chargement dynamique infini en particulier au scroll, car il est souvent inaccessible et peu utilisable.</p>
 
 <h3>L'affichage et la sémantique des résultats</h3>
-<p>Sémantiquement, les résultats de la recherche à afficher sont, soit une liste (ordonnée ou pas), soit un tableau de données. Si des filtres, par exemple, permettent de classer les résultats par pertinence, nombre d'occurrences du terme recherché, par date... alors il faudra choisir une liste ordonnée <code>ol</code> ou signifier cet ordre de tri dans le tableau de résultats. Le choix de la sémantique des résultats va dépendre de plusieurs critères&nbsp;:<br />
+<p>Sémantiquement, les résultats de la recherche à afficher sont, soit une liste (ordonnée ou pas), soit un tableau de données. Si des filtres, par exemple, permettent de classer les résultats par pertinence, nombre d'occurrences du terme recherché, par date... alors il faudra choisir une liste ordonnée <code>ol</code> ou signifier cet ordre de tri dans le tableau de résultats. Le choix de la sémantique des résultats va dépendre de plusieurs critères&nbsp;:</p>
 <ul>
-<li>le type de données à afficher, par exemple, si les résultats sont une liste de titre d'articles et un chapeau ou un résumé, la liste semble adaptée.</li>
-<li>les données à afficher par résultat, par exemple, si ce sont des produits avec le nom, le prix, des détails... le tableau de données sera préféré du fait de la structure de données plus complexe.</li>
+<li>Le type de données à afficher, par exemple, si les résultats sont une liste de titre d'articles et un chapeau ou un résumé, la liste semble adaptée.</li>
+<li>Les données à afficher par résultat, par exemple, si ce sont des produits avec le nom, le prix, des détails... le tableau de données sera préféré du fait de la structure de données plus complexe.</li>
 </ul>
-</p>
+
 <p>Pour ce qui est de la sémantique de chaque résultat, le titre de l'article, le nom du produit... doivent être un titre de rubrique, le chapeau ou le résumé, les détails... mis dans un paragraphe ou dans une cellule de tableau de données.</p>
 <p>Remarque, il est souhaitable de mettre en emphase visuelle (surligné, souligné...) et sémantique (<code>mark</code>) le terme recherché dans les résultats affichés !</p>
 
 <h3>La pagination</h3>
-<p>Lorsque le nombre de résultats dépasse la dizaine, il est utile de paginer ces résultats. Pour faciliter la navigation, la bonne pratique est de mettre un titre de rubrique de même niveau que celui de chaque résultat  positionné au début du composant de pagination afin de l'identifier.
+<p>Lorsque le nombre de résultats dépasse la dizaine, il est utile de paginer ces résultats. Pour faciliter la navigation, la bonne pratique est de mettre un titre de rubrique de même niveau que celui de chaque résultat positionné au début du composant de pagination afin de l'identifier.
 
 <!-- Code pour résultats et pagination -->
 <pre><code class="html">
