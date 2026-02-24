@@ -97,5 +97,5 @@ Parfois, il peut être utile de fournir des messages uniquement pour les lecteur
 La règle de base est que si le focus est déplacé ou que le contexte est restitué aux utilisateur d'<abbr>AT</abbr>, ce n'est pas un message de statut&nbsp;:
 
 - une modale qui demande une action utilisateur, sur laquelle le focus est positionné automatiquement.
-- l'apparition/disparition de contenu suite une interaction utilisateur qui est annoncé aussi aux <abbr>AT</abbr> (par exemple, on annonce au lecteur d'écran "ouvert/fermé" pour un menu, un accordéon)
+- l'apparition/disparition de contenu suite à une interaction utilisateur qui est annoncé aussi aux <abbr>AT</abbr> (par exemple, on annonce au lecteur d'écran "ouvert/fermé" pour un menu, un accordéon)
 - pour une système de panneaux, dont l'ouverture de l'onglet sélectionné est annoncé aux <abbr>AT</abbr>  
