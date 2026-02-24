@@ -90,7 +90,7 @@ Comme de nouvelles informations sont ajoutées dans un ordre significatif et/ou 
 </div>
 ```
 
-Parfois, on veut fournir des messages que pour les lecteurs d'écran, donc, sans avoir besoin de les afficher visuellement. Dans ce cas aussi, il faut utiliser ces rôles <abbr>ARIA</abbr> pour pousser le message au <abbr>AT</abbr> et en particulier aux lecteurs d'écran sans les afficher à l'écran grâce à ces rôles ARIA que nous venons de voir.
+Parfois, il peut être utile de fournir des messages uniquement pour les lecteurs d'écran, sans avoir besoin de les afficher visuellement. Dans ce cas, il faut également utiliser les rôles <abbr>ARIA</abbr> pour restituer les messages aux <abbr>AT</abbr> et en particulier aux lecteurs d'écran.
 
 ## Les messages d'état qui n'en sont pas...
 
