@@ -76,7 +76,10 @@ Dans une application de gestion documentaire en ligne, l'utilisateur insère un 
 </p>
 ```
 
-Dans une application de mailing en ligne, l'utilisateur choisi dans une liste de destinataire de rajouter/enlever une nouvelle adresse mail, cette l'adresse e-mail du destinataire est affichée à l'écran à la suite de celle déjà choisies pour ce message. Le lecteur d'écran devra annoncer l'ajout de cette nouvelle adresse mail. Il faut comprendre que le texte, adresse mail, ajouté/retiré à la liste n'est pas visible pour certains utilisateurs d'<abbr>AT</abbr>. Donc, afin de donner le contexte aux utilisateurs d'AT, en particulier, aux lecteurs d'écran, une information supplémentaire est nécessaire sous forme de contenu non affiché mais lu par la synthèse vocale. Comme de nouvelles informations sont ajoutées dans un ordre significatif et les anciennes informations perdant de leur valeur informationnelle peuvent être supprimées (un autre exemple pourrait être un <span lang="en">chat</span> ou <span lang="en">chatbot</span>), on utilise, ici, le rôle `"log"`.
+Dans une application de mailing en ligne, l'utilisateur choisi  d'ajouter (ou supprimer) une adresse mail dans une liste de destinataires. Cette adresse e-mail est ajoutée (ou supprimée) à la liste d'adresses déjà existantes. Le lecteur d'écran devra annoncer l'ajout (ou suppression) de cette nouvelle adresse mail. 
+Il faut comprendre que l'adresse mail, ajoutée (ou supprimée) à la liste n'est pas visible pour certains utilisateurs d'<abbr>AT</abbr>,  en particulier de lecteurs d'écran. Afin de donner le contexte à ces utilisateurs, une information supplémentaire est nécessaire sous forme de contenu non affiché mais lu par la synthèse vocale. 
+Comme de nouvelles informations sont ajoutées dans un ordre significatif et/ou que les anciennes informations disparaissent, on utilise, ici, le rôle `"log"`.
+ Un autre exemple d'utilisation pourrait être un <span lang="en">chat</span> ou <span lang="en">chatbot</span>.
 
 ```html
 <div role="log">
