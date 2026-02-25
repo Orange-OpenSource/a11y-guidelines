@@ -3,13 +3,15 @@ title: "Use ARIA for status messages"
 abstract: "Status messages, how to with ARIA"
 titleBeforeTag: true
 date: "2019-02-21"
+updateDate: "2026-03-12"
 tags:
   - web
   - intermediate
 ---
 
 ## Status message and accessibility
-The WCAG 2.1 criterion <a href="https://www.w3.org/TR/WCAG22/#status-messages">4.1.3 Status Messages</a> requires that important informations for the user, which do not induce a change of context (no opening of a new window, no focus on the content, no modification of the content or the viewport), are seen via properties and roles (<abbr>ARIA</abbr>) by anyone using <abbr>AT</abbr> without taking focus on the message.
+
+The WCAG criterion <a href="https://www.w3.org/TR/WCAG22/#status-messages">4.1.3 Status Messages</a> requires that important informations for the user, which do not induce a significant change of context (no opening of a new window, no focus on the content, no modification of the content or the viewport), are seen via <abbr>ARIA</abbr> (Accessible Rich Internet Applications) properties and roles by anyone using <abbr>AT</abbr> (Assistive Technology) without taking focus on the message.
 
 ## Some examples of status messages
 
@@ -21,7 +23,8 @@ When a user presses a search button, the content of the page is updated asynchro
 </h2>
 ```
 
-When a user has chosen an item, presses an "Add to cart" button, a textual mention "1 item added, 4 items in the cart" appears temporarily near the shopping cart icon. A screen reader will have to announce "an item added to the cart, the cart currently contains 4 items". Here, the information to push to the user is less crucial than before so we will use the role `"status"`.
+When a user has chosen an item, presses an "Add to cart" button, a textual mention "1 item added, 4 items in the cart" appears temporarily near the shopping cart icon. A screen reader will have to announce "an item added to the cart, the cart currently contains 4 items".
+Here, the information to push to the user is less crucial than before so we will use the role `"status"`.
 
 ```html
 <p role="status">
@@ -29,7 +32,7 @@ When a user has chosen an item, presses an "Add to cart" button, a textual menti
 </p>
 ```
 
-Once a user has activated a process for applying complex search filters, an icon symbolizing "pending": an hourglass, a clock… appears on the screen. The screen reader announces "Application busy, load in progress".
+During the application of a complex search filter, an icon symbolizing "pending" (an hourglass, a clock, etc.) appears on the screen. The screen reader announces "Application busy, loading." Again, this information is important for the user; the `"alert"` role will be used.
 
 ```html
 <div role="alert">
@@ -37,7 +40,7 @@ Once a user has activated a process for applying complex search filters, an icon
 </div>
 ```
 
-An application displays a progress bar to indicate the status of an update of a content item. The screen reader provides intermittent progress announcements: "10% updated" then "20% updated"…
+An application displays a progress bar to indicate the status of an update of a content item. Thanks to the `“progressbar”` role and appropriate ARIA attributes, the screen reader provides intermittent progress announcements: "10% updated" then "20% updated"…
 
 ```html
 <div role="progressbar" aria-valuenow="20" aria-valued="0" aria-valuemax="100">
@@ -45,7 +48,7 @@ An application displays a progress bar to indicate the status of an update of a 
 </div>
 ```
 
-After a user submits a form, text is added to the existing form as follows: "Your form has been submitted successfully." The screen reader announces the same message.
+After a form is submitted, a confirmation message is added to the existing form: "Your form has been successfully submitted." The screen reader announces this important message using the `"alert"` role.
 
 ```html
 <div role="alert">
@@ -53,7 +56,8 @@ After a user submits a form, text is added to the existing form as follows: "You
 </div>
 ```
 
-When a user fills out a form but some of the data entered is incorrect, text is added at the top of the existing form indicating "XX errors in the form". The screen reader announces the message "Form not sent because XX validation errors" (this does not dispense with giving details of the error for each incorrectly filled field). The error information in the form is important and urgent, immediate, so we use the role `"alertdialog"`.
+When a user fills out a form but some of the data entered is incorrect, text is added at the top of the existing form indicating "XX errors in the form". The screen reader announces the message "Form not sent because XX validation errors" (this does not dispense with giving details of the error for each incorrectly filled field).
+The error information in the form is important, urgent, and need a user interaction, so we use the role `"alertdialog"`.
 
 ```html
 <div role="alertdialog" aria-labelledby="errors">
@@ -61,7 +65,7 @@ When a user fills out a form but some of the data entered is incorrect, text is 
 </div>
 ```
 
-Once a user, in an online document management application, has inserted a new document in a directory, a toast notification (popup feedback message) displays the message "The YYY document is saved in the XXX directory" , which is also read by a screen reader.
+In an online document management application, the user inserts a new document into a directory, a toast notification (popup feedback message) displays the message "The document YYY has been successfully saved in the directory XXX", which is also read by a screen reader without any sense of urgency thanks to the `"status"` role.
 
 ```html
 <p role="status">
@@ -69,7 +73,10 @@ Once a user, in an online document management application, has inserted a new do
 </p>
 ```
 
-In an online mailing application, the user chosen from a recipient list to add / remove a new e-mail address, this recipient's e-mail address is displayed on the screen following the one already chosen for this message. The screen reader will have to announce the addition of this new email address. It should be understood that the text, email address, added / removed to the list may not be visible on the screen for some users of <abbr>AT</abbr>. So, in order to give context to screen reader users, additional information is needed in the form of content not displayed but read by speech synthesis. As new information is added in a meaningful order and old information may disappear (another example could be a chat or chatbot), we use, here, the role `"log"`.
+In an online mailing application, the user chooses to add (or remove) an email address from a recipient list. This email address is added (or removed) to the existing list of addresses. The screen reader must announce the addition (or removal) of this new email address.
+It's important to understand that the email address added (or removed) to the list is not visible to some <abbr>AT</abbr> users, particularly screen readers. To provide context for these users, additional information is needed in the form of text content that is not displayed but read aloud by the text-to-speech function.
+As new information is added in a meaningful order and old information may disappear, we use, here, the role `"log"`.
+Another example of use could be a chat or chatbot.
 
 ```html
 <div role="log">
@@ -82,9 +89,10 @@ In an online mailing application, the user chosen from a recipient list to add /
 
 Sometimes we want to provide messages only for screen readers, without having to display them visually. In this case too, you need to use these <abbr>ARIA</abbr> roles to push the message to <abbr>AT</abbr> and in particular to the screen readers without displaying them on the screen.
 
-## Status messages that are not!
+## Status messages that are not
 
 The basic rule is that if the focus is moved or the context is returned to users of <abbr>AT</abbr>, it is not a status message:
-- a modal that requires a user action, on which the focus is set
+
+- a modal that requires a user action, on which the focus is automatically set
 - during the appearance / disappearance of content following a user interaction which is also announced to <abbr>AT</abbr> (for example, the screen reader is announced "open / closed" for a menu, an accordion)
 - for a panel system, whose selected tab is announced at <abbr>AT</abbr>
