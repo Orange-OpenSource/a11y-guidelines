@@ -95,4 +95,3 @@ The basic rule is that if the focus is moved or the context is returned to users
 - a modal that requires a user action, on which the focus is automatically set
 - during the appearance / disappearance of content following a user interaction which is also announced to <abbr>AT</abbr> (for example, the screen reader is announced "open / closed" for a menu, an accordion)
 - for a panel system, whose selected tab is announced at <abbr>AT</abbr>
-:
