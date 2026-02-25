@@ -89,4 +89,4 @@ Plus de détails sur ["Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver"]
 
 - <a href="https://www.w3.org/TR/accname-1.1/" lang="en" hreflang="en">Accessible Name and Description Computation 1.1</a> par <span lang="en">the Accessible Rich Internet Applications Working Group</span>
 - <a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/" lang="en" hreflang="en">What is an accessible name?</a> par Léonie Watson
-- <a href="https://w3c.github.io/accname/#mapping_additional_nd_description" lang="en"">Accessible Name and Description Computation 1.2 -(version de brouillon éde l'éditeur)</a>
+- <a href="https://w3c.github.io/accname/#mapping_additional_nd_description" lang="en" hreflang="en">Accessible Name and Description Computation 1.2 Editorial Draft (en)</a>
