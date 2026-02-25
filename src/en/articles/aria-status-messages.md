@@ -39,7 +39,7 @@ During the application of a complex search filter, an icon symbolizing "pending"
 </div>
 ```
 
-An application displays a progress bar to indicate the status of an update of a content item. The screen reader provides intermittent progress announcements: "10% updated" then "20% updated"…
+An application displays a progress bar to indicate the status of an update of a content item. Thanks to the `“progressbar”` role and appropriate ARIA attributes, the screen reader provides intermittent progress announcements: "10% updated" then "20% updated"…
 
 ```html
 <div role="progressbar" aria-valuenow="20" aria-valued="0" aria-valuemax="100">
