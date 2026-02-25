@@ -31,7 +31,7 @@ Here, the information to push to the user is less crucial than before so we will
 </p>
 ```
 
-During the application of a complex search filter, an icon symbolizing "pending"—an hourglass, a clock, etc.—appears on the screen. The screen reader announces "Application busy, loading." Again, this information is important for the user; the `"alert"` role will be used.
+During the application of a complex search filter, an icon symbolizing "pending" (an hourglass, a clock, etc.) appears on the screen. The screen reader announces "Application busy, loading." Again, this information is important for the user; the `"alert"` role will be used.
 
 ```html
 <div role="alert">
