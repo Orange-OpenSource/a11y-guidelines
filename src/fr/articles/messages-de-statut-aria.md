@@ -31,7 +31,7 @@ Ici, l'information à restituer à l'utilisateur est moins cruciale que précéd
 </p>
 ```
 
-Durant le processus d'application d'un filtre de recherche complexe, une icône symbolisant «&nbsp;en attente&nbsp;»&nbsp;: un sablier, une horloge… apparait à l'écran. Le lecteur d'écran annonce "Application occupée, chargement en cours". Là encore, l'information est importante pour l'utilisateur, on utilisera le rôle `"alert"`.
+Durant le processus d'application d'un filtre de recherche complexe, une icône symbolisant «&nbsp;en attente&nbsp;» (un sablier, une horloge, etc…) apparait à l'écran. Le lecteur d'écran annonce "Application occupée, chargement en cours". Là encore, l'information est importante pour l'utilisateur, on utilisera le rôle `"alert"`.
 
 ```html
 <div role="alert">
