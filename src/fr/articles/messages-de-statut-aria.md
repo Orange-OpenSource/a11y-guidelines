@@ -39,7 +39,7 @@ Durant le processus d'application d'un filtre de recherche complexe, une icône 
 </div>
 ```
 
-Une application affiche une barre de progression pour indiquer l'état d'une mise à jour d'un élément de contenu. Le lecteur d'écran fournit des annonces intermittentes des progrès&nbsp;: "10% mis à jour", puis "20% mis à jour"…
+Une application affiche une barre de progression pour indiquer l'état d'une mise à jour d'un élément de contenu. Grâce au rôle `"progressbar"` et attributs ARIA adéquats, le lecteur d'écran fournit des annonces intermittentes des progrès&nbsp;: "10% mis à jour", puis "20% mis à jour"…
 
 ```html
 <div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
