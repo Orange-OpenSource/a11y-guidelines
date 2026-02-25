@@ -25,7 +25,7 @@ Pour être concis, dans <a href="https://www.w3.org/TR/2018/REC-accname-1.1-2018
 
 1 puis, <code>aria-label</code></li>
 
-1 et enfin, les éléments associés par exemple&nbsp;: texte de la balise pour les boutons, les liens et les cellules de tableau, les éléments <code>Label</code> pour les champs de formulaire, les éléments <code>Legend</code> pour les <code>Fieldset</code>, les éléments <code>Caption</code> pour les tableaux.
+1 et enfin, les éléments associés par exemple&nbsp;: texte de la balise pour les boutons, les liens et les cellules de tableau, les éléments <code>Label</code> pour les champs de formulaire, les éléments <code>legend</code> pour les <code>fieldset</code>, les éléments <code>caption</code> pour les tableaux.
 
 ### Accéder au nom accessible via le navigateur
 
