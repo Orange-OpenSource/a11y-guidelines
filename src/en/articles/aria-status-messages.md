@@ -10,7 +10,7 @@ tags:
 ---
 
 ## Status message and accessibility
-The WCAG 2.1 criterion <a href="https://www.w3.org/TR/WCAG22/#status-messages">4.1.3 Status Messages</a> requires that important informations for the user, which do not induce a significant change of context (no opening of a new window, no focus on the content, no modification of the content or the viewport), are seen via <abbr>ARIA</abbr> (Accessible Rich Internet Application) properties and roles by anyone using <abbr>AT</abbr> (Assistive Technology) without taking focus on the message.
+The WCAG criterion <a href="https://www.w3.org/TR/WCAG22/#status-messages">4.1.3 Status Messages</a> requires that important informations for the user, which do not induce a significant change of context (no opening of a new window, no focus on the content, no modification of the content or the viewport), are seen via <abbr>ARIA</abbr> (Accessible Rich Internet Applications) properties and roles by anyone using <abbr>AT</abbr> (Assistive Technology) without taking focus on the message.
 
 ## Some examples of status messages
 
