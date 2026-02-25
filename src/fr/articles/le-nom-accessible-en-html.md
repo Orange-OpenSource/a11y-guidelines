@@ -19,11 +19,12 @@ Le nom accessible peut être issu du contenu d'une balise, d'attributs de cette 
 
 ## En pratique, comment ça marche ?
 
-Le nom accessible est, par exemple, annoncé par un lecteur d'écran à la prise de focus sur cet élément auquel est ajouté le rôle de l'élément (lien, graphique, bouton...) pour donner la propriété accessibilité de nom. Le nom accessible peut dériver du contenu visible ou caché de l'élément. Les éléments interactifs ou images porteuses d'information doivent avoir un nom accessible, pour plus de détails si un élément doit avoir ou pas un nom accessible voir <a href="https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#accessiblenameguidancebyrole" hreflang="en" lang="en">ARIA Authoring Practices Guide (APG)</a>. Le nom accessible permet aux utilisateurs d'AT de comprendre quelle est la fonction du contrôle (élément interactif), il doit donc être pertinent au regard de son but, son objectif.
-Pour être concis, dans <a href="https://www.w3.org/TR/2018/REC-accname-1.1-20181218/#mapping_additional_nd_te" hreflang="en">méthode de calcul (en anglais)</a>, il existe un ordre de priorité pour calculer le nom d'un élément&nbsp;:
-1 d'abord, <code>aria-labelledby</code></li>
+Le nom accessible est, par exemple, annoncé par un lecteur d'écran à la prise de focus sur cet élément auquel est ajouté le rôle de l'élément (lien, graphique, bouton...) pour donner la propriété accessibilité de nom. Le nom accessible peut dériver du contenu visible ou caché de l'élément. Les éléments interactifs ou images porteuses d'information doivent avoir un nom accessible, pour plus de détails si un élément doit avoir ou pas un nom accessible voir <a href="https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#accessiblenameguidancebyrole" hreflang="en" lang="en">ARIA Authoring Practices Guide (APG)</a>. Le nom accessible permet aux utilisateurs d'<abr>AT</abr>b  de comprendre quelle est la fonction du contrôle (élément interactif), il doit donc être pertinent au regard de son but, son objectif.
+Pour être concis, dans <a href="https://www.w3.org/TR/html-aam-1.0/#accname-computation" hreflang="en" lang="en">HTML Accessibility API Mappings 1.0 - computation method</a>, il existe un ordre de priorité pour calculer le nom d'un élément <abbr>HTML</abbr> spécifique de l'élément, mais en gros&nbsp;:
 
-1 puis, <code>aria-label</code></li>
+1 d'abord, <code>aria-labelledby</code>
+
+1 puis, <code>aria-label</code>
 
 1 et enfin, les éléments associés par exemple&nbsp;: texte de la balise pour les boutons, les liens et les cellules de tableau, les éléments <code>Label</code> pour les champs de formulaire, les éléments <code>legend</code> pour les <code>fieldset</code>, les éléments <code>caption</code> pour les tableaux.
 
@@ -90,3 +91,4 @@ Plus de détails sur ["Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver"]
 - <a href="https://www.w3.org/TR/accname-1.1/" lang="en" hreflang="en">Accessible Name and Description Computation 1.1</a> par <span lang="en">the Accessible Rich Internet Applications Working Group</span>
 - <a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/" lang="en" hreflang="en">What is an accessible name?</a> par Léonie Watson
 - <a href="https://w3c.github.io/accname/#mapping_additional_nd_description" lang="en" hreflang="en">Accessible Name and Description Computation 1.2 Editorial Draft (en)</a>
+- <a href="https://www.w3.org/TR/html-aam-1.0" hreflang="en" lang="en">mHTML Accessibility API Mappings 1.0</a>
