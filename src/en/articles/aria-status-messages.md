@@ -56,7 +56,7 @@ After a form is submitted, a confirmation message is added to the existing form:
 ```
 
 When a user fills out a form but some of the data entered is incorrect, text is added at the top of the existing form indicating "XX errors in the form". The screen reader announces the message "Form not sent because XX validation errors" (this does not dispense with giving details of the error for each incorrectly filled field).
-The error information in the form is important and urgent, immediate, so we use the role `"alertdialog"`.
+The error information in the form is important, urgent, and need a user interaction, so we use the role `"alertdialog"`.
 
 ```html
 <div role="alertdialog" aria-labelledby="errors">
