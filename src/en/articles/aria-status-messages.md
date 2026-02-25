@@ -74,7 +74,8 @@ In an online document management application, the user inserts a new document in
 
 In an online mailing application, the user chooses to add (or remove) an email address from a recipient list. This email address is added (or removed) to the existing list of addresses. The screen reader must announce the addition (or removal) of this new email address.
 It's important to understand that the email address added (or removed) to the list is not visible to some <abbr>AT</abbr> users, particularly screen readers. To provide context for these users, additional information is needed in the form of text content that is not displayed but read aloud by the text-to-speech function.
-As new information is added in a meaningful order and old information may disappear (another example could be a chat or chatbot), we use, here, the role `"log"`.
+As new information is added in a meaningful order and old information may disappear, we use, here, the role `"log"`.
+Another example of use could be a chat or chatbot.
 
 ```html
 <div role="log">
