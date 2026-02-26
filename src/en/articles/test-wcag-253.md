@@ -8,21 +8,21 @@ tags:
   - intermediate
 ---
 
-## What does WCAG 2.5.3 mean
+## Objective of the Criterion
 
-### General explanation
+**WCAG 2.5.3 – Label in Name** aims to ensure that when an interactive element (button, link, input field, etc.) displays visible text on the screen, that same text is also included in its **<a href="/src/fr/articles/le-nom-accessible-en-html.md">accessible name</a>**. 
 
-The purpose of [this criterion](https://www.w3.org/TR/WCAG22/#label-in-name) is to ensure that if a button, link, or other interface element contains some screen visible text, its <a href="/en/articles/accessible-name/">accessible name</a> must contain at least the same text as the one displayed.
-This is to ensure that users of technical aids can understand and interact with the component. Indeed, the technical aids are based on the accessible name of the components. For example, a voice recognition user will be able to click on a button simply by pronouncing its accessible name.
+This allows users of [assistive technologies](/src/fr/solutions-assistance.md) (particularly speech recognition software) to correctly understand and interact with the interface.
+These tools rely on the **accessible name** to identify and activate elements.
 
-The visible text and the accessible name do not have to be identical, but the visible text must be present in the accessible name, preferably first.
+The visible text does not need to be **strictly identical** to the accessible name, but it must **at minimum be included** within it — ideally at the **beginning**.
 
-### Concrete example 
+## Concrete Example
 
-#### Accessible name 
+### Problematic
 
-Let’s take the example of a user using voice recognition software who wants to input and submit a form.
-![button with send text](../images/tester-wcag-253/button_send.png)
+Consider a user navigating with speech recognition software who wants to fill out and submit a form.
+![Button displaying the text “Send”](../articles/images/tester-wcag-253/button_send.png)
 
 <pre><code class="html">
 &lt;button&gt;
@@ -30,61 +30,107 @@ Let’s take the example of a user using voice recognition software who wants to
 &lt;/button&gt;
 </code></pre>
 
-The above example may be problematic. The button contains an image with the text "Send" but the alternative text of the image is "Submit", so its accessible name is "Submit". Since technologies depend on the accessible name, if the user says "Send", nothing will happen.
+In this example, the button visually displays the word **« Send »** (in the image), but the alternative text is **« Submit »**. The accessible name of the button therefore becomes *Submit*.
 
-To solve the problem, the alternative text must be the same as the image text ("Send").
+Result: a speech recognition user who says « Click Send » will not be able to activate the button, because the assistant will not recognize that name.
 
-#### Accessible masking 
+---
 
-Be careful when using <a href="/en/web/components-examples/accessible-hiding/">accessible masking</a>. It should not be placed in the middle of a visually displayed label.
-Otherwise, it will be impossible to correlate the accessible name with the displayed text.
-
-Example of Error:
+### Compliant Example
 
 <pre><code class="html">
-&lt;a href="www.orange.com" target="_blank"&gt; Open &lt;span class="visually-hidden"&gt;in new Window &lt;/span&gt; Orange ebsite &lt;/a&gt;
+&lt;button&gt;
+    &lt;img src="send.png" alt="Send"&gt;
+&lt;/button&gt;
 </code></pre>
 
-If you say, "Open orange website", the voice recognition software won’t find the element. On the other hand, if we say "Open in a new window orange website" the link will be activated, as it is its accessible name.
+The accessible name now contains the word **« Send »**, identical to the visible text. **WCAG 2.5.3 is therefore satisfied**.
 
-## How to test it
+---
 
-### Screen reader 
+## Be Careful with Visually Hidden Content
 
-The screen reader vocalizes the properties of the element on which you place your focus.
-Particularly, the following characteristics of the element: its function (link, button, text...), its status and its accessible name. If the accessible name you hear does not match what is textually visible, then the criterion is considered non-compliant.
+Hidden content should not be inserted **in the middle** of the visible label (it should be placed at the end instead), otherwise the criterion will fail and the element may not work properly with speech input.
 
-You can use the Lyric Viewer on the screen reader to text-write the characteristics of an item. It is therefore possible to compare the accessible name in textual form read by the screen reader with the text displayed on the component.
+### Example of an Error
 
-![Exemple of Lyric Viewer](../images/tester-wcag-253/nvda_visionneuse.png)
+<pre><code class="html">
+&lt;a href="www.orange.com" target="_blank"&gt; Open &lt;span class="visually-hidden"&gt;in a new window &lt;/span&gt; the Orange website &lt;/a&gt;
+</code></pre>
 
-### Order inspector 
+The accessible name becomes:
 
-The best way to check the criterion with the control inspector depends on the browser used.
+« Open in a new window the Orange website »
 
-#### With Firefox
+But the user only sees:
 
-<ol>
-  <li>Access Control Inspector  (<kbd>Ctrl+ Shift. + i</kbd>)</li>
-  <li>Select the accessibility tab</li>
-  <li>Inspect an item</li>
-  <li>Look at the properties part, if the name attribute contains at least the displayed text, the criterion is compliant</li> 
-</ol>
+> « Open the Orange website »
 
-![Firefox Developer Tools panels with Accessibility tab open](../images/tester-wcag-253/FF_name.png)
+With speech recognition, saying « Open the Orange website » **will not work**, because this text does not match the actual accessible name.
 
 
-#### With Chrome or Edge Chronium
+---
 
-<ol>
-  <li>Access Control Inspector  (<kbd>Ctrl+ Shift. + i</kbd>)</li>
-  <li>Select the Elements tab</li>
-  <li>Choose the element you want to inspect</li>
-  <li>
-    Click on the Accessibility tab, this tab can be hidden behind the "more tab" button
-    <img src="../images/tester-wcag-253/more_tab_img.png" alt="">
-  </li>
-  <li>Look at the part "Computed Properties" if the attribute name contains at least the displayed text, the criterion is compliant</li>
-</ol>
+## How to Test Compliance
 
-![Chrome Developer Tools panels with Accessibility tree open](../images/tester-wcag-253/Chrome_name.png)
+### 1. Using a Screen Reader
+
+The screen reader announces:
+
+ * the element’s **role** (button, link, text, etc.),
+ * its **state**,
+ * and its **accessible name**.
+
+**Procedure:**
+
+1. Navigate the page using a screen reader.
+2. Listen to the name announced for each button or link.
+3. If this name **does not match** the visible text, the criterion **is not satisfied**.
+
+Some screen readers provide a *speech viewer* that displays the accessible name in text form, making comparison with the visible label easier.
+
+---
+
+![Exemple de visionneuse de parole](../articles/images/tester-wcag-253/nvda_visionneuse.png)
+
+### 2. Using Developer Tools
+
+The method for verifying the criterion with browser developer tools depends on the browser used.
+
+#### In Firefox
+
+1. Open Developer Tools: `Ctrl + Shift + I`
+2. Select the **Accessibility tab**
+3. Inspect the element to verify
+4. In the **Properties** section, check that the **name** attribute contains at least the visible on-screen text
+ 
+ ---
+
+![Firefox Developer Tools panels with the Accessibility tab open](../articles/images/tester-wcag-253/FF_name.png)
+
+#### In Chrome or Edge (Chromium)
+
+1. Open Developer Tools: `Ctrl + Shift + I`
+2. Select the **Elements tab**
+3. Choose the element to inspect
+4. Click the **Accessibility** tab (it may be hidden under « More tabs »)
+5. In the **Computed Properties** section, verify that the **name** attribute contains at least the displayed text
+
+---
+
+![Chrome Developer Tools panels with the Accessibility tree open](../articles/images/tester-wcag-253/Chrome_name.png)
+
+## Summary
+
+To comply with **WCAG 2.5.3**, make sure that:
+
+* The visible text of an element is included in its accessible name, preferably at the beginning.
+* Hidden content does not alter the correspondence between visible text and accessible name.
+* Testing is performed using a screen reader **and/or** an accessibility inspector.
+
+---
+
+**Related Resources:**
+
+* [WCAG 2.5.3 – Name in Label (W3C)](https://www.w3.org/TR/WCAG22/#label-in-name)
+* [Guide Accessibilité – RGAA](https://accessibilite.numerique.gouv.fr/)

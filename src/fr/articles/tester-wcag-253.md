@@ -24,7 +24,7 @@ En effet, ces outils s’appuient sur le **nom accessible** pour identifier et a
 ### Exemple problématique
 
 Prenons l'exemple d'un utilisateur naviguant à l'aide d'un logiciel de reconnaissance vocale souhaitant saisir et soumettre un formulaire.
-![bouton avec le texte envoyer](../images/tester-wcag-253/button_send.png)
+![bouton avec le texte envoyer](../articles/images/tester-wcag-253/button_send.png)
 
 <pre><code class="html">
 &lt;button&gt;
@@ -94,7 +94,7 @@ Certains lecteurs proposent une *visionneuse de paroles* permettant d’afficher
 
 ---
 
-![Exemple de visionneuse de parole](../images/tester-wcag-253/nvda_visionneuse.png)
+![Exemple de visionneuse de parole](../articles/images/tester-wcag-253/nvda_visionneuse.png)
 
 ### 2. Avec les outils de développement
 
@@ -107,7 +107,7 @@ Le moyen de vérifier le critère avec l'inspecteur de commande dépend du navig
 3. Inspecter l’élément à vérifier
 4. Dans la section **Propriétés**, vérifier que l’attribut **name** contient au moins le texte visible à l’écran
   
-![Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert](../images/tester-wcag-253/FF_name.png)
+![Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert](../articles/images/tester-wcag-253/FF_name.png)
 
 #### Sous Chrome ou Edge Chromium
 
@@ -119,7 +119,7 @@ Le moyen de vérifier le critère avec l'inspecteur de commande dépend du navig
 
 ---
 
-![Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert](../images/tester-wcag-253/Chrome_name.png)
+![Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert](../articles/images/tester-wcag-253/Chrome_name.png)
 
 ## En résumé
 
