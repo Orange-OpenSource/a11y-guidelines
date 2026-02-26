@@ -76,7 +76,7 @@ Avec ce code, le lecteur d'écran dira : "Rechercher édition".
 </code></pre>
 
 Ce bouton de menu hamburger a donc un nom : "Ouverture menu navigation".
-Mais on pourrait aussi utiliser `aria-labelledby` pour référencer un autre élément de la page comme nom :
+Mais on pourrait aussi utiliser `aria-labelledby` pour référencer un autre élément de la page comme nom&nbsp;:
 
 <pre><code class="html">
 &lt;input type="search" aria-labelledby="this"&gt;
