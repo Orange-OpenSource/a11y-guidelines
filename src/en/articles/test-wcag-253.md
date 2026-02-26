@@ -22,6 +22,7 @@ The visible text does not need to be **strictly identical** to the accessible na
 ### Problematic
 
 Consider a user navigating with speech recognition software who wants to fill out and submit a form.
+
 ![Button displaying the text “Send”](../articles/images/tester-wcag-253/button_send.png)
 
 <pre><code class="html">
