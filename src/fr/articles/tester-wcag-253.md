@@ -54,8 +54,7 @@ Le critère **WCAG 2.5.3 est donc respecté**.
 
 ## Attention au masquage accessible
 
-Lorsque vous utilisez des éléments masqués visuellement (via des classes telles que `.visually-hidden`), évitez de les insérer **au milieu** d’un intitulé visible.
-Sinon, le nom accessible ne correspondra plus à l'intitulé que l’utilisateur voit.
+Les contenus masqués ne doivent pas être insérés dans le nom visible (mais plutôt à la fin), sinon le critère sera non-conforme et l'élément ne sera pas utilisable avec une dictée vocale.
 
 ### Exemple d’erreur 
 <pre><code class="html">
