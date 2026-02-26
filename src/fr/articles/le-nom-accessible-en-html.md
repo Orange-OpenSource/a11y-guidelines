@@ -17,7 +17,7 @@ En fait, pour faire simple, le navigateur va générer un arbre accessible (<spa
 
 Le nom accessible peut être issu du contenu d'une balise, d'attributs de cette balise ou d'un élément qui lui est associé.
 
-## En pratique, comment ça marche ?
+## En pratique, comment ça marche&nbsp;?
 
 Le nom accessible est, par exemple, annoncé par un lecteur d'écran à la prise de focus sur cet élément auquel est ajouté le rôle de l'élément (lien, graphique, bouton...) pour donner la propriété accessibilité de nom. Le nom accessible peut dériver du contenu visible ou caché de l'élément. Les éléments interactifs ou images porteuses d'information doivent avoir un nom accessible, pour plus de détails si un élément doit avoir ou pas un nom accessible voir <a href="https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#accessiblenameguidancebyrole" hreflang="en" lang="en">ARIA Authoring Practices Guide (APG)</a>. Le nom accessible permet aux utilisateurs d'<abbr>AT</abbr>  de comprendre quelle est la fonction du contrôle (élément interactif), il doit donc être pertinent au regard de son but, son objectif.
 Pour être concis, dans <a href="https://www.w3.org/TR/html-aam-1.0/#accname-computation" hreflang="en" lang="en">HTML Accessibility API Mappings 1.0 - computation method</a>, il existe un ordre de priorité pour calculer le nom d'un élément <abbr>HTML</abbr> spécifique de l'élément, mais en gros&nbsp;:
