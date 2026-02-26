@@ -3,7 +3,7 @@ title: "The accessible name in HTML"
 abstract: "Accessible name, what is it and his link with Assistive technologies"
 titleBeforeTag: true
 date: "2019-02-20"
-update: "2026-03-13"
+updateDate: "2026-03-13"
 tags:
   - web
   - intermediate
