@@ -16,7 +16,7 @@ En fait, pour faire simple, le navigateur va générer un arbre accessible (<spa
 
 Le nom accessible est issu du contenu d'une balise, d'attributs de cette balise ou d'un élément qui lui est associé.
 
-## En pratique, comment ça marche&&nbsp;?
+## En pratique, comment ça marche&nbsp;?
 
 Le nom accessible est, par exemple, annoncé par un lecteur d'écran à la prise de focus sur cet élément mais le rôle de l'élément est aussi ajouté (lien, graphique, bouton...).
 
