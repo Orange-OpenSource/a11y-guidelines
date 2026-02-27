@@ -32,7 +32,7 @@ To be concise, in <a href="https://www.w3.org/TR/html-aam-1.0/#accname-computati
 
 To access the (accessible) name, the easiest way is to use the tools of browsers.
 
-In Chrome, in Chrome dev tools (<kbd>Ctrl+ Shift + i</kbd>), inspect an element ("Elements" tab) and open the "Accessibility" panel instead of "Style" "(usually on the right). Access to the "Accessibility tree" and in "Computed properties" you have to the "Name", the accessible name of the item being inspected.
+In Chrome, in Chrome dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>), inspect an element ("Elements" tab) and open the "Accessibility" panel instead of "Style" "(usually on the right). Access to the "Accessibility tree" and in "Computed properties" you have to the "Name", the accessible name of the item being inspected.
 
 ![Panels of Chrome Development Tools with Open Accessibility Tree](./images/chrome_name.png)
 
