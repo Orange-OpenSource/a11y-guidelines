@@ -3,18 +3,27 @@ title: "Exemple de menu déroulant"
 abstract: "Créer un menu déroulant accessible."
 titleBeforeTag: true
 date: "2018-01-17"
+updateDate: "2026-02-27"
 tags:
   - component
 ---
 
-<h2>Préambule</h2>
-<p>Dans cet exemple nous allons utiliser le <a href="https://boosted.orange.com/docs/5.1/components/dropdowns/">menu déroulant</a> disponible dans la librairie <a href="https://boosted.orange.com/">Boosted</a>. Cette librairie basée sur Bootstrap permet de concevoir rapidement des interfaces accessibles aux couleurs de la charte Orange.</p>
+<h2>Introduction</h2>
 
-<p>L'exemple d'implémentation décrit ci-dessous est aussi bien adapté aux menus de navigation comme aux composants unitaires présentant une liste d'actions.</p>
+<p>Les menus déroulants permettent d’organiser et d’afficher des options de navigation ou des actions de manière compacte et structurée. Cependant, s’ils ne sont pas correctement développés, ils créent des problèmes d’accessibilité pour de nombreux utilisateurs.</p>
+<p>Un menu déroulant accessible garantit une navigation fluide et intuitive pour tous, en respectant la conformité et les recommandations des normes (<abbr>WCAG</abbr>, <abbr>RGAA</abbr>, <abbr>EN301549</abbr> etc.).</p>
+<p>Dans les exemples suivants, nous allons utiliser le <a href="https://boosted.orange.com/docs/5.3/components/dropdowns/">menu déroulant</a> disponible dans la librairie <a href="https://boosted.orange.com/">Boosted</a>.<br /> Cette librairie basée sur Bootstrap permet de concevoir rapidement des interfaces accessibles aux couleurs de la charte Orange et conformes aux normes WCAG ainsi qu'au <a hreflang="en" href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/">motif de conception aria combobox</a></p>
 
-<h2>Rendu final</h2>
-<p>Voici le rendu de notre menu.</p>
+<h2>Menu déroulant</h2>
+<p>Pour que le menu déroulant soit accessible, il faudra faire particulièrement attention aux points suivants&nbsp;:</p>
+<ul>
+<li>Permettre la navigation à la souris et au clavier (navigation avec la touche <kbd>Tab</kbd>, activation avec <kbd>Entrée</kbd> ou <kbd>Espace</kbd>, déplacement avec les flèches directionnelles).</li>
+<li>Être compatible avec les technologies d’assistance(<abbr>AT</abbr>), en fournissant une sémantique, des rôles et des attributs adaptés.(<code>aria-expanded</code> et <code>aria-current</code> par exemple)</li>
+<li>Une visibilité et un contraste suffisants pour une bonne lisibilité des textes et du focus au clavier.</li>
+<li>Le comportement du menu déroulant et de la sélection d'un élément doivent être prévisibles et cohérents pour éviter toute confusion.</li>
+</ul>
 
+<h2>Exemple</h2>
 <!-- Final menu -->
 <div class="dropdown">
   <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown">
@@ -30,17 +39,17 @@ tags:
   </ul>
 </div>
 
-<h2>Code de l'exemple</h2>
+<h3>Code de l'exemple</h3>
 
 <!-- Code de l'exemple 1 -->
 <pre><code class="html">
 &lt;div class="dropdown"&gt;
-  &lt;button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown"&gt;
+  &lt;button class="btn btn-outline-secondary dropdown-toggle" aria-expanded="false" type="button" id="dropdownMenu1" data-bs-toggle="dropdown"&gt;
     Mon compte
     &lt;span class="caret"&gt;&lt;/span&gt;
   &lt;/button&gt;
   &lt;ul class="dropdown-menu"&gt;
-    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mon panier&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#" &gt;Mon panier&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mes commandes&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mes informations&lt;/a&gt;&lt;/li&gt;
     &lt;li role="separator" class="dropdown-divider"&gt;&lt;/li&gt;
@@ -49,18 +58,24 @@ tags:
 &lt;/div&gt;
 </code></pre>
 
+<h3>Attributs <abbr>ARIA</abbr></h3>
+<ul>
+	<li><code>aria-expanded</code> : l'attribut <code>aria-expanded</code> avec comme valeur <code>true/false</code>, permet de vocaliser l'état du menu (ouvert ou fermé).</li>
+	<li><code>aria-current</code> : si le menu déroulant est utilisé au sein d'un menu de navigation, prévoir l'ajout d'un attribut <code>aria-current="page"</code> sur l'item correspondant à la page active.</li>
+	<li><code>aria-haspopup</code> : l'attribut <code>aria-haspopup</code> est réservé au rôle <code>menu</code> (voir paragraphe "Cas particulier des menus applicatifs"). Il n'est donc pas présent dans cette implémentation.</li>
+</ul>
+
 <h2>Place aux tests</h2>
-<p>Pour que ce menu soit accessible, il doit être utilisable, à la souris, au clavier et au lecteur d'écran.</p>
 
 <h3>Navigation au clavier</h3>
- <dl>
+<dl>
+   <dd>Le menu se ferme. À la fermeture, le focus est automatiquement repositionné sur le bouton permettant d'ouvrir le menu</dd>
    <dt>Déplacer le focus sur le bouton «&nbsp;Mon compte&nbsp;» à l'aide de la touche <kbd>Tab</kbd> et valider avec la touche <kbd>Entrée</kbd>.</dt>
    <dd>Le menu s'ouvre.</dd>
    <dt>Utiliser les flèches <kbd>Haut</kbd>/<kbd>Bas</kbd>.</dt>
    <dd>Celles-ci permettent de se déplacer sur les différents éléments du menu.</dd>
    <dt>Appuyer sur la touche <kbd>Échap</kbd>.</dt>
    <dd>Le menu se ferme. À la fermeture, le focus est automatiquement repositionné sur le bouton permetant d'ouvrir le menu</dd>
-   <dt></dt>
 </dl>
 
 <h3>Navigation au lecteur d'écran</h3>
@@ -75,31 +90,14 @@ tags:
    <dd>Le menu se ferme. Comme le focus est replacé automatiquement, le lecteur d'écran vocalise à nouveau le bouton du menu, ainsi que son état.</dd>
  </dl>
 
-<h3>Attributs <abbr>ARIA</abbr></h3>
-<ul>
-	<li><code>aria-expanded</code> : l'attribut <code>aria-expanded</code> avec comme valeur <code>true/false</code>, permet de vocaliser l'état du menu (ouvert ou fermé).</li>
-	<li><code>aria-current</code> : si le menu déroulant est utilisé au sein d'un menu de navigation, prévoir l'ajout d'un attribut <code>aria-current="page"</code> sur l'item correspondant à la page active.</li>
-	<li><code>aria-haspopup</code> : l'attribut <code>aria-haspopup</code> est réservé au rôle <code>menu</code> (voir paragraphe "Cas particulier des menus applicatifs"). Il n'est donc pas présent dans cette implémentation.</li>
-</ul>
-
-<pre><code class="html">
-  &lt;button aria-expanded="false"&gt;Mon compte&lt;/button&gt;
-    &lt;ul class="dropdown-menu"&gt;
-      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mon panier&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class="dropdown-item" href="#" aria-current="page"&gt;Mes commandes&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mes informations&lt;/a&gt;&lt;/li&gt;
-      &lt;li role="separator" class="dropdown-divider"&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Déconnexion&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-</code></pre>
 
 <p>En complément le pattern ARIA décrit l'utilisation d'un attribut <code>aria-controls</code>, ainsi que des interactions claviers optionnelles supplémentaires : <kbd lang="en">Home</kbd>/<kbd lang="en">End</kbd></p>
-<p>Exemple : <a href="https://www.w3.org/WAI/ARIA/apg/example-index/disclosure/disclosure-navigation.html" hreflang="en" lang="en">Example Disclosure for Navigation Menus</a></p>
+<p>Le motif de conception <abbr>ARIA</abbr> décrit les composants "Menu" et "Menubar" qui utilisent les rôles <code>menu</code> ou <code>menubar</code>.</p>
 
 <h2>Cas particulier des menus applicatifs</h2>
 
 <p>Le pattern ARIA décrit un composant "Menu" et "Menubar", utilisant les rôles <code>menu</code> ou  <code>menubar</code>.</p>
-<p>Attention, ce pattern est réservé uniquement à la création de menu applicatif, dont les interactions devront se rapprocher du comportement des menus présent dans des applications bureaux par exemple.</p>
+<p>Attention, ce pattern est réservé uniquement à la création de menu applicatif, dont les interactions devront se rapprocher du comportement des menus présent dans des applications de bureaux par exemple.</p>
 <p>Ces implémentations sont plus complexes et non nécessaires aux menus de navigation web.</p>
 
 <p>Exemple : <a href="https://www.w3.org/WAI/ARIA/apg/example-index/menubar/menubar-navigation.html" hreflang="en" lang="en">Editor Menubar Example</a></p>
