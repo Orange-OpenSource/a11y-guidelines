@@ -22,11 +22,11 @@ Le nom accessible peut être issu du contenu d'une balise, d'attributs de cette 
 Le nom accessible est, par exemple, annoncé par un lecteur d'écran à la prise de focus sur cet élément auquel est ajouté le rôle de l'élément (lien, graphique, bouton...) pour donner la propriété accessibilité de nom. Le nom accessible peut dériver du contenu visible ou caché de l'élément. Les éléments interactifs ou images porteuses d'information doivent avoir un nom accessible, pour plus de détails si un élément doit avoir ou pas un nom accessible voir <a href="https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#accessiblenameguidancebyrole" hreflang="en" lang="en">ARIA Authoring Practices Guide (APG)</a>. Le nom accessible permet aux utilisateurs d'<abbr>AT</abbr>  de comprendre quelle est la fonction du contrôle (élément interactif), il doit donc être pertinent au regard de son but, son objectif.
 Pour être concis, dans <a href="https://www.w3.org/TR/html-aam-1.0/#accname-computation" hreflang="en" lang="en">HTML Accessibility API Mappings 1.0 - computation method</a>, il existe un ordre de priorité pour calculer le nom d'un élément <abbr>HTML</abbr> spécifique de l'élément, mais en gros&nbsp;:
 
-1 d'abord, <code>aria-labelledby</code>
+1. D'abord, <code>aria-labelledby</code>
 
-1 puis, <code>aria-label</code>
+1. Puis, <code>aria-label</code>
 
-1 et enfin, les éléments associés par exemple&nbsp;: texte de la balise pour les boutons, les liens et les cellules de tableau, les éléments <code>label</code> pour les champs de formulaire, les éléments <code>legend</code> pour les <code>fieldset</code>, les éléments <code>caption</code> pour les tableaux.
+1. Et enfin, les éléments associés par exemple&nbsp;: texte de la balise pour les boutons, les liens et les cellules de tableau, les éléments <code>label</code> pour les champs de formulaire, les éléments <code>legend</code> pour les <code>fieldset</code>, les éléments <code>caption</code> pour les tableaux.
 
 ### Accéder au nom accessible via le navigateur
 
