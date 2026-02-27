@@ -22,11 +22,11 @@ The accessible name is, for example, announced by a screen reader when focus is 
 
 To be concise, in <a href="https://www.w3.org/TR/html-aam-1.0/#accname-computation">HTML Accessibility API Mappings 1.0 - computation method</a>, there is a priority order for calculating the name of a specific <abbr>HTML</abbr> element, but roughly:
 
-1 First, <code>aria-labelledby</code>
+1. First, <code>aria-labelledby</code>
 
-1 Then, <code>aria-label</code>
+1. Then, <code>aria-label</code>
 
-1 nd finally, the associated elements, for example: tag text for buttons, links, and table cells; <code>label</code> elements for form fields; <code>legend</code> elements for <code>fieldset</code> elements; and <code>caption</code> elements for tables.
+1. And finally, the associated elements, for example: tag text for buttons, links, and table cells; <code>label</code> elements for form fields; <code>legend</code> elements for <code>fieldset</code> elements; and <code>caption</code> elements for tables.
 
 ### Access to the accessible name  via the browser
 
