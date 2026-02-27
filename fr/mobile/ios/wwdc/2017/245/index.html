@@ -254,42 +254,42 @@
 </ul>
 <p><br>Par la suite, le fait de cliquer sur un titre permet d'ouvrir la vidéo de présentation <span lang="en">Apple</span> directement au moment indiqué.<br>
 <br><br></p>
-<h2 id="styles-de-texte-0606" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=366">Styles de texte (06:06)</a> <a class="header-anchor" href="#styles-de-texte-0606" id="heading-1914" aria-labelledby="heading-1914">#</a></h2>
+<h2 id="styles-de-texte-0606" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=366">Styles de texte (06:06)</a> <a class="header-anchor" href="#styles-de-texte-0606" id="heading-1891" aria-labelledby="heading-1891">#</a></h2>
 <p>Avec iOS 11, <strong>tous les styles de texte s'adaptent aux 5 tailles de texte disponibles en accessibilité</strong> ce qui n'était le cas que pour le style <em>body</em> auparavant.<br>
 <br>Dans l'<span lang="en">Interface Builder</span> de Xcode, il suffit d'indiquer le style souhaité dans la partie <span lang="en">Attribute Inspector</span> et de cocher la case <span lang="en">Dynamic Type</span> qui permettra d'adapter automatiquement la taille selon les réglages.</p>
 <p><img src="../../../../images/iOSdev/wwdc17-245-TextStyle_1.png" alt="" class="img-fluid"><br>
 <br>Au niveau code, on peut obtenir exactement le même résulat.</p>
 <p><img src="../../../../images/iOSdev/wwdc17-245-TextStyle_2.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="police-personnalisee-0817" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=497">Police personnalisée (08:17)</a> <a class="header-anchor" href="#police-personnalisee-0817" id="heading-1915" aria-labelledby="heading-1915">#</a></h2>
+<h2 id="police-personnalisee-0817" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=497">Police personnalisée (08:17)</a> <a class="header-anchor" href="#police-personnalisee-0817" id="heading-1892" aria-labelledby="heading-1892">#</a></h2>
 <p>L'introduction de la classe <code>UIFontMetrics</code> en iOS 11 permet à une police personnalisée de respecter le comportement du grossissement de caractères.</p>
 <p><img src="../../../../images/iOSdev/wwdc17-245-CustomFonts.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="utilisation-de-pages-web-0925" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=565">Utilisation de pages web (09:25)</a> <a class="header-anchor" href="#utilisation-de-pages-web-0925" id="heading-1916" aria-labelledby="heading-1916">#</a></h2>
+<h2 id="utilisation-de-pages-web-0925" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=565">Utilisation de pages web (09:25)</a> <a class="header-anchor" href="#utilisation-de-pages-web-0925" id="heading-1893" aria-labelledby="heading-1893">#</a></h2>
 <p>Afin d'assurer une compatibilité entre le comportement attendu sur un <strong>terminal iOS</strong> utilisant le <span lang="en">Dynamic Type</span> et l'<strong>affichage de pages web</strong> sur ce même type de terminal, il est possible d'indiquer le style de texte souhaité au niveau CSS.</p>
 <p><img src="../../../../images/iOSdev/wwdc17-245-WebViews.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="affichage-sur-plusieurs-lignes-1014" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=614">Affichage sur plusieurs lignes (10:14)</a> <a class="header-anchor" href="#affichage-sur-plusieurs-lignes-1014" id="heading-1917" aria-labelledby="heading-1917">#</a></h2>
+<h2 id="affichage-sur-plusieurs-lignes-1014" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=614">Affichage sur plusieurs lignes (10:14)</a> <a class="header-anchor" href="#affichage-sur-plusieurs-lignes-1014" id="heading-1894" aria-labelledby="heading-1894">#</a></h2>
 <p>Afin d'éviter la troncature d'un texte trop long dans un <code>label</code> après grossissement, il est conseillé de mettre la valeur <code>0</code> dans le nombre de lignes à afficher, ce qui aura pour signification d'afficher l'ensemble des lignes.</p>
 <p><img src="../../../../images/iOSdev/wwdc17-245-WrapToMultipleLines.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="constraintequaltosystemspacingbelow-1131" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=691">ConstraintEqualToSystemSpacingBelow (11:31)</a> <a class="header-anchor" href="#constraintequaltosystemspacingbelow-1131" id="heading-1918" aria-labelledby="heading-1918">#</a></h2>
+<h2 id="constraintequaltosystemspacingbelow-1131" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=691">ConstraintEqualToSystemSpacingBelow (11:31)</a> <a class="header-anchor" href="#constraintequaltosystemspacingbelow-1131" id="heading-1895" aria-labelledby="heading-1895">#</a></h2>
 <p>Dans la mise en place de contraintes graphiques entre deux éléments de type <code>label</code> s'appuyant sur leur 'baseline', il est préférable de ne pas mettre de valeur fixe pour éviter le chevauchement lors de grossissement de caractères.</p>
 <p><img src="../../../../images/iOSdev/wwdc17-245-AutoLayoutsystemSpacingConstraints_1.png" alt="" class="img-fluid"><br>
 <br>Une constante égale à <code>Standard Value</code> dans l'<span lang="en">Interface Builder</span> de Xcode ou une définition programmatique de la contrainte utilisant <code>constraintEqualToSystemSpacingBelow</code> (nouveauté iOS 11) permet de résoudre ce problème.</p>
 <p><img src="../../../../images/iOSdev/wwdc17-245-AutoLayoutsystemSpacingConstraints_2.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="scaledvalue-1256" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=776">ScaledValue (12:56)</a> <a class="header-anchor" href="#scaledvalue-1256" id="heading-1919" aria-labelledby="heading-1919">#</a></h2>
+<h2 id="scaledvalue-1256" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=776">ScaledValue (12:56)</a> <a class="header-anchor" href="#scaledvalue-1256" id="heading-1896" aria-labelledby="heading-1896">#</a></h2>
 <p>Introduite en iOS 11, la méthode <strong>scaledValue</strong> permet de déterminer la hauteur d'un élement graphique contenant du texte selon le grossissement implémenté.</p>
 <p><img src="../../../../images/iOSdev/wwdc17-245-ScaledValue.png" alt="" class="img-fluid"><br>
 <br>À utiliser par exemple pour un bouton contenant du texte dont la taille est liée au <span lang="en">Dynamic Type</span> et dont on souhaite connaître la hauteur.<br>
 <br><br></p>
-<h2 id="grossissement-delements-voisins-1336" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=816">Grossissement d'éléments voisins (13:36)</a> <a class="header-anchor" href="#grossissement-delements-voisins-1336" id="heading-1920" aria-labelledby="heading-1920">#</a></h2>
+<h2 id="grossissement-delements-voisins-1336" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=816">Grossissement d'éléments voisins (13:36)</a> <a class="header-anchor" href="#grossissement-delements-voisins-1336" id="heading-1897" aria-labelledby="heading-1897">#</a></h2>
 <p>Arrivé à un certain seuil de grossissement, des éléments verticalement voisins peuvent finir par devenir illisibles et même transformer une interface graphique initialement ergonomique en une juxtaposition grossière d'objets.<br>
 <br>Dans ce cas, il est recommandé de passer à un alignement horizontal lorsque le grossisement problématique est atteint.</p>
 <p><img src="../../../../images/iOSdev/wwdc17-245-SideBySideText.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="preferredcontentsizecategory-1523" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=923">PreferredContentSizeCategory (15:23)</a> <a class="header-anchor" href="#preferredcontentsizecategory-1523" id="heading-1921" aria-labelledby="heading-1921">#</a></h2>
+<h2 id="preferredcontentsizecategory-1523" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=923">PreferredContentSizeCategory (15:23)</a> <a class="header-anchor" href="#preferredcontentsizecategory-1523" id="heading-1898" aria-labelledby="heading-1898">#</a></h2>
 <p>Il existe <strong>2 familles</strong> bien distinctes qui contiennent les paliers de grossissement souhaités :</p>
 <ul>
 <li>
@@ -304,17 +304,17 @@
 <br>Il est possible de mettre en place des conditions pour savoir si un seuil de grossissement a été atteint de façon à faire un réarrangement graphique des éléments quand cela est nécessaire.</p>
 <p><img src="../../../../images/iOSdev/wwdc17-245-PreferredContentSizeCategory_2.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="table-view-cells-1638" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=998">Table view cells (16:38)</a> <a class="header-anchor" href="#table-view-cells-1638" id="heading-1922" aria-labelledby="heading-1922">#</a></h2>
+<h2 id="table-view-cells-1638" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=998">Table view cells (16:38)</a> <a class="header-anchor" href="#table-view-cells-1638" id="heading-1899" aria-labelledby="heading-1899">#</a></h2>
 <p>L'utilisation de <span lang="en">table view cells</span> standards va permettre d'adapter automatiquement la disposition d'une cellule en fonction du <span lang="en">Dynamic Type</span> grâce au <a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1058">cell-sizing</a>.</p>
 <p><img src="../../../../images/iOSdev/wwdc17-245-TableViews_1.png" alt="" class="img-fluid"><br>
 <br>Dans le cadre de cellules personnalisées, il faut mettre en place les contraintes pour définir le rendu souhaité et laisser le <span lang="en">cell-sizing</span> opérer.</p>
 <p><img src="../../../../images/iOSdev/wwdc17-245-TableViews_2.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="images-2013" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1213">Images (20:13)</a> <a class="header-anchor" href="#images-2013" id="heading-1923" aria-labelledby="heading-1923">#</a></h2>
+<h2 id="images-2013" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1213">Images (20:13)</a> <a class="header-anchor" href="#images-2013" id="heading-1900" aria-labelledby="heading-1900">#</a></h2>
 <p>Le <span lang="en">Dynamic Type</span> permet aussi le grossissement des images à la fois sur les vues et les barres de tabulation.<br>
 <br>Les explications détaillées de ce point se trouvent dans la <a href="../../../developpement/#taille-des-elements-graphiques">partie développement</a>.<br>
 <br><br></p>
-<h2 id="exemple-2432" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1472">Exemple (24:32)</a> <a class="header-anchor" href="#exemple-2432" id="heading-1924" aria-labelledby="heading-1924">#</a></h2>
+<h2 id="exemple-2432" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1472">Exemple (24:32)</a> <a class="header-anchor" href="#exemple-2432" id="heading-1901" aria-labelledby="heading-1901">#</a></h2>
 <p>Une application d'exemple est proposée pour répondre aux questions que se posent les développeurs face aux éventuels problèmes rencontrés dans l'implémentation du <span lang="en">Dynamic Type</span> (regarder l'<a href="https://developer.apple.com/videos/play/wwdc2017/245/?time=1506">introduction</a> avant de lire la suite) :</p>
 <ul>
 <li>
