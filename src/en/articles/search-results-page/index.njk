@@ -1,0 +1,102 @@
+---
+title: "Search result page"
+abstract: "Best practices for site search results."
+titleBeforeTag: true
+date: "2025-10-31"
+tags:
+  - component
+---
+
+<h2>Introduction</h2>
+<p>Site search should be implemented as a dedicated page. To access it, you can add a "Search" link or a magnifying glass icon in the main menu, footer, or a form that, when validated with the search term, redirects to this dedicated page.</p>
+
+<h2>The Search Form</h2>
+<p>In this example, we used <a href="http://boosted.orange.com/">the Boosted Library</a>, which provides forms that comply with Orange's design guidelines.</p>
+  <p>To perform a search on the site, you must add <code>role="search"</code> to ensure better identification of the search region, like this: <br />
+<!-- Code du form de recherche -->
+<pre><code class="html">
+      &lt;form class="d-flex" role="search"&gt;
+        &lt;input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"&gt;
+        &lt;button class="btn btn-primary" type="submit"&gt;Search&lt;/button&gt;
+      &lt;/form&gt;
+</code></pre>
+</p>
+<p>Please note: It's always better to use a visible form field label for all users, but when there's only one search field as the sole form element on the page, it is sufficient on its own.
+</p>
+<p><strong>Important:</strong> When multiple search forms exist on the same page, each <code>role="search"</code> must be specifically named with an <code>aria-label</code> or <code>aria-labelledby</code>:<br />
+<!-- Code pour 2 form de recherche -->
+<pre><code class="html">
+      &lt;form class="d-flex" role="search" aria-label="Search entire site"&gt;
+        &lt;input class="form-control me-2" type="search" placeholder="Search the site" aria-label="Search the site"&gt;
+        &lt;button class="btn btn-primary" type="submit"&gt;Search&lt;/button&gt;
+      &lt;/form&gt;
+      ...
+      &lt;form class="d-flex" role="search" aria-labelledby="news"&gt;
+        &lt;h2 id="actu"&gt;Search in news&lt;/h2&gt;
+        &lt;input class="form-control me-2" type="search" placeholder="Seach news" aria-label="Seach news"&gt;
+        &lt;button class="btn btn-primary" type="submit"&gt;Search news&lt;/button&gt;
+      &lt;/form&gt;
+</code></pre>
+</p>
+
+<h2>Displaying Results</h2>
+<h3>Page Title</h3>
+<p>Once the search is launched, first of all, the page title (<code>title</code>) should be updated to indicate:</p>
+<ul>
+<li>That the page is a search results page.</li>
+<li>The search term.</li>
+<li>The total number of results.</li>
+</ul>
+
+<p>For example: "2 results for ..... 'Fiber' - Orange.com" </p>
+
+<h3>Loading and Displaying Search Results</h3>
+<p>In some cases, it seems convenient for users to prefer asynchronous result reloading to avoid loading a new page. However, note that this can be disruptive for some users.</p>
+<p>In any cases, the main content of the page must display the results found. These must be placed immediately after the search form so that they are the next element in keyboard navigation, right after the search submit button</p> 
+<p>The results must be preceded by a section heading that includes the search term and the total number of results. If pagination is used, it should also include the number of results displayed on the current page.</p>
+<p>This section heading must be notified to users, including those using assistive technologies, particularly screen readers. To achieve this, we use <abbr>ARIA</abbr>: <code>role="alert"</code> will enable dynamic reading of the element's content by <abbr>AT</abbr> (assistive technologies), given that we reload this page section with each search (note that <code>role="alert"</code> is read only once, unlike <code>aria-live="true"</code>).</p>
+<!-- Code pour form de recherche et résultats -->
+<pre><code class="html">
+...
+  &lt;form class="d-flex" role="search"&gt;
+    &lt;input class="form-control me-2" type="search" placeholder="Search" aria-label="Search the site"&gt;
+    &lt;button class="btn btn-primary" type="submit"&gt;Search&lt;/button&gt;
+  &lt;/form&gt;
+  &lt;h2 role="alert"&gt;
+    15 results, 5 displayed for "Fiber" 
+  &lt;/h2&gt;
+...
+</code></pre>
+
+<p>Please note: Paginating of search results is a good option to avoid overly long result pages. However, infinite dynamic loading, especially when scrolling, as it is often inaccessible and difficult to use.</p>
+
+<h3>Result Display and Semantics</h3>
+<p>Semantically, search results should be displayed as either a list (ordered or unordered) or a data table. If filters allow sorting results by relevance, number of search term occurrences, date, etc., then you should choose an ordered list <code>ol</code> or indicate this sort order in the results table. The choice of result semantics depends on several criteria:</p>
+<ul>
+<li>Type of data to display: For example, if results are a list of article titles with lead paragraphs or summaries, a list structure is appropriate.</li>
+<li>Data to display per result: For example, if these are products with name, price, details, etc., a data table would be preferred due to the more complex data structure.</li>
+</ul>
+
+<p>Regarding the semantics of each result, the article title, product name, etc., should be a section heading, while the lead paragraph, summary, details, etc., should be placed in a paragraph or data table cell.</p>
+<p>Note: It's recommended to highlight the search term in the displayed results both visually (highlighted, underlined, etc.) and semantically (using <code>em</code>, <code>strong</code>, etc.)!</p>
+
+<h3>Pagination</h3>
+<p>When the number of results exceeds 10, it's convenient to paginate these results. To make navigation easier, the best practice is to add a section heading at the same level as each result heading, positioned at the beginning of the pagination component in order to identify it.
+
+<!-- Code pour résultats et pagination -->
+<pre><code class="html">
+...
+  &lt;h2 role="alert"&gt;
+    15 results, 5 displayed for "Fiber" 
+  &lt;/h2&gt;
+...
+  &lt;h3&gt;&lt;strong&gt;Fiber&lt;/strong&gt; deployment in 2021 in Rhône-Alpes by Orange&lt;/h2&gt;
+  &lt;p&gt;Orange plans an accelerated deployment of &lt;strong&gt;fiber&lt;/strong&gt; in uncovered areas...&lt;/p&gt;
+...
+  &lt;nav aria-labelledby="pagination"&gt;
+  &lt;h3 id="pagination" class="visually-hidden"&gt;Search results pagination&lt;/h3&gt;
+  &lt;ul class="pagination"&gt;
+...
+</code></pre>
+
+</p>
