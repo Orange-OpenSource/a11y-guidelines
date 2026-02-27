@@ -3,6 +3,7 @@ title: "The accessible name in HTML"
 abstract: "Accessible name, what is it and his link with Assistive technologies"
 titleBeforeTag: true
 date: "2019-02-20"
+updateDate: "2026-03-13"
 tags:
   - web
   - intermediate
@@ -17,17 +18,25 @@ The accessible name is derived from the content of a tag, attributes of this tag
 
 ## In practice, how does it work?
 
-The accessible name is, for example, announced by a screen reader when the focus is on this element but the role of the element is also added (link, graphic, button…).
+The accessible name is, for example, announced by a screen reader when focus is placed on that element. The element's role (link, graphic, button, etc.) is then added to define the accessibility name property. The accessible name can be derived from the element's visible or hidden content. Interactive elements or images containing information must have an accessible name. For more details on whether an element should or should not have an accessible name, see the <a href="https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#accessiblenameguidancebyrole">ARIA Authoring Practices Guide (APG)</a>. The accessible name allows <abbr>AT</abbr> users to understand the function of the control (interactive element); therefore, it must be relevant to its purpose and objective.
+
+To be concise, in <a href="https://www.w3.org/TR/html-aam-1.0/#accname-computation">HTML Accessibility API Mappings 1.0 - computation method</a>, there is a priority order for calculating the name of a specific <abbr>HTML</abbr> element, but roughly:
+
+1. First, <code>aria-labelledby</code>
+
+1. Then, <code>aria-label</code>
+
+1. And finally, the associated elements, for example: tag text for buttons, links, and table cells; <code>label</code> elements for form fields; <code>legend</code> elements for <code>fieldset</code> elements; and <code>caption</code> elements for tables.
 
 ### Access to the accessible name  via the browser
 
 To access the (accessible) name, the easiest way is to use the tools of browsers.
 
-In Chrome, in Chrome dev tools (<kbd>Ctrl+ Shift + i</kbd>), inspect an element ("Elements" tab) and open the "Accessibility" panel instead of "Style" "(usually on the right). Access to the "Accessibility tree" and in "Computed properties" you have to the "Name", the accessible name of the item being inspected.
+In Chrome, in Chrome dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>), inspect an element ("Elements" tab) and open the "Accessibility" panel instead of "Style" "(usually on the right). Access to the "Accessibility tree" and in "Computed properties" you have to the "Name", the accessible name of the item being inspected.
 
 ![Panels of Chrome Development Tools with Open Accessibility Tree](./images/chrome_name.png)
 
-In FireFox, in dev tools (<kbd>Ctrl+ Shift + i</kbd>), open the "Accessibility" tab (to display the "Options" of dev tools), inspect an element. You access the "Name", the accessible name of the inspected item.
+In FireFox, in dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>), open the "Accessibility" tab (to display the "Options" of dev tools), inspect an element. You access the "Name", the accessible name of the inspected item.
 
 ![Firefox Development Tool Panels with Open Accessibility Tab](./images/FF_name.png)
 
@@ -37,7 +46,7 @@ In FireFox, in dev tools (<kbd>Ctrl+ Shift + i</kbd>), open the "Accessibility" 
 
 Here, the name of the link is the content (text10) of it: "plastic ducks". A screen reader user to take focus on this item will hear: "plastic ducks link". For a voice command user, to click on this link, will say: "click plastic ducks link".
 
-So an item of this type `<button type="submit"></button>` without a title, will not be accessible, of course!
+So an item of this type `<button type="submit"></button>` without a title, will not be accessible, because, of course, there is no accessible name and therefore no information of ​​its function!
 
 Also, we can add the elements to give a name.
 
@@ -81,6 +90,6 @@ More details on ["The attributes <abbr>ARIA</abbr> that can save you"](/en/artic
 
 - <a href="https://www.w3.org/TR/accname-1.1/"> Accessible Name and Description Computation 1.1 </a> by the Accessible Rich Internet Applications Working Group
 - <a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/"> What is an accessible name? </a> by Léonie Watson
-
-&nbsp;
+- <a href="https://w3c.github.io/accname/#mapping_additional_nd_description">Accessible Name and Description Computation 1.2 Editorial Draft (en)</a>
+- <a href="https://www.w3.org/TR/html-aam-1.0">HTML Accessibility API Mappings 1.0</a>
     
