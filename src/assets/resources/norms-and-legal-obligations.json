@@ -1,0 +1,44 @@
+{
+  "urls": [
+    {
+      "name": "Standard international WCAG22",
+      "url": "https://www.w3.org/TR/WCAG22/"
+    },
+    {
+      "name": "EN 301 549 v3.2.1 (2021-03) (PDF)",
+      "url": "https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf"
+    },
+    {
+      "name": "Référentiel général d'amélioration de l'accessibilité - RGAA",
+      "url": "https://accessibilite.numerique.gouv.fr/"
+    },
+    {
+      "name": "LOI n° 2023-171 du 9 mars 2023 portant diverses dispositions d'adaptation au droit de l'Union européenne dans les domaines de l'économie, de la santé, du travail, des transports et de l'agriculture (1) - Légifrance",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFSCTA000047281785"
+    },
+    {
+      "name": "Décret n° 2019-768 du 24 juillet 2019 relatif à l'accessibilité aux personnes handicapées des services de communication au public en ligne - Légifrance",
+      "url": "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000038811937"
+    },
+    {
+      "name": "Accessibilité et RGAA : quelles sont les obligations légales ? - Access42",
+      "url": "https://access42.net/accessibilite-RGAA-obligations-legales"
+    },
+    {
+      "name": "Synthèse des nouvelles règlementations d'accessibilité numérique en France | Temesis",
+      "url": "https://www.temesis.com/blog/synthese-des-nouvelles-reglementations-encadrant-laccessibilite-numerique-en-france/"
+    },
+    {
+      "name": "Schéma pluriannuel de mise en accessibilité - non-respect d’une obligation légale majeure (1) - Dossiers thématiques - CERTAM",
+      "url": "https://certam-avh.com/fr/dossiers-thematiques/schema-pluriannuel-de-mise-en-accessibilite-non-respect-d-une-obligation"
+    },
+    {
+      "name": "Understanding EU’s Digital Accessibility Rules | by Vadim Sharapov | May, 2023 | UX Planet",
+      "url": "https://uxplanet.org/understanding-eus-digital-accessibility-rules-ac60e2914b84"
+    },
+    {
+      "name": "Understanding How the European Accessibility Act Will Impact Your Business - TPGi",
+      "url": "https://www.tpgi.com/understanding-how-the-european-accessibility-act-will-impact-your-business/"
+    }
+  ]
+}

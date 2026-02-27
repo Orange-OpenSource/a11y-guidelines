@@ -1,0 +1,21 @@
+{
+    "urls": [
+      {
+        "name": "HTML Standard",
+        "url": "https://html.spec.whatwg.org/multipage/"
+      },
+      {
+        "name": "HTML5 accessibility",
+        "url": "http://www.html5accessibility.com/"
+      },
+      {
+        "name": "WebAIM: HTML Semantics and Accessibility Cheat Sheet",
+        "url": "https://webaim.org/resources/htmlcheatsheet/"
+      },
+      {
+        "name": "HTML Accessibility API Mappings 1.0",
+        "url": "https://www.w3.org/TR/html-aam-1.0/"
+      }
+    ]
+  }
+  

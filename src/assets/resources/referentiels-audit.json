@@ -1,0 +1,33 @@
+{
+    "urls": [
+      {
+        "name": "Duché du Luxembourg - référentiels de tests RAWeb",
+        "url": "https://accessibilite.public.lu/fr/raweb1/index.html"
+      },
+      {
+        "name": "W3C Easy Checks – A First Review of Web Accessibility | Web Accessibility Initiative (WAI)",
+        "url": "https://www.w3.org/WAI/test-evaluate/preliminary/"
+      },
+      {
+        "name": "Web Accessibility Evaluation Tools List",
+        "url": "https://www.w3.org/WAI/ER/tools/?q=wcag-21-w3c-web-content-accessibility-guidelines-21"
+      },
+      {
+        "name": "DINUM - Audit rapide - DesignGouv",
+        "url": "https://design.numerique.gouv.fr/outils/audit-rapide/"
+      },
+      {
+        "name": "DINUM - Critères et tests - RGAA",
+        "url": "https://accessibilite.numerique.gouv.fr/methode/criteres-et-tests/"
+      },
+      {
+        "name": "Accessibility Auditing Shortlist - DLF Wiki",
+        "url": "https://wiki.diglib.org/Accessibility_Auditing_Shortlist"
+      },
+      {
+        "name": "Andrew Hick - Accessibility checklist",
+        "url": "https://github.com/andrewhick/accessibility/wiki/Accessibility-checklist"
+      }
+    ]
+  }
+  
