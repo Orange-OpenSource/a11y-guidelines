@@ -59,7 +59,7 @@ Also, we can add the elements to give a name.
 Moreover, for form elements, the accessible name is the `label` when it is programmatically associated with the element via the `for` attribute referencing the `id` of the field.
 
 <pre> <code class="html">
-&lt;label for="search"&lt;Search&gt;/label&gt;
+&lt;label for="search"&gt;Search&lt;/label&gt;
 &lt;input id="search" type="text"&gt;
 </code> </pre>
 
