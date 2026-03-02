@@ -38,7 +38,7 @@ In Chrome, in Chrome dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd
 
 In Firefox, in dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>), open the "Accessibility" tab (to display the "Options" of dev tools), inspect an element. You access the "Name", the accessible name of the inspected item.
 
-![Firefox Development Tool Panels with Open Accessibility Tab](./images/FF_name.png)
+![Firefox Development Tool Panels with Open Accessibility Tab](../images/FF_name.png)
 
 ### Content of a tag
 
