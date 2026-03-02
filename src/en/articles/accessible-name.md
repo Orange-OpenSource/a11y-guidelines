@@ -11,7 +11,7 @@ tags:
   
 ## Introduction
 
-The name of the interface components also called accessible name, is basically the name who will be exposed to assistive technology <abbr>AT</abbr> via the accessibility <abbr>API</abbr>. This name is calculated by the browser via an algorithm called [Accessible Name and Description Computation 1.1](https://www.w3.org/TR/accname-1.1/).
+The name of the interface components, also called accessible name, is basically the name that will be exposed to assistive technology <abbr>AT</abbr> via the accessibility <abbr>API</abbr>. The browser calculates this name via an algorithm called [Accessible Name and Description Computation 1.1](https://www.w3.org/TR/accname-1.1/).
 In fact, to make it simple, the browser will generate an accessible tree from the <abbr>DOM</abbr> (Document Object Model) in which a large majority of <abbr>HTML</abbr> elements (those with only a presentation purpose, eg `div` and` span` tags do not have utility) need a (accessible) name to be correctly identified by the <abbr>AT</abbr>.
 
 The accessible name is derived from the content of a tag, attributes of this tag, or an element associated with it.
@@ -30,7 +30,7 @@ To be concise, in <a href="https://www.w3.org/TR/html-aam-1.0/#accname-computati
 
 ### Access to the accessible name  via the browser
 
-To access the accessible name, the easiest way is to use the tools of browsers.
+The easiest way to access the accessible name is to use the browser tools.
 
 In Chrome, in Chrome dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>), inspect an element ("Elements" tab) and open the "Accessibility" panel instead of "Style" "(usually on the right). Access to the "Accessibility tree" and in "Computed properties", you will find the accessible name of the item being inspected listed as "Name".
 
@@ -52,7 +52,7 @@ Also, we can add the elements to give a name.
 
 `<button type="submit">Buy <img alt="the plastic duck" src="duck.jpg"></button>`
  
- This button will have an accessible name that is the content of the button: the textual title, "Buy" plus the "alt" of the image: "the plastic duck" therefore "Buy the plastic duck".
+ This button will have an accessible name that is the content of the button: the textual title, "Buy", plus the "alt" of the image: "the plastic duck", therefore "Buy the plastic duck".
 
 ### Associated element
 
