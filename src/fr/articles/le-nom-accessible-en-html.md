@@ -19,7 +19,7 @@ Le nom accessible peut être issu du contenu d'une balise, d'attributs de cette 
 
 ## En pratique, comment ça marche&nbsp;?
 
-Le nom accessible est, par exemple, annoncé par un lecteur d'écran à la prise de focus sur cet élément auquel est ajouté le rôle de l'élément (lien, graphique, bouton...) pour donner la propriété accessibilité de nom. Le nom accessible peut dériver du contenu visible ou caché de l'élément. Les éléments interactifs ou images porteuses d'information doivent avoir un nom accessible, pour plus de détails si un élément doit avoir ou pas un nom accessible voir <a href="https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#accessiblenameguidancebyrole" hreflang="en" lang="en">ARIA Authoring Practices Guide (APG)</a>. Le nom accessible permet aux utilisateurs d'<abbr>AT</abbr>  de comprendre quelle est la fonction du contrôle (élément interactif), il doit donc être pertinent au regard de son but, son objectif.
+Le nom accessible est, par exemple, annoncé par un lecteur d'écran à la prise de focus sur cet élément auquel est ajouté le rôle de l'élément (lien, graphique, bouton...) pour donner la propriété accessibilité de nom. Le nom accessible peut dériver du contenu visible ou caché de l'élément. Les éléments interactifs ou images porteuses d'information doivent avoir un nom accessible, pour plus de détails si un élément doit avoir ou pas un nom accessible voir <a href="https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#accessiblenameguidancebyrole" hreflang="en" lang="en">ARIA Authoring Practices Guide (APG)</a>. Le nom accessible permet aux utilisateurs d'<abbr>AT</abbr>  de comprendre quelle est la fonction du contrôle (élément interactif), il doit donc être pertinent au regard de son but, de son objectif.
 Pour être concis, dans <a href="https://www.w3.org/TR/html-aam-1.0/#accname-computation" hreflang="en" lang="en">HTML Accessibility API Mappings 1.0 - computation method</a>, il existe un ordre de priorité pour calculer le nom d'un élément <abbr>HTML</abbr> spécifique de l'élément, mais en gros&nbsp;:
 
 1. D'abord, <code>aria-labelledby</code>
@@ -32,11 +32,11 @@ Pour être concis, dans <a href="https://www.w3.org/TR/html-aam-1.0/#accname-com
 
 Pour accéder au nom (accessible), le plus simple est d'utiliser les outils des navigateurs.
 
-Dans Chrome, il faut utiliser les Chrome dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>) pour inspecter un élément et ouvrir le panneau "Accessibility" à la place de celui de "Style" (généralement à droite). On accède à l'"Accessibility tree" et dans "Computed properties" au "Name", le nom accessible de l'élément inspecté.
+Dans Chrome, il faut utiliser les Chrome dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>) pour inspecter un élément et ouvrir le panneau "Accessibilité" à la place de celui de "Style" (généralement à droite). On accède à l'"Arbre d'accessibilité" et dans "Propriétés calculées" au "Name", le nom accessible de l'élément inspecté.
 
 ![Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert](../../web/images/chrome_name.png)
 
-Dans Firefox, il faut utiliser les dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>), ouvrir l'onglet "Accessibilité" (à afficher les "Options" des dev tools), inspecter un élément. On accède au "Name", le nom accessible de l'élément inspecté.
+Dans Firefox, il faut utiliser les dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>), ouvrir l'onglet "Accessibility" (à afficher les "Options" des dev tools), inspecter un élément. On accède au "Name", le nom accessible de l'élément inspecté.
 
 ![Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert](../../web/images/FF_name.png)
 
@@ -46,7 +46,7 @@ Dans Firefox, il faut utiliser les dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd>
 
 Ici, le nom du lien est le contenu visible (libellé) de celui-ci : "canards en plastique". Un utilisateur de lecteur d'écran à la prise de focus sur cet élément entendra : "canards en plastique lien". Pour un utilisateur de commande vocale, pour cliquer sur ce lien, dira : "cliquer canards en plastique lien".
 
-Donc, un élément de ce type `<button type=”submit”></button>` sans intitulé, ne sera pas accessible, car, bien sûr, pas de nom accessible et donc aucune information de sa fonction !
+Donc, un élément de ce type `<button type=”submit”></button>` sans intitulé ne sera pas accessible, car, bien sûr, pas de nom accessible et donc aucune information de sa fonction !
 
 Également, on peut additionner les éléments du contenu de la balise pour donner un nom.
 
