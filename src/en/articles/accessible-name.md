@@ -90,6 +90,6 @@ More details on ["The attributes <abbr>ARIA</abbr> that can save you"](/en/artic
 
 - <a href="https://www.w3.org/TR/accname-1.1/"> Accessible Name and Description Computation 1.1 </a> by the Accessible Rich Internet Applications Working Group
 - <a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/"> What is an accessible name? </a> by Léonie Watson
-- <a href="https://w3c.github.io/accname/#mapping_additional_nd_description">Accessible Name and Description Computation 1.2 Editorial Draft (en)</a>
+- <a href="https://w3c.github.io/accname/#mapping_additional_nd_description">Accessible Name and Description Computation 1.2 Editorial Draft</a>
 - <a href="https://www.w3.org/TR/html-aam-1.0">HTML Accessibility API Mappings 1.0</a>
     
