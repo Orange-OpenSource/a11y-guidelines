@@ -34,7 +34,7 @@ The easiest way to access the accessible name is to use the browser tools.
 
 In Chrome, in Chrome dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>), inspect an element ("Elements" tab) and open the "Accessibility" panel instead of "Style" "(usually on the right). Access to the "Accessibility tree" and in "Computed properties", you will find the accessible name of the item being inspected listed as "Name".
 
-![Panels of Chrome Development Tools with Open Accessibility Tree](./images/chrome_name.png)
+![Panels of Chrome Development Tools with Open Accessibility Tree](../images/chrome_name.png)
 
 In Firefox, in dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>), open the "Accessibility" tab (to display the "Options" of dev tools), inspect an element. You access the "Name", the accessible name of the inspected item.
 
