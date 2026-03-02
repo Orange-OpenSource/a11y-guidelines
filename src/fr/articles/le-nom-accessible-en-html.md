@@ -36,7 +36,7 @@ Dans Chrome, il faut utiliser les Chrome dev tools (<kbd>Ctrl</kbd> + <kbd>Shift
 
 ![Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert](../../web/images/chrome_name.png)
 
-Dans FireFox, il faut utiliser les dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>), ouvrir l'onglet "Accessibilité" (à afficher les "Options" des dev tools), inspecter un élément. On accède au "Name", le nom accessible de l'élément inspecté.
+Dans Firefox, il faut utiliser les dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>), ouvrir l'onglet "Accessibilité" (à afficher les "Options" des dev tools), inspecter un élément. On accède au "Name", le nom accessible de l'élément inspecté.
 
 ![Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert](../../web/images/FF_name.png)
 
