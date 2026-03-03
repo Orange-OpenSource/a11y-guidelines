@@ -38,6 +38,10 @@ L'attribut `aria-current` accepte les valeurs suivantes : `true`, `page`, `step`
 - `time` : indique l'heure en cours
 - `false` (valeur par défaut) : n'a pas d'effet
 
+## Bonnes pratiques  
+
+- Préférer une valeur spécifique (page, step) plutôt que true
+- N’utiliser qu’un seul aria-current par groupe logique
 
 ## Quelques exemples d'usages courants
 
