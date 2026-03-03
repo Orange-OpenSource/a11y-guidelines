@@ -172,7 +172,7 @@
       "Identifier les éléments utilisant une donnée sensorielle du type position, taille ou son, pour transmettre de l'information"
     ],
     "verifier": [
-      "La couleur n'est pas le seul moyen pour convoyer l'information",
+      "La couleur n'est pas le seul moyen pour véhiculer l'information",
       "L'information transmise par une donnée sensorielle peut également être obtenue par un texte explicite"
     ],
     "resultat": [

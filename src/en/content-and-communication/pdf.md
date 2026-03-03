@@ -95,7 +95,7 @@ Ensure a level of [sufficient contrast between the color of the text and that of
 
 ## Testing the accessibility of a PDF document
 
-Finally, you can ask to [download the CommonLook PDF Validator](https://commonlook.com/accessibility-software/pdf-validator/) or [install the PDF Accessibility Checker (PAC)](https://pdfua.foundation/en/pdf-accessibility-checker-pac).
+Finally, you can ask to [download the Allyant PDF Validator](https://allyant.com/free-pdf-accessibility-checker-validator/) or [install the PDF Accessibility Checker (PAC)](https://pac.pdf-accessibility.org/en/download).
 These softwares allow the execution of automatic tests on a PDF document and the detection of accessibility problems:
 * test the document properties,
 * check the markup of lists and links, forms and tables.
