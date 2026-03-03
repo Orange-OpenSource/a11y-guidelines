@@ -35,7 +35,7 @@ To make all this accessible, we can rely on the following attributes:
 - `role="tab"` should be applied to each pagination tab.
 - `tabindex="0"` should be applied to the selected pagination tab; the other tabs should have the attribute `tabindex="-1"`.
 - `tabindex="-1"` removes the element from the tab order: it will not be reachable via keyboard navigation.
-- `aria-selected="true"` to indicate the current position to screen readers on the dot navigation buttons; the other buttons should have the attribute `aria-selected="false"`.
+- `aria-selected="true"` to indicate the current position to screen readers on the current scroll markers buttons; the other buttons should have the attribute `aria-selected="false"`.
 - `aria-hidden="false"` on the displayed slide.
 - `aria-hidden="true"` on the other slides.
 - `aria-roledescription` allows indicating the type of content.
