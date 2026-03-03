@@ -94,4 +94,3 @@ Accessibility requirements are aligned with harmonized standard EN 301 549 (next
 Failure to comply with legal accessibility requirements can result in a fifth-class fine (contravention de 5e classe) of up to €7,500 for legal entities. In the event of a duly documented repeat offence, this penalty can be increased to €75,000.
 
 In addition, the competent authority may impose a daily penalty in addition to the compliance injunction, set at a maximum of €3,000 per day of delay, up to a cumulative ceiling of €300,000.
-

@@ -48,7 +48,6 @@ La dimension internationale du Groupe Orange, présent dans 26 pays, justifie la
 
 - Le risque de sanction est de 50 000 € par service et celle-ci peut être renouvelée 6 mois après la constatation initale.
 
-
 ## Directive (UE) 2019/882, dite _European Accessibility Act_
 
 - Cette directive est transposée en droit français par l'article 16 de la loi n° 2023-171 du 9 mars 2023, complétée par différentes dispositions afférentes du domaine réglementaire.

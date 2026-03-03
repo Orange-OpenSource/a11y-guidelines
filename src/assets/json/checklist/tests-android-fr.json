@@ -45,7 +45,7 @@
 	"title": "S'assurer que l'information est transmise par un autre moyen que la couleur", 
 	"type": ["Test manuel"], 
 	"tests": ["Identifier les éléments utilisant de la couleur pour porter de l'information."], 
-	"verifier": ["La couleur n'est pas le seul moyen de convoyer l'information : <br/>au moins un autre moyen visuel est disponible pour obtenir la même information."], 
+	"verifier": ["La couleur n'est pas le seul moyen de véhiculer l'information : <br/>au moins un autre moyen visuel est disponible pour obtenir la même information."], 
 	"resultat": ["L'information transmise par la couleur peut également être obtenue par un texte explicite.", "L'information transmise par la couleur est complétée par une autre information visuelle (exemple : icônes utilisant des couleurs et des formes différentes).", "Cas particulier des liens dans du texte : s'ils ne sont pas soulignés au focus clavier et au survol souris, fournir un autre moyen que la couleur pour les distinguer."], 
 	"exception": "", 
 	"raccourcis": "", 

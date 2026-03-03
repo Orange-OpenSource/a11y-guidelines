@@ -123,19 +123,35 @@ module.exports = function (eleventyConfig) {
         return helpers.translate(key, targetedLocale)
     })
 
-    eleventyConfig.addFilter('redirectionPermalink', function (path) {
-        // We already have a redirection template for the root page, so we don't want to generate it here
-        if (path === 'index.html') {
-            return false
+   eleventyConfig.addFilter("redirectionPermalink", function (path) {
+        if (!path) return "/";
+
+        let p = String(path).trim();
+
+        // normalisation: no slash at the beginning
+        p = p.replace(/^\/+/, "");
+
+        // security: prevent empty path
+        if (!p) return "/";
+
+        // (fallback) root - Removed from redirections.json
+        if (p === "index.html") return "/";
+
+        // case .../index.html -> generate a folder URL (-> index.html)
+        if (p.endsWith("index.html")) {
+            const dir = p.slice(0, -"index.html".length).replace(/\/+$/, "");
+            return dir ? `/${dir}/` : `/`;
         }
 
-        // We remove the extension to prevent 11ty from throwing errors as it tries to write, for example : `/en/all.html/index.html`
-        if (path.includes('index.html')) {
-            return `/${path.replace('index.html', '')}/`
+        // case *.html -> generate a file (exact match of the old URL)
+        if (p.toLowerCase().endsWith(".html")) {
+            return `/${p}`;
         }
 
-        return `/${path}/`
-    })
+        // otherwise: folder URL
+        return `/${p}/`;
+        });
+
 
     eleventyConfig.addNunjucksFilter('slugify', function (str) {
         return config.eleventy.markdownItAnchor.slugify(str)
