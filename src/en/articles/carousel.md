@@ -26,7 +26,7 @@ To go a little further, here are some additional best practices:
 - **It is preferable to position the stop button immediately before the carousel in the DOM order so the button is easily reached by keyboard navigation.**
 - Content must be usable with a keyboard: the <kbd>Space</kbd> key to pause/stop and <kbd>Ctrl</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd> arrow keys to navigate between slides, etc. <a href="https://www.w3.org/WAI/ARIA/apg/patterns/carousel/">The full list of keyboard interactions is detailed in the WAI-ARIA Authoring Practices (APG) carousel pattern</a>.
 - Pause the rotation when the carousel receives focus; resume it when the carousel loses focus.
-- Displaying the current position via dot navigation helps users orient themselves. Finally, avoid including more than three slides.
+- Displaying the current position via scroll markers, like bullet points for exemple, helps users orient themselves. Finally, avoid including more than three slides.
 
 ## How?
 To make all this accessible, we can rely on the following attributes:
