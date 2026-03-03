@@ -9,7 +9,7 @@ tags:
 ---
 
 ## Why
-Carousels are a dynamic communication tool that are widely used despite offering limited accessibility and user experience benefits (<a href="https://erikrunyon.com/2013/01/carousel-interaction-stats/">Carousel Interaction Stats</a>).
+Carousels are dynamic communication tools that are widely used despite offering limited accessibility and user experience benefits (<a href="https://erikrunyon.com/2013/01/carousel-interaction-stats/">Carousel Interaction Stats</a>).
 If, despite everything, you want to develop one, here are some best practices to help make it accessible and usable.
 
 ### Compliance rules
