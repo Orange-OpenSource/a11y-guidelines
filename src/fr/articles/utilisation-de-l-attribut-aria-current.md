@@ -40,7 +40,7 @@ L'attribut `aria-current` accepte les valeurs suivantes : `true`, `page`, `step`
 
 ## Bonnes pratiques  
 
-- Préférer une valeur spécifique (page, step) plutôt que true
+- Préférer une valeur spécifique (page, step) plutôt que true (surtout conservé pour de la rétrocompatibilité)
 - N’utiliser qu’un seul aria-current par groupe logique
 
 ## Quelques exemples d'usages courants
