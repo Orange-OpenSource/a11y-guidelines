@@ -219,7 +219,7 @@
 <p>&quot;Find out how <strong>structured concurrency</strong> can help your apps manage automatic task cancellation, task priority propagation, and useful task-local value patterns. Learn how to manage resources in your app with useful patterns and the <strong>latest task group APIs</strong>. We'll show you how you can leverage the power of the <strong>task tree</strong> and <strong>task-local values</strong> to gain insight into distributed systems.&quot;</p>
 <p></br>Hereafter, the underlined elements <strong>lead directly to the playback of the WWDC video</strong> at the appropriate moment.<br>
 </br></p>
-<h2 id="structured-concurrency" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=56">Structured Concurrency</a> <a class="header-anchor" href="#structured-concurrency" id="heading-2315" aria-labelledby="heading-2315">#</a></h2>
+<h2 id="structured-concurrency" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=56">Structured Concurrency</a> <a class="header-anchor" href="#structured-concurrency" id="heading-2343" aria-labelledby="heading-2343">#</a></h2>
 <p><img src="../../../../../images/iOSdev/wwdc23-10170_1.png" alt="" class="img-fluid"><br>
 The <strong>concurrent execution</strong> is based on tasks whose structure define a specific way to handle the situation.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10170_2.png" alt="" class="img-fluid"></p>
@@ -228,8 +228,8 @@ The <strong>concurrent execution</strong> is based on tasks whose structure defi
 <p>It's highly recommended to <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10170?time=108">use the structured Tasks</a></strong> so as to let <code>Swift</code> doing smart things such as cancellation whose feasibility is due to the parent-child relationship.<br>
 </br>The unstructured concurrency relies on tasks that aren't part of any hierarchy and so don't have a parent task.<br>
 </br></p>
-<h2 id="tasks" class="h2-focus">Tasks <a class="header-anchor" href="#tasks" id="heading-2316" aria-labelledby="heading-2316">#</a></h2>
-<h3 id="hierarchy"><a href="https://developer.apple.com/videos/play/wwdc2023/10170?time=191">Hierarchy</a> <a class="header-anchor" href="#hierarchy" id="heading-2317" aria-labelledby="heading-2317">#</a></h3>
+<h2 id="tasks" class="h2-focus">Tasks <a class="header-anchor" href="#tasks" id="heading-2344" aria-labelledby="heading-2344">#</a></h2>
+<h3 id="hierarchy"><a href="https://developer.apple.com/videos/play/wwdc2023/10170?time=191">Hierarchy</a> <a class="header-anchor" href="#hierarchy" id="heading-2345" aria-labelledby="heading-2345">#</a></h3>
 <p>Following the previous rationale for making soups in the app example, the <code>chopIngredients</code> function points out the typical <strong>task hierarchy</strong> that highlights a <strong>parent-child relationship</strong>.<br>
 </br></p>
 <ul class="nav nav-tabs" role="tablist">
@@ -260,7 +260,7 @@ The <strong>concurrent execution</strong> is based on tasks whose structure defi
 </div>
 </br>
 </br>
-<h3 id="cancellation"><a href="https://developer.apple.com/videos/play/wwdc2023/10170?time=229">Cancellation</a> <a class="header-anchor" href="#cancellation" id="heading-2318" aria-labelledby="heading-2318">#</a></h3>
+<h3 id="cancellation"><a href="https://developer.apple.com/videos/play/wwdc2023/10170?time=229">Cancellation</a> <a class="header-anchor" href="#cancellation" id="heading-2346" aria-labelledby="heading-2346">#</a></h3>
 <p><img src="../../../../../images/iOSdev/wwdc23-10170_7.png" alt="" class="img-fluid"></p>
 <p>The moment the cancel function occurs will <strong>impact the final behavior</strong> of the rendered code (Ex #1) and determine the way to <strong>catch a potential error</strong> (Ex #2).</p>
 <ul class="nav nav-tabs" role="tablist">
@@ -300,14 +300,14 @@ Then, this code must <a href="https://developer.apple.com/videos/play/wwdc2023/1
 </br>Finally, note that the <code>actors</code> aren't necessary the <a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=448">proper way</a> to modify and read individual properties on the state machine.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10170_6.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="priority"><a href="https://developer.apple.com/videos/play/wwdc2023/10170?time=515">Priority</a> <a class="header-anchor" href="#priority" id="heading-2319" aria-labelledby="heading-2319">#</a></h3>
+<h3 id="priority"><a href="https://developer.apple.com/videos/play/wwdc2023/10170?time=515">Priority</a> <a class="header-anchor" href="#priority" id="heading-2347" aria-labelledby="heading-2347">#</a></h3>
 <p>A <strong>task priority</strong> is defined as communicating to the system how urgent a specific task is.<br>
 This priority level inherited from the parents' in the task tree becomes a <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=548">priority inversion</a></strong> when a high-priority task is waiting on the result of a lower-priority task.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10170_11.png" alt="" class="img-fluid"></p>
 <p>A structured <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=568">priority escalation</a></strong> comes in when low priority tasks are awaited by a higher priority task to be modified.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10170_12.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="groups">Groups <a class="header-anchor" href="#groups" id="heading-2320" aria-labelledby="heading-2320">#</a></h3>
+<h3 id="groups">Groups <a class="header-anchor" href="#groups" id="heading-2348" aria-labelledby="heading-2348">#</a></h3>
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
         <a class="nav-link active"
@@ -341,13 +341,13 @@ This priority level inherited from the parents' in the task tree becomes a <stro
 </br>
 <p><img src="../../../../../images/iOSdev/wwdc23-10170_13.png" alt="" class="img-fluid"><br>
 </br></p>
-<h3 id="local-value"><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=836">Local value</a> <a class="header-anchor" href="#local-value" id="heading-2321" aria-labelledby="heading-2321">#</a></h3>
+<h3 id="local-value"><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=836">Local value</a> <a class="header-anchor" href="#local-value" id="heading-2349" aria-labelledby="heading-2349">#</a></h3>
 <p>A task-local value is a <strong>variable</strong> associated with a task hierarchy and declared as a <strong>static property</strong> with a dedicated wrapper.<br>
 This value exists in a <strong>specific scope</strong> and <a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=894">gets back to its original value</a> at the end thereof.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10170_16.png" alt="" class="img-fluid"></p>
 <p>All tasks but detached ones inherit task-local values from the current task.</p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10170_17.png" alt="" class="img-fluid"></p>
-<h2 id="swiftlog" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1028">SwiftLog</a> <a class="header-anchor" href="#swiftlog" id="heading-2322" aria-labelledby="heading-2322">#</a></h2>
+<h2 id="swiftlog" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1028">SwiftLog</a> <a class="header-anchor" href="#swiftlog" id="heading-2350" aria-labelledby="heading-2350">#</a></h2>
 <p>It's recommended to utilize the <strong>SwiftLog</strong> <code>API</code> package when dealing with a server-side <code>Swift</code> application or a cross-platform app/library to use crucial elements for debugging: the loggers to get messages in a certain log level.<br>
 <img src="../../../../../images/iOSdev/wwdc23-10170_18.png" alt="" class="img-fluid"></p>
 <p>The <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1039">MetadataProvider</a></strong> <code>API</code> is a valuable tool to combine information and merge into a single object presented by a <code>Logger</code>.</p>
@@ -380,7 +380,7 @@ This value exists in a <strong>specific scope</strong> and <a href="https://deve
 </div>
 </div>
 </br>
-<h2 id="traces" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1139">Traces</a> <a class="header-anchor" href="#traces" id="heading-2323" aria-labelledby="heading-2323">#</a></h2>
+<h2 id="traces" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1139">Traces</a> <a class="header-anchor" href="#traces" id="heading-2351" aria-labelledby="heading-2351">#</a></h2>
 <p>Besides the <a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1147"><code>Swift Concurrency</code></a> and the <a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1163"><code>HTTP</code> <code>traffic</code></a> instruments that are useful for debugging, a new <a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1186">open source package</a> for server ecosystem is introduced: <strong>Swift Distributed Tracing</strong></p>
 <p><img src="../../../../../images/iOSdev/wwdc23-10170_21.png" alt="" class="img-fluid"></p>
 <p><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1235">Instrument the code</a> with additional information provided thanks to the <strong>withSpan</strong> <code>API</code> or its <strong><a href="https://developer.apple.com/videos/play/wwdc2023/10170/?time=1288">attributes</a></strong> fills the tracing system with appropriate insights into the task hierarchy.</p>
