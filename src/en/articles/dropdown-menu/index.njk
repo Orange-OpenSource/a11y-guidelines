@@ -3,18 +3,27 @@ title: "Dropdown menu"
 abstract: "Create an accessible drop-down menu."
 titleBeforeTag: true
 date: "2018-01-17"
+updateDate: "2026-02-27"
 tags:
   - component
 ---
 
 <h2>Introduction</h2>
-<p>In this example we will use the <a href="https://boosted.orange.com/docs/5.1/components/dropdowns/">drop-down menu</a> available in the <a href="https://boosted.orange.com/">Boosted</a> library. This library based on Bootstrap allows you to quickly create <abbr title="User Interface">UI</abbr> components branded with the Orange colours.</p>
 
-<p>The example implementation described below is suitable for navigation menus as well as for unit components presenting a list of actions.</p>
+<p>Dropdown menus help organize and display navigation options or actions in a compact, structured way. However, if they are not properly implemented, they create accessibility issues for many users.</p>
+<p>An accessible dropdown menu ensures smooth and intuitive navigation for everyone, while complying with the recommendations of standards (<abbr>WCAG</abbr>, <abbr>RGAA</abbr>, <abbr>EN 301 549</abbr>, etc.).</p>
+<p>In the following examples, we will use the <a href="https://boosted.orange.com/docs/5.1/components/dropdowns/">dropdown menu</a> available in the <a href="https://boosted.orange.com/">Boosted</a> library.<br /> This Bootstrap‑based library makes it possible to quickly design accessible interfaces in Orange brand colors and compliant with WCAG as well as the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/">ARIA combobox design pattern</a></p>
 
-<h2>Final example</h2>
-<p>This is how the drop-down looks with our library.</p>
+<h2>Dropdown menu</h2>
+<p>To make the dropdown menu accessible, pay particular attention to the following:</p>
+<ul>
+<li>Support mouse and keyboard navigation (navigation with the <kbd>Tab</kbd> key, activation with <kbd>Enter</kbd> or <kbd>Space</kbd>, movement with the arrow keys).</li>
+<li>Be compatible with assistive technologies (<abbr>AT</abbr>) by providing appropriate semantics, roles, and attributes (for example, <code>aria-expanded</code> and <code>aria-current</code>).</li>
+<li>Provide sufficient visibility and contrast to ensure readable text and a clearly visible keyboard focus.</li>
+<li>Ensure the behavior of the dropdown and item selection is predictable and consistent to avoid confusion.</li>
+</ul>
 
+<h2>Example</h2>
 <!-- Final menu -->
 <div class="dropdown">
   <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown">
@@ -24,83 +33,70 @@ tags:
   <ul class="dropdown-menu">
     <li><a class="dropdown-item" href="#">My cart</a></li>
     <li><a class="dropdown-item" href="#">My orders</a></li>
-    <li><a class="dropdown-item" href="#">My details</a></li>
+    <li><a class="dropdown-item" href="#">My informations</a></li>
     <li role="separator" class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="#">Log out</a></li>
   </ul>
 </div>
 
-<h2>Code example</h2>
+<h3>Example code</h3>
 
-<!-- Example 1 code -->
+<!-- Example code 1 -->
 <pre><code class="html">
 &lt;div class="dropdown"&gt;
-  &lt;button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown"&gt;
+  &lt;button class="btn btn-outline-secondary dropdown-toggle" aria-expanded="false" type="button" id="dropdownMenu1" data-bs-toggle="dropdown"&gt;
     My account
     &lt;span class="caret"&gt;&lt;/span&gt;
   &lt;/button&gt;
   &lt;ul class="dropdown-menu"&gt;
     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;My cart&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;My orders&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;My details&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;My information&lt;/a&gt;&lt;/li&gt;
     &lt;li role="separator" class="dropdown-divider"&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Log out&lt;/a&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 </code></pre>
 
-<h2>Testing</h2>
-<p>For this menu to be accessible, it must be usable with a mouse, keyboard and screen reader.</p>
+<h3><abbr>ARIA</abbr> attributes</h3>
+<ul>
+	<li><code>aria-expanded</code>: the <code>aria-expanded</code> attribute with a value of <code>true/false</code> allows assistive technologies to announce the menu state (open or closed).</li>
+	<li><code>aria-current</code>: if the dropdown is used within a navigation menu, consider adding <code>aria-current="page"</code> to the item corresponding to the active page.</li>
+	<li><code>aria-haspopup</code>: the <code>aria-haspopup</code> attribute is reserved for the <code>menu</code> role (see the “Special case of application menus” section). It is therefore not present in this implementation.</li>
+</ul>
+
+<h2>Time to test</h2>
 
 <h3>Keyboard navigation</h3>
  <dl>
-   <dt>Move the focus to “My Account” using the <kbd>Tab</kbd> key and press the <kbd>Enter</kbd> key.</dt>
+   <dt>Move focus to the “My account” button using the <kbd>Tab</kbd> key and activate with the <kbd>Enter</kbd> key.</dt>
    <dd>The menu opens.</dd>
-   <dt>Use the <kbd>up</kbd> / <kbd>down</kbd> arrows.</dt>
-   <dd>These allow you to navigate the different menu items.</dd>
-   <dt>Press <kbd>Escape</kbd>.</dt>
-   <dd>The menu closes. On closing, the focus is automatically repositioned onto the button that opened the menu.</dd>
-   <dt></dt>
+   <dt>Use the <kbd>Up</kbd>/<kbd>Down</kbd> arrow keys.</dt>
+   <dd>These allow you to move between the different menu items.</dd>
+   <dt>Press the <kbd>Escape</kbd> key.</dt>
+   <dd>The menu closes. When it closes, focus is automatically returned to the button that opens the menu.</dd>
 </dl>
 
 <h3>Screen reader navigation</h3>
  <dl>
-   <dt>Position the cursor on “My Account”.</dt>
-   <dd>The screen reader says there is a drop-down menu, and vocalizes the drop-down state (open or closed).</dd>
+   <dt>Place focus on the “My account” button.</dt>
+   <dd>The screen reader indicates that it is a dropdown menu and announces the menu state (open or closed).</dd>
    <dt>Press the <kbd>Enter</kbd> key.</dt>
-   <dd>The menu opens, the first item is selected. This element is automatically vocalized by the screen reader.</dd>
-   <dt>Use the <kbd>up</kbd> / <kbd>down</kbd> arrows.</dt>
-   <dd>These allow you to navigate to the different menu items.</dd>
+   <dd>The menu opens, the first item is selected, and it is automatically announced by the screen reader.</dd>
+   <dt>Use the <kbd>Up</kbd>/<kbd>Down</kbd> arrow keys.</dt>
+   <dd>These allow you to move between the different menu items.</dd>
    <dt>Select a menu item using the <kbd>Enter</kbd> key.</dt>
-   <dd>The menu closes. As the focus is repositioned automatically, the screen reader again vocalizes the menu button, and its state.</dd>
+   <dd>The menu closes. Since focus is automatically returned, the screen reader announces the menu button again, along with its state.</dd>
  </dl>
 
-<h3><abbr>ARIA</abbr> attributes</h3>
 
-<ul>   
-	<li><code>aria-expanded</code>: the <code>aria-expanded</code> attribute with a <code>true</code>/<code>false</code> value, allows to vocalize menu states (open or closed).</li>
-	<li><code>aria-current</code>: if the dropdown menu is used within a navigation menu, provide for the addition of an attribute <code>aria-current="page"</code> on the item corresponding to the active page.</li>
-	<li><code>aria-haspopup</code>: the <code>aria-haspopup</code> attribute is reserved for the <code> menu </code> role (see paragraph "Special case of application menus"). It is therefore not present in this implementation.</li>
-</ul>
-
-<pre><code class="html">
-  &lt;button aria-expanded="false"&gt;Mon compte&lt;/button&gt;
-    &lt;ul class="dropdown-menu"&gt;
-      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mon panier&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class="dropdown-item" href="#" aria-current="page"&gt;Mes commandes&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Mes informations&lt;/a&gt;&lt;/li&gt;
-      &lt;li role="separator" class="dropdown-divider"&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Déconnexion&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-</code></pre>
-
-<p>In addition, the ARIA pattern describes the use of an <code>aria-controls</code> attribute, as well as additional optional keyboard interactions: <kbd lang="en">Home</kbd> / <kbd lang="en">End</kbd></p>
+<p>Additionally, the ARIA pattern describes the use of an <code>aria-controls</code> attribute, as well as optional extra keyboard interactions: <kbd>Home</kbd>/<kbd>End</kbd>.</p>
 <p>Example: <a href="https://www.w3.org/WAI/ARIA/apg/example-index/disclosure/disclosure-navigation.html">Example Disclosure for Navigation Menus</a></p>
 
 <h2>Special case of application menus</h2>
 
-<p>The ARIA pattern describes a "Menu" and "Menubar" component, using the roles <code>menu</code> or <code>menubar</code>.</p>
-<p>Please note, this pattern is reserved only for the creation of an application menu, the interactions of which should be similar to the behavior of the menus present in desktop applications for example.</p>
-<p>These implementations are more complex and unnecessary for web navigation menus.</p>
+<p>The ARIA pattern describes “Menu” and “Menubar” components, using the <code>menu</code> and <code>menubar</code> roles.</p>
+<p>Note that this pattern is intended only for building application menus, whose interactions should be similar to menus in desktop applications, for example.</p>
+<p>These implementations are more complex and not necessary for web navigation menus.</p>
 
 <p>Example: <a href="https://www.w3.org/WAI/ARIA/apg/example-index/menubar/menubar-navigation.html">Editor Menubar Example</a></p>
