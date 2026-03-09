@@ -83,7 +83,7 @@ L'attribut `autocomplete` accepte plusieurs types de valeurs définies dans la s
 
 Ces valeurs peuvent être regroupées en plusieurs catégories.
 
-## 1. Valeurs générales : `on` et `off`
+### 1. Valeurs générales : `on` et `off`
 
 Les valeurs `on` et `off` permettent d'activer ou de désactiver l'autoremplissage.
 
@@ -101,7 +101,7 @@ ou :
 
 Cependant, la spécification précise que **les navigateurs peuvent ignorer la valeur `off` dans certains cas**, notamment pour les champs liés à l'authentification.
 
-## 2. Les valeurs définies par la spécification HTML
+### 2. Les valeurs définies par la spécification HTML
 
 La spécification HTML définit un ensemble de **tokens normalisés** permettant d'identifier précisément le type de donnée attendue.
 
@@ -134,7 +134,7 @@ Ces valeurs sont utilisées par :
 
 La liste complète des valeurs est définie dans la spécification HTML.
 
-## 3. Les sections prédéfinies
+### 3. Les sections prédéfinies
 
 La spécification permet également de **regrouper des champs appartenant à une même section logique**.
 
@@ -152,7 +152,7 @@ Une autre section courante est `billing`, utilisée pour les informations de fac
 
 Ces sections permettent aux navigateurs de distinguer plusieurs ensembles de données dans un même formulaire.
 
-## 4. Les sections personnalisées
+### 4. Les sections personnalisées
 
 Il est également possible de définir des sections personnalisées grâce au préfixe :
 
@@ -230,6 +230,6 @@ Prendre le temps de l'ajouter correctement constitue donc une amélioration rapi
 
 <ul lang="en">
   <li><a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute" hreflang="en">HTML Living Standard – Autofilling form controls (en)</a></li>
-  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html" hreflang="en">WCAG 2.1 – Understanding Success Criterion 1.3.5 (en)</a></li>
+  <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html" hreflang="en">WCAG 2.2 – Understanding Success Criterion 1.3.5 (en)</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete" hreflang="en">MDN – HTML attribute: autocomplete (en)</a></li>
 </ul>
