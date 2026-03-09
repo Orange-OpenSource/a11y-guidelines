@@ -118,6 +118,7 @@ Exemples courants :
 | `postal-code`    | code postal         |
 | `country`        | pays                |
 
+
 Exemple d'utilisation :
 
 ```html
@@ -155,7 +156,7 @@ Ces sections permettent aux navigateurs de distinguer plusieurs ensembles de don
 
 Il est également possible de définir des sections personnalisées grâce au préfixe :
 
-```
+```html
 section-*
 ```
 
