@@ -19,7 +19,7 @@ Correctement utilisé, il permet :
 
 Cet article propose un tour d'horizon de cet attribut souvent mal compris : son rôle, son impact sur l'accessibilité, les différentes valeurs possibles et les méthodes pour vérifier sa présence dans un formulaire.
 
-# Présentation de l'attribut `autocomplete`
+## Présentation de l'attribut `autocomplete`
 
 L'attribut `autocomplete` peut être utilisé sur :
 
@@ -45,7 +45,7 @@ Le navigateur peut alors proposer :
 
 La spécification HTML définit une **liste précise de valeurs autorisées**, chacune correspondant à un type d'information spécifique.
 
-# Impact de `autocomplete` sur l'accessibilité
+## Impact de `autocomplete` sur l'accessibilité
 
 L'attribut `autocomplete` joue un rôle direct dans l'accessibilité des formulaires.
 
@@ -77,13 +77,13 @@ L'utilisation de `autocomplete` ne remplace évidemment pas :
 * une **bonne structure de formulaire**
 * des **instructions claires pour l'utilisateur**.
 
-# Comment utiliser correctement `autocomplete`
+## Comment utiliser correctement `autocomplete`
 
 L'attribut `autocomplete` accepte plusieurs types de valeurs définies dans la spécification HTML.
 
 Ces valeurs peuvent être regroupées en plusieurs catégories.
 
-# 1. Valeurs générales : `on` et `off`
+## 1. Valeurs générales : `on` et `off`
 
 Les valeurs `on` et `off` permettent d'activer ou de désactiver l'autoremplissage.
 
@@ -101,7 +101,7 @@ ou :
 
 Cependant, la spécification précise que **les navigateurs peuvent ignorer la valeur `off` dans certains cas**, notamment pour les champs liés à l'authentification.
 
-# 2. Les valeurs définies par la spécification HTML
+## 2. Les valeurs définies par la spécification HTML
 
 La spécification HTML définit un ensemble de **tokens normalisés** permettant d'identifier précisément le type de donnée attendue.
 
@@ -134,7 +134,7 @@ Ces valeurs sont utilisées par :
 
 La liste complète des valeurs est définie dans la spécification HTML.
 
-# 3. Les sections prédéfinies
+## 3. Les sections prédéfinies
 
 La spécification permet également de **regrouper des champs appartenant à une même section logique**.
 
@@ -152,7 +152,7 @@ Une autre section courante est `billing`, utilisée pour les informations de fac
 
 Ces sections permettent aux navigateurs de distinguer plusieurs ensembles de données dans un même formulaire.
 
-# 4. Les sections personnalisées
+## 4. Les sections personnalisées
 
 Il est également possible de définir des sections personnalisées grâce au préfixe :
 
@@ -169,11 +169,11 @@ Exemple :
 
 Cela permet de distinguer plusieurs utilisateurs ou plusieurs ensembles d'informations similaires dans un même formulaire.
 
-# Comment tester la présence et la pertinence de `autocomplete`
+## Comment tester la présence et la pertinence de `autocomplete`
 
 L'analyse de l'attribut `autocomplete` peut se faire de différentes manières.
 
-# Inspection manuelle
+### Inspection manuelle
 
 La première méthode consiste à inspecter le code source du formulaire.
 
@@ -197,7 +197,7 @@ est cohérent, tandis que :
 
 ne l'est pas.
 
-# Utiliser le bookmarklet detectAutocomplete
+### Utiliser le bookmarklet detectAutocomplete
 
 Pour faciliter l'audit des formulaires, il est possible d'utiliser le bookmarklet **detectAutocomplete**.
 
@@ -211,7 +211,7 @@ Il peut aider à :
 
 Le bookmarklet est disponible sur GitHub : https://github.com/MewenLeHo/detectAutocomplete
 
-# Conclusion
+## Conclusion
 
 L'attribut `autocomplete` est un mécanisme simple mais puissant pour améliorer l'expérience utilisateur des formulaires.
 
@@ -226,7 +226,7 @@ Malgré cela, il reste encore **peu utilisé ou mal implémenté dans de nombreu
 
 Prendre le temps de l'ajouter correctement constitue donc une amélioration rapide, à la fois pour l'ergonomie et pour l'accessibilité.
 
-# Webographie
+## Webographie
 
 <ul lang="en">
   <li><a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute" hreflang="en">HTML Living Standard – Autofilling form controls (en)</a></li>
