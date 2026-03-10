@@ -51,7 +51,7 @@ L'attribut `autocomplete` joue un rôle direct dans l'accessibilité des formula
 
 Certaines technologies d'assistance peuvent exploiter cette information pour **identifier la nature d'un champ de formulaire**, indépendamment de son libellé visible.
 
-Cette pratique est notamment liée au **WCAG 2.2 – Success Criterion 1.3.5: Identify Input Purpose**.
+Cette pratique est notamment liée au **WCAG 2.2 – Success Criterion 1.3.5: Identify Input Purpose (niveau AA)**.
 
 Ce critère demande que, pour certains champs collectant des données personnelles, **la finalité du champ soit identifiée programmatiquement** à l'aide des valeurs définies dans la spécification HTML.
 
@@ -70,6 +70,8 @@ Il est important de noter que :
 
 * ce critère **ne s'applique qu'à certains types de données personnelles** prédéfinies par la spécification HTML
 * et uniquement **lorsque ces données sont demandées à l'utilisateur**.
+
+*Remarque :* il est important de noter que ce critère ne s'applique qu'à certains types de données personnelles prédéfinies par la spécification HTML et uniquement lorsque ces données sont demandées à l'utilisateur. Pour les champs dont la finalité n'est pas couverte par les `autofill-tokens` (par exemple : champ de recherche libre, zone de texte pour un commentaire), l'attribut `autocomplete` n'est pas nécessaire, ou ne devraient pas utiliser une valeur inappropriée.
 
 L'utilisation de `autocomplete` ne remplace évidemment pas :
 
@@ -100,6 +102,7 @@ ou :
 ```
 
 Cependant, la spécification précise que **les navigateurs peuvent ignorer la valeur `off` dans certains cas**, notamment pour les champs liés à l'authentification.
+Il est crucial de noter que l'utilisation de `autocomplete="off"` doit être réservée à des cas très spécifiques et justifiés, car elle peut dégrader l'expérience utilisateur et l'accessibilité en empêchant l'autocomplétion pour des champs où elle serait bénéfique.
 
 ### 2. Les valeurs définies par la spécification HTML
 
@@ -117,7 +120,9 @@ Exemples courants :
 | `street-address` | adresse postale     |
 | `postal-code`    | code postal         |
 | `country`        | pays                |
-  
+
+
+
 Exemple d'utilisation :
 
 ```html
