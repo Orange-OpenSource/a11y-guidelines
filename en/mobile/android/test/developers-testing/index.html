@@ -243,7 +243,7 @@
           <div class="mt-4">
           <h1>Android - Developer testing: code analysis</h1>
 <p>This step allows accessibility issues to be reported directly during the development phase and causes application build errors or various warnings. The developer must therefore correct them directly in order to be able to build his application and make it work, which automatically makes it more accessible before even putting it through manual tests or analysis tools. In addition, it avoids possible accessibility regressions.</p>
-<h2 id="lint" class="h2-focus"><span lang="en">Lint</span> <a class="header-anchor" href="#lint" id="heading-2699" aria-labelledby="heading-2699">#</a></h2>
+<h2 id="lint" class="h2-focus"><span lang="en">Lint</span> <a class="header-anchor" href="#lint" id="heading-2772" aria-labelledby="heading-2772">#</a></h2>
 <p>The developer can first use the Lint tool in Android Studio, on his application, to do a first pass on the accessibility problems encountered. 5 accessibility problems can be reported with Lint :</p>
 <ul>
 <li><strong>ClickableViewAccessibility</strong>: If a view overloads <code>onTouchEvent</code> or oveloards <code>onTouchListener</code>, but does not implement <code>performClick</code></li>
@@ -254,7 +254,7 @@
 </ul>
 <p><strong>Example of a Lint report in Android Studio:</strong></p>
 <img src="../../../images/lint.png" alt="screenshot showing a report of the Lint tool, which shows an accessibility error" width="80%">
-<h2 id="automated-tests-espresso" class="h2-focus">Automated tests: Espresso <a class="header-anchor" href="#automated-tests-espresso" id="heading-2700" aria-labelledby="heading-2700">#</a></h2>
+<h2 id="automated-tests-espresso" class="h2-focus">Automated tests: Espresso <a class="header-anchor" href="#automated-tests-espresso" id="heading-2773" aria-labelledby="heading-2773">#</a></h2>
 <p>Espresso is a framework for UI testing on Android. You can integrate the ATF framework (Accessibility Test Framework), which will add a layer of tests concerning accessibility.</p>
 <p>No explicit test needs to be written. Once ATF is integrated into the Expresso tests, accessibility checks are added automatically. ATF works with ViewAction, meaning that it will automatically perform the accessibility check on  ViewAction interactions set up in the Espresso tests. Additionally, to enable accessibility checks, you must call the <code>AccessibilityChecks.enable()</code> function in the test suite.</p>
 <p>How integrate ATF :</p>
@@ -274,12 +274,12 @@ companion object {
 }
 </code></pre>
 <p>So, when in the test suite a <code>ViewAction.click ()</code> is performed on a button that does not match the size required for an interactive element, the test will appear as an error until the accessibility issue be resolved.</p>
-<h3 id="perform-automated-accessibility-tests-on-the-complete-screen">Perform automated accessibility tests on the complete screen <a class="header-anchor" href="#perform-automated-accessibility-tests-on-the-complete-screen" id="heading-2701" aria-labelledby="heading-2701">#</a></h3>
+<h3 id="perform-automated-accessibility-tests-on-the-complete-screen">Perform automated accessibility tests on the complete screen <a class="header-anchor" href="#perform-automated-accessibility-tests-on-the-complete-screen" id="heading-2774" aria-labelledby="heading-2774">#</a></h3>
 <p>Accessibility testing automation according to ViewAction can be limited. That's why, validations from root view can be enabled to test all views, without the 'ViewActions' restrictions. To do this, replace <code>AccessibilityChecks.enable()</code> by <code>AccessibilityChecks.enable().setRunChecksFromRootView(true)</code></p>
-<h3 id="log-accessibility-errors-rather-than-causing-test-failures">Log accessibility errors rather than causing test failures <a class="header-anchor" href="#log-accessibility-errors-rather-than-causing-test-failures" id="heading-2702" aria-labelledby="heading-2702">#</a></h3>
+<h3 id="log-accessibility-errors-rather-than-causing-test-failures">Log accessibility errors rather than causing test failures <a class="header-anchor" href="#log-accessibility-errors-rather-than-causing-test-failures" id="heading-2775" aria-labelledby="heading-2775">#</a></h3>
 <p>Accessibility errors can be logged so that they appear in the Android Studio logcat, rather than causing Espresso tests fail, although this is not recommended. This should only be used temporarily. To do this, add the following function:<br>
 <code>AccessibilityChecks.enable().setThrowExceptionForErrors(false)</code></p>
-<h3 id="create-a-whitelist">Create a whitelist <a class="header-anchor" href="#create-a-whitelist" id="heading-2703" aria-labelledby="heading-2703">#</a></h3>
+<h3 id="create-a-whitelist">Create a whitelist <a class="header-anchor" href="#create-a-whitelist" id="heading-2776" aria-labelledby="heading-2776">#</a></h3>
 <p>Rather than log all accessibility errors in the logcat, it is possible to create a whitelist to log only the ones you want, while keeping the others in error. To do this, we must add the following function :<br>
 <code>AccessibilityChecks.enable().setRunChecksFromRootView(true).setSuppressingResultMatcher(matchesView(anyOf(withId(R.id.buttonPlus))))</code></p>
 <p>In this example, the view with the id <strong>buttonPlus</strong> will not be indicated in error if there is an accessibility problem, but will be displayed in the logcat.</p>
