@@ -141,7 +141,7 @@ Ces valeurs sont utilisées par :
 ### 3. Les sections prédéfinies
 
 Contrairement à ce que l'on croit souvent, la valeur de `autocomplete` peut contenir plusieurs tokens.
-La spécification permet également de **regrouper des champs appartenant à une même section logique**. Ces regroupements permettent d'indiquer le contexte de la donnée.
+La spécification permet en effet de **regrouper des champs appartenant à une même section logique**. Ces regroupements permettent d'indiquer le contexte de la donnée.
 
 La spécification HTML définit une syntaxe structurée :
 
@@ -189,7 +189,7 @@ Cela permet de distinguer plusieurs utilisateurs ou plusieurs ensembles d'inform
 
 ## Exemple complet de formulaire
 
-Voici un exemple simplifié de formulaire utilisant correctement l'attribut autocomplete :
+Voici un exemple simplifié de formulaire utilisant correctement l'attribut `autocomplete` :
 
 ```html
 <form>
