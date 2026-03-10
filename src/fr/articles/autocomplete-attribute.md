@@ -119,6 +119,7 @@ Exemples courants :
 | `country`        | pays                |
 
 
+
 Exemple d'utilisation :
 
 ```html
@@ -132,7 +133,7 @@ Ces valeurs sont utilisées par :
 * les gestionnaires de mots de passe
 * certains outils d'assistance.
 
-La liste complète est définie dans la spécification HTML.
+[La liste complète est définie dans la spécification HTML](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute).
 
 ### 3. Les sections prédéfinies
 
