@@ -15,7 +15,6 @@ Pour une **personne non voyante ou mal-voyante**, cette « vue d’ensemble » n
 
 ## Précisez la langue de rédaction de votre document
 Rappel du contenu du fichier Excel “Correspondance tests Va11ydette et handicaps - WCAG 2.2” :
-RESTE A FAIRE : Stocker les 2 images 
 <img alt="" src="/fr/contenu-et-communication/images/WCAG_Critere3_1_1.png" class="img-fluid" />
 <img alt="" src="/fr/contenu-et-communication/images/WCAG_Critere3_1_2.png" class="img-fluid" />
 
@@ -34,7 +33,6 @@ La structuration de votre document est centrale/essentielle car elle permet de t
 
 ### Hiérarchisez vos paragraphes avec des titres de niveaux
 Rappel du contenu du fichier Excel “Correspondance tests Va11ydette et handicaps - WCAG 2.2” : 
-RESTE A FAIRE : Stocker l'image  
 <img alt="" src="/fr/contenu-et-communication/images/WCAG_Titre_De_Niveaux.png" class="img-fluid" />
 
 Les titres de niveaux sont destinés à être analysés visuellement et avec une technologie d’assistance. Pour faciliter cette analyse :
@@ -62,7 +60,7 @@ Les lecteurs recourant à des technologies d'assistance ont besoin de plus de te
 
 ### Privilégiez des polices de caractères accessibles
 - Pour aider à la lisibilité par tous de votre document, utilisez des **polices simples et sans empattement** (appelé aussi **sans serif**) comme Verdana, Arial ou Helvetica Neu retenue par la marque Orange ou encore Accessible DfA .
-- Concernant la **taille** à retenir pour les caractères, elle dépend de la police choisie. Retenez qu’elle doit être **au moins égale à 10 points**.  @Viviane : A VÉRIFIER : On dit pas toujours 10. Voir fiche mémo powerpoint par exemple qui affiche "minimum taille 12" " De plus, ce serait pas mal de donner une taille minimale pour chacune des polices de caractères données en exemple (Verdana, Arial, Helvetica et Accessible DfA)
+- Concernant la **taille** à retenir pour les caractères, elle dépend de la police choisie. Retenez qu’elle doit être **au moins égale à 10 points**.  @Viviane : À VÉRIFIER : On ne dit pas toujours 10. Voir fiche mémo powerpoint par exemple qui affiche "minimum taille 12" " De plus, ce serait pas mal de donner une taille minimale pour chacune des polices de caractères données en exemple (Verdana, Arial, Helvetica et Accessible DfA)
 - Entre les caractères, privilégiez un **espacement normal ou élargi**, plutôt que condensé.
 
 **À éviter** : 
@@ -84,13 +82,13 @@ Surtout **ne pas utiliser les retours chariots répétés ou de tabulations** ca
 -	Conservez l’accentuation sur les majuscules (exemple : É ou Ç).  
 
 @VivianePourGitHub : Sur la page Réseaux sociaux, il est précisé "Sur un mobile, il suffit de maintenir le doigt sur la lettre à accentuer." Est-ce qu'on le met ici ?
-@isabellechanclou : Je pense que ça serait bien de dire ici comment faire sur Windows et sur Mac (maintenir la touche Maj enfoncée en même temps qu'on enfonce la touche de la lettre à accentuer, puis dans les propositions qui s'affichent, sélectionner le type d'accent que l'on souhaite sur la lettre). On évite au lecteur de devoir faire une recherche sur le comment faire, qu'il risque de ne pas faire.
+@isabellechanclou : Je pense que ça serait bien de dire ici comment faire sur Windows et sur Mac (maintenir la touche Maj enfoncée en même temps qu'on enfonce la touche de la lettre à accentuer, puis dans les propositions qui s'affichent, sélectionner le type d'accent que l'on souhaite sur la lettre). On évite au lecteur de devoir lancer une recherche sur le comment faire, qu'il risque de ne pas faire !
 
 Conserver l’accentuation sur les majuscules (exemple : É ou Ç) : menu **Insertion > Symbole** ou utiliser [les raccourcis clavier](/fr/contenu-et-communication/index#annexes).
 
 ### Rédigez un contenu clair et concis
 -	Limitez les abréviations et acronymes, et explicitez dès la première occurrence ceux qui ne font pas partie du langage courant.
--	Évitez les sigles ou abréviations sauf ceux passés dans le langage courant.  @Viviane : Abréviations apprait 2 fois !
+-	Évitez les sigles ou abréviations sauf ceux passés dans le langage courant.  @Viviane : Abréviations apparait 2 fois !
 -	Mettez en place une ponctuation simple.
 -	Utilisez des tournures de phrases limpides/claires, des phrases courtes et à la construction simple : sujet, verbe, complément. Une idée par phrase.
 -	Évitez au maximum les mots trop compliqués ou spécifiques à un domaine, sinon, les expliquer.
@@ -102,7 +100,6 @@ Conserver l’accentuation sur les majuscules (exemple : É ou Ç) : menu **Inse
 
 ### Utilisez les émojis avec parcimonie
 Rappel du contenu du fichier Excel “Correspondance tests Va11ydette et handicaps - WCAG 2.2” :
-@VivianePourGitHub : RESTE A FAIRE : Stocker l'image  
 <img alt="" src="/fr/contenu-et-communication/images/WCAG_Contenu_Cryptique.png" class="img-fluid" />
 
 Profils concernés : <img alt="" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" /> ,  <img alt="" src="/images/icons/solaris/accessibility_cognitive.svg" width="100" height="100" />
@@ -116,7 +113,6 @@ Profils concernés : <img alt="" src="/images/icons/solaris/accessibility_vision
 
 ### Assurez-vous d’un niveau de contraste suffisant entre la couleur de votre texte et celle de son arrière-plan
 Rappel du contenu du fichier Excel “Correspondance tests Va11ydette et handicaps - WCAG 2.2” :
-@VivianePourGitHub : RESTE A FAIRE : Stocker l'image  
 <img alt="" src="/fr/contenu-et-communication/images/WCAG_Critere1_4_3.png" class="img-fluid" />
 
 Cette vérification pour vos textes est **également valable pour vos icônes, boutons et autres éléments graphiques porteurs d'information**. Le contraste peut être vérifié à l’aide de l’outil **Colour Contrast Analyser** par exemple. (@VivianePourGitHub : Mettre un lien vers le paragraphe associé dans la partie « Testez l’accessibilité de votre document ») 
@@ -126,14 +122,12 @@ Cette vérification pour vos textes est **également valable pour vos icônes, b
 **À prendre en compte** : « [Assurer un contraste suffisamment élevé entre texte et arrière-plan](/fr/contenu-et-communication/checklist-incontournables.md) » fait partie des incontournables !
 
 ### Assurez-vous que la couleur n’est pas le seul moyen utilisé pour communiquer de l’information
-Rappel du contenu du fichier Excel “Correspondance tests Va11ydette et handicaps - WCAG 2.2” :
-@VivianePourGitHub : RESTE A FAIRE : Stocker l'image  
-<img alt="" src="/fr/contenu-et-communication/images/WCAG_Critere1_4_3.png" class="img-fluid" />
+Rappel du contenu du fichier Excel “Correspondance tests Va11ydette et handicaps - WCAG 2.2” : 
+<img alt="" src="/fr/contenu-et-communication/images/WCAG_Critere1_4_1.png" class="img-fluid" />
 
 Si une information est transmise uniquement par la couleur, les personnes aveugles ou malvoyantes utilisant un lecteur d'écran ainsi que certaines personnes daltoniennes n'y auront pas accès. Toute information véhiculée par la couleur doit donc être aussi disponible via un autre moyen (par exemple, un style approprié).
 
 Le respect de cette recommandation demande une vigilence toute particulière lors de la création de vos graphiques. 
-@VivianePourGitHub : RESTE A FAIRE : Stocker les 3 images  
 <img alt="" src="/fr/contenu-et-communication/images/Graphique_RSE_KO.png" class="img-fluid" />
 <img alt="" src="/fr/contenu-et-communication/images/Graphique_RSE_OK.png" class="img-fluid" />
 <img alt="" src="/fr/contenu-et-communication/images/Graphique_RSE_OK_TableauDeDonnees.png" class="img-fluid" />
@@ -142,7 +136,6 @@ Le respect de cette recommandation demande une vigilence toute particulière lor
 
 ## Rédigez des équivalents textuels pertinents pour les images
 Rappel du contenu du fichier Excel “Correspondance tests Va11ydette et handicaps - WCAG 2.2” :
-@VivianePourGitHub : RESTE A FAIRE : Stocker l'image  
 <img alt="" src="/fr/contenu-et-communication/images/WCAG_Critere1_1_1.png" class="img-fluid" />
 
 Profils concernés : <img alt="" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" /> ,  <img alt="" src="/images/icons/solaris/accessibility_cognitive.svg" width="100" height="100" />
@@ -156,7 +149,7 @@ Pour qu’une personne déficiente visuelle puisse avoir accès à l’informati
 - Évitez d’utiliser du texte dans des images comme seule méthode pour communiquer des informations importantes. Si vous ne pouvez pas faire autrement, voici 2 solutions au choix :
 1. Réécrivez ce même texte dans votre contenu
 2. Associez un texte de remplacement à cette image dans lequel vous Décrirez brièvement l’image et mentionnerez le texte figurant sur l’image ainsi que son sens, si besoin.
-- Pour toutes vos images qui contiennent du texte, pensez à vérifier que le contraste est suffisant entre le texte .
+- Pour toutes vos images qui contiennent du texte, pensez à vérifier que le contraste est suffisant entre le texte et le fond de l'image.
 
 **Compléments** : 
 -	Dans le cas d’une **image informative complexe**, indiquez dans son texte de remplacement à quel endroit elle sera décrite dans le document.  Cette description devra être équivalente à l’information transmise par l’image. Elle pourra être donnée par un texte ou par un lien situé dans les deux cas à proximité de l’image.
@@ -167,7 +160,6 @@ Pour qu’une personne déficiente visuelle puisse avoir accès à l’informati
 
 ## Donnez du sens au libellé de vos liens hypertexte
 Rappel du contenu du fichier Excel “Correspondance tests Va11ydette et handicaps - WCAG 2.2” :
-@VivianePourGitHub : RESTE A FAIRE : Stocker les 2 images  
 <img alt="" src="/fr/contenu-et-communication/images/WCAG_Critere2_4_4.png" class="img-fluid" />
 <img alt="" src="/fr/contenu-et-communication/images/WCAG_Critere2_4_9.png" class="img-fluid" />
 
