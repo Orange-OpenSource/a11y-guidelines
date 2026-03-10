@@ -1,6 +1,6 @@
 ---
 title: "L'attribut HTML autocomplete : comprendre et utiliser correctement l'autoremplissage des formulaires"
-abstract: ""
+abstract: "Souvent oublié, l'attribut autocomplete améliore pourtant l'accessibilité et l'ergonomie des formulaires."
 titleBeforeTag: true
 date: "2026-04-17"
 tags:
