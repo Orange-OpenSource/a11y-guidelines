@@ -117,9 +117,7 @@ Exemples courants :
 | `street-address` | adresse postale     |
 | `postal-code`    | code postal         |
 | `country`        | pays                |
-
-
-
+  
 Exemple d'utilisation :
 
 ```html
