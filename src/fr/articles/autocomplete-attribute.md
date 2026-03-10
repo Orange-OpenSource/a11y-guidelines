@@ -43,7 +43,7 @@ Le navigateur peut alors proposer :
 * des données stockées dans le profil utilisateur,
 * ou des informations provenant d'un gestionnaire de mots de passe.
 
-La spécification HTML définit une **liste précise de valeurs autorisées**, chacune correspondant à un type d'information spécifique.
+La spécification HTML définit une **liste précise de valeurs autorisées** (ou `autofill tokens`), chacune correspondant à un type d'information spécifique.
 
 ## Impact de `autocomplete` sur l'accessibilité
 
@@ -51,7 +51,7 @@ L'attribut `autocomplete` joue un rôle direct dans l'accessibilité des formula
 
 Certaines technologies d'assistance peuvent exploiter cette information pour **identifier la nature d'un champ de formulaire**, indépendamment de son libellé visible.
 
-Cette pratique est notamment liée au **critère WCAG 1.3.5 – Identify Input Purpose**.
+Cette pratique est notamment liée au **WCAG 2.2 – Success Criterion 1.3.5: Identify Input Purpose**.
 
 Ce critère demande que, pour certains champs collectant des données personnelles, **la finalité du champ soit identifiée programmatiquement** à l'aide des valeurs définies dans la spécification HTML.
 
@@ -68,16 +68,16 @@ Objectif : permettre aux technologies d'assistance et aux outils d'aide à la sa
 
 Il est important de noter que :
 
-* ce critère **ne s'applique qu'à certains types de données personnelles**
+* ce critère **ne s'applique qu'à certains types de données personnelles** prédéfinies par la spécification HTML
 * et uniquement **lorsque ces données sont demandées à l'utilisateur**.
 
 L'utilisation de `autocomplete` ne remplace évidemment pas :
 
-* un **libellé accessible (`label`)**
-* une **bonne structure de formulaire**
-* des **instructions claires pour l'utilisateur**.
+* un **libellé accessible (fourni par un `label` ou toute autre méthode de nommage accessible)**
+* une **structure de formulaire claire**
+* des **instructions compréhensibles pour l'utilisateur**.
 
-## Comment utiliser correctement `autocomplete`
+## Comprendre la syntaxe de `autocomplete`
 
 L'attribut `autocomplete` accepte plusieurs types de valeurs définies dans la spécification HTML.
 
@@ -103,7 +103,7 @@ Cependant, la spécification précise que **les navigateurs peuvent ignorer la v
 
 ### 2. Les valeurs définies par la spécification HTML
 
-La spécification HTML définit un ensemble de **tokens normalisés** permettant d'identifier précisément le type de donnée attendue.
+La spécification HTML définit de nombreux **tokens normalisés** permettant d'identifier précisément la donnée attendue.
 
 Exemples courants :
 
@@ -132,11 +132,20 @@ Ces valeurs sont utilisées par :
 * les gestionnaires de mots de passe
 * certains outils d'assistance.
 
-La liste complète des valeurs est définie dans la spécification HTML.
+La liste complète est définie dans la spécification HTML.
 
 ### 3. Les sections prédéfinies
 
-La spécification permet également de **regrouper des champs appartenant à une même section logique**.
+Contrairement à ce que l'on croit souvent, la valeur de `autocomplete` peut contenir plusieurs tokens.
+La spécification permet également de **regrouper des champs appartenant à une même section logique**. Ces regroupements permettent d'indiquer le contexte de la donnée.
+
+La spécification HTML définit une syntaxe structurée :
+
+```html
+[shipping | billing] autofill-token
+```
+
+Les tokens sont séparés par des espaces et doivent respecter un ordre précis.
 
 Exemple :
 
@@ -147,7 +156,6 @@ Exemple :
 ```
 
 Dans cet exemple, les champs sont associés à la section **shipping**, ce qui indique qu'ils correspondent à une **adresse de livraison**.
-
 Une autre section courante est `billing`, utilisée pour les informations de facturation.
 
 Ces sections permettent aux navigateurs de distinguer plusieurs ensembles de données dans un même formulaire.
@@ -160,6 +168,12 @@ Il est également possible de définir des sections personnalisées grâce au pr
 section-*
 ```
 
+La syntaxe devient :
+
+```html
+[section-*] autofill-token
+```
+
 Exemple :
 
 ```html
@@ -168,6 +182,31 @@ Exemple :
 ```
 
 Cela permet de distinguer plusieurs utilisateurs ou plusieurs ensembles d'informations similaires dans un même formulaire.
+
+## Exemple complet de formulaire
+
+Voici un exemple simplifié de formulaire utilisant correctement l'attribut autocomplete :
+
+```html
+<form>
+
+  <label for="firstname">Prénom</label>
+  <input id="firstname" autocomplete="given-name">
+
+  <label for="lastname">Nom</label>
+  <input id="lastname" autocomplete="family-name">
+
+  <label for="email">Adresse e-mail</label>
+  <input id="email" type="email" autocomplete="email">
+
+  <label for="street">Adresse</label>
+  <input id="street" autocomplete="street-address">
+
+  <label for="postal">Code postal</label>
+  <input id="postal" autocomplete="postal-code">
+
+</form>
+```
 
 ## Comment tester la présence et la pertinence de `autocomplete`
 
@@ -180,7 +219,7 @@ La première méthode consiste à inspecter le code source du formulaire.
 Points à vérifier :
 
 * présence de l'attribut `autocomplete`
-* cohérence entre la valeur et le type de donnée attendu
+* cohérence entre la valeur et la donnée demandée
 * utilisation correcte des tokens définis par la spécification HTML
 
 Par exemple :
@@ -205,11 +244,34 @@ Cet outil permet d'analyser une page et de **mettre en évidence les champs de f
 
 Il peut aider à :
 
+* identifier les champs qui utilisent `autocomplete` ;
 * identifier les champs qui n'utilisent pas cet attribut ;
 * repérer les valeurs incorrectes ;
 * analyser rapidement la structure d'un formulaire.
 
 Le bookmarklet est disponible sur GitHub : https://github.com/MewenLeHo/detectAutocomplete
+
+## Erreurs fréquentes observées en audit
+
+Lors des audits d'accessibilité ou d'ergonomie, plusieurs erreurs sont souvent rencontrées :
+
+### Absence totale de l'attribut
+
+De nombreux formulaires ne définissent aucune valeur `autocomplete`.
+
+### Mauvaise valeur
+
+Exemple :
+
+```html
+<input type="email" autocomplete="name">
+```
+
+La valeur ne correspond pas à la donnée demandée.
+
+### Utilisation excessive de `autocomplete="off"`
+
+Cette pratique est souvent inutile et parfois ignorée par les navigateurs.
 
 ## Conclusion
 
@@ -217,12 +279,12 @@ L'attribut `autocomplete` est un mécanisme simple mais puissant pour améliorer
 
 Correctement utilisé, il permet :
 
-* de faciliter la saisie des informations,
+* de faciliter et accélérer la saisie des informations,
 * de réduire les erreurs,
 * d'améliorer l'interopérabilité avec les navigateurs et les gestionnaires de mots de passe,
 * et de répondre à certaines exigences des WCAG concernant l'identification de la finalité des champs.
 
-Malgré cela, il reste encore **peu utilisé ou mal implémenté dans de nombreux formulaires**.
+Malgré cela, il reste encore **sous-utilisé ou mal implémenté dans de nombreux formulaires**.
 
 Prendre le temps de l'ajouter correctement constitue donc une amélioration rapide, à la fois pour l'ergonomie et pour l'accessibilité.
 
