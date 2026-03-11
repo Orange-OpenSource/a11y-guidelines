@@ -51,7 +51,11 @@ L'attribut `autocomplete` joue un rôle direct dans l'accessibilité des formula
 
 Certaines technologies d'assistance peuvent exploiter cette information pour **identifier la nature d'un champ de formulaire**, indépendamment de son libellé visible.
 
-Cette pratique est est directement liée à un critère d'accessibilité des WCAG : **WCAG 2.2 – Success Criterion 1.3.5: Identify Input Purpose (niveau AA)**.
+Les **bénéfices pour les utilisateurs** sont multiples :
+* pour les personnes avec des **troubles cognitifs ou de la mémoire** : l'autocomplétion réduit la charge mentale nécessaire pour remplir un formulaire.
+* pour les personnes avec des **difficultés motrices** : cela diminue le nombre de frappes au clavier nécessaires, rendant la saisie moins fatigante et plus rapide.
+
+Cette pratique est directement liée à un critère d'accessibilité des WCAG : **WCAG 2.2 – Success Criterion 1.3.5: Identify Input Purpose (niveau AA)**.
 
 Ce critère demande que, pour certains champs collectant des données personnelles, **la finalité du champ soit identifiée programmatiquement** à l'aide des valeurs définies dans la spécification HTML.
 
@@ -103,6 +107,9 @@ ou :
 
 Cependant, la spécification précise que **les navigateurs peuvent ignorer la valeur `off` dans certains cas**, notamment pour les champs liés à l'authentification.
 Il est crucial de noter que l'utilisation de `autocomplete="off"` doit être réservée à des cas très spécifiques et justifiés, car elle peut dégrader l'expérience utilisateur et l'accessibilité en empêchant l'autocomplétion pour des champs où elle serait bénéfique.
+L'usage de `autocomplete="off"` doit être réservé à des cas très spécifiques où la prédiction d'une valeur n'a aucun sens ou pourrait nuire à la sécurité, comme par exemple :
+* un champ de saisie d'un code à usage unique (OTP)
+* un champ de confirmation de type "Veuillez saisir à nouveau votre e-mail" (bien que cette pratique soit elle-même discutable en termes d'ergonomie).
 
 ### 2. Les valeurs définies par la spécification HTML
 
