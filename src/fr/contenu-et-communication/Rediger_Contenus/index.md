@@ -6,7 +6,7 @@ abstract: "Rédiger des contenus accessibles à toustes"
 Cette page présente des recommandations générales à respecter pour garantir l’accessibilité de vos contenus quel que soit le logiciel de rédaction que vous utilisez (un outil de messagerie électronique, PowerPoint, Word, un réseau social, etc.). 
 
 # Saisissez les informations indispensables à une écoute facilitée de votre document
-Profil concerné :  <img alt="" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" />
+Profil concerné :  <img alt="Personne an situation de handicap visuel" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" />
 
 Quelques éléments pour vous aider à **comprendre pourquoi les recommandations présentées dans ce paragraphe sont primordiales**.
 Quand une **personne voyante** regarde un écran (ou un document papier), elle a une vue d’ensemble. Elle repère les titres et sous-titres, généralement mis en évidence par des artifices graphiques (caractères plus gros, en gras…), et commence sa lecture à la partie qui l’intéresse.
@@ -53,7 +53,7 @@ Pour énumérer des éléments, plutôt que de simples retours à la ligne avec 
 **À prendre en compte** : « [Structurer les listes](/fr/contenu-et-communication/checklist-incontournables.md) » fait partie des incontournables !
 
 ## Utilisez une présentation qui facilite la lecture de votre document
-Profils concernés : <img alt="" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" /> ,  <img alt="" src="/images/icons/solaris/accessibility_cognitive.svg" width="100" height="100" />
+Profils concernés : <img alt="Personne an situation de handicap visuel" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" /> ,  <img alt="Personne an situation de handicap cognitif" src="/images/icons/solaris/accessibility_cognitive.svg" width="100" height="100" />
 
 La complexité visuelle de votre document pourrait nuire à la compréhension de son contenu. 
 Les lecteurs recourant à des technologies d'assistance ont besoin de plus de temps pour comprendre un document complexe. En outre, lorsque la compréhension de certains contenus dépend uniquement de la couleur, de la forme, de la taille ou de la position, ces lecteurs vont rater certaines informations.
@@ -102,14 +102,14 @@ Conserver l’accentuation sur les majuscules (exemple : É ou Ç) : menu **Inse
 Rappel du contenu du fichier Excel “Correspondance tests Va11ydette et handicaps - WCAG 2.2” :
 <img alt="" src="/fr/contenu-et-communication/images/WCAG_Contenu_Cryptique.png" class="img-fluid" />
 
-Profils concernés : <img alt="" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" /> ,  <img alt="" src="/images/icons/solaris/accessibility_cognitive.svg" width="100" height="100" />
+Profils concernés : <img alt="Personne en situation de handicap visuel" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" /> ,  <img alt="Personne en situation de handicap cognitif" src="/images/icons/solaris/accessibility_cognitive.svg" width="100" height="100" />
   
 **Chaque émoji a une description unique qui est transcrite de manière vocale par un lecteur d’écran**.
 •	Assurez-vous de la signification exacte des émojis que vous utilisez pour éviter incompréhensions ou contresens : vérifier ce qui sera lu par un lecteur d’écran grâce à [Emojipedia](https://emojipedia.org/).
 •	Ne mettez pas plusieurs émojis identiques d’affilée.
 
 ##	Employez la couleur de manière accessible
-Profils concernés : <img alt="" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" /> ,  <img alt="" src="/images/icons/solaris/accessibility_cognitive.svg" width="100" height="100" />
+Profils concernés : <img alt="Personne en situation de handicap visuel" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" /> ,  <img alt="Personne en situation de handicap cognitif" src="/images/icons/solaris/accessibility_cognitive.svg" width="100" height="100" />
 
 ### Assurez-vous d’un niveau de contraste suffisant entre la couleur de votre texte et celle de son arrière-plan
 Rappel du contenu du fichier Excel “Correspondance tests Va11ydette et handicaps - WCAG 2.2” :
@@ -138,7 +138,7 @@ Le respect de cette recommandation demande une vigilence toute particulière lor
 Rappel du contenu du fichier Excel “Correspondance tests Va11ydette et handicaps - WCAG 2.2” :
 <img alt="" src="/fr/contenu-et-communication/images/WCAG_Critere1_1_1.png" class="img-fluid" />
 
-Profils concernés : <img alt="" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" /> ,  <img alt="" src="/images/icons/solaris/accessibility_cognitive.svg" width="100" height="100" />
+Profils concernés : <img alt="Personne en situation de handicap visuel" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" /> ,  <img alt="Personne en situation de handicap cognitif" src="/images/icons/solaris/accessibility_cognitive.svg" width="100" height="100" />
 
 Pour qu’une personne déficiente visuelle puisse avoir accès à l’information donnée par les éléments non textuels présents dans votre document, vous devez **rédiger un texte de remplacement** pour chacun de ces éléments. Ce texte **sera lu par un lecteur d’écran**. Par « éléments non textuels », on désigne tout ce qui est images, émojis, graphiques SmartArt, formes, groupes d’éléments, graphiques, objets incorporés, entrées manuscrites et vidéos.
 
@@ -163,7 +163,7 @@ Rappel du contenu du fichier Excel “Correspondance tests Va11ydette et handica
 <img alt="" src="/fr/contenu-et-communication/images/WCAG_Critere2_4_4.png" class="img-fluid" />
 <img alt="" src="/fr/contenu-et-communication/images/WCAG_Critere2_4_9.png" class="img-fluid" />
 
-Profils concernés : <img alt="" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" /> ,  <img alt="" src="/images/icons/solaris/accessibility_cognitive.svg" width="100" height="100" />
+Profils concernés : <img alt="Personne en situation de handicap visuel" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" /> ,  <img alt="Personne en situation de handicap cognitif" src="/images/icons/solaris/accessibility_cognitive.svg" width="100" height="100" />
 
 - Rédigez le libellé d’un lien de manière à **décrire le contenu vers lequel pointe ce lien** et à indiquer les **informations pertinentes sur la cible du lien**. Par exemple,
 o	Si la cible du lien est **un site internet**, indiquez **son nom** dans le libellé. Par exemple, L'accessibilité numérique chez Orange
@@ -177,7 +177,7 @@ o	Si la cible du lien est **un document**, indiquez **son type et sa taille**. P
 **À prendre en compte** : « [Afficher des liens explicites](/fr/contenu-et-communication/checklist-incontournables.md) » fait partie des incontournables !
 
 ##	Évitez d’utiliser des tableaux complexes
-Profil concerné : <img alt="" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" />
+Profil concerné : <img alt="Personne en situation de handicap visuel" src="/images/icons/solaris/accessibility_vision.svg" width="100" height="100" />
 
 Les tableaux sont des composants difficilement compréhensibles pour les personnes non-voyantes qui utilisent un lecteur d’écran. Ils sont également difficiles à lire pour les personnes mal-voyantes qui utilisent une loupe.
  **Les tableaux sont** donc **à utiliser avec parcimonie !** Si vous devez néanmoins en utiliser, suivez les 2 recommandations suivantes :  
@@ -219,8 +219,6 @@ Le RGAA ne propose pas de règle spécifique sur la taille d’un QR code. Mais 
 
 ## Ressources externes
 
-- [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), <abbr title="direction interministérielle du numérique et du système d’information et de communication">DINSIC</abbr> (français).
+- Support Microsoft : [Rendre votre contenu accessible à tous](https://support.microsoft.com/fr-fr/office/rendre-votre-contenu-accessible-%C3%A0-tous-ecab0fcf-d143-4fe8-a2ff-6cd596bddc6d)
 
-- <a href="http://webaim.org/techniques/word/" hreflang="en">Accessibilité Word, WebAIM</a> (anglais).
-
-- Support Microsoft : [Rendre votre contenu accessible à tous](https://support.microsoft.com/fr-fr/office/rendre-votre-contenu-accessible-%C3%A0-tous-ecab0fcf-d143-4fe8-a2ff-6cd596bddc6d) (français)
+- [Créer des documents bureautiques accessibles](https://disic.github.io/guides-documents_bureautiques_accessibles/html/), <abbr title="Direction Interministérielle du NUMérique">DINUM</abbr>
