@@ -295,7 +295,7 @@ Correctement utilisé, il permet :
 * d'améliorer l'interopérabilité avec les navigateurs et les gestionnaires de mots de passe,
 * et de répondre à certaines exigences des WCAG concernant l'identification de la finalité des champs.
 
-Malgré cela, il reste encore **sous-utilisé ou mal implémenté dans de nombreux formulaires**.
+Malgré cela, il reste encore **sous-utilisé ou mal implémenté dans de nombreux formulaires**. La spécification HTML définit aujourd'hui plus de cinquante valeurs possibles pour l'attribut `autocomplete`. En pratique, seule une petite partie est couramment utilisée dans les formulaires.
 
 Prendre le temps de l'ajouter correctement constitue donc une amélioration rapide, à la fois pour l'ergonomie et pour l'accessibilité.
 
