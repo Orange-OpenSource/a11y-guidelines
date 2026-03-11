@@ -286,7 +286,7 @@ Cette pratique est souvent inutile et parfois ignorée par les navigateurs.
 
 ## Conclusion
 
-L'attribut `autocomplete` est un mécanisme simple mais puissant pour améliorer l'expérience utilisateur des formulaires.
+L'attribut `autocomplete` illustre bien une idée simple : une petite information sémantique peut avoir un impact important sur l'expérience utilisateur et l'accessibilité.
 
 Correctement utilisé, il permet :
 
