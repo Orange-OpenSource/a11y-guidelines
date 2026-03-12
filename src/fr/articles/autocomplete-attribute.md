@@ -75,7 +75,7 @@ Il est important de noter que :
 * ce critère **ne s'applique qu'à certains types de données personnelles** prédéfinies par la spécification HTML
 * et uniquement **lorsque ces données sont demandées à l'utilisateur**.
 
-*Remarque :* pour les champs dont la finalité n'est pas couverte par les `autofill-tokens` (par exemple : champ de recherche libre, zone de texte pour un commentaire) n'ont pas besoin de cet attribut, ou ne devraient pas utiliser une valeur inappropriée.
+*Remarque :* les champs dont la finalité n'est pas couverte par les `autofill-tokens` (par exemple : champ de recherche libre, zone de texte pour un commentaire) n'ont pas besoin de cet attribut, ou ne devraient pas utiliser une valeur inappropriée.
 
 L'utilisation de `autocomplete` ne remplace évidemment pas :
 
