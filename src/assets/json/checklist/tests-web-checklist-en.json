@@ -70,7 +70,7 @@
 	"IDorigin": "testWebID-16"
 }, { 
 	"themes": "Colors and contrasts",
-	"title": "Make sure the color is not used as the only means of conveying information.",
+	"title": "Make sure the color is not used as the only means of conveying information",
 	"type": ["Manual test"],
 	"tests": ["Identify elements using color to convey information (active page, selected tab, form fields with errors, links not underlined, etc.)."],
 	"verifier": ["Color is not the only means of conveying information: at least one other visual method is available to obtain the same information."], 
