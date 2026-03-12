@@ -16,7 +16,7 @@
 	"themes": "Textual content",
 	"title": "Give headings to sections of content",
 	"type": ["Bookmarklet"],
-	"tests": ["Install the <a href='https://pauljadam.com/bookmarklets/headings.html'>bookmarklet Headings</a> by dragging it or saving it in your browser's bookmarks bar and running the bookmarklet."],
+	"tests": ["Install the <a href=\"javascript:(function(){document.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/headings.js';var iframes=document.getElementsByTagName('iframe');for(i=0;i<iframes.length;i++){iframes[i].contentDocument.body.appendChild(document.createElement('script')).src='https://cdn.jsdelivr.net/gh/pauljadam/bookmarklets@master/headings.js';}})();\">bookmarklet Headings</a> by dragging it or saving it in your browser's bookmarks bar and running the bookmarklet."],
 	"verifier": ["Headings are relevant and not empty.", "Headings follow each other in a logical sequence (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags) so they reflect the importance and hierarchy visible on the screen (like a table of contents)."],
 	"resultat": ["All content, visually treated as headings, has a heading semantics (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags).", "Headings are set in a logical way."],
 	"exception": "Do not take into account hidden headings (<code>visibility:hidden</code>, <code>aria-hidden='true'</code> or <code>display:none</code>). If one of these masked headings is likely to appear, observations on the new structure of the headings must be made again.",
