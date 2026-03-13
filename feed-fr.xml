@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2026-02-27T00:00:00Z</updated>
+  <updated>2026-03-13T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Exemple de menu déroulant</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/menu-deroulant/"/>
+    <updated>2026-03-13T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/menu-deroulant/</id>
+    <content xml:lang="fr" type="html">Créer un menu déroulant accessible.</content>
+  </entry>
   
   <entry>
     <title>Gestion dynamique du focus</title>
@@ -585,14 +593,6 @@
     <updated>2018-02-07T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/</id>
     <content xml:lang="fr" type="html">Notre point de vue sur les CAPTCHAs et l&#39;accessibilité</content>
-  </entry>
-  
-  <entry>
-    <title>Exemple de menu déroulant</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/menu-deroulant/"/>
-    <updated>2018-01-17T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/menu-deroulant/</id>
-    <content xml:lang="fr" type="html">Créer un menu déroulant accessible.</content>
   </entry>
   
   <entry>
