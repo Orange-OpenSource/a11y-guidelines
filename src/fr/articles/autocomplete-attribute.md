@@ -1,5 +1,5 @@
 ---
-title: "L'attribut HTML autocomplete : comprendre et utiliser correctement l'autoremplissage des formulaires"
+title: "L'attribut HTML autocomplete : comprendre et utiliser correctement l'autocomplétion des formulaires"
 abstract: "Souvent oublié, l'attribut autocomplete améliore pourtant l'accessibilité et l'ergonomie des formulaires."
 titleBeforeTag: true
 date: "2026-04-17"
@@ -106,7 +106,7 @@ Ces valeurs peuvent être regroupées en plusieurs catégories.
 
 ### 1. Valeurs générales : `on` et `off`
 
-Les valeurs `on` et `off` permettent d'activer ou de désactiver l'autoremplissage.
+Les valeurs `on` et `off` permettent d'activer ou de désactiver l'autocomplétion.
 
 Exemple :
 
@@ -121,7 +121,7 @@ ou :
 ```
 
 Cependant, la spécification précise que **les navigateurs peuvent ignorer la valeur `off` dans certains cas**, notamment pour les champs liés à l'authentification.
-Il est crucial de noter que l'utilisation de `autocomplete="off"` doit être réservée à des cas très spécifiques et justifiés, car elle peut dégrader l'expérience utilisateur et l'accessibilité en empêchant l'autocomplétion pour des champs où elle serait bénéfique.
+Il est crucial de noter que l'utilisation de `autocomplete="off"` peut dégrader l'expérience utilisateur et l'accessibilité en empêchant l'autocomplétion pour des champs où elle serait bénéfique.
 
 L'usage de `autocomplete="off"` doit être réservé à des cas très spécifiques où la prédiction d'une valeur n'a aucun sens ou pourrait nuire à la sécurité, comme par exemple :
 * un champ de saisie d'un code à usage unique (OTP)
@@ -343,7 +343,7 @@ La valeur ne correspond pas à la donnée demandée.
 
 3. **Utilisation excessive de `autocomplete="off"`** :
   - **Impact** : pratique souvent inutile, parfois ignorée par les navigateurs, et qui prive certains utilisateurs d'une fonctionnalité importante pour l'accessibilité.
-  - **Solution** : limiter `autocomplete="off"` aux cas réellement justifiés (OTP, champs très sensibles ou sans bénéfice d'autoremplissage) et laisser l'autocomplétion active partout ailleurs.
+  - **Solution** : limiter `autocomplete="off"` aux cas réellement justifiés (OTP, champs très sensibles ou sans bénéfice d'autocomplétion) et laisser l'autocomplétion active partout ailleurs.
 
 4. **Ignorer les sections** :
   - **Impact** : les navigateurs et gestionnaires de mots de passe peuvent avoir plus de mal à distinguer plusieurs ensembles de données (par exemple plusieurs adresses ou plusieurs personnes) dans un même formulaire.
