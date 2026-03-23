@@ -3,7 +3,7 @@ title: "Handling keyboard navigation for ARIA"
 abstract: "Handling keyboard navigation is one of the mainstays of the W3C WAI ARIA recommendations"
 titleBeforeTag: true
 date: "2018-01-16"
-updateDate: "2026-01-01"
+updateDate: "2026-03-27"
 tags:
   - component
 ---

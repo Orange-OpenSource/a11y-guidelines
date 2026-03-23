@@ -3,7 +3,7 @@ title: "Gestion de la navigation au clavier avec ARIA"
 abstract: "Gérer la navigation au clavier avec ARIA et les patrons de conception"
 titleBeforeTag: true
 date: "2018-01-16"
-updateDate: "2026-01-01"
+updateDate: "2026-03-27"
 tags:
   - component
 ---
