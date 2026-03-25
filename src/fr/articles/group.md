@@ -36,7 +36,7 @@ On peut utiliser le rôle `group` avec n'importe quel groupe d'éléments liés 
 Pour un panneau de commande pour la lecture d'un podcast, il est judicieux de mettre un `group` autour des boutons de contrôle de la lecture du son, c'est bien un groupe logique identifiable visuellement et donc a identifier pour les AT.
 
 ```html
-<div role="group" aria-label="Contrôleur son du Podcast">
+<div role="group" aria-label="Contrôleur son du podcast">
     <button>Lire</button>
     <button>Pause</button>
     <button>Stop</button>
