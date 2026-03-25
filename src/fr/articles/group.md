@@ -86,4 +86,3 @@ Dans un menu applicatif, on peut utiliser le rôle `group` pour grouper les diff
 landmark
 infos importante
 
-###
