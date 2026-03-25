@@ -10,7 +10,7 @@ tags:
 
 ## Le rôle `group`
 
-C'est un des rôles présent dans la spécification ARIA 1.3 ([le rôle `group` dans la spécification ARIA](https://www.w3.org/TR/wai-aria-1.3/#group)). Il fait partie des rôles de structure de document.
+C'est l'un des rôles présent dans la spécification ARIA 1.3 ([le rôle `group` dans la spécification ARIA](https://www.w3.org/TR/wai-aria-1.3/#group)). Il fait partie des rôles de structure de document.
 
 ### À quoi sert le rôle `group`&nbsp;?
 
