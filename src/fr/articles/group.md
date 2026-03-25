@@ -25,7 +25,7 @@ Le support est plutôt bon, exception faite des environnements mobiles ([support
 
 #### Pour des éléments de formulaire
 
-Le rôle `group` est tout indiquer pour jouer le rôle équivalent de `Fieldset` pour des éléments de formulaire quand on ne peut faire autrement.
+Le rôle `group` est tout indiqué pour jouer le rôle équivalent de `fieldset` pour des éléments de formulaire quand on ne peut faire autrement.
 
 #### Pour d'autres éléments
 
