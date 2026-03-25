@@ -82,7 +82,7 @@ Dans un menu applicatif, on peut utiliser le rôle `group` pour grouper les diff
 - Si on utilise le rôle `group`, il est aussi intéressant de donner une indication visuelle également du groupage.
 - On peut imbriquer des rôles `group` mais attention au risque de grande verbosité.
 
-### Mauvaises Utilisations
+### Mauvaises utilisations
 landmark
 infos importante
 
