@@ -197,20 +197,20 @@
             
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-156" aria-labelledby="heading-156">#</a></h2>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-1" aria-labelledby="heading-1">#</a></h2>
 <p>We saw in the first part how to <a href="../part1/">structure your form</a> while respecting accessibility criteria.</p>
 <p>In this second part, we will make it easier for the user to enter the fields and set up an error management system when validating our form.</p>
 <p>We will continue to base our examples on our Part 1 registration form.</p>
 <p>In this example, we are using <a href="http://boosted.orange.com/">the Boosted library</a> which is the web version of our <a href="https://system.design.orange.com/">Orange Design System (ODS)</a>. This allows you to obtain forms whose design complies with the Orange charter.</p>
-<h2 id="submitting-a-form" class="h2-focus">Submitting a form <a class="header-anchor" href="#submitting-a-form" id="heading-157" aria-labelledby="heading-157">#</a></h2>
-<h3 id="required-field">Required Field <a class="header-anchor" href="#required-field" id="heading-158" aria-labelledby="heading-158">#</a></h3>
+<h2 id="submitting-a-form" class="h2-focus">Submitting a form <a class="header-anchor" href="#submitting-a-form" id="heading-2" aria-labelledby="heading-2">#</a></h2>
+<h3 id="required-field">Required Field <a class="header-anchor" href="#required-field" id="heading-3" aria-labelledby="heading-3">#</a></h3>
 <p>In forms, it is common for fields to be required. These fields should be made clear to users.</p>
 <p>To achieve this, several solutions exist:</p>
 <ul>
    <li>programmatically, you must use the <code>required</code> or <code>aria-required="true"</code> attribute in the <code>input</code> tag of our fields , using these attributes will allow assistive technologies (AT) to indicate that the field is required.</li>
    <li>users not using assistive technologies must also be informed that the field is mandatory; it is therefore necessary to add a visual identification that is not based solely on the color (for example, by explicitly mentioning "mandatory"). If this identification is not made via explicit text, for example, an asterisk (*), the meaning must be explained, such as, for example, "All mandatory fields are marked with an *", which will be placed beginning of the form.</li>
 </ul>
-<h4 id="example">Example <a class="header-anchor" href="#example" id="heading-159" aria-labelledby="heading-159">#</a></h4>
+<h4 id="example">Example <a class="header-anchor" href="#example" id="heading-4" aria-labelledby="heading-4">#</a></h4>
 <p>In our registration example, several fields can be considered mandatory in order to validate your registration: email, password, first name and last name.</p>
 <p>They must therefore be specified to users.</p>
 <div class="col-md-8">
@@ -287,7 +287,7 @@
   &lt;/div&gt;
   </code>
 </pre>
-<h3 id="error-management">Error management <a class="header-anchor" href="#error-management" id="heading-160" aria-labelledby="heading-160">#</a></h3>
+<h3 id="error-management">Error management <a class="header-anchor" href="#error-management" id="heading-5" aria-labelledby="heading-5">#</a></h3>
 <p>During validation, if mandatory fields are not filled in, or if the format of the data entered is not valid, the user must be informed.</p>
 <p>To achieve this, you need </p>
 <ul>
@@ -307,7 +307,7 @@
    <li>Provide the necessary instructions and be as specific as possible on the errors made in order to facilitate the filling of the fields by the users.</li>
    <li>Make sure errors are visually identifiable on the web page.</li>
 </ul>
-<h4 id="example-2">Example <a class="header-anchor" href="#example-2" id="heading-161" aria-labelledby="heading-161">#</a></h4>
+<h4 id="example-2">Example <a class="header-anchor" href="#example-2" id="heading-6" aria-labelledby="heading-6">#</a></h4>
 <p>In our registration example, several fields may be in error:</p>
 <ul>
    <li>For mandatory fields, it will be necessary to specify which mandatory field is in error</li>
@@ -418,7 +418,7 @@
    <li>Error messages are linked to the field using the <code>aria-describedby</code> or <code>aria-labelledby</code> attribute, which will allow assistive technologies to render the 'information</li>
    <li>The keyboard focus is put on the first field in error in order to be able to rescan the whole form</li>
 </ul>
-<h3 id="using-the-autocomplete-attribute">Using the autocomplete attribute <a class="header-anchor" href="#using-the-autocomplete-attribute" id="heading-162" aria-labelledby="heading-162">#</a></h3>
+<h3 id="using-the-autocomplete-attribute">Using the autocomplete attribute <a class="header-anchor" href="#using-the-autocomplete-attribute" id="heading-7" aria-labelledby="heading-7">#</a></h3>
 <p>The <code>autocomplete</code> attribute makes it easier to fill in fields that contain personal information. All fields whose type is listed in <a href="https://www.w3.org/TR/WCAG22/#input-purposes" lang="en">7. InputPurposes for User Interface Components</a> must contain the <code>autocomplete</code> attribute.</p>
 <p>In our example the fields below should have an <code>autocomplete</code> attribute:</p>
 <ul>
@@ -427,7 +427,7 @@
    <li>Name with <span lang="en"><code>autocomplete="name"</code></span></li>
    <li>First name with <span lang="en"><code>autocomplete="given-name"</code></span></li>
 </ul>
-<h2 id="complete-example" class="h2-focus">Complete example <a class="header-anchor" href="#complete-example" id="heading-163" aria-labelledby="heading-163">#</a></h2>
+<h2 id="complete-example" class="h2-focus">Complete example <a class="header-anchor" href="#complete-example" id="heading-8" aria-labelledby="heading-8">#</a></h2>
 <p>The full HTML and Javascript code that allowed us to make this accessible registration form.</p>
 <pre>
   <code class="html">
@@ -655,7 +655,7 @@
 })
   </code>
 </pre>
-<h2 id="link-to-part-one" class="h2-focus">Link to part one <a class="header-anchor" href="#link-to-part-one" id="heading-164" aria-labelledby="heading-164">#</a></h2>
+<h2 id="link-to-part-one" class="h2-focus">Link to part one <a class="header-anchor" href="#link-to-part-one" id="heading-9" aria-labelledby="heading-9">#</a></h2>
 <p><a href="../part1/">Form part 1 - Structure your form</a></p>
 
           </div>

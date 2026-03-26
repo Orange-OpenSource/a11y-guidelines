@@ -206,25 +206,25 @@
           <p>A <a href="https://developer.mozilla.org/en-US/docs/Glossary/SPA">single-page web application (SPA)</a> is a web application in which page refresh never occurs. During navigation, only portions of the page are dynamically updated using JavaScript code.</p>
 <p><abbr title="single page application">SPA</abbr>s have met with enthusiasm since the advent of JavaScript frameworks: Angular, React or Vue to name only the most popular. In this article, the idea is not to take sides for or against SPAs. It must be recognized that used correctly, this type of framework can solve problems, especially when it is used in the design of large web applications. We will focus here on the difficulties that this can bring in terms of accessibility.</p>
 <p><strong>Warning:</strong> <abbr title="single page applications">SPAs</abbr> should never become the norm. If your need can be met with the help of a standard site you don't need to succumb to the hype. A standard website natively offers accessibility support and spares you the need to get started with a complex framework, skills training, maintenance or compatibility problems with old browsers.</p>
-<h2 id="update-page-title" class="h2-focus">Update page title <a class="header-anchor" href="#update-page-title" id="heading-102" aria-labelledby="heading-102">#</a></h2>
+<h2 id="update-page-title" class="h2-focus">Update page title <a class="header-anchor" href="#update-page-title" id="heading-89" aria-labelledby="heading-89">#</a></h2>
 <p>Browsing through an <abbr title="single-page application">SPA</abbr> does not cause the browser to reload the page. No reloading means no modification of the page title (<code>title</code> tag). However, it is important that <a href="https://a11y-guidelines.orange.com/en/web/develop/textual-content/#set-a-title-for-each-page">each page has a unique title</a>.</p>
 <p>It will therefore be necessary to update the page title via Javascript (<code>document.title</code>). Refer to the documentation of the framework used to know if an implementation of this mechanism is proposed or if it must be created from scratch.</p>
-<h2 id="notify-user-of-page-changes" class="h2-focus">Notify user of page changes <a class="header-anchor" href="#notify-user-of-page-changes" id="heading-103" aria-labelledby="heading-103">#</a></h2>
+<h2 id="notify-user-of-page-changes" class="h2-focus">Notify user of page changes <a class="header-anchor" href="#notify-user-of-page-changes" id="heading-90" aria-labelledby="heading-90">#</a></h2>
 <p>Screen readers used by visually impaired people automatically inform the user when a new page is loaded by the browser. With a <abbr title="single-page application">SPA</abbr>, page changes do not lead the browser to reload, a screen reader therefore has no way of warning the user.</p>
 <p>An acceptable solution is to move the focus to the first heading <code>&lt;h1&gt;</code> of the current page. This will cause it to be read by the screen reader, so the user will be warned that a new page is displayed.<br>
 Note that by default an <code>&lt;h1&gt;</code> tag is not focusable. To allow it to receive focus via Javascript, you must add a <code>tabindex=&quot;-1&quot;</code> attribute to it.</p>
-<h2 id="notify-the-user-of-updates-inside-the-page" class="h2-focus">Notify the user of updates inside the page <a class="header-anchor" href="#notify-the-user-of-updates-inside-the-page" id="heading-104" aria-labelledby="heading-104">#</a></h2>
+<h2 id="notify-the-user-of-updates-inside-the-page" class="h2-focus">Notify the user of updates inside the page <a class="header-anchor" href="#notify-the-user-of-updates-inside-the-page" id="heading-91" aria-labelledby="heading-91">#</a></h2>
 <p>If some information is dynamically updated in the page (confirmation message, loading in progress, error display, etc., it is important to ensure that screen readers announce these changes. Several methods are available depending on the case:</p>
 <ul>
 <li>Move the focus to an element that has just been updated.</li>
 <li>Use ARIA as indicated in the following articles: <a href="https://a11y-guidelines.orange.com/en/articles/aria-status-messages/">Use ARIA for status messages</a> and <a href="https://a11y-guidelines.orange.com/en/articles/aria-live-alert/">The aria-live attribute and the role alert</a>.</li>
 </ul>
-<h2 id="move-focus" class="h2-focus">Move focus <a class="header-anchor" href="#move-focus" id="heading-105" aria-labelledby="heading-105">#</a></h2>
+<h2 id="move-focus" class="h2-focus">Move focus <a class="header-anchor" href="#move-focus" id="heading-92" aria-labelledby="heading-92">#</a></h2>
 <p>On a classic website, when a user clicks on a link and a new page is displayed, the focus is automatically moved to the top of the page (on the <code>body</code>). So, for users who navigate using the keyboard, just use the <code>TAB</code> key to move around the page.</p>
 <p>In a <abbr title="single-page application">SPA</abbr>, if a user clicks on a button that causes a content update, the focus is not moved (it remains on the button).<br>
 More importantly, if the page change makes the focused element disappear, the user will no longer know where he is on the page. This can also cause vocalization issues for screen reader users.</p>
 <p>It is therefore important to make sure to move the focus via Javascript when necessary. Likewise, if a modal dialog box is displayed on the screen, the focus must be positioned in the modal when it appears and then returned to the trigger element (a button for example) when it disappears.</p>
-<h2 id="use-html5-semantics" class="h2-focus">Use HTML5 semantics <a class="header-anchor" href="#use-html5-semantics" id="heading-106" aria-labelledby="heading-106">#</a></h2>
+<h2 id="use-html5-semantics" class="h2-focus">Use HTML5 semantics <a class="header-anchor" href="#use-html5-semantics" id="heading-93" aria-labelledby="heading-93">#</a></h2>
 <p><Abbr title="single-page application">SPA</abbr> are often used in web applications. Sometimes the user has to deal with an interface that looks more like a native application than a website. It is important to ensure that the different areas are correctly identified: navigation, content, search area, etc.</p>
 <p>If your application has specific areas, it is recommended to assign them a <code>label</code> so that they are quickly identifiable. For example using a <code>&lt;region&gt;</code> tag and an <code>aria-label</code> or<code> aria-labelledby</code> attribute.</p>
 <pre><code class="html">
@@ -238,7 +238,7 @@ More importantly, if the page change makes the focused element disappear, the us
 &lt;/div&gt;
 </code></pre>
 <p>See the article: <a href="https://a11y-guidelines.orange.com/en/web/components-examples/landmarks/">Landmarks ARIA</a>, to get more information on the use of these tags.</p>
-<h2 id="manage-browser-history" class="h2-focus">Manage browser history <a class="header-anchor" href="#manage-browser-history" id="heading-107" aria-labelledby="heading-107">#</a></h2>
+<h2 id="manage-browser-history" class="h2-focus">Manage browser history <a class="header-anchor" href="#manage-browser-history" id="heading-94" aria-labelledby="heading-94">#</a></h2>
 <p>Nothing could be more annoying than exiting an application when you simply wanted to return to the previous page using the browser's <code>previous</code> button. However, this is what sometimes happens in <abbr title="single-page application">SPA</abbr>.</p>
 <p>The solution is to manipulate the browser history in Javascript using the <a href="https://developer.mozilla.org/en/docs/Web/API/History_API">History API</a>. This allows you to store the different states of the application and return to them using the <code>previous</code> and <code>next</code> buttons of the browser.</p>
 <h2>Summary of good practices</h2>
@@ -250,7 +250,7 @@ More importantly, if the page change makes the focused element disappear, the us
 <li>Use HTML5 semantics</li>
 <li>Manage browser history (History API)</li>
 </ul>
-<h2 id="useful-links" class="h2-focus">Useful links <a class="header-anchor" href="#useful-links" id="heading-108" aria-labelledby="heading-108">#</a></h2>
+<h2 id="useful-links" class="h2-focus">Useful links <a class="header-anchor" href="#useful-links" id="heading-95" aria-labelledby="heading-95">#</a></h2>
 <ul>
 <li><a href="https://dev.to/s_aitchison/page-titles-and-a11y-in-single-page-applications-esp-react-vue-4ok8">Page Titles and A11y in Single Page Applications (Suzanne Aitchison)</a></li>
 <li><a href="https://www.gatsbyjs.com/blog/2019-07-11-user-testing-accessible-client-routing/">What we learned from user testing of accessible client-side routing techniques with Fable Tech Labs (Marcy Sutton)</a></li>

@@ -196,9 +196,9 @@
             
           
           <div class="mt-4">
-          <h2 id="message-de-statut-et-accessibilite" class="h2-focus">Message de statut et accessibilité <a class="header-anchor" href="#message-de-statut-et-accessibilite" id="heading-261" aria-labelledby="heading-261">#</a></h2>
+          <h2 id="message-de-statut-et-accessibilite" class="h2-focus">Message de statut et accessibilité <a class="header-anchor" href="#message-de-statut-et-accessibilite" id="heading-389" aria-labelledby="heading-389">#</a></h2>
 <p>Le critère <a lang="en" href="https://www.w3.org/TR/WCAG22/#status-messages">4.1.3 Status Messages</a> des WCAG 2.1 demande que les informations importantes pour l'utilisateur, qui n'induisent pas de changement de contexte (pas d'ouverture d'une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu ou du <span lang="en">viewport</span>), soient perçues via des propriétés et rôles (<abbr>ARIA</abbr>) par toute personne utilisant une <abbr>AT</abbr> sans prise de focus sur le message.</p>
-<h2 id="quelques-exemple-de-messages-detat-de-statut-ou-contextuels" class="h2-focus">Quelques exemple de messages d'état, de statut ou contextuels <a class="header-anchor" href="#quelques-exemple-de-messages-detat-de-statut-ou-contextuels" id="heading-262" aria-labelledby="heading-262">#</a></h2>
+<h2 id="quelques-exemple-de-messages-detat-de-statut-ou-contextuels" class="h2-focus">Quelques exemple de messages d'état, de statut ou contextuels <a class="header-anchor" href="#quelques-exemple-de-messages-detat-de-statut-ou-contextuels" id="heading-390" aria-labelledby="heading-390">#</a></h2>
 <p>Lorsqu'un utilisateur appuie sur un bouton de recherche, le contenu de la page est mis à jour asynchronement pour ajouter les résultats de la recherche  affichés dans une région située sous le bouton de recherche. Le message &quot;XX résultats trouvés&quot; est en haut de ce nouveau contenu. Un lecteur d'écran devra annoncer &quot;XX résultats ont été trouvés&quot;. Dans ce cas, l'information fournie à l'utilisateur est important et doit être immédiatement donnée, donc on utilisera le rôle <code>&quot;alert&quot;</code>.</p>
 <pre><code class="language-html">&lt;h2 role=&quot;alert&quot;&gt;
     5 résultats ont été trouvés
@@ -243,7 +243,7 @@
 &lt;/div&gt;
 </code></pre>
 <p>Parfois, on veut fournir des messages que pour les lecteurs d'écran, donc, sans avoir besoin de les afficher visuellement. Dans ce cas aussi, il faut utiliser ces rôles <abbr>ARIA</abbr> pour pousser le message au <abbr>AT</abbr> et en particulier aux lecteurs d'écran sans les afficher à l'écran.</p>
-<h2 id="les-messages-de-statut-qui-nen-sont-pas" class="h2-focus">Les messages de statut qui n'en sont pas ! <a class="header-anchor" href="#les-messages-de-statut-qui-nen-sont-pas" id="heading-263" aria-labelledby="heading-263">#</a></h2>
+<h2 id="les-messages-de-statut-qui-nen-sont-pas" class="h2-focus">Les messages de statut qui n'en sont pas ! <a class="header-anchor" href="#les-messages-de-statut-qui-nen-sont-pas" id="heading-391" aria-labelledby="heading-391">#</a></h2>
 <p>La règle de base est que si le focus est déplacé ou que le contexte est restitué aux utilisateur d'<abbr>AT</abbr>, ce n'est pas un message de statut :</p>
 <ul>
 <li>une modale qui demande une action utilisateur, sur laquelle le focus est donc mis</li>
