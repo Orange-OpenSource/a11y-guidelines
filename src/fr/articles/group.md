@@ -10,12 +10,12 @@ tags:
 
 ## Le rôle `group`
 
-C'est l'un des rôles présent dans la spécification ARIA 1.3 ([le rôle `group` dans la spécification ARIA](https://www.w3.org/TR/wai-aria-1.3/#group)). Il fait partie des rôles de structure de document.
+C'est l'un des rôles présents dans la spécification ARIA ([le rôle `group` dans la spécification ARIA 1.3](https://www.w3.org/TR/wai-aria-1.3/#group)). Il fait partie des rôles de structure de document.
 
 ### À quoi sert le rôle `group`&nbsp;?
 
-Il va permettre de grouper des éléments de la page qui doivent être traités comme une seule et même entité. En fait, grouper des éléments qui ont la même finalité, la même fonction, un but commun.
-Il est un bon moyen de passer l'information de structure et de relation qu'est un groupe aux AT (aide technique) autrement que par un indicateur seulement visuel.
+Il permet de grouper des éléments de la page qui doivent être traités comme une seule et même entité. En fait, grouper des éléments qui ont la même finalité, la même fonction, un but commun.
+C'est un bon moyen de passer l'information de structure et de relation qu'est un groupe aux AT (aide technique) autrement que par un indicateur seulement visuel.
 
 ### Support dans les AT
 
@@ -33,7 +33,7 @@ On peut utiliser le rôle `group` avec n'importe quel groupe d'éléments liés 
 
 #### Exemples
 
-Pour un panneau de commande pour la lecture d'un podcast, il est judicieux de mettre un `group` autour des boutons de contrôle de la lecture du son, c'est bien un groupe logique identifiable visuellement et donc a identifier pour les AT.
+Pour un panneau de contérôle de la lecture d'un podcast, il est judicieux de mettre un `group` autour des boutons de contrôle de la lecture du son, c'est bien un groupe logique identifiable visuellement et donc a identifier pour les AT.
 
 ```html
 <div role="group" aria-label="Contrôleur son du podcast">
@@ -47,9 +47,9 @@ Ici, on s'assure que l'information sur l'existence du groupe image et légende e
 
 ```html
 <figure aria-labelledby="opera_1" role="group">
-  <img src="/operabatiment.jpg" alt="L'opéra Garnier Paris, France">
+  <img src="/operabatiment.jpg" alt="L'opéra Garnier, Paris, France">
   <figcaption id="opera_1">
-    Une représentation du <cite>Barbier de  Séville</cite> à laquelle j'assistais (Nov 2022)&nbsp;!
+    Une représentation du <cite>Barbier de Séville</cite> à laquelle j'assistais (Nov 2022)&nbsp;!
   </figcaption>
 </figure>
 ```
@@ -78,11 +78,11 @@ Dans un menu applicatif, on peut utiliser le rôle `group` pour grouper les diff
 
 - Il faut nommer via `aria-label` ou `aria-labelledby`, lorsque nécessaire à la compréhension, toute balise avec un`role="group"`.
 - Ne pas utiliser de `role="group"` à la place de landmark ou balises de structure de page HTML5.
-- Le rôle `group` amenant une augmentation de la charge cognitive pour l'utilisateur, il est à utiliser avec parcimonie et discrétion et donc réservé à des cas réellement nécessaires.
-- Si on utilise le rôle `group`, il est aussi intéressant de donner une indication visuelle également du groupage.
-- On peut imbriquer des rôles `group` mais attention au risque de grande verbosité.
+- Le rôle `group` entraine une augmentation de la charge cognitive pour l'utilisateur, il est à utiliser avec parcimonie et discrétion et donc réservé à des cas vraiment nécessaires.
+- Si on utilise le rôle `group`, il est aussi intéressant de donner une indication visuelle également du groupage. À l'instar de la bordure générée par un `fieldset` autour d'éléments de formulaire mais on peut imaginer d'autres indices visuels.
+- On peut imbriquer des rôles `group` mais, attention au risque de grande verbosité.
 
-### Mauvaises utilisations
-landmark
-infos importante
+## Conclusion
+
+Les bonnes pratiques de conception d'interface demandent que les éléments faisant partie d'une même unité fonctionnelle ou regroupés car portant le même type de fonction doivent être visuellement groupés. Il en est de même, si cela est nécessaire à la bonne compréhension de l'interface, pour les AT et donc au niveau programmatique. Cela est possible via l'attribut ARIA `role="group"`. Même si son support parmi les couples AT/agent utilisateur n'est pas ubiquitaire, n'hésitez pas à en user.
 
