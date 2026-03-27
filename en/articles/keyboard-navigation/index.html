@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
-    <meta name="description" content="Handling keyboard navigation is one of the mainstays of the W3c WAI ARIA recommendations">
+    <meta name="description" content="Handling keyboard navigation is one of the mainstays of the W3C WAI ARIA recommendations">
     
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Introduction</a><a href="#" class="dropdown-item text-wrap">Design patterns</a><a href="#" class="dropdown-item text-wrap">TabIndex</a><a href="#" class="dropdown-item text-wrap">Design Patterns</a><a href="#" class="dropdown-item text-wrap">User tests</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#aria-and-keyboard-interactions" class="dropdown-item text-wrap">ARIA and keyboard interactions</a><a href="#tabindex" class="dropdown-item text-wrap">tabindex</a><a href="#design-patterns" class="dropdown-item text-wrap">Design patterns</a><a href="#user-testing" class="dropdown-item text-wrap">User testing</a></div>
     </nav>
         
       </div>
@@ -187,34 +187,43 @@
 
             <p class="text-muted mb-0">
               <span class="visually-hidden">Publication date</span>
-              <time datetime="2018-01-16T00:00:00.000Z">
-                January 16, 2018
+              <time datetime="2026-03-27T00:00:00.000Z">
+                March 27, 2026
               </time>
             </p>
 
             
+              <p class="text-muted mb-0">
+                Update of the article from
+                <time datetime="2018-01-16T00:00:00.000Z">
+                  January 16, 2018
+                </time>
+              </p>
+            
           
           <div class="mt-4">
-          
-<h2>Introduction</h2>
-<p>Handling keyboard navigation is one of the mainstays of the <abbr>W3c</abbr>/<abbr>WAI</abbr> <abbr>ARIA</abbr> recommendations (Accessible Rich Internet Application). The goal is to standardize keyboard navigation in each interface components on a web page.<br />
-Generally, keyboard navigation between <abbr>UI</abbr> components (widgets) is “classically” done by tabbing. However, inside a widget, keyboard navigation has to be fine-tuned following the design patterns that are part of the <abbr>ARIA</abbr> recommendation.</p>
-
-<h2>Design patterns</h2>
-
-<h3>TabIndex</h3>
-<p>In HTML5, <abbr>ARIA</abbr> makes `tabindex` available to all visible elements and allows the use of:</p>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-1" aria-labelledby="heading-1">#</a></h2>
+<p>Handling keyboard navigation is one of the mainstays of the W3C/WAI <abbr>ARIA</abbr> recommendations (Accessible Rich Internet Applications). The goal is to standardize keyboard navigation in each interface component on a web page.<br>
+Generally, keyboard navigation between UI components is done by tabbing. However, inside a widget, keyboard navigation must be fine‑tuned by following the design patterns that are part of the ARIA recommendation.</p>
+<h2 id="aria-and-keyboard-interactions" class="h2-focus">ARIA and keyboard interactions <a class="header-anchor" href="#aria-and-keyboard-interactions" id="heading-2" aria-labelledby="heading-2">#</a></h2>
+<h3 id="tabindex">tabindex <a class="header-anchor" href="#tabindex" id="heading-3" aria-labelledby="heading-3">#</a></h3>
+<p>In HTML5, the global attribute <code>tabindex</code> can be used on most rendered elements. It allows the following uses:</p>
 <ul>
-<li>a negative value (`-1`) for components that must not be accessible with keyboard navigation, but can receive focus programmatically;</li>
-<li>a value set to `0`, which allows the element to receive the focus like all natively focusable elements.</li>
+<li>a negative value (<code>tabindex=&quot;-1&quot;</code>) which removes the element from the sequential tab order (it is not reachable via the <kbd>Tab</kbd> key), but it can receive focus programmatically (for example <code>element.focus()</code>) or with a click;</li>
+<li>a value of <code>tabindex=&quot;0&quot;</code> which allows the element to enter the natural tab order and receive focus like natively focusable elements.</li>
 </ul>
-<h3>Design Patterns</h3>
-<p>In <abbr>ARIA</abbr>, the main goal is to standardize keyboard interactions by making keyboard navigation identical to a desktop application (“thick client”). It is therefore necessary to implement the keyboard behaviour on each widget according to its type (accordion, navigation bar, tool bar, potentiometer...) by following [<abbr>ARIA</abbr>design patterns](https://www.w3.org/WAI/ARIA/apg/patterns/). In addition to that, design patterns also give a way to implement the <abbr>ARIA</abbr> properties and states in order to make the widget accessible depending on its type.</p>
-<h3>User tests</h3>
-<p>To validate the usability for people with disabilities and the robustness according to user agents (assistive aids and browsers), the web site must be tested at least by screen reader users (this is the most affected population by wrong implementation of design patterns).</p>
-<p>In any case, you have to test developments in a combination of target environments (browsers/assistive technologies combination). This is a tough but absolutely necessary task for complex cases because on a web site or a traditional web application, you must, at least, test with Safari/VoiceOver, Internet Explorer/Jaws and Firefox/NVDA.</p>
-
-<p> These user tests will allow you to validate that your widget is ergonomic which means that it is usable for this type of users and by extension for all users benefiting from accessibility (remember that 15% of the total population is said to have a disability of some sort or other).</p>
+<p>Avoid using positive <code>tabindex</code> values (&gt; 0) except in very well‑justified cases: they change the tab order and are hard to maintain.</p>
+<h3 id="design-patterns">Design patterns <a class="header-anchor" href="#design-patterns" id="heading-4" aria-labelledby="heading-4">#</a></h3>
+<p>With ARIA, the main goal is to standardize keyboard interactions by making keyboard navigation similar to that of a desktop application. For each component, implement keyboard behaviour according to its type (accordion, navigation menu, toolbar, slider, etc.) by referring to the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/">ARIA design patterns</a>. In addition to keyboard navigation, these design patterns describe how to implement ARIA properties and states to make a component accessible depending on its type.</p>
+<h3 id="user-testing">User testing <a class="header-anchor" href="#user-testing" id="heading-5" aria-labelledby="heading-5">#</a></h3>
+<p>To validate usability for people with disabilities and robustness with user agents (assistive technologies and browsers), it is recommended to have your components tested by people who use screen readers, at minimum. Test your developments on the target environments (browser + assistive technology combinations). This is a substantial but essential effort. At minimum, test with the following combinations:</p>
+<ul>
+<li>macOS: Safari + VoiceOver</li>
+<li>Windows (Chromium): Chrome/Edge + NVDA</li>
+<li>Windows (Chromium): Chrome/Edge + JAWS (if your users rely on it)</li>
+<li>Windows: Firefox + NVDA</li>
+</ul>
+<p>These user tests will allow you to validate that your widget is usable for these users and, by extension, for all users benefiting from accessibility. For reference, <a href="https://www.who.int/news-room/fact-sheets/detail/disability-and-health">16% of the world population has a disability according to <abbr>&gt;WHO</abbr> data</a>.</p>
 
           </div>
         </main>
@@ -224,12 +233,12 @@ Generally, keyboard navigation between <abbr>UI</abbr> components (widgets) is �
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">On this page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Design patterns</a>
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#aria-and-keyboard-interactions" class="nav-link text-muted">ARIA and keyboard interactions</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">TabIndex</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Design Patterns</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">User tests</a></li></ul></li>
+            <a href="#tabindex" class="nav-link text-muted">tabindex</a></li><li class="nav-item position-relative">
+            <a href="#design-patterns" class="nav-link text-muted">Design patterns</a></li><li class="nav-item position-relative">
+            <a href="#user-testing" class="nav-link text-muted">User testing</a></li></ul></li>
       </ul>
     </nav>
             </div>
@@ -268,7 +277,7 @@ Generally, keyboard navigation between <abbr>UI</abbr> components (widgets) is �
           </a>
         </li>
         <li class="nav-item ms-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/keyboard-navigation-aria/index.njk'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/keyboard-navigation.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
             Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>

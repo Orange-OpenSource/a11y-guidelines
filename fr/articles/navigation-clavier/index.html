@@ -2,11 +2,11 @@
 <html lang="fr" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
-    <title>Gestion de la navigation clavier avec ARIA - Recommandations accessibilité numérique Orange</title>
+    <title>Gestion de la navigation au clavier avec ARIA - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
-    <meta name="description" content="Gérer la navigation clavier avec ARIA et les design patterns">
+    <meta name="description" content="Gérer la navigation au clavier avec ARIA et les patrons de conception">
     
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -150,7 +150,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
-          Gestion de la navigation clavier avec ARIA
+          Gestion de la navigation au clavier avec ARIA
         </li>
       </ol>
 </nav>
@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Introduction</a><a href="#" class="dropdown-item text-wrap">Design patterns</a><a href="#" class="dropdown-item text-wrap">TabIndex</a><a href="#" class="dropdown-item text-wrap">Design Patterns</a><a href="#" class="dropdown-item text-wrap">Tests utilisateurs</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#aria-et-interactions-clavier" class="dropdown-item text-wrap">ARIA et interactions clavier</a><a href="#tabindex" class="dropdown-item text-wrap">tabindex</a><a href="#patrons-de-conception" class="dropdown-item text-wrap">Patrons de conception</a><a href="#tests-utilisateurs" class="dropdown-item text-wrap">Tests utilisateurs</a></div>
     </nav>
         
       </div>
@@ -174,7 +174,7 @@
         
         <main id="main-content" class="col-md-9" role="main">
           
-            <h1>Gestion de la navigation clavier avec ARIA</h1>
+            <h1>Gestion de la navigation au clavier avec ARIA</h1>
             
               <span class="visually-hidden" id="filters_label">
                 Thématiques associées :
@@ -187,42 +187,47 @@
 
             <p class="text-muted mb-0">
               <span class="visually-hidden">Date de parution</span>
-              <time datetime="2018-01-16T00:00:00.000Z">
-                16 janvier 2018
+              <time datetime="2026-03-27T00:00:00.000Z">
+                27 mars 2026
               </time>
             </p>
 
             
+              <p class="text-muted mb-0">
+                Mise à jour de l&#39;article du
+                <time datetime="2018-01-16T00:00:00.000Z">
+                  16 janvier 2018
+                </time>
+              </p>
+            
           
           <div class="mt-4">
-          
-<h2>Introduction</h2>
-<p>La gestion des interactions clavier est un des piliers de la recommandation <abbr>ARIA</abbr> (Accessible Rich Internet Application) du <abbr>W3C</abbr>/<abbr>WAI</abbr>.
-Le but est de standardiser la navigation clavier dans les composants d’interface d’une page.<br />
-Globalement, la navigation clavier entre les composants d’interface (widget) se fait «&nbsp;classiquement&nbsp;»
-en tabulant. En revanche, à l’intérieur d’un widget, la navigation clavier va être gérée finement
-en respectant les <i lang="en">design patterns</i> qui sont partie intégrante de la recommandation <abbr>ARIA</abbr>.</p>
-
-<h2><i lang="en">Design patterns</i></h2>
-
-<h3>TabIndex</h3>
-<p>En <abbr>HTML5</abbr>, <abbr>ARIA</abbr> étend l’attribut <code>tabindex</code> à tous les éléments visibles et autorise l’utilisation&nbsp;:</p>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-6" aria-labelledby="heading-6">#</a></h2>
+<p>La gestion des interactions au clavier est l'un des piliers de la recommandation <span lang="en">Accessible Rich Internet Applications</span> (<abbr>ARIA</abbr>) du <abbr>W3C</abbr> (<span lang="en">World Wide Web Consortium</span>) / <abbr>WAI</abbr> (<span lang="en">Web Accessibility Initiative</span>).<br>
+L'objectif est de standardiser la navigation au clavier dans les composants d'interface d'une page.<br>
+Globalement, la navigation entre les composants d'interface se fait classiquement à l'aide de la touche <kbd>Tab</kbd>. À l'intérieur d'un composant, la navigation au clavier doit être gérée finement, selon les patrons de conception qui font partie intégrante de la recommandation <abbr>ARIA</abbr>.</p>
+<h2 id="aria-et-interactions-clavier" class="h2-focus">ARIA et interactions clavier <a class="header-anchor" href="#aria-et-interactions-clavier" id="heading-7" aria-labelledby="heading-7">#</a></h2>
+<h3 id="tabindex">tabindex <a class="header-anchor" href="#tabindex" id="heading-8" aria-labelledby="heading-8">#</a></h3>
+<p>En <abbr>HTML5</abbr>, l'attribut global <code>tabindex</code> peut être utilisé sur la plupart des éléments rendus à l'écran. Il autorise notamment les usages suivants :</p>
 <ul>
-<li>d’une valeur négative (<code>-1</code>) pour les éléments ne devant pas être accessibles à la navigation au
-clavier (pas de prise de focus), mais pouvant recevoir le focus par programmation. </li>
-<li>d’une valeur à <code>0</code>, il permet à l’élément de recevoir le focus comme tout élément nativement focusable.</li>
+<li>d'une valeur négative (<code>tabindex=&quot;-1&quot;</code>) qui retire l'élément de l'ordre de tabulation séquentielle (il n'est pas atteignable au clavier via la touche <kbd>Tab</kbd>), mais il peut recevoir le focus par script (<code>element.focus()</code>) ou par un clic.</li>
+<li>d'une valeur <code>tabindex=&quot;0&quot;</code> qui permet à l'élément d'entrer dans l'ordre de tabulation naturel et de recevoir le focus comme les éléments nativement focusables.</li>
 </ul>
-<h3><i lang="en">Design Patterns</i></h3>
-<p>En <abbr>ARIA</abbr>, tout part d’un besoin d’homogénéiser les interactions clavier en demandant que la navigation clavier soit identique à une application <i lang="en">desktop</i> (client lourd).
-Il faut donc pour chaque widget implémenter l’interaction clavier selon son type (accordéon, barre de navigation,
-d’outils, potentiomètre…) en se reportant aux <i lang="en">design patterns</i> (https://www.w3.org/WAI/ARIA/apg/patterns/).
-En plus de la navigation clavier à implémenter les <i lang="en">design patterns</i> donnent aussi la manière de mettre en œuvre les propriétés et
-états <abbr>ARIA</abbr> pour rendre accessible son <i lang="en">widget</i> toujours en fonction de son type.</p>
-<h3>Tests utilisateurs</h3>
-<p>Pour valider l’utilisabilité pour les personnes en situation de handicap et la robustesse en fonction des agents utilisateurs (aides techniques et navigateurs), il faut faire tester par des utilisateurs de lecteurs d’écran, à minima (c’est la population la plus impactée par des problèmes d’implémentation des <i lang="en">design patterns</i>).</p>
-<p>Dans tous les cas, il faut tester les développements sur les environnements cibles (couple navigateurs/aides techniques). C’est un gros travail absolument nécessaire pour les cas complexes car sur un site ou une application internet classique, il faut, à minima, tester avec Safari/VoiceOver, Jaws/Internet Explorer et Firefox/<abbr>NVDA</abbr>.</p>
-
-<p>Ces tests utilisateurs vont vous permettre de valider que votre widget est ergonomique donc utilisable pour ce type d’utilisateurs et par extension pour l’ensemble des utilisateurs bénéficiant de l’accessibilité (pour rappel, 15% de la population totale).</p>
+<p>Évitez d'utiliser des valeurs <code>tabindex</code> positives (supérieures à 0) sauf cas très justifiés : elles modifient l'ordre de tabulation et sont difficiles à maintenir.</p>
+<h3 id="patrons-de-conception">Patrons de conception <a class="header-anchor" href="#patrons-de-conception" id="heading-9" aria-labelledby="heading-9">#</a></h3>
+<p>Avec <abbr>ARIA</abbr>, l'objectif est d'homogénéiser les interactions clavier en visant une navigation similaire à celle d'une application de bureau.<br>
+Il faut donc, pour chaque composant, implémenter l'interaction au clavier selon son type (accordéon, menu de navigation, barre d'outils, potentiomètre…) en se référant aux <a hreflang="en" href="https://www.w3.org/WAI/ARIA/apg/patterns/">patrons de conception</a>.<br>
+Outre la navigation au clavier à implémenter, les patrons de conception indiquent également comment mettre en œuvre les propriétés et états <abbr>ARIA</abbr> pour rendre un composant accessible, en fonction de son type.</p>
+<h3 id="tests-utilisateurs">Tests utilisateurs <a class="header-anchor" href="#tests-utilisateurs" id="heading-10" aria-labelledby="heading-10">#</a></h3>
+<p>Pour valider l'utilisabilité pour les personnes en situation de handicap et la robustesse vis‑à‑vis des agents utilisateurs (aides techniques et navigateurs), il est recommandé de faire tester vos composants par des personnes utilisant des lecteurs d'écran, au minimum.<br>
+Testez vos développements sur les environnements cibles (combinaisons navigateur et aide technique). C'est un travail conséquent mais indispensable : sur un site ou une application web, testez au minimum avec :</p>
+<ul>
+<li>macOS : Safari + VoiceOver</li>
+<li>Windows (Chromium) : Chrome/Edge + NVDA</li>
+<li>Windows (Chromium) : Chrome/Edge + JAWS (si vos utilisateurs l'utilisent)</li>
+<li>Windows : Firefox + NVDA</li>
+</ul>
+<p>Ces tests utilisateurs vont vous permettre de valider que votre composant est utilisable pour ce type d'utilisateurs et, par extension, pour l'ensemble des utilisateurs bénéficiant de l'accessibilité. Pour rappel, <a href="https://www.who.int/fr/news-room/fact-sheets/detail/disability-and-health">16 % de la population mondiale présente un handicap d'après les données de l'OMS</a>.</p>
 
           </div>
         </main>
@@ -232,12 +237,12 @@ En plus de la navigation clavier à implémenter les <i lang="en">design pattern
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Sur cette page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Design patterns</a>
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#aria-et-interactions-clavier" class="nav-link text-muted">ARIA et interactions clavier</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">TabIndex</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Design Patterns</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Tests utilisateurs</a></li></ul></li>
+            <a href="#tabindex" class="nav-link text-muted">tabindex</a></li><li class="nav-item position-relative">
+            <a href="#patrons-de-conception" class="nav-link text-muted">Patrons de conception</a></li><li class="nav-item position-relative">
+            <a href="#tests-utilisateurs" class="nav-link text-muted">Tests utilisateurs</a></li></ul></li>
       </ul>
     </nav>
             </div>
@@ -276,7 +281,7 @@ En plus de la navigation clavier à implémenter les <i lang="en">design pattern
           </a>
         </li>
         <li class="nav-item ms-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/navigation-clavier-avec-aria/index.njk'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/navigation-clavier.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
             Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
