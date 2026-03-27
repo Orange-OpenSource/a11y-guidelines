@@ -196,33 +196,33 @@
             
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-179" aria-labelledby="heading-179">#</a></h2>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-324" aria-labelledby="heading-324">#</a></h2>
 <p>The name of the interface components also called accessible name, is basically the name who will be exposed to assistive technology <abbr>AT</abbr> via the accessibility <abbr>API</abbr>. This name is calculated by the browser via an algorithm called <a href="https://www.w3.org/TR/accname-1.1/">Accessible Name and Description Computation 1.1</a>.<br>
 In fact, to make it simple, the browser will generate an accessible tree from the <abbr>DOM</abbr> (Document Object Model) in which a large majority of <abbr>HTML</abbr> elements (those with only a presentation purpose, eg <code>div</code> and<code> span</code> tags do not have utility) need a (accessible) name to be correctly identified by the <abbr>AT</abbr>.</p>
 <p>The accessible name is derived from the content of a tag, attributes of this tag or an element associated with it.</p>
-<h2 id="in-practice-how-does-it-work" class="h2-focus">In practice, how does it work? <a class="header-anchor" href="#in-practice-how-does-it-work" id="heading-180" aria-labelledby="heading-180">#</a></h2>
+<h2 id="in-practice-how-does-it-work" class="h2-focus">In practice, how does it work? <a class="header-anchor" href="#in-practice-how-does-it-work" id="heading-325" aria-labelledby="heading-325">#</a></h2>
 <p>The accessible name is, for example, announced by a screen reader when the focus is on this element but the role of the element is also added (link, graphic, button…).</p>
-<h3 id="access-to-the-accessible-name-via-the-browser">Access to the accessible name  via the browser <a class="header-anchor" href="#access-to-the-accessible-name-via-the-browser" id="heading-181" aria-labelledby="heading-181">#</a></h3>
+<h3 id="access-to-the-accessible-name-via-the-browser">Access to the accessible name  via the browser <a class="header-anchor" href="#access-to-the-accessible-name-via-the-browser" id="heading-326" aria-labelledby="heading-326">#</a></h3>
 <p>To access the (accessible) name, the easiest way is to use the tools of browsers.</p>
 <p>In Chrome, in Chrome dev tools (<kbd>Ctrl+ Shift + i</kbd>), inspect an element (&quot;Elements&quot; tab) and open the &quot;Accessibility&quot; panel instead of &quot;Style&quot; &quot;(usually on the right). Access to the &quot;Accessibility tree&quot; and in &quot;Computed properties&quot; you have to the &quot;Name&quot;, the accessible name of the item being inspected.</p>
 <p><img src="./images/chrome_name.png" alt="Panels of Chrome Development Tools with Open Accessibility Tree" class="img-fluid"></p>
 <p>In FireFox, in dev tools (<kbd>Ctrl+ Shift + i</kbd>), open the &quot;Accessibility&quot; tab (to display the &quot;Options&quot; of dev tools), inspect an element. You access the &quot;Name&quot;, the accessible name of the inspected item.</p>
 <p><img src="./images/FF_name.png" alt="Firefox Development Tool Panels with Open Accessibility Tab" class="img-fluid"></p>
-<h3 id="content-of-a-tag">Content of a tag <a class="header-anchor" href="#content-of-a-tag" id="heading-182" aria-labelledby="heading-182">#</a></h3>
+<h3 id="content-of-a-tag">Content of a tag <a class="header-anchor" href="#content-of-a-tag" id="heading-327" aria-labelledby="heading-327">#</a></h3>
 <p><code>&lt;a href=&quot;ducks.html&quot;&gt;plastic ducks&lt;/a&gt;</code></p>
 <p>Here, the name of the link is the content (text10) of it: &quot;plastic ducks&quot;. A screen reader user to take focus on this item will hear: &quot;plastic ducks link&quot;. For a voice command user, to click on this link, will say: &quot;click plastic ducks link&quot;.</p>
 <p>So an item of this type <code>&lt;button type=&quot;submit&quot;&gt;&lt;/button&gt;</code> without a title, will not be accessible, of course!</p>
 <p>Also, we can add the elements to give a name.</p>
 <p><code>&lt;button type=&quot;submit&quot;&gt;Buy &lt;img alt=&quot;the plastic duck&quot; src=&quot;duck.jpg&quot;&gt;&lt;/button&gt;</code></p>
 <p>This button will have an accessible name that is the content of the button: the textual title, &quot;Buy&quot; plus the &quot;alt&quot; of the image: &quot;the plastic duck&quot; therefore &quot;Buy the plastic duck&quot;.</p>
-<h3 id="associated-element">Associated element <a class="header-anchor" href="#associated-element" id="heading-183" aria-labelledby="heading-183">#</a></h3>
+<h3 id="associated-element">Associated element <a class="header-anchor" href="#associated-element" id="heading-328" aria-labelledby="heading-328">#</a></h3>
 <p>Moreover, for form elements, the accessible name is the <code>label</code> when it is programmatically associated with the element via the <code>for</code> attribute referencing the <code>id</code> of the field.</p>
 <pre> <code class="html">
 &lt;label for="search"&lt;Search&gt;/label&gt;
 &lt;input id="search" type="text"&gt;
 </code> </pre>
 <p>With this code, the screen reader will say: &quot;Search edit&quot;.</p>
-<h3 id="with-aria-too">With <abbr>ARIA</abbr> too! <a class="header-anchor" href="#with-aria-too" id="heading-184" aria-labelledby="heading-184">#</a></h3>
+<h3 id="with-aria-too">With <abbr>ARIA</abbr> too! <a class="header-anchor" href="#with-aria-too" id="heading-329" aria-labelledby="heading-329">#</a></h3>
 <p><abbr>ARIA</abbr> will be able to help us naming a <abbr>HTML</abbr> element, using <code>aria-label</code> and<code> aria-labelledby</code>.</p>
 <pre> <code class="html">
 &lt;button class="navbar-toggler" type="button" aria-label="Opening menu navigation" ... &gt;
@@ -237,7 +237,7 @@ But we could also use <code>aria-labelledby</code> to reference another element 
 </code> </pre>
 <p>When taking focus on the field, the screen reader announces &quot;Search on the site edit&quot;.</p>
 <p>More details on <a href="/en/articles/aria-attributes-that-can-save-you/">&quot;The attributes <abbr>ARIA</abbr> that can save you&quot;</a>.</p>
-<h2 id="sources" class="h2-focus">Sources <a class="header-anchor" href="#sources" id="heading-185" aria-labelledby="heading-185">#</a></h2>
+<h2 id="sources" class="h2-focus">Sources <a class="header-anchor" href="#sources" id="heading-330" aria-labelledby="heading-330">#</a></h2>
 <ul>
 <li><a href="https://www.w3.org/TR/accname-1.1/"> Accessible Name and Description Computation 1.1 </a> by the Accessible Rich Internet Applications Working Group</li>
 <li><a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/"> What is an accessible name? </a> by Léonie Watson</li>

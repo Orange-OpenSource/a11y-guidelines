@@ -205,12 +205,12 @@
           <div class="mt-4">
           <p>The deactivation of an interactive element is used to prevent the user from interacting with that component or its descendants.</p>
 <p>This technique should be used sparingly, depending on the components and the context of use.</p>
-<h2 id="disable-a-button" class="h2-focus">Disable a button <a class="header-anchor" href="#disable-a-button" id="heading-224" aria-labelledby="heading-224">#</a></h2>
+<h2 id="disable-a-button" class="h2-focus">Disable a button <a class="header-anchor" href="#disable-a-button" id="heading-369" aria-labelledby="heading-369">#</a></h2>
 <p>It is possible to disable a button by simply adding the <code>disabled</code> attribute:</p>
 <pre><code class="language-html">&lt;button disabled&gt;Delete&lt;/button&gt;
 </code></pre>
 <p>However, this technique is not recommended for a form submission button for various reasons, including low contrast, a button being unreachable via keyboard, and no information being provided to the user.</p>
-<h2 id="disable-a-form-field" class="h2-focus">Disable a form field <a class="header-anchor" href="#disable-a-form-field" id="heading-225" aria-labelledby="heading-225">#</a></h2>
+<h2 id="disable-a-form-field" class="h2-focus">Disable a form field <a class="header-anchor" href="#disable-a-form-field" id="heading-370" aria-labelledby="heading-370">#</a></h2>
 <p>Like a button, a form field is disabled using the <code>disabled</code> attribute.</p>
 <p>It is thus possible to disable an <code>input</code> field or a <code>textarea</code>:</p>
 <pre><code class="language-html">&lt;input type=&quot;text&quot; name=&quot;address&quot; disabled&gt;
@@ -245,7 +245,7 @@
   &lt;option value=&quot;orange&quot;&gt;Orange&lt;/option&gt;
 &lt;/select&gt;
 </code></pre>
-<h2 id="disable-a-link" class="h2-focus">Disable a link <a class="header-anchor" href="#disable-a-link" id="heading-226" aria-labelledby="heading-226">#</a></h2>
+<h2 id="disable-a-link" class="h2-focus">Disable a link <a class="header-anchor" href="#disable-a-link" id="heading-371" aria-labelledby="heading-371">#</a></h2>
 <p>To disable a link, the use of the <code>disabled</code> attribute is not allowed. However, it is possible to simulate a disabled state by following these three steps:</p>
 <ul>
 <li>remove the <code>href</code> attribute so it can no longer receive focus</li>
@@ -253,11 +253,11 @@
 <li>add an <code>aria-disabled=&quot;true&quot;</code> attribute to indicate that it is disabled.</li>
 </ul>
 <pre><code class="html">&lt;a role="link" aria-disabled="true"&gt;Disabled link&lt;/a&gt;</code></pre>
-<h2 id="read-only-attribute" class="h2-focus"><code>read-only</code> attribute <a class="header-anchor" href="#read-only-attribute" id="heading-227" aria-labelledby="heading-227">#</a></h2>
+<h2 id="read-only-attribute" class="h2-focus"><code>read-only</code> attribute <a class="header-anchor" href="#read-only-attribute" id="heading-372" aria-labelledby="heading-372">#</a></h2>
 <p>The boolean attribute <code>read-only</code> controls whether a text field can be edited or not.<br>
 It should not be used to disable other elements (such as buttons and other interactive components), as that is precisely the role of the <code>disabled</code> attribute.</p>
 <p>The main difference between the two techniques is that a read-only element remains accessible via keyboard and is announced by assistive technologies; this can be useful for verifying information that has been previously entered (for example: an email, date of birth, phone number, etc.) without allowing modifications.</p>
-<h2 id="webography" class="h2-focus">Webography <a class="header-anchor" href="#webography" id="heading-228" aria-labelledby="heading-228">#</a></h2>
+<h2 id="webography" class="h2-focus">Webography <a class="header-anchor" href="#webography" id="heading-373" aria-labelledby="heading-373">#</a></h2>
 <ul>
   <li><a href="https://www.scottohara.me/blog/2021/05/28/disabled-links.html">Disabling a link - Scott O'Hara</a></li>
   <li><a href="https://adamsilver.io/blog/the-problem-with-disabled-buttons-and-what-to-do-instead/">The problem with disabled buttons and what to do instead - Adam Silver</a></li>

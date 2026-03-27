@@ -197,24 +197,24 @@
           
           <div class="mt-4">
           <p>Users who navigate using a screen reader are not always aware of changes made on the page. When information is updated or when a message appears, it is sometimes necessary to make the screen reader speak to inform the user. To do this, the <abbr>ARIA</abbr> language has the role <code>alert</code> and the attribute<code> aria-live</code>.</p>
-<h2 id="the-role-alert" class="h2-focus">The role alert <a class="header-anchor" href="#the-role-alert" id="heading-215" aria-labelledby="heading-215">#</a></h2>
+<h2 id="the-role-alert" class="h2-focus">The role alert <a class="header-anchor" href="#the-role-alert" id="heading-360" aria-labelledby="heading-360">#</a></h2>
 <p>Positioned on an HTML element, this allows you to tell the screen reader to vocalize the element automatically when it is created. However, be sure to use this role only in appropriate cases, as clearly stated in the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role">Mozilla MDN documentation</a>. Due to its intrusive nature, role alert should be used sparingly and only in situations where the user's attention is immediately required. Less urgent dynamic changes should use a less aggressive method, such as <code>aria-live=&quot;polite&quot;</code> or other live zone roles.</p>
 <p>To trigger an alert, several methods are possible, with a support that differ depending on the browser and screen reader pair used. You can read <a href="https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/">Steve Faulkner's article</a> on this subject.</p>
 <p>Here are some examples of methods that are well supported.</p>
-<h3 id="create-a-new-element-in-the-dom">Create a new element in the DOM <a class="header-anchor" href="#create-a-new-element-in-the-dom" id="heading-216" aria-labelledby="heading-216">#</a></h3>
+<h3 id="create-a-new-element-in-the-dom">Create a new element in the DOM <a class="header-anchor" href="#create-a-new-element-in-the-dom" id="heading-361" aria-labelledby="heading-361">#</a></h3>
 <p>You can trigger an alert by inserting a new element in the <abbr>DOM</abbr> via Javascript.</p>
 <pre> <code class="html"> &lt;span role="alert"&gt; This is an alert message. &lt;/span&gt; </code> </pre>
-<h3 id="add-a-role-alert-on-an-existing-element">Add a role alert on an existing element <a class="header-anchor" href="#add-a-role-alert-on-an-existing-element" id="heading-217" aria-labelledby="heading-217">#</a></h3>
+<h3 id="add-a-role-alert-on-an-existing-element">Add a role alert on an existing element <a class="header-anchor" href="#add-a-role-alert-on-an-existing-element" id="heading-362" aria-labelledby="heading-362">#</a></h3>
 <p>The triggering of an alert can also be done by adding a <code>role=&quot;alert&quot;</code> dynamically to an existing element via Javascript.</p>
 <pre> <code class="js">
 document.getElementById('alert').setAttribute("role", "alert");
 </code> </pre>
-<h3 id="using-innerhtml">Using innerHTML <a class="header-anchor" href="#using-innerhtml" id="heading-218" aria-labelledby="heading-218">#</a></h3>
+<h3 id="using-innerhtml">Using innerHTML <a class="header-anchor" href="#using-innerhtml" id="heading-363" aria-labelledby="heading-363">#</a></h3>
 <p>Create an alert via the <code>innerHTML</code> property.</p>
 <pre> <code class="js">
 element.innerHTML = '&lt;div role ="alert"&gt;This is an alert&lt;/div&gt;';
 </code> </pre>
-<h2 id="the-aria-live-attribute" class="h2-focus">The <code>aria-live</code> attribute <a class="header-anchor" href="#the-aria-live-attribute" id="heading-219" aria-labelledby="heading-219">#</a></h2>
+<h2 id="the-aria-live-attribute" class="h2-focus">The <code>aria-live</code> attribute <a class="header-anchor" href="#the-aria-live-attribute" id="heading-364" aria-labelledby="heading-364">#</a></h2>
 <p>Positioned on an HTML element, the <code>aria-live</code> attribute is used to indicate to the screen reader that any modification made to its content will result in vocalization by the screen reader.</p>
 <p>Three values ​​are possible:</p>
 <ul>
@@ -232,7 +232,7 @@ element.innerHTML = '&lt;div role ="alert"&gt;This is an alert&lt;/div&gt;';
 <li><strong>aria-relevant:</strong> indicates which type of change triggers a vocalization, possible values: additions (default), removals, all.</li>
 </ul>
 <p>Finally, to be complete, know that the <abbr>ARIA</abbr> language also provides for some specific roles, <strong>status</strong> and <strong>log</strong> in particular which can be useful in certain cases (status bar, logging, chat...) and which, for the moment, must be used in addition to the <code>aria-live</code> attribute to maximize support by the different tools. You can find more info on these roles in the links below.</p>
-<h2 id="references" class="h2-focus">References <a class="header-anchor" href="#references" id="heading-220" aria-labelledby="heading-220">#</a></h2>
+<h2 id="references" class="h2-focus">References <a class="header-anchor" href="#references" id="heading-365" aria-labelledby="heading-365">#</a></h2>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role">Use of the alert role</a></li>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live">ARIA live zones</a></li>
