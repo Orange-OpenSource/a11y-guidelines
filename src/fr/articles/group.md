@@ -59,7 +59,7 @@ Ici, on s'assure que l'information sur l'existence du groupe image et légende e
   <ul role="group">
     <li role="menuitem">Boite de réception</li>
     <li role="menuitem">Archive</li>
-    <li role="menuitem">Poubelle</li>
+    <li role="menuitem">Corbeille</li>
   </ul>
   <ul role="group">
     <li role="menuitem">Dossier perso</li>
