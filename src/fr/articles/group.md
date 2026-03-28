@@ -33,7 +33,7 @@ On peut utiliser le rôle `group` avec n'importe quel groupe d'éléments liés 
 
 #### Exemples
 
-Pour un panneau de contérôle de la lecture d'un podcast, il est judicieux de mettre un `group` autour des boutons de contrôle de la lecture du son, c'est bien un groupe logique identifiable visuellement et donc a identifier pour les AT.
+Pour un panneau de contrôle de la lecture d'un podcast, il est judicieux de mettre un `group` autour des boutons de contrôle de la lecture du son, c'est bien un groupe logique identifiable visuellement et donc a identifier pour les AT.
 
 ```html
 <div role="group" aria-label="Contrôleur son du podcast">
@@ -59,7 +59,7 @@ Ici, on s'assure que l'information sur l'existence du groupe image et légende e
   <ul role="group">
     <li role="menuitem">Boite de réception</li>
     <li role="menuitem">Archive</li>
-    <li role="menuitem">Poubelle</li>
+    <li role="menuitem">Corbeille</li>
   </ul>
   <ul role="group">
     <li role="menuitem">Dossier perso</li>
@@ -80,7 +80,7 @@ Dans un menu applicatif, on peut utiliser le rôle `group` pour grouper les diff
 - Ne pas utiliser de `role="group"` à la place de landmark ou balises de structure de page HTML5.
 - Le rôle `group` entraine une augmentation de la charge cognitive pour l'utilisateur, il est à utiliser avec parcimonie et discrétion et donc réservé à des cas vraiment nécessaires.
 - Si on utilise le rôle `group`, il est aussi intéressant de donner une indication visuelle également du groupage. À l'instar de la bordure générée par un `fieldset` autour d'éléments de formulaire mais on peut imaginer d'autres indices visuels.
-- On peut imbriquer des rôles `group` mais, attention au risque de grande verbosité.
+- On peut imbriquer des rôles `group` mais attention au risque de grande verbosité.
 
 ## Conclusion
 
