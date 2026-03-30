@@ -43,7 +43,7 @@ Pour un panneau de contrôle de la lecture d'un podcast, il est judicieux de met
 </div>
 ```
 
-Ici, on s'assure que l'information sur l'existence du groupe image et légende est bien restitué aux AT malgré le mauvais support natif de `figure`.
+Ici, on s'assure que l'information sur l'existence du groupe image et légende est bien restituée aux AT malgré le mauvais support natif de `figure`.
 
 ```html
 <figure aria-labelledby="opera_1" role="group">
