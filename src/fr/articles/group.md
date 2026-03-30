@@ -72,7 +72,7 @@ Ici, on s'assure que l'information sur l'existence du groupe image et légende e
 </div>
 ```
 
-Dans un menu applicatif, on peut utiliser le rôle `group` pour grouper les différents types d'actions possibles. Ici, pas forcement besoin d'un nom au `group`, la typologie est évidente.
+Dans un menu applicatif, on peut utiliser le rôle `group` pour grouper les différents types d'actions possibles. Ici, pas forcément besoin d'un nom pour le `group`, la typologie est évidente.
 
 ### Bonnes pratiques
 
