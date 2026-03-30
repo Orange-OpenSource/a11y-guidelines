@@ -84,5 +84,5 @@ Dans un menu applicatif, on peut utiliser le rôle `group` pour grouper les diff
 
 ## Conclusion
 
-Les bonnes pratiques de conception d'interface demandent que les éléments faisant partie d'une même unité fonctionnelle ou regroupés car portant le même type de fonction doivent être visuellement groupés. Il en est de même, si cela est nécessaire à la bonne compréhension de l'interface, pour les AT et donc au niveau programmatique. Cela est possible via l'attribut ARIA `role="group"`. Même si son support parmi les couples AT/agent utilisateur n'est pas ubiquitaire, n'hésitez pas à en user.
+Les bonnes pratiques de conception d'interface exigent que les éléments faisant partie d'une même unité fonctionnelle, ou regroupés parce qu'ils portent le même type de fonction, soient visuellement groupés. De même, pour les technologies d'assistance (AT) et au niveau programmatique, il est essentiel de transmettre cette information de groupement si elle est nécessaire à la bonne compréhension de l'interface. Cela est possible via l'attribut ARIA `role="group"`. Même si son support parmi les couples AT/agent utilisateur n'est pas ubiquitaire, n'hésitez pas à en user.
 
