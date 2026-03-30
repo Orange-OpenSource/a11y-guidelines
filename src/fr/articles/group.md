@@ -78,7 +78,7 @@ Dans un menu applicatif, on peut utiliser le rôle `group` pour grouper les diff
 
 - Il faut nommer via `aria-label` ou `aria-labelledby`, lorsque nécessaire à la compréhension, toute balise avec un `role="group"`.
 - Ne pas utiliser de `role="group"` à la place de landmark ou balises de structure de page HTML5.
-- Le rôle `group` entraine une augmentation de la charge cognitive pour l'utilisateur, il est à utiliser avec parcimonie et discrétion et donc réservé à des cas vraiment nécessaires.
+- Le rôle `group` entraîne une augmentation de la charge cognitive pour l'utilisateur, il est à utiliser avec parcimonie et discrétion et donc réservé à des cas vraiment nécessaires.
 - Si on utilise le rôle `group`, il est aussi intéressant de donner une indication visuelle également du groupage. À l'instar de la bordure générée par un `fieldset` autour d'éléments de formulaire mais on peut imaginer d'autres indices visuels.
 - On peut imbriquer des rôles `group` mais attention au risque de grande verbosité.
 
