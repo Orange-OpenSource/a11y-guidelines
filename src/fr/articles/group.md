@@ -14,7 +14,7 @@ C'est l'un des rôles présents dans la spécification ARIA ([le rôle `group` d
 
 ### À quoi sert le rôle `group`&nbsp;?
 
-Il permet de grouper des éléments de la page qui doivent être traités comme une seule et même entité. En fait, grouper des éléments qui ont la même finalité, la même fonction, un but commun.
+Il permet de grouper des éléments de la page qui doivent être traités comme une seule et même entité. En d'autres termes, il s'agit de regrouper des éléments qui partagent la même finalité, la même fonction, ou un but commun.
 C'est un bon moyen de passer l'information de structure et de relation qu'est un groupe aux AT (aide technique) autrement que par un indicateur seulement visuel.
 
 ### Support dans les AT
