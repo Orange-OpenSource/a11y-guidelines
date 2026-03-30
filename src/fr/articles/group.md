@@ -33,7 +33,7 @@ On peut utiliser le rôle `group` avec n'importe quel groupe d'éléments liés 
 
 #### Exemples
 
-Pour un panneau de contrôle de la lecture d'un podcast, il est judicieux de mettre un `group` autour des boutons de contrôle de la lecture du son, c'est bien un groupe logique identifiable visuellement et donc a identifier pour les AT.
+Pour un panneau de contrôle de la lecture d'un podcast, il est judicieux de mettre un `group` autour des boutons de contrôle de la lecture du son, c'est bien un groupe logique identifiable visuellement et donc à identifier pour les AT.
 
 ```html
 <div role="group" aria-label="Contrôleur son du podcast">
