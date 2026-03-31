@@ -14,7 +14,7 @@ C'est l'un des rôles présents dans la spécification ARIA ([le rôle `group` d
 
 ### À quoi sert le rôle `group`&nbsp;?
 
-Il permet de grouper des éléments de la page qui doivent être traités comme une seule et même entité. En fait, grouper des éléments qui ont la même finalité, la même fonction, un but commun.
+Il permet de grouper des éléments de la page qui doivent être traités comme une seule et même entité. En d'autres termes, il s'agit de regrouper des éléments qui partagent la même finalité, la même fonction, ou un but commun.
 C'est un bon moyen de passer l'information de structure et de relation qu'est un groupe aux AT (aide technique) autrement que par un indicateur seulement visuel.
 
 ### Support dans les AT
@@ -33,7 +33,7 @@ On peut utiliser le rôle `group` avec n'importe quel groupe d'éléments liés 
 
 #### Exemples
 
-Pour un panneau de contrôle de la lecture d'un podcast, il est judicieux de mettre un `group` autour des boutons de contrôle de la lecture du son, c'est bien un groupe logique identifiable visuellement et donc a identifier pour les AT.
+Pour un panneau de contrôle de la lecture d'un podcast, il est judicieux de mettre un `group` autour des boutons de contrôle de la lecture du son, c'est bien un groupe logique identifiable visuellement et donc à identifier pour les AT.
 
 ```html
 <div role="group" aria-label="Contrôleur son du podcast">
@@ -43,7 +43,7 @@ Pour un panneau de contrôle de la lecture d'un podcast, il est judicieux de met
 </div>
 ```
 
-Ici, on s'assure que l'information sur l'existence du groupe image et légende est bien restitué aux AT malgré le mauvais support natif de `figure`.
+Ici, on s'assure que l'information sur l'existence du groupe image et légende est bien restituée aux AT malgré le mauvais support natif de `figure`.
 
 ```html
 <figure aria-labelledby="opera_1" role="group">
@@ -72,17 +72,17 @@ Ici, on s'assure que l'information sur l'existence du groupe image et légende e
 </div>
 ```
 
-Dans un menu applicatif, on peut utiliser le rôle `group` pour grouper les différents types d'actions possibles. Ici, pas forcement besoin d'un nom au `group`, la typologie est évidente.
+Dans un menu applicatif, on peut utiliser le rôle `group` pour grouper les différents types d'actions possibles. Ici, pas forcément besoin d'un nom pour le `group`, la typologie est évidente.
 
 ### Bonnes pratiques
 
-- Il faut nommer via `aria-label` ou `aria-labelledby`, lorsque nécessaire à la compréhension, toute balise avec un`role="group"`.
-- Ne pas utiliser de `role="group"` à la place de landmark ou balises de structure de page HTML5.
-- Le rôle `group` entraine une augmentation de la charge cognitive pour l'utilisateur, il est à utiliser avec parcimonie et discrétion et donc réservé à des cas vraiment nécessaires.
+- Il faut nommer via `aria-label` ou `aria-labelledby`, lorsque nécessaire à la compréhension, toute balise avec un `role="group"`.
+- Ne pas utiliser de `role="group"` à la place d'un landmark ou de balises de structure de page HTML5.
+- Le rôle `group` entraîne une augmentation de la charge cognitive pour l'utilisateur, il est à utiliser avec parcimonie et discrétion et donc réservé à des cas vraiment nécessaires.
 - Si on utilise le rôle `group`, il est aussi intéressant de donner une indication visuelle également du groupage. À l'instar de la bordure générée par un `fieldset` autour d'éléments de formulaire mais on peut imaginer d'autres indices visuels.
 - On peut imbriquer des rôles `group` mais attention au risque de grande verbosité.
 
 ## Conclusion
 
-Les bonnes pratiques de conception d'interface demand&ent que les éléments d'une même unité fonctionnelle soient visuellement groupés. Il en est de même au niveau programmatique pour les technologies d'assistance, si cela est nécessaire à une meilleure compréhension de l'interface. Cela est possible via l'attribut ARIA `role="group"`. Même si son support parmi les couples AT/agent utilisateur n'est pas ubiquitaire, n'hésitez pas à l'utiliser à bon escient.
+Les bonnes pratiques de conception d'interface exigent que les éléments faisant partie d'une même unité fonctionnelle, ou regroupés parce qu'ils portent le même type de fonction, soient visuellement groupés. De même, pour les technologies d'assistance (AT) et au niveau programmatique, il est essentiel de transmettre cette information de groupement si elle est nécessaire à la bonne compréhension de l'interface. Cela est possible via l'attribut ARIA `role="group"`. Même si son support parmi les couples AT/agent utilisateur n'est pas ubiquitaire, n'hésitez pas à l'utiliser à bon escient.
 
