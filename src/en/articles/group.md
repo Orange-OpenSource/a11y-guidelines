@@ -30,7 +30,7 @@ The `group` role is ideal for acting as the equivalent of `fieldset` for form el
 
 #### For other elements
 
-The `group` role can be used with any group of logically, semeantically related elements.
+The `group` role can be used with any group of logically, semantically related elements.
 
 #### Examples
 
