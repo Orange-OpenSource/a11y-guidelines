@@ -34,7 +34,7 @@ The `group` role can be used with any group of logically, semantically related e
 
 #### Examples
 
-For a podcast playback control panel, it's a good idea to group the audio playback buttons. This is a visually identifiable logical group, and therefore easily recognizable by the ATs (Assistive Tecnologies).
+For a podcast playback control panel, it's a good idea to group the audio playback buttons. This is a visually identifiable logical group, and therefore should be identified for the ATs (Assistive Technologies).
 
 ```html
 <div role="group" aria-label="Podcast Audio Controller">
