@@ -44,7 +44,7 @@ For a podcast playback control panel, it's a good idea to group the audio playba
 </div>
 ```
 
-Here, we ensure that the information about the existence of the image and caption group is correctly displayed to the ATs despite the poor native support of `figure`.
+Here, we ensure that the information about the existence of the image and caption group is correctly conveyed to the ATs despite the poor native support of `figure`.
 
 ```html
 <figure aria-labelledby="opera_1" role="group">
