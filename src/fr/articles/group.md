@@ -10,7 +10,7 @@ tags:
 
 ## Le rôle `group`
 
-C'est l'un des rôles présents dans la spécification ARIA ([le rôle `group` dans la spécification ARIA 1.3](https://www.w3.org/TR/wai-aria-1.3/#group)). Il fait partie des rôles de structure de document.
+C'est l'un des rôles présents dans la spécification ARIA ([le rôle `group` dans la spécification ARIA 1.3 (en)](https://www.w3.org/TR/wai-aria-1.3/#group)). Il fait partie des rôles de structure de document.
 
 ### À quoi sert le rôle `group`&nbsp;?
 
@@ -19,7 +19,7 @@ C'est un bon moyen de passer l'information de structure et de relation qu'est un
 
 ### Support dans les AT
 
-Le support est plutôt bon, exception faite des environnements mobiles ([support sur a11y support (en)](https://a11ysupport.io/tech/aria/group_role)). Comme le support reste partiel, il est toujours important de tester les implémentations avec vos environnements navigateurs/AT cibles, comme toujours pour de l'ARIA.
+Le support est plutôt bon, exception faite des environnements mobiles ([`group` support sur A11ysupport (en)](https://a11ysupport.io/tech/aria/group_role)). Comme le support reste partiel, il est toujours important de tester les implémentations avec vos environnements navigateurs/AT cibles, comme toujours pour de l'ARIA.
 
 ### Quand peut-on l'utiliser&nbsp;?
 
@@ -29,7 +29,7 @@ Le rôle `group` est tout indiqué pour jouer le rôle équivalent de `fieldset`
 
 #### Pour d'autres éléments
 
-On peut utiliser le rôle `group` avec n'importe quel groupe d'éléments liés entre eux de façon logique.
+On peut utiliser le rôle `group` avec n'importe quel groupe d'éléments liés entre eux de façon logique, sémantique.
 
 #### Exemples
 
@@ -68,6 +68,7 @@ Ici, on s'assure que l'information sur l'existence du groupe image et légende e
   </ul>
   <ul role="group">
     <li role="menuitem">Nouveau dossier</li>
+    ...
   </ul>
 </div>
 ```
