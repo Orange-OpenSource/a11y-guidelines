@@ -75,7 +75,7 @@ Here, we ensure that the information about the existence of the image and captio
 </div>
 ```
 
-In an application menu, the `group` role can be used to group the different types of possible actions. Here, a name isn't necessarily needed for the `group`; the typology is self-explanatory.
+In an application menu, the `group` role can be used to group the different types of possible actions. Here, a name isn't necessarily needed for the `group`; the categories are self-explanatory.
 
 ### Best Practices
 
