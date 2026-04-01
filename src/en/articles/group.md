@@ -60,7 +60,7 @@ Here, we ensure that the information about the existence of the image and captio
  <ul role="group">
   <li role="menuitem">Inbox</li>
   <li role="menuitem">Archive</li>
-  <li role="menuitem">Trash</li>
+  <li role="menuitem">Recycle Bin</li>
  </ul>
  <ul role="group">
   <li role="menuitem">Personal Folder</li>
