@@ -14,7 +14,7 @@ This is one of the roles in the ARIA specification ([the `group` role in ARIA 1.
 
 ### What is the `group` role used for?
 
-It allows you to group page elements that should be treated as a single entity. In other words, it groups elements that share the same purpose, function, or common goal.
+It allows you to group page elements that should be treated as a single entity. In other words, it groups elements that share the same purpose, function, or a common goal.
 
 This is a good way to convey the structural and relational information of a group to assistive technologies (AT) in a way other than through a purely visual indicator.
 
