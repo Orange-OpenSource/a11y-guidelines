@@ -1,7 +1,6 @@
 ---
 title: "The group role"
-abstract: "how-to the group role
-"
+abstract: "how-to use the group role"
 titleBeforeTag: true
 date: "2026-04-02" 
 tags:
