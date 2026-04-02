@@ -13,7 +13,7 @@ Next, we have a lawsuit from an A11y overlay company against A11y experts we've 
 
 Finally, a more understandable version of WCAG, to be used without moderation: https://robertjmccaffery.com/fucking-wcag.
 
-The WebAim Million 2026 study has just been published, and it's getting worse and worse: https://webaim.org/projects/million/.
+The WebAIM Million 2026 study has just been published, and it's getting worse and worse: https://webaim.org/projects/million/.
 
 We can only observe that things are changing around AI and a11y. Between snake oil salesmen and genuine experts trying things out, not everything is worth taking. Let's things settle; perhaps something good will come of it...
 
