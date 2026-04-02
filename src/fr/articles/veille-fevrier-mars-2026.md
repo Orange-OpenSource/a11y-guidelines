@@ -50,7 +50,7 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 
 ## Points techniques
 
-- Popover api et a11y, on avance (en) : https://www.smashingmagazine.com/2026/03/getting-started-popover-api/
+- Popover API et a11y, on avance (en) : https://www.smashingmagazine.com/2026/03/getting-started-popover-api/
 - Role="presentation" n'est pas équivalent à aria-hidden="true", à lire (en) : https://www.matuzo.at/blog/2026/role-presentation-no-alternative-for-aria-hidden
 - Aria-haspopup, quand et comment, clarification importante (en) : https://www.matuzo.at/blog/2026/aria-haspopup-menu
 - Tout sur l'indicateur de focus, à lire (en) : https://blog.pope.tech/2026/03/04/a-guide-to-accessible-focus-indicators/
