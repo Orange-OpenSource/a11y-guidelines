@@ -13,7 +13,7 @@ On commence par l'appel à candidature de LA conf francophone sur la qualité et
 on, ensuite, d'un procès d'une boite de surcouche d'a11y contre des experts a11y que l'on suit depuis longtemps qui fini mal, triste : https://www.lalutineduweb.fr/aide-frais-avocate-proces-contre-faciliti/#20260306. En attendant la Version 5 du RGAA qui est dans les tuyaux, on peut se consoler avec la mise à jour du RaWeb luxembourgeois (en) : https://accessibilite.public.lu/en/news/2026-02-06-raweb-update ou encore là : https://www.temesis.com/blog/mise-a-jour-du-raweb-en-version-1-1/.
 Enfin une version plus compréhensible des WCAG, à utiliser sans modération (en) : https://robertjmccaffery.com/fucking-wcag.
 
-L'étude de WeAim million 2026 vient de paraitre, c'est de pire en pire (en) : https://webaim.org/projects/million/.
+L'étude de WebAIM million 2026 vient de paraitre, c'est de pire en pire (en) : https://webaim.org/projects/million/.
 
 On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeurs de poudre de perlimpinpin et des vrais experts qui essayent des choses,  tout n'est pas bon à prendre. Laissons les choses décanter, peut être en sortira-t-il du bon...
 
