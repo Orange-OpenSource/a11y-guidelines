@@ -56,7 +56,7 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 - Tout sur l'indicateur de focus, à lire (en) : https://blog.pope.tech/2026/03/04/a-guide-to-accessible-focus-indicators/
 - Toujours besoin d'aria-hidden="true" sur des SVG décoratifs (en)  :https://matuzo.at/blog/2026/put-aria-hidden-on-presentational-svgs
 - Pas de tabindex="-1" pour les skip links, confirmation (en) : https://matuzo.at/blog/2026/skip-links-tabindex
-- Comment )ne pas faire de contrôle interactifs imbriqués, important (en) : https://piccalil.li/blog/accessible-faux-nested-interactive-controls/
+- Comment ne pas faire de contrôle interactifs imbriqués, important (en) : https://piccalil.li/blog/accessible-faux-nested-interactive-controls/
 - Choisir entre combobox, listbox et multiselect (en) : https://www.smashingmagazine.com/2026/02/combobox-vs-multiselect-vs-listbox/
 - Tout l'historique de la class visually-hidden (en) : https://dbushell.com/2026/02/20/visually-hidden/
 - Faire des PDF accessibles avec des outils gratuits (en) : https://piccalil.li/blog/a-guide-to-creating-accessible-pdfs-using-free-tools/
