@@ -75,11 +75,10 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 
 - Mise à jour de l’Ultimate Mobile Accessibility Guide (en) : https://dev.to/steady5063/the-ultimate-mobile-accessibility-resource-guide-53gh
 - Tester la structure et la sémantique d'une appli iOS (en) : https://dev.to/steady5063/accessibility-snapshot-testing-in-ios-408e
-- - Le centre de test allemand BIK BITV-Test nous offre trois articles de blog sur les tests d'accessibilité mobile (en) :
-
-      - https://bitvtest.de/en/blog/blog-article/testing-mobile-apps-what-differs-from-web-testing-part-1
-      - https://bitvtest.de/en/blog/blog-article/android-und-ios-should-i-test-both-part-2
-      - https://bitvtest.de/en/blog/blog-article/keyboard-operability-why-is-it-important-part-3
+- Le centre de test allemand BIK BITV-Test nous offre trois articles de blog sur les tests d'accessibilité mobile (en) :
+  - https://bitvtest.de/en/blog/blog-article/testing-mobile-apps-what-differs-from-web-testing-part-1
+  - https://bitvtest.de/en/blog/blog-article/android-und-ios-should-i-test-both-part-2
+  - https://bitvtest.de/en/blog/blog-article/keyboard-operability-why-is-it-important-part-3
 
 - Respecter la taille du texte des systèmes d'exploitation mobiles. Des exemples clairs et précis comme Adrian Roselli sait nous en offrir (en) : https://adrianroselli.com/2026/02/honoring-mobile-os-text-size.html
 - Un jeu vidéo old-school mais accessible, réalisé sur iOS par Daniel Devesa, un développeur et expert a11y de talent (en) : https://accessibilityupto11.com/post/2026-02-22-01/
