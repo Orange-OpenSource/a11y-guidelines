@@ -1,5 +1,5 @@
 ---
-title: "#a11y technical watch, February-March 202"
+title: "#a11y technical watch, February-March 2026"
 abstract: "#a11y anthology, February-March 2026"
 date: "2026-04-02"
 tags:
