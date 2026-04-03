@@ -109,7 +109,6 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 
 - AI ne remplace pas les experts humains (en) : https://buttondown.com/access-ability/archive/ai-will-eliminate-the-need-for-accessibility/
 - Un agent AI spécialisé en a11y, comment faire sur Github (en) : https://accessibility.github.com/documentation/guide/getting-started-with-agents/
-
 - Référencer le ARIA authoring practices guide (APG) pour entrainer un LLM (en) : https://ericwbailey.website/published/heres-how-to-instruct-a-llm-to-reference-the-aria-authoring-practices-guide/
 - Bien entrainer son a11y AI (en) : https://www.last-child.com/build-ai-brain-a11y.html
 - L'AI c'est magique ou pas (éen) : https://adactio.com/journal/22399
