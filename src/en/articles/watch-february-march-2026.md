@@ -132,7 +132,7 @@ Finally, a more understandable version of WCAG, to be used without moderation: h
 - All about HTML tables: https://blog.frankmtaylor.com/2026/03/05/you-dont-know-html-tables/
 - A library of a11y and responsive components: https://opensource.ebay.com/evo-web/
 - The basic building blocks of a11y videos: https://tetralogical.com/blog/2026/02/06/accessible-building-blocks-for-web-videos/
-- Elena's accessible progressive web components, worth checking out: https://arielsalminen.com/2026/progressive-web-components/
+- Elena, an accessible progressive web components library, worth checking out: https://arielsalminen.com/2026/progressive-web-components/
 - A bookmarklet for semantic structure, a must-have: https://a11y-tools.com/blog/2026/03/new-bookmarklet-structure-revealer/
 
 ## Other
