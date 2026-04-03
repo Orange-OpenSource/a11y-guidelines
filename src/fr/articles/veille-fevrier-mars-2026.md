@@ -117,7 +117,7 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 - Mettre en place un skill agentAI pour coder a11y (en) : https://intopia.digital/articles/can-ai-agent-skills-help-developers-ship-accessible-code/
 - L'état de l'art AI et a11y (en) : https://www.linkedin.com/pulse/current-state-digital-accessibility-research-ai-what-137-robert-dodd-qb7ie/
 - Texte de remplacement pour les images et AI (en) : https://www.curbcuts.co/blog/2026-3-29-using-ai-to-automate-more-accessible-alt-text
-- AI et expertise humaine, le on mix pour l'a11y (en) : https://www.grackledocs.com/en/why-good-enough-is-the-greatest-risk-in-digital-accessibility/
+- IA et expertise humaine, le bon mix pour l'a11y (en) : https://www.grackledocs.com/en/why-good-enough-is-the-greatest-risk-in-digital-accessibility/
 
 ## Ressources
 
