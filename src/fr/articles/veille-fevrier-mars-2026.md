@@ -107,16 +107,16 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 
 ## Intelligence Artificielle (IA)
 
-- AI ne remplace pas les experts humains (en) : https://buttondown.com/access-ability/archive/ai-will-eliminate-the-need-for-accessibility/
-- Un agent AI spécialisé en a11y, comment faire sur Github (en) : https://accessibility.github.com/documentation/guide/getting-started-with-agents/
+- L'IA ne remplace pas les experts humains (en) : https://buttondown.com/access-ability/archive/ai-will-eliminate-the-need-for-accessibility/
+- Un agent IA spécialisé en a11y, comment faire sur Github (en) : https://accessibility.github.com/documentation/guide/getting-started-with-agents/
 - Référencer le ARIA authoring practices guide (APG) pour entrainer un LLM (en) : https://ericwbailey.website/published/heres-how-to-instruct-a-llm-to-reference-the-aria-authoring-practices-guide/
-- Bien entrainer son a11y AI (en) : https://www.last-child.com/build-ai-brain-a11y.html
-- L'AI c'est magique ou pas (éen) : https://adactio.com/journal/22399
-- AI et a11y des avancées (en) : https://webaim.org/blog/a-new-path/
-- L'AI peut aider à déplacer vers la gauche l'a11y (en) : https://cerovac.com/a11y/2026/02/the-newest-shift-left-is-to-shift-accessibility-into-ai-model-generation/
-- Mettre en place un skill agentAI pour coder a11y (en) : https://intopia.digital/articles/can-ai-agent-skills-help-developers-ship-accessible-code/
-- L'état de l'art AI et a11y (en) : https://www.linkedin.com/pulse/current-state-digital-accessibility-research-ai-what-137-robert-dodd-qb7ie/
-- Texte de remplacement pour les images et AI (en) : https://www.curbcuts.co/blog/2026-3-29-using-ai-to-automate-more-accessible-alt-text
+- Bien entrainer son a11y IA (en) : https://www.last-child.com/build-ai-brain-a11y.html
+- L'IA c'est magique ou pas (éen) : https://adactio.com/journal/22399
+- IA et a11y des avancées (en) : https://webaim.org/blog/a-new-path/
+- L'IA peut aider à déplacer vers la gauche l'a11y (en) : https://cerovac.com/a11y/2026/02/the-newest-shift-left-is-to-shift-accessibility-into-ai-model-generation/
+- Mettre en place un skill agent IA pour coder a11y (en) : https://intopia.digital/articles/can-ai-agent-skills-help-developers-ship-accessible-code/
+- L'état de l'art IA et a11y (en) : https://www.linkedin.com/pulse/current-state-digital-accessibility-research-ai-what-137-robert-dodd-qb7ie/
+- Texte de remplacement pour les images et IA (en) : https://www.curbcuts.co/blog/2026-3-29-using-ai-to-automate-more-accessible-alt-text
 - IA et expertise humaine, le bon mix pour l'a11y (en) : https://www.grackledocs.com/en/why-good-enough-is-the-greatest-risk-in-digital-accessibility/
 
 ## Ressources
@@ -134,6 +134,6 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 
 ## Autres
 
-- Autour de chacun doit agir contre le validisme (en) : https://piccalil.li/blog/applying-accessibility-fixes-with-stealth-for-the-greater-good/
-- Calcul de l'arbre DOM accessible Chrome (en) : https://www.maxdesign.com.au/articles/axtree.html
+- Autour de soi, chacun doit agir contre le validisme (en) : https://piccalil.li/blog/applying-accessibility-fixes-with-stealth-for-the-greater-good/
+- Calcul du DOM accessible Chrome (en) : https://www.maxdesign.com.au/articles/axtree.html
 - Un contenu mais des façons différentes de l'appréhender (en) : https://a11yblog.com/2026/01/30/how-the-same-content-always-has-multiple-different-versions/
