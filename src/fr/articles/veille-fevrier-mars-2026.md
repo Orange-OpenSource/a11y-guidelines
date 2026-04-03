@@ -1,7 +1,7 @@
 ---
 title: "Veille #A11y Février-Mars 2026"
 abstract: "Florilèges de ressources en #a11y, Février-Mars 2026"
-date: "2026-04-02"
+date: "2026-04-03"
 tags:
   - veille
 ---
@@ -10,12 +10,15 @@ tags:
 
 On commence par l'appel à candidatures de LA conf francophone sur la qualité et l'accessibilité du Web, lancez-vous : https://www.paris-web.fr/actualites/appel-a-sujets-edition-2026-ouvert.
 
-Bon, ensuite, on a un procès d'une boîte de surcouche d'a11y contre des experts a11y que l'on suit depuis longtemps qui finit mal, triste : https://www.lalutineduweb.fr/aide-frais-avocate-proces-contre-faciliti/#20260306. En attendant la Version 5 du RGAA qui est dans les tuyaux, on peut se consoler avec la mise à jour du RaWeb luxembourgeois (en) : https://accessibilite.public.lu/en/news/2026-02-06-raweb-update ou encore là : https://www.temesis.com/blog/mise-a-jour-du-raweb-en-version-1-1/.
-Enfin une version plus compréhensible des WCAG, à utiliser sans modération (en) : https://robertjmccaffery.com/fucking-wcag.
+Bon, ensuite, on a un procès d'une boîte de surcouche d'a11y contre des experts a11y que l'on suit depuis longtemps qui finit mal, triste : https://www.lalutineduweb.fr/aide-frais-avocate-proces-contre-faciliti/#20260306. 
+
+En attendant la Version 5 du RGAA qui est dans les tuyaux, on peut se consoler avec la mise à jour du RaWeb luxembourgeois (en) : https://accessibilite.public.lu/en/news/2026-02-06-raweb-update ou encore là : https://www.temesis.com/blog/mise-a-jour-du-raweb-en-version-1-1/.
 
 L'étude de WebAIM million 2026 vient de paraitre, c'est de pire en pire (en) : https://webaim.org/projects/million/.
 
 On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeurs de poudre de perlimpinpin et des vrais experts qui essayent des choses,  tout n'est pas bon à prendre. Laissons les choses décanter, peut être en sortira-t-il du bon...
+
+Enfin une version plus compréhensible des WCAG, à utiliser sans modération (en) : https://robertjmccaffery.com/fucking-wcag.
 
 ## L’accessibilité dans les lois, les normes et recommandations
 
@@ -37,7 +40,7 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 - Manque d'a11y, quel est le souci (en) : https://gbbns.co/journal/accessibility-problem-isnt-design/
 - Manque de priorisation d'a11y dans le numérique (en) : https://gbbns.co/journal/organisation-that-never-prioritised-it/
 - Mettez à jour vos déclarations d'accessibilité (en) : https://buttondown.com/nic-steenhout/archive/wcag-a-vs-aa-outdated-accessibility-statements/
-- Rendre plus impliqué, autonome les équipes agile en a11y (en) : https://equalentry.com/every-jira-ticket-is-your-accessibility-policy/
+- Rendre plus impliquées et autonomes les équipes agile en a11y (en) : https://equalentry.com/every-jira-ticket-is-your-accessibility-policy/
 
 ## Tester l’accessibilité
 
@@ -76,9 +79,9 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 - Mise à jour de l’Ultimate Mobile Accessibility Guide (en) : https://dev.to/steady5063/the-ultimate-mobile-accessibility-resource-guide-53gh
 - Tester la structure et la sémantique d'une appli iOS (en) : https://dev.to/steady5063/accessibility-snapshot-testing-in-ios-408e
 - Le centre de test allemand BIK BITV-Test nous offre trois articles de blog sur les tests d'accessibilité mobile (en) :
-  - https://bitvtest.de/en/blog/blog-article/testing-mobile-apps-what-differs-from-web-testing-part-1
-  - https://bitvtest.de/en/blog/blog-article/android-und-ios-should-i-test-both-part-2
-  - https://bitvtest.de/en/blog/blog-article/keyboard-operability-why-is-it-important-part-3
+    - https://bitvtest.de/en/blog/blog-article/testing-mobile-apps-what-differs-from-web-testing-part-1
+    - https://bitvtest.de/en/blog/blog-article/android-und-ios-should-i-test-both-part-2
+    - https://bitvtest.de/en/blog/blog-article/keyboard-operability-why-is-it-important-part-3
 
 - Respecter la taille du texte des systèmes d'exploitation mobiles. Des exemples clairs et précis comme Adrian Roselli sait nous en offrir (en) : https://adrianroselli.com/2026/02/honoring-mobile-os-text-size.html
 - Un jeu vidéo old-school mais accessible, réalisé sur iOS par Daniel Devesa, un développeur et expert a11y de talent (en) : https://accessibilityupto11.com/post/2026-02-22-01/
@@ -90,7 +93,7 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 ## Aides techniques
 
 - Pour éviter les répétitions par les lecteurs d'écran (en) : https://www.linkedin.com/pulse/screen-reader-stutter-why-your-content-repeats-itself-sheri-6rnlc/
-- Amélioration dans Office 365 pour la lecture à la navigation clavier (&en) : https://techcommunity.microsoft.com/blog/microsoft365insiderblog/more-logical-navigation-through-word-documents-for-screen-readers/4471937
+- Amélioration dans Office 365 pour la lecture à la navigation clavier (en) : https://techcommunity.microsoft.com/blog/microsoft365insiderblog/more-logical-navigation-through-word-documents-for-screen-readers/4471937
 - Explications de WCAG 2.5.3 Label in Name (en) : https://tarnoff.info/2026/03/16/a11y-101-2-5-3-label-in-name/
 
 ## Ergonomie, UI & UX
@@ -100,7 +103,7 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 - Concevoir pour l'anxiété (en) : https://tetralogical.com/blog/2026/03/10/designing-for-people-with-anxiety/
 - Un arbre de décision pour éviter les modales (en) : https://www.smashingmagazine.com/2026/03/modal-separate-page-ux-decision-tree/
 - Pas d'effet scroll fade sur vos pages (en) : https://dbushell.com/2026/01/09/death-to-scroll-fade/
-- Concevoir pour des outils stressants et l'urgence, bonnes pratiques (en) : https://www.smashingmagazine.com/2025/11/designing-for-stress-emergency/
+- Concevoir pour gérer le stress et les situations d'urgence, bonnes pratiques (en) : https://www.smashingmagazine.com/2025/11/designing-for-stress-emergency/
 - Les annotations du focus order, vraiment nécessaires ? (en) : https://ericwbailey.website/published/you-probably-shouldnt-be-annotating-focus-order/
 - Les designers ont un souci de culture a11y (en) : https://gbbns.co/journal/design-brief-that-never-mentioned-disabled-people/
 
@@ -117,7 +120,7 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 - L'état de l'art IA et a11y (en) : https://www.linkedin.com/pulse/current-state-digital-accessibility-research-ai-what-137-robert-dodd-qb7ie/
 - Texte de remplacement pour les images et IA (en) : https://www.curbcuts.co/blog/2026-3-29-using-ai-to-automate-more-accessible-alt-text
 - IA et expertise humaine, le bon mix pour l'a11y (en) : https://www.grackledocs.com/en/why-good-enough-is-the-greatest-risk-in-digital-accessibility/
-
+- Grosse base de ressources IA pour développer sur iOS - skills, MCP, Agents... (en) : http://github.com/Techopolis/awesome-ios-ai
 ## Ressources
 
 - Des vidéos accessibles pour expliquer comment faire des composants web accessibles, inception (en) : https://tetralogical.com/blog/2026/02/06/accessible-building-blocks-for-web-videos/
@@ -128,7 +131,7 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 - Tout sur les tableaux html (en) : https://blog.frankmtaylor.com/2026/03/05/you-dont-know-html-tables/
 - Une bibliothèque de composants a11y et responsive (en) : https://opensource.ebay.com/evo-web/
 - Les briques de base de vidéos a11y (en) : https://tetralogical.com/blog/2026/02/06/accessible-building-blocks-for-web-videos/
-- Elena des progressive web components accessibles, à voir (en) : https://arielsalminen.com/2026/progressive-web-components/
+- Elena, une librairie de progressive web components accessibles, à voir (en) : https://arielsalminen.com/2026/progressive-web-components/
 - Un bookmarklet pour la structure sémantique, un incontournable (en) : https://a11y-tools.com/blog/2026/03/new-bookmarklet-structure-revealer/
 
 ## Autres

@@ -1,7 +1,7 @@
 ---
 title: "#a11y technical watch, February-March 2026"
 abstract: "#a11y anthology, February-March 2026"
-date: "2026-04-02"
+date: "2026-04-03"
 tags:
   - veille
 ---
@@ -9,13 +9,15 @@ tags:
 
 We're starting with the call for applications for THE French-language conference on web quality and accessibility. Get involved (fr): https://www.paris-web.fr/actualites/appel-a-sujets-edition-2026-ouvert.
 
-Next, we have a lawsuit from an a11y overlay company against a11y experts we've been following for a long time, which ended badly, sadly (fr): https://www.lalutineduweb.fr/aide-frais-avocate-proces-contre-faciliti/#20260306. While we wait for RGAA Version 5, which is in the works, we can take solace in the update to the Luxembourgish RaWeb: https://accessibilite.public.lu/en/news/2026-02-06-raweb-update or here (fr): https://www.temesis.com/blog/mise-a-jour-du-raweb-en-version-1-1/.
+Next, we have a lawsuit from an a11y overlay company against a11y experts we've been following for a long time, which ended badly, sadly (fr): https://www.lalutineduweb.fr/aide-frais-avocate-proces-contre-faciliti/#20260306.
 
-Finally, a more understandable version of WCAG, to be used without moderation: https://robertjmccaffery.com/fucking-wcag.
+While we wait for RGAA Version 5, which is in the works, we can take solace in the update to the Luxembourgish RaWeb: https://accessibilite.public.lu/en/news/2026-02-06-raweb-update or here (fr): https://www.temesis.com/blog/mise-a-jour-du-raweb-en-version-1-1/.
 
 The WebAIM Million 2026 study has just been published, and it's getting worse and worse: https://webaim.org/projects/million/.
 
 We can only observe that things are changing around AI and a11y. Between snake oil salesmen and genuine experts trying things out, not everything is worth taking. Let things settle; perhaps something good will come of it...
+
+Finally, a more understandable version of WCAG, to be used without moderation: https://robertjmccaffery.com/fucking-wcag.
 
 ## Accessibility in Laws, Standards, and Recommendations
 
@@ -101,7 +103,7 @@ We can only observe that things are changing around AI and a11y. Between snake o
 - Designing for anxiety: https://tetralogical.com/blog/2026/03/10/designing-for-people-with-anxiety/
 - A decision tree to avoid modals: https://www.smashingmagazine.com/2026/03/modal-separate-page-ux-decision-tree/
 - No scroll fade on your pages: https://dbushel.com/2026/01/09/death-to-scroll-fade/
-- Designing for stressful tools and emergencies, best practices: https://www.smashingmagazine.com/2025/11/designing-for-stress-emergency/
+- Designing for stress and emergency, best practices: https://www.smashingmagazine.com/2025/11/designing-for-stress-emergency/
 - Focus order annotations, really necessary?: https://ericwbailey.website/published/you-probably-shouldnt-be-annotating-focus-order/
 - Designers have an a11y culture problem: https://gbbns.co/journal/design-brief-that-never-mentioned-disabled-people/
 
@@ -118,6 +120,7 @@ We can only observe that things are changing around AI and a11y. Between snake o
 - State of the art of AI and a11y: https://www.linkedin.com/pulse/current-state-digital-accessibility-research-ai-what-137-robert-dodd-qb7ie/
 - Alternative text for images and AI: https://www.curbcuts.co/blog/2026-3-29-using-ai-to-automate-more-accessible-alt-text
 - AI and human expertise, the on-mix for A11y: https://www.grackledocs.com/en/why-good-enough-is-the-greatest-risk-in-digital-accessibility/
+- A great collection of AI resources for iOS development - skills, MCP, Agents...:http://github.com/Techopolis/awesome-ios-ai
 
 ## Resources
 
