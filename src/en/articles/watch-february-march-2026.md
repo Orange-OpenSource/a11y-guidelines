@@ -77,9 +77,9 @@ We can only observe that things are changing around AI and a11y. Between snake o
 - Testing the structure and semantics of an iOS app: https://dev.to/steady5063/accessibility-snapshot-testing-in-ios-408e
 - The German testing center BIK BITV-Test offers three blog articles on mobile accessibility testing:
 
- - https://bitvtest.de/en/blog/blog-article/testing-mobile-apps-what-differs-from-web-testing-part-1-test
- - https://bitvtest.de/en/blog/blog-article/android-und-ios-should-i-test-both-part-2-test
- - https://bitvtest.de/en/blog/blog-article/keyboard-operability-why-is-it-important-part-3-test
+ - https://bitvtest.de/en/blog/blog-article/testing-mobile-apps-what-differs-from-web-testing-part-1
+ - https://bitvtest.de/en/blog/blog-article/android-und-ios-should-i-test-both-part-2
+ - https://bitvtest.de/en/blog/blog-article/keyboard-operability-why-is-it-important-part-3
 
 - Respect the text size of mobile operating systems. Clear and precise examples, as Adrian Roselli so expertly provides: https://adrianroselli.com/2026/02/honoring-mobile-os-text-size.html
 - An old-school but accessible video game, created for iOS by Daniel Devesa, a talented developer and a11y expert: https://accessibilityupto11.com/post/2026-02-22-01/
