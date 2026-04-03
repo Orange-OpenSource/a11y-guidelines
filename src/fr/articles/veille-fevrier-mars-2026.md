@@ -8,9 +8,9 @@ tags:
 
 # Veille accessibilité numérique Février-Mars 2026
 
-On commence par l'appel à candidature de LA conf francophone sur la qualité et l'accessibilité du Web, lancez-vous : https://www.paris-web.fr/actualites/appel-a-sujets-edition-2026-ouvert.
+On commence par l'appel à candidatures de LA conf francophone sur la qualité et l'accessibilité du Web, lancez-vous : https://www.paris-web.fr/actualites/appel-a-sujets-edition-2026-ouvert.
 
-on, ensuite, d'un procès d'une boite de surcouche d'a11y contre des experts a11y que l'on suit depuis longtemps qui fini mal, triste : https://www.lalutineduweb.fr/aide-frais-avocate-proces-contre-faciliti/#20260306. En attendant la Version 5 du RGAA qui est dans les tuyaux, on peut se consoler avec la mise à jour du RaWeb luxembourgeois (en) : https://accessibilite.public.lu/en/news/2026-02-06-raweb-update ou encore là : https://www.temesis.com/blog/mise-a-jour-du-raweb-en-version-1-1/.
+Bon, ensuite, on a un procès d'une boîte de surcouche d'a11y contre des experts a11y que l'on suit depuis longtemps qui finit mal, triste : https://www.lalutineduweb.fr/aide-frais-avocate-proces-contre-faciliti/#20260306. En attendant la Version 5 du RGAA qui est dans les tuyaux, on peut se consoler avec la mise à jour du RaWeb luxembourgeois (en) : https://accessibilite.public.lu/en/news/2026-02-06-raweb-update ou encore là : https://www.temesis.com/blog/mise-a-jour-du-raweb-en-version-1-1/.
 Enfin une version plus compréhensible des WCAG, à utiliser sans modération (en) : https://robertjmccaffery.com/fucking-wcag.
 
 L'étude de WebAIM million 2026 vient de paraitre, c'est de pire en pire (en) : https://webaim.org/projects/million/.
@@ -56,7 +56,7 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 - Tout sur l'indicateur de focus, à lire (en) : https://blog.pope.tech/2026/03/04/a-guide-to-accessible-focus-indicators/
 - Toujours besoin d'aria-hidden="true" sur des SVG décoratifs (en)  :https://matuzo.at/blog/2026/put-aria-hidden-on-presentational-svgs
 - Pas de tabindex="-1" pour les skip links, confirmation (en) : https://matuzo.at/blog/2026/skip-links-tabindex
-- Comment ne pas faire de contrôle interactifs imbriqués, important (en) : https://piccalil.li/blog/accessible-faux-nested-interactive-controls/
+- Comment ne pas faire de contrôles interactifs imbriqués, important (en) : https://piccalil.li/blog/accessible-faux-nested-interactive-controls/
 - Choisir entre combobox, listbox et multiselect (en) : https://www.smashingmagazine.com/2026/02/combobox-vs-multiselect-vs-listbox/
 - Tout l'historique de la class visually-hidden (en) : https://dbushell.com/2026/02/20/visually-hidden/
 - Faire des PDF accessibles avec des outils gratuits (en) : https://piccalil.li/blog/a-guide-to-creating-accessible-pdfs-using-free-tools/
@@ -68,12 +68,12 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 ## Retour d'expérience
 
 - Programme d'a11y durable (en) : https://equalentry.com/accessibility-program-sustainability/
-- Changer une boite qui proposent un overlay, teaser ça marche pas (en) : https://chrisyoong.com/blog/educating-accessibility-overlay-companies
+- Changer une boîte qui proposent un overlay, teaser ça marche pas (en) : https://chrisyoong.com/blog/educating-accessibility-overlay-companies
 - Lire à haute voix une page, c'est natif dans nos navigateurs (en) : https://adrianroselli.com/2026/03/your-browser-can-already-speak-a-page.html
 
 ## Appli mobile, web mobile
 
-- Mise à jour du ultimate mobile accessibility guide (en) : https://dev.to/steady5063/the-ultimate-mobile-accessibility-resource-guide-53gh
+- Mise à jour de l’Ultimate Mobile Accessibility Guide (en) : https://dev.to/steady5063/the-ultimate-mobile-accessibility-resource-guide-53gh
 - Tester la structure et la sémantique d'une appli iOS (en) : https://dev.to/steady5063/accessibility-snapshot-testing-in-ios-408e
 - - Le centre de test allemand BIK BITV-Test nous offre trois articles de blog sur les tests d'accessibilité mobile (en) :
 
@@ -96,7 +96,7 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 
 ## Ergonomie, UI & UX
 
-- Un plugin Figma poour des annotations d'a11y (en), il à l'air bien compler : https://github.blog/changelog/2025-09-22-open-sourcing-the-github-annotation-toolkit/
+- Un plugin Figma pour des annotations d'a11y (en), il a l'air bien complet : https://github.blog/changelog/2025-09-22-open-sourcing-the-github-annotation-toolkit/
 - Concevoir pour les malvoyants, pédagogique (en) : https://tetralogical.com/blog/2026/03/24/designing-for-people-with-low-vision/ 
 - Concevoir pour l'anxiété (en) : https://tetralogical.com/blog/2026/03/10/designing-for-people-with-anxiety/
 - Un arbre de décision pour éviter les modales (en) : https://www.smashingmagazine.com/2026/03/modal-separate-page-ux-decision-tree/
@@ -109,7 +109,7 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 
 - L'IA ne remplace pas les experts humains (en) : https://buttondown.com/access-ability/archive/ai-will-eliminate-the-need-for-accessibility/
 - Un agent IA spécialisé en a11y, comment faire sur Github (en) : https://accessibility.github.com/documentation/guide/getting-started-with-agents/
-- Référencer le ARIA authoring practices guide (APG) pour entrainer un LLM (en) : https://ericwbailey.website/published/heres-how-to-instruct-a-llm-to-reference-the-aria-authoring-practices-guide/
+- Référencer l’ARIA Authoring Practices Guide (APG) pour entraîner un LLM (en) : https://ericwbailey.website/published/heres-how-to-instruct-a-llm-to-reference-the-aria-authoring-practices-guide/
 - Bien entrainer son a11y IA (en) : https://www.last-child.com/build-ai-brain-a11y.html
 - L'IA c'est magique ou pas (éen) : https://adactio.com/journal/22399
 - IA et a11y des avancées (en) : https://webaim.org/blog/a-new-path/
@@ -126,11 +126,11 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 - L'ordre dans la structure HTML et impact utilisateur (en) : https://a11ywithdiana.substack.com/p/why-order-matters-in-accessible-web
 - Une interview de Matt May, gourou de l'a11y (ene) : https://html5accessibility.com/stuff/2026/02/22/matt-may-speaks/
 - Interview d'une chargée de prod a11y chez un pure player : https://www.linkedin.com/pulse/interview-kahina-hadjou-access42-access42-mmelf/
-- Tout sur les table html (en) : https://blog.frankmtaylor.com/2026/03/05/you-dont-know-html-tables/
+- Tout sur les tableaux html (en) : https://blog.frankmtaylor.com/2026/03/05/you-dont-know-html-tables/
 - Une bibliothèque de composants a11y et responsive (en) : https://opensource.ebay.com/evo-web/
 - Les briques de base de vidéos a11y (en) : https://tetralogical.com/blog/2026/02/06/accessible-building-blocks-for-web-videos/
 - Elena des progressive web components accessibles, à voir (en) : https://arielsalminen.com/2026/progressive-web-components/
-- Un bokmarklet pour la structure sémantique, un incontournable (en) : https://a11y-tools.com/blog/2026/03/new-bookmarklet-structure-revealer/
+- Un bookmarklet pour la structure sémantique, un incontournable (en) : https://a11y-tools.com/blog/2026/03/new-bookmarklet-structure-revealer/
 
 ## Autres
 
