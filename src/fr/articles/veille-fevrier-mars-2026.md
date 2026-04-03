@@ -113,7 +113,7 @@ Enfin une version plus compréhensible des WCAG, à utiliser sans modération (e
 - Un agent IA spécialisé en a11y, comment faire sur Github (en) : https://accessibility.github.com/documentation/guide/getting-started-with-agents/
 - Référencer l’ARIA Authoring Practices Guide (APG) pour entraîner un LLM (en) : https://ericwbailey.website/published/heres-how-to-instruct-a-llm-to-reference-the-aria-authoring-practices-guide/
 - Bien entrainer son a11y IA (en) : https://www.last-child.com/build-ai-brain-a11y.html
-- L'IA c'est magique ou pas (éen) : https://adactio.com/journal/22399
+- L'IA c'est magique ou pas (en) : https://adactio.com/journal/22399
 - IA et a11y des avancées (en) : https://webaim.org/blog/a-new-path/
 - L'IA peut aider à déplacer vers la gauche l'a11y (en) : https://cerovac.com/a11y/2026/02/the-newest-shift-left-is-to-shift-accessibility-into-ai-model-generation/
 - Mettre en place un skill agent IA pour coder a11y (en) : https://intopia.digital/articles/can-ai-agent-skills-help-developers-ship-accessible-code/
