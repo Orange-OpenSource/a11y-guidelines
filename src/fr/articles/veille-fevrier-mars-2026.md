@@ -125,7 +125,7 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 - L'audiodescription passée en revue (en) : https://www.3playmedia.com/events/wbnr-03-11-2026-audio-description/
 - L'ordre dans la structure HTML et impact utilisateur (en) : https://a11ywithdiana.substack.com/p/why-order-matters-in-accessible-web
 - Une interview de Matt May, gourou de l'a11y (ene) : https://html5accessibility.com/stuff/2026/02/22/matt-may-speaks/
-- Interview d'une chargée de prod a11y che z un pure player : https://www.linkedin.com/pulse/interview-kahina-hadjou-access42-access42-mmelf/
+- Interview d'une chargée de prod a11y chez un pure player : https://www.linkedin.com/pulse/interview-kahina-hadjou-access42-access42-mmelf/
 - Tout sur les table html (en) : https://blog.frankmtaylor.com/2026/03/05/you-dont-know-html-tables/
 - Une bibliothèque de composants a11y et responsive (en) : https://opensource.ebay.com/evo-web/
 - Les briques de base de vidéos a11y (en) : https://tetralogical.com/blog/2026/02/06/accessible-building-blocks-for-web-videos/
