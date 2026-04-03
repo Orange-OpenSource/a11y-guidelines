@@ -9,13 +9,13 @@ tags:
 
 We're starting with the call for applications for THE French-language conference on web quality and accessibility. Get involved (fr): https://www.paris-web.fr/actualites/appel-a-sujets-edition-2026-ouvert.
 
-Next, we have a lawsuit from an A11y overlay company against A11y experts we've been following for a long time, which ended badly, sadly (fr): https://www.lalutineduweb.fr/aide-frais-avocate-proces-contre-faciliti/#20260306. While we wait for RGAA Version 5, which is in the works, we can take solace in the update to the Luxembourgish RaWeb: https://accessibilite.public.lu/en/news/2026-02-06-raweb-update or here (fr): https://www.temesis.com/blog/mise-a-jour-du-raweb-en-version-1-1/.
+Next, we have a lawsuit from an a11y overlay company against a11y experts we've been following for a long time, which ended badly, sadly (fr): https://www.lalutineduweb.fr/aide-frais-avocate-proces-contre-faciliti/#20260306. While we wait for RGAA Version 5, which is in the works, we can take solace in the update to the Luxembourgish RaWeb: https://accessibilite.public.lu/en/news/2026-02-06-raweb-update or here (fr): https://www.temesis.com/blog/mise-a-jour-du-raweb-en-version-1-1/.
 
 Finally, a more understandable version of WCAG, to be used without moderation: https://robertjmccaffery.com/fucking-wcag.
 
 The WebAIM Million 2026 study has just been published, and it's getting worse and worse: https://webaim.org/projects/million/.
 
-We can only observe that things are changing around AI and a11y. Between snake oil salesmen and genuine experts trying things out, not everything is worth taking. Let's things settle; perhaps something good will come of it...
+We can only observe that things are changing around AI and a11y. Between snake oil salesmen and genuine experts trying things out, not everything is worth taking. Let things settle; perhaps something good will come of it...
 
 ## Accessibility in Laws, Standards, and Recommendations
 
@@ -42,7 +42,7 @@ We can only observe that things are changing around AI and a11y. Between snake o
 ## Testing Accessibility
 
 - Examples for the Images of Text criterion, well explained: https://vispero.com/resources/does-it-fail-1-4-5-images-of-text/
-- WCG-EM 2.0, More than just web: https://hidde.blog/wcag-em-apps/
+- WCAG-EM 2.0, More than just web: https://hidde.blog/wcag-em-apps/
 - Details on WCAG 2.5.2 pointer cancellation: https://tarnoff.info/2026/03/02/a11y-101-2-5-2-pointer-cancellation/
 - Keyboard testing: https://www.youtube.com/watch?v=zx8hN95vYaY&t=292s
 - Keyboard testing for dummies: https://www.sitepoint.com/accessibility-testing-with-keyboard-navigation/
@@ -92,7 +92,7 @@ We can only observe that things are changing around AI and a11y. Between snake o
 
 - To avoid repetition by screen readers: https://www.linkedin.com/pulse/screen-reader-stutter-why-your-content-repeats-itself-sheri-6rnlc/
 - Improvement in Office 365 for reading with keyboard navigation: <https://techcommunity.microsoft.com/blog/microsoft365insiderblog/more-logical-navigation-through-word-documents-for-screen-readers/4471937>
-- Explanations WCAG 2.5.3 Label in Name: https://tarnoff.info/2026/03/16/a11y-101-2-5-3-label-in-name/
+- Explanation of WCAG 2.5.3 Label in Name: https://tarnoff.info/2026/03/16/a11y-101-2-5-3-label-in-name/
 
 ## Ergonomics, UI & UX
 
