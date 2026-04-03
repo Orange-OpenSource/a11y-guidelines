@@ -33,7 +33,7 @@ On ne peut que constater que ça bouge autour de l'IA et a11y. Entre des vendeur
 - La clarté du discours, c'est aussi de l'accessibilité (en) : https://the-word.news/2026/0205/clarity/
 - Les soft skills des clés du succès d'un programme d'a11y (en) : https://www.linkedin.com/pulse/other-half-accessibility-why-soft-skills-determine-sheri-pzqnc/
 - Les PDF pas la meilleure façon d'exposer du contenu (en) : https://ozewai.org/blog/technical-articles/part-two-why-pdfs-are-not-a-suitable-solution/
-- Impliquer les devs dans l'a11y (en) : https://buttondown.com/access-ability/archive/getting-developers-to-care-about-accessibility/
+- Impliquer les développeurs dans l'a11y (en) : https://buttondown.com/access-ability/archive/getting-developers-to-care-about-accessibility/
 - Manque d'a11y, quel est le souci (en) : https://gbbns.co/journal/accessibility-problem-isnt-design/
 - Manque de priorisation d'a11y dans le numérique (en) : https://gbbns.co/journal/organisation-that-never-prioritised-it/
 - Mettez à jour vos déclarations d'accessibilité (en) : https://buttondown.com/nic-steenhout/archive/wcag-a-vs-aa-outdated-accessibility-statements/
