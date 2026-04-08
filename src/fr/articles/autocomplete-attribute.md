@@ -1,6 +1,6 @@
 ---
 title: "L'attribut HTML autocomplete : comprendre et utiliser correctement l'autocomplétion des formulaires"
-abstract: "Souvent oublié, l'attribut autocomplete améliore pourtant l'accessibilité et l'ergonomie des formulaires."
+abstract: "Derrière un simple attribut HTML se cache un mécanisme puissant : aider les navigateurs à comprendre ce que l'utilisateur doit saisir."
 titleBeforeTag: true
 date: "2026-04-17"
 tags:
@@ -8,18 +8,19 @@ tags:
   - advanced
 ---
 
-Les formulaires sont une partie essentielle de l'expérience utilisateur sur le web. Ils permettent aux utilisateurs de s'inscrire à un service, de se connecter à un compte, de faire des achats, et bien plus encore. Cependant, pour de nombreux utilisateurs, notamment les personnes en situation de handicap, les formulaires peuvent représenter un défi majeur. L'accessibilité des formulaires est donc cruciale pour garantir une expérience utilisateur inclusive. L'un des attributs HTML qui joue un rôle clé dans l'accessibilité des formulaires est l'attribut `autocomplete`. Dans cet article, nous allons explorer en détail cet attribut, son impact sur l'accessibilité, et comment l'utiliser efficacement.
-
-L'attribut HTML `autocomplete` permet aux navigateurs et aux gestionnaires de mots de passe de comprendre **le type d'information attendu dans un champ de formulaire**.
+Les formulaires sont au cœur de l'expérience utilisateur sur le web : inscription, connexion, paiement… Ils sont partout.
+Pourtant, leur remplissage peut représenter un obstacle, en particulier pour les personnes en situation de handicap. L'accessibilité des formulaires est donc un enjeu majeur.
+Parmi les mécanismes souvent négligés, l'attribut HTML `autocomplete` joue un rôle clé.
+Il permet aux navigateurs et aux gestionnaires de mots de passe de comprendre **le type d'information attendu dans un champ**.
 
 Correctement utilisé, il permet :
 
-* d'accélérer la saisie des formulaires ;
+* d'accélérer la saisie ;
 * de réduire les erreurs ;
 * d'améliorer l'expérience utilisateur ;
-* et dans certains cas, de **répondre à des exigences d'accessibilité**.
+* et, dans certains cas, de **répondre à des exigences d'accessibilité**.
 
-Cet article propose un tour d'horizon de cet attribut souvent mal compris : son rôle, son impact sur l'accessibilité, les différentes valeurs possibles et les méthodes pour vérifier sa présence dans un formulaire.
+Cet article propose un tour d'horizon de cet attribut souvent mal compris : son rôle, son impact sur l'accessibilité, sa syntaxe et les bonnes pratiques pour l'utiliser efficacement.
 
 ## Présentation de l'attribut `autocomplete`
 
@@ -49,18 +50,19 @@ La spécification HTML définit une **liste précise de valeurs normalisées** (
 
 ## Impact de `autocomplete` sur l'accessibilité
 
-L'attribut `autocomplete` joue un rôle direct dans l'accessibilité des formulaires.
+L'attribut `autocomplete` joue un rôle direct dans l'accessibilité des formulaires mais n'a pas été conçu spécifiquement pour les technologies d'assistance. Il permet avant tout aux navigateurs d'identifier le type d'information attendu dans un champ et de proposer une autocomplétion adaptée.
 
 Certaines technologies d'assistance peuvent exploiter cette information pour **identifier la nature d'un champ de formulaire**, indépendamment de son libellé visible.
 
 L'attribut `autocomplete` est particulièrement **bénéfique pour les utilisateurs**. Voici quelques exemples de son impact positif :
-- **Utilisateurs avec des troubles cognitifs** : L'auto-complétion aide ces utilisateurs en réduisant la charge cognitive nécessaire pour remplir un formulaire. Les suggestions fournies par le navigateur peuvent servir de rappels ou d'indices, facilitant ainsi la saisie des informations.
-- **Utilisateurs avec des handicaps moteurs** : Pour les personnes ayant des difficultés à utiliser un clavier ou une souris, l'auto-complétion réduit le nombre de frappes nécessaires, rendant le formulaire plus rapide et moins fatigant à remplir.
-- **Utilisateurs malvoyants ou non-voyants** : Les utilisateurs de lecteurs d'écran bénéficient également de l'attribut `autocomplete`. Les suggestions d'auto-complétion peuvent être lues par les lecteurs d'écran, aidant ainsi les utilisateurs à comprendre les informations attendues et à remplir le formulaire plus efficacement.
+- **Utilisateurs avec des troubles cognitifs** : L'autocomplétion aide ces utilisateurs en réduisant la charge cognitive nécessaire pour remplir un formulaire. Les suggestions fournies par le navigateur peuvent servir de rappels ou d'indices, facilitant ainsi la saisie des informations.
+- **Utilisateurs avec des handicaps moteurs** : Pour les personnes ayant des difficultés à utiliser un clavier ou une souris, l'autocomplétion réduit le nombre de frappes nécessaires, rendant le formulaire plus rapide et moins fatigant à remplir.
+- **Utilisateurs malvoyants ou non-voyants** : Les utilisateurs de lecteurs d'écran bénéficient également de l'attribut `autocomplete`. Les suggestions d'autocomplétion peuvent être lues par les lecteurs d'écran, aidant ainsi les utilisateurs à comprendre les informations attendues et à remplir le formulaire plus efficacement.
 
 Cette pratique est directement liée à un critère d'accessibilité des WCAG : **WCAG 2.2 – Success Criterion 1.3.5: Identify Input Purpose (niveau AA)**.
 
 Ce critère demande que, pour certains champs collectant des données personnelles, **la finalité du champ soit identifiée programmatiquement** à l'aide des valeurs définies dans la spécification HTML.
+L'utilisation de `autocomplete` constitue ainsi un moyen standardisé de répondre à ce critère, lorsqu'un token approprié existe.
 
 *Remarque :* le critère concerne les informations relatives à l'utilisateur lui-même, et non celles concernant des tiers (par exemple : adresse de livraisons d'un ami ou numéro de téléphone d'un contact).
 
@@ -89,7 +91,7 @@ L'utilisation de `autocomplete` ne remplace évidemment pas :
 * une **structure de formulaire claire**
 * des **instructions compréhensibles pour l'utilisateur**.
 
-L'attribut autocomplete ne fournit pas de nom accessible au champ. Les technologies d'assistance peuvent exploiter cette information comme un complément, mais jamais comme un substitut au libellé.
+L'attribut `autocomplete` ne fournit pas de nom accessible au champ. Les technologies d'assistance peuvent exploiter cette information comme un complément, mais jamais comme un substitut au libellé.
 
 ## Comprendre la syntaxe de `autocomplete`
 
@@ -104,7 +106,19 @@ Ces valeurs peuvent être regroupées en plusieurs catégories.
 * Si `autocomplete` est présent à la fois sur le `form` et sur un champ, la valeur du champ a priorité.
 * Un `autocomplete` absent sur un champ hérite du comportement du `form`, qui se comporte alors comme une valeur par défaut (par exemple `autocomplete="off"` sur le formulaire, mais `autocomplete="email"` sur un champ précis).
 
-### 1. Valeurs générales : `on` et `off`
+### Syntaxe de l'attribut `autocomplete`
+
+La spécification HTML Living Standard ne définit pas la valeur de l'attribut `autocomplete` comme une simple valeur libre mais plutôt comme une **séquence structurée de tokens** devant obéir à une grammaire stricte ainsi qu'à un ordre précis. Chaque token a un rôle précis, et leur ordre n'est pas interchangeable. L'ordre des tokens est en effet significatif : une valeur mal ordonnée peut être ignorée par le navigateur.
+
+La valeur de `autocomplete` n'est pas une simple chaîne libre : elle doit respecter une structure précise définie par la spécification HTML.
+
+La syntaxe attendue est la suivante :
+
+```html
+autocomplete = "on" | "off" | [section-*] [shipping|billing] [contact-type] autofill-field-name [webauthn]
+```
+
+#### 1. Valeurs générales : `on` et `off`
 
 Les valeurs `on` et `off` permettent d'activer ou de désactiver l'autocomplétion.
 
@@ -127,7 +141,7 @@ L'usage de `autocomplete="off"` doit être réservé à des cas très spécifiqu
 * un champ de saisie d'un code à usage unique (OTP)
 * un champ de confirmation de type "Veuillez saisir à nouveau votre e-mail" (bien que cette pratique soit elle-même discutable en termes d'ergonomie).
 
-### 2. Les valeurs définies par la spécification HTML (obligatoire)
+#### 2. Les valeurs définies par la spécification HTML (obligatoire)
 
 La spécification HTML définit de nombreuses **valeurs normalisées**, appelées `autofill tokens`, permettant d'identifier précisément la donnée attendue.
 
@@ -160,7 +174,7 @@ Ces valeurs sont utilisées par :
 
 [La liste complète est définie dans la spécification HTML](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute).
 
-### 3. Les sections prédéfinies (optionnel)
+#### 3. Les sections prédéfinies (optionnel)
 
 Contrairement à ce que l'on croit souvent, la valeur de `autocomplete` peut contenir plusieurs tokens.
 La spécification permet en effet de **regrouper des champs appartenant à une même section logique**. Ces regroupements permettent d'indiquer le contexte de la donnée.
@@ -186,7 +200,7 @@ Une autre section courante est `billing`, utilisée pour les informations de fac
 
 Ces sections permettent aux navigateurs de distinguer plusieurs ensembles de données dans un même formulaire.
 
-### 4. Les sections personnalisées (optionnel)
+#### 4. Les sections personnalisées (optionnel)
 
 Il est également possible de définir des sections personnalisées grâce au préfixe :
 
@@ -203,7 +217,7 @@ Exemple :
 
 Cela permet de distinguer plusieurs utilisateurs ou plusieurs ensembles d'informations similaires dans un même formulaire.
 
-### 5. Les modificateurs du type de contact (optionnel)
+#### 5. Les modificateurs du type de contact (optionnel)
 
 Certains champs acceptent des tokens supplémentaires appelés `contact type hints`.
 Ces tokens ne sont ni des sections ni des champs, mais des `modificateurs du type de contact`.
@@ -249,9 +263,37 @@ indique que le formulaire attend un numéro de téléphone mobile.
 
 Ces `tokens` permettent de préciser le contexte d'une information de contact comme un numéro de téléphone ou une adresse e-mail. Ce ne sont pas des sections car ces dernières servent à distinguer des groupes de données dans un formulaire.
 
-### 6. Identifiants WebAuthn (optionnel)
+#### 6. Identifiants WebAuthn (optionnel)
 
-La spécification HTML inclut également le token `webauthn`, utilisé pour signaler qu'un champ peut déclencher une authentification WebAuthn (par exemple avec des `passkeys`).
+La spécification HTML inclut également le token `webauthn`, utilisé pour signaler qu'un champ peut déclencher une authentification *via* WebAuthn (par exemple avec des `passkeys`).
+Ce token est défini dans l'[API Web Authentication](https://developer.mozilla.org/fr/docs/Web/API/Web_Authentication_API).
+
+Exemple :
+
+```html
+<input autocomplete="username webauthn">
+```
+
+## Comportement réel des navigateurs
+
+L'attribut `autocomplete` fournit une indication aux navigateurs, mais ne garantit pas à lui seul le fonctionnement de l'autocomplétion.
+
+En pratique, les navigateurs utilisent également :
+
+* l'attribut `name`
+* l'attribut `id`
+* le texte du `label`
+* la structure du formulaire
+* des heuristiques internes
+
+Par exemple, un champ nommé `email` peut être reconnu comme un champ de messagerie même sans `autocomplete`.
+
+```html
+<input name="email">
+```
+
+Cependant, ce comportement n'est pas standardisé et peut varier selon les navigateurs.
+L'utilisation correcte de `autocomplete` permet de fiabiliser ce mécanisme et de réduire les ambiguïtés. En d'autres termes, `autocomplete` est un signal important, mais il n'est pas le seul utilisé par les navigateurs. Ces heuristiques peuvent produire des résultats variables selon les navigateurs et les contextes.
 
 ## Exemple complet de formulaire
 
@@ -261,19 +303,19 @@ Voici un exemple simplifié de formulaire utilisant correctement l'attribut `aut
 <form>
 
   <label for="firstname">Prénom</label>
-  <input id="firstname" autocomplete="given-name">
+  <input id="firstname" name="firstname" autocomplete="given-name">
 
   <label for="lastname">Nom</label>
-  <input id="lastname" autocomplete="family-name">
+  <input id="lastname" name="lastname" autocomplete="family-name">
 
   <label for="email">Adresse e-mail</label>
-  <input id="email" type="email" autocomplete="email">
+  <input id="email" name="email" type="email" autocomplete="email">
 
   <label for="street">Adresse</label>
-  <input id="street" autocomplete="street-address">
+  <input id="street" name="street" autocomplete="street-address">
 
   <label for="postal">Code postal</label>
-  <input id="postal" autocomplete="postal-code">
+  <input id="postal" name="postal" autocomplete="postal-code">
 
 </form>
 ```
@@ -325,12 +367,12 @@ Le bookmarklet est disponible sur GitHub : https://github.com/MewenLeHo/detectAu
 
 Lors des audits d'accessibilité ou d'ergonomie, plusieurs erreurs sont souvent rencontrées :
 
-1. **Oublier l'attribut `autocomplete`** :
+1. **Oublier complètement `autocomplete`** :
   - **Impact** : Les utilisateurs doivent saisir manuellement toutes les informations, ce qui peut être fastidieux et source d'erreurs.
   - **Solution** : Toujours inclure l'attribut `autocomplete` pour les champs de formulaire pertinents.
 
-2. **Utiliser des valeurs incorrectes pour `autocomplete`** :
-  - **Impact** : Les navigateurs peuvent ne pas reconnaître les valeurs incorrectes, rendant l'auto-complétion inefficace.
+2. **Utiliser des tokens non standard** :
+  - **Impact** : Les navigateurs peuvent ne pas reconnaître les valeurs incorrectes, rendant l'autocomplétion inefficace.
   - **Solution** : Utiliser les valeurs standardisées pour l'attribut `autocomplete` comme spécifié dans la documentation HTML.
 
 Exemple :
@@ -340,8 +382,9 @@ Exemple :
 ```
 
 La valeur ne correspond pas à la donnée demandée.
+Les valeurs non définies par la spécification sont ignorées par les navigateurs, qui peuvent alors se reposer sur leurs propres heuristiques.
 
-3. **Utilisation excessive de `autocomplete="off"`** :
+3. **Désactiver inutilement l'autocomplétion** :
   - **Impact** : pratique souvent inutile, parfois ignorée par les navigateurs, et qui prive certains utilisateurs d'une fonctionnalité importante pour l'accessibilité.
   - **Solution** : limiter `autocomplete="off"` aux cas réellement justifiés (OTP, champs très sensibles ou sans bénéfice d'autocomplétion) et laisser l'autocomplétion active partout ailleurs.
 
@@ -349,20 +392,32 @@ La valeur ne correspond pas à la donnée demandée.
   - **Impact** : les navigateurs et gestionnaires de mots de passe peuvent avoir plus de mal à distinguer plusieurs ensembles de données (par exemple plusieurs adresses ou plusieurs personnes) dans un même formulaire.
   - **Solution** : utiliser `shipping`, `billing` ou des sections personnalisées (`section-*`) quand un même formulaire regroupe plusieurs ensembles d'informations similaires.
 
+### Règle simple à retenir
+
+Pour chaque champ de formulaire :
+
+1. fournir un nom accessible clair (`label` ou autre technique de nommage) ;
+2. utiliser un token `autocomplete` standard si applicable ;
+3. ne pas inventer de valeur.
+
+Ces trois règles couvrent la majorité des cas d'usage.
+
 ## Conclusion
 
-L'attribut `autocomplete` illustre bien une idée simple : une petite information sémantique peut avoir un impact important sur l'expérience utilisateur et l'accessibilité.
+L'attribut `autocomplete` illustre une idée simple : une information sémantique minimale peut avoir un impact significatif sur l'expérience utilisateur et l'accessibilité.
 
 Correctement utilisé, il permet :
 
-* de faciliter et accélérer la saisie des informations,
-* de réduire les erreurs,
-* d'améliorer l'interopérabilité avec les navigateurs et les gestionnaires de mots de passe,
-* et de répondre à certaines exigences des WCAG concernant l'identification de la finalité des champs.
+* d'accélérer la saisie ;
+* de réduire les erreurs ;
+* d'améliorer l'interopérabilité avec les navigateurs et les gestionnaires de mots de passe ;
+* et de répondre à certaines exigences d'accessibilité.
 
-Malgré cela, il reste encore **sous-utilisé ou mal implémenté dans de nombreux formulaires**. La spécification HTML définit aujourd'hui plus de cinquante valeurs possibles pour l'attribut `autocomplete`. En pratique, seule une petite partie est couramment utilisée dans les formulaires.
+Malgré cela, il reste encore **sous-utilisé ou mal implémenté dans de nombreux formulaires**.
 
-Prendre le temps de l'ajouter correctement constitue donc une amélioration rapide, à la fois pour l'ergonomie et pour l'accessibilité.
+La spécification HTML définit aujourd'hui plusieurs dizaines de valeurs pour `autocomplete`. En pratique, seule une partie est réellement utilisée.
+
+Prendre le temps de l'implémenter correctement est une amélioration simple, rapide… et pourtant encore trop souvent négligée.
 
 L'attribut `autocomplete` est un outil puissant pour améliorer l'accessibilité des formulaires web. En réduisant la charge cognitive et physique nécessaire pour remplir un formulaire, il rend l'expérience utilisateur plus inclusive et agréable pour tous, y compris les personnes ayant des handicaps. En suivant les bonnes pratiques et en évitant les erreurs courantes, les développeurs peuvent créer des formulaires accessibles qui bénéficient à tous les utilisateurs. Ajouter correctement cet attribut est une amélioration simple, rapide à mettre en œuvre, et pourtant encore trop souvent oubliée dans les formulaires web.
 
