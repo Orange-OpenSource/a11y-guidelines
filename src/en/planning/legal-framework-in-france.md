@@ -70,7 +70,7 @@ The international dimension of the Orange Group, present in 26 countries, justif
 
 ### Obligations for businesses: 
 
-Accessibility requirements are aligned with harmonized standard EN 301 549 (next version available February 2026), equivalent to WCAG 2.1 level AA. Harmonized standards for non-digital accessibility requirements for products or assistive services are not yet available. Their publication is expected by March 2026. 
+Accessibility requirements are aligned with harmonized standard EN 301 549 (next version available at the end of 2026), equivalent to WCAG 2.1 level AA. Harmonized standards for non-digital accessibility requirements for products or assistive services are not yet available. 
 
 **Obligations for services:**
 - Compliance of services concerned.
