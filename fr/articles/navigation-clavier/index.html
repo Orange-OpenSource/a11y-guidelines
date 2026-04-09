@@ -202,23 +202,23 @@
             
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-119" aria-labelledby="heading-119">#</a></h2>
+          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-6" aria-labelledby="heading-6">#</a></h2>
 <p>La gestion des interactions au clavier est l'un des piliers de la recommandation <span lang="en">Accessible Rich Internet Applications</span> (<abbr>ARIA</abbr>) du <abbr>W3C</abbr> (<span lang="en">World Wide Web Consortium</span>) / <abbr>WAI</abbr> (<span lang="en">Web Accessibility Initiative</span>).<br>
 L'objectif est de standardiser la navigation au clavier dans les composants d'interface d'une page.<br>
 Globalement, la navigation entre les composants d'interface se fait classiquement à l'aide de la touche <kbd>Tab</kbd>. À l'intérieur d'un composant, la navigation au clavier doit être gérée finement, selon les patrons de conception qui font partie intégrante de la recommandation <abbr>ARIA</abbr>.</p>
-<h2 id="aria-et-interactions-clavier" class="h2-focus">ARIA et interactions clavier <a class="header-anchor" href="#aria-et-interactions-clavier" id="heading-120" aria-labelledby="heading-120">#</a></h2>
-<h3 id="tabindex">tabindex <a class="header-anchor" href="#tabindex" id="heading-121" aria-labelledby="heading-121">#</a></h3>
+<h2 id="aria-et-interactions-clavier" class="h2-focus">ARIA et interactions clavier <a class="header-anchor" href="#aria-et-interactions-clavier" id="heading-7" aria-labelledby="heading-7">#</a></h2>
+<h3 id="tabindex">tabindex <a class="header-anchor" href="#tabindex" id="heading-8" aria-labelledby="heading-8">#</a></h3>
 <p>En <abbr>HTML5</abbr>, l'attribut global <code>tabindex</code> peut être utilisé sur la plupart des éléments rendus à l'écran. Il autorise notamment les usages suivants :</p>
 <ul>
 <li>d'une valeur négative (<code>tabindex=&quot;-1&quot;</code>) qui retire l'élément de l'ordre de tabulation séquentielle (il n'est pas atteignable au clavier via la touche <kbd>Tab</kbd>), mais il peut recevoir le focus par script (<code>element.focus()</code>) ou par un clic.</li>
 <li>d'une valeur <code>tabindex=&quot;0&quot;</code> qui permet à l'élément d'entrer dans l'ordre de tabulation naturel et de recevoir le focus comme les éléments nativement focusables.</li>
 </ul>
 <p>Évitez d'utiliser des valeurs <code>tabindex</code> positives (supérieures à 0) sauf cas très justifiés : elles modifient l'ordre de tabulation et sont difficiles à maintenir.</p>
-<h3 id="patrons-de-conception">Patrons de conception <a class="header-anchor" href="#patrons-de-conception" id="heading-122" aria-labelledby="heading-122">#</a></h3>
+<h3 id="patrons-de-conception">Patrons de conception <a class="header-anchor" href="#patrons-de-conception" id="heading-9" aria-labelledby="heading-9">#</a></h3>
 <p>Avec <abbr>ARIA</abbr>, l'objectif est d'homogénéiser les interactions clavier en visant une navigation similaire à celle d'une application de bureau.<br>
 Il faut donc, pour chaque composant, implémenter l'interaction au clavier selon son type (accordéon, menu de navigation, barre d'outils, potentiomètre…) en se référant aux <a hreflang="en" href="https://www.w3.org/WAI/ARIA/apg/patterns/">patrons de conception</a>.<br>
 Outre la navigation au clavier à implémenter, les patrons de conception indiquent également comment mettre en œuvre les propriétés et états <abbr>ARIA</abbr> pour rendre un composant accessible, en fonction de son type.</p>
-<h3 id="tests-utilisateurs">Tests utilisateurs <a class="header-anchor" href="#tests-utilisateurs" id="heading-123" aria-labelledby="heading-123">#</a></h3>
+<h3 id="tests-utilisateurs">Tests utilisateurs <a class="header-anchor" href="#tests-utilisateurs" id="heading-10" aria-labelledby="heading-10">#</a></h3>
 <p>Pour valider l'utilisabilité pour les personnes en situation de handicap et la robustesse vis‑à‑vis des agents utilisateurs (aides techniques et navigateurs), il est recommandé de faire tester vos composants par des personnes utilisant des lecteurs d'écran, au minimum.<br>
 Testez vos développements sur les environnements cibles (combinaisons navigateur et aide technique). C'est un travail conséquent mais indispensable : sur un site ou une application web, testez au minimum avec :</p>
 <ul>
@@ -277,7 +277,7 @@ Testez vos développements sur les environnements cibles (combinaisons navigateu
 </a>
           </li><li class="nav-item">
           <a href="https://www.netlify.com" class="nav-link" title="Déploiements sur Netlify">
-            <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
+            <img src="https://www.netlify.com/assets/badges/netlify-badge-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
           </a>
         </li>
         <li class="nav-item ms-sm-auto">
