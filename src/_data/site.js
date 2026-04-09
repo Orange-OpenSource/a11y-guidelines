@@ -157,6 +157,7 @@ module.exports = {
       "hashtag": "#cookie-consent", /* Open the panel with this hashtag */
       "cookieName": "cookie-consent", /* Cookie name */
       "orientation": "bottom", /* Banner position (top - bottom) */
+      "bodyPosition": "top", /* top to bring it as first element in DOM for accessibility */
       "showAlertSmall": false, /* Show the small banner on bottom right */
       "cookieslist": true, /* Show the cookie list */
       "adblocker": false, /* Show a Warning if an adblocker is detected */
