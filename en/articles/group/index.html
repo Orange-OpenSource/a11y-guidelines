@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="no-js" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>The group role - Orange digital accessibility guidelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
+    
+    <meta name="description" content="how-to use the group role">
+    
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <nav class="navbar navbar-expand-lg supra" aria-label="Skip links - Switch language" data-bs-theme="dark">
+   <div class="container-lg">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
+      <a href="#main-menu" class="nav-link">Go to menu</a>
+    </li><li class="nav-item">
+      <a href="#main-content" class="nav-link">Go to content</a>
+    </li><li class="nav-item hidden-if-no-js">
+      <a href="#search-input" class="nav-link">Go to search</a>
+    </li><li class="nav-item">
+      <a href="#footer" class="nav-link">Go to footer</a>
+    </li></ul>
+
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+    </div>
+  </nav>
+
+  
+
+<div class="navbar navbar-expand-md" data-bs-theme="dark">
+  <nav id="main-menu" class="container-lg justify-content-md-start align-items-center" role="navigation" aria-label="Main navigation">
+    <a href="/en/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, go to homepage">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, go to homepage" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Navigation menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/en/" class="nav-link">
+  Home
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/planning/" class="nav-link">
+  Planning
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/web/" class="nav-link">
+  Web
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/android/" class="nav-link">
+  Android
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/mobile/ios/" class="nav-link">
+  iOS
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/content-and-communication/" class="nav-link">
+  Content and communication
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en/articles/" class="nav-link active" aria-current="true">
+  Articles
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Switch language</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link active" aria-current="true" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input"></div>
+
+  </nav>
+</div>
+
+  
+</header>
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">You are here:</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a class="breadcrumb-focus" href="/en/">Home</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-focus" href="/en/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          The group role
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#the-group-role" class="dropdown-item text-wrap">The group role</a><a href="#what-is-the-group-role-used-for" class="dropdown-item text-wrap">What is the group role used for?</a><a href="#support-in-ats" class="dropdown-item text-wrap">Support in ATs</a><a href="#when-can-it-be-used" class="dropdown-item text-wrap">When can it be used?</a><a href="#for-form-elements" class="dropdown-item text-wrap">For form elements</a><a href="#for-other-elements" class="dropdown-item text-wrap">For other elements</a><a href="#examples" class="dropdown-item text-wrap">Examples</a><a href="#best-practices" class="dropdown-item text-wrap">Best Practices</a><a href="#conclusion" class="dropdown-item text-wrap">Conclusion</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main">
+          
+            <h1>The group role</h1>
+            
+              <span class="visually-hidden" id="filters_label">
+                Associated themes:
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><span class="tagType d-inline-block" data-tag="web">Web</span></li>
+              <li class="list-inline-item"><span class="tagType d-inline-block" data-tag="intermediate">Intermediate</span></li>
+              </ul>
+            
+            
+            
+
+            <p class="text-muted mb-0">
+              <span class="visually-hidden">Publication date</span>
+              <time datetime="2026-04-10T00:00:00.000Z">
+                April 10, 2026
+              </time>
+            </p>
+
+            
+          
+          <div class="mt-4">
+          <h2 id="the-group-role" class="h2-focus">The <code>group</code> role <a class="header-anchor" href="#the-group-role" id="heading-259" aria-labelledby="heading-259">#</a></h2>
+<p>This is one of the roles in the ARIA specification (<a href="https://www.w3.org/TR/wai-aria-1.3/#group">the <code>group</code> role in ARIA 1.3 specification</a>). It is one of the document structure roles.</p>
+<h3 id="what-is-the-group-role-used-for">What is the <code>group</code> role used for? <a class="header-anchor" href="#what-is-the-group-role-used-for" id="heading-260" aria-labelledby="heading-260">#</a></h3>
+<p>It allows you to group page elements that should be treated as a single entity. In other words, it groups elements that share the same purpose, function, or a common goal.</p>
+<p>This is a good way to convey the structural and relational information of a group to assistive technologies (AT) in a way other than through a purely visual indicator.</p>
+<h3 id="support-in-ats">Support in ATs <a class="header-anchor" href="#support-in-ats" id="heading-261" aria-labelledby="heading-261">#</a></h3>
+<p>Support is generally good, with the exception of mobile environments (<a href="https://a11ysupport.io/tech/aria/group_role"><code>group</code> support on A11ysupport</a>). Since support remains partial, it's always important to test implementations with your target browser/AT environments, as always with ARIA.</p>
+<h3 id="when-can-it-be-used">When can it be used? <a class="header-anchor" href="#when-can-it-be-used" id="heading-262" aria-labelledby="heading-262">#</a></h3>
+<h4 id="for-form-elements">For form elements <a class="header-anchor" href="#for-form-elements" id="heading-263" aria-labelledby="heading-263">#</a></h4>
+<p>The <code>group</code> role is ideal for acting as the equivalent of <code>fieldset</code> for form elements when there's no other option.</p>
+<h4 id="for-other-elements">For other elements <a class="header-anchor" href="#for-other-elements" id="heading-264" aria-labelledby="heading-264">#</a></h4>
+<p>The <code>group</code> role can be used with any group of logically, semantically related elements.</p>
+<h4 id="examples">Examples <a class="header-anchor" href="#examples" id="heading-265" aria-labelledby="heading-265">#</a></h4>
+<p>For a podcast playback control panel, it's a good idea to group the audio playback buttons. This is a visually identifiable logical group, and therefore should be identified for the ATs (Assistive Technologies).</p>
+<pre><code class="language-html">&lt;div role=&quot;group&quot; aria-label=&quot;Podcast Audio Controller&quot;&gt;
+ &lt;button&gt;Play&lt;/button&gt;
+ &lt;button&gt;Pause&lt;/button&gt;
+ &lt;button&gt;Stop&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Here, we ensure that the information about the existence of the image and caption group is correctly conveyed to the ATs despite the poor native support of <code>figure</code>.</p>
+<pre><code class="language-html">&lt;figure aria-labelledby=&quot;opera_1&quot; role=&quot;group&quot;&gt;
+ &lt;img src=&quot;/operabatiment.jpg&quot; alt=&quot;The Opéra Garnier, Paris, France&quot;&gt;
+ &lt;figcaption id=&quot;opera_1&quot;&gt;
+ A performance of The Barber of Seville that I attended (Nov 2022)!
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<p>In an application menu, the <code>group</code> role can be used to group the different types of possible actions. Here, a name isn't necessarily needed for the <code>group</code>; the categories are self-explanatory.</p>
+<pre><code class="language-html">&lt;div role=&quot;menu&quot;&gt;
+ &lt;ul role=&quot;group&quot;&gt;
+  &lt;li role=&quot;menuitem&quot;&gt;Inbox&lt;/li&gt;
+  &lt;li role=&quot;menuitem&quot;&gt;Archive&lt;/li&gt;
+  &lt;li role=&quot;menuitem&quot;&gt;Recycle Bin&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;ul role=&quot;group&quot;&gt;
+  &lt;li role=&quot;menuitem&quot;&gt;Personal Folder&lt;/li&gt;
+  &lt;li role=&quot;menuitem&quot;&gt;Family Folder&lt;/li&gt;
+  &lt;li role=&quot;menuitem&quot;&gt;Picture Folder&lt;/li&gt;
+ &lt;/ul&gt;
+
+ &lt;ul role=&quot;group&quot;&gt;
+  &lt;li role=&quot;menuitem&quot;&gt;New Folder&lt;/li&gt;
+...
+ &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+<h3 id="best-practices">Best Practices <a class="header-anchor" href="#best-practices" id="heading-266" aria-labelledby="heading-266">#</a></h3>
+<ul>
+<li>When necessary for clarity, use <code>aria-label</code> or <code>aria-labelledby</code> to name any tag with a <code>role=&quot;group&quot;</code>.</li>
+<li>Do not use <code>role=&quot;group&quot;</code> instead of landmarks or HTML5 page structure tags.</li>
+<li>The <code>group</code> role increases cognitive load for the user; use it sparingly and discreetly, and reserve it for truly necessary cases.</li>
+<li>If using the <code>group</code> role, it is also beneficial to provide a visual indication of the grouping. Similar to the border generated by a <code>fieldset</code> around form elements, but other visual cues are possible.</li>
+<li><code>group</code> roles can be nested, but be mindful of the risk of excessive verbosity.</li>
+</ul>
+<h2 id="conclusion" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-267" aria-labelledby="heading-267">#</a></h2>
+<p>Good interface design practices require that elements belonging to the same functional unit, or grouped together because they perform the same type of function, be visually grouped. Similarly, for assistive technologies (AT) and at the programmatic level, it is essential to convey this grouping information if it is necessary for a clear understanding of the interface. This is possible via the ARIA attribute <code>role=&quot;group&quot;</code>. Even though its support among AT/user agent pairs is not universal, feel free to use it judiciously.</p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#the-group-role" class="nav-link text-muted">The group role</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#what-is-the-group-role-used-for" class="nav-link text-muted">What is the group role used for?</a></li><li class="nav-item position-relative">
+            <a href="#support-in-ats" class="nav-link text-muted">Support in ATs</a></li><li class="nav-item position-relative">
+            <a href="#when-can-it-be-used" class="nav-link text-muted">When can it be used?</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#for-form-elements" class="nav-link text-muted">For form elements</a></li><li class="nav-item position-relative">
+            <a href="#for-other-elements" class="nav-link text-muted">For other elements</a></li><li class="nav-item position-relative">
+            <a href="#examples" class="nav-link text-muted">Examples</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#best-practices" class="nav-link text-muted">Best Practices</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#conclusion" class="nav-link text-muted">Conclusion</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/en/contact/" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/en/about/" class="nav-link">
+  About
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-en.xml" class="nav-link">
+  RSS feed
+</a>
+          </li><li class="nav-item">
+            <a href="/en/accessibility/" class="nav-link">
+  Accessibility: partially compliant
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/en/" class="nav-link">
+  Pre-release on Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Deploys by Netlify">
+            <img src="https://www.netlify.com/assets/badges/netlify-badge-color-accent.svg" alt="Deploys by Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/group.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+            Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Back to top">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" title="Back to top">
+        <span class="visually-hidden">Back to top</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "en",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "en"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","bodyPosition":"top","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:en"],"attributesToHighlight":["title","content"]},"placeholder":"Search in entire website","translations":{"button":{"buttonText":"Search in entire website","buttonAriaLabel":"Search in entire website"},"modal":{"searchBox":{"resetButtonTitle":"Clear the query","resetButtonAriaLabel":"Clear the query","cancelButtonText":"Cancel","cancelButtonAriaLabel":"Cancel"},"startScreen":{"recentSearchesTitle":"Recent","noRecentSearchesText":"No recent searches","saveRecentSearchButtonTitle":"Save this search","removeRecentSearchButtonTitle":"Remove this search from history","favoriteSearchesTitle":"Favorite","removeFavoriteSearchButtonTitle":"Remove this search from favorites"},"errorScreen":{"titleText":"Unable to fetch results","helpText":"You might want to check your network connection."},"footer":{"selectText":"to select","selectKeyAriaLabel":"Enter key","navigateText":"to navigate","navigateUpKeyAriaLabel":"Arrow up","navigateDownKeyAriaLabel":"Arrow down","closeText":"to close","closeKeyAriaLabel":"Escape key","searchByText":"Search by"},"noResultsScreen":{"noResultsText":"No results for","suggestedQueryText":"Try searching for","reportMissingResultsText":"Believe this query should return results?","reportMissingResultsLinkText":"Let us know."}}},"debug":false});
+    </script>
+    <div hidden>Anchor link</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2026 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
