@@ -2,7 +2,7 @@
 title: "The group role"
 abstract: "how-to use the group role"
 titleBeforeTag: true
-date: "2026-04-02" 
+date: "2026-04-10" 
 tags:
   - web
   - intermediate
@@ -55,6 +55,8 @@ Here, we ensure that the information about the existence of the image and captio
 </figure>
 ```
 
+In an application menu, the `group` role can be used to group the different types of possible actions. Here, a name isn't necessarily needed for the `group`; the categories are self-explanatory.
+
 ```html
 <div role="menu">
  <ul role="group">
@@ -74,8 +76,6 @@ Here, we ensure that the information about the existence of the image and captio
  </ul>
 </div>
 ```
-
-In an application menu, the `group` role can be used to group the different types of possible actions. Here, a name isn't necessarily needed for the `group`; the categories are self-explanatory.
 
 ### Best Practices
 
