@@ -2,7 +2,7 @@
 title: "Le rôle group"
 abstract: "Comment bien utiliser le rôle group"
 titleBeforeTag: true
-date: "2026-04-02"
+date: "2026-04-10"
 tags:
   - web
   - intermediate
@@ -53,6 +53,7 @@ Ici, on s'assure que l'information sur l'existence du groupe image et légende e
   </figcaption>
 </figure>
 ```
+Dans un menu applicatif, on peut utiliser le rôle `group` pour grouper les différents types d'actions possibles. Ici, pas forcément besoin d'un nom pour le `group`, la typologie est évidente.
 
 ```html
 <div role="menu">
@@ -72,8 +73,6 @@ Ici, on s'assure que l'information sur l'existence du groupe image et légende e
   </ul>
 </div>
 ```
-
-Dans un menu applicatif, on peut utiliser le rôle `group` pour grouper les différents types d'actions possibles. Ici, pas forcément besoin d'un nom pour le `group`, la typologie est évidente.
 
 ### Bonnes pratiques
 
