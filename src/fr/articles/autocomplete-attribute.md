@@ -64,7 +64,7 @@ Cette pratique est directement liée à un critère d'accessibilité des WCAG : 
 Ce critère demande que, pour certains champs collectant des données personnelles, **la finalité du champ soit identifiée programmatiquement** à l'aide des valeurs définies dans la spécification HTML.
 L'utilisation de `autocomplete` constitue ainsi un moyen standardisé de répondre à ce critère, lorsqu'un token approprié existe.
 
-*Remarque :* le critère concerne les informations relatives à l'utilisateur lui-même, et non celles concernant des tiers (par exemple : adresse de livraisons d'un ami ou numéro de téléphone d'un contact).
+*Remarque :* le critère concerne les informations relatives à l'utilisateur lui-même, et non celles concernant des tiers (par exemple : adresse de livraison d'un ami ou numéro de téléphone d'un contact).
 
 Exemples de données concernées :
 
