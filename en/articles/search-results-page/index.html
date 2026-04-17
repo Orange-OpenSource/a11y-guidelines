@@ -2,11 +2,11 @@
 <html lang="en" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
-    <title>Keyboard navigation - Orange digital accessibility guidelines</title>
+    <title>Search result page - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
-    <meta name="description" content="Keyboard navigation how to test">
+    <meta name="description" content="Best practices for site search results.">
     
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -24,10 +24,12 @@
     
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
     
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -81,7 +83,7 @@
 </a>
             </li>
             <li class="nav-item">
-              <a href="/en/web/" class="nav-link active" aria-current="true">
+              <a href="/en/web/" class="nav-link">
   Web
 </a>
             </li>
@@ -101,7 +103,7 @@
 </a>
             </li>
             <li class="nav-item">
-              <a href="/en/articles/" class="nav-link">
+              <a href="/en/articles/" class="nav-link active" aria-current="true">
   Articles
 </a>
             </li><li class="nav-item d-md-none">
@@ -126,35 +128,7 @@
   </nav>
 </div>
 
-  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
-  <div class="container-lg">
-    <ul class="nav"><li class="nav-item">
-              <a href="/en/web/design/" class="nav-link">
-  Design
-</a>
-            </li><li class="nav-item">
-              <a href="/en/web/develop/" class="nav-link">
-  Develop
-</a>
-            </li><li class="nav-item">
-              <a href="/en/web/test/" class="nav-link">
-  Test
-</a>
-            </li><li class="nav-item">
-              <a href="/en/web/wcag-audit/" class="nav-link">
-  Audit
-</a>
-            </li><li class="nav-item">
-              <a href="/en/web/toolbox/" class="nav-link active" aria-current="true">
-  Toolbox
-</a>
-            </li><li class="nav-item">
-              <a href="/en/web/essentials-checklist/" class="nav-link">
-  11 Essentials
-</a>
-            </li></ul>
-  </div>
-</nav>
+  
 </header>
     <div class="container-lg pt-2">
       
@@ -170,43 +144,26 @@
         </li>
       
       
-        <li class="breadcrumb-item d-none d-sm-flex">
-          <a class="breadcrumb-focus" href="/en/web/">Web</a>
-        </li>
-      
-      
         <li class="breadcrumb-item">
-          <a class="breadcrumb-focus" href="/en/web/toolbox/">Toolbox</a>
+          <a class="breadcrumb-focus" href="/en/articles/">Articles</a>
         </li>
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
-          Keyboard navigation
+          Search result page
         </li>
       </ol>
 </nav>
 
       
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
-        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
-      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-bs-toggle="dropdown" aria-expanded="false">
-        Topics
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-left"><a href="https://boosted.orange.com/" class="nav-link dropdown-item">
-  Orange Boosted
-</a><a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link dropdown-item">
-  Methods and test tools
-</a><a href="/en/web/wcag-audit/" class="nav-link dropdown-item">
-  The Va11ydette
-</a><a href="/en/web/toolbox/fact-sheets/" class="nav-link dropdown-item">
-  Fact sheets
-</a><a href="/en/persona/" class="nav-link dropdown-item">
-  Personas
-</a><a href="/en/web/useful-links/" class="nav-link dropdown-item">
-  Useful links
-</a><a href="/en/glossary/" class="nav-link dropdown-item">
-  Glossary
-</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Introduction</a><a href="#" class="dropdown-item text-wrap">The Search Form</a><a href="#" class="dropdown-item text-wrap">Displaying Results</a><a href="#" class="dropdown-item text-wrap">Page Title</a><a href="#" class="dropdown-item text-wrap">Loading and Displaying Search Results</a><a href="#" class="dropdown-item text-wrap">Result Display and Semantics</a><a href="#" class="dropdown-item text-wrap">Pagination</a></div>
     </nav>
         
       </div>
@@ -215,96 +172,144 @@
   <div class="container-lg pt-4">
       <div class="row">
         
-          <div class="col-md-3">
-            <div class="StickySideNavigation">
-              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
-      <h2 id="side-navigation-label">Topics</h2>
-      <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="https://boosted.orange.com/" class="nav-link text-muted">
-  Orange Boosted
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/web/toolbox/methods-and-test-tools/" class="nav-link text-muted">
-  Methods and test tools
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/web/wcag-audit/" class="nav-link text-muted">
-  The Va11ydette
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/web/toolbox/fact-sheets/" class="nav-link text-muted">
-  Fact sheets
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/persona/" class="nav-link text-muted">
-  Personas
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/web/useful-links/" class="nav-link text-muted">
-  Useful links
-</a>
-          </li><li class="nav-item position-relative">
-            <a href="/en/glossary/" class="nav-link text-muted">
-  Glossary
-</a>
-          </li></ul>
-    </nav>
-              
-            </div>
-          </div>
-        
         <main id="main-content" class="col-md-9" role="main">
           
+            <h1>Search result page</h1>
+            
+              <span class="visually-hidden" id="filters_label">
+                Associated themes:
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><span class="tagType d-inline-block" data-tag="component">Component</span></li>
+              </ul>
+            
+            
+            
+
+            <p class="text-muted mb-0">
+              <span class="visually-hidden">Publication date</span>
+              <time datetime="2026-04-17T00:00:00.000Z">
+                April 17, 2026
+              </time>
+            </p>
+
+            
+          
           <div class="mt-4">
-          <h1>Keyboard navigation</h1>
-<p>Navigation in a web page should be possible using only the keyboard, particularly for people who cannot use a mouse. This feature is supported directly by the browser. It is important to verify it is operating correctly, as some developments can lead to difficulties to properly navigate the page.</p>
-<p>To test if your service is accessible using the keyboard, you can try to navigate without your mouse. All available features must be accessible.</p>
-<p><strong>Reminder:</strong> the focus must be visible enough on all focusable elements.</p>
-<h2 id="list-of-keyboard-shortcuts" class="h2-focus">List of keyboard shortcuts: <a class="header-anchor" href="#list-of-keyboard-shortcuts" id="heading-1791" aria-labelledby="heading-1791">#</a></h2>
-<p><img src="/en/web/images/keyboard.png" alt="keyboard shortcuts illustration" class="img-fluid"></p>
-<table class="table">
-<caption class="visually-hidden">List of keyboard shortcuts</caption>
-      <tr>
-         <th scope="col">Interactions</th>
-         <th scope="col">Shortcuts</th>
-      </tr>
-   <tbody>
-      <tr>
-         <td>To move the focus</td>
-         <td><kbd>Tab</kbd></td>
-      </tr>
-      <tr>
-         <td>To move backwards the focus</td>
-         <td><kbd>Shift</kbd> + <kbd>Tab</kbd></td>
-      </tr>
-      <tr>
-         <td>To activate the element that has the focus (link, button, menu…)</td>
-         <td><kbd>Return</kbd> key</td>
-      </tr>
-      <tr>
-         <td>To check / uncheck a checkbox</td>
-         <td><kbd>Spacebar</kbd></td>
-      </tr>
-      <tr>
-         <td>To select of the radio buttons into a radio group</td>
-         <td>arrow keys <kbd>Up</kbd>&nbsp;/&nbsp;<kbd>Down</kbd> ou <kbd>Left</kbd>&nbsp;/&nbsp;<kbd>Right</kbd></td>
-      </tr>
-      <tr>
-         <td>To move in a drop-down list</td>
-         <td>arrow keys <kbd>Up</kbd>&nbsp;/&nbsp;<kbd>Down</kbd>, then <kbd>Spacebar</kbd></td>
-      </tr>
-	  <tr>
-         <td>To scroll(scrollbar)</td>
-         <td>arrow keys <kbd>Up</kbd>&nbsp;/&nbsp;<kbd>Down</kbd> for a vertical scrollbar,<br> arrow keys <kbd>Left</kbd>&nbsp;/&nbsp;<kbd>Right</kbd> for a horizontal scrollbar</td>
-      </tr>
-   </tbody>
-</table>
-<p><strong>Note: on Mac, keyboard navigation must be enabled first:</strong><br>
-In Safari: Edit &gt; Preferences… &gt; Advanced<br>
-Then check the box <em>“Press tab to highlight each item on a webpage”</em>.</p>
+          
+<h2>Introduction</h2>
+<p>Site search should be implemented as a dedicated page. To access it, you can add a "Search" link or a magnifying glass icon in the main menu, footer, or a form that, when validated with the search term, redirects to this dedicated page.</p>
+
+<h2>The Search Form</h2>
+<p>In this example, we used <a href="http://boosted.orange.com/">the Boosted Library</a>, which provides forms that comply with Orange's design guidelines.</p>
+  <p>To perform a search on the site, you must add <code>role="search"</code> to ensure better identification of the search region, like this: <br />
+<!-- Code du form de recherche -->
+<pre><code class="html">
+      &lt;form class="d-flex" role="search"&gt;
+        &lt;input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"&gt;
+        &lt;button class="btn btn-primary" type="submit"&gt;Search&lt;/button&gt;
+      &lt;/form&gt;
+</code></pre>
+</p>
+<p>Please note: It's always better to use a visible form field label for all users, but when there's only one search field as the sole form element on the page, it is sufficient on its own.
+</p>
+<p><strong>Important:</strong> When multiple search forms exist on the same page, each <code>role="search"</code> must be specifically named with an <code>aria-label</code> or <code>aria-labelledby</code>:<br />
+<!-- Code pour 2 form de recherche -->
+<pre><code class="html">
+      &lt;form class="d-flex" role="search" aria-label="Search entire site"&gt;
+        &lt;input class="form-control me-2" type="search" placeholder="Search the site" aria-label="Search the site"&gt;
+        &lt;button class="btn btn-primary" type="submit"&gt;Search&lt;/button&gt;
+      &lt;/form&gt;
+      ...
+      &lt;form class="d-flex" role="search" aria-labelledby="news"&gt;
+        &lt;h2 id="actu"&gt;Search in news&lt;/h2&gt;
+        &lt;input class="form-control me-2" type="search" placeholder="Seach news" aria-label="Seach news"&gt;
+        &lt;button class="btn btn-primary" type="submit"&gt;Search news&lt;/button&gt;
+      &lt;/form&gt;
+</code></pre>
+</p>
+
+<h2>Displaying Results</h2>
+<h3>Page Title</h3>
+<p>Once the search is launched, first of all, the page title (<code>title</code>) should be updated to indicate:</p>
+<ul>
+<li>That the page is a search results page.</li>
+<li>The search term.</li>
+<li>The total number of results.</li>
+</ul>
+
+<p>For example: "2 results for ..... 'Fiber' - Orange.com" </p>
+
+<h3>Loading and Displaying Search Results</h3>
+<p>In some cases, it seems convenient for users to prefer asynchronous result reloading to avoid loading a new page. However, note that this can be disruptive for some users.</p>
+<p>In any cases, the main content of the page must display the results found. These must be placed immediately after the search form so that they are the next element in keyboard navigation, right after the search submit button</p> 
+<p>The results must be preceded by a section heading that includes the search term and the total number of results. If pagination is used, it should also include the number of results displayed on the current page.</p>
+<p>This section heading must be notified to users, including those using assistive technologies, particularly screen readers. To achieve this, we use <abbr>ARIA</abbr>: <code>role="alert"</code> will enable dynamic reading of the element's content by <abbr>AT</abbr> (assistive technologies), given that we reload this page section with each search (note that <code>role="alert"</code> is read only once, unlike <code>aria-live="true"</code>).</p>
+<!-- Code pour form de recherche et résultats -->
+<pre><code class="html">
+...
+  &lt;form class="d-flex" role="search"&gt;
+    &lt;input class="form-control me-2" type="search" placeholder="Search" aria-label="Search the site"&gt;
+    &lt;button class="btn btn-primary" type="submit"&gt;Search&lt;/button&gt;
+  &lt;/form&gt;
+  &lt;h2 role="alert"&gt;
+    15 results, 5 displayed for "Fiber" 
+  &lt;/h2&gt;
+...
+</code></pre>
+
+<p>Please note: Paginating of search results is a good option to avoid overly long result pages. However, infinite dynamic loading, especially when scrolling, as it is often inaccessible and difficult to use.</p>
+
+<h3>Result Display and Semantics</h3>
+<p>Semantically, search results should be displayed as either a list (ordered or unordered) or a data table. If filters allow sorting results by relevance, number of search term occurrences, date, etc., then you should choose an ordered list <code>ol</code> or indicate this sort order in the results table. The choice of result semantics depends on several criteria:</p>
+<ul>
+<li>Type of data to display: For example, if results are a list of article titles with lead paragraphs or summaries, a list structure is appropriate.</li>
+<li>Data to display per result: For example, if these are products with name, price, details, etc., a data table would be preferred due to the more complex data structure.</li>
+</ul>
+
+<p>Regarding the semantics of each result, the article title, product name, etc., should be a section heading, while the lead paragraph, summary, details, etc., should be placed in a paragraph or data table cell.</p>
+<p>Note: It's recommended to highlight the search term in the displayed results both visually (highlighted, underlined, etc.) and semantically (using <code>em</code>, <code>strong</code>, etc.)!</p>
+
+<h3>Pagination</h3>
+<p>When the number of results exceeds 10, it's convenient to paginate these results. To make navigation easier, the best practice is to add a section heading at the same level as each result heading, positioned at the beginning of the pagination component in order to identify it.
+
+<!-- Code pour résultats et pagination -->
+<pre><code class="html">
+...
+  &lt;h2 role="alert"&gt;
+    15 results, 5 displayed for "Fiber" 
+  &lt;/h2&gt;
+...
+  &lt;h3&gt;&lt;strong&gt;Fiber&lt;/strong&gt; deployment in 2021 in Rhône-Alpes by Orange&lt;/h2&gt;
+  &lt;p&gt;Orange plans an accelerated deployment of &lt;strong&gt;fiber&lt;/strong&gt; in uncovered areas...&lt;/p&gt;
+...
+  &lt;nav aria-labelledby="pagination"&gt;
+  &lt;h3 id="pagination" class="visually-hidden"&gt;Search results pagination&lt;/h3&gt;
+  &lt;ul class="pagination"&gt;
+...
+</code></pre>
+
+</p>
 
           </div>
         </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">The Search Form</a></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Displaying Results</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Page Title</a></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Loading and Displaying Search Results</a></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Result Display and Semantics</a></li><li class="nav-item position-relative">
+            <a href="#" class="nav-link text-muted">Pagination</a></li></ul></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
         
       </div>
     </div>
@@ -339,7 +344,7 @@ Then check the box <em>“Press tab to highlight each item on a webpage”</em>.
           </a>
         </li>
         <li class="nav-item ms-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/web/toolbox/methods-and-test-tools/keyboard-navigation.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/search-results-page/index.njk'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
             Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
@@ -362,12 +367,14 @@ Then check the box <em>“Press tab to highlight each item on a webpage”</em>.
       <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
     
     
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
     <script>
       const Application = {
         lang: "en",
         vendors: {
-          highlightJS: false,
-          highlightTitle: false
+          highlightJS: true,
+          highlightTitle: true
         }
       }
     </script>
