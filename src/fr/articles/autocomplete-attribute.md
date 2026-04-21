@@ -2,7 +2,7 @@
 title: "L'attribut HTML autocomplete : comprendre et utiliser correctement l'autocomplétion des formulaires"
 abstract: "Derrière un simple attribut HTML se cache un mécanisme puissant : aider les navigateurs à comprendre ce que l'utilisateur doit saisir."
 titleBeforeTag: true
-date: "2026-04-17"
+date: "2026-04-27"
 tags:
   - web
   - advanced
@@ -403,12 +403,7 @@ Correctement utilisé, il permet :
 * et de répondre à certaines exigences d'accessibilité.
 
 Malgré cela, il reste encore **sous-utilisé ou mal implémenté dans de nombreux formulaires**.
-
-La spécification HTML définit aujourd'hui plusieurs dizaines de valeurs pour `autocomplete`. En pratique, seule une partie est réellement utilisée.
-
-Prendre le temps de l'implémenter correctement est une amélioration simple, rapide… et pourtant encore trop souvent négligée.
-
-L'attribut `autocomplete` est un outil puissant pour améliorer l'accessibilité des formulaires web. En réduisant la charge cognitive et physique nécessaire pour remplir un formulaire, il rend l'expérience utilisateur plus inclusive et agréable pour tous, y compris les personnes ayant des handicaps. En suivant les bonnes pratiques et en évitant les erreurs courantes, les développeurs peuvent créer des formulaires accessibles qui bénéficient à tous les utilisateurs. Ajouter correctement cet attribut est une amélioration simple, rapide à mettre en œuvre, et pourtant encore trop souvent oubliée dans les formulaires web.
+Prendre le temps de l'implémenter correctement est une amélioration simple, rapide à mettre en œuvre,… et pourtant encore trop souvent négligée.
 
 ## Webographie
 
