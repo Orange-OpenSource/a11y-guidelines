@@ -11,14 +11,14 @@ tags:
 Les formulaires sont au cœur de l'expérience utilisateur sur le web : inscription, connexion, paiement… Ils sont partout.
 Pourtant, leur remplissage peut représenter un obstacle, en particulier pour les personnes en situation de handicap. L'accessibilité des formulaires est donc un enjeu majeur.
 Parmi les mécanismes souvent négligés, l'attribut HTML `autocomplete` joue un rôle clé.
-Il permet aux navigateurs et aux gestionnaires de mots de passe de comprendre **le type d'information attendu dans un champ**.
+Il permet aux navigateurs et aux gestionnaires de mots de passe de comprendre **le type d'information attendu dans un champ de formulaire**.
 
 Correctement utilisé, il permet :
 
 * d'accélérer la saisie ;
 * de réduire les erreurs ;
 * d'améliorer l'expérience utilisateur ;
-* et, dans certains cas, de **répondre à des exigences d'accessibilité**.
+* et de **répondre à des exigences d'accessibilité**.
 
 Cet article propose un tour d'horizon de cet attribut souvent mal compris : son rôle, son impact sur l'accessibilité, sa syntaxe et les bonnes pratiques pour l'utiliser efficacement.
 
