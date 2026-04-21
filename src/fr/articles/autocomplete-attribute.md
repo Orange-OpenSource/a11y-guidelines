@@ -110,8 +110,6 @@ Ces valeurs peuvent être regroupées en plusieurs catégories.
 
 La spécification HTML Living Standard ne définit pas la valeur de l'attribut `autocomplete` comme une simple valeur libre mais plutôt comme une **séquence structurée de tokens** devant obéir à une grammaire stricte ainsi qu'à un ordre précis. Chaque token a un rôle précis, et leur ordre n'est pas interchangeable. L'ordre des tokens est en effet significatif : une valeur mal ordonnée peut être ignorée par le navigateur.
 
-La valeur de `autocomplete` n'est pas une simple chaîne libre : elle doit respecter une structure précise définie par la spécification HTML.
-
 La syntaxe attendue est la suivante :
 
 ```html
@@ -141,66 +139,7 @@ L'usage de `autocomplete="off"` doit être réservé à des cas très spécifiqu
 * un champ de saisie d'un code à usage unique (OTP)
 * un champ de confirmation de type "Veuillez saisir à nouveau votre e-mail" (bien que cette pratique soit elle-même discutable en termes d'ergonomie).
 
-#### 2. Les valeurs définies par la spécification HTML (obligatoire)
-
-La spécification HTML définit de nombreuses **valeurs normalisées**, appelées `autofill tokens`, permettant d'identifier précisément la donnée attendue.
-
-Exemples courants :
-
-| Valeur           | Signification       |
-| ---------------- | ------------------- |
-| `name`           | nom complet         |
-| `given-name`     | prénom              |
-| `family-name`    | nom de famille      |
-| `email`          | adresse e-mail      |
-| `tel`            | numéro de téléphone |
-| `street-address` | adresse postale     |
-| `postal-code`    | code postal         |
-| `country`        | pays                |
-
-
-Exemple d'utilisation :
-
-```html
-<label for="firstname">Prénom</label>
-<input id="firstname" name="firstname" autocomplete="given-name">
-```
-
-Ces valeurs sont utilisées par :
-
-* les navigateurs
-* les gestionnaires de mots de passe
-* certains outils d'assistance.
-
-[La liste complète est définie dans la spécification HTML](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute).
-
-#### 3. Les sections prédéfinies (optionnel)
-
-Contrairement à ce que l'on croit souvent, la valeur de `autocomplete` peut contenir plusieurs tokens.
-La spécification permet en effet de **regrouper des champs appartenant à une même section logique**. Ces regroupements permettent d'indiquer le contexte de la donnée.
-
-La spécification HTML définit une syntaxe structurée :
-
-```html
-[section-*] [shipping | billing] [contact-type] autofill-token
-```
-
-Les tokens sont séparés par des espaces et doivent respecter un ordre précis.
-
-Exemple :
-
-```html
-<input autocomplete="shipping given-name">
-<input autocomplete="shipping family-name">
-<input autocomplete="shipping street-address">
-```
-
-Dans cet exemple, les champs sont associés à la section **shipping**, ce qui indique qu'ils correspondent à une **adresse de livraison**.
-Une autre section courante est `billing`, utilisée pour les informations de facturation.
-
-Ces sections permettent aux navigateurs de distinguer plusieurs ensembles de données dans un même formulaire.
-
-#### 4. Les sections personnalisées (optionnel)
+#### 2. Les sections personnalisées (optionnel)
 
 Il est également possible de définir des sections personnalisées grâce au préfixe :
 
@@ -217,7 +156,24 @@ Exemple :
 
 Cela permet de distinguer plusieurs utilisateurs ou plusieurs ensembles d'informations similaires dans un même formulaire.
 
-#### 5. Les modificateurs du type de contact (optionnel)
+#### 3. Les sections prédéfinies (optionnel)
+
+La spécification HTML permet de **regrouper des champs appartenant à une même section logique**. Ces regroupements permettent d'indiquer le contexte de la donnée.
+
+Exemple :
+
+```html
+<input autocomplete="shipping given-name">
+<input autocomplete="shipping family-name">
+<input autocomplete="shipping street-address">
+```
+
+Dans cet exemple, les champs sont associés à la section **shipping**, ce qui indique qu'ils correspondent à une **adresse de livraison**.
+Une autre section courante est `billing`, utilisée pour les informations de facturation.
+
+Ces sections permettent aux navigateurs de distinguer plusieurs ensembles de données dans un même formulaire.
+
+#### 4. Les modificateurs du type de contact (optionnel)
 
 Certains champs acceptent des tokens supplémentaires appelés `contact type hints`.
 Ces tokens ne sont ni des sections ni des champs, mais des `modificateurs du type de contact`.
@@ -262,6 +218,39 @@ autocomplete="mobile tel"
 indique que le formulaire attend un numéro de téléphone mobile.
 
 Ces `tokens` permettent de préciser le contexte d'une information de contact comme un numéro de téléphone ou une adresse e-mail. Ce ne sont pas des sections car ces dernières servent à distinguer des groupes de données dans un formulaire.
+
+#### 5. Les valeurs définies par la spécification HTML (obligatoire)
+
+La spécification HTML définit de nombreuses **valeurs normalisées**, appelées `autofill tokens`, permettant d'identifier précisément la donnée attendue.
+
+Exemples courants :
+
+| Valeur           | Signification       |
+| ---------------- | ------------------- |
+| `name`           | nom complet         |
+| `given-name`     | prénom              |
+| `family-name`    | nom de famille      |
+| `email`          | adresse e-mail      |
+| `tel`            | numéro de téléphone |
+| `street-address` | adresse postale     |
+| `postal-code`    | code postal         |
+| `country`        | pays                |
+
+
+Exemple d'utilisation :
+
+```html
+<label for="firstname">Prénom</label>
+<input id="firstname" name="firstname" autocomplete="given-name">
+```
+
+Ces valeurs sont utilisées par :
+
+* les navigateurs
+* les gestionnaires de mots de passe
+* certains outils d'assistance.
+
+[La liste complète est définie dans la spécification HTML](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute).
 
 #### 6. Identifiants WebAuthn (optionnel)
 
