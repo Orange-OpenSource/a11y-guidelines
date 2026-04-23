@@ -54,10 +54,12 @@ L'attribut `autocomplete` joue un rôle direct dans l'accessibilité des formula
 
 Certaines technologies d'assistance peuvent exploiter cette information pour **identifier la nature d'un champ de formulaire**, indépendamment de son libellé visible.
 
-L'attribut `autocomplete` est particulièrement **bénéfique pour les utilisateurs**. Voici quelques exemples de son impact positif :
+L'attribut `autocomplete` est **bénéfique pour les utilisateurs**, voici quelques exemples de son impact :
 - **Utilisateurs avec des troubles cognitifs** : L'autocomplétion aide ces utilisateurs en réduisant la charge cognitive nécessaire pour remplir un formulaire. Les suggestions fournies par le navigateur peuvent servir de rappels ou d'indices, facilitant ainsi la saisie des informations.
 - **Utilisateurs avec des handicaps moteurs** : Pour les personnes ayant des difficultés à utiliser un clavier ou une souris, l'autocomplétion réduit le nombre de frappes nécessaires, rendant le formulaire plus rapide et moins fatigant à remplir.
 - **Utilisateurs malvoyants ou non-voyants** : Les utilisateurs de lecteurs d'écran bénéficient également de l'attribut `autocomplete`. Les suggestions d'autocomplétion peuvent être lues par les lecteurs d'écran, aidant ainsi les utilisateurs à comprendre les informations attendues et à remplir le formulaire plus efficacement.
+
+*Remarque :* l'attribut `autocomplete` ne fournit pas de nom accessible au champ. Les technologies d'assistance peuvent exploiter cette information comme un complément, mais jamais comme un substitut au libellé.
 
 Cette pratique est directement liée à un critère d'accessibilité des WCAG : **WCAG 2.2 – Success Criterion 1.3.5: Identify Input Purpose (niveau AA)**.
 
@@ -90,8 +92,6 @@ L'utilisation de `autocomplete` ne remplace évidemment pas :
 * un **libellé accessible (fourni par un `label` ou toute autre méthode de nommage accessible)**
 * une **structure de formulaire claire**
 * des **instructions compréhensibles pour l'utilisateur**.
-
-L'attribut `autocomplete` ne fournit pas de nom accessible au champ. Les technologies d'assistance peuvent exploiter cette information comme un complément, mais jamais comme un substitut au libellé.
 
 ## Comprendre la syntaxe de `autocomplete`
 
