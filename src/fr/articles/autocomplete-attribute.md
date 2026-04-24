@@ -91,7 +91,7 @@ L'utilisation de `autocomplete` ne remplace évidemment pas :
 
 * un **libellé accessible (fourni par un `label` ou toute autre méthode de nommage accessible)**
 * une **structure de formulaire claire**
-* des **instructions compréhensibles pour l'utilisateur**.
+* des **instructions compréhensibles** pour l'utilisateur.
 
 ## Comprendre la syntaxe de `autocomplete`
 
@@ -112,7 +112,7 @@ La spécification HTML Living Standard ne définit pas la valeur de l'attribut `
 
 La syntaxe attendue est la suivante :
 
-```html
+```
 autocomplete = "on" | "off" | [section-*] [shipping|billing] [contact-type] autofill-field-name [webauthn]
 ```
 
@@ -168,7 +168,7 @@ Exemple :
 <input autocomplete="shipping street-address">
 ```
 
-Dans cet exemple, les champs sont associés à la section **shipping**, ce qui indique qu'ils correspondent à une **adresse de livraison**.
+Dans cet exemple, les champs sont associés à la section `shipping`, ce qui indique qu'ils correspondent à une **adresse de livraison**.
 Une autre section courante est `billing`, utilisée pour les informations de facturation.
 
 Ces sections permettent aux navigateurs de distinguer plusieurs ensembles de données dans un même formulaire.
@@ -350,7 +350,7 @@ Il peut aider à :
 * repérer les valeurs incorrectes ;
 * analyser rapidement la structure d'un formulaire.
 
-Le bookmarklet est disponible sur GitHub : https://github.com/MewenLeHo/detectAutocomplete
+Le bookmarklet est disponible sur GitHub : [https://github.com/MewenLeHo/detectAutocomplete](https://github.com/MewenLeHo/detectAutocomplete)
 
 ## Erreurs fréquentes observées en audit
 
@@ -411,4 +411,4 @@ Prendre le temps de l'implémenter correctement est une amélioration simple, ra
   <li><a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute" hreflang="en">HTML Living Standard – Autofilling form controls (en)</a></li>
   <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html" hreflang="en">WCAG 2.2 – Understanding Success Criterion 1.3.5 (en)</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete" hreflang="en">MDN – HTML attribute: autocomplete (en)</a></li>
-</ul>
+</ul>>
