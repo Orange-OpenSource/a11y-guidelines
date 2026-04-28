@@ -41,6 +41,7 @@ module.exports = {
           resetButtonAriaLabel: 'Clear the query',
           cancelButtonText: 'Cancel',
           cancelButtonAriaLabel: 'Cancel',
+          searchInputLabel: 'Search on entire website',
         },
         startScreen: {
           recentSearchesTitle: 'Recent',
@@ -83,6 +84,7 @@ module.exports = {
           resetButtonAriaLabel: 'Effacer la recherche',
           cancelButtonText: 'Annuler',
           cancelButtonAriaLabel: 'Annuler',
+          searchInputLabel: 'Rechercher sur le site',
         },
         startScreen: {
           recentSearchesTitle: 'Récent',
@@ -107,7 +109,7 @@ module.exports = {
           searchByText: 'Recherché par',
         },
         noResultsScreen: {
-          noResultsText: 'Aucun résulat pour',
+          noResultsText: 'Aucun résultat pour',
           suggestedQueryText: 'Essayez de rechercher',
           reportMissingResultsText: 'Vous pensez que cette recherche devrait renvoyer des résultats ?',
           reportMissingResultsLinkText: 'Faites le nous savoir.',
@@ -157,7 +159,6 @@ module.exports = {
       "hashtag": "#cookie-consent", /* Open the panel with this hashtag */
       "cookieName": "cookie-consent", /* Cookie name */
       "orientation": "bottom", /* Banner position (top - bottom) */
-      "bodyPosition": "top", /* top to bring it as first element in DOM for accessibility */
       "showAlertSmall": false, /* Show the small banner on bottom right */
       "cookieslist": true, /* Show the cookie list */
       "adblocker": false, /* Show a Warning if an adblocker is detected */
