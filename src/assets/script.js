@@ -215,6 +215,86 @@ function manageEventTabPan() {
   }, "1000");
 })();
 
+/* Algolia DocSearch accessibility fixes for NVDA */
+(function () {
+    const lang = Application.lang;
+
+    const i18n = {
+        fr: {
+            inputLabel: 'Rechercher sur le site',
+            noResults: 'Aucun résultat',
+            resultsCount: function (n) { return n + ' résultat' + (n > 1 ? 's' : ''); }
+        },
+        en: {
+            inputLabel: 'Search in entire website',
+            noResults: 'No results',
+            resultsCount: function (n) { return n + ' result' + (n !== 1 ? 's' : ''); }
+        }
+    };
+
+    const t = i18n[lang] || i18n.en;
+
+    // Create a hidden live region for NVDA announcements
+    const liveRegion = document.createElement('div');
+    liveRegion.setAttribute('role', 'status');
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.className = 'visually-hidden';
+    document.body.appendChild(liveRegion);
+
+    function announce(message) {
+        liveRegion.textContent = '';
+        //Force reflow so NVDA picks up the change
+        setTimeout(function () { liveRegion.textContent = message; }, 50);
+    }
+
+    /*
+     * Outer observer – watches <body> for direct child changes.
+     * DocSearch appends its modal as a direct child of <body> when the user
+     * opens the search dialog, so childList: true (without subtree) is enough
+     * and avoids unnecessary overhead.
+     */
+    const bodyObserver = new MutationObserver(function () {
+        const modal = document.querySelector('.DocSearch-Modal');
+        if (!modal) return;
+
+        // Fix 1 – aria-label correction.
+        // DocSearch hardcodes aria-label="Search" on the <input> in English.
+        // We overwrite it with the locale-aware label only when it differs, to
+        // avoid triggering an unnecessary mutation loop.
+        const input = modal.querySelector('input.DocSearch-Input');
+        if (input && input.getAttribute('aria-label') !== t.inputLabel) {
+            input.setAttribute('aria-label', t.inputLabel);
+        }
+
+        /*
+         * Inner observer – watches the modal's entire subtree for DOM changes.
+         * Every keystroke causes DocSearch to re-render the result list, so we
+         * react to those mutations to determine what to announce:
+         *   - If .DocSearch-NoResults is present → announce "no results".
+         *   - If .DocSearch-Hit elements are present → announce the count.
+         * Both checks use querySelector/querySelectorAll at call time (not
+         * cached) to reflect the current state of the DOM after the mutation.
+         */
+        const resultsObserver = new MutationObserver(function () {
+            const noResults = modal.querySelector('.DocSearch-NoResults');
+            if (noResults) {
+                announce(t.noResults);
+                return;
+            }
+
+            const hits = modal.querySelectorAll('.DocSearch-Hit');
+            if (hits.length > 0) {
+                announce(t.resultsCount(hits.length));
+            }
+        });
+
+        resultsObserver.observe(modal, { childList: true, subtree: true });
+    });
+
+    bodyObserver.observe(document.body, { childList: true });
+})();
+
 /* Highlight searched term in result page */
 (function () {
   document.addEventListener("DOMContentLoaded", () => {
@@ -433,6 +513,16 @@ function tabPanelFocus(tabTitleID, tabDescriptionID) {
     elementTarget.focus();
     document.getElementById(tabDescriptionID).scrollIntoView({behavior: 'smooth', block: 'start'})
 }
+
+window.addEventListener('keydown', function(e) {
+    // Si la touche est '/' ET qu'on n'est pas en train d'écrire dans un champ texte
+    if (e.key === '/' && !["INPUT", "TEXTAREA"].includes(e.target.tagName)) {
+        // On arrête la propagation immédiatement
+        e.stopImmediatePropagation();
+        // On empêche le comportement par défaut (recherche navigateur) si désiré
+        e.preventDefault(); 
+    }
+}, { capture: true }); // <--- Le secret est ici : "capture: true"
 
 window.addEventListener('DOMContentLoaded', function () {
     //initPriorityNav()
