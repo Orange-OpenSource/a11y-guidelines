@@ -515,14 +515,14 @@ function tabPanelFocus(tabTitleID, tabDescriptionID) {
 }
 
 window.addEventListener('keydown', function(e) {
-    // Si la touche est '/' ET qu'on n'est pas en train d'écrire dans un champ texte
+    // If pressed key '/' AND we're not in a textarea
     if (e.key === '/' && !["INPUT", "TEXTAREA"].includes(e.target.tagName)) {
-        // On arrête la propagation immédiatement
+        // We stop propagation immediately
         e.stopImmediatePropagation();
-        // On empêche le comportement par défaut (recherche navigateur) si désiré
+        // We prevent browsers default behavious 
         e.preventDefault(); 
     }
-}, { capture: true }); // <--- Le secret est ici : "capture: true"
+}, { capture: true }); // 
 
 window.addEventListener('DOMContentLoaded', function () {
     //initPriorityNav()
