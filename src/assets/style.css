@@ -251,6 +251,26 @@ pre code {
     font-weight: bolder;
 }
 
+/* Popup structural areas – not interactive (interactive children override with their own cursor) */
+.DocSearch-Modal,
+.DocSearch-Footer,
+.DocSearch-Dropdown,
+.DocSearch-SearchBar {
+    cursor: default;
+}
+
+/* Informational keyboard hints in footer – not interactive (Algolia logo link is excluded) */
+.DocSearch-Commands,
+.DocSearch-Commands li,
+.DocSearch-Commands .DocSearch-Commands-Key {
+    cursor: default;
+}
+
+/* Empty "no recent searches" state – not interactive */
+.DocSearch-StartScreen {
+    cursor: default;
+}
+
 .DocSearch-Button-Container {
     align-items: center;
     display: flex;
