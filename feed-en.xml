@@ -4,12 +4,20 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2026-04-17T00:00:00Z</updated>
+  <updated>2026-05-04T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Price vocalization</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/price-vocalization/"/>
+    <updated>2026-05-04T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/price-vocalization/</id>
+    <content xml:lang="en" type="html">Showing and vocalizing prices.</content>
+  </entry>
   
   <entry>
     <title>Search result page</title>
@@ -593,14 +601,6 @@
     <updated>2018-02-08T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/captcha-accessibility/</id>
     <content xml:lang="en" type="html">CAPTCHA and accessibility</content>
-  </entry>
-  
-  <entry>
-    <title>Price vocalization</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/price-vocalization/"/>
-    <updated>2018-01-14T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/price-vocalization/</id>
-    <content xml:lang="en" type="html">Showing and vocalizing prices.</content>
   </entry>
   
   <entry>

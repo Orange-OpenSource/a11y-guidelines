@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2026-04-17T00:00:00Z</updated>
+  <updated>2026-05-04T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Vocalisation des prix</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/vocalisation-des-prix/"/>
+    <updated>2026-05-04T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/vocalisation-des-prix/</id>
+    <content xml:lang="fr" type="html">Afficher des promos, des prix barrés accessibles.</content>
+  </entry>
   
   <entry>
     <title>Page de résultats de recherche</title>
@@ -625,14 +633,6 @@
     <updated>2018-02-07T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/les-captchas-et-l-accessibilite/</id>
     <content xml:lang="fr" type="html">Notre point de vue sur les CAPTCHAs et l&#39;accessibilité</content>
-  </entry>
-  
-  <entry>
-    <title>Vocalisation des prix</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/vocalisation-des-prix/"/>
-    <updated>2018-01-14T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/vocalisation-des-prix/</id>
-    <content xml:lang="fr" type="html">Afficher des promos, des prix barrés accessibles.</content>
   </entry>
   
   <entry>
