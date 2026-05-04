@@ -71,7 +71,7 @@ La dimension internationale du Groupe Orange, présent dans 26 pays, justifie la
 
 ### Les obligations des entreprises&nbsp;:
 
-Les exigences en matière d’accessibilité sont alignées sur la norme harmonisée EN 301 549 (dont la prochaine version sera disponible en février 2026), équivalente au standard WCAG 2.1 niveau AA. Les normes harmonisées relatives aux exigences non-numériques d’accessibilité pour les produits ou pour les services d’assistance ne sont pas encore disponibles. Leur publication est attendue d’ici mars 2026. 
+Les exigences en matière d’accessibilité sont alignées sur la norme harmonisée EN 301 549 (dont la prochaine version sera disponible fin 2026), équivalente au standard WCAG 2.1 niveau AA. Les normes harmonisées relatives aux exigences non-numériques d’accessibilité pour les produits ou pour les services d’assistance ne sont pas encore disponibles. 
 
 **Obligations pour les services&nbsp;:**
 - Mise en conformité des services concernés.
