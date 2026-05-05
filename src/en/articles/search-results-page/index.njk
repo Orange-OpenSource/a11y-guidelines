@@ -2,7 +2,7 @@
 title: "Search result page"
 abstract: "Best practices for site search results."
 titleBeforeTag: true
-date: "2026-04-17"
+date: "2026-05-05"
 tags:
   - component
 ---
@@ -54,7 +54,7 @@ tags:
 <p>In some cases, it seems convenient for users to prefer asynchronous result reloading to avoid loading a new page. However, note that this can be disruptive for some users.</p>
 <p>In any cases, the main content of the page must display the results found. These must be placed immediately after the search form so that they are the next element in keyboard navigation, right after the search submit button</p> 
 <p>The results must be preceded by a section heading that includes the search term and the total number of results. If pagination is used, it should also include the number of results displayed on the current page.</p>
-<p>This section heading must be notified to users, including those using assistive technologies, particularly screen readers. To achieve this, we use <abbr>ARIA</abbr>: <code>role="alert"</code> will enable dynamic reading of the element's content by <abbr>AT</abbr> (assistive technologies), given that we reload this page section with each search (note that <code>role="alert"</code> is read only once, unlike <code>aria-live="true"</code>).</p>
+<p>This section heading must be notified to users, including those using assistive technologies, particularly screen readers. To achieve this, we use <abbr>ARIA</abbr>: <code>role="alert"</code> will enable dynamic reading of the element's content by <abbr>AT</abbr> (assistive technologies), given that we reload this page section with each search (note that <code>role="alert"</code> is read only once, unlike <code>aria-live</code>).</p>
 <!-- Code pour form de recherche et résultats -->
 <pre><code class="html">
 ...
@@ -62,9 +62,12 @@ tags:
     &lt;input class="form-control me-2" type="search" placeholder="Search" aria-label="Search the site"&gt;
     &lt;button class="btn btn-primary" type="submit"&gt;Search&lt;/button&gt;
   &lt;/form&gt;
-  &lt;h2 role="alert"&gt;
-    15 results, 5 displayed for "Fiber" 
-  &lt;/h2&gt;
+  &lt;div role="alert"&gt; 
+      &lt;h2 Search results /h2&gt;
+        &lt;p&gt;
+          15 results, 5 displayed for "Fiber" 
+        &lt;/p&gt;
+  &lt;/div&gt;
 ...
 </code></pre>
 
@@ -86,10 +89,14 @@ tags:
 <!-- Code pour résultats et pagination -->
 <pre><code class="html">
 ...
-  &lt;h2 role="alert"&gt;
-    15 results, 5 displayed for "Fiber" 
-  &lt;/h2&gt;
+  &lt;div role="alert"&gt; 
+    &lt;h2 Search results /h2&gt;
+      &lt;p&gt;
+        15 results, 5 displayed for "Fiber" 
+      &lt;/p&gt;
+  &lt;/div&gt;
 ...
+
   &lt;h3&gt;&lt;strong&gt;Fiber&lt;/strong&gt; deployment in 2021 in Rhône-Alpes by Orange&lt;/h2&gt;
   &lt;p&gt;Orange plans an accelerated deployment of &lt;strong&gt;fiber&lt;/strong&gt; in uncovered areas...&lt;/p&gt;
 ...
