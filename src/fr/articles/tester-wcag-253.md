@@ -1,5 +1,5 @@
 ---
-title: "Comment tester le WCAG 2.5.3 ?"
+title: "Comment tester le WCAG 2.5.3 ?" 
 abstract: "Les bonnes pratiques pour tester le critère WCAG 2.5.3 (Label in Name)"
 titleBeforeTag: true
 date: "2021-11-22"
@@ -8,21 +8,23 @@ tags:
   - intermediate
 ---
 
-## Que signifie le WCAG 2.5.3
+## Objectif du critère
 
-### Explication générale
+Le critère **WCAG 2.5.3 – Label in Name** vise à garantir que lorsqu’un élément interactif (bouton, lien, champ, etc.) affiche du texte visible à l’écran, ce texte soit également présent dans son **<a href="/src/fr/articles/le-nom-accessible-en-html.md">nom accessible</a>**.  
 
-Le but de [ce critère](https://www.w3.org/TR/WCAG22/#label-in-name) est de s'assurer que si un bouton, un lien ou un autre élément d'interface contient du texte visible à l'écran, <a href="/fr/articles/le-nom-accessible-en-html/">son nom accessible</a> doit contenir au moins le même texte que celui affiché.
-Cela pour garantir que les utilisateurs [d'aides techniques](/fr/solutions-assistance/) soient capables de comprendre et d'interagir avec le composant. En effet les aides techniques s'appuient sur le nom accessible des composants. Par exemple, un utilisateur de reconnaissance vocale pourra cliquer sur un bouton simplement en prononçant son nom accessible.
+Cela permet aux utilisateurs [d'aides techniques](/src/fr/solutions-assistance.md) (en particulier de logiciels de reconnaissance vocale) de comprendre et d’interagir correctement avec l’interface.  
+En effet, ces outils s’appuient sur le **nom accessible** pour identifier et activer les éléments.  
 
-Il n'est pas demandé que le texte visible et le nom accessible soient identiques, mais le texte visible doit être présent dans le nom accessible, de préférence en premier.
+> Le texte visible n’a pas besoin d’être **strictement identique** au nom accessible, mais il doit **au minimum être inclus** dans celui-ci — idéalement au **début**.
 
-### Exemple concret
+---
 
-#### Nom accessible
+## Exemple concret
 
-Prenons l'exemple d'un utilisateur navigant à l'aide d'un logiciel de reconnaissance vocale souhaitant saisir et soumettre un formulaire.
-![bouton avec le texte envoyer](../images/tester-wcag-253/button_send.png)
+### Exemple problématique
+
+Prenons l'exemple d'un utilisateur naviguant à l'aide d'un logiciel de reconnaissance vocale souhaitant saisir et soumettre un formulaire.
+![bouton avec le texte envoyer](../articles/images/tester-wcag-253/button_send.png)
 
 <pre><code class="html">
 &lt;button&gt;
@@ -30,9 +32,14 @@ Prenons l'exemple d'un utilisateur navigant à l'aide d'un logiciel de reconnais
 &lt;/button&gt;
 </code></pre>
 
-L'exemple ci-dessus risque de poser des difficultés. Le bouton contient une image avec le texte "Envoyer", mais l'alternative textuelle de l'image est "Soumettre", son nom accessible est donc "Soumettre". Les technologies d'assistance se basant sur le nom accessible, si l'utilisateur prononce "Envoyer", il ne se passera rien.
+Dans cet exemple, le bouton affiche visuellement le mot **« Envoyer »** (dans l’image), mais le texte alternatif est **« Soumettre »**.
+Le nom accessible du bouton devient donc *Soumettre*.
 
-Pour résoudre le problème, il faut que l'alternative textuelle soit la même que le texte de l'image ("Envoyer").
+Résultat : un utilisateur de reconnaissance vocale qui dit « Cliquer sur Envoyer » ne pourra pas activer le bouton, car l’assistant ne reconnaîtra pas ce nom.
+
+---
+
+### Exemple conforme
 
 <pre><code class="html">
 &lt;button&gt;
@@ -40,57 +47,90 @@ Pour résoudre le problème, il faut que l'alternative textuelle soit la même q
 &lt;/button&gt;
 </code></pre>
 
-#### Masquage accessible
+Le nom accessible contient désormais le mot **« Envoyer »**, identique au texte affiché.
+Le critère **WCAG 2.5.3 est donc respecté**.
 
-Il faut faire attention lorsqu'on utilise du <a href="/fr/web/exemples-de-composants/masquage-accessible/">masquage accessible</a>. Celui-ci ne doit pas être placé au milieu d'un intitulé affiché visuellement.
+---
 
-Sinon il sera impossible de faire une corrélation entre le nom accessible et le texte affiché.
+## Attention au masquage accessible
 
-Exemple d'erreur : 
+Les contenus masqués ne doivent pas être insérés dans le nom visible (mais plutôt à la fin), sinon le critère sera non-conforme et l'élément ne sera pas utilisable avec une dictée vocale.
+
+### Exemple d’erreur 
 <pre><code class="html">
 &lt;a href="www.orange.com" target="_blank"&gt; Ouvrir &lt;span class="visually-hidden"&gt;dans une nouvelle fenêtre &lt;/span&gt; le site d'orange &lt;/a&gt;
 </code></pre>
 
-Si on prononce "Ouvrir le site d'orange", le logiciel de reconnaissance vocale ne trouvera pas cet élément. En revanche, si l'on prononce "Ouvrir dans une nouvelle fenêtre le site d'orange" le lien sera activé, puisque c'est son nom accessible.
+Le nom accessible devient :
 
-## Comment le tester
+> « Ouvrir dans une nouvelle fenêtre le site d’Orange »
 
-### Lecteur d'écran
+Mais l’utilisateur voit seulement :
 
-Le lecteur d'écran vocalise les propriétés de l'élément sur lequel vous placez votre focus.
-En particulier, les caractéristiques suivantes de l'élément : sa fonction (lien, bouton, texte ...), son statut et son nom accessible. Si le nom accessible que vous entendez ne correspond pas à ce qui est textuellement visible, alors le critère est considéré comme non-conforme.
+> « Ouvrir le site d’Orange »
 
-Vous pouvez utiliser la visionneuse de paroles du lecteur d'écran afin de retranscrire de manière textuelle les caractéristiques d'un élément. Il est donc possible de comparer le nom accessible sous forme textuelle lu par le lecteur d'écran avec le texte affiché sur le composant. 
+En reconnaissance vocale, dire « Ouvrir le site d’Orange » **ne fonctionnera pas**, car ce texte ne correspond pas au nom accessible réel.
 
-![Exemple de visionneuse de parole](../images/tester-wcag-253/nvda_visionneuse.png)
+---
 
-### Inspecteur de commande
+## Comment tester la conformité
+
+### 1. Avec un lecteur d’écran
+
+Le lecteur d’écran vocalise :
+
+* la **fonction** de l’élément (bouton, lien, texte, etc.),
+* son **statut**,
+* et son **nom accessible**.
+
+**Procédure :**
+
+1. Naviguez sur la page avec un lecteur d’écran.
+2. Écoutez le nom lu pour chaque bouton ou lien.
+3. Si ce nom **ne correspond pas** au texte visible, le critère **n’est pas conforme**.
+
+Certains lecteurs proposent une *visionneuse de paroles* permettant d’afficher le nom accessible sous forme textuelle, ce qui facilite la comparaison avec le texte affiché.
+
+---
+
+![Exemple de visionneuse de parole](../articles/images/tester-wcag-253/nvda_visionneuse.png)
+
+### 2. Avec les outils de développement
 
 Le moyen de vérifier le critère avec l'inspecteur de commande dépend du navigateur utilisé.
 
-#### Avec Firefox
-<ol>
-  <li>Accéder à l'inspecteur de commande (<kbd>Ctrl+ Maj. + i</kbd>)</li>
-  <li>Sélectionner l'onglet accessibilité</li>
-  <li>Inspecter un élément</li>
-  <li>Regarder la partie propriétés, si l'attribut <span lang="en">name</span> contient au moins le texte qui est affiché le critère est conforme</li> 
-</ol>
+#### Sous Firefox
 
-![Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert](../images/tester-wcag-253/FF_name.png)
+1. Ouvrir l’inspecteur de commande : `Ctrl + Maj + I`
+2. Sélectionner l’onglet **Accessibilité**
+3. Inspecter l’élément à vérifier
+4. Dans la section **Propriétés**, vérifier que l’attribut **name** contient au moins le texte visible à l’écran
+  
+![Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert](../articles/images/tester-wcag-253/FF_name.png)
 
-#### Avec Chrome ou bien Edge Chronium
+#### Sous Chrome ou Edge Chromium
 
-<ol>
-  <li>Accéder à l'inspecteur de commande (<kbd>Ctrl+ Maj. + i</kbd>)</li>
-  <li>Sélectionner l'onglet Éléments</li>
-  <li>Choisisser l'élément que vous souhaitez inspecter</li>
-  <li>
-    Cliquer sur l'onglet Accessibilité, cet onglet peut être caché derrière le bouton "plus d'onglet"
-    <img src="../images/tester-wcag-253/more_tab_img.png" alt="">
-  </li>
-  <li>Regarder la partie "Propriétées calculées" si l'attribut <span lang="en">name</span> contient au moins le texte qui est affiché, le critère est valide</li>
-</ol>
+1. Ouvrir l’inspecteur de commande : `Ctrl + Maj + I`
+2. Sélectionner l’onglet **Éléments**
+3. Choisir l’élément à inspecter
+4. Cliquer sur l’onglet **Accessibilité** (il peut être caché derrière « Plus d’onglets »)
+5. Dans la section **Propriétés calculées**, vérifier que l’attribut **name** contient au moins le texte affiché
 
+---
 
+![Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert](../articles/images/tester-wcag-253/Chrome_name.png)
 
-![Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert](../images/tester-wcag-253/Chrome_name.png)
+## En résumé
+
+Pour respecter le critère **WCAG 2.5.3**, assurez-vous que :
+
+* Le texte visible d’un élément est inclus dans son nom accessible, si possible au début.
+* Les contenus masqués n’altèrent pas la correspondance entre texte visible et nom accessible.
+* Les tests peuvent être réalisés avec un lecteur d’écran **et/ou** un inspecteur d’accessibilité.
+
+---
+
+**Ressources associées :**
+
+* [WCAG 2.5.3 – Name in Label (W3C)](https://www.w3.org/TR/WCAG22/#label-in-name)
+* [Guide Accessibilité – RGAA](https://accessibilite.numerique.gouv.fr/)
