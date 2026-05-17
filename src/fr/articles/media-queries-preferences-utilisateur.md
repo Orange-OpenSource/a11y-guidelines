@@ -4,8 +4,7 @@ abstract: "Les media queries liées aux préférences utilisateur permettent d'a
 titleBeforeTag: true
 date: "2026-05-13"
 tags:
-  - css
-  - accessibility
+  - web
   - advanced
 ---
 
