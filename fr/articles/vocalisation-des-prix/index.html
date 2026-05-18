@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Préambule</a><a href="#" class="dropdown-item text-wrap">Exemples présentant des problèmes de vocalisation</a><a href="#" class="dropdown-item text-wrap">Exemple 1</a><a href="#" class="dropdown-item text-wrap">Exemple 2</a><a href="#" class="dropdown-item text-wrap">Solution pour corriger la vocalisation</a><a href="#" class="dropdown-item text-wrap">Importance de la sémantique</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#preambule" class="dropdown-item text-wrap">Préambule</a><a href="#exemples-presentant-des-problemes-de-vocalisation" class="dropdown-item text-wrap">Exemples présentant des problèmes de vocalisation</a><a href="#exemple-1" class="dropdown-item text-wrap">Exemple 1</a><a href="#exemple-2" class="dropdown-item text-wrap">Exemple 2</a><a href="#solution-pour-corriger-la-vocalisation" class="dropdown-item text-wrap">Solution pour corriger la vocalisation</a><a href="#importance-de-la-semantique" class="dropdown-item text-wrap">Importance de la sémantique</a></div>
     </nav>
         
       </div>
@@ -203,14 +203,14 @@
           
           <div class="mt-4">
           
-<h2>Préambule</h2>
+<h2 id="preambule">Préambule</h2>
 <p>
     L'affichage des prix peut parfois poser des problèmes aux personnes malvoyantes qui utilisent un lecteur d'écran. C'est d'autant plus vrai lorsqu'on souhaite une mise en page particulière ou afficher des promotions (prix barré).
 </p>
 
-<h2>Exemples présentant des problèmes de vocalisation</h2>
+<h2 id="exemples-presentant-des-problemes-de-vocalisation">Exemples présentant des problèmes de vocalisation</h2>
 
-<h3>Exemple 1</h3>
+<h3 id="exemple-1">Exemple 1</h3>
 
 <p>A l'aide d'un lecteur d'écran, l'exemple suivant est vocalisé comme trois éléments distincts :</p>
 <ul>
@@ -237,7 +237,7 @@
 &lt;/span&gt;
 </code></pre>
 
-<h3>Exemple 2</h3>
+<h3 id="exemple-2">Exemple 2</h3>
 
 <p>L'exemple suivant est vocalisé :</p>
 <ul>
@@ -269,7 +269,7 @@
 &lt;/div&gt;
 </code></pre>
 
-<h2>Solution pour corriger la vocalisation</h2>
+<h2 id="solution-pour-corriger-la-vocalisation">Solution pour corriger la vocalisation</h2>
 
 <p>Pour corriger ces problèmes le plus simple est de permettre d'ignorer les caractères qui peuvent potentiellement poser problème aux aides techniques (<abbr>AT</abbr>) et en particulier les lecteurs d'écran, en lecture vocale ou Braille.</p>
 <p>Pour masquer un élément à la synthèse vocale, il suffit d'utiliser l'attribut <code>aria-hidden="true"</code>. Pour ajouter un texte en masquage accessible (texte vocalisé mais non affiché), il suffit d'utiliser une classe CSS de masquage accessible (par exemple la classe <code>visually-hidden</code> si vous utiliser le framework <a href="http://boosted.orange.com">Boosted</a>).</p>
@@ -322,7 +322,7 @@
 &lt;/div&gt;
 </code></pre>
 
-<h2>Importance de la sémantique</h2>
+<h2 id="importance-de-la-semantique">Importance de la sémantique</h2>
 <p>La solution à base de texte en masquage accessible a le mérite de fonctionner avec l'ensemble des outils d'assistance, cela dit il est important de porter une attention particulière aux balises HTML utilisées.</p>
 
 <p>Ajouter de la sémantique dans le code HTML permet d'améliorer la prise en charge par les outils d'assistance. Il est possible d'afficher un texte barré à l'aide d'une balise <code>&lt;span&gt;</code> et d'une classe CSS, cela dit l'utilisation d'une balise appropriée <code>&lt;s&gt;</code> ou <code>&lt;del&gt;</code> apporte du sens à votre code.
@@ -336,13 +336,13 @@ Le lecteur d'écran NVDA par exemple indique automatiquement que le texte est ba
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Sur cette page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Préambule</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Exemples présentant des problèmes de vocalisation</a>
+            <a href="#preambule" class="nav-link text-muted">Préambule</a></li><li class="nav-item position-relative">
+            <a href="#exemples-presentant-des-problemes-de-vocalisation" class="nav-link text-muted">Exemples présentant des problèmes de vocalisation</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Exemple 1</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Exemple 2</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Solution pour corriger la vocalisation</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Importance de la sémantique</a></li>
+            <a href="#exemple-1" class="nav-link text-muted">Exemple 1</a></li><li class="nav-item position-relative">
+            <a href="#exemple-2" class="nav-link text-muted">Exemple 2</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#solution-pour-corriger-la-vocalisation" class="nav-link text-muted">Solution pour corriger la vocalisation</a></li><li class="nav-item position-relative">
+            <a href="#importance-de-la-semantique" class="nav-link text-muted">Importance de la sémantique</a></li>
       </ul>
     </nav>
             </div>

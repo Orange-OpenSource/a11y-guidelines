@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Introduction</a><a href="#" class="dropdown-item text-wrap">Examples with vocalisation problems</a><a href="#" class="dropdown-item text-wrap">Example 1</a><a href="#" class="dropdown-item text-wrap">Example 2</a><a href="#" class="dropdown-item text-wrap">Solution to correct vocalization</a><a href="#" class="dropdown-item text-wrap">Importance of semantics</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#examples-with-voclisation-problems" class="dropdown-item text-wrap">Examples with vocalisation problems</a><a href="#example-1" class="dropdown-item text-wrap">Example 1</a><a href="#example-2" class="dropdown-item text-wrap">Example 2</a><a href="#solution-to-correct-voclization" class="dropdown-item text-wrap">Solution to correct vocalization</a><a href="#importance-of-semantics" class="dropdown-item text-wrap">Importance of semantics</a></div>
     </nav>
         
       </div>
@@ -203,16 +203,16 @@
           
           <div class="mt-4">
           
-<h1>Showing and vocalizing prices</h1>
+<h1 id="showing-and-vocalizing-prices">Showing and vocalizing prices</h1>
 
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 <p>
     Price display can sometimes be problematic for visually impaired people who use a screen reader. This is especially true when you want a particular layout or display promotions (strikethrough price). 
 </p>
 
-<h2>Examples with vocalisation problems </h2>
+<h2 id="examples-with-voclisation-problems">Examples with vocalisation problems </h2>
 
-<h3>Example 1</h3>
+<h3 id="example-1">Example 1</h3>
 
 <p>Using a screen reader, the following example is vocalized as three distinct elements: </p>
 <ul>
@@ -239,7 +239,7 @@ from
 &lt;/span&gt;
 </code></pre>
 
-<h3>Example 2</h3>
+<h3 id="example-2">Example 2</h3>
 
 <p>The following example is vocalized: </p>
 <ul>
@@ -271,7 +271,7 @@ from
 &lt;/div&gt;
 </code></pre>
 
-<h2> Solution to correct vocalization </h2>
+<h2 id="solution-to-correct-voclization"> Solution to correct vocalization </h2>
 
 <p>To fix these problems, the simplest solution is to allow ignoring characters that could potentially cause problems for ATs and especially screen readers, for example, in speech reading or Braille.</p>
 <p> To hide an element from speech synthesis, just use the <code>aria-hidden</code> attribute. To add text in accessible hiding (text that is vocalized but not displayed), you only need to use an accessible CSS class (for example, the class <code>visually-hidden</code> if you use the framework <a href="http://boosted.orange.com">boosted</a>).</p>
@@ -324,7 +324,7 @@ From
 &lt;/div&gt;
 </code></pre>
 
-<h2>Importance of semantics</h2>
+<h2 id="importance-of-semantics">Importance of semantics</h2>
 <p>The accessible text-based hiding solution work with all the assistive technologies, however it is important to pay particular attention to the HTML tags used.</p>
 
 <p>Adding semantics to the HTML code improves support for assistive technologies now and for the futur. It is possible to display a strikethrough text using a <code>&lt;span&gt;</code> tag and a CSS class, but the use of an appropriate tag <code>&lt;s&gt;</code> or <code>&lt;del&gt;</code> brings meaning to your code. 
@@ -339,13 +339,13 @@ The NVDA screen reader, for example, automatically indicates that text is strike
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">On this page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Examples with vocalisation problems</a>
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#examples-with-voclisation-problems" class="nav-link text-muted">Examples with vocalisation problems</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Example 1</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Example 2</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Solution to correct vocalization</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Importance of semantics</a></li>
+            <a href="#example-1" class="nav-link text-muted">Example 1</a></li><li class="nav-item position-relative">
+            <a href="#example-2" class="nav-link text-muted">Example 2</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#solution-to-correct-voclization" class="nav-link text-muted">Solution to correct vocalization</a></li><li class="nav-item position-relative">
+            <a href="#importance-of-semantics" class="nav-link text-muted">Importance of semantics</a></li>
       </ul>
     </nav>
             </div>
