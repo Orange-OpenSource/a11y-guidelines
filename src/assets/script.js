@@ -215,6 +215,120 @@ function manageEventTabPan() {
   }, "1000");
 })();
 
+/**
+ * DocSearch Accessibility Enhancements
+ * Adds ARIA labels for screen reader support in search results
+ */
+(function () {
+    const lang = Application.lang;
+
+    const i18n = {
+        fr: {
+            inputLabel: 'Rechercher sur le site',
+            noResults: 'Aucun résultat',
+            resultsCount: function (n) { return n + ' résultat' + (n > 1 ? 's' : ''); }
+        },
+        en: {
+            inputLabel: 'Search in entire website',
+            noResults: 'No results',
+            resultsCount: function (n) { return n + ' result' + (n !== 1 ? 's' : ''); }
+        }
+    };
+
+    const t = i18n[lang] || i18n.en;
+
+    // Live region for screen reader announcements
+    const liveRegion = document.createElement('div');
+    liveRegion.setAttribute('role', 'status');
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('aria-atomic', 'true');
+    liveRegion.className = 'visually-hidden';
+    document.body.appendChild(liveRegion);
+
+    // Announce message to screen readers
+    function announce(message) {
+        liveRegion.textContent = '';
+        // Force reflow for NVDA to detect change
+        setTimeout(function () { liveRegion.textContent = message; }, 50);
+    }
+
+    /*
+     * Outer observer – watches <body> for direct child changes.
+     * DocSearch appends its modal as a direct child of <body> when the user
+     * opens the search dialog, so childList: true (without subtree) is enough
+     * and avoids unnecessary overhead.
+     */
+    const bodyObserver = new MutationObserver(function () {
+        const modal = document.querySelector('.DocSearch-Modal');
+        if (!modal) return;
+
+        // Fix 1 – aria-label correction.
+        // DocSearch hardcodes aria-label="Search" on the <input> in English.
+        // We overwrite it with the locale-aware label only when it differs, to
+        // avoid triggering an unnecessary mutation loop.
+        const input = modal.querySelector('input.DocSearch-Input');
+        if (input && input.getAttribute('aria-label') !== t.inputLabel) {
+            input.setAttribute('aria-label', t.inputLabel);
+        }
+
+        /*
+         * Inner observer – watches the modal's entire subtree for DOM changes.
+         * Every keystroke causes DocSearch to re-render the result list, so we
+         * react to those mutations to determine what to announce:
+         *   - If .DocSearch-NoResults is present → announce "no results".
+         *   - If .DocSearch-Hit elements are present → announce the count and sections.
+         * Both checks use querySelector/querySelectorAll at call time (not
+         * cached) to reflect the current state of the DOM after the mutation.
+         */
+        const resultsObserver = new MutationObserver(function () {
+            const noResults = modal.querySelector('.DocSearch-NoResults');
+            if (noResults) {
+                announce(t.noResults);
+                return;
+            }
+
+            const hits = modal.querySelectorAll('.DocSearch-Hit');
+            if (hits.length > 0) {
+                // Link each result to its section header for proper announcement order
+                let sectionIdCounter = 0;
+                let titleIdCounter = 0;
+
+                hits.forEach(function (hit) {
+                    const listbox = hit.parentElement;
+                    if (!listbox) return;
+                    const sourceEl = listbox.previousElementSibling;
+                    if (!sourceEl || !sourceEl.classList.contains('DocSearch-Hit-source')) return;
+
+                    // Assign ID to section if missing (reuse across same section results)
+                    let sourceId = sourceEl.getAttribute('id');
+                    if (!sourceId) {
+                        sourceId = 'docsearch-section-' + (sectionIdCounter++);
+                        sourceEl.setAttribute('id', sourceId);
+                    }
+
+                    // Assign ID to result title
+                    const titleEl = hit.querySelector('.DocSearch-Hit-title');
+                    if (!titleEl) return;
+                    let titleId = titleEl.getAttribute('id');
+                    if (!titleId) {
+                        titleId = 'docsearch-title-' + (titleIdCounter++);
+                        titleEl.setAttribute('id', titleId);
+                    }
+
+                    // Link section to result via aria-labelledby (reads in order: section, then title)
+                    hit.setAttribute('aria-labelledby', sourceId + ' ' + titleId);
+                });
+
+                announce(t.resultsCount(hits.length));
+            }
+        });
+
+        resultsObserver.observe(modal, { childList: true, subtree: true });
+    });
+
+    bodyObserver.observe(document.body, { childList: true });
+})();
+
 /* Highlight searched term in result page */
 (function () {
   document.addEventListener("DOMContentLoaded", () => {
@@ -433,6 +547,16 @@ function tabPanelFocus(tabTitleID, tabDescriptionID) {
     elementTarget.focus();
     document.getElementById(tabDescriptionID).scrollIntoView({behavior: 'smooth', block: 'start'})
 }
+
+window.addEventListener('keydown', function(e) {
+    // If pressed key '/' AND we're not in a textarea
+    if (e.key === '/' && !["INPUT", "TEXTAREA"].includes(e.target.tagName)) {
+        // We stop propagation immediately
+        e.stopImmediatePropagation();
+        // We prevent browsers default behavious 
+        e.preventDefault(); 
+    }
+}, { capture: true }); // 
 
 window.addEventListener('DOMContentLoaded', function () {
     //initPriorityNav()
