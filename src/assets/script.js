@@ -215,7 +215,10 @@ function manageEventTabPan() {
   }, "1000");
 })();
 
-/* Algolia DocSearch accessibility fixes for NVDA */
+/**
+ * DocSearch Accessibility Enhancements
+ * Adds ARIA labels for screen reader support in search results
+ */
 (function () {
     const lang = Application.lang;
 
@@ -234,7 +237,7 @@ function manageEventTabPan() {
 
     const t = i18n[lang] || i18n.en;
 
-    // Create a hidden live region for NVDA announcements
+    // Live region for screen reader announcements
     const liveRegion = document.createElement('div');
     liveRegion.setAttribute('role', 'status');
     liveRegion.setAttribute('aria-live', 'polite');
@@ -242,9 +245,10 @@ function manageEventTabPan() {
     liveRegion.className = 'visually-hidden';
     document.body.appendChild(liveRegion);
 
+    // Announce message to screen readers
     function announce(message) {
         liveRegion.textContent = '';
-        //Force reflow so NVDA picks up the change
+        // Force reflow for NVDA to detect change
         setTimeout(function () { liveRegion.textContent = message; }, 50);
     }
 
@@ -272,7 +276,7 @@ function manageEventTabPan() {
          * Every keystroke causes DocSearch to re-render the result list, so we
          * react to those mutations to determine what to announce:
          *   - If .DocSearch-NoResults is present → announce "no results".
-         *   - If .DocSearch-Hit elements are present → announce the count.
+         *   - If .DocSearch-Hit elements are present → announce the count and sections.
          * Both checks use querySelector/querySelectorAll at call time (not
          * cached) to reflect the current state of the DOM after the mutation.
          */
@@ -285,6 +289,36 @@ function manageEventTabPan() {
 
             const hits = modal.querySelectorAll('.DocSearch-Hit');
             if (hits.length > 0) {
+                // Link each result to its section header for proper announcement order
+                let sectionIdCounter = 0;
+                let titleIdCounter = 0;
+
+                hits.forEach(function (hit) {
+                    const listbox = hit.parentElement;
+                    if (!listbox) return;
+                    const sourceEl = listbox.previousElementSibling;
+                    if (!sourceEl || !sourceEl.classList.contains('DocSearch-Hit-source')) return;
+
+                    // Assign ID to section if missing (reuse across same section results)
+                    let sourceId = sourceEl.getAttribute('id');
+                    if (!sourceId) {
+                        sourceId = 'docsearch-section-' + (sectionIdCounter++);
+                        sourceEl.setAttribute('id', sourceId);
+                    }
+
+                    // Assign ID to result title
+                    const titleEl = hit.querySelector('.DocSearch-Hit-title');
+                    if (!titleEl) return;
+                    let titleId = titleEl.getAttribute('id');
+                    if (!titleId) {
+                        titleId = 'docsearch-title-' + (titleIdCounter++);
+                        titleEl.setAttribute('id', titleId);
+                    }
+
+                    // Link section to result via aria-labelledby (reads in order: section, then title)
+                    hit.setAttribute('aria-labelledby', sourceId + ' ' + titleId);
+                });
+
                 announce(t.resultsCount(hits.length));
             }
         });
