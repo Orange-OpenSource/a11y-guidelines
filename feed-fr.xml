@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2026-05-04T00:00:00Z</updated>
+  <updated>2026-05-20T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Le nom accessible en HTML</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/le-nom-accessible-en-html/"/>
+    <updated>2026-05-20T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/le-nom-accessible-en-html/</id>
+    <content xml:lang="fr" type="html">Le nom accessible, qu&#39;est-ce et son rapport avec les technologies d&#39;assistance</content>
+  </entry>
   
   <entry>
     <title>Vocalisation des prix</title>
@@ -609,14 +617,6 @@
     <updated>2020-01-08T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/</id>
     <content xml:lang="fr" type="html">Quand et comment utiliser les roles et attributs de type live</content>
-  </entry>
-  
-  <entry>
-    <title>Le nom accessible en HTML</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/le-nom-accessible-en-html/"/>
-    <updated>2018-10-27T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/le-nom-accessible-en-html/</id>
-    <content xml:lang="fr" type="html">Le nom accessible, qu&#39;est-ce et son rapport avec les technologies d&#39;assistance</content>
   </entry>
   
   <entry>

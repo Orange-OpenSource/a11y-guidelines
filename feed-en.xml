@@ -4,12 +4,20 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2026-05-04T00:00:00Z</updated>
+  <updated>2026-05-20T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>The accessible name in HTML</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/accessible-name/"/>
+    <updated>2026-05-20T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/accessible-name/</id>
+    <content xml:lang="en" type="html">Accessible name, what is it and his link with Assistive technologies</content>
+  </entry>
   
   <entry>
     <title>Price vocalization</title>
@@ -577,14 +585,6 @@
     <updated>2019-02-21T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/aria-status-messages/</id>
     <content xml:lang="en" type="html">Status messages, how to with ARIA</content>
-  </entry>
-  
-  <entry>
-    <title>The accessible name in HTML</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/accessible-name/"/>
-    <updated>2019-02-20T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/accessible-name/</id>
-    <content xml:lang="en" type="html">Accessible name, what is it and his link with Assistive technologies</content>
   </entry>
   
   <entry>

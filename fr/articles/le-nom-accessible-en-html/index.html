@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#en-pratique-comment-ca-marche" class="dropdown-item text-wrap">En pratique, comment ça marche ?</a><a href="#acceder-au-nom-accessible-via-le-navigateur" class="dropdown-item text-wrap">Accéder au nom accessible via le navigateur</a><a href="#contenu-dune-balise" class="dropdown-item text-wrap">Contenu d&#39;une balise</a><a href="#element-associe" class="dropdown-item text-wrap">Élément associé</a><a href="#avec-aria-aussi" class="dropdown-item text-wrap">Avec ARIA aussi !</a><a href="#webographie" class="dropdown-item text-wrap">Webographie</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#en-pratique-comment-ca-marche" class="dropdown-item text-wrap">En pratique, comment ça marche ?</a><a href="#acceder-au-nom-accessible-via-le-navigateur" class="dropdown-item text-wrap">Accéder au nom accessible via le navigateur</a><a href="#contenu-dune-balise" class="dropdown-item text-wrap">Contenu d&#39;une balise</a><a href="#element-associe" class="dropdown-item text-wrap">Élément associé</a><a href="#avec-aria-aussi" class="dropdown-item text-wrap">Avec ARIA aussi</a><a href="#webographie" class="dropdown-item text-wrap">Webographie</a></div>
     </nav>
         
       </div>
@@ -188,33 +188,52 @@
 
             <p class="text-muted mb-0">
               <span class="visually-hidden">Date de parution</span>
-              <time datetime="2018-10-27T00:00:00.000Z">
-                27 octobre 2018
+              <time datetime="2026-05-20T00:00:00.000Z">
+                20 mai 2026
               </time>
             </p>
 
             
+              <p class="text-muted mb-0">
+                Mise à jour de l&#39;article du
+                <time datetime="2018-10-27T00:00:00.000Z">
+                  27 octobre 2018
+                </time>
+              </p>
+            
           
           <div class="mt-4">
           <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-386" aria-labelledby="heading-386">#</a></h2>
-<p>Le nom (<span lang="en">name</span>) du composant d'interface est appelé aussi nom accessible  (<span lang="en">accessible name</span>), c'est globalement ce nom qui va être exposé à la technologie d'assistance <abbr>AT</abbr> via l'<abbr>API</abbr> d'accessibilité (<span lang="en">accessibility <abbr>API</abbr></span>). Ce nom est calculé par le navigateur via un algorithme appelé <a href="https://www.w3.org/TR/accname-1.1/"><span lang="en">Accessible Name and Description Computation 1.1</span></a>.<br>
-En fait, pour faire simple, le navigateur va générer un arbre accessible (<span lang="en">accessibility tree</span>) à partir du <span lang="en">Document Model Object</span> (<abbr>DOM</abbr>) dans lequel une grande majorité des éléments <abbr>HTML</abbr> (ceux qui n'ont qu'un but de présentation, ex. : balises <code>div</code> et <code>span</code> n'en ont pas l'utilité) ont besoin d'un nom (accessible) pour être correctement identifiés par l'<abbr>AT</abbr>.</p>
-<p>Le nom accessible est issu du contenu d'une balise, d'attributs de cette balise ou d'un élément qui lui est associé.</p>
-<h2 id="en-pratique-comment-ca-marche" class="h2-focus">En pratique, comment ça marche ? <a class="header-anchor" href="#en-pratique-comment-ca-marche" id="heading-387" aria-labelledby="heading-387">#</a></h2>
-<p>Le nom accessible est, par exemple, annoncé par un lecteur d'écran à la prise de focus sur cet élément mais le rôle de l'élément est aussi ajouté (lien, graphique, bouton...).</p>
+<p>Le nom (<span lang="en">name</span>) du composant d'interface, appelé aussi nom accessible (<span lang="en">accessible name</span>), c'est le nom qui va être exposé à la technologie d'assistance <abbr>AT</abbr> via l'<abbr>API</abbr> d'accessibilité (<span lang="en">accessibility <abbr>API</abbr></span>). Ce nom est calculé par le navigateur via un algorithme appelé <a href="https://www.w3.org/TR/accname-1.1/"><span lang="en">Accessible Name and Description Computation 1.1</span></a>.<br>
+En fait, pour faire simple, le navigateur va générer un arbre accessible (<span lang="en">accessibility tree</span>) à partir du <span lang="en">Document Model Object</span> (<abbr>DOM</abbr>) dans lequel une grande majorité des éléments <abbr>HTML</abbr> (ceux qui n'ont qu'un but de présentation, exemple : balises <code>div</code> et <code>span</code> n'ont pas d'utilité sémantique) ont besoin d'un nom (accessible) pour être correctement identifiés par l'<abbr>AT</abbr>.</p>
+<p>Le nom accessible peut être issu du contenu d'une balise, d'attributs de cette balise ou d'un élément qui lui est associé.</p>
+<h2 id="en-pratique-comment-ca-marche" class="h2-focus">En pratique, comment ça marche ? <a class="header-anchor" href="#en-pratique-comment-ca-marche" id="heading-387" aria-labelledby="heading-387">#</a></h2>
+<p>Le nom accessible est, par exemple, annoncé par un lecteur d'écran à la prise de focus sur cet élément auquel est ajouté le rôle de l'élément (lien, graphique, bouton...) pour donner la propriété accessibilité de nom. Le nom accessible peut dériver du contenu visible ou caché de l'élément. Les éléments interactifs ou images porteuses d'information doivent avoir un nom accessible, pour plus de détails si un élément doit avoir ou pas un nom accessible voir <a href="https://www.w3.org/WAI/ARIA/apg/practices/names-and-descriptions/#accessiblenameguidancebyrole" hreflang="en" lang="en">ARIA Authoring Practices Guide (APG)</a>. Le nom accessible permet aux utilisateurs d'<abbr>AT</abbr>  de comprendre quelle est la fonction du contrôle (élément interactif), il doit donc être pertinent au regard de son but, de son objectif.<br>
+Pour être concis, dans <a href="https://www.w3.org/TR/html-aam-1.0/#accname-computation" hreflang="en" lang="en">HTML Accessibility API Mappings 1.0 - computation method</a>, il existe un ordre de priorité pour calculer le nom d'un élément <abbr>HTML</abbr> de l'élément, mais en gros :</p>
+<ol>
+<li>
+<p>D'abord, <code>aria-labelledby</code></p>
+</li>
+<li>
+<p>Puis, <code>aria-label</code></p>
+</li>
+<li>
+<p>Et enfin, les éléments associés par exemple : texte de la balise pour les boutons, les liens et les cellules de tableau, les éléments <code>label</code> pour les champs de formulaire, les éléments <code>legend</code> pour les <code>fieldset</code>, les éléments <code>caption</code> pour les tableaux.</p>
+</li>
+</ol>
 <h3 id="acceder-au-nom-accessible-via-le-navigateur">Accéder au nom accessible via le navigateur <a class="header-anchor" href="#acceder-au-nom-accessible-via-le-navigateur" id="heading-388" aria-labelledby="heading-388">#</a></h3>
 <p>Pour accéder au nom (accessible), le plus simple est d'utiliser les outils des navigateurs.</p>
-<p>Dans Chrome, il faut utiliser les Chrome dev tools (<kbd>Ctrl+ Maj. + i</kbd>) pour inspecter un élément et ouvrir le panneau &quot;Accessibility&quot; à la place de celui de &quot;Style&quot; (généralement à droite). On accède à l'&quot;Accessibility tree&quot; et dans &quot;Computed properties&quot; au &quot;Name&quot;, le nom accessible de l'élément inspecté.</p>
+<p>Dans Chrome, il faut utiliser les Chrome dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>) pour inspecter un élément et ouvrir le panneau &quot;Accessibilité&quot; à la place de celui de &quot;Style&quot; (généralement à droite). On accède à l'&quot;Arbre d'accessibilité&quot; et dans &quot;Propriétés calculées&quot; au <span lang="en">&quot;Name&quot;</span>, le nom accessible de l'élément inspecté.</p>
 <p><img src="../../web/images/chrome_name.png" alt="Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert" class="img-fluid"></p>
-<p>Dans FireFox, il faut utiliser les dev tools (<kbd>Ctrl+ Maj. + i</kbd>), ouvrir l'onglet &quot;Accessibilité&quot; (à afficher les &quot;Options&quot; des dev tools), inspecter un élément. On accède au &quot;Name&quot;, le nom accessible de l'élément inspecté.</p>
+<p>Dans Firefox, il faut utiliser les dev tools (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd>), ouvrir l'onglet <span lang="en">&quot;Accessibility&quot;</span> (à afficher les &quot;Options&quot; des dev tools), inspecter un élément. On accède au <span lang="en">&quot;Name&quot;</span>, le nom accessible de l'élément inspecté.</p>
 <p><img src="../../web/images/FF_name.png" alt="Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert" class="img-fluid"></p>
 <h3 id="contenu-dune-balise">Contenu d'une balise <a class="header-anchor" href="#contenu-dune-balise" id="heading-389" aria-labelledby="heading-389">#</a></h3>
 <p><code>&lt;a href=&quot;canard.html&quot;&gt;canards en plastique&lt;/a&gt;</code></p>
-<p>Ici, le nom du lien est le contenu (libellé) de celui-ci : &quot;canards en plastique&quot;. Un utilisateur de lecteur d'écran à la prise de focus sur cet élément entendra : &quot;canards en plastique lien&quot;. Pour un utilisateur de commande vocale, pour cliquer sur ce lien, dira : &quot;cliquer canards en plastique lien&quot;.</p>
-<p>Donc, un élément de ce type <code>&lt;button type=”submit”&gt;&lt;/button&gt;</code> sans intitulé, ne sera pas accessible, bien sûr !</p>
-<p>Également, on peut additionner les éléments pour donner un nom.</p>
+<p>Ici, le nom du lien est le contenu visible (libellé) de celui-ci : &quot;canards en plastique&quot;. Un utilisateur de lecteur d'écran à la prise de focus sur cet élément entendra : &quot;canards en plastique lien&quot;. Pour un utilisateur de commande vocale, pour cliquer sur ce lien, dira : &quot;cliquer canards en plastique lien&quot;.</p>
+<p>Donc, un élément de ce type <code>&lt;button type=”submit”&gt;&lt;/button&gt;</code> sans intitulé ne sera pas accessible, car, bien sûr, pas de nom accessible et donc aucune information de sa fonction !</p>
+<p>Également, on peut additionner les éléments du contenu de la balise pour donner un nom.</p>
 <p><code>&lt;button type=”submit”&gt;Acheter &lt;img alt=&quot;le canard en plastique&quot; src=&quot;canard.jpg&quot;&gt;&lt;/button&gt;</code></p>
-<p>Ce bouton aura lui un nom accessible qui est le contenu du bouton : l'intitulé textuel, &quot;Acheter &quot; plus le <code>alt</code> de l'image : &quot;le canard en plastique&quot; donc &quot;Acheter le canard en plastique&quot;.</p>
+<p>Ce bouton aura lui un nom accessible qui est le contenu du bouton : l'intitulé textuel visible, &quot;Acheter &quot; plus le <code>alt</code> (caché, non-visible) de l'image : &quot;le canard en plastique&quot; donc &quot;Acheter le canard en plastique&quot;.</p>
 <h3 id="element-associe">Élément associé <a class="header-anchor" href="#element-associe" id="heading-390" aria-labelledby="heading-390">#</a></h3>
 <p>Par ailleurs, pour les éléments de formulaire, le nom accessible est le <code>label</code> lorsqu’il est programmatiquement associé à l'élément via l'attribut <code>for</code> référençant l'<code>id</code> du champ.</p>
 <pre><code class="html">
@@ -222,7 +241,7 @@ En fait, pour faire simple, le navigateur va générer un arbre accessible (<spa
 &lt;input id="search" type="text"&gt;
 </code></pre>
 <p>Avec ce code, le lecteur d'écran dira : &quot;Rechercher édition&quot;.</p>
-<h3 id="avec-aria-aussi">Avec <abbr>ARIA</abbr> aussi ! <a class="header-anchor" href="#avec-aria-aussi" id="heading-391" aria-labelledby="heading-391">#</a></h3>
+<h3 id="avec-aria-aussi">Avec <abbr>ARIA</abbr> aussi <a class="header-anchor" href="#avec-aria-aussi" id="heading-391" aria-labelledby="heading-391">#</a></h3>
 <p><abbr>ARIA</abbr> va pouvoir nous aider pour donner un nom à un élément <abbr>HTML</abbr>, en utilisant <code>aria-label</code> et <code>aria-labelledby</code>.</p>
 <pre><code class="html">
 &lt;button class="navbar-toggler" type="button" aria-label="Ouverture menu navigation" ... &gt;
@@ -230,17 +249,19 @@ En fait, pour faire simple, le navigateur va générer un arbre accessible (<spa
 &lt;/button&gt;
 </code></pre>
 <p>Ce bouton de menu hamburger a donc un nom : &quot;Ouverture menu navigation&quot;.<br>
-Mais on pourrait aussi utiliser <code>aria-labelledby</code> pour référencer un autre élément de la page comme nom :</p>
+Mais on pourrait aussi utiliser <code>aria-labelledby</code> pour référencer un autre élément de la page comme nom :</p>
 <pre><code class="html">
 &lt;input type="search" aria-labelledby="this"&gt;
 &lt;button id="this"&gt;Rechercher dans le site&lt;/button&gt;
 </code></pre>
-<p>Lors de la prise de focus sur le champ, le lecteur d'écran annonce &quot;Rechercher sur le site édition&quot;.</p>
+<p>Lors de la prise de focus sur le champ, le lecteur d'écran annonce la propriété de nom accessible : &quot;Rechercher sur le site édition&quot;.</p>
 <p>Plus de détails sur <a href="../attributs-aria-qui-peuvent-vous-sauver/">&quot;Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver&quot;</a>.</p>
 <h2 id="webographie" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-392" aria-labelledby="heading-392">#</a></h2>
 <ul>
 <li><a href="https://www.w3.org/TR/accname-1.1/" lang="en" hreflang="en">Accessible Name and Description Computation 1.1</a> par <span lang="en">the Accessible Rich Internet Applications Working Group</span></li>
 <li><a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/" lang="en" hreflang="en">What is an accessible name?</a> par Léonie Watson</li>
+<li><a href="https://w3c.github.io/accname/#mapping_additional_nd_description" lang="en" hreflang="en">Accessible Name and Description Computation 1.2 Editorial Draft (en)</a></li>
+<li><a href="https://www.w3.org/TR/html-aam-1.0" hreflang="en" lang="en">HTML Accessibility API Mappings 1.0</a></li>
 </ul>
 
           </div>
@@ -252,12 +273,12 @@ Mais on pourrait aussi utiliser <code>aria-labelledby</code> pour référencer u
       <h2 id="toc-title">Sur cette page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
             <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
-            <a href="#en-pratique-comment-ca-marche" class="nav-link text-muted">En pratique, comment ça marche ?</a>
+            <a href="#en-pratique-comment-ca-marche" class="nav-link text-muted">En pratique, comment ça marche ?</a>
             <ul><li class="nav-item position-relative">
             <a href="#acceder-au-nom-accessible-via-le-navigateur" class="nav-link text-muted">Accéder au nom accessible via le navigateur</a></li><li class="nav-item position-relative">
             <a href="#contenu-dune-balise" class="nav-link text-muted">Contenu d&#39;une balise</a></li><li class="nav-item position-relative">
             <a href="#element-associe" class="nav-link text-muted">Élément associé</a></li><li class="nav-item position-relative">
-            <a href="#avec-aria-aussi" class="nav-link text-muted">Avec ARIA aussi !</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#avec-aria-aussi" class="nav-link text-muted">Avec ARIA aussi</a></li></ul></li><li class="nav-item position-relative">
             <a href="#webographie" class="nav-link text-muted">Webographie</a></li>
       </ul>
     </nav>
