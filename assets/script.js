@@ -7,11 +7,41 @@ e.textContent="",setTimeout(function(){e.textContent=a},50)}/*
      * opens the search dialog, so childList: true (without subtree) is enough
      * and avoids unnecessary overhead.
      */const b=Application.lang,c={fr:{inputLabel:"Rechercher sur le site",noResults:"Aucun r\xE9sultat",resultsCount:function(a){return a+" r\xE9sultat"+(1<a?"s":"")}},en:{inputLabel:"Search in entire website",noResults:"No results",resultsCount:function(a){return a+" result"+(1===a?"":"s")}}},d=c[b]||c.en,e=document.createElement("div");// Live region for screen reader announcements
-e.setAttribute("role","status"),e.setAttribute("aria-live","polite"),e.setAttribute("aria-atomic","true"),e.className="visually-hidden",document.body.appendChild(e);const f=new MutationObserver(function(){const b=document.querySelector(".DocSearch-Modal");if(b){// Fix 1 – aria-label correction.
+e.setAttribute("role","status"),e.setAttribute("aria-live","polite"),e.setAttribute("aria-atomic","true"),e.className="visually-hidden",document.body.appendChild(e);let f=!1;const g=new MutationObserver(function(){const b=document.querySelector(".DocSearch-Modal");// Fix 3 – Focus restoration on modal close.
+// DocSearch does not return focus to the trigger button when the modal
+// is closed, causing Tab to restart from the top of the page.
+// We detect the modal disappearing and restore focus to .DocSearch-Button.
+if(!b&&f){f=!1;const a=document.querySelector(".DocSearch-Button");return void(a&&a.focus())}if(!b)return;f=!0;// Fix 1 – aria-label correction.
 // DocSearch hardcodes aria-label="Search" on the <input> in English.
 // We overwrite it with the locale-aware label only when it differs, to
 // avoid triggering an unnecessary mutation loop.
-const c=b.querySelector("input.DocSearch-Input");c&&c.getAttribute("aria-label")!==d.inputLabel&&c.setAttribute("aria-label",d.inputLabel);/*
+const c=b.querySelector("input.DocSearch-Input");// Fix 2 – aria-activedescendant management for NVDA.
+//
+// Problem: DocSearch sets aria-activedescendant to the first result as
+// soon as results appear, which causes NVDA to read the result item
+// instead of echoing the user's typed characters.
+//
+// Additionally, DocSearch internally tracks highlighted index (starts
+// at 0). If we remove aria-activedescendant during typing but DocSearch
+// keeps index=0, the first ArrowDown advances to item 1 and the first
+// result is never announced.
+//
+// Solution:
+//  - While typing: remove aria-activedescendant → NVDA echoes chars.
+//  - First ArrowDown/Up after typing: intercept in capture phase,
+//    block the event (DocSearch keeps index 0), and manually set
+//    aria-activedescendant to the first highlighted item → NVDA
+//    announces the first result.
+//  - Subsequent arrows: DocSearch handles normally (index 0→1, 1→2…).
+if(c&&c.getAttribute("aria-label")!==d.inputLabel&&c.setAttribute("aria-label",d.inputLabel),c&&!c.dataset.a11yPatched){c.dataset.a11yPatched="true",c.setAttribute("tabindex","0");let a=!1;// Capture-phase handler on the modal intercepts arrow keys BEFORE
+// DocSearch's own handler can process them.
+b.addEventListener("keydown",function(d){if(d.target===c)if("ArrowDown"!==d.key&&"ArrowUp"!==d.key)a=!1,c.removeAttribute("aria-activedescendant");else if(!a){a=!0,d.stopPropagation(),d.preventDefault();// Manually announce the already-highlighted first item
+// by setting aria-activedescendant to its ID.
+const e=b.querySelector("[aria-selected=\"true\"]");if(e)c.setAttribute("aria-activedescendant",e.id);else{// Fallback: pick the first hit link (has an ID like docsearch-item-X)
+const a=b.querySelector(".DocSearch-Hit a[id]");a&&c.setAttribute("aria-activedescendant",a.id)}}// Subsequent arrows: let DocSearch handle normally
+},!0),c.addEventListener("input",function(){a=!1,c.removeAttribute("aria-activedescendant")});// Observe attribute changes to strip aria-activedescendant
+// when DocSearch re-applies it after a re-render (during typing)
+const d=new MutationObserver(function(b){a||b.forEach(function(b){"aria-activedescendant"!==b.attributeName||a||c.removeAttribute("aria-activedescendant")})});d.observe(c,{attributes:!0,attributeFilter:["aria-activedescendant"]})}/*
          * Inner observer – watches the modal's entire subtree for DOM changes.
          * Every keystroke causes DocSearch to re-render the result list, so we
          * react to those mutations to determine what to announce:
@@ -22,7 +52,7 @@ const c=b.querySelector("input.DocSearch-Input");c&&c.getAttribute("aria-label")
          */const e=new MutationObserver(function(){const c=b.querySelector(".DocSearch-NoResults");if(c)return void a(d.noResults);const e=b.querySelectorAll(".DocSearch-Hit");if(0<e.length){// Link each result to its section header for proper announcement order
 let b=0,c=0;e.forEach(function(a){const d=a.parentElement;if(!d)return;const e=d.previousElementSibling;if(!e||!e.classList.contains("DocSearch-Hit-source"))return;// Assign ID to section if missing (reuse across same section results)
 let f=e.getAttribute("id");f||(f="docsearch-section-"+b++,e.setAttribute("id",f));// Assign ID to result title
-const g=a.querySelector(".DocSearch-Hit-title");if(!g)return;let h=g.getAttribute("id");h||(h="docsearch-title-"+c++,g.setAttribute("id",h)),a.setAttribute("aria-labelledby",f+" "+h)}),a(d.resultsCount(e.length))}});e.observe(b,{childList:!0,subtree:!0})}});f.observe(document.body,{childList:!0})}(),function(){// Function to highlight all occurrences of the term in the page
+const g=a.querySelector(".DocSearch-Hit-title");if(!g)return;let h=g.getAttribute("id");h||(h="docsearch-title-"+c++,g.setAttribute("id",h)),a.setAttribute("aria-labelledby",f+" "+h)}),a(d.resultsCount(e.length))}});e.observe(b,{childList:!0,subtree:!0})});g.observe(document.body,{childList:!0})}(),function(){// Function to highlight all occurrences of the term in the page
 function a(a){// Exit if no term provided
 function c(d){if(3===d.nodeType){const c=new RegExp(`(${b(a)})`,"gi");if(c.test(d.nodeValue)){const a=document.createElement("span");a.innerHTML=d.nodeValue.replace(c,"<mark>$1</mark>"),d.parentNode.replaceChild(a,d)}}else 1===d.nodeType&&"SCRIPT"!==d.tagName&&"STYLE"!==d.tagName&&Array.from(d.childNodes).forEach(c)}a&&c(document.body)}function b(a){return a.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}document.addEventListener("DOMContentLoaded",()=>{// Retrieve the searched term from localStorage
 const b=localStorage.getItem("searchTerm");b&&(a(b),localStorage.removeItem("searchTerm"))})}(),function(){const a=new URL(window.location).searchParams.get("tag");if(searchArticleButton=document.getElementById("search_article"),null!==searchArticleButton){this.updateTitle=function(){// Declare variables
