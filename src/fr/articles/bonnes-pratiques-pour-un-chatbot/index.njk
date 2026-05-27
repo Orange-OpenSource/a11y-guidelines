@@ -13,14 +13,14 @@ js:
   - script.js
 ---
 
-<h2>Avant-propos</h2>
+<h2 id="avant-propos">Avant-propos</h2>
 <p>Dans cet article, les termes <span lang="en">chatbot</span> et <span lang="en">chat</span> se réfèrent à une fenêtre
   de dialogue qui
   permet d'engager une conversation écrite avec un opérateur ou une intelligence artificielle, parfois également
   appelée
   agent conversationnel.</p>
 
-<h2>1. Les recommandations de la marque</h2>
+<h2 id="1-les-recommandations-de-la-marque">1. Les recommandations de la marque</h2>
 
 <p>Cet article détaille un certain nombre de points techniques sur lesquels il faut être vigilant. Si l'objectif est de
   développer un chatbot pour un site Orange, il convient dans un premier temps de consulter les recommandations de la
@@ -28,7 +28,7 @@ js:
   <span lang="en">(Conversational UI guidelines)</span>.
 </p>
 
-<h2>2. Accéder au chatbot</h2>
+<h2 id="2-acceder-au-chatbot">2. Accéder au chatbot</h2>
 <p>
   Avant d'utiliser un chatbot, bien souvent il est nécessaire de faire apparaître celui-ci en cliquant sur un bouton
   situé dans un coin de la page. L'utilisateur doit être en mesure de découvrir par lui-même qu'il a la possibilité
@@ -38,7 +38,7 @@ js:
   propositions valides.
 </p>
 
-<h3>Navigation au clavier</h3>
+<h3 id="navigation-au-clavier">Navigation au clavier</h3>
 <p>Il suffit de placer un bouton dans un coin de la page à condition qu'il soit accessible à l'aide du clavier. Pour
   cela, il faut utiliser un vrai bouton (balise <code>&lt;button&gt;</code>) au niveau du code,
   comme c'est le cas sur cette page (bouton contact situé en bas à droite de la page).
@@ -63,7 +63,7 @@ js:
   </li>
 </ul>
 
-<h3>Navigation avec une loupe d'écran</h3>
+<h3 id="navigation-avec-une-loupe-d-ecran">Navigation avec une loupe d'écran</h3>
 <p>
   Pour les utilisateurs de loupe d'écran, il est conseillé de ne pas coller le bouton de contact sur le bord de la
   fenêtre. Les défilements de l'écran occasionnés par l'usage de la loupe rendent les déplacements du pointeur de la
@@ -86,7 +86,7 @@ js:
 <img class="screenshot img-fluid" src="images/zoom-ok.png"
   alt="capture d'écran du bouton de contact visible malgré la présence d'une info-bulle">
 
-<h3>Navigation au lecteur d'écran</h3>
+<h3 id="navigation-au-lecteur-d-ecran">Navigation au lecteur d'écran</h3>
 <p>La présence d'un bouton pour accéder au chatbot, en bas à droite, suffira à faire comprendre à certains utilisateurs
   qu'un chatbot est disponible sur la page. Cela dit, pour les utilisateurs aveugles ou malvoyants qui naviguent avec
   un lecteur d'écran, cela risque de poser des difficultés. En effet, pour entendre ce bouton, placé bien souvent à la
@@ -107,7 +107,7 @@ js:
 </ul>
 
 
-<h4>Ajouter des liens d'évitement</h4>
+<h4 id="ajouter-des-liens-d-evitement">Ajouter des liens d'évitement</h4>
 
 <p>Les liens d'évitement permettent d'accéder directement à une zone spécifique de la page. Ils sont insérés en haut de
   page et donc vocalisés en premier. La présence d'un lien d'évitement «&nbsp;accéder au chat&nbsp;» vers le chatbot
@@ -123,7 +123,7 @@ js:
 <img class="screenshot img-fluid" src="images/skiplinks.png"
   alt="capture d'écran des liens d'évitement qui s'affichent sur cette page lors de la navigation au clavier">
 
-<h4>Utiliser des landmarks ARIA</h4>
+<h4 id="utiliser-des-landmarks-aria">Utiliser des landmarks ARIA</h4>
 
 <p>En plus des <a href="../landmarks-aria/">balises de structure HTML5 prédéfinies</a> (<code>main</code>,
   <code>aside</code>, <code>footer</code> et <code>header</code>, ...), il est possible de créer des landmarks
@@ -145,7 +145,7 @@ js:
 
 <p>Ainsi avec seulement deux petits attributs ARIA, on simplifie grandement la navigation.</p>
 
-<h4>Utiliser une balise de titre</h4>
+<h4 id="utiliser-une-balise-de-titre">Utiliser une balise de titre</h4>
 <p>D'après des sondages récurrents réalisés par <a href="https://webaim.org">webaim.org</a> auprès d'utilisateurs de
   lecteurs d'écran on s'aperçoit que les landmarks ne sont pas encore connus de tous. Par sécurité, on peut ajouter
   également une balise de titre (<code>h1</code>, <code>h2</code>...) avant le <span lang="en">chat</span>.
@@ -164,11 +164,11 @@ js:
 
 <img class="screenshot img-fluid" src="images/title.png" alt="capture d'écran, liste des titres dans NVDA">
 
-<h2>3. Accessibilité du chatbot</h2>
+<h2 id="3-accessibilite-du-chatbot">3. Accessibilité du chatbot</h2>
 
 <p>Maintenant que tous les utilisateurs peuvent accéder au chatbot, il faut s'assurer que celui-ci soit accessible.</p>
 
-<h3>Navigation au clavier</h3>
+<h3 id="navigation-au-clavier">Navigation au clavier</h3>
 <p>Concernant la navigation au clavier, il suffit de vérifier en navigant sans l'aide de la souris, qu'il est possible
   de cliquer sur l'ensemble des boutons (touche <kbd>Tab</kbd> pour déplacer le focus, touche <kbd>Entrée</kbd>
   pour activer un bouton) et qu'il est possible de saisir et d'envoyer des messages.</p>
@@ -192,7 +192,7 @@ js:
 <img class="screenshot img-fluid" src="images/chat-scroll.png"
   alt="capture d'écran de la fenêtre de chat avec le focus positionné sur l'élément permettant de faire défiler les messages">
 
-<h3>Navigation avec une loupe d'écran</h3>
+<h3 id="navigation-avec-une-loupe-d-ecran">Navigation avec une loupe d'écran</h3>
 <p>La largeur de la fenêtre de <span lang="en">chat</span> peut avoir une incidence sur le confort de lecture. En effet,
   si, celle-ci est trop
   large, la lecture du <span lang="en">chat</span> à l'aide d'une loupe peut devenir fastidieuse. Notamment si,
@@ -212,9 +212,9 @@ js:
 <img class="screenshot img-fluid" src="images/chatbot-zoom-ok.png"
   alt="capture d'écran d'une fenêtre de chat de largeur satisfaisante">
 
-<h3>Navigation avec un lecteur d'écran</h3>
+<h3> id="navigation-avec-un-lecteur-d-ecran">Navigation avec un lecteur d'écran</h3>
 
-<h4>Labelliser les éléments interactifs</h4>
+<h4 id="labelliser-les-elements-interactifs">Labelliser les éléments interactifs</h4>
 <p>Des étiquettes ont été ajoutées sur le champ de saisie et sur le bouton «&nbsp;Envoyer&nbsp;» à l'aide d'un attribut
   <code>aria-label</code> ou <code>title</code>. Ainsi, un utilisateur malvoyant utilisant un lecteur d'écran entendra
   qu'il s'agit du champ permettant de saisir le message à envoyer.
@@ -226,7 +226,7 @@ js:
 
 <p>La même chose sur les boutons permettant de réduire et de fermer la fenêtre du <span lang="en">chat</span>.</p>
 
-<h4>Prévenir l'utilisateur de l'arrivée d'un nouveau message</h4>
+<h4 id="prevenir-l-utilisateur-de-l-arrivee-d-un-nouveau-message">Prévenir l'utilisateur de l'arrivée d'un nouveau message</h4>
 <p>Bien que les messages reçus apparaissent à l'écran, le lecteur d'écran ne les vocalisera pas automatiquement par
   défaut.</p>
 <p>Pour corriger ce problème, il suffit d'ajouter un attribut <code>aria-live</code> pour indiquer au lecteur d'écran
@@ -235,7 +235,7 @@ js:
       &lt;div id="chat-content" tabindex="0" <span class="important">aria-live="polite"</span>&gt;
   </code></pre>
 
-<h4>Identifier l'émetteur d'un message</h4>
+<h4 id="identifier-l-emetteur-d-un-message">Identifier l'émetteur d'un message</h4>
 <p>Est-ce que vous pouvez identifier qui est l'émetteur du message «Test message 2» dans la capture d'écran
   ci-dessous&nbsp;?
 </p>
@@ -284,7 +284,7 @@ js:
       &lt;span class="from" aria-hidden="true"&gt;moi&lt;/span&gt;
   </code></pre>
 
-<h4>Sons</h4>
+<h4 id="sons">Sons</h4>
 
 <p>Les <a hreflang="en" lang="en"
     href="https://system.design.orange.com/0c1af118d/p/142bf5-conversational">Conversational UI
@@ -293,7 +293,7 @@ js:
   personnes malvoyantes. Elles auront confirmation que leur message a été envoyé sans avoir besoin d'aller lire le fil
   des messages par exemple.</p>
 
-<h4>Titre de la fenêtre</h4>
+<h4 id="titre-de-la-fenetre">Titre de la fenêtre</h4>
 
 <p>Pour compléter l'alerte sonore, il est également important de modifier le titre de la fenêtre à la réception d'un
   message. Ceci permettra à l'utilisateur qui s'est absenté, de détecter, d'un simple coup d'œil, qu'un message est
@@ -317,7 +317,7 @@ js:
     }
   </code></pre>
 
-<h4>Interactions</h4>
+<h4 id="interactions">Interactions</h4>
 <p>Certaines conversations amènent le chatbot à proposer à l'utilisateur d'effectuer un choix parmi plusieurs
   propositions. Le bouton suivant permet d'illustrer cette possibilité&nbsp;:</p>
 <p>
@@ -366,7 +366,7 @@ js:
     }, 0);
   </code></pre>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 <p>Ces recommandations ont été appliquées au <span lang="en">chat</span> disponible sur cette page. N'hésitez pas à
   consulter le code. Pour
   toutes remarques, suggestions n'hésitez pas à consulter ou créer une <span lang="en">issue</span> sur notre <a

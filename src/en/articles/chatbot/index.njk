@@ -13,19 +13,19 @@ js:
   - script.js
 ---
 
-<h1>Designing an accessible chatbot</h1>
+<h1 id="designing-an-accessible-chatbot">Designing an accessible chatbot</h1>
 
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 <p>In this article, the terms “chatbot” and “chat” refer to a dialogue window that allows you to engage in a written
   conversation with an operator or an artificial intelligence, sometimes also called conversational agent. </p>
 
-<h2> 1. Brand’s guidelines</h2>
+<h2 id="1-brand-s-guidelines">1. Brand’s guidelines</h2>
 
-<p> This article details a number of technical points. If the objective is to develop a chatbot for an Orange site, it
+<p>This article details a number of technical points. If the objective is to develop a chatbot for an Orange site, it
   is advisable at first to be familiar with the Brand recommendations on this topic, available at <a
     href="https://design.orange.com/guidelines">design.orange.com</a> (Conversational UI guideline).</p>
 
-<h2> 2. Go to the chatbot</h2>
+<h2 id="2-go-to-the-chatbot">2. Go to the chatbot</h2>
 <p>Before using a chatbot, it is often necessary to make it appear by clicking on a button located in a corner of the
   page. Users must be able to discover that they have the option to use a chatbot on the page they are viewing. This is
   why
@@ -33,7 +33,7 @@ js:
   e-commerce site, label such as “Contact us”, or “A problem with your order?” are valid proposals.
 </p>
 
-<h3> Keyboard Navigation</h3>
+<h3 id="keyboard-navigation">Keyboard Navigation</h3>
 <p>It is sufficient to place a button in a corner of the page, as long as it is accessible by keyboard. Use a real
   <code>button</code> element in the markup., as is the case on this page
   (contact button located at the bottom right of the page).
@@ -52,7 +52,7 @@ js:
   </li>
 </ul>
 
-<h3>Browsing with a screen magnifier</h3>
+<h3 id="browsing-with-a-screen-magnifier">Browsing with a screen magnifier</h3>
 <p>For users with a screen magnifier, it is advisable not to locate the contact button too close to the edge of the
   window. The screen moves caused by the use of the magnifier make the movements of the mouse pointer sometimes less
   accurate. If the user does not target the contact button precisely, tooltips from items displayed outside the window
@@ -68,7 +68,7 @@ js:
 <img class="screenshot" src="images/zoom-ok.png"
   alt="screenshot of the visible contact button despite the presence of a tooltip">
 
-<h3>Screen reader navigation</h3>
+<h3 id="screen-reader-navigation">Screen reader navigation</h3>
 <p>The presence of a button to access the chatbot, in the lower right, is enough to make some users understand that a
   chatbot is available on the page. But, for blind or visually impaired users who are navigating with a screen reader,
   this may pose difficulties. Indeed, to hear this button, often placed at the end of the code, it is necessary for the
@@ -84,7 +84,7 @@ js:
   <li>Use a title tag</li>
 </ul>
 
-<h4>Add skip links</h4>
+<h4 id="add-skip-links">Add skip links</h4>
 
 <p>Skip links provide direct access to a specific area of ​​the page. They are inserted at the top of the page and thus,
   vocalized first. The presence of a skip link “skip to chat” to go directly to the chatbot will allow users to
@@ -100,7 +100,7 @@ js:
   alt="screenshot of the skip links that appear on this page when navigating with the keyboard">
 
 
-<h4>Use <abbr>ARIA</abbr> landmarks</h4>
+<h4 id="use-aria-landmarks">Use <abbr>ARIA</abbr> landmarks</h4>
 
 <p>
   In addition to <a href="../landmarks/">predefined HTML5 structure tags</a> (<code>main</code>, <code>aside</code>,
@@ -123,7 +123,7 @@ js:
 
 <p>With only two small ARIA attributes, navigation is greatly simplified.</p>
 
-<h4>Use a title tag</h4>
+<h4 id="use-a-title-tag">Use a title tag</h4>
 <p>
   According to recurring polls from <a href="https://webaim.org">WebAIM</a> about screen reader users, landmarks are not
   known by everyone yet. For robustness, we can also add a heading tag (<code>h1</code>, <code>h2</code>...) before the
@@ -144,11 +144,11 @@ js:
 <img class="screenshot img-fluid" src="images/title.png" alt="screenshot, list of headings in NVDA">
 
 
-<h2>3. Chatbot accessibility</h2>
+<h2 id="3-chatbot-accessibility">3. Chatbot accessibility</h2>
 
 <p>Now that everyone can access the chatbot, make sure it is accessible.</p>
 
-<h3>Keyboard Navigation</h3>
+<h3 id="keyboard-navigation">Keyboard Navigation</h3>
 <p>Regarding keyboard navigation, it is enough to check while navigating without the help of the mouse, if it is
   possible to click on all the buttons (<kbd>Tab</kbd> key to move the focus, <kbd>Enter</kbd> key to activate a button)
   and to type and send messages.</p>
@@ -170,7 +170,7 @@ outline: .2rem solid #f16e00;
 <p><img class="screenshot img-fluid" src="images/chat-scroll.png"
     alt="screenshot of the chat window with the focus positioned on the item to scroll through the messages"></p>
 
-<h3>Browsing with a screen magnifier</h3>
+<h3 id="browsing-with-a-screen-magnifier">Browsing with a screen magnifier</h3>
 <p>
   The width of the chat window can affect the reading comfort. Indeed, if it is too wide, reading the chat with
   magnifying software can become tedious. Especially if the user has to scroll to read the entire line on the chat.
@@ -184,9 +184,9 @@ outline: .2rem solid #f16e00;
   read the entire chat without moving the visible portion of the screen.</p>
 <img class="screenshot img-fluid" src="images/chatbot-zoom-ok.png" alt="screenshot of a chat window of enough width">
 
-<h3>Navigating with a screen reader</h3>
+<h3 id="navigating-with-a-screen-reader">Navigating with a screen reader</h3>
 
-<h4>Labelling interactive elements</h4>
+<h4 id="labelling-interactive-elements">Labelling interactive elements</h4>
 <p>Labels have been added to the input field and the send button using a <code>title</code> or an
   <code>aria-label</code> attribute. Thus, a visually impaired user using a screen reader will hear that it is the field
   to type the message to send.
@@ -198,7 +198,7 @@ outline: .2rem solid #f16e00;
 
 <p>The same thing must be done on the buttons to reduce and close the chat window. </p>
 
-<h4>Notify the user when a new message arrives</h4>
+<h4 id="notify-the-user-when-a-new-message-arrives">Notify the user when a new message arrives</h4>
 <p>Although the received messages appear on the screen, the screen reader does not automatically read them by default.
 </p>
 <p>To solve this problem, just add an <code>aria-live</code> attribute to tell the screen reader that it should
@@ -207,7 +207,7 @@ outline: .2rem solid #f16e00;
 &lt;div id="chat-content" tabindex="0" <span class="important">aria-live="polite"</span>&gt;
   </code></pre>
 
-<h4>Identify the sender of a message</h4>
+<h4 id="identify-the-sender-of-a-message">Identify the sender of a message</h4>
 <p>Can you identify who the sender of the message “Test message 2” is in the screenshot below?</p>
 <img class="screenshot img-fluid" src="images/chat1.png" alt="screenshot of a conversation via a chat window">
 
@@ -248,14 +248,14 @@ message test 1
 &lt;span class="from" aria-hidden="true"&gt;Me&lt;/span&gt;
     </code></pre>
 
-<h4>Sounds</h4>
+<h4 id="sounds">Sounds</h4>
 <p>The <a href="https://system.design.orange.com/0c1af118d/p/142bf5-conversational">Orange Brand recommendations for
     Conversational UI guidelines</a>
   specify the audio files to use. It is important to make a sound when sending and receiving messages. This is useful
   for everyone but, especially, for the visually impaired. They have confirmation that their message has been sent
   without needing to read the message thread for example.</p>
 
-<h4>Window title</h4>
+<h4 id="window-title">Window title</h4>
 <p>To complete the audio alert, it is also important to change the title of the window when receiving a message. This
   allows the user who has been absent, to detect, at a glance, that a message has arrived even if it is on another tab
   of the browser. Similarly, for a user who navigates with a screen reader, it is very easy to access at any time the
@@ -276,7 +276,7 @@ document.title = "Djingo says…" + title;
 }
   </code></pre>
 
-<h4>Interactions</h4>
+<h4 id="interactions">Interactions</h4>
 <p> Some conversations lead the chatbot to propose multiple choice options. The following button illustrates this
   possibility: </p>
 <p>
@@ -285,7 +285,7 @@ document.title = "Djingo says…" + title;
 <p>In this example, the user must make a choice. In this case, it is necessary to take some precautions to simplify
   navigation.</p>
 
-<h5>Focus Management</h5>
+<h5 id="focus-management">Focus Management</h5>
 <p>To simplify the keyboard navigation, rather than focusing the chat input field, the focus is moved to the text
   preceding the buttons. This then allows the user to navigate the first choice by pressing the <kbd>Tab</kbd> key once.
 </p>
@@ -297,7 +297,7 @@ document.title = "Djingo says…" + title;
   <li><code>tabindex="-1"</code>: the element is focusable via JavaScript only.</li>
 </ul>
 
-<h5>Navigation with a screen reader</h5>
+<h5 id="navigation-with-a-screen-reader">Navigation with a screen reader</h5>
 <p>When focus is moved to an item, the screen reader automatically vocalizes it. But in our case, the
   <code>aria-live</code> attribute already allows to automatically vocalize any addition in the chat window. To avoid
   double vocalization in this case, make sure to temporarily disable the <code>aria-live</code>.
@@ -321,7 +321,7 @@ document.title = "Djingo says…" + title;
   }, 0);
 </code></pre>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 <p>These recommendations have been applied to the chat available on this page. Do not hesitate to consult the code. For
   any comments or suggestions, create an issue on our <a
     href="https://github.com/Orange-OpenSource/a11y-guidelines/issues">GitHub account</a>.</p>
