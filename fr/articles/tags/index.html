@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Préambule</a><a href="#" class="dropdown-item text-wrap">Rendu final</a><a href="#" class="dropdown-item text-wrap">Structure HTML</a><a href="#" class="dropdown-item text-wrap">Étape 1</a><a href="#" class="dropdown-item text-wrap">Suppression d&#39;un tag</a><a href="#" class="dropdown-item text-wrap">Étape 2</a><a href="#" class="dropdown-item text-wrap">Un peu de déco</a><a href="#" class="dropdown-item text-wrap">Étape 3</a><a href="#" class="dropdown-item text-wrap">Étape 4</a><a href="#" class="dropdown-item text-wrap">Optimisation</a><a href="#" class="dropdown-item text-wrap">Étape 5</a><a href="#" class="dropdown-item text-wrap">Étape 6</a><a href="#" class="dropdown-item text-wrap">Étape 7</a><a href="#" class="dropdown-item text-wrap">Optimisation (bis)</a><a href="#" class="dropdown-item text-wrap">Étape 8</a><a href="#" class="dropdown-item text-wrap">Étape 9</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#preambule" class="dropdown-item text-wrap">Préambule</a><a href="#rendu-final" class="dropdown-item text-wrap">Rendu final</a><a href="#structure-html" class="dropdown-item text-wrap">Structure HTML</a><a href="#etape-1" class="dropdown-item text-wrap">Étape 1</a><a href="#suppression-d-un-tag" class="dropdown-item text-wrap">Suppression d&#39;un tag</a><a href="#etape-2" class="dropdown-item text-wrap">Étape 2</a><a href="#un-peu-de-deco" class="dropdown-item text-wrap">Un peu de déco</a><a href="#etape-3" class="dropdown-item text-wrap">Étape 3</a><a href="#etape-4" class="dropdown-item text-wrap">Étape 4</a><a href="#optimisation" class="dropdown-item text-wrap">Optimisation</a><a href="#etape-5" class="dropdown-item text-wrap">Étape 5</a><a href="#etape-6" class="dropdown-item text-wrap">Étape 6</a><a href="#etape-7" class="dropdown-item text-wrap">Étape 7</a><a href="#optimisation-bis" class="dropdown-item text-wrap">Optimisation (bis)</a><a href="#etape-8" class="dropdown-item text-wrap">Étape 8</a><a href="#etape-9" class="dropdown-item text-wrap">Étape 9</a></div>
     </nav>
         
       </div>
@@ -203,14 +203,14 @@
           
           <div class="mt-4">
           
-<h2>Préambule</h2>
+<h2 id="preambule">Préambule</h2>
 <p>Dans cet article, nous allons voir comment réaliser des tags accessibles. Vous savez, ces boutons que nous utilisons pour taguer du contenu, pour afficher une liste de destinataires...</p>
 
-<h2>Rendu final</h2>
+<h2 id="rendu-final">Rendu final</h2>
 <p>Voici un exemple de rendu graphique :</p>
 <img src="exemples/tag.png" alt="Capture d'écran de plusieurs tags dans une page web">
 
-<h2 class="mt-3">Structure HTML</h2>
+<h2 id="structure-html" class="mt-3">Structure HTML</h2>
 <p>Les tags sont habituellement placés dans une liste <abbr>HTML</abbr>. Ainsi, un utilisateur qui navigue à l'aide d'un lecteur d'écran entendra directement le nombre de tags affichés : "Liste de x éléments".
 </p>
 
@@ -225,11 +225,11 @@
 </code></pre>
 
 <div class="exemple">
-  <h3>Étape 1</h3>
+  <h3 id="etape-1">Étape 1</h3>
   <a target="_blank" title="Ouvrir l'étape 1 (nouvelle fenêtre)" href="exemples/1/"><img src="exemples/step1.png" alt="Ouvrir l'étape 1 (nouvelle fenêtre)"></a>
 </div>
 
-<h2 class="mt-3">Suppression d'un tag</h2>
+<h2 id="suppression-d-un-tag" class="mt-3">Suppression d'un tag</h2>
 <p>Un tag doit pouvoir être supprimé. Nous allons ajouter un bouton "Supprimer" sur chaque élément de notre liste. Pour les utilisateurs qui ne voient pas l'écran et qui naviguent à l'aide d'un lecteur d'écran, un simple bouton "Supprimer" n'est pas suffisant. Nous allons ajouter le nom du tag dans l'intitulé du bouton pour ôter toute ambiguïté. Exemple : "Sony, Retirer Sony de la liste".</p>
 <p>L'utilisation d'un vrai bouton rend cette fonctionnalité accessible au lecteur d’écran, mais également aux personnes qui ne peuvent pas utiliser une souris et qui naviguent à l'aide du clavier en déplaçant le focus (touche <kbd>Tab</kbd>). En effet, un bouton est peut recevoir le focus nativement.</p>
 
@@ -244,13 +244,13 @@
 </code></pre>
 
 <div class="exemple">
-  <h3>Étape 2</h3>
+  <h3 id="etape-2">Étape 2</h3>
   <p><a target="_blank" title="Ouvrir l'étape 2 (nouvelle fenêtre)" href="exemples/2/"><img src="exemples/step2.png" alt="Ouvrir l'étape 2 (nouvelle fenêtre)"></a></p>
 </div>
 
 <p>Et voilà des tags simples et accessibles. Bon OK, ce n'est pas très beau.</p>
 
-<h2>Un peu de déco</h2>
+<h2 id="un-peu-de-deco">Un peu de déco</h2>
 <p>Maintenant que nous avons des tags accessibles, on peut passer à la déco. L'idéal serait de faire ressembler nos tags à la première illustration proposée au début de cet article. Plusieurs solutions sont possibles.</p>
 
 <p>On peut par exemple commencer par remplacer l'intitulé du bouton par un "X" ou un icône en forme de croix.</p>
@@ -262,7 +262,7 @@
 </code></pre>
 
 <div class="exemple">
-  <h3>Étape 3</h3>
+  <h3 id="etape-3">Étape 3</h3>
   <p><a target="_blank" title="Ouvrir l'étape 3 (nouvelle fenêtre)" href="exemples/3/"><img src="exemples/step3.png" alt="Ouvrir l'étape 3 (nouvelle fenêtre)"></a></p>
 </div>
 
@@ -286,11 +286,11 @@ button {
 </code></pre>
 
 <div class="exemple">
-  <h3>Étape 4</h3>
+  <h3 id="etape-4">Étape 4</h3>
   <p><a target="_blank" title="Ouvrir l'étape 4 (nouvelle fenêtre)" href="exemples/4/"><img src="exemples/step4.png" alt="Ouvrir l'étape 4 (nouvelle fenêtre)"></a></p>
 </div>
 
-<h2>Optimisation</h2>
+<h2 id="optimisation">Optimisation</h2>
 
 <p>Cela fonctionne, mais ce n'est pas parfait. Il faut bien viser pour supprimer un tag, car le bouton en forme de croix n'est pas très grand. Ce n'est pas agréable à utiliser et cela risque d'être réellement problématique pour les personnes qui tremblent ou qui ont des difficultés avec la souris.</p>
 
@@ -314,7 +314,7 @@ button {
 </code></pre>
 
 <div class="exemple">
-  <h3>Étape 5</h3>
+  <h3 id="etape-5">Étape 5</h3>
   <p><a target="_blank" title="Ouvrir l'étape 5 (nouvelle fenêtre)" href="exemples/5/"><img src="exemples/step5.png" alt="Ouvrir l'étape 5 (nouvelle fenêtre)"></a></p>
 </div>
 
@@ -328,7 +328,7 @@ button {
 <p>Ainsi au lecteur d'écran, pour chaque tag, on entend son libellé, puis un bouton pour le supprimer.</p>
 
 <div class="exemple">
-  <h3>Étape 6</h3>
+  <h3 id="etape-6">Étape 6</h3>
   <p><a target="_blank" title="Ouvrir l'étape 6 (nouvelle fenêtre)" href="exemples/6/"><img src="exemples/step6.png" alt="Ouvrir l'étape 6 (nouvelle fenêtre)"></a></p>
 </div>
 
@@ -344,11 +344,11 @@ button {
 </code></pre>
 
 <div class="exemple">
-  <h3>Étape 7</h3>
+  <h3 id="etape-7">Étape 7</h3>
   <p><a target="_blank" title="Ouvrir l'étape 7 (nouvelle fenêtre)" href="exemples/7/"><img src="exemples/step7.png" alt="ouvrir l'étape 7 (nouvelle fenêtre)"></a></p>
 </div>
 
-<h2>Optimisation (bis)</h2>
+<h2 id="optimisation-bis">Optimisation (bis)</h2>
 <p>Nous avons des tags accessibles, par contre lorsqu'on supprime un tag à l’aide du clavier, le focus reste positionné sur le tag qui disparaît. La position du focus n'est donc plus visible après suppression. Cela se corrige facilement avec un peu de JavaScript. Il suffit de repositionner le focus sur l'élément précédent par exemple&nbsp;:</p>
 
 <pre><code class="javascript">
@@ -359,7 +359,7 @@ button {
 </code></pre>
 
 <div class="exemple">
-  <h3>Étape 8</h3>
+  <h3 id="etape-8">Étape 8</h3>
   <p><a target="_blank" title="Ouvrir l'étape 8 (nouvelle fenêtre)" href="exemples/8/"><img src="exemples/step8.png" alt="Ouvrir l'étape 8 (nouvelle fenêtre)"></a></p>
 </div>
 
@@ -375,7 +375,7 @@ button {
 </code></pre>
 
 <div class="exemple">
-  <h3>Étape 9</h3>
+  <h3 id="etape-9">Étape 9</h3>
   <p><a target="_blank" title="Ouvrir l'étape 9 (nouvelle fenêtre)" href="exemples/9/"><img src="exemples/step9.png" alt="Ouvrir l'étape 9 (nouvelle fenêtre)"></a></p>
 </div>
 
@@ -389,27 +389,27 @@ button {
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Sur cette page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Préambule</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Rendu final</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Structure HTML</a>
+            <a href="#preambule" class="nav-link text-muted">Préambule</a></li><li class="nav-item position-relative">
+            <a href="#rendu-final" class="nav-link text-muted">Rendu final</a></li><li class="nav-item position-relative">
+            <a href="#structure-html" class="nav-link text-muted">Structure HTML</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Étape 1</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Suppression d&#39;un tag</a>
+            <a href="#etape-1" class="nav-link text-muted">Étape 1</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#suppression-d-un-tag" class="nav-link text-muted">Suppression d&#39;un tag</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Étape 2</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Un peu de déco</a>
+            <a href="#etape-2" class="nav-link text-muted">Étape 2</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#un-peu-de-deco" class="nav-link text-muted">Un peu de déco</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Étape 3</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Étape 4</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Optimisation</a>
+            <a href="#etape-3" class="nav-link text-muted">Étape 3</a></li><li class="nav-item position-relative">
+            <a href="#etape-4" class="nav-link text-muted">Étape 4</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#optimisation" class="nav-link text-muted">Optimisation</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Étape 5</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Étape 6</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Étape 7</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Optimisation (bis)</a>
+            <a href="#etape-5" class="nav-link text-muted">Étape 5</a></li><li class="nav-item position-relative">
+            <a href="#etape-6" class="nav-link text-muted">Étape 6</a></li><li class="nav-item position-relative">
+            <a href="#etape-7" class="nav-link text-muted">Étape 7</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#optimisation-bis" class="nav-link text-muted">Optimisation (bis)</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Étape 8</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Étape 9</a></li></ul></li>
+            <a href="#etape-8" class="nav-link text-muted">Étape 8</a></li><li class="nav-item position-relative">
+            <a href="#etape-9" class="nav-link text-muted">Étape 9</a></li></ul></li>
       </ul>
     </nav>
             </div>

@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Introduction</a><a href="#" class="dropdown-item text-wrap">Contenu généré par une action utilisateur avec rechargement complet de page</a><a href="#" class="dropdown-item text-wrap">Contenu dynamique généré par une action utilisateur sans rechargement de page (asynchrone)</a><a href="#" class="dropdown-item text-wrap">Gestion de l’ajout de contenu</a><a href="#" class="dropdown-item text-wrap">Gestion de la disparition de contenu</a><a href="#" class="dropdown-item text-wrap">Avertir l&#39;utilisateur de la modification du contenu</a><a href="#" class="dropdown-item text-wrap">Cas de l&#39;attribut tabindex</a><a href="#" class="dropdown-item text-wrap">Cas particulier d’une modification dynamique d’une iframe</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#contenu-genere-par-une-action-utilisateur-avec-rechargement-complet-de-page" class="dropdown-item text-wrap">Contenu généré par une action utilisateur avec rechargement complet de page</a><a href="#contenu-dynamique-genere-par-une-action-utilisateur-sans-rechargement-de-page-asynchrone" class="dropdown-item text-wrap">Contenu dynamique généré par une action utilisateur sans rechargement de page (asynchrone)</a><a href="#gestion-de-l-ajout-de-contenu" class="dropdown-item text-wrap">Gestion de l’ajout de contenu</a><a href="#gestion-de-la-disparition-de-contenus" class="dropdown-item text-wrap">Gestion de la disparition de contenu</a><a href="#avertir-l-utilisateur-de-la-modification-du-contenu" class="dropdown-item text-wrap">Avertir l&#39;utilisateur de la modification du contenu</a><a href="#cas-de-l-attribut-tabindex" class="dropdown-item text-wrap">Cas de l&#39;attribut tabindex</a><a href="#cas-particulier-d-une-modification-dynamique-d-une-iframe" class="dropdown-item text-wrap">Cas particulier d’une modification dynamique d’une iframe</a></div>
     </nav>
         
       </div>
@@ -203,7 +203,7 @@
           
           <div class="mt-4">
           
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 <p>La gestion du focus dans des applications riches est complexe. Plusieurs cas se présentent&nbsp;: </p>
 <ul>
 	<li>Apparition/disparition de contenu généré par une action utilisateur avec rechargement de page</li>
@@ -211,7 +211,7 @@
 	<li>Cas particulier&nbsp;: les <code>iframes</code> dynamiques </li>
 </ul>
 
-<h2>Contenu généré par une action utilisateur avec rechargement complet de page</h2>
+<h2 id="contenu-genere-par-une-action-utilisateur-avec-rechargement-complet-de-page">Contenu généré par une action utilisateur avec rechargement complet de page</h2>
 <p>Ce cas concerne les situations où une action utilisateur entraîne le rechargement complet de la page pour modifier une partie du contenu. Bien que cela puisse sembler simple, cette méthode présente plusieurs inconvénients, notamment la perte de contexte et une expérience moins fluide.</p>
 
 <p>S’il n’y a aucun moyen de faire du chargement asynchrone, il faut au moins&nbsp;:</p>
@@ -221,15 +221,15 @@
 <li>S’assurer que le parcours du focus reste logique et séquentiel après l'apparition ou la disparition du contenu.</li>
 </ol>
 
-<h2>Contenu dynamique généré par une action utilisateur sans rechargement de page (asynchrone)</h2>
+<h2 id="contenu-dynamique-genere-par-une-action-utilisateur-sans-rechargement-de-page-asynchrone">Contenu dynamique généré par une action utilisateur sans rechargement de page (asynchrone)</h2>
 <p>Ce cas est le plus courant : seul le DOM est modifié par addition ou suppression du contenu lors d’une action utilisateur sans recharger la page entière (par exemple, affichage des résultats d’un moteur de recherche, apparition d’une modale).</p>
-<h3>Gestion de l’ajout de contenu</h3>
+<h3 id="gestion-de-l-ajout-de-contenu">Gestion de l’ajout de contenu</h3>
 <ol>
 <li>Prévenir l’utilisateur de l’apparition de contenu (par exemple, pour un sous-menu à déplier, on peut ajouter un texte «&nbsp;déplier&nbsp;» et mettre une propriété <code>aria-expanded</code> à "true"). Si ce contenu est susceptible de disparaître (popin, par exemple), garder en mémoire l’élément déclenchant l’apparition pour lui redonner le focus lors de la disparition.</li>
 <li>Bonne pratique : insérer le nouveau contenu juste après l’élément déclencheur dans le code source (exemple&nbsp;: menu dépliant),</li>
 <li>Déplacer le focus sur un élément pertinent du nouveau contenu (le container, un titre, un lien, un bouton…).</li>
 </ol>
-<h3>Gestion de la disparition de contenu</h3>
+<h3 id="gestion-de-la-disparition-de-contenus">Gestion de la disparition de contenu</h3>
 <ol>
 <li>Prévenir, si besoin, l’utilisateur avant qu’il ne déclenche cette disparition,</li>
 <li>Redonner le focus à l’élément déclencheur ou, si c'est impossible, juste avant le contenu disparu. Par exemple, à la fermeture d’une boîte de dialogue, le focus doit être repositionné sur l’élément qui a déclenché l’ouverture (bouton).</li>
@@ -237,7 +237,7 @@
 <p>
 <strong>Dans tous les cas, s’assurer que le parcours du focus est demeuré logique et séquentiel après apparition/disparition de contenu.</strong>
 </p>
-<h3>Avertir l'utilisateur de la modification du contenu</h3>
+<h3 id="avertir-l-utilisateur-de-la-modification-du-contenu">Avertir l'utilisateur de la modification du contenu</h3>
 
 <p>C'est une précaution à prendre pour tout utilisateur, et en particulier aux personnes déficientes visuelles, cognitives ou avec un trouble de l’attention. </p>
 <p>L'utilisateur doit pouvoir repérer l’apparition ou la disparition de contenu et d’interagir avec celui-ci, si besoin. <br />Il faut donc prévenir l’utilisateur, et pour cela, il existe plusieurs solutions&nbsp;:</p>
@@ -247,7 +247,7 @@
 
 <p>Voir <a href="../menu-deroulant/">l’exemple de menu déroulant</a> pour la mise en pratique de l’attribut <code>aria-expanded</code>.</p>
 
-<h3>Cas de l'attribut <code>tabindex</code></h3>
+<h3 id="cas-de-l-attribut-tabindex">Cas de l'attribut <code>tabindex</code></h3>
 <p>Il faut, autant que possible, ne pas redéfinir l'ordre de lecture en utilisant des attributs <code>tabindex</code>.</p>
 <p>
 <p>Si l’élément auquel vous transférez le focus n’est pas un élément interactif (titre, liste, texte, etc.), vous devrez utiliser l’une de ces deux méthodes&nbsp;:</p>
@@ -255,7 +255,7 @@
 <li><code>tabindex="-1"</code>&nbsp;: pour interdire à un élément de recevoir le focus via la touche <kbd>tab</kbd> et l’autoriser à recevoir le focus via JavaScript (<a href="https://developer.mozilla.org/fr/docs/Web/API/HTMLElement/focus">méthode JavaScript focus()</a>).</li>
 <li><code>tabindex="0"</code>&nbsp;: pour rendre focusable un élément non-nativement focusable via la touche <kbd>tab</kbd> et via JavaScript.</li>
 </ul>	  
-<h2>Cas particulier d’une modification dynamique d’une <code>iframe</code></h2>
+<h2 id="cas-particulier-d-une-modification-dynamique-d-une-iframe">Cas particulier d’une modification dynamique d’une <code>iframe</code></h2>
 <p>Lorsqu’une <code>iframe</code> est mise à jour dynamiquement par une action utilisateur, il faut&nbsp;:</p>
 <ul>
 <li>Mettre à jour l’attribut <code>title</code> pour indiquer la modification à l’utilisateur. </li>
@@ -271,15 +271,15 @@
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Sur cette page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Contenu généré par une action utilisateur avec rechargement complet de page</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Contenu dynamique généré par une action utilisateur sans rechargement de page (asynchrone)</a>
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#contenu-genere-par-une-action-utilisateur-avec-rechargement-complet-de-page" class="nav-link text-muted">Contenu généré par une action utilisateur avec rechargement complet de page</a></li><li class="nav-item position-relative">
+            <a href="#contenu-dynamique-genere-par-une-action-utilisateur-sans-rechargement-de-page-asynchrone" class="nav-link text-muted">Contenu dynamique généré par une action utilisateur sans rechargement de page (asynchrone)</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Gestion de l’ajout de contenu</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Gestion de la disparition de contenu</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Avertir l&#39;utilisateur de la modification du contenu</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Cas de l&#39;attribut tabindex</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Cas particulier d’une modification dynamique d’une iframe</a></li>
+            <a href="#gestion-de-l-ajout-de-contenu" class="nav-link text-muted">Gestion de l’ajout de contenu</a></li><li class="nav-item position-relative">
+            <a href="#gestion-de-la-disparition-de-contenus" class="nav-link text-muted">Gestion de la disparition de contenu</a></li><li class="nav-item position-relative">
+            <a href="#avertir-l-utilisateur-de-la-modification-du-contenu" class="nav-link text-muted">Avertir l&#39;utilisateur de la modification du contenu</a></li><li class="nav-item position-relative">
+            <a href="#cas-de-l-attribut-tabindex" class="nav-link text-muted">Cas de l&#39;attribut tabindex</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#cas-particulier-d-une-modification-dynamique-d-une-iframe" class="nav-link text-muted">Cas particulier d’une modification dynamique d’une iframe</a></li>
       </ul>
     </nav>
             </div>

@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Introduction</a><a href="#" class="dropdown-item text-wrap">Caution</a><a href="#" class="dropdown-item text-wrap">Implementation</a><a href="#" class="dropdown-item text-wrap">HTML code</a><a href="#" class="dropdown-item text-wrap">Interactions</a><a href="#" class="dropdown-item text-wrap">Examples</a><a href="#" class="dropdown-item text-wrap">Links</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#caution" class="dropdown-item text-wrap">Caution</a><a href="#implementation" class="dropdown-item text-wrap">Implementation</a><a href="#html-code" class="dropdown-item text-wrap">HTML code</a><a href="#interactions" class="dropdown-item text-wrap">Interactions</a><a href="#examples" class="dropdown-item text-wrap">Examples</a><a href="#links" class="dropdown-item text-wrap">Links</a></div>
     </nav>
         
       </div>
@@ -203,19 +203,19 @@
           
           <div class="mt-4">
           
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 
 <p><abbr>ARIA</abbr> provides a large number of components that can be used in rich interfaces (tab, accordion, slider, listbox...). In this example, we will look into the listbox component.
 A listbox is a component that allows the user to select one or more items from a list.
 The items of a listbox are static, a listbox is not intended to receive interactive items (such as links, buttons…), however it can contain images unlike the <code>select</code>.</p>
 <p>More info: <a href="https://w3c.github.io/aria-practices/#Listbox"><abbr>WAI-ARIA</abbr> Authoring Practices</a>.</p>
 
-<h2>Caution</h2>
+<h2 id="caution">Caution</h2>
 <p>Although improvements have been made, support for <abbr>ARIA</abbr> is still partial for all screen readers. Its use should be conditioned by compatibility tests on the target environments (browser/screen reader combinations).</p>
 
-<h2>Implementation</h2>
+<h2 id="implementation">Implementation</h2>
 
-<h3><abbr title="Hypertext Markup Language">HTML</abbr> code</h3>
+<h3 id="html-code"><abbr title="Hypertext Markup Language">HTML</abbr> code</h3>
 <p>To create a listbox, just apply the role <code>listbox</code> to a parent container. Then apply the <code>option</code> role to the list items. We must make it focusable for users who navigate using the keyboard (adding the <code>tabindex="0"</code> attribute) or adding the <code>aria-label</code> or <code>aria-labelledby</code> label for people using a screen reader.</p>
 
 <pre><code class="html">
@@ -229,7 +229,7 @@ The items of a listbox are static, a listbox is not intended to receive interact
 
 <p>Note that the <code>ul</code> and <code>li</code> tags could be replaced by simple <code>div</code> tags, their semantics are overloaded by the <abbr>ARIA</abbr> roles.</p>
 
-<h3>Interactions</h3>
+<h3 id="interactions">Interactions</h3>
 <p>To stick with the pattern of the <abbr>ARIA</abbr> listbox (<a href="https://w3c.github.io/aria-practices/#Listbox"><abbr>WAI-ARIA</abbr> Authoring Practices - listbox</a>), we must handle some interactions using JavaScript.</p>
 
 <p>Keyboard interaction:</p>
@@ -240,10 +240,10 @@ The items of a listbox are static, a listbox is not intended to receive interact
 
 <p>For multiple selection lists: <kbd>shift</kbd> or <kbd>control</kbd> + <kbd>Up</kbd> and <kbd>Down</kbd> arrows, space bar.</p>
 
-<h3>Examples</h3>
+<h3 id="examples">Examples</h3>
 <p>The W3C provides <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#examples-7">several functional examples</a>.</p>
 
-<h2>Links</h2>
+<h2 id="links">Links</h2>
 More information on <abbr>ARIA</abbr> and listbox:
 <ul>
   <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/"><abbr>WAI</abbr>-<abbr>ARIA</abbr> Authoring Practices Guide: listbox</a></li>
@@ -259,14 +259,14 @@ More information on <abbr>ARIA</abbr> and listbox:
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">On this page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Caution</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Implementation</a>
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#caution" class="nav-link text-muted">Caution</a></li><li class="nav-item position-relative">
+            <a href="#implementation" class="nav-link text-muted">Implementation</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">HTML code</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Interactions</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Examples</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Links</a></li>
+            <a href="#html-code" class="nav-link text-muted">HTML code</a></li><li class="nav-item position-relative">
+            <a href="#interactions" class="nav-link text-muted">Interactions</a></li><li class="nav-item position-relative">
+            <a href="#examples" class="nav-link text-muted">Examples</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#links" class="nav-link text-muted">Links</a></li>
       </ul>
     </nav>
             </div>

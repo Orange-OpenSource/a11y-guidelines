@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Introduction</a><a href="#" class="dropdown-item text-wrap">ARIA patterns</a><a href="#" class="dropdown-item text-wrap">Example</a><a href="#" class="dropdown-item text-wrap">Implementation</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#aria-patterns" class="dropdown-item text-wrap">ARIA patterns</a><a href="#example" class="dropdown-item text-wrap">Example</a><a href="#implementation" class="dropdown-item text-wrap">Implementation</a></div>
     </nav>
         
       </div>
@@ -203,12 +203,12 @@
           
           <div class="mt-4">
           
-<h1>Listbox and keyboard navigation</h1>
+<h1 id="listbox-and-keyboard-navigation">Listbox and keyboard navigation</h1>
 
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 <p>For this article, we start from <a href="../listbox-with-checkboxes/">the example of the listbox with checkboxes</a>. The objective is to improve keyboard navigation in order to get close to the W3C / WAI guidelines.</p>
 
-<h2><abbr title="Accessible Rich Internet Applications">ARIA</abbr> patterns</h2>
+<h2 id="aria-patterns"><abbr title="Accessible Rich Internet Applications">ARIA</abbr> patterns</h2>
 <p>The W3C maintains online specifications that describe how <abbr>ARIA</abbr> components should behave: <a href="https://www.w3.org/WAI/ARIA/apg/patterns/"><abbr>WAI-ARIA</abbr> Authoring Practices 1.1</a>.</p>
 <p>The <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/keyboardinteraction">specifications for the listbox</a> tell us for example that:</p>
 <ul>
@@ -220,7 +220,7 @@
     <li>The <kbd>Home</kbd> and <kbd>End</kbd> keys must be able to respectively select the first and the last item of the list.</li>
 </ul>
 
-<h2>Example</h2>
+<h2 id="example">Example</h2>
 <div class="row">
   <ul role="listbox" tabindex="0" class="col-md-8">
       <li tabindex="-1" role="option" aria-checked="false">
@@ -326,7 +326,7 @@
   </ul>
 </div>
 
-<h2>Implementation</h2>
+<h2 id="implementation">Implementation</h2>
 <p>The functionality to automatically select the item by typing the first letters is not easy to implement. The following example uses <abbr title="XML Path Language">XPath</abbr>.</p>
 <p>The first thing to do is listen to the keyboard once the focus is on the list. Depending on the key, it performs an action (selecting an item, moving the selected item…).</p>
 
@@ -403,10 +403,10 @@ default:  // Search item starts with
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">On this page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">ARIA patterns</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Example</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Implementation</a></li>
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#aria-patterns" class="nav-link text-muted">ARIA patterns</a></li><li class="nav-item position-relative">
+            <a href="#example" class="nav-link text-muted">Example</a></li><li class="nav-item position-relative">
+            <a href="#implementation" class="nav-link text-muted">Implementation</a></li>
       </ul>
     </nav>
             </div>

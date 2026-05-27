@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Preamble</a><a href="#" class="dropdown-item text-wrap">Final design</a><a href="#" class="dropdown-item text-wrap">HTML structure</a><a href="#" class="dropdown-item text-wrap">Step 1</a><a href="#" class="dropdown-item text-wrap">Removing a tag</a><a href="#" class="dropdown-item text-wrap">Step 2</a><a href="#" class="dropdown-item text-wrap">Let&#39;s decorate</a><a href="#" class="dropdown-item text-wrap">Step 3</a><a href="#" class="dropdown-item text-wrap">Step 4</a><a href="#" class="dropdown-item text-wrap">Optimisation</a><a href="#" class="dropdown-item text-wrap">Step 5</a><a href="#" class="dropdown-item text-wrap">Step 6</a><a href="#" class="dropdown-item text-wrap">Step 7</a><a href="#" class="dropdown-item text-wrap">Optimisation (again)</a><a href="#" class="dropdown-item text-wrap">Step 8</a><a href="#" class="dropdown-item text-wrap">Step 9</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#preamble" class="dropdown-item text-wrap">Preamble</a><a href="#final-design" class="dropdown-item text-wrap">Final design</a><a href="#html-structure" class="dropdown-item text-wrap">HTML structure</a><a href="#step-1" class="dropdown-item text-wrap">Step 1</a><a href="#removing-a-tag" class="dropdown-item text-wrap">Removing a tag</a><a href="#step-2" class="dropdown-item text-wrap">Step 2</a><a href="#let-s-decorate" class="dropdown-item text-wrap">Let&#39;s decorate</a><a href="#step-3" class="dropdown-item text-wrap">Step 3</a><a href="#step-4" class="dropdown-item text-wrap">Step 4</a><a href="#optimisation" class="dropdown-item text-wrap">Optimisation</a><a href="#step-5" class="dropdown-item text-wrap">Step 5</a><a href="#step-6" class="dropdown-item text-wrap">Step 6</a><a href="#step-7" class="dropdown-item text-wrap">Step 7</a><a href="#optimisation-again" class="dropdown-item text-wrap">Optimisation (again)</a><a href="#step-8" class="dropdown-item text-wrap">Step 8</a><a href="#step-9" class="dropdown-item text-wrap">Step 9</a></div>
     </nav>
         
       </div>
@@ -203,14 +203,14 @@
           
           <div class="mt-4">
           
-<h2>Preamble</h2>
+<h2 id="preamble">Preamble</h2>
 <p>In this article, we will create accessible tags — you know, these buttons we use to categorize content or add a list of recipients, etc.</p>
 
-<h2>Final design</h2>
+<h2 id="final-design">Final design</h2>
 <p>Here is an example of the expected design:</p>
 <img src="examples/tag.png" alt="Screenshot of several tags in a web page">
 
-<h2 class="mt-3"><abbr>HTML</abbr> structure</h2>
+<h2 id="html-structure" class="mt-3"><abbr>HTML</abbr> structure</h2>
 <p>Tags usually come in an <abbr>HTML</abbr> list. Thus, a user browsing with a screen reader will directly hear the number of tags on display: 'List of X elements...'.
 </p>
 
@@ -225,11 +225,11 @@
 </code></pre>
 
 <div class="exemple">
-  <h3>Step 1</h3>
+  <h3 id="step-1">Step 1</h3>
   <a target="_blank" title="Open step 1" href="examples/1/"><img src="examples/step1.png" alt="Open step 1 (new window)"></a>
 </div>
 
-<h2 class="mt-3">Removing a tag</h2>
+<h2 id="removing-a-tag" class="mt-3">Removing a tag</h2>
 <p>One must be able to remove a tag. We will add a 'Remove' button on each element in our list. For users who cannot see the screen and browse with a screen reader, a plain 'Remove' button is not sufficient. We will add the tag name to the button's label to disambiguate, i.e., 'Remove Sony from the list.'</p>
 <p>The use of a real button makes this functionality accessible to the screen reader, but also to people who cannot use a mouse and rely on a keyboard to move the focus (with the <kbd>Tab</kbd> key). A button can indeed be focused naturally.</p>
 
@@ -244,13 +244,13 @@
 </code></pre>
 
 <div class="exemple">
-  <h3>Step 2</h3>
+  <h3 id="step-2">Step 2</h3>
   <p><a target="_blank" title="Open step 2" href="examples/2/"><img src="examples/step2.png" alt="Open step 2 (new window)"></a></p>
 </div>
 
 <p>Here we present simple and accessible tags. Admittedly, their appearance is not particularly appealing at this stage.</p>
 
-<h2>Let's decorate</h2>
+<h2 id="let-s-decorate">Let's decorate</h2>
 <p>Now that our tags are accessible, we can decorate them. The ideal solution would be to make them look like the first illustration at the beginning of this article. We have several solutions.</p>
 
 <p>For example, we can start by replacing the button's text by an 'X' or a cross-shaped icon.</p>
@@ -262,7 +262,7 @@
 </code></pre>
 
 <div class="exemple">
-  <h3>Step 3</h3>
+  <h3 id="step-3">Step 3</h3>
   <p><a target="_blank" title="Open step 3" href="examples/3/"><img src="examples/step3.png" alt="Open step 3 (new window)"></a></p>
 </div>
 
@@ -286,11 +286,11 @@ button {
 </code></pre>
 
 <div class="exemple">
-  <h3>Step 4</h3>
+  <h3 id="step-4">Step 4</h3>
   <p><a target="_blank" title="Open step 4" href="examples/4/"><img src="examples/step4.png" alt="Open step 4 (new window)"></a></p>
 </div>
 
-<h2>Optimisation</h2>
+<h2 id="optimisation">Optimisation</h2>
 
 <p>It works, but it's not perfect. You have to aim precisely to remove a tag because the cross-shaped button is a bit small. It's not very user-friendly and could be a problem for people with a trembling hand or those who have difficulties using a mouse.</p>
 
@@ -314,7 +314,7 @@ button {
 </code></pre>
 
 <div class="exemple">
-  <h3>Step 5</h3>
+  <h3 id="step-5">Step 5</h3>
   <p><a target="_blank" title="Open step 5" href="examples/5/"><img src="examples/step5.png" alt="Open step 5 (new window)"></a></p>
 </div>
 
@@ -328,7 +328,7 @@ button {
 <p>With a screen reader, we now hear each tag's label, then a button to remove it.</p>
 
 <div class="exemple">
-  <h3>Step 6</h3>
+  <h3 id="step-6">Step 6</h3>
   <p><a target="_blank" title="Open step 6" href="examples/6/"><img src="examples/step6.png" alt="Open step 6 (new window)"></a></p>
 </div>
 
@@ -344,11 +344,11 @@ button {
 </code></pre>
 
 <div class="exemple">
-  <h3>Step 7</h3>
+  <h3 id="step-7">Step 7</h3>
   <p><a target="_blank" title="Open step 7" href="examples/7/"><img src="examples/step7.png" alt="Open step 7 (new window)"></a></p>
 </div>
 
-<h2>Optimisation (again)</h2>
+<h2 id="optimisation-again">Optimisation (again)</h2>
 <p>Our tags are accessible. However, when we remove one tag with the keyboard, the focus stays on the vanished tag; thus we don't know where the focus is. This can be easily fixed with a bit of JavaScript. We can focus on the previous element, for example:</p>
 
 <pre><code class="javascript">
@@ -359,7 +359,7 @@ button {
 </code></pre>
 
 <div class="exemple">
-  <h3>Step 8</h3>
+  <h3 id="step-8">Step 8</h3>
   <p><a target="_blank" title="Open step 8" href="examples/8/"><img src="examples/step8.png" alt="Open step 8 (new window)"></a></p>
 </div>
 
@@ -375,7 +375,7 @@ button {
 </code></pre>
 
 <div class="exemple">
-  <h3>Step 9</h3>
+  <h3 id="step-9">Step 9</h3>
   <p><a target="_blank" title="Open step 9" href="examples/9/"><img src="examples/step9.png" alt="Open step 9 (new window)"></a></p>
 </div>
 
@@ -389,27 +389,27 @@ button {
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">On this page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Preamble</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Final design</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">HTML structure</a>
+            <a href="#preamble" class="nav-link text-muted">Preamble</a></li><li class="nav-item position-relative">
+            <a href="#final-design" class="nav-link text-muted">Final design</a></li><li class="nav-item position-relative">
+            <a href="#html-structure" class="nav-link text-muted">HTML structure</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Step 1</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Removing a tag</a>
+            <a href="#step-1" class="nav-link text-muted">Step 1</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#removing-a-tag" class="nav-link text-muted">Removing a tag</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Step 2</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Let&#39;s decorate</a>
+            <a href="#step-2" class="nav-link text-muted">Step 2</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#let-s-decorate" class="nav-link text-muted">Let&#39;s decorate</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Step 3</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Step 4</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Optimisation</a>
+            <a href="#step-3" class="nav-link text-muted">Step 3</a></li><li class="nav-item position-relative">
+            <a href="#step-4" class="nav-link text-muted">Step 4</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#optimisation" class="nav-link text-muted">Optimisation</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Step 5</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Step 6</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Step 7</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Optimisation (again)</a>
+            <a href="#step-5" class="nav-link text-muted">Step 5</a></li><li class="nav-item position-relative">
+            <a href="#step-6" class="nav-link text-muted">Step 6</a></li><li class="nav-item position-relative">
+            <a href="#step-7" class="nav-link text-muted">Step 7</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#optimisation-again" class="nav-link text-muted">Optimisation (again)</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Step 8</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Step 9</a></li></ul></li>
+            <a href="#step-8" class="nav-link text-muted">Step 8</a></li><li class="nav-item position-relative">
+            <a href="#step-9" class="nav-link text-muted">Step 9</a></li></ul></li>
       </ul>
     </nav>
             </div>

@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Introduction</a><a href="#" class="dropdown-item text-wrap">Mise en garde</a><a href="#" class="dropdown-item text-wrap">Mise en place</a><a href="#" class="dropdown-item text-wrap">Code HTML</a><a href="#" class="dropdown-item text-wrap">Interactions</a><a href="#" class="dropdown-item text-wrap">Exemple</a><a href="#email-list" class="dropdown-item text-wrap">Liste des emails</a><a href="#" class="dropdown-item text-wrap">Place aux tests</a><a href="#" class="dropdown-item text-wrap">Exemple webmail</a><a href="#" class="dropdown-item text-wrap">Liens</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#mise-en-garde" class="dropdown-item text-wrap">Mise en garde</a><a href="#mise-en-place" class="dropdown-item text-wrap">Mise en place</a><a href="#code-html" class="dropdown-item text-wrap">Code HTML</a><a href="#interactions" class="dropdown-item text-wrap">Interactions</a><a href="#exemple" class="dropdown-item text-wrap">Exemple</a><a href="#liste-des-emails" class="dropdown-item text-wrap">Liste des emails</a><a href="#place-aux-tests" class="dropdown-item text-wrap">Place aux tests</a><a href="#example-webmail" class="dropdown-item text-wrap">Exemple webmail</a><a href="#liens" class="dropdown-item text-wrap">Liens</a></div>
     </nav>
         
       </div>
@@ -204,15 +204,15 @@
           <div class="mt-4">
           
 
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 <p>Dans cet exemple, nous repartons de <a href="../listbox/">l’exemple sur les <i lang="en">listbox</i> ou zone de liste</a> auquel nous ajoutons des cases à cocher. Nous obtiendrons un composant qui nous permettra de sélectionner un élément parmi une liste de choix, comme une <i lang="en">listbox</i> classique, mais qui permettra également de cocher certains éléments. Un composant qu’on pourrait typiquement trouver dans un webmail.</p>
 
-<h2>Mise en garde</h2>
+<h2 id="mise-en-garde">Mise en garde</h2>
 <p>Bien que des progrès soient réalisés à chaque nouvelle version, le support d’<abbr>ARIA</abbr> est encore partiel pour l’ensemble des lecteurs d’écran. Son utilisation doit être conditionnée par des tests de compatibilité sur l’environnement cible (couple navigateur/lecteur d’écran).</p>
 
-<h2>Mise en place</h2>
+<h2 id="mise-en-place">Mise en place</h2>
 
-<h3>Code <abbr>HTML</abbr></h3>
+<h3 id="code-html">Code <abbr>HTML</abbr></h3>
 <p>Le code reprend celui de l’exemple sur les <i lang="en">listbox</i> auquel nous ajoutons l’information concernant l’état coché / non coché. Pour cela nous utilisons l’attribut <code>aria-checked</code>.</p>
 
 <pre><code class="html">
@@ -251,7 +251,7 @@ Dans ce cas, il faut ajouter également une balise <code>label</code>.</p>
 
 <p>À noter que la balise <code>label</code> reste vide ici. En effet dans ce composant, on ne souhaite pas que la case à cocher soit sélectionnée si on clique sur le texte affiché dans la liste.</p>
 
-<h3>Interactions</h3>
+<h3 id="interactions">Interactions</h3>
 <p>Pour gérer l’interaction à la souris, il suffit de modifier la valeur de l’attribut <code>aria-checked</code> lorsqu’une case à cocher est cliquée.</p>
 
 <pre><code class="js">
@@ -306,9 +306,9 @@ document.querySelectorAll("[type=checkbox]").forEach(checkbox =>{
 });
 </code></pre>
 
-<h2>Exemple</h2>
+<h2 id="exemple">Exemple</h2>
 
-<h3 id="email-list">Liste des emails</h3>
+<h3 id="liste-des-emails">Liste des emails</h3>
 
 <div class="row">
   <ul id="exempleCheckbox" role="listbox" tabindex="0" class="col-md-8 list-group" aria-describedby="email-list">
@@ -339,18 +339,18 @@ document.querySelectorAll("[type=checkbox]").forEach(checkbox =>{
   </ul>
 </div>
 
-<h3>Place aux tests</h3>
+<h3 id="place-aux-tests">Place aux tests</h3>
 
 <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Utilisation à la souris&nbsp;:</strong> on peut sélectionner une option en cliquant sur le texte. On peut cocher ou décocher une option en cliquant sur les cases à cocher.</p>
 <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Utilisation au clavier&nbsp;:</strong> on peut sélectionner une option à l’aide des flèches du clavier haut ou bas. On peut cocher ou décocher une option à l’aide de la barre espace.</p>
 <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Utilisation avec un lecteur d’écran&nbsp;:</strong> mêmes raccourcis clavier (haut, bas et barre espace). Pour chaque élément, le lecteur d’écran nous donne l’information si celui-ci est sélectionné et s’il est coché ou non.</p>
 
 
-<h2>Exemple webmail</h2>
+<h2 id="example-webmail">Exemple webmail</h2>
 <p>Voici une maquette statique qui met en œuvre le composant <i lang="en">listbox</i> de cet exemple et celui de l’exemple sur les <a href="../listbox/"><i lang="en">listbox</i> classiques</a>.</p>
 <a class="btn btn-outline-secondary" target="_blank" href="webmail/">Ouvrir le webmail</a>
 
-<h2>Liens</h2>
+<h2 id="liens">Liens</h2>
 <p>Plus d’infos sur <abbr>ARIA</abbr> et les <i lang="en">listbox</i>&nbsp;:</p>
 <ul>
   <li><a href=ttps://www.w3.org/WAI/ARIA/apg/patterns/listbox/" hreflang="en" lang="en"><abbr>WAI</abbr>-<abbr>ARIA</abbr> Authoring Practices Guide: listbox</a></li>
@@ -366,18 +366,18 @@ document.querySelectorAll("[type=checkbox]").forEach(checkbox =>{
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Sur cette page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Mise en garde</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Mise en place</a>
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#mise-en-garde" class="nav-link text-muted">Mise en garde</a></li><li class="nav-item position-relative">
+            <a href="#mise-en-place" class="nav-link text-muted">Mise en place</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Code HTML</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Interactions</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Exemple</a>
+            <a href="#code-html" class="nav-link text-muted">Code HTML</a></li><li class="nav-item position-relative">
+            <a href="#interactions" class="nav-link text-muted">Interactions</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#exemple" class="nav-link text-muted">Exemple</a>
             <ul><li class="nav-item position-relative">
-            <a href="#email-list" class="nav-link text-muted">Liste des emails</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Place aux tests</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Exemple webmail</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Liens</a></li>
+            <a href="#liste-des-emails" class="nav-link text-muted">Liste des emails</a></li><li class="nav-item position-relative">
+            <a href="#place-aux-tests" class="nav-link text-muted">Place aux tests</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#example-webmail" class="nav-link text-muted">Exemple webmail</a></li><li class="nav-item position-relative">
+            <a href="#liens" class="nav-link text-muted">Liens</a></li>
       </ul>
     </nav>
             </div>

@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Introduction</a><a href="#" class="dropdown-item text-wrap">Dropdown menu</a><a href="#" class="dropdown-item text-wrap">Example</a><a href="#" class="dropdown-item text-wrap">Example code</a><a href="#" class="dropdown-item text-wrap">ARIA attributes</a><a href="#" class="dropdown-item text-wrap">Time to test</a><a href="#" class="dropdown-item text-wrap">Keyboard navigation</a><a href="#" class="dropdown-item text-wrap">Screen reader navigation</a><a href="#" class="dropdown-item text-wrap">Special case of application menus</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#dropdown-menu" class="dropdown-item text-wrap">Dropdown menu</a><a href="#example" class="dropdown-item text-wrap">Example</a><a href="#example-code" class="dropdown-item text-wrap">Example code</a><a href="#aria-attributes" class="dropdown-item text-wrap">ARIA attributes</a><a href="#time-to-test" class="dropdown-item text-wrap">Time to test</a><a href="#keyboard-navigation" class="dropdown-item text-wrap">Keyboard navigation</a><a href="#screen-reader-navigation" class="dropdown-item text-wrap">Screen reader navigation</a><a href="#special-case-of-application-menus" class="dropdown-item text-wrap">Special case of application menus</a></div>
     </nav>
         
       </div>
@@ -203,13 +203,13 @@
           
           <div class="mt-4">
           
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 
 <p>Dropdown menus help organize and display navigation options or actions in a compact, structured way. However, if they are not properly implemented, they create accessibility issues for many users.</p>
 <p>An accessible dropdown menu ensures smooth and intuitive navigation for everyone, while complying with the recommendations of standards (<abbr>WCAG</abbr>, <abbr>RGAA</abbr>, <abbr>EN 301 549</abbr>, etc.).</p>
 <p>In the following examples, we will use the <a href="https://boosted.orange.com/docs/5.1/components/dropdowns/">dropdown menu</a> available in the <a href="https://boosted.orange.com/">Boosted</a> library.<br /> This Bootstrap‑based library makes it possible to quickly design accessible interfaces in Orange brand colors and compliant with WCAG as well as the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/">ARIA combobox design pattern</a></p>
 
-<h2>Dropdown menu</h2>
+<h2 id="dropdown-menu">Dropdown menu</h2>
 <p>To make the dropdown menu accessible, pay particular attention to the following:</p>
 <ul>
 <li>Support mouse and keyboard navigation (navigation with the <kbd>Tab</kbd> key, activation with <kbd>Enter</kbd> or <kbd>Space</kbd>, movement with the arrow keys).</li>
@@ -218,7 +218,7 @@
 <li>Ensure the behavior of the dropdown and item selection is predictable and consistent to avoid confusion.</li>
 </ul>
 
-<h2>Example</h2>
+<h2 id="example">Example</h2>
 <!-- Final menu -->
 <div class="dropdown">
   <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown">
@@ -234,7 +234,7 @@
   </ul>
 </div>
 
-<h3>Example code</h3>
+<h3 id="example-code">Example code</h3>
 
 <!-- Example code 1 -->
 <pre><code class="html">
@@ -253,16 +253,16 @@
 &lt;/div&gt;
 </code></pre>
 
-<h3><abbr>ARIA</abbr> attributes</h3>
+<h3 id="aria-attributes"><abbr>ARIA</abbr> attributes</h3>
 <ul>
 	<li><code>aria-expanded</code>: the <code>aria-expanded</code> attribute with a value of <code>true/false</code> allows assistive technologies to announce the menu state (open or closed).</li>
 	<li><code>aria-current</code>: if the dropdown is used within a navigation menu, consider adding <code>aria-current="page"</code> to the item corresponding to the active page.</li>
 	<li><code>aria-haspopup</code>: the <code>aria-haspopup</code> attribute is reserved for the <code>menu</code> role (see the “Special case of application menus” section). It is therefore not present in this implementation.</li>
 </ul>
 
-<h2>Time to test</h2>
+<h2 id="time-to-test">Time to test</h2>
 
-<h3>Keyboard navigation</h3>
+<h3 id="keyboard-navigation">Keyboard navigation</h3>
  <dl>
    <dt>Move focus to the “My account” button using the <kbd>Tab</kbd> key and activate with the <kbd>Enter</kbd> key.</dt>
    <dd>The menu opens.</dd>
@@ -272,7 +272,7 @@
    <dd>The menu closes. When it closes, focus is automatically returned to the button that opens the menu.</dd>
 </dl>
 
-<h3>Screen reader navigation</h3>
+<h3 id="screen-reader-navigation">Screen reader navigation</h3>
  <dl>
    <dt>Place focus on the “My account” button.</dt>
    <dd>The screen reader indicates that it is a dropdown menu and announces the menu state (open or closed).</dd>
@@ -288,7 +288,7 @@
 <p>Additionally, the ARIA pattern describes the use of an <code>aria-controls</code> attribute, as well as optional extra keyboard interactions: <kbd>Home</kbd>/<kbd>End</kbd>.</p>
 <p>Example: <a href="https://www.w3.org/WAI/ARIA/apg/example-index/disclosure/disclosure-navigation.html">Example Disclosure for Navigation Menus</a></p>
 
-<h2>Special case of application menus</h2>
+<h2 id="special-case-of-application-menus">Special case of application menus</h2>
 
 <p>The ARIA pattern describes “Menu” and “Menubar” components, using the <code>menu</code> and <code>menubar</code> roles.</p>
 <p>Note that this pattern is intended only for building application menus, whose interactions should be similar to menus in desktop applications, for example.</p>
@@ -304,17 +304,17 @@
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">On this page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Dropdown menu</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Example</a>
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#dropdown-menu" class="nav-link text-muted">Dropdown menu</a></li><li class="nav-item position-relative">
+            <a href="#example" class="nav-link text-muted">Example</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Example code</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">ARIA attributes</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Time to test</a>
+            <a href="#example-code" class="nav-link text-muted">Example code</a></li><li class="nav-item position-relative">
+            <a href="#aria-attributes" class="nav-link text-muted">ARIA attributes</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#time-to-test" class="nav-link text-muted">Time to test</a>
             <ul><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Keyboard navigation</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Screen reader navigation</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Special case of application menus</a></li>
+            <a href="#keyboard-navigation" class="nav-link text-muted">Keyboard navigation</a></li><li class="nav-item position-relative">
+            <a href="#screen-reader-navigation" class="nav-link text-muted">Screen reader navigation</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#special-case-of-application-menus" class="nav-link text-muted">Special case of application menus</a></li>
       </ul>
     </nav>
             </div>
