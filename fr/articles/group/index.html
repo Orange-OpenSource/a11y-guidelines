@@ -196,19 +196,19 @@
             
           
           <div class="mt-4">
-          <h2 id="le-role-group" class="h2-focus">Le rôle <code>group</code> <a class="header-anchor" href="#le-role-group" id="heading-227" aria-labelledby="heading-227">#</a></h2>
+          <h2 id="le-role-group" class="h2-focus">Le rôle <code>group</code> <a class="header-anchor" href="#le-role-group" id="heading-364" aria-labelledby="heading-364">#</a></h2>
 <p>C'est l'un des rôles présents dans la spécification ARIA (<a href="https://www.w3.org/TR/wai-aria-1.3/#group">le rôle <code>group</code> dans la spécification ARIA 1.3 (en)</a>). Il fait partie des rôles de structure de document.</p>
-<h3 id="a-quoi-sert-le-role-group">À quoi sert le rôle <code>group</code> ? <a class="header-anchor" href="#a-quoi-sert-le-role-group" id="heading-228" aria-labelledby="heading-228">#</a></h3>
+<h3 id="a-quoi-sert-le-role-group">À quoi sert le rôle <code>group</code> ? <a class="header-anchor" href="#a-quoi-sert-le-role-group" id="heading-365" aria-labelledby="heading-365">#</a></h3>
 <p>Il permet de grouper des éléments de la page qui doivent être traités comme une seule et même entité. En d'autres termes, il s'agit de regrouper des éléments qui partagent la même finalité, la même fonction, ou un but commun.<br>
 C'est un bon moyen de passer l'information de structure et de relation qu'est un groupe aux AT (aide technique) autrement que par un indicateur seulement visuel.</p>
-<h3 id="support-dans-les-at">Support dans les AT <a class="header-anchor" href="#support-dans-les-at" id="heading-229" aria-labelledby="heading-229">#</a></h3>
+<h3 id="support-dans-les-at">Support dans les AT <a class="header-anchor" href="#support-dans-les-at" id="heading-366" aria-labelledby="heading-366">#</a></h3>
 <p>Le support est plutôt bon, exception faite des environnements mobiles (<a href="https://a11ysupport.io/tech/aria/group_role"><code>group</code> support sur A11ysupport (en)</a>). Comme le support reste partiel, il est toujours important de tester les implémentations avec vos environnements navigateurs/AT cibles, comme toujours pour de l'ARIA.</p>
-<h3 id="quand-peut-on-lutiliser">Quand peut-on l'utiliser ? <a class="header-anchor" href="#quand-peut-on-lutiliser" id="heading-230" aria-labelledby="heading-230">#</a></h3>
-<h4 id="pour-des-elements-de-formulaire">Pour des éléments de formulaire <a class="header-anchor" href="#pour-des-elements-de-formulaire" id="heading-231" aria-labelledby="heading-231">#</a></h4>
+<h3 id="quand-peut-on-lutiliser">Quand peut-on l'utiliser ? <a class="header-anchor" href="#quand-peut-on-lutiliser" id="heading-367" aria-labelledby="heading-367">#</a></h3>
+<h4 id="pour-des-elements-de-formulaire">Pour des éléments de formulaire <a class="header-anchor" href="#pour-des-elements-de-formulaire" id="heading-368" aria-labelledby="heading-368">#</a></h4>
 <p>Le rôle <code>group</code> est tout indiqué pour jouer le rôle équivalent de <code>fieldset</code> pour des éléments de formulaire quand on ne peut faire autrement.</p>
-<h4 id="pour-dautres-elements">Pour d'autres éléments <a class="header-anchor" href="#pour-dautres-elements" id="heading-232" aria-labelledby="heading-232">#</a></h4>
+<h4 id="pour-dautres-elements">Pour d'autres éléments <a class="header-anchor" href="#pour-dautres-elements" id="heading-369" aria-labelledby="heading-369">#</a></h4>
 <p>On peut utiliser le rôle <code>group</code> avec n'importe quel groupe d'éléments liés entre eux de façon logique, sémantique.</p>
-<h4 id="exemples">Exemples <a class="header-anchor" href="#exemples" id="heading-233" aria-labelledby="heading-233">#</a></h4>
+<h4 id="exemples">Exemples <a class="header-anchor" href="#exemples" id="heading-370" aria-labelledby="heading-370">#</a></h4>
 <p>Pour un panneau de contrôle de la lecture d'un podcast, il est judicieux de mettre un <code>group</code> autour des boutons de contrôle de la lecture du son, c'est bien un groupe logique identifiable visuellement et donc à identifier pour les AT.</p>
 <pre><code class="language-html">&lt;div role=&quot;group&quot; aria-label=&quot;Contrôleur son du podcast&quot;&gt;
     &lt;button&gt;Lire&lt;/button&gt;
@@ -242,7 +242,7 @@ C'est un bon moyen de passer l'information de structure et de relation qu'est un
   &lt;/ul&gt;
 &lt;/div&gt;
 </code></pre>
-<h3 id="bonnes-pratiques">Bonnes pratiques <a class="header-anchor" href="#bonnes-pratiques" id="heading-234" aria-labelledby="heading-234">#</a></h3>
+<h3 id="bonnes-pratiques">Bonnes pratiques <a class="header-anchor" href="#bonnes-pratiques" id="heading-371" aria-labelledby="heading-371">#</a></h3>
 <ul>
 <li>Il faut nommer via <code>aria-label</code> ou <code>aria-labelledby</code>, lorsque nécessaire à la compréhension, toute balise avec un <code>role=&quot;group&quot;</code>.</li>
 <li>Ne pas utiliser de <code>role=&quot;group&quot;</code> à la place d'un landmark ou de balises de structure de page HTML5.</li>
@@ -250,7 +250,7 @@ C'est un bon moyen de passer l'information de structure et de relation qu'est un
 <li>Si on utilise le rôle <code>group</code>, il est aussi intéressant de donner une indication visuelle également du groupage. À l'instar de la bordure générée par un <code>fieldset</code> autour d'éléments de formulaire mais on peut imaginer d'autres indices visuels.</li>
 <li>On peut imbriquer des rôles <code>group</code> mais attention au risque de grande verbosité.</li>
 </ul>
-<h2 id="conclusion" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-235" aria-labelledby="heading-235">#</a></h2>
+<h2 id="conclusion" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-372" aria-labelledby="heading-372">#</a></h2>
 <p>Les bonnes pratiques de conception d'interface exigent que les éléments faisant partie d'une même unité fonctionnelle, ou regroupés parce qu'ils portent le même type de fonction, soient visuellement groupés. De même, pour les technologies d'assistance (AT) et au niveau programmatique, il est essentiel de transmettre cette information de groupement si elle est nécessaire à la bonne compréhension de l'interface. Cela est possible via l'attribut ARIA <code>role=&quot;group&quot;</code>. Même si son support parmi les couples AT/agent utilisateur n'est pas ubiquitaire, n'hésitez pas à l'utiliser à bon escient.</p>
 
           </div>
