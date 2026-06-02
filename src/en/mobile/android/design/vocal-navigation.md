@@ -147,7 +147,7 @@ See the article on [use of fragments](https://developer.android.com/guide/compon
 <img src="../../../images/image_ex.png" alt="complete example of decorative image and informative icon" width="400" height="149">
 
 By decomposing the image&nbsp;:
-- <img src="../../../images/montagnard.png" alt="example of a decorative image" width="256" height="95"> pas de `contentDescription`
+- <img src="../../../images/montagnard.png" class="img-fluid" alt="example of a decorative image" width="256" height="95"> pas de `contentDescription`
 - <img src="../../../images/settings.png" alt="example of informative icon - settings" width="48" height="48"> `imageView.setContentDescription("paramètres")`
 - <img src="../../../images/edit.png" alt="xample of informative icon - edit" width="48" height="48"> `imageView.setContentDescription("éditer le nom de l’image")`
 
