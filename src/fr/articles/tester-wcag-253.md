@@ -3,6 +3,7 @@ title: "Comment tester le WCAG 2.5.3 ?"
 abstract: "Les bonnes pratiques pour tester le critère WCAG 2.5.3 (Label in Name)"
 titleBeforeTag: true
 date: "2021-11-22"
+updateDate: "2026-06-05"
 tags:
   - web
   - intermediate
