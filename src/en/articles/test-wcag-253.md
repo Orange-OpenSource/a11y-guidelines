@@ -2,7 +2,7 @@
 title: "How to test the WCAG 2.5.3 ?"
 abstract: "Good practices for testing the WCAG 2.5.3 criterion (Label in Name)"
 titleBeforeTag: true
-date: "2022-06-23"
+date: "2022-06-05"
 tags:
   - web
   - intermediate
