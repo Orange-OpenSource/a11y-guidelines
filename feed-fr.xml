@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2026-05-20T00:00:00Z</updated>
+  <updated>2026-06-05T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Comment tester le WCAG 2.5.3 ?</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/"/>
+    <updated>2026-06-05T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/</id>
+    <content xml:lang="fr" type="html">Les bonnes pratiques pour tester le critère WCAG 2.5.3 (Label in Name)</content>
+  </entry>
   
   <entry>
     <title>Le nom accessible en HTML</title>
@@ -561,14 +569,6 @@
     <updated>2021-11-27T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/veille-octobre-novembre-2021/</id>
     <content xml:lang="fr" type="html">Florilèges de ressources en #a11y, Octobre-Novembre 2021</content>
-  </entry>
-  
-  <entry>
-    <title>Comment tester le WCAG 2.5.3 ?</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/"/>
-    <updated>2021-11-22T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/tester-wcag-253/</id>
-    <content xml:lang="fr" type="html">Les bonnes pratiques pour tester le critère WCAG 2.5.3 (Label in Name)</content>
   </entry>
   
   <entry>

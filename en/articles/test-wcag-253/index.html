@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#what-does-wcag-253-mean" class="dropdown-item text-wrap">What does WCAG 2.5.3 mean</a><a href="#general-explanation" class="dropdown-item text-wrap">General explanation</a><a href="#concrete-example" class="dropdown-item text-wrap">Concrete example</a><a href="#accessible-name" class="dropdown-item text-wrap">Accessible name</a><a href="#accessible-masking" class="dropdown-item text-wrap">Accessible masking</a><a href="#how-to-test-it" class="dropdown-item text-wrap">How to test it</a><a href="#screen-reader" class="dropdown-item text-wrap">Screen reader</a><a href="#order-inspector" class="dropdown-item text-wrap">Order inspector</a><a href="#with-firefox" class="dropdown-item text-wrap">With Firefox</a><a href="#with-chrome-or-edge-chronium" class="dropdown-item text-wrap">With Chrome or Edge Chronium</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#objective-of-the-criterion" class="dropdown-item text-wrap">Objective of the Criterion</a><a href="#concrete-example" class="dropdown-item text-wrap">Concrete Example</a><a href="#problematic" class="dropdown-item text-wrap">Problematic</a><a href="#compliant-example" class="dropdown-item text-wrap">Compliant Example</a><a href="#be-careful-with-visually-hidden-content" class="dropdown-item text-wrap">Be Careful with Visually Hidden Content</a><a href="#example-of-an-error" class="dropdown-item text-wrap">Example of an Error</a><a href="#how-to-test-compliance" class="dropdown-item text-wrap">How to Test Compliance</a><a href="#1-using-a-screen-reader" class="dropdown-item text-wrap">1. Using a Screen Reader</a><a href="#2-using-developer-tools" class="dropdown-item text-wrap">2. Using Developer Tools</a><a href="#in-firefox" class="dropdown-item text-wrap">In Firefox</a><a href="#in-chrome-or-edge-chromium" class="dropdown-item text-wrap">In Chrome or Edge (Chromium)</a><a href="#summary" class="dropdown-item text-wrap">Summary</a></div>
     </nav>
         
       </div>
@@ -188,66 +188,111 @@
 
             <p class="text-muted mb-0">
               <span class="visually-hidden">Publication date</span>
-              <time datetime="2022-06-23T00:00:00.000Z">
-                June 23, 2022
+              <time datetime="2026-06-05T00:00:00.000Z">
+                June 05, 2026
               </time>
             </p>
 
             
+              <p class="text-muted mb-0">
+                Update of the article from
+                <time datetime="2022-06-23T00:00:00.000Z">
+                  June 23, 2022
+                </time>
+              </p>
+            
           
           <div class="mt-4">
-          <h2 id="what-does-wcag-253-mean" class="h2-focus">What does WCAG 2.5.3 mean <a class="header-anchor" href="#what-does-wcag-253-mean" id="heading-293" aria-labelledby="heading-293">#</a></h2>
-<h3 id="general-explanation">General explanation <a class="header-anchor" href="#general-explanation" id="heading-294" aria-labelledby="heading-294">#</a></h3>
-<p>The purpose of <a href="https://www.w3.org/TR/WCAG22/#label-in-name">this criterion</a> is to ensure that if a button, link, or other interface element contains some screen visible text, its <a href="/en/articles/accessible-name/">accessible name</a> must contain at least the same text as the one displayed.<br>
-This is to ensure that users of technical aids can understand and interact with the component. Indeed, the technical aids are based on the accessible name of the components. For example, a voice recognition user will be able to click on a button simply by pronouncing its accessible name.</p>
-<p>The visible text and the accessible name do not have to be identical, but the visible text must be present in the accessible name, preferably first.</p>
-<h3 id="concrete-example">Concrete example <a class="header-anchor" href="#concrete-example" id="heading-295" aria-labelledby="heading-295">#</a></h3>
-<h4 id="accessible-name">Accessible name <a class="header-anchor" href="#accessible-name" id="heading-296" aria-labelledby="heading-296">#</a></h4>
-<p>Let’s take the example of a user using voice recognition software who wants to input and submit a form.<br>
-<img src="../images/tester-wcag-253/button_send.png" alt="button with send text" class="img-fluid"></p>
+          <h2 id="objective-of-the-criterion" class="h2-focus">Objective of the Criterion <a class="header-anchor" href="#objective-of-the-criterion" id="heading-293" aria-labelledby="heading-293">#</a></h2>
+<p><strong>WCAG 2.5.3 – Label in Name</strong> aims to ensure that when an interactive element (button, link, input field, etc.) displays visible text on the screen, that same text is also included in its <strong><a href="/src/fr/articles/le-nom-accessible-en-html.md">accessible name</a></strong>.</p>
+<p>This allows users of <a href="/src/fr/solutions-assistance.md">assistive technologies</a> (particularly speech recognition software) to correctly understand and interact with the interface.<br>
+These tools rely on the <strong>accessible name</strong> to identify and activate elements.</p>
+<p>The visible text does not need to be <strong>strictly identical</strong> to the accessible name, but it must <strong>at minimum be included</strong> within it — ideally at the <strong>beginning</strong>.</p>
+<h2 id="concrete-example" class="h2-focus">Concrete Example <a class="header-anchor" href="#concrete-example" id="heading-294" aria-labelledby="heading-294">#</a></h2>
+<h3 id="problematic">Problematic <a class="header-anchor" href="#problematic" id="heading-295" aria-labelledby="heading-295">#</a></h3>
+<p>Consider a user navigating with speech recognition software who wants to fill out and submit a form.</p>
+<p><img src="../articles/images/tester-wcag-253/button_send.png" alt="Button displaying the text “Send”" class="img-fluid"></p>
 <pre><code class="html">
 &lt;button&gt;
     &lt;img src="send.png" alt="Submit"&gt;
 &lt;/button&gt;
 </code></pre>
-<p>The above example may be problematic. The button contains an image with the text &quot;Send&quot; but the alternative text of the image is &quot;Submit&quot;, so its accessible name is &quot;Submit&quot;. Since technologies depend on the accessible name, if the user says &quot;Send&quot;, nothing will happen.</p>
-<p>To solve the problem, the alternative text must be the same as the image text (&quot;Send&quot;).</p>
-<h4 id="accessible-masking">Accessible masking <a class="header-anchor" href="#accessible-masking" id="heading-297" aria-labelledby="heading-297">#</a></h4>
-<p>Be careful when using <a href="/en/web/components-examples/accessible-hiding/">accessible masking</a>. It should not be placed in the middle of a visually displayed label.<br>
-Otherwise, it will be impossible to correlate the accessible name with the displayed text.</p>
-<p>Example of Error:</p>
+<p>In this example, the button visually displays the word <strong>« Send »</strong> (in the image), but the alternative text is <strong>« Submit »</strong>. The accessible name of the button therefore becomes <em>Submit</em>.</p>
+<p>Result: a speech recognition user who says « Click Send » will not be able to activate the button, because the assistant will not recognize that name.</p>
+<hr>
+<h3 id="compliant-example">Compliant Example <a class="header-anchor" href="#compliant-example" id="heading-296" aria-labelledby="heading-296">#</a></h3>
 <pre><code class="html">
-&lt;a href="www.orange.com" target="_blank"&gt; Open &lt;span class="visually-hidden"&gt;in new Window &lt;/span&gt; Orange ebsite &lt;/a&gt;
+&lt;button&gt;
+    &lt;img src="send.png" alt="Send"&gt;
+&lt;/button&gt;
 </code></pre>
-<p>If you say, &quot;Open orange website&quot;, the voice recognition software won’t find the element. On the other hand, if we say &quot;Open in a new window orange website&quot; the link will be activated, as it is its accessible name.</p>
-<h2 id="how-to-test-it" class="h2-focus">How to test it <a class="header-anchor" href="#how-to-test-it" id="heading-298" aria-labelledby="heading-298">#</a></h2>
-<h3 id="screen-reader">Screen reader <a class="header-anchor" href="#screen-reader" id="heading-299" aria-labelledby="heading-299">#</a></h3>
-<p>The screen reader vocalizes the properties of the element on which you place your focus.<br>
-Particularly, the following characteristics of the element: its function (link, button, text...), its status and its accessible name. If the accessible name you hear does not match what is textually visible, then the criterion is considered non-compliant.</p>
-<p>You can use the Lyric Viewer on the screen reader to text-write the characteristics of an item. It is therefore possible to compare the accessible name in textual form read by the screen reader with the text displayed on the component.</p>
-<p><img src="../images/tester-wcag-253/nvda_visionneuse.png" alt="Exemple of Lyric Viewer" class="img-fluid"></p>
-<h3 id="order-inspector">Order inspector <a class="header-anchor" href="#order-inspector" id="heading-300" aria-labelledby="heading-300">#</a></h3>
-<p>The best way to check the criterion with the control inspector depends on the browser used.</p>
-<h4 id="with-firefox">With Firefox <a class="header-anchor" href="#with-firefox" id="heading-301" aria-labelledby="heading-301">#</a></h4>
+<p>The accessible name now contains the word <strong>« Send »</strong>, identical to the visible text. <strong>WCAG 2.5.3 is therefore satisfied</strong>.</p>
+<hr>
+<h2 id="be-careful-with-visually-hidden-content" class="h2-focus">Be Careful with Visually Hidden Content <a class="header-anchor" href="#be-careful-with-visually-hidden-content" id="heading-297" aria-labelledby="heading-297">#</a></h2>
+<p>Hidden content should not be inserted <strong>in the middle</strong> of the visible label (it should be placed at the end instead), otherwise the criterion will fail and the element may not work properly with speech input.</p>
+<h3 id="example-of-an-error">Example of an Error <a class="header-anchor" href="#example-of-an-error" id="heading-298" aria-labelledby="heading-298">#</a></h3>
+<pre><code class="html">
+&lt;a href="www.orange.com" target="_blank"&gt; Open &lt;span class="visually-hidden"&gt;in a new window &lt;/span&gt; the Orange website &lt;/a&gt;
+</code></pre>
+<p>The accessible name becomes:</p>
+<p>« Open in a new window the Orange website »</p>
+<p>But the user only sees:</p>
+<blockquote>
+<p>« Open the Orange website »</p>
+</blockquote>
+<p>With speech recognition, saying « Open the Orange website » <strong>will not work</strong>, because this text does not match the actual accessible name.</p>
+<hr>
+<h2 id="how-to-test-compliance" class="h2-focus">How to Test Compliance <a class="header-anchor" href="#how-to-test-compliance" id="heading-299" aria-labelledby="heading-299">#</a></h2>
+<h3 id="1-using-a-screen-reader">1. Using a Screen Reader <a class="header-anchor" href="#1-using-a-screen-reader" id="heading-300" aria-labelledby="heading-300">#</a></h3>
+<p>The screen reader announces:</p>
+<ul>
+<li>the element’s <strong>role</strong> (button, link, text, etc.),</li>
+<li>its <strong>state</strong>,</li>
+<li>and its <strong>accessible name</strong>.</li>
+</ul>
+<p><strong>Procedure:</strong></p>
 <ol>
-  <li>Access Control Inspector  (<kbd>Ctrl+ Shift. + i</kbd>)</li>
-  <li>Select the accessibility tab</li>
-  <li>Inspect an item</li>
-  <li>Look at the properties part, if the name attribute contains at least the displayed text, the criterion is compliant</li> 
+<li>Navigate the page using a screen reader.</li>
+<li>Listen to the name announced for each button or link.</li>
+<li>If this name <strong>does not match</strong> the visible text, the criterion <strong>is not satisfied</strong>.</li>
 </ol>
-<p><img src="../images/tester-wcag-253/FF_name.png" alt="Firefox Developer Tools panels with Accessibility tab open" class="img-fluid"></p>
-<h4 id="with-chrome-or-edge-chronium">With Chrome or Edge Chronium <a class="header-anchor" href="#with-chrome-or-edge-chronium" id="heading-302" aria-labelledby="heading-302">#</a></h4>
+<p>Some screen readers provide a <em>speech viewer</em> that displays the accessible name in text form, making comparison with the visible label easier.</p>
+<hr>
+<p><img src="../articles/images/tester-wcag-253/nvda_visionneuse.png" alt="Exemple de visionneuse de parole" class="img-fluid"></p>
+<h3 id="2-using-developer-tools">2. Using Developer Tools <a class="header-anchor" href="#2-using-developer-tools" id="heading-301" aria-labelledby="heading-301">#</a></h3>
+<p>The method for verifying the criterion with browser developer tools depends on the browser used.</p>
+<h4 id="in-firefox">In Firefox <a class="header-anchor" href="#in-firefox" id="heading-302" aria-labelledby="heading-302">#</a></h4>
 <ol>
-  <li>Access Control Inspector  (<kbd>Ctrl+ Shift. + i</kbd>)</li>
-  <li>Select the Elements tab</li>
-  <li>Choose the element you want to inspect</li>
-  <li>
-    Click on the Accessibility tab, this tab can be hidden behind the "more tab" button
-    <img src="../images/tester-wcag-253/more_tab_img.png" alt="">
-  </li>
-  <li>Look at the part "Computed Properties" if the attribute name contains at least the displayed text, the criterion is compliant</li>
+<li>Open Developer Tools: <code>Ctrl + Shift + I</code></li>
+<li>Select the <strong>Accessibility tab</strong></li>
+<li>Inspect the element to verify</li>
+<li>In the <strong>Properties</strong> section, check that the <strong>name</strong> attribute contains at least the visible on-screen text</li>
 </ol>
-<p><img src="../images/tester-wcag-253/Chrome_name.png" alt="Chrome Developer Tools panels with Accessibility tree open" class="img-fluid"></p>
+<hr>
+<p><img src="../articles/images/tester-wcag-253/FF_name.png" alt="Firefox Developer Tools panels with the Accessibility tab open" class="img-fluid"></p>
+<h4 id="in-chrome-or-edge-chromium">In Chrome or Edge (Chromium) <a class="header-anchor" href="#in-chrome-or-edge-chromium" id="heading-303" aria-labelledby="heading-303">#</a></h4>
+<ol>
+<li>Open Developer Tools: <code>Ctrl + Shift + I</code></li>
+<li>Select the <strong>Elements tab</strong></li>
+<li>Choose the element to inspect</li>
+<li>Click the <strong>Accessibility</strong> tab (it may be hidden under « More tabs »)</li>
+<li>In the <strong>Computed Properties</strong> section, verify that the <strong>name</strong> attribute contains at least the displayed text</li>
+</ol>
+<hr>
+<p><img src="../articles/images/tester-wcag-253/Chrome_name.png" alt="Chrome Developer Tools panels with the Accessibility tree open" class="img-fluid"></p>
+<h2 id="summary" class="h2-focus">Summary <a class="header-anchor" href="#summary" id="heading-304" aria-labelledby="heading-304">#</a></h2>
+<p>To comply with <strong>WCAG 2.5.3</strong>, make sure that:</p>
+<ul>
+<li>The visible text of an element is included in its accessible name, preferably at the beginning.</li>
+<li>Hidden content does not alter the correspondence between visible text and accessible name.</li>
+<li>Testing is performed using a screen reader <strong>and/or</strong> an accessibility inspector.</li>
+</ul>
+<hr>
+<p><strong>Related Resources:</strong></p>
+<ul>
+<li><a href="https://www.w3.org/TR/WCAG22/#label-in-name">WCAG 2.5.3 – Name in Label (W3C)</a></li>
+<li><a href="https://accessibilite.numerique.gouv.fr/">Guide Accessibilité – RGAA</a></li>
+</ul>
 
           </div>
         </main>
@@ -257,20 +302,22 @@ Particularly, the following characteristics of the element: its function (link, 
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">On this page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#what-does-wcag-253-mean" class="nav-link text-muted">What does WCAG 2.5.3 mean</a>
+            <a href="#objective-of-the-criterion" class="nav-link text-muted">Objective of the Criterion</a></li><li class="nav-item position-relative">
+            <a href="#concrete-example" class="nav-link text-muted">Concrete Example</a>
             <ul><li class="nav-item position-relative">
-            <a href="#general-explanation" class="nav-link text-muted">General explanation</a></li><li class="nav-item position-relative">
-            <a href="#concrete-example" class="nav-link text-muted">Concrete example</a>
+            <a href="#problematic" class="nav-link text-muted">Problematic</a></li><li class="nav-item position-relative">
+            <a href="#compliant-example" class="nav-link text-muted">Compliant Example</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#be-careful-with-visually-hidden-content" class="nav-link text-muted">Be Careful with Visually Hidden Content</a>
             <ul><li class="nav-item position-relative">
-            <a href="#accessible-name" class="nav-link text-muted">Accessible name</a></li><li class="nav-item position-relative">
-            <a href="#accessible-masking" class="nav-link text-muted">Accessible masking</a></li></ul></li></ul></li><li class="nav-item position-relative">
-            <a href="#how-to-test-it" class="nav-link text-muted">How to test it</a>
+            <a href="#example-of-an-error" class="nav-link text-muted">Example of an Error</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#how-to-test-compliance" class="nav-link text-muted">How to Test Compliance</a>
             <ul><li class="nav-item position-relative">
-            <a href="#screen-reader" class="nav-link text-muted">Screen reader</a></li><li class="nav-item position-relative">
-            <a href="#order-inspector" class="nav-link text-muted">Order inspector</a>
+            <a href="#1-using-a-screen-reader" class="nav-link text-muted">1. Using a Screen Reader</a></li><li class="nav-item position-relative">
+            <a href="#2-using-developer-tools" class="nav-link text-muted">2. Using Developer Tools</a>
             <ul><li class="nav-item position-relative">
-            <a href="#with-firefox" class="nav-link text-muted">With Firefox</a></li><li class="nav-item position-relative">
-            <a href="#with-chrome-or-edge-chronium" class="nav-link text-muted">With Chrome or Edge Chronium</a></li></ul></li></ul></li>
+            <a href="#in-firefox" class="nav-link text-muted">In Firefox</a></li><li class="nav-item position-relative">
+            <a href="#in-chrome-or-edge-chromium" class="nav-link text-muted">In Chrome or Edge (Chromium)</a></li></ul></li></ul></li><li class="nav-item position-relative">
+            <a href="#summary" class="nav-link text-muted">Summary</a></li>
       </ul>
     </nav>
             </div>
