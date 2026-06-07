@@ -8,13 +8,13 @@ tags:
   - component
 ---
 
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 
 <p>Dropdown menus help organize and display navigation options or actions in a compact, structured way. However, if they are not properly implemented, they create accessibility issues for many users.</p>
 <p>An accessible dropdown menu ensures smooth and intuitive navigation for everyone, while complying with the recommendations of standards (<abbr>WCAG</abbr>, <abbr>RGAA</abbr>, <abbr>EN 301 549</abbr>, etc.).</p>
 <p>In the following examples, we will use the <a href="https://boosted.orange.com/docs/5.1/components/dropdowns/">dropdown menu</a> available in the <a href="https://boosted.orange.com/">Boosted</a> library.<br /> This Bootstrap‑based library makes it possible to quickly design accessible interfaces in Orange brand colors and compliant with WCAG as well as the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/">ARIA combobox design pattern</a></p>
 
-<h2>Dropdown menu</h2>
+<h2 id="dropdown-menu">Dropdown menu</h2>
 <p>To make the dropdown menu accessible, pay particular attention to the following:</p>
 <ul>
 <li>Support mouse and keyboard navigation (navigation with the <kbd>Tab</kbd> key, activation with <kbd>Enter</kbd> or <kbd>Space</kbd>, movement with the arrow keys).</li>
@@ -23,7 +23,7 @@ tags:
 <li>Ensure the behavior of the dropdown and item selection is predictable and consistent to avoid confusion.</li>
 </ul>
 
-<h2>Example</h2>
+<h2 id="example">Example</h2>
 <!-- Final menu -->
 <div class="dropdown">
   <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown">
@@ -39,7 +39,7 @@ tags:
   </ul>
 </div>
 
-<h3>Example code</h3>
+<h3 id="example-code">Example code</h3>
 
 <!-- Example code 1 -->
 <pre><code class="html">
@@ -58,16 +58,16 @@ tags:
 &lt;/div&gt;
 </code></pre>
 
-<h3><abbr>ARIA</abbr> attributes</h3>
+<h3 id="aria-attributes"><abbr>ARIA</abbr> attributes</h3>
 <ul>
 	<li><code>aria-expanded</code>: the <code>aria-expanded</code> attribute with a value of <code>true/false</code> allows assistive technologies to announce the menu state (open or closed).</li>
 	<li><code>aria-current</code>: if the dropdown is used within a navigation menu, consider adding <code>aria-current="page"</code> to the item corresponding to the active page.</li>
 	<li><code>aria-haspopup</code>: the <code>aria-haspopup</code> attribute is reserved for the <code>menu</code> role (see the “Special case of application menus” section). It is therefore not present in this implementation.</li>
 </ul>
 
-<h2>Time to test</h2>
+<h2 id="time-to-test">Time to test</h2>
 
-<h3>Keyboard navigation</h3>
+<h3 id="keyboard-navigation">Keyboard navigation</h3>
  <dl>
    <dt>Move focus to the “My account” button using the <kbd>Tab</kbd> key and activate with the <kbd>Enter</kbd> key.</dt>
    <dd>The menu opens.</dd>
@@ -77,7 +77,7 @@ tags:
    <dd>The menu closes. When it closes, focus is automatically returned to the button that opens the menu.</dd>
 </dl>
 
-<h3>Screen reader navigation</h3>
+<h3 id="screen-reader-navigation">Screen reader navigation</h3>
  <dl>
    <dt>Place focus on the “My account” button.</dt>
    <dd>The screen reader indicates that it is a dropdown menu and announces the menu state (open or closed).</dd>
@@ -93,7 +93,7 @@ tags:
 <p>Additionally, the ARIA pattern describes the use of an <code>aria-controls</code> attribute, as well as optional extra keyboard interactions: <kbd>Home</kbd>/<kbd>End</kbd>.</p>
 <p>Example: <a href="https://www.w3.org/WAI/ARIA/apg/example-index/disclosure/disclosure-navigation.html">Example Disclosure for Navigation Menus</a></p>
 
-<h2>Special case of application menus</h2>
+<h2 id="special-case-of-application-menus">Special case of application menus</h2>
 
 <p>The ARIA pattern describes “Menu” and “Menubar” components, using the <code>menu</code> and <code>menubar</code> roles.</p>
 <p>Note that this pattern is intended only for building application menus, whose interactions should be similar to menus in desktop applications, for example.</p>
