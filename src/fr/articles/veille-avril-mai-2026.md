@@ -1,7 +1,7 @@
 ---
 title: "Veille #A11y Avril-Mai 2026"
 abstract: "Florilèges de ressources en #A11y, Avril-Mai  2026"
-date: "2026-08-06"
+date: "2026-06-08"
 tags:
   - veille
 ---
@@ -13,7 +13,7 @@ La journée de la sensibilisation à l'accessibilité ou Global Accessibility Aw
 
 Les suites de la plainte pour non accessibilité contre des géants de la grande distribution, grosse désillusion : https://apidv.org/actualites/decision-du-tribunal-judiciaire-de-lille et https://droitpluriel.fr/decision-du-tribunal-judiciaire-de-lille-le-6-mai-2026apidv-et-droit-pluriel-c-auchan-e-commerce-une-interpretation-gravement-erronee-du-droit-de-laccessibilite-numerique/.
 
-Le 31 mars, c'était la première édition d'A11y Ouest, nous étions là pour Orange, een attendant un retour en 2017 ade A11y Paris, un compte-rendu : https://access42.net/compte-rendu-A11y-ouest-2026/.
+Le 31 mars, c'était la première édition d'A11y Ouest, nous étions là pour Orange, en attendant un retour en 2027 ade A11y Paris, un compte-rendu : https://access42.net/compte-rendu-A11y-ouest-2026/.
 
 ## L’accessibilité dans les lois, les normes et recommandations
 
@@ -27,7 +27,7 @@ Le 31 mars, c'était la première édition d'A11y Ouest, nous étions là pour O
 
 - Stratégie de l'UE en matière d'accessibilité et d'inclusion (en) : https://commission.europa.eu/news-and-media/news/boosting-accessibility-and-inclusion-persons-disabilities-2026-05-06_en
 - Créer des documents numériques accessibles, introduction (en) : https://tetralogical.com/blog/2026/05/13/creating-accessible-documents/
-- Auditer en fin de cycles n'est pas la solution, shift left (en) : https://buttondown.com/access-ability/archive/you-can-t-audit-your-way-into-accessibility/
+- Auditer en fin de cycle n'est pas la solution, shift left (en) : https://buttondown.com/access-ability/archive/you-can-t-audit-your-way-into-accessibility/
 - Surcouches d'A11y, c'est mal, on en reparle (en) : https://the-word.news/2026/0402/accessibility-overlays-create-problematic-quick-fixes/
 - Un an après l'EAA, réflexions (en) : https://gbbns.co/journal/accessibility-problem-isnt-design/
 - Il faut des gens dédiés à l'A11y (en) : https://gbbns.co/journal/design-brief-that-never-mentioned-disabled-people/
@@ -38,7 +38,7 @@ Le 31 mars, c'était la première édition d'A11y Ouest, nous étions là pour O
 
 - Critère 2.5.8 Taille de la cible (en) : https://tarnoff.info/2026/04/06/A11y-101-2-5-8-target-size/
 - Plus loin avec Playright que Axe ou Lighthouse (en) : https://247webdevs.blogspot.com/2026/05/why-keyboard-users-cant-scroll-your.html
-- Wcag 3.0 et lecalcul du rapport de contraste (en) : https://adrianroselli.com/2026/04/wcag3-contrast-as-of-april-2026.html
+- Wcag 3.0 et le calcul du rapport de contraste (en) : https://adrianroselli.com/2026/04/wcag3-contrast-as-of-april-2026.html
 - Tester avec des ultilisateurs en situation de handicap (en) : https://A11ywithdiana.substack.com/p/how-to-organize-a-testing-with-users?publication_id=5254847&post_id=192762953&isFreemail=true&r=6k8koq&triedRedirect=true
 - Le clavier et A11y (en) : https://www.dennisdeacon.com/accessibility/keyboard-accessibility-the-clearest-signal-of-digital-maturity/
 
@@ -61,7 +61,7 @@ Le 31 mars, c'était la première édition d'A11y Ouest, nous étions là pour O
 - 9 poncifs sur l'A11y et leurs contre-arguments (en) : https://stephaniewalter.design/blog/9-accessibility-myths-and-pushbacks-and-how-to-answer-them/
 - Bibliothèques et A11y : https://www.accessibilites.abf.asso.fr/2026/05/11/laccessibilite-un-defi-collectif-pour-les-bibliotheques/
 - Pas de quoi se glorifier du GAAD (en) : https://buttondown.com/access-ability/archive/gaad-2026-not-much-to-celebrate-yet/
-- Gaad, colère et A11y, si vrai (en) : https://buttondown.com/nic-steenhout/archive/new-podcast-gaad-and-purposeful-anger/
+- GAAD, colère et A11y, si vrai (en) : https://buttondown.com/nic-steenhout/archive/new-podcast-gaad-and-purposeful-anger/
 - Rappels sur l'utilisation d'ARIA, bien utile (en) : https://www.dennisdeacon.com/accessibility/aria-done-right-why-accessibility-starts-with-better-decisions-not-more-code/
 - De l'IA pour créer des sites, on le savait, l'A11y n'y est pas (en) : https://axesslab.com/lovable/
 - Retour d'un testeur en situation de handicap, à lire : :https://access42.net/references-clients/tests-utilisateurs-accessibilite-marjolaine-rayer/
@@ -84,7 +84,7 @@ Le 31 mars, c'était la première édition d'A11y Ouest, nous étions là pour O
 
 ## Ergonomie, UI & UX
 
-- Est-ce nécessaire (en) : https://alan.com/en/blog/healthy-business/a/is-this-really-needed
+- Est-ce nécessaire ? (en) : https://alan.com/en/blog/healthy-business/a/is-this-really-needed
 - Designers une proposition pour faire plus A11y (en) : https://alistapart.com/article/good-designers-bad-websites-a-proposal/
 - 10 principales erreurs d'A11y dans le webdesign (en) : https://www.levelaccess.com/blog/five-most-common-accessibility-errors-in-software-design-and-development/
 
@@ -97,18 +97,18 @@ Le 31 mars, c'était la première édition d'A11y Ouest, nous étions là pour O
   - https://onsman.com/the-impact-of-ai-on-digital-accessibility-part-ii/
 - Un Agent Skill (en cours de création) pour les développeurs iOS, à tester (en): https://github.com/dadederk/iOS-Accessibility-Agent-Skill
 - Ne comptez pas sur l'IA pour générer vos alternatives d'images (en) : https://silktide.com/blog/the-downsides-of-ai-alt-text/
-- chatbot AI spécifique A11y par WebAim (en) : https://webaim.org/AIMee/
-- Stéréotypes sont des biais cognitifs (en) : https://A11ywithdiana.substack.com/p/did-you-ever-think-about-how-the
-- Tester l'accessibilité au clavier avec l'AI (en) : https://html5accessibility.com/stuff/2026/04/29/keyboard-testing-with-the-power-of-ai/
+- Chatbot AI spécifique A11y par WebAim (en) : https://webaim.org/AIMee/
+- Les stéréotypes sont des biais cognitifs (en) : https://A11ywithdiana.substack.com/p/did-you-ever-think-about-how-the
+- Tester l'accessibilité au clavier avec l'IA (en) : https://html5accessibility.com/stuff/2026/04/29/keyboard-testing-with-the-power-of-ai/
 - Une évaluation des LLM et A11y (en) : https://microsoft.github.io/A11y-llm-eval-report/
 - Modern Web Guidances de Google, à éviter (en) : https://adrianroselli.com/2026/05/maybe-dont-rely-on-googles-modern-web-guidance.html
 
 ## Ressources
 
-- Des amélioration pour de la 3D su le web et A11y (en) : https://cerovac.com/A11y/2026/04/new-hope-for-better-accessibility-of-3d-experiences-on-the-web/
+- Des améliorations pour de la 3D su le web et A11y (en) : https://cerovac.com/A11y/2026/04/new-hope-for-better-accessibility-of-3d-experiences-on-the-web/
 - Les formulaires A11y (en) : https://www.dennisdeacon.com/accessibility/accessible-forms-are-a-business-imperative-not-a-compliance-checkbox/
 - Rendre A11y les graphes (en) : https://www.tempertemper.net/blog/do-graphs-and-charts-need-to-be-accessible 
-- Des personas en situatioùn de handicap (en) : https://knowaboutaccessibility.org/tag/personas/
+- Des personas en situation de handicap (en) : https://knowaboutaccessibility.org/tag/personas/
 - Concevoir pour les aveugles (en) : https://tetralogical.com/blog/2026/04/02/designing-for-people-who-are-blind/
 - Les fondamentaux de l'A11y, la base (en) : https://inklusivo.nl/accessibility-fundamentals/
 - Ressources A11y pour designers (en) : https://accessibility.tools/
