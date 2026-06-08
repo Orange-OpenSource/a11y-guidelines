@@ -1,7 +1,7 @@
 ---
 title: "#A11y technical watch, April-May 2026"
 abstract: "#A11y anthology, April-May 2026"
-date: "2025-06-08"
+date: "2026-06-08"
 tags:
   - veille
 ---
@@ -12,7 +12,7 @@ Global Accessibility Awareness Day (GAAD) celebrates its 15th anniversary on May
 
 Following the lawsuit against major retailers for lack of accessibility, a major disappointment (fr): https://apidv.org/actualites/decision-du-tribunal-judiciaire-de-lille and https://droitpluriel.fr/decision-du-tribunal-judiciaire-de-lille-le-6-mai-2026apidv-et-droit-pluriel-c-auchan-e-commerce-une-interpretation-gravement-erronee-du-droit-de-laccessibilite-numerique/
 
-On March 31st, it was the first edition of A11y Ouest. We were there representing Orange, and we look forward to the return of A11y Paris in 2017. A report is available here (fr): https://access42.net/compte-rendu-A11y-ouest-2026/.
+On March 31st, it was the first edition of A11y Ouest. We were there representing Orange, and we look forward to the return of A11y Paris in 2027. A report is available here (fr): https://access42.net/compte-rendu-A11y-ouest-2026/.
 
 ## Accessibility in Laws, Standards, and Recommendations
 
@@ -71,11 +71,10 @@ On March 31st, it was the first edition of A11y Ouest. We were there representin
 - Apple unveils new accessibility features and updates powered by Apple Intelligence: https://www.apple.com/newsroom/2026/05/apple-unveils-new-accessibility-features-and-updates-with-apple-intelligence/
 - Samsung replaces its version of TalkBack with Google's in the One UI 9 beta: https://accessibleandroid.com/samsung-replaces-its-talkback-version-with-googles-in-one-ui-9-beta/
 - Rachele DiTullio has written four excellent articles on using essential assistive technologies and features on iPhone:
-
- - https://racheleditullio.com/blog/2026/05/at-for-iphone-full-keyboard-access/
- - https://racheleditullio.com/blog/2026/05/at-for-iphone-voice-control-speech-input/
- - https://racheleditullio.com/blog/2026/05/at-for-iphone-voiceover-screen-reader/
- - https://racheleditullio.com/blog/2026/05/4-ios-display-settings-to-check-your-app-with/
+  - https://racheleditullio.com/blog/2026/05/at-for-iphone-full-keyboard-access/
+  - https://racheleditullio.com/blog/2026/05/at-for-iphone-voice-control-speech-input/
+  - https://racheleditullio.com/blog/2026/05/at-for-iphone-voiceover-screen-reader/
+  - https://racheleditullio.com/blog/2026/05/4-ios-display-settings-to-check-your-app-with/
 - Check accessibility with SwiftUI Previews: https://mobileA11y.com/blog/swiftui-preview-testing/
 
 ## Assistive Technologies
@@ -84,7 +83,7 @@ On March 31st, it was the first edition of A11y Ouest. We were there representin
 
 ## Ergonomics, UI & UX
 
-- Is this necessary: https://alan.com/en/blog/healthy-business/a/is-this-really-needed
+- Is this necessary?: https://alan.com/en/blog/healthy-business/a/is-this-really-needed
 - Designers, a proposal to do more with A11y: https://alistapart.com/article/good-designers-bad-websites-a-proposal/
 - 10 Main A11y mistakes in Web Design: https://www.levelaccess.com/blog/five-most-common-accessibility-errors-in-software-design-and-development/
 
