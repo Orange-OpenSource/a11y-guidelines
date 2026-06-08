@@ -100,12 +100,12 @@ On March 31st, it was the first edition of A11y Ouest. We were there representin
 - A11y-specific AI chatbot by WebAim: https://webaim.org/AIMee/
 - Stereotypes are cognitive biases: https://A11ywithdiana.substack.com/p/did-you-ever-think-about-how-the
 - Testing keyboard accessibility with AI: https://html5accessibility.com/stuff/2026/04/29/keyboard-testing-with-the-power-of-ai/
-- An evaluation of LLM and A11y: https://microsoft.github.io/A11y-llm-eval-report/
+- An evaluation of LLM and A11y: https://microsoft.github.io/a11y-llm-eval-report/
 - Google's Modern Web Guidance, to avoid: https://adrianroselli.com/2026/05/maybe-dont-rely-on-googles-modern-web-guidance.html
 
 ## Resources
 
-- Improvements for 3D on the web and A11y: https://cerovac.com/A11y/2026/04/new-hope-for-better-accessibility-of-3d-experiences-on-the-web/
+- Improvements for 3D on the web and A11y: https://cerovac.com/a11y/2026/04/new-hope-for-better-accessibility-of-3d-experiences-on-the-web/
 - A11y forms: https://www.dennisdeacon.com/accessibility/accessible-forms-are-a-business-imperative-not-a-compliance-checkbox/
 - Making graphs accessible: https://www.tempertemper.net/blog/do-graphs-and-charts-need-to-be-accessible
 - Personas with disabilities: https://knowaboutaccessibility.org/tag/personas/

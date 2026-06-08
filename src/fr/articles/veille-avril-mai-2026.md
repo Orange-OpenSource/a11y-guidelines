@@ -20,7 +20,7 @@ Le 31 mars, c'était la première édition d'A11y Ouest, nous étions là pour O
 - Prioriser les efforts pour l'ADA title II (en) : https://vispero.com/resources/ada-title-ii-accessibility-prioritization-guide/
 - Point de vue des intéressés sur l'EAA : https://www.anysurfer.be/fr/blog/detail/european-accessibility-act-le-point-de-vue-des-personnes-en-situation-de-handicap
 - Trucs cool dans le futur ARIA 1.3 (en) : https://afixt.com/cool-new-stuff-coming-in-aria-1-3/
-- Bonnes intentions de l'ARCOM : https://www.arcom.fr/actualites/projet-strategique-2026-2028-de-larcom-une-regulation-du-numerique-plus-forte-proteger-les-francais
+- Bonnes intentions de l'Arcom : https://www.arcom.fr/actualites/projet-strategique-2026-2028-de-larcom-une-regulation-du-numerique-plus-forte-proteger-les-francais
 - Tout sur WCAG 3.1.2 Language of parts (en) : https://tarnoff.info/2026/05/11/A11y-101-3-1-2-language-of-parts/
 
 ## Stratégie de mise en accessibilité
@@ -100,7 +100,7 @@ Le 31 mars, c'était la première édition d'A11y Ouest, nous étions là pour O
 - Chatbot AI spécifique A11y par WebAim (en) : https://webaim.org/AIMee/
 - Les stéréotypes sont des biais cognitifs (en) : https://A11ywithdiana.substack.com/p/did-you-ever-think-about-how-the
 - Tester l'accessibilité au clavier avec l'IA (en) : https://html5accessibility.com/stuff/2026/04/29/keyboard-testing-with-the-power-of-ai/
-- Une évaluation des LLM et A11y (en) : https://microsoft.github.io/A11y-llm-eval-report/
+- Une évaluation des LLM et A11y (en) : https://microsoft.github.io/a11y-llm-eval-report/
 - Modern Web Guidances de Google, à éviter (en) : https://adrianroselli.com/2026/05/maybe-dont-rely-on-googles-modern-web-guidance.html
 
 ## Ressources
