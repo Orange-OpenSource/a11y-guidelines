@@ -37,7 +37,7 @@ Le 31 mars, c'était la première édition d'A11y Ouest, nous étions là pour O
 ## Tester l’accessibilité
 
 - Critère 2.5.8 Taille de la cible (en) : https://tarnoff.info/2026/04/06/A11y-101-2-5-8-target-size/
-- Plus loin avec Playright que Axe ou Lighthouse (en) : https://247webdevs.blogspot.com/2026/05/why-keyboard-users-cant-scroll-your.html
+- Plus loin avec Playwright  que Axe ou Lighthouse (en) : https://www.davidmello.com/software-testing/test-automation/playwright-accessibility-testing-axe-lighthouse-limitations
 - WCAG 3.0 et le calcul du rapport de contraste (en) : https://adrianroselli.com/2026/04/wcag3-contrast-as-of-april-2026.html
 - Tester avec des ultilisateurs en situation de handicap (en) : https://A11ywithdiana.substack.com/p/how-to-organize-a-testing-with-users?publication_id=5254847&post_id=192762953&isFreemail=true&r=6k8koq&triedRedirect=true
 - Le clavier et A11y (en) : https://www.dennisdeacon.com/accessibility/keyboard-accessibility-the-clearest-signal-of-digital-maturity/
