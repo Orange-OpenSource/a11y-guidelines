@@ -13,7 +13,7 @@ La journée de la sensibilisation à l'accessibilité ou Global Accessibility Aw
 
 Les suites de la plainte pour non accessibilité contre des géants de la grande distribution, grosse désillusion : https://apidv.org/actualites/decision-du-tribunal-judiciaire-de-lille et https://droitpluriel.fr/decision-du-tribunal-judiciaire-de-lille-le-6-mai-2026apidv-et-droit-pluriel-c-auchan-e-commerce-une-interpretation-gravement-erronee-du-droit-de-laccessibilite-numerique/.
 
-Le 31 mars, c'était la première édition d'A11y Ouest, nous étions là pour Orange, en attendant un retour en 2027 ade A11y Paris, un compte-rendu : https://access42.net/compte-rendu-A11y-ouest-2026/.
+Le 31 mars, c'était la première édition d'A11y Ouest, nous étions là pour Orange, en attendant un retour en 2027 de A11y Paris, un compte-rendu : https://access42.net/compte-rendu-A11y-ouest-2026/.
 
 ## L’accessibilité dans les lois, les normes et recommandations
 
@@ -38,7 +38,7 @@ Le 31 mars, c'était la première édition d'A11y Ouest, nous étions là pour O
 
 - Critère 2.5.8 Taille de la cible (en) : https://tarnoff.info/2026/04/06/A11y-101-2-5-8-target-size/
 - Plus loin avec Playright que Axe ou Lighthouse (en) : https://247webdevs.blogspot.com/2026/05/why-keyboard-users-cant-scroll-your.html
-- Wcag 3.0 et le calcul du rapport de contraste (en) : https://adrianroselli.com/2026/04/wcag3-contrast-as-of-april-2026.html
+- WCAG 3.0 et le calcul du rapport de contraste (en) : https://adrianroselli.com/2026/04/wcag3-contrast-as-of-april-2026.html
 - Tester avec des ultilisateurs en situation de handicap (en) : https://A11ywithdiana.substack.com/p/how-to-organize-a-testing-with-users?publication_id=5254847&post_id=192762953&isFreemail=true&r=6k8koq&triedRedirect=true
 - Le clavier et A11y (en) : https://www.dennisdeacon.com/accessibility/keyboard-accessibility-the-clearest-signal-of-digital-maturity/
 
@@ -105,7 +105,7 @@ Le 31 mars, c'était la première édition d'A11y Ouest, nous étions là pour O
 
 ## Ressources
 
-- Des améliorations pour de la 3D su le web et A11y (en) : https://cerovac.com/A11y/2026/04/new-hope-for-better-accessibility-of-3d-experiences-on-the-web/
+- Des améliorations pour de la 3D sur le web et A11y (en) : https://cerovac.com/A11y/2026/04/new-hope-for-better-accessibility-of-3d-experiences-on-the-web/
 - Les formulaires A11y (en) : https://www.dennisdeacon.com/accessibility/accessible-forms-are-a-business-imperative-not-a-compliance-checkbox/
 - Rendre A11y les graphes (en) : https://www.tempertemper.net/blog/do-graphs-and-charts-need-to-be-accessible 
 - Des personas en situation de handicap (en) : https://knowaboutaccessibility.org/tag/personas/

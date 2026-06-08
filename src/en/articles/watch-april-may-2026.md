@@ -37,7 +37,7 @@ On March 31st, it was the first edition of A11y Ouest. We were there representin
 
 - Criterion 2.5.8 Target Size: https://tarnoff.info/2026/04/06/A11y-101-2-5-8-target-size/
 - Further testing with Playright than Axe or Lighthouse: https://247webdevs.blogspot.com/2026/05/why-keyboard-users-cant-scroll-your.html
-- Wcag 3.0 and Contrast Ratio Calculation: https://adrianroselli.com/2026/04/wcag3-contrast-as-of-april-2026.html
+- WCAG 3.0 and Contrast Ratio Calculation: https://adrianroselli.com/2026/04/wcag3-contrast-as-of-april-2026.html
 - Testing with Users with disabilities (fr): https://A11ywithdiana.substack.com/p/how-to-organize-a-testing-with-users
 - The keyboard and A11y: https://www.dennisdeacon.com/accessibility/keyboard-accessibility-the-clearest-signal-of-digital-maturity/
 
