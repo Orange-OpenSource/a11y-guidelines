@@ -204,8 +204,8 @@
           
           <div class="mt-4">
           <h2 id="objectif-du-critere" class="h2-focus">Objectif du critère <a class="header-anchor" href="#objectif-du-critere" id="heading-449" aria-labelledby="heading-449">#</a></h2>
-<p>Le critère <strong>WCAG 2.5.3 – Label in Name</strong> vise à garantir que lorsqu’un élément interactif (bouton, lien, champ, etc.) affiche du texte visible à l’écran, ce texte soit également présent dans son <strong><a href="/src/fr/articles/le-nom-accessible-en-html.md">nom accessible</a></strong>.</p>
-<p>Cela permet aux utilisateurs <a href="/src/fr/solutions-assistance.md">d'aides techniques</a> (en particulier de logiciels de reconnaissance vocale) de comprendre et d’interagir correctement avec l’interface.<br>
+<p>Le critère <strong>WCAG 2.5.3 – Label in Name</strong> vise à garantir que lorsqu’un élément interactif (bouton, lien, champ, etc.) affiche du texte visible à l’écran, ce texte soit également présent dans son <strong><a href="/fr/articles/le-nom-accessible-en-html">nom accessible</a></strong>.</p>
+<p>Cela permet aux utilisateurs <a href="/fr/solutions-assistance">d'aides techniques</a> (en particulier de logiciels de reconnaissance vocale) de comprendre et d’interagir correctement avec l’interface.<br>
 En effet, ces outils s’appuient sur le <strong>nom accessible</strong> pour identifier et activer les éléments.</p>
 <blockquote>
 <p>Le texte visible n’a pas besoin d’être <strong>strictement identique</strong> au nom accessible, mais il doit <strong>au minimum être inclus</strong> dans celui-ci — idéalement au <strong>début</strong>.</p>
@@ -214,7 +214,7 @@ En effet, ces outils s’appuient sur le <strong>nom accessible</strong> pour id
 <h2 id="exemple-concret" class="h2-focus">Exemple concret <a class="header-anchor" href="#exemple-concret" id="heading-450" aria-labelledby="heading-450">#</a></h2>
 <h3 id="exemple-problematique">Exemple problématique <a class="header-anchor" href="#exemple-problematique" id="heading-451" aria-labelledby="heading-451">#</a></h3>
 <p>Prenons l'exemple d'un utilisateur naviguant à l'aide d'un logiciel de reconnaissance vocale souhaitant saisir et soumettre un formulaire.<br>
-<img src="../articles/images/tester-wcag-253/button_send.png" alt="bouton avec le texte envoyer" class="img-fluid"></p>
+<img src="../images/tester-wcag-253/button_send.png" alt="bouton avec le texte envoyer" class="img-fluid"></p>
 <pre><code class="html">
 &lt;button&gt;
     &lt;img src="envoyer.png" alt="Soumettre"&gt;
@@ -265,7 +265,7 @@ Le critère <strong>WCAG 2.5.3 est donc respecté</strong>.</p>
 </ol>
 <p>Certains lecteurs proposent une <em>visionneuse de paroles</em> permettant d’afficher le nom accessible sous forme textuelle, ce qui facilite la comparaison avec le texte affiché.</p>
 <hr>
-<p><img src="../articles/images/tester-wcag-253/nvda_visionneuse.png" alt="Exemple de visionneuse de parole" class="img-fluid"></p>
+<p><img src="../images/tester-wcag-253/nvda_visionneuse.png" alt="Exemple de visionneuse de parole" class="img-fluid"></p>
 <h3 id="2-avec-les-outils-de-developpement">2. Avec les outils de développement <a class="header-anchor" href="#2-avec-les-outils-de-developpement" id="heading-457" aria-labelledby="heading-457">#</a></h3>
 <p>Le moyen de vérifier le critère avec l'inspecteur de commande dépend du navigateur utilisé.</p>
 <h4 id="sous-firefox">Sous Firefox <a class="header-anchor" href="#sous-firefox" id="heading-458" aria-labelledby="heading-458">#</a></h4>
@@ -275,7 +275,7 @@ Le critère <strong>WCAG 2.5.3 est donc respecté</strong>.</p>
 <li>Inspecter l’élément à vérifier</li>
 <li>Dans la section <strong>Propriétés</strong>, vérifier que l’attribut <strong>name</strong> contient au moins le texte visible à l’écran</li>
 </ol>
-<p><img src="../articles/images/tester-wcag-253/FF_name.png" alt="Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert" class="img-fluid"></p>
+<p><img src="../images/tester-wcag-253/FF_name.png" alt="Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert" class="img-fluid"></p>
 <h4 id="sous-chrome-ou-edge-chromium">Sous Chrome ou Edge Chromium <a class="header-anchor" href="#sous-chrome-ou-edge-chromium" id="heading-459" aria-labelledby="heading-459">#</a></h4>
 <ol>
 <li>Ouvrir l’inspecteur de commande : <code>Ctrl + Maj + I</code></li>
@@ -285,7 +285,7 @@ Le critère <strong>WCAG 2.5.3 est donc respecté</strong>.</p>
 <li>Dans la section <strong>Propriétés calculées</strong>, vérifier que l’attribut <strong>name</strong> contient au moins le texte affiché</li>
 </ol>
 <hr>
-<p><img src="../articles/images/tester-wcag-253/Chrome_name.png" alt="Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert" class="img-fluid"></p>
+<p><img src="../images/tester-wcag-253/Chrome_name.png" alt="Panneaux des outils de développement de Chrome avec l'inspecteur d'accessibilité ouvert" class="img-fluid"></p>
 <h2 id="en-resume" class="h2-focus">En résumé <a class="header-anchor" href="#en-resume" id="heading-460" aria-labelledby="heading-460">#</a></h2>
 <p>Pour respecter le critère <strong>WCAG 2.5.3</strong>, assurez-vous que :</p>
 <ul>

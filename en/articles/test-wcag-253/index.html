@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
-    <title>How to test the WCAG 2.5.3 ? - Orange digital accessibility guidelines</title>
+    <title>How to test the WCAG 2.5.3? - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
@@ -150,7 +150,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
-          How to test the WCAG 2.5.3 ?
+          How to test the WCAG 2.5.3?
         </li>
       </ol>
 </nav>
@@ -174,7 +174,7 @@
         
         <main id="main-content" class="col-md-9" role="main">
           
-            <h1>How to test the WCAG 2.5.3 ?</h1>
+            <h1>How to test the WCAG 2.5.3?</h1>
             
               <span class="visually-hidden" id="filters_label">
                 Associated themes:
@@ -204,14 +204,14 @@
           
           <div class="mt-4">
           <h2 id="objective-of-the-criterion" class="h2-focus">Objective of the Criterion <a class="header-anchor" href="#objective-of-the-criterion" id="heading-293" aria-labelledby="heading-293">#</a></h2>
-<p><strong>WCAG 2.5.3 – Label in Name</strong> aims to ensure that when an interactive element (button, link, input field, etc.) displays visible text on the screen, that same text is also included in its <strong><a href="/src/fr/articles/le-nom-accessible-en-html.md">accessible name</a></strong>.</p>
-<p>This allows users of <a href="/src/fr/solutions-assistance.md">assistive technologies</a> (particularly speech recognition software) to correctly understand and interact with the interface.<br>
+<p><strong>WCAG 2.5.3 – Label in Name</strong> aims to ensure that when an interactive element (button, link, input field, etc.) displays visible text on the screen, that same text is also included in its <strong><a href="/en/articles/accessible-name">accessible name</a></strong>.</p>
+<p>This allows users of <a href="/en/assistive-technologies">assistive technologies</a> (particularly speech recognition software) to correctly understand and interact with the interface.<br>
 These tools rely on the <strong>accessible name</strong> to identify and activate elements.</p>
 <p>The visible text does not need to be <strong>strictly identical</strong> to the accessible name, but it must <strong>at minimum be included</strong> within it — ideally at the <strong>beginning</strong>.</p>
 <h2 id="concrete-example" class="h2-focus">Concrete Example <a class="header-anchor" href="#concrete-example" id="heading-294" aria-labelledby="heading-294">#</a></h2>
 <h3 id="problematic">Problematic <a class="header-anchor" href="#problematic" id="heading-295" aria-labelledby="heading-295">#</a></h3>
 <p>Consider a user navigating with speech recognition software who wants to fill out and submit a form.</p>
-<p><img src="../articles/images/tester-wcag-253/button_send.png" alt="Button displaying the text “Send”" class="img-fluid"></p>
+<p><img src="../images/tester-wcag-253/button_send.png" alt="Button displaying the text “Send”" class="img-fluid"></p>
 <pre><code class="html">
 &lt;button&gt;
     &lt;img src="send.png" alt="Submit"&gt;
@@ -258,7 +258,7 @@ These tools rely on the <strong>accessible name</strong> to identify and activat
 </ol>
 <p>Some screen readers provide a <em>speech viewer</em> that displays the accessible name in text form, making comparison with the visible label easier.</p>
 <hr>
-<p><img src="../articles/images/tester-wcag-253/nvda_visionneuse.png" alt="Exemple de visionneuse de parole" class="img-fluid"></p>
+<p><img src="../images/tester-wcag-253/nvda_visionneuse.png" alt="Exemple de visionneuse de parole" class="img-fluid"></p>
 <h3 id="2-using-developer-tools">2. Using Developer Tools <a class="header-anchor" href="#2-using-developer-tools" id="heading-301" aria-labelledby="heading-301">#</a></h3>
 <p>The method for verifying the criterion with browser developer tools depends on the browser used.</p>
 <h4 id="in-firefox">In Firefox <a class="header-anchor" href="#in-firefox" id="heading-302" aria-labelledby="heading-302">#</a></h4>
@@ -269,7 +269,7 @@ These tools rely on the <strong>accessible name</strong> to identify and activat
 <li>In the <strong>Properties</strong> section, check that the <strong>name</strong> attribute contains at least the visible on-screen text</li>
 </ol>
 <hr>
-<p><img src="../articles/images/tester-wcag-253/FF_name.png" alt="Firefox Developer Tools panels with the Accessibility tab open" class="img-fluid"></p>
+<p><img src="../images/tester-wcag-253/FF_name.png" alt="Firefox Developer Tools panels with the Accessibility tab open" class="img-fluid"></p>
 <h4 id="in-chrome-or-edge-chromium">In Chrome or Edge (Chromium) <a class="header-anchor" href="#in-chrome-or-edge-chromium" id="heading-303" aria-labelledby="heading-303">#</a></h4>
 <ol>
 <li>Open Developer Tools: <code>Ctrl + Shift + I</code></li>
@@ -279,7 +279,7 @@ These tools rely on the <strong>accessible name</strong> to identify and activat
 <li>In the <strong>Computed Properties</strong> section, verify that the <strong>name</strong> attribute contains at least the displayed text</li>
 </ol>
 <hr>
-<p><img src="../articles/images/tester-wcag-253/Chrome_name.png" alt="Chrome Developer Tools panels with the Accessibility tree open" class="img-fluid"></p>
+<p><img src="../images/tester-wcag-253/Chrome_name.png" alt="Chrome Developer Tools panels with the Accessibility tree open" class="img-fluid"></p>
 <h2 id="summary" class="h2-focus">Summary <a class="header-anchor" href="#summary" id="heading-304" aria-labelledby="heading-304">#</a></h2>
 <p>To comply with <strong>WCAG 2.5.3</strong>, make sure that:</p>
 <ul>
