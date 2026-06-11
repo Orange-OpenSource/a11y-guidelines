@@ -11,9 +11,9 @@ tags:
 
 ## Objectif du critère
 
-Le critère **WCAG 2.5.3 – Label in Name** vise à garantir que lorsqu’un élément interactif (bouton, lien, champ, etc.) affiche du texte visible à l’écran, ce texte soit également présent dans son **<a href="/src/fr/articles/le-nom-accessible-en-html.md">nom accessible</a>**.  
+Le critère **WCAG 2.5.3 – Label in Name** vise à garantir que lorsqu’un élément interactif (bouton, lien, champ, etc.) affiche du texte visible à l’écran, ce texte soit également présent dans son **<a href="/fr/articles/le-nom-accessible-en-html">nom accessible</a>**.  
 
-Cela permet aux utilisateurs [d'aides techniques](/src/fr/solutions-assistance.md) (en particulier de logiciels de reconnaissance vocale) de comprendre et d’interagir correctement avec l’interface.  
+Cela permet aux utilisateurs [d'aides techniques](/fr/solutions-assistance) (en particulier de logiciels de reconnaissance vocale) de comprendre et d’interagir correctement avec l’interface.  
 En effet, ces outils s’appuient sur le **nom accessible** pour identifier et activer les éléments.  
 
 > Le texte visible n’a pas besoin d’être **strictement identique** au nom accessible, mais il doit **au minimum être inclus** dans celui-ci — idéalement au **début**.
@@ -25,7 +25,7 @@ En effet, ces outils s’appuient sur le **nom accessible** pour identifier et a
 ### Exemple problématique
 
 Prenons l'exemple d'un utilisateur naviguant à l'aide d'un logiciel de reconnaissance vocale souhaitant saisir et soumettre un formulaire.
-![bouton avec le texte envoyer](../articles/images/tester-wcag-253/button_send.png)
+![bouton avec le texte envoyer](../images/tester-wcag-253/button_send.png)
 
 <pre><code class="html">
 &lt;button&gt;
@@ -94,7 +94,7 @@ Certains lecteurs proposent une *visionneuse de paroles* permettant d’afficher
 
 ---
 
-![Exemple de visionneuse de parole](../articles/images/tester-wcag-253/nvda_visionneuse.png)
+![Exemple de visionneuse de parole](../images/tester-wcag-253/nvda_visionneuse.png)
 
 ### 2. Avec les outils de développement
 
@@ -107,7 +107,7 @@ Le moyen de vérifier le critère avec l'inspecteur de commande dépend du navig
 3. Inspecter l’élément à vérifier
 4. Dans la section **Propriétés**, vérifier que l’attribut **name** contient au moins le texte visible à l’écran
   
-![Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert](../articles/images/tester-wcag-253/FF_name.png)
+![Panneaux des outils de développement de Firefox avec l'onglet Accessibilité ouvert](../images/tester-wcag-253/FF_name.png)
 
 #### Sous Chrome ou Edge Chromium
 
@@ -119,7 +119,7 @@ Le moyen de vérifier le critère avec l'inspecteur de commande dépend du navig
 
 ---
 
-![Panneaux des outils de développement de Chrome avec le Accessibility tree ouvert](../articles/images/tester-wcag-253/Chrome_name.png)
+![Panneaux des outils de développement de Chrome avec l'inspecteur d'accessibilité ouvert](../images/tester-wcag-253/Chrome_name.png)
 
 ## En résumé
 
