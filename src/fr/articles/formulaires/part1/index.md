@@ -2,24 +2,25 @@
 title: "Formulaire partie 1 - Structurer son formulaire"
 abstract: "Faire un formulaire accessible, partie 1 : labéliser ses champs et structurer son formulaire"
 date: "2022-12-12"
+updateDate: "2026-01-01"
 tags:
   - web
   - intermediate
   - component
-js: 
+js:
 - script.js
 titleBeforeTag: true
 ---
 
 ## Introduction
 
-Pour qu’un formulaire soit accessible à l’ensemble des utilisateurs, quelques règles doivent être respectées lors du développement.
+Pour qu'un formulaire soit accessible à l'ensemble des utilisateurs, quelques règles doivent être respectées lors du développement.
 
-Nous verrons, dans cette première partie, comment bien construire son formulaire, puis, dans une deuxième partie, la soumission d'un formulaire et les étapes de validation.
+Nous verrons dans cette première partie comment bien construire le formulaire, puis, dans la deuxième partie, la soumission et les étapes de validation.
 
 Nous allons développer un formulaire d'inscription afin de voir toutes les subtilités pour rendre un formulaire accessible.
 
-Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/" target="_blank">la librairie Boosted</a>. Celle-ci permet d’obtenir des formulaires dont le design est conforme à la charte Orange.
+Dans cet exemple, nous avons utilisé <a href="http://boosted.orange.com/" target="_blank">la librairie Boosted</a>. Celle-ci permet d'obtenir des formulaires dont le design est conforme à la charte Orange.
 
 ## Étiqueter les champs de formulaires
 
@@ -35,15 +36,15 @@ La solution privilégiée est l'utilisation de la balise <code>label</code>. C'e
     avec son champ en renseignant un attribut
     <code>for</code>
     qui correspondra avec l'<code>id</code>
-    du champ de formulaire auquel il est associé</li>
+    du champ de formulaire auquel il est associé (solution conseillée),</li>
   <li>lier implicitement la balise
     <code>label</code>
     avec son champ, dans ce cas, la balise
     <code>label</code>
-    sera utilisée comme un conteneur entourant le champ de formulaire, La première solution est conseillée.</li>
+    sera utilisée comme un conteneur entourant le champ de formulaire.</li>
 </ul>
 
-#### Exemple 
+#### Exemple
 
 Exemple d'étiquettes correctement liées de manière explicite&nbsp;:
 
@@ -66,84 +67,79 @@ Exemple d'étiquettes correctement liées de manière explicite&nbsp;:
 
 Exemple de code&nbsp;:
 
-<pre>
-  <code class="html">
-  &lt;form id="formulaire" class="border border-secondary p-3 my-2"&gt;
-    &lt;div class="mb-2"&gt;
-        &lt;label for="email" class="form-label"&gt;Email&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="email"/&gt;
-    &lt;/div&gt;
-    &lt;div class="mb-2"&gt;
-      &lt;label for="name" class="form-label"&gt;Nom&lt;/label&gt;
-      &lt;input type="text" class="form-control" id="name"/&gt;
-    &lt;/div&gt;
-    &lt;div class="mb-2"&gt;
-      &lt;label for="firstname" class="form-label"&gt;Prénom&lt;/label&gt;
-      &lt;input type="text" class="form-control" id="firstname"/&gt;
-    &lt;/div&gt;
-  &lt;/form&gt;
-  </code>
-</pre>
+```html
+<form id="formulaire" class="border border-secondary p-3 my-2">
+  <div class="mb-2">
+    <label for="email" class="form-label">Email</label>
+    <input type="text" class="form-control" id="email"/>
+  </div>
+  <div class="mb-2">
+    <label for="name" class="form-label">Nom</label>
+    <input type="text" class="form-control" id="name"/>
+  </div>
+  <div class="mb-2">
+    <label for="firstname" class="form-label">Prénom</label>
+    <input type="text" class="form-control" id="firstname"/>
+  </div>
+</form>
+```
 
 ### Masquer les étiquettes de manière accessible
 
-Dans certains cas, il peut être utile de masquer l'étiquette visuellement. Attention, on peut masquer les étiquettes si et seulement si la fonction champ est suffisamment claire et compréhensible dans son contexte: par exemple, un champ de recherche à côté d'une icone loupe.
+Dans certains cas, il peut être utile de masquer l'étiquette visuellement. Attention, on peut masquer les étiquettes si et seulement si la fonction champ est suffisamment claire et compréhensible dans son contexte : par exemple, un champ de recherche à côté d'une icône loupe.
 
 Même si l'étiquette est masquée visuellement, elle doit toujours être accessible pour les technologies d'assistance.
 
-Cette méthode consiste a utiliser une classe CSS (utilisation de la classe <code>visually-hidden</code> de Bootstrap/Boosted) permettant un masquage accessible. L’utilisation du masquage accessible permet de masquer l’élément à l’écran, tout en conservant sa vocalisation par les outils ou technologies d’assistance (AT). Attention, ne pas utiliser du masquage CSS classique (<code>display: none;</code> ou <code>visibility: hidden;</code>) car l’élément sera masqué également pour les lecteurs d’écran.
+Cette méthode consiste a utiliser une classe CSS (utilisation de la classe <code>visually-hidden</code> de Bootstrap/Boosted) permettant un masquage accessible. L'utilisation du masquage accessible permet de masquer l'élément à l'écran, tout en conservant sa vocalisation par les outils ou technologies d'assistance (AT). Attention, ne pas utiliser du masquage CSS classique (<code>display: none;</code> ou <code>visibility: hidden;</code>) car l'élément sera masqué également pour les lecteurs d'écran.
 
-Consultez l’exemple sur <a href="../../../web/exemples-de-composants/masquage-accessible/" target="_blank">l’exemple sur le masquage accessible</a> pour plus l’information.
+Consultez l'exemple sur <a href="../../../web/exemples-de-composants/masquage-accessible/" target="_blank">l'exemple sur le masquage accessible</a> pour plus d'informations.
 
 #### Exemple
 
 Par exemple, nous pouvons utiliser le masquage accessible pour un champ de recherche, si un bouton avec pour libellé recherche, ou une image loupe, est à coté du champ. Ainsi, l'étiquette du champ est cachée visuellement afin d'éviter une redondance.
 Exemple de code&nbsp;:
 
-<pre>
-  <code class="html">
-    &lt;label for="recherche" class="visually-hidden"&gt;Recherche: &lt;/label&gt;
-    &lt;input type="text" name="recherche" id="recherche"&gt;
-    &lt;button type="submit"&gt;Recherche&lt;/button&gt;
-  </code>
-</pre> 
+```html
+<label for="recherche" class="visually-hidden">Recherche :</label>
+<input type="text" name="recherche" id="recherche">
+<button type="submit">Recherche</button>
+```
 
 ### Les attributs ARIA
 
-Il est aussi possible d'utiliser les  attributs <code>aria-label</code> et <code>aria-labelledby</code> pour étiqueter des champs de formulaire, car ces attributs sont bien supportés par les navigateurs et dans les <abbr>AT</abbr> récentes&nbsp;:
+Il est aussi possible d'utiliser les attributs <code>aria-label</code> et <code>aria-labelledby</code> pour étiqueter des champs de formulaire. Le support est généralement bon, mais varie selon la technologie d'assistance et la version du navigateur ; testez donc avec les technologies d'assistance (NVDA, JAWS, VoiceOver, TalkBack, etc.) et les navigateurs ciblés.
 
 <ul>
-  <li>L’attribut <code>aria-labelledby</code> permet de préciser l’<code>id</code> d’un élément présent dans le code qui sera utilisé pour étiqueter le champ.
+  <li>L'attribut <code>aria-labelledby</code> permet de préciser l'<code>id</code> d'un élément présent dans le code qui sera utilisé pour étiqueter le champ.
   </li>
-  <li>L’attribut <code>aria-label</code> permet de préciser directement un label sous forme d’une chaîne de caractères. Attention l'information ne sera pas donnée visuellement.</li>
+  <li>L'attribut <code>aria-label</code> permet de préciser directement un label sous forme d'une chaîne de caractères. Attention l'information ne sera pas donnée visuellement.</li>
 </ul>
 
-Un exemple possible&nbsp;: 
+Un exemple possible&nbsp;:
 
-<pre>
-  <code class="html">
-    &lt;input type="text" name="recherche" aria-labelledby="recherche"&gt;
-    &lt;button id="recherche" type="submit" class="icon-loup" aria-label="Recherche"&gt;&lt;/button&gt;
-  </code>
-</pre>
+```html
+<h2 id="id-recherche">Rechercher</h2>
+<input type="text" name="recherche" aria-labelledby="id-recherche">
+<button type="submit" class="icon-loupe" aria-label="Recherche"></button>
+```
 
 ### L'attribut title
 
-L’attribut <code>title</code> permet d’étiqueter un champ de formulaire de manière accessible. Il déclenchera également l’affichage d’une info-bulle au survol de l’élément avec la souris, bonne chose pour les déficients cognitifs, les novices du numérique.
+L'attribut <code>title</code> permet d'étiqueter un champ de formulaire de manière accessible, mais ne constitue pas pour autant un substitut fiable à une étiquette visible. Il déclenche également l'affichage d'une infobulle au survol de l'élément avec la souris, ce qui peut aider les utilisateurs présentant des troubles cognitifs et les utilisateurs débutants. De plus, l'attribut <code>title</code> n'est souvent pas accessible aux utilisateurs ne naviguant qu'au clavier et n'est pas lu de manière fiable par les lecteurs d'écran.
 
 Attention, nous pourrions être tentés d'utiliser l'attribut <code>placeholder</code>. Cet attribut n'est pas assez robuste, en effet&nbsp;:
 
 <ul>
-  <li>le texte du <code>placeholder</code> qui s’affiche dans le champ n’est généralement pas assez contrasté&nbsp;;
+  <li>le texte du <code>placeholder</code> qui s'affiche dans le champ n'est généralement pas assez contrasté&nbsp;;
   </li>
-  <li>il s’efface à la saisie du contenu dans le champ (entraînant des difficultés en cas de déficience
+  <li>il s'efface à la saisie du contenu dans le champ (entraînant des difficultés en cas de déficience
     cognitive)&nbsp;;
   </li>
-  <li>le <code>placeholder</code> n’est pas toujours lu par les aides techniques&nbsp;;</li>
-  <li>il rend les corrections difficiles en cas d’erreur s'il n'existe pas de label affiché&nbsp;;</li>
+  <li>le <code>placeholder</code> n'est pas toujours lu par les aides techniques&nbsp;;</li>
+  <li>il rend les corrections difficiles en cas d'erreur s'il n'existe pas de label affiché&nbsp;;</li>
 </ul>
 
-En revanche, le <code>placeholder</code> peut servir de guide, d’aide pour remplir le champ sans que cette information soit absolument nécessaire (par exemple, proposer une valeur attendue valide)&nbsp;: ne pas hésiter à l’utiliser pour ce type de besoin.
+En revanche, le <code>placeholder</code> peut servir de guide, d'aide pour remplir le champ sans que cette information soit absolument nécessaire (par exemple, proposer une valeur attendue valide)&nbsp;: ne pas hésiter à l'utiliser pour ce type de besoin.
 
 
 ## Regrouper les champs de même nature
@@ -155,55 +151,45 @@ Pour les regrouper, on utilise la balise <code>fieldset</code>, qui aura comme p
 
 ### Exemple
 
-Dans notre formulaire d'inscription, on peut ajouter le genre de notre utilisateur. Pour cela, on va implémenter des boutons radio, et les regrouper avec l'entête <strong>Genre</strong>
+Dans notre formulaire d'inscription, on peut ajouter le genre de notre utilisateur. Pour cela, on va implémenter des boutons radio, et les regrouper avec l'entête <strong>Déjà client ?</strong>
 
 <div class="col-md-8">
   <form id="formulaire3" class="border border-secondary p-3 my-2">
     [...]
     <fieldset>
-      <legend>Genre</legend>
+      <legend>Déjà client ?</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M">
-        <label class="form-check-label" for="M">M</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="oui" value="oui">
+        <label class="form-check-label" for="oui">Oui</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme">
-        <label class="form-check-label" for="Mme">Mme</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="Non-binaire" >
-        <label class="form-check-label" for="Non-binaire">Non-binaire</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="non" value="non">
+        <label class="form-check-label" for="non">Non</label>
       </div>
     </fieldset>
   </form>
 </div>
 
-Un exemple possible&nbsp;: 
+Un exemple possible&nbsp;:
 
-<pre>
-  <code class="html">
-    &lt;div class="col-md-8"&gt;
-    &lt;form id="formulaire3" class="border border-secondary p-3 my-2"&gt;
-      [...]
-      &lt;fieldset&gt;
-        &lt;legend&gt;Genre&lt;/legend&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M"&gt;
-          &lt;label class="form-check-label" for="M"&gt;M&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme"&gt;
-          &lt;label class="form-check-label" for="Mme"&gt;Mme&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="Non-binaire" &gt;
-          &lt;label class="form-check-label" for="Non-binaire"&gt;Non-binaire&lt;/label&gt;
-        &lt;/div&gt;
-      &lt;/fieldset&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
-  </code>
-</pre>
+```html
+<div class="col-md-8">
+  <form id="formulaire3" class="border border-secondary p-3 my-2">
+    [...]
+    <fieldset>
+      <legend>Déjà client ?</legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="oui" value="oui">
+        <label class="form-check-label" for="oui">Oui</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="non" value="non">
+        <label class="form-check-label" for="non">Non</label>
+      </div>
+    </fieldset>
+  </form>
+</div>
+```
 
 ## Préciser le type ou le format attendu
 
@@ -212,16 +198,16 @@ Pour aider l'utilisateur, il est aussi important de lui préciser le type ou le 
 Pour informer l'utilisateur, on peut&nbsp;:
 
 <ul>
-  <li>fournir les instructions dans le label</li>
+  <li>fournir les instructions dans l'étiquette visible</li>
   <li>utiliser l'attribut <code>aria-labelledby</code> ou <code>aria-describedby</code></li>
 </ul>
 
 
 ### Exemple
 
-Pour notre formulaire d'inscription, nous allons rajouter un champ mot de passe en précisant le format que l'on souhaite.
+Pour notre formulaire d'inscription, nous allons rajouter un champ de mot de passe en précisant le format que l'on souhaite.
 
-Lorsqu'on ajoute un champ mot de passe, il est aussi important de laisser la possibilité d'afficher ou de cacher le mot de passe. Cela permet aux utilisateurs atteint de troubles moteurs, de l'attention ou cognitifs d'éviter d'éventuelles erreurs de saisie.
+Lorsqu'on ajoute un champ mot de passe, il est aussi important de laisser la possibilité d'afficher ou de cacher le mot de passe. Cela permet aux utilisateurs atteints de troubles moteurs, de l'attention ou cognitifs d'éviter d'éventuelles erreurs de saisie.
 
 <div class="col-md-8">
   <form id="formulaire4" class="border border-secondary p-3 my-2">
@@ -243,36 +229,34 @@ Lorsqu'on ajoute un champ mot de passe, il est aussi important de laisser la pos
         </button>
       </span>
     </div>
-    <div id="passwordHelpBlock" class="form-text">
-        Votre mot de passe doit contenir minimum 6 caractères.
-    </div>
+    <p id="passwordHelpBlock" class="form-text mb-0">
+        Votre mot de passe doit contenir au moins 6 caractères.
+    </p>
   </form>
 </div>
 
-Un exemple possible&nbsp;: 
+Un exemple possible&nbsp;:
 
-<pre>
-  <code class="html">
-  &lt;div class="col-md-8"&gt;
-    &lt;form id="formulaire4" class="border border-secondary p-3 my-2"&gt;
-      &lt;label for="password" class="form-label"&gt;Mot de passe &lt;/label&gt;
-      &lt;div class="mb-2 input-group"&gt;
-        &lt;input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/&gt;
-        &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" &gt;
-            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
-              [...]
-            &lt;/svg&gt;
-          &lt;/button&gt;
-        &lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div id="passwordHelpBlock" class="form-text"&gt;
-          Votre mot de passe doit contenir minimum 6 caractères.
-        &lt;/div&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
-  </code>
-</pre>
+```html
+<div class="col-md-8">
+  <form id="formulaire4" class="border border-secondary p-3 my-2">
+    <label for="password" class="form-label">Mot de passe </label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/>
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility" title="Afficher le mot de passe" >
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            [...]
+          </svg>
+        </button>
+      </span>
+    </div>
+    <p id="passwordHelpBlock" class="form-text mb-0">
+        Votre mot de passe doit contenir minimum 6 caractères.
+      </p>
+  </form>
+</div>
+```
 
 ## Exemple complet
 
@@ -285,7 +269,7 @@ Pour la suite de l'exercice et compléter notre formulaire d'inscription, nous a
       <label for="email_final" class="form-label">Email</label>
       <input type="text" class="form-control" id="email_final"/>
     </div>
-    <label for="password_final" class="form-label">Mot de passe </label>
+    <label for="password_final" class="form-label">Mot de passe</label>
     <div class="mb-2 input-group">
       <input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/>
       <span class="input-group-text">
@@ -303,9 +287,9 @@ Pour la suite de l'exercice et compléter notre formulaire d'inscription, nous a
         </button>
       </span>
     </div>
-    <div id="passwordHelpBlock_final" class="form-text">
+    <p id="passwordHelpBlock_final" class="form-text mb-0">
         Votre mot de passe doit contenir minimum 6 caractères.
-    </div>
+    </p>
     <div class="mb-2">
       <label for="name_final" class="form-label">Nom</label>
       <input type="text" class="form-control" id="name_final"/>
@@ -315,18 +299,14 @@ Pour la suite de l'exercice et compléter notre formulaire d'inscription, nous a
       <input type="text" class="form-control" id="firstname_final"/>
     </div>
     <fieldset>
-      <legend>Genre</legend>
+      <legend>Déjà client ?</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M">
-        <label class="form-check-label" for="M_final">M</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="oui_final" value="oui">
+        <label class="form-check-label" for="oui_final">Oui</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme">
-        <label class="form-check-label" for="Mme_final">Mme</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Non-binaire_final" value="Non-binaire" >
-        <label class="form-check-label" for="Non-binaire_final">Non-binaire</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="non_final" value="non">
+        <label class="form-check-label" for="non_final">Non</label>
       </div>
     </fieldset>
     <div class="mb-2">
@@ -348,70 +328,65 @@ Pour la suite de l'exercice et compléter notre formulaire d'inscription, nous a
   </form>
 </div>
 
-Le code final : 
-<pre>
-  <code class="html">
-  &lt;div class="col-md-8"&gt;
-    &lt;form id="formulaire_final" class="border border-secondary p-3 my-2"&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="email_final" class="form-label"&gt;Email&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="email_final"/&gt;
-      &lt;/div&gt;
-      &lt;label for="password_final" class="form-label"&gt;Mot de passe &lt;/label&gt;
-      &lt;div class="mb-2 input-group"&gt;
-        &lt;input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/&gt;
-        &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility_final" title="Afficher le mot de passe" &gt;
-            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;&lt;/svg&gt;
-          &lt;/button&gt;
-        &lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div id="passwordHelpBlock_final" class="form-text"&gt;
-          Votre mot de passe doit contenir minimum 6 caractères.
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="name_final" class="form-label"&gt;Nom&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="name_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="firstname_final" class="form-label"&gt;Prénom&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="firstname_final"/&gt;
-      &lt;/div&gt;
-      &lt;fieldset&gt;
-        &lt;legend&gt;Genre&lt;/legend&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M"&gt;
-          &lt;label class="form-check-label" for="M_final"&gt;M&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme"&gt;
-          &lt;label class="form-check-label" for="Mme_final"&gt;Mme&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Non-binaire_final" value="Non-binaire" &gt;
-          &lt;label class="form-check-label" for="Non-binaire_final"&gt;Non-binaire&lt;/label&gt;
-        &lt;/div&gt;
-      &lt;/fieldset&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="adresse_final" class="form-label"&gt;Adresse&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="adresse_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="adresse2_final" class="form-label"&gt;Complément d'adresse&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="adresse2_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="ville_final" class="form-label"&gt;Ville&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="ville_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="cp_final" class="form-label"&gt;Code postal&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="cp_final"/&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
-  </code>
-</pre>
+Le code final :
+
+```html
+<div class="col-md-8">
+  <form id="formulaire_final" class="border border-secondary p-3 my-2">
+    <div class="mb-2">
+      <label for="email_final" class="form-label">Email</label>
+      <input type="text" class="form-control" id="email_final"/>
+    </div>
+    <label for="password_final" class="form-label">Mot de passe</label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/>
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-outline-secondary btn-sm" id="password_visibility_final" title="Afficher le mot de passe" >
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"></svg>
+        </button>
+      </span>
+    </div>
+    <p id="passwordHelpBlock_final" class="form-text mb-0">
+      Votre mot de passe doit contenir minimum 6 caractères.
+    </p>
+    <div class="mb-2">
+      <label for="name_final" class="form-label">Nom</label>
+      <input type="text" class="form-control" id="name_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="firstname_final" class="form-label">Prénom</label>
+      <input type="text" class="form-control" id="firstname_final"/>
+    </div>
+    <fieldset>
+      <legend>Déjà client ?</legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="oui_final" value="oui">
+        <label class="form-check-label" for="oui_final">Oui</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="non_final" value="non">
+        <label class="form-check-label" for="non_final">Non</label>
+      </div>
+    </fieldset>
+    <div class="mb-2">
+      <label for="adresse_final" class="form-label">Adresse</label>
+      <input type="text" class="form-control" id="adresse_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="adresse2_final" class="form-label">Complément d'adresse</label>
+      <input type="text" class="form-control" id="adresse2_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="ville_final" class="form-label">Ville</label>
+      <input type="text" class="form-control" id="ville_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="cp_final" class="form-label">Code postal</label>
+      <input type="text" class="form-control" id="cp_final"/>
+    </div>
+  </form>
+</div>
+```
 
 ## Lien vers la deuxième partie
 

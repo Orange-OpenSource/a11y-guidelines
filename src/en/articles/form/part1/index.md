@@ -2,11 +2,12 @@
 title: "Form part 1 - Structure your form"
 abstract: "Making an accessible form, part 1: labeling your fields and structuring your form"
 date: "2022-12-12"
+updateDate: "2026-01-01"
 tags:
   - web
   - intermediate
   - component
-js: 
+js:
 - script.js
 titleBeforeTag: true
 ---
@@ -15,42 +16,33 @@ titleBeforeTag: true
 
 For a form to be accessible to all users, a few rules must be respected during development.
 
-We will see, in this first part, how to properly build your form, then, in a second part, the submission of a form and the validation steps.
+In this first part, we will show how to build your form. In the second part, we will cover form submission and validation.
 
-We are going to develop a registration form in order to see all the subtleties to make a form accessible.
+We will build a registration form to demonstrate the accessibility considerations.
 
 In this example, we used <a href="http://boosted.orange.com/" target="_blank">Boosted library</a>. This allows you to obtain forms whose design complies with the Orange charter.
 
 ## Label form fields
 
-Labels should describe the role of each field on the form. In order for all users to have access to the same information, it is important that these labels are correctly associated with their form fields. To achieve this there are several techniques.
+Labels should describe the role of each field on the form. In order for all users to have access to the same information, it is important that these labels are correctly associated with their form fields. To achieve this, there are several techniques.
 
 ### The label element
 
 The preferred solution is to use the <code>label</code> element. It is best supported by assistive technologies. There are two ways to use this <code>label</code> element:
 
 <ul>
-   <li>explicitly link the element
-     <code>label</code>
-     with its field by filling in an attribute
-     <code>for</code>
-     which will match with the <code>id</code>
-     of the form field it is associated with</li>
-   <li>implicitly link the element
-     <code>label</code>
-     with its field, in this case, the element
-     <code>label</code>
-     will be used as a container surrounding the form field. The first solution is recommended.</li>
+   <li>explicitly link a <code>label</code> to a field by using the for attribute that matches the field's <code>id</code> (best solution),</li>
+   <li>implicitly wrap the field with the <code>label</code> element.</li>
 </ul>
 
-#### Example 
+#### Example
 
-Example of explicitly linked form labels :
+Example of explicitly linked form labels:
 
 <div class="col-md-8">
   <form id="formulaire" class="border border-secondary p-3 my-2">
     <div class="mb-2">
-      <label for="email" class="form-label">E-mail</label>
+      <label for="email" class="form-label">Email</label>
       <input type="text" class="form-control" id="email"/>
     </div>
     <div class="mb-2">
@@ -58,40 +50,38 @@ Example of explicitly linked form labels :
       <input type="text" class="form-control" id="name"/>
     </div>
     <div class="mb-2">
-      <label for="firstname" class="form-label">Fist Name</label>
+      <label for="firstname" class="form-label">First Name</label>
       <input type="text" class="form-control" id="firstname"/>
     </div>
   </form>
 </div>
 
-Sample code :
+Sample code:
 
-<pre>
-  <code class="html">
-  &lt;form id="formulaire" class="border border-secondary p-3 my-2"&gt;
-    &lt;div class="mb-2"&gt;
-        &lt;label for="email" class="form-label"&gt;E-mail&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="email"/&gt;
-    &lt;/div&gt;
-    &lt;div class="mb-2"&gt;
-      &lt;label for="name" class="form-label"&gt;Last Name&lt;/label&gt;
-      &lt;input type="text" class="form-control" id="name"/&gt;
-    &lt;/div&gt;
-    &lt;div class="mb-2"&gt;
-      &lt;label for="firstname" class="form-label"&gt;Fist Name&lt;/label&gt;
-      &lt;input type="text" class="form-control" id="firstname"/&gt;
-    &lt;/div&gt;
-  &lt;/form&gt;
-  </code>
-</pre>
+```html
+  <form id="formulaire" class="border border-secondary p-3 my-2">
+    <div class="mb-2">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email"/>
+    </div>
+    <div class="mb-2">
+      <label for="name" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="name"/>
+    </div>
+    <div class="mb-2">
+      <label for="firstname" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="firstname"/>
+    </div>
+  </form>
+```
 
 ### Hide labels in an accessible way
 
-In some cases, it may be useful to hide the label visually. Attention, labels can be hidden if and only if the field function is sufficiently clear and understandable in its context: for example, a search field next to a magnifying glass icon.
+In some cases, it may be useful to hide the label visually. Note: labels can be hidden only if the field function is sufficiently clear and understandable in its context: for example, a search field next to a magnifying glass icon.
 
 Even though the label is visually hidden, it should still be accessible to assistive technologies.
 
-This method consists of using a CSS class (using the <code>visually-hidden</code> class from Bootstrap/Boosted) allowing accessible hiding. Using accessible masking allows the element to be hidden from view, while retaining its vocalization by assistive tools or technologies (AT). Be careful, do not use classic CSS masking (<code>display: none;</code> or <code>visibility: hidden;</code>) because the element will also be hidden for screen readers.
+This method uses a CSS class (for example, the <code>visually-hidden</code> class from Bootstrap/Boosted) to hide content accessibly. Using accessible hiding keeps the element visually hidden while remaining available to assistive technologies (e.g. spoken by screen readers). Avoid using <code>display:none</code> or <code>visibility:hidden</code>, because these also hide content from screen readers.
 
 See the example at <a href="../../../web/components-examples/accessible-hiding/" target="_blank">accessible masking example</a> for more information.
 
@@ -101,118 +91,103 @@ For example, we can use accessible hiding for a search field, if a button with t
 
 Sample code:
 
-<pre>
-  <code class="html">
-    &lt;label for="recherche" class="visually-hidden"&gt;Search: &lt;/label&gt;
-    &lt;input type="text" name="search" id="search"&gt;
-    &lt;button type="submit"&gt;Search&lt;/button&gt;
-  </code>
-</pre> 
+```html
+<label for="search" class="visually-hidden">Search:</label>
+<input type="text" name="search" id="search">
+<button type="submit">Search</button>
+```
 
 ### ARIA attributes
 
-It is also possible to use the <code>aria-label</code> and <code>aria-labelledby</code> attributes to label form fields, as these attributes are well supported by browsers and in recent assistive technology:
+It is also possible to use the <code>aria-label</code> and <code>aria-labelledby</code> attributes to label form fields. Support is generally good but varies by assistive technology and browser version, so test with your target assistive technologies (NVDA, JAWS, VoiceOver, TalkBack, etc.) and browsers.
 
 <ul>
-   <li>The <code>aria-labelledby</code> attribute is used to specify the <code>id</code> of an element present in the code that will be used to label the field.
-   </li>
+   <li>The <code>aria-labelledby</code> attribute is used to specify the <code>id</code> of an element present in the code that will be used to label the field.</li>
    <li>The <code>aria-label</code> attribute allows you to directly specify a label in the form of a character string. Please note that the information will not be given visually.</li>
 </ul>
 
 A possible example:
 
-<pre>
-  <code class="html">
-    &lt;input type="text" name="search" aria-labelledby="search"&gt;
-    &lt;button id="search" type="submit" class="icon-loup" aria-label="Search"&gt;&lt;/button&gt;
-  </code>
-</pre>
+```html
+<h2 id="id-search">Rechercher</h2>
+<input type="text" name="search" aria-labelledby="id-search">
+<button type="submit" class="icon-search" aria-label="Search"></button>
+```
 
 ### The title attribute
 
-The <code>title</code> attribute is used to label a form field in an accessible manner. It will also trigger the display of a tooltip when hovering over the element with the mouse, good thing for the cognitively impaired, digital novices.
+The <code>title</code> attribute can provide a tooltip but is not a reliable substitute for a label. It will also trigger the display of a tooltip when hovering over the element with the mouse, which can help users with cognitive impairments and novice users. In addition, <code>title</code> is often not exposed to keyboard-only users and not consistently read by screen readers.
 
-Be careful, we might be tempted to use the <code>placeholder</code> attribute. This attribute is not robust enough, indeed:
+Never use <code>placeholder</code> as the only label; <code>placeholders</code> are not a replacement for labels and are not reliably read or persistent:
 
 <ul>
    <li>the <code>placeholder</code> text that displays in the field is usually not high enough contrast;
    </li>
-   <li>it is erased when entering the content in the control (causing difficulties in the event of a deficiency
-     cognitive);
+   <li>it is erased when entering the content in the control (causing difficulties for users with cognitive impairments);
    </li>
    <li>the <code>placeholder</code> is not always read by assistive technology;</li>
    <li>it makes corrections difficult in case of error if there is no label displayed;</li>
 </ul>
 
-On the other hand, the <code>placeholder</code> can serve as a guide, an aid to fill in the field without this information being absolutely necessary (for example, proposing a valid expected value): do not hesitate to use for this type of need.
+On the other hand, the <code>placeholder</code> can serve as a guide, an aid to fill in the field without this information being absolutely necessary (for example, proposing a valid expected value). Use placeholders for such purposes only (as examples), not as labels.
 
 ## Associating related controls
 
-When necessary, it is important to group fields of the same nature, this will make the whole form more understandable.
+When necessary, group fields of the same type. This makes the form easier to understand.
 Most of the time, we group our radio buttons, or our checkboxes, in order to associate a header with these elements.
 
 To group them, we use the <code>fieldset</code> element, which will have as its first child the <code>legend</code> element that will serve as the header for our grouped fields.
 
 ### Example
 
-In our registration form, we can add the gender of our user. For this, we will implement radio buttons, and group them with the header <strong>Gender</strong>
+In our registration form, we can add the gender of our user. For this, we will implement radio buttons, and group them with the header <strong>Returning customer?</strong>
 
 <div class="col-md-8">
   <form id="formulaire3" class="border border-secondary p-3 my-2">
     [...]
     <fieldset>
-      <legend>Gender</legend>
+      <legend>Returning customer?</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M">
-        <label class="form-check-label" for="M">Mr</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="yes" value="yes">
+        <label class="form-check-label" for="yes">Yes</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme">
-        <label class="form-check-label" for="Mme">Mrs</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="No-binary" >
-        <label class="form-check-label" for="Non-binaire">no-binary</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="no" value="no">
+        <label class="form-check-label" for="no">No</label>
       </div>
     </fieldset>
   </form>
 </div>
 
-Sample code&nbsp;: 
+Sample code:
 
-<pre>
-  <code class="html">
-    &lt;div class="col-md-8"&gt;
-    &lt;form id="formulaire3" class="border border-secondary p-3 my-2"&gt;
-      [...]
-      &lt;fieldset&gt;
-        &lt;legend&gt;Gender&lt;/legend&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="M" value="M"&gt;
-          &lt;label class="form-check-label" for="M"&gt;Mr&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Mme" value="Mme"&gt;
-          &lt;label class="form-check-label" for="Mme"&gt;Mrs&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions" id="Non-binaire" value="No-binary" &gt;
-          &lt;label class="form-check-label" for="Non-binaire"&gt;no-binary&lt;/label&gt;
-        &lt;/div&gt;
-      &lt;/fieldset&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
-  </code>
-</pre>
+```html
+<div class="col-md-8">
+  <form id="formulaire3" class="border border-secondary p-3 my-2">
+    [...]
+    <fieldset>
+      <legend>Returning customer?</legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="yes" value="yes">
+        <label class="form-check-label" for="yes">Yes</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="no" value="no">
+        <label class="form-check-label" for="no">No</label>
+      </div>
+    </fieldset>
+  </form>
+</div>
+```
 
 ## Specify the expected type or format
 
-To help the user, it is also important to specify the expected type or format when necessary. For example, for a date of birth, you must, if necessary, indicate the input format (dd/mm/yyyy).
+To help the user, it is also important to specify the expected type or format when necessary. For example, indicate the expected input format for a date of birth when needed (e.g. dd/mm/yyyy).
 
 To inform the user, one can:
 
 <ul>
-   <li>provide instructions in label</li>
+   <li>provide instructions in the label</li>
    <li>use the <code>aria-labelledby</code> or <code>aria-describedby</code> attribute</li>
 </ul>
 
@@ -221,7 +196,7 @@ To inform the user, one can:
 
 For our registration form, we are going to add a password field, specifying the format that we want.
 
-When adding a password field, it is also important to allow the possibility of displaying or hiding the password. This allows users with motor, attention or cognitive disorders to avoid possible input errors.
+When adding a password field, it is also important to allow the possibility of displaying or hiding the password. This helps users with motor, attention, or cognitive impairments avoid input errors.
 
 <div class="col-md-8">
   <form id="formulaire4" class="border border-secondary p-3 my-2">
@@ -243,53 +218,51 @@ When adding a password field, it is also important to allow the possibility of d
         </button>
       </span>
     </div>
-    <div id="passwordHelpBlock" class="form-text">
-        Your password must contain at least 6 characters.
-    </div>
+    <p id="passwordHelpBlock" class="form-text mb-0">
+      Your password must contain at least 6 characters.
+    </p>
   </form>
 </div>
 
-Sample code&nbsp;: 
+Sample code:
 
-<pre>
-  <code class="html">
-  &lt;div class="col-md-8"&gt;
-    &lt;form id="formulaire4" class="border border-secondary p-3 my-2"&gt;
-      &lt;label for="password" class="form-label"&gt;Password&lt;/label&gt;
-      &lt;div class="mb-2 input-group"&gt;
-        &lt;input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/&gt;
-        &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility" title="Show password" &gt;
-            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
-              [...]
-            &lt;/svg&gt;
-          &lt;/button&gt;
-        &lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div id="passwordHelpBlock" class="form-text"&gt;
-          Your password must contain at least 6 characters.
-        &lt;/div&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
-  </code>
-</pre>
+```html
+<div class="col-md-8">
+  <form id="formulaire4" class="border border-secondary p-3 my-2">
+    <label for="password" class="form-label">Password</label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password" aria-describedby="passwordHelpBlock"/>
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility" title="Show password" >
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            [...]
+          </svg>
+        </button>
+      </span>
+    </div>
+    <p id="passwordHelpBlock" class="form-text mb-0">
+      Your password must contain at least 6 characters.
+    </p>
+  </form>
+</div>
+```
 
 ## Complete example
 
 The complete example with all the elements that we have reviewed. In the second part, we will see how to validate the form and manage error messages.
-For the rest of the exercise and to complete our registration form, we have added fields for the address (address, city, postal code).
+For the rest of the exercise and to complete our registration form, we have added fields for the address (address, city, zip code).
 
 <div class="col-md-8">
   <form id="formulaire_final" class="border border-secondary p-3 my-2">
     <div class="mb-2">
-      <label for="email_final" class="form-label">E-mail</label>
+      <label for="email_final" class="form-label">Email</label>
       <input type="text" class="form-control" id="email_final"/>
     </div>
     <label for="password_final" class="form-label">Password</label>
     <div class="mb-2 input-group">
       <input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/>
       <span class="input-group-text">
-        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Show Password" >
+        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Show password" >
           <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000">
             <defs>
               <style>
@@ -303,9 +276,9 @@ For the rest of the exercise and to complete our registration form, we have adde
         </button>
       </span>
     </div>
-    <div id="passwordHelpBlock_final" class="form-text">
-        Your password must contain at least 6 characters.
-    </div>
+    <p id="passwordHelpBlock_final" class="form-text mb-0">
+      Your password must contain at least 6 characters.
+    </p>
     <div class="mb-2">
       <label for="name_final" class="form-label">Last Name</label>
       <input type="text" class="form-control" id="name_final"/>
@@ -315,18 +288,14 @@ For the rest of the exercise and to complete our registration form, we have adde
       <input type="text" class="form-control" id="firstname_final"/>
     </div>
     <fieldset>
-      <legend>Gender</legend>
+      <legend>Returning customer?</legend>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M">
-        <label class="form-check-label" for="M_final">Mr</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="yes_final" value="yes">
+        <label class="form-check-label" for="yes_final">Yes</label>
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme">
-        <label class="form-check-label" for="Mme_final">Mrs</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Non-binaire_final" value="Non-binaire" >
-        <label class="form-check-label" for="Non-binaire_final">Non-binary</label>
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="no_final" value="no">
+        <label class="form-check-label" for="no_final">No</label>
       </div>
     </fieldset>
     <div class="mb-2">
@@ -342,76 +311,71 @@ For the rest of the exercise and to complete our registration form, we have adde
       <input type="text" class="form-control" id="ville_final"/>
     </div>
     <div class="mb-2">
-      <label for="cp_final" class="form-label">Zip code</label>
+      <label for="cp_final" class="form-label">Zip Code</label>
       <input type="text" class="form-control" id="cp_final"/>
     </div>
   </form>
 </div>
 
-The final code : 
-<pre>
-  <code class="html">
-  &lt;div class="col-md-8"&gt;
-    &lt;form id="formulaire_final" class="border border-secondary p-3 my-2"&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="email_final" class="form-label"&gt;E-mail&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="email_final"/&gt;
-      &lt;/div&gt;
-      &lt;label for="password_final" class="form-label"&gt;Password &lt;/label&gt;
-      &lt;div class="mb-2 input-group"&gt;
-        &lt;input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/&gt;
-        &lt;span class="input-group-text"&gt;
-          &lt;button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Show password" &gt;
-            &lt;svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"&gt;&lt;/svg&gt;
-          &lt;/button&gt;
-        &lt;/span&gt;
-      &lt;/div&gt;
-      &lt;div id="passwordHelpBlock_final" class="form-text"&gt;
-          Your password must contain at least 6 characters.
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="name_final" class="form-label"&gt;Last Name&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="name_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="firstname_final" class="form-label"&gt;First Name&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="firstname_final"/&gt;
-      &lt;/div&gt;
-      &lt;fieldset&gt;
-        &lt;legend&gt;Gender&lt;/legend&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="M_final" value="M"&gt;
-          &lt;label class="form-check-label" for="M_final"&gt;Mr&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Mme_final" value="Mme"&gt;
-          &lt;label class="form-check-label" for="Mme_final"&gt;Mrs&lt;/label&gt;
-        &lt;/div&gt;
-        &lt;div class="form-check form-check-inline"&gt;
-          &lt;input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="Non-binaire_final" value="No-binary" &gt;
-          &lt;label class="form-check-label" for="Non-binaire_final"&gt;No-binary&lt;/label&gt;
-        &lt;/div&gt;
-      &lt;/fieldset&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="adresse_final" class="form-label"&gt;Address&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="adresse_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="adresse2_final" class="form-label"&gt;Additional address&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="adresse2_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="ville_final" class="form-label"&gt;City&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="ville_final"/&gt;
-      &lt;/div&gt;
-      &lt;div class="mb-2"&gt;
-        &lt;label for="cp_final" class="form-label"&gt;Zip Code&lt;/label&gt;
-        &lt;input type="text" class="form-control" id="cp_final"/&gt;
-      &lt;/div&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
-  </code>
-</pre>
+The final code:
+
+```html
+<div class="col-md-8">
+  <form id="formulaire_final" class="border border-secondary p-3 my-2">
+    <div class="mb-2">
+      <label for="email_final" class="form-label">Email</label>
+      <input type="text" class="form-control" id="email_final"/>
+    </div>
+    <label for="password_final" class="form-label">Password</label>
+    <div class="mb-2 input-group">
+      <input type="password" class="form-control" id="password_final" aria-describedby="passwordHelpBlock_final"/>
+      <span class="input-group-text">
+        <button type="button" class="btn btn-icon btn-no-outline btn-sm" id="password_visibility_final" title="Show password" >
+          <svg aria-hidden="true" focusable="false" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 1000 1000"></svg>
+        </button>
+      </span>
+    </div>
+    <p id="passwordHelpBlock_final" class="form-text mb-0">
+      Your password must contain at least 6 characters.
+    </p>
+    <div class="mb-2">
+      <label for="name_final" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="name_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="firstname_final" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="firstname_final"/>
+    </div>
+    <fieldset>
+      <legend>Returning customer?</legend>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="yes_final" value="yes">
+        <label class="form-check-label" for="yes_final">Yes</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions_final" id="no_final" value="no">
+        <label class="form-check-label" for="no_final">No</label>
+      </div>
+    </fieldset>
+    <div class="mb-2">
+      <label for="adresse_final" class="form-label">Address</label>
+      <input type="text" class="form-control" id="adresse_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="adresse2_final" class="form-label">Additional address</label>
+      <input type="text" class="form-control" id="adresse2_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="ville_final" class="form-label">City</label>
+      <input type="text" class="form-control" id="ville_final"/>
+    </div>
+    <div class="mb-2">
+      <label for="cp_final" class="form-label">Zip Code</label>
+      <input type="text" class="form-control" id="cp_final"/>
+    </div>
+  </form>
+</div>
+```
 
 ## Link to part two
 
