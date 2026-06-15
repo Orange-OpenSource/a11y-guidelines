@@ -2,7 +2,7 @@
 title: "Form part 1 - Structure your form"
 abstract: "Making an accessible form, part 1: labeling your fields and structuring your form"
 date: "2022-12-12"
-updateDate: "2026-01-01"
+updateDate: "2026-06-19"
 tags:
   - web
   - intermediate
