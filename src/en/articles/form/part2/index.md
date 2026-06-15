@@ -2,7 +2,7 @@
 title: "Form part 2 - Submit your form"
 abstract: "Making a form accessible, part 2: Submitting your form, required field, error handling and the importance of the autocomplete attribute"
 date: "2023-02-21"
-updateDate: "2026-01-01"
+updateDate: "2026-06-19"
 tags:
   - web
   - intermediate
