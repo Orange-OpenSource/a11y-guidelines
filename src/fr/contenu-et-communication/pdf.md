@@ -25,22 +25,22 @@ Ces critères sont utiles aux personnes créant des documents PDF sans utiliser 
 
 ### Structure du document
 * Le document doit contenir a minima un titre de document et une langue par défaut (les changements de langues seront indiqués dans le document).
-  * Voir les critères WCAG associés <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF16.html" title="Technique PDF16 des WCAG 2.0" aria-label="Technique PDF16 des WCAG 2.0"><abbr>PDF16</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF17.html" title="Technique PDF17 des WCAG 2.0" aria-label="Technique PDF17 des WCAG 2.0"><abbr>PDF17</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF18.html" title="Technique PDF18 des WCAG 2.0" aria-label="Technique PDF18 des WCAG 2.0"><abbr>PDF18</abbr></a>.
+  * Voir les critères WCAG associés <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF16" title="Technique PDF16 des WCAG 2.2" aria-label="Technique PDF16 des WCAG 2.2"><abbr>PDF16</abbr></a>, <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF17" title="Technique PDF17 des WCAG 2.2" aria-label="Technique PDF17 des WCAG 2.2"><abbr>PDF17</abbr></a>, <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF18" title="Technique PDF18 des WCAG 2.2" aria-label="Technique PDF18 des WCAG 2.2"><abbr>PDF18</abbr></a>.
 <br>
 
 * Le document est structuré à l’aide de titres, par l’usage approprié de «&nbsp;tags&nbsp;» (balises) titres. De plus, les documents longs proposeront des signets afin de faciliter la navigation.
-  * Voir les critères WCAG associés <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF2.html" title="Technique PDF2 des WCAG 2.0" aria-label="Technique PDF2 des WCAG 2.0"><abbr>PDF2</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF9.html" title="Technique PDF9 des WCAG 2.0" aria-label="Technique PDF9 des WCAG 2.0"><abbr>PDF9</abbr></a>.
+  * Voir les critères WCAG associés <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF2" title="Technique PDF2 des WCAG 2.2" aria-label="Technique PDF2 des WCAG 2.2"><abbr>PDF2</abbr></a>, <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF9" title="Technique PDF9 des WCAG 2.2" aria-label="Technique PDF9 des WCAG 2.2"><abbr>PDF9</abbr></a>.
 <br>
 
 * L’usage d’en-têtes et de pieds de page doit permettre à l’utilisateur de se situer dans le document.
-  * Voir le critère WCAG associé <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF14.html" title="Technique PDF14 des WCAG 2.0" aria-label="Technique PDF14 des WCAG 2.0"><abbr>PDF14</abbr></a>.
+  * Voir le critère WCAG associé <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF14" title="Technique PDF14 des WCAG 2.2" aria-label="Technique PDF14 des WCAG 2.2"><abbr>PDF14</abbr></a>.
 <br>
 
 ### Navigation clavier et ordre de lecture
 
 * L’ordre de lecture restitué par un outil d’assistance, ainsi que l’ordre de la navigation clavier (par tabulation) reflètent la structure du document. 
 * La navigation au clavier doit être possible dans l’ensemble du document sans blocage (empêcher les "pièges" clavier).
-Voir les critères WCAG associés <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF3.html" title="Technique PDF3 des WCAG 2.0" aria-label="Technique PDF3 des WCAG 2.0"><abbr>PDF3</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/G21.html" title="Technique G21 des WCAG 2.0" aria-label="Technique G21 des WCAG 2.0"><abbr>G21</abbr></a>.
+Voir les critères WCAG associés <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF3" title="Technique PDF3 des WCAG 2.2" aria-label="Technique PDF3 des WCAG 2.2"><abbr>PDF3</abbr></a>, <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/general/G21" title="Technique G21 des WCAG 2.2" aria-label="Technique G21 des WCAG 2.2"><abbr>G21</abbr></a>.
 
 ### Images
 
@@ -48,7 +48,7 @@ Voir les critères WCAG associés <a hreflang="en" href="https://www.w3.org/TR/W
 * Les documents scannés sont convertis correctement en texte par reconnaissance optique des caractères (OCR). 
 * Les images décoratives sont cachées.
 
-Voir les critères WCAG associés  <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF1.html" title="Technique PDF1 des WCAG 2.0" aria-label="Technique PDF1 des WCAG 2.0"><abbr>PDF1</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF4.html" title="Technique PDF4 des WCAG 2.0" aria-label="Technique PDF4 des WCAG 2.0"><abbr>PDF4</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF7.html" title="Technique PDF7 des WCAG 2.0" aria-label="Technique PDF7 des WCAG 2.0"><abbr>PDF7</abbr></a>.
+Voir les critères WCAG associés  <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF1" title="Technique PDF1 des WCAG 2.2" aria-label="Technique PDF1 des WCAG 2.2"><abbr>PDF1</abbr></a>, <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF4" title="Technique PDF4 des WCAG 2.2" aria-label="Technique PDF4 des WCAG 2.2"><abbr>PDF4</abbr></a>, <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF7" title="Technique PDF7 des WCAG 2.2" aria-label="Technique PDF7 des WCAG 2.2"><abbr>PDF7</abbr></a>.
 
 ### Tableaux
 
@@ -57,19 +57,19 @@ Voir les critères WCAG associés  <a hreflang="en" href="https://www.w3.org/TR/
 * Toutes les lignes contiennent le même nombre de cellules. 
 * Les cellules fusionnées indiquent de manière appropriée une fusion par ligne ou colonne (attribut `rowSpan` ou `colSpan`). 
 
-Voir le critère WCAG associé <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF6.html" title="Technique PDF6 des WCAG 2.0" aria-label="Technique PDF6 des WCAG 2.0"><abbr>PDF6</abbr></a>.
+Voir le critère WCAG associé <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF6" title="Technique PDF6 des WCAG 2.2" aria-label="Technique PDF6 des WCAG 2.2"><abbr>PDF6</abbr></a>.
 
 ### Liens
 
 Les intitulés de liens sont explicites ou les liens possèdent une alternative explicite.
 
-Voir les critères WCAG associés <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF11.html" title="Technique PDF11 des WCAG 2.0" aria-label="Technique PDF11 des WCAG 2.0"><abbr>PDF11</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF13.html" title="Technique PDF13 des WCAG 2.0" aria-label="Technique PDF13 des WCAG 2.0"><abbr>PDF13</abbr></a>.
+Voir les critères WCAG associés <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF11" title="Technique PDF11 des WCAG 2.2" aria-label="Technique PDF11 des WCAG 2.2"><abbr>PDF11</abbr></a>, <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF13" title="Technique PDF13 des WCAG 2.2" aria-label="Technique PDF13 des WCAG 2.2"><abbr>PDF13</abbr></a>.
 
 ### Listes
 
 Les listes utilisent les «&nbsp;tags&nbsp;» (balises) appropriés (exemples : `L`, `LI`, `Lbl` et `LBody`).
 
-Voir le critère WCAG associé <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF21.html" title="Technique PDF21 des WCAG 2.0" aria-label="Technique PDF21 des WCAG 2.0"><abbr>PDF21</abbr></a>.
+Voir le critère WCAG associé <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF21" title="Technique PDF21 des WCAG 2.2" aria-label="Technique PDF21 des WCAG 2.2"><abbr>PDF21</abbr></a>.
 
 ### Formulaires
 
@@ -79,7 +79,7 @@ Voir le critère WCAG associé <a hreflang="en" href="https://www.w3.org/TR/WCAG
 * Les champs sont accessibles et modifiables au clavier. 
 * Les formulaires pouvant être soumis possèdent un bouton de soumission.
 
-Voir les critères WCAG associés <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF5.html" title="Technique PDF5 des WCAG 2.0" aria-label="Technique PDF5 des WCAG 2.0"><abbr>PDF5</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF10.html" title="Technique PDF10 des WCAG 2.0" aria-label="Technique PDF10 des WCAG 2.0"><abbr>PDF10</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF12.html" title="Technique PDF12 des WCAG 2.0" aria-label="Technique PDF12 des WCAG 2.0"><abbr>PDF12</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF15.html" title="Technique PDF15 des WCAG 2.0" aria-label="Technique PDF15 des WCAG 2.0"><abbr>PDF15</abbr></a>, <a hreflang="en" href="https://www.w3.org/TR/WCAG20-TECHS/PDF22.html" title="Technique PDF22 des WCAG 2.0" aria-label="Technique PDF22 des WCAG 2.0"><abbr>PDF22</abbr></a>.
+Voir les critères WCAG associés <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF5" title="Technique PDF5 des WCAG 2.2" aria-label="Technique PDF5 des WCAG 2.2"><abbr>PDF5</abbr></a>, <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF10" title="Technique PDF10 des WCAG 2.2" aria-label="Technique PDF10 des WCAG 2.2"><abbr>PDF10</abbr></a>, <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF12" title="Technique PDF12 des WCAG 2.2" aria-label="Technique PDF12 des WCAG 2.2"><abbr>PDF12</abbr></a>, <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF15" title="Technique PDF15 des WCAG 2.2" aria-label="Technique PDF15 des WCAG 2.2"><abbr>PDF15</abbr></a>, <a hreflang="en" href="https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF22" title="Technique PDF22 des WCAG 2.2" aria-label="Technique PDF22 des WCAG 2.2"><abbr>PDF22</abbr></a>.
 
 ### Couleurs
 
