@@ -215,7 +215,10 @@ function manageEventTabPan() {
   }, "1000");
 })();
 
-/* Algolia DocSearch accessibility fixes for NVDA */
+/**
+ * DocSearch Accessibility Enhancements
+ * Adds ARIA labels for screen reader support in search results
+ */
 (function () {
     const lang = Application.lang;
 
@@ -234,7 +237,7 @@ function manageEventTabPan() {
 
     const t = i18n[lang] || i18n.en;
 
-    // Create a hidden live region for NVDA announcements
+    // Live region for screen reader announcements
     const liveRegion = document.createElement('div');
     liveRegion.setAttribute('role', 'status');
     liveRegion.setAttribute('aria-live', 'polite');
@@ -242,9 +245,10 @@ function manageEventTabPan() {
     liveRegion.className = 'visually-hidden';
     document.body.appendChild(liveRegion);
 
+    // Announce message to screen readers
     function announce(message) {
         liveRegion.textContent = '';
-        //Force reflow so NVDA picks up the change
+        // Force reflow for NVDA to detect change
         setTimeout(function () { liveRegion.textContent = message; }, 50);
     }
 
@@ -254,9 +258,26 @@ function manageEventTabPan() {
      * opens the search dialog, so childList: true (without subtree) is enough
      * and avoids unnecessary overhead.
      */
+    let modalWasOpen = false;
+
     const bodyObserver = new MutationObserver(function () {
         const modal = document.querySelector('.DocSearch-Modal');
+
+        // Fix 3 – Focus restoration on modal close.
+        // DocSearch does not return focus to the trigger button when the modal
+        // is closed, causing Tab to restart from the top of the page.
+        // We detect the modal disappearing and restore focus to .DocSearch-Button.
+        if (!modal && modalWasOpen) {
+            modalWasOpen = false;
+            const triggerButton = document.querySelector('.DocSearch-Button');
+            if (triggerButton) {
+                triggerButton.focus();
+            }
+            return;
+        }
+
         if (!modal) return;
+        modalWasOpen = true;
 
         // Fix 1 – aria-label correction.
         // DocSearch hardcodes aria-label="Search" on the <input> in English.
@@ -267,12 +288,90 @@ function manageEventTabPan() {
             input.setAttribute('aria-label', t.inputLabel);
         }
 
+        // Fix 2 – aria-activedescendant management for NVDA.
+        //
+        // Problem: DocSearch sets aria-activedescendant to the first result as
+        // soon as results appear, which causes NVDA to read the result item
+        // instead of echoing the user's typed characters.
+        //
+        // Additionally, DocSearch internally tracks highlighted index (starts
+        // at 0). If we remove aria-activedescendant during typing but DocSearch
+        // keeps index=0, the first ArrowDown advances to item 1 and the first
+        // result is never announced.
+        //
+        // Solution:
+        //  - While typing: remove aria-activedescendant → NVDA echoes chars.
+        //  - First ArrowDown/Up after typing: intercept in capture phase,
+        //    block the event (DocSearch keeps index 0), and manually set
+        //    aria-activedescendant to the first highlighted item → NVDA
+        //    announces the first result.
+        //  - Subsequent arrows: DocSearch handles normally (index 0→1, 1→2…).
+        if (input && !input.dataset.a11yPatched) {
+            input.dataset.a11yPatched = 'true';
+
+            // Ensure the input is reachable via Tab
+            input.setAttribute('tabindex', '0');
+
+            let isNavigating = false;
+
+            // Capture-phase handler on the modal intercepts arrow keys BEFORE
+            // DocSearch's own handler can process them.
+            modal.addEventListener('keydown', function (e) {
+                if (e.target !== input) return;
+
+                if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+                    if (!isNavigating) {
+                        // First arrow press after typing: block DocSearch from
+                        // advancing its internal counter.
+                        isNavigating = true;
+                        e.stopPropagation();
+                        e.preventDefault();
+
+                        // Manually announce the already-highlighted first item
+                        // by setting aria-activedescendant to its ID.
+                        const activeItem = modal.querySelector('[aria-selected="true"]');
+                        if (activeItem) {
+                            input.setAttribute('aria-activedescendant', activeItem.id);
+                        } else {
+                            // Fallback: pick the first hit link (has an ID like docsearch-item-X)
+                            const firstHitLink = modal.querySelector('.DocSearch-Hit a[id]');
+                            if (firstHitLink) {
+                                input.setAttribute('aria-activedescendant', firstHitLink.id);
+                            }
+                        }
+                        return;
+                    }
+                    // Subsequent arrows: let DocSearch handle normally
+                } else {
+                    isNavigating = false;
+                    input.removeAttribute('aria-activedescendant');
+                }
+            }, true); // ← capture phase
+
+            input.addEventListener('input', function () {
+                isNavigating = false;
+                input.removeAttribute('aria-activedescendant');
+            });
+
+            // Observe attribute changes to strip aria-activedescendant
+            // when DocSearch re-applies it after a re-render (during typing)
+            const inputAttrObserver = new MutationObserver(function (mutations) {
+                if (isNavigating) return;
+                mutations.forEach(function (m) {
+                    if (m.attributeName === 'aria-activedescendant' && !isNavigating) {
+                        input.removeAttribute('aria-activedescendant');
+                    }
+                });
+            });
+            inputAttrObserver.observe(input, { attributes: true, attributeFilter: ['aria-activedescendant'] });
+        }
+
         /*
          * Inner observer – watches the modal's entire subtree for DOM changes.
          * Every keystroke causes DocSearch to re-render the result list, so we
          * react to those mutations to determine what to announce:
          *   - If .DocSearch-NoResults is present → announce "no results".
-         *   - If .DocSearch-Hit elements are present → announce the count.
+         *   - If .DocSearch-Hit elements are present → announce the count and sections.
          * Both checks use querySelector/querySelectorAll at call time (not
          * cached) to reflect the current state of the DOM after the mutation.
          */
@@ -285,6 +384,36 @@ function manageEventTabPan() {
 
             const hits = modal.querySelectorAll('.DocSearch-Hit');
             if (hits.length > 0) {
+                // Link each result to its section header for proper announcement order
+                let sectionIdCounter = 0;
+                let titleIdCounter = 0;
+
+                hits.forEach(function (hit) {
+                    const listbox = hit.parentElement;
+                    if (!listbox) return;
+                    const sourceEl = listbox.previousElementSibling;
+                    if (!sourceEl || !sourceEl.classList.contains('DocSearch-Hit-source')) return;
+
+                    // Assign ID to section if missing (reuse across same section results)
+                    let sourceId = sourceEl.getAttribute('id');
+                    if (!sourceId) {
+                        sourceId = 'docsearch-section-' + (sectionIdCounter++);
+                        sourceEl.setAttribute('id', sourceId);
+                    }
+
+                    // Assign ID to result title
+                    const titleEl = hit.querySelector('.DocSearch-Hit-title');
+                    if (!titleEl) return;
+                    let titleId = titleEl.getAttribute('id');
+                    if (!titleId) {
+                        titleId = 'docsearch-title-' + (titleIdCounter++);
+                        titleEl.setAttribute('id', titleId);
+                    }
+
+                    // Link section to result via aria-labelledby (reads in order: section, then title)
+                    hit.setAttribute('aria-labelledby', sourceId + ' ' + titleId);
+                });
+
                 announce(t.resultsCount(hits.length));
             }
         });
