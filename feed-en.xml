@@ -12,6 +12,14 @@
   </author>
   
   <entry>
+    <title>Form part 2 - Submit your form</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/form/part2/"/>
+    <updated>2026-06-19T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/form/part2/</id>
+    <content xml:lang="en" type="html">Making a form accessible, part 2: Submitting your form, required field, error handling and the importance of the autocomplete attribute</content>
+  </entry>
+  
+  <entry>
     <title>Form part 1 - Structure your form</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/form/part1/"/>
     <updated>2026-06-19T00:00:00Z</updated>
@@ -433,14 +441,6 @@
     <updated>2023-03-31T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/watch-february-march-2023/</id>
     <content xml:lang="en" type="html">#a11y anthology, February - March 2023</content>
-  </entry>
-  
-  <entry>
-    <title>Form part 2 - Submit your form</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/form/part2/"/>
-    <updated>2023-02-21T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/form/part2/</id>
-    <content xml:lang="en" type="html">Making a form accessible, part 2: Submitting your form, required field, error handling and the importance of the autocomplete attribute</content>
   </entry>
   
   <entry>

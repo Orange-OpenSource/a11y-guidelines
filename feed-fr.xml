@@ -12,6 +12,14 @@
   </author>
   
   <entry>
+    <title>Formulaire partie 2 - Soumettre son formulaire</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/formulaires/part2/"/>
+    <updated>2026-06-19T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/formulaires/part2/</id>
+    <content xml:lang="fr" type="html">Faire un formulaire accessible, partie 2 : Soumettre son formulaire, champ obligatoire, gestion des erreurs et l&#39;importance de l&#39;attribut autocomplete</content>
+  </entry>
+  
+  <entry>
     <title>Formulaire partie 1 - Structurer son formulaire</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/formulaires/part1/"/>
     <updated>2026-06-19T00:00:00Z</updated>
@@ -457,14 +465,6 @@
     <updated>2023-02-05T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/veille-octobre-janvier-2023/</id>
     <content xml:lang="fr" type="html">Florilège de ressources en #a11y, Octobre 2022 -Janvier 2023</content>
-  </entry>
-  
-  <entry>
-    <title>Formulaire partie 2 - Soumettre son formulaire</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/formulaires/part2/"/>
-    <updated>2023-01-24T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/formulaires/part2/</id>
-    <content xml:lang="fr" type="html">Faire un formulaire accessible, partie 2 : Soumettre son formulaire, champ obligatoire, gestion des erreurs et l&#39;importance de l&#39;attribut autocomplete</content>
   </entry>
   
   <entry>
