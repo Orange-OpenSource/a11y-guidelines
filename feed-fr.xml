@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2026-06-09T00:00:00Z</updated>
+  <updated>2026-06-19T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Formulaire partie 1 - Structurer son formulaire</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/formulaires/part1/"/>
+    <updated>2026-06-19T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/formulaires/part1/</id>
+    <content xml:lang="fr" type="html">Faire un formulaire accessible, partie 1 : labéliser ses champs et structurer son formulaire</content>
+  </entry>
   
   <entry>
     <title>Page de résultats de recherche</title>
@@ -457,14 +465,6 @@
     <updated>2023-01-24T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/formulaires/part2/</id>
     <content xml:lang="fr" type="html">Faire un formulaire accessible, partie 2 : Soumettre son formulaire, champ obligatoire, gestion des erreurs et l&#39;importance de l&#39;attribut autocomplete</content>
-  </entry>
-  
-  <entry>
-    <title>Formulaire partie 1 - Structurer son formulaire</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/formulaires/part1/"/>
-    <updated>2022-12-12T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/formulaires/part1/</id>
-    <content xml:lang="fr" type="html">Faire un formulaire accessible, partie 1 : labéliser ses champs et structurer son formulaire</content>
   </entry>
   
   <entry>
