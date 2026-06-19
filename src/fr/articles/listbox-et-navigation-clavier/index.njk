@@ -12,10 +12,10 @@ js:
   - script.js
 ---
 
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 <p>Pour cet article, nous repartons de <a href="../listbox-avec-cases-a-cocher/">l’exemple sur les <span lang="en">listbox</span> ou zone de liste avec cases à cocher</a>. L’objectif est d’améliorer la navigation au clavier afin de se rapprocher des spécifications <i lang="en">design patterns</i> ou modèle de conception du <abbr>W3C</abbr>/<abbr>WAI</abbr>.</p>
 
-<h2>Les patterns <abbr>ARIA</abbr></h2>
+<h2 id="les-patterns-aria">Les patterns <abbr>ARIA</abbr></h2>
 <p>Le <abbr>W3C</abbr> maintient en ligne des spécifications qui décrivent comment doivent se comporter les composants <abbr>ARIA</abbr>&nbsp;: <a href="https://www.w3.org/WAI/ARIA/apg/patterns/" hreflang="en" lang="en"><abbr>WAI</abbr>-<abbr>ARIA</abbr> Authoring Practices Guide</a>.</p>
 <p>La <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/#keyboardinteraction" hreflang="en">spécification concernant les <i lang="en">listbox</i></a> nous apprend, par exemple, que&nbsp;:</p>
 <ul>
@@ -26,7 +26,7 @@ js:
     <li>Les touches <kbd>Début</kbd> et <kbd>Fin</kbd> doivent permettre de sélectionner les éléments depuis le début ou la fin de la liste.</li>
 </ul>
 
-<h2>Exemple</h2>
+<h2 id="exemple">Exemple</h2>
 <div class="row">
   <ul role="listbox" tabindex="0" class="col-md-8">
       <li tabindex="-1" role="option" aria-checked="false">
@@ -131,7 +131,7 @@ js:
   </ul>
 </div>
 
-<h2>Implémentation</h2>
+<h2 id="implementation">Implémentation</h2>
 <p>La fonctionnalité permettant de sélectionner automatiquement l’élément dont l’utilisateur tape les premières lettres n’est pas forcément simple à implémenter. Voici un exemple qui utilise <code>XPath</code>.</p>
 <p>La première chose à faire est d’écouter le clavier lorsque le focus est positionné sur la liste. En fonction de la touche pressée, on effectue une action (déplacement de l’élément sélectionné, sélection d’un élément…).</p>
 
