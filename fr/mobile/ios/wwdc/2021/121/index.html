@@ -60,7 +60,7 @@
   
 
 <div class="navbar navbar-expand-md" data-bs-theme="dark">
-  <nav id="main-menu" class="container-lg justify-content-md-start align-items-center" role="navigation" aria-label="Navigation principale">
+  <nav id="main-menu" class="container-lg justify-content-md-start align-items-center" role="navigation" aria-label="Navigation principale" tabindex="-1">
     <a href="/fr/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
       <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
     </a>
@@ -121,7 +121,7 @@
       </ul>
     </div>
 
-    <div id="search-input"></div>
+    <div id="search-input" tabindex="-1"></div>
 
   </nav>
 </div>
@@ -207,7 +207,7 @@
   <div class="container-lg pt-4">
       <div class="row">
         
-        <main id="main-content" class="col-md-9" role="main">
+        <main id="main-content" class="col-md-9" role="main" tabindex="-1">
           
           <div class="mt-4">
           <h1>WWDC 2021 : Optimiser VoiceOver dans un contexte riche en données</h1>
@@ -229,7 +229,7 @@
 </li>
 </ul>
 <p><br><br></p>
-<h2 id="introduction-0020" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=20">Introduction (00:20)</a> <a class="header-anchor" href="#introduction-0020" id="heading-1925" aria-labelledby="heading-1925">#</a></h2>
+<h2 id="introduction-0020" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=20">Introduction (00:20)</a> <a class="header-anchor" href="#introduction-0020" id="heading-1922" aria-labelledby="heading-1922">#</a></h2>
 <p>L'utilisation de <span lang="en">VoiceOver</span> pour présenter un ensemble de données peut devenir rapidement très problématique si on veut absolument vocaliser chacun des éléments affichés sans que cela ne soit réellement le souhait de l'utilisateur.<br>
 <img src="../../../../images/iOSdev/wwdc21-121-Intro1.png" alt="" class="img-fluid"><br>
 Pour bien comprendre le <strong>fournisseur de contenu personnalisé</strong>, une application <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=37">initialement sans cette fonctionnalité</a> est exposée pour mettre en avant les manquements à combler et optimiser ainsi son utilisation future.</p>
@@ -237,7 +237,7 @@ Pour bien comprendre le <strong>fournisseur de contenu personnalisé</strong>, u
 <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=110"></p>
 <p><img src="../../../../images/iOSdev/wwdc21-121-Intro2.png" alt="Accès à l'extrait de la vidéo mentionnant le protocole et la classe utilisées." class="img-fluid"><br>
 <br><br></p>
-<h2 id="fonctionnement-0229" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=149">Fonctionnement (02:29)</a> <a class="header-anchor" href="#fonctionnement-0229" id="heading-1926" aria-labelledby="heading-1926">#</a></h2>
+<h2 id="fonctionnement-0229" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=149">Fonctionnement (02:29)</a> <a class="header-anchor" href="#fonctionnement-0229" id="heading-1923" aria-labelledby="heading-1923">#</a></h2>
 <p>L'implémentation du <strong>fournisseur de contenu personnalisé</strong> est immédiatement mise en évidence par une <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=155"><code>vocalisation spécifique</code></a> réalisée automatiquement par <span lang="en">VoiceOver</span> qui, par ce biais, suggère l'utilisation du rotor pour obtenir de plus amples informations si besoin.</p>
 <p><img src="../../../../images/iOSdev/wwdc21-121-Using1.png" alt="" class="img-fluid"><br>
 L'utilisateur est ainsi averti que des informations complémentaires sont disponibles en sélectionnant l'item du rotor intitulé <code>Plus de contenus</code>.<br>
@@ -246,7 +246,7 @@ Il suffit ensuite de faire glisser un doigt verticalement pour faire défiler su
 <p>La fonctionnalité <strong>fournisseur de contenu personnalisé</strong> doit être activée par l'utilisateur dans ses réglages pour être détectée par le lecteur d'écran ⟹ <a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=264">🎬</a></p>
 <p><img src="../../../../images/iOSdev/wwdc21-121-Using3.png" alt="" class="img-fluid"><br>
 <br><br></p>
-<h2 id="programmation-avec-uikit-0457" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=297">Programmation avec UIKit (04:57)</a> <a class="header-anchor" href="#programmation-avec-uikit-0457" id="heading-1927" aria-labelledby="heading-1927">#</a></h2>
+<h2 id="programmation-avec-uikit-0457" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=297">Programmation avec UIKit (04:57)</a> <a class="header-anchor" href="#programmation-avec-uikit-0457" id="heading-1924" aria-labelledby="heading-1924">#</a></h2>
 <p>Pour implémenter le <strong>fournisseur de contenu personnalisé</strong> à l'exemple proposé, quelques étapes indispensables sont nécessaires :</p>
 <ul>
 <li>
@@ -267,7 +267,7 @@ Il suffit ensuite de faire glisser un doigt verticalement pour faire défiler su
 <p><img src="../../../../images/iOSdev/wwdc21-121-UIKit2.png" alt="" class="img-fluid"></p>
 <p>La <a href="../../../developpement/#fournisseur-de-contenu-personnalise" style="text-decoration: underline;">section développement iOS</a> de ce site propose un éventuel complément d'informations avec une description réalisée l'an dernier à l'issue de la WWDC20.</p>
 <p><br><br></p>
-<h2 id="programmation-avec-swiftui-0743" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=463">Programmation avec SwiftUI (07:43)</a> <a class="header-anchor" href="#programmation-avec-swiftui-0743" id="heading-1928" aria-labelledby="heading-1928">#</a></h2>
+<h2 id="programmation-avec-swiftui-0743" class="h2-focus"><a href="https://developer.apple.com/videos/play/wwdc2021/10121/?time=463">Programmation avec SwiftUI (07:43)</a> <a class="header-anchor" href="#programmation-avec-swiftui-0743" id="heading-1925" aria-labelledby="heading-1925">#</a></h2>
 <p>La <strong>nouveauté iOS 15</strong> de cette fonctionnalité introduite dans la version iOS précédente réside dans son <strong>adaptation à SwiftUI</strong>.<br>
 <img src="../../../../images/iOSdev/wwdc21-121-SwiftUI1.png" alt="" class="img-fluid"></p>
 <p>L'ensemble des informations à définir est beaucoup plus condensée qu'avec UIKit.<br>
@@ -295,7 +295,7 @@ Il suffit ensuite de faire glisser un doigt verticalement pour faire défiler su
     </div>
     
 
-<footer id="footer" class="o-footer" role="contentinfo">
+<footer id="footer" class="o-footer" role="contentinfo" tabindex="-1">
   <div class="container-lg">
     <nav class="py-2" role="navigation">
       <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
