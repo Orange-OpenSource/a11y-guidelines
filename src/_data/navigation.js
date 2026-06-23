@@ -111,10 +111,10 @@ module.exports = {
         },
         theme: "purple",
         subLevels: [
-          { label: "Word", href: "/en/content-and-communication/word/" },
+          { label: "Write contents", href: "/en/content-and-communication/Write_contents/" },
           {
-            label: "Powerpoint",
-            href: "/en/content-and-communication/powerpoint/",
+            label: "Test contents",
+            href: "/en/content-and-communication/Test_contents/",
           },
           { label: "Excel", href: "/en/content-and-communication/excel/" },
           {
@@ -239,10 +239,10 @@ module.exports = {
         },
         theme: "purple",
         subLevels: [
-          { label: "Word", href: "/fr/contenu-et-communication/word/" },
+          { label: "Rédiger des contenus", href: "/fr/contenu-et-communication/Rediger_Contenus/" },
           {
-            label: "Powerpoint",
-            href: "/fr/contenu-et-communication/powerpoint/",
+            label: "Tester des contenus",
+            href: "/fr/contenu-et-communication/Tester_Contenus/",
           },
           { label: "Excel", href: "/fr/contenu-et-communication/excel/" },
           { label: "Documents PDF", href: "/fr/contenu-et-communication/pdf/" },
