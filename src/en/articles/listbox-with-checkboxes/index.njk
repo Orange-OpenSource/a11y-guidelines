@@ -12,15 +12,15 @@ css:
   - script.css
 ---
 
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 <p>In this example, we start from <a href="../listbox/">the listbox example</a> and we add checkboxes. We will get a component that will allow us to select an item from a list of items, just like a conventional listbox, but that allows us to check some items. We often find it in webmails.</p>
 
-<h2>Caution</h2>
+<h2 id="caution">Caution</h2>
 <p>Although improvements are being made with each new version, support for <abbr>ARIA</abbr> is still partial for all screen readers. Its use should be conditioned by compatibility tests on the target environments (browser/screen reader combinations).</p>
 
-<h2>Implementation</h2>
+<h2 id="implementation">Implementation</h2>
 
-<h3>HTML code</h3>
+<h3 id="html-code">HTML code</h3>
 <p>We take the same listbox from the listbox example and we add the ability to check&nbsp;/ uncheck the items. For this we use the <code>aria-checked</code> attribute.</p>
 
 <pre><code class="html">
@@ -59,7 +59,7 @@ In this case, we must also add the <code>label</code> tag.</p>
 
 <p>Note that the <code>label</code> tag is left blank here intentionally. Indeed, in this component, we do not want the checkbox to be selected if you click on the item label.</p>
 
-<h3>Interactions</h3>
+<h3 id="interactions">Interactions</h3>
 <p>To manage the interaction with the mouse, simply change the value of the <code>aria-checked</code> attribute when a checkbox is clicked.</p>
 
 <pre><code class="js">
@@ -114,7 +114,7 @@ document.querySelectorAll("[type=checkbox]").forEach(checkbox =>{
 });
 </code></pre>
 
-<h2>Example</h2>
+<h2 id="example">Example</h2>
 
 <h3 id="email-list">Email list</h3>
 
@@ -147,18 +147,18 @@ document.querySelectorAll("[type=checkbox]").forEach(checkbox =>{
   </ul>
 </div>
 
-<h3>Testing</h3>
+<h3 id="testing">Testing</h3>
 
 <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Mouse support:</strong> you can select an item by clicking on the text. You can check or uncheck an option by clicking the checkboxes.</p>
 <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Keyboard support:</strong> you can select an item using the arrow up or down keys. You can check or uncheck an option using the spacebar.</p>
 <p><strong><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> Screen reader support:</strong>  same keyboard shortcuts (up, down and space bar). For each item, the screen reader gives us the information whether it is selected / checked or not.</p>
 
 
-<h2>Webmail example</h2>
+<h2 id="webmail-example">Webmail example</h2>
 <p>Here is a static prototype that implements the listbox component of this example and the <a href="../listbox/">listbox example</a>.</p>
 <a class="btn btn-outline-secondary" target="_blank" href="webmail/">Open the webmail</a>
 
-<h2>Links</h2>
+<h2 id="links">Links</h2>
 More information on <abbr>ARIA</abbr> and listbox:
 <ul>
   <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/"><abbr>WAI</abbr>-<abbr>ARIA</abbr> Authoring Practices Guide: listbox</a></li>
