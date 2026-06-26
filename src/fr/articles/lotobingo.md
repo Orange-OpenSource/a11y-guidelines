@@ -134,7 +134,7 @@ On peut commencer petit à petit en l’intégrant aux évolutions en cours.
 6.Que pour l’interne
 Et si une personne phare de l’équipe devient déficiente?
 
-7.Version/interface spécifique pour les personnes handicapées
+7. Version/interface spécifique pour les personnes handicapées
 Ça sert à tout le monde, tu savais que plein de trucs avaient d’abord été développés pour les personnes en situation de handicap? Et t’es bien content aujourd’hui!
 
 8.Je ne crains pas grand-chose (droit, sanction)
