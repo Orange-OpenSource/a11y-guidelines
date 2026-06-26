@@ -13,7 +13,7 @@ tags:
 ## Description
 
 On a tous entendu des raisons pour ne pas fournir un contenu accessible dans les métiers du numérique (développeuses ou développeurs, designeurs ou designeuses, product owneurs, marketeuses ou marketeurs et tous les autres).
-Ces phrases typiques ont tendances à générer une fatigue des acteurs et actrices de l'accessibilité dans leurs pratiques quotidiennes et dans leurs rapports avec leurs clients, leurs collègues ou même leurs familles.
+Ces phrases typiques ont tendance à générer une fatigue des acteurs et actrices de l'accessibilité dans leurs pratiques quotidiennes et dans leurs rapports avec leurs clients, leurs collègues ou même leurs familles.
 Voyons ensemble comment apporter une réponse commune et constructive à ces phrases typiques comme : ça coute trop cher, je n'ai pas le temps et tant d'autres!
 
 Le Lotobingo accessibilité (ou le LoTota11y Bingo) est un atelier en 3 phases.
