@@ -28,7 +28,7 @@ Durée: environ 45 minutes.
 ### Deuxième phase - La compétition
 On estime combien de fois on a entendu ces phrases dans notre vie. 
 
-Sondage individuel pour mettre un score sur chaque phrase typique tirées au hasard dans celles définies :
+Sondage individuel pour mettre un score sur chaque phrase typique tirée au hasard parmi celles définies :
 - Souvent (1 fois par semaine ou plus) : 3 points
 - Régulièrement (entre 1 fois par mois et 1 fois par semaine) : 2 points
 - Un peu (moins de 10 fois dans l'année) : 1 point
