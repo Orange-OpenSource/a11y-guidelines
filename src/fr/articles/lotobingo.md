@@ -42,7 +42,7 @@ Durée : environ 15 minutes
 #### La concertation
 D'abord en sous-groupe, on propose et partage nos meilleures réponses, nos phrases chocs, face à ces phrases typiques.
 #### La restitution
-On restitue la phrase choc plus constructive aux autres participantes et participants.
+On restitue la phrase choc la plus constructive aux autres participantes et participants.
 
 Durée : environ 60 minutes
 
