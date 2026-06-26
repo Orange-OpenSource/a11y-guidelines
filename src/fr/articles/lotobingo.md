@@ -40,7 +40,7 @@ Durée : environ 15 minutes
 
 ### Troisième phase - Les réponses
 #### La concertation
-D'abord en sous groupe, on propose et partage nos meilleures réponses, nos phrases chocs, face à ces phrases typiques.
+D'abord en sous-groupe, on propose et partage nos meilleures réponses, nos phrases chocs, face à ces phrases typiques.
 #### La restitution
 On restitue la phrase choc plus constructive aux autres participantes et participants.
 
