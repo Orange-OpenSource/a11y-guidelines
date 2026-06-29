@@ -8,6 +8,7 @@ tags:
   - mobile
   - beginner
   - intermediate
+  - advanced
 ---
 
 ## Description
@@ -21,7 +22,7 @@ Le Lotobingo accessibilité (ou le LoTota11y Bingo) est un atelier en 3 phases.
 ### Première phase - Les habitudes
 On construit une grille de loto bingo ensemble.
 
-Il y a 11 cases par grille où seront répertoriées les phrases typiques entendues ici ou là sur l'accessibilité numérique.
+Il y a 11 cases par grille numérotées de 1 à 11 où seront répertoriées les phrases typiques entendues ici ou là sur l'accessibilité numérique.
 
 Durée: environ 45 minutes.
 
@@ -46,7 +47,11 @@ On restitue la phrase choc la plus constructive aux autres participantes et part
 
 Durée : environ 60 minutes
 
-## Les phrases typiques et les phrases chocs associées des Lotobingo accessibilité
+## Les phrases typiques et leurs phrases chocs associées des Lotobingo accessibilité
+Jusqu'ici cet atelier a été joué 3 fois, on vous en propose une synthèse des discussions et des résultats ci-dessous.
+
+Merci à toutes et tous pour les histoires partagées et les phrases chocs trouvées ensemble! 
+
 ### A11Y Ouest 2026 - mardi 31 mars 2026 à Rennes
 1. Les outils, les surcouches et l’IA, ça va tout régler !
 Qui corrige l’IA ? L’IA hallucine et fait des erreurs.
@@ -57,7 +62,7 @@ Il faut l’intégrer dans le process projet et à toutes les étapes.
 3. Ça coûte cher et ça va prendre du temps
 C’est un investissement plus coûteux (en temps et en argent) mais prise en compte le plus tôt possible, ça va ouvrir votre service au plus grand nombre, tant en améliorant les performances.
 
-4. On ne risque rien, on est trop petit et ils ne sont pas assez nombreux
+4. On ne risque rien, on est trop petits et ils ne sont pas assez nombreux
 Non traitée ce jour-là.
 
 5. Les handicapés n’utilisent pas
@@ -86,7 +91,7 @@ C’est quoi votre budget « amende » ? Vos concurrents l’ont fait ! Demand
 Cher PO ou chef de projet, ça concerne tout le monde, tu es responsable de la priorisation et tout le monde est capable de l’améliorer même si ce n’est pas toi qui en est à l’origine.
 
 2. Pas le temps ou on verra plus tard
-Il faut faire dès le début où, au final, ça te coûtera moins cher.
+Il faut faire dès le début où, au final, ça te coûtera moins cher qu'à la fin.
 
 3. Pas d’utilisateur en situation de handicap
 Comment le sais-tu ? Il y a des handicaps qui sont invisibles.
@@ -98,7 +103,7 @@ Ne vois pas ça comme un coût, là, on vous parle d’un investissement ! Combi
 Il existe toujours des solutions sans modifier l’esthétique et le fonctionnel
 
 6. J’en ai rien à faire ou  je ne suis pas concerné
-Tu n’as pas le choix, il y a des obligations légales et les objectifs RSE de l’entreprise donc je te propose d ’écouter le témoignage d’un utilisateur en situation de handicap pour que tu te sentes concerné ou de te faire vivre une situation de handicap
+Tu n’as pas le choix, il y a des obligations légales et les objectifs RSE de l’entreprise donc je te propose d’écouter le témoignage d’un utilisateur en situation de handicap pour que tu te sentes concerné ou de te faire vivre une situation de handicap.
 
 7. L’équipe n’a pas les compétences (fournissez-les ! Trop compliqué !)
 L’accompagnement que l’on vous propose vous permettra d’être soutenu et de maîtriser la mise en place de l’accessibilité dans votre projet.
