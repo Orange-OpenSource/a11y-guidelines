@@ -86,7 +86,7 @@ Not addressed that day.
 11. Am I required to do it?
 What’s your “fine” budget? Your competitors have done it — so ask yourself why, and how much ground you’re going to lose!
 
-### Accessibility Workshop - Orange - Wednesday, November 26, 2025 in Arcueil
+### Accessibility Workshop at Orange - Wednesday, November 26, 2025 in Arcueil
 1. It’s not my fault!
 Dear PO or project manager, this is everyone’s concern. You’re responsible for prioritization, and everyone can help improve it — even if you’re not the one who started it.
 
