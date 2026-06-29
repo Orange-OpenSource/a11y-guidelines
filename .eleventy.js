@@ -27,6 +27,12 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({'node_modules/tarteaucitronjs/lang': 'assets/vendors/tarteaucitronjs/lang'})
     eleventyConfig.addPassthroughCopy({'node_modules/tarteaucitronjs/!(tarteaucitron.services.js)': 'assets/vendors/tarteaucitronjs'})
 
+    /**
+     * Copy Able Player assets (accessible media player)
+     * Used for video and audio content with enhanced accessibility features
+     */
+    eleventyConfig.addPassthroughCopy({'src/assets/able-player': 'assets/able-player'})
+
     // Copy/paste all images and examples contents (they are not processed by 11ty. See the .eleventyignore file)
     eleventyConfig.addPassthroughCopy(`src/**/*.{${IMAGES_EXTENSIONS.join(',')}}`)
     eleventyConfig.addPassthroughCopy(`src/en/web/components-examples/**/*.{html,css,js}`)
@@ -34,7 +40,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy(`src/fr/articles/**/*.{html,css,js}`)
     eleventyConfig.addPassthroughCopy(`src/en/articles/**/*.{html,css,js}`)
     eleventyConfig.addPassthroughCopy(`src/**/*.xlsx`)
-    eleventyConfig.addPassthroughCopy(`src/**/*.mp3`)
+    eleventyConfig.addPassthroughCopy(`src/**/*.{mp3,mp4}`)
     eleventyConfig.addPassthroughCopy(`src/**/*.apk`)
     eleventyConfig.addPassthroughCopy(`src/**/*.pdf`)
 
