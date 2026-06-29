@@ -1,6 +1,6 @@
 ---
 title: "Lotobingo Accessibility: Feedback and Takeaways"
-abstract: "Article presenting the results of participants in the Lotobingo workshops held in 2025 and 2026"
+abstract: "Article presenting the results from participants in the Lotobingo workshops held in 2025 and 2026"
 titleBeforeTag: true
 date: "2026-06-28"
 tags:
