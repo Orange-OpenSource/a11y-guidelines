@@ -4,12 +4,20 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2026-06-19T00:00:00Z</updated>
+  <updated>2026-06-28T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Lotobingo Accessibility: Feedback and Takeaways</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/lotobingo/"/>
+    <updated>2026-06-28T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/lotobingo/</id>
+    <content xml:lang="en" type="html">Article presenting the results from participants in the Lotobingo workshops held in 2025 and 2026</content>
+  </entry>
   
   <entry>
     <title>Form part 2 - Submit your form</title>
