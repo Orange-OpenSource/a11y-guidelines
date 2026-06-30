@@ -2,7 +2,7 @@
 title: "L'attribut HTML autocomplete : comprendre et utiliser correctement l'autocomplétion des formulaires"
 abstract: "Derrière un simple attribut HTML se cache un mécanisme puissant : aider les navigateurs à comprendre ce que l'utilisateur doit saisir."
 titleBeforeTag: true
-date: "2026-04-27"
+date: "2026-07-03"
 tags:
   - web
   - advanced
@@ -150,11 +150,17 @@ section-*
 Exemple :
 
 ```html
-<input autocomplete="section-user1 email">
-<input autocomplete="section-user2 email">
+<fieldset>
+  <legend>Adresse de livraison pour le produit A</legend>
+  <input autocomplete="section-productA shipping street-address">
+</fieldset>
+<fieldset>
+  <legend>Adresse de livraison pour le produit B</legend>
+  <input autocomplete="section-productB shipping street-address">
+</fieldset>
 ```
 
-Cela permet de distinguer plusieurs utilisateurs ou plusieurs ensembles d'informations similaires dans un même formulaire.
+Cela permet de distinguer plusieurs ensembles d'informations similaires dans un même formulaire.
 
 #### 3. Les sections prédéfinies (optionnel)
 
