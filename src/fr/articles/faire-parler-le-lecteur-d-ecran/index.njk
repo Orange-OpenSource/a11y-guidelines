@@ -1,6 +1,6 @@
 ---
 title: "Faire parler le lecteur d'écran à l'aide de JavaScript et ARIA"
-abstract: "Exemple de code permettant de faire parler la synthèse vocale."
+abstract: "Exemple de code permettant de faire parler la synthèse vocale grâce aux régions dynamiques ARIA."
 titleBeforeTag: true
 date: "2018-01-04"
 tags:
@@ -9,56 +9,65 @@ js:
   - script.js
 ---
 
+<p>Article mis à jour le ...</p>
+
 <h2>Préambule</h2>
-<p>Dans certains cas, il peut être intéressant de vouloir faire parler le lecteur d'écran, pour confirmer une action utilisateur par exemple. Dans cet exemple, nous allons voir comment ceci peut être réalisé simplement à l'aide de l'attribut <code>aria-live</code>.</p>
+<p>Dans certaines interfaces, il peut être utile de faire annoncer automatiquement une information par un lecteur d'écran, par exemple pour confirmer une action ou signaler un changement dynamique. Cette fonctionnalité repose sur l'utilisation des <strong>régions dynamiques ARIA</strong> (<code>aria-live</code>) combinées à JavaScript.</p>
 
 <h2>Principe de fonctionnement</h2>
-<p>L'attribut <code>aria-live</code> positionné sur un élément permet d'indiquer au lecteur d'écran que cet élément doit être vocalisé automatiquement lorsque son contenu est modifié.</p>
-<p>  Les valeurs possibles sont&nbsp;: </p>
-  <ul>
-    <li><code>aria-live="off"</code>&nbsp;: valeur par défaut, l'utilisateur n'est pas averti lorsque l'élément est mis à jour.</li>
-    <li><code>aria-live="polite"</code>&nbsp;: le lecteur d'écran vocalise de manière polie lorsque l'élément est mis à jour. C'est-à-dire que si le lecteur d'écran était déjà en train de lire du texte, celui-ci n'est pas interrompu.</li>
-    <li><code>aria-live="assertive"</code>&nbsp;: le lecteur d'écran est interrompu dans sa lecture et avertit l'utilisateur de la mise à jour le plus tôt possible.</li>
-  </ul>
+<p>L'attribut <code>aria-live</code> appliqué à un élément indique au lecteur d'écran que les modifications de contenu doivent être annoncées automatiquement. Les valeurs principales sont :</p>
+<ul>
+  <li><code>aria-live="off"</code> : valeur par défaut, aucune annonce automatique.</li>
+  <li><code>aria-live="polite"</code> : le message est annoncé dès que le lecteur d'écran est disponible, après avoir terminé sa lecture en cours.</li>
+  <li><code>aria-live="assertive"</code> : le message interrompt immédiatement la lecture en cours pour être annoncé.</li>
+</ul>
+<p>Pour compléter le comportement, il est possible d'utiliser :</p>
+<ul>
+  <li><code>aria-atomic="true"</code> : indique que l'intégralité du contenu de l'élément doit être annoncée même si seule une partie change.</li>
+  <li><code>aria-relevant="additions text removals"</code> : précise quel type de modification déclenche l'annonce.</li>
+  <li>Les rôles <code>alert</code>, <code>status</code> ou <code>log</code> qui sont traités automatiquement comme des régions dynamiques.</li>
+</ul>
 
-
-<h2>Et en Javascript&nbsp;?</h2>
-<p>Cette première solution permet dans bien des cas de rendre son application accessible. Il existe tout de même quelques cas où il serait pratique de pouvoir faire parler le lecteur d'écran directement à l'aide d'une fonction Javascript (exemple&nbsp;: <code>speak('Article supprimé du panier')</code>). Malheureusement ceci n'est pas disponible nativement.</p>
-<p>Heureusement, on peut rapidement réaliser une petite fonction Javascript qui utilisera un élément <code>aria-live</code> sous le capot pour réaliser cette fonctionnalité.</p>
-
-<p>À l'appel de la fonction <code>speak</code>, on ajoute une <code>div</code> à la fin de la page. On lui affecte un attribut <code>aria-live</code> et on insère le message à vocaliser dans la <code>div</code>. Pour ne pas que ce message soit visible dans la page, on peut ajouter également une classe de masquage accessible sur cette <code>div</code>, ainsi celle-ci sera vocalisée mais ne sera pas visible à l'écran.</p>
+<h2>Faire parler le lecteur d'écran avec JavaScript</h2>
+<p>Il n'existe pas de fonction native pour faire parler directement le lecteur d'écran. Cependant, on peut créer une petite fonction JavaScript qui utilise une région dynamique ARIA sous le capot pour annoncer un message :</p>
 
 <h2>Détail du code</h2>
 
 <pre><code class="javascript">
-  /* srSpeak(text, priority)
-    text&nbsp;: le message à vocaliser
-    priority (facultatif)&nbsp;: "polite" (par défaut) ou "assertive" */
+/* announceToScreenReader(message, priority)
+   message : le texte à vocaliser
+   priority : "polite" (par défaut) ou "assertive" */
 
-  function srSpeak(text, priority) {
-      var el = document.createElement("div");
-      var id = "speak-" + Date.now();
-      el.setAttribute("id", id);
-      el.setAttribute("aria-live", priority || "polite");
-      el.classList.add("visually-hidden");
-      document.body.appendChild(el);
+function announceToScreenReader(message, priority = "polite") {
+    const region = document.createElement("div");
+    const id = "sr-" + Date.now();
 
-      window.setTimeout(function () {
-        document.getElementById(id).innerHTML = text;
-      }, 100);
+    region.setAttribute("id", id);
+    region.setAttribute("aria-live", priority);
+    region.setAttribute("aria-atomic", "true");
+    region.classList.add("visually-hidden");
 
-      window.setTimeout(function () {
-          document.body.removeChild(document.getElementById(id));
-      }, 1000);
-  }
+    document.body.appendChild(region);
+
+    // Attendre un court délai pour que le lecteur d'écran détecte la région
+    setTimeout(() => {
+        region.textContent = message;
+    }, 50);
+
+    // Supprimer la région après annonce
+    setTimeout(() => {
+        document.body.removeChild(region);
+    }, 2000);
+}
 </code></pre>
 
-<p>Rappel&nbsp;: pour que les messages vocalisés ne soient pas visibles à l'écran vous devez avoir <a href="../masquage-accessible/">une classe de masquage accessible</a> (<code>visually-hidden</code>) dans vos <abbr>CSS</abbr>.</p>
-<h2>Exemple</h2>
+<p>Rappel : pour que les messages soient vocalisés mais pas visibles, vous devez avoir <a href="../masquage-accessible/">une classe de masquage accessible</a> (<code>visually-hidden</code>) dans vos <abbr>CSS</abbr>.</p>
 
-<p>Vous pouvez tester cette fonction grâce au formulaire ci-dessous (à tester avec un lecteur d'écran, sinon on n’entend rien).</p>
+<h2>Exemple interactif</h2>
+<p>Vous pouvez tester cette fonction avec le formulaire ci-dessous (à tester avec un lecteur d'écran).</p>
+
 <div class="mb-3">
   <label class="form-label" for="message">Message à vocaliser</label>
   <input type="text" id="message" class="form-control">
 </div>
-<button id="btnSpeak" class="btn btn-outline-secondary">Test</button>
+<button id="btnSpeak" class="btn btn-outline-secondary">Tester</button>
