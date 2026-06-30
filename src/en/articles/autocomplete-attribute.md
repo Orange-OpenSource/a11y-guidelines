@@ -30,7 +30,7 @@ The `autocomplete` attribute can be used on:
 * the `<form>` element
 * certain form elements like `<input>`, `<textarea>`, or `<select>`.
 
-It indicates to the browser **the nature of the data expected in a field**, in order to facilitate its automatic completion.
+It indicates to the browser **the nature of the data expected in a field**, to facilitate its automatic completion.
 
 Simple example:
 
