@@ -114,7 +114,7 @@ Les amendes sont cumulatives et il y a un impact réputationnel sur la marque.
 9. Y’a pas de réglementation dans ce pays
 Ça c’était avant ! Maintenant, depuis le 28 juin 2025 tous les pays d’Europe sont concernés!
 
-10.J’ai appliqué la charte, ce n’est pas ma faute
+10. J’ai appliqué la charte, ce n’est pas ma faute
 Même si chaque composant est accessible unitairement, leur association dans une page ne l’est pas forcément d’où la nécessité de tester.
 
 11. On a un outil qui rend accessible
