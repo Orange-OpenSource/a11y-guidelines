@@ -1,5 +1,5 @@
 ---
-title: "The HTML autocomplete attribute: understanding and correctly using form autofill"
+title: "The HTML autocomplete attribute: a practical guide to form autofill"
 abstract: "Behind a simple HTML attribute lies a powerful mechanism: helping browsers understand what the user needs to enter."
 titleBeforeTag: true
 date: "2026-07-03"
@@ -19,7 +19,7 @@ When used correctly, it helps to:
 * speed up data entry;
 * reduce errors;
 * improve the user experience;
-* and **meet accessibility requirements**.
+* and **help meet accessibility requirements**.
 
 This article provides an overview of this often misunderstood attribute: its role, its impact on accessibility, its syntax, and best practices for using it effectively.
 
@@ -30,7 +30,7 @@ The `autocomplete` attribute can be used on:
 * the `<form>` element
 * certain form elements like `<input>`, `<textarea>`, or `<select>`.
 
-It indicates to the browser **the nature of the data expected in a field**, to facilitate its automatic completion.
+It indicates to the browser **the nature of the data expected in a field**, to facilitate autofill.
 
 Simple example:
 
@@ -41,7 +41,7 @@ Simple example:
 
 In this example, the value `email` tells the browser that the field expects an email address.
 
-The browser can then suggest:
+The browser can then offer autofill suggestions:
 
 * values previously entered,
 * data stored in the user's profile,
@@ -49,16 +49,16 @@ The browser can then suggest:
 
 The HTML specification defines a **precise list of standardized values** (or `autofill tokens`), corresponding to different types of information.
 
-## Impact of autocomplete on accessibility
+## How autocomplete improves accessibility
 
 The `autocomplete` attribute plays a direct role in form accessibility but was not specifically designed for assistive technologies. Its primary purpose is to help browsers identify the type of information expected in a field and offer appropriate autocompletion.
 
 Some assistive technologies can leverage this information to **identify the purpose of a form field**, regardless of its visible label.
 
-The `autocomplete` attribute is beneficial for users, here are a few examples of its impact:
+The `autocomplete` attribute is beneficial for users, some examples include:
 - **Users with cognitive disabilities**: Autocompletion helps these users by reducing the cognitive load required to fill out a form. The suggestions provided by the browser can serve as reminders or cues, making it easier to enter information.
 - **Users with motor disabilities**: For people who have difficulty using a keyboard or mouse, autocompletion reduces the number of keystrokes required, making the form faster and less tiring to complete.
-- **Visually impaired or blind users**: Screen reader users also benefit from the autocomplete attribute. Autocomplete suggestions can be read aloud by screen readers, helping users understand the expected information and fill out the form more efficiently.
+- **Visually impaired or blind users**: Screen reader users may also benefit from browser autofill features. Depending on the browser and assistive technology, autofill suggestions may be exposed in a way that helps users complete forms more efficiently.
 
 *Note*: the `autocomplete` attribute does not provide an accessible name for the field. Assistive technologies may use this information as a supplement, but never as a substitute for the label.
 
@@ -226,7 +226,7 @@ These `tokens` help specify the context of contact information like a phone numb
 
 #### 5. Values defined by the HTML specification (mandatory)
 
-The HTML specification defines many standardized values, called `autofill tokens`, to precisely identify the expected data.
+The HTML Living Standard defines many standardized values, called `autofill tokens`, to precisely identify the expected data.
 
 Common examples:
 
@@ -286,7 +286,7 @@ For example, a field named `email` may be recognized as an email field even with
 <input name="email">
 ```
 
-However, this behavior is not standardized and may vary between browsers. Using autocomplete correctly helps to make this mechanism more reliable and reduce ambiguity. In other words, `autocomplete` is an important signal, but it is not the only one used by browsers. These heuristics can produce variable results depending on the browser and context.
+However, this behavior is not standardized and may vary between browsers. Using the `autocomplete` attribute correctly makes browser behavior more predictable and reduces ambiguity. In other words, `autocomplete` is an important signal, but it is not the only one used by browsers. These heuristics can produce variable results depending on the browser and context.
 
 ## Complete form example
 
@@ -393,11 +393,11 @@ For each form field:
 2. use a standard `autocomplete` token if applicable;
 3. do not invent a value.
 
-These three rules cover the majority of use cases.
+These three rules cover most common use cases.
 
 ## Conclusion
 
-The `autocomplete` attribute illustrates a simple idea: minimal semantic information can have a significant impact on user experience and accessibility.
+The `autocomplete` attribute illustrates a simple idea: a small amount of semantic information can have a significant impact on user experience and accessibility.
 
 When used correctly, it helps to:
 

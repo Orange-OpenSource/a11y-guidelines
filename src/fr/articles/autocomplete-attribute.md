@@ -108,7 +108,7 @@ Ces valeurs peuvent être regroupées en plusieurs catégories.
 
 ### Syntaxe de l'attribut `autocomplete`
 
-La spécification HTML Living Standard ne définit pas la valeur de l'attribut `autocomplete` comme une simple valeur libre mais plutôt comme une **séquence structurée de tokens** devant obéir à une grammaire stricte ainsi qu'à un ordre précis. Chaque token a un rôle précis, et leur ordre n'est pas interchangeable. L'ordre des tokens est en effet significatif : une valeur mal ordonnée peut être ignorée par le navigateur.
+La valeur de l'attribut `autocomplete` n'est pas une simple valeur libre. La spécification HTML Living Standard la définit comme une séquence structurée de tokens obéissant à une grammaire stricte et à un ordre précis. Chaque token possède un rôle spécifique. Leur ordre n'est pas interchangeable : une valeur mal ordonnée peut être ignorée par le navigateur.
 
 La syntaxe attendue est la suivante :
 
@@ -356,7 +356,7 @@ Il peut aider à :
 * repérer les valeurs incorrectes ;
 * analyser rapidement la structure d'un formulaire.
 
-Le bookmarklet est disponible sur GitHub : [https://github.com/MewenLeHo/detectAutocomplete](https://github.com/MewenLeHo/detectAutocomplete)
+Le code source et les instructions d'installation sont disponibles sur GitHub : [https://github.com/MewenLeHo/detectAutocomplete](https://github.com/MewenLeHo/detectAutocomplete)
 
 ## Erreurs fréquentes observées en audit
 
@@ -409,7 +409,7 @@ Correctement utilisé, il permet :
 * et de répondre à certaines exigences d'accessibilité.
 
 Malgré cela, il reste encore **sous-utilisé ou mal implémenté dans de nombreux formulaires**.
-Prendre le temps de l'implémenter correctement est une amélioration simple, rapide à mettre en œuvre,… et pourtant encore trop souvent négligée.
+Prendre le temps de l'implémenter correctement est une amélioration simple, rapide à mettre en œuvre… et pourtant encore trop souvent négligée.
 
 ## Webographie
 
