@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2026-06-28T00:00:00Z</updated>
+  <updated>2026-07-03T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>L&#39;attribut HTML autocomplete : comprendre et utiliser correctement l&#39;autocomplétion des formulaires</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/autocomplete-attribute/"/>
+    <updated>2026-07-03T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/autocomplete-attribute/</id>
+    <content xml:lang="fr" type="html">Derrière un simple attribut HTML se cache un mécanisme puissant : aider les navigateurs à comprendre ce que l&#39;utilisateur doit saisir.</content>
+  </entry>
   
   <entry>
     <title>Lotobingo accessibilité : retours et partages</title>

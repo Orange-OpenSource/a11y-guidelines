@@ -4,12 +4,20 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2026-06-28T00:00:00Z</updated>
+  <updated>2026-07-03T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>The HTML autocomplete attribute: a practical guide to form autofill</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/autocomplete-attribute/"/>
+    <updated>2026-07-03T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/autocomplete-attribute/</id>
+    <content xml:lang="en" type="html">Behind a simple HTML attribute lies a powerful mechanism: helping browsers understand what the user needs to enter.</content>
+  </entry>
   
   <entry>
     <title>Lotobingo Accessibility: Feedback and Takeaways</title>

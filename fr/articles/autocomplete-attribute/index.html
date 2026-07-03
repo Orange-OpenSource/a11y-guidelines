@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>L&#39;attribut HTML autocomplete : comprendre et utiliser correctement l&#39;autocomplétion des formulaires - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
+    
+    <meta name="description" content="Derrière un simple attribut HTML se cache un mécanisme puissant : aider les navigateurs à comprendre ce que l&#39;utilisateur doit saisir.">
+    
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <nav class="navbar navbar-expand-lg supra" aria-label="Liens d&#39;évitements - Changement de langue" data-bs-theme="dark">
+   <div class="container-lg">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
+      <a href="#main-menu" class="nav-link">Aller au menu</a>
+    </li><li class="nav-item">
+      <a href="#main-content" class="nav-link">Aller au contenu</a>
+    </li><li class="nav-item hidden-if-no-js">
+      <a href="#search-input" class="nav-link">Aller à la recherche</a>
+    </li><li class="nav-item">
+      <a href="#footer" class="nav-link">Aller au pied de page</a>
+    </li></ul>
+
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+    </div>
+  </nav>
+
+  
+
+<div class="navbar navbar-expand-md" data-bs-theme="dark">
+  <nav id="main-menu" class="container-lg justify-content-md-start align-items-center" role="navigation" aria-label="Navigation principale" tabindex="-1">
+    <a href="/fr/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/web/" class="nav-link">
+  Web
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/android/" class="nav-link">
+  Android
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/ios/" class="nav-link">
+  iOS
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/contenu-et-communication/" class="nav-link">
+  Contenu et communication
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/articles/" class="nav-link active" aria-current="true">
+  Articles
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input" tabindex="-1"></div>
+
+  </nav>
+</div>
+
+  
+</header>
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a class="breadcrumb-focus" href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-focus" href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          L&#39;attribut HTML autocomplete : comprendre et utiliser correctement l&#39;autocomplétion des formulaires
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        Sur cette page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#presentation-de-lattribut-autocomplete" class="dropdown-item text-wrap">Présentation de l&#39;attribut autocomplete</a><a href="#impact-de-autocomplete-sur-laccessibilite" class="dropdown-item text-wrap">Impact de autocomplete sur l&#39;accessibilité</a><a href="#comprendre-la-syntaxe-de-autocomplete" class="dropdown-item text-wrap">Comprendre la syntaxe de autocomplete</a><a href="#regles-de-priorite" class="dropdown-item text-wrap">Règles de priorité</a><a href="#syntaxe-de-lattribut-autocomplete" class="dropdown-item text-wrap">Syntaxe de l&#39;attribut autocomplete</a><a href="#1-valeurs-generales-on-et-off" class="dropdown-item text-wrap">1. Valeurs générales : on et off</a><a href="#2-les-sections-personnalisees-optionnel" class="dropdown-item text-wrap">2. Les sections personnalisées (optionnel)</a><a href="#3-les-sections-predefinies-optionnel" class="dropdown-item text-wrap">3. Les sections prédéfinies (optionnel)</a><a href="#4-les-modificateurs-du-type-de-contact-optionnel" class="dropdown-item text-wrap">4. Les modificateurs du type de contact (optionnel)</a><a href="#5-les-valeurs-definies-par-la-specification-html-obligatoire" class="dropdown-item text-wrap">5. Les valeurs définies par la spécification HTML (obligatoire)</a><a href="#6-identifiants-webauthn-optionnel" class="dropdown-item text-wrap">6. Identifiants WebAuthn (optionnel)</a><a href="#comportement-reel-des-navigateurs" class="dropdown-item text-wrap">Comportement réel des navigateurs</a><a href="#exemple-complet-de-formulaire" class="dropdown-item text-wrap">Exemple complet de formulaire</a><a href="#comment-tester-la-presence-et-la-pertinence-de-autocomplete" class="dropdown-item text-wrap">Comment tester la présence et la pertinence de autocomplete</a><a href="#inspection-manuelle" class="dropdown-item text-wrap">Inspection manuelle</a><a href="#utiliser-le-bookmarklet-detectautocomplete" class="dropdown-item text-wrap">Utiliser le bookmarklet detectAutocomplete</a><a href="#erreurs-frequentes-observees-en-audit" class="dropdown-item text-wrap">Erreurs fréquentes observées en audit</a><a href="#regle-simple-a-retenir" class="dropdown-item text-wrap">Règle simple à retenir</a><a href="#conclusion" class="dropdown-item text-wrap">Conclusion</a><a href="#webographie" class="dropdown-item text-wrap">Webographie</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main" tabindex="-1">
+          
+            <h1>L&#39;attribut HTML autocomplete : comprendre et utiliser correctement l&#39;autocomplétion des formulaires</h1>
+            
+              <span class="visually-hidden" id="filters_label">
+                Thématiques associées :
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><span class="tagType d-inline-block" data-tag="web">Web</span></li>
+              <li class="list-inline-item"><span class="tagType d-inline-block" data-tag="advanced">Avancé</span></li>
+              </ul>
+            
+            
+            
+
+            <p class="text-muted mb-0">
+              <span class="visually-hidden">Date de parution</span>
+              <time datetime="2026-07-03T00:00:00.000Z">
+                03 juillet 2026
+              </time>
+            </p>
+
+            
+          
+          <div class="mt-4">
+          <p>Les formulaires sont au cœur de l'expérience utilisateur sur le web : inscription, connexion, paiement… Ils sont partout.<br>
+Pourtant, leur remplissage peut représenter un obstacle, en particulier pour les personnes en situation de handicap. L'accessibilité des formulaires est donc un enjeu majeur.<br>
+Parmi les mécanismes souvent négligés, l'attribut HTML <code>autocomplete</code> joue un rôle clé.<br>
+Il permet aux navigateurs et aux gestionnaires de mots de passe de comprendre <strong>le type d'information attendu dans un champ de formulaire</strong>.</p>
+<p>Correctement utilisé, il permet :</p>
+<ul>
+<li>d'accélérer la saisie ;</li>
+<li>de réduire les erreurs ;</li>
+<li>d'améliorer l'expérience utilisateur ;</li>
+<li>et de <strong>répondre à des exigences d'accessibilité</strong>.</li>
+</ul>
+<p>Cet article propose un tour d'horizon de cet attribut souvent mal compris : son rôle, son impact sur l'accessibilité, sa syntaxe et les bonnes pratiques pour l'utiliser efficacement.</p>
+<h2 id="presentation-de-lattribut-autocomplete" class="h2-focus">Présentation de l'attribut <code>autocomplete</code> <a class="header-anchor" href="#presentation-de-lattribut-autocomplete" id="heading-167" aria-labelledby="heading-167">#</a></h2>
+<p>L'attribut <code>autocomplete</code> peut être utilisé sur :</p>
+<ul>
+<li>l'élément <code>&lt;form&gt;</code></li>
+<li>certains éléments de formulaire comme <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code> ou <code>&lt;select&gt;</code>.</li>
+</ul>
+<p>Il permet d'indiquer au navigateur <strong>la nature de la donnée attendue dans un champ</strong>, afin de faciliter son remplissage automatique.</p>
+<p>Exemple simple :</p>
+<pre><code class="language-html">&lt;label for=&quot;email&quot;&gt;Adresse e-mail&lt;/label&gt;
+&lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; autocomplete=&quot;email&quot;&gt;
+</code></pre>
+<p>Dans cet exemple, la valeur <code>email</code> indique au navigateur que le champ attend une adresse de messagerie électronique.</p>
+<p>Le navigateur peut alors proposer :</p>
+<ul>
+<li>des valeurs déjà saisies précédemment,</li>
+<li>des données stockées dans le profil utilisateur,</li>
+<li>ou des informations provenant d'un gestionnaire de mots de passe.</li>
+</ul>
+<p>La spécification HTML définit une <strong>liste précise de valeurs normalisées</strong> (ou <code>autofill tokens</code>), correspondant à différents types d'information.</p>
+<h2 id="impact-de-autocomplete-sur-laccessibilite" class="h2-focus">Impact de <code>autocomplete</code> sur l'accessibilité <a class="header-anchor" href="#impact-de-autocomplete-sur-laccessibilite" id="heading-168" aria-labelledby="heading-168">#</a></h2>
+<p>L'attribut <code>autocomplete</code> joue un rôle direct dans l'accessibilité des formulaires mais n'a pas été conçu spécifiquement pour les technologies d'assistance. Il permet avant tout aux navigateurs d'identifier le type d'information attendu dans un champ et de proposer une autocomplétion adaptée.</p>
+<p>Certaines technologies d'assistance peuvent exploiter cette information pour <strong>identifier la nature d'un champ de formulaire</strong>, indépendamment de son libellé visible.</p>
+<p>L'attribut <code>autocomplete</code> est <strong>bénéfique pour de nombreux utilisateurs</strong>. Voici quelques exemples de son impact :</p>
+<ul>
+<li><strong>Utilisateurs avec des troubles cognitifs</strong> : L'autocomplétion aide ces utilisateurs en réduisant la charge cognitive nécessaire pour remplir un formulaire. Les suggestions fournies par le navigateur peuvent servir de rappels ou d'indices, facilitant ainsi la saisie des informations.</li>
+<li><strong>Utilisateurs avec des handicaps moteurs</strong> : Pour les personnes ayant des difficultés à utiliser un clavier ou une souris, l'autocomplétion réduit le nombre de frappes nécessaires, rendant le formulaire plus rapide et moins fatigant à remplir.</li>
+<li><strong>Utilisateurs malvoyants ou non-voyants</strong> : Les utilisateurs de lecteurs d'écran bénéficient également de l'attribut <code>autocomplete</code>. Les suggestions d'autocomplétion peuvent être lues par les lecteurs d'écran, aidant ainsi les utilisateurs à comprendre les informations attendues et à remplir le formulaire plus efficacement.</li>
+</ul>
+<p><em>Remarque :</em> l'attribut <code>autocomplete</code> ne fournit pas de nom accessible au champ. Les technologies d'assistance peuvent exploiter cette information comme un complément, mais jamais comme un substitut au libellé.</p>
+<p>Cette pratique est directement liée à un critère d'accessibilité des WCAG : <strong>WCAG 2.2 – Success Criterion 1.3.5: Identify Input Purpose (niveau AA)</strong>.</p>
+<p>Ce critère demande que, pour certains champs collectant des données personnelles, <strong>la finalité du champ soit identifiée programmatiquement</strong> à l'aide des valeurs définies dans le HTML Living Standard.<br>
+L'utilisation de <code>autocomplete</code> constitue ainsi un moyen standardisé de répondre à ce critère, lorsqu'un token approprié existe.</p>
+<p><em>Remarque :</em> le critère concerne les informations relatives à l'utilisateur lui-même, et non celles concernant des tiers (par exemple : adresse de livraison d'un ami ou numéro de téléphone d'un contact).</p>
+<p>Exemples de données concernées :</p>
+<ul>
+<li>nom</li>
+<li>prénom</li>
+<li>adresse</li>
+<li>numéro de téléphone</li>
+<li>adresse e-mail</li>
+<li>informations de paiement</li>
+</ul>
+<p>Objectif : permettre aux technologies d'assistance et aux outils d'aide à la saisie de <strong>reconnaître automatiquement ces champs</strong>.</p>
+<p>Il est important de noter que :</p>
+<ul>
+<li>ce critère <strong>ne s'applique qu'à certains types de données personnelles</strong> prédéfinies par la spécification HTML</li>
+<li>uniquement <strong>lorsque ces données sont demandées à l'utilisateur</strong> sous forme de contrôles de saisie (<code>inputs</code>, etc.)</li>
+<li>et lorsque la finalité du champ figure bien dans la liste des <code>input purposes</code> définie par les WCAG, eux‑mêmes alignés sur les <code>autofill tokens HTML</code>.</li>
+</ul>
+<p><em>Remarque :</em> les champs dont la finalité n'est pas couverte par les <code>autofill tokens</code> (par exemple : champ de recherche libre, zone de texte pour un commentaire, champs très métier, ou non standardisés) n'ont pas besoin de cet attribut, ou ne devraient pas utiliser une valeur inappropriée.</p>
+<p>L'utilisation de <code>autocomplete</code> ne remplace évidemment pas :</p>
+<ul>
+<li>un <strong>libellé accessible (fourni par un <code>label</code> ou toute autre méthode de nommage accessible)</strong></li>
+<li>une <strong>structure de formulaire claire</strong></li>
+<li>des <strong>instructions compréhensibles</strong> pour l'utilisateur.</li>
+</ul>
+<h2 id="comprendre-la-syntaxe-de-autocomplete" class="h2-focus">Comprendre la syntaxe de <code>autocomplete</code> <a class="header-anchor" href="#comprendre-la-syntaxe-de-autocomplete" id="heading-169" aria-labelledby="heading-169">#</a></h2>
+<p>L'attribut <code>autocomplete</code> accepte plusieurs types de valeurs définies dans la spécification HTML.</p>
+<p>Ces valeurs peuvent être regroupées en plusieurs catégories.</p>
+<h3 id="regles-de-priorite">Règles de priorité <a class="header-anchor" href="#regles-de-priorite" id="heading-170" aria-labelledby="heading-170">#</a></h3>
+<p><code>autocomplete</code> peut être implémenté sur <code>form</code> et directement sur les champs, dans ce cas les règles suivantes s'appliquent :</p>
+<ul>
+<li>Si <code>autocomplete</code> est présent à la fois sur le <code>form</code> et sur un champ, la valeur du champ a priorité.</li>
+<li>Un <code>autocomplete</code> absent sur un champ hérite du comportement du <code>form</code>, qui se comporte alors comme une valeur par défaut (par exemple <code>autocomplete=&quot;off&quot;</code> sur le formulaire, mais <code>autocomplete=&quot;email&quot;</code> sur un champ précis).</li>
+</ul>
+<h3 id="syntaxe-de-lattribut-autocomplete">Syntaxe de l'attribut <code>autocomplete</code> <a class="header-anchor" href="#syntaxe-de-lattribut-autocomplete" id="heading-171" aria-labelledby="heading-171">#</a></h3>
+<p>La valeur de l'attribut <code>autocomplete</code> n'est pas une simple valeur libre. Le HTML Living Standard la définit comme une séquence structurée de tokens obéissant à une grammaire stricte et à un ordre précis. Chaque token possède un rôle spécifique. Leur ordre n'est pas interchangeable : une valeur mal ordonnée peut être ignorée par le navigateur.</p>
+<p>La syntaxe attendue est la suivante :</p>
+<pre><code>autocomplete = &quot;on&quot; | &quot;off&quot; | [section-*] [shipping|billing] [contact-type] autofill-field-name [webauthn]
+</code></pre>
+<h4 id="1-valeurs-generales-on-et-off">1. Valeurs générales : <code>on</code> et <code>off</code> <a class="header-anchor" href="#1-valeurs-generales-on-et-off" id="heading-172" aria-labelledby="heading-172">#</a></h4>
+<p>Les valeurs <code>on</code> et <code>off</code> permettent d'activer ou de désactiver l'autocomplétion.</p>
+<p>Exemple :</p>
+<pre><code class="language-html">&lt;form autocomplete=&quot;on&quot;&gt;
+</code></pre>
+<p>ou :</p>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; autocomplete=&quot;off&quot;&gt;
+</code></pre>
+<p>Cependant, la spécification précise que <strong>les navigateurs peuvent ignorer la valeur <code>off</code> dans certains cas</strong>, notamment pour les champs liés à l'authentification.<br>
+Il est crucial de noter que l'utilisation de <code>autocomplete=&quot;off&quot;</code> peut dégrader l'expérience utilisateur et l'accessibilité en empêchant l'autocomplétion pour des champs où elle serait bénéfique.</p>
+<p>L'usage de <code>autocomplete=&quot;off&quot;</code> doit être réservé à des cas très spécifiques où la prédiction d'une valeur n'a aucun sens ou pourrait nuire à la sécurité, comme par exemple :</p>
+<ul>
+<li>un champ de saisie d'un code à usage unique (OTP)</li>
+<li>un champ de confirmation de type &quot;Veuillez saisir à nouveau votre e-mail&quot; (bien que cette pratique soit elle-même discutable en termes d'ergonomie).</li>
+</ul>
+<h4 id="2-les-sections-personnalisees-optionnel">2. Les sections personnalisées (optionnel) <a class="header-anchor" href="#2-les-sections-personnalisees-optionnel" id="heading-173" aria-labelledby="heading-173">#</a></h4>
+<p>Il est également possible de définir des sections personnalisées grâce au préfixe :</p>
+<pre><code class="language-html">section-*
+</code></pre>
+<p>Exemple :</p>
+<pre><code class="language-html">&lt;fieldset&gt;
+  &lt;legend&gt;Adresse de livraison pour le produit A&lt;/legend&gt;
+  &lt;input autocomplete=&quot;section-productA shipping street-address&quot;&gt;
+&lt;/fieldset&gt;
+&lt;fieldset&gt;
+  &lt;legend&gt;Adresse de livraison pour le produit B&lt;/legend&gt;
+  &lt;input autocomplete=&quot;section-productB shipping street-address&quot;&gt;
+&lt;/fieldset&gt;
+</code></pre>
+<p>Cela permet de distinguer plusieurs ensembles d'informations similaires dans un même formulaire.</p>
+<h4 id="3-les-sections-predefinies-optionnel">3. Les sections prédéfinies (optionnel) <a class="header-anchor" href="#3-les-sections-predefinies-optionnel" id="heading-174" aria-labelledby="heading-174">#</a></h4>
+<p>La standard HTML permet de <strong>regrouper des champs appartenant à une même section logique</strong>. Ces regroupements permettent d'indiquer le contexte de la donnée.</p>
+<p>Exemple :</p>
+<pre><code class="language-html">&lt;input autocomplete=&quot;shipping given-name&quot;&gt;
+&lt;input autocomplete=&quot;shipping family-name&quot;&gt;
+&lt;input autocomplete=&quot;shipping street-address&quot;&gt;
+</code></pre>
+<p>Dans cet exemple, les champs sont associés à la section <code>shipping</code>, ce qui indique qu'ils correspondent à une <strong>adresse de livraison</strong>.<br>
+Une autre section courante est <code>billing</code>, utilisée pour les informations de facturation.</p>
+<p>Ces sections permettent aux navigateurs de distinguer plusieurs ensembles de données dans un même formulaire.</p>
+<h4 id="4-les-modificateurs-du-type-de-contact-optionnel">4. Les modificateurs du type de contact (optionnel) <a class="header-anchor" href="#4-les-modificateurs-du-type-de-contact-optionnel" id="heading-175" aria-labelledby="heading-175">#</a></h4>
+<p>Certains champs acceptent des tokens supplémentaires appelés <code>contact type hints</code>.<br>
+Ces tokens ne sont ni des sections ni des champs, mais des <code>modificateurs du type de contact</code>.</p>
+<p>Exemple :</p>
+<pre><code class="language-html">home
+work
+mobile
+fax
+pager
+</code></pre>
+<p>Prenons un champ téléphone :</p>
+<pre><code class="language-html">&lt;input autocomplete=&quot;home tel&quot;&gt;
+</code></pre>
+<p>Ici :</p>
+<table>
+<thead>
+<tr>
+<th>token</th>
+<th>rôle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>home</code></td>
+<td>type de contact</td>
+</tr>
+<tr>
+<td><code>tel</code></td>
+<td>champ autofill</td>
+</tr>
+</tbody>
+</table>
+<p>Cela signifie que le formulaire attend dans ce champ un numéro de téléphone personnel.</p>
+<p>Autres exemples :</p>
+<pre><code class="language-html">autocomplete=&quot;work email&quot;
+</code></pre>
+<p>indique une adresse e-mail professionnelle.</p>
+<pre><code class="language-html">autocomplete=&quot;mobile tel&quot;
+</code></pre>
+<p>indique que le formulaire attend un numéro de téléphone mobile.</p>
+<p>Ces <code>tokens</code> permettent de préciser le contexte d'une information de contact comme un numéro de téléphone ou une adresse e-mail. Ce ne sont pas des sections car ces dernières servent à distinguer des groupes de données dans un formulaire.</p>
+<h4 id="5-les-valeurs-definies-par-la-specification-html-obligatoire">5. Les valeurs définies par la spécification HTML (obligatoire) <a class="header-anchor" href="#5-les-valeurs-definies-par-la-specification-html-obligatoire" id="heading-176" aria-labelledby="heading-176">#</a></h4>
+<p>La spécification HTML définit de nombreuses <strong>valeurs normalisées</strong>, appelées <code>autofill tokens</code>, permettant d'identifier précisément la donnée attendue.</p>
+<p>Exemples courants :</p>
+<table>
+<thead>
+<tr>
+<th>Valeur</th>
+<th>Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td>nom complet</td>
+</tr>
+<tr>
+<td><code>given-name</code></td>
+<td>prénom</td>
+</tr>
+<tr>
+<td><code>family-name</code></td>
+<td>nom de famille</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>adresse e-mail</td>
+</tr>
+<tr>
+<td><code>tel</code></td>
+<td>numéro de téléphone</td>
+</tr>
+<tr>
+<td><code>street-address</code></td>
+<td>adresse postale</td>
+</tr>
+<tr>
+<td><code>postal-code</code></td>
+<td>code postal</td>
+</tr>
+<tr>
+<td><code>country</code></td>
+<td>pays</td>
+</tr>
+</tbody>
+</table>
+<p>Exemple d'utilisation :</p>
+<pre><code class="language-html">&lt;label for=&quot;firstname&quot;&gt;Prénom&lt;/label&gt;
+&lt;input id=&quot;firstname&quot; name=&quot;firstname&quot; autocomplete=&quot;given-name&quot;&gt;
+</code></pre>
+<p>Ces valeurs sont utilisées par :</p>
+<ul>
+<li>les navigateurs</li>
+<li>les gestionnaires de mots de passe</li>
+<li>certains outils d'assistance.</li>
+</ul>
+<p><a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute">La liste complète est définie dans la spécification</a>.</p>
+<h4 id="6-identifiants-webauthn-optionnel">6. Identifiants WebAuthn (optionnel) <a class="header-anchor" href="#6-identifiants-webauthn-optionnel" id="heading-177" aria-labelledby="heading-177">#</a></h4>
+<p>La spécification HTML inclut également le token <code>webauthn</code>, utilisé pour signaler qu'un champ peut déclencher une authentification <em>via</em> WebAuthn (par exemple avec des <code>passkeys</code>).<br>
+Ce token est défini dans l'<a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Authentication_API">API Web Authentication</a>.</p>
+<p>Exemple :</p>
+<pre><code class="language-html">&lt;input autocomplete=&quot;username webauthn&quot;&gt;
+</code></pre>
+<h2 id="comportement-reel-des-navigateurs" class="h2-focus">Comportement réel des navigateurs <a class="header-anchor" href="#comportement-reel-des-navigateurs" id="heading-178" aria-labelledby="heading-178">#</a></h2>
+<p>L'attribut <code>autocomplete</code> fournit une indication aux navigateurs, mais ne garantit pas à lui seul le fonctionnement de l'autocomplétion.</p>
+<p>En pratique, les navigateurs utilisent également :</p>
+<ul>
+<li>l'attribut <code>name</code></li>
+<li>l'attribut <code>id</code></li>
+<li>le texte du <code>label</code></li>
+<li>la structure du formulaire</li>
+<li>des heuristiques internes</li>
+</ul>
+<p>Par exemple, un champ nommé <code>email</code> peut être reconnu comme un champ de messagerie même sans <code>autocomplete</code>.</p>
+<pre><code class="language-html">&lt;input name=&quot;email&quot;&gt;
+</code></pre>
+<p>Cependant, ce comportement n'est pas standardisé et peut varier selon les navigateurs.<br>
+L'utilisation correcte de <code>autocomplete</code> permet de fiabiliser ce mécanisme et de réduire les ambiguïtés. En d'autres termes, <code>autocomplete</code> est un signal important, mais il n'est pas le seul utilisé par les navigateurs. Ces heuristiques peuvent produire des résultats variables selon les navigateurs et les contextes.</p>
+<h2 id="exemple-complet-de-formulaire" class="h2-focus">Exemple complet de formulaire <a class="header-anchor" href="#exemple-complet-de-formulaire" id="heading-179" aria-labelledby="heading-179">#</a></h2>
+<p>Voici un exemple simplifié de formulaire utilisant correctement l'attribut <code>autocomplete</code> :</p>
+<pre><code class="language-html">&lt;form&gt;
+
+  &lt;label for=&quot;firstname&quot;&gt;Prénom&lt;/label&gt;
+  &lt;input id=&quot;firstname&quot; name=&quot;firstname&quot; autocomplete=&quot;given-name&quot;&gt;
+
+  &lt;label for=&quot;lastname&quot;&gt;Nom&lt;/label&gt;
+  &lt;input id=&quot;lastname&quot; name=&quot;lastname&quot; autocomplete=&quot;family-name&quot;&gt;
+
+  &lt;label for=&quot;email&quot;&gt;Adresse e-mail&lt;/label&gt;
+  &lt;input id=&quot;email&quot; name=&quot;email&quot; type=&quot;email&quot; autocomplete=&quot;email&quot;&gt;
+
+  &lt;label for=&quot;street&quot;&gt;Adresse&lt;/label&gt;
+  &lt;input id=&quot;street&quot; name=&quot;street&quot; autocomplete=&quot;street-address&quot;&gt;
+
+  &lt;label for=&quot;postal&quot;&gt;Code postal&lt;/label&gt;
+  &lt;input id=&quot;postal&quot; name=&quot;postal&quot; autocomplete=&quot;postal-code&quot;&gt;
+
+&lt;/form&gt;
+</code></pre>
+<h2 id="comment-tester-la-presence-et-la-pertinence-de-autocomplete" class="h2-focus">Comment tester la présence et la pertinence de <code>autocomplete</code> <a class="header-anchor" href="#comment-tester-la-presence-et-la-pertinence-de-autocomplete" id="heading-180" aria-labelledby="heading-180">#</a></h2>
+<p>L'analyse de l'attribut <code>autocomplete</code> peut se faire de différentes manières.</p>
+<h3 id="inspection-manuelle">Inspection manuelle <a class="header-anchor" href="#inspection-manuelle" id="heading-181" aria-labelledby="heading-181">#</a></h3>
+<p>La première méthode consiste à inspecter le code source du formulaire.</p>
+<p>Points à vérifier :</p>
+<ul>
+<li>présence de l'attribut <code>autocomplete</code></li>
+<li>cohérence entre la valeur et la donnée demandée</li>
+<li>utilisation correcte des tokens définis par le HTML Living Standard</li>
+</ul>
+<p>Par exemple :</p>
+<pre><code class="language-html">&lt;input type=&quot;email&quot; autocomplete=&quot;email&quot;&gt;
+</code></pre>
+<p>est cohérent, tandis que :</p>
+<pre><code class="language-html">&lt;input type=&quot;email&quot; autocomplete=&quot;name&quot;&gt;
+</code></pre>
+<p>ne l'est pas.</p>
+<h3 id="utiliser-le-bookmarklet-detectautocomplete">Utiliser le bookmarklet detectAutocomplete <a class="header-anchor" href="#utiliser-le-bookmarklet-detectautocomplete" id="heading-182" aria-labelledby="heading-182">#</a></h3>
+<p>Pour faciliter l'audit des formulaires, il est possible d'utiliser le bookmarklet <strong>detectAutocomplete</strong>.</p>
+<p>Cet outil permet d'analyser une page et de <strong>mettre en évidence les champs de formulaire ainsi que leurs valeurs <code>autocomplete</code></strong>.</p>
+<p>Il peut aider à :</p>
+<ul>
+<li>identifier les champs qui utilisent <code>autocomplete</code> ;</li>
+<li>identifier les champs qui n'utilisent pas cet attribut ;</li>
+<li>repérer les valeurs incorrectes ;</li>
+<li>analyser rapidement la structure d'un formulaire.</li>
+</ul>
+<p>Le code source et les instructions d'installation sont disponibles sur GitHub : <a href="https://github.com/MewenLeHo/detectAutocomplete">https://github.com/MewenLeHo/detectAutocomplete</a></p>
+<h2 id="erreurs-frequentes-observees-en-audit" class="h2-focus">Erreurs fréquentes observées en audit <a class="header-anchor" href="#erreurs-frequentes-observees-en-audit" id="heading-183" aria-labelledby="heading-183">#</a></h2>
+<p>Lors des audits d'accessibilité ou d'ergonomie, plusieurs erreurs sont souvent rencontrées :</p>
+<ol>
+<li><strong>Oublier complètement <code>autocomplete</code></strong> :</li>
+</ol>
+<ul>
+<li><strong>Impact</strong> : Les utilisateurs doivent saisir manuellement toutes les informations, ce qui peut être fastidieux et source d'erreurs.</li>
+<li><strong>Solution</strong> : Toujours inclure l'attribut <code>autocomplete</code> pour les champs de formulaire pertinents.</li>
+</ul>
+<ol start="2">
+<li><strong>Utiliser des tokens non standard</strong> :</li>
+</ol>
+<ul>
+<li><strong>Impact</strong> : Les navigateurs peuvent ne pas reconnaître les valeurs incorrectes, rendant l'autocomplétion inefficace.</li>
+<li><strong>Solution</strong> : Utiliser les valeurs standardisées pour l'attribut <code>autocomplete</code> comme spécifié dans la documentation HTML.</li>
+</ul>
+<p>Exemple :</p>
+<pre><code class="language-html">&lt;input type=&quot;email&quot; autocomplete=&quot;name&quot;&gt;
+</code></pre>
+<p>La valeur ne correspond pas à la donnée demandée.<br>
+Les valeurs non définies par la spécification sont ignorées par les navigateurs, qui peuvent alors se reposer sur leurs propres heuristiques.</p>
+<ol start="3">
+<li><strong>Désactiver inutilement l'autocomplétion</strong> :</li>
+</ol>
+<ul>
+<li><strong>Impact</strong> : pratique souvent inutile, parfois ignorée par les navigateurs, et qui prive certains utilisateurs d'une fonctionnalité importante pour l'accessibilité.</li>
+<li><strong>Solution</strong> : limiter <code>autocomplete=&quot;off&quot;</code> aux cas réellement justifiés (OTP, champs très sensibles ou sans bénéfice d'autocomplétion) et laisser l'autocomplétion active partout ailleurs.</li>
+</ul>
+<ol start="4">
+<li><strong>Ignorer les sections</strong> :</li>
+</ol>
+<ul>
+<li><strong>Impact</strong> : les navigateurs et gestionnaires de mots de passe peuvent avoir plus de mal à distinguer plusieurs ensembles de données (par exemple plusieurs adresses ou plusieurs personnes) dans un même formulaire.</li>
+<li><strong>Solution</strong> : utiliser <code>shipping</code>, <code>billing</code> ou des sections personnalisées (<code>section-*</code>) quand un même formulaire regroupe plusieurs ensembles d'informations similaires.</li>
+</ul>
+<h3 id="regle-simple-a-retenir">Règle simple à retenir <a class="header-anchor" href="#regle-simple-a-retenir" id="heading-184" aria-labelledby="heading-184">#</a></h3>
+<p>Pour chaque champ de formulaire :</p>
+<ol>
+<li>fournir un nom accessible clair (<code>label</code> ou autre technique de nommage) ;</li>
+<li>utiliser un token <code>autocomplete</code> standard si applicable ;</li>
+<li>ne pas inventer de valeur.</li>
+</ol>
+<p>Ces trois règles couvrent la majorité des cas d'usage.</p>
+<h2 id="conclusion" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-185" aria-labelledby="heading-185">#</a></h2>
+<p>L'attribut <code>autocomplete</code> illustre une idée simple : une information sémantique minimale peut avoir un impact significatif sur l'expérience utilisateur et l'accessibilité.</p>
+<p>Correctement utilisé, il permet :</p>
+<ul>
+<li>d'accélérer la saisie ;</li>
+<li>de réduire les erreurs ;</li>
+<li>d'améliorer l'interopérabilité avec les navigateurs et les gestionnaires de mots de passe ;</li>
+<li>et de répondre à certaines exigences d'accessibilité.</li>
+</ul>
+<p>Malgré cela, il reste encore <strong>sous-utilisé ou mal implémenté dans de nombreux formulaires</strong>.<br>
+Bien implémenté, cet attribut constitue une amélioration simple dont les bénéfices dépassent largement le faible coût de mise en œuvre.</p>
+<h2 id="webographie" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-186" aria-labelledby="heading-186">#</a></h2>
+<ul lang="en">
+  <li><a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute" hreflang="en">HTML Living Standard – Autofilling form controls (en)</a></li>
+  <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html" hreflang="en">WCAG 2.2 – Understanding Success Criterion 1.3.5 (en)</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete" hreflang="en">MDN – HTML attribute: autocomplete (en)</a></li>
+</ul>>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sur cette page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#presentation-de-lattribut-autocomplete" class="nav-link text-muted">Présentation de l&#39;attribut autocomplete</a></li><li class="nav-item position-relative">
+            <a href="#impact-de-autocomplete-sur-laccessibilite" class="nav-link text-muted">Impact de autocomplete sur l&#39;accessibilité</a></li><li class="nav-item position-relative">
+            <a href="#comprendre-la-syntaxe-de-autocomplete" class="nav-link text-muted">Comprendre la syntaxe de autocomplete</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#regles-de-priorite" class="nav-link text-muted">Règles de priorité</a></li><li class="nav-item position-relative">
+            <a href="#syntaxe-de-lattribut-autocomplete" class="nav-link text-muted">Syntaxe de l&#39;attribut autocomplete</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#1-valeurs-generales-on-et-off" class="nav-link text-muted">1. Valeurs générales : on et off</a></li><li class="nav-item position-relative">
+            <a href="#2-les-sections-personnalisees-optionnel" class="nav-link text-muted">2. Les sections personnalisées (optionnel)</a></li><li class="nav-item position-relative">
+            <a href="#3-les-sections-predefinies-optionnel" class="nav-link text-muted">3. Les sections prédéfinies (optionnel)</a></li><li class="nav-item position-relative">
+            <a href="#4-les-modificateurs-du-type-de-contact-optionnel" class="nav-link text-muted">4. Les modificateurs du type de contact (optionnel)</a></li><li class="nav-item position-relative">
+            <a href="#5-les-valeurs-definies-par-la-specification-html-obligatoire" class="nav-link text-muted">5. Les valeurs définies par la spécification HTML (obligatoire)</a></li><li class="nav-item position-relative">
+            <a href="#6-identifiants-webauthn-optionnel" class="nav-link text-muted">6. Identifiants WebAuthn (optionnel)</a></li></ul></li></ul></li><li class="nav-item position-relative">
+            <a href="#comportement-reel-des-navigateurs" class="nav-link text-muted">Comportement réel des navigateurs</a></li><li class="nav-item position-relative">
+            <a href="#exemple-complet-de-formulaire" class="nav-link text-muted">Exemple complet de formulaire</a></li><li class="nav-item position-relative">
+            <a href="#comment-tester-la-presence-et-la-pertinence-de-autocomplete" class="nav-link text-muted">Comment tester la présence et la pertinence de autocomplete</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#inspection-manuelle" class="nav-link text-muted">Inspection manuelle</a></li><li class="nav-item position-relative">
+            <a href="#utiliser-le-bookmarklet-detectautocomplete" class="nav-link text-muted">Utiliser le bookmarklet detectAutocomplete</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#erreurs-frequentes-observees-en-audit" class="nav-link text-muted">Erreurs fréquentes observées en audit</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#regle-simple-a-retenir" class="nav-link text-muted">Règle simple à retenir</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#conclusion" class="nav-link text-muted">Conclusion</a></li><li class="nav-item position-relative">
+            <a href="#webographie" class="nav-link text-muted">Webographie</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo" tabindex="-1">
+  <div class="container-lg">
+    <nav class="py-2" role="navigation">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact/" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos/" class="nav-link">
+  À propos
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-fr.xml" class="nav-link">
+  Flux rss
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/accessibilite/" class="nav-link">
+  Accessibilité : partiellement conforme
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/fr/" class="nav-link">
+  Pré-version sur Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Déploiements sur Netlify">
+            <img src="https://www.netlify.com/assets/badges/netlify-badge-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/autocomplete-attribute.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+            Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Retour en haut de page">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" title="Retour en haut de page">
+        <span class="visually-hidden">Retour en haut de page</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      tarteaucitron.init({"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","bodyPosition":"top","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false});var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"],"attributesToHighlight":["title","content"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher sur le site","buttonAriaLabel":"Rechercher sur le site"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler","searchInputLabel":"Rechercher sur le site"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résultat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
+    </script>
+    <div hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2026 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>
