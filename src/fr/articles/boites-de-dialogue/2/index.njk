@@ -3,6 +3,7 @@ title: "Les boîtes de dialogue 2/2"
 abstract: "Exemple de boite de dialogue accessible (partie 2)."
 titleBeforeTag: true
 date: "2018-01-03"
+updateDate: "2025-07-19"
 tags:
   - component
 css:
@@ -12,12 +13,12 @@ js:
 ---
 
 <h2>Présentation</h2>
-<p>Voici un autre exemple de boite de dialogue qui cette fois, au lieu d’afficher un message à l’utilisateur, lui demande de sélectionner un dossier parmi une liste.</p>
+<p>Voici un autre exemple de boite de dialogue qui cette fois, au lieu d'afficher un message à l'utilisateur, lui demande de sélectionner un dossier parmi une liste.</p>
 
 <h2>Exemple</h2>
 <p>Voici le rendu final de cet exemple.</p>
 
-<p><button id="openButton" class="btn btn-outline-secondary">Ouvrir l’exemple final</button></p>
+<p><button id="openButton" class="btn btn-outline-secondary">Ouvrir l'exemple final</button></p>
 
 <!-- Final dialog -->
 <div id="dialog" role="dialog" aria-labelledby="dialogTitle">
@@ -43,7 +44,7 @@ js:
     </div>
     <div class="btnbar">
       <button class="btn btn-outline-secondary">Annuler</button>
-      <button class="btn btn-outline-secondary">Valider</button>
+      <button class="btn btn-primary">Valider</button>
     </div>
   </div>
   <span tabindex="0" class="dialog-stop"></span>
@@ -51,7 +52,7 @@ js:
 
 <h2>Réalisation</h2>
 
-<p>Pas beaucoup de modifications par rapport au <a href="../1/">premier exemple sur les boîtes de dialogue</a>, si ce n’est l’utilisation d’une listbox. Dans cas il suffit de bien veiller à étiqueter celle-ci en utilisant un attribut <code>aria-labelledby</code>.</p>
+<p>Pas beaucoup de modifications par rapport au <a href="../1/">premier exemple sur les boîtes de dialogue</a>, si ce n'est l'utilisation d'une listbox. Dans cas il suffit de bien veiller à étiqueter celle-ci en utilisant un attribut <code>aria-labelledby</code>.</p>
 
 <pre><code class="html">
     &lt;p id="list-label"&gt;Mes fichiers&lt;/p&gt;
