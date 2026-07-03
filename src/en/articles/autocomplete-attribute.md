@@ -12,9 +12,9 @@ Forms are at the heart of the user experience on the web: registration, login, p
 However, filling them out can be an obstacle, especially for people with disabilities. The accessibility of forms is therefore a key challenge.
 
 Among the often overlooked mechanisms, the HTML `autocomplete` attribute plays a crucial role.
-It allows browsers and password managers to understand **the type of information expected in a form field**.
+It helps browsers and password managers identify **the type of information expected in a form field**.
 
-When used correctly, it helps to:
+When used appropriately, it helps to:
 
 * speed up data entry;
 * reduce errors;
@@ -30,7 +30,7 @@ The `autocomplete` attribute can be used on:
 * the `<form>` element
 * certain form elements like `<input>`, `<textarea>`, or `<select>`.
 
-It indicates to the browser **the nature of the data expected in a field**, to facilitate autofill.
+It tells the browser **what kind of information is expected in a field**, making autofill possible.
 
 Simple example:
 
@@ -51,11 +51,11 @@ The HTML specification defines a **precise list of standardized values** (or `au
 
 ## How autocomplete improves accessibility
 
-The `autocomplete` attribute plays a direct role in form accessibility but was not specifically designed for assistive technologies. Its primary purpose is to help browsers identify the type of information expected in a field and offer appropriate autocompletion.
+The `autocomplete` attribute plays a direct role in form accessibility but was not specifically designed for assistive technologies. Its primary purpose is to help browsers identify the kind of information expected in a field and offer appropriate autocompletion.
 
 Some assistive technologies can leverage this information to **identify the purpose of a form field**, regardless of its visible label.
 
-The `autocomplete` attribute is beneficial for users, some examples include:
+The `autocomplete` attribute benefits different groups of users. For example:
 - **Users with cognitive disabilities**: Autocompletion helps these users by reducing the cognitive load required to fill out a form. The suggestions provided by the browser can serve as reminders or cues, making it easier to enter information.
 - **Users with motor disabilities**: For people who have difficulty using a keyboard or mouse, autocompletion reduces the number of keystrokes required, making the form faster and less tiring to complete.
 - **Visually impaired or blind users**: Screen reader users may also benefit from browser autofill features. Depending on the browser and assistive technology, autofill suggestions may be exposed in a way that helps users complete forms more efficiently.
@@ -97,7 +97,7 @@ The use of `autocomplete` obviously does not replace:
 
 The `autocomplete` attribute accepts several types of values defined in the HTML specification.
 
-These values can be grouped into several categories.
+The values fall into several categories.
 
 ### Priority rules
 
@@ -108,9 +108,9 @@ These values can be grouped into several categories.
 
 ### Syntax of the `autocomplete` attribute
 
-The HTML Living Standard specification defines the value of the `autocomplete` attribute not as a simple free-form value, but as a **structured sequence of tokens** that must follow a strict grammar and a specific order. Each token has a precise role, and their order is not interchangeable. The order of the tokens is indeed significant: a poorly ordered value may be ignored by the browser.
+The HTML Living Standard specification defines the value of the `autocomplete` attribute not as a simple free-form value, but as a **structured sequence of tokens** that must follow a strict grammar and a specific order. Each token has a precise role, and their order is not interchangeable. Token order is significant: a poorly ordered value may be ignored by the browser.
 
-The expected syntax is as follows:
+The syntax is as follows:
 
 ```
 autocomplete = "on" | "off" | [section-*] [shipping|billing] [contact-type] autofill-field-name [webauthn]
@@ -290,7 +290,7 @@ However, this behavior is not standardized and may vary between browsers. Using 
 
 ## Complete form example
 
-Here is a simplified example of a form using the `autocomplete` attribute correctly:
+Here is a simplified example of a form using the `autocomplete` attribute properly:
 
 ```html
 <form>
@@ -354,7 +354,7 @@ It can help to:
 * spot incorrect values;
 * quickly analyze a form's structure.
 
-The bookmarklet is available on GitHub: [https://github.com/MewenLeHo/detectAutocomplete](https://github.com/MewenLeHo/detectAutocomplete)
+The source code and installation instructions are available on GitHub: [https://github.com/MewenLeHo/detectAutocomplete](https://github.com/MewenLeHo/detectAutocomplete)
 
 ## Common errors observed in audits
 
@@ -407,7 +407,7 @@ When used correctly, it helps to:
 * and meet certain accessibility requirements.
 
 Despite this, it remains **underused or poorly implemented in many forms**.
-Taking the time to implement it correctly is a simple improvement, quick to implement… and yet still too often overlooked.
+Taking the time to implement it correctly is a small effort that can significantly improve the user experience and one that is still too often overlooked.
 
 ## Webography
 

@@ -54,7 +54,7 @@ L'attribut `autocomplete` joue un rôle direct dans l'accessibilité des formula
 
 Certaines technologies d'assistance peuvent exploiter cette information pour **identifier la nature d'un champ de formulaire**, indépendamment de son libellé visible.
 
-L'attribut `autocomplete` est **bénéfique pour les utilisateurs**, voici quelques exemples de son impact :
+L'attribut `autocomplete` est **bénéfique pour de nombreux utilisateurs**. Voici quelques exemples de son impact :
 - **Utilisateurs avec des troubles cognitifs** : L'autocomplétion aide ces utilisateurs en réduisant la charge cognitive nécessaire pour remplir un formulaire. Les suggestions fournies par le navigateur peuvent servir de rappels ou d'indices, facilitant ainsi la saisie des informations.
 - **Utilisateurs avec des handicaps moteurs** : Pour les personnes ayant des difficultés à utiliser un clavier ou une souris, l'autocomplétion réduit le nombre de frappes nécessaires, rendant le formulaire plus rapide et moins fatigant à remplir.
 - **Utilisateurs malvoyants ou non-voyants** : Les utilisateurs de lecteurs d'écran bénéficient également de l'attribut `autocomplete`. Les suggestions d'autocomplétion peuvent être lues par les lecteurs d'écran, aidant ainsi les utilisateurs à comprendre les informations attendues et à remplir le formulaire plus efficacement.
@@ -63,7 +63,7 @@ L'attribut `autocomplete` est **bénéfique pour les utilisateurs**, voici quelq
 
 Cette pratique est directement liée à un critère d'accessibilité des WCAG : **WCAG 2.2 – Success Criterion 1.3.5: Identify Input Purpose (niveau AA)**.
 
-Ce critère demande que, pour certains champs collectant des données personnelles, **la finalité du champ soit identifiée programmatiquement** à l'aide des valeurs définies dans la spécification HTML.
+Ce critère demande que, pour certains champs collectant des données personnelles, **la finalité du champ soit identifiée programmatiquement** à l'aide des valeurs définies dans le HTML Living Standard.
 L'utilisation de `autocomplete` constitue ainsi un moyen standardisé de répondre à ce critère, lorsqu'un token approprié existe.
 
 *Remarque :* le critère concerne les informations relatives à l'utilisateur lui-même, et non celles concernant des tiers (par exemple : adresse de livraison d'un ami ou numéro de téléphone d'un contact).
@@ -85,7 +85,7 @@ Il est important de noter que :
 * uniquement **lorsque ces données sont demandées à l'utilisateur** sous forme de contrôles de saisie (`inputs`, etc.)
 * et lorsque la finalité du champ figure bien dans la liste des `input purposes` définie par les WCAG, eux‑mêmes alignés sur les `autofill tokens HTML`.
 
-*Remarque :* les champs dont la finalité n'est pas couverte par les `autofill-tokens` (par exemple : champ de recherche libre, zone de texte pour un commentaire, champs très métier, ou non standardisés) n'ont pas besoin de cet attribut, ou ne devraient pas utiliser une valeur inappropriée.
+*Remarque :* les champs dont la finalité n'est pas couverte par les `autofill tokens` (par exemple : champ de recherche libre, zone de texte pour un commentaire, champs très métier, ou non standardisés) n'ont pas besoin de cet attribut, ou ne devraient pas utiliser une valeur inappropriée.
 
 L'utilisation de `autocomplete` ne remplace évidemment pas :
 
@@ -108,7 +108,7 @@ Ces valeurs peuvent être regroupées en plusieurs catégories.
 
 ### Syntaxe de l'attribut `autocomplete`
 
-La valeur de l'attribut `autocomplete` n'est pas une simple valeur libre. La spécification HTML Living Standard la définit comme une séquence structurée de tokens obéissant à une grammaire stricte et à un ordre précis. Chaque token possède un rôle spécifique. Leur ordre n'est pas interchangeable : une valeur mal ordonnée peut être ignorée par le navigateur.
+La valeur de l'attribut `autocomplete` n'est pas une simple valeur libre. Le HTML Living Standard la définit comme une séquence structurée de tokens obéissant à une grammaire stricte et à un ordre précis. Chaque token possède un rôle spécifique. Leur ordre n'est pas interchangeable : une valeur mal ordonnée peut être ignorée par le navigateur.
 
 La syntaxe attendue est la suivante :
 
@@ -164,7 +164,7 @@ Cela permet de distinguer plusieurs ensembles d'informations similaires dans un 
 
 #### 3. Les sections prédéfinies (optionnel)
 
-La spécification HTML permet de **regrouper des champs appartenant à une même section logique**. Ces regroupements permettent d'indiquer le contexte de la donnée.
+La standard HTML permet de **regrouper des champs appartenant à une même section logique**. Ces regroupements permettent d'indiquer le contexte de la donnée.
 
 Exemple :
 
@@ -256,7 +256,7 @@ Ces valeurs sont utilisées par :
 * les gestionnaires de mots de passe
 * certains outils d'assistance.
 
-[La liste complète est définie dans la spécification HTML](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute).
+[La liste complète est définie dans la spécification](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute).
 
 #### 6. Identifiants WebAuthn (optionnel)
 
@@ -327,7 +327,7 @@ Points à vérifier :
 
 * présence de l'attribut `autocomplete`
 * cohérence entre la valeur et la donnée demandée
-* utilisation correcte des tokens définis par la spécification HTML
+* utilisation correcte des tokens définis par le HTML Living Standard
 
 Par exemple :
 
@@ -409,7 +409,7 @@ Correctement utilisé, il permet :
 * et de répondre à certaines exigences d'accessibilité.
 
 Malgré cela, il reste encore **sous-utilisé ou mal implémenté dans de nombreux formulaires**.
-Prendre le temps de l'implémenter correctement est une amélioration simple, rapide à mettre en œuvre… et pourtant encore trop souvent négligée.
+Bien implémenté, cet attribut constitue une amélioration simple dont les bénéfices dépassent largement le faible coût de mise en œuvre.
 
 ## Webographie
 
