@@ -138,7 +138,7 @@ Consulter l’article sur l’[utilisation des fragments](https://developer.andr
 
 **Exemples&nbsp;:**
 
-<img src="../../../images/image_ex.png" alt="exemple complet d’image décorative et d’icône informative" width="400" height="149">
+<img src="../../../images/image_ex.png" class="img-fluid" alt="exemple complet d’image décorative et d’icône informative" width="400" height="149">
 
 En décomposant l’image&nbsp;:
 - <img src="../../../images/montagnard.png" alt="exemple d’image décorative" width="256" height="95"> pas de `contentDescription`
