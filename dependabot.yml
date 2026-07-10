@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    ignore:
+      # Ignore Babel 8.x until ESM compatibility issues are resolved
+      - dependency-name: "@babel/cli"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@babel/core"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@babel/preset-env"
+        update-types: ["version-update:semver-major"]

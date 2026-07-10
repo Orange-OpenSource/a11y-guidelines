@@ -8,12 +8,12 @@ tags:
   - component
 ---
 
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 <p>Il est parfois nécessaire de masquer des éléments dans une page web. La méthode classique consiste à utiliser du <abbr>CSS</abbr> (<code>display:none;</code> et <code>visibility:hidden;</code>). Ces deux propriétés, comme l'attribut <abbr>HTML5</abbr> <code>hidden</code>, permettent de masquer des éléments non seulement à l'écran, mais aussi aux utilisateurs de lecteurs d'écran. Ces éléments ne seront donc ni visibles ni vocalisés par les aides techniques (<abbr>AT</abbr>).</p>
 <p>Dans certains cas, il peut être utile de masquer des éléments à l'écran tout en conservant l'information pour les utilisateurs de lecteurs d'écran. Pour cela, on utilisera une classe <abbr>CSS</abbr> de «&nbsp;masquage accessible&nbsp;».</p>
 <p>Enfin, il existe un autre cas utile&nbsp;: afficher des éléments à l'écran, mais faire en sorte qu'ils ne soient pas vocalisés. Dans ce cas, on utilisera un attribut <abbr>HTML5</abbr> <code>inert</code> ou bien un attribut <abbr>ARIA</abbr> (<code>aria-hidden</code>).</p>
 
-<h2>Le masquage accessible</h2>
+<h2 id="le-masquage-accessible">Le masquage accessible</h2>
 <p>Masquer un élément de manière accessible permet de le faire disparaître à l'écran tout en le conservant pour les utilisateurs d'<abbr>AT</abbr>, en particulier les lecteurs d'écran. Techniquement, la solution consiste à appliquer une classe <abbr>CSS</abbr> sur l'élément qui ne doit pas être visible.</p>
 <p>Il existe plusieurs solutions pour réaliser ce type de classe <abbr>CSS</abbr>&nbsp;:</p>
     <ul>
@@ -52,7 +52,7 @@ tags:
 
 <p>Si vous ne disposez d'aucune classe de masquage accessible, le plus simple est de copier-coller le code ci-dessus.</p>
 
-<h3>Mise en œuvre</h3>
+<h3 id="mise-en-œuvre-1">Mise en œuvre</h3>
 <p>La classe de masquage accessible peut s'employer dans de nombreux cas. Par exemple, pour expliciter le libellé d'un lien&nbsp;:</p>
 
 <pre><code class="html">
@@ -70,13 +70,13 @@ tags:
 
 <p>La solution utilisant la classe de masquage accessible offre néanmoins plusieurs avantages par rapport à la solution <code>aria-label</code>. Si le <abbr>CSS</abbr> est désactivé (ou remplacé par des styles personnalisés adaptés à un certain handicap numérique, par exemple), les textes en masquage accessible apparaîtront automatiquement à l'écran. Lors d'une traduction automatique d'une page, le <code>aria-label</code> ne sera pas traduit. De plus, un <code>aria-label</code> n'étant pas très visible dans le code, les développeurs risque d'oublier de les mettre à jour ou modifier.</p>
 
-<h2>L'attribut <code>aria-hidden</code></h2>
+<h2 id="l-attribut-aria-hidden">L'attribut <code>aria-hidden</code></h2>
 <p>Cet attribut permet de masquer un élément (ou un groupe d'éléments) pour les lecteurs d'écran. Il n'a en revanche aucun effet sur l'affichage à l'écran.</p>
 
-<h3>Mise en œuvre</h3>
+<h3 id="mise-en-œuvre-2">Mise en œuvre</h3>
 <p>Pour masquer un élément (et ses enfants) aux lecteurs d'écran, il suffit d'ajouter un attribut <code>aria-hidden="true"</code>. Le contenu peut toujours être rendu accessible aux <abbr>AT</abbr> grâce à <code>aria-describedby</code> ou <code>aria-labelledby</code>.</p>
 
-<h4>Attention</h4>
+<h4 id="attention">Attention</h4>
 <p>Un élément interactif placé dans un élément possédant ou héritant un attribut <code>aria-hidden="true"</code> sera atteignable au clavier mais sera interprété comme vide pour les <abbr>AT</abbr>. <em>Donc, à ne pas faire.</em></p>
 
 <p><strong>Exemple&nbsp;: </strong><br>
@@ -93,7 +93,7 @@ La capture d'écran suivante montre un lecteur vidéo contenant un certain nombr
 &lt;/div&gt;
 </code></pre>
 
-<h2>Webographie</h2>
+<h2 id="webographie">Webographie</h2>
 <ul>
   <li><a href="https://www.ffoodd.fr/masquage-accessible-de-pointe/">Masquage accessible de pointe</a></li>
   <li><a href="https://gist.github.com/ffoodd/000b59f431e3e64e4ce1a24d5bb36034" lang="en" href="en">Improved .visually-hidden (en)</a></li>
