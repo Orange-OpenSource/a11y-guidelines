@@ -82,7 +82,9 @@
     {%- endfor -%}
     <script>
       var tarteaucitronForceLanguage = "{{ locale }}"
-      tarteaucitron.init({{ site.tracking.tarteaucitronConfig | dump | safe }});
+      var tarteaucitronConfig = {{ site.tracking.tarteaucitronConfig | dump | safe }};
+      tarteaucitronConfig.readmoreLink = Application.lang === "fr" ? "/fr/a-propos/#gestion-des-cookies" : "/en/about/#cookie-management";
+      tarteaucitron.init(tarteaucitronConfig);
       {%- if config.environment == "production" -%}
         var dataLayer = [{
           'site_name': '{{ site.tracking.siteName }}',
