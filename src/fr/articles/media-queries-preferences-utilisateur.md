@@ -35,14 +35,17 @@ Les sections suivantes présentent chacune de ces *media features*, leur fonctio
 
 ## `prefers-reduced-motion`
 
-Cette media query permet de détecter si l'utilisateur souhaite limiter les animations non essentielles.
+La *media feature* `prefers-reduced-motion` permet de détecter si l'utilisateur a exprimé une préférence pour la réduction des animations et des mouvements. Elle est généralement utilisée afin d'adapter ou de limiter certains effets d'animation susceptibles d'améliorer le confort d'utilisation.
 
-Valeurs principales :
+### Valeurs définies par la spécification
 
-- `reduce`
-- `no-preference`
+La spécification définit deux valeurs :
+- `reduce` : l'utilisateur a exprimé une préférence pour la réduction des animations et des mouvements ;
+- `no-preference` : aucune préférence particulière n'a été exprimée.
 
 ### Exemple
+
+L'exemple suivant illustre une approche couramment utilisée consistant à réduire fortement la durée des animations, des transitions et du défilement fluide lorsque l'utilisateur exprime une préférence pour leur réduction.
 
 ```css
 @media (prefers-reduced-motion: reduce) {
@@ -57,26 +60,33 @@ Valeurs principales :
 }
 ```
 
+### Cas d'usage
+
+Par exemple :
+- animations décoratives ;
+- parallaxe ;
+- zooms ;
+- transitions importantes ;
+- défilement fluide ;
+- carrousels.
+
 ### Bonnes pratiques
 
-- Supprimer les animations purement décoratives.
-- Conserver les animations indispensables à la compréhension.
-- Désactiver le défilement fluide (`scroll-behavior: smooth`).
+La réduction des animations ne consiste pas nécessairement à supprimer tous les effets visuels. Les animations qui apportent une information utile ou facilitent la compréhension de l'interface peuvent être conservées, tandis que les animations purement décoratives ou susceptibles de provoquer un inconfort devraient être limitées ou supprimées.
 
-### Lien avec les WCAG
-
-Cette approche contribue notamment au respect du critère **WCAG 2.2 – 2.3.3 Animation from Interactions (AAA)**.
+Il est également recommandé d'éviter le défilement fluide (`scroll-behavior: smooth`) lorsque cette préférence est exprimée.
 
 ## `prefers-contrast`
 
-Permet de détecter la préférence de l'utilisateur concernant le niveau de contraste.
+La *media feature* `prefers-contrast` permet de détecter si l'utilisateur a exprimé une préférence concernant le niveau de contraste de l'interface. Cette préférence peut être définie au niveau du système d'exploitation ou du navigateur.
 
-Valeurs définies par la spécification :
+### Valeurs définies par la spécification
 
-- `more`
-- `less`
-- `custom`
-- `no-preference`
+La spécification définit les valeurs suivantes :
+- `no-preference` : aucune préférence particulière n'a été exprimée ;
+- `more` : l'utilisateur a exprimé une préférence pour un contraste plus élevé ;
+- `less` : l'utilisateur a exprimé une préférence pour un contraste plus faible ;
+- `custom` : l'utilisateur a défini un mode de contraste personnalisé (cette valeur est moins courante et peut varier selon les implémentations).
 
 ### Exemple
 
@@ -97,18 +107,20 @@ Valeurs définies par la spécification :
 
 ### Cas d'usage
 
-- renforcer les bordures ;
-- augmenter les contrastes ;
-- souligner systématiquement les liens.
+- **Thèmes à contraste élevé :** Augmenter la différence de luminosité entre le texte et l'arrière-plan pour améliorer la lisibilité, notamment pour les personnes ayant des déficiences visuelles.
+- **Thèmes à faible contraste :** Réduire le contraste pour les utilisateurs sensibles aux contrastes trop marqués.
+- **Adaptation des éléments graphiques :** Modifier les icônes, les bordures ou les ombres pour qu'elles respectent la préférence de contraste.
 
 ## `prefers-color-scheme`
 
-Permet de détecter la préférence entre thème clair et sombre.
+La *media feature* `prefers-color-scheme` permet de détecter si l'utilisateur a exprimé une préférence pour un thème de couleur clair ou sombre pour l'interface utilisateur. Cette préférence est généralement définie au niveau du système d'exploitation.
 
-Valeurs principales :
+### Valeurs définies par la spécification
 
-- `light`
-- `dark`
+La spécification définit les valeurs suivantes :
+- `no-preference` : aucune préférence particulière n'a été exprimée ;
+- `light` : l'utilisateur a exprimé une préférence pour un thème clair ;
+- `dark` : l'utilisateur a exprimé une préférence pour un thème sombre.
 
 ### Exemple
 
@@ -125,10 +137,16 @@ Valeurs principales :
 }
 ```
 
-### Remarque importante
+### Cas d'usage
 
-Le mode sombre n'améliore pas automatiquement l'accessibilité.
-Les contrastes doivent toujours être vérifiés.
+- **Mode sombre (Dark Mode) :** Offrir une version de l'interface avec des couleurs sombres pour réduire la fatigue oculaire, notamment dans des environnements peu éclairés, ou pour économiser la batterie sur certains écrans.
+- **Mode clair (Light Mode) :** Maintenir une interface lumineuse pour une meilleure lisibilité en plein jour.
+
+### Bonnes pratiques
+
+Lors de la conception d'un mode sombre, il est important de ne pas simplement inverser les couleurs. Les couleurs du texte, des icônes et des éléments interactifs doivent être soigneusement choisies pour maintenir un contraste suffisant et une bonne lisibilité. Testez toujours les deux modes pour vous assurer d'une expérience utilisateur cohérente et accessible.
+
+<!-- Reprendre travail de réécriture ici -->
 
 ## `forced-colors`
 
@@ -309,7 +327,7 @@ Il permet notamment de :
 - identifier les préférences prises en charge ;
 - repérer les éventuelles omissions.
 
-Le projet est disponible sur GitHub : https://github.com/MewenLeHo/prefers-scan
+Le code source et les instructions d'installation sont disponibles sur GitHub : https://github.com/MewenLeHo/prefers-scan
 
 ## Erreurs fréquentes observées en audit
 
