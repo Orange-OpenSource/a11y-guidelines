@@ -20,7 +20,7 @@ Cet article présente les principales *media features* de préférences utilisat
 
 Les *media features* présentées dans cet article sont définies par la spécification **CSS Media Queries Level 5**. En revanche, leur niveau de prise en charge varie selon les navigateurs et les plateformes. Leur utilisation n'est pas explicitement exigée par les **WCAG**, le **RGAA** ou la norme **EN 301 549**, mais constitue une bonne pratique pour concevoir des interfaces capables de s'adapter aux préférences exprimées par les utilisateurs.
 
-## Tableau récapitulatif des *media features*
+## Les principales *media features* de préférences utilisateur
 
 | *Media feature*                | Description                                                             |
 | ------------------------------ | ----------------------------------------------------------------------- |
@@ -33,52 +33,41 @@ Les *media features* présentées dans cet article sont définies par la spécif
 
 Les sections suivantes présentent chacune de ces *media features*, leur fonctionnement, les valeurs définies, lorsqu'elles existent, par la spécification, leurs principaux cas d'usage ainsi que les points d'attention à connaître pour les implémenter correctement.
 
+> **Note**
+>
+> Cet article s'appuie sur la version actuelle de la spécification **CSS Media Queries Level 5**. Certaines documentations ou articles plus anciens peuvent mentionner des valeurs qui ne figurent plus dans la version actuelle, comme `no-preference` pour `prefers-color-scheme`.
+
 ## `prefers-reduced-motion`
 
-La *media feature* `prefers-reduced-motion` permet de détecter si l'utilisateur a exprimé une préférence pour la réduction des animations et des mouvements. Elle est généralement utilisée afin d'adapter ou de limiter certains effets d'animation susceptibles d'améliorer le confort d'utilisation.
+La *media feature* `prefers-reduced-motion` permet de détecter si l'utilisateur a exprimé une préférence pour la réduction des animations et des mouvements. Elle permet d'adapter les animations et les effets de mouvement en conséquence.
 
 ### Valeurs définies par la spécification
 
-La spécification définit deux valeurs :
+La spécification définit les valeurs suivantes :
 - `reduce` : l'utilisateur a exprimé une préférence pour la réduction des animations et des mouvements ;
 - `no-preference` : aucune préférence particulière n'a été exprimée.
 
 ### Exemple
 
-L'exemple suivant illustre une approche couramment utilisée consistant à réduire fortement la durée des animations, des transitions et du défilement fluide lorsque l'utilisateur exprime une préférence pour leur réduction.
-
 ```css
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+  .animated-element {
+    animation: none;
   }
 }
 ```
 
 ### Cas d'usage
 
-Par exemple :
-- animations décoratives ;
-- parallaxe ;
-- zooms ;
-- transitions importantes ;
-- défilement fluide ;
-- carrousels.
+Cette *media feature* peut notamment être utilisée lorsque l'interface comporte des animations, des transitions, des effets de parallaxe ou d'autres mouvements susceptibles d'être réduits lorsque cette préférence est exprimée.
 
 ### Bonnes pratiques
 
-La réduction des animations ne consiste pas nécessairement à supprimer tous les effets visuels. Les animations qui apportent une information utile ou facilitent la compréhension de l'interface peuvent être conservées, tandis que les animations purement décoratives ou susceptibles de provoquer un inconfort devraient être limitées ou supprimées.
-
-Il est également recommandé d'éviter le défilement fluide (`scroll-behavior: smooth`) lorsque cette préférence est exprimée.
+La réduction des animations ne consiste pas nécessairement à supprimer tous les effets visuels. D'une manière générale, il n'est pas nécessaire de supprimer toutes les animations. Lorsqu'une réduction des animations est souhaitée, il n'est pas toujours nécessaire de supprimer tous les effets de mouvement. Les animations qui participent à la compréhension de l'interface peuvent être conservées, tandis que les animations purement décoratives peuvent être réduites ou supprimées.
 
 ## `prefers-contrast`
 
-La *media feature* `prefers-contrast` permet de détecter si l'utilisateur a exprimé une préférence concernant le niveau de contraste de l'interface. Cette préférence peut être définie au niveau du système d'exploitation ou du navigateur.
+La *media feature* `prefers-contrast` permet de détecter si l'utilisateur a exprimé une préférence concernant le niveau de contraste de l'interface.
 
 ### Valeurs définies par la spécification
 
@@ -86,52 +75,42 @@ La spécification définit les valeurs suivantes :
 - `no-preference` : aucune préférence particulière n'a été exprimée ;
 - `more` : l'utilisateur a exprimé une préférence pour un contraste plus élevé ;
 - `less` : l'utilisateur a exprimé une préférence pour un contraste plus faible ;
-- `custom` : l'utilisateur a défini un mode de contraste personnalisé (cette valeur est moins courante et peut varier selon les implémentations).
+- `custom` : l'utilisateur a défini un mode de contraste personnalisé.
 
 ### Exemple
 
 ```css
 @media (prefers-contrast: more) {
-  :root {
-    --border-width: 3px;
-  }
-
-  button,
-  input,
-  select,
-  textarea {
-    border-width: var(--border-width);
+  body {
+    background: white;
+    color: black;
   }
 }
 ```
 
 ### Cas d'usage
 
-- **Thèmes à contraste élevé :** Augmenter la différence de luminosité entre le texte et l'arrière-plan pour améliorer la lisibilité, notamment pour les personnes ayant des déficiences visuelles.
-- **Thèmes à faible contraste :** Réduire le contraste pour les utilisateurs sensibles aux contrastes trop marqués.
-- **Adaptation des éléments graphiques :** Modifier les icônes, les bordures ou les ombres pour qu'elles respectent la préférence de contraste.
+Cette *media feature* peut notamment être utilisée pour :
+- adapter le contraste des couleurs de l'interface ;
+- renforcer ou atténuer certains éléments graphiques (bordures, icônes, indicateurs visuels) ;
+- ajuster la présentation en fonction de la préférence de contraste exprimée par l'utilisateur.
 
 ## `prefers-color-scheme`
 
-La *media feature* `prefers-color-scheme` permet de détecter si l'utilisateur a exprimé une préférence pour un thème de couleur clair ou sombre pour l'interface utilisateur. Cette préférence est généralement définie au niveau du système d'exploitation.
+La *media feature* `prefers-color-scheme` permet de détecter si l'utilisateur a exprimé une préférence pour un thème de couleur clair ou sombre pour l'interface utilisateur.
 
 ### Valeurs définies par la spécification
 
 La spécification définit les valeurs suivantes :
-- `no-preference` : aucune préférence particulière n'a été exprimée ;
-- `light` : l'utilisateur a exprimé une préférence pour un thème clair ;
+- `light` : l'utilisateur a exprimé une préférence pour un thème clair ou n'a exprimé aucune préférence particulière ;
 - `dark` : l'utilisateur a exprimé une préférence pour un thème sombre.
 
 ### Exemple
 
 ```css
-:root {
-  color-scheme: light dark;
-}
-
 @media (prefers-color-scheme: dark) {
   body {
-    background: #111;
+    background-color: #121212;
     color: #f5f5f5;
   }
 }
@@ -139,23 +118,24 @@ La spécification définit les valeurs suivantes :
 
 ### Cas d'usage
 
-- **Mode sombre (Dark Mode) :** Offrir une version de l'interface avec des couleurs sombres pour réduire la fatigue oculaire, notamment dans des environnements peu éclairés, ou pour économiser la batterie sur certains écrans.
-- **Mode clair (Light Mode) :** Maintenir une interface lumineuse pour une meilleure lisibilité en plein jour.
+Cette *media feature* peut notamment être utilisée pour :
+- appliquer automatiquement un thème clair ou sombre ;
+- adapter les couleurs de l'interface à la préférence exprimée ;
+- proposer une expérience cohérente avec le thème choisi par l'utilisateur.
 
 ### Bonnes pratiques
 
-Lors de la conception d'un mode sombre, il est important de ne pas simplement inverser les couleurs. Les couleurs du texte, des icônes et des éléments interactifs doivent être soigneusement choisies pour maintenir un contraste suffisant et une bonne lisibilité. Testez toujours les deux modes pour vous assurer d'une expérience utilisateur cohérente et accessible.
-
-<!-- Reprendre travail de réécriture ici -->
+La conception d'un thème sombre ne consiste pas à inverser automatiquement les couleurs d'un thème clair. Les couleurs du texte, des icônes et des éléments interactifs doivent être soigneusement choisies pour maintenir un contraste suffisant et une bonne lisibilité. Testez toujours les deux modes afin de vérifier que les contrastes, les états interactifs et la lisibilité restent satisfaisants dans chaque thème.
 
 ## `forced-colors`
 
-Indique qu'un mode de couleurs forcées est actif, par exemple le mode contraste élevé de Windows.
+La *media feature* `forced-colors` permet de détecter si l'agent utilisateur applique un mode de couleurs forcées. Dans ce mode, certaines couleurs définies par la page peuvent être remplacées par des couleurs système afin de respecter les préférences d'affichage de l'utilisateur.
 
-Valeurs :
+### Valeurs définies par la spécification
 
-- `active`
-- `none`
+La spécification définit les valeurs suivantes :
+- `active` : un mode de couleurs forcées est actif ;
+- `none` : aucun mode de couleurs forcées n'est actif.
 
 ### Exemple
 
@@ -167,10 +147,19 @@ Valeurs :
 }
 ```
 
-### Recommandations
+### Cas d'usage
 
-- Utiliser les couleurs système (`Canvas`, `CanvasText`, `ButtonText`, etc.).
-- Éviter de désactiver ce comportement avec `forced-color-adjust: none` sauf nécessité absolue.
+Cette *media feature* peut notamment être utilisée pour :
+
+- adapter l'apparence de composants personnalisés lorsque le mode de couleurs forcées est actif ;
+- appliquer des couleurs système à certains éléments de l'interface ;
+- ajuster la présentation de certains composants afin qu'ils restent compatibles avec le mode de couleurs forcées.
+
+### Bonnes pratiques
+
+La propriété `forced-color-adjust` permet de contrôler si un élément doit être adapté lorsque le mode de couleurs forcées est actif.
+
+Sa valeur `none` empêche l'agent utilisateur de remplacer les couleurs de l'élément concerné. Son utilisation devrait rester exceptionnelle et être réservée aux situations où ce comportement est pleinement justifié.
 
 ## `prefers-reduced-transparency`
 
