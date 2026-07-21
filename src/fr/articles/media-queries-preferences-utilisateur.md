@@ -1,87 +1,37 @@
 ---
-title: "Media queries et préférences utilisateur : adapter les interfaces aux besoins des utilisateurs"
-abstract: "Les media queries liées aux préférences utilisateur permettent d'adapter automatiquement une interface aux réglages du système d'exploitation ou du navigateur. Réduction des animations, contraste renforcé, mode sombre, économie de données : ces fonctionnalités jouent un rôle important dans l'accessibilité numérique."
+title: "Media queries et préférences utilisateur : adapter les interfaces aux préférences des utilisateurs"
+abstract: "Les media features de préférences utilisateur permettent d'adapter une interface en fonction des préférences exprimées par l'utilisateur. Définies par la spécification CSS Media Queries Level 5, elles permettent notamment de prendre en compte la réduction des animations, le contraste, le thème clair ou sombre, les couleurs forcées, la transparence et la réduction de la consommation de données."
 titleBeforeTag: true
-date: "2026-05-13"
+date: "2026-07-21"
 tags:
   - web
   - advanced
 ---
 
-Les technologies web modernes permettent de détecter certaines préférences exprimées par les utilisateurs au niveau du système d'exploitation ou du navigateur.
-Ces préférences concernent notamment : les animations, le contraste, le thème visuel, la transparence ou encore la consommation de données.
+Les **media queries** sont historiquement utilisées pour adapter la présentation d'une interface aux caractéristiques du périphérique utilisé, comme la largeur de l'écran, son orientation ou sa résolution.
 
-Ces informations sont exposées via plusieurs **media features CSS** définies dans la spécification *Media Queries Level 5*.
+Avec **CSS Media Queries Level 5**, le **World Wide Web Consortium (W3C)** étend cette approche en introduisant de nouvelles *media features* permettant de prendre en compte les **préférences utilisateur**. Elles permettent d'adapter l'interface en fonction de préférences telles que la réduction des animations (`prefers-reduced-motion`), le thème clair ou sombre (`prefers-color-scheme`), le contraste (`prefers-contrast`) ou encore les couleurs forcées (`forced-colors`). La spécification précise que ces préférences peuvent être définies directement par le navigateur, provenir des réglages du système d'exploitation ou, dans certains cas, être déterminées automatiquement par l'agent utilisateur.
 
-Correctement utilisées, elles permettent de concevoir des interfaces plus confortables, plus robustes et plus inclusives.
+Ces *media features* constituent un mécanisme permettant d'adapter le comportement ou la présentation d'une interface en fonction de certaines préférences d'affichage exprimées par les utilisateurs.
 
-Cet article propose un tour d'horizon des principales media queries liées aux préférences utilisateur, de leur impact sur l'accessibilité, des bonnes pratiques d'implémentation ainsi que des méthodes de test.
+Cet article présente les principales *media features* de préférences utilisateur définies par **Media Queries Level 5**, leurs cas d'usage, leurs limites de compatibilité, ainsi que les bonnes pratiques pour les implémenter, les tester et les auditer.
 
-## Présentation des media queries liées aux préférences utilisateur
+**À retenir**
 
-Une media query permet d'appliquer des styles conditionnellement en fonction de caractéristiques de l'environnement d'exécution.
+Les *media features* présentées dans cet article sont définies par la spécification **CSS Media Queries Level 5**. En revanche, leur niveau de prise en charge varie selon les navigateurs et les plateformes. Leur utilisation n'est pas explicitement exigée par les **WCAG**, le **RGAA** ou la norme **EN 301 549**, mais constitue une bonne pratique pour concevoir des interfaces capables de s'adapter aux préférences exprimées par les utilisateurs.
 
-Exemple classique :
+## Tableau récapitulatif des *media features*
 
-```css
-@media (max-width: 768px) {
-  /* styles pour petits écrans */
-}
-```
+| *Media feature*                | Description                                                             |
+| ------------------------------ | ----------------------------------------------------------------------- |
+| `prefers-reduced-motion`       | Indique une préférence pour la réduction des animations.                |
+| `prefers-contrast`             | Indique une préférence concernant le niveau de contraste.               |
+| `prefers-color-scheme`         | Indique une préférence pour un thème clair ou sombre.                   |
+| `forced-colors`                | Indique si un mode de couleurs forcées est actif.                       |
+| `prefers-reduced-transparency` | Indique une préférence pour la réduction des effets de transparence.    |
+| `prefers-reduced-data`         | Indique une préférence pour la réduction de la consommation de données. |
 
-La spécification CSS Media Queries Level 5 introduit plusieurs media features permettant de détecter des préférences utilisateur explicites.
-
-Les plus importantes sont :
-
-- `prefers-reduced-motion`
-- `prefers-contrast`
-- `prefers-color-scheme`
-- `forced-colors`
-- `prefers-reduced-transparency`
-- `prefers-reduced-data`
-
-Ces préférences peuvent être définies par l'utilisateur dans :
-
-- le système d'exploitation ;
-- le navigateur ;
-- certains environnements d'assistance.
-
-## Impact sur l'accessibilité
-
-Ces media queries ont un impact direct sur l'expérience utilisateur.
-
-### Réduction des animations
-
-Certaines animations peuvent provoquer :
-
-- inconfort visuel ;
-- distraction ;
-- fatigue cognitive ;
-- voire des réactions vestibulaires chez certaines personnes.
-
-### Augmentation du contraste
-
-Des contrastes plus élevés facilitent la lecture pour :
-
-- les personnes malvoyantes ;
-- les personnes âgées ;
-- les utilisateurs en environnement lumineux difficile.
-
-### Adaptation du thème visuel
-
-Le mode sombre peut améliorer le confort visuel dans certains contextes.
-
-### Réduction de la transparence
-
-Les effets de flou ou de transparence peuvent nuire à la lisibilité.
-
-### Réduction de la consommation de données
-
-Utile pour :
-
-- les connexions limitées ;
-- les forfaits mobiles restreints ;
-- les zones à faible bande passante.
+Les sections suivantes présentent chacune de ces *media features*, leur fonctionnement, les valeurs définies, lorsqu'elles existent, par la spécification, leurs principaux cas d'usage ainsi que les points d'attention à connaître pour les implémenter correctement.
 
 ## `prefers-reduced-motion`
 
