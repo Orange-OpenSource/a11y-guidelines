@@ -208,7 +208,7 @@ It helps browsers and password managers identify <strong>the type of information
 <li>and <strong>help meet accessibility requirements</strong>.</li>
 </ul>
 <p>This article provides an overview of this often misunderstood attribute: its role, its impact on accessibility, its syntax, and best practices for using it effectively.</p>
-<h2 id="introduction-to-the-autocomplete-attribute" class="h2-focus">Introduction to the <code>autocomplete</code> attribute <a class="header-anchor" href="#introduction-to-the-autocomplete-attribute" id="heading-78" aria-labelledby="heading-78">#</a></h2>
+<h2 id="introduction-to-the-autocomplete-attribute" class="h2-focus">Introduction to the <code>autocomplete</code> attribute <a class="header-anchor" href="#introduction-to-the-autocomplete-attribute" id="heading-111" aria-labelledby="heading-111">#</a></h2>
 <p>The <code>autocomplete</code> attribute can be used on:</p>
 <ul>
 <li>the <code>&lt;form&gt;</code> element</li>
@@ -227,7 +227,7 @@ It helps browsers and password managers identify <strong>the type of information
 <li>or information from a password manager.</li>
 </ul>
 <p>The HTML specification defines a <strong>precise list of standardized values</strong> (or <code>autofill tokens</code>), corresponding to different types of information.</p>
-<h2 id="how-autocomplete-improves-accessibility" class="h2-focus">How autocomplete improves accessibility <a class="header-anchor" href="#how-autocomplete-improves-accessibility" id="heading-79" aria-labelledby="heading-79">#</a></h2>
+<h2 id="how-autocomplete-improves-accessibility" class="h2-focus">How autocomplete improves accessibility <a class="header-anchor" href="#how-autocomplete-improves-accessibility" id="heading-112" aria-labelledby="heading-112">#</a></h2>
 <p>The <code>autocomplete</code> attribute plays a direct role in form accessibility but was not specifically designed for assistive technologies. Its primary purpose is to help browsers identify the kind of information expected in a field and offer appropriate autocompletion.</p>
 <p>Some assistive technologies can leverage this information to <strong>identify the purpose of a form field</strong>, regardless of its visible label.</p>
 <p>The <code>autocomplete</code> attribute benefits different groups of users. For example:</p>
@@ -263,21 +263,21 @@ It helps browsers and password managers identify <strong>the type of information
 <li>a <strong>clear form structure</strong></li>
 <li><strong>understandable instructions</strong> for the user.</li>
 </ul>
-<h2 id="understanding-the-autocomplete-syntax" class="h2-focus">Understanding the autocomplete syntax <a class="header-anchor" href="#understanding-the-autocomplete-syntax" id="heading-80" aria-labelledby="heading-80">#</a></h2>
+<h2 id="understanding-the-autocomplete-syntax" class="h2-focus">Understanding the autocomplete syntax <a class="header-anchor" href="#understanding-the-autocomplete-syntax" id="heading-113" aria-labelledby="heading-113">#</a></h2>
 <p>The <code>autocomplete</code> attribute accepts several types of values defined in the HTML specification.</p>
 <p>The values fall into several categories.</p>
-<h3 id="priority-rules">Priority rules <a class="header-anchor" href="#priority-rules" id="heading-81" aria-labelledby="heading-81">#</a></h3>
+<h3 id="priority-rules">Priority rules <a class="header-anchor" href="#priority-rules" id="heading-114" aria-labelledby="heading-114">#</a></h3>
 <p><code>autocomplete</code> can be implemented on the form and directly on fields. In this case, the following rules apply:</p>
 <ul>
 <li>If <code>autocomplete</code> is present on both the form and a field, the field's value takes precedence.</li>
 <li>An <code>autocomplete</code> attribute that is absent on a field inherits the behavior of the form, which then acts as a default value (e.g., <code>autocomplete=&quot;off&quot;</code> on the form, but <code>autocomplete=&quot;email&quot;</code> on a specific field).</li>
 </ul>
-<h3 id="syntax-of-the-autocomplete-attribute">Syntax of the <code>autocomplete</code> attribute <a class="header-anchor" href="#syntax-of-the-autocomplete-attribute" id="heading-82" aria-labelledby="heading-82">#</a></h3>
+<h3 id="syntax-of-the-autocomplete-attribute">Syntax of the <code>autocomplete</code> attribute <a class="header-anchor" href="#syntax-of-the-autocomplete-attribute" id="heading-115" aria-labelledby="heading-115">#</a></h3>
 <p>The HTML Living Standard specification defines the value of the <code>autocomplete</code> attribute not as a simple free-form value, but as a <strong>structured sequence of tokens</strong> that must follow a strict grammar and a specific order. Each token has a precise role, and their order is not interchangeable. Token order is significant: a poorly ordered value may be ignored by the browser.</p>
 <p>The syntax is as follows:</p>
 <pre><code>autocomplete = &quot;on&quot; | &quot;off&quot; | [section-*] [shipping|billing] [contact-type] autofill-field-name [webauthn]
 </code></pre>
-<h4 id="1-general-values-on-and-off">1. General values: <code>on</code> and <code>off</code> <a class="header-anchor" href="#1-general-values-on-and-off" id="heading-83" aria-labelledby="heading-83">#</a></h4>
+<h4 id="1-general-values-on-and-off">1. General values: <code>on</code> and <code>off</code> <a class="header-anchor" href="#1-general-values-on-and-off" id="heading-116" aria-labelledby="heading-116">#</a></h4>
 <p>The values <code>on</code> and <code>off</code> allow autocompletion to be enabled or disabled.</p>
 <p>Example:</p>
 <pre><code class="language-html">&lt;form autocomplete=&quot;on&quot;&gt;
@@ -291,7 +291,7 @@ It helps browsers and password managers identify <strong>the type of information
 <li>a field for entering a one-time code (OTP)</li>
 <li>a confirmation field like &quot;Please re-enter your email&quot; (although this practice is itself questionable in terms of usability).</li>
 </ul>
-<h4 id="2-custom-sections-optional">2. Custom sections (optional) <a class="header-anchor" href="#2-custom-sections-optional" id="heading-84" aria-labelledby="heading-84">#</a></h4>
+<h4 id="2-custom-sections-optional">2. Custom sections (optional) <a class="header-anchor" href="#2-custom-sections-optional" id="heading-117" aria-labelledby="heading-117">#</a></h4>
 <p>It is also possible to define custom sections using the prefix:</p>
 <pre><code class="language-html">section-*
 </code></pre>
@@ -306,7 +306,7 @@ It helps browsers and password managers identify <strong>the type of information
 &lt;/fieldset&gt;
 </code></pre>
 <p>This allows distinguishing between multiple sets of similar information within the same form.</p>
-<h4 id="3-predefined-sections-optional">3. Predefined sections (optional) <a class="header-anchor" href="#3-predefined-sections-optional" id="heading-85" aria-labelledby="heading-85">#</a></h4>
+<h4 id="3-predefined-sections-optional">3. Predefined sections (optional) <a class="header-anchor" href="#3-predefined-sections-optional" id="heading-118" aria-labelledby="heading-118">#</a></h4>
 <p>The HTML specification allows <strong>grouping fields that belong to the same logical section</strong>. These groupings help indicate the context of the data.</p>
 <p>Example:</p>
 <pre><code class="language-html">&lt;input autocomplete=&quot;shipping given-name&quot;&gt;
@@ -315,7 +315,7 @@ It helps browsers and password managers identify <strong>the type of information
 </code></pre>
 <p>In this example, the fields are associated with the <code>shipping</code> section, indicating that they correspond to a <strong>shipping address</strong>. Another common section is <code>billing</code>, used for billing information.</p>
 <p>These sections allow browsers to distinguish between multiple sets of data in the same form.</p>
-<h4 id="4-contact-type-modifiers-optional">4. Contact type modifiers (optional) <a class="header-anchor" href="#4-contact-type-modifiers-optional" id="heading-86" aria-labelledby="heading-86">#</a></h4>
+<h4 id="4-contact-type-modifiers-optional">4. Contact type modifiers (optional) <a class="header-anchor" href="#4-contact-type-modifiers-optional" id="heading-119" aria-labelledby="heading-119">#</a></h4>
 <p>Some fields accept additional tokens called <code>contact type hints</code>.<br>
 These tokens are neither sections nor fields, but <code>contact type modifiers</code>.</p>
 <p>Example:</p>
@@ -356,7 +356,7 @@ pager
 </code></pre>
 <p>indicates that the form expects a mobile phone number.</p>
 <p>These <code>tokens</code> help specify the context of contact information like a phone number or an email address. They are not sections, as sections are used to distinguish groups of data within a form.</p>
-<h4 id="5-values-defined-by-the-html-specification-mandatory">5. Values defined by the HTML specification (mandatory) <a class="header-anchor" href="#5-values-defined-by-the-html-specification-mandatory" id="heading-87" aria-labelledby="heading-87">#</a></h4>
+<h4 id="5-values-defined-by-the-html-specification-mandatory">5. Values defined by the HTML specification (mandatory) <a class="header-anchor" href="#5-values-defined-by-the-html-specification-mandatory" id="heading-120" aria-labelledby="heading-120">#</a></h4>
 <p>The HTML Living Standard defines many standardized values, called <code>autofill tokens</code>, to precisely identify the expected data.</p>
 <p>Common examples:</p>
 <table>
@@ -412,13 +412,13 @@ pager
 <li>some assistive tools.</li>
 </ul>
 <p><a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute">The complete list is defined in the HTML specification</a>.</p>
-<h4 id="6-webauthn-identifiers-optional">6. WebAuthn Identifiers (optional) <a class="header-anchor" href="#6-webauthn-identifiers-optional" id="heading-88" aria-labelledby="heading-88">#</a></h4>
+<h4 id="6-webauthn-identifiers-optional">6. WebAuthn Identifiers (optional) <a class="header-anchor" href="#6-webauthn-identifiers-optional" id="heading-121" aria-labelledby="heading-121">#</a></h4>
 <p>The HTML specification also includes the <code>webauthn</code> token, used to signal that a field can trigger authentication via WebAuthn (e.g., with passkeys).<br>
 This token is defined in the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API">Web Authentication API</a>.</p>
 <p>Example:</p>
 <pre><code class="language-html">&lt;input autocomplete=&quot;username webauthn&quot;&gt;
 </code></pre>
-<h2 id="real-browser-behavior" class="h2-focus">Real browser behavior <a class="header-anchor" href="#real-browser-behavior" id="heading-89" aria-labelledby="heading-89">#</a></h2>
+<h2 id="real-browser-behavior" class="h2-focus">Real browser behavior <a class="header-anchor" href="#real-browser-behavior" id="heading-122" aria-labelledby="heading-122">#</a></h2>
 <p>The <code>autocomplete</code> attribute provides a hint to browsers, but it does not guarantee that autocompletion will work on its own.</p>
 <p>In practice, browsers also use:</p>
 <ul>
@@ -432,7 +432,7 @@ This token is defined in the <a href="https://developer.mozilla.org/en-US/docs/W
 <pre><code class="language-html">&lt;input name=&quot;email&quot;&gt;
 </code></pre>
 <p>However, this behavior is not standardized and may vary between browsers. Using the <code>autocomplete</code> attribute correctly makes browser behavior more predictable and reduces ambiguity. In other words, <code>autocomplete</code> is an important signal, but it is not the only one used by browsers. These heuristics can produce variable results depending on the browser and context.</p>
-<h2 id="complete-form-example" class="h2-focus">Complete form example <a class="header-anchor" href="#complete-form-example" id="heading-90" aria-labelledby="heading-90">#</a></h2>
+<h2 id="complete-form-example" class="h2-focus">Complete form example <a class="header-anchor" href="#complete-form-example" id="heading-123" aria-labelledby="heading-123">#</a></h2>
 <p>Here is a simplified example of a form using the <code>autocomplete</code> attribute properly:</p>
 <pre><code class="language-html">&lt;form&gt;
 
@@ -453,9 +453,9 @@ This token is defined in the <a href="https://developer.mozilla.org/en-US/docs/W
 
 &lt;/form&gt;
 </code></pre>
-<h2 id="how-to-test-the-presence-and-relevance-of-autocomplete" class="h2-focus">How to test the presence and relevance of autocomplete <a class="header-anchor" href="#how-to-test-the-presence-and-relevance-of-autocomplete" id="heading-91" aria-labelledby="heading-91">#</a></h2>
+<h2 id="how-to-test-the-presence-and-relevance-of-autocomplete" class="h2-focus">How to test the presence and relevance of autocomplete <a class="header-anchor" href="#how-to-test-the-presence-and-relevance-of-autocomplete" id="heading-124" aria-labelledby="heading-124">#</a></h2>
 <p>The analysis of the <code>autocomplete</code> attribute can be done in different ways.</p>
-<h3 id="manual-inspection">Manual Inspection <a class="header-anchor" href="#manual-inspection" id="heading-92" aria-labelledby="heading-92">#</a></h3>
+<h3 id="manual-inspection">Manual Inspection <a class="header-anchor" href="#manual-inspection" id="heading-125" aria-labelledby="heading-125">#</a></h3>
 <p>The first method is to inspect the form's source code.</p>
 <p>Points to check:</p>
 <ul>
@@ -470,7 +470,7 @@ This token is defined in the <a href="https://developer.mozilla.org/en-US/docs/W
 <pre><code class="language-html">&lt;input type=&quot;email&quot; autocomplete=&quot;name&quot;&gt;
 </code></pre>
 <p>is not.</p>
-<h3 id="using-the-detectautocomplete-bookmarklet">Using the detectAutocomplete bookmarklet <a class="header-anchor" href="#using-the-detectautocomplete-bookmarklet" id="heading-93" aria-labelledby="heading-93">#</a></h3>
+<h3 id="using-the-detectautocomplete-bookmarklet">Using the detectAutocomplete bookmarklet <a class="header-anchor" href="#using-the-detectautocomplete-bookmarklet" id="heading-126" aria-labelledby="heading-126">#</a></h3>
 <p>To facilitate form audits, you can use the <strong>detectAutocomplete</strong> bookmarklet.</p>
 <p>This tool allows you to analyze a page and highlight form fields and their autocomplete values.</p>
 <p>It can help to:</p>
@@ -481,7 +481,7 @@ This token is defined in the <a href="https://developer.mozilla.org/en-US/docs/W
 <li>quickly analyze a form's structure.</li>
 </ul>
 <p>The source code and installation instructions are available on GitHub: <a href="https://github.com/MewenLeHo/detectAutocomplete">https://github.com/MewenLeHo/detectAutocomplete</a></p>
-<h2 id="common-errors-observed-in-audits" class="h2-focus">Common errors observed in audits <a class="header-anchor" href="#common-errors-observed-in-audits" id="heading-94" aria-labelledby="heading-94">#</a></h2>
+<h2 id="common-errors-observed-in-audits" class="h2-focus">Common errors observed in audits <a class="header-anchor" href="#common-errors-observed-in-audits" id="heading-127" aria-labelledby="heading-127">#</a></h2>
 <p>During accessibility or usability audits, several errors are frequently encountered:</p>
 <ol>
 <li><strong>Completely forgetting <code>autocomplete</code></strong>:</li>
@@ -516,7 +516,7 @@ Values not defined by the specification are ignored by browsers, which may then 
 <li><strong>Impact</strong>: Browsers and password managers may have more difficulty distinguishing between multiple sets of data (e.g., multiple addresses or multiple people) in the same form.</li>
 <li><strong>Solution</strong>: Use <code>shipping</code>, <code>billing</code>, or custom sections (<code>section-*</code>) when the same form groups several sets of similar information.</li>
 </ul>
-<h3 id="simple-rule-to-remember">Simple rule to remember <a class="header-anchor" href="#simple-rule-to-remember" id="heading-95" aria-labelledby="heading-95">#</a></h3>
+<h3 id="simple-rule-to-remember">Simple rule to remember <a class="header-anchor" href="#simple-rule-to-remember" id="heading-128" aria-labelledby="heading-128">#</a></h3>
 <p>For each form field:</p>
 <ol>
 <li>provide a clear accessible name (<code>label</code> or other naming technique);</li>
@@ -524,7 +524,7 @@ Values not defined by the specification are ignored by browsers, which may then 
 <li>do not invent a value.</li>
 </ol>
 <p>These three rules cover most common use cases.</p>
-<h2 id="conclusion" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-96" aria-labelledby="heading-96">#</a></h2>
+<h2 id="conclusion" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-129" aria-labelledby="heading-129">#</a></h2>
 <p>The <code>autocomplete</code> attribute illustrates a simple idea: a small amount of semantic information can have a significant impact on user experience and accessibility.</p>
 <p>When used correctly, it helps to:</p>
 <ul>
@@ -535,7 +535,7 @@ Values not defined by the specification are ignored by browsers, which may then 
 </ul>
 <p>Despite this, it remains <strong>underused or poorly implemented in many forms</strong>.<br>
 Taking the time to implement it correctly is a small effort that can significantly improve the user experience and one that is still too often overlooked.</p>
-<h2 id="webography" class="h2-focus">Webography <a class="header-anchor" href="#webography" id="heading-97" aria-labelledby="heading-97">#</a></h2>
+<h2 id="webography" class="h2-focus">Webography <a class="header-anchor" href="#webography" id="heading-130" aria-labelledby="heading-130">#</a></h2>
 <ul>
 <li><a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofilling-form-controls:-the-autocomplete-attribute">HTML Living Standard – Autofilling form controls</a></li>
 <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose.html">WCAG 2.2 – Understanding Success Criterion 1.3.5</a></li>
