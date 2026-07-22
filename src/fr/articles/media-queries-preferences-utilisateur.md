@@ -39,7 +39,7 @@ Les sections suivantes présentent chacune de ces *media features*, leur fonctio
 
 ## `prefers-reduced-motion`
 
-La *media feature* `prefers-reduced-motion` permet de détecter si l'utilisateur a exprimé une préférence pour la réduction des animations et des mouvements. Elle permet d'adapter les animations et les effets de mouvement en conséquence.
+La *media feature* `prefers-reduced-motion` indique si l'utilisateur a exprimé une préférence pour la réduction des animations et des mouvements. Elle permet d'adapter les animations et les effets de mouvement en conséquence.
 
 ### Valeurs définies par la spécification
 
@@ -67,7 +67,7 @@ La réduction des animations ne consiste pas nécessairement à supprimer tous l
 
 ## `prefers-contrast`
 
-La *media feature* `prefers-contrast` permet de détecter si l'utilisateur a exprimé une préférence concernant le niveau de contraste de l'interface.
+La *media feature* `prefers-contrast` indique la préférence de l'utilisateur concernant le niveau de contraste de l'interface.
 
 ### Valeurs définies par la spécification
 
@@ -129,7 +129,7 @@ La conception d'un thème sombre ne consiste pas à inverser automatiquement les
 
 ## `forced-colors`
 
-La *media feature* `forced-colors` permet de détecter si l'agent utilisateur applique un mode de couleurs forcées. Dans ce mode, certaines couleurs définies par la page peuvent être remplacées par des couleurs système afin de respecter les préférences d'affichage de l'utilisateur.
+La *media feature* `forced-colors` indique si un mode de couleurs forcées est actuellement appliqué par l'agent utilisateur. Dans ce mode, certaines couleurs définies par la page peuvent être remplacées par des couleurs système afin de respecter les préférences d'affichage de l'utilisateur.
 
 ### Valeurs définies par la spécification
 
@@ -150,7 +150,6 @@ La spécification définit les valeurs suivantes :
 ### Cas d'usage
 
 Cette *media feature* peut notamment être utilisée pour :
-
 - adapter l'apparence de composants personnalisés lorsque le mode de couleurs forcées est actif ;
 - appliquer des couleurs système à certains éléments de l'interface ;
 - ajuster la présentation de certains composants afin qu'ils restent compatibles avec le mode de couleurs forcées.
@@ -163,32 +162,46 @@ Sa valeur `none` empêche l'agent utilisateur de remplacer les couleurs de l'él
 
 ## `prefers-reduced-transparency`
 
-Indique que l'utilisateur souhaite limiter les effets de transparence.
+La *media feature* `prefers-reduced-transparency` permet de détecter si l'utilisateur a exprimé une préférence pour la réduction des effets de transparence dans l'interface utilisateur. Elle permet d'adapter certains effets visuels lorsque cette préférence est exprimée.
 
-Valeurs :
+### Valeurs définies par la spécification
 
-- `reduce`
-- `no-preference`
+La spécification définit les valeurs suivantes :
+- `reduce` : l'utilisateur a exprimé une préférence pour la réduction des effets de transparence ;
+- `no-preference` : aucune préférence particulière n'a été exprimée.
 
 ### Exemple
 
 ```css
 @media (prefers-reduced-transparency: reduce) {
-  .glass-panel {
+  .overlay {
+    opacity: 1;
     backdrop-filter: none;
-    background: rgba(255, 255, 255, 1);
   }
 }
 ```
 
+### Cas d'usage
+
+Cette *media feature* peut notamment être utilisée pour :
+- réduire les effets de transparence ;
+- supprimer certains effets de flou appliqués à l'arrière-plan ;
+- adapter la présentation des composants utilisant des effets translucides.
+
+### Bonnes pratiques
+
+Lorsqu'une préférence pour la réduction de la transparence est exprimée, les effets reposant sur la translucidité peuvent être remplacés par des couleurs opaques afin de conserver une bonne lisibilité de l'interface.
+
 ## `prefers-reduced-data`
 
-Permet de détecter une préférence pour la réduction de la consommation de données.
+La *media feature* `prefers-reduced-data` permet de détecter si l'utilisateur a exprimé une préférence visant à limiter la consommation de données lors du chargement ou de l'utilisation d'une interface.
 
-Valeurs :
+### Valeurs définies par la spécification
 
-- `reduce`
-- `no-preference`
+La spécification définit les valeurs suivantes :
+
+- `reduce` : l'utilisateur a exprimé une préférence pour limiter la consommation de données ;
+- `no-preference` : aucune préférence particulière n'a été exprimée.
 
 ### Exemple
 
@@ -202,9 +215,41 @@ Valeurs :
 
 ### Cas d'usage
 
-- désactiver les vidéos d'arrière-plan ;
-- charger des images plus légères ;
-- différer certaines ressources.
+Cette *media feature* peut notamment être utilisée pour :
+- désactiver le chargement de médias volumineux ;
+- limiter l'affichage de contenus vidéo ou d'animations ;
+- proposer des versions plus légères de certains contenus.
+
+### Bonnes pratiques
+
+La réduction de la consommation de données ne devrait pas entraîner la suppression de contenus essentiels ou de fonctionnalités indispensables. Les adaptations devraient concerner en priorité les contenus ou ressources dont l'absence n'affecte pas la compréhension ou l'utilisation de l'interface.
+
+## Compatibilité des implémentations
+
+Les *media features* présentées dans cet article ne bénéficient pas toutes du même niveau de prise en charge par les navigateurs et les systèmes d'exploitation.
+
+Certaines, comme `prefers-reduced-motion`, `prefers-color-scheme` ou `forced-colors`, sont aujourd'hui largement implémentées. D'autres, comme `prefers-reduced-transparency`, `prefers-reduced-data` ou certaines valeurs de `prefers-contrast`, présentent un support plus limité selon les navigateurs ou les plateformes.
+
+La simple prise en charge d'une *media feature* par un navigateur ne garantit pas que la préférence puisse être exprimée sur tous les systèmes d'exploitation. Certaines préférences dépendent en effet de la présence d'un réglage correspondant dans le système ou de sa prise en charge par l'agent utilisateur.
+
+Avant de s'appuyer sur une media feature en production, il est donc recommandé de vérifier son niveau de compatibilité ainsi que le contexte dans lequel elle est effectivement disponible.
+
+Les ressources suivantes permettent de suivre l'état des implémentations :
+- la compatibilité MDN (Browser compatibility) de chaque media feature ;
+- la spécification CSS Media Queries Level 5 ;
+- les données de compatibilité de Can I Use lorsque celles-ci sont disponibles.
+
+**Note**
+Une *media feature* peut être reconnue par un navigateur sans qu'il soit possible de modifier facilement la préférence correspondante sur toutes les plateformes. Lors des tests, il est donc important de vérifier à la fois la prise en charge de la *media feature* et la possibilité d'activer la préférence sur le système utilisé.
+
+| *Media feature*                | Niveau de maturité                                                             |
+| ------------------------------ | ------------------------------------------------------------------------------ |
+| `prefers-reduced-motion`       | Large prise en charge                                                          |
+| `prefers-color-scheme`         | Large prise en charge                                                          |
+| `forced-colors`                | Bonne prise en charge mais principalement pertinente sur certaines plateformes |
+| `prefers-contrast`             | Prise en charge variable selon les navigateurs et les valeurs                  |
+| `prefers-reduced-transparency` | Prise en charge limitée                                                        |
+| `prefers-reduced-data`         | Prise en charge limitée                                                        |
 
 ## Détection en JavaScript
 
@@ -220,101 +265,75 @@ if (mediaQuery.matches) {
 
 ## User Preferences API
 
-Le navigateur expose également une API expérimentale documentée par MDN sous le nom **User Preferences API**.
+Les préférences utilisateur peuvent également être interrogées depuis JavaScript grâce à la **User Preferences API**, une API expérimentale documentée par MDN.
 
-Cette API (`navigator.preferences`) est encore expérimentale et ne doit pas être utilisée sans vérification approfondie de la compatibilité.
+Contrairement aux *media features* CSS, cette API fournit un accès programmatique aux préférences utilisateur via l'objet `navigator.preferences`. Elle permet notamment d'observer les changements de préférences au cours de la navigation.
 
-Dans la pratique, `matchMedia()` reste aujourd'hui la méthode la plus robuste.
+À ce jour, cette API reste expérimentale et son niveau de prise en charge est limité. Pour les besoins courants, `window.matchMedia()` demeure la solution la plus largement compatible.
 
-## Comment utiliser ces media queries de la bonne façon
+## Bonnes pratiques d'implémentation
 
-### 1. Prévoir une expérience fonctionnelle par défaut
+### 1. Concevoir une interface fonctionnelle par défaut
 
-Le contenu doit rester compréhensible même sans effets visuels avancés.
+Les *media features* de préférences utilisateur ne devraient pas constituer un prérequis au bon fonctionnement de l'interface. Elles permettent d'adapter la présentation ou certains comportements, mais le contenu doit rester compréhensible et utilisable même lorsqu'aucune préférence particulière n'est exprimée.
 
 ### 2. Adapter uniquement ce qui est nécessaire
 
-L'objectif n'est pas de supprimer toutes les fonctionnalités, mais d'ajuster la présentation.
+L'objectif n'est pas de créer plusieurs versions d'une même interface, mais d'adapter uniquement les éléments concernés par la préférence détectée. Les adaptations doivent rester ciblées et proportionnées.
 
-### 3. Respecter les préférences explicites
+### 3. Respecter les préférences exprimées
 
-Une préférence utilisateur constitue un signal fort à prendre en compte.
+Les préférences détectées traduisent un choix explicite de l'utilisateur ou une préférence déterminée par son environnement d'exécution. Lorsqu'elles sont disponibles, elles devraient être prises en compte plutôt qu'ignorées ou contournées.
 
-### 4. Tester sur plusieurs plateformes
+### 4. Vérifier les implémentations sur plusieurs plateformes
 
-Le support varie selon :
+Le niveau de prise en charge varie selon les navigateurs, les systèmes d'exploitation et les plateformes. Une implémentation fonctionnelle sur un environnement donné ne garantit pas un comportement identique ailleurs.
 
-- les navigateurs ;
-- les systèmes d'exploitation ;
-- les versions.
+Il est recommandé de tester les fonctionnalités sur plusieurs combinaisons de navigateurs et de systèmes d'exploitation.
 
-### 5. Combiner CSS et JavaScript si nécessaire
+### 5. Combiner CSS et JavaScript lorsque cela est pertinent
 
-CSS couvre la majorité des besoins, JavaScript permet des comportements plus complexes.
-
-## Exemple global
-
-```css
-/* Réduction des animations */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
-
-/* Contraste renforcé */
-@media (prefers-contrast: more) {
-  a {
-    text-decoration: underline;
-  }
-}
-
-/* Mode sombre */
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #121212;
-    color: #ffffff;
-  }
-}
-
-/* Couleurs forcées */
-@media (forced-colors: active) {
-  svg {
-    forced-color-adjust: auto;
-  }
-}
-```
+Les *media features* CSS couvrent la majorité des besoins liés à l'adaptation de l'interface. Lorsque des comportements plus avancés sont nécessaires, `window.matchMedia()` permet d'interroger les mêmes préférences depuis JavaScript et de réagir à leurs éventuelles évolutions.
 
 ## Comment tester
 
-## Inspection manuelle
+### 1. Vérifier les préférences du système
 
-Les outils de développement permettent de simuler plusieurs préférences utilisateur.
+Avant de tester une *media feature*, il peut être utile de vérifier que la préférence correspondante est bien activée dans le système d'exploitation ou le navigateur. Selon les plateformes, ces préférences peuvent notamment concerner la réduction des animations, le thème clair ou sombre, le contraste ou les couleurs forcées.
+
+### 2. Inspection manuelle
+
+Les outils de développement permettent d'émuler plusieurs préférences utilisateur sans modifier les réglages du système d'exploitation. Cette approche est particulièrement utile pour vérifier rapidement qu'une media feature est correctement prise en compte.
 
 Dans les navigateurs basés sur Chromium, il est possible d'émuler :
-
 - `prefers-reduced-motion` ;
 - `prefers-color-scheme` ;
 - `prefers-contrast` ;
 - `forced-colors`.
 
-## Utilisation de `matchMedia()` dans la console
+### 3. Vérifier avec `matchMedia()`
+
+Depuis la console du navigateur, `window.matchMedia()` permet de vérifier la valeur retournée par une *media feature*.
 
 ```javascript
 window.matchMedia('(prefers-reduced-motion: reduce)').matches
 ```
 
-Cette expression renvoie `true` ou `false`.
+Cette expression renvoie `true` lorsque la préférence est détectée, et `false` dans le cas contraire.
 
 ## Utiliser le bookmarklet `prefers-scan`
 
-Pour faciliter l'audit, le bookmarklet **prefers-scan** analyse la page et détecte les media queries liées aux préférences utilisateur présentes dans les feuilles de styles.
+Lors d'un audit, il n'est pas toujours évident d'identifier manuellement toutes les *media queries* liées aux préférences utilisateur présentes dans une application. Cette vérification peut être longue, en particulier lorsque plusieurs feuilles de styles sont chargées.
+
+Le bookmarklet **Prefers Scan** automatise cette première étape en analysant les feuilles de styles accessibles de la page.
 
 Il permet notamment de :
-
-- recenser les media queries utilisées ;
+- recenser les media features utilisées ;
 - identifier les préférences prises en charge ;
-- repérer les éventuelles omissions.
+- repérer rapidement les préférences absentes ;
+- faciliter la préparation d'un audit manuel.
+
+**Prefers Scan** permet d'identifier la présence des media features dans les feuilles de styles, mais ne vérifie pas la pertinence ni la qualité des adaptations mises en œuvre. Une vérification manuelle reste indispensable.
 
 Le code source et les instructions d'installation sont disponibles sur GitHub : https://github.com/MewenLeHo/prefers-scan
 
