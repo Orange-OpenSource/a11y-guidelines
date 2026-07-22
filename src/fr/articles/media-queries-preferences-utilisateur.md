@@ -8,11 +8,7 @@ tags:
   - advanced
 ---
 
-Les **media queries** sont historiquement utilisées pour adapter la présentation d'une interface aux caractéristiques du périphérique utilisé, comme la largeur de l'écran, son orientation ou sa résolution.
-
-Avec **CSS Media Queries Level 5**, le **World Wide Web Consortium (W3C)** étend cette approche en introduisant de nouvelles *media features* permettant de prendre en compte les **préférences utilisateur**. Elles permettent d'adapter l'interface en fonction de préférences telles que la réduction des animations (`prefers-reduced-motion`), le thème clair ou sombre (`prefers-color-scheme`), le contraste (`prefers-contrast`) ou encore les couleurs forcées (`forced-colors`). La spécification précise que ces préférences peuvent être définies directement par le navigateur, provenir des réglages du système d'exploitation ou, dans certains cas, être déterminées automatiquement par l'agent utilisateur.
-
-Ces *media features* constituent un mécanisme permettant d'adapter le comportement ou la présentation d'une interface en fonction de certaines préférences d'affichage exprimées par les utilisateurs.
+Avec **CSS Media Queries Level 5**, le **World Wide Web Consortium (W3C)** étend les possibilités offertes par les *media queries* en introduisant de nouvelles *media features* permettant d'adapter une interface en fonction des **préférences exprimées par l'utilisateur**. Elles permettent notamment de prendre en compte la réduction des animations (`prefers-reduced-motion`), le thème clair ou sombre (`prefers-color-scheme`), le contraste (`prefers-contrast`) ou encore les couleurs forcées (`forced-colors`).
 
 Cet article présente les principales *media features* de préférences utilisateur définies par **Media Queries Level 5**, leurs cas d'usage, leurs limites de compatibilité, ainsi que les bonnes pratiques pour les implémenter, les tester et les auditer.
 
@@ -21,9 +17,15 @@ Cet article présente les principales *media features* de préférences utilisat
 
 ## Pourquoi ces media features ont-elles été introduites ?
 
-// To do
+Les premières versions des *media queries* permettaient principalement d'adapter une interface aux caractéristiques du périphérique utilisé, comme la largeur de l'écran, son orientation ou sa résolution.
+
+**CSS Media Queries Level 5** élargit cette approche. En plus des caractéristiques techniques du périphérique, il devient possible de prendre en compte certaines **préférences exprimées par l'utilisateur**, comme la réduction des animations, le thème clair ou sombre, le contraste ou les couleurs forcées. Ces préférences peuvent être définies directement par le navigateur, provenir des réglages du système d'exploitation ou, dans certains cas, être déterminées automatiquement par l'agent utilisateur.
+
+Cette évolution s'inscrit dans une démarche visant à rendre les interfaces plus adaptatives. Plutôt que de proposer une présentation identique à tous les utilisateurs, les applications web peuvent ajuster certains aspects de leur interface afin de mieux respecter les préférences d'affichage exprimées.
 
 ## Les principales *media features* de préférences utilisateur
+
+Les principales *media features* définies par **CSS Media Queries Level 5** sont résumées dans le tableau suivant.
 
 | *Media feature*                | Description                                                             |
 | ------------------------------ | ----------------------------------------------------------------------- |
@@ -34,19 +36,19 @@ Cet article présente les principales *media features* de préférences utilisat
 | `prefers-reduced-transparency` | Indique une préférence pour la réduction des effets de transparence.    |
 | `prefers-reduced-data`         | Indique une préférence pour la réduction de la consommation de données. |
 
-Les sections suivantes présentent chacune de ces *media features*, leur fonctionnement, les valeurs définies, lorsqu'elles existent, par la spécification, leurs principaux cas d'usage ainsi que les points d'attention à connaître pour les implémenter correctement.
+Les sections suivantes présentent le fonctionnement de chacune de ces *media features*, les valeurs définies par la spécification, leurs principaux cas d'usage ainsi que les points d'attention à connaître pour les implémenter correctement. Les valeurs définies par la spécification ne sont pas nécessairement toutes prises en charge par les navigateurs.
 
 > **Note**
 > Cet article s'appuie sur la version actuelle de la spécification **CSS Media Queries Level 5**. Certaines documentations ou articles plus anciens peuvent mentionner des valeurs qui ne figurent plus dans la version actuelle, comme `no-preference` pour `prefers-color-scheme`.
 
 ## `prefers-reduced-motion`
 
-La *media feature* `prefers-reduced-motion` indique si l'utilisateur a exprimé une préférence pour la réduction des animations et des mouvements. Elle permet d'adapter les animations et les effets de mouvement en conséquence.
+La *media feature* `prefers-reduced-motion` indique si l'utilisateur a exprimé une préférence pour la réduction des animations et des effets de mouvement. Elle permet d'adapter ces effets lorsque cette préférence est exprimée.
 
 ### Valeurs définies par la spécification
 
 La spécification définit les valeurs suivantes :
-- `reduce` : l'utilisateur a exprimé une préférence pour la réduction des animations et des mouvements ;
+- `reduce` : l'utilisateur a exprimé une préférence pour la réduction des animations et des effets de mouvement ;
 - `no-preference` : aucune préférence particulière n'a été exprimée.
 
 ### Exemple
@@ -61,15 +63,15 @@ La spécification définit les valeurs suivantes :
 
 ### Cas d'usage
 
-Cette *media feature* peut notamment être utilisée lorsque l'interface comporte des animations, des transitions, des effets de parallaxe ou d'autres mouvements susceptibles d'être réduits lorsque cette préférence est exprimée.
+Cette *media feature* peut notamment être utilisée lorsque l'interface comporte des animations, des transitions, des effets de parallaxe ou d'autres mouvements susceptibles d'être réduits.
 
 ### Bonnes pratiques
 
-La réduction des animations ne consiste pas nécessairement à supprimer tous les effets visuels. D'une manière générale, il n'est pas nécessaire de supprimer toutes les animations. Lorsqu'une réduction des animations est souhaitée, il n'est pas toujours nécessaire de supprimer tous les effets de mouvement. Les animations qui participent à la compréhension de l'interface peuvent être conservées, tandis que les animations purement décoratives peuvent être réduites ou supprimées.
+La réduction des animations ne consiste pas nécessairement à supprimer tous les effets de mouvement. Les animations qui participent à la compréhension de l'interface peuvent être conservées, tandis que les animations purement décoratives peuvent être réduites, simplifiées, voire supprimées.
 
 ## `prefers-contrast`
 
-La *media feature* `prefers-contrast` indique la préférence de l'utilisateur concernant le niveau de contraste de l'interface.
+La *media feature* `prefers-contrast` indique la préférence de l'utilisateur concernant le niveau de contraste de l'interface. Elle permet d'adapter la présentation de l'interface en conséquence.
 
 ### Valeurs définies par la spécification
 
@@ -92,14 +94,15 @@ La spécification définit les valeurs suivantes :
 
 ### Cas d'usage
 
-Cette *media feature* peut notamment être utilisée pour :
-- adapter le contraste des couleurs de l'interface ;
-- renforcer ou atténuer certains éléments graphiques (bordures, icônes, indicateurs visuels) ;
-- ajuster la présentation en fonction de la préférence de contraste exprimée par l'utilisateur.
+Cette *media feature* peut notamment être utilisée lorsque l'interface doit adapter le contraste de ses couleurs, renforcer ou atténuer certains éléments graphiques, ou ajuster sa présentation en fonction de la préférence exprimée.
+
+### Bonnes pratiques
+
+Une préférence concernant le contraste ne consiste pas uniquement à augmenter ou diminuer les contrastes de toutes les couleurs. Les adaptations devraient avant tout améliorer la perceptibilité des contenus et des éléments interactifs tout en conservant une interface cohérente et lisible.
 
 ## `prefers-color-scheme`
 
-La *media feature* `prefers-color-scheme` permet de détecter si l'utilisateur a exprimé une préférence pour un thème de couleur clair ou sombre pour l'interface utilisateur.
+La *media feature* `prefers-color-scheme` indique la préférence de l'utilisateur concernant le thème de couleur de l'interface. Elle permet d'adapter automatiquement la présentation en conséquence.
 
 ### Valeurs définies par la spécification
 
@@ -124,7 +127,7 @@ Cette *media feature* peut notamment être utilisée lorsqu'une interface propos
 
 ### Bonnes pratiques
 
-La conception d'un thème sombre ne consiste pas à inverser automatiquement les couleurs d'un thème clair. Les couleurs du texte, des icônes et des éléments interactifs doivent être soigneusement choisies pour maintenir un contraste suffisant et une bonne lisibilité. Testez toujours les deux modes afin de vérifier que les contrastes, les états interactifs et la lisibilité restent satisfaisants dans chaque thème.
+La conception d'un thème sombre ne consiste pas à inverser mécaniquement les couleurs d'un thème clair. Les couleurs du texte, des icônes et des éléments interactifs doivent être soigneusement choisies pour maintenir un contraste suffisant et une bonne lisibilité. Les deux thèmes devraient être systématiquement testés afin de vérifier que les contrastes, les états interactifs et la lisibilité restent satisfaisants dans chaque mode.
 
 ## `forced-colors`
 
