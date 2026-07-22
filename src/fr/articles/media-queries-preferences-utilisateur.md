@@ -16,9 +16,8 @@ Ces *media features* constituent un mécanisme permettant d'adapter le comportem
 
 Cet article présente les principales *media features* de préférences utilisateur définies par **Media Queries Level 5**, leurs cas d'usage, leurs limites de compatibilité, ainsi que les bonnes pratiques pour les implémenter, les tester et les auditer.
 
-**À retenir**
-
-Les *media features* présentées dans cet article sont définies par la spécification **CSS Media Queries Level 5**. En revanche, leur niveau de prise en charge varie selon les navigateurs et les plateformes. Leur utilisation n'est pas explicitement exigée par les **WCAG**, le **RGAA** ou la norme **EN 301 549**, mais constitue une bonne pratique pour concevoir des interfaces capables de s'adapter aux préférences exprimées par les utilisateurs.
+> **À retenir**
+> Les *media features* présentées dans cet article sont définies par la spécification **CSS Media Queries Level 5**. En revanche, leur niveau de prise en charge varie selon les navigateurs et les plateformes. Leur utilisation n'est pas explicitement exigée par les **WCAG**, le **RGAA** ou la norme **EN 301 549**, mais constitue une bonne pratique pour concevoir des interfaces capables de s'adapter aux préférences exprimées par les utilisateurs.
 
 ## Pourquoi ces media features ont-elles été introduites ?
 
@@ -38,7 +37,6 @@ Les *media features* présentées dans cet article sont définies par la spécif
 Les sections suivantes présentent chacune de ces *media features*, leur fonctionnement, les valeurs définies, lorsqu'elles existent, par la spécification, leurs principaux cas d'usage ainsi que les points d'attention à connaître pour les implémenter correctement.
 
 > **Note**
->
 > Cet article s'appuie sur la version actuelle de la spécification **CSS Media Queries Level 5**. Certaines documentations ou articles plus anciens peuvent mentionner des valeurs qui ne figurent plus dans la version actuelle, comme `no-preference` pour `prefers-color-scheme`.
 
 ## `prefers-reduced-motion`
@@ -240,8 +238,8 @@ Les ressources suivantes permettent de suivre l'état des implémentations :
 - la spécification CSS Media Queries Level 5 ;
 - les données de compatibilité de Can I Use lorsque celles-ci sont disponibles.
 
-**Note**
-Une *media feature* peut être reconnue par un navigateur sans qu'il soit possible de modifier facilement la préférence correspondante sur toutes les plateformes. Lors des tests, il est donc important de vérifier à la fois la prise en charge de la *media feature* et la possibilité d'activer la préférence sur le système utilisé.
+> **Note**
+> Une *media feature* peut être reconnue par un navigateur sans qu'il soit possible de modifier facilement la préférence correspondante sur toutes les plateformes. Lors des tests, il est donc important de vérifier à la fois la prise en charge de la *media feature* et la possibilité d'activer la préférence sur le système utilisé.
 
 | *Media feature*                | Niveau de maturité                                                             |
 | ------------------------------ | ------------------------------------------------------------------------------ |
@@ -267,6 +265,7 @@ if (mediaQuery.matches) {
   disableAnimations();
 }
 ```
+
 À plus long terme, la **User Preferences API** vise à offrir un accès plus riche aux préférences utilisateur depuis JavaScript. Elle reste toutefois expérimentale et ne constitue pas aujourd'hui une alternative à `matchMedia()`.
 
 ## User Preferences API
