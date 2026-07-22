@@ -20,6 +20,10 @@ Cet article présente les principales *media features* de préférences utilisat
 
 Les *media features* présentées dans cet article sont définies par la spécification **CSS Media Queries Level 5**. En revanche, leur niveau de prise en charge varie selon les navigateurs et les plateformes. Leur utilisation n'est pas explicitement exigée par les **WCAG**, le **RGAA** ou la norme **EN 301 549**, mais constitue une bonne pratique pour concevoir des interfaces capables de s'adapter aux préférences exprimées par les utilisateurs.
 
+## Pourquoi ces media features ont-elles été introduites ?
+
+// To do
+
 ## Les principales *media features* de préférences utilisateur
 
 | *Media feature*                | Description                                                             |
@@ -118,10 +122,7 @@ La spécification définit les valeurs suivantes :
 
 ### Cas d'usage
 
-Cette *media feature* peut notamment être utilisée pour :
-- appliquer automatiquement un thème clair ou sombre ;
-- adapter les couleurs de l'interface à la préférence exprimée ;
-- proposer une expérience cohérente avec le thème choisi par l'utilisateur.
+Cette *media feature* peut notamment être utilisée lorsqu'une interface propose plusieurs thèmes de couleur ou lorsque son apparence doit s'adapter automatiquement au thème choisi par l'utilisateur.
 
 ### Bonnes pratiques
 
@@ -251,9 +252,13 @@ Une *media feature* peut être reconnue par un navigateur sans qu'il soit possib
 | `prefers-reduced-transparency` | Prise en charge limitée                                                        |
 | `prefers-reduced-data`         | Prise en charge limitée                                                        |
 
+Ce niveau de maturité constitue une indication générale. Il peut varier selon les versions des navigateurs, les systèmes d'exploitation et les plateformes utilisées.
+
 ## Détection en JavaScript
 
-Les mêmes préférences peuvent être interrogées via `window.matchMedia()`.
+Les préférences utilisateur sont avant tout destinées à être utilisées dans les feuilles de styles CSS grâce aux *media queries*. Dans certains cas, il peut toutefois être nécessaire d'adapter également le comportement de l'interface depuis JavaScript.
+
+`window.matchMedia()` permet d'interroger les mêmes *media queries* que celles utilisées en CSS et de réagir à leurs éventuelles évolutions.
 
 ```javascript
 const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -262,6 +267,7 @@ if (mediaQuery.matches) {
   disableAnimations();
 }
 ```
+À plus long terme, la **User Preferences API** vise à offrir un accès plus riche aux préférences utilisateur depuis JavaScript. Elle reste toutefois expérimentale et ne constitue pas aujourd'hui une alternative à `matchMedia()`.
 
 ## User Preferences API
 
@@ -323,7 +329,7 @@ Cette expression renvoie `true` lorsque la préférence est détectée, et `fals
 
 ## Utiliser le bookmarklet `prefers-scan`
 
-Lors d'un audit, il n'est pas toujours évident d'identifier manuellement toutes les *media queries* liées aux préférences utilisateur présentes dans une application. Cette vérification peut être longue, en particulier lorsque plusieurs feuilles de styles sont chargées.
+Lors d'un audit d'accessibilité ou d'une revue de code, il n'est pas toujours évident d'identifier manuellement toutes les *media queries* liées aux préférences utilisateur présentes dans une application. Cette vérification peut être longue, en particulier lorsque plusieurs feuilles de styles sont chargées.
 
 Le bookmarklet **Prefers Scan** automatise cette première étape en analysant les feuilles de styles accessibles de la page.
 
@@ -341,47 +347,35 @@ Le code source et les instructions d'installation sont disponibles sur GitHub : 
 
 ### Ignorer complètement `prefers-reduced-motion`
 
-Les interfaces riches utilisent souvent de nombreuses animations sans tenir compte des préférences utilisateur.
+Les interfaces modernes utilisent souvent des animations pour accompagner les transitions, attirer l'attention ou enrichir l'expérience utilisateur. Ignorer `prefers-reduced-motion` revient à maintenir ces animations malgré une préférence explicite de l'utilisateur, ce qui peut provoquer une gêne ou un inconfort.
 
 ### Supposer que le mode sombre suffit
 
-Un thème sombre mal contrasté peut rester difficile à lire.
+Un thème sombre n'est pas automatiquement accessible. Des contrastes insuffisants, des couleurs mal choisies ou des états interactifs peu visibles peuvent nuire à la lisibilité et à l'utilisation de l'interface.
 
 ### Désactiver `forced-colors`
 
-Cette pratique peut rendre certains composants inutilisables.
+Désactiver le mode de couleurs forcées à l'aide de `forced-color-adjust: none` prive l'utilisateur des adaptations réalisées par le navigateur. Cette propriété ne devrait être utilisée que dans des situations exceptionnelles et pleinement maîtrisées.
 
 ### Ajouter uniquement des ajustements cosmétiques
 
-Les préférences utilisateur doivent avoir un effet réel sur l'interface.
+Les adaptations apportées devraient modifier le comportement ou la présentation des éléments réellement concernés. Changer uniquement quelques couleurs ou espacements sans répondre à la préférence exprimée limite fortement l'intérêt de ces media features.
 
 ### Ne pas tester
 
-Le support théorique d'une media query ne garantit pas une implémentation correcte.
-
-## Compatibilité et support
-
-Toutes les media queries présentées ne bénéficient pas du même niveau de support.
-
-En pratique :
-
-- `prefers-reduced-motion` est largement supportée ;
-- `prefers-color-scheme` est très largement supportée ;
-- `forced-colors` est bien prise en charge sur Windows ;
-- `prefers-contrast` progresse mais son support reste plus variable ;
-- `prefers-reduced-transparency` et `prefers-reduced-data` sont plus expérimentales.
-
-La documentation MDN doit être consultée avant toute utilisation en production.
+Une *media feature* peut être reconnue par le navigateur tout en étant mal implémentée ou inadaptée au contexte. Il est donc indispensable de vérifier le comportement réel de l'interface sur les plateformes pertinentes.
 
 ## Conclusion
 
-Les media queries liées aux préférences utilisateur constituent un outil puissant pour rendre les interfaces plus adaptatives et plus accessibles.
+Les *media queries* liées aux préférences utilisateur constituent un outil puissant pour rendre les interfaces plus adaptatives et plus accessibles.
 
 Elles permettent de tenir compte de besoins concrets exprimés directement par les utilisateurs : réduction des animations, augmentation du contraste, adaptation des couleurs, diminution des effets visuels ou optimisation de la consommation de données.
 
 Leur mise en œuvre est généralement simple, mais leur impact sur le confort d'utilisation peut être considérable.
 
 Comme souvent en accessibilité numérique, quelques lignes de code bien pensées peuvent améliorer significativement l'expérience de nombreux utilisateurs.
+
+Les *media features* de préférences utilisateur illustrent une évolution importante du Web : plutôt que de s'adapter uniquement aux caractéristiques techniques des appareils, les interfaces peuvent désormais tenir compte des préférences exprimées par leurs utilisateurs. Elles participent ainsi à la conception d'expériences plus personnalisables, plus confortables et, dans de nombreux cas, plus accessibles.
 
 ## Webographie
 
