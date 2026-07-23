@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#label-form-fields" class="dropdown-item text-wrap">Label form fields</a><a href="#the-label-element" class="dropdown-item text-wrap">The label element</a><a href="#example" class="dropdown-item text-wrap">Example</a><a href="#hide-labels-in-an-accessible-way" class="dropdown-item text-wrap">Hide labels in an accessible way</a><a href="#example-2" class="dropdown-item text-wrap">Example</a><a href="#aria-attributes" class="dropdown-item text-wrap">ARIA attributes</a><a href="#the-title-attribute" class="dropdown-item text-wrap">The title attribute</a><a href="#associating-related-controls" class="dropdown-item text-wrap">Associating related controls</a><a href="#example-3" class="dropdown-item text-wrap">Example</a><a href="#specify-the-expected-type-or-format" class="dropdown-item text-wrap">Specify the expected type or format</a><a href="#example-4" class="dropdown-item text-wrap">Example</a><a href="#complete-example" class="dropdown-item text-wrap">Complete example</a><a href="#link-to-part-two" class="dropdown-item text-wrap">Link to part two</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#label-form-fields" class="dropdown-item text-wrap">Label form fields</a><a href="#the-label-element" class="dropdown-item text-wrap">The label element</a><a href="#example" class="dropdown-item text-wrap">Example</a><a href="#hide-labels-in-an-accessible-way" class="dropdown-item text-wrap">Hide labels in an accessible way</a><a href="#example-1" class="dropdown-item text-wrap">Example</a><a href="#aria-attributes" class="dropdown-item text-wrap">ARIA attributes</a><a href="#the-title-attribute" class="dropdown-item text-wrap">The title attribute</a><a href="#associating-related-controls" class="dropdown-item text-wrap">Associating related controls</a><a href="#example-2" class="dropdown-item text-wrap">Example</a><a href="#specify-the-expected-type-or-format" class="dropdown-item text-wrap">Specify the expected type or format</a><a href="#example-3" class="dropdown-item text-wrap">Example</a><a href="#complete-example" class="dropdown-item text-wrap">Complete example</a><a href="#link-to-part-two" class="dropdown-item text-wrap">Link to part two</a></div>
     </nav>
         
       </div>
@@ -204,20 +204,20 @@
             
           
           <div class="mt-4">
-          <h2 id="introduction" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-212" aria-labelledby="heading-212">#</a></h2>
+          <h2 id="introduction" tabindex="-1" class="h2-focus">Introduction <a class="header-anchor" href="#introduction" id="heading-11" aria-labelledby="heading-11">#</a></h2>
 <p>For a form to be accessible to all users, a few rules must be respected during development.</p>
 <p>In this first part, we will show how to build your form. In the second part, we will cover form submission and validation.</p>
 <p>We will build a registration form to demonstrate the accessibility considerations.</p>
 <p>In this example, we used <a href="http://boosted.orange.com/" target="_blank">Boosted library</a>. This allows you to obtain forms whose design complies with the Orange charter.</p>
-<h2 id="label-form-fields" class="h2-focus">Label form fields <a class="header-anchor" href="#label-form-fields" id="heading-213" aria-labelledby="heading-213">#</a></h2>
+<h2 id="label-form-fields" tabindex="-1" class="h2-focus">Label form fields <a class="header-anchor" href="#label-form-fields" id="heading-12" aria-labelledby="heading-12">#</a></h2>
 <p>Labels should describe the role of each field on the form. In order for all users to have access to the same information, it is important that these labels are correctly associated with their form fields. To achieve this, there are several techniques.</p>
-<h3 id="the-label-element">The label element <a class="header-anchor" href="#the-label-element" id="heading-214" aria-labelledby="heading-214">#</a></h3>
+<h3 id="the-label-element" tabindex="-1">The label element <a class="header-anchor" href="#the-label-element" id="heading-13" aria-labelledby="heading-13">#</a></h3>
 <p>The preferred solution is to use the <code>label</code> element. It is best supported by assistive technologies. There are two ways to use this <code>label</code> element:</p>
 <ul>
    <li>explicitly link a <code>label</code> to a field by using the for attribute that matches the field's <code>id</code> (best solution),</li>
    <li>implicitly wrap the field with the <code>label</code> element.</li>
 </ul>
-<h4 id="example">Example <a class="header-anchor" href="#example" id="heading-215" aria-labelledby="heading-215">#</a></h4>
+<h4 id="example" tabindex="-1">Example <a class="header-anchor" href="#example" id="heading-14" aria-labelledby="heading-14">#</a></h4>
 <p>Example of explicitly linked form labels:</p>
 <div class="col-md-8">
   <form id="formulaire" class="border border-secondary p-3 my-2">
@@ -251,19 +251,19 @@
     &lt;/div&gt;
   &lt;/form&gt;
 </code></pre>
-<h3 id="hide-labels-in-an-accessible-way">Hide labels in an accessible way <a class="header-anchor" href="#hide-labels-in-an-accessible-way" id="heading-216" aria-labelledby="heading-216">#</a></h3>
+<h3 id="hide-labels-in-an-accessible-way" tabindex="-1">Hide labels in an accessible way <a class="header-anchor" href="#hide-labels-in-an-accessible-way" id="heading-15" aria-labelledby="heading-15">#</a></h3>
 <p>In some cases, it may be useful to hide the label visually. Note: labels can be hidden only if the field function is sufficiently clear and understandable in its context: for example, a search field next to a magnifying glass icon.</p>
 <p>Even though the label is visually hidden, it should still be accessible to assistive technologies.</p>
 <p>This method uses a CSS class (for example, the <code>visually-hidden</code> class from Bootstrap/Boosted) to hide content accessibly. Using accessible hiding keeps the element visually hidden while remaining available to assistive technologies (e.g. spoken by screen readers). Avoid using <code>display:none</code> or <code>visibility:hidden</code>, because these also hide content from screen readers.</p>
 <p>See the example at <a href="../../../web/components-examples/accessible-hiding/" target="_blank">accessible masking example</a> for more information.</p>
-<h4 id="example-2">Example <a class="header-anchor" href="#example-2" id="heading-217" aria-labelledby="heading-217">#</a></h4>
+<h4 id="example-1" tabindex="-1">Example <a class="header-anchor" href="#example-1" id="heading-16" aria-labelledby="heading-16">#</a></h4>
 <p>For example, we can use accessible hiding for a search field, if a button with the search label, or a magnifying glass image, is next to the field. Thus, the field label is visually hidden to avoid redundancy.</p>
 <p>Sample code:</p>
 <pre><code class="language-html">&lt;label for=&quot;search&quot; class=&quot;visually-hidden&quot;&gt;Search:&lt;/label&gt;
 &lt;input type=&quot;text&quot; name=&quot;search&quot; id=&quot;search&quot;&gt;
 &lt;button type=&quot;submit&quot;&gt;Search&lt;/button&gt;
 </code></pre>
-<h3 id="aria-attributes">ARIA attributes <a class="header-anchor" href="#aria-attributes" id="heading-218" aria-labelledby="heading-218">#</a></h3>
+<h3 id="aria-attributes" tabindex="-1">ARIA attributes <a class="header-anchor" href="#aria-attributes" id="heading-17" aria-labelledby="heading-17">#</a></h3>
 <p>It is also possible to use the <code>aria-label</code> and <code>aria-labelledby</code> attributes to label form fields. Support is generally good but varies by assistive technology and browser version, so test with your target assistive technologies (NVDA, JAWS, VoiceOver, TalkBack, etc.) and browsers.</p>
 <ul>
    <li>The <code>aria-labelledby</code> attribute is used to specify the <code>id</code> of an element present in the code that will be used to label the field.</li>
@@ -274,7 +274,7 @@
 &lt;input type=&quot;text&quot; name=&quot;search&quot; aria-labelledby=&quot;id-search&quot;&gt;
 &lt;button type=&quot;submit&quot; class=&quot;icon-search&quot; aria-label=&quot;Search&quot;&gt;&lt;/button&gt;
 </code></pre>
-<h3 id="the-title-attribute">The title attribute <a class="header-anchor" href="#the-title-attribute" id="heading-219" aria-labelledby="heading-219">#</a></h3>
+<h3 id="the-title-attribute" tabindex="-1">The title attribute <a class="header-anchor" href="#the-title-attribute" id="heading-18" aria-labelledby="heading-18">#</a></h3>
 <p>The <code>title</code> attribute can provide a tooltip but is not a reliable substitute for a label. It will also trigger the display of a tooltip when hovering over the element with the mouse, which can help users with cognitive impairments and novice users. In addition, <code>title</code> is often not exposed to keyboard-only users and not consistently read by screen readers.</p>
 <p>Never use <code>placeholder</code> as the only label; <code>placeholders</code> are not a replacement for labels and are not reliably read or persistent:</p>
 <ul>
@@ -286,11 +286,11 @@
    <li>it makes corrections difficult in case of error if there is no label displayed;</li>
 </ul>
 <p>On the other hand, the <code>placeholder</code> can serve as a guide, an aid to fill in the field without this information being absolutely necessary (for example, proposing a valid expected value). Use placeholders for such purposes only (as examples), not as labels.</p>
-<h2 id="associating-related-controls" class="h2-focus">Associating related controls <a class="header-anchor" href="#associating-related-controls" id="heading-220" aria-labelledby="heading-220">#</a></h2>
+<h2 id="associating-related-controls" tabindex="-1" class="h2-focus">Associating related controls <a class="header-anchor" href="#associating-related-controls" id="heading-19" aria-labelledby="heading-19">#</a></h2>
 <p>When necessary, group fields of the same type. This makes the form easier to understand.<br>
 Most of the time, we group our radio buttons, or our checkboxes, in order to associate a header with these elements.</p>
 <p>To group them, we use the <code>fieldset</code> element, which will have as its first child the <code>legend</code> element that will serve as the header for our grouped fields.</p>
-<h3 id="example-3">Example <a class="header-anchor" href="#example-3" id="heading-221" aria-labelledby="heading-221">#</a></h3>
+<h3 id="example-2" tabindex="-1">Example <a class="header-anchor" href="#example-2" id="heading-20" aria-labelledby="heading-20">#</a></h3>
 <p>In our registration form, we can add the gender of our user. For this, we will implement radio buttons, and group them with the header <strong>Returning customer?</strong></p>
 <div class="col-md-8">
   <form id="formulaire3" class="border border-secondary p-3 my-2">
@@ -326,14 +326,14 @@ Most of the time, we group our radio buttons, or our checkboxes, in order to ass
   &lt;/form&gt;
 &lt;/div&gt;
 </code></pre>
-<h2 id="specify-the-expected-type-or-format" class="h2-focus">Specify the expected type or format <a class="header-anchor" href="#specify-the-expected-type-or-format" id="heading-222" aria-labelledby="heading-222">#</a></h2>
+<h2 id="specify-the-expected-type-or-format" tabindex="-1" class="h2-focus">Specify the expected type or format <a class="header-anchor" href="#specify-the-expected-type-or-format" id="heading-21" aria-labelledby="heading-21">#</a></h2>
 <p>To help the user, it is also important to specify the expected type or format when necessary. For example, indicate the expected input format for a date of birth when needed (e.g. dd/mm/yyyy).</p>
 <p>To inform the user, one can:</p>
 <ul>
    <li>provide instructions in the label</li>
    <li>use the <code>aria-labelledby</code> or <code>aria-describedby</code> attribute</li>
 </ul>
-<h3 id="example-4">Example <a class="header-anchor" href="#example-4" id="heading-223" aria-labelledby="heading-223">#</a></h3>
+<h3 id="example-3" tabindex="-1">Example <a class="header-anchor" href="#example-3" id="heading-22" aria-labelledby="heading-22">#</a></h3>
 <p>For our registration form, we are going to add a password field, specifying the format that we want.</p>
 <p>When adding a password field, it is also important to allow the possibility of displaying or hiding the password. This helps users with motor, attention, or cognitive impairments avoid input errors.</p>
 <div class="col-md-8">
@@ -381,7 +381,7 @@ Most of the time, we group our radio buttons, or our checkboxes, in order to ass
   &lt;/form&gt;
 &lt;/div&gt;
 </code></pre>
-<h2 id="complete-example" class="h2-focus">Complete example <a class="header-anchor" href="#complete-example" id="heading-224" aria-labelledby="heading-224">#</a></h2>
+<h2 id="complete-example" tabindex="-1" class="h2-focus">Complete example <a class="header-anchor" href="#complete-example" id="heading-23" aria-labelledby="heading-23">#</a></h2>
 <p>The complete example with all the elements that we have reviewed. In the second part, we will see how to validate the form and manage error messages.<br>
 For the rest of the exercise and to complete our registration form, we have added fields for the address (address, city, zip code).</p>
 <div class="col-md-8">
@@ -505,7 +505,7 @@ For the rest of the exercise and to complete our registration form, we have adde
   &lt;/form&gt;
 &lt;/div&gt;
 </code></pre>
-<h2 id="link-to-part-two" class="h2-focus">Link to part two <a class="header-anchor" href="#link-to-part-two" id="heading-225" aria-labelledby="heading-225">#</a></h2>
+<h2 id="link-to-part-two" tabindex="-1" class="h2-focus">Link to part two <a class="header-anchor" href="#link-to-part-two" id="heading-24" aria-labelledby="heading-24">#</a></h2>
 <p><a href="../part2/">Form part 2 - Submit your form</a></p>
 
           </div>
@@ -524,15 +524,15 @@ For the rest of the exercise and to complete our registration form, we have adde
             <a href="#example" class="nav-link text-muted">Example</a></li></ul></li><li class="nav-item position-relative">
             <a href="#hide-labels-in-an-accessible-way" class="nav-link text-muted">Hide labels in an accessible way</a>
             <ul><li class="nav-item position-relative">
-            <a href="#example-2" class="nav-link text-muted">Example</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#example-1" class="nav-link text-muted">Example</a></li></ul></li><li class="nav-item position-relative">
             <a href="#aria-attributes" class="nav-link text-muted">ARIA attributes</a></li><li class="nav-item position-relative">
             <a href="#the-title-attribute" class="nav-link text-muted">The title attribute</a></li></ul></li><li class="nav-item position-relative">
             <a href="#associating-related-controls" class="nav-link text-muted">Associating related controls</a>
             <ul><li class="nav-item position-relative">
-            <a href="#example-3" class="nav-link text-muted">Example</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#example-2" class="nav-link text-muted">Example</a></li></ul></li><li class="nav-item position-relative">
             <a href="#specify-the-expected-type-or-format" class="nav-link text-muted">Specify the expected type or format</a>
             <ul><li class="nav-item position-relative">
-            <a href="#example-4" class="nav-link text-muted">Example</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#example-3" class="nav-link text-muted">Example</a></li></ul></li><li class="nav-item position-relative">
             <a href="#complete-example" class="nav-link text-muted">Complete example</a></li><li class="nav-item position-relative">
             <a href="#link-to-part-two" class="nav-link text-muted">Link to part two</a></li>
       </ul>

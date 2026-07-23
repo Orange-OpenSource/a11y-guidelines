@@ -203,13 +203,13 @@
             
           
           <div class="mt-4">
-          <h2 id="objective-of-the-criterion" class="h2-focus">Objective of the Criterion <a class="header-anchor" href="#objective-of-the-criterion" id="heading-509" aria-labelledby="heading-509">#</a></h2>
+          <h2 id="objective-of-the-criterion" tabindex="-1" class="h2-focus">Objective of the Criterion <a class="header-anchor" href="#objective-of-the-criterion" id="heading-353" aria-labelledby="heading-353">#</a></h2>
 <p><strong>WCAG 2.5.3 – Label in Name</strong> aims to ensure that when an interactive element (button, link, input field, etc.) displays visible text on the screen, that same text is also included in its <strong><a href="/en/articles/accessible-name">accessible name</a></strong>.</p>
 <p>This allows users of <a href="/en/assistive-technologies">assistive technologies</a> (particularly speech recognition software) to correctly understand and interact with the interface.<br>
 These tools rely on the <strong>accessible name</strong> to identify and activate elements.</p>
 <p>The visible text does not need to be <strong>strictly identical</strong> to the accessible name, but it must <strong>at minimum be included</strong> within it — ideally at the <strong>beginning</strong>.</p>
-<h2 id="concrete-example" class="h2-focus">Concrete Example <a class="header-anchor" href="#concrete-example" id="heading-510" aria-labelledby="heading-510">#</a></h2>
-<h3 id="problematic">Problematic <a class="header-anchor" href="#problematic" id="heading-511" aria-labelledby="heading-511">#</a></h3>
+<h2 id="concrete-example" tabindex="-1" class="h2-focus">Concrete Example <a class="header-anchor" href="#concrete-example" id="heading-354" aria-labelledby="heading-354">#</a></h2>
+<h3 id="problematic" tabindex="-1">Problematic <a class="header-anchor" href="#problematic" id="heading-355" aria-labelledby="heading-355">#</a></h3>
 <p>Consider a user navigating with speech recognition software who wants to fill out and submit a form.</p>
 <p><img src="../images/tester-wcag-253/button_send.png" alt="Button displaying the text “Send”" class="img-fluid"></p>
 <pre><code class="html">
@@ -220,7 +220,7 @@ These tools rely on the <strong>accessible name</strong> to identify and activat
 <p>In this example, the button visually displays the word <strong>« Send »</strong> (in the image), but the alternative text is <strong>« Submit »</strong>. The accessible name of the button therefore becomes <em>Submit</em>.</p>
 <p>Result: a speech recognition user who says « Click Send » will not be able to activate the button, because the assistant will not recognize that name.</p>
 <hr>
-<h3 id="compliant-example">Compliant Example <a class="header-anchor" href="#compliant-example" id="heading-512" aria-labelledby="heading-512">#</a></h3>
+<h3 id="compliant-example" tabindex="-1">Compliant Example <a class="header-anchor" href="#compliant-example" id="heading-356" aria-labelledby="heading-356">#</a></h3>
 <pre><code class="html">
 &lt;button&gt;
     &lt;img src="send.png" alt="Send"&gt;
@@ -228,9 +228,9 @@ These tools rely on the <strong>accessible name</strong> to identify and activat
 </code></pre>
 <p>The accessible name now contains the word <strong>« Send »</strong>, identical to the visible text. <strong>WCAG 2.5.3 is therefore satisfied</strong>.</p>
 <hr>
-<h2 id="be-careful-with-visually-hidden-content" class="h2-focus">Be Careful with Visually Hidden Content <a class="header-anchor" href="#be-careful-with-visually-hidden-content" id="heading-513" aria-labelledby="heading-513">#</a></h2>
+<h2 id="be-careful-with-visually-hidden-content" tabindex="-1" class="h2-focus">Be Careful with Visually Hidden Content <a class="header-anchor" href="#be-careful-with-visually-hidden-content" id="heading-357" aria-labelledby="heading-357">#</a></h2>
 <p>Hidden content should not be inserted <strong>in the middle</strong> of the visible label (it should be placed at the end instead), otherwise the criterion will fail and the element may not work properly with speech input.</p>
-<h3 id="example-of-an-error">Example of an Error <a class="header-anchor" href="#example-of-an-error" id="heading-514" aria-labelledby="heading-514">#</a></h3>
+<h3 id="example-of-an-error" tabindex="-1">Example of an Error <a class="header-anchor" href="#example-of-an-error" id="heading-358" aria-labelledby="heading-358">#</a></h3>
 <pre><code class="html">
 &lt;a href="www.orange.com" target="_blank"&gt; Open &lt;span class="visually-hidden"&gt;in a new window &lt;/span&gt; the Orange website &lt;/a&gt;
 </code></pre>
@@ -242,8 +242,8 @@ These tools rely on the <strong>accessible name</strong> to identify and activat
 </blockquote>
 <p>With speech recognition, saying « Open the Orange website » <strong>will not work</strong>, because this text does not match the actual accessible name.</p>
 <hr>
-<h2 id="how-to-test-compliance" class="h2-focus">How to Test Compliance <a class="header-anchor" href="#how-to-test-compliance" id="heading-515" aria-labelledby="heading-515">#</a></h2>
-<h3 id="1-using-a-screen-reader">1. Using a Screen Reader <a class="header-anchor" href="#1-using-a-screen-reader" id="heading-516" aria-labelledby="heading-516">#</a></h3>
+<h2 id="how-to-test-compliance" tabindex="-1" class="h2-focus">How to Test Compliance <a class="header-anchor" href="#how-to-test-compliance" id="heading-359" aria-labelledby="heading-359">#</a></h2>
+<h3 id="1-using-a-screen-reader" tabindex="-1">1. Using a Screen Reader <a class="header-anchor" href="#1-using-a-screen-reader" id="heading-360" aria-labelledby="heading-360">#</a></h3>
 <p>The screen reader announces:</p>
 <ul>
 <li>the element’s <strong>role</strong> (button, link, text, etc.),</li>
@@ -259,9 +259,9 @@ These tools rely on the <strong>accessible name</strong> to identify and activat
 <p>Some screen readers provide a <em>speech viewer</em> that displays the accessible name in text form, making comparison with the visible label easier.</p>
 <hr>
 <p><img src="../images/tester-wcag-253/nvda_visionneuse.png" alt="Exemple de visionneuse de parole" class="img-fluid"></p>
-<h3 id="2-using-developer-tools">2. Using Developer Tools <a class="header-anchor" href="#2-using-developer-tools" id="heading-517" aria-labelledby="heading-517">#</a></h3>
+<h3 id="2-using-developer-tools" tabindex="-1">2. Using Developer Tools <a class="header-anchor" href="#2-using-developer-tools" id="heading-361" aria-labelledby="heading-361">#</a></h3>
 <p>The method for verifying the criterion with browser developer tools depends on the browser used.</p>
-<h4 id="in-firefox">In Firefox <a class="header-anchor" href="#in-firefox" id="heading-518" aria-labelledby="heading-518">#</a></h4>
+<h4 id="in-firefox" tabindex="-1">In Firefox <a class="header-anchor" href="#in-firefox" id="heading-362" aria-labelledby="heading-362">#</a></h4>
 <ol>
 <li>Open Developer Tools: <code>Ctrl + Shift + I</code></li>
 <li>Select the <strong>Accessibility tab</strong></li>
@@ -270,7 +270,7 @@ These tools rely on the <strong>accessible name</strong> to identify and activat
 </ol>
 <hr>
 <p><img src="../images/tester-wcag-253/FF_name.png" alt="Firefox Developer Tools panels with the Accessibility tab open" class="img-fluid"></p>
-<h4 id="in-chrome-or-edge-chromium">In Chrome or Edge (Chromium) <a class="header-anchor" href="#in-chrome-or-edge-chromium" id="heading-519" aria-labelledby="heading-519">#</a></h4>
+<h4 id="in-chrome-or-edge-chromium" tabindex="-1">In Chrome or Edge (Chromium) <a class="header-anchor" href="#in-chrome-or-edge-chromium" id="heading-363" aria-labelledby="heading-363">#</a></h4>
 <ol>
 <li>Open Developer Tools: <code>Ctrl + Shift + I</code></li>
 <li>Select the <strong>Elements tab</strong></li>
@@ -280,7 +280,7 @@ These tools rely on the <strong>accessible name</strong> to identify and activat
 </ol>
 <hr>
 <p><img src="../images/tester-wcag-253/Chrome_name.png" alt="Chrome Developer Tools panels with the Accessibility tree open" class="img-fluid"></p>
-<h2 id="summary" class="h2-focus">Summary <a class="header-anchor" href="#summary" id="heading-520" aria-labelledby="heading-520">#</a></h2>
+<h2 id="summary" tabindex="-1" class="h2-focus">Summary <a class="header-anchor" href="#summary" id="heading-364" aria-labelledby="heading-364">#</a></h2>
 <p>To comply with <strong>WCAG 2.5.3</strong>, make sure that:</p>
 <ul>
 <li>The visible text of an element is included in its accessible name, preferably at the beginning.</li>

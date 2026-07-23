@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#image-de-decoration" class="dropdown-item text-wrap">Image de décoration</a><a href="#svg-dans-une-balise-img" class="dropdown-item text-wrap">SVG dans une balise img</a><a href="#svg-en-ligne-inline" class="dropdown-item text-wrap">SVG en ligne (inline)</a><a href="#image-informative-hors-lien-ou-bouton" class="dropdown-item text-wrap">Image informative (hors lien ou bouton)</a><a href="#svg-dans-une-balise-img-2" class="dropdown-item text-wrap">SVG dans une balise img</a><a href="#svg-en-ligne-inline-2" class="dropdown-item text-wrap">SVG en ligne (inline)</a><a href="#les-svg-dans-des-liens-ou-boutons" class="dropdown-item text-wrap">Les SVG dans des liens ou boutons</a><a href="#dernier-mot" class="dropdown-item text-wrap">Dernier mot…</a><a href="#webographie-articles-qui-mont-bien-bien-aides" class="dropdown-item text-wrap">Webographie (articles qui m&#39;ont bien, bien aidés)</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#image-de-decoration" class="dropdown-item text-wrap">Image de décoration</a><a href="#svg-dans-une-balise-img" class="dropdown-item text-wrap">SVG dans une balise img</a><a href="#svg-en-ligne-inline" class="dropdown-item text-wrap">SVG en ligne (inline)</a><a href="#image-informative-hors-lien-ou-bouton" class="dropdown-item text-wrap">Image informative (hors lien ou bouton)</a><a href="#svg-dans-une-balise-img-1" class="dropdown-item text-wrap">SVG dans une balise img</a><a href="#svg-en-ligne-inline-1" class="dropdown-item text-wrap">SVG en ligne (inline)</a><a href="#les-svg-dans-des-liens-ou-boutons" class="dropdown-item text-wrap">Les SVG dans des liens ou boutons</a><a href="#dernier-mot" class="dropdown-item text-wrap">Dernier mot…</a><a href="#webographie-articles-qui-mont-bien-bien-aides" class="dropdown-item text-wrap">Webographie (articles qui m&#39;ont bien, bien aidés)</a></div>
     </nav>
         
       </div>
@@ -205,12 +205,12 @@
           <div class="mt-4">
           <p>Voici quelques recommandations techniques pour vous aider à intégrer des images SVG accessibles.</p>
 <p>Important : quelle que soit la solution retenue, le support navigateurs/aides techniques évoluant très rapidement, pensez à tester vos implémentations sur les configurations les plus utilisées par vos utilisateurs.</p>
-<h2 id="image-de-decoration" class="h2-focus">Image de décoration <a class="header-anchor" href="#image-de-decoration" id="heading-345" aria-labelledby="heading-345">#</a></h2>
-<h3 id="svg-dans-une-balise-img">SVG dans une balise <code>img</code> <a class="header-anchor" href="#svg-dans-une-balise-img" id="heading-346" aria-labelledby="heading-346">#</a></h3>
+<h2 id="image-de-decoration" tabindex="-1" class="h2-focus">Image de décoration <a class="header-anchor" href="#image-de-decoration" id="heading-484" aria-labelledby="heading-484">#</a></h2>
+<h3 id="svg-dans-une-balise-img" tabindex="-1">SVG dans une balise <code>img</code> <a class="header-anchor" href="#svg-dans-une-balise-img" id="heading-485" aria-labelledby="heading-485">#</a></h3>
 <pre><code class="html" title="html">
 &lt;img src="XXX.svg" alt="" aria-hidden="true"&gt;
 </code></pre>
-<h3 id="svg-en-ligne-inline">SVG en ligne (inline) <a class="header-anchor" href="#svg-en-ligne-inline" id="heading-347" aria-labelledby="heading-347">#</a></h3>
+<h3 id="svg-en-ligne-inline" tabindex="-1">SVG en ligne (inline) <a class="header-anchor" href="#svg-en-ligne-inline" id="heading-486" aria-labelledby="heading-486">#</a></h3>
 <pre><code class="html" title="html">
 &lt;svg aria-hidden="true"&gt;
 …
@@ -218,8 +218,8 @@
 </code></pre>
 <p>Vous devez vous assurer que la balise <code>svg</code> ou un de ses enfants (<code>&lt;g&gt;</code>, <code>&lt;path&gt;</code>…) ne possède aucun attribut visant à lui fournir un nom accessible (<code>title</code>, <code>desc</code>, <code>aria-*</code>…).</p>
 <p>Note : historiquement, l'attribut <code>focusable=&quot;false&quot;</code> devait aussi être présent pour éviter toute prise de focus sur le SVG par Internet Explorer et Edge (avant Chromium), ceci n'est plus utile sur les navigateurs actuels (sauf si vos utilisateurs utilisent encore des anciens navigateurs mentionnés).</p>
-<h2 id="image-informative-hors-lien-ou-bouton" class="h2-focus">Image informative (hors lien ou bouton) <a class="header-anchor" href="#image-informative-hors-lien-ou-bouton" id="heading-348" aria-labelledby="heading-348">#</a></h2>
-<h3 id="svg-dans-une-balise-img-2">SVG dans une balise <code>img</code> <a class="header-anchor" href="#svg-dans-une-balise-img-2" id="heading-349" aria-labelledby="heading-349">#</a></h3>
+<h2 id="image-informative-hors-lien-ou-bouton" tabindex="-1" class="h2-focus">Image informative (hors lien ou bouton) <a class="header-anchor" href="#image-informative-hors-lien-ou-bouton" id="heading-487" aria-labelledby="heading-487">#</a></h2>
+<h3 id="svg-dans-une-balise-img-1" tabindex="-1">SVG dans une balise <code>img</code> <a class="header-anchor" href="#svg-dans-une-balise-img-1" id="heading-488" aria-labelledby="heading-488">#</a></h3>
 <p>La solution la plus efficace consiste à utiliser l'attribut <code>alt</code> :</p>
 <pre><code class="html" title="html">
 &lt;img src="XXX.svg" role="img" alt="texte de remplacement"&gt;
@@ -234,7 +234,7 @@
 &lt;img src="XXX.svg" role="img" aria-labelledby="alt-text"&gt;
 </code></pre>
 <p>Note : On rajoute <code>role=&quot;img&quot;</code> pour s'assurer que l'élément soit bien considéré comme une image par les technologies d'assistance.</p>
-<h3 id="svg-en-ligne-inline-2">SVG en ligne (inline) <a class="header-anchor" href="#svg-en-ligne-inline-2" id="heading-350" aria-labelledby="heading-350">#</a></h3>
+<h3 id="svg-en-ligne-inline-1" tabindex="-1">SVG en ligne (inline) <a class="header-anchor" href="#svg-en-ligne-inline-1" id="heading-489" aria-labelledby="heading-489">#</a></h3>
 <p>Le meilleur support pour les SVG est l'affichage en ligne (balise <code>&lt;svg&gt;</code>).</p>
 <pre><code class="html" title="html">
 &lt;svg role="img"&gt;
@@ -272,7 +272,7 @@
   ...
 &lt;/svg&gt;
 </code></pre>
-<h2 id="les-svg-dans-des-liens-ou-boutons" class="h2-focus">Les SVG dans des liens ou boutons <a class="header-anchor" href="#les-svg-dans-des-liens-ou-boutons" id="heading-351" aria-labelledby="heading-351">#</a></h2>
+<h2 id="les-svg-dans-des-liens-ou-boutons" tabindex="-1" class="h2-focus">Les SVG dans des liens ou boutons <a class="header-anchor" href="#les-svg-dans-des-liens-ou-boutons" id="heading-490" aria-labelledby="heading-490">#</a></h2>
 <p>S'il est possible d'afficher du texte à proximité, la meilleure solution est de simplement masquer le SVG à l'aide de l'attribut <code>aria-hidden</code> :</p>
 <pre><code class="html" title="html">
 &lt;button&gt;
@@ -320,9 +320,9 @@ La solution suivante est similaire à la précédente, mais à tester systémati
   &lt;svg aria-hidden="true"&gt;&lt;!--...--&gt;&lt;/svg&gt;
 &lt;/a&gt;
 </code></pre>
-<h2 id="dernier-mot" class="h2-focus">Dernier mot… <a class="header-anchor" href="#dernier-mot" id="heading-352" aria-labelledby="heading-352">#</a></h2>
+<h2 id="dernier-mot" tabindex="-1" class="h2-focus">Dernier mot… <a class="header-anchor" href="#dernier-mot" id="heading-491" aria-labelledby="heading-491">#</a></h2>
 <p>En résumé, s'il ne fallait retenir qu'un seul conseil pour du SVG accessible, ce serait TESTER et tester encore !</p>
-<h2 id="webographie-articles-qui-mont-bien-bien-aides" class="h2-focus">Webographie (articles qui m'ont bien, bien aidés) <a class="header-anchor" href="#webographie-articles-qui-mont-bien-bien-aides" id="heading-353" aria-labelledby="heading-353">#</a></h2>
+<h2 id="webographie-articles-qui-mont-bien-bien-aides" tabindex="-1" class="h2-focus">Webographie (articles qui m'ont bien, bien aidés) <a class="header-anchor" href="#webographie-articles-qui-mont-bien-bien-aides" id="heading-492" aria-labelledby="heading-492">#</a></h2>
 <ul lang="en">
   <li><a href="https://www.deque.com/blog/creating-accessible-svgs/" hreflang="en">Creating Accessible SVGs - Deque (en)</a></li>
   <li><a href="https://weboverhauls.github.io/demos/svg/" hreflang="en">Accessible SVG test page (en)</a></li>
@@ -347,8 +347,8 @@ La solution suivante est similaire à la précédente, mais à tester systémati
             <a href="#svg-en-ligne-inline" class="nav-link text-muted">SVG en ligne (inline)</a></li></ul></li><li class="nav-item position-relative">
             <a href="#image-informative-hors-lien-ou-bouton" class="nav-link text-muted">Image informative (hors lien ou bouton)</a>
             <ul><li class="nav-item position-relative">
-            <a href="#svg-dans-une-balise-img-2" class="nav-link text-muted">SVG dans une balise img</a></li><li class="nav-item position-relative">
-            <a href="#svg-en-ligne-inline-2" class="nav-link text-muted">SVG en ligne (inline)</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#svg-dans-une-balise-img-1" class="nav-link text-muted">SVG dans une balise img</a></li><li class="nav-item position-relative">
+            <a href="#svg-en-ligne-inline-1" class="nav-link text-muted">SVG en ligne (inline)</a></li></ul></li><li class="nav-item position-relative">
             <a href="#les-svg-dans-des-liens-ou-boutons" class="nav-link text-muted">Les SVG dans des liens ou boutons</a></li><li class="nav-item position-relative">
             <a href="#dernier-mot" class="nav-link text-muted">Dernier mot…</a></li><li class="nav-item position-relative">
             <a href="#webographie-articles-qui-mont-bien-bien-aides" class="nav-link text-muted">Webographie (articles qui m&#39;ont bien, bien aidés)</a></li>
