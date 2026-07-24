@@ -82,7 +82,10 @@ Il est possible d'utiliser son téléphone seulement avec un clavier externe.
   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/609ba3f8-1af7-4668-a4df-7db54f101298)
 
 3. A présent, toutes les fonctionnalités disponibles par gestes tactiles doivent l’être également à l’aide du clavier.
-La navigation se fait de la même manière que pour un clavier sur desktop, touche ```TAB``` pour avancer, ```SHIFT+TAB``` pour reculer, ```ESPACE``` pour activer un élément.
+La navigation se fait de la même manière que pour un clavier sur desktop, touche ```TAB``` pour avancer (par élément ou par conteneur), ```SHIFT+TAB``` pour reculer, ```ESPACE``` pour activer un élément.
+La touche ```TAB``` peut ne pas être suffisante, dans ce cas utilisez les flèches haut, bas, gauche, droite pour vérifier que tous les éléments sont atteignables.
+En dernier recours, la combinaison ```CTRL+TAB``` doit permettre d'atteindre les éléments récalcitrants. 
+Si ces combinaisons de touches ne suffisent pas, alors cela provient d'une non-conformité de l'application.
 
 Des combinaisons sont également spécifiques à l'environnement mobile <span lang="en">iOS</span> :
 
