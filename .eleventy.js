@@ -1,7 +1,6 @@
 const cheerio = require('cheerio')
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
-const pluginRss = require('@11ty/eleventy-plugin-rss')
 const markdownItClass = require("markdown-it-class");
 
 
@@ -13,7 +12,9 @@ const collections = require('./src/config/collections')
 
 const IMAGES_EXTENSIONS = ['jpg', 'png', 'svg']
 
-module.exports = function (eleventyConfig) {
+module.exports = async function (eleventyConfig) {
+    const { default: pluginRss } = await import('@11ty/eleventy-plugin-rss')
+
     eleventyConfig.setDataDeepMerge(true)
     eleventyConfig.addPlugin(pluginRss)
 
