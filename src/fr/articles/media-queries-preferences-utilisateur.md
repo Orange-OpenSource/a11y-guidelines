@@ -8,6 +8,12 @@ tags:
   - advanced
 ---
 
+<style>
+  table + p {
+    margin-top: 1rem;
+  }
+</style>
+
 Avec **CSS Media Queries Level 5**, le **World Wide Web Consortium (W3C)** étend les possibilités offertes par les *media queries* en introduisant de nouvelles *media features* permettant d'adapter une interface en fonction des **préférences exprimées par l'utilisateur**. Elles permettent notamment de prendre en compte la réduction des animations (`prefers-reduced-motion`), le thème clair ou sombre (`prefers-color-scheme`), le contraste (`prefers-contrast`) ou encore les couleurs forcées (`forced-colors`).
 
 Cet article présente les principales *media features* de préférences utilisateur définies par **Media Queries Level 5**, leurs cas d'usage, leurs limites de compatibilité, ainsi que les bonnes pratiques pour les implémenter, les tester et les auditer.
