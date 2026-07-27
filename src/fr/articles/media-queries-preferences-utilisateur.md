@@ -149,7 +149,7 @@ La spécification définit les valeurs suivantes :
 
 ### Cas d'usage
 
-Cette *media feature* peut notamment être utilisée lorsque des composants personnalisés doivent s'adapter au mode de couleurs forcées, appliquer des couleurs système ou ajuster leur présentation afin de rester compatibles.
+Cette *media feature* peut notamment être utilisée lorsque des composants personnalisés doivent s'adapter au mode de couleurs forcées, appliquer des couleurs système ou ajuster leur présentation afin de rester compatibles avec celui-ci.
 
 ### Bonnes pratiques
 
