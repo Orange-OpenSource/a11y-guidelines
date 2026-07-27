@@ -14,7 +14,6 @@ tags:
   }
 </style>
 
-
 Forms are at the heart of the user experience on the web: registration, login, payment… They are everywhere.
 However, filling them out can be an obstacle, especially for people with disabilities. The accessibility of forms is therefore a key challenge.
 
