@@ -1,16 +1,16 @@
 ---
 title: "Orange Boosted"
-abstract: "Orange Boosted est un framework HTML, CSS et Javascript basé sur le très populaire Twitter Boostrap"
+abstract: "Orange Boosted est un framework HTML, CSS et Javascript basé sur le très populaire Boostrap"
 ---
 
 # Orange Boosted
-  
+
 ## Présentation
-Orange <span lang="en">Boosted</span> est un framework <abbr>HTML</abbr>, <abbr>CSS</abbr> et Javascript basé sur le très populaire <span lang="en">[Twitter Boostrap](http://getbootstrap.com/)</span>.
+Orange <span lang="en">Boosted</span> est un framework <abbr>HTML</abbr>, <abbr>CSS</abbr> et Javascript basé sur le très populaire [Boostrap](http://getbootstrap.com/).
 Il permet la mise en place rapide d’un site web responsive et accessible aux couleurs de la charte Orange.
 
 ## Pourquoi l’utiliser ?
- - Basé sur <span lang="en">[Twitter Boostrap](https://getbootstrap.com/)</span>
+ - Basé sur [Boostrap](https://getbootstrap.com/)
  - À la charte Orange, la Brand
  - Amélioré avec des composants **plus accessibles**
  - Enrichi de composants spécifiques à Orange
