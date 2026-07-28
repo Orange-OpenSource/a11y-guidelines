@@ -3,7 +3,7 @@ title: "Tester l'accessibilité d'une application iOS"
 abstract: "Description des principaux outils et méthodes de tests pour évaluer rapidement l'accessibilité d'une application iOS"
 titleBeforeTag: true
 date: "2024-03-04"
-updateDate: "2026-07-24"
+updateDate: "2026-07-28"
 tags:
   - mobile
   - beginner
