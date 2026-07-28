@@ -41,7 +41,7 @@ Les principales *media features* définies par **CSS Media Queries Level 5** son
 | `prefers-reduced-transparency` | Indique une préférence pour la réduction des effets de transparence.    |
 | `prefers-reduced-data`         | Indique une préférence pour la réduction de la consommation de données. |
 
-Les sections suivantes présentent le fonctionnement de chacune de ces *media features*, les valeurs définies par la spécification, leurs principaux cas d'usage ainsi que les points d'attention à connaître pour les implémenter correctement. Les valeurs définies par la spécification ne sont pas nécessairement toutes prises en charge par les navigateurs.
+Les sections suivantes présentent le fonctionnement de chacune de ces *media features*, les valeurs définies par la spécification, leurs principaux cas d'usage ainsi que les points d'attention à connaître pour les implémenter correctement. Certaines de ces valeurs ne sont pas prises en charge par tous les navigateurs.
 
 *Note :* cet article s'appuie sur la version actuelle de la spécification **CSS Media Queries Level 5**. Certaines documentations ou articles plus anciens peuvent mentionner des valeurs qui ne figurent plus dans la version actuelle, comme `no-preference` pour `prefers-color-scheme`.
 
@@ -68,6 +68,20 @@ La spécification définit les valeurs suivantes :
 ### Cas d'usage
 
 Cette *media feature* peut notamment être utilisée lorsque l'interface comporte des animations, des transitions, des effets de parallaxe ou d'autres mouvements susceptibles d'être réduits.
+
+## Combiner plusieurs préférences utilisateur
+
+Les *media features* de préférences utilisateur ne sont pas exclusives. Un utilisateur peut exprimer simultanément plusieurs préférences, par exemple un thème sombre associé à une réduction des animations ou à une préférence pour un contraste plus élevé.
+
+Comme les autres *media features* CSS, elles peuvent être combinées au sein d'une même *media query* afin d'adapter l'interface à plusieurs préférences exprimées.
+
+```css
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  /* Adaptations spécifiques */
+}
+```
+
+Dans la pratique, il n'est généralement pas nécessaire de concevoir une variante complète de l'interface pour chaque combinaison possible. Il est préférable de mettre en œuvre des adaptations ciblées et indépendantes, capables de se combiner naturellement lorsque plusieurs préférences sont détectées.
 
 ### Bonnes pratiques
 
@@ -155,7 +169,7 @@ La spécification définit les valeurs suivantes :
 
 ### Cas d'usage
 
-Cette *media feature* peut notamment être utilisée lorsque des composants personnalisés doivent s'adapter au mode de couleurs forcées, appliquer des couleurs système ou ajuster leur présentation afin de rester compatibles avec celui-ci.
+Cette *media feature* peut notamment être utilisée lorsque des composants personnalisés doivent s'adapter au mode de couleurs forcées, appliquer des couleurs système ou ajuster leur présentation afin de rester compatibles avec ce mode.
 
 ### Bonnes pratiques
 
@@ -284,7 +298,7 @@ L'objectif n'est pas de créer plusieurs versions d'une même interface, mais d'
 
 ### 3. Respecter les préférences exprimées
 
-Les préférences détectées traduisent un choix explicite de l'utilisateur ou une préférence déterminée automatiquement par son environnement d'exécution. Lorsqu'elles sont disponibles, elles devraient être prises en compte dans la conception de l'interface.
+Les préférences détectées traduisent un choix explicite de l'utilisateur ou une préférence déterminée automatiquement par son environnement d'exécution. Lorsqu'elles sont disponibles, elles devraient être prises en compte lors de la conception de l'interface
 
 ### 4. Tester sur plusieurs plateformes
 
