@@ -1,5 +1,5 @@
 ---
-title: "Media queries et préférences utilisateur : adapter les interfaces aux préférences des utilisateurs"
+title: "Media queries et préférences utilisateur"
 abstract: "Les media features de préférences utilisateur permettent d'adapter une interface en fonction des préférences exprimées par l'utilisateur. Définies par la spécification CSS Media Queries Level 5, elles permettent notamment de prendre en compte la réduction des animations, le contraste, le thème clair ou sombre, les couleurs forcées, la transparence et la réduction de la consommation de données."
 titleBeforeTag: true
 date: "2026-07-21"
@@ -68,20 +68,6 @@ La spécification définit les valeurs suivantes :
 ### Cas d'usage
 
 Cette *media feature* peut notamment être utilisée lorsque l'interface comporte des animations, des transitions, des effets de parallaxe ou d'autres mouvements susceptibles d'être réduits.
-
-## Combiner plusieurs préférences utilisateur
-
-Les *media features* de préférences utilisateur ne sont pas exclusives. Un utilisateur peut exprimer simultanément plusieurs préférences, par exemple un thème sombre associé à une réduction des animations ou à une préférence pour un contraste plus élevé.
-
-Comme les autres *media features* CSS, elles peuvent être combinées au sein d'une même *media query* afin d'adapter l'interface à plusieurs préférences exprimées.
-
-```css
-@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
-  /* Adaptations spécifiques */
-}
-```
-
-Dans la pratique, il n'est généralement pas nécessaire de concevoir une variante complète de l'interface pour chaque combinaison possible. Il est préférable de mettre en œuvre des adaptations ciblées et indépendantes, capables de se combiner naturellement lorsque plusieurs préférences sont détectées.
 
 ### Bonnes pratiques
 
@@ -285,6 +271,20 @@ La **User Preferences API** est une API expérimentale qui vise à fournir un ac
 Alors que les *media features* CSS permettent principalement d'adapter la présentation de l'interface, cette API fournit un accès programmatique aux préférences utilisateur via l'objet `navigator.preferences`. Elle permet notamment d'observer les changements de préférences au cours de la navigation.
 
 À ce jour, cette API reste expérimentale et son niveau de prise en charge est limité. Pour les besoins courants, `window.matchMedia()` demeure la solution la plus largement compatible.
+
+## Combiner plusieurs préférences utilisateur
+
+Les *media features* de préférences utilisateur ne sont pas exclusives. Un utilisateur peut exprimer simultanément plusieurs préférences, par exemple un thème sombre associé à une réduction des animations ou à une préférence pour un contraste plus élevé.
+
+Comme les autres *media features* CSS, elles peuvent être combinées au sein d'une même *media query* afin d'adapter l'interface à plusieurs préférences exprimées.
+
+```css
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  /* Adaptations spécifiques */
+}
+```
+
+Dans la pratique, il n'est généralement pas nécessaire de concevoir une variante complète de l'interface pour chaque combinaison possible. Il est préférable de mettre en œuvre des adaptations ciblées et indépendantes, capables de se combiner naturellement lorsque plusieurs préférences sont détectées.
 
 ## Bonnes pratiques
 
