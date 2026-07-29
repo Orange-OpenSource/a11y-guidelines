@@ -45,6 +45,34 @@ The following sections describe how each of these *media features* works, the va
 
 *Note:* this article is based on the current version of the **CSS Media Queries Level 5** specification. Some older documentation or articles may refer to values that are no longer part of the current specification, such as `no-preference` for `prefers-color-scheme`.
 
+## `prefers-reduced-motion`
+
+The `prefers-reduced-motion` *media feature* indicates whether the user has expressed a preference for reducing animations and motion effects. It allows these effects to be adapted when such a preference is expressed.
+
+### Values defined by the specification
+
+The specification defines the following values:
+- `reduce`: the user has expressed a preference for reducing animations and motion effects;
+- `no-preference`: no particular preference has been expressed.
+
+### Example
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  .animated-element {
+    animation: none;
+  }
+}
+```
+
+### Use cases
+
+This *media feature* can be used when an interface includes animations, transitions, parallax effects, or other types of motion that can be reduced.
+
+### Best practices
+
+Reducing motion does not necessarily mean removing every animation. Animations that contribute to understanding the interface may be preserved, while purely decorative animations can be reduced, simplified, or removed.
+
 ## `prefers-contrast`
 
 The `prefers-contrast` *media feature* indicates the user's preference regarding the contrast level of the interface. It allows the presentation of the interface to be adapted accordingly.
@@ -263,3 +291,115 @@ Like other CSS *media features*, they can be combined within the same *media que
 ```
 
 In practice, it is generally unnecessary to design a complete variant of the interface for every possible combination. Instead, it is preferable to implement targeted, independent adaptations that combine naturally when multiple preferences are detected.
+
+## Best practices
+
+### 1. Design a functional interface by default
+
+User preference *media features* should not be a prerequisite for an interface to function correctly. They allow the presentation or certain behaviors to be adapted, but the content should remain understandable and usable even when no particular preference is expressed.
+
+### 2. Adapt only what is necessary
+
+The goal is not to create multiple versions of the same interface, but to adapt only the elements affected by the detected preference. Adaptations should remain targeted and proportionate.
+
+### 3. Respect user preferences
+
+Detected preferences reflect either an explicit user choice or a preference determined automatically by the user's runtime environment. When available, they should be taken into account during the design of the interface.
+
+### 4. Test across multiple platforms
+
+Support varies across browsers, operating systems, and platforms. A working implementation in one environment does not guarantee identical behavior elsewhere. It is therefore recommended to test these features across multiple browser and operating system combinations.
+
+### 5. Combine CSS and JavaScript judiciously
+
+CSS *media features* cover most interface adaptation needs. When behavioral adaptations are required, `window.matchMedia()` makes it possible to query the same preferences from JavaScript.
+
+## Testing
+
+### 1. Check the system preferences
+
+Before testing a *media feature*, it is recommended to verify that the corresponding preference is enabled in the operating system or browser. Depending on the platform, these preferences may include reduced motion, light or dark color schemes, contrast, or forced colors.
+
+### 2. Manual inspection
+
+Developer tools make it possible to emulate several user preferences without changing the operating system settings. This is particularly useful for quickly verifying that a *media feature* is correctly taken into account.
+
+In Chromium-based browsers, you can emulate:
+- `prefers-reduced-motion`;
+- `prefers-color-scheme`;
+- `prefers-contrast`;
+- `forced-colors`.
+
+### 3. Verify with `matchMedia()`
+
+From the browser console, `window.matchMedia()` can be used to verify the value returned by a *media feature*.
+
+```javascript
+window.matchMedia('(prefers-reduced-motion: reduce)').matches
+```
+
+This expression returns `true` when the preference is detected, and `false` otherwise.
+
+### 4. Use the `prefers-scan` bookmarklet
+
+During an accessibility audit or code review, it is not always easy to manually identify every user preference *media query* used by an application. This process can be time-consuming, especially when multiple style sheets are loaded.
+
+The **Prefers Scan** bookmarklet automates this task by analyzing the page's accessible style sheets.
+
+It can:
+- list the *media features* in use;
+- identify which user preferences are supported;
+- quickly highlight missing preferences;
+- facilitate the preparation of a manual accessibility audit.
+
+**Prefers Scan** identifies the presence of user preference *media features* in style sheets, but it does not assess the relevance or quality of the adaptations they implement. Manual verification therefore remains essential.
+
+[The source code, installation instructions, and documentation are available on the Prefers Scan GitHub repository.](https://github.com/MewenLeHo/prefers-scan)
+
+## Common mistakes found during accessibility audits
+
+### Ignoring `prefers-reduced-motion`
+
+Modern interfaces often use animations to support transitions, draw attention, or enhance the user experience. Ignoring `prefers-reduced-motion` means that these animations remain enabled despite an explicit user preference, which may cause discomfort or motion sensitivity issues.
+
+### Assuming that dark mode is enough
+
+Supporting `prefers-color-scheme` alone does not guarantee that a dark theme is accessible. Insufficient contrast, poorly chosen colors, or difficult-to-distinguish interactive states can negatively affect readability and usability.
+
+### Disabling `forced-colors`
+
+Disabling forced colors with `forced-color-adjust: none` prevents users from benefiting from the adaptations provided by the browser. This property should only be used in exceptional cases where its consequences are fully understood and carefully considered.
+
+### Making only cosmetic adjustments
+
+Adaptations should modify the behavior or presentation of the elements actually affected by the detected preference. Simply changing a few colors or spacing values without addressing the user's expressed preference significantly reduces the value of these *media features*.
+
+### Not testing
+
+A *media feature* may be recognized by the browser while still being implemented incorrectly or behaving unexpectedly in practice. It is therefore essential to verify the actual behavior of the interface on the relevant platforms.
+
+## Conclusion
+
+User preference *media features* provide a powerful way to make interfaces more adaptive and more accessible.
+
+They make it possible to accommodate concrete user needs, such as reduced motion, increased contrast, color scheme preferences, reduced transparency, or reduced data usage.
+
+Their implementation is generally straightforward, yet their impact on user comfort can be significant.
+
+When implemented thoughtfully, these adaptations can significantly improve the experience of many users.
+
+User preference *media features* also illustrate an important evolution of the Web. Rather than adapting only to the technical characteristics of a device, interfaces can now respond to preferences expressed by their users. As a result, they contribute to creating experiences that are more personalized, more comfortable, and, in many cases, more accessible.
+
+## References
+
+<ul>
+  <li><a href="https://www.w3.org/TR/mediaqueries-5/">W3C – Media Queries Level 5</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility">MDN – Using media queries for accessibility</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">MDN – prefers-reduced-motion</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast">MDN – prefers-contrast</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme">MDN – prefers-color-scheme</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors">MDN – forced-colors</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-transparency">MDN – prefers-reduced-transparency</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-data">MDN – prefers-reduced-data</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/User_Preferences_API">MDN – User Preferences API</a></li>
+</ul>
