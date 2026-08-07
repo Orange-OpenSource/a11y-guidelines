@@ -1,7 +1,7 @@
 ---
 title: "Veille #A11y Juin-Juillet 2026"
 abstract: "Florilèges de ressources en #A11y, Juin-Juillet 2026"
-date: "2026-06-08"
+date: "2026-08-07"
 tags:
   - veille
 ---
@@ -45,7 +45,7 @@ Bonne lecture !
 
 - CSS grid lanes, risques d'inaccessibilité (en) : https://matuzo.at/blog/2026/grid-lanes-accessibility
 - menu avec lien + bouton, à essayer (en) : https://adrianroselli.com/2026/07/link-popover-navigation.html
-- Aria-expanded exemples, complet (en) : https://piccalil.li/blog/use-cases-for-aria-expanded/
+- aria-expanded exemples, complet (en) : https://piccalil.li/blog/use-cases-for-aria-expanded/
 - Support encore partiel de l'API de notification ARIA (en) : https://www.oidaisdes.org/blog/aria-notify-browser-support/
 - Rendre des lignes de tableau cliquables, à éviter (en) : https://www.tempertemper.net/blog/clickable-table-rows-are-a-bad-idea
 - Quelques clés pour des cartes a11y (en) : https://mn.gov/mnit/media/blog/
@@ -63,7 +63,7 @@ Bonne lecture !
 - Rendre a11y un PDF, toujours aussi compliqué (en) : https://silktide.com/blog/pdf-matterhorn-pros-and-cons/
 - Quand un audit vous submerge (en) : https://intopia.digital/articles/how-i-limit-overwhelm-when-auditing/
 
-## Appli mobile, web mobile (en)
+## Appli mobile, web mobile
 
 - Mettre de la sémantique dans SwiftUI (en) : https://wesleydegroot.nl/blog/semantic-accessibility-in-swiftui
 - Est-ce que les titres d'écran doivent avoir une sémantique d'entête ? Spoiler, oui (en) : https://tetralogical.com/blog/2026/07/22/should-the-screen-title-be-a-heading/
@@ -90,9 +90,9 @@ Bonne lecture !
 
 ## Ressources
 
-- Anticiper WCAG 3? SINON... (en) : https://nicolas-steenhout.com/wcag-3-transition-phase/
+- Anticiper WCAG 3 ? Sinon... (en) : https://nicolas-steenhout.com/wcag-3-transition-phase/
 - Un outil open-source d'inspection des API Windows inspiré du vieux aViewer (en) : https://github.com/stevefaulkner/aViewer---moderno
-- Les tests d'a11y en général et dans Wordpress en particulier (en) : https://wpaccessibility.org/docs/testing/
+- Les tests d'a11y en général et dans WordPress en particulier (en) : https://wpaccessibility.org/docs/testing/
 - Bonnes pratiques pour un projet a11y, je connaissais pas (en) : https://opensource.guide/accessibility-best-practices-for-your-project/
 - La base de l'a11y, bien mais pour newbie (en) : https://www.solidstart.info/
 - Rendre accessible aux personnes ayant des difficultés de lecture (en) : https://tetralogical.com/blog/2026/06/25/designing-for-reading-disabilities/

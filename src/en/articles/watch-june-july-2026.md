@@ -1,7 +1,7 @@
 ---
 title: "#A11y technical watch, June-July 2026"
 abstract: "#A11y anthology, June-July 2026"
-date: "2026-06-08"
+date: "2026-08-07"
 tags:
   - veille
 ---
@@ -44,7 +44,7 @@ Happy reading!
 
 - CSS grid lanes, accessibility risks: https://matuzo.at/blog/2026/grid-lanes-accessibility
 - Menu with link + button, worth trying: https://adrianroselli.com/2026/07/link-popover-navigation.html
-- Aria-expanded examples, comprehensive: https://piccalil.li/blog/use-cases-for-aria-expanded/
+- aria-expanded examples, comprehensive: https://piccalil.li/blog/use-cases-for-aria-expanded/
 - Still partial support for the ARIA notification API: https://www.oidaisdes.org/blog/aria-notify-browser-support/
 - Making table rows clickable—best avoided: https://www.tempertemper.net/blog/clickable-table-rows-are-a-bad-idea
 - Key tips for accessible cards: https://mn.gov/mnit/media/blog/
