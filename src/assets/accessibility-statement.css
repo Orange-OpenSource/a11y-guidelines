@@ -1,6 +1,7 @@
 body {
   font-family: "Arial";
   color: #000000;
+  background: #eee;
   margin: 0;
 }
 
@@ -32,14 +33,14 @@ em {
 }
 
 .underover {
-  text-decoration: underline overline #ff3028;
+  text-decoration: underline overline #FF3028;
 }
 
 .lead {
   font-weight: bold;
 }
 
-.row > [class*="col-"] {
+.row>[class*="col-"] {
   padding-right: 30px;
   padding-left: 30px;
 }
@@ -50,7 +51,13 @@ h1 {
   background-repeat: no-repeat;
   background-position: 1rem 1.5rem;
   margin: 0;
-  padding: 2rem 2rem 2rem 8rem;
+  padding: 4em 0 0 0;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    padding: 2rem 2rem 2rem 8rem;
+  }
 }
 
 h2 {
@@ -68,6 +75,10 @@ h2 {
 .summary .pie span {
   font-size: 3em;
   font-weight: 700;
+}
+
+.summary>*:last-child .pie {
+  scale: .5;
 }
 
 .pie-noncompliant {
@@ -92,19 +103,20 @@ table {
   overflow-x: auto;
 }
 
+
 table tr {
   border-bottom: 1px solid #ccc;
 }
 
 table th {
-  font-size: 0.875rem;
+  font-size: .875rem;
   font-weight: bold;
-  padding: 0.5rem;
+  padding: .5rem;
 }
 
 table td {
-  padding: 0.5rem;
-  font-size: 0.875rem;
+  padding: .5rem;
+  font-size: .875rem;
   line-height: 1rem;
 }
 
@@ -116,7 +128,7 @@ table td {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* added line */
+  white-space: nowrap;
   border: 0;
 }
 
@@ -128,6 +140,11 @@ table td {
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap; /* added line */
+  white-space: nowrap;
   border: 0;
+}
+
+.text-break {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
 }

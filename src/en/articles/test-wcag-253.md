@@ -1,5 +1,5 @@
 ---
-title: "How to test the WCAG 2.5.3 ?"
+title: "How to test the WCAG 2.5.3?"
 abstract: "Good practices for testing the WCAG 2.5.3 criterion (Label in Name)"
 titleBeforeTag: true
 date: "2022-06-23"
@@ -11,9 +11,9 @@ tags:
 
 ## Objective of the Criterion
 
-**WCAG 2.5.3 – Label in Name** aims to ensure that when an interactive element (button, link, input field, etc.) displays visible text on the screen, that same text is also included in its **<a href="/src/fr/articles/le-nom-accessible-en-html.md">accessible name</a>**. 
+**WCAG 2.5.3 – Label in Name** aims to ensure that when an interactive element (button, link, input field, etc.) displays visible text on the screen, that same text is also included in its **<a href="/en/articles/accessible-name">accessible name</a>**. 
 
-This allows users of [assistive technologies](/src/fr/solutions-assistance.md) (particularly speech recognition software) to correctly understand and interact with the interface.
+This allows users of [assistive technologies](/en/assistive-technologies) (particularly speech recognition software) to correctly understand and interact with the interface.
 These tools rely on the **accessible name** to identify and activate elements.
 
 The visible text does not need to be **strictly identical** to the accessible name, but it must **at minimum be included** within it — ideally at the **beginning**.
@@ -24,7 +24,7 @@ The visible text does not need to be **strictly identical** to the accessible na
 
 Consider a user navigating with speech recognition software who wants to fill out and submit a form.
 
-![Button displaying the text “Send”](../articles/images/tester-wcag-253/button_send.png)
+![Button displaying the text “Send”](../images/tester-wcag-253/button_send.png)
 
 <pre><code class="html">
 &lt;button&gt;
@@ -93,7 +93,7 @@ Some screen readers provide a *speech viewer* that displays the accessible name 
 
 ---
 
-![Exemple de visionneuse de parole](../articles/images/tester-wcag-253/nvda_visionneuse.png)
+![Exemple de visionneuse de parole](../images/tester-wcag-253/nvda_visionneuse.png)
 
 ### 2. Using Developer Tools
 
@@ -108,7 +108,7 @@ The method for verifying the criterion with browser developer tools depends on t
  
  ---
 
-![Firefox Developer Tools panels with the Accessibility tab open](../articles/images/tester-wcag-253/FF_name.png)
+![Firefox Developer Tools panels with the Accessibility tab open](../images/tester-wcag-253/FF_name.png)
 
 #### In Chrome or Edge (Chromium)
 
@@ -120,7 +120,7 @@ The method for verifying the criterion with browser developer tools depends on t
 
 ---
 
-![Chrome Developer Tools panels with the Accessibility tree open](../articles/images/tester-wcag-253/Chrome_name.png)
+![Chrome Developer Tools panels with the Accessibility tree open](../images/tester-wcag-253/Chrome_name.png)
 
 ## Summary
 
