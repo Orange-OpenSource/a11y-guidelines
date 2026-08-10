@@ -3,6 +3,7 @@ title: "Tester l'accessibilité d'une application iOS"
 abstract: "Description des principaux outils et méthodes de tests pour évaluer rapidement l'accessibilité d'une application iOS"
 titleBeforeTag: true
 date: "2024-03-04"
+updateDate: "2026-07-28"
 tags:
   - mobile
   - beginner
@@ -82,9 +83,12 @@ Il est possible d'utiliser son téléphone seulement avec un clavier externe.
   ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/609ba3f8-1af7-4668-a4df-7db54f101298)
 
 3. A présent, toutes les fonctionnalités disponibles par gestes tactiles doivent l’être également à l’aide du clavier.
-La navigation se fait de la même manière que pour un clavier sur desktop, touche ```TAB``` pour avancer, ```SHIFT+TAB``` pour reculer, ```ESPACE``` pour activer un élément.
+La navigation se fait de la même manière que pour un clavier sur desktop, touche <kbd>Tab</kbd> pour avancer (par élément ou par conteneur), <kbd>Shift</kbd> + <kbd>Tab</kbd> pour reculer, <kbd>Espace</kbd> pour activer un élément.
+La touche <kbd>Tab</kbd> peut ne pas être suffisante, dans ce cas utilisez les flèches <kbd>haut</kbd>, <kbd>bas</kbd>, <kbd>gauche</kbd>, <kbd>droite</kbd> pour vérifier que tous les éléments sont atteignables.
+En dernier recours, la combinaison <kbd>Ctrl</kbd> + <kbd>Tab</kbd> doit permettre d'atteindre les éléments récalcitrants. 
+Si ces combinaisons de touches ne suffisent pas, alors cela provient d'une non-conformité de l'application.
 
-Des combinaisons sont également spécifiques à l'environnement mobile <span lang="en">iOS</span> :
+Des combinaisons sont également spécifiques à l'environnement mobile iOS :
 
   ![Shift+TAB pour afficher l'aide, Fn+H pour revenir à l'accueil, Fn+flèche haut pour sélecteur d'app, Fn+C pour centre de contrôle, Fn+N pour centre de notifications](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/f3e1bb95-27dc-47ce-9b16-fa89a91079e8)
 
