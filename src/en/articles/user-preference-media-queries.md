@@ -18,7 +18,7 @@ With **CSS Media Queries Level 5**, the **World Wide Web Consortium (W3C)** exte
 
 This article covers the main user preference *media features* defined by **Media Queries Level 5**, their use cases, browser support considerations, and best practices for implementing, testing, and auditing them.
 
-*Key takeaway:* the *media features* presented in this article are defined by the **CSS Media Queries Level 5** specification. However, browser support varies across browsers and platforms. While their use is not explicitly required by **WCAG**, **RGAA**, or **EN 301 549**, they are considered a best practice for designing interfaces that adapt to user preferences.
+*Key takeaway:* the *media features* presented in this article are defined by the **CSS Media Queries Level 5** specification. However, browser support varies across browsers and platforms. While their use is not explicitly required by **WCAG**, **RGAA**, or **EN 301 549** (although they may contribute to meeting certain criteria), they are considered a best practice for designing interfaces that adapt to user preferences.
 
 ## Why were these media features introduced?
 
