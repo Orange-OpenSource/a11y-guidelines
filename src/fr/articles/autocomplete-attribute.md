@@ -8,6 +8,12 @@ tags:
   - advanced
 ---
 
+<style>
+  table + p {
+    margin-top: 1rem;
+  }
+</style>
+
 Les formulaires sont au cœur de l'expérience utilisateur sur le web : inscription, connexion, paiement… Ils sont partout.
 Pourtant, leur remplissage peut représenter un obstacle, en particulier pour les personnes en situation de handicap. L'accessibilité des formulaires est donc un enjeu majeur.
 Parmi les mécanismes souvent négligés, l'attribut HTML `autocomplete` joue un rôle clé.
