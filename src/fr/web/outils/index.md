@@ -7,7 +7,7 @@ abstract: "Des ressources, outils et méthodes pour faciliter la prise en compte
 
 Des ressources, outils et méthodes pour faciliter la prise en compte de l’accessibilité numérique :
 
-- **Boosted** pour développer des sites Web à la charte Orange et accessibles,
+- **OUDS-Web** et **Boosted** pour développer des sites Web à la charte Orange et accessibles,
 - **La Va11ydette** pour obtenir le taux de conformité d’un site Web à l’aide d’une grille de questions facile à utiliser,
 - Des ressources à **télécharger**,
 - Quelques **personas** sur l'accessibilité numérique
