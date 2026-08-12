@@ -45,6 +45,9 @@
         servicesContainer
           .querySelectorAll(".tarteaucitronStatusInfo")
           .forEach(function (statusEl) {
+            // Add role="status" so screen readers announce the content
+            statusEl.setAttribute("role", "status");
+
             // Get the service name from the sibling span
             const serviceName = statusEl
               .closest(".tarteaucitronName")
