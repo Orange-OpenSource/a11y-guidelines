@@ -5,7 +5,7 @@ abstract: "OUDS est une évolution d'Orange Boosted, intégrant le nouveau Desig
 
 # OUDS (Orange Unified Design System)
 
-OUDS-Web est le framework de développement web qui implémente l'Orange Unified Design System. Ce framework constitue une évolution d'Orange Boosted, intégrant les principes du nouveau Design System d'Orange.
+**OUDS-Web** est le <span lang="en">framework</span> de développement web qui implémente l'<span lang="en">Orange Unified Design System</span>. Ce framework constitue une évolution d'Orange Boosted, intégrant les principes du nouveau <span lang="en">Design System d'Orange</span>.
 
 ## Pourquoi l'utiliser ?
 
@@ -15,8 +15,8 @@ OUDS-Web est le framework de développement web qui implémente l'Orange Unified
 - Une accessibilité optimisée, du design au code
 - Une gestion native du multi-mode (mode clair, mode sombre)
 - Une gestion native du multi-marque
-- Une fluidité de production entre les designers et les développeurs grâce aux Design Tokens
-- Un accès au code simplifié avec un code open source sous licence MIT
+- Une fluidité de production entre les designers et les développeurs grâce aux <span lang="en">Design Tokens</span>
+- Un accès au code simplifié avec un code <span lang="en">open source</span> sous licence <span lang="en">MIT</span>
 
 ## Sites officiels
 
