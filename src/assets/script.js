@@ -46,6 +46,10 @@
     // Event: services panel opened
     window.addEventListener('tac.open_panel', function () {
         const servicesContainer = document.getElementById('tarteaucitronServices_api');
+        const mainLineOffset = document.getElementById('tarteaucitronMainLineOffset')
+
+        // Apply dark theme to the main line offset
+        mainLineOffset.setAttribute('data-bs-theme', 'dark');
 
         servicesContainer.querySelectorAll('button').forEach(function (button) {
             applyButtonClasses(button);
