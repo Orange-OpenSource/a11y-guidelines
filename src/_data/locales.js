@@ -20,6 +20,9 @@ module.exports = {
       },
       side: {
         label: 'Topics'
+      },
+      footer: {
+        label: 'Footer navigation'
       }
     },
     header: {
@@ -103,6 +106,9 @@ module.exports = {
       },
       side: {
         label: 'Thématiques'
+      },
+      footer: {
+        label: 'Navigation du pied de page'
       }
     },
     header: {
