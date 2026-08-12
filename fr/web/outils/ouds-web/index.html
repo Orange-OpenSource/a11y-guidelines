@@ -2,11 +2,11 @@
 <html lang="fr" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
-    <title>Appareils mobiles - Recommandations accessibilité numérique Orange</title>
+    <title>OUDS - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
-    <meta name="description" content="L&#39;accessibilité des applications mobiles Android et iOS">
+    <meta name="description" content="OUDS est une évolution d&#39;Orange Boosted, intégrant le nouveau Design System d&#39;Orange pour former l&#39;Orange Unified Design System.">
     
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -23,8 +23,6 @@
     <link rel="icon" href="/assets/images/favicon.ico">
     
     <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
-    
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="stylesheet" href="/assets/style.css">
@@ -83,7 +81,7 @@
 </a>
             </li>
             <li class="nav-item">
-              <a href="/fr/web/" class="nav-link">
+              <a href="/fr/web/" class="nav-link active" aria-current="true">
   Web
 </a>
             </li>
@@ -128,7 +126,35 @@
   </nav>
 </div>
 
-  
+  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Navigation secondaire">
+  <div class="container-lg">
+    <ul class="nav"><li class="nav-item">
+              <a href="/fr/web/designer/" class="nav-link">
+  Designer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/web/developper/" class="nav-link">
+  Développer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/web/tester/" class="nav-link">
+  Tester
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/web/audit-wcag/" class="nav-link">
+  Auditer
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/web/outils/" class="nav-link active" aria-current="true">
+  Boite à outils
+</a>
+            </li><li class="nav-item">
+              <a href="/fr/web/checklist-incontournables/" class="nav-link">
+  11 Incontournables
+</a>
+            </li></ul>
+  </div>
+</nav>
 </header>
     <div class="container-lg pt-2">
       
@@ -139,81 +165,127 @@
   <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici</p>
   <ol class="breadcrumb">
       
-        <li class="breadcrumb-item">
+        <li class="breadcrumb-item d-none d-sm-flex">
           <a class="breadcrumb-focus" href="/fr/">Accueil</a>
         </li>
       
       
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a class="breadcrumb-focus" href="/fr/web/">Web</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-focus" href="/fr/web/outils/">Boite à outils</a>
+        </li>
+      
+      
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
-          Appareils mobiles
+          OUDS
         </li>
       </ol>
 </nav>
 
       
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
-        
+        <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        Thématiques
+      </button>
+      <div class="dropdown-menu dropdown-menu-left"><a href="/fr/web/outils/orange-boosted/" class="nav-link dropdown-item">
+  Orange Boosted
+</a><a href="/fr/web/outils/ouds-web/" class="nav-link dropdown-item active" aria-current="page">
+  OUDS-Web
+</a><a href="/fr/web/outils/methodes-et-outils-de-test/" class="nav-link dropdown-item">
+  Méthodes et outils de test
+</a><a href="/fr/web/audit-wcag/" class="nav-link dropdown-item">
+  La Va11ydette
+</a><a href="/fr/web/outils/fiches-memo/" class="nav-link dropdown-item">
+  Fiches mémos
+</a><a href="/fr/persona/" class="nav-link dropdown-item">
+  Personas
+</a><a href="/fr/web/liens-utiles/" class="nav-link dropdown-item">
+  Liens utiles
+</a><a href="/fr/glossaire/" class="nav-link dropdown-item">
+  Glossaire
+</a></div>
+    </nav>
         
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main" tabindex="-1">
-      <h1>Recommandations accessibilité Orange pour les mobiles</h1>
-<p><em><strong>L’accessibilité, une nécessité pour certains, un avantage pour tous !</strong></em></p>
-<h2 id="definition-de-laccessibilite-mobile" tabindex="-1" class="h2-focus">Définition de l’accessibilité mobile <a class="header-anchor" href="#definition-de-laccessibilite-mobile" id="heading-1537" aria-labelledby="heading-1537">#</a></h2>
-<p><strong>C’est une application utilisable par tous</strong></p>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="side-navigation" class="d-none d-md-block" role="navigation" aria-labelledby="side-navigation-label">
+      <h2 id="side-navigation-label">Thématiques</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="/fr/web/outils/orange-boosted/" class="nav-link text-muted">
+  Orange Boosted
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/fr/web/outils/ouds-web/" class="nav-link text-muted active" aria-current="page">
+  OUDS-Web
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/fr/web/outils/methodes-et-outils-de-test/" class="nav-link text-muted">
+  Méthodes et outils de test
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/fr/web/audit-wcag/" class="nav-link text-muted">
+  La Va11ydette
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/fr/web/outils/fiches-memo/" class="nav-link text-muted">
+  Fiches mémos
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/fr/persona/" class="nav-link text-muted">
+  Personas
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/fr/web/liens-utiles/" class="nav-link text-muted">
+  Liens utiles
+</a>
+          </li><li class="nav-item position-relative">
+            <a href="/fr/glossaire/" class="nav-link text-muted">
+  Glossaire
+</a>
+          </li></ul>
+    </nav>
+              
+            </div>
+          </div>
+        
+        <main id="main-content" class="col-md-9" role="main" tabindex="-1">
+          
+          <div class="mt-4">
+          <h1>OUDS (Orange Unified Design System)</h1>
+<p><strong>OUDS-Web</strong> est le <span lang="en">framework</span> de développement web qui implémente l'<span lang="en">Orange Unified Design System</span>. Ce framework constitue une évolution d'Orange Boosted, intégrant les principes du nouveau <span lang="en">Design System d'Orange</span>.</p>
+<h2 id="pourquoi-lutiliser" tabindex="-1" class="h2-focus">Pourquoi l'utiliser ? <a class="header-anchor" href="#pourquoi-lutiliser" id="heading-1816" aria-labelledby="heading-1816">#</a></h2>
 <ul>
-<li>personnes valides.</li>
-<li>seniors.</li>
-<li>personnes en situation de handicap <em>(temporaire ou permanent)</em>.</li>
+<li>Un style graphique commun à tous les services</li>
+<li>Une mise à disposition de composants pour les designers</li>
+<li>Une mise à disposition de composants pour les développeurs web</li>
+<li>Une accessibilité optimisée, du design au code</li>
+<li>Une gestion native du multi-mode (mode clair, mode sombre)</li>
+<li>Une gestion native du multi-marque</li>
+<li>Une fluidité de production entre les designers et les développeurs grâce aux <span lang="en">Design Tokens</span></li>
+<li>Un accès au code simplifié avec un code <span lang="en">open source</span> sous licence <span lang="en">MIT</span></li>
 </ul>
-<p><strong>et dans tous les contextes</strong></p>
+<h2 id="sites-officiels" tabindex="-1" class="h2-focus">Sites officiels <a class="header-anchor" href="#sites-officiels" id="heading-1817" aria-labelledby="heading-1817">#</a></h2>
 <ul>
-<li>avec tous types de matériel : navigateurs mobiles, Android, iOS, tablette.</li>
-<li>dans un contexte dégradé : mauvaise luminosité, etc...</li>
-<li>avec des logiciels spécifiques de compensation du handicap.</li>
+<li><a href="https://unified-design-system.orange.com/472794e18/p/88133e-orange-unified-design-system">Orange Unified Design System</a></li>
+<li><a href="https://web.unified-design-system.orange.com/orange/">OUDS Web</a></li>
 </ul>
-<h2 id="organisation-de-ce-site" tabindex="-1" class="h2-focus">Organisation de ce site <a class="header-anchor" href="#organisation-de-ce-site" id="heading-1538" aria-labelledby="heading-1538">#</a></h2>
-<h3 id="android" tabindex="-1">Android <a class="header-anchor" href="#android" id="heading-1539" aria-labelledby="heading-1539">#</a></h3>
-<h4 id="1-criteres-de-conception" tabindex="-1">1. Critères de conception <a class="header-anchor" href="#1-criteres-de-conception" id="heading-1540" aria-labelledby="heading-1540">#</a></h4>
-<p>Liste des différents critères à respecter pour obtenir une application mobile accessible.<br>
-Un bon moyen de prendre connaissance des éléments importants à respecter pour s’engager vers une démarche de mise en accessibilité.<br>
- </p>
-<h4 id="2-guide-pour-les-developpeurs" tabindex="-1">2. Guide pour les développeurs <a class="header-anchor" href="#2-guide-pour-les-developpeurs" id="heading-1541" aria-labelledby="heading-1541">#</a></h4>
-<p>Section à destination des développeurs.<br>
-Tout ce qu’il faut savoir pour coder accessible sur mobile.<br>
- </p>
-<h4 id="3-talkback" tabindex="-1">3. <span lang="en">Talkback</span> <a class="header-anchor" href="#3-talkback" id="heading-1542" aria-labelledby="heading-1542">#</a></h4>
-<p>Guide simple pour utiliser le lecteur d’écran natif qui détaille toutes les gestuelles nécessaires pour maîtriser <span lang="en">Talkback</span>, outil incontournable dans une démarche d'accessibilité mobile.<br>
- </p>
-<h4 id="4-tests" tabindex="-1">4. Tests <a class="header-anchor" href="#4-tests" id="heading-1543" aria-labelledby="heading-1543">#</a></h4>
-<p>Comprend de façon synthétique les tests à mettre en oeuvre pour s'assurer que les recommandations android sont bien prises en compte avant mise en production de l'application.<br>
- </p>
-<h3 id="ios" tabindex="-1">iOS <a class="header-anchor" href="#ios" id="heading-1544" aria-labelledby="heading-1544">#</a></h3>
-<h4 id="1-criteres-de-conception-1" tabindex="-1">1. Critères de conception <a class="header-anchor" href="#1-criteres-de-conception-1" id="heading-1545" aria-labelledby="heading-1545">#</a></h4>
-<p>Liste des différents critères à respecter pour obtenir une application mobile accessible.<br>
-<br>Un bon moyen de prendre connaissance des éléments importants à respecter pour s’engager vers une démarche de mise en accessibilité.<br>
-<br><br></p>
-<h4 id="2-guide-pour-les-developpeurs-1" tabindex="-1">2. Guide pour les développeurs <a class="header-anchor" href="#2-guide-pour-les-developpeurs-1" id="heading-1546" aria-labelledby="heading-1546">#</a></h4>
-<p>Section à destination des développeurs.<br>
-<br>Tout ce qu’il faut savoir pour coder accessible sur mobile.<br>
-<br><br></p>
-<h4 id="3-voiceover" tabindex="-1">3. <span lang="en">VoiceOver</span> <a class="header-anchor" href="#3-voiceover" id="heading-1547" aria-labelledby="heading-1547">#</a></h4>
-<p>Guide simple pour utiliser le lecteur d’écran natif qui détaille toutes les gestuelles nécessaires pour maîtriser <span lang="en">VoiceOver</span>, outil incontournable dans une démarche d'accessibilité mobile.<br>
-<br><br></p>
-<h4 id="4-wwdc" tabindex="-1">4. WWDC <a class="header-anchor" href="#4-wwdc" id="heading-1548" aria-labelledby="heading-1548">#</a></h4>
-<p>Section qui détaille des présentations Apple faites au <code>World Wide Developers Conference</code> ayant un impact fort dans la démarche d'accessibilité mobile.<br>
-<br><br></p>
-<h4 id="5-tests" tabindex="-1">5. Tests <a class="header-anchor" href="#5-tests" id="heading-1549" aria-labelledby="heading-1549">#</a></h4>
-<p>Comprend de façon synthétique les tests à mettre en oeuvre pour s'assurer que les recommandations iOS sont bien prises en compte avant mise en production de l'application.<br>
-<br><br></p>
-<h3 id="demonstrateur-mdan" tabindex="-1">Démonstrateur mDAN <a class="header-anchor" href="#demonstrateur-mdan" id="heading-1550" aria-labelledby="heading-1550">#</a></h3>
-<p>Présentation de l’application mDAN, le démonstrateur d’accessibilité numérique pour mobile.<br>
-<br><br></p>
-<h3 id="liens-utiles" tabindex="-1">Liens utiles <a class="header-anchor" href="#liens-utiles" id="heading-1551" aria-labelledby="heading-1551">#</a></h3>
-<p>Quelques liens utiles qui pourront compléter les explications de ce site.</p>
 
-    </main>
+          </div>
+        </main>
+        
+      </div>
+    </div>
     
 
 <footer id="footer" class="o-footer" role="contentinfo" tabindex="-1">
@@ -245,7 +317,7 @@ Tout ce qu’il faut savoir pour coder accessible sur mobile.<br>
           </a>
         </li>
         <li class="nav-item ms-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/mobile/index.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/web/outils/ouds-web.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
             Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
@@ -268,13 +340,11 @@ Tout ce qu’il faut savoir pour coder accessible sur mobile.<br>
       <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
     
     
-      <script src="/assets/vendors/highlightjs/highlight.js"></script>
-    
     <script>
       const Application = {
         lang: "fr",
         vendors: {
-          highlightJS: true,
+          highlightJS: false,
           highlightTitle: false
         }
       }
