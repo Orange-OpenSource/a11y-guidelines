@@ -1,6 +1,6 @@
 ---
-title: "OUDS"
-abstract: "OUDS est une évolution d'Orange Boosted, intégrant le nouveau Design System d'Orange pour former l'Orange Unified Design System."
+title: "OUDS-Web"
+abstract: "OUDS-Web est une évolution d'Orange Boosted, intégrant le nouveau Design System d'Orange pour former l'Orange Unified Design System."
 ---
 
 # OUDS (Orange Unified Design System)
