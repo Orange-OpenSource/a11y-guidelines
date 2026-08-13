@@ -34,10 +34,11 @@
 
         document.querySelectorAll('#tarteaucitronRoot button').forEach(function (button) {
             if (
-                button.classList.contains('catToggleBtn') ||
-                button.id === 'tarteaucitronClosePanel'
+              button.classList.contains("catToggleBtn") ||
+              button.id === "tarteaucitronClosePanel" ||
+              button.id === "tarteaucitronBack"
             ) {
-                return;
+              return;
             }
             applyButtonClasses(button, true);
         });
