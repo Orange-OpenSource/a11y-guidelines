@@ -43,67 +43,62 @@
         });
     }, { once: true });
 
-    window.addEventListener(
-      "tac.open_panel",
-      function () {
-        const servicesContainer = document.getElementById(
-          "tarteaucitronServices_api",
-        );
-
-        servicesContainer.querySelectorAll("button").forEach(function (button) {
-          if (button.classList.contains("tarteaucitronAllow")) {
-            button.classList.add("btn", "btn-primary", "btn-inverse", "ms-2");
-          } else {
-            button.classList.add("btn", "btn-info", "ms-2");
-          }
-        });
-
-        // Build a complete aria-label on .tarteaucitronStatusInfo
-        servicesContainer
-          .querySelectorAll(".tarteaucitronStatusInfo")
-          .forEach(function (statusEl) {
-            // Add role="status" so screen readers announce the content
-            statusEl.setAttribute("role", "status");
-
-            // Get the service name from the sibling span
-            const serviceName = statusEl
-              .closest(".tarteaucitronName")
-              .querySelector(".tarteaucitronH3")
-              ?.textContent.trim();
-
-            // Get the current status
-            const currentStatus = statusEl
-              .querySelector(".tacCurrentStatus")
-              ?.textContent.trim();
-
-            // Get the cookie information
-            const cookieInfo = statusEl
-              .querySelector(".tarteaucitronListCookies")
-              ?.textContent.trim();
-
-            // Build and apply the complete aria-label
-            if (serviceName && currentStatus) {
-              const label = `${serviceName} ${currentStatus}${cookieInfo ? " - " + cookieInfo : ""}`;
-              statusEl.setAttribute("aria-label", label);
-            }
-          });
-      },
-      { once: true },
-    );
     // Event: services panel opened
     window.addEventListener('tac.open_panel', function () {
         const servicesContainer = document.getElementById('tarteaucitronServices_api');
-        const mainLineOffset = document.getElementById('tarteaucitronMainLineOffset')
+        const mainLineOffset = document.getElementById('tarteaucitronMainLineOffset');
 
         // Apply dark theme to the main line offset
         mainLineOffset.setAttribute('data-bs-theme', 'dark');
 
+        // Apply Bootstrap classes to buttons
         servicesContainer.querySelectorAll('button').forEach(function (button) {
             applyButtonClasses(button);
         });
+
+        // Build a complete aria-label on .tarteaucitronStatusInfo
+        servicesContainer
+            .querySelectorAll('.tarteaucitronStatusInfo')
+            .forEach(function (statusEl) {
+                // Add role="status" so screen readers announce the content
+                statusEl.setAttribute('role', 'status');
+
+                // Helper function to build and apply the aria-label
+                function updateAriaLabel() {
+                    const serviceName = statusEl
+                        .closest('.tarteaucitronName')
+                        .querySelector('.tarteaucitronH3')
+                        ?.textContent.trim();
+
+                    const currentStatus = statusEl
+                        .querySelector('.tacCurrentStatus')
+                        ?.textContent.trim();
+
+                    const cookieInfo = statusEl
+                        .querySelector('.tarteaucitronListCookies')
+                        ?.textContent.trim();
+
+                    if (serviceName && currentStatus) {
+                        const label = `${serviceName} ${currentStatus}${cookieInfo ? ' - ' + cookieInfo : ''}`;
+                        statusEl.setAttribute('aria-label', label);
+                    }
+                }
+
+                // Build the aria-label on first open
+                updateAriaLabel();
+
+                // Watch for status changes and rebuild the aria-label accordingly
+                const observer = new MutationObserver(updateAriaLabel);
+                observer.observe(statusEl.querySelector('.tacCurrentStatus'), {
+                    childList: true,
+                    characterData: true,
+                    subtree: true,
+                });
+            });
     }, { once: true });
 
 })();
+
 
 /* Tab language IOS */
 
