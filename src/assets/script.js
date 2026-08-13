@@ -11,32 +11,98 @@
 
 /* Cookie consent banner customization */
 (function () {
-    window.addEventListener('tac.root_available', function (e) {
+
+    // Utility function to apply Bootstrap classes to buttons
+    function applyButtonClasses(button, small = false) {
+        const sizeClass = small ? 'btn-sm' : null;
+
+        if (button.classList.contains('tarteaucitronAllow')) {
+            button.classList.add('btn', 'btn-success', 'ms-2', ...(sizeClass ? [sizeClass] : []));
+        } else if (button.classList.contains('tarteaucitronDeny')) {
+            button.classList.add('btn', 'btn-danger', 'ms-2', ...(sizeClass ? [sizeClass] : []));
+        } else {
+            button.classList.add('btn', 'btn-secondary', 'ms-2', ...(sizeClass ? [sizeClass] : []));
+        }
+    }
+
+    // Event: main banner available
+    window.addEventListener('tac.root_available', function () {
+        const alertBig = document.getElementById('tarteaucitronAlertBig');
+
+        // Apply dark theme to the alert banner
+        alertBig.setAttribute('data-bs-theme', 'dark');
 
         document.querySelectorAll('#tarteaucitronRoot button').forEach(function (button) {
-            if (button.classList.contains('catToggleBtn') || button.id === 'tarteaucitronClosePanel') {
-                return
+            if (
+                button.classList.contains('catToggleBtn') ||
+                button.id === 'tarteaucitronClosePanel'
+            ) {
+                return;
             }
+            applyButtonClasses(button, true);
+        });
+    }, { once: true });
 
-            if (button.classList.contains('tarteaucitronAllow')) {
-                button.classList.add('btn', 'btn-inverse', 'btn-primary', 'ms-2')
-            } else {
-                button.classList.add('btn', 'btn-inverse', 'btn-info', 'ms-2')
+    window.addEventListener(
+      "tac.open_panel",
+      function () {
+        const servicesContainer = document.getElementById(
+          "tarteaucitronServices_api",
+        );
+
+        servicesContainer.querySelectorAll("button").forEach(function (button) {
+          if (button.classList.contains("tarteaucitronAllow")) {
+            button.classList.add("btn", "btn-primary", "btn-inverse", "ms-2");
+          } else {
+            button.classList.add("btn", "btn-info", "ms-2");
+          }
+        });
+
+        // Build a complete aria-label on .tarteaucitronStatusInfo
+        servicesContainer
+          .querySelectorAll(".tarteaucitronStatusInfo")
+          .forEach(function (statusEl) {
+            // Add role="status" so screen readers announce the content
+            statusEl.setAttribute("role", "status");
+
+            // Get the service name from the sibling span
+            const serviceName = statusEl
+              .closest(".tarteaucitronName")
+              .querySelector(".tarteaucitronH3")
+              ?.textContent.trim();
+
+            // Get the current status
+            const currentStatus = statusEl
+              .querySelector(".tacCurrentStatus")
+              ?.textContent.trim();
+
+            // Get the cookie information
+            const cookieInfo = statusEl
+              .querySelector(".tarteaucitronListCookies")
+              ?.textContent.trim();
+
+            // Build and apply the complete aria-label
+            if (serviceName && currentStatus) {
+              const label = `${serviceName} ${currentStatus}${cookieInfo ? " - " + cookieInfo : ""}`;
+              statusEl.setAttribute("aria-label", label);
             }
-        })
-    }, {once: true})
-
+          });
+      },
+      { once: true },
+    );
+    // Event: services panel opened
     window.addEventListener('tac.open_panel', function () {
-        const servicesContainer = document.getElementById('tarteaucitronServices_api')
+        const servicesContainer = document.getElementById('tarteaucitronServices_api');
+        const mainLineOffset = document.getElementById('tarteaucitronMainLineOffset')
+
+        // Apply dark theme to the main line offset
+        mainLineOffset.setAttribute('data-bs-theme', 'dark');
 
         servicesContainer.querySelectorAll('button').forEach(function (button) {
-            if (button.classList.contains('tarteaucitronAllow')) {
-                button.classList.add('btn', 'btn-primary', 'btn-inverse', 'ms-2')
-            } else {
-                button.classList.add('btn', 'btn-info', 'ms-2')
-            }
-        })
-    }, {once: true})
+            applyButtonClasses(button);
+        });
+    }, { once: true });
+
 })();
 
 /* Tab language IOS */
@@ -208,11 +274,35 @@ function manageEventTabPan() {
 
 /* Filter docsearch */
 (function () {
-  setTimeout(() => {
-    let svgLoupe = document.getElementsByClassName("DocSearch-Search-Icon")[0];
-    svgLoupe.setAttribute("aria-hidden", true);
-    svgLoupe.setAttribute("focusable", false);
-  }, "1000");
+    const observer = new MutationObserver(function (mutations, obs) {
+        const svgLoupe = document.querySelector('.DocSearch-Search-Icon')
+        const svgCtrl = document.querySelector('.DocSearch-Control-Key-Icon')
+
+        if (svgLoupe && svgCtrl) {
+            // Hide the search icon from assistive technologies
+            svgLoupe.setAttribute('aria-hidden', 'true')
+            svgLoupe.setAttribute('focusable', 'false')
+
+            // Hide the decorative Ctrl SVG from assistive technologies
+            svgCtrl.setAttribute('aria-hidden', 'true')
+            svgCtrl.setAttribute('focusable', 'false')
+
+            // Stop observing once both elements are found and updated
+            obs.disconnect()
+            clearTimeout(safetyTimeout)
+        }
+    })
+
+    // Stop observing after 10 seconds as a safety measure
+    const safetyTimeout = setTimeout(function () {
+        observer.disconnect()
+    }, 10000)
+
+    // Start observing the DOM for changes
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    })
 })();
 
 /**
