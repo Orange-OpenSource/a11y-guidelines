@@ -11,32 +11,51 @@
 
 /* Cookie consent banner customization */
 (function () {
-    window.addEventListener('tac.root_available', function (e) {
+
+    // Utility function to apply Bootstrap classes to buttons
+    function applyButtonClasses(button, small = false) {
+        const sizeClass = small ? 'btn-sm' : null;
+
+        if (button.classList.contains('tarteaucitronAllow')) {
+            button.classList.add('btn', 'btn-success', 'ms-2', ...(sizeClass ? [sizeClass] : []));
+        } else if (button.classList.contains('tarteaucitronDeny')) {
+            button.classList.add('btn', 'btn-danger', 'ms-2', ...(sizeClass ? [sizeClass] : []));
+        } else {
+            button.classList.add('btn', 'btn-secondary', 'ms-2', ...(sizeClass ? [sizeClass] : []));
+        }
+    }
+
+    // Event: main banner available
+    window.addEventListener('tac.root_available', function () {
+        const alertBig = document.getElementById('tarteaucitronAlertBig');
+
+        // Apply dark theme to the alert banner
+        alertBig.setAttribute('data-bs-theme', 'dark');
 
         document.querySelectorAll('#tarteaucitronRoot button').forEach(function (button) {
-            if (button.classList.contains('catToggleBtn') || button.id === 'tarteaucitronClosePanel') {
-                return
+            if (
+                button.classList.contains('catToggleBtn') ||
+                button.id === 'tarteaucitronClosePanel'
+            ) {
+                return;
             }
+            applyButtonClasses(button, true);
+        });
+    }, { once: true });
 
-            if (button.classList.contains('tarteaucitronAllow')) {
-                button.classList.add('btn', 'btn-inverse', 'btn-primary', 'ms-2')
-            } else {
-                button.classList.add('btn', 'btn-inverse', 'btn-info', 'ms-2')
-            }
-        })
-    }, {once: true})
-
+    // Event: services panel opened
     window.addEventListener('tac.open_panel', function () {
-        const servicesContainer = document.getElementById('tarteaucitronServices_api')
+        const servicesContainer = document.getElementById('tarteaucitronServices_api');
+        const mainLineOffset = document.getElementById('tarteaucitronMainLineOffset')
+
+        // Apply dark theme to the main line offset
+        mainLineOffset.setAttribute('data-bs-theme', 'dark');
 
         servicesContainer.querySelectorAll('button').forEach(function (button) {
-            if (button.classList.contains('tarteaucitronAllow')) {
-                button.classList.add('btn', 'btn-primary', 'btn-inverse', 'ms-2')
-            } else {
-                button.classList.add('btn', 'btn-info', 'ms-2')
-            }
-        })
-    }, {once: true})
+            applyButtonClasses(button);
+        });
+    }, { once: true });
+
 })();
 
 /* Tab language IOS */
