@@ -208,11 +208,35 @@ function manageEventTabPan() {
 
 /* Filter docsearch */
 (function () {
-  setTimeout(() => {
-    let svgLoupe = document.getElementsByClassName("DocSearch-Search-Icon")[0];
-    svgLoupe.setAttribute("aria-hidden", true);
-    svgLoupe.setAttribute("focusable", false);
-  }, "1000");
+    const observer = new MutationObserver(function (mutations, obs) {
+        const svgLoupe = document.querySelector('.DocSearch-Search-Icon')
+        const svgCtrl = document.querySelector('.DocSearch-Control-Key-Icon')
+
+        if (svgLoupe && svgCtrl) {
+            // Hide the search icon from assistive technologies
+            svgLoupe.setAttribute('aria-hidden', 'true')
+            svgLoupe.setAttribute('focusable', 'false')
+
+            // Hide the decorative Ctrl SVG from assistive technologies
+            svgCtrl.setAttribute('aria-hidden', 'true')
+            svgCtrl.setAttribute('focusable', 'false')
+
+            // Stop observing once both elements are found and updated
+            obs.disconnect()
+            clearTimeout(safetyTimeout)
+        }
+    })
+
+    // Stop observing after 10 seconds as a safety measure
+    const safetyTimeout = setTimeout(function () {
+        observer.disconnect()
+    }, 10000)
+
+    // Start observing the DOM for changes
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    })
 })();
 
 /**
