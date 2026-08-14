@@ -264,35 +264,39 @@ function manageEventTabPan() {
 
 /* Filter docsearch */
 (function () {
-    const observer = new MutationObserver(function (mutations, obs) {
-        const svgLoupe = document.querySelector('.DocSearch-Search-Icon')
-        const svgCtrl = document.querySelector('.DocSearch-Control-Key-Icon')
+  const observer = new MutationObserver(function (mutations, obs) {
+    const svgLoupe = document.querySelector(".DocSearch-Search-Icon");
+    const svgCtrl = document.querySelector(".DocSearch-Control-Key-Icon");
+    const buttonKeys = document.querySelector(".DocSearch-Button-Keys");
 
-        if (svgLoupe && svgCtrl) {
-            // Hide the search icon from assistive technologies
-            svgLoupe.setAttribute('aria-hidden', 'true')
-            svgLoupe.setAttribute('focusable', 'false')
+    if (svgLoupe && svgCtrl && buttonKeys) {
+      // Hide the search icon from assistive technologies
+      svgLoupe.setAttribute("aria-hidden", "true");
+      svgLoupe.setAttribute("focusable", "false");
 
-            // Hide the decorative Ctrl SVG from assistive technologies
-            svgCtrl.setAttribute('aria-hidden', 'true')
-            svgCtrl.setAttribute('focusable', 'false')
+      // Hide the decorative Ctrl SVG from assistive technologies
+      svgCtrl.setAttribute("aria-hidden", "true");
+      svgCtrl.setAttribute("focusable", "false");
 
-            // Stop observing once both elements are found and updated
-            obs.disconnect()
-            clearTimeout(safetyTimeout)
-        }
-    })
+      // Hide the decorative keyboard shortcut keys from assistive technologies
+      buttonKeys.setAttribute("aria-hidden", "true");
 
-    // Stop observing after 10 seconds as a safety measure
-    const safetyTimeout = setTimeout(function () {
-        observer.disconnect()
-    }, 10000)
+      // Stop observing once all elements are found and updated
+      obs.disconnect();
+      clearTimeout(safetyTimeout);
+    }
+  });
 
-    // Start observing the DOM for changes
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    })
+  // Stop observing after 10 seconds as a safety measure
+  const safetyTimeout = setTimeout(function () {
+    observer.disconnect();
+  }, 10000);
+
+  // Start observing the DOM for changes
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
 })();
 
 /**
