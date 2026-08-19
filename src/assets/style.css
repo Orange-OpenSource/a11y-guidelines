@@ -606,7 +606,7 @@ a.article-focus:hover,
 }
 
 /**
- * For links color accessibility
+ * Adding visual marker on mobile nav
  */
 .navbar-collapse .navbar-nav .nav-link.active:before {
   position: absolute;
