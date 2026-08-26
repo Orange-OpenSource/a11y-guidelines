@@ -3,8 +3,8 @@
 	"title": "Set a title for each screen",
 	"type": ["Manual test"],
 	"tests": ["Navigate through the different screens of the application."],
-	"verifier": ["A title is present on each screen."],
-	"resultat": ["Each screen must have a visible title that is relevant to the context and, if possible, unique."],
+	"verifier": ["A title is present on each screen and vocalized as such by the screen reader."],
+	"resultat": ["Each screen must have a visible title that is perceptible, relevant to the context and, if possible, unique."],
 	"exception": "",
 	"raccourcis": "",
 	"moreInfo": "https://a11y-guidelines.orange.com/en/mobile/ios/design/#title-and-header",
@@ -28,7 +28,7 @@
 	"IDorigin": "testMobID-1"
 }, { 
 	"themes": "Colors and contrasts",
-	"title": "Provide enough contrast between text and background",
+	"title": "Provide enough contrast between informative contents and their background",
 	"type": ["Color Contrast Analyser", "Accessibility Inspector"], 
 	"tests": [["Take a screenshot.", "Inspect the screenshot with Color Contrast Analyser on PC or Mac."], ["With a Mac, you can also check contrasts with Accessibility Inspector (integrated to Xcode)."]],
 	"verifier": ["Contrast is sufficient to identify texts or images of text."], 
@@ -58,7 +58,7 @@
 	"themes": "Keyboard navigation",
 	"title": "Allow the use of the application with keyboard",
 	"type": ["Bluetooth keyboard or Switch Control"],
-	"tests": ["Connect a Bluetooth keyboard to the iOS device (or use Switch Control).<br>See <a target=_blank href=https://a11y-guidelines.orange.com/en/articles/how-to-test-ios/>the article on getting started with features on iOS (new tab)</a>.","Navigate the page using the keyboard keys <kbd>tab</kbd>, <kbd>shift</kbd> + <kbd>tab</kbd>, arrow keys or <kbd>ctrl</kbd> + <kbd>tab</kbd>."], 
+	"tests": ["Connect a Bluetooth keyboard to the iOS device (or use Switch Control).<br>See <a target=_blank href=https://a11y-guidelines.orange.com/en/articles/how-to-test-ios/>the article on getting started with features on iOS (new tab)</a>.","Navigate the page using the keyboard keys <kbd>tab</kbd>, <kbd>shift</kbd> + <kbd>tab</kbd>, arrow keys or <kbd>ctrl</kbd> + <kbd>tab</kbd>.","Focus order maintains a logical reading and usage order.","Focus is not trapped in a part of the page (keyboard trap).","Focus indicator (outline) is visible on all interactive elements and has sufficient contrast."], 
 	"verifier": ["Everything that can be done with the touch screen can be done using the keyboard and vice-versa."],
 	"resultat": ["All interactive elements can be reached and used with a keyboard navigation (or use Switch Control)."],
 	"exception": "",
