@@ -30,7 +30,7 @@
     "babel-preset-minify": "^0.5.1",
     "cheerio": "^1.2.0",
     "cross-env": "^10.1.0",
-    "cssnano": "^8.0.6",
+    "cssnano": "^8.0.8",
     "del-cli": "^7.0.0",
     "markdown-it": "^15.0.0",
     "markdown-it-anchor": "^9.2.1",
