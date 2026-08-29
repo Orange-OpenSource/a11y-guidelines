@@ -16,7 +16,7 @@ Notre fiche mémo accessibilité Word contient un rappel des critères incontour
   </div>
   <div class="col-xl-9">  
     <h2 id="desc-word">Description</h2>
-    <p>Rappel des bonnes pratiques pour rédiger une présentation Word accessible.</p>
+    <p>Rappel des bonnes pratiques pour  une présentation Word accessible.</p>
     <h2 id="tele-word">Téléchargement</h2>
     <p>      
       <a href="../../../res/memos/word/Memo-Word-Orange.pdf" class="btn btn-outline-secondary">
