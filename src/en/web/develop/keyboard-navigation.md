@@ -164,6 +164,8 @@ A webpage with sticky components that may hide the element receiving keyboard fo
 - A modal dialog appears on screen but the focus is not constrained in it, allowing elements hidden by the modal to receive keyboard focus. 
 - A chatbot is displayed on the screen in the foreground of the viewport and may hide the element receiving keyboard focus. 
 
+The [worked modal focus and screen-reader failure analysis](https://frontendatlas.com/incidents/modal-screen-reader-failure) illustrates how escaped focus, a missing accessible name, and failed focus return can be diagnosed and protected with a behavioral regression test.
+
 **Référence WCAG&nbsp;:**
 - <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum">2.4.11 Focus Not Obscured (Minimum)</a>
 - <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-enhanced">2.4.12 Focus Not Obscured (Enhanced)</a>
