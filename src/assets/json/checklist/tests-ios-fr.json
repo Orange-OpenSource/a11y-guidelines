@@ -3,8 +3,8 @@
 	"title": "S'assurer que chaque écran possède un titre visible et pertinent",
 	"type": ["Test manuel"],
 	"tests": ["Naviguer dans les différents écrans de l'application."],
-	"verifier": ["Un titre est présent sur chaque écran."],
-	"resultat": ["Chaque écran doit posséder un titre visible, pertinent par rapport au contexte et si possible unique."],
+	"verifier": ["Un titre est présent sur chaque écran et restitué comme tel par le lecteur d'écran."],
+	"resultat": ["Chaque écran doit posséder un titre perceptible, pertinent par rapport au contexte et si possible unique."],
 	"exception": "",
 	"raccourcis": "",
 	"moreInfo": "http://localhost:8080/fr/mobile/ios/conception/#titre-et-en-tete",
@@ -28,7 +28,7 @@
 	"IDorigin": "testMobID-1"
 }, { 
 	"themes": "Couleurs et contrastes", 
-	"title": "Assurer un contraste suffisamment élevé entre texte et arrière-plan", 
+	"title": "Assurer un contraste suffisamment élevé entre les contenus informatifs et leur arrière-plan", 
 	"type": ["Color Contrast Analyser", "Accessibility Inspector"], 
 	"tests": [["Prendre une capture d'écran.", "Inspecter la capture à l'aide de Color Contrast Analyser sur PC ou Mac."], ["Si vous possédez un Mac, vous pouvez également vérifier les contrastes à l'aide d'Accessibility Inspector (intégré à Xcode)."]], 
 	"verifier": ["Le contraste est suffisant pour les textes et les textes sous forme d'images."], 
@@ -58,7 +58,7 @@
 	"themes": "Navigation clavier",
 	"title": "Permettre l'utilisation de l'application au clavier",
 	"type": ["Clavier bluetooth ou Contrôle de Sélection"],
-	"tests": ["Connecter un clavier bluetooth au mobile iOS (à défaut utiliser le contrôle de sélection).<br>Voir <a target=_blank href=https://a11y-guidelines.orange.com/fr/articles/how-to-test-ios/>l'article sur la prise en main des fonctionnalités sur iOS (nouvel onglet)</a>.","Parcourir l'écran au clavier à l'aide des touches <kbd>tab</kbd>, <kbd>shift</kbd> + <kbd>tab</kbd>, des flèches directionnelles ou des touches <kbd>ctrl</kbd> + <kbd>tab</kbd>."], 
+	"tests": ["Connecter un clavier bluetooth au mobile iOS (à défaut utiliser le contrôle de sélection).<br>Voir <a target=_blank href=https://a11y-guidelines.orange.com/fr/articles/how-to-test-ios/>l'article sur la prise en main des fonctionnalités sur iOS (nouvel onglet)</a>.","Parcourir l'écran au clavier à l'aide des touches <kbd>tab</kbd>, <kbd>shift</kbd> + <kbd>tab</kbd>, des flèches directionnelles ou des touches <kbd>ctrl</kbd> + <kbd>tab</kbd>.", "L'ordre de déplacement du focus conserve une logique de lecture et d'utilisation.","Le focus ne reste pas bloqué sur une partie de la page (piège clavier).","L'indicateur de focus (outline) est visible sur tous les éléments interactifs et possède un contraste suffisant."], 
 	"verifier": ["Tout ce qui peut être fait par l'écran tactile peut être fait au clavier et inversement."],
 	"resultat": ["Tous les éléments interactifs sont atteignables et utilisables en naviguant au clavier."],
 	"exception": "",

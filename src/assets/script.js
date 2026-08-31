@@ -34,28 +34,27 @@
 
         document.querySelectorAll('#tarteaucitronRoot button').forEach(function (button) {
             if (
-                button.classList.contains('catToggleBtn') ||
-                button.id === 'tarteaucitronClosePanel'
+              button.classList.contains("catToggleBtn") ||
+              button.id === "tarteaucitronClosePanel" ||
+              button.id === "tarteaucitronBack"
             ) {
-                return;
+              return;
             }
             applyButtonClasses(button, true);
         });
     }, { once: true });
 
-    window.addEventListener(
-      "tac.open_panel",
-      function () {
-        const servicesContainer = document.getElementById(
-          "tarteaucitronServices_api",
-        );
+    // Event: services panel opened
+    window.addEventListener('tac.open_panel', function () {
+        const servicesContainer = document.getElementById('tarteaucitronServices_api');
+        const mainLineOffset = document.getElementById('tarteaucitronMainLineOffset');
 
-        servicesContainer.querySelectorAll("button").forEach(function (button) {
-          if (button.classList.contains("tarteaucitronAllow")) {
-            button.classList.add("btn", "btn-primary", "btn-inverse", "ms-2");
-          } else {
-            button.classList.add("btn", "btn-info", "ms-2");
-          }
+        // Apply dark theme to the main line offset
+        mainLineOffset.setAttribute('data-bs-theme', 'dark');
+
+        // Apply Boosted classes to buttons
+        servicesContainer.querySelectorAll('button').forEach(function (button) {
+            applyButtonClasses(button);
         });
 
         // Build a complete aria-label on .tarteaucitronStatusInfo
@@ -65,48 +64,39 @@
             // Add role="status" so screen readers announce the content
             statusEl.setAttribute("role", "status");
 
-            // Get the service name from the sibling span
-            const serviceName = statusEl
-              .closest(".tarteaucitronName")
-              .querySelector(".tarteaucitronH3")
-              ?.textContent.trim();
+            // Helper function to build and apply the aria-label
+            function updateAriaLabel() {
+              const serviceName = statusEl
+                .closest(".tarteaucitronName")
+                .querySelector(".tarteaucitronH3")
+                ?.textContent.trim();
 
-            // Get the current status
-            const currentStatus = statusEl
-              .querySelector(".tacCurrentStatus")
-              ?.textContent.trim();
+              const currentStatus = statusEl
+                .querySelector(".tacCurrentStatus")
+                ?.textContent.trim();
 
-            // Get the cookie information
-            const cookieInfo = statusEl
-              .querySelector(".tarteaucitronListCookies")
-              ?.textContent.trim();
-
-            // Build and apply the complete aria-label
-            if (serviceName && currentStatus) {
-              const label = `${serviceName} ${currentStatus}${cookieInfo ? " - " + cookieInfo : ""}`;
-              statusEl.setAttribute("aria-label", label);
+              if (serviceName && currentStatus) {
+                const label = `${serviceName} ${currentStatus}`;
+                statusEl.setAttribute("aria-label", label);
+              }
             }
+
+            // Build the aria-label on first open
+            updateAriaLabel();
+
+            // Watch for status changes and rebuild the aria-label accordingly
+            const observer = new MutationObserver(updateAriaLabel);
+            observer.observe(statusEl.querySelector(".tacCurrentStatus"), {
+              childList: true,
+              characterData: true,
+              subtree: true,
+            });
           });
-      },
-      { once: true },
-    );
-    // Event: services panel opened
-    window.addEventListener('tac.open_panel', function () {
-        const servicesContainer = document.getElementById('tarteaucitronServices_api');
-        const mainLineOffset = document.getElementById('tarteaucitronMainLineOffset')
-
-        // Apply dark theme to the main line offset
-        mainLineOffset.setAttribute('data-bs-theme', 'dark');
-
-        servicesContainer.querySelectorAll('button').forEach(function (button) {
-            applyButtonClasses(button);
-        });
     }, { once: true });
 
 })();
 
 /* Tab language IOS */
-
 function automaticTabPan() {
     var AllLanguage = {
         "objectivec": {
@@ -274,35 +264,39 @@ function manageEventTabPan() {
 
 /* Filter docsearch */
 (function () {
-    const observer = new MutationObserver(function (mutations, obs) {
-        const svgLoupe = document.querySelector('.DocSearch-Search-Icon')
-        const svgCtrl = document.querySelector('.DocSearch-Control-Key-Icon')
+  const observer = new MutationObserver(function (mutations, obs) {
+    const svgLoupe = document.querySelector(".DocSearch-Search-Icon");
+    const svgCtrl = document.querySelector(".DocSearch-Control-Key-Icon");
+    const buttonKeys = document.querySelector(".DocSearch-Button-Keys");
 
-        if (svgLoupe && svgCtrl) {
-            // Hide the search icon from assistive technologies
-            svgLoupe.setAttribute('aria-hidden', 'true')
-            svgLoupe.setAttribute('focusable', 'false')
+    if (svgLoupe && svgCtrl && buttonKeys) {
+      // Hide the search icon from assistive technologies
+      svgLoupe.setAttribute("aria-hidden", "true");
+      svgLoupe.setAttribute("focusable", "false");
 
-            // Hide the decorative Ctrl SVG from assistive technologies
-            svgCtrl.setAttribute('aria-hidden', 'true')
-            svgCtrl.setAttribute('focusable', 'false')
+      // Hide the decorative Ctrl SVG from assistive technologies
+      svgCtrl.setAttribute("aria-hidden", "true");
+      svgCtrl.setAttribute("focusable", "false");
 
-            // Stop observing once both elements are found and updated
-            obs.disconnect()
-            clearTimeout(safetyTimeout)
-        }
-    })
+      // Hide the decorative keyboard shortcut keys from assistive technologies
+      buttonKeys.setAttribute("aria-hidden", "true");
 
-    // Stop observing after 10 seconds as a safety measure
-    const safetyTimeout = setTimeout(function () {
-        observer.disconnect()
-    }, 10000)
+      // Stop observing once all elements are found and updated
+      obs.disconnect();
+      clearTimeout(safetyTimeout);
+    }
+  });
 
-    // Start observing the DOM for changes
-    observer.observe(document.body, {
-        childList: true,
-        subtree: true
-    })
+  // Stop observing after 10 seconds as a safety measure
+  const safetyTimeout = setTimeout(function () {
+    observer.disconnect();
+  }, 10000);
+
+  // Start observing the DOM for changes
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+  });
 })();
 
 /**
