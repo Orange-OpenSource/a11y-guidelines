@@ -3,6 +3,7 @@ title: "Testing the accessibility of an iOS application"
 abstract: "Description of the main testing tools and methods to quickly assess the accessibility of an iOS application"
 titleBeforeTag: true
 date: "2024-03-08"
+updateDate: "2026-07-28"
 tags:
   - mobile
   - beginner
@@ -82,7 +83,12 @@ It is possible to use your phone only with an external keyboard.
 
 
 3. Now, all features available by touch gestures should also be operable with the keyboard.
-Navigating is similar to a desktop keyboard, ```TAB``` key to move forward, ```SHIFT+TAB``` to go back, ```SPACE``` to activate an element. But, combinations are also specific to the iOS mobile environment:
+Navigating is similar to a desktop keyboard, <kbd>Tab</kbd> key to move forward (by element or by container), <kbd>Shift</kbd> + <kbd>Tab</kbd> to go back, <kbd>Space</kbd> to activate an element. 
+The <kbd>Tab</kbd> key may not be sufficient; in that case, use the <kbd>up</kbd>, <kbd>down</kbd>, <kbd>left</kbd>, and <kbd>right</kbd>arrow keys to verify that all elements are accessible.
+As a last resort, the <kbd>Ctrl</kbd> + <kbd>Tab</kbd> key combination should allow you to access stubborn elements.
+If these key combinations are not enough, then the issue stems from the application's non-compliance.
+
+There are also some specific combinations to the iOS mobile environment:
 
    ![](https://github.com/Orange-OpenSource/a11y-guidelines/assets/105045667/83408f02-edab-4456-bd48-9c7e2e778ffc)
 
