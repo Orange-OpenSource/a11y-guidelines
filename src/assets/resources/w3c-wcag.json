@@ -1,0 +1,29 @@
+{
+    "urls": [
+      {
+        "name": "WCAG 2.2",
+        "url": "https://www.w3.org/TR/WCAG22/"
+      },
+      {
+        "name": "How to Meet WCAG (Quickref Reference)",
+        "url": "https://www.w3.org/WAI/WCAG22/quickref/?currentsidebar=%23col_overview#top"
+      },
+      {
+        "name": "Tutorials | Web Accessibility Initiative (WAI) | W3C",
+        "url": "https://www.w3.org/WAI/tutorials/"
+      },
+      {
+        "name": "HTML Accessibility API Mappings 1.0",
+        "url": "https://www.w3.org/TR/html-aam-1.0/"
+      },
+      {
+        "name": "Patterns | APG | WAI | W3C",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/"
+      },
+      {
+        "name": "Accessible name computation",
+        "url": "https://www.w3.org/TR/html-aam-1.0/#accessible-name-and-description-computation"
+      }
+    ]
+  }
+  

@@ -1,0 +1,37 @@
+{
+    "urls": [
+      {
+        "name": "WAI-ARIA Overview | Web Accessibility Initiative (WAI) | W3C",
+        "url": "https://www.w3.org/WAI/standards-guidelines/aria/"
+      },
+      {
+        "name": "Using ARIA",
+        "url": "https://www.w3.org/TR/using-aria/#firstrule"
+      },
+      {
+        "name": "Patterns | APG | WAI | W3C",
+        "url": "https://www.w3.org/WAI/ARIA/apg/patterns/"
+      },
+      {
+        "name": "Accessible name computation",
+        "url": "https://www.w3.org/TR/html-aam-1.0/#accessible-name-and-description-computation"
+      },
+      {
+        "name": "ARIA Widgets",
+        "url": "https://dequeuniversity.com/library/aria/"
+      },
+      {
+        "name": "Les bases de WAI-ARIA - Apprendre le développement web | MDN",
+        "url": "https://dequeuniversity.com/library/aria/"
+      },
+      {
+        "name": "Accessible name required for ARIA",
+        "url": "https://html5accessibility.com/stuff/2024/02/14/when-it-says-name-from-author-it-means-from-you-not-boll-or-bukowski/"
+      },
+      {
+        "name": "Best intention barriers (ARIA edition) · marcus.io",
+        "url": "https://marcus.io/blog/best-intention-barriers-aria"
+      }
+    ]
+  }
+  
