@@ -32,8 +32,10 @@ module.exports = async function (eleventyConfig) {
      * Copy Able Player assets (accessible media player)
      * Used for video and audio content with enhanced accessibility features
      */
-    eleventyConfig.addPassthroughCopy({'node_modules/ableplayer/build/ableplayer.min.css': 'assets/vendors/ableplayer/ableplayer.min.css'})
-    eleventyConfig.addPassthroughCopy({'node_modules/ableplayer/build/ableplayer.min.js': 'assets/vendors/ableplayer/ableplayer.min.js'})
+    eleventyConfig.addPassthroughCopy({
+      "node_modules/ableplayer/build/ableplayer.min.css": "assets/able-player/ableplayer.min.css",
+      "node_modules/ableplayer/build/ableplayer.min.js": "assets/able-player/ableplayer.min.js"
+    });
 
     // Copy/paste all images and examples contents (they are not processed by 11ty. See the .eleventyignore file)
     eleventyConfig.addPassthroughCopy(`src/**/*.{${IMAGES_EXTENSIONS.join(',')}}`)
