@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#status-message-and-accessibility" class="dropdown-item text-wrap">Status message and accessibility</a><a href="#some-examples-of-status-messages" class="dropdown-item text-wrap">Some examples of status messages</a><a href="#status-messages-that-are-not" class="dropdown-item text-wrap">Status messages that are not!</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#status-message-and-accessibility" class="dropdown-item text-wrap">Status message and accessibility</a><a href="#some-examples-of-status-messages" class="dropdown-item text-wrap">Some examples of status messages</a><a href="#status-messages-that-are-not" class="dropdown-item text-wrap">Status messages that are not</a></div>
     </nav>
         
       </div>
@@ -188,53 +188,65 @@
 
             <p class="text-muted mb-0">
               <span class="visually-hidden">Publication date</span>
-              <time datetime="2019-02-21T00:00:00.000Z">
-                February 21, 2019
+              <time datetime="2026-09-21T00:00:00.000Z">
+                September 21, 2026
               </time>
             </p>
 
             
+              <p class="text-muted mb-0">
+                Update of the article from
+                <time datetime="2019-02-21T00:00:00.000Z">
+                  February 21, 2019
+                </time>
+              </p>
+            
           
           <div class="mt-4">
           <h2 id="status-message-and-accessibility" tabindex="-1" class="h2-focus">Status message and accessibility <a class="header-anchor" href="#status-message-and-accessibility" id="heading-291" aria-labelledby="heading-291">#</a></h2>
-<p>The WCAG 2.1 criterion <a href="https://www.w3.org/TR/WCAG22/#status-messages">4.1.3 Status Messages</a> requires that important informations for the user, which do not induce a change of context (no opening of a new window, no focus on the content, no modification of the content or the viewport), are seen via properties and roles (<abbr>ARIA</abbr>) by anyone using <abbr>AT</abbr> without taking focus on the message.</p>
+<p>The WCAG criterion <a href="https://www.w3.org/TR/WCAG22/#status-messages">4.1.3 Status Messages</a> requires that important informations for the user, which do not induce a significant change of context (no opening of a new window, no focus on the content, no modification of the content or the viewport), are seen via <abbr>ARIA</abbr> (Accessible Rich Internet Applications) properties and roles by anyone using <abbr>AT</abbr> (Assistive Technology) without taking focus on the message.</p>
 <h2 id="some-examples-of-status-messages" tabindex="-1" class="h2-focus">Some examples of status messages <a class="header-anchor" href="#some-examples-of-status-messages" id="heading-292" aria-labelledby="heading-292">#</a></h2>
 <p>When a user presses a search button, the content of the page is updated asynchronously to add the search results displayed in a region below the search button. The message &quot;XX results found&quot; is at the top of this new content. A screen reader will have to announce &quot;XX results have been found&quot;. In this case, the information provided to the user is important and must be given immediately, so we will use the role <code>&quot;alert&quot;</code>.</p>
 <pre><code class="language-html">&lt;h2 role=&quot;alert&quot;&gt;
     5 results were found
 &lt;/h2&gt;
 </code></pre>
-<p>When a user has chosen an item, presses an &quot;Add to cart&quot; button, a textual mention &quot;1 item added, 4 items in the cart&quot; appears temporarily near the shopping cart icon. A screen reader will have to announce &quot;an item added to the cart, the cart currently contains 4 items&quot;. Here, the information to push to the user is less crucial than before so we will use the role <code>&quot;status&quot;</code>.</p>
+<p>When a user has chosen an item, presses an &quot;Add to cart&quot; button, a textual mention &quot;1 item added, 4 items in the cart&quot; appears temporarily near the shopping cart icon. A screen reader will have to announce &quot;an item added to the cart, the cart currently contains 4 items&quot;.<br>
+Here, the information to push to the user is less crucial than before so we will use the role <code>&quot;status&quot;</code>.</p>
 <pre><code class="language-html">&lt;p role=&quot;status&quot;&gt;
     an item added to the cart, the cart currently contains 4 items
 &lt;/p&gt;
 </code></pre>
-<p>Once a user has activated a process for applying complex search filters, an icon symbolizing &quot;pending&quot;: an hourglass, a clock… appears on the screen. The screen reader announces &quot;Application busy, load in progress&quot;.</p>
+<p>During the application of a complex search filter, an icon symbolizing &quot;pending&quot; (an hourglass, a clock, etc.) appears on the screen. The screen reader announces &quot;Application busy, loading.&quot; Again, this information is important for the user; the <code>&quot;alert&quot;</code> role will be used.</p>
 <pre><code class="language-html">&lt;div role=&quot;alert&quot;&gt;
     Application busy, load in progress
 &lt;/div&gt;
 </code></pre>
-<p>An application displays a progress bar to indicate the status of an update of a content item. The screen reader provides intermittent progress announcements: &quot;10% updated&quot; then &quot;20% updated&quot;…</p>
+<p>An application displays a progress bar to indicate the status of an update of a content item. Thanks to the <code>“progressbar”</code> role and appropriate ARIA attributes, the screen reader provides intermittent progress announcements: &quot;10% updated&quot; then &quot;20% updated&quot;…</p>
 <pre><code class="language-html">&lt;div role=&quot;progressbar&quot; aria-valuenow=&quot;20&quot; aria-valued=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
     20% updated
 &lt;/div&gt;
 </code></pre>
-<p>After a user submits a form, text is added to the existing form as follows: &quot;Your form has been submitted successfully.&quot; The screen reader announces the same message.</p>
+<p>After a form is submitted, a confirmation message is added to the existing form: &quot;Your form has been successfully submitted.&quot; The screen reader announces this important message using the <code>&quot;alert&quot;</code> role.</p>
 <pre><code class="language-html">&lt;div role=&quot;alert&quot;&gt;
     Your form has been submitted successfully
 &lt;/div&gt;
 </code></pre>
-<p>When a user fills out a form but some of the data entered is incorrect, text is added at the top of the existing form indicating &quot;XX errors in the form&quot;. The screen reader announces the message &quot;Form not sent because XX validation errors&quot; (this does not dispense with giving details of the error for each incorrectly filled field). The error information in the form is important and urgent, immediate, so we use the role <code>&quot;alertdialog&quot;</code>.</p>
+<p>When a user fills out a form but some of the data entered is incorrect, text is added at the top of the existing form indicating &quot;XX errors in the form&quot;. The screen reader announces the message &quot;Form not sent because XX validation errors&quot; (this does not dispense with giving details of the error for each incorrectly filled field).<br>
+The error information in the form is important, urgent, and need a user interaction, so we use the role <code>&quot;alertdialog&quot;</code>.</p>
 <pre><code class="language-html">&lt;div role=&quot;alertdialog&quot; aria-labelledby=&quot;errors&quot;&gt;
    &lt;p id=&quot;errors&quot;&gt;Form not sent because 2 validation errors&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
-<p>Once a user, in an online document management application, has inserted a new document in a directory, a toast notification (popup feedback message) displays the message &quot;The YYY document is saved in the XXX directory&quot; , which is also read by a screen reader.</p>
+<p>In an online document management application, the user inserts a new document into a directory, a toast notification (popup feedback message) displays the message &quot;The document YYY has been successfully saved in the directory XXX&quot;, which is also read by a screen reader without any sense of urgency thanks to the <code>&quot;status&quot;</code> role.</p>
 <pre><code class="language-html">&lt;p role=&quot;status&quot;&gt;
     The YYY document is saved in the XXX directory
 &lt;/p&gt;
 </code></pre>
-<p>In an online mailing application, the user chosen from a recipient list to add / remove a new e-mail address, this recipient's e-mail address is displayed on the screen following the one already chosen for this message. The screen reader will have to announce the addition of this new email address. It should be understood that the text, email address, added / removed to the list may not be visible on the screen for some users of <abbr>AT</abbr>. So, in order to give context to screen reader users, additional information is needed in the form of content not displayed but read by speech synthesis. As new information is added in a meaningful order and old information may disappear (another example could be a chat or chatbot), we use, here, the role <code>&quot;log&quot;</code>.</p>
+<p>In an online mailing application, the user chooses to add (or remove) an email address from a recipient list. This email address is added (or removed) to the existing list of addresses. The screen reader must announce the addition (or removal) of this new email address.<br>
+It's important to understand that the email address added (or removed) to the list is not visible to some <abbr>AT</abbr> users, particularly screen readers. To provide context for these users, additional information is needed in the form of text content that is not displayed but read aloud by the text-to-speech function.<br>
+As new information is added in a meaningful order and old information may disappear, we use, here, the role <code>&quot;log&quot;</code>.<br>
+Another example of use could be a chat or chatbot.</p>
 <pre><code class="language-html">&lt;div role=&quot;log&quot;&gt;
   &lt;ol&gt;
     &lt;li&gt;XX@YY.ZZ has been added&lt;/li&gt;
@@ -243,10 +255,10 @@
 &lt;/div&gt;
 </code></pre>
 <p>Sometimes we want to provide messages only for screen readers, without having to display them visually. In this case too, you need to use these <abbr>ARIA</abbr> roles to push the message to <abbr>AT</abbr> and in particular to the screen readers without displaying them on the screen.</p>
-<h2 id="status-messages-that-are-not" tabindex="-1" class="h2-focus">Status messages that are not! <a class="header-anchor" href="#status-messages-that-are-not" id="heading-293" aria-labelledby="heading-293">#</a></h2>
+<h2 id="status-messages-that-are-not" tabindex="-1" class="h2-focus">Status messages that are not <a class="header-anchor" href="#status-messages-that-are-not" id="heading-293" aria-labelledby="heading-293">#</a></h2>
 <p>The basic rule is that if the focus is moved or the context is returned to users of <abbr>AT</abbr>, it is not a status message:</p>
 <ul>
-<li>a modal that requires a user action, on which the focus is set</li>
+<li>a modal that requires a user action, on which the focus is automatically set</li>
 <li>during the appearance / disappearance of content following a user interaction which is also announced to <abbr>AT</abbr> (for example, the screen reader is announced &quot;open / closed&quot; for a menu, an accordion)</li>
 <li>for a panel system, whose selected tab is announced at <abbr>AT</abbr></li>
 </ul>
@@ -261,7 +273,7 @@
       <ul class="nav flex-column"><li class="nav-item position-relative">
             <a href="#status-message-and-accessibility" class="nav-link text-muted">Status message and accessibility</a></li><li class="nav-item position-relative">
             <a href="#some-examples-of-status-messages" class="nav-link text-muted">Some examples of status messages</a></li><li class="nav-item position-relative">
-            <a href="#status-messages-that-are-not" class="nav-link text-muted">Status messages that are not!</a></li>
+            <a href="#status-messages-that-are-not" class="nav-link text-muted">Status messages that are not</a></li>
       </ul>
     </nav>
             </div>

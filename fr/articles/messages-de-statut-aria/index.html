@@ -2,11 +2,11 @@
 <html lang="fr" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
-    <title>Utiliser ARIA, les messages d&#39;état, de statut ou contextuel - Recommandations accessibilité numérique Orange</title>
+    <title>Utiliser ARIA, les messages d&#39;état ou contextuel - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
-    <meta name="description" content="Les messages d&#39;état, de statut ou contextuel gérés par ARIA">
+    <meta name="description" content="Les messages d&#39;état ou contextuel gérés par ARIA">
     
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -150,7 +150,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
-          Utiliser ARIA, les messages d&#39;état, de statut ou contextuel
+          Utiliser ARIA, les messages d&#39;état ou contextuel
         </li>
       </ol>
 </nav>
@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#message-de-statut-et-accessibilite" class="dropdown-item text-wrap">Message de statut et accessibilité</a><a href="#quelques-exemple-de-messages-detat-de-statut-ou-contextuels" class="dropdown-item text-wrap">Quelques exemple de messages d&#39;état, de statut ou contextuels</a><a href="#les-messages-de-statut-qui-nen-sont-pas" class="dropdown-item text-wrap">Les messages de statut qui n&#39;en sont pas !</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#message-detat-et-accessibilite" class="dropdown-item text-wrap">Message d&#39;état et accessibilité</a><a href="#quelques-exemples-de-messages-detat-ou-contextuels" class="dropdown-item text-wrap">Quelques exemples de messages d&#39;état ou contextuels</a><a href="#les-messages-detat-qui-nen-sont-pas" class="dropdown-item text-wrap">Les messages d&#39;état qui n&#39;en sont pas</a></div>
     </nav>
         
       </div>
@@ -174,7 +174,7 @@
         
         <main id="main-content" class="col-md-9" role="main" tabindex="-1">
           
-            <h1>Utiliser ARIA, les messages d&#39;état, de statut ou contextuel</h1>
+            <h1>Utiliser ARIA, les messages d&#39;état ou contextuel</h1>
             
               <span class="visually-hidden" id="filters_label">
                 Thématiques associées :
@@ -188,53 +188,69 @@
 
             <p class="text-muted mb-0">
               <span class="visually-hidden">Date de parution</span>
-              <time datetime="2018-10-26T00:00:00.000Z">
-                26 octobre 2018
+              <time datetime="2026-09-21T00:00:00.000Z">
+                21 septembre 2026
               </time>
             </p>
 
             
+              <p class="text-muted mb-0">
+                Mise à jour de l&#39;article du
+                <time datetime="2018-10-26T00:00:00.000Z">
+                  26 octobre 2018
+                </time>
+              </p>
+            
           
           <div class="mt-4">
-          <h2 id="message-de-statut-et-accessibilite" tabindex="-1" class="h2-focus">Message de statut et accessibilité <a class="header-anchor" href="#message-de-statut-et-accessibilite" id="heading-479" aria-labelledby="heading-479">#</a></h2>
-<p>Le critère <a lang="en" href="https://www.w3.org/TR/WCAG22/#status-messages">4.1.3 Status Messages</a> des WCAG 2.1 demande que les informations importantes pour l'utilisateur, qui n'induisent pas de changement de contexte (pas d'ouverture d'une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu ou du <span lang="en">viewport</span>), soient perçues via des propriétés et rôles (<abbr>ARIA</abbr>) par toute personne utilisant une <abbr>AT</abbr> sans prise de focus sur le message.</p>
-<h2 id="quelques-exemple-de-messages-detat-de-statut-ou-contextuels" tabindex="-1" class="h2-focus">Quelques exemple de messages d'état, de statut ou contextuels <a class="header-anchor" href="#quelques-exemple-de-messages-detat-de-statut-ou-contextuels" id="heading-480" aria-labelledby="heading-480">#</a></h2>
-<p>Lorsqu'un utilisateur appuie sur un bouton de recherche, le contenu de la page est mis à jour asynchronement pour ajouter les résultats de la recherche  affichés dans une région située sous le bouton de recherche. Le message &quot;XX résultats trouvés&quot; est en haut de ce nouveau contenu. Un lecteur d'écran devra annoncer &quot;XX résultats ont été trouvés&quot;. Dans ce cas, l'information fournie à l'utilisateur est important et doit être immédiatement donnée, donc on utilisera le rôle <code>&quot;alert&quot;</code>.</p>
+          <h2 id="message-detat-et-accessibilite" tabindex="-1" class="h2-focus">Message d'état et accessibilité <a class="header-anchor" href="#message-detat-et-accessibilite" id="heading-479" aria-labelledby="heading-479">#</a></h2>
+<p>Le critère <a lang="en" href="https://www.w3.org/TR/WCAG22/#status-messages">4.1.3 Status Messages</a> des WCAG demande que les informations importantes pour l'utilisateur, qui n'induisent pas de changement de contexte (pas d'ouverture d'une nouvelle fenêtre, pas de prise de focus sur le contenu, pas de modification du contenu significatif ou du <span lang="en">viewport</span>), soient perçues via des propriétés et rôles <abbr>ARIA</abbr> (Accessible Rich Internet Applications) par toute personne utilisant une <abbr>AT</abbr> (Aide Technique) sans prise de focus sur le message.</p>
+<h2 id="quelques-exemples-de-messages-detat-ou-contextuels" tabindex="-1" class="h2-focus">Quelques exemples de messages d'état ou contextuels <a class="header-anchor" href="#quelques-exemples-de-messages-detat-ou-contextuels" id="heading-480" aria-labelledby="heading-480">#</a></h2>
+<p>Lorsqu'un utilisateur appuie sur un bouton de recherche, le contenu de la page est mis à jour de manière asynchrone pour ajouter les résultats de la recherche affichés dans une région située sous le bouton de recherche. Le message &quot;XX résultats trouvés&quot; s'affiche en haut de ce nouveau contenu. Un lecteur d'écran devra annoncer &quot;XX résultats ont été trouvés&quot;. Dans ce cas, l'information fournie à l'utilisateur est importante et doit être immédiatement donnée, donc on utilisera le rôle <code>&quot;alert&quot;</code>.</p>
 <pre><code class="language-html">&lt;h2 role=&quot;alert&quot;&gt;
     5 résultats ont été trouvés
 &lt;/h2&gt;
 </code></pre>
-<p>Lorsqu'un utilisateur après avoir choisi un article, appuie sur un bouton &quot;Ajouter au panier&quot;, une mention textuelle &quot;1 élément ajouté, 4 articles dans le panier&quot; apparaît temporairement près de l'icône du panier. Un lecteur d'écran devra annoncer &quot;un article ajouté au panier, le panier contient actuellement 4 articles&quot;. Ici, l'information à pousser à l'utilisateur est moins cruciale que précédemment donc on utilisera le rôle <code>&quot;status&quot;</code>.</p>
+<p>Après avoir choisi un article, l'utilisateur appuie sur un bouton &quot;Ajouter au panier&quot;, une mention textuelle &quot;1 élément ajouté, 4 articles dans le panier&quot; apparait temporairement près de l'icône du panier. Un lecteur d'écran devra annoncer automatiquement &quot;un article ajouté au panier, le panier contient actuellement 4 articles&quot;.<br>
+Ici, l'information à restituer à l'utilisateur est moins cruciale que précédemment donc on utilisera le rôle <code>&quot;status&quot;</code>.</p>
 <pre><code class="language-html">&lt;p role=&quot;status&quot;&gt;
     un article ajouté au panier, le panier contient actuellement 4 articles
 &lt;/p&gt;
 </code></pre>
-<p>Une fois qu'un utilisateur a activé un processus d'application de filtres de recherche complexes, une icône symbolisant « en attente » : un sablier, une horloge… apparaît à l'écran. Le lecteur d'écran annonce &quot;Application occupée, chargement en cours&quot;.</p>
+<p>Durant le processus d'application d'un filtre de recherche complexe, une icône symbolisant « en attente » (un sablier, une horloge, etc…) apparait à l'écran. Le lecteur d'écran annonce &quot;Application occupée, chargement en cours&quot;. Là encore, l'information est importante pour l'utilisateur, on utilisera le rôle <code>&quot;alert&quot;</code>.</p>
 <pre><code class="language-html">&lt;div role=&quot;alert&quot;&gt;
     Application occupée, chargement en cours
 &lt;/div&gt;
 </code></pre>
-<p>Une application affiche une barre de progression pour indiquer l'état d'une mise à jour d'un élément de contenu. Le lecteur d'écran fournit des annonces intermittentes des progrès : &quot;10% mis à jour&quot;, puis &quot;20% mis à jour&quot;…</p>
+<p>Une application affiche une barre de progression pour indiquer l'état d'une mise à jour d'un élément de contenu. Grâce au rôle <code>&quot;progressbar&quot;</code> et attributs ARIA adéquats, le lecteur d'écran fournit des annonces intermittentes des progrès : &quot;10% mis à jour&quot;, puis &quot;20% mis à jour&quot;…</p>
 <pre><code class="language-html">&lt;div role=&quot;progressbar&quot; aria-valuenow=&quot;20&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
     20% mis à jour
 &lt;/div&gt;
 </code></pre>
-<p>Après qu'un utilisateur a soumis un formulaire, du texte est ajouté au formulaire existant comme suit : &quot;Votre formulaire a été soumis avec succès&quot;. Le lecteur d'écran annonce le même message.</p>
+<p>Après soumission d'un formulaire, un texte de confirmation est ajouté au formulaire existant : &quot;Votre formulaire a été soumis avec succès&quot;. Le lecteur d'écran annonce ce message important via le rôle <code>&quot;alert&quot;</code>.</p>
 <pre><code class="language-html">&lt;div role=&quot;alert&quot;&gt;
     Votre formulaire a été soumis avec succès
 &lt;/div&gt;
 </code></pre>
-<p>Lorsqu'un utilisateur remplit un formulaire mais certaines des données entrées sont incorrectes, du texte est ajouté en haut du formulaire existant indique &quot;XX erreurs dans le formulaire&quot;. Le lecteur d'écran annonce le message &quot;Formulaire non envoyé car XX erreurs de validation&quot; (ceci ne dispense pas de donner les détails de l'erreur pour chaque champ incorrectement rempli). L'information d'erreur dans le formulaire est importante et urgente, immédiate, donc on utilise  le rôle <code>&quot;alertdialog&quot;</code>.</p>
+<p>Lorsqu'un utilisateur remplit un formulaire contenant des données incorrectes, du texte est ajouté en haut du formulaire indiquant : &quot;XX erreurs dans le formulaire&quot;. Le lecteur d'écran annonce le message &quot;Formulaire non envoyé car XX erreurs de validation&quot; et liste les erreurs liées aux champs en erreur (ceci ne dispense pas de donner les détails de l'erreur pour chaque champ incorrectement rempli).<br>
+L'information d'erreur dans le formulaire est importante, urgente, et demande une interaction utilisateur, donc on utilise  le rôle <code>&quot;alertdialog&quot;</code>.</p>
 <pre><code class="language-html">&lt;div role=&quot;alertdialog&quot; aria-labelledby=&quot;errors&quot;&gt;
-   &lt;p id=&quot;errors&quot;&gt;Formulaire non envoyé car 2 erreurs de validation&lt;/p&gt;
+   &lt;p id=&quot;errors&quot;&gt;Formulaire non envoyé car 2 erreurs de validation :&lt;/p&gt;
+   &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;xxx&quot;&gt;Email obligatoire...
+   ...::::::::
+   &lt;/ul&gt;
 &lt;/div&gt;
 </code></pre>
-<p>Une fois qu'un utilisateur, dans une application de gestion documentaire en ligne, a inséré un nouveau document dans un répertoire, une notification toast (message de feedback en popup) affiche le message &quot;Le document YYY est bien enregistré dans le répertoire XXX&quot;, qui est également lu par un lecteur d'écran.</p>
+<p>Dans une application de gestion documentaire en ligne, l'utilisateur insère un nouveau document dans un répertoire, une notification toast (message de feedback en popup) affiche le message &quot;Le document YYY est bien enregistré dans le répertoire XXX&quot;, qui est également lu par un lecteur d'écran sans caractère d'urgence grâce au rôle <code>&quot;statut&quot;</code>.</p>
 <pre><code class="language-html">&lt;p role=&quot;status&quot;&gt;
     Le document YYY est bien enregistré dans le répertoire XXX
 &lt;/p&gt;
 </code></pre>
-<p>Dans une application de mailing en ligne, l'utilisateur choisi dans une liste de destinataire de rajouter/enlever une nouvelle adresse mail, cette l'adresse e-mail du destinataire est affichée à l'écran à la suite de celle déjà choisies pour ce message. Le lecteur d'écran devra annoncer l'ajout de cette nouvelle adresse mail. Il faut comprendre que le texte, adresse mail, ajouté/retiré à la liste peut ne pas être visible à l'écran pour certains utilisateurs d'<abbr>AT</abbr>. Donc, afin de donner le contexte aux utilisateurs de lecteurs d'écran, une information supplémentaire est nécessaire sous forme de contenu non affiché mais lu par la synthèse vocale. Comme de nouvelles informations sont ajoutées dans un ordre significatif et les anciennes informations peuvent disparaître (un autre exemple pourrait être un <span lang="en">chat</span> ou <span lang="en">chatbot</span>), on utilise, ici, le rôle <code>&quot;log&quot;</code>.</p>
+<p>Dans une application de mailing en ligne, l'utilisateur choisi  d'ajouter (ou supprimer) une adresse mail dans une liste de destinataires. Cette adresse e-mail est ajoutée (ou supprimée) à la liste d'adresses déjà existantes. Le lecteur d'écran devra annoncer l'ajout (ou suppression) de cette nouvelle adresse mail.<br>
+Il faut comprendre que l'adresse mail, ajoutée (ou supprimée) à la liste n'est pas visible pour certains utilisateurs d'<abbr>AT</abbr>,  en particulier de lecteurs d'écran. Afin de donner le contexte à ces utilisateurs, une information supplémentaire est nécessaire sous forme de contenu textuel non affiché mais lu par la synthèse vocale.<br>
+Comme de nouvelles informations sont ajoutées dans un ordre significatif et/ou que les anciennes informations disparaissent, on utilise, ici, le rôle <code>&quot;log&quot;</code>.<br>
+Un autre exemple d'utilisation pourrait être un <span lang="en">chat</span> ou <span lang="en">chatbot</span>.</p>
 <pre><code class="language-html">&lt;div role=&quot;log&quot;&gt;
   &lt;ol&gt;
     &lt;li&gt;XX@YY.ZZ a été rajouté&lt;/li&gt;
@@ -242,13 +258,13 @@
   &lt;/ol&gt;
 &lt;/div&gt;
 </code></pre>
-<p>Parfois, on veut fournir des messages que pour les lecteurs d'écran, donc, sans avoir besoin de les afficher visuellement. Dans ce cas aussi, il faut utiliser ces rôles <abbr>ARIA</abbr> pour pousser le message au <abbr>AT</abbr> et en particulier aux lecteurs d'écran sans les afficher à l'écran.</p>
-<h2 id="les-messages-de-statut-qui-nen-sont-pas" tabindex="-1" class="h2-focus">Les messages de statut qui n'en sont pas ! <a class="header-anchor" href="#les-messages-de-statut-qui-nen-sont-pas" id="heading-481" aria-labelledby="heading-481">#</a></h2>
-<p>La règle de base est que si le focus est déplacé ou que le contexte est restitué aux utilisateur d'<abbr>AT</abbr>, ce n'est pas un message de statut :</p>
+<p>Parfois, il peut être utile de fournir des messages uniquement pour les lecteurs d'écran, sans avoir besoin de les afficher visuellement. Dans ce cas, il faut également utiliser les rôles <abbr>ARIA</abbr> pour restituer les messages aux <abbr>AT</abbr> et en particulier aux lecteurs d'écran.</p>
+<h2 id="les-messages-detat-qui-nen-sont-pas" tabindex="-1" class="h2-focus">Les messages d'état qui n'en sont pas <a class="header-anchor" href="#les-messages-detat-qui-nen-sont-pas" id="heading-481" aria-labelledby="heading-481">#</a></h2>
+<p>La règle de base est que si le focus est déplacé ou que le contexte est restitué aux utilisateur d'<abbr>AT</abbr>, ce n'est pas un message d'état :</p>
 <ul>
-<li>une modale qui demande une action utilisateur, sur laquelle le focus est donc mis</li>
-<li>lors de l'apparition/disparition de contenu suite une interaction utilisateur qui est annoncé aussi aux <abbr>AT</abbr> (par exemple, on annonce au lecteur d'écran &quot;ouvert/fermé&quot; pour un menu, un accordéon)</li>
-<li>pour une système de panneaux, dont l'onglet sélectionné est annoncé aux <abbr>AT</abbr></li>
+<li>une modale qui demande une action utilisateur, sur laquelle le focus est positionné automatiquement.</li>
+<li>l'apparition/disparition de contenu suite à une interaction utilisateur qui est annoncé aussi aux <abbr>AT</abbr> (par exemple, on annonce au lecteur d'écran &quot;ouvert/fermé&quot; pour un menu, un accordéon)</li>
+<li>pour une système de panneaux, dont l'ouverture de l'onglet sélectionné est annoncé aux <abbr>AT</abbr></li>
 </ul>
 
           </div>
@@ -259,9 +275,9 @@
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Sur cette page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#message-de-statut-et-accessibilite" class="nav-link text-muted">Message de statut et accessibilité</a></li><li class="nav-item position-relative">
-            <a href="#quelques-exemple-de-messages-detat-de-statut-ou-contextuels" class="nav-link text-muted">Quelques exemple de messages d&#39;état, de statut ou contextuels</a></li><li class="nav-item position-relative">
-            <a href="#les-messages-de-statut-qui-nen-sont-pas" class="nav-link text-muted">Les messages de statut qui n&#39;en sont pas !</a></li>
+            <a href="#message-detat-et-accessibilite" class="nav-link text-muted">Message d&#39;état et accessibilité</a></li><li class="nav-item position-relative">
+            <a href="#quelques-exemples-de-messages-detat-ou-contextuels" class="nav-link text-muted">Quelques exemples de messages d&#39;état ou contextuels</a></li><li class="nav-item position-relative">
+            <a href="#les-messages-detat-qui-nen-sont-pas" class="nav-link text-muted">Les messages d&#39;état qui n&#39;en sont pas</a></li>
       </ul>
     </nav>
             </div>

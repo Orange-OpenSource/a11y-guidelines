@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2026-08-07T00:00:00Z</updated>
+  <updated>2026-09-21T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Utiliser ARIA, les messages d&#39;état ou contextuel</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/"/>
+    <updated>2026-09-21T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/</id>
+    <content xml:lang="fr" type="html">Les messages d&#39;état ou contextuel gérés par ARIA</content>
+  </entry>
   
   <entry>
     <title>Veille #A11y Juin-Juillet 2026</title>
@@ -649,14 +657,6 @@
     <updated>2020-01-08T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/aria-live-alert/</id>
     <content xml:lang="fr" type="html">Quand et comment utiliser les roles et attributs de type live</content>
-  </entry>
-  
-  <entry>
-    <title>Utiliser ARIA, les messages d&#39;état, de statut ou contextuel</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/"/>
-    <updated>2018-10-26T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/</id>
-    <content xml:lang="fr" type="html">Les messages d&#39;état, de statut ou contextuel gérés par ARIA</content>
   </entry>
   
   <entry>
