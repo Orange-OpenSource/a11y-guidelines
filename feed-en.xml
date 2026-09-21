@@ -12,6 +12,14 @@
   </author>
   
   <entry>
+    <title>Tables in accessibility</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/accessible-table/"/>
+    <updated>2026-09-21T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/accessible-table/</id>
+    <content xml:lang="en" type="html">All our recommendations so that the tables are accessible</content>
+  </entry>
+  
+  <entry>
     <title>Use ARIA for status messages</title>
     <link href="https://a11y-guidelines.orange.com/en/articles/aria-status-messages/"/>
     <updated>2026-09-21T00:00:00Z</updated>
@@ -529,14 +537,6 @@
     <updated>2022-06-02T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/watch-april-may-2022/</id>
     <content xml:lang="en" type="html">#a11y anthology, April-May 2022</content>
-  </entry>
-  
-  <entry>
-    <title>Tables in accessibility</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/accessible-table/"/>
-    <updated>2022-04-15T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/accessible-table/</id>
-    <content xml:lang="en" type="html">All our recommendations so that the tables are accessible</content>
   </entry>
   
   <entry>

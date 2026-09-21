@@ -12,6 +12,14 @@
   </author>
   
   <entry>
+    <title>Les tableaux dans l&#39;accessibilité</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/"/>
+    <updated>2026-09-21T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/</id>
+    <content xml:lang="fr" type="html">Toutes nos recommandations pour que les tableaux soient accessibles</content>
+  </entry>
+  
+  <entry>
     <title>Utiliser ARIA, les messages d&#39;état ou contextuel</title>
     <link href="https://a11y-guidelines.orange.com/fr/articles/messages-de-statut-aria/"/>
     <updated>2026-09-21T00:00:00Z</updated>
@@ -561,14 +569,6 @@
     <updated>2022-06-02T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/veille-avril-mai-2022/</id>
     <content xml:lang="fr" type="html">Florilège de ressources en #a11y, Avril-Mai 2022</content>
-  </entry>
-  
-  <entry>
-    <title>Les tableaux dans l&#39;accessibilité</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/"/>
-    <updated>2022-04-15T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/tableau-accessible/</id>
-    <content xml:lang="fr" type="html">Toutes nos recommandations pour que les tableaux soit accessibles</content>
   </entry>
   
   <entry>
