@@ -2,7 +2,11 @@
   "sideNavigationLinks": [
     {
       "label": "Orange Boosted",
-      "href": "https://boosted.orange.com/"
+      "href": "/en/web/toolbox/orange-boosted/"
+    },
+    {
+      "label": "OUDS",
+      "href": "/en/web/toolbox/ouds-web/"
     },
     {
       "label": "Methods and test tools",
