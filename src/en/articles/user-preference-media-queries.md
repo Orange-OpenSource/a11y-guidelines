@@ -18,7 +18,13 @@ With **CSS Media Queries Level 5**, the **World Wide Web Consortium (W3C)** exte
 
 This article covers the main user preference *media features* defined by **Media Queries Level 5**, their use cases, browser support considerations, and best practices for implementing, testing, and auditing them.
 
-*Key takeaway:* the *media features* presented in this article are defined by the **CSS Media Queries Level 5** specification. However, browser support varies across browsers and platforms. While their use is not explicitly required by **WCAG**, **RGAA**, or **EN 301 549** (although they may contribute to meeting certain criteria), they are considered a best practice for designing interfaces that adapt to user preferences.
+*Key takeaway:* the *media features* presented in this article are defined by the **CSS Media Queries Level 5** specification. However, browser support varies across browsers and platforms. Their use is not systematically required by **WCAG**, **RGAA**, or **EN 301 549** (although they may contribute to meeting certain criteria), but is considered a best practice for designing interfaces that adapt to user preferences.
+
+**Standard update**
+
+[EN 301 549 v4.1.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf), published in September 2026, introduces a new clause, **9.7 “User preferences for web pages”**, which requires web pages not to block user-agent modes of operation that respect user preferences, or explicitly override certain platform accessibility preferences, unless this is essential to the information or function of the web page.
+
+At the time of writing, this version has not yet been referenced in the **Official Journal of the European Union**. It therefore does not yet replace **EN 301 549 v3.2.1** as the harmonised standard with legal effect at European level.
 
 ## Why were these media features introduced?
 

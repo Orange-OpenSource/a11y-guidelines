@@ -18,7 +18,13 @@ Avec **CSS Media Queries Level 5**, le **World Wide Web Consortium (W3C)** éten
 
 Cet article présente les principales *media features* de préférences utilisateur définies par **Media Queries Level 5**, leurs cas d'usage, leurs limites de compatibilité, ainsi que les bonnes pratiques pour les implémenter, les tester et les auditer.
 
-*À retenir :* les *media features* présentées dans cet article sont définies par la spécification **CSS Media Queries Level 5**. En revanche, leur niveau de prise en charge varie selon les navigateurs et les plateformes. Leur utilisation n'est pas explicitement exigée par les **WCAG**, le **RGAA** ou la norme **EN 301 549** (même si elle peut contribuer à satisfaire certains critères), mais constitue une bonne pratique pour concevoir des interfaces capables de s'adapter aux préférences exprimées par les utilisateurs.
+*À retenir :* les *media features* présentées dans cet article sont définies par la spécification **CSS Media Queries Level 5**. En revanche, leur niveau de prise en charge varie selon les navigateurs et les plateformes. Leur utilisation n'est pas systématiquement exigée par les **WCAG**, le **RGAA** ou la norme **EN 301 549** (même si elle peut contribuer à satisfaire certains critères), mais constitue une bonne pratique pour concevoir des interfaces capables de s'adapter aux préférences exprimées par les utilisateurs.
+
+**Évolution de la norme**
+
+La version [EN 301 549 v4.1.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf), publiée en septembre 2026, introduit notamment la clause **9.7 « User preferences for web pages »**, qui impose aux pages Web de ne pas bloquer les modes de fonctionnement du user agent permettant de respecter les préférences utilisateur, ni d'outrepasser explicitement certaines préférences d'accessibilité de la plateforme, sauf lorsque cela est essentiel à l'information ou à la fonction de la page.
+
+Au moment de la rédaction de cet article, cette version n'est pas encore référencée au **Journal officiel de l'Union européenne**. Elle ne remplace donc pas encore **EN 301 549 v3.2.1** en tant que version harmonisée ayant une portée juridique au niveau européen.
 
 ## Pourquoi ces media features ont-elles été introduites ?
 
@@ -159,7 +165,11 @@ Cette *media feature* peut notamment être utilisée lorsque des composants pers
 
 ### Bonnes pratiques
 
-Lorsque des ajustements spécifiques sont nécessaires, la propriété `forced-color-adjust` permet de contrôler si un élément doit être adapté lorsque le mode de couleurs forcées est actif. Sa valeur `none` empêche l'agent utilisateur de remplacer les couleurs de l'élément concerné. Son utilisation devrait rester exceptionnelle et être réservée aux situations où ce comportement est dûment justifié.
+Lorsque des ajustements spécifiques sont nécessaires, la propriété `forced-color-adjust` permet de contrôler si un élément doit être adapté lorsque le mode de couleurs forcées est actif. Sa valeur `none` empêche l'agent utilisateur de remplacer les couleurs de l'élément concerné.
+
+Son utilisation devrait rester exceptionnelle. En particulier, elle ne devrait pas être utilisée simplement pour préserver l'apparence visuelle définie par la page lorsque cela empêche l'utilisateur de bénéficier des adaptations liées à ses préférences d'affichage.
+
+La version **EN 301 549 v4.1.1** introduit la clause **9.7 « User preferences for web pages »**, qui encadre notamment les mécanismes permettant d'outrepasser explicitement les préférences d'accessibilité de la plateforme. Elle prévoit que ces préférences ne soient outrepassées que lorsque cela est essentiel à l'information ou à la fonction de la page. `forced-color-adjust` est explicitement cité comme exemple de mécanisme concerné.
 
 ## `prefers-reduced-transparency`
 
