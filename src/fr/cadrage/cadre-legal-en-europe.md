@@ -13,7 +13,7 @@ Pour les acteurs privés, le cadre légal en matière d'accessibilité découle 
 
 ### Les exigences en matière d’accessibilité et les obligations pour les entreprises&nbsp;:
 
-La transposition luxembourgeoise de l’EAA dispose des exigences de la directive sans aller au-delà de cette dernière. Les exigences en matière d’accessibilité sont donc celles de la norme harmonisée EN 301 549 (dont la prochaine version sera disponible en février 2026), équivalente au standard WCAG 2.1 niveau AA. Les normes harmonisées relatives aux exigences non-numériques d’accessibilité pour les produits ou pour les services d’assistance ne sont pas encore disponibles. Leur publication est attendue d’ici mars 2026. 
+La transposition luxembourgeoise de l’EAA dispose des exigences de la directive sans aller au-delà de cette dernière. Les exigences en matière d’accessibilité sont donc celles de la norme harmonisée EN 301 549 (dont la prochaine version sera disponible fin 2026), équivalente au standard WCAG 2.1 niveau AA. Les normes harmonisées relatives aux exigences non-numériques d’accessibilité pour les produits ou pour les services d’assistance ne sont pas encore disponibles.
 
 Les obligations pour les entreprises sont les mêmes que pour la [France](https://a11y-guidelines.orange.com/fr/cadrage/cadre-legal-francais/).
 
@@ -34,7 +34,7 @@ Les obligations pour les entreprises sont les mêmes que pour la [France](https:
 
 ### Les exigences en matière d’accessibilité et les obligations pour les entreprises&nbsp;:
 
-La transposition belge de l’EAA dispose des exigences de la directive sans aller au-delà de cette dernière. Les exigences en matière d’accessibilité sont donc celles de la norme harmonisée EN 301 549 (dont la prochaine version sera disponible en février 2026), équivalente au standard WCAG 2.1 niveau AA. Les normes harmonisées relatives aux exigences non-numériques d’accessibilité pour les produits ou pour les services d’assistance ne sont pas encore disponibles. Leur publication est attendue d’ici mars 2026. 
+La transposition belge de l’EAA dispose des exigences de la directive sans aller au-delà de cette dernière. Les exigences en matière d’accessibilité sont donc celles de la norme harmonisée EN 301 549 (dont la prochaine version sera disponible fin 2026), équivalente au standard WCAG 2.1 niveau AA. Les normes harmonisées relatives aux exigences non-numériques d’accessibilité pour les produits ou pour les services d’assistance ne sont pas encore disponibles.
 
 Les obligations pour les entreprises sont les mêmes que pour la [France](https://a11y-guidelines.orange.com/fr/cadrage/cadre-legal-francais/).
 
@@ -57,7 +57,7 @@ Les obligations pour les entreprises sont les mêmes que pour la [France](https:
 
 ### Les exigences en matière d’accessibilité et les obligations pour les entreprises&nbsp;:
 
-La transposition slovaque de l’EAA dispose des exigences de la directive sans aller au-delà de cette dernière. Les exigences en matière d’accessibilité sont donc celles de la norme harmonisée EN 301 549 (dont la prochaine version sera disponible en février 2026), équivalente au standard WCAG 2.1 niveau AA. Les normes harmonisées relatives aux exigences non-numériques d’accessibilité pour les produits ou pour les services d’assistance ne sont pas encore disponibles. Leur publication est attendue d’ici mars 2026. 
+La transposition slovaque de l’EAA dispose des exigences de la directive sans aller au-delà de cette dernière. Les exigences en matière d’accessibilité sont donc celles de la norme harmonisée EN 301 549 (dont la prochaine version sera disponible fin 2026), équivalente au standard WCAG 2.1 niveau AA. Les normes harmonisées relatives aux exigences non-numériques d’accessibilité pour les produits ou pour les services d’assistance ne sont pas encore disponibles.
 
 Les obligations pour les entreprises sont relativement les mêmes qu’en [France](https://a11y-guidelines.orange.com/fr/cadrage/cadre-legal-francais/). Pour autant, en cas de non-conformité déclarée, un délai de 12 mois maximum est autorisé pour se mettre en conformité. De plus, les déclarations d’accessibilité (donc, pour les services) ont une durée de validité de 5 ans. 
 
@@ -81,7 +81,7 @@ Les obligations pour les entreprises sont relativement les mêmes qu’en [Franc
 
 ### Les exigences en matière d’accessibilité et les obligations pour les entreprises&nbsp;:
 
-La transposition polonaise de l’EAA dispose des exigences de la directive sans aller au-delà de cette dernière. Les exigences en matière d’accessibilité sont donc celles de la norme harmonisée EN 301 549 (dont la prochaine version sera disponible en février 2026), équivalente au standard WCAG 2.1 niveau AA. Les normes harmonisées relatives aux exigences non-numériques d’accessibilité pour les produits ou pour les services d’assistance ne sont pas encore disponibles. Leur publication est attendue d’ici mars 2026. 
+La transposition polonaise de l’EAA dispose des exigences de la directive sans aller au-delà de cette dernière. Les exigences en matière d’accessibilité sont donc celles de la norme harmonisée EN 301 549 (dont la prochaine version sera disponible fin 2026), équivalente au standard WCAG 2.1 niveau AA. Les normes harmonisées relatives aux exigences non-numériques d’accessibilité pour les produits ou pour les services d’assistance ne sont pas encore disponibles.
 
 Les obligations pour les entreprises sont relativement les mêmes qu’en [France](https://a11y-guidelines.orange.com/fr/cadrage/cadre-legal-francais/). Pour autant, la loi dispose également d’une section dédiée au droit du consommateur. Il incombe alors aux entreprises de fournir une réponse à une complainte sous 30 jours (ou 90 si la requête est complexe et si le délai associé est dûment justifié). Aussi, ces-dernières se doivent de fournir un identifiant clair de la personne rédigeant la lettre tout en faisant en sorte de décrire les différents mécanismes de recours auxquels le plaignant peut porter sa requête (internes ou non). 
 
@@ -102,9 +102,9 @@ Les obligations pour les entreprises sont relativement les mêmes qu’en [Franc
 
 ### Les exigences en matière d’accessibilité et les obligations pour les entreprises&nbsp;:
 
-La transposition polonaise de l’EAA dispose des exigences de la directive sans aller au-delà de cette dernière. Les exigences en matière d’accessibilité sont donc celles de la norme harmonisée EN 301 549 (dont la prochaine version sera disponible en février 2026), équivalente au standard WCAG 2.1 niveau AA. Les normes harmonisées relatives aux exigences non-numériques d’accessibilité pour les produits ou pour les services d’assistance ne sont pas encore disponibles. Leur publication est attendue d’ici mars 2026. 
+La transposition polonaise de l’EAA dispose des exigences de la directive sans aller au-delà de cette dernière. Les exigences en matière d’accessibilité sont donc celles de la norme harmonisée EN 301 549 (dont la prochaine version sera disponible fin 2026), équivalente au standard WCAG 2.1 niveau AA. Les normes harmonisées relatives aux exigences non-numériques d’accessibilité pour les produits ou pour les services d’assistance ne sont pas encore disponibles.
 
-Les obligations pour les entreprises sont relativement les mêmes qu’en [France](https://a11y-guidelines.orange.com/fr/cadrage/cadre-legal-francais/). Pour autant, la loi dispose également d’une obligation de formation de tous les acteurs concernés pour les prestataires de services 
+Les obligations pour les entreprises sont relativement les mêmes qu’en [France](https://a11y-guidelines.orange.com/fr/cadrage/cadre-legal-francais/). Pour autant, la loi dispose également d’une obligation de formation de tous les acteurs concernés pour les prestataires de services. 
 
 ### Contrôle et Sanctions&nbsp;:
 
@@ -125,7 +125,7 @@ Les régimes de sanctions prévoient des niveaux d’infractions mineur, grave e
 
 ### Les exigences en matière d’accessibilité et les obligations pour les entreprises&nbsp;:
 
-La transposition roumaine de l’EAA dispose des exigences de la directive sans aller au-delà de cette dernière. Les exigences en matière d’accessibilité sont donc celles de la norme harmonisée EN 301 549 (dont la prochaine version sera disponible en février 2026), équivalente au standard WCAG 2.1 niveau AA. Les normes harmonisées relatives aux exigences non-numériques d’accessibilité pour les produits ou pour les services d’assistance ne sont pas encore disponibles. Leur publication est attendue d’ici mars 2026.
+La transposition roumaine de l’EAA dispose des exigences de la directive sans aller au-delà de cette dernière. Les exigences en matière d’accessibilité sont donc celles de la norme harmonisée EN 301 549 (dont la prochaine version sera disponible fin 2026), équivalente au standard WCAG 2.1 niveau AA. Les normes harmonisées relatives aux exigences non-numériques d’accessibilité pour les produits ou pour les services d’assistance ne sont pas encore disponibles.
 
 Les obligations pour les entreprises sont les mêmes que pour la [France](https://a11y-guidelines.orange.com/fr/cadrage/cadre-legal-francais/).
 

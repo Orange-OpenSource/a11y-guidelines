@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    ignore:
+      # Ignore all Babel updates (manage manually)
+      - dependency-name: "@babel/cli"
+      - dependency-name: "@babel/core"
+      - dependency-name: "@babel/preset-env"

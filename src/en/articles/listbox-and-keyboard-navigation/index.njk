@@ -12,12 +12,12 @@ js:
   - script.js
 ---
 
-<h1>Listbox and keyboard navigation</h1>
+<h1 id="listbox-and-keyboard-navigation">Listbox and keyboard navigation</h1>
 
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 <p>For this article, we start from <a href="../listbox-with-checkboxes/">the example of the listbox with checkboxes</a>. The objective is to improve keyboard navigation in order to get close to the W3C / WAI guidelines.</p>
 
-<h2><abbr title="Accessible Rich Internet Applications">ARIA</abbr> patterns</h2>
+<h2 id="aria-patterns"><abbr title="Accessible Rich Internet Applications">ARIA</abbr> patterns</h2>
 <p>The W3C maintains online specifications that describe how <abbr>ARIA</abbr> components should behave: <a href="https://www.w3.org/WAI/ARIA/apg/patterns/"><abbr>WAI-ARIA</abbr> Authoring Practices 1.1</a>.</p>
 <p>The <a href="https://www.w3.org/WAI/ARIA/apg/patterns/listbox/keyboardinteraction">specifications for the listbox</a> tell us for example that:</p>
 <ul>
@@ -29,7 +29,7 @@ js:
     <li>The <kbd>Home</kbd> and <kbd>End</kbd> keys must be able to respectively select the first and the last item of the list.</li>
 </ul>
 
-<h2>Example</h2>
+<h2 id="example">Example</h2>
 <div class="row">
   <ul role="listbox" tabindex="0" class="col-md-8">
       <li tabindex="-1" role="option" aria-checked="false">
@@ -135,7 +135,7 @@ js:
   </ul>
 </div>
 
-<h2>Implementation</h2>
+<h2 id="implementation">Implementation</h2>
 <p>The functionality to automatically select the item by typing the first letters is not easy to implement. The following example uses <abbr title="XML Path Language">XPath</abbr>.</p>
 <p>The first thing to do is listen to the keyboard once the focus is on the list. Depending on the key, it performs an action (selecting an item, moving the selected item…).</p>
 
