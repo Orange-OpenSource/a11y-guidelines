@@ -3,7 +3,7 @@ title: "Tables in accessibility"
 abstract: "All our recommendations so that the tables are accessible"
 titleBeforeTag: true
 date: "2022-04-15"
-updateDate: "2026-01-30"
+updateDate: "2026-09-21"
 tags:
   - web
   - beginner
