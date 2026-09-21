@@ -86,7 +86,6 @@ The `prefers-contrast` *media feature* indicates the user's preference regarding
 ### Values defined by the specification
 
 The specification defines the following values:
-
 - `no-preference`: the user has not expressed any particular preference;
 - `more`: the user has expressed a preference for a higher level of contrast;
 - `less`: the user has expressed a preference for a lower level of contrast;
@@ -118,7 +117,6 @@ The `prefers-color-scheme` *media feature* indicates the user's preferred color 
 ### Values defined by the specification
 
 The specification defines the following values:
-
 - `light`: the user has expressed a preference for a light color scheme or has not expressed any particular preference;
 - `dark`: the user has expressed a preference for a dark color scheme.
 
@@ -148,7 +146,6 @@ The `forced-colors` *media feature* indicates whether a forced colors mode is cu
 ### Values defined by the specification
 
 The specification defines the following values:
-
 - `active`: a forced colors mode is active;
 - `none`: no forced colors mode is active.
 
@@ -177,7 +174,6 @@ The `prefers-reduced-transparency` *media feature* indicates whether the user ha
 ### Values defined by the specification
 
 The specification defines the following values:
-
 - `reduce`: the user has expressed a preference for reduced transparency;
 - `no-preference`: the user has not expressed any particular preference.
 
@@ -207,7 +203,6 @@ The `prefers-reduced-data` *media feature* indicates whether the user has expres
 ### Values defined by the specification
 
 The specification defines the following values:
-
 - `reduce`: the user has expressed a preference for reduced data usage;
 - `no-preference`: the user has not expressed any particular preference.
 

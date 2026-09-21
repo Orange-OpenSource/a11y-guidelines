@@ -370,9 +370,11 @@ Les interfaces modernes utilisent souvent des animations pour accompagner les tr
 
 La prise en charge de `prefers-color-scheme` ne garantit pas, à elle seule, qu'un thème sombre soit accessible. Des contrastes insuffisants, des couleurs mal choisies ou des états interactifs peu visibles peuvent nuire à la lisibilité et à l'utilisation de l'interface.
 
-### Désactiver `forced-colors`
+### Empêcher les adaptations liées à `forced-colors`
 
-Désactiver le mode de couleurs forcées à l'aide de `forced-color-adjust: none` prive l'utilisateur des adaptations réalisées par le navigateur. Cette propriété ne devrait être utilisée que dans des situations exceptionnelles, lorsque ses conséquences sont parfaitement comprises et maîtrisées.
+Utiliser `forced-color-adjust: none` empêche l'agent utilisateur d'appliquer les adaptations de couleurs forcées à l'élément concerné. Cette propriété ne devrait être utilisée que dans des situations exceptionnelles, lorsque ses conséquences sont parfaitement comprises et maîtrisées.
+
+La version **EN 301 549 v4.1.1** cite explicitement `forced-color-adjust` comme exemple de mécanisme permettant d'outrepasser une préférence d'accessibilité de la plateforme. La clause **9.7 « User preferences for web pages »** prévoit que de telles préférences ne soient explicitement outrepassées que lorsque cela est essentiel à l'information ou à la fonction de la page.
 
 ### Ajouter uniquement des ajustements cosmétiques
 
