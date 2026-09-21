@@ -37,6 +37,7 @@ module.exports = async function (eleventyConfig) {
 
     // Copy/paste all images and examples contents (they are not processed by 11ty. See the .eleventyignore file)
     eleventyConfig.addPassthroughCopy(`src/**/*.{${IMAGES_EXTENSIONS.join(',')}}`)
+    eleventyConfig.addPassthroughCopy(`src/**/*.ico`)
     eleventyConfig.addPassthroughCopy(`src/en/web/components-examples/**/*.{html,css,js}`)
     eleventyConfig.addPassthroughCopy(`src/fr/web/exemples-de-composants/**/*.{html,css,js}`)
     eleventyConfig.addPassthroughCopy(`src/fr/articles/**/*.{html,css,js}`)
