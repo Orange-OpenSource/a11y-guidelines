@@ -22,7 +22,7 @@
             </div>
           </div>
         {% endif %}
-        <main id="main-content" class="col-md-{{ mainContentColumn }}" role="main">
+        <main id="main-content" class="col-md-{{ mainContentColumn }}" role="main" tabindex="-1">
           {% if titleBeforeTag %}
             <h1>{{ title }}</h1>
             {% if tags %}
@@ -69,7 +69,7 @@
       </div>
     </div>
   {%- else -%}
-    <main id="main-content" class="container-lg pt-4" role="main">
+    <main id="main-content" class="container-lg pt-4" role="main" tabindex="-1">
       {{ content | safe }}
     </main>
   {%- endif -%}
