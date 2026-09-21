@@ -3,7 +3,7 @@ title: "Utiliser ARIA, les messages d'état ou contextuel"
 abstract: "Les messages d'état ou contextuel gérés par ARIA"
 titleBeforeTag: true
 date: "2018-10-26"
-updateDate: "2026-03-12"
+updateDate: "2026-09-21"
 tags:
   - web
   - intermediate
