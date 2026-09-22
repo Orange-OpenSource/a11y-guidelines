@@ -15,6 +15,13 @@ js:
  - /assets/able-player/ableplayer.min.js
 ---
 
+<style>
+  .able-wrapper + h2 {
+    margin-top: 1rem;
+  }
+</style>
+
+
 ## Introduction
 SEED(S) est une série de podcasts qui explore comment semer les bonnes pratiques pour concevoir des expériences numériques à la fois plus durables, plus inclusives et plus performantes. 
 Créée à l'origine pour les employés du groupe Orange pour donner l’envie de faire germer une culture numérique commune, plus durable, plus inclusive et profondément centrée sur l’expérience humaine.
