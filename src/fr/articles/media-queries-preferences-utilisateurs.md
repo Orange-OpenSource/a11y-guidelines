@@ -360,6 +360,12 @@ Il permet notamment de :
 
 [Le code source, les instructions d'installation et la documentation du bookmarklet sont disponibles sur le dépôt GitHub de Prefers Scan.](https://github.com/MewenLeHo/prefers-scan)
 
+### 5. Vérifier le respect des préférences utilisateur
+
+La prise en charge d'une *media feature* ne suffit pas à garantir qu'une interface respecte effectivement la préférence de l'utilisateur. Il est également nécessaire de vérifier que la page ne bloque pas les adaptations du user agent et n'outrepasse pas explicitement les préférences d'accessibilité de la plateforme sans justification.
+
+La clause **9.7 « User preferences for web pages »** d'**EN 301 549 v4.1.1** encadre notamment ces comportements. Lors d'un audit, une attention particulière peut être portée aux mécanismes permettant de remplacer ou de neutraliser les adaptations du user agent, tels que `forced-color-adjust: none`.
+
 ## Erreurs fréquentes observées en audit
 
 ### Ignorer complètement `prefers-reduced-motion`

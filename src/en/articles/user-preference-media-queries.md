@@ -364,6 +364,12 @@ It can:
 
 [The source code, installation instructions, and documentation are available on the Prefers Scan GitHub repository.](https://github.com/MewenLeHo/prefers-scan)
 
+### 5. Verify that user preferences are respected
+
+Support for a *media feature* alone does not guarantee that an interface actually respects the user's preference. It is also necessary to verify that the page does not block adaptations made by the user agent or explicitly override platform accessibility preferences without justification.
+
+Clause **9.7 “User preferences for web pages”** of **EN 301 549 v4.1.1** addresses these behaviors. During an audit, particular attention can be paid to mechanisms that replace or prevent user-agent adaptations, such as `forced-color-adjust: none`.
+
 ## Common mistakes found during accessibility audits
 
 ### Ignoring `prefers-reduced-motion`
