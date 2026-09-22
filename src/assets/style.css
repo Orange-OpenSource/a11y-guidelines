@@ -251,6 +251,26 @@ pre code {
     font-weight: bolder;
 }
 
+/* Popup structural areas – not interactive (interactive children override with their own cursor) */
+.DocSearch-Modal,
+.DocSearch-Footer,
+.DocSearch-Dropdown,
+.DocSearch-SearchBar {
+    cursor: default;
+}
+
+/* Informational keyboard hints in footer – not interactive (Algolia logo link is excluded) */
+.DocSearch-Commands,
+.DocSearch-Commands li,
+.DocSearch-Commands .DocSearch-Commands-Key {
+    cursor: default;
+}
+
+/* Empty "no recent searches" state – not interactive */
+.DocSearch-StartScreen {
+    cursor: default;
+}
+
 .DocSearch-Button-Container {
     align-items: center;
     display: flex;
@@ -583,4 +603,18 @@ a.article-focus:hover,
 
 .accordion-title.h6 {
     font-size: 19px;
+}
+
+/**
+ * Adding visual marker on mobile nav
+ */
+.navbar-collapse .navbar-nav .nav-link.active:before {
+  position: absolute;
+  right: var(--bs-navbar-nav-link-padding-x);
+  bottom: 0;
+  left: var(--bs-navbar-nav-link-padding-x);
+  height: calc(var(--bs-navbar-border-width) * 4);
+  content: "";
+  background-color: currentcolor;
+  transition: bottom .2s ease-in-out;
 }

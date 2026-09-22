@@ -14,7 +14,7 @@ For private sector actors, the legal framework regarding accessibility stems fro
 
 ### Accessibility Requirements and Obligations for Companies:
 
-Luxembourg’s transposition of the EAA aligns with the directive’s requirements without exceeding them. Accessibility requirements are therefore those of the harmonized standard EN 301 549 (whose next version will be available in February 2026), equivalent to WCAG 2.1 level AA. Harmonized standards related to non-digital accessibility requirements for products or assistive services are not yet available. Their publication is expected by March 2026.
+Luxembourg’s transposition of the EAA aligns with the directive’s requirements without exceeding them. Accessibility requirements are therefore those of the harmonized standard EN 301 549 (whose next version will be available at the end of 2026), equivalent to WCAG 2.1 level AA. Harmonized standards related to non-digital accessibility requirements for products or assistive services are not yet available.
 
 Obligations for companies are the same as those in [France](https://a11y-guidelines.orange.com/fr/cadrage/cadre-legal-francais/).
 
@@ -35,7 +35,7 @@ Obligations for companies are the same as those in [France](https://a11y-guideli
 
 ### Accessibility Requirements and Obligations for Companies:
 
-Belgium’s transposition of the EAA aligns with the directive’s requirements without exceeding them. Accessibility requirements are those of the harmonized standard EN 301 549 (next version available in February 2026), equivalent to WCAG 2.1 level AA. Harmonized standards for non-digital accessibility requirements for products or assistive services are not yet available. Their publication is expected by March 2026.
+Belgium’s transposition of the EAA aligns with the directive’s requirements without exceeding them. Accessibility requirements are those of the harmonized standard EN 301 549 (next version available at the end of 2026), equivalent to WCAG 2.1 level AA. Harmonized standards for non-digital accessibility requirements for products or assistive services are not yet available.
 
 Obligations for companies are similar to those in [France](https://a11y-guidelines.orange.com/fr/cadrage/cadre-legal-francais/).
 
@@ -58,7 +58,7 @@ Obligations for companies are similar to those in [France](https://a11y-guidelin
 
 ### Accessibility Requirements and Obligations for Companies:
 
-Slovakia’s transposition of the EAA aligns with the directive’s requirements without exceeding them. Accessibility requirements are those of the harmonized standard EN 301 549 (next version available in February 2026), equivalent to WCAG 2.1 level AA. Standards related to non-digital accessibility requirements for products or assistive services are not yet available. Their publication is expected by March 2026.
+Slovakia’s transposition of the EAA aligns with the directive’s requirements without exceeding them. Accessibility requirements are those of the harmonized standard EN 301 549 (next version available at the end of 2026), equivalent to WCAG 2.1 level AA. Standards related to non-digital accessibility requirements for products or assistive services are not yet available.
 
 Obligations for companies are relatively similar to those in [France](https://a11y-guidelines.orange.com/fr/cadrage/cadre-legal-francais/). However, in case of non-compliance, a maximum period of 12 months is allowed to achieve conformity. Additionally, accessibility declarations (for services) are valid for five years.
 
@@ -82,7 +82,7 @@ Obligations for companies are relatively similar to those in [France](https://a1
 
 ### Accessibility Requirements and Obligations for Companies:
 
-Poland’s transposition of the EAA aligns with the directive’s requirements without exceeding them. Accessibility requirements are those of the harmonized standard EN 301 549 (next version available in February 2026), equivalent to WCAG 2.1 level AA. Standards for non-digital accessibility requirements for products or assistive services are not yet available. Their publication is expected by March 2026.
+Poland’s transposition of the EAA aligns with the directive’s requirements without exceeding them. Accessibility requirements are those of the harmonized standard EN 301 549 (next version available at the end of 2026), equivalent to WCAG 2.1 level AA. Standards for non-digital accessibility requirements for products or assistive services are not yet available.
 
 Obligations for companies are similar to those in [France](https://a11y-guidelines.orange.com/fr/cadrage/cadre-legal-francais/). The law also includes a section dedicated to consumer rights, requiring companies to respond to complaints within 30 days (or 90 if the request is complex and justified). Companies must also provide a clear identifier of the complainant and describe the available mechanisms for recourse (internal or external).
 
@@ -104,7 +104,7 @@ Obligations for companies are similar to those in [France](https://a11y-guidelin
 
 ### Accessibility Requirements and Obligations for Companies:
 
-Spain’s transposition of the EAA aligns with the directive’s requirements without exceeding them. Accessibility requirements are those of the harmonized standard EN 301 549 (next version available in February 2026), equivalent to WCAG 2.1 level AA. Standards related to non-digital accessibility requirements for products or assistive services are not yet available. Their publication is expected by March 2026.
+Spain’s transposition of the EAA aligns with the directive’s requirements without exceeding them. Accessibility requirements are those of the harmonized standard EN 301 549 (next version available at the end of 2026), equivalent to WCAG 2.1 level AA. Standards related to non-digital accessibility requirements for products or assistive services are not yet available.
 
 Obligations for companies are similar to those in [France](https://a11y-guidelines.orange.com/fr/cadrage/cadre-legal-francais/). Additionally, the law mandates training for all relevant actors involved in service provision.
 
@@ -128,7 +128,7 @@ Sanction regimes include minor, serious, and very serious violations, with corre
 
 ### Accessibility Requirements and Obligations for Companies:
 
-Romania’s transposition of the EAA aligns with the directive’s requirements without exceeding them. Accessibility requirements are those of the harmonized standard EN 301 549 (next version available in February 2026), equivalent to WCAG 2.1 level AA. Standards for non-digital accessibility requirements for products or assistive services are not yet available. Their publication is expected by March 2026.
+Romania’s transposition of the EAA aligns with the directive’s requirements without exceeding them. Accessibility requirements are those of the harmonized standard EN 301 549 (next version available at the end of 2026), equivalent to WCAG 2.1 level AA. Standards for non-digital accessibility requirements for products or assistive services are not yet available.
 
 Obligations for companies are the same as those in [France](https://a11y-guidelines.orange.com/fr/cadrage/cadre-legal-francais/).
 

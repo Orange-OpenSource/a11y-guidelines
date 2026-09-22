@@ -10,19 +10,19 @@ css:
   - style.css
 ---
 
-<h2>Introduction</h2>
+<h2 id="introduction">Introduction</h2>
 <p>
 Text size enlargement is used by many users (elderly people, people with visual impairments and people that should wear glasses and don’t…). There are two accessibility requirements, one is being able to enlarge the text up to 200% without loss of information and the second one is using the global browser's zooming at 200%, all this without overlapping, loss of content or functionalities. At this zoom level, the presentation may be altered, but the text must remain readable (no text must be truncated or superposed).
 </p>
 
-<h2>Default zoom level</h2>
+<h2 id="default-zoom-level">Default zoom level</h2>
 <p>
       All current browsers offer the possibility to zoom the page. This option enlarges the entire page (text, images, the spacing between the different areas of the page…).
       Although this option is appropriate for occasional users, the drawback is that it adds horizontal scrollbars that make reading difficult for some users.
       At Orange, we have decided to use as the only test method for the WCAG 1.4.4 Resize Text criterion, the text zoom only at 200%.
 </p>
 
-<h3>Identifying the problem</h3>
+<h3 id="identifying-the-problem">Identifying the problem</h3>
 <p>Example of a page with a zoom set to 100%</p>
 <div class="zoom normal">
       The Orange Smartphone accessories shop brings the latest audio, connected speakers and the best wireless headsets (Bluetooth), original protective cases, choice of batteries and connecting cables to customize your mobile. We selected cases for iPhone, Samsung Galaxy,.. to bring you quality products at the best price. Explore the full range of accessories for smartphones and tablets. Buy yours here.
@@ -41,7 +41,7 @@ Text size enlargement is used by many users (elderly people, people with visual 
       The Orange Smartphone accessories shop brings the latest audio, connected speakers and the best wireless headsets (Bluetooth), original protective cases, choice of batteries and connecting cables to customize your mobile. We selected cases for iPhone, Samsung Galaxy,.. to bring you quality products at the best price. Explore the full range of accessories for smartphones and tablets. Buy yours here.
 </div>
 
-<h2>Zoom text only</h2>
+<h2 id="zoom-text-only">Zoom text only</h2>
 <p>
      Fortunately, some browsers allow enlarging only the text size. This is the case for Firefox (available from the View menu &gt; Zoom &gt; Zoom text only).</p>
 <img alt="screenshot of the text zoom option in Firefox" src="../../web/images/zoom-firefox.png">
@@ -50,13 +50,13 @@ Text size enlargement is used by many users (elderly people, people with visual 
 <h2>Relative length units</h2>
 <p>   Using relative length units such as <code>%</code>, <code>em</code>, or <code>rem</code> on the text size, but also on containers size (<code>div</code> height and width) allows to minimize the problems. Indeed, a container with adaptive size can enlarge without hiding or truncating the text inside it.</p>
 
-<h3>Invalid example</h3>
+<h3 id="invalid-example">Invalid example</h3>
 
 <p> This example uses pixel as a size unit on the elements.</p>
 
 <a href="examples/1/" class="btn btn-outline-secondary">Open example 1</a>
 
-<h3>Valid example</h3>
+<h3 id="valid-example">Valid example</h3>
 <p> There are several ways to fix the problem, for example by using a relative size unit on the elements’ height.</p>
 
 <p>E.g., you can replace:<br>
@@ -70,6 +70,6 @@ Or more easily, keeping the pixels, but specifying a minimum height:<br>
 
 <p><a href="examples/2/" class="btn btn-outline-secondary">Open example 2</a></p>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
 <p>It is essential to test your pages with the zoom set to 200% and “Zoom Text Only” option enabled. This is what we recommend at Orange, and it's the only way to ensure your pages remain readable regardless of screen size. While these developments are often simply best practices in responsive web design, or even minor corrections, they can drastically improve how information is perceived by some users.</p>

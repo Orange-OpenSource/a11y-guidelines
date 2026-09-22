@@ -1,8 +1,8 @@
 {% import "../components/ui.njk" as ui with context %}
 
 <header role="banner">
-  <nav class="navbar navbar-expand-lg supra" aria-label="{{ 'skiplinks.label' | translate }} - {{ 'changelang.label' | translate }}" data-bs-theme="dark">
-   <div class="container-lg">
+  <nav class="navbar navbar-expand-md supra" aria-label="{{ 'skiplinks.label' | translate }} - {{ 'changelang.label' | translate }}" data-bs-theme="dark">
+   <div class="container-md">
       {% include "components/header/skip-links.njk" %}
       {{ ui.changelang("supra") }}
     </div>

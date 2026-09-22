@@ -9,7 +9,7 @@
 
 {%- set current = "page" if strictlyActive else "true" -%}
 
-<a href="{{ link.href }}" class="nav-link{{ " " + class if class }}{% if active %} active" aria-current="{{ current }}"{% else %}"{% endif %}>
+<a href="{{ link.href }}" class="nav-link{{ " " + class if class }}{% if active %} active d-inline-block" aria-current="{{ current }}"{% else %}"{% endif %}>
   {{ link.label }}
 </a>
 {%- endmacro -%}
@@ -266,7 +266,7 @@
     {%- for key, lang in site.locales -%}
       {% set active = locale == lang.code %}
       <li class="list-inline-item flex-grow-1">
-        <a href="/{{ lang.code }}/" class="nav-link{% if active %} active" aria-current="true"{% else %}"{% endif %} lang="{{ lang.code }}">
+        <a href="/{{ lang.code }}/" class="nav-link{% if active %} active d-inline-block" aria-current="true"{% else %}"{% endif %} lang="{{ lang.code }}">
         {{ lang.displayName | capitalize }}
         </a>
       </li>
