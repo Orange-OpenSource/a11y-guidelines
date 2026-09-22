@@ -2,11 +2,11 @@
 <html lang="en" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
-    <title>WWDC 2020: VoiceOver Efficiency with Custom Rotors - Orange digital accessibility guidelines</title>
+    <title>Hide technical iframes - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
-    <meta name="description" content="Apple video aims at introducing the different ways to create some rotor items in order to improve the VoiceOver user experience">
+    <meta name="description" content="Hide iframes from assistive technologies">
     
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
-  <body>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
     
 
 <header role="banner">
@@ -93,7 +93,7 @@
 </a>
             </li>
             <li class="nav-item">
-              <a href="/en/mobile/ios/" class="nav-link active d-inline-block" aria-current="true">
+              <a href="/en/mobile/ios/" class="nav-link">
   iOS
 </a>
             </li>
@@ -103,7 +103,7 @@
 </a>
             </li>
             <li class="nav-item">
-              <a href="/en/articles/" class="nav-link">
+              <a href="/en/articles/" class="nav-link active d-inline-block" aria-current="true">
   Articles
 </a>
             </li><li class="nav-item d-md-none">
@@ -128,39 +128,7 @@
   </nav>
 </div>
 
-  <nav id="secondary-navigation" class="o-nav-local border-bottom border-light navbar-light mb-1" role="navigation" aria-label="Secondary navigation">
-  <div class="container-lg">
-    <ul class="nav"><li class="nav-item">
-              <a href="/en/mobile/ios/design/" class="nav-link">
-  Design
-</a>
-            </li><li class="nav-item">
-              <a href="/en/mobile/ios/development/" class="nav-link">
-  Develop
-</a>
-            </li><li class="nav-item">
-              <a href="/en/mobile/ios/test/" class="nav-link">
-  Test
-</a>
-            </li><li class="nav-item">
-              <a href="/en/mobile/ios/wcag-audit/" class="nav-link">
-  Audit
-</a>
-            </li><li class="nav-item">
-              <a href="/en/mobile/ios/toolbox/" class="nav-link">
-  Toolbox
-</a>
-            </li><li class="nav-item">
-              <a href="/en/mobile/ios/checklist/" class="nav-link">
-  11 Essentials
-</a>
-            </li><li class="nav-item">
-              <a href="/en/mobile/ios/wwdc/" class="nav-link active d-inline-block" aria-current="true">
-  WWDC
-</a>
-            </li></ul>
-  </div>
-</nav>
+  
 </header>
     <div class="container-lg pt-2">
       
@@ -176,18 +144,13 @@
         </li>
       
       
-        <li class="breadcrumb-item d-none d-sm-flex">
-          <a class="breadcrumb-focus" href="/en/mobile/ios/">iOS</a>
-        </li>
-      
-      
         <li class="breadcrumb-item">
-          <a class="breadcrumb-focus" href="/en/mobile/ios/wwdc/">WWDC</a>
+          <a class="breadcrumb-focus" href="/en/articles/">Articles</a>
         </li>
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
-          WWDC 2020: VoiceOver Efficiency with Custom Rotors
+          Hide technical iframes
         </li>
       </ol>
 </nav>
@@ -196,132 +159,81 @@
       <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
         
         
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        On this page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#hide-the-iframe-to-all-users" class="dropdown-item text-wrap">Hide the iframe to all users</a></div>
+    </nav>
+        
       </div>
     </div>
     
-  <main id="main-content" class="container-lg pt-4" role="main" tabindex="-1">
-      <h1>WWDC 2020: VoiceOver Efficiency with Custom Rotors</h1>
-<p>This video available on the <strong>official Apple website</strong> (<a href="https://developer.apple.com/videos/play/wwdc2020/10116/">session 10116</a>) aims at introducing the different ways to <strong>create some rotor items</strong> in order to <strong>improve the VoiceOver user experience</strong>.</p>
-<p><img src="../../../../images/iOSdev/wwdc20-116.png" alt="" class="img-fluid"><br>
-</br>This rotor customization is a great accessibility feature that makes the navigation within complex interfaces and the selection of related elements pretty much easier.<br>
-</br></br>Various contents and their video timelapse are indicated hereunder:</p>
-<ul>
-<li><strong>CUSTOM ROTORS FOR MAPS</strong>
-<ul>
-<li><button class="btn btn-link" onclick="tabPanelFocus('ContextForMaps_tab','custom-rotors-for-maps')">Context</button></li>
-<li><button class="btn btn-link" onclick="tabPanelFocus('ImplementationForMaps_tab','custom-rotors-for-maps')">Implementation</button></li>
-<li><button class="btn btn-link" onclick="tabPanelFocus('FinalAppForMaps_tab','custom-rotors-for-maps')">Example</button><br>
-<br></li>
-</ul>
-</li>
-<li><strong>CUSTOM ROTORS FOR TEXT</strong>
-<ul>
-<li><button class="btn btn-link" onclick="tabPanelFocus('ContextForText_tab','custom-rotors-for-text')">Context</button></li>
-<li><button class="btn btn-link" onclick="tabPanelFocus('ContextForMaps_tab','custom-rotors-for-text')">Implementation</button></li>
-<li><button class="btn btn-link" onclick="tabPanelFocus('ContextForMaps_tab','custom-rotors-for-text')">Example</button></li>
-</ul>
-</li>
-</ul>
-</br>
-Thereafter, according to the presentation configuration, the selection of a title or a timelapse will give rise to the video playback on the Apple website directly at the proper moment.
-<p></br></br></p>
-<h2 id="custom-rotors-for-maps" tabindex="-1" class="h2-focus">CUSTOM ROTORS FOR MAPS <a class="header-anchor" href="#custom-rotors-for-maps" id="heading-2013" aria-labelledby="heading-2013">#</a></h2>
-<ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item" role="presentation">
-        <a class="nav-link active"
-           data-bs-toggle="tab" 
-           href="#ContextForMaps"
-           id="ContextForMaps_tab"
-           role="tab" 
-           aria-selected="true">Context</a>
-    </li>
-    <li class="nav-item" role="presentation">
-        <a class="nav-link" 
-           data-bs-toggle="tab" 
-           href="#ImplementationForMaps"
-           id="ImplementationForMaps_tab"
-           role="tab" 
-           aria-selected="false">Implementation</a>
-    </li>
-    <li class="nav-item" role="presentation">
-        <a class="nav-link" 
-           data-bs-toggle="tab" 
-           href="#FinalAppForMaps"
-           id="FinalAppForMaps_tab"
-           role="tab" 
-           aria-selected="false">Example</a>
-    </li>
-</ul>
-<div class="tab-content">
-<div class="tab-pane show active" id="ContextForMaps" role="tabpanel">
-<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10116/?time=73">🎬 (01:13)</a><br>
-</br>Using a <a href="../../../voiceover/#common-gestures" style="text-decoration: underline;">one finger flick</a> with the native VoiceOver system may vocalizes many useless graphical items before reaching the useful element that can't be obtained directly.</p>
-<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForPlans_Context.png" alt="" class="img-fluid"><br>
-</br></br><a style="text-decoration: underline;">Reminder</a>: when browsing all the displayed accessible elements in a page, VoiceOver will natively and automatically read from left to right and select the first item in the top left corner to the last one in the bottom right corner.</p>
-</div>
-<div class="tab-pane" id="ImplementationForMaps" role="tabpanel">
-<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10116/?time=243">🎬 (04:03)</a><br>
-</br>The best way to easily present elements that must be grouped in a specific category is to create <a href="../../../development/#custom-rotor" style="text-decoration: underline;">customized rotor items</a>...</p>
-<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForPlans_Implementation_1.png" alt="" class="img-fluid"><br>
-</br></br>... and implement their dedicated behaviors that will be triggered by the appropriate gesture.</p>
-<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForPlans_Implementation_2.png" alt="" class="img-fluid"></p>
-</div>
-<div class="tab-pane" id="FinalAppForMaps" role="tabpanel" >
-<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10116/?time=196">🎬 (03:16)</a><br>
-</br>Once created, the customized rotor items are available to select, vocalize and focus all the elements that belong to these proposed categories.</p>
-<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForPlans_FinalApp.png" alt="" class="img-fluid"></p>
-</div>
-</div>
-<p></br></br></p>
-<h2 id="custom-rotors-for-text" tabindex="-1" class="h2-focus">CUSTOM ROTORS FOR TEXT <a class="header-anchor" href="#custom-rotors-for-text" id="heading-2014" aria-labelledby="heading-2014">#</a></h2>
-<ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item" role="presentation">
-        <a class="nav-link active"
-           data-bs-toggle="tab" 
-           href="#ContextForText"
-           id="ContextForText_tab"
-           role="tab" 
-           aria-selected="true">Context</a>
-    </li>
-    <li class="nav-item" role="presentation">
-        <a class="nav-link" 
-           data-bs-toggle="tab" 
-           href="#ImplementationForText"
-           id="ImplementationForText_tab"
-           role="tab" 
-           aria-selected="false">Implementation</a>
-    </li>
-    <li class="nav-item" role="presentation">
-        <a class="nav-link" 
-           data-bs-toggle="tab" 
-           href="#FinalAppForText"
-           id="FinalAppForText_tab"
-           role="tab" 
-           aria-selected="false">Example</a>
-    </li>
-</ul>
-<div class="tab-content">
-<div class="tab-pane show active" id="ContextForText" role="tabpanel">
-<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10116/?time=367">🎬 (06:07)</a><br>
-</br>When reading some text that might contain any lines prefixed by icons that convey useful information, it's impossible to get directly the category of info related by the icon only using the native VoiceOver selections.</p>
-<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForText_Context.png" alt="" class="img-fluid"></p>
-</div>
-<div class="tab-pane" id="ImplementationForText" role="tabpanel">
-<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10116/?time=461">🎬 (07:41)</a><br>
-</br>Let's improve the example in the <code>Context</code> tab following the same <button class="btn btn-link" onclick="tabPanelFocus('ImplementationForMaps_tab','custom-rotors-for-maps')">method used for maps</button> but only with one single item whose aim will be to filter the alerts.</p>
-<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForText_Implementation_1.png" alt="" class="img-fluid"><br>
-</br>As usual when dealing with text, filtering consists of working with range and size for the final implementation.</p>
-<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForText_Implementation_2.png" alt="" class="img-fluid"></p>
-</div>
-<div class="tab-pane" id="FinalAppForText" role="tabpanel" >
-<p><a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2020/10116/?time=442">🎬 (07:22)</a><br>
-</br>Once the customized rotor item is created to filter the alerts, a flick up or down with one finger will give rise to the selection of the elements in the defined category.</p>
-<p><img src="../../../../images/iOSdev/wwdc20-116-CustomRotorForText_FinalApp.png" alt="" class="img-fluid"></p>
-</div>
-</div>
-<p></br></br></br></p>
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main" tabindex="-1">
+          
+            <h1>Hide technical iframes</h1>
+            
+              <span class="visually-hidden" id="filters_label">
+                Associated themes:
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><span class="tagType d-inline-block" data-tag="component">Component</span></li>
+              </ul>
+            
+            
+            
 
-    </main>
+            <p class="text-muted mb-0">
+              <span class="visually-hidden">Publication date</span>
+              <time datetime="2026-09-22T00:00:00.000Z">
+                September 22, 2026
+              </time>
+            </p>
+
+            
+              <p class="text-muted mb-0">
+                Update of the article from
+                <time datetime="2018-01-13T00:00:00.000Z">
+                  January 13, 2018
+                </time>
+              </p>
+            
+          
+          <div class="mt-4">
+          
+<h2 id="introduction">Introduction</h2>
+<p>A technical <code>iframe</code> is <code>iframe</code> with only a technical role and invisible to users. For example, an <code> iframe </code> that executes a script to collect the user actions on the page.</p>
+<p>As a general rule, the accessibility repositories ask us to indicate in the <code>title</code> attribute the content that will be present in the <code>iframe</code>, information that will be accessible to the assistive tools (a screen reader will vocalize the <code>title</code> attribute of an <code>iframe</code>).</p>
+<p>However, regarding with <strong>technical iframes</strong>, the objective is to hide them from users and assistive technologies, so the <code>title</code> attribute is not required as long as the hiding is done correctly.</p>
+
+<h2 id="hide-the-iframe-to-all-users">Hide the <code>iframe</code> to all users</h2>
+<p>The solution for hiding the <code>iframe</code>, including from assistive technology users, is to add a <code>aria-hidden='true'</code> attribute on the <code>iframe</code>. The scripts contained in the <code>iframe</code> will always be executed.</p>
+<p>In addition, you can add a <code>tabindex</code> attribute to prevent the focus from entering the <code>iframe</code>. So users who navigate using the keyboard will not get lost inside it.</p>
+<pre><code class="html">
+&lt;iframe aria-hidden="true" tabindex="-1" src="http://www.orange.com/"&gt;&lt;/iframe&gt;
+</code></pre>
+
+<p>In this way, the iframe is neither visible, nor focusable with the keyboard, nor rendered to screen readers.</p>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">On this page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#hide-the-iframe-to-all-users" class="nav-link text-muted">Hide the iframe to all users</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
     
 
 <footer id="footer" class="o-footer" role="contentinfo" tabindex="-1">
@@ -353,7 +265,7 @@ Thereafter, according to the presentation configuration, the selection of a titl
           </a>
         </li>
         <li class="nav-item ms-sm-auto">
-          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/mobile/ios/wwdc/2020/116.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/en/articles/technical-iframes/index.njk'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Report an error on GitHub (new window)">
             Report an error on GitHub<span class="visually-hidden">&nbsp;(new window)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
           </a>
         </li>
@@ -383,7 +295,7 @@ Thereafter, according to the presentation configuration, the selection of a titl
         lang: "en",
         vendors: {
           highlightJS: true,
-          highlightTitle: false
+          highlightTitle: true
         }
       }
     </script>

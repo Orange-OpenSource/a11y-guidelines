@@ -2,11 +2,11 @@
 <html lang="fr" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
-    <title>Masquer les iframe techniques - Recommandations accessibilité numérique Orange</title>
+    <title>Masquer les iframes techniques - Recommandations accessibilité numérique Orange</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
-    <meta name="description" content="Comment masquer les iframes aux outils d&#39;assistance.">
+    <meta name="description" content="Comment masquer les iframes aux outils d&#39;assistance">
     
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -150,7 +150,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
-          Masquer les iframe techniques
+          Masquer les iframes techniques
         </li>
       </ol>
 </nav>
@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         Sur cette page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#" class="dropdown-item text-wrap">Introduction</a><a href="#" class="dropdown-item text-wrap">Cacher l&#39;iframe à tous les utilisateurs</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#introduction" class="dropdown-item text-wrap">Introduction</a><a href="#cacher-l-iframe-a-tous-les-utilisateurs" class="dropdown-item text-wrap">Cacher l&#39;iframe à tous les utilisateurs</a></div>
     </nav>
         
       </div>
@@ -174,7 +174,7 @@
         
         <main id="main-content" class="col-md-9" role="main" tabindex="-1">
           
-            <h1>Masquer les iframe techniques</h1>
+            <h1>Masquer les iframes techniques</h1>
             
               <span class="visually-hidden" id="filters_label">
                 Thématiques associées :
@@ -187,25 +187,35 @@
 
             <p class="text-muted mb-0">
               <span class="visually-hidden">Date de parution</span>
-              <time datetime="2018-01-13T00:00:00.000Z">
-                13 janvier 2018
+              <time datetime="2026-09-22T00:00:00.000Z">
+                22 septembre 2026
               </time>
             </p>
 
             
+              <p class="text-muted mb-0">
+                Mise à jour de l&#39;article du
+                <time datetime="2018-01-13T00:00:00.000Z">
+                  13 janvier 2018
+                </time>
+              </p>
+            
           
           <div class="mt-4">
           
-<h2>Introduction</h2>
-<p>On entend par <code>iframe</code> technique une <code>iframe</code> qui a un rôle purement technique et qui n'est pas visible aux utilisateurs. Par exemple, une <code>iframe</code> qui execute un script pour pouvoir enregistrer les actions de l'utilisateur sur la page.</p>
-<p>Or, les référentiels d'accessibilité nous demandent d'indiquer dans l'attribut <code>title</code> le contenu qui sera présent dans l'<code>iframe</code>, information qui sera accessible aux outils d'assistance (un lecteur d'écran vocalisera l'attribut <code>title</code> d'une <code>iframe</code>).</p>
+<h2 id="introduction">Introduction</h2>
+<p>On entend par <code>iframe</code> technique une <code>iframe</code> qui a un rôle purement technique et qui n'est pas visible aux utilisateurs. Par exemple, une <code>iframe</code> qui exécute un script pour pouvoir enregistrer les actions de l'utilisateur sur la page.</p>
+<p>Globalement, les référentiels d'accessibilité nous demandent, pour les iframes, d'indiquer dans l'attribut <code>title</code> le contenu qui sera présent dans l'<code>iframe</code>, information qui sera accessible aux outils d'assistance (un lecteur d'écran vocalisera l'attribut <code>title</code> d'une <code>iframe</code>).</p>
+<p>Notez cependant que pour les iframes <strong>purement techniques</strong>, l'objectif étant de les cacher aux utilisateurs et aux outils d'assistance, l'attribut <code>title</code> n'est pas requis dès lors qu'elle est correctement masquée.</p>
 
-<h2>Cacher l'<code>iframe</code> à tous les utilisateurs</h2>
-<p>La solution pour cacher l'<code>iframe</code>, y compris aux utilisateurs d'outils d'assistance, est d'ajouter un attribut <code>aria-hidden='true'</code> sur l'<code>iframe</code>. Les scripts contenus dans l'<code>iframe</code> seront toujours executés.</p>
-<p>Par ailleurs, on peut ajouter un attribut <code>tabindex</code> pour interdire au focus de se déplacer dans l'<code>iframe</code>. Ainsi les utilisateurs qui naviguent à l'aide du clavier, n'iront pas se perdre à l'intérieur de cette dernière.</p>
+<h2 id="cacher-l-iframe-a-tous-les-utilisateurs">Cacher l'<code>iframe</code> à tous les utilisateurs</h2>
+<p>La solution pour cacher l'<code>iframe</code>, y compris aux utilisateurs d'outils d'assistance, est d'ajouter un attribut <code>aria-hidden='true'</code> sur l'<code>iframe</code>. Les scripts contenus dans l'<code>iframe</code> seront toujours exécutés.</p>
+<p>Par ailleurs, on peut ajouter un attribut <code>tabindex</code> pour interdire au focus d'entrer dans l'<code>iframe</code>. Ainsi les utilisateurs qui naviguent à l'aide du clavier n'iront pas se perdre à l'intérieur de celle-ci.</p>
 <pre><code class="html">
-&lt;iframe title="contenu technique" aria-hidden="true" tabindex="-1" src="http://www.orange.com/"&gt;&lt;/iframe&gt;
+&lt;iframe aria-hidden="true" tabindex="-1" src="http://www.orange.com/"&gt;&lt;/iframe&gt;
 </code></pre>
+
+<p>De cette manière, l'iframe n'est ni visible, ni accessible au focus clavier, ni restituée aux lecteurs d'écran.</p>
 
           </div>
         </main>
@@ -215,8 +225,8 @@
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">Sur cette page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
-            <a href="#" class="nav-link text-muted">Cacher l&#39;iframe à tous les utilisateurs</a></li>
+            <a href="#introduction" class="nav-link text-muted">Introduction</a></li><li class="nav-item position-relative">
+            <a href="#cacher-l-iframe-a-tous-les-utilisateurs" class="nav-link text-muted">Cacher l&#39;iframe à tous les utilisateurs</a></li>
       </ul>
     </nav>
             </div>
