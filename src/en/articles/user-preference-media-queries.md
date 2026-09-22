@@ -146,6 +146,7 @@ The `forced-colors` *media feature* indicates whether a forced colors mode is cu
 ### Values defined by the specification
 
 The specification defines the following values:
+
 - `active`: a forced colors mode is active;
 - `none`: no forced colors mode is active.
 
@@ -165,7 +166,11 @@ This *media feature* can be used when custom components need to adapt to forced 
 
 ### Best practices
 
-When specific adjustments are required, the `forced-color-adjust` property allows authors to control whether an element should be adapted when forced colors mode is active. Its `none` value prevents the user agent from replacing the colors of the affected element. It should be used sparingly and reserved for situations where this behavior is fully justified.
+When specific adjustments are required, the `forced-color-adjust` property allows authors to control whether an element should be adapted when forced colors mode is active. Its `none` value prevents the user agent from replacing the colors of the affected element.
+
+It should be used sparingly. In particular, it should not be used simply to preserve the visual appearance defined by the page when doing so prevents the user from benefiting from adaptations related to their display preferences.
+
+**EN 301 549 v4.1.1** introduces clause **9.7 “User preferences for web pages”**, which addresses mechanisms that explicitly override platform accessibility preferences. It requires such preferences not to be overridden unless doing so is essential to the information or function of the web page. `forced-color-adjust` is explicitly cited as an example of such a mechanism.
 
 ## `prefers-reduced-transparency`
 
@@ -305,7 +310,9 @@ The goal is not to create multiple versions of the same interface, but to adapt 
 
 ### 3. Respect user preferences
 
-Detected preferences reflect either an explicit user choice or a preference determined automatically by the user's runtime environment. When available, they should be taken into account during the design of the interface.
+Detected preferences reflect either an explicit user choice or a preference determined automatically by the user's runtime environment. They should be taken into account when designing the interface, and should not be explicitly overridden unless doing so is essential to the information or function of the page.
+
+This principle is also reflected in **EN 301 549 v4.1.1**, whose clause **9.7 “User preferences for web pages”** addresses the blocking or explicit overriding of user preferences for web pages.
 
 ### 4. Test across multiple platforms
 
