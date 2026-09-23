@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2026-09-22T00:00:00Z</updated>
+  <updated>2026-09-23T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Media queries et préférences utilisateur</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/media-queries-preferences-utilisateurs/"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/media-queries-preferences-utilisateurs/</id>
+    <content xml:lang="fr" type="html">Les media features de préférences utilisateur permettent d&#39;adapter une interface en fonction des préférences exprimées par l&#39;utilisateur. Définies par la spécification CSS Media Queries Level 5, elles permettent notamment de prendre en compte la réduction des animations, le contraste, le thème clair ou sombre, les couleurs forcées, la transparence et la réduction de la consommation de données.</content>
+  </entry>
   
   <entry>
     <title>Masquer les iframes techniques</title>

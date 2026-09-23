@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="no-js" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <title>Media queries et préférences utilisateur - Recommandations accessibilité numérique Orange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
+    
+    <meta name="description" content="Les media features de préférences utilisateur permettent d&#39;adapter une interface en fonction des préférences exprimées par l&#39;utilisateur. Définies par la spécification CSS Media Queries Level 5, elles permettent notamment de prendre en compte la réduction des animations, le contraste, le thème clair ou sombre, les couleurs forcées, la transparence et la réduction de la consommation de données.">
+    
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue55_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/assets/fonts/HelvNeue75_W1G.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="alternate" type="application/rss+xml" title="Recommandations accessibilité Orange - Français" href="/feed-fr.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Orange digital accessibility guidelines - English" href="/feed-en.xml" />
+    
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/assets/images/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/assets/images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="/assets/images/favicon.ico">
+    
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/a11y-light.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css"></head>
+  <body data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;">
+    
+
+<header role="banner">
+  <nav class="navbar navbar-expand-md supra" aria-label="Liens d&#39;évitements - Changement de langue" data-bs-theme="dark">
+   <div class="container-md">
+      <ul id="avoidanceLinks" class="navbar-nav me-auto"><li class="nav-item">
+      <a href="#main-menu" class="nav-link">Aller au menu</a>
+    </li><li class="nav-item">
+      <a href="#main-content" class="nav-link">Aller au contenu</a>
+    </li><li class="nav-item hidden-if-no-js">
+      <a href="#search-input" class="nav-link">Aller à la recherche</a>
+    </li><li class="nav-item">
+      <a href="#footer" class="nav-link">Aller au pied de page</a>
+    </li></ul>
+
+      <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/fr/" class="nav-link active" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+    </div>
+  </nav>
+
+  
+
+<div class="navbar navbar-expand-md" data-bs-theme="dark">
+  <nav id="main-menu" class="container-lg justify-content-md-start align-items-center" role="navigation" aria-label="Navigation principale" tabindex="-1">
+    <a href="/fr/" class="navbar-brand flex-grow-1 flex-md-grow-0" title="Orange, aller à l’accueil">
+      <img src="/assets/images/orange-logo.svg" alt="Orange, aller à l’accueil" width="50" height="50">
+    </a>
+
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu-list" aria-controls="main-menu-list" aria-expanded="false" aria-label="Menu de navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse me-auto" id="main-menu-list">
+      <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a href="/fr/" class="nav-link">
+  Accueil
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/cadrage/" class="nav-link">
+  Cadrage
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/web/" class="nav-link">
+  Web
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/android/" class="nav-link">
+  Android
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/mobile/ios/" class="nav-link">
+  iOS
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/contenu-et-communication/" class="nav-link">
+  Contenu et communication
+</a>
+            </li>
+            <li class="nav-item">
+              <a href="/fr/articles/" class="nav-link active d-inline-block" aria-current="true">
+  Articles
+</a>
+            </li><li class="nav-item d-md-none">
+  <span class="visually-hidden">Changement de langue</span>
+  <ul class="d-flex list-inline">
+      <li class="list-inline-item flex-grow-1">
+        <a href="/en/" class="nav-link" lang="en">
+        English
+        </a>
+      </li>
+      <li class="list-inline-item flex-grow-1">
+        <a href="/fr/" class="nav-link active d-inline-block" aria-current="true" lang="fr">
+        Français
+        </a>
+      </li></ul>
+</li>
+      </ul>
+    </div>
+
+    <div id="search-input" tabindex="-1"></div>
+
+  </nav>
+</div>
+
+  
+</header>
+    <div class="container-lg pt-2">
+      
+      
+        
+
+<nav role="navigation" aria-labelledby="breadcrumb-label">
+  <p id="breadcrumb-label" class="visually-hidden">Vous êtes ici</p>
+  <ol class="breadcrumb">
+      
+        <li class="breadcrumb-item d-none d-sm-flex">
+          <a class="breadcrumb-focus" href="/fr/">Accueil</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item">
+          <a class="breadcrumb-focus" href="/fr/articles/">Articles</a>
+        </li>
+      
+      
+        <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
+          Media queries et préférences utilisateur
+        </li>
+      </ol>
+</nav>
+
+      
+      <div class="MobileDropdownNavigationContainer d-flex flex-column flex-sm-row justify-content-between">
+        
+        
+          <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+        Sur cette page
+      </button>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#pourquoi-ces-media-features-ont-elles-ete-introduites" class="dropdown-item text-wrap">Pourquoi ces media features ont-elles été introduites ?</a><a href="#les-principales-media-features-de-preferences-utilisateur" class="dropdown-item text-wrap">Les principales media features de préférences utilisateur</a><a href="#prefers-reduced-motion" class="dropdown-item text-wrap">prefers-reduced-motion</a><a href="#valeurs-definies-par-la-specification" class="dropdown-item text-wrap">Valeurs définies par la spécification</a><a href="#exemple" class="dropdown-item text-wrap">Exemple</a><a href="#cas-dusage" class="dropdown-item text-wrap">Cas d&#39;usage</a><a href="#bonnes-pratiques" class="dropdown-item text-wrap">Bonnes pratiques</a><a href="#prefers-contrast" class="dropdown-item text-wrap">prefers-contrast</a><a href="#valeurs-definies-par-la-specification-1" class="dropdown-item text-wrap">Valeurs définies par la spécification</a><a href="#exemple-1" class="dropdown-item text-wrap">Exemple</a><a href="#cas-dusage-1" class="dropdown-item text-wrap">Cas d&#39;usage</a><a href="#bonnes-pratiques-1" class="dropdown-item text-wrap">Bonnes pratiques</a><a href="#prefers-color-scheme" class="dropdown-item text-wrap">prefers-color-scheme</a><a href="#valeurs-definies-par-la-specification-2" class="dropdown-item text-wrap">Valeurs définies par la spécification</a><a href="#exemple-2" class="dropdown-item text-wrap">Exemple</a><a href="#cas-dusage-2" class="dropdown-item text-wrap">Cas d&#39;usage</a><a href="#bonnes-pratiques-2" class="dropdown-item text-wrap">Bonnes pratiques</a><a href="#forced-colors" class="dropdown-item text-wrap">forced-colors</a><a href="#valeurs-definies-par-la-specification-3" class="dropdown-item text-wrap">Valeurs définies par la spécification</a><a href="#exemple-3" class="dropdown-item text-wrap">Exemple</a><a href="#cas-dusage-3" class="dropdown-item text-wrap">Cas d&#39;usage</a><a href="#bonnes-pratiques-3" class="dropdown-item text-wrap">Bonnes pratiques</a><a href="#prefers-reduced-transparency" class="dropdown-item text-wrap">prefers-reduced-transparency</a><a href="#valeurs-definies-par-la-specification-4" class="dropdown-item text-wrap">Valeurs définies par la spécification</a><a href="#exemple-4" class="dropdown-item text-wrap">Exemple</a><a href="#cas-dusage-4" class="dropdown-item text-wrap">Cas d&#39;usage</a><a href="#bonnes-pratiques-4" class="dropdown-item text-wrap">Bonnes pratiques</a><a href="#prefers-reduced-data" class="dropdown-item text-wrap">prefers-reduced-data</a><a href="#valeurs-definies-par-la-specification-5" class="dropdown-item text-wrap">Valeurs définies par la spécification</a><a href="#exemple-5" class="dropdown-item text-wrap">Exemple</a><a href="#cas-dusage-5" class="dropdown-item text-wrap">Cas d&#39;usage</a><a href="#bonnes-pratiques-5" class="dropdown-item text-wrap">Bonnes pratiques</a><a href="#compatibilite-des-implementations" class="dropdown-item text-wrap">Compatibilité des implémentations</a><a href="#detection-en-javascript" class="dropdown-item text-wrap">Détection en JavaScript</a><a href="#user-preferences-api" class="dropdown-item text-wrap">User Preferences API</a><a href="#combiner-plusieurs-preferences-utilisateur" class="dropdown-item text-wrap">Combiner plusieurs préférences utilisateur</a><a href="#bonnes-pratiques-6" class="dropdown-item text-wrap">Bonnes pratiques</a><a href="#1-concevoir-une-interface-fonctionnelle-par-defaut" class="dropdown-item text-wrap">1. Concevoir une interface fonctionnelle par défaut</a><a href="#2-adapter-uniquement-ce-qui-est-necessaire" class="dropdown-item text-wrap">2. Adapter uniquement ce qui est nécessaire</a><a href="#3-respecter-les-preferences-exprimees" class="dropdown-item text-wrap">3. Respecter les préférences exprimées</a><a href="#4-tester-sur-plusieurs-plateformes" class="dropdown-item text-wrap">4. Tester sur plusieurs plateformes</a><a href="#5-combiner-css-et-javascript-avec-discernement" class="dropdown-item text-wrap">5. Combiner CSS et JavaScript avec discernement</a><a href="#comment-tester" class="dropdown-item text-wrap">Comment tester</a><a href="#1-verifier-les-preferences-du-systeme" class="dropdown-item text-wrap">1. Vérifier les préférences du système</a><a href="#2-inspection-manuelle" class="dropdown-item text-wrap">2. Inspection manuelle</a><a href="#3-verifier-avec-matchmedia" class="dropdown-item text-wrap">3. Vérifier avec matchMedia()</a><a href="#4-utiliser-le-bookmarklet-prefers-scan" class="dropdown-item text-wrap">4. Utiliser le bookmarklet prefers-scan</a><a href="#5-verifier-le-respect-des-preferences-utilisateur" class="dropdown-item text-wrap">5. Vérifier le respect des préférences utilisateur</a><a href="#erreurs-frequentes-observees-en-audit" class="dropdown-item text-wrap">Erreurs fréquentes observées en audit</a><a href="#ignorer-completement-prefers-reduced-motion" class="dropdown-item text-wrap">Ignorer complètement prefers-reduced-motion</a><a href="#supposer-que-le-mode-sombre-suffit" class="dropdown-item text-wrap">Supposer que le mode sombre suffit</a><a href="#empecher-les-adaptations-liees-a-forced-colors" class="dropdown-item text-wrap">Empêcher les adaptations liées à forced-colors</a><a href="#ajouter-uniquement-des-ajustements-cosmetiques" class="dropdown-item text-wrap">Ajouter uniquement des ajustements cosmétiques</a><a href="#ne-pas-tester" class="dropdown-item text-wrap">Ne pas tester</a><a href="#conclusion" class="dropdown-item text-wrap">Conclusion</a><a href="#webographie" class="dropdown-item text-wrap">Webographie</a></div>
+    </nav>
+        
+      </div>
+    </div>
+    
+  <div class="container-lg pt-4">
+      <div class="row">
+        
+        <main id="main-content" class="col-md-9" role="main" tabindex="-1">
+          
+            <h1>Media queries et préférences utilisateur</h1>
+            
+              <span class="visually-hidden" id="filters_label">
+                Thématiques associées :
+              </span>
+              <ul class="list-inline mb-1" aria-labelledby="filters_label"><li class="list-inline-item"><span class="tagType d-inline-block" data-tag="web">Web</span></li>
+              <li class="list-inline-item"><span class="tagType d-inline-block" data-tag="advanced">Avancé</span></li>
+              </ul>
+            
+            
+            
+
+            <p class="text-muted mb-0">
+              <span class="visually-hidden">Date de parution</span>
+              <time datetime="2026-09-23T00:00:00.000Z">
+                23 septembre 2026
+              </time>
+            </p>
+
+            
+          
+          <div class="mt-4">
+          <style>
+  table + p {
+    margin-top: 1rem;
+  }
+</style>
+<p>Avec <strong>CSS Media Queries Level 5</strong>, le <strong>World Wide Web Consortium (W3C)</strong> étend les possibilités offertes par les <em>media queries</em> en introduisant de nouvelles <em>media features</em> permettant d'adapter une interface en fonction des <strong>préférences exprimées par l'utilisateur</strong>. Elles permettent notamment de prendre en compte la réduction des animations (<code>prefers-reduced-motion</code>), le thème clair ou sombre (<code>prefers-color-scheme</code>), le contraste (<code>prefers-contrast</code>) ou encore les couleurs forcées (<code>forced-colors</code>).</p>
+<p>Cet article présente les principales <em>media features</em> de préférences utilisateur définies par <strong>Media Queries Level 5</strong>, leurs cas d'usage, leurs limites de compatibilité, ainsi que les bonnes pratiques pour les implémenter, les tester et les auditer.</p>
+<p><em>À retenir :</em> les <em>media features</em> présentées dans cet article sont définies par la spécification <strong>CSS Media Queries Level 5</strong>. En revanche, leur niveau de prise en charge varie selon les navigateurs et les plateformes. Leur utilisation n'est pas systématiquement exigée par les <strong>WCAG</strong>, le <strong>RGAA</strong> ou la norme <strong>EN 301 549</strong> (même si elle peut contribuer à satisfaire certains critères), mais constitue une bonne pratique pour concevoir des interfaces capables de s'adapter aux préférences exprimées par les utilisateurs.</p>
+<p><strong>Évolution de la norme :</strong> la version <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf">EN 301 549 v4.1.1</a>, publiée en septembre 2026, introduit notamment la clause <strong>9.7 « User preferences for web pages »</strong>, qui impose aux pages Web de ne pas bloquer les modes de fonctionnement du user agent permettant de respecter les préférences utilisateur, ni d'outrepasser explicitement certaines préférences d'accessibilité de la plateforme, sauf lorsque cela est essentiel à l'information ou à la fonction de la page.</p>
+<p>Au moment de la rédaction de cet article, cette version n'est pas encore référencée au <strong>Journal officiel de l'Union européenne</strong>. Elle ne remplace donc pas encore <strong>EN 301 549 v3.2.1</strong> en tant que version harmonisée ayant une portée juridique au niveau européen.</p>
+<h2 id="pourquoi-ces-media-features-ont-elles-ete-introduites" tabindex="-1" class="h2-focus">Pourquoi ces media features ont-elles été introduites ? <a class="header-anchor" href="#pourquoi-ces-media-features-ont-elles-ete-introduites" id="heading-263" aria-labelledby="heading-263">#</a></h2>
+<p>Les premières versions des <em>media queries</em> permettaient principalement d'adapter une interface aux caractéristiques du périphérique utilisé, comme la largeur de l'écran, son orientation ou sa résolution.</p>
+<p><strong>CSS Media Queries Level 5</strong> élargit cette approche. En plus des caractéristiques techniques du périphérique, il devient possible de prendre en compte certaines <strong>préférences exprimées par l'utilisateur</strong>, comme la réduction des animations, le thème clair ou sombre, le contraste ou les couleurs forcées. Ces préférences peuvent être définies directement par le navigateur, provenir des réglages du système d'exploitation ou, dans certains cas, être déterminées automatiquement par l'agent utilisateur.</p>
+<p>Cette évolution s'inscrit dans une démarche visant à rendre les interfaces plus adaptatives. Plutôt que de proposer une présentation identique à tous les utilisateurs, les applications web peuvent ajuster certains aspects de leur interface afin de mieux respecter les préférences d'affichage exprimées.</p>
+<h2 id="les-principales-media-features-de-preferences-utilisateur" tabindex="-1" class="h2-focus">Les principales <em>media features</em> de préférences utilisateur <a class="header-anchor" href="#les-principales-media-features-de-preferences-utilisateur" id="heading-264" aria-labelledby="heading-264">#</a></h2>
+<p>Les principales <em>media features</em> définies par <strong>CSS Media Queries Level 5</strong> sont résumées dans le tableau suivant.</p>
+<table>
+<thead>
+<tr>
+<th><em>Media feature</em></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>prefers-reduced-motion</code></td>
+<td>Indique une préférence pour la réduction des animations.</td>
+</tr>
+<tr>
+<td><code>prefers-contrast</code></td>
+<td>Indique une préférence concernant le niveau de contraste.</td>
+</tr>
+<tr>
+<td><code>prefers-color-scheme</code></td>
+<td>Indique une préférence pour un thème clair ou sombre.</td>
+</tr>
+<tr>
+<td><code>forced-colors</code></td>
+<td>Indique si un mode de couleurs forcées est actif.</td>
+</tr>
+<tr>
+<td><code>prefers-reduced-transparency</code></td>
+<td>Indique une préférence pour la réduction des effets de transparence.</td>
+</tr>
+<tr>
+<td><code>prefers-reduced-data</code></td>
+<td>Indique une préférence pour la réduction de la consommation de données.</td>
+</tr>
+</tbody>
+</table>
+<p>Les sections suivantes présentent le fonctionnement de chacune de ces <em>media features</em>, les valeurs définies par la spécification, leurs principaux cas d'usage ainsi que les points d'attention à connaître pour les implémenter correctement. Certaines de ces valeurs ne sont pas prises en charge par tous les navigateurs.</p>
+<p><em>Note :</em> cet article s'appuie sur la version actuelle de la spécification <strong>CSS Media Queries Level 5</strong>. Certaines documentations ou articles plus anciens peuvent mentionner des valeurs qui ne figurent plus dans la version actuelle, comme <code>no-preference</code> pour <code>prefers-color-scheme</code>.</p>
+<h2 id="prefers-reduced-motion" tabindex="-1" class="h2-focus"><code>prefers-reduced-motion</code> <a class="header-anchor" href="#prefers-reduced-motion" id="heading-265" aria-labelledby="heading-265">#</a></h2>
+<p>La <em>media feature</em> <code>prefers-reduced-motion</code> indique si l'utilisateur a exprimé une préférence pour la réduction des animations et des effets de mouvement. Elle permet d'adapter ces effets lorsque cette préférence est exprimée.</p>
+<h3 id="valeurs-definies-par-la-specification" tabindex="-1">Valeurs définies par la spécification <a class="header-anchor" href="#valeurs-definies-par-la-specification" id="heading-266" aria-labelledby="heading-266">#</a></h3>
+<p>La spécification définit les valeurs suivantes :</p>
+<ul>
+<li><code>reduce</code> : l'utilisateur a exprimé une préférence pour la réduction des animations et des effets de mouvement ;</li>
+<li><code>no-preference</code> : aucune préférence particulière n'a été exprimée.</li>
+</ul>
+<h3 id="exemple" tabindex="-1">Exemple <a class="header-anchor" href="#exemple" id="heading-267" aria-labelledby="heading-267">#</a></h3>
+<pre><code class="language-css">@media (prefers-reduced-motion: reduce) {
+  .animated-element {
+    animation: none;
+  }
+}
+</code></pre>
+<h3 id="cas-dusage" tabindex="-1">Cas d'usage <a class="header-anchor" href="#cas-dusage" id="heading-268" aria-labelledby="heading-268">#</a></h3>
+<p>Cette <em>media feature</em> peut notamment être utilisée lorsque l'interface comporte des animations, des transitions, des effets de parallaxe ou d'autres mouvements susceptibles d'être réduits.</p>
+<h3 id="bonnes-pratiques" tabindex="-1">Bonnes pratiques <a class="header-anchor" href="#bonnes-pratiques" id="heading-269" aria-labelledby="heading-269">#</a></h3>
+<p>La réduction des animations ne consiste pas nécessairement à supprimer tous les effets de mouvement. Les animations qui participent à la compréhension de l'interface peuvent être conservées, tandis que les animations purement décoratives peuvent être réduites, simplifiées, voire supprimées.</p>
+<h2 id="prefers-contrast" tabindex="-1" class="h2-focus"><code>prefers-contrast</code> <a class="header-anchor" href="#prefers-contrast" id="heading-270" aria-labelledby="heading-270">#</a></h2>
+<p>La <em>media feature</em> <code>prefers-contrast</code> indique la préférence de l'utilisateur concernant le niveau de contraste de l'interface. Elle permet d'adapter la présentation de l'interface en conséquence.</p>
+<h3 id="valeurs-definies-par-la-specification-1" tabindex="-1">Valeurs définies par la spécification <a class="header-anchor" href="#valeurs-definies-par-la-specification-1" id="heading-271" aria-labelledby="heading-271">#</a></h3>
+<p>La spécification définit les valeurs suivantes :</p>
+<ul>
+<li><code>no-preference</code> : aucune préférence particulière n'a été exprimée ;</li>
+<li><code>more</code> : l'utilisateur a exprimé une préférence pour un contraste plus élevé ;</li>
+<li><code>less</code> : l'utilisateur a exprimé une préférence pour un contraste plus faible ;</li>
+<li><code>custom</code> : l'utilisateur a défini un mode de contraste personnalisé.</li>
+</ul>
+<h3 id="exemple-1" tabindex="-1">Exemple <a class="header-anchor" href="#exemple-1" id="heading-272" aria-labelledby="heading-272">#</a></h3>
+<pre><code class="language-css">@media (prefers-contrast: more) {
+  body {
+    background: white;
+    color: black;
+  }
+}
+</code></pre>
+<h3 id="cas-dusage-1" tabindex="-1">Cas d'usage <a class="header-anchor" href="#cas-dusage-1" id="heading-273" aria-labelledby="heading-273">#</a></h3>
+<p>Cette <em>media feature</em> peut notamment être utilisée lorsque l'interface doit adapter le contraste de ses couleurs, renforcer ou atténuer certains éléments graphiques, ou ajuster sa présentation en fonction de la préférence exprimée.</p>
+<h3 id="bonnes-pratiques-1" tabindex="-1">Bonnes pratiques <a class="header-anchor" href="#bonnes-pratiques-1" id="heading-274" aria-labelledby="heading-274">#</a></h3>
+<p>Une préférence concernant le contraste ne consiste pas uniquement à augmenter ou diminuer les contrastes de toutes les couleurs. Les adaptations devraient avant tout améliorer la perceptibilité des contenus et des éléments interactifs tout en conservant une interface cohérente et lisible.</p>
+<h2 id="prefers-color-scheme" tabindex="-1" class="h2-focus"><code>prefers-color-scheme</code> <a class="header-anchor" href="#prefers-color-scheme" id="heading-275" aria-labelledby="heading-275">#</a></h2>
+<p>La <em>media feature</em> <code>prefers-color-scheme</code> indique la préférence de l'utilisateur concernant le thème de couleur de l'interface. Elle permet d'adapter automatiquement la présentation en conséquence.</p>
+<h3 id="valeurs-definies-par-la-specification-2" tabindex="-1">Valeurs définies par la spécification <a class="header-anchor" href="#valeurs-definies-par-la-specification-2" id="heading-276" aria-labelledby="heading-276">#</a></h3>
+<p>La spécification définit les valeurs suivantes :</p>
+<ul>
+<li><code>light</code> : l'utilisateur a indiqué préférer une interface avec un thème clair, ou n'a exprimé aucune préférence active ;</li>
+<li><code>dark</code> : l'utilisateur a exprimé une préférence pour un thème sombre.</li>
+</ul>
+<h3 id="exemple-2" tabindex="-1">Exemple <a class="header-anchor" href="#exemple-2" id="heading-277" aria-labelledby="heading-277">#</a></h3>
+<pre><code class="language-css">@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #f5f5f5;
+  }
+}
+</code></pre>
+<h3 id="cas-dusage-2" tabindex="-1">Cas d'usage <a class="header-anchor" href="#cas-dusage-2" id="heading-278" aria-labelledby="heading-278">#</a></h3>
+<p>Cette <em>media feature</em> peut être utilisée lorsqu'une interface propose plusieurs thèmes de couleurs ou lorsque son apparence doit s'adapter automatiquement au thème de couleurs préféré par l'utilisateur.</p>
+<h3 id="bonnes-pratiques-2" tabindex="-1">Bonnes pratiques <a class="header-anchor" href="#bonnes-pratiques-2" id="heading-279" aria-labelledby="heading-279">#</a></h3>
+<p>Concevoir un thème sombre ne consiste pas simplement à inverser mécaniquement les couleurs d'un thème clair. Les textes, les icônes et les éléments interactifs doivent être conçus avec soin afin de conserver un contraste suffisant et une bonne lisibilité. Les deux thèmes doivent être testés afin de vérifier que le contraste, les états interactifs et la lisibilité restent satisfaisants dans chaque mode.</p>
+<h2 id="forced-colors" tabindex="-1" class="h2-focus"><code>forced-colors</code> <a class="header-anchor" href="#forced-colors" id="heading-280" aria-labelledby="heading-280">#</a></h2>
+<p>La <em>media feature</em> <code>forced-colors</code> indique si un mode de couleurs forcées est actuellement appliqué par l'agent utilisateur. Dans ce mode, certaines couleurs définies par la page peuvent être remplacées par des couleurs système afin de respecter les préférences d'affichage de l'utilisateur.</p>
+<h3 id="valeurs-definies-par-la-specification-3" tabindex="-1">Valeurs définies par la spécification <a class="header-anchor" href="#valeurs-definies-par-la-specification-3" id="heading-281" aria-labelledby="heading-281">#</a></h3>
+<p>La spécification définit les valeurs suivantes :</p>
+<ul>
+<li><code>active</code> : un mode de couleurs forcées est actif ;</li>
+<li><code>none</code> : aucun mode de couleurs forcées n'est actif.</li>
+</ul>
+<h3 id="exemple-3" tabindex="-1">Exemple <a class="header-anchor" href="#exemple-3" id="heading-282" aria-labelledby="heading-282">#</a></h3>
+<pre><code class="language-css">@media (forced-colors: active) {
+  .custom-button {
+    border: 1px solid ButtonText;
+  }
+}
+</code></pre>
+<h3 id="cas-dusage-3" tabindex="-1">Cas d'usage <a class="header-anchor" href="#cas-dusage-3" id="heading-283" aria-labelledby="heading-283">#</a></h3>
+<p>Cette <em>media feature</em> peut notamment être utilisée lorsque des composants personnalisés doivent s'adapter au mode de couleurs forcées, appliquer des couleurs système ou ajuster leur présentation afin de rester compatibles avec ce mode.</p>
+<h3 id="bonnes-pratiques-3" tabindex="-1">Bonnes pratiques <a class="header-anchor" href="#bonnes-pratiques-3" id="heading-284" aria-labelledby="heading-284">#</a></h3>
+<p>Lorsque des ajustements spécifiques sont nécessaires, la propriété <code>forced-color-adjust</code> permet de contrôler si un élément doit être adapté lorsque le mode de couleurs forcées est actif. Sa valeur <code>none</code> empêche l'agent utilisateur de remplacer les couleurs de l'élément concerné.</p>
+<p>Son utilisation devrait rester exceptionnelle. En particulier, elle ne devrait pas être utilisée simplement pour préserver l'apparence visuelle définie par la page lorsque cela empêche l'utilisateur de bénéficier des adaptations liées à ses préférences d'affichage.</p>
+<p>La version <strong>EN 301 549 v4.1.1</strong> introduit la clause <strong>9.7 « User preferences for web pages »</strong>, qui encadre notamment les mécanismes permettant d'outrepasser explicitement les préférences d'accessibilité de la plateforme. Elle prévoit que ces préférences ne soient outrepassées que lorsque cela est essentiel à l'information ou à la fonction de la page. <code>forced-color-adjust</code> est explicitement cité comme exemple de mécanisme concerné.</p>
+<h2 id="prefers-reduced-transparency" tabindex="-1" class="h2-focus"><code>prefers-reduced-transparency</code> <a class="header-anchor" href="#prefers-reduced-transparency" id="heading-285" aria-labelledby="heading-285">#</a></h2>
+<p>La <em>media feature</em> <code>prefers-reduced-transparency</code> indique si l'utilisateur a exprimé une préférence pour la réduction des effets de transparence. Elle permet d'adapter certains effets visuels lorsque cette préférence est exprimée.</p>
+<h3 id="valeurs-definies-par-la-specification-4" tabindex="-1">Valeurs définies par la spécification <a class="header-anchor" href="#valeurs-definies-par-la-specification-4" id="heading-286" aria-labelledby="heading-286">#</a></h3>
+<p>La spécification définit les valeurs suivantes :</p>
+<ul>
+<li><code>reduce</code> : l'utilisateur a exprimé une préférence pour la réduction des effets de transparence ;</li>
+<li><code>no-preference</code> : aucune préférence particulière n'a été exprimée.</li>
+</ul>
+<h3 id="exemple-4" tabindex="-1">Exemple <a class="header-anchor" href="#exemple-4" id="heading-287" aria-labelledby="heading-287">#</a></h3>
+<pre><code class="language-css">@media (prefers-reduced-transparency: reduce) {
+  .overlay {
+    opacity: 1;
+    backdrop-filter: none;
+  }
+}
+</code></pre>
+<h3 id="cas-dusage-4" tabindex="-1">Cas d'usage <a class="header-anchor" href="#cas-dusage-4" id="heading-288" aria-labelledby="heading-288">#</a></h3>
+<p>Cette <em>media feature</em> peut être utilisée pour prévoir des adaptations lorsque des ressources importantes, comme des vidéos ou des animations, peuvent être remplacées par des alternatives plus légères. Sa prise en charge étant actuellement inexistante dans les agents utilisateurs, elle ne peut toutefois pas être considérée comme un mécanisme utilisable en production aujourd'hui.</p>
+<h3 id="bonnes-pratiques-4" tabindex="-1">Bonnes pratiques <a class="header-anchor" href="#bonnes-pratiques-4" id="heading-289" aria-labelledby="heading-289">#</a></h3>
+<p>Lorsqu'une préférence pour la réduction de la transparence est exprimée, les effets visuels reposant sur la transparence peuvent être remplacés par des couleurs opaques afin d'améliorer la lisibilité de l'interface.</p>
+<h2 id="prefers-reduced-data" tabindex="-1" class="h2-focus"><code>prefers-reduced-data</code> <a class="header-anchor" href="#prefers-reduced-data" id="heading-290" aria-labelledby="heading-290">#</a></h2>
+<p>La <em>media feature</em> <code>prefers-reduced-data</code> indique si l'utilisateur a exprimé une préférence visant à limiter la consommation de données. Elle permet d'adapter le chargement de certaines ressources lorsque cette préférence est exprimée.</p>
+<h3 id="valeurs-definies-par-la-specification-5" tabindex="-1">Valeurs définies par la spécification <a class="header-anchor" href="#valeurs-definies-par-la-specification-5" id="heading-291" aria-labelledby="heading-291">#</a></h3>
+<p>La spécification définit les valeurs suivantes :</p>
+<ul>
+<li><code>reduce</code> : l'utilisateur a exprimé une préférence pour limiter la consommation de données ;</li>
+<li><code>no-preference</code> : aucune préférence particulière n'a été exprimée.</li>
+</ul>
+<h3 id="exemple-5" tabindex="-1">Exemple <a class="header-anchor" href="#exemple-5" id="heading-292" aria-labelledby="heading-292">#</a></h3>
+<pre><code class="language-css">@media (prefers-reduced-data: reduce) {
+  .hero-video {
+    display: none;
+  }
+}
+</code></pre>
+<h3 id="cas-dusage-5" tabindex="-1">Cas d'usage <a class="header-anchor" href="#cas-dusage-5" id="heading-293" aria-labelledby="heading-293">#</a></h3>
+<p>Cette <em>media feature</em> peut notamment être utilisée lorsque certaines ressources volumineuses, comme des vidéos ou des animations, peuvent être remplacées par des versions plus légères.</p>
+<h3 id="bonnes-pratiques-5" tabindex="-1">Bonnes pratiques <a class="header-anchor" href="#bonnes-pratiques-5" id="heading-294" aria-labelledby="heading-294">#</a></h3>
+<p>La réduction de la consommation de données ne devrait pas entraîner la suppression de contenus essentiels ou de fonctionnalités indispensables. Les adaptations devraient concerner en priorité les ressources dont l'absence n'affecte ni la compréhension ni l'utilisation de l'interface.</p>
+<h2 id="compatibilite-des-implementations" tabindex="-1" class="h2-focus">Compatibilité des implémentations <a class="header-anchor" href="#compatibilite-des-implementations" id="heading-295" aria-labelledby="heading-295">#</a></h2>
+<p>Les <em>media features</em> définies par <strong>CSS Media Queries Level 5</strong> ne bénéficient pas toutes du même niveau de prise en charge par les navigateurs et les systèmes d'exploitation.</p>
+<p>Certaines, comme <code>prefers-reduced-motion</code>, <code>prefers-color-scheme</code> ou <code>forced-colors</code>, sont aujourd'hui largement implémentées. D'autres, comme <code>prefers-reduced-transparency</code>, <code>prefers-reduced-data</code> ou certaines valeurs de <code>prefers-contrast</code>, présentent une prise en charge plus limitée selon les navigateurs ou les plateformes.</p>
+<p>La simple prise en charge d'une <em>media feature</em> par un navigateur ne garantit pas que la préférence puisse être exprimée sur tous les systèmes d'exploitation. Certaines préférences dépendent en effet de la présence d'un réglage correspondant dans le système ou de sa prise en charge par l'agent utilisateur.</p>
+<p>Avant de s'appuyer sur une <em>media feature</em> en production, il est donc recommandé de vérifier son niveau de compatibilité ainsi que le contexte dans lequel elle est effectivement disponible.</p>
+<p>Les ressources suivantes permettent de suivre l'état des implémentations :</p>
+<ul>
+<li>la documentation MDN (Browser compatibility) de chaque <em>media feature</em> ;</li>
+<li>la spécification <strong>CSS Media Queries Level 5</strong> ;</li>
+<li>les données de compatibilité de &quot;Can I Use&quot; lorsque celles-ci sont disponibles.</li>
+</ul>
+<p><em>Note :</em> une <em>media feature</em> peut être reconnue par un navigateur sans qu'il soit possible de modifier facilement la préférence correspondante sur toutes les plateformes. Lors des tests, il est donc important de vérifier à la fois la prise en charge de la <em>media feature</em> et la possibilité d'activer la préférence sur le système utilisé.</p>
+<p>Les informations suivantes reflètent un état général des implémentations au moment de la rédaction de cet article.</p>
+<table>
+<thead>
+<tr>
+<th><em>Media feature</em></th>
+<th>Niveau général de prise en charge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>prefers-reduced-motion</code></td>
+<td>Large prise en charge</td>
+</tr>
+<tr>
+<td><code>prefers-color-scheme</code></td>
+<td>Large prise en charge</td>
+</tr>
+<tr>
+<td><code>forced-colors</code></td>
+<td>Bonne prise en charge mais principalement pertinente sur certaines plateformes</td>
+</tr>
+<tr>
+<td><code>prefers-contrast</code></td>
+<td>Largement pris en charge, bien que la prise en charge de certaines valeurs puisse varier</td>
+</tr>
+<tr>
+<td><code>prefers-reduced-transparency</code></td>
+<td>Prise en charge limitée</td>
+</tr>
+<tr>
+<td><code>prefers-reduced-data</code></td>
+<td>Non pris en charge actuellement</td>
+</tr>
+</tbody>
+</table>
+<p>Ces indications sont données à titre informatif. Elles peuvent évoluer selon les versions des navigateurs, les systèmes d'exploitation et les environnements d'exécution.</p>
+<h2 id="detection-en-javascript" tabindex="-1" class="h2-focus">Détection en JavaScript <a class="header-anchor" href="#detection-en-javascript" id="heading-296" aria-labelledby="heading-296">#</a></h2>
+<p>Les préférences utilisateur sont avant tout destinées à être utilisées dans les feuilles de styles CSS grâce aux <em>media queries</em>. Dans certains cas, il peut toutefois être nécessaire d'adapter également le comportement de l'interface depuis JavaScript.</p>
+<p><code>window.matchMedia()</code> permet d'interroger les mêmes <em>media queries</em> que celles utilisées en CSS. La propriété <code>matches</code> permet de vérifier si une <em>media query</em> correspond à l'état actuel, tandis que l'événement <code>change</code> permet de réagir lorsque ce résultat évolue.</p>
+<pre><code class="language-javascript">const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (mediaQuery.matches) {
+  disableAnimations();
+}
+</code></pre>
+<p>Pour les besoins courants, <code>window.matchMedia()</code> constitue la solution la plus largement compatible pour détecter les préférences utilisateur depuis JavaScript.</p>
+<h2 id="user-preferences-api" tabindex="-1" class="h2-focus">User Preferences API <a class="header-anchor" href="#user-preferences-api" id="heading-297" aria-labelledby="heading-297">#</a></h2>
+<p>La <strong>User Preferences API</strong> est une API expérimentale définie par <strong>CSS Media Queries Level 5</strong>. Elle fournit un accès programmatique aux préférences associées à certaines <em>media features</em> et permet notamment de demander une surcharge de ces préférences depuis JavaScript.</p>
+<p>L'API est accessible via l'objet <code>navigator.preferences</code>. Elle fournit notamment des objets correspondant aux préférences de thème de couleurs, de contraste, de réduction des mouvements, de réduction de la transparence et de réduction des données. Ces objets permettent de consulter la valeur de la préférence, d'observer ses changements et, lorsque cela est pris en charge, de demander une surcharge.</p>
+<p>Cette API ne constitue toutefois pas une alternative courante à <code>window.matchMedia()</code>. Elle reste expérimentale et sa prise en charge par les navigateurs est limitée. Pour simplement détecter une préférence afin d'adapter le comportement d'une interface, <code>window.matchMedia()</code> reste généralement la solution à privilégier.</p>
+<h2 id="combiner-plusieurs-preferences-utilisateur" tabindex="-1" class="h2-focus">Combiner plusieurs préférences utilisateur <a class="header-anchor" href="#combiner-plusieurs-preferences-utilisateur" id="heading-298" aria-labelledby="heading-298">#</a></h2>
+<p>Les <em>media features</em> de préférences utilisateur ne sont pas exclusives. Un utilisateur peut exprimer simultanément plusieurs préférences, par exemple un thème sombre associé à une réduction des animations ou à une préférence pour un contraste plus élevé.</p>
+<p>Comme les autres <em>media features</em> CSS, elles peuvent être combinées au sein d'une même <em>media query</em> afin d'adapter l'interface à plusieurs préférences exprimées.</p>
+<pre><code class="language-css">@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  /* Adaptations spécifiques */
+}
+</code></pre>
+<p>Dans la pratique, il n'est généralement pas nécessaire de concevoir une variante complète de l'interface pour chaque combinaison possible. Il est préférable de mettre en œuvre des adaptations ciblées et indépendantes, capables de se combiner naturellement lorsque plusieurs préférences sont détectées.</p>
+<h2 id="bonnes-pratiques-6" tabindex="-1" class="h2-focus">Bonnes pratiques <a class="header-anchor" href="#bonnes-pratiques-6" id="heading-299" aria-labelledby="heading-299">#</a></h2>
+<h3 id="1-concevoir-une-interface-fonctionnelle-par-defaut" tabindex="-1">1. Concevoir une interface fonctionnelle par défaut <a class="header-anchor" href="#1-concevoir-une-interface-fonctionnelle-par-defaut" id="heading-300" aria-labelledby="heading-300">#</a></h3>
+<p>Les <em>media features</em> de préférences utilisateur ne devraient pas constituer un prérequis au bon fonctionnement de l'interface. Elles permettent d'adapter la présentation ou certains comportements, mais le contenu doit rester compréhensible et utilisable même lorsqu'aucune préférence particulière n'est exprimée.</p>
+<h3 id="2-adapter-uniquement-ce-qui-est-necessaire" tabindex="-1">2. Adapter uniquement ce qui est nécessaire <a class="header-anchor" href="#2-adapter-uniquement-ce-qui-est-necessaire" id="heading-301" aria-labelledby="heading-301">#</a></h3>
+<p>L'objectif n'est pas de créer plusieurs versions d'une même interface, mais d'adapter uniquement les éléments concernés par la préférence détectée. Les adaptations doivent rester ciblées et proportionnées.</p>
+<h3 id="3-respecter-les-preferences-exprimees" tabindex="-1">3. Respecter les préférences exprimées <a class="header-anchor" href="#3-respecter-les-preferences-exprimees" id="heading-302" aria-labelledby="heading-302">#</a></h3>
+<p>Les préférences détectées traduisent un choix explicite de l'utilisateur ou une préférence déterminée automatiquement par son environnement d'exécution. Lorsqu'elles sont disponibles, elles devraient être prises en compte lors de la conception de l'interface et ne devraient pas être explicitement outrepassées, sauf lorsque cela est essentiel à l'information ou à la fonction de la page.</p>
+<p>Ce principe est également reflété par la clause <strong>9.7 « User preferences for web pages »</strong> d'<strong>EN 301 549 v4.1.1</strong>, qui encadre le blocage ou l'outrepassement explicite des préférences utilisateur pour les pages Web.</p>
+<h3 id="4-tester-sur-plusieurs-plateformes" tabindex="-1">4. Tester sur plusieurs plateformes <a class="header-anchor" href="#4-tester-sur-plusieurs-plateformes" id="heading-303" aria-labelledby="heading-303">#</a></h3>
+<p>Le niveau de prise en charge varie selon les navigateurs, les systèmes d'exploitation et les plateformes. Une implémentation fonctionnelle sur un environnement donné ne garantit pas un comportement identique ailleurs. Il est donc recommandé de tester les fonctionnalités sur plusieurs combinaisons de navigateurs et de systèmes d'exploitation.</p>
+<h3 id="5-combiner-css-et-javascript-avec-discernement" tabindex="-1">5. Combiner CSS et JavaScript avec discernement <a class="header-anchor" href="#5-combiner-css-et-javascript-avec-discernement" id="heading-304" aria-labelledby="heading-304">#</a></h3>
+<p>Les <em>media features</em> CSS couvrent la majorité des besoins liés à l'adaptation de l'interface. Lorsque des adaptations comportementales sont nécessaires, <code>window.matchMedia()</code> permet d'interroger les mêmes préférences depuis JavaScript.</p>
+<h2 id="comment-tester" tabindex="-1" class="h2-focus">Comment tester <a class="header-anchor" href="#comment-tester" id="heading-305" aria-labelledby="heading-305">#</a></h2>
+<h3 id="1-verifier-les-preferences-du-systeme" tabindex="-1">1. Vérifier les préférences du système <a class="header-anchor" href="#1-verifier-les-preferences-du-systeme" id="heading-306" aria-labelledby="heading-306">#</a></h3>
+<p>Avant de tester une <em>media feature</em>, il est recommandé de vérifier que la préférence correspondante est bien activée dans le système d'exploitation ou le navigateur. Selon les plateformes, ces préférences peuvent notamment concerner la réduction des animations, le thème clair ou sombre, le contraste ou les couleurs forcées.</p>
+<h3 id="2-inspection-manuelle" tabindex="-1">2. Inspection manuelle <a class="header-anchor" href="#2-inspection-manuelle" id="heading-307" aria-labelledby="heading-307">#</a></h3>
+<p>Les outils de développement permettent d'émuler plusieurs préférences utilisateur sans modifier les réglages du système d'exploitation. Cette approche est particulièrement utile pour vérifier rapidement qu'une <em>media feature</em> est correctement prise en compte.</p>
+<p>Dans les navigateurs basés sur Chromium, il est possible d'émuler :</p>
+<ul>
+<li><code>prefers-reduced-motion</code> ;</li>
+<li><code>prefers-color-scheme</code> ;</li>
+<li><code>prefers-contrast</code> ;</li>
+<li><code>forced-colors</code>.</li>
+</ul>
+<h3 id="3-verifier-avec-matchmedia" tabindex="-1">3. Vérifier avec <code>matchMedia()</code> <a class="header-anchor" href="#3-verifier-avec-matchmedia" id="heading-308" aria-labelledby="heading-308">#</a></h3>
+<p>Depuis la console du navigateur, <code>window.matchMedia()</code> permet de vérifier la valeur retournée par une <em>media feature</em>.</p>
+<pre><code class="language-javascript">window.matchMedia('(prefers-reduced-motion: reduce)').matches
+</code></pre>
+<p>Cette expression renvoie <code>true</code> lorsque la préférence est détectée, et <code>false</code> dans le cas contraire.</p>
+<h3 id="4-utiliser-le-bookmarklet-prefers-scan" tabindex="-1">4. Utiliser le bookmarklet <code>prefers-scan</code> <a class="header-anchor" href="#4-utiliser-le-bookmarklet-prefers-scan" id="heading-309" aria-labelledby="heading-309">#</a></h3>
+<p>Lors d'un audit d'accessibilité ou d'une revue de code, il n'est pas toujours évident d'identifier manuellement toutes les <em>media queries</em> liées aux préférences utilisateur présentes dans une application. Cette vérification peut être longue, en particulier lorsque plusieurs feuilles de styles sont chargées.</p>
+<p>Le bookmarklet <strong>Prefers Scan</strong> automatise cette recherche en analysant les feuilles de styles accessibles de la page.</p>
+<p>Il permet notamment de :</p>
+<ul>
+<li>recenser les <em>media features</em> utilisées ;</li>
+<li>identifier les préférences prises en charge ;</li>
+<li>repérer rapidement les préférences absentes ;</li>
+<li>faciliter la préparation d'un audit manuel.</li>
+</ul>
+<p><strong>Prefers Scan</strong> permet d'identifier la présence des <em>media features</em> dans les feuilles de styles, mais ne vérifie pas la pertinence ni la qualité des adaptations mises en œuvre. Une vérification manuelle reste indispensable.</p>
+<p><a href="https://github.com/MewenLeHo/prefers-scan">Le code source, les instructions d'installation et la documentation du bookmarklet sont disponibles sur le dépôt GitHub de Prefers Scan.</a></p>
+<h3 id="5-verifier-le-respect-des-preferences-utilisateur" tabindex="-1">5. Vérifier le respect des préférences utilisateur <a class="header-anchor" href="#5-verifier-le-respect-des-preferences-utilisateur" id="heading-310" aria-labelledby="heading-310">#</a></h3>
+<p>La prise en charge d'une <em>media feature</em> ne suffit pas à garantir qu'une interface respecte effectivement la préférence de l'utilisateur. Il est également nécessaire de vérifier que la page ne bloque pas les adaptations du user agent et n'outrepasse pas explicitement les préférences d'accessibilité de la plateforme sans justification.</p>
+<p>La clause <strong>9.7 « User preferences for web pages »</strong> d'<strong>EN 301 549 v4.1.1</strong> encadre notamment ces comportements. Lors d'un audit, une attention particulière peut être portée aux mécanismes permettant de remplacer ou de neutraliser les adaptations du user agent, tels que <code>forced-color-adjust: none</code>.</p>
+<h2 id="erreurs-frequentes-observees-en-audit" tabindex="-1" class="h2-focus">Erreurs fréquentes observées en audit <a class="header-anchor" href="#erreurs-frequentes-observees-en-audit" id="heading-311" aria-labelledby="heading-311">#</a></h2>
+<h3 id="ignorer-completement-prefers-reduced-motion" tabindex="-1">Ignorer complètement <code>prefers-reduced-motion</code> <a class="header-anchor" href="#ignorer-completement-prefers-reduced-motion" id="heading-312" aria-labelledby="heading-312">#</a></h3>
+<p>Les interfaces modernes utilisent souvent des animations pour accompagner les transitions, attirer l'attention ou améliorer l'expérience utilisateur. Ignorer <code>prefers-reduced-motion</code> revient à maintenir ces animations malgré une préférence explicite de l'utilisateur, ce qui peut provoquer une gêne ou un inconfort.</p>
+<h3 id="supposer-que-le-mode-sombre-suffit" tabindex="-1">Supposer que le mode sombre suffit <a class="header-anchor" href="#supposer-que-le-mode-sombre-suffit" id="heading-313" aria-labelledby="heading-313">#</a></h3>
+<p>La prise en charge de <code>prefers-color-scheme</code> ne garantit pas, à elle seule, qu'un thème sombre soit accessible. Des contrastes insuffisants, des couleurs mal choisies ou des états interactifs peu visibles peuvent nuire à la lisibilité et à l'utilisation de l'interface.</p>
+<h3 id="empecher-les-adaptations-liees-a-forced-colors" tabindex="-1">Empêcher les adaptations liées à <code>forced-colors</code> <a class="header-anchor" href="#empecher-les-adaptations-liees-a-forced-colors" id="heading-314" aria-labelledby="heading-314">#</a></h3>
+<p>Utiliser <code>forced-color-adjust: none</code> empêche l'agent utilisateur d'appliquer les adaptations de couleurs forcées à l'élément concerné. Cette propriété ne devrait être utilisée que dans des situations exceptionnelles, lorsque ses conséquences sont parfaitement comprises et maîtrisées.</p>
+<p>La version <strong>EN 301 549 v4.1.1</strong> cite explicitement <code>forced-color-adjust</code> comme exemple de mécanisme permettant d'outrepasser une préférence d'accessibilité de la plateforme. La clause <strong>9.7 « User preferences for web pages »</strong> prévoit que de telles préférences ne soient explicitement outrepassées que lorsque cela est essentiel à l'information ou à la fonction de la page.</p>
+<h3 id="ajouter-uniquement-des-ajustements-cosmetiques" tabindex="-1">Ajouter uniquement des ajustements cosmétiques <a class="header-anchor" href="#ajouter-uniquement-des-ajustements-cosmetiques" id="heading-315" aria-labelledby="heading-315">#</a></h3>
+<p>Les adaptations apportées devraient modifier le comportement ou la présentation des éléments réellement concernés. Changer uniquement quelques couleurs ou espacements sans répondre à la préférence exprimée limite fortement l'intérêt de ces <em>media features</em>.</p>
+<h3 id="ne-pas-tester" tabindex="-1">Ne pas tester <a class="header-anchor" href="#ne-pas-tester" id="heading-316" aria-labelledby="heading-316">#</a></h3>
+<p>Une <em>media feature</em> peut être reconnue par le navigateur tout en étant mal implémentée ou inadaptée au contexte. Il est donc indispensable de vérifier le comportement réel de l'interface sur les plateformes pertinentes.</p>
+<h2 id="conclusion" tabindex="-1" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-317" aria-labelledby="heading-317">#</a></h2>
+<p>Les <em>media features</em> de préférences utilisateur constituent un outil puissant pour rendre les interfaces plus adaptatives et plus accessibles.</p>
+<p>Elles permettent de tenir compte de besoins concrets exprimés directement par les utilisateurs : réduction des animations, augmentation du contraste, adaptation des couleurs, diminution des effets visuels ou optimisation de la consommation de données.</p>
+<p>Leur mise en œuvre est généralement simple, mais leur impact sur le confort d'utilisation peut être considérable. Bien mises en œuvre, ces adaptations peuvent améliorer significativement l'expérience de nombreux utilisateurs.</p>
+<p>Les <em>media features</em> de préférences utilisateur illustrent une évolution importante du Web : plutôt que de s'adapter uniquement aux caractéristiques techniques des appareils, les interfaces peuvent désormais tenir compte des préférences exprimées par leurs utilisateurs.</p>
+<p>Cependant, détecter une préférence ne constitue qu'une première étape. Une mise en œuvre accessible doit également veiller à ce que l'interface réponde correctement à cette préférence et n'empêche pas inutilement l'agent utilisateur d'appliquer les adaptations correspondantes.</p>
+<p>Utilisées de manière réfléchie et testées dans les environnements pertinents, les <em>media features</em> de préférences utilisateur contribuent ainsi à concevoir des interfaces plus adaptatives, plus confortables et, dans de nombreux cas, plus accessibles.</p>
+<h2 id="webographie" tabindex="-1" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-318" aria-labelledby="heading-318">#</a></h2>
+<ul lang="en">
+  <li><a href="https://www.w3.org/TR/mediaqueries-5/" hreflang="en">W3C – Media Queries Level 5 (en)</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility" hreflang="en">MDN – Using media queries for accessibility (en)</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion" hreflang="en">MDN – prefers-reduced-motion (en)</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-contrast" hreflang="en">MDN – prefers-contrast (en)</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme" hreflang="en">MDN – prefers-color-scheme (en)</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors" hreflang="en">MDN – forced-colors (en)</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-transparency" hreflang="en">MDN – prefers-reduced-transparency (en)</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-data" hreflang="en">MDN – prefers-reduced-data (en)</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/User_Preferences_API" hreflang="en">MDN – User Preferences API (en)</a></li>
+</ul>
+
+          </div>
+        </main>
+        
+          <div class="col-md-3">
+            <div class="StickySideNavigation">
+              <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
+      <h2 id="toc-title">Sur cette page</h2>
+      <ul class="nav flex-column"><li class="nav-item position-relative">
+            <a href="#pourquoi-ces-media-features-ont-elles-ete-introduites" class="nav-link text-muted">Pourquoi ces media features ont-elles été introduites ?</a></li><li class="nav-item position-relative">
+            <a href="#les-principales-media-features-de-preferences-utilisateur" class="nav-link text-muted">Les principales media features de préférences utilisateur</a></li><li class="nav-item position-relative">
+            <a href="#prefers-reduced-motion" class="nav-link text-muted">prefers-reduced-motion</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#valeurs-definies-par-la-specification" class="nav-link text-muted">Valeurs définies par la spécification</a></li><li class="nav-item position-relative">
+            <a href="#exemple" class="nav-link text-muted">Exemple</a></li><li class="nav-item position-relative">
+            <a href="#cas-dusage" class="nav-link text-muted">Cas d&#39;usage</a></li><li class="nav-item position-relative">
+            <a href="#bonnes-pratiques" class="nav-link text-muted">Bonnes pratiques</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#prefers-contrast" class="nav-link text-muted">prefers-contrast</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#valeurs-definies-par-la-specification-1" class="nav-link text-muted">Valeurs définies par la spécification</a></li><li class="nav-item position-relative">
+            <a href="#exemple-1" class="nav-link text-muted">Exemple</a></li><li class="nav-item position-relative">
+            <a href="#cas-dusage-1" class="nav-link text-muted">Cas d&#39;usage</a></li><li class="nav-item position-relative">
+            <a href="#bonnes-pratiques-1" class="nav-link text-muted">Bonnes pratiques</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#prefers-color-scheme" class="nav-link text-muted">prefers-color-scheme</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#valeurs-definies-par-la-specification-2" class="nav-link text-muted">Valeurs définies par la spécification</a></li><li class="nav-item position-relative">
+            <a href="#exemple-2" class="nav-link text-muted">Exemple</a></li><li class="nav-item position-relative">
+            <a href="#cas-dusage-2" class="nav-link text-muted">Cas d&#39;usage</a></li><li class="nav-item position-relative">
+            <a href="#bonnes-pratiques-2" class="nav-link text-muted">Bonnes pratiques</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#forced-colors" class="nav-link text-muted">forced-colors</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#valeurs-definies-par-la-specification-3" class="nav-link text-muted">Valeurs définies par la spécification</a></li><li class="nav-item position-relative">
+            <a href="#exemple-3" class="nav-link text-muted">Exemple</a></li><li class="nav-item position-relative">
+            <a href="#cas-dusage-3" class="nav-link text-muted">Cas d&#39;usage</a></li><li class="nav-item position-relative">
+            <a href="#bonnes-pratiques-3" class="nav-link text-muted">Bonnes pratiques</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#prefers-reduced-transparency" class="nav-link text-muted">prefers-reduced-transparency</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#valeurs-definies-par-la-specification-4" class="nav-link text-muted">Valeurs définies par la spécification</a></li><li class="nav-item position-relative">
+            <a href="#exemple-4" class="nav-link text-muted">Exemple</a></li><li class="nav-item position-relative">
+            <a href="#cas-dusage-4" class="nav-link text-muted">Cas d&#39;usage</a></li><li class="nav-item position-relative">
+            <a href="#bonnes-pratiques-4" class="nav-link text-muted">Bonnes pratiques</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#prefers-reduced-data" class="nav-link text-muted">prefers-reduced-data</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#valeurs-definies-par-la-specification-5" class="nav-link text-muted">Valeurs définies par la spécification</a></li><li class="nav-item position-relative">
+            <a href="#exemple-5" class="nav-link text-muted">Exemple</a></li><li class="nav-item position-relative">
+            <a href="#cas-dusage-5" class="nav-link text-muted">Cas d&#39;usage</a></li><li class="nav-item position-relative">
+            <a href="#bonnes-pratiques-5" class="nav-link text-muted">Bonnes pratiques</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#compatibilite-des-implementations" class="nav-link text-muted">Compatibilité des implémentations</a></li><li class="nav-item position-relative">
+            <a href="#detection-en-javascript" class="nav-link text-muted">Détection en JavaScript</a></li><li class="nav-item position-relative">
+            <a href="#user-preferences-api" class="nav-link text-muted">User Preferences API</a></li><li class="nav-item position-relative">
+            <a href="#combiner-plusieurs-preferences-utilisateur" class="nav-link text-muted">Combiner plusieurs préférences utilisateur</a></li><li class="nav-item position-relative">
+            <a href="#bonnes-pratiques-6" class="nav-link text-muted">Bonnes pratiques</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#1-concevoir-une-interface-fonctionnelle-par-defaut" class="nav-link text-muted">1. Concevoir une interface fonctionnelle par défaut</a></li><li class="nav-item position-relative">
+            <a href="#2-adapter-uniquement-ce-qui-est-necessaire" class="nav-link text-muted">2. Adapter uniquement ce qui est nécessaire</a></li><li class="nav-item position-relative">
+            <a href="#3-respecter-les-preferences-exprimees" class="nav-link text-muted">3. Respecter les préférences exprimées</a></li><li class="nav-item position-relative">
+            <a href="#4-tester-sur-plusieurs-plateformes" class="nav-link text-muted">4. Tester sur plusieurs plateformes</a></li><li class="nav-item position-relative">
+            <a href="#5-combiner-css-et-javascript-avec-discernement" class="nav-link text-muted">5. Combiner CSS et JavaScript avec discernement</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#comment-tester" class="nav-link text-muted">Comment tester</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#1-verifier-les-preferences-du-systeme" class="nav-link text-muted">1. Vérifier les préférences du système</a></li><li class="nav-item position-relative">
+            <a href="#2-inspection-manuelle" class="nav-link text-muted">2. Inspection manuelle</a></li><li class="nav-item position-relative">
+            <a href="#3-verifier-avec-matchmedia" class="nav-link text-muted">3. Vérifier avec matchMedia()</a></li><li class="nav-item position-relative">
+            <a href="#4-utiliser-le-bookmarklet-prefers-scan" class="nav-link text-muted">4. Utiliser le bookmarklet prefers-scan</a></li><li class="nav-item position-relative">
+            <a href="#5-verifier-le-respect-des-preferences-utilisateur" class="nav-link text-muted">5. Vérifier le respect des préférences utilisateur</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#erreurs-frequentes-observees-en-audit" class="nav-link text-muted">Erreurs fréquentes observées en audit</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#ignorer-completement-prefers-reduced-motion" class="nav-link text-muted">Ignorer complètement prefers-reduced-motion</a></li><li class="nav-item position-relative">
+            <a href="#supposer-que-le-mode-sombre-suffit" class="nav-link text-muted">Supposer que le mode sombre suffit</a></li><li class="nav-item position-relative">
+            <a href="#empecher-les-adaptations-liees-a-forced-colors" class="nav-link text-muted">Empêcher les adaptations liées à forced-colors</a></li><li class="nav-item position-relative">
+            <a href="#ajouter-uniquement-des-ajustements-cosmetiques" class="nav-link text-muted">Ajouter uniquement des ajustements cosmétiques</a></li><li class="nav-item position-relative">
+            <a href="#ne-pas-tester" class="nav-link text-muted">Ne pas tester</a></li></ul></li><li class="nav-item position-relative">
+            <a href="#conclusion" class="nav-link text-muted">Conclusion</a></li><li class="nav-item position-relative">
+            <a href="#webographie" class="nav-link text-muted">Webographie</a></li>
+      </ul>
+    </nav>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+
+<footer id="footer" class="o-footer" role="contentinfo" tabindex="-1">
+  <div class="container-lg">
+<nav class="py-2" role="navigation" aria-label="Navigation du pied de page">
+      <ul class="nav align-items-center flex-column flex-sm-row"><li class="nav-item">
+            <a href="/fr/contact/" class="nav-link">
+  Contact
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/a-propos/" class="nav-link">
+  À propos
+</a>
+          </li><li class="nav-item">
+            <a href="/feed-fr.xml" class="nav-link">
+  Flux rss
+</a>
+          </li><li class="nav-item">
+            <a href="/fr/accessibilite/" class="nav-link">
+  Accessibilité : partiellement conforme
+</a>
+          </li><li class="nav-item">
+            <a href="https://a11y-guidelines-orange.netlify.app/fr/" class="nav-link">
+  Pré-version sur Netlify
+</a>
+          </li><li class="nav-item">
+          <a href="https://www.netlify.com" class="nav-link" title="Déploiements sur Netlify">
+            <img src="https://www.netlify.com/assets/badges/netlify-badge-color-accent.svg" alt="Déploiements sur Netlify" width="89" height="40">
+          </a>
+        </li>
+        <li class="nav-item ms-sm-auto">
+          <a href="https://github.com/Orange-OpenSource/a11y-guidelines/issues/new?title=File%20path%20:%20'./src/fr/articles/media-queries-preferences-utilisateurs.md'" class="nav-link" rel="noopener noreferrer" target="_blank" title="Signaler une erreur sur GitHub (nouvelle fenêtre)">
+            Signaler une erreur sur GitHub<span class="visually-hidden">&nbsp;(nouvelle fenêtre)</span><svg width="16" height="16" class="ms-1" viewBox="0 0 1000 1000" aria-hidden="true" focusable="false"><path class="cls-1" d="M374.908,308.958L600,309V109L921.719,430.9a74.988,74.988,0,0,1,0,106.044L600,859V659H325A150.027,150.027,0,0,0,175,809v81C98.941,830.528,50,737.929,50,633.891,50,454.436,195.466,308.958,374.908,308.958Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <nav role="navigation" class="back-to-top" aria-label="Retour en haut de page">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" title="Retour en haut de page">
+        <span class="visually-hidden">Retour en haut de page</span>
+      </a>
+    </nav>
+    <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.8/dist/js/boosted.bundle.min.js" integrity="sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m" crossorigin="anonymous"></script>
+    
+    
+      <script src="/assets/vendors/highlightjs/highlight.js"></script>
+    
+    <script>
+      const Application = {
+        lang: "fr",
+        vendors: {
+          highlightJS: true,
+          highlightTitle: true
+        }
+      }
+    </script>
+    <script src="/assets/script.js"></script><script>
+      var tarteaucitronForceLanguage = "fr"
+      var tarteaucitronConfig = {"privacyUrl":"","hashtag":"#cookie-consent","cookieName":"cookie-consent","orientation":"bottom","bodyPosition":"top","showAlertSmall":false,"cookieslist":true,"adblocker":false,"showIcon":false,"AcceptAllCta":true,"highPrivacy":true,"handleBrowserDNTRequest":false,"removeCredit":false,"moreInfoLink":true,"useExternalCss":true,"readmoreLink":"/cookiespolicy","mandatory":false};
+      tarteaucitronConfig.readmoreLink = Application.lang === "fr" ? "/fr/a-propos/#gestion-des-cookies" : "/en/about/#cookie-management";
+      tarteaucitron.init(tarteaucitronConfig);var dataLayer = [{
+          'site_name': 'accessibility-guidelines',
+          'phase': 'prod'
+        }];
+        tarteaucitron.user.googletagmanagerId = "GTM-N3M5VXS";
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');docsearch({"appId":"QML88ZHQMQ","apiKey":"92e5543d97d72ef6a3ba61b241a75b19","indexName":"a11y-guidelines-orange","container":"#search-input","searchParameters":{"facetFilters":["language:fr"],"attributesToHighlight":["title","content"]},"placeholder":"Rechercher sur le site","translations":{"button":{"buttonText":"Rechercher sur le site","buttonAriaLabel":"Rechercher sur le site"},"modal":{"searchBox":{"resetButtonTitle":"Effacer la recherche","resetButtonAriaLabel":"Effacer la recherche","cancelButtonText":"Annuler","cancelButtonAriaLabel":"Annuler","searchInputLabel":"Rechercher sur le site"},"startScreen":{"recentSearchesTitle":"Récent","noRecentSearchesText":"Aucune recherche récente","saveRecentSearchButtonTitle":"Sauvegarder cette recherche","removeRecentSearchButtonTitle":"Supprimer cette recherche de l'historique","favoriteSearchesTitle":"Favoris","removeFavoriteSearchButtonTitle":"Supprimer cette recherche des favoris"},"errorScreen":{"titleText":"Impossible de récupérer les résultats","helpText":"Vous devriez peut-être vérifier votre connexion réseau."},"footer":{"selectText":"pour sélectionner","selectKeyAriaLabel":"La touche Entrée","navigateText":"pour naviguer","navigateUpKeyAriaLabel":"Flèche du haut","navigateDownKeyAriaLabel":"Flèche du bas","closeText":"pour fermer","closeKeyAriaLabel":"La touche échap","searchByText":"Recherché par"},"noResultsScreen":{"noResultsText":"Aucun résultat pour","suggestedQueryText":"Essayez de rechercher","reportMissingResultsText":"Vous pensez que cette recherche devrait renvoyer des résultats ?","reportMissingResultsLinkText":"Faites le nous savoir."}}},"debug":false});
+    </script>
+    <div hidden>Lien pour ancrage</div>
+    <!--  This file is part of a11y-guidelines | Our vision of mobile & web accessibility guidelines and best practices, with valid/invalid examples. Copyright (C) 2016 - 2026 Orange SA. See the Creative Commons Legal Code Attribution-ShareAlike 3.0 Unported License for more details (LICENCE file). -->
+
+  </body>
+</html>

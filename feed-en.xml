@@ -4,12 +4,20 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2026-09-22T00:00:00Z</updated>
+  <updated>2026-09-23T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Media queries and user preferences</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/user-preference-media-queries/"/>
+    <updated>2026-09-23T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/user-preference-media-queries/</id>
+    <content xml:lang="en" type="html">User preference media features allow interfaces to adapt to preferences expressed by users. Defined by the CSS Media Queries Level 5 specification, they make it possible to adapt an interface based on user preferences such as reduced motion, increased contrast, light or dark color schemes, forced colors, reduced transparency, and reduced data usage.</content>
+  </entry>
   
   <entry>
     <title>Hide technical iframes</title>
