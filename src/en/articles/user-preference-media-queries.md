@@ -20,9 +20,7 @@ This article covers the main user preference *media features* defined by **Media
 
 *Key takeaway:* the *media features* presented in this article are defined by the **CSS Media Queries Level 5** specification. However, browser support varies across browsers and platforms. Their use is not systematically required by **WCAG**, **RGAA**, or **EN 301 549** (although they may contribute to meeting certain criteria), but is considered a best practice for designing interfaces that adapt to user preferences.
 
-**Standard update**
-
-[EN 301 549 v4.1.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf), published in September 2026, introduces a new clause, **9.7 "User preferences for web pages"**, which requires web pages not to block user-agent modes of operation that respect user preferences, or explicitly override certain platform accessibility preferences, unless this is essential to the information or function of the web page.
+**Standard update:** [EN 301 549 v4.1.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf), published in September 2026, introduces a new clause, **9.7 "User preferences for web pages"**, which requires web pages not to block user-agent modes of operation that respect user preferences, or explicitly override certain platform accessibility preferences, unless this is essential to the information or function of the web page.
 
 At the time of writing, this version has not yet been referenced in the **Official Journal of the European Union**. It therefore does not yet replace **EN 301 549 v3.2.1** as the harmonised standard with legal effect at European level.
 
@@ -223,7 +221,7 @@ The specification defines the following values:
 
 ### Use cases
 
-This *media feature* can be used when large resources, such as videos or animations, can be replaced with lighter alternatives.
+This *media feature* can be used to plan adaptations when large resources, such as videos or animations, can be replaced with lighter alternatives. However, because it is currently unsupported by user agents, it cannot be considered a production-ready mechanism at this time.
 
 ### Best practices
 
@@ -249,14 +247,14 @@ The following resources can be used to track the implementation status of these 
 
 The following information reflects the general implementation status at the time of writing.
 
-| *Media feature*                | General level of support                                        |
-| ------------------------------ | --------------------------------------------------------------- |
-| `prefers-reduced-motion`       | Widely supported                                                |
-| `prefers-color-scheme`         | Widely supported                                                |
-| `forced-colors`                | Well supported, but primarily relevant on certain platforms     |
-| `prefers-contrast`             | Support varies depending on the browser and supported values    |
-| `prefers-reduced-transparency` | Limited support                                                 |
-| `prefers-reduced-data`         | Limited support                                                 |
+| *Media feature*                | General level of support                                           |
+| ------------------------------ | ------------------------------------------------------------------ |
+| `prefers-reduced-motion`       | Widely supported                                                   |
+| `prefers-color-scheme`         | Widely supported                                                   |
+| `forced-colors`                | Well supported, but primarily relevant on certain platforms        |
+| `prefers-contrast`             | Widely supported, although support for individual values may vary  |
+| `prefers-reduced-transparency` | Limited support                                                    |
+| `prefers-reduced-data`         | Not currently supported                                            |
 
 These indications are provided for informational purposes only. They may evolve as browsers, operating systems, and runtime environments continue to evolve.
 
@@ -264,7 +262,7 @@ These indications are provided for informational purposes only. They may evolve 
 
 User preferences are primarily intended to be used in CSS stylesheets through *media queries*. In some cases, however, it may also be necessary to adapt the behavior of an interface using JavaScript.
 
-`window.matchMedia()` allows the same *media queries* used in CSS to be evaluated and enables applications to react when their result changes.
+`window.matchMedia()` allows the same *media queries* used in CSS to be evaluated. The `matches` property can be used to check whether a media query currently matches, while the `change` event makes it possible to react when the result changes.
 
 ```javascript
 const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -274,15 +272,15 @@ if (mediaQuery.matches) {
 }
 ```
 
-In the longer term, the **User Preferences API** aims to provide richer access to user preferences from JavaScript. However, it remains experimental and is not currently a practical alternative to `matchMedia()`.
+For common use cases, `window.matchMedia()` is the most widely supported solution for detecting user preferences from JavaScript.
 
 ## User Preferences API
 
-The **User Preferences API** is an experimental API that aims to provide richer access to user preferences from JavaScript.
+The **User Preferences API** is an experimental API defined by **CSS Media Queries Level 5**. It provides programmatic access to preferences associated with certain *media features* and can be used to request overrides of these preferences from JavaScript.
 
-Whereas CSS *media features* are primarily intended to adapt the presentation of an interface, this API provides programmatic access to user preferences through the `navigator.preferences` object. In particular, it allows applications to observe preference changes while the user is interacting with the page.
+The API is exposed through the `navigator.preferences` object. It provides objects corresponding to preferences such as color scheme, contrast, reduced motion, reduced transparency, and reduced data. These objects can be used to read the current preference value, observe preference changes, and, where supported, request an override.
 
-At the time of writing, the API remains experimental and has limited browser support. For most use cases, `window.matchMedia()` remains the most widely supported solution.
+However, this API is not a general-purpose alternative to `window.matchMedia()`. It remains experimental and has limited browser support. For simply detecting a preference in order to adapt the behavior of an interface, `window.matchMedia()` remains the solution to prefer in most cases.
 
 ## Combining multiple user preferences
 

@@ -20,9 +20,7 @@ Cet article présente les principales *media features* de préférences utilisat
 
 *À retenir :* les *media features* présentées dans cet article sont définies par la spécification **CSS Media Queries Level 5**. En revanche, leur niveau de prise en charge varie selon les navigateurs et les plateformes. Leur utilisation n'est pas systématiquement exigée par les **WCAG**, le **RGAA** ou la norme **EN 301 549** (même si elle peut contribuer à satisfaire certains critères), mais constitue une bonne pratique pour concevoir des interfaces capables de s'adapter aux préférences exprimées par les utilisateurs.
 
-**Évolution de la norme**
-
-La version [EN 301 549 v4.1.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf), publiée en septembre 2026, introduit notamment la clause **9.7 « User preferences for web pages »**, qui impose aux pages Web de ne pas bloquer les modes de fonctionnement du user agent permettant de respecter les préférences utilisateur, ni d'outrepasser explicitement certaines préférences d'accessibilité de la plateforme, sauf lorsque cela est essentiel à l'information ou à la fonction de la page.
+**Évolution de la norme :** la version [EN 301 549 v4.1.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf), publiée en septembre 2026, introduit notamment la clause **9.7 « User preferences for web pages »**, qui impose aux pages Web de ne pas bloquer les modes de fonctionnement du user agent permettant de respecter les préférences utilisateur, ni d'outrepasser explicitement certaines préférences d'accessibilité de la plateforme, sauf lorsque cela est essentiel à l'information ou à la fonction de la page.
 
 Au moment de la rédaction de cet article, cette version n'est pas encore référencée au **Journal officiel de l'Union européenne**. Elle ne remplace donc pas encore **EN 301 549 v3.2.1** en tant que version harmonisée ayant une portée juridique au niveau européen.
 
@@ -194,7 +192,7 @@ La spécification définit les valeurs suivantes :
 
 ### Cas d'usage
 
-Cette *media feature* peut notamment être utilisée lorsque l'interface comporte des effets de transparence, des arrière-plans flous ou d'autres éléments translucides susceptibles d'être simplifiés.
+Cette *media feature* peut être utilisée pour prévoir des adaptations lorsque des ressources importantes, comme des vidéos ou des animations, peuvent être remplacées par des alternatives plus légères. Sa prise en charge étant actuellement inexistante dans les agents utilisateurs, elle ne peut toutefois pas être considérée comme un mécanisme utilisable en production aujourd'hui.
 
 ### Bonnes pratiques
 
@@ -247,14 +245,14 @@ Les ressources suivantes permettent de suivre l'état des implémentations :
 
 Les informations suivantes reflètent un état général des implémentations au moment de la rédaction de cet article.
 
-| *Media feature*                | Niveau général de prise en charge                                              |
-| ------------------------------ | ------------------------------------------------------------------------------ |
-| `prefers-reduced-motion`       | Large prise en charge                                                          |
-| `prefers-color-scheme`         | Large prise en charge                                                          |
-| `forced-colors`                | Bonne prise en charge mais principalement pertinente sur certaines plateformes |
-| `prefers-contrast`             | Prise en charge variable selon les navigateurs et les valeurs                  |
-| `prefers-reduced-transparency` | Prise en charge limitée                                                        |
-| `prefers-reduced-data`         | Prise en charge limitée                                                        |
+| *Media feature*                | Niveau général de prise en charge                                                         |
+| ------------------------------ | ------------------------------------------------------------------------------------------|
+| `prefers-reduced-motion`       | Large prise en charge                                                                     |
+| `prefers-color-scheme`         | Large prise en charge                                                                     |
+| `forced-colors`                | Bonne prise en charge mais principalement pertinente sur certaines plateformes            |
+| `prefers-contrast`             | Largement pris en charge, bien que la prise en charge de certaines valeurs puisse varier  |
+| `prefers-reduced-transparency` | Prise en charge limitée                                                                   |
+| `prefers-reduced-data`         | Non pris en charge actuellement                                                           |
 
 Ces indications sont données à titre informatif. Elles peuvent évoluer selon les versions des navigateurs, les systèmes d'exploitation et les environnements d'exécution.
 
@@ -262,7 +260,7 @@ Ces indications sont données à titre informatif. Elles peuvent évoluer selon 
 
 Les préférences utilisateur sont avant tout destinées à être utilisées dans les feuilles de styles CSS grâce aux *media queries*. Dans certains cas, il peut toutefois être nécessaire d'adapter également le comportement de l'interface depuis JavaScript.
 
-`window.matchMedia()` permet d'interroger les mêmes *media queries* que celles utilisées en CSS et de réagir lorsque leur résultat évolue.
+`window.matchMedia()` permet d'interroger les mêmes *media queries* que celles utilisées en CSS. La propriété `matches` permet de vérifier si une *media query* correspond à l'état actuel, tandis que l'événement `change` permet de réagir lorsque ce résultat évolue.
 
 ```javascript
 const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -272,15 +270,15 @@ if (mediaQuery.matches) {
 }
 ```
 
-À plus long terme, la **User Preferences API** vise à offrir un accès plus riche aux préférences utilisateur depuis JavaScript. Elle reste toutefois expérimentale et ne constitue pas aujourd'hui une alternative à `matchMedia()`.
+Pour les besoins courants, `window.matchMedia()` constitue la solution la plus largement compatible pour détecter les préférences utilisateur depuis JavaScript.
 
 ## User Preferences API
 
-La **User Preferences API** est une API expérimentale qui vise à fournir un accès plus riche aux préférences utilisateur depuis JavaScript.
+La **User Preferences API** est une API expérimentale définie par **CSS Media Queries Level 5**. Elle fournit un accès programmatique aux préférences associées à certaines *media features* et permet notamment de demander une surcharge de ces préférences depuis JavaScript.
 
-Alors que les *media features* CSS permettent principalement d'adapter la présentation de l'interface, cette API fournit un accès programmatique aux préférences utilisateur via l'objet `navigator.preferences`. Elle permet notamment d'observer les changements de préférences au cours de la navigation.
+L'API est accessible via l'objet `navigator.preferences`. Elle fournit notamment des objets correspondant aux préférences de thème de couleurs, de contraste, de réduction des mouvements, de réduction de la transparence et de réduction des données. Ces objets permettent de consulter la valeur de la préférence, d'observer ses changements et, lorsque cela est pris en charge, de demander une surcharge.
 
-À ce jour, cette API reste expérimentale et son niveau de prise en charge est limité. Pour les besoins courants, `window.matchMedia()` demeure la solution la plus largement compatible.
+Cette API ne constitue toutefois pas une alternative courante à `window.matchMedia()`. Elle reste expérimentale et sa prise en charge par les navigateurs est limitée. Pour simplement détecter une préférence afin d'adapter le comportement d'une interface, `window.matchMedia()` reste généralement la solution à privilégier.
 
 ## Combiner plusieurs préférences utilisateur
 
