@@ -2,7 +2,7 @@
 title: "Media queries et préférences utilisateur"
 abstract: "Les media features de préférences utilisateur permettent d'adapter une interface en fonction des préférences exprimées par l'utilisateur. Définies par la spécification CSS Media Queries Level 5, elles permettent notamment de prendre en compte la réduction des animations, le contraste, le thème clair ou sombre, les couleurs forcées, la transparence et la réduction de la consommation de données."
 titleBeforeTag: true
-date: "2026-07-21"
+date: "2026-09-23"
 tags:
   - web
   - advanced
@@ -117,7 +117,7 @@ La *media feature* `prefers-color-scheme` indique la préférence de l'utilisate
 ### Valeurs définies par la spécification
 
 La spécification définit les valeurs suivantes :
-- `light` : l'utilisateur a exprimé une préférence pour un thème clair ou n'a exprimé aucune préférence particulière ;
+- `light` : l'utilisateur a indiqué préférer une interface avec un thème clair, ou n'a exprimé aucune préférence active ;
 - `dark` : l'utilisateur a exprimé une préférence pour un thème sombre.
 
 ### Exemple
@@ -133,11 +133,11 @@ La spécification définit les valeurs suivantes :
 
 ### Cas d'usage
 
-Cette *media feature* peut notamment être utilisée lorsqu'une interface propose plusieurs thèmes de couleur ou lorsque son apparence doit s'adapter automatiquement au thème choisi par l'utilisateur.
+Cette *media feature* peut être utilisée lorsqu'une interface propose plusieurs thèmes de couleurs ou lorsque son apparence doit s'adapter automatiquement au thème de couleurs préféré par l'utilisateur.
 
 ### Bonnes pratiques
 
-La conception d'un thème sombre ne consiste pas à inverser mécaniquement les couleurs d'un thème clair. Les couleurs du texte, des icônes et des éléments interactifs doivent être soigneusement choisies pour maintenir un contraste suffisant et une bonne lisibilité. Les deux thèmes devraient être systématiquement testés afin de vérifier que les contrastes, les états interactifs et la lisibilité restent satisfaisants dans chaque mode.
+Concevoir un thème sombre ne consiste pas simplement à inverser mécaniquement les couleurs d'un thème clair. Les textes, les icônes et les éléments interactifs doivent être conçus avec soin afin de conserver un contraste suffisant et une bonne lisibilité. Les deux thèmes doivent être testés afin de vérifier que le contraste, les états interactifs et la lisibilité restent satisfaisants dans chaque mode.
 
 ## `forced-colors`
 
@@ -308,7 +308,9 @@ L'objectif n'est pas de créer plusieurs versions d'une même interface, mais d'
 
 ### 3. Respecter les préférences exprimées
 
-Les préférences détectées traduisent un choix explicite de l'utilisateur ou une préférence déterminée automatiquement par son environnement d'exécution. Lorsqu'elles sont disponibles, elles devraient être prises en compte lors de la conception de l'interface
+Les préférences détectées traduisent un choix explicite de l'utilisateur ou une préférence déterminée automatiquement par son environnement d'exécution. Lorsqu'elles sont disponibles, elles devraient être prises en compte lors de la conception de l'interface et ne devraient pas être explicitement outrepassées, sauf lorsque cela est essentiel à l'information ou à la fonction de la page.
+
+Ce principe est également reflété par la clause **9.7 « User preferences for web pages »** d'**EN 301 549 v4.1.1**, qui encadre le blocage ou l'outrepassement explicite des préférences utilisateur pour les pages Web.
 
 ### 4. Tester sur plusieurs plateformes
 
@@ -396,11 +398,13 @@ Les *media features* de préférences utilisateur constituent un outil puissant 
 
 Elles permettent de tenir compte de besoins concrets exprimés directement par les utilisateurs : réduction des animations, augmentation du contraste, adaptation des couleurs, diminution des effets visuels ou optimisation de la consommation de données.
 
-Leur mise en œuvre est généralement simple, mais leur impact sur le confort d'utilisation peut être considérable.
+Leur mise en œuvre est généralement simple, mais leur impact sur le confort d'utilisation peut être considérable. Bien mises en œuvre, ces adaptations peuvent améliorer significativement l'expérience de nombreux utilisateurs.
 
-Bien mises en œuvre, ces adaptations peuvent améliorer significativement l'expérience de nombreux utilisateurs.
+Les *media features* de préférences utilisateur illustrent une évolution importante du Web : plutôt que de s'adapter uniquement aux caractéristiques techniques des appareils, les interfaces peuvent désormais tenir compte des préférences exprimées par leurs utilisateurs.
 
-Les *media features* de préférences utilisateur illustrent une évolution importante du Web : plutôt que de s'adapter uniquement aux caractéristiques techniques des appareils, les interfaces peuvent désormais tenir compte des préférences exprimées par leurs utilisateurs. Elles participent ainsi à la conception d'expériences plus personnalisables, plus confortables et, dans de nombreux cas, plus accessibles.
+Cependant, détecter une préférence ne constitue qu'une première étape. Une mise en œuvre accessible doit également veiller à ce que l'interface réponde correctement à cette préférence et n'empêche pas inutilement l'agent utilisateur d'appliquer les adaptations correspondantes.
+
+Utilisées de manière réfléchie et testées dans les environnements pertinents, les *media features* de préférences utilisateur contribuent ainsi à concevoir des interfaces plus adaptatives, plus confortables et, dans de nombreux cas, plus accessibles.
 
 ## Webographie
 

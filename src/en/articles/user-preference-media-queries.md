@@ -2,7 +2,7 @@
 title: "Media queries and user preferences"
 abstract: "User preference media features allow interfaces to adapt to preferences expressed by users. Defined by the CSS Media Queries Level 5 specification, they make it possible to adapt an interface based on user preferences such as reduced motion, increased contrast, light or dark color schemes, forced colors, reduced transparency, and reduced data usage."
 titleBeforeTag: true
-date: "2026-07-21"
+date: "2026-09-23"
 tags:
   - web
   - advanced
@@ -22,7 +22,7 @@ This article covers the main user preference *media features* defined by **Media
 
 **Standard update**
 
-[EN 301 549 v4.1.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf), published in September 2026, introduces a new clause, **9.7 “User preferences for web pages”**, which requires web pages not to block user-agent modes of operation that respect user preferences, or explicitly override certain platform accessibility preferences, unless this is essential to the information or function of the web page.
+[EN 301 549 v4.1.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf), published in September 2026, introduces a new clause, **9.7 "User preferences for web pages"**, which requires web pages not to block user-agent modes of operation that respect user preferences, or explicitly override certain platform accessibility preferences, unless this is essential to the information or function of the web page.
 
 At the time of writing, this version has not yet been referenced in the **Official Journal of the European Union**. It therefore does not yet replace **EN 301 549 v3.2.1** as the harmonised standard with legal effect at European level.
 
@@ -117,8 +117,8 @@ The `prefers-color-scheme` *media feature* indicates the user's preferred color 
 ### Values defined by the specification
 
 The specification defines the following values:
-- `light`: the user has expressed a preference for a light color scheme or has not expressed any particular preference;
-- `dark`: the user has expressed a preference for a dark color scheme.
+- `light`: the user has indicated a preference for a light theme, or has not expressed an active preference;
+- `dark`: the user has indicated a preference for a dark theme.
 
 ### Example
 
@@ -170,7 +170,7 @@ When specific adjustments are required, the `forced-color-adjust` property allow
 
 It should be used sparingly. In particular, it should not be used simply to preserve the visual appearance defined by the page when doing so prevents the user from benefiting from adaptations related to their display preferences.
 
-**EN 301 549 v4.1.1** introduces clause **9.7 “User preferences for web pages”**, which addresses mechanisms that explicitly override platform accessibility preferences. It requires such preferences not to be overridden unless doing so is essential to the information or function of the web page. `forced-color-adjust` is explicitly cited as an example of such a mechanism.
+**EN 301 549 v4.1.1** introduces clause **9.7 "User preferences for web pages"**, which addresses mechanisms that explicitly override platform accessibility preferences. It requires such preferences not to be overridden unless doing so is essential to the information or function of the web page. `forced-color-adjust` is explicitly cited as an example of such a mechanism.
 
 ## `prefers-reduced-transparency`
 
@@ -312,7 +312,7 @@ The goal is not to create multiple versions of the same interface, but to adapt 
 
 Detected preferences reflect either an explicit user choice or a preference determined automatically by the user's runtime environment. They should be taken into account when designing the interface, and should not be explicitly overridden unless doing so is essential to the information or function of the page.
 
-This principle is also reflected in **EN 301 549 v4.1.1**, whose clause **9.7 “User preferences for web pages”** addresses the blocking or explicit overriding of user preferences for web pages.
+This principle is also reflected in **EN 301 549 v4.1.1**, whose clause **9.7 "User preferences for web pages"** addresses the blocking or explicit overriding of user preferences for web pages.
 
 ### 4. Test across multiple platforms
 
@@ -368,7 +368,7 @@ It can:
 
 Support for a *media feature* alone does not guarantee that an interface actually respects the user's preference. It is also necessary to verify that the page does not block adaptations made by the user agent or explicitly override platform accessibility preferences without justification.
 
-Clause **9.7 “User preferences for web pages”** of **EN 301 549 v4.1.1** addresses these behaviors. During an audit, particular attention can be paid to mechanisms that replace or prevent user-agent adaptations, such as `forced-color-adjust: none`.
+Clause **9.7 "User preferences for web pages"** of **EN 301 549 v4.1.1** addresses these behaviors. During an audit, particular attention can be paid to mechanisms that replace or prevent user-agent adaptations, such as `forced-color-adjust: none`.
 
 ## Common mistakes found during accessibility audits
 
@@ -398,11 +398,13 @@ User preference *media features* provide a powerful way to make interfaces more 
 
 They make it possible to accommodate concrete user needs, such as reduced motion, increased contrast, color scheme preferences, reduced transparency, or reduced data usage.
 
-Their implementation is generally straightforward, yet their impact on user comfort can be significant.
+Their implementation is generally straightforward, yet their impact on user comfort can be significant. When implemented thoughtfully, these adaptations can improve the experience of many users.
 
-When implemented thoughtfully, these adaptations can significantly improve the experience of many users.
+User preference *media features* also illustrate an important evolution of the Web. Rather than adapting only to the technical characteristics of a device, interfaces can now respond to preferences expressed by their users.
 
-User preference *media features* also illustrate an important evolution of the Web. Rather than adapting only to the technical characteristics of a device, interfaces can now respond to preferences expressed by their users. As a result, they contribute to creating experiences that are more personalized, more comfortable, and, in many cases, more accessible.
+However, detecting a preference is only the first step. An accessible implementation must also ensure that the interface responds appropriately to that preference and does not unnecessarily prevent the user agent from applying the corresponding adaptations.
+
+Used thoughtfully and tested across relevant environments, user preference *media features* contribute to creating interfaces that are more adaptable, more comfortable, and, in many cases, more accessible.
 
 ## References
 
