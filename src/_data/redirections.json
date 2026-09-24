@@ -1608,6 +1608,14 @@
     "new": "/fr/contenu-et-communication/checklist-incontournables"
   },
   {
+    "old": "/fr/articles/explorateur-de-fichiers/",
+    "new": "/fr/articles/"
+  },
+  {
+    "old": "/en/articles/file-explorer/",
+    "new": "/en/articles/"
+  },  
+  {
     "old": "/fr/articles/boites-de-dialogue/1/",
     "new": "/fr/articles/fenetres-modales/"
   },
