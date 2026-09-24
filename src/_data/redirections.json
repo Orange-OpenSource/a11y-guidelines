@@ -1606,5 +1606,21 @@
   {
     "old": "/fr/contenu-et-communication/incontournables",
     "new": "/fr/contenu-et-communication/checklist-incontournables"
+  },
+  {
+    "old": "/fr/articles/boites-de-dialogue/1/",
+    "new": "/fr/articles/fenetres-modales/"
+  },
+  {
+    "old": "/fr/articles/boites-de-dialogue/2/",
+    "new": "/fr/articles/fenetres-modales/"
+  },
+  {
+    "old": "/en/articles/dialogs/1/",
+    "new": "/en/articles/modal-dialogs/"
+  },
+  {
+    "old": "/en/articles/dialogs/1/",
+    "new": "/en/articles/modal-dialogs/"
   }
 ]
