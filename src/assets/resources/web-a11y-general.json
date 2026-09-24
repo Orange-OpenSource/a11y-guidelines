@@ -1,0 +1,161 @@
+{
+    "urls": [
+      {
+        "name": "Web accessibility checklist - MagentaA11y",
+        "url": "https://www.magentaa11y.com/web-accessibility-checklist"
+      },
+      {
+        "name": "Accessibility checklist - AtomicA11y",
+        "url": "https://atomic-a11y.com/accessibility-checklist"
+      },
+      {
+        "name": "Web UI Storybook / Introduction - Docs",
+        "url": "https://storybook.js.org/docs/react/get-started/introduction"
+      },
+      {
+        "name": "Blog – Loriane Buffet – Intégratrice web",
+        "url": "https://loriane-buffet.com"
+      },
+      {
+        "name": "Les notices AcceDe Web (version 4) - AcceDe Web",
+        "url": "https://www.accede-web.com/notices"
+      },
+      {
+        "name": "A11Y Style Guide",
+        "url": "https://a11y-style-guide.com"
+      },
+      {
+        "name": "Guide de l'intégrateur RGAA 3",
+        "url": "https://www.rgaa.gouv.fr"
+      },
+      {
+        "name": "Page d'accueil - Access & Use",
+        "url": "https://accessanduse.com"
+      },
+      {
+        "name": "Web Accessible Code Libraries and Design Patterns – Web Axe",
+        "url": "https://webaxe.org"
+      },
+      {
+        "name": "Inclusive Components Block Links, Cards, Clickable Regions, Rows, Etc. — Adrian Roselli",
+        "url": "https://adrianroselli.com/inclusive-components"
+      },
+      {
+        "name": "Welcome to the Accessibility Developer Guide! - ADG",
+        "url": "https://accessibilitydeveloper.org"
+      },
+      {
+        "name": "Style with Stateful, Semantic Selectors | Ben Myers",
+        "url": "https://benmyers.com/style-with-stateful-selectors"
+      },
+      {
+        "name": "Exemples de composants : modales, toggle, accordion, tabs",
+        "url": "https://codepen.io/collection/jbWmoO?cursor=eyJjb2xsZWN0aW9uX2lkIjoiamJXbW9PIiwiY29sbGVjdGlvbl90b2tlbiI6bnVsbCwibGltaXQiOjQsIm1heF9pdGVtcyI6NSwib2Zmc2V0IjowLCJwYWdlIjoxLCJzb3J0X2J5IjoicG9zaXRpb24iLCJzb3J0X29yZGVyIjoiQXNjIn0="
+      },
+      {
+        "name": "101 Digital Accessibility (a11y) tips and tricks - DEV Community",
+        "url": "https://dev.to/digital-accessibility-tips"
+      },
+      {
+        "name": "Web Accessibility: A Reference to Creating Inclusive Websites",
+        "url": "https://inclusive-web.com"
+      },
+      {
+        "name": "Lost in Translation: Tips for Multilingual Web Accessibility | Ben Myers",
+        "url": "https://benmyers.com/multilingual-accessibility"
+      },
+      {
+        "name": "Textes barrés",
+        "url": "http://www.webaxe.org/strikethrough-html-accessibility/"
+      },
+      {
+        "name": "Markup from hell - HTMHell",
+        "url": "https://htmhell.com"
+      },
+      {
+        "name": "Components – GOV.UK Design System",
+        "url": "https://design-system.service.gov.uk/components"
+      },
+      {
+        "name": "Tous les articles Loriane on CodePen",
+        "url": "https://codepen.io/loriane"
+      },
+      {
+        "name": "Copy and Paste Accessible Code | Mike Mai",
+        "url": "https://mikemai.com/copy-paste-accessible-code"
+      },
+      {
+        "name": "Fix my code: AI-Powered Code Optimization for Compliance A11y - a Collection by Melanie Sumner on CodePen",
+        "url": "https://codepen.io/melaniesumner/fix-my-code"
+      },
+      {
+        "name": "USWDS: The United States Web Design System | U.S. Web Design System (USWDS)",
+        "url": "https://designsystem.digital.gov"
+      },
+      {
+        "name": "The personal Web site of Sara Soueidan — inclusive design engineer and trainer – Sara Soueidan",
+        "url": "https://sarasoueidan.com"
+      },
+      {
+        "name": "Heydon Pickering | BBC GEL Technical Documentation",
+        "url": "https://www.bbc.co.uk/guidelines/futuremedia/accessibility"
+      },
+      {
+        "name": "Parampreet Singh – Medium",
+        "url": "https://medium.com/@parampreet"
+      },
+      {
+        "name": "Reprise de focus et accessibilité – Access42",
+        "url": "https://access42.net/reprise-de-focus"
+      },
+      {
+        "name": "Restitution de aria-labelledby et aria-describedby avec un texte caché (aria-hidden) – Access42",
+        "url": "https://access42.net/restitution-aria"
+      },
+      {
+        "name": "HTML test file index",
+        "url": "https://thepaciellogroup.github.io/AT-browser-tests/"
+      },
+      {
+        "name": "HTML5 Kitchen-sink",
+        "url": "https://codepen.io/dbox/pen/gMbeYw?editors=1100"
+      },
+      {
+        "name": "Carie Fisher on CodePen",
+        "url": "https://codepen.io/carie-fisher"
+      },
+      {
+        "name": "Why are my live regions not working? - TetraLogical",
+        "url": "https://tetralogical.com/live-regions"
+      },
+      {
+        "name": "When to use tabindex='0' - TetraLogical",
+        "url": "https://tetralogical.com/tabindex-zero"
+      },
+      {
+        "name": "Inclusive Components",
+        "url": "https://inclusive-components.com"
+      },
+      {
+        "name": "100 days of A11y",
+        "url": "https://100daysofa11y.com"
+      },
+      {
+        "name": "Create an accessible combobox using ARIA - Pope Tech Blog",
+        "url": "https://blog.pope.tech/accessible-combobox"
+      },
+      {
+        "name": "scottaohara/accessible_components: Listing of accessible components & patterns",
+        "url": "https://github.com/scottaohara/accessible_components"
+      },
+      {
+        "name": "Accessible Cards Components - Block Links (Passes SC 2.5.3)",
+        "url": "https://codepen.io/rfentress/pen/WNqdgzO"
+      },
+      {
+        "name": "A Step-By-Step Guide To Building Accessible Carousels — Smashing Magazine",
+        "url": "https://www.smashingmagazine.com/accessible-carousels"
+      }
+    ]
+  }
+  
