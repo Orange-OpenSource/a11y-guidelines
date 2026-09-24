@@ -1606,5 +1606,13 @@
   {
     "old": "/fr/contenu-et-communication/incontournables",
     "new": "/fr/contenu-et-communication/checklist-incontournables"
+  },
+  {
+    "old": "/fr/articles/explorateur-de-fichiers/",
+    "new": "/fr/articles/"
+  },
+  {
+    "old": "/en/articles/file-explorer/",
+    "new": "/en/articles/"
   }
 ]
