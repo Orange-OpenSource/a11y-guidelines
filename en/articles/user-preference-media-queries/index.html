@@ -206,11 +206,11 @@
 <p><em>Key takeaway:</em> the <em>media features</em> presented in this article are defined by the <strong>CSS Media Queries Level 5</strong> specification. However, browser support varies across browsers and platforms. Their use is not systematically required by <strong>WCAG</strong>, <strong>RGAA</strong>, or <strong>EN 301 549</strong> (although they may contribute to meeting certain criteria), but is considered a best practice for designing interfaces that adapt to user preferences.</p>
 <p><strong>Standard update:</strong> <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf">EN 301 549 v4.1.1</a>, published in September 2026, introduces a new clause, <strong>9.7 &quot;User preferences for web pages&quot;</strong>, which requires web pages not to block user-agent modes of operation that respect user preferences, or explicitly override certain platform accessibility preferences, unless this is essential to the information or function of the web page.</p>
 <p>At the time of writing, this version has not yet been referenced in the <strong>Official Journal of the European Union</strong>. It therefore does not yet replace <strong>EN 301 549 v3.2.1</strong> as the harmonised standard with legal effect at European level.</p>
-<h2 id="why-were-these-media-features-introduced" tabindex="-1" class="h2-focus">Why were these media features introduced? <a class="header-anchor" href="#why-were-these-media-features-introduced" id="heading-235" aria-labelledby="heading-235">#</a></h2>
+<h2 id="why-were-these-media-features-introduced" tabindex="-1" class="h2-focus">Why were these media features introduced? <a class="header-anchor" href="#why-were-these-media-features-introduced" id="heading-146" aria-labelledby="heading-146">#</a></h2>
 <p>Early versions of <em>media queries</em> were primarily designed to adapt an interface to the characteristics of the user's device, such as its screen width, orientation, or resolution.</p>
 <p><strong>CSS Media Queries Level 5</strong> expands this approach. In addition to device characteristics, media queries can now take <strong>user preferences</strong> into account, such as reduced motion, light or dark color schemes, contrast, or forced colors. These preferences may be defined by the browser, inherited from the operating system settings, or, in some cases, determined automatically by the user agent.</p>
 <p>This evolution reflects a broader shift toward more adaptive interfaces. Rather than presenting the same interface to every user, web applications can adjust certain aspects of their presentation to better align with the user's display preferences.</p>
-<h2 id="the-main-user-preference-media-features" tabindex="-1" class="h2-focus">The main user preference <em>media features</em> <a class="header-anchor" href="#the-main-user-preference-media-features" id="heading-236" aria-labelledby="heading-236">#</a></h2>
+<h2 id="the-main-user-preference-media-features" tabindex="-1" class="h2-focus">The main user preference <em>media features</em> <a class="header-anchor" href="#the-main-user-preference-media-features" id="heading-147" aria-labelledby="heading-147">#</a></h2>
 <p>The main <em>media features</em> defined by <strong>CSS Media Queries Level 5</strong> are summarized in the table below.</p>
 <table>
 <thead>
@@ -248,28 +248,28 @@
 </table>
 <p>The following sections describe how each of these <em>media features</em> works, the values defined by the specification, their main use cases, and the key implementation considerations. Some of these values are not supported by all browsers.</p>
 <p><em>Note:</em> this article is based on the current version of the <strong>CSS Media Queries Level 5</strong> specification. Some older documentation or articles may refer to values that are no longer part of the current specification, such as <code>no-preference</code> for <code>prefers-color-scheme</code>.</p>
-<h2 id="prefers-reduced-motion" tabindex="-1" class="h2-focus"><code>prefers-reduced-motion</code> <a class="header-anchor" href="#prefers-reduced-motion" id="heading-237" aria-labelledby="heading-237">#</a></h2>
+<h2 id="prefers-reduced-motion" tabindex="-1" class="h2-focus"><code>prefers-reduced-motion</code> <a class="header-anchor" href="#prefers-reduced-motion" id="heading-148" aria-labelledby="heading-148">#</a></h2>
 <p>The <code>prefers-reduced-motion</code> <em>media feature</em> indicates whether the user has expressed a preference for reducing animations and motion effects. It allows these effects to be adapted when such a preference is expressed.</p>
-<h3 id="values-defined-by-the-specification" tabindex="-1">Values defined by the specification <a class="header-anchor" href="#values-defined-by-the-specification" id="heading-238" aria-labelledby="heading-238">#</a></h3>
+<h3 id="values-defined-by-the-specification" tabindex="-1">Values defined by the specification <a class="header-anchor" href="#values-defined-by-the-specification" id="heading-149" aria-labelledby="heading-149">#</a></h3>
 <p>The specification defines the following values:</p>
 <ul>
 <li><code>reduce</code>: the user has expressed a preference for reducing animations and motion effects;</li>
 <li><code>no-preference</code>: no particular preference has been expressed.</li>
 </ul>
-<h3 id="example" tabindex="-1">Example <a class="header-anchor" href="#example" id="heading-239" aria-labelledby="heading-239">#</a></h3>
+<h3 id="example" tabindex="-1">Example <a class="header-anchor" href="#example" id="heading-150" aria-labelledby="heading-150">#</a></h3>
 <pre><code class="language-css">@media (prefers-reduced-motion: reduce) {
   .animated-element {
     animation: none;
   }
 }
 </code></pre>
-<h3 id="use-cases" tabindex="-1">Use cases <a class="header-anchor" href="#use-cases" id="heading-240" aria-labelledby="heading-240">#</a></h3>
+<h3 id="use-cases" tabindex="-1">Use cases <a class="header-anchor" href="#use-cases" id="heading-151" aria-labelledby="heading-151">#</a></h3>
 <p>This <em>media feature</em> can be used when an interface includes animations, transitions, parallax effects, or other types of motion that can be reduced.</p>
-<h3 id="best-practices" tabindex="-1">Best practices <a class="header-anchor" href="#best-practices" id="heading-241" aria-labelledby="heading-241">#</a></h3>
+<h3 id="best-practices" tabindex="-1">Best practices <a class="header-anchor" href="#best-practices" id="heading-152" aria-labelledby="heading-152">#</a></h3>
 <p>Reducing motion does not necessarily mean removing every animation. Animations that contribute to understanding the interface may be preserved, while purely decorative animations can be reduced, simplified, or removed.</p>
-<h2 id="prefers-contrast" tabindex="-1" class="h2-focus"><code>prefers-contrast</code> <a class="header-anchor" href="#prefers-contrast" id="heading-242" aria-labelledby="heading-242">#</a></h2>
+<h2 id="prefers-contrast" tabindex="-1" class="h2-focus"><code>prefers-contrast</code> <a class="header-anchor" href="#prefers-contrast" id="heading-153" aria-labelledby="heading-153">#</a></h2>
 <p>The <code>prefers-contrast</code> <em>media feature</em> indicates the user's preference regarding the contrast level of the interface. It allows the presentation of the interface to be adapted accordingly.</p>
-<h3 id="values-defined-by-the-specification-1" tabindex="-1">Values defined by the specification <a class="header-anchor" href="#values-defined-by-the-specification-1" id="heading-243" aria-labelledby="heading-243">#</a></h3>
+<h3 id="values-defined-by-the-specification-1" tabindex="-1">Values defined by the specification <a class="header-anchor" href="#values-defined-by-the-specification-1" id="heading-154" aria-labelledby="heading-154">#</a></h3>
 <p>The specification defines the following values:</p>
 <ul>
 <li><code>no-preference</code>: the user has not expressed any particular preference;</li>
@@ -277,7 +277,7 @@
 <li><code>less</code>: the user has expressed a preference for a lower level of contrast;</li>
 <li><code>custom</code>: the user has defined a custom contrast mode.</li>
 </ul>
-<h3 id="example-1" tabindex="-1">Example <a class="header-anchor" href="#example-1" id="heading-244" aria-labelledby="heading-244">#</a></h3>
+<h3 id="example-1" tabindex="-1">Example <a class="header-anchor" href="#example-1" id="heading-155" aria-labelledby="heading-155">#</a></h3>
 <pre><code class="language-css">@media (prefers-contrast: more) {
   body {
     background: white;
@@ -285,19 +285,19 @@
   }
 }
 </code></pre>
-<h3 id="use-cases-1" tabindex="-1">Use cases <a class="header-anchor" href="#use-cases-1" id="heading-245" aria-labelledby="heading-245">#</a></h3>
+<h3 id="use-cases-1" tabindex="-1">Use cases <a class="header-anchor" href="#use-cases-1" id="heading-156" aria-labelledby="heading-156">#</a></h3>
 <p>This <em>media feature</em> can be used when an interface needs to adjust the contrast of its colors, emphasize or de-emphasize certain graphical elements, or adapt its presentation based on the user's expressed preference.</p>
-<h3 id="best-practices-1" tabindex="-1">Best practices <a class="header-anchor" href="#best-practices-1" id="heading-246" aria-labelledby="heading-246">#</a></h3>
+<h3 id="best-practices-1" tabindex="-1">Best practices <a class="header-anchor" href="#best-practices-1" id="heading-157" aria-labelledby="heading-157">#</a></h3>
 <p>A contrast preference does not simply mean increasing or decreasing the contrast of every color. Adaptations should primarily improve the perceptibility of content and interactive elements while maintaining a consistent and readable interface.</p>
-<h2 id="prefers-color-scheme" tabindex="-1" class="h2-focus"><code>prefers-color-scheme</code> <a class="header-anchor" href="#prefers-color-scheme" id="heading-247" aria-labelledby="heading-247">#</a></h2>
+<h2 id="prefers-color-scheme" tabindex="-1" class="h2-focus"><code>prefers-color-scheme</code> <a class="header-anchor" href="#prefers-color-scheme" id="heading-158" aria-labelledby="heading-158">#</a></h2>
 <p>The <code>prefers-color-scheme</code> <em>media feature</em> indicates the user's preferred color scheme for the interface. It allows the interface to adapt its presentation accordingly.</p>
-<h3 id="values-defined-by-the-specification-2" tabindex="-1">Values defined by the specification <a class="header-anchor" href="#values-defined-by-the-specification-2" id="heading-248" aria-labelledby="heading-248">#</a></h3>
+<h3 id="values-defined-by-the-specification-2" tabindex="-1">Values defined by the specification <a class="header-anchor" href="#values-defined-by-the-specification-2" id="heading-159" aria-labelledby="heading-159">#</a></h3>
 <p>The specification defines the following values:</p>
 <ul>
 <li><code>light</code>: the user has indicated a preference for a light theme, or has not expressed an active preference;</li>
 <li><code>dark</code>: the user has indicated a preference for a dark theme.</li>
 </ul>
-<h3 id="example-2" tabindex="-1">Example <a class="header-anchor" href="#example-2" id="heading-249" aria-labelledby="heading-249">#</a></h3>
+<h3 id="example-2" tabindex="-1">Example <a class="header-anchor" href="#example-2" id="heading-160" aria-labelledby="heading-160">#</a></h3>
 <pre><code class="language-css">@media (prefers-color-scheme: dark) {
   body {
     background-color: #121212;
@@ -305,40 +305,40 @@
   }
 }
 </code></pre>
-<h3 id="use-cases-2" tabindex="-1">Use cases <a class="header-anchor" href="#use-cases-2" id="heading-250" aria-labelledby="heading-250">#</a></h3>
+<h3 id="use-cases-2" tabindex="-1">Use cases <a class="header-anchor" href="#use-cases-2" id="heading-161" aria-labelledby="heading-161">#</a></h3>
 <p>This <em>media feature</em> can be used when an interface provides multiple color schemes or when its appearance should automatically adapt to the user's preferred color scheme.</p>
-<h3 id="best-practices-2" tabindex="-1">Best practices <a class="header-anchor" href="#best-practices-2" id="heading-251" aria-labelledby="heading-251">#</a></h3>
+<h3 id="best-practices-2" tabindex="-1">Best practices <a class="header-anchor" href="#best-practices-2" id="heading-162" aria-labelledby="heading-162">#</a></h3>
 <p>Designing a dark theme is not simply a matter of mechanically inverting the colors of a light theme. Text, icons, and interactive elements should be carefully designed to maintain sufficient contrast and good readability. Both themes should be tested to ensure that contrast, interactive states, and readability remain satisfactory in each mode.</p>
-<h2 id="forced-colors" tabindex="-1" class="h2-focus"><code>forced-colors</code> <a class="header-anchor" href="#forced-colors" id="heading-252" aria-labelledby="heading-252">#</a></h2>
+<h2 id="forced-colors" tabindex="-1" class="h2-focus"><code>forced-colors</code> <a class="header-anchor" href="#forced-colors" id="heading-163" aria-labelledby="heading-163">#</a></h2>
 <p>The <code>forced-colors</code> <em>media feature</em> indicates whether a forced colors mode is currently active in the user agent. In this mode, some colors defined by the page may be replaced with system colors to respect the user's display preferences.</p>
-<h3 id="values-defined-by-the-specification-3" tabindex="-1">Values defined by the specification <a class="header-anchor" href="#values-defined-by-the-specification-3" id="heading-253" aria-labelledby="heading-253">#</a></h3>
+<h3 id="values-defined-by-the-specification-3" tabindex="-1">Values defined by the specification <a class="header-anchor" href="#values-defined-by-the-specification-3" id="heading-164" aria-labelledby="heading-164">#</a></h3>
 <p>The specification defines the following values:</p>
 <ul>
 <li><code>active</code>: a forced colors mode is active;</li>
 <li><code>none</code>: no forced colors mode is active.</li>
 </ul>
-<h3 id="example-3" tabindex="-1">Example <a class="header-anchor" href="#example-3" id="heading-254" aria-labelledby="heading-254">#</a></h3>
+<h3 id="example-3" tabindex="-1">Example <a class="header-anchor" href="#example-3" id="heading-165" aria-labelledby="heading-165">#</a></h3>
 <pre><code class="language-css">@media (forced-colors: active) {
   .custom-button {
     border: 1px solid ButtonText;
   }
 }
 </code></pre>
-<h3 id="use-cases-3" tabindex="-1">Use cases <a class="header-anchor" href="#use-cases-3" id="heading-255" aria-labelledby="heading-255">#</a></h3>
+<h3 id="use-cases-3" tabindex="-1">Use cases <a class="header-anchor" href="#use-cases-3" id="heading-166" aria-labelledby="heading-166">#</a></h3>
 <p>This <em>media feature</em> can be used when custom components need to adapt to forced colors mode, use system colors, or adjust their presentation to remain compatible with this mode.</p>
-<h3 id="best-practices-3" tabindex="-1">Best practices <a class="header-anchor" href="#best-practices-3" id="heading-256" aria-labelledby="heading-256">#</a></h3>
+<h3 id="best-practices-3" tabindex="-1">Best practices <a class="header-anchor" href="#best-practices-3" id="heading-167" aria-labelledby="heading-167">#</a></h3>
 <p>When specific adjustments are required, the <code>forced-color-adjust</code> property allows authors to control whether an element should be adapted when forced colors mode is active. Its <code>none</code> value prevents the user agent from replacing the colors of the affected element.</p>
 <p>It should be used sparingly. In particular, it should not be used simply to preserve the visual appearance defined by the page when doing so prevents the user from benefiting from adaptations related to their display preferences.</p>
 <p><strong>EN 301 549 v4.1.1</strong> introduces clause <strong>9.7 &quot;User preferences for web pages&quot;</strong>, which addresses mechanisms that explicitly override platform accessibility preferences. It requires such preferences not to be overridden unless doing so is essential to the information or function of the web page. <code>forced-color-adjust</code> is explicitly cited as an example of such a mechanism.</p>
-<h2 id="prefers-reduced-transparency" tabindex="-1" class="h2-focus"><code>prefers-reduced-transparency</code> <a class="header-anchor" href="#prefers-reduced-transparency" id="heading-257" aria-labelledby="heading-257">#</a></h2>
+<h2 id="prefers-reduced-transparency" tabindex="-1" class="h2-focus"><code>prefers-reduced-transparency</code> <a class="header-anchor" href="#prefers-reduced-transparency" id="heading-168" aria-labelledby="heading-168">#</a></h2>
 <p>The <code>prefers-reduced-transparency</code> <em>media feature</em> indicates whether the user has expressed a preference for reduced transparency. It allows certain visual effects to be adapted when this preference is expressed.</p>
-<h3 id="values-defined-by-the-specification-4" tabindex="-1">Values defined by the specification <a class="header-anchor" href="#values-defined-by-the-specification-4" id="heading-258" aria-labelledby="heading-258">#</a></h3>
+<h3 id="values-defined-by-the-specification-4" tabindex="-1">Values defined by the specification <a class="header-anchor" href="#values-defined-by-the-specification-4" id="heading-169" aria-labelledby="heading-169">#</a></h3>
 <p>The specification defines the following values:</p>
 <ul>
 <li><code>reduce</code>: the user has expressed a preference for reduced transparency;</li>
 <li><code>no-preference</code>: the user has not expressed any particular preference.</li>
 </ul>
-<h3 id="example-4" tabindex="-1">Example <a class="header-anchor" href="#example-4" id="heading-259" aria-labelledby="heading-259">#</a></h3>
+<h3 id="example-4" tabindex="-1">Example <a class="header-anchor" href="#example-4" id="heading-170" aria-labelledby="heading-170">#</a></h3>
 <pre><code class="language-css">@media (prefers-reduced-transparency: reduce) {
   .overlay {
     opacity: 1;
@@ -346,30 +346,30 @@
   }
 }
 </code></pre>
-<h3 id="use-cases-4" tabindex="-1">Use cases <a class="header-anchor" href="#use-cases-4" id="heading-260" aria-labelledby="heading-260">#</a></h3>
+<h3 id="use-cases-4" tabindex="-1">Use cases <a class="header-anchor" href="#use-cases-4" id="heading-171" aria-labelledby="heading-171">#</a></h3>
 <p>This <em>media feature</em> can be used when an interface includes transparency effects, blurred backgrounds, or other translucent elements that can be simplified.</p>
-<h3 id="best-practices-4" tabindex="-1">Best practices <a class="header-anchor" href="#best-practices-4" id="heading-261" aria-labelledby="heading-261">#</a></h3>
+<h3 id="best-practices-4" tabindex="-1">Best practices <a class="header-anchor" href="#best-practices-4" id="heading-172" aria-labelledby="heading-172">#</a></h3>
 <p>When a preference for reduced transparency is expressed, visual effects based on transparency can be replaced with opaque colors to improve the readability of the interface.</p>
-<h2 id="prefers-reduced-data" tabindex="-1" class="h2-focus"><code>prefers-reduced-data</code> <a class="header-anchor" href="#prefers-reduced-data" id="heading-262" aria-labelledby="heading-262">#</a></h2>
+<h2 id="prefers-reduced-data" tabindex="-1" class="h2-focus"><code>prefers-reduced-data</code> <a class="header-anchor" href="#prefers-reduced-data" id="heading-173" aria-labelledby="heading-173">#</a></h2>
 <p>The <code>prefers-reduced-data</code> <em>media feature</em> indicates whether the user has expressed a preference for reducing data usage. It allows the loading of certain resources to be adapted when this preference is expressed.</p>
-<h3 id="values-defined-by-the-specification-5" tabindex="-1">Values defined by the specification <a class="header-anchor" href="#values-defined-by-the-specification-5" id="heading-263" aria-labelledby="heading-263">#</a></h3>
+<h3 id="values-defined-by-the-specification-5" tabindex="-1">Values defined by the specification <a class="header-anchor" href="#values-defined-by-the-specification-5" id="heading-174" aria-labelledby="heading-174">#</a></h3>
 <p>The specification defines the following values:</p>
 <ul>
 <li><code>reduce</code>: the user has expressed a preference for reduced data usage;</li>
 <li><code>no-preference</code>: the user has not expressed any particular preference.</li>
 </ul>
-<h3 id="example-5" tabindex="-1">Example <a class="header-anchor" href="#example-5" id="heading-264" aria-labelledby="heading-264">#</a></h3>
+<h3 id="example-5" tabindex="-1">Example <a class="header-anchor" href="#example-5" id="heading-175" aria-labelledby="heading-175">#</a></h3>
 <pre><code class="language-css">@media (prefers-reduced-data: reduce) {
   .hero-video {
     display: none;
   }
 }
 </code></pre>
-<h3 id="use-cases-5" tabindex="-1">Use cases <a class="header-anchor" href="#use-cases-5" id="heading-265" aria-labelledby="heading-265">#</a></h3>
+<h3 id="use-cases-5" tabindex="-1">Use cases <a class="header-anchor" href="#use-cases-5" id="heading-176" aria-labelledby="heading-176">#</a></h3>
 <p>This <em>media feature</em> can be used to plan adaptations when large resources, such as videos or animations, can be replaced with lighter alternatives. However, because it is currently unsupported by user agents, it cannot be considered a production-ready mechanism at this time.</p>
-<h3 id="best-practices-5" tabindex="-1">Best practices <a class="header-anchor" href="#best-practices-5" id="heading-266" aria-labelledby="heading-266">#</a></h3>
+<h3 id="best-practices-5" tabindex="-1">Best practices <a class="header-anchor" href="#best-practices-5" id="heading-177" aria-labelledby="heading-177">#</a></h3>
 <p>Reducing data usage should not result in essential content or critical functionality being removed. Adaptations should primarily target resources whose absence does not affect the understanding or use of the interface.</p>
-<h2 id="implementation-support" tabindex="-1" class="h2-focus">Implementation support <a class="header-anchor" href="#implementation-support" id="heading-267" aria-labelledby="heading-267">#</a></h2>
+<h2 id="implementation-support" tabindex="-1" class="h2-focus">Implementation support <a class="header-anchor" href="#implementation-support" id="heading-178" aria-labelledby="heading-178">#</a></h2>
 <p>The <em>media features</em> defined by <strong>CSS Media Queries Level 5</strong> do not all benefit from the same level of support across browsers and operating systems.</p>
 <p>Some, such as <code>prefers-reduced-motion</code>, <code>prefers-color-scheme</code>, and <code>forced-colors</code>, are now widely implemented. Others, such as <code>prefers-reduced-transparency</code>, <code>prefers-reduced-data</code>, or some values of <code>prefers-contrast</code>, have more limited support depending on the browser or platform.</p>
 <p>Support for a <em>media feature</em> in a browser does not necessarily mean that the corresponding preference can be expressed on every operating system. Some preferences depend on the availability of a corresponding system setting or on support provided by the user agent.</p>
@@ -417,7 +417,7 @@
 </tbody>
 </table>
 <p>These indications are provided for informational purposes only. They may evolve as browsers, operating systems, and runtime environments continue to evolve.</p>
-<h2 id="detecting-user-preferences-in-javascript" tabindex="-1" class="h2-focus">Detecting user preferences in JavaScript <a class="header-anchor" href="#detecting-user-preferences-in-javascript" id="heading-268" aria-labelledby="heading-268">#</a></h2>
+<h2 id="detecting-user-preferences-in-javascript" tabindex="-1" class="h2-focus">Detecting user preferences in JavaScript <a class="header-anchor" href="#detecting-user-preferences-in-javascript" id="heading-179" aria-labelledby="heading-179">#</a></h2>
 <p>User preferences are primarily intended to be used in CSS stylesheets through <em>media queries</em>. In some cases, however, it may also be necessary to adapt the behavior of an interface using JavaScript.</p>
 <p><code>window.matchMedia()</code> allows the same <em>media queries</em> used in CSS to be evaluated. The <code>matches</code> property can be used to check whether a media query currently matches, while the <code>change</code> event makes it possible to react when the result changes.</p>
 <pre><code class="language-javascript">const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -427,11 +427,11 @@ if (mediaQuery.matches) {
 }
 </code></pre>
 <p>For common use cases, <code>window.matchMedia()</code> is the most widely supported solution for detecting user preferences from JavaScript.</p>
-<h2 id="user-preferences-api" tabindex="-1" class="h2-focus">User Preferences API <a class="header-anchor" href="#user-preferences-api" id="heading-269" aria-labelledby="heading-269">#</a></h2>
+<h2 id="user-preferences-api" tabindex="-1" class="h2-focus">User Preferences API <a class="header-anchor" href="#user-preferences-api" id="heading-180" aria-labelledby="heading-180">#</a></h2>
 <p>The <strong>User Preferences API</strong> is an experimental API defined by <strong>CSS Media Queries Level 5</strong>. It provides programmatic access to preferences associated with certain <em>media features</em> and can be used to request overrides of these preferences from JavaScript.</p>
 <p>The API is exposed through the <code>navigator.preferences</code> object. It provides objects corresponding to preferences such as color scheme, contrast, reduced motion, reduced transparency, and reduced data. These objects can be used to read the current preference value, observe preference changes, and, where supported, request an override.</p>
 <p>However, this API is not a general-purpose alternative to <code>window.matchMedia()</code>. It remains experimental and has limited browser support. For simply detecting a preference in order to adapt the behavior of an interface, <code>window.matchMedia()</code> remains the solution to prefer in most cases.</p>
-<h2 id="combining-multiple-user-preferences" tabindex="-1" class="h2-focus">Combining multiple user preferences <a class="header-anchor" href="#combining-multiple-user-preferences" id="heading-270" aria-labelledby="heading-270">#</a></h2>
+<h2 id="combining-multiple-user-preferences" tabindex="-1" class="h2-focus">Combining multiple user preferences <a class="header-anchor" href="#combining-multiple-user-preferences" id="heading-181" aria-labelledby="heading-181">#</a></h2>
 <p>User preference <em>media features</em> are not mutually exclusive. A user may express several preferences at the same time, such as a dark color scheme combined with reduced motion or a preference for higher contrast.</p>
 <p>Like other CSS <em>media features</em>, they can be combined within the same <em>media query</em> to adapt the interface to multiple user preferences.</p>
 <pre><code class="language-css">@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
@@ -439,22 +439,22 @@ if (mediaQuery.matches) {
 }
 </code></pre>
 <p>In practice, it is generally unnecessary to design a complete variant of the interface for every possible combination. Instead, it is preferable to implement targeted, independent adaptations that combine naturally when multiple preferences are detected.</p>
-<h2 id="best-practices-6" tabindex="-1" class="h2-focus">Best practices <a class="header-anchor" href="#best-practices-6" id="heading-271" aria-labelledby="heading-271">#</a></h2>
-<h3 id="1-design-a-functional-interface-by-default" tabindex="-1">1. Design a functional interface by default <a class="header-anchor" href="#1-design-a-functional-interface-by-default" id="heading-272" aria-labelledby="heading-272">#</a></h3>
+<h2 id="best-practices-6" tabindex="-1" class="h2-focus">Best practices <a class="header-anchor" href="#best-practices-6" id="heading-182" aria-labelledby="heading-182">#</a></h2>
+<h3 id="1-design-a-functional-interface-by-default" tabindex="-1">1. Design a functional interface by default <a class="header-anchor" href="#1-design-a-functional-interface-by-default" id="heading-183" aria-labelledby="heading-183">#</a></h3>
 <p>User preference <em>media features</em> should not be a prerequisite for an interface to function correctly. They allow the presentation or certain behaviors to be adapted, but the content should remain understandable and usable even when no particular preference is expressed.</p>
-<h3 id="2-adapt-only-what-is-necessary" tabindex="-1">2. Adapt only what is necessary <a class="header-anchor" href="#2-adapt-only-what-is-necessary" id="heading-273" aria-labelledby="heading-273">#</a></h3>
+<h3 id="2-adapt-only-what-is-necessary" tabindex="-1">2. Adapt only what is necessary <a class="header-anchor" href="#2-adapt-only-what-is-necessary" id="heading-184" aria-labelledby="heading-184">#</a></h3>
 <p>The goal is not to create multiple versions of the same interface, but to adapt only the elements affected by the detected preference. Adaptations should remain targeted and proportionate.</p>
-<h3 id="3-respect-user-preferences" tabindex="-1">3. Respect user preferences <a class="header-anchor" href="#3-respect-user-preferences" id="heading-274" aria-labelledby="heading-274">#</a></h3>
+<h3 id="3-respect-user-preferences" tabindex="-1">3. Respect user preferences <a class="header-anchor" href="#3-respect-user-preferences" id="heading-185" aria-labelledby="heading-185">#</a></h3>
 <p>Detected preferences reflect either an explicit user choice or a preference determined automatically by the user's runtime environment. They should be taken into account when designing the interface, and should not be explicitly overridden unless doing so is essential to the information or function of the page.</p>
 <p>This principle is also reflected in <strong>EN 301 549 v4.1.1</strong>, whose clause <strong>9.7 &quot;User preferences for web pages&quot;</strong> addresses the blocking or explicit overriding of user preferences for web pages.</p>
-<h3 id="4-test-across-multiple-platforms" tabindex="-1">4. Test across multiple platforms <a class="header-anchor" href="#4-test-across-multiple-platforms" id="heading-275" aria-labelledby="heading-275">#</a></h3>
+<h3 id="4-test-across-multiple-platforms" tabindex="-1">4. Test across multiple platforms <a class="header-anchor" href="#4-test-across-multiple-platforms" id="heading-186" aria-labelledby="heading-186">#</a></h3>
 <p>Support varies across browsers, operating systems, and platforms. A working implementation in one environment does not guarantee identical behavior elsewhere. It is therefore recommended to test these features across multiple browser and operating system combinations.</p>
-<h3 id="5-combine-css-and-javascript-judiciously" tabindex="-1">5. Combine CSS and JavaScript judiciously <a class="header-anchor" href="#5-combine-css-and-javascript-judiciously" id="heading-276" aria-labelledby="heading-276">#</a></h3>
+<h3 id="5-combine-css-and-javascript-judiciously" tabindex="-1">5. Combine CSS and JavaScript judiciously <a class="header-anchor" href="#5-combine-css-and-javascript-judiciously" id="heading-187" aria-labelledby="heading-187">#</a></h3>
 <p>CSS <em>media features</em> cover most interface adaptation needs. When behavioral adaptations are required, <code>window.matchMedia()</code> makes it possible to query the same preferences from JavaScript.</p>
-<h2 id="testing" tabindex="-1" class="h2-focus">Testing <a class="header-anchor" href="#testing" id="heading-277" aria-labelledby="heading-277">#</a></h2>
-<h3 id="1-check-the-system-preferences" tabindex="-1">1. Check the system preferences <a class="header-anchor" href="#1-check-the-system-preferences" id="heading-278" aria-labelledby="heading-278">#</a></h3>
+<h2 id="testing" tabindex="-1" class="h2-focus">Testing <a class="header-anchor" href="#testing" id="heading-188" aria-labelledby="heading-188">#</a></h2>
+<h3 id="1-check-the-system-preferences" tabindex="-1">1. Check the system preferences <a class="header-anchor" href="#1-check-the-system-preferences" id="heading-189" aria-labelledby="heading-189">#</a></h3>
 <p>Before testing a <em>media feature</em>, it is recommended to verify that the corresponding preference is enabled in the operating system or browser. Depending on the platform, these preferences may include reduced motion, light or dark color schemes, contrast, or forced colors.</p>
-<h3 id="2-manual-inspection" tabindex="-1">2. Manual inspection <a class="header-anchor" href="#2-manual-inspection" id="heading-279" aria-labelledby="heading-279">#</a></h3>
+<h3 id="2-manual-inspection" tabindex="-1">2. Manual inspection <a class="header-anchor" href="#2-manual-inspection" id="heading-190" aria-labelledby="heading-190">#</a></h3>
 <p>Developer tools make it possible to emulate several user preferences without changing the operating system settings. This is particularly useful for quickly verifying that a <em>media feature</em> is correctly taken into account.</p>
 <p>In Chromium-based browsers, you can emulate:</p>
 <ul>
@@ -463,12 +463,12 @@ if (mediaQuery.matches) {
 <li><code>prefers-contrast</code>;</li>
 <li><code>forced-colors</code>.</li>
 </ul>
-<h3 id="3-verify-with-matchmedia" tabindex="-1">3. Verify with <code>matchMedia()</code> <a class="header-anchor" href="#3-verify-with-matchmedia" id="heading-280" aria-labelledby="heading-280">#</a></h3>
+<h3 id="3-verify-with-matchmedia" tabindex="-1">3. Verify with <code>matchMedia()</code> <a class="header-anchor" href="#3-verify-with-matchmedia" id="heading-191" aria-labelledby="heading-191">#</a></h3>
 <p>From the browser console, <code>window.matchMedia()</code> can be used to verify the value returned by a <em>media feature</em>.</p>
 <pre><code class="language-javascript">window.matchMedia('(prefers-reduced-motion: reduce)').matches
 </code></pre>
 <p>This expression returns <code>true</code> when the preference is detected, and <code>false</code> otherwise.</p>
-<h3 id="4-use-the-prefers-scan-bookmarklet" tabindex="-1">4. Use the <code>prefers-scan</code> bookmarklet <a class="header-anchor" href="#4-use-the-prefers-scan-bookmarklet" id="heading-281" aria-labelledby="heading-281">#</a></h3>
+<h3 id="4-use-the-prefers-scan-bookmarklet" tabindex="-1">4. Use the <code>prefers-scan</code> bookmarklet <a class="header-anchor" href="#4-use-the-prefers-scan-bookmarklet" id="heading-192" aria-labelledby="heading-192">#</a></h3>
 <p>During an accessibility audit or code review, it is not always easy to manually identify every user preference <em>media query</em> used by an application. This process can be time-consuming, especially when multiple style sheets are loaded.</p>
 <p>The <strong>Prefers Scan</strong> bookmarklet automates this task by analyzing the page's accessible style sheets.</p>
 <p>It can:</p>
@@ -480,28 +480,28 @@ if (mediaQuery.matches) {
 </ul>
 <p><strong>Prefers Scan</strong> identifies the presence of user preference <em>media features</em> in style sheets, but it does not assess the relevance or quality of the adaptations they implement. Manual verification therefore remains essential.</p>
 <p><a href="https://github.com/MewenLeHo/prefers-scan">The source code, installation instructions, and documentation are available on the Prefers Scan GitHub repository.</a></p>
-<h3 id="5-verify-that-user-preferences-are-respected" tabindex="-1">5. Verify that user preferences are respected <a class="header-anchor" href="#5-verify-that-user-preferences-are-respected" id="heading-282" aria-labelledby="heading-282">#</a></h3>
+<h3 id="5-verify-that-user-preferences-are-respected" tabindex="-1">5. Verify that user preferences are respected <a class="header-anchor" href="#5-verify-that-user-preferences-are-respected" id="heading-193" aria-labelledby="heading-193">#</a></h3>
 <p>Support for a <em>media feature</em> alone does not guarantee that an interface actually respects the user's preference. It is also necessary to verify that the page does not block adaptations made by the user agent or explicitly override platform accessibility preferences without justification.</p>
 <p>Clause <strong>9.7 &quot;User preferences for web pages&quot;</strong> of <strong>EN 301 549 v4.1.1</strong> addresses these behaviors. During an audit, particular attention can be paid to mechanisms that replace or prevent user-agent adaptations, such as <code>forced-color-adjust: none</code>.</p>
-<h2 id="common-mistakes-found-during-accessibility-audits" tabindex="-1" class="h2-focus">Common mistakes found during accessibility audits <a class="header-anchor" href="#common-mistakes-found-during-accessibility-audits" id="heading-283" aria-labelledby="heading-283">#</a></h2>
-<h3 id="ignoring-prefers-reduced-motion" tabindex="-1">Ignoring <code>prefers-reduced-motion</code> <a class="header-anchor" href="#ignoring-prefers-reduced-motion" id="heading-284" aria-labelledby="heading-284">#</a></h3>
+<h2 id="common-mistakes-found-during-accessibility-audits" tabindex="-1" class="h2-focus">Common mistakes found during accessibility audits <a class="header-anchor" href="#common-mistakes-found-during-accessibility-audits" id="heading-194" aria-labelledby="heading-194">#</a></h2>
+<h3 id="ignoring-prefers-reduced-motion" tabindex="-1">Ignoring <code>prefers-reduced-motion</code> <a class="header-anchor" href="#ignoring-prefers-reduced-motion" id="heading-195" aria-labelledby="heading-195">#</a></h3>
 <p>Modern interfaces often use animations to support transitions, draw attention, or enhance the user experience. Ignoring <code>prefers-reduced-motion</code> means that these animations remain enabled despite an explicit user preference, which may cause discomfort or motion sensitivity issues.</p>
-<h3 id="assuming-that-dark-mode-is-enough" tabindex="-1">Assuming that dark mode is enough <a class="header-anchor" href="#assuming-that-dark-mode-is-enough" id="heading-285" aria-labelledby="heading-285">#</a></h3>
+<h3 id="assuming-that-dark-mode-is-enough" tabindex="-1">Assuming that dark mode is enough <a class="header-anchor" href="#assuming-that-dark-mode-is-enough" id="heading-196" aria-labelledby="heading-196">#</a></h3>
 <p>Supporting <code>prefers-color-scheme</code> alone does not guarantee that a dark theme is accessible. Insufficient contrast, poorly chosen colors, or difficult-to-distinguish interactive states can negatively affect readability and usability.</p>
-<h3 id="disabling-forced-colors" tabindex="-1">Disabling <code>forced-colors</code> <a class="header-anchor" href="#disabling-forced-colors" id="heading-286" aria-labelledby="heading-286">#</a></h3>
+<h3 id="disabling-forced-colors" tabindex="-1">Disabling <code>forced-colors</code> <a class="header-anchor" href="#disabling-forced-colors" id="heading-197" aria-labelledby="heading-197">#</a></h3>
 <p>Disabling forced colors with <code>forced-color-adjust: none</code> prevents users from benefiting from the adaptations provided by the browser. This property should only be used in exceptional cases where its consequences are fully understood and carefully considered.</p>
-<h3 id="making-only-cosmetic-adjustments" tabindex="-1">Making only cosmetic adjustments <a class="header-anchor" href="#making-only-cosmetic-adjustments" id="heading-287" aria-labelledby="heading-287">#</a></h3>
+<h3 id="making-only-cosmetic-adjustments" tabindex="-1">Making only cosmetic adjustments <a class="header-anchor" href="#making-only-cosmetic-adjustments" id="heading-198" aria-labelledby="heading-198">#</a></h3>
 <p>Adaptations should modify the behavior or presentation of the elements actually affected by the detected preference. Simply changing a few colors or spacing values without addressing the user's expressed preference significantly reduces the value of these <em>media features</em>.</p>
-<h3 id="not-testing" tabindex="-1">Not testing <a class="header-anchor" href="#not-testing" id="heading-288" aria-labelledby="heading-288">#</a></h3>
+<h3 id="not-testing" tabindex="-1">Not testing <a class="header-anchor" href="#not-testing" id="heading-199" aria-labelledby="heading-199">#</a></h3>
 <p>A <em>media feature</em> may be recognized by the browser while still being implemented incorrectly or behaving unexpectedly in practice. It is therefore essential to verify the actual behavior of the interface on the relevant platforms.</p>
-<h2 id="conclusion" tabindex="-1" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-289" aria-labelledby="heading-289">#</a></h2>
+<h2 id="conclusion" tabindex="-1" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-200" aria-labelledby="heading-200">#</a></h2>
 <p>User preference <em>media features</em> provide a powerful way to make interfaces more adaptive and more accessible.</p>
 <p>They make it possible to accommodate concrete user needs, such as reduced motion, increased contrast, color scheme preferences, reduced transparency, or reduced data usage.</p>
 <p>Their implementation is generally straightforward, yet their impact on user comfort can be significant. When implemented thoughtfully, these adaptations can improve the experience of many users.</p>
 <p>User preference <em>media features</em> also illustrate an important evolution of the Web. Rather than adapting only to the technical characteristics of a device, interfaces can now respond to preferences expressed by their users.</p>
 <p>However, detecting a preference is only the first step. An accessible implementation must also ensure that the interface responds appropriately to that preference and does not unnecessarily prevent the user agent from applying the corresponding adaptations.</p>
 <p>Used thoughtfully and tested across relevant environments, user preference <em>media features</em> contribute to creating interfaces that are more adaptable, more comfortable, and, in many cases, more accessible.</p>
-<h2 id="references" tabindex="-1" class="h2-focus">References <a class="header-anchor" href="#references" id="heading-290" aria-labelledby="heading-290">#</a></h2>
+<h2 id="references" tabindex="-1" class="h2-focus">References <a class="header-anchor" href="#references" id="heading-201" aria-labelledby="heading-201">#</a></h2>
 <ul>
   <li><a href="https://www.w3.org/TR/mediaqueries-5/">W3C – Media Queries Level 5</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility">MDN – Using media queries for accessibility</a></li>
