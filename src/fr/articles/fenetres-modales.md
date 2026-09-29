@@ -262,7 +262,9 @@ Comprendre les différences entre HTML natif, ARIA et comportements attendus per
 
 ## Webographie
 
-- [MDN - HTML `<dialog>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog)
-- [WAI-ARIA Authoring Practices Guide - Dialog (Modal) Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/)
-- HTML Living Standard
-- WAI-ARIA Specification
+<ul lang="en">
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog" hreflang="en">MDN - HTML `<dialog>` (en)</a></li>
+  <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" hreflang="en">WAI-ARIA Authoring Practices Guide - Dialog (Modal) Pattern (en)</a></li>
+  <li><a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element" hreflang="en">HTML Living Standard (en)</a></li>
+  <li><a href="https://www.w3.org/TR/wai-aria-1.2/#dialog" hreflang="en">WAI-ARIA Specification (en)</a></li>
+</ul>
