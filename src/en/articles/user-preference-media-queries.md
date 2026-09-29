@@ -231,7 +231,7 @@ Reducing data usage should not result in essential content or critical functiona
 
 The *media features* defined by **CSS Media Queries Level 5** do not all benefit from the same level of support across browsers and operating systems.
 
-Some, such as `prefers-reduced-motion`, `prefers-color-scheme`, and `forced-colors`, are now widely implemented. Others, such as `prefers-reduced-transparency`, `prefers-reduced-data`, or some values of `prefers-contrast`, have more limited support depending on the browser or platform.
+Some, such as `prefers-reduced-motion`, `prefers-color-scheme`, and `forced-colors`, are now widely implemented. Others, such as `prefers-reduced-transparency` or some values of `prefers-contrast`, have more limited support depending on the browser or platform. `prefers-reduced-data`, on the other hand, is currently not supported by any user agent.
 
 Support for a *media feature* in a browser does not necessarily mean that the corresponding preference can be expressed on every operating system. Some preferences depend on the availability of a corresponding system setting or on support provided by the user agent.
 
