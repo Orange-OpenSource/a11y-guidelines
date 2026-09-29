@@ -1,10 +1,11 @@
 {%- macro navLink(link, class, forceStrictlyActive = false) -%}
-{%- set strictlyActive = page.url == link.href -%}
+{%- set currentUrl = page.url if page.url else "" -%}
+{%- set strictlyActive = currentUrl == link.href -%}
 
 {%- if forceStrictlyActive == true -%}
   {%- set active = strictlyActive -%}
 {%- else -%}
-  {%- set active = strictlyActive or link.href in page.url and not link.href | isHomeUrl -%}
+  {%- set active = strictlyActive or link.href in currentUrl and not link.href | isHomeUrl -%}
 {%- endif -%}
 
 {%- set current = "page" if strictlyActive else "true" -%}
