@@ -2,7 +2,7 @@
 title: "Le nom accessible en HTML"
 abstract: "Le nom accessible, qu'est-ce et son rapport avec les technologies d'assistance"
 titleBeforeTag: true
-date: "2018-10-26"
+date: "2026-09-28"
 tags:
   - web
   - intermediate
@@ -11,10 +11,19 @@ tags:
   
 ## Introduction
 
-Le nom (<span lang="en">name</span>) du composant d'interface est appelé aussi nom accessible  (<span lang="en">accessible name</span>), c'est globalement ce nom qui va être exposé à la technologie d'assistance <abbr>AT</abbr> via l'<abbr>API</abbr> d'accessibilité (<span lang="en">accessibility <abbr>API</abbr></span>). Ce nom est calculé par le navigateur via un algorithme appelé [<span lang="en">Accessible Name and Description Computation 1.1</span>](https://www.w3.org/TR/accname-1.1/).
-En fait, pour faire simple, le navigateur va générer un arbre accessible (<span lang="en">accessibility tree</span>) à partir du <span lang="en">Document Model Object</span> (<abbr>DOM</abbr>) dans lequel une grande majorité des éléments <abbr>HTML</abbr> (ceux qui n'ont qu'un but de présentation, ex. : balises `div` et `span` n'en ont pas l'utilité) ont besoin d'un nom (accessible) pour être correctement identifiés par l'<abbr>AT</abbr>.
 
-Le nom accessible est issu du contenu d'une balise, d'attributs de cette balise ou d'un élément qui lui est associé.
+
+Le navigateur gère le nom accessible à l'aide de l'algorithme Accessible Name and Description Computation 1.1. Cet algorithme calcule le nom et la description accessibles à partir de plusieurs sources :
+
+- Le contenu textuel d'une balise.
+
+- Les attributs comme aria-label, aria-labelledby, ou alt.
+
+- Les relations d'association avec d'autres éléments (étiquettes ou descripteurs).
+
+En pratique, le navigateur transforme le Document Object Model (DOM) en un arbre d'accessibilité (« accessibility tree »), qui est ensuite utilisé par les technologies d'assistance. Les éléments qui ont une fonction interactive ou informative (boutons, liens, champs de formulaire, etc.) doivent avoir un nom accessible pour être correctement interprétés.
+
+Les éléments HTML purement présentationnels, comme les balises <div> et <span> sans rôle attribué, n'ont pas besoin de nom accessible.
 
 ## En pratique, comment ça marche ?
 
@@ -82,3 +91,4 @@ Plus de détails sur ["Les attributs <abbr>ARIA</abbr> qui peuvent vous sauver"]
 - <a href="https://www.w3.org/TR/accname-1.1/" lang="en" hreflang="en">Accessible Name and Description Computation 1.1</a> par <span lang="en">the Accessible Rich Internet Applications Working Group</span>
 - <a href="http://simplyaccessible.com/article/accessible-name/" lang="en" hreflang="en">Demystifying accessible name</a> par Joe Watkins
 - <a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/" lang="en" hreflang="en">What is an accessible name?</a> par Léonie Watson
+- <a href="https://access42.net/live-regions-aria-live-analogues-alert-log-status/" lang="fr" hreflang="fr">Live regions ARIA : aria-live et ses analogues alert, log, status</a> par Cécile Jeanne
