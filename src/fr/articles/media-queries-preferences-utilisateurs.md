@@ -20,7 +20,7 @@ Cet article présente les principales *media features* de préférences utilisat
 
 *À retenir :* les *media features* présentées dans cet article sont définies par la spécification **CSS Media Queries Level 5**. En revanche, leur niveau de prise en charge varie selon les navigateurs et les plateformes. Leur utilisation n'est pas systématiquement exigée par les **WCAG**, le **RGAA** ou la norme **EN 301 549** (même si elle peut contribuer à satisfaire certains critères), mais constitue une bonne pratique pour concevoir des interfaces capables de s'adapter aux préférences exprimées par les utilisateurs.
 
-**Évolution de la norme :** la version [EN 301 549 v4.1.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf), publiée en septembre 2026, introduit notamment la clause **9.7 « User preferences for web pages »**, qui impose aux pages Web de ne pas bloquer les modes de fonctionnement du user agent permettant de respecter les préférences utilisateur, ni d'outrepasser explicitement certaines préférences d'accessibilité de la plateforme, sauf lorsque cela est essentiel à l'information ou à la fonction de la page.
+**Évolution de la norme :** la version [EN 301 549 v4.1.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/04.01.01_60/en_301549v040101p.pdf), publiée en septembre 2026, introduit notamment la clause **9.7 « <span lang="en">User preferences for web pages</span> »**, qui impose aux pages Web de ne pas bloquer les modes de fonctionnement de l'agent utilisateur permettant de respecter les préférences utilisateur, ni d'outrepasser explicitement certaines préférences d'accessibilité de la plateforme, sauf lorsque cela est essentiel à l'information ou à la fonction de la page.
 
 Au moment de la rédaction de cet article, cette version n'est pas encore référencée au **Journal officiel de l'Union européenne**. Elle ne remplace donc pas encore **EN 301 549 v3.2.1** en tant que version harmonisée ayant une portée juridique au niveau européen.
 
@@ -167,7 +167,7 @@ Lorsque des ajustements spécifiques sont nécessaires, la propriété `forced-c
 
 Son utilisation devrait rester exceptionnelle. En particulier, elle ne devrait pas être utilisée simplement pour préserver l'apparence visuelle définie par la page lorsque cela empêche l'utilisateur de bénéficier des adaptations liées à ses préférences d'affichage.
 
-La version **EN 301 549 v4.1.1** introduit la clause **9.7 « User preferences for web pages »**, qui encadre notamment les mécanismes permettant d'outrepasser explicitement les préférences d'accessibilité de la plateforme. Elle prévoit que ces préférences ne soient outrepassées que lorsque cela est essentiel à l'information ou à la fonction de la page. `forced-color-adjust` est explicitement cité comme exemple de mécanisme concerné.
+La version **EN 301 549 v4.1.1** introduit la clause **9.7 « <span lang="en">User preferences for web pages</span> »**, qui encadre notamment les mécanismes permettant d'outrepasser explicitement les préférences d'accessibilité de la plateforme. Elle prévoit que ces préférences ne soient outrepassées que lorsque cela est essentiel à l'information ou à la fonction de la page. `forced-color-adjust` est explicitement cité comme exemple de mécanisme concerné.
 
 ## `prefers-reduced-transparency`
 
@@ -192,7 +192,7 @@ La spécification définit les valeurs suivantes :
 
 ### Cas d'usage
 
-Cette *media feature* peut être utilisée pour prévoir des adaptations lorsque des ressources importantes, comme des vidéos ou des animations, peuvent être remplacées par des alternatives plus légères. Sa prise en charge étant actuellement inexistante dans les agents utilisateurs, elle ne peut toutefois pas être considérée comme un mécanisme utilisable en production aujourd'hui.
+Cette *media feature* peut être utilisée lorsque l'interface comporte des effets de transparence, des arrière-plans floutés ou d'autres éléments translucides susceptibles d'être simplifiés.
 
 ### Bonnes pratiques
 
@@ -230,7 +230,7 @@ La réduction de la consommation de données ne devrait pas entraîner la suppre
 
 Les *media features* définies par **CSS Media Queries Level 5** ne bénéficient pas toutes du même niveau de prise en charge par les navigateurs et les systèmes d'exploitation.
 
-Certaines, comme `prefers-reduced-motion`, `prefers-color-scheme` ou `forced-colors`, sont aujourd'hui largement implémentées. D'autres, comme `prefers-reduced-transparency`, `prefers-reduced-data` ou certaines valeurs de `prefers-contrast`, présentent une prise en charge plus limitée selon les navigateurs ou les plateformes.
+Certaines, comme `prefers-reduced-motion`, `prefers-color-scheme` ou `forced-colors`, sont aujourd'hui largement implémentées. D'autres, comme `prefers-reduced-transparency` ou certaines valeurs de `prefers-contrast`, présentent une prise en charge plus limitée selon les navigateurs ou les plateformes. `prefers-reduced-data`, quant à elle, n'est actuellement prise en charge par aucun agent utilisateur.
 
 La simple prise en charge d'une *media feature* par un navigateur ne garantit pas que la préférence puisse être exprimée sur tous les systèmes d'exploitation. Certaines préférences dépendent en effet de la présence d'un réglage correspondant dans le système ou de sa prise en charge par l'agent utilisateur.
 
@@ -308,7 +308,7 @@ L'objectif n'est pas de créer plusieurs versions d'une même interface, mais d'
 
 Les préférences détectées traduisent un choix explicite de l'utilisateur ou une préférence déterminée automatiquement par son environnement d'exécution. Lorsqu'elles sont disponibles, elles devraient être prises en compte lors de la conception de l'interface et ne devraient pas être explicitement outrepassées, sauf lorsque cela est essentiel à l'information ou à la fonction de la page.
 
-Ce principe est également reflété par la clause **9.7 « User preferences for web pages »** d'**EN 301 549 v4.1.1**, qui encadre le blocage ou l'outrepassement explicite des préférences utilisateur pour les pages Web.
+Ce principe est également reflété par la clause **9.7 « <span lang="en">User preferences for web pages</span> »** d'**EN 301 549 v4.1.1**, qui encadre le blocage ou l'outrepassement explicite des préférences utilisateur pour les pages Web.
 
 ### 4. Tester sur plusieurs plateformes
 
@@ -362,9 +362,9 @@ Il permet notamment de :
 
 ### 5. Vérifier le respect des préférences utilisateur
 
-La prise en charge d'une *media feature* ne suffit pas à garantir qu'une interface respecte effectivement la préférence de l'utilisateur. Il est également nécessaire de vérifier que la page ne bloque pas les adaptations du user agent et n'outrepasse pas explicitement les préférences d'accessibilité de la plateforme sans justification.
+La prise en charge d'une *media feature* ne suffit pas à garantir qu'une interface respecte effectivement la préférence de l'utilisateur. Il est également nécessaire de vérifier que la page ne bloque pas les adaptations de l'agent utilisateur et n'outrepasse pas explicitement les préférences d'accessibilité de la plateforme sans justification.
 
-La clause **9.7 « User preferences for web pages »** d'**EN 301 549 v4.1.1** encadre notamment ces comportements. Lors d'un audit, une attention particulière peut être portée aux mécanismes permettant de remplacer ou de neutraliser les adaptations du user agent, tels que `forced-color-adjust: none`.
+La clause **9.7 « <span lang="en">User preferences for web pages</span> »** d'**EN 301 549 v4.1.1** encadre notamment ces comportements. Lors d'un audit, une attention particulière peut être portée aux mécanismes permettant de remplacer ou de neutraliser les adaptations de l'agent utilisateur, tels que `forced-color-adjust: none`.
 
 ## Erreurs fréquentes observées en audit
 
@@ -380,7 +380,7 @@ La prise en charge de `prefers-color-scheme` ne garantit pas, à elle seule, qu'
 
 Utiliser `forced-color-adjust: none` empêche l'agent utilisateur d'appliquer les adaptations de couleurs forcées à l'élément concerné. Cette propriété ne devrait être utilisée que dans des situations exceptionnelles, lorsque ses conséquences sont parfaitement comprises et maîtrisées.
 
-La version **EN 301 549 v4.1.1** cite explicitement `forced-color-adjust` comme exemple de mécanisme permettant d'outrepasser une préférence d'accessibilité de la plateforme. La clause **9.7 « User preferences for web pages »** prévoit que de telles préférences ne soient explicitement outrepassées que lorsque cela est essentiel à l'information ou à la fonction de la page.
+La version **EN 301 549 v4.1.1** cite explicitement `forced-color-adjust` comme exemple de mécanisme permettant d'outrepasser une préférence d'accessibilité de la plateforme. La clause **9.7 « <span lang="en">User preferences for web pages</span> »** prévoit que de telles préférences ne soient explicitement outrepassées que lorsque cela est essentiel à l'information ou à la fonction de la page.
 
 ### Ajouter uniquement des ajustements cosmétiques
 
