@@ -1,0 +1,21 @@
+{
+    "urls": [
+      {
+        "name": "WebAIM: Keyboard Accessibility",
+        "url": "https://webaim.org/techniques/keyboard/"
+      },
+      {
+        "name": "Where to Put Focus When Deleting a Thing — Adrian Roselli",
+        "url": "https://adrianroselli.com/2023/08/where-to-put-focus-when-deleting-a-thing.html"
+      },
+      {
+        "name": "Keyboard accessibility myths and WCAG - TetraLogical",
+        "url": "https://tetralogical.com/blog/2023/11/27/keyboard-accessibility-myths-wcag/"
+      },
+      {
+        "name": "Display Title Attribute on Keyboard Focus",
+        "url": "https://pauljadam.com/demos/title-keyboard.html"
+      }
+    ]
+  }
+  

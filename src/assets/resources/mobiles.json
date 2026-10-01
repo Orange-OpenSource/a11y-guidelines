@@ -1,0 +1,49 @@
+{
+    "urls": [
+      {
+        "name": "Mobile Accessibility Task Force",
+        "url": "https://www.w3.org/WAI/GL/mobile-a11y-tf/"
+      },
+      {
+        "name": "Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies (WCAG2ICT)",
+        "url": "https://w3c.github.io/wcag2ict/"
+      },
+      {
+        "name": "WCAG 2.0 Techniques that Apply to Mobile",
+        "url": "https://www.w3.org/WAI/GL/mobile-a11y-tf/MobileTechniques/#seizure"
+      },
+      {
+        "name": "Mobile Accessibility: How WCAG 2.0 and Other W3C/WAI Guidelines Apply to Mobile",
+        "url": "https://www.w3.org/TR/mobile-accessibility-mapping/"
+      },
+      {
+        "name": "Mobile Accessibility at W3C | Web Accessibility Initiative (WAI) | W3C",
+        "url": "https://www.w3.org/WAI/standards-guidelines/mobile/"
+      },
+      {
+        "name": "How WCAG 2.2 Relates to Mobile and What's Missing - Google Sheets",
+        "url": "https://docs.google.com/spreadsheets/d/1-SM3PY-phoBN4v3PStawv0fYV3RudhuLLLwoGixDOtg/edit?gid=0#gid=0"
+      },
+      {
+        "name": "User Needs Exercise - Mobile - Google Sheets",
+        "url": "https://docs.google.com/spreadsheets/d/1bsze5rAu-6tkWBTGyrcm4tdsGvZAaEBBUCDsQZngl2k/edit?gid=39173941#gid=39173941"
+      },
+      {
+        "name": "Does WCAG 2.2 apply to native apps - TetraLogical",
+        "url": "https://tetralogical.com/blog/2024/07/18/WCAG2ICT/"
+      },
+      {
+        "name": "Duché du Luxembourg - référentiels de tests RAAM 1",
+        "url": "https://accessibilite.public.lu/fr/raam1/index.html"
+      },
+      {
+        "name": "Appt - Méthodologie d'Evaluation Mobile",
+        "url": "https://appt.org/en/guidelines/appt-em"
+      },
+      {
+        "name": "Evinced - Mobile Content Accessibility Guidelines (MCAG)",
+        "url": "https://getevinced.github.io/mcag/"
+      }
+    ]
+  }
+  
