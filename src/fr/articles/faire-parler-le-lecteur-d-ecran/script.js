@@ -1,24 +1,38 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-    document.getElementById('btnSpeak').addEventListener('click',function(){
-        let message = document.getElementById('message');
-        srSpeak(message.value);
-        message.value="";
-    })
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById('btnSpeak');
+    const input = document.getElementById('message');
+
+    btn.addEventListener('click', () => {
+        if(input.value.trim() !== "") {
+            speak(input.value);
+            input.value = "";
+            input.focus();
+        }
+    });
 });
 
-function srSpeak(text, priority) {
-    var el = document.createElement("div");
-    var id = "faire-parler-le-lecteur-d-ecran-" + Date.now();
-    el.setAttribute("id", id);
-    el.setAttribute("aria-live", priority || "polite");            
-    el.classList.add("visually-hidden");
-    document.body.appendChild(el);
+function speak(message, priority = "polite") {
+    const region = document.createElement("div");
+    const id = "sr-" + Date.now();
+
+    region.setAttribute("id", id);
+    region.setAttribute("aria-live", priority);
+    region.setAttribute("aria-atomic", "true");
+    region.classList.add("visually-hidden");
+
+    document.body.appendChild(region);
     
-    window.setTimeout(function () {
-        document.getElementById(id).innerHTML = text;      
-    }, 100);
-    
-    window.setTimeout(function () {
-        document.body.removeChild(document.getElementById(id));
-    }, 1000);
+    if (priority === "assertive") {
+        speechSynthesis.cancel();
+    }
+    speechSynthesis.cancel();
+    speechSynthesis.speak(new SpeechSynthesisUtterance(message));
+
+    setTimeout(() => {
+        region.textContent = message;
+    }, 50);
+
+    setTimeout(() => {
+        document.body.removeChild(region);
+    }, 2000);
 }
