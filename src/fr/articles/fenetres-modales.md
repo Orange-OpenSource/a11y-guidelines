@@ -91,7 +91,7 @@ dialog.show();
 ### Fenêtre modale
 
 ```JavaScript
-dialog.show();
+dialog.showshowModal();
 ```
 
 Cette méthode ouvre une véritable fenêtre modale.
