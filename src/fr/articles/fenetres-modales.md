@@ -177,20 +177,37 @@ Il faut également prévoir ce qui se passe lorsque la boîte de dialogue se fer
 
 ## Navigation clavier
 
-Une boîte de dialogue modale doit permettre de poursuivre les interactions au clavier sans que l'utilisateur puisse interagir avec le contenu inerte situé derrière elle.
+Une fenêtre modale doit pouvoir être utilisée au clavier sans permettre d'interagir avec le contenu de la page situé derrière elle.
 
-Pour une boîte de dialogue ouverte avec `showModal()`, le navigateur prend en charge le contexte modal et rend le reste du document inerte. Le développeur doit néanmoins vérifier que le contenu de la fenêtre est utilisable au clavier et que les comportements choisis sont cohérents avec l'objectif du composant.
+### Avec l'élément HTML `<dialog>`
 
-Le modèle de dialogue modal de l'APG décrit les interactions clavier suivantes :
+Lorsqu'un élément `<dialog>` est ouvert avec `showModal()`, le navigateur gère le contexte modal : le contenu extérieur devient inerte et le focus clavier est limité au dialogue et à l'interface du navigateur.
 
-- `Tab` déplace le focus vers l'élément focalisable suivant dans la boîte de dialogue.
-- `Shift + Tab` déplace le focus vers l'élément focalisable précédent.
-- La navigation au clavier reste dans la séquence de tabulation de la boîte de dialogue, selon le modèle de l'APG.
-- `Escape` ferme la boîte de dialogue dans le comportement décrit par ce modèle.
+Le développeur doit néanmoins vérifier que tous les contrôles de la fenêtre sont utilisables au clavier, que le focus initial est pertinent et qu'un moyen explicite de fermeture est disponible.
 
-Ces recommandations doivent être distinguées des mécanismes natifs de HTML. Pour une boîte de dialogue personnalisée construite avec des éléments génériques, le développeur doit implémenter lui-même les comportements nécessaires, notamment la gestion du focus et l'inertie du contenu extérieur.
+### Le modèle recommandé par le WAI-ARIA APG
 
-Enfin, la boîte de dialogue doit proposer un moyen explicite et visible de la fermer, par exemple un bouton « Fermer » ou « Annuler ». La touche `Escape` constitue un moyen complémentaire, pas un substitut à ce bouton.
+Le *Dialog (Modal) Pattern* du WAI-ARIA Authoring Practices Guide (APG) décrit les interactions clavier suivantes :
+
+- `Tab` déplace le focus vers l'élément focalisable suivant dans la boîte de dialogue. Depuis le dernier élément, il revient au premier.
+- `Shift + Tab` déplace le focus vers l'élément focalisable précédent. Depuis le premier élément, il revient au dernier.
+- `Escape` ferme la boîte de dialogue.
+
+Ces comportements constituent le modèle de conception recommandé par l'APG. Ils ne doivent pas être confondus avec une description exhaustive du comportement natif de chaque navigateur : en particulier, le confinement du focus assuré par `<dialog>` ne signifie pas nécessairement que la tabulation boucle du dernier au premier élément.
+
+Le comportement de fermeture avec `Escape` dépend également de la configuration de la boîte de dialogue, notamment de l'attribut `closedby` lorsqu'il est pris en charge.
+
+### Et pour une modale personnalisée ?
+
+Une modale construite à partir d'éléments génériques, comme une `<div>`, ne bénéficie pas automatiquement des mécanismes natifs de `<dialog>`. Le développeur doit implémenter et tester les comportements nécessaires, notamment :
+
+- placer le focus dans la fenêtre à son ouverture ;
+- empêcher l'interaction avec le contenu extérieur tant que la fenêtre est modale ;
+- gérer correctement la navigation au clavier ;
+- prendre en charge la fermeture au clavier, notamment avec `Escape` lorsque ce comportement est prévu ;
+- restaurer le focus à la fermeture.
+
+Enfin, une fenêtre modale doit proposer un moyen explicite et visible de la fermer, par exemple un bouton « Fermer » ou « Annuler ». La touche `Escape` constitue un moyen complémentaire, et non un substitut à ce bouton.
 
 ## HTML et ARIA
 
@@ -328,9 +345,11 @@ Comprendre les différences entre HTML natif, ARIA et comportements attendus per
 ## Webographie
 
 <ul lang="en">
-  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog" hreflang="en">MDN - HTML dialog (en)</a></li>
-  <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" hreflang="en">WAI-ARIA Authoring Practices Guide - Dialog (Modal) Pattern (en)</a></li>
-  <li><a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element" hreflang="en">HTML Living Standard (en)</a></li>
-  <li><a href="https://www.w3.org/TR/wai-aria-1.2/#dialog" hreflang="en">WAI-ARIA Specification (en)</a></li>
-  <li><a href="https://caniuse.com/?search=closedby" hreflang="en">Support for closedby attribute (en)</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog" hreflang="en">MDN – HTML <code>dialog</code> element (en)</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal" hreflang="en">MDN – HTMLDialogElement: showModal() method (en)</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/closedBy" hreflang="en">MDN – HTMLDialogElement: closedBy property (en)</a></li>
+  <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" hreflang="en">WAI-ARIA Authoring Practices Guide – Dialog (Modal) Pattern (en)</a></li>
+  <li><a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element" hreflang="en">WHATWG – HTML Living Standard: The <code>dialog</code> element (en)</a></li>
+  <li><a href="https://www.w3.org/TR/wai-aria-1.2/#dialog" hreflang="en">W3C – WAI-ARIA 1.2: dialog role (en)</a></li>
+  <li><a href="https://caniuse.com/?search=closedby" hreflang="en">Can I Use – Browser support for the <code>closedby</code> attribute (en)</a></li>
 </ul>
