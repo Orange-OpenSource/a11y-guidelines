@@ -88,84 +88,109 @@ L'élément `<dialog>` peut être affiché de deux manières.
 dialog.show();
 ```
 
+La méthode `show()` ouvre une boîte de dialogue non modale. Le reste du document demeure interactif : l'utilisateur peut poursuivre ses interactions avec le contenu situé à l'extérieur de la boîte de dialogue.
+
 ### Fenêtre modale
 
 ```JavaScript
-dialog.showshowModal();
+dialog.showModal();
 ```
 
-Cette méthode ouvre une véritable fenêtre modale.
+La méthode `showModal()` ouvre une boîte de dialogue modale. Celle-ci est placée dans la couche supérieure du navigateur (top layer) et le reste du document devient inerte, à l'exception de la boîte de dialogue et de ses descendants.
 
-Le reste de la page devient inactif tant que la boîte de dialogue reste ouverte.
+Cette inertie empêche les interactions avec le contenu situé derrière la modale. Elle est prise en charge nativement par le navigateur : il n'est pas nécessaire de rendre manuellement le reste du document inerte pour obtenir ce comportement avec `showModal()`.
+
+Il faut donc choisir la méthode en fonction du comportement recherché : `show()` pour une boîte de dialogue non modale, `showModal()` pour une boîte de dialogue modale.
 
 ## Fermeture
 
-Une boîte de dialogue peut être fermée avec :
+L'élément HTML `<dialog>` propose plusieurs mécanismes natifs de fermeture. Le choix dépend du comportement attendu.
 
-```JavaScript
+### Fermer directement avec `close()`
+
+La méthode `close()` ferme la boîte de dialogue. Elle peut recevoir une chaîne de caractères qui sera exposée via la propriété `returnValue`.
+
+```javascript
 dialog.close();
 ```
 
-D'autres mécanismes de fermeture existent également et seront abordés plus loin dans cet article.
+### Demander la fermeture avec `requestClose()`
+
+La méthode `requestClose()` déclenche une demande de fermeture. Elle provoque l'événement `cancel`, qui permet au code d'empêcher la fermeture avec `preventDefault()`. Si cet événement n'est pas annulé, la boîte de dialogue se ferme.
+
+```javascript
+dialog.requestClose();
+```
+
+Cette méthode est notamment utile lorsqu'une fermeture doit pouvoir être interceptée, par exemple pour demander confirmation avant d'abandonner une saisie. Sa prise en charge doit être vérifiée si le projet cible des navigateurs anciens.
+
+### Fermer avec un formulaire
+
+Un formulaire placé dans une boîte de dialogue peut utiliser `method="dialog"`. Sa soumission ferme alors la boîte de dialogue sans transmettre les données du formulaire. La valeur du bouton de soumission activé peut être récupérée via `returnValue`.
+
+```html
+<form method="dialog">
+  <button value="cancel">Annuler</button>
+  <button value="confirm">Confirmer</button>
+</form>
+```
+
+### Prévoir les interactions de fermeture
+
+La fermeture doit être cohérente avec le rôle de la boîte de dialogue et le parcours proposé. Un bouton de fermeture visible et utilisable au clavier reste un moyen explicite de quitter la fenêtre.
+
+L'attribut `closedby` permet de préciser quelles actions utilisateur peuvent fermer une boîte de dialogue : une action de fermeture légère, comme un clic en dehors de la fenêtre, une action spécifique à la plateforme, comme la touche `Échap`, ou un mécanisme prévu par le développeur.
+
+Il propose trois valeurs :
+
+- `any` : autorise les trois types d'action ;
+- `closerequest` : autorise les actions spécifiques à la plateforme et les mécanismes définis par le développeur ;
+- `none` : limite la fermeture aux mécanismes définis par le développeur.
+
+**Attention à la compatibilité des navigateurs :** l'attribut `closedby` n'est pas encore pris en charge par tous les navigateurs couramment utilisés, notamment Safari et Safari sur iOS. Avant de l'utiliser, vérifiez la compatibilité avec les navigateurs ciblés et prévoyez un mécanisme de fermeture explicite, par exemple un bouton qui appelle `close()`. L'attribut ne doit pas être l'unique moyen de garantir le comportement attendu.
 
 ## Ce que fournit réellement `<dialog>`
 
-L'élément `<dialog>` apporte plusieurs mécanismes natifs qui étaient auparavant implémentés manuellement.
+L'élément HTML `<dialog>`, lorsqu'il est ouvert avec `showModal()`, fournit plusieurs mécanismes natifs qui évitent de devoir les réimplémenter manuellement.
 
-Lorsqu'une fenêtre est ouverte de manière modale :
+- **Une couche d'affichage dédiée :** la boîte de dialogue est placée dans la *top layer* du navigateur, au-dessus du contenu habituel du document.
+- **L'inertie du contenu extérieur :** les éléments du même document situés en dehors de la boîte de dialogue deviennent inertes. Ils ne peuvent donc plus être utilisés pendant que la fenêtre modale est ouverte.
+- **Un arrière-plan personnalisable :** le pseudo-élément `::backdrop` permet de styliser la zone située derrière la boîte de dialogue.
 
-- elle apparaît au-dessus du contenu principal ;
-- le reste de la page devient inactif ;
-- le navigateur applique un comportement spécifique à une boîte de dialogue modale ;
-- un arrière-plan peut être stylisé via le pseudo-élément `::backdrop`.
-
-Ces fonctionnalités réduisent la quantité de code nécessaire pour créer une modale, mais elles ne remplacent pas toutes les bonnes pratiques d'accessibilité.
-
-## Ce que le développeur doit encore gérer
-
-Même avec `<dialog>`, plusieurs aspects restent sous la responsabilité du développeur.
-
-Une fenêtre modale doit notamment :
-
-- posséder un nom accessible ;
-- proposer un moyen explicite de fermeture ;
-- placer le focus sur un élément pertinent lors de son ouverture ;
-- restituer un contexte cohérent après sa fermeture.
-
-Le choix du focus initial dépend également du type de contenu présenté.
-
-Une petite boîte de dialogue ne sera pas nécessairement gérée de la même manière qu'une modale contenant un long texte, un formulaire complexe ou une action critique.
+Ces mécanismes constituent une base solide pour une fenêtre modale accessible. Ils ne dispensent toutefois pas de concevoir correctement son contenu, son nom accessible, son point de départ pour la navigation et ses moyens de fermeture.
 
 ## Gestion du focus
 
-La gestion du focus constitue l'un des aspects les plus importants de l'accessibilité des fenêtres modales.
+La gestion du focus est un élément essentiel de l'accessibilité des fenêtres modales. Le point de départ doit permettre à l'utilisateur de comprendre le contenu présenté et d'interagir avec lui efficacement.
 
-Lorsqu'une modale est ouverte :
+Lorsqu'un élément `<dialog>` est ouvert avec `showModal()`, le navigateur place automatiquement le focus à l'intérieur de la boîte de dialogue. Le développeur peut préciser ce point de départ avec l'attribut `autofocus`, ou ajuster le focus par programmation lorsque le contexte le justifie.
 
-- le focus doit être déplacé à l'intérieur de la fenêtre ;
-- la navigation clavier doit rester cohérente ;
-- le focus ne doit pas se perdre dans le reste de la page.
+Le choix du focus initial dépend notamment de la nature du contenu :
 
-Le positionnement initial du focus dépend du contexte.
+- **Dialogue court et interactif :** le focus peut être placé sur le premier contrôle pertinent.
+- **Dialogue contenant un texte long ou une structure complexe :** il peut être préférable de focaliser un élément statique au début du contenu, comme le titre ou le premier paragraphe, afin de faciliter son exploration.
+- **Dialogue demandant une décision difficilement réversible :** le focus peut être placé sur l'action la moins destructive, lorsque cela aide à prévenir une validation accidentelle.
 
-Selon les recommandations du WAI-ARIA Authoring Practices Guide, plusieurs stratégies peuvent être appropriées :
+Ces stratégies sont décrites dans le WAI-ARIA Authoring Practices Guide (APG). Elles constituent des recommandations de conception : le choix approprié dépend du contenu et du parcours utilisateur.
 
-- placer le focus sur le premier élément interactif ;
-- placer le focus sur un élément statique lorsque le contenu est long ou fortement structuré ;
-- placer le focus sur l'action la moins destructive lorsqu'une décision importante est demandée à l'utilisateur.
+Il faut également prévoir ce qui se passe lorsque la boîte de dialogue se ferme. En règle générale, le focus revient à l'élément qui l'a ouverte. Si cet élément n'existe plus ou si la suite du parcours rend un autre point de départ plus pertinent, le focus doit être placé sur un élément cohérent avec la tâche en cours.
 
 ## Navigation clavier
 
-Une fenêtre modale doit conserver le focus à l'intérieur de son propre cycle de navigation.
+Une boîte de dialogue modale doit permettre de poursuivre les interactions au clavier sans que l'utilisateur puisse interagir avec le contenu inerte situé derrière elle.
 
-Les comportements généralement attendus sont les suivants :
+Pour une boîte de dialogue ouverte avec `showModal()`, le navigateur prend en charge le contexte modal et rend le reste du document inerte. Le développeur doit néanmoins vérifier que le contenu de la fenêtre est utilisable au clavier et que les comportements choisis sont cohérents avec l'objectif du composant.
 
-- `Tab` déplace le focus vers l'élément suivant ;
-- `Shift + Tab` revient à l'élément précédent ;
-- le focus boucle dans la fenêtre ;
-- `Escape` permet de fermer la boîte de dialogue.
+Le modèle de dialogue modal de l'APG décrit les interactions clavier suivantes :
 
-Ces mécanismes participent directement à l'accessibilité du composant.
+- `Tab` déplace le focus vers l'élément focalisable suivant dans la boîte de dialogue.
+- `Shift + Tab` déplace le focus vers l'élément focalisable précédent.
+- La navigation au clavier reste dans la séquence de tabulation de la boîte de dialogue, selon le modèle de l'APG.
+- `Escape` ferme la boîte de dialogue dans le comportement décrit par ce modèle.
+
+Ces recommandations doivent être distinguées des mécanismes natifs de HTML. Pour une boîte de dialogue personnalisée construite avec des éléments génériques, le développeur doit implémenter lui-même les comportements nécessaires, notamment la gestion du focus et l'inertie du contenu extérieur.
+
+Enfin, la boîte de dialogue doit proposer un moyen explicite et visible de la fermer, par exemple un bouton « Fermer » ou « Annuler ». La touche `Escape` constitue un moyen complémentaire, pas un substitut à ce bouton.
 
 ## HTML et ARIA
 
@@ -184,17 +209,26 @@ Il est donc important de distinguer les besoins d'une implémentation entièreme
 
 ## `dialog` et `alertdialog`
 
-Toutes les fenêtres modales n'ont pas le même objectif.
+Toutes les boîtes de dialogue modales ne remplissent pas la même fonction. Le rôle ARIA doit refléter l’objectif réel du composant, et non simplement l’importance de l’action proposée.
 
-Le rôle `dialog` correspond aux interactions générales avec l'utilisateur.
+### Le rôle `dialog`
 
-Le rôle `alertdialog` est destiné aux situations nécessitant une attention immédiate, comme :
+Le rôle `dialog` convient aux interactions qui nécessitent un échange avec l'utilisateur dans une fenêtre distincte du reste de l'interface : formulaire, paramètres, consultation d'informations ou modification d'une configuration, par exemple.
 
-- une erreur bloquante ;
-- une confirmation de suppression ;
-- un avertissement critique.
+### Le rôle `alertdialog`
 
-Le choix du rôle doit être cohérent avec la fonction réelle du composant.
+Le rôle `alertdialog` est destiné aux boîtes de dialogue modales qui interrompent le déroulement habituel de l'interaction pour communiquer un message important et obtenir une réponse de l'utilisateur.
+
+Il peut notamment convenir à une confirmation d'action irréversible ou à un message d'erreur qui nécessite une intervention. **Une confirmation de suppression ne justifie toutefois pas, à elle seule, le recours à `alertdialog`** : il faut tenir compte du contexte et de la nécessité réelle d'interrompre l'utilisateur.
+
+Ce rôle permet aux technologies d'assistance d'identifier spécifiquement ce type de boîte de dialogue et, selon leur prise en charge, de lui appliquer un traitement particulier.
+
+### Quel rôle choisir ?
+
+Le choix ne repose donc pas uniquement sur le caractère critique du message ou sur la présence d'une action destructive. Il dépend avant tout de la fonction de la boîte de dialogue et de la manière dont elle intervient dans le parcours utilisateur.
+
+Dans les deux cas, le nom accessible doit identifier la boîte de dialogue. Pour `alertdialog`, le message principal doit également être associé à celle-ci afin que l'utilisateur puisse comprendre rapidement la situation et la réponse attendue.
+
 
 ## Une erreur fréquente : `aria-describedby`
 
@@ -206,9 +240,40 @@ Dans certains cas, il peut être préférable de laisser l'utilisateur parcourir
 
 ## Une erreur fréquente : ajouter `tabindex`
 
-L'attribut `tabindex` est parfois utilisé sur l'élément `<dialog>` afin de forcer certains comportements liés au focus.
+L'attribut `tabindex` ne doit pas être utilisé sur l'élément HTML `<dialog>`. Celui-ci n'a pas besoin d'être rendu focalisable pour que son contenu puisse recevoir le focus.
 
-Cette pratique doit être examinée avec précaution et confrontée aux recommandations actuelles des spécifications et de la documentation MDN.
+En revanche, lorsqu'une boîte de dialogue contient un texte long ou une structure complexe, il peut être pertinent de placer initialement le focus sur un élément statique situé à l'intérieur de la fenêtre, comme son titre ou le premier paragraphe.
+
+Dans ce cas, cet élément peut recevoir `tabindex="-1"` : il devient focalisable par programmation, sans être ajouté à l'ordre de tabulation habituel.
+
+Par exemple :
+
+```HTML
+<dialog id="details">
+  <h2 id="details-title" tabindex="-1">
+    Informations complémentaires
+  </h2>
+
+  <p>
+    Ce contenu présente plusieurs informations
+    qui doivent pouvoir être parcourues séparément.
+  </p>
+
+  <button type="button">Fermer</button>
+</dialog>
+```
+
+Le développeur peut ensuite placer explicitement le focus sur le titre au moment de l'ouverture :
+
+```JavaScript
+const dialog = document.querySelector("#details");
+const dialogTitle = document.querySelector("#details-title");
+
+dialog.showModal();
+dialogTitle.focus();
+```
+
+Cet exemple illustre le mécanisme technique. Le choix de l'élément à focaliser doit toutefois être adapté au contenu et à l'objectif de la boîte de dialogue. Pour une modale courte, un élément interactif peut être un meilleur point de départ.
 
 ## Retour du focus
 
@@ -267,4 +332,5 @@ Comprendre les différences entre HTML natif, ARIA et comportements attendus per
   <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" hreflang="en">WAI-ARIA Authoring Practices Guide - Dialog (Modal) Pattern (en)</a></li>
   <li><a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element" hreflang="en">HTML Living Standard (en)</a></li>
   <li><a href="https://www.w3.org/TR/wai-aria-1.2/#dialog" hreflang="en">WAI-ARIA Specification (en)</a></li>
+  <li><a href="https://caniuse.com/?search=closedby" hreflang="en">Support for closedby attribute (en)</a></li>
 </ul>
