@@ -70,6 +70,8 @@ Exemple minimal :
 </dialog>
 ```
 
+Cet exemple présente uniquement la structure HTML du dialogue. Son ouverture et le comportement des boutons doivent être définis séparément.
+
 L'élément peut être manipulé en JavaScript grâce à différentes méthodes, notamment pour l'ouvrir ou le fermer.
 
 Cette approche native permet aux navigateurs d'intégrer directement une partie des comportements traditionnellement implémentés manuellement.
@@ -96,11 +98,11 @@ La méthode `show()` ouvre une boîte de dialogue non modale. Le reste du docume
 dialog.showModal();
 ```
 
-La méthode `showModal()` ouvre une boîte de dialogue modale. Celle-ci est placée dans la couche supérieure du navigateur (top layer) et le reste du document devient inerte, à l'exception de la boîte de dialogue et de ses descendants.
+La méthode `showModal()` ouvre la boîte de dialogue de manière modale. Elle la place dans la couche supérieure du navigateur (*top layer*) et rend le reste du document inerte.
 
-Cette inertie empêche les interactions avec le contenu situé derrière la modale. Elle est prise en charge nativement par le navigateur : il n'est pas nécessaire de rendre manuellement le reste du document inerte pour obtenir ce comportement avec `showModal()`.
+Il n'est donc pas nécessaire de rendre manuellement le contenu extérieur inerte pour obtenir ce comportement avec `showModal()`.
 
-Il faut donc choisir la méthode en fonction du comportement recherché : `show()` pour une boîte de dialogue non modale, `showModal()` pour une boîte de dialogue modale.
+Il faut choisir la méthode en fonction du comportement recherché : `show()` pour une boîte de dialogue non modale, `showModal()` pour une boîte de dialogue modale.
 
 ## Fermeture
 
@@ -154,7 +156,7 @@ Il propose trois valeurs :
 L'élément HTML `<dialog>`, lorsqu'il est ouvert avec `showModal()`, fournit plusieurs mécanismes natifs qui évitent de devoir les réimplémenter manuellement.
 
 - **Une couche d'affichage dédiée :** la boîte de dialogue est placée dans la *top layer* du navigateur, au-dessus du contenu habituel du document.
-- **L'inertie du contenu extérieur :** les éléments du même document situés en dehors de la boîte de dialogue deviennent inertes. Ils ne peuvent donc plus être utilisés pendant que la fenêtre modale est ouverte.
+- **Le confinement des interactions :** le navigateur rend inerte le contenu extérieur à la boîte de dialogue. Le focus clavier ne peut donc pas être déplacé vers les éléments de la page situés derrière la fenêtre. Ce mécanisme natif évite d'avoir à implémenter manuellement le confinement du focus, mais ne garantit pas une boucle de tabulation entre le dernier et le premier élément focalisable.
 - **Un arrière-plan personnalisable :** le pseudo-élément `::backdrop` permet de styliser la zone située derrière la boîte de dialogue.
 
 Ces mécanismes constituent une base solide pour une fenêtre modale accessible. Ils ne dispensent toutefois pas de concevoir correctement son contenu, son nom accessible, son point de départ pour la navigation et ses moyens de fermeture.
@@ -175,13 +177,9 @@ Ces stratégies sont décrites dans le WAI-ARIA Authoring Practices Guide (APG).
 
 Il faut également prévoir ce qui se passe lorsque la boîte de dialogue se ferme. En règle générale, le focus revient à l'élément qui l'a ouverte. Si cet élément n'existe plus ou si la suite du parcours rend un autre point de départ plus pertinent, le focus doit être placé sur un élément cohérent avec la tâche en cours.
 
-## Navigation clavier
-
-Une fenêtre modale doit pouvoir être utilisée au clavier sans permettre d'interagir avec le contenu de la page situé derrière elle.
-
 ### Avec l'élément HTML `<dialog>`
 
-Lorsqu'un élément `<dialog>` est ouvert avec `showModal()`, le navigateur gère le contexte modal : le contenu extérieur devient inerte et le focus clavier est limité au dialogue et à l'interface du navigateur.
+Avec `showModal()`, le navigateur prend en charge le contexte modal et empêche les interactions avec le contenu extérieur. Le confinement du focus ne signifie toutefois pas nécessairement que la tabulation boucle du dernier au premier élément focalisable.
 
 Le développeur doit néanmoins vérifier que tous les contrôles de la fenêtre sont utilisables au clavier, que le focus initial est pertinent et qu'un moyen explicite de fermeture est disponible.
 
@@ -211,18 +209,18 @@ Enfin, une fenêtre modale doit proposer un moyen explicite et visible de la fer
 
 ## HTML et ARIA
 
-Avant l'apparition de `<dialog>`, les modales étaient généralement construites avec des éléments génériques enrichis par des attributs ARIA.
+Une fenêtre modale peut être construite à partir de l'élément HTML `<dialog>` ou d'éléments génériques, comme une `<div>`. Les deux approches ne fournissent pas les mêmes mécanismes natifs.
 
-Une implémentation ARIA classique repose notamment sur :
+Pour une modale personnalisée, les attributs ARIA permettent notamment d'exposer sa nature et son état aux technologies d'assistance :
 
-- `role="dialog"` ;
-- `aria-modal="true"` ;
-- `aria-labelledby` ou `aria-label` ;
-- éventuellement `aria-describedby`.
+- `role="dialog"` identifie la boîte de dialogue ;
+- `aria-modal="true"` indique qu'elle est modale ;
+- `aria-labelledby` ou `aria-label` lui fournit un nom accessible ;
+- `aria-describedby` peut associer à la boîte de dialogue une description complémentaire, lorsque cela est pertinent.
 
-L'élément HTML `<dialog>` possède toutefois un rôle implicite et introduit des comportements natifs.
+Ces attributs ne suffisent toutefois pas à rendre une fenêtre réellement modale : le développeur doit également gérer les interactions, le focus et l'inertie du contenu extérieur.
 
-Il est donc important de distinguer les besoins d'une implémentation entièrement personnalisée de ceux d'une implémentation basée sur les fonctionnalités natives du navigateur.
+Avec l'élément HTML `<dialog>`, le rôle `dialog` est fourni nativement. Lorsqu'il est ouvert avec `showModal()`, le navigateur assure également plusieurs mécanismes propres au contexte modal. Il convient donc d'éviter d'ajouter des attributs ARIA qui feraient doublon avec la sémantique native, sans besoin particulier.
 
 ## `dialog` et `alertdialog`
 
