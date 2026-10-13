@@ -84,7 +84,7 @@ L'élément `<dialog>` peut être affiché de deux manières.
 
 ### Fenêtre non modale
 
-```JavaScript
+```javascript
 dialog.show();
 ```
 
@@ -92,7 +92,7 @@ La méthode `show()` ouvre une boîte de dialogue non modale. Le reste du docume
 
 ### Fenêtre modale
 
-```JavaScript
+```javascript
 dialog.showModal();
 ```
 
@@ -248,7 +248,7 @@ Dans ce cas, cet élément peut recevoir `tabindex="-1"` : il devient focalisabl
 
 Par exemple :
 
-```HTML
+```html
 <dialog id="details">
   <h2 id="details-title" tabindex="-1">
     Informations complémentaires
@@ -265,7 +265,7 @@ Par exemple :
 
 Le développeur peut ensuite placer explicitement le focus sur le titre au moment de l'ouverture :
 
-```JavaScript
+```javascript
 const dialog = document.querySelector("#details");
 const dialogTitle = document.querySelector("#details-title");
 
