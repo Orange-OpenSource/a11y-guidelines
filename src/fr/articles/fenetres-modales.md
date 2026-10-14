@@ -10,23 +10,23 @@ tags:
 
 Les fenêtres modales sont devenues un composant incontournable des interfaces web modernes : formulaires, confirmations d'action, paramètres, authentification, affichage de contenus complémentaires...
 
-Pourtant, elles figurent également parmi les composants qui posent le plus de difficultés en matière d'accessibilité.
+Pourtant, leur mise en œuvre soulève de nombreux enjeux en matière d'accessibilité.
 
-Une fenêtre modale ne consiste pas simplement à afficher un élément au-dessus du contenu de la page. Son ouverture modifie le contexte d'interaction de l'utilisateur : le focus clavier doit être géré correctement, les technologies d'assistance doivent pouvoir identifier la boîte de dialogue, et le contenu situé derrière la fenêtre ne doit plus être accessible tant que celle-ci est ouverte.
+Une fenêtre modale ne consiste pas simplement à afficher un élément au-dessus du contenu de la page. Son ouverture modifie le contexte d'interaction de l'utilisateur : le focus clavier doit être géré correctement, les technologies d'assistance doivent pouvoir identifier la boîte de dialogue et le contenu situé derrière la fenêtre doit être rendu inerte tant qu'elle est ouverte.
 
-Pendant longtemps, les développeurs ont dû construire eux-mêmes l'ensemble de ces mécanismes à l'aide de JavaScript et d'ARIA. L'arrivée de l'élément HTML `<dialog>` a profondément fait évoluer cette approche.
+Pendant longtemps, les développeurs ont dû implémenter eux-mêmes une grande partie de ces mécanismes à l'aide de JavaScript et d'ARIA. L'élément HTML `<dialog>` apporte aujourd'hui des mécanismes natifs qui simplifient la création de fenêtres modales, sans dispenser de vérifier leur comportement et leur accessibilité.
 
 Cet article propose un tour d'horizon des bonnes pratiques actuelles autour des fenêtres modales :
 
-- comprendre ce qu'est réellement une fenêtre modale ;
+- distinguer une boîte de dialogue modale d'une boîte de dialogue non modale ;
 - découvrir les possibilités offertes par l'élément HTML `<dialog>` ;
 - identifier le rôle des attributs ARIA ;
 - comprendre les enjeux liés à la gestion du focus ;
-- et éviter les erreurs les plus fréquemment rencontrées lors des audits d'accessibilité.
+- éviter les erreurs fréquemment rencontrées lors des audits d'accessibilité.
 
 ## Qu'est-ce qu'une fenêtre modale ?
 
-Une fenêtre modale est une boîte de dialogue affichée au-dessus du contenu principal d'une page et qui demande à l'utilisateur d'interagir avec elle avant de pouvoir reprendre son activité précédente.
+Une fenêtre modale est une boîte de dialogue qui suspend temporairement l'interaction avec le reste de la page et demande à l'utilisateur d'interagir avec elle avant de reprendre son activité précédente.
 
 Une modale peut par exemple être utilisée pour :
 
@@ -36,16 +36,14 @@ Une modale peut par exemple être utilisée pour :
 - présenter des paramètres ;
 - afficher une information importante.
 
-Lorsque la fenêtre est ouverte, le contenu situé derrière elle devient temporairement inactif du point de vue de l'interaction utilisateur.
+Lorsque la fenêtre est ouverte, le contenu situé derrière elle doit devenir temporairement inactif.
 
 Il est important de distinguer deux notions souvent confondues :
 
 - une boîte de dialogue (*dialog*) ;
 - une boîte de dialogue modale (*modal dialog*).
 
-Une boîte de dialogue classique peut coexister avec le reste de l'interface et laisser l'utilisateur continuer à interagir avec celle-ci.
-
-À l'inverse, une boîte de dialogue modale suspend temporairement l'interaction avec le reste de la page jusqu'à sa fermeture.
+Une boîte de dialogue non modale peut coexister avec le reste de l'interface, que l'utilisateur peut continuer à utiliser. À l'inverse, une boîte de dialogue modale suspend temporairement l'interaction avec le reste de la page jusqu'à sa fermeture.
 
 Cette distinction existe à la fois dans les spécifications HTML et dans les modèles de conception ARIA.
 
@@ -294,9 +292,13 @@ Le rôle `dialog` convient aux interactions qui nécessitent un échange avec l'
 
 Le rôle `alertdialog` est destiné aux boîtes de dialogue modales qui interrompent le déroulement habituel de l'interaction pour communiquer un message important et obtenir une réponse de l'utilisateur.
 
-Il peut notamment convenir à une confirmation d'action irréversible ou à un message d'erreur qui nécessite une intervention. **Une confirmation de suppression ne justifie toutefois pas, à elle seule, le recours à `alertdialog`** : il faut tenir compte du contexte et de la nécessité réelle d'interrompre l'utilisateur. Le rôle permet aux technologies d'assistance d'identifier ce type de dialogue, mais son annonce et son traitement peuvent varier selon les environnements.
+**Son caractère interruptif justifie un usage parcimonieux.** Il ne doit pas être choisi simplement parce qu'une action est importante ou irréversible, mais lorsque la situation nécessite réellement d'attirer immédiatement l'attention de l'utilisateur et de solliciter une réponse.
 
-Le focus initial doit être placé à l'intérieur de la boîte de dialogue. Lorsqu'une réponse est attendue, il est souvent pertinent de le placer sur un bouton, en privilégiant si nécessaire l'action la moins destructive. Le choix doit toutefois rester adapté au contenu et à la situation.
+Il peut notamment convenir à une confirmation d'action irréversible ou à un message d'erreur qui nécessite une intervention. **Une confirmation de suppression ne justifie toutefois pas, à elle seule, le recours à `alertdialog`** : le choix dépend du contexte et de la nécessité réelle d'interrompre l'utilisateur.
+
+Le focus initial doit être placé à l'intérieur de la boîte de dialogue. Lorsqu'une réponse est attendue, il peut être pertinent de le placer sur un bouton, en privilégiant si nécessaire l'action la moins destructive. Le choix doit toutefois rester adapté au contenu et à la situation.
+
+Le rôle permet aux technologies d'assistance d'identifier ce type de dialogue, mais son annonce et son traitement peuvent varier selon les environnements.
 
 ### Quel rôle choisir ?
 
