@@ -270,13 +270,6 @@ Une fenêtre modale peut être construite à partir de l'élément HTML `<dialog
 Pour une modale personnalisée, les attributs ARIA permettent notamment d'exposer sa nature et son état aux technologies d'assistance :
 
 - `role="dialog"` identifie la boîte de dialogue ;
-- `aria-modal="true"` indique qu'elle est modale ;
-- `aria-labelledby` ou `aria-label` lui fournit un nom accessible ;
-- `aria-describedby` peut associer à la boîte de dialogue une description complémentaire, lorsque cela est pertinent.
-
-Pour une modale personnalisée, les attributs ARIA permettent notamment d'exposer sa nature et son état aux technologies d'assistance :
-
-- `role="dialog"` identifie la boîte de dialogue ;
 - `aria-modal="true"` indique que la boîte de dialogue est modale ;
 - `aria-labelledby` ou `aria-label` lui fournit un nom accessible ;
 - `aria-describedby` peut lui associer une description complémentaire, lorsque cela est pertinent.
@@ -317,7 +310,7 @@ L'attribut `aria-describedby` est parfois ajouté systématiquement aux fenêtre
 
 Cette approche n'est pas toujours pertinente. Lorsque la boîte de dialogue contient plusieurs paragraphes, des listes ou d'autres structures sémantiques, faire restituer l'ensemble du contenu sous la forme d'une description textuelle peut rendre son exploration plus difficile.
 
-Le WAI-ARIA Authoring Practices Guide (APG) recommande notamment d'omettre `aria-describedby` lorsque le contenu comporte des structures qui doivent être perçues pour être comprises, et qu'une annonce sous la forme d'un bloc de texte serait difficile à exploiter. <Link url="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" title="Consulter les recommandations de l'APG (en)"/>.
+Le WAI-ARIA Authoring Practices Guide (APG) recommande notamment d'omettre `aria-describedby` lorsque le contenu comporte des structures qui doivent être perçues pour être comprises, et qu'une annonce sous la forme d'un bloc de texte serait difficile à exploiter.
 
 Pour une boîte de dialogue contenant un message descriptif court, l'attribut peut en revanche être utile pour en associer le contenu à la fenêtre.
 
