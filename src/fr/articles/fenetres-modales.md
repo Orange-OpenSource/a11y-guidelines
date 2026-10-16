@@ -197,19 +197,17 @@ Il propose trois valeurs :
 
 Si l'attribut est absent ou invalide, son comportement dépend de la méthode d'ouverture : un dialogue ouvert avec `showModal()` se comporte comme si `closedby="closerequest"`, tandis qu'un dialogue ouvert autrement se comporte comme si `closedby="none"`.
 
-L'attribut `closedby` ne bloque pas les appels programmatiques à `close()`. La méthode `requestClose()` constitue, quant à elle, une demande de fermeture qui peut être annulée via l'événement `cancel` et qui ignore les restrictions définies par `closedby`.
+L'attribut `closedby` ne bloque pas les appels programmatiques à `close()`. Les mécanismes de fermeture définis par le développeur restent donc possibles, même lorsque les fermetures automatiques déclenchées par les actions utilisateur sont désactivées.
 
 **Statut et compatibilité :** l'attribut `closedby` fait partie du standard HTML, mais sa prise en charge varie encore selon les navigateurs. La méthode `requestClose()` peut également ne pas être disponible dans certains environnements anciens. Vérifiez la compatibilité de ces fonctionnalités avec les navigateurs ciblés avant de vous appuyer sur elles pour définir le comportement de fermeture.
 
 ## Ce que fournit réellement `<dialog>`
 
-L'élément HTML `<dialog>`, lorsqu'il est ouvert avec `showModal()`, fournit plusieurs mécanismes natifs qui évitent de devoir les réimplémenter manuellement.
+L'élément HTML `<dialog>`, lorsqu'il est ouvert avec `showModal()`, fournit plusieurs mécanismes natifs utiles à la création d'une fenêtre modale.
 
-- **Une couche d'affichage dédiée :** la boîte de dialogue est placée dans la *top layer* du navigateur, au-dessus du contenu habituel du document et sans être contrainte par les contextes d'empilement habituels.
-- **L'inertie du contenu extérieur :** le navigateur rend inerte le contenu situé à l'extérieur de la boîte de dialogue. Ce contenu ne peut plus être utilisé normalement, n'est plus exposé aux technologies d'assistance et ne peut pas recevoir le focus. Ce mécanisme natif évite d'avoir à rendre manuellement le contenu extérieur inerte. Il ne garantit toutefois pas, à lui seul, une boucle de tabulation entre le dernier et le premier élément focalisable de la boîte de dialogue.
-- **Un arrière-plan personnalisable :** le pseudo-élément `::backdrop` permet de styliser la zone située derrière la boîte de dialogue modale.
+Le pseudo-élément `::backdrop` permet notamment de personnaliser la zone située derrière la boîte de dialogue.
 
-Par exemple, le pseudo-élément `::backdrop` permet d'assombrir la page derrière une boîte de dialogue modale :
+Par exemple, il est possible d'assombrir l'arrière-plan :
 
 ```css
 dialog::backdrop {
@@ -217,9 +215,9 @@ dialog::backdrop {
 }
 ```
 
-Le pseudo-élément `::backdrop` n'est pas un élément HTML à ajouter au document. Il représente la zone située derrière un élément placé dans la couche supérieure, notamment un `<dialog>` ouvert avec `showModal()`.
+Le pseudo-élément `::backdrop` n'est pas un élément HTML à ajouter au document. Il représente la zone située derrière un élément placé dans la couche supérieure (*top layer*), notamment un `<dialog>` ouvert avec `showModal()`.
 
-Ces mécanismes constituent une base solide pour développer une fenêtre modale accessible. Ils ne dispensent toutefois pas de concevoir correctement son contenu, son nom accessible, le placement initial du focus et ses moyens de fermeture. Le comportement du focus au clavier doit également être vérifié, notamment lorsqu'il atteint le dernier élément focalisable de la boîte de dialogue.
+Ces mécanismes natifs ne dispensent pas de vérifier l'accessibilité du composant : son contenu, son nom accessible, le placement initial du focus et ses moyens de fermeture doivent rester adaptés. La navigation au clavier mérite également une attention particulière : l'inertie du contenu extérieur ne garantit pas, à elle seule, que la tabulation reste confinée dans la boîte de dialogue.
 
 ## Gestion du focus
 
@@ -285,7 +283,7 @@ Il ne faut donc utiliser cet attribut que si la fenêtre est réellement modale 
 
 Avec l'élément HTML `<dialog>`, le rôle `dialog` est fourni nativement. Lorsqu'il est ouvert avec `showModal()`, le navigateur assure les mécanismes natifs de modalité et expose celle-ci aux technologies d'assistance. Il n'est donc généralement pas nécessaire d'ajouter explicitement `aria-modal="true"`.
 
-L'attribut `aria-labelledby` reste pertinent pour associer la boîte de dialogue à son titre visible et définir son nom accessible. Quant à `aria-describedby`, son utilité dépend du contenu : il convient surtout lorsque la description est courte et peut être comprise sans perdre d'informations sur sa structure. Pour un contenu complexe comprenant plusieurs paragraphes, des listes ou des tableaux, mieux vaut généralement éviter d'associer l'ensemble de ce contenu comme une description unique.
+L'attribut `aria-labelledby` reste pertinent pour associer la boîte de dialogue à son titre visible et définir son nom accessible. L'utilisation de `aria-describedby` dépend quant à elle du contenu et mérite une attention particulière, notamment lorsque celui-ci comporte plusieurs paragraphes ou des structures sémantiques.
 
 Plus largement, il faut privilégier la sémantique HTML native et éviter les attributs ARIA redondants, sauf besoin particulier.
 
@@ -305,21 +303,19 @@ Le rôle `alertdialog` est destiné aux boîtes de dialogue modales qui interrom
 
 Il peut notamment convenir à une confirmation d'action ou à un message d'erreur qui exige une réponse. Une confirmation de suppression ne justifie toutefois pas, à elle seule, le recours à `alertdialog` : le choix dépend du contexte et de la nécessité réelle d'interrompre l'utilisateur.
 
-À l'ouverture, le focus doit être placé à l'intérieur de la boîte de dialogue. Pour une action difficilement réversible, il peut être pertinent de le positionner sur l'action la moins destructive, afin de limiter le risque de validation accidentelle. Ce choix dépend toutefois du contenu et du contexte.
-
 Le rôle `alertdialog` permet aux technologies d'assistance d'identifier ce type de dialogue et de le traiter spécifiquement, mais son annonce peut varier selon les environnements.
 
 ### Quel rôle choisir ?
 
 Le choix dépend donc avant tout de la fonction de la boîte de dialogue et de la manière dont elle intervient dans le parcours utilisateur.
 
-Dans les deux cas, le nom accessible doit identifier la boîte de dialogue, par exemple en référençant son titre avec `aria-labelledby`. Pour `alertdialog`, le message principal doit également être associé à celle-ci avec `aria-describedby`, conformément au modèle de l'APG, afin que l'utilisateur puisse comprendre rapidement la situation et la réponse attendue.
+Dans les deux cas, le nom accessible doit identifier la boîte de dialogue, par exemple en référençant son titre avec `aria-labelledby`. Pour `alertdialog`, le modèle de l'APG prévoit également `aria-describedby` pour associer le message d'alerte à la boîte de dialogue. Ce message doit rester suffisamment concis pour être compris facilement lors de son annonce.
 
 ## Une erreur fréquente : `aria-describedby`
 
 L'attribut `aria-describedby` est parfois ajouté systématiquement aux fenêtres modales pour associer l'ensemble de leur contenu à leur description accessible.
 
-Cette approche n'est pas toujours pertinente. Lorsque la boîte de dialogue contient plusieurs paragraphes, des listes ou d'autres structures sémantiques, associer un conteneur englobant l'ensemble du contenu peut conduire certaines technologies d'assistance à restituer celui-ci sous la forme d'un bloc de texte, sans permettre d'en explorer directement la structure à partir de cette description.
+Cette approche n'est pas toujours pertinente. Lorsque la boîte de dialogue contient plusieurs paragraphes, des listes ou d'autres structures sémantiques, associer un conteneur englobant l'ensemble du contenu peut conduire les technologies d'assistance à restituer celui-ci sous la forme d'un bloc de texte, sans que sa structure soit nécessairement perceptible dans cette annonce.
 
 Le *WAI-ARIA Authoring Practices Guide* (APG) recommande notamment d'omettre `aria-describedby` lorsque le contenu est complexe ou structuré et qu'une annonce globale risquerait d'en rendre la compréhension difficile.
 
