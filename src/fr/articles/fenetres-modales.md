@@ -154,7 +154,7 @@ Cette fermeture est immédiate et ne peut pas être annulée par un gestionnaire
 
 ### Demander la fermeture avec `requestClose()`
 
-La méthode `requestClose()` demande la fermeture de la boîte de dialogue. Elle déclenche l'événement `cancel`, qui permet au code d'empêcher la fermeture avec `preventDefault()`. Si cet événement n'est pas annulé, la boîte de dialogue se ferme et l'événement `close` est ensuite déclenché.
+La méthode `requestClose()` demande la fermeture de la boîte de dialogue. Elle déclenche l'événement `cancel`, qui permet au code d'empêcher la fermeture en appelant `preventDefault()`. Si cet événement n'est pas annulé, la boîte de dialogue se ferme et l'événement `close` est ensuite déclenché.
 
 ```javascript
 dialog.requestClose();
@@ -164,7 +164,7 @@ Cette méthode est notamment utile lorsqu'une demande de fermeture doit pouvoir 
 
 Contrairement à `close()`, `requestClose()` ne ferme donc pas nécessairement la boîte de dialogue : un gestionnaire de l'événement `cancel` peut empêcher sa fermeture. Cette méthode ignore toutefois l'attribut `closedby` : elle peut fermer la boîte de dialogue même si celui-ci vaut `none`.
 
-Sa prise en charge doit être vérifiée si le projet cible des navigateurs anciens.
+**Compatibilité :** `requestClose()` est prise en charge par les navigateurs récents, mais peut être indisponible dans des environnements plus anciens. Vérifiez sa compatibilité avec les navigateurs ciblés avant de l'utiliser.
 
 ### Fermer avec un formulaire
 
@@ -237,34 +237,38 @@ Ces stratégies sont décrites dans le *WAI-ARIA Authoring Practices Guide* (APG
 
 ### Avec l'élément HTML `<dialog>`
 
-Avec `showModal()`, le navigateur rend le contenu extérieur à la boîte de dialogue inerte et gère une partie du comportement du focus. Cela ne garantit toutefois pas que la tabulation boucle du dernier élément focalisable au premier, et inversement.
+Lorsqu'une boîte de dialogue est ouverte avec `showModal()`, le navigateur rend le contenu extérieur à la boîte de dialogue inerte. Le focus clavier reste alors dans le contenu de la boîte de dialogue ou peut se déplacer vers l'interface du navigateur, par exemple la barre d'adresse.
 
-Avant d'ajouter un mécanisme JavaScript de boucle de focus, il convient de vérifier le comportement de navigation dans les navigateurs et avec les technologies d'assistance ciblés. Le contenu extérieur étant inerte, il faut notamment distinguer le déplacement du focus dans la page de celui vers les éléments de l'interface du navigateur.
+Toutefois, contrairement au modèle d'interaction décrit par le WAI-ARIA Authoring Practices Guide (APG), le comportement natif de `<dialog>` ne garantit pas nécessairement que la navigation au clavier boucle du dernier élément focalisable au premier, et inversement. Lorsque le focus atteint l'une des extrémités de la séquence de tabulation, appuyer sur `Tab` ou `Shift + Tab` peut ainsi déplacer le focus vers l'interface du navigateur.
+
+Cette distinction est importante lors de l'évaluation de l'accessibilité au clavier. Il ne faut pas conclure qu'une boîte de dialogue native nécessite un mécanisme JavaScript de boucle de focus simplement parce que celui-ci ne boucle pas à l'intérieur de la fenêtre. Il convient de tester le comportement dans les navigateurs ciblés et avec les technologies d'assistance concernées, puis de déterminer si un traitement complémentaire est nécessaire.
 
 ### Le modèle recommandé par le WAI-ARIA APG
 
 Le *Dialog (Modal) Pattern* du *WAI-ARIA Authoring Practices Guide* (APG) recommande les interactions clavier suivantes :
 
-- `Tab` déplace le focus vers l'élément focalisable suivant. Depuis le dernier élément, il revient au premier.
-- `Shift + Tab` déplace le focus vers l'élément focalisable précédent. Depuis le premier élément, il revient au dernier.
+- `Tab` déplace le focus vers l'élément focalisable suivant. Depuis le dernier élément, le focus revient au premier.
+- `Shift + Tab` déplace le focus vers l'élément focalisable précédent. Depuis le premier élément, le focus revient au dernier.
 - `Escape` permet de fermer la boîte de dialogue.
 
-Il s'agit d'un modèle de conception recommandé, notamment pour les modales personnalisées, et non d'une description exhaustive du comportement natif de chaque navigateur. Pour une boîte de dialogue HTML native, le comportement de fermeture avec `Escape` dépend également de sa configuration, notamment de l'attribut `closedby` lorsque celui-ci est pris en charge.
+Ce modèle décrit le comportement clavier attendu pour une boîte de dialogue modale. Il est particulièrement pertinent pour les modales personnalisées, dont le développeur doit implémenter lui-même les comportements nécessaires.
+
+Pour une boîte de dialogue HTML native, le navigateur fournit plusieurs mécanismes intégrés de gestion du clavier et du focus. La fermeture avec `Escape` peut dépendre de la configuration de la boîte de dialogue, notamment de l'attribut `closedby` lorsque celui-ci est pris en charge.
 
 ### Et pour une modale personnalisée ?
 
 Une modale construite à partir d'éléments génériques, comme une `<div>`, ne bénéficie pas automatiquement des mécanismes natifs de `<dialog>`. Le développeur doit implémenter et tester les comportements nécessaires, notamment :
 
 - placer le focus à l'intérieur de la fenêtre à son ouverture ;
-- empêcher les interactions avec le contenu extérieur tant que la fenêtre est modale, notamment en utilisant `inert` lorsque cela convient ;
-- gérer la navigation au clavier conformément au modèle retenu, y compris le confinement du focus ;
+- empêcher les interactions avec le contenu extérieur tant que la fenêtre est modale, en utilisant notamment `inert` lorsque cela convient ;
+- gérer la navigation au clavier conformément au modèle d'interaction retenu, notamment en maintenant le focus dans la fenêtre et en faisant boucler la navigation entre ses éléments focalisables ;
 - prendre en charge les demandes de fermeture au clavier, notamment avec `Escape` ;
-- restaurer le focus à la fermeture, vers l'élément déclencheur ou un autre point de départ cohérent avec la tâche en cours ;
-- exposer correctement la boîte de dialogue aux technologies d'assistance, notamment en définissant son rôle, son nom accessible et, lorsque cela est approprié, son caractère modal.
+- restaurer le focus à la fermeture, vers l'élément déclencheur ou vers un autre point de départ cohérent avec la tâche que l'utilisateur doit reprendre ;
+- permettre aux technologies d'assistance d'identifier correctement la boîte de dialogue, notamment en définissant son rôle, son nom accessible et, lorsque cela est approprié, son caractère modal.
 
-L'attribut `aria-hidden="true"` peut masquer un contenu aux technologies d'assistance, mais il ne bloque pas les interactions et ne remplace donc ni `inert` ni la gestion du focus. Il faut également veiller à ne pas masquer un élément qui contient le focus, directement ou par l'intermédiaire d'un de ses ancêtres.
+L'attribut `aria-hidden="true"` peut masquer un contenu aux technologies d'assistance, mais il ne bloque pas les interactions et ne remplace donc ni `inert` ni la gestion du focus. Il faut également veiller à ne pas masquer un élément qui contient le focus, directement ou par l'intermédiaire de l'un de ses ancêtres.
 
-Enfin, une fenêtre modale doit proposer un moyen explicite et visible de la fermer, par exemple un bouton « Fermer » ou « Annuler ». La touche `Escape` constitue un moyen complémentaire lorsque ce comportement est prévu ; elle ne remplace pas ce bouton.
+Enfin, une fenêtre modale doit proposer un moyen explicite et visible de la fermer, par exemple un bouton « Fermer » ou « Annuler ». La touche `Escape` constitue un moyen complémentaire de fermeture lorsque ce comportement est prévu ; elle ne remplace pas le bouton.
 
 ## HTML et ARIA
 

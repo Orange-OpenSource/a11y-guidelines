@@ -43,11 +43,11 @@ It is important to distinguish between two concepts that are often confused:
 - a dialog;
 - a modal dialog.
 
-A non-modal dialog can coexist with the rest of the interface, which remains available for the user to interact with. By contrast, a modal dialog temporarily suspends interaction with the rest of the page until it is closed.
+A non-modal dialog can coexist with the rest of the interface, which remains available for interaction. By contrast, a modal dialog temporarily suspends interaction with the rest of the page until it is closed.
 
-This distinction is reflected in both the HTML specifications and the ARIA design patterns.
+This distinction is reflected in both HTML specifications and ARIA design patterns.
 
-## The Introduction of the HTML `<dialog>` Element
+## Introducing the HTML `<dialog>` Element
 
 For many years, creating a modal dialog primarily involved using generic elements such as `<div>` elements, enhanced with JavaScript and ARIA attributes.
 
@@ -164,7 +164,7 @@ This method is particularly useful when a closing request needs to be intercepte
 
 Unlike `close()`, `requestClose()` does not necessarily close the dialog: a `cancel` event handler can prevent it from closing. However, this method ignores the `closedby` attribute, meaning it can close the dialog even when the attribute is set to `none`.
 
-Browser support should be checked if the project targets older browsers.
+**Browser support:** `requestClose()` is supported in recent browsers but may be unavailable in older environments. Check compatibility with the browsers targeted by the project before using it.
 
 ### Closing a dialog with a form
 
@@ -237,9 +237,11 @@ These strategies are described in the *WAI-ARIA Authoring Practices Guide* (APG)
 
 ### With the HTML `<dialog>` Element
 
-When `showModal()` is used, the browser makes the content outside the dialog inert and manages some aspects of focus behaviour. However, this does not guarantee that keyboard tabbing cycles from the last focusable element to the first, and vice versa.
+When a dialog is opened with `showModal()`, the browser makes the content outside the dialog inert. Keyboard focus is restricted to the dialog's contents and the browser's own interface, such as the address bar.
 
-Before adding a JavaScript focus-trapping mechanism, check navigation behaviour in the target browsers and with the assistive technologies in scope. Since the content outside the dialog is inert, it is important to distinguish between moving focus within the page and moving focus to browser interface elements.
+However, unlike the keyboard interaction pattern described by the WAI-ARIA Authoring Practices Guide (APG), native `<dialog>` behaviour does not necessarily cycle focus from the last focusable element back to the first, or from the first to the last. Pressing `Tab` or `Shift + Tab` at either end of the dialog's tab sequence may move focus to the browser's interface instead.
+
+This distinction is important when assessing keyboard accessibility. Do not assume that a native dialog requires a custom JavaScript focus-trapping mechanism simply because focus does not cycle within the dialog. Test the behaviour in the target browsers and with the assistive technologies in scope, and determine whether any additional handling is necessary.
 
 ### The Pattern Recommended by the WAI-ARIA APG
 
@@ -249,7 +251,9 @@ The *Dialog (Modal) Pattern* in the *WAI-ARIA Authoring Practices Guide* (APG) r
 - `Shift + Tab` moves focus to the previous focusable element. From the first element, focus moves back to the last.
 - `Escape` closes the dialog.
 
-This is a recommended design pattern, particularly for custom modal dialogs, rather than an exhaustive description of the native behaviour implemented by every browser. For a native HTML dialog, closing with `Escape` also depends on its configuration, including the `closedby` attribute where supported.
+This pattern describes the expected keyboard interaction for a modal dialog. It is particularly relevant when implementing a custom modal dialog, for which developers must provide the required behaviour themselves.
+
+For a native HTML dialog, the browser provides several built-in keyboard and focus-management mechanisms. Closing with `Escape` can depend on the dialog's configuration, including the `closedby` attribute where supported.
 
 ### What About a Custom Modal Dialog?
 
@@ -257,7 +261,7 @@ A modal dialog built using generic elements, such as a `<div>`, does not automat
 
 - moving focus inside the dialog when it opens;
 - preventing interaction with the content outside the dialog while it is modal, using `inert` where appropriate;
-- managing keyboard navigation according to the chosen pattern, including keeping focus within the dialog;
+- managing keyboard navigation according to the chosen interaction pattern, including keeping focus within the dialog and cycling through its focusable elements;
 - handling keyboard closing requests, particularly with `Escape`;
 - restoring focus when the dialog closes, either to the triggering element or to another position consistent with the task the user needs to resume;
 - ensuring that assistive technologies can correctly identify the dialog, including by defining its role, accessible name and, where appropriate, its modal state.
@@ -423,4 +427,26 @@ A modal dialog must provide a visible, keyboard-accessible way to close it, such
 
 A modal temporarily interrupts interaction with the rest of the page. Depending on the use case, presenting the content directly within the page may be simpler and less intrusive.
 
+## Conclusion
 
+Modal dialogs illustrate the complexity of certain interface components: behind an often simple appearance lie challenges involving semantics, focus management, keyboard navigation and interaction with assistive technologies.
+
+When used with `showModal()`, the HTML `<dialog>` element provides several native mechanisms that make it easier to create accessible modal dialogs. However, it is still necessary to choose an appropriate initial focus target, check that focus is restored correctly, provide an accessible name, and consider whether a modal presentation is actually necessary.
+
+Understanding what native HTML provides, what ARIA attributes describe, and what developers still need to implement helps create more robust and interoperable interfaces.
+
+**An accessible modal dialog is more than a correctly marked-up component: it must enable everyone to understand the dialog, interact with it, and resume their task without difficulty.**
+
+## References
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog">MDN – HTML <code>dialog</code> element</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal">MDN – HTMLDialogElement: showModal() method</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/closedBy">MDN – HTMLDialogElement: closedBy property</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex">MDN – HTML <code>tabindex</code> global attribute</a></li>
+  <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/">WAI-ARIA Authoring Practices Guide – Dialog (Modal) Pattern</a></li>
+  <li><a href="https://www.w3.org/WAI/ARIA/apg/patterns/alertdialog/">WAI-ARIA Authoring Practices Guide – Alert and Message Dialogs Pattern</a></li>
+  <li><a href="https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element">WHATWG – HTML Living Standard: The <code>dialog</code> element</a></li>
+  <li><a href="https://www.w3.org/TR/wai-aria-1.2/#dialog">W3C – WAI-ARIA 1.2: dialog role</a></li>
+  <li><a href="https://caniuse.com/?search=closedby">Can I Use – Browser support for the <code>closedby</code> attribute</a></li>
+</ul>
