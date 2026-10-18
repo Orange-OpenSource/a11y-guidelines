@@ -227,7 +227,7 @@ The `autofocus` attribute can be used to specify which element should receive fo
 
 The choice of initial focus target depends, in particular, on the nature of the content:
 
-- **Short, interactive dialog:** focus can be placed on the first relevant control, such as a form field or a button that allows the user to proceed.
+- **Short, interactive dialog:** focus can be placed on the first relevant control, such as a form field or a button that allows the user to continue.
 - **Dialog containing long text or a complex structure:** it may be preferable to place focus on a static element at the beginning of the content, such as the heading or an introductory paragraph. This element can be given `tabindex="-1"` so that it can receive programmatic focus without being added to the normal tab order.
 - **Dialog requiring a decision that is difficult to reverse:** placing focus on the least destructive action can help prevent accidental confirmation, when appropriate to the context.
 
@@ -237,9 +237,9 @@ These strategies are described in the *WAI-ARIA Authoring Practices Guide* (APG)
 
 ### With the HTML `<dialog>` Element
 
-When a dialog is opened with `showModal()`, the browser makes the content outside the dialog inert. Keyboard focus is restricted to the dialog's contents and the browser's own interface, such as the address bar.
+When a dialog is opened with `showModal()`, the browser makes the content outside the dialog inert. Keyboard focus is restricted to the dialog's contents and the browser's own UI, such as the address bar.
 
-However, unlike the keyboard interaction pattern described by the WAI-ARIA Authoring Practices Guide (APG), native `<dialog>` behaviour does not necessarily cycle focus from the last focusable element back to the first, or from the first to the last. Pressing `Tab` or `Shift + Tab` at either end of the dialog's tab sequence may move focus to the browser's interface instead.
+However, unlike the keyboard interaction pattern described by the WAI-ARIA Authoring Practices Guide (APG), native `<dialog>` behaviour does not necessarily cycle focus from the last focusable element back to the first, or from the first to the last. Pressing `Tab` or `Shift + Tab` at either end of the dialog's tab sequence may move focus to the browser's own UI instead.
 
 This distinction is important when assessing keyboard accessibility. Do not assume that a native dialog requires a custom JavaScript focus-trapping mechanism simply because focus does not cycle within the dialog. Test the behaviour in the target browsers and with the assistive technologies in scope, and determine whether any additional handling is necessary.
 
@@ -274,16 +274,16 @@ Finally, a modal dialog must provide an explicit, visible way to close it, such 
 
 A modal dialog can be built using the HTML `<dialog>` element or generic elements such as a `<div>`. These two approaches do not provide the same built-in mechanisms.
 
-For a custom modal dialog, ARIA attributes can be used to expose its nature and accessible name to assistive technologies:
+For a custom modal dialog, ARIA attributes can be used to communicate its role and accessible name to assistive technologies:
 
 - `role="dialog"` identifies the dialog;
 - `aria-modal="true"` indicates that it is modal;
 - `aria-labelledby` or `aria-label` provides it with an accessible name;
 - `aria-describedby` can associate it with an additional description when appropriate.
 
-**Warning: `aria-modal="true"` does not, by itself, make a dialog modal.** This attribute communicates the dialog's modal state to assistive technologies, but it does not prevent interaction with the content outside the dialog or trap focus. These behaviours must be implemented separately.
+**Warning: `aria-modal="true"` does not, by itself, make a dialog modal.** This attribute communicates the dialog's modal state to assistive technologies, but it does not prevent interaction with content outside the dialog or keep focus within it. These behaviours must be implemented separately.
 
-This attribute should therefore only be used when the dialog is genuinely modal: the implementation must prevent interaction with the content outside the dialog, and that content must be visually obscured or dimmed. The [WAI-ARIA APG explains this precaution in detail](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/).
+This attribute should therefore only be used when the dialog is genuinely modal: the implementation must prevent interaction with content outside the dialog, and that content must be visually obscured or dimmed. The [WAI-ARIA APG explains this precaution in detail](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/).
 
 With the HTML `<dialog>` element, the `dialog` role is provided natively. When the element is opened with `showModal()`, the browser provides the native mechanisms for modality and exposes the modal state to assistive technologies. Explicitly adding `aria-modal="true"` is therefore generally unnecessary.
 
@@ -297,23 +297,23 @@ Not all modal dialogs serve the same purpose. The ARIA role should reflect the p
 
 ### The `dialog` Role
 
-The `dialog` role is appropriate for interactions that require the user to engage with a window separate from the rest of the interface, such as a form, settings, information display, or configuration changes.
+The `dialog` role is appropriate for interactions that require the user to engage with a dialog separate from the rest of the interface, such as a form, settings, information display, or configuration changes.
 
 ### The `alertdialog` Role
 
 The `alertdialog` role is intended for modal dialogs that interrupt the usual interaction flow to communicate an important message and obtain a response from the user.
 
-**Its interruptive nature warrants careful use.** It should not be chosen simply because an action is important or irreversible, but when the situation genuinely requires the user's immediate attention and a response.
+**Its interruptive nature calls for restraint.** It should not be chosen simply because an action is important or irreversible, but when the situation genuinely requires the user's immediate attention and a response.
 
 It may be appropriate, for example, for an action confirmation or an error message that requires a response. However, a deletion confirmation does not, by itself, justify using `alertdialog`: the choice depends on the context and whether interrupting the user is genuinely necessary.
 
-The `alertdialog` role allows assistive technologies to identify this type of dialog and handle it accordingly, although its announcement may vary across environments.
+The `alertdialog` role allows assistive technologies and browsers to identify this type of dialog and potentially handle it differently. However, its announcement may vary across environments.
 
 ### Which Role Should You Choose?
 
 The choice therefore depends primarily on the dialog's purpose and how it fits into the user's interaction flow.
 
-In both cases, the accessible name must identify the dialog, for example by referencing its title with `aria-labelledby`. For `alertdialog`, the APG pattern also specifies `aria-describedby` to associate the alert message with the dialog. This message should be concise enough to be easily understood when announced.
+In both cases, the dialog must have an accessible name, for example by referencing its title with `aria-labelledby`. For `alertdialog`, the APG pattern also specifies `aria-describedby` to associate the alert message with the dialog. This message should be concise enough to be easily understood when announced.
 
 ## A Common Mistake: `aria-describedby`
 
@@ -321,7 +321,7 @@ The `aria-describedby` attribute is sometimes added to modal dialogs by default 
 
 This approach is not always appropriate. When a dialog contains multiple paragraphs, lists, or other semantic structures, associating a container that encompasses all the content can cause assistive technologies to present it as a single block of text, without necessarily conveying its structure in that announcement.
 
-The *WAI-ARIA Authoring Practices Guide* (APG) recommends omitting `aria-describedby` when the content is complex or structured and a single, global announcement could make it difficult to understand.
+The *WAI-ARIA Authoring Practices Guide* (APG) recommends omitting `aria-describedby` when the content is complex or structured and a single announcement could make it difficult to understand.
 
 However, the attribute can be useful for a dialog containing a short descriptive message, allowing that message to be associated with the dialog.
 
@@ -329,7 +329,7 @@ However, the attribute can be useful for a dialog containing a short descriptive
 
 ## A Common Mistake: Adding `tabindex` to `<dialog>`
 
-The `tabindex` attribute should not be used on the HTML `<dialog>` element itself. The dialog does not need to be made focusable for its contents to receive focus.
+The `tabindex` attribute must not be used on the HTML `<dialog>` element itself. The dialog does not need to be made focusable for its contents to receive focus.
 
 However, when a dialog contains long text or a complex structure, it may be appropriate to place initial focus on a static element inside it, such as its heading or the beginning of its content.
 
@@ -362,21 +362,21 @@ dialog.showModal();
 dialogTitle.focus();
 ```
 
-The `showModal()` method already manages initial focus placement. The explicit call to `focus()` allows the heading to be chosen as the starting point, which can make long or complex content easier to understand and explore.
+The `showModal()` method triggers the browser's native initial focus placement behaviour. The explicit call to `focus()` allows the heading to be chosen as the starting point, which can make long or complex content easier to understand and explore.
 
-Moving focus in this way is not always necessary: the starting point should be appropriate for the content and the purpose of the modal dialog.
+Moving focus in this way is not always necessary: the starting point should be appropriate to the content and the purpose of the modal dialog.
 
 ## Restoring Focus
 
-When a modal dialog closes, focus should return to a position that makes sense for the next step in the interaction flow.
+When a modal dialog closes, focus should return to a position that makes sense for the next step in the user's interaction flow.
 
-In general, focus returns to the element that triggered the dialog to open. If that element has been removed from the DOM or is no longer relevant, for example after an item on the page has been deleted, focus should move to an appropriate target that allows the user to continue their task.
+In general, focus returns to the element that opened the dialog. If that element has been removed from the DOM or is no longer relevant, for example after an item on the page has been deleted, focus should move to an appropriate target that allows the user to continue their task.
 
 When a `<dialog>` element is opened using `showModal()`, the browser attempts to restore focus when the dialog closes. This native behaviour does not eliminate the need to check the result when the page content has changed while the dialog was open. For a custom modal dialog, focus restoration must be implemented explicitly.
 
-For a custom modal dialog, the previously focused element can be stored before the dialog opens, then focus can be restored when it closes if that element still exists:
+For a custom modal dialog, the previously focused element can be stored before the dialog opens, and focus can be restored when it closes if that element is still available:
 
-```javascript id="q8w2cn"
+```javascript
 let previousFocus = null;
 
 function openModal() {
@@ -393,7 +393,7 @@ function closeModal() {
   ) {
     previousFocus.focus();
   } else {
-    // Move focus to an appropriate element
+    // Move focus to an appropriate target
     // for the next step in the interaction flow.
   }
 }
@@ -401,7 +401,7 @@ function closeModal() {
 
 This example illustrates the principle of storing and restoring focus. The `isConnected` property checks whether the element is still part of the DOM, but it does not guarantee that the element is visible or can actually receive focus.
 
-In a real implementation, the result must therefore be checked, and an appropriate fallback target must be provided if necessary. Opening and closing the dialog, managing focus, and restoring interaction with the content outside it must all be adapted to the chosen implementation.
+In a real implementation, the result must therefore be checked, and an appropriate fallback target provided if necessary. Opening and closing the dialog, managing focus, and restoring interaction with the content outside it must all be handled according to the chosen implementation.
 
 ## Common Issues Identified During Accessibility Audits
 
@@ -417,11 +417,11 @@ The dialog must have an appropriate accessible name, usually provided by its tit
 
 ### Poor Focus Management
 
-Focus must be moved to an appropriate target when the dialog opens, support consistent navigation throughout the interaction, and return to an appropriate position when the dialog closes.
+Focus must move to an appropriate target when the dialog opens, support consistent navigation throughout the interaction, and return to an appropriate position when the dialog closes.
 
 ### Failing to Provide an Explicit Way to Close the Dialog
 
-A modal dialog must provide a visible, keyboard-accessible way to close it, such as a “Close” or “Cancel” button. The `Escape` key or clicking outside the dialog can supplement this mechanism, but should not be the only available options.
+A modal dialog should provide a visible, keyboard-accessible way to close it, such as a “Close” or “Cancel” button. The `Escape` key or clicking outside the dialog can supplement this mechanism, but should not be the only available options.
 
 ### Using a Modal When It Is Not Necessary
 

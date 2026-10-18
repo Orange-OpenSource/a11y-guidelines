@@ -221,13 +221,13 @@ Ces mécanismes natifs ne dispensent pas de vérifier l'accessibilité du compos
 
 ## Gestion du focus
 
-Lorsqu'un élément `<dialog>` est ouvert avec `showModal()`, le navigateur place le focus à l'intérieur de la boîte de dialogue. Il reste toutefois nécessaire de choisir un point de départ adapté au contenu et au parcours proposé.
+Lorsqu'un élément `<dialog>` est ouvert avec `showModal()`, le navigateur déplace le focus à l'intérieur de la boîte de dialogue. Il reste toutefois nécessaire de choisir un point de départ adapté au contenu et au parcours proposé.
 
 L'attribut `autofocus` permet de désigner l'élément qui doit recevoir le focus à l'ouverture. Le focus peut également être ajusté par programmation lorsque le contexte le justifie.
 
 Le choix du focus initial dépend notamment de la nature du contenu :
 
-- **Dialogue court et interactif :** le focus peut être placé sur le premier contrôle pertinent, par exemple un champ de formulaire ou un bouton permettant de poursuivre l'action.
+- **Dialogue court et interactif :** le focus peut être placé sur le premier contrôle pertinent, par exemple un champ de formulaire ou un bouton permettant de continuer.
 - **Dialogue contenant un texte long ou une structure complexe :** il peut être préférable de placer le focus sur un élément statique au début du contenu, comme le titre ou un paragraphe introductif. Cet élément peut recevoir `tabindex="-1"` pour pouvoir être focalisé par programmation, sans être ajouté à l'ordre de tabulation habituel.
 - **Dialogue demandant une décision difficilement réversible :** placer le focus sur l'action la moins destructive peut contribuer à éviter une validation accidentelle, lorsque ce choix est pertinent dans le contexte.
 
@@ -237,7 +237,7 @@ Ces stratégies sont décrites dans le *WAI-ARIA Authoring Practices Guide* (APG
 
 ### Avec l'élément HTML `<dialog>`
 
-Lorsqu'une boîte de dialogue est ouverte avec `showModal()`, le navigateur rend le contenu extérieur à la boîte de dialogue inerte. Le focus clavier reste alors dans le contenu de la boîte de dialogue ou peut se déplacer vers l'interface du navigateur, par exemple la barre d'adresse.
+Lorsqu'une boîte de dialogue est ouverte avec `showModal()`, le navigateur rend le contenu extérieur à la boîte de dialogue inerte. Le focus clavier reste alors dans le contenu de la boîte de dialogue, mais peut également se déplacer vers l'interface du navigateur, par exemple la barre d'adresse.
 
 Toutefois, contrairement au modèle d'interaction décrit par le WAI-ARIA Authoring Practices Guide (APG), le comportement natif de `<dialog>` ne garantit pas nécessairement que la navigation au clavier boucle du dernier élément focalisable au premier, et inversement. Lorsque le focus atteint l'une des extrémités de la séquence de tabulation, appuyer sur `Tab` ou `Shift + Tab` peut ainsi déplacer le focus vers l'interface du navigateur.
 
@@ -274,18 +274,18 @@ Enfin, une fenêtre modale doit proposer un moyen explicite et visible de la fer
 
 Une fenêtre modale peut être construite à partir de l'élément HTML `<dialog>` ou d'éléments génériques, comme une `<div>`. Ces deux approches ne fournissent pas les mêmes mécanismes natifs.
 
-Pour une modale personnalisée, les attributs ARIA permettent notamment d'exposer sa nature et son nom accessible aux technologies d'assistance :
+Pour une modale personnalisée, les attributs ARIA permettent notamment d'exposer son rôle et son nom accessible aux technologies d'assistance :
 
 - `role="dialog"` identifie la boîte de dialogue ;
 - `aria-modal="true"` indique qu'elle est modale ;
 - `aria-labelledby` ou `aria-label` permet de lui fournir un nom accessible ;
 - `aria-describedby` peut lui associer une description complémentaire, lorsque cela est pertinent.
 
-**Attention : `aria-modal="true"` ne rend pas, à lui seul, une fenêtre modale.** Cet attribut communique la modalité aux technologies d'assistance, mais ne bloque pas les interactions avec le contenu extérieur et ne confine pas le focus. Ces comportements doivent être assurés par l'implémentation.
+**Attention : `aria-modal="true"` ne rend pas, à lui seul, une fenêtre modale.** Cet attribut communique l'état modal aux technologies d'assistance, mais ne bloque pas les interactions avec le contenu extérieur et ne maintient pas le focus dans la boîte de dialogue. Ces comportements doivent être assurés par l'implémentation.
 
-Il ne faut donc utiliser cet attribut que si la fenêtre est réellement modale : le code doit empêcher les interactions avec le contenu extérieur et ce contenu doit être visuellement occulté ou obscurci. Le [WAI-ARIA APG détaille cette précaution](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/).
+Il ne faut donc utiliser cet attribut que si la fenêtre est réellement modale : le code doit empêcher les interactions avec le contenu extérieur, et celui-ci doit être visuellement occulté ou obscurci. Le [WAI-ARIA APG détaille cette précaution](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/).
 
-Avec l'élément HTML `<dialog>`, le rôle `dialog` est fourni nativement. Lorsqu'il est ouvert avec `showModal()`, le navigateur assure les mécanismes natifs de modalité et expose celle-ci aux technologies d'assistance. Il n'est donc généralement pas nécessaire d'ajouter explicitement `aria-modal="true"`.
+Avec l'élément HTML `<dialog>`, le rôle `dialog` est fourni nativement. Lorsqu'il est ouvert avec `showModal()`, le navigateur assure les mécanismes natifs de modalité et expose l'état modal aux technologies d'assistance. Il n'est donc généralement pas nécessaire d'ajouter explicitement `aria-modal="true"`.
 
 L'attribut `aria-labelledby` reste pertinent pour associer la boîte de dialogue à son titre visible et définir son nom accessible. L'utilisation de `aria-describedby` dépend quant à elle du contenu et mérite une attention particulière, notamment lorsque celui-ci comporte plusieurs paragraphes ou des structures sémantiques.
 
@@ -297,7 +297,7 @@ Toutes les boîtes de dialogue modales ne remplissent pas la même fonction. Le 
 
 ### Le rôle `dialog`
 
-Le rôle `dialog` convient aux interactions qui nécessitent un échange avec l'utilisateur dans une fenêtre distincte du reste de l'interface : formulaire, paramètres, consultation d'informations ou modification d'une configuration, par exemple.
+Le rôle `dialog` convient aux interactions qui nécessitent un échange avec l'utilisateur dans une boîte de dialogue distincte du reste de l'interface : formulaire, paramètres, consultation d'informations ou modification d'une configuration, par exemple.
 
 ### Le rôle `alertdialog`
 
@@ -307,13 +307,13 @@ Le rôle `alertdialog` est destiné aux boîtes de dialogue modales qui interrom
 
 Il peut notamment convenir à une confirmation d'action ou à un message d'erreur qui exige une réponse. Une confirmation de suppression ne justifie toutefois pas, à elle seule, le recours à `alertdialog` : le choix dépend du contexte et de la nécessité réelle d'interrompre l'utilisateur.
 
-Le rôle `alertdialog` permet aux technologies d'assistance d'identifier ce type de dialogue et de le traiter spécifiquement, mais son annonce peut varier selon les environnements.
+Le rôle `alertdialog` permet aux technologies d'assistance et aux navigateurs d'identifier ce type de dialogue et, éventuellement, de lui réserver un traitement spécifique. Son annonce peut toutefois varier selon les environnements.
 
 ### Quel rôle choisir ?
 
 Le choix dépend donc avant tout de la fonction de la boîte de dialogue et de la manière dont elle intervient dans le parcours utilisateur.
 
-Dans les deux cas, le nom accessible doit identifier la boîte de dialogue, par exemple en référençant son titre avec `aria-labelledby`. Pour `alertdialog`, le modèle de l'APG prévoit également `aria-describedby` pour associer le message d'alerte à la boîte de dialogue. Ce message doit rester suffisamment concis pour être compris facilement lors de son annonce.
+Dans les deux cas, la boîte de dialogue doit disposer d'un nom accessible, par exemple en référençant son titre avec `aria-labelledby`. Pour `alertdialog`, le modèle de l'APG prévoit également `aria-describedby` pour associer le message d'alerte à la boîte de dialogue. Ce message doit rester suffisamment concis pour être facilement compris lors de son annonce.
 
 ## Une erreur fréquente : `aria-describedby`
 
@@ -323,7 +323,7 @@ Cette approche n'est pas toujours pertinente. Lorsque la boîte de dialogue cont
 
 Le *WAI-ARIA Authoring Practices Guide* (APG) recommande notamment d'omettre `aria-describedby` lorsque le contenu est complexe ou structuré et qu'une annonce globale risquerait d'en rendre la compréhension difficile.
 
-Pour une boîte de dialogue contenant un message descriptif court, l'attribut peut en revanche être utile pour associer ce message à la fenêtre.
+Pour une boîte de dialogue contenant un message descriptif court, l'attribut peut en revanche être utile pour associer ce message à la boîte de dialogue.
 
 **À retenir :** utilisez `aria-labelledby` pour fournir le nom accessible de la boîte de dialogue, par exemple à partir de son titre. Réservez `aria-describedby` aux descriptions dont l'annonce globale apporte réellement une information utile.
 
@@ -362,7 +362,7 @@ dialog.showModal();
 dialogTitle.focus();
 ```
 
-La méthode `showModal()` gère déjà le placement initial du focus. L'appel explicite à `focus()` permet ici de choisir le titre comme point de départ, ce qui peut faciliter la compréhension et l'exploration d'un contenu long ou complexe.
+La méthode `showModal()` déclenche le comportement natif de placement initial du focus. L'appel explicite à `focus()` permet ici de choisir le titre comme point de départ, ce qui peut faciliter la compréhension et l'exploration d'un contenu long ou complexe.
 
 Ce déplacement de focus n'est pas systématiquement nécessaire : le point de départ doit être adapté au contenu et à l'objectif de la modale.
 
@@ -407,7 +407,7 @@ Dans une implémentation réelle, il faut donc vérifier le résultat et prévoi
 
 Plusieurs défauts reviennent régulièrement lors des audits de fenêtres modales.
 
-### Utiliser une `<div>` sans implémenter les comportements nécessaires
+### Créer une modale avec une `<div>` sans implémenter les comportements nécessaires
 
 Une modale personnalisée doit fournir la sémantique d'une boîte de dialogue et gérer les comportements attendus, notamment le focus, la navigation au clavier et l'inactivité du contenu extérieur. Une apparence visuelle correcte ne garantit pas un comportement accessible.
 
@@ -421,7 +421,7 @@ Le focus doit être placé à un endroit pertinent à l'ouverture, permettre une
 
 ### Ne pas proposer de moyen de fermeture explicite
 
-Une fenêtre modale doit proposer un moyen de fermeture visible et accessible au clavier, par exemple un bouton « Fermer » ou « Annuler ». La touche `Escape` ou un clic à l'extérieur peuvent compléter ce mécanisme, mais ne devraient pas constituer l'unique possibilité.
+Une fenêtre modale devrait proposer un moyen de fermeture visible et accessible au clavier, par exemple un bouton « Fermer » ou « Annuler ». La touche `Escape` ou un clic à l'extérieur peuvent compléter ce mécanisme, mais ne devraient pas constituer l'unique possibilité.
 
 ### Utiliser une modale lorsque ce n'est pas nécessaire
 
