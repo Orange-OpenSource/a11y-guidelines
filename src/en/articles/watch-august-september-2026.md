@@ -71,7 +71,7 @@ Happy reading!
 - A framework for classifying and prioritizing accessibility errors—worth a try: https://link.springer.com/article/10.1007/s44523-026-00010-y
 - The Dunning–Kruger effect in accessibility: https://www.craigabbott.co.uk/blog/2026/the-dunning-kruger-effect-in-accessibility/
 - The accessibility expert as a “unicorn” (an impossible combination of skills)—can one person really do it all? https://a11ywithdiana.substack.com/p/will-the-web-accessibility-specialist
-- Reflections and actionable insights based on the 2026 accessibility report for email markup—worth checking out, especially if you manage email: https://www.nicolas-hoffmann.net/source/1727-de-l-importance-de-rapports-comme-l-Accessibility-Report-2026-de-l-Email-Markup-Consortium.html
+- Reflections and actionable insights based on the 2026 accessibility report for email markup—worth checking out, especially if you manage email (fr): https://www.nicolas-hoffmann.net/source/1727-de-l-importance-de-rapports-comme-l-Accessibility-Report-2026-de-l-Email-Markup-Consortium.html
 - Designing for motor impairments: https://tetralogical.com/blog/2026/08/19/designing-for-no-or-limited-mobility/
 - Beware of poor accessibility auditors (fr): https://www.copsae.fr/nimporte-qui-peut-pretendre-faire-audit-accessibilite-numerique/
 - A university reduces its accessibility errors by 90%: https://blog.pope.tech/2026/08/12/how-one-university-reduced-web-accessibility-errors-by-90/
