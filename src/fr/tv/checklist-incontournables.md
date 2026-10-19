@@ -26,7 +26,6 @@ Cette grille de tests guidés s’adresse aux concepteurs, développeurs, qualif
   <h2 id="test-couleurs-et-contrastes">Couleurs et contrastes</h2>
   <h2 id="test-navigation-clavier">Navigation clavier</h2>
   <h2 id="test-agrandissement">Agrandissement</h2>
-  <h2 id="test-formulaires">Formulaires</h2>
   <h2 id="test-animations">Animations</h2>
   <h2 id="test-aides-techniques">Aides techniques</h2>
 
