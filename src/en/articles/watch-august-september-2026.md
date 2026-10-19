@@ -106,7 +106,7 @@ Happy reading!
 - You can’t automate everything—a new installment: https://www.linkedin.com/pulse/automating-all-accessibility-testing-pipe-dream-nicolas-steenhout-118dc/
 - A promising AI agent for accessibility auditing—worth a look: https://arxiv.org/html/2609.09379v2
 - A perspective on using AI as a partner during an accessibility audit: https://onsman.com/using-ai-as-your-accessibility-testing-partner/
-- AI for accessibility testing: underwhelming, but worth noting: https://cerovac.com/a11y/2026/07/promises-of-accessibility-complaiance/
+- AI for accessibility testing: underwhelming, but worth nothing: https://cerovac.com/a11y/2026/07/promises-of-accessibility-complaiance/
 
 ## Resources
 
