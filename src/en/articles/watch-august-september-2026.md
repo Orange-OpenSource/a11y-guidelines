@@ -9,7 +9,7 @@ tags:
 # Digital accessibility watch — August-September 2026
 
 As the new season begins, a new version of the RGAA (the French accessibility standard) is expected by the end of the year; it has been long-awaited. This article provides an overview (in French): https://www.temesis.com/blog/rgaa-5-quelles-evolutions-attendre-et-comment-vous-y-preparer/.
-We also see the release of the French version of the WCAG 2.2 guidelines, along with the corresponding update to the French translation of WCAG 2.1: https://access42.net/mise-a-jour-traductions-wcag-w3c/.
+We also see the release of the French version of the WCAG 2.2 guidelines, along with the corresponding update to the French translation of WCAG 2.1 (fr): https://access42.net/mise-a-jour-traductions-wcag-w3c/.
 Finally, the results of the WebAIM screen reader survey are out—always a highly informative resource: https://webaim.org/projects/screenreadersurvey11/.
 Happy reading!
 
