@@ -1,7 +1,7 @@
 ---
 title: "Veille #A11y Août-Septembre 2026"
 abstract: "Florilèges de ressources en #A11y, Août-Septembre 2026"
-date: "2026-10-15"
+date: "2026-10-19"
 tags:
   - veille
 ---
