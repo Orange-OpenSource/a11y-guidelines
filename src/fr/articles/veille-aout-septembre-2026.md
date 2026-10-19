@@ -60,7 +60,7 @@ Bonne lecture !
 - `aria-details` expliqué (en) : https://www.maxdesign.com.au/articles/aria-details-explained.html
 - Support pas terrible, en fait, de l'attribut HTML `headers`, à lire (en) : https://adrianroselli.com/2026/09/support-for-headers-attribute.html
 - Fermer la fenêtre en cliquant dehors ? (en) : https://adrianroselli.com/2026/08/should-a-dialog-close-when-clicked-outside.html
-- Le aria-roledescription (en) : https://www.maxdesign.com.au/articles/aria-roledescription-explained.html
+- L'attribut `aria-roledescription` (en) : https://www.maxdesign.com.au/articles/aria-roledescription-explained.html
 - Recommandations pour une action destructrice, complètes (en) : https://www.sheribyrnehaber.com/practical-guidelines-for-making-destructive-actions-accessible/
 - L'accessibility tree expliqué (en) : https://tetralogical.com/blog/2026/09/22/foundations-the-accessibility-tree/
 - Quel temps de remédiation après un audit, bonne question (en) : https://inclusionimpact.co/blog/how-long-does-it-take-to-remediate-accessibility-audit-findings/
