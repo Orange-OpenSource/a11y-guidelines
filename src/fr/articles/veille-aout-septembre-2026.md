@@ -124,4 +124,4 @@ Bonne lecture !
 ## Autres
 
 - Intéressant point de vue sur le handicap (en) : https://sightlessscribbles.com/posts/disability-dongle/
-- Les handicaps multiples (en) : <https://lanie.work/advocacy/not-an-edge-case/>
+- Les handicaps multiples (en) : https://lanie.work/advocacy/not-an-edge-case
