@@ -8,9 +8,12 @@ tags:
 
 # Veille accessibilité numérique Août-Septembre 2026
 
-En cette rentrée, on entrevoit pour la fin de l'année une nouvelle version du RGAA, c'était attendu... Un article fait le point ; https://www.temesis.com/blog/rgaa-5-quelles-evolutions-attendre-et-comment-vous-y-preparer/.
+En cette rentrée, on entrevoit pour la fin de l'année une nouvelle version du RGAA, c'était attendu... Un article fait le point : https://www.temesis.com/blog/rgaa-5-quelles-evolutions-attendre-et-comment-vous-y-preparer/.
+
 On a également la sortie de la version française des WCAG 2.2 et une mise à jour consécutive de WCAG 2.1 : https://access42.net/mise-a-jour-traductions-wcag-w3c/.
-Et enfin, les résultats du screenreader survey de WebAim, toujours aussi instructif (en) : https://webaim.org/projects/screenreadersurvey11/.
+
+Et enfin, les résultats de l'enquête WebAIM auprès des utilisateurs de lecteur d'écran, toujours aussi instructif (en) : https://webaim.org/projects/screenreadersurvey11/.
+
 Bonne lecture !
 
 ## L’accessibilité dans les lois, les normes et recommandations
@@ -46,12 +49,12 @@ Bonne lecture !
 - Tester et comprendre 4.1.2 Name, role, value (en) : https://tarnoff.info/2026/08/24/a11y-101-4-1-2-name-role-value/
 - Tester et comprendre 4.1.3 Status messages (en) : https://tarnoff.info/2026/08/31/a11y-101-4-1-3-status-messages/
 - Tester et comprendre 3.3.7 Redundant entry (en) : https://tarnoff.info/2026/08/10/a11y-101-3-3-7-redundant-entry/
-- Un plugin GitHub scanner pour vérifier les alternatives aux images (en) : https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good/
+- Tester et comprendre 3.3.8 Accessible authentication (en) : https://tarnoff.info/2026/09/28/a11y-101-3-3-8-accessible-authentication-minimum/
+- Un plugin scanner pour vérifier les alternatives aux images (en) : https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good/
 - Comment évaluer un critère (en) : https://adrianroselli.com/2026/09/evaluating-a-success-criterion.html
 - WCAG 2.1.1 Keyboard, on oublie parfois l'aspect temporel (en) : https://adrianroselli.com/2026/08/the-2-1-1-specific-timings-clause.html
 - Le problème des % de conformité (en) : https://afixt.com/accessible-is-conformant/?ref=frontenddogma.com
 - Des tests d'a11y robustes et centrés sur l'utilisateur (en) : https://afixt.com/your-accessibility-tests-stop-at-the-page-your-users-dont/
-- Tester 3.3.8 Accessible authentication (en) : https://tarnoff.info/2026/09/28/a11y-101-3-3-8-accessible-authentication-minimum/
 - Méthodologie de tests d'a11y, la base (en) : https://silktide.com/blog/accessibility-vs-usability-testing/
 - Tester les parcours utilisateur est important (en) : https://equalentry.com/accessibility-user-journey-testing-pac-nyc/
 
@@ -61,8 +64,8 @@ Bonne lecture !
 - Support pas terrible, en fait, de l'attribut HTML `headers`, à lire (en) : https://adrianroselli.com/2026/09/support-for-headers-attribute.html
 - Fermer la fenêtre en cliquant dehors ? (en) : https://adrianroselli.com/2026/08/should-a-dialog-close-when-clicked-outside.html
 - L'attribut `aria-roledescription` (en) : https://www.maxdesign.com.au/articles/aria-roledescription-explained.html
-- Recommandations pour une action destructrice, complètes (en) : https://www.sheribyrnehaber.com/practical-guidelines-for-making-destructive-actions-accessible/
-- L'accessibility tree expliqué (en) : https://tetralogical.com/blog/2026/09/22/foundations-the-accessibility-tree/
+- Recommandations complètes pour une action destructrice (en) : https://www.sheribyrnehaber.com/practical-guidelines-for-making-destructive-actions-accessible/
+- L'arbre d'accessibilité expliqué (en) : https://tetralogical.com/blog/2026/09/22/foundations-the-accessibility-tree/
 - Quel temps de remédiation après un audit, bonne question (en) : https://inclusionimpact.co/blog/how-long-does-it-take-to-remediate-accessibility-audit-findings/
 - Image décorative, pas si sûr (en) : https://nicolas-steenhout.com/retire-decorative-images/
 
@@ -88,10 +91,10 @@ Bonne lecture !
 
 ## Aides techniques
 
-- Retour du screen reader survey, #11, de WebAIM, à lire (en) : https://webaim.org/projects/screenreadersurvey11/
+- Résultats de l'enquête WebAIM auprès des utilisateurs #11, à lire (en) : https://webaim.org/projects/screenreadersurvey11/
 - Plein de chiffres sur l'usage des AT, intéressant (en) : https://beaccessible.com/post/assistive-technology-market-size/
 - Parfois l'IA est une aide technique (en) : https://lanie.work/advocacy/i-am-using-my-brain/
-- Comment lit un lecteur d'écran une page (en) : https://www.maxdesign.com.au/articles/do-screen-readers-read-screen.html
+- Comment lit un lecteur d'écran (en) : https://www.maxdesign.com.au/articles/do-screen-readers-read-screen.html
 - Contrôle vocal et tableaux complexes (en) : https://blog.pope.tech/2026/08/31/speech-recognition-and-complex-tables-with-fields/
 
 ## Ergonomie, UI & UX
@@ -114,7 +117,7 @@ Bonne lecture !
 - Une étude sur plus de 100 déclarations de conformité, instructive (en) : https://scandiary.com/accessibility-statements
 - Une bibliothèque de bookmarklets, sympa et pratique (en) : https://www.spotcheck.tools/
 - WCAG 3 et la couverture des besoins d'accessibilité (en) : https://www.w3.org/blog/2026/crafting-wcag-3-for-more-accessible-user-experiences/
-- 7 dataviz a11y par le duché du Luxembourg, chouette (en) : https://accessibility-luxembourg.github.io/observatory_dataviz_demo
+- 7 dataviz a11y par le Grand-Duché du Luxembourg, chouette (en) : https://accessibility-luxembourg.github.io/observatory_dataviz_demo
 - Comment rendre WCAG 3 meilleur (en) : https://noti.st/hdv/2cNacB/how-we-want-to-make-wcag-3-better
 - Un autre avis sur WCAG 3, pas idiot (en) : https://yatil.net/blog/wcag-3-road-to-hell-paved-with-supplemental-requirements?ref=frontenddogma.com
 - Encore sur WCAG 3, d'autres soucis (en) : https://nicolas-steenhout.com/wcag-3-transition-phase/
