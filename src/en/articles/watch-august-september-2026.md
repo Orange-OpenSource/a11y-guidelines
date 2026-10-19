@@ -1,7 +1,7 @@
 ---
 title: "#a11y technical watch, August-September 2026"
 abstract: "#a11y anthology, August-September 2026"
-date: "2026-10-15"
+date: "2026-10-19"
 tags:
   - veille
 ---
