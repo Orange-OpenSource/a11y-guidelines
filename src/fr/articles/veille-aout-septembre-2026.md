@@ -114,7 +114,7 @@ Bonne lecture !
 - Une étude sur plus de 100 déclarations de conformité, instructive (en) : https://scandiary.com/accessibility-statements
 - Une bibliothèque de bookmarklets, sympa et pratique (en) : https://www.spotcheck.tools/
 - WCAG 3 et la couverture des besoins d'accessibilité (en) : https://www.w3.org/blog/2026/crafting-wcag-3-for-more-accessible-user-experiences/
-- 7 dataviz a11y par le duché du Luxembourg, chouette (en) : <https://accessibility-luxembourg.github.io/observatory_dataviz_demo/>
+- 7 dataviz a11y par le duché du Luxembourg, chouette (en) : https://accessibility-luxembourg.github.io/observatory_dataviz_demo
 - Comment rendre WCAG 3 meilleur (en) : https://noti.st/hdv/2cNacB/how-we-want-to-make-wcag-3-better
 - Un autre avis sur WCAG 3, pas idiot (en) : https://yatil.net/blog/wcag-3-road-to-hell-paved-with-supplemental-requirements?ref=frontenddogma.com
 - Encore sur WCAG 3, d'autres soucis (en) : https://nicolas-steenhout.com/wcag-3-transition-phase/
