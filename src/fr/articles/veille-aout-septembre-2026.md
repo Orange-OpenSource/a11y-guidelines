@@ -10,7 +10,7 @@ tags:
 
 En cette rentrée, on entrevoit pour la fin de l'année une nouvelle version du RGAA, c'était attendu... Un article fait le point ; https://www.temesis.com/blog/rgaa-5-quelles-evolutions-attendre-et-comment-vous-y-preparer/.
 On a également la sortie de la version française des WCAG 2.2 et une mise à jour consécutive de WCAG 2.1 : https://access42.net/mise-a-jour-traductions-wcag-w3c/.
-Et enfin, les résultats du screenreader survey de WebAim, toujoursssi instructif (en) : https://webaim.org/projects/screenreadersurvey11/.
+Et enfin, les résultats du screenreader survey de WebAim, toujours aussi instructif (en) : https://webaim.org/projects/screenreadersurvey11/.
 Bonne lecture !
 
 ## L’accessibilité dans les lois, les normes et recommandations
