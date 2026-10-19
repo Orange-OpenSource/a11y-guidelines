@@ -43,7 +43,7 @@ Bonne lecture !
 - Tester et comprendre 2.5.5 et 2.5.8 Target size (en) : https://www.digitala11y.com/how-to-test-touch-target-size-for-wcag-compliance/
 - Tester et comprendre 3.3.3 Error suggestion (en) : <https://tarnoff.info/2026/07/27/a11y-101-3-3-3-error-suggestion/>
 - Tester et comprendre 3.3.4 Error prevention (en) : <https://tarnoff.info/2026/08/03/a11y-101-3-3-4-error-prevention/>
-- Tester et comprendre 4.1.2 Name, role, value (en) : https://tarnoff.info/2026/08/24/a11y-101-v4-1-2-name-role-value/
+- Tester et comprendre 4.1.2 Name, role, value (en) : https://tarnoff.info/2026/08/24/a11y-101-4-1-2-name-role-value/
 - Tester et comprendre 4.1.3 Status messages (en) : https://tarnoff.info/2026/08/31/a11y-101-4-1-3-status-messages/
 - Tester et comprendre 3.3.7 Redundant entry (en) : https://tarnoff.info/2026/08/10/a11y-101-3-3-7-redundant-entry/
 - Un plugin GitHub scanner pour vérifier les alternatives aux images (en) : https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good/
