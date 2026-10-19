@@ -88,7 +88,7 @@ Bonne lecture !
 
 ## Aides techniques
 
-- Retour du screen reader survey, #11, de WebAIM, à lire (en) : webaim.org/projects/screenreadersurvey11/
+- Retour du screen reader survey, #11, de WebAIM, à lire (en) : https://webaim.org/projects/screenreadersurvey11/
 - Plein de chiffres sur l'usage des AT, intéressant (en) : https://beaccessible.com/post/assistive-technology-market-size/
 - Parfois l'IA est une aide technique (en) : https://lanie.work/advocacy/i-am-using-my-brain/
 - Comment lit un lecteur d'écran une page (en) : https://www.maxdesign.com.au/articles/do-screen-readers-read-screen.html
