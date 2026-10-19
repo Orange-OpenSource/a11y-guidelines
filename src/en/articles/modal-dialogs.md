@@ -433,9 +433,9 @@ Modal dialogs illustrate the complexity of certain interface components: behind 
 
 When used with `showModal()`, the HTML `<dialog>` element provides several native mechanisms that make it easier to create accessible modal dialogs. However, it is still necessary to choose an appropriate initial focus target, check that focus is restored correctly, provide an accessible name, and consider whether a modal presentation is actually necessary.
 
-Understanding what native HTML provides, what ARIA attributes describe, and what developers still need to implement helps create more robust and interoperable interfaces.
+Understanding what native HTML provides, what ARIA attributes describe, and what developers still need to take responsibility for helps create more robust and interoperable interfaces.
 
-**An accessible modal dialog is more than a correctly marked-up component: it must enable everyone to understand the dialog, interact with it, and resume their task without difficulty.**
+**An accessible modal dialog is more than a correctly marked-up component: it must enable everyone to understand the dialog, interact with it, and resume their task smoothly.**
 
 ## References
 

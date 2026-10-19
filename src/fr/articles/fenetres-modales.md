@@ -72,7 +72,7 @@ Cet exemple présente uniquement la structure HTML du dialogue. Il ne définit n
 
 L'élément peut être manipulé en JavaScript grâce à différentes méthodes, notamment `show()`, `showModal()` et `close()`. Le choix de la méthode d'ouverture détermine notamment si le dialogue est modal.
 
-Lorsqu'il est ouvert avec `showModal()`, le navigateur prend nativement en charge plusieurs comportements importants : le placement du dialogue dans la couche supérieure (*top layer*), l'inertie du contenu situé en dehors de celui-ci et la gestion de certaines interactions au clavier.
+Lorsqu'il est ouvert avec `showModal()`, le navigateur prend nativement en charge plusieurs comportements importants : le placement du dialogue dans la couche supérieure (<span lang="en">*top layer*</span>), l'inertie du contenu situé en dehors de celui-ci et la gestion de certaines interactions au clavier.
 
 Cette prise en charge native permet de réduire la quantité de code nécessaire par rapport à une implémentation entièrement personnalisée.
 
@@ -96,7 +96,7 @@ La méthode `show()` ouvre une boîte de dialogue non modale. Le reste du docume
 dialog.showModal();
 ```
 
-La méthode `showModal()` ouvre la boîte de dialogue de manière modale. Elle la place dans la couche supérieure du navigateur (*top layer*) et rend inerte le reste du document.
+La méthode `showModal()` ouvre la boîte de dialogue de manière modale. Elle la place dans la couche supérieure du navigateur (<span lang="en">*top layer*</span>) et rend inerte le reste du document.
 
 Il n'est donc pas nécessaire de rendre manuellement le contenu extérieur inerte pour obtenir ce comportement avec `showModal()`.
 
@@ -215,7 +215,7 @@ dialog::backdrop {
 }
 ```
 
-Le pseudo-élément `::backdrop` n'est pas un élément HTML à ajouter au document. Il représente la zone située derrière un élément placé dans la couche supérieure (*top layer*), notamment un `<dialog>` ouvert avec `showModal()`.
+Le pseudo-élément `::backdrop` n'est pas un élément HTML à ajouter au document. Il représente la zone située derrière un élément placé dans la couche supérieure (<span lang="en">*top layer*</span>), notamment un `<dialog>` ouvert avec `showModal()`.
 
 Ces mécanismes natifs ne dispensent pas de vérifier l'accessibilité du composant : son contenu, son nom accessible, le placement initial du focus et ses moyens de fermeture doivent rester adaptés. La navigation au clavier mérite également une attention particulière : l'inertie du contenu extérieur ne garantit pas, à elle seule, que la tabulation reste confinée dans la boîte de dialogue.
 
@@ -231,7 +231,7 @@ Le choix du focus initial dépend notamment de la nature du contenu :
 - **Dialogue contenant un texte long ou une structure complexe :** il peut être préférable de placer le focus sur un élément statique au début du contenu, comme le titre ou un paragraphe introductif. Cet élément peut recevoir `tabindex="-1"` pour pouvoir être focalisé par programmation, sans être ajouté à l'ordre de tabulation habituel.
 - **Dialogue demandant une décision difficilement réversible :** placer le focus sur l'action la moins destructive peut contribuer à éviter une validation accidentelle, lorsque ce choix est pertinent dans le contexte.
 
-Ces stratégies sont décrites dans le *WAI-ARIA Authoring Practices Guide* (APG). Il s'agit de recommandations de conception, et non de règles universelles : le choix approprié dépend du contenu, du contexte et du parcours utilisateur.
+Ces stratégies sont décrites dans le <span lang="en">*WAI-ARIA Authoring Practices Guide* (APG)</span>. Il s'agit de recommandations de conception, et non de règles universelles : le choix approprié dépend du contenu, du contexte et du parcours utilisateur.
 
 ## Navigation clavier
 
@@ -245,7 +245,7 @@ Cette distinction est importante lors de l'évaluation de l'accessibilité au cl
 
 ### Le modèle recommandé par le WAI-ARIA APG
 
-Le *Dialog (Modal) Pattern* du *WAI-ARIA Authoring Practices Guide* (APG) recommande les interactions clavier suivantes :
+Le *Dialog (Modal) Pattern* du <span lang="en">*WAI-ARIA Authoring Practices Guide* (APG)</span> recommande les interactions clavier suivantes :
 
 - `Tab` déplace le focus vers l'élément focalisable suivant. Depuis le dernier élément, le focus revient au premier.
 - `Shift + Tab` déplace le focus vers l'élément focalisable précédent. Depuis le premier élément, le focus revient au dernier.
@@ -321,7 +321,7 @@ L'attribut `aria-describedby` est parfois ajouté systématiquement aux fenêtre
 
 Cette approche n'est pas toujours pertinente. Lorsque la boîte de dialogue contient plusieurs paragraphes, des listes ou d'autres structures sémantiques, associer un conteneur englobant l'ensemble du contenu peut conduire les technologies d'assistance à restituer celui-ci sous la forme d'un bloc de texte, sans que sa structure soit nécessairement perceptible dans cette annonce.
 
-Le *WAI-ARIA Authoring Practices Guide* (APG) recommande notamment d'omettre `aria-describedby` lorsque le contenu est complexe ou structuré et qu'une annonce globale risquerait d'en rendre la compréhension difficile.
+Le <span lang="en">*WAI-ARIA Authoring Practices Guide* (APG)</span> recommande notamment d'omettre `aria-describedby` lorsque le contenu est complexe ou structuré et qu'une annonce globale risquerait d'en rendre la compréhension difficile.
 
 Pour une boîte de dialogue contenant un message descriptif court, l'attribut peut en revanche être utile pour associer ce message à la boîte de dialogue.
 
