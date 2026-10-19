@@ -61,7 +61,7 @@ A reflection on the A11y expert job (https://blog.hello-bokeh.fr/2025/01/07/acce
 
 ## Feedback
 
-- A story from a blind web user: https://www.iamtamara.design/fr/blog/aveugle-internet
+- A story from a blind web user: https://www.tamarasredojevic.com/writing/being-blind-on-the-internet
 - Report on the 2022-2024 UK government websites (A11Y), interesting: https://www.gov.uk/government/publications/accessibility-monitoring-of-public-sector-websites-and-mobile-apps-from-2022-to-2024/
 - The role=tooltip, yes, but for non-essential content: https://www.tpgi.com/tooltips-are-presentational/
 
