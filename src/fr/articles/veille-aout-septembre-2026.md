@@ -57,7 +57,7 @@ Bonne lecture !
 
 ## Points techniques
 
-- aria-details expliqué (en) : https://www.maxdesign.com.au/articles/aria-details-explained.html
+- `aria-details` expliqué (en) : https://www.maxdesign.com.au/articles/aria-details-explained.html
 - Support pas terrible, en fait, de l'attribut HTML headers, à lire (en) : https://adrianroselli.com/2026/09/support-for-headers-attribute.html
 - Fermer la fenêtre en cliquant dehors ? (en) : https://adrianroselli.com/2026/08/should-a-dialog-close-when-clicked-outside.html
 - Le aria-roledescription (en) : https://www.maxdesign.com.au/articles/aria-roledescription-explained.html
