@@ -185,7 +185,7 @@ La fermeture doit être cohérente avec le rôle de la boîte de dialogue et le 
 
 L'attribut `closedby` permet de préciser quelles actions utilisateur peuvent fermer une boîte de dialogue. Il distingue trois types d'actions :
 
-- une **fermeture légère** (*light dismiss*), par exemple lorsque l'utilisateur clique ou appuie à l'extérieur de la fenêtre ;
+- une **fermeture légère** (<span lang="en">*light dismiss*</span>), par exemple lorsque l'utilisateur clique ou appuie à l'extérieur de la fenêtre ;
 - une **demande de fermeture propre à la plateforme**, comme la touche `Échap` sur ordinateur ou certains gestes de retour sur appareil mobile ;
 - un **mécanisme défini par le développeur**, par exemple un bouton qui appelle `close()` ou la soumission d'un formulaire utilisant `method="dialog"`.
 
@@ -239,7 +239,7 @@ Ces stratégies sont décrites dans le <span lang="en">*WAI-ARIA Authoring Pract
 
 Lorsqu'une boîte de dialogue est ouverte avec `showModal()`, le navigateur rend le contenu extérieur à la boîte de dialogue inerte. Le focus clavier reste alors dans le contenu de la boîte de dialogue, mais peut également se déplacer vers l'interface du navigateur, par exemple la barre d'adresse.
 
-Toutefois, contrairement au modèle d'interaction décrit par le WAI-ARIA Authoring Practices Guide (APG), le comportement natif de `<dialog>` ne garantit pas nécessairement que la navigation au clavier boucle du dernier élément focalisable au premier, et inversement. Lorsque le focus atteint l'une des extrémités de la séquence de tabulation, appuyer sur `Tab` ou `Shift + Tab` peut ainsi déplacer le focus vers l'interface du navigateur.
+Toutefois, contrairement au modèle d'interaction décrit par le <span lang="en">WAI-ARIA Authoring Practices Guide (APG)</span>, le comportement natif de `<dialog>` ne garantit pas nécessairement que la navigation au clavier boucle du dernier élément focalisable au premier, et inversement. Lorsque le focus atteint l'une des extrémités de la séquence de tabulation, appuyer sur `Tab` ou `Shift + Tab` peut ainsi déplacer le focus vers l'interface du navigateur.
 
 Cette distinction est importante lors de l'évaluation de l'accessibilité au clavier. Il ne faut pas conclure qu'une boîte de dialogue native nécessite un mécanisme JavaScript de boucle de focus simplement parce que celui-ci ne boucle pas à l'intérieur de la fenêtre. Il convient de tester le comportement dans les navigateurs ciblés et avec les technologies d'assistance concernées, puis de déterminer si un traitement complémentaire est nécessaire.
 
