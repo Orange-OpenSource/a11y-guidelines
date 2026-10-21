@@ -195,7 +195,7 @@ The attribute supports three values:
 - `closerequest`: allows platform-specific close requests and developer-defined mechanisms, but not light dismiss;
 - `none`: disables automatic closing triggered by user actions. The dialog can still be closed through a developer-defined mechanism, such as a button that calls `close()`.
 
-If the attribute is absent or invalid, its behaviour depends on how the dialog was opened: a dialog opened with `showModal()` behaves as if `closedby="closerequest"` were set, whereas a dialog opened in another way behaves as if `closedby="none"` were set.
+If the attribute is absent or invalid, its behaviour depends on how the dialog was opened: a dialog opened with `showModal()` behaves as if the value of `closedby` were `"closerequest"`, whereas a dialog opened in another way behaves as if the value were `"none"`.
 
 The `closedby` attribute does not prevent programmatic calls to `close()`. Developer-defined closing mechanisms therefore remain available even when automatic closing triggered by user actions is disabled.
 

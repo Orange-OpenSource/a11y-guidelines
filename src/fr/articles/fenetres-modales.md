@@ -195,7 +195,7 @@ Il propose trois valeurs :
 - `closerequest` : autorise les demandes de fermeture propres à la plateforme et les mécanismes définis par le développeur, mais pas la fermeture légère ;
 - `none` : désactive les fermetures automatiques déclenchées par les actions utilisateur. La fermeture reste possible par un mécanisme défini par le développeur, comme un bouton qui appelle `close()`.
 
-Si l'attribut est absent ou invalide, son comportement dépend de la méthode d'ouverture : un dialogue ouvert avec `showModal()` se comporte comme si `closedby="closerequest"`, tandis qu'un dialogue ouvert autrement se comporte comme si `closedby="none"`.
+Si l’attribut est absent ou invalide, son comportement dépend de la méthode d’ouverture : un dialogue ouvert avec `showModal()` se comporte comme si la valeur de `closedby` était `"closerequest"`, tandis qu’un dialogue ouvert autrement se comporte comme si elle était `"none"`.
 
 L'attribut `closedby` ne bloque pas les appels programmatiques à `close()`. Les mécanismes de fermeture définis par le développeur restent donc possibles, même lorsque les fermetures automatiques déclenchées par les actions utilisateur sont désactivées.
 
@@ -283,7 +283,7 @@ Pour une modale personnalisée, les attributs ARIA permettent notamment d'expose
 
 **Attention : `aria-modal="true"` ne rend pas, à lui seul, une fenêtre modale.** Cet attribut communique l'état modal aux technologies d'assistance, mais ne bloque pas les interactions avec le contenu extérieur et ne maintient pas le focus dans la boîte de dialogue. Ces comportements doivent être assurés par l'implémentation.
 
-Il ne faut donc utiliser cet attribut que si la fenêtre est réellement modale : le code doit empêcher les interactions avec le contenu extérieur, et celui-ci doit être visuellement occulté ou obscurci. Le [WAI-ARIA APG détaille cette précaution](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/).
+Il ne faut donc utiliser cet attribut que si la fenêtre est réellement modale : le code doit empêcher les interactions avec le contenu extérieur, et celui-ci doit être visuellement occulté ou obscurci. Le <a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/" hreflang="en">WAI-ARIA APG détaille cette précaution (en)</a>.
 
 Avec l'élément HTML `<dialog>`, le rôle `dialog` est fourni nativement. Lorsqu'il est ouvert avec `showModal()`, le navigateur assure les mécanismes natifs de modalité et expose l'état modal aux technologies d'assistance. Il n'est donc généralement pas nécessaire d'ajouter explicitement `aria-modal="true"`.
 
