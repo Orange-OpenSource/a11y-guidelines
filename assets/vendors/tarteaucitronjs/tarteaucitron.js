@@ -22,7 +22,7 @@ var tarteaucitronScriptsDiscover = document.getElementsByTagName('script'),
 
 
 var tarteaucitron = {
-    "version": "1.36.0",
+    "version": "1.37.0",
     "cdn": cdn,
     "user": {},
     "lang": {},
@@ -2166,7 +2166,7 @@ var tarteaucitron = {
                     }
                 }
 
-                rgxpCookie = new RegExp("^(.*;)?\\s*" + arr[i] + "\\s*=\\s*[^;]+(.*)?$");
+                rgxpCookie = new RegExp("(?:^|;\\s*)" + arr[i].replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + "\\s*=");
 
                 if (document.cookie.match(rgxpCookie)) {
                     document.cookie = arr[i] + '=; expires=Thu, 01 Jan 2000 00:00:00 GMT; path=/;';
@@ -2643,7 +2643,7 @@ var tarteaucitron = {
         var attribute = elem.getAttribute('data-' + attr) || elem.getAttribute(attr) || elem.getAttribute(attr.startsWith('data-') ? attr.slice(5) : attr);
 
         // security: only allow real url on the url attr
-        if ((attr === 'url' || attr === 'data-url' || attr === 'data-src') && !/^https?:\/\/[^\s]+$/.test(elem.getAttribute(attr))) {
+        if ((attr === 'url' || attr === 'data-url' || attr === 'data-src') && !/^https?:\/\/[^\s]+$/.test(attribute)) {
             return "";
         }
 
