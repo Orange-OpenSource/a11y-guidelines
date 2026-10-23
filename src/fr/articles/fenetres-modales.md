@@ -2,7 +2,7 @@
 title: "Fenêtres modales : comprendre les bonnes pratiques d'accessibilité en 2026"
 abstract: "Omniprésentes sur le web, les fenêtres modales font partie des composants les plus complexes à implémenter correctement. HTML, ARIA, gestion du focus : faisons le point sur les pratiques actuelles."
 titleBeforeTag: true
-date: "2026-09-24"
+date: "2026-10-26"
 tags:
   - web
   - advanced
