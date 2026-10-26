@@ -2,14 +2,18 @@
 title: "IOS - Toolbox"
 abstract: "Resources and tools to help improving digital accessibility"
 sideNavigationLinks:
+  - label: "OUDS-iOS"
+    href: "../ouds-ios/"
   - label: "VoiceOver screen reader"
     href: "../voiceover/"
   - label: "Fact sheets"
-    href: "../fact-sheets/"    
+    href: "../fact-sheets/"
   - label: "mDAN m-learning App"
     href: "../../mdan/"
   - label: "Flutter"
-    href: "../../flutter/"    
+    href: "../../flutter/"
+  - label: "OUDS-Flutter"
+    href: "../../flutter/ouds-flutter/"
   - label: "Useful links"
     href: "../../useful-links/"
 ---
@@ -18,6 +22,8 @@ sideNavigationLinks:
 
 Resources and tools to help improving digital accessibility:
 
+- **OUDS-iOS**
+- **OUDS-Flutter**
 - VoiceOver Screen Reader User Guide
 - Information to develop accessible with Flutter
 - mDAN, a mobile application to learn accessibility options for cell phones and applications on iOS

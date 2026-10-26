@@ -2,10 +2,14 @@
 title: "Android - Boite à outils"
 abstract: "Quelques outils pour concevoir et développer une application Android accessible"
 sideNavigationLinks:
+  - label: "OUDS-Android"
+    href: "../ouds-android/"
   - label: "Lecteur d'écran Talkback"
     href: "../talkback/"
   - label: "Flutter"
     href: "../../flutter/"
+  - label: "OUDS-Flutter"
+    href: "../../flutter/ouds-flutter"
   - label: "App m-learning mDAN"
     href: "../../mdan/"
   - label: "Fiches mémos"
@@ -20,10 +24,11 @@ sideNavigationLinks:
 
 Des ressources et outils pour faciliter la prise en compte de l’accessibilité numérique :
 
+- **OUDS-Android**
+- **OUDS-Flutter**
 - Guide d'utilisation du lecteur d'écran TalkBack
 - Informations pour développer accessible avec Flutter
 - mDAN, une application mobile pour se former sur les options d'accessibilité des mobiles et des applications sur Android
 - Des ressources à télécharger
 - Quelques personas
 - Liens vers d'autres ressources dont la documentation officielle de Google
-

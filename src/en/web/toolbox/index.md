@@ -11,4 +11,3 @@ Resources, tools and methods to help improving digital accessibility:
 - The Va11ydette, check-list to calculate the compliance rate of websites against WCAG criteria
 - Fact sheets to create accessible websites
 - Useful links
-
