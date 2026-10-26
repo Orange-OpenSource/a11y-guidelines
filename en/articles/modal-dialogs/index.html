@@ -208,7 +208,7 @@
 <li>understanding the challenges involved in managing focus;</li>
 <li>avoiding common mistakes identified during accessibility audits.</li>
 </ul>
-<h2 id="what-is-a-modal-dialog" tabindex="-1" class="h2-focus">What Is a Modal Dialog? <a class="header-anchor" href="#what-is-a-modal-dialog" id="heading-129" aria-labelledby="heading-129">#</a></h2>
+<h2 id="what-is-a-modal-dialog" tabindex="-1" class="h2-focus">What Is a Modal Dialog? <a class="header-anchor" href="#what-is-a-modal-dialog" id="heading-251" aria-labelledby="heading-251">#</a></h2>
 <p>A modal dialog is a dialog that temporarily suspends interaction with the rest of the page and requires the user to interact with it before returning to their previous task.</p>
 <p>A modal dialog may be used, for example, to:</p>
 <ul>
@@ -226,7 +226,7 @@
 </ul>
 <p>A non-modal dialog can coexist with the rest of the interface, which remains available for interaction. By contrast, a modal dialog temporarily suspends interaction with the rest of the page until it is closed.</p>
 <p>This distinction is reflected in both HTML specifications and ARIA design patterns.</p>
-<h2 id="introducing-the-html-dialog-element" tabindex="-1" class="h2-focus">Introducing the HTML <code>&lt;dialog&gt;</code> Element <a class="header-anchor" href="#introducing-the-html-dialog-element" id="heading-130" aria-labelledby="heading-130">#</a></h2>
+<h2 id="introducing-the-html-dialog-element" tabindex="-1" class="h2-focus">Introducing the HTML <code>&lt;dialog&gt;</code> Element <a class="header-anchor" href="#introducing-the-html-dialog-element" id="heading-252" aria-labelledby="heading-252">#</a></h2>
 <p>For many years, creating a modal dialog primarily involved using generic elements such as <code>&lt;div&gt;</code> elements, enhanced with JavaScript and ARIA attributes.</p>
 <p>HTML now provides a dedicated element for dialogs: <code>&lt;dialog&gt;</code>.</p>
 <p>Minimal example:</p>
@@ -246,19 +246,19 @@
 <p>When opened with <code>showModal()</code>, the browser natively handles several important behaviours: placing the dialog in the top layer, making the content outside it inert, and handling certain keyboard interactions.</p>
 <p>This native support reduces the amount of code required compared with a fully custom implementation.</p>
 <p>However, using <code>&lt;dialog&gt;</code> does not eliminate the need to consider the component's accessibility. The content, labels, available actions, focus management, and closing conditions all remain important aspects to consider during development.</p>
-<h2 id="opening-a-dialog" tabindex="-1" class="h2-focus">Opening a Dialog <a class="header-anchor" href="#opening-a-dialog" id="heading-131" aria-labelledby="heading-131">#</a></h2>
+<h2 id="opening-a-dialog" tabindex="-1" class="h2-focus">Opening a Dialog <a class="header-anchor" href="#opening-a-dialog" id="heading-253" aria-labelledby="heading-253">#</a></h2>
 <p>The <code>&lt;dialog&gt;</code> element can be opened in two ways, depending on whether a modal or non-modal dialog is required.</p>
-<h3 id="non-modal-dialog" tabindex="-1">Non-modal dialog <a class="header-anchor" href="#non-modal-dialog" id="heading-132" aria-labelledby="heading-132">#</a></h3>
+<h3 id="non-modal-dialog" tabindex="-1">Non-modal dialog <a class="header-anchor" href="#non-modal-dialog" id="heading-254" aria-labelledby="heading-254">#</a></h3>
 <pre><code class="language-javascript">dialog.show();
 </code></pre>
 <p>The <code>show()</code> method opens a non-modal dialog. The rest of the document remains interactive, allowing users to continue interacting with content outside the dialog.</p>
-<h3 id="modal-dialog" tabindex="-1">Modal dialog <a class="header-anchor" href="#modal-dialog" id="heading-133" aria-labelledby="heading-133">#</a></h3>
+<h3 id="modal-dialog" tabindex="-1">Modal dialog <a class="header-anchor" href="#modal-dialog" id="heading-255" aria-labelledby="heading-255">#</a></h3>
 <pre><code class="language-javascript">dialog.showModal();
 </code></pre>
 <p>The <code>showModal()</code> method opens a dialog modally. It places the dialog in the browser's top layer and makes the rest of the document inert.</p>
 <p>There is therefore no need to make the content outside the dialog inert manually when using <code>showModal()</code>.</p>
 <p>The choice of method depends on the intended behaviour: use <code>show()</code> for a non-modal dialog and <code>showModal()</code> for a modal dialog.</p>
-<h3 id="complete-example" tabindex="-1">Complete example <a class="header-anchor" href="#complete-example" id="heading-134" aria-labelledby="heading-134">#</a></h3>
+<h3 id="complete-example" tabindex="-1">Complete example <a class="header-anchor" href="#complete-example" id="heading-256" aria-labelledby="heading-256">#</a></h3>
 <p>A <code>&lt;dialog&gt;</code> element can be opened by activating a button and then closed using a button inside the dialog.</p>
 <pre><code class="language-html">&lt;button type=&quot;button&quot; id=&quot;open-dialog&quot;&gt;
   Show details
@@ -286,21 +286,21 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 </code></pre>
 <p>This example illustrates how to open and close a modal dialog. The browser natively manages initial focus placement and attempts to restore focus when the dialog closes.</p>
 <p>However, these behaviours still need to be verified: the initial focus target must be appropriate for the dialog's content, and focus must return to a position that allows users to resume their previous task when the dialog closes. If the previously focused element is no longer available, or if the expected interaction flow differs from the native behaviour, custom focus management may be necessary.</p>
-<h2 id="closing-a-dialog" tabindex="-1" class="h2-focus">Closing a Dialog <a class="header-anchor" href="#closing-a-dialog" id="heading-135" aria-labelledby="heading-135">#</a></h2>
+<h2 id="closing-a-dialog" tabindex="-1" class="h2-focus">Closing a Dialog <a class="header-anchor" href="#closing-a-dialog" id="heading-257" aria-labelledby="heading-257">#</a></h2>
 <p>The HTML <code>&lt;dialog&gt;</code> element provides several built-in ways to close a dialog. The appropriate method depends on the intended behaviour and how the application needs to handle the closing request.</p>
-<h3 id="closing-directly-with-close" tabindex="-1">Closing directly with <code>close()</code> <a class="header-anchor" href="#closing-directly-with-close" id="heading-136" aria-labelledby="heading-136">#</a></h3>
+<h3 id="closing-directly-with-close" tabindex="-1">Closing directly with <code>close()</code> <a class="header-anchor" href="#closing-directly-with-close" id="heading-258" aria-labelledby="heading-258">#</a></h3>
 <p>The <code>close()</code> method closes the dialog. It can accept a string that is then exposed through the <code>returnValue</code> property.</p>
 <pre><code class="language-javascript">dialog.close();
 </code></pre>
 <p>The dialog closes immediately, and the closure cannot be canceled by an event handler. The <code>close</code> event fires after the dialog has closed.</p>
-<h3 id="requesting-closure-with-requestclose" tabindex="-1">Requesting closure with <code>requestClose()</code> <a class="header-anchor" href="#requesting-closure-with-requestclose" id="heading-137" aria-labelledby="heading-137">#</a></h3>
+<h3 id="requesting-closure-with-requestclose" tabindex="-1">Requesting closure with <code>requestClose()</code> <a class="header-anchor" href="#requesting-closure-with-requestclose" id="heading-259" aria-labelledby="heading-259">#</a></h3>
 <p>The <code>requestClose()</code> method requests that the dialog be closed. It fires the <code>cancel</code> event, allowing code to prevent the dialog from closing by calling <code>preventDefault()</code>. If the event is not canceled, the dialog closes and the <code>close</code> event is then fired.</p>
 <pre><code class="language-javascript">dialog.requestClose();
 </code></pre>
 <p>This method is particularly useful when a closing request needs to be intercepted, for example to ask the user to confirm before discarding their input.</p>
 <p>Unlike <code>close()</code>, <code>requestClose()</code> does not necessarily close the dialog: a <code>cancel</code> event handler can prevent it from closing. However, this method ignores the <code>closedby</code> attribute, meaning it can close the dialog even when the attribute is set to <code>none</code>.</p>
 <p><strong>Browser support:</strong> <code>requestClose()</code> is supported in recent browsers but may be unavailable in older environments. Check compatibility with the browsers targeted by the project before using it.</p>
-<h3 id="closing-a-dialog-with-a-form" tabindex="-1">Closing a dialog with a form <a class="header-anchor" href="#closing-a-dialog-with-a-form" id="heading-138" aria-labelledby="heading-138">#</a></h3>
+<h3 id="closing-a-dialog-with-a-form" tabindex="-1">Closing a dialog with a form <a class="header-anchor" href="#closing-a-dialog-with-a-form" id="heading-260" aria-labelledby="heading-260">#</a></h3>
 <p>A form inside a dialog can use <code>method=&quot;dialog&quot;</code>. Submitting the form then closes the dialog without sending the data to a server. The value of the activated submit button can be retrieved through the dialog's <code>returnValue</code> property.</p>
 <pre><code class="language-html">&lt;form method=&quot;dialog&quot;&gt;
   &lt;button value=&quot;cancel&quot;&gt;Cancel&lt;/button&gt;
@@ -308,7 +308,7 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 &lt;/form&gt;
 </code></pre>
 <p>This mechanism makes it possible, for example, to distinguish between the choices made by the user. The calling code can then check <code>dialog.returnValue</code> to determine how to proceed.</p>
-<h3 id="handling-closing-interactions" tabindex="-1">Handling closing interactions <a class="header-anchor" href="#handling-closing-interactions" id="heading-139" aria-labelledby="heading-139">#</a></h3>
+<h3 id="handling-closing-interactions" tabindex="-1">Handling closing interactions <a class="header-anchor" href="#handling-closing-interactions" id="heading-261" aria-labelledby="heading-261">#</a></h3>
 <p>The closing behaviour should be consistent with the dialog's purpose and the interaction flow it provides. A visible, keyboard-accessible close button remains an explicit way to dismiss the dialog.</p>
 <p>The <code>closedby</code> attribute specifies which user actions can close a dialog. It distinguishes between three types of action:</p>
 <ul>
@@ -325,7 +325,7 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 <p>If the attribute is absent or invalid, its behaviour depends on how the dialog was opened: a dialog opened with <code>showModal()</code> behaves as if the value of <code>closedby</code> were <code>&quot;closerequest&quot;</code>, whereas a dialog opened in another way behaves as if the value were <code>&quot;none&quot;</code>.</p>
 <p>The <code>closedby</code> attribute does not prevent programmatic calls to <code>close()</code>. Developer-defined closing mechanisms therefore remain available even when automatic closing triggered by user actions is disabled.</p>
 <p><strong>Status and browser support:</strong> the <code>closedby</code> attribute is part of the HTML standard, but browser support still varies. The <code>requestClose()</code> method may also be unavailable in some older environments. Check compatibility with the browsers targeted by the project before relying on these features to define closing behaviour.</p>
-<h2 id="what-dialog-actually-provides" tabindex="-1" class="h2-focus">What <code>&lt;dialog&gt;</code> Actually Provides <a class="header-anchor" href="#what-dialog-actually-provides" id="heading-140" aria-labelledby="heading-140">#</a></h2>
+<h2 id="what-dialog-actually-provides" tabindex="-1" class="h2-focus">What <code>&lt;dialog&gt;</code> Actually Provides <a class="header-anchor" href="#what-dialog-actually-provides" id="heading-262" aria-labelledby="heading-262">#</a></h2>
 <p>When opened with <code>showModal()</code>, the HTML <code>&lt;dialog&gt;</code> element provides several built-in mechanisms that are useful for creating modal dialogs.</p>
 <p>The <code>::backdrop</code> pseudo-element can be used to customise the area behind the dialog.</p>
 <p>For example, the background can be darkened as follows:</p>
@@ -335,7 +335,7 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 </code></pre>
 <p>The <code>::backdrop</code> pseudo-element is not an HTML element that needs to be added to the document. It represents the area behind an element placed in the top layer, including a <code>&lt;dialog&gt;</code> opened with <code>showModal()</code>.</p>
 <p>These built-in mechanisms do not eliminate the need to check the component's accessibility. Its content, accessible name, initial focus placement, and closing mechanisms must all be appropriate. Keyboard navigation also requires particular attention: making the content outside the dialog inert does not, by itself, guarantee that keyboard tabbing remains confined to the dialog.</p>
-<h2 id="focus-management" tabindex="-1" class="h2-focus">Focus Management <a class="header-anchor" href="#focus-management" id="heading-141" aria-labelledby="heading-141">#</a></h2>
+<h2 id="focus-management" tabindex="-1" class="h2-focus">Focus Management <a class="header-anchor" href="#focus-management" id="heading-263" aria-labelledby="heading-263">#</a></h2>
 <p>When a <code>&lt;dialog&gt;</code> element is opened with <code>showModal()</code>, the browser moves focus inside the dialog. However, an appropriate starting point must still be chosen based on the content and the intended interaction flow.</p>
 <p>The <code>autofocus</code> attribute can be used to specify which element should receive focus when the dialog opens. Focus can also be adjusted programmatically when the context warrants it.</p>
 <p>The choice of initial focus target depends, in particular, on the nature of the content:</p>
@@ -345,12 +345,12 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 <li><strong>Dialog requiring a decision that is difficult to reverse:</strong> placing focus on the least destructive action can help prevent accidental confirmation, when appropriate to the context.</li>
 </ul>
 <p>These strategies are described in the <em>WAI-ARIA Authoring Practices Guide</em> (APG). They are design recommendations, not universal rules: the appropriate choice depends on the content, the context, and the user's interaction flow.</p>
-<h2 id="keyboard-navigation" tabindex="-1" class="h2-focus">Keyboard Navigation <a class="header-anchor" href="#keyboard-navigation" id="heading-142" aria-labelledby="heading-142">#</a></h2>
-<h3 id="with-the-html-dialog-element" tabindex="-1">With the HTML <code>&lt;dialog&gt;</code> Element <a class="header-anchor" href="#with-the-html-dialog-element" id="heading-143" aria-labelledby="heading-143">#</a></h3>
+<h2 id="keyboard-navigation" tabindex="-1" class="h2-focus">Keyboard Navigation <a class="header-anchor" href="#keyboard-navigation" id="heading-264" aria-labelledby="heading-264">#</a></h2>
+<h3 id="with-the-html-dialog-element" tabindex="-1">With the HTML <code>&lt;dialog&gt;</code> Element <a class="header-anchor" href="#with-the-html-dialog-element" id="heading-265" aria-labelledby="heading-265">#</a></h3>
 <p>When a dialog is opened with <code>showModal()</code>, the browser makes the content outside the dialog inert. Keyboard focus is restricted to the dialog's contents and the browser's own UI, such as the address bar.</p>
 <p>However, unlike the keyboard interaction pattern described by the WAI-ARIA Authoring Practices Guide (APG), native <code>&lt;dialog&gt;</code> behaviour does not necessarily cycle focus from the last focusable element back to the first, or from the first to the last. Pressing <code>Tab</code> or <code>Shift + Tab</code> at either end of the dialog's tab sequence may move focus to the browser's own UI instead.</p>
 <p>This distinction is important when assessing keyboard accessibility. Do not assume that a native dialog requires a custom JavaScript focus-trapping mechanism simply because focus does not cycle within the dialog. Test the behaviour in the target browsers and with the assistive technologies in scope, and determine whether any additional handling is necessary.</p>
-<h3 id="the-pattern-recommended-by-the-wai-aria-apg" tabindex="-1">The Pattern Recommended by the WAI-ARIA APG <a class="header-anchor" href="#the-pattern-recommended-by-the-wai-aria-apg" id="heading-144" aria-labelledby="heading-144">#</a></h3>
+<h3 id="the-pattern-recommended-by-the-wai-aria-apg" tabindex="-1">The Pattern Recommended by the WAI-ARIA APG <a class="header-anchor" href="#the-pattern-recommended-by-the-wai-aria-apg" id="heading-266" aria-labelledby="heading-266">#</a></h3>
 <p>The <em>Dialog (Modal) Pattern</em> in the <em>WAI-ARIA Authoring Practices Guide</em> (APG) recommends the following keyboard interactions:</p>
 <ul>
 <li><code>Tab</code> moves focus to the next focusable element. From the last element, focus moves back to the first.</li>
@@ -359,7 +359,7 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 </ul>
 <p>This pattern describes the expected keyboard interaction for a modal dialog. It is particularly relevant when implementing a custom modal dialog, for which developers must provide the required behaviour themselves.</p>
 <p>For a native HTML dialog, the browser provides several built-in keyboard and focus-management mechanisms. Closing with <code>Escape</code> can depend on the dialog's configuration, including the <code>closedby</code> attribute where supported.</p>
-<h3 id="what-about-a-custom-modal-dialog" tabindex="-1">What About a Custom Modal Dialog? <a class="header-anchor" href="#what-about-a-custom-modal-dialog" id="heading-145" aria-labelledby="heading-145">#</a></h3>
+<h3 id="what-about-a-custom-modal-dialog" tabindex="-1">What About a Custom Modal Dialog? <a class="header-anchor" href="#what-about-a-custom-modal-dialog" id="heading-267" aria-labelledby="heading-267">#</a></h3>
 <p>A modal dialog built using generic elements, such as a <code>&lt;div&gt;</code>, does not automatically benefit from the native mechanisms provided by <code>&lt;dialog&gt;</code>. Developers must implement and test the necessary behaviours, including:</p>
 <ul>
 <li>moving focus inside the dialog when it opens;</li>
@@ -371,7 +371,7 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 </ul>
 <p>The <code>aria-hidden=&quot;true&quot;</code> attribute can hide content from assistive technologies, but it does not prevent interaction and therefore cannot replace either <code>inert</code> or focus management. Care must also be taken not to hide an element that contains focus, either directly or through one of its ancestors.</p>
 <p>Finally, a modal dialog must provide an explicit, visible way to close it, such as a “Close” or “Cancel” button. The <code>Escape</code> key provides an additional way to dismiss the dialog when this behaviour is supported; it does not replace the button.</p>
-<h2 id="html-and-aria" tabindex="-1" class="h2-focus">HTML and ARIA <a class="header-anchor" href="#html-and-aria" id="heading-146" aria-labelledby="heading-146">#</a></h2>
+<h2 id="html-and-aria" tabindex="-1" class="h2-focus">HTML and ARIA <a class="header-anchor" href="#html-and-aria" id="heading-268" aria-labelledby="heading-268">#</a></h2>
 <p>A modal dialog can be built using the HTML <code>&lt;dialog&gt;</code> element or generic elements such as a <code>&lt;div&gt;</code>. These two approaches do not provide the same built-in mechanisms.</p>
 <p>For a custom modal dialog, ARIA attributes can be used to communicate its role and accessible name to assistive technologies:</p>
 <ul>
@@ -385,25 +385,25 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 <p>With the HTML <code>&lt;dialog&gt;</code> element, the <code>dialog</code> role is provided natively. When the element is opened with <code>showModal()</code>, the browser provides the native mechanisms for modality and exposes the modal state to assistive technologies. Explicitly adding <code>aria-modal=&quot;true&quot;</code> is therefore generally unnecessary.</p>
 <p>The <code>aria-labelledby</code> attribute remains useful for associating the dialog with its visible title and defining its accessible name. Whether to use <code>aria-describedby</code> depends on the content and requires particular care, especially when it contains multiple paragraphs or semantic structures.</p>
 <p>More generally, native HTML semantics should be preferred, and redundant ARIA attributes should be avoided unless there is a specific need.</p>
-<h2 id="dialog-and-alertdialog" tabindex="-1" class="h2-focus"><code>dialog</code> and <code>alertdialog</code> <a class="header-anchor" href="#dialog-and-alertdialog" id="heading-147" aria-labelledby="heading-147">#</a></h2>
+<h2 id="dialog-and-alertdialog" tabindex="-1" class="h2-focus"><code>dialog</code> and <code>alertdialog</code> <a class="header-anchor" href="#dialog-and-alertdialog" id="heading-269" aria-labelledby="heading-269">#</a></h2>
 <p>Not all modal dialogs serve the same purpose. The ARIA role should reflect the purpose of the component, rather than simply the importance of the action being presented.</p>
-<h3 id="the-dialog-role" tabindex="-1">The <code>dialog</code> Role <a class="header-anchor" href="#the-dialog-role" id="heading-148" aria-labelledby="heading-148">#</a></h3>
+<h3 id="the-dialog-role" tabindex="-1">The <code>dialog</code> Role <a class="header-anchor" href="#the-dialog-role" id="heading-270" aria-labelledby="heading-270">#</a></h3>
 <p>The <code>dialog</code> role is appropriate for interactions that require the user to engage with a dialog separate from the rest of the interface, such as a form, settings, information display, or configuration changes.</p>
-<h3 id="the-alertdialog-role" tabindex="-1">The <code>alertdialog</code> Role <a class="header-anchor" href="#the-alertdialog-role" id="heading-149" aria-labelledby="heading-149">#</a></h3>
+<h3 id="the-alertdialog-role" tabindex="-1">The <code>alertdialog</code> Role <a class="header-anchor" href="#the-alertdialog-role" id="heading-271" aria-labelledby="heading-271">#</a></h3>
 <p>The <code>alertdialog</code> role is intended for modal dialogs that interrupt the usual interaction flow to communicate an important message and obtain a response from the user.</p>
 <p><strong>Its interruptive nature calls for restraint.</strong> It should not be chosen simply because an action is important or irreversible, but when the situation genuinely requires the user's immediate attention and a response.</p>
 <p>It may be appropriate, for example, for an action confirmation or an error message that requires a response. However, a deletion confirmation does not, by itself, justify using <code>alertdialog</code>: the choice depends on the context and whether interrupting the user is genuinely necessary.</p>
 <p>The <code>alertdialog</code> role allows assistive technologies and browsers to identify this type of dialog and potentially handle it differently. However, its announcement may vary across environments.</p>
-<h3 id="which-role-should-you-choose" tabindex="-1">Which Role Should You Choose? <a class="header-anchor" href="#which-role-should-you-choose" id="heading-150" aria-labelledby="heading-150">#</a></h3>
+<h3 id="which-role-should-you-choose" tabindex="-1">Which Role Should You Choose? <a class="header-anchor" href="#which-role-should-you-choose" id="heading-272" aria-labelledby="heading-272">#</a></h3>
 <p>The choice therefore depends primarily on the dialog's purpose and how it fits into the user's interaction flow.</p>
 <p>In both cases, the dialog must have an accessible name, for example by referencing its title with <code>aria-labelledby</code>. For <code>alertdialog</code>, the APG pattern also specifies <code>aria-describedby</code> to associate the alert message with the dialog. This message should be concise enough to be easily understood when announced.</p>
-<h2 id="a-common-mistake-aria-describedby" tabindex="-1" class="h2-focus">A Common Mistake: <code>aria-describedby</code> <a class="header-anchor" href="#a-common-mistake-aria-describedby" id="heading-151" aria-labelledby="heading-151">#</a></h2>
+<h2 id="a-common-mistake-aria-describedby" tabindex="-1" class="h2-focus">A Common Mistake: <code>aria-describedby</code> <a class="header-anchor" href="#a-common-mistake-aria-describedby" id="heading-273" aria-labelledby="heading-273">#</a></h2>
 <p>The <code>aria-describedby</code> attribute is sometimes added to modal dialogs by default to associate all their content with their accessible description.</p>
 <p>This approach is not always appropriate. When a dialog contains multiple paragraphs, lists, or other semantic structures, associating a container that encompasses all the content can cause assistive technologies to present it as a single block of text, without necessarily conveying its structure in that announcement.</p>
 <p>The <em>WAI-ARIA Authoring Practices Guide</em> (APG) recommends omitting <code>aria-describedby</code> when the content is complex or structured and a single announcement could make it difficult to understand.</p>
 <p>However, the attribute can be useful for a dialog containing a short descriptive message, allowing that message to be associated with the dialog.</p>
 <p><strong>Key takeaway:</strong> use <code>aria-labelledby</code> to provide the dialog's accessible name, for example by referencing its title. Reserve <code>aria-describedby</code> for descriptions whose announcement as a whole provides genuinely useful information.</p>
-<h2 id="a-common-mistake-adding-tabindex-to-dialog" tabindex="-1" class="h2-focus">A Common Mistake: Adding <code>tabindex</code> to <code>&lt;dialog&gt;</code> <a class="header-anchor" href="#a-common-mistake-adding-tabindex-to-dialog" id="heading-152" aria-labelledby="heading-152">#</a></h2>
+<h2 id="a-common-mistake-adding-tabindex-to-dialog" tabindex="-1" class="h2-focus">A Common Mistake: Adding <code>tabindex</code> to <code>&lt;dialog&gt;</code> <a class="header-anchor" href="#a-common-mistake-adding-tabindex-to-dialog" id="heading-274" aria-labelledby="heading-274">#</a></h2>
 <p>The <code>tabindex</code> attribute must not be used on the HTML <code>&lt;dialog&gt;</code> element itself. The dialog does not need to be made focusable for its contents to receive focus.</p>
 <p>However, when a dialog contains long text or a complex structure, it may be appropriate to place initial focus on a static element inside it, such as its heading or the beginning of its content.</p>
 <p>This element can then be given <code>tabindex=&quot;-1&quot;</code>, making it programmatically focusable without adding it to the sequential tab order.</p>
@@ -430,7 +430,7 @@ dialogTitle.focus();
 </code></pre>
 <p>The <code>showModal()</code> method triggers the browser's native initial focus placement behaviour. The explicit call to <code>focus()</code> allows the heading to be chosen as the starting point, which can make long or complex content easier to understand and explore.</p>
 <p>Moving focus in this way is not always necessary: the starting point should be appropriate to the content and the purpose of the modal dialog.</p>
-<h2 id="restoring-focus" tabindex="-1" class="h2-focus">Restoring Focus <a class="header-anchor" href="#restoring-focus" id="heading-153" aria-labelledby="heading-153">#</a></h2>
+<h2 id="restoring-focus" tabindex="-1" class="h2-focus">Restoring Focus <a class="header-anchor" href="#restoring-focus" id="heading-275" aria-labelledby="heading-275">#</a></h2>
 <p>When a modal dialog closes, focus should return to a position that makes sense for the next step in the user's interaction flow.</p>
 <p>In general, focus returns to the element that opened the dialog. If that element has been removed from the DOM or is no longer relevant, for example after an item on the page has been deleted, focus should move to an appropriate target that allows the user to continue their task.</p>
 <p>When a <code>&lt;dialog&gt;</code> element is opened using <code>showModal()</code>, the browser attempts to restore focus when the dialog closes. This native behaviour does not eliminate the need to check the result when the page content has changed while the dialog was open. For a custom modal dialog, focus restoration must be implemented explicitly.</p>
@@ -458,24 +458,24 @@ function closeModal() {
 </code></pre>
 <p>This example illustrates the principle of storing and restoring focus. The <code>isConnected</code> property checks whether the element is still part of the DOM, but it does not guarantee that the element is visible or can actually receive focus.</p>
 <p>In a real implementation, the result must therefore be checked, and an appropriate fallback target provided if necessary. Opening and closing the dialog, managing focus, and restoring interaction with the content outside it must all be handled according to the chosen implementation.</p>
-<h2 id="common-issues-identified-during-accessibility-audits" tabindex="-1" class="h2-focus">Common Issues Identified During Accessibility Audits <a class="header-anchor" href="#common-issues-identified-during-accessibility-audits" id="heading-154" aria-labelledby="heading-154">#</a></h2>
+<h2 id="common-issues-identified-during-accessibility-audits" tabindex="-1" class="h2-focus">Common Issues Identified During Accessibility Audits <a class="header-anchor" href="#common-issues-identified-during-accessibility-audits" id="heading-276" aria-labelledby="heading-276">#</a></h2>
 <p>Several issues recur regularly during modal dialog accessibility audits.</p>
-<h3 id="using-a-div-without-implementing-the-required-behaviour" tabindex="-1">Using a <code>&lt;div&gt;</code> Without Implementing the Required Behaviour <a class="header-anchor" href="#using-a-div-without-implementing-the-required-behaviour" id="heading-155" aria-labelledby="heading-155">#</a></h3>
+<h3 id="using-a-div-without-implementing-the-required-behaviour" tabindex="-1">Using a <code>&lt;div&gt;</code> Without Implementing the Required Behaviour <a class="header-anchor" href="#using-a-div-without-implementing-the-required-behaviour" id="heading-277" aria-labelledby="heading-277">#</a></h3>
 <p>A custom modal dialog must provide the semantics of a dialog and implement the expected behaviours, including focus management, keyboard navigation and making the content outside the dialog inert. A visually correct appearance does not guarantee accessible behaviour.</p>
-<h3 id="forgetting-to-provide-an-accessible-name" tabindex="-1">Forgetting to Provide an Accessible Name <a class="header-anchor" href="#forgetting-to-provide-an-accessible-name" id="heading-156" aria-labelledby="heading-156">#</a></h3>
+<h3 id="forgetting-to-provide-an-accessible-name" tabindex="-1">Forgetting to Provide an Accessible Name <a class="header-anchor" href="#forgetting-to-provide-an-accessible-name" id="heading-278" aria-labelledby="heading-278">#</a></h3>
 <p>The dialog must have an appropriate accessible name, usually provided by its title using <code>aria-labelledby</code>, or by <code>aria-label</code> when that approach is appropriate.</p>
-<h3 id="poor-focus-management" tabindex="-1">Poor Focus Management <a class="header-anchor" href="#poor-focus-management" id="heading-157" aria-labelledby="heading-157">#</a></h3>
+<h3 id="poor-focus-management" tabindex="-1">Poor Focus Management <a class="header-anchor" href="#poor-focus-management" id="heading-279" aria-labelledby="heading-279">#</a></h3>
 <p>Focus must move to an appropriate target when the dialog opens, support consistent navigation throughout the interaction, and return to an appropriate position when the dialog closes.</p>
-<h3 id="failing-to-provide-an-explicit-way-to-close-the-dialog" tabindex="-1">Failing to Provide an Explicit Way to Close the Dialog <a class="header-anchor" href="#failing-to-provide-an-explicit-way-to-close-the-dialog" id="heading-158" aria-labelledby="heading-158">#</a></h3>
+<h3 id="failing-to-provide-an-explicit-way-to-close-the-dialog" tabindex="-1">Failing to Provide an Explicit Way to Close the Dialog <a class="header-anchor" href="#failing-to-provide-an-explicit-way-to-close-the-dialog" id="heading-280" aria-labelledby="heading-280">#</a></h3>
 <p>A modal dialog should provide a visible, keyboard-accessible way to close it, such as a “Close” or “Cancel” button. The <code>Escape</code> key or clicking outside the dialog can supplement this mechanism, but should not be the only available options.</p>
-<h3 id="using-a-modal-when-it-is-not-necessary" tabindex="-1">Using a Modal When It Is Not Necessary <a class="header-anchor" href="#using-a-modal-when-it-is-not-necessary" id="heading-159" aria-labelledby="heading-159">#</a></h3>
+<h3 id="using-a-modal-when-it-is-not-necessary" tabindex="-1">Using a Modal When It Is Not Necessary <a class="header-anchor" href="#using-a-modal-when-it-is-not-necessary" id="heading-281" aria-labelledby="heading-281">#</a></h3>
 <p>A modal temporarily interrupts interaction with the rest of the page. Depending on the use case, presenting the content directly within the page may be simpler and less intrusive.</p>
-<h2 id="conclusion" tabindex="-1" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-160" aria-labelledby="heading-160">#</a></h2>
+<h2 id="conclusion" tabindex="-1" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-282" aria-labelledby="heading-282">#</a></h2>
 <p>Modal dialogs illustrate the complexity of certain interface components: behind an often simple appearance lie challenges involving semantics, focus management, keyboard navigation and interaction with assistive technologies.</p>
 <p>When used with <code>showModal()</code>, the HTML <code>&lt;dialog&gt;</code> element provides several native mechanisms that make it easier to create accessible modal dialogs. However, it is still necessary to choose an appropriate initial focus target, check that focus is restored correctly, provide an accessible name, and consider whether a modal presentation is actually necessary.</p>
 <p>Understanding what native HTML provides, what ARIA attributes describe, and what developers still need to take responsibility for helps create more robust and interoperable interfaces.</p>
 <p><strong>An accessible modal dialog is more than a correctly marked-up component: it must enable everyone to understand the dialog, interact with it, and resume their task smoothly.</strong></p>
-<h2 id="references" tabindex="-1" class="h2-focus">References <a class="header-anchor" href="#references" id="heading-161" aria-labelledby="heading-161">#</a></h2>
+<h2 id="references" tabindex="-1" class="h2-focus">References <a class="header-anchor" href="#references" id="heading-283" aria-labelledby="heading-283">#</a></h2>
 <ul>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog">MDN – HTML <code>dialog</code> element</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal">MDN – HTMLDialogElement: showModal() method</a></li>
