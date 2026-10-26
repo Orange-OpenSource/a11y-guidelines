@@ -4,12 +4,20 @@
   <subtitle>Les derniers articles en français</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-fr.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/"/>
-  <updated>2026-10-19T00:00:00Z</updated>
+  <updated>2026-10-26T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Fenêtres modales : comprendre les bonnes pratiques d&#39;accessibilité en 2026</title>
+    <link href="https://a11y-guidelines.orange.com/fr/articles/fenetres-modales/"/>
+    <updated>2026-10-26T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/fr/articles/fenetres-modales/</id>
+    <content xml:lang="fr" type="html">Omniprésentes sur le web, les fenêtres modales font partie des composants les plus complexes à implémenter correctement. HTML, ARIA, gestion du focus : faisons le point sur les pratiques actuelles.</content>
+  </entry>
   
   <entry>
     <title>Veille #A11y Août-Septembre 2026</title>
@@ -705,22 +713,6 @@
     <updated>2018-01-04T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/fr/articles/faire-parler-le-lecteur-d-ecran/</id>
     <content xml:lang="fr" type="html">Exemple de code permettant de faire parler la synthèse vocale.</content>
-  </entry>
-  
-  <entry>
-    <title>Les boîtes de dialogue 2/2</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/boites-de-dialogue/2/"/>
-    <updated>2018-01-03T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/boites-de-dialogue/2/</id>
-    <content xml:lang="fr" type="html">Exemple de boite de dialogue accessible (partie 2).</content>
-  </entry>
-  
-  <entry>
-    <title>Les boîtes de dialogue 1/2</title>
-    <link href="https://a11y-guidelines.orange.com/fr/articles/boites-de-dialogue/1/"/>
-    <updated>2018-01-02T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/fr/articles/boites-de-dialogue/1/</id>
-    <content xml:lang="fr" type="html">Exemple de boite de dialogue accessible (partie 1).</content>
   </entry>
   
   <entry>

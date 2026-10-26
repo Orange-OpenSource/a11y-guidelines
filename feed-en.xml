@@ -4,12 +4,20 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2026-10-19T00:00:00Z</updated>
+  <updated>2026-10-26T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>Modal dialogs: understanding accessibility best practices in 2026</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/modal-dialogs/"/>
+    <updated>2026-10-26T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/modal-dialogs/</id>
+    <content xml:lang="en" type="html">Ubiquitous on the web, modal dialogs are among the most complex components to implement correctly. HTML, ARIA, focus management: let&#39;s take a look at current practices.</content>
+  </entry>
   
   <entry>
     <title>#a11y technical watch, August-September 2026</title>
@@ -673,22 +681,6 @@
     <updated>2018-01-04T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/make-a-screen-reader-talk/</id>
     <content xml:lang="en" type="html">Sample code to make screen reader speech.</content>
-  </entry>
-  
-  <entry>
-    <title>Dialogs 2/2</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/dialogs/2/"/>
-    <updated>2018-01-03T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/dialogs/2/</id>
-    <content xml:lang="en" type="html">Example of an accessible dialog (part 2).</content>
-  </entry>
-  
-  <entry>
-    <title>Dialogs 1/2</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/dialogs/1/"/>
-    <updated>2018-01-02T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/dialogs/1/</id>
-    <content xml:lang="en" type="html">Example of an accessible dialog (part 1).</content>
   </entry>
   
   <entry>
