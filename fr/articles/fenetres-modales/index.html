@@ -208,7 +208,7 @@
 <li>comprendre les enjeux liés à la gestion du focus ;</li>
 <li>éviter les erreurs fréquemment rencontrées lors des audits d'accessibilité.</li>
 </ul>
-<h2 id="quest-ce-quune-fenetre-modale" tabindex="-1" class="h2-focus">Qu'est-ce qu'une fenêtre modale ? <a class="header-anchor" href="#quest-ce-quune-fenetre-modale" id="heading-42" aria-labelledby="heading-42">#</a></h2>
+<h2 id="quest-ce-quune-fenetre-modale" tabindex="-1" class="h2-focus">Qu'est-ce qu'une fenêtre modale ? <a class="header-anchor" href="#quest-ce-quune-fenetre-modale" id="heading-276" aria-labelledby="heading-276">#</a></h2>
 <p>Une fenêtre modale est une boîte de dialogue qui suspend temporairement l'interaction avec le reste de la page et demande à l'utilisateur d'interagir avec elle avant de reprendre son activité précédente.</p>
 <p>Une modale peut par exemple être utilisée pour :</p>
 <ul>
@@ -226,7 +226,7 @@
 </ul>
 <p>Une boîte de dialogue non modale peut coexister avec le reste de l'interface, que l'utilisateur peut continuer à utiliser. À l'inverse, une boîte de dialogue modale suspend temporairement l'interaction avec le reste de la page jusqu'à sa fermeture.</p>
 <p>Cette distinction existe à la fois dans les spécifications HTML et dans les modèles de conception ARIA.</p>
-<h2 id="larrivee-de-lelement-html-dialog" tabindex="-1" class="h2-focus">L'arrivée de l'élément HTML <code>&lt;dialog&gt;</code> <a class="header-anchor" href="#larrivee-de-lelement-html-dialog" id="heading-43" aria-labelledby="heading-43">#</a></h2>
+<h2 id="larrivee-de-lelement-html-dialog" tabindex="-1" class="h2-focus">L'arrivée de l'élément HTML <code>&lt;dialog&gt;</code> <a class="header-anchor" href="#larrivee-de-lelement-html-dialog" id="heading-277" aria-labelledby="heading-277">#</a></h2>
 <p>Pendant de nombreuses années, la création d'une fenêtre modale reposait principalement sur des éléments génériques, comme des <code>&lt;div&gt;</code>, enrichis avec JavaScript et des attributs ARIA.</p>
 <p>HTML propose désormais un élément dédié aux boîtes de dialogue : <code>&lt;dialog&gt;</code>.</p>
 <p>Exemple minimal :</p>
@@ -246,19 +246,19 @@
 <p>Lorsqu'il est ouvert avec <code>showModal()</code>, le navigateur prend nativement en charge plusieurs comportements importants : le placement du dialogue dans la couche supérieure (<span lang="en"><em>top layer</em></span>), l'inertie du contenu situé en dehors de celui-ci et la gestion de certaines interactions au clavier.</p>
 <p>Cette prise en charge native permet de réduire la quantité de code nécessaire par rapport à une implémentation entièrement personnalisée.</p>
 <p>Cependant, utiliser <code>&lt;dialog&gt;</code> ne dispense pas de réfléchir à l'accessibilité du composant. Le contenu, les intitulés, les actions proposées, la gestion du focus et les conditions de fermeture restent autant de points à examiner lors de son développement.</p>
-<h2 id="ouvrir-une-boite-de-dialogue" tabindex="-1" class="h2-focus">Ouvrir une boîte de dialogue <a class="header-anchor" href="#ouvrir-une-boite-de-dialogue" id="heading-44" aria-labelledby="heading-44">#</a></h2>
+<h2 id="ouvrir-une-boite-de-dialogue" tabindex="-1" class="h2-focus">Ouvrir une boîte de dialogue <a class="header-anchor" href="#ouvrir-une-boite-de-dialogue" id="heading-278" aria-labelledby="heading-278">#</a></h2>
 <p>L'élément <code>&lt;dialog&gt;</code> peut être ouvert de deux manières, selon que l'on souhaite créer une boîte de dialogue modale ou non modale.</p>
-<h3 id="fenetre-non-modale" tabindex="-1">Fenêtre non modale <a class="header-anchor" href="#fenetre-non-modale" id="heading-45" aria-labelledby="heading-45">#</a></h3>
+<h3 id="fenetre-non-modale" tabindex="-1">Fenêtre non modale <a class="header-anchor" href="#fenetre-non-modale" id="heading-279" aria-labelledby="heading-279">#</a></h3>
 <pre><code class="language-javascript">dialog.show();
 </code></pre>
 <p>La méthode <code>show()</code> ouvre une boîte de dialogue non modale. Le reste du document demeure interactif : l'utilisateur peut poursuivre ses interactions avec le contenu situé à l'extérieur de la boîte de dialogue.</p>
-<h3 id="fenetre-modale" tabindex="-1">Fenêtre modale <a class="header-anchor" href="#fenetre-modale" id="heading-46" aria-labelledby="heading-46">#</a></h3>
+<h3 id="fenetre-modale" tabindex="-1">Fenêtre modale <a class="header-anchor" href="#fenetre-modale" id="heading-280" aria-labelledby="heading-280">#</a></h3>
 <pre><code class="language-javascript">dialog.showModal();
 </code></pre>
 <p>La méthode <code>showModal()</code> ouvre la boîte de dialogue de manière modale. Elle la place dans la couche supérieure du navigateur (<span lang="en"><em>top layer</em></span>) et rend inerte le reste du document.</p>
 <p>Il n'est donc pas nécessaire de rendre manuellement le contenu extérieur inerte pour obtenir ce comportement avec <code>showModal()</code>.</p>
 <p>Le choix de la méthode dépend du comportement recherché : <code>show()</code> pour une boîte de dialogue non modale, <code>showModal()</code> pour une boîte de dialogue modale.</p>
-<h3 id="exemple-complet" tabindex="-1">Exemple complet <a class="header-anchor" href="#exemple-complet" id="heading-47" aria-labelledby="heading-47">#</a></h3>
+<h3 id="exemple-complet" tabindex="-1">Exemple complet <a class="header-anchor" href="#exemple-complet" id="heading-281" aria-labelledby="heading-281">#</a></h3>
 <p>L'élément <code>&lt;dialog&gt;</code> peut être ouvert depuis un bouton, puis fermé depuis un bouton placé dans la boîte de dialogue.</p>
 <pre><code class="language-html">&lt;button type=&quot;button&quot; id=&quot;open-dialog&quot;&gt;
   Afficher les détails
@@ -286,21 +286,21 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 </code></pre>
 <p>Cet exemple illustre le mécanisme d'ouverture et de fermeture d'une boîte de dialogue modale. Le navigateur gère nativement le placement initial du focus et tente de le restaurer à la fermeture.</p>
 <p>Ces comportements doivent néanmoins être vérifiés : le focus initial doit être adapté au contenu de la boîte de dialogue et, à la fermeture, permettre à l'utilisateur de reprendre son parcours. Si l'élément précédemment focalisé n'est plus disponible ou si le parcours attendu diffère du comportement natif, une gestion spécifique peut être nécessaire.</p>
-<h2 id="fermeture" tabindex="-1" class="h2-focus">Fermeture <a class="header-anchor" href="#fermeture" id="heading-48" aria-labelledby="heading-48">#</a></h2>
+<h2 id="fermeture" tabindex="-1" class="h2-focus">Fermeture <a class="header-anchor" href="#fermeture" id="heading-282" aria-labelledby="heading-282">#</a></h2>
 <p>L'élément HTML <code>&lt;dialog&gt;</code> propose plusieurs mécanismes natifs de fermeture. Le choix dépend du comportement attendu et de la manière dont l'application doit traiter la demande de fermeture.</p>
-<h3 id="fermer-directement-avec-close" tabindex="-1">Fermer directement avec <code>close()</code> <a class="header-anchor" href="#fermer-directement-avec-close" id="heading-49" aria-labelledby="heading-49">#</a></h3>
+<h3 id="fermer-directement-avec-close" tabindex="-1">Fermer directement avec <code>close()</code> <a class="header-anchor" href="#fermer-directement-avec-close" id="heading-283" aria-labelledby="heading-283">#</a></h3>
 <p>La méthode <code>close()</code> ferme la boîte de dialogue. Elle peut recevoir une chaîne de caractères qui sera exposée via la propriété <code>returnValue</code>.</p>
 <pre><code class="language-javascript">dialog.close();
 </code></pre>
 <p>Cette fermeture est immédiate et ne peut pas être annulée par un gestionnaire d'événement. L'événement <code>close</code> est déclenché après la fermeture.</p>
-<h3 id="demander-la-fermeture-avec-requestclose" tabindex="-1">Demander la fermeture avec <code>requestClose()</code> <a class="header-anchor" href="#demander-la-fermeture-avec-requestclose" id="heading-50" aria-labelledby="heading-50">#</a></h3>
+<h3 id="demander-la-fermeture-avec-requestclose" tabindex="-1">Demander la fermeture avec <code>requestClose()</code> <a class="header-anchor" href="#demander-la-fermeture-avec-requestclose" id="heading-284" aria-labelledby="heading-284">#</a></h3>
 <p>La méthode <code>requestClose()</code> demande la fermeture de la boîte de dialogue. Elle déclenche l'événement <code>cancel</code>, qui permet au code d'empêcher la fermeture en appelant <code>preventDefault()</code>. Si cet événement n'est pas annulé, la boîte de dialogue se ferme et l'événement <code>close</code> est ensuite déclenché.</p>
 <pre><code class="language-javascript">dialog.requestClose();
 </code></pre>
 <p>Cette méthode est notamment utile lorsqu'une demande de fermeture doit pouvoir être interceptée, par exemple pour demander confirmation avant d'abandonner une saisie.</p>
 <p>Contrairement à <code>close()</code>, <code>requestClose()</code> ne ferme donc pas nécessairement la boîte de dialogue : un gestionnaire de l'événement <code>cancel</code> peut empêcher sa fermeture. Cette méthode ignore toutefois l'attribut <code>closedby</code> : elle peut fermer la boîte de dialogue même si celui-ci vaut <code>none</code>.</p>
 <p><strong>Compatibilité :</strong> <code>requestClose()</code> est prise en charge par les navigateurs récents, mais peut être indisponible dans des environnements plus anciens. Vérifiez sa compatibilité avec les navigateurs ciblés avant de l'utiliser.</p>
-<h3 id="fermer-avec-un-formulaire" tabindex="-1">Fermer avec un formulaire <a class="header-anchor" href="#fermer-avec-un-formulaire" id="heading-51" aria-labelledby="heading-51">#</a></h3>
+<h3 id="fermer-avec-un-formulaire" tabindex="-1">Fermer avec un formulaire <a class="header-anchor" href="#fermer-avec-un-formulaire" id="heading-285" aria-labelledby="heading-285">#</a></h3>
 <p>Un formulaire placé dans une boîte de dialogue peut utiliser <code>method=&quot;dialog&quot;</code>. Sa soumission ferme alors la boîte de dialogue sans transmettre les données à un serveur. La valeur du bouton de soumission activé peut être récupérée via la propriété <code>returnValue</code> du dialogue.</p>
 <pre><code class="language-html">&lt;form method=&quot;dialog&quot;&gt;
   &lt;button value=&quot;cancel&quot;&gt;Annuler&lt;/button&gt;
@@ -308,7 +308,7 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 &lt;/form&gt;
 </code></pre>
 <p>Ce mécanisme permet notamment de distinguer les différents choix effectués par l'utilisateur. Le code appelant peut ensuite consulter <code>dialog.returnValue</code> pour adapter la suite du parcours.</p>
-<h3 id="prevoir-les-interactions-de-fermeture" tabindex="-1">Prévoir les interactions de fermeture <a class="header-anchor" href="#prevoir-les-interactions-de-fermeture" id="heading-52" aria-labelledby="heading-52">#</a></h3>
+<h3 id="prevoir-les-interactions-de-fermeture" tabindex="-1">Prévoir les interactions de fermeture <a class="header-anchor" href="#prevoir-les-interactions-de-fermeture" id="heading-286" aria-labelledby="heading-286">#</a></h3>
 <p>La fermeture doit être cohérente avec le rôle de la boîte de dialogue et le parcours proposé. Un bouton de fermeture visible et utilisable au clavier reste un moyen explicite de quitter la fenêtre.</p>
 <p>L'attribut <code>closedby</code> permet de préciser quelles actions utilisateur peuvent fermer une boîte de dialogue. Il distingue trois types d'actions :</p>
 <ul>
@@ -325,7 +325,7 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 <p>Si l’attribut est absent ou invalide, son comportement dépend de la méthode d’ouverture : un dialogue ouvert avec <code>showModal()</code> se comporte comme si la valeur de <code>closedby</code> était <code>&quot;closerequest&quot;</code>, tandis qu’un dialogue ouvert autrement se comporte comme si elle était <code>&quot;none&quot;</code>.</p>
 <p>L'attribut <code>closedby</code> ne bloque pas les appels programmatiques à <code>close()</code>. Les mécanismes de fermeture définis par le développeur restent donc possibles, même lorsque les fermetures automatiques déclenchées par les actions utilisateur sont désactivées.</p>
 <p><strong>Statut et compatibilité :</strong> l'attribut <code>closedby</code> fait partie du standard HTML, mais sa prise en charge varie encore selon les navigateurs. La méthode <code>requestClose()</code> peut également ne pas être disponible dans certains environnements anciens. Vérifiez la compatibilité de ces fonctionnalités avec les navigateurs ciblés avant de vous appuyer sur elles pour définir le comportement de fermeture.</p>
-<h2 id="ce-que-fournit-reellement-dialog" tabindex="-1" class="h2-focus">Ce que fournit réellement <code>&lt;dialog&gt;</code> <a class="header-anchor" href="#ce-que-fournit-reellement-dialog" id="heading-53" aria-labelledby="heading-53">#</a></h2>
+<h2 id="ce-que-fournit-reellement-dialog" tabindex="-1" class="h2-focus">Ce que fournit réellement <code>&lt;dialog&gt;</code> <a class="header-anchor" href="#ce-que-fournit-reellement-dialog" id="heading-287" aria-labelledby="heading-287">#</a></h2>
 <p>L'élément HTML <code>&lt;dialog&gt;</code>, lorsqu'il est ouvert avec <code>showModal()</code>, fournit plusieurs mécanismes natifs utiles à la création d'une fenêtre modale.</p>
 <p>Le pseudo-élément <code>::backdrop</code> permet notamment de personnaliser la zone située derrière la boîte de dialogue.</p>
 <p>Par exemple, il est possible d'assombrir l'arrière-plan :</p>
@@ -335,7 +335,7 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 </code></pre>
 <p>Le pseudo-élément <code>::backdrop</code> n'est pas un élément HTML à ajouter au document. Il représente la zone située derrière un élément placé dans la couche supérieure (<span lang="en"><em>top layer</em></span>), notamment un <code>&lt;dialog&gt;</code> ouvert avec <code>showModal()</code>.</p>
 <p>Ces mécanismes natifs ne dispensent pas de vérifier l'accessibilité du composant : son contenu, son nom accessible, le placement initial du focus et ses moyens de fermeture doivent rester adaptés. La navigation au clavier mérite également une attention particulière : l'inertie du contenu extérieur ne garantit pas, à elle seule, que la tabulation reste confinée dans la boîte de dialogue.</p>
-<h2 id="gestion-du-focus" tabindex="-1" class="h2-focus">Gestion du focus <a class="header-anchor" href="#gestion-du-focus" id="heading-54" aria-labelledby="heading-54">#</a></h2>
+<h2 id="gestion-du-focus" tabindex="-1" class="h2-focus">Gestion du focus <a class="header-anchor" href="#gestion-du-focus" id="heading-288" aria-labelledby="heading-288">#</a></h2>
 <p>Lorsqu'un élément <code>&lt;dialog&gt;</code> est ouvert avec <code>showModal()</code>, le navigateur déplace le focus à l'intérieur de la boîte de dialogue. Il reste toutefois nécessaire de choisir un point de départ adapté au contenu et au parcours proposé.</p>
 <p>L'attribut <code>autofocus</code> permet de désigner l'élément qui doit recevoir le focus à l'ouverture. Le focus peut également être ajusté par programmation lorsque le contexte le justifie.</p>
 <p>Le choix du focus initial dépend notamment de la nature du contenu :</p>
@@ -345,12 +345,12 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 <li><strong>Dialogue demandant une décision difficilement réversible :</strong> placer le focus sur l'action la moins destructive peut contribuer à éviter une validation accidentelle, lorsque ce choix est pertinent dans le contexte.</li>
 </ul>
 <p>Ces stratégies sont décrites dans le <span lang="en"><em>WAI-ARIA Authoring Practices Guide</em> (APG)</span>. Il s'agit de recommandations de conception, et non de règles universelles : le choix approprié dépend du contenu, du contexte et du parcours utilisateur.</p>
-<h2 id="navigation-clavier" tabindex="-1" class="h2-focus">Navigation clavier <a class="header-anchor" href="#navigation-clavier" id="heading-55" aria-labelledby="heading-55">#</a></h2>
-<h3 id="avec-lelement-html-dialog" tabindex="-1">Avec l'élément HTML <code>&lt;dialog&gt;</code> <a class="header-anchor" href="#avec-lelement-html-dialog" id="heading-56" aria-labelledby="heading-56">#</a></h3>
+<h2 id="navigation-clavier" tabindex="-1" class="h2-focus">Navigation clavier <a class="header-anchor" href="#navigation-clavier" id="heading-289" aria-labelledby="heading-289">#</a></h2>
+<h3 id="avec-lelement-html-dialog" tabindex="-1">Avec l'élément HTML <code>&lt;dialog&gt;</code> <a class="header-anchor" href="#avec-lelement-html-dialog" id="heading-290" aria-labelledby="heading-290">#</a></h3>
 <p>Lorsqu'une boîte de dialogue est ouverte avec <code>showModal()</code>, le navigateur rend le contenu extérieur à la boîte de dialogue inerte. Le focus clavier reste alors dans le contenu de la boîte de dialogue, mais peut également se déplacer vers l'interface du navigateur, par exemple la barre d'adresse.</p>
 <p>Toutefois, contrairement au modèle d'interaction décrit par le <span lang="en">WAI-ARIA Authoring Practices Guide (APG)</span>, le comportement natif de <code>&lt;dialog&gt;</code> ne garantit pas nécessairement que la navigation au clavier boucle du dernier élément focalisable au premier, et inversement. Lorsque le focus atteint l'une des extrémités de la séquence de tabulation, appuyer sur <code>Tab</code> ou <code>Shift + Tab</code> peut ainsi déplacer le focus vers l'interface du navigateur.</p>
 <p>Cette distinction est importante lors de l'évaluation de l'accessibilité au clavier. Il ne faut pas conclure qu'une boîte de dialogue native nécessite un mécanisme JavaScript de boucle de focus simplement parce que celui-ci ne boucle pas à l'intérieur de la fenêtre. Il convient de tester le comportement dans les navigateurs ciblés et avec les technologies d'assistance concernées, puis de déterminer si un traitement complémentaire est nécessaire.</p>
-<h3 id="le-modele-recommande-par-le-wai-aria-apg" tabindex="-1">Le modèle recommandé par le WAI-ARIA APG <a class="header-anchor" href="#le-modele-recommande-par-le-wai-aria-apg" id="heading-57" aria-labelledby="heading-57">#</a></h3>
+<h3 id="le-modele-recommande-par-le-wai-aria-apg" tabindex="-1">Le modèle recommandé par le WAI-ARIA APG <a class="header-anchor" href="#le-modele-recommande-par-le-wai-aria-apg" id="heading-291" aria-labelledby="heading-291">#</a></h3>
 <p>Le <em>Dialog (Modal) Pattern</em> du <span lang="en"><em>WAI-ARIA Authoring Practices Guide</em> (APG)</span> recommande les interactions clavier suivantes :</p>
 <ul>
 <li><code>Tab</code> déplace le focus vers l'élément focalisable suivant. Depuis le dernier élément, le focus revient au premier.</li>
@@ -359,7 +359,7 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 </ul>
 <p>Ce modèle décrit le comportement clavier attendu pour une boîte de dialogue modale. Il est particulièrement pertinent pour les modales personnalisées, dont le développeur doit implémenter lui-même les comportements nécessaires.</p>
 <p>Pour une boîte de dialogue HTML native, le navigateur fournit plusieurs mécanismes intégrés de gestion du clavier et du focus. La fermeture avec <code>Escape</code> peut dépendre de la configuration de la boîte de dialogue, notamment de l'attribut <code>closedby</code> lorsque celui-ci est pris en charge.</p>
-<h3 id="et-pour-une-modale-personnalisee" tabindex="-1">Et pour une modale personnalisée ? <a class="header-anchor" href="#et-pour-une-modale-personnalisee" id="heading-58" aria-labelledby="heading-58">#</a></h3>
+<h3 id="et-pour-une-modale-personnalisee" tabindex="-1">Et pour une modale personnalisée ? <a class="header-anchor" href="#et-pour-une-modale-personnalisee" id="heading-292" aria-labelledby="heading-292">#</a></h3>
 <p>Une modale construite à partir d'éléments génériques, comme une <code>&lt;div&gt;</code>, ne bénéficie pas automatiquement des mécanismes natifs de <code>&lt;dialog&gt;</code>. Le développeur doit implémenter et tester les comportements nécessaires, notamment :</p>
 <ul>
 <li>placer le focus à l'intérieur de la fenêtre à son ouverture ;</li>
@@ -371,7 +371,7 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 </ul>
 <p>L'attribut <code>aria-hidden=&quot;true&quot;</code> peut masquer un contenu aux technologies d'assistance, mais il ne bloque pas les interactions et ne remplace donc ni <code>inert</code> ni la gestion du focus. Il faut également veiller à ne pas masquer un élément qui contient le focus, directement ou par l'intermédiaire de l'un de ses ancêtres.</p>
 <p>Enfin, une fenêtre modale doit proposer un moyen explicite et visible de la fermer, par exemple un bouton « Fermer » ou « Annuler ». La touche <code>Escape</code> constitue un moyen complémentaire de fermeture lorsque ce comportement est prévu ; elle ne remplace pas le bouton.</p>
-<h2 id="html-et-aria" tabindex="-1" class="h2-focus">HTML et ARIA <a class="header-anchor" href="#html-et-aria" id="heading-59" aria-labelledby="heading-59">#</a></h2>
+<h2 id="html-et-aria" tabindex="-1" class="h2-focus">HTML et ARIA <a class="header-anchor" href="#html-et-aria" id="heading-293" aria-labelledby="heading-293">#</a></h2>
 <p>Une fenêtre modale peut être construite à partir de l'élément HTML <code>&lt;dialog&gt;</code> ou d'éléments génériques, comme une <code>&lt;div&gt;</code>. Ces deux approches ne fournissent pas les mêmes mécanismes natifs.</p>
 <p>Pour une modale personnalisée, les attributs ARIA permettent notamment d'exposer son rôle et son nom accessible aux technologies d'assistance :</p>
 <ul>
@@ -385,25 +385,25 @@ document.querySelector(&quot;#close-dialog&quot;).addEventListener(&quot;click&q
 <p>Avec l'élément HTML <code>&lt;dialog&gt;</code>, le rôle <code>dialog</code> est fourni nativement. Lorsqu'il est ouvert avec <code>showModal()</code>, le navigateur assure les mécanismes natifs de modalité et expose l'état modal aux technologies d'assistance. Il n'est donc généralement pas nécessaire d'ajouter explicitement <code>aria-modal=&quot;true&quot;</code>.</p>
 <p>L'attribut <code>aria-labelledby</code> reste pertinent pour associer la boîte de dialogue à son titre visible et définir son nom accessible. L'utilisation de <code>aria-describedby</code> dépend quant à elle du contenu et mérite une attention particulière, notamment lorsque celui-ci comporte plusieurs paragraphes ou des structures sémantiques.</p>
 <p>Plus largement, il faut privilégier la sémantique HTML native et éviter les attributs ARIA redondants, sauf besoin particulier.</p>
-<h2 id="dialog-et-alertdialog" tabindex="-1" class="h2-focus"><code>dialog</code> et <code>alertdialog</code> <a class="header-anchor" href="#dialog-et-alertdialog" id="heading-60" aria-labelledby="heading-60">#</a></h2>
+<h2 id="dialog-et-alertdialog" tabindex="-1" class="h2-focus"><code>dialog</code> et <code>alertdialog</code> <a class="header-anchor" href="#dialog-et-alertdialog" id="heading-294" aria-labelledby="heading-294">#</a></h2>
 <p>Toutes les boîtes de dialogue modales ne remplissent pas la même fonction. Le rôle ARIA doit refléter l'objectif du composant, et non simplement l'importance de l'action proposée.</p>
-<h3 id="le-role-dialog" tabindex="-1">Le rôle <code>dialog</code> <a class="header-anchor" href="#le-role-dialog" id="heading-61" aria-labelledby="heading-61">#</a></h3>
+<h3 id="le-role-dialog" tabindex="-1">Le rôle <code>dialog</code> <a class="header-anchor" href="#le-role-dialog" id="heading-295" aria-labelledby="heading-295">#</a></h3>
 <p>Le rôle <code>dialog</code> convient aux interactions qui nécessitent un échange avec l'utilisateur dans une boîte de dialogue distincte du reste de l'interface : formulaire, paramètres, consultation d'informations ou modification d'une configuration, par exemple.</p>
-<h3 id="le-role-alertdialog" tabindex="-1">Le rôle <code>alertdialog</code> <a class="header-anchor" href="#le-role-alertdialog" id="heading-62" aria-labelledby="heading-62">#</a></h3>
+<h3 id="le-role-alertdialog" tabindex="-1">Le rôle <code>alertdialog</code> <a class="header-anchor" href="#le-role-alertdialog" id="heading-296" aria-labelledby="heading-296">#</a></h3>
 <p>Le rôle <code>alertdialog</code> est destiné aux boîtes de dialogue modales qui interrompent le déroulement habituel de l'interaction pour communiquer un message important et obtenir une réponse de l'utilisateur.</p>
 <p><strong>Son caractère interruptif justifie un usage parcimonieux.</strong> Il ne doit pas être choisi simplement parce qu'une action est importante ou irréversible, mais lorsque la situation nécessite réellement d'attirer immédiatement l'attention de l'utilisateur et de solliciter une réponse.</p>
 <p>Il peut notamment convenir à une confirmation d'action ou à un message d'erreur qui exige une réponse. Une confirmation de suppression ne justifie toutefois pas, à elle seule, le recours à <code>alertdialog</code> : le choix dépend du contexte et de la nécessité réelle d'interrompre l'utilisateur.</p>
 <p>Le rôle <code>alertdialog</code> permet aux technologies d'assistance et aux navigateurs d'identifier ce type de dialogue et, éventuellement, de lui réserver un traitement spécifique. Son annonce peut toutefois varier selon les environnements.</p>
-<h3 id="quel-role-choisir" tabindex="-1">Quel rôle choisir ? <a class="header-anchor" href="#quel-role-choisir" id="heading-63" aria-labelledby="heading-63">#</a></h3>
+<h3 id="quel-role-choisir" tabindex="-1">Quel rôle choisir ? <a class="header-anchor" href="#quel-role-choisir" id="heading-297" aria-labelledby="heading-297">#</a></h3>
 <p>Le choix dépend donc avant tout de la fonction de la boîte de dialogue et de la manière dont elle intervient dans le parcours utilisateur.</p>
 <p>Dans les deux cas, la boîte de dialogue doit disposer d'un nom accessible, par exemple en référençant son titre avec <code>aria-labelledby</code>. Pour <code>alertdialog</code>, le modèle de l'APG prévoit également <code>aria-describedby</code> pour associer le message d'alerte à la boîte de dialogue. Ce message doit rester suffisamment concis pour être facilement compris lors de son annonce.</p>
-<h2 id="une-erreur-frequente-aria-describedby" tabindex="-1" class="h2-focus">Une erreur fréquente : <code>aria-describedby</code> <a class="header-anchor" href="#une-erreur-frequente-aria-describedby" id="heading-64" aria-labelledby="heading-64">#</a></h2>
+<h2 id="une-erreur-frequente-aria-describedby" tabindex="-1" class="h2-focus">Une erreur fréquente : <code>aria-describedby</code> <a class="header-anchor" href="#une-erreur-frequente-aria-describedby" id="heading-298" aria-labelledby="heading-298">#</a></h2>
 <p>L'attribut <code>aria-describedby</code> est parfois ajouté systématiquement aux fenêtres modales pour associer l'ensemble de leur contenu à leur description accessible.</p>
 <p>Cette approche n'est pas toujours pertinente. Lorsque la boîte de dialogue contient plusieurs paragraphes, des listes ou d'autres structures sémantiques, associer un conteneur englobant l'ensemble du contenu peut conduire les technologies d'assistance à restituer celui-ci sous la forme d'un bloc de texte, sans que sa structure soit nécessairement perceptible dans cette annonce.</p>
 <p>Le <span lang="en"><em>WAI-ARIA Authoring Practices Guide</em> (APG)</span> recommande notamment d'omettre <code>aria-describedby</code> lorsque le contenu est complexe ou structuré et qu'une annonce globale risquerait d'en rendre la compréhension difficile.</p>
 <p>Pour une boîte de dialogue contenant un message descriptif court, l'attribut peut en revanche être utile pour associer ce message à la boîte de dialogue.</p>
 <p><strong>À retenir :</strong> utilisez <code>aria-labelledby</code> pour fournir le nom accessible de la boîte de dialogue, par exemple à partir de son titre. Réservez <code>aria-describedby</code> aux descriptions dont l'annonce globale apporte réellement une information utile.</p>
-<h2 id="une-erreur-frequente-ajouter-tabindex-a-dialog" tabindex="-1" class="h2-focus">Une erreur fréquente : ajouter <code>tabindex</code> à <code>&lt;dialog&gt;</code> <a class="header-anchor" href="#une-erreur-frequente-ajouter-tabindex-a-dialog" id="heading-65" aria-labelledby="heading-65">#</a></h2>
+<h2 id="une-erreur-frequente-ajouter-tabindex-a-dialog" tabindex="-1" class="h2-focus">Une erreur fréquente : ajouter <code>tabindex</code> à <code>&lt;dialog&gt;</code> <a class="header-anchor" href="#une-erreur-frequente-ajouter-tabindex-a-dialog" id="heading-299" aria-labelledby="heading-299">#</a></h2>
 <p>L'attribut <code>tabindex</code> ne doit pas être utilisé sur l'élément HTML <code>&lt;dialog&gt;</code> lui-même. Il n'est pas nécessaire de rendre la boîte de dialogue focalisable pour que son contenu puisse recevoir le focus.</p>
 <p>En revanche, lorsqu'une boîte de dialogue contient un texte long ou une structure complexe, il peut être pertinent de placer initialement le focus sur un élément statique situé à l'intérieur, comme son titre ou le début du contenu.</p>
 <p>Cet élément peut alors recevoir <code>tabindex=&quot;-1&quot;</code> : il devient focalisable par programmation, sans être ajouté à l'ordre de tabulation séquentiel.</p>
@@ -430,7 +430,7 @@ dialogTitle.focus();
 </code></pre>
 <p>La méthode <code>showModal()</code> déclenche le comportement natif de placement initial du focus. L'appel explicite à <code>focus()</code> permet ici de choisir le titre comme point de départ, ce qui peut faciliter la compréhension et l'exploration d'un contenu long ou complexe.</p>
 <p>Ce déplacement de focus n'est pas systématiquement nécessaire : le point de départ doit être adapté au contenu et à l'objectif de la modale.</p>
-<h2 id="reprise-du-focus" tabindex="-1" class="h2-focus">Reprise du focus <a class="header-anchor" href="#reprise-du-focus" id="heading-66" aria-labelledby="heading-66">#</a></h2>
+<h2 id="reprise-du-focus" tabindex="-1" class="h2-focus">Reprise du focus <a class="header-anchor" href="#reprise-du-focus" id="heading-300" aria-labelledby="heading-300">#</a></h2>
 <p>Lorsqu'une fenêtre modale se ferme, le focus doit retrouver une position cohérente avec la suite du parcours.</p>
 <p>En règle générale, il revient sur l'élément qui a déclenché l'ouverture de la boîte de dialogue. Si cet élément a été supprimé du DOM ou n'est plus pertinent, par exemple après la suppression d'un élément de la page, le focus doit être déplacé vers une cible adaptée à la poursuite de la tâche.</p>
 <p>Avec <code>&lt;dialog&gt;</code> ouvert à l'aide de <code>showModal()</code>, le navigateur tente de restaurer le focus à la fermeture. Ce comportement natif ne dispense pas de vérifier le résultat lorsque le contenu de la page a été modifié pendant l'ouverture. Pour une modale personnalisée, cette gestion doit être implémentée explicitement.</p>
@@ -458,24 +458,24 @@ function closeModal() {
 </code></pre>
 <p>Cet exemple illustre le principe de mémorisation et de restauration du focus. La propriété <code>isConnected</code> permet de vérifier que l'élément appartient toujours au DOM, mais ne garantit pas qu'il soit visible ou qu'il puisse effectivement recevoir le focus.</p>
 <p>Dans une implémentation réelle, il faut donc vérifier le résultat et prévoir une cible de remplacement pertinente si nécessaire. L'ouverture, la fermeture, la gestion du focus et le rétablissement des interactions avec le contenu extérieur doivent être adaptés à l'implémentation retenue.</p>
-<h2 id="erreurs-frequentes-observees-en-audit" tabindex="-1" class="h2-focus">Erreurs fréquentes observées en audit <a class="header-anchor" href="#erreurs-frequentes-observees-en-audit" id="heading-67" aria-labelledby="heading-67">#</a></h2>
+<h2 id="erreurs-frequentes-observees-en-audit" tabindex="-1" class="h2-focus">Erreurs fréquentes observées en audit <a class="header-anchor" href="#erreurs-frequentes-observees-en-audit" id="heading-301" aria-labelledby="heading-301">#</a></h2>
 <p>Plusieurs défauts reviennent régulièrement lors des audits de fenêtres modales.</p>
-<h3 id="creer-une-modale-avec-une-div-sans-implementer-les-comportements-necessaires" tabindex="-1">Créer une modale avec une <code>&lt;div&gt;</code> sans implémenter les comportements nécessaires <a class="header-anchor" href="#creer-une-modale-avec-une-div-sans-implementer-les-comportements-necessaires" id="heading-68" aria-labelledby="heading-68">#</a></h3>
+<h3 id="creer-une-modale-avec-une-div-sans-implementer-les-comportements-necessaires" tabindex="-1">Créer une modale avec une <code>&lt;div&gt;</code> sans implémenter les comportements nécessaires <a class="header-anchor" href="#creer-une-modale-avec-une-div-sans-implementer-les-comportements-necessaires" id="heading-302" aria-labelledby="heading-302">#</a></h3>
 <p>Une modale personnalisée doit fournir la sémantique d'une boîte de dialogue et gérer les comportements attendus, notamment le focus, la navigation au clavier et l'inactivité du contenu extérieur. Une apparence visuelle correcte ne garantit pas un comportement accessible.</p>
-<h3 id="oublier-le-nom-accessible" tabindex="-1">Oublier le nom accessible <a class="header-anchor" href="#oublier-le-nom-accessible" id="heading-69" aria-labelledby="heading-69">#</a></h3>
+<h3 id="oublier-le-nom-accessible" tabindex="-1">Oublier le nom accessible <a class="header-anchor" href="#oublier-le-nom-accessible" id="heading-303" aria-labelledby="heading-303">#</a></h3>
 <p>La boîte de dialogue doit disposer d'un nom accessible pertinent, généralement fourni par son titre avec <code>aria-labelledby</code>, ou par <code>aria-label</code> lorsque cette solution est adaptée.</p>
-<h3 id="mal-gerer-le-focus" tabindex="-1">Mal gérer le focus <a class="header-anchor" href="#mal-gerer-le-focus" id="heading-70" aria-labelledby="heading-70">#</a></h3>
+<h3 id="mal-gerer-le-focus" tabindex="-1">Mal gérer le focus <a class="header-anchor" href="#mal-gerer-le-focus" id="heading-304" aria-labelledby="heading-304">#</a></h3>
 <p>Le focus doit être placé à un endroit pertinent à l'ouverture, permettre une navigation cohérente pendant l'interaction et retrouver une position adaptée à la fermeture.</p>
-<h3 id="ne-pas-proposer-de-moyen-de-fermeture-explicite" tabindex="-1">Ne pas proposer de moyen de fermeture explicite <a class="header-anchor" href="#ne-pas-proposer-de-moyen-de-fermeture-explicite" id="heading-71" aria-labelledby="heading-71">#</a></h3>
+<h3 id="ne-pas-proposer-de-moyen-de-fermeture-explicite" tabindex="-1">Ne pas proposer de moyen de fermeture explicite <a class="header-anchor" href="#ne-pas-proposer-de-moyen-de-fermeture-explicite" id="heading-305" aria-labelledby="heading-305">#</a></h3>
 <p>Une fenêtre modale devrait proposer un moyen de fermeture visible et accessible au clavier, par exemple un bouton « Fermer » ou « Annuler ». La touche <code>Escape</code> ou un clic à l'extérieur peuvent compléter ce mécanisme, mais ne devraient pas constituer l'unique possibilité.</p>
-<h3 id="utiliser-une-modale-lorsque-ce-nest-pas-necessaire" tabindex="-1">Utiliser une modale lorsque ce n'est pas nécessaire <a class="header-anchor" href="#utiliser-une-modale-lorsque-ce-nest-pas-necessaire" id="heading-72" aria-labelledby="heading-72">#</a></h3>
+<h3 id="utiliser-une-modale-lorsque-ce-nest-pas-necessaire" tabindex="-1">Utiliser une modale lorsque ce n'est pas nécessaire <a class="header-anchor" href="#utiliser-une-modale-lorsque-ce-nest-pas-necessaire" id="heading-306" aria-labelledby="heading-306">#</a></h3>
 <p>Une modale interrompt temporairement l'interaction avec le reste de la page. Selon le besoin, une présentation directement intégrée au contenu peut être plus simple et moins intrusive.</p>
-<h2 id="conclusion" tabindex="-1" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-73" aria-labelledby="heading-73">#</a></h2>
+<h2 id="conclusion" tabindex="-1" class="h2-focus">Conclusion <a class="header-anchor" href="#conclusion" id="heading-307" aria-labelledby="heading-307">#</a></h2>
 <p>Les fenêtres modales illustrent bien la complexité de certains composants d'interface : derrière une apparence parfois simple se cachent des enjeux de sémantique, de gestion du focus, de navigation au clavier et d'interaction avec les technologies d'assistance.</p>
 <p>L'élément HTML <code>&lt;dialog&gt;</code>, lorsqu'il est utilisé avec <code>showModal()</code>, fournit plusieurs mécanismes natifs qui facilitent la création d'une fenêtre modale accessible. Il reste néanmoins nécessaire de choisir un focus initial pertinent, de vérifier la reprise du focus, de définir un nom accessible et de s'interroger sur la pertinence même d'une présentation modale.</p>
 <p>Comprendre ce que le HTML natif fournit, ce que les attributs ARIA décrivent et ce que le développeur doit encore prendre en charge permet de concevoir des interfaces plus robustes et plus interopérables.</p>
 <p><strong>Une fenêtre modale accessible ne se résume pas à un composant correctement balisé : elle doit permettre à chacun de comprendre le dialogue, d'interagir avec lui et de reprendre son parcours dans de bonnes conditions.</strong></p>
-<h2 id="webographie" tabindex="-1" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-74" aria-labelledby="heading-74">#</a></h2>
+<h2 id="webographie" tabindex="-1" class="h2-focus">Webographie <a class="header-anchor" href="#webographie" id="heading-308" aria-labelledby="heading-308">#</a></h2>
 <ul lang="en">
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog" hreflang="en">MDN – HTML <code>dialog</code> element (en)</a></li>
   <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement/showModal" hreflang="en">MDN – HTMLDialogElement: showModal() method (en)</a></li>
