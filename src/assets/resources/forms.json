@@ -1,0 +1,41 @@
+{
+    "urls": [
+      {
+        "name": "A Guide To Accessible Form Validation — Smashing Magazine",
+        "url": "https://www.smashingmagazine.com/2023/02/guide-accessible-form-validation/"
+      },
+      {
+        "name": "6 Quick tests you can do to test your forms for accessibility - Karl Groves",
+        "url": "https://karlgroves.com/6-quick-tests-you-can-do-to-test-your-forms-for-accessibility/"
+      },
+      {
+        "name": "Doing what’s required: Indicating mandatory fields in an accessible way - TPGi",
+        "url": "https://www.tpgi.com/doing-whats-required-indicating-mandatory-fields-in-an-accessible-way/"
+      },
+      {
+        "name": "Fieldsets, Legends and Screen Readers again - TPGi",
+        "url": "https://www.tpgi.com/fieldsets-legends-and-screen-readers-again/"
+      },
+      {
+        "name": "Don’t Disable Form Controls — Adrian Roselli",
+        "url": "https://adrianroselli.com/2024/02/dont-disable-form-controls.html"
+      },
+      {
+        "name": "Avoid Default Field Validation — Adrian Roselli",
+        "url": "https://adrianroselli.com/2019/02/avoid-default-field-validation.html"
+      },
+      {
+        "name": "My Priority of Methods for Labeling a Control — Adrian Roselli",
+        "url": "https://adrianroselli.com/2020/01/my-priority-of-methods-for-labeling-a-control.html"
+      },
+      {
+        "name": "The anatomy of accessible forms: Best practices | Deque",
+        "url": "https://www.deque.com/blog/anatomy-of-accessible-forms-best-practices/"
+      },
+      {
+        "name": "Various styled accessible form controls",
+        "url": "https://github.com/scottaohara/a11y_styled_form_controls"
+      }
+    ]
+  }
+  
