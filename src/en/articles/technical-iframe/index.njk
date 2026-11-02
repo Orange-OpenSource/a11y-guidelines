@@ -1,0 +1,18 @@
+---
+title: "Hiding technical iframe"
+abstract: "Hidding iframe to assistive technology."
+titleBeforeTag: true
+date: "2018-01-13"
+tags:
+  - component
+---
+
+<h2>Introduction</h2>
+<p>A technical <code>iframe</code> is <code>iframe</code> with only a technical role and invisible to users.For example, an <code> iframe </code> that executes a script to collect the user actions on the page.</p>
+  <p>So, the accessibility repositories ask us to indicate in the <code>title</code> attribute the content that will be present in the <code>iframe</code>, information that will be accessible to the assistive tools (a screen reader will vocalize the <code>title</code> attribute of an <code>iframe</code>).</p>
+<h2>Hide the <code>iframe</code> to all users </h2>
+  <p> The solution for hiding the <code>iframe</code>, including help tools users, is to add a <code>aria-hidden='true'</code> attribute on the <code>iframe</code>. The scripts contained in the <code>iframe</code> will always be executed. </p>
+  <p>In addition, you can add a <code>tabindex</code> attribute to prevent the focus from moving in the <code>iframe</code>. So users who navigate using the keyboard will not get lost inside it.</p>
+<pre><code class="html">
+&lt;iframe title="technical content" aria-hidden="true" tabindex="-1" src="http://www.orange.com/"&gt;&lt;/iframe&gt;
+</code></pre>

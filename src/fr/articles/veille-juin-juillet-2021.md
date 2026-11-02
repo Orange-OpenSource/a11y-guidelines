@@ -43,7 +43,6 @@ Points techniques en accessibilité
 
 - Sur l’importance de l’ordre de la prise de focus, un concept essentiel à comprendre (en) : https://devyarns.com/logical-focus-order/ 
 - Tout sur les definition lists, dl (en) : https://benmyers.dev/blog/on-the-dl/ 
-- Une bonne alternative d‘image (en) : https://jebswebs.net/blog/2021/08/just-what-is-a-good-alternative-description/ 
 - Rendre accessible son authentification de site web (en) : https://www.boia.org/blog/is-your-sites-authentication-process-accessible 
 - Rendre une aide en ligne accessible (en) : https://www.boia.org/blog/make-sure-your-websites-help-resources-are-available-and-accessible 
 - Les contrôles cachés et WCAG 2.2, nouveauté (en) : https://www.boia.org/blog/wcag-2.2-introduces-new-requirements-for-hidden-controls 
@@ -59,7 +58,7 @@ Ergonomie, UI & UX
 
 - TAdER — Text Adaptability is Essential for Reading, on vous explique tout sur pourquoi le texte doit pouvoir s’adapter à l’utilisateur dans le numérique à lire (en) : http://www.tader.info/ 
 - Designer pour des déficiences cognitives, bon résumé (en) : https://ux.shopify.com/designing-for-cognitive-disabilities-b2933d58c278 
-- Améliorer les personae utilisateurs (en) : https://www.uxbooth.com/articles/rethinking-user-personas/ 
+- Améliorer les personas utilisateurs (en) : https://www.uxbooth.com/articles/rethinking-user-personas/ 
 Ressources
 - On manque d’études et donc de chiffres sur la handicap en France  https://www.slate.fr/story/214940/tribune-france-retard-etudes-handicap-passage-modele-medical-social-changer-connaissances-pratiques-inclusion-enseignement-superieur-recherche 
 - Quel élément peut contenir quel élément en HTML, indispensable (en) : https://caninclude.glitch.me/ 

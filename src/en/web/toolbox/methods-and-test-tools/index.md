@@ -39,6 +39,8 @@ Approach:
 - [Test keyboard navigation](./keyboard-navigation/) using the main keyboard shortcuts to navigate in a web page.
 - [Check the adjustment of the text size](./text-zoom/) by handling the browser zoom.
 - [Test navigation and vocalization](./navigating-with-a-screen-reader/) with a screen reader.
+- [Check the presence of keyboard shortcuts](./keyboard-shortcuts/) by using the proposed bookmarklet.
+
 
 ## Method for testing the mobile web
 ### Technical evaluation

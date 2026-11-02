@@ -12,9 +12,9 @@ Users who navigate using a screen reader are not always aware of changes made on
 
 ## The role alert
 
-Positioned on an HTML element, this allows you to tell the screen reader to vocalize the element automatically when it is created. However, be sure to use this role only in appropriate cases, as clearly stated in the [Mozilla MDN] documentation (https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/ Use_the_r% C3% B4le_alert). Due to its intrusive nature, role alert should be used sparingly and only in situations where the user's attention is immediately required. Less urgent dynamic changes should use a less aggressive method, such as `aria-live="polite"` or other live zone roles.
+Positioned on an HTML element, this allows you to tell the screen reader to vocalize the element automatically when it is created. However, be sure to use this role only in appropriate cases, as clearly stated in the [Mozilla MDN documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role). Due to its intrusive nature, role alert should be used sparingly and only in situations where the user's attention is immediately required. Less urgent dynamic changes should use a less aggressive method, such as `aria-live="polite"` or other live zone roles.
 
-To trigger an alert, several methods are possible, with a support that differ depending on the browser and screen reader pair used. You can read [Steve Faulkner's article] (https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/) on this subject.
+To trigger an alert, several methods are possible, with a support that differ depending on the browser and screen reader pair used. You can read [Steve Faulkner's article](https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/) on this subject.
 
 Here are some examples of methods that are well supported.
 
@@ -62,7 +62,7 @@ Finally, to be complete, know that the <abbr>ARIA</abbr> language also provides 
 
 
 ## References
-- [Use of the alert role](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_alert)
-- [ARIA live zones](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Zones_live_ARIA)
-- [Use the log role](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_log)
-- [Use the status role](https://developer.mozilla.org/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_status)
+- [Use of the alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
+- [ARIA live zones](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
+- [Use the log role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
+- [Use the status role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)

@@ -22,9 +22,9 @@
             </div>
           </div>
         {% endif %}
-        <main id="main-content" class="col-md-{{ mainContentColumn }}" role="main">
+        <main id="main-content" class="col-md-{{ mainContentColumn }}" role="main" tabindex="-1">
           {% if titleBeforeTag %}
-            <h1>{{ title }}</h1>  
+            <h1>{{ title }}</h1>
             {% if tags %}
               <span class="visually-hidden" id="filters_label">
                 {{'tags.list' | translate}}
@@ -32,12 +32,29 @@
               <ul class="list-inline mb-1" aria-labelledby="filters_label">
               {%- for tag in tags -%}
                 {%- set tagTranslationKey = 'tags.' + tag -%}
-                <li class="list-inline-item"><a href="../?tag={{ tag }}" class="btn btn-dark btn-sm" data-tag="{{ tag }}">{{ tagTranslationKey | translate }}</a></li>
+                <li class="list-inline-item"><span class="tagType d-inline-block" data-tag="{{ tag }}">{{ tagTranslationKey | translate }}</span></li>
               {% endfor -%}
               </ul>
             {% endif %}
-            <time class="text-muted" datetime="{{ page.date.toISOString() }}">{% localizedDate page.date, locale  %}</time>
-          {% endif %}  
+            {% set pageObj = { data: { updateDate: updateDate }, date: page.date } %}
+            {% set effectiveDate = pageObj | effectiveDate %}
+
+            <p class="text-muted mb-0">
+              <span class="visually-hidden">{{ 'releaseDate.label' | translate }}</span>
+              <time datetime="{{ effectiveDate | toISOString }}">
+                {% localizedDate effectiveDate, locale %}
+              </time>
+            </p>
+
+            {% if updateDate and updateDate != page.date %}
+              <p class="text-muted mb-0">
+                {{ 'articleUpdate.label' | translate }}
+                <time datetime="{{ page.date | toISOString }}">
+                  {% localizedDate page.date, locale %}
+                </time>
+              </p>
+            {% endif %}
+          {% endif %}
           <div class="mt-4">
           {{ content | safe }}
           </div>
@@ -52,7 +69,7 @@
       </div>
     </div>
   {%- else -%}
-    <main id="main-content" class="container-lg pt-4" role="main">
+    <main id="main-content" class="container-lg pt-4" role="main" tabindex="-1">
       {{ content | safe }}
     </main>
   {%- endif -%}

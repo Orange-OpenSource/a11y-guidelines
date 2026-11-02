@@ -10,13 +10,23 @@ displayToc: true
 
 This video encompasses four short presentations all available on the **official Apple website**:
 
-- [Visual Design Accessibility](#visual-design-accessibility)
-
-- [Accessibility Inspector](#accessibility-inspector)
-
-- [Writing Great Accessibility Labels](#writing-great-accessibility-labels)
-
-- [Accessibility Custom Actions](#accessibility-custom-actions)
+- [WWDC 2019: Accessibility Lessons](#wwdc-2019-accessibility-lessons)
+  - [Visual Design Accessibility](#visual-design-accessibility)
+    - [Dynamic Type](#dynamic-type)
+    - [Reduce motion](#reduce-motion)
+    - [Color](#color)
+  - [Accessibility Inspector](#accessibility-inspector)
+    - [Introduction (00:51)](#introduction-0051)
+    - [Audit (02:26)](#audit-0226)
+    - [Inspection (03:40)](#inspection-0340)
+    - [CATextLayer (05:26)](#catextlayer-0526)
+    - [Color Contrast (06:26)](#color-contrast-0626)
+    - [Conclusion (08:24)](#conclusion-0824)
+  - [Writing Great Accessibility Labels](#writing-great-accessibility-labels)
+  - [Accessibility Custom Actions](#accessibility-custom-actions)
+    - [Introduction (00:12)](#introduction-0012)
+    - [Custom Actions](#custom-actions)
+    - [Implementation (07:59)](#implementation-0759)
 
 
 <br>Thereafter, according to the presentation configuration, the selection of a title or a timelapse will give rise to the video playback on the Apple website directly at the proper moment.
@@ -91,7 +101,7 @@ Reminder of the 11 text styles available since iOS 11:
 ... and the programmatic way of their implementations:
 ![](../../../images/iOSdev/wwdc19-244-TextStyles_2.png)
 
-A more detailed explanation of the `Dynamic`&nbsp;`Type` implementation is available in the <a href="../../development#text-size" style="text-decoration: underline;">developers guide section</a>.
+A more detailed explanation of the `Dynamic`&nbsp;`Type` implementation is available in the <a href="../../development/#text-size" style="text-decoration: underline;">developers guide section</a>.
 </div>
 <div class="tab-pane" id="DynamicType-Xcode" role="tabpanel" >
     
@@ -143,7 +153,7 @@ Reminder of the current situation already including this functionality to reduce
 ... and of the programmatic way to be aware of its value from the device settings:
 ![](../../../images/iOSdev/wwdc19-244-TextStyles_5.png)
 
-A detailed explanation of the accessibility options states and events is available in the <a href="../../development#accessibility-options" style="text-decoration: underline;">developers&nbsp;guide&nbsp;section</a>.
+A detailed explanation of the accessibility options states and events is available in the <a href="../../development/#accessibility-options" style="text-decoration: underline;">developers&nbsp;guide&nbsp;section</a>.
 </div>
 
 <div class="tab-pane" id="ReduceMotion-AutoplayingVideo" role="tabpanel" >
@@ -211,7 +221,7 @@ The `Differentiate`&nbsp;`Without`&nbsp;`Color` **iOS&nbsp;13 new feature** is a
 There's also a programmatic way to be aware of its value so as to subsequently adapt the user interface:
 ![](../../../images/iOSdev/wwdc19-244-TextStyles_10.png)
 
-Admittedly, it's highly recommended <a href="../../design#colours" style="text-decoration: underline;">never&nbsp;to&nbsp;transmit&nbsp;information&nbsp;by&nbsp;colors</a> but this situation may be critical for some use cases that must adapt their configuration accordingly (video games for instance).
+Admittedly, it's highly recommended <a href="../../design/#colours" style="text-decoration: underline;">never&nbsp;to&nbsp;transmit&nbsp;information&nbsp;by&nbsp;colors</a> but this situation may be critical for some use cases that must adapt their configuration accordingly (video games for instance).
 
 ![](../../../images/iOSdev/wwdc19-244-TextStyles_11.png)
 </div>
@@ -258,7 +268,7 @@ Introduction of a **Xcode&nbsp;11 new feature** to **vocalize and select element
 This example emphasizes the non automatic accessibility handling for this kind of element that must be programmatically implemented to behave like any other accessibility element.
 <br><br>
 ### [Color Contrast (06:26)](https://developer.apple.com/videos/play/wwdc2019/257/?time=386)
-Besides the font size, it's also very important to be above a [contrast&nbsp;ratio](../../design#colours) to enable sight-impaired people to perfectly understand the whole screen content.
+Besides the font size, it's also very important to be above a [contrast&nbsp;ratio](../../design/#colours) to enable sight-impaired people to perfectly understand the whole screen content.
 
 Once the color contrast issue is detected, a solution is brought about by the **Xcode&nbsp;11 new feature**: **Color Contrast Calculator**.
 ![](../../../images/iOSdev/wwdc19-257-ColorContrast.png)
@@ -291,7 +301,7 @@ After a quick introduction regarding the expectations of a blind user about a **
 - Avoid verbose labels when not necessary [(07:24)](https://developer.apple.com/videos/play/wwdc2019/254/?time=444) but don't hesitate to use it when appropriate [(07:48)](https://developer.apple.com/videos/play/wwdc2019/254/?time=468).
 <br><br><br>
 ## Accessibility Custom Actions
-This video available on the **official Apple website** ([session&nbsp;250](https://developer.apple.com/videos/play/wwdc2019/250/)) highlights the custom actions for the [screen&nbsp;reader](../../voiceover/) and the [Switch&nbsp;Control&nbsp;feature](../../development#switch-control) thanks to a demo application that presents the explained concepts.
+This video available on the **official Apple website** ([session&nbsp;250](https://developer.apple.com/videos/play/wwdc2019/250/)) highlights the custom actions for the [screen&nbsp;reader](../../voiceover/) and the [Switch&nbsp;Control&nbsp;feature](../../development/#switch-control) thanks to a demo application that presents the explained concepts.
 ![](../../../images/iOSdev/wwdc19-250.png)
 <br><br>Various contents and their video timelapse are indicated hereunder:
 
@@ -332,7 +342,7 @@ Quick introduction of VoiceOver with a problem due to an inadequate implementati
      
 <a alt="Click to playback the video at the indicated time." href="https://developer.apple.com/videos/play/wwdc2019/250/?time=190">🎬 (03:10)</a>
 
-The purpose of the <a href="../../development#custom-actions" style="text-decoration: underline;">custom&nbsp;actions</a>  with VoiceOver is clearly explained which helps understand why and in which contexts this functionality must be implemented to significantly improve the user experience.
+The purpose of the <a href="../../development/#custom-actions" style="text-decoration: underline;">custom&nbsp;actions</a>  with VoiceOver is clearly explained which helps understand why and in which contexts this functionality must be implemented to significantly improve the user experience.
 </div>
 <div class="tab-pane" id="CustomActions-SwitchControl" role="tabpanel" >
     
@@ -348,6 +358,6 @@ Implementing custom actions in this context leads to a **drastic decrease of foc
 
 <br><br>
 ### [Implementation (07:59)](https://developer.apple.com/videos/play/wwdc2019/250/?time=479)
-Since iOS&nbsp;8, the [custom&nbsp;actions](../../development#custom-actions) implementation relies on an Objective C syntax that now fits a Swift form by introducing a **closure** in **iOS&nbsp;13**.
+Since iOS&nbsp;8, the [custom&nbsp;actions](../../development/#custom-actions) implementation relies on an Objective C syntax that now fits a Swift form by introducing a **closure** in **iOS&nbsp;13**.
 ![](../../../images/iOSdev/wwdc19-250-CustomActionsCoding.png)
 <br><br><br>

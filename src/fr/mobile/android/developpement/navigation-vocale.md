@@ -3,7 +3,7 @@ title: "Android développer - Navigation vocale"
 abstract: "Quelques recommandations sur le développement d'une application accessible à l'aide du lecteur d'écran sous Android"
 ---
 
-# Navigation vocale
+# Android développer - Navigation vocale
 
 
 ## Vocaliser les images
@@ -44,8 +44,8 @@ Image(
 </pre>
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#images-of-text">1.4.5 Images of Text</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#images-of-text">1.4.5 Images of Text</a>
 
 
 <br/><br/>
@@ -119,7 +119,7 @@ Box(modifier = Modifier.semantics(mergeDescendants = true) {}) {
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 
 
 <br/><br/>
@@ -261,7 +261,7 @@ Row(
 </pre>
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 
   
 <br/><br/>
@@ -301,8 +301,8 @@ chainemoinsButton.accessibilityTraversalAfter = chaineplus.id
 </code></pre>
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-order">2.4.3 Focus Order</a>
 
 
 <br/><br/>
@@ -353,6 +353,22 @@ Il est fréquent de tester la version d’Android avant de déclencher une vocal
    android:accessibilityLiveRegion="polite" /&gt;
 </code></pre>
 
+**Exemple de région live avec Jetpack Compose**:
+
+<pre>
+<code class="kotlin">@Composable
+fun PoliteAccessibilityRegion() {
+Column {
+Text(
+text = "Contenu mis à jour pour l'accessibilité",
+modifier = Modifier.accessibilityLiveRegion(AccessibilityLiveRegion.Polite)
+)
+}
+}
+</code></pre>
+
+
+
 ## Ne pas vocaliser les éléments décoratifs et cachés
 
 **Cible&nbsp;:** tout le monde et en particulier les personnes déficientes visuelles.  
@@ -374,7 +390,7 @@ Consulter l’article sur l’[utilisation des fragments](https://developer.andr
 
 **Exemples&nbsp;:**
 
-<img src="../../../images/image_ex.png" alt="exemple complet d’image décorative et d’icône informative" width="400">
+<img src="../../../images/image_ex.png" class="img-fluid" alt="exemple complet d’image décorative et d’icône informative" width="400">
 
 En décomposant l’image&nbsp;:
 - <img src="../../../images/montagnard.png" alt="exemple d’image décorative" width="256"> pas de `contentDescription`
@@ -422,7 +438,7 @@ Image(
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#non-text-content">1.1.1 Non-text Content</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#non-text-content">1.1.1 Non-text Content</a>
 
 
 ## Regrouper les éléments 
@@ -480,7 +496,7 @@ Text(
 </pre>
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 
 ## Gérer la navigation par entêtes
@@ -519,8 +535,8 @@ Text(
 </pre>
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels">2.4.6 Headings and Labels</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#headings-and-labels">2.4.6 Headings and Labels</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 
 ## Masquer des éléments à l’accessibilité  

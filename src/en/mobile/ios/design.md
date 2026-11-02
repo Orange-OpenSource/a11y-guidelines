@@ -9,8 +9,8 @@ displayToc: true
 This guide aims to present the different accessibility criteria to create an accessible iOS application.
 <br>Each criterion explains for whom it is important, when it can be implemented, why it is important and the corresponding accessibility rule.
 
-<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555"><img class="img-fluid" alt="Access to the WWDC video highlighting the importance ofthe visual." src="../../images/conception-intro-wwdc.png"/>
-</a>
+<div><q>When designing your app, keep text size, weight, and layout in mind for clarity and readability.</q><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=555">WWDC 2020 - Make Your App Visually Accessible (watch the video)</a></div>
+
 ## Images
 <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item" role="presentation">
@@ -112,7 +112,7 @@ Colours have a very important role in the transmission of information.
 </br></br>The normal font type will require a higher contrast than the previous case.
 
 ![](../../images/color_contrast_3.png)
-</br> With [Dynamic&nbsp;Type](../development#text-size) whose purpose is to adapt the font size according to the user settings, the contrast isn't necessary fixed and must be adapted to the text size.
+</br> With [Dynamic&nbsp;Type](../development/#text-size) whose purpose is to adapt the font size according to the user settings, the contrast isn't necessary fixed and must be adapted to the text size.
 
 ![](../../images/color_contrast_1.png)
 </br>Abide by the contrast ratio is crucial but a too high contrast accentuates eye strain and may cause a visual sensation of blurring on the text.
@@ -125,7 +125,7 @@ For light sensitive persons, a pure black text on a pure white background may si
 These two elements propose to the greatest number a very comfortable reading that the contrast unfortunately can't assure on its own (see the end of this section to discover the proper tool for automatic calculations).
 
 ![](../../images/color_contrast_5.png)
-</br>Choosing the appropriate colours finally amounts to **checking each and every contraint** previously exposed for:
+</br>Choosing the appropriate colours finally amounts to **checking each and every constraint** previously exposed for:
 - The **contrast**.
 - The **brightness difference**.
 - The **colour difference**.
@@ -213,7 +213,7 @@ Thanks to the text alternatives, a visually impaired user can use an application
 
 <br>The text alternative of an element is set via the `accessibilityLabel`, `accessibilityHint`, `accessibilityValue` and `accessibilityTrait` (using the `UIAccessibility` protocol available on any child of `UIView`).  
 <br>The order of vocalization (label, value, trait and hint) cannot be changed and the vocalization is done only once.  
-<br>For more technical information on these attributes, please refer to the [text alternatives](../development##text-alternatives) on the developer guide section.
+<br>For more technical information on these attributes, please refer to the [text alternatives](../development/#text-alternatives) on the developer guide section.
 </div>
 <div class="tab-pane" id="alternativeText-Examples" role="tabpanel" >
 Below is a common example of an icon that is associated with a text (badge) to add information.
@@ -600,7 +600,7 @@ There are several types of notification, but the two most used are:
 
 - `UIAccessibilityScreenChangedNotification`: notify a global change.
 
-For more technical information, please check out the corresponding section on the [developer&nbsp;guide&nbsp;for&nbsp;iOS](../development#notify-a-content-change).
+For more technical information, please check out the corresponding section on the [developer&nbsp;guide&nbsp;for&nbsp;iOS](../development/#notify-a-content-change).
 </div>
 <div class="tab-pane" id="changingContent-Check" role="tabpanel" >
 
@@ -780,7 +780,7 @@ A more consistent reading order is `1, 2, 3, 4, 5, 6, 7, 8, 9, 0, vol +, vol-, p
 
 ![Example of reading order](../../images/order.png)
 
-For more technical information, please check out the corresponding section on the [developer&nbsp;guide&nbsp;for&nbsp;iOS](../development#reading-order).
+For more technical information, please check out the corresponding section on the [developer&nbsp;guide&nbsp;for&nbsp;iOS](../development/#reading-order).
 </div>
 <div class="tab-pane" id="readingOrder-Check" role="tabpanel" >
 
@@ -954,8 +954,8 @@ It's then primordial :
 
 - To **test** each appropriate option so as to be sure that its purpose is completely taken into account inside the application.
 
-<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783"><img class="img-fluid" alt="Access to the WWDC video that highlights the importance of taking into account the user settings inside an application." src="../../images/displayPreferences-wwdc.png"/>
-</a>
+<div><q lang="en">It's also our duty to listen and respect the setting for users that have it enabled</q><a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783">WWDC 2020 - Make Your App Visually Accessible (watch the video)</a></div>
+<div><q>[...] it's also our duty to listen and respect the setting for users that have it enabled.</q>&nbsp;<a href="https://developer.apple.com/videos/play/wwdc2020/10020/?time=783">WWDC 2020 - Make Your App Visually Accessible (watch the video)</a></div>
 
 </br>**Target:** everyone.  
 **When:** as of design and during development.

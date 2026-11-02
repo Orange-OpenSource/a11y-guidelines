@@ -1,18 +1,10 @@
 module.exports = {
+  "AFFORDANCE": {
+    "fr": "Qualité ou propriété d'un objet qui définit ses usages possibles ou rend clair comment il peut être utilisé par sa seule apparence. Ce terme est utilisé en français, principalement dans les domaines du design, de l'ergonomie et de la psychologie cognitive. Il est souvent employé tel quel, sans traduction, en raison de son caractère technique et spécifique.",
+    "en": "The quality or property of an object that defines its possible uses or makes clear how it can be used.",
+  },
   "AIDES TECHNIQUES": {
     "base": "<span lang='fr'>Une aide technique est un matériel ou logiciel utilisé par une personne en situation de handicap destiné à compenser, limiter ou neutraliser la déficience.</span>",
-    "fr": ""
-  },
-  "ASSISTIVE TECHNOLOGIES": {
-    "base": "<span lang='en'>Assistive technologies are any product or software that is used to increase, maintain, or improve the functional capabilities of people with disabilities. Ergonomic keyboards, screen readers, magnifier and switch devices are examples.</span>",
-    "fr": ""
-  },
-  "TEXTE DE GRANDE TAILLE": {
-    "base": "<span lang='fr'>Le texte de grande taille est défini comme du texte de 24px ou plus, ou du texte en gras de plus de 19px</span>",
-    "fr": ""
-  },
-  "LARGE TEXT": {
-    "base": "<span lang='en'>Large text is defined as text of 24px or larger, or larger than 19px for bold text</span>",
     "fr": ""
   },
   "API": {
@@ -22,6 +14,10 @@ module.exports = {
   "ARIA": {
     "base": "<span lang='en'>Accessible Rich Internet Applications</span>",
     "fr": "applications internet riches accessibles"
+  },
+  "ASSISTIVE TECHNOLOGIES": {
+    "base": "<span lang='en'>Assistive technologies are any product or software that is used to increase, maintain, or improve the functional capabilities of people with disabilities. Ergonomic keyboards, screen readers, magnifier and switch devices are examples.</span>",
+    "fr": ""
   },
   "AT": {
     "base": "<span lang='en'>Assistive Technology</span>",
@@ -41,7 +37,8 @@ module.exports = {
   },
   "EASE": {
     "base": "<span lang='en'>e-Accessibility Solutions for Everyone</span>",
-    "fr": "service d’accessibilité numérique chez Orange"
+    "fr": "ancien nom du Centre d'Expertise en Accessibilité Numérique du groupe Orange",
+    "en": "former name of the Orange Digital Accessibility Expertise Center"
   },
   "EULA": {
     "base": "<span lang='en'>End-User Licence Agreement</span>",
@@ -90,12 +87,16 @@ module.exports = {
     "en": "French official journal of laws and regulations"
   },
   "JS": {
-    "base": "Javascript",
+    "base": "JavaScript",
   },
   "KOTLIN": {
     "base": "<span lang='en'>Kotlin langage</span>",
     "en": "Kotlin is the second langage used for programming on Android devices",
     "fr": "Kotlin est le second langage utilisé pour programmer sur les mobiles Android"
+  },
+  "LARGE TEXT": {
+    "base": "<span lang='en'>Large text is defined as text of 24px or larger, or larger than 19px for bold text</span>",
+    "fr": ""
   },
   "MIT": {
     "base": "<span lang='en'>Massachussetts Institute of Technology</span>",
@@ -144,6 +145,10 @@ module.exports = {
   "TDD": {
     "base": "<span lang='en'>Test Driven Development</span>",
     "fr": "tests unitaires"
+  },
+  "TEXTE DE GRANDE TAILLE": {
+    "base": "<span lang='fr'>Le texte de grande taille est défini comme du texte de 24px ou plus, ou du texte en gras de plus de 19px</span>",
+    "fr": ""
   },
   "TICS": {
     "base": "<span lang='fr'>Technologies de l'Information et de la Communication</span>",

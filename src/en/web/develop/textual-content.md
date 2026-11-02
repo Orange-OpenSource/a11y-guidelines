@@ -3,7 +3,7 @@ title: "Web develop - Textual content"
 abstract: "Textual content, web accessibility dev recommandations"
 ---
 
-# Textual content
+# Web develop - Textual content
 
 <p class="lead">Ensure that textual content is structured with the appropriate semantics</p>
 
@@ -32,8 +32,8 @@ Allow users to identify the topic of a page, find and get a clear idea of the co
 **Don’t:** 
 `<title>Home</title>`
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**
-- <a href="https://www.w3.org/TR/WCAG21/#page-titled">2.4.2 Page Titled</a>
+**<abbr>WCAG</abbr> reference:**
+- <a href="https://www.w3.org/TR/WCAG22/#page-titled">2.4.2 Page Titled</a>
 
 
 
@@ -84,11 +84,11 @@ Page with a break in the heading hierarchy h2 → h4:
 </code></pre>
 
 **Tool :** 
-[HeadingsMaps](https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309) extension, available for [Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr) and [Firefox](https://addons.mozilla.org/fr/firefox/addon/headingsmap/), extract and display page titles for the current page.
+HeadingsMaps extension, available for [Chrome](https://chrome.google.com/webstore/detail/headingsmap/flbjommegcjonpdmenkdiocclhjacmbi?hl=fr) and [Firefox](https://addons.mozilla.org/fr/firefox/addon/headingsmap/), extract and display page titles for the current page.
    
  
-**Reference <abbr>WCAG</abbr>&nbsp;:**
-- <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+**<abbr>WCAG</abbr> reference:**
+- <a href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 
 
@@ -132,10 +132,10 @@ Allows all users to anticipate how to use and possible behaviors for a given int
 **Objectif technique&nbsp;:**  
 Forces the coherent structuring of the content by the creator of the site.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**
-- <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
-- <a href="https://www.w3.org/TR/WCAG21/#parsing">4.1.1 Parsing</a>
-- <a href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a>
+**<abbr>WCAG</abbr> reference:**
+- <a href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
+- <a href="https://www.w3.org/TR/WCAG22/#parsing">4.1.1 Parsing</a>
+- <a href="https://www.w3.org/TR/WCAG22/#name-role-value">4.1.2 Name, Role, Value</a>
 
 **Tool:**
 
@@ -174,9 +174,9 @@ Enable search engines to identify the language of a page to improve the natural 
 **Example of language change:** 
 `découvrir Orange <span lang="en">live</span> TV`
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#language-of-page">3.1.1 Language of Page</a>
-- <a href="https://www.w3.org/TR/WCAG21/#language-of-parts">3.1.2 Language of Parts</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a href="https://www.w3.org/TR/WCAG22/#language-of-page">3.1.1 Language of Page</a>
+- <a href="https://www.w3.org/TR/WCAG22/#language-of-parts">3.1.2 Language of Parts</a>
 
 
 
@@ -217,5 +217,5 @@ Giving a summary and title for data tables allows everyone to know quickly its p
 
 Improve natural referencing.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>

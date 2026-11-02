@@ -49,6 +49,8 @@ Ces tests peuvent être facilement réalisés par tout acteur projet. Seuls les 
 - [Tester la navigation au clavier](./navigation-clavier/) en utilisant les principaux raccourcis clavier pour naviguer au clavier dans une page web.
 - [Évaluer l’agrandissement de la taille du texte](./agrandissement-texte/) via la gestion du zoom navigateur.
 - [Tester la navigation et la vocalisation](./navigation-lecteur-ecran/) à l’aide d’un lecteur d’écran.
+- [Vérifier la présence de raccourcis clavier](./raccourcis-clavier/) en utilisant le bookmarklet proposé.
+
 
 ## Méthode pour tester le Web mobile 
 

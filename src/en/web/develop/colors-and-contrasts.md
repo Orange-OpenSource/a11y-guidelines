@@ -3,7 +3,7 @@ title: "Web develop - Colors and contrasts"
 abstract: "Colors nd contrast, web accessibility dev recommandations"
 ---
 
-# Colors and contrasts
+# Web develop - Colors and contrasts
 
 <p class="lead">Ensure that the colors used are not a problem for the user</p>
 
@@ -48,9 +48,9 @@ Ease of reading for all users, especially the visually impaired, or people in a 
 **Tool:** 
 The [Colour Contrast Analyser](http://www.paciellogroup.com/resources/contrastanalyser/) application can quickly measure colour contrast levels (free for Windows and Mac).  
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**
-- <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum">1.4.3 Contrast (Minimum)</a>
-- <a href="https://www.w3.org/TR/WCAG21/#non-text-contrast">1.4.11 Non-text Contrast</a>
+**<abbr>WCAG</abbr> reference:**
+- <a href="https://www.w3.org/TR/WCAG22/#contrast-minimum">1.4.3 Contrast (Minimum)</a>
+- <a href="https://www.w3.org/TR/WCAG22/#non-text-contrast">1.4.11 Non-text Contrast</a>
 
 
 
@@ -84,6 +84,6 @@ This example is not valid because the information is conveyed only by colour.
 
 Allow users not distinguishing colours or sensory information (colour blind, visually impaired, hearing impaired, mobile users in bright environment or in noisy environments …) to access the same information by other means.
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**
-- <a href="https://www.w3.org/TR/WCAG21/#sensory-characteristics">1.3.3 Sensory Characteristics</a>
-- <a href="https://www.w3.org/TR/WCAG21/#use-of-color">1.4.1 Use of Color</a>
+**<abbr>WCAG</abbr> reference:**
+- <a href="https://www.w3.org/TR/WCAG22/#sensory-characteristics">1.3.3 Sensory Characteristics</a>
+- <a href="https://www.w3.org/TR/WCAG22/#use-of-color">1.4.1 Use of Color</a>

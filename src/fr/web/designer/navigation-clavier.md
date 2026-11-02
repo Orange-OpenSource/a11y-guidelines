@@ -3,7 +3,7 @@ title: "Web designer - Navigation au clavier"
 abstract: "Navigation au clavier, recommendations d'accessibilité web lors de la conception"
 ---
 
-# Navigation au clavier
+# Web designer - Navigation au clavier
 
 <p class="lead">S’assurer que l’utilisateur puisse naviguer uniquement à l’aide du clavier</p>
 

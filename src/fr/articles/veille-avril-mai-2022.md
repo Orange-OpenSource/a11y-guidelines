@@ -75,7 +75,7 @@ Et enfin, des nouvelles sur WCAG 2.2, repoussé à septembre 2022, voilà pourqu
 
 ## Ergonomie, UI & UX
 - Guide officiel pour faire accessible avec Axure (en)&nbsp;: https://www.axure.com/blog/approachable-guide-prototyping-accessibility-axure-rp
-- Article de fond sur les méthodes du design inclusif, sérieux (en)&nbsp;: https://www.nngroup.com/articles/inclusisive-design/
+- Article de fond sur les méthodes du design inclusif, sérieux (en)&nbsp;: https://www.nngroup.com/articles/inclusive-design/
 - Changer son approche de design inclusif, point de vue intéressant (en)&nbsp;: https://www.fastcompany.com/90697288/inclusive-design-has-become-so-widely-used-that-its-meaningless-that-has-to-change 
 - Gérer le texte en CSS au dessus d'une image, joli (en)&nbsp;: https://ishadeed.com/article/handling-text-over-image-css/ 
 - Tout sur un bon sélecteur de langue, gros boulot avec plein d'exemples (en)&nbsp;: https://www.smashingmagazine.com/2022/05/designing-better-language-selector/

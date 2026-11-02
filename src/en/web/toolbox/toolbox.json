@@ -2,7 +2,11 @@
   "sideNavigationLinks": [
     {
       "label": "Orange Boosted",
-      "href": "https://boosted.orange.com/"
+      "href": "/en/web/toolbox/orange-boosted/"
+    },
+    {
+      "label": "OUDS",
+      "href": "/en/web/toolbox/ouds-web/"
     },
     {
       "label": "Methods and test tools",
@@ -17,10 +21,14 @@
     {
       "label": "Fact sheets",
       "href": "/en/web/toolbox/fact-sheets/"
-    },    
+    },
+    {
+      "label": "Personas",
+      "href": "/en/persona/"
+    },
     {
       "label": "Useful links",
-      "href": "/en/web/useful-links"
+      "href": "/en/web/useful-links/"
     },
     {
       "label": "Glossary",

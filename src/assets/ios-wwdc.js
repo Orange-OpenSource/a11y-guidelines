@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
       elements: 'Elements'
     },
     'fr': {
-      process: "Procédures",
-      check: "A vérifier",
+      process: "Procédure",
+      check: "À vérifier",
       conception: 'Conception',
       development: 'Développement',
       results: "Résultats",
@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         if (activeFilter) {
           elBtnReinit.disabled = false;
 /* 
-          htmlFeedback = '<button type="button" class="btn btn-secondary btn-sm mt-2 mb-3" id="reinitLink">' + translate('reinitFilters') + '';
+          htmlFeedback = '<button type="button" class="btn btn-outline-secondary btn-sm mt-2 mb-3" id="reinitLink">' + translate('reinitFilters') + '';
           elFeedback.innerHTML = htmlFeedback;
  */
 
@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
             
            			htmlrefTests +='<h2 id="test-'+formatHeading(currentRefTests[i].themes)+'"'+htmlrefTestsClass+' >'+currentRefTests[i].themes+'</h2>';
           		}
- 				htmlrefTests += '<a role="button" href="' + currentRefTests[i].raccourcis + '" style="text-decoration: none;">';
+ 				htmlrefTests += '<a href="' + currentRefTests[i].raccourcis + '" style="text-decoration: none;">';
  				htmlrefTests += '<p id="heading'+i+'">' + currentRefTests[i].title + '     ';
  		
  				//Ajout du badge si l'élément impacté existe
@@ -262,7 +262,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       this.DisplayFilters = function() {
         let elFilterFooter = document.getElementById('filter-footer');//Id défini dans le fichier 'filters.njk'
         let htmlFilterFooter = '';
-        htmlFilterFooter += '<button id="reinit" class="btn btn-secondary" disabled>' + translate('reinitFilters') + '</button>';
+        htmlFilterFooter += '<button id="reinit" class="btn btn-outline-secondary" disabled>' + translate('reinitFilters') + '</button>';
         elFilterFooter.innerHTML = htmlFilterFooter;
         let elBtnReinit = document.getElementById('reinit');
 

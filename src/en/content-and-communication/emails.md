@@ -70,7 +70,6 @@ To test your entire email campaign, use the [Accessible email site](http://www.a
 - [Improve email accessibility ](https://support.office.com/en-us/article/video-improve-email-accessibility-ebf3730a-18f8-4b57-81d1-730086231775?omkt=en-001&ui=en-US&rs=en-001&ad=US)
 - [Analyse emails campaigns](http://www.accessible-email.org/)
 - [Test support of HTML and CSS](https://www.caniemail.com/)
-- [On which email clients to test first](https://emails.hteumeuleu.com/which-email-clients-should-you-test-on-b2a892e57606)
 - [A Beginner’s Guide to Email Accessibility](https://webdesign.tutsplus.com/tutorials/a-beginners-guide-to-email-accessibility--cms-31240)
 - [The Ultimate Guide to Accessible Emails](https://litmus.com/blog/ultimate-guide-accessible-emails)
 - [Ideal Mobile Touchscreen Target Sizes](https://www.smashingmagazine.com/2012/02/finger-friendly-design-ideal-mobile-touchscreen-target-sizes/)

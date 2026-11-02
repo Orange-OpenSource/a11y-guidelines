@@ -8,7 +8,7 @@ displayToc: true
 # WWDC 2021: Debugging with Xcode and LLDB
 Find hereafter a detailed summary of three videos that belong to a [taxonomy&nbsp;of&nbsp;some&nbsp;WWDC&nbsp;footages](../../).
 
-The original videos are available on the **official Apple website** ([wwdc18](https://developer.apple.com/videos/play/wwdc2018/412/), [wwdc19](https://developer.apple.com/videos/play/wwdc2019/429/) and [wwdc21](https://developer.apple.com/videos/play/wwdc2021/10209/))).
+The original videos are available on the **official Apple website** ([wwdc18](https://developer.apple.com/videos/play/wwdc2018/412/), [wwdc19](https://developer.apple.com/videos/play/wwdc2019/429/) and [wwdc21](https://developer.apple.com/videos/play/wwdc2021/10209/)).
 
 ![](../../../../../images/iOSdev/wwdc21-xcodeLLDB.png)
 

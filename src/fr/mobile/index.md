@@ -32,8 +32,8 @@ Section à destination des développeurs.
 Tout ce qu’il faut savoir pour coder accessible sur mobile.  
 &nbsp;  
 
-#### 3. Talkback
-Guide simple pour utiliser le lecteur d’écran natif qui détaille toutes les gestuelles nécessaires pour maîtriser Talkback, outil incontournable dans une démarche d'accessibilité mobile.  
+#### 3. <span lang="en">Talkback</span>
+Guide simple pour utiliser le lecteur d’écran natif qui détaille toutes les gestuelles nécessaires pour maîtriser <span lang="en">Talkback</span>, outil incontournable dans une démarche d'accessibilité mobile.  
 &nbsp;  
 
 #### 4. Tests
@@ -49,8 +49,8 @@ Liste des différents critères à respecter pour obtenir une application mobile
 Section à destination des développeurs.
 <br>Tout ce qu’il faut savoir pour coder accessible sur mobile.
 <br><br>
-#### 3. VoiceOver
-Guide simple pour utiliser le lecteur d’écran natif qui détaille toutes les gestuelles nécessaires pour maîtriser VoiceOver, outil incontournable dans une démarche d'accessibilité mobile.
+#### 3. <span lang="en">VoiceOver</span>
+Guide simple pour utiliser le lecteur d’écran natif qui détaille toutes les gestuelles nécessaires pour maîtriser <span lang="en">VoiceOver</span>, outil incontournable dans une démarche d'accessibilité mobile.
 <br><br>
 #### 4. WWDC
 Section qui détaille des présentations Apple faites au `World Wide Developers Conference` ayant un impact fort dans la démarche d'accessibilité mobile.

@@ -1,9 +1,9 @@
 ---
-title: "iPhoneX basic gestures"
+title: "Basic gestures for devices with no home button"
 abstract: "The iPhoneX common gestures description"
 ---
 
-# iPhoneX basic gestures
+# Basic gestures for devices with no home button
 
 This page describes the iPhoneX common gestures with textual explanations and illustrations to easily understand the movements to be done.
 <br>Thereafter, **illustrations with a home button device** are also included to see possible differences.

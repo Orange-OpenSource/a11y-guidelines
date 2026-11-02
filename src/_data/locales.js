@@ -1,5 +1,6 @@
 module.exports = {
   en: {
+    url : "https://a11y-guidelines.orange.com/en/",
     breadcrumb: {
       label: "You are here:"
     },
@@ -19,6 +20,9 @@ module.exports = {
       },
       side: {
         label: 'Topics'
+      },
+      footer: {
+        label: 'Footer navigation'
       }
     },
     header: {
@@ -31,14 +35,21 @@ module.exports = {
       label: 'Filter by theme ',
       all: "All"
     },
+    articleUpdate: {
+      label: 'Update of the article from'
+    },
+    releaseDate: {
+      label: 'Publication date'
+    },
     tags: {
       componentExample: 'Component example',
-      list : "Associated themes :",      
+      list : "Associated themes:",
       mobile: 'Mobile',
       technicalArticle: 'Technical article',
       web: 'Web',
       veille: 'Watch',
       telechargement: 'Download',
+      component: 'Component',
       beginner: 'Beginner',
       intermediate: 'Intermediate',
       advanced: 'Advanced'
@@ -75,8 +86,9 @@ module.exports = {
     }
   },
   fr: {
+    url : "https://a11y-guidelines.orange.com/fr/",
     breadcrumb: {
-      label: "Vous êtes ici&nbsp;:"
+      label: "Vous êtes ici"
     },
     changelang: {
       label: 'Changement de langue'
@@ -94,6 +106,9 @@ module.exports = {
       },
       side: {
         label: 'Thématiques'
+      },
+      footer: {
+        label: 'Navigation du pied de page'
       }
     },
     header: {
@@ -106,6 +121,12 @@ module.exports = {
       label: 'Filtrer par thématique',
       all: 'Tout'
     },
+    articleUpdate: {
+      label: 'Mise à jour de l\'article du'
+    },
+    releaseDate: {
+      label: 'Date de parution'
+    },
     tags: {
       componentExample: 'Exemple de composant',
       list : "Thématiques associées :",
@@ -113,7 +134,8 @@ module.exports = {
       mobile: 'Mobile',
       technicalArticle: 'Article technique',
       web: 'Web',
-      veille: 'Veille',      
+      veille: 'Veille',
+      component: 'Composant',
       beginner: 'Débutant',
       intermediate: 'Intermédiaire',
       advanced: 'Avancé'

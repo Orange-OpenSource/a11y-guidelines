@@ -48,7 +48,7 @@ Quant à lui, `aria-describedby` va rajouter au nom accessible de l'élément, u
 ## Exemples
 
 <pre><code class="html">
-&lt;button aria-label="accéder au code Hypertext markup language"&gt;html&lt;/button&gt;
+&lt;button aria-label="accéder au code html (Hypertext markup language)"&gt;html&lt;/button&gt;
 </code></pre>
 Sortie pour un lecteur d'écran : "accéder au code Hypertext markup language"
 

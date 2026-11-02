@@ -7,7 +7,7 @@ abstract: "For design, for development, for testing"
 ## [For design](design/)
 This set of criteria presents criteria to be taken in account when designing.
 
-Android apps created for Orange must also be compliant with the [Orange Design Guidelines](https://design.orange.com/guidelines/) (“Android”, “Digital Colour Palettes”, “Accessibility”) that detail the color usage, the type system, etc.
+Android apps created for Orange must also be compliant with the [Orange Design Guidelines](https://design.orange.com/) (“Android”, “Digital Colour Palettes”, “Accessibility”) that detail the color usage, the type system, etc.
 
 ## [For development](development/)
 This set of criteria presents the main accessibility options of the Android SDK. This guide explains how to use accessibility attributes and methods, and provides links to Google documentation.

@@ -1,0 +1,46 @@
+# Orange Accessibility Guidelines
+
+> Guidelines, methods, resources and tools proposed by the Orange Digital 
+> Accessibility Expertise Center.
+> We offer training, publish resources for digital stakeholders, support 
+> projects and perform compliance audits.
+> Our expertise covers websites (e-commerce, e-learning, business 
+> applications, Intranet, etc.), mobile applications, office documents, 
+> corporate social networks, emails, videos, software packages, etc.
+> This site is available in English (https://a11y-guidelines.orange.com/en/) 
+> and in French (https://a11y-guidelines.orange.com/fr/).
+
+
+## About
+- [Home](https://a11y-guidelines.orange.com/en/): Orange Digital Accessibility Expertise Center homepage
+
+## Web
+- [Web accessibility guidelines](https://a11y-guidelines.orange.com/en/web/): All web accessibility recommendations
+- [Web guidelines for designers](https://a11y-guidelines.orange.com/en/web/design/): Web accessibility recommendations for designers
+- [Web guidelines for developers](https://a11y-guidelines.orange.com/en/web/develop/): Web accessibility recommendations for developers
+- [Web essential checklist](https://a11y-guidelines.orange.com/en/web/essentials-checklist/): The must-have criteria for web accessibility
+
+## Android
+- [Android accessibility guidelines](https://a11y-guidelines.orange.com/en/mobile/android/): All Android accessibility recommendations
+- [Android guidelines for designers](https://a11y-guidelines.orange.com/en/mobile/android/design/): Android accessibility recommendations for designers
+- [Android guidelines for developers](https://a11y-guidelines.orange.com/en/mobile/android/development/): Android accessibility recommendations for developers
+- [Android essential checklist](https://a11y-guidelines.orange.com/en/mobile/android/essentials-checklist/): The must-have criteria for Android accessibility
+
+## iOS
+- [iOS accessibility guidelines](https://a11y-guidelines.orange.com/en/mobile/ios/): All iOS accessibility recommendations
+- [iOS guidelines for designers](https://a11y-guidelines.orange.com/en/mobile/ios/design/): iOS accessibility recommendations for designers
+- [iOS guidelines for developers](https://a11y-guidelines.orange.com/en/mobile/ios/development/): iOS accessibility recommendations for developers
+- [iOS essential checklist](https://a11y-guidelines.orange.com/en/mobile/ios/essentials-checklist/): The must-have criteria for iOS accessibility
+
+## Content and communication
+- [Content and communication guidelines](https://a11y-guidelines.orange.com/en/content-and-communication/): All content and communication accessibility recommendations
+- [Word accessibility guidelines](https://a11y-guidelines.orange.com/en/content-and-communication/word/): Accessibility recommendations for Word documents
+- [PowerPoint accessibility guidelines](https://a11y-guidelines.orange.com/en/content-and-communication/powerpoint/): Accessibility recommendations for PowerPoint presentations
+- [PDF accessibility guidelines](https://a11y-guidelines.orange.com/en/content-and-communication/pdf/): Accessibility recommendations for PDF documents
+- [Content and communication essential checklist](https://a11y-guidelines.orange.com/en/content-and-communication/essentials-checklist/): The must-have criteria for content and communication accessibility
+
+## Legal framework
+- [Legal framework](https://a11y-guidelines.orange.com/en/planning/): Articles about the legal framework around digital accessibility
+
+## Articles
+- [Articles](https://a11y-guidelines.orange.com/en/articles/): Regularly published articles on digital accessibility topics

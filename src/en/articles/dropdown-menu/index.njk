@@ -1,0 +1,102 @@
+---
+title: "Dropdown menu"
+abstract: "Create an accessible drop-down menu."
+titleBeforeTag: true
+date: "2018-01-17"
+updateDate: "2026-03-13"
+tags:
+  - component
+---
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Dropdown menus help organize and display navigation options or actions in a compact, structured way. However, if they are not properly implemented, they create accessibility issues for many users.</p>
+<p>An accessible dropdown menu ensures smooth and intuitive navigation for everyone, while complying with the recommendations of standards (<abbr>WCAG</abbr>, <abbr>RGAA</abbr>, <abbr>EN 301 549</abbr>, etc.).</p>
+<p>In the following examples, we will use the <a href="https://boosted.orange.com/docs/5.1/components/dropdowns/">dropdown menu</a> available in the <a href="https://boosted.orange.com/">Boosted</a> library.<br /> This Bootstrap‑based library makes it possible to quickly design accessible interfaces in Orange brand colors and compliant with WCAG as well as the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/combobox/">ARIA combobox design pattern</a></p>
+
+<h2 id="dropdown-menu">Dropdown menu</h2>
+<p>To make the dropdown menu accessible, pay particular attention to the following:</p>
+<ul>
+<li>Support mouse and keyboard navigation (navigation with the <kbd>Tab</kbd> key, activation with <kbd>Enter</kbd> or <kbd>Space</kbd>, movement with the arrow keys).</li>
+<li>Be compatible with assistive technologies (<abbr>AT</abbr>) by providing appropriate semantics, roles, and attributes (for example, <code>aria-expanded</code> and <code>aria-current</code>).</li>
+<li>Provide sufficient visibility and contrast to ensure readable text and a clearly visible keyboard focus.</li>
+<li>Ensure the behavior of the dropdown and item selection is predictable and consistent to avoid confusion.</li>
+</ul>
+
+<h2 id="example">Example</h2>
+<!-- Final menu -->
+<div class="dropdown">
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown">
+    My account
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">My cart</a></li>
+    <li><a class="dropdown-item" href="#">My orders</a></li>
+    <li><a class="dropdown-item" href="#">My informations</a></li>
+    <li role="separator" class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Log out</a></li>
+  </ul>
+</div>
+
+<h3 id="example-code">Example code</h3>
+
+<!-- Example code 1 -->
+<pre><code class="html">
+&lt;div class="dropdown"&gt;
+  &lt;button class="btn btn-outline-secondary dropdown-toggle" aria-expanded="false" type="button" id="dropdownMenu1" data-bs-toggle="dropdown"&gt;
+    My account
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;My cart&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;My orders&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;My information&lt;/a&gt;&lt;/li&gt;
+    &lt;li role="separator" class="dropdown-divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;Log out&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<h3 id="aria-attributes"><abbr>ARIA</abbr> attributes</h3>
+<ul>
+	<li><code>aria-expanded</code>: the <code>aria-expanded</code> attribute with a value of <code>true/false</code> allows assistive technologies to announce the menu state (open or closed).</li>
+	<li><code>aria-current</code>: if the dropdown is used within a navigation menu, consider adding <code>aria-current="page"</code> to the item corresponding to the active page.</li>
+	<li><code>aria-haspopup</code>: the <code>aria-haspopup</code> attribute is reserved for the <code>menu</code> role (see the “Special case of application menus” section). It is therefore not present in this implementation.</li>
+</ul>
+
+<h2 id="time-to-test">Time to test</h2>
+
+<h3 id="keyboard-navigation">Keyboard navigation</h3>
+ <dl>
+   <dt>Move focus to the “My account” button using the <kbd>Tab</kbd> key and activate with the <kbd>Enter</kbd> key.</dt>
+   <dd>The menu opens.</dd>
+   <dt>Use the <kbd>Up</kbd>/<kbd>Down</kbd> arrow keys.</dt>
+   <dd>These allow you to move between the different menu items.</dd>
+   <dt>Press the <kbd>Escape</kbd> key.</dt>
+   <dd>The menu closes. When it closes, focus is automatically returned to the button that opens the menu.</dd>
+</dl>
+
+<h3 id="screen-reader-navigation">Screen reader navigation</h3>
+ <dl>
+   <dt>Place focus on the “My account” button.</dt>
+   <dd>The screen reader indicates that it is a dropdown menu and announces the menu state (open or closed).</dd>
+   <dt>Press the <kbd>Enter</kbd> key.</dt>
+   <dd>The menu opens, the first item is selected, and it is automatically announced by the screen reader.</dd>
+   <dt>Use the <kbd>Up</kbd>/<kbd>Down</kbd> arrow keys.</dt>
+   <dd>These allow you to move between the different menu items.</dd>
+   <dt>Select a menu item using the <kbd>Enter</kbd> key.</dt>
+   <dd>The menu closes. Since focus is automatically returned, the screen reader announces the menu button again, along with its state.</dd>
+ </dl>
+
+
+<p>Additionally, the ARIA pattern describes the use of an <code>aria-controls</code> attribute, as well as optional extra keyboard interactions: <kbd>Home</kbd>/<kbd>End</kbd>.</p>
+<p>Example: <a href="https://www.w3.org/WAI/ARIA/apg/example-index/disclosure/disclosure-navigation.html">Example Disclosure for Navigation Menus</a></p>
+
+<h2 id="special-case-of-application-menus">Special case of application menus</h2>
+
+<p>The ARIA pattern describes “Menu” and “Menubar” components, using the <code>menu</code> and <code>menubar</code> roles.</p>
+<p>Note that this pattern is intended only for building application menus, whose interactions should be similar to menus in desktop applications, for example.</p>
+<p>These implementations are more complex and not necessary for web navigation menus.</p>
+
+<p>Example: <a href="https://www.w3.org/WAI/ARIA/apg/example-index/menubar/menubar-navigation.html">Editor Menubar Example</a></p>

@@ -16,7 +16,7 @@ Have a bug or a feature request? Search for existing and closed issues. If your 
 
 ## Copyright and license
 
-Documentation under the [CC BY SA 3.0 license](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENCE).  
+Documentation under the [CC BY SA 3.0 license](https://github.com/Orange-OpenSource/a11y-guidelines/blob/master/LICENSE).  
 
 The Orange logo and some images or screenshots are the property of Orange:
 Copyright (C) 2016 - 2020 Orange SA All rights reserved

@@ -163,7 +163,7 @@
 		"wcag": [
 			"1.4.1 A"
 		],
-		"verifier": "<p>Vérifier que la couleur n'est pas le seul moyen de convoyer d'information&nbsp;:</p><ul><li>l'information peut également être obtenue par un texte</li><li>au moins un autre moyen visuel est disponible pour obtenir la même information (exemple&nbsp;: des icônes utilisent des couleurs, mais également des formes différentes).</li></ul>\n<p>Non applicable, si aucune information n'est portée par de la couleur.</p>",
+		"verifier": "<p>Vérifier que la couleur n'est pas le seul moyen de véhiculer d'information&nbsp;:</p><ul><li>l'information peut également être obtenue par un texte</li><li>au moins un autre moyen visuel est disponible pour obtenir la même information (exemple&nbsp;: des icônes utilisent des couleurs, mais également des formes différentes).</li></ul>\n<p>Non applicable, si aucune information n'est portée par de la couleur.</p>",
 		"resultatTest": "nt"
 	},{
 		"themes": "Couleurs et contrastes",

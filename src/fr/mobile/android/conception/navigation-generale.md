@@ -3,7 +3,7 @@ title: "Android designer - Navigation générale"
 abstract: "Navigation générale, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
-# Navigation générale
+# Android designer - Navigation générale
 
 ## Avoir des zones de clic suffisamment grandes
 
@@ -39,8 +39,8 @@ Dans les exemples ci-dessous, le cadre noir correspond à la taille de la zone i
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#target-size">2.5.5 Target Size</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#target-size">2.5.5 Target Size</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#pointer-cancellation">2.5.2 Pointer Cancellation</a>
 
 
 <br/><br/>
@@ -65,7 +65,7 @@ L'application reste utilisable en mode portrait et en mode paysage
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#orientation">1.3.4 Orientation</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#orientation">1.3.4 Orientation</a>
 
 <br/><br/>
 ## Proposer une alternative aux actions gestuelles
@@ -92,8 +92,8 @@ Naviguer entre plusieurs pages à l'aide d'un swipe horizontal (avec les ViewPag
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#pointer-gestures">2.5.1 Pointer Gestures</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#motion-actuation">2.5.4 Motion Actuation</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#pointer-gestures">2.5.1 Pointer Gestures</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#motion-actuation">2.5.4 Motion Actuation</a>
 
 <br/><br/>
 ## Proposer des textes lisibles
@@ -115,7 +115,7 @@ Android propose nativement la police Roboto qui se compose de 16 variantes, dont
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#text-spacing">1.4.12 Text Spacing</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#text-spacing">1.4.12 Text Spacing</a>
 
 <br/><br/>
 ## Utiliser les composants natifs
@@ -152,5 +152,5 @@ Cependant, tout les téléphones n'utilisant pas nécessairement une version d'A
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#timing-adjustable">2.2.1 Timing Adjustable</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#timing-adjustable">2.2.1 Timing Adjustable</a>
 

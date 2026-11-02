@@ -17,21 +17,21 @@ L'activation de <span lang="en">VoiceOver</span> se fait via le menu `Réglages`
            data-bs-toggle="tab" 
            href="#VoiceOverActivation-iOS15"
            role="tab" 
-           aria-selected="true">iOS 15</a>
+           aria-selected="true" lang="en">iOS 15</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link"
            data-bs-toggle="tab" 
            href="#VoiceOverActivation-iOS13"
            role="tab" 
-           aria-selected="false">iOS 13</a>
+           aria-selected="false" lang="en">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-bs-toggle="tab" 
            href="#VoiceOverActivation-iOS12"
            role="tab" 
-           aria-selected="false">iOS 12</a>
+           aria-selected="false" lang="en">iOS 12</a>
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
@@ -60,14 +60,14 @@ Il est préférable mais non obligatoire d'**activer la vibration** pour percevo
            data-bs-toggle="tab" 
            href="#iPhoneVibration-iOS13"
            role="tab" 
-           aria-selected="true">iOS 13</a>
+           aria-selected="true" lang="en">iOS 13</a>
     </li>
     <li class="nav-item" role="presentation">
         <a class="nav-link" 
            data-bs-toggle="tab" 
            href="#iPhoneVibration-iOS12"
            role="tab" 
-           aria-selected="false">iOS 12</a>
+           aria-selected="false" lang="en">iOS 12</a>
     </li>
 </ul><div class="tab-content">
 <div class="tab-pane show active"
@@ -173,9 +173,9 @@ Dans une première partie, nous décrirons les gestes de base liés à une utili
 </ul>
 
 </br></br>
-## iPhoneX
-L'arrivée sur le marché de ce terminal sous iOS11 avec l'absence de bouton principal a quelque peu bouleversé la gestuelle classique dont on avait l'habitude.
-<br>Ces [nouveaux gestes de base](./iphone-x) ont donc fortement impacté les manipulations <span lang="en">VoiceOver</span> dont les principales sont fournies ci-dessous&nbsp;:
+## Terminal avec configuration sans bouton principal
+L'arrivée sur le marché de l'iPhoneX sous iOS11 avec l'absence de bouton principal a quelque peu bouleversé la gestuelle classique dont on avait l'habitude.
+<br>Ces [nouveaux gestes de base](./iphone-x/) ont donc fortement impacté les manipulations <span lang="en">VoiceOver</span> dont les principales sont fournies ci-dessous&nbsp;:
 - [revenir à l'écran d'accueil,](#BackHome)
 
 - [accéder au multitâche,](#Multitask)

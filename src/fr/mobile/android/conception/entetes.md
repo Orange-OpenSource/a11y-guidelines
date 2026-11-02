@@ -3,7 +3,7 @@ title: "Android designer - Entêtes"
 abstract: "Titre d'écran, recommendations d'accessibilité lors de la conception sous Android"
 ---
 
-# Entêtes
+# Android designer - Entêtes
 
 ## Avoir un titre d'écran pertinent et unique
 
@@ -25,4 +25,4 @@ Une erreur commune est de mettre un titre unique pour toutes les pages d’une a
 
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#page-titled">2.4.2 Page titled</a> 
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#page-titled">2.4.2 Page titled</a> 

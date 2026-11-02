@@ -1,14 +1,14 @@
 {%- import "../components/ui.njk" as ui with context -%}
 <!doctype html>
-<html lang="{{ locale }}" dir="ltr" class="no-js">
+<html lang="{{ locale }}" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
-    <meta charset="utf-8">    
+    <meta charset="utf-8">
     <title>{{ title }} - {{ site.title[locale] }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />    
+    <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     {% if abstract %}
     <meta name="description" content="{{ abstract }}">
-    {% endif %}        
+    {% endif %}
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
@@ -27,7 +27,7 @@
     {% if highlightJS == true %}
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@{{ vendors.highlightJS.version }}/build/styles/{{ vendors.highlightJS.theme }}.min.css">
     {% endif %}
-    <link rel="stylesheet" href="/assets/vendors/docsearch/docsearch.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="/assets/tarteaucitron-boosted.css">
     {%- for item in head -%}{{ item | safe }}{%- endfor -%}
@@ -35,7 +35,7 @@
       <link rel="stylesheet" href="{{ item }}">
     {%- endfor -%}
   </head>
-  <body{% if displayToc == true %} data-bs-spy="scroll" data-bs-target="#toc" style="position:relative;"{% endif %}>
+  <body{% if displayToc == true %} data-bs-spy="scroll" data-bs-offset="130" data-bs-target="#toc" style="position:relative;"{% endif %}>
     {% include "partials/header.njk" %}
     <div class="container-lg pt-2">
       {# We don't want to display the breadcrumb on the home pages #}
@@ -52,12 +52,12 @@
     {% block content %}{% endblock %}
     {% include "partials/footer.njk" %}
     <nav role="navigation" class="back-to-top" aria-label="{{ 'backToTop.label' | translate }}">
-      <a href="#top" class="back-to-top-link btn btn-icon btn-secondary" data-o-label="{{ 'backToTop.label' | translate }}">
+      <a href="#top" class="back-to-top-link btn btn-icon btn-outline-secondary" title="{{ 'backToTop.label' | translate }}">
         <span class="visually-hidden">{{ 'backToTop.label' | translate }}</span>
       </a>
     </nav>
     <script src="/assets/vendors/tarteaucitronjs/tarteaucitron.js"></script>
-    <script src="/assets/vendors/docsearch/docsearch.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
     {% if popperJS == true %}
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/{{ vendors.popper.version }}/umd/popper.min.js" integrity="{{ vendors.popper.integrity }}" crossorigin="anonymous"></script>
     {% endif %}
@@ -82,7 +82,9 @@
     {%- endfor -%}
     <script>
       var tarteaucitronForceLanguage = "{{ locale }}"
-      tarteaucitron.init({{ site.tracking.tarteaucitronConfig | dump | safe }});
+      var tarteaucitronConfig = {{ site.tracking.tarteaucitronConfig | dump | safe }};
+      tarteaucitronConfig.readmoreLink = Application.lang === "fr" ? "/fr/a-propos/#gestion-des-cookies" : "/en/about/#cookie-management";
+      tarteaucitron.init(tarteaucitronConfig);
       {%- if config.environment == "production" -%}
         var dataLayer = [{
           'site_name': '{{ site.tracking.siteName }}',
@@ -93,7 +95,7 @@
       {%- endif -%}
       docsearch({{ site.getDocSearchConfig(locale) | dump | safe }});
     </script>
-    <div id="a11y_heading_anchor_label" hidden>{{ 'headingsAnchor.label' | translate }}</div>
+    <div hidden>{{ 'headingsAnchor.label' | translate }}</div>
     {% include "partials/licence.njk" %}
   </body>
 </html>

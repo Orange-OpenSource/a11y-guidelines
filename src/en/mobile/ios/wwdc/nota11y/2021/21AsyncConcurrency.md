@@ -88,7 +88,7 @@ It's recommended to activate the dedicated [environment&nbsp;variable](https://d
 <div class="tab-pane" id="SwiftConcurrencyContinuation" role="tabpanel">
 
 The power of concurrency relied on the [timesharing](https://developer.apple.com/videos/play/wwdc2021/10254/?time=611) that could unfortunately lead to  in tough situations due to the context switches processing the results.
-These thread context switches are **replaced by the continuations** for managing the [resumption&nbsp;of&nbsp;work](https://developer.apple.com/videos/play/wwdc2021/10254/?time=671)
+These thread context switches are **replaced by the continuations** for managing the [resumption&nbsp;of&nbsp;work](https://developer.apple.com/videos/play/wwdc2021/10254/?time=671).
 
 ![](../../../../../images/iOSdev/wwdc21-Concurrency-SwiftConcurrencyContinuation_1.png)
 

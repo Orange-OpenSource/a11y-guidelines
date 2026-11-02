@@ -3,7 +3,7 @@ title: "Web développer - Contenu textuel"
 abstract: "Contenu textuel, recommendations d'accessibilité web lors du développement"
 ---
 
-# Contenu textuel
+# Web développer - Contenu textuel
 
 <p class="lead">S’assurer que les contenus textuels soient structurés avec la sémantique appropriée</p>
 
@@ -31,7 +31,7 @@ Permettre aux utilisateurs d’identifier le sujet d’une page, de se repérer 
 `<title>Accueil</title>`
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#page-titled">2.4.2 Page Titled</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#page-titled">2.4.2 Page Titled</a>
 
 
 
@@ -83,12 +83,12 @@ Un titrage de page avec un saut de niveau h2 → h4&nbsp;:
    
 **Outils :**  
 Des extensions à installer dans votre navigateur permettent d'extraire la liste des titres : 
-- L’extension <a href="https://www.learningapps.co.uk/moodle/xertetoolkits/play.php?template_id=1309" hreflang="en" lang="en">HeadingsMaps</a>.
+- L’extension <strong lang="en">HeadingsMaps</strong> disponible sur Firefox et chrome.
 - L'extension <a href="https://chrispederick.com/work/web-developer/" lang="en">Web developer</a>.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#headings-and-labels ">2.4.6 Headings and Labels</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#headings-and-labels ">2.4.6 Headings and Labels</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
 
 
 
@@ -135,9 +135,9 @@ Oblige à la structuration cohérente du contenu par le créateur du site et per
 Dans cet exemple, le lien «&nbsp;Actualiser&nbsp;» devrait être un bouton «&nbsp;Actualiser&nbsp;» car ici il déclenche une action et non le chargement d’une <abbr>URL</abbr> (page).
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#parsing">4.1.1 Parsing</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#parsing">4.1.1 Parsing</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#name-role-value">4.1.2 Name, Role, Value</a>
 
 **Outil&nbsp;:** [validateur <abbr>HTML</abbr> et <abbr>CSS</abbr> du <abbr>W3c</abbr>](https://validator.w3.org/)
 
@@ -175,8 +175,8 @@ Permettre aux moteurs de recherche d’identifier la langue d’une page pour am
 `découvrir Orange <span lang="en">live</span> TV`
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#language-of-page">3.1.1 Language of Page</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#language-of-parts">3.1.2 Language of Parts</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#language-of-page">3.1.1 Language of Page</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#language-of-parts">3.1.2 Language of Parts</a>
 
 
 
@@ -199,7 +199,7 @@ Pour des données tabulaires&nbsp;:
 **À vérifier&nbsp;:**
 
 - Rappel&nbsp;: ne pas utiliser de tableaux à des fins de mise en page. 
-- La légende (`caption`) peut être remplacée par un titre de section (`hx`) placé avant le tableau.v
+- La légende (`caption`) peut être remplacée par un titre de section (`hx`) placé avant le tableau.
 - Préférer scinder un tableau complexe en plusieurs tableaux plus simples.
 - Les balises `tbody`, `tfoot` et `thead` n’ont aucune influence sur l’accessibilité, il n’y a donc pas d’obligation à les utiliser.
 
@@ -213,4 +213,4 @@ Dans le cas d’un tableau complexe, un résumé est présent pour expliciter la
 Donner un résumé et un titre aux tableaux de données permet à tous d’en connaître l’objet rapidement sans avoir à le parcourir. Pour des utilisateurs déficients visuels, lier les cellules aux en-têtes permet de se situer dans le tableau et de comprendre les données de celui-ci.
 
 **Référence <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#info-and-relationships">1.3.1 Info and Relationships</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#info-and-relationships">1.3.1 Info and Relationships</a>

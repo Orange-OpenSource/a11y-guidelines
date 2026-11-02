@@ -96,5 +96,5 @@ Voici néanmoins les raccourcis principaux&nbsp;:
 
 ## Prise en main des lecteurs d'écran sous mobile
 Pour tester un site web sur mobile : 
-- <a href="../../../mobile/android/talkback/">Guide d’utilisation de TalkBack (sous Android)</a>
-- <a href="../../../mobile/ios/voiceover/">Guide d’utilisation de VoiceOver (sous iOS)</a>
+- <a href="../../../../mobile/android/talkback/">Guide d’utilisation de TalkBack (sous Android)</a>
+- <a href="../../../../mobile/ios/voiceover/">Guide d’utilisation de VoiceOver (sous iOS)</a>

@@ -3,7 +3,7 @@ title: "Android design - Element Magnification"
 abstract: "Element magnification, accessibility design recommandations with Android"
 ---
 
-# Element magnification
+# Android design - Element magnification
 
 ## Enlarge texts without loss of information
 
@@ -31,7 +31,7 @@ The text size magnification accessibility option, present in the phone settings.
 <img src="../../../images/agrandissement.jpg" alt="example of a screen with the text at 200% without loss of information" width="300" height="530">
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#resize-text">1.4.4 Resize text</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#reflow">1.4.10 Reflow</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#resize-text">1.4.4 Resize text</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#reflow">1.4.10 Reflow</a>
 

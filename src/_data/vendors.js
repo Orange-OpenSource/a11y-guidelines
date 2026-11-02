@@ -1,11 +1,11 @@
 module.exports = {
   boosted: {
-    version: '5.1.3',
+    version: '5.3.8',
     css: {
-      integrity: 'sha384-Di/KMIVcO9Z2MJO3EsrZebWTNrgJTrzEDwAplhM5XnCFQ1aDhRNWrp6CWvVcn00c'
+      integrity: 'sha384-kwpgedOHSHo219WTezLqyMOgCWremFb5TML711U5X8c4TJMMBAyhHFf2gNv78IpY'
     },
     js: {
-      integrity: 'sha384-5thbp4uNEqKgkl5m+rMBhqR+ZCs+3iAaLIghPWAgOv0VKvzGlYKR408MMbmCjmZF'
+      integrity: 'sha384-lSjE7ZAWc1Wiua5r2jyHbPL07FiKkHPWCXugD3qTq4o4M4YZQzLTrDF1CXrjxU/m'
     }
   },
   highlightJS: {
@@ -16,7 +16,7 @@ module.exports = {
     version: '1.19.2'
   },
   popper: {
-    version: '1.16.1',
-    integrity: 'sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN'
+    version: '2.11.8',
+    integrity: 'sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r'
   }
 }

@@ -3,7 +3,7 @@ title: "Android - Developer testing: code analysis"
 abstract: "Detect accessibility issues during the development phase in Android apps"
 ---
 
-# Developer testing: code analysis
+# Android - Developer testing: code analysis
 
 This step allows accessibility issues to be reported directly during the development phase and causes application build errors or various warnings. The developer must therefore correct them directly in order to be able to build his application and make it work, which automatically makes it more accessible before even putting it through manual tests or analysis tools. In addition, it avoids possible accessibility regressions.
 
@@ -46,8 +46,6 @@ companion object {
 </code></pre>
 
 So, when in the test suite a `ViewAction.click ()` is performed on a button that does not match the size required for an interactive element, the test will appear as an error until the accessibility issue be resolved.
-
-Orange has its own framework based on Espresso to perform automatic accessibility checks, which contains additional rules. It is recommended to use this framework available on [gitlab](https://gitlab.tech.orange/soft_a11y/espresso-accessibility-orange).
 
 ### Perform automated accessibility tests on the complete screen
 

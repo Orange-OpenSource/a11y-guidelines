@@ -13,7 +13,7 @@ This part indicates how to make your content on social networks as accessible as
 - [Keep the accentuation on the capital letters](/fr/contenu-et-communication/#comment-mettre-des-accents-aux-majuscules) (example: É or Ç).
 On a mobile phone, simply hold your finger on the letter to be accentuated.
 - If the post is written on an image or a background color, [maintain sufficient contrast with the text](/en/web/develop/colors-and-contrasts/#provide-enough-contrast-between-front-and-background-colors).
-Use a [tool to check the contrast](/en/web/toolbox/methods-and-test-tools/color-contrast-level).
+Use a [tool to check the contrast](/en/web/toolbox/methods-and-test-tools/color-contrast-level/).
 
 ### Links
 - Name the links in a way that makes it easy to understand the action or destination of the link. Example: Avoid "Clic here", prefer "The package in detail…".

@@ -1,11 +1,11 @@
 ---
-title: "Rappels sur les gestes de base avec un iPhone X"
+title: "Rappels sur les gestes de base sans bouton principal"
 abstract: "Guide des gestes principaux pour naviguer avec un iphone X"
 ---
 
-# Rappels sur les gestes de base avec un iPhone X
+# Rappels sur les gestes de base sans bouton principal
 
-Cette page décrit de façon non exhaustive les gestes spécifiques de l'iPhone X à l'aide d'explications textuelles et de schémas permettant de visualiser plus facilement les manipulations à réaliser.
+Cette page décrit de façon non exhaustive les gestes spécifiques d'un terminal sans bouton principal présent sur le bas de l'écran à l'aide d'explications textuelles et de schémas permettant de visualiser plus facilement les manipulations à réaliser.
 
 Par la suite, **la gestuelle graphique sur un terminal possédant un bouton principal est mise en parallèle** de façon à s'approprier plus facilement cette nouvelle logique de manipulation.
 

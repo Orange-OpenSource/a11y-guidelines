@@ -1,11 +1,11 @@
 ---
 title: "Recommandations accessibilité Orange pour le web"
-abstract: "Critères incontournables, exigences, méthodes et outils pour l'accessibilité des pages web"
+abstract: "Ressources pour l'accessibilité des pages web, critères, exigences, méthodes et outils..."
 ---
 
-# Recommandations accessibilité Orange pour le web
+# Recommandations et outils pour accessibilité web Orange
 
-***L’accessibilité, un avantage pour tous, une nécessité pour certains&nbsp;!***
+***L’accessibilité, un avantage pour tous, une nécessité pour certains, un droit pour les personnes handicapées&nbsp;!***
 
 ## Définition de l’accessibilité web
 **C’est un service web utilisable par tous**
@@ -19,25 +19,20 @@ abstract: "Critères incontournables, exigences, méthodes et outils pour l'acce
 - Avec tous types de matériel&nbsp;: navigateurs, <abbr>PC</abbr>, Mac, téléphones mobiles, tablettes
 - Dans un contexte dégradé&nbsp;: mauvaise luminosité, <i lang="en">touchpad</i> en mobilité, etc.
 - Avec des logiciels spécifiques de compensation du handicap
-  
-## Organisation de ce site
 
-### Critères incontournables
-Liste des critères principaux selon votre profil, basés sur un sous-ensemble des recommandations <abbr>WCAG</abbr> 2.1 niveau AA. Un bon moyen de prendre connaissance des principaux critères à respecter pour s’engager vers une démarche de mise en accessibilité progressive.  
+## Organisation de cette rubrique "Web"
 
-### Ensemble des exigences
-Section à destination des développeurs. Tout ce qu’il faut savoir pour coder accessible et pour effectuer les tests permettant de valider ses développements.
+### Designer
+Liste des critères principaux à prendre en compte en phase de maquettage, basés sur un sous-ensemble des recommandations <abbr>WCAG</abbr> (Web Content Accessibility Guidelines) 2.2 niveau AA.
 
-### Méthodes et outils de test
-Pour ceux qui veulent vérifier l’accessibilité de leurs pages avec des outils plus ou moins automatiques. Enfin, tout l’outillage méthodologique et technique pour évaluer ses pages.
+### Développer
+Section à destination des développeurs. Tout ce qu’il faut savoir pour coder accessible, l'ensemble des critères <abbr>WCAG</abbr> (Web Content Accessibility Guidelines) 2.2 niveau AA, rangés par thématique.
 
-### Exemples
-Des exemples didactiques pour certains types de composants ou d’éléments d’interface  particulièrement délicats à rendre accessibles et fréquemment utilisés. Tout y est expliqué, il n’y a plus qu’à se laisser guider&nbsp;!
+### Tester
+Pour ceux qui veulent vérifier l’accessibilité de leurs pages avec des outils plus ou moins automatiques quel que soit votre profil : designer UX/UI, développeur, testeur, expert accessibilité. Enfin, tout l’outillage méthodologique et technique pour évaluer ses pages.
 
-Ces exemples utilisent la librairie [Boosted](http://boosted.orange.com/). Cette librairie basée sur [Bootstrap](http://getbootstrap.com/) permet de réaliser rapidement un site web responsive et accessible aux couleurs de la charte Orange.
+### Auditer
+La Va11ydette, notre outil opensource qui nous aide lors de nos audits et nos déclarations de conformité. C'est une application Web, PWA (Progressive Web App), à tester&nbsp;!
 
-### Articles techniques
-Des articles techniques sur la mise en place de l'accessibilité web.
-
-### Outils Orange open source
-Présentation de la bibliothèque [Boosted](http://boosted.orange.com/) et du service [Confort+](https://confort-plus.orange.com/).
+### Boite à outils
+Méthode et outils internes et externe que nous utilisons dans notre activité. Notamment, le design system d'Orange, Orange Boosted, nos Fiches mémos pour avoir toutes les bonnes pratiques d'accessibilité, des Personas pour mieux comprendre les problématiques d'accessibilité...

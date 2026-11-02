@@ -93,7 +93,7 @@ Petit rappel sur les 11 styles de texte disponibles depuis iOS 11&nbsp;:
 ... ainsi que sur la façon programmatique de les implémenter&nbsp;:
 ![](../../../images/iOSdev/wwdc19-244-TextStyles_2.png)
 
-Une explication détaillée de l'implémentation du `Dynamic`&nbsp;`Type` est disponible dans la partie <a href="../../developpement#taille-des-textes" style="text-decoration: underline;">guide pour les développeurs</a>.
+Une explication détaillée de l'implémentation du `Dynamic`&nbsp;`Type` est disponible dans la partie <a href="../../developpement/#taille-des-textes" style="text-decoration: underline;">guide pour les développeurs</a>.
 </div>
 <div class="tab-pane" id="DynamicType-Xcode" role="tabpanel" >
     
@@ -145,7 +145,7 @@ Petit rappel sur la situation actuelle incluant la fonctionnalité déjà prése
 ... ainsi que sur la façon programmatique de connaître sa valeur issue des réglages du terminal&nbsp;:
 ![](../../../images/iOSdev/wwdc19-244-TextStyles_5.png)
 
-Une explication détaillée des états et des événements des options d'accessibilité est disponible dans la partie <a href="../../developpement#options-daccessibilite" style="text-decoration: underline;">guide&nbsp;pour&nbsp;les&nbsp;développeurs</a>.
+Une explication détaillée des états et des événements des options d'accessibilité est disponible dans la partie <a href="../../#options-daccessibilite" style="text-decoration: underline;">guide&nbsp;pour&nbsp;les&nbsp;développeurs</a>.
 </div>
 <div class="tab-pane" id="ReduceMotion-AutoplayingVideo" role="tabpanel" >
     
@@ -211,7 +211,7 @@ La **nouvelle fonctionnalité iOS&nbsp;13** `Différencier`&nbsp;`sans`&nbsp;`co
 La valeur de cette option est accessible de façon programmatique afin d'adapter subséquemment le visuel d'une application&nbsp;:
 ![](../../../images/iOSdev/wwdc19-244-TextStyles_10.png)
 
-Il est bien évidemment recommandé de <a href="../../conception#couleurs" style="text-decoration: underline;">ne jamais faire passer une information par la couleur uniquement</a> mais il y a des cas spécifiques où ce type de configuration est primordial et où l'intérêt de rajouter des éléments graphiques pour différencier les couleurs a un intérêt non négligeable (jeu vidéo par exemple).
+Il est bien évidemment recommandé de <a href="../../conception/#couleurs" style="text-decoration: underline;">ne jamais faire passer une information par la couleur uniquement</a> mais il y a des cas spécifiques où ce type de configuration est primordial et où l'intérêt de rajouter des éléments graphiques pour différencier les couleurs a un intérêt non négligeable (jeu vidéo par exemple).
 
 ![](../../../images/iOSdev/wwdc19-244-TextStyles_11.png)
 </div>
@@ -258,7 +258,7 @@ Après avoir montré comment activer une sélection d'éléments graphiques conc
 Cet exemple met en avant le fait que l'accessibilité pour ce type d'élément n'est pas du tout géré automatiquement par le système et doit absolument être implémenté de façon programmatique.
 <br><br>
 ### [Contraste des couleurs (06:26)](https://developer.apple.com/videos/play/wwdc2019/257/?time=386)
-Hormis le fait d'avoir des polices de taille suffisamment grande pour être perçues par tous, il est aussi primordial de [respecter&nbsp;un&nbsp;contraste&nbsp;de&nbsp;couleurs](../../conception#couleurs) pour permettre à l'ensemble des personnes ayant des troubles visuels de distinguer parfaitement ce qui est sur l'écran.
+Hormis le fait d'avoir des polices de taille suffisamment grande pour être perçues par tous, il est aussi primordial de [respecter&nbsp;un&nbsp;contraste&nbsp;de&nbsp;couleurs](../../conception/#couleurs) pour permettre à l'ensemble des personnes ayant des troubles visuels de distinguer parfaitement ce qui est sur l'écran.
 
 Une fois le problème décelé, une solution est apportée par la **nouvelle fonctionnalité Xcode&nbsp;11**&nbsp;: **Color Contrast Calculator**.
 ![](../../../images/iOSdev/wwdc19-257-ColorContrast.png)
@@ -290,7 +290,7 @@ Après une brève introduction concernant les attentes d'un utilisateur <span la
 - éviter les labels prolixes [(07:24)](https://developer.apple.com/videos/play/wwdc2019/254/?time=444) sauf lorsque cela permet d'apporter de l'information nécessaire et non verbeuse [(07:48)](https://developer.apple.com/videos/play/wwdc2019/254/?time=468).
 <br><br><br>
 ## Utiliser les actions personnalisées
-Cette présentation visualisable sur le **site développeur officiel d'<span lang="en">Apple</span>** ([session&nbsp;250](https://developer.apple.com/videos/play/wwdc2019/250/)) met en avant l'intérêt et l'implémentation des actions personnalisées pour le [lecteur&nbsp;d'écran](../../voiceover) et le [contrôle&nbsp;de&nbsp;sélection](../../developpement#controle-de-selection) en s'appuyant sur une application qui permet de comprendre directement les concepts développés.
+Cette présentation visualisable sur le **site développeur officiel d'<span lang="en">Apple</span>** ([session&nbsp;250](https://developer.apple.com/videos/play/wwdc2019/250/)) met en avant l'intérêt et l'implémentation des actions personnalisées pour le [lecteur&nbsp;d'écran](../../voiceover/) et le [contrôle&nbsp;de&nbsp;sélection](../../developpement#controle-de-selection) en s'appuyant sur une application qui permet de comprendre directement les concepts développés.
 ![](../../../images/iOSdev/wwdc19-250.png)
 <br><br>Les thèmes abordés ainsi que leur référence temporelle au sein de la vidéo sont décrits ci-dessous :
 
@@ -331,7 +331,7 @@ Présentation rapide de VoiceOver ainsi que de la problématique liée à une im
 <a alt="Lien vers l'extrait vidéo au temps indiqué." href="https://developer.apple.com/videos/play/wwdc2019/250/?time=190">🎬 (03:10)</a>
 
 
-L'intérêt des <a href="../../developpement#actions-personnalisees" style="text-decoration: underline;">actions&nbsp;personnalisées</a> avec <span lang="en">VoiceOver</span> est présenté de façon très pragmatique et particulièrement pédagogique de façon à comprendre pourquoi et dans quels contextes ce type de fonctionnalité doit absolument être mise en oeuvre pour améliorer significativement l'expérience utilisateur.
+L'intérêt des <a href="../../developpement/#actions-personnalisees" style="text-decoration: underline;">actions&nbsp;personnalisées</a> avec <span lang="en">VoiceOver</span> est présenté de façon très pragmatique et particulièrement pédagogique de façon à comprendre pourquoi et dans quels contextes ce type de fonctionnalité doit absolument être mise en oeuvre pour améliorer significativement l'expérience utilisateur.
 </div>
 <div class="tab-pane" id="CustomActions-SwitchControl" role="tabpanel" >
     
@@ -346,6 +346,6 @@ L'utilisation d'actions personnalisées dans ce contexte va permettre une **dimi
 
 <br><br>
 ### [Implémentation (07:59)](https://developer.apple.com/videos/play/wwdc2019/250/?time=479)
-Depuis iOS&nbsp;8, la création d'[actions&nbsp;personnalisées](../../developpement#actions-personnalisees) s'appuie sur une syntaxe ObjectiveC qui s'est adaptée à Swift en incluant désormais une **<span lang="en">closure</span> en iOS&nbsp;13**.
+Depuis iOS&nbsp;8, la création d'[actions&nbsp;personnalisées](../../developpement/#actions-personnalisees) s'appuie sur une syntaxe ObjectiveC qui s'est adaptée à Swift en incluant désormais une **<span lang="en">closure</span> en iOS&nbsp;13**.
 ![](../../../images/iOSdev/wwdc19-250-CustomActionsCoding.png)
 <br><br><br>

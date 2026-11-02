@@ -8,7 +8,403 @@
     "resultat": [],
     "exception": "",
     "raccourcis": "",
-    "profils": ["All","Accessibility","Dark Mode","Debugging","DocC","Formatting","Instruments","Localization","Optimization","Platforms...","Swift","SwiftUI","TextKit","What's new in...","Xcode"]
+    "profils": ["All","Accessibility","A.I.","Dark Mode","Debugging","DocC","Formatting","Instruments","Keyboard","Keynote","Localization","Optimization","Platforms State...","Regex","Shortcuts","Swift","Swift Playgrounds","SwiftUI","What's new in...","Xcode","Xcode Playgrounds"]
+  },
+  {
+    "themes": "WWDC 2024",
+    "title": "Keynote",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2024/24Keynote",
+    "profils": ["All","A.I.","Keynote","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Analyze hangs with Instruments",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310248",
+    "profils": ["All","Debugging","Instruments","Optimization","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Animate symbols in your app",
+    "type": ["SF Symbol"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23Symbols",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Beyond the basics of structured concurrency",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310170",
+    "profils": ["All","Debugging","Instruments","Swift"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Bring widgets to life",
+    "type": ["Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23Widgets",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Bring widgets to new places",
+    "type": ["Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23Widgets",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Build accessible apps with SwiftUI and UIKit",
+    "type": ["Notification"],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310036",
+    "profils": ["All","Accessibility","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Build programmatic UI with Xcode Previews",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310252",
+    "profils": ["All","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Create animated symbols",
+    "type": ["SF Symbol"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23Symbols",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Create rich documentation with Swift-DocC",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310244",
+    "profils": ["All","DocC"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Debug with structured logging",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/23DebuggingAndTesting",
+    "profils": ["All","Debugging"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Design dynamic Live Activities",
+    "type": ["Live Activities"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23LiveActivities",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Design Shortcuts for Spotlight",
+    "type": ["Button","Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23AppIntents",
+    "profils": ["All","Shortcuts","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Discover String Catalogs",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310155",
+    "profils": ["All","Localization","Swift","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Expand on Swift macros",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/23SwiftMacros",
+    "profils": ["All","Swift"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Explore enhancements to App Intents",
+    "type": ["Button","Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23AppIntents",
+    "profils": ["All","Shortcuts","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Explore pie charts and interactivity in Swift Charts",
+    "type": ["Charts"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/2310037",
+    "profils": ["All","Swift","SwiftUI"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Fix failures faster with Xcode test reports",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/23DebuggingAndTesting",
+    "profils": ["All","Debugging","Optimization"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Generalize APIs with parameter packs",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310168",
+    "profils": ["All","Swift"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Keynote",
+    "type": ["Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23Keynote",
+    "profils": ["All","Accessibility","Keyboard","Keynote"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Make features discoverable with TipKit",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/2310229",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Meet ActivityKit",
+    "type": ["Live Activities"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23LiveActivities",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Perform accessibility audits for your app",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310035",
+    "profils": ["All","Accessibility","Instruments","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Platforms State of the Union",
+    "type": ["Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23PlatformsSotU",
+    "profils": ["All","Accessibility","Platforms State...","Swift","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Prototype with Xcode Playgrounds",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310250",
+    "profils": ["All","Xcode Playgrounds"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Spotlight your app with App Shortcuts",
+    "type": ["Button","Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/23AppIntents",
+    "profils": ["All","Shortcuts","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Support HDR images in your app",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/23HDRImages",
+    "profils": ["All","Optimization"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Unleash the UIKit trait system",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310057",
+    "profils": ["All","SwiftUI"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Update Live Activities with push notifications",
+    "type": ["Live Activities"],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/23LiveActivities",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "What’s new in SF Symbols 5",
+    "type": ["SF Symbol"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/2310197",
+    "profils": ["All","What's new in..."]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "What’s new in Swift",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310164",
+    "profils": ["All","Swift","What's new in..."]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "What’s new in SwiftUI",
+    "type": ["Button","Charts","Menu","Scene","ScrollView","SF Symbol","Widget"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/2310148",
+    "profils": ["All","Accessibility","Keyboard","SwiftUI","What's new in...","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "What’s new in UIKit",
+    "type": ["Activity Indicator","Menu","ScrollView","SF Symbol"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/2310055",
+    "profils": ["All","Dark Mode","What's new in..."]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "What’s new in Xcode 15",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/2310165",
+    "profils": ["All","Debugging","DocC","Localization","Swift","What's new in...","Xcode"]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "What’s new with text and text interactions",
+    "type": ["Attributed String","Menu","ScrollView"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2023/2310058",
+    "profils": ["All","What's new in..."]
+  },
+  {
+    "themes": "WWDC 2023",
+    "title": "Write Swift macros",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/23SwiftMacros",
+    "profils": ["All","Swift"]
   },
   {
     "themes": "WWDC 2022",
@@ -23,6 +419,116 @@
   },
   {
     "themes": "WWDC 2022",
+    "title": "Build your first app in Swift Playgrounds",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22SwiftPlaygrounds",
+    "profils": ["All","Swift Playgrounds"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Create engaging content for Swift Playgrounds",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22SwiftPlaygrounds",
+    "profils": ["All","Swift Playgrounds"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Design an effective chart",
+    "type": ["Charts"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/22Charts",
+    "profils": ["All","Accessibility","Dark Mode","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Design app experiences with charts",
+    "type": ["Charts"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/22Charts",
+    "profils": ["All","Accessibility","Dark Mode","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Design App Shortcuts",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/2210169",
+    "profils": ["All", "Shortcuts"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Design protocol interfaces in Swift",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22SwiftGenericsProtocols",
+    "profils": ["All","Swift"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Embrace Swift generics",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22SwiftGenericsProtocols",
+    "profils": ["All","Swift"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Explore EDR on iOS",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2023/23HDRImages",
+    "profils": ["All","Optimization"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Get to know Developer Mode",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22DevelopXcode14",
+    "profils": ["All","Xcode"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Hello Swift Charts",
+    "type": ["Charts"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/22Charts",
+    "profils": ["All","Accessibility","Dark Mode","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2022",
     "title": "Improve the discoverability of your Swift-DocC content",
     "type": [],
     "tests": [],
@@ -30,7 +536,73 @@
     "resultat": [],
     "exception": "",
     "raccourcis": "2022/22SwiftDocC",
-    "profils": ["All","DocC","Xcode","What's new in..."]
+    "profils": ["All","DocC","Xcode"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Meet Swift Regex",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22SwiftRegex",
+    "profils": ["All","Regex"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Meet the expanded San Francisco font family",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/22110381",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Swift Charts: Raise the bar",
+    "type": ["Charts"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2022/22Charts",
+    "profils": ["All","Accessibility","Dark Mode","SwiftUI","Xcode"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Swift Regex: Beyond the basics",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22SwiftRegex",
+    "profils": ["All","Regex"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Track down hangs with Xcode and on-device detection",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/2210082",
+    "profils": ["All","Debugging","Instruments","Xcode"]
+  },
+  {
+    "themes": "WWDC 2022",
+    "title": "Use Xcode to develop a multiplatform app",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2022/22DevelopXcode14",
+    "profils": ["All","Xcode"]
   },
   {
     "themes": "WWDC 2022",
@@ -52,7 +624,7 @@
     "resultat": [],
     "exception": "",
     "raccourcis": "2022/22110354",
-    "profils": ["All","Instruments","Swift","What's new in..."]
+    "profils": ["All","Instruments","Regex","Swift","What's new in..."]
   },
   {
     "themes": "WWDC 2022",
@@ -130,6 +702,17 @@
     "exception": "",
     "raccourcis": "2021/21hitches",
     "profils": ["All","Debugging","Instruments","Optimization","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
+    "title": "Design great actions for Shortcuts, Siri, and Suggestions",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2021/21ShortcutsActions",
+    "profils": ["All", "Shortcuts"]
   },
   {
     "themes": "WWDC 2021",
@@ -261,7 +844,7 @@
     "resultat": ["Design"],
     "exception": "",
     "raccourcis": "2021/21102",
-    "profils": ["All","Platforms...","Swift","SwiftUI","Xcode"]
+    "profils": ["All","Platforms State...","Swift","SwiftUI","Xcode"]
   },
   {
     "themes": "WWDC 2021",
@@ -284,6 +867,17 @@
     "exception": "",
     "raccourcis": "2021/2110221",
     "profils": ["All","Localization","Formatting","Xcode"]
+  },
+  {
+    "themes": "WWDC 2021",
+    "title": "Support Full Keyboard Access in your iOS app",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": [],
+    "exception": "",
+    "raccourcis": "2021/2110120",
+    "profils": ["All","Accessibility","Keyboard","Shortcuts"]
   },
   {
     "themes": "WWDC 2021",
@@ -342,6 +936,39 @@
   },
    {
     "themes": "WWDC 2020",
+    "title": "Build for the iPadOS pointer",
+    "type": ["Pointer"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2020/20iPadOSPointer",
+    "profils": ["All"]
+  },
+   {
+    "themes": "WWDC 2020",
+    "title": "Design for the iPadOS pointer",
+    "type": ["Pointer"],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2020/20iPadOSPointer",
+    "profils": ["All"]
+  },
+  {
+    "themes": "WWDC 2020",
+    "title": "Feature your actions in the Shortcuts app",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2021/21ShortcutsActions",
+    "profils": ["All", "Shortcuts"]
+  },
+   {
+    "themes": "WWDC 2020",
     "title": "Formatters",
     "type": ["Attributed String"],
     "tests": [],
@@ -353,6 +980,17 @@
   },
   {
     "themes": "WWDC 2019",
+    "title": "Building Great Shortcuts",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2021/21ShortcutsActions",
+    "profils": ["All", "Shortcuts"]
+  },
+  {
+    "themes": "WWDC 2019",
     "title": "Implementing Dark Mode on iOS",
     "type": ["Materials","UIBar","Attributed String","Activity Indicator"],
     "tests": [],
@@ -361,6 +999,17 @@
     "exception": "",
     "raccourcis": "2019/19214",
     "profils": ["All","Dark Mode","Xcode"]
+  },
+  {
+    "themes": "WWDC 2019",
+    "title": "Introducing Parameters for Shortcuts",
+    "type": [],
+    "tests": [],
+    "verifier": [],
+    "resultat": ["Design"],
+    "exception": "",
+    "raccourcis": "2021/21ShortcutsActions",
+    "profils": ["All", "Shortcuts"]
   },
   {
     "themes": "WWDC 2019",

@@ -1,6 +1,7 @@
 ---
 title: "Web - Designer accessible"
-abstract: "Liste des critères WCAG pour la ;conception"
+abstract: "Liste des critères WCAG pour la conception"
+displayToc: false
 ---
 
 # Liste des critères WCAG pour le design
@@ -8,8 +9,10 @@ abstract: "Liste des critères WCAG pour la ;conception"
 Ce socle de critères destiné aux sites et applications web permet d’éviter les principales erreurs d’accessibilité.
 La mise en œuvre de ce socle ne permet pas d’obtenir à coup sûr un site accessible, mais pose les fondations qui permettent de s’engager dans une démarche de mise en accessibilité progressive.
 
-Le respect de la charte Orange appelée la Brand (Design for digital platforms Guideline), disponible sur [le site de la marque Orange](https://design.orange.com/) est un prérequis à l’utilisation de ce socle.
+Le respect de la charte Orange appelée la <span lang="en">Brand (Design for digital platforms Guideline)</span>, disponible sur [le site de la marque Orange](https://design.orange.com/) est un prérequis à l’utilisation de ce socle.
 Certains points déjà présents dans la charte Orange (utilisation des couleurs, alignement du texte…) n’ont pas été repris dans cette liste de critères.
+
+Pour faire des maquettes accessibles, il est utile d'ajouter des annotations à nos maquettes. Pour plus d'informations, <a href="../../articles/annotations-accessibilite/" target="_blank">lisez notre article sur les annotations</a>.
 
 Cette version dédiée à la conception n’aborde pas le code, elle s’adresse aux concepteurs de produits, designers, responsables de projet, etc.
 

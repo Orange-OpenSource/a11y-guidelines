@@ -52,7 +52,7 @@ These two techniques are transparent for the user, and the risks they pose are v
 The first solution consists in adding a hidden field in the form. This will never be filled by a user. If you detect server-side that the field was filled, it must be malevolent software.
 The second technique consists in measuring the time it takes for the user to fill the form. If it is very fast, there’s a good chance that it’s malevolent software.
 
-## Anti-spam and blacklist solutions to remove bot requests
+## Anti-spam and denylist solutions to remove bot requests
 
 It is also possible, server-side, to triage information with anti-spam software and automatically remove submissions from malevolent software by analysing content data and the originating IP.
 

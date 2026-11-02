@@ -1,0 +1,24 @@
+---
+title: "Test: adding a recipient"
+eleventyExcludeFromCollections: true
+css:
+ - style.css
+js:
+  - script.js
+---
+
+<div class="example">
+  <h1>Test: adding a recipient</h1>
+
+  <form>
+      <label for="to"><h2>Recipients list</h2> (please input names and first names separated by commas):</label>
+      <div class="field">
+          <ul id="selection-list" aria-labelledby="selection-list-label"></ul>
+          <input id="to">
+      </div>
+
+      <label for="message">Message: </label>
+      <textarea id="message"></textarea>
+      <input type="submit" value="Envoyer">
+  </form>
+</div>

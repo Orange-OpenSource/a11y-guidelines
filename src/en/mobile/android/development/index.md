@@ -1,6 +1,7 @@
 ﻿---
 title: "Android accessibility criteria for development"
 abstract: "The dev accessibility options of the Android SDK"
+displayToc: false
 ---
 
 # Android accessibility criteria for development

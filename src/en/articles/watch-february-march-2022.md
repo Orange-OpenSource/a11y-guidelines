@@ -12,7 +12,7 @@ Another example of non-respect of the fundamental rights of people with disabili
 - https://certam-avh.com/fr/dossiers-thematiques/accessibilite-numerique-la-grande-oubliee-de-la-campagne-presidentielle-2022
 - https://www.temesis.com/blog/accessibilite-classement-des-sites-des-candidats-a-la-presidentielle-2022/
 Also this month, the return of the one million study from WebAim update 2022: https://webaim.org/blog/webaim-million-2022/
-And finally, a new content in our site of in our site of recommendations, 5 personae to improve A11y (fr): https://a11y-guidelines.orange.com/fr/persona/
+And finally, a new content in our site of in our site of recommendations, 5 personas to improve A11y (fr): https://a11y-guidelines.orange.com/fr/persona/
 ## Accessibility in laws, standards and recommendations
 - The EU and the first digital accessibility reports of the different member countries: https://www.deque.com/blog/eu-runs-worlds-largest-accessibility-test/
 - Finally, a position of the IAAP (the international association of a11y pros) on a11y overlays: https://www.accessibilityassociation.org/s/overlay-position-and-recommendations
@@ -70,7 +70,7 @@ And finally, a new content in our site of in our site of recommendations, 5 pers
 - Using Figma's A11y annotation kit to design a11y: https://medium.com/designing-atlassian/create-accessible-designs-using-the-figma-a11y-annotation-kit-35371f00dac5
 - Documenting the design system: https://www.youtube.com/watch?v=bpDF3ShKYZQ
 - Use the right vocabulary when doing user testing: https://axesslab.com/testing-a-scary-word/
-- Font accessibility and readability, the basics: https://bighack.org/font-accessibility-and-readability-the-basics/
+- Font accessibility and readability, the basics: https://business.scope.org.uk/article/font-accessibility-and-readability-the-basics/
 ## Resources
 - List of resources following CSUN2022, the a11y conference that refers to: https://docs.google.com/spreadsheets/d/1Tgmba0L6Z0BkHu9Hb3jlZ3IweguAdrja649rzk8X_Dk/
 - a11y's best practices for those with fine motor disabilities: https://theweco.com/accessibility-limited-fine-motor/
@@ -83,4 +83,4 @@ And finally, a new content in our site of in our site of recommendations, 5 pers
 - And hop, a headshot for Facil'iti: https://adrianroselli.com/2022/03/faciliti-will-get-you-sued.html
 ## Others
 -	Awesome! play and fix your code to make it accessible: https://a11yphant.com/
-- Just Nice: https://daverupert.com/2022/04/what-if-everyth
+- Just Nice: https://daverupert.com/2022/04/what-if-everything-got-better/

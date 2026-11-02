@@ -10,6 +10,6 @@ permalink: 404.html
   <section{% if locale != localeCode %} lang="{{ localeCode }}"{% endif %} class="mt-4">
     <h2>{{ localeObject.displayName | capitalize }}</h2>
     <p>{{ '404.content.message' | translate(localeCode) }}</p>
-    <a href="/{{ localeCode }}" class="btn btn-secondary">{{ '404.content.linkLabel' | translate(localeCode) }}</a>
+    <a href="/{{ localeCode }}" class="btn btn-outline-secondary">{{ '404.content.linkLabel' | translate(localeCode) }}</a>
   </section>
 {% endfor %}

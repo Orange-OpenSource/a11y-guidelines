@@ -3,7 +3,7 @@ title: "Android design - Keyboard navigation & Switch Access"
 abstract: "Keyboard navigation & Switch Access, accessibility design recommandations with Android"
 ---
 
-# Keyboard navigation & Switch Access
+# Android design - Keyboard navigation & Switch Access
 
 ## Access to interactive elements
 
@@ -24,10 +24,10 @@ To manage keyboard and Switch Access navigation, there are 2 things to check:
 - Only the interactive elements are highlighted with the keyboard (and Switch Access) navigation.
 
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#keyboard">2.1.1 Keyboard</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#name-role-value">4.1.2 Name, Role, Value</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-visible">2.4.7 Focus Visible</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#keyboard">2.1.1 Keyboard</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#name-role-value">4.1.2 Name, Role, Value</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-visible">2.4.7 Focus Visible</a>
 
 
 ## Order keyboard navigation
@@ -50,9 +50,9 @@ For more information on [focus management on Android](http://developer.android.c
 - It is possible to scroll in a drop-down list to access all the content
 - You are never trapped in a part of the screen (what we call a keyboard trap)
 
-**Reference <abbr>WCAG</abbr>&nbsp;:**  
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#no-keyboard-trap">2.1.2 No Keyboard Trap</a>
-- <a lang="en" href="https://www.w3.org/TR/WCAG21/#focus-order">2.4.3 Focus Order</a>
+**<abbr>WCAG</abbr> reference:**  
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#meaningful-sequence">1.3.2 Meaningful Sequence</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#no-keyboard-trap">2.1.2 No Keyboard Trap</a>
+- <a lang="en" href="https://www.w3.org/TR/WCAG22/#focus-order">2.4.3 Focus Order</a>
 
 

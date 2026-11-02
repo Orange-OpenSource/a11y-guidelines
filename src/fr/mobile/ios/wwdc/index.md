@@ -15,6 +15,15 @@ La plupart des illustrations proviennent des supports de présentations fournies
 **L'accès au résumé de chacune de ces vidéos se fait en cliquant sur le titre ou directement sur l'image de présentation**.
 <br><br><br>
 
+
+## [2022 - Rendre accessible une application en mode Single App](2022/10152/)
+Cette présentation met l'accent sur les différents moyens de **mettre en oeuvre le mode single app** en détaillant chacune des possibilités offertes par les OS.
+<a href="2022/10152/">
+    
+![Accès à la session Rendre accessible une application en mode Single App](../../images/iOSdev/wwdc22-10152.png)
+</a>
+</br></br></br> 
+
 ## [2021 - Incorporer efficacement l'accessibilité à vos graphes](2021/122/)
 Précisions sur la façon de **présenter des graphes** avec VoiceOver en présentant une **nouveauté iOS&nbsp;15** pour ce système d'assistance technologique.
 <a href="2021/122/">

@@ -5,6 +5,10 @@ on:
     branches:
       - master
 
+env:
+  # Opt-in to run JavaScript actions with Node.js 24 on the runner
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
 jobs:
   build_and_deploy:
     name: Build & deploy website
@@ -13,12 +17,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup NodeJS
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: '14.14.0'
+          node-version: '24.x'
 
       - name: Install dependencies
         run: npm install

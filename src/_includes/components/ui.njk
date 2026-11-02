@@ -1,15 +1,16 @@
 {%- macro navLink(link, class, forceStrictlyActive = false) -%}
-{%- set strictlyActive = page.url == link.href -%}
+{%- set currentUrl = page.url if page.url else "" -%}
+{%- set strictlyActive = currentUrl == link.href -%}
 
 {%- if forceStrictlyActive == true -%}
   {%- set active = strictlyActive -%}
 {%- else -%}
-  {%- set active = strictlyActive or link.href in page.url and not link.href | isHomeUrl -%}
+  {%- set active = strictlyActive or link.href in currentUrl and not link.href | isHomeUrl -%}
 {%- endif -%}
 
 {%- set current = "page" if strictlyActive else "true" -%}
 
-<a href="{{ link.href }}" class="nav-link{{ " " + class if class }}{% if active %} active" aria-current="{{ current }}"{% else %}"{% endif %}>
+<a href="{{ link.href }}" class="nav-link{{ " " + class if class }}{% if active %} active d-inline-block" aria-current="{{ current }}"{% else %}"{% endif %}>
   {{ link.label }}
 </a>
 {%- endmacro -%}
@@ -42,14 +43,32 @@
 {%- macro lastPosts(posts, max) -%}
 <ol class="list-unstyled row">
   {%- for post in posts | reverse | limit(max) -%}
+    {% set rawDate = post.data.updateDate or post.date %}
+    {% set effectiveDate = rawDate | jsDate %}
+    {% set isUpdated = post.data.updateDate and post.data.updateDate != post.date %}
+
     <li class="col-md-4 pb-3 d-flex">
       <article class="bg-white p-3 flex-grow-1">
         <h3 class="mb-1">
-          <a href="{{ post.url }}" class="text-decoration-none">{{ post.data.title }}</a>
+          <a href="{{ post.url }}" class="text-decoration-none article-focus">{{ post.data.title }}</a>
         </h3>
-        {% if post.date %}
-          <time class="text-muted" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale %}</time>
+
+        <p class="text-muted mb-0">
+          <span class="visually-hidden">{{ 'releaseDate.label' | translate }}</span>
+          <time datetime="{{ effectiveDate | toISOString }}">
+            {% localizedDate effectiveDate, locale %}
+          </time>
+        </p>
+
+        {% if isUpdated %}
+          <p class="text-muted mb-0">
+            {{ 'articleUpdate.label' | translate }}
+            <time datetime="{{ post.date | jsDate | toISOString }}">
+              {% localizedDate post.date, locale %}
+            </time>
+          </p>
         {% endif %}
+
         {% if post.data.abstract %}
           <p class="my-2">{{ post.data.abstract }}</p>
         {% endif %}
@@ -60,17 +79,16 @@
 {%- endmacro -%}
 
 {%- macro postsList(posts, filters = true, displayDate = true, displayTags = true) -%}
-{% if filters == true %}
-  {{ filtersBar(posts) }}
-{% endif %}
-<ol class="list-unstyled">
+<ol class="list-unstyled" id="list_article">
 {%- for post in posts %}{% if page.url != post.url -%}
   {% set tags = post.data.tags %}
+  {% set effectiveDate = post | effectiveDate %}
+  {% set isUpdated = post.data.updateDate and post.data.updateDate != post.date %}
 
   <li class="border-bottom border-light py-3"{% if tags %} data-tags="{{ tags | join(";") }}"{% endif %}>
     <article>
       <h2 class="mb-1">
-        <a href="{{ post.url }}" class="text-decoration-none">{{ post.data.title }}</a>
+        <a href="{{ post.url }}" class="text-decoration-none article-focus">{{ post.data.title }}</a>
       </h2>
       {% if displayTags == true and tags %}
        <span id="post_{{loop.index}}" class="visually-hidden">{{'tags.list' | translate}}</span>
@@ -78,15 +96,29 @@
           {%- for tag in tags -%}
             {%- set tagTranslationKey = 'tags.' + tag -%}
             <li class="list-inline-item">
-              <a href="?tag={{ tag }}" class="btn btn-dark btn-sm">
+              <p class="tagType">
                 {{ tagTranslationKey | translate }}
-              </a>
+              </p>
             </li>
           {%- endfor -%}
         </ul>
       {% endif %}
-      {% if displayDate == true and post.date %}
-        <time class="text-muted" datetime="{{ post.date.toISOString() }}">{% localizedDate post.date, locale  %}</time>
+      {% if displayDate == true %}
+        <p class="text-muted mb-0">
+          <span class="visually-hidden">{{ 'releaseDate.label' | translate }}</span>
+          <time datetime="{{ effectiveDate | jsDate | toISOString }}">
+            {% localizedDate effectiveDate, locale %}
+          </time>
+        </p>
+
+        {% if isUpdated %}
+          <p class="text-muted mb-0">
+            {{ 'articleUpdate.label' | translate }}
+            <time datetime="{{ post.date | jsDate | toISOString }}">
+              {% localizedDate post.date, locale %}
+            </time>
+          </p>
+        {% endif %}
       {% endif %}
       {% if post.data.abstract %}
         <p class="my-2">{{ post.data.abstract }}</p>
@@ -95,10 +127,6 @@
   </li>
 {% endif %}{%- endfor -%}
 </ol>
-{%- endmacro -%}
-
-{%- macro componentsExamplesList(posts) -%}
-  {{ postsList(posts, false, false, false) }}
 {%- endmacro -%}
 
 {%- macro filtersBar(posts) -%}
@@ -138,8 +166,8 @@
         {%- for heading in headings -%}
           {%- if heading.level > level %}
             <ul>
-          {%- elseif first == false -%}            
-            </li>          
+          {%- elseif first == false -%}
+            </li>
           {%- endif -%}
 
           {%- if heading.level < level %}
@@ -151,7 +179,7 @@
 
           <li class="nav-item position-relative">
             <a href="#{{ heading.id }}" class="nav-link text-muted">{{ heading.text }}</a>
-          
+
           {%- set level = heading.level -%}
           {%- set first = false -%}
         {%- endfor -%}
@@ -164,7 +192,7 @@
     </nav>
   {%- elseif mode == "mobile" -%}
     <nav id="mobile-toc" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-toc-dropdown-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         {{ 'toc.title' | translate }}
       </button>
       <div class="dropdown-menu dropdown-menu-right">
@@ -192,7 +220,7 @@
     </nav>
   {%- elseif mode == "mobile" -%}
     <nav id="mobile-side-navigation" class="dropdown d-md-none" role="navigation" aria-labelledby="mobile-side-navigation-handler">
-      <button type="button" class="btn btn-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-bs-toggle="dropdown" aria-expanded="false">
+      <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-side-navigation-handler" data-bs-toggle="dropdown" aria-expanded="false">
         {{ 'navigation.side.label' | translate }}
       </button>
       <div class="dropdown-menu dropdown-menu-left">
@@ -210,7 +238,11 @@
   {%- for key, value in glossary -%}
     {%- if (locale == "fr" and key != "ASSISTIVE TECHNOLOGIES" and key != "LARGE TEXT") or (locale == "en" and key != "AIDES TECHNIQUES" and key != "TEXTE DE GRANDE TAILLE") -%}
       <dt id="{{ key | slugify }}" class="py-2 ps-2 text-end">{{ key }}</dt>
-      <dd class="py-2 pe-2 ps-3 mb-0">{{ value.base | safe }}{{ ", " + value[locale] | safe if value[locale] }}</dd>
+      {%- if key == "AFFORDANCE" -%}
+        <dd class="py-2 pe-2 ps-3 mb-0">{{ value[locale] | safe if value[locale] }}</dd>
+      {%- else -%}
+        <dd class="py-2 pe-2 ps-3 mb-0">{{ value.base | safe }}{{ ", " + value[locale] | safe if value[locale] }}</dd>
+      {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
 </dl>
@@ -218,7 +250,6 @@
 
 {%- macro changelang(mode) -%}
 {%- if mode == "supra" -%}
-<nav role="navigation" aria-label="{{ 'changelang.label' | translate }}">
   <ul class="navbar-nav">
     {%- for key, lang in site.locales -%}
       {% set active = locale == lang.code %}
@@ -229,7 +260,6 @@
       </li>
     {%- endfor -%}
   </ul>
-</nav>
 {%- elseif mode == "mobile" -%}
 <li class="nav-item d-md-none">
   <span class="visually-hidden">{{ 'changelang.label' | translate }}</span>
@@ -237,7 +267,7 @@
     {%- for key, lang in site.locales -%}
       {% set active = locale == lang.code %}
       <li class="list-inline-item flex-grow-1">
-        <a href="/{{ lang.code }}/" class="nav-link{% if active %} active" aria-current="true"{% else %}"{% endif %} lang="{{ lang.code }}">
+        <a href="/{{ lang.code }}/" class="nav-link{% if active %} active d-inline-block" aria-current="true"{% else %}"{% endif %} lang="{{ lang.code }}">
         {{ lang.displayName | capitalize }}
         </a>
       </li>
