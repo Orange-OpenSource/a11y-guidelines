@@ -123,7 +123,7 @@ Pourquoi ce critère figure-t-il parmi les incontournables de l’accessibilité
 Curieux de connaître les 3 règles d’or pour maximiser accessibilité et SEO de votre contenu ?
 Et oui ! Le titre des entêtes est loin d’être un simple détail ! 61% des internautes quittent un site en moins de 5 secondes si elles ou ils ne trouvent pas ce qu’elles ou ils cherchent au 1er coup d’œil ! 👀
 Dans ce troisième épisode, nous aborderons les sujets suivants :
-- Pourquoi donner des titres aux entêtes ?
+- Pourquoi donner des titres aux en-têtes ?
 - Les pages sans rubriques…est-ce fréquent ?
 - Les 3 règles d’or communes.
 - Les erreurs classiques à éviter.
