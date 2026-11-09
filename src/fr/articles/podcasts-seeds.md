@@ -116,7 +116,7 @@ Dans ce premier épisode, nous explorons 4 aspects essentiels de la lisibilité 
 - La clarté des « call-to-action ».
 
 ### Épisode 2 - Contenu textuel, donner un titre aux pages
-L’épisode d’aujourd’hui s’attaque à un sujet fondamental et pourtant souvent sous-estimé … le titre des pages de votre site ou application.
+L’épisode d’aujourd’hui s’attaque à un sujet fondamental et pourtant souvent sous-estimé : le titre des pages de votre site ou application.
 Pourquoi ce critère figure-t-il parmi les incontournables de l’accessibilité ? Et comment, du point de vue SEO, ce même titre peut-il devenir un point d’appui essentiel pour la visibilité d’un contenu ?
 
 ### Épisode 3 - Organiser les contenus, donner un titre à chaque section
