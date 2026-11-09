@@ -24,7 +24,7 @@ js:
 
 ## Introduction
 SEED(S) est une série de podcasts qui explore comment semer les bonnes pratiques pour concevoir des expériences numériques à la fois plus durables, plus inclusives et plus performantes. 
-Créée à l'origine pour les employés du groupe Orange pour donner l’envie de faire germer une culture numérique commune, plus durable, plus inclusive et profondément centrée sur l’expérience humaine.
+Créée à l'origine pour les employés du groupe Orange afin de susciter l'émergence d'une culture numérique commune, plus durable, plus inclusive et profondément centrée sur l’expérience humaine.
 
 SEED(S) signifie Sustainable & Efficient Experience on Digital, avec un S entre parenthèses pour rappeler qu’il n’existe pas une seule bonne pratique universelle, mais une multitude de « graines » à semer, à chaque étape d’un projet numérique.
 Pensé comme un ensemble de mini-séries thématiques, SEED(S) explore différentes facettes clés de l’expérience numérique durable, en croisant enjeux stratégiques, pratiques opérationnelles et retours d’expérience. 
