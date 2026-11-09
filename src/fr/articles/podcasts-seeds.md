@@ -120,7 +120,7 @@ L’épisode d’aujourd’hui s’attaque à un sujet fondamental et pourtant s
 Pourquoi ce critère figure-t-il parmi les incontournables de l’accessibilité ? Et comment, du point de vue SEO, ce même titre peut-il devenir un point d’appui essentiel pour la visibilité d’un contenu ?
 
 ### Épisode 3 - Organiser les contenus, donner un titre à chaque section
-Curieux de connaitre les 3 règles d’or pour maximiser accessibilité et SEO de votre contenu ?
+Curieux de connaître les 3 règles d’or pour maximiser accessibilité et SEO de votre contenu ?
 Et oui ! Le titre des entêtes est loin d’être un simple détail ! 61% des internautes quittent un site en moins de 5 secondes si elles ou ils ne trouvent pas ce qu’elles ou ils cherchent au 1er coup d’œil ! 👀
 Dans ce troisième épisode, nous aborderons les sujets suivants :
 - Pourquoi donner des titres aux entêtes ?
