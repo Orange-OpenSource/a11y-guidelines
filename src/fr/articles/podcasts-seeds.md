@@ -146,7 +146,7 @@ Au menu :
 
 ### Épisode 6 - Métadonnées et liens, les guides invisibles
 Devinette… invisibles et pourtant indispensables pour guider les internautes. Qui sommes-nous ? Quand on visite un site, on voit des pages. Des textes. Des images. Des boutons. Mais une grande partie de ce qui guide notre navigation est invisible…
-Aujourd’hui, nous nous s’intéressons à ces éléments discrets mais essentiels, les métadonnées et les liens.
+Aujourd’hui, nous nous intéressons à ces éléments discrets mais essentiels, les métadonnées et les liens.
 Au menu :
 - Les métadonnées, décrire une page sans la montrer.
 - Le texte des liens, cliquer sans se perdre.
