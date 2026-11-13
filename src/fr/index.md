@@ -33,4 +33,7 @@ Notre expertise couvre les sites Web (e-commerce, e-learning, applications méti
   <li class="list-inline-item pb-2">
     <a href="articles/memo-accessibilite/#liste-des-memos/" class="btn btn-outline-secondary btn-sm">Fiches mémos</a>
   </li>
+   <li class="list-inline-item pb-2">
+    <a href="liens-utiles/" class="btn btn-secondary btn-sm">Liens utiles</a>
+  </li>
 </ul>
