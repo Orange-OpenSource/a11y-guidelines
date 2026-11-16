@@ -3,7 +3,7 @@
     "title": "Donner des titres aux rubriques", 
 	"type": ["Test manuel"],
     "tests": ["Naviguer dans les différents écrans de l'application."],
-	"verifier": ["Les titres structurant les contenus (écrans, rubriques, sections) sont bien visibles et pertinents.","Activer le lecteur d'écran et vérifier que ces titres sont restitués comme tels par le lecteur d'écran.","Si des écrans n'ont pas de titre principal visible, le lecteur d'écran doit tout de même restituer une information pour aider à comprendre le contexte de l'écran sur lequel l'utilisateur se trouve (par exemple, à l'aide d'un titre masqué mais pour restituer un écran d'accueil)"],
+	"verifier": ["Les titres structurant les contenus (écrans, rubriques, sections) sont bien visibles et pertinents.","Activer le lecteur d'écran et vérifier que ces titres sont restitués comme tels par le lecteur d'écran.","Si des écrans n'ont pas de titre principal visible, le lecteur d'écran doit tout de même restituer une information pour aider à comprendre le contexte de l'écran sur lequel l'utilisateur se trouve (par exemple, à l'aide d'un titre masqué pour restituer un écran d'accueil)"],
     "resultat": ["Tous les contenus traités visuellement comme des titres possèdent une sémantique de titre.", "Si possible, les titres de niveaux sont hiérarchisés de manière à refléter leur poids sémantique.", "Le contexte d'un écran sans titre visible est restitué par le lecteur d'écran."], 
     "exception":"", 
     "raccourcis": "", 
