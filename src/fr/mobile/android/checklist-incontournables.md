@@ -1,5 +1,5 @@
 ---
-title: "Liste des critères WCAG pour les tests Android"
+title: "Critères incontournables Android"
 abstract: "Notre socle de critères destiné aux sites et applications web permettant tester le respect des WCAG"
 displayToc: true
 leftColumn:
