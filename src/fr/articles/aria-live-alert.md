@@ -8,7 +8,7 @@ tags:
   - web
   - intermediate
 ---
-  
+
 Les utilisateurs qui naviguent à l’aide d’un lecteur d’écran ne sont pas toujours informés des changements qui surviennent dans une page. Lorsqu’une information est mise à jour ou qu’un message apparaît, il peut être nécessaire de provoquer une annonce vocale afin d’en avertir l’utilisateur. Pour répondre à ce besoin, le langage <abbr>ARIA</abbr> propose notamment le rôle alert et l’attribut aria-live.
 ## Le rôle alert
 
