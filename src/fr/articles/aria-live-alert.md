@@ -2,7 +2,8 @@
 title: "L'attribut aria-live et le role alert"
 abstract: "Quand et comment utiliser les roles et attributs de type live"
 titleBeforeTag: true
-date: "2025-12-05"
+date: "2020-01-08"
+updateDate: "2026-11-16"
 tags:
   - web
   - intermediate
