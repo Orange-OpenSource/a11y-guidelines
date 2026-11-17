@@ -2,7 +2,7 @@
 title: "Tester l’accessibilité d’un site web avec NVDA"
 abstract: "Apprenez à utiliser NVDA pour tester l’accessibilité d’un site web grâce à 8 vidéos pratiques"
 titleBeforeTag: true
-date: "2016-09-16"
+date: "2026-11-17"
 tags:
   - web
   - beginner
