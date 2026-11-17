@@ -6,6 +6,11 @@ date: "2026-11-17"
 tags:
   - web
   - beginner
+css:
+ - /assets/able-player/ableplayer.min.css
+js:
+ - https://code.jquery.com/jquery-3.7.1.min.js
+ - /assets/able-player/ableplayer.min.js
 ---
 
 # Tester l’accessibilité d’un site web avec NVDA : un parcours en 8 vidéos
