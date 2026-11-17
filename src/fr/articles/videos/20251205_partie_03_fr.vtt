@@ -1,0 +1,195 @@
+WEBVTT
+
+00:14.347 --> 00:16.716
+Dans cette vidéo, je vais vous montrer
+
+00:16.716 --> 00:19.719
+comment naviguer au clavier avec NVDA.
+
+00:20.453 --> 00:23.456
+J'ai coupé le son avec les touches "NVDA + S"
+
+00:23.656 --> 00:26.659
+et maintenant je vais ouvrir
+la visionneuse de paroles.
+
+00:27.193 --> 00:30.463
+Comme nous l'avons vu
+dans les vidéos précédentes, il me suffit
+
+00:30.463 --> 00:34.868
+d'utiliser les touches "NVDA + N",
+d'aller sur "Outils"
+
+00:35.769 --> 00:38.738
+puis de sélectionner "Visionneuse de parole".
+
+00:39.339 --> 00:42.342
+Maintenant que nous sommes prêts,
+je vais lancer mon site de démo.
+
+00:43.376 --> 00:46.713
+Dès qu'on affiche un site web,
+NVDA commence par lire
+
+00:46.713 --> 00:50.250
+le titre de la page web,
+puis lit la totalité du contenu.
+
+00:51.017 --> 00:54.020
+Pour l'arrêter,
+il suffit d'utiliser la touche "Ctrl"
+
+00:54.254 --> 00:57.123
+ou de simplement commencer à naviguer.
+
+00:57.123 --> 00:59.059
+Pour relancer la lecture, on utilise
+
+00:59.059 --> 01:01.895
+la touche "NVDA + flèche du bas"
+
+01:01.895 --> 01:05.632
+NVDA lit à partir de la position
+courante jusqu'à la fin de la page.
+
+01:06.699 --> 01:10.503
+Pour le test, on va plutôt privilégier
+la navigation ligne par ligne
+
+01:10.503 --> 01:13.206
+avec les flèches du haut
+et les flèches du bas
+
+01:13.206 --> 01:18.845
+ou mot par mot avec les touches
+"Ctrl + flèche de gauche" ou "Ctrl + flèche de droite.
+
+01:20.080 --> 01:23.583
+En naviguant ainsi, je passe
+sur tout le contenu du site.
+
+01:23.883 --> 01:27.353
+Sur un bouton la barre d'espace me permet de l'activer.
+
+01:27.654 --> 01:30.757
+Je peux me déplacer dans ce menu
+déroulant à nouveau
+
+01:30.757 --> 01:33.760
+avec les flèches du haut et du bas
+
+01:34.027 --> 01:36.996
+et sélectionner le lien que je souhaite
+avec la touche "Entrée".
+
+01:37.764 --> 01:40.767
+On sort du menu avec la touche "Échap".
+
+01:41.167 --> 01:43.903
+Maintenant, je vais vous montrer
+comment utiliser
+
+01:43.903 --> 01:46.005
+NVDA dans un champ de formulaire.
+
+01:46.473 --> 01:49.042
+NVDA a 2 modes de fonctionnement :
+
+01:49.042 --> 01:52.812
+Le mode "navigation" pour la lecture
+des contenus que nous venons de voir
+
+01:53.480 --> 01:58.051
+et le mode "focus" qui s'enclenche
+dès qu'on arrive dans une zone de saisie.
+
+01:58.818 --> 02:01.855
+On peut voir visuellement
+dans quel mode se trouve NVDA.
+
+02:02.055 --> 02:05.625
+Si l'encadré est rose, alors
+nous sommes dans un mode de navigation.
+
+02:06.192 --> 02:08.728
+S'il est bleu, nous sommes en mode focus.
+
+02:10.029 --> 02:12.832
+De cette manière NVDA permet d'écrire
+
+02:12.832 --> 02:15.668
+dans un champ de formulaire
+sans déclencher les raccourcis clavier.
+
+02:16.402 --> 02:19.339
+Si je souhaite sortir
+du champ de formulaire sans valider,
+
+02:19.339 --> 02:22.475
+il suffit d'utiliser les touches
+"Inser + espace".
+
+02:23.309 --> 02:26.446
+Cette combinaison permet de passer
+d'un mode à l'autre.
+
+02:28.148 --> 02:30.917
+A noter également qu'il existe
+un certain nombre de raccourcis
+
+02:30.917 --> 02:35.255
+permettant de naviguer directement
+vers les différents éléments de la page.
+
+02:35.922 --> 02:39.125
+Pour passer d'un élément interactif
+à un autre, comme un lien,
+
+02:39.125 --> 02:41.094
+un champ de formulaire ou un bouton.
+
+02:41.094 --> 02:43.963
+J'utilise généralement la touche "Tab"
+
+02:43.963 --> 02:46.933
+comme une navigation au clavier classique.
+
+02:46.933 --> 02:51.204
+La touche "Shift + Tab" permet de naviguer
+dans la direction inverse,
+
+02:52.005 --> 02:54.607
+mais je peux également cibler l'élément
+
+02:54.607 --> 02:57.610
+que je souhaite atteindre avec d'autres
+raccourcis clavier.
+
+02:58.211 --> 03:02.048
+La touche "H" par exemple,
+permet de naviguer par titre de niveau.
+
+03:02.682 --> 03:06.519
+La touche "K", elle me permet d'accéder
+directement au lien
+
+03:07.086 --> 03:11.224
+et la touche "B" me permet
+d'accéder directement aux boutons.
+
+03:12.025 --> 03:18.131
+Encore une fois, il suffira d'utiliser le bouton
+"shift + le raccourci clavier souhaité"
+
+03:18.431 --> 03:21.301
+pour aller dans la direction inverse.
+
+03:22.569 --> 03:24.237
+Merci de votre attention.
+
+03:24.237 --> 03:25.638
+Cette vidéo est terminée !
+
+03:25.638 --> 03:27.840
+À bientôt sur une nouvelle démonstration.

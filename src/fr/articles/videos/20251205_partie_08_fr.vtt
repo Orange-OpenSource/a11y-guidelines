@@ -1,0 +1,104 @@
+WEBVTT
+
+00:14.748 --> 00:17.617
+Dans cette vidéo, je vais montrer comment tester
+
+00:17.617 --> 00:20.920
+les informations remontées automatiquement à l'utilisateur
+
+00:20.920 --> 00:24.257
+comme les messages d'erreur, l'état
+d'un menu déroulant,
+
+00:24.791 --> 00:28.194
+les résultats d'une recherche ou l'état
+des cases à cocher.
+
+00:29.095 --> 00:33.266
+Ces informations doivent refléter
+le résultat demandé par l'utilisateur
+
+00:33.800 --> 00:36.736
+et le focus ne doit pas avoir bougé.
+
+00:36.736 --> 00:39.739
+Toutes ces informations
+doivent être remontées par NVDA.
+
+00:40.640 --> 00:43.610
+Pour commencer, je vais vous montrer
+le résultat d'une recherche.
+
+00:44.844 --> 00:47.247
+Je fais une recherche sur "sac"
+
+00:47.247 --> 00:49.883
+Une nouvelle page s'ouvre
+et une alerte m'indique
+
+00:49.883 --> 00:52.886
+que des résultats ont été trouvés.
+
+00:53.253 --> 00:56.256
+Je fais le même test avec "parapluie",
+
+00:56.389 --> 00:59.392
+On voit bien que même sans résultats obtenus,
+
+00:59.392 --> 01:02.395
+l'information m'est retournée.
+
+01:02.562 --> 01:07.267
+Autre exemple je dois également avoir
+une alerte sur le résultat de mes actions.
+
+01:07.600 --> 01:10.336
+Comme ici avec l'ajout dans le panier,
+
+01:10.336 --> 01:14.007
+on peut voir que NVDA m'indique bien
+"article ajouté au panier".
+
+01:15.475 --> 01:17.143
+Je dois également avoir une alerte
+
+01:17.143 --> 01:18.912
+pour ces trois types d'éléments.
+
+01:19.112 --> 01:22.382
+Le drop down tout d'abord,
+une alerte doit indiquer
+
+01:22.382 --> 01:25.385
+si le menu est plié ou déplié.
+
+01:25.919 --> 01:29.255
+Ensuite, je dois avoir une alerte
+sur le statut de la case à cocher.
+
+01:29.556 --> 01:32.559
+Est-elle cochée ou non cochée ?
+
+01:32.759 --> 01:36.663
+Et enfin, en cas de message d'erreur
+lors d'une mauvaise saisie
+
+01:36.663 --> 01:41.134
+dans un formulaire par exemple,
+une alerte doit également me prévenir.
+
+01:42.469 --> 01:45.371
+En conclusion, NVDA doit pouvoir restituer
+
+01:45.371 --> 01:48.374
+le statut des éléments
+et le résultat des actions.
+
+01:48.808 --> 01:50.477
+Merci de votre attention.
+
+01:50.477 --> 01:51.878
+Cette vidéo est terminée !
+
+01:51.878 --> 01:54.080
+À bientôt sur une nouvelle démonstration.
