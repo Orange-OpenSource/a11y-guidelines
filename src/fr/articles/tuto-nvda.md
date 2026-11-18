@@ -39,7 +39,7 @@ Cet article a été rédigé le 12 mai 2025.
 
 Cette première vidéo accompagne les premiers pas : téléchargement, installation et démarrage du lecteur d’écran. Elle montre également comment éviter son lancement automatique à l’ouverture de la session Windows, une option qui n’est pas toujours utile sur un poste principalement dédié aux tests.
 
-Une fois NVDA installé, vous pouvez le lancer avec le raccourci `Ctrl + Alt + N`, lorsque celui-ci est disponible sur votre configuration.
+Une fois NVDA installé, vous pouvez le lancer avec le raccourci <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>N</kbd>, lorsque celui-ci est disponible sur votre configuration.
 
 Pour obtenir une version actuelle du logiciel, utilisez la [page de téléchargement de NV Access](https://www.nvaccess.org/download/). La démonstration vidéo peut présenter des écrans différents de ceux de la version que vous installez.
 
