@@ -25,7 +25,7 @@ L’utilisation du rôle `alert` doit être réservée à des cas spécifiques o
 
 ### Précautions à prendre
 
-- **Documentation** : Consultez la documentation officielle, <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role" lang="en" hreflang="en">MDN – ARIA: alert role</a>, pour des recommandations détaillées.
+- **Documentation** : Consultez la documentation officielle, <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role" lang="en" hreflang="en">MDN – ARIA: alert role</a>, pour des recommandations détaillées.
 - **Parcimonie** : Évitez d’utiliser le rôle `alert` pour des notifications fréquentes ou non essentielles, car cela peut perturber l’expérience utilisateur.
 
 ### Compatibilité et déclenchement
@@ -91,7 +91,7 @@ Le lecteur d’écran interrompt immédiatement sa tâche en cours pour annoncer
 
 Des attributs supplémentaires permettent de modifier finement le comportement par défaut d'`aria-live` :
 
-- `aria-atomic` : `true` ou `false` (valeur par défaut), indique si l’assistant vocal doit lire l’ensemble de la zone live (`true`) ou uniquement la partie modifiée (`false`).
+- `aria-atomic` : `true` ou `false` (valeur par défaut), indique si l’assistant vocal doit lire l’ensemble de la région live (`true`) ou uniquement la partie modifiée (`false`).
 - `aria-relevant` : détermine quels types de changements déclenchent une vocalisation, les valeurs possibles sont : `additions` (valeur par défaut ; annonce uniquement les nouveaux contenus ajoutés), `removals` (annonce les éléments supprimés) et `all` (annonce tous les changements).
 
 Enfin, pour être complet, sachez que la norme <abbr>ARIA</abbr> prévoit également quelques rôles spécifiques, `status` et `log` notamment, qui peuvent s'avérer utiles dans certains cas (barre d'état, journalisation, chat…) et qui, pour le moment, doivent être utilisés en complément de l'attribut `aria-live` pour maximiser la prise en charge par les outils d'assistance. Vous trouverez plus d'informations sur ces rôles dans les liens ci-dessous.
