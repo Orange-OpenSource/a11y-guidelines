@@ -3,7 +3,7 @@ title: "The aria-live attribute and the role alert"
 abstract: "When and how to use roles and attributes of live content type"
 titleBeforeTag: true
 date: "2020-01-08"
-updateDate: "2026-11-16"
+updateDate: "2026-11-19"
 tags:
   - web
   - intermediate
