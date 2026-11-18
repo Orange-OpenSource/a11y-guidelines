@@ -13,6 +13,13 @@ js:
  - /assets/able-player/ableplayer.min.js
 ---
 
+<style>
+  .able-wrapper + h3 {
+    margin-top: 1rem;
+  }
+</style>
+
+
 # Tester l’accessibilité d’un site web avec NVDA : un parcours en 8 vidéos
 
 ## Pourquoi utiliser NVDA pour tester un site web ?
