@@ -21,43 +21,47 @@ Here are some examples of methods that are well supported.
 
 You can trigger an alert by inserting a new element in the <abbr>DOM</abbr> via JavaScript.
 
-<pre> <code class="html"> &lt;span role="alert"&gt; This is an alert message. &lt;/span&gt; </code> </pre>
+```html
+<p role="alert">This is an alert message.</p>
+```
 
 ### Add a role alert on an existing element
+
 The triggering of an alert can also be done by adding a `role="alert"` dynamically to an existing element via Javascript.
 
-<pre> <code class="js">
+```javascript
 document.getElementById('alert').setAttribute("role", "alert");
-</code> </pre>
+```
 
-### Using innerHTML
+### Using `innerHTML`
 
 Create an alert via the `innerHTML` property.
-<pre> <code class="js">
-element.innerHTML = '&lt;div role ="alert"&gt;This is an alert&lt;/div&gt;';
-</code> </pre>
+
+```javascript
+element.innerHTML = '<p role="alert">This is an alert</p>';
+```
 
 ## The `aria-live` attribute
 
 Positioned on an HTML element, the `aria-live` attribute is used to indicate to the screen reader that any modification made to its content will result in vocalization by the screen reader.
 
 Three values ​​are possible:
-- Off: no vocalization
-- Polite: the vocalization will take place when the screen reader has finished the current task
-- Assertive: the screen reader interrupts the current task to inform the user
+- `off`: no vocalization
+- `polite`: the vocalization will take place when the screen reader has finished the current task
+- `assertive`: the screen reader interrupts the current task to inform the user
 
 It is strongly recommended that the `aria-live` attribute be set on the element as soon as the page is loaded to maximize compatibility with different browsers and screen readers.
 
-<pre> <code class = "html">
-&lt;span aria-live="polite"&gt;5 selected items&lt;/span&gt;
-</code> </pre>
+```html
+<p aria-live="polite">5 itemsselected</p>
+```
 
 Additional attributes allow fine modification of the default behavior of `aria-live`:
 
-- **aria-atomic:** true or false (default), used to indicate whether the whole of the live zone must be read (true) or only the modified part (false).
-- **aria-relevant:** indicates which type of change triggers a vocalization, possible values: additions (default), removals, all.
+- `aria-atomic`: true or false (default), used to indicate whether the whole of the live zone must be read (true) or only the modified part (false).
+- `aria-relevant`: indicates which type of change triggers a vocalization, possible values: additions (default), removals, all.
 
-Finally, to be complete, know that the <abbr>ARIA</abbr> language also provides for some specific roles, **status** and **log** in particular which can be useful in certain cases (status bar, logging, chat...) and which, for the moment, must be used in addition to the `aria-live` attribute to maximize support by the different tools. You can find more info on these roles in the links below.
+Finally, to be complete, know that the <abbr>ARIA</abbr> language also provides for some specific roles, `status` and `log` in particular which can be useful in certain cases (status bar, logging, chat…) and which, for the moment, must be used in addition to the `aria-live` attribute to maximize support by the different tools. You can find more info on these roles in the links below.
 
 
 ## References

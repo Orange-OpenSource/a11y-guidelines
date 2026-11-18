@@ -25,7 +25,7 @@ L’utilisation du rôle `alert` doit être réservée à des cas spécifiques o
 
 ### Précautions à prendre
 
-- **Documentation** : Consultez la documentation officielle, [MDN – ARIA: alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role){:lang="en"}, pour des recommandations détaillées.
+- **Documentation** : Consultez la documentation officielle, <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role" lang="en" href lang="en">MDN – ARIA: alert role</a>, pour des recommandations détaillées.
 - **Parcimonie** : Évitez d’utiliser le rôle `alert` pour des notifications fréquentes ou non essentielles, car cela peut perturber l’expérience utilisateur.
 
 ### Compatibilité et déclenchement
