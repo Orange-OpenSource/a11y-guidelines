@@ -15,13 +15,11 @@ Users who navigate using a screen reader are not always aware of changes made on
 
 Positioned on an HTML element, this allows you to tell the screen reader to vocalize the element automatically when it is created. However, be sure to use this role only in appropriate cases, as clearly stated in the [Mozilla MDN documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role). Due to its intrusive nature, role alert should be used sparingly and only in situations where the user's attention is immediately required. Less urgent dynamic changes should use a less aggressive method, such as `aria-live="polite"` or other live zone roles.
 
-To trigger an alert, several methods are possible, with a support that differ depending on the browser and screen reader pair used. You can read [Steve Faulkner's article](https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/) on this subject.
-
 Here are some examples of methods that are well supported.
 
 ### Create a new element in the DOM
 
-You can trigger an alert by inserting a new element in the <abbr>DOM</abbr> via Javascript.
+You can trigger an alert by inserting a new element in the <abbr>DOM</abbr> via JavaScript.
 
 <pre> <code class="html"> &lt;span role="alert"&gt; This is an alert message. &lt;/span&gt; </code> </pre>
 
@@ -53,7 +51,7 @@ It is strongly recommended that the `aria-live` attribute be set on the element 
 <pre> <code class = "html">
 &lt;span aria-live="polite"&gt;5 selected items&lt;/span&gt;
 </code> </pre>
-  
+
 Additional attributes allow fine modification of the default behavior of `aria-live`:
 
 - **aria-atomic:** true or false (default), used to indicate whether the whole of the live zone must be read (true) or only the modified part (false).
