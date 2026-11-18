@@ -44,7 +44,8 @@ module.exports = async function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy(`src/fr/articles/**/*.{html,css,js}`)
     eleventyConfig.addPassthroughCopy(`src/en/articles/**/*.{html,css,js}`)
     eleventyConfig.addPassthroughCopy(`src/**/*.xlsx`)
-    eleventyConfig.addPassthroughCopy(`src/**/*.{mp3,mp4,vtt}`)
+    eleventyConfig.addPassthroughCopy(`src/**/*.{mp3,mp4}`)
+    eleventyConfig.addPassthroughCopy(`src/**/*.{vtt}`)
     eleventyConfig.addPassthroughCopy(`src/**/*.apk`)
     eleventyConfig.addPassthroughCopy(`src/**/*.pdf`)
 
