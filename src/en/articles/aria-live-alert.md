@@ -9,11 +9,11 @@ tags:
   - intermediate
 ---
 
-Users who navigate using a screen reader are not always aware of changes made on the page. When information is updated or when a message appears, it is sometimes necessary to make the screen reader speak to inform the user. To do this, the <abbr>ARIA</abbr> language has the role `alert` and the attribute` aria-live`.
+Users who navigate using a screen reader are not always aware of changes made on the page. When information is updated or when a message appears, it is sometimes necessary to make the screen reader speak to inform the user. To do this, the <abbr>ARIA</abbr> standard has the role `alert` and the attribute `aria-live`.
 
-## The role alert
+## The `alert` role
 
-Positioned on an HTML element, this allows you to tell the screen reader to vocalize the element automatically when it is created. However, be sure to use this role only in appropriate cases, as clearly stated in the [Mozilla MDN documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role). Due to its intrusive nature, role alert should be used sparingly and only in situations where the user's attention is immediately required. Less urgent dynamic changes should use a less aggressive method, such as `aria-live="polite"` or other live zone roles.
+Positioned on an HTML element, this allows you to tell the screen reader to vocalize the element automatically when it is created. However, be sure to use this role only in appropriate cases, as clearly stated in the [Mozilla MDN documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role). Due to its intrusive nature, role alert should be used sparingly and only in situations where the user's attention is immediately required. Less urgent dynamic changes should use a less aggressive method, such as `aria-live="polite"` or other live region roles.
 
 Here are some examples of methods that are well supported.
 
@@ -53,19 +53,23 @@ Three values ​​are possible:
 It is strongly recommended that the `aria-live` attribute be set on the element as soon as the page is loaded to maximize compatibility with different browsers and screen readers.
 
 ```html
-<p aria-live="polite">5 itemsselected</p>
+<p aria-live="polite">5 items selected</p>
 ```
 
 Additional attributes allow fine modification of the default behavior of `aria-live`:
 
-- `aria-atomic`: true or false (default), used to indicate whether the whole of the live zone must be read (true) or only the modified part (false).
-- `aria-relevant`: indicates which type of change triggers a vocalization, possible values: additions (default), removals, all.
+- `aria-atomic`: `true` or `false` (default value), used to indicate whether the whole live region must be read (`true`) or only the modified part (`false`).
+- `aria-relevant`: indicates which type of change triggers a vocalization, possible values: `additions` (default value), `removals`, `all`.
 
-Finally, to be complete, know that the <abbr>ARIA</abbr> language also provides for some specific roles, `status` and `log` in particular which can be useful in certain cases (status bar, logging, chat…) and which, for the moment, must be used in addition to the `aria-live` attribute to maximize support by the different tools. You can find more info on these roles in the links below.
+Finally, to be complete, note that the <abbr>ARIA</abbr> standard also provides some specific roles, `status` and `log` in particular which can be useful in certain cases (status bar, logging, chat…) and which, for the moment, must be used in addition to the `aria-live` attribute to maximize support by the different tools. You can find more info on these roles in the links below.
 
 
 ## References
-- [Use of the alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
-- [ARIA live zones](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
-- [Use the log role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
-- [Use the status role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role">MDN – ARIA: alert role</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live">MDN – ARIA: aria-live attribute</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/log_role">MDN – ARIA: log role</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role">MDN – ARIA: status role</a></li>
+  <li><a href="https://access42.net/live-regions-aria-live-analogues-alert-log-status/" lang="fr" hreflang="fr">Live regions ARIA : aria-live et ses analogues alert, log, status</a></li>
+</ul>
