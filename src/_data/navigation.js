@@ -228,6 +228,16 @@ module.exports = {
           { label: "WWDC", href: "/fr/mobile/ios/wwdc/" },
         ],
       },
+      { 
+        label: "TV",
+        href: "/fr/tv/",
+        theme: "warning",
+        subLevels: [{
+            label: "11 Incontournables",
+            href: "/fr/tv/checklist-incontournables/",
+          },
+        ],
+      },
       {
         label: "Contenu et communication",
         href: "/fr/contenu-et-communication/",
