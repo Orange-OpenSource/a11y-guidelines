@@ -1,0 +1,196 @@
+WEBVTT
+
+00:15.849 --> 00:17.050
+Dans cette vidéo,
+
+00:17.350 --> 00:19.519
+nous allons tester les champs de formulaire.
+
+00:19.886 --> 00:24.224
+NVDA permet de vérifier plusieurs points
+concernant les champs de formulaire.
+
+00:24.891 --> 00:27.894
+D'abord, en vérifiant
+que les champs ont un nom accessible.
+
+00:28.128 --> 00:30.897
+Le nom accessible
+d'un composant correspond
+
+00:30.897 --> 00:35.835
+à ce qui est restitué par les technologies
+d'assistance comme NVDA.
+
+00:35.835 --> 00:38.304
+NVDA va également restituer les instructions
+
+00:38.304 --> 00:40.373
+contenues dans le champ de formulaire,
+
+00:40.440 --> 00:44.511
+pour que l'utilisateur ait toutes les informations
+nécessaires à sa complétion.
+
+00:45.345 --> 00:47.747
+Quand un champ est requis
+pour valider le formulaire,
+
+00:47.747 --> 00:50.784
+NVDA restitue le caractère obligatoire du champ.
+
+00:51.251 --> 00:56.189
+NVDA restitue également l'information indiquant
+que le champ autorise l'auto complétion
+
+00:56.623 --> 01:00.026
+lorsqu'il s'agit d'un formulaire de saisie
+des informations personnelles
+
+01:00.693 --> 01:03.696
+comme le nom,
+le prénom ou l'adresse email.
+
+01:03.730 --> 01:07.200
+Dans ce cas, il est nécessaire
+d'aider les utilisateurs à rentrer
+
+01:07.200 --> 01:07.967
+leurs informations.
+
+01:09.069 --> 01:11.638
+Maintenant,
+pour la restitution des libellés,
+
+01:11.638 --> 01:13.740
+je suis sur une page de facturation
+
+01:13.740 --> 01:16.709
+et je dois remplir
+plusieurs champs de formulaire.
+
+01:17.944 --> 01:21.114
+Chacun de ces champs
+doit être correctement libellé
+
+01:21.314 --> 01:25.351
+et lu par NVDA. Comme ici
+pour le champ de formulaire "Nom",
+
+01:25.819 --> 01:28.588
+j'ai bien un libellé "nom" correspondant
+
+01:28.588 --> 01:31.825
+à mon libellé visible
+au dessus du champ de formulaire.
+
+01:32.759 --> 01:36.396
+On peut également voir
+que le caractère obligatoire du champ
+
+01:36.396 --> 01:41.367
+est restitué par NVDA et puisqu'il
+s'agit de coordonnées personnelles,
+
+01:41.668 --> 01:44.938
+l'information indiquant
+que ce champ permet l'auto complétion
+
+01:44.938 --> 01:47.941
+est également présent et vocalisé.
+
+01:49.109 --> 01:51.144
+Pour le deuxième champ d'adresse
+
+01:51.144 --> 01:53.179
+qui est optionnel,
+
+01:53.346 --> 01:55.448
+tel que mentionné dans le libellé.
+
+01:55.448 --> 01:59.119
+On peut voir que le champ
+n'est pas vocalisé comme obligatoire
+
+01:59.285 --> 02:02.288
+et NVDA m'indique simplement
+que c'est un champ d'édition.
+
+02:04.390 --> 02:05.258
+Maintenant,
+
+02:05.258 --> 02:08.261
+je vais passer sur des champs
+non conformes.
+
+02:08.428 --> 02:11.431
+Par exemple, sur ce champ de formulaire.
+
+02:11.598 --> 02:12.932
+On peut voir que le champ est indiqué
+
+02:12.932 --> 02:16.469
+comme obligatoire
+grâce à l'astérisque à côté du libellé.
+
+02:17.270 --> 02:20.874
+Par contre,
+si je passe dessus avec NVDA
+
+02:21.774 --> 02:26.746
+On voit que le statut obligatoire du champ
+de formulaire n'est pas perçu par NVDA.
+
+02:28.014 --> 02:29.315
+Un autre exemple
+
+02:29.315 --> 02:32.085
+le champ pour la date d'expiration
+
+02:32.085 --> 02:35.088
+est bien libellé.
+
+02:35.288 --> 02:36.256
+On voit que c'est un champ
+
+02:36.256 --> 02:39.259
+qui permet d'entrer
+la date d'expiration de notre carte bleue,
+
+02:39.592 --> 02:41.828
+mais NVDA ne vocalise
+
+02:41.828 --> 02:44.797
+que l'exemple placé dans le place holder,
+
+02:44.797 --> 02:50.503
+c'est à dire "exemple 06/24"
+et non le libellé du champ
+
+02:51.037 --> 02:55.508
+qui devrait être quelque chose
+comme "expiration de la carte bleue".
+
+02:56.676 --> 02:59.879
+C'est ce qui arrive
+quand le label n'est pas lié au champ.
+
+03:00.947 --> 03:04.050
+C'est pourquoi il est important
+de vérifier avec NVDA
+
+03:04.050 --> 03:05.919
+chaque champ de formulaire
+
+03:05.919 --> 03:10.156
+et de ne pas simplement se fier
+à l'information transmise visuellement.
+
+03:11.357 --> 03:13.026
+Merci de votre attention.
+
+03:13.026 --> 03:14.427
+Cette vidéo est terminée !
+
+03:14.427 --> 03:16.629
+À bientôt sur une nouvelle démonstration.

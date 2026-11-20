@@ -1,0 +1,150 @@
+WEBVTT
+
+00:14.180 --> 00:18.418
+Dans cette vidéo, nous allons
+utiliser la liste d'éléments de NVDA.
+
+00:19.152 --> 00:22.956
+Cette liste va nous permettre
+de visualiser les éléments d'une page web
+
+00:23.490 --> 00:26.793
+et de vérifier la sémantique HTML
+de ses éléments.
+
+00:27.327 --> 00:30.096
+Pour rappel,
+la sémantique permet de fournir
+
+00:30.096 --> 00:33.099
+l'information sur le rôle des éléments.
+
+00:33.199 --> 00:37.871
+Pour ce faire, on va utiliser
+les combinaisons des touches "NVDA + F7".
+
+00:38.538 --> 00:41.508
+Une fenêtre apparaît avec les listes
+des différents
+
+00:41.508 --> 00:44.511
+éléments présents dans la page web.
+
+00:44.744 --> 00:49.015
+Tout l'intérêt est qu'on va y retrouver
+la liste complète des liens,
+
+00:49.015 --> 00:53.420
+des titres de niveaux, des champs de formulaire,
+des boutons et des régions.
+
+00:53.953 --> 00:56.956
+Tous sélectionnables
+via des boutons radio.
+
+00:57.357 --> 01:00.293
+Il est possible de filtrer la liste des éléments
+
+01:00.293 --> 01:04.697
+en faisant une recherche par nom
+ou de placer directement
+
+01:04.697 --> 01:09.269
+le focus sur l'élément sélectionné
+via le bouton "Aller à".
+
+01:10.904 --> 01:12.305
+un premier exemple.
+
+01:12.305 --> 01:15.909
+Je souhaite vérifier la sémantique
+des liens et des boutons de ma page.
+
+01:16.810 --> 01:19.846
+Ici, j'ai un élément
+qui m'amène sur une nouvelle page.
+
+01:19.879 --> 01:21.414
+C'est donc un lien.
+
+01:21.414 --> 01:24.684
+Si je vérifie,
+je peux voir sur la liste des éléments
+
+01:25.218 --> 01:28.188
+qu'il est bien dans la catégorie "Liens".
+
+01:28.955 --> 01:32.625
+Je teste également avec un élément présent
+dans la catégorie Bouton.
+
+01:33.293 --> 01:35.628
+Je sais donc
+qu'il doit déclencher une action,
+
+01:35.628 --> 01:38.598
+une validation
+ou me permettre de faire un choix.
+
+01:39.799 --> 01:42.368
+Un deuxième exemple, je souhaite vérifier
+
+01:42.368 --> 01:46.072
+que tous les éléments qui me semblent
+être des titres de niveau le sont.
+
+01:46.739 --> 01:51.044
+Il me suffit d'ouvrir la liste d'éléments
+sur le bouton radio "Titres"
+
+01:51.377 --> 01:54.380
+et de comparer ce que je vois
+sur la page web
+
+01:54.814 --> 01:57.817
+et ce que me remonte NVDA.
+
+01:58.251 --> 02:01.855
+Un dernier exemple
+je veux vérifier la structure de la page
+
+02:02.188 --> 02:05.091
+en sélectionnant le bouton radio "Régions"
+
+02:05.091 --> 02:08.895
+je vais pouvoir vérifier
+que des balises de sémantique HTML
+
+02:09.229 --> 02:12.298
+ont bien été utilisées
+pour structurer ma page web.
+
+02:13.333 --> 02:16.269
+Ces listes permettent
+donc de voir les éléments d'une page web
+
+02:16.269 --> 02:19.873
+dans son ensemble,
+d'y faire un certain nombre de contrôles.
+
+02:20.607 --> 02:22.308
+Y a t il des titres de niveau ?
+
+02:22.308 --> 02:24.677
+sont ils correctement hiérarchisés ?
+
+02:24.677 --> 02:27.714
+le rôle des liens et des boutons
+sont-ils corrects ?
+
+02:27.714 --> 02:28.481
+par exemple.
+
+02:29.249 --> 02:30.917
+Merci de votre attention.
+
+02:30.917 --> 02:32.318
+Cette vidéo est terminée !
+
+02:32.318 --> 02:34.521
+À bientôt sur une nouvelle démonstration.

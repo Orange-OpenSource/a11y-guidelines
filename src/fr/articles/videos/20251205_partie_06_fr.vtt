@@ -1,0 +1,173 @@
+WEBVTT
+
+00:15.181 --> 00:17.117
+Dans cette vidéo, nous allons tester
+
+00:17.117 --> 00:19.953
+le nom accessible des liens et boutons,
+
+00:19.953 --> 00:24.991
+c'est à dire vérifier ce qui est vocalisé
+quand on passe sur ces éléments avec NVDA.
+
+00:25.759 --> 00:28.728
+Il faut bien faire attention
+au fait que ce qui est vocalisé
+
+00:28.728 --> 00:31.931
+par NVDA n'est pas toujours
+ce qui est visible à l'écran
+
+00:32.332 --> 00:35.335
+puisqu'il est possible
+de modifier ces valeurs dans le code.
+
+00:36.202 --> 00:39.439
+NVDA vocalise
+donc ce que l'on appelle le nom accessible
+
+00:39.806 --> 00:42.642
+de l'élément interactif.
+
+00:42.642 --> 00:45.645
+Les éléments interactifs
+comme les liens et les boutons
+
+00:45.745 --> 00:47.814
+doivent donc avoir un nom accessible,
+
+00:47.814 --> 00:51.651
+pertinent et explicite.
+
+00:51.951 --> 00:53.620
+Pour cet exemple,
+
+00:53.620 --> 00:56.623
+on va reprendre la liste d'éléments
+de NVDA.
+
+00:56.923 --> 01:01.294
+Pour rappel, on ouvre cet outil
+avec les touches "NVDA + F7".
+
+01:02.162 --> 01:04.898
+On peut voir dans mon exemple
+que les liens "Voir plus"
+
+01:04.898 --> 01:08.068
+sont identiques visuellement sur ma page web.
+
+01:09.569 --> 01:10.370
+Je vais donc aller
+
+01:10.370 --> 01:13.440
+vérifier leurs noms accessibles
+sur cette liste d'éléments
+
+01:14.507 --> 01:16.242
+en effectuant une recherche.
+
+01:16.242 --> 01:20.814
+Je vois dans ce cas qu'un nom accessible
+différent leur a été attribué.
+
+01:21.314 --> 01:25.518
+En effet, des noms accessibles,
+plus pertinents ont été placés et masqués,
+
+01:25.819 --> 01:28.822
+sauf pour les utilisateurs
+d'aides techniques.
+
+01:29.756 --> 01:31.958
+NVDA vocalise ce nom accessible.
+
+01:31.958 --> 01:34.861
+Les deux liens sont
+donc bien clairement différenciés
+
+01:34.861 --> 01:37.197
+pour un utilisateur de NVDA.
+
+01:38.731 --> 01:41.568
+Un autre exemple avec le bouton "Fr".
+
+01:41.568 --> 01:46.206
+L'information que ce bouton
+va ouvrir un menu permettant de choisir
+
+01:46.206 --> 01:49.442
+une langue nous est indiquée
+visuellement par son aspect
+
+01:50.276 --> 01:54.881
+en plaçant le focus sur cet élément
+NVDA vocalise hors de liste
+
+01:54.948 --> 01:59.853
+Choix de langue et devise navigation
+région liste de 2 éléments.
+
+02:00.753 --> 02:04.224
+Donc il m'indique que j'arrive
+sur une liste de 2 éléments
+
+02:04.824 --> 02:08.528
+et ensuite bouton réduit en cours
+version française.
+
+02:09.129 --> 02:13.666
+J'ai donc bien dans mon nom accessible
+une indication pertinente de l'élément.
+
+02:13.867 --> 02:17.871
+"Version française""
+étant le nom accessible pour "Fr"
+
+02:18.738 --> 02:22.876
+et j'ai sa fonction
+grâce notamment à la sémantique HTML
+
+02:23.209 --> 02:24.310
+de bouton utilisé.
+
+02:26.112 --> 02:27.847
+Un exemple du même bouton
+
+02:27.847 --> 02:30.250
+sans différence visuelle apparente.
+
+02:30.316 --> 02:34.287
+Si je place mon focus dessus,
+on voit avec la visionneuse de parole
+
+02:34.687 --> 02:37.690
+de NVDA qu'il n'y a pas de nom accessible.
+
+02:37.790 --> 02:41.961
+En effet, NVDA vocalise "lien en cours fr".
+
+02:43.229 --> 02:46.799
+La sémantique de bouton a été remplacée
+par celle d'un lien.
+
+02:47.333 --> 02:50.436
+L'utilisateur s'attend
+donc à sortir de la page actuelle
+
+02:50.904 --> 02:55.308
+et le nom accessible
+est passé de version française au libellé
+
+02:55.308 --> 02:59.712
+visible à l'écran, c'est à dire "Fr",
+ce qui est nettement moins pertinent.
+
+03:01.648 --> 03:03.316
+Merci de votre attention.
+
+03:03.316 --> 03:04.717
+Cette vidéo est terminée !
+
+03:04.717 --> 03:06.920
+À bientôt sur une nouvelle démonstration.

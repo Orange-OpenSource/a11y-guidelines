@@ -1,0 +1,133 @@
+WEBVTT
+
+00:14.981 --> 00:16.483
+Dans cette vidéo,
+
+00:16.483 --> 00:19.486
+nous allons tester
+l'alternative textuelle des images.
+
+00:20.470 --> 00:23.573
+C'est ce qui est vocalisé
+ou restitué par NVDA
+
+00:23.873 --> 00:26.860
+quand on place le focus sur une image.
+
+00:27.310 --> 00:30.230
+Il est important de différencier
+plusieurs possibilités
+
+00:30.230 --> 00:33.233
+en fonction de l'information véhiculée.
+
+00:34.434 --> 00:36.770
+Les images décoratives, tout d'abord,
+
+00:36.770 --> 00:41.441
+ne doivent pas être perçues par NVDA
+et donc ne doivent pas être vocalisées
+
+00:42.325 --> 00:45.311
+comme sur cette bannière
+qui est purement décorative.
+
+00:45.612 --> 00:49.482
+Elle habille le texte mais n'est
+pas nécessaire à la compréhension du site.
+
+00:50.750 --> 00:53.119
+Les images porteuses d'informations, elles
+
+00:53.286 --> 00:56.156
+doivent décrire l'information
+contenue dans l'image.
+
+00:56.623 --> 00:59.209
+Dans cet exemple,
+nous avons l'image d'un sac,
+
+00:59.209 --> 01:02.262
+l'utilisateur souhaitant faire un choix
+parmi la liste
+
+01:02.846 --> 01:07.067
+doit avoir une description
+et des informations liées à ce sac.
+
+01:07.901 --> 01:12.522
+On a donc le type de sac, sa couleur
+et surtout l'information que ce sac
+
+01:12.522 --> 01:17.393
+est en promotion avec son ancien prix
+et le nouveau prix avec la promotion.
+
+01:19.095 --> 01:20.830
+Les images contenant du texte
+
+01:20.830 --> 01:24.434
+doivent reprendre
+au moins le texte visible dans l'image.
+
+01:24.918 --> 01:25.735
+Dans cet exemple,
+
+01:25.735 --> 01:29.456
+on voit que l'image m'informe
+d'un pourcentage sur les ventes privées.
+
+01:29.989 --> 01:32.592
+Le texte complet doit être à minima
+
+01:32.592 --> 01:35.595
+repris dans le nom accessible de l'image.
+
+01:36.379 --> 01:38.898
+Les images cliquables enfin,
+
+01:38.898 --> 01:41.000
+donc des liens, par exemple,
+
+01:41.000 --> 01:44.170
+doivent préciser la fonction
+et la cible du lien.
+
+01:44.871 --> 01:47.807
+Sur cet exemple,
+on voit l'icône d'un réseau social.
+
+01:47.807 --> 01:51.594
+Cette image est cliquable
+et ne possède pas de libellé visible.
+
+01:51.861 --> 01:55.915
+Il est donc primordial
+que cette image possède un nom accessible
+
+01:56.332 --> 01:59.335
+permettant à l'utilisateur
+de comprendre l'information
+
+01:59.502 --> 02:02.505
+portée par cet élément.
+
+02:02.572 --> 02:06.626
+Avant de faire des tests,
+il est donc nécessaire de bien faire la distinction
+
+02:06.626 --> 02:09.295
+entre des images porteuses d'informations,
+
+02:09.829 --> 02:13.249
+des images décoratives,
+ou des images liens.
+
+02:14.067 --> 02:15.735
+Merci de votre attention.
+
+02:15.735 --> 02:17.137
+Cette vidéo est terminée !
+
+02:17.137 --> 02:19.339
+À bientôt sur une nouvelle démonstration.

@@ -1,0 +1,286 @@
+WEBVTT
+
+00:13.680 --> 00:15.040
+Bonjour à tous !
+
+00:15.040 --> 00:18.440
+Je m'appelle Damien.
+Je suis expert en accessibilité.
+
+00:19.200 --> 00:22.920
+Je fais des tests d'accessibilité
+de sites web, sur le web
+
+00:23.400 --> 00:27.120
+et pour m'aider à compléter mes tests,
+j'utilise NVDA.
+
+00:27.480 --> 00:32.200
+Un outil d'assistance technique pour les personnes
+ayant des déficiences visuelles.
+
+00:32.440 --> 00:35.760
+C'est l'un des lecteurs d'écran
+les plus utilisés sur Windows.
+
+00:36.640 --> 00:39.960
+Dans cette série de vidéos,
+je vais vous apprendre à tester
+
+00:39.960 --> 00:42.800
+l'accessibilité d'un site avec NVDA.
+
+00:43.560 --> 00:44.840
+Voici la première.
+
+00:44.840 --> 00:46.800
+Je vais vous montrer comment l'installer !
+
+00:47.680 --> 00:51.120
+Tout d'abord,
+ouvrez la page de téléchargement de NVDA
+
+00:51.360 --> 00:55.760
+sur www.nvda.fr
+
+00:57.080 --> 00:59.800
+Le site n'est pas très beau,
+mais c'est bien celui-là.
+
+01:01.000 --> 01:05.840
+Depuis l'écran d'accueil,
+cliquez sur “Téléchargements”, qui se trouve ici.
+
+01:06.800 --> 01:08.640
+Choisir la version stable.
+
+01:08.640 --> 01:12.000
+Ce lien là, il va vous donner
+deux choix de téléchargement.
+
+01:12.280 --> 01:14.680
+La première en dessous
+est pour les Windows XP
+
+01:15.080 --> 01:18.520
+et le lien suivant
+est pour les versions Windows au-dessus.
+
+01:18.920 --> 01:20.400
+Pour lancer le téléchargement,
+
+01:20.400 --> 01:23.800
+cliquez sur le lien
+qui correspond à votre version de Windows.
+
+01:33.640 --> 01:36.040
+Le téléchargement vient de se terminer.
+
+01:36.040 --> 01:40.040
+Je clique sur mon fichier “.exe”
+et l'installation va commencer.
+
+01:40.920 --> 01:44.640
+Comme vous pouvez l'entendre,
+un son nous arrive dans les oreilles,
+
+01:44.840 --> 01:48.440
+indiquant que NVDA commence à s'installer.
+
+01:49.160 --> 01:50.600
+Pour désactiver les paroles,
+
+01:50.600 --> 01:54.840
+il suffira de cliquer sur les touches
+“Inser + S” en même temps.
+
+01:55.800 --> 01:58.560
+On arrive
+sur la fenêtre de NVDA Launcher.
+
+01:58.880 --> 02:01.120
+Une fois NVDA lancé,
+
+02:01.560 --> 02:05.280
+vous aurez quelques options à paramétrer.
+
+02:05.920 --> 02:08.960
+D'abord, cliquez sur “J'accepte”,
+parce que vous avez lu
+
+02:09.320 --> 02:14.120
+la totalité des accords de licence,
+et “Installer NVDA sur cet ordinateur”.
+
+02:17.560 --> 02:21.200
+Il vous propose ensuite
+d'installer NVDA sur votre disque dur
+
+02:21.200 --> 02:25.040
+et de cocher quelques options :
+“Utiliser NVDA lors de la connexion”,
+
+02:25.280 --> 02:28.520
+je vous conseille de la décocher
+pour éviter d'avoir NVDA
+
+02:28.520 --> 02:31.240
+qui s'ouvre systématiquement
+à chaque connexion,
+
+02:31.280 --> 02:34.280
+nous l'installons uniquement
+à des fins de test,
+
+02:34.280 --> 02:39.880
+et “Créer une icône sur le bureau et utilisez le raccourci
+clavier Ctrl + Alt + n” pour l'ouvrir,
+
+02:39.920 --> 02:43.760
+qui va être utile pour lancer directement
+NVDA avec un raccourci clavier.
+
+02:43.920 --> 02:46.840
+Vous pouvez laisser cocher,
+ça ne pose aucun problème.
+
+02:46.840 --> 02:48.640
+Et on clique sur “Continuer” !
+
+02:48.640 --> 02:50.560
+Vous verrez, c'est tout à fait normal.
+
+02:50.840 --> 02:52.520
+Il va vous parler
+puisqu'à partir du moment
+
+02:52.520 --> 02:56.200
+où on a lancé l'installation,
+il commence à vocaliser tous les textes.
+
+02:56.560 --> 02:57.880
+Vous autorisez évidemment
+
+02:57.880 --> 03:00.280
+l'application à apporter des modifications
+sur votre appareil.
+
+03:01.000 --> 03:01.640
+Donc “OUI” !
+
+03:01.640 --> 03:03.080
+NVDA s'installe.
+
+03:03.080 --> 03:08.320
+“NVDA a été installé avec succès”,
+donc NVDA a bien été installé !
+
+03:08.600 --> 03:12.080
+Il suffit de cliquer sur “OK”
+et il va nous ouvrir une nouvelle fenêtre
+
+03:12.240 --> 03:15.320
+pour paramétrer quelques petites options
+supplémentaires,
+
+03:15.720 --> 03:18.280
+la voici, il reparle,
+
+03:18.680 --> 03:21.640
+donc “Inser + S” de nouveau
+pour désactiver les paroles.
+
+03:22.080 --> 03:25.920
+Nous avons la popup : “Bienvenue dans NVDA !”
+
+03:25.920 --> 03:29.440
+Tout d'abord la première option,
+la disposition du clavier qui peut être utile
+
+03:29.440 --> 03:31.920
+pour les raccourcis clavier
+à utiliser plus tard,
+
+03:31.920 --> 03:36.000
+on choisit si c'est un ordinateur de bureau
+ou un ordinateur portable.
+
+03:36.480 --> 03:40.960
+Et ensuite, il nous propose d'utiliser le
+verrouillage majuscule comme touche NVDA,
+
+03:41.640 --> 03:43.960
+c'est tout à fait
+possible, c'est à vous de voir,
+
+03:43.960 --> 03:45.560
+sinon ce sera la touche “Inser”.
+
+03:45.560 --> 03:49.880
+De démarrer NVDA après la connexion,
+je ne vous le conseille pas,
+
+03:49.880 --> 03:51.480
+c'est à des fins de test,
+
+03:51.480 --> 03:55.920
+avoir NVDA qui s'ouvre systématiquement
+n'est pas forcément intéressant pour vous
+
+03:55.920 --> 03:59.560
+puisque sinon, il va vocaliser à l'ouverture de Windows,
+
+04:00.000 --> 04:03.640
+votre identifiant, votre mot de passe.
+Et il vous propose de garder
+
+04:03.840 --> 04:07.080
+“afficher ce dialogue au démarrage”,
+que je vais décocher,
+
+04:07.440 --> 04:08.880
+nous n'en avons pas besoin.
+
+04:08.880 --> 04:10.360
+On clique sur “OK”.
+
+04:10.360 --> 04:12.480
+Il nous propose un recueil des données,
+
+04:12.480 --> 04:14.120
+à vous de voir ce que vous préférez,
+
+04:14.120 --> 04:16.840
+moi, je fais : “Me le rappeler plus tard”,
+
+04:16.840 --> 04:20.680
+et voilà, NVDA a été installé
+correctement sur l'ordinateur.
+
+04:21.120 --> 04:25.080
+Vous trouverez l'icône en bas
+dans les applications exécutées.
+
+04:26.000 --> 04:30.720
+On voit la petite icône de NVDA qui
+s'est placée dans les logiciels actifs,
+
+04:30.960 --> 04:33.960
+et pour l’ouvrir, il me suffira
+de faire un clic gauche dessus
+
+04:33.960 --> 04:34.080
+Cette vidéo est terminée !
+
+04:34.080 --> 04:38.080
+et d'aller sur “Préférences” “Paramètres”
+ou faire “Control + Alt + N”.
+
+04:38.480 --> 04:40.160
+Merci de votre attention.
+
+04:40.160 --> 04:41.880
+Cette vidéo est terminée !
+
+04:41.880 --> 04:44.040
+À bientôt sur une nouvelle démonstration.
