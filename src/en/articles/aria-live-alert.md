@@ -1,68 +1,108 @@
 ---
-title: "The aria-live attribute and the role alert"
-abstract: "When and how to use roles and attributes of live content type"
+title: "The aria-live attribute and the alert role"
+abstract: "When and how to use live region roles and attributes"
 titleBeforeTag: true
 date: "2020-01-08"
+updateDate: "2026-11-19"
 tags:
   - web
   - intermediate
 ---
-  
-Users who navigate using a screen reader are not always aware of changes made on the page. When information is updated or when a message appears, it is sometimes necessary to make the screen reader speak to inform the user. To do this, the <abbr>ARIA</abbr> language has the role `alert` and the attribute` aria-live`.
 
-## The role alert
+Users navigating with a screen reader are not always aware of dynamic changes on a page. When content updates or a new message appears, triggering a spoken announcement may be necessary to alert the user. To address this need, the <abbr>ARIA</abbr> standard provides the `alert` role and the `aria-live` attribute.
 
-Positioned on an HTML element, this allows you to tell the screen reader to vocalize the element automatically when it is created. However, be sure to use this role only in appropriate cases, as clearly stated in the [Mozilla MDN documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role). Due to its intrusive nature, role alert should be used sparingly and only in situations where the user's attention is immediately required. Less urgent dynamic changes should use a less aggressive method, such as `aria-live="polite"` or other live zone roles.
+## The `alert` role
 
-To trigger an alert, several methods are possible, with a support that differ depending on the browser and screen reader pair used. You can read [Steve Faulkner's article](https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/) on this subject.
+When applied to an HTML element, the `alert` role instructs the screen reader to automatically announce its content as soon as it is inserted into the page. Designed to capture immediate attention, this behavior makes it a powerful but potentially disruptive feature.
 
-Here are some examples of methods that are well supported.
+### Best practices
 
-### Create a new element in the DOM
+The `alert` role should be reserved for situations requiring immediate user intervention, such as:
 
-You can trigger an alert by inserting a new element in the <abbr>DOM</abbr> via Javascript.
+- A critical form submission error.
+- A security or system alert.
+- An urgent notification requiring prompt action.
 
-<pre> <code class="html"> &lt;span role="alert"&gt; This is an alert message. &lt;/span&gt; </code> </pre>
+### Precautions
 
-### Add a role alert on an existing element
-The triggering of an alert can also be done by adding a `role="alert"` dynamically to an existing element via Javascript.
+- **Documentation**: Refer to the official [MDN – ARIA: alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role) documentation for detailed guidelines.
+- **Moderate use**: Avoid using the `alert` role for frequent or non-critical messages to prevent disrupting the user experience.
 
-<pre> <code class="js">
+### Compatibility and triggering
+
+Support for <abbr>ARIA</abbr> attributes and roles, including `alert`, varies across browser and screen reader combinations. To ensure consistent behavior:
+
+- Test across several browser and assistive technology combinations.
+- Choose triggering mechanisms best suited to your target environments.
+
+### Inserting a new element into the DOM
+
+An alert can be triggered by inserting a new element into the <abbr>DOM</abbr> via JavaScript:
+
+```html
+<p role="alert">This is an alert message.</p>
+```
+
+### Adding the `alert` role to an existing element
+
+An alert can also be triggered by dynamically adding `role="alert"` to an existing element:
+
+```javascript
 document.getElementById('alert').setAttribute("role", "alert");
-</code> </pre>
+```
 
-### Using innerHTML
+### Using `innerHTML`
 
 Create an alert via the `innerHTML` property.
-<pre> <code class="js">
-element.innerHTML = '&lt;div role ="alert"&gt;This is an alert&lt;/div&gt;';
-</code> </pre>
+
+```javascript
+element.innerHTML = '<p role="alert">This is an alert</p>';
+```
 
 ## The `aria-live` attribute
 
-Positioned on an HTML element, the `aria-live` attribute is used to indicate to the screen reader that any modification made to its content will result in vocalization by the screen reader.
+When added to an HTML element, the `aria-live` attribute informs the screen reader that updates within its content must be announced. This attribute is essential for managing dynamic updates on a page, ensuring that screen reader users are kept informed of important changes.
 
-Three values ​​are possible:
-- Off: no vocalization
-- Polite: the vocalization will take place when the screen reader has finished the current task
-- Assertive: the screen reader interrupts the current task to inform the user
+### Possible values
 
-It is strongly recommended that the `aria-live` attribute be set on the element as soon as the page is loaded to maximize compatibility with different browsers and screen readers.
+The `aria-live` attribute accepts three primary values, each having a distinct impact on the screen reader's behavior:
 
-<pre> <code class = "html">
-&lt;span aria-live="polite"&gt;5 selected items&lt;/span&gt;
-</code> </pre>
-  
-Additional attributes allow fine modification of the default behavior of `aria-live`:
+- `off`:
+Content updates will not be announced by default.
+Use this when updates are not relevant to the user or do not require an immediate announcement.
 
-- **aria-atomic:** true or false (default), used to indicate whether the whole of the live zone must be read (true) or only the modified part (false).
-- **aria-relevant:** indicates which type of change triggers a vocalization, possible values: additions (default), removals, all.
+- `polite`:
+The updated content will be announced only after the screen reader has finished its current task (such as reading a paragraph or another notification).
+Ideal for non-urgent information, such as confirmations or minor notifications.
 
-Finally, to be complete, know that the <abbr>ARIA</abbr> language also provides for some specific roles, **status** and **log** in particular which can be useful in certain cases (status bar, logging, chat...) and which, for the moment, must be used in addition to the `aria-live` attribute to maximize support by the different tools. You can find more info on these roles in the links below.
+- `assertive`:
+The screen reader interrupts its current task immediately to announce the updated content.
+Use with caution, and only for critical or time-sensitive messages requiring prompt attention, such as errors or security alerts.
+
+### Best practices for use
+
+- Initial declaration: It is strongly recommended to define the `aria-live` attribute on the element when the page first loads. This ensures optimal compatibility across various browsers and screen readers.
+- Simple updates: Ensure that any content changes inside live regions remain clear, concise, and easy to understand.
+- Appropriate prioritization: Select the right value (`polite` or `assertive`) according to the urgency and importance of the message to avoid needlessly disrupting the user.
+
+```html
+<p aria-live="polite">5 items selected</p>
+```
+
+Additional attributes allow fine-tuning the default behavior of `aria-live`:
+
+- `aria-atomic`: `true` or `false` (default value). Indicates whether the screen reader must read the entire live region (`true`) or only the modified nodes (`false`).
+- `aria-relevant`: Defines which types of changes trigger an announcement. Possible values: `additions` (default value), `removals`, `all`.
+
+Finally, the <abbr>ARIA</abbr> standard also defines specialized roles—notably `status` and `log`—which are useful in specific contexts (such as status bars, logging, or chat feeds). For optimal support across assistive technologies, they should currently be paired with the `aria-live` attribute. Additional details can be found in the references below.
 
 
 ## References
-- [Use of the alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
-- [ARIA live zones](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
-- [Use the log role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
-- [Use the status role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role">MDN – ARIA: alert role</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live">MDN – ARIA: aria-live attribute</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/log_role">MDN – ARIA: log role</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role">MDN – ARIA: status role</a></li>
+  <li><a href="https://access42.net/live-regions-aria-live-analogues-alert-log-status/" lang="fr" hreflang="fr">Live regions ARIA : aria-live et ses analogues alert, log, status</a></li>
+</ul>
