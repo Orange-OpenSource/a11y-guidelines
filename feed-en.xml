@@ -4,12 +4,20 @@
   <subtitle>Last articles in English</subtitle>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml" rel="self"/>
   <link href="https://a11y-guidelines.orange.com/feed-en.xml"/>
-  <updated>2026-10-26T00:00:00Z</updated>
+  <updated>2026-11-24T00:00:00Z</updated>
   <id>https://a11y-guidelines.orange.com/</id>
   <author>
     <name>a11yguideline Orange</name>
     <email>accessibility.group@orange.com</email>
   </author>
+  
+  <entry>
+    <title>The aria-live attribute and the alert role</title>
+    <link href="https://a11y-guidelines.orange.com/en/articles/aria-live-alert/"/>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <id>https://a11y-guidelines.orange.com/en/articles/aria-live-alert/</id>
+    <content xml:lang="en" type="html">When and how to use live region roles and attributes</content>
+  </entry>
   
   <entry>
     <title>Modal dialogs: understanding accessibility best practices in 2026</title>
@@ -641,14 +649,6 @@
     <updated>2020-12-23T00:00:00Z</updated>
     <id>https://a11y-guidelines.orange.com/en/articles/autocomplete-component/</id>
     <content xml:lang="en" type="html">Presentation of our approach and selected guidelines for autocompletion components</content>
-  </entry>
-  
-  <entry>
-    <title>The aria-live attribute and the role alert</title>
-    <link href="https://a11y-guidelines.orange.com/en/articles/aria-live-alert/"/>
-    <updated>2020-01-08T00:00:00Z</updated>
-    <id>https://a11y-guidelines.orange.com/en/articles/aria-live-alert/</id>
-    <content xml:lang="en" type="html">When and how to use roles and attributes of live content type</content>
   </entry>
   
   <entry>

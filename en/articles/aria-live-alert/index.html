@@ -2,11 +2,11 @@
 <html lang="en" dir="ltr" class="no-js" data-bs-theme="light">
   <head>
     <meta charset="utf-8">
-    <title>The aria-live attribute and the role alert - Orange digital accessibility guidelines</title>
+    <title>The aria-live attribute and the alert role - Orange digital accessibility guidelines</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="l2y2kYf6v887K8NW7L41pN29ueW0w5P02MJrUiP2JoA" />
     
-    <meta name="description" content="When and how to use roles and attributes of live content type">
+    <meta name="description" content="When and how to use live region roles and attributes">
     
     <link rel="preconnect" href="https://code.jquery.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
@@ -150,7 +150,7 @@
       
       
         <li class="breadcrumb-item d-none d-sm-flex" aria-current="page">
-          The aria-live attribute and the role alert
+          The aria-live attribute and the alert role
         </li>
       </ol>
 </nav>
@@ -163,7 +163,7 @@
       <button type="button" class="btn btn-outline-secondary dropdown-toggle" id="mobile-toc-dropdown-handler" data-bs-toggle="dropdown" aria-expanded="false">
         On this page
       </button>
-      <div class="dropdown-menu dropdown-menu-right"><a href="#the-role-alert" class="dropdown-item text-wrap">The role alert</a><a href="#create-a-new-element-in-the-dom" class="dropdown-item text-wrap">Create a new element in the DOM</a><a href="#add-a-role-alert-on-an-existing-element" class="dropdown-item text-wrap">Add a role alert on an existing element</a><a href="#using-innerhtml" class="dropdown-item text-wrap">Using innerHTML</a><a href="#the-aria-live-attribute" class="dropdown-item text-wrap">The aria-live attribute</a><a href="#references" class="dropdown-item text-wrap">References</a></div>
+      <div class="dropdown-menu dropdown-menu-right"><a href="#the-alert-role" class="dropdown-item text-wrap">The alert role</a><a href="#best-practices" class="dropdown-item text-wrap">Best practices</a><a href="#precautions" class="dropdown-item text-wrap">Precautions</a><a href="#compatibility-and-triggering" class="dropdown-item text-wrap">Compatibility and triggering</a><a href="#inserting-a-new-element-into-the-dom" class="dropdown-item text-wrap">Inserting a new element into the DOM</a><a href="#adding-the-alert-role-to-an-existing-element" class="dropdown-item text-wrap">Adding the alert role to an existing element</a><a href="#using-innerhtml" class="dropdown-item text-wrap">Using innerHTML</a><a href="#the-aria-live-attribute" class="dropdown-item text-wrap">The aria-live attribute</a><a href="#possible-values" class="dropdown-item text-wrap">Possible values</a><a href="#best-practices-for-use" class="dropdown-item text-wrap">Best practices for use</a><a href="#references" class="dropdown-item text-wrap">References</a></div>
     </nav>
         
       </div>
@@ -174,7 +174,7 @@
         
         <main id="main-content" class="col-md-9" role="main" tabindex="-1">
           
-            <h1>The aria-live attribute and the role alert</h1>
+            <h1>The aria-live attribute and the alert role</h1>
             
               <span class="visually-hidden" id="filters_label">
                 Associated themes:
@@ -188,56 +188,96 @@
 
             <p class="text-muted mb-0">
               <span class="visually-hidden">Publication date</span>
-              <time datetime="2020-01-08T00:00:00.000Z">
-                January 08, 2020
+              <time datetime="2026-11-24T00:00:00.000Z">
+                November 24, 2026
               </time>
             </p>
 
             
+              <p class="text-muted mb-0">
+                Update of the article from
+                <time datetime="2020-01-08T00:00:00.000Z">
+                  January 08, 2020
+                </time>
+              </p>
+            
           
           <div class="mt-4">
-          <p>Users who navigate using a screen reader are not always aware of changes made on the page. When information is updated or when a message appears, it is sometimes necessary to make the screen reader speak to inform the user. To do this, the <abbr>ARIA</abbr> language has the role <code>alert</code> and the attribute<code> aria-live</code>.</p>
-<h2 id="the-role-alert" tabindex="-1" class="h2-focus">The role alert <a class="header-anchor" href="#the-role-alert" id="heading-465" aria-labelledby="heading-465">#</a></h2>
-<p>Positioned on an HTML element, this allows you to tell the screen reader to vocalize the element automatically when it is created. However, be sure to use this role only in appropriate cases, as clearly stated in the <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role">Mozilla MDN documentation</a>. Due to its intrusive nature, role alert should be used sparingly and only in situations where the user's attention is immediately required. Less urgent dynamic changes should use a less aggressive method, such as <code>aria-live=&quot;polite&quot;</code> or other live zone roles.</p>
-<p>To trigger an alert, several methods are possible, with a support that differ depending on the browser and screen reader pair used. You can read <a href="https://developer.paciellogroup.com/blog/2017/04/aria-alert-support/">Steve Faulkner's article</a> on this subject.</p>
-<p>Here are some examples of methods that are well supported.</p>
-<h3 id="create-a-new-element-in-the-dom" tabindex="-1">Create a new element in the DOM <a class="header-anchor" href="#create-a-new-element-in-the-dom" id="heading-466" aria-labelledby="heading-466">#</a></h3>
-<p>You can trigger an alert by inserting a new element in the <abbr>DOM</abbr> via Javascript.</p>
-<pre> <code class="html"> &lt;span role="alert"&gt; This is an alert message. &lt;/span&gt; </code> </pre>
-<h3 id="add-a-role-alert-on-an-existing-element" tabindex="-1">Add a role alert on an existing element <a class="header-anchor" href="#add-a-role-alert-on-an-existing-element" id="heading-467" aria-labelledby="heading-467">#</a></h3>
-<p>The triggering of an alert can also be done by adding a <code>role=&quot;alert&quot;</code> dynamically to an existing element via Javascript.</p>
-<pre> <code class="js">
-document.getElementById('alert').setAttribute("role", "alert");
-</code> </pre>
-<h3 id="using-innerhtml" tabindex="-1">Using innerHTML <a class="header-anchor" href="#using-innerhtml" id="heading-468" aria-labelledby="heading-468">#</a></h3>
+          <p>Users navigating with a screen reader are not always aware of dynamic changes on a page. When content updates or a new message appears, triggering a spoken announcement may be necessary to alert the user. To address this need, the <abbr>ARIA</abbr> standard provides the <code>alert</code> role and the <code>aria-live</code> attribute.</p>
+<h2 id="the-alert-role" tabindex="-1" class="h2-focus">The <code>alert</code> role <a class="header-anchor" href="#the-alert-role" id="heading-465" aria-labelledby="heading-465">#</a></h2>
+<p>When applied to an HTML element, the <code>alert</code> role instructs the screen reader to automatically announce its content as soon as it is inserted into the page. Designed to capture immediate attention, this behavior makes it a powerful but potentially disruptive feature.</p>
+<h3 id="best-practices" tabindex="-1">Best practices <a class="header-anchor" href="#best-practices" id="heading-466" aria-labelledby="heading-466">#</a></h3>
+<p>The <code>alert</code> role should be reserved for situations requiring immediate user intervention, such as:</p>
+<ul>
+<li>A critical form submission error.</li>
+<li>A security or system alert.</li>
+<li>An urgent notification requiring prompt action.</li>
+</ul>
+<h3 id="precautions" tabindex="-1">Precautions <a class="header-anchor" href="#precautions" id="heading-467" aria-labelledby="heading-467">#</a></h3>
+<ul>
+<li><strong>Documentation</strong>: Refer to the official <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role">MDN – ARIA: alert role</a> documentation for detailed guidelines.</li>
+<li><strong>Moderate use</strong>: Avoid using the <code>alert</code> role for frequent or non-critical messages to prevent disrupting the user experience.</li>
+</ul>
+<h3 id="compatibility-and-triggering" tabindex="-1">Compatibility and triggering <a class="header-anchor" href="#compatibility-and-triggering" id="heading-468" aria-labelledby="heading-468">#</a></h3>
+<p>Support for <abbr>ARIA</abbr> attributes and roles, including <code>alert</code>, varies across browser and screen reader combinations. To ensure consistent behavior:</p>
+<ul>
+<li>Test across several browser and assistive technology combinations.</li>
+<li>Choose triggering mechanisms best suited to your target environments.</li>
+</ul>
+<h3 id="inserting-a-new-element-into-the-dom" tabindex="-1">Inserting a new element into the DOM <a class="header-anchor" href="#inserting-a-new-element-into-the-dom" id="heading-469" aria-labelledby="heading-469">#</a></h3>
+<p>An alert can be triggered by inserting a new element into the <abbr>DOM</abbr> via JavaScript:</p>
+<pre><code class="language-html">&lt;p role=&quot;alert&quot;&gt;This is an alert message.&lt;/p&gt;
+</code></pre>
+<h3 id="adding-the-alert-role-to-an-existing-element" tabindex="-1">Adding the <code>alert</code> role to an existing element <a class="header-anchor" href="#adding-the-alert-role-to-an-existing-element" id="heading-470" aria-labelledby="heading-470">#</a></h3>
+<p>An alert can also be triggered by dynamically adding <code>role=&quot;alert&quot;</code> to an existing element:</p>
+<pre><code class="language-javascript">document.getElementById('alert').setAttribute(&quot;role&quot;, &quot;alert&quot;);
+</code></pre>
+<h3 id="using-innerhtml" tabindex="-1">Using <code>innerHTML</code> <a class="header-anchor" href="#using-innerhtml" id="heading-471" aria-labelledby="heading-471">#</a></h3>
 <p>Create an alert via the <code>innerHTML</code> property.</p>
-<pre> <code class="js">
-element.innerHTML = '&lt;div role ="alert"&gt;This is an alert&lt;/div&gt;';
-</code> </pre>
-<h2 id="the-aria-live-attribute" tabindex="-1" class="h2-focus">The <code>aria-live</code> attribute <a class="header-anchor" href="#the-aria-live-attribute" id="heading-469" aria-labelledby="heading-469">#</a></h2>
-<p>Positioned on an HTML element, the <code>aria-live</code> attribute is used to indicate to the screen reader that any modification made to its content will result in vocalization by the screen reader.</p>
-<p>Three values ​​are possible:</p>
+<pre><code class="language-javascript">element.innerHTML = '&lt;p role=&quot;alert&quot;&gt;This is an alert&lt;/p&gt;';
+</code></pre>
+<h2 id="the-aria-live-attribute" tabindex="-1" class="h2-focus">The <code>aria-live</code> attribute <a class="header-anchor" href="#the-aria-live-attribute" id="heading-472" aria-labelledby="heading-472">#</a></h2>
+<p>When added to an HTML element, the <code>aria-live</code> attribute informs the screen reader that updates within its content must be announced. This attribute is essential for managing dynamic updates on a page, ensuring that screen reader users are kept informed of important changes.</p>
+<h3 id="possible-values" tabindex="-1">Possible values <a class="header-anchor" href="#possible-values" id="heading-473" aria-labelledby="heading-473">#</a></h3>
+<p>The <code>aria-live</code> attribute accepts three primary values, each having a distinct impact on the screen reader's behavior:</p>
 <ul>
-<li>Off: no vocalization</li>
-<li>Polite: the vocalization will take place when the screen reader has finished the current task</li>
-<li>Assertive: the screen reader interrupts the current task to inform the user</li>
+<li>
+<p><code>off</code>:<br>
+Content updates will not be announced by default.<br>
+Use this when updates are not relevant to the user or do not require an immediate announcement.</p>
+</li>
+<li>
+<p><code>polite</code>:<br>
+The updated content will be announced only after the screen reader has finished its current task (such as reading a paragraph or another notification).<br>
+Ideal for non-urgent information, such as confirmations or minor notifications.</p>
+</li>
+<li>
+<p><code>assertive</code>:<br>
+The screen reader interrupts its current task immediately to announce the updated content.<br>
+Use with caution, and only for critical or time-sensitive messages requiring prompt attention, such as errors or security alerts.</p>
+</li>
 </ul>
-<p>It is strongly recommended that the <code>aria-live</code> attribute be set on the element as soon as the page is loaded to maximize compatibility with different browsers and screen readers.</p>
-<pre> <code class = "html">
-&lt;span aria-live="polite"&gt;5 selected items&lt;/span&gt;
-</code> </pre>
-<p>Additional attributes allow fine modification of the default behavior of <code>aria-live</code>:</p>
+<h3 id="best-practices-for-use" tabindex="-1">Best practices for use <a class="header-anchor" href="#best-practices-for-use" id="heading-474" aria-labelledby="heading-474">#</a></h3>
 <ul>
-<li><strong>aria-atomic:</strong> true or false (default), used to indicate whether the whole of the live zone must be read (true) or only the modified part (false).</li>
-<li><strong>aria-relevant:</strong> indicates which type of change triggers a vocalization, possible values: additions (default), removals, all.</li>
+<li>Initial declaration: It is strongly recommended to define the <code>aria-live</code> attribute on the element when the page first loads. This ensures optimal compatibility across various browsers and screen readers.</li>
+<li>Simple updates: Ensure that any content changes inside live regions remain clear, concise, and easy to understand.</li>
+<li>Appropriate prioritization: Select the right value (<code>polite</code> or <code>assertive</code>) according to the urgency and importance of the message to avoid needlessly disrupting the user.</li>
 </ul>
-<p>Finally, to be complete, know that the <abbr>ARIA</abbr> language also provides for some specific roles, <strong>status</strong> and <strong>log</strong> in particular which can be useful in certain cases (status bar, logging, chat...) and which, for the moment, must be used in addition to the <code>aria-live</code> attribute to maximize support by the different tools. You can find more info on these roles in the links below.</p>
-<h2 id="references" tabindex="-1" class="h2-focus">References <a class="header-anchor" href="#references" id="heading-470" aria-labelledby="heading-470">#</a></h2>
+<pre><code class="language-html">&lt;p aria-live=&quot;polite&quot;&gt;5 items selected&lt;/p&gt;
+</code></pre>
+<p>Additional attributes allow fine-tuning the default behavior of <code>aria-live</code>:</p>
 <ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role">Use of the alert role</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live">ARIA live zones</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/log_role">Use the log role</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/status_role">Use the status role</a></li>
+<li><code>aria-atomic</code>: <code>true</code> or <code>false</code> (default value). Indicates whether the screen reader must read the entire live region (<code>true</code>) or only the modified nodes (<code>false</code>).</li>
+<li><code>aria-relevant</code>: Defines which types of changes trigger an announcement. Possible values: <code>additions</code> (default value), <code>removals</code>, <code>all</code>.</li>
+</ul>
+<p>Finally, the <abbr>ARIA</abbr> standard also defines specialized roles—notably <code>status</code> and <code>log</code>—which are useful in specific contexts (such as status bars, logging, or chat feeds). For optimal support across assistive technologies, they should currently be paired with the <code>aria-live</code> attribute. Additional details can be found in the references below.</p>
+<h2 id="references" tabindex="-1" class="h2-focus">References <a class="header-anchor" href="#references" id="heading-475" aria-labelledby="heading-475">#</a></h2>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role">MDN – ARIA: alert role</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live">MDN – ARIA: aria-live attribute</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/log_role">MDN – ARIA: log role</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/status_role">MDN – ARIA: status role</a></li>
+  <li><a href="https://access42.net/live-regions-aria-live-analogues-alert-log-status/" lang="fr" hreflang="fr">Live regions ARIA : aria-live et ses analogues alert, log, status</a></li>
 </ul>
 
           </div>
@@ -248,12 +288,18 @@ element.innerHTML = '&lt;div role ="alert"&gt;This is an alert&lt;/div&gt;';
               <nav id="toc" class="bg-200 p-3 d-none d-md-block" role="navigation" aria-labelledby="toc-title">
       <h2 id="toc-title">On this page</h2>
       <ul class="nav flex-column"><li class="nav-item position-relative">
-            <a href="#the-role-alert" class="nav-link text-muted">The role alert</a>
+            <a href="#the-alert-role" class="nav-link text-muted">The alert role</a>
             <ul><li class="nav-item position-relative">
-            <a href="#create-a-new-element-in-the-dom" class="nav-link text-muted">Create a new element in the DOM</a></li><li class="nav-item position-relative">
-            <a href="#add-a-role-alert-on-an-existing-element" class="nav-link text-muted">Add a role alert on an existing element</a></li><li class="nav-item position-relative">
+            <a href="#best-practices" class="nav-link text-muted">Best practices</a></li><li class="nav-item position-relative">
+            <a href="#precautions" class="nav-link text-muted">Precautions</a></li><li class="nav-item position-relative">
+            <a href="#compatibility-and-triggering" class="nav-link text-muted">Compatibility and triggering</a></li><li class="nav-item position-relative">
+            <a href="#inserting-a-new-element-into-the-dom" class="nav-link text-muted">Inserting a new element into the DOM</a></li><li class="nav-item position-relative">
+            <a href="#adding-the-alert-role-to-an-existing-element" class="nav-link text-muted">Adding the alert role to an existing element</a></li><li class="nav-item position-relative">
             <a href="#using-innerhtml" class="nav-link text-muted">Using innerHTML</a></li></ul></li><li class="nav-item position-relative">
-            <a href="#the-aria-live-attribute" class="nav-link text-muted">The aria-live attribute</a></li><li class="nav-item position-relative">
+            <a href="#the-aria-live-attribute" class="nav-link text-muted">The aria-live attribute</a>
+            <ul><li class="nav-item position-relative">
+            <a href="#possible-values" class="nav-link text-muted">Possible values</a></li><li class="nav-item position-relative">
+            <a href="#best-practices-for-use" class="nav-link text-muted">Best practices for use</a></li></ul></li><li class="nav-item position-relative">
             <a href="#references" class="nav-link text-muted">References</a></li>
       </ul>
     </nav>
