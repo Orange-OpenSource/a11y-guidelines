@@ -3,7 +3,7 @@ title: "The aria-live attribute and the alert role"
 abstract: "When and how to use live region roles and attributes"
 titleBeforeTag: true
 date: "2020-01-08"
-updateDate: "2026-11-19"
+updateDate: "2026-11-24"
 tags:
   - web
   - intermediate
